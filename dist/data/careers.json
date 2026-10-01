@@ -1,0 +1,7805 @@
+[
+  {
+    "id": "adviser",
+    "name": "Adviser",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 45,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 4,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Aide",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Evaluate",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Lore (Local)",
+          "Lore (Politics)",
+          "Research",
+          "Secret Signs (Any One)"
+        ],
+        "talents": [
+          "Beneath Notice",
+          "Etiquette (All)",
+          "Gregarious",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Adviser",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Cool",
+          "Gamble",
+          "Intimidate",
+          "Language (Classical, Guilder, or Thieves Tongue)",
+          "Lore (Heraldry)"
+        ],
+        "talents": [
+          "Criminal",
+          "Embezzle",
+          "Schemer",
+          "Supportive"
+        ],
+        "trappings": [
+          "Livery"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Counsellor",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Language (Any One)",
+          "Leadership",
+          "Lore (Any One)"
+        ],
+        "talents": [
+          "Argumentative",
+          "Briber",
+          "Cat-tongued",
+          "Kingpin"
+        ],
+        "trappings": [
+          "Aide",
+          "Quality Clothing"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Chancellor",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Perform (Dancing)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Carouser",
+          "Commanding Presence",
+          "Noble Blood",
+          "Suave"
+        ],
+        "trappings": [
+          "Quality Courtly Garb",
+          "Riding Horse",
+          "Staff of Advisers and Aides"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "agitator",
+    "name": "Agitator",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 46,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Pamphleteer",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Art (Writing)",
+          "Charm",
+          "Consume Alcohol",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Haggle",
+          "Lore (Local)",
+          "Lore (Politics)",
+          "Trade (Printing)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Blather",
+          "Gregarious",
+          "Panhandle",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Hammer and Nails",
+          "Pile of Leaflets",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Agitator",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Gamble",
+          "Intuition",
+          "Leadership",
+          "Melee (Brawling)"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Argumentative",
+          "Impassioned Zeal",
+          "Public Speaker"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Sturdy Crate"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Rabble Rouser",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Intimidate",
+          "Perception",
+          "Ranged (Throwing)"
+        ],
+        "talents": [
+          "Cat-tongued",
+          "Dirty Fighting",
+          "Flee!",
+          "Step Aside"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Pamphleteer"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Demagogue",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Lore (Heraldry)"
+        ],
+        "talents": [
+          "Etiquette (All)",
+          "Master Orator",
+          "Schemer",
+          "Suave"
+        ],
+        "trappings": [
+          "Impressive Hat",
+          "3 Pamphleteers",
+          "Patron",
+          "Printing Press"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "apothecary",
+    "name": "Apothecary",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 47,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 3,
+      "I": 1,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apothecary’s Apprentice",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Endurance",
+          "Haggle",
+          "Heal",
+          "Language (Classical)",
+          "Lore (Chemistry)",
+          "Lore (Medicine)",
+          "Perception",
+          "Trade (Apothecary)",
+          "Trade (Poisoner)"
+        ],
+        "talents": [
+          "Acute Sense (Taste)",
+          "Concoct",
+          "Craftsman (Apothecary)",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Book (Blank)",
+          "Leather Jerkin",
+          "Pestle and Mortar"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Apothecary",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Evaluate",
+          "Gossip",
+          "Language (Guilder)",
+          "Secret Signs (Guilder)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Criminal",
+          "Dealmaker",
+          "Etiquette (Guilder)",
+          "Pharmacist"
+        ],
+        "trappings": [
+          "Guild Licence",
+          "Trade Tools (Apothecary)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Apothecary",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intuition",
+          "Leadership",
+          "Lore (Science)",
+          "Research"
+        ],
+        "talents": [
+          "Bookish",
+          "Etiquette (Criminals or Scholars)",
+          "Master Tradesman (Apothecary)",
+          "Resistant (Poison)"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Book (Apothecary)",
+          "Workshop (Apothecary)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Apothecary General",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Intimidate"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Kingpin",
+          "Savant (Chemistry)",
+          "Savvy"
+        ],
+        "trappings": [
+          "Commission Papers",
+          "Large Workshop (Apothecary)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artisan",
+    "name": "Artisan",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 48,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 3,
+      "WP": 4,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Artisan",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Art (Any One)",
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Haggle",
+          "Endurance",
+          "Evaluate",
+          "Pick Lock",
+          "Trade (Any One)"
+        ],
+        "talents": [
+          "Craftsman (as Trade)",
+          "Strong Back",
+          "Tenacious",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Chalk",
+          "Leather Jerkin",
+          "1d10 Rags"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Artisan",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Drive",
+          "Lore (Local)",
+          "Gossip",
+          "Language (Guilder)",
+          "Perception"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Etiquette (Guilder)",
+          "Nimble-fingered",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Guild Licence",
+          "Trade Tools (as Trade)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Artisan",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intuition",
+          "Leadership",
+          "Research",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Acute Sense (Taste or Touch)",
+          "Master Tradesman (as Trade)",
+          "Read/Write",
+          "Tinker"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Workshop (as Trade)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Guildmaster",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Intimidate"
+        ],
+        "talents": [
+          "Briber",
+          "Magnum Opus",
+          "Public Speaker",
+          "Schemer"
+        ],
+        "trappings": [
+          "Guild",
+          "Quality Clothing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist",
+    "name": "Artist",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 49,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 3,
+      "WP": 4,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Artist",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Art (Any One)",
+          "Charm",
+          "Climb",
+          "Consume Alcohol",
+          "Evaluate",
+          "Gossip",
+          "Intuition",
+          "Lore (Art)",
+          "Perception",
+          "Trade (Art Supplies)"
+        ],
+        "talents": [
+          "Artistic",
+          "Read/Write",
+          "Sharp",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Brush or Chisel or Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Artist",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Endurance",
+          "Entertain (Storytelling)",
+          "Gamble",
+          "Haggle",
+          "Lore (Heraldry)",
+          "Melee (Fencing)"
+        ],
+        "talents": [
+          "Attractive",
+          "Carouser",
+          "Gregarious",
+          "Nimble-fingered"
+        ],
+        "trappings": [
+          "Sling Bag containing Trade Tools (Artist)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Artist",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Leadership",
+          "Lore (Any One)",
+          "Research",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Acute Sense (Sight or Touch)",
+          "Dealmaker",
+          "Etiquette (Any One)",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Patron",
+          "Workshop (Artist)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Maestro",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Cool",
+          "Secret Signs (Any One)"
+        ],
+        "talents": [
+          "Ambidextrous",
+          "Magnum Opus",
+          "Savant (Art)",
+          "Wealthy"
+        ],
+        "trappings": [
+          "3 Apprentices",
+          "Large Workshop (Artist)",
+          "Library (Art)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bailiff",
+    "name": "Bailiff",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 50,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": 3,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Tax Collector",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Evaluate",
+          "Gossip",
+          "Intimidate",
+          "Melee (Basic)",
+          "Perception",
+          "Pick Lock"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Embezzle",
+          "Numismatics",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Small Lock Box"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Bailiff",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Haggle",
+          "Intuition",
+          "Leadership",
+          "Lore (Local)"
+        ],
+        "talents": [
+          "Criminal",
+          "Menacing",
+          "Public Speaker",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "3 Tax Collectors"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Reeve",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Lore (Heraldry)",
+          "Navigation",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Argumentative",
+          "Kingpin",
+          "Nose for Trouble",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Bailiff",
+          "Breastplate",
+          "Riding Horse"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Magistrate",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Classical)",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Iron Will",
+          "Savvy",
+          "Schemer"
+        ],
+        "trappings": [
+          "Library (Law)",
+          "Quality Robes",
+          "Seal of Office"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beggar",
+    "name": "Beggar",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 51,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 2,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Pauper",
+        "status": "Brass",
+        "standing": 0,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Intuition",
+          "Outdoor Survival",
+          "Perception",
+          "Secret Signs (Vagabond)",
+          "Stealth (Rural or Urban)"
+        ],
+        "talents": [
+          "Beneath Notice",
+          "Panhandle",
+          "Resistant (Disease)",
+          "Stone Soup"
+        ],
+        "trappings": [
+          "Cup",
+          "Poor Quality Blanket"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Beggar",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Entertain (Acting)",
+          "Entertain (Any One)",
+          "Lore (Local)",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Blather",
+          "Criminal",
+          "Etiquette (Criminals)"
+        ],
+        "trappings": [
+          "Bowl",
+          "Crutch"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Beggar",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Charm Animal",
+          "Haggle",
+          "Leadership",
+          "Melee (Brawling)"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Hardy",
+          "Step Aside",
+          "Very Resilient"
+        ],
+        "trappings": [
+          "Disguise Kit",
+          "Hiding Place",
+          "Pauper Follower"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Beggar King",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Bribery",
+          "Intimidate"
+        ],
+        "talents": [
+          "Cat-tongued",
+          "Dealmaker",
+          "Fearless (Watchmen)",
+          "Suave"
+        ],
+        "trappings": [
+          "Lair",
+          "Large Group of Beggar Followers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "boatman",
+    "name": "Boatman",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 52,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": 2,
+      "Ag": 1,
+      "Dex": 3,
+      "Int": 4,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Boathand",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Melee (Brawling)",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Fisherman",
+          "Strong Back",
+          "Strong Swimmer",
+          "Waterman"
+        ],
+        "trappings": [
+          "Hand Weapon (Boat Hook)",
+          "Leather Jack",
+          "Pole"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Boatman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Haggle",
+          "Navigation",
+          "Lore (Riverways)",
+          "Perception",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Etiquette (Guilder)",
+          "Seasoned Traveller",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Rope",
+          "Rowboat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Bargeswain",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Heal",
+          "Intuition",
+          "Trade (Boatbuilder)"
+        ],
+        "talents": [
+          "Craftsman (Boatbuilder)",
+          "Dealmaker",
+          "Embezzle",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Backpack",
+          "Trade Tools (Carpenter)",
+          "Trade Tools (Physician)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Barge Master",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Leadership"
+        ],
+        "talents": [
+          "Orientation",
+          "Pilot",
+          "Public Speaker",
+          "Savant (Riverways)"
+        ],
+        "trappings": [
+          "Barge and Crew",
+          "Hat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bounty-hunter",
+    "name": "Bounty Hunter",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 53,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 1,
+      "T": 3,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Thief-taker",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Cool",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Melee (Basic)",
+          "Perception",
+          "Pick Lock",
+          "Stealth (Any One)"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Shadow",
+          "Strike to Stun",
+          "Suave"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Leather Jerkin",
+          "Rope"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Bounty Hunter",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Endurance",
+          "Intimidate",
+          "Outdoor Survival",
+          "Ranged (Crossbow, Entangling, or Throwing)",
+          "Track"
+        ],
+        "talents": [
+          "Marksman",
+          "Relentless",
+          "Seasoned Traveller",
+          "Strong Back"
+        ],
+        "trappings": [
+          "2 Bolas or Crossbow with 10 Bolts or Lasso",
+          "Leather Skullcap",
+          "Manacles",
+          "Net",
+          "Warrant Papers"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Bounty Hunter",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Climb",
+          "Ride (Horse)",
+          "Swim"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Careful Strike",
+          "Dual Wielder",
+          "Sprinter"
+        ],
+        "trappings": [
+          "Mail Shirt",
+          "Riding Horse"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Bounty Hunter General",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Drive",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Deadeye Shot",
+          "Fearless (Bounties)",
+          "Hardy",
+          "Sure Shot"
+        ],
+        "trappings": [
+          "Draught Horse and Cart",
+          "4 Pairs of Manacles"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cavalryman",
+    "name": "Cavalryman",
+    "class": "Warrior",
+    "species": [
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 54,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 1,
+      "S": 2,
+      "T": null,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Horseman",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Consume Alcohol",
+          "Cool",
+          "Language (Battle)",
+          "Melee (Cavalry)",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Blackpowder or Bow)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Dual Wielder",
+          "Lightning Reflexes",
+          "Roughrider"
+        ],
+        "trappings": [
+          "Bow with 10 Arrows or Pistol with 10 Shots",
+          "Leather Jack",
+          "Light Warhorse"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Cavalryman",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Charm",
+          "Endurance",
+          "Gamble",
+          "Gossip",
+          "Melee (Basic)",
+          "Play (Horn)"
+        ],
+        "talents": [
+          "Etiquette (Soldiers)",
+          "Gunner",
+          "Seasoned Traveller",
+          "Trick Rider"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Open Helm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Cavalry Sergeant",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Intimidate",
+          "Leadership",
+          "Lore (Warfare)",
+          "Ranged (Engineering)"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Fast Shot",
+          "Hatred (Any One)",
+          "War Leader"
+        ],
+        "trappings": [
+          "Sash"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Cavalry Officer",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Intuition",
+          "Lore (Heraldry)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Inspiring",
+          "Read/Write",
+          "Robust"
+        ],
+        "trappings": [
+          "Deck of Cards",
+          "Quality Clothing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "charlatan",
+    "name": "Charlatan",
+    "class": "Rogue",
+    "species": [
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 55,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 3,
+      "Dex": 1,
+      "Int": 2,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Swindler",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Cool",
+          "Entertain (Acting)",
+          "Entertain (Storytelling)",
+          "Gamble",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Cardsharp",
+          "Criminal",
+          "Dicer",
+          "Fast Hands"
+        ],
+        "trappings": [
+          "Deck of Cards",
+          "Dice",
+          "2 Sets of Clothing"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Charlatan",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Dodge",
+          "Evaluate",
+          "Language (Thieves Tongue)",
+          "Perception",
+          "Secret Signs (Thief)"
+        ],
+        "talents": [
+          "Blather",
+          "Etiquette (Criminals)",
+          "Mimic",
+          "Secret Identity"
+        ],
+        "trappings": [
+          "Forged Document",
+          "Colourful Mixtures",
+          "Trinkets and Charms",
+          "2 Sets of Quality Clothing"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Con Artist",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Language (Any One)",
+          "Lore (Art)",
+          "Lore (Heraldry)",
+          "Pick Lock"
+        ],
+        "talents": [
+          "Attractive",
+          "Cat-tongued",
+          "Dealmaker",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Disguise Kit",
+          "Multiple Forged Documents"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Scoundrel",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Lore (Genealogy)",
+          "Research"
+        ],
+        "talents": [
+          "Gregarious",
+          "Master of Disguise",
+          "Nose for Trouble",
+          "Suave"
+        ],
+        "trappings": [
+          "Forged Seal",
+          "Writing Kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "coachman",
+    "name": "Coachman",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 56,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 2,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Postilion",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Climb",
+          "Drive",
+          "Endurance",
+          "Gossip",
+          "Melee (Basic)",
+          "Perception",
+          "Play (Horn)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Animal Affinity",
+          "Combat Aware",
+          "Seasoned Traveller",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Coach Horn",
+          "Hat",
+          "Leather Jerkin",
+          "Warm Coat"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Coachman",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Consume Alcohol",
+          "Intuition",
+          "Lore (Local)",
+          "Navigation",
+          "Ranged (Blackpowder)",
+          "Ranged (Entangling)"
+        ],
+        "talents": [
+          "Crack the Whip",
+          "Criminal",
+          "Gunner",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Blunderbuss with 10 Shots",
+          "Whip"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Coach Master",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Training (Horse)",
+          "Intimidate",
+          "Language (Any One)",
+          "Lore (Routes)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Fearless (Outlaws)",
+          "Marksman",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Pistol with 10 Shots",
+          "Quality Cloak"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Route Master",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Haggle",
+          "Leadership"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Etiquette (Any One)",
+          "Orientation",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Fleet of Coaches and Horses",
+          "Maps"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "duellist",
+    "name": "Duellist",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "High Elf",
+      "Human"
+    ],
+    "page": 57,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 3,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Fencer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Cool",
+          "Dodge",
+          "Gamble",
+          "Heal",
+          "Intuition",
+          "Language (Classical)",
+          "Melee (Any One)",
+          "Perception"
+        ],
+        "talents": [
+          "Beat Blade",
+          "Distract",
+          "Feint",
+          "Step Aside"
+        ],
+        "trappings": [
+          "Melee Weapon (Any)",
+          "Sling Bag containing Clothing and 1d10 Bandages"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Duellist",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Endurance",
+          "Intimidate",
+          "Melee (Any One)",
+          "Ranged (Blackpowder)",
+          "Trade (Gunsmith)"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Dual Wielder",
+          "Etiquette (Any One)",
+          "Fast Shot"
+        ],
+        "trappings": [
+          "Main Gauche or Sword-breaker",
+          "Pistol with 10 Shots"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Duelmaster",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Leadership",
+          "Lore (Warfare)",
+          "Melee (Any One)",
+          "Perform (Acrobatics)"
+        ],
+        "talents": [
+          "Ambidextrous",
+          "Disarm",
+          "Reversal",
+          "Riposte"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Quality Rapier",
+          "Trusty Second",
+          "2 Wooden Training Swords"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Judicial Champion",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Lore (Law)",
+          "Melee (Any One)"
+        ],
+        "talents": [
+          "Combat Master",
+          "Menacing",
+          "Reaction Strike",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "2 Quality Weapons"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "engineer",
+    "name": "Engineer",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 58,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 2,
+      "S": 1,
+      "T": null,
+      "I": 3,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Student Engineer",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Art (Drawing)",
+          "Consume Alcohol",
+          "Cool",
+          "Endurance",
+          "Evaluate",
+          "Language (Classical)",
+          "Lore (Engineering)",
+          "Ranged (Engineering)",
+          "Research",
+          "Trade (Engineer)"
+        ],
+        "talents": [
+          "Craftsman (Engineer)",
+          "Read/Write",
+          "Tinker",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Book (Engineer)",
+          "Hammer and Spikes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Engineer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Drive",
+          "Language (Guilder)",
+          "Lore (Science)",
+          "Navigation",
+          "Ride (Horse)",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Etiquette (Guilder)",
+          "Etiquette (Scholars)",
+          "Gunner",
+          "Marksman"
+        ],
+        "trappings": [
+          "Guild Licence",
+          "Trade Tools (Engineer)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Engineer",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Animal Training (Pigeon)",
+          "Dodge",
+          "Language (Khazalid)",
+          "Leadership"
+        ],
+        "talents": [
+          "Master Tradesman (Engineer)",
+          "Orientation",
+          "Sniper",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "Workshop (Engineer)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Chartered Engineer",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any One)",
+          "Perception"
+        ],
+        "talents": [
+          "Embezzle",
+          "Magnum Opus",
+          "Rapid Reload",
+          "Savant (Engineering)"
+        ],
+        "trappings": [
+          "Library (Engineering)",
+          "Quality Trade Tools (Engineer)",
+          "Large Workshop (Engineer)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entertainer",
+    "name": "Entertainer",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 59,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": 3,
+      "S": null,
+      "T": 4,
+      "I": null,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": null,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Busker",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Consume Alcohol",
+          "Dodge",
+          "Entertain (Any One)",
+          "Gossip",
+          "Haggle",
+          "Perform (Any One)",
+          "Play (Any One)",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Attractive",
+          "Mimic",
+          "Perfect Pitch",
+          "Suave"
+        ],
+        "trappings": [
+          "Bowl",
+          "Musical Instrument"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Entertainer",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Entertain (Any One)",
+          "Melee (Basic)",
+          "Perform (Any One)",
+          "Play (Any One)",
+          "Ranged (Throwing)",
+          "Ride (Any One)"
+        ],
+        "talents": [
+          "Contortionist",
+          "Jump Up",
+          "Sharpshooter",
+          "Trick Rider"
+        ],
+        "trappings": [
+          "Costume",
+          "Instrument",
+          "5 Throwing Knives"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Troubadour",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Animal Training (Any One)",
+          "Art (Writing)",
+          "Language (Any One)"
+        ],
+        "talents": [
+          "Blather",
+          "Master of Disguise",
+          "Public Speaker",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Trained Animal",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Troupe Leader",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Drive",
+          "Leadership"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Etiquette (Any One)",
+          "Seasoned Traveller",
+          "Sharp"
+        ],
+        "trappings": [
+          "Draught Horses and Wagon (Stage)",
+          "Troupe of Entertainers",
+          "Wardrobe of Costumes and Props"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "envoy",
+    "name": "Envoy",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 60,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 2,
+      "Ag": null,
+      "Dex": 4,
+      "Int": 1,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Herald",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Art (Writing)",
+          "Athletics",
+          "Charm",
+          "Dodge",
+          "Drive",
+          "Endurance",
+          "Haggle",
+          "Lore (Heraldry)",
+          "Lore (Politics)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Blather",
+          "Etiquette (Nobles)",
+          "Read/Write",
+          "Suave"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Livery",
+          "Scroll Case"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Envoy",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Intuition",
+          "Language (Any One)"
+        ],
+        "talents": [
+          "Etiquette (Any One)",
+          "Gregarious",
+          "Linguistics",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "10 Sheets of Parchment",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Diplomat",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Consume Alcohol",
+          "Intimidate",
+          "Language (Any One)",
+          "Leadership"
+        ],
+        "talents": [
+          "Carouser",
+          "Cat-tongued",
+          "Dealmaker",
+          "Schemer"
+        ],
+        "trappings": [
+          "Aide",
+          "Quality Clothes",
+          "Map"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Ambassador",
+        "status": "Gold",
+        "standing": 5,
+        "skills": [
+          "Lore (All)",
+          "Secret Signs (Any One)"
+        ],
+        "talents": [
+          "Briber",
+          "Commanding Presence",
+          "Noble Blood",
+          "Savant (Politics)"
+        ],
+        "trappings": [
+          "Best Quality Courtly Clothes",
+          "Herald",
+          "Staff of Diplomats"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fence",
+    "name": "Fence",
+    "class": "Rogue",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 61,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": null,
+      "Dex": 2,
+      "Int": 1,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Broker",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Consume Alcohol",
+          "Evaluate",
+          "Gamble",
+          "Gossip",
+          "Haggle",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Cardsharp",
+          "Criminal",
+          "Gregarious",
+          "Numismatics"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Stolen Goods worth 1d10 Shillings"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Fence",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Intuition",
+          "Language (Thieves Tongue)",
+          "Lore (Heraldry)",
+          "Secret Signs (Thief)",
+          "Trade (Engraver)"
+        ],
+        "talents": [
+          "Briber",
+          "Dealmaker",
+          "Etiquette (Criminals)",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Eyeglass",
+          "Trade Tools (Engraver)",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Trafficker",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Drive",
+          "Entertain (Storytelling)",
+          "Lore (Art)",
+          "Research"
+        ],
+        "talents": [
+          "Cat-tongued",
+          "Etiquette (Any One)",
+          "Kingpin",
+          "Suave"
+        ],
+        "trappings": [
+          "Horse and Cart",
+          "Pawnbroker’s Shop"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Black Marketeer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Intimidate",
+          "Leadership"
+        ],
+        "talents": [
+          "Iron Will",
+          "Menacing",
+          "Savvy",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "Gang of Racketeers",
+          "Network of Informers",
+          "Warehouse"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "flagellant",
+    "name": "Flagellant",
+    "class": "Ranger",
+    "species": [
+      "Human"
+    ],
+    "page": 62,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 2,
+      "T": 1,
+      "I": null,
+      "Ag": 3,
+      "Dex": null,
+      "Int": null,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Penitent",
+        "status": "Brass",
+        "standing": 0,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Heal",
+          "Intimidate",
+          "Intuition",
+          "Lore (Sigmar)",
+          "Melee (Flail)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Berserk Charge",
+          "Flagellant",
+          "Frenzy",
+          "Stone Soup"
+        ],
+        "trappings": [
+          "Flail",
+          "Tattered Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Flagellant",
+        "status": "Brass",
+        "standing": 0,
+        "skills": [
+          "Art (Icons)",
+          "Language (Classical)",
+          "Lore (The Empire)",
+          "Melee (Basic)",
+          "Melee (Two-handed)",
+          "Ranged (Sling)"
+        ],
+        "talents": [
+          "Dual Wielder",
+          "Fearless (Everything)",
+          "Hardy",
+          "Hatred (Heretics)"
+        ],
+        "trappings": [
+          "Great Weapon (Military Flail)",
+          "Religious Symbol"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Zealot",
+        "status": "Brass",
+        "standing": 0,
+        "skills": [
+          "Charm",
+          "Language (Any One)",
+          "Lore (Theology)",
+          "Perception"
+        ],
+        "talents": [
+          "Furious Assault",
+          "Implacable",
+          "Menacing",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Religious Relic"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Prophet of Doom",
+        "status": "Brass",
+        "standing": 0,
+        "skills": [
+          "Entertain (Speeches)",
+          "Leadership"
+        ],
+        "talents": [
+          "Battle Rage",
+          "Frightening",
+          "Impassioned Zeal",
+          "Jump Up"
+        ],
+        "trappings": [
+          "Book (Religion)",
+          "Followers (including Penitents, Flagellants, and Zealots)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grave-robber",
+    "name": "Grave Robber",
+    "class": "Rogue",
+    "species": [
+      "Halfling",
+      "Human"
+    ],
+    "page": 63,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": 2,
+      "Int": null,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Penny Thief",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Melee (Basic)",
+          "Perception",
+          "Stealth (Any One)"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Criminal",
+          "Flee!",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Crowbar",
+          "Hooded Cloak",
+          "Sack",
+          "Shovel"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Grave Robber",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Bribery",
+          "Drive",
+          "Evaluate",
+          "Haggle",
+          "Pick Lock",
+          "Set Trap"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Etiquette (Criminals)",
+          "Night Vision",
+          "Resistant (Disease)"
+        ],
+        "trappings": [
+          "Backpack",
+          "Handcart",
+          "Hand Weapon",
+          "Storm Lantern and Oil",
+          "Tarpaulin",
+          "Trade Tools (Thief)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Tomb Robber",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Lore (History)",
+          "Outdoor Survival",
+          "Research"
+        ],
+        "talents": [
+          "Read/Write",
+          "Strike Mighty Blow",
+          "Trapper",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Horse and Cart",
+          "Leather Jack",
+          "Pick",
+          "Rope"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Treasure Hunter",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Navigation",
+          "Trade (Engineer)"
+        ],
+        "talents": [
+          "Fearless (Undead)",
+          "Sixth Sense",
+          "Strong-minded",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Bedroll",
+          "Maps",
+          "Tent",
+          "Trade Tools (Engineer)",
+          "Writing Kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "guard",
+    "name": "Guard",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 64,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 2,
+      "I": 1,
+      "Ag": 4,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Sentry",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Consume Alcohol",
+          "Cool",
+          "Entertain (Storytelling)",
+          "Gamble",
+          "Gossip",
+          "Intimidate",
+          "Intuition",
+          "Melee (Basic)",
+          "Melee (Brawling)",
+          "Perception"
+        ],
+        "talents": [
+          "Dicer",
+          "Etiquette (Servants)",
+          "Robust",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Buckler",
+          "Leather Jerkin",
+          "Storm Lantern with Oil"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Guard",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Dodge",
+          "Endurance",
+          "Heal",
+          "Melee (Polearm)",
+          "Ranged (Bow)"
+        ],
+        "talents": [
+          "Drilled",
+          "Reversal",
+          "Shieldsman",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Bow with 10 Arrows",
+          "Sleeved Mail Shirt",
+          "Shield",
+          "Spear"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Honour Guard",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Language (Battle)",
+          "Lore (Heraldry)",
+          "Melee (Two-handed)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Etiquette (Any One)",
+          "Fearless (Intruders)",
+          "Reaction Strike",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Great Weapon or Halberd",
+          "Helmet",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Guard Officer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Combat Master",
+          "Furious Assault",
+          "Iron Will",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Squad of Guards"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hedge-witch",
+    "name": "Hedge Witch",
+    "class": "Peasant",
+    "species": [
+      "Human"
+    ],
+    "page": 65,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 4,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Hedge Apprentice",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Channelling (Magick)",
+          "Charm",
+          "Cool",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Folklore)",
+          "Lore (Herbs)",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Trade (Herbalist)"
+        ],
+        "talents": [
+          "Craftsman (Herbalist)",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Amulet",
+          "Hand Weapon (Sickle)",
+          "Quarterstaff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Hedge Witch",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Heal",
+          "Lore (Local)",
+          "Lore (Magic)",
+          "Lore (Spirits)",
+          "Pray",
+          "Secret Signs (Hedgefolk)"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Arcane Magic (Hedgecraft)",
+          "Sixth Sense",
+          "Striding Gait (Any One)"
+        ],
+        "trappings": [
+          "Healing Poultice",
+          "Trade Tools (Herbalist)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Hedge Master",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Gossip",
+          "Leadership",
+          "Perception"
+        ],
+        "talents": [
+          "Instinctive Diction",
+          "Magical Sense",
+          "Master Tradesman (Herbalist)",
+          "Savant (Folklore)"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Isolated Hut"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Hedgewise",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Endurance",
+          "Lore (Genealogy)"
+        ],
+        "talents": [
+          "Acute Sense (Any One)",
+          "Pure Soul",
+          "Resistant (Disease)",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Assortment of Animal Skulls",
+          "Ceremonial Cloak and Garland"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "herbalist",
+    "name": "Herbalist",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 66,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 2,
+      "I": 3,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 1,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Herb Gatherer",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Endurance",
+          "Heal",
+          "Lore (Herbs)",
+          "Outdoor Survival",
+          "Perception",
+          "Swim",
+          "Trade (Herbalist)",
+          "Trade (Poisoner)"
+        ],
+        "talents": [
+          "Craftsman (Herbalist)",
+          "Hardy",
+          "Orientation",
+          "Striding Gait (Any One)"
+        ],
+        "trappings": [
+          "Boots",
+          "Cloak",
+          "Hand Weapon (Sickle)",
+          "Sling Bag containing Assortment of Herbs"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Herbalist",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Charm",
+          "Evaluate",
+          "Gossip",
+          "Haggle",
+          "Lore (Local)",
+          "Navigation"
+        ],
+        "talents": [
+          "Acute Sense (Taste)",
+          "Field Dressing",
+          "Nimble-fingered",
+          "Sharp"
+        ],
+        "trappings": [
+          "Trade Tools (Herbalist)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Herb Master",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Cool",
+          "Leadership",
+          "Lore (Medicine)"
+        ],
+        "talents": [
+          "Concoct",
+          "Dealmaker",
+          "Master Tradesman (Herbalist)",
+          "Savvy"
+        ],
+        "trappings": [
+          "3 Herbal Remedies",
+          "Herb Gatherer",
+          "Workshop (Herbalist)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Herbwise",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm Animal",
+          "Drive"
+        ],
+        "talents": [
+          "Etiquette (Scholars)",
+          "Read/Write",
+          "Resistant (Poison)",
+          "Savant (Herbs)"
+        ],
+        "trappings": [
+          "Book (Herbs)",
+          "Pony and Cart"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 67,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 2,
+      "S": null,
+      "T": 3,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Trapper",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Climb",
+          "Endurance",
+          "Outdoor Survival",
+          "Perception",
+          "Set Trap",
+          "Stealth (Rural)",
+          "Track"
+        ],
+        "talents": [
+          "Hardy",
+          "Rover",
+          "Striding Gait (All)",
+          "Trapper"
+        ],
+        "trappings": [
+          "Hand Weapon (Axe)",
+          "Selection of Animal Traps",
+          "Sturdy Boots and Cloak"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Hunter",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Animal Training (Dog)",
+          "Cool",
+          "Lore (Beasts)",
+          "Melee (Polearm)",
+          "Ranged (Blackpowder, Bow, Crossbow, Sling, or Throwing)",
+          "Secret Signs (Ranger)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Hunter’s Eye",
+          "Marksman",
+          "Sharpshooter"
+        ],
+        "trappings": [
+          "Hunting Dog",
+          "Ranged Weapon (Any One)",
+          "Spear"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Tracker",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Haggle",
+          "Navigation",
+          "Swim"
+        ],
+        "talents": [
+          "Acute Sense (Any One)",
+          "Deadeye Shot",
+          "Fearless (Beasts)",
+          "Sure Shot"
+        ],
+        "trappings": [
+          "Backpack",
+          "Bedroll",
+          "Tent"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Huntsmaster",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Animal Training (Hawk)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Etiquette (Servants)",
+          "Fast Shot",
+          "Robust",
+          "Sniper"
+        ],
+        "trappings": [
+          "Hawk Mews or Kennel of Hunting Dogs",
+          "Riding Horse"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "investigator",
+    "name": "Investigator",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 68,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": 4,
+      "Int": 2,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Enquirer",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Gossip",
+          "Intuition",
+          "Melee (Brawling)",
+          "Perception",
+          "Stealth (Urban)",
+          "Track"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Beneath Notice",
+          "Read/Write",
+          "Sharp"
+        ],
+        "trappings": [
+          "Lamp Oil",
+          "Lantern",
+          "Journal",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Investigator",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Bribery",
+          "Consume Alcohol",
+          "Evaluate",
+          "Intimidate",
+          "Pick Lock",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Etiquette (Any One)",
+          "Nose for Trouble",
+          "Savvy",
+          "Shadow"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Hand Weapon",
+          "Magnifying Glass",
+          "Lockpick"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Sleuth",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Leadership",
+          "Lore (Any One)",
+          "Lore (Law)",
+          "Research"
+        ],
+        "talents": [
+          "Bookish",
+          "Break and Enter",
+          "Sixth Sense",
+          "Suave"
+        ],
+        "trappings": [
+          "Assistant",
+          "Office"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Detective",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Lore (Any One)",
+          "Secret Signs (Any One)"
+        ],
+        "talents": [
+          "Acute Sense (Any One)",
+          "Savant (Any One)",
+          "Speedreader",
+          "Tower of Memories"
+        ],
+        "trappings": [
+          "Network of Informers",
+          "Spyglass"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "knave",
+    "name": "Knave",
+    "class": "Rogue",
+    "species": [
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 69,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Hustler",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Consume Alcohol",
+          "Entertain (Any One)",
+          "Gamble",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Lore (Local)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Attractive",
+          "Blather",
+          "Criminal",
+          "Gregarious"
+        ],
+        "trappings": [
+          "Flask of Spirits"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Knave",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Endurance",
+          "Language (Thieves Tongue)",
+          "Lore (Any One)",
+          "Melee (Basic)",
+          "Perception",
+          "Secret Signs (Thief)"
+        ],
+        "talents": [
+          "Carouser",
+          "Etiquette (Any One)",
+          "Resistant (Disease or Poison)",
+          "Suave"
+        ],
+        "trappings": [
+          "Dose of Weirdroot",
+          "Quality Clothing"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Procurer",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Evaluate",
+          "Leadership"
+        ],
+        "talents": [
+          "Briber",
+          "Dealmaker",
+          "Embezzle",
+          "Numismatics"
+        ],
+        "trappings": [
+          "A Ring of Hustlers"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Ringleader",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intimidate",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Kingpin",
+          "Read/Write",
+          "Savant (Local)",
+          "Schemer"
+        ],
+        "trappings": [
+          "A Ring of Knaves",
+          "Townhouse with Discreet Back Entrance"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "knight",
+    "name": "Knight",
+    "class": "Warrior",
+    "species": [
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 70,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 2,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Squire",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Cool",
+          "Heal",
+          "Lore (Heraldry)",
+          "Melee (Basic)",
+          "Melee (Cavalry)",
+          "Ride (Horse)",
+          "Trade (Farrier)"
+        ],
+        "talents": [
+          "Etiquette (Nobles, or Soldiers)",
+          "Noble Blood",
+          "Strike Mighty Blow",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Mail Shirt",
+          "Riding Horse",
+          "Shield",
+          "Trade Tools (Farrier)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Knight",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Dodge",
+          "Endurance",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Any One)",
+          "Play (Horn)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Roughrider",
+          "Seasoned Traveller",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Destrier",
+          "Melee Weapon (Any)",
+          "Lance",
+          "Plate Armour",
+          "Sword"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "First Knight",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Leadership",
+          "Lore (Warfare)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Fearless (Any One)",
+          "Stout-hearted",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Barding",
+          "Small Unit of Knights"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Knight of the Inner Circle",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Lore (Any One)",
+          "Secret Signs (Knightly Order)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Iron Will",
+          "Read/Write",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Large Unit of Knights or Several Small Units of Knights",
+          "Plumed Great Helm",
+          "Squire"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lawyer",
+    "name": "Lawyer",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 71,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 1,
+      "Ag": null,
+      "Dex": 3,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Student Lawyer",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Consume Alcohol",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Intuition",
+          "Language (Classical)",
+          "Lore (Law)",
+          "Lore (Theology)",
+          "Research"
+        ],
+        "talents": [
+          "Blather",
+          "Etiquette (Scholars)",
+          "Read/Write",
+          "Speedreader"
+        ],
+        "trappings": [
+          "Book (Law)",
+          "Magnifying Glass"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Lawyer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Cool",
+          "Haggle",
+          "Intimidate",
+          "Language (Guilder)",
+          "Lore (Local)",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Argumentative",
+          "Briber",
+          "Etiquette (Criminals)",
+          "Etiquette (Guilder)"
+        ],
+        "trappings": [
+          "Court Robes",
+          "Guild Licence",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Barrister",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Art (Writing)",
+          "Entertain (Speeches)",
+          "Lore (Politics)",
+          "Perception"
+        ],
+        "talents": [
+          "Cat-tongued",
+          "Impassioned Zeal",
+          "Menacing",
+          "Savant (Law)"
+        ],
+        "trappings": [
+          "Assistant (Student or Servant)",
+          "Office"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Judge",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Leadership",
+          "Lore (Any One)"
+        ],
+        "talents": [
+          "Bookish",
+          "Commanding Presence",
+          "Master Orator",
+          "Savvy"
+        ],
+        "trappings": [
+          "Gavel",
+          "Ostentatious Wig"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "merchant",
+    "name": "Merchant",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 72,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Trader",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Bribery",
+          "Charm Animal",
+          "Consume Alcohol",
+          "Drive",
+          "Evaluate",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Navigation"
+        ],
+        "talents": [
+          "Blather",
+          "Dealmaker",
+          "Read/Write",
+          "Suave"
+        ],
+        "trappings": [
+          "Abacus",
+          "Canvas Tarpaulin",
+          "Mule and Cart",
+          "3d10 Shillings"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Merchant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Charm",
+          "Gamble",
+          "Language (Any One)",
+          "Language (Guilder)",
+          "Lore (Local)",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Briber",
+          "Embezzle",
+          "Etiquette (Guilder)",
+          "Savvy"
+        ],
+        "trappings": [
+          "Barge or 2 Wagons",
+          "20 GC",
+          "Guild Licence"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Merchant",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Language (Any)",
+          "Language (Classical)",
+          "Leadership"
+        ],
+        "talents": [
+          "Cat-tongued",
+          "Etiquette (Any One)",
+          "Numismatics",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "100 GC",
+          "Townhouse with Servants",
+          "Warehouse"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Merchant Prince",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Lore (Any One)",
+          "Intimidate"
+        ],
+        "talents": [
+          "Iron Will",
+          "Luck",
+          "Schemer",
+          "Wealthy"
+        ],
+        "trappings": [
+          "2 Barges and 4 Wagons",
+          "Large Town Estate",
+          "1000 GC",
+          "Quality Clothing",
+          "2 Warehouses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "messenger",
+    "name": "Messenger",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 73,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": 3,
+      "T": 1,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 2,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Runner",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Haggle",
+          "Melee (Basic)",
+          "Navigation",
+          "Perception",
+          "Secret Signs (Ranger or Thief)"
+        ],
+        "talents": [
+          "Criminal",
+          "Flee!",
+          "Fleet-footed",
+          "Sprinter"
+        ],
+        "trappings": [
+          "Scroll Case"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Messenger",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Lore (Local)",
+          "Outdoor Survival",
+          "Ride (Horse)",
+          "Swim"
+        ],
+        "talents": [
+          "Iron Will",
+          "Read/Write",
+          "Seasoned Traveller",
+          "Striding Gait (All)"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Leather Jack",
+          "Riding Horse"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Courier",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Gossip",
+          "Lore (Geography)"
+        ],
+        "talents": [
+          "Nose for Trouble",
+          "Step Aside",
+          "Tenacious",
+          "Trick Rider"
+        ],
+        "trappings": [
+          "Backpack",
+          "Saddlebags",
+          "Shield"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Courier-captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Research"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Hatred (Outlaws)",
+          "Orientation",
+          "Schemer"
+        ],
+        "trappings": [
+          "Couriers",
+          "Mail Shirt",
+          "Writing Kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "miner",
+    "name": "Miner",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 74,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": 1,
+      "Ag": null,
+      "Dex": 3,
+      "Int": null,
+      "WP": 2,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Prospector",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Cool",
+          "Endurance",
+          "Gossip",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Melee (Two-handed)",
+          "Outdoor Survival",
+          "Perception",
+          "Secret Signs (Vagabond)"
+        ],
+        "talents": [
+          "Robust",
+          "Striding Gait (Rocky)",
+          "Strong Back",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Charcoal Stick",
+          "Crude Map",
+          "Great Weapon (Two-handed Pick)",
+          "Hand Weapon (Pick)",
+          "Pan",
+          "Spade"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Miner",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Evaluate",
+          "Haggle",
+          "Secret Signs (Miner)",
+          "Stealth (Underground)",
+          "Trade (Explosives)"
+        ],
+        "talents": [
+          "Night Vision",
+          "Strike Mighty Blow",
+          "Sturdy",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Davrich Lamp",
+          "Lamp Oil",
+          "Leather Jack",
+          "Open Helm (Miner’s Helm)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Miner",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Intuition",
+          "Lore (Geology)",
+          "Navigation",
+          "Trade (Engineer)"
+        ],
+        "talents": [
+          "Careful Strike",
+          "Craftsman (Explosives)",
+          "Tinker",
+          "Tunnel Fighter"
+        ],
+        "trappings": [
+          "Trade Tools (Engineer)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Mine Foreman",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Leadership"
+        ],
+        "talents": [
+          "Argumentative",
+          "Embezzle",
+          "Read/Write",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Crew of Miners",
+          "Writing Kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mystic",
+    "name": "Mystic",
+    "class": "Peasant",
+    "species": [
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 75,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 4,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 2,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Fortune Teller",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Dodge",
+          "Entertain (Fortune-telling)",
+          "Gossip",
+          "Intuition",
+          "Lore (Astrology)",
+          "Lore (Theology)",
+          "Perception",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Holy Visions",
+          "Luck",
+          "Second Sight",
+          "Suave"
+        ],
+        "trappings": [
+          "Cheap Jewellery",
+          "Deck of Cards or Dice"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Mystic",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Cool",
+          "Entertain (Storytelling)",
+          "Evaluate",
+          "Haggle",
+          "Intimidate",
+          "Secret Signs (Vagabond)"
+        ],
+        "talents": [
+          "Detect Artefact",
+          "Sixth Sense",
+          "Supportive",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Selection of Amulets"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Auger",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Writing)",
+          "Channelling (Azyr)",
+          "Language (Magick)",
+          "Lore (Magic)"
+        ],
+        "talents": [
+          "Magical Sense",
+          "Nose for Trouble",
+          "Petty Magic",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Seer",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm Animal",
+          "Lore (Prophecy)"
+        ],
+        "talents": [
+          "Arcane Magic (Heavens)",
+          "Menacing",
+          "Strong-minded",
+          "Witch!"
+        ],
+        "trappings": [
+          "Trade Tools (Astrology)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 76,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 4,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 2,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Scion",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Consume Alcohol",
+          "Gamble",
+          "Gossip",
+          "Intimidate",
+          "Language (Classical)",
+          "Leadership",
+          "Lore (Heraldry)",
+          "Melee (Fencing)",
+          "Perform (Dancing)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Etiquette (Nobles)",
+          "Luck",
+          "Noble Blood",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Courtly Garb",
+          "Foil or Hand Mirror",
+          "Velvet Cloak",
+          "Jewellery worth 3d10 GC",
+          "Personal Servant"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Noble",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Language (Any One)",
+          "Lore (Politics)",
+          "Melee (Parry) or Ranged (Blackpowder)",
+          "Play (Any One)"
+        ],
+        "talents": [
+          "Briber",
+          "Carouser",
+          "Menacing",
+          "Suave"
+        ],
+        "trappings": [
+          "Coach or Riding Horse",
+          "4 Household Servants",
+          "Jewellery worth 50 GC",
+          "Main-gauche or Pistol with 10 Shots",
+          "Quality Courtly Garb"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Grandee",
+        "status": "Gold",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Lore (Genealogy)",
+          "Lore (Local)",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Fearless (Paupers)",
+          "Public Speaker",
+          "Schemer"
+        ],
+        "trappings": [
+          "Fiefdom",
+          "200 GC",
+          "Jewellery worth 200 GC",
+          "2 sets of Quality Courtly Garb",
+          "Signet Ring"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Noble Lord",
+        "status": "Gold",
+        "standing": 7,
+        "skills": [
+          "Charm Animal",
+          "Intuition"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Iron Will",
+          "War Leader",
+          "Wealthy"
+        ],
+        "trappings": [
+          "500 GC",
+          "Jewellery worth 500 GC",
+          "Province"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nun",
+    "name": "Nun",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 77,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 3,
+      "I": 4,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Novice",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Art (Calligraphy)",
+          "Charm",
+          "Cool",
+          "Endurance",
+          "Heal",
+          "Language (Classical)",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Pray",
+          "Trade (Brewer)"
+        ],
+        "talents": [
+          "Bless (Any One)",
+          "Holy Visions",
+          "Panhandle",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Religious Symbol",
+          "Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Nun",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Intuition",
+          "Language (Any One)",
+          "Lore (Local)",
+          "Melee (Any One)"
+        ],
+        "talents": [
+          "Etiquette (Cultists)",
+          "Field Dressing",
+          "Invoke (Any One)",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Book (Religion)",
+          "Religious Relic"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Abbess",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Intimidate",
+          "Leadership",
+          "Lore (Politics)",
+          "Perception"
+        ],
+        "talents": [
+          "Inspiring",
+          "Resistant (Any One)",
+          "Savant (Theology)",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Abbey",
+          "Library (Theology)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Prioress General",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Lore (Any One)",
+          "Research"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Iron Will",
+          "Pure Soul",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Religious Order"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outlaw",
+    "name": "Outlaw",
+    "class": "Rogue",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 78,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 1,
+      "T": 3,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Brigand",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Intimidate",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Criminal",
+          "Menacing",
+          "Rover",
+          "Very Resilient"
+        ],
+        "trappings": [
+          "Bedroll",
+          "Hand Weapon",
+          "Leather Jerkin",
+          "Tinderbox"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Outlaw",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Consume Alcohol",
+          "Gossip",
+          "Lore (Local)",
+          "Ranged (Bow or Crossbow)",
+          "Secret Signs (Scout)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Marksman",
+          "Robust",
+          "Striding Gait (Any One)",
+          "Trapper"
+        ],
+        "trappings": [
+          "Bow with 10 Arrows or Crossbow with 10 Bolts or Shield",
+          "Tent"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Outlaw Chief",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Leadership",
+          "Navigation",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Deadeye Shot",
+          "Dual Wielder",
+          "Fearless (Roadwardens)",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Band of Outlaws",
+          "Helmet",
+          "Sleeved Mail Shirt"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Bandit King",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Frightening",
+          "Inspiring",
+          "Iron Will",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "‘Fiefdom’ of Outlaw Chiefs",
+          "Lair"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pedlar",
+    "name": "Pedlar",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 79,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": 2,
+      "Int": 4,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Vagabond",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Endurance",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Haggle",
+          "Navigation",
+          "Outdoor Survival",
+          "Secret Signs (Vagabond)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Flee!",
+          "Gregarious",
+          "Stone Soup",
+          "Striding Gait (Any One)"
+        ],
+        "trappings": [
+          "Basket",
+          "Blanket",
+          "Goods worth 2d10 Pennies",
+          "Small Tent"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Pedlar",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Consume Alcohol",
+          "Drive",
+          "Evaluate",
+          "Lore (Local)",
+          "Perception",
+          "Trade (Tinker)"
+        ],
+        "talents": [
+          "Seasoned Traveller",
+          "Sturdy",
+          "Tinker",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Backpack or Handcart",
+          "Bedroll",
+          "Goods worth 8d20 Pennies",
+          "Pots and Pans",
+          "Trade Tools (Tinker)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Carter",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Intuition",
+          "Ranged (Sling)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Orientation",
+          "Sixth Sense",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Mule and Cart",
+          "Goods worth at least 2d10 Shillings",
+          "Sling with 10 Bullets"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Wandering Trader",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Language (Any One)",
+          "Lore (Geography)"
+        ],
+        "talents": [
+          "Etiquette (Any One)",
+          "Numismatics",
+          "Strong-minded",
+          "Suave"
+        ],
+        "trappings": [
+          "Draught Horse and Wagon",
+          "Goods worth at least 3d10 Shillings",
+          "4d10 Shillings"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "physician",
+    "name": "Physician",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 80,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 2,
+      "I": 3,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Physician’s Apprentice",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Cool",
+          "Endurance",
+          "Gossip",
+          "Heal",
+          "Language (Classical)",
+          "Lore (Medicine)",
+          "Research",
+          "Trade (Barber)"
+        ],
+        "talents": [
+          "Bookish",
+          "Craftsman (Barber)",
+          "Field Dressing",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Bandages",
+          "Healing Draught"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Physician",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Haggle",
+          "Language (Guilder)",
+          "Lore (Science)",
+          "Secret Signs (Guilder)",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Etiquette (Guilder)",
+          "Etiquette (Scholars)",
+          "Nimble-fingered",
+          "Surgery"
+        ],
+        "trappings": [
+          "Book (Medicine)",
+          "Guild Licence",
+          "Trade Tools (Physician)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Doktor",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Gamble",
+          "Intuition",
+          "Leadership"
+        ],
+        "talents": [
+          "Ambidextrous",
+          "Resistant (Disease)",
+          "Savvy",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Workshop (Physician)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Court Physician",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Genealogy)",
+          "Perform (Dancing)"
+        ],
+        "talents": [
+          "Carouser",
+          "Etiquette (Nobles)",
+          "Savant (Medicine)",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Courtly Attire",
+          "Letter of Appointment"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pilot",
+    "name": "Pilot",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 81,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Riverguide",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Consume Alcohol",
+          "Gossip",
+          "Intuition",
+          "Lore (Local)",
+          "Lore (Riverways)",
+          "Navigation",
+          "Outdoor Survival",
+          "Perception",
+          "Row",
+          "Swim"
+        ],
+        "talents": [
+          "Fisherman",
+          "Orientation",
+          "River Guide",
+          "Waterman"
+        ],
+        "trappings": [
+          "Hand Weapon (Boat Hook)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Pilot",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Cool",
+          "Entertain (Storytelling)",
+          "Haggle",
+          "Language (Any One)"
+        ],
+        "talents": [
+          "Etiquette (Guilder)",
+          "Night Vision",
+          "Nose for Trouble",
+          "Pilot"
+        ],
+        "trappings": [
+          "Leather Jerkin",
+          "Rope",
+          "Rowboat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Navigator",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Endurance",
+          "Intimidate",
+          "Lore (Local)",
+          "Lore (Wrecks)"
+        ],
+        "talents": [
+          "Acute Sense (Sight)",
+          "Dealmaker",
+          "Savant (Riverways)",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Pole",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Pilot",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Sail"
+        ],
+        "talents": [
+          "Seasoned Traveller",
+          "Sharp",
+          "Sixth Sense",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Boathand",
+          "Small Riverboat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pit-fighter",
+    "name": "Pit Fighter",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 82,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": 2,
+      "Ag": 3,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Pugilist",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Entertain (Taunt)",
+          "Gamble",
+          "Intimidate",
+          "Melee (Any One)",
+          "Melee (Brawling)"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Enclosed Fighter",
+          "In-fighter",
+          "Iron Jaw"
+        ],
+        "trappings": [
+          "Bandages",
+          "Knuckledusters",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Pit Fighter",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Haggle",
+          "Melee (Basic)",
+          "Melee (Flail or Two-handed)",
+          "Perception",
+          "Perform (Fight)",
+          "Ranged (Entangling)"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Dual Wielder",
+          "Menacing",
+          "Shieldsman"
+        ],
+        "trappings": [
+          "Flail or Great Weapon",
+          "Net or Whip",
+          "Shield"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pit Champion",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Gossip",
+          "Heal",
+          "Intuition",
+          "Perform (Acrobatics)"
+        ],
+        "talents": [
+          "Ambidextrous",
+          "Combat Master",
+          "Disarm",
+          "Robust"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Helmet"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Pit Legend",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Ranged (Any One)"
+        ],
+        "talents": [
+          "Frightening",
+          "Furious Assault",
+          "Implacable",
+          "Reaction Strike"
+        ],
+        "trappings": [
+          "Quality Helmet"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "priest",
+    "name": "Priest",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 83,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 3,
+      "I": 4,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Endurance",
+          "Entertain (Storytelling)",
+          "Heal",
+          "Intuition",
+          "Language (Classical)",
+          "Lore (Theology)",
+          "Pray",
+          "Research"
+        ],
+        "talents": [
+          "Bless (Any One)",
+          "Holy Visions",
+          "Read/Write",
+          "Suave"
+        ],
+        "trappings": [
+          "Religious Symbol",
+          "Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Priest",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Gossip",
+          "Intimidate",
+          "Leadership",
+          "Lore (Any One)",
+          "Melee (Basic)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Blather",
+          "Bookish",
+          "Etiquette (Cultists)",
+          "Invoke (Any One)"
+        ],
+        "trappings": [
+          "Book (Religion)",
+          "Ceremonial Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Art (Writing)",
+          "Entertain (Speeches)",
+          "Lore (Politics)",
+          "Perception"
+        ],
+        "talents": [
+          "Acute Sense (Any One)",
+          "Hatred (Any One)",
+          "Impassioned Zeal",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Quality Robes",
+          "Religious Relic",
+          "Subordinate Priests",
+          "Temple"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Lector",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Language (Any One)",
+          "Lore (Heraldry)"
+        ],
+        "talents": [
+          "Master Orator",
+          "Pure Soul",
+          "Resistant (Any One)",
+          "Savant (Theology)"
+        ],
+        "trappings": [
+          "Library (Theology)",
+          "Subordinate High Priests"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "protagonist",
+    "name": "Protagonist",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 84,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 3,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": 2,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Braggart",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Entertain (Taunt)",
+          "Gossip",
+          "Intimidate",
+          "Melee (Basic)",
+          "Melee (Brawling)"
+        ],
+        "talents": [
+          "Criminal",
+          "Dirty Fighting",
+          "In-fighter",
+          "Menacing"
+        ],
+        "trappings": [
+          "Hood or Mask",
+          "Knuckledusters",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Protagonist",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Intuition",
+          "Perception",
+          "Pick Lock",
+          "Ride (Horse)",
+          "Stealth (Any One)"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Etiquette (Criminals)",
+          "Strike to Stun",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Mail Shirt",
+          "Riding Horse",
+          "Shield"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Hitman",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Climb",
+          "Entertain (Acting)",
+          "Ranged (Blackpowder or Crossbow or Throwing)",
+          "Trade (Poisoner)"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Careful Strike",
+          "Shadow",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Cloak",
+          "Crossbow with 10 Bolts or Pistol with 10 Shots or 5 Throwing Knives",
+          "Garotte",
+          "Poison"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Assassin",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Charm"
+        ],
+        "talents": [
+          "Dual Wielder",
+          "Furious Assault",
+          "Mimic",
+          "Secret Identity"
+        ],
+        "trappings": [
+          "Disguise Kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "racketeer",
+    "name": "Racketeer",
+    "class": "Rogue",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 85,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": 2,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Thug",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Intimidate",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Melee (Brawling)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Criminal",
+          "Dirty Fighting",
+          "Menacing"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Knuckledusters",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Racketeer",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Climb",
+          "Gossip",
+          "Language (Thieves Tongue)",
+          "Perception",
+          "Secret Signs (Thief)"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Embezzle",
+          "Etiquette (Criminals)",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Hat",
+          "Mail Shirt"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Gang Boss",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Intuition",
+          "Leadership",
+          "Ranged (Crossbow)"
+        ],
+        "talents": [
+          "Fearless (Watchmen)",
+          "Nose for Trouble",
+          "Numismatics",
+          "Robust"
+        ],
+        "trappings": [
+          "Crossbow Pistol with 10 Bolts",
+          "Gang of Thugs and Racketeers",
+          "Lair"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Crime Lord",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Law)",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Frightening",
+          "Iron Will",
+          "Kingpin"
+        ],
+        "trappings": [
+          "Network of Informers",
+          "Quality Clothing and Hat",
+          "Subordinate Gang Bosses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rat-catcher",
+    "name": "Rat Catcher",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 86,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 4,
+      "T": 1,
+      "I": 2,
+      "Ag": null,
+      "Dex": 1,
+      "Int": null,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Rat Hunter",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Animal Training (Dog)",
+          "Charm Animal",
+          "Endurance",
+          "Haggle",
+          "Melee (Basic)",
+          "Perception",
+          "Set Trap",
+          "Stealth (Underground)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Enclosed Fighter",
+          "Night Vision",
+          "Resistant (Disease)",
+          "Trapper"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Sack",
+          "Small Animal Traps",
+          "Small but Vicious Dog"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Rat Catcher",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Drive",
+          "Gossip",
+          "Language (Guilder)",
+          "Lore (Rats)",
+          "Track",
+          "Trade (Poisoner)"
+        ],
+        "talents": [
+          "Acute Sense (Hearing)",
+          "Etiquette (Guilder)",
+          "Fearless (Rats)",
+          "Tunnel Fighter"
+        ],
+        "trappings": [
+          "Pole for Dead Rats",
+          "Rat Poison"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Sewer Jack",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Intimidate",
+          "Ranged (Crossbow)"
+        ],
+        "talents": [
+          "Hardy",
+          "Stout-hearted",
+          "Strike to Injure",
+          "Very Resilient"
+        ],
+        "trappings": [
+          "Crossbow with 10 Bolts or Spear",
+          "Feinkopf Lantern",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Exterminator",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Leadership",
+          "Navigation"
+        ],
+        "talents": [
+          "Menacing",
+          "Resistant (Poison)",
+          "Robust",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Assistant",
+          "Sack of Poisoned Bait"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "riverwarden",
+    "name": "Riverwarden",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 87,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 1,
+      "T": null,
+      "I": 3,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "River Recruit",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Melee (Basic)",
+          "Perception",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Strong Back",
+          "Strong Swimmer",
+          "Very Strong",
+          "Waterman"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Leather Jack",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Riverwarden",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Climb",
+          "Gossip",
+          "Intimidate",
+          "Intuition",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Criminal",
+          "Gunner",
+          "Night Vision",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Lantern and Oil",
+          "Pistol with 10 Shots",
+          "Shield"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Shipsword",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Evaluate",
+          "Leadership",
+          "Lore (Riverways)"
+        ],
+        "talents": [
+          "Fearless (Wreckers)",
+          "Hatred (Any One)",
+          "Nose for Trouble",
+          "Strong Legs"
+        ],
+        "trappings": [
+          "Grappling Hook",
+          "Helmet",
+          "Mail Shirt"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Shipsword Master",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Law)",
+          "Navigation"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Kingpin",
+          "Menacing",
+          "Orientation"
+        ],
+        "trappings": [
+          "Patrol Boats and Crew",
+          "Symbol of Rank"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "riverwoman",
+    "name": "Riverwoman",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 88,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 3,
+      "T": 1,
+      "I": null,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 4,
+      "WP": null,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Greenfish",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Lore (Local)",
+          "Outdoor Survival",
+          "Row",
+          "Stealth (Rural)",
+          "Swim"
+        ],
+        "talents": [
+          "Fisherman",
+          "Gregarious",
+          "Striding Gait (Wetland)",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Bucket",
+          "Fishing Rod and Bait",
+          "Leather Leggings"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Riverwoman",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Entertain (Storytelling)",
+          "Lore (Riverways)",
+          "Melee (Polearm)",
+          "Set Trap",
+          "Trade (Boatbuilder)"
+        ],
+        "talents": [
+          "Craftsman (Boatbuilder)",
+          "Rover",
+          "Strong Back",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Eel Trap",
+          "Leather Jerkin",
+          "Net",
+          "Spear"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Riverwise",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Haggle",
+          "Intuition",
+          "Leadership",
+          "Perception"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Sharp",
+          "Stout-hearted",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Rowboat",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "River Elder",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Lore (Folklore)",
+          "Sail"
+        ],
+        "talents": [
+          "Master Tradesman (Boatbuilder)",
+          "Public Speaker",
+          "Savant (Riverways)",
+          "Waterman"
+        ],
+        "trappings": [
+          "Barge or Hut"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "roadwarden",
+    "name": "Roadwarden",
+    "class": "Ranger",
+    "species": [
+      "Halfling",
+      "Human"
+    ],
+    "page": 89,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": 4,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Toll Keeper",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Consume Alcohol",
+          "Cool",
+          "Evaluate",
+          "Gamble",
+          "Gossip",
+          "Intimidate",
+          "Intuition",
+          "Melee (Basic)",
+          "Perception",
+          "Ranged (Crossbow)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Embezzle",
+          "Marksman",
+          "Numismatics"
+        ],
+        "trappings": [
+          "Crossbow with 10 Bolts",
+          "Hand Weapon",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Roadwarden",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Charm",
+          "Charm Animal",
+          "Entertain (Storytelling)",
+          "Ranged (Blackpowder)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Criminal",
+          "Rapid Reload",
+          "Roughrider",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Light Warhorse",
+          "Mail Shirt",
+          "Pistol with 10 Shots",
+          "Rope"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Road Sergeant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Dodge",
+          "Endurance",
+          "Leadership",
+          "Track"
+        ],
+        "talents": [
+          "Etiquette (Soldiers)",
+          "Fearless (Outlaws)",
+          "Hatred (Any One)",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Squad of Roadwardens",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Road Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (The Empire)",
+          "Navigation"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Commanding Presence",
+          "Kingpin",
+          "Roughrider"
+        ],
+        "trappings": [
+          "Quality Hat and Cloak",
+          "Unit of Roadwardens"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sailor",
+    "name": "Sailor",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 90,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 3,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 4,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Landsman",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Cool",
+          "Endurance",
+          "Gamble",
+          "Melee (Brawling)",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Sea Legs",
+          "Striding Gait (Coastal)",
+          "Strong Back",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Brush",
+          "Bucket",
+          "Mop"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Sailor",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Dodge",
+          "Entertain (Singing)",
+          "Gossip",
+          "Language (Any One)",
+          "Melee (Basic)",
+          "Play (Pennywhistle)"
+        ],
+        "talents": [
+          "Catfall",
+          "Seasoned Traveller",
+          "Strong Legs",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Hand Weapon (Boat Hook)",
+          "Leather Jerkin"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Boatswain",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Heal",
+          "Leadership",
+          "Lore (Oceans)",
+          "Trade (Boatbuilder)"
+        ],
+        "talents": [
+          "Craftsman (Boatbuilder)",
+          "Old Salt",
+          "Strike Mighty Blow",
+          "Surgery"
+        ],
+        "trappings": [
+          "Trade Tools (Carpenter)",
+          "Trade Tools (Physician)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Ship’s Master",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Navigation"
+        ],
+        "talents": [
+          "Orientation",
+          "Pilot",
+          "Public Speaker",
+          "Savvy"
+        ],
+        "trappings": [
+          "Sailing Ship and Crew",
+          "Sextant",
+          "Shipping Charts",
+          "Spyglass"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scholar",
+    "name": "Scholar",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 91,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 3,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Student",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Art (Writing)",
+          "Consume Alcohol",
+          "Cool",
+          "Entertain (Storytelling)",
+          "Evaluate",
+          "Gamble",
+          "Gossip",
+          "Language (Classical)",
+          "Lore (Any One)",
+          "Research"
+        ],
+        "talents": [
+          "Bookish",
+          "Etiquette (Scholars)",
+          "Read/Write",
+          "Savvy"
+        ],
+        "trappings": [
+          "Alcohol",
+          "Book"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Scholar",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Intuition",
+          "Language (Any One)",
+          "Lore (Any One)",
+          "Melee (Brawling)",
+          "Navigation"
+        ],
+        "talents": [
+          "Linguistics",
+          "Numismatics",
+          "Speedreader",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "Access to a Library",
+          "Degree"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Fellow",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Entertain (Lecture)",
+          "Intimidate",
+          "Language (Any One)",
+          "Lore (Any One)"
+        ],
+        "talents": [
+          "Blather",
+          "Public Speaker",
+          "Savant (Any One)",
+          "Tower of Memories"
+        ],
+        "trappings": [
+          "Mortarboard",
+          "Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Professor",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Entertain (Rhetoric)",
+          "Language (Any One) or Lore (Any One)"
+        ],
+        "talents": [
+          "Argumentative",
+          "Magnum Opus",
+          "Master Orator",
+          "Savant (Any One)"
+        ],
+        "trappings": [
+          "Study"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scout",
+    "name": "Scout",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 92,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 2,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": 1,
+      "Dex": 4,
+      "Int": 3,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Guide",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Endurance",
+          "Gossip",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Navigation",
+          "Outdoor Survival",
+          "Perception",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Orientation",
+          "Night Vision",
+          "Rover",
+          "Striding Gait (All)"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Leather Jack",
+          "Sturdy Boots and Cloak",
+          "Rope"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Scout",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Charm Animal",
+          "Cool",
+          "Ranged (Bow, Crossbow, or Sling)",
+          "Secret Signs (Scout)",
+          "Stealth (Underground)",
+          "Swim",
+          "Track"
+        ],
+        "talents": [
+          "Acute Sense (Sight)",
+          "Flee!",
+          "Seasoned Traveller",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Bow with 10 Arrows or Crossbow with 10 Bolts or Sling with 10 Lead Bullets",
+          "Mail Shirt"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pathfinder",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Haggle",
+          "Lore (Geography)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Hardy",
+          "Shadow",
+          "Sharp"
+        ],
+        "trappings": [
+          "Map",
+          "Riding Horse",
+          "Saddlebags with 2 weeks’ Rations",
+          "Tent"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Explorer",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Language (Any One)",
+          "Trade (Cartographer)"
+        ],
+        "talents": [
+          "Craftsman (Cartographer)",
+          "Linguistics",
+          "Read/Write",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Selection of Maps",
+          "Trade Tools (Cartographer)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "servant",
+    "name": "Servant",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 93,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Menial",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Stealth (Any One)"
+        ],
+        "talents": [
+          "Beneath Notice",
+          "Etiquette (Servants)",
+          "Strong Back",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Floor Brush"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Servant",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Animal Training (Dog or Horse)",
+          "Charm",
+          "Charm Animal",
+          "Drive",
+          "Gamble",
+          "Lore (Local)"
+        ],
+        "talents": [
+          "Etiquette (Any One)",
+          "Gregarious",
+          "Shadow",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Livery"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Attendant",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Cool",
+          "Evaluate",
+          "Intimidate",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Read/Write",
+          "Resistant (Poison)",
+          "Suave",
+          "Supportive"
+        ],
+        "trappings": [
+          "Lamp Oil",
+          "Quality Livery",
+          "Storm Lantern",
+          "Tinderbox"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Steward",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Leadership",
+          "Melee (Basic)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Embezzle",
+          "Savvy",
+          "Schemer"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Fine Clothes",
+          "Servant"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slayer",
+    "name": "Slayer",
+    "class": "Warrior",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 94,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 2,
+      "I": 4,
+      "Ag": 3,
+      "Dex": null,
+      "Int": null,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Troll Slayer",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Heal",
+          "Language (Battle)",
+          "Lore (Trolls)",
+          "Melee (Basic)",
+          "Play (Horn)"
+        ],
+        "talents": [
+          "Dual Wielder",
+          "Fearless (Everything)",
+          "Frenzy",
+          "Slayer"
+        ],
+        "trappings": [
+          "Flask of Spirits",
+          "Hand Weapon (Dwarf Axe)",
+          "Tattoos"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Giant Slayer",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Entertain (Storytelling)",
+          "Intimidate",
+          "Lore (Giants)",
+          "Melee (Two-handed)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Hardy",
+          "Implacable",
+          "Menacing",
+          "Reversal"
+        ],
+        "trappings": [
+          "Great Weapon (Dwarf Greataxe)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Dragon Slayer",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Evaluate",
+          "Lore (Dragons)",
+          "Perception",
+          "Ranged (Throwing)"
+        ],
+        "talents": [
+          "Ambidextrous",
+          "Furious Assault",
+          "Relentless",
+          "Robust"
+        ],
+        "trappings": [
+          "2 Dwarf Throwing Axes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Daemon Slayer",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Lore (Daemons)",
+          "Navigation"
+        ],
+        "talents": [
+          "Combat Master",
+          "Frightening",
+          "Strike Mighty Blow",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Rune Axe"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "smuggler",
+    "name": "Smuggler",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 95,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": 2,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "River Runner",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Endurance",
+          "Lore (Local)",
+          "Perception",
+          "Row",
+          "Sail",
+          "Stealth (Rural or Urban)",
+          "Swim"
+        ],
+        "talents": [
+          "Criminal",
+          "Fisherman",
+          "Striding Gait (Wetland)",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Large Sack",
+          "Mask or Scarves",
+          "Storm Lantern and Oil",
+          "Tinderbox"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Smuggler",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Evaluate",
+          "Haggle",
+          "Gossip",
+          "Melee (Basic)",
+          "Secret Signs (Smuggler)"
+        ],
+        "talents": [
+          "Briber",
+          "Etiquette (Criminals)",
+          "Night Vision",
+          "Waterman"
+        ],
+        "trappings": [
+          "2 Barrels",
+          "Hand Weapon",
+          "Rowboat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Smuggler",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Intuition",
+          "Leadership",
+          "Lore (Riverways)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Fast Shot",
+          "Pilot",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Pistol with 10 Shots",
+          "River Runners",
+          "Speedy Barge"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Smuggler King",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Language (Any One)",
+          "Intimidate"
+        ],
+        "talents": [
+          "Fearless (Riverwardens)",
+          "Kingpin",
+          "Savvy",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Disguise Kit",
+          "Small Fleet of Barges"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soldier",
+    "name": "Soldier",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 96,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 1,
+      "S": 1,
+      "T": 3,
+      "I": 4,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 2,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Recruit",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Language (Battle)",
+          "Melee (Any One)",
+          "Melee (Basic)",
+          "Ranged (Any One)"
+        ],
+        "talents": [
+          "Drilled",
+          "Etiquette (Soldiers)",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Breastplate",
+          "Uniform",
+          "Weapon (Any One)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Soldier",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Consume Alcohol",
+          "Entertain (Storytelling)",
+          "Intimidate",
+          "Outdoor Survival",
+          "Perception",
+          "Play (Drum, Flute, Horn, or Trumpet)"
+        ],
+        "talents": [
+          "Dicer",
+          "Marksman",
+          "Rapid Reload",
+          "Shieldsman"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Helmet",
+          "Weapon (Any)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Sergeant",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Heal",
+          "Leadership",
+          "Lore (Warfare)",
+          "Navigation"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Enclosed Fighter",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Symbol of Rank",
+          "Regiment of Recruits"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Officer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Heraldry)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Public Speaker",
+          "Read/Write",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Letter of Commission",
+          "Light Warhorse",
+          "Map",
+          "Orders",
+          "Quality Uniform",
+          "Symbol of Rank",
+          "Regiment of Soldiers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spy",
+    "name": "Spy",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 97,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": 2,
+      "Int": 4,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Informer",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Consume Alcohol",
+          "Cool",
+          "Gamble",
+          "Gossip",
+          "Intuition",
+          "Melee (Basic)",
+          "Perception",
+          "Stealth (Any One)"
+        ],
+        "talents": [
+          "Beneath Notice",
+          "Etiquette (Any One)",
+          "Gregarious",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Charcoal Stick",
+          "Sling Bag containing 2 different sets of Clothing and Hooded Cloak"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Spy",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Entertain (Acting)",
+          "Language (Any One)",
+          "Pick Lock",
+          "Secret Signs (Any One)",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Attractive",
+          "Mimic",
+          "Secret Identity",
+          "Shadow"
+        ],
+        "trappings": [
+          "Disguise Kit",
+          "Informer",
+          "Telescope"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Agent",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Animal Training (Pigeon)",
+          "Leadership",
+          "Research"
+        ],
+        "talents": [
+          "Carouser",
+          "Cat-tongued",
+          "Lip Reading",
+          "Master of Disguise"
+        ],
+        "trappings": [
+          "Book (Cryptography)",
+          "Loft of Homing Pigeons",
+          "Ring of Spies and Informers",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Spymaster",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Haggle",
+          "Lore (Any One)"
+        ],
+        "talents": [
+          "Briber",
+          "Schemer",
+          "Suave",
+          "Tower of Memories"
+        ],
+        "trappings": [
+          "Office and Staff"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stevedore",
+    "name": "Stevedore",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 98,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 4,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Dockhand",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Intimidate",
+          "Melee (Basic)",
+          "Melee (Brawling)",
+          "Swim"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Strong Back",
+          "Sturdy",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Hand Weapon (Boat Hook)",
+          "Leather Gloves"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Stevedore",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Gamble",
+          "Haggle",
+          "Lore (Local)",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Criminal",
+          "Etiquette (Criminals)",
+          "Etiquette (Guilders)",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Guild Licence",
+          "Leather Jerkin",
+          "Pipe and Tobacco",
+          "Porter Cap"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Foreman",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Evaluate",
+          "Intuition",
+          "Leadership"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Embezzle",
+          "Menacing",
+          "Public Speaker"
+        ],
+        "trappings": [
+          "Gang of Stevedores",
+          "Whistle"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Dock Master",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Intuition",
+          "Lore (Taxes)"
+        ],
+        "talents": [
+          "Fearless (Merchants)",
+          "Kingpin",
+          "Numismatics",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Office and Staff",
+          "Writing Kit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thief",
+    "name": "Thief",
+    "class": "Rogue",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 99,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 3,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Prowler",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Intimidate",
+          "Melee (Basic)",
+          "Perception",
+          "Pick Lock",
+          "Sleight of Hand",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Criminal",
+          "Fast Hands",
+          "Flee!"
+        ],
+        "trappings": [
+          "Crowbar",
+          "Leather Jerkin",
+          "Sack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Thief",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Evaluate",
+          "Gossip",
+          "Language (Thieves Tongue)",
+          "Lore (Local)",
+          "Secret Signs (Thief)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Etiquette (Criminals)",
+          "Night Vision",
+          "Shadow"
+        ],
+        "trappings": [
+          "Fence Contact",
+          "Rope",
+          "Trade Tools (Thief)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Thief",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Entertain (Acting)",
+          "Intuition",
+          "Ranged (Crossbow)"
+        ],
+        "talents": [
+          "Lip Reading",
+          "Secret Identity",
+          "Step Aside",
+          "Trapper"
+        ],
+        "trappings": [
+          "Crossbow Pistol with 10 Bolts",
+          "Grappling Hook",
+          "Several Fence Contacts"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Cat Burglar",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Endurance",
+          "Gamble"
+        ],
+        "talents": [
+          "Catfall",
+          "Dual Wielder",
+          "Scale Sheer Surface",
+          "Strong Legs"
+        ],
+        "trappings": [
+          "Calling Card",
+          "Dark Clothing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "townsman",
+    "name": "Townsman",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 100,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 2,
+      "Ag": null,
+      "Dex": 4,
+      "Int": 1,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Clerk",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Evaluate",
+          "Gamble",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Lore (Local)",
+          "Research",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Embezzle",
+          "Read/Write",
+          "Speedreader"
+        ],
+        "trappings": [
+          "Lodgings"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Townsman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Entertain (Any One)",
+          "Language (Any One)",
+          "Melee (Brawling)",
+          "Trade (Any One)"
+        ],
+        "talents": [
+          "Blather",
+          "Etiquette (Any One)",
+          "Gregarious",
+          "Savvy"
+        ],
+        "trappings": [
+          "Modest Shop"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Proprietor",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intimidate",
+          "Leadership",
+          "Perception",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Etiquette (Any One)",
+          "Lip Reading",
+          "Nose for Trouble",
+          "Suave"
+        ],
+        "trappings": [
+          "Blunderbuss with 10 Shots",
+          "Inn or Townhouse",
+          "Staff"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Burgomeister",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Entertain (Speeches)",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Briber",
+          "Public Speaker",
+          "Schemer",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Chains of Office",
+          "Coach and Footman",
+          "Large Townhouse with Gardens and Servants",
+          "Quality Clothing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "villager",
+    "name": "Villager",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 101,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": 1,
+      "Dex": 2,
+      "Int": 4,
+      "WP": null,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Peasant",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Lore (Local)",
+          "Melee (Brawling)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Hardy",
+          "Stone Soup",
+          "Strong Back",
+          "Tenacious"
+        ],
+        "trappings": [
+          "None"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Villager",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Animal Training (Any One Domesticated Animal)",
+          "Drive",
+          "Entertain (Storytelling)",
+          "Melee (Basic, Polearm, or Two-handed)",
+          "Ranged (Entangling or Sling)",
+          "Trade (Any One)"
+        ],
+        "talents": [
+          "Animal Affinity",
+          "Craftsman (as Trade)",
+          "Striding Gait (Any One)",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Hand Weapon (Axe)",
+          "Lasso or Sling with 10 Stone Bullets",
+          "Leather Jerkin",
+          "Trade Tools (as Trade)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Councillor",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Intimidate",
+          "Leadership"
+        ],
+        "talents": [
+          "Stout-hearted",
+          "Strong-minded",
+          "Supportive",
+          "Very Resilient"
+        ],
+        "trappings": [
+          "Cottage",
+          "Mule and Cart",
+          "Workshop (as Trade)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Village Elder",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Intuition",
+          "Lore (Folklore)"
+        ],
+        "talents": [
+          "Master Tradesman (as Trade)",
+          "Nimble-fingered",
+          "Public Speaker",
+          "Savant (Local)"
+        ],
+        "trappings": [
+          "The Respect of the Village"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "warden",
+    "name": "Warden",
+    "class": "Courtier",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 102,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Custodian",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Consume Alcohol",
+          "Cool",
+          "Endurance",
+          "Evaluate",
+          "Intuition",
+          "Lore (Local)",
+          "Perception"
+        ],
+        "talents": [
+          "Animal Affinity",
+          "Etiquette (Servants)",
+          "Night Vision",
+          "Sharp"
+        ],
+        "trappings": [
+          "Keys",
+          "Lamp Oil",
+          "Lantern",
+          "Livery"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Warden",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intimidate",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Ranged (Bow)",
+          "Ride (Horse)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Menacing",
+          "Rover",
+          "Striding Gait (Any One)",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Bow with 10 Arrows or Hand Weapon",
+          "Leather Jack",
+          "Riding Horse"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Seneschal",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Gossip",
+          "Leadership"
+        ],
+        "talents": [
+          "Embezzle",
+          "Etiquette (Any One)",
+          "Public Speaker",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Rod of Office",
+          "Staff of Custodians"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Governor",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Language (Classical)",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Carouser",
+          "Commanding Presence",
+          "Savant (Local)",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Aide",
+          "Governor’s Residence",
+          "Servant"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "warrior-priest",
+    "name": "Warrior Priest",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 103,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 2,
+      "T": 3,
+      "I": 4,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Neophyte",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Heal",
+          "Language (Classical)",
+          "Leadership",
+          "Lore (Theology)",
+          "Melee (Any One)",
+          "Pray"
+        ],
+        "talents": [
+          "Bless (Any One)",
+          "Etiquette (Cultists)",
+          "Holy Visions",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Book (Religion)",
+          "Melee Weapon (Any)",
+          "Leather Jerkin",
+          "Religious Symbol",
+          "Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Warrior Priest",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Entertain (Speeches)",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Any One)",
+          "Ranged (Any One)"
+        ],
+        "talents": [
+          "Dual Wielder",
+          "Inspiring",
+          "Invoke (Any One)",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Weapon (Any)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Priest Sergeant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Intuition",
+          "Perception",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Pure Soul",
+          "Seasoned Traveller",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Light Warhorse"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Priest Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Drive",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Fearless (Any One)",
+          "Furious Assault",
+          "Holy Hatred",
+          "War Leader"
+        ],
+        "trappings": [
+          "Religious Relic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "watchman",
+    "name": "Watchman",
+    "class": "Burgher",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 104,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Watch Recruit",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Gossip",
+          "Intimidate",
+          "Melee (Basic)",
+          "Perception"
+        ],
+        "talents": [
+          "Criminal",
+          "Drilled",
+          "Sprinter",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Leather Jack",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Watchman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Climb",
+          "Intuition",
+          "Lore (Local)",
+          "Melee (Polearm)",
+          "Pick Lock"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Enclosed Fighter",
+          "Menacing",
+          "Night Vision"
+        ],
+        "trappings": [
+          "Copper Badge",
+          "Lamp Oil",
+          "Lantern and Pole"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Watch Sergeant",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Haggle",
+          "Leadership",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Disarm",
+          "Etiquette (Soldiers)",
+          "Fearless (Criminals)",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Open Helm",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Watch Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Politics)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Kingpin",
+          "Public Speaker",
+          "Robust",
+          "Schemer"
+        ],
+        "trappings": [
+          "Quality Hand Weapon",
+          "Quality Hat",
+          "Quality Symbol of Rank",
+          "Riding Horse"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "witch",
+    "name": "Witch",
+    "class": "Rogue",
+    "species": [
+      "Human"
+    ],
+    "page": 105,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Dabbler",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Channelling (Magick)",
+          "Charm",
+          "Cool",
+          "Gossip",
+          "Heal",
+          "Language (Magick)",
+          "Perception",
+          "Research",
+          "Stealth (Rural or Urban)"
+        ],
+        "talents": [
+          "Instinctive Diction",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Notes Stuffed in Locked Drawer",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Witch",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Channelling (Dhar)",
+          "Endurance",
+          "Evaluate",
+          "Intimidate",
+          "Melee (Basic or Polearm)",
+          "Secret Signs (Any One)"
+        ],
+        "talents": [
+          "Arcane Magic (Witchcraft)",
+          "Attractive",
+          "Criminal",
+          "Witch!"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Hand Weapon or Quarterstaff"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Enchanter",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Lore (Any One)",
+          "Lore (Magic)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Magical Sense",
+          "Menacing"
+        ],
+        "trappings": [
+          "Assistant",
+          "Enchanted Staff",
+          "Tomes of Forbidden Knowledge"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Warlock",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Dodge",
+          "Entertain (Speeches)"
+        ],
+        "talents": [
+          "Briber",
+          "Frightening",
+          "Iron Will",
+          "Kingpin"
+        ],
+        "trappings": [
+          "Minions",
+          "Library (Magic)",
+          "Remote Lair"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "witch-hunter",
+    "name": "Witch Hunter",
+    "class": "Ranger",
+    "species": [
+      "Human"
+    ],
+    "page": 106,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": null,
+      "T": 3,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Interrogator",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Dodge",
+          "Gossip",
+          "Heal",
+          "Intimidate",
+          "Intuition",
+          "Lore (Witches)",
+          "Melee (Brawling)",
+          "Perception"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Menacing",
+          "Read/Write",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Instruments of Torture"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Witch Hunter",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Entertain (Speeches)",
+          "Melee (Basic or Fencing)",
+          "Ranged (Blackpowder or Crossbow)",
+          "Ride (Horse)",
+          "Secret Signs (Any One)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Dual Wielder",
+          "Nose for Trouble",
+          "Shadow"
+        ],
+        "trappings": [
+          "Pistol with 10 Shots",
+          "Hat",
+          "Leather Jack",
+          "Riding Horse",
+          "Rapier or Silvered Sword",
+          "Rope"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Witch Hunter Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Endurance",
+          "Leadership",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Fearless (Witches)",
+          "Relentless",
+          "Seasoned Traveller",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Quality Clothing",
+          "Subordinate Interrogators"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Witchfinder General",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Lore (Chaos)",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Frightening",
+          "Iron Will",
+          "Magic Resistance",
+          "Pure Soul"
+        ],
+        "trappings": [
+          "Quality Courtly Garb",
+          "Subordinate Witch Hunters"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "class": "Academic",
+    "species": [
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 107,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 3,
+      "Dex": 4,
+      "Int": 1,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Wizard’s Apprentice",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Channelling (Any Colour)",
+          "Cool",
+          "Gossip",
+          "Language (Classical)",
+          "Language (Magick)",
+          "Lore (Any One)",
+          "Lore (Magic)",
+          "Melee (Polearm)",
+          "Perception",
+          "Research"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Quarterstaff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Wizard",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Endurance",
+          "Evaluate",
+          "Intimidate",
+          "Intuition",
+          "Language (Battle)"
+        ],
+        "talents": [
+          "Arcane Magic (Any Colour Lore)",
+          "Etiquette (Scholars)",
+          "Seasoned Traveller",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Enchanted Staff",
+          "Magic Licence",
+          "Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Wizard",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Drive or Ride (Any One)",
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Craftsman (Any One)",
+          "Instinctive Diction",
+          "Magical Sense",
+          "Menacing"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Light Warhorse",
+          "Magical Item"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Wizard Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any One)",
+          "Lore (Any One)"
+        ],
+        "talents": [
+          "Detect Artefact",
+          "Frightening",
+          "Iron Will",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Library (Magic)",
+          "Workshop (Magic)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wrecker",
+    "name": "Wrecker",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 108,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 1,
+      "T": null,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Cargo Scavenger",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Pick Lock",
+          "Row",
+          "Stealth (Rural)",
+          "Swim"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Criminal",
+          "Flee!",
+          "Rover"
+        ],
+        "trappings": [
+          "Crowbar",
+          "Large Sack",
+          "Leather Gloves"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Wrecker",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Intuition",
+          "Navigation",
+          "Perception",
+          "Set Trap"
+        ],
+        "talents": [
+          "Etiquette (Criminals)",
+          "Night Vision",
+          "Strong Swimmer",
+          "Trapper"
+        ],
+        "trappings": [
+          "Hand Weapon (Boat Hook)",
+          "Leather Jack",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "River Pirate",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Gossip",
+          "Intimidate",
+          "Melee (Brawling)",
+          "Ranged (Crossbow or Throwing)"
+        ],
+        "talents": [
+          "In-fighter",
+          "Menacing",
+          "Strong Legs",
+          "Waterman"
+        ],
+        "trappings": [
+          "Crossbow with 10 Bolts or Javelin",
+          "Grappling Hook and Rope"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Wrecker Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Lore (Riverways)"
+        ],
+        "talents": [
+          "Frightening",
+          "Furious Assault",
+          "Pilot",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Barge and Wrecker Crew",
+          "Keg of Ale"
+        ]
+      }
+    ]
+  }
+]

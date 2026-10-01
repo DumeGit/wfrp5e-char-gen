@@ -1,0 +1,295 @@
+{
+  "Human": {
+    "page": 27,
+    "offsets": {
+      "WS": 20,
+      "BS": 20,
+      "S": 20,
+      "T": 20,
+      "I": 20,
+      "Ag": 20,
+      "Dex": 20,
+      "Int": 20,
+      "WP": 20,
+      "Fel": 20
+    },
+    "languages": [
+      "Reikspiel"
+    ],
+    "fate": 4,
+    "fortune": 3,
+    "movement": 4,
+    "age": [
+      14,
+      2
+    ],
+    "height": [
+      57,
+      2
+    ],
+    "skills": [
+      "Animal Care",
+      "Charm",
+      "Cool",
+      "Evaluate",
+      "Gossip",
+      "Haggle",
+      "Language (Bretonnian)",
+      "Language (Wastelander)",
+      "Leadership",
+      "Lore (Reikland)",
+      "Melee (Basic)",
+      "Ranged (Bow)"
+    ],
+    "talents": [
+      [
+        "Doomed"
+      ]
+    ],
+    "randomTalents": 4
+  },
+  "Dwarf": {
+    "page": 29,
+    "offsets": {
+      "WS": 30,
+      "BS": 20,
+      "S": 20,
+      "T": 30,
+      "I": 10,
+      "Ag": 10,
+      "Dex": 30,
+      "Int": 20,
+      "WP": 40,
+      "Fel": 10
+    },
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "fate": 2,
+    "fortune": 2,
+    "movement": 3,
+    "age": [
+      15,
+      10
+    ],
+    "height": [
+      51,
+      1
+    ],
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Intimidate",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any One)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Resolute",
+        "Strong-minded"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "randomTalents": 0
+  },
+  "Halfling": {
+    "page": 31,
+    "offsets": {
+      "WS": 10,
+      "BS": 30,
+      "S": 10,
+      "T": 10,
+      "I": 40,
+      "Ag": 20,
+      "Dex": 30,
+      "Int": 20,
+      "WP": 30,
+      "Fel": 30
+    },
+    "languages": [
+      "Haffennaff",
+      "Reikspiel"
+    ],
+    "fate": 2,
+    "fortune": 3,
+    "movement": 3,
+    "age": [
+      15,
+      5
+    ],
+    "height": [
+      37,
+      1
+    ],
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Dodge",
+      "Gamble",
+      "Haggle",
+      "Intuition",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any One)",
+      "Trade (Cook)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ]
+    ],
+    "randomTalents": 2
+  },
+  "High Elf": {
+    "page": 33,
+    "offsets": {
+      "WS": 30,
+      "BS": 30,
+      "S": 20,
+      "T": 20,
+      "I": 40,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 20
+    },
+    "languages": [
+      "Elthárin",
+      "Reikspiel"
+    ],
+    "fate": 1,
+    "fortune": 2,
+    "movement": 5,
+    "age": [
+      30,
+      10
+    ],
+    "height": [
+      71,
+      1
+    ],
+    "skills": [
+      "Cool",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Play (Any One)",
+      "Ranged (Bow)",
+      "Sail",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Coolheaded",
+        "Savvy"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Second Sight",
+        "Sixth Sense"
+      ],
+      [
+        "Read/Write"
+      ]
+    ],
+    "randomTalents": 0
+  },
+  "Wood Elf": {
+    "page": 35,
+    "offsets": {
+      "WS": 30,
+      "BS": 30,
+      "S": 20,
+      "T": 20,
+      "I": 40,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 20
+    },
+    "languages": [
+      "Elthárin",
+      "Reikspiel"
+    ],
+    "fate": 1,
+    "fortune": 2,
+    "movement": 5,
+    "age": [
+      30,
+      10
+    ],
+    "height": [
+      71,
+      1
+    ],
+    "skills": [
+      "Athletics",
+      "Climb",
+      "Endurance",
+      "Entertain (Singing)",
+      "Intimidate",
+      "Melee (Basic)",
+      "Outdoor Survival",
+      "Perception",
+      "Ranged (Bow)",
+      "Stealth (Rural)",
+      "Track"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Hardy",
+        "Second Sight"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Very Resilient"
+      ],
+      [
+        "Rover"
+      ]
+    ],
+    "randomTalents": 0
+  }
+}

@@ -1,0 +1,2173 @@
+[
+  {
+    "name": "Blessing of Battle",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Weapon Skill.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Breath",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target does not need to breathe and ignores rules for Suffocation.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Charisma",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Fellowship.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Conscience",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target must pass an Average (+2 SL) Cool Test to break any of the strictures of your deity. If they fail, they are overcome with shame and do not take the action.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Courage",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Willpower.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Finesse",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Dexterity.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Fortune",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target may reroll their next failed Test. The reroll must stand.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Grace",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Agility.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Hardiness",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Toughness.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Healing",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: Touch Target: 1 Duration: Instant Your target heals +1 Wound.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Blessing of The Hunt",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Ballistic Skill.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Might",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Strength.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Protection",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Enemies must make an Average (+2 SL) Cool Test to attack your target as shame wells within for considering violence. If they fail, they must choose a different target, or a different Action.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Recuperation",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: Touch Target: 1 Duration: Instant Your target may reduce the duration of 1 disease with which they are afflicted by 1 day. This prayer may only be attempted once per instance of a disease per person.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Blessing of Righteousness",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target’s weapon counts as Magical.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Savagery",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds When your target next inflicts a Critical Wound, roll twice and choose the best result.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Tenacity",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: Instant Your target may remove 1 Condition (except Besmirched).",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Blessing of Wisdom",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Intelligence.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Blessing of Wit",
+    "page": 221,
+    "category": "Blessing",
+    "text": "Range: 6 yards Target: 1 Duration: 6 rounds Your target gains +10 Initiative. BLESSING NAMES Each cult has unique names for every Blessing — sometimes more than one name. For instance, the Cult of Sigmar may refer to the Blessing of Battle as The Litany of Sigmar’s Wrath, while the Cult of Ulric may call it The Sharp Bite of Winter. The words spoken will be different, but the end effect will be the same.",
+    "range": "6 yards",
+    "target": "1",
+    "duration": "6 rounds"
+  },
+  {
+    "name": "Becalm",
+    "page": 222,
+    "category": "Manann",
+    "text": "Range: Fellowship Bonus miles Target: 1 sailing vessel within line of sight Duration: 1 hour You steal the wind from the sails of a ship or boat. It is completely becalmed. Even in stormy weather, an area of eerie calm and smooth waters surrounds the vessel while gales, lashing rains and towering crests surge and crash around it. This area of calm extends for Fellowship yards from the vessel, and if the ship is propelled by some other method, such as oars, the area of calm travels with it.",
+    "range": "Fellowship Bonus miles",
+    "target": "1 sailing vessel within line of sight",
+    "duration": "1 hour"
+  },
+  {
+    "name": "Drowned Man’s Face",
+    "page": 222,
+    "category": "Manann",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Rounds You implore Manann to drown your foe. Your target’s lungs continuously fill with saltwater while the Miracle is active, and their hair floats around their head as if submerged. For the duration, the target suffers a Fatigued Condition and drowns (see page 169). The water is holy, so daemons and undead drown too. When the Miracle ends, your target suffers a Stunned Condition for 1 Round as they cough out seawater.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Fair Winds",
+    "page": 222,
+    "category": "Manann",
+    "text": "Range: Initiative Bonus miles Target: 1 sailing vessel within line of sight Duration: 1 hour The target vessel’s sails fill with favourable winds, speeding them safely towards their destination. While this Miracle is active, the sailing vessel moves at top speed, no matter the prevailing wind, tide, or current, and all Sail Tests made to control the vessel gain a bonus of +1 SL.",
+    "range": "Initiative Bonus miles",
+    "target": "1 sailing vessel within line of sight",
+    "duration": "1 hour"
+  },
+  {
+    "name": "Manalt’s Bounty",
+    "page": 222,
+    "category": "Manann",
+    "text": "Range: Special Target: Special Duration: Instant You implore the Lord of Sea’s Bounty to provide you with sustenance. Reaching into a body of water, you catch enough fish to feed 1 person. If you reach into the sea, you provide enough fish for 2 people. For every +2 SL, you may feed another person.",
+    "range": "Special",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Sea Legs",
+    "page": 223,
+    "category": "Manann",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Rounds Your target is immediately drenched in saltwater, and reels as if on the rolling deck of a tempest-tossed vessel. Their hair is whipped by spectral winds, and a torrent of spray lashes their skin. They gain one each of the Blinded, Deafened, and Fatigued Conditions, and must attempt an Average (+2 SL) Athletics Test to use their Move. If they fail, they also gain the Prone Condition.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Waterwalk",
+    "page": 223,
+    "category": "Manann",
+    "text": "Range: You Target: You Duration: Fellowship Bonus minutes You call on Manann to allow you to cross a stretch of open water as if it were solid ground. This only works on larger bodies of water that are at least 10 yards wide. Anything smaller is too far removed from Manann’s domain for it to be noticed.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus minutes"
+  },
+  {
+    "name": "Death Mask",
+    "page": 223,
+    "category": "Morr",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds Morr works through you, piercing the Portal to make his presence known to your foes. Your visage takes on a cadaverous mien, and you gain Fear. Undead are not immune to this Fear regardless of any Talents, Traits (including Construct), or other effects.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Destroy Undead",
+    "page": 223,
+    "category": "Morr",
+    "text": "Range: Yo Target: AoE (Fellowship Bonus yards) Duration: Instant You call the power of Morr to smite all undead. A black fire ripples forth from your body in a perfect circle. All targets with the Undead Creature Trait lose 1d10 Wounds, ignoring Toughness Bonus and Armour Points. Any undead destroyed by this Miracle can never be raised with Necromancy again under normal conditions. For every SL, you may cause 1 additional Wound.",
+    "range": "Yo",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Dooming",
+    "page": 223,
+    "category": "Morr",
+    "text": "Range: Touch Target: 1 Duration: Instant Gazing deeply into your target’s eyes while muttering a threnody to Morr, you are granted a vision of the target’s Doom, a glimpse of what the future holds. This is almost always related to the target’s death. This Miracle may only be performed on a character once, after which the Doomed Talent may be purchased with XP as if it were in the target’s Career.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Last Rites",
+    "page": 223,
+    "category": "Morr",
+    "text": "Range: 1 yard Target: 1 Duration: Instant You chant a solemn requiem over a corpse. This Miracle ensures that the soul is sent through the portal to Morr’s realm, and guarantees the cadaver may not be targeted by any Necromantic spells. If the Miracle targets a foe with the Construct and Undead Creature Traits, it will be destroyed.",
+    "range": "1 yard",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Portal’s Threshold",
+    "page": 223,
+    "category": "Morr",
+    "text": "Range: Touch Target: Special Duration: Until sunrise You draw a line up to 8 yards long on the ground while incanting a dirge to Morr. Upon enacting the Miracle, an indistinct, shadowy portal seems to manifest to the hoarse croaking of ravens. Creatures with the Undead Creature Trait must pass a Challenging (+0 SL) Cool Test to cross the line. Creatures with both Undead and Construct simply cannot cross the line.",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Until sunrise"
+  },
+  {
+    "name": "Stay Morr’s Hand",
+    "page": 223,
+    "category": "Morr",
+    "text": "Range: Touch Target: 1 Duration: Fellowship Bonus hours You touch the eyes of someone close to death and request Morr guide the soul within, but not take it. The target must have 0 Wounds and be willing. For the duration of the Miracle, the target gains the Unconscious Condition and will not deteriorate until the Miracle ends, staving off disease, ignoring Critical Wounds and poisons, and similar. This Miracle comes to an end should appropriate healing be provided, or should you perform the last rites. If you do this, which takes about a minute, the target’s soul will pass through Morr’s portal upon death, and the resulting corpse may never be targeted by Necromancy.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus hours"
+  },
+  {
+    "name": "Blazing Sun",
+    "page": 224,
+    "category": "Myrmidia",
+    "text": "Range: Special Target: Special Duration: Instant You call on Myrmidia to scour the battlefield of dishonourable foes, and a blinding flash of golden light bursts forth. All non-Myrmidians looking in your direction receive 1 Blinded Condition. For every +2 SL, they receive +1 Blinded Condition.",
+    "range": "Special",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Eagle’s Eye",
+    "page": 224,
+    "category": "Myrmidia",
+    "text": "Range: Fellowship yards Target: You Duration: Fellowship Bonus Rounds You call on Myrmidia to send a Divine Servant to grant you knowledge of your enemies. A spectral eagle manifests, soaring into the sky above. The eagle looks like and has the capabilities of a normal eagle, but cannot physically affect the world or be harmed in any way. While the Miracle is in effect, you can see through the eagle’s eyes and control its flight, surveying the battlefield and spying upon your enemies. The eagle has Perception 55, Acute Sense (Sight), and Fly 80; you see using its abilities instead of your own. While looking through the eagle’s eyes, you cannot see through your own eyes, leaving you potentially vulnerable.",
+    "range": "Fellowship yards",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Fury’s Call",
+    "page": 224,
+    "category": "Myrmidia",
+    "text": "Range: You Target: AoE (Fellowship Bonus yards) Duration: Fellowship Bonus Rounds Your passionate prayers instil your allies with a furious disdain for their foes. Allied characters receive the Frenzy Creature Trait (see page 358).",
+    "range": "You",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Inspiring",
+    "page": 224,
+    "category": "Myrmidia",
+    "text": "Range: You Target: AoE (Fellowship Bonus yards) Duration: Fellowship Bonus Rounds Your rousing prayers inspire discipline and coordination within the ranks. Allied characters gain +1 Drilled Talent.",
+    "range": "You",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Shield of Myrmidia",
+    "page": 224,
+    "category": "Myrmidia",
+    "text": "Range: Fellowship yards Target: Fellowship Bonus Duration: Fellowship Bonus Rounds Your stalwart prayers incite Myrmidia to shield your allies in glittering, gossamer strands of light, warding enemy blows. Allies gain +1 Armour Point on all Hit Locations.",
+    "range": "Fellowship yards",
+    "target": "Fellowship Bonus",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Spear of Myrmidia",
+    "page": 224,
+    "category": "Myrmidia",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds If wielding a spear, it gains the Impact Quality and counts as Magical.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "An Invitation",
+    "page": 224,
+    "category": "Ranald",
+    "text": "Range: 1 yard Target: 1 Duration: Instant You spin one of Ranald’s riddles concerning portals, and whether they exist if closed. A door, window, or hatch you target has one method of securing it undone — a lock unlocks, a latch unlatches, a rope unties. For every +2 SL, you may target another method of securing the door, window, or hatch.",
+    "range": "1 yard",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Cat’s Eyes",
+    "page": 224,
+    "category": "Ranald",
+    "text": "Range: Fellowship yards Target: You Duration: Fellowship Bonus Rounds Does anything exist that cannot be seen? You riddle with Ranald, who sends a Divine Servant in the form of a cat as an answer. The cat has the capabilities of a normal cat, but cannot be harmed in any way. While the Miracle is in effect, you perceive everything the cat perceives and control its movement. Your senses are as sharp as a cat’s, but you do not have access to any of your own sense-enhancing Talents such as Night Vision. While the Miracle is in effect, you cannot perceive anything through your own senses, leaving you vulnerable.",
+    "range": "Fellowship yards",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Cheat the Odds",
+    "page": 224,
+    "category": "Ranald",
+    "text": "Range: You Target: You Duration: Special Crossing your fingers, you ask what, exactly, is luck? Gain +1 Fortune Point, which lasts until the end of the session. For every +2 SL, you may gain an extra +1 Fortune Point. You may not invoke this Miracle again until you reach 0 Fortune points.",
+    "range": "You",
+    "target": "You",
+    "duration": "Special"
+  },
+  {
+    "name": "Ranald’s Grace",
+    "page": 225,
+    "category": "Ranald",
+    "text": "Range: Touch Target: 1 Duration: Fellowship Bonus Rounds You call on Ranald to let your target negotiate the riddles of reality. Your target gains +10 Agility, +10 Stealth, and +1 Catfall Talent for the duration of the Miracle.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Trickster’s Glamour",
+    "page": 225,
+    "category": "Ranald",
+    "text": "Range: 1 yard Target: 1 Duration: Fellowship Bonus minutes You smile at Ranald as you cheekily ask others what, exactly, is wealth? For each target affected, choose one option: 0 The target’s purse appears empty. 0 The target’s purse appears full. 0 The target’s attire appears cheap and unremarkable. 0 The target’s attire appears rich and finely crafted. 0 A single valuable item is impossible to perceive. For every +2 SL, you may select an additional effect for one of your targets.",
+    "range": "1 yard",
+    "target": "1",
+    "duration": "Fellowship Bonus minutes"
+  },
+  {
+    "name": "You Saw Nothing",
+    "page": 225,
+    "category": "Ranald",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Rounds You spin a complex conundrum concerning the reality of that which is unperceived. The target may pass unnoticed and remarked, providing they do nothing to draw attention to themselves, such as touching, attacking, calling out to someone, casting a spell, or making a loud noise. You may only invoke this Miracle if no one is looking directly at you.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Rhya’s Children",
+    "page": 225,
+    "category": "Rhya",
+    "text": "Range: You Target: AoE (Fellowship yards) Duration: Fellowship Bonus Rounds Laying hands on the earth, you chant a prayer to Rhya appealing for her aid in understanding her realm. This Miracle may only be invoked outdoors, outside settlements. You sense the presence and passing of all living creatures within the Area of Effect.",
+    "range": "You",
+    "target": "AoE (Fellowship yards)",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Rhya’s Harvest",
+    "page": 225,
+    "category": "Rhya",
+    "text": "Range: Touch Target: Special Duration: 1 Round You chant to Rhya, and life springs forth. Edible fruit, vegetables, and fungi grow at the point where you touch. Each Round, enough food grows to feed 1 person. The type of food depends on your location: in a meadow you may grow grains, while in a wood you may cause many different fruits and fungi to spring forth.",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "1 Round"
+  },
+  {
+    "name": "Rhya’s Shelter",
+    "page": 225,
+    "category": "Rhya",
+    "text": "Range: You Target: You Duration: Special You sing one of Rhya’s hymns concerning shelter and safety. You may only invoke this Miracle outdoors and outside settlements. You discover a perfect natural shelter. Some combination of earth and trees has formed a perfect location to camp for the night. The spot is protected from all naturally occurring wind and rain, and lasts as long as you remain camped there. The shelter is large enough for 1 person. For every +2 SL it fits another individual. When you break camp, the shelter cannot be rediscovered, as though it only existed through your goddess’s will.",
+    "range": "You",
+    "target": "You",
+    "duration": "Special"
+  },
+  {
+    "name": "Rhya’s Succour",
+    "page": 225,
+    "category": "Rhya",
+    "text": "Range: Fellowship yards Target: Fellowship Bonus Duration: Instant You chant Rhya’s song of revitalisation. All targets remove 1 Condition. If this removes all suffered Conditions, the targets feel as refreshed as if they had just awoken from a good night’s sleep, and gain a bonus of +1 SL to any Tests on their next Turn.",
+    "range": "Fellowship yards",
+    "target": "Fellowship Bonus",
+    "duration": "Instant"
+  },
+  {
+    "name": "Rhya’s Touch",
+    "page": 225,
+    "category": "Rhya",
+    "text": "Range: Touch Target: 1 Duration: Special You lay hands upon an injured or diseased target as you sing your prayers. Choose one of the following effects: 0 Heal Fellowship Bonus Wounds. 0 Cure 1 naturally occurring disease. For every + 2 SL, you may choose another effect, and may choose the same effect repeatedly. This Miracle is slow, with the effects taking at least 10 minutes to manifest. If interrupted, the Miracle will need to be attempted again.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Special"
+  },
+  {
+    "name": "Rhya’s Union",
+    "page": 226,
+    "category": "Rhya",
+    "text": "Range: Touch Target: Special Duration: Fellowship Bonus hours You bless and consecrate the union between two souls. While the Miracle is in effect, if biologically possible, the couple will conceive a child.",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Fellowship Bonus hours"
+  },
+  {
+    "name": "Anchorite’s Endurance",
+    "page": 226,
+    "category": "Shallya",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Rounds Your earnest prayers appeal to Shallya to grant the target the strength to endure. The target feels no pain, gains the Painless Creature trait, and suffers no penalties caused by Conditions.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Balm to a Wounded Mind",
+    "page": 226,
+    "category": "Shallya",
+    "text": "Range: Touch Target: 1 Duration: Fellowship Bonus minutes You call on Shallya to calm the troubled mind of your target. All Psychology Traits are removed for the duration, and afterwards the target enters deep and restful slumbers that last until next sunrise, assuming they are not disturbed. An unwilling target may make a Challenging (+0 SL) Cool Test to resist sleeping.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus minutes"
+  },
+  {
+    "name": "Bitter Catharsis",
+    "page": 226,
+    "category": "Shallya",
+    "text": "Range: Touch Target: 1 Duration: Instant In answer to your heartfelt prayers, Shallya draws a poison or disease into you and purges it, completely removing it from your target’s system. For every +2 SL, you may purge another disease or poison. For each poison removed or disease cured in this manner, you suffer 1d10 – Fellowship Bonus Wounds.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Martyr",
+    "page": 226,
+    "category": "Shallya",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Rounds You intone prayers concerning Shallya’s need to take on the world’s pain. Any Damage taken by your target is instead suffered by you; add your Fellowship Bonus to your Toughness Bonus for the purpose of calculating the Wounds suffered from that Damage.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Shallya’s Tears",
+    "page": 226,
+    "category": "Shallya",
+    "text": "Range: Touch Target: 1 Duration: Special You passionately appeal to Shallya to spare a poor, wounded soul as tears flow freely down your cheeks. You pray for 10 – Fellowship Bonus Rounds, at which point you heal the target of 1 Critical Wound. For every +2 SL, you may heal another Critical Wound. If your prayer is interrupted, the target receives no benefit. This Miracle cannot reattach amputated body parts.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Special"
+  },
+  {
+    "name": "Unblemished Innocence",
+    "page": 226,
+    "category": "Shallya",
+    "text": "Range: Touch Target: 1 Duration: Instant Laying hands on the afflicted, you beg Shallya to rid them of recently acquired corruption. The target loses 1 Corruption Point gained within the last hour, and can lose another per +2 SL scored. However, the Chaos Gods do not like to be so directly opposed. Should an attempt to invoke the Miracle Fumble, you and the target both gain 1d10 Corruption Points on top of any other effects.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Beacon of Righteous Virtue",
+    "page": 226,
+    "category": "Sigmar",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds As you bellow prayers in Sigmar’s name, you become infused with the holy fire of righteousness. All allies who can see you instantaneously remove all Broken Conditions, and gain the Fearless (Everything) Talent while the Miracle is in effect and you remain in their line of sight. You cause Fear in orcs and goblins.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Heed Not the Witch",
+    "page": 226,
+    "category": "Sigmar",
+    "text": "Range: You Target: You with AoE (Fellowship Bonus yards) Duration: Fellowship Bonus Rounds You call on Sigmar to protect those close to you from the fell influence of Chaos. Any Spells that target anyone or anywhere within the Area of Effect suffer a penalty of -2 SL to Casting Tests, in addition to any other penalties.",
+    "range": "You",
+    "target": "You with AoE (Fellowship Bonus yards)",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Sigmar’s Fiery Hammer",
+    "page": 227,
+    "category": "Sigmar",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You chant benedictions of Sigmar’s might. If wielding a warhammer, it counts as Magical, deals +Fellowship Bonus Damage, and any target struck receives +1 Ablaze Condition.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Soulfire",
+    "page": 227,
+    "category": "Sigmar",
+    "text": "Range: You Target: AoE (Fellowship Bonus yards) Duration: Instant You call the power of Sigmar to smite the enemies of the Empire. A holy fire explodes from your body, blasting outwards. All targets around you in the Area of Effect take 1d10 Wounds ignoring Toughness Bonus and Armour Points. Targets with the Daemon or Undead Creature Trait also gain an Ablaze Condition. For every SL, you may cause an extra +1 Wound to any orcs, goblins, undead, or servants of the Ruinous Powers.",
+    "range": "You",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Twin-tailed Comet",
+    "page": 227,
+    "category": "Sigmar",
+    "text": "Range: Fellowship yards Target: AoE (Fellowship Bonus yards, maximum) Duration: Instant You invoke litanies to Sigmar, calling on him to smite his foes. A twin-tailed comet, blazing a trail of fire in its wake, plummets from the heavens to strike an area within line of sight and range that contains those Sigmar would deem an enemy. Everything within the Area of Effect, except invalid creatures, suffers 1d10 + SL Wounds, ignoring Toughness Bonus and Armour Points, and gains an Ablaze Condition. The target area must be outdoors, and if Sigmar finds no foes to smite, he smites you instead.",
+    "range": "Fellowship yards",
+    "target": "AoE (Fellowship Bonus yards, maximum)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Vanquish the Unrighteous",
+    "page": 227,
+    "category": "Sigmar",
+    "text": "Range: You Target: AoE (Fellowship Bonus yards) Duration: Fellowship Bonus Rounds Your prayers instil your chosen allies with a burning hatred for the enemies of Sigmar. Allied characters gain Hatred (see page 184) towards orcs, goblins, undead, and any associated with Chaos. After slaying such a foe, Hatred grants +2 SL to combat Tests instead of +1 SL.",
+    "range": "You",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Animal Instincts",
+    "page": 227,
+    "category": "Taal",
+    "text": "Range: Touch Target: 1 Duration: Fellowship Bonus hours You intone chants describing Taal’s extraordinary senses, and call upon him for aid. While the Miracle is in effect, you gain +1 Acute Sense (Any One) Talent and, if you rest, you will automatically awaken should any threats come within Perception yards.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus hours"
+  },
+  {
+    "name": "King of the Wild",
+    "page": 227,
+    "category": "Taal",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus minutes You chant a low prayer, and Taal answers with a wild animal appropriate for the surrounding area, which will act according to your wishes for the duration of the Miracle. See The Beasts of the Reikland on pages 325–327 for sample animals that may be summoned.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus minutes"
+  },
+  {
+    "name": "Leaping Stag",
+    "page": 227,
+    "category": "Taal",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You chant to Father Taal, and he grants you his favour, imbuing you with speed and agility. You gain +1 Movement and +1 Strong Legs Talent. Further, you automatically pass all Athletics Tests made when Leaping.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Lord of the Hunt",
+    "page": 227,
+    "category": "Taal",
+    "text": "Range: You Target: You Duration: Fellowship Bonus hours You call on Taal to guide you in the hunt for your quarry, which must be an animal you have seen, or an individual you know (as limited by the GM). While the Miracle is in effect, you cannot lose your quarry’s trail save by supernatural means. Should your quarry enter a settlement, the trail ends there. You also receive +1 SL to all Tests regarding your quarry while under the influence of the Miracle.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus hours"
+  },
+  {
+    "name": "Tanglefoot",
+    "page": 228,
+    "category": "Taal",
+    "text": "Range: Fellowship yards Target: AoE (Fellowship Bonus yards) Duration: Instant You call on Taal, chanting prayers to protect his wild places. Roots, vines, and creepers wrap themselves around your targets. All targets within the Area of Effect gain an Entangled Condition with a Strength equal to your Fellowship.",
+    "range": "Fellowship yards",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Tooth and Claw",
+    "page": 228,
+    "category": "Taal",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You call on Taal to grant you the ferocious might of his kingdom. Gain the Bite (Strength Bonus + 3) and Weapon (Strength Bonus + 4) Creature Traits. Their attacks are Magical.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Hoarfrost’s Chill",
+    "page": 228,
+    "category": "Ulric",
+    "text": "Range: You Target: AoE (Fellowship yards) Duration: Fellowship Bonus Rounds You scream angry prayers, and cold Ulric answers. Your eyes gain a steely blue glint and the air around you grows unnaturally cold. You cause Fear (see page 183), and all within the Area of Effect except you lose Advantage at the start of each Round, as they are chilled to the bone.",
+    "range": "You",
+    "target": "AoE (Fellowship yards)",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Howl of the Wolf",
+    "page": 228,
+    "category": "Ulric",
+    "text": "Range: Fellowship yards Target: Special Duration: Fellowship Bonus Rounds You howl for Ulric’s aid, and he sends a minor Divine Servant in the form of a white wolf. The wolf fights your enemies for the duration of the Miracle before vanishing to Ulric’s hunting grounds with a spectral, blood-chilling howl. White wolves have the statistics of a Wolf (see page 327) with Weapon Skill 45, Willpower 35, and the Bite +6, Frenzy, Magical, and Size (Large) Creature Traits.",
+    "range": "Fellowship yards",
+    "target": "Special",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Pelt of the Winter Wolf",
+    "page": 228,
+    "category": "Ulric",
+    "text": "Range: Touch Target: 1 Duration: Fellowship Bonus hours Your bellowed prayers bring Ulric’s attention, allowing your target to survive the bite of his realm. While they still feel the pain and discomfort caused by cold and wintry weather, they suffer no mechanical penalties.",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus hours"
+  },
+  {
+    "name": "The Snow King’s Judgement",
+    "page": 228,
+    "category": "Ulric",
+    "text": "Range: Fellowship yards Target: 1 Duration: Instant You call on Ulric to make manifest his disdain for the weak, the cowardly, and the deceitful. The target’s blood and marrow freeze, causing 1d10 Wounds ignoring Toughness Bonus and Armour Points. For every SL, you may cause 1 additional Wound. If the GM rules that the target is neither weak, cowardly, nor deceitful, you suffer the effects instead.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Ulric’s Fury",
+    "page": 228,
+    "category": "Ulric",
+    "text": "Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Rounds You chant furious prayers, and Ulric’s ferocity spreads. An ally may take a free Frenzy Test (see page 184) on their Turns. However, instead of granting a free attack, Frenzy adds +1d10 Damage to the first melee hit they make on their Turn. If they roll 10, they keep rolling, adding more Damage each time, until they roll less than 10.",
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Winter’s Bite",
+    "page": 228,
+    "category": "Ulric",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You roar prayers concerning Blitzbeil, Ulric’s ever-thirsty axe. If wielding an axe, it counts as Magical, causes an additional +SL Damage, and any targets struck gain a Fatigued Condition. Further, struck targets lose any Bleeding Conditions as their blood freezes; similarly, attacks from your axe cannot cause any Bleeding Conditions.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "As Verena Is My Witness",
+    "page": 229,
+    "category": "Verena",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds By calling Verena as your witness, the truth of your words shines out for all to see. For the duration of the Miracle, provided you speak only the truth, all listeners will believe you speak truly. This does not necessarily mean they will agree with your conclusions, of course.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus"
+  },
+  {
+    "name": "Blind Justice",
+    "page": 229,
+    "category": "Verena",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You articulate prayers concerning Verena’s acute perceptions, able to pierce through to the truth of all things. You may make a Challenging (+0 SL) Perception Test to see through Spells and Miracles involving illusion or misdirection. You may also make an Average (+2 SL) Intuition Test to tell whether a character speaking to you is lying. Note: This will only tell you if the character believes they speak the truth; it will not alert you if they are mistaken.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Shackles of Truth",
+    "page": 229,
+    "category": "Verena",
+    "text": "Range: Fellowship Bonus yards Target: 1 Duration: Fellowship Bonus Rounds Your appeal to Verena, requesting her judgement concerning a suspected criminal. If your target committed a crime and claims they did not, they gain an Entangled Condition that cannot be removed for the duration. If you have falsely accused the target, Verena is displeased with your lack of wisdom: you must immediately roll on the Wrath of the Gods table.",
+    "range": "Fellowship Bonus yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Sword of Justice",
+    "page": 229,
+    "category": "Verena",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You pray to Verena to guide your blade to strike down the unjust. If wielding a sword, it ignores Armour Points and counts as Magical. Further, if struck opponents are criminals (as determined by the GM), they must make an Average (+2 SL) Endurance Test or suffer the Unconscious Condition that lasts for at least Fellowship Bonus Rounds. If any crime is perpetrated on the unconscious opponents, you suffer +1 Sin Point per crime.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Truth Will Out",
+    "page": 229,
+    "category": "Verena",
+    "text": "Range: Fellowship Bonus yards Target: 1 Duration: Instant You intone prayers of Verena’s ability to find any truth. You may ask the target a single question. It will be immediately answered truthfully and fully. The target may resist with an Opposed Average (+2 SL) Cool Test against your SL. If they win, they may stubbornly refuse to answer. If they achieve +2 SL, they may withhold minor information. +4 SL allows them to withhold significant information, while +6 SL allows them to lie outright. You will know if they resist successfully, though you will lack specific knowledge about their deceit, or proof of their dishonesty.",
+    "range": "Fellowship Bonus yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Wisdom of the Owl",
+    "page": 229,
+    "category": "Verena",
+    "text": "Range: You Target: You Duration: Fellowship Bonus Rounds You call on Verena to instil you with her wisdom and knowledge. You gain +20 Intelligence and you may ask the GM the likeliest outcome of one of your immediate decisions with the facts you have available. Further, your pupils dilate widely, and your gaze becomes piercing and unsettling: gain +1 Acute Sense (Sight), Menacing, and Night Vision Talents.",
+    "range": "You",
+    "target": "You",
+    "duration": "Fellowship Bonus Rounds"
+  },
+  {
+    "name": "Animal Friend",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: 1 yard Target: 1 Duration: 1 hour You make friends with a creature that is smaller than you and possesses the Bestial Creature Trait. The animal trusts you completely and regards you as a friend.",
+    "cn": "0",
+    "range": "1 yard",
+    "target": "1",
+    "duration": "1 hour"
+  },
+  {
+    "name": "Bearings",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: You Target: You Duration: Instant You sense the influx of the Winds of Magic from their source. You know which direction north is.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Instant"
+  },
+  {
+    "name": "Careful Step",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: You Target: You Duration: Agility minutes The magic flowing through your feet ensures any organic matter you tread upon remains undamaged: twigs do not break, grass springs back to its original position, and even delicate flowers are unharmed. Those seeking to use the Track Skill to pursue you through rural terrain suffer a -3 SL penalty to their Tests.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Agility minutes"
+  },
+  {
+    "name": "Conserve",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: 1 yard Target: Special Duration: Willpower Bonus days You preserve up to a day’s worth of rations. During this time they will not rot, develop mould, or go stale, although they can still be harmed by external factors, such as getting wet or being burned or poisoned.",
+    "cn": "0",
+    "range": "1 yard",
+    "target": "Special",
+    "duration": "Willpower Bonus days"
+  },
+  {
+    "name": "Dart",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: Willpower yards Target: 1 Duration: Instant You cause a small dart of magical energy to fly from your fingers. This is a magic missile with a Damage of +0.",
+    "cn": "0",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Dazzle",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: 1 Duration: Willpower Bonus Rounds The target gains 1 Blinded Condition, and gains 1 Blinded Condition at the start of each Round for the duration of the Spell.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Drain",
+    "page": 240,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: 1 Duration: Instant You touch your target, draining their life. This counts as a magic missile with Damage +0 that ignores Armour Points. You then heal 1 Wound.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Eavesdrop",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: Initiative yards Target: 1 Duration: Willpower Bonus minutes You can hear what your target says as if you were standing right next to them.",
+    "cn": "0",
+    "range": "Initiative yards",
+    "target": "1",
+    "duration": "Willpower Bonus minutes"
+  },
+  {
+    "name": "Gust",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: Willpower yards Target: Special Duration: Instant You create a brief gust of wind, strong enough to blow out a candle, cause an open door to slam, or blow a few pages to the floor.",
+    "cn": "0",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Light",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: You Target: You Duration: Willpower minutes You create a small light, roughly equivalent to a torch, which glows from your hand, staff, or some other part of your person. While the Spell is active, you may choose to increase the illumination to that of a lantern, or decrease it to that of a candle, if you pass an Average (+2 SL) Willpower Test.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Magic Flame",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: You Target: You Duration: Willpower Bonus Rounds You kindle a small flame that flickers to life in the palm of your hand. It will not burn you, but will emit heat and set flammable objects alight, like a natural flame.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Marsh Lights",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: Willpower yards Target: Special Duration: Willpower minutes You create a number of flickering magical lights up to your Intelligence Bonus. They resemble torches or hooded lanterns. Provided they remain within line of sight, for your Action you may control the lights by passing an Average (+2 SL) Willpower Test; a success allows you to send the lights moving in any direction. They will move at walking pace in a straight line, passing through any objects (or witnesses) in their path, unless you Test again to change their direction.",
+    "cn": "0",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Murmured Whisper",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: Willpower yards Target: Special Duration: Willpower Bonus Rounds You cast your voice at a point within Willpower yards, regardless of line of sight. Your voice sounds from this point, and all within earshot will hear it.",
+    "cn": "0",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Open Lock",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: 1 Duration: Instant One non-magical lock you touch opens.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Produce Small Animal",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: Special Duration: Instant You reach into a bag, pocket, or hat, or under a rock, bush or burrow, producing a small animal of a type you would expect to find in the vicinity, such as a rabbit, dove, or rat. If there are no appropriate local animals, the Spell does nothing. The temperament of the animal is not guaranteed.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Protection from Rain",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: You Target: You Duration: Willpower Bonus hours You can keep yourself and your possessions dry whatever the weather, unaffected by precipitation. This affects rain, hail, sleet, and snow, and any similar water falling from the heavens, but not standing water.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus hours"
+  },
+  {
+    "name": "Purify Water",
+    "page": 241,
+    "category": "Petty",
+    "text": "CN: 0 Range: 1 yard Target: Special Duration: Instant You purify all water within a receptacle, such as a water flask, stein, or jug. All non-magical impurities, such as poison or contaminants are removed, leaving crisp, clear, potable water. If the vessel contains another liquid that is predominantly water — such as ale or wine — this is also purified, turning into delicious, pure, non-alcoholic water.",
+    "cn": "0",
+    "range": "1 yard",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Rot",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: 1 yard Target: Special Duration: Instant You cause a roughly fist-sized volume of organic material to immediately rot. Foodstuffs perish, clothes crumble, leathers shrivel (losing 1 Armour Point on 1 Hit Location), and similar, as dictated by the GM.",
+    "cn": "0",
+    "range": "1 yard",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Shock",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: 1 Duration: Instant Your target receives 1 Stunned Condition.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Sleep",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: 1 Duration: Willpower Bonus Rounds You touch the target, sending them into a deep sleep. If the target has the Prone Condition, they gain the Unconscious Condition as they fall asleep. They remain unconscious for the duration, although loud noises or being moved or jostled will awaken them instantly. If your targets are standing or sitting when affected, they start themselves awake as they hit the ground, gaining the Prone Condition, but remaining conscious. If your target is not resisting, and is suitably tired, they will pass into a deep and restful sleep.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Sly Hands",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: You Target: You Duration: Instant You teleport a small object — no bigger than your fist — from about your person into your hand.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Instant"
+  },
+  {
+    "name": "Sounds",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: Willpower yards Target: Special Duration: Willpower Bonus Rounds You create small noises nearby. You can create quiet, indistinct noises that sound as if they come from a specific location within range, regardless of line of sight. The noises can evoke something specific, such as footsteps, whispers, or the howl of an animal, but nothing so distinct that it might convey a message. While the Spell is active, you may control the sounds by passing an Average (+2 SL) Willpower Test. A success allows you to move the sounds to another point within range, or to increase or decrease their volume.",
+    "cn": "0",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Spring",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: Touch Target: Special Duration: Willpower Bonus Rounds You touch the ground and water bubbles forth at the rate of 1 pint per Round, to a total of your Initiative Bonus in pints.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Twitch",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: Half Willpower yards Target: 1 Duration: Instant You cause a small object to move, slightly. Something may fall from a shelf, or a book may slam its pages shut. If the object is held, the holder must pass an Average (+2 SL) Dexterity Test or drop the object.",
+    "cn": "0",
+    "range": "Half Willpower yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Warning",
+    "page": 242,
+    "category": "Petty",
+    "text": "CN: 0 Range: 1 yard Target: 1 Duration: Instant You channel magic into an object, noticing immediately if it has been poisoned, infected, or trapped.",
+    "cn": "0",
+    "range": "1 yard",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Aethyric Armour",
+    "page": 242,
+    "category": "Arcane",
+    "text": "CN: 2 Range: You Target: You Duration: Willpower Bonus Rounds You gain +1 Armour Point to all Hit Locations as you wrap yourself in a protective swathe of magic.",
+    "cn": "2",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Aethyric Arms",
+    "page": 242,
+    "category": "Arcane",
+    "text": "CN: 3 Range: You Target: You Duration: Willpower Bonus Rounds You conjure a Magical melee weapon of your choice from among the weapons in page 301.",
+    "cn": "3",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Arrow Shield",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 3 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds Any missiles containing organic matter, such as arrows with wooden shafts, are automatically destroyed if they pass within the Area of Effect, causing no damage to their target. Missiles comprising only inorganic matter, such as throwing knives and pistol shots, are unaffected.",
+    "cn": "3",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Blast",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 4 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Instant You channel magic into an explosive blast. This is a magic missile with Damage +3 that targets everyone in the Area of Effect.",
+    "cn": "4",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Bolt",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 4 Range: Willpower yards Target: 1 Duration: Instant You channel magic into a damaging bolt. Bolt is a magic missile with a Damage of +4.",
+    "cn": "4",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Breath",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 6 Range: Special Target: Special Duration: Instant Choose a target within 20 + Willpower Bonus yards and make a Challenging (+0 SL) Ballistic Skill Test. The target, and any creature within Initiative Bonus yards of them, may oppose your result with a Dodge Test. Those who fail to beat your result are struck by this spell. Breath inflicts Willpower Bonus Damage. The effects of this spell vary depending on the Lore used to cast it. 0 Acid (Metal): Damage is increased by 4. Weapons and armour carried by affected targets each suffer 1 Damage. 0 Cold (Beasts, Light, Necromancy): Damage is increased by 2. Targets gain a Fatigued Condition. Until it is removed, their weapons gain the Slow Flaw. 0 Electricity (Heavens): Damage is increased by 2. Damage ignores metal armour. Targets gain a Stunned Condition. 0 Fire (Fire, Daemonology, Waaagh!, and Tzeentch Chaos Lores): Damage is increased by 5. Targets gain an Ablaze Condition.",
+    "cn": "6",
+    "range": "Special",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Bridge",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 4 Range: Willpower yards Target: Special Duration: Willpower Bonus Rounds You create a bridge of magical energy, with a maximum length and breadth of your Willpower Bonus in yards. For every +2 SL, you may increase length or breadth by your Willpower Bonus in yards.",
+    "cn": "4",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Chain Attack",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 6 Range: Willpower yards Target: Special Duration: Instant You channel a twisting spur of rupturing magic into your target. This is a Damage +4 magic missile. If Chain Attack deals more Wounds than the target’s Toughness Bonus, it leaps to the nearest other target within Willpower Bonus yards of the previous target, inflicting –1 Damage each time. It may leap a maximum number of times equal to your Willpower Bonus. For every +2 SL achieved, it may chain to an additional target.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Corrosive Blood",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 2 Range: You Target: You Duration: Toughness Bonus Rounds or hours You infuse yourself with magic, lending your blood a fearsome potency. You gain the Corrosive Blood Creature Trait (see page 357) for Toughness Bonus Rounds. Alternatively, for Toughness Bonus hours, all small parasites (fleas, leeches, etc.) that bite you instantly die and transmit no disease. Blood Rot and similar diseases are purged from your body.",
+    "cn": "2",
+    "range": "You",
+    "target": "You",
+    "duration": "Toughness Bonus Rounds or hours"
+  },
+  {
+    "name": "Dark Vision",
+    "page": 243,
+    "category": "Arcane",
+    "text": "CN: 1 Range: You Target: You Duration: Initiative Bonus Rounds You boost your Second Sight to assist your mundane senses. While the Spell is active, gain the Dark Vision Creature Trait (see page 357).",
+    "cn": "1",
+    "range": "You",
+    "target": "You",
+    "duration": "Initiative Bonus Rounds"
+  },
+  {
+    "name": "Distracting",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 4 Range: You Target: You Duration: Willpower Bonus Rounds You wreathe yourself in magic, which swirls around you, distracting your foes. While the Spell is active, gain the Distracting Creature Trait (see page 358).",
+    "cn": "4",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Dome",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 7 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You create a dome of magical energy overhead, blocking incoming attacks. Anyone within the Area of Effect gains the Ward 6+ Creature Trait (see page 363) against Magical or ranged attacks originating outside the dome. Those within may attack out of the dome as normal, and the dome does not impede movement.",
+    "cn": "7",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Drop",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 1 Range: Willpower yards Target: 1 Duration: Instant You channel magic into an object being held by the target creature. This could be a weapon, a rope, or someone’s hand. Unless a Challenging (+0 SL) Dexterity Test is passed, the item is dropped. For every +2 SL, you may impose -1 SL on the Dexterity Test.",
+    "cn": "1",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Entangle",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 3 Range: Willpower Bonus yards Target: 1 Duration: Willpower Bonus Rounds Using magic, you entrap your target, wrapping them in whatever suits your Lore: vines, shadows, their own clothing… Your target gains one Entangled Condition with a Strength equal to your Willpower.",
+    "cn": "3",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Fearsome",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 3 Range: You Target: You Duration: Willpower Bonus Rounds Shrouding yourself in magic, you become fearsome and intimidating. Gain Fear 1. For every +3 SL, you may increase your Fear value by 1.",
+    "cn": "3",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Flight",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 8 Range: You Target: You Duration: Willpower Bonus Rounds You can fly, whether by sprouting wings, ascending on a pillar of magical light, or some other method. Gain the Fly (Athletics) Creature Trait (see page 358).",
+    "cn": "8",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Magic Shield",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 4 Range: You Target: You Duration: Willpower Bonus Rounds You encase yourself in bands of protective magic. While the Spell is active, add +Willpower Bonus SL to any dispel attempts you make.",
+    "cn": "4",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Move Object",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 4 Range: Willpower yards Target: 1 Duration: 1 Round Using magic, you grab hold of a non-sentient object no larger than 1 + SL yards in any dimension, moving it with the sheer force of your will, which is considered to have a Strength equal to your Willpower. You may move the object up to Willpower Bonus yards. If anyone attempts to impede the object’s movement, make an Opposed Willpower/Strength Test. For every +2 SL, you may increase the distance the object is moved by Willpower Bonus yards.",
+    "cn": "4",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "1 Round"
+  },
+  {
+    "name": "Mundane Aura",
+    "page": 244,
+    "category": "Arcane",
+    "text": "CN: 4 Range: You Target: You Duration: Willpower minutes You drain all the Winds of Magic from within your body and your possessions, removing any magical aura. For the duration of the Spell, you appear mundane to the Magical Sense Talent and similar. You effectively have no magical ability and your magical nature cannot be detected by any means. While this Spell is in effect, you cannot cast any other Spells. Mundane Aura immediately ends if you make a Channelling Test.",
+    "cn": "4",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Push",
+    "page": 245,
+    "category": "Arcane",
+    "text": "CN: 6 Range: You Target: AoE (Willpower Bonus yards, maximum) Duration: Instant All targets around you are pushed back your Willpower Bonus in yards, take 1d10 Damage ignoring Armour Points, and gain the Prone Condition. If they collide into a creature the same Size or smaller, that creature gains the Prone Condition (but takes no Damage). For every +2 SL, you may push creatures back another Willpower Bonus in yards.",
+    "cn": "6",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards, maximum)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Silence",
+    "page": 245,
+    "category": "Arcane",
+    "text": "CN: 4 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus minutes You create a zone around you through which no noise can travel. Within the zone, no sound can be heard, and people outside the zone cannot hear anything emanating from it. This interferes with the casting of Spells: the Difficulty of Casting Tests increases by one step.",
+    "cn": "4",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus minutes"
+  },
+  {
+    "name": "Teleport",
+    "page": 245,
+    "category": "Arcane",
+    "text": "CN: 3 Range: You Target: You Duration: Instant Using magic, you can teleport up to your Willpower Bonus + SL in yards. This movement allows you to traverse gaps, avoid perils and pitfalls, and ignore obstacles.",
+    "cn": "3",
+    "range": "You",
+    "target": "You",
+    "duration": "Instant"
+  },
+  {
+    "name": "Terrifying",
+    "page": 245,
+    "category": "Arcane",
+    "text": "CN: 6 Range: You Target: You Duration: Willpower Bonus Rounds You become a terrifying horror to your enemies. You gain the Terror 1 Creature Trait (see page 362). For every +3 SL, you may increase your Terror value by 1.",
+    "cn": "6",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Ward",
+    "page": 245,
+    "category": "Arcane",
+    "text": "CN: 6 Range: You Target: You Duration: Willpower Bonus Rounds You wrap yourself in protective magic, gaining the Ward 7+ Creature Trait (see page 363).",
+    "cn": "6",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Amber Talons",
+    "page": 245,
+    "category": "Beasts",
+    "text": "CN: 3 Range: You Target: You Duration: Willpower Bonus Rounds Your nails grow into wickedly sharp talons of crystal amber. Your unarmed attacks lose Undamaging, gain Magical, have a Damage of SB + 4, and inflict 1 Bleeding Condition whenever they cause Wounds. Further, gain Scale Sheer Surface (see page 125).",
+    "cn": "3",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Beast Form",
+    "page": 245,
+    "category": "Beasts",
+    "text": "CN: 5 Range: You Target: You Duration: Toughness minutes You infuse your very bones and flesh with Ghur, warping your body into that of an animal. When cast, select a new form from any in the Beasts of the Reikland section of the Bestiary (see pages 325-327). You gain all the creature’s standard Traits except the Bestial and Skittish Traits. Furthermore, replace your Movement, Strength, Toughness, Agility, and Dexterity with the creature’s. Recalculate your Wounds. For every +2 SL, you may include 1 of the creature’s Optional Creature Traits except Size (Enormous). While transformed, you look like a normal version of the animal, with amber and brown colouring. You cannot speak, cast Spells, or dispel. Critical Wounds and lost Wounds carry over when you revert to your true form, but you cannot be reduced below 0 Wounds in this way.",
+    "cn": "5",
+    "range": "You",
+    "target": "You",
+    "duration": "Toughness minutes"
+  },
+  {
+    "name": "Beast Master",
+    "page": 246,
+    "category": "Beasts",
+    "text": "CN: 10 Range: Willpower Bonus yards Target: 1 Duration: Willpower Bonus days Your breath steams and your eyes take on a shining amber sheen as Ghur suffuses you. Your gaze and words convince a creature with the Bestial and Size (Small, Average, or Large) Traits that you are its pack master. It fights to the death to protect you. While subject to your mastery, the beast follows your commands, instinctively understanding simple instructions. If the Spell ends, the creature retains enough respect and fear not to attack you unless compelled to. Your allies may not be so fortunate.",
+    "cn": "10",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Willpower Bonus days"
+  },
+  {
+    "name": "Beast Tongue",
+    "page": 246,
+    "category": "Beasts",
+    "text": "CN: 3 Range: You Target: You Duration: Willpower minutes You can commune with all creatures possessing the Bestial Trait. Ghur clogs your throat, and your language comes out as snarls, hisses, and roars as befits the beasts to whom you speak. While the creatures are not compelled to answer you or do as you bid, most hear you out. You gain +2 SL on all Animal Training and Charm Animal Tests. While this Spell is active, you may only speak with beasts — you may not speak any civilised tongues and can only communicate with your party using gestures. You cannot cast Spells or dispel while Beast Tongue is active.",
+    "cn": "3",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Flock of Doom",
+    "page": 246,
+    "category": "Beasts",
+    "text": "CN: 8 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You call down a murder of crows or similar local birds to assail your foes. The flock ferociously attacks everyone in the Area of Effect who lacks Arcane Magic (Beasts) , inflicting a Damage 7 hit to the head at the end of each Round. The birds also cause them to suffer 1 Blinded Condition while within the area as they peck at their eyes. As an Action, you may make an Average (+2 SL) Charm Animal Test to move the flock to another area within range.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Hunter’s Hide",
+    "page": 246,
+    "category": "Beasts",
+    "text": "CN: 6 Range: You Target: You Duration: Willpower Bonus Rounds You cloak yourself in a shimmering mantle of Ghur. You gain +20 Toughness, the Acute Sense (Smell) Talent (see page 114), and the Dark Vision and Fear 1 Creature Traits (see page 358).",
+    "cn": "6",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "The Amber Spear",
+    "page": 246,
+    "category": "Beasts",
+    "text": "CN: 8 Range: Strength yards Target: 1 (maximum) Duration: Instant You hurl a great spear of pure Ghur with uncanny accuracy. This is a magic missile with a Damage of +12, ignoring AP from armour made of leather, fur, scales, and similar. You may choose its Hit Location, and it also inflicts +1 Bleeding Condition.",
+    "cn": "8",
+    "range": "Strength yards",
+    "target": "1 (maximum)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Wyssan’s Wildform",
+    "page": 246,
+    "category": "Beasts",
+    "text": "CN: 8 Range: You Target: You Duration: Willpower Bonus Rounds You call on the wild power of Ghur to infuse you, surrendering to its savage delights. Gain +1 Movement, +30 Strength and Toughness, and the following Creature Traits (see pages 356–361): Belligerent, Bite (Strength Bonus + 1), Fear 1, Frenzy, Magical, Striding Gait (Woodland). While the Spell is active, you are incapable of using any Language or Lore Skills.",
+    "cn": "8",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Caress of Laniph",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 6 Range: Touch Target: 1 (maximum) Duration: Instant Reaching out an ebon hand, you draw out your target’s soulstuff. This is a magic missile with a Damage of +6 that ignores TB and AP. For every 2 Wounds you inflict, you permanently reduce the target’s maximum Wounds by 1 and may add 1 SL to your channelling pool. You must use your hand for the Touch Test, not an enchanted staff.",
+    "cn": "6",
+    "range": "Touch",
+    "target": "1 (maximum)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Dying Words",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 2 Range: Touch Target: 1 Duration: Willpower Bonus Rounds Touching the body of a recently departed soul (one that passed away within the last day), you call its soul back briefly. For the Spell’s duration, you can communicate with the dead soul, though they cannot take any action other than talking. They are not compelled to answer you, but the dead do not lie.",
+    "cn": "2",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Purple Pall of Shyish",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 9 Range: You Target: You Duration: Willpower Bonus Rounds You pull about you a pall fashioned from fine strands of Shyish. Gain +WPB Armour Points on all Locations and the Fear 1 Creature Trait (see page 358). For every +2 SL, you may increase your Fear rating by 1.",
+    "cn": "9",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Sanctify",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 10 Range: Touch Target: AoE (Willpower Bonus yards) Duration: Willpower minutes Inscribing a magical circle, you ward it with Shyish, forming an impenetrable barrier to the undead. Creatures with the Undead Creature Trait cannot enter or leave the circle.",
+    "cn": "10",
+    "range": "Touch",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Scythe of Shyish",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 6 Range: You Target: You Duration: Willpower Bonus Rounds You conjure a magical scythe. It acts like a Magical Halberd with a Damage of SB + WPB + 4. Undead enemies do not receive Advantage when Engaged with you.",
+    "cn": "6",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Soul Vortex",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 8 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Instant You hurl a shimmering ball of Shyish which erupts into purple flames, swirling with ghostly faces, mouths agape in silent terror. Targets within the Area of Effect receive +1 Broken Condition. Targets with the Undead Creature Trait take a magic missile hit with a Damage of +10 that ignores Toughness Bonus and Armour Points.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Steal Life",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 8 Range: Willpower yards Target: 1 Duration: Instant Thin strands of purple mist connect you briefly to your target, who wastes away before your very eyes. This counts as a magic missile with a Damage of +6 that ignores Armour Points. Furthermore, you lose all Fatigued Conditions, and for every 2 Wounds you inflict, you may heal 1 Wound.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Swift Passing",
+    "page": 247,
+    "category": "Death",
+    "text": "CN: 2 Range: Touch Target: Special Duration: Instant Your touch brings the release of death to a single creature standing at Morr’s threshold. If the target has 0 Wounds remaining, death swiftly follows. Furthermore, they cannot be raised as Undead.",
+    "cn": "2",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Aqshy’s Aegis",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 5 Range: You Target: You Duration: Willpower Bonus Rounds You wrap yourself in a fiery cloak of Aqshy, channelling flame into an aegis. You are completely immune to damage from non-magical fire and ignore any Ablaze Conditions you receive. You receive the Ward 7+ Creature Trait (see page 363) against magical fire attacks, including warpfire and Spells from the Lore of Fire.",
+    "cn": "5",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Cauterise",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 2 Range: Touch Target: 1 Duration: Instant Channelling Aqshy through your hands, you lay them on an ally’s wounds. The target heals 1 Wound, or 1 + SL Wounds if they have Arcane Magic (Fire), and removes all Bleeding Conditions. Furthermore, their wounds will not become infected. Targets without Arcane Magic (Fire) must pass a Challenging (+0 SL) Endurance Test or scream in agony. On an Astounding Failure, the target gains a Stunned Condition and is permanently scarred.",
+    "cn": "2",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Crown of Flame",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 8 Range: You Target: You Duration: Willpower Bonus Rounds You channel Aqshy into a majestic crown of inspiring fire about your brow. You gain +1 War Leader Talent (see page 128) and the Fear Trait (see page 358). For every +2 SL, you may increase your Fear value by 1 or take War Leader again. Furthermore, gain a +1 SL bonus on all Channelling and Casting Tests using Aqshy.",
+    "cn": "8",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Firewall",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 6 Range: Willpower yards Target: AoE (Special) Duration: Willpower Bonus Rounds You channel a streak of Aqshy, creating a wall of flame. The firewall is Willpower Bonus yards long, 1 yard high, and 1 yard deep. Anyone crossing the firewall gains 1 Ablaze Condition and suffers a magic missile hit with a Damage of +WPB. You can add extra Area of Effect with Overcasting to multiply its length.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "AoE (Special)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Flaming Hearts",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 5 Range: You Target: AoE (Fellowship Bonus yards) Duration: Instant Your voice takes on a rich resonance, echoing with Aqshy’s fiery passion. Allied characters lose all Broken and Fatigued Conditions and may take a Frenzy Test (see page 184).",
+    "cn": "5",
+    "range": "You",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Flaming Sword of Rhuin",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 8 Range: Willpower yards Target: 1 sword (Hand Weapon) Duration: Willpower Bonus Rounds You wreathe a sword in magical flames. The weapon has Damage SB + 6 and the Damaging and Magical Qualities (see page 304). Hits with the blade inflict 1 Ablaze Condition. If a wielder lacks Arcane Magic (Fire) and they Fumble an attack with the flaming sword, they gain 1 Ablaze Condition.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "1 sword (Hand Weapon)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Great Fires of U’Zhul",
+    "page": 248,
+    "category": "Fire",
+    "text": "CN: 10 Range: Willpower yards Target: 1 (maximum) + AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You hurl an explosive blast of Aqshy. The flames erupt into a furious blaze, burning with the heat of a forge. The central target suffers a magic missile hit with Damage +10 that ignores AP and inflicts 2 Ablaze Conditions and the Prone Condition. Other targets in the Area of Effect suffer a Damage +5 magic missile hit ignoring AP. The Spell stops behaving like a magic missile as the fire continues to burn in the Area of Effect for the duration. Anyone within the Area of Effect at the end of a Round suffers WPB + 5 Damage, ignoring AP, and gains 1 Ablaze Condition.",
+    "cn": "10",
+    "range": "Willpower yards",
+    "target": "1 (maximum) + AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Purge",
+    "page": 249,
+    "category": "Fire",
+    "text": "CN: 10 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You funnel intense flame to burn away corruption in an area. Anything flammable is set alight, and any creatures in the area take +SL Ablaze Conditions. If the location contains a Corrupting Influence, such as Dhar, warpstone, or a Chaos- tainted object, it smoulders and blackens, beginning to burn away. You can maintain Purge in subsequent Rounds with your Actions by passing a single Challenging (+0 SL) Channelling (Aqshy) Test, but must pass a Difficult (-1 SL) Endurance Test every 30 minutes or gain a Fatigued Condition; a Failure (-1 SL or worse on the Endurance Test) ends the Spell. The precise time needed to eliminate the Corrupting Influence is determined by the GM. As a rough guideline, a small quantity (smaller than an acorn) of warpstone, or a minor Chaos-tainted object may require 10 - Willpower Bonus Rounds (minimum of 1 Round). A fist-sized chunk of warpstone or a more potent Chaos-tainted object may require double the amount of time. A powerful Chaos artefact may take hours or longer. See page 187 for details on Corrupting Influences.",
+    "cn": "10",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Cerulean Shield",
+    "page": 249,
+    "category": "Heavens",
+    "text": "CN: 7 Range: You Target: You Duration: Willpower Bonus Rounds You encase yourself in a crackling cage of sparking electricity and Azyr. For the Spell’s duration, gain +3 Armour Points to all Locations against metal weapons — such as daggers, swords, and arrows with metal tips. If struck by metal melee weapons, your attacker takes 6 Damage to their striking arm.",
+    "cn": "7",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Comet of Casandora",
+    "page": 249,
+    "category": "Heavens",
+    "text": "CN: 16 Range: Initiative yards Target: AoE (2 x Willpower Bonus yards) Duration: Special You channel all the Azyr you can muster and reach out to the skies, calling down a comet to wreak havoc amongst your foes. Select a target area of impact. At the end of the next Round, make a Very Hard (-3 SL) Ballistic Skill or Average (+2 SL) Lore (Astronomy) Test. For every +SL you achieve on the Ballistic Skill or Lore Test, you may move your area of impact by Willpower Bonus yards. For every -SL, the GM moves the area of impact by 1d10 yards in a random direction. Comet of Casandora then acts as a magic missile with Damage +18 that hits all targets in the Area of Effect. Targets also gain 1 Ablaze Condition and the Prone Condition.",
+    "cn": "16",
+    "range": "Initiative yards",
+    "target": "AoE (2 x Willpower Bonus yards)",
+    "duration": "Special"
+  },
+  {
+    "name": "Coruscating Arc",
+    "page": 249,
+    "category": "Heavens",
+    "text": "CN: 12 Range: Willpower yards Target: Special Duration: Instant A crackling bolt of chain lightning shoots from your fingertips, scything through the enemy’s ranks. Coruscating Arc acts like Chain Attack (see page 243), except its Damage is +10 and it inflicts 1 Blinded Condition.",
+    "cn": "12",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Fate’s Fickle Fingers",
+    "page": 249,
+    "category": "Heavens",
+    "text": "CN: 6 Range: You Target: AoE (Initiative Bonus yards) Duration: Willpower Bonus Rounds All allies within the Area of Effect, excluding those with the Arcane Magic (Heavens) Talent, create a single pool of Fortune Points. All may draw on the pool; first come, first served. When the Spell ends, you reallocate any remaining Fortune Points as fairly as possible.",
+    "cn": "6",
+    "range": "You",
+    "target": "AoE (Initiative Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Starcrossed",
+    "page": 249,
+    "category": "Heavens",
+    "text": "CN: 7 Range: Initiative yards Target: 1 Duration: Initiative Bonus Rounds You can spend Fortune Points to force the target to reroll Tests.",
+    "cn": "7",
+    "range": "Initiative yards",
+    "target": "1",
+    "duration": "Initiative Bonus Rounds"
+  },
+  {
+    "name": "The First Portent of Amul",
+    "page": 249,
+    "category": "Heavens",
+    "text": "CN: 3 Range: You Target: You Duration: Initiative Bonus Rounds You read signs about what the future holds. For the duration of the spell you gain +1 Fortune Point. For every +2 SL, you may gain +1 more.",
+    "cn": "3",
+    "range": "You",
+    "target": "You",
+    "duration": "Initiative Bonus Rounds"
+  },
+  {
+    "name": "The Second Portent of Amul",
+    "page": 250,
+    "category": "Heavens",
+    "text": "CN: 6 Range: You Target: You Duration: Initiative Bonus Rounds You divine clues as to forthcoming events. For the duration of the spell you gain 1 + SL Fortune Points. For every +2 SL, you may gain +1 additional Fortune Point.",
+    "cn": "6",
+    "range": "You",
+    "target": "You",
+    "duration": "Initiative Bonus Rounds"
+  },
+  {
+    "name": "The Third Portent of Amul",
+    "page": 250,
+    "category": "Heavens",
+    "text": "CN: 12 Range: You Target: You Duration: Initiative Rounds You divine a portent of doom. For the duration of the spell you gain +1 Fate Point. MYSTICS The Mystic career can gain access to the Arcane Magic (Heavens) Talent. Mystics who take that Talent can only take these Spells: Fate’s Fickle Fingers, Starcrossed, The First Portent of Amul, The Second Portent of Amul, The Third Portent of Amul. To gain access to the rest of the Lore of Heavens, they would need to enter a suitable spellcasting career.",
+    "cn": "12",
+    "range": "You",
+    "target": "You",
+    "duration": "Initiative Rounds"
+  },
+  {
+    "name": "Barkskin",
+    "page": 250,
+    "category": "Life",
+    "text": "CN: 3 Range: Touch Target: 1 Duration: Willpower Bonus Rounds You cause the target’s skin to become hard and rough like the bark of a tree. The target gains +2 Toughness Bonus, but suffers -10 Agility and Dexterity.",
+    "cn": "3",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Earthblood",
+    "page": 250,
+    "category": "Life",
+    "text": "CN: 6 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You draw up wholesome energies from the soil. To cast this Spell, you must be in direct contact with the earth — either touching it, or standing barefoot. Any living creatures in direct contact with the earth within the Area of Effect heal WPB Wounds at the start of every Round.",
+    "cn": "6",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Earthpool",
+    "page": 250,
+    "category": "Life",
+    "text": "CN: 7 Range: Willpower yards Target: You Duration: Instant After successfully casting Earthpool, you immediately disappear into the ground in a wild torrent of Ghyran. You appear at the start of the next Round at any point within range, erupting from the earth violently. Any creature you erupt under is thrown back 1 yard in a random direction and falls Prone. This Spell will not allow you to move through solid rock, but will allow you to move through water.",
+    "cn": "7",
+    "range": "Willpower yards",
+    "target": "You",
+    "duration": "Instant"
+  },
+  {
+    "name": "Fare of the Land",
+    "page": 250,
+    "category": "Life",
+    "text": "CN: 4 Range: Touch Target: 1 Duration: Willpower Bonus days You flood the target’s body with nourishing Ghyran. The target need not eat or drink. They still excrete as normal, though their leavings are verdant green.",
+    "cn": "4",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus days"
+  },
+  {
+    "name": "Forest of Thorns",
+    "page": 251,
+    "category": "Life",
+    "text": "CN: 6 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds This Spell may only target a patch of earth. You cause a dense knot of wickedly spiked brambles and tangled vines to burst upwards, covering the Area of Effect. For the duration, anyone without the Arcane Magic (Life) Talent attempting to traverse the area on foot must make a Hard (-2 SL) Athletics Test. If they fail, they gain 1 Bleeding Condition and 1 Entangled Condition with a Strength equal to your Willpower. After the Spell ends, the growth remains but loses its magical properties.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Lie of the Land",
+    "page": 251,
+    "category": "Life",
+    "text": "CN: 5 Range: Initiative Bonus miles Target: You Duration: Special Touching the earth, your senses flow through the Ghyran tracing the nearby area. After communing for 1 minute, you receive a mental map of natural features — land, forests, rivers — within range. Settlements may be alluded to as areas of clear terrain or trenches. If you increase the range using Overcasting, the time it takes to commune with the land increases by 1 minute for each SL.",
+    "cn": "5",
+    "range": "Initiative Bonus miles",
+    "target": "You",
+    "duration": "Special"
+  },
+  {
+    "name": "Lifebloom",
+    "page": 251,
+    "category": "Life",
+    "text": "CN: 8 Range: Willpower Bonus yards Target: Special Duration: Instant You cause Ghyran to flood an area that is blighted or desolate. As examples of the Spell’s power, you may target either a dry riverbed, well, field, or a domestic animal. If you successfully cast the Spell, the target bursts to life: 0 A dry river begins to flow once again. 0 A dry or polluted well becomes clean and fresh. 0 A planted field, vineyard, or orchard bursts into life, with all its crops immediately reaching full ripeness. 0 A sick or unproductive animal is cured of all diseases and becomes energetic and eager once more.",
+    "cn": "8",
+    "range": "Willpower Bonus yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Regenerate",
+    "page": 251,
+    "category": "Life",
+    "text": "CN: 6 Range: Touch Target: 1 Duration: Willpower Bonus Rounds Your target gains the Regeneration Creature Trait (see page 360).",
+    "cn": "6",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Banishment",
+    "page": 251,
+    "category": "Light",
+    "text": "CN: 12 Range: You Target: AoE (Willpower Bonus yards) Duration: Instant You open your hands and a cleansing halo of Hysh issues forth, affecting all creatures within the Area of Effect whose Toughness is lower than your Willpower. Targets with the Daemonic or Undead Creature Trait gain the Unstable Creature Trait (see page 363). If they already have the Unstable Trait, they are reduced to 0 Wounds.",
+    "cn": "12",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Blinding Light",
+    "page": 251,
+    "category": "Light",
+    "text": "CN: 5 Range: You Target: You Duration: Instant You emit a blinding flash of light from your hand or staff. Everyone looking at you within WPB yards receives 3 Blinded Conditions unless they possess the Arcane Magic (Light) Talent.",
+    "cn": "5",
+    "range": "You",
+    "target": "You",
+    "duration": "Instant"
+  },
+  {
+    "name": "Clarity of Thought",
+    "page": 251,
+    "category": "Light",
+    "text": "CN: 6 Range: Touch Target: 1 Duration: Intelligence minutes You calm your target’s mind, allowing them to think clearly. The target ignores any negative modifiers to their mental processes, such as Conditions like Stunned, Mental Mutations, Psychologies, and so forth while the Spell is in effect.",
+    "cn": "6",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Intelligence minutes"
+  },
+  {
+    "name": "Daemonbane",
+    "page": 252,
+    "category": "Light",
+    "text": "CN: 10 Range: Willpower Bonus yards Target: 1 Daemon Duration: Instant You summon a blast of Hysh that passes through the border between the Realm of Chaos and the material world. If the target’s Toughness is higher than your Intelligence but less than double, halve their maximum Wounds for the rest of the encounter. If lower, you banish them with a blinding white light Everyone looking at a banished daemon from Willpower yards away receives 3 Blinded Conditions, unless they possess the Arcane Magic (Light) Talent.",
+    "cn": "10",
+    "range": "Willpower Bonus yards",
+    "target": "1 Daemon",
+    "duration": "Instant"
+  },
+  {
+    "name": "Healing Light",
+    "page": 252,
+    "category": "Light",
+    "text": "CN: 8 Range: Willpower Bonus yards Target: 1 Duration: Instant Your target glows with a cleansing light, healing Intelligence Bonus Wounds and removing poisons and intoxicants. If you pass a Very Hard (-3 SL) Channelling (Hysh) Test, 1 Corruption Point gained in the last hour is also lost.",
+    "cn": "8",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Net of Amyntok",
+    "page": 252,
+    "category": "Light",
+    "text": "CN: 8 Range: Intelligence Bonus yards Target: 1 Duration: Intelligence Bonus Rounds You cast a net woven from strands of Hysh over your target, whose mind is overcome with conundrums and puzzles, leaving them paralysed with indecision. Target loses their Move and gains +1 Stunned Condition, which they cannot lose while the Spell is active. When recovering from the Condition, targets Test their Intelligence instead of the Endurance Skill. Bestial creatures are immune to this Spell.",
+    "cn": "8",
+    "range": "Intelligence Bonus yards",
+    "target": "1",
+    "duration": "Intelligence Bonus Rounds"
+  },
+  {
+    "name": "Phâ’s Protection",
+    "page": 252,
+    "category": "Light",
+    "text": "CN: 10 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You summon a protective aura of pure holy light. Creatures with the Daemonic or Undead Creature Trait and those with mutations cannot enter the Area of Effect — those already within the area gain a Broken Condition until they leave. Creatures within the area cannot gain any Corruption Points while the Spell is active.",
+    "cn": "10",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Speed of Thought",
+    "page": 252,
+    "category": "Light",
+    "text": "CN: 8 Range: You Target: You Duration: Willpower Bonus Rounds A lattice of Hysh overlays your mind, allowing you to think rapidly. Gain +20 to Intelligence and Initiative.",
+    "cn": "8",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Crucible of Chamon",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 7 Range: Willpower Bonus yards Target: 1 object Duration: Instant You channel Chamon into a single non-magical, metallic object, such as a weapon or piece of armour covering a single body part. The item melts, dripping to the floor as molten metal, cooling almost immediately. If held, the item is dropped. If worn, the wearer takes a hit like a magic missile with Damage +WPB that ignores Armour Points. While the object is destroyed, the metal retains its base value, and may be used by a smith as raw material.",
+    "cn": "7",
+    "range": "Willpower Bonus yards",
+    "target": "1 object",
+    "duration": "Instant"
+  },
+  {
+    "name": "Enchant Weapon",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 6 Range: 1 yard Target: Special Duration: Willpower Bonus Rounds You encase a single non-magical weapon with heavy bands of Chamon, enhancing its potency. For the duration of the Spell, it gains +WPB Damage and the Magical and Unbreakable Qualities (see pages 304–305). For every +3 SL, you may also add 1 Weapon Quality or remove 1 Weapon Flaw while the Spell is active.",
+    "cn": "6",
+    "range": "1 yard",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Feather of Lead",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 5 Range: Willpower yards Target: Area of Effect (Willpower Bonus yards) Duration: Willpower Bonus Rounds Calling on the Golden Wind, you alter the density of your target’s belongings, raising or lowering their weight. For the duration of the Spell, choose one effect for everyone within the area of effect: 0 Count as two steps more Overburdened. 0 Do not count as Overburdened. See page 299 for details on Encumbrance.",
+    "cn": "5",
+    "range": "Willpower yards",
+    "target": "Area of Effect (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Fool’s Gold",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 4 Range: Touch Target: 1 Duration: Willpower minutes You weave Chamon into a non-magical object made of metal, fundamentally altering its nature. For the duration of the Spell, all metal in the object becomes gold. This is not an illusion: it has transformed into gold. When the Spell ends, the item reverts to its original metal. This Spell can ruin good weapons, make armour too heavy to wear, and turn lead coins into something more appealing.",
+    "cn": "4",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Forge of Chamon",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 9 Range: Willpower Bonus yards Target: Special Duration: Willpower minutes You alter the quality of a metal item. You may add 1 Item Quality or remove 1 Item Flaw. For every +2 SL, you may add another Item Quality or remove another Item Flaw.",
+    "cn": "9",
+    "range": "Willpower Bonus yards",
+    "target": "Special",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Glittering Robe",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 6 Range: You Target: You Duration: Willpower Bonus Rounds You conjure a shimmering, luminous cloak of scales that dazzles the enemy. The robe emits as much light as a candelabra, you gain +2 AP to all Locations, and any enemies Engaged with you must pass a Challenging (+0 SL) Endurance Test of suffer 1 Blinded Condition.",
+    "cn": "6",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Mutable Metal",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 5 Range: Touch Target: 1 Duration: Willpower Bonus Rounds You touch a non-magical object made of metal, which instantly becomes warm to the touch as you squeeze Chamon into it. You may bend and mangle the object with your bare hands. If you wish to make a more complex alteration and the GM agrees, you may attempt a pertinent Average (+2 SL) Art or Trade Test instead, depending on what you are trying to achieve.",
+    "cn": "5",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Transmutation of Chamon",
+    "page": 253,
+    "category": "Metal",
+    "text": "CN: 12 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You wrench Chamon from the metals worn by your foes, and the earth itself, briefly transforming the flesh of your enemies into metal. This is a Damage +WPB magic missile affecting all in the Area of Effect; the Spell ignores TB and AP and inflicts +1 Blinded, Deafened, and Stunned Condition, all of which last for the duration. All affected targets gain +1 AP from the gold wrapped about their bodies, but also endure Suffocation (see page 169). If targets die while the Spell is in effect, they are permanently encased in a shell of base metals, a macabre reminder of the risks of sorcery.",
+    "cn": "12",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Choking Shadows",
+    "page": 254,
+    "category": "Shadows",
+    "text": "CN: 6 Range: Willpower Bonus yards Target: 1 Duration: Willpower Bonus Rounds You wrap shadowy tendrils of Ulgu around your foes’ necks. They suffer 1 Fatigued Condition, cannot talk, and suffocate (see page 169).",
+    "cn": "6",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Doppelganger",
+    "page": 254,
+    "category": "Shadows",
+    "text": "CN: 10 Range: You Target: You Duration: Intelligence Bonus minutes You weave a cloak of Ulgu, assuming the likeness of another humanoid creature with whom you are familiar (as determined by the GM). Your appearance fools anyone without the Second Sight Talent, though some may note if your mannerisms are incorrect. Those with Second Sight must win an Opposed Difficult (-1 SL) Intuition Test against the Casting Test to notice the disguise.",
+    "cn": "10",
+    "range": "You",
+    "target": "You",
+    "duration": "Intelligence Bonus minutes"
+  },
+  {
+    "name": "Illusion",
+    "page": 254,
+    "category": "Shadows",
+    "text": "CN: 8 Range: Willpower yards Target: AoE (Intelligence Bonus yards) Duration: Intelligence minutes You spin a web of intricate strands of Ulgu, obfuscating the Area of Effect with an illusory image of your choosing. You automatically fool anyone without the Second Sight Talent. Those with that Talent must win an Opposed Difficult (-1 SL) Intuition Test against the Casting Test to notice the illusion. This does not let them see through the Spell or end its effects — they merely understand it is an illusion. The illusion is typically unmoving. For your Action, you may make a Hard (-2 SL) Channelling (Ulgu) Test to make the illusion move within its space for that Round.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "AoE (Intelligence Bonus yards)",
+    "duration": "Intelligence minutes"
+  },
+  {
+    "name": "Mindslip",
+    "page": 254,
+    "category": "Shadows",
+    "text": "CN: 6 Range: 1 yard Target: 1 Duration: Intelligence minutes You conjure delicate threads of Ulgu in your target’s mind, causing all prior memory of you to disappear for the Spell’s duration. Once the Spell is over, if you wish, the target must win an Opposed Average (+2 SL) Intelligence Test against the Casting Test or the memory loss becomes permanent until dispelled.",
+    "cn": "6",
+    "range": "1 yard",
+    "target": "1",
+    "duration": "Intelligence minutes"
+  },
+  {
+    "name": "Mystifying Miasma",
+    "page": 254,
+    "category": "Shadows",
+    "text": "CN: 6 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds You conjure forth a swirling mass of mist shot through with roiling shadows that confounds the senses. Anyone within the mist without the Arcane Magic (Shadows) Talent is affected by the miasma, gaining 1 Blinded, Deafened, and Fatigued Condition, which remain for the Spell’s duration. Affected creatures that attempt to use their Move must pass a Challenging (+0 SL) Perception Test or gain the Prone Condition.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Shadowsteed",
+    "page": 255,
+    "category": "Shadows",
+    "text": "CN: 6 Range: Willpower Bonus yards Target: 1 Duration: Until the next dawn You summon forth a shadowy steed. The creature’s unnatural flesh is black as midnight, and at times it appears to be both solid and insubstantial. Use the rules for a riding horse (see page 327). When the shadowsteed is out of sunlight, it gains the following Creature Traits (see page 356): Dark Vision, Ethereal, Fear 1, Magical, Painless, and Ward 9+. Even when insubstantial, shadowsteeds may be ridden. Riders with the Arcane Magic (Shadow) Talent have a bonus of +2 SL to Ride Tests to ride a shadowsteed. Those without the Talent suffer a penalty of -2 SL. Shadowsteeds are tireless and need neither rest nor sustenance. As the first rays of dawn break over the horizon, the steeds melt into insubstantial mist. If the Spell ends while a shadowsteed has a rider, the rider suddenly falls and suffers falling damage (see page 169).",
+    "cn": "6",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Until the next dawn"
+  },
+  {
+    "name": "Shadowstep",
+    "page": 255,
+    "category": "Shadows",
+    "text": "CN: 8 Range: Willpower yards Target: You Duration: Instant You create a shadowy portal of Ulgu through the Aethyr. You disappear from your current location and immediately appear up to Willpower yards away. Any enemies Engaging you when you disappear gain the Surprised Condition.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "You",
+    "duration": "Instant"
+  },
+  {
+    "name": "Shroud of Invisibility",
+    "page": 255,
+    "category": "Shadows",
+    "text": "CN: 8 Range: Touch Target: 1 Duration: Willpower Bonus Rounds You wrap the target in a shroud of Ulgu. The target becomes invisible and cannot be perceived by mundane senses. The Spell automatically fools anyone without Second Sight. Those with the Sight must win an Opposed Perception Test against the Casting Test to notice that someone is nearby, though they will not be able to pin down the precise location. Targets are still perceptible to the other senses. The Spell ends if the target brings attention to themself by making loud noises or attacking someone.",
+    "cn": "8",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Goodwill",
+    "page": 255,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: You Target: AoE (Fellowship Bonus yards) Duration: Willpower Bonus minutes You create an atmosphere conducive to friendliness and good spirits. All Fellowship Tests within the Area of Effect receive +1 SL, and Animosity and Hatred Psychologies have no effect.",
+    "cn": "0",
+    "range": "You",
+    "target": "AoE (Fellowship Bonus yards)",
+    "duration": "Willpower Bonus minutes"
+  },
+  {
+    "name": "Halétha’s Joy",
+    "page": 255,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: Touch Target: 1 Duration: Fellowship Bonus hours You plead with a god of fertility to bless the target. While the Spell is active, if biologically possible, they will conceive a child. The Spell ends when used.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus hours"
+  },
+  {
+    "name": "Mirkride",
+    "page": 256,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: You Target: You Duration: Willpower Bonus minutes Speaking ancient words of magic, your spirit leaves your body, stepping into the Hedge, the dark space between the material world and the spirit realm. For the duration, you stand apart from the world, able to witness it invisibly and completely silently, but not affect it in any way. Your spirit self has the Ethereal Trait (see page 358). Your body remains in place, immobile and insensate. If you take any Magical damage, it instead immediately ends the Spell. You can see and interact with spirits, other Ethereal creatures, and daemons, even invisible ones, and vice versa. At the end of the Spell, you are pulled suddenly back to your body. If your body is killed while you are walking the Hedge, your spirit will wander aimlessly for eternity.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus minutes"
+  },
+  {
+    "name": "Nepenthe",
+    "page": 256,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: Touch Target: Special Duration: Willpower Bonus hours As you chant your incantations over a cup, a thick mist issues from your mouth and coalesces as a thick, silver liquid. A character who drinks it within the duration may choose to completely forget one individual, permanently.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Willpower Bonus hours"
+  },
+  {
+    "name": "Nostrum",
+    "page": 256,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: Touch Target: Special Duration: Dexterity Bonus hours You incant a spell over a prepared draught, imbuing it with magical power. If drunk while the Spell is active, the drinker immediately heals Dexterity Bonus Wounds and is cured of one disease of the GM’s choice. For every +2 SL, you may cure an extra disease.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Dexterity Bonus hours"
+  },
+  {
+    "name": "Part the Branches",
+    "page": 256,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: You Target: You Duration: Initiative minutes Your pupils dilate as you complete your incantation, allowing you to see into the spirit world. This allows you to see all invisible creatures.",
+    "cn": "0",
+    "range": "You",
+    "target": "You",
+    "duration": "Initiative minutes"
+  },
+  {
+    "name": "Protective Charm",
+    "page": 256,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: Touch Target: Special Duration: Willpower Bonus days You imbue a charm, such as a small piece of jewellery or pocket- sized trinket, with a spell of protection. Those bearing the charm gain +2 SL to resist magical effects and Corruption.",
+    "cn": "0",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Willpower Bonus days"
+  },
+  {
+    "name": "Shepherd’s Eye",
+    "page": 256,
+    "category": "Hedgecraft",
+    "text": "CN: 0 Range: Special Target: Special Duration: Instant This spell is most often used to find lost livestock, but is easily put to other uses. You grab a bit of organic matter belonging to a single creature — wool, blood, a piece of their leavings — and add it to a bowl of water. After scrying into the bowl for 10 - IB minutes, secret symbols appear to your sight: the GM will describe the creature’s location. If you are familiar with the location, you know where they are.",
+    "cn": "0",
+    "range": "Special",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Blight",
+    "page": 256,
+    "category": "Witchcraft",
+    "text": "CN: 14 Range: Willpower Bonus yards Target: Special Duration: Instant You cause an area to become blighted or desolate. For example you may target either a tavern, well, field, or a domestic animal. If you successfully cast the Spell, the target suffers from a blight: 0 All food and drink in a blighted tavern immediately spoils. 0 A blighted well becomes instantly brackish and stagnant. 0 Any crops currently planted in a blighted field rot overnight. 0 A blighted animal sickens. The afflicted beast no longer produces anything (cows produce no milk, coats and hides grow mangy and unusable) and will die in 10 - SL days.",
+    "cn": "14",
+    "range": "Willpower Bonus yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Creeping Menace",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 6 Range: Willpower yards Target: 1 Duration: Willpower Bonus Rounds You summon a swarm of creeping, slithering creatures to harass your foes. Each target affected is immediately Engaged by a swarm of Giant Rats, Giant Spiders, or Snakes (your choice of one creature type). Use the standard profiles for the relevant creature type, adding the Swarm Trait. For your Action, you may make a Challenging (+0 SL) Charm Animal Test to direct one or more swarms to attack a different target. When the Spell ends, any remaining swarms disappear into the shadows.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Curse of Crippling Pain",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 10 Range: Willpower yards Target: 1 Duration: Willpower Bonus Rounds Stabbing a crude representation of your target — a doll or puppet — you inflict crippling pain. When successfully cast, choose which Hit Location to stab: 0 Body — Target doubles up in agony, gaining +1 Fatigued, and must pass a Hard (-2 SL) Endurance Test or fall Prone. 0 Head — Target gains a Stunned Condition, and must pass an Average (+2 SL) Endurance Test or gain -SL additional Stunned. 0 Limb — Limb becomes useless, as if amputated (see page 177). Fatigued and Stunned last for the duration. You may stab the doll again to affect an additional, unaffected Location by using an Action to take an Average (+2 SL) Channelling Test.",
+    "cn": "10",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Curse of Ill Fortune",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 8 Target: 1 Range: Willpower yards or Willpower Bonus miles (with ingredient) Duration: Willpower Bonus minutes or days (with ingredient) The target suffers bad luck. Laces snap, chairs break, and other minor narrative effects inconvenience them. They suffer -1 SL to all Tests and cannot spend Fortune. If they have no Fortune, they reroll all Test rolls of 01–05. This Spell’s ingredient, something belonging to the target (such as a personal possession or strand of hair), lets you ignore line of sight.",
+    "cn": "8",
+    "range": "Willpower yards or Willpower",
+    "target": "1",
+    "duration": "Willpower Bonus minutes or days (with ingredient)"
+  },
+  {
+    "name": "Glamour",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 4 Range: Touch Target: 1 adult Duration: Willpower Bonus hours You alter the target’s appearance to look however old you wish, within the normal range of adulthood.",
+    "cn": "4",
+    "range": "Touch",
+    "target": "1 adult",
+    "duration": "Willpower Bonus hours"
+  },
+  {
+    "name": "Haunting Horror",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 8 Range: Touch Target: Special Duration: Willpower days You target a single location, such as a house or clearing, and inflict haunting dreams and waking nightmares on any who enter there. Those entering while the Spell is active are unnerved by eerie sensations, flitting shadows, and whispered voices lurking on the threshold of hearing. Unless they are witches or their familiars, they gain +1 Fatigued Condition. Then, unless they pass a Challenging (+0 SL) Psychology Test, they gain another Fatigued Condition and a Broken Condition, both of which are only removed upon leaving the location.",
+    "cn": "8",
+    "range": "Touch",
+    "target": "Special",
+    "duration": "Willpower days"
+  },
+  {
+    "name": "Make Hale",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 4 Range: Touch Target: 1 Duration: Instant Your hands glow with a soothing, pale yellow light and the target relaxes. They heal WPB Wounds and lose 1 Fatigued and 1 Stunned. With +3 SL, you may change Range to Willpower Bonus yards, causing streams of light to leap from your fingers and twist through the air.",
+    "cn": "4",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "The Evil Eye",
+    "page": 257,
+    "category": "Witchcraft",
+    "text": "CN: 6 Range: 10 yards (maximum) Target: 1 (maximum) Duration: Instant You lock eyes with the target and wither their psyche. Perform an Opposed Intimidate/Cool Test, adding any SL from the Casting Test to your result. If you win, the target suffers Fear 1 from you and gains 1 Fatigued Condition, plus 1 Fatigued per +3 SL by which you win. If you win by 6+ SL, they gain 1 Broken Condition.",
+    "cn": "6",
+    "range": "10 yards (maximum)",
+    "target": "1 (maximum)",
+    "duration": "Instant"
+  },
+  {
+    "name": "Destroy Lesser Daemon",
+    "page": 258,
+    "category": "Daemonology",
+    "text": "CN: 6 Range: Willpower Bonus yards Target: 1 Size (Average) or smaller Daemon Duration: Willpower Bonus Rounds Your Spell disrupts the Dhar holding a daemon together and draws it back to you. The target makes an Opposed Easy (+4 SL) Endurance Test against the Casting Test. If you win, you immediately destroy the target and you may increase one of your Characteristics by +10 for the duration as you syphon profane energies from your victim.",
+    "cn": "6",
+    "range": "Willpower Bonus yards",
+    "target": "1 Size (Average) or smaller Daemon",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Detect Daemon",
+    "page": 258,
+    "category": "Daemonology",
+    "text": "CN: 4 Range: Willpower yards Target: Special Duration: Instant Your Spell homes in on the daemonic influences in the surrounding area. You automatically know if there is a manifested daemon within range, be it summoned, bound into an artefact, possessing another, or similar.",
+    "cn": "4",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Manifest Lesser Daemon",
+    "page": 258,
+    "category": "Daemonology",
+    "text": "CN: 8 Range: Willpower Bonus yards Target: Special Duration: Willpower Bonus Rounds You channel a sickening flow of Dhar, briefly forcing a rent into the fabric of reality. A Lesser Daemon immediately manifests through the rent (see page 349 for two examples: a Bloodletter or a Daemonette). Perform an Opposed Channelling (Dhar)/ Cool Test with the daemon. If successful, the daemon will respond to one command issued by you, quite literally, then vanish (assuming the command is completed before the Duration ends). If failed, the daemon immediately attacks.",
+    "cn": "8",
+    "range": "Willpower Bonus yards",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Octagram",
+    "page": 258,
+    "category": "Daemonology",
+    "text": "CN: 10 Range: Touch Target: AoE (Intelligence Bonus yards across, maximum) Duration: Willpower minutes Daubing an octagram to the floor, and marking it with unholy symbols, you ward against all daemonic influence. Those with the Daemonic Trait cannot enter or leave the octagram.",
+    "cn": "10",
+    "range": "Touch",
+    "target": "AoE (Intelligence Bonus yards across, maximum)",
+    "duration": "Willpower minutes"
+  },
+  {
+    "name": "Raise Dead",
+    "page": 258,
+    "category": "Necromancy",
+    "text": "CN: 7 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Until sunrise You channel a heavy flow of Dhar into bare earth, causing old bones to gather and rise. 1 + SL Skeletons (see page 339) claw upwards into the affected area at the end of the Round, which are organised as you prefer within the Area of Effect. They start with the Prone Condition. The summoned undead are entirely under your control and can perform simple orders as you command. If you are killed or gain the Unconscious Condition, the Spell comes to an end and the summoned undead collapse. For each +2 SL, you may summon an extra Skeleton.",
+    "cn": "7",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Until sunrise"
+  },
+  {
+    "name": "Reanimate",
+    "page": 258,
+    "category": "Necromancy",
+    "text": "CN: 8 Range: Willpower yards Target: AoE (Willpower Bonus yards) Duration: Until sunrise You channel worming strands of thick Dhar before you, sinking it into corpses, reanimating that which was once dead. Reanimate WPB + SL dead bodies (as Zombies, see page 340) or skeletons (as Skeletons, see page 339) within range. They start with the Prone Condition. The summoned undead are entirely under your control and can perform simple orders as you command. If you die or gain an Unconscious Condition, the Spell comes to an end and the reanimated corpses fall dead again. For each +2 SL, you may reanimate an extra WPB + SL Skeletons or Zombies.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Until sunrise"
+  },
+  {
+    "name": "Screaming Skull",
+    "page": 259,
+    "category": "Necromancy",
+    "text": "CN: 8 Range: Willpower yards Target: Special Duration: Instant You shriek the high-pitched words of the spell and a large, black skull wreathed with greenish-purple fire forms before you, then flies forwards, screaming and cackling as it goes. The skull moves in a straight line for the Spell range, following the contours of the land, passing through any obstacles in its way. Screaming Skull is a magic missile with Damage +WPB that only affects targets without the Undead Creature Trait. Any suffering Wounds from the Spell must pass a Challenging (+0 SL) Psychology Test or take a Broken Condition.",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Vanhel’s Call",
+    "page": 259,
+    "category": "Necromancy",
+    "text": "CN: 6 Range: Willpower yards Target: Special Duration: Instant You manipulate complicated flows of Dhar into your targets, filling them with overwhelming energy. Intelligence Bonus targets with the Undead Trait gain a free Move or Action — choose one to affect all targets — taken the moment the Spell is cast. For each +2 SL, you may invigorate an extra Intelligence Bonus targets.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Festering Inflammation",
+    "page": 259,
+    "category": "Nurgle",
+    "text": "CN: 5 Range: Willpower Bonus yards Target: 1 Duration: Instant You conjure up septic fluids in the wounds of your opponent. One of the target’s Wounds becomes a Festering Wound.",
+    "cn": "5",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Instant"
+  },
+  {
+    "name": "Miasma of Pestilence",
+    "page": 259,
+    "category": "Nurgle",
+    "text": "CN: 6 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds A thin mist gathers around you. All living creatures within the Area of Effect must pass a Hard (-2 SL) Endurance Test or suffer from the Nausea Symptom (see page 182). Those dedicated to Nurgle, and skaven plague monks, are not affected.",
+    "cn": "6",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Stream of Corruption",
+    "page": 259,
+    "category": "Nurgle",
+    "text": "CN: 9 Range: Special Target: Special Duration: Instant Your maw distends horrifically before you vomit forth a foul stream of diseased filth and horror. Immediately make an Unopposed Acid- and Poison-type Breath attack (see page 357). It counts as a magic missile with a Damage equal to your Toughness Bonus, and it ignores Armour Points. Further, any targets that take more than their TB in Wounds must pass a Challenging (+0 SL) Endurance Test or contract Blood Rot (see page 179).",
+    "cn": "9",
+    "range": "Special",
+    "target": "Special",
+    "duration": "Instant"
+  },
+  {
+    "name": "Acquiescence",
+    "page": 260,
+    "category": "Slaanesh",
+    "text": "CN: 5 Range: Touch Target: 1 Duration: Willpower Bonus Rounds Your magic pierces deep within your target, flooding their senses with strange, euphoric sensations. At the start of each Round, the target must make a Challenging (+0 SL) Endurance Test. If they fail, they lose their Move and Action as they are overwhelmed with blissful sensation.",
+    "cn": "5",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "From Pain, Pleasure",
+    "page": 260,
+    "category": "Slaanesh",
+    "text": "CN: 6 Range: Touch Target: 1 Duration: Willpower Bonus Rounds You confound the target’s senses, transforming pain to pleasure. The target gains the Painless Creature Trait (see page 360) for the duration of the Spell. As they endure injuries, they experience a wave of pleasurable sensation. Should they suffer a Critical Wound, they must pass an Average (+2 SL) Endurance Test or drop their weapons, standing Helplessly as their enemies rain blows down upon them, lost in the ecstatic rending of their own flesh.",
+    "cn": "6",
+    "range": "Touch",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Phantasmagoria",
+    "page": 260,
+    "category": "Slaanesh",
+    "text": "CN: 8 Range: You Target: AoE (Willpower Bonus yards) Duration: Willpower Bonus Rounds In response to your invocation, unearthly visions of beguiling and fearsome creatures fill the area of effect, giving you and all allies the Distracting Creature Trait (see page 358) for the duration of the Spell. Targets do not distract one another.",
+    "cn": "8",
+    "range": "You",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Boon of Tzeentch",
+    "page": 260,
+    "category": "Tzeentch",
+    "text": "CN: 9 Range: You Target: You Duration: Intelligence Bonus days The Changer of the Ways twists your mind, granting you access to arcane knowledge. Choose one Spell from any Lore. For the Duration, you may cast it as if you had memorised it, but may not record it in a grimoire. If you channel to cast the new Spell, you may use either Channelling (Dhar) or the Channelling Skill appropriate to the Spell, should you possess it. If you suffer a Miscast when casting this new Spell, Boon of Tzeentch quits your mind in disgust, and also erases itself from your grimoire should it have allowed itself to be recorded there.",
+    "cn": "9",
+    "range": "You",
+    "target": "You",
+    "duration": "Intelligence Bonus days"
+  },
+  {
+    "name": "Transformation of Tzeentch",
+    "page": 260,
+    "category": "Tzeentch",
+    "text": "CN: 12 Range: Willpower Bonus yards Target: 1 Duration: Willpower Bonus Rounds At your command, bonds of aethyric fire coil from the earth, shrouding your target in a cocoon of magical energy. The target gains the Prone Condition and is considered Helpless for the duration. At the end of each Round, they must pass a Challenging (+0 SL) Endurance Test or gain 1 Corruption Point.",
+    "cn": "12",
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds"
+  },
+  {
+    "name": "Treason of Tzeentch",
+    "page": 260,
+    "category": "Tzeentch",
+    "text": "CN: 6 Range: Willpower yards Target: AoE (Initiative Bonus yards) Duration: Intelligence Bonus Rounds You channel fine strands of traitorous thoughts into your targets’ minds, twisting their motivations and fanning fires of discontent. Targets gain Animosity (Allies). Further, unless immune to that Psychology, they cannot transfer Advantage to their allies and, if they score a Critical when attacking, they must pass a Hard (-2 SL) Cool Test or target their nearest ally.",
+    "cn": "6",
+    "range": "Willpower yards",
+    "target": "AoE (Initiative Bonus yards)",
+    "duration": "Intelligence Bonus Rounds"
+  }
+]

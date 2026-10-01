@@ -1,0 +1,1042 @@
+[
+  {
+    "name": "Backpack",
+    "price": "5/–",
+    "enc": 2,
+    "capacity": 4,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Barrel",
+    "price": "8/–",
+    "enc": 6,
+    "capacity": 12,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Cask",
+    "price": "3/–",
+    "enc": 2,
+    "capacity": 4,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Flask",
+    "price": "5/–",
+    "enc": 0,
+    "capacity": 0,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Jug",
+    "price": "3/–",
+    "enc": 1,
+    "capacity": 1,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Pewter Stein",
+    "price": "7/–",
+    "enc": 0,
+    "capacity": 0,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Pouch",
+    "price": "4d",
+    "enc": 0,
+    "capacity": 1,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Sack",
+    "price": "1/–",
+    "enc": 2,
+    "capacity": 4,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Sack, Large",
+    "price": "1/6",
+    "enc": 3,
+    "capacity": 6,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Saddlebags",
+    "price": "18/–",
+    "enc": 4,
+    "capacity": 8,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Sling Bag",
+    "price": "1/–",
+    "enc": 1,
+    "capacity": 2,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Scroll Case",
+    "price": "16/–",
+    "enc": 0,
+    "capacity": 0,
+    "availability": "Scarce",
+    "page": 308
+  },
+  {
+    "name": "Waterskin",
+    "price": "1/–",
+    "enc": 1,
+    "capacity": 1,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Amulet",
+    "price": "2d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Boots",
+    "price": "3 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Cloak",
+    "price": "2 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Clothing",
+    "price": "3 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Coat",
+    "price": "3 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Costume",
+    "price": "1 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 308
+  },
+  {
+    "name": "Courtly Garb",
+    "price": "16 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 308
+  },
+  {
+    "name": "Face Powder",
+    "price": "10/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Gloves",
+    "price": "8/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Velvet Cloak",
+    "price": "12 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 308
+  },
+  {
+    "name": "Hat",
+    "price": "10/6",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Hood or Mask",
+    "price": "5/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Jewellery",
+    "price": "Varies",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Perfume",
+    "price": "10/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Pins (6)",
+    "price": "10/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 308
+  },
+  {
+    "name": "Religious Symbol",
+    "price": "6/8",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Robes",
+    "price": "3 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Sceptre",
+    "price": "8 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 308
+  },
+  {
+    "name": "Shoes",
+    "price": "2 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Signet Ring",
+    "price": "5 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 308
+  },
+  {
+    "name": "Tattoo",
+    "price": "4/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 308
+  },
+  {
+    "name": "Uniform",
+    "price": "2 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 308
+  },
+  {
+    "name": "Walking Cane",
+    "price": "3 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 308
+  },
+  {
+    "name": "Ale, pint",
+    "price": "3d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Ale, keg",
+    "price": "3/–",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Dwarf Ale, pint",
+    "price": "9d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Exotic",
+    "page": 309
+  },
+  {
+    "name": "Food, groceries/day",
+    "price": "10d",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Meal, inn",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Rations, 1 day",
+    "price": "2/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Spirits, pint",
+    "price": "2/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Wine, bottle",
+    "price": "10d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Wine and Spirits, drink",
+    "price": "4d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 309
+  },
+  {
+    "name": "Abacus",
+    "price": "3/4",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Animal Trap",
+    "price": "2/6",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Antitoxin Kit",
+    "price": "3 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Boat Hook",
+    "price": "5/–",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Broom",
+    "price": "10d",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Bucket",
+    "price": "2/6",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Chisel",
+    "price": "4/2",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Comb",
+    "price": "10d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Crowbar",
+    "price": "2/6",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Crutch",
+    "price": "3/–",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Disguise Kit",
+    "price": "6/6",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Ear Pick",
+    "price": "2/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Fish Hooks (12)",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Floor Brush",
+    "price": "1/6",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Gavel",
+    "price": "1 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Hammer",
+    "price": "3/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Hand Mirror",
+    "price": "1 GC 1/6",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 310
+  },
+  {
+    "name": "Hoe",
+    "price": "4/–",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Key",
+    "price": "1 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Knife",
+    "price": "8/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Lockpicks",
+    "price": "2 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Manacles",
+    "price": "2 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Mantrap",
+    "price": "2 GC",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Mop",
+    "price": "1/–",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Nails (12)",
+    "price": "2d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Paint Brush",
+    "price": "4/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Pestle and Mortar",
+    "price": "14/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Pick",
+    "price": "2 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Pole (3 yards)",
+    "price": "5/–",
+    "enc": 3,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Quill Pen",
+    "price": "3/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Rake",
+    "price": "4/6",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Reading Lens",
+    "price": "3 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 310
+  },
+  {
+    "name": "Saw",
+    "price": "6/–",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Sickle",
+    "price": "1 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Spade",
+    "price": "8/–",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Spike",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Stamp, engraved",
+    "price": "5 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Tongs, steel",
+    "price": "16/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 310
+  },
+  {
+    "name": "Telescope",
+    "price": "5 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 310
+  },
+  {
+    "name": "Tweezers",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Writing Kit",
+    "price": "4 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 310
+  },
+  {
+    "name": "Book, Apothecary",
+    "price": "8 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 311
+  },
+  {
+    "name": "Book, Art",
+    "price": "5 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 311
+  },
+  {
+    "name": "Book, Cryptography",
+    "price": "8 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Exotic",
+    "page": 311
+  },
+  {
+    "name": "Book, Engineer",
+    "price": "3 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 311
+  },
+  {
+    "name": "Book, Law",
+    "price": "15 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 311
+  },
+  {
+    "name": "Book, Magic",
+    "price": "20 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Exotic",
+    "page": 311
+  },
+  {
+    "name": "Book, Medicine",
+    "price": "15 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 311
+  },
+  {
+    "name": "Book, Religion",
+    "price": "1 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 311
+  },
+  {
+    "name": "Leaflet",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 311
+  },
+  {
+    "name": "Legal Document",
+    "price": "3/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 311
+  },
+  {
+    "name": "Map",
+    "price": "3 GC",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 311
+  },
+  {
+    "name": "Parchment/sheet",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 311
+  },
+  {
+    "name": "Ball",
+    "price": "5d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Bandage",
+    "price": "4d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Baton",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Bedroll",
+    "price": "6/–",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Blanket",
+    "price": "8d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Candle (dozen)",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Canvas Tarp",
+    "price": "8/–",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Chalk",
+    "price": "10d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Charcoal stick",
+    "price": "10d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Cutlery",
+    "price": "3/6",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Deck of Cards",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Cooking Pot",
+    "price": "8/–",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Cup",
+    "price": "8d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Dice",
+    "price": "10d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Doll",
+    "price": "2/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Feinkopf Lamp",
+    "price": "2 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 316
+  },
+  {
+    "name": "Grappling Hook",
+    "price": "1 GC –/10",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 316
+  },
+  {
+    "name": "Instrument",
+    "price": "2 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Rare",
+    "page": 316
+  },
+  {
+    "name": "Lamp Oil",
+    "price": "2/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Lantern",
+    "price": "12/–",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Storm Lantern",
+    "price": "1 GC",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 316
+  },
+  {
+    "name": "Match",
+    "price": "1d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Pan",
+    "price": "7/6",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Pipe and Tobacco",
+    "price": "3/4",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 316
+  },
+  {
+    "name": "Placard",
+    "price": "1/–",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Plate",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Bowl",
+    "price": "1/–",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Rags",
+    "price": "1d",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Rope, 10 yards",
+    "price": "8/4",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Tent",
+    "price": "3 GC",
+    "enc": 2,
+    "capacity": null,
+    "availability": "Scarce",
+    "page": 316
+  },
+  {
+    "name": "Tinderbox",
+    "price": "4/2",
+    "enc": 0,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  },
+  {
+    "name": "Torch (stick and rags)",
+    "price": "2d",
+    "enc": 1,
+    "capacity": null,
+    "availability": "Common",
+    "page": 316
+  }
+]

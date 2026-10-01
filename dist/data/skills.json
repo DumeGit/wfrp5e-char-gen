@@ -1,0 +1,535 @@
+[
+  {
+    "name": "Climb",
+    "char": "S",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Consume Alcohol",
+    "char": "T",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Cool",
+    "char": "WP",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Dodge",
+    "char": "Ag",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Drive",
+    "char": "Ag",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Endurance",
+    "char": "T",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Entertain",
+    "char": "Fel",
+    "advanced": false,
+    "grouped": true,
+    "options": [
+      "Acting",
+      "Comedy",
+      "Fortune-telling",
+      "Lecture",
+      "Rhetoric",
+      "Singing",
+      "Speeches",
+      "Storytelling",
+      "Taunt"
+    ],
+    "page": 111
+  },
+  {
+    "name": "Evaluate",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Animal Care",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Animal Training",
+    "char": "Int",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Demigryph",
+      "Dog",
+      "Hawk",
+      "Horse",
+      "Pigeon",
+      "Pigeon Your understanding of a particular type of animal",
+      "and ability to train them"
+    ],
+    "page": 111
+  },
+  {
+    "name": "Art",
+    "char": "Dex",
+    "advanced": false,
+    "grouped": true,
+    "options": [
+      "Calligraphy",
+      "Drawing",
+      "Engraving",
+      "Icons",
+      "Mosaics",
+      "Painting",
+      "Sculpture",
+      "Tattooing",
+      "Weaving",
+      "Writing"
+    ],
+    "page": 111
+  },
+  {
+    "name": "Athletics",
+    "char": "Ag",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Bribery",
+    "char": "Fel",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Channelling",
+    "char": "WP",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Aqshy",
+      "Azyr",
+      "Chamon",
+      "Dhar",
+      "Ghur",
+      "Ghyran",
+      "Hysh",
+      "Magick",
+      "Shyish",
+      "Ulgu"
+    ],
+    "page": 111
+  },
+  {
+    "name": "Charm",
+    "char": "Fel",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Charm Animal",
+    "char": "WP",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 111
+  },
+  {
+    "name": "Intuition",
+    "char": "I",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Language",
+    "char": "Int",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Battle",
+      "Bretonnian",
+      "Classical",
+      "Elthárin",
+      "Guilder",
+      "Haffennaff",
+      "Khazalid",
+      "Magick",
+      "Reikspiel",
+      "Thieves Tongue",
+      "Wastelander"
+    ],
+    "page": 112
+  },
+  {
+    "name": "Leadership",
+    "char": "Fel",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Lore",
+    "char": "Int",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Art",
+      "Astrology",
+      "Beasts",
+      "Chaos",
+      "Chemistry",
+      "Daemons",
+      "Dragons",
+      "Dwarfs",
+      "Engineering",
+      "Folklore",
+      "Genealogy",
+      "Geography",
+      "Geology",
+      "Giants",
+      "Heraldry",
+      "Herbs",
+      "History",
+      "Law",
+      "Local",
+      "Magic",
+      "Medicine",
+      "Metallurgy",
+      "Oceans",
+      "Politics",
+      "Prophecy",
+      "Rats",
+      "Reikland",
+      "Riverways",
+      "Routes",
+      "Science",
+      "Sigmar",
+      "Spirits",
+      "Taxes",
+      "The Empire",
+      "Theology",
+      "Trolls",
+      "Warfare",
+      "Witches",
+      "Wrecks"
+    ],
+    "page": 112
+  },
+  {
+    "name": "Melee",
+    "char": "WS",
+    "advanced": false,
+    "grouped": true,
+    "options": [
+      "Basic",
+      "Brawling",
+      "Cavalry",
+      "Fencing",
+      "Flail",
+      "Parry",
+      "Polearm",
+      "Two-handed"
+    ],
+    "page": 112
+  },
+  {
+    "name": "Navigation",
+    "char": "I",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Outdoor Survival",
+    "char": "Int",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Gamble",
+    "char": "Int",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Gossip",
+    "char": "Fel",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Haggle",
+    "char": "Fel",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Heal",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Intimidate",
+    "char": "S",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 112
+  },
+  {
+    "name": "Pray",
+    "char": "Fel",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 113
+  },
+  {
+    "name": "Ranged",
+    "char": "BS",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Blackpowder",
+      "Bow",
+      "Crossbow",
+      "Engineering",
+      "Entangling",
+      "Explosives",
+      "Sling",
+      "Throwing"
+    ],
+    "page": 113
+  },
+  {
+    "name": "Research",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 113
+  },
+  {
+    "name": "Ride",
+    "char": "Ag",
+    "advanced": false,
+    "grouped": true,
+    "options": [
+      "Demigryph",
+      "Griffon",
+      "Horse",
+      "Pegasus"
+    ],
+    "page": 113
+  },
+  {
+    "name": "Row",
+    "char": "S",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 113
+  },
+  {
+    "name": "Sail",
+    "char": "Ag",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 113
+  },
+  {
+    "name": "Perception",
+    "char": "I",
+    "advanced": false,
+    "grouped": false,
+    "options": [],
+    "page": 113
+  },
+  {
+    "name": "Perform",
+    "char": "Ag",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Acrobatics",
+      "Clowning",
+      "Dancing",
+      "Fight",
+      "Firebreathing",
+      "Juggling",
+      "Miming",
+      "Rope Walking"
+    ],
+    "page": 113
+  },
+  {
+    "name": "Pick Lock",
+    "char": "Dex",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 113
+  },
+  {
+    "name": "Play",
+    "char": "Dex",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Bagpipe",
+      "Drum",
+      "Flute",
+      "Harpsichord",
+      "Horn",
+      "Lute",
+      "Pennywhistle",
+      "Trumpet",
+      "Violin"
+    ],
+    "page": 113
+  },
+  {
+    "name": "Secret Signs",
+    "char": "Int",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Grey Order",
+      "Guilder",
+      "Hedgefolk",
+      "Knightly Order",
+      "Miner",
+      "Ranger",
+      "Scout",
+      "Smuggler",
+      "Thief",
+      "Vagabond"
+    ],
+    "page": 114
+  },
+  {
+    "name": "Set Trap",
+    "char": "Dex",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 114
+  },
+  {
+    "name": "Sleight of Hand",
+    "char": "Dex",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 114
+  },
+  {
+    "name": "Stealth",
+    "char": "Ag",
+    "advanced": false,
+    "grouped": true,
+    "options": [
+      "Rural",
+      "Underground",
+      "Urban"
+    ],
+    "page": 114
+  },
+  {
+    "name": "Swim",
+    "char": "S",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 114
+  },
+  {
+    "name": "Track",
+    "char": "I",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 114
+  },
+  {
+    "name": "Trade",
+    "char": "Dex",
+    "advanced": true,
+    "grouped": true,
+    "options": [
+      "Apothecary",
+      "Art Supplies",
+      "Barber",
+      "Boatbuilder",
+      "Brewer",
+      "Calligrapher",
+      "Carpenter",
+      "Cartographer",
+      "Chandler",
+      "Cook",
+      "Embalmer",
+      "Engineer",
+      "Engraver",
+      "Explosives",
+      "Farrier",
+      "Gunsmith",
+      "Herbalist",
+      "Poisoner",
+      "Printing",
+      "Shipwright",
+      "Smith",
+      "Tanner",
+      "Tinker"
+    ],
+    "page": 114
+  }
+]

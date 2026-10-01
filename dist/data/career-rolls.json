@@ -1,0 +1,1223 @@
+[
+  {
+    "career": "Apothecary",
+    "page": 36,
+    "Human": [
+      1,
+      1
+    ],
+    "Dwarf": [
+      1,
+      1
+    ],
+    "Halfling": [
+      1,
+      1
+    ],
+    "High Elf": [
+      1,
+      2
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Engineer",
+    "page": 36,
+    "Human": [
+      2,
+      2
+    ],
+    "Dwarf": [
+      2,
+      4
+    ],
+    "Halfling": [
+      2,
+      2
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Lawyer",
+    "page": 36,
+    "Human": [
+      3,
+      3
+    ],
+    "Dwarf": [
+      5,
+      6
+    ],
+    "Halfling": [
+      3,
+      4
+    ],
+    "High Elf": [
+      3,
+      6
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Nun",
+    "page": 36,
+    "Human": [
+      4,
+      5
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Physician",
+    "page": 36,
+    "Human": [
+      6,
+      6
+    ],
+    "Dwarf": [
+      7,
+      7
+    ],
+    "Halfling": [
+      5,
+      6
+    ],
+    "High Elf": [
+      7,
+      8
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Priest",
+    "page": 36,
+    "Human": [
+      7,
+      11
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Scholar",
+    "page": 36,
+    "Human": [
+      12,
+      13
+    ],
+    "Dwarf": [
+      8,
+      9
+    ],
+    "Halfling": [
+      7,
+      8
+    ],
+    "High Elf": [
+      9,
+      12
+    ],
+    "Wood Elf": [
+      1,
+      1
+    ]
+  },
+  {
+    "career": "Wizard",
+    "page": 36,
+    "Human": [
+      14,
+      14
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": [
+      13,
+      16
+    ],
+    "Wood Elf": [
+      2,
+      5
+    ]
+  },
+  {
+    "career": "Agitator",
+    "page": 36,
+    "Human": [
+      15,
+      15
+    ],
+    "Dwarf": [
+      10,
+      11
+    ],
+    "Halfling": [
+      9,
+      10
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Artisan",
+    "page": 36,
+    "Human": [
+      16,
+      17
+    ],
+    "Dwarf": [
+      12,
+      17
+    ],
+    "Halfling": [
+      11,
+      15
+    ],
+    "High Elf": [
+      17,
+      19
+    ],
+    "Wood Elf": [
+      6,
+      10
+    ]
+  },
+  {
+    "career": "Beggar",
+    "page": 36,
+    "Human": [
+      18,
+      19
+    ],
+    "Dwarf": [
+      18,
+      18
+    ],
+    "Halfling": [
+      16,
+      19
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Investigator",
+    "page": 36,
+    "Human": [
+      20,
+      20
+    ],
+    "Dwarf": [
+      19,
+      20
+    ],
+    "Halfling": [
+      20,
+      21
+    ],
+    "High Elf": [
+      20,
+      21
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Merchant",
+    "page": 36,
+    "Human": [
+      21,
+      21
+    ],
+    "Dwarf": [
+      21,
+      24
+    ],
+    "Halfling": [
+      22,
+      25
+    ],
+    "High Elf": [
+      22,
+      26
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Rat Catcher",
+    "page": 36,
+    "Human": [
+      22,
+      23
+    ],
+    "Dwarf": [
+      25,
+      25
+    ],
+    "Halfling": [
+      26,
+      28
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Townsman",
+    "page": 36,
+    "Human": [
+      24,
+      26
+    ],
+    "Dwarf": [
+      26,
+      31
+    ],
+    "Halfling": [
+      29,
+      31
+    ],
+    "High Elf": [
+      27,
+      28
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Watchman",
+    "page": 36,
+    "Human": [
+      27,
+      27
+    ],
+    "Dwarf": [
+      32,
+      34
+    ],
+    "Halfling": [
+      32,
+      33
+    ],
+    "High Elf": [
+      29,
+      29
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Adviser",
+    "page": 36,
+    "Human": [
+      28,
+      28
+    ],
+    "Dwarf": [
+      35,
+      36
+    ],
+    "Halfling": [
+      34,
+      34
+    ],
+    "High Elf": [
+      30,
+      31
+    ],
+    "Wood Elf": [
+      11,
+      14
+    ]
+  },
+  {
+    "career": "Artist",
+    "page": 36,
+    "Human": [
+      29,
+      29
+    ],
+    "Dwarf": [
+      37,
+      37
+    ],
+    "Halfling": [
+      35,
+      36
+    ],
+    "High Elf": [
+      32,
+      32
+    ],
+    "Wood Elf": [
+      15,
+      18
+    ]
+  },
+  {
+    "career": "Duellist",
+    "page": 36,
+    "Human": [
+      30,
+      30
+    ],
+    "Dwarf": [
+      38,
+      38
+    ],
+    "Halfling": null,
+    "High Elf": [
+      33,
+      34
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Envoy",
+    "page": 36,
+    "Human": [
+      31,
+      31
+    ],
+    "Dwarf": [
+      39,
+      40
+    ],
+    "Halfling": [
+      37,
+      37
+    ],
+    "High Elf": [
+      35,
+      37
+    ],
+    "Wood Elf": [
+      19,
+      25
+    ]
+  },
+  {
+    "career": "Noble",
+    "page": 36,
+    "Human": [
+      32,
+      32
+    ],
+    "Dwarf": [
+      41,
+      41
+    ],
+    "Halfling": null,
+    "High Elf": [
+      38,
+      40
+    ],
+    "Wood Elf": [
+      26,
+      31
+    ]
+  },
+  {
+    "career": "Servant",
+    "page": 36,
+    "Human": [
+      33,
+      35
+    ],
+    "Dwarf": [
+      42,
+      42
+    ],
+    "Halfling": [
+      38,
+      43
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Spy",
+    "page": 36,
+    "Human": [
+      36,
+      36
+    ],
+    "Dwarf": [
+      43,
+      43
+    ],
+    "Halfling": [
+      44,
+      44
+    ],
+    "High Elf": [
+      41,
+      43
+    ],
+    "Wood Elf": [
+      32,
+      35
+    ]
+  },
+  {
+    "career": "Warden",
+    "page": 36,
+    "Human": [
+      37,
+      37
+    ],
+    "Dwarf": [
+      44,
+      45
+    ],
+    "Halfling": [
+      45,
+      46
+    ],
+    "High Elf": [
+      44,
+      45
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Bailiff",
+    "page": 36,
+    "Human": [
+      38,
+      38
+    ],
+    "Dwarf": [
+      46,
+      47
+    ],
+    "Halfling": [
+      47,
+      47
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Hedge Witch",
+    "page": 36,
+    "Human": [
+      39,
+      39
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Herbalist",
+    "page": 36,
+    "Human": [
+      40,
+      40
+    ],
+    "Dwarf": null,
+    "Halfling": [
+      48,
+      50
+    ],
+    "High Elf": [
+      46,
+      47
+    ],
+    "Wood Elf": [
+      36,
+      42
+    ]
+  },
+  {
+    "career": "Hunter",
+    "page": 36,
+    "Human": [
+      41,
+      42
+    ],
+    "Dwarf": [
+      48,
+      49
+    ],
+    "Halfling": [
+      51,
+      52
+    ],
+    "High Elf": [
+      48,
+      50
+    ],
+    "Wood Elf": [
+      43,
+      52
+    ]
+  },
+  {
+    "career": "Miner",
+    "page": 36,
+    "Human": [
+      43,
+      43
+    ],
+    "Dwarf": [
+      50,
+      54
+    ],
+    "Halfling": [
+      53,
+      53
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Mystic",
+    "page": 36,
+    "Human": [
+      44,
+      44
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": [
+      53,
+      57
+    ]
+  },
+  {
+    "career": "Scout",
+    "page": 36,
+    "Human": [
+      45,
+      45
+    ],
+    "Dwarf": [
+      55,
+      55
+    ],
+    "Halfling": [
+      54,
+      54
+    ],
+    "High Elf": [
+      51,
+      56
+    ],
+    "Wood Elf": [
+      58,
+      68
+    ]
+  },
+  {
+    "career": "Villager",
+    "page": 36,
+    "Human": [
+      46,
+      50
+    ],
+    "Dwarf": [
+      56,
+      56
+    ],
+    "Halfling": [
+      55,
+      57
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Bounty Hunter",
+    "page": 37,
+    "Human": [
+      51,
+      51
+    ],
+    "Dwarf": [
+      57,
+      60
+    ],
+    "Halfling": [
+      58,
+      58
+    ],
+    "High Elf": [
+      57,
+      59
+    ],
+    "Wood Elf": [
+      69,
+      70
+    ]
+  },
+  {
+    "career": "Coachman",
+    "page": 37,
+    "Human": [
+      52,
+      52
+    ],
+    "Dwarf": [
+      61,
+      61
+    ],
+    "Halfling": [
+      59,
+      60
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Entertainer",
+    "page": 37,
+    "Human": [
+      53,
+      54
+    ],
+    "Dwarf": [
+      62,
+      63
+    ],
+    "Halfling": [
+      61,
+      63
+    ],
+    "High Elf": [
+      60,
+      62
+    ],
+    "Wood Elf": [
+      71,
+      75
+    ]
+  },
+  {
+    "career": "Flagellant",
+    "page": 37,
+    "Human": [
+      55,
+      56
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Messenger",
+    "page": 37,
+    "Human": [
+      57,
+      57
+    ],
+    "Dwarf": [
+      64,
+      65
+    ],
+    "Halfling": [
+      64,
+      65
+    ],
+    "High Elf": [
+      63,
+      63
+    ],
+    "Wood Elf": [
+      76,
+      78
+    ]
+  },
+  {
+    "career": "Pedlar",
+    "page": 37,
+    "Human": [
+      58,
+      58
+    ],
+    "Dwarf": [
+      66,
+      67
+    ],
+    "Halfling": [
+      66,
+      67
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Roadwarden",
+    "page": 37,
+    "Human": [
+      59,
+      59
+    ],
+    "Dwarf": null,
+    "Halfling": [
+      68,
+      68
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Witch Hunter",
+    "page": 37,
+    "Human": [
+      60,
+      60
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Boatman",
+    "page": 37,
+    "Human": [
+      61,
+      62
+    ],
+    "Dwarf": [
+      68,
+      69
+    ],
+    "Halfling": [
+      69,
+      69
+    ],
+    "High Elf": [
+      64,
+      64
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Pilot",
+    "page": 37,
+    "Human": [
+      63,
+      63
+    ],
+    "Dwarf": [
+      70,
+      70
+    ],
+    "Halfling": [
+      70,
+      70
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Riverwarden",
+    "page": 37,
+    "Human": [
+      64,
+      65
+    ],
+    "Dwarf": null,
+    "Halfling": [
+      71,
+      71
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Riverwoman",
+    "page": 37,
+    "Human": [
+      66,
+      68
+    ],
+    "Dwarf": [
+      71,
+      72
+    ],
+    "Halfling": [
+      72,
+      74
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Sailor",
+    "page": 37,
+    "Human": [
+      69,
+      70
+    ],
+    "Dwarf": [
+      73,
+      73
+    ],
+    "Halfling": [
+      75,
+      75
+    ],
+    "High Elf": [
+      65,
+      79
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Smuggler",
+    "page": 37,
+    "Human": [
+      71,
+      71
+    ],
+    "Dwarf": [
+      74,
+      75
+    ],
+    "Halfling": [
+      76,
+      79
+    ],
+    "High Elf": [
+      80,
+      80
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Stevedore",
+    "page": 37,
+    "Human": [
+      72,
+      73
+    ],
+    "Dwarf": [
+      76,
+      77
+    ],
+    "Halfling": [
+      80,
+      82
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Wrecker",
+    "page": 37,
+    "Human": [
+      74,
+      74
+    ],
+    "Dwarf": [
+      78,
+      78
+    ],
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": [
+      79,
+      79
+    ]
+  },
+  {
+    "career": "Charlatan",
+    "page": 37,
+    "Human": [
+      75,
+      75
+    ],
+    "Dwarf": null,
+    "Halfling": [
+      83,
+      83
+    ],
+    "High Elf": [
+      81,
+      83
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Fence",
+    "page": 37,
+    "Human": [
+      76,
+      76
+    ],
+    "Dwarf": [
+      79,
+      79
+    ],
+    "Halfling": [
+      84,
+      84
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Grave Robber",
+    "page": 37,
+    "Human": [
+      77,
+      77
+    ],
+    "Dwarf": null,
+    "Halfling": [
+      85,
+      85
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Knave",
+    "page": 37,
+    "Human": [
+      78,
+      79
+    ],
+    "Dwarf": null,
+    "Halfling": [
+      86,
+      88
+    ],
+    "High Elf": [
+      84,
+      85
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Outlaw",
+    "page": 37,
+    "Human": [
+      80,
+      83
+    ],
+    "Dwarf": [
+      80,
+      82
+    ],
+    "Halfling": [
+      89,
+      89
+    ],
+    "High Elf": [
+      86,
+      88
+    ],
+    "Wood Elf": [
+      80,
+      85
+    ]
+  },
+  {
+    "career": "Racketeer",
+    "page": 37,
+    "Human": [
+      84,
+      84
+    ],
+    "Dwarf": [
+      83,
+      83
+    ],
+    "Halfling": [
+      90,
+      90
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Thief",
+    "page": 37,
+    "Human": [
+      85,
+      87
+    ],
+    "Dwarf": [
+      84,
+      84
+    ],
+    "Halfling": [
+      91,
+      94
+    ],
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Witch",
+    "page": 37,
+    "Human": [
+      88,
+      88
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Cavalryman",
+    "page": 37,
+    "Human": [
+      89,
+      90
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": [
+      89,
+      92
+    ],
+    "Wood Elf": [
+      86,
+      90
+    ]
+  },
+  {
+    "career": "Guard",
+    "page": 37,
+    "Human": [
+      91,
+      92
+    ],
+    "Dwarf": [
+      85,
+      87
+    ],
+    "Halfling": [
+      95,
+      96
+    ],
+    "High Elf": [
+      93,
+      94
+    ],
+    "Wood Elf": [
+      91,
+      92
+    ]
+  },
+  {
+    "career": "Knight",
+    "page": 37,
+    "Human": [
+      93,
+      93
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": [
+      95,
+      95
+    ],
+    "Wood Elf": [
+      93,
+      94
+    ]
+  },
+  {
+    "career": "Pit Fighter",
+    "page": 37,
+    "Human": [
+      94,
+      94
+    ],
+    "Dwarf": [
+      88,
+      90
+    ],
+    "Halfling": [
+      97,
+      97
+    ],
+    "High Elf": [
+      96,
+      97
+    ],
+    "Wood Elf": [
+      95,
+      96
+    ]
+  },
+  {
+    "career": "Protagonist",
+    "page": 37,
+    "Human": [
+      95,
+      95
+    ],
+    "Dwarf": [
+      91,
+      93
+    ],
+    "Halfling": null,
+    "High Elf": [
+      98,
+      98
+    ],
+    "Wood Elf": null
+  },
+  {
+    "career": "Soldier",
+    "page": 37,
+    "Human": [
+      96,
+      99
+    ],
+    "Dwarf": [
+      94,
+      96
+    ],
+    "Halfling": [
+      98,
+      100
+    ],
+    "High Elf": [
+      99,
+      100
+    ],
+    "Wood Elf": [
+      97,
+      100
+    ]
+  },
+  {
+    "career": "Slayer",
+    "page": 37,
+    "Human": null,
+    "Dwarf": [
+      97,
+      100
+    ],
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  },
+  {
+    "career": "Warrior Priest",
+    "page": 37,
+    "Human": [
+      100,
+      100
+    ],
+    "Dwarf": null,
+    "Halfling": null,
+    "High Elf": null,
+    "Wood Elf": null
+  }
+]
