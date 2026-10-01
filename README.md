@@ -14,6 +14,8 @@ Open `http://127.0.0.1:8047/`. The browser saves the current draft on that devic
 
 The seven creation steps cover Species, all 64 Careers, Characteristics, free Skills, Talents/equipment, optional XP spending, and review/export. The default budget is 1,000 XP, editable by the user. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
 
+The Talents & gear step includes a searchable shop for 242 fixed-price Trappings from the supplied Consumer Guide (pp. 301, 303, 307–316). It converts the rolled purse using 1 GC = 20 shillings = 240 pennies, blocks overspending, supports removing a purchase, and adds purchases to equipment and PDF export. It assumes purchases are made during character creation, when Availability Tests are waived (p. 296). Items with variable or unlisted prices, including the magical items whose listed figures are black-market buyer prices (p. 315), require the GM and are not offered at an invented purchase price. Bought items do not earn creation tracker boxes (p. 36).
+
 The character sheet export retains the 556 editable fields in the supplied PDF and appends a complete creation/XP record. The record includes overflow Skills, Talents, gear, and magic. It can also be downloaded separately.
 
 ## Rules and source

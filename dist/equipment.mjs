@@ -1,4 +1,5 @@
 import {career,CLASS_KIT,derive} from './rules.mjs';
+import {marketCatalog,purse} from './market.mjs';
 // Printed equipment tables, pp.301, 303, 307–310. Prices are not inferred for unlisted items.
 export const WEAPONS=[];
 function weapon(name,group,enc,reach,damage,qualities='',page=301){WEAPONS.push({name,group,enc,reach,damage,qualities,page});}
@@ -16,7 +17,7 @@ export function itemWeight(R,name){
  const qty=name.match(/^(\d+) (Rags|Bandages|Matches|Candles|Sets of Clothing)$/);
  if(qty)return Number(qty[1])*(qty[2]==='Sets of Clothing'?1:0);
  name=(aliases[name]||name).replace(/^Book \(([^)]+)\)$/,'Book, $1').replace(/^Trade Tools \([^)]+\)$/,'Trade Tools');
- return GEAR_ENC[name]??R.gear?.find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
+ return GEAR_ENC[name]??marketCatalog(R).find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
 }
 export function gearOptions(raw){
  if(/^(Weapon|Melee Weapon) \(Any/.test(raw))return WEAPONS.filter(w=>!raw.startsWith('Melee')||w.page===301).map(w=>w.name);
@@ -26,7 +27,7 @@ export function gearOptions(raw){
  if(raw.includes(' or '))return raw.split(' or ');
  return [raw];
 }
-export function gearSlots(R,s){const c=career(R,s);return [{name:'Clothing',origin:'All characters',key:'all-0'},{name:'Dagger',origin:'All characters',key:'all-1'},{name:'Pouch',origin:'All characters',key:'all-2'},...(CLASS_KIT[c.class]||[]).map((name,i)=>({name,origin:`${c.class} class`,key:`class-${i}`})),...c.levels[0].trappings.filter(x=>x!=='None').map((name,i)=>({name,origin:`${c.levels[0].name} (level 1)`,key:`career-${i}`})),...s.bonusGear.map((i)=>({name:c.levels[1].trappings[i],origin:'Random Career bonus',key:`bonus-${i}`,level:2})),...s.ledger.filter(x=>x.type==='trapping').map((x,i)=>({name:x.name,origin:x.reason||'Acquired during advancement',key:`acquired-${i}`,level:x.level}))];}
+export function gearSlots(R,s){const c=career(R,s),catalog=new Map(marketCatalog(R).map(x=>[x.id,x]));return [{name:'Clothing',origin:'All characters',key:'all-0'},{name:'Dagger',origin:'All characters',key:'all-1'},{name:'Pouch',origin:'All characters',key:'all-2'},...(CLASS_KIT[c.class]||[]).map((name,i)=>({name,origin:`${c.class} class`,key:`class-${i}`})),...c.levels[0].trappings.filter(x=>x!=='None').map((name,i)=>({name,origin:`${c.levels[0].name} (level 1)`,key:`career-${i}`})),...s.bonusGear.map((i)=>({name:c.levels[1].trappings[i],origin:'Random Career bonus',key:`bonus-${i}`,level:2})),...s.ledger.filter(x=>x.type==='trapping').map((x,i)=>({name:x.name,origin:x.reason||'Acquired during advancement',key:`acquired-${i}`,level:x.level})),...(s.purchases||[]).map((x,i)=>({name:catalog.get(x.id)?.name||'Unknown purchased item',origin:'Bought with starting wealth',key:`purchase-${i}`,marketId:x.id}))];}
 export function equipment(R,s){let weapons=[],armour=[],other=[],unknown=[];const d=derive(R,s);const notes=[];
  for(const slot of gearSlots(R,s)){
   const opts=gearOptions(slot.name);let name=opts.includes(s.gearChoices[slot.key])?s.gearChoices[slot.key]:opts[0];
@@ -37,10 +38,10 @@ export function equipment(R,s){let weapons=[],armour=[],other=[],unknown=[];cons
   const a=ARMOUR.find(a=>a.name===matchName);
   if(w){const baseDamage=w.damage.replace('SB',d.sb).split('+').map(Number).reduce((a,b)=>a+b,0),bonus=w.page===301&&d.talents.includes('Strike Mighty Blow')?1:w.page===303&&d.talents.includes('Accurate Shot')?1:0;weapons.push({...w,label:name,damage:Number.isFinite(baseDamage)?baseDamage+bonus:w.damage});if(bonus)notes.push(w.page===301?'Strike Mighty Blow adds +1 melee Damage; use +2 instead when attacking with Advantage (p. 127).':'Accurate Shot adds +1 ranged Damage; use +2 instead when aiming (p. 114).');if(a){armour.push({...a,label:name,worn:false,carriedEnc:0});notes.push('Buckler is listed as both weapon and shield; its Enc is counted once, with weapons.');}if(name.includes(' with '))other.push({name:name.split(' with ')[1],enc:null,origin:slot.origin});}
   else if(a)armour.push({...a,label:name,worn:a.locations!=='Shield',carriedEnc:a.locations==='Shield'?a.enc:Math.max(0,a.enc-1)});
-  else{const item={name,origin:slot.origin,enc:itemWeight(R,name)};if(/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Pouch|Backpack|Sling Bag)$/.test(name)){item.worn=true;item.enc=Math.max(0,item.enc-1);}if(name.startsWith('Sling Bag containing')){item.enc=0;item.container=true;item.containerUnresolved=!slot.key.startsWith('class-');}if(name.startsWith('Backpack containing')){item.enc=1;item.container=true;item.containerUnresolved=!slot.key.startsWith('class-');}if(name==='Clothing'&&gearSlots(R,s).some(x=>['Uniform','Fine Clothing','Courtly Garb','Robes'].includes(x.name))){item.worn=false;item.enc=1;}other.push(item);}
+  else{const listed=slot.marketId?marketCatalog(R).find(x=>x.id===slot.marketId):null,item={name,origin:slot.origin,enc:listed?.enc??itemWeight(R,name)};if(/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Pouch|Backpack|Sling Bag)$/.test(name)){item.worn=true;item.enc=Math.max(0,item.enc-1);}if(listed?.category==='Prosthetics'){item.worn=true;item.enc=0;}if(listed?.enc===null&&['Animals and vehicles','Trade tools'].includes(listed.category)){item.notCarried=true;item.enc=null;}if(name.startsWith('Sling Bag containing')){item.enc=0;item.container=true;item.containerUnresolved=!slot.key.startsWith('class-');}if(name.startsWith('Backpack containing')){item.enc=1;item.container=true;item.containerUnresolved=!slot.key.startsWith('class-');}if(name==='Clothing'&&gearSlots(R,s).some(x=>['Uniform','Fine Clothing','Courtly Garb','Robes'].includes(x.name))){item.worn=false;item.enc=1;}other.push(item);}
  }
- for(const a of other)if(a.enc===null)unknown.push(a.name);else if(a.containerUnresolved)unknown.push(`${a.name} (check contents against container capacity)`);
- if(s.wealth?.amount>200)unknown.push('Coins: check storage capacity; 1 Enc per 200 coins (p. 299).');
+ for(const a of other)if(a.enc===null&&!a.notCarried)unknown.push(a.name);else if(a.containerUnresolved)unknown.push(`${a.name} (check contents against container capacity)`);
+ const coins=purse(R,s).coins;if(coins.gc+coins.ss+coins.d>200)unknown.push('Coins: check storage capacity; 1 Enc per 200 coins (p. 299).');
  const ap={Head:0,Arms:0,Body:0,Legs:0,Shield:0};const byLayer={};for(const a of armour){const layer=a.name.startsWith('Leather')?'leather':a.name.startsWith('Mail')?'mail':a.locations==='Shield'?'shield':'plate';for(const loc of ['Head','Arms','Body','Legs','Shield'])if(a.locations.includes(loc)){const k=`${layer}-${loc}`;byLayer[k]=Math.max(byLayer[k]||0,a.ap);}}
  for(const [key,val]of Object.entries(byLayer))ap[key.split('-')[1]]+=val;
  const weaponEnc=weapons.reduce((a,w)=>a+w.enc,0),armourEnc=armour.reduce((a,w)=>a+w.carriedEnc,0),gearEnc=other.reduce((a,w)=>a+(w.enc||0),0);

@@ -1,4 +1,5 @@
 // All game data and references come from the supplied Fifth Edition rulebook.
+import {marketCatalog} from './market.mjs';
 export const KEYS=['WS','BS','S','T','I','Ag','Dex','Int','WP','Fel'];
 export const CHAR_COST=[125,175,250,350,500,700,950,1300,1800,2550,3600,5025,6950,9000,11250];
 export const SKILL_COST=[50,75,100,150,250,400,600,850,850,1700,2500,3500,4750,6500,8500];
@@ -22,7 +23,7 @@ export function die(sides=100,source=globalThis.crypto){
  return n%sides+1;
 }
 export function roll(s,label,count,sides,page){const values=Array.from({length:count},()=>die(sides));s.rolls.push({at:new Date().toISOString(),label,dice:`${count}d${sides}`,values,total:values.reduce((a,b)=>a+b,0),page});return values;}
-export function fresh(){return {version:1,name:'',appearance:'',ambition:'',partyAmbition:'',notes:'',species:'Human',speciesMode:'choose',speciesAttempts:0,career:'soldier',careerMode:'choose',careerAttempts:0,careerOffers:[],bonusGear:[],charMode:'points',charRolls:[],charAttempts:0,assignment:KEYS.map((_,i)=>i),points:KEYS.map(()=>10),boost:{},speciesSkills:[],skillChoices:{},careerSkills:{},talentChoices:{},randomTalents:[],freeTalent:'',gearChoices:{},gearRolls:{},wealth:null,spells:[],xp:1000,advanceSize:5,ledger:[],rolls:[],sturdyRule:'creation',step:0};}
+export function fresh(){return {version:1,name:'',appearance:'',ambition:'',partyAmbition:'',notes:'',species:'Human',speciesMode:'choose',speciesAttempts:0,career:'soldier',careerMode:'choose',careerAttempts:0,careerOffers:[],bonusGear:[],charMode:'points',charRolls:[],charAttempts:0,assignment:KEYS.map((_,i)=>i),points:KEYS.map(()=>10),boost:{},speciesSkills:[],skillChoices:{},careerSkills:{},talentChoices:{},randomTalents:[],freeTalent:'',gearChoices:{},gearRolls:{},wealth:null,purchases:[],spells:[],xp:1000,advanceSize:5,ledger:[],rolls:[],sturdyRule:'creation',step:0};}
 export function skillInfo(R,name){return R.skills.find(x=>x.name===base(name));}
 export function talentInfo(R,name){return R.talents.find(x=>base(x.name).toLowerCase()===base(canon(name)).toLowerCase());}
 export function options(R,raw,type='skill'){
@@ -77,7 +78,8 @@ export function derive(R,s){
  const wounds=sb+2*tb+wpb+(has('Hardy')?tb:0);
  const currentSkills=careerSkillSlots(R,s,level).flatMap(x=>x.raw.includes('(All)')?options(R,x.raw):[x.name]);
  const ownedHigher=[...s.bonusGear.map(x=>({level:2})),...s.ledger.filter(x=>x.type==='trapping')];
- const ownedNames=['Clothing','Dagger','Pouch',...(CLASS_KIT[c.class]||[]),...c.levels[0].trappings,...Object.values(s.gearChoices),...s.bonusGear.map(i=>c.levels[1].trappings[i]),...s.ledger.filter(x=>x.type==='trapping').map(x=>x.name)];
+ const purchaseNames=new Map(marketCatalog(R).map(x=>[x.id,x.name]));
+ const ownedNames=['Clothing','Dagger','Pouch',...(CLASS_KIT[c.class]||[]),...c.levels[0].trappings,...Object.values(s.gearChoices),...s.bonusGear.map(i=>c.levels[1].trappings[i]),...s.ledger.filter(x=>x.type==='trapping').map(x=>x.name),...(s.purchases||[]).map(x=>purchaseNames.get(x.id)).filter(Boolean)];
  let statusLevel=1;for(let l=2;l<=level;l++)if(c.levels[l-1].trappings.some(t=>ownedNames.includes(t)||/^(Weapon|Melee Weapon) \(Any/.test(t)))statusLevel=l;
  const status=c.levels[statusLevel-1];
  const warnings=[];if(has('Doomed'))warnings.push('Agree a Dooming with the GM and record it in your notes (p. 118).');
