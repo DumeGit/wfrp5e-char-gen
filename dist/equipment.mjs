@@ -1,5 +1,5 @@
 import {career,CLASS_KIT,derive} from './rules.mjs';
-import {marketCatalog,purse,purchaseItem} from './market.mjs';
+import {marketCatalog,purchaseItem} from './market.mjs';
 import {rawGearSlots,rolledName,coinValue,itemParts,itemModifiers,CONTAINERS,CARRIERS,modifierNames} from './inventory.mjs';
 // Printed equipment tables, pp.301, 303, 307–310. Prices are not inferred for unlisted items.
 export const WEAPONS=[];
@@ -42,16 +42,13 @@ export function inventoryEntries(R,s){
  for(const slot of slots){
   const resolved=resolvedGearName(s,slot);if(coinValue(resolved))continue;
   itemParts(resolved).forEach((part,i)=>{
-   const key=i?`${slot.key}:part-${i}`:slot.key,name=part.name,alias=name==='Leather Breastplate'?'Leather Jerkin':ALIASES[name]||name,prefs=s.gearState?.[key]||{},mods=itemModifiers({...slot.purchase,...prefs});
+   const key=i?`${slot.key}:part-${i}`:slot.key,name=part.name,alias=name==='Leather Breastplate'?'Leather Jerkin':ALIASES[name]||name,mods=itemModifiers(slot.purchase);
    const weapon=WEAPONS.find(w=>(w.name===alias||w.name.replace(' (2H)','')===alias||(w.name==='Hand Weapon'&&alias.startsWith('Hand Weapon ('))))||(name==='Hook'?WEAPONS.find(w=>w.name==='Dagger'):null);
-   const armour=ARMOUR.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=CONTAINERS[alias]??CARRIERS[alias],carrier=Object.hasOwn(CARRIERS,alias),canWear=!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics';
-   const defaults=part.inContainer?slot.key:name==='Clothing'&&slot.key==='all-0'&&hasOutfit?'carried':canWear?'worn':carrier||alias==='Workshop'?'stored':'carried';
-   const placement=prefs.placement||defaults;
+   const armour=ARMOUR.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=CONTAINERS[alias]??CARRIERS[alias],carrier=Object.hasOwn(CARRIERS,alias),canWear=!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics'||capacity!==undefined&&!carrier&&!['Barrel','Cask','Jug','Pewter Stein'].includes(alias);
+   const placement=listed?.category==='Prosthetics'?'worn':weapon||armour?.locations==='Shield'?'equipped':name==='Clothing'&&slot.key==='all-0'&&hasOutfit?'carried':canWear?'worn':carrier||alias==='Workshop'?'external':'carried';
    let enc=name==='Hook'?1:armour?.enc??weapon?.enc??listed?.enc??itemWeight(R,alias);
-   if(armour?.quick&&placement!=='worn')enc=null;
-   if(prefs.encOverride!==undefined&&Number.isFinite(prefs.encOverride)&&prefs.encOverride>=0&&(!armour?.quick||placement!=='worn'))enc=prefs.encOverride;
    if(enc!==null){enc=Math.max(0,enc+(mods.flaws.includes('Bulky')?1:0)-(mods.qualities.includes('Lightweight')?1:0));}
-   entries.push({...slot,key,name,alias,quantity:part.quantity,weapon,armour,canWear,capacity,carrier,placement,enc,...mods,quick:armour?.quick,netMode:prefs.netMode||(slot.name.startsWith('Ranged Weapon')?'ranged':'melee'),oneHanded:prefs.oneHanded===true,encOverride:prefs.encOverride,passengers:Number.isInteger(prefs.passengers)&&prefs.passengers>=0?prefs.passengers:0});
+   entries.push({...slot,key,name,alias,quantity:part.quantity,weapon,armour,canWear,capacity,carrier,placement,enc,...mods,quick:armour?.quick,netMode:slot.name.startsWith('Ranged Weapon')?'ranged':'melee',oneHanded:false,inContainer:part.inContainer?slot.key:null});
   });
  }
  return entries;
@@ -69,41 +66,48 @@ function adjustedWeapon(entry,d){
 }
 function slotAliasNote(e){return e.name.startsWith('Great Weapon (')?`${e.name} uses the ${e.alias} profile (p. 301); no separate profile is printed.`:'';}
 export function equipment(R,s){
- const d=derive(R,s),entries=inventoryEntries(R,s),byKey=new Map(entries.map(x=>[x.key,x])),notes=[],warnings=[],unknown=[],weapons=[],armour=[],other=[],ap={Head:0,Arms:0,Body:0,Legs:0,Shield:0};
- const parents=new Map();
- for(const e of entries){let parent=byKey.get(e.placement);if(!['worn','carried','stored'].includes(e.placement)&&(!parent||parent.capacity===undefined)){warnings.push(`${e.name}: storage destination is missing; counted as carried.`);parent=null;}
-  let node=parent,seen=new Set([e.key]);while(node){if(seen.has(node.key)){warnings.push(`${e.name}: containers cannot contain themselves or form a loop; counted as carried.`);parent=null;break;}seen.add(node.key);node=byKey.get(node.placement);}
-  if(parent&&(e.weapon?.page===301&&['Long','Very Long','Massive'].includes(e.weapon.reach))&&!parent.carrier){warnings.push(`${e.name}: long weapons need a suitable carrier, not an ordinary pack (p. 308).`);parent=null;}
-  parents.set(e.key,parent?.key||null);
+ const d=derive(R,s),entries=inventoryEntries(R,s),notes=[],warnings=[],unknown=[],weapons=[],armour=[],other=[],ap={Head:0,Arms:0,Body:0,Legs:0,Shield:0};
+ // Creation defaults are derived, so saved packing preferences cannot hide gear.
+ const parents=new Map(entries.map(e=>[e.key,null]));
+ const bags=entries.filter(e=>e.capacity!==undefined&&!e.carrier&&e.quantity!==null);
+ const loads=new Map(bags.map(e=>[e.key,0]));
+ const pack=(e,bag)=>{parents.set(e.key,bag.key);e.placement=bag.key;loads.set(bag.key,loads.get(bag.key)+e.enc*e.quantity);};
+ const candidates=entries.filter(e=>e.placement==='carried'&&e.capacity===undefined&&e.enc!==null&&e.quantity!==null);
+ // Keep the book's explicitly packed contents together when they fit.
+ for(const e of candidates.filter(e=>e.inContainer)){
+  const bag=bags.find(b=>b.key===e.inContainer),weight=e.enc*e.quantity;
+  if(bag&&loads.get(bag.key)+weight<=bag.capacity*bag.quantity)pack(e,bag);
  }
- const personallyCarried=e=>{let node=e;while(parents.get(node.key))node=byKey.get(parents.get(node.key));return node.placement!=='stored';};
+ // Fit larger belongings first; overflow stays in the carried total.
+ for(const e of candidates.filter(e=>!parents.get(e.key)).sort((a,b)=>b.enc*b.quantity-a.enc*a.quantity)){
+  const weight=e.enc*e.quantity;
+  const bag=bags.filter(b=>loads.get(b.key)+weight<=b.capacity*b.quantity).sort((a,b)=>(a.capacity*a.quantity-loads.get(a.key))-(b.capacity*b.quantity-loads.get(b.key)))[0];
+  if(bag)pack(e,bag);
+ }
+ const personallyCarried=e=>e.placement!=='external';
  const weights=new Map();
  for(const e of entries){let value=e.enc===null||e.quantity===null?null:e.enc*e.quantity;
   const worn=e.placement==='worn'&&e.canWear&&!parents.get(e.key);
-  if(e.quick){if(!worn&&e.encOverride===undefined)value=null;}else if(worn&&value!==null)value=e.flaws.includes('Bulky')&&e.encOverride===undefined?Math.max(e.quantity,value-e.quantity):Math.max(0,value-e.quantity);
+  if(!e.quick&&worn&&value!==null)value=e.flaws.includes('Bulky')?Math.max(e.quantity,value-e.quantity):Math.max(0,value-e.quantity);
   weights.set(e.key,value);e.carriedEnc=!parents.get(e.key)&&personallyCarried(e)?value:0;e.worn=worn;
  }
- const coins=purse(R,s).coins,coinEnc=(coins.gc+coins.ss+coins.d)/200,coinParent=byKey.get(s.coinStorage),coinOnPerson=s.coinStorage!=='stored'&&(!coinParent||personallyCarried(coinParent));
+ const coinEnc=0; // User-selected creator convention: ignore coin weight.
  for(const e of entries.filter(x=>x.capacity!==undefined)){
-  const children=entries.filter(x=>parents.get(x.key)===e.key),load=children.reduce((n,x)=>n+(x.enc===null||x.quantity===null?0:x.enc*x.quantity),0)+(s.coinStorage===e.key?coinEnc:0)+(e.carrier?e.passengers*10:0);
-  e.load=load;e.loadUnknown=children.some(x=>x.enc===null||x.quantity===null);
-  if(load>e.capacity){warnings.push(`${e.name}: ${load.toFixed(2)} Enc packed, capacity ${e.capacity} (pp. 308, 312).`);if(personallyCarried(e))unknown.push(`${e.name}: contents exceed capacity; repack to calculate the load`);}
-  if(e.loadUnknown){warnings.push(`${e.name}: some contents have unknown Encumbrance.`);if(personallyCarried(e))unknown.push(`${e.name}: unresolved contents`);}
+  e.load=loads.get(e.key)||0;e.loadUnknown=false;
  }
  for(const e of entries){
-  if(personallyCarried(e)&&!parents.get(e.key)&&weights.get(e.key)===null)unknown.push(e.name+(e.quick?' (only worn Enc is published)':''));
+  if(personallyCarried(e)&&!parents.get(e.key)&&weights.get(e.key)===null)unknown.push(e.name);
   if(e.name==='Hook')notes.push('Hook counts as a Dagger (p. 315); its own Encumbrance is retained.');
   if(slotAliasNote(e))notes.push(slotAliasNote(e));
   if(e.name==='Grimoire')notes.push('Grimoire uses the Book, Magic Encumbrance entry (pp. 237, 311).');
   if(e.name==='Lunch')notes.push('Lunch uses the printed Meal Encumbrance entry (pp. 39, 309).');
   if(e.name==='Leather Breastplate')notes.push('Leather Breastplate (p. 96) uses Leather Jerkin statistics (p. 307), as agreed.');
   if(e.weapon)weapons.push({...adjustedWeapon(e,d),carriedEnc:e.carriedEnc});
-  if(e.armour)armour.push({...e.armour,key:e.key,label:e.name+(e.quantity>1?` ×${e.quantity}`:''),enc:e.enc,carriedEnc:e.weapon?0:e.carriedEnc,worn:e.worn,active:e.worn||(e.armour.locations==='Shield'&&e.placement==='carried'),qualities:[e.armour.qualities,...modifierNames(e)].filter(Boolean).join(', '),itemQualities:e.qualities,itemFlaws:e.flaws});
+  if(e.armour)armour.push({...e.armour,key:e.key,label:e.name+(e.quantity>1?` ×${e.quantity}`:''),enc:e.enc,carriedEnc:e.weapon?0:e.carriedEnc,worn:e.worn,active:e.worn||(e.armour.locations==='Shield'&&e.placement==='equipped'),qualities:[e.armour.qualities,...modifierNames(e)].filter(Boolean).join(', '),itemQualities:e.qualities,itemFlaws:e.flaws});
   if(!e.weapon&&!e.armour)other.push({key:e.key,name:e.name+(e.quantity>1?` ×${e.quantity}`:''),origin:e.origin,enc:e.carriedEnc,worn:e.worn,placement:e.placement,qualities:e.qualities,flaws:e.flaws});
  }
- if(s.coinStorage&&!['carried','stored'].includes(s.coinStorage)&&(!coinParent||coinParent.capacity===undefined)){warnings.push('Coin storage is missing; coins are counted as carried.');}
  const byLayer={};for(const a of armour.filter(a=>a.active)){const layer=a.quick?'quick':a.name.startsWith('Leather')?'leather':a.name.startsWith('Mail')?'mail':a.locations==='Shield'?'shield':'plate';for(const loc of Object.keys(ap))if(a.locations.includes(loc)){const k=`${layer}-${loc}`;byLayer[k]=Math.max(byLayer[k]||0,a.ap);}}
- const activeQuick=armour.some(a=>a.active&&a.quick);if(activeQuick&&armour.some(a=>a.active&&!a.quick&&a.locations!=='Shield'))warnings.push('Quick Armour replaces detailed armour; choose one system rather than stacking them (p. 307).');
+ const activeQuick=armour.some(a=>a.active&&a.quick);if(activeQuick&&armour.some(a=>a.active&&!a.quick&&a.locations!=='Shield'))warnings.push('Quick Armour replaces detailed armour; its protection and penalties are not stacked (p. 307).');
  for(const [key,val]of Object.entries(byLayer)){const [layer,loc]=key.split('-');if(!activeQuick||['quick','shield'].includes(layer))ap[loc]+=val;}
  function penalty(a,value){return Math.max(0,value*(a.itemFlaws.includes('Unreliable')?2:1)-(a.itemQualities.includes('Practical')?1:0));}
  const wornArmour=armour.filter(a=>a.worn&&(!activeQuick||a.quick)),stealth=-['mail','plate'].reduce((n,layer)=>n+Math.max(0,...wornArmour.filter(a=>layer==='mail'?a.name.startsWith('Mail')||a.quick&&a.ap>=3:!a.name.startsWith('Leather')&&!a.name.startsWith('Mail')&&(!a.quick||a.ap>=5)).map(a=>penalty(a,1))),0),perception=-Math.max(0,...wornArmour.filter(a=>a.name==='Helm'||a.name==='Heavy Armour').map(a=>penalty(a,2)));
@@ -114,14 +118,14 @@ export function equipment(R,s){
   const layer=a.quick?'quick':leather?'leather':a.name.startsWith('Mail')?'mail':'plate';for(const loc of ['Head','Arms','Body','Legs'])if(a.locations.includes(loc)){const key=`${layer}:${loc}`;layers[key]=Math.max(layers[key]||0,penalty(a,value));}}
   return -Math.max(0,...['Head','Arms','Body','Legs'].map(loc=>Object.entries(layers).filter(([k])=>k.endsWith(':'+loc)).reduce((n,[,v])=>n+v,0)));};
 
- const weaponEnc=weapons.reduce((n,x)=>n+(x.carriedEnc||0),0),armourEnc=armour.reduce((n,x)=>n+(x.carriedEnc||0),0),packedCoins=coinParent&&coinParent.capacity!==undefined,coinsCarriedEnc=coinOnPerson&&!packedCoins?coinEnc:0,gearEnc=other.reduce((n,x)=>n+(x.enc||0),0)+coinsCarriedEnc,total=Number((weaponEnc+armourEnc+gearEnc).toFixed(3));
+ const weaponEnc=weapons.reduce((n,x)=>n+(x.carriedEnc||0),0),armourEnc=armour.reduce((n,x)=>n+(x.carriedEnc||0),0),gearEnc=other.reduce((n,x)=>n+(x.enc||0),0),total=Number((weaponEnc+armourEnc+gearEnc).toFixed(3));
  const complete=!unknown.length;let band=total<=d.capacity?0:total<=d.capacity*2?1:total<=d.capacity*3?2:3;
  const movement=band===3?0:band===2?Math.max(2,d.movement-2):band===1?Math.max(3,d.movement-1):d.movement,agility=band===2?Math.max(10,d.stats.Ag-20):band===1?d.stats.Ag-10:d.stats.Ag;
  if(entries.filter(e=>personallyCarried(e)&&!parents.get(e.key)&&e.enc>=4).length>1)warnings.push('Normally only one oversized object can be carried; it likely needs both hands (p. 299).');
  if(d.talents.includes('Sure Shot'))notes.push('Sure Shot: +1 ranged Damage; ignore Partial armour, and Weakpoints when using Impale (p. 127).');
  if(d.talents.includes('Accurate Shot'))notes.push('Accurate Shot: +1 ranged Damage is included; +2 instead when aiming (p. 114).');
  if(d.talents.includes('Strike Mighty Blow'))notes.push('Strike Mighty Blow: +1 melee Damage is included; +2 instead with Advantage (p. 127).');
- notes.push('Coin weight uses the book’s rough guide: number of coins / 200 Enc (p. 299). Packed contents use container capacity; only the container itself counts toward carried Enc (p. 308).');
+ notes.push('Creator defaults: armour and wearable containers are worn, weapons are equipped, and other belongings fill available containers. Overflow is carried separately. Coin weight is ignored by user choice.');
  return {entries,weapons,armour,other,unknown:[...new Set(unknown)],ap,weaponEnc,armourEnc,gearEnc,total,notes:[...new Set(notes)],warnings,coinEnc,penalties:{complete,band,movement,agility,travelFatigue:band<3?band:0,immobile:band===3,stealth:stealth||0,perception:perception||0,casting:Object.fromEntries((lores.length?lores:['Other magic']).map(l=>[l,castingFor(l)||0]))}};
 }
 export function recordAcquisition(R,s,level,index,reason,linkedGear=''){

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
 import * as M from '../dist/rules.mjs';
 import {equipment,inventoryEntries,gearOptions,gearSlots,recordAcquisition,itemWeight} from '../dist/equipment.mjs';
-import {buyTrapping,purse,marketCatalog,marketQuote,purchaseItem} from '../dist/market.mjs';
+import {buyTrapping,purse,marketCatalog,purchaseItem} from '../dist/market.mjs';
 import {migrateInventory} from '../dist/inventory.mjs';
 import {appearanceSummary,doomingResult,suggestedName} from '../dist/background.mjs';
 import {exportSheet} from '../dist/export.mjs';
@@ -12,7 +12,6 @@ import {folioGear} from '../dist/folio.mjs';
 import {R,soldier} from './fixture.mjs';
 const rich=()=>{const s=soldier();s.wealth={amount:1000,currency:'gold crowns'};s.xp=1000000;return s;};
 function bought(s,id){buyTrapping(R,s,id);return `purchase-${s.purchases.at(-1).uid}`;}
-function leaveOtherGear(s,...keep){s.coinStorage='stored';for(const e of inventoryEntries(R,s))if(!keep.includes(e.key))s.gearState[e.key]={placement:'stored'};}
 
 test('effect wording never makes Sturdy, Combat Reflexes, Strike to Injure or Disarm repeatable',()=>{
  const s=M.fresh();s.species='Dwarf';s.career='stevedore';assert.match(M.quote(R,s,'talent','Sturdy').error,/Already known/);
@@ -44,54 +43,67 @@ test('ranged Career choices, aliases and counted weapons receive actual profiles
  assert.ok(gearOptions('Ranged Weapon (Any One)').includes('Bow (2H)'));assert.ok(!gearOptions('Ranged Weapon (Any One)').includes('Dagger'));
  for(const [raw,weapon]of [['Main-gauche','Main Gauche'],['Sword-breaker','Swordbreaker'],['Great Weapon (Military Flail)','Military Flail (2H)'],['Great Weapon (Dwarf Greataxe)','Greataxe (2H)'],['2 Bolas','Bolas'],['5 Throwing Knives','Throwing Knife'],['Hook','Dagger']]){const s=rich();s.ledger.push({type:'trapping',name:raw,level:2,cost:0});const w=equipment(R,s).weapons.find(x=>x.label.startsWith(raw)||x.name===weapon);assert.ok(w,raw);assert.equal(w.name,weapon,raw);if(raw.startsWith('2 '))assert.equal(w.quantity,2);if(raw.startsWith('5 '))assert.equal(w.quantity,5);}
 });
-test('melee Net and Bolas preserve the table and footnote rules',()=>{
- const s=rich();const key=bought(s,'301:Net');let w=equipment(R,s).weapons.find(x=>x.key===key);assert.equal(w.group,'Basic');assert.equal(w.reach,'Short');assert.match(w.qualities,/Defensive/);s.gearState[key]={netMode:'ranged'};w=equipment(R,s).weapons.find(x=>x.key===key);assert.equal(w.group,'Entangling');assert.equal(w.reach,'SB yards');const b=bought(s,'303:Bolas');w=equipment(R,s).weapons.find(x=>x.key===b);assert.match(w.qualities,/Inflict \(Prone\)/);assert.match(w.qualities,/only on leg hits/);
+test('melee and Career ranged Nets and Bolas retain their automatic printed profiles',()=>{
+ const s=rich(),key=bought(s,'301:Net');let w=equipment(R,s).weapons.find(x=>x.key===key);assert.equal(w.group,'Basic');assert.equal(w.reach,'Short');assert.match(w.qualities,/Defensive/);s.ledger.push({type:'trapping',name:'Ranged Weapon (Any One)',cost:0});s.gearChoices['acquired-0']='Net';w=equipment(R,s).weapons.find(x=>x.key==='acquired-0');assert.equal(w.group,'Entangling');assert.equal(w.reach,'SB yards');const b=bought(s,'303:Bolas');w=equipment(R,s).weapons.find(x=>x.key===b);assert.match(w.qualities,/Inflict \(Prone\)/);assert.match(w.qualities,/only on leg hits/);
 });
-test('Sure Shot, Rapid Reload and one-handed weapon options affect character profiles',()=>{
- const s=rich(),bow=bought(s,'303:Bow (2H)'),crossbow=bought(s,'303:Crossbow (2H)'),spear=bought(s,'301:Spear (2H)'),sword=bought(s,'301:Bastard Sword (2H)');const oldBow=equipment(R,s).weapons.find(x=>x.key===bow).damage;s.ledger.push({type:'talent',name:'Sure Shot',cost:100},{type:'talent',name:'Rapid Reload',cost:100});s.gearState[spear]={oneHanded:true};s.gearState[sword]={oneHanded:true};const ws=equipment(R,s).weapons;assert.equal(ws.find(x=>x.key===bow).damage,oldBow+1);assert.match(ws.find(x=>x.key===crossbow).qualities,/Reload 0/);assert.ok(!ws.find(x=>x.key===spear).qualities.includes('Fast'));assert.equal(ws.find(x=>x.key===sword).group,'Basic');assert.ok(!ws.find(x=>x.key===sword).qualities.includes('Damaging'));
+
+test('Sure Shot and Rapid Reload affect equipped weapon profiles without configuration',()=>{
+ const s=rich(),bow=bought(s,'303:Bow (2H)'),crossbow=bought(s,'303:Crossbow (2H)');const oldBow=equipment(R,s).weapons.find(x=>x.key===bow).damage;s.ledger.push({type:'talent',name:'Sure Shot',cost:100},{type:'talent',name:'Rapid Reload',cost:100});const ws=equipment(R,s).weapons;assert.equal(ws.find(x=>x.key===bow).damage,oldBow+1);assert.match(ws.find(x=>x.key===crossbow).qualities,/Reload 0/);assert.ok(ws.every(x=>x.placement==='equipped'));
 });
+
 test('linking an owned purchase grants one Career box without duplicating its inventory',()=>{
  const s=rich(),key=bought(s,'307:Breastplate'),index=M.career(R,s).levels[1].trappings.indexOf('Breastplate'),before=folioGear(R,s).find(x=>x.name==='Breastplate').quantity;recordAcquisition(R,s,2,index,'Bought with starting funds',key);assert.equal(folioGear(R,s).find(x=>x.name==='Breastplate').quantity,before);assert.equal(M.derive(R,s).earnedBoxes,1);assert.throws(()=>recordAcquisition(R,s,2,index,'Again',key),/already earned/);s.ledger.pop();assert.equal(folioGear(R,s).find(x=>x.name==='Breastplate').quantity,before);
 });
 test('poisons, Quick Armour and instrument/tent size variants use printed prices',()=>{
  const cat=marketCatalog(R);for(const [name,cost,enc]of [['Adder root',5,0],['Black lotus (leaves)',72,0],['Black lotus (sap)',4800,0],['Daemon’s tand',5,0],['Small Instrument',240,0],['Large Instrument',960,2],['Small Tent',360,1],['Large Tent',1440,4],['Heavy Armour',21120,10]]){const item=cat.find(x=>x.name===name);assert.equal(item.pennies,cost,name);assert.equal(item.enc,enc,name);}assert.equal(cat.find(x=>x.name==='Mule').page,312);
 });
-test('Flaws discount prices; Quality prices require an explicit agreement without invented multipliers',()=>{
- const item=marketCatalog(R).find(x=>x.name==='Breastplate'),q=marketQuote(item,{flaws:['Bulky','Unreliable']});assert.equal(q.pennies,item.pennies/4);assert.equal(q.availability,'Common');assert.match(marketQuote(item,{qualities:['Fine']}).error,/GM-agreed/);assert.equal(marketQuote(item,{qualities:['Fine'],agreedPrice:1000}).pennies,1000);const poison=marketCatalog(R).find(x=>x.name==='Black lotus (leaves)');assert.equal(marketQuote(poison,{flaws:['Ugly']}).availability,'Exotic');
+test('new purchases use the listed price and have no added craftsmanship',()=>{
+ const s=rich(),item=marketCatalog(R).find(x=>x.name==='Breastplate');buyTrapping(R,s,item.id);assert.equal(s.purchases.at(-1).pennies,item.pennies);assert.equal(s.purchases.at(-1).qualities,undefined);assert.equal(s.purchases.at(-1).flaws,undefined);
 });
-test('containers count their own Enc, enforce capacity and reject circular or oversized packing',()=>{
- const s=rich(),pack=bought(s,'308:Backpack'),rope=bought(s,'316:Rope, 10 yards'),tent=bought(s,'316:Tent');leaveOtherGear(s,pack,rope,tent);s.gearState[rope]={placement:pack};s.gearState[tent]={placement:pack};let eq=equipment(R,s);assert.equal(eq.total,1);assert.equal(eq.entries.find(x=>x.key===pack).load,3);assert.equal(eq.unknown.length,0);s.gearState['career-2']={placement:pack};eq=equipment(R,s);assert.match(eq.warnings.join(' '),/long weapons/);s.gearState[pack]={placement:pack};assert.match(equipment(R,s).warnings.join(' '),/loop/);
+
+test('bags are worn and belongings pack automatically while weapons stay equipped',()=>{
+ const s=rich(),pack=bought(s,'308:Backpack'),rope=bought(s,'316:Rope, 10 yards'),tent=bought(s,'316:Tent'),eq=equipment(R,s);assert.equal(eq.entries.find(x=>x.key===pack).worn,true);assert.equal(eq.entries.find(x=>x.key===pack).carriedEnc,1);assert.equal(eq.entries.find(x=>x.key===pack).load,3);for(const key of [rope,tent]){assert.equal(eq.entries.find(x=>x.key===key).placement,pack);assert.equal(eq.entries.find(x=>x.key===key).carriedEnc,0);}assert.equal(eq.entries.find(x=>x.key==='career-2').placement,'equipped');assert.equal(eq.entries.find(x=>x.key==='career-2').carriedEnc,3);assert.equal(eq.unknown.length,0);
 });
-test('overflow, unlisted contents and stored equipment never silently disappear from the load calculation',()=>{
- const s=rich(),pack=bought(s,'308:Sling Bag'),tent=bought(s,'316:Tent'),rope=bought(s,'316:Rope, 10 yards');leaveOtherGear(s,pack,tent,rope);s.gearState[tent]={placement:pack};s.gearState[rope]={placement:pack};let eq=equipment(R,s);assert.match(eq.unknown.join(' '),/exceed capacity/);s.gearState[pack]={placement:'stored'};eq=equipment(R,s);assert.equal(eq.total,0);assert.equal(eq.unknown.length,0);
+
+test('overflow counts as carried rather than disappearing or requiring packing choices',()=>{
+ const s=rich(),tent=bought(s,'316:Tent'),rope=bought(s,'316:Rope, 10 yards'),eq=equipment(R,s);assert.equal(eq.entries.find(x=>x.key===tent).placement,'carried');assert.equal(eq.entries.find(x=>x.key===rope).placement,'carried');assert.equal(eq.gearEnc,3);assert.equal(eq.unknown.length,0);for(const e of eq.entries.filter(x=>x.capacity!==undefined))assert.ok(e.load<=e.capacity*e.quantity);
 });
-test('Mule and Cart are separate carriers; their loads do not become personal Enc',()=>{
- const s=rich();s.ledger.push({type:'trapping',name:'Mule and Cart',level:2,cost:0});const mule=inventoryEntries(R,s).find(x=>x.name==='Mule'),cart=inventoryEntries(R,s).find(x=>x.name==='Cart');assert.equal(mule.capacity,14);assert.equal(cart.capacity,25);const tent=bought(s,'316:Large Tent');leaveOtherGear(s,cart.key,mule.key,tent);s.gearState[tent]={placement:cart.key};assert.equal(equipment(R,s).total,0);assert.equal(equipment(R,s).entries.find(x=>x.key===cart.key).load,4);
+
+test('animals and vehicles remain external Trappings without passenger management',()=>{
+ const s=rich(),before=equipment(R,s).total;s.ledger.push({type:'trapping',name:'Mule and Cart',level:2,cost:0});const eq=equipment(R,s);for(const name of ['Mule','Cart']){const e=eq.entries.find(x=>x.name===name);assert.equal(e.placement,'external');assert.equal(e.carriedEnc,0);assert.equal(e.load,0);}assert.equal(eq.total,before);
 });
-test('human-sized passengers consume carrier capacity at ten Enc each',()=>{
- const s=rich(),cart=bought(s,'312:Cart');leaveOtherGear(s,cart);s.gearState[cart]={placement:'stored',passengers:3};const eq=equipment(R,s);assert.equal(eq.entries.find(x=>x.key===cart).load,30);assert.match(eq.warnings.join(' '),/capacity/);assert.equal(eq.total,0);
+
+test('legacy manual packing and weight overrides cannot secretly change creation totals',()=>{
+ const s=rich(),before=equipment(R,s);for(const e of before.entries)s.gearState[e.key]={placement:'stored',encOverride:100,passengers:12,qualities:['Lightweight'],flaws:['Bulky']};s.coinStorage='missing';assert.deepEqual(equipment(R,s),before);
 });
-test('craftsmanship ranks survive a purchase and lightweight/bulky change item Enc',()=>{
- const s=rich(),item=marketCatalog(R).find(x=>x.name==='Backpack');const q=buyTrapping(R,s,item.id,{qualities:['Fine','Durable','Lightweight'],ranks:{Fine:3,Durable:2},agreedPrice:100});assert.deepEqual(q.ranks,{Durable:2,Fine:3});const key=`purchase-${s.purchases.at(-1).uid}`;assert.equal(inventoryEntries(R,s).find(x=>x.key===key).enc,1);s.gearState[key]={flaws:['Bulky']};assert.equal(inventoryEntries(R,s).find(x=>x.key===key).enc,2);
+
+test('old purchased craftsmanship and prices are retained without rewriting the save',()=>{
+ const s=rich(),item=marketCatalog(R).find(x=>x.name==='Backpack');s.purchases.push({id:item.id,uid:'old-pack',pennies:100,qualities:['Fine','Durable','Lightweight'],ranks:{Fine:3,Durable:2}});const before=JSON.stringify(s),eq=equipment(R,s);assert.deepEqual(eq.entries.find(x=>x.key==='purchase-old-pack').ranks,{Durable:2,Fine:3});assert.equal(eq.entries.find(x=>x.key==='purchase-old-pack').enc,1);assert.equal(purse(R,s).spent,100);assert.equal(JSON.stringify(s),before);
 });
+
 test('counted starting ammunition retains the published zero Enc',()=>{
  for(const name of ['Arrow','Bolt','Shot','Lead Bullet','Stone Bullet'])assert.equal(itemWeight(R,name),0,name);
 });
-test('coin weight can be carried or packed without charging the contents twice',()=>{
- const s=rich();s.wealth={amount:400,currency:'gold crowns'};leaveOtherGear(s,'all-2');s.coinStorage='carried';assert.equal(equipment(R,s).coinEnc,2);assert.equal(equipment(R,s).total,2);s.coinStorage='all-2';assert.match(equipment(R,s).unknown.join(' '),/exceed capacity/);s.coinStorage='stored';assert.equal(equipment(R,s).total,0);
+test('coin weight is ignored without changing the remaining purse or bag capacity',()=>{
+ const s=rich(),before=equipment(R,s).total;s.wealth={amount:40000,currency:'gold crowns'};const eq=equipment(R,s);assert.equal(eq.coinEnc,0);assert.equal(eq.total,before);assert.equal(eq.entries.find(x=>x.key==='all-2').load,1);assert.equal(purse(R,s).remaining,40000*240);assert.match(eq.notes.join(' '),/Coin weight is ignored by user choice/);
 });
-test('load penalties follow the three published thresholds and do not modify XP prices',()=>{
- const s=rich();leaveOtherGear(s,'class-0');s.gearState['class-0']={placement:'carried',encOverride:9};let eq=equipment(R,s);assert.equal(eq.penalties.band,1);assert.equal(eq.penalties.movement,3);assert.equal(eq.penalties.agility,M.derive(R,s).stats.Ag-10);const price=M.quote(R,s,'char','Ag').cost;s.gearState['class-0'].encOverride=18;eq=equipment(R,s);assert.equal(eq.penalties.band,2);assert.equal(eq.penalties.agility,Math.max(10,M.derive(R,s).stats.Ag-20));s.gearState['class-0'].encOverride=30;assert.equal(equipment(R,s).penalties.immobile,true);assert.equal(M.quote(R,s,'char','Ag').cost,price);
+
+test('automatically equipped purchases apply load thresholds without changing XP prices',()=>{
+ const s=rich(),price=M.quote(R,s,'char','Ag').cost;for(let i=0;i<5;i++)bought(s,'303:Javelin');let eq=equipment(R,s);assert.equal(eq.penalties.band,1);assert.equal(eq.penalties.movement,3);assert.equal(eq.penalties.agility,M.derive(R,s).stats.Ag-10);for(let i=0;i<9;i++)bought(s,'303:Javelin');eq=equipment(R,s);assert.equal(eq.penalties.band,2);assert.equal(eq.penalties.agility,Math.max(10,M.derive(R,s).stats.Ag-20));for(let i=0;i<12;i++)bought(s,'303:Javelin');assert.equal(equipment(R,s).penalties.immobile,true);assert.equal(M.quote(R,s,'char','Ag').cost,price);
 });
-test('armour layering, wearing, Practical and Unreliable feed Stealth, Perception and Lore-specific casting',()=>{
- const s=rich(),leather=bought(s,'307:Leather Jack'),mail=bought(s,'307:Mail Coat'),helm=bought(s,'307:Helm');leaveOtherGear(s,leather,mail,helm);s.ledger.push({type:'talent',name:'Arcane Magic (Fire)',cost:100},{type:'talent',name:'Arcane Magic (Metal)',cost:100},{type:'talent',name:'Arcane Magic (Beasts)',cost:100});let eq=equipment(R,s);assert.equal(eq.ap.Body,3);assert.equal(eq.penalties.stealth,-2);assert.equal(eq.penalties.perception,-2);assert.deepEqual(eq.penalties.casting,{Fire:-3,Metal:-1,Beasts:-2});s.gearState[helm]={placement:'carried'};assert.equal(equipment(R,s).ap.Head,0);assert.equal(equipment(R,s).penalties.perception,0);s.gearState[helm]={placement:'worn',qualities:['Practical'],flaws:['Unreliable']};assert.equal(equipment(R,s).penalties.perception,-3);
+
+test('automatically worn layered armour applies protection and Lore-specific penalties',()=>{
+ const s=rich(),leather=bought(s,'307:Leather Jack'),mail=bought(s,'307:Mail Coat'),helm=bought(s,'307:Helm');s.ledger.push({type:'talent',name:'Arcane Magic (Fire)',cost:100},{type:'talent',name:'Arcane Magic (Metal)',cost:100},{type:'talent',name:'Arcane Magic (Beasts)',cost:100});const eq=equipment(R,s);assert.equal(eq.ap.Body,3);assert.equal(eq.penalties.stealth,-2);assert.equal(eq.penalties.perception,-2);assert.deepEqual(eq.penalties.casting,{Fire:-3,Metal:-1,Beasts:-2});for(const key of [leather,mail,helm])assert.equal(eq.entries.find(x=>x.key===key).worn,true);assert.equal(eq.entries.find(x=>x.key===mail).carriedEnc,2);assert.equal(eq.entries.find(x=>x.key===helm).carriedEnc,1);
 });
-test('Quick Armour replaces detailed armour and its worn-only Enc is labelled when unworn',()=>{
- const s=rich(),quick=bought(s,'307:Heavy Armour');let eq=equipment(R,s);assert.equal(eq.ap.Body,5);assert.equal(eq.penalties.stealth,-2);assert.equal(eq.penalties.perception,-2);assert.match(eq.warnings.join(' '),/replaces detailed/);s.gearState[quick]={placement:'carried'};eq=equipment(R,s);assert.match(eq.unknown.join(' '),/only worn Enc/);
+
+test('Quick Armour is worn automatically and uses the printed worn Enc and protection',()=>{
+ const s=rich(),quick=bought(s,'307:Heavy Armour'),eq=equipment(R,s);assert.equal(eq.ap.Body,5);assert.equal(eq.penalties.stealth,-2);assert.equal(eq.penalties.perception,-2);assert.equal(eq.entries.find(x=>x.key===quick).carriedEnc,10);assert.match(eq.warnings.join(' '),/replaces detailed/);
 });
-test('a confirmed unworn Quick Armour weight resolves carrying and container loads',()=>{
- const s=rich(),quick=bought(s,'307:Medium Armour'),pack=bought(s,'308:Backpack');leaveOtherGear(s,quick,pack);s.gearState[quick]={placement:pack};assert.match(equipment(R,s).unknown.join(' '),/unresolved contents/);s.gearState[quick]={placement:pack,encOverride:3};let eq=equipment(R,s);assert.equal(eq.entries.find(x=>x.key===pack).load,3);assert.equal(eq.unknown.length,0);s.gearState[quick]={placement:'carried',encOverride:7};eq=equipment(R,s);assert.equal(eq.armourEnc,7);s.gearState[quick].placement='worn';assert.equal(equipment(R,s).armourEnc,4);
+
+test('unlisted weights remain explicit rather than silently assumed zero',()=>{
+ const s=rich();s.ledger.push({type:'trapping',name:'Unlisted Keepsake',cost:0});const eq=equipment(R,s);assert.ok(eq.unknown.includes('Unlisted Keepsake'));assert.equal(eq.penalties.complete,false);
 });
+
 test('reference corrections retain complete Mimic and spell duration, excluding Dooming-table fragments',()=>{
  assert.match(M.talentInfo(R,'Mimic').text,/fake it or hide it/);assert.ok(!M.talentInfo(R,'Disarm').text.includes('Morr sends'));assert.ok(!M.talentInfo(R,'Doomed').text.includes('51–52'));assert.equal(R.spells.find(x=>x.name==='As Verena Is My Witness').duration,'Fellowship Bonus Rounds');
 });

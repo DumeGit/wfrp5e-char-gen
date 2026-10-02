@@ -1,4 +1,4 @@
-import {rawGearSlots,rolledName,coinValue,itemModifiers} from './inventory.mjs';
+import {rawGearSlots,rolledName,coinValue} from './inventory.mjs';
 // Listed prices and Availability from the supplied Consumer Guide, pp. 301, 303, 307, 312–315.
 // Other portable goods are taken from the extracted gear table, pp. 308–311, 316.
 const EXTRA=[];
@@ -147,12 +147,5 @@ export function priceInPennies(price){if(typeof price!=='string'||/^(Varies|n\/a
 export function formatMoney(pennies){if(!Number.isInteger(pennies)||pennies<0)return '—';const gc=Math.floor(pennies/240),ss=Math.floor(pennies%240/12),d=pennies%12;return [gc?`${gc} GC`:'',ss?`${ss}/${d||'–'}`:d&&gc?`–/${d}`:'',!gc&&!ss?`${d}d`:''].filter(Boolean).join(' ')||'0d';}
 export function marketCatalog(R){if(CACHE.has(R))return CACHE.get(R);const listed=[...(R.gear||[]).map(x=>({...x,category:PAGE_CATEGORIES[x.page]||'Trappings'})),...EXTRA].filter(x=>priceInPennies(x.price)!==null).map(x=>({...x,id:`${x.page}:${x.name}`,pennies:priceInPennies(x.price)}));CACHE.set(R,listed);return listed;}
 export function purchaseItem(R,p){const legacy=p.id?.startsWith('313:')?`312:${p.id.slice(4)}`:p.id;return marketCatalog(R).find(x=>x.id===p.id)||marketCatalog(R).find(x=>x.id===legacy&&x.category==='Animals and vehicles');}
-export function marketQuote(item,options={}){
- const {qualities,flaws,ranks}=itemModifiers(options),availability=['Common','Scarce','Rare','Exotic'];
- let pennies=qualities.length?options.agreedPrice:item.pennies/2**flaws.length;
- const error=!Number.isInteger(pennies)||pennies<0?(qualities.length?'Quality items have no fixed purchase-price multiplier in the book. Enter a GM-agreed final price.':'This discount gives a fraction of a penny. Enter a GM-agreed whole-penny price.') :'';
- if(!qualities.length&&error&&Number.isInteger(options.agreedPrice)&&options.agreedPrice>=0)pennies=options.agreedPrice;
- return {...item,qualities,flaws,ranks,pennies,price:formatMoney(pennies),availability:item.availability==='Exotic'?'Exotic':availability[Math.max(0,availability.indexOf(item.availability)-flaws.length)]||item.availability,error:Number.isInteger(pennies)&&pennies>=0?'':error};
-}
 export function purse(R,s){const rolled=s.wealth?Number(s.wealth.amount)*(s.wealth.currency==='gold crowns'?240:s.wealth.currency==='silver shillings'?12:1):0,grants=rawGearSlots(R,s).reduce((n,x)=>n+coinValue(rolledName(s,x)),0),start=rolled+grants,spent=(s.purchases||[]).reduce((n,x)=>n+(x.pennies??purchaseItem(R,x)?.pennies??0),0),remaining=start-spent;return {rolled,grants,start,spent,remaining,coins:{gc:Math.floor(Math.max(0,remaining)/240),ss:Math.floor(Math.max(0,remaining)%240/12),d:Math.max(0,remaining)%12}};}
-export function buyTrapping(R,s,id,options={}){const base=marketCatalog(R).find(x=>x.id===id);if(!base)throw Error('Choose a Trapping with a listed book price.');if(!s.wealth)throw Error('Roll starting wealth first.');const item=marketQuote(base,options);if(item.error)throw Error(item.error);if(item.pennies>purse(R,s).remaining)throw Error(`Not enough money: ${item.name} costs ${item.price}.`);(s.purchases??=[]).push({id,uid:globalThis.crypto.randomUUID(),pennies:item.pennies,qualities:item.qualities,flaws:item.flaws,ranks:item.ranks});return item;}
+export function buyTrapping(R,s,id){const item=marketCatalog(R).find(x=>x.id===id);if(!item)throw Error('Choose a Trapping with a listed book price.');if(!s.wealth)throw Error('Roll starting wealth first.');if(item.pennies>purse(R,s).remaining)throw Error(`Not enough money: ${item.name} costs ${item.price}.`);(s.purchases??=[]).push({id,uid:globalThis.crypto.randomUUID(),pennies:item.pennies});return item;}
