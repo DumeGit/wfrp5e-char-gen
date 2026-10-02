@@ -60,6 +60,8 @@ The tests cover all 64 Careers, every d100 Career outcome for every Species, ref
 
 The verification URL query `?verify=1` uses a separate draft key, so browser checks do not replace the user's open draft. It changes no game rules.
 
+Creation has eight navigation steps, with separate Talents and Gear & money screens and six creation readiness indicators. Ability and spell issues route to Talents; wealth, item quantities and purchase issues route to Gear & money. Existing saved drafts and imported character files migrate their old Experience/Review step once using additive navigation metadata; character rules, XP, rolls and equipment remain unchanged. All 41 checks pass, including migration and issue routing. Browser checks cover separate completion states, spell choices, item purchase/removal, repair links, Review/export readiness and mobile navigation.
+
 Characteristic point inputs reserve the same level-badge space in every cell. Experience Talents separate learnable choices from learned Talents and unavailable alternatives. Disabled purchases name the restriction; a rule restriction is retained even if the XP budget is also insufficient. The normal one-Bless and one-Invoke limits cite pp. 116 and 121. Bless and Invoke must match the established patron (pp. 40, 116, 121); the rejection names the required Talent and deity. Browser checks verify aligned inputs on desktop and mobile, no page overflow at 320/390 pixels, and Talent purchase/undo. All 39 automated checks pass, including matching and mismatched Invoke purchases for all ten deities.
 
 ## Hosting
