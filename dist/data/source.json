@@ -31,5 +31,38 @@
   "notes": [
     "Only this supplied book is used.",
     "The full rulebook PDF is not included in this website."
+  ],
+  "auditCorrectionPages": [
+    111,
+    117,
+    118,
+    119,
+    120,
+    122,
+    123,
+    124,
+    125,
+    127,
+    149,
+    229,
+    237,
+    298,
+    299,
+    301,
+    303,
+    307,
+    308,
+    312,
+    313,
+    315,
+    316
+  ],
+  "backgroundPages": [
+    27,
+    29,
+    31,
+    32,
+    35,
+    118
   ]
 }

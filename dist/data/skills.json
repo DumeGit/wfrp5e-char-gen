@@ -91,9 +91,7 @@
       "Dog",
       "Hawk",
       "Horse",
-      "Pigeon",
-      "Pigeon Your understanding of a particular type of animal",
-      "and ability to train them"
+      "Pigeon"
     ],
     "page": 111
   },
@@ -181,16 +179,24 @@
     "advanced": true,
     "grouped": true,
     "options": [
+      "Albion",
       "Battle",
       "Bretonnian",
       "Classical",
       "Elthárin",
+      "Estalian",
+      "Gospodarinyi",
+      "Grumbarth",
       "Guilder",
       "Haffennaff",
       "Khazalid",
       "Magick",
+      "Norse",
+      "Pilgrim Sign",
+      "Queekish",
       "Reikspiel",
       "Thieves Tongue",
+      "Tilean",
       "Wastelander"
     ],
     "page": 112

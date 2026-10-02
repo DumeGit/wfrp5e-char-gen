@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"28f238e648914740a5de";
+const CACHE=CACHE_PREFIX+"128f1f95ef14ba80f662";
 const ASSETS=[
  "app.js",
  "assets/LICENSE-pdf-lib.md",
@@ -9,6 +9,9 @@ const ASSETS=[
  "assets/icon-512.png",
  "assets/icon-maskable-512.png",
  "assets/pdf-lib.min.js",
+ "background.mjs",
+ "creator-ui.mjs",
+ "data/background.json",
  "data/career-rolls.json",
  "data/careers.json",
  "data/gear.json",
@@ -22,6 +25,7 @@ const ASSETS=[
  "export.mjs",
  "folio.mjs",
  "index.html",
+ "inventory.mjs",
  "manifest.webmanifest",
  "market.mjs",
  "pwa.mjs",

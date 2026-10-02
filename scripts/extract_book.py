@@ -101,3 +101,7 @@ write('source.json',{'title':'Warhammer Fantasy Roleplay, Fifth Edition','source
 print(json.dumps({'careers':len(careers),'careerRolls':len(random_careers),'talents':len(talents),'errors':errors},indent=2))
 print('SOLDIER',json.dumps(next(c for c in careers if c['name']=='Soldier'),ensure_ascii=False))
 print('TALENT NAMES',', '.join(t['name'] for t in talents))
+
+# Preserve corrections to tables and cross-page descriptions after extraction.
+import runpy
+runpy.run_path(str(Path(__file__).resolve().with_name("apply-book-corrections.py")))

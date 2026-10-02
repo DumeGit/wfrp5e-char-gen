@@ -1,0 +1,505 @@
+{
+  "Human": {
+    "page": 27,
+    "forenames": [
+      "Adhemar",
+      "Anders",
+      "Artur",
+      "Beatrijs",
+      "Clementia",
+      "Detlev",
+      "Erika",
+      "Frauke",
+      "Frederich",
+      "Gerner",
+      "Gertraud",
+      "Haletha",
+      "Heinrich",
+      "Helga",
+      "Henryk",
+      "Irmina",
+      "Jehanne",
+      "Karl",
+      "Kruger",
+      "Lorelay",
+      "Marieke",
+      "Sebastien",
+      "Sigfreda",
+      "Talther",
+      "Talunda",
+      "Ulrich",
+      "Ulrika",
+      "Viola",
+      "Walther",
+      "Werther",
+      "Willelma",
+      "Wilryn",
+      "Xaver"
+    ],
+    "surnames": [
+      "Augenlos (One Eye)",
+      "Bauer (Farmer)",
+      "Dunn (Very Thin)",
+      "Fleischer (Butcher)",
+      "Lang (Tall)",
+      "Laut (Loud Voice)",
+      "Meyer (Steward)",
+      "Müller (Miller)",
+      "Schmidt (Smith)",
+      "Schuster (Cobbler)",
+      "Stark (Strong)"
+    ],
+    "eyes": [
+      "Ice Blue",
+      "Green",
+      "Pale Blue",
+      "Blue",
+      "Pale Grey",
+      "Grey",
+      "Brown",
+      "Hazel",
+      "Dark Brown",
+      "Black"
+    ],
+    "hair": [
+      "White Blond",
+      "Golden Blond",
+      "Red Blond",
+      "Golden Brown",
+      "Light Brown",
+      "Dark Brown",
+      "Black",
+      "Auburn",
+      "Red",
+      "Grey"
+    ]
+  },
+  "Dwarf": {
+    "page": 29,
+    "forenames": [
+      "Alaeric",
+      "Bori",
+      "Bardlin",
+      "Belorn",
+      "Ergrim",
+      "Fenna",
+      "Galazil (Golden Haired)",
+      "Gnoldok (Wise Eyes)",
+      "Grufbad",
+      "Gottri",
+      "Gudrin",
+      "Kargrim",
+      "Okri (Crafter)",
+      "Thymbrin",
+      "Ulfar"
+    ],
+    "surnames": [
+      "Alriksniz",
+      "Alriksnev",
+      "Anvilhalm",
+      "Bardinsniz",
+      "Bardinsnev",
+      "Gnoldoksniz",
+      "Gnoldoksnev",
+      "Goreksson",
+      "Goreksdottir",
+      "Gottrisson",
+      "Gottrisdottir",
+      "Gudrunsniz",
+      "Gudrunsnev",
+      "Okrisniz",
+      "Okrisnev",
+      "Orc-render",
+      "Snorrisson",
+      "Snorrisdottir",
+      "Stoutbelly",
+      "Sturnfast",
+      "Ulfarsson",
+      "Ulfarsdottir"
+    ],
+    "clans": [
+      "Ardrungan (Reikland)",
+      "Dokkintroll (Grey Mountains)",
+      "Ganvalgger (Grey Mountains)",
+      "Gromheld (Reikland)",
+      "Gunnisson (Silver Mountain)",
+      "Harrazlings (Reikland)",
+      "Helhein (Ekrund)",
+      "Svengeln (World’s Edge Mountains)",
+      "Threkkson (Dragonback Mountains)",
+      "Thrungtak (Grey Mountains)",
+      "Unboki (Reikland)",
+      "Wyrgrinti (Grey Mountains)"
+    ],
+    "eyes": [
+      "Coal",
+      "Lead",
+      "Steel",
+      "Blue",
+      "Earth Brown",
+      "Bronze",
+      "Hazel",
+      "Green",
+      "Copper",
+      "Gold"
+    ],
+    "hair": [
+      "White",
+      "Grey",
+      "Pale Blond",
+      "Golden",
+      "Copper",
+      "Bronze",
+      "Brown",
+      "Dark Brown",
+      "Reddish Brown",
+      "Black"
+    ]
+  },
+  "Halfling": {
+    "page": 31,
+    "forenames": [
+      "Antinnerra (Anni)",
+      "Augustus (Gus)",
+      "Esmerelda (Esme)",
+      "Ferdinand (Fred)",
+      "Heironymus (Hiro)",
+      "Maximilian (Max)",
+      "Theodosius (Theo)",
+      "Thomasina (Tina)",
+      "Seralinadara (Lin)",
+      "Valentina (Val)"
+    ],
+    "surnames": [
+      "Brandysnap",
+      "Croop",
+      "Greenthistle",
+      "Fumbletoe",
+      "Hamfist",
+      "Lostpocket",
+      "Lowhaven",
+      "Rootbottom",
+      "Stoutbarrel",
+      "Thorncobble",
+      "Willowpot"
+    ],
+    "eyes": [
+      "Light Grey",
+      "Grey",
+      "Pale Blue",
+      "Blue",
+      "Green",
+      "Hazel",
+      "Brown",
+      "Copper",
+      "Dark Brown"
+    ],
+    "hair": [
+      "Grey",
+      "Flaxen",
+      "Russet",
+      "Honey",
+      "Chestnut",
+      "Ginger",
+      "Mustard",
+      "Almond",
+      "Chocolate",
+      "Liquorice"
+    ]
+  },
+  "High Elf": {
+    "page": 32,
+    "forenames": [
+      "Aesdiaric",
+      "Athsoranel",
+      "Dorolmor",
+      "Farolandril",
+      "Gythael",
+      "Irandyl",
+      "Linmarfin",
+      "Mirealiath",
+      "Morolric",
+      "Ulliadiaellion"
+    ],
+    "surnames": [
+      "Arrowshaper",
+      "Echostrider",
+      "Fallowhair",
+      "Falconsinger",
+      "Foamheart",
+      "Goldenhair",
+      "Hopestrider",
+      "Lightprow",
+      "Silverspray",
+      "Spellsign"
+    ],
+    "eyes": [
+      "Jet",
+      "Amethyst",
+      "Aquamarine",
+      "Sapphire",
+      "Turquoise",
+      "Emerald",
+      "Amber",
+      "Copper",
+      "Citrine",
+      "Gold"
+    ],
+    "hair": [
+      "Silver",
+      "White",
+      "Pale Blond",
+      "Blond",
+      "Yellow Blond",
+      "Copper Blond",
+      "Red Blond",
+      "Auburn",
+      "Red",
+      "Black"
+    ]
+  },
+  "Wood Elf": {
+    "page": 35,
+    "forenames": [
+      "Aeslornoc",
+      "Athmarddu",
+      "Dornilstra",
+      "Farsorhan",
+      "Gynferth",
+      "Imilanhu",
+      "Linerianryn",
+      "Malmarstra",
+      "Morandrilwyth",
+      "Ullifinarha"
+    ],
+    "surnames": [
+      "Barkdweller",
+      "Boughshaker",
+      "Birdcaller",
+      "Fleetriver",
+      "Larkcaller",
+      "Stagsinger",
+      "Spitetamer",
+      "Weavecaller",
+      "Willowlimb",
+      "Waspwend"
+    ],
+    "eyes": [
+      "Ivory",
+      "Charcoal",
+      "Ivy Green",
+      "Mossy Green",
+      "Chestnut",
+      "Dark Brown",
+      "Tan",
+      "Sandy Brown",
+      "Violet"
+    ],
+    "hair": [
+      "Birch Silver",
+      "Ash Blond",
+      "Rose Gold",
+      "Honey Blond",
+      "Brown",
+      "Mahogany Brown",
+      "Dark Brown",
+      "Sienna",
+      "Ebony",
+      "Blue-Black"
+    ]
+  },
+  "doomings": [
+    {
+      "min": 1,
+      "max": 3,
+      "text": "The witch’s word shall write your doom.",
+      "page": 118
+    },
+    {
+      "min": 4,
+      "max": 6,
+      "text": "Beware the sign of the crimson sun.",
+      "page": 118
+    },
+    {
+      "min": 7,
+      "max": 9,
+      "text": "Thine mind lingers overlong in the land of dreams.",
+      "page": 118
+    },
+    {
+      "min": 10,
+      "max": 12,
+      "text": "Tread not upon the tender roots of sleeping trees.",
+      "page": 118
+    },
+    {
+      "min": 13,
+      "max": 15,
+      "text": "Trust not the signs of Ranald.",
+      "page": 118
+    },
+    {
+      "min": 16,
+      "max": 18,
+      "text": "Hold thine breath under Morrslieb’s light, lest darkness take root in thine soul.",
+      "page": 118
+    },
+    {
+      "min": 19,
+      "max": 21,
+      "text": "Fear the land bereft of the seagull’s cry.",
+      "page": 118
+    },
+    {
+      "min": 22,
+      "max": 24,
+      "text": "Be thou impious upon a Mondstille night and thou wilt never see another.",
+      "page": 118
+    },
+    {
+      "min": 25,
+      "max": 28,
+      "text": "Trust not in the strength of bridges if the day be a Festag.",
+      "page": 118
+    },
+    {
+      "min": 29,
+      "max": 31,
+      "text": "The children of Ulric call, with haste thou wilt fall.",
+      "page": 118
+    },
+    {
+      "min": 32,
+      "max": 34,
+      "text": "A night without song precedes a morning without waking.",
+      "page": 118
+    },
+    {
+      "min": 35,
+      "max": 38,
+      "text": "For the want of a key, that’s the ending of thee.",
+      "page": 118
+    },
+    {
+      "min": 39,
+      "max": 41,
+      "text": "An ogre may name you his most valuable boon and yet remain an ogre.",
+      "page": 118
+    },
+    {
+      "min": 42,
+      "max": 44,
+      "text": "It ringeth once: peace. It ringeth twice: pleasure. It ringeth thrice: death.",
+      "page": 118
+    },
+    {
+      "min": 45,
+      "max": 47,
+      "text": "The Twisted Puppeteer doth pull thy strings and thus conjure up the end of things.",
+      "page": 118
+    },
+    {
+      "min": 48,
+      "max": 50,
+      "text": "Ottokar dared to court the divine, but to do so is no right of thine.",
+      "page": 118
+    },
+    {
+      "min": 51,
+      "max": 52,
+      "text": "Recall young Tomas and provoke not the beast of the woods.",
+      "page": 118
+    },
+    {
+      "min": 53,
+      "max": 55,
+      "text": "Be thou circumspect when carousing with dwarfs.",
+      "page": 118
+    },
+    {
+      "min": 56,
+      "max": 58,
+      "text": "Plague and dark disease shall bring thee quickly to thy knees.",
+      "page": 118
+    },
+    {
+      "min": 59,
+      "max": 62,
+      "text": "The sword shalt deliver no justice, only thine end.",
+      "page": 118
+    },
+    {
+      "min": 63,
+      "max": 65,
+      "text": "The sticky bun! The pork pasty! The eel and leek pie! Lo, they are Morr’s dishes!",
+      "page": 118
+    },
+    {
+      "min": 66,
+      "max": 68,
+      "text": "Strain thou not the patience of the weary Shallyan.",
+      "page": 118
+    },
+    {
+      "min": 69,
+      "max": 71,
+      "text": "A lurker in goblin shape waits to waylay every treasure seeker.",
+      "page": 118
+    },
+    {
+      "min": 72,
+      "max": 74,
+      "text": "Recall Baron Trister and honour thy debts.",
+      "page": 118
+    },
+    {
+      "min": 75,
+      "max": 78,
+      "text": "Keep the relic of a crow’s skull upon thee, lest thee drink poison and perish.",
+      "page": 118
+    },
+    {
+      "min": 79,
+      "max": 81,
+      "text": "When thou wager with elves, win thou may, lose thou may, but cheat thou not.",
+      "page": 118
+    },
+    {
+      "min": 82,
+      "max": 84,
+      "text": "Laugh not in the face of the flatulent lest thine own guts fester.",
+      "page": 118
+    },
+    {
+      "min": 85,
+      "max": 87,
+      "text": "Never was there one such as thee, who drowned on land and not at sea.",
+      "page": 118
+    },
+    {
+      "min": 88,
+      "max": 91,
+      "text": "As new life cries out, Father Morr shall welcome thee.",
+      "page": 118
+    },
+    {
+      "min": 92,
+      "max": 94,
+      "text": "Heed the siren’s trilling, or soon your heart lies still.",
+      "page": 118
+    },
+    {
+      "min": 95,
+      "max": 97,
+      "text": "Rise not before Cacklefax’s calling, for thine death is early indeed.",
+      "page": 118
+    },
+    {
+      "min": 98,
+      "max": 100,
+      "text": "Morr sends a maiden.",
+      "page": 118
+    }
+  ]
+}

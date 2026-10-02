@@ -75,3 +75,7 @@ talents=json.loads((dest/'talents.json').read_text(encoding='utf-8'))
 for t in talents:t['text']=clean(t['text'])
 write('talents.json',talents)
 print('Skills',len(skills));print('Spells',len(spells),dict(collections.Counter(x['category'] for x in spells)));print('Incomplete descriptions:',[(x['name'],x['text'][-80:]) for x in spells if x['text'][-1] not in '.!?'])
+
+# Preserve corrections to tables and cross-page descriptions after extraction.
+import runpy
+runpy.run_path(str(Path(__file__).resolve().with_name("apply-book-corrections.py")))

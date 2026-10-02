@@ -1,5 +1,5 @@
 import {derive,skillInfo,knownSpells} from './rules.mjs';
-import {gearSlots,gearOptions} from './equipment.mjs';
+import {gearSlots,gearOptions,equipment} from './equipment.mjs';
 
 const units={Candles:'Candle',Matches:'Match',Bandages:'Bandage',Arrows:'Arrow',Bolts:'Bolt',Shots:'Shot',Bullets:'Bullet','Lead Bullets':'Lead Bullet','Stone Bullets':'Stone Bullet',Bolas:'Bola','Throwing Knives':'Throwing Knife',Barges:'Barge',Wagons:'Wagon','Sets of Clothing':'Clothing','different sets of Clothing':'Clothing','sheets of Parchment':'Parchment'};
 function itemParts(text){
@@ -29,12 +29,12 @@ export function folioGear(R,s){
  return [...grouped.values()].sort((a,b)=>a.name.localeCompare(b.name));
 }
 export function folioData(R,s){
- const d=derive(R,s),counts=new Map();
+ const d=derive(R,s),load=equipment(R,s).penalties,counts=new Map();
  for(const name of d.talents)counts.set(name,(counts.get(name)||0)+1);
  return {
-  skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>({name,value:d.stats[skillInfo(R,name)?.char]+Math.round(points*5)})).sort((a,b)=>a.name.localeCompare(b.name)),
+  skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>({name,value:((skillInfo(R,name)?.char==='Ag'&&load.complete)?load.agility:d.stats[skillInfo(R,name)?.char])+Math.round(points*5)})).sort((a,b)=>a.name.localeCompare(b.name)),
   talents:[...counts].map(([name,value])=>({name,value})).sort((a,b)=>a.name.localeCompare(b.name)),
-  magic:knownSpells(R,s).map(x=>({name:x.name})).sort((a,b)=>a.name.localeCompare(b.name)),
+  magic:knownSpells(R,s).map(x=>({name:x.displayName||x.name})).sort((a,b)=>a.name.localeCompare(b.name)),
   gear:folioGear(R,s).map(({name,quantity})=>({name,value:quantity}))
  };
 }
