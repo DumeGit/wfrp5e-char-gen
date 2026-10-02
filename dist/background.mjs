@@ -1,4 +1,9 @@
 export function appearanceSummary(s){return [s.appearance,s.background?.eyes?`Eyes: ${s.background.eyes}`:'',s.background?.hair?`Hair: ${s.background.hair}`:'',s.background?.clan?`Clan: ${s.background.clan}`:''].filter(Boolean).join('; ');}
+export function setAgeHeight(s,age,height){
+ // Replace generated prefixes, including duplicates left by older versions.
+ const background=(s.appearance||'').replace(/^(?:\d+ years;\s*\d+ ft \d+ in(?:;\s*|$))+/,'');
+ s.appearance=`${age} years; ${Math.floor(height/12)} ft ${height%12} in`+(background?`; ${background}`:'');
+}
 export function bookName(value){return value.replace(/ \([^)]*\)/g,'');}
 export function nameParts(s){
  if(s.identity&&typeof s.identity.forename==='string'&&typeof s.identity.surname==='string')return {...s.identity};

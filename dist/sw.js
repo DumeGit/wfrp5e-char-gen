@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"3377a328c3c100e29627";
+const CACHE=CACHE_PREFIX+"002caaf7f7a4efb54a68";
 const ASSETS=[
  "app.js",
  "assets/LICENSE-pdf-lib.md",

@@ -5,7 +5,7 @@ import {marketCatalog,purse,buyTrapping,formatMoney,purchaseItem} from './market
 import {exportSheet,exportRecord} from './export.mjs';
 import {folioData} from './folio.mjs';
 import {penaltySummary,acquisitionChoices} from './creator-ui.mjs';
-import {appearanceSummary,suggestion,bookName,nameParts,setNamePart,doomingResult} from './background.mjs';
+import {appearanceSummary,setAgeHeight,suggestion,bookName,nameParts,setNamePart,doomingResult} from './background.mjs';
 import {migrateInventory} from './inventory.mjs';
 const names=['species','careers','career-rolls','skills','talents','spells','gear','source','background'];
 const data=await Promise.all(names.map(async n=>{const r=await fetch(`data/${n}.json`);if(!r.ok)throw Error(`Cannot load ${n}`);return r.json()}));
@@ -127,7 +127,7 @@ async function action(el){const a=el.dataset.action;if(a==='step'){s.step=Number
  if(a==='load-file'){$('#import-file').click();return;}
  if(a==='unlock'){if(!confirm('Clear the XP ledger and spells so you can edit creation?'))return;s.ledger=[];s.spells=[];}
  if(a==='species-roll'){const n=M.roll(s,'Species',1,100,23)[0];s.speciesAttempts++;if(s.species!==M.speciesResult(n))s.background={};s.species=M.speciesResult(n);s.speciesMode=s.speciesAttempts===1?'first':'later';resetDependent();s.careerAttempts=0;s.careerMode='choose';s.careerOffers=[];if(!M.career(R,s).species.includes(s.species))s.career=R.careers.find(x=>x.species.includes(s.species)).id;toast(`d100 ${n} → ${s.species}`);}
- if(a==='age'){const sp=R.species[s.species],age=sp.age[0]+M.roll(s,'Age',sp.age[1],10,sp.page).reduce((a,b)=>a+b,0),height=sp.height[0]+M.roll(s,'Height (inches)',sp.height[1],10,sp.page).reduce((a,b)=>a+b,0);s.appearance=`${age} years; ${Math.floor(height/12)} ft ${height%12} in`+(s.appearance?`; ${s.appearance}`:'');}
+ if(a==='age'){const sp=R.species[s.species],age=sp.age[0]+M.roll(s,'Age',sp.age[1],10,sp.page).reduce((a,b)=>a+b,0),height=sp.height[0]+M.roll(s,'Height (inches)',sp.height[1],10,sp.page).reduce((a,b)=>a+b,0);setAgeHeight(s,age,height);}
  if(a==='career-roll'){const id=rolledCareer();s.careerOffers=[id];changeCareer(id,s.careerAttempts===1?'first':'later');}
  if(a==='career-three'){const first=s.careerOffers[0],second=rolledCareer(),third=rolledCareer();s.careerOffers=[first,second,third];changeCareer(first,'three');}
  if(a==='career-offer')changeCareer(el.dataset.id,'three');
