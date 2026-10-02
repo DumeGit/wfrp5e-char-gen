@@ -60,6 +60,8 @@ The tests cover all 64 Careers, every d100 Career outcome for every Species, ref
 
 The verification URL query `?verify=1` uses a separate draft key, so browser checks do not replace the user's open draft. It changes no game rules.
 
+Characteristic point inputs reserve the same level-badge space in every cell. Experience Talents separate learnable choices from learned Talents and unavailable alternatives. Disabled purchases name the restriction; a rule restriction is retained even if the XP budget is also insufficient. The normal one-Bless and one-Invoke limits cite pp. 116 and 121 rather than imposing an additional cross-Talent patron constraint. Browser checks verify aligned inputs on desktop and mobile, no page overflow at 320/390 pixels, and Talent purchase/undo. All 37 automated checks pass.
+
 ## Hosting
 
 The existing private Sites project is recorded in `.openai/hosting.json`. Reuse that project ID. There is no server database or account system in the application; Sites controls access. Do not put the full rulebook PDF or credentials into the published assets.

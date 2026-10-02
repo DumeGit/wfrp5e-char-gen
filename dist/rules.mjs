@@ -98,7 +98,8 @@ export function invalidTalent(R,s,name){const d=derive(R,s),b=base(name),magical
  if((b==='Magic Resistance'&&(hasChannel||owned.some(x=>magical.includes(x)||divine.includes(x))))||(magical.includes(b)&&owned.some(x=>divine.includes(x)||x==='Magic Resistance'))||(divine.includes(b)&&(hasChannel||owned.some(x=>magical.includes(x)||x==='Magic Resistance'))))return 'Incompatible magical or divine training (pp. 115, 121–123).';
  if(b==='Savant'&&!d.skills[`Lore (${name.match(/\((.*)\)/)?.[1]})`])return 'Savant requires an Advance in the chosen Lore (p. 125).';
  if(b==='Arcane Magic'&&owned.includes(b)&&!d.talents.includes(name))return 'A second Lore needs a specific exception and GM permission (p. 115).';
- if(divine.includes(b)&&d.talents.some(t=>divine.includes(base(t))&&t.match(/\((.*)\)/)?.[1]!==name.match(/\((.*)\)/)?.[1]))return 'Choose the same patron deity.';
+ const otherDivine=divine.includes(b)&&d.talents.find(t=>base(t)===b&&t!==name);
+ if(otherDivine)return `Already have ${otherDivine}; normally only one ${b} Talent (p. ${b==='Bless'?116:121}).`;
  const repeats=d.talents.filter(t=>t===name).length;if(!repeats)return '';
  const text=talentInfo(R,name)?.text||'';let limit=1;
  if(/second time|twice|second purchase/.test(text))limit=2;
@@ -112,7 +113,7 @@ export function quote(R,s,type,name,amount=5){const d=derive(R,s),c=career(R,s);
  if(type==='talent'){cost=100;inCareer=careerTalentOptions(R,s,d.level).includes(name);tick=inCareer&&d.earnedBoxes<36;error=!inCareer?'Not available in this Career level.':invalidTalent(R,s,name);}
  if(type==='promotion'){cost=100;if(d.level===4)error='Already at the final Career level.';else if(d.ticks<[10,12,14][d.level-1])error=`Requires ${[10,12,14][d.level-1]} tracker boxes and the Advance Career Endeavour (p. 196).`;}
  if(!Number.isFinite(cost))error='This advance is beyond the published XP table (p. 191).';
- if(cost>d.remaining)error=`Requires ${cost} XP; ${d.remaining} remain.`;
+ if(cost>d.remaining&&!error)error=`Requires ${cost} XP; ${d.remaining} remain.`;
  return {type,name,cost,tick,inCareer,error,amount:['char','skill'].includes(type)?amount:undefined,page:type==='promotion'?196:type==='talent'?`${career(R,s).page}, 191`:amount===1?364:191};
 }
 export function purchase(R,s,type,name,amount=5){const q=quote(R,s,type,name,amount);if(q.error)throw Error(q.error);delete q.error;const d=derive(R,s);if(type==='talent'&&name==='Petty Magic')q.freeSpells=d.wpb;if(type==='promotion')q.name=`${career(R,s).levels[d.level-1].name} → ${career(R,s).levels[d.level].name}`;s.ledger.push(q);}
