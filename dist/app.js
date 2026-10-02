@@ -18,6 +18,7 @@ const button=(action,label,attrs='',style='quiet')=>`<button type="button" class
 const page=p=>`<span class="source">p. ${p}</span>`;
 const locked=()=>s.ledger.length>0;
 function save(){try{localStorage.setItem(STORAGE,JSON.stringify(s));}catch{toast('Draft could not be saved in this browser. Download a character file to keep it.')}}
+window.addEventListener('wfrp-before-update',save);
 function toast(text){$('#toast').textContent=text;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').textContent='',6500);}
 function freeSpellErrors(){let start=0,out=[];for(const g of M.spellGrants(R,s)){const chosen=s.spells.slice(start,start+g.count);if(chosen.length!==g.count||chosen.some(n=>!g.choices.some(x=>x.name===n)))out.push(`Choose ${g.count} free spells for ${g.talent}.`);start+=g.count;}if(s.spells.filter(Boolean).length>start)out.push('Remove spells without a matching Talent grant.');if(new Set(s.spells.filter(Boolean)).size!==s.spells.filter(Boolean).length)out.push('Choose different spells for each free choice.');return out;}
 function errors(){const ids=new Set(marketCatalog(R).map(x=>x.id));return [...M.validation(R,s),...freeSpellErrors(),...gearSlots(R,s).filter(x=>/\d+d10/.test(x.name)&&!Object.keys(s.gearRolls).some(k=>k.startsWith(x.key+':'))).map(x=>`Roll the quantity for ${x.name}.`),...((s.purchases||[]).some(x=>!ids.has(x.id))?['An imported Trapping has no listed book price.']:[]),...(purse(R,s).remaining<0?['Trapping purchases exceed starting wealth.']:[])];}

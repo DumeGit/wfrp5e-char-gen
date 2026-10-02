@@ -1,16 +1,16 @@
 # WFRP Character Ledger
 
-A private, browser-based Fifth Edition character generator built from the supplied rulebook. No rules from another edition or external source are used.
+A browser-based Fifth Edition character generator built from the supplied rulebook. No rules from another edition or external source are used.
 
 ## Use
 
-Open the published private Site, or serve `dist` locally:
+Open [the public Vercel app](https://wfrp5e-char-gen-dist.vercel.app), or serve `dist` locally:
 
 ```powershell
 python -m http.server 8047 --bind 127.0.0.1 --directory dist
 ```
 
-Open `http://127.0.0.1:8047/`. The browser saves the current draft on that device. **Save character** downloads a JSON file for later import with **Load character**. Drafts on the local preview and published Site belong to separate browser origins; use Save/Load to transfer them.
+Open `http://127.0.0.1:8047/`. The browser saves the current draft on that device. **Save character** downloads a JSON file for later import with **Load character**. Drafts on the local preview and published app belong to separate browser origins; use Save/Load to transfer them.
 
 The eight creation steps cover Species, all 64 Careers, Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default budget is 1,000 XP, editable by the user. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
 
@@ -72,6 +72,16 @@ All 46 automated checks pass, including folio Skill totals, Talent purchase/undo
 
 ## Hosting
 
-The existing private Sites project is recorded in `.openai/hosting.json`. Reuse that project ID. There is no server database or account system in the application; Sites controls access. Do not put the full rulebook PDF or credentials into the published assets.
+The GitHub repository contains this `character-generator` directory and automatically deploys to Vercel. The root `vercel.json` builds the PWA assets with `npm run build` and serves `dist`. A headers-only configuration in `dist` also supports projects configured to serve that folder directly. The manifest and service worker are revalidated so new deployments can be detected. `.openai/hosting.json` records the earlier Sites hosting setup; it is not used for the current Vercel deployment. There is no server database or account system. Do not put the full rulebook PDF or credentials into the published assets.
+
+## Install and use offline
+
+The app is an installable PWA with a home-screen icon and standalone window. On Android Chrome, use **Install app** or the browser's installation menu. On iPhone/iPad, open it in Safari, choose **Share → Add to Home Screen**, and enable **Open as Web App** if offered. The Install app button shows instructions when the browser does not provide a native installation prompt. It disappears when the app is running as an installed app.
+
+Open the app online first and wait for **Available offline · PDF exports included** at the bottom of the page. The initial download includes the supplied character-sheet PDF (about 12.5 MB), all rule data, and the PDF library. Character creation, XP purchases and PDF/record exports then work without a connection. Character drafts remain on the current device; use Save character for backups and Load character to move them between browsers, devices or installation contexts. There is no cloud sync.
+
+Updates download in the background and offer **Update now** or **Later**. Update now saves the draft before refreshing. Offline files are installed together; an incomplete download does not replace the previous working version. Run `npm run build` after changing files in `dist` when preparing a manual deployment. The build generates a content-versioned service worker from `scripts/service-worker.template.js`.
+
+All 50 automated checks pass, including offline navigation and asset delivery, the complete PDF template, update activation, cache cleanup and failed-download recovery. A browser check with the local server stopped confirmed that the app reopened, XP purchases and undo worked, and the character PDF was generated. A real service-worker update preserved the test character. Mobile installation instructions were checked at 390 px without horizontal overflow.
 
 Dependency: pdf-lib 1.17.1 (MIT), bundled locally for PDF export.
