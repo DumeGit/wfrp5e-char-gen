@@ -18,6 +18,8 @@ The Gear & money step includes a searchable shop for 242 fixed-price Trappings f
 
 The character folio has compact, collapsible Skills, Talents, Magic and Gear lists, also available under View character on phones. Skills show their current total; Talents include free and purchased ranks; magic shows known names; Gear merges duplicate items and displays quantities. Unrolled quantities show `?`. Explicit containers, ammunition and counted packs are unpacked for display; ambiguous descriptive Trappings remain named bundles. Lists update after purchases and undo. Expanded sections are remembered on the device independently of character saves.
 
+Large desktop screens use a 1,700 px maximum workspace and a 350–380 px folio. XP and coin sit side by side; summary spacing is compact. The folio has no internal scrollbar. It stays sticky on desktop only when its full contents fit between the viewport's 24 px top and bottom margins; otherwise it flows with the page. A ResizeObserver updates this after sections expand, character changes redraw the folio, or the viewport changes. Tablet and phone folios always use normal page flow. Browser checks cover 1920 × 1080, a short desktop viewport, 1024 px tablets, and 390 px phones, including expanded lists and the return to sticky positioning after collapse.
+
 The character sheet export retains the 556 editable fields in the supplied PDF and appends a complete creation/XP record. The record includes overflow Skills, Talents, gear, and magic. It can also be downloaded separately.
 
 ## Rules and source
