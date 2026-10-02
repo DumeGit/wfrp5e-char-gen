@@ -49,6 +49,8 @@ Dice use `crypto.getRandomValues` with rejection sampling; every individual die 
 
 ## Verification
 
+The folio interface shows readiness from the existing creation validator, links unresolved choices to their steps, and uses a compact step selector and expandable character summary on phones. XP budgets have an explicit Update action; Career trackers show the existing 10/12/14-box segments. Keyboard tab navigation, focus, scroll position and expanded rules are preserved when purchases redraw the screen. Presentation labels and issue routing live in `dist/ui.mjs`; character rules and the saved-character format are unchanged.
+
 ```powershell
 npm install
 npm test
