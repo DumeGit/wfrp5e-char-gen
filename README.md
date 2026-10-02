@@ -34,6 +34,7 @@ Dice use `crypto.getRandomValues` with rejection sampling; every individual die 
 ## Explicit interpretations and limits
 
 - Fate and Fortune have separate Species values. Random-creation rewards are applied separately (pp. 23, 27–40).
+- The p. 36 random Career bonus is capped at the number of distinct listed level-two Trappings. Seven Careers list only one, so accepting the first roll requires one selection and earns one box. The book has no explicit single-option exception; this resolves the otherwise impossible selection without inventing a second Trapping.
 - Leather Breastplate uses Leather Jerkin statistics, as explicitly agreed by the user (pp. 96, 307).
 - Navigation uses Initiative; the sheet's preprinted Int label is corrected (p. 112).
 - Sturdy's conflicting formulas are selectable: p. 40 doubles SB + TB; p. 127 doubles only SB. They are never stacked.
