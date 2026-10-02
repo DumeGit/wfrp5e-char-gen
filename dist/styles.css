@@ -24,7 +24,7 @@ details{padding:15px 0;border-top:1px solid var(--line)}summary{cursor:pointer;f
 
 .sheet{position:static;max-height:none;overflow:visible}
 .folio-balances{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;grid-column:1 / -1}.folio-balances .folio-xp{padding:0}.folio-balances .folio-xp>strong{font-size:26px;margin:6px 0}.folio-coin>span{display:block;font-size:12px;color:#c6d1c6}.folio-coin>strong{display:block;font:26px Georgia;color:#efd39c;margin:6px 0;overflow-wrap:anywhere}.sheet .folio-line,.sheet .folio-menus{grid-column:1 / -1}
-@media screen and (min-width:1201px){.sheet.folio-fits{position:sticky;top:24px}}
+@media screen and (min-width:1201px){.sheet{position:sticky;top:24px;max-height:calc(100dvh - 48px);overflow-y:auto;scrollbar-width:thin}}
 @media(min-width:1500px){.workspace{grid-template-columns:220px minmax(0,1fr) clamp(350px,20vw,380px)}}
 @media(min-width:761px){.sheet h2{font-size:26px;margin:7px 0}.sheet-heading>p{margin-bottom:8px}.sheet .profile-badge{padding:4px 8px}.sheet .stat-grid{margin:16px 0}.sheet .stat-grid>div{padding:8px 2px}.sheet .stat-grid strong{margin-top:5px}.sheet .derived{padding-bottom:12px}.sheet .folio-line{padding:10px 0}.sheet .folio-section>summary{padding:11px 0}}
 @media(max-width:760px){.folio-balances{display:none}}
