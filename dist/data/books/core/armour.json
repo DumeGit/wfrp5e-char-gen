@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Buckler",
+    "enc": 1,
+    "locations": "Shield",
+    "ap": 1,
+    "qualities": "Shield",
+    "page": 307,
+    "id": "core:armour:0"
+  },
+  {
+    "name": "Shield",
+    "enc": 2,
+    "locations": "Shield",
+    "ap": 2,
+    "qualities": "Shield",
+    "page": 307,
+    "id": "core:armour:1"
+  },
+  {
+    "name": "Large Shield",
+    "enc": 3,
+    "locations": "Shield",
+    "ap": 3,
+    "qualities": "Shield",
+    "page": 307,
+    "id": "core:armour:2"
+  },
+  {
+    "name": "Leather Coif",
+    "enc": 0,
+    "locations": "Head",
+    "ap": 1,
+    "qualities": "Partial",
+    "page": 307,
+    "id": "core:armour:3"
+  },
+  {
+    "name": "Leather Jack",
+    "enc": 1,
+    "locations": "Arms, Body",
+    "ap": 1,
+    "qualities": "",
+    "page": 307,
+    "id": "core:armour:4"
+  },
+  {
+    "name": "Leather Jerkin",
+    "enc": 1,
+    "locations": "Body",
+    "ap": 1,
+    "qualities": "",
+    "page": 307,
+    "id": "core:armour:5"
+  },
+  {
+    "name": "Leather Leggings",
+    "enc": 1,
+    "locations": "Legs",
+    "ap": 1,
+    "qualities": "",
+    "page": 307,
+    "id": "core:armour:6"
+  },
+  {
+    "name": "Mail Chausses",
+    "enc": 3,
+    "locations": "Legs",
+    "ap": 2,
+    "qualities": "Flexible",
+    "page": 307,
+    "id": "core:armour:7"
+  },
+  {
+    "name": "Mail Coat",
+    "enc": 3,
+    "locations": "Arms, Body",
+    "ap": 2,
+    "qualities": "Flexible",
+    "page": 307,
+    "id": "core:armour:8"
+  },
+  {
+    "name": "Mail Coif",
+    "enc": 1,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Flexible, Partial",
+    "page": 307,
+    "id": "core:armour:9"
+  },
+  {
+    "name": "Mail Shirt",
+    "enc": 2,
+    "locations": "Body",
+    "ap": 2,
+    "qualities": "Flexible",
+    "page": 307,
+    "id": "core:armour:10"
+  },
+  {
+    "name": "Bracers",
+    "enc": 2,
+    "locations": "Arms",
+    "ap": 2,
+    "qualities": "Impenetrable, Weakpoints",
+    "page": 307,
+    "id": "core:armour:11"
+  },
+  {
+    "name": "Breastplate",
+    "enc": 3,
+    "locations": "Body",
+    "ap": 2,
+    "qualities": "Impenetrable, Weakpoints",
+    "page": 307,
+    "id": "core:armour:12"
+  },
+  {
+    "name": "Helm",
+    "enc": 2,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Impenetrable, Weakpoints; −2 SL Perception",
+    "page": 307,
+    "id": "core:armour:13"
+  },
+  {
+    "name": "Open Helm",
+    "enc": 1,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Partial",
+    "page": 307,
+    "id": "core:armour:14"
+  },
+  {
+    "name": "Plate Leggings",
+    "enc": 3,
+    "locations": "Legs",
+    "ap": 2,
+    "qualities": "Impenetrable, Weakpoints",
+    "page": 307,
+    "id": "core:armour:15"
+  },
+  {
+    "name": "Light Armour",
+    "enc": 0,
+    "ap": 1,
+    "qualities": "",
+    "locations": "Head, Arms, Body, Legs",
+    "page": 307,
+    "quick": true,
+    "id": "core:armour:16"
+  },
+  {
+    "name": "Medium Armour",
+    "enc": 4,
+    "ap": 3,
+    "qualities": "Flexible",
+    "locations": "Head, Arms, Body, Legs",
+    "page": 307,
+    "quick": true,
+    "id": "core:armour:17"
+  },
+  {
+    "name": "Heavy Armour",
+    "enc": 10,
+    "ap": 5,
+    "qualities": "Impenetrable, Weakpoints",
+    "locations": "Head, Arms, Body, Legs",
+    "page": 307,
+    "quick": true,
+    "id": "core:armour:18"
+  }
+]

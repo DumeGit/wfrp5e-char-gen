@@ -1,0 +1,272 @@
+{
+  "talentEffects": {
+    "Warrior Born": "WS",
+    "Marksman": "BS",
+    "Very Strong": "S",
+    "Very Resilient": "T",
+    "Sharp": "I",
+    "Lightning Reflexes": "Ag",
+    "Nimble-fingered": "Dex",
+    "Savvy": "Int",
+    "Coolheaded": "WP",
+    "Suave": "Fel"
+  },
+  "talentLimits": {
+    "Aethyric Attunement": 2,
+    "Luck": 3,
+    "Strong Back": 2,
+    "Wealthy": 2,
+    "Magnum Opus": null
+  },
+  "talentOptions": {
+    "Acute Sense": [
+      "Sight",
+      "Hearing",
+      "Taste",
+      "Touch",
+      "Smell"
+    ],
+    "Resistant": [
+      "Chaos",
+      "Disease",
+      "Magic",
+      "Corruption",
+      "Poison"
+    ],
+    "Etiquette": [
+      "Criminals",
+      "Cultists",
+      "Guilders",
+      "Nobles",
+      "Scholars",
+      "Servants",
+      "Soldiers"
+    ],
+    "Striding Gait": [
+      "Coastal",
+      "Desert",
+      "Rocky",
+      "Tundra",
+      "Wetland",
+      "Woodland"
+    ],
+    "Hatred": [
+      "Beastmen",
+      "Goblins",
+      "Orcs",
+      "Monsters",
+      "Outlaws",
+      "Sigmarites",
+      "Undead",
+      "Witches",
+      "Heretics"
+    ],
+    "Fearless": [
+      "Giants",
+      "Skeletons",
+      "Trolls",
+      "Watchmen",
+      "Bounties",
+      "Outlaws",
+      "Everything",
+      "Undead",
+      "Intruders",
+      "Beasts",
+      "Paupers",
+      "Roadwardens",
+      "Rats",
+      "Wreckers",
+      "Riverwardens",
+      "Merchants",
+      "Criminals",
+      "Witches"
+    ]
+  },
+  "colours": [
+    "Beasts",
+    "Death",
+    "Fire",
+    "Heavens",
+    "Life",
+    "Light",
+    "Metal",
+    "Shadows"
+  ],
+  "gods": [
+    "Manann",
+    "Morr",
+    "Myrmidia",
+    "Ranald",
+    "Rhya",
+    "Shallya",
+    "Sigmar",
+    "Taal",
+    "Ulric",
+    "Verena"
+  ],
+  "blessings": {
+    "Manann": [
+      "Battle",
+      "Breath",
+      "Courage",
+      "Hardiness",
+      "Savagery",
+      "Tenacity"
+    ],
+    "Morr": [
+      "Breath",
+      "Courage",
+      "Fortune",
+      "Righteousness",
+      "Tenacity",
+      "Wisdom"
+    ],
+    "Myrmidia": [
+      "Battle",
+      "Conscience",
+      "Courage",
+      "Fortune",
+      "Protection",
+      "Righteousness"
+    ],
+    "Ranald": [
+      "Charisma",
+      "Conscience",
+      "Finesse",
+      "Fortune",
+      "Protection",
+      "Wit"
+    ],
+    "Rhya": [
+      "Breath",
+      "Conscience",
+      "Grace",
+      "Healing",
+      "Protection",
+      "Recuperation"
+    ],
+    "Shallya": [
+      "Breath",
+      "Conscience",
+      "Healing",
+      "Protection",
+      "Recuperation",
+      "Tenacity"
+    ],
+    "Sigmar": [
+      "Battle",
+      "Courage",
+      "Hardiness",
+      "Might",
+      "Protection",
+      "Righteousness"
+    ],
+    "Taal": [
+      "Battle",
+      "Breath",
+      "Conscience",
+      "Hardiness",
+      "The Hunt",
+      "Savagery"
+    ],
+    "Ulric": [
+      "Battle",
+      "Courage",
+      "Hardiness",
+      "Might",
+      "Savagery",
+      "Tenacity"
+    ],
+    "Verena": [
+      "Conscience",
+      "Courage",
+      "Fortune",
+      "Righteousness",
+      "Wisdom",
+      "Wit"
+    ]
+  },
+  "classKit": {
+    "Academic": [
+      "Sling Bag containing Writing Kit and {1d10} sheets of Parchment"
+    ],
+    "Burgher": [
+      "Cloak",
+      "Hat",
+      "Sling Bag containing Lunch"
+    ],
+    "Courtier": [
+      "Fine Clothing",
+      "Tweezers",
+      "Ear Pick",
+      "Comb"
+    ],
+    "Peasant": [
+      "Cloak",
+      "Sling Bag containing Rations (1 day)"
+    ],
+    "Ranger": [
+      "Cloak",
+      "Backpack containing Tinderbox, Blanket and Rations (1 day)"
+    ],
+    "Riverfolk": [
+      "Cloak",
+      "Sling Bag containing a Flask of Spirits"
+    ],
+    "Rogue": [
+      "Sling Bag containing 2 Candles and {1d10} Matches",
+      "Hood or Mask"
+    ],
+    "Warrior": [
+      "Hand Weapon"
+    ]
+  },
+  "containers": {
+    "Backpack": 4,
+    "Barrel": 12,
+    "Cask": 4,
+    "Flask": 0,
+    "Jug": 1,
+    "Pewter Stein": 0,
+    "Pouch": 1,
+    "Sack": 4,
+    "Sack, Large": 6,
+    "Saddlebags": 8,
+    "Sling Bag": 2,
+    "Scroll Case": 0,
+    "Waterskin": 1
+  },
+  "carriers": {
+    "Cart": 25,
+    "Coach": 80,
+    "Coracle": 10,
+    "Destrier": 20,
+    "Draught Horse": 20,
+    "Hunting Dog": 0,
+    "Light Warhorse": 18,
+    "Monkey": 1,
+    "Mule": 14,
+    "Pony": 14,
+    "Riding Horse": 16,
+    "River Barge": 300,
+    "Row Boat": 60,
+    "Wagon": 30
+  },
+  "gearEnc": {
+    "Clothing": 1,
+    "Uniform": 1,
+    "Fine Clothing": 1,
+    "Cloak": 1,
+    "Hat": 0,
+    "Robes": 1,
+    "Tattered Robes": 1,
+    "Hooded Cloak": 1,
+    "Hood": 0,
+    "Mask": 0,
+    "Pouch": 0,
+    "Backpack": 2,
+    "Sling Bag": 1,
+    "Sack": 2,
+    "Large Sack": 3
+  }
+}

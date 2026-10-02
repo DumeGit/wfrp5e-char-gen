@@ -40,7 +40,7 @@ test('Career coin rolls and bonus coins enter the purse; valuable goods do not',
  const s=M.fresh();s.career='merchant';s.wealth={amount:20,currency:'silver shillings'};s.gearRolls['career-3:3d10']=20;s.bonusGear=[1];assert.equal(purse(R,s).grants,20*12+20*240);const before=purse(R,s).remaining;buyTrapping(R,s,'307:Shield');assert.equal(purse(R,s).remaining,before-480);s.career='fence';s.bonusGear=[];assert.equal(purse(R,s).grants,0);
 });
 test('ranged Career choices, aliases and counted weapons receive actual profiles',()=>{
- assert.ok(gearOptions('Ranged Weapon (Any One)').includes('Bow (2H)'));assert.ok(!gearOptions('Ranged Weapon (Any One)').includes('Dagger'));
+ assert.ok(gearOptions('Ranged Weapon (Any One)',R).includes('Bow (2H)'));assert.ok(!gearOptions('Ranged Weapon (Any One)',R).includes('Dagger'));
  for(const [raw,weapon]of [['Main-gauche','Main Gauche'],['Sword-breaker','Swordbreaker'],['Great Weapon (Military Flail)','Military Flail (2H)'],['Great Weapon (Dwarf Greataxe)','Greataxe (2H)'],['2 Bolas','Bolas'],['5 Throwing Knives','Throwing Knife'],['Hook','Dagger']]){const s=rich();s.ledger.push({type:'trapping',name:raw,level:2,cost:0});const w=equipment(R,s).weapons.find(x=>x.label.startsWith(raw)||x.name===weapon);assert.ok(w,raw);assert.equal(w.name,weapon,raw);if(raw.startsWith('2 '))assert.equal(w.quantity,2);if(raw.startsWith('5 '))assert.equal(w.quantity,5);}
 });
 test('melee and Career ranged Nets and Bolas retain their automatic printed profiles',()=>{

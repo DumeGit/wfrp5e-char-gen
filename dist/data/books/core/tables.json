@@ -1,0 +1,1370 @@
+[
+  {
+    "id": "core:species",
+    "name": "Core Species",
+    "kind": "species",
+    "sides": 100,
+    "page": 23,
+    "rows": [
+      {
+        "min": 1,
+        "max": 90,
+        "result": "Human"
+      },
+      {
+        "min": 91,
+        "max": 94,
+        "result": "Halfling"
+      },
+      {
+        "min": 95,
+        "max": 98,
+        "result": "Dwarf"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "High Elf"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Wood Elf"
+      }
+    ]
+  },
+  {
+    "id": "core:talents",
+    "name": "Core random Talents",
+    "kind": "talent",
+    "sides": 100,
+    "page": 23,
+    "rows": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Acute Sense (Sight)"
+      },
+      {
+        "min": 3,
+        "max": 5,
+        "result": "Ambidextrous"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "Artistic"
+      },
+      {
+        "min": 8,
+        "max": 10,
+        "result": "Attractive"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "Briber"
+      },
+      {
+        "min": 13,
+        "max": 15,
+        "result": "Cardsharp"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "Catfall"
+      },
+      {
+        "min": 18,
+        "max": 20,
+        "result": "Coolheaded"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "Contortionist"
+      },
+      {
+        "min": 23,
+        "max": 25,
+        "result": "Flee!"
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "result": "Gregarious"
+      },
+      {
+        "min": 28,
+        "max": 30,
+        "result": "Iron Jaw"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "Lightning Reflexes"
+      },
+      {
+        "min": 33,
+        "max": 35,
+        "result": "Linguistics"
+      },
+      {
+        "min": 36,
+        "max": 37,
+        "result": "Marksman"
+      },
+      {
+        "min": 38,
+        "max": 40,
+        "result": "Mimic"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "Night Vision"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "Nimble-fingered"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "Noble Blood"
+      },
+      {
+        "min": 48,
+        "max": 50,
+        "result": "Nose for Trouble"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "Orientation"
+      },
+      {
+        "min": 53,
+        "max": 55,
+        "result": "Perfect Pitch"
+      },
+      {
+        "min": 56,
+        "max": 57,
+        "result": "Pure Soul"
+      },
+      {
+        "min": 58,
+        "max": 60,
+        "result": "Read/Write"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "Resistant (Poison)"
+      },
+      {
+        "min": 63,
+        "max": 65,
+        "result": "Rover"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "Savvy"
+      },
+      {
+        "min": 68,
+        "max": 70,
+        "result": "Sea Legs"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "Sharp"
+      },
+      {
+        "min": 73,
+        "max": 75,
+        "result": "Stone Soup"
+      },
+      {
+        "min": 76,
+        "max": 77,
+        "result": "Strong Back"
+      },
+      {
+        "min": 78,
+        "max": 80,
+        "result": "Sturdy"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "Suave"
+      },
+      {
+        "min": 83,
+        "max": 85,
+        "result": "Super Numerate"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "Supportive"
+      },
+      {
+        "min": 88,
+        "max": 90,
+        "result": "Tinker"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Tunnel Fighter"
+      },
+      {
+        "min": 93,
+        "max": 95,
+        "result": "Very Resilient"
+      },
+      {
+        "min": 96,
+        "max": 97,
+        "result": "Very Strong"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "Warrior Born"
+      }
+    ]
+  },
+  {
+    "id": "core:career:human",
+    "name": "Human core Careers",
+    "kind": "career",
+    "species": "Human",
+    "sides": 100,
+    "page": "36–37",
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "result": "engineer"
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "result": "lawyer"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "result": "nun"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "result": "physician"
+      },
+      {
+        "min": 7,
+        "max": 11,
+        "result": "priest"
+      },
+      {
+        "min": 12,
+        "max": 13,
+        "result": "scholar"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "result": "wizard"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "agitator"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "artisan"
+      },
+      {
+        "min": 18,
+        "max": 19,
+        "result": "beggar"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "result": "investigator"
+      },
+      {
+        "min": 21,
+        "max": 21,
+        "result": "merchant"
+      },
+      {
+        "min": 22,
+        "max": 23,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 24,
+        "max": 26,
+        "result": "townsman"
+      },
+      {
+        "min": 27,
+        "max": 27,
+        "result": "watchman"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "adviser"
+      },
+      {
+        "min": 29,
+        "max": 29,
+        "result": "artist"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "duellist"
+      },
+      {
+        "min": 31,
+        "max": 31,
+        "result": "envoy"
+      },
+      {
+        "min": 32,
+        "max": 32,
+        "result": "noble"
+      },
+      {
+        "min": 33,
+        "max": 35,
+        "result": "servant"
+      },
+      {
+        "min": 36,
+        "max": 36,
+        "result": "spy"
+      },
+      {
+        "min": 37,
+        "max": 37,
+        "result": "warden"
+      },
+      {
+        "min": 38,
+        "max": 38,
+        "result": "bailiff"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "hedge-witch"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "herbalist"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "hunter"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "miner"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "mystic"
+      },
+      {
+        "min": 45,
+        "max": 45,
+        "result": "scout"
+      },
+      {
+        "min": 46,
+        "max": 50,
+        "result": "villager"
+      },
+      {
+        "min": 51,
+        "max": 51,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 52,
+        "max": 52,
+        "result": "coachman"
+      },
+      {
+        "min": 53,
+        "max": 54,
+        "result": "entertainer"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "flagellant"
+      },
+      {
+        "min": 57,
+        "max": 57,
+        "result": "messenger"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "pedlar"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "roadwarden"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "witch-hunter"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "boatman"
+      },
+      {
+        "min": 63,
+        "max": 63,
+        "result": "pilot"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "riverwarden"
+      },
+      {
+        "min": 66,
+        "max": 68,
+        "result": "riverwoman"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "sailor"
+      },
+      {
+        "min": 71,
+        "max": 71,
+        "result": "smuggler"
+      },
+      {
+        "min": 72,
+        "max": 73,
+        "result": "stevedore"
+      },
+      {
+        "min": 74,
+        "max": 74,
+        "result": "wrecker"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "charlatan"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "fence"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "grave-robber"
+      },
+      {
+        "min": 78,
+        "max": 79,
+        "result": "knave"
+      },
+      {
+        "min": 80,
+        "max": 83,
+        "result": "outlaw"
+      },
+      {
+        "min": 84,
+        "max": 84,
+        "result": "racketeer"
+      },
+      {
+        "min": 85,
+        "max": 87,
+        "result": "thief"
+      },
+      {
+        "min": 88,
+        "max": 88,
+        "result": "witch"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "cavalryman"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "guard"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "knight"
+      },
+      {
+        "min": 94,
+        "max": 94,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 95,
+        "max": 95,
+        "result": "protagonist"
+      },
+      {
+        "min": 96,
+        "max": 99,
+        "result": "soldier"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "warrior-priest"
+      }
+    ]
+  },
+  {
+    "id": "core:career:dwarf",
+    "name": "Dwarf core Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "sides": 100,
+    "page": "36–37",
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 4,
+        "result": "engineer"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "lawyer"
+      },
+      {
+        "min": 7,
+        "max": 7,
+        "result": "physician"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "scholar"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "agitator"
+      },
+      {
+        "min": 12,
+        "max": 17,
+        "result": "artisan"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "result": "beggar"
+      },
+      {
+        "min": 19,
+        "max": 20,
+        "result": "investigator"
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "result": "merchant"
+      },
+      {
+        "min": 25,
+        "max": 25,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 26,
+        "max": 31,
+        "result": "townsman"
+      },
+      {
+        "min": 32,
+        "max": 34,
+        "result": "watchman"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "adviser"
+      },
+      {
+        "min": 37,
+        "max": 37,
+        "result": "artist"
+      },
+      {
+        "min": 38,
+        "max": 38,
+        "result": "duellist"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "envoy"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "noble"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "servant"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "spy"
+      },
+      {
+        "min": 44,
+        "max": 45,
+        "result": "warden"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "bailiff"
+      },
+      {
+        "min": 48,
+        "max": 49,
+        "result": "hunter"
+      },
+      {
+        "min": 50,
+        "max": 54,
+        "result": "miner"
+      },
+      {
+        "min": 55,
+        "max": 55,
+        "result": "scout"
+      },
+      {
+        "min": 56,
+        "max": 56,
+        "result": "villager"
+      },
+      {
+        "min": 57,
+        "max": 60,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 61,
+        "max": 61,
+        "result": "coachman"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "entertainer"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "messenger"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "pedlar"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "boatman"
+      },
+      {
+        "min": 70,
+        "max": 70,
+        "result": "pilot"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "riverwoman"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "sailor"
+      },
+      {
+        "min": 74,
+        "max": 75,
+        "result": "smuggler"
+      },
+      {
+        "min": 76,
+        "max": 77,
+        "result": "stevedore"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "wrecker"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "fence"
+      },
+      {
+        "min": 80,
+        "max": 82,
+        "result": "outlaw"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "racketeer"
+      },
+      {
+        "min": 84,
+        "max": 84,
+        "result": "thief"
+      },
+      {
+        "min": 85,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 90,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 91,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 96,
+        "result": "soldier"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "slayer"
+      }
+    ]
+  },
+  {
+    "id": "core:career:halfling",
+    "name": "Halfling core Careers",
+    "kind": "career",
+    "species": "Halfling",
+    "sides": 100,
+    "page": "36–37",
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "result": "engineer"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "lawyer"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "physician"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "scholar"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "agitator"
+      },
+      {
+        "min": 11,
+        "max": 15,
+        "result": "artisan"
+      },
+      {
+        "min": 16,
+        "max": 19,
+        "result": "beggar"
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "result": "investigator"
+      },
+      {
+        "min": 22,
+        "max": 25,
+        "result": "merchant"
+      },
+      {
+        "min": 26,
+        "max": 28,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 29,
+        "max": 31,
+        "result": "townsman"
+      },
+      {
+        "min": 32,
+        "max": 33,
+        "result": "watchman"
+      },
+      {
+        "min": 34,
+        "max": 34,
+        "result": "adviser"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "artist"
+      },
+      {
+        "min": 37,
+        "max": 37,
+        "result": "envoy"
+      },
+      {
+        "min": 38,
+        "max": 43,
+        "result": "servant"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "spy"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "warden"
+      },
+      {
+        "min": 47,
+        "max": 47,
+        "result": "bailiff"
+      },
+      {
+        "min": 48,
+        "max": 50,
+        "result": "herbalist"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "hunter"
+      },
+      {
+        "min": 53,
+        "max": 53,
+        "result": "miner"
+      },
+      {
+        "min": 54,
+        "max": 54,
+        "result": "scout"
+      },
+      {
+        "min": 55,
+        "max": 57,
+        "result": "villager"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "coachman"
+      },
+      {
+        "min": 61,
+        "max": 63,
+        "result": "entertainer"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "messenger"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "pedlar"
+      },
+      {
+        "min": 68,
+        "max": 68,
+        "result": "roadwarden"
+      },
+      {
+        "min": 69,
+        "max": 69,
+        "result": "boatman"
+      },
+      {
+        "min": 70,
+        "max": 70,
+        "result": "pilot"
+      },
+      {
+        "min": 71,
+        "max": 71,
+        "result": "riverwarden"
+      },
+      {
+        "min": 72,
+        "max": 74,
+        "result": "riverwoman"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "sailor"
+      },
+      {
+        "min": 76,
+        "max": 79,
+        "result": "smuggler"
+      },
+      {
+        "min": 80,
+        "max": 82,
+        "result": "stevedore"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "charlatan"
+      },
+      {
+        "min": 84,
+        "max": 84,
+        "result": "fence"
+      },
+      {
+        "min": 85,
+        "max": 85,
+        "result": "grave-robber"
+      },
+      {
+        "min": 86,
+        "max": 88,
+        "result": "knave"
+      },
+      {
+        "min": 89,
+        "max": 89,
+        "result": "outlaw"
+      },
+      {
+        "min": 90,
+        "max": 90,
+        "result": "racketeer"
+      },
+      {
+        "min": 91,
+        "max": 94,
+        "result": "thief"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "guard"
+      },
+      {
+        "min": 97,
+        "max": 97,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "core:career:high-elf",
+    "name": "High Elf core Careers",
+    "kind": "career",
+    "species": "High Elf",
+    "sides": 100,
+    "page": "36–37",
+    "rows": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "apothecary"
+      },
+      {
+        "min": 3,
+        "max": 6,
+        "result": "lawyer"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "physician"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "scholar"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "wizard"
+      },
+      {
+        "min": 17,
+        "max": 19,
+        "result": "artisan"
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "result": "investigator"
+      },
+      {
+        "min": 22,
+        "max": 26,
+        "result": "merchant"
+      },
+      {
+        "min": 27,
+        "max": 28,
+        "result": "townsman"
+      },
+      {
+        "min": 29,
+        "max": 29,
+        "result": "watchman"
+      },
+      {
+        "min": 30,
+        "max": 31,
+        "result": "adviser"
+      },
+      {
+        "min": 32,
+        "max": 32,
+        "result": "artist"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "duellist"
+      },
+      {
+        "min": 35,
+        "max": 37,
+        "result": "envoy"
+      },
+      {
+        "min": 38,
+        "max": 40,
+        "result": "noble"
+      },
+      {
+        "min": 41,
+        "max": 43,
+        "result": "spy"
+      },
+      {
+        "min": 44,
+        "max": 45,
+        "result": "warden"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "herbalist"
+      },
+      {
+        "min": 48,
+        "max": 50,
+        "result": "hunter"
+      },
+      {
+        "min": 51,
+        "max": 56,
+        "result": "scout"
+      },
+      {
+        "min": 57,
+        "max": 59,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 60,
+        "max": 62,
+        "result": "entertainer"
+      },
+      {
+        "min": 63,
+        "max": 63,
+        "result": "messenger"
+      },
+      {
+        "min": 64,
+        "max": 64,
+        "result": "boatman"
+      },
+      {
+        "min": 65,
+        "max": 79,
+        "result": "sailor"
+      },
+      {
+        "min": 80,
+        "max": 80,
+        "result": "smuggler"
+      },
+      {
+        "min": 81,
+        "max": 83,
+        "result": "charlatan"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "knave"
+      },
+      {
+        "min": 86,
+        "max": 88,
+        "result": "outlaw"
+      },
+      {
+        "min": 89,
+        "max": 92,
+        "result": "cavalryman"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "guard"
+      },
+      {
+        "min": 95,
+        "max": 95,
+        "result": "knight"
+      },
+      {
+        "min": 96,
+        "max": 97,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 98,
+        "max": 98,
+        "result": "protagonist"
+      },
+      {
+        "min": 99,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "core:career:wood-elf",
+    "name": "Wood Elf core Careers",
+    "kind": "career",
+    "species": "Wood Elf",
+    "sides": 100,
+    "page": "36–37",
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "scholar"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "wizard"
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "result": "artisan"
+      },
+      {
+        "min": 11,
+        "max": 14,
+        "result": "adviser"
+      },
+      {
+        "min": 15,
+        "max": 18,
+        "result": "artist"
+      },
+      {
+        "min": 19,
+        "max": 25,
+        "result": "envoy"
+      },
+      {
+        "min": 26,
+        "max": 31,
+        "result": "noble"
+      },
+      {
+        "min": 32,
+        "max": 35,
+        "result": "spy"
+      },
+      {
+        "min": 36,
+        "max": 42,
+        "result": "herbalist"
+      },
+      {
+        "min": 43,
+        "max": 52,
+        "result": "hunter"
+      },
+      {
+        "min": 53,
+        "max": 57,
+        "result": "mystic"
+      },
+      {
+        "min": 58,
+        "max": 68,
+        "result": "scout"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 71,
+        "max": 75,
+        "result": "entertainer"
+      },
+      {
+        "min": 76,
+        "max": 78,
+        "result": "messenger"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "wrecker"
+      },
+      {
+        "min": 80,
+        "max": 85,
+        "result": "outlaw"
+      },
+      {
+        "min": 86,
+        "max": 90,
+        "result": "cavalryman"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "guard"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "knight"
+      },
+      {
+        "min": 95,
+        "max": 96,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  }
+]

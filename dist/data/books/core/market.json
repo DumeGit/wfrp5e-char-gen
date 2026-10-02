@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "core:market:melee-knife",
+    "name": "Knife",
+    "page": 301,
+    "price": "8/–",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Melee weapons"
+  },
+  {
+    "name": "Dagger",
+    "price": "16/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:0"
+  },
+  {
+    "name": "Hand Weapon",
+    "price": "2 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:1"
+  },
+  {
+    "name": "Sword",
+    "price": "4 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:2"
+  },
+  {
+    "name": "Net",
+    "price": "6/–",
+    "enc": 1,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:3"
+  },
+  {
+    "name": "Knuckledusters",
+    "price": "2/6",
+    "enc": 0,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:4"
+  },
+  {
+    "name": "Garrote (2H)",
+    "price": "1/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:5"
+  },
+  {
+    "name": "Cavalry Hammer (2H)",
+    "price": "4 GC",
+    "enc": 3,
+    "availability": "Rare",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:6"
+  },
+  {
+    "name": "Lance",
+    "price": "1 GC",
+    "enc": 3,
+    "availability": "Rare",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:7"
+  },
+  {
+    "name": "Buckler",
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:8"
+  },
+  {
+    "name": "Foil",
+    "price": "5 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:9"
+  },
+  {
+    "name": "Main Gauche",
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:10"
+  },
+  {
+    "name": "Rapier",
+    "price": "5 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:11"
+  },
+  {
+    "name": "Swordbreaker",
+    "price": "1 GC 2/6",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:12"
+  },
+  {
+    "name": "Flail",
+    "price": "2 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:13"
+  },
+  {
+    "name": "Grain Flail (2H)",
+    "price": "5/–",
+    "enc": 2,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:14"
+  },
+  {
+    "name": "Military Flail (2H)",
+    "price": "3 GC",
+    "enc": 3,
+    "availability": "Rare",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:15"
+  },
+  {
+    "name": "Whip",
+    "price": "5/–",
+    "enc": 1,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:16"
+  },
+  {
+    "name": "Halberd (2H)",
+    "price": "2 GC",
+    "enc": 3,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:17"
+  },
+  {
+    "name": "Pike (2H)",
+    "price": "18/–",
+    "enc": 4,
+    "availability": "Rare",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:18"
+  },
+  {
+    "name": "Quarterstaff (2H)",
+    "price": "3/–",
+    "enc": 2,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:19"
+  },
+  {
+    "name": "Spear (2H)",
+    "price": "15/–",
+    "enc": 2,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:20"
+  },
+  {
+    "name": "Bastard Sword (2H)",
+    "price": "10 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:21"
+  },
+  {
+    "name": "Greataxe (2H)",
+    "price": "4 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:22"
+  },
+  {
+    "name": "Pick (2H)",
+    "price": "2 GC",
+    "enc": 3,
+    "availability": "Common",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:23"
+  },
+  {
+    "name": "Warhammer (2H)",
+    "price": "4 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:24"
+  },
+  {
+    "name": "Zweihänder (2H)",
+    "price": "16 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 301,
+    "category": "Melee weapons",
+    "id": "core:market:25"
+  },
+  {
+    "name": "Blunderbuss (2H)",
+    "price": "10 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:26"
+  },
+  {
+    "name": "Handgun (2H)",
+    "price": "16 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:27"
+  },
+  {
+    "name": "Pistol",
+    "price": "20 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:28"
+  },
+  {
+    "name": "Bow (2H)",
+    "price": "4 GC",
+    "enc": 2,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:29"
+  },
+  {
+    "name": "Longbow (2H)",
+    "price": "8 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:30"
+  },
+  {
+    "name": "Shortbow (2H)",
+    "price": "3 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:31"
+  },
+  {
+    "name": "Crossbow (2H)",
+    "price": "5 GC",
+    "enc": 2,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:32"
+  },
+  {
+    "name": "Crossbow Pistol",
+    "price": "6 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:33"
+  },
+  {
+    "name": "Heavy Crossbow (2H)",
+    "price": "8 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:34"
+  },
+  {
+    "name": "Repeater Handgun (2H)",
+    "price": "50 GC",
+    "enc": 3,
+    "availability": "Rare",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:35"
+  },
+  {
+    "name": "Repeater Pistol",
+    "price": "40 GC",
+    "enc": 1,
+    "availability": "Rare",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:36"
+  },
+  {
+    "name": "Hochland Long Rifle (2H)",
+    "price": "100 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:37"
+  },
+  {
+    "name": "Bolas",
+    "price": "10/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:38"
+  },
+  {
+    "name": "Lasso (2H)",
+    "price": "6/–",
+    "enc": 1,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:39"
+  },
+  {
+    "name": "Bomb",
+    "price": "3 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:40"
+  },
+  {
+    "name": "Incendiary",
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:41"
+  },
+  {
+    "name": "Sling",
+    "price": "1/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:42"
+  },
+  {
+    "name": "Staff Sling (2H)",
+    "price": "4/–",
+    "enc": 2,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:43"
+  },
+  {
+    "name": "Javelin",
+    "price": "10/6",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:44"
+  },
+  {
+    "name": "Throwing Axe",
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:45"
+  },
+  {
+    "name": "Throwing Knife",
+    "price": "18/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 303,
+    "category": "Ranged weapons",
+    "id": "core:market:46"
+  },
+  {
+    "name": "Bullet and Powder (12)",
+    "price": "3/3",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:47"
+  },
+  {
+    "name": "Improvised Shot and Powder",
+    "price": "3d",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:48"
+  },
+  {
+    "name": "Small Shot and Powder (12)",
+    "price": "3/3",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:49"
+  },
+  {
+    "name": "Arrow (12)",
+    "price": "5/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:50"
+  },
+  {
+    "name": "Elf Arrow",
+    "price": "6/–",
+    "enc": 0,
+    "availability": "Exotic",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:51"
+  },
+  {
+    "name": "Bolt (12)",
+    "price": "5/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:52"
+  },
+  {
+    "name": "Lead Bullet (12)",
+    "price": "4d",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:53"
+  },
+  {
+    "name": "Stone Bullet (12)",
+    "price": "1d",
+    "enc": 0,
+    "availability": "Common",
+    "page": 303,
+    "category": "Ammunition",
+    "id": "core:market:54"
+  },
+  {
+    "name": "Shield",
+    "price": "2 GC",
+    "enc": 2,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:55"
+  },
+  {
+    "name": "Large Shield",
+    "price": "3 GC",
+    "enc": 3,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:56"
+  },
+  {
+    "name": "Leather Coif",
+    "price": "2 GC",
+    "enc": 0,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:57"
+  },
+  {
+    "name": "Leather Jack",
+    "price": "3 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:58"
+  },
+  {
+    "name": "Leather Jerkin",
+    "price": "2 GC 10/–",
+    "enc": 1,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:59"
+  },
+  {
+    "name": "Leather Leggings",
+    "price": "3 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:60"
+  },
+  {
+    "name": "Mail Chausses",
+    "price": "10 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:61"
+  },
+  {
+    "name": "Mail Coat",
+    "price": "20 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:62"
+  },
+  {
+    "name": "Mail Coif",
+    "price": "6 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:63"
+  },
+  {
+    "name": "Mail Shirt",
+    "price": "16 GC",
+    "enc": 2,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:64"
+  },
+  {
+    "name": "Bracers",
+    "price": "12 GC",
+    "enc": 2,
+    "availability": "Rare",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:65"
+  },
+  {
+    "name": "Breastplate",
+    "price": "15 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:66"
+  },
+  {
+    "name": "Helm",
+    "price": "5 GC",
+    "enc": 2,
+    "availability": "Rare",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:67"
+  },
+  {
+    "name": "Open Helm",
+    "price": "3 GC",
+    "enc": 1,
+    "availability": "Common",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:68"
+  },
+  {
+    "name": "Plate Leggings",
+    "price": "12 GC",
+    "enc": 3,
+    "availability": "Rare",
+    "page": 307,
+    "category": "Armour and shields",
+    "id": "core:market:69"
+  },
+  {
+    "name": "Light Armour",
+    "price": "8 GC",
+    "enc": 0,
+    "availability": "Common",
+    "page": 307,
+    "category": "Quick armour (optional)",
+    "id": "core:market:70"
+  },
+  {
+    "name": "Medium Armour",
+    "price": "44 GC",
+    "enc": 4,
+    "availability": "Scarce",
+    "page": 307,
+    "category": "Quick armour (optional)",
+    "id": "core:market:71"
+  },
+  {
+    "name": "Heavy Armour",
+    "price": "88 GC",
+    "enc": 10,
+    "availability": "Rare",
+    "page": 307,
+    "category": "Quick armour (optional)",
+    "id": "core:market:72"
+  },
+  {
+    "name": "Small Instrument",
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 316,
+    "category": "Miscellaneous",
+    "id": "core:market:73"
+  },
+  {
+    "name": "Large Instrument",
+    "price": "4 GC",
+    "enc": 2,
+    "availability": "Rare",
+    "page": 316,
+    "category": "Miscellaneous",
+    "id": "core:market:74"
+  },
+  {
+    "name": "Small Tent",
+    "price": "1 GC 10/–",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 316,
+    "category": "Miscellaneous",
+    "id": "core:market:75"
+  },
+  {
+    "name": "Large Tent",
+    "price": "6 GC",
+    "enc": 4,
+    "availability": "Scarce",
+    "page": 316,
+    "category": "Miscellaneous",
+    "id": "core:market:76"
+  },
+  {
+    "name": "Trade Tools",
+    "price": "3 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 312,
+    "category": "Trade tools",
+    "id": "core:market:77"
+  },
+  {
+    "name": "Workshop",
+    "price": "80 GC",
+    "enc": null,
+    "availability": "Rare",
+    "page": 312,
+    "category": "Trade tools",
+    "id": "core:market:78"
+  },
+  {
+    "name": "Cart",
+    "price": "20 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:79"
+  },
+  {
+    "name": "Chicken",
+    "price": "5d",
+    "enc": 1,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:80"
+  },
+  {
+    "name": "Coach",
+    "price": "150 GC",
+    "enc": null,
+    "availability": "Rare",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:81"
+  },
+  {
+    "name": "Coracle",
+    "price": "2 GC",
+    "enc": 6,
+    "availability": "Scarce",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:82"
+  },
+  {
+    "name": "Destrier",
+    "price": "600 GC",
+    "enc": null,
+    "availability": "Scarce",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:83"
+  },
+  {
+    "name": "Dog Collar",
+    "price": "1/7",
+    "enc": 0,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:84"
+  },
+  {
+    "name": "Draught Horse",
+    "price": "20 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:85"
+  },
+  {
+    "name": "Homing Pigeon",
+    "price": "1/–",
+    "enc": 1,
+    "availability": "Scarce",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:86"
+  },
+  {
+    "name": "Hunting Dog",
+    "price": "2 GC",
+    "enc": null,
+    "availability": "Rare",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:87"
+  },
+  {
+    "name": "Light Warhorse",
+    "price": "150 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:88"
+  },
+  {
+    "name": "Monkey",
+    "price": "10 GC",
+    "enc": 2,
+    "availability": "Rare",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:89"
+  },
+  {
+    "name": "Mule",
+    "price": "10 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:90"
+  },
+  {
+    "name": "Pony",
+    "price": "40 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:91"
+  },
+  {
+    "name": "Riding Horse",
+    "price": "60 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:92"
+  },
+  {
+    "name": "River Barge",
+    "price": "225 GC",
+    "enc": null,
+    "availability": "Rare",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:93"
+  },
+  {
+    "name": "Row Boat",
+    "price": "6 GC",
+    "enc": null,
+    "availability": "Scarce",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:94"
+  },
+  {
+    "name": "Saddle and Harness",
+    "price": "6 GC",
+    "enc": 4,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:95"
+  },
+  {
+    "name": "Wagon",
+    "price": "75 GC",
+    "enc": null,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:96"
+  },
+  {
+    "name": "Worms (6)",
+    "price": "1d",
+    "enc": 0,
+    "availability": "Common",
+    "page": 312,
+    "category": "Animals and vehicles",
+    "id": "core:market:97"
+  },
+  {
+    "name": "Adder root",
+    "price": "5d",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:98"
+  },
+  {
+    "name": "Black lotus (leaves)",
+    "price": "6/–",
+    "enc": 0,
+    "availability": "Exotic",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:99"
+  },
+  {
+    "name": "Black lotus (sap)",
+    "price": "20 GC",
+    "enc": 0,
+    "availability": "Exotic",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:100"
+  },
+  {
+    "name": "Daemon’s tand",
+    "price": "5d",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:101"
+  },
+  {
+    "name": "Dwarf bile",
+    "price": "4/–",
+    "enc": 0,
+    "availability": "Exotic",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:102"
+  },
+  {
+    "name": "Juck",
+    "price": "1/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:103"
+  },
+  {
+    "name": "Rat poison",
+    "price": "4d",
+    "enc": 0,
+    "availability": "Common",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:104"
+  },
+  {
+    "name": "Schlafenkraut",
+    "price": "1/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:105"
+  },
+  {
+    "name": "Spider spittle",
+    "price": "3/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:106"
+  },
+  {
+    "name": "Weirdroot",
+    "price": "4/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 313,
+    "category": "Poisons",
+    "id": "core:market:107"
+  },
+  {
+    "name": "Digestive Tonic",
+    "price": "3/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:108"
+  },
+  {
+    "name": "Faxtoryll",
+    "price": "15/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:109"
+  },
+  {
+    "name": "Healing Poultice",
+    "price": "12/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:110"
+  },
+  {
+    "name": "Nightshade",
+    "price": "3 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:111"
+  },
+  {
+    "name": "Remedy (Malaise, Nausea, Pox, Wounded)",
+    "price": "2/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:112"
+  },
+  {
+    "name": "Remedy (Coughs and Sneezes, Fever, Flux)",
+    "price": "3/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:113"
+  },
+  {
+    "name": "Remedy (Blight, Buboes, Convulsions, Gangrene)",
+    "price": "4/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:114"
+  },
+  {
+    "name": "Salwort",
+    "price": "12/–",
+    "enc": 0,
+    "availability": "Common",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:115"
+  },
+  {
+    "name": "Vitality Draught",
+    "price": "18/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 314,
+    "category": "Herbs and remedies",
+    "id": "core:market:116"
+  },
+  {
+    "name": "Eyepatch",
+    "price": "6d",
+    "enc": 0,
+    "availability": "Common",
+    "page": 315,
+    "category": "Prosthetics",
+    "id": "core:market:117"
+  },
+  {
+    "name": "False Eye",
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 315,
+    "category": "Prosthetics",
+    "id": "core:market:118"
+  },
+  {
+    "name": "False Leg",
+    "price": "16/–",
+    "enc": 2,
+    "availability": "Scarce",
+    "page": 315,
+    "category": "Prosthetics",
+    "id": "core:market:119"
+  },
+  {
+    "name": "Gilded Nose",
+    "price": "18/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "page": 315,
+    "category": "Prosthetics",
+    "id": "core:market:120"
+  },
+  {
+    "name": "Hook",
+    "price": "3/4",
+    "enc": 1,
+    "availability": "Common",
+    "page": 315,
+    "category": "Prosthetics",
+    "id": "core:market:121"
+  },
+  {
+    "name": "Wooden Teeth",
+    "price": "10/–",
+    "enc": 0,
+    "availability": "Rare",
+    "page": 315,
+    "category": "Prosthetics",
+    "id": "core:market:122"
+  }
+]

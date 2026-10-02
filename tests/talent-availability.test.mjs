@@ -25,13 +25,13 @@ test('an otherwise valid purchase still explains insufficient XP',()=>{
 });
 
 test('level-two Priest Invoke matches Bless for every patron and rejects other deities',()=>{
- for(const god of M.GODS){
+ for(const god of R.config.gods){
   const s=M.fresh();s.career='priest';s.freeTalent=`Bless (${god})`;s.xp=100000;
   for(let i=0;i<10;i++)M.purchase(R,s,'char','Int');
   M.purchase(R,s,'promotion','');
   assert.equal(M.derive(R,s).level,2);
   assert.equal(M.quote(R,s,'talent',`Invoke (${god})`).error,'',god);
-  for(const other of M.GODS.filter(x=>x!==god)){
+  for(const other of R.config.gods.filter(x=>x!==god)){
    const before=JSON.stringify(s.ledger);
    const reason=M.quote(R,s,'talent',`Invoke (${other})`).error;
    assert.ok(reason.includes(`Requires Invoke (${god})`),reason);

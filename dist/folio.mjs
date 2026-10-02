@@ -17,7 +17,7 @@ function itemParts(text){
 export function folioGear(R,s){
  const grouped=new Map();
  for(const slot of gearSlots(R,s)){
-  const choices=gearOptions(slot.name);
+  const choices=gearOptions(slot.name,R);
   const chosen=choices.includes(s.gearChoices[slot.key])?s.gearChoices[slot.key]:choices[0];
   const text=chosen.replace(/\{?(\d+)d10\}?/g,m=>s.gearRolls[`${slot.key}:${m}`]??m);
   for(const item of itemParts(text)){

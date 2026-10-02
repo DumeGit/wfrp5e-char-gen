@@ -1,6 +1,8 @@
 # WFRP Character Ledger
 
-A browser-based Fifth Edition character generator built from the supplied rulebook. No rules from another edition or external source are used.
+A browser-based Fifth Edition character generator built from the supplied rulebook. The core book is currently the only installed source; verified supplied supplements can be integrated as opt-in book packs.
+
+Contributor instructions and the user's project decisions are in [AGENTS.md](AGENTS.md). The book integration format and review workflow are in [docs/BOOKS.md](docs/BOOKS.md).
 
 ## Use
 
@@ -23,6 +25,16 @@ Large desktop screens use a 1,700 px maximum workspace and a 350–380 px folio.
 The character sheet export retains the 556 editable fields in the supplied PDF and appends a complete creation/XP record. The record includes overflow Skills, Talents, gear, and magic. It can also be downloaded separately.
 
 ## Rules and source
+
+### Book-pack foundation
+
+`dist/books.mjs` loads the registry at `dist/data/books/index.json`, resolves dependencies, assembles selected books and validates content/references. The core pack reuses the existing extracted catalogs, with equipment profiles, shop rows, configuration and explicit roll tables in `dist/data/books/core/`. Talent effects/limits, specialisations, patrons, Arcane Lores, Class kits and carrying capacities feed the actual engine from this configuration.
+
+**Origins → Books & options** lists registered books; supplements and alternate-rule variants are opt-in. Changing books starts a new character. Added Careers do not alter random probabilities; extra printed d100 tables must be selected explicitly. Conflicting names, missing references, invalid tables, unreviewed Fourth Edition conversions and unsupported settings are rejected. Rule/content replacements require an explicitly selected variant and a documented target/reason. This foundation does not automatically implement novel mechanics: a supplied book may still require a new handler.
+
+Content receives namespaced identities and book/page sources. UI references and the companion PDF include sources, book versions/hashes, selected tables and conversion/variant decisions. Preprinted PDF page fields remain numeric because they are too small for book titles. Current character files/drafts use version 2 and record the selected book versions. Old WIP characters are not migrated, as requested; the app starts a fresh draft in a new storage key, and rejects unsupported files instead of silently reinterpreting them.
+
+`npm run check:books` validates every registered pack with its dependencies, including disabled packs. `npm run build` runs this check before generating the offline worker; all installed book files are cached for offline selection. Synthetic supplement/variant fixtures live only in tests and are not published.
 
 - `dist/data/source.json` identifies the supplied PDF by SHA-256 and records source pages.
 - `scripts/extract_book.py` extracts all four levels and the visual Characteristic scheme of each Career, random Career tables, and Talent references.

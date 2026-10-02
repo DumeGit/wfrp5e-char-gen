@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "core": "core",
+  "packs": [
+    {
+      "id": "core",
+      "path": "core/manifest.json"
+    }
+  ]
+}

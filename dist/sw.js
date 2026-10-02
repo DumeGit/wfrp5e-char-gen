@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"002caaf7f7a4efb54a68";
+const CACHE=CACHE_PREFIX+"5b6cf2b16d5650db5f34";
 const ASSETS=[
  "app.js",
  "assets/LICENSE-pdf-lib.md",
@@ -10,8 +10,17 @@ const ASSETS=[
  "assets/icon-maskable-512.png",
  "assets/pdf-lib.min.js",
  "background.mjs",
+ "book-ui.mjs",
+ "books.mjs",
  "creator-ui.mjs",
  "data/background.json",
+ "data/books/core/armour.json",
+ "data/books/core/config.json",
+ "data/books/core/manifest.json",
+ "data/books/core/market.json",
+ "data/books/core/tables.json",
+ "data/books/core/weapons.json",
+ "data/books/index.json",
  "data/career-rolls.json",
  "data/careers.json",
  "data/gear.json",
@@ -30,6 +39,7 @@ const ASSETS=[
  "market.mjs",
  "pwa.mjs",
  "rules.mjs",
+ "sources.mjs",
  "styles.css",
  "ui.mjs"
 ];

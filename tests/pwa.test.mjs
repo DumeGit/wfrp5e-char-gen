@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {loadBookLibrary,assembleBooks} from '../dist/books.mjs';
 
 const dist=new URL('../dist/',import.meta.url),worker=await readFile(new URL('sw.js',dist),'utf8');
 const assets=JSON.parse(worker.match(/const ASSETS=(\[[\s\S]*?\]);/)[1]);
@@ -66,6 +67,15 @@ test('updates wait for the user; activation removes only old ledger caches',asyn
  await h.lifecycle('message',{type:'unrelated'});assert.equal(h.skips,0);
  await h.lifecycle('message',{type:'APPLY_UPDATE'});assert.equal(h.skips,1);
  await h.lifecycle('activate');assert.equal(h.claims,1);assert.ok(h.stores.has(cacheName));assert.ok(h.stores.has('another-app'));assert.ok(!h.stores.has('wfrp-ledger-offline-old'));
+});
+
+test('the real book loader can assemble installed books entirely from offline assets',async()=>{
+ const h=await harness();await h.lifecycle('install');h.offline();
+ const library=await loadBookLibrary(async url=>{
+  const response=await h.request(url.href);assert.ok(response,`Missing cached book data ${url}`);return response.json();
+ },new URL('data/books/index.json',base));
+ const R=assembleBooks(library);assert.equal(R.careers.length,64);assert.equal(R.weapons.length,50);assert.equal(R.books[0].id,'core');
+ for(const {manifest}of library.packs)assert.ok(assets.includes(`data/books/${manifest.id}/manifest.json`));
 });
 
 test('a failed download cannot leave a partially prepared offline version',async()=>{

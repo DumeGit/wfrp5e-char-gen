@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "core",
+  "title": "Warhammer Fantasy Roleplay, Fifth Edition",
+  "shortTitle": "Core",
+  "edition": 5,
+  "version": "1.0.0",
+  "kind": "core",
+  "dependsOn": [],
+  "source": {
+    "file": "Warhammer Fantasy Roleplay (2).pdf",
+    "sha256": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902"
+  },
+  "notes": [
+    "Fifth Edition core rules are the default authority.",
+    "The full rulebook PDF is not included in this website."
+  ],
+  "files": {
+    "species": "../../species.json",
+    "careers": "../../careers.json",
+    "career-rolls": "../../career-rolls.json",
+    "skills": "../../skills.json",
+    "talents": "../../talents.json",
+    "spells": "../../spells.json",
+    "gear": "../../gear.json",
+    "source": "../../source.json",
+    "background": "../../background.json",
+    "config": "config.json",
+    "weapons": "weapons.json",
+    "armour": "armour.json",
+    "market": "market.json",
+    "tables": "tables.json"
+  }
+}

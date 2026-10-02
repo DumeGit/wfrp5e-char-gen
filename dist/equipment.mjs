@@ -1,18 +1,6 @@
-import {career,CLASS_KIT,derive} from './rules.mjs';
+import {career,derive} from './rules.mjs';
 import {marketCatalog,purchaseItem} from './market.mjs';
-import {rawGearSlots,rolledName,coinValue,itemParts,itemModifiers,CONTAINERS,CARRIERS,modifierNames} from './inventory.mjs';
-// Printed equipment tables, pp.301, 303, 307–310. Prices are not inferred for unlisted items.
-export const WEAPONS=[];
-function weapon(name,group,enc,reach,damage,qualities='',page=301){WEAPONS.push({name,group,enc,reach,damage,qualities,page});}
-weapon('Dagger','Basic',0,'Very Short','SB+2');weapon('Knife','Basic',0,'Very Short','SB+1','Undamaging');weapon('Hand Weapon','Basic',1,'Average','SB+4','Unbalanced');weapon('Sword','Basic',1,'Average','SB+4');weapon('Knuckledusters','Brawling',0,'Personal','SB+2');weapon('Garrote (2H)','Brawling',0,'Personal','SB+2','Inflict (Entangled: Strength), Undamaging');weapon('Cavalry Hammer (2H)','Cavalry',3,'Long','SB+5','Pummel');weapon('Lance','Cavalry',3,'Very Long','SB+6','Damaging, Impale; charge only');weapon('Foil','Fencing',1,'Average','SB+3','Fast, Impale, Precise, Undamaging');weapon('Main Gauche','Fencing',0,'Short','SB+2','Defensive, Impale, Parry');weapon('Rapier','Fencing',1,'Long','SB+4','Fast, Impale');weapon('Swordbreaker','Fencing',0,'Short','SB+1','Defensive, Parry, Trap Blade');weapon('Flail','Flail',1,'Average','SB+4','Pummel, Wrap, Unbalanced');weapon('Grain Flail (2H)','Flail',2,'Long','SB+3','Pummel, Imprecise');weapon('Military Flail (2H)','Flail',3,'Long','SB+5','Damaging, Pummel, Wrap, Unbalanced');weapon('Whip','Flail',1,'Very Long','SB+2','Wrap, Unbalanced, Undamaging');weapon('Halberd (2H)','Polearm',3,'Long','SB+5','Defensive, Hack, Impale');weapon('Pike (2H)','Polearm',4,'Massive','SB+4','Impale');weapon('Quarterstaff (2H)','Polearm',2,'Long','SB+3','Defensive, Pummel');weapon('Spear (2H)','Polearm',2,'Very Long','SB+4','Fast, Impale');weapon('Bastard Sword (2H)','Two-handed',2,'Long','SB+5','Damaging, Defensive');weapon('Greataxe (2H)','Two-handed',3,'Long','SB+6','Damaging, Hack, Unbalanced');weapon('Pick (2H)','Two-handed',3,'Long','SB+5','Damaging, Penetrating, Unbalanced');weapon('Warhammer (2H)','Two-handed',3,'Long','SB+6','Damaging, Pummel, Unbalanced');weapon('Zweihänder (2H)','Two-handed',3,'Long','SB+5','Damaging, Hack');
-for(const a of [['Blunderbuss (2H)','Blackpowder',2,'20 yards','8','Blast 3, Dangerous, Reload 3'],['Handgun (2H)','Blackpowder',2,'40 yards','10','Reload 3'],['Pistol','Blackpowder',0,'20 yards','9','Pistol, Reload 2'],['Bow (2H)','Bow',2,'50 yards','SB+4',''],['Longbow (2H)','Bow',3,'60 yards','SB+4',''],['Shortbow (2H)','Bow',1,'40 yards','SB+3',''],['Crossbow (2H)','Crossbow',2,'50 yards','9','Reload 1'],['Crossbow Pistol','Crossbow',0,'20 yards','7','Pistol, Reload 1'],['Heavy Crossbow (2H)','Crossbow',3,'60 yards','10','Reload 2'],['Repeater Handgun (2H)','Engineering',3,'40 yards','10','Repeater 4, Dangerous, Reload 5'],['Repeater Pistol','Engineering',1,'20 yards','9','Pistol, Repeater 4, Dangerous, Reload 4'],['Hochland Long Rifle (2H)','Engineering',3,'100 yards','10','Precise, Reload 4'],['Bolas','Entangling',0,'SB × 3 yards','SB','Inflict (Entangled 35), Undamaging'],['Lasso (2H)','Entangling',1,'SB × 2 yards','—','Inflict (Entangled 45)'],['Net','Entangling',1,'SB yards','—','Inflict (Entangled 50)'],['Bomb','Explosives',0,'SB yards','12','Blast 5, Inflict (Deafened), Dangerous'],['Incendiary','Explosives',0,'SB yards','8','Blast 4, Inflict (Ablaze), Dangerous'],['Sling','Sling',0,'40 yards','6',''],['Staff Sling (2H)','Sling',2,'50 yards','7',''],['Javelin','Throwing',1,'SB × 3 yards','SB+3','Impale'],['Rock','Throwing',0,'SB × 3 yards','SB','Undamaging'],['Throwing Axe','Throwing',1,'SB × 2 yards','SB+3','Hack'],['Throwing Knife','Throwing',0,'SB × 2 yards','SB+2','']])weapon(...a,303);
-for(const w of WEAPONS)if(['Blackpowder','Engineering','Explosives'].includes(w.group))w.qualities+=', Blackpowder, Damaging';
-weapon('Buckler','Fencing',1,'Personal','SB+1','Defensive, Parry, Undamaging');
-weapon('Net','Basic',1,'Short','—','Defensive, Inflict (Entangled 50)');
-WEAPONS.find(w=>w.name==='Bolas').qualities='Inflict (Entangled 35), Inflict (Prone), Undamaging; Entangled and Prone only on leg hits';
-export const ARMOUR=[['Buckler',1,'Shield',1,'Shield'],['Shield',2,'Shield',2,'Shield'],['Large Shield',3,'Shield',3,'Shield'],['Leather Coif',0,'Head',1,'Partial'],['Leather Jack',1,'Arms, Body',1,''],['Leather Jerkin',1,'Body',1,''],['Leather Leggings',1,'Legs',1,''],['Mail Chausses',3,'Legs',2,'Flexible'],['Mail Coat',3,'Arms, Body',2,'Flexible'],['Mail Coif',1,'Head',2,'Flexible, Partial'],['Mail Shirt',2,'Body',2,'Flexible'],['Bracers',2,'Arms',2,'Impenetrable, Weakpoints'],['Breastplate',3,'Body',2,'Impenetrable, Weakpoints'],['Helm',2,'Head',2,'Impenetrable, Weakpoints; −2 SL Perception'],['Open Helm',1,'Head',2,'Partial'],['Plate Leggings',3,'Legs',2,'Impenetrable, Weakpoints']].map(([name,enc,locations,ap,qualities])=>({name,enc,locations,ap,qualities,page:307}));
-export const GEAR_ENC={'Clothing':1,'Uniform':1,'Fine Clothing':1,'Cloak':1,'Hat':0,'Robes':1,'Tattered Robes':1,'Hooded Cloak':1,'Hood':0,'Mask':0,'Pouch':0,'Backpack':2,'Sling Bag':1,'Sack':2,'Large Sack':3};
-ARMOUR.push(...[['Light Armour',0,1,''],['Medium Armour',4,3,'Flexible'],['Heavy Armour',10,5,'Impenetrable, Weakpoints']].map(([name,enc,ap,qualities])=>({name,enc,ap,qualities,locations:'Head, Arms, Body, Legs',page:307,quick:true})));
+import {rawGearSlots,rolledName,coinValue,itemParts,itemModifiers,modifierNames} from './inventory.mjs';
 export function itemWeight(R,name){
  // The ammunition table gives Enc 0 for these units/packs (p. 303).
  if(['Arrow','Bolt','Shot','Bullet','Lead Bullet','Stone Bullet'].includes(name))return 0;
@@ -23,12 +11,12 @@ export function itemWeight(R,name){
  const qty=name.match(/^(\d+) (Rags|Bandages|Matches|Candles|Sets of Clothing)$/);
  if(qty)return Number(qty[1])*(qty[2]==='Sets of Clothing'?1:0);
  name=(aliases[name]||name).replace(/^Book \(([^)]+)\)$/,'Book, $1').replace(/^Trade Tools \([^)]+\)$/,'Trade Tools');
- return GEAR_ENC[name]??marketCatalog(R).find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
+ return R.config.gearEnc[name]??marketCatalog(R).find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
 }
 
 const ALIASES={'Main-gauche':'Main Gauche','Sword-breaker':'Swordbreaker','Great Weapon (Two-handed Pick)':'Pick (2H)','Great Weapon (Military Flail)':'Military Flail (2H)','Great Weapon (Dwarf Greataxe)':'Greataxe (2H)','Large Sack':'Sack, Large','Small Instrument':'Small Instrument','Coach Horn':'Instrument','Mandolin':'Instrument','Lute':'Large Instrument','Harp':'Large Instrument','Flute':'Small Instrument','Recorder':'Small Instrument','Tambourine':'Small Instrument','Small Drum':'Instrument','Large Drum':'Large Instrument','Parchment':'Parchment/sheet','Rations (1 day)':'Rations, 1 day','Rations (one day)':'Rations, 1 day','Lunch':'Meal, inn','Grimoire':'Book, Magic'};
-export function gearOptions(raw){
- if(/^(Weapon|Melee Weapon|Ranged Weapon) \(Any/.test(raw))return [...new Set(WEAPONS.filter(w=>!raw.startsWith('Melee')&&!raw.startsWith('Ranged')||w.page===(raw.startsWith('Ranged')?303:301)).map(w=>w.name))];
+export function gearOptions(raw,R){
+ if(/^(Weapon|Melee Weapon|Ranged Weapon) \(Any/.test(raw))return [...new Set(R.weapons.filter(w=>!raw.startsWith('Melee')&&!raw.startsWith('Ranged')||w.kind===(raw.startsWith('Ranged')?'ranged':'melee')).map(w=>w.name))];
  if(ALIASES[raw]&&raw.startsWith('Great Weapon'))return [ALIASES[raw]];
  if(raw==='Musical Instrument')return ['Small Instrument','Instrument','Large Instrument'];
  if(raw==='Helmet')return ['Helm','Open Helm'];
@@ -36,15 +24,15 @@ export function gearOptions(raw){
  return [raw];
 }
 export function gearSlots(R,s){return [...rawGearSlots(R,s),...(s.purchases||[]).map((x,i)=>({name:purchaseItem(R,x)?.name||'Unknown purchased item',origin:'Bought with starting wealth',key:x.uid?`purchase-${x.uid}`:`purchase-${i}`,marketId:purchaseItem(R,x)?.id,purchase:x}))];}
-export function resolvedGearName(s,slot){const opts=gearOptions(slot.name);return rolledName(s,slot,opts.includes(s.gearChoices[slot.key])?s.gearChoices[slot.key]:opts[0]);}
+export function resolvedGearName(s,slot,R){const opts=gearOptions(slot.name,R);return rolledName(s,slot,opts.includes(s.gearChoices[slot.key])?s.gearChoices[slot.key]:opts[0]);}
 export function inventoryEntries(R,s){
- const entries=[],slots=gearSlots(R,s),hasOutfit=slots.some(x=>['Uniform','Fine Clothing','Courtly Garb','Robes'].includes(resolvedGearName(s,x)));
+ const entries=[],slots=gearSlots(R,s),hasOutfit=slots.some(x=>['Uniform','Fine Clothing','Courtly Garb','Robes'].includes(resolvedGearName(s,x,R)));
  for(const slot of slots){
-  const resolved=resolvedGearName(s,slot);if(coinValue(resolved))continue;
+  const resolved=resolvedGearName(s,slot,R);if(coinValue(resolved))continue;
   itemParts(resolved).forEach((part,i)=>{
    const key=i?`${slot.key}:part-${i}`:slot.key,name=part.name,alias=name==='Leather Breastplate'?'Leather Jerkin':ALIASES[name]||name,mods=itemModifiers(slot.purchase);
-   const weapon=WEAPONS.find(w=>(w.name===alias||w.name.replace(' (2H)','')===alias||(w.name==='Hand Weapon'&&alias.startsWith('Hand Weapon ('))))||(name==='Hook'?WEAPONS.find(w=>w.name==='Dagger'):null);
-   const armour=ARMOUR.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=CONTAINERS[alias]??CARRIERS[alias],carrier=Object.hasOwn(CARRIERS,alias),canWear=!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics'||capacity!==undefined&&!carrier&&!['Barrel','Cask','Jug','Pewter Stein'].includes(alias);
+   const weapon=R.weapons.find(w=>(w.name===alias||w.name.replace(' (2H)','')===alias||(w.name==='Hand Weapon'&&alias.startsWith('Hand Weapon ('))))||(name==='Hook'?R.weapons.find(w=>w.name==='Dagger'):null);
+   const armour=R.armour.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=R.config.containers[alias]??R.config.carriers[alias]??(Number.isFinite(listed?.capacity)?listed.capacity:undefined),carrier=Object.hasOwn(R.config.carriers,alias),canWear=!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics'||capacity!==undefined&&!carrier&&!['Barrel','Cask','Jug','Pewter Stein'].includes(alias);
    const placement=listed?.category==='Prosthetics'?'worn':weapon||armour?.locations==='Shield'?'equipped':name==='Clothing'&&slot.key==='all-0'&&hasOutfit?'carried':canWear?'worn':carrier||alias==='Workshop'?'external':'carried';
    let enc=name==='Hook'?1:armour?.enc??weapon?.enc??listed?.enc??itemWeight(R,alias);
    if(enc!==null){enc=Math.max(0,enc+(mods.flaws.includes('Bulky')?1:0)-(mods.qualities.includes('Lightweight')?1:0));}
@@ -53,11 +41,11 @@ export function inventoryEntries(R,s){
  }
  return entries;
 }
-function adjustedWeapon(entry,d){
- let w={...entry.weapon};if(entry.name==='Net')w={...WEAPONS.find(w=>w.name==='Net'&&w.page===(entry.netMode==='ranged'?303:301))};
+function adjustedWeapon(entry,d,R){
+ let w={...entry.weapon};if(entry.name==='Net')w={...R.weapons.find(w=>w.name==='Net'&&w.kind===entry.netMode)};
  let qualities=w.qualities.split(', ').filter(Boolean),damage=w.damage.replace('SB',d.sb).split('+').map(Number).reduce((a,b)=>a+b,0),bonus=0;
- if(w.page===301&&d.talents.includes('Strike Mighty Blow'))bonus++;
- if(w.page===303){if(d.talents.includes('Accurate Shot'))bonus++;if(d.talents.includes('Sure Shot'))bonus++;}
+ if(w.kind==='melee'&&d.talents.includes('Strike Mighty Blow'))bonus++;
+ if(w.kind==='ranged'){if(d.talents.includes('Accurate Shot'))bonus++;if(d.talents.includes('Sure Shot'))bonus++;}
  if(entry.oneHanded&&w.name==='Spear (2H)'){damage--;qualities=qualities.filter(x=>x!=='Fast');}
  if(entry.oneHanded&&w.name==='Bastard Sword (2H)'){w.group='Basic';qualities=qualities.filter(x=>x!=='Damaging');qualities.push('Unbalanced');}
  if(d.talents.includes('Rapid Reload'))qualities=qualities.map(x=>x.replace(/Reload (\d+)/,(_,n)=>`Reload ${Math.max(0,Number(n)-1)}`));
@@ -102,7 +90,7 @@ export function equipment(R,s){
   if(e.name==='Grimoire')notes.push('Grimoire uses the Book, Magic Encumbrance entry (pp. 237, 311).');
   if(e.name==='Lunch')notes.push('Lunch uses the printed Meal Encumbrance entry (pp. 39, 309).');
   if(e.name==='Leather Breastplate')notes.push('Leather Breastplate (p. 96) uses Leather Jerkin statistics (p. 307), as agreed.');
-  if(e.weapon)weapons.push({...adjustedWeapon(e,d),carriedEnc:e.carriedEnc});
+  if(e.weapon)weapons.push({...adjustedWeapon(e,d,R),carriedEnc:e.carriedEnc});
   if(e.armour)armour.push({...e.armour,key:e.key,label:e.name+(e.quantity>1?` ×${e.quantity}`:''),enc:e.enc,carriedEnc:e.weapon?0:e.carriedEnc,worn:e.worn,active:e.worn||(e.armour.locations==='Shield'&&e.placement==='equipped'),qualities:[e.armour.qualities,...modifierNames(e)].filter(Boolean).join(', '),itemQualities:e.qualities,itemFlaws:e.flaws});
   if(!e.weapon&&!e.armour)other.push({key:e.key,name:e.name+(e.quantity>1?` ×${e.quantity}`:''),origin:e.origin,enc:e.carriedEnc,worn:e.worn,placement:e.placement,qualities:e.qualities,flaws:e.flaws});
  }
@@ -131,6 +119,6 @@ export function equipment(R,s){
 export function recordAcquisition(R,s,level,index,reason,linkedGear=''){
  const d=derive(R,s);if(level!==d.level+1||level>4)throw Error('Only the next Career level grants Trapping boxes.');const name=career(R,s).levels[level-1].trappings[index];if(!name||name==='None')throw Error('Choose a Career Trapping.');if(!reason.trim())throw Error('Record how the Trapping was obtained.');
  if(s.ledger.some(x=>x.type==='trapping'&&x.name===name)||s.bonusGear.some(i=>career(R,s).levels[1].trappings[i]===name))throw Error('This Trapping already earned a box.');
- if(linkedGear){const existing=gearSlots(R,s).find(x=>x.key===linkedGear);if(!existing)throw Error('Choose an owned item.');const actual=resolvedGearName(s,existing),choices=gearOptions(name);if(!choices.includes(actual)&&name!==actual)throw Error('The owned item must match the required Trapping.');if(s.ledger.some(x=>x.linkedGear===linkedGear))throw Error('This owned item already earned a box.');}
+ if(linkedGear){const existing=gearSlots(R,s).find(x=>x.key===linkedGear);if(!existing)throw Error('Choose an owned item.');const actual=resolvedGearName(s,existing,R),choices=gearOptions(name,R);if(!choices.includes(actual)&&name!==actual)throw Error('The owned item must match the required Trapping.');if(s.ledger.some(x=>x.linkedGear===linkedGear))throw Error('This owned item already earned a box.');}
  s.ledger.push({type:'trapping',name,reason,level,cost:0,tick:d.earnedBoxes<36,page:'43–44',...(linkedGear?{linkedGear}:{})});
 }

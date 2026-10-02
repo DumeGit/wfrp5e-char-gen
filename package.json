@@ -1,1 +1,1 @@
-{"name":"wfrp-character-ledger","version":"1.0.0","private":true,"type":"module","scripts":{"pretest":"npm run build","build":"node scripts/build-pwa.mjs","test":"node --test tests/*.test.mjs"},"dependencies":{"pdf-lib":"1.17.1"}}
+{"name":"wfrp-character-ledger","version":"1.0.0","private":true,"type":"module","scripts":{"pretest":"npm run build","check:books":"node scripts/check-books.mjs","build":"npm run check:books && node scripts/build-pwa.mjs","test":"node --test tests/*.test.mjs"},"dependencies":{"pdf-lib":"1.17.1"}}
