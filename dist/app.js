@@ -1,4 +1,4 @@
-import * as M from './rules.mjs';
+import * as M from './rules.mjs?v=patron-1';
 import {characteristicNames,issueStep} from './ui.mjs';
 import {gearSlots,gearOptions,equipment} from './equipment.mjs';
 import {marketCatalog,purse,buyTrapping,formatMoney} from './market.mjs';

@@ -100,6 +100,8 @@ export function invalidTalent(R,s,name){const d=derive(R,s),b=base(name),magical
  if(b==='Arcane Magic'&&owned.includes(b)&&!d.talents.includes(name))return 'A second Lore needs a specific exception and GM permission (p. 115).';
  const otherDivine=divine.includes(b)&&d.talents.find(t=>base(t)===b&&t!==name);
  if(otherDivine)return `Already have ${otherDivine}; normally only one ${b} Talent (p. ${b==='Bless'?116:121}).`;
+ const patronTalent=divine.includes(b)&&d.talents.find(t=>divine.includes(base(t))&&t.match(/\((.*)\)/)?.[1]!==name.match(/\((.*)\)/)?.[1]);
+ if(patronTalent){const patron=patronTalent.match(/\((.*)\)/)?.[1];return `Requires ${b} (${patron}) to match your patron from ${patronTalent} (pp. 40, 116, 121).`;}
  const repeats=d.talents.filter(t=>t===name).length;if(!repeats)return '';
  const text=talentInfo(R,name)?.text||'';let limit=1;
  if(/second time|twice|second purchase/.test(text))limit=2;
