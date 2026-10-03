@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "up-in-arms",
+  "title": "Up in Arms",
+  "shortTitle": "Up in Arms",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Up in Arms.pdf",
+    "sha256": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Fifth Edition core creation and advancement govern. Existing Talents use core definitions; approved older names are mapped explicitly.",
+      "User approved Fifth Edition Skill allocations with printed Tilean choices and native Tilean language; core Human physical attributes remain unchanged.",
+      "Keep core statistics and add only new equipment. No alternative armoury or older Talent replacement is enabled.",
+      "Crew Commander is visible but unavailable until its repeat limit and Test bonus are converted by agreement.",
+      "Printed numeric Test modifiers remain in reference descriptions by user decision. Explicit old Advantage references use Momentum under core Appendix I p. 364.",
+      "An optional Career refinement unavailable to the Species retains the original legal Career and logs the rejected result, per user instruction."
+    ]
+  },
+  "notes": [
+    "Only character-creation material is integrated. Injury, mounted combat, Pursuits, group Advantage, hireling management, structure damage and Warrior Endeavours remain outside this creator.",
+    "Unpriced descriptive Trappings and unspecified ammunition quantities remain unresolved rather than invented."
+  ],
+  "files": {
+    "careers": "careers.json",
+    "talents": "talents.json",
+    "spells": "spells.json",
+    "origins": "origins.json",
+    "rules": "rules.json",
+    "tables": "tables.json",
+    "market": "market.json",
+    "weapons": "weapons.json"
+  }
+}

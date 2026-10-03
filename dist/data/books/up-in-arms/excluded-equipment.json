@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Dagger",
+    "page": 91,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Improvised Weapon",
+    "page": 91,
+    "reason": "No fixed purchase price."
+  },
+  {
+    "name": "Knife",
+    "page": 91,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Sword",
+    "page": 91,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Shield (Buckler)",
+    "page": 92,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Shield",
+    "page": 92,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Shield (Large)",
+    "page": 92,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Cavalry Hammer",
+    "page": 93,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Lance",
+    "page": 93,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Foil",
+    "page": 93,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Rapier",
+    "page": 93,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Boat Hook",
+    "page": 94,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Garrote",
+    "page": 94,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Knuckledusters",
+    "page": 94,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Unarmed",
+    "page": 94,
+    "reason": "No fixed purchase price."
+  },
+  {
+    "name": "Grain Flail",
+    "page": 95,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Flail",
+    "page": 95,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Military Flail",
+    "page": 95,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Cloak",
+    "page": 95,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Main Gauche",
+    "page": 95,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Swordbreaker",
+    "page": 95,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Halberd",
+    "page": 96,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Spear",
+    "page": 96,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Pike",
+    "page": 96,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Quarterstaff",
+    "page": 96,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Bastard Sword",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Great Axe",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Pick",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Warhammer",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Zweihander",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Arrow (12)",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Elf Arrow",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Sharp Stick",
+    "page": 98,
+    "reason": "No fixed purchase price."
+  },
+  {
+    "name": "Bolt (12)",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Lead Bullet (12)",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Pebble",
+    "page": 98,
+    "reason": "No fixed purchase price."
+  },
+  {
+    "name": "Stone Bullet (12)",
+    "page": 98,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Blunderbuss",
+    "page": 101,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Hochland Long Rifle",
+    "page": 101,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Handgun",
+    "page": 101,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Pistol",
+    "page": 101,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "(2H) Repeater Handgun",
+    "page": 101,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Repeater Pistol",
+    "page": 101,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Bullet and Powder (12)",
+    "page": 102,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Improvised Shot and Powder",
+    "page": 102,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Small Shot and Powder (12)",
+    "page": 102,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Bomb",
+    "page": 102,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Incendiary",
+    "page": 102,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Animal Carcass",
+    "page": 124,
+    "reason": "No fixed purchase price."
+  },
+  {
+    "name": "Incendiary",
+    "page": 124,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Bomb",
+    "page": 124,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Incendiary",
+    "page": 124,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Bullet and Powder (12)",
+    "page": 124,
+    "reason": "Existing core item retains its core data."
+  },
+  {
+    "name": "Ball and Powder",
+    "page": 124,
+    "reason": "Existing core item retains its core data."
+  }
+]

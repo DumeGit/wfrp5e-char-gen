@@ -1,0 +1,101 @@
+[
+  {
+    "id": "up-in-arms:miracle:command-the-legion",
+    "name": "Command the Legion",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "See text",
+    "target": "Any ally",
+    "duration": "Instant",
+    "text": "Myrmidia carries your orders across the battlefield. You may issue a command to any ally within line of sight. The command must be relevant to the accomplishment of an armed struggle or ongoing strategy. Any Leadership Tests you make as a result benefit from a +10 bonus.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:dismay-foe",
+    "name": "Dismay Foe",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "You",
+    "target": "You",
+    "duration": "1 Round",
+    "text": "You embody Myrmidia in her most wrathful of aspects. Gain the Terror 1 Creature Trait.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:in-good-order",
+    "name": "In Good Order",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "Self",
+    "target": "Allies within AoE (Willpower yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "Knowing that the situation is hopeless you pray that your forces do not suffer from a disastrous rout. While the miracle is in play any allies may break from combat without allowing the enemy to gain Momentum or make free attacks (the printed Fourth Edition cross-reference is Fleeing, WFRP p. 165).",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses. The old Advantage reference becomes Momentum under Fifth Edition Appendix I p. 364; the old page reference is labelled."
+  },
+  {
+    "id": "up-in-arms:miracle:know-your-enemy",
+    "name": "Know Your Enemy",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "Willpower Yards",
+    "target": "1",
+    "duration": "Instant",
+    "text": "You call on Myrmidia to inform you of a nearby enemy’s strengths and weaknesses. The GM should allow you to check the profile, traits, skills and talents of the target.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:on-deadly-ground",
+    "name": "On Deadly Ground",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "Self",
+    "target": "Allies within AoE (Willpower yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "Knowing that victory cannot be secured unless your forces stand firm you call on Myrmidia to banish all thoughts of retreat from the minds of your allies. Whilst the miracle is in effect your allies do not receive Broken Conditions.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:quick-strike",
+    "name": "Quick Strike",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "You",
+    "target": "You",
+    "duration": "3 Rounds",
+    "text": "Infused with Myrmidia’s power, you benefit from heightened reflexes and can anticipate your opponent’s moves. At the start of every round whilst the Miracle is in effect, you may attempt a Challenging (+0) Initiative Test to gain an immediate free attack outside the normal turn sequence. This attack is resolved with whatever weapon you are carrying in your primary hand.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:shieldmaiden-s-devotion",
+    "name": "Shieldmaiden’s Devotion",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "Self",
+    "target": "Allies within AoE (Willpower yards)",
+    "duration": "4 Rounds",
+    "text": "Your chanted prayers fill the hearts of the faithful with the fearlessness of her bravest Shieldmaidens. All Myrmidians within range gain +1 Fearless (Enemy) Talent. This enemy may either be a particular individual, or a particular species.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:skill-of-combat",
+    "name": "Skill of Combat",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "Self",
+    "target": "Allies within AoE (Willpower yards)",
+    "duration": "4 Rounds",
+    "text": "You embody in your allies the skill of Myrmidia. Whilst this Miracle is in effect, all allies in range benefit from a +10 bonus to their WS and BS.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  },
+  {
+    "id": "up-in-arms:miracle:vengeful-wrath",
+    "name": "Vengeful Wrath",
+    "category": "Myrmidia",
+    "page": 79,
+    "range": "You",
+    "target": "You",
+    "duration": "6 Rounds",
+    "text": "You are filled with the righteous indignation of Myrmidia. Whilst this Miracle is in effect, you must charge and attack the nearest unrepentant enemy. You may reroll any Melee Skill rolls you make whilst the Miracle is in effect.",
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses."
+  }
+]

@@ -1,0 +1,1857 @@
+[
+  {
+    "id": "up-in-arms:career:archer",
+    "name": "Archer",
+    "class": "Warrior",
+    "species": [
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 10,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 1,
+      "S": 2,
+      "T": 3,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Bowman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Language (Battle)",
+          "Perception",
+          "Play (Horn)",
+          "Ranged (Bow)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Fast Shot",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Bow",
+          "Pack",
+          "Quiver and 10 Arrows",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Archer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Gamble",
+          "Gossip",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Track",
+          "Trade (Fletcher)"
+        ],
+        "talents": [
+          "Drilled",
+          "Etiquette (Soldiers)",
+          "Marksman",
+          "Sure Shot"
+        ],
+        "trappings": [
+          "Headgear",
+          "Quality Bow",
+          "Sword"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Archer Sergeant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Leadership",
+          "Navigation",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Sharpshooter",
+          "Sniper",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Quality Uniform",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Archer Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Warfare)",
+          "Secret Signs (Scout)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Seasoned Traveller",
+          "Stout-hearted",
+          "War Leader"
+        ],
+        "trappings": [
+          "Letter of Commission",
+          "Light Warhorse with Saddle and Tack",
+          "Symbol of Rank"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:greatsword",
+    "name": "Greatsword",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 12,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 3,
+      "I": 2,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Greatsword Cadet",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gossip",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Melee (Two-handed)",
+          "Play (Drum)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Drilled",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Metal Breastplate",
+          "Uniform",
+          "Zweihänder"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Greatsword",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Gamble",
+          "Intimidate",
+          "Lore (Heraldry)",
+          "Melee (Any)",
+          "Outdoor Survival",
+          "Perception"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Etiquette (Soldiers)",
+          "Fearless (Any)",
+          "Strike Mighty Blow"
+        ],
+        "trappings": [
+          "Full Plate Armour",
+          "Large Feathered Hat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Greatsword Sergeant",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Intuition",
+          "Leadership",
+          "Navigation",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Enclosed Fighter",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Manual on the art of Zweihänder fighting",
+          "Quality Zweihänder",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Greatsword Captain",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Inspiring",
+          "Public Speaker",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Letter of Commission",
+          "Light Warhorse with Saddle and Tack",
+          "Quality Uniform",
+          "Symbol of Rank"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Public Speaking → Public Speaker; Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:halberdier",
+    "name": "Halberdier",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 14,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 2,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Halberdier Recruit",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perform (Parade)",
+          "Play (Drum)"
+        ],
+        "talents": [
+          "Dicer",
+          "Drilled",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Halberd",
+          "Leather Breastplate",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Halberdier",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Gamble",
+          "Gossip",
+          "Intimidate",
+          "Outdoor Survival",
+          "Perception"
+        ],
+        "talents": [
+          "Enclosed Fighter",
+          "Etiquette (Soldiers)",
+          "Fearless (Any)",
+          "Strike Mighty Blow"
+        ],
+        "trappings": [
+          "Metal Breastplate",
+          "Helmet",
+          "Quality Halberd"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Halberdier Sergeant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Intuition",
+          "Leadership",
+          "Navigation",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Stout-hearted",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Symbol of Rank",
+          "Quality Uniform"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Halberdier Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Inspiring",
+          "Public Speaker",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Letter of Commission",
+          "Light Warhorse with Saddle and Tack",
+          "Quality Sword",
+          "Symbol of Rank"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Public Speaking → Public Speaker; Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:handgunner",
+    "name": "Handgunner",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 16,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 1,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 3,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Handgunner Recruit",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Perception",
+          "Play (Flute)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Gunner",
+          "Marksman",
+          "Sniper"
+        ],
+        "trappings": [
+          "Handgun",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Handgunner",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Gamble",
+          "Gossip",
+          "Intuition",
+          "Outdoor Survival",
+          "Trade (Gunsmith)"
+        ],
+        "talents": [
+          "Drilled",
+          "Etiquette (Soldiers)",
+          "Fast Shot",
+          "Rapid Reload"
+        ],
+        "trappings": [
+          "Large Feathered Hat",
+          "Quality Handgun"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Handgunner Sergeant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Navigation",
+          "Ranged (Engineering)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Sharpshooter",
+          "Sure Shot",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Quality Uniform",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Handgunner Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Seasoned Traveller",
+          "Stout-hearted",
+          "War Leader"
+        ],
+        "trappings": [
+          "Letter of Commission",
+          "Light Warhorse with Saddle and Tack",
+          "Symbol of Rank"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Warleader → War Leader. Printed Ranged (Engineer) uses Ranged (Engineering), as approved by the user; the book otherwise uses Engineering."
+  },
+  {
+    "id": "up-in-arms:career:artillerist",
+    "name": "Artillerist",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 18,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 1,
+      "S": null,
+      "T": 2,
+      "I": 1,
+      "Ag": 4,
+      "Dex": null,
+      "Int": 1,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Artillerist",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Cool",
+          "Drive",
+          "Endurance",
+          "Evaluate",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Navigation",
+          "Perception",
+          "Ranged (Blackpowder, Catapult, Crossbow, or Engineering)"
+        ],
+        "talents": [
+          "Marksman",
+          "Rapid Reload",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Apron"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Artillerist",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Gamble",
+          "Gossip",
+          "Outdoor Survival",
+          "Ranged (Blackpowder, Catapult, Crossbow, or Engineering)",
+          "Trade (Carpenter or Gunsmith)"
+        ],
+        "talents": [
+          "Crew Commander",
+          "Etiquette (Soldiers)",
+          "Orientation",
+          "Sniper"
+        ],
+        "trappings": [
+          "Telescope",
+          "Tools",
+          "Uniform",
+          "Weapon (Any)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Artillerist Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Intuition",
+          "Leadership",
+          "Lore (Artillery)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Read/Write",
+          "Tinker",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Quality Uniform",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Artillerist",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Public Speaker",
+          "Seasoned Traveller",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Artillery piece and Limber",
+          "Letter of Commission",
+          "Light Warhorse with Saddle and Tack",
+          "Map",
+          "Symbol of Rank"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Public Speaking → Public Speaker; Unshakable → Unshakeable."
+  },
+  {
+    "id": "up-in-arms:career:camp-follower",
+    "name": "Camp Follower",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 20,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 2,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Ribaud",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Dodge",
+          "Entertain (Any)",
+          "Gossip",
+          "Haggle",
+          "Melee (Any)",
+          "Outdoor Survival",
+          "Perception",
+          "Perform (Dance)"
+        ],
+        "talents": [
+          "Attractive",
+          "Beneath Notice",
+          "Blather",
+          "Dirty Fighting"
+        ],
+        "trappings": [
+          "Bed Roll",
+          "Pack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Camp Follower",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Bribery",
+          "Endurance",
+          "Gamble",
+          "Ranged (Any)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Dicer",
+          "Etiquette (Soldiers)",
+          "Rover",
+          "Stone Soup"
+        ],
+        "trappings": [
+          "Quality Hat",
+          "Tent"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Seasoned Scavenger",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Intimidate",
+          "Intuition",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Seasoned Traveller",
+          "Sturdy",
+          "Unshakeable",
+          "Very Resilient"
+        ],
+        "trappings": [
+          "Quality Clothing"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Camp Chief",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Evaluate",
+          "Leadership"
+        ],
+        "talents": [
+          "Inspiring",
+          "Public Speaker",
+          "Stout-hearted",
+          "Strong-Minded"
+        ],
+        "trappings": [
+          "Riding Horse with Saddle and Tack",
+          "Ring of Camp Followers"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Public Speaking → Public Speaker; Unshakable → Unshakeable."
+  },
+  {
+    "id": "up-in-arms:career:cartographer",
+    "name": "Cartographer",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 22,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Surveyor",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Cartography)",
+          "Climb",
+          "Evaluate",
+          "Lore (Geography)",
+          "Melee (Basic)",
+          "Navigation",
+          "Outdoor Survival",
+          "Perception",
+          "Stealth (Rural)",
+          "Trade (Cartographer)"
+        ],
+        "talents": [
+          "Artistic",
+          "Orientation",
+          "Read/Write",
+          "Rover"
+        ],
+        "trappings": [
+          "Vellum",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Cartographer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Endurance",
+          "Gossip",
+          "Haggle",
+          "Lore (Heraldry)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Flee!",
+          "Seasoned Traveller",
+          "Striding Gait (Any)"
+        ],
+        "trappings": [
+          "Horse with Saddle and Tack",
+          "Theodolite"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Chartered Cartographer",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Intuition",
+          "Language (Guilder)",
+          "Research",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Bookish",
+          "Etiquette (Guilders)",
+          "Nimble-fingered",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Letter of Charter",
+          "Quality Travel Clothes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Cartographer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Magnum Opus",
+          "Master Tradesman (Cartographer)",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Quality Theodolite",
+          "Study"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Nimble Fingered → Nimble-fingered; Strider (Any) → Striding Gait (Any)."
+  },
+  {
+    "id": "up-in-arms:career:freelance",
+    "name": "Freelance",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 31,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Squire",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Consume Alcohol",
+          "Heal",
+          "Gossip",
+          "Melee (Cavalry)",
+          "Outdoor Survival",
+          "Ride (Horse)",
+          "Trade (Farrier)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Roughrider",
+          "Sturdy",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Mail Shirt",
+          "Riding Horse with Saddle and Tack",
+          "Shield",
+          "Trade Tools (Farrier)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Freelance Knight",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Intimidate",
+          "Intuition",
+          "Melee (Any)"
+        ],
+        "talents": [
+          "Etiquette (Any)",
+          "Seasoned Traveller",
+          "Stone Soup",
+          "Strike Mighty Blow"
+        ],
+        "trappings": [
+          "Destrier with Saddle and Tack",
+          "Melee Weapon (Any)",
+          "Personal Heraldry",
+          "Plate Armour and Helm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Freelance Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Gamble",
+          "Haggle",
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Combat Master",
+          "Stout-hearted",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Barding",
+          "Small Retinue of Followers"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Knight Commander",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Language (Battle)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Disarm",
+          "Inspiring",
+          "Iron Will",
+          "Luck"
+        ],
+        "trappings": [
+          "Company of Knights",
+          "Squire"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:knight-of-the-blazing-sun",
+    "name": "Knight of the Blazing Sun",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 32,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 3,
+      "Dex": null,
+      "Int": 2,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Novice",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Heal",
+          "Language (Classical)",
+          "Lore (Any)",
+          "Lore (Heraldry)",
+          "Melee (Basic)",
+          "Melee (Cavalry)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Noble Blood",
+          "Read/Write",
+          "Sturdy",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Mail Shirt",
+          "Religious Symbol (Myrmidia)",
+          "Riding Horse with Saddle and Tack",
+          "Shield",
+          "Trade Tools (Farrier)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Knight",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Intimidate",
+          "Language (Battle)",
+          "Lore (Warfare)",
+          "Melee (Any)"
+        ],
+        "talents": [
+          "Etiquette (Any)",
+          "Seasoned Traveller",
+          "Shieldsman",
+          "Strike To Injure"
+        ],
+        "trappings": [
+          "Destrier with Saddle and Tack",
+          "Lance",
+          "Melee Weapon (Any)",
+          "Plate Armour and Helm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Hochmeister",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Leadership",
+          "Ranged (Any)",
+          "Research"
+        ],
+        "talents": [
+          "Disarm",
+          "Fearless (Any)",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Barding",
+          "Small Unit of Blazing Sun knights"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Knight of the Inner Circle",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Lore (Any)",
+          "Secret Signs (Blazing Sun)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Stout-hearted",
+          "Strike Mighty Blow",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Great Helm with Sun emblem",
+          "Large Unit of Knights or Several Small Units of Knights",
+          "Squire"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:knight-of-the-white-wolf",
+    "name": "Knight of the White Wolf",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 34,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 4,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Novice",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Heal",
+          "Lore (Heraldry)",
+          "Melee (Basic)",
+          "Melee (Cavalry)",
+          "Outdoor Survival",
+          "Ride (Horse)",
+          "Trade (Farrier)"
+        ],
+        "talents": [
+          "Hardy",
+          "Roughrider",
+          "Sturdy",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Cavalry Hammer",
+          "Leather Jack",
+          "Mail Shirt",
+          "Religious Symbol (Ulric)",
+          "Riding Horse with Saddle and Tack",
+          "Trade Tools (Farrier)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Knight",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Any)"
+        ],
+        "talents": [
+          "Menacing",
+          "Seasoned Traveller",
+          "Strike Mighty Blow",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Destrier with Saddle and Tack",
+          "Plate Armour",
+          "Wolfskin Cloak"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Templar Sergeant",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Consume Alcohol",
+          "Leadership",
+          "Lore (Warfare)",
+          "Perception"
+        ],
+        "talents": [
+          "Fearless (Any)",
+          "Furious Assault",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Barding",
+          "Small Unit of White Wolf knights"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Company Commander (Inner Circle)",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Lore (Any)",
+          "Secret Signs (Ulric)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Implacable",
+          "Iron Will",
+          "Inspiring"
+        ],
+        "trappings": [
+          "Novice",
+          "Company of White Wolf knights"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:knight-panther",
+    "name": "Knight Panther",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 36,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Squire",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Athletics",
+          "Charm Animal",
+          "Heal",
+          "Lore (Empire)",
+          "Lore (Heraldry)",
+          "Melee (Basic)",
+          "Melee (Cavalry)",
+          "Ride (Horse)",
+          "Trade (Farrier)"
+        ],
+        "talents": [
+          "Etiquette (Any)",
+          "Roughrider",
+          "Sturdy",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Mail Shirt",
+          "Riding Horse with Saddle and Tack",
+          "Shield",
+          "Trade Tools (Farrier)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Knight",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Any)"
+        ],
+        "talents": [
+          "Menacing",
+          "Shieldsman",
+          "Strike Mighty Blow",
+          "Coolheaded"
+        ],
+        "trappings": [
+          "Destrier with Saddle and Tack",
+          "Great Cat Pelt",
+          "Lance",
+          "Ring or Medallion with Panther Emblem",
+          "Plate Armour and Great Helm with Bestial Crest",
+          "Sword"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "First Knight",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Language (Any)",
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Fearless (Chaos)",
+          "Stout-hearted",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Barding",
+          "Small Unit of Knights Panther"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Company Commander (Inner Circle)",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Lore (Any)",
+          "Secret Signs (Knights Panther)"
+        ],
+        "talents": [
+          "Disarm",
+          "Inspiring",
+          "Iron Will",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Large Unit of Knights Panther or Several Small Units of Knights",
+          "Squire"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Unshakable → Unshakeable; Warleader → War Leader."
+  },
+  {
+    "id": "up-in-arms:career:light-cavalry",
+    "name": "Light Cavalry",
+    "class": "Warrior",
+    "species": [
+      "Human",
+      "High Elf",
+      "Wood Elf"
+    ],
+    "page": 44,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": null,
+      "T": 1,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Reiver",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Dodge",
+          "Endurance",
+          "Haggle",
+          "Heal",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Ranged (Throwing)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Crack the Whip",
+          "Etiquette (Mercenaries)",
+          "Field Dressing",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Javelin",
+          "Leather Jack",
+          "Riding Horse with Saddle and Tack",
+          "Shield or Buckler"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Light Cavalry",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Gamble",
+          "Gossip",
+          "Melee (Cavalry)",
+          "Ranged (Bow)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Orientation",
+          "Roughrider",
+          "Rover"
+        ],
+        "trappings": [
+          "Light Warhorse",
+          "Mail Coat",
+          "Open Helm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Lance",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Drive",
+          "Intuition",
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Combat Reflexes",
+          "Rapid Reload",
+          "Seasoned Traveller",
+          "Trick Rider"
+        ],
+        "trappings": [
+          "Lance",
+          "Mail Chausses",
+          "Page",
+          "Squire"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Heraldry or Law)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Dealmaker",
+          "Inspiring",
+          "War Leader"
+        ],
+        "trappings": [
+          "Brace of Pistols with Gunpowder and Ammunition or Bow with Quiver of 10 Arrows",
+          "Breastplate",
+          "Flamboyant Clothing",
+          "Warhorse"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Rough Rider → Roughrider; Trick Riding → Trick Rider."
+  },
+  {
+    "id": "up-in-arms:career:siege-specialist",
+    "name": "Siege Specialist",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human",
+      "High Elf"
+    ],
+    "page": 46,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 1,
+      "S": 1,
+      "T": null,
+      "I": null,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 3,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Crossbowman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Endurance",
+          "Gamble",
+          "Gossip",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Ranged (Crossbow)"
+        ],
+        "talents": [
+          "Etiquette (Mercenaries)",
+          "Marksman",
+          "Rapid Reload",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Crossbow and Ammunition",
+          "Feathered Hat",
+          "Leather Jack and Skullcap",
+          "Pavise"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Siege Specialist",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intuition",
+          "Lore (Engineering)",
+          "Melee (Two-handed)",
+          "Perception",
+          "Set Trap",
+          "Trade (Miner)"
+        ],
+        "talents": [
+          "Enclosed Fighter",
+          "Hardy",
+          "Orientation",
+          "Tunnel Fighter"
+        ],
+        "trappings": [
+          "Shovel",
+          "Two-handed Pick"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Sapper",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Ranged (Catapult, Engineering)",
+          "Trade (Explosives)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Craftsman (Explosives)",
+          "Gunner",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Books of Ballistics Tables",
+          "Plate Breastplate",
+          "Pistol with Bullets and Ammunition",
+          "Set of Six 60-second Fuses",
+          "Trade Tools (Engineer)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Siege Master",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Law)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Master Tradesman (Engineering)",
+          "Savvy",
+          "War Leader"
+        ],
+        "trappings": [
+          "Light Warhorse",
+          "Pavilion Tent with Body Servant",
+          "Quality Clothes"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Tunnel Rat → Tunnel Fighter; Unshakable → Unshakeable."
+  },
+  {
+    "id": "up-in-arms:career:pikeman",
+    "name": "Pikeman",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 48,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 1,
+      "I": 2,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Recruit",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Language (Battle)",
+          "Language (Tilean)",
+          "Melee (Basic)",
+          "Melee (Polearm)"
+        ],
+        "talents": [
+          "Drilled",
+          "Reaction Strike",
+          "Very Strong",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Leather Breastplate",
+          "Leather Skullcap",
+          "Pike",
+          "Uniform in Unit Colours"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Pikeman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Gossip",
+          "Heal",
+          "Intimidate",
+          "Lore (Warfare)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Dicer",
+          "Enclosed Fighter",
+          "Etiquette (Mercenaries)",
+          "Fearless (Cavalry)"
+        ],
+        "trappings": [
+          "Dice",
+          "Mail Coat",
+          "Open Helm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "File Leader",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Haggle",
+          "Intuition",
+          "Leadership",
+          "Perception"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Combat Reflexes",
+          "Field Dressing",
+          "Robust"
+        ],
+        "trappings": [
+          "Plate Breastplate",
+          "Sash of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Banner Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Law)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Inspiring",
+          "Unshakeable",
+          "Very Resilient",
+          "War Leader"
+        ],
+        "trappings": [
+          "Banner-Bearer",
+          "Baton of Rank",
+          "Light Warhorse",
+          "Plate Bracers and Leggings",
+          "Quality Uniform",
+          "Unit Banner"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Unshakable → Unshakeable."
+  },
+  {
+    "id": "up-in-arms:career:priest-of-myrmidia",
+    "name": "Priest of Myrmidia",
+    "class": "Warrior",
+    "species": [
+      "Human"
+    ],
+    "page": 78,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 4,
+      "T": null,
+      "I": 2,
+      "Ag": 3,
+      "Dex": null,
+      "Int": 1,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "First Eagle",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Language (Battle)",
+          "Leadership",
+          "Lore (Warfare)",
+          "Lore (Theology)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception",
+          "Pray"
+        ],
+        "talents": [
+          "Bless (Myrmidia)",
+          "Combat Aware",
+          "Etiquette (Cultists)",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Leather Jerkin",
+          "Mymidian Holy Book",
+          "Myrmidian Icon",
+          "Spear",
+          "White Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Warrior Priest",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Entertain (Speeches)",
+          "Heal",
+          "Intuition",
+          "Melee (Any)",
+          "Ranged (Any)"
+        ],
+        "talents": [
+          "Drilled",
+          "Inspiring",
+          "Invoke (Myrmidia)",
+          "Shieldsman"
+        ],
+        "trappings": [
+          "Breastplate & Helmet",
+          "Shield"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Priest Sergeant",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Lore (Any)",
+          "Melee (Any)",
+          "Research",
+          "Trade (Weaponsmith or Armourer)"
+        ],
+        "talents": [
+          "Bookish",
+          "Holy Visions",
+          "Pure Soul",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Full Plate Armour"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Priest Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Master",
+          "Combat Reflexes",
+          "Fearless (Any)",
+          "War Leader"
+        ],
+        "trappings": [
+          "Religious Relic (Myrmidian)"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Warleader → War Leader."
+  }
+]

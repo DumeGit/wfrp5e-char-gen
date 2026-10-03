@@ -8,6 +8,7 @@ export function restoreNavigation(character){
  return {...character,step:Math.max(0,Math.min(steps.length-1,step)),navigationVersion:2};
 }
 export function issueStep(message){
+ if(/origin available/.test(message))return 0;
  if(/Career available|bonus level-two/.test(message))return 1;
  if(/Characteristic/.test(message))return 2;
  if(/Species Skills|Career Skill|creation limit/.test(message))return 3;

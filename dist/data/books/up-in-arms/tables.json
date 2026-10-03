@@ -1,0 +1,189 @@
+[
+  {
+    "id": "up-in-arms:refinement:engineer",
+    "name": "Engineer optional military Career",
+    "kind": "career-refinement",
+    "career": "engineer",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 75,
+        "result": "engineer"
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "result": "up-in-arms:career:artillerist"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  },
+  {
+    "id": "up-in-arms:refinement:scholar",
+    "name": "Scholar optional military Career",
+    "kind": "career-refinement",
+    "career": "scholar",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 85,
+        "result": "scholar"
+      },
+      {
+        "min": 86,
+        "max": 100,
+        "result": "up-in-arms:career:cartographer"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  },
+  {
+    "id": "up-in-arms:refinement:pedlar",
+    "name": "Pedlar optional military Career",
+    "kind": "career-refinement",
+    "career": "pedlar",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 75,
+        "result": "pedlar"
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "result": "up-in-arms:career:camp-follower"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  },
+  {
+    "id": "up-in-arms:refinement:cavalryman",
+    "name": "Cavalryman optional military Career",
+    "kind": "career-refinement",
+    "career": "cavalryman",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 75,
+        "result": "cavalryman"
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "result": "up-in-arms:career:light-cavalry"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  },
+  {
+    "id": "up-in-arms:refinement:knight",
+    "name": "Knight optional military Career",
+    "kind": "career-refinement",
+    "career": "knight",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 55,
+        "result": "knight"
+      },
+      {
+        "min": 56,
+        "max": 65,
+        "result": "up-in-arms:career:freelance"
+      },
+      {
+        "min": 66,
+        "max": 70,
+        "result": "up-in-arms:career:knight-of-the-blazing-sun"
+      },
+      {
+        "min": 71,
+        "max": 85,
+        "result": "up-in-arms:career:knight-of-the-white-wolf"
+      },
+      {
+        "min": 86,
+        "max": 100,
+        "result": "up-in-arms:career:knight-panther"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  },
+  {
+    "id": "up-in-arms:refinement:soldier",
+    "name": "Soldier optional military Career",
+    "kind": "career-refinement",
+    "career": "soldier",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 40,
+        "result": "soldier"
+      },
+      {
+        "min": 41,
+        "max": 50,
+        "result": "up-in-arms:career:archer"
+      },
+      {
+        "min": 51,
+        "max": 70,
+        "result": "up-in-arms:career:halberdier"
+      },
+      {
+        "min": 71,
+        "max": 85,
+        "result": "up-in-arms:career:handgunner"
+      },
+      {
+        "min": 86,
+        "max": 90,
+        "result": "up-in-arms:career:greatsword"
+      },
+      {
+        "min": 91,
+        "max": 96,
+        "result": "up-in-arms:career:pikeman"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "up-in-arms:career:siege-specialist"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  },
+  {
+    "id": "up-in-arms:refinement:warrior-priest",
+    "name": "Warrior Priest optional military Career",
+    "kind": "career-refinement",
+    "career": "warrior-priest",
+    "sides": 100,
+    "page": 9,
+    "rows": [
+      {
+        "min": 1,
+        "max": 85,
+        "result": "warrior-priest"
+      },
+      {
+        "min": 86,
+        "max": 100,
+        "result": "up-in-arms:career:priest-of-myrmidia"
+      }
+    ],
+    "conversion": "Optional second roll after a core random Career result; never alters the core table. A result unavailable to the Species retains the original legal Career, with the rejected result logged (user interpretation)."
+  }
+]

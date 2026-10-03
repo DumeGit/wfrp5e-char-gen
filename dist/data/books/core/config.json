@@ -1,4 +1,20 @@
 {
+  "skillOptions": {
+    "Entertain": [],
+    "Animal Training": [],
+    "Art": [],
+    "Channelling": [],
+    "Language": [],
+    "Lore": [],
+    "Melee": [],
+    "Ranged": [],
+    "Ride": [],
+    "Perform": [],
+    "Play": [],
+    "Secret Signs": [],
+    "Stealth": [],
+    "Trade": []
+  },
   "talentEffects": {
     "Warrior Born": "WS",
     "Marksman": "BS",

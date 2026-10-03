@@ -5,6 +5,10 @@
     {
       "id": "core",
       "path": "core/manifest.json"
+    },
+    {
+      "id": "up-in-arms",
+      "path": "up-in-arms/manifest.json"
     }
   ]
 }

@@ -13,7 +13,7 @@ The app loads a registered core pack plus explicitly selected supplements/varian
 
 ## Manifest and registry
 
-Only the core book is installed today. Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
+The core book and Up in Arms are installed. The supplement's reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
 
 Every manifest has `schemaVersion: 1`, an ID (`lowercase-hyphenated` recommended), title, shortTitle, edition (4 or 5), version, kind (`core`, `supplement`, `variant`), dependsOn, source (`file`, `sha256`) and files. Fourth Edition packs also require `compatibility: {reviewed: true, notes: [...]}` with a nonempty review. The format only checks that a review was recorded; the integrator remains responsible for its accuracy.
 
@@ -47,12 +47,13 @@ Supported file keys:
 | species | Object keyed by displayed Species name, using current core creation fields |
 | background | Object keyed by Species, with printed forenames, surnames, eyes, hair and optional clans |
 | skills | Array: name, char, advanced, grouped, options, page |
-| talents | Array: name, text, page; special rules need a supported setting or handler |
+| talents | Array: name, text, page; optional `unavailable` explanation blocks purchase/free grants; special rules need a supported setting or handler |
 | spells | Array: name, category, text, range, target, duration, optional cn, page |
-| gear / market | Arrays: name, price, enc (number or null), availability, optional category; gear may have capacity |
+| gear / market | Arrays: name, price, enc (number or null), availability, optional category; capacity, wearable, text and ammunition reference fields are supported |
 | weapons | Array: name, group, enc, reach, damage, qualities, kind (melee/ranged), page |
 | armour | Array: name, enc, locations, ap, qualities, optional quick, page |
 | tables | Array of explicitly selectable printed d100 tables |
+| origins | Regional Species profiles: printed Skills/Talents/native languages, names, optional starting Talent replacement and conditional Career alternatives |
 | rules | Array of supported, sourced setting extensions |
 
 Core-only files `source`, `config` and `career-rolls` keep the original source record, settings and extracted Career table. Supplements cannot replace these files wholesale. Existing core arrays live in `dist/data/`; additional core equipment profiles, shop rows, settings and explicit roll tables live in `dist/data/books/core/`.
@@ -75,7 +76,7 @@ Content replacements require `replaces` with the active target's `contentId` and
 
 Each rules record requires `id`, `path` (an array of one or two strings), `operation`, `value`, `page` and `reason`. These records are declarative data, not executable scripts.
 
-Supported top-level settings are `talentEffects` (permanent +5 Characteristic keys), `talentLimits` (integer purchase limits; `null` means unlimited), `talentOptions`, `colours`, `gods`, `blessings`, `classKit`, `containers`, `carriers` and `gearEnc`. They feed actual engine calculations/options; the source of each change is retained in the record.
+Supported top-level settings are `talentEffects` (permanent +5 Characteristic keys), `talentLimits` (integer purchase limits; `null` means unlimited), `talentOptions`, `skillOptions` (additional specialisations of existing grouped Skills), `colours`, `gods`, `blessings`, `classKit`, `containers`, `carriers` and `gearEnc`. They feed actual engine calculations/options; the source of each change is retained in the record.
 
 - `add`: create a previously absent setting entry, e.g. a sourced repeat limit for a new Talent.
 - `append`: add distinct values to an existing array, e.g. additional printed specialisations. Core dynamic Talent groups (Art, Trade, Lore, gods and Arcane Lores) derive their choices from the relevant Skill/configuration instead of duplicating those lists.
@@ -88,5 +89,11 @@ New costs, prerequisites, Species formulas, Talent bonuses other than the suppor
 Tables require ID, name, kind (`species`, `career`, `talent`), page, sides (100), and rows (`min`, `max`, `result`). Career tables also specify their Species and reference Career IDs; other tables reference Species/Talent names. Each face must have exactly one result; absent/out-of-range/overlapping rows and unavailable results fail validation. This version supports printed d100 tables only; other dice need explicit implementation.
 
 Core random tables remain the defaults. Enabling extra choices does not add entries to those tables or change their weights. Additional printed tables appear in the book panel and must be chosen explicitly. A new Species without a core Career table receives no automatic substitute, even if an enabled pack contains one.
+
+The `career-refinement` table kind additionally requires `career`, the original Career ID, and references actual Career results. It is conditional, rather than a replacement random Career table. Its handler offers one optional second roll after a matching core result and retains the original when a result is unavailable to the Species, following the user's explicit Up in Arms decision.
+
+Regional origins require a Species reference and page. Optional fields are `languages`, `skills`, `talents`, `randomTalents`, `background` (forenames/surnames/page), `optionalTalent`, `careerChoices` (original Career IDs to alternative IDs), and `allowedPatrons`. Physical Species attributes stay in the core Species record. A starting Talent replacement targets one Species slot, preserves the original roll and never adds a free rank. Novel regional allocation formulas still need a handler and review.
+
+New equipment can carry `text`, `wearable: true`, and `ammunition: {range, damage, qualities}`. The ammunition fields are reference descriptions, not a loaded-ammunition or combat calculation. Weapon records also support `text`. Unknown fields still fail validation.
 
 Source labels in the interface and companion record include book and printed page. Tiny preprinted PDF page fields keep just page numbers to avoid clipping; Notes identify the books/Career source, and the attached record provides complete Talent, magic, equipment, conversions, rule changes and book hashes. Saved character files contain the enabled book versions and explicit table selections. The offline build includes every registered pack file, including disabled packs, so selecting installed books and exporting remain available without a network. No arbitrary PDF-upload importer is added to the app: extraction/integration happens during development.

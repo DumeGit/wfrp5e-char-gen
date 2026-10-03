@@ -1,9 +1,9 @@
 import {KEYS,canon,base,options,skillInfo,talentInfo} from './rules.mjs';
 
 export const BOOK_SCHEMA=1;
-const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables'];
+const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables','origins'];
 const files=new Set([...arrays,'species','background','career-rolls','source','config','rules']);
-const settings=new Set(['talentEffects','talentLimits','talentOptions','colours','gods','blessings','classKit','containers','carriers','gearEnc']);
+const settings=new Set(['talentEffects','talentLimits','talentOptions','skillOptions','colours','gods','blessings','classKit','containers','carriers','gearEnc']);
 const plain=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
 const nonempty=x=>typeof x==='string'&&x.trim().length>0;
 const strings=x=>Array.isArray(x)&&x.every(nonempty);
@@ -12,7 +12,7 @@ const fail=message=>{throw Error(`Book pack: ${message}`);};
 const pageOK=p=>Number.isInteger(p)&&p>0||typeof p==='string'&&/^\d+(?:[–—-]\d+)?$/.test(p);
 const unsafe=x=>['__proto__','prototype','constructor'].includes(x);
 const columns={
- careers:['class','species','advanceScheme','levels','runtimeId'],skills:['char','advanced','grouped','options'],talents:['text'],spells:['category','text','range','target','duration','cn'],gear:['price','enc','capacity','availability','category'],market:['price','enc','availability','category'],weapons:['group','enc','reach','damage','qualities','kind'],armour:['enc','locations','ap','qualities','quick'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents'],background:['forenames','surnames','eyes','hair','clans'],tables:['kind','sides','rows','species']
+ careers:['class','species','advanceScheme','levels','runtimeId'],skills:['char','advanced','grouped','options'],talents:['text','unavailable'],spells:['category','text','range','target','duration','cn'],gear:['price','enc','capacity','availability','category','text','ammunition','wearable'],market:['price','enc','availability','category','text','ammunition','wearable'],weapons:['group','enc','reach','damage','qualities','kind','text'],armour:['enc','locations','ap','qualities','quick'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents'],background:['forenames','surnames','eyes','hair','clans'],tables:['kind','sides','rows','species','career'],origins:['species','languages','skills','talents','randomTalents','background','optionalTalent','careerChoices','allowedPatrons']
 };
 
 export function validateManifest(p){
@@ -139,13 +139,14 @@ export function validateCatalog(R){
  if(!plain(C)||Object.keys(C).some(k=>!settings.has(k)))fail('unsupported core setting.');
  for(const key of settings)if(!(key in C))fail(`missing setting ${key}.`);
  for(const key of ['gods','colours'])if(!strings(C[key])||!C[key].length||new Set(C[key]).size!==C[key].length)fail(`invalid ${key}.`);
- for(const key of ['talentOptions','blessings','classKit'])if(!plain(C[key])||Object.values(C[key]).some(x=>!strings(x)))fail(`invalid ${key}.`);
+ for(const key of ['talentOptions','skillOptions','blessings','classKit'])if(!plain(C[key])||Object.values(C[key]).some(x=>!strings(x)))fail(`invalid ${key}.`);
+ for(const [name,opts]of Object.entries(C.skillOptions))if(!R.skills.some(x=>x.name===name&&x.grouped)||new Set(opts).size!==opts.length||opts.some(x=>R.skills.find(s=>s.name===name).options.includes(x)))fail(`${name}: invalid additional Skill specialisations.`);
  for(const key of ['containers','carriers','gearEnc'])if(!plain(C[key])||Object.values(C[key]).some(x=>!Number.isFinite(x)||x<0))fail(`invalid ${key}.`);
  if(!plain(C.talentEffects)||Object.values(C.talentEffects).some(x=>!KEYS.includes(x)))fail('invalid Talent Characteristic effects.');
  if(!plain(C.talentLimits)||Object.values(C.talentLimits).some(x=>x!==null&&(!Number.isInteger(x)||x<1)))fail('invalid Talent repeat limits.');
  const ids=new Set();for(const key of arrays.concat('species','background','rules'))for(const x of (Array.isArray(R[key])?R[key]:Object.values(R[key])).filter(plain)){if(ids.has(x.contentId))fail(`duplicate content ID ${x.contentId}.`);ids.add(x.contentId);}
  for(const x of R.skills)if(!KEYS.includes(x.char)||typeof x.advanced!=='boolean'||typeof x.grouped!=='boolean'||x.grouped&&!strings(x.options))fail(`${x.name}: invalid Skill.`);
- for(const x of R.talents)if(!nonempty(x.text))fail(`${x.name}: Talent description required.`);
+ for(const x of R.talents)if(!nonempty(x.text)||x.unavailable!==undefined&&!nonempty(x.unavailable))fail(`${x.name}: Talent description and unavailability reason must be text.`);
  for(const x of R.spells)if(!['text','category','range','target','duration'].every(k=>nonempty(x[k])))fail(`${x.name}: incomplete spell.`);
  for(const [name,sp]of Object.entries(R.species)){
   if(!plain(sp.offsets)||KEYS.some(k=>!Number.isFinite(sp.offsets[k]))||!strings(sp.languages)||!strings(sp.skills)||!Array.isArray(sp.talents)||sp.talents.some(x=>!strings(x)||!x.length)||!['fate','fortune','movement','randomTalents'].every(k=>Number.isInteger(sp[k])&&sp[k]>=0)||!['age','height'].every(k=>Array.isArray(sp[k])&&sp[k].length===2&&sp[k].every(x=>Number.isInteger(x)&&x>=0)))fail(`${name}: incomplete Species.`);
@@ -161,22 +162,33 @@ export function validateCatalog(R){
    for(const raw of l.talents)if(!talentInfo(R,raw))fail(`${c.name}: unknown Talent ${raw}.`);
   });
  }
- for(const kind of ['gear','market'])for(const x of R[kind])if(typeof x.price!=='string'||x.enc!==null&&(!Number.isFinite(x.enc)||x.enc<0))fail(`${x.name}: invalid price/weight.`);
+ for(const kind of ['gear','market'])for(const x of R[kind]){
+  if(typeof x.price!=='string'||x.enc!==null&&(!Number.isFinite(x.enc)||x.enc<0)||x.wearable!==undefined&&typeof x.wearable!=='boolean'||x.text!==undefined&&!nonempty(x.text))fail(`${x.name}: invalid equipment data.`);
+  if(x.ammunition&&(!plain(x.ammunition)||Object.keys(x.ammunition).some(k=>!['range','damage','qualities'].includes(k))||!['range','damage','qualities'].every(k=>nonempty(x.ammunition[k]))))fail(`${x.name}: incomplete ammunition reference.`);
+ }
  const shopNames=new Map();for(const x of [...R.gear,...R.market]){const name=x.name.toLowerCase(),previous=shopNames.get(name);if(previous&&!(previous.source.book==='core'&&x.source.book==='core'&&previous.page!==x.page&&previous.price===x.price&&previous.enc===x.enc))fail(`${x.name}: duplicate shop option across gear and market.`);shopNames.set(name,x);}
  const runtimeIds=new Set();for(const c of R.careers){if(runtimeIds.has(c.id))fail(`duplicate Career ID ${c.id}.`);runtimeIds.add(c.id);}
- for(const w of R.weapons)if(!['melee','ranged'].includes(w.kind)||!['group','reach','damage'].every(k=>nonempty(w[k]))||!Number.isFinite(w.enc)||w.enc<0||typeof w.qualities!=='string')fail(`${w.name}: incomplete weapon profile.`);
+ for(const w of R.weapons)if(!['melee','ranged'].includes(w.kind)||!['group','reach','damage'].every(k=>nonempty(w[k]))||!Number.isFinite(w.enc)||w.enc<0||typeof w.qualities!=='string'||w.text!==undefined&&!nonempty(w.text))fail(`${w.name}: incomplete weapon profile.`);
  for(const a of R.armour)if(!nonempty(a.locations)||!Number.isFinite(a.enc)||a.enc<0||!Number.isInteger(a.ap)||a.ap<0||typeof a.qualities!=='string')fail(`${a.name}: incomplete armour profile.`);
  for(const [name,char]of Object.entries(C.talentEffects))if(!talentInfo(R,name))fail(`unknown effect Talent ${name}.`);
  for(const name of Object.keys(C.talentLimits))if(!talentInfo(R,name))fail(`unknown repeat-limit Talent ${name}.`);
  for(const name of Object.keys(R.species))if(!R.careers.some(c=>c.species.includes(name)))fail(`${name}: no available Career.`);
+ for(const o of R.origins){
+  if(!R.species[o.species]||['languages','skills'].some(k=>o[k]!==undefined&&!strings(o[k]))||o.talents!==undefined&&(!Array.isArray(o.talents)||o.talents.some(x=>!strings(x)||!x.length))||o.randomTalents!==undefined&&(!Number.isInteger(o.randomTalents)||o.randomTalents<0))fail(`${o.name}: invalid regional creation profile.`);
+  for(const name of o.skills||[])for(const n of options(R,name))if(!skillInfo(R,n))fail(`${o.name}: unknown Skill ${n}.`);
+  for(const name of (o.talents||[]).flat().concat(o.optionalTalent||[]))if(!talentInfo(R,name))fail(`${o.name}: unknown Talent ${name}.`);
+  if(o.background&&(!plain(o.background)||Object.keys(o.background).some(k=>!['forenames','surnames','page'].includes(k))||!pageOK(o.background.page)||['forenames','surnames'].some(k=>!strings(o.background[k])||!o.background[k].length)))fail(`${o.name}: invalid regional name suggestions.`);
+  if(o.allowedPatrons&&(!strings(o.allowedPatrons)||o.allowedPatrons.some(n=>!C.gods.includes(n))))fail(`${o.name}: unknown regional patron.`);
+  if(o.careerChoices){if(!plain(o.careerChoices))fail(`${o.name}: invalid regional Career choices.`);for(const [from,to]of Object.entries(o.careerChoices)){if(!runtimeIds.has(from)||!strings(to)||to.some(id=>!R.careers.some(c=>c.id===id&&c.species.includes(o.species))))fail(`${o.name}: unavailable regional Career choice.`);}}
+ }
  for(const god of C.gods){if(!C.blessings[god]?.length||C.blessings[god].some(n=>!R.spells.some(x=>x.name===`Blessing of ${n}`)))fail(`${god}: missing Blessings.`);if(!R.spells.some(x=>x.category===god))fail(`${god}: missing Miracles.`);}
  for(const lore of C.colours)if(!R.spells.some(x=>x.category===lore))fail(`${lore}: missing Lore spells.`);
  for(const table of R.tables){
-  if(!['species','career','talent'].includes(table.kind)||table.sides!==100||!Array.isArray(table.rows)||!table.rows.length||table.kind==='career'&&!R.species[table.species])fail(`${table.id}: invalid roll table.`);
+  if(!['species','career','talent','career-refinement'].includes(table.kind)||table.sides!==100||!Array.isArray(table.rows)||!table.rows.length||table.kind==='career'&&!R.species[table.species]||table.kind==='career-refinement'&&!runtimeIds.has(table.career))fail(`${table.id}: invalid roll table.`);
   for(let n=1;n<=100;n++){const rows=table.rows.filter(r=>n>=r.min&&n<=r.max);if(rows.length!==1)fail(`${table.id}: result ${n} is missing or overlapping.`);}
   for(const row of table.rows){
    if(!Number.isInteger(row.min)||!Number.isInteger(row.max)||row.min<1||row.max>100||row.min>row.max||!nonempty(row.result))fail(`${table.id}: invalid row.`);
-   if(table.kind==='species'&&!R.species[row.result]||table.kind==='talent'&&!talentInfo(R,row.result)||table.kind==='career'&&!R.careers.some(c=>c.id===row.result&&c.species.includes(table.species)))fail(`${table.id}: unavailable result ${row.result}.`);
+   if(table.kind==='species'&&!R.species[row.result]||table.kind==='talent'&&!talentInfo(R,row.result)||table.kind==='career'&&!R.careers.some(c=>c.id===row.result&&c.species.includes(table.species))||table.kind==='career-refinement'&&!runtimeIds.has(row.result))fail(`${table.id}: unavailable result ${row.result}.`);
   }
  }
  if(!R.tables.some(x=>x.kind==='species'))fail('a Species roll table is required.');

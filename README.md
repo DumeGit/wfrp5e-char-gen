@@ -1,6 +1,6 @@
 # WFRP Character Ledger
 
-A browser-based Fifth Edition character generator built from the supplied rulebook. The core book is currently the only installed source; verified supplied supplements can be integrated as opt-in book packs.
+A browser-based Fifth Edition character generator built from the supplied rulebook. The core book and the opt-in **Up in Arms** supplement are installed. Its 15 Careers, Tilean origins, nine additional Myrmidian Miracles and 70 new shop entries are documented with compatibility decisions in [docs/UP-IN-ARMS.md](docs/UP-IN-ARMS.md).
 
 Contributor instructions and the user's project decisions are in [AGENTS.md](AGENTS.md). The book integration format and review workflow are in [docs/BOOKS.md](docs/BOOKS.md).
 
@@ -14,7 +14,7 @@ python -m http.server 8047 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:8047/`. The browser saves the current draft on that device. **Save character** downloads a JSON file for later import with **Load character**. Drafts on the local preview and published app belong to separate browser origins; use Save/Load to transfer them.
 
-The eight creation steps cover Species, all 64 Careers, Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default budget is 1,000 XP, editable by the user. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
+The eight creation steps cover Species, all 64 core Careers (79 with Up in Arms enabled), Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default budget is 1,000 XP, editable by the user. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
 
 The Gear & money step includes a searchable shop for 253 fixed-price Trappings from the supplied Consumer Guide (pp. 301, 303, 307–316). Career-granted cash is added to the purse. It converts starting funds using 1 GC = 20 shillings = 240 pennies, blocks overspending, supports removing a purchase, and adds purchases to equipment and PDF export. It assumes purchases are made during character creation, when Availability Tests are waived (p. 296). Items with variable or unlisted prices, including the magical items whose listed figures are black-market buyer prices (p. 315), require the GM and are not offered at an invented purchase price. Bought items do not earn creation tracker boxes (p. 36).
 
@@ -72,7 +72,7 @@ npm install
 npm test
 ```
 
-The tests cover all 64 Careers, every d100 Career outcome for every Species, reference resolution, XP prices and limits, a full 1,000 XP Soldier regression, independent Fate/Fortune bonuses, random sampling, the magic catalog, and editable PDF fields including Priest overflow. Browser checks cover the guided creation flow, a real random-roll record, XP purchase, PDF download, responsive layout, and valid/invalid WebMCP calls.
+The tests cover all 64 core Careers and all 15 Up in Arms Careers, every d100 Career outcome for every Species, reference resolution, XP prices and limits, a full 1,000 XP Soldier regression, independent Fate/Fortune bonuses, random sampling, the magic catalog, and editable PDF fields including Priest overflow. Browser checks cover the guided creation flow, a real random-roll record, XP purchase, PDF download, responsive layout, and valid/invalid WebMCP calls.
 
 The verification URL query `?verify=1` uses a separate draft key, so browser checks do not replace the user's open draft. It changes no game rules.
 

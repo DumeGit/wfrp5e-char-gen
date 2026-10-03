@@ -31,8 +31,8 @@ export function inventoryEntries(R,s){
   const resolved=resolvedGearName(s,slot,R);if(coinValue(resolved))continue;
   itemParts(resolved).forEach((part,i)=>{
    const key=i?`${slot.key}:part-${i}`:slot.key,name=part.name,alias=name==='Leather Breastplate'?'Leather Jerkin':ALIASES[name]||name,mods=itemModifiers(slot.purchase);
-   const weapon=R.weapons.find(w=>(w.name===alias||w.name.replace(' (2H)','')===alias||(w.name==='Hand Weapon'&&alias.startsWith('Hand Weapon ('))))||(name==='Hook'?R.weapons.find(w=>w.name==='Dagger'):null);
-   const armour=R.armour.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=R.config.containers[alias]??R.config.carriers[alias]??(Number.isFinite(listed?.capacity)?listed.capacity:undefined),carrier=Object.hasOwn(R.config.carriers,alias),canWear=!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics'||capacity!==undefined&&!carrier&&!['Barrel','Cask','Jug','Pewter Stein'].includes(alias);
+   const weapon=R.weapons.find(w=>w.name===alias)||R.weapons.find(w=>(w.name.replace(' (2H)','')===alias||(w.name==='Hand Weapon'&&alias.startsWith('Hand Weapon ('))))||(name==='Hook'?R.weapons.find(w=>w.name==='Dagger'):null);
+   const armour=R.armour.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=R.config.containers[alias]??R.config.carriers[alias]??(Number.isFinite(listed?.capacity)?listed.capacity:undefined),carrier=Object.hasOwn(R.config.carriers,alias),canWear=listed?.wearable===true||!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics'||capacity!==undefined&&!carrier&&!['Barrel','Cask','Jug','Pewter Stein'].includes(alias);
    const placement=listed?.category==='Prosthetics'?'worn':weapon||armour?.locations==='Shield'?'equipped':name==='Clothing'&&slot.key==='all-0'&&hasOutfit?'carried':canWear?'worn':carrier||alias==='Workshop'?'external':'carried';
    let enc=name==='Hook'?1:armour?.enc??weapon?.enc??listed?.enc??itemWeight(R,alias);
    if(enc!==null){enc=Math.max(0,enc+(mods.flaws.includes('Bulky')?1:0)-(mods.qualities.includes('Lightweight')?1:0));}
@@ -89,7 +89,7 @@ export function equipment(R,s){
   if(slotAliasNote(e))notes.push(slotAliasNote(e));
   if(e.name==='Grimoire')notes.push('Grimoire uses the Book, Magic Encumbrance entry (pp. 237, 311).');
   if(e.name==='Lunch')notes.push('Lunch uses the printed Meal Encumbrance entry (pp. 39, 309).');
-  if(e.name==='Leather Breastplate')notes.push('Leather Breastplate (p. 96) uses Leather Jerkin statistics (p. 307), as agreed.');
+  if(e.name==='Leather Breastplate')notes.push(`Leather Breastplate (${career(R,s).source.book==='core'?'core':career(R,s).source.book} p. ${career(R,s).page}) uses core Leather Jerkin statistics (p. 307), as agreed.`);
   if(e.weapon)weapons.push({...adjustedWeapon(e,d,R),carriedEnc:e.carriedEnc});
   if(e.armour)armour.push({...e.armour,key:e.key,label:e.name+(e.quantity>1?` ×${e.quantity}`:''),enc:e.enc,carriedEnc:e.weapon?0:e.carriedEnc,worn:e.worn,active:e.worn||(e.armour.locations==='Shield'&&e.placement==='equipped'),qualities:[e.armour.qualities,...modifierNames(e)].filter(Boolean).join(', '),itemQualities:e.qualities,itemFlaws:e.flaws});
   if(!e.weapon&&!e.armour)other.push({key:e.key,name:e.name+(e.quantity>1?` ×${e.quantity}`:''),origin:e.origin,enc:e.carriedEnc,worn:e.worn,placement:e.placement,qualities:e.qualities,flaws:e.flaws});

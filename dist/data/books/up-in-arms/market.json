@@ -1,0 +1,725 @@
+[
+  {
+    "id": "up-in-arms:item:theodolite",
+    "name": "Theodolite",
+    "page": 88,
+    "price": "6 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:ostrich-feather",
+    "name": "Ostrich Feather",
+    "page": 88,
+    "price": "3/–",
+    "enc": 0,
+    "availability": "Rare",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:compass",
+    "name": "Compass",
+    "page": 88,
+    "price": "10/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:bandoleer",
+    "name": "Bandoleer",
+    "page": 88,
+    "price": "6/–",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Packs and clothing",
+    "wearable": true
+  },
+  {
+    "id": "up-in-arms:item:slow-match-1-yard",
+    "name": "Slow Match (1 yard)",
+    "page": 88,
+    "price": "2d",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:fuse-1-yard",
+    "name": "Fuse (1 yard)",
+    "page": 88,
+    "price": "3d",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:bow-string",
+    "name": "Bow String",
+    "page": 88,
+    "price": "4/–",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:whetstone",
+    "name": "Whetstone",
+    "page": 88,
+    "price": "2/6",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:sealskin",
+    "name": "Sealskin",
+    "page": 88,
+    "price": "30/–",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Packs and clothing",
+    "wearable": true
+  },
+  {
+    "id": "up-in-arms:item:silk-underwear",
+    "name": "Silk Underwear",
+    "page": 88,
+    "price": "1GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Packs and clothing",
+    "wearable": true
+  },
+  {
+    "id": "up-in-arms:item:captain-brauns-multi-stove",
+    "name": "Captain Braun’s Multi-Stove",
+    "page": 88,
+    "price": "10/–",
+    "enc": 3,
+    "availability": "Scarce",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:captain-brauns-insta-boiler",
+    "name": "Captain Braun’s Insta-Boiler",
+    "page": 88,
+    "price": "6/–",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Trappings"
+  },
+  {
+    "id": "up-in-arms:item:axe",
+    "name": "Axe",
+    "page": 91,
+    "price": "10/–",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:ballock-knife",
+    "name": "Ballock Knife",
+    "page": 91,
+    "price": "16/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:club",
+    "name": "Club",
+    "page": 91,
+    "price": "4/–",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:mace",
+    "name": "Mace",
+    "page": 91,
+    "price": "15/–",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:military-pick",
+    "name": "Military Pick",
+    "page": 91,
+    "price": "15/–",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:scimitar",
+    "name": "Scimitar",
+    "page": 91,
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:warhammer",
+    "name": "Warhammer",
+    "page": 91,
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:pavise",
+    "name": "Pavise",
+    "page": 92,
+    "price": "3 GC 15/–",
+    "enc": 4,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:demi-lance",
+    "name": "Demi-Lance",
+    "page": 93,
+    "price": "1GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:sabre",
+    "name": "Sabre",
+    "page": 93,
+    "price": "2GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:smallsword",
+    "name": "Smallsword",
+    "page": 93,
+    "price": "4GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:spiked-gauntlet",
+    "name": "Spiked Gauntlet",
+    "page": 94,
+    "price": "2 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:locked-gauntlet",
+    "name": "Locked Gauntlet",
+    "page": 94,
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:sap",
+    "name": "Sap",
+    "page": 94,
+    "price": "1/–",
+    "enc": 0,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:weighted-net-2h",
+    "name": "Weighted Net (2H)",
+    "page": 95,
+    "price": "1GC 10/–",
+    "enc": 1,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:ahlspiess-2h",
+    "name": "Ahlspiess (2H)",
+    "page": 96,
+    "price": "2 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:bill-2h",
+    "name": "Bill (2H)",
+    "page": 96,
+    "price": "2 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:mancatcher-2h",
+    "name": "Mancatcher (2H)",
+    "page": 96,
+    "price": "2 GC",
+    "enc": 3,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:partizan-glaive-2h",
+    "name": "Partizan/Glaive (2H)",
+    "page": 96,
+    "price": "2 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:pollaxe-2h",
+    "name": "Pollaxe (2H)",
+    "page": 96,
+    "price": "2 GC",
+    "enc": 3,
+    "availability": "Scarce",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:flamberge-zweihander-2h",
+    "name": "Flamberge Zweihander (2H)",
+    "page": 98,
+    "price": "30GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:barbed-arrow-12",
+    "name": "Barbed Arrow (12)",
+    "page": 98,
+    "price": "8/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "–",
+      "qualities": "Impale, Slash (1A)"
+    },
+    "text": "BOW; Range: As weapon; Damage modifier: –; Qualities and Flaws: Impale, Slash (1A). Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:bodkin-arrow-12",
+    "name": "Bodkin Arrow (12)",
+    "page": 98,
+    "price": "8/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "–",
+      "qualities": "Impale, Penetrating"
+    },
+    "text": "BOW; Range: As weapon; Damage modifier: –; Qualities and Flaws: Impale, Penetrating. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:matchlock-handgun-2h",
+    "name": "Matchlock Handgun (2H)",
+    "page": 101,
+    "price": "2 GC",
+    "enc": 2,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:matchlock-blunderbuss-2h",
+    "name": "Matchlock Blunderbuss (2H)",
+    "page": 101,
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:arquebus-2h",
+    "name": "Arquebus (2H)",
+    "page": 101,
+    "price": "5 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:double-barrelled-handgun-2h",
+    "name": "Double-barrelled Handgun (2H)",
+    "page": 101,
+    "price": "7 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:griffonsfoot-pistol",
+    "name": "Griffonsfoot Pistol",
+    "page": 101,
+    "price": "20 GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:gun-axe-2h",
+    "name": "Gun Axe (2H)",
+    "page": 101,
+    "price": "8 GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:gun-halberd-2h",
+    "name": "Gun Halberd (2H)",
+    "page": 101,
+    "price": "10 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:pepperbox",
+    "name": "Pepperbox",
+    "page": 101,
+    "price": "12 GC",
+    "enc": 1,
+    "availability": "Rare",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:hand-mortar-2h",
+    "name": "Hand Mortar (2H)",
+    "page": 101,
+    "price": "50 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:cane-pistol",
+    "name": "Cane Pistol",
+    "page": 101,
+    "price": "15 GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Weapons"
+  },
+  {
+    "id": "up-in-arms:item:paper-cartridge-12",
+    "name": "Paper Cartridge (12)",
+    "page": 102,
+    "price": "5/-",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+1",
+      "qualities": "Impale, Penetrating"
+    },
+    "text": "BLACKPOWDER AND ENGINEERING; Range: As weapon; Damage modifier: +1; Qualities and Flaws: Impale, Penetrating. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:aqshy-infused-powder-12",
+    "name": "Aqshy-Infused Powder (12)",
+    "page": 102,
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "+10",
+      "damage": "+2",
+      "qualities": "Impale, Penetrating"
+    },
+    "text": "BLACKPOWDER AND ENGINEERING; Range: +10; Damage modifier: +2; Qualities and Flaws: Impale, Penetrating. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:precision-shot-and-powder",
+    "name": "Precision Shot and Powder",
+    "page": 102,
+    "price": "3/-",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+1",
+      "qualities": "Impale, Penetrating, Precise"
+    },
+    "text": "BLACKPOWDER AND ENGINEERING; Range: As weapon; Damage modifier: +1; Qualities and Flaws: Impale, Penetrating, Precise. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:scrap-and-powder-12",
+    "name": "Scrap and Powder (12)",
+    "page": 102,
+    "price": "2/-",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "Half Weapon",
+      "damage": "-1",
+      "qualities": "Spread +3, Infected"
+    },
+    "text": "BLACKPOWDER AND ENGINEERING; Range: Half Weapon; Damage modifier: -1; Qualities and Flaws: Spread +3, Infected. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:large-bullet-and-powder-12",
+    "name": "Large Bullet and Powder (12)",
+    "page": 102,
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As Weapon",
+      "damage": "+2",
+      "qualities": "Impale, Impact, Penetrating"
+    },
+    "text": "BLACKPOWDER AND ENGINEERING; Range: As Weapon; Damage modifier: +2; Qualities and Flaws: Impale, Impact, Penetrating. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:grapple",
+    "name": "Grapple",
+    "page": 102,
+    "price": "2 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "Half Weapon",
+      "damage": "+2",
+      "qualities": "Penetrating, Reload +2"
+    },
+    "text": "BLACKPOWDER AND ENGINEERING; Range: Half Weapon; Damage modifier: +2; Qualities and Flaws: Penetrating, Reload +2. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:ballista",
+    "name": "Ballista",
+    "page": 123,
+    "price": "30 GC",
+    "enc": 20,
+    "availability": "Scarce",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:cannon-small",
+    "name": "Cannon (small)",
+    "page": 123,
+    "price": "40 GC",
+    "enc": 30,
+    "availability": "Scarce",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:cannon-medium",
+    "name": "Cannon (medium)",
+    "page": 123,
+    "price": "100 GC",
+    "enc": 50,
+    "availability": "Exotic",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:cannon-large",
+    "name": "Cannon (large)",
+    "page": 123,
+    "price": "250 GC",
+    "enc": 75,
+    "availability": "Exotic",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:mortar",
+    "name": "Mortar",
+    "page": 123,
+    "price": "50 GC",
+    "enc": 50,
+    "availability": "Exotic",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:swivel-gun",
+    "name": "Swivel Gun",
+    "page": 123,
+    "price": "20 GC",
+    "enc": 5,
+    "availability": "Rare",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:catapult-small",
+    "name": "Catapult (small)",
+    "page": 123,
+    "price": "20 GC",
+    "enc": 25,
+    "availability": "Scarce",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:catapult-medium",
+    "name": "Catapult (medium)",
+    "page": 123,
+    "price": "40 GC",
+    "enc": 40,
+    "availability": "Scarce",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:catapult-large",
+    "name": "Catapult (large)",
+    "page": 123,
+    "price": "60 GC",
+    "enc": 65,
+    "availability": "Scarce",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:volley-gun",
+    "name": "Volley Gun",
+    "page": 123,
+    "price": "10 GC",
+    "enc": 5,
+    "availability": "Exotic",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:helblaster-volley-gun",
+    "name": "Helblaster Volley Gun",
+    "page": 123,
+    "price": "500 GC",
+    "enc": 85,
+    "availability": "Exotic",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:helstorm-rocket-battery",
+    "name": "Helstorm Rocket Battery",
+    "page": 123,
+    "price": "500 GC",
+    "enc": 75,
+    "availability": "Exotic",
+    "category": "Siege weapons"
+  },
+  {
+    "id": "up-in-arms:item:bolt-ballista",
+    "name": "Bolt (Ballista)",
+    "page": 124,
+    "price": "4/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Penetrating, Impale"
+    },
+    "text": "BALLISTA; Range: As weapon; Damage modifier: —; Qualities and Flaws: Penetrating, Impale. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:ball-and-powder-cannon",
+    "name": "Ball and Powder (Cannon)",
+    "page": 124,
+    "price": "8/–",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Blast +2, Impact"
+    },
+    "text": "CANNON; Range: As weapon; Damage modifier: —; Qualities and Flaws: Blast +2, Impact. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:grapeshot-and-powder-cannon",
+    "name": "Grapeshot and Powder (Cannon)",
+    "page": 124,
+    "price": "6/6",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "Quarter weapon",
+      "damage": "–2",
+      "qualities": "Spread +5"
+    },
+    "text": "CANNON; Range: Quarter weapon; Damage modifier: –2; Qualities and Flaws: Spread +5. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:stone-catapult",
+    "name": "Stone (Catapult)",
+    "page": 124,
+    "price": "8/–",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Damaging, Impact"
+    },
+    "text": "CATAPULT; Range: As weapon; Damage modifier: —; Qualities and Flaws: Damaging, Impact. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:bullets-and-powder-for-1-shot-swivel-gun",
+    "name": "Bullets and Powder for 1 shot (Swivel Gun)",
+    "page": 124,
+    "price": "2/2",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+1",
+      "qualities": "Impale, Penetrating, Spread +3"
+    },
+    "text": "SWIVEL GUN; Range: As weapon; Damage modifier: +1; Qualities and Flaws: Impale, Penetrating, Spread +3. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:small-shot-and-powder-for-1-shot-swivel-gun",
+    "name": "Small Shot and Powder for 1 shot (Swivel Gun)",
+    "page": 124,
+    "price": "2/2",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Spread +6"
+    },
+    "text": "SWIVEL GUN; Range: As weapon; Damage modifier: —; Qualities and Flaws: Spread +6. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  },
+  {
+    "id": "up-in-arms:item:rocket-helstorm-rocket",
+    "name": "Rocket (Helstorm Rocket)",
+    "page": 124,
+    "price": "5GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "—"
+    },
+    "text": "HELSTORM ROCKET; Range: As weapon; Damage modifier: —; Qualities and Flaws: —. Printed ammunition modifiers are reference data; no ammunition is assumed loaded."
+  }
+]

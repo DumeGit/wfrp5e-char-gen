@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"5b6cf2b16d5650db5f34";
+const CACHE=CACHE_PREFIX+"1360d540d5cf0a52d0e4";
 const ASSETS=[
  "app.js",
  "assets/LICENSE-pdf-lib.md",
@@ -21,6 +21,16 @@ const ASSETS=[
  "data/books/core/tables.json",
  "data/books/core/weapons.json",
  "data/books/index.json",
+ "data/books/up-in-arms/careers.json",
+ "data/books/up-in-arms/excluded-equipment.json",
+ "data/books/up-in-arms/manifest.json",
+ "data/books/up-in-arms/market.json",
+ "data/books/up-in-arms/origins.json",
+ "data/books/up-in-arms/rules.json",
+ "data/books/up-in-arms/spells.json",
+ "data/books/up-in-arms/tables.json",
+ "data/books/up-in-arms/talents.json",
+ "data/books/up-in-arms/weapons.json",
  "data/career-rolls.json",
  "data/careers.json",
  "data/gear.json",
@@ -37,7 +47,9 @@ const ASSETS=[
  "inventory.mjs",
  "manifest.webmanifest",
  "market.mjs",
+ "origins.mjs",
  "pwa.mjs",
+ "regional-careers.mjs",
  "rules.mjs",
  "sources.mjs",
  "styles.css",

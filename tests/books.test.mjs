@@ -115,7 +115,8 @@ test('loader rejects duplicate registry entries and paths outside published book
 test('book selector lists real registered books, mandatory core and opt-in variants',()=>{
  const p=additions(),lib=withPack(p),s=soldier(),html=bookPanel(lib,R,s);
  assert.match(html,/data-book="core" checked disabled/);assert.match(html,/data-book="fixture"\s*>/);assert.match(html,/Changing books starts a new character/);
- assert.ok(!bookPanel(library,R,s).includes('data-action="apply-books"'));
+ assert.ok(bookPanel(library,R,s).includes('data-action="apply-books"'));
+ assert.ok(!bookPanel({...library,packs:library.packs.filter(p=>p.manifest.kind==='core')},R,s).includes('data-action="apply-books"'));
 });
 test('a supplement character fills the editable PDF with book-specific references',async()=>{
  globalThis.PDFLib=PDFLib;const on=assembleBooks(withPack(additions()),['fixture']),s=soldier();s.career='fixture:soldier';s.freeTalent='Fixture Talent';s.books=bookSelection(on);buyTrapping(on,s,'fixture:blade');

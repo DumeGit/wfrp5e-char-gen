@@ -1,0 +1,115 @@
+[
+  {
+    "id": "up-in-arms:skills:trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Fletcher",
+      "Miner",
+      "Weaponsmith",
+      "Armourer"
+    ],
+    "page": 10,
+    "reason": "Additional specialisations explicitly printed in the new Careers; individual Career pages identify their uses."
+  },
+  {
+    "id": "up-in-arms:skills:perform",
+    "path": [
+      "skillOptions",
+      "Perform"
+    ],
+    "operation": "append",
+    "value": [
+      "Parade",
+      "Dance"
+    ],
+    "page": 14,
+    "reason": "Additional specialisations explicitly printed in the new Careers; individual Career pages identify their uses."
+  },
+  {
+    "id": "up-in-arms:skills:ranged",
+    "path": [
+      "skillOptions",
+      "Ranged"
+    ],
+    "operation": "append",
+    "value": [
+      "Catapult"
+    ],
+    "page": 46,
+    "reason": "Additional specialisations explicitly printed in the new Careers; individual Career pages identify their uses."
+  },
+  {
+    "id": "up-in-arms:skills:lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Artillery",
+      "Empire",
+      "Tilea"
+    ],
+    "page": 18,
+    "reason": "Additional specialisations explicitly printed in the new Careers; individual Career pages identify their uses. Lore (Tilea) is the regional creation option on p. 55."
+  },
+  {
+    "id": "up-in-arms:skills:art",
+    "path": [
+      "skillOptions",
+      "Art"
+    ],
+    "operation": "append",
+    "value": [
+      "Cartography"
+    ],
+    "page": 22,
+    "reason": "Additional specialisations explicitly printed in the new Careers; individual Career pages identify their uses."
+  },
+  {
+    "id": "up-in-arms:skills:secret-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "append",
+    "value": [
+      "Blazing Sun",
+      "Ulric",
+      "Knights Panther"
+    ],
+    "page": 32,
+    "reason": "Additional specialisations explicitly printed in the new Careers; individual Career pages identify their uses."
+  },
+  {
+    "id": "up-in-arms:talent-options:fearless",
+    "path": [
+      "talentOptions",
+      "Fearless"
+    ],
+    "operation": "append",
+    "value": [
+      "Chaos",
+      "Cavalry"
+    ],
+    "page": 36,
+    "reason": "Additional specialisations explicitly printed in Up in Arms Careers."
+  },
+  {
+    "id": "up-in-arms:talent-options:etiquette",
+    "path": [
+      "talentOptions",
+      "Etiquette"
+    ],
+    "operation": "append",
+    "value": [
+      "Mercenaries"
+    ],
+    "page": 48,
+    "reason": "Additional specialisations explicitly printed in Up in Arms Careers."
+  }
+]

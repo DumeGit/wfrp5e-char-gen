@@ -1,3 +1,4 @@
+import {creationBackground} from './origins.mjs';
 export function appearanceSummary(s){return [s.appearance,s.background?.eyes?`Eyes: ${s.background.eyes}`:'',s.background?.hair?`Hair: ${s.background.hair}`:'',s.background?.clan?`Clan: ${s.background.clan}`:''].filter(Boolean).join('; ');}
 export function setAgeHeight(s,age,height){
  // Replace generated prefixes, including duplicates left by older versions.
@@ -16,6 +17,6 @@ export function setNamePart(s,key,value){
  s.identity={...nameParts(s),[key]:value};
  s.name=[s.identity.forename.trim(),s.identity.surname.trim()].filter(Boolean).join(' ');
 }
-export function suggestion(R,s,kind,roll){const choices=R.background?.[s.species]?.[kind]||[];if(!choices.length)throw Error('No book suggestions for this choice.');const n=roll(choices.length,R.background[s.species].page,kind,R.background[s.species].source);return choices[n-1];}
+export function suggestion(R,s,kind,roll){const b=creationBackground(R,s),choices=b?.[kind]||[];if(!choices.length)throw Error('No book suggestions for this choice.');const source=['forenames','surnames'].includes(kind)?b.source:R.background[s.species].source;const n=roll(choices.length,source.page,kind,source);return choices[n-1];}
 export function suggestedName(R,s,roll){return [suggestion(R,s,'forenames',roll),suggestion(R,s,'surnames',roll)].map(bookName).join(' ');}
 export function doomingResult(R,n){return R.background.doomings.find(x=>n>=x.min&&n<=x.max);}
