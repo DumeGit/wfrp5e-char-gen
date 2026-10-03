@@ -114,3 +114,10 @@ Regression coverage includes the audit cases, complete 1,000 XP Soldier creation
 
 
 Origins integrates first name and surname/epithet directly into the main form. Each can be typed, selected from the Species’ printed suggestions, or rolled independently; a full-name roll is also available. Name parts update the folio and saved/exported full name immediately. Old full names remain unchanged until a part is edited, and multiword custom names persist as separate parts. Eye colour, hair colour and Dwarf clan use the same editable book-list and roll controls. Rolls choose uniformly from printed lists and retain their page references; they are suggestions, not invented rulebook roll tables.
+
+
+## Archives of the Empire I
+
+Enable **Archives of the Empire: Volume I** in Origins → Books & options to add four Careers, twelve Halfling clan profiles, Mootland origin, three Eonir kindreds, fourteen weapons and four ammunition entries. It works with core alone or with Up in Arms. Fifth Edition creation and advancement remain authoritative; reviewed user decisions, source pages, exclusions and limitations are documented in [docs/ARCHIVES-I.md](docs/ARCHIVES-I.md).
+
+Cityborn uses High Elf Careers while retaining Wood Elf starting benefits. Younger receives Youngblood as an additional kindred Talent. Mootland access and Thorncobble Noble Blood requirements are checked before export; Badger Rider's gaming-table approval requirement is explained. Lip Reading's erroneous Skill entry remains visibly unavailable. Existing core equipment is unchanged; when both supplements are enabled the Up in Arms Precision Shot and Powder price takes precedence, as agreed. Exports include the complete source and conversion record.

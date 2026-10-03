@@ -1,11 +1,12 @@
 import {randomTable} from './books.mjs';
 import {sourceLabel} from './sources.mjs';
+import {careerSpecies} from './origins.mjs';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function bookPanel(library,R,s){
  const enabled=new Set(R.selection.map(x=>x.id));
  const choices=library.packs.map(({manifest:b})=>`<label class="book-choice"><input type="checkbox" data-book="${esc(b.id)}" ${enabled.has(b.id)?'checked':''} ${b.kind==='core'?'disabled':''}><span><strong>${esc(b.title)}</strong><small>${b.kind==='core'?'Required core rules':b.kind==='variant'?'Optional rule variant':'Additional character options'} · ${esc(b.shortTitle||b.id)}</small></span></label>`).join('');
  const tables=['species','career','talent'].map(kind=>{
-  const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===s.species));
+  const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s)));
   if(available.length<2)return '';
   const active=randomTable(R,s,kind);
   return `<div class="field"><label for="table-${kind}">${kind==='talent'?'Random Talents':kind==='species'?'Species':'Career'} roll table</label><select id="table-${kind}" data-bind="rollTable" data-key="${kind}">${available.map(x=>`<option value="${esc(x.id)}" ${x.id===active?.id?'selected':''}>${esc(x.name+' · '+sourceLabel(R,x))}</option>`).join('')}</select></div>`;

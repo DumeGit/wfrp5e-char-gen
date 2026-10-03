@@ -1,0 +1,499 @@
+[
+  {
+    "id": "archives-i:career:ghost-strider",
+    "name": "Ghost Strider",
+    "class": "Ranger",
+    "species": [
+      "Wood Elf"
+    ],
+    "page": 88,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": 1,
+      "S": 4,
+      "T": null,
+      "I": null,
+      "Ag": 1,
+      "Dex": 2,
+      "Int": 1,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Forest Ranger",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Lore (Beasts)",
+          "Navigation",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Bow)",
+          "Stealth (Any)",
+          "Trade (Bowyer)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Fleet-footed",
+          "Shadow",
+          "Striding Gait (Woodlands)"
+        ],
+        "trappings": [
+          "Backpack",
+          "Hooded Cloak",
+          "Longbow and 10 arrows",
+          "Trade tools (Bowyer)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Ghost Strider",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Athletics",
+          "Charm Animal",
+          "Melee (Basic)",
+          "Secret Signs (Ranger)",
+          "Set Trap",
+          "Swim",
+          "Track"
+        ],
+        "talents": [
+          "Animal Affinity",
+          "Fast Shot",
+          "Orientation",
+          "Scale Sheer Surface"
+        ],
+        "trappings": [
+          "Personally crafted Elf Bow and 10 arrows",
+          "Selection of Traps",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Windwraith",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Endurance",
+          "Dodge"
+        ],
+        "talents": [
+          "Catfall",
+          "Combat Aware",
+          "Strike Mighty Blow",
+          "Sharpshooter"
+        ],
+        "trappings": [
+          "Elf Bow and Leather Armour with at least 1 Quality each",
+          "10 Elf Arrows"
+        ],
+        "unavailableSkills": [
+          {
+            "name": "Lip Reading",
+            "reason": "Unavailable: printed as a Skill on p. 88, but Lip Reading is a Talent in the Fifth Edition core (p. 122). This Career entry cannot grant a Skill Advance or an additional Talent."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Forest’s Wrath",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Intimidate",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Deadeye Shot",
+          "Hatred (Any)",
+          "Sniper",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Trophy of a Legendary Enemy",
+          "Signature Elf Arrows (For Worthy Prey)",
+          "Fearsome Reputation"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, tracker advancement and core Talent definitions apply. The printed eight first-level Skill options are retained. Fleet Footed → Fleet-footed; Strider (Woodlands) → Striding Gait (Woodlands); Scale sheer Surface → Scale Sheer Surface; Lip Reading Skill entry remains unavailable; no Skill or extra Talent is granted.",
+    "randomAlternativeFor": "bounty-hunter"
+  },
+  {
+    "id": "archives-i:career:fieldwarden",
+    "name": "Fieldwarden",
+    "class": "Ranger",
+    "species": [
+      "Halfling"
+    ],
+    "page": 89,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": 1,
+      "S": null,
+      "T": 4,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 2,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Novice Warden",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Gossip",
+          "Intuition",
+          "Lore (Moot)",
+          "Navigation",
+          "Perception",
+          "Ranged (Sling)",
+          "Trade (Any)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Careful Strike",
+          "Distract",
+          "Fast Shot",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Backpack",
+          "Tent",
+          "Map of local area",
+          "Sling with 10 stones",
+          "Trade Tools (as Trade)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Field Warden",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Dodge",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Secret Signs (Scout)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Drilled",
+          "Nose for Trouble",
+          "Orientation"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Hand Weapon",
+          "Lantern with Oil"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Field Warden Sergeant",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Cool",
+          "Endurance",
+          "Lore (Necromancy)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Fleet-footed",
+          "Hardy",
+          "Night Vision",
+          "Rover"
+        ],
+        "trappings": [
+          "Quality Mail Shirt",
+          "Squad of Novice Wardens"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Field Warden Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Fearless (Any)",
+          "Hatred (Undead)",
+          "Inspiring",
+          "Robust",
+          "Savant (Moot)"
+        ],
+        "trappings": [
+          "Garrison of Experienced Field Wardens",
+          "Respect of the Community"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, tracker advancement and core Talent definitions apply. The printed eight first-level Skill options are retained. Fearless → Fearless (Any); Savant (Moot terrain) → Savant (Moot).",
+    "randomAlternativeFor": "roadwarden",
+    "requiredOrigins": [
+      "archives-i:origin:mootland"
+    ],
+    "text": "Requires a Mootland Halfling (p. 87)."
+  },
+  {
+    "id": "archives-i:career:karak-ranger",
+    "name": "Karak Ranger",
+    "class": "Ranger",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 90,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": 3,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Hold Runner",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Dodge",
+          "Endurance",
+          "Trade (Cartographer)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Row"
+        ],
+        "talents": [
+          "Implacable",
+          "Orientation",
+          "Striding Gait (Any)",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Backpack",
+          "Hand Weapon",
+          "Leather Jack",
+          "Trade tools (Cartographer)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Karak Ranger",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm Animal",
+          "Intuition",
+          "Ranged (Blackpowder)",
+          "Secret Signs (Scout, Ranger)",
+          "Track"
+        ],
+        "talents": [
+          "Strike Mighty Blow",
+          "Scale Sheer Surface",
+          "Nose for Trouble",
+          "Rover"
+        ],
+        "trappings": [
+          "Blackpowder Weapon with Ammunition",
+          "Grappling Hook & Rope"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Karak Pathkeeper",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Lore (Engineering)",
+          "Stealth (Underground)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Enclosed Fighter",
+          "River Guide",
+          "Gunner",
+          "Strong Legs"
+        ],
+        "trappings": [
+          "Tools (Masonry)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Karak Mountain Strider",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Cool",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Tinker",
+          "Savant (Dwarf Holds and Routes)",
+          "Robust",
+          "Tenacious"
+        ],
+        "trappings": [
+          "4 Apprentice Hold Runners",
+          "Maps",
+          "Souvenirs from many Travels."
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, tracker advancement and core Talent definitions apply. The printed eight first-level Skill options are retained. Strider (any) → Striding Gait (Any).",
+    "randomAlternativeFor": "messenger"
+  },
+  {
+    "id": "archives-i:career:badger-rider",
+    "name": "Badger Rider",
+    "class": "Warrior",
+    "species": [
+      "Halfling"
+    ],
+    "page": 91,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": 1,
+      "S": 3,
+      "T": null,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Badger Botherer",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Training (Badgers)",
+          "Charm Animal",
+          "Dodge",
+          "Gossip",
+          "Perception",
+          "Ranged (Sling)",
+          "Ride (Badger)",
+          "Trade (Any)"
+        ],
+        "talents": [
+          "Fast Shot",
+          "Flee!",
+          "Marksman",
+          "Roughrider"
+        ],
+        "trappings": [
+          "Backpack",
+          "Leather Jack",
+          "Sling",
+          "Tamed Badger with Saddle/Tack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Badger Rider",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Charm",
+          "Cool",
+          "Endurance",
+          "Melee (Basic)",
+          "Navigation",
+          "Ranged (Entangling)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Rover",
+          "Seasoned Traveller",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Saddlebags",
+          "Boiled Leather Breastplate",
+          "Entangling OR Throwing weapon"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Badger Sergeant",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Intimidate",
+          "Melee (Cavalry)",
+          "Outdoor Survival",
+          "Track"
+        ],
+        "talents": [
+          "Distract",
+          "Resolute",
+          "Trick Rider",
+          "Tunnel Fighter"
+        ],
+        "trappings": [
+          "Badger Barding (2AP on head and torso)",
+          "Melee Weapon (Basic OR Cavalry)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Badger Master",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Consume Alcohol",
+          "Leadership"
+        ],
+        "talents": [
+          "Carouser",
+          "Frightening",
+          "Inspiring",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Large Tame Badger (Mootland Spotted Pony-Badger)",
+          "A Squire (Badger Botherer)",
+          "Plate Armour",
+          "Sense of Humour"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, tracker advancement and core Talent definitions apply. The printed eight first-level Skill options are retained. Trick Riding → Trick Rider; Tunnel Rat → Tunnel Fighter.",
+    "randomAlternativeFor": "soldier",
+    "requiredOrigins": [
+      "archives-i:origin:mootland"
+    ],
+    "text": "Requires a Mootland Halfling (p. 87). At creation, convince your GM that Badger Riders are real and attempt the badger’s terrifying war cry for the other players (p. 87). GM approval is required."
+  }
+]

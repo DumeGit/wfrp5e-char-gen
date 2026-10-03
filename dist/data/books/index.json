@@ -9,6 +9,10 @@
     {
       "id": "up-in-arms",
       "path": "up-in-arms/manifest.json"
+    },
+    {
+      "id": "archives-i",
+      "path": "archives-i/manifest.json"
     }
   ]
 }

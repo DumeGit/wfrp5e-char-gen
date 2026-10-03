@@ -1,0 +1,484 @@
+[
+  {
+    "id": "archives-i:origin:ashfield",
+    "name": "Ashfield clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Cool",
+      "Intuition",
+      "Language (Haffennaff)",
+      "Ranged (Any)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Acute Sense (Sight)",
+        "Etiquette (Soldiers)"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:brambledown",
+    "name": "Brambledown clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Language (Haffennaff)",
+      "Navigation",
+      "Outdoor Survival",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Gregarious",
+        "Seasoned Traveller"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:brandysnap",
+    "name": "Brandysnap clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Animal Care",
+      "Gamble",
+      "Language (Haffennaff)",
+      "Lore (Herbs)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Craftsman (Farmer)",
+        "Sturdy"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:hayfoot",
+    "name": "Hayfoot clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Gamble",
+      "Haggle",
+      "Evaluate",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Dealmaker",
+        "Etiquette (Guilders)"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:hollyfoot",
+    "name": "Hollyfoot clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Evaluate",
+      "Haggle",
+      "Language (Haffennaff)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Craftsman (Any)",
+        "Nimble-fingered"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:hayfoot-hollyfoot",
+    "name": "Hayfoot-Hollyfoot clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Bribery",
+      "Haggle",
+      "Gossip",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Argumentative",
+        "Numismatics"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:lostpockets",
+    "name": "Lostpockets clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Endurance",
+      "Gamble",
+      "Gossip",
+      "Intuition"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Hardy",
+        "Stone Soup"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:lowhaven",
+    "name": "Lowhaven clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Bribery",
+      "Haggle",
+      "Intimidate",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Criminal",
+        "Etiquette (Criminals)",
+        "Etiquette (Guilders)"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:rumster",
+    "name": "Rumster clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Endurance",
+      "Gossip",
+      "Haggle",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Craftsman (Cook)",
+        "Dealmaker"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:skelfsider",
+    "name": "Skelfsider clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Endurance",
+      "Gamble",
+      "Gossip",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Beneath Notice",
+        "Etiquette (Servants)"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:thorncobble",
+    "name": "Thorncobble clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Gossip",
+      "Leadership",
+      "Lore (Heraldry)",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Etiquette (Nobles)",
+        "Etiquette (Scholars)",
+        "Read/Write"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents.",
+    "additionalCareers": [
+      {
+        "career": "noble",
+        "requiredTalent": "Noble Blood",
+        "reason": "Noble requires Noble Blood for a Thorncobble Halfling at creation (Archives I p. 31). Choose it as your free Career Talent or acquire it with XP before exporting."
+      }
+    ],
+    "text": "A Thorncobble with Noble Blood may enter Noble at character creation (p. 31). Choose Noble in the Career step; Noble Blood is required before export."
+  },
+  {
+    "id": "archives-i:origin:tumbleberry",
+    "name": "Tumbleberry clan (Reikland)",
+    "species": "Halfling",
+    "page": 32,
+    "skills": [
+      "Charm",
+      "Consume Alcohol",
+      "Lore (Reikland)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Any)",
+      "Trade (Cook)",
+      "Gossip",
+      "Haggle",
+      "Lore (Any)",
+      "Language (Haffennaff)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Taste)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Etiquette (Burghers)",
+        "Etiquette (Guilders)",
+        "Read/Write"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core native Haffennaff and Reikspiel and core physical attributes. Printed Mootish uses Haffennaff, Resistance uses Resistant, and Small is omitted because core Halfling size is handled separately. One clan Talent replaces one of the core two random Talents; total five Species Talents."
+  },
+  {
+    "id": "archives-i:origin:mootland",
+    "name": "Mootland",
+    "species": "Halfling",
+    "page": 87,
+    "text": "Mootland Halflings may choose Fieldwarden or, with GM approval and the printed war-cry requirement, Badger Rider. A random Road Warden or Soldier result may optionally be exchanged for the corresponding Career (p. 87).",
+    "conversion": "User approved an explicit Mootland origin to enforce the regional Career restrictions. Core Halfling Skills, Talents, native languages and physical attributes remain unchanged; no Reikland clan profile is assumed."
+  },
+  {
+    "id": "archives-i:origin:eonir-forestborn",
+    "name": "Eonir — Forestborn (Faniour)",
+    "species": "Wood Elf",
+    "page": 78,
+    "sheetSpecies": "Wood Elf (Eonir)",
+    "conversion": "User approved Wood Elf starting attributes, Skills, Talents and physical details for all Eonir kindreds. Career availability and the default core Career table follow High Elf for Cityborn and Wood Elf for the other kindreds. No Species probabilities are changed."
+  },
+  {
+    "id": "archives-i:origin:eonir-cityborn",
+    "name": "Eonir — Cityborn (Toriour)",
+    "species": "Wood Elf",
+    "page": 78,
+    "sheetSpecies": "Wood Elf (Eonir)",
+    "conversion": "User approved Wood Elf starting attributes, Skills, Talents and physical details for all Eonir kindreds. Career availability and the default core Career table follow High Elf for Cityborn and Wood Elf for the other kindreds. No Species probabilities are changed.",
+    "careerSpecies": "High Elf",
+    "classNote": "Cityborn",
+    "text": "Cityborn is a GM option. Use High Elf Careers, while retaining Wood Elf starting attributes. Your sheet identifies you as Wood Elf (Eonir), with Cityborn on the Class line (p. 78)."
+  },
+  {
+    "id": "archives-i:origin:eonir-younger",
+    "name": "Eonir — Younger (Harioth)",
+    "species": "Wood Elf",
+    "page": 78,
+    "sheetSpecies": "Wood Elf (Eonir)",
+    "conversion": "User approved Wood Elf starting attributes, Skills, Talents and physical details for all Eonir kindreds. Career availability and the default core Career table follow High Elf for Cityborn and Wood Elf for the other kindreds. No Species probabilities are changed. Youngblood is an explicitly additional zero-XP kindred grant, maximum 1; its contextual lower-Status rule is reference text, not a campaign status manager.",
+    "grantedTalents": [
+      "Youngblood"
+    ],
+    "text": "Younger kindred uses Wood Elf Careers and receives the additional Youngblood Talent. You are considered lower Status than other Eonir unless they also have Youngblood (p. 78). This contextual comparison does not change your normal Career Status."
+  }
+]

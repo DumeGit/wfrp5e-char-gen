@@ -4,4 +4,9 @@ export function creationSpecies(R,s){const sp=R.species[s.species],o=originProfi
 export function creationBackground(R,s){const b=R.background[s.species],o=originProfile(R,s);return o?.background?{...b,...o.background,source:{book:o.source.book,page:o.background.page}}:b;}
 export function startingTalentReplacement(R,s){const o=originProfile(R,s);return o?.optionalTalent&&typeof s.originTalentSlot==='string'?{slot:s.originTalentSlot,talent:o.optionalTalent}:null;}
 export function careerRefinementTable(R,s,id=s.career){return (R.tables||[]).find(x=>x.kind==='career-refinement'&&x.career===id)||null;}
-export function regionalCareerChoices(R,s,id=s.career){return originProfile(R,s)?.careerChoices?.[id]||[];}
+export function regionalCareerChoices(R,s,id=s.career){return [...new Set([...(originProfile(R,s)?.careerChoices?.[id]||[]),...(s.careerMode==='choose'?[]:R.careers.filter(c=>c.randomAlternativeFor===id&&careerAvailable(R,s,c)).map(c=>c.id))])];}
+export function careerSpecies(R,s){return originProfile(R,s)?.careerSpecies||s.species;}
+export function careerAvailable(R,s,c){if(c.requiredOrigins&&!c.requiredOrigins.includes(s.origin))return false;return c.species.includes(careerSpecies(R,s))||!!originProfile(R,s)?.additionalCareers?.some(x=>x.career===c.id);}
+export function careerCreationIssue(R,s,talents){const grant=originProfile(R,s)?.additionalCareers?.find(x=>x.career===s.career);return grant?.requiredTalent&&!talents.includes(grant.requiredTalent)?grant.reason:'';}
+export function sheetSpecies(R,s){return originProfile(R,s)?.sheetSpecies||s.species;}
+export function sheetClass(R,s,c){const note=originProfile(R,s)?.classNote;return c.class+(note?` (${note})`:'');}

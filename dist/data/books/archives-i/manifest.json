@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "archives-i",
+  "title": "Archives of the Empire: Volume I",
+  "shortTitle": "Archives I",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Archives of the Empire - Vol I.pdf",
+    "sha256": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Current Fifth Edition creation allocations, advancement and core Talent definitions govern.",
+      "Clan profiles use the user-approved five-Talent adaptation: omit old Small, use Resistant (Chaos), one clan choice and one random Talent; Mootish is recorded as Haffennaff.",
+      "Fearless without a printed group offers core enemy choices. Savant (Moot terrain) uses Savant (Moot); Savant (Dwarf Holds and Routes) retains the core owned-Lore requirement.",
+      "User approved all three Eonir kindreds with Wood Elf starting attributes; Cityborn follows High Elf Careers and records its kindred on the Class line. Younger receives the additional Youngblood Talent, maximum 1.",
+      "Existing core equipment is unchanged. New profiles retain printed properties; contextual combat effects are described. Challenging (+0) becomes +0 SL under core Appendix I p. 364.",
+      "If Up in Arms is also enabled, its Precision Shot and Powder price (3 shillings, p. 102) takes precedence over this book's 3-penny price (p. 93), by user instruction."
+    ]
+  },
+  "notes": [
+    "Only creator-relevant material is integrated. NPCs, settlements, adventure hooks and campaign activity remain outside this character creator.",
+    "Descriptive or unpriced Trappings retain their printed names; no missing weights, prices, quantities or animal statistics are invented."
+  ],
+  "files": {
+    "careers": "careers.json",
+    "talents": "talents.json",
+    "origins": "origins.json",
+    "rules": "rules.json",
+    "market": "market.json",
+    "weapons": "weapons.json"
+  }
+}

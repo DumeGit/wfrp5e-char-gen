@@ -13,7 +13,7 @@ The app loads a registered core pack plus explicitly selected supplements/varian
 
 ## Manifest and registry
 
-The core book and Up in Arms are installed. The supplement's reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
+The core book, Up in Arms and Archives of the Empire I are installed. The supplement's reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md) and [ARCHIVES-I.md](ARCHIVES-I.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
 
 Every manifest has `schemaVersion: 1`, an ID (`lowercase-hyphenated` recommended), title, shortTitle, edition (4 or 5), version, kind (`core`, `supplement`, `variant`), dependsOn, source (`file`, `sha256`) and files. Fourth Edition packs also require `compatibility: {reviewed: true, notes: [...]}` with a nonempty review. The format only checks that a review was recorded; the integrator remains responsible for its accuracy.
 
@@ -97,3 +97,12 @@ Regional origins require a Species reference and page. Optional fields are `lang
 New equipment can carry `text`, `wearable: true`, and `ammunition: {range, damage, qualities}`. The ammunition fields are reference descriptions, not a loaded-ammunition or combat calculation. Weapon records also support `text`. Unknown fields still fail validation.
 
 Source labels in the interface and companion record include book and printed page. Tiny preprinted PDF page fields keep just page numbers to avoid clipping; Notes identify the books/Career source, and the attached record provides complete Talent, magic, equipment, conversions, rule changes and book hashes. Saved character files contain the enabled book versions and explicit table selections. The offline build includes every registered pack file, including disabled packs, so selecting installed books and exporting remain available without a network. No arbitrary PDF-upload importer is added to the app: extraction/integration happens during development.
+
+
+## Kindreds, conditional Careers and explicit duplicate precedence
+
+Origins support `careerSpecies` to choose a different core Species Career catalog/table while retaining physical Species benefits, `sheetSpecies` and `classNote` for exported labels, `grantedTalents` for explicitly additional creation grants, `text` for contextual requirements, and `additionalCareers` records `{career, requiredTalent, reason}`. The latter requires its Talent before creation is complete, but can expose a Career during selection so its free first-level Talent can satisfy the requirement. Unknown references fail validation.
+
+Careers support `requiredOrigins`, `randomAlternativeFor` and `text`. Printed random-result substitutions are optional choices and preserve the original random bonus method. Career levels may retain `unavailableSkills: [{name, reason}]`; these are explanatory disabled entries, never actual Skill options or bonus Talents. Unknown Career-level mechanics fail validation.
+
+An explicitly approved same-name option may declare `supersededBy: {book, contentId, reason}`. The loader checks the installed target's same-name content in the same category. If that book is selected, the declaring entry is omitted and its reason recorded; otherwise it remains available. This supports Archives I/Up in Arms' agreed ammunition-price precedence without requiring Up in Arms to be enabled or relying on load order. Ordinary same-name conflicts remain errors.

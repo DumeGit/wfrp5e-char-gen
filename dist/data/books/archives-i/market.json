@@ -1,0 +1,207 @@
+[
+  {
+    "id": "archives-i:item:eonir-war-blade",
+    "name": "Eonir War Blade",
+    "page": 92,
+    "price": "3GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:eonir-spear-2h",
+    "name": "Eonir Spear (2H)",
+    "page": 92,
+    "price": "2GC",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:wildwood-sword-2h",
+    "name": "Wildwood Sword (2H)",
+    "page": 92,
+    "price": "10GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:bearded-axe",
+    "name": "Bearded Axe",
+    "page": 92,
+    "price": "1GC",
+    "enc": 2,
+    "availability": "Common",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:dwarf-hammer",
+    "name": "Dwarf Hammer",
+    "page": 92,
+    "price": "3 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:slayer-s-axe-2h",
+    "name": "Slayer's Axe (2H)",
+    "page": 92,
+    "price": "12GC",
+    "enc": 4,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:nan-s-cleaver",
+    "name": "Nan's Cleaver",
+    "page": 92,
+    "price": "1GC",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:iron-skillet",
+    "name": "Iron Skillet",
+    "page": 92,
+    "price": "1GC",
+    "enc": 1,
+    "availability": "Common",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:dwarf-handgun-2h",
+    "name": "Dwarf Handgun (2H)",
+    "page": 93,
+    "price": "9GC",
+    "enc": 2,
+    "availability": "Rare",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:dwarf-pistol",
+    "name": "Dwarf Pistol",
+    "page": 93,
+    "price": "18GC",
+    "enc": 1,
+    "availability": "Rare",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:dwarf-crossbow-2h",
+    "name": "Dwarf Crossbow (2H)",
+    "page": 93,
+    "price": "9GC",
+    "enc": 3,
+    "availability": "Rare",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:drakefire-pistol",
+    "name": "Drakefire Pistol",
+    "page": 93,
+    "price": "25GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:cinderblast-bomb",
+    "name": "Cinderblast Bomb",
+    "page": 93,
+    "price": "3GC",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM."
+  },
+  {
+    "id": "archives-i:item:blackbriar-javelin",
+    "name": "Blackbriar Javelin",
+    "page": 93,
+    "price": "2GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM. The printed Challenging (+0) Test Difficulty is converted to +0 SL under core Appendix I p. 364."
+  },
+  {
+    "id": "archives-i:item:drakefire-shot-12",
+    "name": "Drakefire Shot (12)",
+    "page": 93,
+    "price": "4/-",
+    "enc": 0,
+    "availability": "Rare",
+    "category": "Ammunition",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM. Intended for Drakefire Pistols. In another Blackpowder weapon it functions once before exploding in the user’s hands; resolve every shot as a Fumble (p. 94).",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+2",
+      "qualities": "Damaging"
+    }
+  },
+  {
+    "id": "archives-i:item:precision-shot-and-powder",
+    "name": "Precision Shot and Powder",
+    "page": 93,
+    "price": "3d",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Ammunition",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM.",
+    "supersededBy": {
+      "book": "up-in-arms",
+      "contentId": "up-in-arms:item:precision-shot-and-powder",
+      "reason": "User-approved price precedence: when both books are enabled, use Up in Arms p. 102 (3 shillings) instead of Archives I p. 93 (3 pennies). The ammunition modifiers are identical."
+    },
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+1",
+      "qualities": "Impale, Penetrating, Precise"
+    }
+  },
+  {
+    "id": "archives-i:item:starfire-shafts-12",
+    "name": "Starfire Shafts (12)",
+    "page": 93,
+    "price": "8/-",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM. Critical hits also inflict an Ablaze condition (p. 93).",
+    "ammunition": {
+      "range": "+50",
+      "damage": "–",
+      "qualities": "Accurate, Impale"
+    }
+  },
+  {
+    "id": "archives-i:item:swiftshiver-shafts-12",
+    "name": "Swiftshiver Shafts (12)",
+    "page": 93,
+    "price": "6/-",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Ammunition",
+    "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM. To use Blast 1, expend an additional Swiftshiver arrow per target before making the attack Test (p. 93).",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+1",
+      "qualities": "Blast 1, Penetrating"
+    }
+  }
+]

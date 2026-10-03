@@ -9,7 +9,7 @@ export function itemParts(text){
  const container=text.match(/^(.+?) containing (.+)$/);if(container){const root=itemParts(container[1])[0];return [root,...container[2].split(/,\s*| and /).flatMap(itemParts).map(x=>({...x,inContainer:true}))];}
  if(text.includes(' and ')&&!['Pipe and Tobacco','Saddle and Harness'].includes(text))return text.split(' and ').flatMap(itemParts);
  const ammo=text.match(/^(.+?) with (\d+ .+)$/);if(ammo)return [...itemParts(ammo[1]),...itemParts(ammo[2])];
- const amount=text.match(/^(\d+|\{?\d+d10\}?) (.+)$/);if(amount&&!coinValue(text))return [{name:UNITS[amount[2]]||amount[2],quantity:/d10/.test(amount[1])?null:Number(amount[1])}];
+ const amount=text.match(/^(\d+|\{?\d+d10\}?) (.+)$/);if(amount&&!coinValue(text))return [{name:UNITS[amount[2]]||Object.entries(UNITS).find(([k])=>k.toLowerCase()===amount[2].toLowerCase())?.[1]||amount[2],quantity:/d10/.test(amount[1])?null:Number(amount[1])}];
  return [{name:text,quantity:1}];
 }
 export function itemModifiers(value={}){const qualities=[...new Set((value.qualities||[]).filter(x=>ITEM_QUALITIES.includes(x)))],flaws=[...new Set((value.flaws||[]).filter(x=>ITEM_FLAWS.includes(x)))];const ranks=Object.fromEntries(['Durable','Fine'].filter(x=>qualities.includes(x)).map(x=>[x,Number.isInteger(value.ranks?.[x])&&value.ranks[x]>0?value.ranks[x]:1]));return {qualities,flaws,ranks};}

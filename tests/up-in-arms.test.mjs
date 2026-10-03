@@ -71,7 +71,7 @@ test('optional Career refinement retains the core bonus and logs unavailable Spe
 
 test('printed Tilean Career alternatives and permitted Flagellant patrons are enforced',()=>{
  const s=madeCareer(on.careers.find(c=>c.id==='soldier'),'up-in-arms:origin:tilea');s.careerMode='first';
- assert.equal(regionalCareer(on,s,'up-in-arms:career:pikeman').base,'soldier');assert.throws(()=>regionalCareer(on,s,'up-in-arms:career:archer'),/printed Tilean/);
+ assert.equal(regionalCareer(on,s,'up-in-arms:career:pikeman').base,'soldier');assert.throws(()=>regionalCareer(on,s,'up-in-arms:career:archer'),/printed alternative/);
  s.career='priest';s.regionalCareerBase='flagellant';s.freeTalent='';assert.match(M.invalidTalent(on,s,'Bless (Sigmar)'),/Tilean Flagellant/);assert.equal(M.invalidTalent(on,s,'Bless (Myrmidia)'),'');
 });
 

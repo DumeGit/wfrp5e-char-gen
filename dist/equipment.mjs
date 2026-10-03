@@ -10,12 +10,14 @@ export function itemWeight(R,name){
  if(name==='Lute')return 2;
  const qty=name.match(/^(\d+) (Rags|Bandages|Matches|Candles|Sets of Clothing)$/);
  if(qty)return Number(qty[1])*(qty[2]==='Sets of Clothing'?1:0);
- name=(aliases[name]||name).replace(/^Book \(([^)]+)\)$/,'Book, $1').replace(/^Trade Tools \([^)]+\)$/,'Trade Tools');
+ name=(aliases[name]||name).replace(/^Book \(([^)]+)\)$/,'Book, $1').replace(/^Trade Tools \([^)]+\)$/i,'Trade Tools');
  return R.config.gearEnc[name]??marketCatalog(R).find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
 }
 
 const ALIASES={'Main-gauche':'Main Gauche','Sword-breaker':'Swordbreaker','Great Weapon (Two-handed Pick)':'Pick (2H)','Great Weapon (Military Flail)':'Military Flail (2H)','Great Weapon (Dwarf Greataxe)':'Greataxe (2H)','Large Sack':'Sack, Large','Small Instrument':'Small Instrument','Coach Horn':'Instrument','Mandolin':'Instrument','Lute':'Large Instrument','Harp':'Large Instrument','Flute':'Small Instrument','Recorder':'Small Instrument','Tambourine':'Small Instrument','Small Drum':'Instrument','Large Drum':'Large Instrument','Parchment':'Parchment/sheet','Rations (1 day)':'Rations, 1 day','Rations (one day)':'Rations, 1 day','Lunch':'Meal, inn','Grimoire':'Book, Magic'};
 export function gearOptions(raw,R){
+ if(raw==='Entangling OR Throwing weapon')return [...new Set(R.weapons.filter(w=>w.kind==='ranged'&&['Entangling','Throwing'].includes(w.group)).map(w=>w.name))];
+ if(raw==='Melee Weapon (Basic OR Cavalry)')return [...new Set(R.weapons.filter(w=>w.kind==='melee'&&['Basic','Cavalry'].includes(w.group)).map(w=>w.name))];
  if(/^(Weapon|Melee Weapon|Ranged Weapon) \(Any/.test(raw))return [...new Set(R.weapons.filter(w=>!raw.startsWith('Melee')&&!raw.startsWith('Ranged')||w.kind===(raw.startsWith('Ranged')?'ranged':'melee')).map(w=>w.name))];
  if(ALIASES[raw]&&raw.startsWith('Great Weapon'))return [ALIASES[raw]];
  if(raw==='Musical Instrument')return ['Small Instrument','Instrument','Large Instrument'];

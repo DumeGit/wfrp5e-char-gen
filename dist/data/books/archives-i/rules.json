@@ -1,0 +1,92 @@
+[
+  {
+    "id": "archives-i:skills:trade-32",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Farmer"
+    ],
+    "page": 32,
+    "reason": "Specialisations explicitly named on this printed page in Archives I Careers or clan Talent choices; use current core Skill and Talent definitions. Savant still requires possessing its Lore."
+  },
+  {
+    "id": "archives-i:skills:trade-88",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Bowyer"
+    ],
+    "page": 88,
+    "reason": "Specialisations explicitly named on this printed page in Archives I Careers or clan Talent choices; use current core Skill and Talent definitions. Savant still requires possessing its Lore."
+  },
+  {
+    "id": "archives-i:skills:lore-89",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Moot",
+      "Necromancy"
+    ],
+    "page": 89,
+    "reason": "Specialisations explicitly named on this printed page in Archives I Careers or clan Talent choices; use current core Skill and Talent definitions. Savant still requires possessing its Lore."
+  },
+  {
+    "id": "archives-i:skills:lore-90",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Dwarf Holds and Routes"
+    ],
+    "page": 90,
+    "reason": "Specialisations explicitly named on this printed page in Archives I Careers or clan Talent choices; use current core Skill and Talent definitions. Savant still requires possessing its Lore."
+  },
+  {
+    "id": "archives-i:skills:animal-training-91",
+    "path": [
+      "skillOptions",
+      "Animal Training"
+    ],
+    "operation": "append",
+    "value": [
+      "Badgers"
+    ],
+    "page": 91,
+    "reason": "Specialisations explicitly named on this printed page in Archives I Careers or clan Talent choices; use current core Skill and Talent definitions. Savant still requires possessing its Lore."
+  },
+  {
+    "id": "archives-i:skills:ride-91",
+    "path": [
+      "skillOptions",
+      "Ride"
+    ],
+    "operation": "append",
+    "value": [
+      "Badger"
+    ],
+    "page": 91,
+    "reason": "Specialisations explicitly named on this printed page in Archives I Careers or clan Talent choices; use current core Skill and Talent definitions. Savant still requires possessing its Lore."
+  },
+  {
+    "id": "archives-i:talent-limit:youngblood",
+    "path": [
+      "talentLimits",
+      "Youngblood"
+    ],
+    "operation": "add",
+    "value": 1,
+    "page": 78,
+    "reason": "The printed special kindred Talent has maximum 1. It is an additional creation grant for Younger Eonir; no repeat-Test bonus or ordinary Career access is added."
+  }
+]

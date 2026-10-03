@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"1360d540d5cf0a52d0e4";
+const CACHE=CACHE_PREFIX+"51241ce62373edd55e34";
 const ASSETS=[
  "app.js",
  "assets/LICENSE-pdf-lib.md",
@@ -14,6 +14,13 @@ const ASSETS=[
  "books.mjs",
  "creator-ui.mjs",
  "data/background.json",
+ "data/books/archives-i/careers.json",
+ "data/books/archives-i/manifest.json",
+ "data/books/archives-i/market.json",
+ "data/books/archives-i/origins.json",
+ "data/books/archives-i/rules.json",
+ "data/books/archives-i/talents.json",
+ "data/books/archives-i/weapons.json",
  "data/books/core/armour.json",
  "data/books/core/config.json",
  "data/books/core/manifest.json",
