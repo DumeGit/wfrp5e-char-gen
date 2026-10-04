@@ -1,3 +1,4 @@
+import {elfDiscount} from './high-elf.mjs';
 import {freeTalents,derive,career,base,knownSpells} from './rules.mjs';
 import {creationSpecies} from './origins.mjs';
 export const windsOfMagic=R=>R.books.some(b=>b.id==='winds-of-magic');
@@ -48,9 +49,9 @@ export function quoteRitual(R,s,name,talent){
  const d=derive(R,s),lores=[...new Set(d.talents.filter(t=>base(t)==='Arcane Magic'))];
  const eligible=lores.filter(t=>ritual.ritual.lores.includes('*')||ritual.ritual.lores.includes(t.match(/\((.*)\)/)?.[1]));
  const chosen=talent||eligible.find(t=>ritual.ritual.discountLores?.includes(t.match(/\((.*)\)/)?.[1]))||eligible[0],lore=chosen?.match(/\((.*)\)/)?.[1];
- const cost=ritual.ritual.discountLores?.includes(lore)?ritual.ritual.discountXP:ritual.ritual.learningXP;
+ const normal=ritual.ritual.discountLores?.includes(lore)?ritual.ritual.discountXP:ritual.ritual.learningXP,cost=elfDiscount(R,s,'spell',name,normal);
  const error=mundaneAlchemist(s)?'Mundane Alchemists are limited to their ten printed spells (Winds of Magic p. 39).':!eligible.includes(chosen)?`Requires Arcane Magic for ${ritual.ritual.lores.includes('*')?'a Lore':ritual.ritual.lores.join(', ')} (Winds of Magic p. ${ritual.page}).`:knownSpells(R,s).some(x=>x.name===name&&x.ritual)?'Already known.':cost>d.remaining?'Not enough XP.':'';
- return {type:'spell',name,talent:chosen||'',cost,tick:false,page:ritual.page,source:ritual.source,definition:ritual.source,error};
+ return {type:'spell',name,talent:chosen||'',cost,tick:false,page:ritual.page,source:ritual.source,definition:ritual.source,error,...(normal!==cost?{discount:'Blood of Aenarion: ritual memorisation included by user-approved interpretation; High Elf Guide p. 51'}:{})};
 }
 export function womIssues(R,s){
  if(!windsOfMagic(R))return [];

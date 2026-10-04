@@ -1,0 +1,373 @@
+[
+  {
+    "id": "dwarf-guide:gear:dwarf-axe",
+    "name": "Dwarf Axe",
+    "page": 93,
+    "enc": 1,
+    "price": "1 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-warhammer",
+    "name": "Dwarf Warhammer",
+    "page": 93,
+    "enc": 1,
+    "price": "1 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:whirling-blades-of-death",
+    "name": "Whirling blades of death",
+    "page": 93,
+    "enc": 2,
+    "price": "5 GC",
+    "availability": "Rare",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-greataxe-2h",
+    "name": "Dwarf Greataxe (2H)",
+    "page": 93,
+    "enc": 3,
+    "price": "4 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-greathammer-2h",
+    "name": "Dwarf Greathammer (2H)",
+    "page": 93,
+    "enc": 3,
+    "price": "4 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-pick-2h",
+    "name": "Dwarf Pick (2H)",
+    "page": 93,
+    "enc": 3,
+    "price": "1 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:steam-drill-2h",
+    "name": "Steam Drill (2H)",
+    "page": 93,
+    "enc": 3,
+    "price": "12 GC",
+    "availability": "Rare",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:cog-axe",
+    "name": "Cog Axe",
+    "page": 93,
+    "enc": 1,
+    "price": "15 GC",
+    "availability": "Exotic",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:steam-gauntlet",
+    "name": "Steam Gauntlet",
+    "page": 93,
+    "enc": 1,
+    "price": "40 GC",
+    "availability": "Exotic",
+    "category": "Dwarf weapons"
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-handgun-2h",
+    "name": "Dwarf Handgun (2H)",
+    "page": 94,
+    "enc": 2,
+    "price": "6 GC",
+    "availability": "Scarce",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again. Misfires only on 00."
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-pistol",
+    "name": "Dwarf Pistol",
+    "page": 94,
+    "enc": 0,
+    "price": "12 GC",
+    "availability": "Rare",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again. Misfires only on 00."
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-crossbow-2h",
+    "name": "Dwarf Crossbow (2H)",
+    "page": 94,
+    "enc": 2,
+    "price": "5 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again."
+  },
+  {
+    "id": "dwarf-guide:gear:drakegun-2h",
+    "name": "Drakegun (2H)",
+    "page": 94,
+    "enc": 3,
+    "price": "20 GC",
+    "availability": "Rare",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again. Also inflicts Ablaze on affected targets."
+  },
+  {
+    "id": "dwarf-guide:gear:drakefire-pistol",
+    "name": "Drakefire Pistol",
+    "page": 94,
+    "enc": 1,
+    "price": "25 GC",
+    "availability": "Exotic",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again. Also inflicts Ablaze on affected targets."
+  },
+  {
+    "id": "dwarf-guide:gear:repeating-dwarf-handgun-2h",
+    "name": "Repeating Dwarf Handgun (2H)",
+    "page": 94,
+    "enc": 3,
+    "price": "10 GC",
+    "availability": "Exotic",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again."
+  },
+  {
+    "id": "dwarf-guide:gear:grudge-raker-2h",
+    "name": "Grudge-raker (2H)",
+    "page": 94,
+    "enc": 2,
+    "price": "15 GC",
+    "availability": "Exotic",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again. Salvo 2 (p. 92): fire single or multiple shots before reloading; each shot after the first has cumulative −10 on its Ranged Test. Reload increases remaining Salvo by one, up to two; an 00 Misfire inflicts remaining Salvo hits (minimum one). Printed numeric modifiers are reference only."
+  },
+  {
+    "id": "dwarf-guide:gear:blasting-charge",
+    "name": "Blasting Charge",
+    "page": 94,
+    "enc": 0,
+    "price": "2 GC",
+    "availability": "Scarce",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again. Also inflicts Ablaze on affected targets."
+  },
+  {
+    "id": "dwarf-guide:gear:cinderblast-bomb",
+    "name": "Cinderblast Bomb",
+    "page": 94,
+    "enc": 0,
+    "price": "3 GC",
+    "availability": "Exotic",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again."
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-throwing-axe",
+    "name": "Dwarf Throwing Axe",
+    "page": 94,
+    "enc": 1,
+    "price": "1 GC",
+    "availability": "Common",
+    "category": "Dwarf weapons",
+    "text": "Printed profiles already include ammunition modifiers; do not apply those modifiers again."
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-bullets-and-powder-12",
+    "name": "Dwarf Bullets and Powder (12)",
+    "page": 93,
+    "enc": null,
+    "price": "3/3",
+    "availability": "Common",
+    "category": "Dwarf trappings",
+    "text": "Printed pack of twelve."
+  },
+  {
+    "id": "dwarf-guide:gear:dwarf-crossbow-bolts-12",
+    "name": "Dwarf Crossbow Bolts (12)",
+    "page": 93,
+    "enc": null,
+    "price": "5/-",
+    "availability": "Common",
+    "category": "Dwarf trappings",
+    "text": "Printed pack of twelve."
+  },
+  {
+    "id": "dwarf-guide:gear:drakefire-shots-12",
+    "name": "Drakefire Shots (12)",
+    "page": 93,
+    "enc": null,
+    "price": "1 GC",
+    "availability": "Rare",
+    "category": "Dwarf trappings",
+    "text": "The book supplies price/pack size, not Encumbrance."
+  },
+  {
+    "id": "dwarf-guide:gear:trollhammer-torpedo-one-torpedo",
+    "name": "Trollhammer Torpedo (one torpedo)",
+    "page": 94,
+    "enc": 1,
+    "price": "5 GC",
+    "availability": "Exotic",
+    "category": "Dwarf trappings",
+    "text": "Drakegun ammunition: Range 40, Damage +14; Blackpowder, Dangerous, Impact, Reload 6; inflicts Ablaze. These are an alternate loaded weapon profile, not a separately fired handheld weapon."
+  },
+  {
+    "id": "dwarf-guide:gear:battle-standard",
+    "name": "Battle Standard",
+    "page": 96,
+    "enc": 3,
+    "price": "8 GC",
+    "availability": "Scarce",
+    "category": "Dwarf trappings",
+    "text": "Extends Protection Rune range to 12 yards; no rune is granted."
+  },
+  {
+    "id": "dwarf-guide:gear:metal-foil-sheets",
+    "name": "Metal Foil Sheets",
+    "page": 96,
+    "enc": 0,
+    "price": "1/6",
+    "availability": "Common",
+    "category": "Dwarf trappings",
+    "text": "Runescribing material."
+  },
+  {
+    "id": "dwarf-guide:gear:reckoner-s-log",
+    "name": "Reckoner’s Log",
+    "page": 96,
+    "enc": 3,
+    "price": "10 GC",
+    "availability": "Rare",
+    "category": "Dwarf trappings",
+    "text": "Stone-tablet log. The parchment version has Enc 1 but no distinct price, so is not invented as a shop profile."
+  },
+  {
+    "id": "dwarf-guide:gear:stone-tablet",
+    "name": "Stone Tablet",
+    "page": 96,
+    "enc": 1,
+    "price": "2/-",
+    "availability": "Common",
+    "category": "Dwarf trappings",
+    "text": "For durable records."
+  },
+  {
+    "id": "dwarf-guide:gear:candelabra-with-a-dozen-candles",
+    "name": "Candelabra (with a dozen candles)",
+    "page": 95,
+    "enc": 0,
+    "price": "4/-",
+    "availability": "Common",
+    "category": "Dwarf trappings",
+    "text": "Illumination: 15 yards."
+  },
+  {
+    "id": "dwarf-guide:gear:gromril-breastplate",
+    "name": "Gromril Breastplate",
+    "page": 95,
+    "enc": 3,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Dwarf armour",
+    "text": "Reference only; Dwarfs do not sell gromril. Printed minimum material value: 1280 GC."
+  },
+  {
+    "id": "dwarf-guide:gear:gromril-open-helm",
+    "name": "Gromril Open Helm",
+    "page": 95,
+    "enc": 1,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Dwarf armour",
+    "text": "Reference only; Dwarfs do not sell gromril. Printed minimum material value: 256 GC. Printed penalty: −10% Perception; retained as a reference, not automatically converted to a Test SL modifier."
+  },
+  {
+    "id": "dwarf-guide:gear:gromril-bracers",
+    "name": "Gromril Bracers",
+    "page": 95,
+    "enc": 3,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Dwarf armour",
+    "text": "Reference only; Dwarfs do not sell gromril. Printed minimum material value: 1024 GC."
+  },
+  {
+    "id": "dwarf-guide:gear:gromril-plate-leggings",
+    "name": "Gromril Plate Leggings",
+    "page": 95,
+    "enc": 3,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Dwarf armour",
+    "text": "Reference only; Dwarfs do not sell gromril. Printed minimum material value: 1280 GC. Printed penalty: −10 Stealth; retained as a reference, not automatically converted to a Test SL modifier."
+  },
+  {
+    "id": "dwarf-guide:gear:gromril-helm",
+    "name": "Gromril Helm",
+    "page": 95,
+    "enc": 2,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Dwarf armour",
+    "text": "Reference only; Dwarfs do not sell gromril. Printed minimum material value: 384 GC. Printed penalty: −20% Perception; retained as a reference, not automatically converted to a Test SL modifier."
+  },
+  {
+    "id": "dwarf-guide:gear:mail-skirt",
+    "name": "Mail Skirt",
+    "page": 95,
+    "enc": 2,
+    "price": "1 GC",
+    "availability": "Scarce",
+    "category": "Dwarf armour",
+    "text": "Printed Dwarf armour profile."
+  },
+  {
+    "id": "dwarf-guide:gear:miner-s-helm",
+    "name": "Miner’s Helm",
+    "page": 95,
+    "enc": 1,
+    "price": "2 GC",
+    "availability": "Common",
+    "category": "Dwarf armour",
+    "text": "Printed Dwarf armour profile. Printed penalty: −10% Perception; retained as a reference, not automatically converted to a Test SL modifier."
+  },
+  {
+    "id": "dwarf-guide:gear:shield-platform",
+    "name": "Shield Platform",
+    "page": 96,
+    "enc": 4,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Ancestral heirlooms",
+    "text": "Reference only, not sold by Dwarf clans. Printed material value: 15 GC. Live bearer/activation effects are deferred."
+  },
+  {
+    "id": "dwarf-guide:gear:oathstone",
+    "name": "Oathstone",
+    "page": 96,
+    "enc": 3,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Ancestral heirlooms",
+    "text": "Reference only, not sold by Dwarf clans. Printed material value: 25 GC. Live bearer/activation effects are deferred."
+  },
+  {
+    "id": "dwarf-guide:gear:anvil-of-doom",
+    "name": "Anvil of Doom",
+    "page": 96,
+    "enc": 20,
+    "price": "n/a",
+    "availability": "n/a",
+    "category": "Ancestral heirlooms",
+    "text": "Reference only, not sold by Dwarf clans. Printed material value: 1000 GC. Live bearer/activation effects are deferred."
+  }
+]

@@ -1,0 +1,1246 @@
+[
+  {
+    "id": "dwarf-guide:career:brewer",
+    "name": "Brewer",
+    "class": "Burgher",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 62,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 3,
+      "WP": 4,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Brewer",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Drive",
+          "Endurance",
+          "Entertain (Singing or Storytelling)",
+          "Evaluate",
+          "Melee (Basic or Two-handed)",
+          "Perception",
+          "Trade (Brewer)"
+        ],
+        "talents": [
+          "Carouser",
+          "Craftsman (Brewer)",
+          "Strong Back",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Trade Tools (Brewer)",
+          "Mop and Bucket"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Brewer",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Dodge",
+          "Heal",
+          "Gossip",
+          "Language (Guilder)",
+          "Ranged (Crossbow or Throwing)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Gregarious",
+          "Liquid Fortification",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Tankard",
+          "Ale Keg",
+          "Book (Recipe)",
+          "Dwarf Axe",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Brewmaster",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Haggle",
+          "Leadership",
+          "Secret Signs (Guilder)",
+          "Trade (Apothecary)"
+        ],
+        "talents": [
+          "Acute Sense (Taste)",
+          "Concoct",
+          "Stout-hearted",
+          "Master Tradesman (Brewer)"
+        ],
+        "trappings": [
+          "Brewery",
+          "Ingredients",
+          "Thermometer",
+          "Beardling Apprentice"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Chief Victualler",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Intuition",
+          "Trade (Cook)"
+        ],
+        "talents": [
+          "Acute Sense (Smell)",
+          "Master Tradesman (Cook)",
+          "Magnum Opus",
+          "Resistant (Poison)"
+        ],
+        "trappings": [
+          "Trade Tools (Cook)",
+          "Tasting Spoon",
+          "Kitchen with Staff"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:doom-priest",
+    "name": "Doom Priest",
+    "class": "Warrior",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 64,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 3,
+      "T": 1,
+      "I": null,
+      "Ag": null,
+      "Dex": 2,
+      "Int": null,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Glorifier",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Art (Tattoo)",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Entertain (Storytelling)",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Play (Horn)"
+        ],
+        "talents": [
+          "Ancestral Grudge",
+          "Demolisher",
+          "Frenzy",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Dwarf Axe",
+          "Tattoos",
+          "Flask of Spirits",
+          "Mail Coat"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Doom Priest",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Leadership",
+          "Lore (Theology or Warfare)",
+          "Melee (Two-handed)",
+          "Perception",
+          "Ranged (Throwing)",
+          "Runesmithing"
+        ],
+        "talents": [
+          "Ambidextrous",
+          "Dual Wielder",
+          "Inspiring",
+          "Rune Magic (Protection Runes)"
+        ],
+        "trappings": [
+          "Dwarf Axe or Dwarf Greataxe",
+          "Trade Tools (Smith)",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Berserker Priest",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Lore (Runes)",
+          "Melee (Flail)",
+          "Secret Signs (Brotherhood of Grimnir)"
+        ],
+        "talents": [
+          "Fearless (Any)",
+          "Magic Defiance",
+          "Rune Magic (Weapon Runes)",
+          "War Leader"
+        ],
+        "trappings": [
+          "Wards of Grimnir (protective tattoos)",
+          "Two Chainaxes or Dwarf Throwing Axes",
+          "Gold Jewellery",
+          "Apprentice Glorifier"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Gate Sealer",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Outdoor Survival",
+          "Lore (Chaos)"
+        ],
+        "talents": [
+          "Glorious Demise",
+          "Master Rune Magic (Protection Runes and Weapon Runes)",
+          "Pure Soul",
+          "Whirlwind of Death"
+        ],
+        "trappings": [
+          "Runic Axe"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:forge-priest",
+    "name": "Forge Priest",
+    "class": "Academic",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 66,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": 2,
+      "T": 1,
+      "I": null,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 3,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Forge Initiate",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Art (Sculpture or Engraving)",
+          "Cool",
+          "Consume Alcohol",
+          "Endurance",
+          "Entertain (Singing)",
+          "Evaluate",
+          "Haggle",
+          "Lore (Geology or Metallurgy)",
+          "Melee (Basic or Two-handed)",
+          "Trade (Any)"
+        ],
+        "talents": [
+          "Craftsman (Any)",
+          "Enclosed Fighter",
+          "Stone Soup",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Dwarf Pick",
+          "Mail Coat"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Forge Priest",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Language (Battle or Guilder)",
+          "Leadership",
+          "Lore (Runes or Theology)",
+          "Research",
+          "Runesmithing",
+          "Secret Signs (Miner or Guilder)"
+        ],
+        "talents": [
+          "Bludgeoner",
+          "Detect Artefact",
+          "Rune Magic (Protection Runes)",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Dwarf Warhammer",
+          "Trade Tools (Any One)",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open) or Miner’s Helm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Forgemaster",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Climb",
+          "Lore (Any)",
+          "Navigation",
+          "Perception"
+        ],
+        "talents": [
+          "Forgefire",
+          "Magic Defiance",
+          "Master Tradesman (Any)",
+          "Rune Magic (Armour Runes and Engineering Runes)"
+        ],
+        "trappings": [
+          "Temple",
+          "Dwarf Greathammer",
+          "Gromril Suit",
+          "Beardling Initiate"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Forgelord",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Intimidate",
+          "Intuition"
+        ],
+        "talents": [
+          "Iron Will",
+          "Master Rune Magic (All Forms)",
+          "Pure Soul",
+          "Rune Magic (All Forms)"
+        ],
+        "trappings": [
+          "Runic Hammer"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:hearth-priest",
+    "name": "Hearth Priest",
+    "class": "Academic",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 67,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 2,
+      "I": 4,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Hearth Initiate",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Art (Any)",
+          "Charm",
+          "Cool",
+          "Consume Alcohol",
+          "Endurance",
+          "Entertain (Any)",
+          "Gossip",
+          "Heal",
+          "Melee (Basic or Two-handed)",
+          "Trade (Brewer or Cook)"
+        ],
+        "talents": [
+          "Carouser",
+          "Field Dressing",
+          "Perfect Pitch",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Toasting Tankard",
+          "Mail Coat",
+          "Lantern"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Hearth Priest",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Intimidate",
+          "Intuition",
+          "Leadership",
+          "Lore (Runes or Theology)",
+          "Perception",
+          "Runesmithing"
+        ],
+        "talents": [
+          "Liquid Fortification",
+          "Rune Magic (Protection Runes and Talismanic Runes)",
+          "Supportive",
+          "Surgery"
+        ],
+        "trappings": [
+          "Cult Medallion",
+          "Dwarf Axe",
+          "Shield",
+          "Trade Tools (Smith)",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Hearthmaster",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Language (Any)",
+          "Lore (Medicine or Anatomy)",
+          "Research",
+          "Trade (Any)"
+        ],
+        "talents": [
+          "Magic Defiance",
+          "Pharmacist",
+          "Resistant (Any)",
+          "Master Rune Magic (Protection Runes)"
+        ],
+        "trappings": [
+          "Temple",
+          "Gromril Suit",
+          "Brazier",
+          "Beardling Initiate"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Hearthseer",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Evaluate",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Magical Sense",
+          "Master Rune Magic (Talismanic Runes)",
+          "Menacing",
+          "Pure Soul"
+        ],
+        "trappings": [
+          "Runic Shield"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:hammerer",
+    "name": "Hammerer",
+    "class": "Warrior",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 68,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": 3,
+      "I": 2,
+      "Ag": 4,
+      "Dex": null,
+      "Int": null,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Oathsworn",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Climb",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Melee (Two-handed)",
+          "Perception",
+          "Play (Drum or Horn)"
+        ],
+        "talents": [
+          "Bludgeoner",
+          "Combat Aware",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Dwarf Warhammer",
+          "Leather Breastplate"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Hammerer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Gamble",
+          "Heal",
+          "Intimidate",
+          "Intuition",
+          "Lore (Heraldry)"
+        ],
+        "talents": [
+          "Drilled",
+          "Kingsguard",
+          "Strike to Stun",
+          "Tireless"
+        ],
+        "trappings": [
+          "Dwarf Greathammer",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Gate Keeper",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Gossip",
+          "Leadership",
+          "Lore (Geology)",
+          "Navigation"
+        ],
+        "talents": [
+          "Enclosed Fighter",
+          "Unshakeable",
+          "Very Strong",
+          "War Leader"
+        ],
+        "trappings": [
+          "Gate Key",
+          "Runic Hammer or Runic Battle Standard",
+          "Shield",
+          "Unit of Hammerers"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Shieldbearer",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Lore (Warfare)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Iron Will",
+          "Pure Soul",
+          "Strong-minded",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Shield Platform"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:ironbreaker",
+    "name": "Ironbreaker",
+    "class": "Warrior",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 70,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 3,
+      "S": 2,
+      "T": 1,
+      "I": 4,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Shieldbreaker",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Play (Drum or Horn)",
+          "Stealth (Underground)"
+        ],
+        "talents": [
+          "Orientation",
+          "Striding Gait (Rocky)",
+          "Strong Back",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Dwarf Axe or Dwarf Warhammer",
+          "Shield",
+          "Mail Coat",
+          "Leather Leggings",
+          "Rope"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Ironbreaker",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Entertain (Singing)",
+          "Intimidate",
+          "Lore (Geology)",
+          "Melee (Any)",
+          "Secret Signs (Miner)"
+        ],
+        "talents": [
+          "Drilled",
+          "Enclosed Fighter",
+          "Shieldsman",
+          "Tireless"
+        ],
+        "trappings": [
+          "Gromril Suit",
+          "Gromril Helm (Closed)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Irondrake",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Navigation",
+          "Perception",
+          "Ranged (Engineering)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Dragon Belcher",
+          "Night Vision",
+          "Underminer",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Drakegun",
+          "Runic Armour"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Ironbeard",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Implacable",
+          "Short Fuse",
+          "War Leader"
+        ],
+        "trappings": [
+          "Two Drakefire Pistols or Trollhammer Torpedo",
+          "Cinderblast Bomb",
+          "Unit of Ironbreakers"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:karak-ranger",
+    "name": "Karak Ranger",
+    "class": "Ranger",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 72,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": 2,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Mountaineer",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Throwing)",
+          "Trade (Cartographer)"
+        ],
+        "talents": [
+          "Orientation",
+          "Stone Soup",
+          "Striding Gait (Any)",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Dwarf Axe",
+          "Dwarf Throwing Axe",
+          "Mail Coat",
+          "Sturdy Boots",
+          "Rope"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Karak Ranger",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Consume Alcohol",
+          "Melee (Two-handed)",
+          "Play (Drum or Horn)",
+          "Ranged (Crossbow)",
+          "Secret Signs (Ranger)",
+          "Stealth (Any)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Demolisher",
+          "Rover",
+          "Tireless"
+        ],
+        "trappings": [
+          "Dwarf Greataxe",
+          "Dwarf Crossbow and Ammunition",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Deadeye",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Intuition",
+          "Lore (Engineering or Geology)",
+          "Navigation",
+          "Track"
+        ],
+        "talents": [
+          "Harpooner",
+          "Night Vision",
+          "Nose for Trouble",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Shield",
+          "Map"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Ranger Captain",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Leadership",
+          "Set Trap"
+        ],
+        "talents": [
+          "Scale Sheer Surface",
+          "Tenacious",
+          "Trapper",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Trade Tools (Cartographer)",
+          "Unit of Rangers"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings.",
+    "alternativeFor": "archives-i:career:karak-ranger"
+  },
+  {
+    "id": "dwarf-guide:career:runescribe",
+    "name": "Runescribe",
+    "class": "Academic",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 74,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Runescribe",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Art (Writing)",
+          "Consume Alcohol",
+          "Entertain (Singing or Storytelling)",
+          "Evaluate",
+          "Gamble",
+          "Haggle",
+          "Language (Any)",
+          "Lore (Any)",
+          "Research",
+          "Stealth (Any)"
+        ],
+        "talents": [
+          "Read/Write",
+          "Speedreader",
+          "Super Numerate",
+          "Supportive"
+        ],
+        "trappings": [
+          "Trade Tools (Engraver)",
+          "Stone Tablets",
+          "Metal Foil Sheets",
+          "Writing Kit",
+          "Books"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Runescribe",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Gossip",
+          "Intuition",
+          "Lore (Any)",
+          "Navigation",
+          "Perception",
+          "Trade (Any)"
+        ],
+        "talents": [
+          "Acute Sense (Touch)",
+          "Bookish",
+          "Lip Reading",
+          "Long Memory"
+        ],
+        "trappings": [
+          "Research Archive",
+          "Mail Coat",
+          "Beardling Apprentice"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Lorekeeper",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Heal",
+          "Lore (Any)",
+          "Outdoor Survival",
+          "Track"
+        ],
+        "talents": [
+          "Ancestral Grudge",
+          "Gregarious",
+          "Linguistics",
+          "Savant (Any)"
+        ],
+        "trappings": [
+          "Dwarf Axe or Dwarf Warhammer",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)",
+          "Key to the Royal Library"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Loremaster",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Cool",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Blather",
+          "Detect Artefact",
+          "Public Speaker",
+          "Tireless"
+        ],
+        "trappings": [
+          "Personal Study",
+          "Lorekeeper Apprentice"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:runesmith",
+    "name": "Runesmith",
+    "class": "Academic",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 76,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": 4,
+      "T": 3,
+      "I": null,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Runesmith",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Art (Sculpture or Engraving)",
+          "Cool",
+          "Consume Alcohol",
+          "Endurance",
+          "Evaluate",
+          "Intuition",
+          "Lore (Runes)",
+          "Runesmithing",
+          "Melee (Basic or Two-handed)",
+          "Trade (Smith)"
+        ],
+        "talents": [
+          "Detect Artefact",
+          "Resistant (Magic)",
+          "Rune Magic (Rune of Stone)",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Trade Tools (Smith)",
+          "Dwarf Warhammer or Dwarf Greathammer",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Runesmith",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Athletics",
+          "Dodge",
+          "Intimidate",
+          "Lore (Geology or Metallurgy)",
+          "Perception",
+          "Stealth (Any)"
+        ],
+        "talents": [
+          "Forgefire",
+          "Magic Defiance",
+          "Magical Sense",
+          "Rune Magic (All Forms)"
+        ],
+        "trappings": [
+          "Runic Item",
+          "Gromril Suit",
+          "Gromril Helm (Open)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Runemaster",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Navigation",
+          "Pick Lock",
+          "Set Trap"
+        ],
+        "talents": [
+          "Acute Sense (Touch)",
+          "Long Memory",
+          "Master Rune Magic (All Forms)",
+          "Tireless"
+        ],
+        "trappings": [
+          "Runic Wargear",
+          "Shield",
+          "Workshop",
+          "Beardling Apprentice"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Runelord",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Leadership",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Ancestral Grudge",
+          "Iron Will",
+          "Menacing",
+          "Pure Soul"
+        ],
+        "trappings": [
+          "Master Runic Wargear"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  },
+  {
+    "id": "dwarf-guide:career:thane",
+    "name": "Thane",
+    "class": "Courtier",
+    "species": [
+      "Dwarf"
+    ],
+    "page": 78,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 3,
+      "T": 2,
+      "I": null,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Heritor",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Dodge",
+          "Gamble",
+          "Leadership",
+          "Lore (Heraldry or History)",
+          "Melee (Basic or Two-handed)",
+          "Ranged (Crossbow or Blackpowder)",
+          "Secret Signs (Guilder)",
+          "Trade (Any)"
+        ],
+        "talents": [
+          "Ancestral Grudge",
+          "Noble Blood",
+          "Read/Write",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Basic Weapon (Any One) or Two-handed Weapon (Any One)",
+          "Dwarf Crossbow or Dwarf Handgun",
+          "Breastplate",
+          "Mail Skirt",
+          "Plate Helm (Open)",
+          "Jewellery worth 3d10 GC"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Thane",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Art (Writing)",
+          "Charm",
+          "Cool",
+          "Evaluate",
+          "Lore (Local or Politics)",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Argumentative",
+          "Carouser",
+          "Dealmaker",
+          "Public Speaker"
+        ],
+        "trappings": [
+          "Loyal Clan",
+          "Basic Weapon (Any One) or Shield",
+          "Dwarf Pistol",
+          "Gromril Suit",
+          "Jewellery worth 50 GC"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Throng Leader",
+        "status": "Gold",
+        "standing": 5,
+        "skills": [
+          "Endurance",
+          "Haggle",
+          "Intimidate",
+          "Intuition"
+        ],
+        "talents": [
+          "Inspiring",
+          "Tireless",
+          "Unshakeable",
+          "War Leader"
+        ],
+        "trappings": [
+          "Unit of Dwarf Warriors",
+          "Quality Weaponry",
+          "Gromril Helm (Open or Closed)",
+          "250 GC",
+          "Jewellery worth 200 GC"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Karak Lord",
+        "status": "Gold",
+        "standing": 8,
+        "skills": [
+          "Lore (Any)",
+          "Perception"
+        ],
+        "talents": [
+          "Iron Will",
+          "Long Memory",
+          "Public Speaker",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Army of Dwarf Warriors",
+          "Runic Wargear",
+          "Oathstone",
+          "1000 GC",
+          "Jewellery worth 500 GC"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+  }
+]

@@ -1,0 +1,869 @@
+{
+  "names": {
+    "page": 39,
+    "rows": [
+      {
+        "min": 1,
+        "max": 9,
+        "male": "Alaric",
+        "female": "Akilinda"
+      },
+      {
+        "min": 10,
+        "max": 18,
+        "male": "Algrim",
+        "female": "Adalni"
+      },
+      {
+        "min": 19,
+        "max": 27,
+        "male": "Alrik",
+        "female": "Alrika"
+      },
+      {
+        "min": 28,
+        "max": 37,
+        "male": "Baragor",
+        "female": "Arin"
+      },
+      {
+        "min": 38,
+        "max": 45,
+        "male": "Bardin",
+        "female": "Askima"
+      },
+      {
+        "min": 46,
+        "max": 53,
+        "male": "Belegar",
+        "female": "Astrid"
+      },
+      {
+        "min": 54,
+        "max": 61,
+        "male": "Bel(e)gol",
+        "female": "Beodinga"
+      },
+      {
+        "min": 62,
+        "max": 70,
+        "male": "Borgin",
+        "female": "Beothilt"
+      },
+      {
+        "min": 71,
+        "max": 79,
+        "male": "Borin",
+        "female": "Berit"
+      },
+      {
+        "min": 80,
+        "max": 88,
+        "male": "Bradni",
+        "female": "Berta"
+      },
+      {
+        "min": 89,
+        "max": 98,
+        "male": "Brogar",
+        "female": "Boria"
+      },
+      {
+        "min": 99,
+        "max": 107,
+        "male": "Brokk",
+        "female": "Breda"
+      },
+      {
+        "min": 108,
+        "max": 115,
+        "male": "Brond(I)",
+        "female": "Brit(t)a"
+      },
+      {
+        "min": 116,
+        "max": 121,
+        "male": "Bronn",
+        "female": "Brondra"
+      },
+      {
+        "min": 122,
+        "max": 129,
+        "male": "Burlok",
+        "female": "Brun(n)a"
+      },
+      {
+        "min": 130,
+        "max": 137,
+        "male": "Cranneg",
+        "female": "Bunna"
+      },
+      {
+        "min": 138,
+        "max": 145,
+        "male": "Darbli",
+        "female": "Daedbet"
+      },
+      {
+        "min": 146,
+        "max": 153,
+        "male": "Dargo",
+        "female": "Daril"
+      },
+      {
+        "min": 154,
+        "max": 161,
+        "male": "Dern",
+        "female": "Darna"
+      },
+      {
+        "min": 162,
+        "max": 170,
+        "male": "Dimrond",
+        "female": "Derna"
+      },
+      {
+        "min": 171,
+        "max": 179,
+        "male": "Dimzad",
+        "female": "Devoni"
+      },
+      {
+        "min": 180,
+        "max": 184,
+        "male": "Dorin",
+        "female": "Dorbi"
+      },
+      {
+        "min": 185,
+        "max": 188,
+        "male": "Drong",
+        "female": "Duree"
+      },
+      {
+        "min": 189,
+        "max": 200,
+        "male": "Drumin",
+        "female": "Edlyn"
+      },
+      {
+        "min": 201,
+        "max": 209,
+        "male": "Durak",
+        "female": "Eilianhilt"
+      },
+      {
+        "min": 210,
+        "max": 218,
+        "male": "Duregar",
+        "female": "Eldrida"
+      },
+      {
+        "min": 219,
+        "max": 227,
+        "male": "Durgin",
+        "female": "Engilfrit"
+      },
+      {
+        "min": 228,
+        "max": 234,
+        "male": "Dwinbar",
+        "female": "Eonhilt"
+      },
+      {
+        "min": 235,
+        "max": 239,
+        "male": "Elmador",
+        "female": "Esma"
+      },
+      {
+        "min": 240,
+        "max": 246,
+        "male": "Enlag",
+        "female": "Fenna"
+      },
+      {
+        "min": 247,
+        "max": 253,
+        "male": "Fenni",
+        "female": "Fonsa"
+      },
+      {
+        "min": 254,
+        "max": 261,
+        "male": "Fimbur",
+        "female": "Freda"
+      },
+      {
+        "min": 262,
+        "max": 270,
+        "male": "Finn",
+        "female": "Frenchin"
+      },
+      {
+        "min": 271,
+        "max": 279,
+        "male": "Furgil",
+        "female": "Friga"
+      },
+      {
+        "min": 280,
+        "max": 288,
+        "male": "Garil",
+        "female": "Fronika"
+      },
+      {
+        "min": 289,
+        "max": 300,
+        "male": "Goddi",
+        "female": "Galan"
+      },
+      {
+        "min": 301,
+        "max": 309,
+        "male": "Gomrund",
+        "female": "Galea"
+      },
+      {
+        "min": 310,
+        "max": 318,
+        "male": "Gorazin",
+        "female": "Gamila"
+      },
+      {
+        "min": 319,
+        "max": 327,
+        "male": "Gorim",
+        "female": "Gemmon"
+      },
+      {
+        "min": 328,
+        "max": 337,
+        "male": "Gorm",
+        "female": "Gamona"
+      },
+      {
+        "min": 338,
+        "max": 345,
+        "male": "Gotrek",
+        "female": "Gennadea"
+      },
+      {
+        "min": 346,
+        "max": 353,
+        "male": "Gottri",
+        "female": "Gert(r)a"
+      },
+      {
+        "min": 354,
+        "max": 361,
+        "male": "Grim",
+        "female": "Gloren"
+      },
+      {
+        "min": 362,
+        "max": 370,
+        "male": "Grimli",
+        "female": "Gottra"
+      },
+      {
+        "min": 371,
+        "max": 379,
+        "male": "Grindol",
+        "female": "Grida"
+      },
+      {
+        "min": 380,
+        "max": 390,
+        "male": "Grom",
+        "female": "Grizal"
+      },
+      {
+        "min": 391,
+        "max": 400,
+        "male": "Grond",
+        "female": "Grondi"
+      },
+      {
+        "min": 401,
+        "max": 409,
+        "male": "Groth",
+        "female": "Grunna"
+      },
+      {
+        "min": 410,
+        "max": 418,
+        "male": "Grum",
+        "female": "Harga"
+      },
+      {
+        "min": 419,
+        "max": 427,
+        "male": "Grumdin",
+        "female": "Heldin"
+      },
+      {
+        "min": 428,
+        "max": 437,
+        "male": "Grundi",
+        "female": "Helga"
+      },
+      {
+        "min": 438,
+        "max": 445,
+        "male": "Grung",
+        "female": "Helgar"
+      },
+      {
+        "min": 446,
+        "max": 453,
+        "male": "Grunni",
+        "female": "Holda"
+      },
+      {
+        "min": 454,
+        "max": 461,
+        "male": "Guttri",
+        "female": "Hunni"
+      },
+      {
+        "min": 462,
+        "max": 470,
+        "male": "Haakon",
+        "female": "Husina"
+      },
+      {
+        "min": 471,
+        "max": 479,
+        "male": "Hadra",
+        "female": "Inga"
+      },
+      {
+        "min": 480,
+        "max": 489,
+        "male": "Harek",
+        "female": "Ingardas"
+      },
+      {
+        "min": 490,
+        "max": 499,
+        "male": "Hargin",
+        "female": "Ingeida"
+      },
+      {
+        "min": 500,
+        "max": 507,
+        "male": "Hargrim",
+        "female": "Ingina"
+      },
+      {
+        "min": 508,
+        "max": 512,
+        "male": "Harok",
+        "female": "Ingundas"
+      },
+      {
+        "min": 513,
+        "max": 518,
+        "male": "Heganbor",
+        "female": "Irmina"
+      },
+      {
+        "min": 519,
+        "max": 527,
+        "male": "Hergar",
+        "female": "Kalea"
+      },
+      {
+        "min": 528,
+        "max": 537,
+        "male": "Hugnir",
+        "female": "Karelia"
+      },
+      {
+        "min": 538,
+        "max": 545,
+        "male": "Hurgar",
+        "female": "Karga"
+      },
+      {
+        "min": 546,
+        "max": 553,
+        "male": "Kadri",
+        "female": "Karstin"
+      },
+      {
+        "min": 554,
+        "max": 561,
+        "male": "Kadrin",
+        "female": "Katrin"
+      },
+      {
+        "min": 562,
+        "max": 570,
+        "male": "Kallon",
+        "female": "Kemma"
+      },
+      {
+        "min": 571,
+        "max": 579,
+        "male": "Kargun",
+        "female": "Kettra"
+      },
+      {
+        "min": 580,
+        "max": 589,
+        "male": "Katalin",
+        "female": "Kotafrit"
+      },
+      {
+        "min": 590,
+        "max": 600,
+        "male": "Kazadar",
+        "female": "Kotahilt"
+      },
+      {
+        "min": 601,
+        "max": 609,
+        "male": "Kazgar",
+        "female": "Laka"
+      },
+      {
+        "min": 610,
+        "max": 618,
+        "male": "Kazran",
+        "female": "Lakin"
+      },
+      {
+        "min": 619,
+        "max": 627,
+        "male": "Kazrik",
+        "female": "Leena"
+      },
+      {
+        "min": 628,
+        "max": 637,
+        "male": "Ketil",
+        "female": "Lenka"
+      },
+      {
+        "min": 638,
+        "max": 645,
+        "male": "Kettri",
+        "female": "Loera"
+      },
+      {
+        "min": 646,
+        "max": 653,
+        "male": "Kragg",
+        "female": "Lorata"
+      },
+      {
+        "min": 654,
+        "max": 661,
+        "male": "Krudd",
+        "female": "Lora"
+      },
+      {
+        "min": 662,
+        "max": 670,
+        "male": "Kurgan",
+        "female": "Magda"
+      },
+      {
+        "min": 671,
+        "max": 679,
+        "male": "Largs",
+        "female": "Mehthilt"
+      },
+      {
+        "min": 680,
+        "max": 689,
+        "male": "Logan",
+        "female": "Melanna"
+      },
+      {
+        "min": 690,
+        "max": 700,
+        "male": "Logazor",
+        "female": "Menni"
+      },
+      {
+        "min": 701,
+        "max": 707,
+        "male": "Lunn",
+        "female": "Minna"
+      },
+      {
+        "min": 708,
+        "max": 718,
+        "male": "Mendri",
+        "female": "Mistila"
+      },
+      {
+        "min": 719,
+        "max": 727,
+        "male": "Mordin",
+        "female": "Modra"
+      },
+      {
+        "min": 728,
+        "max": 737,
+        "male": "Morek",
+        "female": "Morga"
+      },
+      {
+        "min": 738,
+        "max": 745,
+        "male": "Morgrim",
+        "female": "Nanda"
+      },
+      {
+        "min": 746,
+        "max": 753,
+        "male": "Mundri",
+        "female": "Nanna"
+      },
+      {
+        "min": 754,
+        "max": 761,
+        "male": "Norgrim",
+        "female": "Olka"
+      },
+      {
+        "min": 762,
+        "max": 768,
+        "male": "Oldor",
+        "female": "Osanna"
+      },
+      {
+        "min": 769,
+        "max": 775,
+        "male": "Ragni",
+        "female": "Reiarin"
+      },
+      {
+        "min": 776,
+        "max": 784,
+        "male": "Rogni",
+        "female": "Rihilt"
+      },
+      {
+        "min": 785,
+        "max": 790,
+        "male": "Rorek",
+        "female": "Sanne"
+      },
+      {
+        "min": 791,
+        "max": 800,
+        "male": "Rungni",
+        "female": "Sifna"
+      },
+      {
+        "min": 801,
+        "max": 812,
+        "male": "Skag",
+        "female": "Sigifrit"
+      },
+      {
+        "min": 813,
+        "max": 820,
+        "male": "Skaldor",
+        "female": "Sigifrith"
+      },
+      {
+        "min": 821,
+        "max": 830,
+        "male": "Skalf",
+        "female": "Sigrid"
+      },
+      {
+        "min": 831,
+        "max": 838,
+        "male": "Skalli",
+        "female": "Sigrun"
+      },
+      {
+        "min": 839,
+        "max": 844,
+        "male": "Skorri",
+        "female": "Skorina"
+      },
+      {
+        "min": 845,
+        "max": 851,
+        "male": "Sindri",
+        "female": "Solveig"
+      },
+      {
+        "min": 852,
+        "max": 860,
+        "male": "Snorri",
+        "female": "Sunni"
+      },
+      {
+        "min": 861,
+        "max": 866,
+        "male": "Stromni",
+        "female": "Svenrina"
+      },
+      {
+        "min": 867,
+        "max": 874,
+        "male": "Storri",
+        "female": "Tarni"
+      },
+      {
+        "min": 875,
+        "max": 882,
+        "male": "Sundrim",
+        "female": "Tharma"
+      },
+      {
+        "min": 883,
+        "max": 890,
+        "male": "Sven",
+        "female": "Theodfirt"
+      },
+      {
+        "min": 891,
+        "max": 900,
+        "male": "Thingrim",
+        "female": "Thindra"
+      },
+      {
+        "min": 901,
+        "max": 909,
+        "male": "Thori",
+        "female": "Thoda"
+      },
+      {
+        "min": 910,
+        "max": 920,
+        "male": "Thrund",
+        "female": "Thora"
+      },
+      {
+        "min": 921,
+        "max": 929,
+        "male": "Thungni",
+        "female": "Throlin"
+      },
+      {
+        "min": 930,
+        "max": 936,
+        "male": "Thurgrom",
+        "female": "Thurma"
+      },
+      {
+        "min": 937,
+        "max": 942,
+        "male": "Thyk",
+        "female": "Trunni"
+      },
+      {
+        "min": 943,
+        "max": 950,
+        "male": "Ulfar",
+        "female": "Ulla"
+      },
+      {
+        "min": 951,
+        "max": 957,
+        "male": "Ulther",
+        "female": "Uote"
+      },
+      {
+        "min": 958,
+        "max": 965,
+        "male": "Vikram",
+        "female": "Vala"
+      },
+      {
+        "min": 966,
+        "max": 972,
+        "male": "Vragni",
+        "female": "Valma"
+      },
+      {
+        "min": 973,
+        "max": 980,
+        "male": "Yadri",
+        "female": "Vanyra"
+      },
+      {
+        "min": 981,
+        "max": 988,
+        "male": "Yanni",
+        "female": "Winnifer"
+      },
+      {
+        "min": 989,
+        "max": 993,
+        "male": "Yorri",
+        "female": "Woda"
+      },
+      {
+        "min": 994,
+        "max": 1000,
+        "male": "Zamnil",
+        "female": "Zylra"
+      }
+    ]
+  },
+  "birthplaces": {
+    "page": 41,
+    "rows": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "Bretonnia Parravon or nearby settlements"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "Border Princes Barrak Varr"
+      },
+      {
+        "min": 5,
+        "max": 10,
+        "result": "The Empire Altdorf"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "The Empire Nuln"
+      },
+      {
+        "min": 13,
+        "max": 15,
+        "result": "The Empire Middenheim"
+      },
+      {
+        "min": 16,
+        "max": 18,
+        "result": "The Empire Averland"
+      },
+      {
+        "min": 19,
+        "max": 25,
+        "result": "Worlds Edge Mountains Karak Kadrin"
+      },
+      {
+        "min": 26,
+        "max": 31,
+        "result": "Worlds Edge Mountains Karaz-a-Karak"
+      },
+      {
+        "min": 32,
+        "max": 35,
+        "result": "Worlds Edge Mountains Zhufbar"
+      },
+      {
+        "min": 36,
+        "max": 38,
+        "result": "Worlds Edge Mountains Karak Azul"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "Worlds Edge Mountains Other Settlements"
+      },
+      {
+        "min": 41,
+        "max": 44,
+        "result": "Grey Mountains Karak Norn"
+      },
+      {
+        "min": 45,
+        "max": 49,
+        "result": "Grey Mountains Grim Hold"
+      },
+      {
+        "min": 50,
+        "max": 55,
+        "result": "Grey Mountains Karak Azgaraz"
+      },
+      {
+        "min": 56,
+        "max": 59,
+        "result": "Grey Mountains Karak Zilfin"
+      },
+      {
+        "min": 60,
+        "max": 64,
+        "result": "Grey Mountains other settlements"
+      },
+      {
+        "min": 65,
+        "max": 69,
+        "result": "The Vaults Karak Grom"
+      },
+      {
+        "min": 70,
+        "max": 74,
+        "result": "The Vaults Karak Izor"
+      },
+      {
+        "min": 75,
+        "max": 79,
+        "result": "The Vaults Karak Bhufdar"
+      },
+      {
+        "min": 80,
+        "max": 82,
+        "result": "The Vaults Karak KaferKammaz"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "The Vaults Karak Eksfilaz"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "Black Mountains Karak Hirn"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "Black Mountains Karak Gantuk"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "Black Mountains Karak Angazbar"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "Black Mountains Other Settlements"
+      },
+      {
+        "min": 93,
+        "max": 95,
+        "result": "Norsca Kraka Dorden"
+      },
+      {
+        "min": 96,
+        "max": 97,
+        "result": "Norsca Kraka Drak"
+      },
+      {
+        "min": 98,
+        "max": 99,
+        "result": "Norsca Kraka Ornsmotek"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Norsca — Kraka Ravnsvake"
+      }
+    ]
+  },
+  "longbeard": {
+    "page": 50,
+    "text": "Adaptation warning: user-approved creation interpretation, −1 starting Fate and Fortune; age 120 or older, subject to GM discretion. At Brass/Silver count as Gold 1 with other Dwarfs; at Gold count Standing one higher, for social Tests only, not Earnings. Printed +10 on Tests to avoid/remove Conditions is a situational reference. The 0-Fate Resilience/Resolve fallback is deferred to character management."
+  }
+}

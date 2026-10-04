@@ -1,0 +1,520 @@
+[
+  {
+    "id": "dwarf-guide:update:guild-engineer",
+    "name": "Guild Engineer",
+    "careers": [
+      "engineer",
+      "up-in-arms:career:artillerist"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Guild Engineer",
+      "status": "Silver",
+      "standing": 3,
+      "skills": [
+        "Dodge",
+        "Drive",
+        "Melee (Any)",
+        "Ranged (Any)",
+        "Research",
+        "Trade (Any)"
+      ],
+      "talents": [
+        "Craftsman (Engineer)",
+        "Crew Commander",
+        "Entrenchment",
+        "Orientation"
+      ],
+      "trappings": [
+        "Trade Tools (Engineer)",
+        "Dwarf Warhammer or Dwarf Greathammer",
+        "Dwarf Handgun or Dwarf Pistol",
+        "Gromril Suit",
+        "Telescope"
+      ]
+    },
+    "page": 56,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:outcast-engineer",
+    "name": "Outcast Engineer",
+    "careers": [
+      "engineer",
+      "up-in-arms:career:artillerist"
+    ],
+    "profile": {
+      "level": 3,
+      "name": "Outcast Engineer",
+      "status": "Silver",
+      "standing": 3,
+      "skills": [
+        "Bribery",
+        "Gamble",
+        "Trade (Any)"
+      ],
+      "talents": [
+        "Argumentative",
+        "Dragon Belcher",
+        "Master Tradesman (Engineer)",
+        "Sniper"
+      ],
+      "trappings": [
+        "Dwarf Axe or Dwarf Greataxe",
+        "Repeating Dwarf Handgun",
+        "Mark of Shame"
+      ],
+      "unavailableSkills": [
+        {
+          "name": "Entertain",
+          "reason": "Printed without a required specialisation; left unresolved rather than invent a choice."
+        }
+      ]
+    },
+    "page": 56,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances.",
+    "characteristic": "Fel"
+  },
+  {
+    "id": "dwarf-guide:update:stoneshaper",
+    "name": "Stoneshaper",
+    "careers": [
+      "artisan"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Stoneshaper",
+      "status": "Silver",
+      "standing": 1,
+      "skills": [
+        "Climb",
+        "Language (Guilder)",
+        "Lore (Geology)",
+        "Navigation",
+        "Set Trap",
+        "Stealth (Underground)"
+      ],
+      "talents": [
+        "Enclosed Fighter",
+        "Entrenchment",
+        "Sixth Sense",
+        "Tireless"
+      ],
+      "trappings": [
+        "Trade Tools (Mason)",
+        "Dwarf Warhammer"
+      ]
+    },
+    "page": 57,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances.",
+    "characteristic": "I"
+  },
+  {
+    "id": "dwarf-guide:update:reckoner",
+    "name": "Reckoner",
+    "careers": [
+      "lawyer"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Reckoner",
+      "status": "Silver",
+      "standing": 4,
+      "skills": [
+        "Athletics",
+        "Evaluate",
+        "Intimidate",
+        "Lore (Heraldry or History)",
+        "Navigation",
+        "Stealth (Underground)"
+      ],
+      "talents": [
+        "Dealmaker",
+        "Menacing",
+        "Sturdy",
+        "Tireless"
+      ],
+      "trappings": [
+        "Reckoner’s Log",
+        "1d10 Shattered Tablets",
+        "Runescribing Kit",
+        "Dwarf Axe or Dwarf Warhammer",
+        "Breastplate",
+        "Mail Skirt",
+        "Plate Helm (Open)"
+      ]
+    },
+    "page": 57,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:grudgemaster",
+    "name": "Grudgemaster",
+    "careers": [
+      "lawyer"
+    ],
+    "profile": {
+      "level": 3,
+      "name": "Grudgemaster",
+      "status": "Gold",
+      "standing": 1,
+      "skills": [
+        "Intuition",
+        "Language (Any)",
+        "Lore (Any)",
+        "Secret Signs (Guilder)"
+      ],
+      "talents": [
+        "Ancestral Grudge",
+        "Bookish",
+        "Long Memory",
+        "Supportive"
+      ],
+      "trappings": [
+        "Research Archive",
+        "Beardling Apprentice",
+        "Key to the Hall of Remembering"
+      ]
+    },
+    "page": 57,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:karak-miner",
+    "name": "Karak Miner",
+    "careers": [
+      "miner"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Karak Miner",
+      "status": "Silver",
+      "standing": 1,
+      "skills": [
+        "Climb",
+        "Entertain (Singing)",
+        "Evaluate",
+        "Ranged (Explosives)",
+        "Secret Signs (Miner)",
+        "Stealth (Underground)"
+      ],
+      "talents": [
+        "Enclosed Fighter",
+        "Night Vision",
+        "Striding Gait (Rocky)",
+        "Underminer"
+      ],
+      "trappings": [
+        "Dwarf Pick",
+        "Miner’s Helm",
+        "Davrich Lamp",
+        "Candle",
+        "Lamp Oil",
+        "Breastplate",
+        "Mail Skirt"
+      ]
+    },
+    "page": 58,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:lodefinder",
+    "name": "Lodefinder",
+    "careers": [
+      "miner"
+    ],
+    "profile": {
+      "level": 3,
+      "name": "Lodefinder",
+      "status": "Silver",
+      "standing": 2,
+      "skills": [
+        "Drive",
+        "Lore (Geology)",
+        "Melee (Engineering)",
+        "Navigation"
+      ],
+      "talents": [
+        "Detect Artefact",
+        "Orientation",
+        "Short Fuse",
+        "Tunnel Fighter"
+      ],
+      "trappings": [
+        "Steam Drill",
+        "Blasting Charge",
+        "Beardling Apprentice"
+      ]
+    },
+    "page": 58,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:brother-of-grimnir",
+    "name": "Brother of Grimnir",
+    "careers": [
+      "slayer"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Brother of Grimnir",
+      "status": "Brass",
+      "standing": 2,
+      "skills": [
+        "Art (Tattoo)",
+        "Intimidate",
+        "Language (Battle)",
+        "Melee (Two-handed)",
+        "Outdoor Survival",
+        "Secret Signs (Brotherhood of Grimnir)"
+      ],
+      "talents": [
+        "Demolisher",
+        "Magic Defiance",
+        "Sharp",
+        "Very Strong"
+      ],
+      "trappings": [
+        "Wards of Grimnir (protective tattoos)",
+        "Dwarf Axe or Dwarf Greataxe"
+      ]
+    },
+    "page": 60,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:doomseeker",
+    "name": "Doomseeker",
+    "careers": [
+      "slayer"
+    ],
+    "profile": {
+      "level": 3,
+      "name": "Doomseeker",
+      "status": "Brass",
+      "standing": 2,
+      "skills": [
+        "Athletics",
+        "Climb",
+        "Melee (Flail)",
+        "Perception"
+      ],
+      "talents": [
+        "Ambidextrous",
+        "Combat Master",
+        "Glorious Demise",
+        "Whirlwind of Death"
+      ],
+      "trappings": [
+        "2 Whirling blades of death"
+      ]
+    },
+    "page": 60,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:quarreller",
+    "name": "Quarreller",
+    "careers": [
+      "soldier"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Quarreller",
+      "status": "Silver",
+      "standing": 3,
+      "skills": [
+        "Consume Alcohol",
+        "Gamble",
+        "Intimidate",
+        "Melee (Two-handed)",
+        "Outdoor Survival",
+        "Ranged (Crossbow)"
+      ],
+      "talents": [
+        "Drilled",
+        "Harpooner",
+        "Rapid Reload",
+        "Tireless"
+      ],
+      "trappings": [
+        "Dwarf Crossbow and Ammunition",
+        "Breastplate",
+        "Mail Skirt",
+        "Plate Helm (Open)"
+      ]
+    },
+    "page": 61,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:thunderer",
+    "name": "Thunderer",
+    "careers": [
+      "soldier",
+      "up-in-arms:career:handgunner"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Thunderer",
+      "status": "Silver",
+      "standing": 3,
+      "skills": [
+        "Evaluate",
+        "Gamble",
+        "Intimidate",
+        "Outdoor Survival",
+        "Ranged (Engineering)",
+        "Trade (Gunsmith)"
+      ],
+      "talents": [
+        "Dragon Belcher",
+        "Drilled",
+        "Tireless",
+        "Unshakeable"
+      ],
+      "trappings": [
+        "Dwarf Handgun and Ammunition",
+        "Breastplate",
+        "Mail Skirt",
+        "Plate Helm (Open)"
+      ]
+    },
+    "page": 61,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition Characteristic progression retained unless explicitly replaced by this profile; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:sky-pilot",
+    "name": "Sky Pilot",
+    "careers": [
+      "engineer"
+    ],
+    "profile": {
+      "level": 3,
+      "name": "Sky Pilot",
+      "status": "Silver",
+      "standing": 3,
+      "skills": [
+        "Charm",
+        "Navigation",
+        "Outdoor Survival",
+        "Sail (Skycraft)"
+      ],
+      "talents": [
+        "Acute Sense (Sight)",
+        "Maverick",
+        "Seasoned Traveller",
+        "Short Fuse"
+      ],
+      "trappings": [
+        "Pilot’s Licence",
+        "Dwarf Pistol",
+        "Telescope"
+      ]
+    },
+    "page": 56,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition progression retained unless explicitly replaced; no extra free Advances.",
+    "characteristic": "Ag"
+  },
+  {
+    "id": "dwarf-guide:update:runebearer",
+    "name": "Runebearer",
+    "careers": [
+      "messenger"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Runebearer",
+      "status": "Silver",
+      "standing": 1,
+      "skills": [
+        "Cool",
+        "Melee (Basic)",
+        "Ranged (Crossbow)",
+        "Secret Signs (Ranger)",
+        "Stealth (Any)",
+        "Swim"
+      ],
+      "talents": [
+        "Orientation",
+        "Seasoned Traveller",
+        "Striding Gait (Rocky)",
+        "Tireless"
+      ],
+      "trappings": [
+        "Dwarf Axe",
+        "Dwarf Crossbow and Ammunition",
+        "Leather Jack"
+      ]
+    },
+    "page": 58,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition progression retained unless explicitly replaced; no extra free Advances."
+  },
+  {
+    "id": "dwarf-guide:update:war-mourner",
+    "name": "War-mourner",
+    "careers": [
+      "slayer"
+    ],
+    "profile": {
+      "level": 4,
+      "name": "War-mourner",
+      "status": "Brass",
+      "standing": 2,
+      "skills": [
+        "Intuition",
+        "Leadership"
+      ],
+      "talents": [
+        "Ancestral Grudge",
+        "Berserk Charge",
+        "Combat Master",
+        "War Leader"
+      ],
+      "trappings": [
+        "2 Runic Chainaxes"
+      ]
+    },
+    "page": 60,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition progression retained unless explicitly replaced; no extra free Advances.",
+    "characteristic": "Fel"
+  },
+  {
+    "id": "dwarf-guide:update:axefighter",
+    "name": "Axefighter",
+    "careers": [
+      "soldier"
+    ],
+    "profile": {
+      "level": 2,
+      "name": "Axefighter",
+      "status": "Silver",
+      "standing": 3,
+      "skills": [
+        "Consume Alcohol",
+        "Gamble",
+        "Intimidate",
+        "Melee (Two-handed)",
+        "Outdoor Survival",
+        "Ranged (Throwing)"
+      ],
+      "talents": [
+        "Demolisher",
+        "Drilled",
+        "Shieldsman",
+        "Tireless"
+      ],
+      "trappings": [
+        "Dwarf Axe or Dwarf Greataxe",
+        "Shield",
+        "Breastplate",
+        "Mail Skirt",
+        "Plate Helm (Open)"
+      ]
+    },
+    "page": 61,
+    "conversion": "Optional Dwarf-only Career level. Core Fifth Edition progression retained unless explicitly replaced; no extra free Advances.",
+    "characteristic": "S",
+    "unavailable": "Unavailable: its Strength replacement duplicates Fifth Edition Soldier’s level-one Strength. User deferred this variant."
+  }
+]

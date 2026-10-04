@@ -1,0 +1,740 @@
+[
+  {
+    "name": "Sea Guard",
+    "class": "Warrior",
+    "species": [
+      "High Elf"
+    ],
+    "page": 64,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 1,
+      "S": 3,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": null,
+      "Int": null,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Sea Warden",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Consume Alcohol",
+          "Dodge",
+          "Gossip",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Ranged (Bow)",
+          "Ranged (Crossbow)",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Drilled",
+          "Fisherman",
+          "Hardy",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Elf Bow and 10 Arrows",
+          "Spear",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Sea Guard",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Endurance",
+          "Gamble",
+          "Outdoor Survival",
+          "Sail"
+        ],
+        "talents": [
+          "Enclosed Fighter",
+          "Lightning Reflexes",
+          "Sea Legs",
+          "Shieldsman"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Helmet",
+          "Mail Shirt",
+          "Shield"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Sea Master",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Navigation",
+          "Perception",
+          "Sail"
+        ],
+        "talents": [
+          "Inspiring",
+          "Old Salt",
+          "Savant (Oceans)",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Symbol of Rank",
+          "Quality Uniform"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Sea Helm",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Drive (Skycutter)",
+          "Intimidate"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Stout-hearted",
+          "Striding Gait (Coastal)",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Quality Uniform",
+          "Skycutter Chariot and Swiftfeather Roc",
+          "Tall Sea Helm"
+        ]
+      }
+    ],
+    "id": "high-elf:career:sea-guard",
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. Level 1: Animal Care (Swiftfeather Roc) uses core Animal Care as an ungrouped Skill. Level 1: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 2: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 3: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill.",
+    "text": "Printed training context: Level 1: Animal Care (Swiftfeather Roc) uses core Animal Care as an ungrouped Skill. Level 1: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 2: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 3: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill."
+  },
+  {
+    "name": "Swordmaster",
+    "class": "Warrior",
+    "species": [
+      "High Elf"
+    ],
+    "page": 66,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 4,
+      "Dex": null,
+      "Int": 3,
+      "WP": 2,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Swordwarden",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Art (Painting or Sculpture)",
+          "Athletics",
+          "Dodge",
+          "Lore (Any)",
+          "Melee (Basic)",
+          "Melee (Brawling)",
+          "Melee (Two-handed)",
+          "Perception",
+          "Perform (Acrobatics)",
+          "Play (Any)"
+        ],
+        "talents": [
+          "Acute Sense (Any)",
+          "Careful Strike",
+          "Disarm",
+          "Martial Arts"
+        ],
+        "trappings": [
+          "Clay Set or Painting Set",
+          "Loose Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Swordmaster",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Art (Poetry)",
+          "Cool",
+          "Endurance",
+          "Gossip",
+          "Intuition",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Beat Blade",
+          "Riposte",
+          "Strike to Injure",
+          "Sword-dancing"
+        ],
+        "trappings": [
+          "Book on Philosophy",
+          "Greatsword of Hoeth",
+          "Mail Shirt",
+          "Tall Helmet",
+          "Travelling Clothes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Blademaster",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Art (Painting or Sculpture)",
+          "Heal",
+          "Leadership",
+          "Ranged (Bow)"
+        ],
+        "talents": [
+          "Combat Master",
+          "Reaction Strike",
+          "Second Sight",
+          "Strike Mighty Blow"
+        ],
+        "trappings": [
+          "Book on the Art of War",
+          "Combs in Hair",
+          "Symbol of Rank"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Bladelord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Intimidate",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Pure Soul",
+          "Seasoned Traveller",
+          "War Leader"
+        ],
+        "trappings": [
+          "Book of Poetry",
+          "Fine Robes",
+          "Ornate Armour"
+        ]
+      }
+    ],
+    "id": "high-elf:career:swordmaster",
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. "
+  },
+  {
+    "name": "Shadow Warrior",
+    "class": "Warrior",
+    "species": [
+      "High Elf"
+    ],
+    "page": 70,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 1,
+      "S": 2,
+      "T": null,
+      "I": null,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 3,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Shadow Novice",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Endurance",
+          "Melee (Basic)",
+          "Navigation",
+          "Outdoor Survival",
+          "Ranged (Bow)",
+          "Set Trap",
+          "Stealth (Rural)",
+          "Swim"
+        ],
+        "talents": [
+          "Deadeye Shot",
+          "Rover",
+          "Scale Sheer Surface",
+          "Striding Gait (Woodland)"
+        ],
+        "trappings": [
+          "Bedroll",
+          "Elf Bow and 10 Barbed Arrows",
+          "Rope and Grappling Hook"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Shadow Warrior",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Intimidate",
+          "Melee (Brawling)",
+          "Secret Signs (Shadow Warriors)",
+          "Track"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Fearless (Dark Elves)",
+          "Menacing",
+          "Shadow"
+        ],
+        "trappings": [
+          "Crescent Pendant of Lileath",
+          "Face Wrap",
+          "Helm",
+          "Mail Shirt"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Shadow Master",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Gossip",
+          "Heal",
+          "Leadership"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Dual Wielder",
+          "Secret Identity",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Cadre of Shadow Warriors",
+          "Caltrops",
+          "Disguise Kit"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Shadow-walker",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Pick Lock",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Catfall",
+          "Seasoned Traveller",
+          "Sharpshooter",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Lockpick",
+          "Ring of Contacts"
+        ]
+      }
+    ],
+    "id": "high-elf:career:shadow-warrior",
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. "
+  },
+  {
+    "name": "Merchant Adventurer",
+    "class": "Burgher",
+    "species": [
+      "High Elf"
+    ],
+    "page": 72,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 4,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 3,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Sea Messenger",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Charm Animal",
+          "Climb",
+          "Dodge",
+          "Gossip",
+          "Melee (Basic)",
+          "Navigation",
+          "Ranged (Bow)",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Fisherman",
+          "Luck",
+          "Orientation",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Abacus",
+          "Elf Bow and 10 Arrows",
+          "Hand Weapon (Sword)",
+          "Tidecutter and Giant Flying Fish"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Merchant Adventurer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Evaluate",
+          "Haggle or Gamble",
+          "Language (Any)",
+          "Melee (Brawling)"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Old Salt",
+          "Pilot",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Bloodhawk or Razorbill and Crew",
+          "Hand Weapon (Sword)",
+          "Leather Jack",
+          "Shipping Charts and Sextant",
+          "Three Barrels of Goods"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Sea Explorer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Endurance",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Detect Artefact",
+          "Iron Jaw",
+          "Sea Legs",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Fleet of Two Tidecutters",
+          "Golden Eagle and Crew",
+          "Warehouse"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Sea Monster Hunter",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Intimidate",
+          "Leadership"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Fearless (Sea Monsters)",
+          "Sure Shot",
+          "Very Resilient"
+        ],
+        "trappings": [
+          "Albatross and Crew",
+          "Flotilla of Ships",
+          "Warehouses in Two Ports"
+        ]
+      }
+    ],
+    "id": "high-elf:career:merchant-adventurer",
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. Level 1: Sail (Any) uses core Sail as an ungrouped Skill.",
+    "text": "Printed training context: Level 1: Sail (Any) uses core Sail as an ungrouped Skill."
+  },
+  {
+    "name": "Aestheticist",
+    "class": "Courtier",
+    "species": [
+      "High Elf"
+    ],
+    "page": 74,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": 3,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Outfitter",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Art (Any)",
+          "Charm",
+          "Cool",
+          "Entertain (Any)",
+          "Evaluate",
+          "Intuition",
+          "Gossip",
+          "Haggle",
+          "Perception",
+          "Trade (Jeweller)"
+        ],
+        "talents": [
+          "Acute Sense (Any)",
+          "Artistic (Any)",
+          "Second Sight",
+          "Suave"
+        ],
+        "trappings": [
+          "Bottle of Perfume",
+          "Charms",
+          "Colourful Scarves",
+          "Comb"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Aestheticist",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Any)",
+          "Consume Alcohol",
+          "Lore (Local)",
+          "Lore (Magic)",
+          "Stealth (Urban)",
+          "Trade (Any)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Craftsman (Any)",
+          "Etiquette (Nobles)",
+          "Nimble-fingered"
+        ],
+        "trappings": [
+          "Crystal Pendulum",
+          "Flamboyant Clothing",
+          "Selection of Amulets"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Taste Maker",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Bribery",
+          "Language (Any)",
+          "Lore (Heraldry)",
+          "Perform (Any)"
+        ],
+        "talents": [
+          "Carouser",
+          "Detect Artefact",
+          "Gregarious",
+          "Master Tradesman (Any)"
+        ],
+        "trappings": [
+          "Essential Oils",
+          "Incense Sticks",
+          "Tuning fork"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Harmony Master",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Heal",
+          "Leadership"
+        ],
+        "talents": [
+          "Argumentative",
+          "Holy Visions",
+          "Magnum Opus",
+          "Pure Soul"
+        ],
+        "trappings": [
+          "Aethyrolabe",
+          "Plain High-Quality Robes"
+        ]
+      }
+    ],
+    "id": "high-elf:career:aestheticist",
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. "
+  },
+  {
+    "name": "Mage",
+    "class": "Academic",
+    "species": [
+      "High Elf"
+    ],
+    "page": 90,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": null,
+      "Ag": 4,
+      "Dex": 2,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Novitiate",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Calligraphy or Engraving)",
+          "Channelling (Any Colour)",
+          "Charm",
+          "Gossip",
+          "Heal",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Lore (Theology)",
+          "Perception",
+          "Pray"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Detect Artefact",
+          "Petty Magic",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Chalk or Chisel",
+          "Religious Symbol (Isha)",
+          "Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Student Mage",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Channelling (Any Colour)",
+          "Cool",
+          "Intimidate",
+          "Language (Any One)",
+          "Lore (Any One)",
+          "Research"
+        ],
+        "talents": [
+          "Arcane Magic (Any Arcane Lore)",
+          "Coolheaded",
+          "Instinctive Diction",
+          "Savvy"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Religious Symbol (Hoeth)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Mage",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Channelling (Qhaysh)",
+          "Evaluate",
+          "Melee (Polearm)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Blessed by Isha",
+          "Dual Wielder",
+          "High Magic",
+          "Lileath’s Blessing"
+        ],
+        "trappings": [
+          "Hand Weapon (Sword)",
+          "Light Warhorse",
+          "Religious Symbol (Lileath)",
+          "Staff",
+          "Wayshard"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "High Mage",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Lore (Any)",
+          "Dodge"
+        ],
+        "talents": [
+          "Fast Hands",
+          "Iron Will",
+          "Magical Sense",
+          "Menacing"
+        ],
+        "trappings": [
+          "Magical Item"
+        ]
+      }
+    ],
+    "id": "high-elf:career:mage",
+    "text": "Mage levels 1–4 are supported. Archmage (level five) and entry into the three Elf priest branches are deferred by user decision. Student Mage requires four of this guide’s six Petty spells. Additional Colour Lores use 10 individual Channelling points and four qualifying spells, up to WP Bonus; High Magic has the further requirements on pp. 79–83.",
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. "
+  }
+]

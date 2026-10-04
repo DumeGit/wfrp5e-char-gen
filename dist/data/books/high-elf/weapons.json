@@ -1,0 +1,13 @@
+[
+  {
+    "id": "high-elf:weapon:greatsword-of-hoeth",
+    "name": "Greatsword of Hoeth",
+    "page": 33,
+    "kind": "melee",
+    "group": "Two-handed",
+    "enc": 2,
+    "reach": "Long",
+    "damage": "+SB+6",
+    "qualities": "Damaging, Durable 3, Fine 3, Hack"
+  }
+]

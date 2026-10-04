@@ -1,0 +1,1043 @@
+[
+  {
+    "id": "high-elf:table:outer",
+    "name": "High Elf Outer Kingdoms Careers",
+    "kind": "career",
+    "species": "High Elf",
+    "page": 59,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 3,
+        "result": "apothecary"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "result": "lawyer"
+      },
+      {
+        "min": 6,
+        "max": 8,
+        "result": "high-elf:career:mage"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "result": "scholar"
+      },
+      {
+        "min": 17,
+        "max": 19,
+        "result": "artisan"
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "result": "investigator"
+      },
+      {
+        "min": 22,
+        "max": 24,
+        "result": "merchant"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "high-elf:career:merchant-adventurer"
+      },
+      {
+        "min": 27,
+        "max": 29,
+        "result": "townsman"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "watchman"
+      },
+      {
+        "min": 31,
+        "max": 32,
+        "result": "adviser"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "high-elf:career:aestheticist"
+      },
+      {
+        "min": 35,
+        "max": 35,
+        "result": "artist"
+      },
+      {
+        "min": 36,
+        "max": 36,
+        "result": "duellist"
+      },
+      {
+        "min": 37,
+        "max": 39,
+        "result": "envoy"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "noble"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "servant"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "spy"
+      },
+      {
+        "min": 47,
+        "max": 51,
+        "result": "warden"
+      },
+      {
+        "min": 52,
+        "max": 52,
+        "result": "herbalist"
+      },
+      {
+        "min": 53,
+        "max": 55,
+        "result": "hunter"
+      },
+      {
+        "min": 56,
+        "max": 60,
+        "result": "scout"
+      },
+      {
+        "min": 61,
+        "max": 63,
+        "result": "villager"
+      },
+      {
+        "min": 64,
+        "max": 66,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 67,
+        "max": 67,
+        "result": "entertainer"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "messenger"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "boatman"
+      },
+      {
+        "min": 72,
+        "max": 73,
+        "result": "pilot"
+      },
+      {
+        "min": 74,
+        "max": 77,
+        "result": "sailor"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "smuggler"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "knave"
+      },
+      {
+        "min": 80,
+        "max": 81,
+        "result": "charlatan"
+      },
+      {
+        "min": 82,
+        "max": 84,
+        "result": "outlaw"
+      },
+      {
+        "min": 85,
+        "max": 88,
+        "result": "cavalryman"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "guard"
+      },
+      {
+        "min": 91,
+        "max": 92,
+        "result": "knight"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "high-elf:career:sea-guard"
+      },
+      {
+        "min": 94,
+        "max": 95,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 96,
+        "max": 96,
+        "result": "protagonist"
+      },
+      {
+        "min": 97,
+        "max": 99,
+        "result": "soldier"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "high-elf:career:swordmaster"
+      }
+    ],
+    "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
+    "origins": [
+      "high-elf:origin:tiranoc",
+      "high-elf:origin:chrace",
+      "high-elf:origin:cothique",
+      "high-elf:origin:yvresse"
+    ]
+  },
+  {
+    "id": "high-elf:table:nagarythe",
+    "name": "High Elf Nagarythe Careers",
+    "kind": "career",
+    "species": "High Elf",
+    "page": 59,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 3,
+        "result": "apothecary"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "result": "high-elf:career:mage"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "physician"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "scholar"
+      },
+      {
+        "min": 10,
+        "max": 12,
+        "result": "artisan"
+      },
+      {
+        "min": 13,
+        "max": 15,
+        "result": "investigator"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "result": "merchant"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "high-elf:career:merchant-adventurer"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "result": "adviser"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "result": "high-elf:career:aestheticist"
+      },
+      {
+        "min": 21,
+        "max": 21,
+        "result": "artist"
+      },
+      {
+        "min": 22,
+        "max": 24,
+        "result": "duellist"
+      },
+      {
+        "min": 25,
+        "max": 27,
+        "result": "envoy"
+      },
+      {
+        "min": 28,
+        "max": 29,
+        "result": "noble"
+      },
+      {
+        "min": 30,
+        "max": 32,
+        "result": "servant"
+      },
+      {
+        "min": 33,
+        "max": 37,
+        "result": "spy"
+      },
+      {
+        "min": 38,
+        "max": 39,
+        "result": "warden"
+      },
+      {
+        "min": 40,
+        "max": 43,
+        "result": "herbalist"
+      },
+      {
+        "min": 44,
+        "max": 48,
+        "result": "hunter"
+      },
+      {
+        "min": 49,
+        "max": 56,
+        "result": "scout"
+      },
+      {
+        "min": 57,
+        "max": 59,
+        "result": "villager"
+      },
+      {
+        "min": 60,
+        "max": 64,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 65,
+        "max": 67,
+        "result": "entertainer"
+      },
+      {
+        "min": 68,
+        "max": 70,
+        "result": "messenger"
+      },
+      {
+        "min": 71,
+        "max": 74,
+        "result": "high-elf:career:shadow-warrior"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "boatman"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "smuggler"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "knave"
+      },
+      {
+        "min": 79,
+        "max": 82,
+        "result": "charlatan"
+      },
+      {
+        "min": 83,
+        "max": 86,
+        "result": "outlaw"
+      },
+      {
+        "min": 87,
+        "max": 90,
+        "result": "cavalryman"
+      },
+      {
+        "min": 91,
+        "max": 91,
+        "result": "guard"
+      },
+      {
+        "min": 92,
+        "max": 93,
+        "result": "knight"
+      },
+      {
+        "min": 94,
+        "max": 95,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 96,
+        "max": 97,
+        "result": "protagonist"
+      },
+      {
+        "min": 98,
+        "max": 99,
+        "result": "soldier"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "high-elf:career:swordmaster"
+      }
+    ],
+    "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
+    "origins": [
+      "high-elf:origin:the-shadowlands"
+    ]
+  },
+  {
+    "id": "high-elf:table:inner",
+    "name": "High Elf Inner Kingdoms Careers",
+    "kind": "career",
+    "species": "High Elf",
+    "page": 59,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 3,
+        "result": "apothecary"
+      },
+      {
+        "min": 4,
+        "max": 6,
+        "result": "lawyer"
+      },
+      {
+        "min": 7,
+        "max": 9,
+        "result": "high-elf:career:mage"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "physician"
+      },
+      {
+        "min": 12,
+        "max": 14,
+        "result": "scholar"
+      },
+      {
+        "min": 15,
+        "max": 17,
+        "result": "artisan"
+      },
+      {
+        "min": 18,
+        "max": 19,
+        "result": "investigator"
+      },
+      {
+        "min": 20,
+        "max": 25,
+        "result": "merchant"
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "result": "high-elf:career:merchant-adventurer"
+      },
+      {
+        "min": 28,
+        "max": 29,
+        "result": "townsman"
+      },
+      {
+        "min": 30,
+        "max": 31,
+        "result": "watchman"
+      },
+      {
+        "min": 32,
+        "max": 33,
+        "result": "adviser"
+      },
+      {
+        "min": 34,
+        "max": 36,
+        "result": "high-elf:career:aestheticist"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "artist"
+      },
+      {
+        "min": 39,
+        "max": 41,
+        "result": "duellist"
+      },
+      {
+        "min": 42,
+        "max": 45,
+        "result": "envoy"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "noble"
+      },
+      {
+        "min": 48,
+        "max": 50,
+        "result": "servant"
+      },
+      {
+        "min": 51,
+        "max": 53,
+        "result": "spy"
+      },
+      {
+        "min": 54,
+        "max": 55,
+        "result": "warden"
+      },
+      {
+        "min": 56,
+        "max": 56,
+        "result": "herbalist"
+      },
+      {
+        "min": 57,
+        "max": 57,
+        "result": "hunter"
+      },
+      {
+        "min": 58,
+        "max": 59,
+        "result": "scout"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "villager"
+      },
+      {
+        "min": 61,
+        "max": 61,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 62,
+        "max": 64,
+        "result": "entertainer"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "messenger"
+      },
+      {
+        "min": 67,
+        "max": 69,
+        "result": "boatman"
+      },
+      {
+        "min": 70,
+        "max": 72,
+        "result": "pilot"
+      },
+      {
+        "min": 73,
+        "max": 77,
+        "result": "sailor"
+      },
+      {
+        "min": 78,
+        "max": 80,
+        "result": "smuggler"
+      },
+      {
+        "min": 81,
+        "max": 83,
+        "result": "knave"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "charlatan"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "cavalryman"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "guard"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "knight"
+      },
+      {
+        "min": 92,
+        "max": 95,
+        "result": "high-elf:career:sea-guard"
+      },
+      {
+        "min": 96,
+        "max": 96,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 97,
+        "max": 97,
+        "result": "protagonist"
+      },
+      {
+        "min": 98,
+        "max": 99,
+        "result": "soldier"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "high-elf:career:swordmaster"
+      }
+    ],
+    "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
+    "origins": [
+      "high-elf:origin:caledor",
+      "high-elf:origin:ellyrion",
+      "high-elf:origin:saphery",
+      "high-elf:origin:eataine"
+    ]
+  },
+  {
+    "id": "high-elf:table:avelorn",
+    "name": "High Elf Avelorn Careers",
+    "kind": "career",
+    "species": "High Elf",
+    "page": 59,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 4,
+        "result": "apothecary"
+      },
+      {
+        "min": 5,
+        "max": 9,
+        "result": "high-elf:career:mage"
+      },
+      {
+        "min": 10,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 17,
+        "result": "scholar"
+      },
+      {
+        "min": 18,
+        "max": 21,
+        "result": "artisan"
+      },
+      {
+        "min": 22,
+        "max": 22,
+        "result": "merchant"
+      },
+      {
+        "min": 23,
+        "max": 23,
+        "result": "high-elf:career:merchant-adventurer"
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "result": "adviser"
+      },
+      {
+        "min": 26,
+        "max": 28,
+        "result": "high-elf:career:aestheticist"
+      },
+      {
+        "min": 29,
+        "max": 33,
+        "result": "artist"
+      },
+      {
+        "min": 34,
+        "max": 35,
+        "result": "duellist"
+      },
+      {
+        "min": 36,
+        "max": 38,
+        "result": "envoy"
+      },
+      {
+        "min": 39,
+        "max": 41,
+        "result": "noble"
+      },
+      {
+        "min": 42,
+        "max": 43,
+        "result": "servant"
+      },
+      {
+        "min": 44,
+        "max": 45,
+        "result": "spy"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "warden"
+      },
+      {
+        "min": 48,
+        "max": 51,
+        "result": "herbalist"
+      },
+      {
+        "min": 52,
+        "max": 55,
+        "result": "hunter"
+      },
+      {
+        "min": 56,
+        "max": 59,
+        "result": "scout"
+      },
+      {
+        "min": 60,
+        "max": 62,
+        "result": "villager"
+      },
+      {
+        "min": 63,
+        "max": 63,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 64,
+        "max": 69,
+        "result": "entertainer"
+      },
+      {
+        "min": 70,
+        "max": 73,
+        "result": "messenger"
+      },
+      {
+        "min": 74,
+        "max": 74,
+        "result": "boatman"
+      },
+      {
+        "min": 75,
+        "max": 77,
+        "result": "sailor"
+      },
+      {
+        "min": 78,
+        "max": 79,
+        "result": "smuggler"
+      },
+      {
+        "min": 80,
+        "max": 83,
+        "result": "knave"
+      },
+      {
+        "min": 84,
+        "max": 86,
+        "result": "charlatan"
+      },
+      {
+        "min": 87,
+        "max": 87,
+        "result": "outlaw"
+      },
+      {
+        "min": 88,
+        "max": 91,
+        "result": "cavalryman"
+      },
+      {
+        "min": 92,
+        "max": 93,
+        "result": "guard"
+      },
+      {
+        "min": 94,
+        "max": 95,
+        "result": "knight"
+      },
+      {
+        "min": 96,
+        "max": 96,
+        "result": "protagonist"
+      },
+      {
+        "min": 97,
+        "max": 99,
+        "result": "soldier"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "high-elf:career:swordmaster"
+      }
+    ],
+    "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
+    "origins": [
+      "high-elf:origin:avelorn"
+    ]
+  },
+  {
+    "id": "high-elf:table:sea-elf",
+    "name": "High Elf Sea Elf Careers",
+    "kind": "career",
+    "species": "High Elf",
+    "page": 59,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 2,
+        "result": "apothecary"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "lawyer"
+      },
+      {
+        "min": 5,
+        "max": 7,
+        "result": "high-elf:career:mage"
+      },
+      {
+        "min": 8,
+        "max": 11,
+        "result": "physician"
+      },
+      {
+        "min": 12,
+        "max": 14,
+        "result": "scholar"
+      },
+      {
+        "min": 15,
+        "max": 17,
+        "result": "artisan"
+      },
+      {
+        "min": 18,
+        "max": 20,
+        "result": "investigator"
+      },
+      {
+        "min": 21,
+        "max": 25,
+        "result": "merchant"
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "result": "high-elf:career:merchant-adventurer"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "townsman"
+      },
+      {
+        "min": 29,
+        "max": 29,
+        "result": "watchman"
+      },
+      {
+        "min": 30,
+        "max": 32,
+        "result": "adviser"
+      },
+      {
+        "min": 33,
+        "max": 33,
+        "result": "high-elf:career:aestheticist"
+      },
+      {
+        "min": 34,
+        "max": 34,
+        "result": "artist"
+      },
+      {
+        "min": 35,
+        "max": 35,
+        "result": "duellist"
+      },
+      {
+        "min": 36,
+        "max": 39,
+        "result": "envoy"
+      },
+      {
+        "min": 40,
+        "max": 42,
+        "result": "noble"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "servant"
+      },
+      {
+        "min": 45,
+        "max": 48,
+        "result": "spy"
+      },
+      {
+        "min": 49,
+        "max": 51,
+        "result": "scout"
+      },
+      {
+        "min": 52,
+        "max": 55,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 56,
+        "max": 58,
+        "result": "entertainer"
+      },
+      {
+        "min": 59,
+        "max": 61,
+        "result": "messenger"
+      },
+      {
+        "min": 62,
+        "max": 65,
+        "result": "boatman"
+      },
+      {
+        "min": 66,
+        "max": 69,
+        "result": "pilot"
+      },
+      {
+        "min": 70,
+        "max": 74,
+        "result": "sailor"
+      },
+      {
+        "min": 75,
+        "max": 77,
+        "result": "smuggler"
+      },
+      {
+        "min": 78,
+        "max": 79,
+        "result": "stevedore"
+      },
+      {
+        "min": 80,
+        "max": 82,
+        "result": "knave"
+      },
+      {
+        "min": 83,
+        "max": 86,
+        "result": "charlatan"
+      },
+      {
+        "min": 87,
+        "max": 87,
+        "result": "outlaw"
+      },
+      {
+        "min": 88,
+        "max": 88,
+        "result": "cavalryman"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "guard"
+      },
+      {
+        "min": 91,
+        "max": 91,
+        "result": "knight"
+      },
+      {
+        "min": 92,
+        "max": 94,
+        "result": "high-elf:career:sea-guard"
+      },
+      {
+        "min": 95,
+        "max": 95,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 96,
+        "max": 96,
+        "result": "protagonist"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "soldier"
+      }
+    ],
+    "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
+    "origins": [
+      "high-elf:origin:sea-elf"
+    ]
+  }
+]

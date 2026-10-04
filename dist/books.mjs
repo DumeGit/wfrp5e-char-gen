@@ -1,3 +1,5 @@
+import {dwarfIssues} from './dwarf-guide.mjs';
+import {validateElfState,validateElfCreation} from './high-elf.mjs';
 import {cultIssues} from './cults.mjs';
 import {KEYS,canon,base,options,skillInfo,talentInfo} from './rules.mjs';
 import {careerSpecies,careerAvailable} from './origins.mjs';
@@ -6,8 +8,8 @@ import {validateIIIState,oldFaith,spellChoices} from './archives-iii.mjs';
 import {validateWoMState} from './winds-of-magic.mjs';
 
 export const BOOK_SCHEMA=1;
-const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables','origins','astrology','cants','cults'];
-const files=new Set([...arrays,'species','background','career-rolls','source','config','rules']);
+const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables','origins','astrology','cants','cults','careerUpdates','runes','techniques'];
+const files=new Set([...arrays,'species','background','career-rolls','source','config','rules','withdrawals','dwarfCreation','highElfCreation']);
 const settings=new Set(['talentEffects','talentLimits','talentOptions','skillOptions','colours','gods','blessings','classKit','containers','carriers','gearEnc']);
 const plain=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
 const nonempty=x=>typeof x==='string'&&x.trim().length>0;
@@ -24,10 +26,12 @@ export function validateBackgroundTable(table,label){
  return table;
 }
 const columns={
+ techniques:['sl','text'],
+ careerUpdates:['careers','characteristic','profile','unavailable'],runes:['form','master','sl','text'],
  cults:['miracles','text'],
  cants:['lore','text'],
  astrology:['min','max','adjustments','talent','witchling','text','classical','ascendant','calendar','god','appearance','profilePage'],
- careers:['class','species','advanceScheme','levels','runtimeId','requiredOrigins','randomAlternativeFor','text'],skills:['char','advanced','grouped','options','text'],talents:['text','unavailable'],spells:['category','text','range','target','duration','cn','specialisations','ritual'],gear:['price','enc','capacity','availability','category','text','ammunition','wearable','ogreSized'],market:['price','enc','availability','category','text','ammunition','wearable','ogreSized'],weapons:['group','enc','reach','damage','qualities','kind','text'],armour:['enc','locations','ap','qualities','quick'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents','mechanics','appearancePage'],background:['forenames','surnames','eyes','hair','clans','rollTables','nameElements','imperialNames','namePages'],tables:['kind','sides','rows','species','career'],origins:['species','languages','skills','talents','randomTalents','background','optionalTalent','careerChoices','allowedPatrons','careerSpecies','grantedTalents','sheetSpecies','classNote','text','additionalCareers','randomTalentAlternative']
+ careers:['class','species','advanceScheme','levels','runtimeId','requiredOrigins','randomAlternativeFor','text','alternativeFor'],skills:['char','advanced','grouped','options','text','speciesOnly'],talents:['text','unavailable','limit','speciesOnly'],spells:['category','text','range','target','duration','cn','specialisations','ritual','requiredLores'],gear:['price','enc','capacity','availability','category','text','ammunition','wearable','ogreSized'],market:['price','enc','availability','category','text','ammunition','wearable','ogreSized'],weapons:['group','enc','reach','damage','qualities','kind','text'],armour:['enc','locations','ap','qualities','quick','layer'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents','mechanics','appearancePage'],background:['forenames','surnames','eyes','hair','clans','rollTables','nameElements','imperialNames','namePages'],tables:['kind','sides','rows','species','career','origin','origins'],origins:['species','languages','skills','talents','randomTalents','background','optionalTalent','careerChoices','allowedPatrons','careerSpecies','grantedTalents','sheetSpecies','classNote','text','additionalCareers','randomTalentAlternative','careers','careerTable']
 };
 
 export function validateManifest(p){
@@ -66,6 +70,9 @@ export async function loadBookLibrary(readJSON,registryURL=new URL('./data/books
  for(const p of packs)for(const id of p.manifest.dependsOn)if(!seen.has(id))fail(`${p.manifest.id}: missing dependency ${id}.`);
  // Validate every pack, including disabled ones, in its dependency context.
  const library={schemaVersion:BOOK_SCHEMA,core:index.core,packs};
+ for(const p of packs)for(const c of p.data.careers||[])if(c.alternativeFor&&!packs.some(q=>(q.data.careers||[]).some(t=>t.id===c.alternativeFor&&t.name===c.name)))fail(`${c.id}: alternate profile needs an installed same-name Career.`);
+ for(const p of packs)for(const u of p.data.careerUpdates||[])if(!strings(u.careers)||u.careers.some(id=>!packs.some(q=>(q.data.careers||[]).some(c=>c.id===id))))fail(`${u.id}: Career update needs installed target Careers.`);
+ for(const p of packs){if(p.data.withdrawals!==undefined){if(!Array.isArray(p.data.withdrawals))fail(`${p.manifest.id}: withdrawals must be an array.`);for(const w of p.data.withdrawals){const target=packs.find(q=>q.manifest.id===w.book);if(!plain(w)||Object.keys(w).some(k=>!['id','book','kind','target','page','reason'].includes(k))||!nonempty(w.id)||!w.id.startsWith(p.manifest.id+':')||!['weapons','market','gear'].includes(w.kind)||w.book===p.manifest.id||!pageOK(w.page)||!nonempty(w.reason)||!target?.data[w.kind]?.some(t=>t.id===w.target))fail(`${p.manifest.id}: withdrawal needs an installed equipment target and a sourced reason.`);}}}
  for(const p of packs)for(const kind of arrays)for(const x of p.data[kind]||[])if(x.supersededBy){const v=x.supersededBy;if(!plain(v)||Object.keys(v).some(k=>!['book','contentId','reason'].includes(k))||!nonempty(v.reason)||v.book===p.manifest.id||!packs.find(q=>q.manifest.id===v.book)?.data[kind]?.some(t=>t.id===v.contentId&&t.name===x.name))fail(`${x.id}: superseding content must name another installed book's same-name option and a reason.`);}
  for(const p of packs)assembleBooks(library,[p.manifest.id]);
  return library;
@@ -108,8 +115,8 @@ function mergeEntry(R,pack,kind,value,key){
   entry.replaces=old.contentId;
   if(kind==='species'||kind==='background')R[kind][key]=entry;else R[kind][R[kind].indexOf(old)]=entry;
  }else{
-  const sameName=x=>kind==='talents'?base(canon(x.name)).toLowerCase()===base(canon(entry.name)).toLowerCase():x.name.toLowerCase()===entry.name.toLowerCase()&&(kind!=='weapons'||x.kind===entry.kind);
-  if(list.some(x=>x.contentId===entry.contentId||sameName(x)||x.id===entry.id))fail(`${entry.contentId}: duplicate option; declare an explicit variant replacement.`);
+  const sameName=x=>kind==='talents'?base(canon(x.name)).toLowerCase()===base(canon(entry.name)).toLowerCase():x.name.toLowerCase()===entry.name.toLowerCase()&&(kind!=='weapons'||x.kind===entry.kind)&&(kind!=='runes'||x.form===entry.form);
+  if(list.some(x=>x.contentId===entry.contentId||sameName(x)&&!(kind==='careers'&&(entry.alternativeFor===x.id||x.alternativeFor===entry.id))||x.id===entry.id))fail(`${entry.contentId}: duplicate option; declare an explicit variant replacement.`);
   if(kind==='species'||kind==='background')R[kind][key]=entry;else R[kind].push(entry);
  }
 }
@@ -138,21 +145,28 @@ export function assembleBooks(library,ids=[library.core]){
    R.source=structuredClone(data.source);R.config=structuredClone(data.config);R['career-rolls']=structuredClone(data['career-rolls']);
   }
   for(const key of arrays){if(data[key]===undefined)continue;if(!Array.isArray(data[key]))fail(`${p.id}: ${key} must be an array.`);for(const entry of data[key]){
-   mergeEntry(R,p,key,entry);
+   if(!packs.some(q=>(q.data.withdrawals||[]).some(w=>w.kind===key&&w.target===entry.id&&R.books.some(b=>b.id===w.book))))mergeEntry(R,p,key,entry);
   }}
   for(const key of ['species','background']){if(data[key]===undefined)continue;if(!plain(data[key]))fail(`${p.id}: ${key} must be an object.`);for(const [name,value]of Object.entries(data[key])){
    if(unsafe(name))fail('unsafe content key.');
    if(key==='background'&&name==='doomings'){if(p.kind!=='core')fail('alternate Dooming tables need an implemented rule handler.');R.background.doomings=structuredClone(value);continue;}
    mergeEntry(R,p,key,value,name);
   }}
+  if(data.highElfCreation){if(p.id!=='high-elf'||R.highElfCreation)fail('unsupported High Elf creation source.');R.highElfCreation=structuredClone(data.highElfCreation);}
+  if(data.dwarfCreation){if(p.id!=='dwarf-guide'||R.dwarfCreation)fail('unsupported Dwarf creation source.');R.dwarfCreation=structuredClone(data.dwarfCreation);}
   if(data.rules)applyRules(R,p,data.rules);
  }
+ // Explicit cross-name withdrawals are applied after every pack, independent of selection order.
+ for(const p of packs)for(const w of p.data.withdrawals||[]){if(!R.books.some(b=>b.id===w.book))continue;const original=packs.find(q=>q.manifest.id===w.book).data[w.kind].find(x=>x.id===w.target);R.contentDecisions.push({name:original.name,source:{book:p.manifest.id,page:w.page},reason:w.reason});}
  validateCatalog(R);
  return R;
 }
 
 export function validateCatalog(R){
  const C=R.config;
+ if(R.highElfCreation)validateElfCreation(R);
+ for(const x of R.techniques)if(x.source.book!=='high-elf'||!Number.isInteger(x.sl)||x.sl<1||!nonempty(x.text))fail('invalid Sword-dancing technique.');
+ for(const x of R.spells)if(x.category==='Elven Arcane'?(!strings(x.requiredLores)||x.requiredLores.length!==2||new Set(x.requiredLores).size!==2||x.requiredLores.some(l=>!C.colours.includes(l))):x.requiredLores!==undefined)fail(`${x.name}: invalid Elven Arcane requirements.`);
  if(!plain(C)||Object.keys(C).some(k=>!settings.has(k)))fail('unsupported core setting.');
  for(const key of settings)if(!(key in C))fail(`missing setting ${key}.`);
  for(const key of ['gods','colours'])if(!strings(C[key])||!C[key].length||new Set(C[key]).size!==C[key].length)fail(`invalid ${key}.`);
@@ -163,6 +177,7 @@ export function validateCatalog(R){
  if(!plain(C.talentLimits)||Object.values(C.talentLimits).some(x=>x!==null&&(!Number.isInteger(x)||x<1)))fail('invalid Talent repeat limits.');
  const ids=new Set();for(const key of arrays.concat('species','background','rules'))for(const x of (Array.isArray(R[key])?R[key]:Object.values(R[key])).filter(plain)){if(ids.has(x.contentId))fail(`duplicate content ID ${x.contentId}.`);ids.add(x.contentId);}
  for(const x of R.skills)if(!KEYS.includes(x.char)||typeof x.advanced!=='boolean'||typeof x.grouped!=='boolean'||x.grouped&&!strings(x.options))fail(`${x.name}: invalid Skill.`);
+ for(const x of R.skills)if(x.speciesOnly!==undefined&&(!strings(x.speciesOnly)||x.speciesOnly.some(n=>!R.species[n])))fail(`${x.name}: invalid Skill Species restriction.`);
  for(const x of R.skills)if(x.text!==undefined&&!nonempty(x.text))fail(`${x.name}: Skill description must be text.`);
  const ritualLores=new Set(R.spells.map(x=>x.category).filter(x=>!['Petty','Arcane','Blessing','Ritual',...C.gods].includes(x)));
  for(const x of R.spells)if(x.ritual!==undefined){
@@ -175,6 +190,7 @@ export function validateCatalog(R){
   if(sign.witchling!==undefined){if(!Array.isArray(sign.witchling)||sign.witchling.some(row=>!plain(row)||Object.keys(row).some(key=>!['min','max','adjustments','talent'].includes(key))||!Number.isInteger(row.min)||!Number.isInteger(row.max)||row.min<1||row.max>10||row.min>row.max||!talentInfo(R,row.talent)||!plain(row.adjustments)||Object.entries(row.adjustments).some(([key,value])=>!KEYS.includes(key)||!Number.isInteger(value))))fail(`${sign.name}: invalid Witchling table.`);for(let n=1;n<=10;n++)if(sign.witchling.filter(row=>n>=row.min&&n<=row.max).length!==1)fail(`${sign.name}: Witchling result ${n} is missing or overlapping.`);}
  }
  if(R.astrology?.length)for(let n=1;n<=100;n++)if(R.astrology.filter(sign=>n>=sign.min&&n<=sign.max).length!==1)fail(`star-sign result ${n} is missing or overlapping.`);
+ for(const x of R.talents){if(x.limit!==undefined&&!(Number.isInteger(x.limit)&&x.limit>0||strings(x.limit)&&x.limit.length&&x.limit.every(k=>KEYS.includes(k))))fail(`${x.name}: invalid dynamic purchase limit.`);if(x.speciesOnly!==undefined&&(!strings(x.speciesOnly)||x.speciesOnly.some(n=>!R.species[n])))fail(`${x.name}: invalid Talent Species restriction.`);}
  for(const x of R.talents)if(!nonempty(x.text)||x.unavailable!==undefined&&!nonempty(x.unavailable))fail(`${x.name}: Talent description and unavailability reason must be text.`);
  for(const x of R.spells){if(!['text','category','range','target','duration'].every(k=>nonempty(x[k])))fail(`${x.name}: incomplete spell.`);if(x.specialisations!==undefined&&(!strings(x.specialisations)||!x.specialisations.length||new Set(x.specialisations).size!==x.specialisations.length))fail(`${x.name}: invalid spell specialisations.`);}
  const spellNames=spellChoices(R).map(x=>x.name);if(new Set(spellNames).size!==spellNames.length)fail('spell specialisations conflict with another spell name.');
@@ -204,16 +220,10 @@ export function validateCatalog(R){
    if(m.exclusiveLores?.some(lore=>!m.arcaneLores?.includes(lore)))fail(`${name}: exclusive Lore must also be allowed.`);
   }
  }
- for(const c of R.careers){
-  if(!strings(c.species)||!c.species.length||c.species.some(x=>!R.species[x])||!C.classKit[c.class]||!plain(c.advanceScheme)||KEYS.some(k=>![null,1,2,3,4].includes(c.advanceScheme[k]))||!Array.isArray(c.levels)||c.levels.length!==4)fail(`${c.name}: invalid Career structure.`);
-  c.levels.forEach((l,i)=>{
-   if(!plain(l)||Object.keys(l).some(k=>!['level','name','status','standing','skills','talents','trappings','unavailableSkills'].includes(k)))fail(`${c.name}: unsupported Career level fields need an implemented handler.`);
-   if(l.level!==i+1||!nonempty(l.name)||!['Brass','Silver','Gold'].includes(l.status)||!Number.isInteger(l.standing)||l.standing<0||!['skills','talents','trappings'].every(k=>strings(l[k])))fail(`${c.name}: invalid Career level ${i+1}.`);
-   if(l.unavailableSkills!==undefined&&(!Array.isArray(l.unavailableSkills)||l.unavailableSkills.some(x=>!plain(x)||Object.keys(x).some(k=>!['name','reason'].includes(k))||!nonempty(x.name)||!nonempty(x.reason))))fail(`${c.name}: unavailable Skills require a name and reason.`);
-   for(const raw of l.skills)for(const n of options(R,raw))if(!skillInfo(R,n))fail(`${c.name}: unknown Skill ${n}.`);
-   for(const raw of l.talents)if(!talentInfo(R,raw))fail(`${c.name}: unknown Talent ${raw}.`);
-  });
- }
+ for(const update of R.careerUpdates){if(!strings(update.careers)||!update.careers.length||update.characteristic!==undefined&&!KEYS.includes(update.characteristic)||update.unavailable!==undefined&&!nonempty(update.unavailable)||!plain(update.profile)||![2,3,4].includes(update.profile.level)||!nonempty(update.conversion))fail(`${update.name}: invalid Career update.`);const probe={...R,careerUpdates:[],careers:[{id:update.id,name:update.name,class:'Warrior',species:['Dwarf'],page:update.page,advanceScheme:Object.fromEntries(KEYS.map(k=>[k,null])),levels:[1,2,3,4].map(level=>level===update.profile.level?update.profile:{level,name:'Validation',status:'Brass',standing:1,skills:[],talents:[],trappings:[]})}]};validateCareerProfiles(probe);}
+ for(const rune of R.runes)if(!['Weapon','Armour','Talisman','Protection','Engineering','Doom'].includes(rune.form)||typeof rune.master!=='boolean'||!nonempty(rune.text)||rune.form!=='Doom'&&(!Number.isInteger(rune.sl)||rune.sl<1))fail(`${rune.name}: invalid rune.`);
+ if(R.dwarfCreation){const v=R.dwarfCreation;if(!plain(v)||Object.keys(v).some(k=>!['names','birthplaces','longbeard'].includes(k))||!pageOK(v.names?.page)||!pageOK(v.birthplaces?.page)||!pageOK(v.longbeard?.page)||!nonempty(v.longbeard.text))fail('invalid Dwarf creation data.');for(const [key,max] of [['names',1000],['birthplaces',100]]){const table=v[key];if(!plain(table)||Object.keys(table).some(k=>!['page','rows'].includes(k))||!Array.isArray(table.rows)||!table.rows.length||table.rows.some(row=>!plain(row)||Object.keys(row).some(k=>!(key==='names'?['min','max','male','female']:['min','max','result']).includes(k))||!Number.isInteger(row.min)||!Number.isInteger(row.max)||row.min<1||row.max>max||row.min>row.max))fail('invalid Dwarf '+key+' table.');}for(let n=1;n<=1000;n++)if(v.names.rows.filter(r=>n>=r.min&&n<=r.max&&nonempty(r.male)&&nonempty(r.female)).length!==1)fail(`Dwarf name result ${n} missing/overlapping.`);for(let n=1;n<=100;n++)if(v.birthplaces.rows.filter(r=>n>=r.min&&n<=r.max&&nonempty(r.result)).length!==1)fail(`Dwarf birthplace result ${n} missing/overlapping.`);}
+ validateCareerProfiles(R);
  for(const kind of ['gear','market'])for(const x of R[kind]){
   if(typeof x.price!=='string'||x.enc!==null&&(!Number.isFinite(x.enc)||x.enc<0)||x.wearable!==undefined&&typeof x.wearable!=='boolean'||x.text!==undefined&&!nonempty(x.text))fail(`${x.name}: invalid equipment data.`);
   if(x.ogreSized!==undefined&&typeof x.ogreSized!=='boolean')fail(`${x.name}: invalid Ogre-sized flag.`);
@@ -222,13 +232,14 @@ export function validateCatalog(R){
  const shopNames=new Map();for(const x of [...R.gear,...R.market]){const name=x.name.toLowerCase(),previous=shopNames.get(name);if(previous&&!(previous.source.book==='core'&&x.source.book==='core'&&previous.page!==x.page&&previous.price===x.price&&previous.enc===x.enc))fail(`${x.name}: duplicate shop option across gear and market.`);shopNames.set(name,x);}
  const runtimeIds=new Set();for(const c of R.careers){if(runtimeIds.has(c.id))fail(`duplicate Career ID ${c.id}.`);runtimeIds.add(c.id);}
  for(const [name,sp]of Object.entries(R.species))if(sp.mechanics?.careers?.some(id=>!runtimeIds.has(id)))fail(`${name}: unknown additional Career.`);
- for(const c of R.careers){if(c.randomAlternativeFor!==undefined&&!runtimeIds.has(c.randomAlternativeFor)||c.requiredOrigins!==undefined&&(!strings(c.requiredOrigins)||!c.requiredOrigins.length||c.requiredOrigins.some(id=>!R.origins.some(o=>o.id===id&&c.species.includes(o.species))))||c.text!==undefined&&!nonempty(c.text))fail(`${c.name}: invalid conditional Career requirement.`);}
+ for(const c of R.careers){if(c.alternativeFor!==undefined&&(!nonempty(c.alternativeFor)||c.alternativeFor===c.id||R.careers.some(x=>x.id===c.alternativeFor&&x.name!==c.name)))fail(`${c.name}: invalid alternate profile.`);if(c.randomAlternativeFor!==undefined&&!runtimeIds.has(c.randomAlternativeFor)||c.requiredOrigins!==undefined&&(!strings(c.requiredOrigins)||!c.requiredOrigins.length||c.requiredOrigins.some(id=>!R.origins.some(o=>o.id===id&&c.species.includes(o.species))))||c.text!==undefined&&!nonempty(c.text))fail(`${c.name}: invalid conditional Career requirement.`);}
  for(const w of R.weapons)if(!['melee','ranged'].includes(w.kind)||!['group','reach','damage'].every(k=>nonempty(w[k]))||!Number.isFinite(w.enc)||w.enc<0||typeof w.qualities!=='string'||w.text!==undefined&&!nonempty(w.text))fail(`${w.name}: incomplete weapon profile.`);
- for(const a of R.armour)if(!nonempty(a.locations)||!Number.isFinite(a.enc)||a.enc<0||!Number.isInteger(a.ap)||a.ap<0||typeof a.qualities!=='string')fail(`${a.name}: incomplete armour profile.`);
+ for(const a of R.armour)if(a.layer!==undefined&&!['leather','mail','plate'].includes(a.layer)||!nonempty(a.locations)||!Number.isFinite(a.enc)||a.enc<0||!Number.isInteger(a.ap)||a.ap<0||typeof a.qualities!=='string')fail(`${a.name}: incomplete armour profile.`);
  for(const [name,char]of Object.entries(C.talentEffects))if(!talentInfo(R,name))fail(`unknown effect Talent ${name}.`);
  for(const name of Object.keys(C.talentLimits))if(!talentInfo(R,name))fail(`unknown repeat-limit Talent ${name}.`);
  for(const name of Object.keys(R.species))if(!R.careers.some(c=>careerAvailable(R,{species:name},c)))fail(`${name}: no available Career.`);
  for(const o of R.origins){
+  if(o.careers!==undefined&&(!strings(o.careers)||o.careers.some(id=>!runtimeIds.has(id)))||o.careerTable!==undefined&&!R.tables.some(t=>t.id===o.careerTable&&t.kind==='career'&&t.origins?.includes(o.id)))fail(`${o.name}: invalid regional Career access/table.`);
   if(!R.species[o.species]||['languages','skills'].some(k=>o[k]!==undefined&&!strings(o[k]))||o.talents!==undefined&&(!Array.isArray(o.talents)||o.talents.some(x=>!strings(x)||!x.length))||o.randomTalents!==undefined&&(!Number.isInteger(o.randomTalents)||o.randomTalents<0))fail(`${o.name}: invalid regional creation profile.`);
   for(const name of o.skills||[])for(const n of options(R,name))if(!skillInfo(R,n))fail(`${o.name}: unknown Skill ${n}.`);
   for(const name of (o.talents||[]).flat().concat(o.optionalTalent||[],o.randomTalentAlternative||[]))if(!talentInfo(R,name))fail(`${o.name}: unknown Talent ${name}.`);
@@ -243,11 +254,13 @@ export function validateCatalog(R){
  for(const god of C.gods){if(!C.blessings[god]?.length||C.blessings[god].some(n=>!R.spells.some(x=>x.name===`Blessing of ${n}`)))fail(`${god}: missing Blessings.`);if(!(god==='Old Faith'&&oldFaith(R))&&!R.cults.some(x=>x.name===god)&&!R.spells.some(x=>x.category===god))fail(`${god}: missing Miracles.`);}
  for(const lore of C.colours)if(!R.spells.some(x=>x.category===lore))fail(`${lore}: missing Lore spells.`);
  for(const table of R.tables){
+  if(table.origins!==undefined&&(!strings(table.origins)||!table.origins.length||table.origins.some(id=>!R.origins.some(o=>o.id===id&&o.species===table.species))))fail(`${table.name}: invalid table origins.`);
+  if(table.origin!==undefined&&!R.origins.some(o=>o.id===table.origin&&o.species===table.species))fail(`${table.name}: invalid table origin.`);
   if(!['species','career','talent','career-refinement'].includes(table.kind)||table.sides!==100||!Array.isArray(table.rows)||!table.rows.length||table.kind==='career'&&!R.species[table.species]||table.kind==='career-refinement'&&!runtimeIds.has(table.career))fail(`${table.id}: invalid roll table.`);
   for(let n=1;n<=100;n++){const rows=table.rows.filter(r=>n>=r.min&&n<=r.max);if(rows.length!==1)fail(`${table.id}: result ${n} is missing or overlapping.`);}
   for(const row of table.rows){
    if(!Number.isInteger(row.min)||!Number.isInteger(row.max)||row.min<1||row.max>100||row.min>row.max||!nonempty(row.result))fail(`${table.id}: invalid row.`);
-   if(table.kind==='species'&&!R.species[row.result]||table.kind==='talent'&&!talentInfo(R,row.result)||table.kind==='career'&&!R.careers.some(c=>c.id===row.result&&careerAvailable(R,{species:table.species},c))||table.kind==='career-refinement'&&!runtimeIds.has(row.result))fail(`${table.id}: unavailable result ${row.result}.`);
+   if(table.kind==='species'&&!R.species[row.result]||table.kind==='talent'&&!talentInfo(R,row.result)||table.kind==='career'&&!R.careers.some(c=>c.id===row.result&&(table.origins||[table.origin]).some(origin=>careerAvailable(R,{species:table.species,origin},c)))||table.kind==='career-refinement'&&!runtimeIds.has(row.result))fail(`${table.id}: unavailable result ${row.result}.`);
   }
  }
  if(!R.tables.some(x=>x.kind==='species'))fail('a Species roll table is required.');
@@ -261,19 +274,35 @@ export function catalogForCharacter(library,character){
  for(const ref of selection.packs){const p=library.packs.find(x=>x.manifest.id===ref.id);if(!p||p.manifest.version!==ref.version)fail(`missing or different book version: ${ref.id}.`);}
  const R=assembleBooks(library,selection.packs.map(x=>x.id));
  if(R.selection.length!==selection.packs.length||R.selection.some((ref,i)=>ref.id!==selection.packs[i].id||ref.version!==selection.packs[i].version))fail('saved book dependencies or order do not match.');
+ validateElfState(R,character);
  validateChartState(R,character);
  validateIIIState(R,character);
  validateWoMState(R,character);
+ const dwarfErrors=dwarfIssues(R,character,{talents:[]});if(dwarfErrors.length)fail(dwarfErrors.join(' '));
  const cultErrors=cultIssues(R,character);if(cultErrors.length)fail(cultErrors.join(' '));
  return R;
 }
 export function randomTable(R,s,kind){
- const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s)));
+ const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s))&&(!x.origin||x.origin===s.origin)&&(!x.origins||x.origins.includes(s.origin)));
  const selected=s.rollTables?.[kind];
  if(selected&&!available.some(x=>x.id===selected))fail(`unavailable ${kind} random table.`);
  // User-approved default: Archives II's Species table supersedes core while enabled.
  const speciesDefault=kind==='species'?available.find(x=>x.id==='archives-ii:table:species'):null;
  // Explicit choices win; a Species with only one printed Career table needs no extra choice.
- return available.find(x=>x.id===selected)||speciesDefault||available.find(x=>x.source.book==='core')||(kind==='career'&&available.length===1?available[0]:null);
+ return available.find(x=>x.id===selected)||available.find(x=>x.id===R.origins.find(o=>o.id===s.origin)?.careerTable)||available.find(x=>x.origin===s.origin&&x.origin)||speciesDefault||available.find(x=>x.source.book==='core')||(kind==='career'&&available.length===1?available[0]:null);
 }
 export function tableResult(table,n){if(!table||!Number.isInteger(n)||n<1||n>table.sides)fail('invalid table roll.');return table.rows.find(x=>n>=x.min&&n<=x.max).result;}
+
+function validateCareerProfiles(R){
+ for(const c of R.careers){
+  if(!strings(c.species)||!c.species.length||c.species.some(x=>!R.species[x])||!R.config.classKit[c.class]||!plain(c.advanceScheme)||KEYS.some(k=>![null,1,2,3,4].includes(c.advanceScheme[k]))||!Array.isArray(c.levels)||c.levels.length!==4)fail(`${c.name}: invalid Career structure.`);
+  c.levels.forEach((l,i)=>{
+   if(!plain(l)||Object.keys(l).some(k=>!['level','name','status','standing','skills','talents','trappings','unavailableSkills'].includes(k)))fail(`${c.name}: unsupported Career level fields need an implemented handler.`);
+   if(l.level!==i+1||!nonempty(l.name)||!['Brass','Silver','Gold'].includes(l.status)||!Number.isInteger(l.standing)||l.standing<0||!['skills','talents','trappings'].every(k=>strings(l[k])))fail(`${c.name}: invalid Career level ${i+1}.`);
+   if(l.unavailableSkills!==undefined&&(!Array.isArray(l.unavailableSkills)||l.unavailableSkills.some(x=>!plain(x)||Object.keys(x).some(k=>!['name','reason'].includes(k))||!nonempty(x.name)||!nonempty(x.reason))))fail(`${c.name}: unavailable Skills require a name and reason.`);
+   for(const raw of l.skills)for(const n of options(R,raw))if(!skillInfo(R,n))fail(`${c.name}: unknown Skill ${n}.`);
+   for(const raw of l.talents)if(!talentInfo(R,raw))fail(`${c.name}: unknown Talent ${raw}.`);
+  });
+ }
+
+}

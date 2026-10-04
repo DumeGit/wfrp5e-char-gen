@@ -1,11 +1,14 @@
+import {dwarfGearSlots} from './dwarf-guide.mjs';
+import {effectiveCareer} from './context-career.mjs';
 // Shared inventory identity and book-only parsing. No derived character rules here.
-export function rawGearSlots(R,s){const c=R.careers.find(c=>c.id===s.career);return [{name:'Clothing',origin:'All characters',key:'all-0'},{name:'Dagger',origin:'All characters',key:'all-1'},{name:'Pouch',origin:'All characters',key:'all-2'},...(R.config.classKit[c.class]||[]).map((name,i)=>({name,origin:`${c.class} class`,key:`class-${i}`})),...c.levels[0].trappings.filter(x=>x!=='None').map((name,i)=>({name,origin:`${c.levels[0].name} (level 1)`,key:`career-${i}`})),...s.bonusGear.map(i=>({name:c.levels[1].trappings[i],origin:'Random Career bonus',key:`bonus-${i}`,level:2})),...s.ledger.filter(x=>x.type==='trapping').map((x,i)=>({...x,origin:x.reason||'Acquired during advancement',key:`acquired-${i}`})).filter(x=>!x.linkedGear)];}
+export function rawGearSlots(R,s){const c=effectiveCareer(R,s);return dwarfGearSlots(R,s,[{name:'Clothing',origin:'All characters',key:'all-0'},{name:'Dagger',origin:'All characters',key:'all-1'},{name:'Pouch',origin:'All characters',key:'all-2'},...(R.config.classKit[c.class]||[]).map((name,i)=>({name,origin:`${c.class} class`,key:`class-${i}`})),...c.levels[0].trappings.filter(x=>x!=='None').map((name,i)=>({name,origin:`${c.levels[0].name} (level 1)`,key:`career-${i}`})),...s.bonusGear.map(i=>({name:c.levels[1].trappings[i],origin:'Random Career bonus',key:`bonus-${i}`,level:2})),...s.ledger.filter(x=>x.type==='trapping').map((x,i)=>({...x,origin:x.reason||'Acquired during advancement',key:`acquired-${i}`})).filter(x=>!x.linkedGear)]);}
 export function rolledName(s,slot,name=slot.name){return name.replace(/\{?(\d+)d10\}?/g,m=>s.gearRolls[`${slot.key}:${m}`]??m);}
 export function coinValue(name){const m=name.match(/^(\d+)\s+(GC|Gold Crowns?|Shillings?|Silver Shillings?|Pennies|Brass Pennies)$/i);return m?Number(m[1])*(/GC|Gold/i.test(m[2])?240:/Shilling/i.test(m[2])?12:1):0;}
 export const ITEM_QUALITIES=['Durable','Fine','Lightweight','Practical'];
 export const ITEM_FLAWS=['Bulky','Shoddy','Ugly','Unreliable'];
 const UNITS={Candles:'Candle',Matches:'Match',Bandages:'Bandage',Arrows:'Arrow',Bolts:'Bolt',Shots:'Shot',Bullets:'Bullet','Lead Bullets':'Lead Bullet','Stone Bullets':'Stone Bullet',Bolas:'Bolas','Throwing Knives':'Throwing Knife','Sets of Clothing':'Clothing','different sets of Clothing':'Clothing','sheets of Parchment':'Parchment',Barges:'River Barge',Wagons:'Wagon'};
 export function itemParts(text){
+ if(text==='Ammunition')return [{name:text,quantity:null}];
  const container=text.match(/^(.+?) containing (.+)$/);if(container){const root=itemParts(container[1])[0];return [root,...container[2].split(/,\s*| and /).flatMap(itemParts).map(x=>({...x,inContainer:true}))];}
  if(text.includes(' and ')&&!['Pipe and Tobacco','Saddle and Harness'].includes(text))return text.split(' and ').flatMap(itemParts);
  const ammo=text.match(/^(.+?) with (\d+ .+)$/);if(ammo)return [...itemParts(ammo[1]),...itemParts(ammo[2])];

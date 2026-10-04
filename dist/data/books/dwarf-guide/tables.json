@@ -1,0 +1,3148 @@
+[
+  {
+    "id": "dwarf-guide:table:karaz-a-karak",
+    "name": "Karaz-a-Karak Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karaz-a-karak",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 12,
+        "result": "lawyer"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "result": "physician"
+      },
+      {
+        "min": 14,
+        "max": 16,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 17,
+        "max": 18,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "result": "agitator"
+      },
+      {
+        "min": 20,
+        "max": 24,
+        "result": "artisan"
+      },
+      {
+        "min": 25,
+        "max": 25,
+        "result": "beggar"
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "investigator"
+      },
+      {
+        "min": 29,
+        "max": 31,
+        "result": "merchant"
+      },
+      {
+        "min": 32,
+        "max": 32,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 33,
+        "max": 37,
+        "result": "townsman"
+      },
+      {
+        "min": 38,
+        "max": 38,
+        "result": "watchman"
+      },
+      {
+        "min": 39,
+        "max": 40,
+        "result": "adviser"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "artist"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "duellist"
+      },
+      {
+        "min": 43,
+        "max": 45,
+        "result": "envoy"
+      },
+      {
+        "min": 46,
+        "max": 46,
+        "result": "servant"
+      },
+      {
+        "min": 47,
+        "max": 47,
+        "result": "spy"
+      },
+      {
+        "min": 48,
+        "max": 49,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 50,
+        "max": 51,
+        "result": "warden"
+      },
+      {
+        "min": 52,
+        "max": 52,
+        "result": "bailiff"
+      },
+      {
+        "min": 53,
+        "max": 53,
+        "result": "hunter"
+      },
+      {
+        "min": 54,
+        "max": 57,
+        "result": "miner"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "scout"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "villager"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 61,
+        "max": 61,
+        "result": "coachman"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "entertainer"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "messenger"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "pedlar"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "boatman"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "pilot"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "riverwoman"
+      },
+      {
+        "min": 74,
+        "max": 74,
+        "result": "sailor"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "smuggler"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "stevedore"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "wrecker"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "fence"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "outlaw"
+      },
+      {
+        "min": 80,
+        "max": 80,
+        "result": "racketeer"
+      },
+      {
+        "min": 81,
+        "max": 81,
+        "result": "thief"
+      },
+      {
+        "min": 82,
+        "max": 83,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "guard"
+      },
+      {
+        "min": 86,
+        "max": 88,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 91,
+        "max": 91,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "protagonist"
+      },
+      {
+        "min": 93,
+        "max": 96,
+        "result": "slayer"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:barak-varr",
+    "name": "Barak Varr Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:barak-varr",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "lawyer"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "agitator"
+      },
+      {
+        "min": 18,
+        "max": 22,
+        "result": "artisan"
+      },
+      {
+        "min": 23,
+        "max": 23,
+        "result": "beggar"
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 26,
+        "max": 26,
+        "result": "investigator"
+      },
+      {
+        "min": 27,
+        "max": 30,
+        "result": "merchant"
+      },
+      {
+        "min": 31,
+        "max": 31,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 32,
+        "max": 36,
+        "result": "townsman"
+      },
+      {
+        "min": 37,
+        "max": 37,
+        "result": "watchman"
+      },
+      {
+        "min": 38,
+        "max": 39,
+        "result": "adviser"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "artist"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "duellist"
+      },
+      {
+        "min": 42,
+        "max": 43,
+        "result": "envoy"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "servant"
+      },
+      {
+        "min": 45,
+        "max": 45,
+        "result": "spy"
+      },
+      {
+        "min": 46,
+        "max": 46,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "warden"
+      },
+      {
+        "min": 49,
+        "max": 49,
+        "result": "bailiff"
+      },
+      {
+        "min": 50,
+        "max": 50,
+        "result": "hunter"
+      },
+      {
+        "min": 51,
+        "max": 53,
+        "result": "miner"
+      },
+      {
+        "min": 54,
+        "max": 54,
+        "result": "scout"
+      },
+      {
+        "min": 55,
+        "max": 55,
+        "result": "villager"
+      },
+      {
+        "min": 56,
+        "max": 56,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 57,
+        "max": 57,
+        "result": "coachman"
+      },
+      {
+        "min": 58,
+        "max": 59,
+        "result": "entertainer"
+      },
+      {
+        "min": 60,
+        "max": 61,
+        "result": "messenger"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "pedlar"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 66,
+        "max": 68,
+        "result": "boatman"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "pilot"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "riverwoman"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "sailor"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "smuggler"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "stevedore"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "wrecker"
+      },
+      {
+        "min": 80,
+        "max": 80,
+        "result": "fence"
+      },
+      {
+        "min": 81,
+        "max": 81,
+        "result": "outlaw"
+      },
+      {
+        "min": 82,
+        "max": 82,
+        "result": "racketeer"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "thief"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:karak-azul",
+    "name": "Karak Azul Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karak-azul",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 8,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 9,
+        "max": 10,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "lawyer"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "result": "physician"
+      },
+      {
+        "min": 14,
+        "max": 15,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "result": "agitator"
+      },
+      {
+        "min": 19,
+        "max": 24,
+        "result": "artisan"
+      },
+      {
+        "min": 25,
+        "max": 25,
+        "result": "beggar"
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "investigator"
+      },
+      {
+        "min": 29,
+        "max": 31,
+        "result": "merchant"
+      },
+      {
+        "min": 32,
+        "max": 32,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 33,
+        "max": 37,
+        "result": "townsman"
+      },
+      {
+        "min": 38,
+        "max": 39,
+        "result": "watchman"
+      },
+      {
+        "min": 40,
+        "max": 41,
+        "result": "adviser"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "artist"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "duellist"
+      },
+      {
+        "min": 44,
+        "max": 45,
+        "result": "envoy"
+      },
+      {
+        "min": 46,
+        "max": 46,
+        "result": "servant"
+      },
+      {
+        "min": 47,
+        "max": 47,
+        "result": "spy"
+      },
+      {
+        "min": 48,
+        "max": 48,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "warden"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "bailiff"
+      },
+      {
+        "min": 53,
+        "max": 53,
+        "result": "hunter"
+      },
+      {
+        "min": 54,
+        "max": 58,
+        "result": "miner"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "scout"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "villager"
+      },
+      {
+        "min": 61,
+        "max": 61,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 62,
+        "max": 62,
+        "result": "coachman"
+      },
+      {
+        "min": 63,
+        "max": 63,
+        "result": "entertainer"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "messenger"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "pedlar"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "boatman"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "pilot"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "riverwoman"
+      },
+      {
+        "min": 74,
+        "max": 74,
+        "result": "sailor"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "smuggler"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "stevedore"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "wrecker"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "fence"
+      },
+      {
+        "min": 79,
+        "max": 80,
+        "result": "outlaw"
+      },
+      {
+        "min": 81,
+        "max": 81,
+        "result": "racketeer"
+      },
+      {
+        "min": 82,
+        "max": 82,
+        "result": "thief"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 85,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:karak-eight-peaks",
+    "name": "Karak Eight Peaks Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karak-eight-peaks",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "result": "lawyer"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "result": "physician"
+      },
+      {
+        "min": 12,
+        "max": 13,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "agitator"
+      },
+      {
+        "min": 16,
+        "max": 20,
+        "result": "artisan"
+      },
+      {
+        "min": 21,
+        "max": 21,
+        "result": "beggar"
+      },
+      {
+        "min": 22,
+        "max": 23,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 24,
+        "max": 24,
+        "result": "investigator"
+      },
+      {
+        "min": 25,
+        "max": 27,
+        "result": "merchant"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 29,
+        "max": 32,
+        "result": "townsman"
+      },
+      {
+        "min": 33,
+        "max": 34,
+        "result": "watchman"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "adviser"
+      },
+      {
+        "min": 37,
+        "max": 37,
+        "result": "artist"
+      },
+      {
+        "min": 38,
+        "max": 38,
+        "result": "duellist"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "envoy"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "servant"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "spy"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "warden"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "bailiff"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "hunter"
+      },
+      {
+        "min": 47,
+        "max": 50,
+        "result": "miner"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "scout"
+      },
+      {
+        "min": 53,
+        "max": 53,
+        "result": "villager"
+      },
+      {
+        "min": 54,
+        "max": 54,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 55,
+        "max": 55,
+        "result": "coachman"
+      },
+      {
+        "min": 56,
+        "max": 56,
+        "result": "entertainer"
+      },
+      {
+        "min": 57,
+        "max": 59,
+        "result": "messenger"
+      },
+      {
+        "min": 60,
+        "max": 62,
+        "result": "pedlar"
+      },
+      {
+        "min": 63,
+        "max": 65,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 66,
+        "max": 66,
+        "result": "boatman"
+      },
+      {
+        "min": 67,
+        "max": 67,
+        "result": "pilot"
+      },
+      {
+        "min": 68,
+        "max": 68,
+        "result": "riverwoman"
+      },
+      {
+        "min": 69,
+        "max": 69,
+        "result": "sailor"
+      },
+      {
+        "min": 70,
+        "max": 70,
+        "result": "smuggler"
+      },
+      {
+        "min": 71,
+        "max": 71,
+        "result": "stevedore"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "wrecker"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "fence"
+      },
+      {
+        "min": 74,
+        "max": 75,
+        "result": "outlaw"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "racketeer"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "thief"
+      },
+      {
+        "min": 78,
+        "max": 79,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 80,
+        "max": 83,
+        "result": "guard"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 88,
+        "max": 88,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 89,
+        "max": 89,
+        "result": "protagonist"
+      },
+      {
+        "min": 90,
+        "max": 94,
+        "result": "slayer"
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:karak-kadrin",
+    "name": "Karak Kadrin Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karak-kadrin",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "lawyer"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 16,
+        "max": 16,
+        "result": "agitator"
+      },
+      {
+        "min": 17,
+        "max": 21,
+        "result": "artisan"
+      },
+      {
+        "min": 22,
+        "max": 22,
+        "result": "beggar"
+      },
+      {
+        "min": 23,
+        "max": 25,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 26,
+        "max": 26,
+        "result": "investigator"
+      },
+      {
+        "min": 27,
+        "max": 29,
+        "result": "merchant"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 31,
+        "max": 35,
+        "result": "townsman"
+      },
+      {
+        "min": 36,
+        "max": 36,
+        "result": "watchman"
+      },
+      {
+        "min": 37,
+        "max": 37,
+        "result": "adviser"
+      },
+      {
+        "min": 38,
+        "max": 38,
+        "result": "artist"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "duellist"
+      },
+      {
+        "min": 40,
+        "max": 41,
+        "result": "envoy"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "servant"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "spy"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "warden"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "bailiff"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "hunter"
+      },
+      {
+        "min": 51,
+        "max": 54,
+        "result": "miner"
+      },
+      {
+        "min": 55,
+        "max": 55,
+        "result": "scout"
+      },
+      {
+        "min": 56,
+        "max": 56,
+        "result": "villager"
+      },
+      {
+        "min": 57,
+        "max": 57,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "coachman"
+      },
+      {
+        "min": 59,
+        "max": 60,
+        "result": "entertainer"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "messenger"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "pedlar"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 67,
+        "max": 67,
+        "result": "boatman"
+      },
+      {
+        "min": 68,
+        "max": 68,
+        "result": "pilot"
+      },
+      {
+        "min": 69,
+        "max": 69,
+        "result": "riverwoman"
+      },
+      {
+        "min": 70,
+        "max": 70,
+        "result": "sailor"
+      },
+      {
+        "min": 71,
+        "max": 71,
+        "result": "smuggler"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "stevedore"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "wrecker"
+      },
+      {
+        "min": 74,
+        "max": 74,
+        "result": "fence"
+      },
+      {
+        "min": 75,
+        "max": 76,
+        "result": "outlaw"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "racketeer"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "thief"
+      },
+      {
+        "min": 79,
+        "max": 82,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "guard"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 89,
+        "max": 90,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 91,
+        "max": 91,
+        "result": "protagonist"
+      },
+      {
+        "min": 92,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:zhufbar",
+    "name": "Zhufbar Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:zhufbar",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 7,
+        "result": "engineer"
+      },
+      {
+        "min": 8,
+        "max": 10,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 11,
+        "max": 12,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "lawyer"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "physician"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 18,
+        "max": 19,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "result": "agitator"
+      },
+      {
+        "min": 22,
+        "max": 27,
+        "result": "artisan"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "beggar"
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 31,
+        "max": 31,
+        "result": "investigator"
+      },
+      {
+        "min": 32,
+        "max": 34,
+        "result": "merchant"
+      },
+      {
+        "min": 35,
+        "max": 35,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 36,
+        "max": 39,
+        "result": "townsman"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "watchman"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "adviser"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "artist"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "duellist"
+      },
+      {
+        "min": 44,
+        "max": 45,
+        "result": "envoy"
+      },
+      {
+        "min": 46,
+        "max": 46,
+        "result": "servant"
+      },
+      {
+        "min": 47,
+        "max": 47,
+        "result": "spy"
+      },
+      {
+        "min": 48,
+        "max": 48,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "warden"
+      },
+      {
+        "min": 51,
+        "max": 51,
+        "result": "bailiff"
+      },
+      {
+        "min": 52,
+        "max": 52,
+        "result": "hunter"
+      },
+      {
+        "min": 53,
+        "max": 57,
+        "result": "miner"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "scout"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "villager"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 61,
+        "max": 61,
+        "result": "coachman"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "entertainer"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "messenger"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "pedlar"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "boatman"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "pilot"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "riverwoman"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "sailor"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "smuggler"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "stevedore"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "wrecker"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "fence"
+      },
+      {
+        "min": 80,
+        "max": 81,
+        "result": "outlaw"
+      },
+      {
+        "min": 82,
+        "max": 82,
+        "result": "racketeer"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "thief"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:karak-hirn-black-mountains",
+    "name": "Karak Hirn / Black Mountains Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karak-hirn-black-mountains",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "lawyer"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "agitator"
+      },
+      {
+        "min": 18,
+        "max": 22,
+        "result": "artisan"
+      },
+      {
+        "min": 23,
+        "max": 23,
+        "result": "beggar"
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 26,
+        "max": 26,
+        "result": "investigator"
+      },
+      {
+        "min": 27,
+        "max": 29,
+        "result": "merchant"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 31,
+        "max": 35,
+        "result": "townsman"
+      },
+      {
+        "min": 36,
+        "max": 36,
+        "result": "watchman"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "adviser"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "artist"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "duellist"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "envoy"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "servant"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "spy"
+      },
+      {
+        "min": 45,
+        "max": 45,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "warden"
+      },
+      {
+        "min": 48,
+        "max": 49,
+        "result": "bailiff"
+      },
+      {
+        "min": 50,
+        "max": 51,
+        "result": "hunter"
+      },
+      {
+        "min": 52,
+        "max": 55,
+        "result": "miner"
+      },
+      {
+        "min": 56,
+        "max": 57,
+        "result": "scout"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "villager"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "coachman"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "entertainer"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "messenger"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "pedlar"
+      },
+      {
+        "min": 67,
+        "max": 69,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "boatman"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "pilot"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "riverwoman"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "sailor"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "smuggler"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "stevedore"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "wrecker"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "fence"
+      },
+      {
+        "min": 80,
+        "max": 81,
+        "result": "outlaw"
+      },
+      {
+        "min": 82,
+        "max": 82,
+        "result": "racketeer"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "thief"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:karak-izor-vaults",
+    "name": "Karak Izor / Vaults Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karak-izor-vaults",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "lawyer"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "agitator"
+      },
+      {
+        "min": 18,
+        "max": 22,
+        "result": "artisan"
+      },
+      {
+        "min": 23,
+        "max": 23,
+        "result": "beggar"
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 26,
+        "max": 26,
+        "result": "investigator"
+      },
+      {
+        "min": 27,
+        "max": 29,
+        "result": "merchant"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 31,
+        "max": 35,
+        "result": "townsman"
+      },
+      {
+        "min": 36,
+        "max": 37,
+        "result": "watchman"
+      },
+      {
+        "min": 38,
+        "max": 39,
+        "result": "adviser"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "artist"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "duellist"
+      },
+      {
+        "min": 42,
+        "max": 43,
+        "result": "envoy"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "servant"
+      },
+      {
+        "min": 45,
+        "max": 45,
+        "result": "spy"
+      },
+      {
+        "min": 46,
+        "max": 46,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "warden"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "bailiff"
+      },
+      {
+        "min": 51,
+        "max": 51,
+        "result": "hunter"
+      },
+      {
+        "min": 52,
+        "max": 56,
+        "result": "miner"
+      },
+      {
+        "min": 57,
+        "max": 57,
+        "result": "scout"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "villager"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 60,
+        "max": 60,
+        "result": "coachman"
+      },
+      {
+        "min": 61,
+        "max": 62,
+        "result": "entertainer"
+      },
+      {
+        "min": 63,
+        "max": 64,
+        "result": "messenger"
+      },
+      {
+        "min": 65,
+        "max": 66,
+        "result": "pedlar"
+      },
+      {
+        "min": 67,
+        "max": 69,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 70,
+        "max": 71,
+        "result": "boatman"
+      },
+      {
+        "min": 72,
+        "max": 72,
+        "result": "pilot"
+      },
+      {
+        "min": 73,
+        "max": 74,
+        "result": "riverwoman"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "sailor"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "smuggler"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "stevedore"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "wrecker"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "fence"
+      },
+      {
+        "min": 80,
+        "max": 81,
+        "result": "outlaw"
+      },
+      {
+        "min": 82,
+        "max": 82,
+        "result": "racketeer"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "thief"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:karak-norn-grey-mountains",
+    "name": "Karak Norn / Grey Mountains Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:karak-norn-grey-mountains",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "result": "engineer"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "lawyer"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "result": "physician"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "agitator"
+      },
+      {
+        "min": 18,
+        "max": 22,
+        "result": "artisan"
+      },
+      {
+        "min": 23,
+        "max": 23,
+        "result": "beggar"
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 26,
+        "max": 26,
+        "result": "investigator"
+      },
+      {
+        "min": 27,
+        "max": 29,
+        "result": "merchant"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 31,
+        "max": 34,
+        "result": "townsman"
+      },
+      {
+        "min": 35,
+        "max": 36,
+        "result": "watchman"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "adviser"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "artist"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "duellist"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "envoy"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "servant"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "spy"
+      },
+      {
+        "min": 45,
+        "max": 45,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 46,
+        "max": 47,
+        "result": "warden"
+      },
+      {
+        "min": 48,
+        "max": 49,
+        "result": "bailiff"
+      },
+      {
+        "min": 50,
+        "max": 51,
+        "result": "hunter"
+      },
+      {
+        "min": 52,
+        "max": 54,
+        "result": "miner"
+      },
+      {
+        "min": 55,
+        "max": 56,
+        "result": "scout"
+      },
+      {
+        "min": 57,
+        "max": 57,
+        "result": "villager"
+      },
+      {
+        "min": 58,
+        "max": 58,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "coachman"
+      },
+      {
+        "min": 60,
+        "max": 61,
+        "result": "entertainer"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "messenger"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "pedlar"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "boatman"
+      },
+      {
+        "min": 70,
+        "max": 70,
+        "result": "pilot"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "riverwoman"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "sailor"
+      },
+      {
+        "min": 74,
+        "max": 74,
+        "result": "smuggler"
+      },
+      {
+        "min": 75,
+        "max": 75,
+        "result": "stevedore"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "wrecker"
+      },
+      {
+        "min": 77,
+        "max": 77,
+        "result": "fence"
+      },
+      {
+        "min": 78,
+        "max": 80,
+        "result": "outlaw"
+      },
+      {
+        "min": 81,
+        "max": 81,
+        "result": "racketeer"
+      },
+      {
+        "min": 82,
+        "max": 82,
+        "result": "thief"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 85,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 89,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 93,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "slayer"
+      },
+      {
+        "min": 98,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:norse",
+    "name": "Norse Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:norse",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "result": "engineer"
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 8,
+        "max": 8,
+        "result": "lawyer"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "result": "physician"
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 11,
+        "max": 11,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 12,
+        "max": 14,
+        "result": "agitator"
+      },
+      {
+        "min": 15,
+        "max": 19,
+        "result": "artisan"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "result": "beggar"
+      },
+      {
+        "min": 21,
+        "max": 23,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 24,
+        "max": 24,
+        "result": "investigator"
+      },
+      {
+        "min": 25,
+        "max": 26,
+        "result": "merchant"
+      },
+      {
+        "min": 27,
+        "max": 27,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 28,
+        "max": 31,
+        "result": "townsman"
+      },
+      {
+        "min": 32,
+        "max": 33,
+        "result": "watchman"
+      },
+      {
+        "min": 34,
+        "max": 34,
+        "result": "adviser"
+      },
+      {
+        "min": 35,
+        "max": 35,
+        "result": "artist"
+      },
+      {
+        "min": 36,
+        "max": 36,
+        "result": "duellist"
+      },
+      {
+        "min": 37,
+        "max": 38,
+        "result": "envoy"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "servant"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "spy"
+      },
+      {
+        "min": 41,
+        "max": 41,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "warden"
+      },
+      {
+        "min": 43,
+        "max": 44,
+        "result": "bailiff"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "hunter"
+      },
+      {
+        "min": 47,
+        "max": 50,
+        "result": "miner"
+      },
+      {
+        "min": 51,
+        "max": 52,
+        "result": "scout"
+      },
+      {
+        "min": 53,
+        "max": 53,
+        "result": "villager"
+      },
+      {
+        "min": 54,
+        "max": 54,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 55,
+        "max": 55,
+        "result": "coachman"
+      },
+      {
+        "min": 56,
+        "max": 57,
+        "result": "entertainer"
+      },
+      {
+        "min": 58,
+        "max": 59,
+        "result": "messenger"
+      },
+      {
+        "min": 60,
+        "max": 61,
+        "result": "pedlar"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "boatman"
+      },
+      {
+        "min": 66,
+        "max": 66,
+        "result": "pilot"
+      },
+      {
+        "min": 67,
+        "max": 68,
+        "result": "riverwoman"
+      },
+      {
+        "min": 69,
+        "max": 70,
+        "result": "sailor"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "smuggler"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "stevedore"
+      },
+      {
+        "min": 74,
+        "max": 75,
+        "result": "wrecker"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "fence"
+      },
+      {
+        "min": 77,
+        "max": 78,
+        "result": "outlaw"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "racketeer"
+      },
+      {
+        "min": 80,
+        "max": 80,
+        "result": "thief"
+      },
+      {
+        "min": 81,
+        "max": 82,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 83,
+        "max": 84,
+        "result": "guard"
+      },
+      {
+        "min": 85,
+        "max": 86,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 87,
+        "max": 88,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 89,
+        "max": 91,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "protagonist"
+      },
+      {
+        "min": 93,
+        "max": 96,
+        "result": "slayer"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  },
+  {
+    "id": "dwarf-guide:table:imperial",
+    "name": "Imperial Dwarf Careers",
+    "kind": "career",
+    "species": "Dwarf",
+    "origin": "dwarf-guide:origin:imperial",
+    "page": "51–52",
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 4,
+        "result": "engineer"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "result": "dwarf-guide:career:forge-priest"
+      },
+      {
+        "min": 6,
+        "max": 6,
+        "result": "dwarf-guide:career:hearth-priest"
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "result": "lawyer"
+      },
+      {
+        "min": 9,
+        "max": 9,
+        "result": "physician"
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "result": "dwarf-guide:career:runescribe"
+      },
+      {
+        "min": 12,
+        "max": 12,
+        "result": "dwarf-guide:career:runesmith"
+      },
+      {
+        "min": 13,
+        "max": 14,
+        "result": "agitator"
+      },
+      {
+        "min": 15,
+        "max": 19,
+        "result": "artisan"
+      },
+      {
+        "min": 20,
+        "max": 20,
+        "result": "beggar"
+      },
+      {
+        "min": 21,
+        "max": 22,
+        "result": "dwarf-guide:career:brewer"
+      },
+      {
+        "min": 23,
+        "max": 24,
+        "result": "investigator"
+      },
+      {
+        "min": 25,
+        "max": 27,
+        "result": "merchant"
+      },
+      {
+        "min": 28,
+        "max": 28,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 29,
+        "max": 33,
+        "result": "townsman"
+      },
+      {
+        "min": 34,
+        "max": 35,
+        "result": "watchman"
+      },
+      {
+        "min": 36,
+        "max": 37,
+        "result": "adviser"
+      },
+      {
+        "min": 38,
+        "max": 38,
+        "result": "artist"
+      },
+      {
+        "min": 39,
+        "max": 39,
+        "result": "duellist"
+      },
+      {
+        "min": 40,
+        "max": 41,
+        "result": "envoy"
+      },
+      {
+        "min": 42,
+        "max": 42,
+        "result": "servant"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "spy"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "dwarf-guide:career:thane"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "warden"
+      },
+      {
+        "min": 47,
+        "max": 48,
+        "result": "bailiff"
+      },
+      {
+        "min": 49,
+        "max": 50,
+        "result": "hunter"
+      },
+      {
+        "min": 51,
+        "max": 54,
+        "result": "miner"
+      },
+      {
+        "min": 55,
+        "max": 55,
+        "result": "scout"
+      },
+      {
+        "min": 56,
+        "max": 56,
+        "result": "villager"
+      },
+      {
+        "min": 57,
+        "max": 58,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 59,
+        "max": 59,
+        "result": "coachman"
+      },
+      {
+        "min": 60,
+        "max": 61,
+        "result": "entertainer"
+      },
+      {
+        "min": 62,
+        "max": 63,
+        "result": "messenger"
+      },
+      {
+        "min": 64,
+        "max": 65,
+        "result": "pedlar"
+      },
+      {
+        "min": 66,
+        "max": 67,
+        "result": "dwarf-guide:career:karak-ranger"
+      },
+      {
+        "min": 68,
+        "max": 69,
+        "result": "boatman"
+      },
+      {
+        "min": 70,
+        "max": 70,
+        "result": "pilot"
+      },
+      {
+        "min": 71,
+        "max": 72,
+        "result": "riverwoman"
+      },
+      {
+        "min": 73,
+        "max": 73,
+        "result": "sailor"
+      },
+      {
+        "min": 74,
+        "max": 75,
+        "result": "smuggler"
+      },
+      {
+        "min": 76,
+        "max": 77,
+        "result": "stevedore"
+      },
+      {
+        "min": 78,
+        "max": 78,
+        "result": "wrecker"
+      },
+      {
+        "min": 79,
+        "max": 79,
+        "result": "fence"
+      },
+      {
+        "min": 80,
+        "max": 82,
+        "result": "outlaw"
+      },
+      {
+        "min": 83,
+        "max": 83,
+        "result": "racketeer"
+      },
+      {
+        "min": 84,
+        "max": 84,
+        "result": "thief"
+      },
+      {
+        "min": 85,
+        "max": 85,
+        "result": "dwarf-guide:career:doom-priest"
+      },
+      {
+        "min": 86,
+        "max": 87,
+        "result": "guard"
+      },
+      {
+        "min": 88,
+        "max": 88,
+        "result": "dwarf-guide:career:hammerer"
+      },
+      {
+        "min": 89,
+        "max": 89,
+        "result": "dwarf-guide:career:ironbreaker"
+      },
+      {
+        "min": 90,
+        "max": 91,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 92,
+        "max": 93,
+        "result": "protagonist"
+      },
+      {
+        "min": 94,
+        "max": 96,
+        "result": "slayer"
+      },
+      {
+        "min": 97,
+        "max": 100,
+        "result": "soldier"
+      }
+    ]
+  }
+]

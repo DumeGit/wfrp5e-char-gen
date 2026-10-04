@@ -1,0 +1,103 @@
+[
+  {
+    "id": "high-elf:rule:skill-art",
+    "path": [
+      "skillOptions",
+      "Art"
+    ],
+    "operation": "append",
+    "value": [
+      "Poetry"
+    ],
+    "page": 66,
+    "reason": "Printed grouped Skill specialisations in regional origins and new Careers; core Skill definitions govern."
+  },
+  {
+    "id": "high-elf:rule:skill-secret-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "append",
+    "value": [
+      "Shadow Warriors"
+    ],
+    "page": 70,
+    "reason": "Printed grouped Skill specialisations in regional origins and new Careers; core Skill definitions govern."
+  },
+  {
+    "id": "high-elf:rule:skill-trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Jeweller"
+    ],
+    "page": 74,
+    "reason": "Printed grouped Skill specialisations in regional origins and new Careers; core Skill definitions govern."
+  },
+  {
+    "id": "high-elf:rule:talent-fearless",
+    "path": [
+      "talentOptions",
+      "Fearless"
+    ],
+    "operation": "append",
+    "value": [
+      "Dark Elves",
+      "Sea Monsters"
+    ],
+    "page": 70,
+    "reason": "Printed Talent specialisations; canonical Fifth Edition Talent definitions govern."
+  },
+  {
+    "id": "high-elf:rule:talent-hatred",
+    "path": [
+      "talentOptions",
+      "Hatred"
+    ],
+    "operation": "append",
+    "value": [
+      "Dark Elves"
+    ],
+    "page": 55,
+    "reason": "Printed Talent specialisations; canonical Fifth Edition Talent definitions govern."
+  },
+  {
+    "id": "high-elf:rule:qhaysh",
+    "path": [
+      "skillOptions",
+      "Channelling"
+    ],
+    "operation": "append",
+    "value": [
+      "Qhaysh"
+    ],
+    "page": 83,
+    "reason": "High Magic requires Channelling (Qhaysh); Advances cannot exceed any of the eight Colour Channelling totals."
+  },
+  {
+    "id": "high-elf:rule:limit-martial-arts",
+    "path": [
+      "talentLimits",
+      "Martial Arts"
+    ],
+    "operation": "add",
+    "value": null,
+    "page": 68,
+    "reason": "The printed Characteristic Bonus cap is checked dynamically; this does not permit unlimited purchases."
+  },
+  {
+    "id": "high-elf:rule:limit-lileath-s-blessing",
+    "path": [
+      "talentLimits",
+      "Lileath’s Blessing"
+    ],
+    "operation": "add",
+    "value": null,
+    "page": 83,
+    "reason": "The printed Characteristic Bonus cap is checked dynamically; this does not permit unlimited purchases."
+  }
+]

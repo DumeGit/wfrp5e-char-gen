@@ -1,0 +1,497 @@
+[
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Language (Khazalid)",
+      "Leadership",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Ancestral Grudge",
+        "Resolute"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 48,
+    "id": "dwarf-guide:origin:karaz-a-karak",
+    "name": "Karaz-a-Karak",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Haggle",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Melee (Basic)",
+      "Navigation",
+      "Sail",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Dealmaker",
+        "Strong-minded"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Resolute"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 48,
+    "id": "dwarf-guide:origin:barak-varr",
+    "name": "Barak Varr",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Climb",
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Evaluate",
+      "Haggle",
+      "Intimidate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Hatred (Orcs and Goblins)",
+        "Resolute"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 48,
+    "id": "dwarf-guide:origin:karak-azul",
+    "name": "Karak Azul",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Evaluate",
+      "Intuition",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Lore (Warfare)",
+      "Melee (Basic)",
+      "Set Trap",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Resolute"
+      ],
+      [
+        "Strong-minded",
+        "Tenacious"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 49,
+    "id": "dwarf-guide:origin:karak-eight-peaks",
+    "name": "Karak Eight Peaks",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Gamble",
+      "Intimidate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Iron Jaw",
+        "Read/Write"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Resolute",
+        "Strong-minded"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 49,
+    "id": "dwarf-guide:origin:karak-kadrin",
+    "name": "Karak Kadrin",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Engineering)",
+      "Lore (Geology)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Strong-minded",
+        "Tinker"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 49,
+    "id": "dwarf-guide:origin:zhufbar",
+    "name": "Zhufbar",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Climb",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Haggle",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Melee (Basic)",
+      "Play (Horn)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Scale Sheer Surface",
+        "Strong-minded"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 49,
+    "id": "dwarf-guide:origin:karak-hirn-black-mountains",
+    "name": "Karak Hirn / Black Mountains",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Climb",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Melee (Basic)",
+      "Outdoor Survival",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Enclosed Fighter",
+        "Resolute"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 49,
+    "id": "dwarf-guide:origin:karak-izor-vaults",
+    "name": "Karak Izor / Vaults",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Climb",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Melee (Basic)",
+      "Perception",
+      "Ranged (Crossbow)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Resolute",
+        "Stone Soup"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 49,
+    "id": "dwarf-guide:origin:karak-norn-grey-mountains",
+    "name": "Karak Norn / Grey Mountains",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Climb",
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Language (Khazalid)",
+      "Language (Norse)",
+      "Lore (Dwarfs)",
+      "Melee (Basic)",
+      "Sail",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Carouser",
+        "Strong-minded"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 50,
+    "id": "dwarf-guide:origin:norse",
+    "name": "Norse",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  },
+  {
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Intimidate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Resolute",
+        "Strong-minded"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "page": 50,
+    "id": "dwarf-guide:origin:imperial",
+    "name": "Imperial",
+    "species": "Dwarf",
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "randomTalents": 0,
+    "conversion": "User-approved Fifth Edition adaptation: five different Species Skills at +5; five printed Talent slots; native Khazalid and Reikspiel. Core physical attributes remain unchanged."
+  }
+]

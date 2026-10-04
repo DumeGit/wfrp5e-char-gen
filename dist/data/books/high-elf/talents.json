@@ -1,0 +1,62 @@
+[
+  {
+    "id": "high-elf:talent:martial-arts",
+    "name": "Martial Arts",
+    "page": 68,
+    "text": "Your unarmed attacks lose Undamaging. Each subsequent rank permits one additional printed Quality: Damaging, Defensive, Distract, Fast, Penetrating, Precise or Pummel. At combat start or the start of a turn choose one Quality until the next turn.",
+    "limit": [
+      "WS"
+    ],
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  },
+  {
+    "id": "high-elf:talent:sword-dancing",
+    "name": "Sword-dancing",
+    "page": 68,
+    "text": "Learn Ritual of Cleansing for free. Each additional technique costs 100 XP for each technique currently known. Techniques require a Greatsword of Hoeth to perform, except for the older traditions described by the book. Performance and Yenlui remain references.",
+    "limit": 1,
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  },
+  {
+    "id": "high-elf:talent:blessed-by-isha",
+    "name": "Blessed by Isha",
+    "page": 83,
+    "text": "Only Elves. Receive the everqueen’s blessing in Ulthuan or Ariel’s blessing in Athel Loren. Unlocks High Magic; the full training prerequisites are on pp. 79–80.",
+    "limit": 1,
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  },
+  {
+    "id": "high-elf:talent:high-magic",
+    "name": "High Magic",
+    "page": 83,
+    "text": "Requires Blessed by Isha and an Advance in Channelling (Qhaysh). Allows learning High Magic spells at 200 XP per Intelligence Bonus band of currently known spells (200, 400, 600, and so on). Does not state a free spell grant. The printed description adds Talent rank to High Magic Overcasting SL and removes individual Wind access restrictions for Colour spellcasting. Adaptation warning: the book describes ranks but gives no maximum; the user permits one purchase for this creator.",
+    "limit": 1,
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  },
+  {
+    "id": "high-elf:talent:lileath-s-blessing",
+    "name": "Lileath’s Blessing",
+    "page": 83,
+    "text": "Printed maximum: Initiative Bonus. Each rank gives +1 SL to Channelling (Qhaysh) Tests and permits one extra simultaneous aura spell that grants Ward. These situational effects remain descriptions.",
+    "limit": [
+      "I"
+    ],
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  },
+  {
+    "id": "high-elf:talent:uncouth-uranai",
+    "name": "Uncouth Uranai",
+    "page": 57,
+    "text": "When interacting with High Elves from Caledor, Ellyrion, Avelorn or Saphery, reduce Standing by one. This prejudice does not apply to Eataine or the Outer Kingdoms. This is a starting cultural Talent, not a permanent global Status reduction.",
+    "limit": 1,
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  },
+  {
+    "id": "high-elf:talent:blood-of-aenarion",
+    "name": "Blood of Aenarion",
+    "page": 51,
+    "text": "Optional High Elf ancestry. Grants one additional Fate point at creation and Magical Prodigy or Martial Prodigy. A rolled mental-corruption effect is a Psychology rather than a Mutation. Weekly Average (+2 SL) Cool Test or Yenlui (Dark). The creator applies permanent effects and XP discounts; play-time effects remain descriptions.",
+    "limit": 1,
+    "conversion": "Reviewed creator adaptation: use the printed maximum where supplied and normal Fifth Edition Talent XP prices. High Magic’s one-purchase cap is explicitly user-approved. Situational rank effects are not permanent Characteristic or Skill bonuses."
+  }
+]

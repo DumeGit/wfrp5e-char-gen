@@ -1,0 +1,253 @@
+{
+  "page": 53,
+  "discountRituals": true,
+  "eras": [
+    {
+      "id": "ending",
+      "name": "Time of Ending",
+      "min": 40,
+      "max": 130,
+      "offset": 30,
+      "dice": [
+        10,
+        10
+      ],
+      "burden": "No Elder benefits or burdens; default High Elf age."
+    },
+    {
+      "id": "steel",
+      "name": "Time of Steel",
+      "min": 130,
+      "max": 210,
+      "offset": 120,
+      "dice": [
+        9,
+        10
+      ],
+      "burden": "One fewer old extra Fate/Resilience point. Approved Fifth Edition adaptation: reduce starting Fate or Fortune by one, your choice. Weekly Easy (+4 SL) Cool Test or move towards Yenlui (Light)."
+    },
+    {
+      "id": "incursion",
+      "name": "Time of Incursion",
+      "min": 210,
+      "max": 350,
+      "offset": 200,
+      "dice": [
+        15,
+        10
+      ],
+      "burden": "Begin with five Corruption points. Weekly Average (+2 SL) Cool Test or move towards Yenlui (Light)."
+    },
+    {
+      "id": "voyages",
+      "name": "Time of Voyages",
+      "min": 350,
+      "max": 610,
+      "offset": 320,
+      "dice": [
+        30,
+        10
+      ],
+      "burden": "At most one Endeavour between adventures, excluding Duties & Responsibilities. Weekly Challenging (+0 SL) Cool Test or gain Yenlui (Light)."
+    },
+    {
+      "id": "sage",
+      "name": "Time of the Sage",
+      "min": 610,
+      "max": 870,
+      "offset": 580,
+      "dice": [
+        30,
+        10
+      ],
+      "burden": "Prejudice (Humans). Weekly Difficult (−1 SL) Cool Test or move towards Yenlui (Light)."
+    },
+    {
+      "id": "shadows",
+      "name": "Time of Shadows",
+      "min": 870,
+      "max": null,
+      "offset": 840,
+      "dice": [
+        30,
+        10
+      ],
+      "burden": "Starting Fate and Fortune are zero and cannot rise during creation. Blood of Aenarion takes priority (p. 53). Weekly Hard (−2 SL) Cool Test or move towards Yenlui (Light)."
+    }
+  ],
+  "psychologies": [
+    {
+      "min": 1,
+      "max": 20,
+      "name": "Hollow Heart",
+      "adjustments": {
+        "WP": 10,
+        "Fel": -10
+      },
+      "text": "+10 Willpower, −10 Fellowship."
+    },
+    {
+      "min": 21,
+      "max": 40,
+      "name": "Profane Urgency",
+      "adjustments": {
+        "Ag": 10,
+        "WP": -10
+      },
+      "text": "+10 Agility, −10 Willpower."
+    },
+    {
+      "min": 41,
+      "max": 60,
+      "name": "Thrill Hunter",
+      "adjustments": {
+        "WP": 10,
+        "I": -10
+      },
+      "text": "+10 Willpower, −10 Initiative."
+    },
+    {
+      "min": 61,
+      "max": 74,
+      "name": "Tortured Visions",
+      "adjustments": {
+        "I": -10
+      },
+      "text": "−10 Initiative."
+    },
+    {
+      "min": 75,
+      "max": 89,
+      "name": "Unending Malice",
+      "adjustments": {},
+      "text": "+1 SL on Tests to hurt another; −1 SL on other Tests."
+    },
+    {
+      "min": 90,
+      "max": 100,
+      "name": "Unholy Rage",
+      "adjustments": {
+        "WS": 10
+      },
+      "text": "+10 Weapon Skill and subject to Frenzy (Psychology)."
+    }
+  ],
+  "enclaves": [
+    "Marienburg",
+    "Erengrad",
+    "Magritta",
+    "Brionne",
+    "Luccini",
+    "Al-Haikk"
+  ],
+  "kingdoms": [
+    "Caledor",
+    "Ellyrion",
+    "Avelorn",
+    "Saphery",
+    "Eataine",
+    "Tiranoc",
+    "Nagarythe",
+    "Chrace",
+    "Cothique",
+    "Yvresse"
+  ],
+  "pettySpells": [
+    "Bless Arrow",
+    "Calm",
+    "Greenfinger",
+    "Identify Disease",
+    "Remove Dirt",
+    "Reveal Magic"
+  ],
+  "obsessions": {
+    "page": 48,
+    "rows": [
+      {
+        "face": 1,
+        "text": "To leave an artistic or scholarly legacy. This involves the planning and creation of a great magnum opus that will find admirers for centuries to come."
+      },
+      {
+        "face": 2,
+        "text": "To see the Dark Elves defeated once and for all. To convince other High Elves that Ulthuan’s military needs to be reinforced to meet this goal."
+      },
+      {
+        "face": 3,
+        "text": "To ensure that a particular kingdom becomes the paramount realm in Ulthuan. This may involve rebuilding a shattered kingdom (such as Yvresse) or maintaining the power of an important kingdom (such as Eataine)."
+      },
+      {
+        "face": 4,
+        "text": "To reestablish High Elf dominions around the world. To convince other High Elves that Ulthuan’s navies must be reinforced to meet this goal."
+      },
+      {
+        "face": 5,
+        "text": "To see that Ulthuan does not risk its people or its treasure in attempts to build alliances with Humans or Dwarfs."
+      },
+      {
+        "face": 6,
+        "text": "To view sights no other Elf has seen by travelling to distant lands and exploring their remote regions."
+      },
+      {
+        "face": 7,
+        "text": "To find someone in the world with whom you can fully relate through the forging of a solid friendship or true and lasting love."
+      },
+      {
+        "face": 8,
+        "text": "To educate others in a system of thought that will lead them to live better lives in time to come. This may be a moral mission, one that seeks to wipe out a source of suffering, or the promotion of a form of pleasure-seeking."
+      },
+      {
+        "face": 9,
+        "text": "To garner greater wealth and power with which to secure the safety and comfort of your family, friends, or neighbours."
+      },
+      {
+        "face": 10,
+        "text": "To master your emotions, control your nature, and find inner peace."
+      }
+    ]
+  },
+  "dreams": {
+    "page": 50,
+    "rows": [
+      {
+        "face": 1,
+        "text": "The land of Ulthuan is wracked by war, cities burn, and towers topple. To the south, the king and the general clasp their hands in friendship, and the Dragon takes flight. This Dream recollects the story of Phoenix King Morvael and General Mentheus. Perhaps it urges the dreamer to delegate tasks to those more suited to them. It may warn that a friend faces peril or that disaster looms for the dreamer."
+      },
+      {
+        "face": 2,
+        "text": "A war rages in the heavens. Two mighty figures wearing suits of black iron clash. After a great struggle, one is cast down, and the other yells in triumph. This Dream reflects Khaine’s victory over Vaul. It may portend that an attempt to exact vengeance will fail or warn that someone is trying to trap the dreamer."
+      },
+      {
+        "face": 3,
+        "text": "You have served the master sculptor Oeric all your life. You watch in awe as he chisels fine detail into the hair of an Elf maiden made from bone white marble. The Dream may portend a dangerous temptation, the potential recovery of something thought lost, or the undertaking of a masterwork."
+      },
+      {
+        "face": 4,
+        "text": "Storms lash at a high citadel on the northern coast of Ulthuan. A burning green witchfire shines from the narrow windows in the tall towers. Flocks of harpies circle around its tallest towers, and waves crash at its base. A vision of the tower of Anlec may portend a building that contains great dangers or the fact that enemies are secretly mustering their strength to assail you."
+      },
+      {
+        "face": 5,
+        "text": "Multicoloured winds cascade about you. You are tumbled about, spinning uncontrollably in the furious cyclone. Figures dressed in the panoply of mages float within the tumult, their expressions calm and focused. This vision of the Great Vortex may indicate that the dreamer must make a great sacrifice to avert disaster or undertake a great or dangerous project."
+      },
+      {
+        "face": 6,
+        "text": "A High Elf with noble bearing, wearing clothing that is expertly tailored but has clearly been worn in by years of travel, clasps hands with a Dwarf wearing the regalia of their high kings. They smile in friendship. A vision of Malerion before he tried to claim the Phoenix Throne, befriending the Dwarf high king Snorri Whitebeard. Perversely, this vision may portend either the chance to forge a valuable friendship or that someone close to you will betray you."
+      },
+      {
+        "face": 7,
+        "text": "The Bloody-handed God rages. He has been tricked, and his precious treasures have been lost and scattered about, stolen and hidden in the mortal world, where the gods are forbidden to tread. The Dream may portend the loss or theft of a precious item or the chance to discover something that had been lost or stolen in the past. Alternatively, the Dream may warn that people who had previously seemed friendly may have changed their position, or that the dreamer should beware of a lover’s manipulations."
+      },
+      {
+        "face": 8,
+        "text": "A fortress floats upon a dark sea. Chill winds blow, and mountains of ice drift through the water. The admiral aboard his dragonship orders his crew to close with the enemy and brace for a ram. The Dream suggests that a great victory may be won if the dreamer takes bold and decisive action. However, paradoxically, it may warn against overextending an effort and risking disaster if a consolidation of recent gains is not taken before greater victory is sought."
+      },
+      {
+        "face": 9,
+        "text": "From their roosting sites among alabaster pillars of rock, gigantic birds with wings of flame take to the air, circling about and calling to one another with harsh cries. This vision of Flamespyre Phoenixes may promise the dreamer an opportunity to reinvent themselves, find a new purpose in life, or cheat death."
+      },
+      {
+        "face": 10,
+        "text": "The ancient Dragon struggles to rouse itself, but the temperature of the world is not to its liking. It shifts its weight onto its other side and yawns and falls to sleep once more. The Dream may warn that the dreamer is foolish to ignore a growing threat in favour of enjoying easy comforts. Alternatively, the Dream may hint that the current environment is not conducive to a hoped for course of action."
+      }
+    ]
+  }
+}

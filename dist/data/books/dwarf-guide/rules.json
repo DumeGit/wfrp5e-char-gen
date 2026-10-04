@@ -1,0 +1,67 @@
+[
+  {
+    "id": "dwarf-guide:rule:lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Runes"
+    ],
+    "page": 80,
+    "reason": "Printed Dwarf Career/Skill specialisations; normal Fifth Edition allocations and XP."
+  },
+  {
+    "id": "dwarf-guide:rule:art",
+    "path": [
+      "skillOptions",
+      "Art"
+    ],
+    "operation": "append",
+    "value": [
+      "Tattoo"
+    ],
+    "page": 64,
+    "reason": "Printed Dwarf Career/Skill specialisations; normal Fifth Edition allocations and XP."
+  },
+  {
+    "id": "dwarf-guide:rule:melee",
+    "path": [
+      "skillOptions",
+      "Melee"
+    ],
+    "operation": "append",
+    "value": [
+      "Engineering"
+    ],
+    "page": 93,
+    "reason": "Printed Dwarf Career/Skill specialisations; normal Fifth Edition allocations and XP."
+  },
+  {
+    "id": "dwarf-guide:rule:trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Mason"
+    ],
+    "page": 57,
+    "reason": "Printed Dwarf Career/Skill specialisations; normal Fifth Edition allocations and XP."
+  },
+  {
+    "id": "dwarf-guide:rule:secret-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "append",
+    "value": [
+      "Brotherhood of Grimnir"
+    ],
+    "page": 60,
+    "reason": "Printed Dwarf Career/Skill specialisations; normal Fifth Edition allocations and XP."
+  }
+]

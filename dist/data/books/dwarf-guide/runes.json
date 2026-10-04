@@ -1,0 +1,709 @@
+[
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-cleaving",
+    "name": "Rune of Cleaving",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "The weapon inflicts +1 Damage for each Rune of Cleaving.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-retribution",
+    "name": "Rune of Retribution",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "Any Critical Wounds inflicted by this weapon may add +20 to rolls on a Critical Wound table for each Rune of Retribution.",
+    "sl": 12,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-cutting",
+    "name": "Rune of Cutting",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "When attacking with this weapon, you may ignore 2 APs of armour per Rune of Cutting on successful hits.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-daunting",
+    "name": "Rune of Daunting",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "Whilst this weapon is drawn, you gain the Fear Creature Trait (WFRP Core Rulebook). Your Fear Rating is equal to the number of Runes of Daunting. If you already have a Fear Rating, increase by +1 for each Rune of Daunting.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-fire",
+    "name": "Rune of Fire",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "Once drawn, the weapon’s blade bursts into flames, providing 20 yards of illumination, and inflicting 1 Ablaze Condition on enemies it inflicts damage upon. A weapon with two or three Runes of Fire can be used to make ranged attacks using Ballistic Skill, with a Range equal to the wielder’s Willpower Bonus, and the Blast 4 Quality. This attack deals no Damage, but inflicts 1 Ablaze Condition for each Rune of Fire.",
+    "sl": 16,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-fury",
+    "name": "Rune of Fury",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "Whilst wielding this weapon, you gain 1 level of Dual Wielder (WFRP Core Rulebook) for each Rune of Fury, which may exceed the Talent usual maximum levels.",
+    "sl": 15,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-grudge-rune",
+    "name": "Grudge Rune",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "Nominate an enemy you bear a Blood Grudge (page 84). For each Grudge Rune, the weapon gains both +10 to hit and +1 Damage on attacks against the target. At the end of the adventure, if your nominated enemy is slain, you may nominate a new target against whom you bear a Blood Grudge.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-might",
+    "name": "Rune of Might",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "When attacking a target of a larger Size than yourself, the weapon inflicts +3 Damage for each Rune of Might.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-speed",
+    "name": "Rune of Speed",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "Whilst carrying this weapon in combat, you gain +10 Initiative for each Rune of Speed.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-rune-of-striking",
+    "name": "Rune of Striking",
+    "page": 127,
+    "form": "Weapon",
+    "master": false,
+    "text": "When attacking with this weapon, you gain +10 to your Melee Skill for each Rune of Striking (the specialisation for the Melee Skill being the same as the Weapon Type of the weapon upon which the rune is inscribed). Note that the bonus only applies to strikes with this weapon, so if you are dual wielding with a similar weapon, attacks made with that weapon do not benefit from the bonus.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-alaric-the-mad",
+    "name": "Master Rune of Alaric the Mad",
+    "page": 127,
+    "form": "Weapon",
+    "master": true,
+    "text": "Any attacks made by this weapon ignore the target’s AP, the target’s armour Qualities, and any other benefits provided by the target’s armour.",
+    "sl": 30,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-breaking",
+    "name": "Master Rune of Breaking",
+    "page": 127,
+    "form": "Weapon",
+    "master": true,
+    "text": "When this weapon makes a successful attack against an enemy who Opposed with Melee, or makes a successful Melee Test to Oppose an incoming attack, any magic weapon used by your opponent during their Melee Test is destroyed.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-flight",
+    "name": "Master Rune of Flight",
+    "page": 128,
+    "form": "Weapon",
+    "master": true,
+    "text": "The weapon can be used as a Thrown ranged weapon, with a Range of SB×3. When used on a ranged attack, the weapon gains the Accurate Quality, and returns to your hand after inflicting Damage.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-skalf-blackhammer",
+    "name": "Master Rune of Skalf Blackhammer",
+    "page": 128,
+    "form": "Weapon",
+    "master": true,
+    "text": "Any successful attack with this weapon counts as scoring a Critical.",
+    "sl": 28,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-the-slayer",
+    "name": "Master Rune of the Slayer",
+    "page": 128,
+    "form": "Weapon",
+    "master": true,
+    "text": "Choose a specific type of enemy: Daemons, Undead, Dragons, Goblins, Elves, etc. When attacking that target with this weapon, you may Reverse any attack Tests, and Reverse any rolls they make on a Critical Wound table.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-snorri-spangelhelm",
+    "name": "Master Rune of Snorri Spangelhelm",
+    "page": 128,
+    "form": "Weapon",
+    "master": true,
+    "text": "Any failed Melee Tests made with this weapon always count as achieving a success with 0 SL. An attack with this weapon can still fail if the target scores more SLs on their Opposed Test.",
+    "sl": 22,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:weapon-master-rune-of-haste",
+    "name": "Master Rune of Haste",
+    "page": 128,
+    "form": "Weapon",
+    "master": true,
+    "text": "The weapon gains the Fast Quality (WFRP Core Rulebook), except all Tests to defend against the weapon with Melee suffer a -30 penalty (instead of -10).",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-rune-of-force",
+    "name": "Rune of Force",
+    "page": 128,
+    "form": "Armour",
+    "master": false,
+    "text": "Whilst wearing this armour, if you make a successful Melee attack as part of a Charge, you inflict bonus Damage for each Rune of Impact equal to the APs of your most armoured location.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-rune-of-fortitude",
+    "name": "Rune of Fortitude",
+    "page": 128,
+    "form": "Armour",
+    "master": false,
+    "text": "Whilst wearing this armour, you increase your Toughness by +10 for each Rune of Fortitude. Rumours that armour bearing a Rune of Fortitude eventually become sentient are purely speculative.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-rune-of-iron",
+    "name": "Rune of Iron",
+    "page": 128,
+    "form": "Armour",
+    "master": false,
+    "text": "Whilst wearing this armour, you gain +2 Wounds for each Rune of Iron. These Wounds are lost when the armour is removed, which can trigger a Critical Wound for a severely injured Character.",
+    "sl": 12,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-rune-of-resistance",
+    "name": "Rune of Resistance",
+    "page": 128,
+    "form": "Armour",
+    "master": false,
+    "text": "Whilst wearing this armour, you gain +10 for each Rune of Resistance on Tests to Oppose an incoming Melee attack.",
+    "sl": 12,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-rune-of-shielding",
+    "name": "Rune of Shielding",
+    "page": 128,
+    "form": "Armour",
+    "master": false,
+    "text": "Whilst wearing this armour, any incoming ranged attacks or spells reduce the Damage they inflict upon by 2 for each Rune of Shielding. If this reduces Damage inflicted to 0 or less, you do not lose any Wounds.",
+    "sl": 12,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-rune-of-stone",
+    "name": "Rune of Stone",
+    "page": 128,
+    "form": "Armour",
+    "master": false,
+    "text": "The armour gains +1 AP for each Rune of Stone. Suits with one or more Runes of Stone, and no other runes, are exempt from the Rule of Pride — they continue to function even if identical suits of runic armour enters 100 yards.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-master-rune-of-adamant",
+    "name": "Master Rune of Adamant",
+    "page": 128,
+    "form": "Armour",
+    "master": true,
+    "text": "When you suffer a Critical Wound whilst wearing this armour, you may Reverse the roll on the Critical Wound table.",
+    "sl": 22,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-master-rune-of-gromril",
+    "name": "Master Rune of Gromril",
+    "page": 128,
+    "form": "Armour",
+    "master": true,
+    "text": "The armour loses the Weakpoints Flaw, can never be Damaged except by a Runic Flaw (page 126), and never reduces its AP due to Talents or effects such as the Penetrating Quality. Effects that ignore armour and inflict Wounds directly still apply.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:armour-master-rune-of-steel",
+    "name": "Master Rune of Steel",
+    "page": 129,
+    "form": "Armour",
+    "master": true,
+    "text": "Whilst wearing this armour, you can only suffer a maximum of 10 Wounds from any instance when Damage is inflicted.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-clear-sight",
+    "name": "Rune of Clear Sight",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "When the talisman is pressed to your eye, you negate any penalties imposed by fog, mist, smoke, or other clouding, non-magical vapours. Two Runes of Clear Seeing also penetrate magical vapours. Two Runes of Clear Seeing allow you to see clearly even in total darkness.",
+    "sl": 8,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-truth",
+    "name": "Rune of Truth",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "The talisman glows brightly if pressed into contact with an item that has been faked, forged, counterfeited, or deliberately degraded in value. Two Runes of Disclosure also identify magical illusions or duplicates. Three Runes of Disclosure reveal the precise method of deception to the bearer.",
+    "sl": 8,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-far-sight",
+    "name": "Rune of Far Sight",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "When the talisman is pressed to the user’s eye, their vision is magnified, allowing them to clearly see events up to a mile away. Two Runes of Farseeing extend vision up to two miles. Three Runes of Farseeing extend vision up to four miles.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-the-furnace",
+    "name": "Rune of the Furnace",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "Whilst wearing this talisman, you can never acquire the Ablaze Condition, are immune to heat exposure, and reduce all incoming Damage from fire and flaming attacks by 4 for each Rune of the Furnace.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-luck",
+    "name": "Rune of Luck",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "Whilst wearing this talisman, you gain 1 Fortune point for each Rune of Luck, which can exceed your usual maximum Fortune. You lose these Fortune points when you remove the talisman (to a minimum of 0 Fortune), and cannot regain them until the following session.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-restoration",
+    "name": "Rune of Restoration",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "After a good night’s sleep whilst wearing this talisman, the bearer regains their Toughness Bonus in Wounds for each Rune of Restoration.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-spellbreaking",
+    "name": "Rune of Spellbreaking",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "Whilst wearing this talisman, and using the Magic Resistance Talent, you can activate a Rune of Spellbreaking to automatically count as rolling 01 on your Willpower Test. You can activate each Rune of Spellbreaking once per adventure, and must choose to activate it before you roll.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-spelleating",
+    "name": "Rune of Spelleating",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "If you successfully dispel a spell using the Magic Resistance Talent whilst wearing this talisman, the spellcaster cannot attempt the spell again for your Willpower Bonus in Rounds. Two Runes of Spelleating extend this effect to your Willpower Bonus in hours. Three Runes of Spelleating extend this effect to your Willpower Bonus in weeks.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-rune-of-warding",
+    "name": "Rune of Warding",
+    "page": 129,
+    "form": "Talisman",
+    "master": false,
+    "text": "Whilst wearing this talisman, you may impose a -10 penalty for each Rune of Warding on attack Tests or spellcasting Tests targeting you.",
+    "sl": 15,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-master-rune-of-balance",
+    "name": "Master Rune of Balance",
+    "page": 129,
+    "form": "Talisman",
+    "master": true,
+    "text": "Whilst wearing this talisman, if an enemy within line of sight casts a spell, you may either Reverse their Spellcasting Test, or Reverse your Opposed Willpower Test (if you’re in range to attempt Magic Resistance).",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-master-rune-of-industry",
+    "name": "Master Rune of Industry",
+    "page": 129,
+    "form": "Talisman",
+    "master": true,
+    "text": "Whilst wearing this talisman, you may take an extra Endeavour between adventures.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-master-rune-of-kingship",
+    "name": "Master Rune of Kingship",
+    "page": 129,
+    "form": "Talisman",
+    "master": true,
+    "text": "Whilst wearing this talisman, you may Reverse any Charm, Intimidate, and Leadership Tests you make that target a Dwarf, or a group mostly consisting of Dwarfs. Rumour has it whoever wears this talisman benefits from the wisdom of the previous bearer.",
+    "sl": 24,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-master-rune-of-passage",
+    "name": "Master Rune of Passage",
+    "page": 130,
+    "form": "Talisman",
+    "master": true,
+    "text": "Whilst wearing this talisman, and Moving no faster than walking pace, you can Move through solid, immobile objects like trees, rock, and metal cages. You cannot Move through animals or Undead creatures. You cannot end your Move inside a solid object.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:talisman-master-rune-of-spite",
+    "name": "Master Rune of Spite",
+    "page": 130,
+    "form": "Talisman",
+    "master": true,
+    "text": "Whenever you take Damage from a Melee attack, the attacker immediately suffers 2d10 Damage to a random location, reduced by Toughness Bonus and Armour Points as normal.",
+    "sl": 24,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-alarm",
+    "name": "Rune of Alarm",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "The runic item emits a loud, blaring noise if any creature of Size Small or larger enters its range of effect. Two Runes of Alarm may instead bellow a pre-recorded sentence. Three Runes of Alarm may instead transmit a pre-recorded telepathic message to the crafter or their closest living descendant, over any distance.",
+    "sl": 8,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-battle",
+    "name": "Rune of Battle",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "Affected allies begin combat with 1 Momentum for each Rune of Battle.",
+    "sl": 18,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-courage",
+    "name": "Rune of Courage",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "Affected allies gain +10 on Psychology Tests (WFRP Core Rulebook) for each Rune of Courage.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-discovery",
+    "name": "Rune of Discovery",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "For each Rune of Discovery the runic item has, the crafter may choose a specific metal or gem (e.g. gold, diamond, gromril, iron ore, obsinite, ithilmar, brightstone). The runic item glows brightly if the specified material appears within its range of effect.",
+    "sl": 8,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-enemy-detection",
+    "name": "Rune of Enemy Detection",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "For each rune, describe a type of creature — a general creature type (Skaven, obvious Chaos worshippers), or a more specific description (one-eyed women with red hair). When a creature that clearly matches the description enters the range of effect, the rune glows a violent crimson.",
+    "sl": 8,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-locking",
+    "name": "Rune of Locking",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "Any locks within the runic item’s range of effect are immune to being picked or forced except by magic or the corresponding key. Two Runes of Locking also protect from magical effects. Three Runes of Locking are proof against the lock’s corresponding key — only the crafter, or their closest living descendant, can open the lock at will. A lock may still be bypassed by smashing through the chest or door they protect.",
+    "sl": 6,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-purification",
+    "name": "Rune of Purification",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "Affected allies gain +20 for each Rune of Purification on Tests to resist toxins in air and water.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-retribution",
+    "name": "Rune of Retribution",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "If a creature violates the sanctity of dead bodies within the runic item’s range of effect (e.g. stealing from the dead, casting a necromantic spell), they immediately gain 1 Ablaze Condition for each Rune of Retribution.",
+    "sl": 8,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-sanctuary",
+    "name": "Rune of Sanctuary",
+    "page": 130,
+    "form": "Protection",
+    "master": false,
+    "text": "Affected allies gain +10 for each Rune of Sanctuary on Willpower Tests to dispel with Magic Resistance.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-slowness",
+    "name": "Rune of Slowness",
+    "page": 131,
+    "form": "Protection",
+    "master": false,
+    "text": "Enemies attempting to Engage an affected ally reduce the distance they can Run by 4 yards for each Rune of Slowness, to a minimum of the enemy’s Walk distance.",
+    "sl": 12,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-rune-of-verminkill",
+    "name": "Rune of Verminkill",
+    "page": 131,
+    "form": "Protection",
+    "master": false,
+    "text": "Rodents, Skaven, and rat-based abominations like Rat Ogres lose 2 Wounds for each Rune of Verminkill (ignoring Toughness Bonus and Armour Points) when they enter the runic item’s range of effect, or start their Turn within it.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-master-rune-of-expel-chaos",
+    "name": "Master Rune of Expel Chaos",
+    "page": 131,
+    "form": "Protection",
+    "master": true,
+    "text": "Affected allies may Reverse any Test to resist corrupting influences, Tests to avoid mutation from Corruption, and rolls on the Physical and Mental Corruption Tables. In addition, when an affected ally is engaged with a Daemonic enemy that has the Unstable Trait, they count as having +2 Momentum when calculating Wounds lost for being Unstable.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-master-rune-of-grimnir",
+    "name": "Master Rune of Grimnir",
+    "page": 131,
+    "form": "Protection",
+    "master": true,
+    "text": "You may Reverse enemy Ranged attack Tests made against affected allies.",
+    "sl": 22,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-master-rune-of-grungni",
+    "name": "Master Rune of Grungni",
+    "page": 131,
+    "form": "Protection",
+    "master": true,
+    "text": "You may Reverse any enemy spellcasting Tests made against affected allies.",
+    "sl": 22,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-master-rune-of-stromni-redbeard",
+    "name": "Master Rune of Stromni Redbeard",
+    "page": 131,
+    "form": "Protection",
+    "master": true,
+    "text": "Affected allies begin combat with 1 Momentum. Double the range of this rune’s effects to 12 yards, or 24 yards if forged upon a battle standard.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:protection-master-rune-of-valaya",
+    "name": "Master Rune of Valaya",
+    "page": 131,
+    "form": "Protection",
+    "master": true,
+    "text": "Affected allies may Reverse any Willpower Test to Oppose spellcasting with Magic Resistance. The range limit for Magic Resistance is removed — affected allies can Oppose any spell cast against a target in their line of sight — and the Talent can be used to dispel persistent spells (WFRP Core Rulebook), not just incoming spells.",
+    "sl": 22,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-accuracy",
+    "name": "Rune of Accuracy",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "When attacking with this weapon, you gain +10 to hit for each Rune of Accuracy.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-burning",
+    "name": "Rune of Burning",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "A target struck by this weapon gains 1 Ablaze Condition per Rune of Burning.",
+    "sl": 16,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-forging",
+    "name": "Rune of Forging",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "When you Fumble and/or Misfire whilst using this weapon, the crew may activate this rune to negate the effects. You can activate each Rune of Forging once per adventure.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-penetrating",
+    "name": "Rune of Penetrating",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "The weapon inflicts +2 Damage for each Rune of Penetrating.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-reloading",
+    "name": "Rune of Reloading",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "The weapon reduces its Reload Rating by 2 for each Rune of Reloading. If this would reduce the Rating to 0 or below, the weapon loses the Reload Flaw. Weapons with the Salvo Quality cannot be reduced below Reload Rating 1.",
+    "sl": 12,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-seeking",
+    "name": "Rune of Seeking",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "When this weapon attacks a flying enemy, you gain +20 to hit for each Rune of Seeking.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-the-stalwart",
+    "name": "Rune of the Stalwart",
+    "page": 131,
+    "form": "Engineering",
+    "master": false,
+    "text": "Dwarfs crewing this weapon begin combat with 1 Momentum for each Rune of the Stalwart. This extra Momentum is lost by any Characters that leave the weapon’s crew, or become Engaged in melee.",
+    "sl": 14,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-rune-of-the-valiant",
+    "name": "Rune of the Valiant",
+    "page": 132,
+    "form": "Engineering",
+    "master": false,
+    "text": "Dwarfs gain +10 Willpower for each Rune of the Valiant whilst crewing this weapon.",
+    "sl": 10,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-master-rune-of-defence",
+    "name": "Master Rune of Defence",
+    "page": 132,
+    "form": "Engineering",
+    "master": true,
+    "text": "The weapon’s crew always count as being in hard cover, imposing a -30 modifier on Ranged attacks against them.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-master-rune-of-disguise",
+    "name": "Master Rune of Disguise",
+    "page": 132,
+    "form": "Engineering",
+    "master": true,
+    "text": "The weapon is invisible to all enemies until it fires, at which point it becomes visible for the rest of the combat. The weapon’s crew remain visible as normal, and moving the machine still causes noise.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-master-rune-of-immolation",
+    "name": "Master Rune of Immolation",
+    "page": 132,
+    "form": "Engineering",
+    "master": true,
+    "text": "Any Dwarf crewing this weapon may choose to activate the rune as a Free Action, triggering the machine’s self-destruction. All creatures within 6 yards of the machine take 15 Damage to a random location, reduced by Toughness Bonus and Armour Points. Survivors gain the Ablaze Condition. The weapon itself is destroyed.",
+    "sl": 20,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:engineering-master-rune-of-skewering",
+    "name": "Master Rune of Skewering",
+    "page": 132,
+    "form": "Engineering",
+    "master": true,
+    "text": "When making a Ranged attack with the weapon, you may activate this rune to count as rolling 01. If the attack succeeds, it also counts as a Critical, and may strike any location you choose. You may activate this rune once per adventure, and must decide to activate it before you roll.",
+    "sl": 22,
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:doom-rune-of-hearth-and-home",
+    "name": "Rune of Hearth and Home",
+    "page": 132,
+    "form": "Doom",
+    "master": false,
+    "text": "Requires an Anvil of Doom and a Hard (−2 SL) Runesmithing Action (p. 132). The blessing of Valaya affirms a Dwarf’s resolve to fight and die without fear. All Dwarfs within 25 yards of the Anvil of Doom may count as rolling 01 on any Cool Tests (WFRP Core Rulebook) they make until the end of the next Round.",
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:doom-rune-of-oath-and-steel",
+    "name": "Rune of Oath and Steel",
+    "page": 132,
+    "form": "Doom",
+    "master": false,
+    "text": "Requires an Anvil of Doom and a Hard (−2 SL) Runesmithing Action (p. 132). The blessing of Grungni enchants the armour of his children with supernatural resilience. All Dwarfs within 25 yards of the Anvil of Doom improve the AP of any armour they’re wearing by 2, until the end of the next Round.",
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  },
+  {
+    "id": "dwarf-guide:rune:doom-rune-of-wrath-and-ruin",
+    "name": "Rune of Wrath and Ruin",
+    "page": 132,
+    "form": "Doom",
+    "master": false,
+    "text": "Requires an Anvil of Doom and a Hard (−2 SL) Runesmithing Action (p. 132). The blessing of Grimnir unleashes the war god’s fury in a raging storm of splitting earth and darkening skies. All enemies within 25 yards of the Anvil of Doom are struck for 12 Damage to a random location, reduced by Toughness Bonus and Armour Points.",
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+  }
+]

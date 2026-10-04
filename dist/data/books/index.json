@@ -33,6 +33,14 @@
     {
       "id": "rough-nights",
       "path": "rough-nights/manifest.json"
+    },
+    {
+      "id": "dwarf-guide",
+      "path": "dwarf-guide/manifest.json"
+    },
+    {
+      "id": "high-elf",
+      "path": "high-elf/manifest.json"
     }
   ]
 }

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dwarf-guide:armour:gromril-breastplate",
+    "name": "Gromril Breastplate",
+    "page": 95,
+    "enc": 3,
+    "locations": "Body",
+    "ap": 3,
+    "qualities": "Durable 4, Fine 1, Impenetrable, Weakpoints"
+  },
+  {
+    "id": "dwarf-guide:armour:gromril-open-helm",
+    "name": "Gromril Open Helm",
+    "page": 95,
+    "enc": 1,
+    "locations": "Head",
+    "ap": 3,
+    "qualities": "Durable 4, Fine 1, Partial"
+  },
+  {
+    "id": "dwarf-guide:armour:gromril-bracers",
+    "name": "Gromril Bracers",
+    "page": 95,
+    "enc": 3,
+    "locations": "Arms",
+    "ap": 3,
+    "qualities": "Durable 4, Fine 1, Impenetrable, Weakpoints"
+  },
+  {
+    "id": "dwarf-guide:armour:gromril-plate-leggings",
+    "name": "Gromril Plate Leggings",
+    "page": 95,
+    "enc": 3,
+    "locations": "Legs",
+    "ap": 3,
+    "qualities": "Durable 4, Fine 1, Impenetrable, Weakpoints"
+  },
+  {
+    "id": "dwarf-guide:armour:gromril-helm",
+    "name": "Gromril Helm",
+    "page": 95,
+    "enc": 2,
+    "locations": "Head",
+    "ap": 3,
+    "qualities": "Durable 4, Fine 1, Impenetrable, Weakpoints"
+  },
+  {
+    "id": "dwarf-guide:armour:mail-skirt",
+    "name": "Mail Skirt",
+    "page": 95,
+    "enc": 2,
+    "locations": "Legs",
+    "ap": 2,
+    "qualities": "Flexible, Partial"
+  },
+  {
+    "id": "dwarf-guide:armour:miner-s-helm",
+    "name": "Miner’s Helm",
+    "page": 95,
+    "enc": 1,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Partial"
+  }
+]

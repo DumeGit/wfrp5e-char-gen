@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "high-elf",
+  "title": "High Elf Player’s Guide",
+  "shortTitle": "High Elf Guide",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "High Elf Player's Guide.pdf",
+    "sha256": "16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Printed pages match PDF positions. Fifth Edition core rules govern creation and XP unless the user explicitly approved a guide-specific adaptation.",
+      "Eleven regional profiles retain printed Talent slots and core High Elf physical benefits, with five distinct Species Skills at +5. Ungrouped Animal Care/Sail use core totals and retain printed context.",
+      "Career table overlaps are corrected by user approval: Outer Guard 89–90, Avelorn Scholar 13–17. Core Career aliases are documented in each table.",
+      "Mage levels 1–4 and all learnable spell profiles are included. Archmage level five and the three advanced Elf priest career branches are deferred until the manager phase by user choice.",
+      "Mage uses 10 individual Channelling points and four qualifying spells before the next Colour Lore; other Elf Careers retain the core prerequisite.",
+      "Martial Arts and Lileath’s Blessing retain their printed Bonus-based caps; High Magic is permitted once with an explicit adaptation warning. No free High Magic spell is invented.",
+      "Core equipment profiles/prices are preserved. New equipment uses printed qualified Elf-market prices; Unique items are acquired-Trapping references. Ithiltaen Helm AP remains unresolved.",
+      "Elder creation uses printed individual Skill points alongside normal allocations, with separate per-era caps and no tracker boxes/free Talent/gear. The lost old extra point becomes a user-approved choice of −1 starting Fate or Fortune.",
+      "Blood of Aenarion uses the approved noble definition, core mental-corruption effects as Psychology and discounts only legal purchases. Ritual discount: included by user decision.",
+      "Yenlui, Dreams, Obsessions, naval combat, live casting, sacrifices, crafting and intrigues remain reference/background or future manager systems."
+    ]
+  },
+  "files": {
+    "careers": "careers.json",
+    "origins": "origins.json",
+    "tables": "tables.json",
+    "spells": "spells.json",
+    "talents": "talents.json",
+    "rules": "rules.json",
+    "techniques": "techniques.json",
+    "highElfCreation": "creation.json",
+    "gear": "gear.json",
+    "weapons": "weapons.json",
+    "armour": "armour.json"
+  }
+}

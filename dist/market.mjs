@@ -1,3 +1,4 @@
+import {dwarfGearIssue} from './dwarf-guide.mjs';
 import {rawGearSlots,rolledName,coinValue} from './inventory.mjs';
 import {equipmentSize} from './equipment-sizing.mjs';
 // Listed prices and Availability from the supplied Consumer Guide, pp. 301, 303, 307, 312–315.
@@ -13,4 +14,4 @@ export function marketCatalog(R,s){
 }
 export function purchaseItem(R,p){const legacy=p.id?.startsWith('313:')?`312:${p.id.slice(4)}`:p.id;return marketCatalog(R).find(x=>x.id===p.id)||marketCatalog(R).find(x=>x.id===legacy&&x.category==='Animals and vehicles');}
 export function purse(R,s){const rolled=s.wealth?Number(s.wealth.amount)*(s.wealth.currency==='gold crowns'?240:s.wealth.currency==='silver shillings'?12:1):0,grants=rawGearSlots(R,s).reduce((n,x)=>n+coinValue(rolledName(s,x)),0),start=rolled+grants,spent=(s.purchases||[]).reduce((n,x)=>n+(x.pennies??purchaseItem(R,x)?.pennies??0),0),remaining=start-spent;return {rolled,grants,start,spent,remaining,coins:{gc:Math.floor(Math.max(0,remaining)/240),ss:Math.floor(Math.max(0,remaining)%240/12),d:Math.max(0,remaining)%12}};}
-export function buyTrapping(R,s,id){const item=marketCatalog(R,s).find(x=>x.id===id);if(!item)throw Error('Choose a Trapping with a listed book price.');if(item.sizeUnresolved||item.useUnresolved)throw Error(item.sizeNote);if(!s.wealth)throw Error('Roll starting wealth first.');if(item.pennies>purse(R,s).remaining)throw Error(`Not enough money: ${item.name} costs ${item.price}.`);(s.purchases??=[]).push({id,uid:globalThis.crypto.randomUUID(),pennies:item.pennies});return item;}
+export function buyTrapping(R,s,id){const item=marketCatalog(R,s).find(x=>x.id===id);if(!item)throw Error('Choose a Trapping with a listed book price.');const issue=dwarfGearIssue(R,s,item);if(issue)throw Error(issue);if(item.sizeUnresolved||item.useUnresolved)throw Error(item.sizeNote);if(!s.wealth)throw Error('Roll starting wealth first.');if(item.pennies>purse(R,s).remaining)throw Error(`Not enough money: ${item.name} costs ${item.price}.`);(s.purchases??=[]).push({id,uid:globalThis.crypto.randomUUID(),pennies:item.pennies});return item;}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "high-elf:armour:ithilmar-breastplate",
+    "name": "Ithilmar Breastplate",
+    "page": 34,
+    "enc": 1,
+    "locations": "Body",
+    "ap": 2,
+    "qualities": "Durable 2, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:ithilmar-open-helm",
+    "name": "Ithilmar Open Helm",
+    "page": 34,
+    "enc": 0,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Durable 2, Fine 2, Partial",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:ithilmar-bracers",
+    "name": "Ithilmar Bracers",
+    "page": 34,
+    "enc": 1,
+    "locations": "Arms",
+    "ap": 2,
+    "qualities": "Durable 2, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:ithilmar-plate-leggings",
+    "name": "Ithilmar Plate Leggings",
+    "page": 34,
+    "enc": 1,
+    "locations": "Legs",
+    "ap": 2,
+    "qualities": "Durable 2, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:ithilmar-helm",
+    "name": "Ithilmar Helm",
+    "page": 34,
+    "enc": 0,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Durable 2, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:dragon-armour-breastplate",
+    "name": "Dragon Armour Breastplate",
+    "page": 34,
+    "enc": 3,
+    "locations": "Body",
+    "ap": 2,
+    "qualities": "Durable 3, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:dragon-armour-open-helm",
+    "name": "Dragon Armour Open Helm",
+    "page": 34,
+    "enc": 1,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Durable 3, Fine 2, Partial",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:dragon-armour-bracers",
+    "name": "Dragon Armour Bracers",
+    "page": 34,
+    "enc": 3,
+    "locations": "Arms",
+    "ap": 2,
+    "qualities": "Durable 3, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:dragon-armour-plate-leggings",
+    "name": "Dragon Armour Plate Leggings",
+    "page": 34,
+    "enc": 3,
+    "locations": "Legs",
+    "ap": 2,
+    "qualities": "Durable 3, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:dragon-armour-helm",
+    "name": "Dragon Armour Helm",
+    "page": 34,
+    "enc": 2,
+    "locations": "Head",
+    "ap": 2,
+    "qualities": "Durable 3, Fine 2, Impenetrable, Weakpoints",
+    "layer": "plate"
+  },
+  {
+    "id": "high-elf:armour:white-lion-cloak",
+    "name": "White Lion Cloak",
+    "page": 34,
+    "enc": 2,
+    "locations": "Body",
+    "ap": 2,
+    "qualities": "Fine 2, Partial",
+    "layer": "leather"
+  }
+]

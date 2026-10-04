@@ -1,0 +1,261 @@
+[
+  {
+    "id": "dwarf-guide:talent:ancestral-grudge",
+    "name": "Ancestral Grudge",
+    "page": 80,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. There are entries in the Great Book of Grudges — those borne against Orcs, Goblins, and Skaven in particular — that are so grievous they can only be avenged with the extinction of all their kind. You have inherited one of these fabled grudges, and whilst you have no chance of seeing it completed in your lifetime, you are more than happy to do your part. Choose a culture or faction that is the target of your Ancestral Grudge (e.g. Orcs, Goblins, Skaven, Trolls, Daemons of Khorne, etc.). Enter them into your Book of Grudges as the target of your vengeance, per the rules on page 33. You bear this group a Blood Grudge that can never be satisfied. However, every time you win a significant victory against this group — e.g. by destroying their works, taking back something stolen, or killing many of their kind — you gain 50 XP. Each time you purchase this Talent, you gain an Ancestral Grudge against a different faction. At the GM’s discretion, declaring vengeance against a smaller sub-faction can award more XP when you score victory over them — e.g. you gain 75 XP each victory if your target is a specific Goblin tribe, or 100 XP each victory if targeting a specific Human family line.",
+    "limit": [
+      "WP"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:bludgeoner",
+    "name": "Bludgeoner",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You smash more powerful enemies into submission with brutal hammer swings to the head, leaving them utterly exposed whilst you finish them off. When you win an opposed Test to activate the Pummel Quality, you inflict an additional Stunned Condition for each level of Bludgeoner.",
+    "limit": [
+      "S"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:crew-commander",
+    "name": "Crew Commander",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You are practised at managing crews of siege weapons and artillery pieces. As an Action you may make a Challenging (0 SL) Leadership Test to help a crew manning a weapon with the Crewed Flaw within earshot. If you succeed, the crew members may use your Ranged Skill on the next attack using the weapon.",
+    "limit": [
+      "I"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only.",
+    "unavailable": "Crew Commander has no agreed Fifth Edition conversion; left unavailable by user decision.",
+    "supersededBy": {
+      "book": "up-in-arms",
+      "contentId": "up-in-arms:talent:crew-commander",
+      "reason": "The existing unavailable Up in Arms entry retains the user’s decision; the Dwarf Guide does not unlock it."
+    }
+  },
+  {
+    "id": "dwarf-guide:talent:demolisher",
+    "name": "Demolisher",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. Cover and armour is no defence against the bite of your axe. When you activate the Hack Quality as part of an attack, you inflict +1 additional Damage on struck armour or shields for each level of Demolisher. In addition, when attacking an enemy in cover with a weapon that has the Hack Quality, hard cover counts as medium cover, medium cover counts as soft cover, and soft cover provides no protection at all.",
+    "limit": [
+      "S"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:dragon-belcher",
+    "name": "Dragon Belcher",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. Certain Goblin tribes have been known to refer to Dwarf firearms as ‘dragon belchers’, for the furious roar and explosion of smoke they discharge as they fire. You make the most of this psychological impact to scatter and pin your opponents with suppressive fire. When you fire a weapon with the Blackpowder Quality, targeted enemies who fail their Cool Test gain an additional Broken Condition for each level of Dragon Belcher.",
+    "limit": [
+      "BS"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:entrenchment",
+    "name": "Entrenchment",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You make the most of whatever terrain is available to you to protect yourself and allies from enemy missile fire. When you are in soft cover, attacks against you are Hard (−2 SL) instead of Difficult (−1 SL). When you are in medium cover, attacks against you are Very Hard (−3 SL) instead of Hard (−2 SL).",
+    "limit": [
+      "Int"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:forgefire",
+    "name": "Forgefire",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You are a living battery of runic power, radiating an aura of battle-fury that imbues nearby weapons with the heat of their forging. When you are Engaged, any melee weapons wielded by yourself or an ally within Willpower Bonus yards gain the Penetrating Quality. If an affected weapon is already Penetrating, its attacks now ignore 1 additional point of non-metal armour.",
+    "limit": 1,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:glorious-demise",
+    "name": "Glorious Demise",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. Your bloodlust is so strong it overwhelms your body’s natural instinct to rest after trauma. When you gain the Unconscious Condition, you can interrupt the Turn order to make an immediate Melee attack as a Free Action, before you are taken out of action. When you gain the Stunned Condition, you can spend a Fortune point to make an immediate Melee attack as a Free Action. You take your next Turn as usual, which means you cannot take an Action if you’re still Stunned.",
+    "limit": 1,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:harpooner",
+    "name": "Harpooner",
+    "page": 81,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. As a veteran quareller, you use precision shooting to neutralise your target, impaling them with bolts in extremely painful locations. When you inflict a Critical Hit with a Crossbow weapon, you may increase your roll on the Critical Hit table by +10 for each level of Harpooner, to a maximum of 00. In addition, Crossbow bolts lodged into the target’s body due to the Impale Quality reduce the target’s Movement by 1 per bolt, to a minimum of 1.",
+    "limit": [
+      "BS"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:kingsguard",
+    "name": "Kingsguard",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You are sworn to defend the life of your lord, and any they designate under your protection. If that means sacrificing your own life to shield your charge, you are prepared to do so. Any enemy attacks against an ally within 2 yards of you suffers a -10 modifier for each level of Kingsguard. This Talent does not apply to attacks against yourself, nor does it apply if you are currently suffering from a Condition.",
+    "limit": 3,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:liquid-fortification",
+    "name": "Liquid Fortification",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. Many Dwarfs insist that good ale can steady the nerves and improve the fighting proficiency of a hearty warrior. Nonetheless, a prudent fighter is careful not to become too reliant on alcohol, lest they become afflicted with “brew-fever”. You gain +10 Strength and Toughness after consuming an alcoholic drink. This provides an immediate bonus to your Consume Alcohol Test for consuming the drink, and the benefit continues to apply whether you succeed or fail on that Test. You retain this bonus until an hour has passed since your last alcoholic drink — drinking again can prolong the effect, but does not increase your Characteristic bonuses beyond +10.",
+    "limit": [
+      "T"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:long-memory",
+    "name": "Long Memory",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You never forget a face — or a promise. Unlike the Elven Tower of Memories technique (WFRP Core Rulebook), which Dwarfs consider frivolous and flawed, you use a form of sense memory to anchor details in the real places where you witnessed them, by recalling a specific feeling, taste, or smell from that location. When recalling significant events you were involved in previously in the campaign, you can perfectly remember the time, date, location, and visible faces of all individuals present, and exactly what those present pledged to say or do. If recalling a significant event you witnessed before the campaign began, you may need to take an Intelligence Test to remember details, with a difficulty set by the intervening time — Easy (+4 SL) for events mere months ago, Hard (−2 SL) for events a century ago.",
+    "limit": [
+      "Int"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:magic-defiance",
+    "name": "Magic Defiance",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. Core Rulebook) You ground enemy spellcraft through your own body, refusing to be affected by its fickle enchantments. You can Reverse any Test you are obliged to make as part of a magic spell’s effects, as well as Tests to dispel magic with Magic Resistance (WFRP Core Rulebook).",
+    "limit": [
+      "WP"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:master-rune-magic",
+    "name": "Master Rune Magic",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You have learned the secret rites of creating a master rune… but whether you have the skill to successfully forge one still awaits to be seen. Choose a master rune from pages 127-131. If your Talent specifies a runic form or forms (e.g. Protection Runes), you must choose a master rune from the specified lists. You can use the Forge Rune Endeavour to inscribe your chosen master rune on an item. Each time you purchase this Talent, you learn a new master rune you can craft. See page 121 for full runesmithing rules. In addition, the first time you acquire this Talent, you also learn all three Doom Runes (page 132).",
+    "limit": [
+      "WP"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:maverick",
+    "name": "Maverick",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You are an experienced, if reckless, flyer, putting your faith in high speed and overwhelming firepower. You do not suffer the -20 penalty on Ranged attacks when using the Flight Creature Trait.",
+    "limit": [
+      "Ag"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:rune-magic",
+    "name": "Rune Magic",
+    "page": 82,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You are inducted into the secret arcane traditions of the Dwarfs, with the knowledge of crafting magical runes. Choose a rune from pages 127 -131. You cannot select a master rune. If your Talent specifies a runic form or forms (e.g. Protection Runes), you must choose a rune from the specified lists. Finally, if your Talent specifies a specific rune (e.g. the Rune of Stone), you must choose that specific rune. You can use the Forge Rune Endeavour to inscribe your chosen rune on an item. Each time you purchase this Talent, you learn a new rune you can craft.",
+    "limit": [
+      "Int",
+      "WP"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:short-fuse",
+    "name": "Short Fuse",
+    "page": 83,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You time your explosives carefully to detonate at the optimum moment, showering fragments over the widest possible distance. When using an Explosive weapon with the Blast Quality, increase its Rating by +1 for each level of Short Fuse.",
+    "limit": [
+      "Int"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:tireless",
+    "name": "Tireless",
+    "page": 83,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You endure heavy burdens, tiring journeys, and interrupted sleep with admirable resolve, refusing to let such ordeals dull your mind or slow your fighting strength. When you apply penalties due to suffering from the Fatigued Condition, you may ignore 1 instance of the Fatigued Condition, +1 additional Fatigued Condition for each level of Tireless. For example, a Character with 4 Fatigued Conditions and 2 levels of Tireless would ignore the effect of 3 Fatigued Conditions, suffering only a -10 penalty to all Tests.",
+    "limit": [
+      "T"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:underminer",
+    "name": "Underminer",
+    "page": 83,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. enemies, but have learned to compensate by attacking from an unexpected angle.",
+    "limit": [
+      "Ag"
+    ],
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  },
+  {
+    "id": "dwarf-guide:talent:whirlwind-of-death",
+    "name": "Whirlwind of Death",
+    "page": 83,
+    "text": "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. You attack in a sweeping, indiscriminate, fury, tearing through whole formations of enemy warriors. As an Action, you can spend 1 Fortune to make a Melee attack against all creatures Engaged with you. The GM chooses one enemy to Oppose this Test. If your attack succeeds, you inflict the same Damage to the same Hit Location against all Engaged creatures, calculated as normal. Do not apply Criticals on Whirlwind of Death attacks, though Critical Wounds are inflicted on enemies reduced to 0 Wounds as normal. You cannot activate any other special attack options as part of a Whirlwind of Death. However, if a Character with Dual Wielder (WFRP Core Rulebook) is wielding two weapons as part of a Whirlwind of Death, they may Reverse their Melee attack Test.",
+    "limit": 1,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only."
+  }
+]

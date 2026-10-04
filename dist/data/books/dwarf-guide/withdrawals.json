@@ -1,0 +1,130 @@
+[
+  {
+    "id": "dwarf-guide:withdrawal:weapons-bearded-axe",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:bearded-axe",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-bearded-axe",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:bearded-axe",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-dwarf-hammer",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:dwarf-hammer",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-dwarf-hammer",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:dwarf-hammer",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-slayer-s-axe-2h",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:slayer-s-axe-2h",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-slayer-s-axe-2h",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:slayer-s-axe-2h",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-dwarf-handgun-2h",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:dwarf-handgun-2h",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-dwarf-handgun-2h",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:dwarf-handgun-2h",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-dwarf-pistol",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:dwarf-pistol",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-dwarf-pistol",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:dwarf-pistol",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-dwarf-crossbow-2h",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:dwarf-crossbow-2h",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-dwarf-crossbow-2h",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:dwarf-crossbow-2h",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-drakefire-pistol",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:drakefire-pistol",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-drakefire-pistol",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:drakefire-pistol",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:weapons-cinderblast-bomb",
+    "book": "archives-i",
+    "kind": "weapons",
+    "target": "archives-i:weapon:cinderblast-bomb",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  },
+  {
+    "id": "dwarf-guide:withdrawal:market-cinderblast-bomb",
+    "book": "archives-i",
+    "kind": "market",
+    "target": "archives-i:item:cinderblast-bomb",
+    "page": 92,
+    "reason": "Guide p. 92 supersedes Archives I Dwarf weapon options. The user approved removing these older profiles/shop options without assuming one-to-one replacements."
+  }
+]

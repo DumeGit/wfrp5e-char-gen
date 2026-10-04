@@ -1,0 +1,571 @@
+[
+  {
+    "name": "Caledor",
+    "page": 54,
+    "skills": [
+      "Climb",
+      "Cool",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Intimidate",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Ranged (Bow)",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Commanding Presence",
+        "Resolute"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Second Sight",
+        "Strong-minded"
+      ]
+    ],
+    "id": "high-elf:origin:caledor",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:inner",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Ellyrion",
+    "page": 54,
+    "skills": [
+      "Animal Care",
+      "Charm Animal",
+      "Cool",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Play (Any)",
+      "Ranged (Bow)",
+      "Ride (Horse)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Animal Affinity",
+        "Orientation"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Second Sight",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:ellyrion",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:inner",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Avelorn",
+    "page": 54,
+    "skills": [
+      "Athletics",
+      "Cool",
+      "Entertain (Singing)",
+      "Gossip",
+      "Intuition",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Play (Any)",
+      "Ranged (Bow)"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Attractive",
+        "Artistic"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Second Sight",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:avelorn",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:avelorn",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Saphery",
+    "page": 54,
+    "skills": [
+      "Cool",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Language (Elthárin)",
+      "Lore (Any)",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Play (Any)",
+      "Ranged (Bow)",
+      "Research"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)",
+        "Bookish"
+      ],
+      [
+        "Coolheaded",
+        "Savvy"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Second Sight"
+      ]
+    ],
+    "id": "high-elf:origin:saphery",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:inner",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Eataine",
+    "page": 54,
+    "skills": [
+      "Charm",
+      "Cool",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Gossip",
+      "Language (Any)",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Perception",
+      "Sail",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Dealmaker",
+        "Savvy"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Schemer",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:eataine",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:inner",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Tiranoc",
+    "page": 55,
+    "skills": [
+      "Animal Care",
+      "Cool",
+      "Endurance",
+      "Entertain (Singing)",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Play (Any)",
+      "Ranged (Bow)",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Coolheaded",
+        "Hatred (Dark Elves)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Tenacious",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:tiranoc",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:outer",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "The Shadowlands",
+    "page": 55,
+    "skills": [
+      "Athletics",
+      "Cool",
+      "Endurance",
+      "Entertain (Singing)",
+      "Language (Elthárin)",
+      "Melee (Basic)",
+      "Navigation",
+      "Outdoor Survival",
+      "Perception",
+      "Ranged (Bow)",
+      "Stealth (Rural)",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Coolheaded",
+        "Tenacious"
+      ],
+      [
+        "Hatred (Dark Elves)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Rover",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:the-shadowlands",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:nagarythe",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Chrace",
+    "page": 55,
+    "skills": [
+      "Cool",
+      "Endurance",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Heal",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Outdoor Survival",
+      "Perception",
+      "Ranged (Bow)",
+      "Set Trap"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Hardy",
+        "Hunter’s Eye"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Sixth Sense"
+      ],
+      [
+        "Striding Gait (Woodland)"
+      ]
+    ],
+    "id": "high-elf:origin:chrace",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:outer",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Cothique",
+    "page": 55,
+    "skills": [
+      "Athletics",
+      "Cool",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Haggle",
+      "Language (Elthárin)",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Ranged (Bow)",
+      "Sail",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Sea Legs",
+        "Hardy"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Orientation",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:cothique",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:outer",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Yvresse",
+    "page": 55,
+    "skills": [
+      "Cool",
+      "Endurance",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Intuition",
+      "Language (Elthárin)",
+      "Leadership",
+      "Melee (Basic)",
+      "Navigation",
+      "Perception",
+      "Ranged (Bow)",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Coolheaded",
+        "Stout-hearted"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Resolute",
+        "Implacable"
+      ],
+      [
+        "Second Sight",
+        "Sixth Sense"
+      ]
+    ],
+    "id": "high-elf:origin:yvresse",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:outer",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background."
+  },
+  {
+    "name": "Sea Elf",
+    "page": 57,
+    "skills": [
+      "Cool",
+      "Endurance",
+      "Entertain (Singing)",
+      "Evaluate",
+      "Gossip",
+      "Haggle",
+      "Language (Elthárin)",
+      "Language (Any)",
+      "Melee (Basic)",
+      "Navigation",
+      "Sail",
+      "Swim"
+    ],
+    "talents": [
+      [
+        "Acute Sense (Sight)"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Old Salt",
+        "Sea Legs"
+      ],
+      [
+        "Orientation",
+        "Sixth Sense"
+      ],
+      [
+        "Read/Write"
+      ],
+      [
+        "Uncouth Uranai"
+      ]
+    ],
+    "id": "high-elf:origin:sea-elf",
+    "species": "High Elf",
+    "randomTalents": 0,
+    "careerTable": "high-elf:table:sea-elf",
+    "careers": [
+      "servant",
+      "villager",
+      "pilot",
+      "stevedore"
+    ],
+    "conversion": "User-approved Fifth Edition adaptation: select five distinct Species Skills at +5; retain core High Elf attributes, native languages, Fate/Fortune and all printed Talent slots (including six where printed). Strider (Woodlands) uses core Striding Gait (Woodland).",
+    "text": "Choose an enclave and an Ulthuan kingdom of heritage. These are background choices and do not add the kingdom’s starting Skills/Talents. Uncouth Uranai’s −1 Standing applies only to interactions with Caledor, Ellyrion, Avelorn or Saphery Elves; it does not lower the displayed general Status.",
+    "sheetSpecies": "High Elf (Sea Elf)",
+    "background": {
+      "page": 57,
+      "forenames": [
+        "Aesdiaric",
+        "Athsoranel",
+        "Dorolmor",
+        "Farolandril",
+        "Gythael",
+        "Irandyl",
+        "Linmarfin",
+        "Mirealiath",
+        "Morolric",
+        "Ulliadiaellion"
+      ],
+      "surnames": [
+        "Bluestrait",
+        "Cloudspear",
+        "Farborn",
+        "Greenbreeze",
+        "Seablade",
+        "Starfoam",
+        "Starguided",
+        "Wavestrider",
+        "Whitecrest"
+      ]
+    }
+  }
+]

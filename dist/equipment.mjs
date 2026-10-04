@@ -12,11 +12,12 @@ export function itemWeight(R,name){
  const qty=name.match(/^(\d+) (Rags|Bandages|Matches|Candles|Sets of Clothing)$/);
  if(qty)return Number(qty[1])*(qty[2]==='Sets of Clothing'?1:0);
  name=(aliases[name]||name).replace(/^Book \(([^)]+)\)$/,'Book, $1').replace(/^Trade Tools \([^)]+\)$/i,'Trade Tools');
- return R.config.gearEnc[name]??marketCatalog(R).find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
+ return R.config.gearEnc[name]??R.gear.find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??marketCatalog(R).find(x=>x.name.toLowerCase()===name.toLowerCase())?.enc??null;
 }
 
 const ALIASES={'Main-gauche':'Main Gauche','Sword-breaker':'Swordbreaker','Great Weapon (Two-handed Pick)':'Pick (2H)','Great Weapon (Military Flail)':'Military Flail (2H)','Great Weapon (Dwarf Greataxe)':'Greataxe (2H)','Large Sack':'Sack, Large','Small Instrument':'Small Instrument','Coach Horn':'Instrument','Mandolin':'Instrument','Lute':'Large Instrument','Harp':'Large Instrument','Flute':'Small Instrument','Recorder':'Small Instrument','Tambourine':'Small Instrument','Small Drum':'Instrument','Large Drum':'Large Instrument','Parchment':'Parchment/sheet','Rations (1 day)':'Rations, 1 day','Rations (one day)':'Rations, 1 day','Lunch':'Meal, inn','Grimoire':'Book, Magic'};
 export function gearOptions(raw,R){
+ if(R.books.some(b=>b.id==='dwarf-guide')){if(raw==='Gromril Helm (Open or Closed)')return ['Gromril Open Helm','Gromril Helm'];if(raw==='Gromril Helm (Open)')return ['Gromril Open Helm'];if(raw==='Gromril Helm (Closed)')return ['Gromril Helm'];if(raw==='Plate Helm (Open)')return ['Open Helm'];if(/^Basic Weapon \(Any/.test(raw)&&!raw.includes(' or '))return R.weapons.filter(w=>w.kind==='melee'&&w.group==='Basic').map(w=>w.name);if(/^Two-handed Weapon \(Any/.test(raw))return R.weapons.filter(w=>w.kind==='melee'&&w.group==='Two-handed').map(w=>w.name);}
  if(raw==='Two-handed Weapon')return R.weapons.filter(w=>w.kind==='melee'&&w.group==='Two-handed').map(w=>w.name);
  if(/^Hand Weapon \(.+ or .+\)$/.test(raw))return raw.slice(13,-1).split(' or ').map(x=>`Hand Weapon (${x})`);
  if(raw==='Entangling OR Throwing weapon')return [...new Set(R.weapons.filter(w=>w.kind==='ranged'&&['Entangling','Throwing'].includes(w.group)).map(w=>w.name))];
@@ -92,6 +93,7 @@ export function equipment(R,s){
  }
  for(const e of entries){
   if(e.sizeNote)notes.push(`${e.name}: ${e.sizeNote}`);
+  if(e.armour?.source?.book==='dwarf-guide'){const ref=R.gear.find(x=>x.name===e.alias);if(ref?.text)notes.push(`${e.name}: ${ref.text} (Dwarf Guide p. ${ref.page}).`);}
   if(e.name==='Gutplate'&&e.alias==='Ogre Gutplate')notes.push('Gutplate Career Trapping uses the Ogre Gutplate table profile and Gutplate description (Archives II pp. 29–30). Descriptive variants remain unresolved.');
   if(personallyCarried(e)&&!parents.get(e.key)&&weights.get(e.key)===null)unknown.push(e.name);
   if(e.name==='Hook')notes.push('Hook counts as a Dagger (p. 315); its own Encumbrance is retained.');
@@ -103,14 +105,14 @@ export function equipment(R,s){
   if(e.armour)armour.push({...e.armour,key:e.key,label:e.name+(e.quantity>1?` ×${e.quantity}`:''),enc:e.enc,carriedEnc:e.weapon?0:e.carriedEnc,worn:e.worn,active:e.worn||(e.armour.locations==='Shield'&&e.placement==='equipped'),qualities:[e.armour.qualities,...modifierNames(e)].filter(Boolean).join(', '),itemQualities:e.qualities,itemFlaws:e.flaws});
   if(!e.weapon&&!e.armour)other.push({key:e.key,name:e.name+(e.quantity>1?` ×${e.quantity}`:''),origin:e.origin,enc:e.carriedEnc,worn:e.worn,placement:e.placement,qualities:e.qualities,flaws:e.flaws});
  }
- const byLayer={};for(const a of armour.filter(a=>a.active)){const layer=a.quick?'quick':a.name.startsWith('Leather')?'leather':a.name.startsWith('Mail')?'mail':a.locations==='Shield'?'shield':'plate';for(const loc of Object.keys(ap))if(a.locations.includes(loc)){const k=`${layer}-${loc}`;byLayer[k]=Math.max(byLayer[k]||0,a.ap);}}
+ const byLayer={};for(const a of armour.filter(a=>a.active)){const layer=a.quick?'quick':a.layer==='leather'||a.name.startsWith('Leather')?'leather':a.name.startsWith('Mail')?'mail':a.locations==='Shield'?'shield':'plate';for(const loc of Object.keys(ap))if(a.locations.includes(loc)){const k=`${layer}-${loc}`;byLayer[k]=Math.max(byLayer[k]||0,a.ap);}}
  const activeQuick=armour.some(a=>a.active&&a.quick);if(activeQuick&&armour.some(a=>a.active&&!a.quick&&a.locations!=='Shield'))warnings.push('Quick Armour replaces detailed armour; its protection and penalties are not stacked (p. 307).');
  for(const [key,val]of Object.entries(byLayer)){const [layer,loc]=key.split('-');if(!activeQuick||['quick','shield'].includes(layer))ap[loc]+=val;}
  function penalty(a,value){return Math.max(0,value*(a.itemFlaws.includes('Unreliable')?2:1)-(a.itemQualities.includes('Practical')?1:0));}
- const wornArmour=armour.filter(a=>a.worn&&(!activeQuick||a.quick)),stealth=-['mail','plate'].reduce((n,layer)=>n+Math.max(0,...wornArmour.filter(a=>layer==='mail'?a.name.startsWith('Mail')||a.quick&&a.ap>=3:!a.name.startsWith('Leather')&&!a.name.startsWith('Mail')&&(!a.quick||a.ap>=5)).map(a=>penalty(a,1))),0),perception=-Math.max(0,...wornArmour.filter(a=>a.name==='Helm'||a.name==='Heavy Armour').map(a=>penalty(a,2)));
+ const wornArmour=armour.filter(a=>a.worn&&(!activeQuick||a.quick)),stealth=-['mail','plate'].reduce((n,layer)=>n+Math.max(0,...wornArmour.filter(a=>layer==='mail'?a.layer==='mail'||a.name.startsWith('Mail')||a.quick&&a.ap>=3:a.layer!=='leather'&&!a.name.startsWith('Leather')&&!a.name.startsWith('Mail')&&(!a.quick||a.ap>=5)).map(a=>penalty(a,1))),0),perception=-Math.max(0,...wornArmour.filter(a=>a.name==='Helm'||['Ithilmar Helm','Dragon Armour Helm'].includes(a.name)||a.name==='Heavy Armour').map(a=>penalty(a,2)));
  const lores=d.talents.filter(t=>t.startsWith('Arcane Magic (')).map(t=>t.match(/\((.*)\)/)[1]);
  const castingFor=lore=>{const layers={};for(const a of wornArmour){
-  const leather=a.name.startsWith('Leather'),metal=a.name.startsWith('Mail')||(!leather&&a.locations!=='Shield');let value=a.ap;
+  const leather=a.layer==='leather'||a.name.startsWith('Leather'),metal=a.name.startsWith('Mail')||(!leather&&a.locations!=='Shield');let value=a.ap;
   if(a.quick){value=a.ap-(lore==='Metal'?Math.max(0,a.ap-1):lore==='Beasts'?1:0);}else if(lore==='Metal'&&metal||lore==='Beasts'&&leather)continue;
   const layer=a.quick?'quick':leather?'leather':a.name.startsWith('Mail')?'mail':'plate';for(const loc of ['Head','Arms','Body','Legs'])if(a.locations.includes(loc)){const key=`${layer}:${loc}`;layers[key]=Math.max(layers[key]||0,penalty(a,value));}}
   return -Math.max(0,...['Head','Arms','Body','Legs'].map(loc=>Object.entries(layers).filter(([k])=>k.endsWith(':'+loc)).reduce((n,[,v])=>n+v,0)));};

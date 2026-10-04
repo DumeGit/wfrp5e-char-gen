@@ -8,7 +8,7 @@ export function bookPanel(library,R,s){
  const books=library.packs.filter(x=>!isCareerVariant(x.manifest.id));
  const choices=books.map(({manifest:b})=>`<label class="book-choice"><input type="checkbox" data-book="${esc(b.id)}" ${enabled.has(b.id)?'checked':''} ${b.kind==='core'?'disabled':''}><span><strong>${esc(b.title)}</strong><small>${b.kind==='core'?'Required core rules':b.kind==='variant'?'Optional rule variant':'Additional character options'} · ${esc(b.shortTitle||b.id)}</small></span></label>`).join('');
  const tables=['species','career','talent'].map(kind=>{
-  const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s)));
+  const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s))&&(!x.origin||x.origin===s.origin)&&(!x.origins||x.origins.includes(s.origin)));
   const active=randomTable(R,s,kind);if(!available.length||available.length<2&&active)return '';
   return `<div class="field"><label for="table-${kind}">${kind==='talent'?'Random Talents':kind==='species'?'Species':'Career'} roll table</label><select id="table-${kind}" data-bind="rollTable" data-key="${kind}">${!active?'<option value="" selected>Choose a printed table to enable rolls…</option>':''}${available.map(x=>`<option value="${esc(x.id)}" ${x.id===active?.id?'selected':''}>${esc(x.name+' · '+sourceLabel(R,x))}</option>`).join('')}</select></div>`;
  }).join('');

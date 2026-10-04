@@ -1,0 +1,41 @@
+[
+  {
+    "id": "dwarf-guide:skill:lore-runes",
+    "name": "Lore (Runes)",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 80,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "text": "Runelore covers rune history, materials, identification and effects. The Runesmiths Guild passes it on orally; it cannot be learned from books."
+  },
+  {
+    "id": "dwarf-guide:skill:runesmithing",
+    "name": "Runesmithing",
+    "char": "Dex",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 80,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "text": "Used to craft, reawaken or deactivate magical runes. Rune forging is deferred to character management; no item is granted by learning a rune."
+  },
+  {
+    "id": "dwarf-guide:skill:sail-skycraft",
+    "name": "Sail (Skycraft)",
+    "char": "Ag",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 80,
+    "speciesOnly": [
+      "Dwarf"
+    ],
+    "text": "Advanced flying-machine operation. Take-off and landing require Average (+2 SL) Tests. Normal Sail does not unlock Skycraft, and Skycraft does not grant normal Sail. Situational operations are references only."
+  }
+]
