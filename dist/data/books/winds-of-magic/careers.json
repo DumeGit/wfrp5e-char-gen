@@ -1,0 +1,1479 @@
+[
+  {
+    "id": "winds-of-magic:career:beadle",
+    "name": "Beadle",
+    "class": "Warrior",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 36,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 3,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Laboratory Assistant",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Gossip",
+          "Intuition",
+          "Melee (Basic)",
+          "Perception",
+          "Stealth (Urban)",
+          "Trade (Carpenter)"
+        ],
+        "talents": [
+          "Dicer",
+          "Read/Write",
+          "Savvy",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Uniform in the Colours of the Faculty"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Beadle",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Cool",
+          "Intimidate",
+          "Lore (Any)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Carouser",
+          "Etiquette (Scholars)",
+          "Reversal",
+          "Strike Mighty Blow"
+        ],
+        "trappings": [
+          "Pistol or Blunderbuss with 12 shots",
+          "Sleeved Mail Shirt"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Groundskeeper",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Heal",
+          "Melee (Any)",
+          "Track"
+        ],
+        "talents": [
+          "Argumentative",
+          "Fearless (Intruders)",
+          "Menacing",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Helmet",
+          "Master Key to the Faculty"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Terror of the Faculty",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Frightening",
+          "Public Speaker",
+          "Suave",
+          "Unshakeable"
+        ],
+        "trappings": [
+          "Breastplate",
+          "Crew of beadles"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Diceman → Dicer."
+  },
+  {
+    "id": "winds-of-magic:career:mundane-alchemist",
+    "name": "Mundane Alchemist",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 38,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 2,
+      "Ag": 4,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Tinkerer",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Gossip",
+          "Haggle",
+          "Language (Classical)",
+          "Lore (Chemistry)",
+          "Lore (Geology)",
+          "Lore (Science)",
+          "Trade (Alchemist)",
+          "Trade (Poisoner)"
+        ],
+        "talents": [
+          "Concoct",
+          "Craftsman (Alchemist)",
+          "Read/Write",
+          "Savvy"
+        ],
+        "trappings": [
+          "Book (Blank)",
+          "Leather Jerkin",
+          "Pestle and Mortar",
+          "Test Tubes and Alembic",
+          "Tripod",
+          "Writing Kit"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Alchemist",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Intuition",
+          "Lore (Medicine)",
+          "Language (Guilder)",
+          "Perception",
+          "Research",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Bookish",
+          "Criminal",
+          "Etiquette (Guilders)",
+          "Nimble-fingered"
+        ],
+        "trappings": [
+          "Guild License",
+          "Trade Tools"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Alchemist",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Drive",
+          "Language (Any)",
+          "Leadership",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Detect Artefact",
+          "Master Tradesman (Alchemist)",
+          "Petty Magic",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Book (Alchemy)",
+          "Laboratory"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Transmutator",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Channelling (Chamon)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Arcane Magic (Metal)",
+          "Master Tradesman (Poisoner)",
+          "Resistant (Poison)",
+          "Savant (Alchemy)"
+        ],
+        "trappings": [
+          "Fine Quality Laboratory",
+          "Letter of Commission"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Arcane Magic (Lore of Metal) → Arcane Magic (Metal); Etiquette (Guilder) → Etiquette (Guilders); Nimble Fingered → Nimble-fingered; Resistance (Poison) → Resistant (Poison). User approves Lore (Alchemy) as a selectable specialisation for Savant (Alchemy), requiring a normal Advance under core p. 125. Petty Magic grants min(WP Bonus at acquisition, 4) distinct permitted spells, as approved for this Career only.",
+    "text": "Only Humans may learn Petty Magic or Arcane Magic (Metal). This Career is limited to four named Petty spells, Mundane Aura, Ward, Enchant Weapon, Fool’s Gold, Forge of Chamon and Mutable Metal (p. 39). More spells require entering a Wizard Career, outside this creator."
+  },
+  {
+    "id": "winds-of-magic:career:magister-vigilant",
+    "name": "Magister Vigilant",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 40,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": 4,
+      "T": null,
+      "I": 3,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Vigilant’s Apprentice",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Channelling (Any Colour)",
+          "Charm",
+          "Cool",
+          "Dodge",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception"
+        ],
+        "talents": [
+          "Magical Sense",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Disguise",
+          "Grimoire"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Magister Vigilant",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Gossip",
+          "Intimidate",
+          "Language (Battle)",
+          "Pick Lock",
+          "Research",
+          "Track"
+        ],
+        "talents": [
+          "Arcane Magic (Any Arcane Lore)",
+          "Blather",
+          "Fast Hands",
+          "Menacing"
+        ],
+        "trappings": [
+          "Magical Licence"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Magister Inquisitor",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Navigation",
+          "Secret Signs (Any)",
+          "Sleight of Hand",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Savvy",
+          "Shadow",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Item"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Lord Vigilant",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Lore (Any)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Frightening",
+          "Iron Will",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Standard Robes"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Use existing core Talent definitions."
+  },
+  {
+    "id": "winds-of-magic:career:scryer",
+    "name": "Scryer",
+    "class": "Peasant",
+    "species": [
+      "Human"
+    ],
+    "page": 42,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 3,
+      "Dex": 4,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Haunted",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Dodge",
+          "Intuition",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Navigation",
+          "Perception",
+          "Psychometry",
+          "Sleight of Hand",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Beneath Notice",
+          "Luck",
+          "Orientation",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Backpack with Tent",
+          "Dagger",
+          "Practical Outdoor Clothing"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Scryer",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Endurance",
+          "Gossip",
+          "Haggle",
+          "Intimidate"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Criminal",
+          "Savvy",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Permanent Abode"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Psychometrician",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Evaluate",
+          "Lore (History)",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Etiquette (Nobles)",
+          "Menacing",
+          "Nose for Trouble",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Respectable Clothing"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Reader of the Past",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Leadership"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Frightening",
+          "Magical Sense",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Fine Clothing",
+          "Town House"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Use existing core Talent definitions.",
+    "text": "Only Humans may learn Psychometry. Starting Scryers use normal Career Skill allocation without sacrificing a random Species Talent (p. 48). Augury and Psychometry cannot both be possessed (p. 46)."
+  },
+  {
+    "id": "winds-of-magic:career:hierophant",
+    "name": "Hierophant",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 56,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Acolyte of the Light Order",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Channelling (Hysh)",
+          "Dodge",
+          "Entertain (Singing)",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Lore (Nehekhara)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Candle with Holder",
+          "Grimoire",
+          "Staff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Hierophant",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Gossip",
+          "Language (Any)",
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Arcane Magic (Light)",
+          "Detect Artefact",
+          "Savvy",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Practical Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Hierophant",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Evaluate",
+          "Lore (Daemonology)",
+          "Research",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Dual Wielder",
+          "Instinctive Diction",
+          "Magical Sense",
+          "Tower of Memories"
+        ],
+        "trappings": [
+          "Acolyte Apprentice",
+          "Light Warhorse",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Guardian of the Light Order",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Iron Will",
+          "Menacing",
+          "Resistant (Chaos)"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Library (Magic)",
+          "Study"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Resistance (Chaos) → Resistant (Chaos).",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Light College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:alchemist",
+    "name": "Alchemist",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 68,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": null,
+      "Dex": 2,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Alchemist Apprentice",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Channelling (Chamon)",
+          "Evaluate",
+          "Haggle",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception",
+          "Trade (Alchemist)"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Staff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Alchemist",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Intimidate",
+          "Lore (Metallurgy)",
+          "Research",
+          "Trade (Blacksmith, Goldsmith, or Engineer)"
+        ],
+        "talents": [
+          "Arcane Magic (Metal)",
+          "Argumentative",
+          "Detect Artefact",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Portable Alchemical Laboratory",
+          "Practical Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Alchemist",
+        "status": "Gold",
+        "standing": 3,
+        "skills": [
+          "Lore (Engineering)",
+          "Lore (Science)",
+          "Ride (Horse)",
+          "Trade (Engineer)"
+        ],
+        "talents": [
+          "Bookish",
+          "Craftsman (Blacksmith, Goldsmith, or Engineer)",
+          "Instinctive Diction",
+          "Magical Sense"
+        ],
+        "trappings": [
+          "Alchemist Apprentice",
+          "Light Warhorse",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Alchemist Lord",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Language (Khazalid)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Frightening",
+          "Iron Will",
+          "War Wizard",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Library (Engineering, Magic, or Science)",
+          "Workshop (Engineering or Magic)"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Use existing core Talent definitions.",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Metal College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:druid",
+    "name": "Druid",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 80,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Druid’s Apprentice",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Channelling (Ghyran)",
+          "Charm Animal",
+          "Dodge",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Outdoor Survival",
+          "Perception"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Copper Sickle",
+          "Grimoire",
+          "Staff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Druid",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Gossip",
+          "Language (Any)",
+          "Language (Battle)",
+          "Navigation",
+          "Research"
+        ],
+        "talents": [
+          "Arcane Magic (Life)",
+          "Detect Artefact",
+          "Fast Hands",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Practical Robes",
+          "Silver Sickle"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Druid",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Evaluate",
+          "Lore (Plants)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Instinctive Diction",
+          "Magical Sense",
+          "Menacing",
+          "Rover"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Gold Sickle",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Druid Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Frightening",
+          "Iron Will",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Garden Retreat",
+          "Library (Magic)"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Use existing core Talent definitions.",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Life College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:astromancer",
+    "name": "Astromancer",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 92,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 3,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Celestial Acolyte",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Augury",
+          "Channelling (Azyr)",
+          "Dodge",
+          "Entertain (Fortune Telling)",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Staff",
+          "Starwatcher’s Handbook"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Astromancer",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Cool",
+          "Gossip",
+          "Intimidate",
+          "Language (Battle)",
+          "Lore (Astronomy)",
+          "Research"
+        ],
+        "talents": [
+          "Arcane Magic (Heavens)",
+          "Detect Artefact",
+          "Orientation",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Ceremonial Telescope",
+          "Magical Licence",
+          "Practical Robes",
+          "Sextant"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Grand Astromancer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Evaluate",
+          "Navigation",
+          "Lore (Prophecy)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Instinctive Diction",
+          "Magical Sense",
+          "Seasoned Traveller",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Expensive Orrery or Armillary Sphere",
+          "Light Warhorse",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Lord Celestial",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Frightening",
+          "Iron Will",
+          "Night Vision",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Library (Magic)",
+          "Tower or Mountaintop Observatory"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Use existing core Talent definitions.",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Heavens College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:shadowmancer",
+    "name": "Shadowmancer",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 104,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 2,
+      "Ag": 4,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Trickster’s Apprentice",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Channelling (Ulgu)",
+          "Dodge",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception",
+          "Secret Signs (Grey Order)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Hooded Cloak",
+          "Staff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Shadowmancer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Entertain (Acting)",
+          "Gossip",
+          "Intimidate",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Arcane Magic (Shadows)",
+          "Detect Artefact",
+          "Fast Hands",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Practical Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Grey Guardian",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Evaluate",
+          "Lore (Politics)",
+          "Research",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Blather",
+          "Instinctive Diction",
+          "Magical Sense",
+          "Mimic"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Light Warhorse",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Grey Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Secret Identity",
+          "Shadow",
+          "Tower of Memories",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Library (Magic)",
+          "Ring of Informers",
+          "Workshop (Magic)"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Use existing core Talent definitions.",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Shadows College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:spiriter",
+    "name": "Spiriter",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 116,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 3,
+      "Ag": 2,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Spiriter",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Channelling (Shyish)",
+          "Cool",
+          "Dodge",
+          "Intimidate",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Grimoire",
+          "Staff of Petrified Wood"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Spiriter",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Art (Engraving)",
+          "Endurance",
+          "Evaluate",
+          "Language (Battle)",
+          "Lore (Undead)",
+          "Research"
+        ],
+        "talents": [
+          "Arcane Magic (Death)",
+          "Detect Artefact",
+          "Fast Hands",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Practical Robes",
+          "Scythe"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Spiriter",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Leadership",
+          "Lore (Warfare)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Instinctive Diction",
+          "Magical Sense",
+          "Menacing",
+          "Resistant (Poison or Disease)"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Light Warhorse",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Spiriter Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Frightening",
+          "Iron Will",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Library (Magic)",
+          "Workshop (Magic)"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Resistance (Poison or Disease) → Resistant (Poison or Disease).",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Death College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:pyromancer",
+    "name": "Pyromancer",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 128,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 3,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Apprentice Pyromancer",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Channelling (Aqshy)",
+          "Dodge",
+          "Intimidate",
+          "Intuition",
+          "Language (Battle)",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Basic)",
+          "Melee (Polearm)",
+          "Perception"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "First Key of Secrets",
+          "Grimoire",
+          "Staff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Pyromancer",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Gossip",
+          "Language (Any)",
+          "Leadership",
+          "Lore (Warfare)"
+        ],
+        "talents": [
+          "Arcane Magic (Fire)",
+          "Detect Artefact",
+          "Fast Hands",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Practical Robes",
+          "Second and Third Keys of Secrets",
+          "Sword"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Pyromancer",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Evaluate",
+          "Research",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Dual Wielder",
+          "Instinctive Diction",
+          "Magical Sense",
+          "Menacing"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Fourth and Fifth Keys of Secrets",
+          "Light Warhorse",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Pyromancer Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Frightening",
+          "Iron Will",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Elaborate Robes",
+          "Library (Magic)",
+          "Sixth and Seventh Keys of Secrets",
+          "Workshop (Magic)"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Arcane Magic (Lore of Fire) → Arcane Magic (Fire).",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Fire College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  },
+  {
+    "id": "winds-of-magic:career:shaman",
+    "name": "Shaman",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 140,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 3,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Shaman’s Apprentice",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Channelling (Ghur)",
+          "Cool",
+          "Dodge",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Magic)",
+          "Melee (Polearm)",
+          "Outdoor Survival",
+          "Perception"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Grimoire (often in the form of enscribed bones or teeth)",
+          "Staff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Shaman",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Training (Any)",
+          "Charm Animal",
+          "Lore (Beasts)",
+          "Ranged (Bow)",
+          "Stealth (Rural)",
+          "Track"
+        ],
+        "talents": [
+          "Arcane Magic (Beasts)",
+          "Coolheaded",
+          "Fast Hands",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Magical Licence",
+          "Practical Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Shaman",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Navigation",
+          "Research",
+          "Ride (Horse)",
+          "Secret Signs (Amber Order)"
+        ],
+        "talents": [
+          "Animal Affinity",
+          "Instinctive Diction",
+          "Magical Sense",
+          "Menacing"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Magical Item",
+          "Standard Robes"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Shaman Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Lore (Any)",
+          "Leadership"
+        ],
+        "talents": [
+          "Frightening",
+          "Iron Will",
+          "Lightning Reflexes",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Conclave of Shamans",
+          "Elaborate Robes",
+          "Shamanic Lair"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Arcane Magic (Lore of Beasts) → Arcane Magic (Beasts).",
+    "randomAlternativeFor": "wizard",
+    "text": "Affiliated with the Beasts College tradition. The printed Career remains Human-only; core Wizard stays available. College affiliation and arcane marks are described on p. 35 and in the associated chapter."
+  }
+]

@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"0a6f2067ff3a2fb3d8df";
+const CACHE=CACHE_PREFIX+"784044daf7848a251701";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -62,6 +62,14 @@ const ASSETS=[
  "data/books/up-in-arms/tables.json",
  "data/books/up-in-arms/talents.json",
  "data/books/up-in-arms/weapons.json",
+ "data/books/winds-of-magic/careers.json",
+ "data/books/winds-of-magic/duplicates.json",
+ "data/books/winds-of-magic/gear.json",
+ "data/books/winds-of-magic/manifest.json",
+ "data/books/winds-of-magic/rules.json",
+ "data/books/winds-of-magic/skills.json",
+ "data/books/winds-of-magic/spells.json",
+ "data/books/winds-of-magic/tables.json",
  "data/career-rolls.json",
  "data/careers.json",
  "data/gear.json",
@@ -86,7 +94,9 @@ const ASSETS=[
  "sources.mjs",
  "species-mechanics.mjs",
  "styles.css",
- "ui.mjs"
+ "ui.mjs",
+ "winds-of-magic-ui.mjs",
+ "winds-of-magic.mjs"
 ];
 const ROOT=self.registration.scope;
 const paths=new Set(ASSETS.map(path=>new URL(path,ROOT).pathname));

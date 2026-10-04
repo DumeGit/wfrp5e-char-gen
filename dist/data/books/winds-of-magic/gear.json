@@ -1,0 +1,60 @@
+[
+  {
+    "id": "winds-of-magic:gear:practical-robes",
+    "name": "Practical Robes",
+    "page": 151,
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Rare",
+    "category": "Wizard robes",
+    "wearable": true,
+    "text": "Listed second-hand illicit-market price, approved for this creator’s shop. Robes for their associated Wind grant +1 SL to Channelling. Robes associated with a different Lore impose −1 SL to Casting and Channelling. Witch and Hedge Witch Careers do not benefit. Choose the robe’s associated Wind with the GM. Situational magic modifiers remain reference text.",
+    "conversion": "Use the printed price/Encumbrance and core worn reduction. User explicitly permits the second-hand illicit-market price with its qualification. Lore-dependent casting effects remain descriptions, not permanent bonuses; no free promotion gifts are assumed."
+  },
+  {
+    "id": "winds-of-magic:gear:standard-robes",
+    "name": "Standard Robes",
+    "page": 151,
+    "price": "8 GC",
+    "enc": 2,
+    "availability": "Exotic",
+    "category": "Wizard robes",
+    "wearable": true,
+    "text": "Listed second-hand illicit-market price, approved for this creator’s shop. Robes for their associated Wind grant +2 SL to Channelling. Robes associated with a different Lore impose −1 SL to Casting and Channelling. Witch and Hedge Witch Careers do not benefit. Choose the robe’s associated Wind with the GM. Situational magic modifiers remain reference text.",
+    "conversion": "Use the printed price/Encumbrance and core worn reduction. User explicitly permits the second-hand illicit-market price with its qualification. Lore-dependent casting effects remain descriptions, not permanent bonuses; no free promotion gifts are assumed."
+  },
+  {
+    "id": "winds-of-magic:gear:elaborate-robes",
+    "name": "Elaborate Robes",
+    "page": 151,
+    "price": "30 GC",
+    "enc": 4,
+    "availability": "Exotic",
+    "category": "Wizard robes",
+    "wearable": true,
+    "text": "Listed second-hand illicit-market price, approved for this creator’s shop. Robes for their associated Wind grant +3 SL to Channelling. Robes associated with a different Lore impose −1 SL to Casting and Channelling. Witch and Hedge Witch Careers do not benefit. Choose the robe’s associated Wind with the GM. Situational magic modifiers remain reference text.",
+    "conversion": "Use the printed price/Encumbrance and core worn reduction. User explicitly permits the second-hand illicit-market price with its qualification. Lore-dependent casting effects remain descriptions, not permanent bonuses; no free promotion gifts are assumed."
+  },
+  {
+    "id": "winds-of-magic:gear:portable-alchemical-laboratory",
+    "name": "Portable Alchemical Laboratory",
+    "page": 50,
+    "price": "12 GC",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Tools and kits",
+    "text": "A travelling trunk with mortar and pestle, crucibles, a small forge, metal-working tools, glassware and ingredient drawers. The kit costs 12 GC; its Encumbrance and Availability are not specified.",
+    "conversion": "Use the explicit kit price. Do not invent a weight, capacity or Availability."
+  },
+  {
+    "id": "winds-of-magic:gear:enchanted-staff",
+    "name": "Enchanted Staff",
+    "page": 152,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Commission Endeavour",
+    "category": "Magical artefacts",
+    "text": "A replacement requires a Commission Endeavour costing 15 GC; commissioning is deferred by user choice, so this is not a shop purchase. It can be used as a Quarterstaff in combat (use the core p. 301 combat profile). When borne, reduce CN for its associated Lore and the bearer’s Arcane spells by 1, minimum 0. It extends the body for Touch spells. Dhar-attracting staffs cause Minor Exposure to Corruption once daily. Multi-Wind Elven techniques are guarded. Apprentice Staff Trappings are mundane, not enchanted.",
+    "conversion": "User defers commissioning. Retain the named acquired-Trapping reference without an invented weight, free promotion grant, automated casting effect or manufactured item."
+  }
+]

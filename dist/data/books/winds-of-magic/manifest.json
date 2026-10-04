@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "winds-of-magic",
+  "title": "Winds of Magic",
+  "shortTitle": "Winds of Magic",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Winds of Magic.pdf",
+    "sha256": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Fifth Edition core rules govern; revised Fourth Edition casting, Talent ranks, promotion and the extra Channelling prerequisite for multiple Elf Lores do not replace core rules.",
+      "Retain core definitions for 63 exact-name duplicate spells. Fat of the Land (p. 87) has the same effect as core Fare of the Land (p. 250) and does not add a second learnable spell.",
+      "Psychometry sacrifice unlocks paid advancement only, with no extra free Skill points, as approved by the user. Starting Scryers retain ordinary Fifth Edition allocations.",
+      "Ritual memorisation uses the printed Learning XP; performance, crafting, familiar creation/progression, NPCs, environmental magic, potions and adventures remain campaign material. No ingredient/manufacturing/sales values become invented retail prices.",
+      "User approves Lore (Alchemy) as a selectable specialisation with Savant requiring an Advance, and caps Mundane Alchemist free Petty spells at min(WP Bonus at acquisition, 4) without extra XP or banked spells.",
+      "User defers Enchanted Staff commissioning; keep only an acquired-Trapping reference, not an ordinary shop purchase.",
+      "User approves the three printed second-hand illicit-market robe prices with their qualification. Lore-dependent equipment modifiers remain descriptions; promotion does not automatically grant gifts."
+    ]
+  },
+  "files": {
+    "careers": "careers.json",
+    "skills": "skills.json",
+    "spells": "spells.json",
+    "rules": "rules.json",
+    "gear": "gear.json",
+    "tables": "tables.json"
+  }
+}

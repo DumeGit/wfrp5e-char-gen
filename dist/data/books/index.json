@@ -25,6 +25,10 @@
     {
       "id": "archives-iii-hedge",
       "path": "archives-iii-hedge/manifest.json"
+    },
+    {
+      "id": "winds-of-magic",
+      "path": "winds-of-magic/manifest.json"
     }
   ]
 }

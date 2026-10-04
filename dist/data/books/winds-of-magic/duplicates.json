@@ -1,0 +1,322 @@
+[
+  {
+    "name": "Silence",
+    "core": "Silence",
+    "page": 27
+  },
+  {
+    "name": "Banishment",
+    "core": "Banishment",
+    "page": 62
+  },
+  {
+    "name": "Blinding Light",
+    "core": "Blinding Light",
+    "page": 62
+  },
+  {
+    "name": "Clarity of Thought",
+    "core": "Clarity of Thought",
+    "page": 62
+  },
+  {
+    "name": "Daemonbane",
+    "core": "Daemonbane",
+    "page": 63
+  },
+  {
+    "name": "Healing Light",
+    "core": "Healing Light",
+    "page": 63
+  },
+  {
+    "name": "Net of Amyntok",
+    "core": "Net of Amyntok",
+    "page": 64
+  },
+  {
+    "name": "Phâ’s Protection",
+    "core": "Phâ’s Protection",
+    "page": 65
+  },
+  {
+    "name": "Speed of Thought",
+    "core": "Speed of Thought",
+    "page": 65
+  },
+  {
+    "name": "Crucible of Chamon",
+    "core": "Crucible of Chamon",
+    "page": 74
+  },
+  {
+    "name": "Enchant Weapon",
+    "core": "Enchant Weapon",
+    "page": 74
+  },
+  {
+    "name": "Feather of Lead",
+    "core": "Feather of Lead",
+    "page": 75
+  },
+  {
+    "name": "Fool’s Gold",
+    "core": "Fool’s Gold",
+    "page": 75
+  },
+  {
+    "name": "Forge of Chamon",
+    "core": "Forge of Chamon",
+    "page": 75
+  },
+  {
+    "name": "Glittering Robe",
+    "core": "Glittering Robe",
+    "page": 75
+  },
+  {
+    "name": "Mutable Metal",
+    "core": "Mutable Metal",
+    "page": 77
+  },
+  {
+    "name": "Transmutation of Chamon",
+    "core": "Transmutation of Chamon",
+    "page": 77
+  },
+  {
+    "name": "Barkskin",
+    "core": "Barkskin",
+    "page": 86
+  },
+  {
+    "name": "Earthblood",
+    "core": "Earthblood",
+    "page": 86
+  },
+  {
+    "name": "Earthpool",
+    "core": "Earthpool",
+    "page": 86
+  },
+  {
+    "name": "Fat of the Land",
+    "core": "Fare of the Land",
+    "page": 87
+  },
+  {
+    "name": "Forest of Thorns",
+    "core": "Forest of Thorns",
+    "page": 87
+  },
+  {
+    "name": "Lie of the Land",
+    "core": "Lie of the Land",
+    "page": 88
+  },
+  {
+    "name": "Lifebloom",
+    "core": "Lifebloom",
+    "page": 88
+  },
+  {
+    "name": "Regenerate",
+    "core": "Regenerate",
+    "page": 88
+  },
+  {
+    "name": "Cerulean Shield",
+    "core": "Cerulean Shield",
+    "page": 98
+  },
+  {
+    "name": "Comet of Casandora",
+    "core": "Comet of Casandora",
+    "page": 98
+  },
+  {
+    "name": "Fate’s Fickle Fingers",
+    "core": "Fate’s Fickle Fingers",
+    "page": 99
+  },
+  {
+    "name": "Starcrossed",
+    "core": "Starcrossed",
+    "page": 101
+  },
+  {
+    "name": "The First Portent of Amul",
+    "core": "The First Portent of Amul",
+    "page": 101
+  },
+  {
+    "name": "The Second Portent of Amul",
+    "core": "The Second Portent of Amul",
+    "page": 101
+  },
+  {
+    "name": "The Third Portent of Amul",
+    "core": "The Third Portent of Amul",
+    "page": 101
+  },
+  {
+    "name": "Choking Shadows",
+    "core": "Choking Shadows",
+    "page": 110
+  },
+  {
+    "name": "Doppelganger",
+    "core": "Doppelganger",
+    "page": 111
+  },
+  {
+    "name": "Illusion",
+    "core": "Illusion",
+    "page": 111
+  },
+  {
+    "name": "Mindslip",
+    "core": "Mindslip",
+    "page": 112
+  },
+  {
+    "name": "Mystifying Miasma",
+    "core": "Mystifying Miasma",
+    "page": 112
+  },
+  {
+    "name": "Shadowsteed",
+    "core": "Shadowsteed",
+    "page": 113
+  },
+  {
+    "name": "Shadowstep",
+    "core": "Shadowstep",
+    "page": 113
+  },
+  {
+    "name": "Shroud of Invisibility",
+    "core": "Shroud of Invisibility",
+    "page": 113
+  },
+  {
+    "name": "Caress of Laniph",
+    "core": "Caress of Laniph",
+    "page": 123
+  },
+  {
+    "name": "Dying Words",
+    "core": "Dying Words",
+    "page": 123
+  },
+  {
+    "name": "Purple Pall of Shyish",
+    "core": "Purple Pall of Shyish",
+    "page": 124
+  },
+  {
+    "name": "Sanctify",
+    "core": "Sanctify",
+    "page": 124
+  },
+  {
+    "name": "Scythe of Shyish",
+    "core": "Scythe of Shyish",
+    "page": 124
+  },
+  {
+    "name": "Soul Vortex",
+    "core": "Soul Vortex",
+    "page": 124
+  },
+  {
+    "name": "Steal Life",
+    "core": "Steal Life",
+    "page": 125
+  },
+  {
+    "name": "Swift Passing",
+    "core": "Swift Passing",
+    "page": 125
+  },
+  {
+    "name": "Aqshy’s Aegis",
+    "core": "Aqshy’s Aegis",
+    "page": 134
+  },
+  {
+    "name": "Cauterise",
+    "core": "Cauterise",
+    "page": 135
+  },
+  {
+    "name": "Crown of Flame",
+    "core": "Crown of Flame",
+    "page": 135
+  },
+  {
+    "name": "Firewall",
+    "core": "Firewall",
+    "page": 135
+  },
+  {
+    "name": "Flaming Hearts",
+    "core": "Flaming Hearts",
+    "page": 135
+  },
+  {
+    "name": "Flaming Sword of Rhuin",
+    "core": "Flaming Sword of Rhuin",
+    "page": 135
+  },
+  {
+    "name": "Great Fires of U’Zhul",
+    "core": "Great Fires of U’Zhul",
+    "page": 136
+  },
+  {
+    "name": "Purge",
+    "core": "Purge",
+    "page": 137
+  },
+  {
+    "name": "Amber Talons",
+    "core": "Amber Talons",
+    "page": 146
+  },
+  {
+    "name": "Beast Form",
+    "core": "Beast Form",
+    "page": 146
+  },
+  {
+    "name": "Beast Master",
+    "core": "Beast Master",
+    "page": 146
+  },
+  {
+    "name": "Beast Tongue",
+    "core": "Beast Tongue",
+    "page": 147
+  },
+  {
+    "name": "Flock of Doom",
+    "core": "Flock of Doom",
+    "page": 147
+  },
+  {
+    "name": "Hunter’s Hide",
+    "core": "Hunter’s Hide",
+    "page": 148
+  },
+  {
+    "name": "The Amber Spear",
+    "core": "The Amber Spear",
+    "page": 148
+  },
+  {
+    "name": "Wyssan’s Wildform",
+    "core": "Wyssan’s Wildform",
+    "page": 149
+  }
+]

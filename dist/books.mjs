@@ -2,6 +2,7 @@ import {KEYS,canon,base,options,skillInfo,talentInfo} from './rules.mjs';
 import {careerSpecies,careerAvailable} from './origins.mjs';
 import {validateChartState} from './astrology.mjs';
 import {validateIIIState,oldFaith,spellChoices} from './archives-iii.mjs';
+import {validateWoMState} from './winds-of-magic.mjs';
 
 export const BOOK_SCHEMA=1;
 const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables','origins','astrology','cants'];
@@ -24,7 +25,7 @@ export function validateBackgroundTable(table,label){
 const columns={
  cants:['lore','text'],
  astrology:['min','max','adjustments','talent','witchling','text','classical','ascendant','calendar','god','appearance','profilePage'],
- careers:['class','species','advanceScheme','levels','runtimeId','requiredOrigins','randomAlternativeFor','text'],skills:['char','advanced','grouped','options'],talents:['text','unavailable'],spells:['category','text','range','target','duration','cn','specialisations'],gear:['price','enc','capacity','availability','category','text','ammunition','wearable','ogreSized'],market:['price','enc','availability','category','text','ammunition','wearable','ogreSized'],weapons:['group','enc','reach','damage','qualities','kind','text'],armour:['enc','locations','ap','qualities','quick'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents','mechanics','appearancePage'],background:['forenames','surnames','eyes','hair','clans','rollTables','nameElements','imperialNames','namePages'],tables:['kind','sides','rows','species','career'],origins:['species','languages','skills','talents','randomTalents','background','optionalTalent','careerChoices','allowedPatrons','careerSpecies','grantedTalents','sheetSpecies','classNote','text','additionalCareers','randomTalentAlternative']
+ careers:['class','species','advanceScheme','levels','runtimeId','requiredOrigins','randomAlternativeFor','text'],skills:['char','advanced','grouped','options','text'],talents:['text','unavailable'],spells:['category','text','range','target','duration','cn','specialisations','ritual'],gear:['price','enc','capacity','availability','category','text','ammunition','wearable','ogreSized'],market:['price','enc','availability','category','text','ammunition','wearable','ogreSized'],weapons:['group','enc','reach','damage','qualities','kind','text'],armour:['enc','locations','ap','qualities','quick'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents','mechanics','appearancePage'],background:['forenames','surnames','eyes','hair','clans','rollTables','nameElements','imperialNames','namePages'],tables:['kind','sides','rows','species','career'],origins:['species','languages','skills','talents','randomTalents','background','optionalTalent','careerChoices','allowedPatrons','careerSpecies','grantedTalents','sheetSpecies','classNote','text','additionalCareers','randomTalentAlternative']
 };
 
 export function validateManifest(p){
@@ -160,6 +161,12 @@ export function validateCatalog(R){
  if(!plain(C.talentLimits)||Object.values(C.talentLimits).some(x=>x!==null&&(!Number.isInteger(x)||x<1)))fail('invalid Talent repeat limits.');
  const ids=new Set();for(const key of arrays.concat('species','background','rules'))for(const x of (Array.isArray(R[key])?R[key]:Object.values(R[key])).filter(plain)){if(ids.has(x.contentId))fail(`duplicate content ID ${x.contentId}.`);ids.add(x.contentId);}
  for(const x of R.skills)if(!KEYS.includes(x.char)||typeof x.advanced!=='boolean'||typeof x.grouped!=='boolean'||x.grouped&&!strings(x.options))fail(`${x.name}: invalid Skill.`);
+ for(const x of R.skills)if(x.text!==undefined&&!nonempty(x.text))fail(`${x.name}: Skill description must be text.`);
+ const ritualLores=new Set(R.spells.map(x=>x.category).filter(x=>!['Petty','Arcane','Blessing','Ritual',...C.gods].includes(x)));
+ for(const x of R.spells)if(x.ritual!==undefined){
+  const v=x.ritual,distinct=xs=>strings(xs)&&xs.length>0&&new Set(xs).size===xs.length;
+  if(x.category!=='Ritual'||!plain(v)||Object.keys(v).some(k=>!['lores','learningXP','discountLores','discountXP'].includes(k))||!distinct(v.lores)||v.lores.some(l=>l!=='*'&&!ritualLores.has(l))||v.lores.includes('*')&&v.lores.length!==1||!Number.isInteger(v.learningXP)||v.learningXP<=0||(v.discountLores===undefined)!==(v.discountXP===undefined)||v.discountLores!==undefined&&(!distinct(v.discountLores)||v.discountLores.some(l=>!ritualLores.has(l)||!v.lores.includes('*')&&!v.lores.includes(l))||!Number.isInteger(v.discountXP)||v.discountXP<=0||v.discountXP>=v.learningXP))fail(`${x.name}: invalid ritual learning rules.`);
+ }
  for(const sign of R.astrology||[]){
   if(!pageOK(sign.profilePage)||!['text','classical','ascendant','calendar','god','appearance'].every(key=>nonempty(sign[key])))fail(`${sign.name}: incomplete astrology reference.`);
   if(!Number.isInteger(sign.min)||!Number.isInteger(sign.max)||sign.min<1||sign.max>100||sign.min>sign.max||!plain(sign.adjustments)||Object.entries(sign.adjustments).some(([key,value])=>!KEYS.includes(key)||!Number.isInteger(value))||sign.talent!==undefined&&!talentInfo(R,sign.talent))fail(`${sign.name}: invalid star-sign effect.`);
@@ -252,6 +259,7 @@ export function catalogForCharacter(library,character){
  if(R.selection.length!==selection.packs.length||R.selection.some((ref,i)=>ref.id!==selection.packs[i].id||ref.version!==selection.packs[i].version))fail('saved book dependencies or order do not match.');
  validateChartState(R,character);
  validateIIIState(R,character);
+ validateWoMState(R,character);
  return R;
 }
 export function randomTable(R,s,kind){

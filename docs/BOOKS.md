@@ -13,7 +13,7 @@ The app loads a registered core pack plus explicitly selected supplements/varian
 
 ## Manifest and registry
 
-The core book, Up in Arms and Archives of the Empire I, II and III are installed, with an optional animal-doctor Hedge Witch variant. Reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md), [ARCHIVES-I.md](ARCHIVES-I.md), [ARCHIVES-II.md](ARCHIVES-II.md) and [ARCHIVES-III.md](ARCHIVES-III.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character; an edited draft requires confirmation, while an untouched blank character has nothing to discard. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
+The core book, Up in Arms, Archives of the Empire I, II and III, and Winds of Magic are installed, with an optional animal-doctor Hedge Witch variant. Reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md), [ARCHIVES-I.md](ARCHIVES-I.md), [ARCHIVES-II.md](ARCHIVES-II.md), [ARCHIVES-III.md](ARCHIVES-III.md) and [WINDS-OF-MAGIC.md](WINDS-OF-MAGIC.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character; an edited draft requires confirmation, while an untouched blank character has nothing to discard. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
 
 Every manifest has `schemaVersion: 1`, an ID (`lowercase-hyphenated` recommended), title, shortTitle, edition (4 or 5), version, kind (`core`, `supplement`, `variant`), dependsOn, source (`file`, `sha256`) and files. Fourth Edition packs also require `compatibility: {reviewed: true, notes: [...]}` with a nonempty review. The format only checks that a review was recorded; the integrator remains responsible for its accuracy.
 
@@ -46,9 +46,9 @@ Supported file keys:
 | careers | Array using the current four-level Career structure and Characteristic scheme |
 | species | Object keyed by displayed Species name, using current core creation fields |
 | background | Object keyed by Species, with printed forenames, surnames, eyes, hair and optional clans |
-| skills | Array: name, char, advanced, grouped, options, page |
+| skills | Array: name, char, advanced, grouped, options, page; optional sourced `text` description |
 | talents | Array: name, text, page; optional `unavailable` explanation blocks purchase/free grants; special rules need a supported setting or handler |
-| spells | Array: name, category, text, range, target, duration, optional cn, optional distinct `specialisations`, page; expanded learnable names must stay unique |
+| spells | Array: name, category, text, range, target, duration, optional cn, optional distinct `specialisations`, page; expanded learnable names must stay unique. Ritual learning may declare the validated `ritual` object described below. |
 | cants | Array: name, lore, text, page; optional free Colour Lore choices at 1/3/6 learned spells |
 | gear / market | Arrays: name, price, enc (number or null), availability, optional category; capacity, wearable, text and ammunition reference fields are supported |
 | weapons | Array: name, group, enc, reach, damage, qualities, kind (melee/ranged), page |
@@ -59,6 +59,10 @@ Supported file keys:
 | rules | Array of supported, sourced setting extensions |
 
 Core-only files `source`, `config` and `career-rolls` keep the original source record, settings and extracted Career table. Supplements cannot replace these files wholesale. Existing core arrays live in `dist/data/`; additional core equipment profiles, shop rows, settings and explicit roll tables live in `dist/data/books/core/`.
+
+### Ritual learning
+
+Winds of Magic adds an explicit memorisation handler, rather than a general performance engine; see [WINDS-OF-MAGIC.md](WINDS-OF-MAGIC.md) for sources and scope. A `category: "Ritual"` record may declare `ritual: {lores, learningXP, discountLores?, discountXP?}`. `lores` is a nonempty distinct list of supported magical Lores, or the sole wildcard `"*"`. It requires a possessed Arcane Magic Talent for one of those Lores. A discount must supply both a distinct subset of permitted Lores and a positive integer XP below `learningXP`. Missing/unknown categories, duplicate Lores, mismatched discount fields and unknown mechanics fail validation. Memorisation never grants tracker boxes or counts toward spell grants, price bands, extra Elf Lores or Cants; performance remains deferred.
 
 Every new content record requires an explicit globally unique namespaced `id`, e.g. `supplied-book:career:actual-name`, plus its printed `page`. Names are the runtime lookup keys for Skills/Talents/spells; they must be unambiguous in a selected catalog. Careers have an explicit runtime ID. The loader adds `contentId` and `source: {book, page}` without modifying the extracted data. Core name-derived IDs are stable as long as the canonical names remain unchanged; never recycle an existing ID for another option. Core profile IDs in JSON are persistent identifiers, not positions to regenerate after reordering.
 

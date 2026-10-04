@@ -7,7 +7,7 @@ export function cantGrants(R,s){
  if(!s.cants?.enabled)return [];
  const known=knownSpells(R,s),talents=derive(R,s).talents;
  return [...new Set((R.cants||[]).map(x=>x.lore))].flatMap(lore=>{
-  const talent=`Arcane Magic (${lore})`,count=known.filter(x=>x.talent===talent).length;
+  const talent=`Arcane Magic (${lore})`,count=known.filter(x=>x.talent===talent&&!x.ritual).length;
   if(!talents.includes(talent)||!count)return [];
   return [{lore,count:count>=6?3:count>=3?2:1,spells:count,choices:R.cants.filter(x=>x.lore===lore)}];
  });

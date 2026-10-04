@@ -1,0 +1,22 @@
+[
+  {
+    "id": "winds-of-magic:skill:augury",
+    "name": "Augury",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 44,
+    "text": "Interpret signs and portents to receive visions of the future. Only Humans and Elves may learn Augury; it cannot be possessed with Psychometry. See pp. 44–46 for readings and conditional first-level Career access."
+  },
+  {
+    "id": "winds-of-magic:skill:psychometry",
+    "name": "Psychometry",
+    "char": "Int",
+    "advanced": true,
+    "grouped": false,
+    "options": [],
+    "page": 47,
+    "text": "An innate Human ability to receive visions of recent events or unspoken thoughts while in a related place or touching an associated object or person. Each Test requires an Average (+2 SL) Endurance Test or a Fatigued Condition (p. 48). It cannot be possessed with Augury."
+  }
+]

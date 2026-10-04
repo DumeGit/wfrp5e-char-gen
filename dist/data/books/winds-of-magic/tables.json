@@ -1,0 +1,86 @@
+[
+  {
+    "id": "winds-of-magic:refinement:apothecary",
+    "name": "Apothecary optional Winds of Magic Career",
+    "kind": "career-refinement",
+    "career": "apothecary",
+    "page": 35,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 75,
+        "result": "apothecary"
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "result": "winds-of-magic:career:mundane-alchemist"
+      }
+    ],
+    "conversion": "Optional one-time second roll after the core Career result. Keep the original by choice or if the result is unavailable to the Species, following the existing user-approved policy. Wizard 01–95 retains core Wizard with a choice of the eight printed Human College Careers; no artificial probabilities are assigned to that choice."
+  },
+  {
+    "id": "winds-of-magic:refinement:wizard",
+    "name": "Wizard optional Winds of Magic Career",
+    "kind": "career-refinement",
+    "career": "wizard",
+    "page": 35,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 95,
+        "result": "wizard"
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "result": "winds-of-magic:career:magister-vigilant"
+      }
+    ],
+    "conversion": "Optional one-time second roll after the core Career result. Keep the original by choice or if the result is unavailable to the Species, following the existing user-approved policy. Wizard 01–95 retains core Wizard with a choice of the eight printed Human College Careers; no artificial probabilities are assigned to that choice."
+  },
+  {
+    "id": "winds-of-magic:refinement:mystic",
+    "name": "Mystic optional Winds of Magic Career",
+    "kind": "career-refinement",
+    "career": "mystic",
+    "page": 35,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 90,
+        "result": "mystic"
+      },
+      {
+        "min": 91,
+        "max": 100,
+        "result": "winds-of-magic:career:scryer"
+      }
+    ],
+    "conversion": "Optional one-time second roll after the core Career result. Keep the original by choice or if the result is unavailable to the Species, following the existing user-approved policy. Wizard 01–95 retains core Wizard with a choice of the eight printed Human College Careers; no artificial probabilities are assigned to that choice."
+  },
+  {
+    "id": "winds-of-magic:refinement:guard",
+    "name": "Guard optional Winds of Magic Career",
+    "kind": "career-refinement",
+    "career": "guard",
+    "page": 35,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 75,
+        "result": "guard"
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "result": "winds-of-magic:career:beadle"
+      }
+    ],
+    "conversion": "Optional one-time second roll after the core Career result. Keep the original by choice or if the result is unavailable to the Species, following the existing user-approved policy. Wizard 01–95 retains core Wizard with a choice of the eight printed Human College Careers; no artificial probabilities are assigned to that choice."
+  }
+]

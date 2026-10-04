@@ -1,0 +1,61 @@
+[
+  {
+    "id": "winds-of-magic:rule:skilloptions-trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Alchemist",
+      "Blacksmith",
+      "Goldsmith"
+    ],
+    "page": 38,
+    "reason": "Additional specialisations explicitly printed in Winds of Magic Careers."
+  },
+  {
+    "id": "winds-of-magic:rule:skilloptions-lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Nehekhara",
+      "Daemonology",
+      "Plants",
+      "Astronomy",
+      "Undead",
+      "Alchemy"
+    ],
+    "page": 38,
+    "reason": "Additional specialisations explicitly printed in Winds of Magic Careers."
+  },
+  {
+    "id": "winds-of-magic:rule:skilloptions-entertain",
+    "path": [
+      "skillOptions",
+      "Entertain"
+    ],
+    "operation": "append",
+    "value": [
+      "Fortune Telling"
+    ],
+    "page": 92,
+    "reason": "Additional specialisations explicitly printed in Winds of Magic Careers."
+  },
+  {
+    "id": "winds-of-magic:rule:skilloptions-secret-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "append",
+    "value": [
+      "Amber Order"
+    ],
+    "page": 140,
+    "reason": "Additional specialisations explicitly printed in Winds of Magic Careers."
+  }
+]
