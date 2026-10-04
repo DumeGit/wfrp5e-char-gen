@@ -1,0 +1,168 @@
+[
+  {
+    "id": "archives-ii:table:species",
+    "name": "Archives II Species",
+    "kind": "species",
+    "sides": 100,
+    "page": 18,
+    "rows": [
+      {
+        "min": 1,
+        "max": 89,
+        "result": "Human"
+      },
+      {
+        "min": 90,
+        "max": 93,
+        "result": "Halfling"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "Dwarf"
+      },
+      {
+        "min": 98,
+        "max": 98,
+        "result": "Ogre"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "High Elf"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Wood Elf"
+      }
+    ],
+    "conversion": "Explicitly selectable table; core default probabilities are unchanged. Fifth Edition random creation bonuses replace the old +20 XP Species reward."
+  },
+  {
+    "id": "archives-ii:table:ogre-careers",
+    "name": "Archives II Ogre Careers",
+    "kind": "career",
+    "species": "Ogre",
+    "sides": 100,
+    "page": 18,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "archives-ii:career:ogre-butcher"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "result": "artisan"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "beggar"
+      },
+      {
+        "min": 5,
+        "max": 6,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 7,
+        "max": 12,
+        "result": "watchman"
+      },
+      {
+        "min": 13,
+        "max": 13,
+        "result": "servant"
+      },
+      {
+        "min": 14,
+        "max": 14,
+        "result": "bailiff"
+      },
+      {
+        "min": 15,
+        "max": 21,
+        "result": "hunter"
+      },
+      {
+        "min": 22,
+        "max": 23,
+        "result": "miner"
+      },
+      {
+        "min": 24,
+        "max": 26,
+        "result": "archives-ii:career:rhinox-herder"
+      },
+      {
+        "min": 27,
+        "max": 29,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 30,
+        "max": 32,
+        "result": "entertainer"
+      },
+      {
+        "min": 33,
+        "max": 39,
+        "result": "pedlar"
+      },
+      {
+        "min": 40,
+        "max": 40,
+        "result": "sailor"
+      },
+      {
+        "min": 41,
+        "max": 43,
+        "result": "stevedore"
+      },
+      {
+        "min": 44,
+        "max": 47,
+        "result": "grave-robber"
+      },
+      {
+        "min": 48,
+        "max": 56,
+        "result": "outlaw"
+      },
+      {
+        "min": 57,
+        "max": 61,
+        "result": "racketeer"
+      },
+      {
+        "min": 62,
+        "max": 68,
+        "result": "guard"
+      },
+      {
+        "min": 69,
+        "max": 79,
+        "result": "pit-fighter"
+      },
+      {
+        "min": 80,
+        "max": 84,
+        "result": "protagonist"
+      },
+      {
+        "min": 85,
+        "max": 91,
+        "result": "archives-ii:career:maneater"
+      },
+      {
+        "min": 92,
+        "max": 100,
+        "result": "soldier"
+      }
+    ],
+    "conversion": "User correction: printed missing 05 is assigned to Rat Catcher, making its range 05–06. Seaman uses Fifth Edition Sailor. Core Career definitions and Class labels apply to existing Careers."
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "archives-ii:sign:wymund-the-anchorite",
+    "name": "Wymund the Anchorite",
+    "page": 39,
+    "min": 1,
+    "max": 5,
+    "adjustments": {
+      "Fel": 2,
+      "I": 2,
+      "Int": -3
+    },
+    "profilePage": 40,
+    "classical": "Wymenos",
+    "ascendant": "Midwinter",
+    "calendar": "Vorhexen 12th – Vorhexen 27th",
+    "god": "Manaan",
+    "appearance": "A stern face",
+    "text": "People born under the light of Wymund the Anchorite are patient and methodical. They prefer to scrutinize every detail of a situation before deciding how to proceed. Their slowness to pass judgment and tolerance of the foibles of others makes them kind, loyal friends — sometimes to a fault. Often, they forgive others the unforgivable, to their detriment. But when they decide that a person is no longer worthy of their grace, they are harsh, implacable foes."
+  },
+  {
+    "id": "archives-ii:sign:the-big-cross",
+    "name": "The Big Cross",
+    "page": 39,
+    "min": 6,
+    "max": 10,
+    "adjustments": {
+      "S": 2,
+      "WP": 2,
+      "I": -3
+    },
+    "profilePage": 40,
+    "classical": "Azurios",
+    "ascendant": "Midwinter",
+    "calendar": "Vorxehen 28th – Nachhexen 8th",
+    "god": "Ulric",
+    "appearance": "An X",
+    "text": "There is no uncertainty in the hearts of those born under the Big Cross. The path they must take through the world seems obvious to them, and they make sensible choices to keep on it. But this rationality can lead to a predictable passivity and detachment from the world around them. If their path is already made, why deviate from it? It is vital that they find something to fight for, rather than simply allowing the tides of fate to sweep them away."
+  },
+  {
+    "id": "archives-ii:sign:the-limner-s-line",
+    "name": "The Limner’s Line",
+    "page": 39,
+    "min": 11,
+    "max": 15,
+    "adjustments": {
+      "BS": 2,
+      "Ag": 2,
+      "WS": -3
+    },
+    "profilePage": 41,
+    "classical": "Verros",
+    "ascendant": "Late Winter/Early Spring",
+    "calendar": "Nachhexen 9th – Nachhexen 28th",
+    "god": "Vallich (Smithing and Ship Building (Nordland))",
+    "appearance": "An archer with a drawn bow",
+    "text": "Natives of the Limner’s Line were born to be poets, painters, sculptors — artists of all kinds. They create beauty wherever they go, and even those who by circumstance do not find themselves in an artistic field still find a way to make their life’s work into a kind of art. If they are doktors, they are surgeons. If they are soldiers, they become master tacticians. People born under the Limner’s Line must take care not to become too critical of themselves or their work."
+  },
+  {
+    "id": "archives-ii:sign:gnuthus-the-ox",
+    "name": "Gnuthus the Ox",
+    "page": 39,
+    "min": 16,
+    "max": 20,
+    "adjustments": {
+      "T": 2,
+      "WP": 2,
+      "Int": -3
+    },
+    "profilePage": 41,
+    "classical": "Nuthlos",
+    "ascendant": "Early Spring",
+    "calendar": "Nachhexen 29th – Jahrdrung 16th",
+    "god": "Guvaur (Bulls (Ostland))",
+    "appearance": "An ox",
+    "text": "Those born under the sign of the Ox are devoted allies and fast friends. When they pledge themselves to a person, an ideal, or a cause, they cannot be moved. If they make a promise, they honor it. If they owe someone a debt, they find a way to pay it, no matter the cost to themselves. Their honesty is just as often naiveté, and they must be on guard lest others take advantage. In addition, they pledge themselves to the wrong causes and losing sides just as often as they find themselves on the side of righteousness."
+  },
+  {
+    "id": "archives-ii:sign:dragomas-the-drake",
+    "name": "Dragomas the Drake",
+    "page": 39,
+    "min": 21,
+    "max": 25,
+    "adjustments": {
+      "WP": 2,
+      "Fel": 2,
+      "Dex": -3
+    },
+    "profilePage": 41,
+    "classical": "Drakonos",
+    "ascendant": "Spring",
+    "calendar": "Jarhdrung 17th – Pflugzeit 7th",
+    "god": "Khaine",
+    "appearance": "A rearing dragon",
+    "text": "Bold, assertive, and strong, people born under Dragomas the Drake are instinctive leaders. They project confidence and assurance into the world, and people simply want to follow them. This charisma can quickly cross the line into an inflexible arrogance, and what begins with gentle leadership and guidance may end in tyranny. Being a leader comes with responsibility to one’s followers, and those born under the Drake are wise to remember this."
+  },
+  {
+    "id": "archives-ii:sign:the-gloaming",
+    "name": "The Gloaming",
+    "page": 39,
+    "min": 26,
+    "max": 30,
+    "adjustments": {
+      "Int": 2,
+      "I": 2,
+      "WP": -3
+    },
+    "profilePage": 42,
+    "classical": "Tartotes",
+    "ascendant": "Spring",
+    "calendar": "Pflugzeit 8th – Pflugzeit 31st",
+    "god": "Morr",
+    "appearance": "A collection of red and blue stars that appears only at twilight",
+    "text": "The stars that make up the Gloaming appear only under specific conditions, at twilight. People born under the Gloaming are doubters and skeptics. This skepticism can morph into paranoia and unreasonable suspicion of anything they cannot see or touch. The metaphysical, the theoretical—none of it is trustworthy. Only the hard, physical reality of the world is reliable. At their best, natives of the Gloaming are brilliant investigators and scholars. They are often inclined toward sorcery despite their distrust of the mystical."
+  },
+  {
+    "id": "archives-ii:sign:grungni-s-baldric",
+    "name": "Grungni’s Baldric",
+    "page": 39,
+    "min": 31,
+    "max": 35,
+    "adjustments": {
+      "WS": 2,
+      "WP": 2,
+      "Fel": -3
+    },
+    "profilePage": 42,
+    "classical": "Gileon",
+    "ascendant": "Late Spring/Early Summer",
+    "calendar": "Pflugzeit 32nd – Sigmarzeit 22nd",
+    "god": "Grungni (Dwarfs, the Forge (Stirland)), Margileo (Honour (Averland))",
+    "appearance": "A dwarf with a baldric",
+    "text": "Grungni’s Baldric is sacred to soldiers and Dwarfs, and as such, those born under its light are honorable, disciplined, and naturally disposed to the soldiering life. Even those who are not soldiers tend to approach their personal lives with a martial rigor. It is difficult for people born under the Baldric to relax and enjoy the finer things in life. People born under more tranquil signs may find them single-minded and humorless."
+  },
+  {
+    "id": "archives-ii:sign:mammit-the-wise",
+    "name": "Mammit the Wise",
+    "page": 39,
+    "min": 36,
+    "max": 40,
+    "adjustments": {
+      "I": 2,
+      "Int": 2,
+      "Fel": -3
+    },
+    "profilePage": 42,
+    "classical": "Mammius",
+    "ascendant": "Early Summer",
+    "calendar": "Sigmarzeit 23rd – Sommerzeit 11th",
+    "god": "Verena",
+    "appearance": "An owl",
+    "text": "To the person born under Mammit the Wise, everything is an opportunity for learning. This introspective bent makes them clever, fair, and kind — but it can lead them to view the misfortunes of others as simply another subject for study. This allows them to act with detachment when they must, but taken too far, their detachment can become indifference and cruelty."
+  },
+  {
+    "id": "archives-ii:sign:mummit-the-fool",
+    "name": "Mummit the Fool",
+    "page": 39,
+    "min": 41,
+    "max": 45,
+    "adjustments": {
+      "WP": -3
+    },
+    "profilePage": 43,
+    "classical": "The Fool",
+    "ascendant": "Summer",
+    "calendar": "Sommerzeit 12th – Sommerzeit 29th",
+    "god": "Ranald",
+    "appearance": "A smiling face",
+    "text": "Mummit the Fool smiles down at the world from the night sky and heralds a time of new beginnings. People born under Mummit the Fool are sensible, intuitive, and above all, improbably lucky. Things simply work out for them, or seem to. As such, they are known to struggle with impulsivity and wanderlust — a desire to leave it all behind and avoid responsibility for as long as they can.",
+    "talent": "Luck"
+  },
+  {
+    "id": "archives-ii:sign:the-two-bullocks",
+    "name": "The Two Bullocks",
+    "page": 39,
+    "min": 46,
+    "max": 50,
+    "adjustments": {
+      "Int": -3
+    },
+    "profilePage": 43,
+    "classical": "Hashoor",
+    "ascendant": "Midsummer",
+    "calendar": "Sommerzeit 30th – Vorgeheim 13th",
+    "god": "Ahalt (Hunting, Fertility, and Sacrifice (Wissenland))",
+    "appearance": "Two oxen",
+    "text": "People born under the Two Bullocks are innovators; they are diligent, creative, and can create nearly anything they put their minds to. Fortunately for the world, what they most want to do is help others, whether that means making improvements to a printing press or designing a better plow for their family’s fields. Unfortunately, the projects they throw themselves into can be fanciful and impractical, and malefactors might bend their idealism to dangerous or unrighteous causes.",
+    "talent": "Craftsman (Any)"
+  },
+  {
+    "id": "archives-ii:sign:the-dancer",
+    "name": "The Dancer",
+    "page": 39,
+    "min": 51,
+    "max": 55,
+    "adjustments": {
+      "I": -3
+    },
+    "profilePage": 43,
+    "classical": "Adamnos",
+    "ascendant": "Late Summer",
+    "calendar": "Vorgeheim 14th – Nachgeheim 2nd",
+    "god": "Millavog (Dancing (Wissenland))",
+    "appearance": "A whirling dancer",
+    "text": "The Dancer is the sign of passion — and of obsession. What those born under the sign choose to pursue they chase with a single-minded devotion. Whether their focus is a lover or a mystery to solve, the world falls away in the face of their determination. When they are scorned, they take it poorly, and may react violently. The focus of Impassioned Zeal can be chosen later in play (p. 43).",
+    "talent": "Impassioned Zeal"
+  },
+  {
+    "id": "archives-ii:sign:the-drummer",
+    "name": "The Drummer",
+    "page": 39,
+    "min": 56,
+    "max": 60,
+    "adjustments": {
+      "WP": -3
+    },
+    "profilePage": 44,
+    "classical": "Lupios",
+    "ascendant": "Late Summer/Early Autumn",
+    "calendar": "Nachgeheim 3rd – Nachgeheim 24th",
+    "god": "Lupos (Predators (Hochland))",
+    "appearance": "A drum",
+    "text": "A person born under the Drummer is distinguishable by their expansive, generous spirit. They do nothing in moderation, and when they give, they give everything. A Drummer never fails to give alms to the poor or take care of ailing family members. They also never turn down an invitation to a tavern or a party. They are a joy to be around, but this joy can swiftly turn to ruinous excess and hedonism if left unchecked.",
+    "talent": "Carouser"
+  },
+  {
+    "id": "archives-ii:sign:the-piper",
+    "name": "The Piper",
+    "page": 39,
+    "min": 61,
+    "max": 65,
+    "adjustments": {
+      "Fel": 2,
+      "Dex": 2,
+      "WS": -3
+    },
+    "profilePage": 44,
+    "classical": "Sangist",
+    "ascendant": "Autumn",
+    "calendar": "Nachgheim 25th – Erntezeit 16th",
+    "god": "Ranald, Katya (Disarming Beauty (Reikland))",
+    "appearance": "A capering piper",
+    "text": "The best diplomats are born under the Piper’s rule, and so are the best thieves. They are cunning, slick, and very tactful when they need to be. In a negotiation, there is none better to have one’s back. However, they do not hesitate to play both sides to their advantage — or take advantage of allies, if they think they’ll come out the better for it. Theologians disagree as to the correct deity to associate with the Piper. In Marienburg it is considered a particularly fortuitous sign, and some families attempt to conceive nine months before it rises ascendant."
+  },
+  {
+    "id": "archives-ii:sign:vobist-the-faint",
+    "name": "Vobist the Faint",
+    "page": 39,
+    "min": 66,
+    "max": 70,
+    "adjustments": {
+      "I": -3
+    },
+    "profilePage": 44,
+    "classical": "Vobist",
+    "ascendant": "Autumn",
+    "calendar": "Erntezeit 17 th – Brauzeit 6th",
+    "god": "Ranald",
+    "appearance": "No stars",
+    "text": "A void of stars. An empty spot in the heavens. Someone born under Vobist the Faint seems erratic and uncertain at times; after all, they were born under pure darkness. They can be overcautious at times, but they can also be bold and courageous when others least expect it, leaping into the fray before even their bravest friends. What seems to be a fundamental uncertainty is also a keen sense of which battles to fight, and how. For Morrslieb, the Chaos Moon, to rise full while Vobist the Faint is ascendent is a particularly bad omen.",
+    "talent": "Sixth Sense"
+  },
+  {
+    "id": "archives-ii:sign:the-broken-cart",
+    "name": "The Broken Cart",
+    "page": 39,
+    "min": 71,
+    "max": 75,
+    "adjustments": {
+      "WP": -3
+    },
+    "profilePage": 45,
+    "classical": "Kharnos",
+    "ascendant": "Autumn",
+    "calendar": "Brauzeit 7th – Brauzeit 27th",
+    "god": "Nurgle",
+    "appearance": "A cart with a broken wheel",
+    "text": "At times, people born under the Broken Cart can be prideful and over-concerned with appearances. They might spend their last coin in pursuit of the finer things in life, or dash themselves on the rocks looking for the approval of their betters. When this tendency is curbed — when they come to peace with the fundamental insecurities that cause them to spend their lives searching for things to fulfill them — their pride becomes confidence, and their conceit mellows into likeability. The Broken Cart’s association with Nurgle is rarely acknowledged, as worship of any Ruinous Power is grounds for a short trip to a tall pyre in most parts of the world. All know that there is something dark and primal about the sign, however, and its associations with disease are common across many cultures. Many folk know that the Father of Plagues is a force in the world, and when disease scours the land, the desperate often recall old tales and forbidden rites, and make offerings just the same.",
+    "talent": "Resistant (Disease)"
+  },
+  {
+    "id": "archives-ii:sign:the-greased-goat",
+    "name": "The Greased Goat",
+    "page": 39,
+    "min": 76,
+    "max": 80,
+    "adjustments": {
+      "T": -3
+    },
+    "profilePage": 45,
+    "classical": "Talios",
+    "ascendant": "Late Autumn",
+    "calendar": "Brauzeit 28th – Kaldezeit 17th",
+    "god": "Taal",
+    "appearance": "A goat",
+    "text": "A person born under the Greased Goat refuses to let anyone get too near. They can seem aloof and apathetic, but this is an attempt to make sure they are not hurt by the disappointments that are assuredly coming their way. When they are knocked down, they wallow in their pain. On the rare occasions they allow themselves to feel joy, their joy is infectious. Children born under the Greased Goat who have an aptitude for magic often find themselves drawn towards the Amber wind of Ghur. Those born under the Greased Goat would be wise to remember that the world is not there to victimize them. Everyone has a run of bad luck sometimes, but it does not define them.",
+    "talent": "Animal Affinity"
+  },
+  {
+    "id": "archives-ii:sign:rhya-s-cauldron",
+    "name": "Rhya’s Cauldron",
+    "page": 39,
+    "min": 81,
+    "max": 85,
+    "adjustments": {
+      "Ag": -3
+    },
+    "profilePage": 46,
+    "classical": "Rionyes",
+    "ascendant": "Early Winter",
+    "calendar": "Kaldezeit 18th – Kaldezeit 33rd",
+    "god": "Rhya",
+    "appearance": "A cauldron",
+    "text": "Rhya’s Cauldron is revered by Astromancers, Wizards of the Jade and Amethyst orders, and astrologers alike. It is associated with the budding of new things in nature, and also their inevitable death. People born under its light are known to be righteous in their ideals and merciful towards the innocent. No matter what their station in life, they are relentless in their pursuit of justice. This relentlessness, if unchecked, can make them careless and even callous towards the lives and well-being of others.",
+    "talent": "Iron Will"
+  },
+  {
+    "id": "archives-ii:sign:cackelfax-the-cockerel",
+    "name": "Cackelfax the Cockerel",
+    "page": 39,
+    "min": 86,
+    "max": 90,
+    "adjustments": {
+      "Fel": -3
+    },
+    "profilePage": 46,
+    "classical": "Kakeros",
+    "ascendant": "Winter",
+    "calendar": "Ulriczeit 1st – Ulriczeit 16th",
+    "god": "Kakarol (Horses (Ostland))",
+    "appearance": "Two coins",
+    "text": "Those born under Cackelfax the Cockerel have lofty goals and their eyes towards the future. You’ll rarely find a spendthrift Cockerel. They go about achieving their goals in the most direct way possible, and that means acquisition — of connections, favors, property, skill, and most of all, money: scads of money. As they rise, they take care of those who took care of them. Many established and aspiring political figures in the Old World were born under the sign of the Cockerel, or claim they were. Other signs may find the Cockerel greedy or ruthless, but they know their truth: in this world, success isn’t earned by the most meritorious. It is bought — with money or with blood.",
+    "talent": "Dealmaker"
+  },
+  {
+    "id": "archives-ii:sign:the-bonesaw",
+    "name": "The Bonesaw",
+    "page": 39,
+    "min": 91,
+    "max": 95,
+    "adjustments": {
+      "Int": 2,
+      "Fel": 2,
+      "WS": -3
+    },
+    "profilePage": 46,
+    "classical": "Alyoi",
+    "ascendant": "Winter",
+    "calendar": "Ulriczeit 17th – Ulriczeit 31st",
+    "god": "Shallya",
+    "appearance": "A knife",
+    "text": "The Bonesaw is the sign of the philosopher — above all else, they crave knowledge. They live to explore and experiment. Unlike other inquisitive signs, however, they do not want to hoard what they know for its own sake, and they do not withdraw into themselves. One born under the Bonesaw wants to disseminate what they know as widely as possible. This can, however, make them seem like overbearing know-it-alls, rather than passionate scholars of the world."
+  },
+  {
+    "id": "archives-ii:sign:the-witchling-star",
+    "name": "The Witchling Star",
+    "page": 39,
+    "min": 96,
+    "max": 100,
+    "adjustments": {},
+    "profilePage": 47,
+    "classical": "Solkios",
+    "ascendant": "Winter",
+    "calendar": "Urliczeit 32nd – Vorhexen 11th",
+    "god": "Soll",
+    "appearance": "A single bright star",
+    "text": "Magical and mysterious, the Witchling Star is considered an ominous sign by most astrologers. Those under its rule have great courage. They possess a sort of mercuriality that stops just short of dishonesty or inconstancy, but which occasionally causes problems for those around them. Whatever scrapes they get themselves into, they can generally get out of. Their charm can seem nearly mystical at times, almost as though they were blessed by the winds of magic themselves.",
+    "witchling": [
+      {
+        "min": 1,
+        "max": 3,
+        "talent": "Sixth Sense",
+        "adjustments": {}
+      },
+      {
+        "min": 4,
+        "max": 6,
+        "talent": "Second Sight",
+        "adjustments": {
+          "S": -3
+        }
+      },
+      {
+        "min": 7,
+        "max": 9,
+        "talent": "Petty Magic",
+        "adjustments": {
+          "S": -3
+        }
+      },
+      {
+        "min": 10,
+        "max": 10,
+        "talent": "Witch!",
+        "adjustments": {
+          "S": -5
+        }
+      }
+    ],
+    "conversion": "User resolves p. 47’s blanket −3 Strength by using the detailed p. 39 table: no penalty for Sixth Sense, −3 for Second Sight/Petty Magic, −5 for Witch!."
+  }
+]

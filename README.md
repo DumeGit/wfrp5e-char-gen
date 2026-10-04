@@ -1,6 +1,6 @@
 # WFRP Character Ledger
 
-A browser-based Fifth Edition character generator built from the supplied rulebook. The core book and the opt-in **Up in Arms** supplement are installed. Its 15 Careers, Tilean origins, nine additional Myrmidian Miracles and 70 new shop entries are documented with compatibility decisions in [docs/UP-IN-ARMS.md](docs/UP-IN-ARMS.md).
+A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms**, **Archives of the Empire I** and **Archives of the Empire II** are installed. All four together offer 86 Careers and 241 spells/Blessings/Miracles. Compatibility decisions and exclusions are documented separately for each supplement.
 
 Contributor instructions and the user's project decisions are in [AGENTS.md](AGENTS.md). The book integration format and review workflow are in [docs/BOOKS.md](docs/BOOKS.md).
 
@@ -14,7 +14,7 @@ python -m http.server 8047 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:8047/`. The browser saves the current draft on that device. **Save character** downloads a JSON file for later import with **Load character**. Drafts on the local preview and published app belong to separate browser origins; use Save/Load to transfer them.
 
-The eight creation steps cover Species, all 64 core Careers (79 with Up in Arms enabled), Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default budget is 1,000 XP, editable by the user. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
+The eight creation steps cover Species, all 64 core Careers (86 with all supplements enabled), Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default base budget is 1,000 XP, editable by the user; retaining an optional Archives II star-sign roll adds 25 XP separately. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
 
 The Gear & money step includes a searchable shop for 253 fixed-price Trappings from the supplied Consumer Guide (pp. 301, 303, 307–316). Career-granted cash is added to the purse. It converts starting funds using 1 GC = 20 shillings = 240 pennies, blocks overspending, supports removing a purchase, and adds purchases to equipment and PDF export. It assumes purchases are made during character creation, when Availability Tests are waived (p. 296). Items with variable or unlisted prices, including the magical items whose listed figures are black-market buyer prices (p. 315), require the GM and are not offered at an invented purchase price. Bought items do not earn creation tracker boxes (p. 36).
 
@@ -94,7 +94,7 @@ Open the app online first and wait for **Available offline · PDF exports includ
 
 Updates download in the background and offer **Update now** or **Later**. Update now saves the draft before refreshing. Offline files are installed together; an incomplete download does not replace the previous working version. Run `npm run build` after changing files in `dist` when preparing a manual deployment. The build generates a content-versioned service worker from `scripts/service-worker.template.js`.
 
-All 50 automated checks pass, including offline navigation and asset delivery, the complete PDF template, update activation, cache cleanup and failed-download recovery. A browser check with the local server stopped confirmed that the app reopened, XP purchases and undo worked, and the character PDF was generated. A real service-worker update preserved the test character. Mobile installation instructions were checked at 390 px without horizontal overflow.
+The PWA checks cover offline navigation and asset delivery, the complete PDF template, update activation, cache cleanup and failed-download recovery. A browser check with the local server stopped confirmed that the app reopened, XP purchases and undo worked, and the character PDF was generated. A real service-worker update preserved the test character. Mobile installation instructions were checked at 390 px without horizontal overflow.
 
 Dependency: pdf-lib 1.17.1 (MIT), bundled locally for PDF export.
 
@@ -121,3 +121,11 @@ Origins integrates first name and surname/epithet directly into the main form. E
 Enable **Archives of the Empire: Volume I** in Origins → Books & options to add four Careers, twelve Halfling clan profiles, Mootland origin, three Eonir kindreds, fourteen weapons and four ammunition entries. It works with core alone or with Up in Arms. Fifth Edition creation and advancement remain authoritative; reviewed user decisions, source pages, exclusions and limitations are documented in [docs/ARCHIVES-I.md](docs/ARCHIVES-I.md).
 
 Cityborn uses High Elf Careers while retaining Wood Elf starting benefits. Younger receives Youngblood as an additional kindred Talent. Mootland access and Thorncobble Noble Blood requirements are checked before export; Badger Rider's gaming-table approval requirement is explained. Lip Reading's erroneous Skill entry remains visibly unavailable. Existing core equipment is unchanged; when both supplements are enabled the Up in Arms Precision Shot and Powder price takes precedence, as agreed. Exports include the complete source and conversion record.
+
+## Archives of the Empire II
+
+Enable **Archives of the Empire: Volume II** in Origins → Books & options to add Ogres, Maneater, Rhinox Herder and Ogre Butcher, the printed Ogre equipment and seven Great Maw spells. Optional star signs are in Characteristics; ascendant and celestial mansions are background only. The approved Fifth Edition adaptations and deferred campaign material are documented in [docs/ARCHIVES-II.md](docs/ARCHIVES-II.md).
+
+Ogres start with 1 Fate and 2 Fortune, five Skills at +5 and Large size. Wounds and carrying capacity include their size rules; core carrying Talents apply before capacity is doubled. Language (Magick) uses Toughness in the app, folio and sheet. Ordinary equipment uses the approved sizing categories; native Ogre profiles retain their printed values. Unclear prices, weights and non-Ogre use require GM review rather than invented statistics. Restricted Ogre choices require a GM acknowledgement before export.
+
+Names support Imperial lists or the two traditional d100 elements. Eyes and hair use the printed 2d10 probabilities. Retaining the first star-sign roll adds at most 25 XP, consistently across purchases, undo and exports. The detailed Witchling table on p. 39 governs its outcome; duplicate and incompatible Talents follow core limits. The export includes source pages, adaptation notes, the chart and the complete creation/XP record. All 153 automated checks pass, including all book combinations and every Ogre Career die face.

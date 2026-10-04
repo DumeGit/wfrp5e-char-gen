@@ -1,0 +1,159 @@
+[
+  {
+    "id": "archives-ii:rule:skill-lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Ogres",
+      "Rhinox",
+      "The Great Maw"
+    ],
+    "page": "20–37",
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-ride",
+    "path": [
+      "skillOptions",
+      "Ride"
+    ],
+    "operation": "append",
+    "value": [
+      "Rhinox"
+    ],
+    "page": 36,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-entertain",
+    "path": [
+      "skillOptions",
+      "Entertain"
+    ],
+    "operation": "append",
+    "value": [
+      "Bellow"
+    ],
+    "page": 35,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-animal-training",
+    "path": [
+      "skillOptions",
+      "Animal Training"
+    ],
+    "operation": "append",
+    "value": [
+      "Rhinox"
+    ],
+    "page": 36,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Butcher"
+    ],
+    "page": 37,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-art",
+    "path": [
+      "skillOptions",
+      "Art"
+    ],
+    "operation": "append",
+    "value": [
+      "Butchery"
+    ],
+    "page": 37,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-channelling",
+    "path": [
+      "skillOptions",
+      "Channelling"
+    ],
+    "operation": "append",
+    "value": [
+      "The Great Maw"
+    ],
+    "page": 37,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:skill-secret-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "append",
+    "value": [
+      "The Great Maw"
+    ],
+    "page": 37,
+    "reason": "Printed Archives II specialisations; Fifth Edition Skill definitions apply."
+  },
+  {
+    "id": "archives-ii:rule:great-maw-lore",
+    "path": [
+      "colours"
+    ],
+    "operation": "append",
+    "value": [
+      "The Great Maw"
+    ],
+    "page": 32,
+    "reason": "Great Maw Arcane Lore, explicitly Ogre-only. The Species restriction is enforced by the engine."
+  },
+  {
+    "id": "archives-ii:rule:talent-etiquette",
+    "path": [
+      "talentOptions",
+      "Etiquette"
+    ],
+    "operation": "append",
+    "value": [
+      "Slims"
+    ],
+    "page": 35,
+    "reason": "Printed Archives II Talent specialisations using the existing core Talent."
+  },
+  {
+    "id": "archives-ii:rule:talent-fearless",
+    "path": [
+      "talentOptions",
+      "Fearless"
+    ],
+    "operation": "append",
+    "value": [
+      "Large Beasts"
+    ],
+    "page": 36,
+    "reason": "Printed Archives II Talent specialisations using the existing core Talent."
+  },
+  {
+    "id": "archives-ii:rule:talent-striding-gait",
+    "path": [
+      "talentOptions",
+      "Striding Gait"
+    ],
+    "operation": "append",
+    "value": [
+      "Mountains"
+    ],
+    "page": 36,
+    "reason": "Printed Archives II Talent specialisations using the existing core Talent."
+  }
+]

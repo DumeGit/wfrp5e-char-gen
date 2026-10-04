@@ -1,0 +1,1222 @@
+{
+  "Ogre": {
+    "id": "archives-ii:background:ogre",
+    "page": 21,
+    "forenames": [
+      "Adhemar",
+      "Anders",
+      "Artur",
+      "Beatrijs",
+      "Clementia",
+      "Detlev",
+      "Erika",
+      "Frauke",
+      "Frederich",
+      "Gerner",
+      "Gertraud",
+      "Haletha",
+      "Heinrich",
+      "Helga",
+      "Henryk",
+      "Irmina",
+      "Jehanne",
+      "Karl",
+      "Kruger",
+      "Lorelay",
+      "Marieke",
+      "Sebastien",
+      "Sigfreda",
+      "Talther",
+      "Talunda",
+      "Ulrich",
+      "Ulrika",
+      "Viola",
+      "Walther",
+      "Werther",
+      "Willelma",
+      "Wilryn",
+      "Xaver"
+    ],
+    "surnames": [
+      "Goldtooth",
+      "Ironskin",
+      "Thundermaw",
+      "Bloodguzzler",
+      "Eyebiter",
+      "Onetusk",
+      "Bullgorger"
+    ],
+    "eyes": [
+      "Grey",
+      "Green",
+      "Amber",
+      "Hazel",
+      "Brown",
+      "Dark Brown",
+      "Sienna",
+      "Black",
+      "Purple Black",
+      "Blue Black"
+    ],
+    "hair": [
+      "Brown",
+      "Red Brown",
+      "Terracotta",
+      "Sienna",
+      "Burgundy",
+      "Dark Brown",
+      "Black",
+      "Charcoal",
+      "Jet Black",
+      "Blue Black"
+    ],
+    "imperialNames": "Human",
+    "namePages": {
+      "forenames": 22,
+      "surnames": 23
+    },
+    "rollTables": {
+      "eyes": {
+        "page": 21,
+        "dice": [
+          2,
+          10
+        ],
+        "rows": [
+          {
+            "min": 2,
+            "max": 2,
+            "result": "Grey"
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "result": "Green"
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "result": "Amber"
+          },
+          {
+            "min": 5,
+            "max": 7,
+            "result": "Hazel"
+          },
+          {
+            "min": 8,
+            "max": 11,
+            "result": "Brown"
+          },
+          {
+            "min": 12,
+            "max": 14,
+            "result": "Dark Brown"
+          },
+          {
+            "min": 15,
+            "max": 17,
+            "result": "Sienna"
+          },
+          {
+            "min": 18,
+            "max": 18,
+            "result": "Black"
+          },
+          {
+            "min": 19,
+            "max": 19,
+            "result": "Purple Black"
+          },
+          {
+            "min": 20,
+            "max": 20,
+            "result": "Blue Black"
+          }
+        ]
+      },
+      "hair": {
+        "page": 21,
+        "dice": [
+          2,
+          10
+        ],
+        "rows": [
+          {
+            "min": 2,
+            "max": 2,
+            "result": "Brown"
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "result": "Red Brown"
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "result": "Terracotta"
+          },
+          {
+            "min": 5,
+            "max": 7,
+            "result": "Sienna"
+          },
+          {
+            "min": 8,
+            "max": 11,
+            "result": "Burgundy"
+          },
+          {
+            "min": 12,
+            "max": 14,
+            "result": "Dark Brown"
+          },
+          {
+            "min": 15,
+            "max": 17,
+            "result": "Black"
+          },
+          {
+            "min": 18,
+            "max": 18,
+            "result": "Charcoal"
+          },
+          {
+            "min": 19,
+            "max": 19,
+            "result": "Jet Black"
+          },
+          {
+            "min": 20,
+            "max": 20,
+            "result": "Blue Black"
+          }
+        ]
+      }
+    },
+    "nameElements": [
+      {
+        "name": "element1",
+        "page": 22,
+        "dice": [
+          1,
+          100
+        ],
+        "rows": [
+          {
+            "min": 1,
+            "max": 1,
+            "result": "Ar"
+          },
+          {
+            "min": 2,
+            "max": 2,
+            "result": "Ag"
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "result": "Az"
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "result": "Bargh"
+          },
+          {
+            "min": 5,
+            "max": 5,
+            "result": "Blag"
+          },
+          {
+            "min": 6,
+            "max": 6,
+            "result": "Boz"
+          },
+          {
+            "min": 7,
+            "max": 7,
+            "result": "Bur"
+          },
+          {
+            "min": 8,
+            "max": 8,
+            "result": "Dar"
+          },
+          {
+            "min": 9,
+            "max": 9,
+            "result": "Dergh"
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "result": "Duth"
+          },
+          {
+            "min": 11,
+            "max": 11,
+            "result": "Far"
+          },
+          {
+            "min": 12,
+            "max": 12,
+            "result": "Feg"
+          },
+          {
+            "min": 13,
+            "max": 13,
+            "result": "Fer"
+          },
+          {
+            "min": 14,
+            "max": 14,
+            "result": "Fog"
+          },
+          {
+            "min": 15,
+            "max": 15,
+            "result": "Fuzgh"
+          },
+          {
+            "min": 16,
+            "max": 16,
+            "result": "Gar"
+          },
+          {
+            "min": 17,
+            "max": 17,
+            "result": "Gagh"
+          },
+          {
+            "min": 18,
+            "max": 18,
+            "result": "Geg"
+          },
+          {
+            "min": 19,
+            "max": 19,
+            "result": "Gez"
+          },
+          {
+            "min": 20,
+            "max": 20,
+            "result": "Gorg"
+          },
+          {
+            "min": 21,
+            "max": 21,
+            "result": "Grum"
+          },
+          {
+            "min": 22,
+            "max": 22,
+            "result": "Gurz"
+          },
+          {
+            "min": 23,
+            "max": 23,
+            "result": "Hroth"
+          },
+          {
+            "min": 24,
+            "max": 24,
+            "result": "Keggur"
+          },
+          {
+            "min": 25,
+            "max": 25,
+            "result": "Kug"
+          },
+          {
+            "min": 26,
+            "max": 26,
+            "result": "Kuz"
+          },
+          {
+            "min": 27,
+            "max": 27,
+            "result": "Mag"
+          },
+          {
+            "min": 28,
+            "max": 28,
+            "result": "Mar"
+          },
+          {
+            "min": 29,
+            "max": 29,
+            "result": "Margh"
+          },
+          {
+            "min": 30,
+            "max": 30,
+            "result": "Meg"
+          },
+          {
+            "min": 31,
+            "max": 31,
+            "result": "Merrig"
+          },
+          {
+            "min": 32,
+            "max": 32,
+            "result": "Mor"
+          },
+          {
+            "min": 33,
+            "max": 33,
+            "result": "Morg"
+          },
+          {
+            "min": 34,
+            "max": 34,
+            "result": "Morz"
+          },
+          {
+            "min": 35,
+            "max": 35,
+            "result": "Mug"
+          },
+          {
+            "min": 36,
+            "max": 36,
+            "result": "Murg"
+          },
+          {
+            "min": 37,
+            "max": 37,
+            "result": "Murgog"
+          },
+          {
+            "min": 38,
+            "max": 38,
+            "result": "Murz"
+          },
+          {
+            "min": 39,
+            "max": 39,
+            "result": "Muz"
+          },
+          {
+            "min": 40,
+            "max": 40,
+            "result": "Murthig"
+          },
+          {
+            "min": 41,
+            "max": 41,
+            "result": "Nar"
+          },
+          {
+            "min": 42,
+            "max": 42,
+            "result": "Narg"
+          },
+          {
+            "min": 43,
+            "max": 43,
+            "result": "Nag"
+          },
+          {
+            "min": 44,
+            "max": 44,
+            "result": "Nagar"
+          },
+          {
+            "min": 45,
+            "max": 45,
+            "result": "Naz"
+          },
+          {
+            "min": 46,
+            "max": 46,
+            "result": "Nartha"
+          },
+          {
+            "min": 47,
+            "max": 47,
+            "result": "Ner"
+          },
+          {
+            "min": 48,
+            "max": 48,
+            "result": "Nerg"
+          },
+          {
+            "min": 49,
+            "max": 49,
+            "result": "Neggim"
+          },
+          {
+            "min": 50,
+            "max": 50,
+            "result": "Nur"
+          },
+          {
+            "min": 51,
+            "max": 51,
+            "result": "Nug"
+          },
+          {
+            "min": 52,
+            "max": 52,
+            "result": "Nuggith"
+          },
+          {
+            "min": 53,
+            "max": 53,
+            "result": "Rar"
+          },
+          {
+            "min": 54,
+            "max": 54,
+            "result": "Rag"
+          },
+          {
+            "min": 55,
+            "max": 55,
+            "result": "Raggim"
+          },
+          {
+            "min": 56,
+            "max": 56,
+            "result": "Raz"
+          },
+          {
+            "min": 57,
+            "max": 57,
+            "result": "Razog"
+          },
+          {
+            "min": 58,
+            "max": 58,
+            "result": "Rer"
+          },
+          {
+            "min": 59,
+            "max": 59,
+            "result": "Reg"
+          },
+          {
+            "min": 60,
+            "max": 60,
+            "result": "Skr"
+          },
+          {
+            "min": 61,
+            "max": 61,
+            "result": "Tar"
+          },
+          {
+            "min": 62,
+            "max": 62,
+            "result": "Tag"
+          },
+          {
+            "min": 63,
+            "max": 63,
+            "result": "Tazag"
+          },
+          {
+            "min": 64,
+            "max": 64,
+            "result": "Teg"
+          },
+          {
+            "min": 65,
+            "max": 65,
+            "result": "Terg"
+          },
+          {
+            "min": 66,
+            "max": 66,
+            "result": "Thar"
+          },
+          {
+            "min": 67,
+            "max": 67,
+            "result": "Thag"
+          },
+          {
+            "min": 68,
+            "max": 68,
+            "result": "Thaz"
+          },
+          {
+            "min": 69,
+            "max": 69,
+            "result": "Thegiz"
+          },
+          {
+            "min": 70,
+            "max": 70,
+            "result": "Ther"
+          },
+          {
+            "min": 71,
+            "max": 71,
+            "result": "Thug"
+          },
+          {
+            "min": 72,
+            "max": 72,
+            "result": "Torg"
+          },
+          {
+            "min": 73,
+            "max": 73,
+            "result": "Torz"
+          },
+          {
+            "min": 74,
+            "max": 74,
+            "result": "Tur"
+          },
+          {
+            "min": 75,
+            "max": 75,
+            "result": "Turg"
+          },
+          {
+            "min": 76,
+            "max": 76,
+            "result": "Tuz"
+          },
+          {
+            "min": 77,
+            "max": 77,
+            "result": "Var"
+          },
+          {
+            "min": 78,
+            "max": 78,
+            "result": "Varg"
+          },
+          {
+            "min": 79,
+            "max": 79,
+            "result": "Varz"
+          },
+          {
+            "min": 80,
+            "max": 80,
+            "result": "Ver"
+          },
+          {
+            "min": 81,
+            "max": 81,
+            "result": "Verm"
+          },
+          {
+            "min": 82,
+            "max": 82,
+            "result": "Vug"
+          },
+          {
+            "min": 83,
+            "max": 83,
+            "result": "Vuz"
+          },
+          {
+            "min": 84,
+            "max": 84,
+            "result": "Vuzzig"
+          },
+          {
+            "min": 85,
+            "max": 85,
+            "result": "Yar"
+          },
+          {
+            "min": 86,
+            "max": 86,
+            "result": "Yamith"
+          },
+          {
+            "min": 87,
+            "max": 87,
+            "result": "Yer"
+          },
+          {
+            "min": 88,
+            "max": 88,
+            "result": "Yeg"
+          },
+          {
+            "min": 89,
+            "max": 89,
+            "result": "Yorgh"
+          },
+          {
+            "min": 90,
+            "max": 90,
+            "result": "Yorz"
+          },
+          {
+            "min": 91,
+            "max": 91,
+            "result": "Yur"
+          },
+          {
+            "min": 92,
+            "max": 92,
+            "result": "Yug"
+          },
+          {
+            "min": 93,
+            "max": 93,
+            "result": "Yuz"
+          },
+          {
+            "min": 94,
+            "max": 94,
+            "result": "Zar"
+          },
+          {
+            "min": 95,
+            "max": 95,
+            "result": "Zargh"
+          },
+          {
+            "min": 96,
+            "max": 96,
+            "result": "Zag"
+          },
+          {
+            "min": 97,
+            "max": 97,
+            "result": "Zer"
+          },
+          {
+            "min": 98,
+            "max": 98,
+            "result": "Zeg"
+          },
+          {
+            "min": 99,
+            "max": 99,
+            "result": "Zog"
+          },
+          {
+            "min": 100,
+            "max": 100,
+            "result": "Zor"
+          }
+        ]
+      },
+      {
+        "name": "element2",
+        "page": 22,
+        "dice": [
+          1,
+          100
+        ],
+        "rows": [
+          {
+            "min": 1,
+            "max": 1,
+            "result": "abba"
+          },
+          {
+            "min": 2,
+            "max": 2,
+            "result": "addoo"
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "result": "akka"
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "result": "ag"
+          },
+          {
+            "min": 5,
+            "max": 5,
+            "result": "alloo"
+          },
+          {
+            "min": 6,
+            "max": 6,
+            "result": "alta"
+          },
+          {
+            "min": 7,
+            "max": 7,
+            "result": "algoo"
+          },
+          {
+            "min": 8,
+            "max": 8,
+            "result": "alza"
+          },
+          {
+            "min": 9,
+            "max": 9,
+            "result": "angoosh"
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "result": "annash"
+          },
+          {
+            "min": 11,
+            "max": 11,
+            "result": "argo"
+          },
+          {
+            "min": 12,
+            "max": 12,
+            "result": "argani"
+          },
+          {
+            "min": 13,
+            "max": 13,
+            "result": "argloo"
+          },
+          {
+            "min": 14,
+            "max": 14,
+            "result": "arki"
+          },
+          {
+            "min": 15,
+            "max": 15,
+            "result": "arkash"
+          },
+          {
+            "min": 16,
+            "max": 16,
+            "result": "arkuga"
+          },
+          {
+            "min": 17,
+            "max": 17,
+            "result": "artha"
+          },
+          {
+            "min": 18,
+            "max": 18,
+            "result": "artaga"
+          },
+          {
+            "min": 19,
+            "max": 19,
+            "result": "arthash"
+          },
+          {
+            "min": 20,
+            "max": 20,
+            "result": "attha"
+          },
+          {
+            "min": 21,
+            "max": 21,
+            "result": "ebb"
+          },
+          {
+            "min": 22,
+            "max": 22,
+            "result": "edd"
+          },
+          {
+            "min": 23,
+            "max": 23,
+            "result": "ek"
+          },
+          {
+            "min": 24,
+            "max": 24,
+            "result": "elg"
+          },
+          {
+            "min": 25,
+            "max": 25,
+            "result": "ell"
+          },
+          {
+            "min": 26,
+            "max": 26,
+            "result": "elt"
+          },
+          {
+            "min": 27,
+            "max": 27,
+            "result": "elg"
+          },
+          {
+            "min": 28,
+            "max": 28,
+            "result": "elz"
+          },
+          {
+            "min": 29,
+            "max": 29,
+            "result": "eng"
+          },
+          {
+            "min": 30,
+            "max": 30,
+            "result": "emm"
+          },
+          {
+            "min": 31,
+            "max": 31,
+            "result": "enn"
+          },
+          {
+            "min": 32,
+            "max": 32,
+            "result": "erg"
+          },
+          {
+            "min": 33,
+            "max": 33,
+            "result": "ergl"
+          },
+          {
+            "min": 34,
+            "max": 34,
+            "result": "erk"
+          },
+          {
+            "min": 35,
+            "max": 35,
+            "result": "erkag"
+          },
+          {
+            "min": 36,
+            "max": 36,
+            "result": "ert"
+          },
+          {
+            "min": 37,
+            "max": 37,
+            "result": "erth"
+          },
+          {
+            "min": 38,
+            "max": 38,
+            "result": "ett"
+          },
+          {
+            "min": 39,
+            "max": 39,
+            "result": "ew"
+          },
+          {
+            "min": 40,
+            "max": 40,
+            "result": "gat"
+          },
+          {
+            "min": 41,
+            "max": 41,
+            "result": "getha"
+          },
+          {
+            "min": 42,
+            "max": 42,
+            "result": "gothish"
+          },
+          {
+            "min": 43,
+            "max": 43,
+            "result": "gratoo"
+          },
+          {
+            "min": 44,
+            "max": 44,
+            "result": "grethi"
+          },
+          {
+            "min": 45,
+            "max": 45,
+            "result": "grothoo"
+          },
+          {
+            "min": 46,
+            "max": 46,
+            "result": "gruta"
+          },
+          {
+            "min": 47,
+            "max": 47,
+            "result": "guta"
+          },
+          {
+            "min": 48,
+            "max": 48,
+            "result": "guttash"
+          },
+          {
+            "min": 49,
+            "max": 49,
+            "result": "obbi"
+          },
+          {
+            "min": 50,
+            "max": 50,
+            "result": "oddi"
+          },
+          {
+            "min": 51,
+            "max": 51,
+            "result": "okka"
+          },
+          {
+            "min": 52,
+            "max": 52,
+            "result": "olgish"
+          },
+          {
+            "min": 53,
+            "max": 53,
+            "result": "olloo"
+          },
+          {
+            "min": 54,
+            "max": 54,
+            "result": "oltush"
+          },
+          {
+            "min": 55,
+            "max": 55,
+            "result": "olgtha"
+          },
+          {
+            "min": 56,
+            "max": 56,
+            "result": "olthi"
+          },
+          {
+            "min": 57,
+            "max": 57,
+            "result": "onga"
+          },
+          {
+            "min": 58,
+            "max": 58,
+            "result": "onni"
+          },
+          {
+            "min": 59,
+            "max": 59,
+            "result": "orgoo"
+          },
+          {
+            "min": 60,
+            "max": 60,
+            "result": "orglish"
+          },
+          {
+            "min": 61,
+            "max": 61,
+            "result": "ork"
+          },
+          {
+            "min": 62,
+            "max": 62,
+            "result": "ort"
+          },
+          {
+            "min": 63,
+            "max": 63,
+            "result": "orth"
+          },
+          {
+            "min": 64,
+            "max": 64,
+            "result": "ott"
+          },
+          {
+            "min": 65,
+            "max": 65,
+            "result": "rag"
+          },
+          {
+            "min": 66,
+            "max": 66,
+            "result": "reg"
+          },
+          {
+            "min": 67,
+            "max": 67,
+            "result": "ret"
+          },
+          {
+            "min": 68,
+            "max": 68,
+            "result": "reth"
+          },
+          {
+            "min": 69,
+            "max": 69,
+            "result": "rob"
+          },
+          {
+            "min": 70,
+            "max": 70,
+            "result": "rok"
+          },
+          {
+            "min": 71,
+            "max": 71,
+            "result": "roth"
+          },
+          {
+            "min": 72,
+            "max": 72,
+            "result": "rug"
+          },
+          {
+            "min": 73,
+            "max": 73,
+            "result": "ruk"
+          },
+          {
+            "min": 74,
+            "max": 74,
+            "result": "rut"
+          },
+          {
+            "min": 75,
+            "max": 75,
+            "result": "rutag"
+          },
+          {
+            "min": 76,
+            "max": 76,
+            "result": "tag"
+          },
+          {
+            "min": 77,
+            "max": 77,
+            "result": "teg"
+          },
+          {
+            "min": 78,
+            "max": 78,
+            "result": "thorg"
+          },
+          {
+            "min": 79,
+            "max": 79,
+            "result": "throg"
+          },
+          {
+            "min": 80,
+            "max": 80,
+            "result": "throt"
+          },
+          {
+            "min": 81,
+            "max": 81,
+            "result": "thruta"
+          },
+          {
+            "min": 82,
+            "max": 82,
+            "result": "thrush"
+          },
+          {
+            "min": 83,
+            "max": 83,
+            "result": "ubbsh"
+          },
+          {
+            "min": 84,
+            "max": 84,
+            "result": "uddoo"
+          },
+          {
+            "min": 85,
+            "max": 85,
+            "result": "ulgoo"
+          },
+          {
+            "min": 86,
+            "max": 86,
+            "result": "ulloo"
+          },
+          {
+            "min": 87,
+            "max": 87,
+            "result": "ultsh"
+          },
+          {
+            "min": 88,
+            "max": 88,
+            "result": "ulgi"
+          },
+          {
+            "min": 89,
+            "max": 89,
+            "result": "ulzish"
+          },
+          {
+            "min": 90,
+            "max": 90,
+            "result": "ungish"
+          },
+          {
+            "min": 91,
+            "max": 91,
+            "result": "unnoo"
+          },
+          {
+            "min": 92,
+            "max": 92,
+            "result": "urga"
+          },
+          {
+            "min": 93,
+            "max": 93,
+            "result": "urka"
+          },
+          {
+            "min": 94,
+            "max": 94,
+            "result": "urthoo"
+          },
+          {
+            "min": 95,
+            "max": 95,
+            "result": "urthu"
+          },
+          {
+            "min": 96,
+            "max": 96,
+            "result": "urthagish"
+          },
+          {
+            "min": 97,
+            "max": 97,
+            "result": "urutoo"
+          },
+          {
+            "min": 98,
+            "max": 98,
+            "result": "uruzi"
+          },
+          {
+            "min": 99,
+            "max": 99,
+            "result": "uttish"
+          },
+          {
+            "min": 100,
+            "max": 100,
+            "result": "yogg"
+          }
+        ]
+      }
+    ],
+    "conversion": "Imperial Ogre forename suggestions use the supplied Fifth Edition Human list (core p. 27), permitted by Archives II p. 21. Traditional names join two separate d100 elements (p. 22). Titles/clan names are printed examples (p. 23), sampled uniformly as suggestions. Eyes/hair use printed 2d10 tables (p. 21). Names UI must distinguish these sources."
+  }
+}

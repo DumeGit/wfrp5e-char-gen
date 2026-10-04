@@ -1,0 +1,21 @@
+[
+  {
+    "id": "archives-ii:armour:ogre-gutplate",
+    "name": "Ogre Gutplate",
+    "page": 29,
+    "enc": 4,
+    "locations": "Body",
+    "ap": 3,
+    "qualities": "Impenetrable"
+  },
+  {
+    "id": "archives-ii:armour:ironfist-shield",
+    "name": "Ironfist",
+    "page": 29,
+    "enc": 2,
+    "locations": "Shield",
+    "ap": 1,
+    "qualities": "Shield 1, Defensive",
+    "conversion": "Printed Shield 1 uses the current core Shield quality (p. 305), providing its Shield AP while equipped. Weapon/armour Encumbrance is counted once."
+  }
+]

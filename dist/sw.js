@@ -1,7 +1,8 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"51241ce62373edd55e34";
+const CACHE=CACHE_PREFIX+"7e3a14d2161d9a8b416d";
 const ASSETS=[
  "app.js",
+ "archives-ui.mjs",
  "assets/LICENSE-pdf-lib.md",
  "assets/character-sheet.pdf",
  "assets/icon-180.png",
@@ -9,6 +10,7 @@ const ASSETS=[
  "assets/icon-512.png",
  "assets/icon-maskable-512.png",
  "assets/pdf-lib.min.js",
+ "astrology.mjs",
  "background.mjs",
  "book-ui.mjs",
  "books.mjs",
@@ -21,6 +23,18 @@ const ASSETS=[
  "data/books/archives-i/rules.json",
  "data/books/archives-i/talents.json",
  "data/books/archives-i/weapons.json",
+ "data/books/archives-ii/armour.json",
+ "data/books/archives-ii/astrology.json",
+ "data/books/archives-ii/background.json",
+ "data/books/archives-ii/careers.json",
+ "data/books/archives-ii/manifest.json",
+ "data/books/archives-ii/market.json",
+ "data/books/archives-ii/rules.json",
+ "data/books/archives-ii/species.json",
+ "data/books/archives-ii/spells.json",
+ "data/books/archives-ii/tables.json",
+ "data/books/archives-ii/talents.json",
+ "data/books/archives-ii/weapons.json",
  "data/books/core/armour.json",
  "data/books/core/config.json",
  "data/books/core/manifest.json",
@@ -47,6 +61,7 @@ const ASSETS=[
  "data/species.json",
  "data/spells.json",
  "data/talents.json",
+ "equipment-sizing.mjs",
  "equipment.mjs",
  "export.mjs",
  "folio.mjs",
@@ -59,6 +74,7 @@ const ASSETS=[
  "regional-careers.mjs",
  "rules.mjs",
  "sources.mjs",
+ "species-mechanics.mjs",
  "styles.css",
  "ui.mjs"
 ];

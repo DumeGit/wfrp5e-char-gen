@@ -1,0 +1,121 @@
+{
+  "Ogre": {
+    "id": "archives-ii:species:ogre",
+    "page": 20,
+    "offsets": {
+      "WS": 20,
+      "BS": 10,
+      "S": 35,
+      "T": 35,
+      "I": 0,
+      "Ag": 15,
+      "Dex": 10,
+      "Int": 10,
+      "WP": 20,
+      "Fel": 10
+    },
+    "languages": [
+      "Reikspiel"
+    ],
+    "fate": 1,
+    "fortune": 2,
+    "movement": 6,
+    "age": [
+      15,
+      5
+    ],
+    "height": [
+      91,
+      1
+    ],
+    "appearancePage": 21,
+    "skills": [
+      "Athletics",
+      "Consume Alcohol",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Intimidate",
+      "Language (Grumbarth)",
+      "Lore (Ogres)",
+      "Melee (Basic)",
+      "Melee (Brawling)",
+      "Navigation",
+      "Outdoor Survival",
+      "Track"
+    ],
+    "talents": [
+      [
+        "Dirty Fighting"
+      ],
+      [
+        "Resistant (Chaos)"
+      ],
+      [
+        "Resistant (Poison (Ingested))"
+      ],
+      [
+        "Very Resilient",
+        "Very Strong"
+      ],
+      [
+        "Vice (Food)"
+      ]
+    ],
+    "randomTalents": 0,
+    "mechanics": {
+      "size": "Large",
+      "capacityMultiplier": 2,
+      "equipmentSizing": "ogre",
+      "gmApproval": "No Ogre may take writing, complex-artistry or suitably advanced Lore Skills/Talents without GM permission (Archives II p. 21). Confirm with your GM which of your choices need permission and obtain it before finishing creation.",
+      "careers": [
+        "artisan",
+        "beggar",
+        "rat-catcher",
+        "watchman",
+        "servant",
+        "bailiff",
+        "hunter",
+        "miner",
+        "bounty-hunter",
+        "entertainer",
+        "pedlar",
+        "sailor",
+        "stevedore",
+        "grave-robber",
+        "outlaw",
+        "racketeer",
+        "guard",
+        "pit-fighter",
+        "protagonist",
+        "soldier"
+      ],
+      "skillCharacteristics": {
+        "Language (Magick)": "T"
+      },
+      "skillReplacements": {
+        "Ride (Horse)": "Ride (Rhinox)"
+      },
+      "arcaneLores": [
+        "The Great Maw",
+        "Heavens",
+        "Death",
+        "Beasts"
+      ],
+      "exclusiveLores": [
+        "The Great Maw"
+      ],
+      "magicReferences": [
+        {
+          "page": 31,
+          "text": "Ogre Casting uses Toughness for Language (Magick). Spellcasting requires meat as part of the cost of living; without suitable meat the Ogre loses Wounds equal to the spell’s CN. This ordinary meat does not reduce Miscast risk. Esoteric ingredients can be acquired or bought for 1 shilling per CN. The page also states that casting without a suitable ingredient costs Wounds equal to CN; retain that wording for GM adjudication. These are play references, not automatic Wounds or coin deductions."
+        },
+        {
+          "page": 32,
+          "lore": "The Great Maw",
+          "text": "Great Maw Lore: after successfully casting a Lore spell, roll 1d10. A 10, or a result at least equal to its unmodified CN, restores Wounds equal to that unmodified CN. Channelling or a Grimoire does not lower the CN used for this benefit. Ingredients are bloody animal parts, unusual bile, marrow or cured fat. This is a play reference, not automatic healing."
+        }
+      ]
+    },
+    "conversion": "User-approved adaptation: 1 Fate, 2 Fortune, no extra point to distribute; normal Fifth Edition random-creation bonuses apply. Choose five Skills at +5 with core limits. Retain five printed Species Talents, using Resistant as the core heading; omit old Large Talent and record Large size separately. Native Reikspiel is explicit; Grumbarth remains selectable. Carrying capacity is doubled after core Talent effects. Use current core Size rules, not the old combat summary on p. 28."
+  }
+}

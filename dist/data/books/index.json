@@ -13,6 +13,10 @@
     {
       "id": "archives-i",
       "path": "archives-i/manifest.json"
+    },
+    {
+      "id": "archives-ii",
+      "path": "archives-ii/manifest.json"
     }
   ]
 }

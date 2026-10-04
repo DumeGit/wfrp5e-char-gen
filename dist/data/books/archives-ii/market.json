@@ -1,0 +1,149 @@
+[
+  {
+    "id": "archives-ii:item:ogre-club",
+    "name": "Ogre Club",
+    "page": 29,
+    "price": "1 GC",
+    "enc": 2,
+    "availability": "Common",
+    "category": "Weapons",
+    "text": "Optional personalisation on p. 30: metal plates add Pummel, rusty spikes add Penetrating, scavenged blades add Hack. Equipment Quality/Flaw editing is deferred in this creator; no option is silently chosen. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:ironfist",
+    "name": "Ironfist",
+    "page": 29,
+    "price": "4 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "An Ogre cannot be disarmed of an Ironfist. The hand may still hold a weapon or perform simple actions (p. 30). Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:big-ogre-club-2h",
+    "name": "Big Ogre Club (2H)",
+    "page": 29,
+    "price": "5 GC",
+    "enc": 6,
+    "availability": "Common",
+    "category": "Weapons",
+    "text": "Optional personalisation on p. 30: metal plates add Pummel, rusty spikes add Penetrating, scavenged blades add Hack. Equipment Quality/Flaw editing is deferred in this creator; no option is silently chosen. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:great-throwing-spear",
+    "name": "Great Throwing Spear",
+    "page": 29,
+    "price": "6/–",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "A large javelin used by Ogre Hunters (p. 30). Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:leadbelcher-gun-2h",
+    "name": "Leadbelcher Gun (2H)",
+    "page": 29,
+    "price": "14 GC",
+    "enc": 8,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Ogre cannon-like weapon. Can fire shot or cannonballs (p. 30). Core p. 303 supplies inherent Blackpowder and Damaging Qualities. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:ogre-pistol",
+    "name": "Ogre Pistol",
+    "page": 29,
+    "price": "9 GC",
+    "enc": 3,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Uses normal blackpowder shot and powder. May also serve as a Hand Weapon, breaking only on a Fumbled attack (p. 30). No second weapon is granted. Core p. 303 supplies inherent Blackpowder and Damaging Qualities. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:harpoon-launcher",
+    "name": "Harpoon Launcher",
+    "page": 29,
+    "price": "8 GC",
+    "enc": 5,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Uses Ranged (Crossbow) or Ranged (Entangling) without penalty. Removing the rope increases range to 60 and removes Entangle (p. 30); the listed profile includes its rope. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:chain-trap",
+    "name": "Chain Trap",
+    "page": 29,
+    "price": "1 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Spring-loaded jaws on a chain; can be flung at prey and reeled in (p. 30). Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:leadbelcher-shot-12",
+    "name": "Leadbelcher Shot (12)",
+    "page": 29,
+    "price": "4/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "Half weapon",
+      "damage": "—",
+      "qualities": "Blast 3"
+    },
+    "text": "Already Ogre-sized; printed ammunition pack and Encumbrance are retained.",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:leadbelcher-ball-1",
+    "name": "Leadbelcher Ball (1)",
+    "page": 29,
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+4",
+      "qualities": "Penetrating, Impale, Impact"
+    },
+    "text": "Already Ogre-sized; printed ammunition pack and Encumbrance are retained. Price includes 2/– of powder for one shot; recovered balls can be fired again for the cost of powder (p. 29).",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:harpoon-6",
+    "name": "Harpoon (6)",
+    "page": 29,
+    "price": "5/–",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Impale"
+    },
+    "text": "Already Ogre-sized; printed ammunition pack and Encumbrance are retained.",
+    "ogreSized": true
+  },
+  {
+    "id": "archives-ii:item:ogre-gutplate",
+    "name": "Ogre Gutplate",
+    "page": 29,
+    "price": "20 GC",
+    "enc": 4,
+    "availability": "Rare",
+    "category": "Armour",
+    "text": "Already Ogre-sized. Uniquely suited to Ogre anatomy; even scaled-down versions give incomplete protection to other Species (p. 29). The table lists Plate with no additional penalty; core plate Stealth, Casting and worn-armour Encumbrance rules apply.",
+    "ogreSized": true
+  }
+]

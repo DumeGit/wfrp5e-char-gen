@@ -1,0 +1,361 @@
+[
+  {
+    "id": "archives-ii:career:maneater",
+    "name": "Maneater",
+    "class": "Warrior",
+    "species": [
+      "Ogre"
+    ],
+    "page": 35,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Fresh Meat",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Gamble",
+          "Intimidate",
+          "Language (Battle)",
+          "Melee (Basic)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Menacing",
+          "Strong Back",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Dagger",
+          "Hunk of Meat",
+          "Wanderlust"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Maneater",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Entertain (Bellow)",
+          "Gossip",
+          "Lore (Local)",
+          "Melee (Two-handed)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Etiquette (Slims)",
+          "Rapid Reload",
+          "Seasoned Traveller",
+          "Strike Mighty Blow"
+        ],
+        "trappings": [
+          "Gutplate",
+          "Local Clothing",
+          "Two-handed Weapon or Ogre Pistol"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Maneater Crusher",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Melee (Any)",
+          "Intuition",
+          "Leadership"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Combat Reflexes",
+          "Frightening",
+          "Hardy"
+        ],
+        "trappings": [
+          "Unit of Mercenaries",
+          "Respect"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Maneater Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Language (Any)",
+          "Ranged (Any)"
+        ],
+        "talents": [
+          "Combat Master",
+          "Furious Assault",
+          "Reaction Strike",
+          "War Leader"
+        ],
+        "trappings": [
+          "Battle-Tested Gutplate",
+          "Mercenary Contract"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, XP advancement and core Talent definitions apply; retain all ten printed first-level Skill options. Warleader → War Leader."
+  },
+  {
+    "id": "archives-ii:career:rhinox-herder",
+    "name": "Rhinox Herder",
+    "class": "Peasant",
+    "species": [
+      "Ogre"
+    ],
+    "page": 36,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": 1,
+      "S": 1,
+      "T": 1,
+      "I": null,
+      "Ag": 4,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Rhinox Rustler",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Bribery",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Melee (Basic)",
+          "Perception",
+          "Ranged (Entangling)",
+          "Set Trap",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Flee!",
+          "Marksman",
+          "Rover",
+          "Striding Gait (Mountains)"
+        ],
+        "trappings": [
+          "Backpack",
+          "Hand Weapon",
+          "Lasso",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Rhinox Herder",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Animal Training (Rhinox)",
+          "Charm Animal",
+          "Endurance",
+          "Lore (Rhinox)",
+          "Ranged (Throwing)"
+        ],
+        "talents": [
+          "Fearless (Large Beasts)",
+          "Roughrider",
+          "Stout-hearted",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Harpoon or Great Throwing Spear",
+          "Rhinox Furs"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Rhinox Breaker",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Intimidate",
+          "Outdoor Survival",
+          "Ride (Rhinox)"
+        ],
+        "talents": [
+          "Distract",
+          "Resolute",
+          "Seasoned Traveller",
+          "Trick Rider"
+        ],
+        "trappings": [
+          "Rhinox",
+          "Rhinox Skull Gutplate",
+          "Saddlebags"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Rhinox Master",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Intuition",
+          "Leadership"
+        ],
+        "talents": [
+          "Carouser",
+          "Frightening",
+          "Inspiring",
+          "Strike to Injure"
+        ],
+        "trappings": [
+          "Farmstead or Grazing Rights on a Large Estate",
+          "Herd of Rhinox or Other Large Beasts"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, XP advancement and core Talent definitions apply; retain all ten printed first-level Skill options. Strider (Mountains) → Striding Gait (Mountains); Trick Riding → Trick Rider. Harpoon remains the printed Trapping with unresolved statistics; it is not silently a launcher or a pack of six ammunition pieces."
+  },
+  {
+    "id": "archives-ii:career:ogre-butcher",
+    "name": "Ogre Butcher",
+    "class": "Academic",
+    "species": [
+      "Ogre"
+    ],
+    "page": 37,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 4,
+      "Ag": null,
+      "Dex": 2,
+      "Int": null,
+      "WP": 1,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Slopscooper",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Consume Alcohol",
+          "Endurance",
+          "Gossip",
+          "Intimidate",
+          "Language (Magick)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Pray",
+          "Trade (Butcher)"
+        ],
+        "talents": [
+          "Implacable",
+          "Petty Magic",
+          "Sixth Sense",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Butcher's Apron",
+          "Hand Weapon (Cleaver or Mallet)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Ogre Butcher",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Butchery)",
+          "Channelling (The Great Maw)",
+          "Intimidate",
+          "Lore (The Great Maw)",
+          "Ranged (Throwing)",
+          "Secret Signs (The Great Maw)"
+        ],
+        "talents": [
+          "Acute Sense (Taste)",
+          "Aethyric Attunement",
+          "Arcane Magic (The Great Maw)",
+          "Holy Visions"
+        ],
+        "trappings": [
+          "Carved Animal Bones (Grimoire)",
+          "Trade Tools (Butcher)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Mawsage",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Entertain (Speeches)",
+          "Heal",
+          "Intuition",
+          "Perception"
+        ],
+        "talents": [
+          "Frightening",
+          "Second Sight",
+          "Strike Mighty Blow",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Apprentice Butcher",
+          "Bloody Sack of 10 Esoteric Ingredients",
+          "Collection of Skulls"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Slaughtermaster",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Language (Any)",
+          "Lore (Magic)"
+        ],
+        "talents": [
+          "Detect Artefact",
+          "Impassioned Zeal",
+          "Inspiring",
+          "Magical Sense"
+        ],
+        "trappings": [
+          "Cave or Other Lair",
+          "Loyal Cultists of the Maw",
+          "Bottomless Hunger"
+        ]
+      }
+    ],
+    "conversion": "Fifth Edition creation allocations, XP advancement and core Talent definitions apply; retain all ten printed first-level Skill options. Arcane Magic (Lore of the Great Maw) → Arcane Magic (The Great Maw)."
+  }
+]

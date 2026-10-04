@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Bonecrusher",
+    "page": 32,
+    "category": "The Great Maw",
+    "cn": 5,
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Instant",
+    "text": "You crunch loudly on a mouthful of bones while snarling a curse at a nearby foe. Bonecrusher is a magic missile with a Damage of +4 which ignores your target’s Armour Points but not their Toughness Bonus. Additionally, if your attack inflicts a Critical Wound, add +20 to the roll on the appropriate Critical Wound table to determine its severity.",
+    "id": "archives-ii:spell:bonecrusher",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here."
+  },
+  {
+    "name": "Bullgorger",
+    "page": 32,
+    "category": "The Great Maw",
+    "cn": 5,
+    "range": "Willpower Bonus yards",
+    "target": "1",
+    "duration": "Willpower Bonus Rounds",
+    "text": "You devour the heart of a mighty beast, projecting its strength and power onto a nearby creature. For the spell’s duration, your target adds +2 to their Strength Bonus for the purposes of Damage they inflict or for other appropriate feats of Strength. However, when the spell ends, they find themselves consumed by an immense hunger and must immediately gorge themselves on a substantial meal or gain a Fatigued Condition. If the target wishes to reject your gift, they may attempt a Difficult (−1 SL) Cool Test to ignore its effects.",
+    "id": "archives-ii:spell:bullgorger",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here. User resolves conflicting Difficult (+20) by the difficulty label: Difficult (−1 SL)."
+  },
+  {
+    "name": "Braingobbler",
+    "page": 32,
+    "category": "The Great Maw",
+    "cn": 5,
+    "range": "You",
+    "target": "You",
+    "duration": "Willpower Bonus Rounds",
+    "text": "You devour an entire head, brains and all. Your prodigious gut distils the essence of nightmares from within the unfortunate skull and projects them in a wave of nauseating horror about you. You gain the Fear 2 Creature Trait (WFRP , page 341). If the late owner of the devoured head had a close relationship to someone who is affected by your Fear Trait, they make any Cool Tests to resist the Fear at a – 20 penalty.",
+    "id": "archives-ii:spell:braingobbler",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here."
+  },
+  {
+    "name": "Taste Death",
+    "page": 33,
+    "category": "The Great Maw",
+    "cn": 2,
+    "range": "You",
+    "target": "You",
+    "duration": "Instant",
+    "text": "By consuming part of a corpse you learn about when and how the creature died. You learn if the victim was stabbed, poisoned, killed by magic, died of natural causes, and so on. The information you gain is general. For example, you may learn that the victim was stabbed to death with a sword, but not what kind of sword. You also do not learn anything about who may have been responsible, save the method they used. If the target suffered a ‘clean’ death — that is, did not die of poison or disease — it is considered proper to consume the remainder of the corpse.",
+    "id": "archives-ii:spell:taste-death",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here."
+  },
+  {
+    "name": "Trollguts",
+    "page": 33,
+    "category": "The Great Maw",
+    "cn": 7,
+    "range": "Toughness Bonus yards",
+    "target": "1",
+    "duration": "Toughness Bonus Rounds",
+    "text": "You swallow a tiny amount of Troll Bile or similar, imbibing and distilling that creature’s immense regenerative powers and gifting them to another. Your target gains the Regeneration Creature Trait (WFRP , page 341 ). Ogres suffer no additional effects from this spell, but other Species may be less lucky. Anyone other than an Ogre who recovers Wounds from the effects of this spell must make an Average (+2 SL) Endurance Test. If they fail, new flesh growing over their wounds takes on a mottled green or blue appearance, not at all unlike the skin of a Troll. This effect is particularly prominent if the spell happens to be responsible for a limb growing back. Though this effect is not a mutation, it is likely to be mistaken for one by anyone who sees it, with all the potential unpleasant consequences that may ensue.",
+    "id": "archives-ii:spell:trollguts",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here. Regenerate uses current core Regeneration (p. 360); Average (+20) difficulty uses +2 SL under Appendix I p. 364."
+  },
+  {
+    "name": "The Maw",
+    "page": 33,
+    "category": "The Great Maw",
+    "cn": 11,
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "You devour the better part of a large beast, drawing out the Great Maw itself, causing a sliver of it to manifest. The ground splits apart, a thousand gnashing teeth waiting hungrily in the chasm. The pit is bottomless, its hunger endless, its teeth shards of razor, and the sound of its roiling jaws like the grinding of glass on stone. Anyone in the affected area must make an immediate Challenging (+0 SL) Dodge Test to scramble clear. If they succeed, targets take a Damage +8 hit as they pull themselves out of the Maw, with the Damage reduced by 1 for each SL achieved on the Dodge Test. Anyone who fails the Test plunges into the Maw, which begins the methodical work of swallowing them alive. They immediately suffer a Damage +10 hit to a randomly chosen location, and gain 3 Entangled Conditions. Attempts to remove these Conditions are resisted by the Maw’s Strength of 60. The victim may not escape the Maw until all 3 Entangled conditions are removed. At the end of each of their turns, creatures inside the Maw suffer another Damage +10 hit to a randomly chosen location. The Maw’s teeth are sharp, and it does not give up prey easily. As soon as the spell ends, the Maw vanishes, but attempts to keep any limbs that remain inside it as it goes. If a creature is inside the Maw when it vanishes, they immediately suffer a Critical Wound to a randomly chosen hit location.",
+    "id": "archives-ii:spell:the-maw",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here. Challenging (+0) difficulty uses +0 SL under Appendix I p. 364."
+  },
+  {
+    "name": "Feast of the Fallen",
+    "page": 33,
+    "category": "The Great Maw",
+    "cn": 9,
+    "range": "You",
+    "target": "Special",
+    "duration": "Willpower Bonus Rounds",
+    "text": "You bathe your favourite blade in the blood of a freshly fallen foe, drawing power to you and awakening a thirst for blood in your allies. Any creatures of your choosing in the area of effect gain the Vampiric Creature Trait (WFRP , page 343) for the duration of this spell. The target does not need to bite their opponents to enjoy the benefits of this Trait, merely wound them in melee combat. Additionally, they may continue to benefit from healing from other sources. If a creature wishes to resist this spell, they may attempt a Difficult (−1 SL) Endurance Test to ignore its effects. For the duration of this spell, the blood of foes gushes towards those affected, seeping across their blades, up their arms, and into their mouths. Ogres are not bothered by this effect, and in fact most revel in it, but other creatures typically find being made subject to this spell extremely unsettling. When the spell ends, non-Ogres who wounded at least one opponent in melee while under its effects must make a Challenging (+0 SL) Cool Test or gain a Stunned Condition. Additionally, if they wounded an opponent who had the Infected or Diseased Creature Traits, any Test made to avoid the negative effects of those Traits suffers a –30 penalty.",
+    "id": "archives-ii:spell:feast-of-the-fallen",
+    "conversion": "Current core Creature Traits apply; old page references identify Fourth Edition. Numeric effect modifiers remain printed unless explicitly converted here. User resolves conflicting Difficult (+20) by the difficulty label: Difficult (−1 SL). Challenging (+0) difficulty uses +0 SL under Appendix I p. 364."
+  }
+]

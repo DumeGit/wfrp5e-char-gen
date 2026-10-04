@@ -1,6 +1,7 @@
 import {career,derive} from './rules.mjs';
 import {marketCatalog,purchaseItem} from './market.mjs';
 import {rawGearSlots,rolledName,coinValue,itemParts,itemModifiers,modifierNames} from './inventory.mjs';
+import {equipmentSize} from './equipment-sizing.mjs';
 export function itemWeight(R,name){
  // The ammunition table gives Enc 0 for these units/packs (p. 303).
  if(['Arrow','Bolt','Shot','Bullet','Lead Bullet','Stone Bullet'].includes(name))return 0;
@@ -16,13 +17,15 @@ export function itemWeight(R,name){
 
 const ALIASES={'Main-gauche':'Main Gauche','Sword-breaker':'Swordbreaker','Great Weapon (Two-handed Pick)':'Pick (2H)','Great Weapon (Military Flail)':'Military Flail (2H)','Great Weapon (Dwarf Greataxe)':'Greataxe (2H)','Large Sack':'Sack, Large','Small Instrument':'Small Instrument','Coach Horn':'Instrument','Mandolin':'Instrument','Lute':'Large Instrument','Harp':'Large Instrument','Flute':'Small Instrument','Recorder':'Small Instrument','Tambourine':'Small Instrument','Small Drum':'Instrument','Large Drum':'Large Instrument','Parchment':'Parchment/sheet','Rations (1 day)':'Rations, 1 day','Rations (one day)':'Rations, 1 day','Lunch':'Meal, inn','Grimoire':'Book, Magic'};
 export function gearOptions(raw,R){
+ if(raw==='Two-handed Weapon')return R.weapons.filter(w=>w.kind==='melee'&&w.group==='Two-handed').map(w=>w.name);
+ if(/^Hand Weapon \(.+ or .+\)$/.test(raw))return raw.slice(13,-1).split(' or ').map(x=>`Hand Weapon (${x})`);
  if(raw==='Entangling OR Throwing weapon')return [...new Set(R.weapons.filter(w=>w.kind==='ranged'&&['Entangling','Throwing'].includes(w.group)).map(w=>w.name))];
  if(raw==='Melee Weapon (Basic OR Cavalry)')return [...new Set(R.weapons.filter(w=>w.kind==='melee'&&['Basic','Cavalry'].includes(w.group)).map(w=>w.name))];
  if(/^(Weapon|Melee Weapon|Ranged Weapon) \(Any/.test(raw))return [...new Set(R.weapons.filter(w=>!raw.startsWith('Melee')&&!raw.startsWith('Ranged')||w.kind===(raw.startsWith('Ranged')?'ranged':'melee')).map(w=>w.name))];
  if(ALIASES[raw]&&raw.startsWith('Great Weapon'))return [ALIASES[raw]];
  if(raw==='Musical Instrument')return ['Small Instrument','Instrument','Large Instrument'];
  if(raw==='Helmet')return ['Helm','Open Helm'];
- if(raw.includes(' or '))return raw.split(' or ');
+ if(raw.includes(' or '))return raw.split(' or ').flatMap(name=>gearOptions(name,R));
  return [raw];
 }
 export function gearSlots(R,s){return [...rawGearSlots(R,s),...(s.purchases||[]).map((x,i)=>({name:purchaseItem(R,x)?.name||'Unknown purchased item',origin:'Bought with starting wealth',key:x.uid?`purchase-${x.uid}`:`purchase-${i}`,marketId:purchaseItem(R,x)?.id,purchase:x}))];}
@@ -32,13 +35,14 @@ export function inventoryEntries(R,s){
  for(const slot of slots){
   const resolved=resolvedGearName(s,slot,R);if(coinValue(resolved))continue;
   itemParts(resolved).forEach((part,i)=>{
-   const key=i?`${slot.key}:part-${i}`:slot.key,name=part.name,alias=name==='Leather Breastplate'?'Leather Jerkin':ALIASES[name]||name,mods=itemModifiers(slot.purchase);
+   const key=i?`${slot.key}:part-${i}`:slot.key,name=part.name,alias=name==='Leather Breastplate'?'Leather Jerkin':name==='Gutplate'&&R.armour.some(a=>a.name==='Ogre Gutplate')?'Ogre Gutplate':ALIASES[name]||name,mods=itemModifiers(slot.purchase);
    const weapon=R.weapons.find(w=>w.name===alias)||R.weapons.find(w=>(w.name.replace(' (2H)','')===alias||(w.name==='Hand Weapon'&&alias.startsWith('Hand Weapon ('))))||(name==='Hook'?R.weapons.find(w=>w.name==='Dagger'):null);
    const armour=R.armour.find(a=>a.name===alias),listed=slot.marketId&&i===0?marketCatalog(R).find(x=>x.id===slot.marketId):marketCatalog(R).find(x=>x.name===alias),capacity=R.config.containers[alias]??R.config.carriers[alias]??(Number.isFinite(listed?.capacity)?listed.capacity:undefined),carrier=Object.hasOwn(R.config.carriers,alias),canWear=listed?.wearable===true||!!armour&&armour.locations!=='Shield'||/^(Clothing|Uniform|Fine Clothing|Courtly Garb|Boots|Coat|Velvet Cloak|Cloak|Hat|Robes|Tattered Robes|Hooded Cloak|Hood|Mask|Pouch|Backpack|Sling Bag)$/.test(alias)||listed?.category==='Prosthetics'||capacity!==undefined&&!carrier&&!['Barrel','Cask','Jug','Pewter Stein'].includes(alias);
    const placement=listed?.category==='Prosthetics'?'worn':weapon||armour?.locations==='Shield'?'equipped':name==='Clothing'&&slot.key==='all-0'&&hasOutfit?'carried':canWear?'worn':carrier||alias==='Workshop'?'external':'carried';
    let enc=name==='Hook'?1:armour?.enc??weapon?.enc??listed?.enc??itemWeight(R,alias);
+   const size=equipmentSize(R,s,weapon?.name||armour?.name||alias,listed);if(size.unresolved)enc=null;else if(enc!==null)enc*=size.multiplier;
    if(enc!==null){enc=Math.max(0,enc+(mods.flaws.includes('Bulky')?1:0)-(mods.qualities.includes('Lightweight')?1:0));}
-   entries.push({...slot,key,name,alias,quantity:part.quantity,weapon,armour,canWear,capacity,carrier,placement,enc,...mods,quick:armour?.quick,netMode:slot.name.startsWith('Ranged Weapon')?'ranged':'melee',oneHanded:false,inContainer:part.inContainer?slot.key:null});
+   entries.push({...slot,key,name,alias,quantity:part.quantity,weapon,armour,canWear,capacity,carrier,placement,enc,sizeNote:size.note,useUnresolved:!!size.useUnresolved,...mods,quick:armour?.quick,netMode:slot.name.startsWith('Ranged Weapon')?'ranged':'melee',oneHanded:false,inContainer:part.inContainer?slot.key:null});
   });
  }
  return entries;
@@ -46,6 +50,7 @@ export function inventoryEntries(R,s){
 function adjustedWeapon(entry,d,R){
  let w={...entry.weapon};if(entry.name==='Net')w={...R.weapons.find(w=>w.name==='Net'&&w.kind===entry.netMode)};
  let qualities=w.qualities.split(', ').filter(Boolean),damage=w.damage.replace('SB',d.sb).split('+').map(Number).reduce((a,b)=>a+b,0),bonus=0;
+ if(w.kind==='melee'&&d.size==='Large')bonus+=d.sb;
  if(w.kind==='melee'&&d.talents.includes('Strike Mighty Blow'))bonus++;
  if(w.kind==='ranged'){if(d.talents.includes('Accurate Shot'))bonus++;if(d.talents.includes('Sure Shot'))bonus++;}
  if(entry.oneHanded&&w.name==='Spear (2H)'){damage--;qualities=qualities.filter(x=>x!=='Fast');}
@@ -86,6 +91,8 @@ export function equipment(R,s){
   e.load=loads.get(e.key)||0;e.loadUnknown=false;
  }
  for(const e of entries){
+  if(e.sizeNote)notes.push(`${e.name}: ${e.sizeNote}`);
+  if(e.name==='Gutplate'&&e.alias==='Ogre Gutplate')notes.push('Gutplate Career Trapping uses the Ogre Gutplate table profile and Gutplate description (Archives II pp. 29–30). Descriptive variants remain unresolved.');
   if(personallyCarried(e)&&!parents.get(e.key)&&weights.get(e.key)===null)unknown.push(e.name);
   if(e.name==='Hook')notes.push('Hook counts as a Dagger (p. 315); its own Encumbrance is retained.');
   if(slotAliasNote(e))notes.push(slotAliasNote(e));
@@ -114,6 +121,7 @@ export function equipment(R,s){
  if(entries.filter(e=>personallyCarried(e)&&!parents.get(e.key)&&e.enc>=4).length>1)warnings.push('Normally only one oversized object can be carried; it likely needs both hands (p. 299).');
  if(d.talents.includes('Sure Shot'))notes.push('Sure Shot: +1 ranged Damage; ignore Partial armour, and Weakpoints when using Impale (p. 127).');
  if(d.talents.includes('Accurate Shot'))notes.push('Accurate Shot: +1 ranged Damage is included; +2 instead when aiming (p. 114).');
+ if(d.size==='Large')notes.push('Large size: primary melee weapon Damage includes an additional Strength Bonus (core p. 360). This extra Damage does not apply to ranged or extra attacks.');
  if(d.talents.includes('Strike Mighty Blow'))notes.push('Strike Mighty Blow: +1 melee Damage is included; +2 instead with Advantage (p. 127).');
  notes.push('Creator defaults: armour and wearable containers are worn, weapons are equipped, and other belongings fill available containers. Overflow is carried separately. Coin weight is ignored by user choice.');
  return {entries,weapons,armour,other,unknown:[...new Set(unknown)],ap,weaponEnc,armourEnc,gearEnc,total,notes:[...new Set(notes)],warnings,coinEnc,penalties:{complete,band,movement,agility,travelFatigue:band<3?band:0,immobile:band===3,stealth:stealth||0,perception:perception||0,casting:Object.fromEntries((lores.length?lores:['Other magic']).map(l=>[l,castingFor(l)||0]))}};

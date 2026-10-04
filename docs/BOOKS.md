@@ -13,7 +13,7 @@ The app loads a registered core pack plus explicitly selected supplements/varian
 
 ## Manifest and registry
 
-The core book, Up in Arms and Archives of the Empire I are installed. The supplement's reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md) and [ARCHIVES-I.md](ARCHIVES-I.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
+The core book, Up in Arms and Archives of the Empire I and II are installed. Reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md), [ARCHIVES-I.md](ARCHIVES-I.md) and [ARCHIVES-II.md](ARCHIVES-II.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character; an edited draft requires confirmation, while an untouched blank character has nothing to discard. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
 
 Every manifest has `schemaVersion: 1`, an ID (`lowercase-hyphenated` recommended), title, shortTitle, edition (4 or 5), version, kind (`core`, `supplement`, `variant`), dependsOn, source (`file`, `sha256`) and files. Fourth Edition packs also require `compatibility: {reviewed: true, notes: [...]}` with a nonempty review. The format only checks that a review was recorded; the integrator remains responsible for its accuracy.
 
@@ -54,6 +54,7 @@ Supported file keys:
 | armour | Array: name, enc, locations, ap, qualities, optional quick, page |
 | tables | Array of explicitly selectable printed d100 tables |
 | origins | Regional Species profiles: printed Skills/Talents/native languages, names, optional starting Talent replacement and conditional Career alternatives |
+| astrology | Printed d100 sign rows, Characteristic adjustments, optional Talent or Witchling d10 outcomes, sourced profile text/metadata |
 | rules | Array of supported, sourced setting extensions |
 
 Core-only files `source`, `config` and `career-rolls` keep the original source record, settings and extracted Career table. Supplements cannot replace these files wholesale. Existing core arrays live in `dist/data/`; additional core equipment profiles, shop rows, settings and explicit roll tables live in `dist/data/books/core/`.
@@ -83,6 +84,20 @@ Supported top-level settings are `talentEffects` (permanent +5 Characteristic ke
 - `replace`: change an existing setting **only in a selected variant pack**, with a reason.
 
 New costs, prerequisites, Species formulas, Talent bonuses other than the supported +5 effect, new magic grant systems, and different Career structures are not generic settings. They need explicit code, schema expansion, tests and UI/export support when an actual supplied book requires them. Fourth Edition SL-based Talent test bonuses/repeat caps are not automatically applied by this Fifth Edition creator. Combat-only effects stay in reference descriptions.
+
+### Explicit Species mechanics and background dice
+
+Species may include a validated `mechanics` object. Implemented fields are `size: "Large"` (doubled Wounds and additional SB for primary melee damage), `capacityMultiplier: 2` (after core Talent effects), `careers` (additional existing Career IDs), `skillCharacteristics` (exact Skill names to Characteristic keys), `skillReplacements` (exact Skill-name replacements), `arcaneLores` (allowed canonical Lore names) and `exclusiveLores` (Lores reserved for the declaring Species). Archives II also uses `equipmentSizing: "ogre"` for its explicitly reviewed categories and `gmApproval` text requiring a creation acknowledgement. `magicReferences` are sourced `{page, text, lore?}` descriptions, displayed for magical characters and optionally restricted to a possessed Arcane Lore; they do not automate play effects. Every Career/Skill/Lore reference is validated. Overrides do not modify the core catalogs or another Species. Skill Characteristic overrides feed the UI, folio and PDF/record totals; wind names are matched to canonical Lore names when checking restrictions.
+
+Background records may include `rollTables` keyed by `eyes`/`hair` and two `nameElements` tables. Each table requires `page`, `dice: [count, sides]` and rows `{min, max, result}`, with exactly one row for every possible total. Appearance tables use 2d10; name elements use separate 1d100 rolls joined into one given name. Repeated results preserve their printed probabilities. Ordinary core background suggestions keep their existing uniform-list behavior. Unsupported dice, missing totals and overlaps fail validation.
+
+`imperialNames` references another Species' printed naming lists while retaining this Species' appearance. `namePages` provides separate forename/surname references, and Species `appearancePage` identifies age/height. The Ogre naming-style control selects Imperial lists or the two traditional element tables. Gear/market `ogreSized: true` flags explicit native profiles so price and Encumbrance are not doubled again.
+
+### Optional astrology
+
+Each `astrology` row requires ID, name, page, d100 `min`/`max`, `adjustments` mapping Characteristic keys to integer initial modifiers, and sourced description metadata (`text`, `profilePage`, `classical`, `ascendant`, `calendar`, `god`, `appearance`). Optional `talent` references a core-compatible Talent. `witchling` is a complete d10 array of `{min, max, adjustments, talent}`. All dice faces, references and supported fields are validated.
+
+The implemented Archives II workflow stores `{enabled, sign, rolledSign, witchling, talent, ascendant, mansions}`. Roll the initial sign once, then retain it for 25 XP or choose another without a reward. The Witchling effect also rolls once. Grants obey core Talent caps and incompatibilities. Ascendant and up to five mansion signs remain background only. The selected chart is validated on save-file loading; XP totals and initial scores derive from it rather than altering the base budget or XP ledger. New astrology grant types/rewards would require their own reviewed handler.
 
 ## Random tables, sources and exports
 

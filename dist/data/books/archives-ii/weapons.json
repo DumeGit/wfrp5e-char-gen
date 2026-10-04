@@ -1,0 +1,98 @@
+[
+  {
+    "id": "archives-ii:weapon:ogre-club",
+    "name": "Ogre Club",
+    "page": 29,
+    "group": "Basic",
+    "enc": 2,
+    "reach": "Average",
+    "damage": "SB+4",
+    "qualities": "Special",
+    "kind": "melee",
+    "text": "Optional personalisation on p. 30: metal plates add Pummel, rusty spikes add Penetrating, scavenged blades add Hack. Equipment Quality/Flaw editing is deferred in this creator; no option is silently chosen. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:ironfist",
+    "name": "Ironfist",
+    "page": 29,
+    "group": "Basic",
+    "enc": 2,
+    "reach": "Short",
+    "damage": "SB+3",
+    "qualities": "Shield 1, Defensive",
+    "kind": "melee",
+    "text": "An Ogre cannot be disarmed of an Ironfist. The hand may still hold a weapon or perform simple actions (p. 30). Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:big-ogre-club-2h",
+    "name": "Big Ogre Club (2H)",
+    "page": 29,
+    "group": "Two-handed",
+    "enc": 6,
+    "reach": "Long",
+    "damage": "SB+6",
+    "qualities": "Damaging, Special",
+    "kind": "melee",
+    "text": "Optional personalisation on p. 30: metal plates add Pummel, rusty spikes add Penetrating, scavenged blades add Hack. Equipment Quality/Flaw editing is deferred in this creator; no option is silently chosen. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:great-throwing-spear",
+    "name": "Great Throwing Spear",
+    "page": 29,
+    "group": "Throwing",
+    "enc": 2,
+    "reach": "SB × 3",
+    "damage": "SB+4",
+    "qualities": "Impale",
+    "kind": "ranged",
+    "text": "A large javelin used by Ogre Hunters (p. 30). Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:leadbelcher-gun-2h",
+    "name": "Leadbelcher Gun (2H)",
+    "page": 29,
+    "group": "Blackpowder",
+    "enc": 8,
+    "reach": "50",
+    "damage": "+10",
+    "qualities": "Dangerous, Reload 5, Blackpowder, Damaging",
+    "kind": "ranged",
+    "text": "Ogre cannon-like weapon. Can fire shot or cannonballs (p. 30). Core p. 303 supplies inherent Blackpowder and Damaging Qualities. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:ogre-pistol",
+    "name": "Ogre Pistol",
+    "page": 29,
+    "group": "Blackpowder",
+    "enc": 3,
+    "reach": "20",
+    "damage": "+8",
+    "qualities": "Pistol, Reload 1, Blackpowder, Damaging",
+    "kind": "ranged",
+    "text": "Uses normal blackpowder shot and powder. May also serve as a Hand Weapon, breaking only on a Fumbled attack (p. 30). No second weapon is granted. Core p. 303 supplies inherent Blackpowder and Damaging Qualities. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:harpoon-launcher",
+    "name": "Harpoon Launcher",
+    "page": 29,
+    "group": "Entangling",
+    "enc": 5,
+    "reach": "20",
+    "damage": "+10",
+    "qualities": "Entangle, Reload 2",
+    "kind": "ranged",
+    "text": "Uses Ranged (Crossbow) or Ranged (Entangling) without penalty. Removing the rope increases range to 60 and removes Entangle (p. 30); the listed profile includes its rope. Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  },
+  {
+    "id": "archives-ii:weapon:chain-trap",
+    "name": "Chain Trap",
+    "page": 29,
+    "group": "Entangling",
+    "enc": 2,
+    "reach": "SB × 2",
+    "damage": "+7",
+    "qualities": "Entangle",
+    "kind": "ranged",
+    "text": "Spring-loaded jaws on a chain; can be flung at prey and reeled in (p. 30). Already Ogre-sized: do not double printed price/Encumbrance. Availability is for the Empire (p. 29). Average creatures find these weapons all but useless; consult the GM (p. 28)."
+  }
+]

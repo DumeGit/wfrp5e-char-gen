@@ -32,7 +32,7 @@ export function folioData(R,s){
  const d=derive(R,s),load=equipment(R,s).penalties,counts=new Map();
  for(const name of d.talents)counts.set(name,(counts.get(name)||0)+1);
  return {
-  skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>({name,value:((skillInfo(R,name)?.char==='Ag'&&load.complete)?load.agility:d.stats[skillInfo(R,name)?.char])+Math.round(points*5)})).sort((a,b)=>a.name.localeCompare(b.name)),
+  skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>({name,value:((skillInfo(R,name,s)?.char==='Ag'&&load.complete)?load.agility:d.stats[skillInfo(R,name,s)?.char])+Math.round(points*5)})).sort((a,b)=>a.name.localeCompare(b.name)),
   talents:[...counts].map(([name,value])=>({name,value})).sort((a,b)=>a.name.localeCompare(b.name)),
   magic:knownSpells(R,s).map(x=>({name:x.displayName||x.name})).sort((a,b)=>a.name.localeCompare(b.name)),
   gear:folioGear(R,s).map(({name,quantity})=>({name,value:quantity}))
