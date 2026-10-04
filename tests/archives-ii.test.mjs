@@ -14,9 +14,10 @@ import * as PDFLib from 'pdf-lib';
 import {exportSheet} from '../dist/export.mjs';
 import {bookSelection,catalogForCharacter} from '../dist/books.mjs';
 import {speciesMagicReferences} from '../dist/species-mechanics.mjs';
+import {speciesRulePanel} from '../dist/archives-ui.mjs';
 const B=assembleBooks(library,['archives-ii']);
 export function ogre(career='archives-ii:career:maneater'){
- const s=M.fresh();Object.assign(s,{name:'Arabba Goldtooth',species:'Ogre',career,speciesApproval:true,freeTalent:career.endsWith('maneater')?'Sturdy':career.endsWith('rhinox-herder')?'Marksman':'Petty Magic',speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'}});
+ const s=M.fresh();Object.assign(s,{name:'Arabba Goldtooth',species:'Ogre',career,freeTalent:career.endsWith('maneater')?'Sturdy':career.endsWith('rhinox-herder')?'Marksman':'Petty Magic',speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'}});
  return s;
 }
 function sign(s,n){const row=B.astrology.find(x=>n>=x.min&&n<=x.max);s.chart={enabled:true,sign:row.id,rolledSign:row.id,witchling:0,talent:'',ascendant:'',mansions:[]};return row;}
@@ -31,10 +32,17 @@ test('Archives II remains opt-in and every book combination preserves core conte
 });
 test('Ogre creation retains five Skills, five Species Talents, native Reikspiel and core limits',()=>{
  for(const c of B.careers.filter(x=>x.source.book==='archives-ii')){const s=ogre(c.id);assert.deepEqual(M.validation(B,s),[]);assert.equal(M.freeTalents(B,s).length,6);assert.ok(!M.freeTalents(B,s).includes('Large'));assert.equal(M.freeSkills(B,s)['Language (Reikspiel)'],6);assert.ok(!M.freeSkills(B,s)['Language (Grumbarth)']);assert.equal(c.levels[0].skills.length,10);}
- const s=ogre();s.speciesApproval=false;assert.match(M.validation(B,s).join('\n'),/GM-approval/);
- s.speciesApproval=true;s.speciesSkills.push('s-5');assert.match(M.validation(B,s).join('\n'),/five different/);
+ const s=ogre();assert.deepEqual(M.validation(B,s),[]);
+ s.speciesSkills.push('s-5');assert.match(M.validation(B,s).join('\n'),/five different/);
  assert.equal(M.derive(B,ogre()).fate,1);assert.equal(M.derive(B,ogre()).fortune,2);
  Object.assign(s,{speciesMode:'first',careerMode:'first',charMode:'first'});assert.equal(M.derive(B,s).fate,2);assert.equal(M.derive(B,s).fortune,3);
+});
+test('Ogre GM rule remains informational without an acknowledgement gate',()=>{
+ const s=ogre(),text=B.species.Ogre.mechanics.gmApproval,html=speciesRulePanel(B,s);
+ assert.ok(html.includes(text));assert.doesNotMatch(html,/checkbox|data-bind|reviewed these choices/);
+ assert.deepEqual(M.validation(B,s),[]);assert.ok(M.derive(B,s).warnings.includes(text));
+ M.purchase(B,s,'char','WS');assert.equal(M.derive(B,s).spent,125);
+ assert.equal(speciesRulePanel(R,M.fresh()),'');
 });
 test('all 100 Ogre Career faces are defined and legal, including approved 05–06 correction',()=>{
  const s=ogre();

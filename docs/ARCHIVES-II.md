@@ -1,6 +1,6 @@
 # Archives of the Empire: Volume II — integration review
 
-**Status: installed as the opt-in `archives-ii` pack, version 1.0.1.** All creation decisions below are approved. Unspecified profiles remain unresolved; campaign systems are deferred.
+**Status: installed as the opt-in `archives-ii` pack, version 1.0.2.** All creation decisions below are approved. Unspecified profiles remain unresolved; campaign systems are deferred.
 
 Source: the supplied `Archives of the Empire - Vol II.pdf`, 96 pages, SHA-256 `95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b`. Printed pages match PDF positions. Some running headers say Volume I; the contents are the second collection covering Ogres, astrology, magical artifice and mass battles. The source PDF and full text remain outside the published app.
 
@@ -30,7 +30,7 @@ MarkItDown text is in the parent workspace's `tmp/pdfs/archives-ii.md`. `scripts
 | Ogre-sized ordinary equipment, p. 31 | Double ordinary weapons, armour, clothing and carrying containers. Keep food, ammunition, animals and vehicles at listed unit prices/weights; flag other unclear items for GM review. Explicit p. 29 Ogre profiles keep printed values. |
 | Seaman Career, p. 18 | Map to Fifth Edition core Sailor and document the old name. |
 | “Difficult (+20)” in Bullgorger/Feast of the Fallen, pp. 32–33 | Use **Difficult (−1 SL)**. Record that the user chose the printed difficulty label over the conflicting numeric modifier. |
-| Ogre writing/art/advanced-Lore restriction, p. 21 | Display the printed restriction and require a GM-approval acknowledgement. Do not invent an exhaustive forbidden-option list. |
+| Ogre writing/art/advanced-Lore restriction, p. 21 | Display the printed restriction as an informational reminder; the user removed the acknowledgement checkbox and creator/export gate. Do not invent an exhaustive forbidden-option list. |
 | Duplicate or conflicting star-sign Talents, p. 39 | Keep core learning limits; count an already-owned nonrepeatable Talent once. Require compatible choices before export. Sign penalties and retained-roll +25 XP still apply. |
 | Rhinox Herder's Harpoon, p. 36 | Keep the named Trapping with unresolved statistics. Do not turn it into a Harpoon Launcher or the six-piece ammunition pack. |
 

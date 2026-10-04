@@ -208,14 +208,14 @@ write('armour.json', [{'id': 'archives-ii:armour:ogre-gutplate', 'name': 'Ogre G
 for item in market:
     item['ogreSized'] = True
 write('market.json', market)
-write('manifest.json', {'schemaVersion': 1, 'id': 'archives-ii', 'title': 'Archives of the Empire: Volume II', 'shortTitle': 'Archives II', 'edition': 4, 'version': '1.0.1', 'kind': 'supplement', 'dependsOn': ['core'], 'source': {'file': 'Archives of the Empire - Vol II.pdf', 'sha256': read(STAGED/'source-review.json')['sha256']}, 'compatibility': {'reviewed': True, 'notes': [
+write('manifest.json', {'schemaVersion': 1, 'id': 'archives-ii', 'title': 'Archives of the Empire: Volume II', 'shortTitle': 'Archives II', 'edition': 4, 'version': '1.0.2', 'kind': 'supplement', 'dependsOn': ['core'], 'source': {'file': 'Archives of the Empire - Vol II.pdf', 'sha256': read(STAGED/'source-review.json')['sha256']}, 'compatibility': {'reviewed': True, 'notes': [
     'User-approved random-table defaults: Archives II p. 18 Species rolls supersede core while enabled; its Ogre Career table is automatic for Ogres. Explicit table choices remain available.',
     'Fifth Edition core creation, advancement, Talents and Creature Traits govern. Select five Species Skills at +5; omit old Large as a Talent and use Large size.',
     'User-approved Ogre starting adaptation: 1 Fate, 2 Fortune, no extra point; retain normal Fifth Edition random-creation bonuses.',
     'User correction: Rat Catcher covers 05–06 in the p. 18 Career table. Seaman maps to core Sailor; existing Careers retain core Class labels.',
     'User-approved Ogre carrying calculation: apply core Talent effects first, then double final capacity.',
     'User-approved equipment sizing: double ordinary weapons, armour, clothing and carrying containers; retain food/ammunition/animal/vehicle unit values, and flag other items for GM review. Printed p. 29 Ogre equipment is not doubled again.',
-    'User-approved GM acknowledgement for Ogres’ writing/complex-artistry/advanced-Lore restriction; no exhaustive forbidden list is invented.',
+    'User-approved informational reminder for Ogres’ writing/complex-artistry/advanced-Lore restriction; no checkbox or creator/export acknowledgement gate, and no exhaustive forbidden list is invented.',
     'Star signs use core Talent limits. Already-owned nonrepeatable grants count once, and incompatible choices prevent export. Printed penalties and accepted first-roll +25 XP remain.',
     'User resolves Witchling Star p. 39/47 by the detailed d10 table. The initial star-sign result grants at most 25 XP; ascendant/mansions grant no bonuses.',
     'User resolves Difficult (+20) in Bullgorger and Feast of the Fallen as Difficult (−1 SL). Other printed numeric effect modifiers remain; valid old difficulty modifiers use core Appendix I p. 364.',
