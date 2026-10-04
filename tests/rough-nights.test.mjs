@@ -126,7 +126,7 @@ test('Gnome PDF retains all editable fields and exports Small Wounds, adapted va
  // Synthetic fixed quantities complete the test draft; these are not claimed as random rolls.
  for(const slot of gearSlots(B,s))for(const match of slot.name.matchAll(/\{?(\d+)d10\}?/g))s.gearRolls[`${slot.key}:${match[0]}`]=5*Number(match[1]);
  const bytes=await exportSheet(B,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url)))),form=(await PDFLib.PDFDocument.load(bytes)).getForm();
- assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Species').getText(),'Gnome');assert.equal(form.getTextField('Wounds_Total').getText(),String(M.derive(B,s).wounds));assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));
+ assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Species').getText(),'[Legacy] Gnome');assert.equal(form.getTextField('Wounds_Total').getText(),String(M.derive(B,s).wounds));assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));
  assert.equal(form.getTextField('Wounds_SB').getText(),'0');assert.equal(form.getTextField('Wounds_WPB').getText(),'0');
  assert.match(form.getTextField('Notes').getText(),/Proposed adaptation/);
  assert.match(form.getTextField('Spell_2_Name').getText(),/Trickster/);assert.match(form.getTextField('Spell_2_Effect').getText(),/Evawn/);

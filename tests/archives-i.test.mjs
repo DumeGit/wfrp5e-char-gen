@@ -90,7 +90,7 @@ test('Younger Eonir receives exactly one additional Youngblood grant without cha
 test('Cityborn exports the Eonir Species and kindred on the editable Class field',async()=>{
  globalThis.PDFLib=PDFLib;const s=archivesCharacter('Wood Elf','noble','archives-i:origin:eonir-cityborn');
  const bytes=await exportSheet(on,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
- const doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Species').getText(),'Wood Elf (Eonir)');assert.match(form.getTextField('Class_1').getText(),/Cityborn/);assert.ok(doc.getPageCount()>3);
+ const doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Species').getText(),'[Legacy] Wood Elf (Eonir)');assert.match(form.getTextField('Class_1').getText(),/Cityborn/);assert.ok(doc.getPageCount()>3);
 });
 
 test('all four new Careers complete creation only with the required Species and origin',()=>{

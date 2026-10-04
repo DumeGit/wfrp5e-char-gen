@@ -3,6 +3,8 @@ import {knownRunes} from './dwarf-guide.mjs';
 import {knownCants} from './archives-iii.mjs';
 import {derive,skillInfo,knownSpells} from './rules.mjs';
 import {gearSlots,gearOptions,equipment} from './equipment.mjs';
+import {isLegacy} from './legacy.mjs';
+import {legacyOption,legacyGear,legacyMagic} from './legacy-character.mjs';
 
 const units={Candles:'Candle',Matches:'Match',Bandages:'Bandage',Arrows:'Arrow',Bolts:'Bolt',Shots:'Shot',Bullets:'Bullet','Lead Bullets':'Lead Bullet','Stone Bullets':'Stone Bullet',Bolas:'Bola','Throwing Knives':'Throwing Knife',Barges:'Barge',Wagons:'Wagon','Sets of Clothing':'Clothing','different sets of Clothing':'Clothing','sheets of Parchment':'Parchment'};
 function itemParts(text){
@@ -25,8 +27,9 @@ export function folioGear(R,s){
   const text=chosen.replace(/\{?(\d+)d10\}?/g,m=>s.gearRolls[`${slot.key}:${m}`]??m);
   for(const item of itemParts(text)){
    const key=item.name.toLocaleLowerCase(),existing=grouped.get(key);
-   if(existing)existing.quantity=existing.quantity===null||item.quantity===null?null:existing.quantity+item.quantity;
-   else grouped.set(key,{...item});
+   const legacy=isLegacy(R,legacyGear(R,s,slot,item.name));
+   if(existing){existing.quantity=existing.quantity===null||item.quantity===null?null:existing.quantity+item.quantity;if(legacy)existing.legacy=true;}
+   else grouped.set(key,{...item,...(legacy?{legacy:true}:{})});
   }
  }
  return [...grouped.values()].sort((a,b)=>a.name.localeCompare(b.name));
@@ -34,10 +37,11 @@ export function folioGear(R,s){
 export function folioData(R,s){
  const d=derive(R,s),load=equipment(R,s).penalties,counts=new Map();
  for(const name of d.talents)counts.set(name,(counts.get(name)||0)+1);
+ const tag=(row,entry)=>({...row,...(isLegacy(R,entry)?{legacy:true}:{})});
  return {
-  skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>({name,value:((skillInfo(R,name,s)?.char==='Ag'&&load.complete)?load.agility:d.stats[skillInfo(R,name,s)?.char])+Math.round(points*5)})).sort((a,b)=>a.name.localeCompare(b.name)),
-  talents:[...counts].map(([name,value])=>({name,value})).sort((a,b)=>a.name.localeCompare(b.name)),
-  magic:[...knownTechniques(R,s).map(x=>({name:`${x.name} · technique`})),...knownRunes(R,s,d.talents).map(x=>({name:`${x.name} · ${x.form} Rune`})),...knownSpells(R,s).map(x=>({name:x.displayName||x.name})),...knownCants(R,s).map(x=>({name:`${x.name} · ${x.lore} Cant`}))].sort((a,b)=>a.name.localeCompare(b.name)),
-  gear:folioGear(R,s).map(({name,quantity})=>({name,value:quantity}))
+  skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>tag({name,value:((skillInfo(R,name,s)?.char==='Ag'&&load.complete)?load.agility:d.stats[skillInfo(R,name,s)?.char])+Math.round(points*5)},legacyOption(R,s,'skill',name))).sort((a,b)=>a.name.localeCompare(b.name)),
+  talents:[...counts].map(([name,value])=>tag({name,value},legacyOption(R,s,'talent',name))).sort((a,b)=>a.name.localeCompare(b.name)),
+  magic:[...knownTechniques(R,s).map(x=>tag({name:`${x.name} · technique`},x)),...knownRunes(R,s,d.talents).map(x=>tag({name:`${x.name} · ${x.form} Rune`},x)),...knownSpells(R,s).map(x=>tag({name:x.displayName||x.name},legacyMagic(R,s,x))),...knownCants(R,s).map(x=>tag({name:`${x.name} · ${x.lore} Cant`},x))].sort((a,b)=>a.name.localeCompare(b.name)),
+  gear:folioGear(R,s).map(({name,quantity,legacy})=>({name,value:quantity,...(legacy?{legacy:true}:{})}))
  };
 }

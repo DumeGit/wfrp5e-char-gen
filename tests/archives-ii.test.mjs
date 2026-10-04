@@ -148,7 +148,7 @@ test('Archives II PDF keeps editable fields and agrees on Large Wounds, casting,
  assert.ok(equipment(B,s).entries.every(x=>x.quantity!==null));
  const bytes=await exportSheet(B,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
  const doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);
- for(const [key,value]of Object.entries({Species:'Ogre',Wounds_Total:d.wounds,Enc_Max:d.capacity,Fate:1,Fortune_Max:2,XP_Total:1225,XP_Spent:d.spent,XP_Current:d.remaining,AP_Body:3,AP_Shield:1}))assert.equal(form.getTextField(key).getText(),String(value),key);
+ for(const [key,value]of Object.entries({Species:'[Legacy] Ogre',Wounds_Total:d.wounds,Enc_Max:d.capacity,Fate:1,Fortune_Max:2,XP_Total:1225,XP_Spent:d.spent,XP_Current:d.remaining,AP_Body:3,AP_Shield:1}))assert.equal(form.getTextField(key).getText(),String(value),key);
  assert.match(form.getTextField('Notes').getText(),/Large/);assert.ok(M.knownSpells(B,s).some(x=>x.category==='The Great Maw'));
  assert.equal(form.getTextField('Language_1_Char').getText(),String(d.stats.T));assert.equal(form.getTextField('Language_1').getText(),'Magick');
 });
