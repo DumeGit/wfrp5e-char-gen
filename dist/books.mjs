@@ -1,3 +1,4 @@
+import {cultIssues} from './cults.mjs';
 import {KEYS,canon,base,options,skillInfo,talentInfo} from './rules.mjs';
 import {careerSpecies,careerAvailable} from './origins.mjs';
 import {validateChartState} from './astrology.mjs';
@@ -5,7 +6,7 @@ import {validateIIIState,oldFaith,spellChoices} from './archives-iii.mjs';
 import {validateWoMState} from './winds-of-magic.mjs';
 
 export const BOOK_SCHEMA=1;
-const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables','origins','astrology','cants'];
+const arrays=['careers','skills','talents','spells','gear','weapons','armour','market','tables','origins','astrology','cants','cults'];
 const files=new Set([...arrays,'species','background','career-rolls','source','config','rules']);
 const settings=new Set(['talentEffects','talentLimits','talentOptions','skillOptions','colours','gods','blessings','classKit','containers','carriers','gearEnc']);
 const plain=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
@@ -23,6 +24,7 @@ export function validateBackgroundTable(table,label){
  return table;
 }
 const columns={
+ cults:['miracles','text'],
  cants:['lore','text'],
  astrology:['min','max','adjustments','talent','witchling','text','classical','ascendant','calendar','god','appearance','profilePage'],
  careers:['class','species','advanceScheme','levels','runtimeId','requiredOrigins','randomAlternativeFor','text'],skills:['char','advanced','grouped','options','text'],talents:['text','unavailable'],spells:['category','text','range','target','duration','cn','specialisations','ritual'],gear:['price','enc','capacity','availability','category','text','ammunition','wearable','ogreSized'],market:['price','enc','availability','category','text','ammunition','wearable','ogreSized'],weapons:['group','enc','reach','damage','qualities','kind','text'],armour:['enc','locations','ap','qualities','quick'],species:['offsets','languages','fate','fortune','movement','age','height','skills','talents','randomTalents','mechanics','appearancePage'],background:['forenames','surnames','eyes','hair','clans','rollTables','nameElements','imperialNames','namePages'],tables:['kind','sides','rows','species','career'],origins:['species','languages','skills','talents','randomTalents','background','optionalTalent','careerChoices','allowedPatrons','careerSpecies','grantedTalents','sheetSpecies','classNote','text','additionalCareers','randomTalentAlternative']
@@ -190,10 +192,11 @@ export function validateCatalog(R){
 
   if(sp.mechanics!==undefined){
    const m=sp.mechanics;
-   if(!plain(m)||Object.keys(m).some(k=>!['size','capacityMultiplier','careers','skillCharacteristics','skillReplacements','arcaneLores','exclusiveLores','equipmentSizing','gmApproval','magicReferences'].includes(k)))fail(`${name}: unsupported Species mechanics.`);
+   if(!plain(m)||Object.keys(m).some(k=>!['size','capacityMultiplier','careers','skillCharacteristics','skillReplacements','arcaneLores','exclusiveLores','equipmentSizing','gmApproval','magicReferences','references'].includes(k)))fail(`${name}: unsupported Species mechanics.`);
    if(m.equipmentSizing!==undefined&&m.equipmentSizing!=='ogre'||m.gmApproval!==undefined&&!nonempty(m.gmApproval))fail(`${name}: invalid equipment sizing or GM requirement.`);
+   if(m.references!==undefined&&(!Array.isArray(m.references)||m.references.some(x=>!plain(x)||Object.keys(x).some(key=>!['text','page'].includes(key))||!nonempty(x.text)||!pageOK(x.page))))fail(`${name}: invalid Species reference.`);
    if(m.magicReferences!==undefined&&(!Array.isArray(m.magicReferences)||m.magicReferences.some(x=>!plain(x)||Object.keys(x).some(key=>!['text','page','lore'].includes(key))||!nonempty(x.text)||!pageOK(x.page)||x.lore!==undefined&&!C.colours.includes(x.lore))))fail(`${name}: invalid magic reference.`);
-   if(m.size!==undefined&&m.size!=='Large'||m.capacityMultiplier!==undefined&&m.capacityMultiplier!==2)fail(`${name}: unsupported size or capacity multiplier.`);
+   if(m.size!==undefined&&!['Large','Small'].includes(m.size)||m.capacityMultiplier!==undefined&&m.capacityMultiplier!==2)fail(`${name}: unsupported size or capacity multiplier.`);
    for(const key of ['careers','arcaneLores','exclusiveLores'])if(m[key]!==undefined&&(!strings(m[key])||!m[key].length||new Set(m[key]).size!==m[key].length))fail(`${name}: invalid ${key}.`);
    if(m.skillCharacteristics!==undefined&&(!plain(m.skillCharacteristics)||Object.entries(m.skillCharacteristics).some(([skill,char])=>!skillInfo(R,skill)||!KEYS.includes(char))))fail(`${name}: invalid Skill Characteristic override.`);
    if(m.skillReplacements!==undefined&&(!plain(m.skillReplacements)||Object.entries(m.skillReplacements).some(([from,to])=>!nonempty(to)||!skillInfo(R,from)||!skillInfo(R,to)||from===to||options(R,to).length!==1)))fail(`${name}: invalid Skill replacement.`);
@@ -236,7 +239,8 @@ export function validateCatalog(R){
   if(o.additionalCareers!==undefined&&(!Array.isArray(o.additionalCareers)||o.additionalCareers.some(x=>!plain(x)||Object.keys(x).some(k=>!['career','requiredTalent','reason'].includes(k))||!runtimeIds.has(x.career)||!talentInfo(R,x.requiredTalent)||!nonempty(x.reason))))fail(`${o.name}: invalid additional Career grant.`);
   if(o.careerChoices){if(!plain(o.careerChoices))fail(`${o.name}: invalid regional Career choices.`);for(const [from,to]of Object.entries(o.careerChoices)){if(!runtimeIds.has(from)||!strings(to)||to.some(id=>!R.careers.some(c=>c.id===id&&c.species.includes(o.species))))fail(`${o.name}: unavailable regional Career choice.`);}}
  }
- for(const god of C.gods){if(!C.blessings[god]?.length||C.blessings[god].some(n=>!R.spells.some(x=>x.name===`Blessing of ${n}`)))fail(`${god}: missing Blessings.`);if(!(god==='Old Faith'&&oldFaith(R))&&!R.spells.some(x=>x.category===god))fail(`${god}: missing Miracles.`);}
+ for(const cult of R.cults)if(!C.gods.includes(cult.name)||!strings(cult.miracles)||!cult.miracles.length||new Set(cult.miracles).size!==cult.miracles.length||cult.miracles.some(n=>!R.spells.some(x=>x.name===n&&C.gods.includes(x.category)&&!x.ritual))||!nonempty(cult.text))fail(`${cult.name}: invalid cult Miracle references or description.`);
+ for(const god of C.gods){if(!C.blessings[god]?.length||C.blessings[god].some(n=>!R.spells.some(x=>x.name===`Blessing of ${n}`)))fail(`${god}: missing Blessings.`);if(!(god==='Old Faith'&&oldFaith(R))&&!R.cults.some(x=>x.name===god)&&!R.spells.some(x=>x.category===god))fail(`${god}: missing Miracles.`);}
  for(const lore of C.colours)if(!R.spells.some(x=>x.category===lore))fail(`${lore}: missing Lore spells.`);
  for(const table of R.tables){
   if(!['species','career','talent','career-refinement'].includes(table.kind)||table.sides!==100||!Array.isArray(table.rows)||!table.rows.length||table.kind==='career'&&!R.species[table.species]||table.kind==='career-refinement'&&!runtimeIds.has(table.career))fail(`${table.id}: invalid roll table.`);
@@ -260,6 +264,7 @@ export function catalogForCharacter(library,character){
  validateChartState(R,character);
  validateIIIState(R,character);
  validateWoMState(R,character);
+ const cultErrors=cultIssues(R,character);if(cultErrors.length)fail(cultErrors.join(' '));
  return R;
 }
 export function randomTable(R,s,kind){

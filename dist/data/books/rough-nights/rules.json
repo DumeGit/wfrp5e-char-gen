@@ -1,0 +1,94 @@
+[
+  {
+    "id": "rough-nights:rule:ghassally",
+    "path": [
+      "skillOptions",
+      "Language"
+    ],
+    "operation": "append",
+    "value": [
+      "Ghassally"
+    ],
+    "page": 88,
+    "reason": "Printed Gnome language specialisation; core Language definition applies."
+  },
+  {
+    "id": "rough-nights:rule:suffuse-limit",
+    "path": [
+      "talentLimits",
+      "Suffuse with Ulgu"
+    ],
+    "operation": "add",
+    "value": 1,
+    "page": 88,
+    "reason": "Printed maximum of one purchase; no old per-rank scaling."
+  },
+  {
+    "id": "rough-nights:rule:gods",
+    "path": [
+      "gods"
+    ],
+    "operation": "append",
+    "value": [
+      "Evawn",
+      "Mabyn",
+      "Ringil"
+    ],
+    "page": 90,
+    "reason": "Gnome patrons use their printed six Blessings and three core Miracle references, with matching Bless/Invoke."
+  },
+  {
+    "id": "rough-nights:rule:blessings-evawn",
+    "path": [
+      "blessings",
+      "Evawn"
+    ],
+    "operation": "add",
+    "value": [
+      "Charisma",
+      "Courage",
+      "Fortune",
+      "Finesse",
+      "Hardiness",
+      "Protection"
+    ],
+    "page": 90,
+    "reason": "Six Blessings printed in the Gnome Gods table."
+  },
+  {
+    "id": "rough-nights:rule:blessings-mabyn",
+    "path": [
+      "blessings",
+      "Mabyn"
+    ],
+    "operation": "add",
+    "value": [
+      "Battle",
+      "Hardiness",
+      "Protection",
+      "Righteousness",
+      "Tenacity",
+      "Wisdom"
+    ],
+    "page": 90,
+    "reason": "Six Blessings printed in the Gnome Gods table."
+  },
+  {
+    "id": "rough-nights:rule:blessings-ringil",
+    "path": [
+      "blessings",
+      "Ringil"
+    ],
+    "operation": "add",
+    "value": [
+      "Breath",
+      "Charisma",
+      "Conscience",
+      "Grace",
+      "The Hunt",
+      "Wit"
+    ],
+    "page": 90,
+    "reason": "Six Blessings printed in the Gnome Gods table."
+  }
+]

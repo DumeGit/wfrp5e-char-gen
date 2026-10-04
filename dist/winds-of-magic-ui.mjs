@@ -1,10 +1,11 @@
+import {speciesLoreIssue} from './species-mechanics.mjs';
 import {windsOfMagic,affiliatedCareer,collegeCareer,collegeLore,collegeLores,startingScryer,psychometrySacrifice,womReferences,quoteRitual,mundaneAlchemist} from './winds-of-magic.mjs';
 import {derive} from './rules.mjs';
 import {creationSpecies} from './origins.mjs';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function collegePanel(R,s){
  if(!windsOfMagic(R)||!affiliatedCareer(s))return '';
- return `<section class="notice"><strong>College affiliation · Winds of Magic p. 35</strong>${collegeCareer(s)?`<p>${esc(collegeLore(s))} · fixed by this Career.</p>`:`<div class="field"><label for="college-lore">College Lore</label><select id="college-lore" data-bind="college"><option value="">Choose…</option>${collegeLores.map(l=>`<option value="${l}" ${s.college===l?'selected':''}>${l}</option>`).join('')}</select></div>`}<p class="small">Your first Arcane Magic Talent must match your College. Follow its traditions and arcane marks; later Elf Lores still follow Fifth Edition’s requirements.</p></section>`;
+ return `<section class="notice"><strong>College affiliation · Winds of Magic p. 35</strong>${collegeCareer(s)?`<p>${esc(collegeLore(s))} · fixed by this Career.</p>`:`<div class="field"><label for="college-lore">College Lore</label><select id="college-lore" data-bind="college"><option value="">Choose…</option>${collegeLores.filter(l=>!speciesLoreIssue(R,s,l)).map(l=>`<option value="${l}" ${s.college===l?'selected':''}>${l}</option>`).join('')}</select></div>`}<p class="small">Your first Arcane Magic Talent must match your College. Follow its traditions and arcane marks; later Elf Lores still follow Fifth Edition’s requirements.</p></section>`;
 }
 export function psychometryPanel(R,s){
  if(!windsOfMagic(R)||s.species!=='Human')return '';

@@ -29,6 +29,10 @@
     {
       "id": "winds-of-magic",
       "path": "winds-of-magic/manifest.json"
+    },
+    {
+      "id": "rough-nights",
+      "path": "rough-nights/manifest.json"
     }
   ]
 }

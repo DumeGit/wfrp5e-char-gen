@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "rough-nights",
+  "title": "Rough Nights & Hard Days",
+  "shortTitle": "Rough Nights",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Rough Nights & Hard Days.pdf",
+    "sha256": "08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f7"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Printed pages are PDF positions minus one. Character-creation material is Appendix I pp. 86–90; adventures/NPCs and pub games are excluded.",
+      "Fifth Edition core governs allocations, Talent definitions, XP and creation rewards. User-approved starting Fate/Fortune are explicitly labeled as a proposed adaptation.",
+      "Fifth Edition Career profiles and normal random-creation bonuses apply, not Fourth Edition creation XP. Advisor → Adviser. User-approved Bawd → Knave mapping uses the revised Fifth Edition Rogue Career.",
+      "Gnome gods reuse existing core Miracle definitions through validated cult references, without duplicating spells or silently replacing core definitions.",
+      "Dark/Chaos magic remains outside the creator’s existing scope. Suffuse with Ulgu is reference-only for situational effects.",
+      "Random Species probabilities are never merged or silently replaced; selecting Gnome automatically uses its complete sole printed Career table."
+    ]
+  },
+  "files": {
+    "species": "species.json",
+    "background": "background.json",
+    "talents": "talents.json",
+    "tables": "tables.json",
+    "rules": "rules.json",
+    "cults": "cults.json"
+  }
+}

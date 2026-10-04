@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"c48a71b017577bb5b301";
+const CACHE=CACHE_PREFIX+"3d9330c861df431e8d3a";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -18,6 +18,7 @@ const ASSETS=[
  "books.mjs",
  "career-variants.mjs",
  "creator-ui.mjs",
+ "cults.mjs",
  "data/background.json",
  "data/books/archives-i/careers.json",
  "data/books/archives-i/manifest.json",
@@ -53,6 +54,13 @@ const ASSETS=[
  "data/books/core/tables.json",
  "data/books/core/weapons.json",
  "data/books/index.json",
+ "data/books/rough-nights/background.json",
+ "data/books/rough-nights/cults.json",
+ "data/books/rough-nights/manifest.json",
+ "data/books/rough-nights/rules.json",
+ "data/books/rough-nights/species.json",
+ "data/books/rough-nights/tables.json",
+ "data/books/rough-nights/talents.json",
  "data/books/up-in-arms/careers.json",
  "data/books/up-in-arms/excluded-equipment.json",
  "data/books/up-in-arms/manifest.json",

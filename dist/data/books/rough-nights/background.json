@@ -1,0 +1,189 @@
+{
+  "Gnome": {
+    "id": "rough-nights:background:gnome",
+    "page": 89,
+    "forenames": [
+      "Elowen",
+      "Ia",
+      "Kerra",
+      "Ladoca",
+      "Metheven",
+      "Morwen",
+      "Steren",
+      "Tryfena",
+      "Breward",
+      "Daveth",
+      "Gwinear",
+      "Mawnan",
+      "Meriasek",
+      "Nivet",
+      "Talan",
+      "Ythel"
+    ],
+    "surnames": [
+      "Annearil",
+      "Frayne",
+      "Hawken",
+      "Landweth",
+      "Peddlar",
+      "Scantleburn",
+      "Thorne",
+      "Trethewey",
+      "Mudfoot",
+      "Glittereye",
+      "Soleheart",
+      "Patchcloak"
+    ],
+    "eyes": [
+      "Pale Blue",
+      "Blue",
+      "Deep Blue",
+      "Turquoise",
+      "Pale Green",
+      "Hazel",
+      "Pale Brown",
+      "Brown",
+      "Dark Brown",
+      "Violet"
+    ],
+    "hair": [
+      "Black",
+      "Dark Brown",
+      "Auburn",
+      "Brown",
+      "Light Brown",
+      "Ginger",
+      "Red Blond",
+      "Golden Blond",
+      "White Blond",
+      "White"
+    ],
+    "rollTables": {
+      "eyes": {
+        "name": "Gnome eyes",
+        "page": 89,
+        "dice": [
+          2,
+          10
+        ],
+        "rows": [
+          {
+            "min": 2,
+            "max": 2,
+            "result": "Pale Blue"
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "result": "Blue"
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "result": "Deep Blue"
+          },
+          {
+            "min": 5,
+            "max": 7,
+            "result": "Turquoise"
+          },
+          {
+            "min": 8,
+            "max": 11,
+            "result": "Pale Green"
+          },
+          {
+            "min": 12,
+            "max": 14,
+            "result": "Hazel"
+          },
+          {
+            "min": 15,
+            "max": 17,
+            "result": "Pale Brown"
+          },
+          {
+            "min": 18,
+            "max": 18,
+            "result": "Brown"
+          },
+          {
+            "min": 19,
+            "max": 19,
+            "result": "Dark Brown"
+          },
+          {
+            "min": 20,
+            "max": 20,
+            "result": "Violet"
+          }
+        ]
+      },
+      "hair": {
+        "name": "Gnome hair",
+        "page": 89,
+        "dice": [
+          2,
+          10
+        ],
+        "rows": [
+          {
+            "min": 2,
+            "max": 2,
+            "result": "Black"
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "result": "Dark Brown"
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "result": "Auburn"
+          },
+          {
+            "min": 5,
+            "max": 7,
+            "result": "Brown"
+          },
+          {
+            "min": 8,
+            "max": 11,
+            "result": "Light Brown"
+          },
+          {
+            "min": 12,
+            "max": 14,
+            "result": "Ginger"
+          },
+          {
+            "min": 15,
+            "max": 17,
+            "result": "Red Blond"
+          },
+          {
+            "min": 18,
+            "max": 18,
+            "result": "Golden Blond"
+          },
+          {
+            "min": 19,
+            "max": 19,
+            "result": "White Blond"
+          },
+          {
+            "min": 20,
+            "max": 20,
+            "result": "White"
+          }
+        ]
+      }
+    },
+    "namePages": {
+      "forenames": 88,
+      "surnames": 89
+    },
+    "conversion": "Printed name examples are sampled uniformly as suggestions, not a printed random-name table. Surnames offer eight Glimdwarrow clans and four printed epithets. Eyes/hair use the actual 2d10 distribution (p. 89); age 10d10+20 and height 1d10+3 ft 4 in."
+  }
+}

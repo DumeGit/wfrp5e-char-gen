@@ -1,0 +1,263 @@
+[
+  {
+    "id": "rough-nights:table:species",
+    "name": "Rough Nights Species",
+    "kind": "species",
+    "page": 87,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 89,
+        "result": "Human"
+      },
+      {
+        "min": 90,
+        "max": 93,
+        "result": "Halfling"
+      },
+      {
+        "min": 94,
+        "max": 97,
+        "result": "Dwarf"
+      },
+      {
+        "min": 98,
+        "max": 98,
+        "result": "Gnome"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "High Elf"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "Wood Elf"
+      }
+    ],
+    "conversion": "Optional printed Species table: Gnome on 98. Does not merge with Archives II’s Ogre table or change the existing default. Fifth Edition creation rewards replace the old +20 XP."
+  },
+  {
+    "id": "rough-nights:table:gnome-careers",
+    "name": "Gnome Careers",
+    "kind": "career",
+    "species": "Gnome",
+    "page": 87,
+    "sides": 100,
+    "rows": [
+      {
+        "min": 1,
+        "max": 1,
+        "result": "apothecary"
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "result": "lawyer"
+      },
+      {
+        "min": 3,
+        "max": 4,
+        "result": "physician"
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "result": "priest"
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "result": "scholar"
+      },
+      {
+        "min": 8,
+        "max": 14,
+        "result": "wizard"
+      },
+      {
+        "min": 15,
+        "max": 15,
+        "result": "agitator"
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "result": "artisan"
+      },
+      {
+        "min": 18,
+        "max": 18,
+        "result": "beggar"
+      },
+      {
+        "min": 19,
+        "max": 19,
+        "result": "investigator"
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "result": "merchant"
+      },
+      {
+        "min": 22,
+        "max": 22,
+        "result": "rat-catcher"
+      },
+      {
+        "min": 23,
+        "max": 28,
+        "result": "townsman"
+      },
+      {
+        "min": 29,
+        "max": 29,
+        "result": "watchman"
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "result": "adviser"
+      },
+      {
+        "min": 31,
+        "max": 31,
+        "result": "artist"
+      },
+      {
+        "min": 32,
+        "max": 32,
+        "result": "envoy"
+      },
+      {
+        "min": 33,
+        "max": 33,
+        "result": "noble"
+      },
+      {
+        "min": 34,
+        "max": 35,
+        "result": "servant"
+      },
+      {
+        "min": 36,
+        "max": 40,
+        "result": "spy"
+      },
+      {
+        "min": 41,
+        "max": 42,
+        "result": "warden"
+      },
+      {
+        "min": 43,
+        "max": 43,
+        "result": "bailiff"
+      },
+      {
+        "min": 44,
+        "max": 44,
+        "result": "herbalist"
+      },
+      {
+        "min": 45,
+        "max": 46,
+        "result": "hunter"
+      },
+      {
+        "min": 47,
+        "max": 54,
+        "result": "miner"
+      },
+      {
+        "min": 55,
+        "max": 58,
+        "result": "scout"
+      },
+      {
+        "min": 59,
+        "max": 62,
+        "result": "villager"
+      },
+      {
+        "min": 63,
+        "max": 63,
+        "result": "bounty-hunter"
+      },
+      {
+        "min": 64,
+        "max": 68,
+        "result": "entertainer"
+      },
+      {
+        "min": 69,
+        "max": 69,
+        "result": "messenger"
+      },
+      {
+        "min": 70,
+        "max": 75,
+        "result": "pedlar"
+      },
+      {
+        "min": 76,
+        "max": 76,
+        "result": "boatman"
+      },
+      {
+        "min": 77,
+        "max": 80,
+        "result": "riverwoman"
+      },
+      {
+        "min": 81,
+        "max": 83,
+        "result": "smuggler"
+      },
+      {
+        "min": 84,
+        "max": 85,
+        "result": "knave"
+      },
+      {
+        "min": 86,
+        "max": 90,
+        "result": "charlatan"
+      },
+      {
+        "min": 91,
+        "max": 91,
+        "result": "fence"
+      },
+      {
+        "min": 92,
+        "max": 92,
+        "result": "outlaw"
+      },
+      {
+        "min": 93,
+        "max": 94,
+        "result": "racketeer"
+      },
+      {
+        "min": 95,
+        "max": 98,
+        "result": "thief"
+      },
+      {
+        "min": 99,
+        "max": 99,
+        "result": "guard"
+      },
+      {
+        "min": 100,
+        "max": 100,
+        "result": "soldier"
+      }
+    ],
+    "conversion": "Fifth Edition Career profiles and normal random-creation bonuses apply, not Fourth Edition creation XP. Advisor → Adviser. User-approved Bawd → Knave mapping uses the revised Fifth Edition Rogue Career."
+  }
+]

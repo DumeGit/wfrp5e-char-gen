@@ -1,6 +1,8 @@
+import {speciesReferences} from './species-mechanics.mjs';
+import {sourceLabel} from './sources.mjs';
 import {chartState,starSign,starEffect,chartXP,chartTalentChoices} from './astrology.mjs';
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export function speciesRulePanel(R,s){const text=R.species[s.species].mechanics?.gmApproval;return text?`<div class="notice"><p>${esc(text)}</p></div>`:'';}
+export function speciesRulePanel(R,s){const text=R.species[s.species].mechanics?.gmApproval;return (text?`<div class="notice"><p>${esc(text)}</p></div>`:'')+speciesReferences(R,s).map(x=>`<div class="notice"><p>${esc(x.text)} <span class="source">${esc(sourceLabel(R,x))}</span></p></div>`).join('');}
 export function nameStylePanel(R,s,{select}){if(!R.background[s.species].imperialNames)return '';return `<div class="field"><label for="ogre-name-style">Naming tradition</label>${select('id="ogre-name-style" data-bind="nameStyle"',[['imperial','Imperial names · core p. 27'],['traditional','Traditional Ogre names · Archives II pp. 22–23']],s.nameStyle||'imperial')}</div>`;}
 export function nameElementPanel(R,s,{select,button}){
  const tables=s.nameStyle==='traditional'?R.background[s.species].nameElements:null;if(!tables)return '';

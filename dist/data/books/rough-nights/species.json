@@ -1,0 +1,138 @@
+{
+  "Gnome": {
+    "id": "rough-nights:species:gnome",
+    "page": 88,
+    "offsets": {
+      "WS": 20,
+      "BS": 10,
+      "S": 10,
+      "T": 15,
+      "I": 30,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 40,
+      "Fel": 15
+    },
+    "languages": [
+      "Reikspiel"
+    ],
+    "fate": 2,
+    "fortune": 2,
+    "movement": 3,
+    "age": [
+      20,
+      10
+    ],
+    "height": [
+      40,
+      1
+    ],
+    "appearancePage": 89,
+    "skills": [
+      "Channelling (Ulgu)",
+      "Charm",
+      "Consume Alcohol",
+      "Dodge",
+      "Entertain (Any)",
+      "Gossip",
+      "Haggle",
+      "Language (Ghassally)",
+      "Language (Magick)",
+      "Language (Wastelander)",
+      "Outdoor Survival",
+      "Stealth (Any)"
+    ],
+    "talents": [
+      [
+        "Beneath Notice",
+        "Suffuse with Ulgu"
+      ],
+      [
+        "Luck",
+        "Mimic"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Fisherman",
+        "Read/Write"
+      ],
+      [
+        "Second Sight",
+        "Sixth Sense"
+      ]
+    ],
+    "randomTalents": 0,
+    "mechanics": {
+      "size": "Small",
+      "careers": [
+        "apothecary",
+        "lawyer",
+        "physician",
+        "priest",
+        "scholar",
+        "wizard",
+        "agitator",
+        "artisan",
+        "beggar",
+        "investigator",
+        "merchant",
+        "rat-catcher",
+        "townsman",
+        "watchman",
+        "adviser",
+        "artist",
+        "envoy",
+        "noble",
+        "servant",
+        "spy",
+        "warden",
+        "bailiff",
+        "herbalist",
+        "hunter",
+        "miner",
+        "scout",
+        "villager",
+        "bounty-hunter",
+        "entertainer",
+        "messenger",
+        "pedlar",
+        "boatman",
+        "riverwoman",
+        "smuggler",
+        "knave",
+        "charlatan",
+        "fence",
+        "outlaw",
+        "racketeer",
+        "thief",
+        "guard",
+        "soldier"
+      ],
+      "arcaneLores": [
+        "Shadows"
+      ],
+      "references": [
+        {
+          "page": 88,
+          "text": "Proposed Fifth Edition adaptation, approved by the user: Gnomes start with 2 Fate and 2 Fortune, with no extra points to distribute. The supplement instead prints Fate 2, Resilience 0 and two extra points; it does not supply Fifth Edition starting values. Normal Fifth Edition random-creation bonuses still apply."
+        },
+        {
+          "page": 88,
+          "text": "Gnomes are inherently magical. With an Advance in Language (Magick), they may attempt Dispelling even without a spellcasting Talent. Gnome wizards can learn Shadows, Dark Magic and Chaos Magic, but Necromancy, Daemonology and all Chaos Magic are outlawed by their people. Only Shadows is supported by this creator’s ordinary Arcane Lore choices; dark/Chaos training and live Dispelling remain outside its current scope."
+        },
+        {
+          "page": 89,
+          "text": "Gnome clans are inherited from the mother and do not change on marriage. A Gnome may conceal their clan name behind an epithet. Eyes grow grey with age, typically entirely grey by age 200; hair eventually becomes deep silver. The printed 2d10 appearance tables are used without inventing age cutoffs or reroll rules."
+        },
+        {
+          "page": 88,
+          "text": "User-approved Fifth Edition Size (Small): Wounds = 2 × Toughness Bonus, plus another Toughness Bonus with Hardy (core pp. 120, 361). The supplement’s older formula, 2 × TB + WPB, is not used. Small is recorded separately from the five Species Talent choices."
+        }
+      ]
+    },
+    "conversion": "User-approved Fate/Fortune adaptation: 2 Fate / 2 Fortune, no extra distribution; display the proposal warning. Fifth Edition five Species Skills at +5 and ordinary creation limits replace Fourth Edition +5/+3 allocations. Reikspiel is explicitly native; Ghassally remains selectable. Omit Small as a sixth Species Talent and record Small size separately."
+  }
+}
