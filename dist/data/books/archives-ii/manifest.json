@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume II",
   "shortTitle": "Archives II",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -16,6 +16,7 @@
   "compatibility": {
     "reviewed": true,
     "notes": [
+      "User-approved random-table defaults: Archives II p. 18 Species rolls supersede core while enabled; its Ogre Career table is automatic for Ogres. Explicit table choices remain available.",
       "Fifth Edition core creation, advancement, Talents and Creature Traits govern. Select five Species Skills at +5; omit old Large as a Talent and use Large size.",
       "User-approved Ogre starting adaptation: 1 Fate, 2 Fortune, no extra point; retain normal Fifth Edition random-creation bonuses.",
       "User correction: Rat Catcher covers 05–06 in the p. 18 Career table. Seaman maps to core Sailor; existing Careers retain core Class labels.",

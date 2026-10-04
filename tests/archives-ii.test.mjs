@@ -44,8 +44,20 @@ test('all 100 Ogre Career faces are defined and legal, including approved 05–0
  assert.equal(tableResult(table,5),'rat-catcher');assert.equal(tableResult(table,6),'rat-catcher');assert.equal(tableResult(table,40),'sailor');
  s.rollTables={career:table.id};assert.equal(randomTable(B,s,'career'),table);
  assert.doesNotMatch(bookPanel(library,B,ogre()),/Choose a printed table to enable rolls/);
- assert.equal(randomTable(B,M.fresh(),'species').id,randomTable(R,M.fresh(),'species').id);
+ assert.equal(randomTable(B,M.fresh(),'species').id,'archives-ii:table:species');
  const scheme=B.careers.find(x=>x.name==='Ogre Butcher').advanceScheme;assert.equal(scheme.Dex,2);assert.equal(scheme.Int,null);
+});
+test('Archives II Species table defaults only when enabled and preserves explicit choices',()=>{
+ const expected=face=>face<=89?'Human':face<=93?'Halfling':face<=97?'Dwarf':face===98?'Ogre':face===99?'High Elf':'Wood Elf';
+ for(const ids of [['archives-ii'],['up-in-arms','archives-ii'],['archives-i','archives-ii'],['up-in-arms','archives-i','archives-ii']]){
+  const catalog=assembleBooks(library,ids),s=M.fresh(),table=randomTable(catalog,s,'species');
+  assert.equal(table.id,'archives-ii:table:species');
+  for(let face=1;face<=100;face++)assert.equal(tableResult(table,face),expected(face),`Species ${face}`);
+  assert.match(bookPanel(library,catalog,s),/<option value="archives-ii:table:species" selected>/);
+  const core=randomTable(R,s,'species');s.rollTables={species:core.id};assert.equal(randomTable(catalog,s,'species').id,core.id);
+  assert.equal(randomTable(catalogForCharacter(library,{...s,version:2,books:bookSelection(catalog)}),s,'species').id,core.id);
+ }
+ for(const ids of [[],['up-in-arms'],['archives-i'],['up-in-arms','archives-i']])assert.equal(randomTable(assembleBooks(library,ids),M.fresh(),'species').id,randomTable(R,M.fresh(),'species').id);
 });
 test('Imperial and traditional Ogre names retain their distinct sources and appearance dice',()=>{
  const s=ogre();let b=creationBackground(B,s);assert.deepEqual(b.forenames,R.background.Human.forenames);assert.deepEqual(b.surnames,R.background.Human.surnames);assert.equal(b.source.book,'core');

@@ -37,7 +37,7 @@
         "result": "Wood Elf"
       }
     ],
-    "conversion": "Explicitly selectable table; core default probabilities are unchanged. Fifth Edition random creation bonuses replace the old +20 XP Species reward."
+    "conversion": "User-approved default when Archives II is enabled: this p. 18 Species table supersedes the core table unless the user explicitly selects another. Fifth Edition random creation bonuses replace the old +20 XP Species reward."
   },
   {
     "id": "archives-ii:table:ogre-careers",

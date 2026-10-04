@@ -120,7 +120,7 @@ write('spells.json', spells)
 
 career_ranges = [(1, 1, 'archives-ii:career:ogre-butcher'), (2, 2, 'artisan'), (3, 4, 'beggar'), (5, 6, 'rat-catcher'), (7, 12, 'watchman'), (13, 13, 'servant'), (14, 14, 'bailiff'), (15, 21, 'hunter'), (22, 23, 'miner'), (24, 26, 'archives-ii:career:rhinox-herder'), (27, 29, 'bounty-hunter'), (30, 32, 'entertainer'), (33, 39, 'pedlar'), (40, 40, 'sailor'), (41, 43, 'stevedore'), (44, 47, 'grave-robber'), (48, 56, 'outlaw'), (57, 61, 'racketeer'), (62, 68, 'guard'), (69, 79, 'pit-fighter'), (80, 84, 'protagonist'), (85, 91, 'archives-ii:career:maneater'), (92, 100, 'soldier')]
 write('tables.json', [
-    {'id': 'archives-ii:table:species', 'name': 'Archives II Species', 'kind': 'species', 'sides': 100, 'page': 18, 'rows': [{'min': lo, 'max': hi, 'result': name} for lo, hi, name in [(1, 89, 'Human'), (90, 93, 'Halfling'), (94, 97, 'Dwarf'), (98, 98, 'Ogre'), (99, 99, 'High Elf'), (100, 100, 'Wood Elf')]], 'conversion': 'Explicitly selectable table; core default probabilities are unchanged. Fifth Edition random creation bonuses replace the old +20 XP Species reward.'},
+    {'id': 'archives-ii:table:species', 'name': 'Archives II Species', 'kind': 'species', 'sides': 100, 'page': 18, 'rows': [{'min': lo, 'max': hi, 'result': name} for lo, hi, name in [(1, 89, 'Human'), (90, 93, 'Halfling'), (94, 97, 'Dwarf'), (98, 98, 'Ogre'), (99, 99, 'High Elf'), (100, 100, 'Wood Elf')]], 'conversion': 'User-approved default when Archives II is enabled: this p. 18 Species table supersedes the core table unless the user explicitly selects another. Fifth Edition random creation bonuses replace the old +20 XP Species reward.'},
     {'id': 'archives-ii:table:ogre-careers', 'name': 'Archives II Ogre Careers', 'kind': 'career', 'species': 'Ogre', 'sides': 100, 'page': 18, 'rows': [{'min': lo, 'max': hi, 'result': name} for lo, hi, name in career_ranges], 'conversion': 'User correction: printed missing 05 is assigned to Rat Catcher, making its range 05–06. Seaman uses Fifth Edition Sailor. Core Career definitions and Class labels apply to existing Careers.'}
 ])
 
@@ -208,7 +208,8 @@ write('armour.json', [{'id': 'archives-ii:armour:ogre-gutplate', 'name': 'Ogre G
 for item in market:
     item['ogreSized'] = True
 write('market.json', market)
-write('manifest.json', {'schemaVersion': 1, 'id': 'archives-ii', 'title': 'Archives of the Empire: Volume II', 'shortTitle': 'Archives II', 'edition': 4, 'version': '1.0.0', 'kind': 'supplement', 'dependsOn': ['core'], 'source': {'file': 'Archives of the Empire - Vol II.pdf', 'sha256': read(STAGED/'source-review.json')['sha256']}, 'compatibility': {'reviewed': True, 'notes': [
+write('manifest.json', {'schemaVersion': 1, 'id': 'archives-ii', 'title': 'Archives of the Empire: Volume II', 'shortTitle': 'Archives II', 'edition': 4, 'version': '1.0.1', 'kind': 'supplement', 'dependsOn': ['core'], 'source': {'file': 'Archives of the Empire - Vol II.pdf', 'sha256': read(STAGED/'source-review.json')['sha256']}, 'compatibility': {'reviewed': True, 'notes': [
+    'User-approved random-table defaults: Archives II p. 18 Species rolls supersede core while enabled; its Ogre Career table is automatic for Ogres. Explicit table choices remain available.',
     'Fifth Edition core creation, advancement, Talents and Creature Traits govern. Select five Species Skills at +5; omit old Large as a Talent and use Large size.',
     'User-approved Ogre starting adaptation: 1 Fate, 2 Fortune, no extra point; retain normal Fifth Edition random-creation bonuses.',
     'User correction: Rat Catcher covers 05–06 in the p. 18 Career table. Seaman maps to core Sailor; existing Careers retain core Class labels.',

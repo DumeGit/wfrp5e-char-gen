@@ -252,7 +252,9 @@ export function randomTable(R,s,kind){
  const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s)));
  const selected=s.rollTables?.[kind];
  if(selected&&!available.some(x=>x.id===selected))fail(`unavailable ${kind} random table.`);
- // Preserve core defaults; a Species with only one printed Career table needs no extra choice.
- return available.find(x=>x.id===selected)||available.find(x=>x.source.book==='core')||(kind==='career'&&available.length===1?available[0]:null);
+ // User-approved default: Archives II's Species table supersedes core while enabled.
+ const speciesDefault=kind==='species'?available.find(x=>x.id==='archives-ii:table:species'):null;
+ // Explicit choices win; a Species with only one printed Career table needs no extra choice.
+ return available.find(x=>x.id===selected)||speciesDefault||available.find(x=>x.source.book==='core')||(kind==='career'&&available.length===1?available[0]:null);
 }
 export function tableResult(table,n){if(!table||!Number.isInteger(n)||n<1||n>table.sides)fail('invalid table roll.');return table.rows.find(x=>n>=x.min&&n<=x.max).result;}
