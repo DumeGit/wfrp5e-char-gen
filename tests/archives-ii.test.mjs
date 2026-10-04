@@ -37,12 +37,13 @@ test('Ogre creation retains five Skills, five Species Talents, native Reikspiel 
  Object.assign(s,{speciesMode:'first',careerMode:'first',charMode:'first'});assert.equal(M.derive(B,s).fate,2);assert.equal(M.derive(B,s).fortune,3);
 });
 test('all 100 Ogre Career faces are defined and legal, including approved 05–06 correction',()=>{
- const s=ogre();assert.equal(randomTable(B,s,'career'),null);
+ const s=ogre();
  const table=B.tables.find(x=>x.id==='archives-ii:table:ogre-careers');
+ assert.equal(randomTable(B,s,'career'),table);
  for(let face=1;face<=100;face++)assert.ok(careerAvailable(B,s,B.careers.find(x=>x.id===tableResult(table,face))));
  assert.equal(tableResult(table,5),'rat-catcher');assert.equal(tableResult(table,6),'rat-catcher');assert.equal(tableResult(table,40),'sailor');
  s.rollTables={career:table.id};assert.equal(randomTable(B,s,'career'),table);
- assert.match(bookPanel(library,B,ogre()),/Choose a printed table to enable rolls/);
+ assert.doesNotMatch(bookPanel(library,B,ogre()),/Choose a printed table to enable rolls/);
  assert.equal(randomTable(B,M.fresh(),'species').id,randomTable(R,M.fresh(),'species').id);
  const scheme=B.careers.find(x=>x.name==='Ogre Butcher').advanceScheme;assert.equal(scheme.Dex,2);assert.equal(scheme.Int,null);
 });

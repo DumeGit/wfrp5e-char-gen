@@ -56,6 +56,16 @@ test('additional printed roll table never changes core probabilities until expli
  s.rollTables={career:'fixture:career'};assert.equal(tableResult(randomTable(on,s,'career'),100),'fixture:soldier');
  assert.throws(()=>randomTable(R,s,'career'),/unavailable/);
 });
+test('a sole Career table defaults for a new Species, while multiple tables require a choice',()=>{
+ const p=additions();p.data.species={'Fixture Species':{...structuredClone(raw.species.Human),id:'fixture:species',page:8}};p.data.background={'Fixture Species':{...structuredClone(raw.background.Human),id:'fixture:background',page:9}};p.data.careers[0].species.push('Fixture Species');
+ const table={id:'fixture:career',name:'Fixture Career table',kind:'career',species:'Fixture Species',page:12,sides:100,rows:[{min:1,max:100,result:'fixture:soldier'}]};p.data.tables=[table];
+ const s={...soldier(),species:'Fixture Species'},single=assembleBooks(withPack(p),['fixture']);
+ assert.equal(randomTable(single,s,'career').id,table.id);assert.equal(tableResult(randomTable(single,s,'career'),100),'fixture:soldier');
+ p.data.tables.push({...table,id:'fixture:alternate-career',name:'Alternate Fixture Career table'});
+ const multiple=assembleBooks(withPack(p),['fixture']);assert.equal(randomTable(multiple,s,'career'),null);
+ s.rollTables={career:'fixture:alternate-career'};assert.equal(randomTable(multiple,s,'career').id,'fixture:alternate-career');
+ s.rollTables={career:'missing'};assert.throws(()=>randomTable(multiple,s,'career'),/unavailable/);
+});
 test('same-name content and IDs are rejected, including Talent aliases and shop collisions',()=>{
  const p=additions();p.data.talents[0].name='Strong Back';assert.throws(()=>assembleBooks(withPack(p),['fixture']),/duplicate option/);
  p.data.talents[0].name='Strong Back (Other)';assert.throws(()=>assembleBooks(withPack(p),['fixture']),/duplicate option/);

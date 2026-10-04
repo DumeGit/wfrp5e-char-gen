@@ -103,7 +103,7 @@ The implemented Archives II workflow stores `{enabled, sign, rolledSign, witchli
 
 Tables require ID, name, kind (`species`, `career`, `talent`), page, sides (100), and rows (`min`, `max`, `result`). Career tables also specify their Species and reference Career IDs; other tables reference Species/Talent names. Each face must have exactly one result; absent/out-of-range/overlapping rows and unavailable results fail validation. This version supports printed d100 tables only; other dice need explicit implementation.
 
-Core random tables remain the defaults. Enabling extra choices does not add entries to those tables or change their weights. Additional printed tables appear in the book panel and must be chosen explicitly. A new Species without a core Career table receives no automatic substitute, even if an enabled pack contains one.
+Core random tables remain the defaults. Enabling extra choices does not add entries to those tables or change their weights. Additional printed tables appear in the book panel. When a Species has no core Career table and exactly one enabled printed Career table, it is used automatically (for example Archives II Ogres). Multiple non-core Career tables require explicit selection; no table is invented for a Species without one.
 
 The `career-refinement` table kind additionally requires `career`, the original Career ID, and references actual Career results. It is conditional, rather than a replacement random Career table. Its handler offers one optional second roll after a matching core result and retains the original when a result is unavailable to the Species, following the user's explicit Up in Arms decision.
 
