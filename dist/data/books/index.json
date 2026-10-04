@@ -17,6 +17,14 @@
     {
       "id": "archives-ii",
       "path": "archives-ii/manifest.json"
+    },
+    {
+      "id": "archives-iii",
+      "path": "archives-iii/manifest.json"
+    },
+    {
+      "id": "archives-iii-hedge",
+      "path": "archives-iii-hedge/manifest.json"
     }
   ]
 }

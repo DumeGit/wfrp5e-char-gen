@@ -13,7 +13,7 @@ The app loads a registered core pack plus explicitly selected supplements/varian
 
 ## Manifest and registry
 
-The core book, Up in Arms and Archives of the Empire I and II are installed. Reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md), [ARCHIVES-I.md](ARCHIVES-I.md) and [ARCHIVES-II.md](ARCHIVES-II.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character; an edited draft requires confirmation, while an untouched blank character has nothing to discard. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
+The core book, Up in Arms and Archives of the Empire I, II and III are installed, with an optional animal-doctor Hedge Witch variant. Reviewed conversions and exclusions are in [UP-IN-ARMS.md](UP-IN-ARMS.md), [ARCHIVES-I.md](ARCHIVES-I.md), [ARCHIVES-II.md](ARCHIVES-II.md) and [ARCHIVES-III.md](ARCHIVES-III.md). Test fixtures are synthetic integration checks and are not shipped content. Adding a pack to the registry installs it; it remains disabled for characters until selected in **Origins → Books & options**. Required dependencies are included automatically. Changing enabled books deliberately starts a new character; an edited draft requires confirmation, while an untouched blank character has nothing to discard. The user does not require migration of old WIP characters; current saved characters record exact book IDs/versions and reject missing/different versions.
 
 Every manifest has `schemaVersion: 1`, an ID (`lowercase-hyphenated` recommended), title, shortTitle, edition (4 or 5), version, kind (`core`, `supplement`, `variant`), dependsOn, source (`file`, `sha256`) and files. Fourth Edition packs also require `compatibility: {reviewed: true, notes: [...]}` with a nonempty review. The format only checks that a review was recorded; the integrator remains responsible for its accuracy.
 
@@ -48,7 +48,8 @@ Supported file keys:
 | background | Object keyed by Species, with printed forenames, surnames, eyes, hair and optional clans |
 | skills | Array: name, char, advanced, grouped, options, page |
 | talents | Array: name, text, page; optional `unavailable` explanation blocks purchase/free grants; special rules need a supported setting or handler |
-| spells | Array: name, category, text, range, target, duration, optional cn, page |
+| spells | Array: name, category, text, range, target, duration, optional cn, optional distinct `specialisations`, page; expanded learnable names must stay unique |
+| cants | Array: name, lore, text, page; optional free Colour Lore choices at 1/3/6 learned spells |
 | gear / market | Arrays: name, price, enc (number or null), availability, optional category; capacity, wearable, text and ammunition reference fields are supported |
 | weapons | Array: name, group, enc, reach, damage, qualities, kind (melee/ranged), page |
 | armour | Array: name, enc, locations, ap, qualities, optional quick, page |
@@ -100,6 +101,8 @@ Each `astrology` row requires ID, name, page, d100 `min`/`max`, `adjustments` ma
 The implemented Archives II workflow stores `{enabled, sign, rolledSign, witchling, talent, ascendant, mansions}`. Roll the initial sign once, then retain it for 25 XP or choose another without a reward. The Witchling effect also rolls once. Grants obey core Talent caps and incompatibilities. Ascendant and up to five mansion signs remain background only. The selected chart is validated on save-file loading; XP totals and initial scores derive from it rather than altering the base budget or XP ledger. New astrology grant types/rewards would require their own reviewed handler.
 
 ## Random tables, sources and exports
+
+Archives III is installed alongside I/II and Up in Arms, with a separate animal-doctor Hedge Witch variant. See [ARCHIVES-III.md](ARCHIVES-III.md) for reviewed conversions, choices and deferred chapters. Its handlers support `randomTalentAlternative` on origins (an exclusive fixed-or-random slot), selected Old Faith Blessings and optional Cants. These mechanics require code rather than generic descriptive imports. Saved Cants validate their book, Lore, IDs and uniqueness; undo prunes selections after losing a spell threshold.
 
 Tables require ID, name, kind (`species`, `career`, `talent`), page, sides (100), and rows (`min`, `max`, `result`). Career tables also specify their Species and reference Career IDs; other tables reference Species/Talent names. Each face must have exactly one result; absent/out-of-range/overlapping rows and unavailable results fail validation. This version supports printed d100 tables only; other dice need explicit implementation.
 

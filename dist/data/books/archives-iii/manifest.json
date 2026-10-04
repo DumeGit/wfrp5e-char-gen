@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "archives-iii",
+  "title": "Archives of the Empire: Volume III",
+  "shortTitle": "Archives III",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Archives of the Empire - Volume III.pdf",
+    "sha256": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Fifth Edition core creation allocations, Career trackers and Talent/Creature Trait definitions govern; descriptive play effects remain references.",
+      "User-approved Hedgecraft duplicate handling: retain the six core definitions and import nine new spell names. Fellstave has seven printed target specialisations.",
+      "Altdorf profiles retain core physical Species/native Languages and five Skills at +5. Eastender Criminal-or-random is one exclusive Talent slot.",
+      "User-approved optional Cants: select free abilities after one, three and six spells of a Colour Lore; live Channelling and power tracking are deferred.",
+      "Old Faith: six chosen Blessings from Bless, one additional from Invoke; paid extras use core Miracle prices counting only Invoke and purchased Blessings, as approved by the user.",
+      "User skips the alternative armour chapter entirely; core armour remains unchanged.",
+      "User defers familiars to the character-manager phase. Businesses, ongoing armour repair/looting, NPCs and adventures are deferred."
+    ]
+  },
+  "files": {
+    "careers": "careers.json",
+    "spells": "spells.json",
+    "origins": "origins.json",
+    "rules": "rules.json",
+    "cants": "cants.json"
+  }
+}

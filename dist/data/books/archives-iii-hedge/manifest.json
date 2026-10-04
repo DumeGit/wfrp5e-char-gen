@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "archives-iii-hedge",
+  "title": "Archives III — Animal-doctor Hedge Witch",
+  "shortTitle": "Hedge Witch variant",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "variant",
+  "dependsOn": [
+    "archives-iii"
+  ],
+  "source": {
+    "file": "Archives of the Empire - Volume III.pdf",
+    "sha256": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Lore (Herbs) → Animal Care; Trade (Herbalist) → Animal Training; Craftsman (Herbalist) → Hardy; Master Tradesman (Herbalist) → Robust. Secret Signs (Hedge Witch) uses core Hedgefolk. Extra first-level Skill choices give no extra free Advances. Printed Trade (Charms) is absent from core and its swap remains unavailable."
+    ]
+  },
+  "files": {
+    "careers": "careers.json"
+  }
+}

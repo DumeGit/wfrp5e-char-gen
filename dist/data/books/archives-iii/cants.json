@@ -1,0 +1,194 @@
+[
+  {
+    "id": "archives-iii:cant:beasts-face-of-the-wild",
+    "name": "Face of the Wild",
+    "lore": "Beasts",
+    "page": 87,
+    "text": "By expending 1 SL of gathered power, you sprout fangs, fur, claws, or other intimidating features. You gain the Fear (1) Creature Trait until your next turn.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:beasts-talons-of-ghur",
+    "name": "Talons of Ghur",
+    "lore": "Beasts",
+    "page": 87,
+    "text": "You may expend a number of SL of gathered power, up to a maximum of your Willpower Bonus, to add +1 Damage for each to any unarmed attack you make until your next turn. You may decide to apply this effect after you have made your Melee Test, but before the GM has described the results.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:beasts-thick-hide",
+    "name": "Thick Hide",
+    "lore": "Beasts",
+    "page": 87,
+    "text": "By expending 3 SL of gathered power, you reinforce leather armour you are wearing. Add 1 AP to any hit location protected by leather armour until your next turn.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:death-eyes-of-death",
+    "name": "Eyes of Death",
+    "lore": "Death",
+    "page": 87,
+    "text": "By expending 1 SL of gathered power, you are granted a vision of another creature's death. You may ask how close a creature you can see is to death. The GM must describe, in relative terms, how many Wounds that creature has remaining.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:death-whispers-of-doom",
+    "name": "Whispers of Doom",
+    "lore": "Death",
+    "page": 87,
+    "text": "By expending 2 SL of gathered power, you can learn the Dooming of any creature you inflicted at least 1 Wound on during the previous Willpower Bonus minutes.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:death-deaths-visage",
+    "name": "Death’s Visage",
+    "lore": "Death",
+    "page": 87,
+    "text": "By expending 3 SL of gathered power, you can take on the aspect of the grave. For this round, you no longer need to breathe, and can ignore the effects of Fatigued, disease, and Poisoned. Creatures with the Undead Trait will ignore you unless you attack them directly, or if they are intelligent enough to see through your ruse.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:fire-brighten-blaze",
+    "name": "Brighten Blaze",
+    "lore": "Fire",
+    "page": 87,
+    "text": "By expending 1 SL of gathered power, any non-magical fire you can see within Willpower yards grows in intensity. A candle flame burns as violently as a torch, a torch as brightly as a campfire, and so on. This both increases the illumination provided, and may cause nearby creatures to gain an Ablaze Condition if the GM rules they were standing close enough to be caught in the enlarged fire.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:fire-set-alight",
+    "name": "Set Alight",
+    "lore": "Fire",
+    "page": 87,
+    "text": "Any time you strike an opponent with a Melee attack, you may expend 2 SL of gathered power to inflict one Ablaze Condition upon them.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:fire-fervent-bellow",
+    "name": "Fervent Bellow",
+    "lore": "Fire",
+    "page": 87,
+    "text": "By shouting your encouragement and expending 3 SL of gathered power, one ally who can hear your voice loses one Broken Condition.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:heavens-visions-of-trauma",
+    "name": "Visions of Trauma",
+    "lore": "Heavens",
+    "page": 87,
+    "text": "You may expend 1 SL of gathered power to gain +1 SL on any Dodge or Melee Test you make to avoid or parry an attack.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:heavens-crackling-blade",
+    "name": "Crackling Blade",
+    "lore": "Heavens",
+    "page": 87,
+    "text": "You may expend a number of SL of gathered power, up to a maximum of your Willpower Bonus, to add +1 Damage for each to any Melee attack you make with a metal weapon. You may decide to apply this effect after you have made your Melee Test, but before the GM has described the results.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:heavens-visions-of-fortune",
+    "name": "Visions of Fortune",
+    "lore": "Heavens",
+    "page": 87,
+    "text": "By expending 3 SL of gathered power, you peer into what is to come and shout a warning or advice to an ally who can hear your voice. They receive a +2 SL bonus to use on any one Test during their next turn. You may not use this cant on yourself.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:metal-reinforcement",
+    "name": "Reinforcement",
+    "lore": "Metal",
+    "page": 88,
+    "text": "By expending 1 SL of gathered power, you strengthen metal armour you are wearing. Add 1 AP to any hit location protected by metal armour until your next turn.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:metal-heart-of-iron",
+    "name": "Heart of Iron",
+    "lore": "Metal",
+    "page": 88,
+    "text": "In response to receiving a Critical Wound, you may choose to expend 2 SL of gathered power. The struck location toughens unnaturally, resisting a potentially mortal blow. Your attacker must roll twice on the appropriate Critical Wound chart, choosing the least harmful result.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:metal-quicksilver-blade",
+    "name": "Quicksilver Blade",
+    "lore": "Metal",
+    "page": 88,
+    "text": "By expending 3 SL of gathered power, one metal weapon you are holding begins to flow like water. Melee attacks you make this Round count as spells of Chamon and enjoy the benefits listed for spells of the Lore of Metal described on Fifth Edition core Lore of Metal — ignoring the AP of metal armour, and inflicting additional Damage equal to the AP of metal armour worn on that Hit Location.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:life-staunch",
+    "name": "Staunch",
+    "lore": "Life",
+    "page": 88,
+    "text": "By expending 1 SL of gathered power, you remove all Fatigued and Bleeding Conditions from yourself.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:life-invigorate",
+    "name": "Invigorate",
+    "lore": "Life",
+    "page": 88,
+    "text": "As an Action, you may expend 2 SL of gathered power and touch another creature. Until your next turn, that creature gains +1 SL to all Tests involving their Strength or Toughness, and automatically passes any Test to resist the effects of disease or poison.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:life-regenerate",
+    "name": "Regenerate",
+    "lore": "Life",
+    "page": 88,
+    "text": "At the start of your turn, you may expend 3 SL of gathered power to immediately gain the Regeneration Creature Trait (Fifth Edition core) until the start of the next Round.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:light-brighteyes",
+    "name": "Brighteyes",
+    "lore": "Light",
+    "page": 88,
+    "text": "By expending 1 SL of gathered power, your eyes begin to give off a faint light. You gain the Dark Vision Creature Trait until the beginning of your next turn. Additionally, you become immune to the Blinded Condition while the effect persists. Blinded Conditions you already have are ignored for the duration of this effect but return once it ends.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:light-purging-light",
+    "name": "Purging Light",
+    "lore": "Light",
+    "page": 88,
+    "text": "By expending 2 SL of gathered power, a melee weapon you are holding or a single piece of ammunition begins to glow with furious light. Until your next turn, targets struck by a weapon or piece of ammunition under the effects of this Cant must make a Challenging (+0 SL) Endurance Test or gain a Blinded Condition. If the target has the Daemonic Trait, they take an additional +3 Damage from the attack as well.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:light-perfection-of-the-self",
+    "name": "Perfection of the Self",
+    "lore": "Light",
+    "page": 88,
+    "text": "By expending 3 SL of gathered power, you are engulfed in a cleansing light. Until your next turn, you may ignore the effects of any Diseases, Poisons, Critical Wounds, or Mutations that afflict you. Even severed limbs are temporarily replaced by airy constructions of pure Hysh.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:shadows-ulgus-touch",
+    "name": "Ulgu’s Touch",
+    "lore": "Shadows",
+    "page": 88,
+    "text": "By expending 1 SL of gathered power, you cloak yourself in raw Ulgu. You may add a number of SL up to your Willpower Bonus to any Stealth Tests you make this Round, adding them after the dice have been rolled but before the GM has described the result.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:shadows-not-your-problem",
+    "name": "Not Your Problem",
+    "lore": "Shadows",
+    "page": 88,
+    "text": "By expending 2 SL of gathered power you become less of a threat in the eyes of others. If there is at least one other viable target which a hostile enemy can attack on their next turn, they will attack that target instead.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  },
+  {
+    "id": "archives-iii:cant:shadows-a-passing-shadow",
+    "name": "A Passing Shadow",
+    "lore": "Shadows",
+    "page": 88,
+    "text": "By expending 3 SL of gathered power, you become impossible to restrain. You may slip free of any existing bonds, and all attempts to grab, hold, or otherwise prevent your movement fail. You may pass through difficult terrain without hindrance, and your almost insubstantial form may even slip past barred windows and through other tight spaces.",
+    "conversion": "Optional creation selections only: free Cant at one, three and six spells of this Colour Lore (p. 86). Current core Creature Traits apply. Live Channelling/power spending is deferred."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "archives-iii:rule:gods",
+    "path": [
+      "gods"
+    ],
+    "operation": "append",
+    "value": [
+      "Handrich",
+      "Solkan",
+      "Old Faith"
+    ],
+    "page": 58,
+    "reason": "Printed cult patron options (Handrich p. 47, Solkan p. 55, Old Faith p. 58); use matching Bless/Invoke patrons."
+  },
+  {
+    "id": "archives-iii:rule:blessings-handrich",
+    "path": [
+      "blessings",
+      "Handrich"
+    ],
+    "operation": "add",
+    "value": [
+      "Charisma",
+      "Fortune",
+      "Hardiness",
+      "Protection",
+      "Wisdom",
+      "Wit"
+    ],
+    "page": 47,
+    "reason": "Six fixed Blessings printed for this cult."
+  },
+  {
+    "id": "archives-iii:rule:blessings-solkan",
+    "path": [
+      "blessings",
+      "Solkan"
+    ],
+    "operation": "add",
+    "value": [
+      "Battle",
+      "Conscience",
+      "Courage",
+      "Hardiness",
+      "Might",
+      "Tenacity"
+    ],
+    "page": 55,
+    "reason": "Six fixed Blessings printed for this cult."
+  },
+  {
+    "id": "archives-iii:rule:blessings-old-faith",
+    "path": [
+      "blessings",
+      "Old Faith"
+    ],
+    "operation": "add",
+    "value": [
+      "Battle",
+      "Breath",
+      "Charisma",
+      "Conscience",
+      "Courage",
+      "Finesse",
+      "Fortune",
+      "Grace",
+      "Hardiness",
+      "Healing",
+      "The Hunt",
+      "Might",
+      "Protection",
+      "Recuperation",
+      "Righteousness",
+      "Savagery",
+      "Tenacity",
+      "Wisdom",
+      "Wit"
+    ],
+    "page": 58,
+    "reason": "Choose six distinct Blessings with Bless and one additional with Invoke. User-approved cost count excludes the six Bless grants; extra Blessings use core Miracle prices."
+  },
+  {
+    "id": "archives-iii:rule:skilloptions-language",
+    "path": [
+      "skillOptions",
+      "Language"
+    ],
+    "operation": "append",
+    "value": [
+      "Belthani"
+    ],
+    "page": 62,
+    "reason": "Explicitly printed Career specialisations; no extra free Advances."
+  },
+  {
+    "id": "archives-iii:rule:skilloptions-lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Torture"
+    ],
+    "page": 54,
+    "reason": "Explicitly printed Career specialisations; no extra free Advances."
+  },
+  {
+    "id": "archives-iii:rule:talentoptions-fearless",
+    "path": [
+      "talentOptions",
+      "Fearless"
+    ],
+    "operation": "append",
+    "value": [
+      "Magic Users"
+    ],
+    "page": 54,
+    "reason": "Printed Solkan Fearless target; use the core Talent."
+  }
+]

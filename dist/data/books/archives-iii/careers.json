@@ -1,0 +1,368 @@
+[
+  {
+    "id": "archives-iii:career:priest-of-handrich",
+    "name": "Priest of Handrich",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 46,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Clerk",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Consume Alcohol",
+          "Evaluate",
+          "Gamble",
+          "Gossip",
+          "Haggle",
+          "Lore (Theology)",
+          "Pray",
+          "Research"
+        ],
+        "talents": [
+          "Bless (Handrich)",
+          "Embezzle",
+          "Numismatics",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Abacus and Slate",
+          "Handrichan Icon",
+          "Brown Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Circuit Trader",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Animal Training",
+          "Cool",
+          "Intuition",
+          "Language (Any)",
+          "Lore (Politics)",
+          "Perception"
+        ],
+        "talents": [
+          "Briber",
+          "Carouser",
+          "Dealmaker",
+          "Invoke (Handrich)"
+        ],
+        "trappings": [
+          "Gazetteer",
+          "Lock Box",
+          "Well-tailored Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Officiant",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Intimidate",
+          "Leadership",
+          "Lore (Any)",
+          "Secret Signs (Guilder)"
+        ],
+        "talents": [
+          "Bookish",
+          "Cat-tongued",
+          "Robust",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "Handrich-touched Coin",
+          "Subordinate Clerks",
+          "Temple"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Profit",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Entertain (Speeches)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Public Speaker",
+          "Schemer",
+          "Strong-minded",
+          "Wealthy"
+        ],
+        "trappings": [
+          "Subordinate Officiants",
+          "Warehouse"
+        ]
+      }
+    ],
+    "conversion": "Use Fifth Edition allocations and core Talents. Academic Class follows core Priest (p. 83); the supplement gives a specialised Priest Career without a separate Class kit. Printed descriptive Trappings retain unknown weights where no matching profile exists."
+  },
+  {
+    "id": "archives-iii:career:priest-of-solkan",
+    "name": "Priest of Solkan",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 54,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Acolyte",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Endurance",
+          "Intimidate",
+          "Intuition",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Perception",
+          "Pray",
+          "Research"
+        ],
+        "talents": [
+          "Bless (Solkan)",
+          "Holy Visions",
+          "Read/Write",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Symbol of Solkan",
+          "Wooden Mask"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Priest",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Writing)",
+          "Gossip",
+          "Language (Classical)",
+          "Leadership",
+          "Lore (Politics)",
+          "Melee (Basic)"
+        ],
+        "talents": [
+          "Etiquette (Cultists)",
+          "Hatred (Chaos)",
+          "Impassioned Zeal",
+          "Invoke (Solkan)"
+        ],
+        "trappings": [
+          "Ceremonial Robes",
+          "Gold-plated Mask",
+          "Staff of Law or Sundial"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Inquisitor",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Language (Estalian or Tilean)",
+          "Lore (Chaos)",
+          "Lore (Torture)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Acute Sense (Any)",
+          "Holy Hatred",
+          "Menacing",
+          "Resolute"
+        ],
+        "trappings": [
+          "Black Inquisitor’s Attire",
+          "Entourage of Acolytes",
+          "Instruments of Torture",
+          "Riding Horse"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Grand Inquisitor",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Charm",
+          "Entertain (Speeches)"
+        ],
+        "talents": [
+          "Fearless (Magic Users)",
+          "Iron Will",
+          "Pure Soul",
+          "Resistant (Any)"
+        ],
+        "trappings": [
+          "High Quality Robes",
+          "Replica of Solkan’s Amulet",
+          "Temple"
+        ]
+      }
+    ],
+    "conversion": "Use Fifth Edition allocations and core Talents. Academic Class follows core Priest (p. 83); the supplement gives a specialised Priest Career without a separate Class kit. Printed descriptive Trappings retain unknown weights where no matching profile exists. Resistance (Any) uses core Resistant (Any); Inqusitor’s spelling is corrected to Inquisitor’s.",
+    "text": "The book recommends Solkanites chiefly as NPCs or for a suitable party; a restrained, group-compatible priest is possible (p. 53). Solkan grants no Blessings or Miracles to a priest with any Sin or Corruption points (p. 55)."
+  },
+  {
+    "id": "archives-iii:career:priestess-of-rhya",
+    "name": "Priestess of Rhya",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 72,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 4,
+      "Ag": null,
+      "Dex": 3,
+      "Int": 2,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Endurance",
+          "Gossip",
+          "Intuition",
+          "Lore (Local)",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Perception",
+          "Pray"
+        ],
+        "talents": [
+          "Bless (Rhya)",
+          "Holy Visions",
+          "Orientation",
+          "Suave"
+        ],
+        "trappings": [
+          "Practical Tunic and Robes",
+          "Symbol of Rhya (wheatsheaf or spiral)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Priestess",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Cool",
+          "Entertain (Singing)",
+          "Heal",
+          "Intimidate",
+          "Lore (Herbs)"
+        ],
+        "talents": [
+          "Etiquette (Cultists)",
+          "Gregarious",
+          "Invoke (Rhya)",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Carved Staff",
+          "Healing Poultice",
+          "Trade Tools (Herbalist)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priestess",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Leadership",
+          "Lore (Spirits)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Impassioned Zeal",
+          "Pure Soul",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Entourage of Priestesses and/or Initiates",
+          "Quality Robes",
+          "Sacred Site"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Green Watcher",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Lore (Medicine)",
+          "Navigation"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Field Dressing",
+          "Public Speaker",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Entourage of Nuns and Priestesses",
+          "Riding Horse"
+        ]
+      }
+    ],
+    "conversion": "Use Fifth Edition allocations and core Talents. Academic Class follows core Priest (p. 83); the supplement gives a specialised Priest Career without a separate Class kit. Printed descriptive Trappings retain unknown weights where no matching profile exists.",
+    "text": "Male priests of Rhya are also allowed. Rhya has no Warrior Priests or Witch Hunters (p. 73)."
+  }
+]

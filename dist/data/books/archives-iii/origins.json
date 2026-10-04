@@ -1,0 +1,203 @@
+[
+  {
+    "id": "archives-iii:origin:south-banker",
+    "name": "Altdorf — South Banker",
+    "species": "Human",
+    "page": 83,
+    "skills": [
+      "Animal Care",
+      "Charm",
+      "Cool",
+      "Gossip",
+      "Language (Any)",
+      "Leadership",
+      "Lore (Any)",
+      "Melee (Basic)",
+      "Melee (Fencing)",
+      "Ranged (Blackpowder)",
+      "Ranged (Bow)",
+      "Ride (Horse)"
+    ],
+    "talents": [
+      [
+        "Doomed"
+      ],
+      [
+        "Etiquette (Any)"
+      ],
+      [
+        "Noble Blood",
+        "Pure Soul"
+      ],
+      [
+        "Read/Write",
+        "Supportive"
+      ],
+      [
+        "Savvy",
+        "Suave"
+      ]
+    ],
+    "randomTalents": 0,
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered."
+  },
+  {
+    "id": "archives-iii:origin:eastender",
+    "name": "Altdorf — Eastender",
+    "species": "Human",
+    "page": 83,
+    "skills": [
+      "Cool",
+      "Evaluate",
+      "Gossip",
+      "Haggle",
+      "Intimidate",
+      "Intuition",
+      "Language (Battle or Thieves Tongue)",
+      "Lore (Reikland)",
+      "Melee (Brawling)",
+      "Ranged (Blackpowder)",
+      "Sleight of Hand",
+      "Stealth (Urban)"
+    ],
+    "talents": [
+      [
+        "Argumentative",
+        "Flee!"
+      ],
+      [
+        "Doomed"
+      ],
+      [
+        "Nimble-fingered",
+        "Read/Write"
+      ],
+      [
+        "Savvy",
+        "Suave"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered. Criminal OR one random Talent is a single exclusive starting slot, not an extra sixth Talent. Thieves’ Tongue uses the core spelling Thieves Tongue.",
+    "randomTalentAlternative": "Criminal"
+  },
+  {
+    "id": "archives-iii:origin:dwarf-altdorfer",
+    "name": "Altdorf — Dwarf Altdorfer",
+    "species": "Dwarf",
+    "page": 83,
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Evaluate",
+      "Intimidate",
+      "Intuition",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Craftsman (Any)",
+        "Resolute"
+      ],
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "randomTalents": 0,
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered."
+  },
+  {
+    "id": "archives-iii:origin:hexxerbezrik",
+    "name": "Altdorf — Hexxerbezrik",
+    "species": "Human",
+    "page": 84,
+    "skills": [
+      "Cool",
+      "Evaluate",
+      "Gossip",
+      "Intimidate",
+      "Intuition",
+      "Language (Classical)",
+      "Lore (Reikland)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Perception",
+      "Sleight of Hand",
+      "Stealth (Urban)"
+    ],
+    "talents": [
+      [
+        "Doomed"
+      ],
+      [
+        "Beneath Notice",
+        "Read/Write"
+      ],
+      [
+        "Savvy",
+        "Suave"
+      ],
+      [
+        "Second Sight",
+        "Sixth Sense"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered."
+  },
+  {
+    "id": "archives-iii:origin:docklands",
+    "name": "Altdorf — Docklands",
+    "species": "Human",
+    "page": 84,
+    "skills": [
+      "Consume Alcohol",
+      "Evaluate",
+      "Gossip",
+      "Haggle",
+      "Intimidate",
+      "Intuition",
+      "Language (Thieves Tongue)",
+      "Lore (Reikland)",
+      "Melee (Brawling)",
+      "Row",
+      "Sail (Barge)",
+      "Sleight of Hand"
+    ],
+    "talents": [
+      [
+        "Criminal",
+        "Etiquette (Merchants)"
+      ],
+      [
+        "Dealmaker",
+        "Menacing"
+      ],
+      [
+        "Doomed"
+      ],
+      [
+        "Savvy",
+        "Suave"
+      ]
+    ],
+    "randomTalents": 1,
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered. Thieves’ Tongue uses the core spelling Thieves Tongue."
+  }
+]

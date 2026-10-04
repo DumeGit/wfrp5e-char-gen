@@ -1,7 +1,9 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"84b9e4690b19b154422f";
+const CACHE=CACHE_PREFIX+"0a6f2067ff3a2fb3d8df";
 const ASSETS=[
  "app.js",
+ "archives-iii-ui.mjs",
+ "archives-iii.mjs",
  "archives-ui.mjs",
  "assets/LICENSE-pdf-lib.md",
  "assets/character-sheet.pdf",
@@ -35,6 +37,14 @@ const ASSETS=[
  "data/books/archives-ii/tables.json",
  "data/books/archives-ii/talents.json",
  "data/books/archives-ii/weapons.json",
+ "data/books/archives-iii-hedge/careers.json",
+ "data/books/archives-iii-hedge/manifest.json",
+ "data/books/archives-iii/cants.json",
+ "data/books/archives-iii/careers.json",
+ "data/books/archives-iii/manifest.json",
+ "data/books/archives-iii/origins.json",
+ "data/books/archives-iii/rules.json",
+ "data/books/archives-iii/spells.json",
  "data/books/core/armour.json",
  "data/books/core/config.json",
  "data/books/core/manifest.json",

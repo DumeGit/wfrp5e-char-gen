@@ -1,3 +1,4 @@
+import {knownCants} from './archives-iii.mjs';
 import {derive,skillInfo,knownSpells} from './rules.mjs';
 import {gearSlots,gearOptions,equipment} from './equipment.mjs';
 
@@ -34,7 +35,7 @@ export function folioData(R,s){
  return {
   skills:Object.entries(d.skills).filter(([,points])=>points>0).map(([name,points])=>({name,value:((skillInfo(R,name,s)?.char==='Ag'&&load.complete)?load.agility:d.stats[skillInfo(R,name,s)?.char])+Math.round(points*5)})).sort((a,b)=>a.name.localeCompare(b.name)),
   talents:[...counts].map(([name,value])=>({name,value})).sort((a,b)=>a.name.localeCompare(b.name)),
-  magic:knownSpells(R,s).map(x=>({name:x.displayName||x.name})).sort((a,b)=>a.name.localeCompare(b.name)),
+  magic:[...knownSpells(R,s).map(x=>({name:x.displayName||x.name})),...knownCants(R,s).map(x=>({name:`${x.name} · ${x.lore} Cant`}))].sort((a,b)=>a.name.localeCompare(b.name)),
   gear:folioGear(R,s).map(({name,quantity})=>({name,value:quantity}))
  };
 }

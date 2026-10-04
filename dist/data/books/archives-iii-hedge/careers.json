@@ -1,0 +1,132 @@
+[
+  {
+    "id": "archives-iii-hedge:career:hedge-witch",
+    "name": "Hedge Witch",
+    "class": "Peasant",
+    "species": [
+      "Human"
+    ],
+    "page": 62,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 4,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Hedge Apprentice",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Channelling (Magick)",
+          "Charm",
+          "Cool",
+          "Intuition",
+          "Language (Magick)",
+          "Lore (Folklore)",
+          "Animal Care",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Animal Training",
+          "Secret Signs (Hedgefolk)",
+          "Language (Belthani)"
+        ],
+        "talents": [
+          "Hardy",
+          "Petty Magic",
+          "Read/Write",
+          "Second Sight"
+        ],
+        "trappings": [
+          "Amulet",
+          "Hand Weapon (Sickle)",
+          "Quarterstaff"
+        ],
+        "unavailableSkills": [
+          {
+            "name": "Trade (Charms) → Charm Animal",
+            "reason": "The printed source Skill is absent from Fifth Edition Hedge Witch; no extra replacement Skill is granted."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Hedge Witch",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Heal",
+          "Lore (Local)",
+          "Lore (Magic)",
+          "Lore (Spirits)",
+          "Pray",
+          "Secret Signs (Hedgefolk)"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Arcane Magic (Hedgecraft)",
+          "Sixth Sense",
+          "Striding Gait (Any One)"
+        ],
+        "trappings": [
+          "Healing Poultice",
+          "Trade Tools (Herbalist)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Hedge Master",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Gossip",
+          "Leadership",
+          "Perception"
+        ],
+        "talents": [
+          "Instinctive Diction",
+          "Magical Sense",
+          "Robust",
+          "Savant (Folklore)"
+        ],
+        "trappings": [
+          "Apprentice",
+          "Isolated Hut"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Hedgewise",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Endurance",
+          "Lore (Genealogy)"
+        ],
+        "talents": [
+          "Acute Sense (Any One)",
+          "Pure Soul",
+          "Resistant (Disease)",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Assortment of Animal Skulls",
+          "Ceremonial Cloak and Garland"
+        ]
+      }
+    ],
+    "runtimeId": "hedge-witch",
+    "replaces": "core:careers:hedge-witch",
+    "reason": "User-approved optional Archives III animal-doctor adaptation.",
+    "conversion": "Lore (Herbs) → Animal Care; Trade (Herbalist) → Animal Training; Craftsman (Herbalist) → Hardy; Master Tradesman (Herbalist) → Robust. Secret Signs (Hedge Witch) uses core Hedgefolk. Extra first-level Skill choices give no extra free Advances. Printed Trade (Charms) is absent from core and its swap remains unavailable."
+  }
+]

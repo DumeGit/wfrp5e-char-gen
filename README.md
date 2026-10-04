@@ -1,6 +1,6 @@
 # WFRP Character Ledger
 
-A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms**, **Archives of the Empire I** and **Archives of the Empire II** are installed. All four together offer 86 Careers and 241 spells/Blessings/Miracles. Compatibility decisions and exclusions are documented separately for each supplement.
+A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms** and **Archives of the Empire I, II and III** are installed. All five together offer 89 Careers and 268 spell/Blessing/Miracle profiles (Fellstave offers seven separately learnable targets), plus 24 optional Cants. Compatibility decisions and exclusions are documented separately for each supplement.
 
 Contributor instructions and the user's project decisions are in [AGENTS.md](AGENTS.md). The book integration format and review workflow are in [docs/BOOKS.md](docs/BOOKS.md).
 
@@ -14,7 +14,7 @@ python -m http.server 8047 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:8047/`. The browser saves the current draft on that device. **Save character** downloads a JSON file for later import with **Load character**. Drafts on the local preview and published app belong to separate browser origins; use Save/Load to transfer them.
 
-The eight creation steps cover Species, all 64 core Careers (86 with all supplements enabled), Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default base budget is 1,000 XP, editable by the user; retaining an optional Archives II star-sign roll adds 25 XP separately. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices.
+The eight creation steps cover Species, all 64 core Careers (89 with all supplements enabled), Characteristics, free Skills, Talents, Gear & money, optional XP spending, and review/export. The default base budget is 1,000 XP, editable by the user; retaining an optional Archives II star-sign roll adds 25 XP separately. Experience offers standard +5 Advances (p. 191) and optional +1 Advances (Appendix II, p. 364) for Characteristics and Skills. After a partial +1 band, the same Characteristic or Skill must reach a multiple of five before a +5 purchase. The most recent ledger entry can be undone from the top of Experience. Spending XP locks foundational choices; undo purchases or clear advancement before changing those choices. Optional Cant selections remain editable.
 
 The Gear & money step includes a searchable shop for 253 fixed-price Trappings from the supplied Consumer Guide (pp. 301, 303, 307–316). Career-granted cash is added to the purse. It converts starting funds using 1 GC = 20 shillings = 240 pennies, blocks overspending, supports removing a purchase, and adds purchases to equipment and PDF export. It assumes purchases are made during character creation, when Availability Tests are waived (p. 296). Items with variable or unlisted prices, including the magical items whose listed figures are black-market buyer prices (p. 315), require the GM and are not offered at an invented purchase price. Bought items do not earn creation tracker boxes (p. 36).
 
@@ -25,6 +25,10 @@ Large desktop screens use a 1,700 px maximum workspace and a 350–380 px folio.
 The character sheet export retains the 556 editable fields in the supplied PDF and appends a complete creation/XP record. The record includes overflow Skills, Talents, gear, and magic. It can also be downloaded separately.
 
 ## Rules and source
+
+### Archives III
+
+Adds Priest of Handrich, Priest of Solkan and Priestess of Rhya, 18 Miracles, nine new Hedgecraft spell names, five Altdorf origins and optional Cants. Old Faith offers six chosen Blessings with Bless and one additional with Invoke; extra purchases use core Miracle prices, excluding the six Bless grants from the count by user decision. Eastender chooses Criminal or one random Talent. The animal-doctor Hedge Witch is a separately enabled Career variant. Cants unlock free at 1/3/6 Colour Lore spells and appear in the folio, review and exported record. Alternative armour is skipped; familiars, Enterprises and live magic remain deferred. Full sources and decisions: [docs/ARCHIVES-III.md](docs/ARCHIVES-III.md).
 
 ### Book-pack foundation
 
