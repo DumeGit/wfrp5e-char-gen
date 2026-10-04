@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "blood-bramble",
+  "title": "Blood and Bramble",
+  "shortTitle": "Blood & Bramble",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Blood and Bramble.pdf",
+    "sha256": "6e62fc57534f2d56cfd99333666389d0bf293ddb81b6f3d8284382b3e2f5b8df"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Adds twelve Hedgecraft and twelve Witchcraft spell profiles from detailed entries pp. 6–17. Existing Fifth Edition Lore Talents, free spell grants, learning prices and core Traits/Talents apply; no additional free spells or Careers.",
+      "Named old Test Difficulty modifiers are converted using Appendix I. Ordinary printed numeric bonuses/penalties remain descriptions. Fourth Edition core page references are identified explicitly.",
+      "Hedgecraft ingredient requirements and printed foraging/price information (p. 6) are retained as references. No free ingredients, potions, enchanted weapons, spirits or summoned creatures are granted.",
+      "User selected Godspakt’s detailed p. 10 You/You profile; its PDF p. 28 card instead prints Touch/1. The mismatch remains visible in its description.",
+      "User approved a 5-penny Hedgecraft ingredient shop entry with unknown Encumbrance, unspecified supplied amount and unlisted Availability, all explicitly noted.",
+      "Nameless Summons p. 17 prints overlapping −0/+0 results. Both are retained as references without choosing errata or automating summoning.",
+      "NPC profiles, adventure hooks, live casting, Condition/curse handling, spirit bargaining and summoning are deferred to campaign management."
+    ]
+  },
+  "files": {
+    "spells": "spells.json",
+    "gear": "gear.json"
+  }
+}

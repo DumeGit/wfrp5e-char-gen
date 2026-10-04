@@ -41,6 +41,10 @@
     {
       "id": "high-elf",
       "path": "high-elf/manifest.json"
+    },
+    {
+      "id": "blood-bramble",
+      "path": "blood-bramble/manifest.json"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # WFRP Character Ledger
 
-A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms**, **Archives of the Empire I, II and III**, **Winds of Magic**, **Rough Nights & Hard Days**, **High Elf Player’s Guide** and **Dwarf Player’s Guide** are installed. All nine books together offer 117 Career profiles, 463 spell/Blessing/Miracle profiles, 17 learnable rituals, 24 optional Cants, ten Sword-dancing techniques and 71 rune knowledge entries. Same-name Career alternatives remain explicit choices. Compatibility decisions and exclusions are documented separately for each supplement.
+A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms**, **Archives of the Empire I, II and III**, **Winds of Magic**, **Rough Nights & Hard Days**, **High Elf Player’s Guide**, **Dwarf Player’s Guide** and **Blood and Bramble** are installed. All ten books together offer 117 Career profiles, 487 spell/Blessing/Miracle profiles, 17 learnable rituals, 24 optional Cants, ten Sword-dancing techniques and 71 rune knowledge entries. Same-name Career alternatives remain explicit choices. Compatibility decisions and exclusions are documented separately for each supplement.
 
 Enable **Rough Nights & Hard Days** in Origins → Books & options for Gnomes, their complete Career table, names/appearance, Suffuse with Ulgu and Evawn/Mabyn/Ringil. Gnomes use the approved proposed 2 Fate / 2 Fortune adaptation with a visible warning, five Species Skills and core Small Wounds (2 × TB, plus Hardy). Suffuse has a separate warning and situational effects remain references. The optional Species table retains its printed probabilities independently of Archives II. Details: [docs/ROUGH-NIGHTS.md](docs/ROUGH-NIGHTS.md).
 
@@ -9,6 +9,8 @@ Enable **Winds of Magic** in Origins → Books & options to add twelve Careers, 
 Contributor instructions and the user's project decisions are in [AGENTS.md](AGENTS.md). The book integration format and review workflow are in [docs/BOOKS.md](docs/BOOKS.md).
 
 Enable **Dwarf Player’s Guide** for eleven regional profiles and automatic regional Career tables, ten Careers, optional Career levels and equipment/weapon Skill swaps, weighted names, Longbeard, new Talents and rune knowledge. Guide/Archives I Karak Ranger profiles remain explicit alternatives. Learning runes does not grant enchanted equipment; gromril/heirlooms are references rather than ordinary shop purchases. Approved conversions, unavailable entries and deferred campaign rules: [docs/DWARF-GUIDE.md](docs/DWARF-GUIDE.md).
+
+Enable **Blood and Bramble** for twelve new Hedgecraft and twelve Witchcraft spells with source descriptions, existing Fifth Edition learning rules and a qualified 5-penny ingredient shop entry. Godspakt uses the approved detailed You/You profile; ingredient quantities/weights remain unspecified and live spell effects remain references. Details: [docs/BLOOD-BRAMBLE.md](docs/BLOOD-BRAMBLE.md).
 
 ## Use
 

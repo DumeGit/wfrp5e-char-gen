@@ -1,0 +1,13 @@
+[
+  {
+    "id": "blood-bramble:gear:hedgecraft-ingredients",
+    "name": "Hedgecraft Ingredients",
+    "page": 6,
+    "price": "5d",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Spell ingredients",
+    "text": "Printed price: 5 brass pennies (p. 6). The book does not specify the amount supplied, Encumbrance or Availability. Each purchase records one purchase of ingredients, not a defined number of spell uses. Ingredients are required for Hedgecraft casting. Foraging and consumption are deferred.",
+    "conversion": "User-approved shop entry at the printed 5-penny price. Unknown weight remains unresolved; no pack size or number of spell uses is invented."
+  }
+]

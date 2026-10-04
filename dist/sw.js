@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"814b42c018aba2b48ddc";
+const CACHE=CACHE_PREFIX+"9ff21cf328fdc3774bb6";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -48,6 +48,9 @@ const ASSETS=[
  "data/books/archives-iii/origins.json",
  "data/books/archives-iii/rules.json",
  "data/books/archives-iii/spells.json",
+ "data/books/blood-bramble/gear.json",
+ "data/books/blood-bramble/manifest.json",
+ "data/books/blood-bramble/spells.json",
  "data/books/core/armour.json",
  "data/books/core/config.json",
  "data/books/core/manifest.json",
