@@ -124,7 +124,8 @@
       }
     ],
     "conversion": "Fifth Edition creation allocations, tracker advancement and core Talent definitions apply. The printed eight first-level Skill options are retained. Fleet Footed → Fleet-footed; Strider (Woodlands) → Striding Gait (Woodlands); Scale sheer Surface → Scale Sheer Surface; Lip Reading Skill entry remains unavailable; no Skill or extra Talent is granted.",
-    "randomAlternativeFor": "bounty-hunter"
+    "randomAlternativeFor": "bounty-hunter",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait."
   },
   {
     "id": "archives-i:career:fieldwarden",
@@ -250,7 +251,8 @@
     "requiredOrigins": [
       "archives-i:origin:mootland"
     ],
-    "text": "Requires a Mootland Halfling (p. 87)."
+    "text": "Requires a Mootland Halfling (p. 87).",
+    "adaptation": "Unspecified Fearless becomes a core enemy-group choice; Savant (Moot terrain) requires core Lore (Moot)."
   },
   {
     "id": "archives-i:career:karak-ranger",
@@ -367,7 +369,8 @@
       }
     ],
     "conversion": "Fifth Edition creation allocations, tracker advancement and core Talent definitions apply. The printed eight first-level Skill options are retained. Strider (any) → Striding Gait (Any).",
-    "randomAlternativeFor": "messenger"
+    "randomAlternativeFor": "messenger",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait."
   },
   {
     "id": "archives-i:career:badger-rider",
@@ -494,6 +497,7 @@
     "requiredOrigins": [
       "archives-i:origin:mootland"
     ],
-    "text": "Requires a Mootland Halfling (p. 87). At creation, convince your GM that Badger Riders are real and attempt the badger’s terrifying war cry for the other players (p. 87). GM approval is required."
+    "text": "Requires a Mootland Halfling (p. 87). At creation, convince your GM that Badger Riders are real and attempt the badger’s terrifying war cry for the other players (p. 87). GM approval is required.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Trick Rider, Tunnel Fighter."
   }
 ]

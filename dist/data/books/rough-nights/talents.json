@@ -4,6 +4,7 @@
     "name": "Suffuse with Ulgu",
     "page": 88,
     "text": "You are suffuse with the Grey Wind of Magic, which those with Second Sight perceive as a shadowy, shifting mist wreathed about your body. You can use your Channelling (Ulgu) Skill in place of the Stealth Skill for all relevant Tests. Further, any successful attempts to cast spells from the Lore of Shadow within 8 yards of you gain +1 SL. This bonus may only be claimed once, no matter how many Characters are Suffuse with Ulgu in a spellcaster’s vicinity. Adaptation warning: this Fourth Edition Talent has no Fifth Edition equivalent. By user approval, its printed maximum of one and effects are retained as references. The creator does not replace displayed Stealth totals, automatically grant nearby casting SL, or import Fourth Edition per-rank Tests bonuses.",
-    "conversion": "Printed maximum 1; no Fourth Edition per-rank Tests bonus is imported. Channelling substitution and nearby Shadows +1 SL remain situational references, not permanent changes to Skill totals or casting bonuses."
+    "conversion": "Printed maximum 1; no Fourth Edition per-rank Tests bonus is imported. Channelling substitution and nearby Shadows +1 SL remain situational references, not permanent changes to Skill totals or casting bonuses.",
+    "adaptation": "Fourth Edition per-rank bonus on the listed Tests omitted; printed limit and effects retained under the approved Fifth Edition adaptation."
   }
 ]

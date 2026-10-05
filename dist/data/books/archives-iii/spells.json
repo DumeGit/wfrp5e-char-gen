@@ -30,7 +30,8 @@
     "target": "1",
     "duration": "Fellowship Bonus Rounds",
     "text": "You ask Handrich to witness this deal, and seal it with a handshake. The target cannot act in opposition to this deal for at least Fellowship Bonus Rounds. If they do wish to contest some part of it, they must make an Average (+2 SL) Cool Test contesting your SL. If successful, they can refuse to take an action dictated by the deal. For every additional 2 SL they achieve, they may take one action in opposition to the deal. You will know if they break the deal. You suffer +1 Sin point if you break the terms of the deal while this Miracle is in effect.",
-    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated."
+    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:supply-and-demand",
@@ -41,7 +42,8 @@
     "target": "One batch of trade goods in line of sight",
     "duration": "1 hour",
     "text": "Having successfully identified a place looking to sell or buy certain goods through a Difficult (−1 SL) Gossip Test, you may invoke Handrich to make the amount available appear to increase or decrease. This does not affect any goods in your own possession. For example, a merchant looking to buy grain will suddenly find rats have got into their existing supplies, while someone selling rare linens discovers extra stock tucked away in a back room. You may change an item’s Availability by one level (Common becomes Scarce, Exotic becomes Rare, etc.) to affect its Bartering Ratio, as per WFRP page 291.",
-    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated."
+    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:trickle-down",
@@ -63,7 +65,8 @@
     "target": "1",
     "duration": "Instant",
     "text": "Handrich examines the fortunes of all and suggests a deal could be reached. You may spend 1 point of the target’s Fortune as though it were your own. However, they may choose to contest this by making a Challenging (+0 SL) Fellowship Test against your SL. If they beat this, they keep their Fortune point. If they beat your SL by +4 SL, then they may choose to spend a point of your Fortune as their own. The lost Fortune must be spent by the end of the session in which it is lost. When the next session begins, the lost Fortune is restored to its original owner.",
-    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated."
+    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:absolute-purity",
@@ -141,7 +144,8 @@
     "duration": "Willpower Bonus Rounds",
     "text": "You grasp a stick no longer than eight inches in length and transform it into a magical weapon. This counts as a dagger that possesses the Magical Quality. The Dagger of the Art is particularly potent when wielded against enemies with the Ethereal or Corruption Creature Traits. It inflicts Damage of SB + 8 to these foes. You can retain the Dagger of the Art after the duration ends by passing a Challenging (+0 SL) Channelling Test each round thereafter.",
     "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated.",
-    "cn": 4
+    "cn": 4,
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:fellstave",
@@ -162,7 +166,8 @@
       "Fimir",
       "Trolls",
       "Undead"
-    ]
+    ],
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:invigorate",
@@ -234,7 +239,8 @@
     "duration": "1d10 years",
     "text": "You incant words of banishment, demanding that a creature from beyond the Hedge return to its place of origin. One creature with the Ethereal or Daemonic Trait within range must pass a Challenging (+0 SL) Willpower Test or suffer a number of Wounds equal to your Willpower Bonus. If this reduces them to 0 Wounds or fewer, they are immediately banished from the physical world, unable to return for the duration.",
     "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated.",
-    "cn": 8
+    "cn": 8,
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:wyrd-ward",
@@ -301,7 +307,8 @@
     "target": "1",
     "duration": "Until the next sunset",
     "text": "You reach out a gentle hand to a creature of the wild and hum soothing melodies to calm and tame. Take an Average (+2 SL) Charm Animal Test to domesticate any uncorrupted, wild animal of Large Size or smaller. If successful, it will become docile towards Humans, Elves who honour Isha, and similar allies. For every Success Level it becomes increasingly tame and pliable, although it will not willingly leave its natural territory.",
-    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated."
+    "conversion": "Use Fifth Edition magic and core Traits/Talents. Valid old Test Difficulties use Appendix I SL modifiers; ordinary printed numeric bonuses remain reference text. Play effects are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "archives-iii:spell:rhyas-rage",

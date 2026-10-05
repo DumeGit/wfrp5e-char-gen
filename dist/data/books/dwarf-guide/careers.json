@@ -737,7 +737,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait."
   },
   {
     "id": "dwarf-guide:career:karak-ranger",
@@ -862,7 +863,8 @@
       }
     ],
     "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings.",
-    "alternativeFor": "archives-i:career:karak-ranger"
+    "alternativeFor": "archives-i:career:karak-ranger",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait."
   },
   {
     "id": "dwarf-guide:career:runescribe",
@@ -987,7 +989,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Public Speaker."
   },
   {
     "id": "dwarf-guide:career:runesmith",
@@ -1241,6 +1244,7 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings."
+    "conversion": "Fifth Edition creation allocations and XP; core Talent equivalents replace older names. New Dwarf Talents use approved printed limits with adaptation warnings.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Public Speaker."
   }
 ]

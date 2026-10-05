@@ -2,67 +2,61 @@ import * as M from './rules.mjs';
 import {creationSpecies,originProfile} from './origins.mjs';
 import {elderSkills,highElfReferences,knownTechniques} from './high-elf.mjs';
 import {dwarfReferences,knownRunes} from './dwarf-guide.mjs';
-import {starSign,starEffect} from './astrology.mjs';
+import {starEffect} from './astrology.mjs';
 import {divineReference,knownCants} from './archives-iii.mjs';
-import {womReferences} from './winds-of-magic.mjs';
-import {legacySources,isLegacy} from './legacy.mjs';
-import {randomTable} from './books.mjs';
+import {womReferences,psychometrySacrifice} from './winds-of-magic.mjs';
+import {equipmentSize} from './equipment-sizing.mjs';
+import {legacySources,isLegacy,legacyMechanic,legacyCareerSkill} from './legacy.mjs';
 
-// Acquisition context is separate from the definition: e.g. core Hardy via a Legacy origin.
+const convertedTalents=new Set(['Dicer','Striding Gait','Tunnel Fighter','Public Speaker','Trick Rider']);
 export function legacyOption(R,s,kind,name){
  const sources=[],add=entry=>sources.push(...legacySources(R,entry));
- const definition=kind==='skill'?M.skillInfo(R,name,s):kind==='talent'?M.talentInfo(R,name):kind==='char'?null:(R[kind]||[]).find(x=>x.name===name||x.displayName===name);
+ const definition=kind==='skill'?M.skillInfo(R,name,s):kind==='talent'?M.talentInfo(R,name):null;
  add(definition);
- for(const rule of R.rules||[]){
-  const [group,key]=rule.path;
-  if(kind==='skill'&&group==='skillOptions'&&key===M.base(name)&&rule.value?.some?.(v=>name===`${key} (${v})`))add(rule);
-  if(kind==='talent'&&['talentOptions','talentLimits','talentEffects'].includes(group)&&key===M.base(name))add(rule);
- }
  const c=M.career(R,s),sp=creationSpecies(R,s),d=M.derive(R,s);
  if(kind==='skill'){
-  if(M.speciesSkillSlots(R,s).some(x=>x.name===name&&s.speciesSkills.includes(x.key))||sp.languages.some(x=>name===`Language (${x})`))add(sp);
-  for(const slot of M.careerSkillSlots(R,s,d.level))if((slot.name===name||M.options(R,slot.raw,'skill',s).includes(name))&&(d.currentSkills.includes(name)||(s.careerSkills[slot.key]||0)>0))add(slot);
-  if(c.adaptationNotes?.length&&d.currentSkills.includes(name))add(c);
-  if(elderSkills(R,s)[name])add({source:{book:'high-elf',page:53}});
+  if(d.currentSkills.includes(name))add(legacyCareerSkill(c,name));
+  // Changed allocations do not change the rules for unchanged core native languages.
+  if(M.speciesSkillSlots(R,s).some(x=>x.name===name&&s.speciesSkills.includes(x.key)))add(sp);
+  if(elderSkills(R,s)[name])add(legacyMechanic('elder'));
+  if(name==='Psychometry'&&psychometrySacrifice(R,s))add(legacyMechanic('psychometry'));
+  if(c.legacySailor&&['Athletics','Melee (Basic)','Intuition'].includes(name))add(legacyMechanic('sailor'));
  }
  if(kind==='talent'){
-  const selected=M.freeTalents(R,s);
-  if(selected.includes(name)&&name!==s.freeTalent)add(sp);
-  if(name===s.freeTalent||M.careerTalentOptions(R,s,d.level).includes(name))add(c);
-  if(starEffect(R,s).talent===name)add(starSign(R,s));
-  for(const ref of divineReference(R,s))if(/^Bless |^Invoke /.test(name))add(ref);
-  const patron=name.match(/^(?:Bless|Invoke) \((.*)\)$/)?.[1];
-  if(patron)add(R.cults.find(x=>x.name===patron));
-  for(const rule of R.rules||[])if(patron&&rule.path[0]==='gods'&&rule.value?.includes?.(patron))add(rule);
+  // Regional omission/reallocation does not change every core Talent's own rule.
+  if(convertedTalents.has(M.base(name))&&c.adaptation&&M.careerTalentOptions(R,s,d.level).includes(name))add({source:c.source,adaptation:`Printed older Talent option replaced with core ${M.base(name)}.`});
+  if(c.name==='Fieldwarden'&&M.careerTalentOptions(R,s,d.level).includes(name)&&(/^Fearless \(/.test(name)||name==='Savant (Moot)'))add({source:c.source,adaptation:c.adaptation});
+  if(starEffect(R,s).talent===name)add(legacyMechanic('astrology'));
+  if(name==='Invoke (Old Faith)')add(legacyMechanic('oldFaith'));
+  if(name==='Petty Magic'&&s.career==='winds-of-magic:career:mundane-alchemist')add(legacyMechanic('alchemist'));
  }
- if(kind==='char'&&c.advanceScheme[name])add(c);
- for(const x of s.ledger||[])if(x.name===name&&x.type===({skill:'skill',talent:'talent',char:'char'}[kind]||kind))add(x);
+ for(const x of s.ledger||[])if(x.name===name&&x.type===kind)add(x);
  return {...definition,legacySources:sources};
 }
 export function legacyGear(R,s,slot,name=slot.name){
- const c=M.career(R,s),sources=legacySources(R,slot);
- if(/^(career|bonus|acquired)-/.test(slot.key))sources.push(...legacySources(R,c));
- for(const group of ['weapons','armour','gear','market'])for(const item of R[group]||[])if(item.name===name)sources.push(...legacySources(R,item));
- for(const group of ['gear','market'])for(const item of R[group]||[])if(item.id===slot.marketId)sources.push(...legacySources(R,item));
- if(s.species==='Ogre')sources.push({book:'archives-ii',page:31});
+ const sources=legacySources(R,slot);let profile;
+ for(const group of ['weapons','armour','gear','market'])for(const item of R[group]||[])if(item.name===name||item.id===slot.marketId){sources.push(...legacySources(R,item));profile??=item;}
+ const sizing=equipmentSize(R,s,name,profile);
+ // Native Ogre profiles keep printed values; only the agreed general sizing interpretation is tagged.
+ if(s.species==='Ogre'&&sizing.multiplier===2)sources.push(...legacySources(R,legacyMechanic('ogreSizing')));
  return {legacySources:sources};
 }
 export function legacyMagic(R,s,entry){
  const sources=legacySources(R,entry);
- if(entry.lore==='Old Faith')sources.push({book:'archives-iii',page:58});
- if(s.career==='winds-of-magic:career:mundane-alchemist'&&entry.category==='Petty')sources.push({book:'winds-of-magic',page:39});
- for(const purchase of s.ledger||[])if(purchase.type==='spell'&&purchase.name===entry.name)sources.push(...legacySources(R,purchase));
+ if(s.career==='winds-of-magic:career:mundane-alchemist'&&entry.category==='Petty'&&!s.ledger.some(x=>x.type==='spell'&&x.name===entry.name))sources.push(...legacySources(R,legacyMechanic('alchemist')));
+ if(entry.category==='Elven Arcane')sources.push(...legacySources(R,legacyMechanic('elvenArcane')));
+ const patron=entry.lore||entry.talent?.match(/^Invoke \((.*)\)$/)?.[1];
+ if(patron==='Evawn'&&entry.name==='Trickster’s Glamour'||patron==='Mabyn'&&entry.name==='You Saw Nothing')sources.push(...legacySources(R,R.cults.find(x=>x.name===patron)));
+ for(const x of s.ledger||[])if(x.type==='spell'&&x.name===entry.name)sources.push(...legacySources(R,x));
  return {...entry,legacySources:sources};
 }
 export function legacyContext(R,s){
- const d=M.derive(R,s),entries=[creationSpecies(R,s),originProfile(R,s),M.career(R,s),s.careerRefinement,starSign(R,s),...highElfReferences(R,s),...dwarfReferences(R,s),...womReferences(R,s),...divineReference(R,s),...M.knownSpells(R,s).map(x=>legacyMagic(R,s,x)),...knownRunes(R,s,d.talents),...knownTechniques(R,s),...knownCants(R,s),...s.ledger];
+ const d=M.derive(R,s),entries=[creationSpecies(R,s),originProfile(R,s),M.career(R,s),...highElfReferences(R,s),...dwarfReferences(R,s),...womReferences(R,s),...divineReference(R,s),...M.knownSpells(R,s).map(x=>legacyMagic(R,s,x)),...knownRunes(R,s,d.talents),...knownTechniques(R,s),...knownCants(R,s),...s.ledger];
+ if(s.longbeard)entries.push(legacyMechanic('longbeard'));
+ if(s.species==='Ogre')entries.push(legacyMechanic('ogreCapacity'));
+ if(s.chart?.enabled)entries.push(legacyMechanic('astrology'));
  for(const name of d.talents)entries.push(legacyOption(R,s,'talent',name));
  for(const name of Object.keys(d.skills))if(d.skills[name]>0)entries.push(legacyOption(R,s,'skill',name));
- for(const kind of ['species','career','talent']){const table=randomTable(R,s,kind);if(table&&(s.rolls||[]).some(x=>x.source?.book===table.source.book&&x.source?.page===table.source.page))entries.push(table);}
- for(const p of s.purchases||[])entries.push((R.gear||[]).find(x=>x.id===p.id)||(R.market||[]).find(x=>x.id===p.id));
  return {legacySources:entries.flatMap(x=>legacySources(R,x))};
 }
-export function legacySummary(R,s){
- const context=legacyContext(R,s);
- return isLegacy(R,context)?`Legacy creation rules: ${[...new Set(context.legacySources.map(x=>R.books.find(b=>b.id===x.book)?.shortTitle||x.book))].join('; ')}. See the source and conversion notes in the complete record.`:'';
-}
+export function legacySummary(R,s){const context=legacyContext(R,s);return isLegacy(R,context)?`Legacy adaptations: ${[...new Set(context.legacySources.map(x=>R.books.find(b=>b.id===x.book)?.shortTitle||x.book))].join('; ')}. Specific changed rules are identified in the complete record.`:'';}

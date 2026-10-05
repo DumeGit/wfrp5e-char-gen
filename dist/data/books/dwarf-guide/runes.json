@@ -307,7 +307,8 @@
     "master": false,
     "text": "Whilst wearing this talisman, you gain 1 Fortune point for each Rune of Luck, which can exceed your usual maximum Fortune. You lose these Fortune points when you remove the talisman (to a minimum of 0 Fortune), and cannot regain them until the following session.",
     "sl": 10,
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Permanent Resilience expenditure converted to maximum Fortune (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:talisman-rune-of-restoration",
@@ -417,7 +418,8 @@
     "master": false,
     "text": "Affected allies begin combat with 1 Momentum for each Rune of Battle.",
     "sl": 18,
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:protection-rune-of-courage",
@@ -517,7 +519,8 @@
     "master": true,
     "text": "Affected allies may Reverse any Test to resist corrupting influences, Tests to avoid mutation from Corruption, and rolls on the Physical and Mental Corruption Tables. In addition, when an affected ally is engaged with a Daemonic enemy that has the Unstable Trait, they count as having +2 Momentum when calculating Wounds lost for being Unstable.",
     "sl": 20,
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:protection-master-rune-of-grimnir",
@@ -547,7 +550,8 @@
     "master": true,
     "text": "Affected allies begin combat with 1 Momentum. Double the range of this rune’s effects to 12 yards, or 24 yards if forged upon a battle standard.",
     "sl": 20,
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:protection-master-rune-of-valaya",
@@ -627,7 +631,8 @@
     "master": false,
     "text": "Dwarfs crewing this weapon begin combat with 1 Momentum for each Rune of the Stalwart. This extra Momentum is lost by any Characters that leave the weapon’s crew, or become Engaged in melee.",
     "sl": 14,
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:engineering-rune-of-the-valiant",
@@ -686,7 +691,8 @@
     "form": "Doom",
     "master": false,
     "text": "Requires an Anvil of Doom and a Hard (−2 SL) Runesmithing Action (p. 132). The blessing of Valaya affirms a Dwarf’s resolve to fight and die without fear. All Dwarfs within 25 yards of the Anvil of Doom may count as rolling 01 on any Cool Tests (WFRP Core Rulebook) they make until the end of the next Round.",
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:doom-rune-of-oath-and-steel",
@@ -695,7 +701,8 @@
     "form": "Doom",
     "master": false,
     "text": "Requires an Anvil of Doom and a Hard (−2 SL) Runesmithing Action (p. 132). The blessing of Grungni enchants the armour of his children with supernatural resilience. All Dwarfs within 25 yards of the Anvil of Doom improve the AP of any armour they’re wearing by 2, until the end of the next Round.",
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "dwarf-guide:rune:doom-rune-of-wrath-and-ruin",
@@ -704,6 +711,7 @@
     "form": "Doom",
     "master": false,
     "text": "Requires an Anvil of Doom and a Hard (−2 SL) Runesmithing Action (p. 132). The blessing of Grimnir unleashes the war god’s fury in a raging storm of splitting earth and darkening skies. All enemies within 25 yards of the Anvil of Doom are struck for 12 Damage to a random location, reduced by Toughness Bonus and Armour Points.",
-    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred."
+    "conversion": "Learned rune knowledge only, not an owned enchanted item. Printed numeric modifiers remain in reference text; Advantage references use Momentum. Core Creature Traits/Talents apply. Rune forging and live activation are deferred.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]

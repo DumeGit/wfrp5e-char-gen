@@ -116,7 +116,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Diceman → Dicer."
+    "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Diceman → Dicer.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Dicer, Public Speaker."
   },
   {
     "id": "winds-of-magic:career:mundane-alchemist",
@@ -242,7 +243,8 @@
       }
     ],
     "conversion": "Fifth Edition free allocations, XP, Career trackers and core Talent definitions govern; retain the ten printed starting Skill options. Class follows the p. 35 table. Arcane Magic (Lore of Metal) → Arcane Magic (Metal); Etiquette (Guilder) → Etiquette (Guilders); Nimble Fingered → Nimble-fingered; Resistance (Poison) → Resistant (Poison). User approves Lore (Alchemy) as a selectable specialisation for Savant (Alchemy), requiring a normal Advance under core p. 125. Petty Magic grants min(WP Bonus at acquisition, 4) distinct permitted spells, as approved for this Career only.",
-    "text": "Only Humans may learn Petty Magic or Arcane Magic (Metal). This Career is limited to four named Petty spells, Mundane Aura, Ward, Enchant Weapon, Fool’s Gold, Forge of Chamon and Mutable Metal (p. 39). More spells require entering a Wizard Career, outside this creator."
+    "text": "Only Humans may learn Petty Magic or Arcane Magic (Metal). This Career is limited to four named Petty spells, Mundane Aura, Ward, Enchant Weapon, Fool’s Gold, Forge of Chamon and Mutable Metal (p. 39). More spells require entering a Wizard Career, outside this creator.",
+    "adaptation": "Free Petty Magic grant capped at the smaller of acquisition Willpower Bonus or four, by user-approved adaptation."
   },
   {
     "id": "winds-of-magic:career:magister-vigilant",

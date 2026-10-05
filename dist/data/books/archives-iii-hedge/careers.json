@@ -127,6 +127,7 @@
     "runtimeId": "hedge-witch",
     "replaces": "core:careers:hedge-witch",
     "reason": "User-approved optional Archives III animal-doctor adaptation.",
-    "conversion": "Lore (Herbs) → Animal Care; Trade (Herbalist) → Animal Training; Craftsman (Herbalist) → Hardy; Master Tradesman (Herbalist) → Robust. Secret Signs (Hedge Witch) uses core Hedgefolk. Extra first-level Skill choices give no extra free Advances. Printed Trade (Charms) is absent from core and its swap remains unavailable."
+    "conversion": "Lore (Herbs) → Animal Care; Trade (Herbalist) → Animal Training; Craftsman (Herbalist) → Hardy; Master Tradesman (Herbalist) → Robust. Secret Signs (Hedge Witch) uses core Hedgefolk. Extra first-level Skill choices give no extra free Advances. Printed Trade (Charms) is absent from core and its swap remains unavailable.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait. Compatible swaps applied to the Fifth Edition Career; obsolete Trade (Charms) swap unavailable; extra Skill options grant no extra free Advances."
   }
 ]

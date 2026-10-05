@@ -92,7 +92,7 @@ export function selectedPacks(library,ids=[library.core]){
 function entryFor(pack,kind,value,key){
  const entry=structuredClone(value);
  if(!plain(entry)||!pageOK(entry.page))fail(`${pack.id}/${kind}: a printed page is required.`);
- const allowed=new Set(['id','contentId','name','page','conversion','replaces','reason','supersededBy',...columns[kind]]);
+ const allowed=new Set(['id','contentId','name','page','conversion','adaptation','replaces','reason','supersededBy',...columns[kind]]);
  if(Object.keys(entry).some(k=>!allowed.has(k)))fail(`${pack.id}/${kind}: unsupported fields need an implemented rule handler.`);
  entry.name??=key;
  if(!nonempty(entry.name))fail(`${pack.id}/${kind}: name is required.`);
@@ -102,6 +102,7 @@ function entryFor(pack,kind,value,key){
  entry.id??=entry.contentId;
  if(entry.runtimeId){if(pack.kind!=='variant'||!entry.replaces||kind!=='careers')fail('runtimeId is only supported on Career replacements.');entry.id=entry.runtimeId;}
  entry.source={book:pack.id,page:entry.page};
+ if(entry.adaptation!==undefined&&!nonempty(entry.adaptation))fail(`${entry.contentId}: adaptation must explain an actual Fifth Edition rule change.`);
  if(entry.conversion!==undefined&&(!nonempty(entry.conversion)))fail(`${entry.contentId}: conversion note must be text.`);
  return entry;
 }

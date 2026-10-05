@@ -33,7 +33,8 @@
     "duration": "Instant",
     "text": "You perform a magical investigation into whether an item is cursed. Successfully deciphering a cursed item reveals its secrets: the fact that it is cursed, the details of its boons and banes, and how the curse is triggered. Those who create curses do not like having them deciphered. If you decipher the curse, make a Challenging (+0 SL) Intelligence Test. Failure means you suffer Moderate Exposure to Corruption (WFRP, page 182) due to spiteful secondary wards worked into the cursed item. Note: Whilst the curse is deciphered it is is still in effect. The Remove Curse Ritual (page 33) must be performed to remove the curse.",
     "id": "winds-of-magic:spell:decipher-curse",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Disrupt Magic",
@@ -105,7 +106,8 @@
     "duration": "Instant",
     "text": "You draw upon earthbound Hysh to reshape the ground. Churning rocks and soil form a hill approximately 20 yards in diameter and 5 yards tall. Characters standing on the rising ground must make a Challenging (+0 SL) Dodge Test or suffer 20 Damage to a random body location. Even those who manage to dodge suffer 10 Damage. The hill remains permanently.",
     "id": "winds-of-magic:spell:assault-of-stone",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Crevasse",
@@ -117,7 +119,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You open a rumbling crevasse in the ground. The crevasse is 3 yards wide, long, and deep. You can increase the length and depth by +1 yard for every +2 SL to a maximum depth of 10 yards. Targets standing on or adjacent to the crevasse must pass a Challenging (+0 SL) Dodge Test to avoid falling in. Marginal Failures allow targets to grab on to the edge. Horses and vehicles fall automatically. Affected structures might partially collapse. When the spell ends, the crevasse closes and victims inside are crushed for 20 Damage, burying them alive. Buried victims are subject to Suffocation (WFRP, page 181).",
     "id": "winds-of-magic:spell:crevasse",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Dazzling Brightness",
@@ -177,7 +180,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "Pale hands burst from the ground at your targets’ feet. Targets within the area of effect must make a Challenging (+0 SL) Dodge Test to avoid the hands. Targets caught by the hands are Grappled (WFRP, page 163) with a Strength equal to your Willpower. Alternatively, instead of inflicting damage on subsequent rounds, the hands pull targets underground where they begin to Suffocate (WFRP, page 181). In order to use this option the casting wizard must declare their intent to suffocate their target when casting the spell.",
     "id": "winds-of-magic:spell:hands-of-karkora",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Illuminate the Edifice",
@@ -189,7 +193,8 @@
     "duration": "Willpower Bonus hours",
     "text": "You illuminate the interior of a house with daylight. You can illuminate a tower or large manor with +2 SL or a castle with +4 SL. Every enclosed space is filled with light that seeps out through cracks. Daemons and Undead must pass a Challenging (+0 SL) Willpower Test to enter the building. If they pass the Test and enter the building, they suffer Damage that ignores their Toughness Bonus and Armour Points equal to the total SL on your Casting Test.",
     "id": "winds-of-magic:spell:illuminate-the-edifice",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Light of Purity",
@@ -345,7 +350,8 @@
     "duration": "Willpower Bonus hours",
     "text": "You summon golden bars out of the ground to contain targets within a cage. The bars are half an inch thick and a Character can bend them apart by passing a Hard (−2 SL) Strength test or cut them with appropriate tools. Tiny or Little-sized prisoners can squeeze through the 6-inch gaps between bars. Characters outside the cage cannot enter, though weapons and missiles can still pass between the bars. If cast indoors, the cage bursts through walls and ceilings that obstruct its AoE.",
     "id": "winds-of-magic:spell:gilded-cage",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Golden Touch",
@@ -357,7 +363,8 @@
     "duration": "Willpower × 1d10 minutes",
     "text": "After casting this spell, the next living creature you touch transforms into a golden statue. The target may attempt a Challenging (+0 SL) Willpower Test to resist being petrified. As a statue, the target cannot see, hear, or feel anything, but does not suffocate. Duration is rolled secretly by the GM. The target counts as having a Toughness Bonus of 10, but Wounds are suffered normally. If the statue suffers Wounds the spell is ended immediately.",
     "id": "winds-of-magic:spell:golden-touch",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Goldsteel Shielding",
@@ -513,7 +520,8 @@
     "duration": "Instant",
     "text": "This spell may only target a patch of earth. You summon a small Blood Forest, covering the Area of Effect. Anyone standing in the area immediately suffers 10 Damage (modified by TB and Armour) and receives a Bleeding Condition from lashing branches and thorns. The Blood Forest remains until cut down or burned. Anyone passing through the Blood Forest at more than half of their Movement must make a Challenging (+0 SL) Agility Test or receive a Bleeding Condition.",
     "id": "winds-of-magic:spell:gardeners-warcry",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Geyser",
@@ -609,7 +617,8 @@
     "duration": "Willpower Bonus minutes",
     "text": "You are lifted directly upwards by a misty spiral staircase, to a height of Willpower yards. The stairs’ height can be increased by additional Willpower yards for every +2 SL to a maximum height of 200 yards. While standing on the staircase you receive 3 Armour Points to all locations, and the stairs’ height is added to the distance missile attacks against you must travel. Other Jade Wizards who know this spell can climb the stairs by making a Challenging (+0 SL) Lore (Magic) Test, but to everyone else the stairs are insubstantial.",
     "id": "winds-of-magic:spell:spiral-stair",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Vaunted Transmogrification of Colchis",
@@ -657,7 +666,8 @@
     "duration": "Willpower Bonus hours",
     "text": "You transform yourself or a willing target into an oak tree. The target can see and hear normally, and can be damaged by axes, fire, and other attacks that would harm a tree. Unwilling targets can attempt an Average (+2 SL) Willpower Test to resist the spell.",
     "id": "winds-of-magic:spell:wood-shape",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Azure Blades",
@@ -693,7 +703,8 @@
     "duration": "Instant",
     "text": "You scry across time and space. Choose one of the following 3 effects: 0 Learn the most auspicious time for a future action. The GM secretly rolls a Challenging (+0 SL) Intelligence Test for you, to determine the accuracy of your prediction. Examples might include forecasting the Winds of Magic, favourable weather, or a change of guards. 0 Locate a lost or stolen object. You must have seen the object previously. This spell points you in the direction of the object but does not reveal its distance. 0 Modify a single future die roll by plus or minus 10. You must be very specific about the conditions. Examples include a creature’s next attack against you, or the next Dodge Test you attempt. You can only be under one effect of this type at a time.",
     "id": "winds-of-magic:spell:divination",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Enemy Foreseen",
@@ -765,7 +776,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You radiate frigid Azyr from your outstretched hand. Choose a direction. All targets in that direction and within range take 12 Damage (ignoring Armour Points but not Toughness Bonus). Additionally, they must roll a Hard (−2 SL) Endurance Test or suffer the first stage of Cold Exposure (WFRP, page 181). Liquid water in the Area of Effect freezes at a rate of 1 inch of thickness per round. On subsequent rounds, you can either point the mistral in another direction or continue freezing the same targets. Targets only take Damage on the first round but must Test against Cold Exposure every round. Targets recover any lost Characteristics at a rate of 10 points per hour. You can move while casting this spell.",
     "id": "winds-of-magic:spell:mistral-from-the-stratosphere",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Mystic Mirror",
@@ -873,7 +885,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "If the target fails a Challenging (+0 SL) Willpower Test, they become confused. Roll 1d10 to determine the target’s behaviour for the spell’s duration: Roll Effect 1–2 Befuddled: The target must pass a Challenging (+0 SL) Willpower Test to take actions. 3–4 Wander: The target can act normally but moves in a random direction. 5–6 Attack: The target charges the nearest target and attacks. 7–8 Do Nothing: The target can only stand still and Dodge. 9–10 Curl Into a Ball: The target receives the Prone Condition and is Helpless (WFRP, page 162).",
     "id": "winds-of-magic:spell:bewilder",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Black Horrors",
@@ -909,7 +922,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You conjure a stringless fiddle that compels enemies to dance uncontrollably, losing all sense of urgency. Targets can attempt a Willpower Test to resist the dance. Affected enemies cannot move or take actions unless they first pass a Hard (−2 SL) Athletics Test or Challenging Perform (Dance) Test. When the spell expires, affected targets receive a Fatigued Condition. Friendly or neutral characters are unaffected by the spell.",
     "id": "winds-of-magic:spell:dance-of-despair",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Deep Pockets",
@@ -993,7 +1007,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You cause a dark pit to open in the ground with a diameter and depth equal to the Area of Effect. Targets standing on or adjacent to the pit must pass a Challenging (+0 SL) Dodge Test to avoid falling in. Marginal Failures allow victims to grab on to the edge. When the spell ends, the pit closes and victims inside are crushed for 20 Damage, burying them alive. Buried victims are subject to Suffocation (WFRP, page 181).",
     "id": "winds-of-magic:spell:pit-of-tarnus",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Ribauld’s Retroactive Illusion",
@@ -1041,7 +1056,8 @@
     "duration": "Willpower minutes",
     "text": "You compel an enemy to switch allegiances. If the target fails an Opposed Willpower Test, they regard you as an ally and treat their former allies as enemies. Each time a target is asked to attack a former ally, it can attempt a Challenging (+0 SL) Cool Test to break the enchantment. Targets will not follow instructions that are clearly suicidal. When this spell is cast upon a neutral target, you instead gain +2 SL to any Fellowship-based Tests you make involving the neutral target. The spell has no effect on friendly targets.",
     "id": "winds-of-magic:spell:traitor-of-tarn",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Wandering Shadow",
@@ -1065,7 +1081,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You embolden allies with your words. Friendly targets are immune to Fear for the spell’s duration, and Terror is treated as Fear instead. Additionally, all Psychology effects caused by grief are permanently removed. This spell may instead be cast on nearby enemies to make them heedless of danger. Targets who fail a Challenging (+0 SL) Cool Test may not flee combat for the spell’s duration.",
     "id": "winds-of-magic:spell:acceptance-of-fate",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Amaranth",
@@ -1101,7 +1118,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You summon a swirling cloud of choking dust. Targets within the Area of Effect suffer 8 Damage ignoring Armour, and begin to suffocate (WFRP, page 181) until they leave the cloud. This spell uses the Random Vortex rules (page 20). If you achieve +4 SL, you can summon a Purple Sun of Xereus at the centre of the cloud. This 1-yard-diameter globe of purple-edged darkness causes Fear (2) and disintegrates anything it touches. Targets struck by the globe must pass a Challenging (+0 SL) Cool Test or die instantly. Obstacles such as walls and doors are burned through automatically.",
     "id": "winds-of-magic:spell:ashes-and-dust",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Compel Spirits",
@@ -1137,7 +1155,8 @@
     "duration": "3 rounds",
     "text": "You surround a spirit with Shyish to unbind it from the world. Creatures with both the Undead and Ethereal traits must pass a Challenging (+0 SL) Cool Test every round or receive a Stunned Condition as they are forced to confront their own state of existence. Spirits that accrue 3 Stunned Conditions are released from the mortal realm.",
     "id": "winds-of-magic:spell:deaths-release",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Fate of Bjuna",
@@ -1149,7 +1168,8 @@
     "duration": "Fellowship Bonus rounds",
     "text": "Targets succumb to hysterical laughter and may even choke to death. Every round, they must roll a Challenging (+0 SL) Cool Test or receive a Stunned Condition and suffer their own Strength Bonus + 6 Damage, ignoring Armour. This Damage has a 50% chance of being applied to the head and a 50% chance of being applied to the body. The targets’ convulsions cause organs to rupture and blood vessels to burst. For every +2 SL, you may surround one target with purple energy. If the target fails a Challenging (+0 SL) Willpower Test, the Shyish energy enters their mouth. The target immediately takes Suffocation damage (WFRP, page 181) and continues suffocating for the spell’s duration.",
     "id": "winds-of-magic:spell:fate-of-bjuna",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Iyrtu’s Embrace",
@@ -1209,7 +1229,8 @@
     "duration": "Instant",
     "text": "You make living enemies acutely aware of their own mortality. Your primary target must test for Minor Exposure to Corruption (WFRP, page 182), and then pass a Challenging (+0 SL) Cool Test or receive an Unconscious Condition. Enemies standing within your Initiative Bonus yards of the primary target must pass an Average (+2 SL) Cool Test or receive a Stunned Condition. Everyone who fails their Cool Test must also pass a Easy (+4 SL) Cool Test or receive a Fatigued Condition and Psychology (Despair). For the next week, victims of Despair receive a Fatigued Condition every morning upon awakening.",
     "id": "winds-of-magic:spell:taste-of-death",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Telepathy",
@@ -1221,7 +1242,8 @@
     "duration": "Instant",
     "text": "Using the spirit-plane, you send a telepathic message to another Amethyst wizard. The Animus Imprisoned spell removes range limitations. Attempts to communicate with other characters are difficult. Characters who receive a telepathic message must pass a Challenging (+0 SL) Intuition Test to understand the message. Alternatively, this spell can be used to read the surface thoughts of another Amethyst Wizard. The target can make a Challenging (+0 SL) Intelligence Test to notice the attempt, and if detected, can attempt an Opposed Willpower Test to block your intrusion.",
     "id": "winds-of-magic:spell:telepathy",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Tide of Years",
@@ -1233,7 +1255,8 @@
     "duration": "Instant",
     "text": "You cause a non-magical object to age instantly and crumble to dust. The maximum Encumbrance of the affected object may be up to 2, plus 1 Encumbrance for every +2 SL on your Casting Test. Items with the Durable Quality do not crumble but instead lose all Qualities. You can cast Tide of Years on a living creature if you achieve 4 or more SL on your Casting Test. The target must pass an Average (+2 SL) Cool Test or grow older in a matter of seconds. Permanently reduce Strength and Toughness by 1d10 each. Daemons, Undead, and plant-based creatures are immune to this effect.",
     "id": "winds-of-magic:spell:tide-of-years",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Wild Kin of Zandox",
@@ -1245,7 +1268,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You summon two guardian hounds made of purple shadow. The hounds cannot be observed directly, but a character who passes a Hard (−2 SL) Perception Test can briefly glimpse the hounds as slavering beasts with needle-sharp fangs. On your round, the hounds can attack enemies within 4 yards. Each hound has Weapon Skill 50 and the Weapon (Bite) +8 Trait. Hounds cannot be attacked themselves and do not accrue Momentum.",
     "id": "winds-of-magic:spell:wild-kin-of-zandox",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "name": "Body of Fire",
@@ -1257,7 +1281,8 @@
     "duration": "Toughness Bonus minutes",
     "text": "Your body is sheathed in flame and your blood becomes pyrophoric. Targets attempting to grab or grapple you suffer 8 + SL Damage and must pass a Hard (−2 SL) Cool Test every round or let go. Every round that you Grapple with an opponent, they receive 1 Ablaze Condition and suffer 8 + SL additional Damage. If you are wounded in melee combat, fiery blood squirts at your attacker, who must pass a Challenging (+0 SL) Dodge Test or suffer a magic missile hit with Damage +3 (ignoring Armour). Your clothes and trappings are immune to fire, but you can still be damaged by fire attacks.",
     "id": "winds-of-magic:spell:body-of-fire",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Boiling Blood",
@@ -1269,7 +1294,8 @@
     "duration": "1 round",
     "text": "You cause the target’s blood to boil if it fails a Difficult (−1 SL) Endurance Test. The target immediately receives 2 Blinded Conditions from the pain, and at the start of its rounds suffers 10 + SL Damage (ignoring Armour, but not TB). Targets slain by this spell explode in a spray of scalding blood, inflicting a magic missile hit with Damage +1 against everyone within 2 yards.",
     "id": "winds-of-magic:spell:boiling-blood",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Burning Head",
@@ -1281,7 +1307,8 @@
     "duration": "Instant",
     "text": "You hurl a ball of fire roughly two feet in diameter, in the shape of a flaming head. The burning head flies in a straight line laughing maniacally, striking all targets in its path, until it reaches the extent of the spell’s range. Hits are magic missiles with Damage +4 (Damage +0 if the target passes a Challenging (+0 SL) Dodge Test). Everyone the burning head strikes receives 1 Ablaze Condition. Targets who lose at least 1 Wound from the burning head treat you as possessing the Fear (1) Creature Trait.",
     "id": "winds-of-magic:spell:burning-head",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Captivating Flame",
@@ -1293,7 +1320,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You cause flames to dance and mesmerise observers. Target a fire source no larger than a torch. One random character who’s looking in the direction of the fire must pass a Challenging (+0 SL) Cool Test or receive 3 Stunned Conditions. Mesmerised characters are oblivious to everything else until they remove all Stunned Conditions gained from this spell. Attacking a Stunned target instantly removes all Stunned Conditions gained from this spell. With +2 SL on your Casting Test you may enchant a larger fire, such as a brazier or campfire, which affects 2 random observers. With +4 SL you may enchant a massive fire, such as a pyre or burning building, which affects all observers.",
     "id": "winds-of-magic:spell:captivating-flame",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Choleric",
@@ -1305,7 +1333,8 @@
     "duration": "Willpower Bonus hours, days, or weeks",
     "text": "You incite a target to dislike another individual. The target becomes subject to Prejudice (WFRP, page 190) against someone of your choice for Willpower Bonus hours. You must name or point to the intended subject of the target’s ire. If the two are friends, the target may resist the spell with an Average (+2 SL) Cool Test. 0 If you achieve +4 SL on your Casting Test, you may cause the target to become subject to Animosity (WFRP, page 190) for Willpower Bonus days. 0 If you achieve +8 SL on your Casting Test, you may cause the target to become subject to Hatred (WFRP, page 190) for Willpower Bonus weeks. Until this curse expires or is dispelled, the target follows the normal rules for resisting the effects of Prejudice, Animosity, and Hatred.",
     "id": "winds-of-magic:spell:choleric",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Flamestorm",
@@ -1377,7 +1406,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You summon a minor elemental to defend your camp. You must put your hands into a bonfire, taking 6 Damage minus your Toughness Bonus, to draw forth a small humanoid flame creature with coal-black eyes. The elemental has Movement 3, Weapon Skill equal to your Willpower, attacks at Damage +6, and has the Fear (1) Creature Trait. The elemental cannot stray more than 12 yards from the fire, and you must verbally direct it. Whenever you cast another spell or talk to someone else, it simply stands still. The elemental can only move, attack, and it does not accrue Momentum. If the elemental inflicts Damage on an opponent they also suffer an Ablaze Condition. It cannot be harmed by any means other than being doused with a pint or more of water, which destroys it.",
     "id": "winds-of-magic:spell:kindred-of-the-hearth",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "name": "Magma Storm",
@@ -1401,7 +1431,8 @@
     "duration": "Willpower Bonus minutes",
     "text": "You summon a magical red sword that hovers in front of you. Each additional +2 SL on your Casting Test allows you to summon an extra sword (maximum 6 swords). On every subsequent round, you can spend your action to direct the swords against targets within range and line of sight. A target can only be attacked by one sword at a time. The swords possess the Fly (20) Creature Trait and strike with Weapon Skill 60 and deal 8 Damage before returning quickly to you. Sanguine Swords can be defended against normally and do not accrue Momentum. The swords can be dispelled but are otherwise indestructible.",
     "id": "winds-of-magic:spell:sanguine-swords",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "name": "Taste of Fire",
@@ -1413,7 +1444,8 @@
     "duration": "Instant",
     "text": "You elevate food or liquid to a more thermogenic state. Choose one of the following effects: 0 A pot of food becomes extremely spicy. Eating it requires an Easy (+4 SL) Endurance Test to avoid digestive after-effects. 0 A quart-jug of any liquid transforms into strong alcoholic spirits. A hint of the original liquid’s flavour is retained. 0 A pint-flask of any liquid transforms into highly flammable oil, usable in lanterns.",
     "id": "winds-of-magic:spell:taste-of-fire",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Withering Heat",
@@ -1437,7 +1469,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You create a mighty gale of sparks and cinders. Targets within the Area of Effect suffer 8 + SL Damage every round and must pass a Challenging (+0 SL) Athletics Test or receive the Prone Condition. Flammable objects and terrain features in the area have a 25% chance of igniting each round. Only hard cover provides shelter from the flaming blizzard’s effects.",
     "id": "winds-of-magic:spell:ygethmors-flaming-blizzard",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Amber Trance",
@@ -1449,7 +1482,8 @@
     "duration": "Willpower Bonus minutes",
     "text": "You transform your target into a statue made of transparent amber. The target can attempt a Hard (−2 SL) Cool Test to resist. An amber statue cannot be moved or harmed, not even by diseases or poisons, but it can heal both naturally and magically. The spell ends if the statue is attacked, although the first blow does not inflict damage. Targets retain no memories from their trance. A willing target can enter an extended hibernation period that lasts over a full 3-month season, until the equinox or solstice. If you cast the trance upon yourself, the spell cannot end prematurely unless someone dispels it or attacks you.",
     "id": "winds-of-magic:spell:amber-trance",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Awakening of the Wood",
@@ -1461,7 +1495,8 @@
     "duration": "Instant",
     "text": "You rouse an area of forest, causing lashing branches and tangling thorns to assail those caught within. Targets in the Area of Effect suffer a magic missile hit with Damage +4. Targets who fail an Average (+2 SL) Dodge Test also receive a Bleeding Condition and an Entangled Condition with a Strength of 30.",
     "id": "winds-of-magic:spell:awakening-of-the-wood",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Beast Unbroken",
@@ -1473,7 +1508,8 @@
     "duration": "Instant",
     "text": "You cause a domestic animal to become wild and ornery. The GM decides whether an animal flees into the wilds or turns against its former owner. The Charm Animal Skill cannot tame the target, only dissuade them from attacking. Riders must pass a Hard (−2 SL) Ride Test to avoid being thrown from their mount. If you roll +4 SL or more on your Casting Test, you may instead cause a Human to undergo a repugnant transformation. The target can resist with a Difficult (−1 SL) Willpower Test. If the target fails, they sprout thick body hair and lose their capacity for speech. The target’s actions are determined by rolling 1d10 every round: Roll 1–3 Distracted: The target scratches its fur, defecates, or picks its nose 4–6 Panicked: The target moves in a random direction, running into obstacles or attacking creatures in its path 7–9 Friendly: The target laughs maniacally and crawls or dances toward the nearest character 10 Enraged: The target releases a primal scream, causing Fear (1) in anyone without the Arcane Magic (Beasts) Talent who can hear it For both applications of The Beast Unbroken, the target remains under the effects until the curse is dispelled.",
     "id": "winds-of-magic:spell:beast-unbroken",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Curse of Anraheir",
@@ -1485,7 +1521,8 @@
     "duration": "Willpower Bonus rounds",
     "text": "You summon small spirits out of the ground to harass and distract your foes. The spirits do not cause damage, but enemy targets within the Area of Effect suffer –2 Movement and –20 Weapon Skill, Ballistic Skill, and Agility. Targets who leave the area are followed by pesky spirits but suffer only –1/–10 to these Characteristics. Mounts must pass a Challenging (+0 SL) Cool Test or flee until they are calmed with a successful Challenging (+0 SL) Ride Test. The earth spirits are invisible to everyone except the targets, and they cannot be harmed by any means.",
     "id": "winds-of-magic:spell:curse-of-anraheir",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Eyes of the Pack",
@@ -1605,7 +1642,8 @@
     "duration": "2 × Willpower Bonus rounds",
     "text": "You are surrounded by a cowl of amber light that weakens and redirects non-magical attacks. If an attack would hit you, make a Challenging (+0 SL) Cool Test. If successful, the attack’s damage is reduced by your Willpower Bonus + SL. If an attack is reduced to 0 Damage in this way it is deflected instead. Ranged attacks hit a random target within 2 yards of you — resolve this as if they were the original target. Melee attacks are reflected to strike the attacker, who may not attempt to oppose the attack.",
     "id": "winds-of-magic:spell:vengeful-hood",
-    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition."
+    "conversion": "New spell; Fifth Edition magic, core Talents/Traits and Appendix I Difficulty-to-SL conversions govern. Other printed numeric modifiers and temporary effects remain descriptions, with no permanent character bonuses. Printed WFRP page references refer to Fourth Edition.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Winter Coat",
@@ -1647,7 +1685,8 @@
       ],
       "learningXP": 400
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:bind-spirit-within-power-stone",
@@ -1690,7 +1729,8 @@
       ],
       "learningXP": 450
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:create-power-stone",
@@ -1733,7 +1773,8 @@
       ],
       "learningXP": 500
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:conjuration-of-the-incarnate-elemental-of-death",
@@ -1751,7 +1792,8 @@
       ],
       "learningXP": 500
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:conjuration-of-jack-o-cinders",
@@ -1769,7 +1811,8 @@
       ],
       "learningXP": 500
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:corrupt-waystone",
@@ -1791,7 +1834,8 @@
       ],
       "learningXP": 450
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:create-construct",
@@ -1809,7 +1853,8 @@
       ],
       "learningXP": 400
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:create-familiar",
@@ -1827,7 +1872,8 @@
       ],
       "learningXP": 250
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Permanent Resilience expenditure converted to maximum Fortune (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:create-waystone-property",
@@ -1845,7 +1891,8 @@
       ],
       "learningXP": 300
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:cursecraft",
@@ -1897,7 +1944,8 @@
       ],
       "learningXP": 100
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Resolve expenditure converted to Fortune (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:invocate-daemon",
@@ -1915,7 +1963,8 @@
       ],
       "learningXP": 400
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:materialise-the-living-swamp",
@@ -1937,7 +1986,8 @@
       ],
       "learningXP": 400
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:remove-curse",
@@ -1955,7 +2005,8 @@
       ],
       "learningXP": 200
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "winds-of-magic:ritual:the-crossed-scythes",
@@ -1973,6 +2024,7 @@
       ],
       "learningXP": 400
     },
-    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted."
+    "conversion": "Memorisation uses the printed fixed Learning XP, without free spell grants, escalating spell prices, tracker boxes, Cant or extra-Lore counts. Ritual performance, generated creatures/items and sacrifices remain deferred. Fifth Edition Difficulty and Fate/Fortune conversions apply; absent ordinary spell fields are shown as unlisted.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]

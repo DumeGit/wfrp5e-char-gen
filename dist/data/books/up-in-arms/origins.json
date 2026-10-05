@@ -160,7 +160,8 @@
       "Verena",
       "Shallya",
       "Ranald"
-    ]
+    ],
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   },
   {
     "id": "up-in-arms:origin:luccini",
@@ -324,7 +325,8 @@
       "Shallya",
       "Ranald"
     ],
-    "optionalTalent": "Doomed"
+    "optionalTalent": "Doomed",
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   },
   {
     "id": "up-in-arms:origin:imperial-tilean",
@@ -451,6 +453,7 @@
       "Lore (Reikland)",
       "Melee (Basic)",
       "Ranged (Bow)"
-    ]
+    ],
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   }
 ]

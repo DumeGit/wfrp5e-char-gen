@@ -39,7 +39,8 @@
       ]
     ],
     "randomTalents": 0,
-    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered."
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered.",
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   },
   {
     "id": "archives-iii:origin:eastender",
@@ -79,7 +80,8 @@
     ],
     "randomTalents": 1,
     "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered. Criminal OR one random Talent is a single exclusive starting slot, not an extra sixth Talent. Thieves’ Tongue uses the core spelling Thieves Tongue.",
-    "randomTalentAlternative": "Criminal"
+    "randomTalentAlternative": "Criminal",
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   },
   {
     "id": "archives-iii:origin:dwarf-altdorfer",
@@ -120,7 +122,8 @@
       ]
     ],
     "randomTalents": 0,
-    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered."
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered.",
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   },
   {
     "id": "archives-iii:origin:hexxerbezrik",
@@ -159,7 +162,8 @@
       ]
     ],
     "randomTalents": 1,
-    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered."
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered.",
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   },
   {
     "id": "archives-iii:origin:docklands",
@@ -198,6 +202,7 @@
       ]
     ],
     "randomTalents": 1,
-    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered. Thieves’ Tongue uses the core spelling Thieves Tongue."
+    "conversion": "Retain Fifth Edition physical attributes, native Languages, five Skills at +5 and creation limits; use the printed five regional Talent slots. No Career roll probabilities or additional native Languages are invented. Nimble Fingered uses core Nimble-fingered. Thieves’ Tongue uses the core spelling Thieves Tongue.",
+    "adaptation": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
   }
 ]

@@ -21,7 +21,8 @@
     "duration": "Instant",
     "text": "Your touch brings peace of mind. The target removes any Prejudice, Animosity, Fear, or Frenzy effects if you pass a Challenging (+0 SL) Fellowship Test.",
     "id": "high-elf:spell:calm",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Greenfinger",
@@ -85,7 +86,8 @@
     "requiredLores": [
       "Life",
       "Metal"
-    ]
+    ],
+    "adaptation": "Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Lesser Banishment",
@@ -101,7 +103,8 @@
     "requiredLores": [
       "Light",
       "Death"
-    ]
+    ],
+    "adaptation": "Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Magic Alarm",
@@ -117,7 +120,8 @@
     "requiredLores": [
       "Heavens",
       "Shadows"
-    ]
+    ],
+    "adaptation": "Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Masking the Mind",
@@ -133,7 +137,8 @@
     "requiredLores": [
       "Death",
       "Shadows"
-    ]
+    ],
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Purify Body",
@@ -149,7 +154,8 @@
     "requiredLores": [
       "Life",
       "Light"
-    ]
+    ],
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Speak with Animal",
@@ -165,7 +171,8 @@
     "requiredLores": [
       "Heavens",
       "Beasts"
-    ]
+    ],
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Voice of Iron",
@@ -181,7 +188,8 @@
     "requiredLores": [
       "Fire",
       "Metal"
-    ]
+    ],
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Zone of Comfort",
@@ -197,7 +205,8 @@
     "requiredLores": [
       "Fire",
       "Beasts"
-    ]
+    ],
+    "adaptation": "Assigned to the latest acquired Colour Lore for Fifth Edition prices and training counts."
   },
   {
     "name": "Apotheosis",
@@ -209,7 +218,8 @@
     "duration": "1 Round",
     "text": "You infuse the target with pure magic to heal and inspire fear. They recover your Willpower Bonus in Wounds and temporarily gain the Fear 1 Creature Trait. Overcasting: 0 For every +3 SL, you can increase the number of healed Wounds by your Willpower Bonus. 0 +6 SL — The target heals a Critical Wound if you pass a Challenging (+0 SL) Fellowship Test. 0 +10 SL — You raise the target from the dead at full Wounds. The target’s head is surrounded by a halo of shimmering power, but otherwise they regain their normal appearance and abilities. After Willpower Bonus minutes, the target dies and cannot be revived again. The target also dies if Apotheosis is Dispelled. Gain Yenlui (Dark)",
     "id": "high-elf:spell:apotheosis",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Arcane Unforging",
@@ -221,7 +231,8 @@
     "duration": "Instant",
     "text": "You summon the powers of unmaking to injure armoured enemies and destroy magic items. The target suffers 1 Damage to the body for every 2 Armour Points worn (Example: A target with 3 Armour Points on all six Hit Locations would have a total of 18 Armour Points and so suffer 9 Damage). Toughness Bonus is subtracted, but Armour Points are ignored. In addition, one of the target’s magic items (randomly determined) is destroyed if you pass a Challenging (+0 SL) Channelling Test. Overcasting: 0 For every +1 SL, you can destroy 1 worn Armour Point (randomly determined) after dealing Damage. 0 +3 SL — If you pass an Average (+2 SL) Dexterity Test, all magic items carried by the target are revealed to you and you can choose one magic item to destroy instead of rolling. 0 +8 SL — You can increase the spell’s Damage to 1 Damage per Armour Point.",
     "id": "high-elf:spell:arcane-unforging",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Coruscation of Finreir",
@@ -245,7 +256,8 @@
     "duration": "Willpower Bonus Rounds",
     "text": "You warp the air around your enemies with shimmering magic. Shooters can reroll any missile attacks that miss the affected targets as your curse guides arrows, bolts, and stones toward them. The curse affects magical ammunition and war machines, but not magic missiles. Overcasting: 0 +4 SL — Shields carried by targets lose their AP and the Defensive Quality when Opposing missile attacks as the missiles swerve around them. Shields can still be used to block incoming attacks. 0 +6 SL — If you pass a Challenging (+0 SL) Ballistic Skill Test, you may choose the Hit Locations for missiles striking any cursed targets instead of using the standard random method.",
     "id": "high-elf:spell:curse-of-arrow-attraction",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Deadlock",
@@ -269,7 +281,8 @@
     "duration": "Instant",
     "text": "You expel magic from the world by conjuring an aethyric vortex. Persistent spells within the Area of Effect are immediately Dispelled without an Extended Test, and magic accumulated by Channelling spellcasters is lost. Magic items and Ward Creature Traits are unaffected. Overcasting: 0 +5 SL — You can increase the Area of Effect to Willpower yards. A Difficult (-1 SL) Intelligence Test allows you to exempt friendly targets (including yourself) from the spell effects. 0 +7 SL — Persistent Blessings and Miracles are also Dispelled. Gain Yenlui (Light). 0 +10 SL — Magic items lose their powers and Ward Creature Traits are negated. Spellcasters must pass a Challenging (+0 SL) Channelling Test or lose all spellcasting ability for 24 hours.",
     "id": "high-elf:spell:drain-magic",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Fiery Convocation",
@@ -281,7 +294,8 @@
     "duration": "Willpower Bonus Rounds",
     "text": "You call forth an unrelenting barrage of fire. All creatures within the Area of Effect when the spell is cast suffer a magic missile hit with Damage +5 and receive an Ablaze Condition. They take another hit and Ablaze Condition every subsequent Round, even if they leave the original Area of Effect. Effects can be voided by full immersion in water or sand. Overcasting: 0 +5 SL — Damage increases to +6 on the second Round and continues increasing by another +1 every subsequent Round. Gain Yenlui (Dark). 0 +8 SL — A Challenging (+0 SL) Weapon Skill Test allows you to exempt friendly targets from the spell effects.",
     "id": "high-elf:spell:fiery-convocation",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Fortune is Fickle",
@@ -305,7 +319,8 @@
     "duration": "Intelligence Bonus Rounds",
     "text": "You conjure an illusory maze of mist and shadows. Every Round, targets must pass a Very Hard (-3 SL) Navigation Test or perform no action except wander in a random direction at their normal walking pace. The spell is invisible to everyone else, so targets merely appear to be in a daze. If a target fails 3 Tests, you may control their direction for the remainder of the spell’s duration by passing an Average (+2 SL) Leadership Test. Every time you want to change a target’s movement direction, you must pass a new Leadership Test. Overcasting: 0 +3 SL — The spell’s effects last for Intelligence Bonus hours for targets who fail three Navigation Tests. Gain Yenlui (Dark). 0 +6 SL — A Challenging (+0 SL) Agility Test allows you to exempt friendly targets from the spell effects.",
     "id": "high-elf:spell:glamour-of-teclis",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Greater Banishment",
@@ -317,7 +332,8 @@
     "duration": "1 Round",
     "text": "You radiate streams of purest Qhaysh to banish evil and darkness. Each Round, Daemonic and Undead creatures within the Area of Effect suffer a magic missile hit with Damage +8 (or Damage +15 if they are Size Large or larger). Creatures with the Unstable Trait suffer double Damage. Daemons destroyed by this spell cannot be resummoned for 1,001 days. Destroyed Undead can never be resummoned. Additionally, you can make a free Dispelling attempt against every Witchcraft, Daemonology, Necromancy, Dark Magic, or Chaos spell within the Area of Effect. Overcasting: 0 For every +1 SL, you can add a +10 bonus to your Dispelling Tests. 0 +4 SL — Magic items with evil or Chaotic enchantments cease to function for the spell’s duration if you pass an Average (+2 SL) Fellowship Test. 0 +7 SL — Increase Damage to +15 (or +30 if the target is Size Large or larger). Gain Yenlui (Light).",
     "id": "high-elf:spell:greater-banishment",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Hand of Glory",
@@ -377,7 +393,8 @@
     "duration": "1 Round",
     "text": "You summon a polychromatic storm of crackling energy from the sky. The tempest moves like a random vortex spell, except that it skips steps #1–2 and instead proceeds to move 2d10 yards as per step #3 (see Winds of Magic, page 21). Every Round Creatures within the Area of Effect suffer a magic missile hit with Damage +4 and must pass an Average (+2 SL) Athletics Test or deduct –20 from their Weapon Skill and Ballistic Skill scores while the tempest lasts. Flying targets instead suffer Damage +5 and their Athletics Tests suffer from -1 SL. Overcasting: 0 +4 SL — In addition to the normal effects, creatures within the Area of Effect must pass a Challenging (+0 SL) Cool Test to move. Flying targets that fail this Test immediately fall at a speed of 50 yards per Round. All Ballistic Skill Tests are made with a penalty of –30. 0 +5 SL — In addition to the normal effects, every Round the tempest inflicts a magic missile hit with Damage +15 against buildings and war machines within the Area of Effect. 0 +8 SL — A Challenging (+0 SL) Initiative Test allows you to exempt friendly targets from the spell effects.",
     "id": "high-elf:spell:tempest",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Walk between Worlds",
@@ -389,7 +406,8 @@
     "duration": "1 Round",
     "text": "You open the paths between worlds for your allies. Friendly targets gain the Ethereal Creature Trait and their Movement scores are doubled. Overcasting: 0 +5 SL — The spell’s duration is increased to Intelligence Bonus minutes if you pass a Hard (-2 SL) Willpower Test. 0 +8 SL — Targets at an appropriate geomantic nexus may traverse the Paths of the Old Ones to arrive at another nexus. You decide which nexus they travel to. There is no limit to the distance travelled.",
     "id": "high-elf:spell:walk-between-worlds",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Artist’s Touch",
@@ -461,7 +479,8 @@
     "duration": "Intelligence Bonus hours",
     "text": "Sacrifice: 1 item You detect the presence of rare minerals for magic item creation. The GM decides whether any minerals are within range depending on the location (50% chance is fair for mountainous regions). If minerals are underground, you identify the correct place to dig. Mineral quantity is determined by the GM, but generally you find enough for 1d10 Encumbrance worth of magic items. Rare minerals improve the Lore (Magic) Test Difficulty during magic item creation from Very Hard (-3 SL) to Difficult (-1 SL). For details, see Archives of the Empire Vol. II, page 54. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. 0 +3 SL — In addition to other minerals, you detect the presence of ithilmar. Ithilmar deposits oare only found on Vaul’s Anvil in Caledor. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:divination-of-stones",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Fires of Perfection",
@@ -581,7 +600,8 @@
     "duration": "Willpower minutes",
     "text": "Sacrifices: +2 Fatigued Conditions and –1 Wound You wreathe a single-masted ship in a dense cloak of sea fog, along with its crew. Tests made to perceive the ship or target it with ranged attacks suffer from –3 SL. Cloaked ships still leave a wake behind them and create eddies in the fog, which might be noticed with a Challenging (+0 SL) Perception Test. Black arks and sea monsters cannot be cloaked. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. 0 For every +2 SL, you can cloak a larger ship, equivalent to one additional mast in size. 0 +8 SL — Black arks and sea monsters can be cloaked. Your Yenlui State moves towards Yenlui (Dark). Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:cloak-of-mathlann",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Mistress of the Deep",
@@ -593,7 +613,8 @@
     "duration": "Fellowship Bonus Rounds",
     "text": "Sacrifices: +1 Fatigued Condition and –1 Wound You summon one of Mathlann’s watery maidens to distract your foes. Every Round, characters within 20 yards of the eerily singing Oceanid must pass a Difficult (-1 SL) Cool Test or become beguiled. Beguiled characters can perform no actions except move towards the Oceanid, becoming Helpless (WFRP, page 162). The Syreen profile (Sea of Claws, page 145), Naiad profile (Death on the Reik Companion, page 88), or Siren profile (Imperial Zoo, page 86) can be used for Oceanids, though the Naiad profile is recommended. The Oceanid does not move or attack and swims away when the spell expires. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. 0 +5 SL — You are unaffected by the Oceanid’s call. 0 +3 SL — You can instruct the Oceanid to move at Movement 6 but not attack. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:mistress-of-the-deep",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Waterlungs",
@@ -653,7 +674,8 @@
     "duration": "Instant",
     "text": "You learn the magical properties of an item or artefact. Its abilities, curses, and bound entities (e.g. elementals, Daemons, spirits) become known. If you pass a Challenging (+0 SL) Intelligence Test, you learn how the item was created. Bonus SL reveals information about the item’s creator. Understanding powerful artefacts sufficiently to repair or duplicate them might require an Extended Intelligence Test rolled over multiple castings. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:arcane-insight",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Greater Spirit Bond",
@@ -677,7 +699,8 @@
     "duration": "Intelligence Bonus minutes",
     "text": "Sacrifice: Extended Difficult (-1 SL) Research Test to a total of 10 SL You imbue a sword with the essence of Hoeth. The sword counts as magical and gains the Fast Quality. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light +3 SL — The sword can receive either the Defensive or the Precise Quality. 0 +5 SL — The sword acquires a mind of its own. The wielder gains 1 level in each of the following Talents: Combat Aware, Reaction Strike, and Riposte. 0 +7 SL — If this spell is cast during the forging of a sword, the bestowed Qualities become permanent. Only one attempt is allowed per sword. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:crucible-of-light",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Mnemonic Control",
@@ -689,7 +712,8 @@
     "duration": "Instant",
     "text": "Sacrifice: Extended Difficult (-1 SL) Research Test to a total of 10 SL You tap into the subconsciousness to pull forth buried memories. The target’s next Lore or non-magical Language Test automatically succeeds with +SL equal to your Casting Test. There must be a reasonable in-game explanation for having been exposed to the knowledge in question. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. 0 +2 SL — The target can use the auto-success on their next Casting Test. 0 +3 SL — The spell can be used to erase one specific memory from the target. You cannot erase the memory of skills or spells. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:mnemonic-control",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Psychic Sending",
@@ -701,7 +725,8 @@
     "duration": "Instant",
     "text": "Sacrifice: Extended Difficult (-1 SL) Research Test to a total of 10 SL. You mentally transmit a long-distance verbal message. The recipient must be someone with whom you’ve previously met or corresponded. Messages can be up to a minute in length and are heard in your speaking voice. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. 0 +3 SL — You can transmit a mental image along with your message. 0 +4 SL — You can communicate with a stranger provided you know their full name. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:psychic-sending",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Sacred Wards",
@@ -713,7 +738,8 @@
     "duration": "Intelligence Bonus hours",
     "text": "Sacrifice: Extended Difficult (-1 SL) Research Test to a total of 20 SL You cast protective enchantments on an area. A designated password may exempt targets from the ward effect. Choose one of the following effects, applied to anyone entering the Area of Effect: 0 Forgetfulness: Memories from the last 24 hours are lost. 0 Purity: Suffer (Mutations x 6) Damage ignoring Toughness Bonus and Armour Points. Daemons cannot enter the Area of Effect. 0 Surveillance: You can see the space within the Area of Effect by spending a Round to concentrate. 0 Truthfulness: No lies can be spoken within the Area of Effect. This spell can only be cast once on a given area. You can renew this spell with a CN 0 Casting Test before expiry, at the original Area of Effect, duration, and effects. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. +6 SL — Duration can be increased to Intelligence Bonus weeks. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:sacred-wards",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "name": "Soulcraft",
@@ -737,6 +763,7 @@
     "duration": "Intelligence Bonus hours",
     "text": "Sacrifice: Extended Hard (-2 SL) Research Test to a total of 20 SL You invoke a mystical prime language that existed before the arrival of the Old Ones. You can communicate on a basic level with any mortal creature or animal. Conveying or understanding advanced concepts might require an Intelligence Test by one or both parties. The exchange sounds like gibberish to bystanders unless they know Anoqeyån, in which case an Average (+2 SL) Language (Magick) Test allows them to comprehend the gist of it. Overcasting: To benefit from Overcasting options for this spell, your Yenlui State must be Light. 0 +2 SL — Allows advanced communication with elder species that predated the Old Ones, such as Dragons, Great Eagles, Fimir, and most animals. 0 +4 SL — Allows basic communication with any spirit, elemental, or Daemon. Esoteric faith spell: a Mage needs a tutor or access to pertinent reading materials (p. 99). Sacrifices and referenced external creature/ship profiles remain GM references.",
     "id": "high-elf:spell:the-primary-words",
-    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated."
+    "conversion": "New guide spell. Fifth Edition core magic, Talents and Creature Traits govern; named Test Difficulties use Appendix I SL conversions. Other numeric bonuses and temporary effects remain reference descriptions. Old WFRP page references refer to Fourth Edition. Casting, sacrifices, crafting and generated creatures are not automated.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]

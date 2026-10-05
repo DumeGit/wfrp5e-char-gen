@@ -224,7 +224,8 @@
       "high-elf:origin:chrace",
       "high-elf:origin:cothique",
       "high-elf:origin:yvresse"
-    ]
+    ],
+    "adaptation": "Printed Bawd result uses the revised Fifth Edition Knave Career profile."
   },
   {
     "id": "high-elf:table:nagarythe",
@@ -423,7 +424,8 @@
     "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
     "origins": [
       "high-elf:origin:the-shadowlands"
-    ]
+    ],
+    "adaptation": "Printed Bawd result uses the revised Fifth Edition Knave Career profile."
   },
   {
     "id": "high-elf:table:inner",
@@ -645,7 +647,8 @@
       "high-elf:origin:ellyrion",
       "high-elf:origin:saphery",
       "high-elf:origin:eataine"
-    ]
+    ],
+    "adaptation": "Printed Bawd result uses the revised Fifth Edition Knave Career profile."
   },
   {
     "id": "high-elf:table:avelorn",
@@ -834,7 +837,8 @@
     "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
     "origins": [
       "high-elf:origin:avelorn"
-    ]
+    ],
+    "adaptation": "Printed Bawd result uses the revised Fifth Edition Knave Career profile."
   },
   {
     "id": "high-elf:table:sea-elf",
@@ -1038,6 +1042,7 @@
     "conversion": "Use core Career profiles and Fifth Edition random-creation rewards. Advisor → Adviser; Huffer → Pilot (p. 63); Seaman → Sailor; Bawd → Knave. User-approved table corrections: Outer Guard 89–90, Avelorn Scholar 13–17, preserving the following Knight/Artisan ranges.",
     "origins": [
       "high-elf:origin:sea-elf"
-    ]
+    ],
+    "adaptation": "Printed Bawd result uses the revised Fifth Edition Knave Career profile."
   }
 ]

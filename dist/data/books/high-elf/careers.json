@@ -120,7 +120,8 @@
     ],
     "id": "high-elf:career:sea-guard",
     "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. Level 1: Animal Care (Swiftfeather Roc) uses core Animal Care as an ungrouped Skill. Level 1: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 2: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 3: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill.",
-    "text": "Printed training context: Level 1: Animal Care (Swiftfeather Roc) uses core Animal Care as an ungrouped Skill. Level 1: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 2: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 3: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill."
+    "text": "Printed training context: Level 1: Animal Care (Swiftfeather Roc) uses core Animal Care as an ungrouped Skill. Level 1: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 2: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill. Level 3: Sail (Bloodhawk, Falconship, Hawkship, or Dragonship) uses core Sail as an ungrouped Skill.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait. Printed Animal Care/Sail specialisations use the single ungrouped Fifth Edition Skill total."
   },
   {
     "name": "Swordmaster",
@@ -365,7 +366,8 @@
       }
     ],
     "id": "high-elf:career:shadow-warrior",
-    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. "
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. ",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait."
   },
   {
     "name": "Merchant Adventurer",
@@ -491,7 +493,8 @@
     ],
     "id": "high-elf:career:merchant-adventurer",
     "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. Level 1: Sail (Any) uses core Sail as an ungrouped Skill.",
-    "text": "Printed training context: Level 1: Sail (Any) uses core Sail as an ungrouped Skill."
+    "text": "Printed training context: Level 1: Sail (Any) uses core Sail as an ungrouped Skill.",
+    "adaptation": "Printed Animal Care/Sail specialisations use the single ungrouped Fifth Edition Skill total."
   },
   {
     "name": "Aestheticist",
@@ -735,6 +738,7 @@
     ],
     "id": "high-elf:career:mage",
     "text": "Mage levels 1–4 are supported. Archmage (level five) and entry into the three Elf priest branches are deferred by user decision. Student Mage requires four of this guide’s six Petty spells. Additional Colour Lores use 10 individual Channelling points and four qualifying spells, up to WP Bonus; High Magic has the further requirements on pp. 79–83.",
-    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. "
+    "conversion": "Fifth Edition free creation, XP, tracker and promotion rules govern. Use canonical core Talents, including Catfall, Detect Artefact, Nimble-fingered and Striding Gait (Woodland/Coastal); spelling/punctuation variants do not create new Talents. ",
+    "adaptation": "Channelling training uses individual Fifth Edition points and the approved four-spell Career progression."
   }
 ]

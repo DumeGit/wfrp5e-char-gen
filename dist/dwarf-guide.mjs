@@ -1,3 +1,4 @@
+import {legacyMechanic} from './legacy.mjs';
 // Explicit creator handlers for the supplied Dwarf Guide; no campaign automation.
 const base=name=>name.replace(/ \(.*/, '');
 export const dwarfGuide=R=>R.books.some(b=>b.id==='dwarf-guide');
@@ -30,7 +31,7 @@ export function effectiveCareer(R,s){
  for(const [level,id] of Object.entries(s.dwarfCareerUpdates||{})){
   const update=R.careerUpdates?.find(x=>x.id===id&&x.careers.includes(c.id));
   if(!update||update.unavailable||s.species!=='Dwarf')continue;
-  c.levels[Number(level)-1]={...structuredClone(update.profile),source:update.source};
+  c.levels[Number(level)-1]={...structuredClone(update.profile),source:update.source,adaptation:update.adaptation};
   if(update.characteristic){for(const key of Object.keys(c.advanceScheme))if(c.advanceScheme[key]===Number(level))c.advanceScheme[key]=null;const previous=c.advanceScheme[update.characteristic];c.advanceScheme[update.characteristic]=previous?Math.min(previous,Number(level)):Number(level);}
  }
  return c;
@@ -51,7 +52,7 @@ export function dwarfTalentIssue(R,s,name,d){
  return '';
 }
 export function grudgeSlots(s,talents){return talents.map((name,i)=>({name,i})).filter(x=>base(x.name)==='Ancestral Grudge');}
-export function dwarfReferences(R,s){if(!dwarfGuide(R)||s.species!=='Dwarf')return [];return [{source:{book:'dwarf-guide',page:42},text:'The supplied appearance section refers to a table absent from this PDF. Core eye/hair choices are retained; its regional roll modifiers are not applied to a different table.'},...(dwarfSwaps(R,s)?[{source:{book:'dwarf-guide',page:55},text:'Optional Career weapon/horse replacements and matching weapon Skill choices enabled. Original options remain selectable. Unspecified ammunition quantities and Full Plate Armour composition remain unresolved.'}]:[]),...(s.longbeard?[{source:{book:'dwarf-guide',page:50},text:R.dwarfCreation.longbeard.text}]:[]),...Object.values(s.dwarfCareerUpdates||{}).map(id=>R.careerUpdates.find(x=>x.id===id)).filter(Boolean).map(u=>({source:u.source,text:`Career variant: ${u.profile.name}. ${u.conversion}`}))];}
+export function dwarfReferences(R,s){if(!dwarfGuide(R)||s.species!=='Dwarf')return [];return [{source:{book:'dwarf-guide',page:42},text:'The supplied appearance section refers to a table absent from this PDF. Core eye/hair choices are retained; its regional roll modifiers are not applied to a different table.'},...(dwarfSwaps(R,s)?[{source:{book:'dwarf-guide',page:55},text:'Optional Career weapon/horse replacements and matching weapon Skill choices enabled. Original options remain selectable. Unspecified ammunition quantities and Full Plate Armour composition remain unresolved.'}]:[]),...(s.longbeard?[{...legacyMechanic('longbeard'),text:R.dwarfCreation.longbeard.text}]:[]),...Object.values(s.dwarfCareerUpdates||{}).map(id=>R.careerUpdates.find(x=>x.id===id)).filter(Boolean).map(u=>({source:u.source,adaptation:u.adaptation,text:`Career variant: ${u.profile.name}. ${u.conversion}`}))];}
 export function dwarfIssues(R,s,d){
  const issues=[];if(s.longbeard!==undefined&&typeof s.longbeard!=='boolean')issues.push('Invalid Longbeard selection.');if(['dwarfNameStyle','dwarfParentStyle'].some(k=>s[k]!==undefined&&!['Male','Female'].includes(s[k])))issues.push('Choose a printed Dwarf name column.');if(s.grudgeTargets!==undefined&&(!Array.isArray(s.grudgeTargets)||s.grudgeTargets.some(x=>typeof x!=='string')))issues.push('Invalid Ancestral Grudge choices.');if(s.longbeard){if(!dwarfGuide(R)||s.species!=='Dwarf')issues.push('Longbeard requires Dwarf and the Dwarf Guide.');if(!Number.isInteger(s.longbeardAge)||s.longbeardAge<120)issues.push('Longbeard: enter an age of at least 120.');}
  if(s.dwarfTrappingSwaps!==undefined&&(typeof s.dwarfTrappingSwaps!=='boolean'||s.dwarfTrappingSwaps&&(!dwarfGuide(R)||s.species!=='Dwarf')))issues.push('Dwarf equipment swaps require Dwarf and the Dwarf Guide.');

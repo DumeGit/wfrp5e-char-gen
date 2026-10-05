@@ -138,7 +138,7 @@ test('capped Petty grants preserve a subsequent Arcane grant and editable PDF ma
  const known=M.knownSpells(B,s);assert.equal(known.length,5);assert.equal(known[4].name,'Enchant Weapon');assert.equal(known[4].talent,'Arcane Magic (Metal)');
  globalThis.PDFLib=PDFLib;const bytes=await exportSheet(B,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
  const form=(await PDFLib.PDFDocument.load(bytes)).getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Spell_4_Name').getText(),'[Legacy] Warning');assert.equal(form.getTextField('Spell_5_Name').getText(),'Enchant Weapon');assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));
- assert.ok(form.getFields().some(x=>x.getName().endsWith('_Name')&&x.getText?.()==='[Legacy] Lore (Alchemy)'));
+ assert.ok(form.getFields().some(x=>x.getName().endsWith('_Name')&&x.getText?.()==='Lore (Alchemy)'));
  if(process.env.WFRP_WOM_QA==='1')fs.writeFileSync(new URL('../../tmp/pdfs/winds-of-magic-review/alchemist-sheet.pdf',import.meta.url),bytes);
 });
 test('ritual learning uses fixed XP and required Lores, blocks duplicates, and earns no tracker or spell-count benefit',()=>{
@@ -179,7 +179,7 @@ test('new magic and Augury export with all 556 editable fields, sourced ritual X
  assert.ok(folioData(B,s).magic.some(x=>x.name==='Create Power Stone'));
  globalThis.PDFLib=PDFLib;const bytes=await exportSheet(B,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
  const doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('XP_Spent').getText(),String(d.spent));assert.ok(doc.getPageCount()>4);
- assert.ok(form.getFields().some(x=>x.getName().endsWith('_Name')&&x.getText?.()==='[Legacy] Augury'));assert.equal(form.getTextField('Spell_2_Name').getText(),'[Legacy] Create Power Stone');
+ assert.ok(form.getFields().some(x=>x.getName().endsWith('_Name')&&x.getText?.()==='Augury'));assert.equal(form.getTextField('Spell_2_Name').getText(),'Create Power Stone');
  if(process.env.WFRP_WOM_QA==='1'){
   fs.writeFileSync(new URL('../../tmp/pdfs/winds-of-magic-review/astromancer-sheet.pdf',import.meta.url),bytes);
   fs.writeFileSync(new URL('../../tmp/pdfs/winds-of-magic-review/astromancer.json',import.meta.url),JSON.stringify({...s,step:7},null,2));

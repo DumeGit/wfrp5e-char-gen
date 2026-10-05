@@ -7,7 +7,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 export function bookPanel(library,R,s){
  const enabled=new Set(R.selection.map(x=>x.id));
  const books=library.packs.filter(x=>!isCareerVariant(x.manifest.id));
- const choices=books.map(({manifest:b})=>`<label class="book-choice"><input type="checkbox" data-book="${esc(b.id)}" ${enabled.has(b.id)?'checked':''} ${b.kind==='core'?'disabled':''}><span><strong>${esc(b.title)} ${b.edition===4?legacyTag({books:[b]},{source:{book:b.id}}):''}</strong><small>${b.kind==='core'?'Required core rules':b.kind==='variant'?'Optional rule variant':'Additional character options'} · ${esc(b.shortTitle||b.id)}</small></span></label>`).join('');
+ const choices=books.map(({manifest:b})=>`<label class="book-choice"><input type="checkbox" data-book="${esc(b.id)}" ${enabled.has(b.id)?'checked':''} ${b.kind==='core'?'disabled':''}><span><strong>${esc(b.title)} </strong><small>${b.kind==='core'?'Required core rules':b.kind==='variant'?'Optional rule variant':'Additional character options'} · ${esc(b.shortTitle||b.id)}</small></span></label>`).join('');
  const tables=['species','career','talent'].map(kind=>{
   const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s))&&(!x.origin||x.origin===s.origin)&&(!x.origins||x.origins.includes(s.origin)));
   const active=randomTable(R,s,kind);if(!available.length||available.length<2&&active)return '';

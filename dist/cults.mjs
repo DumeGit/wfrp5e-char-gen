@@ -4,7 +4,7 @@ export function miracleChoices(R,god){
  return cult?cult.miracles.map(name=>R.spells.find(x=>x.name===name)).filter(Boolean):R.spells.filter(x=>x.category===god&&!x.ritual);
 }
 export function cultReferences(R,talents){
- return (R.cults||[]).filter(c=>talents.some(t=>t===`Bless (${c.name})`||t===`Invoke (${c.name})`)).map(c=>({source:c.source,text:c.text}));
+ return (R.cults||[]).filter(c=>talents.some(t=>t===`Bless (${c.name})`||t===`Invoke (${c.name})`)).map(c=>({source:c.source,adaptation:c.adaptation,text:c.text}));
 }
 export function cultIssues(R,s){
  return s.ledger.filter(x=>x.type==='spell').flatMap(x=>{

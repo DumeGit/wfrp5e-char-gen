@@ -37,7 +37,7 @@ Approved naming mappings: Huffer → Pilot; Advisor → Adviser; Seaman → Sail
 
 Runesmithing uses Dexterity; Lore (Runes) uses Intelligence; Sail (Skycraft) uses Agility (p. 80). These Dwarf-specific profiles are distinct from ordinary Lore/Sail. Ordinary Sail does not unlock Skycraft. Exceptions remain GM decisions; there is no acknowledgement checkbox. Printed specialisations extend existing core groups without extra free points.
 
-Twenty Talent records on pp. 80–83 retain user-approved printed limits and effects with adaptation warnings. Old per-rank Test SL bonuses are omitted. Repeated purchases use Fifth Edition’s 100 XP price. Dynamic limits count all free and paid purchases of the same base Talent, across specialised rune names. Rune Magic’s cap is Intelligence Bonus + Willpower Bonus; Master Rune Magic’s cap is Willpower Bonus. Crew Commander remains unavailable under the earlier Up in Arms decision, even when both books are enabled.
+Twenty Talent records on pp. 80–83 retain user-approved printed limits and effects. Talents with omitted Fourth Edition per-rank Test SL bonuses or converted Difficulties carry Legacy/adaptation warnings; compatible unchanged profiles do not. Repeated purchases use Fifth Edition’s 100 XP price. Dynamic limits count all free and paid purchases of the same base Talent, across specialised rune names. Rune Magic’s cap is Intelligence Bonus + Willpower Bonus; Master Rune Magic’s cap is Willpower Bonus. Crew Commander remains unavailable under the earlier Up in Arms decision, even when both books are enabled.
 
 Each Ancestral Grudge purchase needs a distinct culture/faction. Printed campaign XP rewards are descriptions, never added to creator XP. Undo removes excess choice slots.
 

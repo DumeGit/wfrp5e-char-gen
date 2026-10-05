@@ -1,5 +1,5 @@
-import {legacyTag} from './legacy.mjs';
-const legacyFeature={source:{book:'archives-iii'}};
+import {legacyTag,legacyMechanic,legacyName} from './legacy.mjs';
+const legacyFeature={source:{book:'archives-iii-hedge',page:62},adaptation:'Compatible swaps applied to core Fifth Edition Hedge Witch; obsolete Trade (Charms) swap is unavailable and extra options grant no extra Advances.'};
 import {assembleBooks,bookSelection} from './books.mjs';
 
 const variants=[{id:'archives-iii-hedge',parent:'archives-iii',career:'hedge-witch',name:'Animal-doctor Hedge Witch',source:'Archives III p. 62'}];

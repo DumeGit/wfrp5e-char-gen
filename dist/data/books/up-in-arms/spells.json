@@ -30,7 +30,8 @@
     "target": "Allies within AoE (Willpower yards)",
     "duration": "Willpower Bonus Rounds",
     "text": "Knowing that the situation is hopeless you pray that your forces do not suffer from a disastrous rout. While the miracle is in play any allies may break from combat without allowing the enemy to gain Momentum or make free attacks (the printed Fourth Edition cross-reference is Fleeing, WFRP p. 165).",
-    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses. The old Advantage reference becomes Momentum under Fifth Edition Appendix I p. 364; the old page reference is labelled."
+    "conversion": "Printed numeric modifiers retained in the description by user decision; situational effects are reference text, not automatic character bonuses. The old Advantage reference becomes Momentum under Fifth Edition Appendix I p. 364; the old page reference is labelled.",
+    "adaptation": "Fourth Edition Advantage references converted to Momentum (core Appendix I)."
   },
   {
     "id": "up-in-arms:miracle:know-your-enemy",

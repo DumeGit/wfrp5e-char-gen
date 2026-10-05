@@ -244,7 +244,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Public Speaking → Public Speaker; Unshakable → Unshakeable; Warleader → War Leader."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Public Speaking → Public Speaker; Unshakable → Unshakeable; Warleader → War Leader.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Public Speaker."
   },
   {
     "id": "up-in-arms:career:halberdier",
@@ -368,7 +369,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Public Speaking → Public Speaker; Unshakable → Unshakeable; Warleader → War Leader."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Public Speaking → Public Speaker; Unshakable → Unshakeable; Warleader → War Leader.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Dicer, Public Speaker."
   },
   {
     "id": "up-in-arms:career:handgunner",
@@ -614,7 +616,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Public Speaking → Public Speaker; Unshakable → Unshakeable."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Public Speaking → Public Speaker; Unshakable → Unshakeable.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Public Speaker."
   },
   {
     "id": "up-in-arms:career:camp-follower",
@@ -735,7 +738,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Public Speaking → Public Speaker; Unshakable → Unshakeable."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Public Speaking → Public Speaker; Unshakable → Unshakeable.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Dicer, Public Speaker."
   },
   {
     "id": "up-in-arms:career:cartographer",
@@ -857,7 +861,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Nimble Fingered → Nimble-fingered; Strider (Any) → Striding Gait (Any)."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Nimble Fingered → Nimble-fingered; Strider (Any) → Striding Gait (Any).",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Striding Gait."
   },
   {
     "id": "up-in-arms:career:freelance",
@@ -1482,7 +1487,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Rough Rider → Roughrider; Trick Riding → Trick Rider."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Rough Rider → Roughrider; Trick Riding → Trick Rider.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Trick Rider."
   },
   {
     "id": "up-in-arms:career:siege-specialist",
@@ -1608,7 +1614,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Tunnel Rat → Tunnel Fighter; Unshakable → Unshakeable."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Tunnel Rat → Tunnel Fighter; Unshakable → Unshakeable.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Tunnel Fighter."
   },
   {
     "id": "up-in-arms:career:pikeman",
@@ -1733,7 +1740,8 @@
         ]
       }
     ],
-    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Unshakable → Unshakeable."
+    "conversion": "Fifth Edition starting allocation, tracker advancement and core Talent definitions apply. Older printed Talent names: Diceman → Dicer; Unshakable → Unshakeable.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Dicer."
   },
   {
     "id": "up-in-arms:career:priest-of-myrmidia",

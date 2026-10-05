@@ -94,7 +94,7 @@ test('Editable sheet and full creation record preserve known spell details and s
  const source=fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url));
  const bytes=await exportSheet(B,s,source,JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
  const pdf=await PDFLib.PDFDocument.load(bytes),form=pdf.getForm();assert.equal(form.getFields().length,556);
- assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));assert.equal(form.getTextField('Spell_1_Name').getText(),'[Legacy] Badwill');assert.equal(form.getTextField('Spell_2_Name').getText(),'[Legacy] Bonesetter');
+ assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));assert.equal(form.getTextField('Spell_1_Name').getText(),'Badwill');assert.equal(form.getTextField('Spell_2_Name').getText(),'Bonesetter');
  assert.ok(pdf.getPageCount()>2);const record=await PDFLib.PDFDocument.load(await exportRecord(B,s));assert.ok(record.getPageCount()>0);
  if(process.env.WFRP_BRAMBLE_QA==='1'){const dir=new URL('../../tmp/pdfs/blood-bramble-review/',import.meta.url);fs.writeFileSync(new URL('hedge-verification.pdf',dir),bytes);fs.writeFileSync(new URL('hedge-verification.json',dir),JSON.stringify(s));const witch=brambleCaster('witch','Arcane Magic (Witchcraft)');M.purchaseSpell(B,witch,'Nameless Summons','Arcane Magic (Witchcraft)');fs.writeFileSync(new URL('witch-verification.json',dir),JSON.stringify(witch));}
 });

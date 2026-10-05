@@ -118,7 +118,8 @@
         ]
       }
     ],
-    "conversion": "Use Fifth Edition allocations and core Talents. Academic Class follows core Priest (p. 83); the supplement gives a specialised Priest Career without a separate Class kit. Printed descriptive Trappings retain unknown weights where no matching profile exists."
+    "conversion": "Use Fifth Edition allocations and core Talents. Academic Class follows core Priest (p. 83); the supplement gives a specialised Priest Career without a separate Class kit. Printed descriptive Trappings retain unknown weights where no matching profile exists.",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Public Speaker."
   },
   {
     "id": "archives-iii:career:priest-of-solkan",
@@ -363,6 +364,7 @@
       }
     ],
     "conversion": "Use Fifth Edition allocations and core Talents. Academic Class follows core Priest (p. 83); the supplement gives a specialised Priest Career without a separate Class kit. Printed descriptive Trappings retain unknown weights where no matching profile exists.",
-    "text": "Male priests of Rhya are also allowed. Rhya has no Warrior Priests or Witch Hunters (p. 73)."
+    "text": "Male priests of Rhya are also allowed. Rhya has no Warrior Priests or Witch Hunters (p. 73).",
+    "adaptation": "Older Talent options replaced with Fifth Edition definitions: Public Speaker."
   }
 ]

@@ -158,4 +158,6 @@ Elven Arcane spells use validated `requiredLores`: exactly two distinct Colour L
 
 ## Legacy provenance
 
-All Fourth Edition packs inherit the **Legacy** presentation label from their validated manifest edition and source references. No duplicate tagging field or manually maintained list is required. Specific adapted mechanics and definitions remain documented in `conversion`, manifest compatibility notes and the book integration document. Character-specific core Career updates, prayer grants, regional allocations, spell grants and XP discounts must preserve their supplement source so Legacy follows them into choices, folio, review and export. Core definitions and game identifiers must not be renamed to add a tag. See [LEGACY.md](LEGACY.md) for the reviewed inventory and semantics.
+Record an actual Fifth Edition rule change with optional nonempty `adaptation` text on the affected catalog entry. It must explain the concrete conversion, separately from generic `conversion` review notes. The loader validates the field; the shared Legacy helpers use it in UI and exports. Source edition alone never grants a tag. New packs do not inherit Legacy automatically.
+
+Context-only changes use a reviewed `legacyMechanic` entry and apply only where the change is used. Unchanged core Skills/Talents/gear do not inherit an entire adapted Career or regional profile’s tag. Preserve canonical names and IDs. See [LEGACY.md](LEGACY.md), including compatible negative cases; retain the metadata when re-extracting/rebuilding a pack.

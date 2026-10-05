@@ -53,7 +53,8 @@
     "page": 69,
     "sl": 2,
     "text": "You enter a state known as ‘shadowfast’, moving with such speed that you appear blurred and insubstantial to the naked eye. You appear up to SL x your Movement in yards away (to a minimum of 5 yards). Obstacles and terrain impede movement as normal. Any enemies you were Engaged with before you used this technique must pass a Challenging (+0 SL) Initiative Test or gain the Surprised Condition.",
-    "conversion": "Learning uses the printed Sword-dancing cost and grants no tracker box. Combat, Yenlui and temporary effects remain references; use core Talents/Traits. Named Difficulties use Appendix I SL modifiers, and old Advantage becomes Momentum."
+    "conversion": "Learning uses the printed Sword-dancing cost and grants no tracker box. Combat, Yenlui and temporary effects remain references; use core Talents/Traits. Named Difficulties use Appendix I SL modifiers, and old Advantage becomes Momentum.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "high-elf:technique:path-of-the-hawk",
@@ -61,7 +62,8 @@
     "page": 69,
     "sl": 3,
     "text": "You emit a high-pitched whistle along the length of your blade, which amplifies as you match the blade’s natural frequency. You target someone within Willpower Bonus yards and inflict piercing pain on their eardrums if they fail a Difficult (-1 SL) Endurance Test. The target immediately suffers 10 + Sword-dancing SL Damage (ignoring Armour, but not TB) and receives 2 Deafened Conditions from the pain. Targets slain by this technique crumple to the ground with blood oozing from their ears. Each +1 SL on your Sword-dancing Test may increase the range and number of targets by 1.",
-    "conversion": "Learning uses the printed Sword-dancing cost and grants no tracker box. Combat, Yenlui and temporary effects remain references; use core Talents/Traits. Named Difficulties use Appendix I SL modifiers, and old Advantage becomes Momentum."
+    "conversion": "Learning uses the printed Sword-dancing cost and grants no tracker box. Combat, Yenlui and temporary effects remain references; use core Talents/Traits. Named Difficulties use Appendix I SL modifiers, and old Advantage becomes Momentum.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "high-elf:technique:path-of-falling-water",
@@ -77,6 +79,7 @@
     "page": 69,
     "sl": 4,
     "text": "With unnatural speed, you strike in a single fluid movement, the steel glinting in the light as it slices through the air. Your opponent must pass a Very Hard (-3 SL) Dodge Test or be unable to avoid the blow that strikes with +4 to the Damage you cause. Each +1 SL on your Sword-dancing Test adds an extra +1 Damage.",
-    "conversion": "Learning uses the printed Sword-dancing cost and grants no tracker box. Combat, Yenlui and temporary effects remain references; use core Talents/Traits. Named Difficulties use Appendix I SL modifiers, and old Advantage becomes Momentum."
+    "conversion": "Learning uses the printed Sword-dancing cost and grants no tracker box. Combat, Yenlui and temporary effects remain references; use core Talents/Traits. Named Difficulties use Appendix I SL modifiers, and old Advantage becomes Momentum.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]

@@ -162,7 +162,8 @@
     "availability": "Scarce",
     "category": "Herbs & drinks",
     "text": "Challenging (+0 SL) Consume Alcohol Test. Failed drinking follows ordinary alcohol rules; Elves use the printed Narinocha d10 table instead of Stinking Drunk. Table effects and Yenlui are play references. High Elf market/outpost prices only (p. 32).",
-    "conversion": "Keep core equipment profiles and prices. New profiles use printed values; temporary and situational effects remain descriptions."
+    "conversion": "Keep core equipment profiles and prices. New profiles use printed values; temporary and situational effects remain descriptions.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "high-elf:gear:sunroot-extract-vial",
@@ -195,7 +196,8 @@
     "availability": "Exotic",
     "category": "Enchanted items",
     "text": "Challenging (+0 SL) Lore (Magic) discerns nearby Wind concentrations; Hard (−2 SL) points to the nearest concentration of a particular Wind. High Elf market/outpost prices only (p. 32).",
-    "conversion": "Keep core equipment profiles and prices. New profiles use printed values; temporary and situational effects remain descriptions."
+    "conversion": "Keep core equipment profiles and prices. New profiles use printed values; temporary and situational effects remain descriptions.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   },
   {
     "id": "high-elf:gear:flamespyre-phoenix-feather",
@@ -250,6 +252,7 @@
     "availability": "Rare",
     "category": "Enchanted items",
     "text": "Challenging (+0 SL) Pray senses the direction of the nearest waystone; aids Yenlui meditation. Sold only to someone trusted to protect it. High Elf market/outpost prices only (p. 32).",
-    "conversion": "Keep core equipment profiles and prices. New profiles use printed values; temporary and situational effects remain descriptions."
+    "conversion": "Keep core equipment profiles and prices. New profiles use printed values; temporary and situational effects remain descriptions.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]

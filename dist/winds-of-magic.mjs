@@ -1,3 +1,4 @@
+import {legacyMechanic} from './legacy.mjs';
 import {elfDiscount} from './high-elf.mjs';
 import {freeTalents,derive,career,base,knownSpells} from './rules.mjs';
 import {creationSpecies} from './origins.mjs';
@@ -78,7 +79,7 @@ export function womReferences(R,s){
  if(!windsOfMagic(R))return [];
  const out=[];
  if(affiliatedCareer(s))out.push({source:{book:'winds-of-magic',page:35},text:`College affiliation: ${collegeLore(s)||'not chosen'}. The generic Wizard remains valid; every College-affiliated Wizard follows that order and its associated Lore and arcane marks.`});
- if(mundaneAlchemist(s))out.push({source:{book:'winds-of-magic',page:39},text:career(R,s).text+' Approved Fifth Edition adaptation: Petty Magic grants the smaller of the Willpower Bonus at acquisition or four distinct permitted spells. No extra spell is banked or exchanged for XP.'});
- if(psychometrySacrifice(R,s))out.push({source:{book:'winds-of-magic',page:48},text:`Gave up random Species Talent ${s.psychometrySlot+1}: ${s.randomTalents[s.psychometrySlot]}. Psychometry is unlocked for paid advancement in the listed Careers, with 0 free Skill points. Non-career prices apply unless it is actually a Career Skill.`});
+ if(mundaneAlchemist(s))out.push({...legacyMechanic('alchemist'),text:career(R,s).text+' Approved Fifth Edition adaptation: Petty Magic grants the smaller of the Willpower Bonus at acquisition or four distinct permitted spells. No extra spell is banked or exchanged for XP.'});
+ if(psychometrySacrifice(R,s))out.push({...legacyMechanic('psychometry'),text:`Gave up random Species Talent ${s.psychometrySlot+1}: ${s.randomTalents[s.psychometrySlot]}. Psychometry is unlocked for paid advancement in the listed Careers, with 0 free Skill points. Non-career prices apply unless it is actually a Career Skill.`});
  return out;
 }

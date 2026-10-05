@@ -179,6 +179,7 @@
     "damage": "SB+3",
     "qualities": "Impale, If rested in fertile earth each night, inflicts Poisoned when causing at least 1 Wound; resisted with Challenging (+0 SL) Endurance",
     "text": "Availability assumes a strong local presence of the associated Species (p. 92); some weapons are not sold to outsiders. Confirm access with your GM. The printed Challenging (+0) Test Difficulty is converted to +0 SL under core Appendix I p. 364.",
-    "conversion": "New named equipment only. Printed profiles, prices and weights retained; existing core equipment is unchanged. Situational effects are reference descriptions, not combat automation."
+    "conversion": "New named equipment only. Printed profiles, prices and weights retained; existing core equipment is unchanged. Situational effects are reference descriptions, not combat automation.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]

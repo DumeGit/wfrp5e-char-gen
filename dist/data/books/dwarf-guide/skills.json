@@ -36,6 +36,7 @@
     "speciesOnly": [
       "Dwarf"
     ],
-    "text": "Advanced flying-machine operation. Take-off and landing require Average (+2 SL) Tests. Normal Sail does not unlock Skycraft, and Skycraft does not grant normal Sail. Situational operations are references only."
+    "text": "Advanced flying-machine operation. Take-off and landing require Average (+2 SL) Tests. Normal Sail does not unlock Skycraft, and Skycraft does not grant normal Sail. Situational operations are references only.",
+    "adaptation": "Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I)."
   }
 ]
