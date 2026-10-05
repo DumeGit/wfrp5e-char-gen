@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "kind": "gear",
+      "name": "Jewellery",
+      "contentId": "core:gear:jewellery",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    }
+  ],
+  "features": [
+    {
+      "id": "core:feature:creation",
+      "name": "Guided creation, XP, equipment and editable exports",
+      "status": "implemented",
+      "source": {
+        "book": "core",
+        "page": 27
+      },
+      "reason": "Core creation is implemented; live play remains outside the creator."
+    },
+    {
+      "id": "core:feature:tracker-single",
+      "name": "Optional individual Advances and tracker grouping",
+      "status": "adapted",
+      "source": {
+        "book": "core",
+        "page": 364
+      },
+      "reason": "The user-approved grouping awards a box after five eligible points in the same Skill/Characteristic; Appendix II does not specify tracker interaction."
+    },
+    {
+      "id": "core:feature:campaign",
+      "name": "Campaign character management",
+      "status": "deferred",
+      "source": {
+        "book": "core"
+      },
+      "reason": "Conditions, combat, spent resources, XP awards and ongoing Career changes remain future manager systems."
+    }
+  ]
+}

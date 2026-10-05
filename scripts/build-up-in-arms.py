@@ -16,8 +16,11 @@ read = lambda path: json.loads(path.read_text(encoding='utf-8-sig'))
 slug = lambda s: re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
 
 
+from book_build import prepare_manifest
+
 def write(name, value):
-    (DEST/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    value = prepare_manifest(name, value, DEST)
+    (DEST/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 
 core_skills = read(ROOT/'dist/data/skills.json')

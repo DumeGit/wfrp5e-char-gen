@@ -15,10 +15,12 @@ read = lambda p: json.loads(p.read_text(encoding='utf-8-sig'))
 slug = lambda s: re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
 norm = lambda s: re.sub(r'\s+', ' ', s.replace('T wist', 'Twist').replace('T ouch', 'Touch').replace('T est', 'Test').replace('diety', 'deity')).strip()
 pages = {p['page']:p['text'] for p in read(STAGED/'pages.json')}
+from book_build import prepare_manifest
+
 def write(name, value, directory=None):
     directory = directory or args.output_dir
-    directory.mkdir(parents=True, exist_ok=True)
-    (directory/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    value = prepare_manifest(name, value, directory)
+    (directory/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 def convert(text):
     for old, new in [('Average (+20)', 'Average (+2 SL)'), ('Difficult (–10)', 'Difficult (−1 SL)'), ('Challenging (+0)', 'Challenging (+0 SL)'), ('Hard (–20)', 'Hard (−2 SL)')]:

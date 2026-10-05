@@ -34,6 +34,7 @@
     "origins": "origins.json",
     "rules": "rules.json",
     "market": "market.json",
-    "weapons": "weapons.json"
+    "weapons": "weapons.json",
+    "coverage": "coverage.json"
   }
 }

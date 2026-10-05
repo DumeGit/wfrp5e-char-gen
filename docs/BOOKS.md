@@ -33,7 +33,7 @@ For example, this is a structural template, **not a real book or invented game r
   "dependsOn": ["core"],
   "source": {"file": "actual-source.pdf", "sha256": "REPLACE_WITH_ACTUAL_64_HEX_DIGIT_HASH"},
   "compatibility": {"reviewed": true, "notes": ["Document the actual conversion review here."]},
-  "files": {"careers": "careers.json", "spells": "spells.json"}
+  "files": {"careers": "careers.json", "spells": "spells.json", "coverage": "coverage.json"}
 }
 ```
 
@@ -161,3 +161,16 @@ Elven Arcane spells use validated `requiredLores`: exactly two distinct Colour L
 Record an actual Fifth Edition rule change with optional nonempty `adaptation` text on the affected catalog entry. It must explain the concrete conversion, separately from generic `conversion` review notes. The loader validates the field; the shared Legacy helpers use it in UI and exports. Source edition alone never grants a tag. New packs do not inherit Legacy automatically.
 
 Context-only changes use a reviewed `legacyMechanic` entry and apply only where the change is used. Unchanged core Skills/Talents/gear do not inherit an entire adapted Career or regional profile’s tag. Preserve canonical names and IDs. See [LEGACY.md](LEGACY.md), including compatible negative cases; retain the metadata when re-extracting/rebuilding a pack.
+
+
+## Registry coverage and release checks
+
+Every registered pack supplies `files.coverage: "coverage.json"`. Its schema is `{schemaVersion: 1, records: [...], features: [...]}`. Record overrides require an installed `contentId`, exact `kind`/`name`, a status and reason. Features require a namespaced `book:feature:id`, name, status, source and reason. Allowed statuses are `implemented`, `adapted`, `reference-only`, `unavailable`, `deferred`. Feature sources name their own book and optionally a verified printed page; omit the page for a book-wide scope decision rather than inventing one. The loader checks all registered inventories, including disabled books, and rejects missing, stale, duplicate or unsupported targets/statuses.
+
+A record defaults to implemented, becomes adapted only from reviewed Legacy/adaptation metadata, and remains unavailable if its actual rule record disables it. Explicit reference-only overrides identify retained profiles whose purchase/action is not offered. Counts are profile records, not claims that live effects are automated. Coverage metadata reports scope; it never enables mechanics or changes Legacy tags. Deferred chapters/embedded missing entries belong in `features` rather than fabricated option records.
+
+`npm run generate:books` derives `dist/data/content-report.json`, `docs/INCLUSION-MATRIX.md` and the marked README summary. The JSON includes every source record and feature; Markdown groups counts and explains exceptions. Active totals use the combined registry with precedence applied, while source inventories retain withdrawn records and explicit Career variants. `npm run check:generated` rejects drift without rewriting it. Reviewed aliases and their decisions are included in the generated documentation.
+
+Before committing, run **`npm run check:release`**: validate books/coverage, check module syntax/imports/identifiers, check generated documentation, check formatting, run the complete tests, rebuild the versioned offline worker and verify every published asset is cached. Browser checks still cover desktop and narrow mobile with `?verify=1`. Changes must be committed locally; the user pushes and Vercel deploys. These commands never push or deploy. See [ARCHITECTURE.md](ARCHITECTURE.md) for feature boundaries and shared result/issue contracts.
+
+The Python extraction builders use `scripts/book_build.py` to preserve reviewed coverage when regenerating a manifest, including copying it into an isolated output directory. A new book without reviewed coverage fails generation rather than silently losing its inventory. The full registry validator checks the copied metadata during the release process.

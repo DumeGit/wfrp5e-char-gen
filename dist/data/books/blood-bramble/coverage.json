@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "blood-bramble:feature:ingredients",
+      "name": "Hedgecraft ingredient quantity/weight",
+      "status": "reference-only",
+      "source": {
+        "book": "blood-bramble",
+        "page": 6
+      },
+      "reason": "5-penny purchase supported, but supplied amount and weight are unspecified."
+    },
+    {
+      "id": "blood-bramble:feature:campaign",
+      "name": "Foraging, ingredient consumption, pacts/summons and adventures",
+      "status": "deferred",
+      "source": {
+        "book": "blood-bramble"
+      },
+      "reason": "No live effects, companions or NPC Career profiles are granted."
+    }
+  ]
+}

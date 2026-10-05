@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "kind": "gear",
+      "name": "Gromril Breastplate",
+      "contentId": "dwarf-guide:gear:gromril-breastplate",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Gromril Open Helm",
+      "contentId": "dwarf-guide:gear:gromril-open-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Gromril Bracers",
+      "contentId": "dwarf-guide:gear:gromril-bracers",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Gromril Plate Leggings",
+      "contentId": "dwarf-guide:gear:gromril-plate-leggings",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Gromril Helm",
+      "contentId": "dwarf-guide:gear:gromril-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Shield Platform",
+      "contentId": "dwarf-guide:gear:shield-platform",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Oathstone",
+      "contentId": "dwarf-guide:gear:oathstone",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Anvil of Doom",
+      "contentId": "dwarf-guide:gear:anvil-of-doom",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "armour",
+      "name": "Gromril Breastplate",
+      "contentId": "dwarf-guide:armour:gromril-breastplate",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Gromril Open Helm",
+      "contentId": "dwarf-guide:armour:gromril-open-helm",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Gromril Bracers",
+      "contentId": "dwarf-guide:armour:gromril-bracers",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Gromril Plate Leggings",
+      "contentId": "dwarf-guide:armour:gromril-plate-leggings",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Gromril Helm",
+      "contentId": "dwarf-guide:armour:gromril-helm",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    }
+  ],
+  "features": [
+    {
+      "id": "dwarf-guide:feature:longbeard",
+      "name": "Longbeard starting resources",
+      "status": "adapted",
+      "source": {
+        "book": "dwarf-guide",
+        "page": 50
+      },
+      "reason": "Approved −1 starting Fate/Fortune, minimum age 120, with warning."
+    },
+    {
+      "id": "dwarf-guide:feature:longbeard-zero",
+      "name": "Longbeard 0-Fate fallback",
+      "status": "deferred",
+      "source": {
+        "book": "dwarf-guide",
+        "page": 50
+      },
+      "reason": "Old Resilience/Resolve fallback has no agreed conversion."
+    },
+    {
+      "id": "dwarf-guide:feature:appearance",
+      "name": "Missing printed appearance table",
+      "status": "unavailable",
+      "source": {
+        "book": "dwarf-guide",
+        "page": 42
+      },
+      "reason": "Referenced table is absent in supplied PDF; retain explained core suggestions."
+    },
+    {
+      "id": "dwarf-guide:feature:outcast-entertain",
+      "name": "Outcast Engineer unspecialised Entertain",
+      "status": "unavailable",
+      "source": {
+        "book": "dwarf-guide",
+        "page": 56
+      },
+      "reason": "Retain unavailable entry rather than inventing a specialisation."
+    },
+    {
+      "id": "dwarf-guide:feature:campaign",
+      "name": "Rune forging/activation, machinery crews and campaign grudges",
+      "status": "deferred",
+      "source": {
+        "book": "dwarf-guide"
+      },
+      "reason": "Learning runes grants knowledge, not items; no campaign XP awards."
+    }
+  ]
+}

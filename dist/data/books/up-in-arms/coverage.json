@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "up-in-arms:feature:tilean",
+      "name": "Tilean starting allocations",
+      "status": "adapted",
+      "source": {
+        "book": "up-in-arms",
+        "page": "55–56"
+      },
+      "reason": "Approved Fifth Edition allocations with printed Tilean choices and native language."
+    },
+    {
+      "id": "up-in-arms:feature:armoury",
+      "name": "Replacement profiles for existing core equipment",
+      "status": "unavailable",
+      "source": {
+        "book": "up-in-arms"
+      },
+      "reason": "User chose to retain core statistics and import only new equipment."
+    },
+    {
+      "id": "up-in-arms:feature:campaign",
+      "name": "Injuries, mounted/group combat, hirelings and Warrior Endeavours",
+      "status": "deferred",
+      "source": {
+        "book": "up-in-arms"
+      },
+      "reason": "Outside character-creation scope."
+    }
+  ]
+}

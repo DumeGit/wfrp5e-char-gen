@@ -29,6 +29,7 @@
     "weapons": "weapons.json",
     "armour": "armour.json",
     "market": "market.json",
-    "tables": "tables.json"
+    "tables": "tables.json",
+    "coverage": "coverage.json"
   }
 }

@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "kind": "gear",
+      "name": "Greatsword of Hoeth",
+      "contentId": "high-elf:gear:greatsword-of-hoeth",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Ithilmar Breastplate",
+      "contentId": "high-elf:gear:ithilmar-breastplate",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Ithilmar Open Helm",
+      "contentId": "high-elf:gear:ithilmar-open-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Ithilmar Bracers",
+      "contentId": "high-elf:gear:ithilmar-bracers",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Ithilmar Plate Leggings",
+      "contentId": "high-elf:gear:ithilmar-plate-leggings",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Ithilmar Helm",
+      "contentId": "high-elf:gear:ithilmar-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Dragon Armour Breastplate",
+      "contentId": "high-elf:gear:dragon-armour-breastplate",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Dragon Armour Open Helm",
+      "contentId": "high-elf:gear:dragon-armour-open-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Dragon Armour Bracers",
+      "contentId": "high-elf:gear:dragon-armour-bracers",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Dragon Armour Plate Leggings",
+      "contentId": "high-elf:gear:dragon-armour-plate-leggings",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Dragon Armour Helm",
+      "contentId": "high-elf:gear:dragon-armour-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "gear",
+      "name": "Ithiltaen Helm",
+      "contentId": "high-elf:gear:ithiltaen-helm",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    },
+    {
+      "kind": "armour",
+      "name": "Ithilmar Breastplate",
+      "contentId": "high-elf:armour:ithilmar-breastplate",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Ithilmar Open Helm",
+      "contentId": "high-elf:armour:ithilmar-open-helm",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Ithilmar Bracers",
+      "contentId": "high-elf:armour:ithilmar-bracers",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Ithilmar Plate Leggings",
+      "contentId": "high-elf:armour:ithilmar-plate-leggings",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Ithilmar Helm",
+      "contentId": "high-elf:armour:ithilmar-helm",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Dragon Armour Breastplate",
+      "contentId": "high-elf:armour:dragon-armour-breastplate",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Dragon Armour Open Helm",
+      "contentId": "high-elf:armour:dragon-armour-open-helm",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Dragon Armour Bracers",
+      "contentId": "high-elf:armour:dragon-armour-bracers",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Dragon Armour Plate Leggings",
+      "contentId": "high-elf:armour:dragon-armour-plate-leggings",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "armour",
+      "name": "Dragon Armour Helm",
+      "contentId": "high-elf:armour:dragon-armour-helm",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    },
+    {
+      "kind": "weapons",
+      "name": "Greatsword of Hoeth",
+      "contentId": "high-elf:weapon:greatsword-of-hoeth",
+      "status": "reference-only",
+      "reason": "Matching equipment is reference-only, not an ordinary shop purchase. Granted equipment still uses its printed profile."
+    }
+  ],
+  "features": [
+    {
+      "id": "high-elf:feature:elder",
+      "name": "Elder creation points and resource reductions",
+      "status": "adapted",
+      "source": {
+        "book": "high-elf",
+        "page": 53
+      },
+      "reason": "Approved Fifth Edition individual Skill points, caps, and Fate/Fortune interpretation."
+    },
+    {
+      "id": "high-elf:feature:blood",
+      "name": "Blood of Aenarion Psychology and ritual discount",
+      "status": "adapted",
+      "source": {
+        "book": "high-elf",
+        "page": 51
+      },
+      "reason": "Core Psychology effects; approved ritual inclusion in Prodigy discount."
+    },
+    {
+      "id": "high-elf:feature:sailor",
+      "name": "Sea Elf Sailor option",
+      "status": "adapted",
+      "source": {
+        "book": "high-elf",
+        "page": 63
+      },
+      "reason": "Approved core-compatible Athletics/Basic/Intuition scheme."
+    },
+    {
+      "id": "high-elf:feature:elven-arcane",
+      "name": "Elven Arcane learning Lore assignment",
+      "status": "adapted",
+      "source": {
+        "book": "high-elf",
+        "page": 79
+      },
+      "reason": "Assign to latest acquired Colour Lore for core learning prices/counts."
+    },
+    {
+      "id": "high-elf:feature:advanced-careers",
+      "name": "Archmage fifth level and advanced priest branches",
+      "status": "deferred",
+      "source": {
+        "book": "high-elf"
+      },
+      "reason": "Only Mage levels 1–4 supported; user deferred higher/priest Career branches."
+    },
+    {
+      "id": "high-elf:feature:ithiltaen",
+      "name": "Ithiltaen AP",
+      "status": "reference-only",
+      "source": {
+        "book": "high-elf",
+        "page": 34
+      },
+      "reason": "Printed AP is blank and remains unresolved."
+    },
+    {
+      "id": "high-elf:feature:campaign",
+      "name": "Yenlui changes, intrigue, crafting and ship/crew combat",
+      "status": "deferred",
+      "source": {
+        "book": "high-elf"
+      },
+      "reason": "Starting choices and references supported; ongoing play systems deferred."
+    }
+  ]
+}

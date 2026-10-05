@@ -14,7 +14,11 @@ args=parser.parse_args()
 args.output_dir.mkdir(parents=True,exist_ok=True)
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 slug=lambda s:re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
-def write(name,value):(args.output_dir/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+from book_build import prepare_manifest
+
+def write(name, value):
+    value = prepare_manifest(name, value, args.output_dir)
+    (args.output_dir/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 def norm(s):return re.sub(r'\s+',' ',s).strip()
 def convert(s):
     for label,num,sl in [('Very Easy',60,6),('Easy',40,4),('Average',20,2),('Challenging',0,0),('Difficult',-10,-1),('Hard',-20,-2),('Very Hard',-30,-3)]:

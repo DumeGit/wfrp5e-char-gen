@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "kind": "gear",
+      "name": "Enchanted Staff",
+      "contentId": "winds-of-magic:gear:enchanted-staff",
+      "status": "reference-only",
+      "reason": "No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price."
+    }
+  ],
+  "features": [
+    {
+      "id": "winds-of-magic:feature:psychometry",
+      "name": "Species Talent trade for Psychometry",
+      "status": "adapted",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 48
+      },
+      "reason": "Approved paid-advancement unlock only; no starting Skill points."
+    },
+    {
+      "id": "winds-of-magic:feature:alchemy-grant",
+      "name": "Mundane Alchemist Petty Magic grant",
+      "status": "adapted",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 39
+      },
+      "reason": "Approved min(acquisition WP Bonus, 4) distinct free spells."
+    },
+    {
+      "id": "winds-of-magic:feature:rituals",
+      "name": "Ritual memorisation",
+      "status": "implemented",
+      "source": {
+        "book": "winds-of-magic",
+        "page": "28–33"
+      },
+      "reason": "Uses printed learning XP; performance remains deferred."
+    },
+    {
+      "id": "winds-of-magic:feature:staff-commission",
+      "name": "Enchanted Staff commissioning",
+      "status": "deferred",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 152
+      },
+      "reason": "The Commission Endeavour is deferred; acquired staff reference is retained."
+    },
+    {
+      "id": "winds-of-magic:feature:marsh-magic",
+      "name": "Fimir Marsh Magic as player options",
+      "status": "unavailable",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 217
+      },
+      "reason": "No supported player Species/Lore grants these adversary spells."
+    },
+    {
+      "id": "winds-of-magic:feature:combined-wind",
+      "name": "Skin of Bone and Bark ordinary learning",
+      "status": "deferred",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 218
+      },
+      "reason": "Adventure-acquired two-caster spell has no ordinary starting grant or learning cost."
+    },
+    {
+      "id": "winds-of-magic:feature:marks",
+      "name": "College Marks",
+      "status": "reference-only",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 24
+      },
+      "reason": "College affiliation does not grant starting Arcane Marks."
+    },
+    {
+      "id": "winds-of-magic:feature:campaign",
+      "name": "Alternate casting, crafting, potions, familiars and environmental magic",
+      "status": "deferred",
+      "source": {
+        "book": "winds-of-magic"
+      },
+      "reason": "Core creator rules remain authoritative; live/downtime systems are deferred."
+    }
+  ]
+}

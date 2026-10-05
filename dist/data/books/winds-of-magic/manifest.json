@@ -31,6 +31,7 @@
     "spells": "spells.json",
     "rules": "rules.json",
     "gear": "gear.json",
-    "tables": "tables.json"
+    "tables": "tables.json",
+    "coverage": "coverage.json"
   }
 }

@@ -27,6 +27,7 @@
   },
   "files": {
     "spells": "spells.json",
-    "gear": "gear.json"
+    "gear": "gear.json",
+    "coverage": "coverage.json"
   }
 }

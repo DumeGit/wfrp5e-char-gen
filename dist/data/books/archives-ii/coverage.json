@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "archives-ii:feature:ogre-capacity",
+      "name": "Ogre carrying Talent ordering",
+      "status": "adapted",
+      "source": {
+        "book": "archives-ii",
+        "page": 31
+      },
+      "reason": "Apply core carrying Talents first, then double capacity, as approved."
+    },
+    {
+      "id": "archives-ii:feature:ogre-sizing",
+      "name": "Typical Ogre equipment sizing categories",
+      "status": "adapted",
+      "source": {
+        "book": "archives-ii",
+        "page": 31
+      },
+      "reason": "Use user-approved categories; unclear items remain unresolved."
+    },
+    {
+      "id": "archives-ii:feature:star-talents",
+      "name": "Star-sign Talent compatibility and core limits",
+      "status": "adapted",
+      "source": {
+        "book": "archives-ii",
+        "page": 39
+      },
+      "reason": "Keep Fifth Edition limits and magic compatibility; an already-owned nonrepeatable Talent counts once."
+    },
+    {
+      "id": "archives-ii:feature:gm-reminder",
+      "name": "Ogre restrictions / GM permission reminder",
+      "status": "reference-only",
+      "source": {
+        "book": "archives-ii",
+        "page": 21
+      },
+      "reason": "Informational rule text only; no acknowledgement checkbox or export gate."
+    },
+    {
+      "id": "archives-ii:feature:harpoon",
+      "name": "Rhinox Herder Harpoon statistics",
+      "status": "reference-only",
+      "source": {
+        "book": "archives-ii",
+        "page": 36
+      },
+      "reason": "Retain the printed Trapping name; do not assume launcher or ammunition-pack statistics."
+    },
+    {
+      "id": "archives-ii:feature:firebelly",
+      "name": "Firebelly Wizard modifications",
+      "status": "unavailable",
+      "source": {
+        "book": "archives-ii",
+        "page": 31
+      },
+      "reason": "No complete printed Career modifications; no invented profile."
+    },
+    {
+      "id": "archives-ii:feature:campaign",
+      "name": "Big Names, live magic, artifice, mass battles and psychology",
+      "status": "deferred",
+      "source": {
+        "book": "archives-ii"
+      },
+      "reason": "Outside creator scope; no manufacturing prices become shop prices."
+    }
+  ]
+}

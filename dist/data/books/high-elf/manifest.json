@@ -39,6 +39,7 @@
     "highElfCreation": "creation.json",
     "gear": "gear.json",
     "weapons": "weapons.json",
-    "armour": "armour.json"
+    "armour": "armour.json",
+    "coverage": "coverage.json"
   }
 }

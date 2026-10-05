@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "archives-iii-hedge:feature:charms",
+      "name": "Animal-doctor Trade (Charms) swap",
+      "status": "unavailable",
+      "source": {
+        "book": "archives-iii-hedge",
+        "page": 62
+      },
+      "reason": "Source Skill is absent from the core Career; do not invent a swap."
+    }
+  ]
+}

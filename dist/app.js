@@ -1,344 +1,704 @@
-import {elfOriginPanel,elfCareerPanel,elfSkillsPanel,elfMagicShop,elfReview,elfAction,elfChange} from './high-elf-ui.mjs';
-import {birthEra,elfState,elfLedgerIssues,elderSkills} from './high-elf.mjs';
-import {dwarfOriginPanel,dwarfCareerPanel,grudgePanel,runePanel,dwarfReview,runeShopRows,runeChoiceDescription} from './dwarf-guide-ui.mjs';
-import {defaultCareerResult,dwarfGuide,knownRunes,dwarfGearIssue} from './dwarf-guide.mjs';
-import * as M from './rules.mjs?v=patron-1';
-import {characteristicNames,issueStep,steps,creationStepCount,experienceStep,reviewStep,restoreNavigation,hasCharacterChanges} from './ui.mjs?v=split-1';
-import {gearSlots,gearOptions,equipment,recordAcquisition} from './equipment.mjs';
-import {marketCatalog,purse,buyTrapping,formatMoney,purchaseItem} from './market.mjs';
-import {exportSheet,exportRecord} from './export.mjs';
-import {folioData} from './folio.mjs';
-import {penaltySummary,acquisitionChoices} from './creator-ui.mjs';
-import {appearanceSummary,setAgeHeight,suggestion,traditionalName,selectedTraditionalName,bookName,nameParts,setNamePart,doomingResult} from './background.mjs';
-import {loadBookLibrary,assembleBooks,bookSelection,catalogForCharacter,randomTable,tableResult} from './books.mjs';
-import {sourceLabel} from './sources.mjs';
-import {legacyTag,legacyName,legacySources,LEGACY_EXPLANATION} from './legacy.mjs';
-import {legacyOption,legacyGear,legacyContext,legacyMagic} from './legacy-character.mjs';
-import {bookPanel,bookSetup,tablePicker} from './book-ui.mjs';
-import {careerBrowser,careerOptions,trainingPrerequisites,kitSummary,comparisonHTML} from './flow-ui.mjs';
-import {shopCategory,purchaseReason,talentCalculation,calculation} from './workspace.mjs';
-import {magicRows,filterMagic} from './magic-browser.mjs';
-import {issueTarget} from './issue-targets.mjs';
-import {careerVariantPanel,clearCareerSelections,switchCareerVariant,isCareerVariant} from './career-variants.mjs';
-import {creationSpecies,creationBackground,originProfile,careerRefinementTable,regionalCareerChoices,startingTalentReplacement,careerAvailable,sheetSpecies} from './origins.mjs';
-import {refineCareer,regionalCareer,storedRefinement} from './regional-careers.mjs';
-import {speciesRulePanel,nameStylePanel,nameElementPanel,astrologyPanel} from './archives-ui.mjs';
-import {chartState,starSign,starEffect,rollStar,rollWitchling} from './astrology.mjs';
-import {speciesMagicReferences} from './species-mechanics.mjs';
-import {freeMagicIssues,cantIssues,syncCants} from './archives-iii.mjs';
-import {originTalentChoice,divinePanel,cantPanel,cantReview} from './archives-iii-ui.mjs';
-import {collegePanel,psychometryPanel,psychicSkillPanel,womReferencePanel,ritualShop,womGearPanel,pettyGrantNote} from './winds-of-magic-ui.mjs';
-import {psychometrySacrifice,psychicSkillIssue,extraCareerSkills,startingScryer} from './winds-of-magic.mjs';
-const library=await loadBookLibrary(async url=>{const r=await fetch(url);if(!r.ok)throw Error(`Cannot load book data: ${url.pathname}`);return r.json()});
-let R=assembleBooks(library);
-const STORAGE='wfrp-fifth-character-ledger-v2'+(new URLSearchParams(location.search).has('verify')?'-verification':'');
-const newCharacter=()=>({...restoreNavigation(M.fresh()),version:2,books:bookSelection(R),rollTables:{}});
-let s=newCharacter(),restoreIssue='',setupOpen=!localStorage.getItem(STORAGE),undoChoice=null,pendingChange=null,choiceReturn=null;
-try{const saved=JSON.parse(localStorage.getItem(STORAGE));if(saved){if(saved.version!==2)throw Error('Start a new WIP character.');const next=catalogForCharacter(library,saved);if(!next.species[saved.species]||!next.careers.some(c=>c.id===saved.career))throw Error('Saved character options are unavailable.');R=next;s={...newCharacter(),...restoreNavigation(saved)};}}catch(error){restoreIssue=error.message;R=assembleBooks(library);s=newCharacter();}
-let folioOpen=new Set(),summaryExpanded=false,detailsState=new Map(),xpTab='Characteristics',careerFilter='All classes',skillSearch='',openedSkillGroups=new Set(),marketSearch='',openedMarketGroups=new Set();
-let careerSearch='',careerBook='all',careerPreview='',careerLimit=12,shopBook='all',shopGroup='all',shopAffordable=false,shopSort='name',xpCareerOnly=false,xpAffordable=false,magicFilters={query:'',type:'all',lore:'all',book:'all',status:'available'},fullAppendix=false;
-try{const prefs=JSON.parse(localStorage.getItem(STORAGE+'-folio'));summaryExpanded=prefs?.expanded===true;folioOpen=new Set((Array.isArray(prefs?.open)?prefs.open:[]).filter(x=>['skills','talents','magic','gear'].includes(x)));}catch{}
-function saveFolioPreferences(){try{localStorage.setItem(STORAGE+'-folio',JSON.stringify({expanded:summaryExpanded,open:[...folioOpen]}));}catch{}}
-const $=q=>document.querySelector(q),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function selectionEntry(attrs,value){const bind=attrs.match(/data-bind="([^"]+)"/)?.[1],key=attrs.match(/data-key="([^"]+)"/)?.[1];if(bind==='species')return R.species[value];if(bind==='origin')return R.origins.find(x=>x.id===value);if(['career','freeTalent'].includes(bind))return bind==='career'?R.careers.find(x=>x.id===value):legacyOption(R,s,'talent',value);if(bind==='skillChoices')return {...legacyOption(R,s,'skill',value),legacySources:[...(legacyOption(R,s,'skill',value).legacySources||[]),...(key?.startsWith('s-')?legacySources(R,creationSpecies(R,s)):[])].filter(Boolean)};if(bind==='talentChoices')return {...legacyOption(R,s,'talent',value),legacySources:legacyOption(R,s,'talent',value).legacySources};if(bind==='gearChoices'){const slot=gearSlots(R,s).find(x=>x.key===key);return slot?legacyGear(R,s,slot,value):null;}return null;}
-const select=(attrs,items,value,empty=false)=>`<select ${attrs}>${empty?'<option value="">Choose…</option>':''}${items.map(x=>{const [v,label,disabled]=Array.isArray(x)?x:[x,x];return `<option value="${esc(v)}" ${disabled?'disabled':''} ${v===value?'selected':''}>${esc(String(label).includes('Legacy')?label:legacyName(R,selectionEntry(attrs,v),label))}</option>`}).join('')}</select>`;
-const button=(action,label,attrs='',style='quiet')=>`<button type="button" class="${style}" data-action="${action}" ${attrs}>${label}</button>`;
-const page=p=>`<button type="button" class="source source-button" data-action="source-info" data-book="core" data-page="${esc(p)}">p. ${esc(p)}</button>`;
-const ref=x=>`<button type="button" class="source source-button book-reference" data-action="source-info" data-book="${esc(x?.source?.book||'core')}" data-page="${esc(x?.source?.page||x?.page||'')}">${esc(sourceLabel(R,x,{legacy:false}))}</button>${legacyTag(R,x)}`;
-const locked=()=>s.ledger.length>0;
-function save(){try{localStorage.setItem(STORAGE,JSON.stringify(s));}catch{toast('Draft could not be saved in this browser. Download a character file to keep it.')}}
-window.addEventListener('wfrp-before-update',save);
-function toast(text){$('#toast').textContent=text;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').textContent='',6500);}
-function freeSpellErrors(){return freeMagicIssues(R,s,M.spellGrants(R,s));}
-function ledgerErrors(){return s.ledger.flatMap((x,i)=>{if(x.type!=='talent')return [];const problem=M.invalidTalent(R,{...s,ledger:s.ledger.slice(0,i)},x.name);return problem?[`Saved Talent purchase ${i+1}: ${x.name} — ${problem} Undo or clear advancement to correct it.`]:[];});}
-function errors(){const ids=new Set(marketCatalog(R).map(x=>x.id));return [...M.validation(R,s),...ledgerErrors(),...elfLedgerIssues(R,s),...freeSpellErrors(),...cantIssues(R,s),...equipment(R,s).entries.filter(x=>x.useUnresolved).map(x=>x.name+': '+x.sizeNote),...gearSlots(R,s).filter(x=>/\d+d10/.test(x.name)&&!Object.keys(s.gearRolls).some(k=>k.startsWith(x.key+':'))).map(x=>`Roll the quantity for ${x.name}.`),...((s.purchases||[]).some(x=>!purchaseItem(R,x))?['An imported Trapping has no listed book price.']:[]),...(s.purchases||[]).map(p=>purchaseItem(R,p)).filter(Boolean).map(x=>dwarfGearIssue(R,s,x)).filter(Boolean),...(purse(R,s).remaining<0?['Trapping purchases exceed starting wealth.']:[])];}
-function skillChoice(slot){const opts=M.options(R,slot.raw,'skill',s);return opts.length>1?select(`data-bind="skillChoices" data-key="${slot.key}" aria-label="${esc(slot.raw)}"`,opts,slot.name):`<strong>${esc(slot.name)}</strong>${legacyTag(R,{...legacyOption(R,s,'skill',slot.name),legacySources:[...legacyOption(R,s,'skill',slot.name).legacySources,...(slot.key.startsWith('s-')?legacySources(R,creationSpecies(R,s)):[])].filter(Boolean)})}`;}
-function talentDescription(name,{quote=null,metadata=''}={}){const t=M.talentInfo(R,name),context=legacyOption(R,s,'talent',name);return `<details class="talent-description" data-detail-key="talent:${esc(name)}"><summary><span>${esc(name)} ${ref({...t,legacySources:[...context.legacySources,...legacySources(R,quote)]})}</span>${metadata}</summary><p>${esc(t?.text||'See the supplied Career and Talent descriptions.')}</p>${t?.limit?`<p class="small muted">Printed purchase limit: ${esc(Array.isArray(t.limit)?t.limit.map(k=>characteristicNames[k]+' Bonus').join(' + '):t.limit)}.</p>`:''}${t?.conversion?`<p class="small muted">${esc(t.conversion)}</p>`:''}<p class="calculation-status">${esc(talentCalculation(R,name))}</p>${runeChoiceDescription(R,name)}${t?.unavailable?`<p class="purchase-error">${esc(t.unavailable)}</p>`:''}</details>`;}
-function characteristicClass(k){const unlock=M.career(R,s).advanceScheme[k];return unlock?`career-characteristic career-level-${unlock} ${M.derive(R,s).level>=unlock?'career-current':'career-future'}`:'career-none';}
-function characteristicTitle(k){const unlock=M.career(R,s).advanceScheme[k];return unlock?`Career level ${unlock} · ${M.derive(R,s).level>=unlock?'currently available':'currently non-career'}`:'Non-career Characteristic';}
-function characteristicBadge(k,compact=true){const unlock=M.career(R,s).advanceScheme[k];if(!unlock)return compact?'':'<span class="characteristic-badge">Non-career</span>';const available=M.derive(R,s).level>=unlock;return `<span class="characteristic-badge" title="${esc(characteristicTitle(k))}">${compact?`L${unlock}${available?' · ✓':''}`:`Career L${unlock} · ${available?'✓ available':'later level'}`}</span>`;}
-function characteristicLegend(){return `<div class="career-legend" aria-label="Career Characteristic colours">${[1,2,3,4].map(level=>`<span class="career-level-${level}"><i aria-hidden="true"></i>Level ${level}${level===1?' · starting':''}</span>`).join('')}</div><p class="small muted">✓ marks currently available Career Characteristics. Later levels become Career Characteristics when you reach that level; non-career purchases cost double. ${page(191)}</p>`;}
-function spellDetailsBody(x){const fields=[['CN','cn'],['Range','range'],['Target','target'],['Duration','duration']].filter(([,key])=>x[key]!=null&&x[key]!==''),prefix=fields.map(([label,key])=>`${label}: ${x[key]}`).join(' ');const effect=x.text.startsWith(prefix)?x.text.slice(prefix.length).trim():x.text;return `<p class="calculation-status">Reference for play: casting, targets and situational effects are not applied during creation.</p><dl class="spell-meta">${fields.map(([label,key])=>`<div><dt>${label}</dt><dd>${esc(x[key])}</dd></div>`).join('')}</dl><p>${esc(effect)}</p>`;}
-function spellDescription(x){x=legacyMagic(R,s,x);return `<details class="spell-description"><summary>${esc(x.displayName||x.name)} · ${esc(x.category)} ${ref(x)}</summary>${x.grantSource?`<p class="small muted">Available through ${esc(x.lore)} · ${ref({source:x.grantSource})}. Reimagined for this patron using the core Miracle’s effects.</p>`:''}${spellDetailsBody(x)}${x.conversion?`<p class="small muted">${esc(x.conversion)}</p>`:''}</details>`;}
-function marketShop(){
- const wallet=purse(R,s),catalog=marketCatalog(R,s).map(x=>({...x,browseCategory:shopCategory(R,x)})),groups=[...new Set(catalog.map(x=>x.browseCategory))].sort();
- let listed=catalog.filter(x=>(shopBook==='all'||x.source.book===shopBook)&&(shopGroup==='all'||x.browseCategory===shopGroup)&&(!shopAffordable||!purchaseReason(R,s,x)));
- listed.sort(shopSort==='price-low'?(a,b)=>a.pennies-b.pennies:shopSort==='price-high'?(a,b)=>b.pennies-a.pennies:(a,b)=>a.name.localeCompare(b.name));
- return `<details class="shop-disclosure section-gap"><summary>Shop · buy extra Trappings</summary><section class="market section-gap"><h3>Buy extra equipment ${page('296–316')}</h3><p class="small muted">Creation purchases waive Availability Tests (p. 296). Fixed printed prices and agreed sizing apply. Bought gear earns no creation tracker boxes. Known weight and inherent profile values feed totals; situational effects remain references for play.</p><div class="market-balance"><div><span>Starting funds</span><strong>${s.wealth?formatMoney(wallet.start):'Not rolled'}</strong><small>Career cash: ${formatMoney(wallet.grants)}</small></div><div><span>Spent</span><strong>${formatMoney(wallet.spent)}</strong></div><div><span>Remaining</span><strong>${formatMoney(wallet.remaining)}</strong></div></div>${s.purchases.length?`<details open><summary>Purchased items · ${s.purchases.length}</summary><div class="market-purchases">${s.purchases.map((x,i)=>{const item=purchaseItem(R,x);return `<div class="market-purchase"><span><strong>${esc(item?.name||'Unknown item')}</strong><small>${formatMoney(x.pennies??item?.pennies)} · ${item?ref(item):'Check imported character'}</small></span>${button('remove-trapping','Remove',`data-index="${i}" aria-label="Remove ${esc(item?.name||'item')}"`)}</div>`;}).join('')}</div></details>`:''}<div class="browser-filters"><div class="field"><label for="market-search">Find equipment</label><input id="market-search" type="search" value="${esc(marketSearch)}" placeholder="Name, category, source or page"></div><div class="field"><label for="shop-group">Category</label>${select('id="shop-group" data-bind="shopGroup"',[['all','All categories'],...groups],shopGroup)}</div><div class="field"><label for="shop-book">Source</label>${select('id="shop-book" data-bind="shopBook"',[['all','All selected books'],...R.books.filter(b=>catalog.some(x=>x.source.book===b.id)).map(b=>[b.id,b.shortTitle||b.title])],shopBook)}</div><div class="field"><label for="shop-sort">Sort</label>${select('id="shop-sort" data-bind="shopSort"',[['name','Name'],['price-low','Lowest price'],['price-high','Highest price']],shopSort)}</div></div><label class="check-row"><input type="checkbox" data-bind="shopAffordable" ${shopAffordable?'checked':''}>Within my budget and available to buy</label><p class="small muted" id="market-results" aria-live="polite">${listed.length} equipment profiles</p><div class="market-catalog">${(shopSort==='name'?groups.filter(g=>listed.some(x=>x.browseCategory===g)):['All categories · price order']).map(category=>`<details data-market-group data-category="${esc(category)}" ${openedMarketGroups.has(category)||shopSort!=='name'||shopGroup!=='all'?'open':''}><summary>${esc(category)} <span class="minilabel">${listed.filter(x=>shopSort!=='name'||x.browseCategory===category).length} items</span></summary>${listed.filter(x=>shopSort!=='name'||x.browseCategory===category).map(x=>{const reason=purchaseReason(R,s,x);return `<div class="market-item" data-market-search="${esc(`${x.name} ${x.category} ${category} ${sourceLabel(R,x,{legacy:false})}`.toLowerCase())}"><div>${x.text?`<details class="market-profile" data-detail-key="equipment:${esc(x.id)}"><summary><strong>${esc(x.name)}</strong></summary><p class="small">${esc(x.text)}</p></details>`:`<strong>${esc(x.name)}</strong>`}<small>${esc(x.category)} · ${esc(x.availability)} · Enc ${x.enc===null?'Unknown':x.enc} · ${ref({...x,legacySources:legacyGear(R,s,{key:'shop'},x.name).legacySources})}</small>${x.sizeNote?`<p class="small muted">${esc(x.sizeNote)}</p>`:''}</div><div>${button('buy-trapping',`${esc(x.price)} · Buy`,`data-id="${esc(x.id)}" ${reason?'disabled':''}`,'primary')}${reason?`<p class="purchase-error small">${esc(reason)}</p>`:''}</div></div>`;}).join('')}</details>`).join('')}</div></section></details>`;
+import { createFeature as createWorkspaceShell } from "./features/workspace-shell.mjs";
+import { captureDisclosures, restoreDisclosures } from "./disclosures.mjs";
+import { createFeature as create_controls } from "./features/controls.mjs";
+import { createFeature as create_origins_view } from "./features/origins-view.mjs";
+import { createFeature as create_creation_views } from "./features/creation-views.mjs";
+import { createFeature as create_experience_view } from "./features/experience-view.mjs";
+import { createFeature as create_shop_view } from "./features/shop-view.mjs";
+import { createFeature as create_review_view } from "./features/review-view.mjs";
+import { createFeature as create_creation_state } from "./features/creation-state.mjs";
+import { createFeature as create_dialogs } from "./features/dialogs.mjs";
+import { createFeature as create_actions } from "./features/actions.mjs";
+import { createResultReader } from "./character-result.mjs";
+
+import * as M from "./rules.mjs";
+import {
+  characteristicNames,
+  steps,
+  creationStepCount,
+  experienceStep,
+  reviewStep,
+  restoreNavigation,
+} from "./ui.mjs";
+
+import { formatMoney } from "./market.mjs";
+
+import { penaltySummary } from "./creator-ui.mjs";
+import { setNamePart } from "./background.mjs";
+import {
+  loadBookLibrary,
+  assembleBooks,
+  bookSelection,
+  catalogForCharacter,
+  randomTable,
+} from "./books.mjs";
+
+import { legacyTag } from "./legacy.mjs";
+import { legacyContext } from "./legacy-character.mjs";
+import { bookSetup } from "./book-ui.mjs";
+
+import { issueTarget } from "./issue-targets.mjs";
+
+import { sheetSpecies } from "./origins.mjs";
+
+import { syncCants } from "./archives-iii.mjs";
+import { cantPanel } from "./archives-iii-ui.mjs";
+
+const library = await loadBookLibrary(async (url) => {
+  const r = await fetch(url);
+  if (!r.ok) throw Error(`Cannot load book data: ${url.pathname}`);
+  return r.json();
+});
+let R = assembleBooks(library);
+const STORAGE =
+  "wfrp-fifth-character-ledger-v2" +
+  (new URLSearchParams(location.search).has("verify") ? "-verification" : "");
+const newCharacter = () => ({
+  ...restoreNavigation(M.fresh()),
+  version: 2,
+  books: bookSelection(R),
+  rollTables: {},
+});
+let s = newCharacter(),
+  restoreIssue = "",
+  setupOpen = !localStorage.getItem(STORAGE),
+  undoChoice = null,
+  pendingChange = null,
+  choiceReturn = null;
+try {
+  const saved = JSON.parse(localStorage.getItem(STORAGE));
+  if (saved) {
+    if (saved.version !== 2) throw Error("Start a new WIP character.");
+    const next = catalogForCharacter(library, saved);
+    if (
+      !next.species[saved.species] ||
+      !next.careers.some((c) => c.id === saved.career)
+    )
+      throw Error("Saved character options are unavailable.");
+    R = next;
+    s = { ...newCharacter(), ...restoreNavigation(saved) };
+  }
+} catch (error) {
+  restoreIssue = error.message;
+  R = assembleBooks(library);
+  s = newCharacter();
 }
-function filterMarket(){
- const q=marketSearch.trim().toLowerCase();let count=0;
- for(const group of document.querySelectorAll('[data-market-group]')){let visible=0;for(const row of group.querySelectorAll('[data-market-search]')){row.hidden=!!q&&!row.dataset.marketSearch.includes(q);if(!row.hidden)visible++;}group.hidden=visible===0;const countLabel=group.querySelector('summary .minilabel');if(countLabel)countLabel.textContent=`${visible} item${visible===1?'':'s'}`;if(q&&visible)group.open=true;count+=visible;}
- const summary=$('#market-results');if(summary)summary.textContent=`${count} matching equipment profiles`;
+let folioOpen = new Set(),
+  summaryExpanded = false,
+  detailsState = new Map(),
+  xpTab = "Characteristics",
+  careerFilter = "All classes",
+  skillSearch = "",
+  openedSkillGroups = new Set(),
+  marketSearch = "",
+  openedMarketGroups = new Set();
+let careerSearch = "",
+  careerBook = "all",
+  careerPreview = "",
+  careerLimit = 12,
+  shopBook = "all",
+  shopGroup = "all",
+  shopAffordable = false,
+  shopSort = "name",
+  xpCareerOnly = false,
+  xpAffordable = false,
+  magicFilters = {
+    query: "",
+    type: "all",
+    lore: "all",
+    book: "all",
+    status: "available",
+  },
+  fullAppendix = false;
+try {
+  const prefs = JSON.parse(localStorage.getItem(STORAGE + "-folio"));
+  summaryExpanded = prefs?.expanded === true;
+  folioOpen = new Set(
+    (Array.isArray(prefs?.open) ? prefs.open : []).filter((x) =>
+      ["skills", "talents", "magic", "gear"].includes(x),
+    ),
+  );
+} catch {}
+function saveFolioPreferences() {
+  try {
+    localStorage.setItem(
+      STORAGE + "-folio",
+      JSON.stringify({ expanded: summaryExpanded, open: [...folioOpen] }),
+    );
+  } catch {}
 }
-function originSuggestionField(label,key,kind,value,isName=false){const b=creationBackground(R,s);if(isName&&key==='forename'&&b.nameElements)return `<div class="field"><label for="origin-forename">Given name</label><input id="origin-forename" type="text" data-bind="namePart" data-key="forename" value="${esc(value||'')}" placeholder="Write your own or combine the elements below" maxlength="90"></div>`;const choices=b[kind].map(x=>[isName?bookName(x):x,x]),id=`origin-${key}`,selected=choices.some(([v])=>v===value)?value:'';return `<div class="field origin-suggestion"><label for="${id}">${label}</label><input id="${id}" type="text" data-bind="${isName?'namePart':'background'}" data-key="${key}" value="${esc(value||'')}" placeholder="Write your own ${label.toLowerCase()}" maxlength="${isName?90:80}"><div class="origin-suggestion-tools">${select(`id="book-${key}" data-bind="${isName?'bookName':'backgroundChoice'}" data-key="${key}" aria-label="Choose ${label.toLowerCase()} from the book"`,choices,selected,true).replace('Choose…','Book suggestions…')}${button(isName?'roll-name-part':'roll-appearance','Roll',`data-key="${key}" data-kind="${kind}" aria-label="Roll ${label.toLowerCase()}"`)}</div></div>`;}
-function regionalOrigins(){const choices=R.origins.filter(x=>x.species===s.species),o=originProfile(R,s);if(!choices.length)return '';return `<div class="field section-gap"><label for="regional-origin">Origin / clan</label>${select('id="regional-origin" data-bind="origin"',[['',`Core ${s.species}`],...choices.map(x=>[x.id,x.name])],s.origin||'')}</div>${o?`<p class="small muted">${esc(o.name)} · ${ref(o)}. Native languages: ${esc(creationSpecies(R,s).languages.join(' and '))}. Regional choices use Fifth Edition creation allocations.${o.text?`<br>${esc(o.text)}`:''}</p>`:''}`;}
-function lucciniTalentChoice(){const o=originProfile(R,s),sp=creationSpecies(R,s);if(!o?.optionalTalent)return '';const slots=[...sp.talents.map((opts,i)=>[`species-${i}`,s.talentChoices[`species-${i}`]||opts[0]]),...s.randomTalents.map((t,i)=>[`random-${i}`,t])];return `<div class="field"><label for="luccini-doomed">Optional Luccinan Dooming</label>${select('id="luccini-doomed" data-bind="originTalentSlot"',[['','Keep all starting Talents'],...slots.map(([key,name])=>[key,`Replace ${name} with Doomed`])],s.originTalentSlot||'')}</div><p class="small muted">Replace one regional starting Talent, rather than adding a Talent (${ref(o)}). Original random rolls remain in the record.</p>`;}
-function optionalCareerChoices(){if(s.careerMode==='choose')return '';const table=careerRefinementTable(R,s),refined=s.careerRefinement,choices=regionalCareerChoices(R,s,s.regionalCareerBase||s.career);return `${table&&!refined?`<div class="notice"><strong>Optional Career roll</strong><p class="small">Keep your rolled Career, or roll once on the additional ${esc(M.career(R,s).name)} table (${ref(table)}). Species restrictions still apply.</p>${button('career-refine','Roll optional Career · d100')}</div>`:''}${refined?`<div class="notice"><p>${esc(refined.message)} ${legacyTag(R,refined)}</p>${refined.career!==refined.base?button('career-original','Keep original Career'):''}</div>`:''}${choices.length?`<div class="notice"><strong>Printed Career alternatives</strong><p class="small">You may keep the rolled Career or choose a printed alternative.</p><div class="actions">${s.regionalCareerBase?button('regional-original','Keep original regional result'):""}${choices.filter(id=>id!==s.career).map(id=>button('regional-career',esc(R.careers.find(c=>c.id===id).name),`data-id="${esc(id)}"`)).join('')}</div></div>`:''}`;}
-function origins(){const sp=R.species[s.species],b=creationBackground(R,s),parts=nameParts(s),surnameLabel=s.species==='Gnome'?'Clan name / epithet':b.nameElements?'Title / clan name':s.species.includes('Elf')?'Epithet':s.species==='Dwarf'?'Surname / clan name':'Surname';return `<span class="eyebrow">01 / Origins</span><h1>Origins & identity</h1>${bookPanel(library,R)}<p class="muted">Choose your Species, name and appearance.</p><div class="origin-species"><div class="field"><label for="species">Species</label>${select('id="species" data-bind="species"',Object.keys(R.species),s.species)}</div>${button('species-roll','Roll Species · d100','','primary')}</div>${tablePicker(R,s,'species')}<p class="small muted">${s.speciesMode==='first'?'+1 Fortune · first roll accepted':s.speciesAttempts?'Later roll / choice · no bonus':'Chosen Species · no random bonus'}</p><div class="notice">${s.species} begins with ${sp.fate} Fate, ${sp.fortune} Fortune and Movement ${sp.movement}. Fate and Fortune are separate values. ${ref(sp)}<br>Accepting your first Species roll adds 1 Fortune. Accepting the first Species, Career and Characteristics rolls adds 1 Fate. ${page('23, 40')}</div>${speciesRulePanel(R,s)}${regionalOrigins()}${dwarfOriginPanel(R,s)}${elfOriginPanel(R,s)}<h2>Your name <span class="source">${esc(sourceLabel(R,b))}</span></h2>${nameStylePanel(R,s,{select})}<p class="small muted">Write your own, choose from the book, or roll each part separately.</p><div class="cols">${originSuggestionField('First name','forename','forenames',parts.forename,true)}${originSuggestionField(surnameLabel,'surname','surnames',parts.surname,true)}</div><div class="identity-preview"><div><span class="small muted">Character name</span><strong aria-live="polite">${esc(s.name||'Your character')}</strong></div>${button('suggest-name',b.nameElements?'Roll given name & title':'Roll full name')}</div>${nameElementPanel(R,s,{select,button})}<h2>Appearance <span class="source">${esc(sourceLabel(R,R.background[s.species]))}</span></h2><div class="cols">${originSuggestionField('Eye colour','eyes','eyes',s.background?.eyes)}${originSuggestionField('Hair colour','hair','hair',s.background?.hair)}</div>${b.clans?originSuggestionField('Dwarf clan','clan','clans',s.background?.clan):''}<p class="small muted">${b.dwarfNames?'Names use the printed d1000 ranges; core appearance and clan suggestions use their printed lists.':R.background[s.species].rollTables?'Eye and hair rolls use the printed 2d10 tables.':'Random suggestions choose uniformly from the printed lists.'} All rolls are recorded.</p><div class="field"><label for="appearance">Age, height & background</label><textarea id="appearance" data-bind="appearance" placeholder="Age, height, distinguishing features, and a few words about your past…">${esc(s.appearance)}</textarea></div>${button('age',s.longbeard?'Roll height · use chosen Longbeard age':'Roll age & height')}<div class="cols section-gap"><div class="field"><label for="ambition">Personal ambition</label><textarea id="ambition" data-bind="ambition" placeholder="What are you striving for?">${esc(s.ambition)}</textarea></div><div class="field"><label for="partyAmbition">Party ambition</label><textarea id="partyAmbition" data-bind="partyAmbition" placeholder="Agree this with your group (p. 42).">${esc(s.partyAmbition)}</textarea></div></div><p class="small muted">Biography is your character’s fiction. Rules and options come only from your selected supplied books.</p>`;}
-function careerView(){const c=M.career(R,s),available=R.careers.filter(x=>careerAvailable(R,s,x)),bonus=M.bonusTrappingLimit(R,s);return `<h1>Choose your Career</h1><p class="muted">${available.length} of ${R.careers.length} enabled Careers are available to ${esc(originProfile(R,s)?.name||s.species)} characters.</p>${careerBrowser(R,s,{query:careerSearch,className:careerFilter,book:careerBook,preview:careerPreview,limit:careerLimit})}${tablePicker(R,s,'career')}<div class="actions">${button('career-roll',s.careerAttempts?'Roll another Career':'Roll Career · d100',randomTable(R,s,'career')?'':'disabled title="Choose a printed Career roll table above, or choose a Career directly"','primary')}${s.careerAttempts===1&&randomTable(R,s,'career')?button('career-three','Roll two more'):''}</div>${s.careerOffers.length===3?`<p class="small">Choose one result for one bonus Trapping:</p><div class="actions">${s.careerOffers.map(id=>button('career-offer',esc(R.careers.find(c=>c.id===id).name),`data-id="${id}"`)).join('')}</div>`:''}${optionalCareerChoices()}${careerOptions(R,s)}${trainingPrerequisites(R,s,{select,button})}<div class="notice">${bonus?`Select ${bonus} level-two Trapping${bonus===1?'':'s'}. Each earns one tracker box.${s.careerMode==='first'&&bonus<2?' This Career lists only one option.':''}`:'Chosen Career: standard starting Trappings, no bonus tracker boxes.'} ${page(36)}</div><h2>${esc(c.name)} <span class="source">${esc(c.class)} · ${esc(sourceLabel(R,c,{legacy:false}))}</span>${legacyTag(R,c)}</h2><p class="small">Begin as <strong>${esc(c.levels[0].name)}</strong> — ${c.levels[0].status} ${c.levels[0].standing}. Your first advances are ${Object.entries(c.advanceScheme).filter(([k,v])=>v===1).map(([k])=>k).join(', ')}.</p>${bonus?`<h3>Bonus Trappings <span class="counter">${s.bonusGear.length}/${bonus}</span></h3><div class="checklist">${M.bonusTrappingSlots(R,s).map(({name:t,i})=>`<label class="check-row"><input type="checkbox" data-bind="bonusGear" value="${i}" ${s.bonusGear.includes(i)?'checked':''}>${esc(t)}</label>`).join('')}</div>`:''}${c.text?`<div class="notice">${esc(c.text)} ${ref(c)}</div>`:''}${(originProfile(R,s)?.additionalCareers||[]).filter(x=>x.career===c.id).map(x=>`<div class="notice">${esc(x.reason)} ${ref(originProfile(R,s))}</div>`).join('')}<h3>The Career path</h3>${c.levels.map(l=>`<details ${l.level===1?'open':''}><summary>${l.level}. ${esc(l.name)} · ${l.status} ${l.standing} ${legacyTag(R,l.source?l:c)}</summary><p><strong>Skills:</strong> ${esc(l.skills.join(', '))}</p>${(l.unavailableSkills||[]).map(x=>`<p class="small muted"><strong>${esc(x.name)} · unavailable</strong><br>${esc(x.reason)}</p>`).join('')}<p><strong>Talents:</strong> ${l.talents.map(n=>M.talentInfo(R,n)?.unavailable?`<span class="muted">${esc(n)} (unavailable)</span>`:esc(n)).join(', ')}</p>${l.talents.filter(n=>M.talentInfo(R,n)?.unavailable).map(n=>talentDescription(n)).join('')}<p><strong>Trappings:</strong> ${esc(l.trappings.join(', '))}</p></details>`).join('')}`;}
-function characteristics(){const c=M.career(R,s),sp=R.species[s.species],budget=s.charMode==='first'?6:s.charMode==='rearrange'?3:0;return `<span class="eyebrow">03 / Characteristics</span><h1>Characteristics</h1>${legacyTag(R,R.species[s.species])}<p class="muted">Each score starts with your Species modifier and a roll or point allocation. ${page(38)}</p><div class="actions">${button('char-roll',s.charAttempts?'Reroll 10 × 2d10':'Roll 10 × 2d10','','primary')}${button('char-points','Allocate 100 points')}${s.charRolls.length?button('char-rearrange','Rearrange rolled values'):''}</div><div class="notice">${s.charMode==='points'?'Distribute exactly 100 points, from 4 to 16 in each Characteristic.':s.charMode==='first'?'First rolls retained in order: up to +6 starting points across your three Career Characteristics.':s.charMode==='rearrange'?'First results rearranged: up to +3 starting points across your three Career Characteristics.':'Rerolled results: assign each result once; no extra starting points.'}</div>${s.charMode==='points'?`<p><span class="counter">${s.points.reduce((a,b)=>a+b,0)} / 100 points allocated</span></p><div class="points-grid">${M.KEYS.map((k,i)=>`<div class="field characteristic-cell ${characteristicClass(k)}"><label for="point-${i}" title="${characteristicNames[k]}">${k}</label><div class="characteristic-meta">${characteristicBadge(k)}</div><input type="number" id="point-${i}" data-bind="points" data-key="${i}" min="4" max="16" value="${s.points[i]}"><small class="muted">+ ${sp.offsets[k]} Species</small></div>`).join('')}</div>`:`<table><thead><tr><th>Characteristic</th><th>2d10 result</th><th>Species</th><th>Initial</th></tr></thead><tbody>${M.KEYS.map((k,i)=>`<tr class="${characteristicClass(k)}"><td><span class="characteristic-label"><strong>${k}</strong>${characteristicBadge(k)}</span><small class="characteristic-name">${characteristicNames[k]}</small></td><td>${s.charMode==='first'?s.charRolls[i]:select(`data-bind="assignment" data-key="${i}" aria-label="Roll for ${k}"`,s.charRolls.map((v,j)=>[j,`${j+1}: ${v}`]),s.assignment[i])}</td><td>+${sp.offsets[k]}</td><td>${M.initial(R,s)[k]}</td></tr>`).join('')}</tbody></table>`}${characteristicLegend()}${budget?`<h3>Career starting increases <span class="counter">${Object.values(s.boost).reduce((a,b)=>a+b,0)} / ${budget}</span></h3><div class="cols">${M.KEYS.filter(k=>c.advanceScheme[k]===1).map(k=>`<div class="field"><label>${k} increase</label><input type="number" data-bind="boost" data-key="${k}" aria-label="${k} starting increase" min="0" max="${budget}" value="${s.boost[k]||0}"></div>`).join('')}</div>`:''}<p class="small muted">Starting increases and Talent bonuses are not purchased Advances. Each later Characteristic Advance adds +5; costs begin at 125 XP. ${page(191)}</p>${astrologyPanel(R,s,{select,button,options:M.options})}`;}
-function skills(){const slots=M.careerSkillSlots(R,s),total=Object.values(s.careerSkills).reduce((a,b)=>a+b,0);return `<span class="eyebrow">04 / Skills</span><h1>Starting Skills</h1><p class="muted">Every Advance is +5. Ordinary creation Skills may receive at most three Advances in total. ${page('38–39')}</p><div class="allocation-budgets" aria-label="Starting Skill budgets"><span><strong>${s.speciesSkills.length}/5</strong> Species Skills · +5 each</span><span><strong>${total}/8</strong> Career Advances · +5 each</span><small>Native languages and Elder points are separate grants.</small></div>${elfSkillsPanel(R,s)}<section class="species-skill-section"><h3>Species Skills <span class="counter">${s.speciesSkills.length} / 5 chosen</span></h3><p class="small muted">Choose five Skills · +5 each. ${ref(creationSpecies(R,s))}</p><div class="species-skills-grid">${M.speciesSkillSlots(R,s).map(slot=>`<div class="species-skill-option"><div class="species-skill-info">${skillChoice(slot)}${M.careerSkillSlots(R,s,1).some(x=>x.name===slot.name)?'<small class="species-career-marker" title="Also offered by your Career">Career</small>':''}</div><label class="species-skill-check"><input type="checkbox" data-bind="speciesSkills" value="${slot.key}" aria-label="Choose Species ${esc(slot.name)}" ${s.speciesSkills.includes(slot.key)?'checked':''}><span>+5</span></label></div>`).join('')}</div></section><div class="notice">Fluent in ${creationSpecies(R,s).languages.join(' and ')}: +30 in each native Language Skill. This explicit Species benefit is separate from the usual +15 limit.</div><h3>Career Skills ${legacyTag(R,M.career(R,s))} <span class="counter">${total} / 8 Advances</span></h3>${psychicSkillPanel(R,s)}${slots.filter(x=>x.level===1).map(slot=>`<div class="skill-row"><div>${skillChoice(slot)}<div class="minilabel">${M.skillInfo(R,slot.name,s)?.char} · Species +${M.speciesSkillSlots(R,s).filter(x=>x.name===slot.name&&s.speciesSkills.includes(x.key)).length*5} · Career +${(s.careerSkills[slot.key]||0)*5} · total starting +${(M.freeSkills(R,s)[slot.name]||0)*5}</div></div><div class="stepper">${button('skill-minus','−',`data-key="${slot.key}" aria-label="Decrease ${esc(slot.name)}"`)}<strong>${s.careerSkills[slot.key]||0}</strong>${button('skill-plus','+',`data-key="${slot.key}" aria-label="Increase ${esc(slot.name)}"`)}</div></div>`).join('')}<details class="section-gap"><summary>Specialisations for later Career levels</summary><p>Choose these now if you plan to advance your Career with XP.</p>${slots.filter(x=>x.level>1).map(slot=>`<div class="skill-row"><span class="minilabel">Level ${slot.level}</span>${skillChoice(slot)}</div>`).join('')}</details>`;}
-function magicSection(){let idx=0;return speciesMagicReferences(R,s,M.derive(R,s).talents).map(x=>`<details class="section-gap"><summary>Ogre magic reference · ${esc(sourceLabel(R,x))}</summary><p>${esc(x.text)}</p></details>`).join('')+divinePanel(R,s)+M.spellGrants(R,s).map(g=>`<h3>${esc(g.talent)} ${legacyTag(R,legacyOption(R,s,'talent',g.talent))} — ${g.count} free ${g.category==='Old Faith'?'Blessing':R.config.gods.includes(g.category)?'Miracle':'Spell'}${g.count===1?'':'s'}</h3>${pettyGrantNote(R,s,g)}${Array.from({length:g.count},()=>{const i=idx++,chosen=g.choices.find(x=>x.name===s.spells[i]);return `<div class="free-magic-choice"><span>Free choice ${i+1}: <strong>${esc(chosen?.name||'Not chosen')}</strong></span>${button('free-magic-picker',chosen?'Change':'Choose',`data-index="${i}"`)}</div>${chosen?spellDescription({...chosen,lore:g.category,talent:g.talent}):''}`;}).join('')}`).join('');}
-function talents(){const sp=creationSpecies(R,s),d=M.derive(R,s),replacement=startingTalentReplacement(R,s);return `<span class="eyebrow">05 / Talents</span><h1>Starting Talents</h1><p class="muted">Choose your special abilities and any starting spells or Miracles.</p><h3>Species Talents</h3>${originTalentChoice(R,s)}${lucciniTalentChoice()}${sp.talents.map((_,i)=>{const opts=M.speciesTalentOptions(R,s,i);return replacement?.slot===`species-${i}`?`<span class="chip">${esc(replacement.talent)} · regional replacement ${legacyTag(R,sp)}</span>`:opts.length===1?`<span class="chip">${esc(opts[0])}${legacyTag(R,legacyOption(R,s,'talent',opts[0]))}</span>`:`<div class="field"><label for="talent-${i}">Species choice</label>${select(`id="talent-${i}" data-bind="talentChoices" data-key="species-${i}"`,opts,s.talentChoices[`species-${i}`]||opts[0])}</div>`;}).join('')}${sp.randomTalents?`${tablePicker(R,s,'talent')}<p class="small">${sp.randomTalents} random Talents from ${ref(randomTable(R,s,"talent"))}. Duplicates are rerolled and retained in your roll record.</p>${s.randomTalents.length?s.randomTalents.map((t,i)=>psychometrySacrifice(R,s)&&s.psychometrySlot===i?`<span class="chip muted">${esc(t)} · given up for Psychometry</span>`:replacement?.slot===`random-${i}`?`<span class="chip">${esc(replacement.talent)} · regional replacement ${legacyTag(R,sp)}</span>`:t==='Artistic'?`<div class="field"><label>Artistic specialisation</label>${select(`data-bind="talentChoices" data-key="random-${i}" aria-label="Artistic specialisation"`,M.options(R,'Artistic','talent'),s.talentChoices[`random-${i}`]||'Artistic (Drawing)')}</div>`:`<span class="chip">${esc(t)}</span>`).join(''):button('random-talents',`Roll ${sp.randomTalents} random Talents`,'','primary')}`:''}${psychometryPanel(R,s)}${(originProfile(R,s)?.grantedTalents||[]).map(t=>`<span class="chip">${esc(t)} · kindred grant</span>${talentDescription(t)}`).join('')}<div class="field section-gap"><label for="freeTalent">One free Career Talent</label>${select('id="freeTalent" data-bind="freeTalent"',M.careerTalentOptions(R,s).map(n=>[n,n,M.talentInfo(R,n)?.unavailable]),s.freeTalent,true)}</div>${s.freeTalent?talentDescription(s.freeTalent):''}${d.talents.includes('Doomed')?`<details class="section-gap" open><summary>Your Dooming ${page(118)}</summary><p class="small muted">Choose or roll a suggestion from the book, then agree its meaning with your GM.</p><div class="field"><label for="dooming">Dooming</label>${select('id="dooming" data-bind="dooming"',R.background.doomings.map(x=>[x.text,`${x.min}–${x.max}: ${x.text}`]),s.dooming,true)}</div>${button('roll-dooming','Roll Dooming · d100')}</details>`:''}${starSign(R,s)?`<h3>Star-sign benefit · Archives II p. 39 ${legacyTag(R,starSign(R,s))}</h3><p>${esc(starSign(R,s).name)}${starEffect(R,s).talent?` · ${esc(starEffect(R,s).talent)}`:''}. Core Talent limits apply.</p>`:''}${womReferencePanel(R,s)}${grudgePanel(R,s)}${runePanel(R,s)}${magicSection()}${M.knownSpells(R,s).some(x=>x.category==='Blessing'&&x.lore!=='Old Faith')?`<div class="notice">Your patron grants six Blessings automatically (p. 220). All six appear in the export; overflow goes into the creation record.</div>`:''}<details class="section-gap"><summary>Read all your Talent rules</summary>${d.talents.map(talentDescription).join('')}</details>`;}
-function gear(){const d=M.derive(R,s),eq=equipment(R,s);return `<span class="eyebrow">06 / Gear & money</span><h1>Gear & money</h1><p class="muted">Resolve your starting belongings, roll your purse, and buy extra equipment.</p>${kitSummary(R,s,{select,button,tag:slot=>legacyTag(R,legacyGear(R,s,slot))})}${eq.notes.filter(n=>!n.startsWith('Creator defaults:')).map(n=>`<div class="notice">${esc(n)}</div>`).join('')}<h3>Starting wealth ${page(39)}</h3>${s.wealth?`<p><strong>${s.wealth.amount} ${s.wealth.currency}</strong></p>`:button('wealth','Roll starting wealth','','primary')}<p class="small muted">Based on ${M.career(R,s).levels[0].status} ${M.career(R,s).levels[0].standing}. A promotion does not grant another purse.</p>${d.talents.includes('Sturdy')||s.species==='Dwarf'?`<div class="field"><label for="sturdyRule">Book discrepancy: carrying capacity</label>${select('id="sturdyRule" data-bind="sturdyRule"',[['creation','Creation rule, p. 40: 2 × (SB + TB)'],['talent','Sturdy, p. 127: 2 × SB + TB']],s.sturdyRule)}<small class="muted">Both formulas appear in the book. Your selection is recorded.</small></div>`:''}${M.derive(R,s).talents.some(x=>/Magic|Witch!/.test(x))?womGearPanel(R):''}`;}
-function xpRow(type,name){
- const amount=['char','skill'].includes(type)&&s.advanceSize===1?1:5;
- const q=M.quote(R,s,type,name,amount),d=M.derive(R,s);if(xpCareerOnly&&!q.inCareer||xpAffordable&&(q.error||q.cost>d.remaining))return '';
- const blocked=q.error||(errors().length?'Finish creation before spending XP.':'');
- const value=type==='char'?d.stats[name]:type==='skill'?d.stats[M.skillInfo(R,name,s)?.char]+Math.round((d.skills[name]||0)*5):0;
- const filter=type==='skill'?` data-skill-search="${esc(name.toLowerCase())}"`:'';
- const progress=(d.trackerProgress[`${type}:${name}`]||0)+1;
- const trackerLabel=blocked?'Not currently purchasable':q.tick?'Career · +1 tracker box':!q.inCareer?'Non-career · no tracker box':d.earnedBoxes>=36?'Career · tracker full':amount===1?`Career · ${progress%5}/5 toward a tracker box`:'Career · no tracker box';
- if(type==='skill'){
-  const tracker=blocked?'Unavailable':trackerLabel.replace('toward a tracker box','to next box').replace('tracker box','box');
-  const loadNote=M.skillInfo(R,name,s)?.char==='Ag'&&equipment(R,s).penalties.complete&&equipment(R,s).penalties.band;
-  return `<div class="xp-row xp-skill-row"${filter}><div class="xp-skill-identity"><div class="xp-skill-name"><strong>${esc(name)}</strong>${legacyTag(R,{...q,legacySources:legacyOption(R,s,type,name).legacySources})}</div><span class="xp-skill-meta" title="${esc(trackerLabel)}">${esc(tracker)}</span></div><div class="xp-skill-result"><span class="advance-result">${value} <span aria-hidden="true">→</span> ${value+amount} <small>+${amount}</small></span></div>${button('calculation','?',`data-kind="skill" data-name="${esc(name)}" aria-label="How is ${esc(name)} calculated?" title="How is ${esc(name)} calculated?"`,'skill-calculation-help')}<div class="xp-skill-purchase">${button('buy',`${q.cost||'—'} XP`,`data-type="skill" data-name="${esc(name)}" data-amount="${amount}" ${blocked?'disabled':''} title="${esc(blocked||'Purchase this improvement')}"`,'primary')}</div>${blocked?`<p class="purchase-error xp-skill-note">${esc(blocked)}</p>`:''}${loadNote?'<p class="minilabel xp-skill-note">Base score shown; the folio includes load penalties (p. 299).</p>':''}</div>`;
- }
- if(type==='talent')return `<div class="xp-row xp-talent-row"><div>${talentDescription(name,{quote:q,metadata:`<span class="xp-talent-meta"><span>${d.talents.filter(t=>t===name).length} ranks owned</span><span>${esc(trackerLabel)}</span></span>`})}</div><div>${button('buy',`${q.cost||'—'} XP`,`data-type="talent" data-name="${esc(name)}" ${blocked?'disabled':''} title="${esc(blocked||'Purchase this improvement')}"`,'primary')}${blocked?`<p class="minilabel purchase-error">${esc(blocked)}</p>`:''}</div></div>`;
- return `<div class="xp-row ${type==='char'?characteristicClass(name):''}"${filter}><div><strong>${esc(type==='char'?characteristicNames[name]:name)}</strong>${legacyTag(R,{...q,legacySources:legacyOption(R,s,type,name).legacySources})}${type==='char'?characteristicBadge(name,false):''}<p>${type==='talent'?'':`<span class="advance-result">${value} <span aria-hidden="true">→</span> ${value+amount} <small>+${amount}</small></span>`}<span class="tracker-effect">${trackerLabel}</span>${(type==='char'&&name==='Ag'||type==='skill'&&M.skillInfo(R,name,s)?.char==='Ag')&&equipment(R,s).penalties.complete&&equipment(R,s).penalties.band?'<small class="muted">Base score shown for advancement; the folio includes load penalties (p. 299).</small>':''}</p>${type==='talent'?`<span class="owned-ranks">${d.talents.filter(t=>t===name).length} ranks owned</span>${talentDescription(name)}`:button('calculation','How calculated?',`data-kind="${type}" data-name="${esc(name)}"`,'text-button')}</div><div>${button('buy',`${q.cost||'—'} XP`,`data-type="${type}" data-name="${esc(name)}" data-amount="${amount}" ${blocked?'disabled':''} title="${esc(blocked||'Purchase this improvement')}"`,'primary')}${blocked?`<p class="minilabel purchase-error">${esc(blocked)}</p>`:''}</div></div>`;
-}
-function experienceTalents(){
- const d=M.derive(R,s),available=[],known=[],unavailable=[];
- for(const name of M.careerTalentOptions(R,s,d.level)){
-  const reason=M.invalidTalent(R,s,name);
-  (reason.startsWith('Already known;')?known:reason?unavailable:available).push(name);
- }
- return `<section class="talent-group"><h3>Career Talents <span class="counter">${available.length}</span></h3><p class="small muted">Each purchase costs 100 XP. The button shows why a purchase is unavailable.</p>${available.length?runeShopRows(available,n=>xpRow('talent',n),'available'):'<p class="empty">No new Career Talents can be learned at this level.</p>'}</section>${known.length?`<details class="talent-catalog-group" data-group="known-talents"><summary>Already learned <span class="counter">${known.length}</span></summary><p class="small muted">These Talents cannot be purchased again under their normal rules.</p>${known.map(n=>`<div class="known-talent"><span class="owned-ranks">${d.talents.filter(t=>t===n).length} ranks owned</span>${talentDescription(n)}</div>`).join('')}</details>`:''}${unavailable.length?`<details class="talent-catalog-group" data-group="unavailable-talents"><summary>Unavailable alternatives <span class="counter">${unavailable.length}</span></summary><p class="small muted">These choices have a rule restriction. Expand a Talent to read its rules.</p>${runeShopRows(unavailable,n=>xpRow('talent',n),'unavailable')}</details>`:''}`;
-}
-function experienceSkills(){
- const d=M.derive(R,s),unlocks=M.talentSkillUnlocks(R,s);
- const all=[...new Set([...d.currentSkills,...unlocks,...Object.keys(d.skills),...R.skills.filter(x=>!x.advanced).flatMap(x=>x.grouped?M.options(R,`${x.name} (Any)`,'skill',s):[x.name])])].sort((a,b)=>a.localeCompare(b));
- const career=all.filter(n=>d.currentSkills.includes(n));
- const trained=all.filter(n=>!d.currentSkills.includes(n)&&(d.skills[n]||0)>0);
- const other=all.filter(n=>!d.currentSkills.includes(n)&&!(d.skills[n]>0));
- const groups=Object.groupBy?Object.groupBy(other,M.base):other.reduce((out,n)=>((out[M.base(n)]??=[]).push(n),out),{});
- return `${d.talents.includes('Seasoned Traveller')?`<div class="field"><label for="local-region">Current region for Seasoned Traveller</label>${select('id="local-region" data-bind="localRegion"',['Local','Reikland','Empire','Bretonnia','Estalia','Tilea','Kislev','Wasteland'],s.localRegion,true)}<small class="muted">Confirm with your GM. Only the selected regional Lore is unlocked, while you remain there (p. 125); non-career XP still costs double.</small></div>`:''}<div class="field skill-search"><label for="xp-skill-search">Find a Skill</label><input id="xp-skill-search" type="search" placeholder="Search Skills or specialisations…" value="${esc(skillSearch)}" autocomplete="off"><small class="muted">Your Career Skills come first. Browse other Basic Skills and talent-unlocked Skills below.</small></div><p id="xp-skill-results" class="minilabel" aria-live="polite"></p><section class="skill-group"><h3>Current Career Skills <span class="counter">${career.length}</span></h3>${career.map(n=>xpRow('skill',n)).join('')}</section>${trained.length?`<section class="skill-group"><h3>Other trained Skills <span class="counter">${trained.length}</span></h3>${trained.map(n=>xpRow('skill',n)).join('')}</section>`:''}<section class="skill-group skill-catalog"><h3>Other available Skills <span class="counter">${other.length}</span></h3><p class="small muted">Skills with several specialisations can be expanded. Non-career Advances cost double.</p>${Object.entries(groups).map(([base,names])=>names.length===1?xpRow('skill',names[0]):`<details class="skill-catalog-group" data-group="${esc(base)}"><summary>${esc(base)} <span class="minilabel">${names.length} options</span></summary>${names.map(n=>xpRow('skill',n)).join('')}</details>`).join('')}</section>`;
-}
-function filterSkills(){
- const input=$('#xp-skill-search');if(!input)return;
- const query=skillSearch.trim().toLocaleLowerCase(),rows=[...document.querySelectorAll('[data-skill-search]')];let count=0;
- for(const row of rows){const match=!query||row.dataset.skillSearch.includes(query);row.hidden=!match;if(match)count++;}
- for(const group of document.querySelectorAll('.skill-catalog-group')){const match=!!group.querySelector('[data-skill-search]:not([hidden])');group.hidden=!match;group.open=query?match:openedSkillGroups.has(group.dataset.group);}
- for(const group of document.querySelectorAll('.skill-group')){const visible=group.querySelectorAll('[data-skill-search]:not([hidden])').length;group.hidden=!visible;const label=group.querySelector('h3 .counter');if(label)label.textContent=visible;}
- const results=$('#xp-skill-results');if(results)results.textContent=query?`${count} matching Skill${count===1?'':'s'}`:'';
-}
-function experience(){
- const d=M.derive(R,s),e=errors(),c=M.career(R,s),q=M.quote(R,s,'promotion','');let rows='';
- if(xpTab==='Characteristics')rows=characteristicLegend()+M.KEYS.map(k=>xpRow('char',k)).join('');
- if(xpTab==='Skills')rows=experienceSkills();
- if(xpTab==='Talents')rows=grudgePanel(R,s)+experienceTalents();
- if(xpTab==='Magic')rows=spellShop();
- const last=s.ledger.at(-1),undo=last?button('undo',`Undo last: ${esc(last.name)}${['char','skill'].includes(last.type)?` +${last.amount===1?1:5}`:''}`,'','quiet'):'';
- return `<span class="eyebrow">07 / Experience</span><h1>Spend experience</h1><p class="muted">Each purchase has an exact price, source, and tracker effect. ${page('191, 364')}</p><div class="xp-balance xp-sticky-balance"><div><span>XP budget</span><strong>${d.xpTotal.toLocaleString()}</strong>${d.xpBonus?`<small>${s.xp.toLocaleString()} base + ${d.xpBonus} star-sign XP</small>`:''}</div><div><span>Spent</span><strong>${d.spent.toLocaleString()}</strong></div><div class="remaining"><span>Available to spend</span><strong>${d.remaining.toLocaleString()}</strong></div></div><details class="budget-edit"><summary>Edit XP budget</summary><div class="budget-form"><div class="field"><label for="xp">Base XP budget</label><input id="xp" type="number" min="${Math.max(0,d.spent-d.xpBonus)}" step="1" value="${s.xp}"></div>${button('set-xp','Update budget','','secondary')}</div><p class="small muted">Includes spent XP. Star-sign XP is added separately. Unspent experience can be kept.</p></details>${undo?`<div class="undo-bar">${undo}<span class="minilabel">Recalculates XP and tracker boxes.</span></div>`:''}${e.length?issuePanel(e,'Finish creation to spend XP'):''}<div class="career-progress"><div class="split"><strong>${esc(c.levels[d.level-1].name)} ${legacyTag(R,c)}</strong><span class="level-pill">Career level ${d.level}</span></div>${trackerBoxes(d)}${d.level<4?`<p>${button('promote','Advance Career · 100 XP',`${q.error||e.length?'disabled':''} title="${esc(q.error)}"`,'secondary')}</p><small>Requires the Advance Career Endeavour (p. 196). Using this button records that requirement as met.</small>`:''}</div><div class="xp-browser-controls"><label class="check-row"><input type="checkbox" data-bind="xpCareerOnly" ${xpCareerOnly?'checked':''}>Career only</label><label class="check-row"><input type="checkbox" data-bind="xpAffordable" ${xpAffordable?'checked':''}>Affordable now</label><span class="small muted">Filters hide rows; prices and eligibility stay the same. Career-only applies to Characteristics, Skills and Talents; magic uses its own access filters.</span></div><div class="page-tabs" role="tablist" aria-label="XP purchases">${['Characteristics','Skills','Talents','Magic'].map(t=>`<button role="tab" id="xp-tab-${t}" aria-controls="xp-content" tabindex="${t===xpTab?0:-1}" aria-selected="${t===xpTab}" class="quiet" data-action="xp-tab" data-tab="${t}">${t}</button>`).join('')}</div>${['Characteristics','Skills'].includes(xpTab)?`<div class="advance-choice"><span class="label">Advance by</span><div class="inline-choice" role="group" aria-label="Advance size">${[5,1].map(n=>button('advance-size',`+${n}`,`data-size="${n}" aria-pressed="${s.advanceSize===n}"`,s.advanceSize===n?'quiet active':'quiet')).join('')}</div><span class="small muted">${s.advanceSize===1?'Optional individual Advances: Appendix II, p. 364. Five +1 Advances in the same Career Skill or Characteristic earn one tracker box.':'+5 Advances: p. 191. An incomplete +1 band must reach five before returning to +5 on that Skill or Characteristic.'}</span></div>`:''}<div id="xp-content" role="tabpanel" aria-labelledby="xp-tab-${xpTab}" ${e.length?'class="unavailable"':''}>${rows}</div><details class="section-gap"><summary>Acquire a higher-level Career Trapping ${legacyTag(R,c)}</summary><p>Only record an item from the next Career level, actually obtained with your GM. This does not create free gear or deduct coin. Each different next-level Trapping earns one box (pp. 43–44).</p><div class="field"><label for="new-trapping">Trapping</label>${select('id="new-trapping"',c.levels.filter(l=>l.level===d.level+1).flatMap(l=>l.trappings.map((t,i)=>[`${l.level}:${i}`,`Level ${l.level}: ${legacyName(R,l.source?l:c,t)}`])))}</div><div class="field"><label for="owned-trapping">Use an existing owned item?</label>${select('id="owned-trapping"',[['','New item obtained outside the starting shop'],...acquisitionChoices(R,s)],'')}</div><div class="field"><label for="acquisition">How was it obtained?</label><input id="acquisition" placeholder="Gift, campaign reward, or purchase from other funds"></div>${button('acquire','Record acquisition',e.length?'disabled':'')}</details><details class="ledger-section" open><summary>XP ledger <span class="counter">${s.ledger.length} entries</span></summary>${ledgerTable()}</details><p class="small muted">Non-career Characteristics and Basic Skills cost double. Training and Unusual Learning Endeavours, Career changes, and GM awards are outside this creation workflow.</p>`;
-}
-function spellQuote(name,talent){return M.quoteSpell(R,s,name,talent);}
-function spellShop(){
- const rows=magicRows(R,s),d=M.derive(R,s),issues=errors(),choices=filterMagic(rows,magicFilters).filter(x=>!xpAffordable||x.owned||x.quote&&!x.quote.error&&x.quote.cost<=d.remaining),known=rows.filter(x=>x.owned),legal=rows.filter(x=>!x.owned&&x.quote&&!x.quote.error);
- const fields=[['type','Knowledge type',[['all','All types'],...[...new Set(rows.map(x=>x.type))].sort()]],['lore','Lore / tradition',[['all','All traditions'],...[...new Set(rows.flatMap(x=>x.lores?.filter(l=>l!=='*')||[x.lore]).filter(Boolean))].sort()]],['book','Source',[['all','All selected books'],...R.books.filter(b=>rows.some(x=>x.source.book===b.id)).map(b=>[b.id,b.shortTitle||b.title])]],['status','Show',[['available','Available to learn now'],['known','Already known'],['all','Browse all, including locked']]]];
- return `${magicSection()}${hasColourMagic()?cantPanel(R,s):''}<section class="magic-browser"><h3>Magic & knowledge library</h3>${!legal.length?`<div class="notice"><strong>${known.length?'No additional purchases available now.':'No magical training yet.'}</strong><p class="small">Spell learning follows your Talents, Lore and prerequisites. You can browse references without granting yourself any powers.</p>${button('browse-magic','Browse all magic & knowledge')}</div>`:''}<div class="field"><label for="magic-search">Find magic or knowledge</label><input id="magic-search" type="search" data-search="magic" value="${esc(magicFilters.query)}" placeholder="Name, tradition or effect"></div><div class="browser-filters">${fields.map(([key,label,items])=>`<div class="field"><label for="magic-${key}">${label}</label>${select(`id="magic-${key}" data-bind="magicFilter" data-key="${key}"`,items,magicFilters[key])}</div>`).join('')}</div><p class="small muted" aria-live="polite">${choices.length} matching profiles. Rituals, spells, prayers, techniques and rune knowledge keep their distinct learning rules.</p>${choices.length?choices.map(x=>{const q=x.quote,reason=x.owned?'Already known.':q?.error||(!q?(x.type==='Cant'?'Choose Cants above after meeting the appropriate Lore and spell-count threshold.':x.type==='Rune'?'Requires this rune Talent option in your current Career.':`Requires an appropriate spell-learning Talent and access to ${x.lore||x.category}.`):issues.length?'Finish creation before spending XP.':''),action=x.type==='Technique'?'buy-technique':x.type==='Rune'?'buy':'buy-spell';return `<article class="xp-row magic-profile"><div>${spellDescription({...x,category:x.type})}<small>${esc(x.lore||'')} · ${x.cn!==undefined?`CN ${esc(x.cn)} · `:''}${x.owned?'Known':q?`${q.cost} XP`:'Locked'}${q?.discount?` · ${esc(q.discount)}`:''}</small></div><div>${x.owned?'<span class="counter">Known</span>':button(action,q?`${q.cost} XP`:'Unavailable',`data-type="talent" data-name="${esc(x.type==='Rune'?x.talent:x.name)}" data-talent="${esc(q?.talent||x.talent||'')}" ${reason?'disabled':''}`,'primary')}${reason&&!x.owned?`<p class="purchase-error minilabel">${esc(reason)}</p>`:''}</div></article>`;}).join(''):'<p class="empty">No profiles match these filters. Try browsing all or changing the search.</p>'}</section>`;
-}
-function ledgerTable(){const d=M.derive(R,s);return s.ledger.length?`<div class="table-wrap"><table><thead><tr><th># / Improvement</th><th>XP</th><th>Total</th><th>Source</th></tr></thead><tbody>${s.ledger.map((x,i)=>`<tr><td>${i+1}. ${esc(x.name)}${['char','skill'].includes(x.type)?` +${x.amount===1?1:5}`:''}<br><small>${d.trackerCredits[i]?'+1 tracker box':x.type==='promotion'?'Career advancement':x.amount===1&&(x.inCareer??x.tick)?`${d.trackerProgressAt[i]}/5 toward a tracker box`:'No tracker box'}</small></td><td>${x.cost}</td><td>${s.ledger.slice(0,i+1).reduce((a,b)=>a+b.cost,0)}</td><td>${ref(x)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="empty">No XP spent yet. Unspent XP can be kept.</p>';}
-function review(){const d=M.derive(R,s),c=M.career(R,s),eq=equipment(R,s),e=errors();return `<span class="eyebrow">08 / Review & export</span><h1>${esc(s.name||'Your character')}</h1><p class="muted">${esc(sheetSpecies(R,s))} · ${c.name} / ${c.levels[d.level-1].name} · ${d.status}</p>${speciesRulePanel(R,s)}${e.length?issuePanel(e,'Finish these choices to export'):`<div class="notice success"><strong>Ready to export.</strong> Your sheet, free benefits, dice results and every XP purchase are accounted for.</div>`}<div class="actions">${button('sheet','Download character sheet',e.length?'disabled':'','primary')}${button('record','Download creation & XP record',e.length?'disabled':'','secondary')}</div><label class="check-row"><input type="checkbox" data-bind="fullAppendix" ${fullAppendix?'checked':''}>Include the complete enabled-book compatibility appendix</label><p class="small muted">Every character choice, applicable adaptation, roll and XP purchase is always included. The optional appendix also lists unused content conversions.</p><p class="small muted">The sheet uses your supplied fillable PDF. The complete creation record is appended to the sheet, including anything that exceeds its available rows. You can also download the record separately.</p>${reviewNotices(d,eq)}<h3>Characteristics</h3><div class="table-wrap"><table><thead><tr><th></th>${M.KEYS.map(k=>`<th>${k}</th>`).join('')}</tr></thead><tbody>${[['Initial*',k=>d.stats[k]-d.charAdv[k]],['XP advances',k=>'+'+d.charAdv[k]],['Intrinsic current',k=>d.stats[k]]].map(([label,fn])=>`<tr><td>${label}</td>${M.KEYS.map(k=>`<td>${fn(k)}</td>`).join('')}</tr>`).join('')}</tbody></table></div><p class="minilabel">*Includes Talent bonuses, which do not count as Advances.</p><details class="review-section" open><summary>Trained Skills</summary><table><thead><tr><th>Skill</th><th>Free</th><th>XP added</th><th>Current</th></tr></thead><tbody>${Object.entries(d.skills).filter(([n,v])=>v>0).sort().map(([n,v])=>`<tr><td>${esc(n)}${legacyTag(R,legacyOption(R,s,'skill',n))}</td><td>+${(M.freeSkills(R,s)[n]||0)*5}</td><td>+${Math.round((d.paidSkills[n]||0)*5)}</td><td>${(M.skillInfo(R,n,s)?.char==='Ag'&&eq.penalties.complete?eq.penalties.agility:d.stats[M.skillInfo(R,n,s)?.char])+Math.round(v*5)}</td></tr>`).join('')}</tbody></table></details><details class="review-section" ><summary>Talents</summary>${[...new Set(d.talents)].map(talentDescription).join('')}</details><details class="review-section" open><summary>Equipment</summary><p class="small">${eq.weapons.map(x=>`${esc(x.label)} ${legacyTag(R,{...x,legacySources:legacyGear(R,s,x,x.name).legacySources})} (${x.group}, damage ${Number.isFinite(x.damage)?'+'+x.damage:x.damage})`).join(' · ')}</p><p class="small">${eq.armour.map(x=>`${esc(x.label)} ${legacyTag(R,{...x,legacySources:legacyGear(R,s,x,x.name).legacySources})} (${x.locations}, AP ${x.ap})`).join(' · ')}</p><p class="small">${eq.other.map(x=>`${esc(x.name)} ${legacyTag(R,legacyGear(R,s,{key:x.slotKey||x.key||''},x.alias||x.name))}`).join(' · ')}</p><p><strong>Encumbrance ${eq.unknown.length?`known subtotal ${eq.total}`:eq.total} / ${d.capacity}</strong></p>${!eq.unknown.length&&eq.total>d.capacity?'<div class="notice">Overburdened: the folio and exported current scores include load penalties. The table above shows intrinsic Characteristics (p. 299).</div>':''}</details><details class="review-section" ><summary>Wealth</summary><p>Remaining after purchases: <strong>${formatMoney(purse(R,s).remaining)}</strong> · spent ${formatMoney(purse(R,s).spent)}.</p><p>${s.wealth?`${s.wealth.amount} ${s.wealth.currency}`:'Not rolled'}</p></details>${M.knownSpells(R,s).length?`<h3>Spells, Blessings & Miracles</h3>${M.knownSpells(R,s).map(x=>`${spellDescription(x)}`).join('')}`:''}${cantReview(R,s)}${womReferencePanel(R,s)}${dwarfReview(R,s)}${elfReview(R,s)}<details class="review-section" ><summary>Every XP accounted for</summary>${ledgerTable()}</details><details class="review-section" ><summary>Dice record</summary><p class="small muted">Each die uses the browser’s cryptographic random generator with rejection sampling. Raw faces, totals and timestamps are recorded. This is an editable local record, not a tamper-proof certificate.</p>${s.rolls.length?s.rolls.map(r=>`<div class="roll-entry"><strong>${esc(r.label)}</strong> · ${r.dice}: ${r.values.join(' + ')} = ${r.total} ${ref(r)}<br><small class="muted">${esc(r.at)}</small></div>`).join(''):'<p class="empty">No dice have been rolled.</p>'}</details>${penaltySummary(R,s)}<div class="field section-gap"><label for="notes">Character notes / GM decisions</label><textarea id="notes" data-bind="notes">${esc(s.notes)}</textarea></div><details><summary>Source and interpretations</summary><p>${esc(LEGACY_EXPLANATION)}</p><p>${R.books.map(b=>esc(b.title)).join('; ')} are enabled. Each option identifies its book and printed page. Conversion notes and optional rule changes are included in the exported record. MarkItDown extraction was checked against the PDF tables and Career symbols.</p><p>Navigation uses Initiative (p. 112); the sheet’s printed “Int” is corrected to I. Leather Breastplate uses Leather Jerkin statistics with your agreed naming note. The +45 Skill Advance costs 850 XP as printed (p. 191). Optional +1 prices follow Appendix II (p. 364). Five +1 Career Advances in the same Skill or Characteristic count as one tracker box, using your interpretation where the appendix is silent.</p><p>Unlisted weights are not invented. Situational Talent effects remain in their reference text. GM decisions still apply.</p></details>`;}
-function issuePanel(issues,title){return `<div class="issue-panel"><strong>${esc(title)}</strong><ul>${issues.map(message=>{const target=issueTarget(R,s,message);return `<li>${button('issue',`${esc(message)} <span>Open the choice in ${esc(steps[target.step])}</span>`,`data-step="${target.step}" data-target="${esc(target.target)}"`)}</li>`;}).join('')}</ul></div>`;}
-function trackerBoxes(d){const goal=[10,12,14,0][d.level-1];return goal?`<div class="tracker-boxes" role="img" aria-label="${d.ticks} of ${goal} Career tracker boxes">${Array.from({length:goal},(_,i)=>`<span class="${i<d.ticks?'filled':''}" aria-hidden="true">${i<d.ticks?'✓':''}</span>`).join('')}</div><p class="small muted">${d.ticks} / ${goal} boxes toward level ${d.level+1}</p>`:'<p class="small muted">Final Career level reached.</p>';}
-function folioMenus(){
- const sections=folioData(R,s);
- return `<div class="folio-menus">${Object.entries(sections).map(([key,rows])=>`<details class="folio-section" data-folio-section="${key}" ${folioOpen.has(key)?'open':''}><summary><span class="folio-toggle" aria-hidden="true"></span><span>${key[0].toUpperCase()+key.slice(1)}</span><span class="folio-count">${rows.length}</span></summary>${rows.length?`<ul class="folio-list">${rows.map(row=>`<li><span>${key==='skills'?button('calculation',esc(row.name),`data-kind="skill" data-name="${esc(row.name)}"`,'folio-name-button'):esc(row.name)}${row.legacy?`<button type="button" class="legacy-tag" data-action="legacy-info" data-explanation="${esc(row.legacyTitle)}" title="${esc(row.legacyTitle)}">Legacy</button>`:''}</span>${key==='magic'?'':`<strong class="folio-value"${row.value===null?' title="Quantity not rolled yet"':''}>${row.value===null?'?':`${key==='skills'?'':'×'}${row.value}`}</strong>`}</li>`).join('')}</ul>`:'<p class="folio-empty">None yet.</p>'}</details>`).join('')}</div>`;
+const $ = (q) => document.querySelector(q),
+  esc = (v) =>
+    String(v ?? "").replace(
+      /[&<>"']/g,
+      (c) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[c],
+    );
+
+const locked = () => s.ledger.length > 0;
+function save() {
+  try {
+    localStorage.setItem(STORAGE, JSON.stringify(s));
+  } catch {
+    toast(
+      "Draft could not be saved in this browser. Download a character file to keep it.",
+    );
+  }
 }
 
-function hasColourMagic(){return M.derive(R,s).talents.some(t=>/^Arcane Magic \(/.test(t)&&R.config.colours.includes(t.match(/\((.*)\)/)?.[1]));}
-function reviewNotices(d,eq){
- const data=[...eq.unknown.map(name=>`${name}: no published weight; total Encumbrance and load effects remain unresolved.`),...eq.warnings];
- return `${data.length?`<details class="review-warnings" open><summary>Unresolved supplied data · ${data.length}</summary><p class="small muted">These are distinct from unfinished creation choices. The app retains unknown values and records the limitation in your export.</p>${data.map(x=>`<p>${esc(x)}</p>`).join('')}</details>`:''}<details class="review-reminders"><summary>Rules & reference reminders · ${d.warnings.length+eq.notes.length}</summary>${[...new Set([...d.warnings,...eq.notes])].map(x=>`<p class="small">${esc(x)}</p>`).join('')}</details>`;
+function getContext() {
+  return {
+    marketShop,
+    folioMenus,
+    characteristicTitle,
+    R,
+    s,
+    esc,
+    result,
+    select,
+    button,
+    ref,
+    library,
+    page,
+    careerSearch,
+    careerFilter,
+    careerBook,
+    careerPreview,
+    careerLimit,
+    talentDescription,
+    characteristicLegend,
+    characteristicClass,
+    characteristicBadge,
+    skillChoice,
+    spellDescription,
+    lucciniTalentChoice,
+    xpCareerOnly,
+    xpAffordable,
+    errors,
+    skillSearch,
+    $,
+    openedSkillGroups,
+    xpTab,
+    issuePanel,
+    trackerBoxes,
+    ledgerTable,
+    magicFilters,
+    magicSection,
+    hasColourMagic,
+    shopSort,
+    marketSearch,
+    shopGroup,
+    shopBook,
+    shopAffordable,
+    openedMarketGroups,
+    fullAppendix,
+    folioOpen,
+    pendingChange,
+    setupOpen,
+    render,
+    undoChoice,
+    sourceInfo,
+    dialog,
+    showCalculation,
+    freeMagicPicker,
+    jumpToIssue,
+    choiceReturn,
+    summaryExpanded,
+    saveFolioPreferences,
+    toast,
+    newCharacter,
+    detailsState,
+    resetDependent,
+    rolledCareer,
+    changeCareer,
+    locked,
+    proposedCareer,
+    showImpact,
+  };
 }
-function dialog(title,html){
- const box=$('#creator-dialog');$('#creator-dialog-title').textContent=title;$('#creator-dialog-body').innerHTML=html;if(!box.open)box.showModal();annotateSources(box);
+function setContext(name, value) {
+  switch (name) {
+    case "R":
+      R = value;
+      break;
+    case "s":
+      s = value;
+      break;
+    case "restoreIssue":
+      restoreIssue = value;
+      break;
+    case "setupOpen":
+      setupOpen = value;
+      break;
+    case "undoChoice":
+      undoChoice = value;
+      break;
+    case "pendingChange":
+      pendingChange = value;
+      break;
+    case "choiceReturn":
+      choiceReturn = value;
+      break;
+    case "folioOpen":
+      folioOpen = value;
+      break;
+    case "summaryExpanded":
+      summaryExpanded = value;
+      break;
+    case "detailsState":
+      detailsState = value;
+      break;
+    case "xpTab":
+      xpTab = value;
+      break;
+    case "careerFilter":
+      careerFilter = value;
+      break;
+    case "skillSearch":
+      skillSearch = value;
+      break;
+    case "openedSkillGroups":
+      openedSkillGroups = value;
+      break;
+    case "marketSearch":
+      marketSearch = value;
+      break;
+    case "openedMarketGroups":
+      openedMarketGroups = value;
+      break;
+    case "careerSearch":
+      careerSearch = value;
+      break;
+    case "careerBook":
+      careerBook = value;
+      break;
+    case "careerPreview":
+      careerPreview = value;
+      break;
+    case "careerLimit":
+      careerLimit = value;
+      break;
+    case "shopBook":
+      shopBook = value;
+      break;
+    case "shopGroup":
+      shopGroup = value;
+      break;
+    case "shopAffordable":
+      shopAffordable = value;
+      break;
+    case "shopSort":
+      shopSort = value;
+      break;
+    case "xpCareerOnly":
+      xpCareerOnly = value;
+      break;
+    case "xpAffordable":
+      xpAffordable = value;
+      break;
+    case "magicFilters":
+      magicFilters = value;
+      break;
+    case "fullAppendix":
+      fullAppendix = value;
+      break;
+    case "searchTimer":
+      searchTimer = value;
+      break;
+    default:
+      throw Error("Unknown UI state " + name);
+  }
+  return value;
 }
-function annotateSources(root=document){
- for(const node of root.querySelectorAll('span.source:not([data-action])')){
-  const label=node.textContent,book=R.books.find(b=>label.includes(b.shortTitle||b.title)),p=label.match(/p\.\s*([\d–—, -]+)/)?.[1];
-  if(!book&&!p)continue;node.dataset.action='source-info';node.dataset.book=book?.id||'core';node.dataset.page=p||'';node.tabIndex=0;node.setAttribute('role','button');
- }
+const {
+  select,
+  button,
+  page,
+  ref,
+  skillChoice,
+  talentDescription,
+  characteristicClass,
+  characteristicTitle,
+  characteristicBadge,
+  characteristicLegend,
+  spellDescription,
+} = create_controls(getContext, setContext);
+const { lucciniTalentChoice, origins } = create_origins_view(
+  getContext,
+  setContext,
+);
+const { careerView, characteristics, skills, magicSection, talents, gear } =
+  create_creation_views(getContext, setContext);
+const { filterSkills, experience } = create_experience_view(
+  getContext,
+  setContext,
+);
+const { marketShop, filterMarket } = create_shop_view(getContext, setContext);
+const {
+  ledgerTable,
+  review,
+  issuePanel,
+  trackerBoxes,
+  folioMenus,
+  hasColourMagic,
+} = create_review_view(getContext, setContext);
+const { resetDependent, changeCareer, rolledCareer } = create_creation_state(
+  getContext,
+  setContext,
+);
+const {
+  dialog,
+  lockCreationControls,
+  sourceInfo,
+  showCalculation,
+  freeMagicPicker,
+  showImpact,
+  proposedCareer,
+  jumpToIssue,
+} = create_dialogs(getContext, setContext);
+const { action, handleChange } = create_actions(getContext, setContext);
+
+const { workspaceShell } = createWorkspaceShell(getContext);
+window.addEventListener("wfrp-before-update", save);
+function toast(text) {
+  $("#toast").textContent = text;
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(() => ($("#toast").textContent = ""), 6500);
 }
-function lockCreationControls(){
- const root=document.querySelector('.creation-lock');if(!root)return;
- for(const node of root.querySelectorAll('input,select,textarea,button')){
-  if(node.dataset.search==='career'||['careerFilter','careerBook'].includes(node.dataset.bind)||['step','source-info','legacy-info','calculation','career-preview','career-more','books'].includes(node.dataset.action))continue;
-  node.disabled=true;
- }
-}
-function sourceInfo(bookId,p){
- const b=R.books.find(b=>b.id===bookId)||library.packs.find(x=>x.manifest.id===bookId)?.manifest;
- dialog('Book reference',`<h3>${esc(b?.title||bookId)}</h3>${p?`<p><strong>Printed page ${esc(p)}</strong></p>`:''}<p class="small muted">This is the source of the displayed rule or profile. An older source does not by itself mean an adaptation. Legacy badges explain actual changes separately.</p><details><summary>Supplied source file</summary><p class="small">${esc(b?.source?.file||'Supplied Fifth Edition core book')}</p></details>`);
-}
-function showCalculation(kind,name){const model=calculation(R,s,kind,name);dialog(model.title,`<dl class="calculation-breakdown">${model.rows.map(([label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><p class="small muted">${esc(model.note)}</p>${name==='Capacity'?page('40, 127, 299'):''}`);}
-function freeMagicPicker(index){
- let offset=0,grant;
- for(const g of M.spellGrants(R,s)){if(index>=offset&&index<offset+g.count){grant=g;break;}offset+=g.count;}
- if(!grant)throw Error('That free magic choice is no longer available.');
- dialog(`Choose free ${grant.category==='Old Faith'?'Blessing':'magic'} · ${grant.talent}`,`<p class="small muted">${grant.count} distinct free choices from this grant. This choice costs 0 XP and earns no tracker box.</p><div class="field"><label for="free-magic-search">Search eligible profiles</label><input id="free-magic-search" type="search" data-dialog-search="free" placeholder="Name or effect"></div><div class="free-magic-results">${grant.choices.map(x=>{const duplicate=s.spells.some((name,i)=>i!==index&&name===x.name&&(grant.category==='Old Faith'||i>=offset&&i<offset+grant.count));return `<article data-dialog-row="${esc(`${x.name} ${x.text}`.toLowerCase())}">${spellDescription({...x,lore:grant.category,talent:grant.talent})}${button('choose-free-magic',duplicate?'Already selected':'Choose · 0 XP',`data-index="${index}" data-name="${esc(x.name)}" ${duplicate?'disabled':''}`,'primary')}</article>`;}).join('')}</div>`);
-}
-function showImpact(label,apply,comparison='',bind='career'){
- const broad=['species','origin'].includes(bind),talentsOnly=bind==='originTalentMode';
- const changes=broad?['Species and Career Skill allocations, selected specialisations and starting Talents are cleared.','Career roll choices, starting increases, equipment, purchases and wealth are reset.','Regional options are recalculated; an unavailable Career is replaced with a legal one.']:talentsOnly?['Starting Talent choices, random Talent results, the Psychometry trade and free magic choices are cleared.']:['Career Skill allocations, selected specialisations, the free Career Talent and free magic choices are cleared.','Career equipment, purchases and wealth are reset; affected starting increases are recalculated.'];
- pendingChange=apply;dialog(label,`<p>Here is what applying this choice changes:</p><ul class="impact-list">${changes.map(x=>`<li>${esc(x)}</li>`).join('')}<li>Existing dice history is kept. ${broad?'Other identity text is retained; a Species change clears its name/appearance suggestion fields.':'Species grants and identity are retained.'}</li></ul>${comparison}<p class="small muted">You can undo this choice until your next character edit or roll.</p><div class="actions">${button('confirm-change','Apply change','','primary')}${button('close-dialog','Keep current choices')}</div>`);
-}
-function proposedCareer(bind,key,value,checked){
- const next=structuredClone(s);let catalog=R;
- if(bind==='career'||bind==='dwarfCareerProfile'){next.career=value;delete next.dwarfCareerUpdates;if(next.highElf)delete next.highElf.careerVariant;}
- if(bind==='dwarfCareerUpdate'){(next.dwarfCareerUpdates??={})[key]=value;if(!value)delete next.dwarfCareerUpdates[key];}
- if(bind==='dwarfTrappingSwaps')next.dwarfTrappingSwaps=checked;
- if(bind==='elfChoice'&&key==='careerVariant')(next.highElf??={}).careerVariant=value;
- if(bind==='careerVariant')catalog=assembleBooks(library,[...R.selection.filter(b=>b.id!=='archives-iii-hedge').map(b=>b.id),...(value?[value]:[])]);
- return M.career(catalog,next);
-}
-function jumpToIssue(step,target){
- setupOpen=false;s.step=Number(step);render();const node=document.querySelector(target)||document.querySelector('main h1');
- for(let parent=node?.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;
- node?.scrollIntoView({block:'center',behavior:'instant'});if(node){if(!node.matches('input,select,textarea,button,summary'))node.tabIndex=-1;node.focus({preventScroll:true});node.classList.add('choice-highlight');setTimeout(()=>node.classList.remove('choice-highlight'),2400);}
-}
-function render(){
- syncCants(R,s);
- const folioScroll=document.querySelector('.sheet')?.scrollTop||0;
- const oldFocus=document.activeElement,focusId=oldFocus?.id,focusAction=oldFocus?.dataset?.action,focusName=oldFocus?.dataset?.name,focusTab=oldFocus?.dataset?.tab,focusKey=oldFocus?.dataset?.key,focusBind=oldFocus?.dataset?.bind,focusModifier=oldFocus?.dataset?.modifier,scrollPosition=window.scrollY;
- const textSelection=oldFocus?.matches('input[type="search"],input[type="text"],input:not([type]),textarea')?{start:oldFocus.selectionStart,end:oldFocus.selectionEnd,direction:oldFocus.selectionDirection,scrollLeft:oldFocus.scrollLeft}:null;
- for(const detail of document.querySelectorAll('main details'))detailsState.set(detail.dataset.detailKey||detail.querySelector('summary')?.textContent.trim(),detail.open);
- if(document.querySelector('[data-market-group]'))openedMarketGroups=new Set([...document.querySelectorAll('[data-market-group][open]')].map(x=>x.dataset.category));
- if(!skillSearch&&document.querySelector('.skill-catalog'))openedSkillGroups=new Set([...document.querySelectorAll('.skill-catalog-group[open]')].map(x=>x.dataset.group));
- const d=M.derive(R,s),eq=equipment(R,s),c=M.career(R,s),issues=errors(),pending=Array.from({length:steps.length},(_,i)=>issues.filter(x=>issueTarget(R,s,x).step===i));s.step=Math.max(0,Math.min(steps.length-1,s.step));
- const body=setupOpen?bookSetup(library,R):[origins,careerView,characteristics,skills,talents,gear,experience,review][s.step](),ready=creationStepCount-new Set(issues.map(x=>issueTarget(R,s,x).step).filter(i=>i<creationStepCount)).size;
- $('#app').innerHTML=`<div class="workspace ${setupOpen?'book-setup-workspace':''}"><aside class="rail"><div class="rail-heading"><span class="eyebrow">Character creation</span><strong>Your next chapter</strong><p>${ready} of ${creationStepCount} creation steps ready</p><div class="creation-meter" role="img" aria-label="${ready} of ${creationStepCount} creation steps ready"><span style="width:${ready/creationStepCount*100}%"></span></div></div><div class="mobile-step field"><label for="mobile-step">Creation step</label>${select('id="mobile-step" data-bind="stepSwitch"',steps.map((name,i)=>[i,`${i+1}. ${name}`]),s.step)}</div><nav aria-label="Character creation steps"><ol class="steps">${steps.map((name,i)=>`<li><button class="${i===s.step?'active':''}" ${i===s.step?'aria-current="step"':''} data-action="step" data-step="${i}"><span class="step-number">${i<creationStepCount&&!pending[i].length?'✓':String(i+1).padStart(2,'0')}</span><span>${name}<small>${i<creationStepCount?(pending[i].length?`${pending[i].length} choice${pending[i].length===1?'':'s'} left`:'Ready'):i===experienceStep?'Optional advances':'Sheet & creation record'}</small></span></button></li>`).join('')}</ol></nav><div class="header-actions">${button('save-file','Save character')}${button('load-file','Load character')}${button('new','New character')}<input type="file" id="import-file" accept="application/json,.json" hidden></div><p class="save-status">Saved automatically on this device</p>${button('sources','Sources & decisions','','text-button')}${button('books','Choose books','','text-button')}</aside><main class="panel"><div class="stage-meta"><span>Step ${s.step+1} of ${steps.length}</span><span class="${pending[s.step].length?'pending-status':'ready-status'}">${s.step<creationStepCount?(pending[s.step].length?`${pending[s.step].length} choice${pending[s.step].length===1?'':'s'} remaining`:'✓ Ready'):issues.length?`${issues.length} creation choices remaining`:'✓ Creation complete'}</span></div>${!setupOpen&&locked()&&s.step<creationStepCount?`<div class="notice">Creation is locked while XP is spent. ${button('unlock','Clear advancement & edit creation')}</div><div class="creation-lock">${body}</div>`:body}${undoChoice&&!setupOpen?`<div class="choice-undo">${button('undo-choice',`Undo ${esc(undoChoice.label)}`)}<small>Available until the next character edit or roll.</small></div>`:''}${!setupOpen&&s.step===4&&hasColourMagic()?cantPanel(R,s):''}${!setupOpen&&s.step===5?marketShop()+penaltySummary(R,s):''}${!setupOpen?`<div class="step-footer">${s.step?button('step','Back',`data-step="${s.step-1}"`):'<span></span>'}<span class="footer-position">${s.step+1} / ${steps.length}</span>${s.step<reviewStep?button('step',`Continue to ${steps[s.step+1]}`,`data-step="${s.step+1}"`,'primary'):button('step','Back to Experience',`data-step="${experienceStep}"`)}</div>`:''}</main><aside class="sheet ${summaryExpanded?'expanded':''}" aria-label="Character summary"><div class="sheet-heading"><span class="eyebrow">Character folio</span><h2>${esc(s.name||'Your character')}</h2><p>${esc(sheetSpecies(R,s))} · ${esc(c.name)} ${legacyTag(R,legacyContext(R,s))}</p><span class="profile-badge">${esc(c.levels[d.level-1].name)} · ${d.status}</span>${button('summary-toggle',summaryExpanded?'Hide details':'View character',`aria-expanded="${summaryExpanded}" aria-controls="sheet-body"`,'summary-toggle')}</div><div class="mobile-totals"><span><strong>${d.remaining.toLocaleString()}</strong> XP left</span><span><strong>${s.wealth?formatMoney(purse(R,s).remaining):'—'}</strong> coin</span></div><div id="sheet-body" class="sheet-body"><div class="stat-grid">${M.KEYS.map(k=>`<button type="button" class="stat-calculation ${characteristicClass(k)}" data-action="calculation" data-kind="char" data-name="${k}" title="${esc(characteristicNames[k]+': '+characteristicTitle(k))}" aria-label="Calculate ${esc(characteristicNames[k])}"><small>${k}${c.advanceScheme[k]?` · L${c.advanceScheme[k]}`:''}</small><strong>${k==='Ag'&&eq.penalties.complete?eq.penalties.agility:d.stats[k]}</strong></button>`).join('')}</div><div class="derived">${[['Wounds',d.wounds],['Movement',eq.penalties.complete?eq.penalties.movement:d.movement],['Fate',d.fate],['Fortune',d.fortune]].map(([k,v])=>`<button type="button" class="derived-calculation" data-action="calculation" data-kind="derived" data-name="${k}"><span title="${k}">${k==='Movement'?'Move':k}</span><strong>${v}</strong></button>`).join('')}</div><div class="folio-balances"><div class="folio-xp"><span>XP remaining</span><strong>${d.remaining.toLocaleString()} <small>XP</small></strong><p>${d.spent.toLocaleString()} spent of ${d.xpTotal.toLocaleString()}${d.xpBonus?` (+${d.xpBonus} star sign)`:""}</p></div><div class="folio-coin"><span>Remaining coin</span><strong>${s.wealth?formatMoney(purse(R,s).remaining):'Not rolled'}</strong></div></div><div class="folio-line"><span>Current tracker</span><strong>${d.ticks} / ${[10,12,14,'—'][d.level-1]}</strong></div><button type="button" class="folio-line capacity-calculation" data-action="calculation" data-kind="derived" data-name="Capacity" aria-label="How is carrying capacity calculated?"><span>${eq.unknown.length?'Known Enc / capacity':'Enc / capacity'}</span><strong>${eq.total} / ${d.capacity} <small>ⓘ</small></strong></button>${eq.penalties.complete&&eq.penalties.band?`<p class="packing-warning">${eq.penalties.immobile?'Unable to move':`Load: Move ${eq.penalties.movement}, Ag ${eq.penalties.agility}`} (p. 299)</p>`:''}${folioMenus()}<div class="folio-status ${issues.length?'pending':'complete'}"><span>${issues.length?`${issues.length} choices remaining`:'✓ Creation complete'}</span>${issues.length?button('issue','Finish choices',`data-step="${issueTarget(R,s,issues[0]).step}" data-target="${esc(issueTarget(R,s,issues[0]).target)}"`):button('step','Review & export',`data-step="${reviewStep}"`)}</div></div></aside></div><div class="mobile-workspace-bar"><span>${d.remaining.toLocaleString()} XP · ${s.wealth?formatMoney(purse(R,s).remaining):'Coin unrolled'}</span>${button('mobile-folio','View character')}${button('mobile-choice','Back to choice')}</div><footer class="footer-note">Rules from your selected books · Your draft stays on this device</footer>`;
- for(const detail of document.querySelectorAll('main details')){const key=detail.dataset.detailKey||detail.querySelector('summary')?.textContent.trim();if(detailsState.has(key))detail.open=detailsState.get(key);}
- filterSkills();filterMarket();annotateSources();lockCreationControls();save();
- document.querySelector('.sheet').scrollTop=folioScroll;
- let focused=focusId?document.getElementById(focusId):null;
- if(!focused&&focusAction&&focusAction!=='step')focused=[...document.querySelectorAll('[data-action]')].find(x=>x.dataset.action===focusAction&&x.dataset.name===focusName&&x.dataset.tab===focusTab&&x.dataset.key===focusKey);
- if(!focused&&focusBind)focused=[...document.querySelectorAll('[data-bind]')].find(x=>x.dataset.bind===focusBind&&x.dataset.key===focusKey&&x.dataset.modifier===focusModifier);
- focused?.focus({preventScroll:true});
- if(textSelection&&focused?.setSelectionRange&&textSelection.start!==null){focused.setSelectionRange(textSelection.start,textSelection.end,textSelection.direction);focused.scrollLeft=textSelection.scrollLeft;}
- window.scrollTo({top:scrollPosition,behavior:'instant'});
+const readResult = createResultReader();
+const result = () => readResult(R, s);
+const errors = () => result().issues.filter((x) => x.severity === "error");
+
+function render() {
+  syncCants(R, s);
+  const folioScroll = document.querySelector(".sheet")?.scrollTop || 0;
+  const oldFocus = document.activeElement,
+    focusId = oldFocus?.id,
+    focusAction = oldFocus?.dataset?.action,
+    focusName = oldFocus?.dataset?.name,
+    focusTab = oldFocus?.dataset?.tab,
+    focusKey = oldFocus?.dataset?.key,
+    focusBind = oldFocus?.dataset?.bind,
+    focusModifier = oldFocus?.dataset?.modifier,
+    scrollPosition = window.scrollY;
+  const textSelection = oldFocus?.matches(
+    'input[type="search"],input[type="text"],input:not([type]),textarea',
+  )
+    ? {
+        start: oldFocus.selectionStart,
+        end: oldFocus.selectionEnd,
+        direction: oldFocus.selectionDirection,
+        scrollLeft: oldFocus.scrollLeft,
+      }
+    : null;
+  captureDisclosures(document.querySelector("main") || document, detailsState);
+  if (document.querySelector("[data-market-group]"))
+    openedMarketGroups = new Set(
+      [...document.querySelectorAll("[data-market-group][open]")].map(
+        (x) => x.dataset.category,
+      ),
+    );
+  if (!skillSearch && document.querySelector(".skill-catalog"))
+    openedSkillGroups = new Set(
+      [...document.querySelectorAll(".skill-catalog-group[open]")].map(
+        (x) => x.dataset.group,
+      ),
+    );
+  const d = result().derived,
+    eq = result().equipment,
+    c = M.career(R, s),
+    issues = errors(),
+    pending = Array.from({ length: steps.length }, (_, i) =>
+      issues.filter((x) => issueTarget(R, s, x).step === i),
+    );
+  s.step = Math.max(0, Math.min(steps.length - 1, s.step));
+  const body = setupOpen
+      ? bookSetup(library, R)
+      : [
+          origins,
+          careerView,
+          characteristics,
+          skills,
+          talents,
+          gear,
+          experience,
+          review,
+        ][s.step](),
+    ready =
+      creationStepCount -
+      new Set(
+        issues
+          .map((x) => issueTarget(R, s, x).step)
+          .filter((i) => i < creationStepCount),
+      ).size;
+  $("#app").innerHTML = workspaceShell({
+    d,
+    eq,
+    c,
+    issues,
+    pending,
+    body,
+    ready,
+  });
+  restoreDisclosures(document.querySelector("main"), detailsState);
+
+  filterMarket();
+  lockCreationControls();
+  save();
+  document.querySelector(".sheet").scrollTop = folioScroll;
+  let focused = focusId ? document.getElementById(focusId) : null;
+  if (!focused && focusAction && focusAction !== "step")
+    focused = [...document.querySelectorAll("[data-action]")].find(
+      (x) =>
+        x.dataset.action === focusAction &&
+        x.dataset.name === focusName &&
+        x.dataset.tab === focusTab &&
+        x.dataset.key === focusKey,
+    );
+  if (!focused && focusBind)
+    focused = [...document.querySelectorAll("[data-bind]")].find(
+      (x) =>
+        x.dataset.bind === focusBind &&
+        x.dataset.key === focusKey &&
+        x.dataset.modifier === focusModifier,
+    );
+  focused?.focus({ preventScroll: true });
+  if (
+    textSelection &&
+    focused?.setSelectionRange &&
+    textSelection.start !== null
+  ) {
+    focused.setSelectionRange(
+      textSelection.start,
+      textSelection.end,
+      textSelection.direction,
+    );
+    focused.scrollLeft = textSelection.scrollLeft;
+  }
+  window.scrollTo({ top: scrollPosition, behavior: "instant" });
 }
 
-function resetDependent(){if(s.species!=='High Elf')delete s.highElf;else if(s.highElf){s.highElf.history=[];s.highElf.era='';delete s.highElf.careerVariant;}delete s.dwarfCareerUpdates;delete s.dwarfTrappingSwaps;delete s.grudgeTargets;if(s.species!=='Dwarf'){delete s.longbeard;delete s.longbeardAge;}delete s.college;delete s.psychometrySlot;delete s.careerRefinement;delete s.careerRefinements;delete s.regionalCareerBase;delete s.originTalentSlot;delete s.originTalentMode;delete s.cants;s.skillChoices={};s.speciesSkills=[];s.careerSkills={};s.talentChoices={};s.randomTalents=[];s.freeTalent='';s.dooming='';s.bonusGear=[];s.gearChoices={};s.gearRolls={};s.wealth=null;s.purchases=[];s.gearState={};s.coinStorage='carried';s.localRegion='';s.boost={};s.ledger=[];s.spells=[];}
-function changeCareer(id,mode='choose'){if(s.highElf)delete s.highElf.careerVariant;delete s.college;if(startingScryer({career:id}))delete s.psychometrySlot;delete s.careerRefinement;delete s.regionalCareerBase;s.career=id;s.careerMode=mode;clearCareerSelections(s);delete s.dwarfCareerUpdates;delete s.grudgeTargets;careerFilter='All classes';}
-function rolledCareer(){const table=randomTable(R,s,'career');if(!table)throw Error('No printed Career roll table for this Species; choose a Career.');const n=M.roll(s,'Career',1,table.sides,table.page)[0];s.rolls.at(-1).source=table.source;s.careerAttempts++;return defaultCareerResult(R,tableResult(table,n));}
-function download(bytes,name,type){const url=URL.createObjectURL(new Blob([bytes],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),20000);}
-async function action(el){const a=el.dataset.action;
- if(a==='close-dialog'){$('#creator-dialog').close();pendingChange=null;return;}
- if(a==='confirm-change'){const apply=pendingChange;pendingChange=null;$('#creator-dialog').close();apply?.();return;}
- if(a==='source-info'){sourceInfo(el.dataset.book,el.dataset.page);return;}
- if(a==='legacy-info'){dialog('Legacy adaptation',`<p>${esc(el.dataset.explanation||el.title)}</p><p class="small muted">This badge marks a specific change to a printed rule for Fifth Edition, not every option from an older book.</p>`);return;}
- if(a==='sources'){dialog('Selected books & decisions',R.books.map(b=>`<details><summary>${esc(b.title)}</summary><p class="small">Version ${esc(b.version)} · ${esc(b.source.file)}</p>${[...(b.compatibility?.notes||[]),...(b.notes||[])].map(x=>`<p class="small">${esc(x)}</p>`).join('')}</details>`).join(''));return;}
- if(a==='calculation'){showCalculation(el.dataset.kind,el.dataset.name);return;}
- if(a==='free-magic-picker'){freeMagicPicker(Number(el.dataset.index));return;}
- if(a==='choose-free-magic'){undoChoice=null;s.spells[Number(el.dataset.index)]=el.dataset.name;$('#creator-dialog').close();render();return;}
- if(a==='issue'){jumpToIssue(el.dataset.step,el.dataset.target);return;}
- if(a==='books'){setupOpen=true;render();window.scrollTo({top:0,behavior:'instant'});return;}
- if(a==='books-cancel'){setupOpen=false;render();return;}
- if(a==='career-preview'){careerPreview=el.dataset.id;render();$('.career-preview')?.scrollIntoView({block:'nearest'});return;}
- if(a==='career-more'){careerLimit+=12;render();return;}
- if(a==='career-apply'){handleChange({target:{dataset:{bind:'career'},value:el.dataset.id}});return;}
- if(a==='browse-magic'){magicFilters.status='all';render();return;}
- if(a==='mobile-folio'){choiceReturn={step:s.step,y:window.scrollY};summaryExpanded=true;saveFolioPreferences();render();$('.sheet')?.scrollIntoView({block:'start',behavior:'instant'});return;}
- if(a==='mobile-choice'){if(choiceReturn?.step===s.step)window.scrollTo({top:choiceReturn.y,behavior:'instant'});else document.querySelector('main h1')?.scrollIntoView({block:'start',behavior:'instant'});return;}
- if(a==='undo-choice'){if(!undoChoice)return;const previous=undoChoice;undoChoice=null;R=previous.R;s=previous.s;careerPreview='';render();toast('Choice undone; previous allocations restored.');return;}
- if(!['step','xp-tab','summary-toggle','advance-size','sheet','record','apply-books'].includes(a))undoChoice=null;
- if(elfAction(R,s,el,(sides,p,label,source,count=1)=>{const n=M.roll(s,label,count,sides,p).reduce((a,b)=>a+b,0);s.rolls.at(-1).source=source;return n;})){render();return;}if(a==='step'){setupOpen=false;s.step=Number(el.dataset.step);render();window.scrollTo({top:0,behavior:'instant'});return;}
- if(a==='new'){if(!confirm('Start a new character? Save the current character first if you want to keep it.'))return;s=newCharacter();setupOpen=true;}
- if(a==='save-file'){download(JSON.stringify(s,null,2),`${s.name||'character'}.json`,'application/json');toast('Character file saved.');return;}
- if(a==='load-file'){$('#import-file').click();return;}
- if(a==='unlock'){if(!confirm('Clear the XP ledger and spells so you can edit creation?'))return;s.ledger=[];s.spells=[];}
- if(a==='apply-books'){const ids=[...document.querySelectorAll('[data-book]:checked')].map(x=>x.dataset.book),next=assembleBooks(library,ids);if(JSON.stringify(next.selection)===JSON.stringify(R.selection.filter(b=>!isCareerVariant(b.id)))){setupOpen=false;render();toast('These books are already selected.');return;}if(hasCharacterChanges(s,newCharacter())&&!confirm('Changing books starts a new character. Save the current character first if you want to keep it.'))return;R=next;s=newCharacter();setupOpen=false;undoChoice=null;careerPreview='';careerFilter='All classes';detailsState.clear();toast('Selected books are ready for a new character.');}
- const chartRoll=(label,count,sides,p)=>{const total=M.roll(s,label,count,sides,p).reduce((a,b)=>a+b,0);s.rolls.at(-1).source={book:'archives-ii',page:p};return total;};
- if(a==='star-roll')rollStar(R,s,chartRoll);
- if(a==='witchling-roll')rollWitchling(R,s,chartRoll);
- if(a==='ascendant-roll'||a==='mansion-roll'){const n=chartRoll(a==='ascendant-roll'?'Ascendant sign':`Celestial mansion ${Number(el.dataset.key)+1}`,1,100,50),id=R.astrology.find(x=>n>=x.min&&n<=x.max).id;const chart=chartState(s);if(a==='ascendant-roll')chart.ascendant=id;else chart.mansions[Number(el.dataset.key)]=id;s.chart=chart;}
- if(a==='traditional-name'){const values=[];setNamePart(s,'forename',traditionalName(R,s,(sides,p,kind,source,count)=>{const n=M.roll(s,kind,count,sides,p).reduce((a,b)=>a+b,0);s.rolls.at(-1).source=source;values.push(n);return n;}));s.nameElements=values;}
- if(a==='species-roll'){const table=randomTable(R,s,'species'),n=M.roll(s,'Species',1,table.sides,table.page)[0],result=tableResult(table,n);s.rolls.at(-1).source=table.source;s.speciesAttempts++;if(s.species!==result){delete s.origin;s.background={};delete s.rollTables.career;}s.species=result;s.speciesMode=s.speciesAttempts===1?'first':'later';resetDependent();s.careerAttempts=0;s.careerMode='choose';s.careerOffers=[];if(!careerAvailable(R,s,M.career(R,s)))s.career=R.careers.find(x=>careerAvailable(R,s,x)).id;toast(`d100 ${n} → ${s.species}`);}
- if(a==='age'&&birthEra(R,s)){if(!Number.isInteger(elfState(s).elderAge))throw Error('Set or roll your Elder age first.');const sp=R.species[s.species],height=sp.height[0]+M.roll(s,'Height (inches)',sp.height[1],10,sp.appearancePage||sp.page).reduce((a,b)=>a+b,0);s.rolls.at(-1).source=sp.source;setAgeHeight(s,elfState(s).elderAge,height);render();return;}
- if(a==='age'){const sp=R.species[s.species];if(s.longbeard&&(!Number.isInteger(s.longbeardAge)||s.longbeardAge<120))throw Error('Choose a Longbeard age of at least 120 first.');const age=s.longbeard?s.longbeardAge:sp.age[0]+M.roll(s,'Age',sp.age[1],10,sp.appearancePage||sp.page).reduce((a,b)=>a+b,0),height=sp.height[0]+M.roll(s,'Height (inches)',sp.height[1],10,sp.appearancePage||sp.page).reduce((a,b)=>a+b,0);for(const r of s.rolls.slice(s.longbeard?-1:-2))r.source={...sp.source,page:sp.appearancePage||sp.page};setAgeHeight(s,age,height);}
- if(a==='career-roll'){delete s.careerRefinements;const id=rolledCareer();s.careerOffers=[id];changeCareer(id,s.careerAttempts===1?'first':'later');}
- if(a==='career-three'){const first=s.careerOffers[0],second=rolledCareer(),third=rolledCareer();s.careerOffers=[first,second,third];changeCareer(first,'three');s.careerRefinement=storedRefinement(s);}
- if(a==='career-offer'){changeCareer(el.dataset.id,'three');s.careerRefinement=storedRefinement(s);}
- if(a==='career-refine'){const result=refineCareer(R,s,(sides,p,label,source)=>{const n=M.roll(s,label,1,sides,p)[0];s.rolls.at(-1).source=source;return n;});const mode=s.careerMode;changeCareer(result.career,mode);s.careerRefinement=result;(s.careerRefinements??={})[result.base]=result;s.careerOffers=s.careerOffers.map(id=>id===result.base?result.career:id);toast(result.message);}
- if(a==='career-original'){const previous=s.careerRefinement,base=previous.base,mode=s.careerMode;changeCareer(base,mode);const result={...previous,career:base,message:previous.message+' Original Career kept by choice.'};s.careerRefinement=result;(s.careerRefinements??={})[base]=result;s.careerOffers=s.careerOffers.map(id=>id===previous.career?base:id);toast('Original Career retained; its optional roll remains recorded.');}
- if(a==='regional-original'){const previous=s.career,base=s.regionalCareerBase,mode=s.careerMode;changeCareer(base,mode);s.careerRefinement=storedRefinement(s);s.careerOffers=s.careerOffers.map(id=>id===previous?base:id);}
- if(a==='regional-career'){const result=regionalCareer(R,s,el.dataset.id),mode=s.careerMode;changeCareer(result.career,mode);s.regionalCareerBase=result.base;s.careerOffers=s.careerOffers.map(id=>id===result.base?result.career:id);}
- if(a==='char-roll'){s.charAttempts++;s.charRolls=M.KEYS.map(k=>M.roll(s,`${k} starting roll`,2,10,38).reduce((a,b)=>a+b,0));s.assignment=M.KEYS.map((_,i)=>i);s.charMode=s.charAttempts===1?'first':'reroll';s.boost={};}
- if(a==='char-points'){s.charMode='points';s.boost={};}
- if(a==='char-rearrange'){s.charMode=s.charAttempts===1?'rearrange':'reroll';s.boost={};}
- if(a==='skill-plus'||a==='skill-minus'){const key=el.dataset.key,now=s.careerSkills[key]||0,slot=M.careerSkillSlots(R,s,1).find(x=>x.key===key);if(a==='skill-plus'){const issue=psychicSkillIssue(R,s,slot.name);if(issue)throw Error(issue);if(Object.values(s.careerSkills).reduce((a,b)=>a+b,0)>=8)throw Error('All eight Career Advances are allocated.');if((M.freeSkills(R,s)[slot.name]||0)-(elderSkills(R,s)[slot.name]||0)>=3)throw Error('This Skill already has three free Advances.');s.careerSkills[key]=now+1;}else s.careerSkills[key]=Math.max(0,now-1);}
- if(a==='random-talents'){if(s.randomTalents.length)return;const known=M.freeTalents(R,s,false),table=randomTable(R,s,'talent');if(!table)throw Error('Choose Talents using an implemented printed table.');const valid=[...new Set(table.rows.map(x=>x.result))].filter(x=>!known.includes(x));if(valid.length<creationSpecies(R,s).randomTalents)throw Error('This table has too few distinct unowned Talents.');let attempts=0;while(s.randomTalents.length<creationSpecies(R,s).randomTalents){if(++attempts>1000)throw Error('Too many duplicate rolls; try again.');const n=M.roll(s,'Random Species Talent',1,table.sides,table.page)[0],talent=tableResult(table,n);s.rolls.at(-1).source=table.source;if(known.includes(talent)||s.randomTalents.includes(talent)){s.rolls.at(-1).label+=` — duplicate ${talent}; rerolled`;continue;}s.randomTalents.push(talent);}}
+$("#app").addEventListener(
+  "toggle",
+  (e) => {
+    const detail = e.target;
+    if (!detail.isConnected || !detail.dataset.folioSection) return;
+    const key = detail.dataset.folioSection;
+    if (detail.open) folioOpen.add(key);
+    else folioOpen.delete(key);
+    saveFolioPreferences();
+  },
+  true,
+);
+$("#app").addEventListener("click", (e) => {
+  const el = e.target.closest("[data-action]");
+  if (!el || el.disabled || el.closest("fieldset[disabled]")) return;
+  if (["legacy-info", "source-info"].includes(el.dataset.action)) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  action(el).catch((err) => {
+    toast(err.message);
+    render();
+  });
+});
+$("#app").addEventListener("keydown", (e) => {
+  const tab = e.target.closest('[data-action="xp-tab"]');
+  if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key))
+    return;
+  e.preventDefault();
+  const tabs = ["Characteristics", "Skills", "Talents", "Magic"],
+    index = tabs.indexOf(xpTab);
+  xpTab =
+    tabs[
+      e.key === "Home"
+        ? 0
+        : e.key === "End"
+          ? 3
+          : (index + (e.key === "ArrowRight" ? 1 : 3)) % 4
+    ];
+  render();
+  document.getElementById("xp-tab-" + xpTab)?.focus({ preventScroll: true });
+});
+$("#app").addEventListener("input", (e) => {
+  if (e.target.dataset.search) {
+    const key = e.target.dataset.search;
+    if (key === "career") {
+      careerSearch = e.target.value;
+      careerLimit = 12;
+    }
+    if (key === "magic") magicFilters.query = e.target.value;
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(render, 180);
+    return;
+  }
+  if (e.target.id === "xp-skill-search") {
+    if (!skillSearch)
+      openedSkillGroups = new Set(
+        [...document.querySelectorAll(".skill-catalog-group[open]")].map(
+          (x) => x.dataset.group,
+        ),
+      );
+    skillSearch = e.target.value;
+    filterSkills();
+    return;
+  }
+  if (e.target.id === "market-search") {
+    marketSearch = e.target.value;
+    filterMarket();
+    return;
+  }
+  const { bind, key } = e.target.dataset;
+  if (bind === "namePart") {
+    undoChoice = null;
+    setNamePart(s, key, e.target.value);
+    save();
+    if ($(".sheet h2")) $(".sheet h2").textContent = s.name || "Your character";
+    if ($(".identity-preview strong"))
+      $(".identity-preview strong").textContent = s.name || "Your character";
+    const picker = $("#book-" + key);
+    if (picker)
+      picker.value = [...picker.options].some((x) => x.value === e.target.value)
+        ? e.target.value
+        : "";
+    return;
+  }
+  if (bind === "background") {
+    undoChoice = null;
+    (s.background ??= {})[key] = e.target.value;
+    save();
+    const picker = $("#book-" + key);
+    if (picker)
+      picker.value = [...picker.options].some((x) => x.value === e.target.value)
+        ? e.target.value
+        : "";
+    return;
+  }
+  if (
+    ["name", "appearance", "ambition", "partyAmbition", "notes"].includes(bind)
+  ) {
+    undoChoice = null;
+    s[bind] = e.target.value;
+    save();
+    if (bind === "name" && $(".sheet h2"))
+      $(".sheet h2").textContent = s.name || "Your character";
+  }
+});
 
- if(a==='wealth'){if(s.wealth)return;const l=M.career(R,s).levels[0],count=l.status==='Brass'?2*l.standing:l.status==='Silver'?l.standing:0,total=count?M.roll(s,'Starting wealth',count,10,39).reduce((a,b)=>a+b,0):l.standing;s.wealth={amount:(l.status==='Brass'?20:l.status==='Silver'?10:2)+total,currency:l.status==='Brass'?'brass pennies':l.status==='Silver'?'silver shillings':'gold crowns'};}
- if(a==='dwarf-birthplace'){const n=M.roll(s,'Dwarf birthplace',1,100,41)[0];s.rolls.at(-1).source={book:'dwarf-guide',page:41};(s.background??={}).birthplace=R.dwarfCreation.birthplaces.rows.find(x=>n>=x.min&&n<=x.max).result;}
- if(a==='suggest-name'||a==='roll-name-part'){const keys=a==='suggest-name'?['forename','surname']:[el.dataset.key];for(const key of keys){const b=creationBackground(R,s),roll=(sides,p,kind,source,count=1)=>{const n=M.roll(s,`Book ${kind} suggestion`,count,sides,p).reduce((a,b)=>a+b,0);s.rolls.at(-1).source=source;if(kind.startsWith('Name element'))(s.nameElements??=[])[Number(kind.slice(-1))-1]=n;return n;};setNamePart(s,key,key==='forename'&&b.nameElements?traditionalName(R,s,roll):bookName(suggestion(R,s,key==='forename'?'forenames':'surnames',roll)));}}
- if(a==='roll-appearance'){(s.background??={})[el.dataset.key]=suggestion(R,s,el.dataset.kind,(sides,p,kind,source,count=1)=>{const n=M.roll(s,`Book ${kind} suggestion`,count,sides,p).reduce((a,b)=>a+b,0);s.rolls.at(-1).source=source;return n;});}
- if(a==='roll-dooming'){s.dooming=doomingResult(R,M.roll(s,'Dooming',1,100,118)[0]).text;}
- if(a==='buy-trapping'){const item=buyTrapping(R,s,el.dataset.id);toast(`${item.name} bought for ${item.price}. ${formatMoney(purse(R,s).remaining)} remains.`);}
- if(a==='remove-trapping'){const index=Number(el.dataset.index);if(!Number.isInteger(index)||index<0||index>=(s.purchases||[]).length)throw Error('Purchased item not found.');const itemKey=s.purchases[index].uid?`purchase-${s.purchases[index].uid}`:`purchase-${index}`;if(s.ledger.some(x=>x.linkedGear===itemKey))throw Error('Undo the linked Career acquisition before removing this purchase.');s.purchases.splice(index,1);toast('Purchase removed and money restored.');}
- if(a==='gear-quantities'){for(const g of gearSlots(R,s))for(const m of g.name.matchAll(/\{?(\d+)d10\}?/g)){const key=`${g.key}:${m[0]}`;if(s.gearRolls[key]===undefined)s.gearRolls[key]=M.roll(s,`Trapping: ${g.name}`,Number(m[1]),10,39).reduce((a,b)=>a+b,0);}}
- if(a==='xp-tab')xpTab=el.dataset.tab;
- if(a==='summary-toggle'){summaryExpanded=!summaryExpanded;saveFolioPreferences();}
- if(a==='set-xp'){const n=Number($('#xp').value);if(!Number.isInteger(n)||n<Math.max(0,M.derive(R,s).spent-M.derive(R,s).xpBonus)||n>1000000)throw Error('XP must be a whole number at least equal to the amount spent.');s.xp=n;toast('XP budget updated.');}
- if(a==='advance-size')s.advanceSize=Number(el.dataset.size);
- if(a==='buy'||a==='promote'){if(errors().length)throw Error('Finish the creation choices above first.');M.purchase(R,s,a==='promote'?'promotion':el.dataset.type,el.dataset.name||'',Number(el.dataset.amount)||5);toast(a==='promote'?'Career advanced.':'Improvement added to the XP ledger.');}
- if(a==='buy-technique'){if(errors().length)throw Error('Finish creation first.');M.purchase(R,s,'technique',el.dataset.name);}
- if(a==='buy-spell'){if(errors().length)throw Error('Finish the free magic choices first.');M.purchaseSpell(R,s,el.dataset.name,el.dataset.talent);}
- if(a==='acquire'){if(errors().length)throw Error('Finish creation first.');const [l,i]=$('#new-trapping').value.split(':').map(Number);recordAcquisition(R,s,l,i,$('#acquisition').value,$('#owned-trapping').value);}
- if(a==='undo'){s.ledger.pop();if(s.grudgeTargets)s.grudgeTargets=s.grudgeTargets.slice(0,M.derive(R,s).talents.filter(t=>M.base(t)==='Ancestral Grudge').length);s.spells=s.spells.slice(0,M.spellGrants(R,s).reduce((a,g)=>a+g.count,0));}
- if(a==='sheet'||a==='record'){if(errors().length)throw Error('Finish creation before exporting.');el.disabled=true;toast('Preparing your PDF…');const bytes=a==='sheet'?await exportSheet(R,s,undefined,undefined,{fullAppendix}):await exportRecord(R,s,{fullAppendix});download(bytes,`${s.name||'Character'}_${a==='sheet'?'Character_Sheet':'Creation_and_XP_Record'}.pdf`,'application/pdf');toast('Your PDF is ready.');}
- render();}
-$('#app').addEventListener('toggle',e=>{const detail=e.target;if(!detail.isConnected||!detail.dataset.folioSection)return;const key=detail.dataset.folioSection;if(detail.open)folioOpen.add(key);else folioOpen.delete(key);saveFolioPreferences();},true);
-$('#app').addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(!el||el.disabled||el.closest('fieldset[disabled]'))return;if(['legacy-info','source-info'].includes(el.dataset.action)){e.preventDefault();e.stopPropagation();}action(el).catch(err=>{toast(err.message);render();});});
-$('#app').addEventListener('keydown',e=>{const tab=e.target.closest('[data-action="xp-tab"]');if(!tab||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=['Characteristics','Skills','Talents','Magic'],index=tabs.indexOf(xpTab);xpTab=tabs[e.key==='Home'?0:e.key==='End'?3:(index+(e.key==='ArrowRight'?1:3))%4];render();document.getElementById('xp-tab-'+xpTab)?.focus({preventScroll:true});});
-$('#app').addEventListener('input',e=>{if(e.target.dataset.search){const key=e.target.dataset.search;if(key==='career'){careerSearch=e.target.value;careerLimit=12;}if(key==='magic')magicFilters.query=e.target.value;clearTimeout(searchTimer);searchTimer=setTimeout(render,180);return;}if(e.target.id==='xp-skill-search'){if(!skillSearch)openedSkillGroups=new Set([...document.querySelectorAll('.skill-catalog-group[open]')].map(x=>x.dataset.group));skillSearch=e.target.value;filterSkills();return;}if(e.target.id==='market-search'){marketSearch=e.target.value;filterMarket();return;}const {bind,key}=e.target.dataset;if(bind==='namePart'){undoChoice=null;setNamePart(s,key,e.target.value);save();if($('.sheet h2'))$('.sheet h2').textContent=s.name||'Your character';if($('.identity-preview strong'))$('.identity-preview strong').textContent=s.name||'Your character';const picker=$('#book-'+key);if(picker)picker.value=[...picker.options].some(x=>x.value===e.target.value)?e.target.value:'';return;}if(bind==='background'){undoChoice=null;(s.background??={})[key]=e.target.value;save();const picker=$('#book-'+key);if(picker)picker.value=[...picker.options].some(x=>x.value===e.target.value)?e.target.value:'';return;}if(['name','appearance','ambition','partyAmbition','notes'].includes(bind)){undoChoice=null;s[bind]=e.target.value;save();if(bind==='name'&&$('.sheet h2'))$('.sheet h2').textContent=s.name||'Your character';}});
-function handleChange(e,approved=false){const el=e.target,{bind,key}=el.dataset;
- const ui={careerBook:v=>careerBook=v,shopBook:v=>shopBook=v,shopGroup:v=>shopGroup=v,shopSort:v=>shopSort=v,shopAffordable:()=>shopAffordable=el.checked,xpCareerOnly:()=>xpCareerOnly=el.checked,xpAffordable:()=>xpAffordable=el.checked,fullAppendix:()=>fullAppendix=el.checked,magicFilter:v=>magicFilters[key]=v};
- if(ui[bind]){ui[bind](el.value);render();return;}
- const descriptor={dataset:{...el.dataset},value:el.value,checked:el.checked},destructive=['species','origin','career','dwarfCareerProfile','dwarfTrappingSwaps','dwarfCareerUpdate','careerVariant','originTalentMode'].includes(bind)||(bind==='elfChoice'&&key==='careerVariant');
- if(destructive&&!approved){if(locked()){toast('Undo or clear advancement before changing foundational choices.');render();return;}const diff=['career','dwarfCareerProfile','dwarfTrappingSwaps','dwarfCareerUpdate','careerVariant'].includes(bind)||(bind==='elfChoice'&&key==='careerVariant')?comparisonHTML(M.career(R,s),proposedCareer(bind,key,el.value,el.checked)):'';showImpact('Review this creation change',()=>handleChange({target:descriptor},true),diff,bind);return;}
- const before={s:structuredClone(s),R};try{if(!bind||['namePart','background','name','appearance','ambition','partyAmbition','notes'].includes(bind))return;
- if(elfChange(R,s,el)){if(key==='careerVariant')clearCareerSelections(s);undoChoice={...before,label:el.dataset.key||'background choice'};render();return;}
- if(bind==='bookName'){undoChoice=null;if(el.value)setNamePart(s,key,el.value);render();return;}
- if(bind==='backgroundChoice'){undoChoice=null;if(el.value)(s.background??={})[key]=el.value;render();return;}
- if(bind==='stepSwitch'){setupOpen=false;s.step=Number(el.value);render();window.scrollTo({top:0,behavior:'instant'});return;}
- if(bind==='careerFilter'){careerFilter=el.value;render();return;}
- if(bind==='rollTable'){(s.rollTables??={})[key]=el.value;randomTable(R,s,key);}
- else if(bind==='nameStyle')s.nameStyle=el.value;
- else if(bind==='nameElement'){(s.nameElements??=[])[Number(key)]=Number(el.value);const name=selectedTraditionalName(R,s);if(name)setNamePart(s,'forename',name);}
- else if(['chartEnabled','starSign','starTalent','mansionCount'].includes(bind)){if(s.ledger.length)throw Error('Undo or clear advancement before changing your star chart.');const chart=chartState(s);if(bind==='chartEnabled'){chart.enabled=el.checked;s.spells=[];}if(bind==='starSign'){chart.sign=el.value;chart.talent='';s.spells=[];}if(bind==='starTalent')chart.talent=el.value;if(bind==='mansionCount')chart.mansions=Array.from({length:Number(el.value)},(_,i)=>chart.mansions[i]||'');s.chart=chart;}
- else if(bind==='species'){if(s.species!==el.value){delete s.origin;s.background={};delete s.rollTables.career;}s.species=el.value;s.speciesMode='choose';resetDependent();s.careerAttempts=0;s.careerMode='choose';s.careerOffers=[];if(!careerAvailable(R,s,M.career(R,s)))s.career=R.careers.find(x=>careerAvailable(R,s,x)).id;}
- else if(bind==='origin'){if(s.ledger.length)throw Error('Undo or clear advancement before changing your origin.');s.origin=el.value;resetDependent();s.careerMode='choose';s.careerAttempts=0;s.careerOffers=[];delete s.rollTables.career;if(!careerAvailable(R,s,M.career(R,s)))s.career=R.careers.find(c=>careerAvailable(R,s,c)).id;}
- else if(bind==='originTalentMode'){if(s.ledger.length)throw Error('Undo or clear advancement before changing starting Talents.');s.originTalentMode=el.value;delete s.psychometrySlot;s.randomTalents=[];s.talentChoices={};s.freeTalent='';s.spells=[];}
- else if(bind==='longbeard'){if(locked())throw Error('Clear advancement before changing Longbeard.');s.longbeard=el.checked;}
- else if(bind==='longbeardAge'){const n=Number(el.value);if(!Number.isInteger(n)||n<120)throw Error('Enter an age of at least 120.');s.longbeardAge=n;}
- else if(bind==='grudgeTarget'){(s.grudgeTargets??=[])[Number(key)]=el.value;}
- else if(bind==='dwarfCareerProfile'){if(locked())throw Error('Clear advancement before changing your profile.');const speciesChoices=Object.fromEntries(Object.entries(s.skillChoices).filter(([k])=>k.startsWith('s-')));changeCareer(el.value,s.careerMode);s.skillChoices=speciesChoices;}
- else if(bind==='dwarfTrappingSwaps'){if(locked())throw Error('Clear advancement before changing equipment swaps.');const speciesChoices=Object.fromEntries(Object.entries(s.skillChoices).filter(([k])=>k.startsWith('s-'))),boost=s.boost;clearCareerSelections(s);s.skillChoices=speciesChoices;s.boost=boost;s.dwarfTrappingSwaps=el.checked;}
- else if(bind==='dwarfCareerUpdate'){if(locked())throw Error('Clear advancement before changing Career levels.');const u=R.careerUpdates.find(x=>x.id===el.value&&x.careers.includes(s.career)&&x.profile.level===Number(key));if(el.value&&(!u||u.unavailable))throw Error(u?.unavailable||'Unavailable variant.');const previous={...s.dwarfCareerUpdates},speciesChoices=Object.fromEntries(Object.entries(s.skillChoices).filter(([k])=>k.startsWith('s-'))),boost=s.boost;clearCareerSelections(s);s.skillChoices=speciesChoices;s.boost=boost;s.dwarfCareerUpdates={...previous,[key]:el.value};if(!el.value)delete s.dwarfCareerUpdates[key];}
- else if(bind==='careerVariant'){R=switchCareerVariant(library,R,s,el.value);toast(el.value?'Animal-doctor Hedge Witch selected.':'Standard Hedge Witch selected.');}
- else if(bind==='college'){if(locked())throw Error('Undo or clear advancement before changing your College.');s.college=el.value;s.spells=[];}
- else if(bind==='psychometrySlot'){if(locked())throw Error('Undo or clear advancement before changing the Psychometry trade.');if(el.value==='')delete s.psychometrySlot;else{s.psychometrySlot=Number(el.value);if(!psychometrySacrifice(R,s)||M.derive(R,s).skills.Augury>0){delete s.psychometrySlot;throw Error('Choose an available random Talent without possessing Augury.');}}s.spells=[];}
- else if(bind==='cantsEnabled'){s.cants={enabled:el.checked,choices:s.cants?.choices||{}};}
- else if(bind==='cant'){const choices=s.cants.choices[el.dataset.lore]||[];s.cants.choices[el.dataset.lore]=Array.from({length:Math.max(choices.length,Number(key)+1)},(_,i)=>i===Number(key)?el.value:choices[i]||'');}
- else if(bind==='originTalentSlot'){s.originTalentSlot=el.value;if(el.value===`random-${s.psychometrySlot}`)delete s.psychometrySlot;s.freeTalent='';s.spells=[];}
- else if(bind==='career'){delete s.careerRefinements;changeCareer(el.value);careerPreview=el.value;}
- else if(bind==='speciesSkills'||bind==='bonusGear'){const value=bind==='bonusGear'?Number(el.value):el.value;if(el.checked){const max=bind==='speciesSkills'?5:M.bonusTrappingLimit(R,s);if(s[bind].length>=max)throw Error(`Choose at most ${max}.`);s[bind].push(value);}else s[bind]=s[bind].filter(x=>x!==value);}
- else if(['points','boost','assignment'].includes(bind)){const n=Number(el.value);if(!Number.isInteger(n))throw Error('Use a whole number.');if(bind==='points'&&(n<4||n>16))throw Error('Allocate 4–16 points per Characteristic.');if(bind==='boost'&&(n<0||n>6))throw Error('Starting increases must be 0–6.');if(bind==='assignment'){const other=s.assignment.indexOf(n);s.assignment[other]=s.assignment[key];}s[bind][key]=n;}
- else if(['skillChoices','talentChoices','gearChoices'].includes(bind))s[bind][key]=el.value;
- else if(bind==='spells')s.spells[Number(key)]=el.value;
- else if(bind==='xp'){const n=Number(el.value);if(!Number.isInteger(n)||n<Math.max(0,M.derive(R,s).spent-M.derive(R,s).xpBonus)||n>1000000)throw Error('XP must be a whole number at least equal to the amount spent.');s.xp=n;}
- else{s[bind]=el.value;if(bind==='freeTalent'){s.spells=[];if(!extraCareerSkills(R,s).length)delete s.careerSkills['c1-wom-augury'];}}
- if(!['stepSwitch','careerFilter','rollTable'].includes(bind)&&JSON.stringify(before.s)!==JSON.stringify(s))undoChoice={...before,label:bind==='species'?'Species change':bind==='origin'?'origin change':bind==='career'?'Career change':'last creation choice'};render();}catch(err){s=before.s;R=before.R;toast(err.message);render();}}
-$('#app').addEventListener('change',handleChange);
-$('#app').addEventListener('change',async e=>{if(e.target.id!=='import-file')return;try{const file=e.target.files[0];if(!file||file.size>3000000)throw Error('Choose a character JSON file under 3 MB.');const incoming=JSON.parse(await file.text()),next=catalogForCharacter(library,incoming);if(incoming.version!==2||!next.species[incoming.species]||!next.careers.some(c=>c.id===incoming.career)||!Array.isArray(incoming.ledger)||!Array.isArray(incoming.rolls))throw Error('Unsupported character file. Start a new WIP character.');const old=s,oldR=R;R=next;s={...newCharacter(),...restoreNavigation(incoming)};try{for(const kind of ['species','career','talent'])randomTable(R,s,kind);M.derive(R,s);errors();}catch{s=old;R=oldR;throw Error('Character file contains invalid values.');}setupOpen=false;undoChoice=null;careerPreview='';render();toast('Character and selected books loaded. Imported rolls are history, not newly generated dice.');}catch(err){toast(err.message);}});
-render();if(restoreIssue)toast(`Draft could not be restored: ${restoreIssue}`);
-if(document.modelContext?.registerTool){try{document.modelContext.registerTool({name:'read_character',annotations:{readOnlyHint:true,untrustedContentHint:true},description:'Read the current WFRP character, unresolved choices, XP ledger, and roll history.',inputSchema:{type:'object',properties:{}},execute:async()=>({content:[{type:'text',text:JSON.stringify({character:s,derived:M.derive(R,s),unresolved:errors()})}]})});document.modelContext.registerTool({name:'show_creation_step',annotations:{readOnlyHint:false,untrustedContentHint:false},description:'Open a creation step without changing character choices.',inputSchema:{type:'object',properties:{step:{type:'integer',minimum:1,maximum:steps.length}},required:['step']},execute:async({step})=>{if(!Number.isInteger(step)||step<1||step>steps.length)throw Error(`Step must be 1–${steps.length}.`);setupOpen=false;s.step=step-1;render();return {content:[{type:'text',text:`Opened ${steps[s.step]}`}]};}});}catch{}}
+$("#app").addEventListener("change", handleChange);
+$("#app").addEventListener("change", async (e) => {
+  if (e.target.id !== "import-file") return;
+  try {
+    const file = e.target.files[0];
+    if (!file || file.size > 3000000)
+      throw Error("Choose a character JSON file under 3 MB.");
+    const incoming = JSON.parse(await file.text()),
+      next = catalogForCharacter(library, incoming);
+    if (
+      incoming.version !== 2 ||
+      !next.species[incoming.species] ||
+      !next.careers.some((c) => c.id === incoming.career) ||
+      !Array.isArray(incoming.ledger) ||
+      !Array.isArray(incoming.rolls)
+    )
+      throw Error("Unsupported character file. Start a new WIP character.");
+    const old = s,
+      oldR = R;
+    R = next;
+    s = { ...newCharacter(), ...restoreNavigation(incoming) };
+    try {
+      for (const kind of ["species", "career", "talent"])
+        randomTable(R, s, kind);
+      result().derived;
+      errors();
+    } catch {
+      s = old;
+      R = oldR;
+      throw Error("Character file contains invalid values.");
+    }
+    setupOpen = false;
+    undoChoice = null;
+    careerPreview = "";
+    render();
+    toast(
+      "Character and selected books loaded. Imported rolls are history, not newly generated dice.",
+    );
+  } catch (err) {
+    toast(err.message);
+  }
+});
+render();
+if (restoreIssue) toast(`Draft could not be restored: ${restoreIssue}`);
+if (document.modelContext?.registerTool) {
+  try {
+    document.modelContext.registerTool({
+      name: "read_character",
+      annotations: { readOnlyHint: true, untrustedContentHint: true },
+      description:
+        "Read the current WFRP character, unresolved choices, XP ledger, and roll history.",
+      inputSchema: { type: "object", properties: {} },
+      execute: async () => ({
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify({
+              character: s,
+              derived: result().derived,
+              unresolved: errors(),
+            }),
+          },
+        ],
+      }),
+    });
+    document.modelContext.registerTool({
+      name: "show_creation_step",
+      annotations: { readOnlyHint: false, untrustedContentHint: false },
+      description: "Open a creation step without changing character choices.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          step: { type: "integer", minimum: 1, maximum: steps.length },
+        },
+        required: ["step"],
+      },
+      execute: async ({ step }) => {
+        if (!Number.isInteger(step) || step < 1 || step > steps.length)
+          throw Error(`Step must be 1–${steps.length}.`);
+        setupOpen = false;
+        s.step = step - 1;
+        render();
+        return { content: [{ type: "text", text: `Opened ${steps[s.step]}` }] };
+      },
+    });
+  } catch {}
+}
 
 let searchTimer;
-$('#creator-dialog').addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(!el)return;e.preventDefault();action(el).catch(err=>toast(err.message));});
-$('#creator-dialog').addEventListener('input',e=>{if(!e.target.dataset.dialogSearch)return;const q=e.target.value.trim().toLowerCase();for(const row of $('#creator-dialog').querySelectorAll('[data-dialog-row]'))row.hidden=!!q&&!row.dataset.dialogRow.includes(q);});
-$('#creator-dialog').addEventListener('close',()=>pendingChange=null);
-document.addEventListener('keydown',e=>{if(e.target.matches('span.source[role="button"]')&&['Enter',' '].includes(e.key)){e.preventDefault();e.target.click();}});
+$("#creator-dialog").addEventListener("click", (e) => {
+  const el = e.target.closest("[data-action]");
+  if (!el) return;
+  e.preventDefault();
+  action(el).catch((err) => toast(err.message));
+});
+$("#creator-dialog").addEventListener("input", (e) => {
+  if (!e.target.dataset.dialogSearch) return;
+  const q = e.target.value.trim().toLowerCase();
+  for (const row of $("#creator-dialog").querySelectorAll("[data-dialog-row]"))
+    row.hidden = !!q && !row.dataset.dialogRow.includes(q);
+});
+$("#creator-dialog").addEventListener("close", () => (pendingChange = null));
+document.addEventListener("keydown", (e) => {
+  if (
+    e.target.matches('span.source[role="button"]') &&
+    ["Enter", " "].includes(e.key)
+  ) {
+    e.preventDefault();
+    e.target.click();
+  }
+});

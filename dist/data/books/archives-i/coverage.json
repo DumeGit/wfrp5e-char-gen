@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "archives-i:feature:lip-reading",
+      "name": "Ghost Strider: Lip Reading in Skill list",
+      "status": "unavailable",
+      "source": {
+        "book": "archives-i",
+        "page": 88
+      },
+      "reason": "Printed under Skills but is a core Talent; user chose to leave this entry unavailable."
+    },
+    {
+      "id": "archives-i:feature:kindred",
+      "name": "Kindred trials, followers and animal management",
+      "status": "deferred",
+      "source": {
+        "book": "archives-i"
+      },
+      "reason": "Starting origins and Career choices are supported; campaign progression is deferred."
+    }
+  ]
+}

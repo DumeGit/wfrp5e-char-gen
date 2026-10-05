@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "rough-nights:feature:suffuse",
+      "name": "Suffuse with Ulgu situational effects",
+      "status": "reference-only",
+      "source": {
+        "book": "rough-nights",
+        "page": 88
+      },
+      "reason": "Talent selection is supported; Stealth substitution and nearby casting bonuses are descriptions for play."
+    },
+    {
+      "id": "rough-nights:feature:pub-games",
+      "name": "Pub games, adventures and patron strictures tracking",
+      "status": "deferred",
+      "source": {
+        "book": "rough-nights"
+      },
+      "reason": "NPCs and adventure rewards do not become starting profiles or grants."
+    }
+  ]
+}

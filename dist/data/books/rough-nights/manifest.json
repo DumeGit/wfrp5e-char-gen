@@ -30,6 +30,7 @@
     "talents": "talents.json",
     "tables": "tables.json",
     "rules": "rules.json",
-    "cults": "cults.json"
+    "cults": "cults.json",
+    "coverage": "coverage.json"
   }
 }

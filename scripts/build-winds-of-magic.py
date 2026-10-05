@@ -9,7 +9,11 @@ args=parser.parse_args(); args.output_dir.mkdir(parents=True,exist_ok=True)
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 slug=lambda s:re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD',s).encode('ascii','ignore').decode().lower()).strip('-')
 norm=lambda s:re.sub(r'\s+',' ',s.replace('T est','Test').replace('T oughness','Toughness').replace('W illpower','Willpower')).strip()
-def write(n,v):(args.output_dir/n).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+from book_build import prepare_manifest
+
+def write(n, v):
+    v = prepare_manifest(n, v, args.output_dir)
+    (args.output_dir/n).write_text(json.dumps(v, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 def convert(t):
     t=norm(t)
     for name,number in [('Very Easy',60),('Easy',40),('Average',20),('Challenging',0),('Difficult',-10),('Hard',-20),('Very Hard',-30)]:

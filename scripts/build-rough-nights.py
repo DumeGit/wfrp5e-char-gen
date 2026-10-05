@@ -20,8 +20,11 @@ args = parser.parse_args()
 args.output_dir.mkdir(parents=True, exist_ok=True)
 read = lambda path: json.loads(path.read_text(encoding='utf-8-sig'))
 slug = lambda text: re.sub(r'[^a-z0-9]+','-',text.lower()).strip('-')
+from book_build import prepare_manifest
+
 def write(name, value):
-    (args.output_dir/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    value = prepare_manifest(name, value, args.output_dir)
+    (args.output_dir/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 pages = read(STAGED/'pages.json')
 tables = read(STAGED/'tables.raw.json')

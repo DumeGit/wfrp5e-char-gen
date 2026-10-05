@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "archives-iii:feature:old-faith",
+      "name": "Old Faith extra Blessing prices",
+      "status": "adapted",
+      "source": {
+        "book": "archives-iii",
+        "page": 58
+      },
+      "reason": "Exclude six Bless-granted prayers; count Invoke and bought prayers for escalating core Miracle prices."
+    },
+    {
+      "id": "archives-iii:feature:cants",
+      "name": "Optional free Cant selections and export",
+      "status": "implemented",
+      "source": {
+        "book": "archives-iii",
+        "page": "85–88"
+      },
+      "reason": "Choose at 1/3/6 learned Colour Lore spells, without live power tracking."
+    },
+    {
+      "id": "archives-iii:feature:armour",
+      "name": "Alternative armour system",
+      "status": "unavailable",
+      "source": {
+        "book": "archives-iii",
+        "page": "34–38"
+      },
+      "reason": "User chose to skip this entire alternative, including its new profiles."
+    },
+    {
+      "id": "archives-iii:feature:familiar",
+      "name": "Animal Familiar creation and progression",
+      "status": "deferred",
+      "source": {
+        "book": "archives-iii",
+        "page": "75–82"
+      },
+      "reason": "User deferred the whole chapter until the character manager."
+    },
+    {
+      "id": "archives-iii:feature:enterprises",
+      "name": "Enterprises, including starting ownership",
+      "status": "deferred",
+      "source": {
+        "book": "archives-iii",
+        "page": 6
+      },
+      "reason": "User deferred ownership, debt, trade and business management together."
+    },
+    {
+      "id": "archives-iii:feature:campaign",
+      "name": "Live casting/Cants, armour maintenance and adventures",
+      "status": "deferred",
+      "source": {
+        "book": "archives-iii"
+      },
+      "reason": "Selections/descriptions are available; play systems are deferred."
+    }
+  ]
+}

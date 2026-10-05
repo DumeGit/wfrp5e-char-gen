@@ -30,6 +30,7 @@
     "spells": "spells.json",
     "origins": "origins.json",
     "rules": "rules.json",
-    "cants": "cants.json"
+    "cants": "cants.json",
+    "coverage": "coverage.json"
   }
 }
