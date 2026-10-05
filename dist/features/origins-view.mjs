@@ -1,3 +1,4 @@
+import { chapterHeading } from "../design-system.mjs";
 import { sourceButton } from "../source-controls.mjs";
 import { elfOriginPanel } from "../high-elf-ui.mjs";
 import { dwarfOriginPanel } from "../dwarf-guide-ui.mjs";
@@ -73,7 +74,7 @@ export function createFeature(getContext, setContext) {
               : s.species === "Dwarf"
                 ? "Surname / clan name"
                 : "Surname";
-    return `<span class="eyebrow">01 / Origins</span><h1>Origins & identity</h1>${bookPanel(library, R)}<p class="muted">Choose your Species, name and appearance.</p>
+    return `<span class="eyebrow">01 / Origins</span>${chapterHeading("Origins & identity")}${bookPanel(library, R)}<p class="muted">Choose your Species, name and appearance.</p>
 <div class="origin-species"><div class="field"><label for="species">Species</label>${select('id="species" data-bind="species"', Object.keys(R.species), s.species)}</div>${button("species-roll", "Roll Species · d100", "", "primary")}</div>${tablePicker(R, s, "species")}<p class="small muted">${s.speciesMode === "first" ? "+1 Fortune · first roll accepted" : s.speciesAttempts ? "Later roll / choice · no bonus" : "Chosen Species · no random bonus"}</p>
 <div class="notice">${s.species} begins with ${sp.fate} Fate, ${sp.fortune} Fortune and Movement ${sp.movement}. Fate and Fortune are separate values. ${ref(sp)}<br>Accepting your first Species roll adds 1 Fortune. Accepting the first Species, Career and Characteristics rolls adds 1 Fate. ${page("23, 40")}</div>${speciesRulePanel(R, s)}${regionalOrigins()}${dwarfOriginPanel(R, s)}${elfOriginPanel(R, s)}<h2>Your name ${sourceButton(R, b)}</h2>${nameStylePanel(R, s, { select })}<p class="small muted">Write your own, choose from the book, or roll each part separately.</p>
 <div class="cols">${originSuggestionField("First name", "forename", "forenames", parts.forename, true)}${originSuggestionField(surnameLabel, "surname", "surnames", parts.surname, true)}</div>

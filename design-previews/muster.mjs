@@ -57,7 +57,7 @@ function preview(c) {
   study.querySelector(".nav-foot").textContent = "By ink and oath.";
   study.querySelector(".portrait > span").textContent = "WS";
   study.querySelector(".study-page h4").innerHTML =
-    `<span class="illuminated-initial">S</span>pend experience`;
+    `<span class="illuminated-initial"><span>S</span></span>pend experience`;
   study.querySelector(".page-sub").textContent = "The next deed awaits.";
   study.querySelector(".folio-footer > span").textContent =
     "A record of deeds. A promise of more.";

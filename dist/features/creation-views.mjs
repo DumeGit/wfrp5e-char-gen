@@ -1,3 +1,4 @@
+import { chapterHeading } from "../design-system.mjs";
 import { sourceButton } from "../source-controls.mjs";
 import { detailKey } from "../disclosures.mjs";
 import { elfSkillsPanel } from "../high-elf-ui.mjs";
@@ -84,7 +85,7 @@ export function createFeature(getContext, setContext) {
     const c = M.career(R, s),
       available = R.careers.filter((x) => careerAvailable(R, s, x)),
       bonus = M.bonusTrappingLimit(R, s);
-    return `<h1>Choose your Career</h1>
+    return `${chapterHeading("Choose your Career")}
 <p class="muted">${available.length} of ${R.careers.length} enabled Careers are available to ${esc(originProfile(R, s)?.name || s.species)} characters.</p>${careerBrowser(R, s, { query: careerSearch, className: careerFilter, book: careerBook, preview: careerPreview, limit: careerLimit })}${tablePicker(R, s, "career")}<div class="actions">${button("career-roll", s.careerAttempts ? "Roll another Career" : "Roll Career · d100", randomTable(R, s, "career") ? "" : 'disabled title="Choose a printed Career roll table above, or choose a Career directly"', "primary")}${s.careerAttempts === 1 && randomTable(R, s, "career") ? button("career-three", "Roll two more") : ""}</div>${
       s.careerOffers.length === 3
         ? `<p class="small">Choose one result for one bonus Trapping:</p>
@@ -144,7 +145,7 @@ export function createFeature(getContext, setContext) {
     const c = M.career(R, s),
       sp = R.species[s.species],
       budget = s.charMode === "first" ? 6 : s.charMode === "rearrange" ? 3 : 0;
-    return `<span class="eyebrow">03 / Characteristics</span><h1>Characteristics</h1>${legacyTag(R, R.species[s.species])}<p class="muted">Each score starts with your Species modifier and a roll or point allocation. ${page(38)}</p>
+    return `<span class="eyebrow">03 / Characteristics</span>${chapterHeading("Characteristics")}${legacyTag(R, R.species[s.species])}<p class="muted">Each score starts with your Species modifier and a roll or point allocation. ${page(38)}</p>
 <div class="actions">${button("char-roll", s.charAttempts ? "Reroll 10 × 2d10" : "Roll 10 × 2d10", "", "primary")}${button("char-points", "Allocate 100 points")}${s.charRolls.length ? button("char-rearrange", "Rearrange rolled values") : ""}</div>
 <div class="notice">${s.charMode === "points" ? "Distribute exactly 100 points, from 4 to 16 in each Characteristic." : s.charMode === "first" ? "First rolls retained in order: up to +6 starting points across your three Career Characteristics." : s.charMode === "rearrange" ? "First results rearranged: up to +3 starting points across your three Career Characteristics." : "Rerolled results: assign each result once; no extra starting points."}</div>${
       s.charMode === "points"
@@ -186,7 +187,7 @@ export function createFeature(getContext, setContext) {
 
     const slots = M.careerSkillSlots(R, s),
       total = Object.values(s.careerSkills).reduce((a, b) => a + b, 0);
-    return `<span class="eyebrow">04 / Skills</span><h1>Starting Skills</h1>
+    return `<span class="eyebrow">04 / Skills</span>${chapterHeading("Starting Skills")}
 <p class="muted">Every Advance is +5. Ordinary creation Skills may receive at most three Advances in total. ${page("38–39")}</p>
 <div class="allocation-budgets" aria-label="Starting Skill budgets"><span><strong>${s.speciesSkills.length}/5</strong> Species Skills · +5 each</span><span><strong>${total}/8</strong> Career Advances · +5 each</span><small>Native languages and Elder points are separate grants.</small></div>${elfSkillsPanel(R, s)}<section class="species-skill-section"><h3>Species Skills <span class="counter">${s.speciesSkills.length} / 5 chosen</span></h3>
 <p class="small muted">Choose five Skills · +5 each. ${ref(creationSpecies(R, s))}</p>
@@ -265,7 +266,7 @@ export function createFeature(getContext, setContext) {
     const sp = creationSpecies(R, s),
       d = result().derived,
       replacement = startingTalentReplacement(R, s);
-    return `<span class="eyebrow">05 / Talents</span><h1>Starting Talents</h1>
+    return `<span class="eyebrow">05 / Talents</span>${chapterHeading("Starting Talents")}
 <p class="muted">Choose your special abilities and any starting spells or Miracles.</p>
 <h3>Species Talents</h3>${originTalentChoice(R, s)}${lucciniTalentChoice()}${sp.talents
       .map((_, i) => {
@@ -313,7 +314,7 @@ export function createFeature(getContext, setContext) {
 
     const d = result().derived,
       eq = result().equipment;
-    return `<span class="eyebrow">06 / Gear & money</span><h1>Gear & money</h1>
+    return `<span class="eyebrow">06 / Gear & money</span>${chapterHeading("Gear & money")}
 <p class="muted">Resolve your starting belongings, roll your purse, and buy extra equipment.</p>${kitSummary(R, s, { select, button, tag: (slot) => legacyTag(R, legacyGear(R, s, slot)) })}${eq.notes
       .filter((n) => !n.startsWith("Creator defaults:"))
       .map((n) => `<div class="notice">${esc(n)}</div>`)

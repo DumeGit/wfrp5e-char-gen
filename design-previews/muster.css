@@ -867,3 +867,12 @@
     display: none;
   }
 }
+
+.illuminated-initial {
+  line-height: 1;
+}
+.illuminated-initial > span {
+  display: block;
+  line-height: 1;
+  transform: translateY(-0.045em);
+}

@@ -1,12 +1,20 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"e7f4ddf7467485895adb";
+const CACHE=CACHE_PREFIX+"3ef9725abfdfe38da423";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
  "archives-iii.mjs",
  "archives-ui.mjs",
  "assets/LICENSE-pdf-lib.md",
+ "assets/black-banner/banner.png",
+ "assets/black-banner/w.svg",
  "assets/character-sheet.pdf",
+ "assets/fonts/cinzel-OFL.txt",
+ "assets/fonts/cinzel.ttf",
+ "assets/fonts/fell-OFL.txt",
+ "assets/fonts/fell.ttf",
+ "assets/fonts/gothic-OFL.txt",
+ "assets/fonts/gothic.ttf",
  "assets/icon-180.png",
  "assets/icon-192.png",
  "assets/icon-512.png",
@@ -139,6 +147,10 @@ const ASSETS=[
  "data/species.json",
  "data/spells.json",
  "data/talents.json",
+ "design-system.css",
+ "design-system.html",
+ "design-system.mjs",
+ "design-tokens.css",
  "disclosures.mjs",
  "dwarf-guide-ui.mjs",
  "dwarf-guide.mjs",

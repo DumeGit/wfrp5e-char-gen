@@ -1,3 +1,4 @@
+import { chapterHeading } from "../design-system.mjs";
 import { detailKey } from "../disclosures.mjs";
 import { grudgePanel, runeShopRows } from "../dwarf-guide-ui.mjs";
 import * as M from "../rules.mjs";
@@ -219,7 +220,7 @@ export function createFeature(getContext, setContext) {
             "quiet",
           )
         : "";
-    return `<span class="eyebrow">07 / Experience</span><h1>Spend experience</h1>
+    return `<span class="eyebrow">07 / Experience</span>${chapterHeading("Spend experience")}
 <p class="muted">Each purchase has an exact price, source, and tracker effect. ${page("191, 364")}</p>
 <div class="xp-balance xp-sticky-balance"><div><span>XP budget</span><strong>${d.xpTotal.toLocaleString()}</strong>${d.xpBonus ? `<small>${s.xp.toLocaleString()} base + ${d.xpBonus} star-sign XP</small>` : ""}</div>
 <div><span>Spent</span><strong>${d.spent.toLocaleString()}</strong></div>

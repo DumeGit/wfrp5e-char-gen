@@ -1,3 +1,4 @@
+import { initDesignMotion } from "./design-system.mjs";
 import { createFeature as createWorkspaceShell } from "./features/workspace-shell.mjs";
 import { captureDisclosures, restoreDisclosures } from "./disclosures.mjs";
 import { createFeature as create_controls } from "./features/controls.mjs";
@@ -44,6 +45,8 @@ import { sheetSpecies } from "./origins.mjs";
 
 import { syncCants } from "./archives-iii.mjs";
 import { cantPanel } from "./archives-iii-ui.mjs";
+
+initDesignMotion();
 
 const library = await loadBookLibrary(async (url) => {
   const r = await fetch(url);

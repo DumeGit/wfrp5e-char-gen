@@ -1,3 +1,4 @@
+import { ledgerEmblem } from "../design-system.mjs";
 import * as M from "../rules.mjs";
 import {
   characteristicNames,
@@ -64,7 +65,7 @@ export function createFeature(getContext) {
 </nav>
 <div class="header-actions">${button("save-file", "Save character")}${button("load-file", "Load character")}${button("new", "New character")}<input type="file" id="import-file" accept="application/json,.json" hidden>
 </div>
-<p class="save-status">Saved automatically on this device</p>${button("sources", "Sources & decisions", "", "text-button")}${button("books", "Choose books", "", "text-button")}</aside>
+<p class="save-status">Saved automatically on this device</p>${button("sources", "Sources & decisions", "", "text-button")}${button("books", "Choose books", "", "text-button")}<div class="rail-seal" aria-hidden="true">${ledgerEmblem()}</div><p class="rail-oath">By ink and oath.</p></aside>
 <main class="panel">
 <div class="stage-meta">
 <span>Step ${s.step + 1} of ${steps.length}</span>
@@ -82,7 +83,7 @@ export function createFeature(getContext) {
     }${!setupOpen && s.step === 4 && hasColourMagic() ? cantPanel(R, s) : ""}${!setupOpen && s.step === 5 ? marketShop() + penaltySummary(R, s) : ""}${!setupOpen ? `<div class="step-footer">${s.step ? button("step", "Back", `data-step="${s.step - 1}"`) : "<span></span>"}<span class="footer-position">${s.step + 1} / ${steps.length}</span>${s.step < reviewStep ? button("step", `Continue to ${steps[s.step + 1]}`, `data-step="${s.step + 1}"`, "primary") : button("step", "Back to Experience", `data-step="${experienceStep}"`)}</div>` : ""}</main>
 <aside class="sheet ${summaryExpanded ? "expanded" : ""}" aria-label="Character summary">
 <div class="sheet-heading">
-<span class="eyebrow">Character folio</span>
+<span class="eyebrow">Character folio</span><div class="folio-crest" aria-hidden="true">${ledgerEmblem()}</div>
 <h2>${esc(s.name || "Your character")}</h2>
 <p>${esc(sheetSpecies(R, s))} · ${esc(c.name)} ${legacyTag(R, legacyContext(R, s))}</p>
 <span class="profile-badge">${esc(c.levels[d.level - 1].name)} · ${d.status}</span>${button("summary-toggle", summaryExpanded ? "Hide details" : "View character", `aria-expanded="${summaryExpanded}" aria-controls="sheet-body"`, "summary-toggle")}</div>

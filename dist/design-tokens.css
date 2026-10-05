@@ -1,0 +1,96 @@
+/* Black Banner v1. Semantic roles are the public styling API for new features. */
+@font-face {
+  font-family: Ledger Text;
+  src: url(assets/fonts/fell.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Ledger Caps;
+  src: url(assets/fonts/cinzel.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: Ledger Display;
+  src: url(assets/fonts/gothic.ttf) format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --color-world: #201a16;
+  --color-leather: #30221b;
+  --color-leather-deep: #251c17;
+  --color-leather-raised: #493328;
+  --color-on-leather: #f2dfb7;
+  --color-on-leather-muted: #c7af88;
+  --color-line-dark: #806744;
+  --color-paper: #eee0bd;
+  --color-paper-raised: #f9f0db;
+  --color-paper-recessed: #e5d4ae;
+  --color-paper-hover: #f5e6c5;
+  --color-ink: #38291d;
+  --color-muted: #70583c;
+  --color-line: #c4ab7d;
+  --color-line-soft: #d4c19b;
+  --color-gold: #bda16a;
+  --color-gold-light: #e5c683;
+  --color-gold-dark: #82613a;
+  --color-crimson: #812c31;
+  --color-crimson-hover: #662127;
+  --color-on-crimson: #fff1ce;
+  --color-success: #3e6045;
+  --color-success-surface: #e8eddb;
+  --color-success-line: #9aaa86;
+  --color-success-on-dark: #bdd0a5;
+  --color-warning: #785422;
+  --color-warning-surface: #f2e4c1;
+  --color-error: #7b292e;
+  --color-error-surface: #f4dfd6;
+  --color-error-line: #c89988;
+  --color-legacy: #65475b;
+  --color-legacy-surface: #efe2e8;
+  --color-legacy-line: #b697a7;
+  --color-focus: #8a5425;
+  --color-career-start-tint: #eee0d2;
+  --color-career-later: #62646b;
+  --color-career-later-tint: #e4e1d6;
+  --color-career-1-on-dark: #d9868e;
+  --color-career-2-on-dark: #88c69f;
+  --color-career-3-on-dark: #b8c2cd;
+  --font-body: "Segoe UI", system-ui, sans-serif;
+  --font-heading: "Ledger Text", Georgia, serif;
+  --font-caps: "Ledger Caps", Georgia, serif;
+  --font-banner: "Ledger Display", Georgia, serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-heading: clamp(1.9rem, 2.5vw, 2.5rem);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --radius-control: 2px;
+  --radius-surface: 2px;
+  --shadow-surface: 0 8px 28px #120b0755;
+  --shadow-dialog: 0 16px 60px #120b0780;
+  --line-ornament: 3px double var(--color-gold);
+  --control-height: 44px;
+  --control-height-compact: 36px;
+  --layout-max: 1700px;
+  --layout-rail: 210px;
+  --layout-folio: 310px;
+  --motion-control: 160ms;
+  --motion-ash: 16s;
+  --motion-mist: 22s;
+  --motion-candle: 7s;
+  /* Existing features consume these aliases; new code uses semantic roles above. */
+  --ink: var(--color-ink);
+  --paper: var(--color-paper);
+  --muted: var(--color-muted);
+  --line: var(--color-line-soft);
+  --red: var(--color-crimson);
+  --green: var(--color-success);
+  --brass: var(--color-gold);
+  --focus: var(--color-focus);
+}

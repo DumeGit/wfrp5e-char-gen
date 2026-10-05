@@ -1,3 +1,4 @@
+import { chapterHeading } from "./design-system.mjs";
 import { randomTable } from "./books.mjs";
 import { sourceLabel } from "./sources.mjs";
 import { LEGACY_EXPLANATION } from "./legacy.mjs";
@@ -16,7 +17,7 @@ export function bookPanel(library, R) {
 
 export function bookSetup(library, R) {
   const enabled = new Set(R.selection.map((x) => x.id));
-  return `<span class="eyebrow">Before you begin</span><h1>Choose your books</h1>
+  return `<span class="eyebrow">Before you begin</span>${chapterHeading("Choose your books")}
 <p class="muted">Select the supplied books you want to use for this character. Fifth Edition core rules remain the foundation.</p>
 <div class="notice">Changing books starts a new character. Career variants are chosen later in Career; selecting a supplement does not enable every optional rule.</div>
 <div class="book-grid">${library.packs

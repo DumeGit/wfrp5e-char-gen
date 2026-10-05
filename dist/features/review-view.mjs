@@ -1,3 +1,4 @@
+import { chapterHeading } from "../design-system.mjs";
 import { sourceButton } from "../source-controls.mjs";
 import { detailKey } from "../disclosures.mjs";
 import { elfReview } from "../high-elf-ui.mjs";
@@ -46,7 +47,7 @@ export function createFeature(getContext, setContext) {
       c = M.career(R, s),
       eq = result().equipment,
       e = errors();
-    return `<span class="eyebrow">08 / Review & export</span><h1>${esc(s.name || "Your character")}</h1>
+    return `<span class="eyebrow">08 / Review & export</span>${chapterHeading(s.name || "Your character")}
 <p class="muted">${esc(sheetSpecies(R, s))} · ${c.name} / ${c.levels[d.level - 1].name} · ${d.status}</p>${speciesRulePanel(R, s)}${e.length ? issuePanel(e, "Finish these choices to export") : `<div class="notice success"><strong>Ready to export.</strong> Your sheet, free benefits, dice results and every XP purchase are accounted for.</div>`}<div class="actions">${button("sheet", "Download character sheet", e.length ? "disabled" : "", "primary")}${button("record", "Download creation & XP record", e.length ? "disabled" : "", "secondary")}</div>
 <label class="check-row"><input type="checkbox" data-bind="fullAppendix" ${fullAppendix ? "checked" : ""}>Include the complete enabled-book compatibility appendix</label><p class="small muted">Every character choice, applicable adaptation, roll and XP purchase is always included. The optional appendix also lists unused content conversions.</p>
 <p class="small muted">The sheet uses your supplied fillable PDF. The complete creation record is appended to the sheet, including anything that exceeds its available rows. You can also download the record separately.</p>${reviewNotices(d, eq)}<h3>Characteristics</h3>

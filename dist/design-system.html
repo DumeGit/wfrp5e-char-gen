@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Black Banner — Component reference</title>
+    <link rel="icon" href="assets/black-banner/w.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="workspace.css" />
+    <link rel="stylesheet" href="book-search.css" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="design-system.css" />
+    <style>
+      .system-guide {
+        max-width: 1100px;
+        margin: 24px auto;
+        padding: 0 24px;
+      }
+      .system-guide .panel {
+        padding: 32px;
+      }
+      .kit-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .system-guide section {
+        min-width: 0;
+      }
+      .system-guide .sheet {
+        position: static;
+        max-height: none;
+      }
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .swatch {
+        height: 60px;
+        border: 1px solid var(--color-line);
+        margin-bottom: 6px;
+      }
+      .system-guide code {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+      }
+      .system-guide .folio-list {
+        text-align: left;
+      }
+      @media (max-width: 760px) {
+        .system-guide {
+          padding: 0 3%;
+        }
+        .kit-grid {
+          grid-template-columns: 1fr;
+        }
+        .system-guide .panel {
+          padding: 22px 18px;
+        }
+        .system-guide .folio-crest {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-art" aria-hidden="true"></div>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"
+          ><img class="ledger-emblem" src="assets/black-banner/w.svg" alt=""
+        /></span>
+        <div class="brand-title">
+          <span class="brand-world">THE CHARACTER LEDGER</span
+          ><strong>The Black Banner</strong
+          ><small>DESIGN SYSTEM · VERSION ONE</small>
+        </div>
+      </div>
+      <div class="masthead-actions">
+        <button
+          id="design-motion"
+          type="button"
+          class="quiet"
+          aria-pressed="true"
+        >
+          Pause motion</button
+        ><a class="quiet" href="./">Open creator</a>
+      </div>
+      <div class="banner-search-ribbon">
+        <span class="banner-caption">COMPONENT REFERENCE</span
+        ><span class="banner-caption"
+          >No character data or game rules are changed here.</span
+        >
+      </div>
+    </header>
+    <main class="system-guide">
+      <article class="panel">
+        <div class="stage-meta">
+          <span>THE SHARED VISUAL LANGUAGE</span><span>BLACK BANNER v1</span>
+        </div>
+        <div id="system-heading"></div>
+        <p class="muted">
+          Reusable controls and states for current and future features. This
+          page uses the creator’s actual styles and local assets.
+        </p>
+        <h2>Materials</h2>
+        <div class="swatches">
+          <div>
+            <div class="swatch" style="background: var(--color-leather)"></div>
+            <code>--color-leather</code>
+          </div>
+          <div>
+            <div class="swatch" style="background: var(--color-paper)"></div>
+            <code>--color-paper</code>
+          </div>
+          <div>
+            <div class="swatch" style="background: var(--color-gold)"></div>
+            <code>--color-gold</code>
+          </div>
+          <div>
+            <div class="swatch" style="background: var(--color-crimson)"></div>
+            <code>--color-crimson</code>
+          </div>
+          <div>
+            <div class="swatch" style="background: var(--color-ink)"></div>
+            <code>--color-ink</code>
+          </div>
+          <div>
+            <div class="swatch" style="background: var(--color-legacy)"></div>
+            <code>--color-legacy</code>
+          </div>
+        </div>
+        <div class="kit-grid">
+          <section>
+            <h2>Actions & fields</h2>
+            <div class="actions">
+              <button class="primary" type="button">Main action</button
+              ><button class="secondary" type="button">Secondary</button
+              ><button class="quiet" type="button">Neutral</button
+              ><button class="primary" type="button" disabled>
+                Unavailable
+              </button>
+            </div>
+            <p class="purchase-error">
+              A disabled action keeps its reason visible.
+            </p>
+            <div class="field">
+              <label for="sample-name">Character name</label
+              ><input id="sample-name" value="Walther Schmidt" />
+            </div>
+            <div class="field">
+              <label for="sample-origin">Origin</label
+              ><select id="sample-origin">
+                <option>Empire</option>
+                <option>Book-specific origin</option>
+              </select>
+            </div>
+            <label class="check-row"
+              ><input type="checkbox" /> Optional choice</label
+            >
+            <div class="actions section-gap">
+              <button class="quiet" id="open-example" type="button">
+                Open reference dialog
+              </button>
+            </div>
+          </section>
+          <section>
+            <h2>Feedback & provenance</h2>
+            <div class="notice">
+              A printed rule or choice reminder stays readable on paper.
+            </div>
+            <div class="notice success">A choice is complete.</div>
+            <div class="notice error">
+              A required choice still needs attention.
+            </div>
+            <p>
+              <button class="source source-button" type="button">
+                Printed source
+              </button>
+              <button class="legacy-tag" type="button">Legacy</button>
+            </p>
+            <p class="small muted">
+              Legacy means an adaptation, not an error or restriction.
+            </p>
+            <details data-detail-key="system:description">
+              <summary>One name, one expandable description</summary>
+              <p>
+                Shared body text is readable. Use stable disclosure keys when
+                rendering dynamic content.
+              </p>
+            </details>
+          </section>
+          <section>
+            <h2>Compact advancement</h2>
+            <div class="xp-row xp-advance-row">
+              <div class="xp-advance-identity">
+                <span class="xp-advance-name"
+                  ><strong>Weapon Skill</strong
+                  ><span class="characteristic-badge career-level-1"
+                    >L1 · ✓</span
+                  ></span
+                ><small class="xp-advance-meta">Career · +1 tracker box</small>
+              </div>
+              <div class="xp-advance-result">
+                <span class="advance-result">41 → 46 <small>+5</small></span>
+              </div>
+              <button
+                class="advance-calculation-help"
+                type="button"
+                aria-label="Example calculation explanation"
+              >
+                ?
+              </button>
+              <div class="xp-advance-purchase">
+                <button class="primary" type="button">125 XP</button>
+              </div>
+            </div>
+            <p class="small muted">
+              Example appearance only. This page makes no purchases.
+            </p>
+            <div
+              class="tracker-boxes"
+              role="img"
+              aria-label="Two of ten sample tracker boxes filled"
+            >
+              <span class="filled">✓</span><span class="filled">✓</span
+              ><span></span><span></span><span></span><span></span><span></span
+              ><span></span><span></span><span></span>
+            </div>
+          </section>
+          <section>
+            <h2>Leather folio</h2>
+            <aside class="sheet" aria-label="Example folio">
+              <div class="sheet-heading">
+                <span class="eyebrow">Character folio</span>
+                <div class="folio-crest" aria-hidden="true">
+                  <img
+                    class="ledger-emblem"
+                    src="assets/black-banner/w.svg"
+                    alt=""
+                  />
+                </div>
+                <h2>Walther Schmidt</h2>
+                <p>Human · Soldier</p>
+              </div>
+              <details class="folio-section">
+                <summary>
+                  <span class="folio-toggle" aria-hidden="true"></span
+                  ><span>Skills</span><span class="folio-count">2</span>
+                </summary>
+                <ul class="folio-list">
+                  <li>
+                    <span>Cool</span><strong class="folio-value">37</strong>
+                  </li>
+                  <li>
+                    <span>Melee (Basic)</span
+                    ><strong class="folio-value">46</strong>
+                  </li>
+                </ul>
+              </details>
+              <div class="folio-status">
+                <button class="quiet" type="button">Review & export</button>
+              </div>
+            </aside>
+          </section>
+        </div>
+      </article>
+    </main>
+    <dialog
+      id="example-dialog"
+      class="creator-dialog"
+      aria-labelledby="example-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="example-title">A shared reference</h2>
+        <button id="close-example" class="quiet" type="button">Close</button>
+      </div>
+      <p>
+        Dialog text uses raised parchment. Focus remains inside the native
+        dialog until it is closed.
+      </p>
+      <div class="notice">
+        Decorative details stay around the content, leaving rules readable.
+      </div>
+    </dialog>
+    <script type="module">
+      import { chapterHeading, initDesignMotion } from "./design-system.mjs";
+      document.querySelector("#system-heading").innerHTML =
+        chapterHeading("A new chapter");
+      initDesignMotion();
+      const dialog = document.querySelector("#example-dialog");
+      document
+        .querySelector("#open-example")
+        .addEventListener("click", () => dialog.showModal());
+      document
+        .querySelector("#close-example")
+        .addEventListener("click", () => dialog.close());
+    </script>
+  </body>
+</html>
