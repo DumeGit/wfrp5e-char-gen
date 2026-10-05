@@ -196,6 +196,7 @@ function render(){
  syncCants(R,s);
  const folioScroll=document.querySelector('.sheet')?.scrollTop||0;
  const oldFocus=document.activeElement,focusId=oldFocus?.id,focusAction=oldFocus?.dataset?.action,focusName=oldFocus?.dataset?.name,focusTab=oldFocus?.dataset?.tab,focusKey=oldFocus?.dataset?.key,focusBind=oldFocus?.dataset?.bind,focusModifier=oldFocus?.dataset?.modifier,scrollPosition=window.scrollY;
+ const textSelection=oldFocus?.matches('input[type="search"],input[type="text"],input:not([type]),textarea')?{start:oldFocus.selectionStart,end:oldFocus.selectionEnd,direction:oldFocus.selectionDirection,scrollLeft:oldFocus.scrollLeft}:null;
  for(const detail of document.querySelectorAll('main details'))detailsState.set(detail.querySelector('summary')?.textContent.trim(),detail.open);
  if(document.querySelector('[data-market-group]'))openedMarketGroups=new Set([...document.querySelectorAll('[data-market-group][open]')].map(x=>x.dataset.category));
  if(!skillSearch&&document.querySelector('.skill-catalog'))openedSkillGroups=new Set([...document.querySelectorAll('.skill-catalog-group[open]')].map(x=>x.dataset.group));
@@ -208,7 +209,9 @@ function render(){
  let focused=focusId?document.getElementById(focusId):null;
  if(!focused&&focusAction&&focusAction!=='step')focused=[...document.querySelectorAll('[data-action]')].find(x=>x.dataset.action===focusAction&&x.dataset.name===focusName&&x.dataset.tab===focusTab&&x.dataset.key===focusKey);
  if(!focused&&focusBind)focused=[...document.querySelectorAll('[data-bind]')].find(x=>x.dataset.bind===focusBind&&x.dataset.key===focusKey&&x.dataset.modifier===focusModifier);
- focused?.focus({preventScroll:true});window.scrollTo({top:scrollPosition,behavior:'instant'});
+ focused?.focus({preventScroll:true});
+ if(textSelection&&focused?.setSelectionRange&&textSelection.start!==null){focused.setSelectionRange(textSelection.start,textSelection.end,textSelection.direction);focused.scrollLeft=textSelection.scrollLeft;}
+ window.scrollTo({top:scrollPosition,behavior:'instant'});
 }
 
 function resetDependent(){if(s.species!=='High Elf')delete s.highElf;else if(s.highElf){s.highElf.history=[];s.highElf.era='';delete s.highElf.careerVariant;}delete s.dwarfCareerUpdates;delete s.dwarfTrappingSwaps;delete s.grudgeTargets;if(s.species!=='Dwarf'){delete s.longbeard;delete s.longbeardAge;}delete s.college;delete s.psychometrySlot;delete s.careerRefinement;delete s.careerRefinements;delete s.regionalCareerBase;delete s.originTalentSlot;delete s.originTalentMode;delete s.cants;s.skillChoices={};s.speciesSkills=[];s.careerSkills={};s.talentChoices={};s.randomTalents=[];s.freeTalent='';s.dooming='';s.bonusGear=[];s.gearChoices={};s.gearRolls={};s.wealth=null;s.purchases=[];s.gearState={};s.coinStorage='carried';s.localRegion='';s.boost={};s.ledger=[];s.spells=[];}
