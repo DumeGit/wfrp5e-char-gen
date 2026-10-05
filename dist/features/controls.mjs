@@ -87,7 +87,13 @@ export function createFeature(getContext, setContext) {
 
     const t = M.talentInfo(R, name),
       context = legacyOption(R, s, "talent", name);
-    return `<details class="talent-description" data-detail-key="talent:${esc(name)}"><summary><span>${esc(name)} ${ref({ ...t, legacySources: [...context.legacySources, ...legacySources(R, quote)] })}</span>${metadata}</summary><p>${esc(t?.text || "See the supplied Career and Talent descriptions.")}</p>${t?.limit ? `<p class="small muted">Printed purchase limit: ${esc(Array.isArray(t.limit) ? t.limit.map((k) => characteristicNames[k] + " Bonus").join(" + ") : t.limit)}.</p>` : ""}${t?.conversion ? `<p class="small muted">${esc(t.conversion)}</p>` : ""}<p class="calculation-status">${esc(talentCalculation(R, name))}</p>${runeChoiceDescription(R, name)}${t?.unavailable ? `<p class="purchase-error">${esc(t.unavailable)}</p>` : ""}</details>`;
+    return `<details class="talent-description" data-detail-key="talent:${esc(name)}"><summary><span>${esc(name)} ${ref({ ...t, legacySources: [...context.legacySources, ...legacySources(R, quote)] })}</span>${metadata}</summary>${talentDetailsBody(name)}</details>`;
+  }
+
+  function talentDetailsBody(name, { text, includeNotes = true } = {}) {
+    const { R, esc } = getContext(),
+      t = M.talentInfo(R, name);
+    return `<p>${esc(text ?? t?.text ?? "See the supplied Career and Talent descriptions.")}</p>${t?.limit ? `<p class="small muted">${includeNotes ? "Printed purchase limit" : "Purchase limit"}: ${esc(Array.isArray(t.limit) ? t.limit.map((k) => characteristicNames[k] + " Bonus").join(" + ") : t.limit)}.</p>` : ""}${includeNotes ? `${t?.conversion ? `<p class="small muted">${esc(t.conversion)}</p>` : ""}<p class="calculation-status">${esc(talentCalculation(R, name))}</p>` : ""}${runeChoiceDescription(R, name)}${includeNotes && t?.unavailable ? `<p class="purchase-error">${esc(t.unavailable)}</p>` : ""}`;
   }
 
   function characteristicClass(k) {
@@ -125,7 +131,7 @@ export function createFeature(getContext, setContext) {
 <p class="small muted">✓ marks currently available Career Characteristics. Later levels become Career Characteristics when you reach that level; non-career purchases cost double. ${page(191)}</p>`;
   }
 
-  function spellDetailsBody(x) {
+  function spellDetailsBody(x, { includeCreatorNote = true } = {}) {
     let { esc } = getContext();
 
     const fields = [
@@ -138,7 +144,7 @@ export function createFeature(getContext, setContext) {
     const effect = x.text.startsWith(prefix)
       ? x.text.slice(prefix.length).trim()
       : x.text;
-    return `<p class="calculation-status">Reference for play: casting, targets and situational effects are not applied during creation.</p>
+    return `${includeCreatorNote ? '<p class="calculation-status">Reference for play: casting, targets and situational effects are not applied during creation.</p>' : ""}
 <dl class="spell-meta">${fields.map(([label, key]) => `<div><dt>${label}</dt><dd>${esc(x[key])}</dd></div>`).join("")}</dl><p>${esc(effect)}</p>`;
   }
 
@@ -156,6 +162,7 @@ export function createFeature(getContext, setContext) {
     ref,
     skillChoice,
     talentDescription,
+    talentDetailsBody,
     characteristicClass,
     characteristicTitle,
     characteristicBadge,

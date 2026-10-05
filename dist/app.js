@@ -10,6 +10,7 @@ import { createFeature as create_creation_state } from "./features/creation-stat
 import { createFeature as create_dialogs } from "./features/dialogs.mjs";
 import { createFeature as create_actions } from "./features/actions.mjs";
 import { createResultReader } from "./character-result.mjs";
+import { createBookSearch } from "./features/book-search.mjs";
 
 import * as M from "./rules.mjs";
 import {
@@ -172,11 +173,14 @@ function getContext() {
     careerPreview,
     careerLimit,
     talentDescription,
+    talentDetailsBody,
     characteristicLegend,
     characteristicClass,
     characteristicBadge,
     skillChoice,
     spellDescription,
+    spellDetailsBody,
+    action,
     lucciniTalentChoice,
     xpCareerOnly,
     xpAffordable,
@@ -323,11 +327,13 @@ const {
   ref,
   skillChoice,
   talentDescription,
+  talentDetailsBody,
   characteristicClass,
   characteristicTitle,
   characteristicBadge,
   characteristicLegend,
   spellDescription,
+  spellDetailsBody,
 } = create_controls(getContext, setContext);
 const { lucciniTalentChoice, origins } = create_origins_view(
   getContext,
@@ -482,6 +488,7 @@ function render() {
     focused.scrollLeft = textSelection.scrollLeft;
   }
   window.scrollTo({ top: scrollPosition, behavior: "instant" });
+  bannerSearch.refresh();
 }
 
 $("#app").addEventListener(
@@ -633,6 +640,7 @@ $("#app").addEventListener("change", async (e) => {
     toast(err.message);
   }
 });
+const bannerSearch = createBookSearch(getContext, setContext);
 render();
 if (restoreIssue) toast(`Draft could not be restored: ${restoreIssue}`);
 if (document.modelContext?.registerTool) {

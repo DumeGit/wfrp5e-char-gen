@@ -28,6 +28,8 @@ October 2026 UX refresh: audit items 1 and 3–22. Saved book presets (item 2) w
 
 ## Implementation boundaries
 
+The centred banner search is available at every step and book setup. Typing shows ranked compact results across imported content from selected books, without filters; clicking or pressing Enter opens a read-only rule dialog. Category, source and selective Legacy information remain visible. Separate dialog actions open the appropriate existing Career preview, starting choices, Experience tab or shop; they never select or purchase anything. Desktop uses a dropdown beneath the field; mobile puts the field below the brand and opens references full-screen. Arrow keys, Escape, clear, more results and return-to-search preserve the input caret/query. Existing local searches remain. Full behavior and catalogue limitations: [BOOK-SEARCH.md](BOOK-SEARCH.md).
+
 `workspace.mjs`, `flow-ui.mjs`, `magic-browser.mjs`, `issue-targets.mjs` and `record-sources.mjs` contain presentation models. Core and supplement modules calculate legal choices, XP prices, grants, money and derived totals. Search/filter state is separate from the saved character. No presets, build planner, draft library or campaign manager were added.
 
 The optional full appendix is an export preference, not a rule option. Omitting it never omits the character's actual choices, source-specific warnings or XP purchases. Record Talent expenditure sums the actual ledger costs, including approved discounts.
