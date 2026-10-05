@@ -26,7 +26,7 @@ const variations = [
     strap: "DARK LEATHER · OLD GOLD · CRIMSON",
     text: "A darker, theatrical campaign standard: near-black leather, warm gold, red cloth and a framed parchment page. The drama comes from heraldry and painting.",
     detail:
-      "Your preferred direction · candlelight, ash and gilded reflections",
+      "Your preferred direction · aged gold, candlelight and drifting ash",
     mark: "comet",
   },
 ];

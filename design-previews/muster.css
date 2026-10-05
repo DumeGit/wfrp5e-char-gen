@@ -134,11 +134,11 @@
 }
 .heraldic-crest {
   position: relative;
-  width: 7cqw;
-  height: 8.5cqw;
+  width: 6cqw;
+  height: 7cqw;
   flex: none;
   color: #f5d57b;
-  filter: drop-shadow(0 1px 1px #000);
+  filter: none;
 }
 .fantasy-muster .muster-w {
   width: 100%;
@@ -386,6 +386,8 @@
   font-size: 0.95cqw;
 }
 .fantasy-muster .portrait {
+  display: grid;
+  place-items: center;
   border-radius: 3% 3% 45% 45%;
   height: 8.1cqw;
   width: 7cqw;
@@ -395,8 +397,11 @@
     0 0 0 0.3cqw #0002,
     0 0 0 0.45cqw var(--gold);
 }
-.fantasy-muster .portrait .emblem {
-  opacity: 0.9;
+.fantasy-muster .portrait .muster-w {
+  display: block;
+  width: 72%;
+  height: 72%;
+  opacity: 1;
 }
 .fantasy-muster .study-folio h4 {
   font:
@@ -594,9 +599,6 @@
   letter-spacing: 0.02em;
   text-shadow: 0 0.15cqw #4c261b;
 }
-.black-banner .heraldic-crest {
-  filter: drop-shadow(0 0.25cqw 0.3cqw #0009);
-}
 .black-banner .study-nav {
   background: linear-gradient(90deg, #0004, transparent 13%), #32221b;
 }
@@ -640,11 +642,12 @@
   background: linear-gradient(110deg, #0005, #65342510), #29201a;
 }
 .black-banner .portrait {
-  background: #681f22;
-  color: #dab069;
+  background: linear-gradient(135deg, #b8975f13, #17120f44);
+  color: #bca06b;
+  border-color: #8e7048;
   box-shadow:
-    0 0 0 0.3cqw #17100e,
-    0 0 0 0.5cqw #bc9657;
+    inset 0 0 0 0.25cqw #b4986026,
+    0 0 0 0.25cqw #8e70485c;
 }
 .black-banner .mini-export {
   background: #812329;
@@ -702,21 +705,6 @@
   opacity: 0.55;
   animation: muster-candle 7s ease-in-out infinite alternate;
 }
-.black-banner .heraldic-crest::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-      115deg,
-      transparent 42%,
-      #fff6d5bb 49%,
-      transparent 56%
-    ) -240%
-    0 / 250% 100% no-repeat;
-  mask: url(assets/muster-w.svg) center / contain no-repeat;
-  pointer-events: none;
-  animation: muster-gold 15s ease-in-out infinite;
-}
 .black-banner button,
 .black-banner summary,
 .black-banner .mini-row {
@@ -773,25 +761,6 @@
     opacity: 0.55;
   }
 }
-@keyframes muster-gold {
-  0%,
-  78% {
-    background-position: -240% 0;
-    opacity: 0;
-  }
-  80% {
-    opacity: 0.65;
-  }
-  90% {
-    background-position: 240% 0;
-    opacity: 0.65;
-  }
-  92%,
-  100% {
-    background-position: 240% 0;
-    opacity: 0;
-  }
-}
 @keyframes muster-arrive {
   from {
     opacity: 0;
@@ -808,8 +777,7 @@
 }
 .muster-gallery.paused .muster-embers,
 .muster-gallery.paused .muster-candlelight,
-.muster-gallery.paused .black-banner .painted-banner::after,
-.muster-gallery.paused .black-banner .heraldic-crest::after {
+.muster-gallery.paused .black-banner .painted-banner::after {
   display: none;
 }
 
@@ -895,8 +863,7 @@
   }
   .muster-embers,
   .muster-candlelight,
-  .black-banner .painted-banner::after,
-  .black-banner .heraldic-crest::after {
+  .black-banner .painted-banner::after {
     display: none;
   }
 }

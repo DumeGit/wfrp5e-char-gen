@@ -10,4 +10,4 @@ Final prompt, verbatim:
 
 ## Gilded W
 
-`muster-w.svg` is drawn directly in vector code for the user's requested logo revision. The supplied Warhammer wordmark guides its angular W shape, gold faces and red bevels. It is not an extracted official logo or an imagegen output. It replaces the shield/comet mark in the three fantasy iterations, and C's occasional glint uses its silhouette as a CSS mask. Both assets remain outside the published app.
+`muster-w.svg` is drawn directly in vector code for the user's requested logo revision. The supplied Warhammer wordmark guides its angular W shape, now softened to antique gold with a thin oxblood bevel to match the surrounding design. Its viewBox centres the visible letter, and the folio uses a centred grid placement with even inset space. It is not an extracted official logo or an imagegen output. It replaces the shield/comet mark in the three fantasy iterations. The user requested removal of the glint; the emblem remains static. Both assets remain outside the published app.
