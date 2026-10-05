@@ -58,27 +58,32 @@ export function createFeature(getContext, setContext) {
             : amount === 1
               ? `Career · ${progress % 5}/5 toward a tracker box`
               : "Career · no tracker box";
-    if (type === "skill") {
+    if (["char", "skill"].includes(type)) {
+      const label = type === "char" ? characteristicNames[name] : name;
       const tracker = blocked
         ? "Unavailable"
         : trackerLabel
             .replace("toward a tracker box", "to next box")
             .replace("tracker box", "box");
       const loadNote =
-        M.skillInfo(R, name, s)?.char === "Ag" &&
+        (type === "char"
+          ? name === "Ag"
+          : M.skillInfo(R, name, s)?.char === "Ag") &&
         result().equipment.penalties.complete &&
         result().equipment.penalties.band;
-      return `<div class="xp-row xp-skill-row"${filter}><div class="xp-skill-identity"><div class="xp-skill-name"><strong>${esc(name)}</strong>${legacyTag(R, { ...q, legacySources: legacyOption(R, s, type, name).legacySources })}</div>
-<span class="xp-skill-meta" title="${esc(trackerLabel)}">${esc(tracker)}</span></div>
-<div class="xp-skill-result"><span class="advance-result">${value} <span aria-hidden="true">→</span> ${value + amount} <small>+${amount}</small></span></div>${button("calculation", "?", `data-kind="skill" data-name="${esc(name)}" aria-label="How is ${esc(name)} calculated?" title="How is ${esc(name)} calculated?"`, "skill-calculation-help")}<div class="xp-skill-purchase">${button("buy", `${q.cost || "—"} XP`, `data-type="skill" data-name="${esc(name)}" data-amount="${amount}" ${blocked ? "disabled" : ""} title="${esc(blocked || "Purchase this improvement")}"`, "primary")}</div>${blocked ? `<p class="purchase-error xp-skill-note">${esc(blocked)}</p>` : ""}${loadNote ? '<p class="minilabel xp-skill-note">Base score shown; the folio includes load penalties (p. 299).</p>' : ""}</div>`;
+      const careerClass =
+        type === "char"
+          ? ` xp-characteristic-row ${characteristicClass(name)}`
+          : "";
+      return `<div class="xp-row xp-advance-row${careerClass}"${filter}><div class="xp-advance-identity"><div class="xp-advance-name"><strong>${esc(label)}</strong>${type === "char" ? characteristicBadge(name) : ""}${legacyTag(R, { ...q, legacySources: legacyOption(R, s, type, name).legacySources })}</div>
+<span class="xp-advance-meta" title="${esc(trackerLabel)}">${esc(tracker)}</span></div>
+<div class="xp-advance-result"><span class="advance-result">${value} <span aria-hidden="true">→</span> ${value + amount} <small>+${amount}</small></span></div>${button("calculation", "?", `data-kind="${type}" data-name="${esc(name)}" aria-label="How is ${esc(label)} calculated?" title="How is ${esc(label)} calculated?"`, "advance-calculation-help")}<div class="xp-advance-purchase">${button("buy", `${q.cost || "—"} XP`, `data-type="${type}" data-name="${esc(name)}" data-amount="${amount}" ${blocked ? "disabled" : ""} title="${esc(blocked || "Purchase this improvement")}"`, "primary")}</div>${blocked ? `<p class="purchase-error xp-advance-note">${esc(blocked)}</p>` : ""}${loadNote ? '<p class="minilabel xp-advance-note">Base score shown; the folio includes load penalties (p. 299).</p>' : ""}</div>`;
     }
     if (type === "talent")
       return `<div class="xp-row xp-talent-row"><div>${talentDescription(name, { quote: q, metadata: `<span class="xp-talent-meta"><span>${d.talents.filter((t) => t === name).length} ranks owned</span><span>${esc(trackerLabel)}</span></span>` })}</div>
 <div>${button("buy", `${q.cost || "—"} XP`, `data-type="talent" data-name="${esc(name)}" ${blocked ? "disabled" : ""} title="${esc(blocked || "Purchase this improvement")}"`, "primary")}${blocked ? `<p class="minilabel purchase-error">${esc(blocked)}</p>` : ""}</div>
 </div>`;
-    return `<div class="xp-row ${type === "char" ? characteristicClass(name) : ""}"${filter}><div><strong>${esc(type === "char" ? characteristicNames[name] : name)}</strong>${legacyTag(R, { ...q, legacySources: legacyOption(R, s, type, name).legacySources })}${type === "char" ? characteristicBadge(name, false) : ""}<p>${type === "talent" ? "" : `<span class="advance-result">${value} <span aria-hidden="true">→</span> ${value + amount} <small>+${amount}</small></span>`}<span class="tracker-effect">${trackerLabel}</span>${((type === "char" && name === "Ag") || (type === "skill" && M.skillInfo(R, name, s)?.char === "Ag")) && result().equipment.penalties.complete && result().equipment.penalties.band ? '<small class="muted">Base score shown for advancement; the folio includes load penalties (p. 299).</small>' : ""}</p>${type === "talent" ? `<span class="owned-ranks">${d.talents.filter((t) => t === name).length} ranks owned</span>${talentDescription(name)}` : button("calculation", "How calculated?", `data-kind="${type}" data-name="${esc(name)}"`, "text-button")}</div>
-<div>${button("buy", `${q.cost || "—"} XP`, `data-type="${type}" data-name="${esc(name)}" data-amount="${amount}" ${blocked ? "disabled" : ""} title="${esc(blocked || "Purchase this improvement")}"`, "primary")}${blocked ? `<p class="minilabel purchase-error">${esc(blocked)}</p>` : ""}</div>
-</div>`;
+    return "";
   }
 
   function experienceTalents() {
