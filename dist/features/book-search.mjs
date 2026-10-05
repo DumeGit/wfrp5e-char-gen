@@ -9,7 +9,7 @@ import { legacyTag } from "../legacy.mjs";
 import { legacyOption, legacyGear, legacyMagic } from "../legacy-character.mjs";
 import { characteristicNames } from "../ui.mjs";
 import { searchBookText } from "../book-search-text.mjs";
-import { talentCalculation } from "../workspace.mjs";
+import { createReferenceLinker } from "../book-search-links.mjs";
 
 const labels = {
   career: "Career",
@@ -25,19 +25,39 @@ export function createBookSearch(getContext, setContext) {
     status = document.querySelector("#book-search-status"),
     box = document.querySelector("#book-search-dialog"),
     body = document.querySelector("#book-search-body");
+  const previous = document.createElement("button"),
+    hover = document.createElement("aside");
+  previous.type = "button";
+  previous.className = "quiet search-chain-back";
+  previous.hidden = true;
+  previous.textContent = "← Back";
+  previous.setAttribute("aria-label", "Back to previous reference");
+  box.querySelector(".dialog-heading").prepend(previous);
+  hover.className = "search-term-preview";
+  hover.id = "search-term-preview";
+  hover.setAttribute("role", "tooltip");
+  hover.hidden = true;
+  box.append(hover);
   let catalogue,
     index = [],
     matches = [],
     active = -1,
     limit = 8,
     selected,
-    currentActions = [];
+    currentActions = [],
+    linkText,
+    currentView,
+    history = [],
+    previewTarget;
   function refresh() {
     const { R } = getContext();
     if (catalogue !== R) {
       catalogue = R;
       index = buildSearchIndex(R);
+      linkText = createReferenceLinker(index);
       selected = null;
+      currentView = null;
+      history = [];
       if (box.open) box.close();
       limit = 8;
     }
@@ -161,7 +181,7 @@ export function createBookSearch(getContext, setContext) {
       )
       .join("");
   }
-  function openRule(key) {
+  function renderRule(key) {
     const { R, s, result, ref } = getContext(),
       row = index.find((x) => x.key === key);
     if (!row) return;
@@ -182,34 +202,84 @@ export function createBookSearch(getContext, setContext) {
           .legacySources,
       };
     if (row.kind === "magic") entry = legacyMagic(R, s, entry);
-    const notes = [
-      ...new Set(
-        [
-          entry.conversion,
-          entry.adaptation,
-          ...searchBookText(entry).notes,
-          ...(entry.legacySources || []).map((x) => x.adaptation),
-          ...(row.facets || []).flatMap((f) => [
-            f.conversion,
-            f.adaptation,
-            ...searchBookText(f).notes,
-          ]),
-          row.kind === "talent" ? talentCalculation(R, row.name) : "",
-          row.kind === "magic"
-            ? "Casting, targets and situational effects are references for play; they are not applied during creation."
-            : "",
-        ]
-          .filter(Boolean)
-          .map((n) =>
-            n
-              .replace(/^Adaptation warning(?: — |: )/, "")
-              .replace(/^[,;]\s*/, ""),
-          ),
-      ),
-    ];
     document.querySelector("#book-search-title").textContent = row.name;
-    body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(row.label || labels[row.kind])}</span> ${ref(entry)}</p><div class="search-book-reference">${referenceBody(row)}</div><section class="search-creator-context"><h3>Use in the creator ${legacyTag(R, entry)}</h3><p class="search-rule-status">${esc(context.status)}</p>${notes.map((n) => `<p class="small muted">${esc(n)}</p>`).join("")}${context.reason ? `<p class="notice small">${esc(context.reason)}</p>` : ""}<div class="search-rule-actions">${currentActions.map((a, i) => `<button type="button" class="quiet" data-search-route="${i}">${esc(a.label)} →</button>`).join("")}<button type="button" class="text-button" data-search-back>Back to search</button></div><p class="small muted">Viewing a rule does not select it or spend XP or money.</p></section>`;
+    body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(row.label || labels[row.kind])}</span> ${ref(entry)}</p><div class="search-book-reference">${referenceBody(row)}</div><div class="search-rule-actions">${currentActions.map((a, i) => `<button type="button" class="quiet" data-search-route="${i}">${esc(a.label)} →</button>`).join("")}<button type="button" class="text-button" data-search-back>Back to search</button></div>`;
+    linkReferences(row);
     if (!box.open) box.showModal();
+  }
+  function linkReferences(row) {
+    const root = body.querySelector(".search-book-reference"),
+      walker = document.createTreeWalker(root, window.NodeFilter.SHOW_TEXT),
+      nodes = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (!node.parentElement.closest("button, a, h2, h3, dt"))
+        nodes.push(node);
+    }
+    for (const node of nodes) {
+      const segments = linkText(node.textContent, row);
+      if (!segments.some((x) => x.keys)) continue;
+      const fragment = document.createDocumentFragment();
+      for (const segment of segments) {
+        if (!segment.keys)
+          fragment.append(document.createTextNode(segment.text));
+        else {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "search-term-link";
+          button.textContent = segment.text;
+          button.dataset.referenceKeys = JSON.stringify(segment.keys);
+          button.setAttribute("aria-label", `View ${segment.text} reference`);
+          fragment.append(button);
+        }
+      }
+      node.replaceWith(fragment);
+    }
+  }
+  function showView(view, { push = false, reset = false } = {}) {
+    hidePreview();
+    if (reset) history = [];
+    if (push && currentView) history.push(currentView);
+    currentView = view;
+    previous.hidden = !history.length;
+    if (view.key) renderRule(view.key);
+    else {
+      const { R, ref } = getContext();
+      selected = null;
+      currentActions = [];
+      document.querySelector("#book-search-title").textContent = view.name;
+      body.innerHTML = `<p>Several references in your selected books share this name. Choose which to read.</p><div class="search-reference-choices">${view.keys
+        .map((key) => {
+          const row = index.find((x) => x.key === key);
+          return `<div><button type="button" class="quiet" data-reference-choice="${esc(key)}">${esc(row.name)} · ${esc(row.label || labels[row.kind])}</button> ${ref(row.entry)}</div>`;
+        })
+        .join("")}</div>`;
+    }
+    box.scrollTop = 0;
+    if (push) previous.focus({ preventScroll: true });
+  }
+  function openRule(key) {
+    showView({ key }, { reset: true });
+  }
+  function hidePreview() {
+    previewTarget?.removeAttribute("aria-describedby");
+    previewTarget = null;
+    hover.hidden = true;
+  }
+  function showPreview(button) {
+    if (button === previewTarget) return;
+    hidePreview();
+    const keys = JSON.parse(button.dataset.referenceKeys),
+      rows = keys.map((key) => index.find((x) => x.key === key)),
+      { R } = getContext();
+    hover.innerHTML = `<strong>${esc(button.textContent)}${rows.length === 1 && rows[0].name !== button.textContent ? ` → ${esc(rows[0].name)}` : ""}</strong><p>${rows.map((row) => `${esc(row.label || labels[row.kind])} · ${esc(sourceText(R, row))}${legacyTag(R, row.entry) ? " · Legacy" : ""}`).join("<br>")}</p>${rows.length === 1 ? `<p>${esc(searchBookText(rows[0].entry).text.slice(0, 240) || "Open to view its profile and source.")}</p>` : ""}<small>Click to read the full reference</small>`;
+    previewTarget = button;
+    button.setAttribute("aria-describedby", hover.id);
+    hover.hidden = false;
+    const rect = button.getBoundingClientRect(),
+      bounds = hover.getBoundingClientRect();
+    hover.style.left = `${Math.max(10, Math.min(rect.left, window.innerWidth - bounds.width - 10))}px`;
+    hover.style.top = `${rect.bottom + bounds.height + 12 < window.innerHeight ? rect.bottom + 8 : Math.max(10, rect.top - bounds.height - 8)}px`;
   }
   function navigate(route) {
     const ctx = getContext();
@@ -306,13 +376,19 @@ export function createBookSearch(getContext, setContext) {
   input.addEventListener("input", () => {
     limit = 8;
     refresh();
-    showResults();
   });
   input.addEventListener("focus", () => {
     refresh();
-    showResults();
+    if (popup.hidden) showResults();
   });
-  input.addEventListener("click", showResults);
+  input.addEventListener("click", () => {
+    if (popup.hidden) showResults();
+  });
+  document
+    .querySelector(".banner-search-field")
+    .addEventListener("click", (e) => {
+      if (!e.target.closest("input, button")) input.focus();
+    });
   input.addEventListener("keydown", (e) => {
     if (e.isComposing) return;
     if (["ArrowDown", "ArrowUp"].includes(e.key)) {
@@ -340,10 +416,21 @@ export function createBookSearch(getContext, setContext) {
     const option = e.target.closest("[data-search-key]");
     if (option) openRule(option.dataset.searchKey);
   });
+  // Combobox options retain input focus until selection. Otherwise pointer focus
+  // can dismiss or replace the dropdown before its click is delivered.
+  popup.addEventListener("mousedown", (e) => {
+    if (
+      e.button === 0 &&
+      e.target.closest("[data-search-key], #book-search-more")
+    )
+      e.preventDefault();
+  });
   document.querySelector("#book-search-more").addEventListener("click", () => {
+    const scroll = list.scrollTop;
     limit += 8;
     showResults();
     input.focus({ preventScroll: true });
+    list.scrollTop = scroll;
   });
   document.querySelector("#book-search-clear").addEventListener("click", () => {
     input.value = "";
@@ -358,7 +445,22 @@ export function createBookSearch(getContext, setContext) {
     if (!e.relatedTarget?.closest(".banner-search")) closeResults();
   });
   box.addEventListener("click", (e) => {
+    const term = e.target.closest("[data-reference-keys]");
+    if (term) {
+      const keys = JSON.parse(term.dataset.referenceKeys);
+      showView(
+        keys.length === 1 ? { key: keys[0] } : { keys, name: term.textContent },
+        { push: true },
+      );
+      return;
+    }
+    const choice = e.target.closest("[data-reference-choice]");
+    if (choice) {
+      showView({ key: choice.dataset.referenceChoice }, { push: true });
+      return;
+    }
     if (e.target.closest("[data-search-close], [data-search-back]")) {
+      hidePreview();
       box.close();
       input.focus({ preventScroll: true });
       showResults();
@@ -378,7 +480,28 @@ export function createBookSearch(getContext, setContext) {
     }
   });
   box.addEventListener("cancel", () => {
+    hidePreview();
     closeResults();
   });
+  previous.addEventListener("click", () => {
+    if (history.length) showView(history.pop());
+    if (history.length) previous.focus({ preventScroll: true });
+    else
+      box.querySelector("[data-search-close]").focus({ preventScroll: true });
+  });
+  body.addEventListener("pointerover", (e) => {
+    const button = e.target.closest("[data-reference-keys]");
+    if (button && e.pointerType !== "touch") showPreview(button);
+  });
+  body.addEventListener("pointerout", (e) => {
+    if (previewTarget && !previewTarget.contains(e.relatedTarget))
+      hidePreview();
+  });
+  body.addEventListener("focusin", (e) => {
+    const button = e.target.closest("[data-reference-keys]");
+    if (button) showPreview(button);
+  });
+  body.addEventListener("focusout", hidePreview);
+  box.addEventListener("scroll", hidePreview);
   return { refresh };
 }

@@ -10,6 +10,7 @@ import {
 } from "../dist/book-search.mjs";
 import * as M from "../dist/rules.mjs";
 import { searchBookText } from "../dist/book-search-text.mjs";
+import { createReferenceLinker } from "../dist/book-search-links.mjs";
 const B = assembleBooks(
   library,
   library.packs
@@ -20,6 +21,61 @@ const core = buildSearchIndex(R),
   all = buildSearchIndex(B);
 const find = (ix, name, kind) =>
   ix.find((x) => x.name === name && (!kind || x.kind === kind));
+
+test("Related references preserve exact text, choose longest names and stay within selected content", () => {
+  const link = createReferenceLinker(core),
+    row = find(core, "Soldier", "career"),
+    text =
+      "Soldier: Strong Back, Melee (Basic), swordplay and unimported-blorp.",
+    segments = link(text, row);
+  assert.equal(segments.map((x) => x.text).join(""), text);
+  assert.deepEqual(
+    segments.filter((x) => x.keys).map((x) => x.text),
+    ["Strong Back", "Melee (Basic)"],
+  );
+  assert.ok(
+    segments
+      .filter((x) => x.keys)
+      .every((x) => x.keys.every((key) => core.some((r) => r.key === key))),
+  );
+  assert.ok(!link("Bludgeoner and Godspakt", row).some((x) => x.keys));
+  const leather = link("Leather Breastplate", row);
+  assert.equal(leather.length, 1);
+  assert.equal(leather[0].text, "Leather Breastplate");
+  assert.deepEqual(leather[0].keys, [
+    find(core, "Leather Jerkin", "equipment").key,
+  ]);
+  assert.ok(
+    createReferenceLinker(all)("Bludgeoner and Godspakt", row).every(
+      (x) => x.keys || x.text === " and ",
+    ),
+  );
+});
+
+test("Related references prefer the current book and expose ambiguous alternatives without inventing precedence", () => {
+  const rows = [
+    { key: "core-ward", name: "Ward", entry: { source: { book: "core" } } },
+    { key: "guide-ward", name: "Ward", entry: { source: { book: "guide" } } },
+    { key: "other-ward", name: "Ward", entry: { source: { book: "other" } } },
+  ];
+  const link = createReferenceLinker(rows);
+  assert.deepEqual(
+    link("Ward", { name: "Shield", entry: { source: { book: "guide" } } })[0]
+      .keys,
+    ["guide-ward"],
+  );
+  assert.deepEqual(
+    link("Ward", {
+      name: "Shield",
+      entry: { source: { book: "elsewhere" } },
+    })[0].keys,
+    rows.map((x) => x.key),
+  );
+  assert.equal(
+    link("rewarded warding", { name: "Shield" }).some((x) => x.keys),
+    false,
+  );
+});
 
 test("Matching excludes adaptation/creator annotations but preserves actual book prose", () => {
   const bludgeoner = find(all, "Bludgeoner", "talent"),
