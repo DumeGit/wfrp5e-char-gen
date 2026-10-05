@@ -69,6 +69,28 @@
 .previous-studies:hover {
   color: #ffe1a0;
 }
+.muster-preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.muster-gallery [data-motion] {
+  border: 1px solid #a88b54;
+  padding: 8px 12px;
+  background: #493025;
+  color: #ffe7c0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.muster-gallery [data-motion]:hover {
+  background: #73402b;
+  color: #fff0cf;
+}
+.muster-gallery [data-motion]:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
 .fantasy-muster {
   aspect-ratio: 1.35;
   --cover: #701f21;
@@ -111,11 +133,18 @@
   padding: 1.5cqw 2.8cqw;
 }
 .heraldic-crest {
+  position: relative;
   width: 7cqw;
   height: 8.5cqw;
   flex: none;
   color: #f5d57b;
   filter: drop-shadow(0 1px 1px #000);
+}
+.fantasy-muster .muster-w {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
 }
 .title-cartouche {
   position: relative;
@@ -566,11 +595,7 @@
   text-shadow: 0 0.15cqw #4c261b;
 }
 .black-banner .heraldic-crest {
-  color: #c3984c;
-  background: #791f23;
-  border: 1px solid #a47739;
-  clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
-  padding: 0.7cqw;
+  filter: drop-shadow(0 0.25cqw 0.3cqw #0009);
 }
 .black-banner .study-nav {
   background: linear-gradient(90deg, #0004, transparent 13%), #32221b;
@@ -631,6 +656,163 @@
   color: #ffe4b2;
 }
 
+/* Quiet motion belongs to the preferred C study, outside the live app. */
+.black-banner .muster-brand,
+.black-banner .search-ribbon {
+  position: relative;
+  z-index: 2;
+}
+.muster-embers {
+  position: absolute;
+  inset: 0 0 4.5cqw;
+  overflow: hidden;
+  pointer-events: none;
+}
+.muster-embers i {
+  position: absolute;
+  left: calc(48% + var(--particle) * 6.5%);
+  bottom: -1cqw;
+  width: clamp(1px, 0.15cqw, 2px);
+  height: clamp(2px, 0.3cqw, 4px);
+  border-radius: 50%;
+  background: #ffce7d;
+  box-shadow: 0 0 0.6cqw #ff9c3b99;
+  opacity: 0;
+  animation: muster-ash calc(12s + var(--particle) * 0.9s) linear infinite;
+  animation-delay: calc(var(--particle) * -2.9s);
+}
+.black-banner .painted-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 76% 82%, #e4cda146, transparent 38%);
+  opacity: 0.3;
+  animation: muster-mist 22s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.muster-candlelight {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 0 46%, #ef9b3824, transparent 18%),
+    radial-gradient(ellipse at 100% 74%, #ffc8641c, transparent 15%);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  animation: muster-candle 7s ease-in-out infinite alternate;
+}
+.black-banner .heraldic-crest::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      115deg,
+      transparent 42%,
+      #fff6d5bb 49%,
+      transparent 56%
+    ) -240%
+    0 / 250% 100% no-repeat;
+  mask: url(assets/muster-w.svg) center / contain no-repeat;
+  pointer-events: none;
+  animation: muster-gold 15s ease-in-out infinite;
+}
+.black-banner button,
+.black-banner summary,
+.black-banner .mini-row {
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+.black-banner .mini-row:hover {
+  box-shadow: inset 0 0 1cqw #8a602117;
+}
+#expanded .black-banner {
+  animation: muster-arrive 400ms ease-out both;
+}
+@keyframes muster-ash {
+  0% {
+    transform: translate(0, 0) rotate(-15deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-4cqw, -17cqw) rotate(40deg);
+    opacity: 0;
+  }
+}
+@keyframes muster-mist {
+  from {
+    transform: translateX(-2cqw);
+    opacity: 0.15;
+  }
+  to {
+    transform: translateX(2cqw);
+    opacity: 0.5;
+  }
+}
+@keyframes muster-candle {
+  0%,
+  30%,
+  74% {
+    opacity: 0.35;
+  }
+  20%,
+  61%,
+  100% {
+    opacity: 0.8;
+  }
+  40%,
+  83% {
+    opacity: 0.55;
+  }
+}
+@keyframes muster-gold {
+  0%,
+  78% {
+    background-position: -240% 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  90% {
+    background-position: 240% 0;
+    opacity: 0.65;
+  }
+  92%,
+  100% {
+    background-position: 240% 0;
+    opacity: 0;
+  }
+}
+@keyframes muster-arrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.muster-gallery.paused .black-banner,
+.muster-gallery.paused .black-banner *,
+.muster-gallery.paused .black-banner *::before,
+.muster-gallery.paused .black-banner *::after {
+  animation: none !important;
+}
+.muster-gallery.paused .muster-embers,
+.muster-gallery.paused .muster-candlelight,
+.muster-gallery.paused .black-banner .painted-banner::after,
+.muster-gallery.paused .black-banner .heraldic-crest::after {
+  display: none;
+}
+
 .muster-gallery #expanded {
   max-width: 1200px;
   background: #241b16;
@@ -641,6 +823,13 @@
 }
 .muster-gallery .dialog-toolbar h2 {
   color: #e7cf9c;
+}
+.muster-gallery .dialog-toolbar {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.muster-gallery .dialog-toolbar h2 {
+  margin-right: auto;
 }
 .muster-gallery .dialog-toolbar button {
   background: #5b2923;
@@ -694,5 +883,20 @@
   }
   .muster-gallery .dialog-toolbar h2 {
     font-size: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .black-banner,
+  .black-banner *,
+  .black-banner *::before,
+  .black-banner *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .muster-embers,
+  .muster-candlelight,
+  .black-banner .painted-banner::after,
+  .black-banner .heraldic-crest::after {
+    display: none;
   }
 }

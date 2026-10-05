@@ -25,7 +25,8 @@ const variations = [
     name: "The Black Banner",
     strap: "DARK LEATHER · OLD GOLD · CRIMSON",
     text: "A darker, theatrical campaign standard: near-black leather, warm gold, red cloth and a framed parchment page. The drama comes from heraldry and painting.",
-    detail: "Darkest frame · warm, readable centre",
+    detail:
+      "Your preferred direction · candlelight, ash and gilded reflections",
     mark: "comet",
   },
 ];
@@ -36,13 +37,22 @@ function preview(c) {
   const study = node.firstElementChild;
   study.classList.add("fantasy-muster");
   study.querySelector(".atmosphere").remove();
-  const crest = study.querySelector(".header-emblem").innerHTML;
+  const crest =
+    '<img class="emblem muster-w" src="assets/muster-w.svg" alt="" />';
+  study.querySelectorAll(".emblem").forEach((mark) => (mark.outerHTML = crest));
   study.querySelector(".study-header").outerHTML = `
     <header class="muster-masthead">
       <div class="painted-banner" aria-hidden="true"></div>
+      ${c.id === "black-banner" ? `<div class="muster-embers" aria-hidden="true">${Array.from({ length: 8 }, (_, i) => `<i style="--particle:${i}"></i>`).join("")}</div>` : ""}
       <div class="muster-brand"><div class="heraldic-crest">${crest}</div><div class="title-cartouche"><span class="mini-overline">WARHAMMER FANTASY ROLEPLAY</span><h3>The Character Ledger</h3><span class="chapter">FIFTH EDITION · THE MUSTER ROLL</span></div></div>
       <div class="search-ribbon"><span>A NEW CHAPTER</span><button class="preview-search" data-demo="Search"><span aria-hidden="true">⌕</span> Search Careers, Skills, Talents, magic and equipment…</button><span>THE OLD WORLD</span></div>
     </header>`;
+  if (c.id === "black-banner") {
+    const glow = document.createElement("div");
+    glow.className = "muster-candlelight";
+    glow.setAttribute("aria-hidden", "true");
+    study.append(glow);
+  }
   study.querySelector(".nav-caption").textContent = "THE MUSTER ROLL";
   study.querySelector(".nav-foot").textContent = "By ink and oath.";
   study.querySelector(".portrait > span").textContent = "WS";
@@ -62,16 +72,48 @@ document.querySelector(".gallery").innerHTML = variations
   .join("");
 
 const dialog = document.querySelector("#expanded");
+const reduced = matchMedia("(prefers-reduced-motion: reduce)"),
+  motionButtons = document.querySelectorAll("[data-motion]");
+let paused = reduced.matches;
+function updateMotion() {
+  document.body.classList.toggle("paused", paused);
+  motionButtons.forEach((motionButton) => {
+    motionButton.disabled = reduced.matches;
+    motionButton.textContent = reduced.matches
+      ? "Motion reduced"
+      : paused
+        ? "Enable motion"
+        : "Pause motion";
+    motionButton.setAttribute("aria-pressed", String(!paused));
+    motionButton.title = reduced.matches
+      ? "Your device requests reduced motion."
+      : "Toggle animation in The Black Banner preview";
+  });
+}
+updateMotion();
+reduced.addEventListener("change", () => {
+  paused = reduced.matches;
+  updateMotion();
+});
+function openPreview(c) {
+  document.querySelector("#expanded-title").textContent =
+    `${c.number} / ${c.name}`;
+  document.querySelector("#expanded-body").innerHTML = preview(c);
+  dialog.showModal();
+}
+const requested = variations.find((c) => location.hash === `#${c.id}`);
+if (requested) openPreview(requested);
 let toastTimer;
 document.addEventListener("click", (e) => {
   const button = e.target.closest("button");
   if (!button) return;
+  if (button.hasAttribute("data-motion")) {
+    paused = !paused;
+    updateMotion();
+  }
   if (button.dataset.open) {
     const c = variations.find((c) => c.id === button.dataset.open);
-    document.querySelector("#expanded-title").textContent =
-      `${c.number} / ${c.name}`;
-    document.querySelector("#expanded-body").innerHTML = preview(c);
-    dialog.showModal();
+    openPreview(c);
   }
   if (button.id === "close") dialog.close();
   if (button.dataset.tab) {
