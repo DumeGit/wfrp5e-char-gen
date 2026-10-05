@@ -32,6 +32,8 @@ October 2026 UX refresh: audit items 1 and 3–22. Saved book presets (item 2) w
 
 The optional full appendix is an export preference, not a rule option. Omitting it never omits the character's actual choices, source-specific warnings or XP purchases. Record Talent expenditure sums the actual ledger costs, including approved discounts.
 
+Starting Species Skills use a compact two-column desktop list and a single phone column, preserving specialisation selectors, five-choice counters, Career overlap markers and +5 checkboxes. Shop item names open available profile descriptions; items without additional text have no empty disclosure. Category, Availability, weight and source remain visible without a repeated profile heading. Experience Talent names are their description disclosures, with owned ranks and tracker effects underneath. Stable disclosure keys preserve open descriptions after purchases and undo.
+
 ## Verification
 
 - Outcome tests cover Career availability/search/preview immutability and variants; shop taxonomy, restrictions and purse feedback; non-caster and caster magic filtering; calculation reconciliation; precise issue destinations; relevant source collection; compact/full exports and editable field values.
