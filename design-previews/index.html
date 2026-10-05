@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Old World — visual studies</title>
+    <link rel="stylesheet" href="concepts.css" />
+  </head>
+  <body>
+    <header class="gallery-header">
+      <div>
+        <p class="overline">THE CHARACTER LEDGER / VISUAL STUDIES</p>
+        <h1>Four ways into the Old World.</h1>
+        <p class="intro">
+          Small, interactive style sketches. Open a study for a closer look.
+        </p>
+      </div>
+      <button id="motion" aria-pressed="false">Pause motion</button>
+    </header>
+    <main class="gallery" aria-label="Design directions"></main>
+    <footer>
+      Same example character in every study. Sounds play only when requested.
+      These sketches do not change your character.
+    </footer>
+    <dialog id="expanded" aria-labelledby="expanded-title">
+      <div class="dialog-toolbar">
+        <h2 id="expanded-title"></h2>
+        <button id="close" aria-label="Close enlarged preview">Close ×</button>
+      </div>
+      <div id="expanded-body"></div>
+      <p class="sound-status" role="status"></p>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="concepts.js" type="module"></script>
+  </body>
+</html>

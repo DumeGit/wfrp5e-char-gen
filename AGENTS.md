@@ -17,7 +17,7 @@
 - Core discrepancies remain documented: Leather Breastplate uses Leather Jerkin statistics; Sturdy's two printed formulas remain selectable; random Career bonus choices are capped by distinct available level-two Trappings. Do not silently remove these interpretations.
 - Pack equipment automatically. Wear armour and wearable carrying items, equip weapons, put other belongings in available containers up to capacity, and count overflow as carried. Ignore coin weight by user choice. No packing editor or adding equipment Qualities/Flaws. Inherent printed properties remain. Unknown weights stay unresolved, not zero.
 - Names/appearance are part of Origins: type, choose printed suggestions or roll. Rerolling age/height replaces previous generated values, preserving other background text.
-- Keep UX minimal: separate Talents and Gear steps; only Skills with multiple choices expand in Experience. Characteristic and Skill purchases share compact rows with score changes, XP price and an accessible ? calculation control. Disabled purchases explain why. Career Characteristic badges must not change cell alignment. Maintain button hover contrast, focus and mobile navigation/scroll behavior. Folio lists are compact/collapsible; desktop sticky folio may scroll internally when too tall, phone layout uses page flow.
+- Keep interactions clear and compact; ornate visual styling is welcome under the user’s October 2026 redesign request. Separate Talents and Gear steps; only Skills with multiple choices expand in Experience. Characteristic and Skill purchases share compact rows with score changes, XP price and an accessible ? calculation control. Disabled purchases explain why. Career Characteristic badges must not change cell alignment. Maintain button hover contrast, focus and mobile navigation/scroll behavior. Folio lists are compact/collapsible; desktop sticky folio may scroll internally when too tall, phone layout uses page flow.
 
 ## Engineering and delivery
 
@@ -46,3 +46,5 @@
 
 - Use structured issue records from their detecting rule; never route by English message text. Folio, review, calculations and PDF exports consume the shared character result. See docs/ARCHITECTURE.md before extending these modules.
 - Maintain each book's validated coverage inventory and exact, scoped content aliases. Run `npm run generate:books` after registry/coverage changes and `npm run check:release` before committing; generated counts/statuses must not be hand-edited. Compatible older-edition content remains unadapted unless actual reviewed changes apply.
+
+- Visual redesign studies are kept in design-previews/ outside the published app until the user selects a direction. See docs/DESIGN-PREVIEWS.md. Preserve compact advancement controls, readable body text, source/Legacy access and mobile navigation when applying richer styling. Motion must respect reduced-motion preferences; sound starts only through an explicit user action.

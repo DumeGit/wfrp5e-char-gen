@@ -14,6 +14,8 @@ Enable **Winds of Magic** in Choose books to add twelve Careers, Augury/Psychome
 
 Contributor instructions and the user's project decisions are in [AGENTS.md](AGENTS.md). The book integration format and review workflow are in [docs/BOOKS.md](docs/BOOKS.md).
 
+Four standalone Old World visual concepts are available in `design-previews/`; see [docs/DESIGN-PREVIEWS.md](docs/DESIGN-PREVIEWS.md). These are design proposals outside the published app, with enlargement, motion controls and optional sound samples.
+
 Enable **Dwarf Player’s Guide** for eleven regional profiles and automatic regional Career tables, ten Careers, optional Career levels and equipment/weapon Skill swaps, weighted names, Longbeard, new Talents and rune knowledge. Guide/Archives I Karak Ranger profiles remain explicit alternatives. Learning runes does not grant enchanted equipment; gromril/heirlooms are references rather than ordinary shop purchases. Approved conversions, unavailable entries and deferred campaign rules: [docs/DWARF-GUIDE.md](docs/DWARF-GUIDE.md).
 
 Enable **Blood and Bramble** for twelve new Hedgecraft and twelve Witchcraft spells with source descriptions, existing Fifth Edition learning rules and a qualified 5-penny ingredient shop entry. Godspakt uses the approved detailed You/You profile; ingredient quantities/weights remain unspecified and live spell effects remain references. Details: [docs/BLOOD-BRAMBLE.md](docs/BLOOD-BRAMBLE.md).
