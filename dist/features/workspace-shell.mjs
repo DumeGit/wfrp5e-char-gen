@@ -64,8 +64,9 @@ export function createFeature(getContext) {
       .join("")}</ol>
 </nav>
 <div class="header-actions">${button("save-file", "Save character")}${button("load-file", "Load character")}${button("new", "New character")}<input type="file" id="import-file" accept="application/json,.json" hidden>
+<div class="install-app-slot" data-install-slot></div>
 </div>
-<p class="save-status">Saved automatically on this device</p>${button("sources", "Sources & decisions", "", "text-button")}${button("books", "Choose books", "", "text-button")}<div class="rail-seal" aria-hidden="true">${ledgerEmblem()}</div><p class="rail-oath">By ink and oath.</p></aside>
+<p class="save-status">Saved automatically on this device</p>${button("sources", "Sources & decisions", "", "text-button")}${button("books", "Choose books", "", "text-button")}</aside>
 <main class="panel">
 <div class="stage-meta">
 <span>Step ${s.step + 1} of ${steps.length}</span>

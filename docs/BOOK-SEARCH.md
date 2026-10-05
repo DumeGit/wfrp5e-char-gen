@@ -1,6 +1,6 @@
 # Search selected books
 
-The Black Banner masthead has a wide search field centred in the ribbon below the brand and header actions, on desktop and phone. Its painted artwork is clipped separately so the dropdown can extend over the workspace. There are no global filters. Existing Career, Skill, magic and shop filters remain independent.
+The shortened Black Banner masthead has a wide search field centred in the ribbon below the brand, on desktop and phone. Install app is in the left menu below New character, and the masthead has no motion button. Its painted artwork is clipped separately so the dropdown can extend over the workspace. There are no global filters. Existing Career, Skill, magic and shop filters remain independent.
 
 Typing produces eight ranked matches, with **Show more matches** adding eight. Exact names, reviewed aliases, prefixes and other name matches precede description/metadata matches. Words can match in different parts of a profile. Normalisation ignores case, punctuation and accents; it never resolves content or invents rule equivalents. Each result shows its name, category, book/page, a matching excerpt where available and selective Legacy status. With an empty field, only a hint appears. Clicking a result or pressing Enter views its reference. Arrow keys choose a result, Escape dismisses the dropdown, and Clear empties the query. The input itself is never replaced during searching, preserving its caret and keyboard composition.
 

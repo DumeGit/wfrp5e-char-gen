@@ -78,14 +78,7 @@
         </div>
       </div>
       <div class="masthead-actions">
-        <button
-          id="design-motion"
-          type="button"
-          class="quiet"
-          aria-pressed="true"
-        >
-          Pause motion</button
-        ><a class="quiet" href="./">Open creator</a>
+        <a class="quiet" href="./">Open creator</a>
       </div>
       <div class="banner-search-ribbon">
         <span class="banner-caption">COMPONENT REFERENCE</span
@@ -285,10 +278,9 @@
       </div>
     </dialog>
     <script type="module">
-      import { chapterHeading, initDesignMotion } from "./design-system.mjs";
+      import { chapterHeading } from "./design-system.mjs";
       document.querySelector("#system-heading").innerHTML =
         chapterHeading("A new chapter");
-      initDesignMotion();
       const dialog = document.querySelector("#example-dialog");
       document
         .querySelector("#open-example")

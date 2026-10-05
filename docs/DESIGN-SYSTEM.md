@@ -8,7 +8,8 @@ The user selected **C — The Black Banner** on 5 October 2026 and authorised im
 | --- | --- |
 | `dist/design-tokens.css` | Semantic colours, typography, spacing, radii, control heights, layout widths and motion durations; local font declarations |
 | `dist/design-system.css` | Shared component skin, shell, responsive adaptations, print and reduced motion |
-| `dist/design-system.mjs` | Escaped accessible chapter headings, shared emblem markup and independent motion preference |
+| `dist/design-system.mjs` | Escaped accessible chapter headings and shared emblem markup |
+| `dist/install-control.mjs` | Reparents the existing install button into the redrawable rail, preserving its listeners and browser state |
 | `dist/styles.css`, `workspace.css`, `book-search.css` | Existing feature structure, density and interactions; loaded before the skin |
 | `dist/design-system.html` | Live component reference, independent of character data and rules |
 | `dist/assets/black-banner/`, `assets/fonts/` | Canonical production art/emblem and local fonts with their SIL Open Font Licenses |
@@ -35,6 +36,8 @@ Use `chapterHeading(title)` for the page-level heading and normal h2/h3 for sect
 | Dialogs | `.creator-dialog`, `.book-search-dialog`, `.dialog-heading` | Raised parchment, gold line, dark backdrop; native focus and existing chaining/history |
 | Folio | `.sheet`, `.folio-section`, `.folio-list` | Compact quantities/totals and static centred crest; bounded desktop scroll, phone page flow |
 | Tracker | `.tracker-boxes` | Small squares with unchanged XP grouping and limits |
+| Rolled scores | `.characteristics-table` | Compact rows with abbreviations, names, inline Career badges and editable assignment selectors |
+| Starting increases | `.career-starting-increases` | Budget and three labelled point inputs in one desktop strip; compact wrapping on phones |
 
 Use roles such as `--color-paper-raised`, `--color-on-leather`, `--color-crimson`, `--color-on-crimson`, `--color-line` and `--color-focus`. Career-level roles retain L1–L4 text, red/green/grey/gold accents and dashed future availability. Legacy remains selective and separate.
 
@@ -44,12 +47,14 @@ Dense rules/controls use `--font-body`; headings use the readable serif `--font-
 
 Desktop joins a 210px rail, flexible parchment and 310px folio (350px from 1500px) within 1700px. Tablet puts the folio beneath the main leaf. Phone retains the step selector, condensed expandable folio and fixed XP/coin strip. Long names wrap. Preserve essential fields, purchase reasons and source/Legacy access. Clip header art separately so search results can extend over the workspace.
 
+The masthead is shortened, with a smaller title/emblem and search ribbon. Install app lives below New character in the rail, and is hidden when installed. Preserve the same button node across redraws so install prompts, help and installed-state listeners survive navigation. The desktop rail uses 40px step rows, a Save/Load pair, full-width New/Install controls and compact utility links. All steps fit normal desktop heights; navigation alone may scroll on short windows. The rail has no extra footer emblem. The folio keeps its separate scrolling behavior.
+
 Initials use a fixed line-height-one box, grid centring and a small optical correction; no baseline-dependent padding. The folio crest also uses grid centring with inset space. Characteristic badges reserve equal space.
 
-Ash/mist stay in the banner; low-opacity candlelight stays at leather edges. The parchment, rules and controls do not move. Pause/Enable persists a separate presentation preference (`wfrp-ledger-design-motion`), never a character field. System reduced motion overrides it and explains the setting. No sound, glints, entrance animations or continuous button effects. Colour transitions last 160ms; reduced motion disables them. Print removes decorations and uses plain ink/paper.
+Ash/mist stay in the banner; low-opacity candlelight stays at leather edges. The parchment, rules and controls do not move. The user removed the creator's Pause/Enable button; motion now follows the system reduced-motion preference through CSS, without a saved app preference. No sound, glints, entrance animations or continuous button effects. Colour transitions last 160ms; reduced motion disables them. Print removes decorations and uses plain ink/paper.
 
 The banner is the preview's original imagegen artwork, copied without pixel changes; prompt/provenance remains in `design-previews/assets/README.md`. The W is native vector code. `scripts/generate-icons.py` rasterises its canonical path/gradient and token palette for PWA icons without requiring a Windows font. Regenerate icons after emblem/icon-palette changes. The W remains within the maskable safe area.
 
 ## Maintenance and release
 
-Update this document and affected feature docs in the same change. Inspect setup, all eight steps and reference dialogs on desktop/phone; verify hover/disabled/focus contrast, no horizontal page overflow, heading accessibility and independent motion state. Run `npm run check:release` after final styles/assets so offline caching covers art, fonts, skin, component module, guide and icons. Preserve PDF/export tests. Commit locally; the user pushes/deploys.
+Update this document and affected feature docs in the same change. Inspect setup, all eight steps and reference dialogs on desktop/phone; verify hover/disabled/focus contrast, no horizontal page overflow, heading accessibility, reduced-motion CSS and install behavior after redraws. Run `npm run check:release` after final styles/assets so offline caching covers art, fonts, skin, component module, guide and icons. Preserve PDF/export tests. Commit locally; the user pushes/deploys.

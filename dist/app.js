@@ -1,4 +1,4 @@
-import { initDesignMotion } from "./design-system.mjs";
+import { createInstallControl } from "./install-control.mjs";
 import { createFeature as createWorkspaceShell } from "./features/workspace-shell.mjs";
 import { captureDisclosures, restoreDisclosures } from "./disclosures.mjs";
 import { createFeature as create_controls } from "./features/controls.mjs";
@@ -46,7 +46,9 @@ import { sheetSpecies } from "./origins.mjs";
 import { syncCants } from "./archives-iii.mjs";
 import { cantPanel } from "./archives-iii-ui.mjs";
 
-initDesignMotion();
+const mountInstallControl = createInstallControl(
+  document.getElementById("pwa-install"),
+);
 
 const library = await loadBookLibrary(async (url) => {
   const r = await fetch(url);
@@ -455,6 +457,7 @@ function render() {
     body,
     ready,
   });
+  mountInstallControl($("#app"));
   restoreDisclosures(document.querySelector("main"), detailsState);
 
   filterMarket();

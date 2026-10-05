@@ -157,9 +157,9 @@ export function createFeature(getContext, setContext) {
             ) => `<div class="field characteristic-cell ${characteristicClass(k)}"><label for="point-${i}" title="${characteristicNames[k]}">${k}</label><div class="characteristic-meta">${characteristicBadge(k)}</div>
 <input type="number" id="point-${i}" data-bind="points" data-key="${i}" min="4" max="16" value="${s.points[i]}"><small class="muted">+ ${sp.offsets[k]} Species</small></div>`,
           ).join("")}</div>`
-        : `<table><thead><tr><th>Characteristic</th><th>2d10 result</th><th>Species</th><th>Initial</th></tr></thead><tbody>${M.KEYS.map(
+        : `<table class="characteristics-table"><thead><tr><th>Characteristic</th><th>2d10</th><th>Species</th><th>Initial</th></tr></thead><tbody>${M.KEYS.map(
             (k, i) =>
-              `<tr class="${characteristicClass(k)}"><td><span class="characteristic-label"><strong>${k}</strong>${characteristicBadge(k)}</span><small class="characteristic-name">${characteristicNames[k]}</small></td><td>${
+              `<tr class="${characteristicClass(k)}"><td><div class="characteristic-identity"><span class="characteristic-label"><strong>${k}</strong>${characteristicBadge(k)}</span><small class="characteristic-name">${characteristicNames[k]}</small></div></td><td>${
                 s.charMode === "first"
                   ? s.charRolls[i]
                   : select(
@@ -171,13 +171,15 @@ export function createFeature(getContext, setContext) {
           ).join("")}</tbody></table>`
     }${characteristicLegend()}${
       budget
-        ? `<h3>Career starting increases <span class="counter">${Object.values(s.boost).reduce((a, b) => a + b, 0)} / ${budget}</span></h3>
-<div class="cols">${M.KEYS.filter((k) => c.advanceScheme[k] === 1)
+        ? `<section class="career-starting-increases" aria-label="Career starting increases"><div class="starting-increases-heading"><h3>Career starting increases</h3><span class="counter">${Object.values(s.boost).reduce((a, b) => a + b, 0)} / ${budget}</span></div>
+<div class="starting-increases-controls">${M.KEYS.filter(
+            (k) => c.advanceScheme[k] === 1,
+          )
             .map(
               (k) =>
-                `<div class="field"><label>${k} increase</label><input type="number" data-bind="boost" data-key="${k}" aria-label="${k} starting increase" min="0" max="${budget}" value="${s.boost[k] || 0}"></div>`,
+                `<label class="starting-increase"><span>${k}</span><input type="number" data-bind="boost" data-key="${k}" aria-label="${characteristicNames[k]} starting increase" min="0" max="${budget}" value="${s.boost[k] || 0}"></label>`,
             )
-            .join("")}</div>`
+            .join("")}</div></section>`
         : ""
     }<p class="small muted">Starting increases and Talent bonuses are not purchased Advances. Each later Characteristic Advance adds +5; costs begin at 125 XP. ${page(191)}</p>${astrologyPanel(R, s, { select, button, options: M.options })}`;
   }

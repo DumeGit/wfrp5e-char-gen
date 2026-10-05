@@ -45,17 +45,7 @@
         </div>
       </div>
       <div class="masthead-actions">
-        <span class="edition">BY INK AND OATH</span
-        ><button
-          id="design-motion"
-          type="button"
-          class="quiet"
-          aria-pressed="true"
-        >
-          Pause motion</button
-        ><button id="pwa-install" class="install-app" type="button" hidden>
-          Install app
-        </button>
+        <span class="edition">BY INK AND OATH</span>
       </div>
       <div class="banner-search-ribbon">
         <span class="banner-caption">THE OLD WORLD</span>
@@ -159,6 +149,11 @@
       <div id="book-search-body"></div>
     </dialog>
     <div id="toast" role="status" aria-live="polite"></div>
+    <div hidden>
+      <button id="pwa-install" class="install-app" type="button" hidden>
+        Install app
+      </button>
+    </div>
     <script src="assets/pdf-lib.min.js" defer></script>
     <script type="module" src="app.js?v=pwa-1"></script>
     <script type="module" src="pwa.mjs"></script>
