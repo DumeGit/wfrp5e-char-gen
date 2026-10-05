@@ -15,4 +15,20 @@ Motion can be paused and respects the system reduced-motion setting. Sound is of
 
 The locally bundled Cinzel Decorative, IM Fell English and UnifrakturCook fonts are from the [Google Fonts source repository](https://github.com/google/fonts). Each font's supplied SIL Open Font License is included beside the font in `design-previews/fonts/`. The studies make no external font requests at runtime and use no new plugin.
 
+## Muster Roll: fantasy iteration
+
+The user preferred The Muster Roll but found its riveted steel and military palette too close to Warhammer 40,000. Three further studies are in `design-previews/muster.html`, served at http://127.0.0.1:8075/muster.html. They draw on the supplied classic fantasy box-art reference without reproducing its illustration or logo. No production theme has been selected or applied.
+
+| Variation | Direction |
+| --- | --- |
+| A — The Battle Standard | Crimson title cartouche, gilded display lettering, painted regimental banners and an ivory working page; closest to the supplied reference's colours |
+| B — The Regimental Ledger | Light vellum navigation/folio, a wax seal and oxblood chapter markers; gentler during long creation sessions |
+| C — The Black Banner | Dark warm leather, old gold, Gothic display lettering and red heraldic cloth around a parchment centre |
+
+All three share the same original painted banner and example data, allowing comparison of the framing rather than different content. The banner stays above the functional workspace. The recently added global search is represented in the masthead. There are no sound controls or audio code in these new studies, and no animation. Tabs, enlargement and folio disclosures work; the other controls explicitly demonstrate appearance without connecting to a draft or rules engine. Thumbnails crop a full desktop composition, so use Open for the complete layout. The phone gallery stacks cards; these are not finished mobile creator screens.
+
+`study-screen.mjs` now holds the common example markup and tab rows used by both galleries, preserving the original four studies without duplicate screen templates. `muster.mjs` adds the new heading/crest treatments and interactions; `muster.css` owns the variant styling. The generated banner is saved as `design-previews/assets/muster-banner-v2.png`; the full prompt and generation provenance are in [assets/README.md](../design-previews/assets/README.md). The built-in imagegen tool was used, not the CLI fallback. No supplied box artwork or book PDF is copied into the project.
+
+Verification for this iteration: inspect the three thumbnails and enlarged layouts, switch tabs, expand the folio, check single-column phone gallery/overflow, confirm the original gallery still opens and renders, and check browser errors. The release checks cover the unchanged published app separately.
+
 Verification: inspect all four thumbnails, enlarge a study, switch preview tabs, expand the folio, toggle motion and request a sound sample. Check the narrow gallery layout and browser errors. No live app redesign, push or deployment is part of this exploratory change.

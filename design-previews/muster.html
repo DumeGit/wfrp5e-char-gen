@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Muster Roll — Fantasy iterations</title>
+    <link rel="stylesheet" href="concepts.css" />
+    <link rel="stylesheet" href="muster.css" />
+  </head>
+  <body class="muster-gallery">
+    <header class="gallery-header">
+      <div>
+        <p class="overline">THE MUSTER ROLL / SECOND EXPLORATION</p>
+        <h1>Under the banners of the Old World.</h1>
+        <p class="intro">
+          Painted heraldry, crimson cloth and gilt-edged parchment. Three
+          variations, no sound.
+        </p>
+      </div>
+      <a class="previous-studies" href="index.html">Original studies ↗</a>
+    </header>
+    <main class="gallery" aria-label="Muster Roll iterations"></main>
+    <footer>
+      Visual studies only. Tabs and folio disclosures work; other controls are
+      demonstrations. Your character and the live app are unchanged.
+    </footer>
+    <dialog id="expanded" aria-labelledby="expanded-title">
+      <div class="dialog-toolbar">
+        <h2 id="expanded-title"></h2>
+        <button id="close" aria-label="Close enlarged preview">Close ×</button>
+      </div>
+      <div id="expanded-body"></div>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="muster.mjs" type="module"></script>
+  </body>
+</html>

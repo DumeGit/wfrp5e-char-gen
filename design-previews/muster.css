@@ -1,0 +1,698 @@
+.muster-gallery {
+  background: radial-gradient(ellipse at 50% 0, #543324, #201b18 65%);
+  color: #eddec0;
+  padding: 28px;
+}
+.muster-gallery .gallery,
+.muster-gallery .gallery-header,
+.muster-gallery footer {
+  max-width: 1480px;
+}
+.muster-gallery .gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.muster-gallery .concept {
+  background: #2c231e;
+  border-color: #70533b;
+  border-radius: 0;
+  box-shadow: 0 12px 30px #0005;
+}
+.muster-gallery .concept-heading {
+  padding: 13px 14px;
+  gap: 9px;
+  min-height: 76px;
+}
+.muster-gallery .concept-heading h2 {
+  font:
+    19px Fell,
+    Georgia,
+    serif;
+  color: #f2d597;
+}
+.muster-gallery .concept-heading p {
+  font-size: 8px;
+  letter-spacing: 0.11em;
+  color: #bda47f;
+}
+.muster-gallery .concept-heading > span {
+  color: #c99b55;
+}
+.muster-gallery .concept-heading button {
+  font-size: 10px;
+  white-space: nowrap;
+  padding: 6px 8px;
+  background: #4d3028;
+  border-color: #92734c;
+}
+.muster-gallery .concept-notes {
+  padding: 13px 16px 16px;
+  min-height: 127px;
+}
+.muster-gallery .concept-notes p {
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 0 0 10px;
+  color: #d1c1a6;
+}
+.muster-gallery .concept-notes small {
+  font-size: 10px;
+  color: #c9a66a;
+}
+.previous-studies {
+  color: #dab975;
+  font-size: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid #b4905a;
+  white-space: nowrap;
+}
+.previous-studies:hover {
+  color: #ffe1a0;
+}
+.fantasy-muster {
+  aspect-ratio: 1.35;
+  --cover: #701f21;
+  --edge: #381b16;
+  --gold: #b58b42;
+  --ink: #382a1c;
+  --paper: #eee0bd;
+  --muted: #70563a;
+  --button: #90252c;
+  --on-button: #fff1cd;
+  --row: #a52b31;
+  --heading: #f5ddac;
+  border: 4px solid var(--edge);
+  outline-offset: -7px;
+}
+.fantasy-muster .grain {
+  opacity: 0.13;
+}
+.muster-masthead {
+  height: 20cqw;
+  position: relative;
+  isolation: isolate;
+  color: var(--heading);
+  border-bottom: 0.45cqw double var(--gold);
+  overflow: hidden;
+}
+.painted-banner {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #21190fe8, #3520167a 48%, #261c1305 78%),
+    url(assets/muster-banner-v2.png) 50% 34% / cover;
+  z-index: -1;
+}
+.muster-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.8cqw;
+  height: 15cqw;
+  padding: 1.5cqw 2.8cqw;
+}
+.heraldic-crest {
+  width: 7cqw;
+  height: 8.5cqw;
+  flex: none;
+  color: #f5d57b;
+  filter: drop-shadow(0 1px 1px #000);
+}
+.title-cartouche {
+  position: relative;
+  padding: 1cqw 1.8cqw 1.2cqw;
+  border: 0.3cqw double #d4a246;
+  background: linear-gradient(100deg, #922a29e8, #6f1a1cc9);
+  box-shadow:
+    0 0.3cqw 1cqw #0007,
+    inset 0 0 0 0.3cqw #5f191778;
+}
+.title-cartouche:after,
+.title-cartouche:before {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  font-size: 1.5cqw;
+  color: #f7d06e;
+  transform: translateY(-50%);
+}
+.title-cartouche:before {
+  left: -0.9cqw;
+}
+.title-cartouche:after {
+  right: -0.9cqw;
+}
+.muster-brand h3 {
+  margin: 0.4cqw 0;
+  font:
+    700 3cqw Cinzel,
+    Georgia,
+    serif;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: #f3cd62;
+  text-shadow:
+    0 0.13cqw #6f410b,
+    0.1cqw 0.2cqw #25170e,
+    -0.07cqw -0.07cqw #fff0b0;
+}
+.fantasy-muster .mini-overline {
+  font-size: 1cqw;
+  color: #eedfbc;
+  letter-spacing: 0.2em;
+}
+.fantasy-muster .chapter {
+  font-size: 0.95cqw;
+  letter-spacing: 0.14em;
+  color: #f0d7ab;
+  opacity: 1;
+}
+.search-ribbon {
+  height: 4.5cqw;
+  padding: 0.7cqw 2.3cqw;
+  display: flex;
+  align-items: center;
+  gap: 2cqw;
+  color: #d4b27d;
+  background: #281811cf;
+  border-top: 1px solid #b9924855;
+  font:
+    0.78cqw Cinzel,
+    Georgia,
+    serif;
+  letter-spacing: 0.07em;
+}
+.search-ribbon > span {
+  white-space: nowrap;
+  flex: 1;
+}
+.search-ribbon > span:last-child {
+  text-align: right;
+}
+.preview-search {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.8cqw;
+  padding: 0.5cqw 0.8cqw;
+  border: 1px solid #c49b55;
+  background: #efe4c8;
+  color: #715837;
+  text-align: left;
+  white-space: nowrap;
+  font:
+    1.02cqw Fell,
+    Georgia,
+    serif;
+  letter-spacing: 0;
+  box-shadow: inset 0 0 0.4cqw #7d542427;
+}
+.preview-search > span {
+  font:
+    1.5cqw Georgia,
+    serif;
+}
+.preview-search:hover {
+  background: #fff0c9 !important;
+  color: #412b1c !important;
+}
+.fantasy-muster .study-workspace {
+  height: calc(100% - 20cqw);
+  grid-template-columns: 20% 56% 24%;
+}
+.fantasy-muster .study-nav {
+  background:
+    linear-gradient(90deg, #0003, transparent 12%, #0002 80%),
+    repeating-linear-gradient(92deg, #fff0 0, #d8794512 3cqw, #0001 7cqw),
+    var(--cover);
+  border-right: 0.45cqw double var(--gold);
+}
+.fantasy-muster .study-nav nav button {
+  min-height: 3.6cqw;
+  padding: 0.8cqw 0.4cqw;
+  font-size: 1.55cqw;
+}
+.fantasy-muster .study-nav nav button.selected {
+  background: linear-gradient(90deg, #e8d2a6, #f3dfb7);
+  color: #61241f;
+  box-shadow: 0 0.15cqw 0.4cqw #240a0b77;
+  border-color: #d0a654;
+  clip-path: polygon(0 0, 100% 0, 94% 50%, 100% 100%, 0 100%);
+}
+.fantasy-muster .study-nav nav button.selected span {
+  color: #8b592d;
+}
+.fantasy-muster .study-nav nav button:hover {
+  background: #cfaa4b30;
+  box-shadow: none;
+  color: #fff0c8;
+}
+.fantasy-muster .study-nav nav button.selected:hover {
+  background: #ffe5b2;
+  color: #5a211d;
+}
+.fantasy-muster .nav-caption {
+  font-size: 1.04cqw;
+  letter-spacing: 0.08em;
+}
+.fantasy-muster .study-page {
+  background:
+    radial-gradient(ellipse at 20% 0, #fff9, transparent 65%),
+    linear-gradient(
+      90deg,
+      #8d572417,
+      transparent 10%,
+      transparent 95%,
+      #7f512022
+    ),
+    var(--paper);
+  box-shadow: inset 0 0 2cqw #7b451721;
+  padding: 1.8cqw 2.1cqw;
+}
+.fantasy-muster .page-corners {
+  inset: 1cqw;
+  border-color: #a5814769;
+}
+.fantasy-muster .page-corners:before,
+.fantasy-muster .page-corners:after {
+  content: "✦";
+  font-size: 1.4cqw;
+  top: -0.75cqw;
+  padding: 0;
+  background: var(--paper);
+}
+.fantasy-muster .page-corners:before {
+  left: -0.6cqw;
+}
+.fantasy-muster .page-corners:after {
+  right: -0.6cqw;
+}
+.fantasy-muster .study-page h4 {
+  font:
+    3.4cqw Fell,
+    Georgia,
+    serif;
+  color: #792326;
+  margin: 1.15cqw 0 0.3cqw;
+}
+.illuminated-initial {
+  display: inline-grid;
+  place-items: center;
+  font:
+    3.4cqw Cinzel,
+    Georgia,
+    serif;
+  margin-right: 0.1cqw;
+  width: 3.8cqw;
+  height: 3.9cqw;
+  border: 0.25cqw double #b9974d;
+  background: #832425;
+  color: #e9c570;
+  box-shadow: inset 0 0 0 0.2cqw #b9974d44;
+  vertical-align: -0.15cqw;
+}
+.fantasy-muster .mini-budget {
+  background: #8263370a;
+}
+.fantasy-muster .mini-tabs {
+  border-bottom: 2px solid #9b763c;
+}
+.fantasy-muster .mini-tabs button {
+  background: #c3a86d17;
+  border-color: #9b763c;
+  font-size: 1.3cqw;
+}
+.fantasy-muster .mini-tabs button[aria-selected="true"] {
+  background: #87242b;
+  color: #f7e8c2;
+  box-shadow: inset 0 0.2cqw #d6b063;
+}
+.fantasy-muster .mini-tabs button:hover {
+  background: #672128;
+  color: #f7e8c2;
+}
+.fantasy-muster .mini-row {
+  padding: 1.15cqw 0.8cqw;
+}
+.fantasy-muster .mini-row.career-row {
+  background: #9b352609;
+  border-left-width: 0.3cqw;
+}
+.fantasy-muster .xp-price {
+  background: linear-gradient(#a03234, #7b2327);
+  border-color: #b99b67;
+  box-shadow: 0 0.12cqw 0.2cqw #50231833;
+  font-size: 1.1cqw;
+}
+.fantasy-muster .mini-tracker i {
+  box-shadow: none;
+  border-color: #9e7e49;
+}
+.fantasy-muster .study-folio {
+  background:
+    linear-gradient(100deg, #0003, #8d382018 35%, #0002), var(--cover);
+  border-left: 0.45cqw double var(--gold);
+  padding: 1.9cqw 1.5cqw;
+}
+.fantasy-muster .folio-caption {
+  font-size: 0.95cqw;
+}
+.fantasy-muster .portrait {
+  border-radius: 3% 3% 45% 45%;
+  height: 8.1cqw;
+  width: 7cqw;
+  color: #e1b45d;
+  background: linear-gradient(135deg, #dbbf6b1c, #0003);
+  box-shadow:
+    0 0 0 0.3cqw #0002,
+    0 0 0 0.45cqw var(--gold);
+}
+.fantasy-muster .portrait .emblem {
+  opacity: 0.9;
+}
+.fantasy-muster .study-folio h4 {
+  font:
+    700 2.35cqw Cinzel,
+    Georgia,
+    serif;
+  color: #f8e0b0;
+  line-height: 1.2;
+}
+.fantasy-muster .mini-stats > div {
+  background: #f0dba60b;
+  border: 0;
+  border-bottom: 1px solid #b28b4e80;
+}
+.fantasy-muster .mini-stats strong {
+  color: #f6e2b6;
+}
+.fantasy-muster .mini-export {
+  background: #d9ba79;
+  color: #412820;
+  border-color: #d9ba79;
+}
+.fantasy-muster .mini-export:hover {
+  background: #ffe3a5;
+  color: #321c15;
+}
+.fantasy-muster .mini-actions button:hover {
+  background: #9e4a39;
+  color: #fff0c9;
+}
+
+.regimental-ledger {
+  --cover: #ece0c2;
+  --edge: #632922;
+  --gold: #a7834b;
+  --heading: #4a3421;
+  --paper: #f5ecd5;
+  --button: #853030;
+  --muted: #736246;
+}
+.regimental-ledger .muster-masthead {
+  height: 20cqw;
+  background: #7a2025;
+}
+.regimental-ledger .painted-banner {
+  background:
+    linear-gradient(90deg, #36251bec, #37211b60 48%, transparent 85%),
+    url(assets/muster-banner-v2.png) 60% 35% / cover;
+}
+.regimental-ledger .muster-brand {
+  height: 15cqw;
+  padding-left: 3cqw;
+}
+.regimental-ledger .title-cartouche {
+  border: 0;
+  box-shadow: none;
+  background: none;
+  padding: 0;
+}
+.regimental-ledger .title-cartouche:before,
+.regimental-ledger .title-cartouche:after {
+  display: none;
+}
+.regimental-ledger .muster-brand h3 {
+  font:
+    3.3cqw Fell,
+    Georgia,
+    serif;
+  letter-spacing: 0;
+  color: #f4dfab;
+  text-shadow: 0 0.2cqw 0.25cqw #000;
+}
+.regimental-ledger .study-nav {
+  background: linear-gradient(90deg, #a5753622, transparent 15%), #ece0c2;
+  color: #59402c;
+  border-color: #bd9d6b;
+}
+.regimental-ledger .study-nav nav button span {
+  color: #936844;
+}
+.regimental-ledger .study-nav nav button.selected {
+  background: #822a2e;
+  color: #f7e5ba;
+  clip-path: polygon(0 0, 100% 0, 94% 50%, 100% 100%, 0 100%);
+  box-shadow: 0 0.3cqw 0.4cqw #4b201222;
+}
+.regimental-ledger .study-nav nav button.selected span {
+  color: #f0c777;
+}
+.regimental-ledger .study-nav nav button:hover {
+  background: #ccb17a33;
+  color: #593326;
+}
+.regimental-ledger .study-nav nav button.selected:hover {
+  background: #6c1d24;
+  color: #fff0cf;
+}
+.regimental-ledger .mini-actions button {
+  color: #683b2e;
+  background: #d7c59e55;
+}
+.regimental-ledger .mini-actions button:hover {
+  background: #863032;
+  color: #fff0cb;
+}
+.regimental-ledger .nav-seal {
+  background: #8a2728;
+  color: #e4b975;
+  opacity: 1;
+  border-radius: 50%;
+  padding: 1.2cqw;
+  box-shadow:
+    inset 0 0 0 0.25cqw #6b1d21,
+    inset 0 0 0 0.35cqw #d19b6244,
+    0 0.2cqw 0.4cqw #49291755;
+  transform: rotate(-10deg);
+}
+.regimental-ledger .study-folio {
+  background: linear-gradient(100deg, #9f633e18, transparent 23%), #f0e4c9;
+  color: #533b27;
+  border-color: #bd9d6b;
+}
+.regimental-ledger .study-folio h4 {
+  color: #762b2b;
+  font:
+    2.8cqw Fell,
+    Georgia,
+    serif;
+}
+.regimental-ledger .portrait {
+  color: #80282c;
+  background: #e4d5b9;
+  box-shadow: 0 0 0 0.4cqw #d6c09b;
+  border-color: #b3955a;
+}
+.regimental-ledger .mini-stats strong {
+  color: #473321;
+}
+.regimental-ledger .mini-stats > div {
+  background: #aa704208;
+  border-bottom-color: #ba9a6555;
+}
+.regimental-ledger .mini-export {
+  background: #852b2e;
+  color: #f9e7c2;
+  border-color: #9d603f;
+}
+.regimental-ledger .mini-export:hover {
+  background: #5c1c22;
+  color: #ffecbe;
+}
+.regimental-ledger .nav-foot {
+  color: #836943;
+  opacity: 1;
+}
+.regimental-ledger .nav-caption,
+.regimental-ledger .folio-caption,
+.regimental-ledger .rank,
+.regimental-ledger .mini-stats small,
+.regimental-ledger .study-folio summary span {
+  color: #7d5a34;
+}
+.regimental-ledger .study-page h4 {
+  font-size: 3.2cqw;
+}
+
+.black-banner {
+  --cover: #28201b;
+  --edge: #b28442;
+  --gold: #bca06b;
+  --paper: #dec99f;
+  --heading: #e5d0a7;
+  --ink: #382415;
+  --muted: #6b5135;
+}
+.black-banner .painted-banner {
+  background:
+    linear-gradient(90deg, #18130ce8, #21120a4a 55%, #180d061c),
+    url(assets/muster-banner-v2.png) 50% 35% / cover;
+  filter: saturate(0.8);
+}
+.black-banner .title-cartouche {
+  border: 0;
+  border-top: 1px solid #d0a150;
+  border-bottom: 1px solid #d0a150;
+  background: #251610a8;
+  box-shadow: none;
+  padding: 0.8cqw 1cqw;
+}
+.black-banner .muster-brand h3 {
+  font-family: Gothic, Georgia, serif;
+  font-size: 3.9cqw;
+  font-weight: 700;
+  color: #e4c077;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0.15cqw #4c261b;
+}
+.black-banner .heraldic-crest {
+  color: #c3984c;
+  background: #791f23;
+  border: 1px solid #a47739;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  padding: 0.7cqw;
+}
+.black-banner .study-nav {
+  background: linear-gradient(90deg, #0004, transparent 13%), #32221b;
+}
+.black-banner .study-nav nav button.selected {
+  background: linear-gradient(#952b30, #6e2025);
+  color: #f8dfab;
+  box-shadow: none;
+  border-color: #b79156;
+}
+.black-banner .study-nav nav button.selected span {
+  color: #efc97b;
+}
+.black-banner .study-nav nav button.selected:hover {
+  background: #a43739;
+  color: #fce8bb;
+}
+.black-banner .study-page {
+  background:
+    radial-gradient(ellipse at 50% 5%, #f8edcf70, transparent 75%),
+    linear-gradient(
+      90deg,
+      #79532a2a,
+      transparent 15%,
+      transparent 85%,
+      #79532a2a
+    ),
+    var(--paper);
+}
+.black-banner .study-page h4 {
+  font:
+    3.5cqw Fell,
+    Georgia,
+    serif;
+  color: #712528;
+}
+.black-banner .mini-tabs button[aria-selected="true"] {
+  background: #38251b;
+  color: #f4dfb1;
+}
+.black-banner .study-folio {
+  background: linear-gradient(110deg, #0005, #65342510), #29201a;
+}
+.black-banner .portrait {
+  background: #681f22;
+  color: #dab069;
+  box-shadow:
+    0 0 0 0.3cqw #17100e,
+    0 0 0 0.5cqw #bc9657;
+}
+.black-banner .mini-export {
+  background: #812329;
+  color: #f4da9f;
+  border-color: #b89c5d;
+}
+.black-banner .mini-export:hover {
+  background: #a33538;
+  color: #ffe4b2;
+}
+
+.muster-gallery #expanded {
+  max-width: 1200px;
+  background: #241b16;
+  border: 1px solid #a38653;
+}
+.muster-gallery #expanded .study {
+  aspect-ratio: 1.2;
+}
+.muster-gallery .dialog-toolbar h2 {
+  color: #e7cf9c;
+}
+.muster-gallery .dialog-toolbar button {
+  background: #5b2923;
+  color: #ffe7c0;
+  border-color: #a88b54;
+}
+.muster-gallery .dialog-toolbar button:hover {
+  background: #8c3431;
+  color: #fff0cf;
+}
+.muster-gallery button:focus-visible,
+.muster-gallery summary:focus-visible,
+.previous-studies:focus-visible {
+  outline: 2px solid #e0b257;
+  outline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  .muster-gallery .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .muster-gallery .concept-heading h2 {
+    font-size: 18px;
+  }
+  .muster-gallery .concept-notes {
+    min-height: 110px;
+  }
+}
+@media (max-width: 760px) {
+  .muster-gallery {
+    padding: 15px;
+  }
+  .muster-gallery .gallery {
+    grid-template-columns: 1fr;
+  }
+  .muster-gallery .gallery-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .muster-gallery .concept-heading {
+    min-height: 65px;
+  }
+  .muster-gallery .concept-notes {
+    min-height: 0;
+  }
+  .muster-gallery #expanded {
+    padding: 13px;
+    width: calc(100vw - 16px);
+  }
+  .muster-gallery #expanded .study {
+    aspect-ratio: 1.1;
+  }
+  .muster-gallery .dialog-toolbar h2 {
+    font-size: 18px;
+  }
+}
