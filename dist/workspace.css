@@ -52,3 +52,15 @@ button.legacy-tag:hover{background:#ded1f0;color:#3d285f}
 .book-setup-workspace ~ .mobile-workspace-bar{display:none}
 
 .mobile-workspace-bar .quiet:hover:not(:disabled),.mobile-workspace-bar .quiet:active{background:#465c50;color:#fff4da;border-color:#97a889}
+
+/* Skill purchases keep the name, score change and price together. */
+.xp-row.xp-skill-row{grid-template-columns:minmax(0,1fr) auto 32px 84px;gap:8px 12px;padding:10px 6px;align-items:center}
+.xp-skill-row .xp-skill-identity{min-width:0}.xp-skill-name{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px}.xp-skill-name strong{line-height:1.35;overflow-wrap:anywhere}.xp-skill-name .legacy-tag{margin:0}
+.xp-skill-meta{display:block;font-size:11px;color:var(--muted);line-height:1.4;margin-top:3px}
+.xp-skill-row .advance-result{font-size:16px;line-height:1.4;white-space:nowrap}.xp-skill-row .advance-result small{font-size:11px;padding:2px 4px;margin-left:3px}
+.skill-calculation-help{display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid #bcc8bd;border-radius:50%;background:#f0f4ec;color:#425c48;font-size:13px;font-weight:650;line-height:1}
+.skill-calculation-help:hover{background:#dce8d6;border-color:#7a967d;color:#243f2b}
+.xp-skill-row .xp-skill-purchase{max-width:none;text-align:right}.xp-skill-row .primary{width:84px;min-width:0;min-height:36px;padding:7px 8px;font-size:12px;white-space:nowrap}
+.xp-skill-row .xp-skill-note{grid-column:1 / -1;max-width:none;margin:0;line-height:1.4;font-size:11px}
+.skill-group:has(.xp-skill-row){margin-top:18px}.skill-group:has(.xp-skill-row) h3{font-size:15px;margin:18px 0 0;padding-bottom:8px}.skill-catalog-group:has(.xp-skill-row) summary{padding-top:11px;padding-bottom:11px;font-size:14px}
+@media(max-width:760px){.xp-row.xp-skill-row{grid-template-columns:minmax(0,1fr) 32px 76px;gap:4px 8px;padding:9px 4px}.xp-skill-row .xp-skill-identity{grid-column:1;grid-row:1}.xp-skill-row .xp-skill-result{grid-column:1;grid-row:2}.xp-skill-row .skill-calculation-help{grid-column:2;grid-row:1 / span 2}.xp-skill-row .xp-skill-purchase{grid-column:3;grid-row:1 / span 2}.xp-skill-row .primary{width:76px}.xp-skill-row .advance-result{font-size:15px}.xp-skill-row .xp-skill-name strong{font-size:13px}.xp-skill-row .xp-skill-note{grid-row:auto}}
