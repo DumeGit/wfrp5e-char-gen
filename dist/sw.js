@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"e3e2b5738136344aa595";
+const CACHE=CACHE_PREFIX+"1aeaa186f41d6e93cff6";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -124,17 +124,21 @@ const ASSETS=[
  "equipment-sizing.mjs",
  "equipment.mjs",
  "export.mjs",
+ "flow-ui.mjs",
  "folio.mjs",
  "high-elf-ui.mjs",
  "high-elf.mjs",
  "index.html",
  "inventory.mjs",
+ "issue-targets.mjs",
  "legacy-character.mjs",
  "legacy.mjs",
+ "magic-browser.mjs",
  "manifest.webmanifest",
  "market.mjs",
  "origins.mjs",
  "pwa.mjs",
+ "record-sources.mjs",
  "regional-careers.mjs",
  "rules.mjs",
  "sources.mjs",
@@ -142,7 +146,9 @@ const ASSETS=[
  "styles.css",
  "ui.mjs",
  "winds-of-magic-ui.mjs",
- "winds-of-magic.mjs"
+ "winds-of-magic.mjs",
+ "workspace.css",
+ "workspace.mjs"
 ];
 const ROOT=self.registration.scope;
 const paths=new Set(ASSETS.map(path=>new URL(path,ROOT).pathname));

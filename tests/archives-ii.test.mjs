@@ -8,7 +8,7 @@ import {equipment,gearOptions} from '../dist/equipment.mjs';
 import {marketCatalog,buyTrapping,purse} from '../dist/market.mjs';
 import {chartXP,chartGrants,starEffect,rollStar,rollWitchling,chartRecord} from '../dist/astrology.mjs';
 import {folioData} from '../dist/folio.mjs';
-import {bookPanel} from '../dist/book-ui.mjs';
+import {bookPanel,tablePicker} from '../dist/book-ui.mjs';
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
 import {exportSheet} from '../dist/export.mjs';
@@ -61,7 +61,7 @@ test('Archives II Species table defaults only when enabled and preserves explici
   const catalog=assembleBooks(library,ids),s=M.fresh(),table=randomTable(catalog,s,'species');
   assert.equal(table.id,'archives-ii:table:species');
   for(let face=1;face<=100;face++)assert.equal(tableResult(table,face),expected(face),`Species ${face}`);
-  assert.match(bookPanel(library,catalog,s),/<option value="archives-ii:table:species" selected>/);
+  assert.match(tablePicker(catalog,s,'species'),/<option value="archives-ii:table:species" selected>/);
   const core=randomTable(R,s,'species');s.rollTables={species:core.id};assert.equal(randomTable(catalog,s,'species').id,core.id);
   assert.equal(randomTable(catalogForCharacter(library,{...s,version:2,books:bookSelection(catalog)}),s,'species').id,core.id);
  }

@@ -16,7 +16,7 @@ test('Career variants appear only with their Career and parent book, outside the
  const V=switchCareerVariant(library,B,s,'archives-iii-hedge');
  assert.match(careerVariantPanel(V,s),/value="archives-iii-hedge" selected/);
  assert.doesNotMatch(bookPanel(library,V,s),/archives-iii-hedge|Animal-doctor/);
- assert.match(bookPanel(library,V,s),/counter">3<\/span>/);
+ assert.match(bookPanel(library,V,s),/3 selected books/);
 });
 test('Switching Career variants clears dependent choices, preserves creation rolls, and round trips saved sources',()=>{
  const s={...M.fresh(),version:2,books:bookSelection(B),career:'hedge-witch',name:'Test',origin:'',speciesSkills:['s-0'],randomTalents:['Strong Back'],talentChoices:{'species-0':'Doomed'},careerMode:'first',careerAttempts:1,careerOffers:['hedge-witch'],rolls:[{label:'Career',dice:'1d100',values:[18],total:18}],charMode:'first',charRolls:Array(10).fill(10),background:{eyes:'Brown'},careerSkills:{'c1-0':2},freeTalent:'Petty Magic',spells:['Open Lock'],spellLores:{'Open Lock':'Petty Magic'},gearChoices:{x:'old'},purchases:[{id:'old'}],wealth:{amount:10,currency:'silver shillings'}};

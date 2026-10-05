@@ -1,5 +1,5 @@
 // Reviewed changes only: edition and generic compatibility notes are not conversions.
-export const LEGACY_EXPLANATION='A printed rule changed for Fifth Edition. Compatible material used unchanged has only its book reference. Hover over a Legacy tag for the specific adaptation.';
+export const LEGACY_EXPLANATION='A printed rule changed for Fifth Edition. Compatible material used unchanged has only its book reference. Tap or click a Legacy tag for the specific adaptation.';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const mechanics={
  elder:['high-elf',53,'Past-Career points use Fifth Edition individual Advances and creation caps; lost Fate/Resilience becomes a choice of Fate/Fortune.'],
@@ -54,5 +54,5 @@ export const legacyTitle=(R,entry)=>legacySources(R,entry).map(s=>`${R.books.fin
 export function legacyTag(R,entry){
  const sources=legacySources(R,entry);if(!sources.length)return '';
  const explanations=legacyTitle(R,entry);
- return `<span class="legacy-tag" title="${esc(explanations)}">Legacy</span>`;
+ return `<button type="button" class="legacy-tag" data-action="legacy-info" data-explanation="${esc(explanations)}" title="${esc(explanations)}" aria-label="Explain Legacy adaptation">Legacy</button>`;
 }

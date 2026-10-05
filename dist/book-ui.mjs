@@ -1,17 +1,23 @@
 import {randomTable} from './books.mjs';
 import {sourceLabel} from './sources.mjs';
-import {legacyTag,LEGACY_EXPLANATION} from './legacy.mjs';
+import {LEGACY_EXPLANATION} from './legacy.mjs';
 import {careerSpecies} from './origins.mjs';
 import {isCareerVariant} from './career-variants.mjs';
-const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export function bookPanel(library,R,s){
+import {bookSummary,esc} from './workspace.mjs';
+
+export function bookPanel(library,R){
+ return `<div class="selected-books"><span><strong>${R.books.filter(b=>!isCareerVariant(b.id)).length} selected books</strong><small>${R.books.filter(b=>!isCareerVariant(b.id)).map(b=>esc(b.shortTitle||b.title)).join(' · ')}</small></span><button type="button" class="quiet" data-action="books">Choose books</button></div>`;
+}
+
+export function bookSetup(library,R){
  const enabled=new Set(R.selection.map(x=>x.id));
- const books=library.packs.filter(x=>!isCareerVariant(x.manifest.id));
- const choices=books.map(({manifest:b})=>`<label class="book-choice"><input type="checkbox" data-book="${esc(b.id)}" ${enabled.has(b.id)?'checked':''} ${b.kind==='core'?'disabled':''}><span><strong>${esc(b.title)} </strong><small>${b.kind==='core'?'Required core rules':b.kind==='variant'?'Optional rule variant':'Additional character options'} · ${esc(b.shortTitle||b.id)}</small></span></label>`).join('');
- const tables=['species','career','talent'].map(kind=>{
-  const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s))&&(!x.origin||x.origin===s.origin)&&(!x.origins||x.origins.includes(s.origin)));
-  const active=randomTable(R,s,kind);if(!available.length||available.length<2&&active)return '';
-  return `<div class="field"><label for="table-${kind}">${kind==='talent'?'Random Talents':kind==='species'?'Species':'Career'} roll table</label><select id="table-${kind}" data-bind="rollTable" data-key="${kind}">${!active?'<option value="" selected>Choose a printed table to enable rolls…</option>':''}${available.map(x=>`<option value="${esc(x.id)}" ${x.id===active?.id?'selected':''}>${esc(x.name+' · '+sourceLabel(R,x))}</option>`).join('')}</select></div>`;
- }).join('');
- return `<details class="book-panel" data-group="books"><summary>Books & options <span class="counter">${R.books.filter(b=>!isCareerVariant(b.id)).length}</span></summary><p class="small muted legacy-legend"><span class="legacy-tag">Legacy</span> ${esc(LEGACY_EXPLANATION)}</p><div class="book-choices">${choices}</div>${books.length>1?'<p class="small muted">Changing books starts a new character. Required books are included automatically.</p><button type="button" class="quiet" data-action="apply-books">Use selected books & start new character</button>':'<p class="small muted">The core book is currently the only installed source. Verified supplements will appear here when added.</p>'}${tables?`<h3>Random tables</h3><p class="small muted">Archives II’s Species table is the default while enabled. Other core tables stay the default; a sole Career table is automatic. You can choose an alternative here.</p>${tables}`:''}${R.books.filter(b=>b.kind==='variant'&&!isCareerVariant(b.id)).map(b=>`<p class="small muted">Variant enabled: ${esc(b.title)}</p>`).join('')}</details>`;
+ return `<span class="eyebrow">Before you begin</span><h1>Choose your books</h1><p class="muted">Select the supplied books you want to use for this character. Fifth Edition core rules remain the foundation.</p><div class="notice">Changing books starts a new character. Career variants are chosen later in Career; selecting a supplement does not enable every optional rule.</div><div class="book-grid">${library.packs.filter(x=>!isCareerVariant(x.manifest.id)).map(pack=>{const b=pack.manifest;return `<label class="book-card"><input type="checkbox" data-book="${esc(b.id)}" ${enabled.has(b.id)?'checked':''} ${b.kind==='core'?'disabled':''}><span><strong>${esc(b.title)}</strong><small>${b.kind==='core'?'Required core rules':'Additional character options'}</small><p>${esc(bookSummary(pack))}</p></span></label>`;}).join('')}</div><p class="small muted">${esc(LEGACY_EXPLANATION)} Each character option keeps its own book and page reference.</p><div class="actions"><button type="button" class="primary" data-action="apply-books">Use selected books</button><button type="button" class="quiet" data-action="books-cancel">Return to character</button></div>`;
+}
+
+export function tablePicker(R,s,kind){
+ const available=R.tables.filter(x=>x.kind===kind&&(kind!=='career'||x.species===careerSpecies(R,s))&&(!x.origin||x.origin===s.origin)&&(!x.origins||x.origins.includes(s.origin))),active=randomTable(R,s,kind);
+ const reference=active?`<button type="button" class="source-button" data-action="source-info" data-book="${esc(active.source.book)}" data-page="${esc(active.source.page)}">${esc(sourceLabel(R,active))}</button>`:'';
+ if(available.length<2&&active)return `<p class="small muted roll-source">Rolls use ${esc(active.name)} · ${reference}.</p>`;
+ if(!available.length)return '<p class="small muted">No implemented printed roll table for this selection; choose directly.</p>';
+ return `<div class="field table-picker"><label for="table-${kind}">Roll using</label><select id="table-${kind}" data-bind="rollTable" data-key="${kind}">${!active?'<option value="">Choose a printed table…</option>':''}${available.map(x=>`<option value="${esc(x.id)}" ${x.id===active?.id?'selected':''}>${esc(x.name+' · '+sourceLabel(R,x))}</option>`).join('')}</select><small class="muted">Printed probabilities are retained. This changes the table for future rolls. ${reference}</small></div>`;
 }

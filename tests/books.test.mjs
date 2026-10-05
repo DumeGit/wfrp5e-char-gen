@@ -5,7 +5,7 @@ import * as PDFLib from 'pdf-lib';
 import {library,R,soldier} from './fixture.mjs';
 import {assembleBooks,loadBookLibrary,validateManifest,bookSelection,catalogForCharacter,randomTable,tableResult} from '../dist/books.mjs';
 import {sourceLabel} from '../dist/sources.mjs';
-import {bookPanel} from '../dist/book-ui.mjs';
+import {bookPanel,bookSetup} from '../dist/book-ui.mjs';
 import * as M from '../dist/rules.mjs';
 import {marketCatalog,buyTrapping,purse} from '../dist/market.mjs';
 import {equipment,gearOptions} from '../dist/equipment.mjs';
@@ -123,10 +123,10 @@ test('loader rejects duplicate registry entries and paths outside published book
  index.packs=[{id:'core',path:'core/manifest.json'}];const bad={...original.manifest,files:{species:'../../../../secret.json'}};await assert.rejects(loadBookLibrary(async u=>u.href===url.href?index:bad,url),/inside the data/);
 });
 test('book selector lists real registered books, mandatory core and opt-in variants',()=>{
- const p=additions(),lib=withPack(p),s=soldier(),html=bookPanel(lib,R,s);
+ const p=additions(),lib=withPack(p),s=soldier(),html=bookSetup(lib,R,s);
  assert.match(html,/data-book="core" checked disabled/);assert.match(html,/data-book="fixture"\s*>/);assert.match(html,/Changing books starts a new character/);
- assert.ok(bookPanel(library,R,s).includes('data-action="apply-books"'));
- assert.ok(!bookPanel({...library,packs:library.packs.filter(p=>p.manifest.kind==='core')},R,s).includes('data-action="apply-books"'));
+ assert.ok(bookSetup(library,R,s).includes('data-action="apply-books"'));assert.doesNotMatch(bookPanel(library,R,s),/data-book=/);
+ assert.match(bookSetup({...library,packs:library.packs.filter(p=>p.manifest.kind==='core')},R,s),/Required core rules/);
 });
 test('a supplement character fills the editable PDF with book-specific references',async()=>{
  globalThis.PDFLib=PDFLib;const on=assembleBooks(withPack(additions()),['fixture']),s=soldier();s.career='fixture:soldier';s.freeTalent='Fixture Talent';s.books=bookSelection(on);buyTrapping(on,s,'fixture:blade');
