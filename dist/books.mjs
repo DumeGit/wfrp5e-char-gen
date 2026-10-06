@@ -267,7 +267,7 @@ export function validateManifest(p) {
   return p;
 }
 
-// readJSON is injected so the exact browser loader is also used by build/tests.
+// Full source validation for builds/tests; browser startup uses book-bundle.mjs.
 export async function loadBookLibrary(
   readJSON,
   registryURL = new URL("./data/books/index.json", import.meta.url),

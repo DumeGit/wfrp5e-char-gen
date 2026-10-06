@@ -28,12 +28,12 @@ import { formatMoney } from "./market.mjs";
 import { penaltySummary } from "./creator-ui.mjs";
 import { setNamePart } from "./background.mjs";
 import {
-  loadBookLibrary,
   assembleBooks,
   bookSelection,
   catalogForCharacter,
   randomTable,
 } from "./books.mjs";
+import { loadBookBundle } from "./book-bundle.mjs";
 
 import { legacyTag } from "./legacy.mjs";
 import { legacyContext } from "./legacy-character.mjs";
@@ -50,7 +50,7 @@ const mountInstallControl = createInstallControl(
   document.getElementById("pwa-install"),
 );
 
-const library = await loadBookLibrary(async (url) => {
+const library = await loadBookBundle(async (url) => {
   const r = await fetch(url);
   if (!r.ok) throw Error(`Cannot load book data: ${url.pathname}`);
   return r.json();

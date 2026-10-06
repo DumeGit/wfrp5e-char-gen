@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { loadBookLibrary } from "../dist/books.mjs";
+import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
 import {
   buildBookReport,
   inclusionMarkdown,
@@ -23,6 +24,15 @@ const next =
   "\n" +
   readme.slice(readme.indexOf(end));
 const outputs = [
+  [
+    "../dist/data/book-library.json",
+    JSON.stringify({
+      format: BOOK_BUNDLE_FORMAT,
+      schemaVersion: library.schemaVersion,
+      core: library.core,
+      packs: library.packs,
+    }) + "\n",
+  ],
   ["../dist/data/content-report.json", JSON.stringify(report, null, 2) + "\n"],
   ["../docs/INCLUSION-MATRIX.md", inclusionMarkdown(report)],
   ["../README.md", next],
@@ -42,5 +52,5 @@ for (const [path, text] of outputs) {
   } else await writeFile(url, text);
 }
 console.log(
-  `${check ? "Verified" : "Generated"} registry counts, inclusion matrix and README summary for ${report.books.length} packs.`,
+  `${check ? "Verified" : "Generated"} startup bundle, registry counts, inclusion matrix and README summary for ${report.books.length} packs.`,
 );
