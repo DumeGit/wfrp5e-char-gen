@@ -202,7 +202,10 @@ export function options(R, raw, type = "skill", s) {
   if (!m) return [raw];
   const [_, b, spec] = m;
   let opts;
-  if (/Any|All|as Trade/.test(spec)) {
+  if (
+    /Any|All|as Trade/.test(spec) ||
+    (type === "talent" && b === "Craftsman" && spec === "Trade")
+  ) {
     if (type === "skill") {
       opts = [
         ...(skillInfo(R, raw)?.options || []),
@@ -1246,7 +1249,7 @@ export function spellGrants(R, s) {
     else if (name === "Witch!") category = "Witch!";
     else continue;
     const cult = b === "Invoke" && R.cults.find((x) => x.name === category);
-    const choices = (cult ? miracleChoices(R, category) : spells)
+    const choices = (cult ? miracleChoices(R, category, s.career) : spells)
       .filter((x) => !x.ritual && womSpellAllowed(R, s, x))
       .filter((x) =>
         category === "Old Faith"

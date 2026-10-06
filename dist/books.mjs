@@ -128,6 +128,10 @@ const columns = {
     "attacks",
     "text",
     "notes",
+    "traitGrants",
+    "talentGrants",
+    "armourProfiles",
+    "magicGrants",
   ],
   traits: ["text", "parameter"],
   templates: ["adjustments", "skills", "talents", "magic", "text"],
@@ -135,7 +139,7 @@ const columns = {
   techniques: ["sl", "text"],
   careerUpdates: ["careers", "characteristic", "profile", "unavailable"],
   runes: ["form", "master", "sl", "text"],
-  cults: ["miracles", "text"],
+  cults: ["miracles", "careerMiracles", "text"],
   cants: ["lore", "text"],
   astrology: [
     "min",
@@ -247,6 +251,14 @@ const columns = {
 };
 
 export function validateManifest(p) {
+  if (
+    p.creators !== undefined &&
+    (!Array.isArray(p.creators) ||
+      !p.creators.length ||
+      new Set(p.creators).size !== p.creators.length ||
+      p.creators.some((name) => !["pc", "npc"].includes(name)))
+  )
+    fail(`${p.id}: invalid creator support declaration.`);
   if (
     !plain(p) ||
     p.schemaVersion !== BOOK_SCHEMA ||
@@ -1439,7 +1451,7 @@ export function validateCatalog(R) {
       }
     }
   }
-  for (const cult of R.cults)
+  for (const cult of R.cults) {
     if (
       !C.gods.includes(cult.name) ||
       !strings(cult.miracles) ||
@@ -1454,6 +1466,27 @@ export function validateCatalog(R) {
       !nonempty(cult.text)
     )
       fail(`${cult.name}: invalid cult Miracle references or description.`);
+    if (
+      cult.careerMiracles !== undefined &&
+      (!plain(cult.careerMiracles) ||
+        !Object.keys(cult.careerMiracles).length ||
+        Object.entries(cult.careerMiracles).some(
+          ([career, names]) =>
+            !R.careers.some((x) => x.id === career) ||
+            !strings(names) ||
+            !names.length ||
+            new Set(names).size !== names.length ||
+            names.some(
+              (name) =>
+                !R.spells.some(
+                  (x) =>
+                    x.name === name && C.gods.includes(x.category) && !x.ritual,
+                ),
+            ),
+        ))
+    )
+      fail(`${cult.name}: invalid Career-specific Miracle references.`);
+  }
   for (const god of C.gods) {
     if (
       !C.blessings[god]?.length ||

@@ -44,9 +44,9 @@ Career browsing now has search, Class/source filters and a non-mutating preview.
 
 ## NPC & Monster Creator
 
-Open **NPC & monster creator** in the left menu for the separate core-only GM workspace. It includes 49 base creature profiles, four worked NPCs, seven development templates and all 67 Creature Traits, with explicit GM changes, recorded individualisation/Mutation rolls, undo, equipment/magic, independent save/load, and dedicated stat block PDF/text exports. Review and exports use the same calculated result as the live folio. It does not manage combat or ongoing resources.
+Open **NPC & monster creator** in the left menu for the separate GM workspace, initially using core. It includes 49 base creature profiles, four worked NPCs, seven development templates and all 67 Creature Traits, with explicit GM changes, recorded individualisation/Mutation rolls, undo, equipment/magic, independent save/load, and dedicated stat block PDF/text exports. Review and exports use the same calculated result as the live folio. It does not manage combat or ongoing resources.
 
-Printed values are preserved until changed; conflicts remain visible. Career XP requires GM-supplied existing Advance counts because core p. 318 supplies no NPC XP history. Tiny and unresolved calculations require explicit GM values. Sources, interpretations, scope and extension details: [docs/NPC-CREATOR.md](docs/NPC-CREATOR.md).
+Printed values are preserved until changed; conflicts remain visible. Career XP requires GM-supplied existing Advance counts because core p. 318 supplies no NPC XP history. Tiny and unresolved calculations require explicit GM values. The GM book picker accepts only explicitly reviewed NPC packs; PC book selection is independent. Sources, interpretations, scope and extension details: [docs/NPC-CREATOR.md](docs/NPC-CREATOR.md). Deft Steps is being prepared but is not yet enabled; pending decisions and progress are recorded in [docs/DEFT-STEPS.md](docs/DEFT-STEPS.md).
 
 ## Rules and source
 

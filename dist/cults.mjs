@@ -1,9 +1,9 @@
 import { issue, finishIssues } from "./issues.mjs";
 // A supplied cult can reuse core Miracles without duplicating or rewriting them.
-export function miracleChoices(R, god) {
+export function miracleChoices(R, god, career = "") {
   const cult = (R.cults || []).find((x) => x.name === god);
   return cult
-    ? cult.miracles
+    ? (cult.careerMiracles?.[career] || cult.miracles)
         .map((name) => R.spells.find((x) => x.name === name))
         .filter(Boolean)
     : R.spells.filter((x) => x.category === god && !x.ritual);
@@ -23,7 +23,8 @@ export function cultIssues(R, s, structured = false) {
     .flatMap((x) => {
       const god = x.talent?.match(/^Invoke \((.*)\)$/)?.[1],
         cult = (R.cults || []).find((c) => c.name === god);
-      return cult && !cult.miracles.includes(x.name)
+      return cult &&
+        !miracleChoices(R, god, s.career).some((entry) => entry.name === x.name)
         ? [
             issue(
               "cult.miracle",

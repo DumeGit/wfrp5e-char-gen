@@ -12,6 +12,8 @@ import {
 } from "../npc-profile.mjs";
 import { npcMagicChoices, npcQuote, npcCareerTalents } from "../npc-result.mjs";
 import { npcText } from "../npc-export.mjs";
+import { npcSourceLabel } from "../npc-books.mjs";
+import { legacyTag, isLegacy } from "../legacy.mjs";
 
 export const npcSteps = [
   "Base profile",
@@ -32,15 +34,20 @@ export const select = (id, options, current, attrs = "") =>
 export const field = (label, control) =>
   `<div class="field"><label>${label}${control}</label></div>`;
 export function createNPCViews(getContext) {
-  const ref = (x) =>
-    btn(
-      "reference",
-      `p. ${x.page || x.source?.page}`,
-      `data-id="${esc(x.contentId)}"`,
-      "source-button",
+  const ref = (x) => {
+    if (!x) return "";
+    const { R } = getContext();
+    return (
+      btn(
+        "reference",
+        npcSourceLabel(R, x),
+        `data-id="${esc(x.contentId)}"`,
+        "source-button",
+      ) + legacyTag(R, x)
     );
+  };
   function profileView() {
-    const { R, s, d, ui } = getContext();
+    const { R, s, d, ui, books } = getContext();
     const rows = R.creatures.filter(
       (x) =>
         (!ui.category || x.category === ui.category) &&
@@ -49,9 +56,10 @@ export function createNPCViews(getContext) {
             .toLowerCase()
             .includes(ui.filter.toLowerCase())),
     );
-    return `${chapterHeading("Base profile")}<p>Start with a printed core profile, then make it your own. ${ref(d.profile)}</p>
+    const bookControls = `<details data-detail-key="npc:books"><summary>Selected books <small>${R.selection.length}</small></summary><div class="npc-compact-list">${books.map((b) => `<label class="npc-book-choice"><input type="checkbox" data-npc-book="${esc(b.id)}" ${R.selection.some((x) => x.id === b.id) ? "checked" : ""} ${b.kind === "core" ? "disabled" : ""}><span>${esc(b.title)}${b.kind === "core" ? " · Required" : ""}</span></label>`).join("")}</div><p class="small muted">Only books reviewed for this GM creator appear here. Changing books starts a new NPC; your player-character draft is separate.</p></details>`;
+    return `${chapterHeading("Base profile")}<p>Start with a printed profile, then make it your own. ${ref(d.profile)}</p>${bookControls}
     <div class="npc-toolbar">${field("Find a profile", `<input type="search" id="npc-profile-search" data-ui="filter" value="${esc(ui.filter)}" placeholder="Orc, merchant, dragon…">`)}${field("Category", select("npc-category", [["", "All categories"], ...[...new Set(R.creatures.map((x) => x.category))]], ui.category, 'data-ui="category"'))}</div>
-    <div class="npc-profile-grid">${rows.map((x) => `<button class="npc-profile-card ${x.contentId === s.profile ? "selected" : ""}" data-npc-action="profile" data-id="${esc(x.contentId)}" aria-pressed="${x.contentId === s.profile}"><strong>${esc(x.name)}</strong><span>${esc(x.size)} · p. ${x.page}${x.example ? " · Worked example" : ""}</span></button>`).join("") || "<p>No matching profiles.</p>"}</div>
+    <div class="npc-profile-grid">${rows.map((x) => `<button class="npc-profile-card ${x.contentId === s.profile ? "selected" : ""}" data-npc-action="profile" data-id="${esc(x.contentId)}" aria-pressed="${x.contentId === s.profile}"><strong>${esc(x.name)}</strong><span>${esc(x.size)} · ${esc(npcSourceLabel(R, x))}${isLegacy(R, x) ? " · Legacy" : ""}${x.example ? " · Worked example" : ""}</span></button>`).join("") || "<p>No matching profiles.</p>"}</div>
     <h2>Identity</h2><div class="npc-toolbar">${field("Name", `<input id="npc-name" data-state="name" value="${esc(s.name)}">`)}${field("GM notes / role", `<textarea id="npc-notes" data-state="notes" rows="2">${esc(s.notes)}</textarea>`)}</div>
     <details id="npc-printed" data-detail-key="npc:printed"><summary>Original printed profile ${esc(d.profile.name)}</summary><pre class="npc-rule-text">${esc(d.profile.text)}</pre></details>
     ${d.profile.notes.map((x) => `<p class="notice small">${esc(x)}</p>`).join("")}`;
@@ -104,7 +112,7 @@ export function createNPCViews(getContext) {
     }`;
   }
   function statsView() {
-    const { s, d } = getContext();
+    const { R, s, d } = getContext();
     return `<h2>Characteristics & size</h2>${field("Creature anatomy", select("npc-anatomy", ["Standard", "Quadruped", "Bird", "Snake", "Spider", "Other"], s.anatomy, 'data-state="anatomy"'))}<p class="small muted">${esc(d.hitLocations)} Core p. 318.</p><div class="npc-toolbar">${field("Size", select("npc-size", [...NPC_SIZES, "Tiny"], s.size, 'data-state="size"'))}${btn("individualise", "Individualise: −10 + 2d10", "", "primary")}${btn("reset-scores", "Clear GM score overrides")}${Object.keys(s.characteristicRolls).length ? btn("reset-individualise", "Clear individualisation") : ""}</div><p class="small muted">Blank fields retain the calculated value. A number is an explicit final GM score. Individualisation rolls each present Characteristic; Movement and Wounds are excluded. Core p. 318.</p><div class="npc-score-grid">${NPC_KEYS.map((k) => `<label for="npc-score-${k}"><strong>${k}</strong><span>Current ${value(d.stats[k])}</span><input id="npc-score-${k}" data-score="${k}" inputmode="numeric" type="number" min="0" max="1000000" value="${s.overrides[k] ?? ""}" placeholder="${value(d.stats[k])}">${btn("calculation", "?", `data-key="${k}" aria-label="How ${k} is calculated"`, "calculation-help")}</label>`).join("")}</div>
     <div class="npc-toolbar">${field(
       "Toughness Bonus",
@@ -195,7 +203,7 @@ export function createNPCViews(getContext) {
           ),
         ),
       ].sort();
-    return `<details data-detail-key="npc:skill-talent"><summary>Skills & Talents <small>${d.skills.length} Skills · ${d.talents.length} Talents</small></summary><h3>Skills</h3><div class="npc-compact-list">${d.skills.map((x) => `<div class="npc-inline"><strong>${esc(x.name)}</strong><span>${value(x.total)} <small>(bonus ${value(x.advance)}${x.paid ? ` + ${x.paid} paid` : ""})</small></span>${s.skills.some((y) => y.name === x.name) ? btn("remove-skill", "Remove GM bonus", `data-name="${esc(x.name)}"`) : x.origins.some((y) => y.startsWith("Printed")) ? btn("remove-printed-skill", "Remove", `data-name="${esc(x.name)}"`) : ""}</div>`).join("")}</div><div class="npc-toolbar">${field("Skill", select("npc-add-skill", skills, ui.skill, 'data-ui="skill"'))}${field("GM bonus", `<input id="npc-skill-bonus" type="number" min="0" value="${ui.skillBonus}" data-ui="skillBonus">`)}${btn("add-skill", "Add / update bonus", "", "primary")}</div><h3>Talents</h3>${d.talents.map((t) => `<div class="npc-item"><details data-detail-key="npc:talent:${esc(t.name)}"><summary>${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""}</summary><p>${esc(M.talentInfo(R, t.name)?.text || "See core source")}</p></details>${s.talents.some((x) => x.name === t.name) ? btn("remove-talent", "Remove GM ranks", `data-name="${esc(t.name)}"`) : t.origins.includes("Printed") ? btn("remove-printed-talent", "Remove", `data-name="${esc(t.name)}"`) : ""}</div>`).join("")}<div class="npc-toolbar">${field("Talent", select("npc-talent", talents, ui.talent, 'data-ui="talent"'))}${/\(Any\)$/.test(ui.talent) ? field("Specify target", `<input id="npc-talent-target" type="text" data-ui="talentTarget" value="${esc(ui.talentTarget || "")}" placeholder="Enter the printed Talent target">`) : ""}${field("Ranks", `<input id="npc-talent-ranks" data-ui="talentRanks" type="number" min="1" value="${ui.talentRanks}">`)}${btn("add-talent", "Add GM Talent", "", "primary")}</div><p class="small muted">GM additions cost no XP. Use paid development below for Career purchases. Permanent supported effects are calculated; situational effects remain in the rule description.</p></details>`;
+    return `<details data-detail-key="npc:skill-talent"><summary>Skills & Talents <small>${d.skills.length} Skills · ${d.talents.length} Talents</small></summary><h3>Skills</h3><div class="npc-compact-list">${d.skills.map((x) => `<div class="npc-inline"><strong>${esc(x.name)}</strong><span>${value(x.total)} <small>(bonus ${value(x.advance)}${x.paid ? ` + ${x.paid} paid` : ""})</small></span>${s.skills.some((y) => y.name === x.name) ? btn("remove-skill", "Remove GM bonus", `data-name="${esc(x.name)}"`) : x.origins.some((y) => y.startsWith("Printed")) ? btn("remove-printed-skill", "Remove", `data-name="${esc(x.name)}"`) : ""}</div>`).join("")}</div><div class="npc-toolbar">${field("Skill", select("npc-add-skill", skills, ui.skill, 'data-ui="skill"'))}${field("GM bonus", `<input id="npc-skill-bonus" type="number" min="0" value="${ui.skillBonus}" data-ui="skillBonus">`)}${btn("add-skill", "Add / update bonus", "", "primary")}</div><h3>Talents</h3>${d.talents.map((t) => `<div class="npc-item"><details data-detail-key="npc:talent:${esc(t.name)}"><summary>${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""}</summary><p>${esc(M.talentInfo(R, t.name)?.text || "See source")}</p>${ref(M.talentInfo(R, t.name))}</details>${s.talents.some((x) => x.name === t.name) ? btn("remove-talent", "Remove GM ranks", `data-name="${esc(t.name)}"`) : t.origins.includes("Printed") ? btn("remove-printed-talent", "Remove", `data-name="${esc(t.name)}"`) : ""}</div>`).join("")}<div class="npc-toolbar">${field("Talent", select("npc-talent", talents, ui.talent, 'data-ui="talent"'))}${/\(Any\)$/.test(ui.talent) ? field("Specify target", `<input id="npc-talent-target" type="text" data-ui="talentTarget" value="${esc(ui.talentTarget || "")}" placeholder="Enter the printed Talent target">`) : ""}${field("Ranks", `<input id="npc-talent-ranks" data-ui="talentRanks" type="number" min="1" value="${ui.talentRanks}">`)}${btn("add-talent", "Add GM Talent", "", "primary")}</div><p class="small muted">GM additions cost no XP. Use paid development below for Career purchases. Permanent supported effects are calculated; situational effects remain in the rule description.</p></details>`;
   }
   function mutationsView() {
     const { R, s, d, ui } = getContext();
@@ -318,7 +326,7 @@ export function createNPCViews(getContext) {
   }
   function folio() {
     const { s, d } = getContext();
-    return `<aside class="sheet npc-sheet" aria-label="NPC stat block"><div class="sheet-heading"><span class="eyebrow">GM bestiary</span><div class="folio-crest">${ledgerEmblem()}</div><h2>${esc(d.name)}</h2><p>${esc(d.profile.name)} · ${esc(d.size)}${d.template ? ` · ${esc(d.template.name)}` : ""}</p>${btn("folio-toggle", "View stat block", 'aria-expanded="false"', "summary-toggle")}</div><div class="npc-folio-body"><div class="npc-folio-stats">${NPC_KEYS.map((k) => `<div><small>${k}</small><strong>${value(d.stats[k])}</strong></div>`).join("")}</div><p class="small">SB ${value(d.sb)} · TB ${value(d.tb)} · Walk ${value(d.walk)} · Run ${value(d.run)}</p><p class="small">Combat Initiative ${value(d.combatInitiative)}</p><h3>Attacks</h3>${d.attacks.map((a) => `<p class="npc-attack"><strong>${esc(a.name)}</strong><span>${a.skill === null ? "Rule" : a.skill}${a.damage === null ? "" : ` / +${a.damage}`}</span><small>${esc(a.text)}</small></p>`).join("")}<p class="small">${
+    return `<aside class="sheet npc-sheet" aria-label="NPC stat block"><div class="sheet-heading"><span class="eyebrow">GM bestiary</span><div class="folio-crest">${ledgerEmblem()}</div><h2>${esc(d.name)}</h2><p>${esc(d.profile.name)} · ${esc(d.size)}${d.template ? ` · ${esc(d.template.name)}` : ""}</p><p class="small">${ref(d.profile)}</p>${btn("folio-toggle", "View stat block", 'aria-expanded="false"', "summary-toggle")}</div><div class="npc-folio-body"><div class="npc-folio-stats">${NPC_KEYS.map((k) => `<div><small>${k}</small><strong>${value(d.stats[k])}</strong></div>`).join("")}</div><p class="small">SB ${value(d.sb)} · TB ${value(d.tb)} · Walk ${value(d.walk)} · Run ${value(d.run)}</p><p class="small">Combat Initiative ${value(d.combatInitiative)}</p><h3>Attacks</h3>${d.attacks.map((a) => `<p class="npc-attack"><strong>${esc(a.name)}</strong><span>${a.skill === null ? "Rule" : a.skill}${a.damage === null ? "" : ` / +${a.damage}`}</span><small>${esc(a.text)}</small></p>`).join("")}<p class="small">${
       Object.entries(d.protection)
         .filter(([, v]) => v)
         .map(([k, v]) => `${k} ${v} AP`)
@@ -351,13 +359,13 @@ export function createNPCViews(getContext) {
       )}<p class="small">${d.remaining} XP remaining · ${d.spent} spent</p>${btn("step", "Review & export", 'data-step="3"', "primary")}</div></aside>`;
   }
   function render() {
-    const { s, d, undoAvailable, verify } = getContext();
+    const { R, s, d, undoAvailable, verify } = getContext();
     return `<div class="workspace npc-workspace"><aside class="rail"><div class="rail-heading"><span class="eyebrow">NPC & monster creation</span><strong>The GM’s bestiary</strong></div><a class="npc-mode-link" href="index.html${verify ? "?verify=1" : ""}">← Player character creator</a><div class="mobile-step field"><label for="npc-mobile-step">Creation section</label>${select(
       "npc-mobile-step",
       npcSteps.map((x, i) => [i, x]),
       s.step,
       'data-state="step"',
-    )}</div><nav aria-label="NPC creation sections"><ol class="steps">${npcSteps.map((name, i) => `<li>${btn("step", name, `data-step="${i}" ${i === s.step ? 'aria-current="step"' : ""}`, i === s.step ? "active" : "")}</li>`).join("")}</ol></nav><div class="header-actions">${btn("save", "Save NPC")}${btn("load", "Load NPC")}${btn("new", "New NPC")}${btn("duplicate", "Duplicate NPC")}${btn("undo", "Undo last edit", undoAvailable ? "" : "disabled")}<div data-install-slot></div></div><p class="save-status">Separate draft · saved on this device</p><p class="small">Core book only · pp. 318–363</p><input id="npc-import" type="file" accept="application/json,.json" hidden></aside><main class="panel"><div class="stage-meta"><span>Section ${s.step + 1} of 4</span><span>${d.issues.filter((x) => x.severity === "error").length} unresolved errors</span></div>${[profileView, customView, gearMagicView, reviewView][s.step]()}${d.issues.length ? `<details class="npc-issues" data-detail-key="npc:issues" ${d.issues.some((x) => x.severity === "error") ? "open" : ""}><summary>Checks & source discrepancies (${d.issues.length})</summary>${d.issues.map((x) => `<p class="${x.severity === "error" ? "error" : "small"}">${esc(x.message)} ${btn("issue", "Show control", `data-code="${esc(x.code)}"`, "text-button")}</p>`).join("")}</details>` : ""}<div class="step-footer">${s.step ? btn("step", "Back", `data-step="${s.step - 1}"`) : "<span></span>"}${s.step < 3 ? btn("step", `Continue to ${npcSteps[s.step + 1]}`, `data-step="${s.step + 1}"`, "primary") : ""}</div></main>${folio()}</div>`;
+    )}</div><nav aria-label="NPC creation sections"><ol class="steps">${npcSteps.map((name, i) => `<li>${btn("step", name, `data-step="${i}" ${i === s.step ? 'aria-current="step"' : ""}`, i === s.step ? "active" : "")}</li>`).join("")}</ol></nav><div class="header-actions">${btn("save", "Save NPC")}${btn("load", "Load NPC")}${btn("new", "New NPC")}${btn("duplicate", "Duplicate NPC")}${btn("undo", "Undo last edit", undoAvailable ? "" : "disabled")}<div data-install-slot></div></div><p class="save-status">Separate draft · saved on this device</p><p class="small">${R.selection.length} selected ${R.selection.length === 1 ? "book" : "books"}</p><input id="npc-import" type="file" accept="application/json,.json" hidden></aside><main class="panel"><div class="stage-meta"><span>Section ${s.step + 1} of 4</span><span>${d.issues.filter((x) => x.severity === "error").length} unresolved errors</span></div>${[profileView, customView, gearMagicView, reviewView][s.step]()}${d.issues.length ? `<details class="npc-issues" data-detail-key="npc:issues" ${d.issues.some((x) => x.severity === "error") ? "open" : ""}><summary>Checks & source discrepancies (${d.issues.length})</summary>${d.issues.map((x) => `<p class="${x.severity === "error" ? "error" : "small"}">${esc(x.message)} ${btn("issue", "Show control", `data-code="${esc(x.code)}"`, "text-button")}</p>`).join("")}</details>` : ""}<div class="step-footer">${s.step ? btn("step", "Back", `data-step="${s.step - 1}"`) : "<span></span>"}${s.step < 3 ? btn("step", `Continue to ${npcSteps[s.step + 1]}`, `data-step="${s.step + 1}"`, "primary") : ""}</div></main>${folio()}</div>`;
   }
   return { render };
 }

@@ -21,6 +21,63 @@ const fail = (name) => {
 export function validateBestiary(R) {
   for (const x of R.creatures || []) {
     if (
+      x.magicGrants !== undefined &&
+      (!Array.isArray(x.magicGrants) ||
+        x.magicGrants.some(
+          (grant) =>
+            !object(grant) ||
+            !text(grant.name) ||
+            !text(grant.lore) ||
+            Object.keys(grant).some((key) => !["name", "lore"].includes(key)) ||
+            !R.spells.some(
+              (spell) =>
+                spell.name === grant.name &&
+                !spell.ritual &&
+                (spell.category === grant.lore ||
+                  (spell.category === "Arcane" &&
+                    R.config.colours.includes(grant.lore))),
+            ),
+        ))
+    )
+      fail(x.name + " printed magic");
+    for (const kind of ["trait", "talent"]) {
+      const grants = x[`${kind}Grants`];
+      if (grants === undefined) continue;
+      const catalog = R[kind === "trait" ? "traits" : "talents"];
+      if (
+        !Array.isArray(grants) ||
+        grants.some(
+          (g) =>
+            !object(g) ||
+            !text(g.name) ||
+            Object.keys(g).some(
+              (key) => !["name", "value", "ranks"].includes(key),
+            ) ||
+            (g.value !== undefined && typeof g.value !== "string") ||
+            (g.ranks !== undefined &&
+              (!Number.isInteger(g.ranks) || g.ranks < 1)) ||
+            !catalog.some(
+              (record) => record.name.split(" (")[0] === g.name.split(" (")[0],
+            ),
+        )
+      )
+        fail(x.name + " explicit " + kind + " grants");
+    }
+    if (
+      x.armourProfiles !== undefined &&
+      (!Array.isArray(x.armourProfiles) ||
+        x.armourProfiles.some(
+          (a) =>
+            !object(a) ||
+            !text(a.name) ||
+            !Number.isInteger(a.ap) ||
+            a.ap < 0 ||
+            !text(a.text) ||
+            Object.keys(a).some((key) => !["name", "ap", "text"].includes(key)),
+        ))
+    )
+      fail(x.name + " printed armour");
+    if (
       !object(x.stats) ||
       NPC_KEYS.some(
         (k) =>
@@ -40,6 +97,12 @@ export function validateBestiary(R) {
       x.attacks.some(
         (a) =>
           !text(a.name) ||
+          (a.skillName !== undefined &&
+            (!text(a.skillName) ||
+              !R.skills.some(
+                (skill) =>
+                  skill.name.split(" (")[0] === a.skillName.split(" (")[0],
+              ))) ||
           typeof a.text !== "string" ||
           typeof a.optional !== "boolean" ||
           [a.skill, a.damage].some(

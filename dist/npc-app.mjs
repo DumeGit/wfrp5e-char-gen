@@ -1,4 +1,10 @@
-import { loadBookLibrary, assembleBooks } from "./books.mjs";
+import { loadBookLibrary } from "./books.mjs";
+import {
+  assembleNPCBooks,
+  catalogForNPC,
+  npcBooks,
+  npcSourceLabel,
+} from "./npc-books.mjs";
 import * as M from "./rules.mjs";
 import { freshNPC, validateNPCState } from "./npc-state.mjs";
 import { npcResult, npcQuote } from "./npc-result.mjs";
@@ -11,30 +17,33 @@ import { esc } from "./workspace.mjs";
 const root = document.querySelector("#app"),
   verify = new URL(location.href).searchParams.has("verify"),
   storage = `wfrp-fifth-npc-creator-v1${verify ? "-verification" : ""}`;
-const R = await (async () =>
-  assembleBooks(
-    await loadBookLibrary(async (url) => {
-      const response = await fetch(url);
-      if (!response.ok)
-        throw Error(`Cannot load NPC book content (${response.status}).`);
-      return response.json();
-    }),
-  ))().catch((error) => {
+const library = await loadBookLibrary(async (url) => {
+  const response = await fetch(url);
+  if (!response.ok)
+    throw Error(`Cannot load NPC book content (${response.status}).`);
+  return response.json();
+}).catch((error) => {
   root.innerHTML = `<main class="panel"><h1>Unable to open the GM creator</h1><p>${esc(error.message)}</p><p><a href="npc.html${verify ? "?verify=1" : ""}">Retry loading</a></p></main>`;
   throw error;
 });
 const history = [];
-let s = freshNPC(R),
+let R = assembleNPCBooks(library),
+  s = freshNPC(R),
   d,
   search,
   saveProblem = "";
 try {
   const saved = localStorage.getItem(storage);
-  if (saved) s = validateNPCState(R, JSON.parse(saved));
+  if (saved) {
+    const loaded = JSON.parse(saved);
+    const next = catalogForNPC(library, loaded);
+    s = validateNPCState(next, loaded);
+    R = next;
+  }
 } catch (e) {
   saveProblem = `The saved NPC could not be opened: ${e.message} A new draft is shown.`;
 }
-const ui = {
+const freshUI = () => ({
   filter: "",
   category: "",
   trait: "",
@@ -52,7 +61,8 @@ const ui = {
   xpType: "char",
   xpName: "",
   amount: 5,
-};
+});
+const ui = freshUI();
 const install = createInstallControl(document.querySelector("#pwa-install"));
 const context = () => ({
   R,
@@ -60,6 +70,7 @@ const context = () => ({
   d,
   ui,
   verify,
+  books: npcBooks(library).map((p) => p.manifest),
   undoAvailable: history.length > 0,
 });
 const views = createNPCViews(context);
@@ -106,12 +117,14 @@ function render() {
   search?.refresh();
 }
 function change(label, fn, coalesce = false) {
-  const snapshot = structuredClone(s);
+  const snapshot = structuredClone(s),
+    previousCatalog = R;
   try {
     fn();
     validateNPCState(R, s);
   } catch (e) {
     s = snapshot;
+    R = previousCatalog;
     throw e;
   }
   if (!coalesce || history.at(-1)?.label !== label)
@@ -126,7 +139,10 @@ function undo() {
   if (!item) return;
   const rolls = s.rolls,
     changes = s.changes;
+  const previousBooks = JSON.stringify(s.books);
   s = item.snapshot;
+  R = catalogForNPC(library, s);
+  if (JSON.stringify(s.books) !== previousBooks) Object.assign(ui, freshUI());
   s.rolls = rolls;
   s.changes = [
     ...changes,
@@ -176,6 +192,16 @@ function setProfile(id) {
 }
 async function action(el) {
   const a = el.dataset.npcAction;
+  if (a === "confirm-books") {
+    const ids = JSON.parse(el.dataset.books);
+    document.querySelector("#creator-dialog").close();
+    change("Change selected NPC books; start a new draft", () => {
+      R = assembleNPCBooks(library, ids);
+      s = freshNPC(R);
+      Object.assign(ui, freshUI());
+    });
+    return;
+  }
   if (a === "step") {
     s.step = Number(el.dataset.step);
     save();
@@ -537,6 +563,14 @@ function input(el) {
   });
 }
 root.addEventListener("click", (e) => {
+  const legacy = e.target.closest('[data-action="legacy-info"]');
+  if (legacy) {
+    dialog(
+      "Legacy adaptation",
+      `<p>${esc(legacy.dataset.explanation)}</p>${btn("close", "Close")}`,
+    );
+    return;
+  }
   const el = e.target.closest("[data-npc-action]");
   if (el) action(el).catch((err) => toast(err.message));
 });
@@ -561,15 +595,42 @@ root.addEventListener("input", (e) => {
   }
 });
 root.addEventListener("change", async (e) => {
+  if (e.target.dataset.npcBook) {
+    const id = e.target.dataset.npcBook;
+    const ids = R.selection.filter((b) => b.id !== id).map((b) => b.id);
+    if (e.target.checked) ids.push(id);
+    render();
+    const attributes = `data-books="${esc(JSON.stringify(ids))}"`;
+    if (
+      s.changes.length ||
+      s.ledger.length ||
+      s.notes ||
+      s.name !== d.profile.name
+    ) {
+      dialog(
+        "Changing books starts a new NPC",
+        `<p>The selected books determine available profiles, rules and equipment. This starts a fresh draft; session Undo can restore the current NPC.</p>${btn("confirm-books", "Change books", attributes, "primary")}${btn("close", "Keep current NPC")}`,
+      );
+    } else {
+      await action({
+        dataset: { npcAction: "confirm-books", books: JSON.stringify(ids) },
+      });
+    }
+    return;
+  }
   if (e.target.id === "npc-import") {
     try {
       const file = e.target.files[0];
       if (!file) return;
       if (file.size > 5000000)
         throw Error("NPC files must be smaller than 5 MB.");
-      const loaded = validateNPCState(R, JSON.parse(await file.text()));
+      const fileState = JSON.parse(await file.text());
+      const next = catalogForNPC(library, fileState);
+      const loaded = validateNPCState(next, fileState);
       change("Load NPC file (imported dice are unverified)", () => {
+        R = next;
         s = loaded;
+        Object.assign(ui, freshUI());
       });
       toast("NPC loaded.");
     } catch (err) {
@@ -600,7 +661,7 @@ search = createBookSearch(
     ref: (x) =>
       btn(
         "reference",
-        `Core · p. ${x.page || x.source?.page || 318}`,
+        npcSourceLabel(R, x),
         `data-id="${esc(x.contentId)}" data-action="npc-reference"`,
         "source-button",
       ),
@@ -608,7 +669,12 @@ search = createBookSearch(
       `<p>${esc(M.talentInfo(R, name)?.text || "See source.")}</p>`,
     spellDetailsBody: (x) => `<p>${esc(x.text)}</p>`,
     action: async (el) => {
-      if (el.dataset.npcAction) await action(el);
+      if (el.dataset.action === "legacy-info")
+        dialog(
+          "Legacy adaptation",
+          `<p>${esc(el.dataset.explanation)}</p>${btn("close", "Close")}`,
+        );
+      else if (el.dataset.npcAction) await action(el);
     },
     toast,
   }),

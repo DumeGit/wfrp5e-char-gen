@@ -1,6 +1,6 @@
 # Core NPC & Monster Creator
 
-The separate GM creator is `dist/npc.html`, linked from the player creator’s left menu. It initially assembles **core only**, irrespective of selected PC supplements. Its independently saved draft and JSON schema cannot overwrite or be loaded as a PC. `?verify=1` isolates both testing drafts. Supplement NPC material will require its own reviewed integration; registering a supplement for PC creation does not claim its creatures are supported here.
+The separate GM creator is `dist/npc.html`, linked from the player creator’s left menu. It initially assembles core, irrespective of selected PC supplements. Its **Selected books** panel accepts only packs explicitly declaring reviewed NPC support (`creators: ["npc"]` or `["pc", "npc"]`); currently only core is registered with that declaration. Changing books starts a fresh NPC with session undo and asks before discarding an edited draft. Save/load restores the exact reviewed selection and versions. Its independently saved draft and JSON schema cannot overwrite or be loaded as a PC. `?verify=1` isolates both testing drafts. Registering a supplement for PC creation does not claim its creatures are supported here.
 
 ## Catalogue and workflow
 
@@ -39,5 +39,7 @@ The selected Career/level gives eligible Characteristic/Skill/Talent options. Th
 Creature Trait and Talent descriptions retain situational rules. The creator does not run combat, Conditions, regeneration, psychology, live casting, control/command Tests, mutation acquisition during play or encounter balancing. Anatomy is a GM choice with core p. 318’s quadruped, bird, snake and spider Hit Location references; it does not invent missing Critical tables.
 
 Registry arrays `creatures`, `templates`, `traits` and `mutations` carry stable namespaced IDs and source pages. Bestiary validators reject unsupported shapes and Mutation-table overlaps/gaps. The same registry generates source counts and coverage. Future supplement imports must review duplicates, replacements, old Traits, new permanent effects and tables individually, with handlers and tests before automation. Core NPC additions are not automatically Legacy; the existing selective policy applies only to actual edition adaptations.
+
+Supplement profiles can use explicit structured Trait/Talent grants, including printed repeat ranks, explicit armour locations, spell grants and attack Skill names. These preserve the printed baseline and avoid parsing a different book's formatting as if it were the core format. Folio/profile references, discrepancies, calculation provenance, gear and spell references, and export records use their actual book/page. Selective Legacy explanations work in both the GM editor and its search reference dialog. Career-specific cult Miracle lists use the same access handler as PC creation. See [BOOKS.md](BOOKS.md) for validation contracts and [DEFT-STEPS.md](DEFT-STEPS.md) for the first supplement's pending review.
 
 Release requires `npm run check:release`, browser checks on desktop/mobile in verification mode, and visually checked exported PDFs. Commit locally and report the hash; the user pushes and deploys.

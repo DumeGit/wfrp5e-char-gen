@@ -4,6 +4,20 @@ export const bonus = (n) =>
   n === null || n === undefined ? null : Math.floor(n / 10);
 export function profileFeatures(R, p, kind) {
   const collection = kind === "trait" ? R.traits : R.talents;
+  if (p[`${kind}Grants`])
+    return p[`${kind}Grants`].map((grant) => {
+      const entry = collection.find(
+        (record) => M.base(record.name) === M.base(grant.name),
+      );
+      return {
+        id: entry.contentId,
+        name: grant.name,
+        value: grant.value || "",
+        printed: true,
+        source: p.source,
+        ranks: grant.ranks || 1,
+      };
+    });
   const text = p.sections[kind === "trait" ? "Traits" : "Talents"] || "";
   const names = [
     ...collection.map((x) => (kind === "talent" ? M.base(x.name) : x.name)),
@@ -91,6 +105,12 @@ export function armourLocations(text, fallback = "All") {
       : ["Head", "Arms", "Body", "Legs"];
 }
 export function printedArmour(p) {
+  if (p.armourProfiles)
+    return p.armourProfiles.map((a, i) => ({
+      ...a,
+      id: `base-armour-${i}`,
+      source: p.source,
+    }));
   const text = (p.sections.Armour || "").split("Optional ")[0];
   return [
     ...text.matchAll(
@@ -114,6 +134,7 @@ export function attackCharacteristic(attack) {
     : "WS";
 }
 export function attackSkill(R, attack) {
+  if (attack.skillName) return attack.skillName;
   const char = attackCharacteristic(attack);
   if (
     /^(?:Bite|Horns|Tail|[0-9]+ Tentacles|Chill Grasp|Ghostly Howl|Vomit|Breath)/.test(

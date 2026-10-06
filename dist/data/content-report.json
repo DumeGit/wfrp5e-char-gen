@@ -25,7 +25,7 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "kind": "core",
       "recordCounts": {
         "implemented": 1007,

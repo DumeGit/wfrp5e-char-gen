@@ -71,7 +71,7 @@ export function validateNPCState(R, s) {
     Object.keys(fresh).some((k) => !(k in s)) ||
     JSON.stringify(s.books) !== JSON.stringify(bookSelection(R))
   )
-    throw Error("The NPC file needs the current core book version.");
+    throw Error("The NPC file needs the current selected book versions.");
   if (
     !R.creatures.some((x) => x.contentId === s.profile) ||
     typeof s.name !== "string" ||

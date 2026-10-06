@@ -1,4 +1,5 @@
 import * as M from "./rules.mjs";
+import { miracleChoices } from "./cults.mjs";
 import { NPC_KEYS, NPC_SIZES } from "./bestiary-content.mjs";
 import {
   bonus,
@@ -40,7 +41,7 @@ function issue(
     code,
     message,
     severity,
-    source: { book: "core", page },
+    source: typeof page === "object" ? page : { book: "core", page },
     control: { step, target },
   };
 }
@@ -130,7 +131,7 @@ export function npcResult(R, s) {
           "warning",
           0,
           "#npc-printed",
-          p.page,
+          p.source,
         ),
       );
   if (s.removedTraits.length)
@@ -176,7 +177,7 @@ export function npcResult(R, s) {
             "warning",
             1,
             `#npc-score-${key}`,
-            template.page,
+            template.source,
           ),
         );
       addStat(key, value, template.name, template.source);
@@ -241,7 +242,7 @@ export function npcResult(R, s) {
             "error",
             1,
             `#npc-template-talent-${i}`,
-            template.page,
+            template.source,
           ),
         );
     });
@@ -249,7 +250,7 @@ export function npcResult(R, s) {
     addTalent(
       t.name,
       t.ranks,
-      { book: "core", page: M.talentInfo(R, t.name)?.page || 114 },
+      M.talentInfo(R, t.name)?.source || { book: "core", page: 114 },
       "GM",
     );
   for (const t of s.ledger.filter((x) => x.type === "talent"))
@@ -488,7 +489,7 @@ export function npcResult(R, s) {
           "error",
           1,
           "#npc-talent",
-          info.page,
+          info.source,
         ),
       );
   }
@@ -574,7 +575,7 @@ export function npcResult(R, s) {
         "warning",
         1,
         "#npc-tb",
-        p.page,
+        p.source,
       ),
     );
   if (s.tbMode === "printed" && stats.T !== p.stats.T)
@@ -695,7 +696,7 @@ export function npcResult(R, s) {
             "warning",
             1,
             "#npc-add-skill",
-            p.page,
+            p.source,
           ),
         );
       }
@@ -719,7 +720,7 @@ export function npcResult(R, s) {
             "error",
             1,
             `#npc-template-skill-${i}`,
-            template.page,
+            template.source,
           ),
         );
       else
@@ -731,7 +732,7 @@ export function npcResult(R, s) {
     addSkill(
       x.name,
       x.bonus,
-      { book: "core", page: M.skillInfo(R, x.name)?.page || 111 },
+      M.skillInfo(R, x.name)?.source || { book: "core", page: 111 },
       "GM Skill bonus",
     );
   if (
@@ -1064,6 +1065,11 @@ export function npcResult(R, s) {
       magic.push({ ...entry, lore, origin });
   };
   const spellText = p.sections.Spells || "";
+  for (const grant of p.magicGrants || []) {
+    const entry = R.spells.find((x) => x.name === grant.name);
+    if (!s.removedSpells.includes(entry.contentId))
+      addSpell(entry, grant.lore, "Printed");
+  }
   for (const entry of R.spells)
     if (
       spellText.includes(entry.name) &&
@@ -1109,6 +1115,9 @@ export function npcResult(R, s) {
           ? magic.some((x) => x.contentId === entry.contentId)
           : R.config.gods.includes(entry.category)
             ? patrons.includes(entry.category) &&
+              miracleChoices(R, entry.category, s.career).some(
+                (x) => x.contentId === entry.contentId,
+              ) &&
               (traits.some(
                 (x) => x.name === "Miracles" && x.value === entry.category,
               ) ||
@@ -1129,7 +1138,7 @@ export function npcResult(R, s) {
           "error",
           2,
           "#npc-magic",
-          entry?.page || 354,
+          entry?.source || { book: "core", page: 354 },
         ),
       );
     else addSpell(entry, selected.lore, "GM selection / XP");
@@ -1269,6 +1278,7 @@ export function npcResult(R, s) {
     );
   return {
     profile: p,
+    career: s.career,
     template,
     name: s.name || p.name,
     stats,
@@ -1323,6 +1333,9 @@ export function npcMagicChoices(R, d) {
       if (d.lores.includes(x.category)) return [{ entry: x, lore: x.category }];
       if (
         d.patrons.includes(x.category) &&
+        miracleChoices(R, x.category, d.career).some(
+          (entry) => entry.contentId === x.contentId,
+        ) &&
         (d.traits.some(
           (t) => t.name === "Miracles" && t.value === x.category,
         ) ||

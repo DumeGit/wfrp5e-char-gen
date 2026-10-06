@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"fe0d487727b000a4c4f3";
+const CACHE=CACHE_PREFIX+"25adc7816d241520ba67";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -190,6 +190,7 @@ const ASSETS=[
  "manifest.webmanifest",
  "market.mjs",
  "npc-app.mjs",
+ "npc-books.mjs",
  "npc-export.mjs",
  "npc-profile.mjs",
  "npc-result.mjs",

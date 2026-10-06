@@ -1,6 +1,8 @@
 import { npcResult } from "./npc-result.mjs";
 import * as M from "./rules.mjs";
 import { NPC_KEYS } from "./bestiary-content.mjs";
+import { npcSourceLabel } from "./npc-books.mjs";
+import { legacyPDFName, legacyTitle } from "./legacy.mjs";
 
 const score = (v) => (v === null || v === undefined ? "—" : String(v));
 export function npcText(
@@ -11,7 +13,7 @@ export function npcText(
   const d = result,
     lines = [
       d.name,
-      `${d.profile.name} · ${d.size}${d.template ? ` · ${d.template.name}` : ""} · Core p. ${d.profile.page}`,
+      `${legacyPDFName(R, d.profile)} · ${d.size}${d.template ? ` · ${d.template.name}` : ""} · ${npcSourceLabel(R, d.profile)}`,
       NPC_KEYS.map((k) => `${k} ${score(d.stats[k])}`).join(" | "),
       `SB ${score(d.sb)} · TB ${score(d.tb)} · Walk ${score(d.walk)} · Run ${score(d.run)} · Combat Initiative ${score(d.combatInitiative)}`,
       "",
@@ -34,23 +36,33 @@ export function npcText(
       "",
       "TALENTS",
       d.talents
-        .map((x) => `${x.name}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`)
+        .map(
+          (x) =>
+            `${legacyPDFName(R, M.talentInfo(R, x.name), x.name)}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`,
+        )
         .join(", "),
       "",
       "TRAITS",
       ...d.traits.map(
         (t) =>
-          `${t.name}${t.value ? ` (${t.value})` : ""} · p. ${t.source.page}`,
+          `${legacyPDFName(
+            R,
+            R.traits.find((x) => x.contentId === t.id),
+            t.name,
+          )}${t.value ? ` (${t.value})` : ""} · ${npcSourceLabel(R, t)}`,
       ),
       "",
       "EQUIPMENT",
       d.profile.sections.Trappings || "",
-      ...d.gear.map((x) => `${x.quantity} × ${x.name}`),
+      ...d.gear.map(
+        (x) =>
+          `${x.quantity} × ${legacyPDFName(R, x)} · ${npcSourceLabel(R, x)}`,
+      ),
       "",
       "MAGIC",
       ...d.magic.map(
         (x) =>
-          `${x.name} (${x.lore}) · ${x.cn !== undefined ? `CN ${x.cn} · ` : ""}Range ${x.range || "see rule"} · Target ${x.target || "see rule"} · Duration ${x.duration || "see rule"} · p. ${x.page}`,
+          `${legacyPDFName(R, x)} (${x.lore}) · ${x.cn !== undefined ? `CN ${x.cn} · ` : ""}Range ${x.range || "see rule"} · Target ${x.target || "see rule"} · Duration ${x.duration || "see rule"} · ${npcSourceLabel(R, x)}`,
       ),
       "",
       "MUTATIONS",
@@ -63,21 +75,27 @@ export function npcText(
       "",
       "SOURCE DISCREPANCIES & CHECKS",
       ...d.profile.notes,
+      ...[d.profile, ...d.gear, ...d.magic]
+        .map((x) => legacyTitle(R, x))
+        .filter(Boolean),
       ...d.issues.map(
-        (x) => `${x.severity}: ${x.message} (p. ${x.source.page})`,
+        (x) => `${x.severity}: ${x.message} (${npcSourceLabel(R, x.source)})`,
       ),
     ];
   if (record)
     lines.push(
       "",
       "CREATION RECORD",
-      `Core book ${R.books.find((b) => b.id === "core").version}`,
+      ...R.books.map(
+        (book) =>
+          `${book.title} · ${book.version} · SHA-256 ${book.source.sha256}`,
+      ),
       ...Object.entries(d.steps).flatMap(([key, items]) =>
         items
           .filter((x) => x.label !== "Printed profile")
           .map(
             (x) =>
-              `${key}: ${x.label} = ${score(x.value)} (p. ${x.source.page})`,
+              `${key}: ${x.label} = ${score(x.value)} (${npcSourceLabel(R, x.source)})`,
           ),
       ),
       "Template Skills use the higher existing/template bonus, by the user's interpretation of the worked examples.",
@@ -106,13 +124,13 @@ export function npcText(
       "RULE REFERENCES FOR SELECTED OPTIONS",
       ...d.traits.map(
         (t) =>
-          `${t.name}${t.value ? ` (${t.value})` : ""} (p. ${R.traits.find((x) => x.contentId === t.id)?.page || t.source.page}): ${R.traits.find((x) => x.contentId === t.id)?.text || "See source"}`,
+          `${t.name}${t.value ? ` (${t.value})` : ""} (${npcSourceLabel(R, R.traits.find((x) => x.contentId === t.id) || t)}): ${R.traits.find((x) => x.contentId === t.id)?.text || "See source"}`,
       ),
       ...d.talents.map(
         (t) =>
-          `${t.name} (p. ${M.talentInfo(R, t.name)?.page || t.source.page}): ${M.talentInfo(R, t.name)?.text || "See source"}`,
+          `${t.name} (${npcSourceLabel(R, M.talentInfo(R, t.name) || t)}): ${M.talentInfo(R, t.name)?.text || "See source"}${legacyTitle(R, M.talentInfo(R, t.name)) ? ` Legacy: ${legacyTitle(R, M.talentInfo(R, t.name))}` : ""}`,
       ),
-      ...d.magic.map((x) => `${x.name} (p. ${x.page}): ${x.text}`),
+      ...d.magic.map((x) => `${x.name} (${npcSourceLabel(R, x)}): ${x.text}`),
       "",
       "EDIT HISTORY",
       ...s.changes.map((x) => `${x.at} · ${x.label}`),
@@ -132,7 +150,7 @@ export async function npcPDF(
     bold = await pdf.embedFont(StandardFonts.HelveticaBold);
   pdf.setTitle(`${result.name} — WFRP NPC`);
   pdf.setSubject(
-    "Core Fifth Edition NPC stat block and optional creation record",
+    "WFRP Fifth Edition NPC stat block and sourced creation record",
   );
   let page, y;
   const newPage = () => {
