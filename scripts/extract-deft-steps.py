@@ -113,53 +113,5 @@ for n, category in [(18, 'The Night Prowler'), (19, 'The Gamester'), (24, 'The D
 assert len(miracles)==32,(len(miracles),[m['name'] for m in miracles])
 write('miracles.raw.json',miracles)
 
-# Profile headers and totals are kept in physical column order. Plain text
-# extraction joins nearby prose to some boxes; retain only their 9pt type.
-profiles = []
-profile_pages = [34,47,48,49,55,64,65,83,93,103,108,111,133,134]
-NPC_KEYS = 'M WS BS S T I Ag Dex Int WP Fel W'.split()
-for n in profile_pages:
-    page = pdf.pages[n-1]
-    words = page.extract_words(extra_attrs=['fontname','size'])
-    headers = [w for w in words if w['text']=='WS' and any(q['text']=='M' and abs(q['top']-w['top'])<2 and 0<w['x0']-q['x0']<30 for q in words)]
-    for hit in sorted(headers,key=lambda w:(w['x0']//240,w['top'])):
-        y=hit['top']
-        columns = [w for w in words if abs(w['top']-y)<2 and w['text'] in NPC_KEYS and hit['x0']-25 <= w['x0'] < hit['x0']+195]
-        assert len(columns)==12,(n,columns)
-        x0=(58 if n%2 else 75)+(244 if hit['x0']>300 else 0)-3
-        x1=x0+240
-        starts = [w['top']-35 for w in headers if w['top']>y+20 and abs(w['x0']-hit['x0'])<10]
-        end=min(starts+[727])
-        cropped=page.crop((x0,y+9,x1,end)).filter(lambda o:o.get('object_type')!='char' or 8.8<o.get('size',0)<9.2)
-        raw=cropped.extract_text(x_tolerance=2,y_tolerance=3) or ''
-        lines=raw.splitlines()
-        if lines[0].split()==NPC_KEYS:lines=lines[1:]
-        values=lines[0].split()
-        assert len(values)==12 and all(re.fullmatch(r'\d+|[–—-]',v) for v in values),(n,values)
-        body='\n'.join(lines[1:])
-        heading=page.crop((x0,y-43,x1,y)).filter(lambda o:o.get('object_type')!='char' or 8.8<o.get('size',0)<10.2)
-        title=heading.extract_text() or ''
-        sections={}
-        parts=re.split(r'(?m)\b(Traits|Optional|Skills|Talents|Trappings|Fate Points|Armour by Location|Drakesmalice|Miracles):\s*',body)
-        for i in range(1,len(parts),2):sections[parts[i]]=norm(parts[i+1])
-        profiles.append({'page':n,'heading':norm(title),'stats':dict(zip(NPC_KEYS,[int(v) if v.isdigit() else None for v in values])),'sections':sections,'text':norm(body)})
-# The full-width 9pt Outlaw table and the next hound header share the
-# profile font. Use the known printed profile headings to bound those boxes.
-for n, names in [(103,['OUTLAW','OUTLAW CHIEF']), (133,['HOCHLAND LOCKHUND','NORDLANDER BAMSE','GROOTSCHER MARSH HOUND']), (134,['DOVE HAWK','ARABYAN REDHAWK'])]:
-    text=reader.pages[n-1].extract_text()
-    for i,name in enumerate(names):
-        start=text.index(name+'\n')
-        end=text.index(names[i+1]+'\n',start) if i+1<len(names) else len(text)
-        block=text[start:end]
-        match=re.search(r'M WS BS S T I Ag Dex Int WP Fel W\n[^\n]+\n(.*)',block,re.S)
-        assert match,(n,name)
-        body=re.split(r'\n(?:HOUNDS|HAWKS|Hunting Traits)\n',match[1])[0]
-        sections={}
-        parts=re.split(r'(?m)\b(Traits|Optional|Skills|Talents|Trappings):\s*',body)
-        for j in range(1,len(parts),2):sections[parts[j]]=norm(parts[j+1])
-        rows=[x for x in profiles if x['page']==n]
-        rows[i].update(heading=name,sections=sections,text=norm(body))
-assert len(profiles)==22,len(profiles)
-write('profiles.raw.json',profiles)
-write('source-review.json', {'title':'Deft Steps, Light Fingers','edition':4,'file':args.source.name,'sha256':hashlib.sha256(args.source.read_bytes()).hexdigest(),'pdfPages':len(reader.pages),'careers':len(careers),'miracles':len(miracles),'profiles':len(profiles),'status':'Staged extraction only. Compatibility review and user decisions pending; not registered or enabled.'})
-print(json.dumps({'careers':len(careers),'miracles':len(miracles),'profiles':len(profiles),'output':str(args.output_dir)}))
+write('source-review.json', {'title':'Deft Steps, Light Fingers','edition':4,'file':args.source.name,'sha256':hashlib.sha256(args.source.read_bytes()).hexdigest(),'pdfPages':len(reader.pages),'careers':len(careers),'miracles':len(miracles),'status':'Staged extraction only. Compatibility review and user decisions pending; not registered or enabled.'})
+print(json.dumps({'careers':len(careers),'miracles':len(miracles),'output':str(args.output_dir)}))

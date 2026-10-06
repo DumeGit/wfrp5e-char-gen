@@ -1,4 +1,4 @@
-// A Cause is chosen by the player/GM, not inferred from a Career or cult.
+// A Cause is chosen by the player, not inferred from a Career or cult.
 export const CAUSE_KEY = "impassioned-zeal-cause";
 export const CAUSE_PLACEHOLDER = "Impassioned Zeal (Any Cause)";
 export function causeTalent(raw) {

@@ -4,12 +4,8 @@
   "title": "Deft Steps — Ranald the Dealer",
   "shortTitle": "Ranald the Dealer",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "variant",
-  "creators": [
-    "pc",
-    "npc"
-  ],
   "dependsOn": [
     "deft-steps"
   ],

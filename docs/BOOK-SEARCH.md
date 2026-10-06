@@ -37,4 +37,4 @@ Outcome tests cover selected-book isolation, withdrawals, facet joins, stable id
 
 Inactive-book reference search is deferred; adding it requires explicit availability labelling and must never apply content without the corresponding book selection.
 
-The core catalogue also indexes 53 NPC/creature profiles, seven NPC templates, 67 Creature Traits and 40 Mutation outcomes. Results have distinct type labels and retain namespaced identity, including same-name Career/template/Trait alternatives. Profile sections and complete Trait text participate in exact related-reference chaining; internal discrepancy notes are excluded from matching. The separate GM creator uses reference-only dialogs, with no PC eligibility calculations or creator-selection actions.
+Search indexes Careers, Skills, Talents, magic and equipment from the selected player-character catalogue. NPC/creature profiles, templates, Traits and Mutation tables are not published or indexed after removal of the NPC creator.

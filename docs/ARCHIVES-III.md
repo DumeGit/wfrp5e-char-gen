@@ -1,6 +1,6 @@
 # Archives of the Empire: Volume III
 
-Installed as an opt-in supplement (`archives-iii`, 1.0.0) with a separately selected animal-doctor Hedge Witch variant (`archives-iii-hedge`, 1.0.0). Enable the supplement under Origins → Books & options. Choose the animal-doctor variant under Career → Hedge Witch variant when Hedge Witch is selected and Archives III is enabled. Changing books starts a new WIP character; switching the Career variant keeps identity, Species choices and rolls, clears Career-dependent allocations/magic/equipment, and is locked while XP is spent. Neither pack changes random probabilities.
+Installed as an opt-in supplement (`archives-iii`, 1.0.0) with a separately selected animal-doctor Hedge Witch variant (`archives-iii-hedge`, 1.0.0). Enable the supplement under Choose books. Choose the animal-doctor variant under Career → Hedge Witch variant when Hedge Witch is selected and Archives III is enabled. Changing books starts a new WIP character; switching the Career variant keeps identity, Species choices and rolls, clears Career-dependent allocations/magic/equipment, and is locked while XP is spent. Neither pack changes random probabilities.
 
 Source: supplied `Archives of the Empire - Volume III.pdf`, 96 pages, SHA-256 `e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788`. Printed pages match PDF positions. The first running header says Volume I while the contents identify Volume III. MarkItDown text and PDF verification images remain outside the published app.
 

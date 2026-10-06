@@ -1,6 +1,6 @@
 # Rough Nights & Hard Days
 
-Enable **Rough Nights & Hard Days** in Origins → Books & options. This adds Gnomes, their printed creation tables, names and appearance, Suffuse with Ulgu, and the patrons Evawn, Mabyn and Ringil. It reuses existing Fifth Edition Careers and prayers; it adds no NPC profiles, adventure loot, pub games or campaign systems.
+Enable **Rough Nights & Hard Days** in Choose books. This adds Gnomes, their printed creation tables, names and appearance, Suffuse with Ulgu, and the patrons Evawn, Mabyn and Ringil. It reuses existing Fifth Edition Careers and prayers; it adds no NPC profiles, adventure loot, pub games or campaign systems.
 
 ## Source and extraction
 

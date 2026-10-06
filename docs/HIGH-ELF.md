@@ -4,7 +4,7 @@ Supplied PDF: `High Elf Player's Guide.pdf`, 128 pages. Printed pages match PDF 
 
 ## Included creation content
 
-Enable `high-elf` in Origins → Books & options. It depends on core. Eleven High Elf origins include ten Ulthuan kingdoms and Sea Elf (pp. 54–58). They retain core physical attributes, native languages, Fate/Fortune and five distinct Species Skills at +5, with **all printed Talent slots**, including six where printed. Sea Elf enclave and kingdom of heritage are background, not a second regional allocation. Uncouth Uranai affects Standing only in the printed social context.
+Enable `high-elf` in Choose books. It depends on core. Eleven High Elf origins include ten Ulthuan kingdoms and Sea Elf (pp. 54–58). They retain core physical attributes, native languages, Fate/Fortune and five distinct Species Skills at +5, with **all printed Talent slots**, including six where printed. Sea Elf enclave and kingdom of heritage are background, not a second regional allocation. Uncouth Uranai affects Standing only in the printed social context.
 
 Five regional d100 Career tables (p. 59) cover every result and become the origin’s default. An explicit core-table choice overrides that default. User-approved corrections: Outer Kingdoms Guard **89–90**, keeping Knight 91–92; Avelorn Scholar **13–17**, keeping Artisan 18–21. Names map Advisor → Adviser, Huffer → Pilot, Seaman → Sailor and Bawd → Knave, using core definitions.
 

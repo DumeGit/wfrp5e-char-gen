@@ -145,7 +145,7 @@ test("Unified search respects selected books, withdrawals and stable profile ide
   assert.equal(new Set(all.map((x) => x.key)).size, all.length);
   assert.deepEqual(
     new Set(all.map((x) => x.kind)),
-    new Set(["career", "skill", "talent", "magic", "equipment", "creature", "template", "trait", "mutation"]),
+    new Set(["career", "skill", "talent", "magic", "equipment"]),
   );
   const dagger = all.filter(
     (x) =>
@@ -162,8 +162,12 @@ test("Search ranks names over descriptions, handles punctuation and indexes scop
   assert.equal(searchBooks(all, "lore alchemy").rows[0].name, "Lore (Alchemy)");
   assert.equal(searchBooks(all, "Diceman").rows[0].name, "Dicer");
   assert.equal(searchBooks(core, "Diceman").total, 0);
-  assert.equal(searchBooks(all, "Bawd").rows[0].name, "Bawd");
-  assert.ok(searchBooks(all, "Bawd").rows.some(x=>x.kind==='career'&&x.name==='Knave'));
+  assert.equal(searchBooks(all, "Bawd").rows[0].name, "Knave");
+  assert.ok(
+    searchBooks(all, "Bawd").rows.some(
+      (x) => x.kind === "career" && x.name === "Knave",
+    ),
+  );
   assert.equal(searchBooks(all, " ").rows.length, 0);
   assert.equal(searchBooks(all, "no-such-thing-zxy").total, 0);
   const broad = searchBooks(all, "magic", 8);

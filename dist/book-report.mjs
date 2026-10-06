@@ -66,10 +66,6 @@ export function buildBookReport(library) {
   );
   const activeCounts = {
     books: active.books.length,
-    creatureProfiles: active.creatures.length,
-    npcTemplates: active.templates.length,
-    creatureTraits: active.traits.length,
-    mutations: active.mutations.length,
     careers: active.careers.length,
     magicProfiles: active.spells.length,
     rituals: active.spells.filter((x) => x.ritual).length,

@@ -44,7 +44,6 @@ export function createFeature(getContext) {
 </span>
 </div>
 </div>
-<a class="creator-mode-link" href="npc.html${new URL(location.href).searchParams.has("verify") ? "?verify=1" : ""}">NPC &amp; monster creator →</a>
 <div class="mobile-step field">
 <label for="mobile-step">Creation step</label>${select(
       'id="mobile-step" data-bind="stepSwitch"',

@@ -1,6 +1,6 @@
 # Winds of Magic
 
-Installed as an opt-in supplement (`winds-of-magic`, 1.0.0). Enable under Origins → Books & options. Changing books starts a new WIP character. Core definitions and random probabilities remain unchanged.
+Installed as an opt-in supplement (`winds-of-magic`, 1.0.0). Enable under Choose books. Changing books starts a new WIP character. Core definitions and random probabilities remain unchanged.
 
 Source: supplied `Winds of Magic.pdf`, 224 pages, SHA-256 `28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150`. Printed pages match PDF positions. MarkItDown extraction, raw page text and verification images remain outside the published app.
 
@@ -55,6 +55,6 @@ Potion ingredient costs and alchemical market/sales values are not retail prices
 
 Tests cover the 32 existing supplement selections, all twelve Career schemes/creation allocations, optional Career roll boundaries, College restrictions, psychic Skill access/Talent sacrifice, printed Alchemist spell choices, ritual XP/duplicates/eligibility/undo/count exclusions, strict learning-rule schema, actual robe money/Encumbrance and all 556 editable PDF fields. Desktop and 390-pixel mobile preview checks verify purchase/refund, visible disabled reasons, no horizontal overflow and ready-to-export state. The actual browser-generated PDF has 556 editable fields and matching XP/ritual values; the sheet and attached record were rendered and visually inspected.
 
-All 183 automated tests pass, including the approved Lore prerequisite, Petty grant boundaries, unchanged grants for other Careers, purchase/undo and the subsequent Arcane grant's PDF row placement. Final desktop/mobile checks verify the Alchemist cap explanation and that buying Lore (Alchemy) makes Savant purchasable; undo restores its restriction and refunds XP. Both new character PDFs retain all 556 editable fields and were rendered for inspection.
+Regression coverage includes the approved Lore prerequisite, Petty grant boundaries, unchanged grants for other Careers, purchase/undo and the subsequent Arcane grant's PDF row placement. Final desktop/mobile checks verify the Alchemist cap explanation and that buying Lore (Alchemy) makes Savant purchasable; undo restores its restriction and refunds XP. Both new character PDFs retain all 556 editable fields and were rendered for inspection.
 
 The complete integration includes the approved Mundane Alchemist conversions and is registered for local use. No push or deployment is performed by the agent; the user controls publishing.

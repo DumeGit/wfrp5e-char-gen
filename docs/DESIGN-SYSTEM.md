@@ -59,10 +59,6 @@ The banner is the preview's original imagegen artwork, copied without pixel chan
 
 Update this document and affected feature docs in the same change. Inspect setup, all eight steps and reference dialogs on desktop/phone; verify hover/disabled/focus contrast, no horizontal page overflow, heading accessibility, reduced-motion CSS and install behavior after redraws. Run `npm run check:release` after final styles/assets so offline caching covers art, fonts, skin, component module, guide and icons. Preserve PDF/export tests. Commit locally; the user pushes/deploys.
 
-## GM workspace
+## Current product scope
 
-The separate NPC entry shares the Black Banner shell, emblem, controls, reference dialogs and install node. `npc.css` owns only GM feature layout: compact 12-cell score inputs, category/profile cards, minimal stat block and form groups. It uses the shared semantic tokens. Desktop keeps the bounded sticky folio; mobile uses its explicit View stat block disclosure in page flow. Tool-mode links preserve the verification query and each tool's independent saved draft. Future GM sections must use this same presentation contract.
-
-### NPC workspace refinements
-
-The header creator-mode switch remains visible on phones and before PC book selection is confirmed. NPC sections use the PC numbered navigation, tokens, source buttons, compact fields and folio hierarchy. Eight focused sections replace the crowded Customise page. Profile cards have separate preview/apply actions and page-flow Show more; no internal catalogue scroll. Required-choice alerts precede the editor, with target focus/inline errors and section badges. Nonblocking source/Legacy notes remain a separate gold disclosure. Mobile uses a section selector, one-row Save/Load/New, an optional Draft tools & books disclosure and a fixed Stat block/Review strip; expanded folio survives edits without its own mobile scroll. The review renders the same compact sheet model as PDF/text, and marks export readiness beside the actions.
+The shared design system serves the player-character creator and component reference. The NPC workspace and tool-mode navigation were removed on 6 October 2026; do not retain GM-only styles or controls. Future authorised features should use the same semantic tokens and accessible compact controls.

@@ -4,12 +4,8 @@
   "title": "Deft Steps, Light Fingers",
   "shortTitle": "Deft Steps",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "supplement",
-  "creators": [
-    "pc",
-    "npc"
-  ],
   "dependsOn": [
     "core"
   ],
@@ -20,14 +16,11 @@
   "compatibility": {
     "reviewed": true,
     "notes": [
-      "Nine Careers, 32 Miracles, 15 priced entries and 22 NPC/animal profiles. Fifth Edition creation, XP and core Talent/Creature Trait definitions govern; no random probabilities are invented.",
+      "Nine Careers, 32 Miracles and 15 priced entries. Fifth Edition creation, XP and core Talent definitions govern; no random probabilities are invented.",
       "User-reviewed Public Speaking Talent placement, Perform (Acting) → Entertain (Acting), explicit Art/Stealth specialisations and Impassioned Zeal Cause; no extra free Advances or Talents.",
       "Ranald aspects use Invoke (Ranald) and their printed lists. Protector heading corrected; A Suitable Stooge uses A Suitable Sucker. Stay Lucky → Cheat the Odds and the previously approved core Miracle equivalents retain Legacy notes.",
-      "Hounds’ Stride → Sprinter; abstract NPC Armour is the first number on all locations, without stacking equipment. Brunner uses explicit locations. Parenthesised totals remain references.",
-      "NPC baselines/ranks remain printed, including Albrecht’s 196 Wounds. Forger/Brunner punctuation errors use the explicitly approved numbers with discrepancy notes. No prior XP or Advance counts inferred.",
       "Named Test Difficulty modifiers use Appendix I SL; ordinary printed numeric situational modifiers remain text. Old core references keep their Fourth Edition identification.",
-      "Thieving tool naming pairs use their approved table/description equivalences. Animal weights shown as dashes remain unknown; buying an animal does not create a companion.",
-      "Specific hunting training descriptions remain references; ongoing command/training Tests, combat and campaign procedures are deferred."
+      "Thieving tool naming pairs use their approved table/description equivalences. Animal weights shown as dashes remain unknown; buying an animal does not create a companion."
     ]
   },
   "files": {
@@ -36,7 +29,6 @@
     "gear": "gear.json",
     "rules": "rules.json",
     "cults": "cults.json",
-    "creatures": "creatures.json",
     "coverage": "coverage.json"
   }
 }

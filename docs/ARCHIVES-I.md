@@ -1,6 +1,6 @@
 # Archives of the Empire: Volume I
 
-Installed as the optional `archives-i` pack, version 1.0.0. Enable it in **Origins → Books & options**. It can run with the core alone or alongside Up in Arms. Changing enabled books starts a new WIP character. No source PDF is bundled or published.
+Installed as the optional `archives-i` pack, version 1.0.0. Enable it in **Choose books**. It can run with the core alone or alongside Up in Arms. Changing enabled books starts a new WIP character. No source PDF is bundled or published.
 
 Source: the user's supplied `Archives of the Empire - Vol I.pdf`, 96 pages, SHA-256 `d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7`. Printed page numbers match PDF page positions. MarkItDown provided the full text; Career blocks, coloured Characteristic symbols, clan table and equipment tables were checked against the original PDF.
 

@@ -41,7 +41,7 @@ Starting Species Skills use a compact two-column desktop list and a single phone
 - Outcome tests cover Career availability/search/preview immutability and variants; shop taxonomy, restrictions and purse feedback; non-caster and caster magic filtering; calculation reconciliation; precise issue destinations; relevant source collection; compact/full exports and editable field values.
 - Existing book, rules, XP, tracker, packing, selective Legacy and offline-cache tests remain required.
 - Browser checks use an isolated `?verify=1` draft, with desktop and mobile layouts. Verify change confirmation/cancellation/undo, prerequisite sharing, source/Legacy dialogs, locked references, shop filtering/purchases, free magic selection, issue focus and PDF downloads.
-- PDF check: with all ten books enabled, the verification Soldier produces a 6-page default record versus a 50-page full appendix record. The default sheet has 8 pages (two supplied sheet pages plus record), with all 556 fields retained. These counts depend on the character's content.
+- PDF check: with all selected books enabled, the verification Soldier produces a 6-page default record versus a 50-page full appendix record. The default sheet has 8 pages (two supplied sheet pages plus record), with all 556 fields retained. These counts depend on the character's content.
 
 Build before delivery so the content-versioned offline worker includes every new module and stylesheet. Commit locally only; the user pushes to GitHub/Vercel.
 
@@ -51,6 +51,6 @@ C — The Black Banner is the active shared theme. The joined leather/folio and 
 
 The banner is shorter and has no motion or install controls. Install app sits below New character and retains its live button node after step changes/redraws. Left navigation uses compact rows and utility controls so it fits normal desktop heights; short windows retain an accessible scroll fallback. Rolled Characteristics use compact named rows with Career badges beside abbreviations, and Career starting increases use a budget plus three inline inputs instead of a large two-column form. Roll/assignment values, point budgets and validation are unchanged.
 
-## GM creator contract
+## Scope boundary
 
-The independent NPC workspace applies the same compact controls, preview-before-apply and source/Legacy access principles across eight focused sections. Creator-mode access remains visible on mobile and during initial book setup. Structured errors appear above the editor immediately, route to actual focused/highlighted controls, and badge their sections; nonblocking source checks are separately disclosed. All compact exports enforce readiness. The user requested a play-facing compact NPC sheet without discrepancy/adaptation commentary; those explanations stay in the app, with JSON and audit-record backups separate. This exception leaves PC exports unchanged. See [NPC-CREATOR.md](NPC-CREATOR.md) for layout, scope and rule decisions.
+The workspace creates player characters only. NPC/Monster creation was removed at the user’s request on 6 October 2026. There is no creator-mode switch or NPC export path. Animal purchases record belongings without creating companions. Future tools require a new scope decision and their own usability verification.

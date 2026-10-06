@@ -186,32 +186,18 @@ decisions = [
  {'page':24, 'subject':'A Suitable Stooge versus A Suitable Sucker', 'decision':'Treat both as the detailed A Suitable Sucker Miracle, retaining the name mismatch note.', 'adapted':False},
  {'page':13, 'subject':'Invoke aspect names', 'decision':'All four aspects use Invoke (Ranald) with their own printed Career-specific Miracle lists.', 'adapted':True},
  {'page':32, 'subject':'Two tool naming pairs', 'decision':'Thin Jimmy uses Steel Mummit description; Telescopic Pole uses Telescopic Stick description. Retain table prices and weights with mismatch notes.', 'adapted':False},
- {'page':34, 'subject':'Abstract NPC Armour', 'decision':'Use the first number as abstract all-location protection, without stacking assigned armour. Parenthesised totals are references only. Brunner p. 111 uses explicit printed locations instead.', 'adapted':True},
- {'page':133, 'subject':'Hounds’ Stride Trait', 'decision':'User-approved Stride → core Sprinter (p. 361): Run Movement ×1.5 when Running. Add a Legacy explanation; do not substitute the Striding Gait Talent.', 'adapted':True},
  {'page':20, 'subject':'Trickster-Priest Perform (Acting)', 'decision':'Use Entertain (Acting), with a Legacy note. This remains the same Skill already listed at level two, without an extra grant.', 'adapted':True},
  {'page':20, 'subject':'Unspecified Art and Stealth', 'decision':'Offer an explicit core specialisation, without additional free Advances.', 'adapted':True},
- {'page':22, 'subject':'Unspecified Impassioned Zeal Cause', 'decision':'Require an explicit Cause when selected; Father Pedragar p. 83 retains an unspecified-Cause warning until supplied by the GM.', 'adapted':True},
- {'page':47, 'subject':'Forger Skill punctuation', 'decision':'Use Art (Calligraphy) 55, Art (Painting) 40, Melee (Basic) 33 and Perception 50; retain the printed punctuation discrepancy.', 'adapted':False},
- {'page':111, 'subject':'Brunner Lore punctuation', 'decision':'Use Lore (Tilea) 50, retaining the printed comma discrepancy.', 'adapted':False},
+ {'page':22, 'subject':'Unspecified Impassioned Zeal Cause', 'decision':'Require an explicit Cause when selected.', 'adapted':True},
  {'page':18, 'subject':'Stay Lucky', 'decision':'Use core Cheat the Odds (p. 224) with a Legacy explanation on the affected Miracle lists.', 'adapted':True},
 ]
-profile_overrides = []
-for profile in read(args.input_dir/'profiles.raw.json'):
-    if profile['page'] == 133 and re.search(r'\bStride\b', profile['sections'].get('Traits', '')):
-        profile_overrides.append({
-            'page':133, 'heading':profile['heading'],
-            'traitReplacements':[{'printed':'Stride', 'canonical':'Sprinter', 'corePage':361}],
-            'adaptation':'The printed Fourth Edition Stride Trait uses the user-approved Fifth Edition Sprinter Trait (core p. 361): multiply Run Movement by 1.5 when Running.',
-        })
-assert len(profile_overrides) == 3
 assert len(careers) == 9 and len(spells) == 32 and len(gear) == 15
 args.output_dir.mkdir(parents=True, exist_ok=True)
 for filename, value in [('careers.json',careers),('spells.json',spells),('gear.json',gear),('rules.json',rules),
                         ('cults.json',cults),
-                        ('profiles.raw.json',read(args.input_dir/'profiles.raw.json')),('profile-overrides.json',profile_overrides),
                         ('pending.json',pending),('decisions.json',decisions)]:
     (args.output_dir/filename).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 source = read(args.input_dir/'source-review.json')
-source.update(status='User source decisions recorded; runtime registration still requires NPC conversion, handlers, coverage and release verification.', preparedGear=len(gear))
+source.update(status='User source decisions recorded; PC-only preparation complete; run installation and release verification.', preparedGear=len(gear))
 (args.output_dir/'source-review.json').write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'careers':len(careers),'miracles':len(spells),'independentGear':len(gear),'pending':len(pending),'output':str(args.output_dir)}))

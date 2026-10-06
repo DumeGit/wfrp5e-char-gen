@@ -685,13 +685,6 @@ export const CONTENT_ALIASES = Object.freeze([
       "Previously approved Fifth Edition Miracle equivalent.",
     ],
     [
-      "traits",
-      "Stride",
-      "Sprinter",
-      133,
-      "User-approved core Trait replacement, with a Legacy explanation on each hound.",
-    ],
-    [
       "gear-profile",
       "Steel Mummit",
       "Thin Jimmy",
@@ -769,7 +762,6 @@ export function validateAliases(aliases, bookIds) {
         "skills",
         "careers",
         "spells",
-        "traits",
       ].includes(x.kind) ||
       !x.from ||
       !x.to ||
@@ -823,7 +815,7 @@ export function validateAliasTargets(aliases, entries, config) {
       valid = entries.some(
         (e) => e.contentKind === "careers" && e.name === x.to,
       );
-    else if (["spells", "traits"].includes(x.kind))
+    else if (x.kind === "spells")
       valid = entries.some((e) => e.contentKind === x.kind && e.name === x.to);
     else
       valid =

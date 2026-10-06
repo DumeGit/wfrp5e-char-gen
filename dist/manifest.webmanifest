@@ -28,15 +28,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "shortcuts": [
-    {
-      "name": "Player character creator",
-      "url": "./"
-    },
-    {
-      "name": "NPC & Monster Creator",
-      "url": "./npc.html"
-    }
   ]
 }

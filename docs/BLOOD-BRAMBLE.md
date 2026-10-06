@@ -2,7 +2,7 @@
 
 Source: the user-supplied `Blood and Bramble.pdf`, 30 PDF pages. Printed pp. 1–22 match PDF positions; the unnumbered spell cards occupy PDF pp. 23–28. MarkItDown provides searchable text, and PDF column extraction preserves continued descriptions. The pack records the source SHA-256 and ships structured creator options only.
 
-Enable **Blood and Bramble** in Origins → Books & options. It adds twelve Hedgecraft and twelve Witchcraft spells from detailed entries pp. 6–17. None duplicates a spell in the other installed books. It adds no Species, Careers, Talents, starting bonuses, random tables or alternate magic-learning system.
+Enable **Blood and Bramble** in Choose books. It adds twelve Hedgecraft and twelve Witchcraft spells from detailed entries pp. 6–17. None duplicates a spell in the other installed books. It adds no Species, Careers, Talents, starting bonuses, random tables or alternate magic-learning system.
 
 ## Spell learning and compatibility
 

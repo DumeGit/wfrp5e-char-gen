@@ -2,7 +2,7 @@
 
 Source: the user-supplied `Dwarf Player's Guide.pdf`, 144 pages. Printed pages match PDF positions. MarkItDown provides searchable text; PDF tables, columns and Career symbols were checked separately. The pack records its source SHA-256 and includes only structured creator content, not the source PDF.
 
-Enable **Dwarf Player’s Guide** in Origins → Books & options. Fifth Edition core allocations, XP prices, native languages, Creature Traits and existing Talents govern unless a reviewed user decision below says otherwise. This is a creator integration; descriptions of situational or campaign effects do not automate those effects.
+Enable **Dwarf Player’s Guide** in Choose books. Fifth Edition core allocations, XP prices, native languages, Creature Traits and existing Talents govern unless a reviewed user decision below says otherwise. This is a creator integration; descriptions of situational or campaign effects do not automate those effects.
 
 ## Creation and background
 

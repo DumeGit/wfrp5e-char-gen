@@ -17,10 +17,6 @@ const labels = {
   talent: "Talent",
   magic: "Magic",
   equipment: "Equipment",
-  creature: "Creature / NPC",
-  template: "NPC template",
-  trait: "Creature Trait",
-  mutation: "Mutation",
 };
 export function createBookSearch(getContext, setContext) {
   const input = document.querySelector("#book-search"),
@@ -157,21 +153,6 @@ export function createBookSearch(getContext, setContext) {
       return `<p><strong>${x.advanced ? "Advanced" : "Basic"} Skill</strong> · ${esc(characteristicNames[x.char])}${x.grouped ? " · Grouped" : ""}</p>${x.text ? `<p>${esc(x.text)}</p>` : '<p class="small muted">The full Skill description is not included in the imported catalogue. Consult the book/page above for its complete rule.</p>'}${x.options?.length ? `<p><strong>Printed specialisations:</strong> ${esc(x.options.join(", "))}</p>` : ""}`;
     if (row.kind === "magic")
       return `${spellDetailsBody({ ...x, text: x.text || "See the supplied book for the full profile." }, { includeCreatorNote: false })}${x.lore || x.form || x.category ? `<p><strong>Tradition / type:</strong> ${esc(x.lore || x.form || x.category)}</p>` : ""}`;
-    if (row.kind === "creature")
-      return `<p>${esc(x.category)} · ${esc(x.size)}</p><table><thead><tr>${Object.keys(
-        x.stats,
-      )
-        .map((k) => `<th>${esc(k)}</th>`)
-        .join("")}</tr></thead><tbody><tr>${Object.values(x.stats)
-        .map((v) => `<td>${v ?? "—"}</td>`)
-        .join("")}</tr></tbody></table>${Object.entries(x.sections)
-        .map(
-          ([name, text]) =>
-            `<section><h3>${esc(name)}</h3><p>${esc(text)}</p></section>`,
-        )
-        .join("")}`;
-    if (["template", "trait", "mutation"].includes(row.kind))
-      return `<p>${esc(x.text)}</p>`;
     return row.facets
       .map((f) => ({ ...f, text: searchBookText(f).text }))
       .map(
@@ -206,25 +187,21 @@ export function createBookSearch(getContext, setContext) {
     if (!row) return;
     selected = row;
     closeResults();
-    const referenceOnly = getContext().referenceOnly;
-    const context = referenceOnly
-      ? { actions: [] }
-      : searchContext(R, s, row, result());
+    const context = searchContext(R, s, row, result());
     currentActions = context.actions;
     let entry = row.entry;
-    if (!referenceOnly && ["talent", "skill"].includes(row.kind))
+    if (["talent", "skill"].includes(row.kind))
       entry = {
         ...entry,
         legacySources: legacyOption(R, s, row.kind, row.name).legacySources,
       };
-    if (!referenceOnly && row.kind === "equipment")
+    if (row.kind === "equipment")
       entry = {
         ...entry,
         legacySources: legacyGear(R, s, { key: "search" }, row.name)
           .legacySources,
       };
-    if (!referenceOnly && row.kind === "magic")
-      entry = legacyMagic(R, s, entry);
+    if (row.kind === "magic") entry = legacyMagic(R, s, entry);
     document.querySelector("#book-search-title").textContent = row.name;
     body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(row.label || labels[row.kind])}</span> ${ref(entry)}</p><div class="search-book-reference">${referenceBody(row)}</div><div class="search-rule-actions">${currentActions.map((a, i) => `<button type="button" class="quiet" data-search-route="${i}">${esc(a.label)} →</button>`).join("")}<button type="button" class="text-button" data-search-back>Back to search</button></div>`;
     linkReferences(row);

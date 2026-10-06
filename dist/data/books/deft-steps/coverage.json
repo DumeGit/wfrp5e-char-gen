@@ -23,36 +23,6 @@
       "reason": "Thin Jimmy/Steel Mummit and Telescopic Pole/Stick use paired table prices and descriptions."
     },
     {
-      "id": "deft-steps:feature:hound-training",
-      "name": "Hound and hawk training choices",
-      "status": "adapted",
-      "source": {
-        "book": "deft-steps",
-        "page": 133
-      },
-      "reason": "Printed profile-specific choices and command references; named Difficulty modifiers use core SL. Core Broken/Guard/War effects apply."
-    },
-    {
-      "id": "deft-steps:feature:npc-baselines",
-      "name": "Printed NPC baselines and punctuation",
-      "status": "implemented",
-      "source": {
-        "book": "deft-steps",
-        "page": 47
-      },
-      "reason": "All numeric baselines retained, including Albrecht’s 196 Wounds; approved punctuation interpretations have original source notes."
-    },
-    {
-      "id": "deft-steps:feature:unresolved-gear",
-      "name": "Unresolved named NPC equipment",
-      "status": "reference-only",
-      "source": {
-        "book": "deft-steps",
-        "page": 64
-      },
-      "reason": "No invented special weapon profiles, Qualities or monetary rolls. Named belongings and magical effects remain printed references."
-    },
-    {
       "id": "deft-steps:feature:campaign",
       "name": "Campaign procedures and ongoing play",
       "status": "deferred",
@@ -61,6 +31,16 @@
         "page": 15
       },
       "reason": "Ranald’s Gamble, contacts/organisations, crime/fraud, patrols/bounties, pathfinding/camping, hunting and ongoing training remain outside creation."
+    },
+    {
+      "id": "deft-steps:feature:npc-material",
+      "name": "NPC/animal profiles and hunting training",
+      "status": "deferred",
+      "source": {
+        "book": "deft-steps",
+        "page": "34–134"
+      },
+      "reason": "NPC creator removed at the user’s request. Animal shop entries record PC acquisition only; profiles, training and named NPC equipment are outside current scope."
     }
   ]
 }
