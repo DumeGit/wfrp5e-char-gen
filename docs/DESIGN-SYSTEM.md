@@ -58,3 +58,7 @@ The banner is the preview's original imagegen artwork, copied without pixel chan
 ## Maintenance and release
 
 Update this document and affected feature docs in the same change. Inspect setup, all eight steps and reference dialogs on desktop/phone; verify hover/disabled/focus contrast, no horizontal page overflow, heading accessibility, reduced-motion CSS and install behavior after redraws. Run `npm run check:release` after final styles/assets so offline caching covers art, fonts, skin, component module, guide and icons. Preserve PDF/export tests. Commit locally; the user pushes/deploys.
+
+## GM workspace
+
+The separate NPC entry shares the Black Banner shell, emblem, controls, reference dialogs and install node. `npc.css` owns only GM feature layout: compact 12-cell score inputs, category/profile cards, minimal stat block and form groups. It uses the shared semantic tokens. Desktop keeps the bounded sticky folio; mobile uses its explicit View stat block disclosure in page flow. Tool-mode links preserve the verification query and each tool's independent saved draft. Future GM sections must use this same presentation contract.

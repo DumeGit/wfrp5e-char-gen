@@ -56,6 +56,10 @@ Supported file keys:
 | gear / market | Arrays: name, price, enc (number or null), availability, optional category; capacity, wearable, text and ammunition reference fields are supported |
 | weapons | Array: name, group, enc, reach, damage, qualities, kind (melee/ranged), page |
 | armour | Array: name, enc, locations, ap, qualities, optional quick, page |
+| creatures | Printed NPC/creature profiles with all 12 numeric-or-absent stats, Size, TB, sections, Skills, attacks, text and separate discrepancy notes |
+| templates | Sourced NPC stat adjustments, explicit Skill/Talent grant choices and optional free Petty/Lore spell limits |
+| traits | Creature Trait name, complete sourced text and explicit parameter metadata |
+| mutations | Physical/Mental d100 outcomes, sourced effect text and individually implemented permanent adjustments |
 | tables | Array of explicitly selectable printed d100 tables |
 | origins | Regional Species profiles: printed Skills/Talents/native languages, names, optional starting Talent replacement and conditional Career alternatives |
 | astrology | Printed d100 sign rows, Characteristic adjustments, optional Talent or Witchling d10 outcomes, sourced profile text/metadata |
@@ -174,3 +178,5 @@ A record defaults to implemented, becomes adapted only from reviewed Legacy/adap
 Before committing, run **`npm run check:release`**: validate books/coverage, check module syntax/imports/identifiers, check generated documentation, check formatting, run the complete tests, rebuild the versioned offline worker and verify every published asset is cached. Browser checks still cover desktop and narrow mobile with `?verify=1`. Changes must be committed locally; the user pushes and Vercel deploys. These commands never push or deploy. See [ARCHITECTURE.md](ARCHITECTURE.md) for feature boundaries and shared result/issue contracts.
 
 The Python extraction builders use `scripts/book_build.py` to preserve reviewed coverage when regenerating a manifest, including copying it into an isolated output directory. A new book without reviewed coverage fails generation rather than silently losing its inventory. The full registry validator checks the copied metadata during the release process.
+
+The core NPC creator currently assembles core only. The four Bestiary arrays are registry-ready for future supplements, but an existing PC book pack does not enable unreviewed NPC material. See [NPC-CREATOR.md](NPC-CREATOR.md) for scope, baseline/XP rules and extension requirements.

@@ -1,0 +1,3459 @@
+[
+  {
+    "id": "core:creatures:human",
+    "name": "Human",
+    "page": 319,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 30,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 30,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 30,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (35/+7) Optional Bow and Arrows: (35/+7) 50 yards, Impale",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Animal Care 35, Gossip 35, Haggle 35, Melee (Basic) 35, Ranged (Bow) 35"
+    },
+    "skills": [
+      {
+        "name": "Animal Care",
+        "total": 35
+      },
+      {
+        "name": "Gossip",
+        "total": 35
+      },
+      {
+        "name": "Haggle",
+        "total": 35
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bow and Arrows",
+        "skill": 35,
+        "damage": 7,
+        "optional": true,
+        "text": "50 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (35/+7) Optional Bow and Arrows: (35/+7) 50 yards, Impale Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Animal Care 35, Gossip 35, Haggle 35, Melee (Basic) 35, Ranged (Bow) 35",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:halfling",
+    "name": "Halfling",
+    "page": 319,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 20,
+      "BS": 40,
+      "S": 20,
+      "T": 20,
+      "I": 50,
+      "Ag": 30,
+      "Dex": 40,
+      "Int": 30,
+      "WP": 40,
+      "Fel": 40,
+      "W": 10
+    },
+    "size": "Average",
+    "toughnessBonus": 2,
+    "sections": {
+      "Attacks": "Hand Weapon: (20/+6) Optional Sling and Bullets: (40/+6) 60 yards, Pummel",
+      "Armour": "Toughness Bonus: 2 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Charm 45, Dodge 35, Perception 55, Sleight of Hand 45, Stealth (Urban) 35",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards"
+    },
+    "skills": [
+      {
+        "name": "Charm",
+        "total": 45
+      },
+      {
+        "name": "Dodge",
+        "total": 35
+      },
+      {
+        "name": "Perception",
+        "total": 55
+      },
+      {
+        "name": "Sleight of Hand",
+        "total": 45
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 20,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Sling and Bullets",
+        "skill": 40,
+        "damage": 6,
+        "optional": true,
+        "text": "60 yards, Pummel"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (20/+6) Optional Sling and Bullets: (40/+6) 60 yards, Pummel Armour: Toughness Bonus: 2 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Charm 45, Dodge 35, Perception 55, Sleight of Hand 45, Stealth (Urban) 35 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:dwarf",
+    "name": "Dwarf",
+    "page": 320,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 3,
+      "WS": 40,
+      "BS": 30,
+      "S": 30,
+      "T": 40,
+      "I": 20,
+      "Ag": 20,
+      "Dex": 40,
+      "Int": 30,
+      "WP": 50,
+      "Fel": 20,
+      "W": 16
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (45/+7) Optional Crossbow and Bolts: (30/+9) 50 yards, Impale, Reload 3",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Consume Alcohol 45, Endurance 45, Evaluate 35, Lore (Dwarfs) 35, Melee (Basic) 45",
+      "Traits": "Hatred (Orcs and Goblins): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Magic Resistance: Any spell that targets them suffers -3 SL Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards"
+    },
+    "skills": [
+      {
+        "name": "Consume Alcohol",
+        "total": 45
+      },
+      {
+        "name": "Endurance",
+        "total": 45
+      },
+      {
+        "name": "Evaluate",
+        "total": 35
+      },
+      {
+        "name": "Lore (Dwarfs)",
+        "total": 35
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 45,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Crossbow and Bolts",
+        "skill": 30,
+        "damage": 9,
+        "optional": true,
+        "text": "50 yards, Impale, Reload 3"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (45/+7) Optional Crossbow and Bolts: (30/+9) 50 yards, Impale, Reload 3 Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Consume Alcohol 45, Endurance 45, Evaluate 35, Lore (Dwarfs) 35, Melee (Basic) 45 Traits: Hatred (Orcs and Goblins): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Magic Resistance: Any spell that targets them suffers -3 SL Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+    "notes": [
+      "The printed Toughness Bonus differs from Toughness / 10. Printed values are retained until the GM explicitly selects recalculation or a manual value."
+    ]
+  },
+  {
+    "id": "core:creatures:high-elf-or-wood-elf",
+    "name": "High Elf or Wood Elf",
+    "page": 320,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 40,
+      "BS": 40,
+      "S": 30,
+      "T": 30,
+      "I": 50,
+      "Ag": 40,
+      "Dex": 40,
+      "Int": 40,
+      "WP": 40,
+      "Fel": 30,
+      "W": 13
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (40/+7) Optional Longbow and Elf Arrows: (45/+7) 70 yards, Impale",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Cool 45, Melee (Basic) 45, Navigation 55, Perception 55, Ranged (Bow) 45",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards"
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 45
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      },
+      {
+        "name": "Navigation",
+        "total": 55
+      },
+      {
+        "name": "Perception",
+        "total": 55
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 40,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Longbow and Elf Arrows",
+        "skill": 45,
+        "damage": 7,
+        "optional": true,
+        "text": "70 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (40/+7) Optional Longbow and Elf Arrows: (45/+7) 70 yards, Impale Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Cool 45, Melee (Basic) 45, Navigation 55, Perception 55, Ranged (Bow) 45 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:human-watchman",
+    "name": "Human Watchman",
+    "page": 321,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 45,
+      "BS": 30,
+      "S": 40,
+      "T": 30,
+      "I": 40,
+      "Ag": 35,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 30,
+      "W": 13
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Dagger: (55/+6) Hand Weapon: (55/+8)",
+      "Armour": "Toughness Bonus: 3 Leather Jack: +1 AP to Arms and Body",
+      "Skills": "Athletics 40, Cool 40, Dodge 40, Gossip 40, Haggle 35, Intimidate 45, Melee (Basic) 55, Perception 50, Ranged (Bow) 35",
+      "Talents": "Acute Sense (Sight): May take Perception Tests to detect normally imperceptible details with the associated sense Nose for Trouble: Advantage on Intuition Tests, and can usually tell where to gamble, fight, or get stinking drunk Supportive: Advantage and no penalty on Tests to Charm those of higher Status Warrior Born: +5 WS already added to profile",
+      "Trappings": "Cloak, Clothing, Copper Badge, Dagger, Hand Weapon, Lamp Oil, Lantern and Pole, Leather Jack, Hat, Pouch containing 1d10 Silver Shillings, Sling Bag containing Lunch, Uniform"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 40
+      },
+      {
+        "name": "Cool",
+        "total": 40
+      },
+      {
+        "name": "Dodge",
+        "total": 40
+      },
+      {
+        "name": "Gossip",
+        "total": 40
+      },
+      {
+        "name": "Haggle",
+        "total": 35
+      },
+      {
+        "name": "Intimidate",
+        "total": 45
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 55
+      },
+      {
+        "name": "Perception",
+        "total": 50
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Dagger",
+        "skill": 55,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Hand Weapon",
+        "skill": 55,
+        "damage": 8,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Dagger: (55/+6) Hand Weapon: (55/+8) Armour: Toughness Bonus: 3 Leather Jack: +1 AP to Arms and Body Skills: Athletics 40, Cool 40, Dodge 40, Gossip 40, Haggle 35, Intimidate 45, Melee (Basic) 55, Perception 50, Ranged (Bow) 35 Talents: Acute Sense (Sight): May take Perception Tests to detect normally imperceptible details with the associated sense Nose for Trouble: Advantage on Intuition Tests, and can usually tell where to gamble, fight, or get stinking drunk Supportive: Advantage and no penalty on Tests to Charm those of higher Status Warrior Born: +5 WS already added to profile Trappings: Cloak, Clothing, Copper Badge, Dagger, Hand Weapon, Lamp Oil, Lantern and Pole, Leather Jack, Hat, Pouch containing 1d10 Silver Shillings, Sling Bag containing Lunch, Uniform",
+    "notes": [
+      "The second printed Talents heading contains belongings; retained as Trappings."
+    ]
+  },
+  {
+    "id": "core:creatures:human-merchant",
+    "name": "Human Merchant",
+    "page": 321,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 30,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 30,
+      "Ag": 40,
+      "Dex": 30,
+      "Int": 40,
+      "WP": 35,
+      "Fel": 45,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Dagger: (35/+5)",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Animal Care 45, Charm 50, Charm Animal 40, Drive 45, Evaluate 50, Gossip 55, Haggle 55, Intuition 35, Melee (Basic) 35, Navigation 45",
+      "Talents": "Gregarious: Advantage on Gossip Tests and can usually tell where in a settlement gossip is likely to be exchanged Strong Back: Adds +1 SL to Opposed Strength Tests, and can carry an additional Encumbrance point Super Numerate: Advantage on Evaluate Tests, and can keep track of the passage of time accurately while conscious Suave: +5 Fel already added to profile",
+      "Trappings": "Abacus, Canvas Tarpaulin, Cloak, Clothing, Dagger, Hat, Mule and Cart containing Wares, Pouch containing 3d10 Shillings, Sling Bag containing Lunch"
+    },
+    "skills": [
+      {
+        "name": "Animal Care",
+        "total": 45
+      },
+      {
+        "name": "Charm",
+        "total": 50
+      },
+      {
+        "name": "Charm Animal",
+        "total": 40
+      },
+      {
+        "name": "Drive",
+        "total": 45
+      },
+      {
+        "name": "Evaluate",
+        "total": 50
+      },
+      {
+        "name": "Gossip",
+        "total": 55
+      },
+      {
+        "name": "Haggle",
+        "total": 55
+      },
+      {
+        "name": "Intuition",
+        "total": 35
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      },
+      {
+        "name": "Navigation",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Dagger",
+        "skill": 35,
+        "damage": 5,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Dagger: (35/+5) Armour: Toughness Bonus: 3 Skills: Animal Care 45, Charm 50, Charm Animal 40, Drive 45, Evaluate 50, Gossip 55, Haggle 55, Intuition 35, Melee (Basic) 35, Navigation 45 Talents: Gregarious: Advantage on Gossip Tests and can usually tell where in a settlement gossip is likely to be exchanged Strong Back: Adds +1 SL to Opposed Strength Tests, and can carry an additional Encumbrance point Super Numerate: Advantage on Evaluate Tests, and can keep track of the passage of time accurately while conscious Suave: +5 Fel already added to profile Trappings: Abacus, Canvas Tarpaulin, Cloak, Clothing, Dagger, Hat, Mule and Cart containing Wares, Pouch containing 3d10 Shillings, Sling Bag containing Lunch",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:human-thug",
+    "name": "Human Thug",
+    "page": 322,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 40,
+      "BS": 30,
+      "S": 45,
+      "T": 40,
+      "I": 35,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 30,
+      "W": 15
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Dagger: (50/+6) Hand Weapon: (50/+8) Knuckledusters: (45/+6)",
+      "Armour": "Toughness Bonus: 3 Leather Jack: +1 AP to Arms and Body",
+      "Skills": "Charm 35, Consume Alcohol 45, Cool 40, Dodge 35, Gamble 35, Gossip 35, Haggle 35, Intimidate 55, Melee (Basic) 50, Melee (Brawling) 45, Stealth (Urban) 35",
+      "Talents": "Briber: Advantage on Bribery Tests Cardsharp: When making an Opposed Gamble Test, if the NPC rolls a double, they may reroll their opponent’s Test Iron Jaw: The first time in an encounter the NPC gains one or more Stunned Conditions, they gain one less Very Strong: +5 S already added to profile",
+      "Trappings": "Clothing, Dagger, Hand Weapon, Hood, Knuckledusters, Leather Jack, Pouch containing 3d10 Brass Pennies, Sling Bag containing 2 Candles and 5 Matches"
+    },
+    "skills": [
+      {
+        "name": "Charm",
+        "total": 35
+      },
+      {
+        "name": "Consume Alcohol",
+        "total": 45
+      },
+      {
+        "name": "Cool",
+        "total": 40
+      },
+      {
+        "name": "Dodge",
+        "total": 35
+      },
+      {
+        "name": "Gamble",
+        "total": 35
+      },
+      {
+        "name": "Gossip",
+        "total": 35
+      },
+      {
+        "name": "Haggle",
+        "total": 35
+      },
+      {
+        "name": "Intimidate",
+        "total": 55
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 50
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 45
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Dagger",
+        "skill": 50,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Hand Weapon",
+        "skill": 50,
+        "damage": 8,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Knuckledusters",
+        "skill": 45,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Dagger: (50/+6) Hand Weapon: (50/+8) Knuckledusters: (45/+6) Armour: Toughness Bonus: 3 Leather Jack: +1 AP to Arms and Body Skills: Charm 35, Consume Alcohol 45, Cool 40, Dodge 35, Gamble 35, Gossip 35, Haggle 35, Intimidate 55, Melee (Basic) 50, Melee (Brawling) 45, Stealth (Urban) 35 Talents: Briber: Advantage on Bribery Tests Cardsharp: When making an Opposed Gamble Test, if the NPC rolls a double, they may reroll their opponent’s Test Iron Jaw: The first time in an encounter the NPC gains one or more Stunned Conditions, they gain one less Very Strong: +5 S already added to profile Trappings: Clothing, Dagger, Hand Weapon, Hood, Knuckledusters, Leather Jack, Pouch containing 3d10 Brass Pennies, Sling Bag containing 2 Candles and 5 Matches",
+    "notes": [
+      "The printed Toughness Bonus differs from Toughness / 10. Printed values are retained until the GM explicitly selects recalculation or a manual value."
+    ]
+  },
+  {
+    "id": "core:creatures:halfling-thief",
+    "name": "Halfling Thief",
+    "page": 322,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 20,
+      "BS": 40,
+      "S": 30,
+      "T": 20,
+      "I": 55,
+      "Ag": 40,
+      "Dex": 50,
+      "Int": 30,
+      "WP": 40,
+      "Fel": 40,
+      "W": 10
+    },
+    "size": "Average",
+    "toughnessBonus": 2,
+    "sections": {
+      "Attacks": "Dagger: (25/+5)",
+      "Armour": "Toughness Bonus: 2 Leather Jerkin: +1 AP to Body",
+      "Skills": "Athletics 45, Climb 35, Dodge 50, Intuition 60, Melee (Basic) 25, Perception 65, Pick Lock 55, Sleight of Hand 55, Stealth (Urban) 50",
+      "Talents": "Acute Sense (Taste): May take Perception Tests to detect normally imperceptible details with the associated sense Catfall: Advantage on Athletics Tests made while falling and may make Athletics Tests to reduce Damage while falling Flee!: Tests to flee as the Quarry in a Pursuit benefit from +1 SL Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Resistance (Chaos): Automatically pass first Test to resist Corruption each session, Advantage on all further such Tests",
+      "Trappings": "Clothing, Crowbar, Dagger, Hood, Leather Jerkin, Pouch containing 3d10 Brass Pennies, Sack, Sling Bag containing 2 Candles and 1d10 Matches"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 45
+      },
+      {
+        "name": "Climb",
+        "total": 35
+      },
+      {
+        "name": "Dodge",
+        "total": 50
+      },
+      {
+        "name": "Intuition",
+        "total": 60
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 25
+      },
+      {
+        "name": "Perception",
+        "total": 65
+      },
+      {
+        "name": "Pick Lock",
+        "total": 55
+      },
+      {
+        "name": "Sleight of Hand",
+        "total": 55
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 50
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Dagger",
+        "skill": 25,
+        "damage": 5,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Dagger: (25/+5) Armour: Toughness Bonus: 2 Leather Jerkin: +1 AP to Body Skills: Athletics 45, Climb 35, Dodge 50, Intuition 60, Melee (Basic) 25, Perception 65, Pick Lock 55, Sleight of Hand 55, Stealth (Urban) 50 Talents: Acute Sense (Taste): May take Perception Tests to detect normally imperceptible details with the associated sense Catfall: Advantage on Athletics Tests made while falling and may make Athletics Tests to reduce Damage while falling Flee!: Tests to flee as the Quarry in a Pursuit benefit from +1 SL Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Resistance (Chaos): Automatically pass first Test to resist Corruption each session, Advantage on all further such Tests Trappings: Clothing, Crowbar, Dagger, Hood, Leather Jerkin, Pouch containing 3d10 Brass Pennies, Sack, Sling Bag containing 2 Candles and 1d10 Matches",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:gnome",
+    "name": "Gnome",
+    "page": 323,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 40,
+      "BS": 30,
+      "S": 30,
+      "T": 20,
+      "I": 30,
+      "Ag": 40,
+      "Dex": 40,
+      "Int": 30,
+      "WP": 40,
+      "Fel": 25,
+      "W": 11
+    },
+    "size": "Average",
+    "toughnessBonus": 2,
+    "sections": {
+      "Attacks": "Hand Weapon: (45/+7)",
+      "Armour": "Toughness Bonus: 2 Optional Leather Jerkin: +1 AP to Body Optional Helmet: +2 AP to Head",
+      "Skills": "Charm Animal 45, Melee (Basic) 45, Stealth (Rural) 40",
+      "Traits": "Hatred (Orcs and Goblins): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards"
+    },
+    "skills": [
+      {
+        "name": "Charm Animal",
+        "total": 45
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 45,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (45/+7) Armour: Toughness Bonus: 2 Optional Leather Jerkin: +1 AP to Body Optional Helmet: +2 AP to Head Skills: Charm Animal 45, Melee (Basic) 45, Stealth (Rural) 40 Traits: Hatred (Orcs and Goblins): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:ogre",
+    "name": "Ogre",
+    "page": 324,
+    "category": "Peoples of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 30,
+      "BS": 20,
+      "S": 45,
+      "T": 45,
+      "I": 20,
+      "Ag": 25,
+      "Dex": 20,
+      "Int": 20,
+      "WP": 30,
+      "Fel": 20,
+      "W": 30
+    },
+    "size": "Large",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (40/+12)",
+      "Armour": "Toughness Bonus: 3 Optional Gut Plate: +2 AP to Body Optional Helmet: +2 AP to Head Optional Ironfist: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Consume Alcohol 55, Endurance 55, Melee 40",
+      "Traits": "Fear: Opponents cannot gain Momentum, Cool Test to overcome Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Size (Large): See page 360 for implications of size",
+      "Optional Traits": "Belligerent, Infected, Tracker"
+    },
+    "skills": [
+      {
+        "name": "Consume Alcohol",
+        "total": 55
+      },
+      {
+        "name": "Endurance",
+        "total": 55
+      },
+      {
+        "name": "Melee",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 40,
+        "damage": 12,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (40/+12) Armour: Toughness Bonus: 3 Optional Gut Plate: +2 AP to Body Optional Helmet: +2 AP to Head Optional Ironfist: +2 AP when Opposing an attack with Dodge or Melee Skills: Consume Alcohol 55, Endurance 55, Melee 40 Traits: Fear: Opponents cannot gain Momentum, Cool Test to overcome Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Size (Large): See page 360 for implications of size Optional Traits: Belligerent, Infected, Tracker",
+    "notes": [
+      "The printed Toughness Bonus differs from Toughness / 10. Printed values are retained until the GM explicitly selects recalculation or a manual value.",
+      "Belligerent, Infected and Tracker are printed under Trappings. See the documented heading decision."
+    ]
+  },
+  {
+    "id": "core:creatures:boar",
+    "name": "Boar",
+    "page": 325,
+    "category": "Beasts of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 7,
+      "WS": 35,
+      "BS": null,
+      "S": 35,
+      "T": 40,
+      "I": 35,
+      "Ag": 35,
+      "Dex": null,
+      "Int": 10,
+      "WP": 10,
+      "Fel": null,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hooves and Tusks: (40/+6) Horns (Tusks): (40/+7) Free Attack only when Charging",
+      "Armour": "Toughness Bonus: 4 Hide: +1 AP",
+      "Skills": "Melee (Brawling) 40, Perception 40, Stealth (Rural) 40",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Skittish: Receive +3 Broken Condition if affected by loud noise or magic",
+      "Optional Traits": "Belligerent, Frenzy, Infected, Size (Large), Territorial, Trained (Broken, Magic, Mount, War)"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      },
+      {
+        "name": "Perception",
+        "total": 40
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hooves and Tusks",
+        "skill": 40,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Horns (Tusks)",
+        "skill": 40,
+        "damage": 7,
+        "optional": false,
+        "text": "Free Attack only when Charging"
+      }
+    ],
+    "text": "Attacks: Hooves and Tusks: (40/+6) Horns (Tusks): (40/+7) Free Attack only when Charging Armour: Toughness Bonus: 4 Hide: +1 AP Skills: Melee (Brawling) 40, Perception 40, Stealth (Rural) 40 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Skittish: Receive +3 Broken Condition if affected by loud noise or magic Optional Traits: Belligerent, Frenzy, Infected, Size (Large), Territorial, Trained (Broken, Magic, Mount, War)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:dog",
+    "name": "Dog",
+    "page": 325,
+    "category": "Beasts of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 25,
+      "BS": null,
+      "S": 20,
+      "T": 20,
+      "I": 35,
+      "Ag": 30,
+      "Dex": null,
+      "Int": 15,
+      "WP": 10,
+      "Fel": 15,
+      "W": 4
+    },
+    "size": "Small",
+    "toughnessBonus": 2,
+    "sections": {
+      "Attacks": "Claws: (25/+5) Bite: (25/+5) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 2 Optional Light Armour: +1 AP",
+      "Skills": "Dodge 35, Perception 40, Track 45",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Skittish: Receive +3 Broken Conditions if affected by loud noise or magic Tracker: The creature has the Track Skill at Int +10",
+      "Optional Traits": "Frenzy, Infected, Size (Average), Territorial, Trained (Broken, Drive, Entertain, Fetch, Guard, Magic, War) Note: The small but vicious"
+    },
+    "skills": [
+      {
+        "name": "Dodge",
+        "total": 35
+      },
+      {
+        "name": "Perception",
+        "total": 40
+      },
+      {
+        "name": "Track",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 25,
+        "damage": 5,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 25,
+        "damage": 5,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Claws: (25/+5) Bite: (25/+5) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 2 Optional Light Armour: +1 AP Skills: Dodge 35, Perception 40, Track 45 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Skittish: Receive +3 Broken Conditions if affected by loud noise or magic Tracker: The creature has the Track Skill at Int +10 Optional Traits: Frenzy, Infected, Size (Average), Territorial, Trained (Broken, Drive, Entertain, Fetch, Guard, Magic, War) Note: The small but vicious",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:giant-rat",
+    "name": "Giant Rat",
+    "page": 326,
+    "category": "Beasts of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 20,
+      "BS": null,
+      "S": 20,
+      "T": 20,
+      "I": 35,
+      "Ag": 35,
+      "Dex": 10,
+      "Int": 15,
+      "WP": 15,
+      "Fel": null,
+      "W": 4
+    },
+    "size": "Small",
+    "toughnessBonus": 2,
+    "sections": {
+      "Attacks": "Claws: (30/+4) Bite: (30/+5) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 2 Optional Light Armour: +1 AP",
+      "Skills": "Melee (Brawling) 30, Perception 45, Stealth 40",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Skittish: Receive +3 Broken Condition if affected by loud noise or magic",
+      "Optional Traits": "Disease (Black Plague, Ratte Fever), Size (Average), Swarm, Trained (War)"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 30
+      },
+      {
+        "name": "Perception",
+        "total": 45
+      },
+      {
+        "name": "Stealth",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 30,
+        "damage": 4,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 30,
+        "damage": 5,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Claws: (30/+4) Bite: (30/+5) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 2 Optional Light Armour: +1 AP Skills: Melee (Brawling) 30, Perception 45, Stealth 40 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Skittish: Receive +3 Broken Condition if affected by loud noise or magic Optional Traits: Disease (Black Plague, Ratte Fever), Size (Average), Swarm, Trained (War)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:giant-spider",
+    "name": "Giant Spider",
+    "page": 326,
+    "category": "Beasts of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 35,
+      "BS": null,
+      "S": 15,
+      "T": 25,
+      "I": 10,
+      "Ag": 35,
+      "Dex": 30,
+      "Int": 5,
+      "WP": 25,
+      "Fel": null,
+      "W": 4
+    },
+    "size": "Small",
+    "toughnessBonus": null,
+    "sections": {
+      "Attacks": "Fangs: (40/+3) Bite: (40/+4) Lose Momentum to make this Free Attack",
+      "Skills": "Dodge 40, Melee (Brawling) 40, Stealth 40",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Wallcrawler: Can move at full Movement across appropriate surfaces and automatically passes Climb Tests Web 40: On a successful hit, opponents gain 1 Entangled Condition, with a Strength of 40",
+      "Optional Traits": "Size (Tiny to Large), Striding Gait (Woodland), Swarm, Trained (Broken, Guard, Magic, Mount, War), Venom (Average)"
+    },
+    "skills": [
+      {
+        "name": "Dodge",
+        "total": 40
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      },
+      {
+        "name": "Stealth",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Fangs",
+        "skill": 40,
+        "damage": 3,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 40,
+        "damage": 4,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Fangs: (40/+3) Bite: (40/+4) Lose Momentum to make this Free Attack Skills: Dodge 40, Melee (Brawling) 40, Stealth 40 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Wallcrawler: Can move at full Movement across appropriate surfaces and automatically passes Climb Tests Web 40: On a successful hit, opponents gain 1 Entangled Condition, with a Strength of 40 Optional Traits: Size (Tiny to Large), Striding Gait (Woodland), Swarm, Trained (Broken, Guard, Magic, Mount, War), Venom (Average)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:horse",
+    "name": "Horse",
+    "page": 327,
+    "category": "Beasts of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 8,
+      "WS": 25,
+      "BS": null,
+      "S": 45,
+      "T": 35,
+      "I": 15,
+      "Ag": 30,
+      "Dex": null,
+      "Int": 10,
+      "WP": 10,
+      "Fel": 10,
+      "W": 22
+    },
+    "size": "Large",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hooves: (25/+12), Pummel",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP",
+      "Skills": "Athletics 40, Endurance 40",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Size (Large): See page 360 for implications of size Skittish: Receive +3 Broken Conditions if affected by loud noise or magic",
+      "Optional Traits": "Trained (Broken, Drive, Entertain, Magic, Mount, War)"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 40
+      },
+      {
+        "name": "Endurance",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hooves",
+        "skill": 25,
+        "damage": 12,
+        "optional": false,
+        "text": ", Pummel"
+      }
+    ],
+    "text": "Attacks: Hooves: (25/+12), Pummel Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Skills: Athletics 40, Endurance 40 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Size (Large): See page 360 for implications of size Skittish: Receive +3 Broken Conditions if affected by loud noise or magic Optional Traits: Trained (Broken, Drive, Entertain, Magic, Mount, War)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:wolf",
+    "name": "Wolf",
+    "page": 327,
+    "category": "Beasts of the Reikland",
+    "example": false,
+    "stats": {
+      "M": 9,
+      "WS": 25,
+      "BS": null,
+      "S": 35,
+      "T": 30,
+      "I": 35,
+      "Ag": 30,
+      "Dex": null,
+      "Int": 15,
+      "WP": 15,
+      "Fel": null,
+      "W": 10
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Claws: (35/+6) Bite: (35/+6) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP",
+      "Skills": "Melee (Brawling) 35, Perception 45, Track 45",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Skittish: Receive +3 Broken Condition if affected by loud noise or magic",
+      "Optional Traits": "Frenzy, Infected, Size (Large), Territorial, Trained (Broken, Drive, Fetch, Guard, Magic, War) horse Horses are bred for many jobs, including speedy mounts for messengers, sturdy destriers for knights, and mighty drays for farmers. They are so useful, horse trading is almost a competitive sport in the Reikland. Unscrupulous horse copers (horse salesmen) are keen to make money at the expense of the ignorant buyer, painting and filing teeth of elderly horses or stuffing rags up noses to soak mucus — so the prospective buyer should beware."
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 35
+      },
+      {
+        "name": "Perception",
+        "total": 45
+      },
+      {
+        "name": "Track",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 35,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 35,
+        "damage": 6,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Claws: (35/+6) Bite: (35/+6) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Skills: Melee (Brawling) 35, Perception 45, Track 45 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Skittish: Receive +3 Broken Condition if affected by loud noise or magic Optional Traits: Frenzy, Infected, Size (Large), Territorial, Trained (Broken, Drive, Fetch, Guard, Magic, War) horse Horses are bred for many jobs, including speedy mounts for messengers, sturdy destriers for knights, and mighty drays for farmers. They are so useful, horse trading is almost a competitive sport in the Reikland. Unscrupulous horse copers (horse salesmen) are keen to make money at the expense of the ignorant buyer, painting and filing teeth of elderly horses or stuffing rags up noses to soak mucus — so the prospective buyer should beware.",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:bog-octopus",
+    "name": "Bog Octopus",
+    "page": 328,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 3,
+      "WS": 35,
+      "BS": null,
+      "S": 80,
+      "T": 75,
+      "I": 15,
+      "Ag": 55,
+      "Dex": null,
+      "Int": 5,
+      "WP": 65,
+      "Fel": null,
+      "W": 56
+    },
+    "size": "Large",
+    "toughnessBonus": 7,
+    "sections": {
+      "Attacks": "8 Tentacles: (40/+8) The creature may make 8 free attacks, if they cause Damage they can also give their opponent an Entangled Condition",
+      "Armour": "Toughness Bonus: 7",
+      "Skills": "Climb 65, Melee (Brawling) 40, Stealth (Rural) 65, Swim 90",
+      "Traits": "Amphibious: The creature has the Swim skill and adds +1 SL to all Swim Tests and move at full Movement through water Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Striding Gait (Wetlands): Suffer no penalties for moving through wetland and +1 SL to all Athletics and Stealth Tests in wetland Venom (Difficult): Wounded opponents must pass an Difficult (-1 SL) Endurance Test or gain a Poisoned Condition",
+      "Optional Traits": "Size (Enormous or Monstrous), Territorial"
+    },
+    "skills": [
+      {
+        "name": "Climb",
+        "total": 65
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 65
+      },
+      {
+        "name": "Swim",
+        "total": 90
+      }
+    ],
+    "attacks": [
+      {
+        "name": "8 Tentacles",
+        "skill": 40,
+        "damage": 8,
+        "optional": false,
+        "text": "The creature may make 8 free attacks, if they cause Damage they can also give their opponent an Entangled Condition"
+      }
+    ],
+    "text": "Attacks: 8 Tentacles: (40/+8) The creature may make 8 free attacks, if they cause Damage they can also give their opponent an Entangled Condition Armour: Toughness Bonus: 7 Skills: Climb 65, Melee (Brawling) 40, Stealth (Rural) 65, Swim 90 Traits: Amphibious: The creature has the Swim skill and adds +1 SL to all Swim Tests and move at full Movement through water Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Striding Gait (Wetlands): Suffer no penalties for moving through wetland and +1 SL to all Athletics and Stealth Tests in wetland Venom (Difficult): Wounded opponents must pass an Difficult (-1 SL) Endurance Test or gain a Poisoned Condition Optional Traits: Size (Enormous or Monstrous), Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:cave-squig",
+    "name": "Cave Squig",
+    "page": 329,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 45,
+      "BS": null,
+      "S": 50,
+      "T": 30,
+      "I": 10,
+      "Ag": 50,
+      "Dex": null,
+      "Int": 5,
+      "WP": 15,
+      "Fel": null,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "T eeth: (45/+9)",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Athletics 60, Dodge 60",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Bounce: When Charging, Leaping, or Sprinting, the creature doubles their Movement Attribute and can ignore all intervening terrain and creatures Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+      "Optional Traits": "Dark Vision, Frenzy, Horns +8, Size (Tiny–Enormous), Trained (Guard, Mount)"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 60
+      },
+      {
+        "name": "Dodge",
+        "total": 60
+      }
+    ],
+    "attacks": [
+      {
+        "name": "T eeth",
+        "skill": 45,
+        "damage": 9,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: T eeth: (45/+9) Armour: Toughness Bonus: 3 Skills: Athletics 60, Dodge 60 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Bounce: When Charging, Leaping, or Sprinting, the creature doubles their Movement Attribute and can ignore all intervening terrain and creatures Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Optional Traits: Dark Vision, Frenzy, Horns +8, Size (Tiny–Enormous), Trained (Guard, Mount)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:demigryph",
+    "name": "Demigryph",
+    "page": 329,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 7,
+      "WS": 45,
+      "BS": null,
+      "S": 55,
+      "T": 40,
+      "I": 30,
+      "Ag": 45,
+      "Dex": null,
+      "Int": 15,
+      "WP": 25,
+      "Fel": null,
+      "W": 30
+    },
+    "size": "Large",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Claws: (50/+14) Bite: (50/+8) Lose Momentum to make this Free Attack, and has the Penetrating",
+      "Armour": "Toughness Bonus: 4 Hide: +1 AP Optional Light Armour: +1 AP Optional Medium Armour: +3 AP",
+      "Skills": "Athletics 55, Endurance 45, Melee (Brawling) 50",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size",
+      "Optional Traits": "Trained (Broken, Drive, Guard, Mount, War)"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 55
+      },
+      {
+        "name": "Endurance",
+        "total": 45
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 50
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 50,
+        "damage": 14,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 50,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack, and has the Penetrating"
+      }
+    ],
+    "text": "Attacks: Claws: (50/+14) Bite: (50/+8) Lose Momentum to make this Free Attack, and has the Penetrating Armour: Toughness Bonus: 4 Hide: +1 AP Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Skills: Athletics 55, Endurance 45, Melee (Brawling) 50 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Optional Traits: Trained (Broken, Drive, Guard, Mount, War)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:dragon",
+    "name": "Dragon",
+    "page": 330,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 65,
+      "BS": 60,
+      "S": 65,
+      "T": 65,
+      "I": 60,
+      "Ag": 25,
+      "Dex": 15,
+      "Int": 45,
+      "WP": 85,
+      "Fel": 25,
+      "W": 104
+    },
+    "size": "Enormous",
+    "toughnessBonus": 6,
+    "sections": {
+      "Attacks": "Claws: (70/+16) Bite: (70/+9) Lose Momentum to make this Free Attack, and has the Penetrating Tail: (70/+8) Lose Momentum to make this Free Attack, smaller opponents take a Prone Condition if wounded Breath (Any One): See page 357 for details of breath attacks",
+      "Armour": "Toughness Bonus: 6 Scales: +3 AP",
+      "Skills": "Melee (Brawling) 70, Perception 70, Tracking 70",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Fly (80): As the creature’s Move, they can fly up to 80 yards, see page 358 for details Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Enormous): See page 360 for implications of size",
+      "Optional Traits": "Immunity (Any), Infestation, Magical, Mental Corruption, Mutation, Size (Monstrous), Spellcaster (Various), Stealthy, Striding Gait (Wetlands, Woodland), Undead, Venom (Difficult)"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 70
+      },
+      {
+        "name": "Perception",
+        "total": 70
+      },
+      {
+        "name": "Tracking",
+        "total": 70
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 70,
+        "damage": 16,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 70,
+        "damage": 9,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack, and has the Penetrating"
+      },
+      {
+        "name": "Tail",
+        "skill": 70,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack, smaller opponents take a Prone Condition if wounded"
+      },
+      {
+        "name": "Breath (Any One)",
+        "skill": null,
+        "damage": null,
+        "optional": false,
+        "text": "See page 357 for details of breath attacks"
+      }
+    ],
+    "text": "Attacks: Claws: (70/+16) Bite: (70/+9) Lose Momentum to make this Free Attack, and has the Penetrating Tail: (70/+8) Lose Momentum to make this Free Attack, smaller opponents take a Prone Condition if wounded Breath (Any One): See page 357 for details of breath attacks Armour: Toughness Bonus: 6 Scales: +3 AP Skills: Melee (Brawling) 70, Perception 70, Tracking 70 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Fly (80): As the creature’s Move, they can fly up to 80 yards, see page 358 for details Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Enormous): See page 360 for implications of size Optional Traits: Immunity (Any), Infestation, Magical, Mental Corruption, Mutation, Size (Monstrous), Spellcaster (Various), Stealthy, Striding Gait (Wetlands, Woodland), Undead, Venom (Difficult)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:fenbeast",
+    "name": "Fenbeast",
+    "page": 331,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 35,
+      "BS": null,
+      "S": 50,
+      "T": 55,
+      "I": 10,
+      "Ag": 15,
+      "Dex": 10,
+      "Int": 10,
+      "WP": null,
+      "Fel": null,
+      "W": 40
+    },
+    "size": "Large",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Fists: (40/+14) Magical",
+      "Armour": "Toughness Bonus: 5",
+      "Skills": "Endurance 65, Melee (Brawling) 40",
+      "Traits": "Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Regeneration: Regain 1d10 Wounds at start of round. A roll of 10 heals a Critical Wound. At 0 Wounds, roll 8+ to regain one Wound. Cannot Regenerate Wounds or Critical Wounds caused by Fire. Size (Large): See page 360 for implications of size Stupid: Must pass an Easy (+4 SL) Intelligence Test before acting, unless they are directed by a creature without this Trait.",
+      "Optional Traits": "Frenzy, Hungry, Infestation, Territorial"
+    },
+    "skills": [
+      {
+        "name": "Endurance",
+        "total": 65
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Fists",
+        "skill": 40,
+        "damage": 14,
+        "optional": false,
+        "text": "Magical"
+      }
+    ],
+    "text": "Attacks: Fists: (40/+14) Magical Armour: Toughness Bonus: 5 Skills: Endurance 65, Melee (Brawling) 40 Traits: Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Regeneration: Regain 1d10 Wounds at start of round. A roll of 10 heals a Critical Wound. At 0 Wounds, roll 8+ to regain one Wound. Cannot Regenerate Wounds or Critical Wounds caused by Fire. Size (Large): See page 360 for implications of size Stupid: Must pass an Easy (+4 SL) Intelligence Test before acting, unless they are directed by a creature without this Trait. Optional Traits: Frenzy, Hungry, Infestation, Territorial",
+    "notes": [
+      "The printed profile has Intelligence despite Construct declaring that Characteristic absent. The untouched printed score is retained; new Construct additions follow the full Trait rule."
+    ]
+  },
+  {
+    "id": "core:creatures:giant",
+    "name": "Giant",
+    "page": 332,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 30,
+      "BS": 30,
+      "S": 65,
+      "T": 55,
+      "I": 30,
+      "Ag": 20,
+      "Dex": 15,
+      "Int": 15,
+      "WP": 25,
+      "Fel": 15,
+      "W": 72
+    },
+    "size": "Enormous",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Hand Weapon: (35/+16)",
+      "Armour": "Toughness Bonus: 5 Scavenged Armour: +1 AP",
+      "Skills": "Consume Alcohol 60, Melee (Basic) 35",
+      "Traits": "Size (Enormous): See page 360 for implications of size",
+      "Optional Traits": "Hungry, Infected, Infestation, Night Vision, Size (Monstrous), Stupid"
+    },
+    "skills": [
+      {
+        "name": "Consume Alcohol",
+        "total": 60
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 35,
+        "damage": 16,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (35/+16) Armour: Toughness Bonus: 5 Scavenged Armour: +1 AP Skills: Consume Alcohol 60, Melee (Basic) 35 Traits: Size (Enormous): See page 360 for implications of size Optional Traits: Hungry, Infected, Infestation, Night Vision, Size (Monstrous), Stupid",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:griffon",
+    "name": "Griffon",
+    "page": 332,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 50,
+      "BS": null,
+      "S": 50,
+      "T": 50,
+      "I": 45,
+      "Ag": 60,
+      "Dex": null,
+      "Int": 20,
+      "WP": 50,
+      "Fel": 15,
+      "W": 80
+    },
+    "size": "Enormous",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Talons: (60/+14), Fast Bite: (60/+8) Lose Momentum to make this Free Attack, Penetrating",
+      "Armour": "Toughness Bonus: 5 Hide: +1 AP",
+      "Skills": "Athletics 65, Melee (Brawling) 60, Perception 60",
+      "Traits": "Fly (80): As the creature’s Move, they can fly up to 80 yards, see page 358 for details Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Enormous): See page 360 for implications of size",
+      "Optional Traits": "Bestial, Immune to Psychology, Territorial, Trained (Broken, Guard, Magic, Mount, War)"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 65
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 60
+      },
+      {
+        "name": "Perception",
+        "total": 60
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Talons",
+        "skill": 60,
+        "damage": 14,
+        "optional": false,
+        "text": ", Fast"
+      },
+      {
+        "name": "Bite",
+        "skill": 60,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack, Penetrating"
+      }
+    ],
+    "text": "Attacks: Talons: (60/+14), Fast Bite: (60/+8) Lose Momentum to make this Free Attack, Penetrating Armour: Toughness Bonus: 5 Hide: +1 AP Skills: Athletics 65, Melee (Brawling) 60, Perception 60 Traits: Fly (80): As the creature’s Move, they can fly up to 80 yards, see page 358 for details Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Enormous): See page 360 for implications of size Optional Traits: Bestial, Immune to Psychology, Territorial, Trained (Broken, Guard, Magic, Mount, War)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:manticore",
+    "name": "Manticore",
+    "page": 333,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 55,
+      "BS": null,
+      "S": 55,
+      "T": 55,
+      "I": 50,
+      "Ag": 65,
+      "Dex": null,
+      "Int": 10,
+      "WP": 35,
+      "Fel": null,
+      "W": 72
+    },
+    "size": "Enormous",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Claws: (60/+14) Bite: (60/+8) Lose Momentum to make this Free Attack Tail: (60/+7) Lose Momentum to make this Free Attack, smaller opponents take a Prone Condition if wounded",
+      "Armour": "Toughness Bonus: 5 Hide: +1 AP",
+      "Skills": "Melee (Brawling) 60, Track 55",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Fly (80): As the creature’s Move, they can fly up to 80 yards, see page 358 for details Size (Enormous): See page 360 for implications of size T erritorial: Protective of a particular area or location, will fight to the death to protect it and will not pursue enemies leaving the area Venom (Difficult): Wounded opponents must pass an Difficult (-1 SL) Endurance Test or gain a Poisoned Condition",
+      "Optional Traits": "Hatred (Predators), Mutation, Trained (Broken, Magic, Mount)"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 60
+      },
+      {
+        "name": "Track",
+        "total": 55
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 60,
+        "damage": 14,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 60,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      },
+      {
+        "name": "Tail",
+        "skill": 60,
+        "damage": 7,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack, smaller opponents take a Prone Condition if wounded"
+      }
+    ],
+    "text": "Attacks: Claws: (60/+14) Bite: (60/+8) Lose Momentum to make this Free Attack Tail: (60/+7) Lose Momentum to make this Free Attack, smaller opponents take a Prone Condition if wounded Armour: Toughness Bonus: 5 Hide: +1 AP Skills: Melee (Brawling) 60, Track 55 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Fly (80): As the creature’s Move, they can fly up to 80 yards, see page 358 for details Size (Enormous): See page 360 for implications of size T erritorial: Protective of a particular area or location, will fight to the death to protect it and will not pursue enemies leaving the area Venom (Difficult): Wounded opponents must pass an Difficult (-1 SL) Endurance Test or gain a Poisoned Condition Optional Traits: Hatred (Predators), Mutation, Trained (Broken, Magic, Mount)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:pegasus",
+    "name": "Pegasus",
+    "page": 334,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 8,
+      "WS": 35,
+      "BS": null,
+      "S": 45,
+      "T": 40,
+      "I": 30,
+      "Ag": 45,
+      "Dex": null,
+      "Int": 20,
+      "WP": 25,
+      "Fel": null,
+      "W": 28
+    },
+    "size": "Large",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hooves: (40/+12), Pummel",
+      "Armour": "Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP",
+      "Skills": "Athletics 55, Endurance 45, Melee (Brawling) 40",
+      "Traits": "Fly (100): As the creature’s Move, they can fly up to 100 yards, see page 358 for details Size (Large): See page 360 for implications of size"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 55
+      },
+      {
+        "name": "Endurance",
+        "total": 45
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hooves",
+        "skill": 40,
+        "damage": 12,
+        "optional": false,
+        "text": ", Pummel"
+      }
+    ],
+    "text": "Attacks: Hooves: (40/+12), Pummel Armour: Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Skills: Athletics 55, Endurance 45, Melee (Brawling) 40 Traits: Fly (100): As the creature’s Move, they can fly up to 100 yards, see page 358 for details Size (Large): See page 360 for implications of size",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:troll",
+    "name": "Troll",
+    "page": 335,
+    "category": "Monstrous Beasts",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 30,
+      "BS": 15,
+      "S": 55,
+      "T": 45,
+      "I": 10,
+      "Ag": 15,
+      "Dex": 15,
+      "Int": 10,
+      "WP": 20,
+      "Fel": 5,
+      "W": 30
+    },
+    "size": "Large",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (45/+14) Bite: (40/+8) Lose Momentum to make this Free Attack Vomit: (55/+8) Must start turn Engaged and give up Move and Action, affects all targets within 2 yards, who oppose using Challenging (+0 SL) Dodge. On hit, inflicts Stunned Condition and 1 Damage to victim’s weapons and armour. May only use again after 12 hours.",
+      "Armour": "Toughness Bonus: 4 Scales: +2 AP",
+      "Skills": "Melee (Brawling) 40, Melee (Basic) 45, Endurance 55",
+      "Traits": "Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Regeneration: Regain 1d10 Wounds at start of round. A roll of 10 heals a Critical Wound. At 0 Wounds, roll 8+ to regain one Wound. Cannot Regenerate Wounds or Critical Wounds caused by Fire. Size (Large): See page 360 for implications of size Stupid: Must pass an Easy (+4 SL) Intelligence Test before acting, unless they are directed by a creature without this Trait",
+      "Optional Traits": "Amphibious, Bestial, Corruption (Minor), Frenzy, Hungry, Infestation, Magic Resistance 2, Mutation, Night Vision, Painless, Stealthy, Striding Gait (Mountains, Underground, Wetlands)"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      },
+      {
+        "name": "Endurance",
+        "total": 55
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 45,
+        "damage": 14,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 40,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      },
+      {
+        "name": "Vomit",
+        "skill": 55,
+        "damage": 8,
+        "optional": false,
+        "text": "Must start turn Engaged and give up Move and Action, affects all targets within 2 yards, who oppose using Challenging (+0 SL) Dodge. On hit, inflicts Stunned Condition and 1 Damage to victim’s weapons and armour. May only use again after 12 hours."
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (45/+14) Bite: (40/+8) Lose Momentum to make this Free Attack Vomit: (55/+8) Must start turn Engaged and give up Move and Action, affects all targets within 2 yards, who oppose using Challenging (+0 SL) Dodge. On hit, inflicts Stunned Condition and 1 Damage to victim’s weapons and armour. May only use again after 12 hours. Armour: Toughness Bonus: 4 Scales: +2 AP Skills: Melee (Brawling) 40, Melee (Basic) 45, Endurance 55 Traits: Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Regeneration: Regain 1d10 Wounds at start of round. A roll of 10 heals a Critical Wound. At 0 Wounds, roll 8+ to regain one Wound. Cannot Regenerate Wounds or Critical Wounds caused by Fire. Size (Large): See page 360 for implications of size Stupid: Must pass an Easy (+4 SL) Intelligence Test before acting, unless they are directed by a creature without this Trait Optional Traits: Amphibious, Bestial, Corruption (Minor), Frenzy, Hungry, Infestation, Magic Resistance 2, Mutation, Night Vision, Painless, Stealthy, Striding Gait (Mountains, Underground, Wetlands)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:goblin",
+    "name": "Goblin",
+    "page": 336,
+    "category": "Orcs and Goblins",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 25,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 20,
+      "Ag": 30,
+      "Dex": 25,
+      "Int": 20,
+      "WP": 20,
+      "Fel": 15,
+      "W": 11
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon (30/+7) Optional Shortbow and Arrows: (35/+6) 40 yards, Impale",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Helmet: +2 AP to Head Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Dodge 35, Melee (Basic) 30, Perception 25, Ranged (Bow) 35, Stealth (Rural) 35, Stealth (Underground) 35",
+      "Traits": "Afraid (Elves): Elves cause Fear against this creature, see page 183 for details Animosity (Orcs and Goblins): The creature dislikes orcs and goblins, see page 183 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+      "Optional Traits": "Dark Vision, Hatred (Dwarfs), Ranged (Shortbow and Arrows) +7 (20) (Impale), Striding Gait (Woodland), Venom ‘Where is they? Where is they? Where is his eyes?’ — Taunting of a captive by goblins of the Cluster Eye Tribe"
+    },
+    "skills": [
+      {
+        "name": "Dodge",
+        "total": 35
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 30
+      },
+      {
+        "name": "Perception",
+        "total": 25
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 35
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 35
+      },
+      {
+        "name": "Stealth (Underground)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 30,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Shortbow and Arrows",
+        "skill": 35,
+        "damage": 6,
+        "optional": true,
+        "text": "40 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon (30/+7) Optional Shortbow and Arrows: (35/+6) 40 yards, Impale Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Helmet: +2 AP to Head Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Dodge 35, Melee (Basic) 30, Perception 25, Ranged (Bow) 35, Stealth (Rural) 35, Stealth (Underground) 35 Traits: Afraid (Elves): Elves cause Fear against this creature, see page 183 for details Animosity (Orcs and Goblins): The creature dislikes orcs and goblins, see page 183 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Optional Traits: Dark Vision, Hatred (Dwarfs), Ranged (Shortbow and Arrows) +7 (20) (Impale), Striding Gait (Woodland), Venom ‘Where is they? Where is they? Where is his eyes?’ — Taunting of a captive by goblins of the Cluster Eye Tribe",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:orc",
+    "name": "Orc",
+    "page": 337,
+    "category": "Orcs and Goblins",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 25,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 20,
+      "Ag": 30,
+      "Dex": 25,
+      "Int": 20,
+      "WP": 20,
+      "Fel": 15,
+      "W": 11
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (40/+7) Optional Bow and Arrows: (35/+7) 50 yards, Impale",
+      "Armour": "Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Helmet: +2 AP to Head Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Endurance 50, Melee (Basic) 40, Ranged (Bow) 35",
+      "Traits": "Animosity (Orcs and Goblins): The creature dislikes orcs and goblins, see page 183 Belligerent: As long as they possess Advantage and their opponent does not, they are immune to Fear Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+      "Optional Traits": "Painless"
+    },
+    "skills": [
+      {
+        "name": "Endurance",
+        "total": 50
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 40
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 40,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bow and Arrows",
+        "skill": 35,
+        "damage": 7,
+        "optional": true,
+        "text": "50 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (40/+7) Optional Bow and Arrows: (35/+7) 50 yards, Impale Armour: Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Helmet: +2 AP to Head Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Endurance 50, Melee (Basic) 40, Ranged (Bow) 35 Traits: Animosity (Orcs and Goblins): The creature dislikes orcs and goblins, see page 183 Belligerent: As long as they possess Advantage and their opponent does not, they are immune to Fear Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Optional Traits: Painless",
+    "notes": [
+      "The printed Toughness Bonus differs from Toughness / 10. Printed values are retained until the GM explicitly selects recalculation or a manual value."
+    ]
+  },
+  {
+    "id": "core:creatures:crypt-ghoul",
+    "name": "Crypt Ghoul",
+    "page": 338,
+    "category": "Orcs and Goblins",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 30,
+      "BS": null,
+      "S": 35,
+      "T": 40,
+      "I": 30,
+      "Ag": 35,
+      "Dex": 25,
+      "Int": 20,
+      "WP": 20,
+      "Fel": 5,
+      "W": 13
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Filthy Claws: (35/+6) Bite: (35/+6) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 4",
+      "Skills": "Melee (Brawling) 35, Stealth 40, Track 40",
+      "Traits": "Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards",
+      "Optional Traits": "Bestial, Venom (Challenging)"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 35
+      },
+      {
+        "name": "Stealth",
+        "total": 40
+      },
+      {
+        "name": "Track",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Filthy Claws",
+        "skill": 35,
+        "damage": 6,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 35,
+        "damage": 6,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Filthy Claws: (35/+6) Bite: (35/+6) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 4 Skills: Melee (Brawling) 35, Stealth 40, Track 40 Traits: Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Optional Traits: Bestial, Venom (Challenging)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:snotling",
+    "name": "Snotling",
+    "page": 338,
+    "category": "Orcs and Goblins",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 20,
+      "BS": 20,
+      "S": 20,
+      "T": 20,
+      "I": 20,
+      "Ag": 30,
+      "Dex": 20,
+      "Int": 10,
+      "WP": 20,
+      "Fel": 15,
+      "W": 4
+    },
+    "size": "Small",
+    "toughnessBonus": 2,
+    "sections": {
+      "Attacks": "Knife: (20/+3) Undamaging Optional Rocks: (20/+2) 6 yards, Undamaging",
+      "Armour": "Toughness Bonus: 2",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size",
+      "Optional Traits": "Swarm, Trained (Broken, Fetch, Guard), Venom (Challenging)"
+    },
+    "skills": [],
+    "attacks": [
+      {
+        "name": "Knife",
+        "skill": 20,
+        "damage": 3,
+        "optional": false,
+        "text": "Undamaging"
+      },
+      {
+        "name": "Rocks",
+        "skill": 20,
+        "damage": 2,
+        "optional": true,
+        "text": "6 yards, Undamaging"
+      }
+    ],
+    "text": "Attacks: Knife: (20/+3) Undamaging Optional Rocks: (20/+2) 6 yards, Undamaging Armour: Toughness Bonus: 2 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Small): See page 360 for implications of size Optional Traits: Swarm, Trained (Broken, Fetch, Guard), Venom (Challenging)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:skeleton",
+    "name": "Skeleton",
+    "page": 339,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 25,
+      "BS": 25,
+      "S": 30,
+      "T": 30,
+      "I": 20,
+      "Ag": 20,
+      "Dex": 25,
+      "Int": null,
+      "WP": null,
+      "Fel": null,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (30/+7) Magical",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Melee (Basic) 30",
+      "Traits": "Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+      "Optional Traits": "Corruption (Minor), Infected, Territorial"
+    },
+    "skills": [
+      {
+        "name": "Melee (Basic)",
+        "total": 30
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 30,
+        "damage": 7,
+        "optional": false,
+        "text": "Magical"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (30/+7) Magical Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Melee (Basic) 30 Traits: Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds Optional Traits: Corruption (Minor), Infected, Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:zombie",
+    "name": "Zombie",
+    "page": 340,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 15,
+      "BS": null,
+      "S": 30,
+      "T": 30,
+      "I": 5,
+      "Ag": 10,
+      "Dex": 10,
+      "Int": null,
+      "WP": null,
+      "Fel": null,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (25/+7) Magical Bite: (30/+6) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Melee (Basic) 25, Melee (Brawling) 30",
+      "Traits": "Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Painless: All non-amputation penalties suffered from Critical Wounds are ignored Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+      "Optional Traits": "Corruption (Minor), Disease (Various), Distracting, Territorial"
+    },
+    "skills": [
+      {
+        "name": "Melee (Basic)",
+        "total": 25
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 30
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 25,
+        "damage": 7,
+        "optional": false,
+        "text": "Magical"
+      },
+      {
+        "name": "Bite",
+        "skill": 30,
+        "damage": 6,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (25/+7) Magical Bite: (30/+6) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 3 Skills: Melee (Basic) 25, Melee (Brawling) 30 Traits: Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Painless: All non-amputation penalties suffered from Critical Wounds are ignored Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds Optional Traits: Corruption (Minor), Disease (Various), Distracting, Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:dire-wolf",
+    "name": "Dire Wolf",
+    "page": 341,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 9,
+      "WS": 35,
+      "BS": null,
+      "S": 35,
+      "T": 30,
+      "I": 35,
+      "Ag": 25,
+      "Dex": null,
+      "Int": null,
+      "WP": 10,
+      "Fel": null,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Claws: (40/+7) Bite: (40/+6) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 3 Hide: +1 AP",
+      "Skills": "Cool 15, Melee (Brawling) 40, Track 10",
+      "Traits": "Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+      "Optional Traits": "Corruption (Minor), Distracting, Painless, Size (Large), Territorial"
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 15
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      },
+      {
+        "name": "Track",
+        "total": 10
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 40,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 40,
+        "damage": 6,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Claws: (40/+7) Bite: (40/+6) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 3 Hide: +1 AP Skills: Cool 15, Melee (Brawling) 40, Track 10 Traits: Construct: Never Test Int, WP , or Fel; use T for WP if needed, see page 357 for details Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds Optional Traits: Corruption (Minor), Distracting, Painless, Size (Large), Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:ghost",
+    "name": "Ghost",
+    "page": 341,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 30,
+      "BS": null,
+      "S": 30,
+      "T": 30,
+      "I": 10,
+      "Ag": 30,
+      "Dex": 20,
+      "Int": 15,
+      "WP": 15,
+      "Fel": null,
+      "W": 10
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Ghostly Grasp: (40/+5) Magical",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Dodge 40, Melee (Brawling) 40",
+      "Traits": "Dark Vision: See in the dark as daylight Ethereal: Insubstantial, can only be harmed by Magical attacks Fear: The creature causes Fear, see page 183 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+      "Optional Traits": "Bestial, Fly 20, Frenzy, Hatred, Swarm, Territorial"
+    },
+    "skills": [
+      {
+        "name": "Dodge",
+        "total": 40
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Ghostly Grasp",
+        "skill": 40,
+        "damage": 5,
+        "optional": false,
+        "text": "Magical"
+      }
+    ],
+    "text": "Attacks: Ghostly Grasp: (40/+5) Magical Armour: Toughness Bonus: 3 Skills: Dodge 40, Melee (Brawling) 40 Traits: Dark Vision: See in the dark as daylight Ethereal: Insubstantial, can only be harmed by Magical attacks Fear: The creature causes Fear, see page 183 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds Optional Traits: Bestial, Fly 20, Frenzy, Hatred, Swarm, Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:cairn-wraith",
+    "name": "Cairn Wraith",
+    "page": 342,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 35,
+      "BS": null,
+      "S": 35,
+      "T": 30,
+      "I": 25,
+      "Ag": 30,
+      "Dex": 25,
+      "Int": 25,
+      "WP": 25,
+      "Fel": 15,
+      "W": 11
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Scythe: (45/+7) Defensive, Hack, Impale, Magical Chill Grasp: (40) Lose Momentum and Action, engaged target may oppose using Dodge or Melee. If the creature wins, the target loses 1d10 + SL Wounds ignoring Toughness Bonus and Armour Points. This attack is Magical.",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Melee (Brawling) 40, Melee (Two-handed) 45",
+      "Traits": "Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Dark Vision: See in the dark as daylight Ethereal: Insubstantial, can only be harmed by Magical attacks Painless: All non-amputation penalties suffered from Critical Wounds are ignored Terror 3: The creature causes Terror , see page 184 for details Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+      "Optional Traits": "Fly 20, Territorial"
+    },
+    "skills": [
+      {
+        "name": "Melee (Brawling)",
+        "total": 40
+      },
+      {
+        "name": "Melee (Two-handed)",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Scythe",
+        "skill": 45,
+        "damage": 7,
+        "optional": false,
+        "text": "Defensive, Hack, Impale, Magical"
+      },
+      {
+        "name": "Chill Grasp",
+        "skill": 40,
+        "damage": null,
+        "optional": false,
+        "text": "Lose Momentum and Action, engaged target may oppose using Dodge or Melee. If the creature wins, the target loses 1d10 + SL Wounds ignoring Toughness Bonus and Armour Points. This attack is Magical."
+      }
+    ],
+    "text": "Attacks: Scythe: (45/+7) Defensive, Hack, Impale, Magical Chill Grasp: (40) Lose Momentum and Action, engaged target may oppose using Dodge or Melee. If the creature wins, the target loses 1d10 + SL Wounds ignoring Toughness Bonus and Armour Points. This attack is Magical. Armour: Toughness Bonus: 3 Skills: Melee (Brawling) 40, Melee (Two-handed) 45 Traits: Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Dark Vision: See in the dark as daylight Ethereal: Insubstantial, can only be harmed by Magical attacks Painless: All non-amputation penalties suffered from Critical Wounds are ignored Terror 3: The creature causes Terror , see page 184 for details Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds Optional Traits: Fly 20, Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:tomb-banshee",
+    "name": "Tomb Banshee",
+    "page": 342,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 30,
+      "BS": null,
+      "S": 30,
+      "T": 30,
+      "I": 10,
+      "Ag": 30,
+      "Dex": 20,
+      "Int": 15,
+      "WP": 15,
+      "Fel": null,
+      "W": 10
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (45/+7) Magical Ghostly Howl: Lose Momentum to make Free Attack. All living targets within 30 yards gain 3 Deafened Conditions and suffer 1d10 Wounds ignoring Toughness Bonus and Armour Points. Those affected must also pass an Average (+2 SL) Cool Test or gain a Broken Condition. This attack is Magical.",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Dodge 40, Melee (Basic) 45",
+      "Traits": "Dark Vision: See in the dark as daylight Ethereal: Insubstantial, can only be harmed by Magical attacks Painless: All non-amputation penalties suffered from Critical Wounds are ignored Terror 3: The creature causes Terror , see page 184 for details Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+      "Optional Traits": "Fly 20, Frenzy, Territorial"
+    },
+    "skills": [
+      {
+        "name": "Dodge",
+        "total": 40
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 45,
+        "damage": 7,
+        "optional": false,
+        "text": "Magical"
+      },
+      {
+        "name": "Ghostly Howl",
+        "skill": null,
+        "damage": null,
+        "optional": false,
+        "text": "Lose Momentum to make Free Attack. All living targets within 30 yards gain 3 Deafened Conditions and suffer 1d10 Wounds ignoring Toughness Bonus and Armour Points. Those affected must also pass an Average (+2 SL) Cool Test or gain a Broken Condition. This attack is Magical."
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (45/+7) Magical Ghostly Howl: Lose Momentum to make Free Attack. All living targets within 30 yards gain 3 Deafened Conditions and suffer 1d10 Wounds ignoring Toughness Bonus and Armour Points. Those affected must also pass an Average (+2 SL) Cool Test or gain a Broken Condition. This attack is Magical. Armour: Toughness Bonus: 3 Skills: Dodge 40, Melee (Basic) 45 Traits: Dark Vision: See in the dark as daylight Ethereal: Insubstantial, can only be harmed by Magical attacks Painless: All non-amputation penalties suffered from Critical Wounds are ignored Terror 3: The creature causes Terror , see page 184 for details Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds Optional Traits: Fly 20, Frenzy, Territorial",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:vampire",
+    "name": "Vampire",
+    "page": 343,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 40,
+      "BS": 40,
+      "S": 50,
+      "T": 40,
+      "I": 40,
+      "Ag": 50,
+      "Dex": 40,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 25,
+      "W": 15
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (55/+9) Bite: (60/+8) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 4 Optional Medium Armour: +3 AP Optional Heavy Armour: +5 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Charm 35, Climb 60, Intuition 50, Melee (Basic) 55, Melee (Brawling) 60, Perception 50, Stealth (Rural) 60, Stealth (Urban) 60, Track 40",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Vampiric: Whenever the creature performs a successful Bite attack against an appropriate opponent, they heal as many Wounds as the opponent loses. Drinking blood in this way is the only way they can heal.",
+      "Optional Traits": "Bestial, Champion, Corruption (Minor), Dark Vision, Distracting, Fear, Fly 40, Frenzy, Hungry, Mental Corruption, Painless, Petrifying Gaze, Regeneration, Spellcaster (Death or Necromancy), Tracker, W allcrawler"
+    },
+    "skills": [
+      {
+        "name": "Charm",
+        "total": 35
+      },
+      {
+        "name": "Climb",
+        "total": 60
+      },
+      {
+        "name": "Intuition",
+        "total": 50
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 55
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 60
+      },
+      {
+        "name": "Perception",
+        "total": 50
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 60
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 60
+      },
+      {
+        "name": "Track",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 55,
+        "damage": 9,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 60,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (55/+9) Bite: (60/+8) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 4 Optional Medium Armour: +3 AP Optional Heavy Armour: +5 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Charm 35, Climb 60, Intuition 50, Melee (Basic) 55, Melee (Brawling) 60, Perception 50, Stealth (Rural) 60, Stealth (Urban) 60, Track 40 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Vampiric: Whenever the creature performs a successful Bite attack against an appropriate opponent, they heal as many Wounds as the opponent loses. Drinking blood in this way is the only way they can heal. Optional Traits: Bestial, Champion, Corruption (Minor), Dark Vision, Distracting, Fear, Fly 40, Frenzy, Hungry, Mental Corruption, Painless, Petrifying Gaze, Regeneration, Spellcaster (Death or Necromancy), Tracker, W allcrawler",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:varghulf",
+    "name": "Varghulf",
+    "page": 344,
+    "category": "Restless Dead",
+    "example": false,
+    "stats": {
+      "M": 8,
+      "WS": 55,
+      "BS": null,
+      "S": 55,
+      "T": 55,
+      "I": 20,
+      "Ag": 50,
+      "Dex": null,
+      "Int": 10,
+      "WP": 25,
+      "Fel": null,
+      "W": 32
+    },
+    "size": "Large",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Claws: (65/+14) Bite: (65/+8) Lose Momentum to make this Free Attack",
+      "Armour": "Toughness Bonus: 5 Hide: +1 AP",
+      "Skills": "Climb 65, Melee (Brawling) 65, Perception 30, Stealth (Rural) 60, Stealth (Urban) 60, Track 20",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Dark Vision: See in the dark as daylight Hatred (Living): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Regeneration: Regain 1d10 Wounds at start of round. A roll of 10 heals a Critical Wound. At 0 Wounds, roll 8+ to regain one Wound. Cannot Regenerate Wounds or Critical Wounds caused by Fire. Size (Large): See page 360 for implications of size Terror 3: The creature causes Terror, see page 184 for details Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Vampiric: Whenever the creature performs a successful Bite attack against an appropriate opponent, they heal as many Wounds as the opponent loses. Drinking blood in this way is the only way they can heal damage from fire.",
+      "Optional Traits": "Corruption (Minor), Fly 80, Frenzy, Territorial, Tracker"
+    },
+    "skills": [
+      {
+        "name": "Climb",
+        "total": 65
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 65
+      },
+      {
+        "name": "Perception",
+        "total": 30
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 60
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 60
+      },
+      {
+        "name": "Track",
+        "total": 20
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 65,
+        "damage": 14,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bite",
+        "skill": 65,
+        "damage": 8,
+        "optional": false,
+        "text": "Lose Momentum to make this Free Attack"
+      }
+    ],
+    "text": "Attacks: Claws: (65/+14) Bite: (65/+8) Lose Momentum to make this Free Attack Armour: Toughness Bonus: 5 Hide: +1 AP Skills: Climb 65, Melee (Brawling) 65, Perception 30, Stealth (Rural) 60, Stealth (Urban) 60, Track 20 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Dark Vision: See in the dark as daylight Hatred (Living): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Regeneration: Regain 1d10 Wounds at start of round. A roll of 10 heals a Critical Wound. At 0 Wounds, roll 8+ to regain one Wound. Cannot Regenerate Wounds or Critical Wounds caused by Fire. Size (Large): See page 360 for implications of size Terror 3: The creature causes Terror, see page 184 for details Undead: Not reliant on air, food, water, and other things needed to sustain life, affected by spells, miracles, or other abilities that affect Undead only Vampiric: Whenever the creature performs a successful Bite attack against an appropriate opponent, they heal as many Wounds as the opponent loses. Drinking blood in this way is the only way they can heal damage from fire. Optional Traits: Corruption (Minor), Fly 80, Frenzy, Territorial, Tracker",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:gor",
+    "name": "Gor",
+    "page": 345,
+    "category": "Beastmen",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 35,
+      "BS": 30,
+      "S": 35,
+      "T": 40,
+      "I": 30,
+      "Ag": 35,
+      "Dex": 20,
+      "Int": 20,
+      "WP": 30,
+      "Fel": 10,
+      "W": 14
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (45/+7) Horns: (35/+7) Free Attack only when Charging",
+      "Armour": "Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Melee (Basic) 45, Perception 35",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Optional Traits": "Corruption (Minor), Disease (Packer’s Pox), Infected, Infestation, Mark of Chaos, Mutation"
+    },
+    "skills": [
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      },
+      {
+        "name": "Perception",
+        "total": 35
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 45,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Horns",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": "Free Attack only when Charging"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (45/+7) Horns: (35/+7) Free Attack only when Charging Armour: Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Melee (Basic) 45, Perception 35 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Optional Traits: Corruption (Minor), Disease (Packer’s Pox), Infected, Infestation, Mark of Chaos, Mutation",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:ungor",
+    "name": "Ungor",
+    "page": 345,
+    "category": "Beastmen",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 30,
+      "BS": 30,
+      "S": 30,
+      "T": 35,
+      "I": 30,
+      "Ag": 35,
+      "Dex": 30,
+      "Int": 20,
+      "WP": 25,
+      "Fel": 10,
+      "W": 11
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (35/+7) Optional Shortbow and Arrows: (40/+6) 40 yards, Impale",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Melee (Basic) 35, Perception 35, Track 40, Ranged (Bow) 40, Stealth (Rural) 40",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Optional Traits": "Corruption (Minor), Disease (Packer’s Pox), Infected, Infestation, Mutation gor Gors, the most common of the beastmen, haunt almost every forest in the Old World. Their appearance varies widely, but most combine human and bestial features, often with the head and legs of a goat and the torso and arms of a man. All gors possess a large pair of horns, the defining mark that distinguishes them from ungors and turnskins. Among beastmen, larger horns command greater status, and the biggest gors are known as bestigors."
+    },
+    "skills": [
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      },
+      {
+        "name": "Perception",
+        "total": 35
+      },
+      {
+        "name": "Track",
+        "total": 40
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 40
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Shortbow and Arrows",
+        "skill": 40,
+        "damage": 6,
+        "optional": true,
+        "text": "40 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (35/+7) Optional Shortbow and Arrows: (40/+6) 40 yards, Impale Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Melee (Basic) 35, Perception 35, Track 40, Ranged (Bow) 40, Stealth (Rural) 40 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Optional Traits: Corruption (Minor), Disease (Packer’s Pox), Infected, Infestation, Mutation gor Gors, the most common of the beastmen, haunt almost every forest in the Old World. Their appearance varies widely, but most combine human and bestial features, often with the head and legs of a goat and the torso and arms of a man. All gors possess a large pair of horns, the defining mark that distinguishes them from ungors and turnskins. Among beastmen, larger horns command greater status, and the biggest gors are known as bestigors.",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:minotaur",
+    "name": "Minotaur",
+    "page": 346,
+    "category": "Beastmen",
+    "example": false,
+    "stats": {
+      "M": 6,
+      "WS": 45,
+      "BS": 25,
+      "S": 45,
+      "T": 45,
+      "I": 20,
+      "Ag": 35,
+      "Dex": 10,
+      "Int": 15,
+      "WP": 35,
+      "Fel": 10,
+      "W": 30
+    },
+    "size": "Large",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (55/+12) Horns: (45/+8) Free Attack only when Charging",
+      "Armour": "Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Cool 40, Endurance 50, Melee (Basic) 55",
+      "Traits": "Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Optional Traits": "Belligerent, Corruption (Minor), Disease (Packer’s Pox), Frenzy, Infected, Infestation, Mutation"
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 40
+      },
+      {
+        "name": "Endurance",
+        "total": 50
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 55
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 55,
+        "damage": 12,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Horns",
+        "skill": 45,
+        "damage": 8,
+        "optional": false,
+        "text": "Free Attack only when Charging"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (55/+12) Horns: (45/+8) Free Attack only when Charging Armour: Toughness Bonus: 4 Optional Light Armour: +1 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Cool 40, Endurance 50, Melee (Basic) 55 Traits: Hungry: If they incapacitate an opponent or encounter a fresh body, they must pass an Average (+2 SL) Cool Test or feast, losing their next Move and Action Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Optional Traits: Belligerent, Corruption (Minor), Disease (Packer’s Pox), Frenzy, Infected, Infestation, Mutation",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:cultist",
+    "name": "Cultist",
+    "page": 347,
+    "category": "Cultists and Mutants",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 30,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 30,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 30,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (35/+7) Optional Bow and Arrows: (35/+7) 50 yards, Impale",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Melee (Basic) 35, Ranged (Bow) 35, Secret Signs (Cult) 40",
+      "Optional Traits": "Corruption (Minor), Mark of Chaos, Mental Corruption, Mutation"
+    },
+    "skills": [
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 35
+      },
+      {
+        "name": "Secret Signs (Cult)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Bow and Arrows",
+        "skill": 35,
+        "damage": 7,
+        "optional": true,
+        "text": "50 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (35/+7) Optional Bow and Arrows: (35/+7) 50 yards, Impale Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Melee (Basic) 35, Ranged (Bow) 35, Secret Signs (Cult) 40 Optional Traits: Corruption (Minor), Mark of Chaos, Mental Corruption, Mutation",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:mutant",
+    "name": "Mutant",
+    "page": 347,
+    "category": "Cultists and Mutants",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 30,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 30,
+      "Ag": 30,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 30,
+      "Fel": 30,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": null,
+    "sections": {
+      "Attacks": "Hand Weapon: (35/+7)",
+      "Skills": "Melee (Basic) 35, Stealth (Rural) 40, Stealth (Urban) 40",
+      "Traits": "Corruption (Minor): Is a Corrupting Influence with a Strength of Minor Mutation: Roll on the Physical Corruption Table on page 189",
+      "Optional Traits": "Any Creature Traits the GM feels appropriate"
+    },
+    "skills": [
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 40
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (35/+7) Skills: Melee (Basic) 35, Stealth (Rural) 40, Stealth (Urban) 40 Traits: Corruption (Minor): Is a Corrupting Influence with a Strength of Minor Mutation: Roll on the Physical Corruption Table on page 189 Optional Traits: Any Creature Traits the GM feels appropriate",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:chaos-warrior",
+    "name": "Chaos Warrior",
+    "page": 348,
+    "category": "Cultists and Mutants",
+    "example": false,
+    "stats": {
+      "M": 4,
+      "WS": 50,
+      "BS": 30,
+      "S": 45,
+      "T": 45,
+      "I": 45,
+      "Ag": 40,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 55,
+      "Fel": 30,
+      "W": 17
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (60/+8)",
+      "Armour": "Toughness Bonus: 4 Heavy Armour: +5 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Cool 65, Dodge 50, Endurance 55, Melee (Basic) 60",
+      "Traits": "Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Corruption (Minor): Is a Corrupting Influence with a Strength of Minor",
+      "Optional Traits": "Belligerent, Disease (Various), Distracting, Frenzy, Mark of Chaos, Mental Corruption, Mutation"
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 65
+      },
+      {
+        "name": "Dodge",
+        "total": 50
+      },
+      {
+        "name": "Endurance",
+        "total": 55
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 60
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 60,
+        "damage": 8,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (60/+8) Armour: Toughness Bonus: 4 Heavy Armour: +5 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Cool 65, Dodge 50, Endurance 55, Melee (Basic) 60 Traits: Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Corruption (Minor): Is a Corrupting Influence with a Strength of Minor Optional Traits: Belligerent, Disease (Various), Distracting, Frenzy, Mark of Chaos, Mental Corruption, Mutation",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:bloodletter-of-khorne",
+    "name": "Bloodletter of Khorne",
+    "page": 349,
+    "category": "Daemons",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 55,
+      "BS": 55,
+      "S": 45,
+      "T": 35,
+      "I": 45,
+      "Ag": 45,
+      "Dex": 30,
+      "Int": 25,
+      "WP": 70,
+      "Fel": 15,
+      "W": 17
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hellblade: (65/+9) Damaging, Impact, Magical Horns: (55/+8) Free Attack only when Charging, Magical",
+      "Armour": "Toughness Bonus: 3 Scales: +2 AP",
+      "Skills": "Cool 80, Melee (Two-handed) 60, Perception 50",
+      "Traits": "Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Corruption (Moderate): Is a Corrupting Influence with a Strength of Moderate Daemonic 8+: Not reliant on air, food, water, and other things needed to sustain life. Roll 1d10 after any blow is received: if the creature rolls 8 or higher, the blow is ignored, even if it is a Critical. They may not use this ability to ignore Magical blows. If reduced to 0 Wounds, the creature is removed from play. Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Frenzy: Test WP to enter Frenzy: Free Attack each Round, +1 Damage, may only attack or move to attack Hatred (Daemons of Slaanesh): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Mark of Chaos (Khorne): See page 359 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds BloodleTTer of khorne Khorne’s chosen, bloodletters stalk the battlefields of the Old World, harvesting skulls in honour of the Blood God. Needle- like teeth jut from their monstrous, horned visages, and their blood-red skin is covered in scales as hard as brass. Each bears a Hellblade, a wickedly sharp weapon steeped in gore, wielded with the savage fury for which Khorne’s daemons are feared. Daemons cannot manifest for long, because the material world itself rejects them. The havoc they wreak before being banished is so profound, however, that none who encounter a daemon ever forget the mind-fracturing experience."
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 80
+      },
+      {
+        "name": "Melee (Two-handed)",
+        "total": 60
+      },
+      {
+        "name": "Perception",
+        "total": 50
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hellblade",
+        "skill": 65,
+        "damage": 9,
+        "optional": false,
+        "text": "Damaging, Impact, Magical"
+      },
+      {
+        "name": "Horns",
+        "skill": 55,
+        "damage": 8,
+        "optional": false,
+        "text": "Free Attack only when Charging, Magical"
+      }
+    ],
+    "text": "Attacks: Hellblade: (65/+9) Damaging, Impact, Magical Horns: (55/+8) Free Attack only when Charging, Magical Armour: Toughness Bonus: 3 Scales: +2 AP Skills: Cool 80, Melee (Two-handed) 60, Perception 50 Traits: Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Corruption (Moderate): Is a Corrupting Influence with a Strength of Moderate Daemonic 8+: Not reliant on air, food, water, and other things needed to sustain life. Roll 1d10 after any blow is received: if the creature rolls 8 or higher, the blow is ignored, even if it is a Critical. They may not use this ability to ignore Magical blows. If reduced to 0 Wounds, the creature is removed from play. Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Frenzy: Test WP to enter Frenzy: Free Attack each Round, +1 Damage, may only attack or move to attack Hatred (Daemons of Slaanesh): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Mark of Chaos (Khorne): See page 359 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds BloodleTTer of khorne Khorne’s chosen, bloodletters stalk the battlefields of the Old World, harvesting skulls in honour of the Blood God. Needle- like teeth jut from their monstrous, horned visages, and their blood-red skin is covered in scales as hard as brass. Each bears a Hellblade, a wickedly sharp weapon steeped in gore, wielded with the savage fury for which Khorne’s daemons are feared. Daemons cannot manifest for long, because the material world itself rejects them. The havoc they wreak before being banished is so profound, however, that none who encounter a daemon ever forget the mind-fracturing experience.",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:daemonette-of-slaanesh",
+    "name": "Daemonette of Slaanesh",
+    "page": 350,
+    "category": "Daemons",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 50,
+      "BS": 45,
+      "S": 35,
+      "T": 35,
+      "I": 55,
+      "Ag": 60,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 70,
+      "Fel": 45,
+      "W": 16
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Claws: (55/+9) Fast, Penetrating, Magical",
+      "Armour": "Toughness Bonus: 3",
+      "Skills": "Charm 55, Cool 80, Dodge 70, Melee (Brawling) 55, Perception 60",
+      "Traits": "Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Corruption (Moderate): Is a Corrupting Influence with a Strength of Moderate Daemonic 8+: Not reliant on air, food, water, and other things needed to sustain life. Roll 1d10 after any blow is received: if the creature rolls 8 or higher, the blow is ignored, even if it is a Critical. They may not use this ability to ignore Magical blows. If reduced to 0 Wounds, the creature is removed from play. Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Frenzy: Test WP to enter Frenzy: Free Attack each Round, +1 Damage, may only attack or move to attack Hatred (Daemons of Khorne): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Mark of Chaos (Slaanesh): See page 359 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds"
+    },
+    "skills": [
+      {
+        "name": "Charm",
+        "total": 55
+      },
+      {
+        "name": "Cool",
+        "total": 80
+      },
+      {
+        "name": "Dodge",
+        "total": 70
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 55
+      },
+      {
+        "name": "Perception",
+        "total": 60
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 55,
+        "damage": 9,
+        "optional": false,
+        "text": "Fast, Penetrating, Magical"
+      }
+    ],
+    "text": "Attacks: Claws: (55/+9) Fast, Penetrating, Magical Armour: Toughness Bonus: 3 Skills: Charm 55, Cool 80, Dodge 70, Melee (Brawling) 55, Perception 60 Traits: Champion: If the creature wins an Opposed Test when defending in melee combat, they can cause Damage as if they were the attacker Corruption (Moderate): Is a Corrupting Influence with a Strength of Moderate Daemonic 8+: Not reliant on air, food, water, and other things needed to sustain life. Roll 1d10 after any blow is received: if the creature rolls 8 or higher, the blow is ignored, even if it is a Critical. They may not use this ability to ignore Magical blows. If reduced to 0 Wounds, the creature is removed from play. Dark Vision: See in the dark as daylight Fear: The creature causes Fear, see page 183 for details Frenzy: Test WP to enter Frenzy: Free Attack each Round, +1 Damage, may only attack or move to attack Hatred (Daemons of Khorne): Must attack by fastest and most deadly means possible, +1 SL on Melee and Ranged Tests, immune to Intimidate and Fear caused by them Mark of Chaos (Slaanesh): See page 359 for details Painless: All non-amputation penalties suffered from Critical Wounds are ignored Unstable: If the creature ends a Round Engaged with opponents who possess Advantage when they do not, they are driven back, and they lose 2 Wounds",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:clanrat",
+    "name": "Clanrat",
+    "page": 351,
+    "category": "Skaven",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 30,
+      "BS": 30,
+      "S": 30,
+      "T": 30,
+      "I": 40,
+      "Ag": 35,
+      "Dex": 30,
+      "Int": 20,
+      "WP": 20,
+      "Fel": 15,
+      "W": 11
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (35/+7)",
+      "Armour": "Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee",
+      "Skills": "Athletics 40, Climb 40, Dodge 40, Melee (Basic) 35, Perception 45, Track 50, Stealth (Underground) 40, Stealth (Urban) 40",
+      "Traits": "Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Underground): Suffer no penalties for moving underground and +1 SL to all Athletics and Stealth Tests when underground",
+      "Optional Traits": "Disease (Ratte Fever), Mutation, Skittish, Tracker"
+    },
+    "skills": [
+      {
+        "name": "Athletics",
+        "total": 40
+      },
+      {
+        "name": "Climb",
+        "total": 40
+      },
+      {
+        "name": "Dodge",
+        "total": 40
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 35
+      },
+      {
+        "name": "Perception",
+        "total": 45
+      },
+      {
+        "name": "Track",
+        "total": 50
+      },
+      {
+        "name": "Stealth (Underground)",
+        "total": 40
+      },
+      {
+        "name": "Stealth (Urban)",
+        "total": 40
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (35/+7) Armour: Toughness Bonus: 3 Optional Light Armour: +1 AP Optional Medium Armour: +3 AP Optional Shield: +2 AP when Opposing an attack with Dodge or Melee Skills: Athletics 40, Climb 40, Dodge 40, Melee (Basic) 35, Perception 45, Track 50, Stealth (Underground) 40, Stealth (Urban) 40 Traits: Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Underground): Suffer no penalties for moving underground and +1 SL to all Athletics and Stealth Tests when underground Optional Traits: Disease (Ratte Fever), Mutation, Skittish, Tracker",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:stormvermin",
+    "name": "Stormvermin",
+    "page": 352,
+    "category": "Skaven",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 45,
+      "BS": 30,
+      "S": 45,
+      "T": 45,
+      "I": 55,
+      "Ag": 45,
+      "Dex": 30,
+      "Int": 20,
+      "WP": 35,
+      "Fel": 15,
+      "W": 15
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Halberd: (60/+8) Defensive, Hack, Impale",
+      "Armour": "Toughness Bonus: 4 Heavy Armour: +5 AP",
+      "Skills": "Climb 50, Cool 50, Dodge 60, Intimidate 50, Leadership 25, Melee (Basic 60, Polearm 60), Perception 65, Track 60",
+      "Talents": "Combat Aware: ignore Surprised Condition from ambush with Challenging (+0 SL) Perception Test Combat Reflexes: Combat Initiative counts as 75 Resolute: On gaining a Condition, retain Advantage on a Challenging (+0 SL) Cool Test",
+      "Traits": "Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Underground): Suffer no penalties for moving underground and +1 SL to all Athletics and Stealth Tests when underground",
+      "Optional Traits": "Disease (Ratte Fever), Mutation, Skittish, Tracker"
+    },
+    "skills": [
+      {
+        "name": "Climb",
+        "total": 50
+      },
+      {
+        "name": "Cool",
+        "total": 50
+      },
+      {
+        "name": "Dodge",
+        "total": 60
+      },
+      {
+        "name": "Intimidate",
+        "total": 50
+      },
+      {
+        "name": "Leadership",
+        "total": 25
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 60
+      },
+      {
+        "name": "Melee (Polearm)",
+        "total": 60
+      },
+      {
+        "name": "Perception",
+        "total": 65
+      },
+      {
+        "name": "Track",
+        "total": 60
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Halberd",
+        "skill": 60,
+        "damage": 8,
+        "optional": false,
+        "text": "Defensive, Hack, Impale"
+      }
+    ],
+    "text": "Attacks: Halberd: (60/+8) Defensive, Hack, Impale Armour: Toughness Bonus: 4 Heavy Armour: +5 AP Skills: Climb 50, Cool 50, Dodge 60, Intimidate 50, Leadership 25, Melee (Basic 60, Polearm 60), Perception 65, Track 60 Talents: Combat Aware: ignore Surprised Condition from ambush with Challenging (+0 SL) Perception Test Combat Reflexes: Combat Initiative counts as 75 Resolute: On gaining a Condition, retain Advantage on a Challenging (+0 SL) Cool Test Traits: Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Underground): Suffer no penalties for moving underground and +1 SL to all Athletics and Stealth Tests when underground Optional Traits: Disease (Ratte Fever), Mutation, Skittish, Tracker",
+    "notes": [
+      "This is a complete printed worked profile. Its template contributions are already included; applying another template is a further GM customisation."
+    ]
+  },
+  {
+    "id": "core:creatures:rat-ogre",
+    "name": "Rat Ogre",
+    "page": 352,
+    "category": "Skaven",
+    "example": false,
+    "stats": {
+      "M": 5,
+      "WS": 35,
+      "BS": 10,
+      "S": 55,
+      "T": 45,
+      "I": 35,
+      "Ag": 45,
+      "Dex": 25,
+      "Int": 10,
+      "WP": 25,
+      "Fel": 10,
+      "W": 30
+    },
+    "size": "Large",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Claws: (50/+14)",
+      "Armour": "Toughness Bonus: 4 Hide: +1 AP",
+      "Skills": "Climb 60, Endurance 60, Melee (Brawling) 50",
+      "Traits": "Bestial: Animal behaviour is simple and predictable, see page 356 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Stupid: Must pass an Easy (+4 SL) Intelligence Test before acting, unless they are directed by a creature without this Trait",
+      "Optional Traits": "Corruption (Minor), Dark Vision, Disease (Ratte Fever), Mutation, Tail, Tracker, Trained (Broken, Guard, Mount, War)"
+    },
+    "skills": [
+      {
+        "name": "Climb",
+        "total": 60
+      },
+      {
+        "name": "Endurance",
+        "total": 60
+      },
+      {
+        "name": "Melee (Brawling)",
+        "total": 50
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Claws",
+        "skill": 50,
+        "damage": 14,
+        "optional": false,
+        "text": ""
+      }
+    ],
+    "text": "Attacks: Claws: (50/+14) Armour: Toughness Bonus: 4 Hide: +1 AP Skills: Climb 60, Endurance 60, Melee (Brawling) 50 Traits: Bestial: Animal behaviour is simple and predictable, see page 356 Infected: Wounded opponents must take an Easy (+4 SL) Endurance Test to avoid a Festering Wound Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Size (Large): See page 360 for implications of size Stupid: Must pass an Easy (+4 SL) Intelligence Test before acting, unless they are directed by a creature without this Trait Optional Traits: Corruption (Minor), Dark Vision, Disease (Ratte Fever), Mutation, Tail, Tracker, Trained (Broken, Guard, Mount, War)",
+    "notes": []
+  },
+  {
+    "id": "core:creatures:skrakk-bestigor-elite",
+    "name": "Skrakk - Bestigor (Elite)",
+    "page": 354,
+    "category": "Worked Examples",
+    "example": true,
+    "stats": {
+      "M": 5,
+      "WS": 50,
+      "BS": 30,
+      "S": 50,
+      "T": 55,
+      "I": 45,
+      "Ag": 35,
+      "Dex": 20,
+      "Int": 20,
+      "WP": 45,
+      "Fel": 10,
+      "W": 19
+    },
+    "size": "Average",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Greataxe: (65/+11) Damaging, Hack, Unbalanced Horns: (35/+9) Free Attack only when Charging",
+      "Armour": "Toughness Bonus: 5 Light Armour: +1 AP",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Skills": "Cool 60, Dodge 50, Intimidate 60, Leadership 15, Melee (Basic 65, Two-Handed 65), Perception 60",
+      "Talents": "Combat Aware: Take a Challenging (+0 SL) Perception Test to ignore the Surprised Condition from an ambush Combat Reflexes: Combat Initiative counts as 65 Resolute: On gaining a Condition, retain Advantage on a Challenging (+0 SL) Cool Test",
+      "Trappings": "Greataxe, Light Armour"
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 60
+      },
+      {
+        "name": "Dodge",
+        "total": 50
+      },
+      {
+        "name": "Intimidate",
+        "total": 60
+      },
+      {
+        "name": "Leadership",
+        "total": 15
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 65
+      },
+      {
+        "name": "Melee (Two-Handed)",
+        "total": 65
+      },
+      {
+        "name": "Perception",
+        "total": 60
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Greataxe",
+        "skill": 65,
+        "damage": 11,
+        "optional": false,
+        "text": "Damaging, Hack, Unbalanced"
+      },
+      {
+        "name": "Horns",
+        "skill": 35,
+        "damage": 9,
+        "optional": false,
+        "text": "Free Attack only when Charging"
+      }
+    ],
+    "text": "Attacks: Greataxe: (65/+11) Damaging, Hack, Unbalanced Horns: (35/+9) Free Attack only when Charging Armour: Toughness Bonus: 5 Light Armour: +1 AP Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Skills: Cool 60, Dodge 50, Intimidate 60, Leadership 15, Melee (Basic 65, Two-Handed 65), Perception 60 Talents: Combat Aware: Take a Challenging (+0 SL) Perception Test to ignore the Surprised Condition from an ambush Combat Reflexes: Combat Initiative counts as 65 Resolute: On gaining a Condition, retain Advantage on a Challenging (+0 SL) Cool Test Trappings: Greataxe, Light Armour",
+    "notes": [
+      "This is a complete printed worked profile. Its template contributions are already included; applying another template is a further GM customisation."
+    ]
+  },
+  {
+    "id": "core:creatures:ungrakk-gor-beastlord-commander",
+    "name": "Ungrakk - Gor Beastlord (Commander)",
+    "page": 355,
+    "category": "Worked Examples",
+    "example": true,
+    "stats": {
+      "M": 5,
+      "WS": 55,
+      "BS": 50,
+      "S": 55,
+      "T": 50,
+      "I": 50,
+      "Ag": 45,
+      "Dex": 20,
+      "Int": 20,
+      "WP": 50,
+      "Fel": 25,
+      "W": 20
+    },
+    "size": "Average",
+    "toughnessBonus": 5,
+    "sections": {
+      "Attacks": "Hand Weapon: (75/+9) Horns: (55/+9) Free Attack only when Charging",
+      "Armour": "Toughness Bonus: 5 Medium Armour: +3 AP",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Skills": "Cool 70, Dodge 65, Intimidate 75, Leadership 50, Lore (Warfare) 40, Melee (Basic 75, Two-Handed 75), Perception 70",
+      "Talents": "Combat Aware: Take a Challenging (+0 SL) Perception Test to ignore the Surprised Condition from an ambush Combat Reflexes: Combat Initiative counts as 70 Furious Assault: Once per Round, if creature hits opponent in melee, they may lose Advantage to make an extra attack Inspiring: Advantage on Leadership Tests in Combat Luck: May make 1 reroll per session Resolute: On gaining a Condition, retain Advantage on a Challenging (+0 SL) Cool Test Unshakeable: No need to test to avoid Broken Conditions when shot at by Blackpowder weapons War Leader: Allies influenced with Leadership during battle may use the creature’s Leadership rather than their Cool to resist Fear until the end of the battle",
+      "Trappings": "Axe, Medium Armour"
+    },
+    "skills": [
+      {
+        "name": "Cool",
+        "total": 70
+      },
+      {
+        "name": "Dodge",
+        "total": 65
+      },
+      {
+        "name": "Intimidate",
+        "total": 75
+      },
+      {
+        "name": "Leadership",
+        "total": 50
+      },
+      {
+        "name": "Lore (Warfare)",
+        "total": 40
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 75
+      },
+      {
+        "name": "Melee (Two-Handed)",
+        "total": 75
+      },
+      {
+        "name": "Perception",
+        "total": 70
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 75,
+        "damage": 9,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Horns",
+        "skill": 55,
+        "damage": 9,
+        "optional": false,
+        "text": "Free Attack only when Charging"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (75/+9) Horns: (55/+9) Free Attack only when Charging Armour: Toughness Bonus: 5 Medium Armour: +3 AP Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Skills: Cool 70, Dodge 65, Intimidate 75, Leadership 50, Lore (Warfare) 40, Melee (Basic 75, Two-Handed 75), Perception 70 Talents: Combat Aware: Take a Challenging (+0 SL) Perception Test to ignore the Surprised Condition from an ambush Combat Reflexes: Combat Initiative counts as 70 Furious Assault: Once per Round, if creature hits opponent in melee, they may lose Advantage to make an extra attack Inspiring: Advantage on Leadership Tests in Combat Luck: May make 1 reroll per session Resolute: On gaining a Condition, retain Advantage on a Challenging (+0 SL) Cool Test Unshakeable: No need to test to avoid Broken Conditions when shot at by Blackpowder weapons War Leader: Allies influenced with Leadership during battle may use the creature’s Leadership rather than their Cool to resist Fear until the end of the battle Trappings: Axe, Medium Armour",
+    "notes": [
+      "This is a complete printed worked profile. Its template contributions are already included; applying another template is a further GM customisation."
+    ]
+  },
+  {
+    "id": "core:creatures:swilegrakk-bray-shaman-spellcaster",
+    "name": "Swilegrakk - Bray Shaman (Spellcaster)",
+    "page": 355,
+    "category": "Worked Examples",
+    "example": true,
+    "stats": {
+      "M": 5,
+      "WS": 35,
+      "BS": 30,
+      "S": 35,
+      "T": 40,
+      "I": 40,
+      "Ag": 35,
+      "Dex": 20,
+      "Int": 30,
+      "WP": 40,
+      "Fel": 10,
+      "W": 15
+    },
+    "size": "Average",
+    "toughnessBonus": 4,
+    "sections": {
+      "Attacks": "Hand Weapon: (45/+7) Horns: (35/+7) Free Attack only when Charging",
+      "Armour": "Toughness Bonus: 4",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Skills": "Channelling (Ghur) 50, Cool 50, Dodge 45, Intuition 50, Language (Magick) 45, Melee (Basic) 45, Perception 50",
+      "Talents": "Arcane Magic (Beasts): May cast spells from the Lore of Beasts Instinctive Diction: If a Critical Casting Test requires a roll on the Minor Miscast Table, the creature may reduce the result by 20, and if the final result is less than 01, no Miscast occurs Petty Magic: May cast Petty Magic spells Second Sight: Can perceive the Winds of Magic",
+      "Spells": "Petty Magic: Animal Friend, Dart, Sounds Lore of Beasts: Arrow Shield, Beast Form, Blast",
+      "Trappings": "Axe, Light Armour, Staff"
+    },
+    "skills": [
+      {
+        "name": "Channelling (Ghur)",
+        "total": 50
+      },
+      {
+        "name": "Cool",
+        "total": 50
+      },
+      {
+        "name": "Dodge",
+        "total": 45
+      },
+      {
+        "name": "Intuition",
+        "total": 50
+      },
+      {
+        "name": "Language (Magick)",
+        "total": 45
+      },
+      {
+        "name": "Melee (Basic)",
+        "total": 45
+      },
+      {
+        "name": "Perception",
+        "total": 50
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 45,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Horns",
+        "skill": 35,
+        "damage": 7,
+        "optional": false,
+        "text": "Free Attack only when Charging"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (45/+7) Horns: (35/+7) Free Attack only when Charging Armour: Toughness Bonus: 4 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Skills: Channelling (Ghur) 50, Cool 50, Dodge 45, Intuition 50, Language (Magick) 45, Melee (Basic) 45, Perception 50 Talents: Arcane Magic (Beasts): May cast spells from the Lore of Beasts Instinctive Diction: If a Critical Casting Test requires a roll on the Minor Miscast Table, the creature may reduce the result by 20, and if the final result is less than 01, no Miscast occurs Petty Magic: May cast Petty Magic spells Second Sight: Can perceive the Winds of Magic Spells: Petty Magic: Animal Friend, Dart, Sounds Lore of Beasts: Arrow Shield, Beast Form, Blast Trappings: Axe, Light Armour, Staff",
+    "notes": [
+      "This is a complete printed worked profile. Its template contributions are already included; applying another template is a further GM customisation."
+    ]
+  },
+  {
+    "id": "core:creatures:guzgog-ungor-skirmisher",
+    "name": "Guzgog - Ungor Skirmisher",
+    "page": 356,
+    "category": "Worked Examples",
+    "example": true,
+    "stats": {
+      "M": 5,
+      "WS": 30,
+      "BS": 40,
+      "S": 30,
+      "T": 35,
+      "I": 40,
+      "Ag": 45,
+      "Dex": 30,
+      "Int": 20,
+      "WP": 35,
+      "Fel": 10,
+      "W": 12
+    },
+    "size": "Average",
+    "toughnessBonus": 3,
+    "sections": {
+      "Attacks": "Hand Weapon: (30/+7) Shortbow and Arrows: (50/+6) 40 yards, Impale",
+      "Armour": "Toughness Bonus: 3",
+      "Traits": "Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland",
+      "Skills": "Dodge 55, Ranged (Bow) 50, Stealth (Rural) 55",
+      "Trappings": "Axe, Shortbow and 10 Arrows"
+    },
+    "skills": [
+      {
+        "name": "Dodge",
+        "total": 55
+      },
+      {
+        "name": "Ranged (Bow)",
+        "total": 50
+      },
+      {
+        "name": "Stealth (Rural)",
+        "total": 55
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Hand Weapon",
+        "skill": 30,
+        "damage": 7,
+        "optional": false,
+        "text": ""
+      },
+      {
+        "name": "Shortbow and Arrows",
+        "skill": 50,
+        "damage": 6,
+        "optional": false,
+        "text": "40 yards, Impale"
+      }
+    ],
+    "text": "Attacks: Hand Weapon: (30/+7) Shortbow and Arrows: (50/+6) 40 yards, Impale Armour: Toughness Bonus: 3 Traits: Night Vision: See clearly for 20 yards and extend the illumination distance of light sources by 20 yards Striding Gait (Woodland): Suffer no penalties for moving through woodland and +1 SL to all Athletics and Stealth Tests in woodland Skills: Dodge 55, Ranged (Bow) 50, Stealth (Rural) 55 Trappings: Axe, Shortbow and 10 Arrows",
+    "notes": [
+      "This is a complete printed worked profile. Its template contributions are already included; applying another template is a further GM customisation."
+    ]
+  }
+]

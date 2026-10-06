@@ -9,6 +9,10 @@ Each source inventory remains visible even when another selected book supersedes
 | Active catalogue | Count |
 |---|---:|
 | books | 10 |
+| creatureProfiles | 53 |
+| npcTemplates | 7 |
+| creatureTraits | 67 |
+| mutations | 40 |
 | careers | 117 |
 | magicProfiles | 504 |
 | rituals | 17 |
@@ -19,7 +23,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 1 | 0 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1007 | 0 | 1 | 0 | 0 |
 | Up in Arms | 135 | 12 | 0 | 1 | 0 |
 | Archives of the Empire: Volume I | 31 | 22 | 0 | 0 | 0 |
 | Archives of the Empire: Volume II | 50 | 7 | 0 | 0 | 0 |
@@ -35,26 +39,33 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.0.0
+Pack `core` · version 1.1.0
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | armour | 19 | 0 | 0 | 0 | 0 |
 | background | 5 | 0 | 0 | 0 | 0 |
 | careers | 64 | 0 | 0 | 0 | 0 |
+| creatures | 53 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
+| mutations | 40 | 0 | 0 | 0 | 0 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
 | spells | 225 | 0 | 0 | 0 | 0 |
 | tables | 7 | 0 | 0 | 0 | 0 |
 | talents | 167 | 0 | 0 | 0 | 0 |
+| templates | 7 | 0 | 0 | 0 | 0 |
+| traits | 67 | 0 | 0 | 0 | 0 |
 | weapons | 50 | 0 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
 | Campaign character management | deferred | Book-wide scope decision | Conditions, combat, spent resources, XP awards and ongoing Career changes remain future manager systems. |
 | Guided creation, XP, equipment and editable exports | implemented | p. 27 | Core creation is implemented; live play remains outside the creator. |
+| Separate core NPC and monster creator | implemented | p. 318 | Printed profiles, optional templates, explicit GM adjustments, source checks, recorded dice, independent drafts and dedicated stat block exports. |
+| Live Creature Trait effects and combat | reference-only | p. 356 | Creature Trait text is readable/exported; live combat, Conditions, regeneration and casting remain deferred. |
+| Seven NPC development templates and magic selections | implemented | p. 353 | Higher Skill bonus interpretation is explicitly approved; printed template choices and free spell caps are enforced. |
 | Optional individual Advances and tracker grouping | adapted | p. 364 | The user-approved grouping awards a box after five eligible points in the same Skill/Characteristic; Appendix II does not specify tracker interaction. |
 
 <details>

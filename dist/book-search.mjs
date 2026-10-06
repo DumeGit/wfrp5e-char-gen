@@ -75,6 +75,13 @@ export function buildSearchIndex(R) {
     });
   };
   R.careers.forEach((x) => add("career", x));
+  for (const [collection, kind, label] of [
+    ["creatures", "creature", "Creature / NPC"],
+    ["templates", "template", "NPC template"],
+    ["traits", "trait", "Creature Trait"],
+    ["mutations", "mutation", "Mutation"],
+  ])
+    for (const x of R[collection] || []) add(kind, x, x.name, { label });
   for (const kind of ["skill", "talent"]) {
     const entries = R[kind + "s"];
     const names = new Set(

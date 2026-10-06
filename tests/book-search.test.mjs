@@ -145,7 +145,7 @@ test("Unified search respects selected books, withdrawals and stable profile ide
   assert.equal(new Set(all.map((x) => x.key)).size, all.length);
   assert.deepEqual(
     new Set(all.map((x) => x.kind)),
-    new Set(["career", "skill", "talent", "magic", "equipment"]),
+    new Set(["career", "skill", "talent", "magic", "equipment", "creature", "template", "trait", "mutation"]),
   );
   const dagger = all.filter(
     (x) =>

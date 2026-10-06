@@ -1,0 +1,606 @@
+[
+  {
+    "id": "core:templates:soldier",
+    "name": "Soldier",
+    "page": 353,
+    "adjustments": {
+      "WS": 10,
+      "S": 10,
+      "T": 10,
+      "WP": 10
+    },
+    "skills": [
+      {
+        "options": [
+          "Cool"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Melee (Basic)",
+          "Melee (Polearm)"
+        ],
+        "bonus": 10,
+        "count": 1
+      }
+    ],
+    "talents": [],
+    "text": "Characteristic adjustments: WS +10, S +10, T +10, WP +10. Skills: Cool +10, Dodge +10, Melee (Basic) or Melee (Polearm) +10. Talents: . Recalculate Wounds."
+  },
+  {
+    "id": "core:templates:skirmisher",
+    "name": "Skirmisher",
+    "page": 353,
+    "adjustments": {
+      "BS": 10,
+      "I": 10,
+      "Ag": 10,
+      "WP": 10
+    },
+    "skills": [
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Ranged (Bow)",
+          "Ranged (Sling)",
+          "Ranged (Throwing)"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Stealth (Rural)",
+          "Stealth (Underground)"
+        ],
+        "bonus": 10,
+        "count": 1
+      }
+    ],
+    "talents": [],
+    "text": "Characteristic adjustments: BS +10, I +10, Ag +10, WP +10. Skills: Dodge +10, Ranged (Bow) or Ranged (Sling) or Ranged (Throwing) +10, Stealth (Rural) or Stealth (Underground) +10. Talents: . Recalculate Wounds."
+  },
+  {
+    "id": "core:templates:elite",
+    "name": "Elite",
+    "page": 353,
+    "adjustments": {
+      "WS": 15,
+      "S": 15,
+      "T": 15,
+      "I": 15,
+      "WP": 15
+    },
+    "skills": [
+      {
+        "options": [
+          "Cool"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Intimidate"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Leadership"
+        ],
+        "bonus": 5,
+        "count": 1
+      },
+      {
+        "options": [
+          "Melee (Any)"
+        ],
+        "bonus": 15,
+        "count": 2
+      },
+      {
+        "options": [
+          "Perception"
+        ],
+        "bonus": 15,
+        "count": 1
+      }
+    ],
+    "talents": [
+      {
+        "options": [
+          "Combat Aware"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Combat Reflexes"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Resolute"
+        ],
+        "ranks": 1
+      }
+    ],
+    "text": "Characteristic adjustments: WS +15, S +15, T +15, I +15, WP +15. Skills: Cool +15, Dodge +15, Intimidate +10, Leadership +5, Melee (Any) +15 (choose 2), Perception +15. Talents: Combat Aware, Combat Reflexes, Resolute. Recalculate Wounds."
+  },
+  {
+    "id": "core:templates:leader",
+    "name": "Leader",
+    "page": 353,
+    "adjustments": {
+      "WS": 15,
+      "BS": 15,
+      "S": 15,
+      "T": 15,
+      "I": 15,
+      "Ag": 15,
+      "WP": 15,
+      "Fel": 5
+    },
+    "skills": [
+      {
+        "options": [
+          "Cool"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Intimidate"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Leadership"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Lore (Warfare)"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Melee (Any)"
+        ],
+        "bonus": 15,
+        "count": 2
+      },
+      {
+        "options": [
+          "Perception"
+        ],
+        "bonus": 15,
+        "count": 1
+      }
+    ],
+    "talents": [
+      {
+        "options": [
+          "Combat Aware"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Combat Reflexes"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Furious Assault"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Inspiring"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Resolute"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "War Leader"
+        ],
+        "ranks": 1
+      }
+    ],
+    "text": "Characteristic adjustments: WS +15, BS +15, S +15, T +15, I +15, Ag +15, WP +15, Fel +5. Skills: Cool +15, Dodge +15, Intimidate +15, Leadership +15, Lore (Warfare) +10, Melee (Any) +15 (choose 2), Perception +15. Talents: Combat Aware, Combat Reflexes, Furious Assault, Inspiring, Resolute, War Leader. Recalculate Wounds."
+  },
+  {
+    "id": "core:templates:commander",
+    "name": "Commander",
+    "page": 353,
+    "adjustments": {
+      "WS": 20,
+      "BS": 20,
+      "S": 20,
+      "T": 10,
+      "I": 20,
+      "Ag": 10,
+      "WP": 20,
+      "Fel": 15
+    },
+    "skills": [
+      {
+        "options": [
+          "Cool"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Intimidate"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Leadership"
+        ],
+        "bonus": 30,
+        "count": 1
+      },
+      {
+        "options": [
+          "Lore (Warfare)"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Melee (Any)"
+        ],
+        "bonus": 20,
+        "count": 2
+      },
+      {
+        "options": [
+          "Perception"
+        ],
+        "bonus": 20,
+        "count": 1
+      }
+    ],
+    "talents": [
+      {
+        "options": [
+          "Combat Aware"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Combat Reflexes"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Furious Assault"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Inspiring"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Luck"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Resolute"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Unshakeable"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "War Leader"
+        ],
+        "ranks": 1
+      }
+    ],
+    "text": "Characteristic adjustments: WS +20, BS +20, S +20, T +10, I +20, Ag +10, WP +20, Fel +15. Skills: Cool +20, Dodge +20, Intimidate +20, Leadership +30, Lore (Warfare) +20, Melee (Any) +20 (choose 2), Perception +20. Talents: Combat Aware, Combat Reflexes, Furious Assault, Inspiring, Luck, Resolute, Unshakeable, War Leader. Recalculate Wounds."
+  },
+  {
+    "id": "core:templates:spellcaster",
+    "name": "Spellcaster",
+    "page": 354,
+    "adjustments": {
+      "I": 10,
+      "Int": 10,
+      "WP": 10
+    },
+    "skills": [
+      {
+        "options": [
+          "Channelling (Any)"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Cool"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Intuition"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Language (Magick)"
+        ],
+        "bonus": 15,
+        "count": 1
+      },
+      {
+        "options": [
+          "Melee (Basic)",
+          "Melee (Polearm)"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Perception"
+        ],
+        "bonus": 10,
+        "count": 1
+      }
+    ],
+    "talents": [
+      {
+        "options": [
+          "Aethyric Attunement",
+          "Instinctive Diction"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Arcane Magic (Any)",
+          "Chaos Magic (Any)"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Petty Magic"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Second Sight"
+        ],
+        "ranks": 1
+      }
+    ],
+    "text": "Characteristic adjustments: I +10, Int +10, WP +10. Skills: Channelling (Any) +10, Cool +10, Dodge +10, Intuition +10, Language (Magick) +15, Melee (Basic) or Melee (Polearm) +10, Perception +10. Talents: Aethyric Attunement or Instinctive Diction, Arcane Magic (Any) or Chaos Magic (Any), Petty Magic, Second Sight. Recalculate Wounds. Choose up to 3 Petty spells and up to 3 spells from a suitable Lore.",
+    "magic": {
+      "petty": 3,
+      "lore": 3
+    }
+  },
+  {
+    "id": "core:templates:spellcaster-lord",
+    "name": "Spellcaster Lord",
+    "page": 354,
+    "adjustments": {
+      "WS": 10,
+      "I": 20,
+      "Ag": 15,
+      "Int": 20,
+      "WP": 20,
+      "Fel": 10
+    },
+    "skills": [
+      {
+        "options": [
+          "Channelling (Any)"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Cool"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Dodge"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Intuition"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Language (Magick)"
+        ],
+        "bonus": 20,
+        "count": 1
+      },
+      {
+        "options": [
+          "Leadership"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Melee (Basic)",
+          "Melee (Polearm)"
+        ],
+        "bonus": 10,
+        "count": 1
+      },
+      {
+        "options": [
+          "Perception"
+        ],
+        "bonus": 20,
+        "count": 1
+      }
+    ],
+    "talents": [
+      {
+        "options": [
+          "Aethyric Attunement"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Arcane Magic (Any)",
+          "Chaos Magic (Any)"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Instinctive Diction"
+        ],
+        "ranks": 2
+      },
+      {
+        "options": [
+          "Luck"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Magical Sense"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Menacing"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Petty Magic"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Second Sight"
+        ],
+        "ranks": 1
+      },
+      {
+        "options": [
+          "Sixth Sense"
+        ],
+        "ranks": 1
+      }
+    ],
+    "text": "Characteristic adjustments: WS +10, I +20, Ag +15, Int +20, WP +20, Fel +10. Skills: Channelling (Any) +20, Cool +20, Dodge +20, Intuition +20, Language (Magick) +20, Leadership +10, Melee (Basic) or Melee (Polearm) +10, Perception +20. Talents: Aethyric Attunement, Arcane Magic (Any) or Chaos Magic (Any), Instinctive Diction 2, Luck, Magical Sense, Menacing, Petty Magic, Second Sight, Sixth Sense. Recalculate Wounds. Choose up to 6 Petty spells and up to 9 spells from a suitable Lore.",
+    "magic": {
+      "petty": 6,
+      "lore": 9
+    }
+  }
+]

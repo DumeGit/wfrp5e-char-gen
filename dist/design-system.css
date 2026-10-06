@@ -1452,3 +1452,5 @@ dialog::backdrop {
     font-size: 24px;
   }
 }
+
+.creator-mode-link { display: block; color: var(--color-on-leather); font-size: .8rem; margin: .45rem 0; }

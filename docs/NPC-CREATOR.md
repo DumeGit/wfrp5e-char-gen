@@ -1,0 +1,43 @@
+# Core NPC & Monster Creator
+
+The separate GM creator is `dist/npc.html`, linked from the player creator’s left menu. It initially assembles **core only**, irrespective of selected PC supplements. Its independently saved draft and JSON schema cannot overwrite or be loaded as a PC. `?verify=1` isolates both testing drafts. Supplement NPC material will require its own reviewed integration; registering a supplement for PC creation does not claim its creatures are supported here.
+
+## Catalogue and workflow
+
+The supplied core book provides 49 base profiles (pp. 319–352), four worked NPC examples (pp. 354–356), seven development templates (pp. 353–354) and 67 Creature Traits (pp. 356–363). Core p. 189’s two Mutation tables support the Traits that reference them. `scripts/extract_bestiary.py` reuses the reviewed PDF after MarkItDown reading, separates layout columns and preserves source text, printed totals and explicit discrepancies. Full PDFs are never shipped.
+
+1. **Base profile:** searchable category/profile browser, identity and GM notes; original printed profile remains readable.
+2. **Customise:** one optional template, its actual Skill/Talent choices, final GM Characteristic/Wounds overrides, Size, Traits, Skills/Talents, Mutations and optional Career-based XP.
+3. **Equipment & magic:** include/exclude printed attacks, include/exclude printed armour and choose optional armour, assign Consumer Guide equipment, set final GM attack values and select accessible spells. Equipment is assigned by the GM without inventing a starting purse or XP cost.
+4. **Review & export:** shared stat block, text/copy, dedicated stat block PDF or PDF with creation/XP record, and an editable JSON file. PDF output blocks unresolved errors, retains warnings and paginates all overflow. This is not the PC AcroForm.
+
+The compact live folio, review and exports consume one `npcResult` snapshot. Editing has session undo; paid development also has an explicit last-purchase undo. Undo retains recorded dice and adds an edit-history entry. Duplicate creates the current editable copy; save original/copy JSON files to keep both, or use session undo. There is one autosaved GM draft, not a campaign roster. Search/filter state is transient. Individualisation rerolls replace the active dice adjustment instead of accumulating onto the last rolled score; earlier rolls remain in history. Compact stat block exports list sourced options and magic profiles; the optional record includes full selected Trait/Talent/spell rule references. Real dice use the existing `crypto.getRandomValues` rejection-sampling function and record each face, total, timestamp and printed page. Loaded histories are labelled unverified.
+
+## Printed baselines and decisions
+
+- Untouched profiles preserve all printed Characteristics, Wounds, Skill totals and attack totals, including inconsistencies. Templates already included in worked examples are not reapplied automatically.
+- Orc p. 337 prints T 30/TB 4. Dwarf, Ogre and Human Thug also have conflicting printed TB values. Retain those until the GM explicitly recalculates or enters TB. Consistent profiles normally recalculate TB when Toughness changes. Changed Wounds use core Size/Hardy/Construct rules; final GM Wounds override remains explicit.
+- The Fenbeast and Dire Wolf print Intelligence despite Construct’s absent-Characteristic rule. Their original scores stay intact, with a discrepancy note. A newly added Construct removes Int/WP/Fel, substitutes SB for WPB in Wounds and makes attacks Magical.
+- Template Skills use the **higher existing or template bonus**, not their sum, by the user-approved interpretation of the worked examples. Negative printed offsets are retained rather than rounded up to zero. An unrecognised printed Skill name stays at its printed total and is flagged; remove it and add a reviewed core Skill instead of silently guessing an alias.
+- Small, Average, Large, Enormous and Monstrous have printed Wounds formulas. Tiny requires explicit GM values; no Wounds formula or resizing step is invented.
+- Resizing uses S +10/T +10/Ag −5 per increased step, reversed for decreases. Primary melee Damage includes the Size extra SB; ranged and extra attacks do not. The user chose the **general p. 360 rule** over the p. 361 Giant Spider example: Large Fangs +8, Bite +6, Wounds 26. The example’s Fangs +5 conflict is shown.
+- Swarm ignores Size and has five times a normal example’s Wounds plus WS +10. After changes to its underlying Wounds factors, require a manual Wounds value rather than inventing how to combine its Size exception.
+- Trained (Broken) uses the recorded 2d10 as Fellowship when absent, or adds it to an existing score. War adds WS +10 and Guard grants Territorial. Other training effects remain rules references.
+- Ogre p. 324’s Belligerent/Infected/Tracker under “Trappings” are optional Trait suggestions, by user decision. Human Watchman’s second “Talents” heading contains belongings and is retained as Trappings.
+- Venom uses the full p. 363 rule: causing Wounds inflicts Poisoned; its Difficulty affects recovery. Conflicting avoidance-Test summaries remain documented.
+- Marks grant their printed Talents and Animosity references, and expose their listed Talents as Career purchases (pp. 359–360). Already-printed Marks do not reapply permanent stat changes or request replacement Mutation rolls. Amphibious grants Swim without a printed numeric bonus; a newly added Amphibious requires an explicit GM Swim bonus. Newly added Mutation/Mental Corruption requires a corresponding physical/mental table result.
+- Core template Chaos Magic choices use the core Chaos Magic (Lore) definition. Instinctive Diction’s explicit template ranks remain printed grants, without inventing an additional per-rank effect.
+
+## Career-based paid development
+
+Core p. 318 permits Career development and GM-chosen XP expenditure. **It does not specify the Advance counts or past XP behind printed NPC totals.** The app therefore requires a GM-entered starting Advance count for each Characteristic/Skill before pricing it, including relevant template contributions according to the GM’s declared history. It never treats the printed profile as automatically having zero Advances. These counts affect pricing only, not the printed score. Final GM Characteristic overrides must be cleared before paid Characteristic increases, so purchased Advances change the displayed score. Abstract printed Light/Medium/Heavy (or Basic/Good/Best) Armour uses the highest selected quick profile instead of stacking it onto assigned detailed armour; natural protection and shields remain separate. Each purchase records its starting pricing count and is validated against the printed price table.
+
+The selected Career/level gives eligible Characteristic/Skill/Talent options. The GM chooses the level; player creation allocations, tracker boxes and promotion gates are not imported. +5 and optional +1 prices use core pp. 191/364; a partial band must be completed before returning to +5. Talents remain 100 XP per purchase under their core limits and prerequisites. Spell prices use the printed known-spell bands, including the NPC’s granted/printed spells. Template free spell limits remain enforced after paid additions. Career/template/profile and an already-used pricing count cannot be changed while its relevant XP entries remain; undo purchases first.
+
+## Scope and extension
+
+Creature Trait and Talent descriptions retain situational rules. The creator does not run combat, Conditions, regeneration, psychology, live casting, control/command Tests, mutation acquisition during play or encounter balancing. Anatomy is a GM choice with core p. 318’s quadruped, bird, snake and spider Hit Location references; it does not invent missing Critical tables.
+
+Registry arrays `creatures`, `templates`, `traits` and `mutations` carry stable namespaced IDs and source pages. Bestiary validators reject unsupported shapes and Mutation-table overlaps/gaps. The same registry generates source counts and coverage. Future supplement imports must review duplicates, replacements, old Traits, new permanent effects and tables individually, with handlers and tests before automation. Core NPC additions are not automatically Legacy; the existing selective policy applies only to actual edition adaptations.
+
+Release requires `npm run check:release`, browser checks on desktop/mobile in verification mode, and visually checked exported PDFs. Commit locally and report the hash; the user pushes and deploys.

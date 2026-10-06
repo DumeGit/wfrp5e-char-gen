@@ -38,6 +38,7 @@ export function createFeature(getContext) {
 <div class="rail-heading">
 <span class="eyebrow">Character creation</span>
 <strong>Your next chapter</strong>
+<a class="creator-mode-link" href="npc.html${new URL(location.href).searchParams.has("verify") ? "?verify=1" : ""}">NPC &amp; monster creator →</a>
 <p>${ready} of ${creationStepCount} creation steps ready</p>
 <div class="creation-meter" role="img" aria-label="${ready} of ${creationStepCount} creation steps ready">
 <span style="width:${(ready / creationStepCount) * 100}%">

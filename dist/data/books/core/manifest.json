@@ -4,7 +4,7 @@
   "title": "Warhammer Fantasy Roleplay, Fifth Edition",
   "shortTitle": "Core",
   "edition": 5,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "core",
   "dependsOn": [],
   "source": {
@@ -30,6 +30,10 @@
     "armour": "armour.json",
     "market": "market.json",
     "tables": "tables.json",
-    "coverage": "coverage.json"
+    "coverage": "coverage.json",
+    "creatures": "creatures.json",
+    "templates": "templates.json",
+    "traits": "traits.json",
+    "mutations": "mutations.json"
   }
 }

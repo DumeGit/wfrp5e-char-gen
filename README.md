@@ -42,6 +42,12 @@ The character sheet export retains the 556 editable fields in the supplied PDF a
 
 Career browsing now has search, Class/source filters and a non-mutating preview. Foundational manual changes show their impact and offer undo until the next character edit/roll. Career → Training choices before Skills shares patron, College and equipment choices with later steps. Magic uses a searchable library with type/Lore/source/access filters; free grants use an eligible-only chooser. Experience offers optional Career-only/affordable filters and visible Talent ranks; the shop unifies categories across books and supports budget filters and price sorting. Mobile has a persistent XP/coin strip with folio access and return to the previous choice. Full audit mapping and verification: [docs/CREATOR-UX.md](docs/CREATOR-UX.md).
 
+## NPC & Monster Creator
+
+Open **NPC & monster creator** in the left menu for the separate core-only GM workspace. It includes 49 base creature profiles, four worked NPCs, seven development templates and all 67 Creature Traits, with explicit GM changes, recorded individualisation/Mutation rolls, undo, equipment/magic, independent save/load, and dedicated stat block PDF/text exports. Review and exports use the same calculated result as the live folio. It does not manage combat or ongoing resources.
+
+Printed values are preserved until changed; conflicts remain visible. Career XP requires GM-supplied existing Advance counts because core p. 318 supplies no NPC XP history. Tiny and unresolved calculations require explicit GM values. Sources, interpretations, scope and extension details: [docs/NPC-CREATOR.md](docs/NPC-CREATOR.md).
+
 ## Rules and source
 
 ### Archives III

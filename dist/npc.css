@@ -1,0 +1,33 @@
+.npc-mode-link{display:block;margin-top:.7rem;color:var(--color-on-leather);font-size:.85rem}
+.npc-toolbar{display:flex;align-items:end;gap:.65rem;flex-wrap:wrap;margin:.7rem 0}
+.npc-toolbar .field{flex:1 1 180px;margin:0;min-width:0}
+.npc-toolbar input,.npc-toolbar select{width:100%}
+.npc-toolbar button{flex:none;margin-bottom:.05rem}
+.npc-profile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.5rem;max-height:370px;overflow:auto;padding:.2rem}
+.npc-profile-card{display:flex;flex-direction:column;align-items:start;text-align:left;padding:.65rem .75rem;min-height:70px;gap:.25rem}
+.npc-profile-card span{font-size:.75rem;color:var(--color-muted)}
+.npc-profile-card.selected{border:2px solid var(--color-crimson);background:var(--color-paper-raised)}
+.npc-score-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.5rem}
+.npc-score-grid label{position:relative;display:grid;gap:.2rem;padding:.5rem;background:var(--color-paper-raised);border:1px solid var(--color-line);border-radius:var(--radius-surface)}
+.npc-score-grid label span{font-size:.7rem;color:var(--color-muted)}
+.npc-score-grid input{min-width:0;width:100%;height:36px;padding:.4rem}
+.npc-score-grid .calculation-help{position:absolute;right:.25rem;top:.25rem;width:25px;height:25px;padding:0;min-height:0}
+.npc-template-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem}
+.npc-template-choices .field select{width:100%;margin-bottom:.3rem}
+.npc-rule-text{white-space:pre-wrap;font:inherit;font-size:.85rem;overflow-wrap:anywhere;line-height:1.65;background:var(--color-paper-raised);padding:1rem;border:1px solid var(--color-line)}
+.npc-item,.npc-inline{display:flex;align-items:start;justify-content:space-between;gap:.6rem;padding:.55rem 0;border-bottom:1px solid var(--color-line)}
+.npc-item>details,.npc-item>div{flex:1;min-width:0}.npc-item>button,.npc-inline>button{font-size:.75rem;min-height:30px;padding:.3rem .45rem;flex:none}
+.npc-item summary small{margin-left:.5rem;color:var(--color-muted)}
+.npc-item details p{font-size:.85rem}.npc-inline{align-items:center;font-size:.85rem}
+.npc-checkbox{display:flex;gap:.5rem;align-items:center;padding:.35rem 0}
+.npc-folio-stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.3rem}.npc-folio-stats>div{display:flex;flex-direction:column;align-items:center;gap:.1rem;padding:.35rem .1rem;border:1px solid var(--color-line)}
+.npc-folio-stats small{font-size:.65rem}.npc-folio-stats strong{font-size:1rem}
+.npc-folio-body{overflow-y:auto;min-height:0;padding:0 .15rem .4rem}.npc-sheet{display:flex;flex-direction:column}.npc-sheet h3{font-size:1rem;margin:.7rem 0 .2rem}
+.npc-attack{display:grid;grid-template-columns:1fr auto;gap:.2rem;margin:.4rem 0;font-size:.8rem}.npc-attack small{grid-column:1/-1;font-size:.7rem;line-height:1.4}
+.npc-issues{margin-top:1rem}.npc-workspace .rail .steps button{min-height:44px;font-size:.9rem;padding:.6rem .8rem}
+@media(max-width:1100px){.npc-sheet{max-height:none}.npc-folio-body{overflow:visible}.npc-score-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:700px){.npc-toolbar{align-items:stretch}.npc-toolbar .field{flex-basis:100%}.npc-toolbar button{max-width:100%}.npc-score-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.npc-template-choices{grid-template-columns:1fr}.npc-profile-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-height:300px}.npc-sheet .npc-folio-body{display:none}.npc-sheet.expanded .npc-folio-body{display:block}.npc-inline{flex-wrap:wrap}.npc-rule-text{padding:.6rem}.npc-item{gap:.3rem}}
+@media print{.npc-workspace .rail,.npc-workspace .panel,.masthead{display:none}.npc-sheet .npc-folio-body{display:block}.npc-sheet{width:100%;max-height:none}.npc-folio-body{overflow:visible}}
+
+@media(max-width:700px){.npc-workspace .rail .header-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.npc-workspace .rail .header-actions button{width:100%;min-height:40px;padding:.45rem;font-size:.75rem}.npc-mode-link{margin:0 0 .6rem}}
+@media(max-width:700px){.npc-workspace .rail .header-actions > button,.npc-workspace .rail .header-actions > [data-install-slot],.npc-workspace .rail .header-actions #pwa-install{grid-column:auto}}

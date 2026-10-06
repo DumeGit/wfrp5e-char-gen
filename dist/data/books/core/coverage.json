@@ -38,6 +38,36 @@
         "book": "core"
       },
       "reason": "Conditions, combat, spent resources, XP awards and ongoing Career changes remain future manager systems."
+    },
+    {
+      "id": "core:feature:npc-creation",
+      "name": "Separate core NPC and monster creator",
+      "status": "implemented",
+      "source": {
+        "book": "core",
+        "page": 318
+      },
+      "reason": "Printed profiles, optional templates, explicit GM adjustments, source checks, recorded dice, independent drafts and dedicated stat block exports."
+    },
+    {
+      "id": "core:feature:npc-templates",
+      "name": "Seven NPC development templates and magic selections",
+      "status": "implemented",
+      "source": {
+        "book": "core",
+        "page": 353
+      },
+      "reason": "Higher Skill bonus interpretation is explicitly approved; printed template choices and free spell caps are enforced."
+    },
+    {
+      "id": "core:feature:npc-play",
+      "name": "Live Creature Trait effects and combat",
+      "status": "reference-only",
+      "source": {
+        "book": "core",
+        "page": 356
+      },
+      "reason": "Creature Trait text is readable/exported; live combat, Conditions, regeneration and casting remain deferred."
     }
   ]
 }

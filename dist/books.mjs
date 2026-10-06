@@ -1,4 +1,5 @@
 import { validateCoverage } from "./book-coverage.mjs";
+import { validateBestiary } from "./bestiary-content.mjs";
 import {
   CONTENT_ALIASES,
   validateAliases,
@@ -31,6 +32,10 @@ const arrays = [
   "careerUpdates",
   "runes",
   "techniques",
+  "creatures",
+  "templates",
+  "traits",
+  "mutations",
 ];
 const files = new Set([
   ...arrays,
@@ -112,6 +117,21 @@ export function validateBackgroundTable(table, label) {
   return table;
 }
 const columns = {
+  creatures: [
+    "category",
+    "example",
+    "stats",
+    "size",
+    "toughnessBonus",
+    "sections",
+    "skills",
+    "attacks",
+    "text",
+    "notes",
+  ],
+  traits: ["text", "parameter"],
+  templates: ["adjustments", "skills", "talents", "magic", "text"],
+  mutations: ["category", "min", "max", "text", "adjustments"],
   techniques: ["sl", "text"],
   careerUpdates: ["careers", "characteristic", "profile", "unavailable"],
   runes: ["form", "master", "sl", "text"],
@@ -691,6 +711,7 @@ export function assembleBooks(library, ids = [library.core]) {
 }
 
 export function validateCatalog(R) {
+  validateBestiary(R);
   const C = R.config;
   if (R.highElfCreation) validateElfCreation(R);
   for (const x of R.techniques)

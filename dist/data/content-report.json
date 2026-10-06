@@ -9,6 +9,10 @@
   ],
   "activeCounts": {
     "books": 10,
+    "creatureProfiles": 53,
+    "npcTemplates": 7,
+    "creatureTraits": 67,
+    "mutations": 40,
     "careers": 117,
     "magicProfiles": 504,
     "rituals": 17,
@@ -21,19 +25,19 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "kind": "core",
       "recordCounts": {
-        "implemented": 840,
+        "implemented": 1007,
         "adapted": 0,
         "reference-only": 1,
         "unavailable": 0,
         "deferred": 0
       },
       "featureCounts": {
-        "implemented": 1,
+        "implemented": 3,
         "adapted": 1,
-        "reference-only": 0,
+        "reference-only": 1,
         "unavailable": 0,
         "deferred": 1
       },
@@ -59,6 +63,13 @@
           "unavailable": 0,
           "deferred": 0
         },
+        "creatures": {
+          "implemented": 53,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
         "gear": {
           "implemented": 129,
           "adapted": 0,
@@ -68,6 +79,13 @@
         },
         "market": {
           "implemented": 124,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "mutations": {
+          "implemented": 40,
           "adapted": 0,
           "reference-only": 0,
           "unavailable": 0,
@@ -103,6 +121,20 @@
         },
         "talents": {
           "implemented": 167,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "templates": {
+          "implemented": 7,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "traits": {
+          "implemented": 67,
           "adapted": 0,
           "reference-only": 0,
           "unavailable": 0,
@@ -1082,6 +1114,589 @@
           "source": {
             "book": "core",
             "page": 108
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:bloodletter-of-khorne",
+          "kind": "creatures",
+          "name": "Bloodletter of Khorne",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 349
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:boar",
+          "kind": "creatures",
+          "name": "Boar",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 325
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:bog-octopus",
+          "kind": "creatures",
+          "name": "Bog Octopus",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 328
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:cairn-wraith",
+          "kind": "creatures",
+          "name": "Cairn Wraith",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 342
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:cave-squig",
+          "kind": "creatures",
+          "name": "Cave Squig",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 329
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:chaos-warrior",
+          "kind": "creatures",
+          "name": "Chaos Warrior",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 348
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:clanrat",
+          "kind": "creatures",
+          "name": "Clanrat",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 351
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:crypt-ghoul",
+          "kind": "creatures",
+          "name": "Crypt Ghoul",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 338
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:cultist",
+          "kind": "creatures",
+          "name": "Cultist",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 347
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:daemonette-of-slaanesh",
+          "kind": "creatures",
+          "name": "Daemonette of Slaanesh",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 350
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:demigryph",
+          "kind": "creatures",
+          "name": "Demigryph",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 329
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:dire-wolf",
+          "kind": "creatures",
+          "name": "Dire Wolf",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 341
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:dog",
+          "kind": "creatures",
+          "name": "Dog",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 325
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:dragon",
+          "kind": "creatures",
+          "name": "Dragon",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 330
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:dwarf",
+          "kind": "creatures",
+          "name": "Dwarf",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 320
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:fenbeast",
+          "kind": "creatures",
+          "name": "Fenbeast",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 331
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:ghost",
+          "kind": "creatures",
+          "name": "Ghost",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 341
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:giant",
+          "kind": "creatures",
+          "name": "Giant",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 332
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:giant-rat",
+          "kind": "creatures",
+          "name": "Giant Rat",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 326
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:giant-spider",
+          "kind": "creatures",
+          "name": "Giant Spider",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 326
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:gnome",
+          "kind": "creatures",
+          "name": "Gnome",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 323
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:goblin",
+          "kind": "creatures",
+          "name": "Goblin",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 336
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:gor",
+          "kind": "creatures",
+          "name": "Gor",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 345
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:griffon",
+          "kind": "creatures",
+          "name": "Griffon",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 332
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:guzgog-ungor-skirmisher",
+          "kind": "creatures",
+          "name": "Guzgog - Ungor Skirmisher",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:halfling",
+          "kind": "creatures",
+          "name": "Halfling",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 319
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:halfling-thief",
+          "kind": "creatures",
+          "name": "Halfling Thief",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 322
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:high-elf-or-wood-elf",
+          "kind": "creatures",
+          "name": "High Elf or Wood Elf",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 320
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:horse",
+          "kind": "creatures",
+          "name": "Horse",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 327
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:human",
+          "kind": "creatures",
+          "name": "Human",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 319
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:human-merchant",
+          "kind": "creatures",
+          "name": "Human Merchant",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 321
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:human-thug",
+          "kind": "creatures",
+          "name": "Human Thug",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 322
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:human-watchman",
+          "kind": "creatures",
+          "name": "Human Watchman",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 321
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:manticore",
+          "kind": "creatures",
+          "name": "Manticore",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 333
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:minotaur",
+          "kind": "creatures",
+          "name": "Minotaur",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 346
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:mutant",
+          "kind": "creatures",
+          "name": "Mutant",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 347
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:ogre",
+          "kind": "creatures",
+          "name": "Ogre",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 324
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:orc",
+          "kind": "creatures",
+          "name": "Orc",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 337
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:pegasus",
+          "kind": "creatures",
+          "name": "Pegasus",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 334
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:rat-ogre",
+          "kind": "creatures",
+          "name": "Rat Ogre",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 352
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:skeleton",
+          "kind": "creatures",
+          "name": "Skeleton",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 339
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:skrakk-bestigor-elite",
+          "kind": "creatures",
+          "name": "Skrakk - Bestigor (Elite)",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 354
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:snotling",
+          "kind": "creatures",
+          "name": "Snotling",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 338
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:stormvermin",
+          "kind": "creatures",
+          "name": "Stormvermin",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 352
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:swilegrakk-bray-shaman-spellcaster",
+          "kind": "creatures",
+          "name": "Swilegrakk - Bray Shaman (Spellcaster)",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 355
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:tomb-banshee",
+          "kind": "creatures",
+          "name": "Tomb Banshee",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 342
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:troll",
+          "kind": "creatures",
+          "name": "Troll",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 335
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:ungor",
+          "kind": "creatures",
+          "name": "Ungor",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 345
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:ungrakk-gor-beastlord-commander",
+          "kind": "creatures",
+          "name": "Ungrakk - Gor Beastlord (Commander)",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 355
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:vampire",
+          "kind": "creatures",
+          "name": "Vampire",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 343
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:varghulf",
+          "kind": "creatures",
+          "name": "Varghulf",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 344
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:wolf",
+          "kind": "creatures",
+          "name": "Wolf",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 327
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:creatures:zombie",
+          "kind": "creatures",
+          "name": "Zombie",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 340
           },
           "reason": "Creator profile/choice is supported; situational play effects remain reference text."
         },
@@ -3876,6 +4491,446 @@
           "source": {
             "book": "core",
             "page": 301
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:animalistic-legs",
+          "kind": "mutations",
+          "name": "Animalistic Legs",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:awful-cravings",
+          "kind": "mutations",
+          "name": "Awful Cravings",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:beast-within",
+          "kind": "mutations",
+          "name": "Beast Within",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:chaotic-dreams",
+          "kind": "mutations",
+          "name": "Chaotic Dreams",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:corpulent",
+          "kind": "mutations",
+          "name": "Corpulent",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:crawling-skin",
+          "kind": "mutations",
+          "name": "Crawling Skin",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:distended-digits",
+          "kind": "mutations",
+          "name": "Distended Digits",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:emaciated",
+          "kind": "mutations",
+          "name": "Emaciated",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:enormous-eye",
+          "kind": "mutations",
+          "name": "Enormous Eye",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:erratic-fantasist",
+          "kind": "mutations",
+          "name": "Erratic Fantasist",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:extra-leg-joints",
+          "kind": "mutations",
+          "name": "Extra Leg Joints",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:extra-mouth",
+          "kind": "mutations",
+          "name": "Extra Mouth",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:fearful-concern",
+          "kind": "mutations",
+          "name": "Fearful Concern",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:fleshy-tentacle",
+          "kind": "mutations",
+          "name": "Fleshy Tentacle",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:glowing-skin",
+          "kind": "mutations",
+          "name": "Glowing Skin",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:hateful-impulses",
+          "kind": "mutations",
+          "name": "Hateful Impulses",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:hollow-heart",
+          "kind": "mutations",
+          "name": "Hollow Heart",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:inhuman-beauty",
+          "kind": "mutations",
+          "name": "Inhuman Beauty",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:inverted-face",
+          "kind": "mutations",
+          "name": "Inverted Face",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:iron-skin",
+          "kind": "mutations",
+          "name": "Iron Skin",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:jealous-thoughts",
+          "kind": "mutations",
+          "name": "Jealous Thoughts",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:lolling-tongue",
+          "kind": "mutations",
+          "name": "Lolling Tongue",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:lonely-spirit",
+          "kind": "mutations",
+          "name": "Lonely Spirit",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:mental-blocks",
+          "kind": "mutations",
+          "name": "Mental Blocks",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:patchy-feathers",
+          "kind": "mutations",
+          "name": "Patchy Feathers",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:profane-urgency",
+          "kind": "mutations",
+          "name": "Profane Urgency",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:shaky-morale",
+          "kind": "mutations",
+          "name": "Shaky Morale",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:short-legs",
+          "kind": "mutations",
+          "name": "Short Legs",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:spiny-protrusions",
+          "kind": "mutations",
+          "name": "Spiny Protrusions",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:suspicious-mind",
+          "kind": "mutations",
+          "name": "Suspicious Mind",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:thorny-scales",
+          "kind": "mutations",
+          "name": "Thorny Scales",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:thrill-hunter",
+          "kind": "mutations",
+          "name": "Thrill Hunter",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:tortured-visions",
+          "kind": "mutations",
+          "name": "Tortured Visions",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:totally-unhinged",
+          "kind": "mutations",
+          "name": "Totally Unhinged",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:unending-malice",
+          "kind": "mutations",
+          "name": "Unending Malice",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:uneven-horns",
+          "kind": "mutations",
+          "name": "Uneven Horns",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:unholy-rage",
+          "kind": "mutations",
+          "name": "Unholy Rage",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:webbed-feet",
+          "kind": "mutations",
+          "name": "Webbed Feet",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:whiskered-snout",
+          "kind": "mutations",
+          "name": "Whiskered Snout",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:mutations:worried-jitters",
+          "kind": "mutations",
+          "name": "Worried Jitters",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 189
           },
           "reason": "Creator profile/choice is supported; situational play effects remain reference text."
         },
@@ -8819,6 +9874,820 @@
           "reason": "Creator profile/choice is supported; situational play effects remain reference text."
         },
         {
+          "contentId": "core:templates:commander",
+          "kind": "templates",
+          "name": "Commander",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 353
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:templates:elite",
+          "kind": "templates",
+          "name": "Elite",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 353
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:templates:leader",
+          "kind": "templates",
+          "name": "Leader",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 353
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:templates:skirmisher",
+          "kind": "templates",
+          "name": "Skirmisher",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 353
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:templates:soldier",
+          "kind": "templates",
+          "name": "Soldier",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 353
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:templates:spellcaster",
+          "kind": "templates",
+          "name": "Spellcaster",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 354
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:templates:spellcaster-lord",
+          "kind": "templates",
+          "name": "Spellcaster Lord",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 354
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:afraid",
+          "kind": "traits",
+          "name": "Afraid",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:amphibious",
+          "kind": "traits",
+          "name": "Amphibious",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:animosity",
+          "kind": "traits",
+          "name": "Animosity",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:belligerent",
+          "kind": "traits",
+          "name": "Belligerent",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:bestial",
+          "kind": "traits",
+          "name": "Bestial",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:bite",
+          "kind": "traits",
+          "name": "Bite",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:blessed",
+          "kind": "traits",
+          "name": "Blessed",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:bounce",
+          "kind": "traits",
+          "name": "Bounce",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:breath",
+          "kind": "traits",
+          "name": "Breath",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:champion",
+          "kind": "traits",
+          "name": "Champion",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:chill-grasp",
+          "kind": "traits",
+          "name": "Chill Grasp",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:cold-blooded",
+          "kind": "traits",
+          "name": "Cold-blooded",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:constrictor",
+          "kind": "traits",
+          "name": "Constrictor",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:construct",
+          "kind": "traits",
+          "name": "Construct",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:corrosive-blood",
+          "kind": "traits",
+          "name": "Corrosive Blood",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:corruption",
+          "kind": "traits",
+          "name": "Corruption",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:daemonic",
+          "kind": "traits",
+          "name": "Daemonic",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:dark-vision",
+          "kind": "traits",
+          "name": "Dark Vision",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:disease",
+          "kind": "traits",
+          "name": "Disease",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:distracting",
+          "kind": "traits",
+          "name": "Distracting",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:ethereal",
+          "kind": "traits",
+          "name": "Ethereal",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:fear",
+          "kind": "traits",
+          "name": "Fear",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:fly",
+          "kind": "traits",
+          "name": "Fly",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:frenzy",
+          "kind": "traits",
+          "name": "Frenzy",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:ghostly-howl",
+          "kind": "traits",
+          "name": "Ghostly Howl",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:grim",
+          "kind": "traits",
+          "name": "Grim",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:hatred",
+          "kind": "traits",
+          "name": "Hatred",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:horns",
+          "kind": "traits",
+          "name": "Horns",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:hungry",
+          "kind": "traits",
+          "name": "Hungry",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:immune-to-psychology",
+          "kind": "traits",
+          "name": "Immune to Psychology",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:immunity",
+          "kind": "traits",
+          "name": "Immunity",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:infected",
+          "kind": "traits",
+          "name": "Infected",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:infestation",
+          "kind": "traits",
+          "name": "Infestation",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:magic-resistance",
+          "kind": "traits",
+          "name": "Magic Resistance",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:magical",
+          "kind": "traits",
+          "name": "Magical",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:many-heads",
+          "kind": "traits",
+          "name": "Many Heads",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:mark-of-chaos",
+          "kind": "traits",
+          "name": "Mark of Chaos",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:mental-corruption",
+          "kind": "traits",
+          "name": "Mental Corruption",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:miracles",
+          "kind": "traits",
+          "name": "Miracles",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:mutation",
+          "kind": "traits",
+          "name": "Mutation",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:night-vision",
+          "kind": "traits",
+          "name": "Night Vision",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:painless",
+          "kind": "traits",
+          "name": "Painless",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:petrifying-gaze",
+          "kind": "traits",
+          "name": "Petrifying Gaze",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:regeneration",
+          "kind": "traits",
+          "name": "Regeneration",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:size",
+          "kind": "traits",
+          "name": "Size",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:skittish",
+          "kind": "traits",
+          "name": "Skittish",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:spellcaster",
+          "kind": "traits",
+          "name": "Spellcaster",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:sprinter",
+          "kind": "traits",
+          "name": "Sprinter",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:stealthy",
+          "kind": "traits",
+          "name": "Stealthy",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:striding-gait",
+          "kind": "traits",
+          "name": "Striding Gait",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:stupid",
+          "kind": "traits",
+          "name": "Stupid",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:swarm",
+          "kind": "traits",
+          "name": "Swarm",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:tail",
+          "kind": "traits",
+          "name": "Tail",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:tentacles",
+          "kind": "traits",
+          "name": "Tentacles",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:territorial",
+          "kind": "traits",
+          "name": "Territorial",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:terror",
+          "kind": "traits",
+          "name": "Terror",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:tongue",
+          "kind": "traits",
+          "name": "Tongue",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:tracker",
+          "kind": "traits",
+          "name": "Tracker",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:trained",
+          "kind": "traits",
+          "name": "Trained",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:undead",
+          "kind": "traits",
+          "name": "Undead",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:unstable",
+          "kind": "traits",
+          "name": "Unstable",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:vampiric",
+          "kind": "traits",
+          "name": "Vampiric",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:venom",
+          "kind": "traits",
+          "name": "Venom",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:vomit",
+          "kind": "traits",
+          "name": "Vomit",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:wallcrawler",
+          "kind": "traits",
+          "name": "Wallcrawler",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:ward",
+          "kind": "traits",
+          "name": "Ward",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:traits:web",
+          "kind": "traits",
+          "name": "Web",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
           "contentId": "core:weapon:0",
           "kind": "weapons",
           "name": "Dagger",
@@ -9388,6 +11257,36 @@
             "page": 27
           },
           "reason": "Core creation is implemented; live play remains outside the creator."
+        },
+        {
+          "id": "core:feature:npc-creation",
+          "name": "Separate core NPC and monster creator",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 318
+          },
+          "reason": "Printed profiles, optional templates, explicit GM adjustments, source checks, recorded dice, independent drafts and dedicated stat block exports."
+        },
+        {
+          "id": "core:feature:npc-play",
+          "name": "Live Creature Trait effects and combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Creature Trait text is readable/exported; live combat, Conditions, regeneration and casting remain deferred."
+        },
+        {
+          "id": "core:feature:npc-templates",
+          "name": "Seven NPC development templates and magic selections",
+          "status": "implemented",
+          "source": {
+            "book": "core",
+            "page": 353
+          },
+          "reason": "Higher Skill bonus interpretation is explicitly approved; printed template choices and free spell caps are enforced."
         },
         {
           "id": "core:feature:tracker-single",
