@@ -14,7 +14,7 @@ import { createReferenceLinker } from "../dist/book-search-links.mjs";
 const B = assembleBooks(
   library,
   library.packs
-    .filter((x) => x.manifest.id !== "archives-iii-hedge")
+    .filter((x) => x.manifest.kind !== "variant")
     .map((x) => x.manifest.id),
 );
 const core = buildSearchIndex(R),
@@ -162,7 +162,8 @@ test("Search ranks names over descriptions, handles punctuation and indexes scop
   assert.equal(searchBooks(all, "lore alchemy").rows[0].name, "Lore (Alchemy)");
   assert.equal(searchBooks(all, "Diceman").rows[0].name, "Dicer");
   assert.equal(searchBooks(core, "Diceman").total, 0);
-  assert.equal(searchBooks(all, "Bawd").rows[0].name, "Knave");
+  assert.equal(searchBooks(all, "Bawd").rows[0].name, "Bawd");
+  assert.ok(searchBooks(all, "Bawd").rows.some(x=>x.kind==='career'&&x.name==='Knave'));
   assert.equal(searchBooks(all, " ").rows.length, 0);
   assert.equal(searchBooks(all, "no-such-thing-zxy").total, 0);
   const broad = searchBooks(all, "magic", 8);

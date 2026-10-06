@@ -8,6 +8,7 @@ import { legacyTag, legacyName } from "../legacy.mjs";
 import { legacyOption } from "../legacy-character.mjs";
 import { magicRows, filterMagic } from "../magic-browser.mjs";
 import { cantPanel } from "../archives-iii-ui.mjs";
+import { causeControl } from "../talent-targets-ui.mjs";
 
 // Live context keeps rendering state outside the saved character. Unusual book
 // mechanics remain explicit handlers rather than generic configuration rules.
@@ -88,7 +89,7 @@ export function createFeature(getContext, setContext) {
   }
 
   function experienceTalents() {
-    let { result, R, s, talentDescription } = getContext();
+    let { result, R, s, talentDescription, esc, button } = getContext();
 
     const d = result().derived,
       available = [],
@@ -103,7 +104,12 @@ export function createFeature(getContext, setContext) {
           : available
       ).push(name);
     }
-    return `<section class="talent-group"><h3>Career Talents <span class="counter">${available.length}</span></h3>
+    const cause = M.careerTalentOptions(R, s, d.level).some(
+      (n) => M.base(n) === "Impassioned Zeal",
+    )
+      ? causeControl(s, esc, button)
+      : "";
+    return `${cause}<section class="talent-group"><h3>Career Talents <span class="counter">${available.length}</span></h3>
 <p class="small muted">Each purchase costs 100 XP. The button shows why a purchase is unavailable.</p>${available.length ? runeShopRows(available, (n) => xpRow("talent", n), "available") : '<p class="empty">No new Career Talents can be learned at this level.</p>'}</section>${known.length ? `<details data-detail-key="${detailKey("experience-view:experienceTalents:0")}" class="talent-catalog-group" data-group="known-talents"><summary>Already learned <span class="counter">${known.length}</span></summary><p class="small muted">These Talents cannot be purchased again under their normal rules.</p>${known.map((n) => `<div class="known-talent"><span class="owned-ranks">${d.talents.filter((t) => t === n).length} ranks owned</span>${talentDescription(n)}</div>`).join("")}</details>` : ""}${unavailable.length ? `<details data-detail-key="${detailKey("experience-view:experienceTalents:1")}" class="talent-catalog-group" data-group="unavailable-talents"><summary>Unavailable alternatives <span class="counter">${unavailable.length}</span></summary><p class="small muted">These choices have a rule restriction. Expand a Talent to read its rules.</p>${runeShopRows(unavailable, (n) => xpRow("talent", n), "unavailable")}</details>` : ""}`;
   }
 

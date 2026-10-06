@@ -1,0 +1,83 @@
+[
+  {
+    "id": "deft-steps:cult:ranald",
+    "name": "Ranald",
+    "page": 13,
+    "miracles": [
+      "An Invitation",
+      "Cat’s Eyes",
+      "Cheat the Odds",
+      "Ranald’s Grace",
+      "Trickster’s Glamour",
+      "You Saw Nothing"
+    ],
+    "careerMiracles": {
+      "deft-steps:career:thief-priest": [
+        "Distant Sounds",
+        "Long Reach",
+        "Lose the Loot",
+        "Silence Reigns",
+        "Poor Man’s Face",
+        "Talk Your Way Out",
+        "The Heat Is Off",
+        "An Invitation",
+        "Cat’s Eyes",
+        "Ranald’s Grace",
+        "Cheat the Odds",
+        "You Saw Nothing"
+      ],
+      "deft-steps:career:gambler-priest": [
+        "Bountiful Fortune",
+        "Crisis of Confidence",
+        "Force the Hand of Chance",
+        "Perfect Empathy",
+        "The Gamemaster",
+        "Up the Stakes",
+        "Cat’s Eyes",
+        "Ranald’s Grace",
+        "Trickster’s Glamour",
+        "Cheat the Odds"
+      ],
+      "deft-steps:career:trickster-priest": [
+        "A Suitable Sucker",
+        "Bamboozle",
+        "One Almighty Lie",
+        "Ranald’s Mischief",
+        "Unremembered Face",
+        "Cat’s Eyes",
+        "Ranald’s Grace",
+        "Trickster’s Glamour",
+        "Cheat the Odds",
+        "You Saw Nothing"
+      ],
+      "deft-steps:career:liberator-priest": [
+        "Back At You",
+        "Class War",
+        "Free Your Mind",
+        "Moment of Clarity",
+        "Rally Round",
+        "Under my Protection",
+        "An Invitation",
+        "Cat’s Eyes",
+        "Trickster’s Glamour",
+        "Cheat the Odds",
+        "You Saw Nothing"
+      ],
+      "priest": [
+        "An Invitation",
+        "Cat’s Eyes",
+        "Cheat the Odds",
+        "Ranald’s Grace",
+        "Trickster’s Glamour",
+        "You Saw Nothing",
+        "Bamboozle",
+        "Perfect Empathy",
+        "Talk Your Way Out",
+        "Unremembered Face"
+      ]
+    },
+    "text": "All four aspects share Ranald’s Blessings: Charisma, Conscience, Finesse, Fortune, Protection and Wit. Aspect priests have their own Miracle lists (pp. 18–19, 24–25); general priests can also learn Bamboozle, Perfect Empathy, Talk Your Way Out and Unremembered Face (p. 13).",
+    "conversion": "Protector’s p. 25 list has the incorrect Trickster-Priests heading; user assigns it to Liberator-Priest. Dealer’s A Suitable Stooge uses the detailed A Suitable Sucker entry.",
+    "adaptation": "User-approved core equivalents in aspect lists: Stay Lucky → Cheat the Odds; Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour; You Ain’t Seen Me Right? → You Saw Nothing. All aspects use Invoke (Ranald), with their separate printed access."
+  }
+]

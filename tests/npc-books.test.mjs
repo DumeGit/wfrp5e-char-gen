@@ -26,7 +26,7 @@ function extended() {
  return next;
 }
 test('NPC selection requires an explicit review and restores exact saved book versions',()=>{
- assert.deepEqual(npcBooks(library).map(p=>p.manifest.id),['core']);
+ assert.deepEqual(npcBooks(library).map(p=>p.manifest.id),['core','deft-steps','deft-steps-ranald-priest','deft-steps-dealer','deft-steps-taal-priest','deft-steps-white-stag','deft-steps-longshanks','deft-steps-pickpocket']);
  assert.throws(()=>assembleNPCBooks(library,['core','up-in-arms']),/reviewed/);
  const next=extended(), catalog=assembleNPCBooks(next,['core','npc-fixture']);
  const s=freshNPC(catalog,'npc-fixture:creatures:sample');

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "deft-steps-white-stag:career:nun",
+    "name": "Nun",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 89,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 3,
+      "I": 4,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Novice",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Art (Calligraphy)",
+          "Charm Animal",
+          "Cool",
+          "Endurance",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Heal",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Pray"
+        ],
+        "talents": [
+          "Bless (Any One)",
+          "Holy Visions",
+          "Panhandle",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Religious Symbol",
+          "Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Nun",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Intuition",
+          "Language (Any One)",
+          "Lore (Local)",
+          "Melee (Any One)"
+        ],
+        "talents": [
+          "Etiquette (Cultists)",
+          "Field Dressing",
+          "Invoke (Any One)",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Book (Religion)",
+          "Religious Relic"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Abbess",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Intimidate",
+          "Leadership",
+          "Lore (Politics)",
+          "Perception"
+        ],
+        "talents": [
+          "Inspiring",
+          "Resistant (Any One)",
+          "Savant (Theology)",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Abbey",
+          "Library (Theology)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Prioress General",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Lore (Any One)",
+          "Research"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Iron Will",
+          "Pure Soul",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Religious Order"
+        ]
+      }
+    ],
+    "runtimeId": "nun",
+    "replaces": "core:careers:nun",
+    "reason": "Printed optional White Stag / Hermit first-level choices; keeps core Fifth Edition Career structure and allocations.",
+    "conversion": "Only printed first-level Skill changes apply. Core Fifth Edition level structure, Characteristics, Talent definitions, free allocations and XP limits remain. Choosing the variant grants no additional Advances. Printed Entertain (Storyteller) uses the core Storytelling name, a spelling correction without a Legacy adaptation."
+  }
+]

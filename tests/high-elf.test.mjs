@@ -31,7 +31,7 @@ function past(s,era,mode='chosen',career='soldier'){
 }
 test('High Elf pack is opt-in and composes with supplements without changing core profiles',()=>{
  assert.equal(core.origins.some(x=>x.source.book==='high-elf'),false);
- const all=assembleBooks(library,library.packs.map(p=>p.manifest.id));
+ const all=assembleBooks(library,library.packs.filter(p=>p.manifest.kind!=='variant').map(p=>p.manifest.id));
  for(const key of ['species','weapons','armour'])for(const x of key==='species'?Object.values(core[key]):core[key]){const y=key==='species'?all[key][x.name]:all[key].find(y=>y.contentId===x.contentId);assert.deepEqual(y,x);}
  assert.equal(R.careers.filter(x=>x.source.book==='high-elf').length,6);assert.equal(R.spells.filter(x=>x.source.book==='high-elf').length,59);assert.equal(R.techniques.length,10);
  assert.ok(!R.careers.some(x=>x.source.book==='high-elf'&&x.levels.length!==4));

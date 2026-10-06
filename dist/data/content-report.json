@@ -8,18 +8,18 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 10,
-    "creatureProfiles": 53,
+    "books": 11,
+    "creatureProfiles": 75,
     "npcTemplates": 7,
     "creatureTraits": 67,
     "mutations": 40,
-    "careers": 117,
-    "magicProfiles": 504,
+    "careers": 126,
+    "magicProfiles": 536,
     "rituals": 17,
     "cants": 24,
     "techniques": 10,
     "runes": 71,
-    "pricedShopEntries": 390
+    "pricedShopEntries": 405
   },
   "books": [
     {
@@ -21899,6 +21899,1283 @@
           "reason": "5-penny purchase supported, but supplied amount and weight are unspecified."
         }
       ]
+    },
+    {
+      "id": "deft-steps",
+      "title": "Deft Steps, Light Fingers",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 48,
+        "adapted": 31,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 2,
+        "adapted": 2,
+        "reference-only": 1,
+        "unavailable": 0,
+        "deferred": 1
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 8,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "creatures": {
+          "implemented": 9,
+          "adapted": 13,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "cults": {
+          "implemented": 0,
+          "adapted": 1,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "gear": {
+          "implemented": 11,
+          "adapted": 4,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "spells": {
+          "implemented": 27,
+          "adapted": 5,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps:career:forger",
+          "kind": "careers",
+          "name": "Forger",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 44
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:career:gambler-priest",
+          "kind": "careers",
+          "name": "Gambler-Priest",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 16
+          },
+          "reason": "Reviewed Fifth Edition changes: Diceman → Dicer; Invoke (The Gamester) → Invoke (Ranald); retains the Career-specific printed Miracle list. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds."
+        },
+        {
+          "contentId": "deft-steps:career:gamekeeper",
+          "kind": "careers",
+          "name": "Gamekeeper",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 138
+          },
+          "reason": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any)."
+        },
+        {
+          "contentId": "deft-steps:career:liberator-priest",
+          "kind": "careers",
+          "name": "Liberator-Priest",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 22
+          },
+          "reason": "Reviewed Fifth Edition changes: Impassioned Zeal requires an explicit Cause; Invoke (The Protector) → Invoke (Ranald); retains the Career-specific printed Miracle list; Level-two Public Speaking moves from Skills to the Public Speaker Talent options; Public Speaking → Public Speaker. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing."
+        },
+        {
+          "contentId": "deft-steps:career:muleskinner",
+          "kind": "careers",
+          "name": "Muleskinner",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 128
+          },
+          "reason": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any); Trick-Riding → Trick Rider."
+        },
+        {
+          "contentId": "deft-steps:career:poacher",
+          "kind": "careers",
+          "name": "Poacher",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 140
+          },
+          "reason": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any)."
+        },
+        {
+          "contentId": "deft-steps:career:ranger-priest-of-taal",
+          "kind": "careers",
+          "name": "Ranger-Priest of Taal",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 86
+          },
+          "reason": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any)."
+        },
+        {
+          "contentId": "deft-steps:career:thief-priest",
+          "kind": "careers",
+          "name": "Thief-Priest",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 14
+          },
+          "reason": "Reviewed Fifth Edition changes: Invoke (The Night Prowler) → Invoke (Ranald); retains the Career-specific printed Miracle list. Printed older Miracles use reviewed core equivalents: Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing."
+        },
+        {
+          "contentId": "deft-steps:career:trickster-priest",
+          "kind": "careers",
+          "name": "Trickster-Priest",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 20
+          },
+          "reason": "Reviewed Fifth Edition changes: Invoke (The Deceiver) → Invoke (Ranald); retains the Career-specific printed Miracle list; Printed Perform (Acting) uses Entertain (Acting), by user choice; Public Speaking → Public Speaker; Unspecified Art requires a chosen core specialisation; Unspecified Stealth requires a chosen core specialisation. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing."
+        },
+        {
+          "contentId": "deft-steps:creatures:albrecht-the-fish",
+          "kind": "creatures",
+          "name": "Albrecht “The Fish”",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 64
+          },
+          "reason": "Strider (Marshes) uses Striding Gait (Marshes); The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:arabyan-redhawk",
+          "kind": "creatures",
+          "name": "Arabyan Redhawk",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 134
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:august-sternwachter",
+          "kind": "creatures",
+          "name": "August Sternwachter",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 55
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:bawd",
+          "kind": "creatures",
+          "name": "Bawd",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 48
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:black-guard-of-morr-knight",
+          "kind": "creatures",
+          "name": "Black Guard of Morr (Knight)",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 34
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:brunner",
+          "kind": "creatures",
+          "name": "Brunner",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 111
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:charlatan",
+          "kind": "creatures",
+          "name": "Charlatan",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 49
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:dove-hawk",
+          "kind": "creatures",
+          "name": "Dove Hawk",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 134
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:father-pedragar",
+          "kind": "creatures",
+          "name": "Father Pedragar",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 83
+          },
+          "reason": "Strider (Woodland) uses Striding Gait (Woodland)."
+        },
+        {
+          "contentId": "deft-steps:creatures:fence",
+          "kind": "creatures",
+          "name": "Fence",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 47
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:forger",
+          "kind": "creatures",
+          "name": "Forger",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 47
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:grootscher-marsh-hound",
+          "kind": "creatures",
+          "name": "Grootscher Marsh Hound",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 133
+          },
+          "reason": "Printed Stride uses core Sprinter (p. 361): Run Movement ×1.5 when Running."
+        },
+        {
+          "contentId": "deft-steps:creatures:gunna-von-sperren",
+          "kind": "creatures",
+          "name": "Gunna von Sperren",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 65
+          },
+          "reason": "Strider (Coastal) uses Striding Gait (Coastal)."
+        },
+        {
+          "contentId": "deft-steps:creatures:hochland-lockhund",
+          "kind": "creatures",
+          "name": "Hochland Lockhund",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 133
+          },
+          "reason": "Printed Stride uses core Sprinter (p. 361): Run Movement ×1.5 when Running."
+        },
+        {
+          "contentId": "deft-steps:creatures:nordlander-bamse",
+          "kind": "creatures",
+          "name": "Nordlander Bamse",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 133
+          },
+          "reason": "Printed Stride uses core Sprinter (p. 361): Run Movement ×1.5 when Running."
+        },
+        {
+          "contentId": "deft-steps:creatures:outlaw",
+          "kind": "creatures",
+          "name": "Outlaw",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 103
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:outlaw-chief",
+          "kind": "creatures",
+          "name": "Outlaw Chief",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 103
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:racketeer",
+          "kind": "creatures",
+          "name": "Racketeer",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 48
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:safe-house-owner-townsman",
+          "kind": "creatures",
+          "name": "Safe House Owner (Townsman)",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 49
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:creatures:typical-bounty-hunter",
+          "kind": "creatures",
+          "name": "Typical Bounty Hunter",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 108
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:watch-sergeant",
+          "kind": "creatures",
+          "name": "Watch Sergeant",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 93
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:creatures:watchman",
+          "kind": "creatures",
+          "name": "Watchman",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 93
+          },
+          "reason": "The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references."
+        },
+        {
+          "contentId": "deft-steps:cult:ranald",
+          "kind": "cults",
+          "name": "Ranald",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 13
+          },
+          "reason": "User-approved core equivalents in aspect lists: Stay Lucky → Cheat the Odds; Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour; You Ain’t Seen Me Right? → You Saw Nothing. All aspects use Invoke (Ranald), with their separate printed access."
+        },
+        {
+          "contentId": "deft-steps:gear:arabyan-redhawk",
+          "kind": "gear",
+          "name": "Arabyan Redhawk",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 132
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:bag-of-soot",
+          "kind": "gear",
+          "name": "Bag of Soot",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:bag-of-tarrabeth-seed",
+          "kind": "gear",
+          "name": "Bag of Tarrabeth Seed",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "deft-steps:gear:caltrops-12",
+          "kind": "gear",
+          "name": "Caltrops (12)",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "deft-steps:gear:crampons-2",
+          "kind": "gear",
+          "name": "Crampons (2)",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:dove-hawk",
+          "kind": "gear",
+          "name": "Dove Hawk",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 132
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:glass-cutter",
+          "kind": "gear",
+          "name": "Glass Cutter",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "deft-steps:gear:grootscher-marsh-hound",
+          "kind": "gear",
+          "name": "Grootscher Marsh Hound",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 132
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:hochland-lockhund",
+          "kind": "gear",
+          "name": "Hochland Lockhund",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 132
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:hunters-garb",
+          "kind": "gear",
+          "name": "Hunter’s Garb",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 132
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:nordlander-bamse",
+          "kind": "gear",
+          "name": "Nordlander Bamse",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 132
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:periscope",
+          "kind": "gear",
+          "name": "Periscope",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:smoke-bomb",
+          "kind": "gear",
+          "name": "Smoke Bomb",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:telescopic-pole",
+          "kind": "gear",
+          "name": "Telescopic Pole",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:gear:thin-jimmy",
+          "kind": "gear",
+          "name": "Thin Jimmy",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "deft-steps:spell:a-suitable-sucker",
+          "kind": "spells",
+          "name": "A Suitable Sucker",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 24
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:aurochs-heart",
+          "kind": "spells",
+          "name": "Auroch’s Heart",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:back-at-you",
+          "kind": "spells",
+          "name": "Back At You",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 25
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:bamboozle",
+          "kind": "spells",
+          "name": "Bamboozle",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 24
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged."
+        },
+        {
+          "contentId": "deft-steps:spell:bountiful-fortune",
+          "kind": "spells",
+          "name": "Bountiful Fortune",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 19
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:class-war",
+          "kind": "spells",
+          "name": "Class War",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 25
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:crisis-of-confidence",
+          "kind": "spells",
+          "name": "Crisis of Confidence",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 19
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:distant-sounds",
+          "kind": "spells",
+          "name": "Distant Sounds",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:earthshudder",
+          "kind": "spells",
+          "name": "Earthshudder",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged."
+        },
+        {
+          "contentId": "deft-steps:spell:force-the-hand-of-chance",
+          "kind": "spells",
+          "name": "Force the Hand of Chance",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 19
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:free-your-mind",
+          "kind": "spells",
+          "name": "Free Your Mind",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 25
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:long-reach",
+          "kind": "spells",
+          "name": "Long Reach",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:lose-the-loot",
+          "kind": "spells",
+          "name": "Lose the Loot",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:moment-of-clarity",
+          "kind": "spells",
+          "name": "Moment of Clarity",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 25
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:natures-repast",
+          "kind": "spells",
+          "name": "Nature’s Repast",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:one-almighty-lie",
+          "kind": "spells",
+          "name": "One Almighty Lie",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 24
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:pax-of-taal",
+          "kind": "spells",
+          "name": "Pax of Taal",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:perfect-empathy",
+          "kind": "spells",
+          "name": "Perfect Empathy",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 19
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:poor-mans-face",
+          "kind": "spells",
+          "name": "Poor Man’s Face",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:rally-round",
+          "kind": "spells",
+          "name": "Rally Round",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 25
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:ranalds-mischief",
+          "kind": "spells",
+          "name": "Ranald’s Mischief",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 24
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:rending-paw",
+          "kind": "spells",
+          "name": "Rending Paw",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:rivers-blessing",
+          "kind": "spells",
+          "name": "River’s Blessing",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:silence-reigns",
+          "kind": "spells",
+          "name": "Silence Reigns",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:talk-your-way-out",
+          "kind": "spells",
+          "name": "Talk Your Way Out",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:the-gamemaster",
+          "kind": "spells",
+          "name": "The Gamemaster",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 19
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:the-heat-is-off",
+          "kind": "spells",
+          "name": "The Heat Is Off",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 18
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:under-my-protection",
+          "kind": "spells",
+          "name": "Under my Protection",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 25
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged."
+        },
+        {
+          "contentId": "deft-steps:spell:unremembered-face",
+          "kind": "spells",
+          "name": "Unremembered Face",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 24
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged."
+        },
+        {
+          "contentId": "deft-steps:spell:up-the-stakes",
+          "kind": "spells",
+          "name": "Up the Stakes",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 19
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps:spell:wild-wind",
+          "kind": "spells",
+          "name": "Wild Wind",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged."
+        },
+        {
+          "contentId": "deft-steps:spell:wilderness-way",
+          "kind": "spells",
+          "name": "Wilderness Way",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 88
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": [
+        {
+          "id": "deft-steps:feature:campaign",
+          "name": "Campaign procedures and ongoing play",
+          "status": "deferred",
+          "source": {
+            "book": "deft-steps",
+            "page": 15
+          },
+          "reason": "Ranald’s Gamble, contacts/organisations, crime/fraud, patrols/bounties, pathfinding/camping, hunting and ongoing training remain outside creation."
+        },
+        {
+          "id": "deft-steps:feature:hound-training",
+          "name": "Hound and hawk training choices",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 133
+          },
+          "reason": "Printed profile-specific choices and command references; named Difficulty modifiers use core SL. Core Broken/Guard/War effects apply."
+        },
+        {
+          "id": "deft-steps:feature:npc-baselines",
+          "name": "Printed NPC baselines and punctuation",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 47
+          },
+          "reason": "All numeric baselines retained, including Albrecht’s 196 Wounds; approved punctuation interpretations have original source notes."
+        },
+        {
+          "id": "deft-steps:feature:ranald-lists",
+          "name": "Ranald aspect Miracle access",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 13
+          },
+          "reason": "Four Careers retain separate printed Miracle lists with approved core Invoke/Miracle equivalents."
+        },
+        {
+          "id": "deft-steps:feature:tools",
+          "name": "Tool naming mismatches",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps",
+            "page": 32
+          },
+          "reason": "Thin Jimmy/Steel Mummit and Telescopic Pole/Stick use paired table prices and descriptions."
+        },
+        {
+          "id": "deft-steps:feature:unresolved-gear",
+          "name": "Unresolved named NPC equipment",
+          "status": "reference-only",
+          "source": {
+            "book": "deft-steps",
+            "page": 64
+          },
+          "reason": "No invented special weapon profiles, Qualities or monetary rolls. Named belongings and magical effects remain printed references."
+        }
+      ]
+    },
+    {
+      "id": "deft-steps-ranald-priest",
+      "title": "Deft Steps — General Ranald Priest",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps-ranald-priest:career:priest",
+          "kind": "careers",
+          "name": "Priest",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps-ranald-priest",
+            "page": 13
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "deft-steps-dealer",
+      "title": "Deft Steps — Ranald the Dealer",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 1,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "cults": {
+          "implemented": 0,
+          "adapted": 1,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps-dealer:career:priest",
+          "kind": "careers",
+          "name": "Priest",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps-dealer",
+            "page": 24
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "deft-steps-dealer:cult:ranald",
+          "kind": "cults",
+          "name": "Ranald",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps-dealer",
+            "page": 24
+          },
+          "reason": "User-approved core equivalents in aspect lists: Stay Lucky → Cheat the Odds; Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour; You Ain’t Seen Me Right? → You Saw Nothing. All aspects use Invoke (Ranald), with their separate printed access."
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "deft-steps-taal-priest",
+      "title": "Deft Steps — Taal Priest",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps-taal-priest:career:priest",
+          "kind": "careers",
+          "name": "Priest",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps-taal-priest",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "deft-steps-white-stag",
+      "title": "Deft Steps — White Stag / Hermit",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps-white-stag:career:nun",
+          "kind": "careers",
+          "name": "Nun",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps-white-stag",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "deft-steps-longshanks",
+      "title": "Deft Steps — Longshanks Scout",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps-longshanks:career:scout",
+          "kind": "careers",
+          "name": "Scout",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps-longshanks",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "deft-steps-pickpocket",
+      "title": "Deft Steps — Pickpocket",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 1,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "deft-steps-pickpocket:career:thief",
+          "kind": "careers",
+          "name": "Thief",
+          "status": "implemented",
+          "source": {
+            "book": "deft-steps-pickpocket",
+            "page": 27
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": [
+        {
+          "id": "deft-steps-pickpocket:feature:talent-swap",
+          "name": "Pickpocket Talent swap",
+          "status": "reference-only",
+          "source": {
+            "book": "deft-steps-pickpocket",
+            "page": 27
+          },
+          "reason": "Core Fifth Edition Thief already has Fast Hands and no level-one Strike to Stun; no further swap or free Talent is added."
+        }
+      ]
     }
   ],
   "aliases": [
@@ -22466,6 +23743,138 @@
       },
       "reason": "Approved Hearth Priest naming correction. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision.",
       "scope": "dwarf-guide"
+    },
+    {
+      "kind": "talents",
+      "from": "Public Speaking",
+      "to": "Public Speaker",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 22
+      },
+      "reason": "Approved core Talent equivalent; level-two Liberator entry moves from Skills to Talent options."
+    },
+    {
+      "kind": "talents",
+      "from": "Diceman",
+      "to": "Dicer",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 16
+      },
+      "reason": "Previously approved core Talent equivalent."
+    },
+    {
+      "kind": "talents",
+      "from": "Strider",
+      "to": "Striding Gait",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 83
+      },
+      "reason": "Previously approved core Talent equivalent; printed terrains retained."
+    },
+    {
+      "kind": "talents",
+      "from": "Trick-Riding",
+      "to": "Trick Rider",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 128
+      },
+      "reason": "Previously approved core Talent equivalent."
+    },
+    {
+      "kind": "skills",
+      "from": "Perform (Acting)",
+      "to": "Entertain (Acting)",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 20
+      },
+      "reason": "User-approved Skill replacement, explained as Legacy."
+    },
+    {
+      "kind": "spells",
+      "from": "Stay Lucky",
+      "to": "Cheat the Odds",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 18
+      },
+      "reason": "User-approved core Miracle replacement, explained as Legacy in aspect lists."
+    },
+    {
+      "kind": "spells",
+      "from": "A Suitable Stooge",
+      "to": "A Suitable Sucker",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 24
+      },
+      "reason": "User-approved printed naming mismatch; detailed entry used."
+    },
+    {
+      "kind": "spells",
+      "from": "Rich Man, Poor Man, Beggar Man, Thief",
+      "to": "Trickster’s Glamour",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 19
+      },
+      "reason": "Previously approved Fifth Edition Miracle equivalent."
+    },
+    {
+      "kind": "spells",
+      "from": "You Ain’t Seen Me Right?",
+      "to": "You Saw Nothing",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 18
+      },
+      "reason": "Previously approved Fifth Edition Miracle equivalent."
+    },
+    {
+      "kind": "traits",
+      "from": "Stride",
+      "to": "Sprinter",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 133
+      },
+      "reason": "User-approved core Trait replacement, with a Legacy explanation on each hound."
+    },
+    {
+      "kind": "gear-profile",
+      "from": "Steel Mummit",
+      "to": "Thin Jimmy",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 33
+      },
+      "reason": "User pairs p. 32 table name/price with this p. 33 description."
+    },
+    {
+      "kind": "gear-profile",
+      "from": "Telescopic Stick",
+      "to": "Telescopic Pole",
+      "scope": "deft-steps",
+      "source": {
+        "book": "deft-steps",
+        "page": 33
+      },
+      "reason": "User pairs p. 32 table name/price with this p. 33 description."
     }
   ]
 }

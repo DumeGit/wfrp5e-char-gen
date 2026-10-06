@@ -16,6 +16,7 @@ export function profileFeatures(R, p, kind) {
         printed: true,
         source: p.source,
         ranks: grant.ranks || 1,
+        ...(grant.adaptation ? { adaptation: grant.adaptation } : {}),
       };
     });
   const text = p.sections[kind === "trait" ? "Traits" : "Talents"] || "";
@@ -134,7 +135,7 @@ export function attackCharacteristic(attack) {
     : "WS";
 }
 export function attackSkill(R, attack) {
-  if (attack.skillName) return attack.skillName;
+  if ("skillName" in attack) return attack.skillName;
   const char = attackCharacteristic(attack);
   if (
     /^(?:Bite|Horns|Tail|[0-9]+ Tentacles|Chill Grasp|Ghostly Howl|Vomit|Breath)/.test(

@@ -1,4 +1,12 @@
 import { canonicalRuleName } from "./content-references.mjs";
+import {
+  CAUSE_KEY,
+  CAUSE_PLACEHOLDER,
+  causeTalent,
+  causeIssue,
+  namedCause,
+  targetAllowed,
+} from "./talent-targets.mjs";
 import { issue, finishIssues, uniqueIssues, skillControl } from "./issues.mjs";
 import { legacySources, legacyMechanic } from "./legacy.mjs";
 import { effectiveCareer } from "./context-career.mjs";
@@ -177,6 +185,8 @@ export function talentInfo(R, name) {
 export function options(R, raw, type = "skill", s) {
   if (s && type === "skill") raw = speciesSkillName(R, s, raw);
   raw = canon(raw);
+  if (type === "talent" && causeTalent(raw))
+    return [namedCause(s?.talentChoices?.[CAUSE_KEY]) || CAUSE_PLACEHOLDER];
   if (type === "talent") {
     const runes = runeTalentOptions(R, raw);
     if (runes !== null) return runes;
@@ -314,7 +324,7 @@ export function careerTalentOptions(R, s, level = 1) {
               ? careerSkillSlots(R, s, level)
                   .filter((x) => base(x.name) === "Trade")
                   .map((x) => t.replace("(as Trade)", x.name.slice(6)))
-              : options(R, t, "talent"),
+              : options(R, t, "talent", s),
           ),
         ),
     ),
@@ -716,6 +726,7 @@ export function derive(R, s) {
   };
 }
 export function invalidTalent(R, s, name) {
+  if (causeIssue(name)) return causeIssue(name);
   const d = derive(R, s),
     b = base(name),
     magical = ["Arcane Magic", "Chaos Magic", "Petty Magic", "Witch!"],
@@ -802,7 +813,9 @@ export function invalidTalent(R, s, name) {
     const patron = patronTalent.match(/\((.*)\)/)?.[1];
     return `Requires ${b} (${patron}) to match your patron from ${patronTalent} (pp. 40, 116, 121).`;
   }
-  const repeats = d.talents.filter((t) => t === name).length;
+  const repeats = d.talents.filter((t) =>
+    b === "Impassioned Zeal" ? base(t) === b : t === name,
+  ).length;
   if (!repeats) return "";
   // Explicit learning limits, not words in the effect such as "roll twice".
   const configured = R.config.talentLimits[b],
@@ -906,7 +919,7 @@ export function quote(R, s, type, name, amount = 5) {
   }
   if (type === "talent") {
     cost = 100;
-    inCareer = careerTalentOptions(R, s, d.level).includes(name);
+    inCareer = targetAllowed(careerTalentOptions(R, s, d.level), name);
     tick = inCareer && d.earnedBoxes < 36;
     error = !inCareer
       ? "Not available in this Career level."

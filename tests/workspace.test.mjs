@@ -23,7 +23,7 @@ import { exportRecord, exportSheet } from "../dist/export.mjs";
 const B = assembleBooks(
   library,
   library.packs
-    .filter((x) => x.manifest.id !== "archives-iii-hedge")
+    .filter((x) => x.manifest.kind !== "variant")
     .map((x) => x.manifest.id),
 );
 

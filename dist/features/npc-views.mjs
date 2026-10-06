@@ -1,4 +1,6 @@
 import * as M from "../rules.mjs";
+import { causeTalent, namedCause } from "../talent-targets.mjs";
+import { trainingChoices } from "../npc-training.mjs";
 import { esc } from "../workspace.mjs";
 import { chapterHeading, ledgerEmblem } from "../design-system.mjs";
 import { NPC_KEYS, NPC_SIZES } from "../bestiary-content.mjs";
@@ -133,18 +135,7 @@ export function createNPCViews(getContext) {
       entry = R.traits.find((x) => x.contentId === ui.trait),
       parameter = entry ? traitParameter(entry.name, entry) : null;
     let choices;
-    if (entry?.name === "Trained")
-      choices = [
-        "Broken",
-        "Drive",
-        "Entertain",
-        "Fetch",
-        "Guard",
-        "Home",
-        "Magic",
-        "Mount",
-        "War",
-      ];
+    if (entry?.name === "Trained") choices = trainingChoices(d.profile);
     if (entry?.name === "Breath")
       choices = ["Acid", "Cold", "Electricity", "Fire", "Poison", "Smoke"];
     if (entry?.name === "Mark of Chaos")
@@ -158,7 +149,7 @@ export function createNPCViews(getContext) {
       .filter((t) => t.name !== "Size")
       .map(
         (t) =>
-          `<div class="npc-item"><details data-detail-key="npc:trait:${esc(t.id)}:${esc(t.value)}"><summary><strong>${esc(t.name)}${t.value ? ` (${esc(t.value)})` : ""}</strong><small>${t.printed ? "Printed" : "Added"}</small></summary><p>${esc(R.traits.find((x) => x.contentId === t.id)?.text || "")}</p>${ref(R.traits.find((x) => x.contentId === t.id))}</details>${t.printed || s.traits.some((x) => x.id === t.id && x.value === t.value) ? btn("remove-trait", "Remove", `data-id="${esc(t.id)}" data-value="${esc(t.value)}" data-printed="${t.printed}"`) : `<small class="muted">Granted by selected option</small>`}</div>`,
+          `<div class="npc-item"><details data-detail-key="npc:trait:${esc(t.id)}:${esc(t.value)}"><summary><strong>${esc(t.name)}${t.value ? ` (${esc(t.value)})` : ""}</strong><small>${t.printed ? "Printed" : "Added"}</small>${legacyTag(R, t)}</summary><p>${esc(R.traits.find((x) => x.contentId === t.id)?.text || "")}</p>${ref(R.traits.find((x) => x.contentId === t.id))}</details>${t.printed || s.traits.some((x) => x.id === t.id && x.value === t.value) ? btn("remove-trait", "Remove", `data-id="${esc(t.id)}" data-value="${esc(t.value)}" data-printed="${t.printed}"`) : `<small class="muted">Granted by selected option</small>`}</div>`,
       )
       .join(
         "",
@@ -176,6 +167,7 @@ export function createNPCViews(getContext) {
       )
       .join(" · ")}</p>
     <div class="npc-toolbar">${field("Add Trait", select("npc-trait-select", [["", "Choose…"], ...R.traits.filter((x) => x.name !== "Size").map((x) => [x.contentId, x.name])], ui.trait, 'data-ui="trait"'))}${parameter ? field(entry.parameter || "Value", choices ? select("npc-trait-value", [["", "Choose…"], ...choices], ui.traitValue, 'data-ui="traitValue"') : `<input id="npc-trait-value" data-ui="traitValue" ${parameter === "number" ? 'type="number" min="1"' : ""} value="${esc(ui.traitValue)}" placeholder="${parameter === "number" ? "Rating" : esc(entry.parameter || "Value")}">`) : ""}${btn("add-trait", "Add Trait", entry ? "" : "disabled", "primary")}</div>${entry ? `<p class="small">${esc(entry.text)} ${ref(entry)}</p>` : ""}
+    ${d.trainingReferences.map((x) => `<details data-detail-key="npc:training:${esc(x.name)}"><summary>Trained (${esc(x.name)}) ${ref(x)}</summary><p>${esc(x.text)}</p><p class="small muted">Command Tests and ongoing training are references; they are not rolled or tracked by this creator.</p></details>`).join("")}
     ${d.training.has("Broken") && !profileFeatures(R, d.profile, "trait").some((t) => t.name === "Trained" && t.value.includes("Broken")) ? `<div id="npc-training-roll">${btn("training-roll", "Roll Broken’s 2d10 Fellowship")}${s.trainingRoll ? `<span>${s.trainingRoll.faces.join(" + ")} = ${s.trainingRoll.faces.reduce((a, b) => a + b, 0)}</span>` : ""}</div>` : ""}
     ${d.traits.some((t) => t.name === "Mark of Chaos" && t.value === "Tzeentch" && !t.printed) ? `<div id="npc-mark-roll" class="npc-toolbar">${field("First Mutation table", select("npc-mark-start", ["Mental", "Physical"], ui.markStart, 'data-ui="markStart"'))}${btn("mark-roll", "Roll Tzeentch Mutations")}${s.markRoll ? `<span>d10 ${s.markRoll.faces[0]} → ${Math.ceil(s.markRoll.faces[0] / 3)} alternating Mutations</span>` : ""}</div>` : ""}`;
   }
@@ -203,7 +195,7 @@ export function createNPCViews(getContext) {
           ),
         ),
       ].sort();
-    return `<details data-detail-key="npc:skill-talent"><summary>Skills & Talents <small>${d.skills.length} Skills · ${d.talents.length} Talents</small></summary><h3>Skills</h3><div class="npc-compact-list">${d.skills.map((x) => `<div class="npc-inline"><strong>${esc(x.name)}</strong><span>${value(x.total)} <small>(bonus ${value(x.advance)}${x.paid ? ` + ${x.paid} paid` : ""})</small></span>${s.skills.some((y) => y.name === x.name) ? btn("remove-skill", "Remove GM bonus", `data-name="${esc(x.name)}"`) : x.origins.some((y) => y.startsWith("Printed")) ? btn("remove-printed-skill", "Remove", `data-name="${esc(x.name)}"`) : ""}</div>`).join("")}</div><div class="npc-toolbar">${field("Skill", select("npc-add-skill", skills, ui.skill, 'data-ui="skill"'))}${field("GM bonus", `<input id="npc-skill-bonus" type="number" min="0" value="${ui.skillBonus}" data-ui="skillBonus">`)}${btn("add-skill", "Add / update bonus", "", "primary")}</div><h3>Talents</h3>${d.talents.map((t) => `<div class="npc-item"><details data-detail-key="npc:talent:${esc(t.name)}"><summary>${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""}</summary><p>${esc(M.talentInfo(R, t.name)?.text || "See source")}</p>${ref(M.talentInfo(R, t.name))}</details>${s.talents.some((x) => x.name === t.name) ? btn("remove-talent", "Remove GM ranks", `data-name="${esc(t.name)}"`) : t.origins.includes("Printed") ? btn("remove-printed-talent", "Remove", `data-name="${esc(t.name)}"`) : ""}</div>`).join("")}<div class="npc-toolbar">${field("Talent", select("npc-talent", talents, ui.talent, 'data-ui="talent"'))}${/\(Any\)$/.test(ui.talent) ? field("Specify target", `<input id="npc-talent-target" type="text" data-ui="talentTarget" value="${esc(ui.talentTarget || "")}" placeholder="Enter the printed Talent target">`) : ""}${field("Ranks", `<input id="npc-talent-ranks" data-ui="talentRanks" type="number" min="1" value="${ui.talentRanks}">`)}${btn("add-talent", "Add GM Talent", "", "primary")}</div><p class="small muted">GM additions cost no XP. Use paid development below for Career purchases. Permanent supported effects are calculated; situational effects remain in the rule description.</p></details>`;
+    return `<details data-detail-key="npc:skill-talent"><summary>Skills & Talents <small>${d.skills.length} Skills · ${d.talents.length} Talents</small></summary><h3>Skills</h3><div class="npc-compact-list">${d.skills.map((x) => `<div class="npc-inline"><strong>${esc(x.name)}</strong><span>${value(x.total)} <small>(bonus ${value(x.advance)}${x.paid ? ` + ${x.paid} paid` : ""})</small></span>${s.skills.some((y) => y.name === x.name) ? btn("remove-skill", "Remove GM bonus", `data-name="${esc(x.name)}"`) : x.origins.some((y) => y.startsWith("Printed")) ? btn("remove-printed-skill", "Remove", `data-name="${esc(x.name)}"`) : ""}</div>`).join("")}</div><div class="npc-toolbar">${field("Skill", select("npc-add-skill", skills, ui.skill, 'data-ui="skill"'))}${field("GM bonus", `<input id="npc-skill-bonus" type="number" min="0" value="${ui.skillBonus}" data-ui="skillBonus">`)}${btn("add-skill", "Add / update bonus", "", "primary")}</div><h3>Talents</h3>${d.talents.map((t) => `<div class="npc-item"><details data-detail-key="npc:talent:${esc(t.name)}"><summary>${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""}${legacyTag(R, t)}</summary><p>${esc(M.talentInfo(R, t.name)?.text || "See source")}</p>${ref(M.talentInfo(R, t.name))}</details>${s.talents.some((x) => x.name === t.name) ? btn("remove-talent", "Remove GM ranks", `data-name="${esc(t.name)}"`) : t.origins.includes("Printed") ? btn("remove-printed-talent", "Remove", `data-name="${esc(t.name)}"`) : ""}</div>`).join("")}<div class="npc-toolbar">${field("Talent", select("npc-talent", talents, ui.talent, 'data-ui="talent"'))}${/\(Any(?: Cause)?\)$/.test(ui.talent) ? field("Specify target", `<input id="npc-talent-target" type="text" data-ui="talentTarget" value="${esc(ui.talentTarget || "")}" placeholder="Enter the printed Talent target">`) : ""}${field("Ranks", `<input id="npc-talent-ranks" data-ui="talentRanks" type="number" min="1" value="${ui.talentRanks}">`)}${btn("add-talent", "Add GM Talent", "", "primary")}</div><p class="small muted">GM additions cost no XP. Use paid development below for Career purchases. Permanent supported effects are calculated; situational effects remain in the rule description.</p></details>`;
   }
   function mutationsView() {
     const { R, s, d, ui } = getContext();
@@ -244,13 +236,17 @@ export function createNPCViews(getContext) {
       )
         ? ui.xpName
         : "",
+      purchaseName =
+        ui.xpType === "talent" && causeTalent(name)
+          ? namedCause(ui.xpTarget) || name
+          : name,
       [id, lore] = (name || "").split("|"),
       quote = name
         ? npcQuote(
             R,
             s,
             ui.xpType,
-            name,
+            purchaseName,
             ui.xpType === "talent" || ui.xpType === "spell"
               ? 1
               : Number(ui.amount),
@@ -270,7 +266,7 @@ export function createNPCViews(getContext) {
         ui.xpType,
         'data-ui="xpType"',
       ),
-    )}${field("Advancement", select("npc-xp-name", [["", "Choose…"], ...options], name, 'data-ui="xpName"'))}${
+    )}${field("Advancement", select("npc-xp-name", [["", "Choose…"], ...options], name, 'data-ui="xpName"'))}${ui.xpType === "talent" && causeTalent(name) ? field("Cause", `<input id="npc-xp-target" data-ui="xpTarget" type="text" maxlength="160" value="${esc(ui.xpTarget)}" placeholder="Enter a political, religious or philosophical cause">`) : ""}${
       ["char", "skill"].includes(ui.xpType)
         ? field(
             "Increase",
@@ -325,7 +321,7 @@ export function createNPCViews(getContext) {
     return `${chapterHeading("Review & export")}<p>Export a dedicated GM stat block, with an optional creation and XP record.</p><div class="npc-toolbar">${btn("copy", "Copy stat block")}${btn("text", "Download text")}${btn("pdf", "Export stat block PDF", "", "primary")}${btn("pdf-record", "PDF + creation record")}${btn("save", "Save editable NPC")}</div><p class="small muted">Errors need resolving before PDF export. Warnings and printed discrepancies remain in the export. Save JSON preserves the complete editable draft.</p><pre class="npc-rule-text">${esc(npcText(R, s, { result: d }))}</pre><details data-detail-key="npc:record"><summary>Creation, dice & XP record</summary><pre class="npc-rule-text">${esc(npcText(R, s, { record: true, result: d }).split("CREATION RECORD")[1] || "")}</pre></details>`;
   }
   function folio() {
-    const { s, d } = getContext();
+    const { R, s, d } = getContext();
     return `<aside class="sheet npc-sheet" aria-label="NPC stat block"><div class="sheet-heading"><span class="eyebrow">GM bestiary</span><div class="folio-crest">${ledgerEmblem()}</div><h2>${esc(d.name)}</h2><p>${esc(d.profile.name)} · ${esc(d.size)}${d.template ? ` · ${esc(d.template.name)}` : ""}</p><p class="small">${ref(d.profile)}</p>${btn("folio-toggle", "View stat block", 'aria-expanded="false"', "summary-toggle")}</div><div class="npc-folio-body"><div class="npc-folio-stats">${NPC_KEYS.map((k) => `<div><small>${k}</small><strong>${value(d.stats[k])}</strong></div>`).join("")}</div><p class="small">SB ${value(d.sb)} · TB ${value(d.tb)} · Walk ${value(d.walk)} · Run ${value(d.run)}</p><p class="small">Combat Initiative ${value(d.combatInitiative)}</p><h3>Attacks</h3>${d.attacks.map((a) => `<p class="npc-attack"><strong>${esc(a.name)}</strong><span>${a.skill === null ? "Rule" : a.skill}${a.damage === null ? "" : ` / +${a.damage}`}</span><small>${esc(a.text)}</small></p>`).join("")}<p class="small">${
       Object.entries(d.protection)
         .filter(([, v]) => v)
@@ -335,13 +331,22 @@ export function createNPCViews(getContext) {
       ["Skills", d.skills.map((x) => `${x.name} ${value(x.total)}`)],
       [
         "Talents",
-        d.talents.map((x) => `${x.name}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`),
+        d.talents.map(
+          (x) =>
+            `${x.name}${x.ranks > 1 ? ` ×${x.ranks}` : ""}${isLegacy(R, x) ? " · Legacy" : ""}`,
+        ),
       ],
       [
         "Traits",
-        d.traits.map((x) => `${x.name}${x.value ? ` (${x.value})` : ""}`),
+        d.traits.map(
+          (x) =>
+            `${x.name}${x.value ? ` (${x.value})` : ""}${isLegacy(R, x) ? " · Legacy" : ""}`,
+        ),
       ],
-      ["Magic", d.magic.map((x) => x.name)],
+      [
+        "Magic",
+        d.magic.map((x) => `${x.name}${isLegacy(R, x) ? " · Legacy" : ""}`),
+      ],
       [
         "Equipment",
         [

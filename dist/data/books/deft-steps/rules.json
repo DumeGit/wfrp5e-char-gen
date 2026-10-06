@@ -1,0 +1,70 @@
+[
+  {
+    "id": "deft-steps:skilloptions:lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Ranald"
+    ],
+    "page": 20,
+    "reason": "Specialisations explicitly printed in Deft Steps Careers; individual Career pages identify uses."
+  },
+  {
+    "id": "deft-steps:skilloptions:language",
+    "path": [
+      "skillOptions",
+      "Language"
+    ],
+    "operation": "append",
+    "value": [
+      "Thieve’s Tongue"
+    ],
+    "page": 22,
+    "reason": "Specialisations explicitly printed in Deft Steps Careers; individual Career pages identify uses."
+  },
+  {
+    "id": "deft-steps:talentoptions:etiquette",
+    "path": [
+      "talentOptions",
+      "Etiquette"
+    ],
+    "operation": "append",
+    "value": [
+      "Ranaldans",
+      "Ranald",
+      "Taal",
+      "Guilder"
+    ],
+    "page": 16,
+    "reason": "Specialisations explicitly printed in Deft Steps Careers; individual Career pages identify uses."
+  },
+  {
+    "id": "deft-steps:skilloptions:secret-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "append",
+    "value": [
+      "Thieves"
+    ],
+    "page": 20,
+    "reason": "Specialisations explicitly printed in Deft Steps Careers; individual Career pages identify uses."
+  },
+  {
+    "id": "deft-steps:skilloptions:trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "append",
+    "value": [
+      "Artist"
+    ],
+    "page": 44,
+    "reason": "Specialisations explicitly printed in Deft Steps Careers; individual Career pages identify uses."
+  }
+]

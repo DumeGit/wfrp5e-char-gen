@@ -13,7 +13,7 @@ import {bookPanel} from '../dist/book-ui.mjs';
 import {elfOriginPanel,elfCareerPanel} from '../dist/high-elf-ui.mjs';
 import {dwarfOriginPanel} from '../dist/dwarf-guide-ui.mjs';
 import {exportSheet} from '../dist/export.mjs';
-const all=assembleBooks(library,library.packs.map(p=>p.manifest.id));
+const all=assembleBooks(library,library.packs.filter(p=>p.manifest.kind!=='variant').map(p=>p.manifest.id));
 const record=(kind,book,name)=>all[kind].find(x=>x.source.book===book&&x.name===name);
 
 test('every book distinguishes actual conversions from compatible printed additions',()=>{

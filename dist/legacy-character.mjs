@@ -1,4 +1,5 @@
 import * as M from "./rules.mjs";
+import { deftMiracleAdaptation } from "./deft-steps.mjs";
 import { creationSpecies, originProfile } from "./origins.mjs";
 import {
   elderSkills,
@@ -56,6 +57,18 @@ export function legacyOption(R, s, kind, name) {
       add(legacyMechanic("sailor"));
   }
   if (kind === "talent") {
+    if (
+      c.source.book === "deft-steps" &&
+      M.careerTalentOptions(R, s, d.level).includes(name) &&
+      (name === "Invoke (Ranald)" || M.base(name) === "Impassioned Zeal")
+    )
+      add({
+        source: c.source,
+        adaptation:
+          name === "Invoke (Ranald)"
+            ? "Printed aspect-specific Invoke uses Invoke (Ranald), retaining this Career’s printed Miracle list."
+            : "Printed Impassioned Zeal omits its Cause; an explicit Cause is required, with normal purchase limits.",
+      });
     // Regional omission/reallocation does not change every core Talent's own rule.
     if (
       convertedTalents.has(M.base(name)) &&
@@ -101,6 +114,9 @@ export function legacyGear(R, s, slot, name = slot.name) {
 }
 export function legacyMagic(R, s, entry) {
   const sources = legacySources(R, entry);
+  sources.push(
+    ...legacySources(R, deftMiracleAdaptation(R, s.career, entry.name)),
+  );
   if (
     s.career === "winds-of-magic:career:mundane-alchemist" &&
     entry.category === "Petty" &&

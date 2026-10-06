@@ -6,6 +6,7 @@ import {
   npcSourceLabel,
 } from "./npc-books.mjs";
 import * as M from "./rules.mjs";
+import { causeTalent, namedCause } from "./talent-targets.mjs";
 import { freshNPC, validateNPCState } from "./npc-state.mjs";
 import { npcResult, npcQuote } from "./npc-result.mjs";
 import { npcText, npcPDF } from "./npc-export.mjs";
@@ -60,6 +61,7 @@ const freshUI = () => ({
   spell: "",
   xpType: "char",
   xpName: "",
+  xpTarget: "",
   amount: 5,
 });
 const ui = freshUI();
@@ -409,10 +411,13 @@ async function action(el) {
       s.skills = s.skills.filter((x) => x.name !== el.dataset.name);
     else if (a === "add-talent") {
       let name = form("npc-talent");
-      if (/\(Any\)$/.test(name)) {
+      if (/\(Any(?: Cause)?\)$/.test(name)) {
         const target = form("npc-talent-target").trim();
         if (!target) throw Error("Specify the Talent target.");
-        name = name.replace(/\(Any\)$/, `(${target})`);
+        name = causeTalent(name)
+          ? namedCause(target)
+          : name.replace(/\(Any\)$/, `(${target})`);
+        if (!name) throw Error("Specify a Cause, without brackets.");
       }
       if (!M.talentInfo(R, name)) throw Error("Choose a Talent.");
       s.talents = s.talents.filter((x) => x.name !== name);
@@ -458,7 +463,11 @@ async function action(el) {
       s.removedSpells.push(el.dataset.id);
     } else if (a === "buy-xp") {
       const type = ui.xpType,
-        name = form("npc-xp-name"),
+        selected = form("npc-xp-name"),
+        name =
+          type === "talent" && causeTalent(selected)
+            ? namedCause(form("npc-xp-target")) || selected
+            : selected,
         amount = ["talent", "spell"].includes(type) ? 1 : Number(ui.amount),
         [contentId, lore] = name.split("|"),
         q = npcQuote(R, s, type, name, amount, { contentId, lore });

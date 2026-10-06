@@ -24,7 +24,7 @@ export function brambleCaster(career='hedge-witch',talent='Arcane Magic (Hedgecr
 
 test('Blood and Bramble is opt-in, adds 24 distinct spells and composes with all installed books',()=>{
  assert.ok(!R.spells.some(x=>x.name==='Godspakt'));
- const ids=library.packs.map(x=>x.manifest.id).filter(x=>!['core','blood-bramble','archives-iii-hedge'].includes(x));
+ const ids=library.packs.filter(p=>p.manifest.kind!=='variant').map(x=>x.manifest.id).filter(x=>!['core','blood-bramble','archives-iii-hedge'].includes(x));
  const contexts=[[],ids,['archives-iii','archives-iii-hedge'],['winds-of-magic'],['high-elf'],['archives-ii','rough-nights']];
  for(const enabled of contexts)for(const order of [[...enabled,'blood-bramble'],['blood-bramble',...enabled]]){
   const before=assembleBooks(library,enabled),after=assembleBooks(library,order);

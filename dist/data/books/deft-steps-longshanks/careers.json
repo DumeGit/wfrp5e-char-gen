@@ -1,0 +1,132 @@
+[
+  {
+    "id": "deft-steps-longshanks:career:scout",
+    "name": "Scout",
+    "class": "Peasant",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 89,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 2,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": 1,
+      "Dex": 4,
+      "Int": 3,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Guide",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Climb",
+          "Endurance",
+          "Gossip",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Bow)"
+        ],
+        "talents": [
+          "Orientation",
+          "Night Vision",
+          "Rover",
+          "Striding Gait (All)"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Leather Jack",
+          "Sturdy Boots and Cloak",
+          "Rope"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Scout",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Charm Animal",
+          "Cool",
+          "Ranged (Bow, Crossbow, or Sling)",
+          "Secret Signs (Scout)",
+          "Stealth (Underground)",
+          "Swim",
+          "Track"
+        ],
+        "talents": [
+          "Acute Sense (Sight)",
+          "Flee!",
+          "Seasoned Traveller",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Bow with 10 Arrows or Crossbow with 10 Bolts or Sling with 10 Lead Bullets",
+          "Mail Shirt"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pathfinder",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Haggle",
+          "Lore (Geography)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Hardy",
+          "Shadow",
+          "Sharp"
+        ],
+        "trappings": [
+          "Map",
+          "Riding Horse",
+          "Saddlebags with 2 weeks’ Rations",
+          "Tent"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Explorer",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Language (Any One)",
+          "Trade (Cartographer)"
+        ],
+        "talents": [
+          "Craftsman (Cartographer)",
+          "Linguistics",
+          "Read/Write",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Selection of Maps",
+          "Trade Tools (Cartographer)"
+        ]
+      }
+    ],
+    "runtimeId": "scout",
+    "replaces": "core:careers:scout",
+    "reason": "Printed optional Longshanks Scout first-level choices; keeps core Fifth Edition Career structure and allocations.",
+    "conversion": "Only printed first-level Skill changes apply. Core Fifth Edition level structure, Characteristics, Talent definitions, free allocations and XP limits remain. Choosing the variant grants no additional Advances."
+  }
+]

@@ -8,18 +8,18 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 10 |
-| creatureProfiles | 53 |
+| books | 11 |
+| creatureProfiles | 75 |
 | npcTemplates | 7 |
 | creatureTraits | 67 |
 | mutations | 40 |
-| careers | 117 |
-| magicProfiles | 504 |
+| careers | 126 |
+| magicProfiles | 536 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
 | runes | 71 |
-| pricedShopEntries | 390 |
+| pricedShopEntries | 405 |
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -34,6 +34,13 @@ Each source inventory remains visible even when another selected book supersedes
 | Dwarf Player’s Guide | 156 | 34 | 13 | 2 | 0 |
 | High Elf Player’s Guide | 55 | 55 | 23 | 0 | 0 |
 | Blood and Bramble | 15 | 10 | 0 | 0 | 0 |
+| Deft Steps, Light Fingers | 48 | 31 | 0 | 0 | 0 |
+| Deft Steps — General Ranald Priest (variant) | 1 | 0 | 0 | 0 | 0 |
+| Deft Steps — Ranald the Dealer (variant) | 1 | 1 | 0 | 0 | 0 |
+| Deft Steps — Taal Priest (variant) | 1 | 0 | 0 | 0 | 0 |
+| Deft Steps — White Stag / Hermit (variant) | 1 | 0 | 0 | 0 | 0 |
+| Deft Steps — Longshanks Scout (variant) | 1 | 0 | 0 | 0 | 0 |
+| Deft Steps — Pickpocket (variant) | 1 | 0 | 0 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -613,6 +620,143 @@ Pack `blood-bramble` · version 1.0.0
 
 </details>
 
+## Deft Steps, Light Fingers
+
+Pack `deft-steps` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 8 | 0 | 0 | 0 |
+| creatures | 9 | 13 | 0 | 0 | 0 |
+| cults | 0 | 1 | 0 | 0 | 0 |
+| gear | 11 | 4 | 0 | 0 | 0 |
+| spells | 27 | 5 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Campaign procedures and ongoing play | deferred | p. 15 | Ranald’s Gamble, contacts/organisations, crime/fraud, patrols/bounties, pathfinding/camping, hunting and ongoing training remain outside creation. |
+| Hound and hawk training choices | adapted | p. 133 | Printed profile-specific choices and command references; named Difficulty modifiers use core SL. Core Broken/Guard/War effects apply. |
+| Printed NPC baselines and punctuation | implemented | p. 47 | All numeric baselines retained, including Albrecht’s 196 Wounds; approved punctuation interpretations have original source notes. |
+| Ranald aspect Miracle access | adapted | p. 13 | Four Careers retain separate printed Miracle lists with approved core Invoke/Miracle equivalents. |
+| Tool naming mismatches | implemented | p. 32 | Thin Jimmy/Steel Mummit and Telescopic Pole/Stick use paired table prices and descriptions. |
+| Unresolved named NPC equipment | reference-only | p. 64 | No invented special weapon profiles, Qualities or monetary rolls. Named belongings and magical effects remain printed references. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `deft-steps:career:gambler-priest` — Gambler-Priest | careers | adapted | p. 16 | Reviewed Fifth Edition changes: Diceman → Dicer; Invoke (The Gamester) → Invoke (Ranald); retains the Career-specific printed Miracle list. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds. |
+| `deft-steps:career:gamekeeper` — Gamekeeper | careers | adapted | p. 138 | Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any). |
+| `deft-steps:career:liberator-priest` — Liberator-Priest | careers | adapted | p. 22 | Reviewed Fifth Edition changes: Impassioned Zeal requires an explicit Cause; Invoke (The Protector) → Invoke (Ranald); retains the Career-specific printed Miracle list; Level-two Public Speaking moves from Skills to the Public Speaker Talent options; Public Speaking → Public Speaker. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing. |
+| `deft-steps:career:muleskinner` — Muleskinner | careers | adapted | p. 128 | Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any); Trick-Riding → Trick Rider. |
+| `deft-steps:career:poacher` — Poacher | careers | adapted | p. 140 | Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any). |
+| `deft-steps:career:ranger-priest-of-taal` — Ranger-Priest of Taal | careers | adapted | p. 86 | Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any). |
+| `deft-steps:career:thief-priest` — Thief-Priest | careers | adapted | p. 14 | Reviewed Fifth Edition changes: Invoke (The Night Prowler) → Invoke (Ranald); retains the Career-specific printed Miracle list. Printed older Miracles use reviewed core equivalents: Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing. |
+| `deft-steps:career:trickster-priest` — Trickster-Priest | careers | adapted | p. 20 | Reviewed Fifth Edition changes: Invoke (The Deceiver) → Invoke (Ranald); retains the Career-specific printed Miracle list; Printed Perform (Acting) uses Entertain (Acting), by user choice; Public Speaking → Public Speaker; Unspecified Art requires a chosen core specialisation; Unspecified Stealth requires a chosen core specialisation. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing. |
+| `deft-steps:creatures:albrecht-the-fish` — Albrecht “The Fish” | creatures | adapted | p. 64 | Strider (Marshes) uses Striding Gait (Marshes); The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:black-guard-of-morr-knight` — Black Guard of Morr (Knight) | creatures | adapted | p. 34 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:father-pedragar` — Father Pedragar | creatures | adapted | p. 83 | Strider (Woodland) uses Striding Gait (Woodland). |
+| `deft-steps:creatures:grootscher-marsh-hound` — Grootscher Marsh Hound | creatures | adapted | p. 133 | Printed Stride uses core Sprinter (p. 361): Run Movement ×1.5 when Running. |
+| `deft-steps:creatures:gunna-von-sperren` — Gunna von Sperren | creatures | adapted | p. 65 | Strider (Coastal) uses Striding Gait (Coastal). |
+| `deft-steps:creatures:hochland-lockhund` — Hochland Lockhund | creatures | adapted | p. 133 | Printed Stride uses core Sprinter (p. 361): Run Movement ×1.5 when Running. |
+| `deft-steps:creatures:nordlander-bamse` — Nordlander Bamse | creatures | adapted | p. 133 | Printed Stride uses core Sprinter (p. 361): Run Movement ×1.5 when Running. |
+| `deft-steps:creatures:outlaw` — Outlaw | creatures | adapted | p. 103 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:outlaw-chief` — Outlaw Chief | creatures | adapted | p. 103 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:racketeer` — Racketeer | creatures | adapted | p. 48 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:typical-bounty-hunter` — Typical Bounty Hunter | creatures | adapted | p. 108 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:watch-sergeant` — Watch Sergeant | creatures | adapted | p. 93 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:creatures:watchman` — Watchman | creatures | adapted | p. 93 | The first printed Armour number is abstract protection on all locations; it does not stack with assigned armour. Parenthesised totals remain references. |
+| `deft-steps:cult:ranald` — Ranald | cults | adapted | p. 13 | User-approved core equivalents in aspect lists: Stay Lucky → Cheat the Odds; Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour; You Ain’t Seen Me Right? → You Saw Nothing. All aspects use Invoke (Ranald), with their separate printed access. |
+| `deft-steps:gear:bag-of-tarrabeth-seed` — Bag of Tarrabeth Seed | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
+| `deft-steps:gear:caltrops-12` — Caltrops (12) | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
+| `deft-steps:gear:glass-cutter` — Glass Cutter | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
+| `deft-steps:gear:thin-jimmy` — Thin Jimmy | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
+| `deft-steps:spell:bamboozle` — Bamboozle | spells | adapted | p. 24 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
+| `deft-steps:spell:earthshudder` — Earthshudder | spells | adapted | p. 88 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
+| `deft-steps:spell:under-my-protection` — Under my Protection | spells | adapted | p. 25 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
+| `deft-steps:spell:unremembered-face` — Unremembered Face | spells | adapted | p. 24 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
+| `deft-steps:spell:wild-wind` — Wild Wind | spells | adapted | p. 88 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
+
+</details>
+
+## Deft Steps — General Ranald Priest
+
+Pack `deft-steps-ranald-priest` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+
+## Deft Steps — Ranald the Dealer
+
+Pack `deft-steps-dealer` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 0 | 0 | 0 | 0 |
+| cults | 0 | 1 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `deft-steps-dealer:cult:ranald` — Ranald | cults | adapted | p. 24 | User-approved core equivalents in aspect lists: Stay Lucky → Cheat the Odds; Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour; You Ain’t Seen Me Right? → You Saw Nothing. All aspects use Invoke (Ranald), with their separate printed access. |
+
+</details>
+
+## Deft Steps — Taal Priest
+
+Pack `deft-steps-taal-priest` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+
+## Deft Steps — White Stag / Hermit
+
+Pack `deft-steps-white-stag` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+
+## Deft Steps — Longshanks Scout
+
+Pack `deft-steps-longshanks` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+
+## Deft Steps — Pickpocket
+
+Pack `deft-steps-pickpocket` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 1 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Pickpocket Talent swap | reference-only | p. 27 | Core Fifth Edition Thief already has Fast Hands and no level-one Strike to Stun; no further swap or free Talent is added. |
+
 ## Reviewed aliases
 
 Aliases are exact and scoped; they are not fuzzy substitutions. The active `contentId` is required to distinguish same-name Career alternatives. No mapping is invented for the withdrawn Archives I Dwarf weapons.
@@ -674,3 +818,15 @@ Aliases are exact and scoped; they are not fuzzy substitutions. The active `cont
 | careers / dwarf-guide | Huffer | Pilot | core p. 81 | Approved core Career equivalent. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision. |
 | gear-profile / dwarf-guide | Dwarf Hammer | Dwarf Warhammer | dwarf-guide p. 93 | Approved Guide naming mismatch. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision. |
 | rune-form / dwarf-guide | Protective Runes | Protection Runes | dwarf-guide p. 130 | Approved Hearth Priest naming correction. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision. |
+| talents / deft-steps | Public Speaking | Public Speaker | deft-steps p. 22 | Approved core Talent equivalent; level-two Liberator entry moves from Skills to Talent options. |
+| talents / deft-steps | Diceman | Dicer | deft-steps p. 16 | Previously approved core Talent equivalent. |
+| talents / deft-steps | Strider | Striding Gait | deft-steps p. 83 | Previously approved core Talent equivalent; printed terrains retained. |
+| talents / deft-steps | Trick-Riding | Trick Rider | deft-steps p. 128 | Previously approved core Talent equivalent. |
+| skills / deft-steps | Perform (Acting) | Entertain (Acting) | deft-steps p. 20 | User-approved Skill replacement, explained as Legacy. |
+| spells / deft-steps | Stay Lucky | Cheat the Odds | deft-steps p. 18 | User-approved core Miracle replacement, explained as Legacy in aspect lists. |
+| spells / deft-steps | A Suitable Stooge | A Suitable Sucker | deft-steps p. 24 | User-approved printed naming mismatch; detailed entry used. |
+| spells / deft-steps | Rich Man, Poor Man, Beggar Man, Thief | Trickster’s Glamour | deft-steps p. 19 | Previously approved Fifth Edition Miracle equivalent. |
+| spells / deft-steps | You Ain’t Seen Me Right? | You Saw Nothing | deft-steps p. 18 | Previously approved Fifth Edition Miracle equivalent. |
+| traits / deft-steps | Stride | Sprinter | deft-steps p. 133 | User-approved core Trait replacement, with a Legacy explanation on each hound. |
+| gear-profile / deft-steps | Steel Mummit | Thin Jimmy | deft-steps p. 33 | User pairs p. 32 table name/price with this p. 33 description. |
+| gear-profile / deft-steps | Telescopic Stick | Telescopic Pole | deft-steps p. 33 | User pairs p. 32 table name/price with this p. 33 description. |

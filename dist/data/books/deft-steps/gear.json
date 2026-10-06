@@ -1,0 +1,171 @@
+[
+  {
+    "id": "deft-steps:gear:bag-of-tarrabeth-seed",
+    "name": "Bag of Tarrabeth Seed",
+    "page": 32,
+    "price": "6d",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Thieving tools",
+    "text": "Whilst Tarrabeth is a healing herb its seed is pungent and sweet, and is used in cooking. Some dogs find the scent stimulating and distracting, so burglars occasionally use it to distract guard dogs. If a Character is being tracked by dogs, they may leave a bag of Tarrabeth seed in their path. Dogs who come within 5 yards of the bag should make an Average (+2 SL) Willpower Test. Those who fail the Test spend D10 rounds investigating the bag before taking up the trail again. If a dog scores an Astounding Failure (-6 SL or less), they are so distracted by the scent that they forget about the original trail they were following.",
+    "conversion": "Description: p. 32. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion.",
+    "adaptation": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+  },
+  {
+    "id": "deft-steps:gear:bag-of-soot",
+    "name": "Bag of Soot",
+    "page": 32,
+    "price": "2d",
+    "enc": 0,
+    "availability": "Common",
+    "category": "Thieving tools",
+    "text": "The finest soot is said to come from the cannon foundries of Nuln. A Character can use a bag of soot to stain their clothes, equipment, and exposed skin, making surfaces dark and dull. A character who is covered in soot is harder to perceive in the dark. Any Characters suffer -1 SL to sight-based Perception Tests made to spot the Character or discern anything about their appearance.",
+    "conversion": "Description: p. 32. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion."
+  },
+  {
+    "id": "deft-steps:gear:caltrops-12",
+    "name": "Caltrops (12)",
+    "page": 32,
+    "price": "2/-",
+    "enc": 0,
+    "availability": "Rare",
+    "category": "Thieving tools",
+    "text": "These many-sided spikes are sometimes scattered on battlefields to make areas unsafe for cavalry. A Character with caltrops may use an Action to scatter a dozen of them on the ground, creating a hazardous area 2 yards in diameter. Anyone entering the area must pass a Hard (−2 SL) Athletics Test or be struck by the caltrops. If the Character is aware of the caltrops and moves at walking speed, this Test becomes Average (+2 SL). Characters who fail the Test take a Damage D10 hit to a randomly determined leg and suffer a Surprised Condition.",
+    "conversion": "Description: p. 32. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion.",
+    "adaptation": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+  },
+  {
+    "id": "deft-steps:gear:crampons-2",
+    "name": "Crampons (2)",
+    "page": 32,
+    "price": "1GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Thieving tools",
+    "text": "Crampons are wooden frames fitted to boots. Horseshoe nails are hammered through the frame to assist in scaling steep surfaces. Whilst wearing a pair of crampons, Tests made by a Character have the following modifiers: 0 +2 SL to Climb Tests made to scale a rocky or wooden surface 0 +1 SL to Climb Tests made to scale a rope 0 -1 SL to Athletics or Agility Tests made outside the context of climbing 0 -2 SL to Stealth Tests made outside the context of climbing 0 -2 SL to any other Test involving movement made outside the context of climbing (it is best to remove crampons before attempting your dance steps)",
+    "conversion": "Description: p. 32. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion."
+  },
+  {
+    "id": "deft-steps:gear:glass-cutter",
+    "name": "Glass Cutter",
+    "page": 32,
+    "price": "1GC",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Thieving tools",
+    "text": "A short metal rod tipped with a hard shard of diamond or Stonehorn. A Character equipped with a glass cutter can use it to bore a hole through a pane of glass or scratch out a panel that may then be knocked in with a mallet. Doing this requires an Average (+2 SL) Art (Engraving) Test. Glass Cutting Success Table (p. 33): +1 or more, cut a hole/panel without complication; +0, cut it but with normal breaking-glass noise; −0, bore the hole and take a Damage 3 hit to the primary hand; −1 or less, the window shatters noisily and the primary hand takes a Damage 3 hit.",
+    "conversion": "Description: p. 33. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion.",
+    "adaptation": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+  },
+  {
+    "id": "deft-steps:gear:periscope",
+    "name": "Periscope",
+    "page": 32,
+    "price": "2GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Thieving tools",
+    "text": "Pioneered by Dwarf Engineers for the purposes of providing a view to the crews of their submersible ships, a periscope is a device employing mirrors to allow Characters to peep around corners or over objects without exposing themselves. A simple periscope may be nothing more than a mirror lashed to the short rod, but purpose- built devices that house two angled mirrors within a sturdy frame are available. A Character with a periscope may use it to make sight-based Perception Tests while keeping their body hidden or within cover.",
+    "conversion": "Description: p. 33. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion."
+  },
+  {
+    "id": "deft-steps:gear:smoke-bomb",
+    "name": "Smoke Bomb",
+    "page": 32,
+    "price": "1GC",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Thieving tools",
+    "text": "A typical smoke bomb consists of a metal or ceramic vessel containing an alchemical cocktail, which is wadded in and lit by a fuse. A smoke bomb can be thrown exactly like an incendiary, though it does not burn at such a high temperature. Instead, it produces a thick cloud of smoke. The smoke is thick enough to fill a large room or an area 10 yards in diameter in the open air. The cloud persists for 2D10 Rounds (double the number if the bomb is employed in an enclosed space). Characters may not see through the smoke cloud and may only see 1 yard if within the smoke cloud. Furthermore, the smoke is not breathable, and any Character caught in the cloud must test to see if they suffer from Suffocation as described on page 181 of the Fourth Edition Warhammer Fantasy Roleplay Core Rulebook. Smoke bombs are, therefore, effective ways to clear a room or cover an escape.",
+    "conversion": "Description: p. 33. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion."
+  },
+  {
+    "id": "deft-steps:gear:thin-jimmy",
+    "name": "Thin Jimmy",
+    "page": 32,
+    "price": "2GC",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Thieving tools",
+    "text": "Named for one of the legendary companions of Ranald, this is a small thin steel tool that can be slipped between a door and the jamb in the hope of levering a bolt aside. Whilst a crowbar is used to lever a door open despite a lock, and a lockpick is used to spring a lock open, a Steel Mummit acts on the bolt in the hope of jiggling it loose without the need to operate any mechanism. If a door is locked with a lock and key (not a padlock), or if it is bolted shut, a Steel Mummit may be used to open it if a Character passes a Hard (−2 SL) Sleight of Hand Test. Steel Mummit Success Table (p. 33): +1 or more, open the lock/bolt undamaged and it can be relocked; +0, open it but ruin the mechanism/bolt, visibly needing repair; −0, fail to open it; −1 or less, fail and make loud scraping audible in adjoining rooms.",
+    "conversion": "Description: p. 33. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion. User-approved printed naming mismatch: table Thin Jimmy uses the description headed Steel Mummit. The naming correction alone is not a Legacy adaptation.",
+    "adaptation": "Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364)."
+  },
+  {
+    "id": "deft-steps:gear:telescopic-pole",
+    "name": "Telescopic Pole",
+    "page": 32,
+    "price": "3GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Thieving tools",
+    "text": "This stick has the appearance of a walking cane with a hooked handle. In fact, it may be extended into a pole of twelve feet in length. The pole may be used to manipulate objects at a distance, such as unlatching windows on an upper floor or reaching through prison bars to a set of keys. A Character may make Dexterity Tests using the telescopic stick to manipulate objects up to 4 yards away. The pole is unwieldy, so any Tests made whilst using it suffer from -2 SL.",
+    "conversion": "Description: p. 33. The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion. User-approved printed naming mismatch: table Telescopic Pole uses the description headed Telescopic Stick. The naming correction alone is not a Legacy adaptation."
+  },
+  {
+    "id": "deft-steps:gear:hunters-garb",
+    "name": "Hunter’s Garb",
+    "page": 132,
+    "price": "15/-",
+    "enc": 2,
+    "availability": "Rare",
+    "category": "Clothing",
+    "text": "This clothing made to resemble the local flora, with fronds, leaves, and even flowers, hanging from it. It may look bizarre and unwieldy out of context, but it gives a bonus of +2 SL to any Stealth Tests that are made in the appropriate terrain.",
+    "conversion": "The printed +2 SL applies situationally in appropriate terrain; no permanent Stealth bonus is added."
+  },
+  {
+    "id": "deft-steps:gear:hochland-lockhund",
+    "name": "Hochland Lockhund",
+    "page": 132,
+    "price": "2GC",
+    "enc": null,
+    "availability": "Common",
+    "category": "Animals",
+    "text": "Hunting animal listed in the Animals and Equipment table. Profiles and training are on pp. 133–134.",
+    "conversion": "Records acquisition only, without creating or controlling a companion. A printed dash for Encumbrance remains unknown, not zero."
+  },
+  {
+    "id": "deft-steps:gear:nordlander-bamse",
+    "name": "Nordlander Bamse",
+    "page": 132,
+    "price": "4GC",
+    "enc": null,
+    "availability": "Scarce",
+    "category": "Animals",
+    "text": "Hunting animal listed in the Animals and Equipment table. Profiles and training are on pp. 133–134.",
+    "conversion": "Records acquisition only, without creating or controlling a companion. A printed dash for Encumbrance remains unknown, not zero."
+  },
+  {
+    "id": "deft-steps:gear:grootscher-marsh-hound",
+    "name": "Grootscher Marsh Hound",
+    "page": 132,
+    "price": "5GC",
+    "enc": null,
+    "availability": "Scarce",
+    "category": "Animals",
+    "text": "Hunting animal listed in the Animals and Equipment table. Profiles and training are on pp. 133–134.",
+    "conversion": "Records acquisition only, without creating or controlling a companion. A printed dash for Encumbrance remains unknown, not zero."
+  },
+  {
+    "id": "deft-steps:gear:dove-hawk",
+    "name": "Dove Hawk",
+    "page": 132,
+    "price": "10GC",
+    "enc": 1,
+    "availability": "Rare",
+    "category": "Animals",
+    "text": "Hunting animal listed in the Animals and Equipment table. Profiles and training are on pp. 133–134.",
+    "conversion": "Records acquisition only, without creating or controlling a companion. A printed dash for Encumbrance remains unknown, not zero."
+  },
+  {
+    "id": "deft-steps:gear:arabyan-redhawk",
+    "name": "Arabyan Redhawk",
+    "page": 132,
+    "price": "25GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Animals",
+    "text": "Hunting animal listed in the Animals and Equipment table. Profiles and training are on pp. 133–134.",
+    "conversion": "Records acquisition only, without creating or controlling a companion. A printed dash for Encumbrance remains unknown, not zero."
+  }
+]

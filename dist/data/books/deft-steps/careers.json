@@ -1,0 +1,1105 @@
+[
+  {
+    "id": "deft-steps:career:thief-priest",
+    "name": "Thief-Priest",
+    "class": "Rogue",
+    "species": [
+      "Human"
+    ],
+    "page": 14,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 1,
+      "Dex": 3,
+      "Int": 4,
+      "WP": 1,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Dodge",
+          "Intuition",
+          "Lore (Ranald)",
+          "Perception",
+          "Pick Lock",
+          "Pray",
+          "Sleight of Hand",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Bless (Ranald)",
+          "Flee!",
+          "Holy Visions",
+          "Suave"
+        ],
+        "trappings": [
+          "Discrete Symbol of Ranald",
+          "Leather Jerkin",
+          "Sack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Thief-Priest",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Charm",
+          "Intuition",
+          "Endurance",
+          "Entertain (Storytelling)",
+          "Language (Thieve’s Tongue)",
+          "Secret Signs (Thief)"
+        ],
+        "talents": [
+          "Secret Identity",
+          "Etiquette (Ranaldans)",
+          "Invoke (Ranald)",
+          "Luck"
+        ],
+        "trappings": [
+          "Trade Tools (Thief)",
+          "Rope",
+          "Book (Ranald)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Evaluate",
+          "Gossip"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Etiquette (Criminals)",
+          "Nimble-fingered",
+          "Nose for Trouble"
+        ],
+        "trappings": [
+          "Initiate Apprentice/Lookout",
+          "Shrine of the Night Prowler",
+          "Quality Dark Clothing"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Shadow Prowler",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Leadership",
+          "Intimidate"
+        ],
+        "talents": [
+          "Criminal",
+          "Night Vision",
+          "Pure Soul",
+          "Shadow"
+        ],
+        "trappings": [
+          "Mask",
+          "Subordinate Thief-Priests"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Invoke (The Night Prowler) → Invoke (Ranald); retains the Career-specific printed Miracle list. Printed older Miracles use reviewed core equivalents: Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing.",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented.",
+    "randomAlternativeFor": "priest"
+  },
+  {
+    "id": "deft-steps:career:gambler-priest",
+    "name": "Gambler-Priest",
+    "class": "Rogue",
+    "species": [
+      "Human"
+    ],
+    "page": 16,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 4,
+      "Dex": 1,
+      "Int": 3,
+      "WP": 2,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Cool",
+          "Gamble",
+          "Gossip",
+          "Intuition",
+          "Lore (Ranald)",
+          "Perception",
+          "Pray",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Bless (Ranald)",
+          "Luck",
+          "Holy Visions",
+          "Suave"
+        ],
+        "trappings": [
+          "Discrete Symbol of Ranald",
+          "Deck of Cards",
+          "Dice"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Gambler-Priest",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Dodge",
+          "Entertain (Storytelling)",
+          "Evaluate",
+          "Haggle",
+          "Intimidate",
+          "Melee (Basic)"
+        ],
+        "talents": [
+          "Cardsharp",
+          "Dicer",
+          "Etiquette (Ranaldans)",
+          "Invoke (Ranald)"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Quality Clothing",
+          "Lucky Charm"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Evaluate",
+          "Language (Any)",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Acute Sense (Any)",
+          "Read/Write",
+          "Fast Hands",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "Initiate Apprentice",
+          "Shrine of Ranald (Portable or Fixed)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master of Chance",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Intimidate"
+        ],
+        "talents": [
+          "Nose for Trouble",
+          "Pure Soul",
+          "Savvy",
+          "Schemer",
+          "Secret Identity"
+        ],
+        "trappings": [
+          "Subordinate Priests",
+          "Best Quality Clothes"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Diceman → Dicer; Invoke (The Gamester) → Invoke (Ranald); retains the Career-specific printed Miracle list. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds.",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented.",
+    "randomAlternativeFor": "priest"
+  },
+  {
+    "id": "deft-steps:career:trickster-priest",
+    "name": "Trickster-Priest",
+    "class": "Rogue",
+    "species": [
+      "Human"
+    ],
+    "page": 20,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 3,
+      "Dex": 2,
+      "Int": 4,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Cool",
+          "Intuition",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Lore (Ranald)",
+          "Perception",
+          "Pray",
+          "Sleight of Hand"
+        ],
+        "talents": [
+          "Bless (Ranald)",
+          "Cat-tongued",
+          "Luck",
+          "Suave"
+        ],
+        "trappings": [
+          "Discrete Symbol of Ranald",
+          "2 Sets of Clothing"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Trickster-Priest",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Entertain (Acting)",
+          "Intimidate",
+          "Language (Any)",
+          "Melee (Basic)",
+          "Stealth (Any)"
+        ],
+        "talents": [
+          "Etiquette (Ranald)",
+          "Holy Visions",
+          "Invoke (Ranald)",
+          "Secret Identity"
+        ],
+        "trappings": [
+          "Disguise Kit",
+          "Hand Weapon",
+          "Book (Ranald)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Art (Any)",
+          "Dodge",
+          "Entertain (Acting)",
+          "Secret Signs (Thieves)"
+        ],
+        "talents": [
+          "Blather",
+          "Fast Hands",
+          "Master of Disguise",
+          "Mimic"
+        ],
+        "trappings": [
+          "Initiate Apprentice",
+          "Cloak or Coat with Hidden Pockets"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Lord of Misrule",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Leadership",
+          "Consume Alcohol"
+        ],
+        "talents": [
+          "Nose for Trouble",
+          "Public Speaker",
+          "Pure Soul",
+          "Savvy"
+        ],
+        "trappings": [
+          "Subordinate Priests",
+          "Trade Tools (Any)"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Invoke (The Deceiver) → Invoke (Ranald); retains the Career-specific printed Miracle list; Printed Perform (Acting) uses Entertain (Acting), by user choice; Public Speaking → Public Speaker; Unspecified Art requires a chosen core specialisation; Unspecified Stealth requires a chosen core specialisation. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing.",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented.",
+    "randomAlternativeFor": "priest"
+  },
+  {
+    "id": "deft-steps:career:liberator-priest",
+    "name": "Liberator-Priest",
+    "class": "Rogue",
+    "species": [
+      "Human"
+    ],
+    "page": 22,
+    "advanceScheme": {
+      "WS": 4,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 2,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Cool",
+          "Entertain (Storytelling)",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Lore (Politics)",
+          "Perception",
+          "Pray"
+        ],
+        "talents": [
+          "Argumentative",
+          "Bless (Ranald)",
+          "Holy Visions",
+          "Luck"
+        ],
+        "trappings": [
+          "Discrete Symbol of Ranald",
+          "Leather Jack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Liberator-Priest",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Bribery",
+          "Dodge",
+          "Intimidate",
+          "Melee (Basic)"
+        ],
+        "talents": [
+          "Cat-tongued",
+          "Etiquette (Ranald)",
+          "Invoke (Ranald)",
+          "Read/Write",
+          "Public Speaker"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Holy Book (Ranald)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Evaluate",
+          "Language (Thieve’s Tongue)",
+          "Leadership",
+          "Lore (Local)"
+        ],
+        "talents": [
+          "Impassioned Zeal (Any Cause)",
+          "Public Speaker",
+          "Schemer",
+          "Secret Identity"
+        ],
+        "trappings": [
+          "Initiate Apprentice",
+          "Shrine of Ranald",
+          "Street Urchin Band"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "People’s Champion",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Language (Any)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Disarm",
+          "Gregarious",
+          "Master Orator",
+          "Pure Soul"
+        ],
+        "trappings": [
+          "Grateful Local Common Folk",
+          "Subordinate Priests"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Impassioned Zeal requires an explicit Cause; Invoke (The Protector) → Invoke (Ranald); retains the Career-specific printed Miracle list; Level-two Public Speaking moves from Skills to the Public Speaker Talent options; Public Speaking → Public Speaker. Printed older Miracles use reviewed core equivalents: Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour, Stay Lucky → Cheat the Odds, You Ain’t Seen Me Right? → You Saw Nothing.",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented.",
+    "randomAlternativeFor": "priest"
+  },
+  {
+    "id": "deft-steps:career:forger",
+    "name": "Forger",
+    "class": "Rogue",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 44,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": null,
+      "Dex": 1,
+      "Int": 2,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Fraudster",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Art (Any One)",
+          "Cool",
+          "Consume Alcohol",
+          "Gossip",
+          "Haggle",
+          "Intuition",
+          "Perception",
+          "Sleight of Hand",
+          "Stealth (Urban)",
+          "Trade (Artist or Smith)"
+        ],
+        "talents": [
+          "Artistic",
+          "Craftsman (Trade)",
+          "Criminal",
+          "Numismatics"
+        ],
+        "trappings": [
+          "Coin Mould (any currency)",
+          "Trade Tools"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Forger",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Art (Any One)",
+          "Bribery",
+          "Charm",
+          "Evaluate",
+          "Gamble",
+          "Secret Signs (Thief)"
+        ],
+        "talents": [
+          "Briber",
+          "Nimble-fingered",
+          "Read/Write",
+          "Tinker"
+        ],
+        "trappings": [
+          "Calligrapher’s Tools"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Counterfeiter",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Lore (Art)",
+          "Lore (Heraldry)",
+          "Research",
+          "Trade (Any One)"
+        ],
+        "talents": [
+          "Acute Sense (Any)",
+          "Dealmaker",
+          "Savvy",
+          "Super Numerate"
+        ],
+        "trappings": [
+          "Artist’s Tools",
+          "Workshop",
+          "Charlatan Contact"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Counterfeiter",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Leadership",
+          "Lore (History)"
+        ],
+        "talents": [
+          "Kingpin",
+          "Magnum Opus",
+          "Master Tradesman (Any)",
+          "Schemer"
+        ],
+        "trappings": [
+          "2 Charlatan Subordinates",
+          "Forged Guild Licence",
+          "Quality Clothing"
+        ]
+      }
+    ],
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented."
+  },
+  {
+    "id": "deft-steps:career:ranger-priest-of-taal",
+    "name": "Ranger-Priest of Taal",
+    "class": "Ranger",
+    "species": [
+      "Human"
+    ],
+    "page": 86,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Charm Animal",
+          "Cool",
+          "Endurance",
+          "Intuition",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Perception",
+          "Pray",
+          "Ranged (Bow)"
+        ],
+        "talents": [
+          "Bless (Taal)",
+          "Holy Visions",
+          "Orientation",
+          "Rover"
+        ],
+        "trappings": [
+          "Bow and 10 arrows",
+          "Cloak",
+          "Religious Symbol (Taal)",
+          "Sturdy Boots"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Ranger-Priest",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Heal",
+          "Intimidate",
+          "Melee (Basic)",
+          "Navigation",
+          "Stealth (Rural)",
+          "Track"
+        ],
+        "talents": [
+          "Etiquette (Taal)",
+          "Invoke (Taal)",
+          "Striding Gait (Any)"
+        ],
+        "trappings": [
+          "Backpack",
+          "Bedroll",
+          "Book (Taal)",
+          "Hand Weapon"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Animal Training (Any)",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Hardy",
+          "Pure Soul",
+          "Resistant (Any)",
+          "Sure Shot"
+        ],
+        "trappings": [
+          "Initiate Follower",
+          "Religious Relic"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Vice-Heirarch",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Language (Any)",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Disarm",
+          "Gregarious",
+          "Master Orator",
+          "Pure Soul"
+        ],
+        "trappings": [
+          "Animal Companion",
+          "Subordinate Priests"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any).",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented."
+  },
+  {
+    "id": "deft-steps:career:muleskinner",
+    "name": "Muleskinner",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human"
+    ],
+    "page": 128,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 1,
+      "S": null,
+      "T": 4,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 2,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Driver",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Animal Care",
+          "Charm Animal",
+          "Drive",
+          "Endurance",
+          "Gossip",
+          "Lore (Local)",
+          "Melee (Basic)",
+          "Perception",
+          "Ranged (Entangling)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Animal Affinity",
+          "Crack the Whip",
+          "Orientation",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Gloves",
+          "Leather Hat",
+          "Travel Clothes",
+          "Whip"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Muleskinner",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Animal Training (Any)",
+          "Dodge",
+          "Language (Any)",
+          "Navigation",
+          "Outdoor Survival",
+          "Ranged (Bow)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Seasoned Traveller",
+          "Fearless (Any)",
+          "Striding Gait (Any)"
+        ],
+        "trappings": [
+          "Tent",
+          "Quality Hat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Caravan Guide",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Cool",
+          "Intuition",
+          "Trade (Carpenter)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Etiquette (Guilder)",
+          "Nose for Trouble",
+          "Stout-hearted",
+          "Trick Rider"
+        ],
+        "trappings": [
+          "Map",
+          "Pack Animal",
+          "Quality Travel Clothes",
+          "Riding Horse and Tack"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Caravan Master",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Haggle",
+          "Leadership"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Inspiring",
+          "Numismatics",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Caravan",
+          "Stable of Pack Animals"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any); Trick-Riding → Trick Rider.",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented."
+  },
+  {
+    "id": "deft-steps:career:gamekeeper",
+    "name": "Gamekeeper",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 138,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": 1,
+      "S": null,
+      "T": null,
+      "I": 1,
+      "Ag": 3,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Underkeeper",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Animal Care",
+          "Climb",
+          "Gossip",
+          "Lore (Beasts)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Bow)",
+          "Set Trap",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Marksman",
+          "Rover",
+          "Striding Gait (Any)",
+          "Trapper"
+        ],
+        "trappings": [
+          "Hat",
+          "Bow and Arrow (12)",
+          "Hand Weapon"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Gamekeeper",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Endurance",
+          "Intuition",
+          "Lore (Local)",
+          "Track"
+        ],
+        "talents": [
+          "Hunter’s Eye",
+          "Menacing",
+          "Sharpshooter",
+          "Strike to Stun"
+        ],
+        "trappings": [
+          "Quality Hat",
+          "Hunting Suit"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Head Gamekeeper",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Animal Training (Any)",
+          "Navigation",
+          "Ranged (Blackpowder)",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Acute Sense (Any)",
+          "Orientation",
+          "Fast Shot"
+        ],
+        "trappings": [
+          "Blackpowder Weapon",
+          "Riding Horse with Saddle and Tack"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Gamekeeper",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Leadership",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Commanding Presence",
+          "Etiquette (Servants)",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Estate Cottage",
+          "Quality Clothing"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any).",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented."
+  },
+  {
+    "id": "deft-steps:career:poacher",
+    "name": "Poacher",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 140,
+    "advanceScheme": {
+      "WS": 3,
+      "BS": 1,
+      "S": null,
+      "T": null,
+      "I": 4,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 2,
+      "WP": null,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Scrumper",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Bribery",
+          "Climb",
+          "Dodge",
+          "Haggle",
+          "Lore (Beasts)",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Sling)",
+          "Set Trap",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Fisherman",
+          "Flee!",
+          "Striding Gait (Any)",
+          "Trapper"
+        ],
+        "trappings": [
+          "Cloak",
+          "Rod and Line",
+          "Selection of Animal Traps",
+          "Sling with 10 Stone Bullets"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Poacher",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Athletics",
+          "Cool",
+          "Endurance",
+          "Melee (Basic)",
+          "Ranged (Bow)",
+          "Track"
+        ],
+        "talents": [
+          "Hunter’s Eye",
+          "Marksman",
+          "Rover",
+          "Sharpshooter"
+        ],
+        "trappings": [
+          "Bed Roll",
+          "Bow and Arrow",
+          "Tent"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Poacher",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Animal Care",
+          "Animal Training (Any)",
+          "Navigation",
+          "Ride (Horse)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Acute Sense (Any)",
+          "Criminal",
+          "Fast Shot"
+        ],
+        "trappings": [
+          "Hunting Hound or Hawk",
+          "Quality Weapon"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Champion Poacher",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Intimidate",
+          "Lore (Law)"
+        ],
+        "talents": [
+          "Briber",
+          "Dealmaker",
+          "Kingpin",
+          "Menacing"
+        ],
+        "trappings": [
+          "Riding Horse with Saddle and Tack"
+        ]
+      }
+    ],
+    "adaptation": "Reviewed Fifth Edition changes: Strider (Any) → Striding Gait (Any).",
+    "conversion": "Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented."
+  }
+]

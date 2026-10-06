@@ -620,6 +620,99 @@ export const CONTENT_ALIASES = Object.freeze([
       "Approved Hearth Priest naming correction. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision.",
     scope: "dwarf-guide",
   },
+  ...[
+    [
+      "talents",
+      "Public Speaking",
+      "Public Speaker",
+      22,
+      "Approved core Talent equivalent; level-two Liberator entry moves from Skills to Talent options.",
+    ],
+    [
+      "talents",
+      "Diceman",
+      "Dicer",
+      16,
+      "Previously approved core Talent equivalent.",
+    ],
+    [
+      "talents",
+      "Strider",
+      "Striding Gait",
+      83,
+      "Previously approved core Talent equivalent; printed terrains retained.",
+    ],
+    [
+      "talents",
+      "Trick-Riding",
+      "Trick Rider",
+      128,
+      "Previously approved core Talent equivalent.",
+    ],
+    [
+      "skills",
+      "Perform (Acting)",
+      "Entertain (Acting)",
+      20,
+      "User-approved Skill replacement, explained as Legacy.",
+    ],
+    [
+      "spells",
+      "Stay Lucky",
+      "Cheat the Odds",
+      18,
+      "User-approved core Miracle replacement, explained as Legacy in aspect lists.",
+    ],
+    [
+      "spells",
+      "A Suitable Stooge",
+      "A Suitable Sucker",
+      24,
+      "User-approved printed naming mismatch; detailed entry used.",
+    ],
+    [
+      "spells",
+      "Rich Man, Poor Man, Beggar Man, Thief",
+      "Trickster’s Glamour",
+      19,
+      "Previously approved Fifth Edition Miracle equivalent.",
+    ],
+    [
+      "spells",
+      "You Ain’t Seen Me Right?",
+      "You Saw Nothing",
+      18,
+      "Previously approved Fifth Edition Miracle equivalent.",
+    ],
+    [
+      "traits",
+      "Stride",
+      "Sprinter",
+      133,
+      "User-approved core Trait replacement, with a Legacy explanation on each hound.",
+    ],
+    [
+      "gear-profile",
+      "Steel Mummit",
+      "Thin Jimmy",
+      33,
+      "User pairs p. 32 table name/price with this p. 33 description.",
+    ],
+    [
+      "gear-profile",
+      "Telescopic Stick",
+      "Telescopic Pole",
+      33,
+      "User pairs p. 32 table name/price with this p. 33 description.",
+    ],
+  ].map(([kind, from, to, page, reason]) => ({
+    kind,
+    from,
+    to,
+    scope: "deft-steps",
+    source: { book: "deft-steps", page },
+    reason,
+  })),
 ]);
 export function canonicalName(kind, name, scope) {
   const alias = CONTENT_ALIASES.find(
@@ -675,6 +768,8 @@ export function validateAliases(aliases, bookIds) {
         "talents",
         "skills",
         "careers",
+        "spells",
+        "traits",
       ].includes(x.kind) ||
       !x.from ||
       !x.to ||
@@ -728,6 +823,8 @@ export function validateAliasTargets(aliases, entries, config) {
       valid = entries.some(
         (e) => e.contentKind === "careers" && e.name === x.to,
       );
+    else if (["spells", "traits"].includes(x.kind))
+      valid = entries.some((e) => e.contentKind === x.kind && e.name === x.to);
     else
       valid =
         Object.hasOwn(config.gearEnc || {}, x.to) ||

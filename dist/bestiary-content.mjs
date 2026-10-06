@@ -21,6 +21,25 @@ const fail = (name) => {
 export function validateBestiary(R) {
   for (const x of R.creatures || []) {
     if (
+      x.trainingOptions !== undefined &&
+      (!Array.isArray(x.trainingOptions) ||
+        new Set(x.trainingOptions.map((o) => o?.name)).size !==
+          x.trainingOptions.length ||
+        x.trainingOptions.some(
+          (o) =>
+            !object(o) ||
+            !text(o.name) ||
+            !text(o.text) ||
+            !Number.isInteger(o.page) ||
+            o.page < 1 ||
+            (o.adaptation !== undefined && !text(o.adaptation)) ||
+            Object.keys(o).some(
+              (k) => !["name", "text", "page", "adaptation"].includes(k),
+            ),
+        ))
+    )
+      fail(x.name + " training options");
+    if (
       x.magicGrants !== undefined &&
       (!Array.isArray(x.magicGrants) ||
         x.magicGrants.some(
@@ -51,9 +70,10 @@ export function validateBestiary(R) {
             !object(g) ||
             !text(g.name) ||
             Object.keys(g).some(
-              (key) => !["name", "value", "ranks"].includes(key),
+              (key) => !["name", "value", "ranks", "adaptation"].includes(key),
             ) ||
             (g.value !== undefined && typeof g.value !== "string") ||
+            (g.adaptation !== undefined && !text(g.adaptation)) ||
             (g.ranks !== undefined &&
               (!Number.isInteger(g.ranks) || g.ranks < 1)) ||
             !catalog.some(
@@ -101,6 +121,7 @@ export function validateBestiary(R) {
         (a) =>
           !text(a.name) ||
           (a.skillName !== undefined &&
+            a.skillName !== null &&
             (!text(a.skillName) ||
               !R.skills.some(
                 (skill) =>

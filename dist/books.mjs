@@ -132,6 +132,7 @@ const columns = {
     "talentGrants",
     "armourProfiles",
     "magicGrants",
+    "trainingOptions",
   ],
   traits: ["text", "parameter"],
   templates: ["adjustments", "skills", "talents", "magic", "text"],

@@ -1,4 +1,5 @@
 import { detailKey } from "../disclosures.mjs";
+import { CAUSE_KEY, namedCause } from "../talent-targets.mjs";
 import { elfAction, elfChange } from "../high-elf-ui.mjs";
 import { birthEra, elfState, elderSkills } from "../high-elf.mjs";
 import * as M from "../rules.mjs";
@@ -683,6 +684,13 @@ export function createFeature(getContext, setContext) {
       toast("XP budget updated.");
     }
     if (a === "advance-size") s.advanceSize = Number(el.dataset.size);
+    if (a === "set-cause") {
+      const value = $("#impassioned-cause").value.trim();
+      if (!namedCause(value)) throw Error("Enter a Cause, without brackets.");
+      s.talentChoices[CAUSE_KEY] = value;
+      if (M.base(s.freeTalent) === "Impassioned Zeal")
+        s.freeTalent = namedCause(value);
+    }
     if (a === "buy" || a === "promote") {
       if (errors().length)
         throw Error("Finish the creation choices above first.");

@@ -38,7 +38,7 @@ export function npcText(
       d.talents
         .map(
           (x) =>
-            `${legacyPDFName(R, M.talentInfo(R, x.name), x.name)}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`,
+            `${legacyPDFName(R, { ...M.talentInfo(R, x.name), ...x }, x.name)}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`,
         )
         .join(", "),
       "",
@@ -47,9 +47,17 @@ export function npcText(
         (t) =>
           `${legacyPDFName(
             R,
-            R.traits.find((x) => x.contentId === t.id),
+            {
+              ...R.traits.find((x) => x.contentId === t.id),
+              source: t.source,
+              adaptation: t.adaptation,
+            },
             t.name,
           )}${t.value ? ` (${t.value})` : ""} · ${npcSourceLabel(R, t)}`,
+      ),
+      ...d.trainingReferences.map(
+        (x) =>
+          `Trained (${legacyPDFName(R, x)}): ${x.text} · ${npcSourceLabel(R, x)}`,
       ),
       "",
       "EQUIPMENT",
@@ -75,7 +83,14 @@ export function npcText(
       "",
       "SOURCE DISCREPANCIES & CHECKS",
       ...d.profile.notes,
-      ...[d.profile, ...d.gear, ...d.magic]
+      ...[
+        d.profile,
+        ...d.gear,
+        ...d.magic,
+        ...d.traits,
+        ...d.talents,
+        ...d.trainingReferences,
+      ]
         .map((x) => legacyTitle(R, x))
         .filter(Boolean),
       ...d.issues.map(
@@ -124,13 +139,15 @@ export function npcText(
       "RULE REFERENCES FOR SELECTED OPTIONS",
       ...d.traits.map(
         (t) =>
-          `${t.name}${t.value ? ` (${t.value})` : ""} (${npcSourceLabel(R, R.traits.find((x) => x.contentId === t.id) || t)}): ${R.traits.find((x) => x.contentId === t.id)?.text || "See source"}`,
+          `${legacyPDFName(R, t)}${t.value ? ` (${t.value})` : ""} (${npcSourceLabel(R, R.traits.find((x) => x.contentId === t.id) || t)}): ${R.traits.find((x) => x.contentId === t.id)?.text || "See source"}${t.adaptation ? ` Legacy: ${t.adaptation} (${npcSourceLabel(R, t)})` : ""}`,
       ),
       ...d.talents.map(
         (t) =>
-          `${t.name} (${npcSourceLabel(R, M.talentInfo(R, t.name) || t)}): ${M.talentInfo(R, t.name)?.text || "See source"}${legacyTitle(R, M.talentInfo(R, t.name)) ? ` Legacy: ${legacyTitle(R, M.talentInfo(R, t.name))}` : ""}`,
+          `${legacyPDFName(R, { ...M.talentInfo(R, t.name), ...t }, t.name)} (${npcSourceLabel(R, M.talentInfo(R, t.name) || t)}): ${M.talentInfo(R, t.name)?.text || "See source"}${legacyTitle(R, { ...M.talentInfo(R, t.name), ...t }) ? ` Legacy: ${legacyTitle(R, { ...M.talentInfo(R, t.name), ...t })}` : ""}`,
       ),
-      ...d.magic.map((x) => `${x.name} (${npcSourceLabel(R, x)}): ${x.text}`),
+      ...d.magic.map(
+        (x) => `${legacyPDFName(R, x)} (${npcSourceLabel(R, x)}): ${x.text}`,
+      ),
       "",
       "EDIT HISTORY",
       ...s.changes.map((x) => `${x.at} · ${x.label}`),

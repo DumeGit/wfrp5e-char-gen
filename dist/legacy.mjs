@@ -72,6 +72,17 @@ export function legacyMechanic(id) {
 }
 export function legacyCareerSkill(c, name) {
   if (
+    c?.id === "deft-steps:career:trickster-priest" &&
+    /^(Art|Stealth) \(|^Entertain \(Acting\)$/.test(name)
+  )
+    return {
+      source: c.source,
+      adaptation:
+        name === "Entertain (Acting)"
+          ? "Printed level-three Perform (Acting) uses Entertain (Acting), by user choice; it is the same Skill listed at level two."
+          : "The printed Skill omits its specialisation; the user approved an explicit core specialisation choice, without extra free Advances.",
+    };
+  if (
     [
       "high-elf:career:sea-guard",
       "high-elf:career:merchant-adventurer",
@@ -134,6 +145,18 @@ export function legacySources(R, entry) {
         const changed = legacyCareerSkill(c, entry.name);
         add(changed?.source, changed?.adaptation);
       }
+  if (
+    entry?.type === "talent" &&
+    eligibility?.book === "deft-steps" &&
+    (entry.name === "Invoke (Ranald)" ||
+      /^Impassioned Zeal \(/.test(entry.name))
+  )
+    add(
+      eligibility,
+      entry.name === "Invoke (Ranald)"
+        ? "Printed aspect-specific Invoke uses Invoke (Ranald), retaining the Career’s own Miracle list."
+        : "Printed Impassioned Zeal omits its Cause; the user approved an explicit Cause with normal core purchase limits.",
+    );
   if (
     entry?.type === "talent" &&
     [

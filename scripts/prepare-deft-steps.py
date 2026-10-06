@@ -96,15 +96,41 @@ for (setting, group), entries in additions.items():
                   'reason':'Specialisations explicitly printed in Deft Steps Careers; individual Career pages identify uses.'})
 
 spells = read(args.input_dir/'miracles.raw.json')
+aspect_spells = {}
 for spell in spells:
     aspect = spell['category']
+    aspect_spells.setdefault(aspect, []).append(spell['name'])
     spell['id'] = 'deft-steps:spell:'+slug(spell['name'])
     spell['category'] = 'Taal' if aspect == 'Taal' else 'Ranald'
     original = spell['text']
+    original = original.replace('WFRP Core Rulebook, page 255', 'Fourth Edition WFRP Core Rulebook, page 255')
+    if spell['name'] == 'Ranald’s Mischief':
+        original += ' Characteristic table (p. 24): d10 1–2 Weapon Skill; 3–4 Intelligence; 5–6 Fellowship; 7–8 Initiative; 9–0 choose any Characteristic. Roll twice, rerolling duplicates.'
     spell['text'] = difficulty(original)
     if spell['text'] != original:
         spell['adaptation'] = 'Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged.'
     spell['conversion'] = 'Miracle effects remain reference text. No temporary Characteristic changes, Conditions, command Tests, travel rerolls or campaign actions are applied to the created character.'
+
+core_ranald = [s['name'] for s in read(ROOT/'dist/data/spells.json') if s['category'] == 'Ranald']
+equivalents = {'Stay Lucky':'Cheat the Odds', 'Rich Man, Poor Man, Beggar Man, Thief':'Trickster’s Glamour', 'You Ain’t Seen Me Right?':'You Saw Nothing'}
+aspect_lists = {
+ 'Thief-Priest':('The Night Prowler',['An Invitation','Cat’s Eyes','Ranald’s Grace','Stay Lucky','You Ain’t Seen Me Right?']),
+ 'Gambler-Priest':('The Gamester',['Cat’s Eyes','Ranald’s Grace','Rich Man, Poor Man, Beggar Man, Thief','Stay Lucky']),
+ 'Trickster-Priest':('The Deceiver',['Cat’s Eyes','Ranald’s Grace','Rich Man, Poor Man, Beggar Man, Thief','Stay Lucky','You Ain’t Seen Me Right?']),
+ 'Liberator-Priest':('The Protector',['An Invitation','Cat’s Eyes','Rich Man, Poor Man, Beggar Man, Thief','Stay Lucky','You Ain’t Seen Me Right?']),
+}
+scoped = {}
+for name, (aspect, existing) in aspect_lists.items():
+    career = next(c for c in careers if c['name'] == name)
+    career['randomAlternativeFor'] = 'priest'
+    scoped[career['id']] = aspect_spells[aspect]+[equivalents.get(s,s) for s in existing]
+    career['adaptation'] = career.get('adaptation','')+' Printed older Miracles use reviewed core equivalents: '+', '.join(s+' → '+equivalents[s] for s in existing if s in equivalents)+'.'
+scoped['priest'] = core_ranald+['Bamboozle','Perfect Empathy','Talk Your Way Out','Unremembered Face']
+cults = [{'id':'deft-steps:cult:ranald','name':'Ranald','page':13,
+          'miracles':core_ranald, 'careerMiracles':scoped,
+          'text':'All four aspects share Ranald’s Blessings: Charisma, Conscience, Finesse, Fortune, Protection and Wit. Aspect priests have their own Miracle lists (pp. 18–19, 24–25); general priests can also learn Bamboozle, Perfect Empathy, Talk Your Way Out and Unremembered Face (p. 13).',
+          'conversion':'Protector’s p. 25 list has the incorrect Trickster-Priests heading; user assigns it to Liberator-Priest. Dealer’s A Suitable Stooge uses the detailed A Suitable Sucker entry.',
+          'adaptation':'User-approved core equivalents in aspect lists: Stay Lucky → Cheat the Odds; Rich Man, Poor Man, Beggar Man, Thief → Trickster’s Glamour; You Ain’t Seen Me Right? → You Saw Nothing. All aspects use Invoke (Ranald), with their separate printed access.'}]
 
 def passage(page, heading, stop):
     text = pages[str(page)]
@@ -126,7 +152,13 @@ qualification = 'The p. 32 prices and Availability are a rough guide for discree
 gear = []
 for name, price, enc, availability, description_page, heading, stop in tool_rows:
     original = passage(description_page, heading, stop)
+    original = original.replace('Warhammer Fantasy Roleplay Core Rulebook', 'Fourth Edition Warhammer Fantasy Roleplay Core Rulebook')
+    if name == 'Glass Cutter':
+        original += ' Glass Cutting Success Table (p. 33): +1 or more, cut a hole/panel without complication; +0, cut it but with normal breaking-glass noise; −0, bore the hole and take a Damage 3 hit to the primary hand; −1 or less, the window shatters noisily and the primary hand takes a Damage 3 hit.'
+    if name == 'Thin Jimmy':
+        original += ' Steel Mummit Success Table (p. 33): +1 or more, open the lock/bolt undamaged and it can be relocked; +0, open it but ruin the mechanism/bolt, visibly needing repair; −0, fail to open it; −1 or less, fail and make loud scraping audible in adjoining rooms.'
     text = difficulty(original)
+    price = re.sub(r'^(\d+)s$', r'\1/-', price)
     entry = {'id':'deft-steps:gear:'+slug(name), 'name':name, 'page':32, 'price':price, 'enc':enc,
              'availability':availability, 'category':'Thieving tools', 'text':text,
              'conversion':f'Description: p. {description_page}. '+qualification}
@@ -137,7 +169,7 @@ for name, price, enc, availability, description_page, heading, stop in tool_rows
         entry['adaptation'] = 'Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364).'
     gear.append(entry)
 gear.append({'id':'deft-steps:gear:hunters-garb', 'name':'Hunter’s Garb', 'page':132,
-             'price':'15s', 'enc':2, 'availability':'Rare', 'category':'Clothing',
+             'price':'15/-', 'enc':2, 'availability':'Rare', 'category':'Clothing',
              'text':passage(132, 'Hunter’s Garb\n', 'Animals and Equipment'),
              'conversion':'The printed +2 SL applies situationally in appropriate terrain; no permanent Stealth bonus is added.'})
 for name, price, enc, availability in [('Hochland Lockhund','2GC',None,'Common'), ('Nordlander Bamse','4GC',None,'Scarce'),
@@ -175,6 +207,7 @@ assert len(profile_overrides) == 3
 assert len(careers) == 9 and len(spells) == 32 and len(gear) == 15
 args.output_dir.mkdir(parents=True, exist_ok=True)
 for filename, value in [('careers.json',careers),('spells.json',spells),('gear.json',gear),('rules.json',rules),
+                        ('cults.json',cults),
                         ('profiles.raw.json',read(args.input_dir/'profiles.raw.json')),('profile-overrides.json',profile_overrides),
                         ('pending.json',pending),('decisions.json',decisions)]:
     (args.output_dir/filename).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "deft-steps-pickpocket:career:thief",
+    "name": "Thief",
+    "class": "Rogue",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 27,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 1,
+      "T": null,
+      "I": 2,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 3,
+      "WP": null,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Prowler",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Intuition",
+          "Perception",
+          "Perform (Clowning)",
+          "Sleight of Hand",
+          "Stealth (Urban)"
+        ],
+        "talents": [
+          "Alley Cat",
+          "Criminal",
+          "Fast Hands",
+          "Flee!"
+        ],
+        "trappings": [
+          "Crowbar",
+          "Leather Jerkin",
+          "Sack"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Thief",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Evaluate",
+          "Gossip",
+          "Language (Thieves Tongue)",
+          "Lore (Local)",
+          "Secret Signs (Thief)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Etiquette (Criminals)",
+          "Night Vision",
+          "Shadow"
+        ],
+        "trappings": [
+          "Fence Contact",
+          "Rope",
+          "Trade Tools (Thief)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Thief",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Bribery",
+          "Entertain (Acting)",
+          "Intuition",
+          "Ranged (Crossbow)"
+        ],
+        "talents": [
+          "Lip Reading",
+          "Secret Identity",
+          "Step Aside",
+          "Trapper"
+        ],
+        "trappings": [
+          "Crossbow Pistol with 10 Bolts",
+          "Grappling Hook",
+          "Several Fence Contacts"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Cat Burglar",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Endurance",
+          "Gamble"
+        ],
+        "talents": [
+          "Catfall",
+          "Dual Wielder",
+          "Scale Sheer Surface",
+          "Strong Legs"
+        ],
+        "trappings": [
+          "Calling Card",
+          "Dark Clothing"
+        ]
+      }
+    ],
+    "runtimeId": "thief",
+    "replaces": "core:careers:thief",
+    "reason": "Printed optional Pickpocket first-level choices; keeps core Fifth Edition Career structure and allocations.",
+    "conversion": "Only printed first-level Skill changes apply. Core Fifth Edition level structure, Characteristics, Talent definitions, free allocations and XP limits remain. Choosing the variant grants no additional Advances.",
+    "text": "The printed swap from Strike to Stun to Fast Hands is already present in the Fifth Edition Thief. Its Talents remain unchanged; there is no extra Talent slot."
+  }
+]

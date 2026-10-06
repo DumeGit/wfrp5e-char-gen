@@ -1,0 +1,125 @@
+[
+  {
+    "id": "deft-steps-taal-priest:career:priest",
+    "name": "Priest",
+    "class": "Academic",
+    "species": [
+      "Human"
+    ],
+    "page": 89,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 3,
+      "I": 4,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Charm Animal",
+          "Cool",
+          "Endurance",
+          "Intuition",
+          "Lore (Theology)",
+          "Outdoor Survival",
+          "Perception",
+          "Pray",
+          "Research"
+        ],
+        "talents": [
+          "Bless (Any One)",
+          "Holy Visions",
+          "Read/Write",
+          "Suave"
+        ],
+        "trappings": [
+          "Religious Symbol",
+          "Robes"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Priest",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Gossip",
+          "Intimidate",
+          "Leadership",
+          "Lore (Any One)",
+          "Melee (Basic)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Blather",
+          "Bookish",
+          "Etiquette (Cultists)",
+          "Invoke (Any One)"
+        ],
+        "trappings": [
+          "Book (Religion)",
+          "Ceremonial Robes"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "High Priest",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Art (Writing)",
+          "Entertain (Speeches)",
+          "Lore (Politics)",
+          "Perception"
+        ],
+        "talents": [
+          "Acute Sense (Any One)",
+          "Hatred (Any One)",
+          "Impassioned Zeal",
+          "Strong-minded"
+        ],
+        "trappings": [
+          "Quality Robes",
+          "Religious Relic",
+          "Subordinate Priests",
+          "Temple"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Lector",
+        "status": "Gold",
+        "standing": 4,
+        "skills": [
+          "Language (Any One)",
+          "Lore (Heraldry)"
+        ],
+        "talents": [
+          "Master Orator",
+          "Pure Soul",
+          "Resistant (Any One)",
+          "Savant (Theology)"
+        ],
+        "trappings": [
+          "Library (Theology)",
+          "Subordinate High Priests"
+        ]
+      }
+    ],
+    "runtimeId": "priest",
+    "replaces": "core:careers:priest",
+    "reason": "Printed optional Taal Priest first-level choices; keeps core Fifth Edition Career structure and allocations.",
+    "conversion": "Only printed first-level Skill changes apply. Core Fifth Edition level structure, Characteristics, Talent definitions, free allocations and XP limits remain. Choosing the variant grants no additional Advances."
+  }
+]

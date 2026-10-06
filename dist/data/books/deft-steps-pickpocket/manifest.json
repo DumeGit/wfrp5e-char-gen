@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "deft-steps-pickpocket",
+  "title": "Deft Steps — Pickpocket",
+  "shortTitle": "Pickpocket",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "variant",
+  "creators": [
+    "pc",
+    "npc"
+  ],
+  "dependsOn": [
+    "deft-steps"
+  ],
+  "source": {
+    "file": "Deft Steps Light Fingers.pdf",
+    "sha256": "2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537eec"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Only printed first-level Skill changes apply. Core Fifth Edition level structure, Characteristics, Talent definitions, free allocations and XP limits remain. Choosing the variant grants no additional Advances."
+    ]
+  },
+  "files": {
+    "careers": "careers.json",
+    "coverage": "coverage.json"
+  }
+}

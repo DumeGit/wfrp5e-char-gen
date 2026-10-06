@@ -45,6 +45,34 @@
     {
       "id": "blood-bramble",
       "path": "blood-bramble/manifest.json"
+    },
+    {
+      "id": "deft-steps",
+      "path": "deft-steps/manifest.json"
+    },
+    {
+      "id": "deft-steps-ranald-priest",
+      "path": "deft-steps-ranald-priest/manifest.json"
+    },
+    {
+      "id": "deft-steps-dealer",
+      "path": "deft-steps-dealer/manifest.json"
+    },
+    {
+      "id": "deft-steps-taal-priest",
+      "path": "deft-steps-taal-priest/manifest.json"
+    },
+    {
+      "id": "deft-steps-white-stag",
+      "path": "deft-steps-white-stag/manifest.json"
+    },
+    {
+      "id": "deft-steps-longshanks",
+      "path": "deft-steps-longshanks/manifest.json"
+    },
+    {
+      "id": "deft-steps-pickpocket",
+      "path": "deft-steps-pickpocket/manifest.json"
     }
   ]
 }

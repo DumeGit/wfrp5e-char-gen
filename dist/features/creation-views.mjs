@@ -1,4 +1,5 @@
 import { chapterHeading } from "../design-system.mjs";
+import { causeControl } from "../talent-targets-ui.mjs";
 import { sourceButton } from "../source-controls.mjs";
 import { detailKey } from "../disclosures.mjs";
 import { elfSkillsPanel } from "../high-elf-ui.mjs";
@@ -290,7 +291,7 @@ export function createFeature(getContext, setContext) {
       ]),
       s.freeTalent,
       true,
-    )}</div>${s.freeTalent ? talentDescription(s.freeTalent) : ""}${
+    )}</div>${M.careerTalentOptions(R, s).some((n) => M.base(n) === "Impassioned Zeal") ? causeControl(s, esc, button) : ""}${s.freeTalent ? talentDescription(s.freeTalent) : ""}${
       d.talents.includes("Doomed")
         ? `<details data-detail-key="${detailKey("creation-views:talents:0")}" class="section-gap" open><summary>Your Dooming ${page(118)}</summary><p class="small muted">Choose or roll a suggestion from the book, then agree its meaning with your GM.</p>
 <div class="field"><label for="dooming">Dooming</label>${select(

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "deft-steps-pickpocket:feature:talent-swap",
+      "name": "Pickpocket Talent swap",
+      "status": "reference-only",
+      "source": {
+        "book": "deft-steps-pickpocket",
+        "page": 27
+      },
+      "reason": "Core Fifth Edition Thief already has Fast Hands and no level-one Strike to Stun; no further swap or free Talent is added."
+    }
+  ]
+}

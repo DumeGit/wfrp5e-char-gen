@@ -1,4 +1,8 @@
 import * as M from "./rules.mjs";
+import { causeIssue, targetAllowed } from "./talent-targets.mjs";
+import { trainingChoices, trainingReferences } from "./npc-training.mjs";
+import { deftMiracleAdaptation } from "./deft-steps.mjs";
+import { legacySources } from "./legacy.mjs";
 import { miracleChoices } from "./cults.mjs";
 import { NPC_KEYS, NPC_SIZES } from "./bestiary-content.mjs";
 import {
@@ -51,6 +55,7 @@ function sumLedger(s, type, name) {
     .reduce((n, x) => n + x.amount, 0);
 }
 function talentPurchaseIssue(R, d, name) {
+  if (causeIssue(name)) return causeIssue(name);
   const base = M.base(name),
     owned = d.talents.map((t) => M.base(t.name)),
     magic = ["Arcane Magic", "Chaos Magic", "Petty Magic", "Witch!"],
@@ -218,16 +223,19 @@ export function npcResult(R, s) {
     (x) => !s.removedTalents.includes(x.name),
   );
   const talentMap = new Map();
-  const addTalent = (name, ranks, source, origin) => {
+  const addTalent = (name, ranks, source, origin, adaptation) => {
     name = M.canon(name);
     const item = talentMap.get(name) || { name, ranks: 0, source, origins: [] };
     // Sources granting the same rank do not silently multiply purchases.
     if (origin === "GM" || origin === "XP") item.ranks += ranks;
     else item.ranks = Math.max(item.ranks, ranks);
     item.origins.push(origin);
+    if (adaptation) item.adaptation = adaptation;
     talentMap.set(name, item);
   };
-  baseTalents.forEach((x) => addTalent(x.name, x.ranks, p.source, "Printed"));
+  baseTalents.forEach((x) =>
+    addTalent(x.name, x.ranks, p.source, "Printed", x.adaptation),
+  );
   if (template)
     template.talents.forEach((g, i) => {
       const options = grantChoices(R, g, "talent"),
@@ -253,8 +261,26 @@ export function npcResult(R, s) {
       M.talentInfo(R, t.name)?.source || { book: "core", page: 114 },
       "GM",
     );
-  for (const t of s.ledger.filter((x) => x.type === "talent"))
+  for (const t of s.ledger.filter((x) => x.type === "talent")) {
     addTalent(t.name, 1, t.source, "XP");
+    talentMap.get(M.canon(t.name)).legacySources = legacySources(R, {
+      type: "talent",
+      name: t.name,
+      eligibility: R.careers.find((c) => c.id === s.career)?.source,
+    });
+  }
+  for (const t of talentMap.values())
+    if (causeIssue(t.name))
+      issues.push(
+        issue(
+          "talent.cause",
+          causeIssue(t.name),
+          "warning",
+          1,
+          "#npc-talent",
+          t.source,
+        ),
+      );
   const mark = traits.find((x) => x.name === "Mark of Chaos");
   if (mark) {
     if (["Khorne", "Nurgle", "Slaanesh", "Tzeentch"].includes(mark.value)) {
@@ -415,6 +441,18 @@ export function npcResult(R, s) {
       .filter((x) => x.name === "Trained")
       .flatMap((t) => t.value.split(",").map((x) => x.trim())),
   );
+  for (const choice of training)
+    if (!trainingChoices(p).includes(choice))
+      issues.push(
+        issue(
+          "training.option",
+          `${choice} is not a supported training option for this profile.`,
+          "error",
+          1,
+          "#npc-trait-value",
+          p.source,
+        ),
+      );
   if (training.has("War") && !baseTraining.has("War"))
     addStat("WS", 10, "Trained (War)", { book: "core", page: 363 });
   if (training.has("Broken") && !baseTraining.has("Broken")) {
@@ -1069,7 +1107,14 @@ export function npcResult(R, s) {
       entry &&
       !magic.some((x) => x.contentId === entry.contentId && x.lore === lore)
     )
-      magic.push({ ...entry, lore, origin });
+      magic.push({
+        ...entry,
+        lore,
+        origin,
+        legacySources: [deftMiracleAdaptation(R, s.career, entry.name)]
+          .filter(Boolean)
+          .map((x) => ({ ...x.source, adaptation: x.adaptation })),
+      });
   };
   const spellText = p.sections.Spells || "";
   for (const grant of p.magicGrants || []) {
@@ -1306,6 +1351,7 @@ export function npcResult(R, s) {
     patrons: [...new Set(patrons)],
     mutations,
     training,
+    trainingReferences: trainingReferences(p, training),
     issues,
     spent,
     remaining: s.xpBudget - spent,
@@ -1417,7 +1463,7 @@ export function npcQuote(R, s, type, name, amount = 5, extra = {}) {
       };
     advances = s.advanceCounts.skill[name] + sumLedger(s, "skill", name);
   } else if (type === "talent") {
-    if (!npcCareerTalents(R, s, d).includes(name))
+    if (!targetAllowed(npcCareerTalents(R, s, d), name))
       return { error: "This Talent is outside the selected Career level." };
     const info = M.talentInfo(R, name);
     if (!info)
@@ -1426,7 +1472,11 @@ export function npcQuote(R, s, type, name, amount = 5, extra = {}) {
           "This printed Talent has no standalone core definition or purchase limit; retain it as a reference grant.",
       };
     const count = d.talents
-      .filter((x) => x.name === name)
+      .filter((x) =>
+        M.base(name) === "Impassioned Zeal"
+          ? M.base(x.name) === "Impassioned Zeal"
+          : x.name === name,
+      )
       .reduce((n, x) => n + x.ranks, 0);
     const configured = R.config.talentLimits[M.base(name)];
     const limit =
