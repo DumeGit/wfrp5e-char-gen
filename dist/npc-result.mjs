@@ -3,6 +3,7 @@ import { causeIssue, targetAllowed } from "./talent-targets.mjs";
 import { trainingChoices, trainingReferences } from "./npc-training.mjs";
 import { deftMiracleAdaptation } from "./deft-steps.mjs";
 import { legacySources } from "./legacy.mjs";
+import { npcIssueStep } from "./npc-flow.mjs";
 import { miracleChoices } from "./cults.mjs";
 import { NPC_KEYS, NPC_SIZES } from "./bestiary-content.mjs";
 import {
@@ -46,7 +47,7 @@ function issue(
     message,
     severity,
     source: typeof page === "object" ? page : { book: "core", page },
-    control: { step, target },
+    control: { step: npcIssueStep(target, step), target },
   };
 }
 function sumLedger(s, type, name) {
@@ -757,7 +758,7 @@ export function npcResult(R, s) {
             `Choose ${g.count} distinct ${g.options.join(" or ")} Skill${g.count > 1 ? "s" : ""} for ${template.name}.`,
             "error",
             1,
-            `#npc-template-skill-${i}`,
+            `#npc-template-skill-${i}-0`,
             template.source,
           ),
         );

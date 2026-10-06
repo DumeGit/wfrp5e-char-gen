@@ -62,3 +62,7 @@ Update this document and affected feature docs in the same change. Inspect setup
 ## GM workspace
 
 The separate NPC entry shares the Black Banner shell, emblem, controls, reference dialogs and install node. `npc.css` owns only GM feature layout: compact 12-cell score inputs, category/profile cards, minimal stat block and form groups. It uses the shared semantic tokens. Desktop keeps the bounded sticky folio; mobile uses its explicit View stat block disclosure in page flow. Tool-mode links preserve the verification query and each tool's independent saved draft. Future GM sections must use this same presentation contract.
+
+### NPC workspace refinements
+
+The header creator-mode switch remains visible on phones and before PC book selection is confirmed. NPC sections use the PC numbered navigation, tokens, source buttons, compact fields and folio hierarchy. Eight focused sections replace the crowded Customise page. Profile cards have separate preview/apply actions and page-flow Show more; no internal catalogue scroll. Required-choice alerts precede the editor, with target focus/inline errors and section badges. Nonblocking source/Legacy notes remain a separate gold disclosure. Mobile uses a section selector, one-row Save/Load/New, an optional Draft tools & books disclosure and a fixed Stat block/Review strip; expanded folio survives edits without its own mobile scroll. The review renders the same compact sheet model as PDF/text, and marks export readiness beside the actions.

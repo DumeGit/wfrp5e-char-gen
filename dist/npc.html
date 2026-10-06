@@ -47,6 +47,10 @@
       </div>
       <div class="masthead-actions">
         <span class="edition">BY INK AND OATH</span>
+        <nav class="creator-tool-switch" aria-label="Creator mode">
+          <a href="index.html">Player character</a
+          ><a href="npc.html" aria-current="page">NPC &amp; monster</a>
+        </nav>
       </div>
       <div class="banner-search-ribbon">
         <span class="banner-caption">THE OLD WORLD</span>
@@ -90,7 +94,11 @@
         <span class="banner-caption">SEARCH YOUR SELECTED BOOKS</span>
       </div>
     </header>
-    <div id="app"><main class="panel" aria-live="polite"><p>Opening the GM’s Bestiary…</p></main></div>
+    <div id="app">
+      <main class="panel" aria-live="polite">
+        <p>Opening the GM’s Bestiary…</p>
+      </main>
+    </div>
     <div id="pwa-status" class="pwa-status" role="status" aria-live="polite">
       Preparing offline access, including PDF exports…
     </div>
@@ -158,5 +166,6 @@
     <script src="assets/pdf-lib.min.js" defer></script>
     <script type="module" src="npc-app.mjs"></script>
     <script type="module" src="pwa.mjs"></script>
+    <script type="module" src="creator-mode.mjs"></script>
   </body>
 </html>

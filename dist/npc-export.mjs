@@ -1,6 +1,8 @@
+import { npcSheet } from "./npc-sheet.mjs";
+import { compactNPCPDF } from "./npc-pdf.mjs";
+import { npcChecks } from "./npc-flow.mjs";
 import { npcResult } from "./npc-result.mjs";
 import * as M from "./rules.mjs";
-import { NPC_KEYS } from "./bestiary-content.mjs";
 import { npcSourceLabel } from "./npc-books.mjs";
 import { legacyPDFName, legacyTitle } from "./legacy.mjs";
 
@@ -11,91 +13,31 @@ export function npcText(
   { record = false, result = npcResult(R, s) } = {},
 ) {
   const d = result,
+    sheet = npcSheet(R, s, d),
     lines = [
-      d.name,
-      `${legacyPDFName(R, d.profile)} · ${d.size}${d.template ? ` · ${d.template.name}` : ""} · ${npcSourceLabel(R, d.profile)}`,
-      NPC_KEYS.map((k) => `${k} ${score(d.stats[k])}`).join(" | "),
-      `SB ${score(d.sb)} · TB ${score(d.tb)} · Walk ${score(d.walk)} · Run ${score(d.run)} · Combat Initiative ${score(d.combatInitiative)}`,
-      "",
-      "ATTACKS",
-      ...d.attacks.map(
-        (a) =>
-          `${a.name}: ${a.skill === null ? "See rule" : a.skill}${a.damage === null ? "" : `/+${a.damage}`} · ${a.text}`,
-      ),
+      sheet.name,
+      sheet.subtitle + " · " + sheet.source,
+      sheet.scores.map((x) => `${x.key} ${x.value}`).join(" | "),
+      sheet.derived,
+      ...(sheet.attacks.length
+        ? [
+            "",
+            "ATTACKS",
+            ...sheet.attacks.map(
+              (x) =>
+                `${x.name}: ${x.test}/${x.damage}${x.detail ? ` · ${x.detail}` : ""}`,
+            ),
+          ]
+        : []),
       "",
       "PROTECTION",
-      Object.entries(d.protection)
-        .map(([k, v]) => `${k} ${v} AP`)
-        .join(" · "),
-      "",
-      "HIT LOCATIONS",
-      `${d.anatomy}: ${d.hitLocations} (p. 318)`,
-      "",
-      "SKILLS",
-      d.skills.map((x) => `${x.name} ${score(x.total)}`).join(", "),
-      "",
-      "TALENTS",
-      d.talents
-        .map(
-          (x) =>
-            `${legacyPDFName(R, { ...M.talentInfo(R, x.name), ...x }, x.name)}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`,
-        )
-        .join(", "),
-      "",
-      "TRAITS",
-      ...d.traits.map(
-        (t) =>
-          `${legacyPDFName(
-            R,
-            {
-              ...R.traits.find((x) => x.contentId === t.id),
-              source: t.source,
-              adaptation: t.adaptation,
-            },
-            t.name,
-          )}${t.value ? ` (${t.value})` : ""} · ${npcSourceLabel(R, t)}`,
-      ),
-      ...d.trainingReferences.map(
-        (x) =>
-          `Trained (${legacyPDFName(R, x)}): ${x.text} · ${npcSourceLabel(R, x)}`,
-      ),
-      "",
-      "EQUIPMENT",
-      d.profile.sections.Trappings || "",
-      ...d.gear.map(
-        (x) =>
-          `${x.quantity} × ${legacyPDFName(R, x)} · ${npcSourceLabel(R, x)}`,
-      ),
-      "",
-      "MAGIC",
-      ...d.magic.map(
-        (x) =>
-          `${legacyPDFName(R, x)} (${x.lore}) · ${x.cn !== undefined ? `CN ${x.cn} · ` : ""}Range ${x.range || "see rule"} · Target ${x.target || "see rule"} · Duration ${x.duration || "see rule"} · ${npcSourceLabel(R, x)}`,
-      ),
-      "",
-      "MUTATIONS",
-      ...d.mutations.map(
-        (x) => `${x.name}${x.location ? ` (${x.location})` : ""}: ${x.text}`,
-      ),
-      "",
-      "GM NOTES",
-      s.notes,
-      "",
-      "SOURCE DISCREPANCIES & CHECKS",
-      ...d.profile.notes,
-      ...[
-        d.profile,
-        ...d.gear,
-        ...d.magic,
-        ...d.traits,
-        ...d.talents,
-        ...d.trainingReferences,
-      ]
-        .map((x) => legacyTitle(R, x))
-        .filter(Boolean),
-      ...d.issues.map(
-        (x) => `${x.severity}: ${x.message} (${npcSourceLabel(R, x.source)})`,
-      ),
+      sheet.protection,
+      ...(sheet.anatomy ? [sheet.anatomy] : []),
+      ...sheet.sections.flatMap(([name, text]) => [
+        "",
+        name.toUpperCase(),
+        text,
+      ]),
     ];
   if (record)
     lines.push(
@@ -137,6 +79,9 @@ export function npcText(
       "Recorded dice from loaded files are unverified imported history.",
       "",
       "RULE REFERENCES FOR SELECTED OPTIONS",
+      ...d.trainingReferences.map(
+        (x) => `Trained (${x.name}): ${x.text} (${npcSourceLabel(R, x)})`,
+      ),
       ...d.traits.map(
         (t) =>
           `${legacyPDFName(R, t)}${t.value ? ` (${t.value})` : ""} (${npcSourceLabel(R, R.traits.find((x) => x.contentId === t.id) || t)}): ${R.traits.find((x) => x.contentId === t.id)?.text || "See source"}${t.adaptation ? ` Legacy: ${t.adaptation} (${npcSourceLabel(R, t)})` : ""}`,
@@ -161,6 +106,9 @@ export async function npcPDF(
   s,
   { record = false, result = npcResult(R, s), pdfLib = globalThis.PDFLib } = {},
 ) {
+  if (npcChecks(result).blocked)
+    throw Error("Resolve required choices before exporting an NPC sheet.");
+  if (!record) return compactNPCPDF(R, s, result, pdfLib);
   const { PDFDocument, StandardFonts, rgb } = pdfLib;
   const pdf = await PDFDocument.create(),
     font = await pdf.embedFont(StandardFonts.Helvetica),

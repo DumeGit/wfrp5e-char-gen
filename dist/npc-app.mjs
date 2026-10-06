@@ -14,6 +14,8 @@ import { createNPCViews, btn } from "./features/npc-views.mjs";
 import { createBookSearch } from "./features/book-search.mjs";
 import { createInstallControl } from "./install-control.mjs";
 import { esc } from "./workspace.mjs";
+import { npcChecks } from "./npc-flow.mjs";
+import { npcFeedback } from "./features/npc-feedback.mjs";
 
 const root = document.querySelector("#app"),
   verify = new URL(location.href).searchParams.has("verify"),
@@ -47,6 +49,11 @@ try {
 const freshUI = () => ({
   filter: "",
   category: "",
+  profileSource: "",
+  profileLimit: 12,
+  previewProfile: "",
+  trainingTab: "skills",
+  folioExpanded: false,
   trait: "",
   traitValue: "",
   skill: "",
@@ -63,6 +70,8 @@ const freshUI = () => ({
   xpName: "",
   xpTarget: "",
   amount: 5,
+  gearFilter: "",
+  magicFilter: "",
 });
 const ui = freshUI();
 const install = createInstallControl(document.querySelector("#pwa-install"));
@@ -104,6 +113,23 @@ function render() {
   install(root);
   for (const el of root.querySelectorAll("details[data-detail-key]"))
     if (opened.has(el.dataset.detailKey)) el.open = true;
+  for (const x of d.issues.filter(
+    (x) => x.severity === "error" && x.control.step === s.step,
+  )) {
+    const target = root.querySelector(x.control.target);
+    if (!target) continue;
+    target.setAttribute("aria-invalid", "true");
+    target.classList.add("npc-invalid");
+    const group = target.closest(".field") || target.closest("label");
+    if (group) {
+      const explanation = document.createElement("p");
+      explanation.className = "npc-field-error";
+      explanation.id = `npc-inline-error-${d.issues.indexOf(x)}`;
+      explanation.textContent = x.message;
+      group.append(explanation);
+      target.setAttribute("aria-describedby", explanation.id);
+    }
+  }
   const folio = root.querySelector(".npc-folio-body");
   if (folio) folio.scrollTop = scroll;
   const next = id ? document.getElementById(id) : null;
@@ -194,6 +220,39 @@ function setProfile(id) {
 }
 async function action(el) {
   const a = el.dataset.npcAction;
+  if (a === "preview-profile") {
+    ui.previewProfile = el.dataset.id;
+    render();
+    return;
+  }
+  if (a === "more-profiles") {
+    ui.profileLimit += 12;
+    render();
+    return;
+  }
+  if (a === "tab") {
+    if (
+      el.dataset.key !== "trainingTab" ||
+      !["skills", "talents"].includes(el.dataset.value)
+    )
+      return;
+    ui.trainingTab = el.dataset.value;
+    render();
+    return;
+  }
+  if (a === "books") {
+    s.step = 0;
+    render();
+    const books = root.querySelector("#npc-books");
+    books.open = true;
+    books.scrollIntoView({ block: "center" });
+    save();
+    return;
+  }
+  if (a === "issues") {
+    dialog("Required choices & source notes", npcFeedback(R, d, { all: true }));
+    return;
+  }
   if (a === "confirm-books") {
     const ids = JSON.parse(el.dataset.books);
     document.querySelector("#creator-dialog").close();
@@ -206,6 +265,7 @@ async function action(el) {
   }
   if (a === "step") {
     s.step = Number(el.dataset.step);
+    if (el.dataset.tab === "talents") ui.trainingTab = "talents";
     save();
     render();
     root.querySelector(".panel").scrollIntoView({ block: "start" });
@@ -273,10 +333,11 @@ async function action(el) {
     return;
   }
   if (a === "folio-toggle") {
-    const sheet = root.querySelector(".npc-sheet"),
-      expanded = sheet.classList.toggle("expanded");
-    el.setAttribute("aria-expanded", String(expanded));
-    el.textContent = expanded ? "Hide stat block" : "View stat block";
+    ui.folioExpanded = !ui.folioExpanded;
+    render();
+    root
+      .querySelector(ui.folioExpanded ? "#npc-folio" : "#npc-main")
+      .scrollIntoView({ block: "start" });
     return;
   }
   if (a === "template-reference") {
@@ -296,13 +357,46 @@ async function action(el) {
     return;
   }
   if (a === "issue") {
-    const x = d.issues.find((x) => x.code === el.dataset.code);
+    const x = d.issues[Number(el.dataset.issueIndex)];
+    if (!x) return;
+    document.querySelector("#creator-dialog").close();
     s.step = x.control.step;
+    if (s.step === 3)
+      ui.trainingTab =
+        x.control.target === "#npc-talent" ? "talents" : "skills";
+    if (x.code === "amphibious.swim-bonus") ui.skill = "Swim";
+    if (x.control.target === "#npc-trait-value") {
+      const names = {
+        "mark.god": "Mark of Chaos",
+        "training.option": "Trained",
+        "magic.patron": "Miracles",
+      };
+      const trait = d.traits.find((t) => t.name === names[x.code]);
+      if (trait) {
+        ui.trait = trait.id;
+        ui.traitValue = trait.value;
+      }
+    }
     render();
-    const target = document.querySelector(x.control.target);
-    target?.closest("details")?.setAttribute("open", "");
+    const target =
+      root.querySelector(x.control.target) || root.querySelector("#npc-main");
+    for (let node = target; node && node !== root; node = node.parentElement)
+      if (node.tagName === "DETAILS") node.open = true;
+    if (!target.matches("input,select,textarea,button")) target.tabIndex = -1;
+    target.classList.add("npc-issue-highlight");
     target?.scrollIntoView({ block: "center" });
-    target?.focus();
+    target?.focus({ preventScroll: true });
+    save();
+    return;
+  }
+  if (
+    ["copy", "text", "pdf", "pdf-record"].includes(a) &&
+    npcChecks(d).blocked
+  ) {
+    dialog(
+      "Resolve required choices before export",
+      npcFeedback(R, d, { all: true }),
+    );
     return;
   }
   if (a === "copy") {
@@ -310,9 +404,9 @@ async function action(el) {
     toast("Stat block copied.");
     return;
   }
-  if (a === "text") {
+  if (a === "text" || a === "record-text") {
     download(
-      npcText(R, s, { record: true, result: d }),
+      npcText(R, s, { record: a === "record-text", result: d }),
       "text/plain;charset=utf-8",
       ".txt",
     );
@@ -492,6 +586,8 @@ async function action(el) {
 function input(el) {
   if (el.dataset.ui) {
     ui[el.dataset.ui] = el.value;
+    if (["filter", "category", "profileSource"].includes(el.dataset.ui))
+      ui.profileLimit = 12;
     if (["trait", "xpType"].includes(el.dataset.ui)) {
       if (el.dataset.ui === "trait") ui.traitValue = "";
       else ui.xpName = "";
@@ -501,6 +597,13 @@ function input(el) {
   }
   if (el.dataset.state) {
     const key = el.dataset.state;
+    if (key === "step") {
+      s.step = integer(el.value);
+      save();
+      render();
+      root.querySelector("#npc-main").scrollIntoView({ block: "start" });
+      return;
+    }
     if (s.ledger.length && ["template", "career", "careerLevel"].includes(key))
       throw Error("Undo paid development before changing this choice.");
     change(

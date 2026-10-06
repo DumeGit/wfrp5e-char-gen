@@ -96,7 +96,8 @@ test('Impassioned Zeal requires an explicit Cause in both purchase paths and use
  assert.match(npcQuote(B,gm,'talent',CAUSE_PLACEHOLDER,1).error,/Cause/);
  buyNPC(gm,'talent',name);assert.equal(npcResult(B,gm).spent,100);validateNPCState(B,JSON.parse(JSON.stringify(gm)));
  assert.match(legacyTitle(B,npcResult(B,gm).talents.find(t=>t.name===name)),/Cause/);
- assert.match(npcText(B,gm),/\[Legacy\] Impassioned Zeal/);
+ assert.match(npcText(B,gm),/Impassioned Zeal \(Protect the innocent\)/);
+ assert.doesNotMatch(npcText(B,gm),/\[Legacy\]|SOURCE DISCREPANCIES/);
  assert.match(npcText(B,gm,{record:true}),/RULE REFERENCES FOR SELECTED OPTIONS[\s\S]*\[Legacy\] Impassioned Zeal/);
  assert.match(npcQuote(B,gm,'talent',namedCause('Another cause'),1).error,/limit/);
 });

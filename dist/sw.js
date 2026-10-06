@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"fb3aafb414fccb865981";
+const CACHE=CACHE_PREFIX+"f8208fe92e465952a0de";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -35,6 +35,7 @@ const ASSETS=[
  "character-result.mjs",
  "content-references.mjs",
  "context-career.mjs",
+ "creator-mode.mjs",
  "creator-ui.mjs",
  "cults.mjs",
  "data/background.json",
@@ -197,6 +198,16 @@ const ASSETS=[
  "features/creation-views.mjs",
  "features/dialogs.mjs",
  "features/experience-view.mjs",
+ "features/npc-characteristics-view.mjs",
+ "features/npc-controls.mjs",
+ "features/npc-development-view.mjs",
+ "features/npc-equipment-view.mjs",
+ "features/npc-feedback.mjs",
+ "features/npc-profile-view.mjs",
+ "features/npc-review-view.mjs",
+ "features/npc-shell.mjs",
+ "features/npc-training-view.mjs",
+ "features/npc-traits-view.mjs",
  "features/npc-views.mjs",
  "features/origins-view.mjs",
  "features/review-view.mjs",
@@ -220,8 +231,11 @@ const ASSETS=[
  "npc-app.mjs",
  "npc-books.mjs",
  "npc-export.mjs",
+ "npc-flow.mjs",
+ "npc-pdf.mjs",
  "npc-profile.mjs",
  "npc-result.mjs",
+ "npc-sheet.mjs",
  "npc-state.mjs",
  "npc-training.mjs",
  "npc.css",

@@ -1,5 +1,6 @@
 import { bookSelection } from "./books.mjs";
 import { NPC_KEYS } from "./bestiary-content.mjs";
+import { NPC_SECTIONS } from "./npc-flow.mjs";
 import * as M from "./rules.mjs";
 import {
   printedArmour,
@@ -79,7 +80,7 @@ export function validateNPCState(R, s) {
     !safeNum(s.xpBudget) ||
     !Number.isInteger(s.step) ||
     s.step < 0 ||
-    s.step > 3 ||
+    s.step >= NPC_SECTIONS.length ||
     ![1, 2, 3, 4].includes(s.careerLevel)
   )
     throw Error("Invalid NPC profile or creation settings.");

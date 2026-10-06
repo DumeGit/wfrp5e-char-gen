@@ -45,7 +45,7 @@ test('save validation rejects PC files, wrong book versions, unknown mechanics a
  const s=npc('Human');assert.deepEqual(validateNPCState(R,JSON.parse(JSON.stringify(s))),s);assert.throws(()=>validateNPCState(R,soldier()),/NPC/);const bad=structuredClone(s);bad.books.packs[0].version='0.0.0';assert.throws(()=>validateNPCState(R,bad),/book version/);bad.books=s.books;bad.overrides.Invented=30;assert.throws(()=>validateNPCState(R,bad),/score/);delete bad.overrides.Invented;bad.trainingRoll={faces:[20]};assert.throws(()=>validateNPCState(R,bad),/roll/);
 });
 test('text and multipage PDF exports consume the same complete result, including records and overflow',async()=>{
- const s=npc('Orc');s.notes='Long GM note. '.repeat(800);const d=npcResult(R,s),text=npcText(R,s,{result:d,record:true});assert.match(text,/T 30/);assert.match(text,/TB 4/);assert.match(text,/CREATION RECORD/);assert.match(text,/Toughness Bonus 4 disagree/);const bytes=await npcPDF(R,s,{result:d,record:true,pdfLib:PDFLib}),pdf=await PDFLib.PDFDocument.load(bytes);assert.ok(pdf.getPageCount()>2);assert.match(pdf.getTitle(),/Orc/);
+ const s=npc('Orc');s.notes='Long GM note. '.repeat(800);const d=npcResult(R,s),text=npcText(R,s,{result:d,record:true});assert.match(text,/T 30/);assert.match(text,/TB 4/);assert.match(text,/CREATION RECORD/);assert.doesNotMatch(text,/Toughness Bonus 4 disagree|SOURCE DISCREPANCIES/);assert.ok(d.issues.some(x=>x.code==='printed.toughness-conflict'));const bytes=await npcPDF(R,s,{result:d,record:true,pdfLib:PDFLib}),pdf=await PDFLib.PDFDocument.load(bytes);assert.ok(pdf.getPageCount()>2);assert.match(pdf.getTitle(),/Orc/);
 });
 
 
