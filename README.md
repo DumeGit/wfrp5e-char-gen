@@ -48,6 +48,8 @@ Open **NPC & monster creator** in the left menu for the separate GM workspace, i
 
 Printed values are preserved until changed; conflicts remain visible. Career XP requires GM-supplied existing Advance counts because core p. 318 supplies no NPC XP history. Tiny and unresolved calculations require explicit GM values. The GM book picker accepts only explicitly reviewed NPC packs; PC book selection is independent. Sources, interpretations, scope and extension details: [docs/NPC-CREATOR.md](docs/NPC-CREATOR.md). Deft Steps is being prepared but is not yet enabled; pending decisions and progress are recorded in [docs/DEFT-STEPS.md](docs/DEFT-STEPS.md).
 
+Reviewed supplement profiles can declare a complete abstract Armour rating that does not stack with assigned armour; removing it restores ordinary equipment layering. This supports the approved Deft Steps interpretation without changing core quick Armour rules. The preparation script records approved Career corrections, the three hounds' Stride → Sprinter replacement and the two equipment naming pairs, separately from remaining source questions.
+
 ## Rules and source
 
 ### Archives III

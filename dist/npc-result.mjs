@@ -1019,26 +1019,33 @@ export function npcResult(R, s) {
         a.locations || a.text,
         shield ? "Shield" : "All",
       );
-    const layer = shield
-      ? "shield"
-      : /Leather/i.test(a.name)
-        ? "leather"
-        : /Mail/i.test(a.name)
-          ? "mail"
-          : /Natural|Skin|Hide|Scales/i.test(a.name)
-            ? "natural"
-            : /^(?:Basic|Good|Best|Light|Medium|Heavy) Armour$/.test(a.name)
-              ? "quick"
-              : "plate";
+    const layer = a.abstract
+      ? "abstract"
+      : shield
+        ? "shield"
+        : /Leather/i.test(a.name)
+          ? "leather"
+          : /Mail/i.test(a.name)
+            ? "mail"
+            : /Natural|Skin|Hide|Scales/i.test(a.name)
+              ? "natural"
+              : /^(?:Basic|Good|Best|Light|Medium|Heavy) Armour$/.test(a.name)
+                ? "quick"
+                : "plate";
     for (const l of locations) {
       const key = `${layer}:${l}`;
       layers.set(key, Math.max(layers.get(key) || 0, a.ap));
     }
   }
   const quick = [...layers.keys()].some((k) => k.startsWith("quick:"));
+  const abstract = armour.some((a) => a.abstract);
   for (const [key, ap] of layers) {
     const [layer, location] = key.split(":");
-    if (!quick || ["quick", "shield", "natural"].includes(layer))
+    if (
+      abstract
+        ? layer === "abstract"
+        : !quick || ["quick", "shield", "natural"].includes(layer)
+    )
       protection[location] += ap;
   }
   for (const m of mutations) {

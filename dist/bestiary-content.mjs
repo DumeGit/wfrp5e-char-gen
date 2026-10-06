@@ -73,7 +73,10 @@ export function validateBestiary(R) {
             !Number.isInteger(a.ap) ||
             a.ap < 0 ||
             !text(a.text) ||
-            Object.keys(a).some((key) => !["name", "ap", "text"].includes(key)),
+            (a.abstract !== undefined && typeof a.abstract !== "boolean") ||
+            Object.keys(a).some(
+              (key) => !["name", "ap", "text", "abstract"].includes(key),
+            ),
         ))
     )
       fail(x.name + " printed armour");

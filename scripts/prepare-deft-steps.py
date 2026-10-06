@@ -48,8 +48,29 @@ careers = read(args.input_dir/'careers.raw.json')
 for career in careers:
     changes = []
     for level in career['levels']:
+        if career['name'] == 'Trickster-Priest' and level['level'] == 3:
+            level['skills'][level['skills'].index('Perform (Acting)')] = 'Entertain (Acting)'
+            changes.append('Printed Perform (Acting) uses Entertain (Acting), by user choice')
+        if career['name'] == 'Trickster-Priest':
+            for index, raw in enumerate(level['skills']):
+                if raw in {'Art', 'Stealth'}:
+                    level['skills'][index] = raw+' (Any)'
+                    changes.append(f'Unspecified {raw} requires a chosen core specialisation')
+        if career['name'] == 'Liberator-Priest' and 'Impassioned Zeal' in level['talents']:
+            level['talents'][level['talents'].index('Impassioned Zeal')] = 'Impassioned Zeal (Any Cause)'
+            changes.append('Impassioned Zeal requires an explicit Cause')
+        if career['name'] == 'Liberator-Priest' and level['level'] == 2:
+            # User-approved move, not a replacement Skill or extra free grant.
+            level['skills'].remove('Public Speaking')
+            level['talents'].append('Public Speaking')
+            changes.append('Level-two Public Speaking moves from Skills to the Public Speaker Talent options')
         for index, raw in enumerate(level['talents']):
-            canonical = talent_name(raw)
+            if raw in {'Invoke (The Night Prowler)', 'Invoke (The Gamester)',
+                       'Invoke (The Deceiver)', 'Invoke (The Protector)'}:
+                canonical = 'Invoke (Ranald)'
+                changes.append(raw+' → '+canonical+'; retains the Career-specific printed Miracle list')
+            else:
+                canonical = talent_name(raw)
             level['talents'][index] = canonical
             if raw != canonical and raw.split(' (')[0] in changed_rules:
                 changes.append(raw+' → '+canonical)
@@ -67,7 +88,7 @@ for career in careers:
             if match and 'Any' not in match[2] and match[2] not in config['talentOptions'].get(match[1], []):
                 additions.setdefault(('talentOptions', match[1]), {})[match[2]] = career['page']
     if changes:
-        career['adaptation'] = 'Uses Fifth Edition core Talent equivalents: '+('; '.join(sorted(set(changes))))+'.'
+        career['adaptation'] = 'Reviewed Fifth Edition changes: '+('; '.join(sorted(set(changes))))+'.'
     career['conversion'] = 'Core Fifth Edition creation allocations and Talent definitions apply. Printed Career levels, Characteristics, Skill/Talent counts and Trapping names are retained. No new random Career probabilities are invented.'
 for (setting, group), entries in additions.items():
     rules.append({'id':f'deft-steps:{setting.lower()}:{slug(group)}', 'path':[setting, group],
@@ -98,6 +119,8 @@ tool_rows = [
  ('Glass Cutter','1GC',0,'Exotic',33,'Glass Cutter \n','Periscope'),
  ('Periscope','2GC',1,'Exotic',33,'Periscope\n','Smoke Bomb'),
  ('Smoke Bomb','1GC',0,'Exotic',33,'Smoke Bomb\n','Steel Mummit'),
+ ('Thin Jimmy','2GC',0,'Exotic',33,'Steel Mummit\n','GLASS CUTTING SUCCESS TABLE'),
+ ('Telescopic Pole','3GC',1,'Exotic',33,'T elescopic Stick\n',None),
 ]
 qualification = 'The p. 32 prices and Availability are a rough guide for discreet artisan-made tools; ordinary market purchases may arouse suspicion.'
 gear = []
@@ -107,6 +130,9 @@ for name, price, enc, availability, description_page, heading, stop in tool_rows
     entry = {'id':'deft-steps:gear:'+slug(name), 'name':name, 'page':32, 'price':price, 'enc':enc,
              'availability':availability, 'category':'Thieving tools', 'text':text,
              'conversion':f'Description: p. {description_page}. '+qualification}
+    if name in {'Thin Jimmy', 'Telescopic Pole'}:
+        alias = 'Steel Mummit' if name == 'Thin Jimmy' else 'Telescopic Stick'
+        entry['conversion'] += f' User-approved printed naming mismatch: table {name} uses the description headed {alias}. The naming correction alone is not a Legacy adaptation.'
     if text != original:
         entry['adaptation'] = 'Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364).'
     gear.append(entry)
@@ -121,22 +147,38 @@ for name, price, enc, availability in [('Hochland Lockhund','2GC',None,'Common')
                  'text':'Hunting animal listed in the Animals and Equipment table. Profiles and training are on pp. 133–134.',
                  'conversion':'Records acquisition only, without creating or controlling a companion. A printed dash for Encumbrance remains unknown, not zero.'})
 
-pending = [
- {'page':22,'subject':'Public Speaking printed as a Skill','decision':'Awaiting user choice; no move to Talents or replacement Skill assumed.'},
- {'page':25,'subject':'Protector Miracle list headed Trickster-Priests','decision':'Awaiting user choice of intended Career.'},
- {'page':24,'subject':'A Suitable Stooge versus A Suitable Sucker','decision':'Awaiting user approval of name equivalence.'},
- {'page':13,'subject':'Invoke aspect names versus Bless (Ranald)','decision':'Awaiting user choice of Fifth Edition patron handling.'},
- {'page':133,'subject':'Stride Creature Trait has no Fifth Edition equivalent','decision':'Awaiting user choice; not replaced with Striding Gait or a Movement modifier.'},
- {'page':32,'subject':'Thin Jimmy/Steel Mummit and Telescopic Pole/Stick','decision':'Awaiting user approval before pairing table prices with descriptions.'},
- {'page':34,'subject':'Abstract NPC Armour values without locations','decision':'Awaiting user choice before assigning protection locations.'},
- {'page':20,'subject':'Malformed or missing Skill specialisations and Talent targets','decision':'Awaiting user choice to retain unresolved original entries and require explicit Talent targets; related NPC malformed entries are pp. 47 and 111.'},
+pending = []
+decisions = [
+ {'page':22, 'subject':'Public Speaking printed as a Skill', 'decision':'Move it to level-two Talent options as core Public Speaker. It remains a listed level-three option, without an extra free rank.', 'adapted':True},
+ {'page':25, 'subject':'Protector list headed Trickster-Priests', 'decision':'Assign the Protector Miracle list to Liberator-Priest; retain the printed heading mismatch note.', 'adapted':False},
+ {'page':24, 'subject':'A Suitable Stooge versus A Suitable Sucker', 'decision':'Treat both as the detailed A Suitable Sucker Miracle, retaining the name mismatch note.', 'adapted':False},
+ {'page':13, 'subject':'Invoke aspect names', 'decision':'All four aspects use Invoke (Ranald) with their own printed Career-specific Miracle lists.', 'adapted':True},
+ {'page':32, 'subject':'Two tool naming pairs', 'decision':'Thin Jimmy uses Steel Mummit description; Telescopic Pole uses Telescopic Stick description. Retain table prices and weights with mismatch notes.', 'adapted':False},
+ {'page':34, 'subject':'Abstract NPC Armour', 'decision':'Use the first number as abstract all-location protection, without stacking assigned armour. Parenthesised totals are references only. Brunner p. 111 uses explicit printed locations instead.', 'adapted':True},
+ {'page':133, 'subject':'Hounds’ Stride Trait', 'decision':'User-approved Stride → core Sprinter (p. 361): Run Movement ×1.5 when Running. Add a Legacy explanation; do not substitute the Striding Gait Talent.', 'adapted':True},
+ {'page':20, 'subject':'Trickster-Priest Perform (Acting)', 'decision':'Use Entertain (Acting), with a Legacy note. This remains the same Skill already listed at level two, without an extra grant.', 'adapted':True},
+ {'page':20, 'subject':'Unspecified Art and Stealth', 'decision':'Offer an explicit core specialisation, without additional free Advances.', 'adapted':True},
+ {'page':22, 'subject':'Unspecified Impassioned Zeal Cause', 'decision':'Require an explicit Cause when selected; Father Pedragar p. 83 retains an unspecified-Cause warning until supplied by the GM.', 'adapted':True},
+ {'page':47, 'subject':'Forger Skill punctuation', 'decision':'Use Art (Calligraphy) 55, Art (Painting) 40, Melee (Basic) 33 and Perception 50; retain the printed punctuation discrepancy.', 'adapted':False},
+ {'page':111, 'subject':'Brunner Lore punctuation', 'decision':'Use Lore (Tilea) 50, retaining the printed comma discrepancy.', 'adapted':False},
+ {'page':18, 'subject':'Stay Lucky', 'decision':'Use core Cheat the Odds (p. 224) with a Legacy explanation on the affected Miracle lists.', 'adapted':True},
 ]
-assert len(careers) == 9 and len(spells) == 32 and len(gear) == 13
+profile_overrides = []
+for profile in read(args.input_dir/'profiles.raw.json'):
+    if profile['page'] == 133 and re.search(r'\bStride\b', profile['sections'].get('Traits', '')):
+        profile_overrides.append({
+            'page':133, 'heading':profile['heading'],
+            'traitReplacements':[{'printed':'Stride', 'canonical':'Sprinter', 'corePage':361}],
+            'adaptation':'The printed Fourth Edition Stride Trait uses the user-approved Fifth Edition Sprinter Trait (core p. 361): multiply Run Movement by 1.5 when Running.',
+        })
+assert len(profile_overrides) == 3
+assert len(careers) == 9 and len(spells) == 32 and len(gear) == 15
 args.output_dir.mkdir(parents=True, exist_ok=True)
 for filename, value in [('careers.json',careers),('spells.json',spells),('gear.json',gear),('rules.json',rules),
-                        ('profiles.raw.json',read(args.input_dir/'profiles.raw.json')),('pending.json',pending)]:
+                        ('profiles.raw.json',read(args.input_dir/'profiles.raw.json')),('profile-overrides.json',profile_overrides),
+                        ('pending.json',pending),('decisions.json',decisions)]:
     (args.output_dir/filename).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 source = read(args.input_dir/'source-review.json')
-source.update(status='Prepared for review only; no manifest or registry entry until pending decisions and NPC conversion are complete.', preparedGear=len(gear))
+source.update(status='User source decisions recorded; runtime registration still requires NPC conversion, handlers, coverage and release verification.', preparedGear=len(gear))
 (args.output_dir/'source-review.json').write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'careers':len(careers),'miracles':len(spells),'independentGear':len(gear),'pending':len(pending),'output':str(args.output_dir)}))

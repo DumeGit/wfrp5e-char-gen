@@ -57,9 +57,30 @@ test('structured NPC grants preserve printed ranks, Skills, attacks, armour and 
  assert.match(text,/Synthetic book · 1\.0\.0/);assert.match(text,/Fixture p\. 7/);
 });
 test('malformed structured grants and unsupported magic cannot silently disappear',()=>{
- const cases=[p=>p.talentGrants[0].ranks=0,p=>p.traitGrants[0].name='Invented Trait',p=>p.armourProfiles[0].ap=-1,p=>p.magicGrants[0].name='Invented spell',p=>p.magicGrants[0].lore='Invented Lore',p=>p.attacks[0].skillName='Invented Skill'];
+ const cases=[p=>p.talentGrants[0].ranks=0,p=>p.traitGrants[0].name='Invented Trait',p=>p.armourProfiles[0].ap=-1,p=>p.armourProfiles[0].abstract='yes',p=>p.magicGrants[0].name='Invented spell',p=>p.magicGrants[0].lore='Invented Lore',p=>p.attacks[0].skillName='Invented Skill'];
  for(const edit of cases){const next=extended();edit(next.packs.at(-1).data.creatures[0]);assert.throws(()=>assembleNPCBooks(next,['npc-fixture']),/Bestiary/);}
  const catalog=assembleNPCBooks(extended(),['npc-fixture']);validateBestiary(catalog);
+});
+test('an explicit abstract Armour rating covers all locations without stacking assigned equipment',()=>{
+ const next=extended(), profile=next.packs.at(-1).data.creatures[0];
+ profile.armourProfiles=[{name:'Printed Armour rating',ap:5,text:'All locations. Parenthesised printed total remains reference only.',abstract:true}];
+ const catalog=assembleNPCBooks(next,['npc-fixture']), s=freshNPC(catalog,'npc-fixture:creatures:sample');
+ const leather=catalog.armour.find(a=>/Leather/i.test(a.name)&&a.ap>0);
+ const plate=catalog.armour.find(a=>/Plate/i.test(a.name)&&a.ap>0);
+ s.gear.push({id:leather.contentId,quantity:1},{id:plate.contentId,quantity:1});
+ assert.deepEqual(npcResult(catalog,s).protection,{Head:5,Arms:5,Body:5,Legs:5,Shield:0});
+ s.removedArmour.push('base-armour-0');
+ assert.ok(Object.values(npcResult(catalog,s).protection).some(v=>v>0));
+ assert.notDeepEqual(npcResult(catalog,s).protection,{Head:5,Arms:5,Body:5,Legs:5,Shield:0});
+ validateNPCState(catalog,s);
+});
+test('a printed Sprinter grant multiplies Run Movement without changing Walk or the printed M',()=>{
+ const next=extended();next.packs.at(-1).data.creatures[0].traitGrants=[{name:'Sprinter'}];
+ const catalog=assembleNPCBooks(next,['npc-fixture']), s=freshNPC(catalog,'npc-fixture:creatures:sample');
+ let d=npcResult(catalog,s);
+ assert.equal(d.stats.M,4);assert.equal(d.walk,8);assert.equal(d.run,24);
+ s.removedTraits.push('core:traits:sprinter');
+ d=npcResult(catalog,s);assert.equal(d.stats.M,4);assert.equal(d.walk,8);assert.equal(d.run,16);
 });
 test('Career-scoped Miracle access agrees in PC grants, NPC choices and saved purchases',()=>{
  const catalog=structuredClone(R), spells=catalog.spells.filter(p=>p.category==='Ranald').slice(0,2);
