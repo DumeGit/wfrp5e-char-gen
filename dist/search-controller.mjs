@@ -90,7 +90,7 @@ export function createSearchController({
       input.value.trim() || category !== "all"
         ? `${ranked.length} match${ranked.length === 1 ? "" : "es"} · ${getScope()}`
         : `Search ${getScope()}, or choose a category to browse.`;
-    more.hidden = visible >= ranked.length;
+    more.hidden = Boolean(observer) || visible >= ranked.length;
     empty.hidden = !(input.value.trim() && ranked.length === 0);
     end.hidden = !ranked.length || visible < ranked.length;
     end.textContent = "All matching references shown.";
