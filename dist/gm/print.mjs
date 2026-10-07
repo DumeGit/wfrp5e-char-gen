@@ -1,5 +1,6 @@
 import { KEYS } from "../rules.mjs";
 import { rowName } from "./model.mjs";
+import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
 export const PRINT_LAYOUTS = [6, 4];
 const A4 = [595.28, 841.89];
@@ -127,7 +128,16 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
       description = s.description ? wrap(font, s.description, size, inner) : [],
       sections = cardSections(r, s).map(([label, value]) => ({
         label,
-        lines: wrap(font, `${label}: ${value}`, size, inner),
+        lines: wrapPDFRuns(
+          [
+            { text: `${label}: `, bold: true },
+            { text: printable(font, value) },
+          ],
+          font,
+          bold,
+          size,
+          inner,
+        ),
       })),
       heightNeeded =
         20 +
@@ -283,7 +293,17 @@ export async function prepareGMPrint(PDFLib, entries, { perPage = 6 } = {}) {
           );
           y -= 3;
           for (const section of plan.sections) {
-            draw(section.lines, plan.size);
+            for (const line of section.lines) {
+              drawPDFRuns(page, line, {
+                x: x + 10,
+                y,
+                size: plan.size,
+                font,
+                bold,
+                color: ink,
+              });
+              y -= plan.size + 2;
+            }
             y -= 3;
           }
         }

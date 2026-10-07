@@ -13,6 +13,10 @@ The creator switch is available in the desktop rail and above the phone page sel
 
 On desktop the folio stays alongside the page and scrolls internally if needed. Medium screens use two columns and put the folio beneath the editor; phones use page flow, a page selector and a fixed status/stat-block/review strip. Editing/search does not replace the active input. Native dialogs, keyboard tab navigation, explicit labels and reduced-motion styling are retained.
 
+PDF typography uses selective emphasis: table-card section labels are bold, with values and descriptions in regular type. Full-sheet attack, spell, Corruption and personality labels are also bold. Both exports measure and draw mixed-weight text with the same embedded fonts; the card fit check accounts for bold widths before export.
+
+Six cards per page is the default each time the print dialog opens. Four cards is an explicit larger-layout choice; it does not become the next session's default.
+
 ## Source decisions and calculations
 
 - Individual variation (p. 318): printed Characteristic −10 + recorded 2d10; rerolls replace the previous base value. Movement is not rolled. Dice use the shared cryptographic rejection-sampling function. Save files contain imported history, not independently verified randomness.
@@ -40,6 +44,7 @@ On desktop the folio stays alongside the page and scrolls internally if needed. 
 | `dist/gm/views.mjs`, `controls.mjs`, `sheet.mjs` | Compact workflow, safe shared controls and stat-block presentation |
 | `dist/gm/references.mjs` | Persistent core reference search, related-reference history and hover/focus previews |
 | `dist/gm/pdf.mjs` | Full stat-block PDF using the shared result; excludes source warnings/history |
+| `dist/gm/pdf-text.mjs` | Shared mixed-weight text wrapping and drawing using exact font measurements |
 | `dist/gm/print.mjs`, `printing.mjs` | Measured six/four-per-A4 card layout and local temporary print batch |
 | `dist/gm/app.mjs` | Boot, independent storage, undo, dialogs and events; stable text editing |
 | `dist/gm/style.css` | Responsive workshop layout using shared semantic design tokens |
@@ -61,3 +66,9 @@ Outcome tests cover every untouched profile, source mismatch rejection, Track na
 - Browser verification used an isolated `?verify=1` draft at 1440×900 and 390×844. Desktop and phone had no horizontal overflow. Checked printed-profile preview/application, stable name editing, Spellcaster alternatives, equipment/AP, compatible magic, review, player/GM switching, saved-draft import/load and undo, reference ambiguity/chaining/Back, and six/four-card batch controls. Tiny's warning appeared before export; both export controls were disabled and its issue link focused the Wounds input.
 - All 53 untouched profiles passed preservation checks and six-card fit measurement. Representative mixed six-card and four-card A4 PDFs, a full Spider sheet and a multipage notes case were generated with the same export modules. Poppler renders were visually checked for spacing, legibility and clipping. Four-card body text is normally 11 pt; six-card text is normally 9.25 pt. Oversized custom entries are blocked at the 7.5 pt minimum.
 - Browser export controls produced success feedback, but the in-app browser's download observer did not return a file. Download retrieval through that observer is unverified; the actual PDF bytes were verified separately through the shared export modules. No production deployment or push was performed.
+
+### PDF emphasis follow-up — 7 October 2026
+
+- Poppler renders of mixed six-card and four-card pages, a full Dragon sheet and a full caster/Corruption/personality sheet were visually checked after the typography change. Labels are distinct and no clipping or overlap was found. The representative cards retained 9.25 pt (six) and 11 pt (four) body text.
+- A mixed-weight wrapping regression checks that long unbroken names and paragraphs retain their content and remain within the measured width at 7.5, 9.25 and 11 pt. The existing all-profile fit, overflow blocking and multipage tests remain required. No browser controls changed in this follow-up.
+- `npm run check:release` passed: 18 packs, 78 application modules, generated/format checks, **316 tests** (25 GM tests) and an offline inventory of 243 published files. The default-layout regression also verifies six cards without an explicit layout argument.

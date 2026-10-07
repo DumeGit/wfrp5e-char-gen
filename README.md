@@ -48,6 +48,8 @@ The app supports player-character creation and a fresh, separate **NPC & creatur
 
 Enable **Deft Steps, Light Fingers** for nine Careers, 32 Miracles and 15 priced tools/clothing/animals. Six optional core Career profiles appear in Career. Ranald aspects retain separate Miracle lists; Art/Stealth and Impassioned Zeal Cause use explicit choices. Purchasing an animal records a belonging, without generating a companion. Actual conversions have selective Legacy explanations. Details: [docs/DEFT-STEPS.md](docs/DEFT-STEPS.md).
 
+GM PDFs use selective bold labels for easier scanning. Card fit checks measure both font weights; full sheets also emphasise attack, spell, Corruption and personality labels.
+
 ## Rules and source
 
 ### Archives III

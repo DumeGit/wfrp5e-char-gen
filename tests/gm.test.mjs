@@ -14,6 +14,7 @@ import { prepareGM } from "../dist/gm/content.mjs";
 import { pickerEntries, workspace } from "../dist/gm/views.mjs";
 import { sheetSections, createGMPDF } from "../dist/gm/pdf.mjs";
 import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
+import { wrapPDFRuns } from "../dist/gm/pdf-text.mjs";
 import * as PDFLib from "pdf-lib";
 const R = assembleBooks(
     JSON.parse(
@@ -40,11 +41,48 @@ const profile = (name) => data.profiles.find((p) => p.name === name),
       origin: "GM",
     });
 
+test("mixed-weight PDF wrapping preserves content and measures the actual font faces", async () => {
+  const doc = await PDFLib.PDFDocument.create(),
+    font = await doc.embedFont(PDFLib.StandardFonts.Helvetica),
+    bold = await doc.embedFont(PDFLib.StandardFonts.HelveticaBold),
+    longName = "UnbrokenCreatureName".repeat(8),
+    runs = [
+      { text: "Attacks: ", bold: true },
+      { text: `Fangs 40 / +8; ${longName} 55 / +12\n` },
+      { text: "Magic: ", bold: true },
+      { text: "Aethyric Armour (CN 2)" },
+    ];
+  for (const size of [7.5, 9.25, 11]) {
+    const lines = wrapPDFRuns(runs, font, bold, size, 245);
+    assert.equal(
+      lines
+        .flat()
+        .map((x) => x.text)
+        .join("")
+        .replace(/\s/g, ""),
+      runs
+        .map((x) => x.text)
+        .join("")
+        .replace(/\s/g, ""),
+    );
+    assert.equal(lines[0][0].bold, true);
+    assert.ok(lines.flat().some((x) => !x.bold && x.text.includes("Fangs")));
+    for (const line of lines) {
+      const width = line.reduce(
+        (n, x) => n + (x.bold ? bold : font).widthOfTextAtSize(x.text, size),
+        0,
+      );
+      assert.ok(width <= 245 + 0.001, `Text exceeds card width at ${size} pt`);
+    }
+  }
+});
+
 test("six complete table cards share one portrait A4 page, with additional cards paginated", async () => {
   const s = draft("Human"),
     r = result(s),
     entries = Array.from({ length: 6 }, () => ({ s, r }));
-  const print = await prepareGMPrint(PDFLib, entries, { perPage: 6 });
+  const print = await prepareGMPrint(PDFLib, entries);
+  assert.equal(print.perPage, 6);
   assert.deepEqual(print.overflow, []);
   assert.ok(print.cards.every((c) => c.fontSize >= 7.5));
   const doc = await PDFLib.PDFDocument.load(await print.bytes());

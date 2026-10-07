@@ -1,5 +1,6 @@
 import { KEYS } from "../rules.mjs";
 import { rowName } from "./model.mjs";
+import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
 // The sheet consumes exactly the same result as review and the folio.
 // Source conflicts, imported history and calculation commentary stay in the app.
@@ -238,7 +239,29 @@ export async function createGMPDF(PDFLib, r, s) {
   );
   y -= 5;
   for (const [title, lines] of sheetSections(r, s)) {
-    const initial = wrap(lines[0]).length;
+    const richLines = lines.map((line, i) => {
+      const label =
+        title === "Attacks"
+          ? r.attacks[i].name
+          : title === "Magic & prayers"
+            ? r.spells[i].name
+            : title === "Corruption"
+              ? r.mutations[i].name + ":"
+              : title === "Personality"
+                ? line.slice(0, line.indexOf(":") + 1)
+                : "";
+      return wrapPDFRuns(
+        [
+          { text: safe(label), bold: true },
+          { text: safe(line.slice(label.length)) },
+        ],
+        font,
+        bold,
+        10,
+        width,
+      );
+    });
+    const initial = richLines[0].length;
     reserve(Math.min(initial, 3) * 15 + 31);
     y -= 5;
     page.drawText(title, { x: 42, y, size: 14, font: heading, color: crimson });
@@ -250,7 +273,13 @@ export async function createGMPDF(PDFLib, r, s) {
       color: rule,
     });
     y -= 16;
-    for (const line of lines) text(line);
+    for (const paragraph of richLines) {
+      for (const line of paragraph) {
+        reserve(15);
+        drawPDFRuns(page, line, { x: 42, y, size: 10, font, bold, color: ink });
+        y -= 15;
+      }
+    }
     y -= 5;
   }
   return doc.save();
