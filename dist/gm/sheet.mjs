@@ -24,7 +24,7 @@ export function statBlock(r, s, { compact = false } = {}) {
   )}
   ${r.skills.length ? section("skills", `Skills <small>${r.skills.length}</small>`, `<div class="gm-mini-list">${r.skills.map((x) => `<div><span>${esc(x.name)}</span><b>${x.total}</b></div>`).join("")}</div>`) : ""}
   ${r.talents.length ? section("talents", `Talents <small>${r.talents.length}</small>`, `<p>${listNames(r.talents)}</p>`) : ""}
-  ${r.traits.length ? section("traits", `Traits <small>${r.traits.length}</small>`, `<p>${r.traits.map((t) => esc(rowName(t))).join(", ")}</p>`) : ""}
+  ${r.traits.length ? section("traits", `Traits <small>${r.traits.length}</small>`, r.traits.map((t) => `<p><strong>${esc(rowName(t))}:</strong> ${esc(t.description)}</p>`).join("")) : ""}
   ${r.spells.length ? section("magic", `Magic <small>${r.spells.length}</small>`, `<p>${r.spells.map((x) => esc(x.name)).join(", ")}</p>`) : ""}
   ${r.gear.length || r.profile.sections.Trappings ? section("gear", "Trappings", `${r.profile.sections.Trappings ? `<p>${esc(r.profile.sections.Trappings)}</p>` : ""}<div class="gm-mini-list">${r.gear.map((g) => `<div><span>${esc(g.entry.name)}</span><b>×${g.quantity}</b></div>`).join("")}</div>`) : ""}
   ${r.mutations.length ? section("mutations", "Corruption", `<p>${r.mutations.map((x) => esc(x.name)).join(", ")}</p>`) : ""}

@@ -39,10 +39,7 @@ export function sheetSections(r, s) {
           ]
         : [],
     ],
-    [
-      "Creature Traits",
-      r.traits.length ? [r.traits.map(rowName).join("; ")] : [],
-    ],
+    ["Creature Traits", r.traits.map((t) => `${rowName(t)}: ${t.description}`)],
     [
       "Magic & prayers",
       r.spells.map(
@@ -247,9 +244,11 @@ export async function createGMPDF(PDFLib, r, s) {
             ? r.spells[i].name
             : title === "Corruption"
               ? r.mutations[i].name + ":"
-              : title === "Personality"
-                ? line.slice(0, line.indexOf(":") + 1)
-                : "";
+              : title === "Creature Traits"
+                ? rowName(r.traits[i]) + ":"
+                : title === "Personality"
+                  ? line.slice(0, line.indexOf(":") + 1)
+                  : "";
       return wrapPDFRuns(
         [
           { text: safe(label), bold: true },

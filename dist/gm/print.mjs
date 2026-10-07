@@ -53,8 +53,8 @@ function wrap(font, text, size, width) {
   return lines;
 }
 
-// Table cards list ability names/ratings, like the printed bestiary profiles.
-// They are not miniature reproductions of the full sheet or rule descriptions.
+// Table cards retain actual Traits and their source descriptions. Measured
+// overflow blocks printing rather than truncating rules or shrinking below 7.5pt.
 export function cardSections(r, s) {
   return [
     [
@@ -81,7 +81,10 @@ export function cardSections(r, s) {
         .map((x) => x.name + (x.ranks > 1 ? ` ×${x.ranks}` : ""))
         .join("; "),
     ],
-    ["Traits", r.traits.map(rowName).join("; ")],
+    [
+      "Traits",
+      r.traits.map((t) => `${rowName(t)}: ${t.description}`).join("\n"),
+    ],
     [
       "Magic",
       r.spells
@@ -116,10 +119,17 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
   const { r, s } = entry,
     inner = width - 20;
   for (let size = maxSize; size >= MIN_FONT; size -= 0.25) {
+    const lineHeight = size + 1.25,
+      sectionGap = 2;
     const title = wrap(bold, r.name, 12, inner),
       subtitle = wrap(
         font,
-        [r.profile.name, r.template?.name, r.size, `Core p. ${r.profile.page}`]
+        [
+          r.name === r.profile.name ? "" : r.profile.name,
+          r.template?.name,
+          r.size,
+          `Core p. ${r.profile.page}`,
+        ]
           .filter(Boolean)
           .join(" · "),
         7.5,
@@ -129,10 +139,21 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
       sections = cardSections(r, s).map(([label, value]) => ({
         label,
         lines: wrapPDFRuns(
-          [
-            { text: `${label}: `, bold: true },
-            { text: printable(font, value) },
-          ],
+          label === "Traits"
+            ? [
+                { text: "Traits: ", bold: true },
+                ...r.traits.flatMap((t, i) => [
+                  {
+                    text: printable(font, `${i ? "\n" : ""}${rowName(t)}: `),
+                    bold: true,
+                  },
+                  { text: printable(font, t.description) },
+                ]),
+              ]
+            : [
+                { text: `${label}: `, bold: true },
+                { text: printable(font, value) },
+              ],
           font,
           bold,
           size,
@@ -146,10 +167,15 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
         description.length * (size + 2) +
         44 +
         14 +
-        sections.reduce((n, x) => n + x.lines.length * (size + 2) + 3, 0);
+        sections.reduce(
+          (n, x) => n + x.lines.length * lineHeight + sectionGap,
+          0,
+        );
     if (heightNeeded <= height - 12)
       return {
         size,
+        lineHeight,
+        sectionGap,
         title,
         subtitle,
         description,
@@ -160,6 +186,8 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
     if (size === MIN_FONT)
       return {
         size,
+        lineHeight,
+        sectionGap,
         title,
         subtitle,
         description,
@@ -302,9 +330,9 @@ export async function prepareGMPrint(PDFLib, entries, { perPage = 6 } = {}) {
                 bold,
                 color: ink,
               });
-              y -= plan.size + 2;
+              y -= plan.lineHeight;
             }
-            y -= 3;
+            y -= plan.sectionGap;
           }
         }
       }

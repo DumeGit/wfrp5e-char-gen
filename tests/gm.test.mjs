@@ -15,6 +15,7 @@ import { pickerEntries, workspace } from "../dist/gm/views.mjs";
 import { sheetSections, createGMPDF } from "../dist/gm/pdf.mjs";
 import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
 import { wrapPDFRuns } from "../dist/gm/pdf-text.mjs";
+import { statBlock } from "../dist/gm/sheet.mjs";
 import * as PDFLib from "pdf-lib";
 const R = assembleBooks(
     JSON.parse(
@@ -121,19 +122,111 @@ test("four-card layout measures each profile and never clips oversized content",
   await assert.rejects(blocked.bytes(), /do not fit/);
 });
 
-test("all 53 untouched core profiles fit six-per-A4 at readable size", async () => {
+test("all 53 described core profiles fit four-per-A4, with measured six-card overflow rather than dropped Traits", async () => {
   const entries = data.profiles.map((p) => {
     const s = freshGM(data, p.id);
     return { s, r: result(s) };
   });
   for (let i = 0; i < entries.length; i += 48) {
     const print = await prepareGMPrint(PDFLib, entries.slice(i, i + 48));
-    assert.deepEqual(print.overflow, []);
     assert.ok(print.cards.every((c) => c.fontSize >= 7.5));
+    if (print.overflow.length) {
+      await assert.rejects(print.bytes(), /do not fit/);
+      const larger = await prepareGMPrint(PDFLib, entries.slice(i, i + 48), {
+        perPage: 4,
+      });
+      assert.deepEqual(larger.overflow, []);
+      assert.ok(larger.cards.every((c) => c.fontSize >= 7.5));
+    }
   }
 });
 
-test("table cards retain mechanical fields and omit discrepancy/rule prose", async () => {
+test("Griffon sheet uses the three printed Trait descriptions, never suggested optional Traits", () => {
+  const s = draft("Griffon"),
+    r = result(s);
+  assert.deepEqual(
+    r.traits.map((t) => t.name),
+    ["Fly", "Night Vision", "Size"],
+  );
+  assert.match(r.traits[0].description, /fly up to 80 yards/);
+  assert.equal(r.attacks[0].text, "Fast");
+  assert.match(
+    r.traits[1].description,
+    /extend the illumination distance.*20 yards/,
+  );
+  assert.match(r.traits[2].description, /page 360/);
+  for (const text of [
+    JSON.stringify(sheetSections(r, s)),
+    JSON.stringify(cardSections(r, s)),
+    statBlock(r, s),
+  ]) {
+    assert.match(text, /Fly \(80\)/);
+    assert.match(text, /fly up to 80 yards/);
+    assert.doesNotMatch(
+      text,
+      /Optional Traits|Bestial|Immune to Psychology|Territorial|Trained/,
+    );
+  }
+  const html = statBlock(r, s);
+  assert.match(html, /<strong>Fly \(80\):<\/strong>/);
+  s.removed.push(r.traits.find((t) => t.name === "Night Vision").key);
+  assert.doesNotMatch(
+    JSON.stringify(cardSections(result(s), s)),
+    /Night Vision|illumination/,
+  );
+});
+
+test("added Traits and updated ratings use full definitions without stale profile summaries; rule conflicts retain the full core rule", () => {
+  const s = draft("Griffon");
+  s.removed.push(profile("Griffon").traits.find((t) => t.name === "Fly").key);
+  trait(s, "Fly", "40");
+  trait(s, "Bestial");
+  const r = result(s);
+  assert.equal(
+    r.traits.find((t) => t.name === "Fly").description,
+    data.traits.find((t) => t.name === "Fly").text,
+  );
+  assert.equal(
+    r.traits.find((t) => t.name === "Bestial").description,
+    data.traits.find((t) => t.name === "Bestial").text,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(cardSections(r, s)),
+    /80 yards|Fly \(80\)/,
+  );
+  const spider = draft("Giant Spider");
+  trait(spider, "Venom", "Average");
+  assert.equal(
+    result(spider).traits.find((t) => t.name === "Venom").description,
+    data.traits.find((t) => t.name === "Venom").text,
+  );
+  assert.match(
+    result(draft("Bloodletter of Khorne")).traits.find(
+      (t) => t.name === "Frenzy",
+    ).description,
+    /Test WP to enter Frenzy: Free Attack/,
+  );
+  assert.match(
+    result(draft("Orc")).traits.find((t) => t.name === "Belligerent")
+      .description,
+    /Momentum/,
+  );
+  assert.ok(
+    result(draft("Orc")).warnings.some((w) => /summary.*Advantage/.test(w)),
+  );
+  assert.doesNotMatch(
+    JSON.stringify(cardSections(result(draft("Orc")), draft("Orc"))),
+    /profile summary|Advantage/,
+  );
+  const injected = {
+    ...r,
+    traits: [{ ...r.traits[0], description: "<script>bad</script>" }],
+  };
+  assert.doesNotMatch(statBlock(injected, s), /<script>/);
+  assert.match(statBlock(injected, s), /&lt;script&gt;/);
+});
+
+test("table cards retain mechanical fields and Trait descriptions, omitting discrepancy notes", async () => {
   const s = draft("Giant Spider");
   s.size = "Large";
   const r = result(s),

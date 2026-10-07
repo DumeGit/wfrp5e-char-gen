@@ -1,4 +1,5 @@
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
+import { describeTraits } from "./trait-descriptions.mjs";
 
 export const GM_SCHEMA = 1;
 export const SIZES = [
@@ -1002,8 +1003,14 @@ export function calculateGM(data, R, s) {
         ]),
       ).values(),
     ],
-    traits: traits.map((t) => (t.name === "Size" ? { ...t, value: size } : t)),
-    attacks,
+    traits: describeTraits(
+      p,
+      traits.map((t) => (t.name === "Size" ? { ...t, value: size } : t)),
+    ),
+    attacks: attacks.map((a) => ({
+      ...a,
+      text: (a.text || "").replace(/^\s*[,;]\s*/, ""),
+    })),
     armour,
     ap,
     shield: Math.max(0, ...armour.filter((a) => a.shield).map((a) => a.ap)),
@@ -1044,6 +1051,7 @@ export function calculateGM(data, R, s) {
       "The general Size rule gives Fangs +8. The p. 361 worked example gives +5, omitting the additional Size damage; the user chose the general rule.",
     );
   warnings.push(...p.notes);
+  warnings.push(...result.traits.map((t) => t.descriptionNote).filter(Boolean));
   if (
     traits.some((t) => t.name === "Venom") &&
     /avoid|pass.*Endurance/.test(p.sections.Traits || "")
