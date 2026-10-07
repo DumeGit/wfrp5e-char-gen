@@ -2,6 +2,8 @@
 
 The user selected **C — The Black Banner** on 5 October 2026 and authorised implementation. This is the creator's active design: painted Old World heraldry, dark leather, parchment, muted antique gold and oxblood. Gothic lettering belongs to the masthead; the working interface stays compact and readable. The W uses the approved softened bevel and centred folio placement. Decorative initials are optically centred. There is no logo glint or sound.
 
+The Bestiary's moonlight/bone colour proposals are isolated in `design-previews/bestiary-colours.html`; see [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md). They are exploratory semantic-token overrides, not a production theme or a change to either creator's palette.
+
 ## Ownership
 
 | File | Responsibility |

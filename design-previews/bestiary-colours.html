@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bestiary colour studies</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #0d1726;
+        color: #e9e1cb;
+        font:
+          16px/1.6 "Segoe UI",
+          sans-serif;
+      }
+      main {
+        max-width: 1520px;
+        margin: auto;
+        padding: 32px 24px;
+      }
+      h1 {
+        font:
+          36px/1.2 Georgia,
+          serif;
+        margin: 0 0 12px;
+      }
+      p {
+        color: #bbc8d5;
+        margin: 0 0 24px;
+        max-width: 880px;
+      }
+      .studies {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      article {
+        border: 1px solid #52657a;
+        background: #17263a;
+        min-width: 0;
+      }
+      .image {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+        background: #101c2b;
+      }
+      iframe {
+        position: absolute;
+        width: 1320px;
+        height: 960px;
+        border: 0;
+        transform-origin: top left;
+        pointer-events: none;
+      }
+      .caption {
+        padding: 20px;
+      }
+      h2 {
+        font:
+          24px/1.2 Georgia,
+          serif;
+        margin: 0 0 12px;
+        color: #e6d2a0;
+      }
+      .caption p {
+        font-size: 14px;
+        min-height: 68px;
+        margin-bottom: 16px;
+      }
+      .swatches {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .swatch {
+        width: 30px;
+        height: 20px;
+        border: 1px solid #ffffff55;
+      }
+      .open {
+        display: inline-block;
+        padding: 8px 14px;
+        color: #f3e4ba;
+        background: #294362;
+        border: 1px solid #7a91aa;
+        text-decoration: none;
+      }
+      .open:hover {
+        background: #365779;
+      }
+      .open:focus-visible {
+        outline: 3px solid #e6cf94;
+        outline-offset: 3px;
+      }
+      .note {
+        margin-top: 24px;
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .studies {
+          grid-template-columns: 1fr;
+        }
+        .image {
+          height: 300px;
+        }
+        .caption p {
+          min-height: 0;
+        }
+        main {
+          padding: 24px 16px;
+        }
+        h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>The Bestiary · moonlight &amp; bone</h1>
+      <p>
+        Three colour studies drawn from the new undead banner. Same Skeleton,
+        same controls and layout. These are previews only; the live creators are
+        unchanged.
+      </p>
+      <div class="studies">
+        <article>
+          <div class="image">
+            <iframe
+              aria-hidden="true"
+              inert
+              title="A — Moonlit Vellum preview"
+              src="bestiary-screen.html?palette=moonlit&amp;thumbnail=1"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>A — Moonlit Vellum</h2>
+            <p>
+              Storm-blue navigation, pale bone parchment and cobalt actions.
+              Keeps the familiar light working page, with a cooler frame.
+            </p>
+            <div
+              class="swatches"
+              aria-label="Navy, storm blue, bone, cobalt and old gold"
+            >
+              <span class="swatch" style="background: #122136"></span
+              ><span class="swatch" style="background: #304560"></span
+              ><span class="swatch" style="background: #e7e3d4"></span
+              ><span class="swatch" style="background: #294e78"></span
+              ><span class="swatch" style="background: #ab9768"></span>
+            </div>
+            <a class="open" href="bestiary-screen.html?palette=moonlit"
+              >Open A at full size</a
+            >
+          </div>
+        </article>
+        <article>
+          <div class="image">
+            <iframe
+              aria-hidden="true"
+              inert
+              title="B — Midnight Grimoire preview"
+              src="bestiary-screen.html?palette=midnight&amp;thumbnail=1"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>B — Midnight Grimoire</h2>
+            <p>
+              Deep navy throughout, slate-blue fields, ivory text and bone-gold
+              actions. The strongest shift toward the moonlit painting.
+            </p>
+            <div
+              class="swatches"
+              aria-label="Midnight, slate blue, raised blue, ivory and bone gold"
+            >
+              <span class="swatch" style="background: #0c1727"></span
+              ><span class="swatch" style="background: #202e43"></span
+              ><span class="swatch" style="background: #2a3b52"></span
+              ><span class="swatch" style="background: #eee7d4"></span
+              ><span class="swatch" style="background: #d8bd80"></span>
+            </div>
+            <a class="open" href="bestiary-screen.html?palette=midnight"
+              >Open B at full size</a
+            >
+          </div>
+        </article>
+        <article>
+          <div class="image">
+            <iframe
+              aria-hidden="true"
+              inert
+              title="C — The Verdigris Crypt preview"
+              src="bestiary-screen.html?palette=crypt&amp;thumbnail=1"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>C — The Verdigris Crypt</h2>
+            <p>
+              Blue-green leather, weathered grey-green parchment and tarnished
+              brass. A colder, older crypt atmosphere with a light working page.
+            </p>
+            <div
+              class="swatches"
+              aria-label="Deep teal, weathered teal, grey-green parchment, green-blue and brass"
+            >
+              <span class="swatch" style="background: #13262c"></span
+              ><span class="swatch" style="background: #355057"></span
+              ><span class="swatch" style="background: #dce2d9"></span
+              ><span class="swatch" style="background: #305e60"></span
+              ><span class="swatch" style="background: #ab9a69"></span>
+            </div>
+            <a class="open" href="bestiary-screen.html?palette=crypt"
+              >Open C at full size</a
+            >
+          </div>
+        </article>
+      </div>
+      <p class="note">
+        Open a study to compare full-size text, fields, buttons and the folio.
+        The palette selector switches all three in place. No sound, new effects
+        or saved-character changes.
+      </p>
+    </main>
+    <script>
+      const resize = () =>
+        document.querySelectorAll(".image").forEach((frame) => {
+          const scale = frame.clientWidth / 1320;
+          frame.querySelector("iframe").style.transform = `scale(${scale})`;
+          frame.style.height = `${Math.round(960 * scale)}px`;
+        });
+      new ResizeObserver(resize).observe(document.querySelector(".studies"));
+      resize();
+    </script>
+  </body>
+</html>

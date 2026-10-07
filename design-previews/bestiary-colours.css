@@ -1,0 +1,181 @@
+/* Exploratory GM palettes only. Production tokens and layout stay unchanged. */
+:root[data-palette="moonlit"] {
+  --color-world: #101b2c;
+  --color-leather: #192b43;
+  --color-leather-deep: #122136;
+  --color-leather-raised: #304560;
+  --color-on-leather: #e9dfc4;
+  --color-on-leather-muted: #bac8d4;
+  --color-line-dark: #687b92;
+  --color-paper: #e7e3d4;
+  --color-paper-raised: #f5f2e8;
+  --color-paper-recessed: #d7d6c9;
+  --color-paper-hover: #e6ebeb;
+  --color-ink: #243444;
+  --color-muted: #4c5962;
+  --color-line: #a5adac;
+  --color-line-soft: #bfc6c2;
+  --color-gold: #ab9768;
+  --color-gold-light: #e5d199;
+  --color-gold-dark: #72603c;
+  --color-crimson: #294e78;
+  --color-crimson-hover: #203f63;
+  --color-on-crimson: #f4f0df;
+  --color-focus: #3972ab;
+}
+:root[data-palette="midnight"] {
+  color-scheme: dark;
+  --color-world: #090f1b;
+  --color-leather: #101c2d;
+  --color-leather-deep: #0c1727;
+  --color-leather-raised: #253953;
+  --color-on-leather: #e7ddbf;
+  --color-on-leather-muted: #afbece;
+  --color-line-dark: #54667d;
+  --color-paper: #202e43;
+  --color-paper-raised: #2a3b52;
+  --color-paper-recessed: #17253a;
+  --color-paper-hover: #344962;
+  --color-ink: #eee7d4;
+  --color-muted: #bcc8d5;
+  --color-line: #687b90;
+  --color-line-soft: #4d617a;
+  --color-gold: #b5a16e;
+  --color-gold-light: #ecd8a3;
+  --color-gold-dark: #cab987;
+  --color-crimson: #d8bd80;
+  --color-crimson-hover: #ead29a;
+  --color-on-crimson: #142238;
+  --color-focus: #90b9e2;
+  --color-success: #b8d1bd;
+  --color-success-surface: #203c35;
+  --color-success-line: #658b79;
+  --color-warning: #edd09a;
+  --color-warning-surface: #3e3528;
+  --color-error: #f1b6ad;
+  --color-error-surface: #482b35;
+  --color-error-line: #a56871;
+  --color-legacy: #ddc1df;
+  --color-legacy-surface: #3d2e47;
+  --color-legacy-line: #8f759c;
+}
+:root[data-palette="crypt"] {
+  --color-world: #101e21;
+  --color-leather: #1a3033;
+  --color-leather-deep: #13262c;
+  --color-leather-raised: #355057;
+  --color-on-leather: #e5e0c6;
+  --color-on-leather-muted: #b2c5c3;
+  --color-line-dark: #678080;
+  --color-paper: #dce2d9;
+  --color-paper-raised: #edf0e6;
+  --color-paper-recessed: #ccd5cb;
+  --color-paper-hover: #e4ede7;
+  --color-ink: #253b3a;
+  --color-muted: #475d58;
+  --color-line: #9eafa3;
+  --color-line-soft: #b7c6b9;
+  --color-gold: #ab9a69;
+  --color-gold-light: #ddd0a0;
+  --color-gold-dark: #70613f;
+  --color-crimson: #305e60;
+  --color-crimson-hover: #244a4f;
+  --color-on-crimson: #f4efdb;
+  --color-focus: #377d8b;
+}
+.brand-title {
+  background: #0b1725bf;
+}
+/* Palette switching is immediate, avoiding transient mixed-colour screenshots. */
+:root[data-palette] * {
+  transition: none;
+}
+.banner-search-ribbon {
+  background: #101e2cb3;
+}
+.panel {
+  background:
+    radial-gradient(ellipse at 40% 0, #ffffff18, transparent 75%),
+    var(--color-paper);
+  box-shadow: inset 0 0 24px #07172d12;
+}
+.rail::before,
+.sheet::before {
+  background: radial-gradient(ellipse at 0 50%, #72aad514, transparent 25%);
+}
+.chapter-initial {
+  color: var(--color-on-crimson);
+}
+.steps button.active .step-number,
+.steps button.active small {
+  color: var(--color-on-crimson);
+}
+:root[data-palette="midnight"] .steps button:hover {
+  color: var(--color-on-leather);
+}
+:root[data-palette="midnight"] .steps button.active:hover {
+  color: var(--color-on-crimson);
+}
+:root[data-palette="midnight"] .secondary:hover:not(:disabled) {
+  color: var(--color-on-leather);
+}
+.sheet-heading {
+  background: #8ca8bb0c;
+}
+.sheet-heading .folio-crest {
+  box-shadow: inset 0 0 0 2px #afc3ce22;
+}
+input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+.preview-tools {
+  background: #091522;
+  color: #e7dfc7;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font:
+    13px/1.4 "Segoe UI",
+    sans-serif;
+  border-bottom: 1px solid #5d7289;
+}
+.preview-tools a {
+  color: #e7d297;
+}
+.preview-tools strong {
+  margin-right: auto;
+}
+.preview-tools select {
+  width: auto;
+  min-height: 36px;
+  padding: 4px 9px;
+  background: #263b51;
+  color: #f2ead9;
+  border: 1px solid #8b9aab;
+}
+.preview-tools label {
+  margin: 0;
+}
+.preview-tools small {
+  color: #bec9d3;
+}
+.preview-tools[hidden] {
+  display: none;
+}
+@media (max-width: 600px) {
+  .preview-tools {
+    padding: 8px 12px;
+  }
+  .preview-tools small {
+    flex-basis: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en" data-palette="moonlit">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bestiary palette preview</title>
+    <link rel="stylesheet" href="../dist/styles.css" />
+    <link rel="stylesheet" href="../dist/workspace.css" />
+    <link rel="stylesheet" href="../dist/book-search.css" />
+    <link rel="stylesheet" href="../dist/design-tokens.css" />
+    <link rel="stylesheet" href="../dist/design-system.css" />
+    <link rel="stylesheet" href="../dist/gm/style.css" />
+    <link rel="stylesheet" href="bestiary-colours.css" />
+  </head>
+  <body>
+    <div class="preview-tools">
+      <strong id="preview-title">A — Moonlit Vellum</strong
+      ><label for="palette">Palette</label
+      ><select id="palette">
+        <option value="moonlit">A · Moonlit Vellum</option>
+        <option value="midnight">B · Midnight Grimoire</option>
+        <option value="crypt">C · The Verdigris Crypt</option></select
+      ><a href="bestiary-colours.html">All previews</a
+      ><small>Static colour study · creator actions are inactive</small>
+    </div>
+    <header class="masthead">
+      <div class="masthead-art" aria-hidden="true"></div>
+      <div class="banner-atmosphere" aria-hidden="true">
+        <i style="--particle: 0"></i><i style="--particle: 1"></i
+        ><i style="--particle: 2"></i><i style="--particle: 3"></i
+        ><i style="--particle: 4"></i><i style="--particle: 5"></i>
+      </div>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"
+          ><img
+            class="ledger-emblem"
+            src="../dist/assets/black-banner/w.svg"
+            alt=""
+            width="108"
+            height="100"
+        /></span>
+        <div class="brand-title">
+          <span class="brand-world">WARHAMMER FANTASY ROLEPLAY</span
+          ><strong>The Bestiary Workshop</strong
+          ><small>FIFTH EDITION · THE MUSTER ROLL</small>
+        </div>
+      </div>
+      <div class="masthead-actions">
+        <span class="edition">BY INK AND OATH</span>
+      </div>
+      <div class="banner-search-ribbon">
+        <span class="banner-caption">THE OLD WORLD</span>
+        <div class="banner-search">
+          <button
+            type="button"
+            class="quiet book-search-launcher"
+            aria-haspopup="dialog"
+            aria-label="Search rules and book references"
+          >
+            ⌕ Search rules and book references…
+          </button>
+          <div class="banner-search-field">
+            <span class="banner-search-icon" aria-hidden="true">⌕</span
+            ><input
+              id="book-search"
+              type="search"
+              role="combobox"
+              aria-label="Search the books"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="book-search-results"
+              autocomplete="off"
+              placeholder="Search rules, Careers, magic, creatures and more…"
+            /><button
+              id="book-search-clear"
+              type="button"
+              aria-label="Clear book search"
+            >
+              ×
+            </button>
+          </div>
+          <div id="book-search-dropdown" class="book-search-dropdown" hidden="">
+            <div class="search-result-tools">
+              <select id="book-search-category" aria-label="Search category">
+                <option value="all">All categories</option>
+              </select>
+              <p id="book-search-status" role="status" aria-live="polite"></p>
+            </div>
+
+            <div
+              id="book-search-results"
+              role="listbox"
+              aria-label="Matching rules"
+            ></div>
+            <p id="book-search-empty" hidden="">
+              No matches. Try a shorter name or another word.
+            </p>
+            <button
+              id="book-search-more"
+              type="button"
+              hidden=""
+              aria-label="Load the next 20 search results"
+            >
+              Load more results
+            </button>
+            <p class="search-results-end" hidden=""></p>
+          </div>
+        </div>
+        <span class="banner-caption">ALL BOOK REFERENCES</span>
+      </div>
+    </header>
+    <div id="app">
+      <div class="workspace gm-workspace">
+        <aside class="rail">
+          <nav class="creator-switch" aria-label="Creator">
+            <a href="./?verify=1">Player character</a
+            ><a href="gm.html?verify=1" aria-current="page"
+              >NPC &amp; creature</a
+            >
+          </nav>
+          <div class="rail-heading">
+            <span class="eyebrow">Game Master's workshop</span
+            ><strong>The Bestiary</strong>
+            <p>Core book · Fifth Edition</p>
+          </div>
+          <div class="field">
+            <label for="gm-step-select">Workshop page</label
+            ><select
+              id="gm-step-select"
+              data-bind="step"
+              class="gm-mobile-select"
+            >
+              <option value="0">Starting profile</option>
+              <option value="1" selected="">Customise</option>
+              <option value="2">Equipment &amp; magic</option>
+              <option value="3">Review &amp; export</option>
+            </select>
+          </div>
+          <nav class="gm-step-nav" aria-label="Workshop pages">
+            <ol class="steps">
+              <li>
+                <button data-action="step" data-step="0" class="">
+                  <span class="step-number">01</span
+                  ><span
+                    >Starting profile<small>Choose your foundation</small></span
+                  >
+                </button>
+              </li>
+              <li>
+                <button
+                  data-action="step"
+                  data-step="1"
+                  class="active"
+                  aria-current="step"
+                >
+                  <span class="step-number">02</span
+                  ><span>Customise<small>Optional changes</small></span>
+                </button>
+              </li>
+              <li>
+                <button data-action="step" data-step="2" class="">
+                  <span class="step-number">03</span
+                  ><span
+                    >Equipment &amp; magic<small
+                      >Armour, attacks &amp; spells</small
+                    ></span
+                  >
+                </button>
+              </li>
+              <li>
+                <button data-action="step" data-step="3" class="">
+                  <span class="step-number">04</span
+                  ><span
+                    >Review &amp; export<small>A compact sheet</small></span
+                  >
+                </button>
+              </li>
+            </ol>
+          </nav>
+          <div class="header-actions">
+            <button type="button" class="quiet" data-action="save">
+              Save NPC / creature</button
+            ><button type="button" class="quiet" data-action="load">
+              Load draft</button
+            ><button type="button" class="quiet" data-action="new">
+              New NPC / creature
+            </button>
+            <div data-install-slot=""></div>
+          </div>
+          <p class="save-status">Isolated preview · personal draft unchanged</p>
+          <button type="button" class="quiet" data-action="undo">
+            ↶ Undo last change
+          </button>
+          <p class="gm-rail-note">
+            Independent from your player character. Career development and
+            campaign tracking are outside this workshop.
+          </p>
+        </aside>
+        <main class="panel gm-panel">
+          <div class="gm-page-heading">
+            <span class="eyebrow">THE BESTIARY · 02 / 04</span>
+            <h1 class="chapter-title" aria-label="Customise">
+              <span class="chapter-initial" aria-hidden="true"
+                ><span>C</span></span
+              ><span aria-hidden="true">ustomise</span>
+            </h1>
+          </div>
+          <div id="gm-feedback">
+            <details data-detail-key="gm:source-notes">
+              <summary>
+                Source notes <small>1 · review before export</small>
+              </summary>
+              <div class="gm-detail-body">
+                <ul>
+                  <li>
+                    Unstable: the profile summary (p. 339) uses Advantage; the
+                    sheet follows the full core Trait definition (p. 363), which
+                    uses Momentum.
+                  </li>
+                </ul>
+                <p class="gm-small">
+                  These notes stay in the app; the PDF contains the compact stat
+                  block.
+                </p>
+              </div>
+            </details>
+          </div>
+          <div class="gm-template-bar">
+            <div>
+              <span class="eyebrow">Core template</span
+              ><strong>Printed profile</strong
+              ><small>Optional · add training or magical ability</small>
+            </div>
+            <button type="button" class="quiet" data-action="template-picker">
+              Choose template
+            </button>
+          </div>
+          <div class="page-tabs" role="tablist" aria-label="Customisation">
+            <button
+              role="tab"
+              id="gm-tab-0"
+              aria-controls="gm-custom-content"
+              aria-selected="true"
+              tabindex="0"
+              class="active"
+              data-action="tab"
+              data-tab="0"
+            >
+              Characteristics</button
+            ><button
+              role="tab"
+              id="gm-tab-1"
+              aria-controls="gm-custom-content"
+              aria-selected="false"
+              tabindex="-1"
+              class=""
+              data-action="tab"
+              data-tab="1"
+            >
+              Traits</button
+            ><button
+              role="tab"
+              id="gm-tab-2"
+              aria-controls="gm-custom-content"
+              aria-selected="false"
+              tabindex="-1"
+              class=""
+              data-action="tab"
+              data-tab="2"
+            >
+              Skills &amp; Talents
+            </button>
+          </div>
+          <div
+            id="gm-custom-content"
+            role="tabpanel"
+            aria-labelledby="gm-tab-0"
+          >
+            <div class="gm-section-heading">
+              <h2>Characteristics</h2>
+              <button
+                type="button"
+                class="quiet"
+                data-action="roll-all"
+                title="Printed score −10 + 2d10, core p. 318"
+              >
+                Roll individual variation
+              </button>
+            </div>
+            <p class="gm-small">
+              Edit the starting score; template, Talent and Size changes are
+              added once. Individual variation uses printed score −10 + 2d10 (p.
+              318).
+            </p>
+            <div class="gm-characteristics">
+              <div class="gm-char-row">
+                <label for="stat-M"><b>M</b><small>Printed 4</small></label
+                ><input
+                  aria-label="M starting score"
+                  id="stat-M"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="4"
+                  data-stat="M"
+                /><span class="gm-char-final">→ <b>4</b></span>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-WS"><b>WS</b><small>Printed 25</small></label
+                ><input
+                  aria-label="WS starting score"
+                  id="stat-WS"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="25"
+                  data-stat="WS"
+                /><span class="gm-char-final">→ <b>25</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="WS"
+                  aria-label="Roll individual variation for WS"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-BS"><b>BS</b><small>Printed 25</small></label
+                ><input
+                  aria-label="BS starting score"
+                  id="stat-BS"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="25"
+                  data-stat="BS"
+                /><span class="gm-char-final">→ <b>25</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="BS"
+                  aria-label="Roll individual variation for BS"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-S"><b>S</b><small>Printed 30</small></label
+                ><input
+                  aria-label="S starting score"
+                  id="stat-S"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="30"
+                  data-stat="S"
+                /><span class="gm-char-final">→ <b>30</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="S"
+                  aria-label="Roll individual variation for S"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-T"><b>T</b><small>Printed 30</small></label
+                ><input
+                  aria-label="T starting score"
+                  id="stat-T"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="30"
+                  data-stat="T"
+                /><span class="gm-char-final">→ <b>30</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="T"
+                  aria-label="Roll individual variation for T"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-I"><b>I</b><small>Printed 20</small></label
+                ><input
+                  aria-label="I starting score"
+                  id="stat-I"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="20"
+                  data-stat="I"
+                /><span class="gm-char-final">→ <b>20</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="I"
+                  aria-label="Roll individual variation for I"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-Ag"><b>Ag</b><small>Printed 20</small></label
+                ><input
+                  aria-label="Ag starting score"
+                  id="stat-Ag"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="20"
+                  data-stat="Ag"
+                /><span class="gm-char-final">→ <b>20</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="Ag"
+                  aria-label="Roll individual variation for Ag"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-Dex"><b>Dex</b><small>Printed 25</small></label
+                ><input
+                  aria-label="Dex starting score"
+                  id="stat-Dex"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value="25"
+                  data-stat="Dex"
+                /><span class="gm-char-final">→ <b>25</b></span
+                ><button
+                  type="button"
+                  class="quiet"
+                  data-action="roll-stat"
+                  data-key="Dex"
+                  aria-label="Roll individual variation for Dex"
+                >
+                  ⚄
+                </button>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-Int"><b>Int</b><small>Printed —</small></label
+                ><input
+                  aria-label="Int starting score"
+                  id="stat-Int"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value=""
+                  data-stat="Int"
+                /><span class="gm-char-final">→ <b>—</b></span>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-WP"><b>WP</b><small>Printed —</small></label
+                ><input
+                  aria-label="WP starting score"
+                  id="stat-WP"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value=""
+                  data-stat="WP"
+                /><span class="gm-char-final">→ <b>—</b></span>
+              </div>
+              <div class="gm-char-row">
+                <label for="stat-Fel"><b>Fel</b><small>Printed —</small></label
+                ><input
+                  aria-label="Fel starting score"
+                  id="stat-Fel"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="—"
+                  value=""
+                  data-stat="Fel"
+                /><span class="gm-char-final">→ <b>—</b></span>
+              </div>
+            </div>
+            <h2>Size &amp; derived values</h2>
+            <div class="gm-fields">
+              <div class="field">
+                <label for="gm-size">Size</label
+                ><select id="gm-size" data-bind="size">
+                  <option value="Tiny">Tiny</option>
+                  <option value="Small">Small</option>
+                  <option value="Average" selected="">Average</option>
+                  <option value="Large">Large</option>
+                  <option value="Enormous">Enormous</option>
+                  <option value="Monstrous">Monstrous</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="gm-wounds">Wounds override</label
+                ><input
+                  id="gm-wounds"
+                  type="number"
+                  value=""
+                  data-bind="wounds"
+                  min="0"
+                  step="1"
+                  placeholder="Calculated / printed"
+                />
+              </div>
+              <div class="field">
+                <label for="gm-tb-mode">Toughness Bonus</label
+                ><select id="gm-tb-mode" data-bind="tbMode">
+                  <option value="" selected="">Printed until changed</option>
+                  <option value="printed">Keep printed bonus</option>
+                  <option value="calculated">Calculate from Toughness</option>
+                  <option value="manual">Set manually</option>
+                </select>
+              </div>
+            </div>
+            <label class="gm-check"
+              ><input type="checkbox" data-bind="recalculate" /> Recalculate
+              derived values from this build</label
+            >
+            <details data-detail-key="gm:calculations">
+              <summary>How totals are calculated</summary>
+              <div class="gm-detail-body">
+                <p>
+                  Printed scores are the baseline. Template and Size changes,
+                  explicit Talent benefits and selected Corruption effects are
+                  added to that baseline. Printed Skills retain their difference
+                  from the associated Characteristic; a template uses the higher
+                  Skill bonus. GM Skill totals override that result.
+                </p>
+                <p>
+                  Untouched profiles retain printed Wounds, attacks and
+                  Toughness Bonus. Changed profiles use the core Size formula
+                  (pp. 360–361); Hardy adds Toughness Bonus before
+                  multiplication. Construct substitutes Strength Bonus for
+                  Willpower Bonus. Swarm uses five times the normal creature’s
+                  Wounds and ignores Size changes. Tiny requires a manual Wounds
+                  value.
+                </p>
+                <p>
+                  Primary melee Damage changes with Strength Bonus and the Size
+                  bonus. Ranged and extra attacks receive no Size bonus.
+                  Situational effects remain reference text.
+                </p>
+              </div>
+            </details>
+          </div>
+          <footer class="gm-page-footer">
+            <button
+              type="button"
+              class="quiet"
+              data-action="step"
+              data-step="0"
+            >
+              ← Previous</button
+            ><button
+              type="button"
+              class="primary"
+              data-action="step"
+              data-step="2"
+            >
+              Equipment &amp; magic →
+            </button>
+          </footer>
+        </main>
+        <aside
+          class="sheet gm-folio"
+          id="gm-folio"
+          aria-label="Current stat block"
+        >
+          <div class="sheet-title">
+            <span class="folio-crest" aria-hidden="true"
+              ><img
+                class="ledger-emblem"
+                src="../dist/assets/black-banner/w.svg"
+                alt=""
+                width="108"
+                height="100" /></span
+            ><span class="eyebrow">The creature folio</span>
+          </div>
+          <article class="gm-stat-block gm-stat-compact">
+            <header>
+              <span class="eyebrow">Restless Dead</span>
+              <h2>Skeleton</h2>
+              <p>Skeleton · Average</p>
+            </header>
+            <div class="gm-stat-grid">
+              <div><span>M</span><strong>4</strong></div>
+              <div><span>WS</span><strong>25</strong></div>
+              <div><span>BS</span><strong>25</strong></div>
+              <div><span>S</span><strong>30</strong></div>
+              <div><span>T</span><strong>30</strong></div>
+              <div><span>I</span><strong>20</strong></div>
+              <div><span>Ag</span><strong>20</strong></div>
+              <div><span>Dex</span><strong>25</strong></div>
+              <div><span>Int</span><strong>—</strong></div>
+              <div><span>WP</span><strong>—</strong></div>
+              <div><span>Fel</span><strong>—</strong></div>
+            </div>
+            <div class="gm-derived">
+              <div><span>Wounds</span><strong>12</strong></div>
+              <div><span>TB</span><strong>3</strong></div>
+              <div><span>Size</span><strong>Average</strong></div>
+            </div>
+            <details data-detail-key="gm:folio:attacks" open="">
+              <summary>Attacks</summary>
+              <div class="gm-detail-body">
+                <div class="gm-stat-attacks">
+                  <div>
+                    <strong>Hand Weapon</strong><span>30 / +7</span
+                    ><small>Magical</small>
+                  </div>
+                </div>
+              </div>
+            </details>
+            <details data-detail-key="gm:folio:defence">
+              <summary>Defence</summary>
+              <div class="gm-detail-body">
+                <p class="gm-ap-line">
+                  Head <b>0</b> · Arms <b>0</b> · Body <b>0</b> · Legs <b>0</b>
+                </p>
+              </div>
+            </details>
+            <details data-detail-key="gm:folio:skills">
+              <summary>Skills <small>1</small></summary>
+              <div class="gm-detail-body">
+                <div class="gm-mini-list">
+                  <div><span>Melee (Basic)</span><b>30</b></div>
+                </div>
+              </div>
+            </details>
+
+            <details data-detail-key="gm:folio:traits">
+              <summary>Traits <small>6</small></summary>
+              <div class="gm-detail-body">
+                <p>
+                  <strong>Construct:</strong> Never Test Int, WP , or Fel; use T
+                  for WP if needed, see page 357 for details
+                </p>
+                <p><strong>Dark Vision:</strong> See in the dark as daylight</p>
+                <p>
+                  <strong>Fear (1):</strong> The creature causes Fear, see page
+                  183 for details
+                </p>
+                <p>
+                  <strong>Painless:</strong> All non-amputation penalties
+                  suffered from Critical Wounds are ignored
+                </p>
+                <p>
+                  <strong>Undead:</strong> Not reliant on air, food, water, and
+                  other things needed to sustain life, affected by spells,
+                  miracles, or other abilities that affect Undead only
+                </p>
+                <p>
+                  <strong>Unstable:</strong> The creature’s corpus is maintained
+                  by foul magics that are inherently unstable in the material
+                  realm. Whenever they end a Round Engaged with any opponents
+                  who possess Momentum when they do not, the creature is driven
+                  back, and the magics holding them together weaken and the
+                  creature loses 2 Wounds. If the creature ever reaches 0
+                  Wounds, the magics holding them in place collapse, and they
+                  are destroyed or driven back from whence they came.
+                </p>
+              </div>
+            </details>
+          </article>
+          <div class="gm-folio-footer">
+            <span>Ready to export</span
+            ><button
+              type="button"
+              class="quiet"
+              data-action="step"
+              data-step="3"
+            >
+              Review &amp; export
+            </button>
+          </div>
+        </aside>
+      </div>
+      <div class="mobile-workspace-bar gm-mobile-bar">
+        <span>Ready for the table</span
+        ><button type="button" class="quiet" data-action="folio">
+          Stat block</button
+        ><button type="button" class="quiet" data-action="step" data-step="3">
+          Review
+        </button>
+      </div>
+    </div>
+    <script type="module" src="bestiary-colours.mjs"></script>
+  </body>
+</html>

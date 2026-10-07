@@ -36,3 +36,17 @@ Verification for this iteration: inspect the W at thumbnail/enlarged sizes, conf
 Verification: inspect all four thumbnails, enlarge a study, switch preview tabs, expand the folio, toggle motion and request a sound sample. Check the narrow gallery layout and browser errors. The original gallery stays exploratory. C now has a separate production implementation; no push or deployment is performed by the agent.
 
 The decorative S now uses a line-height-one box with an optical correction in the preview; the production `chapterHeading` component generalises this for every page heading.
+
+## Bestiary colour studies — 7 October 2026
+
+Three new proposals are in `design-previews/bestiary-colours.html`, outside `dist`. Serve the repository root and open `/design-previews/bestiary-colours.html` (the current local preview is http://127.0.0.1:8095/design-previews/bestiary-colours.html). They draw their palette from the generated skeleton-army banner; neither creator's production palette changes.
+
+| Study | Colour direction |
+| --- | --- |
+| A — Moonlit Vellum | Navy/storm-blue shell, pale bone parchment, cobalt actions and muted gold |
+| B — Midnight Grimoire | Midnight shell, slate-blue working page/fields, ivory text and bone-gold actions |
+| C — The Verdigris Crypt | Blue-green shell, grey-green parchment, teal actions and tarnished brass |
+
+`bestiary-screen.html` captures the actual isolated core Skeleton Customise screen with the shared production styles. Each proposal overrides semantic colour roles through `bestiary-colours.css`; a few preview-only overrides remove warm fixed overlays and retain contrast when primary buttons use light gold. No layout redesign, new artwork, sound or rules are introduced. The gallery scales the same desktop snapshot into three thumbnails. Full-size links expose normal responsive layout and a native Palette selector for comparison. Disclosures work, but creator actions are inert and there is no rules engine, save/load, service worker or local-storage access in these studies. The supplied Skeleton data is unchanged. The original galleries remain historical; the new proposals have not been selected for implementation.
+
+Verification: inspected the three thumbnails and full-size palettes, switched the native selector, checked both W images load, and inspected the gallery/full-size phone layouts at 390×844 without horizontal page overflow. Gallery thumbnails are inert and hidden from the accessibility tree; labelled full-size links provide access. Reviewed body, secondary text, shell and primary-button contrast; selected navigation captions retain readable contrast in B. Palette changes are immediate to avoid mixed-colour transitions during comparison. `npm run check:release` passed all 328 tests and offline coverage; the previews stay outside the 254 published/offline assets. Preview module syntax and formatting checks passed. No creator code, rules, save format or published assets changed.
