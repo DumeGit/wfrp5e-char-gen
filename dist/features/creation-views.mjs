@@ -87,19 +87,18 @@ export function createFeature(getContext, setContext) {
       available = R.careers.filter((x) => careerAvailable(R, s, x)),
       bonus = M.bonusTrappingLimit(R, s);
     return `${chapterHeading("Choose your Career")}
-<p class="muted">${available.length} of ${R.careers.length} enabled Careers are available to ${esc(originProfile(R, s)?.name || s.species)} characters.</p>${careerBrowser(R, s, { query: careerSearch, className: careerFilter, book: careerBook, preview: careerPreview, limit: careerLimit })}${tablePicker(R, s, "career")}<div class="actions">${button("career-roll", s.careerAttempts ? "Roll another Career" : "Roll Career · d100", randomTable(R, s, "career") ? "" : 'disabled title="Choose a printed Career roll table above, or choose a Career directly"', "primary")}${s.careerAttempts === 1 && randomTable(R, s, "career") ? button("career-three", "Roll two more") : ""}</div>${
+<section class="career-roll-controls" aria-label="Roll a Career"><div class="actions">${button("career-roll", s.careerAttempts ? "Roll another Career" : "Roll Career · d100", randomTable(R, s, "career") ? "" : 'disabled title="Choose a printed Career roll table, or choose a Career directly"', "primary")}${s.careerAttempts === 1 && randomTable(R, s, "career") ? button("career-three", "Roll two more") : ""}</div>${tablePicker(R, s, "career")}</section>
+<section class="chosen-career" aria-label="Chosen Career"><span class="eyebrow">Chosen Career</span><h2>${esc(c.name)} ${legacyTag(R, c)}</h2><span class="small muted">${esc(c.class)} · ${sourceButton(R, c)}</span><p>Begin as <strong>${esc(c.levels[0].name)}</strong> — ${c.levels[0].status} ${c.levels[0].standing}. Starting Characteristics: ${Object.entries(
+      c.advanceScheme,
+    )
+      .filter(([, level]) => level === 1)
+      .map(([key]) => key)
+      .join(", ")}.</p></section>${
       s.careerOffers.length === 3
         ? `<p class="small">Choose one result for one bonus Trapping:</p>
 <div class="actions">${s.careerOffers.map((id) => button("career-offer", esc(R.careers.find((c) => c.id === id).name), `data-id="${id}"`)).join("")}</div>`
         : ""
-    }${optionalCareerChoices()}${careerOptions(R, s)}${trainingPrerequisites(R, s, { select, button })}<div class="notice">${bonus ? `Select ${bonus} level-two Trapping${bonus === 1 ? "" : "s"}. Each earns one tracker box.${s.careerMode === "first" && bonus < 2 ? " This Career lists only one option." : ""}` : "Chosen Career: standard starting Trappings, no bonus tracker boxes."} ${page(36)}</div>
-<h2>${esc(c.name)} <span class="small">${esc(c.class)} · ${sourceButton(R, c)}</span>${legacyTag(R, c)}</h2>
-<p class="small">Begin as <strong>${esc(c.levels[0].name)}</strong> — ${c.levels[0].status} ${c.levels[0].standing}. Your first advances are ${Object.entries(
-      c.advanceScheme,
-    )
-      .filter(([k, v]) => v === 1)
-      .map(([k]) => k)
-      .join(", ")}.</p>${
+    }${optionalCareerChoices()}<p class="muted">${available.length} of ${R.careers.length} enabled Careers are available to ${esc(originProfile(R, s)?.name || s.species)} characters.</p>${careerBrowser(R, s, { query: careerSearch, className: careerFilter, book: careerBook, preview: careerPreview, limit: careerLimit })}${careerOptions(R, s)}${trainingPrerequisites(R, s, { select, button })}<div class="notice">${bonus ? `Select ${bonus} level-two Trapping${bonus === 1 ? "" : "s"}. Each earns one tracker box.${s.careerMode === "first" && bonus < 2 ? " This Career lists only one option." : ""}` : "Chosen Career: standard starting Trappings, no bonus tracker boxes."} ${page(36)}</div>${
       bonus
         ? `<h3>Bonus Trappings <span class="counter">${s.bonusGear.length}/${bonus}</span></h3>
 <div class="checklist">${M.bonusTrappingSlots(R, s)

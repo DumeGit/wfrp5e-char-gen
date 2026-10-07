@@ -42,6 +42,8 @@ Use `chapterHeading(title)` for the page-level heading and normal h2/h3 for sect
 | Tracker | `.tracker-boxes` | Small squares with unchanged XP grouping and limits |
 | Rolled scores | `.characteristics-table` | Compact rows with abbreviations, names, inline Career badges and editable assignment selectors |
 | Starting increases | `.career-starting-increases` | Budget and three labelled point inputs in one desktop strip; compact wrapping on phones |
+| Origins | `.origins-editor`, `.origin-input-roll`, `.origin-resources` | Compact desktop fields with adjacent labelled dice actions, suggestion selects and resource strip; 16px field text and 44px touch controls on phones |
+| Chosen Career | `.career-roll-controls`, `.chosen-career` | Roll actions/table first, current Career summary below, then search; primary-colour edge uses the shared palette |
 
 Transient status messages must clear their text when their timer expires: the shared `#toast:not(:empty)` style is content-driven, not class-driven. Workshop notifications expire after 4.5 seconds, do not capture pointer events and clear the fixed mobile action bar plus its safe-area inset. Keep persistent actionable errors in the issue panel.
 
@@ -58,6 +60,8 @@ The masthead is shortened, with a smaller title/emblem and search ribbon. Instal
 At widths 761–1000px the decorative search-ribbon captions hide, and the search uses one centred flexible column. This avoids overflowing a small desktop/tablet window while retaining the shared search controller and phone launcher behavior.
 
 Initials use a fixed line-height-one box, grid centring and a small optical correction; no baseline-dependent padding. The folio crest also uses grid centring with inset space. Characteristic badges reserve equal space.
+
+Origins uses scoped spacing rather than shrinking every creator control. Its brief random-roll explanation expands through native details with a stable key; supplement warnings and required choices stay visible. Eye/hair fields share a phone row; names and ambitions stack. Background and ambitions start at 76px and remain resizable. Career rolls and the chosen summary precede the browser on both desktop and phones. Rolled results update browser state without adding search/filter values to character saves.
 
 Ash/mist stay in the banner; low-opacity candlelight stays at leather edges. The parchment, rules and controls do not move. The user removed the creator's Pause/Enable button; motion now follows the system reduced-motion preference through CSS, without a saved app preference. No sound, glints, entrance animations or continuous button effects. Colour transitions last 160ms; reduced motion disables them. Print removes decorations and uses plain ink/paper.
 

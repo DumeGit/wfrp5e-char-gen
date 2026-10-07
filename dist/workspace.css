@@ -81,3 +81,52 @@ button.legacy-tag:hover{background:#ded1f0;color:#3d285f}
 .xp-row.xp-characteristic-row{border-left:3px solid transparent;padding-left:10px}
 .xp-characteristic-row.career-characteristic{border-left-color:var(--career-color)}
 .xp-characteristic-row .characteristic-badge{display:inline-block;margin:0;font-size:11px;line-height:1.4;white-space:nowrap}
+
+/* Origins keeps typing, printed choices and genuine rolls together. */
+.origins-editor > .eyebrow { display: none; }
+.origins-editor .field { gap: 6px; margin-bottom: 12px; }
+.origins-editor .selected-books { padding-bottom: 10px; margin-bottom: 14px; font-size: 13px; }
+.origins-editor .cols { gap: 14px; }
+.origins-editor h2 { font-size: 22px; margin: 18px 0 10px; }
+.origins-editor .section-gap { margin-top: 16px; }
+.origins-editor .small,
+.origins-editor .origin-help { font-size: 12px; line-height: 1.5; margin: 6px 0 10px; }
+.origins-editor .notice { padding: 10px 12px; margin: 12px 0; }
+.origins-editor .notice p { margin: 8px 0; }
+.origins-editor input:not([type=checkbox]),
+.origins-editor select { min-height: var(--control-height-compact); padding: 7px 9px; font-size: 14px; }
+.origins-editor textarea { min-height: 76px; padding: 8px 10px; font-size: 14px; }
+.origins-editor .quiet { min-height: var(--control-height-compact); padding: 7px 11px; font-size: 12px; }
+.origins-editor .origin-species { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 10px; }
+.origins-editor .origin-species .field { margin: 0; }
+.origins-editor .origin-species > button { width: auto; min-height: var(--control-height-compact); padding: 7px 12px; }
+.origins-editor .origin-resources { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; padding: 8px 10px; background: var(--color-paper-recessed); border: 1px solid var(--color-line); font-size: 12px; }
+.origin-resources strong { margin-left: 5px; font-variant-numeric: tabular-nums; }
+.origins-editor .origin-roll-help { padding: 7px 0; margin: 0; border: 0; }
+.origin-roll-help summary { font-size: 12px; color: var(--color-muted); }
+.origin-input-roll { display: grid; grid-template-columns: minmax(0, 1fr) 36px; gap: 6px; }
+.origins-editor .origin-input-roll button { padding: 0; font-size: 22px; line-height: 1; }
+.origins-editor .origin-suggestion-tools { display: block; margin: 0; }
+.origins-editor .origin-suggestion-tools select { width: 100%; }
+.origins-editor .identity-preview { padding: 8px 10px; margin: 0 0 16px; }
+.origins-editor .identity-preview strong { font: 18px var(--font-heading); margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.origin-field-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 10px; }
+.chosen-career { margin: 14px 0 20px; padding: 12px 14px; border: 1px solid var(--color-line); border-left: 3px solid var(--color-crimson); background: var(--color-paper-raised); }
+.chosen-career h2 { font-size: 23px; margin: 3px 0 7px; }
+.chosen-career p { font-size: 13px; margin: 6px 0 0; line-height: 1.5; }
+.chosen-career .eyebrow { font-size: 11px; }
+.career-roll-controls .actions { margin: 0 0 12px; }
+@media (max-width: 760px) {
+  .origins-editor .cols { gap: 0; }
+  .origins-editor .origin-appearance { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .origins-editor input:not([type=checkbox]),
+  .origins-editor select,
+  .origins-editor textarea { font-size: 16px; }
+  .origins-editor input:not([type=checkbox]),
+  .origins-editor select,
+  .origins-editor .quiet,
+  .origins-editor .origin-species > button { min-height: var(--control-height); }
+  .origin-input-roll { grid-template-columns: minmax(0, 1fr) 44px; }
+  .origins-editor .identity-preview { gap: 8px; }
+  .origins-editor .identity-preview strong { font-size: 17px; }
+}

@@ -6,7 +6,7 @@ October 2026 UX refresh: audit items 1 and 3–22. Saved book presets (item 2) w
 | --- | --- |
 | 1 | Dedicated **Choose books** setup, outside the eight creation steps. Each card summarizes its installed content. Core is required; Career variants stay in Career. |
 | 3 | Printed roll-table selectors beside Species, Career and random Talent rolls. Sole/default tables remain automatic; source details are tappable. No probabilities are merged. |
-| 4 | Searchable Career browser with Class and source filters. Cards preview starting training and kit; only **Choose Career → Apply change** alters the draft. |
+| 4 | Career roll controls appear first, then a compact chosen Career summary and the searchable browser with Class/source filters. Rolled selections populate Find a Career and clear stale Class/Source filters; choosing among three offers synchronises the chosen result. Browser cards preview starting training and kit; manual selection uses **Choose Career → Apply change**. Typing or previewing does not alter the draft. |
 | 5 | Career variants, optional levels and equipment swaps share a **Career options** section. A comparison shows changed Characteristics, level names, Status, Skills, Talents and Trappings before application. |
 | 6 | **Training choices before Skills** exposes the shared free Career Talent, College affiliation and equipment alternatives. Conditional training responds immediately, including Morr's Augury access. These are the same choices used by Talents and Gear. |
 | 7 | Sticky Species/Career allocation counters; Career overlap markers and separate Species, Career and total free points on rows. Native languages and Elder allocations retain their distinct rules. |
@@ -36,10 +36,13 @@ The optional full appendix is an export preference, not a rule option. Omitting 
 
 Starting Species Skills use a compact two-column desktop list and a single phone column, preserving specialisation selectors, five-choice counters, Career overlap markers and +5 checkboxes. Shop item names open available profile descriptions; items without additional text have no empty disclosure. Category, Availability, weight and source remain visible without a repeated profile heading. Experience Talent names are their description disclosures, with owned ranks and tracker effects underneath. Stable disclosure keys preserve open descriptions after purchases and undo.
 
+Origins groups each name/appearance text field with an accessible dice button and a printed-suggestion select underneath. Starting Fate, Fortune and Movement share a compact strip; the existing random-creation explanation uses a stable disclosure. Names, regional choices, supplement warnings, ambitions and background remain editable in the main form. Reduced spacing and shorter textareas do not change roll probabilities, logs or save/export fields. Eye/hair controls remain paired on phones, with 16px field text and 44px touch heights. Age/height rerolls replace the previous generated values while preserving custom background text.
+
 ## Verification
 
 - Outcome tests cover Career availability/search/preview immutability and variants; shop taxonomy, restrictions and purse feedback; non-caster and caster magic filtering; calculation reconciliation; precise issue destinations; relevant source collection; compact/full exports and editable field values.
 - Existing book, rules, XP, tracker, packing, selective Legacy and offline-cache tests remain required.
+- Career reset tests cover rolled search/preview synchronisation, stale filter removal, manual-search preservation and exclusion from saved character state. Browser checks cover desktop and 390/320px Origins/Career layouts, printed suggestions, independent rolls and age/height replacement.
 - Browser checks use an isolated `?verify=1` draft, with desktop and mobile layouts. Verify change confirmation/cancellation/undo, prerequisite sharing, source/Legacy dialogs, locked references, shop filtering/purchases, free magic selection, issue focus and PDF downloads.
 - PDF check: with all selected books enabled, the verification Soldier produces a 6-page default record versus a 50-page full appendix record. The default sheet has 8 pages (two supplied sheet pages plus record), with all 556 fields retained. These counts depend on the character's content.
 

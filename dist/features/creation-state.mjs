@@ -52,7 +52,7 @@ export function createFeature(getContext, setContext) {
   }
 
   function changeCareer(id, mode = "choose") {
-    let { s, careerFilter } = getContext();
+    let { R, s, careerFilter } = getContext();
 
     if (s.highElf) delete s.highElf.careerVariant;
     delete s.college;
@@ -65,6 +65,12 @@ export function createFeature(getContext, setContext) {
     delete s.dwarfCareerUpdates;
     delete s.grudgeTargets;
     setContext("careerFilter", (careerFilter = "All classes"));
+    if (mode !== "choose") {
+      setContext("careerSearch", R.careers.find((c) => c.id === id).name);
+      setContext("careerPreview", id);
+      setContext("careerBook", "all");
+      setContext("careerLimit", 12);
+    }
   }
 
   function rolledCareer() {

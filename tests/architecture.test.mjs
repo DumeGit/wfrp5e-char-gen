@@ -332,6 +332,38 @@ test("extracted actions publish replacement state before render, including purch
   assert.equal(s.wealth, null);
 });
 
+test("rolled Career selection clears stale browser filters without storing search state in the character", () => {
+  const s = soldier(),
+    browsing = {
+      careerSearch: "unrelated",
+      careerPreview: "soldier",
+      careerBook: "up-in-arms",
+      careerFilter: "Warriors",
+      careerLimit: 48,
+    },
+    resets = createResets(
+      () => ({ R, s, ...browsing }),
+      (key, value) => {
+        browsing[key] = value;
+      },
+    );
+  resets.changeCareer("wizard", "first");
+  assert.equal(browsing.careerSearch, "Wizard");
+  assert.equal(browsing.careerPreview, "wizard");
+  assert.equal(browsing.careerBook, "all");
+  assert.equal(browsing.careerFilter, "All classes");
+  assert.equal(browsing.careerLimit, 12);
+  assert.equal(s.careerSearch, undefined);
+  resets.changeCareer("soldier", "three");
+  assert.equal(browsing.careerSearch, "Soldier");
+  assert.equal(browsing.careerPreview, "soldier");
+  browsing.careerSearch = "spell";
+  browsing.careerBook = "core";
+  resets.changeCareer("wizard");
+  assert.equal(browsing.careerSearch, "spell");
+  assert.equal(browsing.careerBook, "core");
+});
+
 test("rendered Skill and rune groups retain distinct disclosure identities", () => {
   const s = soldier(),
     result = characterResult(B, s);
