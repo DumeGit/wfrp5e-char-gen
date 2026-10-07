@@ -21,12 +21,12 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.3",
+      "version": "1.1.4",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 435,
+        "reference-only": 436,
         "unavailable": 0,
         "deferred": 0
       },
@@ -76,7 +76,7 @@
         "ruleReferences": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 434,
+          "reference-only": 435,
           "unavailable": 0,
           "deferred": 0
         },
@@ -4671,6 +4671,17 @@
           "contentId": "core:rule-reference:rule-133-fate-and-fortune",
           "kind": "ruleReferences",
           "name": "Fate and Fortune",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 133
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-133-fortune",
+          "kind": "ruleReferences",
+          "name": "Fortune",
           "status": "reference-only",
           "source": {
             "book": "core",

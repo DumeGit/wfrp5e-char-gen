@@ -19,7 +19,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 435 | 0 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 436 | 0 | 0 |
 | Up in Arms | 135 | 12 | 0 | 1 | 0 |
 | Archives of the Empire: Volume I | 31 | 22 | 0 | 0 | 0 |
 | Archives of the Empire: Volume II | 50 | 7 | 0 | 0 | 0 |
@@ -42,7 +42,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.3
+Pack `core` · version 1.1.4
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -51,7 +51,7 @@ Pack `core` · version 1.1.3
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| ruleReferences | 0 | 0 | 434 | 0 | 0 |
+| ruleReferences | 0 | 0 | 435 | 0 | 0 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
 | spells | 225 | 0 | 0 | 0 | 0 |
@@ -146,6 +146,7 @@ Pack `core` · version 1.1.3
 | `core:rule-reference:rule-133-achieving-the-impossible` — Achieving the Impossible | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-133-fate` — Fate | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-133-fate-and-fortune` — Fate and Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-133-fortune` — Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-133-replenishing-fate` — Replenishing Fate | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-133-replenishing-fortune` — Replenishing Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-134-casing-the-joint` — Casing the Joint | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |

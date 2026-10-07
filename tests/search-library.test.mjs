@@ -16,6 +16,55 @@ const full = await loadReferenceLibrary(library, () => wire);
 const named = (name, kind) =>
   full.rows.filter((row) => row.name === name && (!kind || row.kind === kind));
 
+test("core Fate and Fortune references include all spending and replenishment rules", () => {
+  const fate = named("Fate", "rule")[0],
+    fortune = named("Fortune", "rule")[0],
+    combined = named("Fate and Fortune", "rule")[0];
+  for (const row of [fate, fortune, combined]) {
+    assert.equal(row.entry.page, 133);
+    assert.equal(row.entry.source.book, "core");
+    assert.equal(row.legacy.length, 0);
+  }
+  for (const heading of [
+    "Cheating Death",
+    "Achieving the Impossible",
+    "Replenishing Fate",
+  ])
+    assert.ok(referenceBodyHTML(fate).includes(`<h3>${heading}</h3>`));
+  assert.match(fate.entry.text, /How Did That Miss\?/);
+  assert.match(fate.entry.text, /Not Today!/);
+  assert.match(fate.entry.text, /I Will Not Fail!/);
+  assert.match(fate.entry.text, /win by at least \+1 SL/);
+  assert.match(fate.entry.text, /pick the Hit Location/);
+  assert.match(fate.entry.text, /Fate is not automatically replenished/);
+  assert.match(fortune.entry.text, /Gain Advantage on a Test before rolling/);
+  assert.match(fortune.entry.text, /Reroll a Test, keeping the new result/);
+  assert.match(fortune.entry.text, /another Fortune to reroll again/);
+  assert.match(fortune.entry.text, /Remove one Condition \(page 184\)/);
+  assert.match(referenceBodyHTML(fortune), /<h3>Replenishing Fortune<\/h3>/);
+  assert.match(
+    fortune.entry.text,
+    /regain all Fortune Points at the start of each gaming session/,
+  );
+  assert.ok(combined.entry.text.includes(fate.entry.text));
+  assert.ok(combined.entry.text.includes(fortune.entry.text));
+  for (const title of [
+    "Achieving the Impossible",
+    "Replenishing Fate",
+    "Replenishing Fortune",
+  ])
+    assert.equal(named(title, "rule").length, 1);
+  for (const [query, row] of [
+    ["Fate Points", fate],
+    ["Fortune Points", fortune],
+  ])
+    assert.equal(searchBooks(full.rows, query, 20).rows[0].key, row.key);
+  assert.ok(
+    named("Blessing of Fortune", "magic").length,
+    "Fortune Blessing remains a separate reference",
+  );
+});
+
 test("one all-book reference corpus includes inactive books, explicit variants and withdrawn profiles without changing the draft", () => {
   const draft = soldier();
   const before = JSON.stringify(draft),

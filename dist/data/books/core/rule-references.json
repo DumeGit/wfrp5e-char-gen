@@ -574,7 +574,11 @@
     "category": "rule",
     "topic": "Fate & Fortune",
     "page": 133,
-    "text": "Fate points are far more precious than Fortune. They mark you as a Character of destiny, allowing you to Cheat Death or Achieve the Impossible.\n\nCheating Death You may spend a Fate Point to delay your appointment with Morr in the following ways:\n\n•  How Did That Miss? After any dice are rolled for an attack against you, but before Damage is calculated, Opposed Test outcomes resolved or Critical Hits are determined, spend a Fate Point to negate the effects of that attack. The blow misses, the spell fizzles, or you otherwise escape by the skin of your teeth. Play then continues as normal.\n\n•  Not Today! Instead of dying, your Character is knocked unconscious, left for dead, swept away by a river, or otherwise removed from the encounter. Whatever the circumstances, your Character survives, but takes no further part in the current encounter."
+    "text": "Fate points are far more precious than Fortune. They mark you as a Character of destiny, allowing you to Cheat Death or Achieve the Impossible.\n\n### Cheating Death\n\nYou may spend a Fate Point to delay your appointment with Morr in the following ways:\n\n• How Did That Miss? After any dice are rolled for an attack against you, but before Damage is calculated, Opposed Test outcomes resolved or Critical Hits are determined, spend a Fate Point to negate the effects of that attack. The blow misses, the spell fizzles, or you otherwise escape by the skin of your teeth. Play then continues as normal.\n\n• Not Today! Instead of dying, your Character is knocked unconscious, left for dead, swept away by a river, or otherwise removed from the encounter. Whatever the circumstances, your Character survives, but takes no further part in the current encounter.\n\n### Achieving the Impossible\n\nYou may spend a Fate Point to succeed where failure seems certain.\n\n• I Will Not Fail! Instead of rolling a Test, choose the result instead. You automatically succeed, even in the direst circumstances. In an Opposed Test, you win by at least +1 SL. If you choose to score a Critical, you may pick the Hit Location instead of rolling randomly.\n\n### Replenishing Fate\n\nFate is not automatically replenished. The GM may grant a Fate Point for an act of exceptional heroism, bravery, or significance. This usually happens only at the end of an important adventure, so spend Fate carefully — it is rarely replenished.",
+    "aliases": [
+      "Fate Point",
+      "Fate Points"
+    ]
   },
   {
     "id": "core:rule-reference:rule-133-fate-and-fortune",
@@ -582,7 +586,19 @@
     "category": "rule",
     "topic": "Fate & Fortune",
     "page": 133,
-    "text": "Whether it is guts, luck, or the favour of the gods, Fate and Fortune smile upon you. You can spend them to gain an edge or cheat unpleasant consequences."
+    "text": "Whether it is guts, luck, or the favour of the gods, Fate and Fortune smile upon you. You can spend them to gain an edge or cheat unpleasant consequences.\n\n### Fortune\n\n### Spend a Fortune Point to:\n\n• Gain Advantage on a Test before rolling.\n\n• Reroll a Test, keeping the new result. You may spend another Fortune to reroll again.\n\n• Remove one Condition (page 184).\n\n### Replenishing Fortune\n\nYou regain all Fortune Points at the start of each gaming session. Certain encounters, Spells, and abilities may also replenish (or remove!) Fortune Points.\n\n### Fate\n\nFate points are far more precious than Fortune. They mark you as a Character of destiny, allowing you to Cheat Death or Achieve the Impossible.\n\n### Cheating Death\n\nYou may spend a Fate Point to delay your appointment with Morr in the following ways:\n\n• How Did That Miss? After any dice are rolled for an attack against you, but before Damage is calculated, Opposed Test outcomes resolved or Critical Hits are determined, spend a Fate Point to negate the effects of that attack. The blow misses, the spell fizzles, or you otherwise escape by the skin of your teeth. Play then continues as normal.\n\n• Not Today! Instead of dying, your Character is knocked unconscious, left for dead, swept away by a river, or otherwise removed from the encounter. Whatever the circumstances, your Character survives, but takes no further part in the current encounter.\n\n### Achieving the Impossible\n\nYou may spend a Fate Point to succeed where failure seems certain.\n\n• I Will Not Fail! Instead of rolling a Test, choose the result instead. You automatically succeed, even in the direst circumstances. In an Opposed Test, you win by at least +1 SL. If you choose to score a Critical, you may pick the Hit Location instead of rolling randomly.\n\n### Replenishing Fate\n\nFate is not automatically replenished. The GM may grant a Fate Point for an act of exceptional heroism, bravery, or significance. This usually happens only at the end of an important adventure, so spend Fate carefully — it is rarely replenished."
+  },
+  {
+    "id": "core:rule-reference:rule-133-fortune",
+    "name": "Fortune",
+    "category": "rule",
+    "topic": "Fate & Fortune",
+    "page": 133,
+    "aliases": [
+      "Fortune Point",
+      "Fortune Points"
+    ],
+    "text": "### Spend a Fortune Point to:\n\n• Gain Advantage on a Test before rolling.\n\n• Reroll a Test, keeping the new result. You may spend another Fortune to reroll again.\n\n• Remove one Condition (page 184).\n\n### Replenishing Fortune\n\nYou regain all Fortune Points at the start of each gaming session. Certain encounters, Spells, and abilities may also replenish (or remove!) Fortune Points."
   },
   {
     "id": "core:rule-reference:rule-133-replenishing-fate",
