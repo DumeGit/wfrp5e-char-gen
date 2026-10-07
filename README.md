@@ -52,6 +52,8 @@ Enable **Deft Steps, Light Fingers** for nine Careers, 32 Miracles and 15 priced
 
 GM PDFs use selective bold labels for easier scanning. Card fit checks measure both font weights; full sheets also emphasise attack, spell, Corruption and personality labels.
 
+Both creators' gradient action buttons use opaque base fills to prevent a white flash during hover transitions. NPC template previews separate Characteristic adjustments, Skills, Talent ranks and magic limits, with expandable alternatives and a stacked phone layout. See [design standards](docs/DESIGN-SYSTEM.md) and [workshop behavior](docs/GM-WORKSHOP.md).
+
 ## Rules and source
 
 ### Archives III

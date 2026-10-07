@@ -65,6 +65,10 @@ The player banner is the preview's original imagegen artwork, copied without pix
 
 ## Maintenance and release
 
+Gradient action and active-navigation fills have an opaque primary-colour base. Never leave the base transparent when a hover state removes a gradient: the background-colour transition would briefly expose the pale page. Both creator palettes use the same fix and retain their readable hover foregrounds.
+
+GM template previews use the compiled grants in separate Characteristics, Skills, Talents and optional Magic sections. Bonuses and ranks align to the right; long alternative lists use native disclosures with stable template/slot keys. The two-column desktop summary stacks on phones. The preview remains read-only until Apply template; no grant, choice or calculation is inferred from prose.
+
 Update this document and affected feature docs in the same change. Inspect setup, all eight steps and reference dialogs on desktop/phone; verify hover/disabled/focus contrast, no horizontal page overflow, heading accessibility, reduced-motion CSS and install behavior after redraws. Run `npm run check:release` after final styles/assets so offline caching covers art, fonts, skin, component module, guide and icons. Preserve PDF/export tests. Commit locally; the user pushes/deploys.
 
 ## Current product scope

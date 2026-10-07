@@ -17,6 +17,7 @@ import {
   pickerEntries,
   issuePanel,
   sourceNotes,
+  templateOverview,
   TABS,
 } from "./views.mjs";
 import { statBlock } from "./sheet.mjs";
@@ -197,7 +198,7 @@ function templatePreview(id) {
   const t = data.templates.find((t) => t.id === id);
   modal(
     t.name,
-    `<p>Core · p. ${t.page}</p><p>${esc(t.text)}</p><p class="gm-small">One template is applied to the starting profile. Replacing it clears the previous template choices and chosen magic; explicit GM scores, equipment and Traits remain. Undo restores the previous build.</p><div class="gm-dialog-actions">${button("Back to templates", "template-picker")}${button("Apply template", "apply-template", "", "primary")}</div>`,
+    `${templateOverview(t)}<div class="gm-dialog-actions">${button("Back to templates", "template-picker")}${button("Apply template", "apply-template", "", "primary")}</div>`,
   );
 }
 function showPicker(kind) {

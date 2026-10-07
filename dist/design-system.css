@@ -336,7 +336,9 @@ mark {
   color: var(--color-on-crimson);
 }
 .steps button.active {
-  background: linear-gradient(var(--color-crimson), var(--color-crimson-hover));
+  background:
+    linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
+    var(--color-crimson-hover);
   border-color: var(--color-gold-dark);
   color: var(--color-on-crimson);
 }
@@ -593,7 +595,10 @@ textarea:hover {
   border-radius: var(--radius-control);
 }
 .primary {
-  background: linear-gradient(var(--color-crimson), var(--color-crimson-hover));
+  /* An opaque base prevents the page flashing through when hover removes the gradient. */
+  background:
+    linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
+    var(--color-crimson-hover);
   border-color: var(--color-crimson);
   color: var(--color-on-crimson);
   box-shadow: 0 2px 3px #50231822;

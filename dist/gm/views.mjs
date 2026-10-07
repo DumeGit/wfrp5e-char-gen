@@ -28,6 +28,41 @@ export const STEPS = [
   "Review & export",
 ];
 export const TABS = ["Characteristics", "Traits", "Skills & Talents"];
+// Preview the compiled grants, keeping every alternative available to inspect.
+export function templateOverview(t) {
+  const rows = (slots, kind) =>
+    `<ul class="gm-template-grants">${slots
+      .map((slot, index) => {
+        const choices = slot.options.length > 1,
+          label = slot.options.map(esc).join(" or "),
+          amount = kind === "Skill" ? `+${slot.bonus}` : `×${slot.ranks}`,
+          choice = choices
+            ? `<small class="gm-template-choice">Choose ${slot.count || 1}${slot.count > 1 ? " different" : ""}</small>`
+            : "",
+          names =
+            slot.options.length > 3
+              ? detail(
+                  `template:${t.id}:${kind}:${index}`,
+                  `${[...new Set(slot.options.map(base))].map(esc).join(" or ")} <small>${slot.options.length} options</small>`,
+                  `<ul>${slot.options.map((name) => `<li>${esc(name)}</li>`).join("")}</ul>`,
+                )
+              : `<span>${label}</span>`;
+        return `<li><div>${names}${choice}</div><strong>${amount}</strong></li>`;
+      })
+      .join("")}</ul>`;
+  return `<div class="gm-template-preview"><p class="gm-template-source">Core · p. ${t.page} · One template at a time</p>
+    <section><h3>Characteristics</h3><dl class="gm-template-adjustments">${Object.entries(
+      t.adjustments,
+    )
+      .map(
+        ([key, amount]) => `<div><dt>${esc(key)}</dt><dd>+${amount}</dd></div>`,
+      )
+      .join(
+        "",
+      )}</dl><p class="gm-small">Wounds are recalculated after applying the template.</p></section>
+    <div class="gm-template-columns"><section><h3>Skills</h3>${rows(t.skills, "Skill")}<p class="gm-small">Uses the higher of the existing Skill bonus and the template bonus.</p></section><section><h3>Talents</h3>${t.talents.length ? rows(t.talents, "Talent") : '<p class="gm-small">No Talents granted.</p>'}${t.magic ? `<h3>Magic</h3><ul class="gm-template-grants"><li><span>Petty spells</span><strong>Up to ${t.magic.petty}</strong></li><li><span>Spells from a suitable Lore</span><strong>Up to ${t.magic.lore}</strong></li></ul><p class="gm-small">Choose compatible spells in Equipment &amp; magic.</p>` : ""}</section></div>
+    <p class="gm-template-footnote">Replacing a template clears its previous choices and chosen magic. Explicit GM scores, equipment and Traits remain. Undo restores the previous build.</p></div>`;
+}
 const paragraph = (text) => `<p>${esc(text)}</p>`;
 const origin = (x) => `<span class="gm-origin">${esc(x.origin || "GM")}</span>`;
 const textArea = (label, key, value) =>

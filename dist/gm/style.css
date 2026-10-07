@@ -3,7 +3,9 @@
   background-image:
     linear-gradient(90deg, #08101ded, #10162b77 58%, #090d1933),
     url(../assets/black-banner/bestiary-banner.webp);
-  background-position: center, 66% 54%;
+  background-position:
+    center,
+    66% 54%;
 }
 .gm-workspace {
   align-items: start;
@@ -771,6 +773,104 @@
   margin: 20px 0 0;
   padding-top: 15px;
   border-top: 1px solid var(--color-line);
+}
+.gm-template-preview h3 {
+  font: 19px var(--font-heading);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-line);
+}
+.gm-template-source {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin: 0 0 20px;
+}
+.gm-template-adjustments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+.gm-template-adjustments > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-recessed);
+  font-size: 13px;
+}
+.gm-template-adjustments dd {
+  margin: 0;
+  font-weight: 650;
+  color: var(--color-crimson);
+}
+.gm-template-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 22px;
+}
+.gm-template-grants {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 13px;
+}
+.gm-template-grants > li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--color-line-soft);
+  line-height: 1.5;
+}
+.gm-template-grants > li > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.gm-template-grants > li > strong {
+  flex-shrink: 0;
+  color: var(--color-crimson);
+  font-variant-numeric: tabular-nums;
+}
+.gm-template-grants details {
+  border: 0;
+  padding: 0;
+}
+.gm-template-grants summary {
+  cursor: pointer;
+}
+.gm-template-grants summary small,
+.gm-template-choice {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+.gm-template-choice {
+  display: block;
+  margin-top: 3px;
+}
+.gm-template-grants .gm-detail-body {
+  padding: 4px 0;
+}
+.gm-template-grants .gm-detail-body ul {
+  padding-left: 20px;
+  margin: 8px 0 0;
+}
+.gm-template-footnote {
+  padding: 12px;
+  background: var(--color-paper-recessed);
+  border-left: 2px solid var(--color-gold-dark);
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 18px 0 0;
+}
+@media (max-width: 600px) {
+  .gm-template-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
 }
 .gm-roll-list {
   padding-left: 20px;

@@ -19,6 +19,10 @@ The user selected **A — Moonlit Vellum** from the standalone [colour studies](
 
 On desktop the folio stays alongside the page and scrolls internally if needed. Medium screens use two columns and put the folio beneath the editor; phones use page flow, a page selector and a fixed status/stat-block/review strip. Editing/search does not replace the active input. Native dialogs, keyboard tab navigation, explicit labels and reduced-motion styling are retained.
 
+Template previews show Characteristic adjustment chips, separate Skill/Talent rows with aligned bonuses/ranks, explicit choice counts and expandable long alternative lists. Caster previews also show their Petty/Lore spell limits. Sections stack on phones; source, Wounds recalculation and replacement/undo guidance remain visible. The view uses compiled template fields, without changing grants or application behavior.
+
+Template-preview and hover follow-up (7 October 2026): inspected Spellcaster and Spellcaster Lord previews on desktop, expandable Channelling choices and the stacked 390×844 layout without horizontal overflow; applied Soldier successfully. Confirmed opaque primary fills in GM/player main flows and the player's dark hover fill/light foreground. Shared active navigation uses the same opaque base. No GM browser warnings/errors were recorded. `npm run check:release` passed all 328 tests and offline coverage. Real phone hardware was not tested.
+
 PDF typography uses selective emphasis: table-card section labels are bold, with values and descriptions in regular type. Actual Trait names/ratings are bold with their descriptions in regular type in both formats; full-sheet attack, spell, Corruption and personality labels are also bold. Both exports measure and draw mixed-weight text with the same embedded fonts; the card fit check accounts for bold widths before export.
 
 Six cards per page is the default each time the print dialog opens. Four cards is an explicit larger-layout choice; it does not become the next session's default.
