@@ -50,6 +50,35 @@
   --color-legacy-surface: #efe2e8;
   --color-legacy-line: #b697a7;
   --color-focus: #8a5425;
+  --color-title-veil: #251610ad;
+  --color-search-veil: #251810b3;
+  --color-dialog-backdrop: #17100ecc;
+  --color-chapter-initial: var(--color-gold-light);
+  --color-step-number-active: var(--color-gold-light);
+  --color-step-caption-active: var(--color-on-leather-muted);
+  --surface-working-leaf:
+    radial-gradient(ellipse at 40% 0, #fff6, transparent 75%),
+    linear-gradient(
+      90deg,
+      #79532a12,
+      transparent 8%,
+      transparent 94%,
+      #79532a1a
+    ),
+    var(--color-paper);
+  --shadow-working-leaf: inset 0 0 24px #79532a18;
+  --surface-folio-crest: linear-gradient(135deg, #b8975f13, #17120f44);
+  --shadow-folio-crest: inset 0 0 0 2px #b4986026;
+  --surface-rail-glow: radial-gradient(
+    ellipse at 0 50%,
+    #ef9b3820,
+    transparent 25%
+  );
+  --surface-folio-glow: radial-gradient(
+    ellipse at 100% 70%,
+    #ef9b381c,
+    transparent 20%
+  );
   --color-career-start-tint: #eee0d2;
   --color-career-later: #62646b;
   --color-career-later-tint: #e4e1d6;
@@ -93,4 +122,53 @@
   --green: var(--color-success);
   --brass: var(--color-gold);
   --focus: var(--color-focus);
+}
+
+/* Moonlit Vellum: the approved GM palette. Shared components inherit these roles. */
+:root[data-theme="moonlit-vellum"] {
+  --color-world: #101b2c;
+  --color-leather: #192b43;
+  --color-leather-deep: #122136;
+  --color-leather-raised: #304560;
+  --color-on-leather: #e9dfc4;
+  --color-on-leather-muted: #bac8d4;
+  --color-line-dark: #687b92;
+  --color-paper: #e7e3d4;
+  --color-paper-raised: #f5f2e8;
+  --color-paper-recessed: #d7d6c9;
+  --color-paper-hover: #e6ebeb;
+  --color-ink: #243444;
+  --color-muted: #4c5962;
+  --color-line: #a5adac;
+  --color-line-soft: #bfc6c2;
+  --color-gold: #ab9768;
+  --color-gold-light: #e5d199;
+  --color-gold-dark: #72603c;
+  /* Historical primary-action role names; errors retain their separate red role. */
+  --color-crimson: #294e78;
+  --color-crimson-hover: #203f63;
+  --color-on-crimson: #f4f0df;
+  --color-focus: #3972ab;
+  --color-title-veil: #0b1725bf;
+  --color-search-veil: #101e2cb3;
+  --color-dialog-backdrop: #0c172bcc;
+  --color-chapter-initial: var(--color-on-crimson);
+  --color-step-number-active: var(--color-on-crimson);
+  --color-step-caption-active: var(--color-on-crimson);
+  --surface-working-leaf:
+    radial-gradient(ellipse at 40% 0, #ffffff18, transparent 75%),
+    var(--color-paper);
+  --shadow-working-leaf: inset 0 0 24px #07172d12;
+  --surface-folio-crest: #8ca8bb0c;
+  --shadow-folio-crest: inset 0 0 0 2px #afc3ce22;
+  --surface-rail-glow: radial-gradient(
+    ellipse at 0 50%,
+    #72aad514,
+    transparent 25%
+  );
+  --surface-folio-glow: radial-gradient(
+    ellipse at 100% 70%,
+    #72aad514,
+    transparent 20%
+  );
 }

@@ -22,7 +22,7 @@ Enable **Blood and Bramble** for twelve new Hedgecraft and twelve Witchcraft spe
 
 ## Use
 
-Explore the three NPC banner-inspired palette proposals at `design-previews/bestiary-colours.html` when serving the repository root. They are static colour studies; the live creators retain Black Banner. Details: [design previews](docs/DESIGN-PREVIEWS.md).
+The NPC creator uses the selected **A — Moonlit Vellum** palette: storm-blue framing, bone parchment, cobalt actions and old gold. It inherits the shared Black Banner components through central theme tokens; the player creator retains its original colours. The three historical static studies remain at `design-previews/bestiary-colours.html` when serving the repository root. Details: [design system](docs/DESIGN-SYSTEM.md) and [design previews](docs/DESIGN-PREVIEWS.md).
 
 Open [the public Vercel app](https://wfrp5e-char-gen-dist.vercel.app), or serve `dist` locally:
 

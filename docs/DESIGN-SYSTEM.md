@@ -2,13 +2,13 @@
 
 The user selected **C — The Black Banner** on 5 October 2026 and authorised implementation. This is the creator's active design: painted Old World heraldry, dark leather, parchment, muted antique gold and oxblood. Gothic lettering belongs to the masthead; the working interface stays compact and readable. The W uses the approved softened bevel and centred folio placement. Decorative initials are optically centred. There is no logo glint or sound.
 
-The Bestiary's moonlight/bone colour proposals are isolated in `design-previews/bestiary-colours.html`; see [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md). They are exploratory semantic-token overrides, not a production theme or a change to either creator's palette.
+The user selected **A — Moonlit Vellum** for the Bestiary Workshop on 7 October 2026. It uses storm-blue framing, pale bone parchment, cobalt actions and muted old gold, drawn from the workshop's undead banner. Player creation retains the original Black Banner palette. The shared Black Banner component/layout system serves both. Historical palette studies remain in `design-previews/bestiary-colours.html`; see [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md).
 
 ## Ownership
 
 | File | Responsibility |
 | --- | --- |
-| `dist/design-tokens.css` | Semantic colours, typography, spacing, radii, control heights, layout widths and motion durations; local font declarations |
+| `dist/design-tokens.css` | Semantic colours, decorative surfaces, typography, spacing, radii, control heights, layout widths and motion durations; local fonts and the approved Moonlit Vellum theme |
 | `dist/design-system.css` | Shared component skin, shell, responsive adaptations, print and reduced motion |
 | `dist/design-system.mjs` | Escaped accessible chapter headings and shared emblem markup |
 | `dist/install-control.mjs` | Reparents the existing install button into the redrawable rail, preserving its listeners and browser state |
@@ -16,7 +16,9 @@ The Bestiary's moonlight/bone colour proposals are isolated in `design-previews/
 | `dist/design-system.html` | Live component reference, independent of character data and rules |
 | `dist/assets/black-banner/`, `assets/fonts/` | Canonical production art/emblem and local fonts with their SIL Open Font Licenses |
 
-New features reuse semantic tokens and existing controls. Do not copy preview `cqw` sizing, add book-specific palettes, or hardcode another paper/leather/primary colour. Features own their necessary layout; shared appearance belongs in the design system. Old short variables (`--ink`, `--paper`, `--muted`, `--line`, `--red`, `--green`, `--brass`, `--focus`) are compatibility aliases. Historical feature styles remain before the skin, not as another selectable theme.
+New features reuse semantic tokens and existing controls. Do not copy preview `cqw` sizing, add book-specific palettes, or hardcode another paper/leather/primary colour. Features own their necessary layout; shared appearance belongs in the design system. The GM entry point opts into its approved palette with `data-theme="moonlit-vellum"` on the root HTML element; defaults preserve the player palette. Theme selection is fixed by the entry point, not a saved character setting. Old short variables (`--ink`, `--paper`, `--muted`, `--line`, `--red`, `--green`, `--brass`, `--focus`) are compatibility aliases. The historical `--color-crimson`/`--color-on-crimson` names represent primary actions and chapter accents; they are cobalt/ivory in Moonlit Vellum. Actual errors, success, warning and Legacy retain their separate semantic roles. Historical feature styles remain before the skin, not as another selectable theme.
+
+Decorative paper gradients, title/search veils, rail/folio glows, crest surfaces and shadows have shared token roles. New components inherit these instead of copying preview colours. Active navigation captions/numbers and chapter initials use explicit foreground roles. Moonlit dialogs, search, native fields and mobile controls inherit the same colour palette; its placeholder text and modal backdrop are defined by shared skin rules. The GM theme-colour meta tag matches its navy shell. The PWA's shared icons/manifest remain the overall application identity.
 
 Use `chapterHeading(title)` for the page-level heading and normal h2/h3 for sections. It escapes user names, preserves graphemes, supplies the complete accessible name and hides decorative fragments from assistive technology. `ledgerEmblem()` is decorative, with labelled text nearby. Never interpolate raw user text into HTML.
 
@@ -24,7 +26,7 @@ Use `chapterHeading(title)` for the page-level heading and normal h2/h3 for sect
 
 | Purpose | Reuse | Treatment |
 | --- | --- | --- |
-| Main action | `.primary` | Oxblood/ivory with persistent hover contrast; keep disabled reasons nearby |
+| Main action | `.primary` | Oxblood/ivory for players, cobalt/ivory for GM; persistent hover contrast and nearby disabled reasons |
 | Secondary action | `.secondary` | Leather/warm text |
 | Neutral action | `.quiet` | Raised paper on paper; leather variant in the dark shell |
 | Fields | `.field`, labelled input/select/textarea | Raised paper, thin warm line, visible focus; 44px normal/36px compact controls |
@@ -53,6 +55,8 @@ Desktop joins a 210px rail, flexible parchment and 310px folio (350px from 1500p
 
 The masthead is shortened, with a smaller title/emblem and search ribbon. Install app lives below New character in the rail, and is hidden when installed. Preserve the same button node across redraws so install prompts, help and installed-state listeners survive navigation. The desktop rail uses 40px step rows, a Save/Load pair, full-width New/Install controls and compact utility links. All steps fit normal desktop heights; navigation alone may scroll on short windows. The rail has no extra footer emblem. The folio keeps its separate scrolling behavior.
 
+At widths 761–1000px the decorative search-ribbon captions hide, and the search uses one centred flexible column. This avoids overflowing a small desktop/tablet window while retaining the shared search controller and phone launcher behavior.
+
 Initials use a fixed line-height-one box, grid centring and a small optical correction; no baseline-dependent padding. The folio crest also uses grid centring with inset space. Characteristic badges reserve equal space.
 
 Ash/mist stay in the banner; low-opacity candlelight stays at leather edges. The parchment, rules and controls do not move. The user removed the creator's Pause/Enable button; motion now follows the system reduced-motion preference through CSS, without a saved app preference. No sound, glints, entrance animations or continuous button effects. Colour transitions last 160ms; reduced motion disables them. Print removes decorations and uses plain ink/paper.
@@ -65,7 +69,7 @@ Update this document and affected feature docs in the same change. Inspect setup
 
 ## Current product scope
 
-The shared design system serves player creation, the fresh core-only GM workshop and the component reference. `creator-switch.mjs` and `.creator-switch` provide desktop/mobile navigation between independent tools. The workshop uses the same semantic colours, headings, dialogs and controls; `gm/style.css` owns only its compact profile/score/stat-block layout. Desktop folio scrolling, medium-screen flow and phone page navigation remain distinct. The removed NPC runtime/skin has not been restored. See [GM-WORKSHOP.md](GM-WORKSHOP.md).
+The shared design system serves player creation, the fresh core-only GM workshop and the component reference. `creator-switch.mjs` and `.creator-switch` provide desktop/mobile navigation between independent tools. The workshop uses the same semantic roles, headings, dialogs and controls, with its approved Moonlit Vellum values supplied centrally; `gm/style.css` owns its compact profile/score/stat-block layout and banner image/crop. Desktop folio scrolling, medium-screen flow and phone page navigation remain distinct. The removed NPC runtime/skin has not been restored. See [GM-WORKSHOP.md](GM-WORKSHOP.md).
 
 ## Shared book search surfaces
 
