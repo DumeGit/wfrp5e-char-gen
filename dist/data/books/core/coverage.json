@@ -42,12 +42,22 @@
     {
       "id": "core:feature:npc-creation",
       "name": "NPC and monster creation",
-      "status": "deferred",
+      "status": "implemented",
       "source": {
         "book": "core",
         "page": "318–363"
       },
-      "reason": "Removed at the user’s request on 6 October 2026. The application supports player-character creation only; NPC profiles, templates, Traits and exports are outside current scope."
+      "reason": "Fresh core-only Bestiary Workshop: printed profiles, templates, Traits, GM edits, equipment, magic, independent drafts and compact PDF export. Career development and live play are excluded."
+    },
+    {
+      "id": "core:feature:npc-career-development",
+      "name": "NPC Career development",
+      "status": "deferred",
+      "source": {
+        "book": "core",
+        "page": 355
+      },
+      "reason": "Explicitly excluded from the new GM workshop by the user. No Career selection or XP progression is applied."
     }
   ]
 }

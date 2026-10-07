@@ -1,0 +1,1060 @@
+import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
+
+export const GM_SCHEMA = 1;
+export const SIZES = [
+  "Tiny",
+  "Small",
+  "Average",
+  "Large",
+  "Enormous",
+  "Monstrous",
+];
+export const TRAINING = [
+  "Broken",
+  "Drive",
+  "Entertain",
+  "Fetch",
+  "Guard",
+  "Home",
+  "Magic",
+  "Mount",
+  "War",
+];
+export const BREATH = [
+  "Acid",
+  "Cold",
+  "Electricity",
+  "Fire",
+  "Poison",
+  "Smoke",
+];
+export const PARAMETER = {
+  Bite: "Damage",
+  Breath: "Type",
+  Horns: "",
+  Tail: "",
+  Tongue: "",
+  Tentacles: "Number",
+};
+const own = (o, k) => Object.hasOwn(o, k);
+const number = (n) => Number.isInteger(n) && n >= 0;
+const bonus = (n) => (n === null ? null : Math.floor(n / 10));
+const rowName = (row) => row.name + (row.value ? ` (${row.value})` : "");
+export { rowName };
+
+export function freshGM(data, profile = "") {
+  return {
+    type: "wfrp-gm",
+    schemaVersion: GM_SCHEMA,
+    dataVersion: data.version,
+    coreVersion: data.coreVersion,
+    profile,
+    name: "",
+    description: "",
+    purpose: "",
+    motivation: "",
+    manner: "",
+    notes: "",
+    step: 0,
+    template: "",
+    templateSkills: {},
+    templateTalents: {},
+    stats: {},
+    size: "",
+    wounds: null,
+    tbMode: "",
+    tb: null,
+    recalculate: false,
+    traits: [],
+    skills: [],
+    talents: [],
+    gear: [],
+    spells: [],
+    mutations: [],
+    removed: [],
+    optionalAttacks: [],
+    optionalArmour: [],
+    attackOverrides: {},
+    rolls: [],
+    brokenRoll: null,
+    markRoll: null,
+    includeNotes: false,
+  };
+}
+export function validateGMDraft(data, R, s) {
+  const empty = freshGM(data),
+    plain = (v) => v && typeof v === "object" && !Array.isArray(v);
+  if (
+    !plain(s) ||
+    s.type !== empty.type ||
+    s.schemaVersion !== GM_SCHEMA ||
+    s.dataVersion !== data.version ||
+    s.coreVersion !== data.coreVersion ||
+    Object.keys(s).length !== Object.keys(empty).length ||
+    Object.keys(s).some((k) => !own(empty, k))
+  )
+    throw Error(
+      "Choose a current NPC & creature save file for this core version.",
+    );
+  for (const k of [
+    "profile",
+    "name",
+    "description",
+    "purpose",
+    "motivation",
+    "manner",
+    "notes",
+    "template",
+    "size",
+    "tbMode",
+  ])
+    if (typeof s[k] !== "string" || s[k].length > 20000)
+      throw Error(`Invalid ${k} in NPC file.`);
+  if (s.profile && !data.profiles.some((p) => p.id === s.profile))
+    throw Error("Unknown printed profile.");
+  if (s.template && !data.templates.some((p) => p.id === s.template))
+    throw Error("Unknown creature template.");
+  if (s.size && !SIZES.includes(s.size)) throw Error("Unknown Size.");
+  if (
+    !Number.isInteger(s.step) ||
+    s.step < 0 ||
+    s.step > 3 ||
+    typeof s.recalculate !== "boolean" ||
+    typeof s.includeNotes !== "boolean" ||
+    !["", "printed", "calculated", "manual"].includes(s.tbMode)
+  )
+    throw Error("Invalid NPC controls.");
+  for (const k of ["wounds", "tb"])
+    if (s[k] !== null && !number(s[k])) throw Error(`Invalid ${k}.`);
+  for (const k of [
+    "stats",
+    "templateSkills",
+    "templateTalents",
+    "attackOverrides",
+  ])
+    if (
+      !plain(s[k]) ||
+      Object.keys(s[k]).some((key) =>
+        ["__proto__", "constructor", "prototype"].includes(key),
+      )
+    )
+      throw Error(`Invalid ${k}.`);
+  for (const [k, v] of Object.entries(s.stats))
+    if (!["M", ...KEYS].includes(k) || (v !== null && !number(v)))
+      throw Error("Invalid Characteristic override.");
+  for (const k of [
+    "traits",
+    "skills",
+    "talents",
+    "gear",
+    "spells",
+    "mutations",
+    "removed",
+    "optionalAttacks",
+    "optionalArmour",
+    "rolls",
+  ])
+    if (!Array.isArray(s[k]) || s[k].length > 1000)
+      throw Error(`Invalid ${k} list.`);
+  for (const t of s.traits)
+    if (
+      !plain(t) ||
+      !data.traits.some((x) => x.name === t.name) ||
+      typeof t.value !== "string" ||
+      typeof t.key !== "string"
+    )
+      throw Error("Invalid Trait choice.");
+  for (const t of s.talents)
+    if (
+      !plain(t) ||
+      !talentInfo(R, t.name) ||
+      !number(t.ranks) ||
+      !t.ranks ||
+      typeof t.key !== "string"
+    )
+      throw Error("Invalid Talent choice.");
+  for (const t of s.skills)
+    if (
+      !plain(t) ||
+      !skillInfo(R, t.name) ||
+      !number(t.total) ||
+      typeof t.key !== "string"
+    )
+      throw Error("Invalid Skill choice.");
+  for (const g of s.gear)
+    if (
+      !plain(g) ||
+      ![...R.weapons, ...R.armour, ...R.gear, ...R.market].some(
+        (x) => x.contentId === g.id,
+      ) ||
+      !number(g.quantity) ||
+      g.quantity < 1 ||
+      typeof g.key !== "string"
+    )
+      throw Error("Invalid equipment choice.");
+  for (const id of s.spells)
+    if (!R.spells.some((p) => p.contentId === id))
+      throw Error("Unknown spell.");
+  for (const id of s.mutations)
+    if (!data.mutations.some((p) => p.id === id))
+      throw Error("Unknown mutation.");
+  if (
+    s.removed.some((key) => typeof key !== "string") ||
+    new Set(s.spells).size !== s.spells.length ||
+    new Set(s.mutations).size !== s.mutations.length
+  )
+    throw Error("Duplicate or invalid selections.");
+  for (const [key, value] of Object.entries(s.templateSkills))
+    if (
+      !/^\d+$/.test(key) ||
+      !Array.isArray(value) ||
+      value.some((v) => typeof v !== "string")
+    )
+      throw Error("Invalid template Skill choices.");
+  for (const [key, value] of Object.entries(s.templateTalents))
+    if (!/^\d+$/.test(key) || typeof value !== "string")
+      throw Error("Invalid template Talent choices.");
+  for (const v of Object.values(s.attackOverrides))
+    if (
+      !plain(v) ||
+      Object.keys(v).some((k) => !["skill", "damage"].includes(k)) ||
+      Object.values(v).some((n) => n !== null && !number(n))
+    )
+      throw Error("Invalid attack adjustment.");
+  if (
+    s.brokenRoll !== null &&
+    (!Array.isArray(s.brokenRoll) ||
+      s.brokenRoll.length !== 2 ||
+      s.brokenRoll.some((n) => !number(n) || n < 1 || n > 10))
+  )
+    throw Error("Invalid Broken training roll.");
+  if (
+    s.markRoll !== null &&
+    (!number(s.markRoll) || s.markRoll < 1 || s.markRoll > 10)
+  )
+    throw Error("Invalid Mark roll.");
+  const p = data.profiles.find((p) => p.id === s.profile),
+    t = data.templates.find((t) => t.id === s.template);
+  for (const [i, names] of Object.entries(s.templateSkills))
+    if (
+      !t?.skills[i] ||
+      names.length > t.skills[i].count ||
+      names.some((n) => n && !t.skills[i].options.includes(n)) ||
+      new Set(names.filter(Boolean)).size !== names.filter(Boolean).length
+    )
+      throw Error("Unknown template Skill choice.");
+  for (const [i, name] of Object.entries(s.templateTalents))
+    if (!t?.talents[i]?.options.includes(name))
+      throw Error("Unknown template Talent choice.");
+  for (const key of s.optionalAttacks)
+    if (!p?.attacks.some((a) => a.key === key && a.optional))
+      throw Error("Unknown optional attack.");
+  for (const key of s.optionalArmour)
+    if (!p?.armour.some((a) => a.key === key && a.optional))
+      throw Error("Unknown optional armour.");
+  const rowKeys = [...s.traits, ...s.skills, ...s.talents, ...s.gear].map(
+    (x) => x.key,
+  );
+  if (
+    rowKeys.some((k) => !/^gm-[a-z0-9-]+$/.test(k)) ||
+    new Set(rowKeys).size !== rowKeys.length
+  )
+    throw Error("Invalid or duplicate added row identity.");
+  for (const t of [...s.traits, ...s.skills, ...s.talents])
+    if (t.origin !== "GM" || t.name.length > 1000 || t.value?.length > 1000)
+      throw Error("Invalid GM row provenance or text.");
+  const removable = new Set([
+    ...(p
+      ? [...p.traits, ...p.skills, ...p.talents, ...p.attacks, ...p.armour].map(
+          (x) => x.key,
+        )
+      : []),
+    ...R.spells.map((x) => x.contentId),
+  ]);
+  if (
+    s.removed.some(
+      (k) =>
+        !removable.has(k) &&
+        !(k.startsWith("skill:") && skillInfo(R, k.slice(6))),
+    )
+  )
+    throw Error("Unknown removed entry.");
+  if (
+    Object.keys(s.attackOverrides).some(
+      (k) =>
+        !p?.attacks.some((a) => a.key === k) &&
+        ![...s.gear, ...s.traits].some((x) => x.key === k),
+    )
+  )
+    throw Error("Unknown attack override.");
+  for (const r of s.rolls)
+    if (
+      !plain(r) ||
+      typeof r.label !== "string" ||
+      typeof r.at !== "string" ||
+      !Array.isArray(r.faces) ||
+      r.count !== r.faces.length ||
+      !Number.isInteger(r.sides) ||
+      r.sides < 2 ||
+      r.faces.some((n) => !number(n) || n < 1 || n > r.sides) ||
+      r.total !== r.faces.reduce((a, b) => a + b, 0) ||
+      !Number.isInteger(r.page)
+    )
+      throw Error("Invalid recorded dice.");
+  return s;
+}
+export function gmRoll(s, label, count, sides, page) {
+  const faces = Array.from({ length: count }, () => die(sides)),
+    total = faces.reduce((a, b) => a + b, 0);
+  s.rolls.push({
+    label,
+    faces,
+    total,
+    count,
+    sides,
+    page,
+    at: new Date().toISOString(),
+  });
+  return faces;
+}
+export function individualise(s, p, key) {
+  if (p.stats[key] === null)
+    throw Error("The printed Characteristic is absent.");
+  const faces = gmRoll(s, `Individualise ${p.name}: ${key}`, 2, 10, 318);
+  s.stats[key] = p.stats[key] - 10 + faces.reduce((a, b) => a + b, 0);
+}
+export function applyTemplate(s, id) {
+  s.template = id;
+  s.templateSkills = {};
+  s.templateTalents = {};
+  s.spells = [];
+}
+export function woundFormula(
+  stats,
+  size,
+  construct = false,
+  swarm = false,
+  hardy = 0,
+  toughnessBonus = bonus(stats.T),
+) {
+  const tb = toughnessBonus,
+    sb = bonus(stats.S),
+    wp = construct ? sb : bonus(stats.WP);
+  if (tb === null) return null;
+  if (swarm)
+    return sb === null || wp === null ? null : (sb + (2 + hardy) * tb + wp) * 5;
+  if (size === "Tiny") return null;
+  if (size === "Small") return (2 + hardy) * tb;
+  if (sb === null || wp === null) return null;
+  return (
+    (sb + (2 + hardy) * tb + wp) *
+    ({ Average: 1, Large: 2, Enormous: 4, Monstrous: 8 }[size] || 1)
+  );
+}
+const sizeDamage = (size, sb) =>
+  sb * ({ Large: 1, Enormous: 1, Monstrous: 2 }[size] || 0);
+const parts = (text) =>
+  text
+    .split(",")
+    .map((v) => v.trim())
+    .filter(Boolean);
+const magicLore = (name) =>
+  name.match(/^(?:Arcane Magic|Chaos Magic) \((.*)\)$/)?.[1];
+export function magicChoices(R, result) {
+  const lores = new Set(
+    result.talents.map((t) => magicLore(t.name)).filter(Boolean),
+  );
+  for (const t of result.traits)
+    if (t.name === "Spellcaster")
+      parts(t.value).forEach((x) => lores.add(x.replace(/^Lore of /, "")));
+  const blessingGods = result.traits
+      .filter((t) => t.name === "Blessed")
+      .map((t) => t.value),
+    miracleGods = result.traits
+      .filter((t) => t.name === "Miracles")
+      .map((t) => t.value);
+  result.talents.forEach((t) => {
+    if (/^Bless \(/.test(t.name))
+      blessingGods.push(t.name.match(/\((.*)\)/)[1]);
+    if (/^Invoke \(/.test(t.name))
+      miracleGods.push(t.name.match(/\((.*)\)/)[1]);
+  });
+  return R.spells.filter(
+    (spell) =>
+      (spell.category === "Petty" &&
+        result.talents.some((t) => t.name === "Petty Magic")) ||
+      lores.has(spell.category) ||
+      (spell.category === "Arcane" && lores.size) ||
+      (spell.category === "Blessing" &&
+        blessingGods.some((god) =>
+          R.config.blessings[god]?.some(
+            (name) => spell.name === `Blessing of ${name}`,
+          ),
+        )) ||
+      (miracleGods.includes(spell.category) && !spell.ritual),
+  );
+}
+export function calculateGM(data, R, s) {
+  const issues = [],
+    warnings = [],
+    add = (message, step, target, code = "choice") =>
+      issues.push({
+        message,
+        code,
+        severity: "error",
+        source: { book: "core", page: code.startsWith("magic") ? 354 : 318 },
+        control: { step, target },
+      });
+  const p = data.profiles.find((p) => p.id === s.profile);
+  if (!p) {
+    add("Choose a printed starting profile.", 0, "#gm-profile-search");
+    return {
+      profile: null,
+      issues,
+      warnings,
+      stats: {},
+      skills: [],
+      talents: [],
+      traits: [],
+      attacks: [],
+      armour: [],
+      spells: [],
+      gear: [],
+      mutations: [],
+      size: "",
+      tb: null,
+      wounds: null,
+    };
+  }
+  const template = data.templates.find((t) => t.id === s.template);
+  const live = (rows) => rows.filter((x) => !s.removed.includes(x.key));
+  const traits = live([...p.traits, ...s.traits]).map((t) => ({
+    ...t,
+    text: data.traits.find((x) => x.name === t.name)?.text || "",
+    page: data.traits.find((x) => x.name === t.name)?.page || p.page,
+  }));
+  const talents = live([...p.talents, ...s.talents]).map((t) => ({ ...t }));
+  for (const t of traits.filter(
+    (t) => t.name === "Mark of Chaos" && t.origin === "GM",
+  )) {
+    const grant = (name) => {
+      if (!talents.some((x) => x.name === name))
+        talents.push({ name, ranks: 1, key: `mark-${name}`, origin: "Trait" });
+    };
+    if (t.value === "Khorne") grant("Frenzy");
+    if (t.value === "Slaanesh") grant("Fearless (Everything)");
+    if (t.value) grant(`Etiquette (Followers of ${t.value})`);
+    if (
+      t.value === "Tzeentch" &&
+      (s.markRoll === null ||
+        s.mutations.length < Math.ceil(s.markRoll / 3) ||
+        s.mutations
+          .slice(0, Math.ceil(s.markRoll / 3))
+          .some(
+            (id, i, ids) =>
+              i &&
+              data.mutations.find((m) => m.id === id)?.category ===
+                data.mutations.find((m) => m.id === ids[i - 1])?.category,
+          ))
+    )
+      add(
+        "Roll and choose the alternating Mental/Physical Mutations granted by the Mark of Tzeentch.",
+        1,
+        "#gm-mutations",
+      );
+  }
+  const trained = traits
+    .filter((t) => t.name === "Trained" && t.origin !== "Printed")
+    .flatMap((t) => parts(t.value));
+  if (
+    trained.includes("Guard") &&
+    !traits.some((t) => t.name === "Territorial")
+  )
+    traits.push({
+      key: "trained-guard",
+      name: "Territorial",
+      value: "",
+      origin: "Training",
+      text: data.traits.find((t) => t.name === "Territorial").text,
+      page: 363,
+    });
+  const templateSkills = [];
+  for (const [i, slot] of (template?.talents || []).entries()) {
+    const name =
+      slot.options.length === 1 ? slot.options[0] : s.templateTalents[i];
+    if (!slot.options.includes(name)) {
+      add(
+        `Choose ${slot.options.length > 2 ? "a magical Lore Talent" : slot.options.join(" or ")} for ${template.name}.`,
+        1,
+        `#template-talent-${i}`,
+      );
+      continue;
+    }
+    talents.push({
+      key: `template-talent-${i}`,
+      name,
+      ranks: slot.ranks,
+      origin: "Template",
+    });
+  }
+  for (const [i, slot] of (template?.skills || []).entries()) {
+    const names =
+      slot.options.length === 1 ? [slot.options[0]] : s.templateSkills[i] || [];
+    if (
+      names.length !== slot.count ||
+      new Set(names).size !== names.length ||
+      names.some((n) => !slot.options.includes(n))
+    ) {
+      add(
+        `Choose ${slot.count === 1 ? "a" : "two different"} ${base(slot.options[0])} specialisation${slot.count > 1 ? "s" : ""} for ${template.name}.`,
+        1,
+        `#template-skill-${i}`,
+      );
+      continue;
+    }
+    for (const name of names)
+      templateSkills.push({ name, bonus: slot.bonus, origin: "Template" });
+  }
+  const stats = {};
+  for (const key of ["M", ...KEYS])
+    stats[key] = own(s.stats, key) ? s.stats[key] : p.stats[key];
+  const adjustments = { ...(template?.adjustments || {}) };
+  for (const t of talents.filter((x) => x.origin !== "Printed")) {
+    const key = R.config.talentEffects[base(t.name)];
+    if (key) adjustments[key] = (adjustments[key] || 0) + 5 * t.ranks;
+    if (t.name === "Fleet-footed") adjustments.M = (adjustments.M || 0) + 1;
+  }
+  for (const t of p.talents.filter((x) => s.removed.includes(x.key))) {
+    const key = R.config.talentEffects[base(t.name)];
+    if (key) adjustments[key] = (adjustments[key] || 0) - 5 * t.ranks;
+    if (t.name === "Fleet-footed") adjustments.M = (adjustments.M || 0) - 1;
+  }
+  if (trained.includes("War")) adjustments.WS = (adjustments.WS || 0) + 10;
+  if (trained.includes("Broken")) {
+    if (s.brokenRoll === null)
+      add(
+        "Roll the 2d10 Fellowship increase for Broken training.",
+        1,
+        "#gm-broken-roll",
+      );
+    else {
+      if (stats.Fel === null) stats.Fel = 0;
+      adjustments.Fel =
+        (adjustments.Fel || 0) + s.brokenRoll.reduce((a, b) => a + b, 0);
+    }
+  }
+  const mutations = s.mutations
+    .map((id) => data.mutations.find((m) => m.id === id))
+    .filter(Boolean);
+  for (const m of mutations)
+    for (const [key, v] of Object.entries(m.adjustments || {}))
+      adjustments[key] = (adjustments[key] || 0) + v;
+  const newTraits = traits.filter((t) => t.origin === "GM");
+  if (newTraits.some((t) => t.name === "Swarm"))
+    adjustments.WS = (adjustments.WS || 0) + 10;
+  if (newTraits.some((t) => t.name === "Mark of Chaos" && t.value === "Nurgle"))
+    adjustments.T = (adjustments.T || 0) + 10;
+  const construct = traits.some((t) => t.name === "Construct"),
+    swarm = traits.some((t) => t.name === "Swarm");
+  if (newTraits.some((t) => t.name === "Construct"))
+    for (const k of ["Int", "WP", "Fel"]) stats[k] = null;
+  let size = s.size || p.size;
+  if (!swarm && size !== p.size) {
+    const steps = SIZES.indexOf(size) - SIZES.indexOf(p.size);
+    adjustments.S = (adjustments.S || 0) + 10 * steps;
+    adjustments.T = (adjustments.T || 0) + 10 * steps;
+    adjustments.Ag = (adjustments.Ag || 0) - 5 * steps;
+  }
+  for (const [key, v] of Object.entries(adjustments)) {
+    if (stats[key] === null)
+      add(
+        `${key} is absent; this change needs an explicit base score.`,
+        1,
+        `#stat-${key}`,
+      );
+    else stats[key] += v;
+  }
+  for (const [key, v] of Object.entries(stats))
+    if (v !== null && !number(v))
+      add(`${key} must be a nonnegative whole number.`, 1, `#stat-${key}`);
+  const changed =
+    s.recalculate ||
+    Object.keys(stats).some((key) => stats[key] !== p.stats[key]) ||
+    size !== p.size ||
+    swarm !== p.traits.some((t) => t.name === "Swarm") ||
+    construct !== p.traits.some((t) => t.name === "Construct");
+  let tb = p.toughnessBonus ?? bonus(stats.T);
+  const tbConflict =
+    p.toughnessBonus !== null && p.toughnessBonus !== bonus(p.stats.T);
+  if (changed) tb = bonus(stats.T);
+  if (s.tbMode === "printed") tb = p.toughnessBonus ?? bonus(p.stats.T);
+  if (s.tbMode === "calculated") tb = bonus(stats.T);
+  if (s.tbMode === "manual") {
+    tb = s.tb;
+    if (tb === null) add("Set a manual Toughness Bonus.", 1, "#gm-tb");
+  }
+  if (tbConflict && changed && !s.tbMode)
+    add(
+      "The printed Toughness Bonus conflicts with Toughness. Choose which value to use before exporting this changed profile.",
+      1,
+      "#gm-tb-mode",
+      "source.tb",
+    );
+  const hardy = talents
+      .filter((t) => base(t.name) === "Hardy")
+      .reduce((n, t) => n + t.ranks, 0),
+    printedHardy = p.talents
+      .filter((t) => base(t.name) === "Hardy")
+      .reduce((n, t) => n + t.ranks, 0);
+  let wounds =
+    changed || hardy !== printedHardy
+      ? woundFormula(stats, size, construct, swarm, hardy, tb)
+      : p.stats.W;
+  if (swarm) {
+    const normalChanged =
+        s.recalculate ||
+        template ||
+        hardy !== printedHardy ||
+        ["S", "T", "WP"].some((k) => stats[k] !== p.stats[k]) ||
+        construct !== p.traits.some((t) => t.name === "Construct"),
+      normal = normalChanged
+        ? woundFormula(stats, p.size, construct, false, hardy, tb)
+        : p.stats.W;
+    wounds = normal === null ? null : normal * 5;
+  }
+  if (s.wounds !== null) wounds = s.wounds;
+  if (wounds === null)
+    add(
+      "This build needs a manual Wounds value. Tiny has no printed Wounds formula (p. 361).",
+      1,
+      "#gm-wounds",
+    );
+  const skills = new Map();
+  const put = (name, total, origin) => {
+    if (s.removed.includes(`skill:${name}`)) return;
+    const old = skills.get(name);
+    if (!old || total > old.total)
+      skills.set(name, { name, total, origin, char: skillInfo(R, name)?.char });
+  };
+  for (const x of live(p.skills)) {
+    const char = skillInfo(R, x.name)?.char;
+    const value =
+      changed && char && stats[char] !== null && p.stats[char] !== null
+        ? stats[char] + x.total - p.stats[char]
+        : x.total;
+    put(x.name, value, "Printed");
+  }
+  for (const x of templateSkills) {
+    const char = skillInfo(R, x.name)?.char;
+    if (!char || stats[char] === null)
+      add(
+        `${x.name} needs an explicit ${char || "Characteristic"} score.`,
+        1,
+        `#template-skill-${template.skills.findIndex((v) => v.options.includes(x.name))}`,
+      );
+    else put(x.name, stats[char] + x.bonus, "Template");
+  }
+  for (const t of newTraits) {
+    const grant = {
+      Tracker: ["Track", "Int"],
+      Stealthy: ["Stealth (Rural)", "Ag"],
+      Blessed: ["Pray", "Fel"],
+      Miracles: ["Pray", "Fel"],
+    }[t.name];
+    if (grant) {
+      if (stats[grant[1]] === null)
+        add(
+          `${t.name} needs ${grant[1]} for its granted Skill.`,
+          1,
+          `#trait-${t.key}`,
+        );
+      else put(grant[0], stats[grant[1]] + 10, "Trait");
+    }
+    if (t.name === "Amphibious" && stats.S !== null)
+      put("Swim", stats.S, "Trait");
+    if (t.name === "Spellcaster" && !template?.magic) {
+      for (const lore of parts(t.value)) {
+        const wind = {
+          Beasts: "Ghur",
+          Death: "Shyish",
+          Fire: "Aqshy",
+          Heavens: "Azyr",
+          Life: "Ghyran",
+          Light: "Hysh",
+          Metal: "Chamon",
+          Shadows: "Ulgu",
+        }[lore];
+        if (wind && stats.WP !== null)
+          put(`Channelling (${wind})`, stats.WP + 10, "Trait");
+        if (!wind && !s.skills.some((x) => base(x.name) === "Channelling"))
+          add(
+            "Choose a Channelling Wind Skill for this magical Lore.",
+            1,
+            "#gm-tab-2",
+            "magic.wind",
+          );
+      }
+      if (stats.Int !== null) put("Language (Magick)", stats.Int + 10, "Trait");
+    }
+  }
+  for (const x of live(s.skills))
+    skills.set(x.name, { ...x, char: skillInfo(R, x.name)?.char });
+  for (const x of s.skills)
+    if (!number(x.total))
+      add(
+        `${x.name} needs a nonnegative whole-number total.`,
+        1,
+        "#gm-tab-2",
+        "skill.total",
+      );
+  for (const t of s.talents)
+    if (
+      !Number.isInteger(t.ranks) ||
+      t.ranks < 1 ||
+      (R.config.talentLimits[base(t.name)] !== null &&
+        t.ranks > (R.config.talentLimits[base(t.name)] ?? 1))
+    )
+      add(
+        `${t.name} exceeds its core purchase limit.`,
+        1,
+        "#gm-tab-2",
+        "talent.limit",
+      );
+  for (const t of s.talents)
+    if (base(t.name) === "Impassioned Zeal" && !t.name.match(/\(([^)]+)\)/))
+      add(
+        "Set an explicit Cause for Impassioned Zeal.",
+        1,
+        "#gm-tab-2",
+        "talent.cause",
+      );
+  for (const t of newTraits) {
+    const param =
+      PARAMETER[t.name] ??
+      data.traits.find((x) => x.name === t.name)?.parameter;
+    if (param && !t.value.trim())
+      add(`Set ${param.toLowerCase()} for ${t.name}.`, 1, `#trait-${t.key}`);
+    if (
+      ["Rating", "Number", "Damage"].includes(param) &&
+      (!/^\d+$/.test(t.value) || Number(t.value) < 1)
+    )
+      add(
+        `${t.name} needs a positive whole-number ${param.toLowerCase()}.`,
+        1,
+        `#trait-${t.key}`,
+      );
+  }
+  for (const t of newTraits) {
+    const known = {
+      Breath: BREATH,
+      "Mark of Chaos": ["Khorne", "Nurgle", "Slaanesh", "Tzeentch"],
+      Blessed: R.config.gods,
+      Miracles: R.config.gods,
+      Spellcaster: [
+        ...R.config.colours,
+        "Hedgecraft",
+        "Witchcraft",
+        "Daemonology",
+        "Necromancy",
+        "Nurgle",
+        "Slaanesh",
+        "Tzeentch",
+      ],
+      Corruption: ["Minor", "Moderate", "Major"],
+      Trained: TRAINING,
+    }[t.name];
+    if (known && parts(t.value).some((v) => !known.includes(v)))
+      add(
+        `Choose a printed ${t.name} parameter.`,
+        1,
+        `#trait-${t.key}`,
+        "trait.parameter",
+      );
+  }
+  const sb = bonus(stats.S) || 0,
+    oldSB = bonus(p.stats.S) || 0;
+  const attacks = live(p.attacks)
+    .filter((a) => !a.optional || s.optionalAttacks.includes(a.key))
+    .map((a) => {
+      const ranged =
+        /Bow|Sling|Crossbow|Rocks|Breath|Vomit/.test(a.name) ||
+        /yards/.test(a.text);
+      const free =
+        /Bite|Horns|Tail|Tentacle|Breath|Vomit|Grasp|Howl/.test(a.name) ||
+        /Free Attack/.test(a.text);
+      const weapon = R.weapons.find((w) => a.name.startsWith(w.name));
+      const char = ranged ? "BS" : "WS",
+        skillName = weapon
+          ? `${ranged ? "Ranged" : "Melee"} (${weapon.group})`
+          : `Melee (Brawling)`;
+      const trainedSkill =
+        skills.get(skillName) || skills.get(ranged ? "Ranged" : "Melee");
+      let score = a.skill,
+        damage = a.damage;
+      if (
+        (changed || s.skills.length) &&
+        score !== null &&
+        stats[char] !== null &&
+        p.stats[char] !== null
+      )
+        score = s.skills.some((x) => x.name === skillName)
+          ? trainedSkill.total
+          : Math.max(
+              score + stats[char] - p.stats[char],
+              trainedSkill?.total ?? 0,
+            );
+      if (changed && damage !== null) {
+        if (a.name === "Vomit")
+          damage = damage + (bonus(stats.T) || 0) - (bonus(p.stats.T) || 0);
+        else
+          damage =
+            damage +
+            sb -
+            oldSB +
+            (!ranged && !free
+              ? sizeDamage(swarm ? "Average" : size, sb) -
+                sizeDamage(p.size, oldSB)
+              : 0);
+      }
+      const override = s.attackOverrides[a.key] || {};
+      return {
+        ...a,
+        skill: own(override, "skill") ? override.skill : score,
+        damage: own(override, "damage") ? override.damage : damage,
+        ranged,
+        free,
+      };
+    });
+  const gear = s.gear
+    .filter((g) => !g.id.startsWith("printed-attack-"))
+    .map((g) => ({
+      ...g,
+      entry: [...R.weapons, ...R.armour, ...R.gear, ...R.market].find(
+        (x) => x.contentId === g.id,
+      ),
+    }));
+  for (const g of gear.filter((g) =>
+    R.weapons.some((w) => w.contentId === g.id),
+  )) {
+    const w = g.entry,
+      char = w.kind === "ranged" ? "BS" : "WS",
+      name = `${w.kind === "ranged" ? "Ranged" : "Melee"} (${w.group})`;
+    const skill = skills.get(name)?.total ?? stats[char];
+    let damage = null;
+    const m = w.damage.replaceAll(" ", "").match(/^(SB|TB)?\+?(\d+)?$/);
+    if (m)
+      damage =
+        (m[1] === "SB" ? sb : m[1] === "TB" ? bonus(stats.T) || 0 : 0) +
+        Number(m[2] || 0);
+    if (w.kind === "melee" && damage !== null)
+      damage += sizeDamage(swarm ? "Average" : size, sb);
+    attacks.push({
+      key: g.key,
+      name: w.name,
+      skill,
+      damage,
+      text: [w.reach, w.qualities].filter(Boolean).join(" · "),
+      origin: "GM",
+      ranged: w.kind === "ranged",
+    });
+  }
+  for (const t of newTraits) {
+    if (attacks.some((a) => base(a.name) === t.name)) continue;
+    let damage,
+      score = stats.WS,
+      text = "Free Attack",
+      ranged = false;
+    if (t.name === "Bite") damage = Number(t.value) || null;
+    if (t.name === "Horns") damage = sb + 4;
+    if (t.name === "Tail") damage = sb + 2;
+    if (t.name === "Tentacles") damage = sb;
+    if (t.name === "Tongue") {
+      damage = sb;
+      ranged = true;
+      score = stats.BS;
+      text = "3 yards; 12 yards above Large · Free Attack";
+    }
+    if (t.name === "Vomit") {
+      damage = (tb || 0) + 4;
+      ranged = true;
+      score = stats.BS;
+      text =
+        "2 yards · Easy (+4 SL) · replaces Move and Action · once per 12 hours";
+    }
+    if (t.name === "Breath") {
+      damage = {
+        Acid: (bonus(stats.T) || 0) + 4,
+        Cold: sb + 2,
+        Electricity: sb + 2,
+        Fire: sb + 3,
+        Poison: (bonus(stats.T) || 0) + 2,
+        Smoke: null,
+      }[t.value];
+      ranged = true;
+      score = stats.BS ?? 30;
+      text = `${20 + (bonus(stats.T) || 0)} yards · ${t.value} · Magical Free Attack`;
+    }
+    if (damage !== undefined || t.name === "Breath")
+      attacks.push({
+        key: t.key,
+        name: rowName(t),
+        skill: score,
+        damage,
+        text,
+        origin: "Trait",
+        ranged,
+        free: true,
+      });
+  }
+  const mighty = talents
+      .filter(
+        (t) => base(t.name) === "Strike Mighty Blow" && t.origin !== "Printed",
+      )
+      .reduce((n, t) => n + t.ranks, 0),
+    accurate = talents
+      .filter((t) => base(t.name) === "Accurate Shot" && t.origin !== "Printed")
+      .reduce((n, t) => n + t.ranks, 0);
+  for (const a of attacks) {
+    const override = s.attackOverrides[a.key] || {};
+    if (own(override, "skill")) a.skill = override.skill;
+    if (own(override, "damage")) a.damage = override.damage;
+    if (a.damage !== null && !own(override, "damage"))
+      a.damage += a.ranged ? accurate : mighty;
+    if (a.damage !== null && a.skill === null)
+      add(`${a.name} needs an attack score.`, 2, `#attack-${a.key}`);
+    if (
+      (a.skill !== null && !number(a.skill)) ||
+      (a.damage !== null && !number(a.damage))
+    )
+      add(
+        `${a.name} needs nonnegative whole-number attack values.`,
+        2,
+        `#attack-${a.key}`,
+      );
+  }
+  let armour = live(
+    p.armour.filter((a) => !a.optional || s.optionalArmour.includes(a.key)),
+  );
+  for (const g of gear.filter((g) =>
+    R.armour.some((a) => a.contentId === g.id),
+  )) {
+    const a = g.entry;
+    armour.push({
+      ...a,
+      key: g.key,
+      origin: "GM",
+      shield: a.locations === "Shield",
+    });
+  }
+  const ap = { Head: 0, Arms: 0, Body: 0, Legs: 0 },
+    layers = {};
+  const quick = armour.some((a) => a.quick);
+  for (const a of armour.filter((a) => !a.shield)) {
+    const natural = /Hide|Scales|Bark/.test(a.name);
+    if (quick && !a.quick && !natural) {
+      warnings.push(
+        "Quick Armour replaces detailed armour; they are not stacked (p. 307).",
+      );
+      continue;
+    }
+    const layer = natural
+      ? "natural"
+      : a.quick
+        ? "quick"
+        : a.name.startsWith("Leather")
+          ? "leather"
+          : a.name.startsWith("Mail")
+            ? "mail"
+            : a.origin === "Printed"
+              ? "printed"
+              : "plate";
+    for (const loc of Object.keys(ap))
+      if (a.locations.includes(loc))
+        layers[`${layer}:${loc}`] = Math.max(
+          layers[`${layer}:${loc}`] || 0,
+          a.ap,
+        );
+  }
+  for (const [k, v] of Object.entries(layers)) ap[k.split(":")[1]] += v;
+  const spells = R.spells.filter(
+    (spell) =>
+      [...p.spells, ...s.spells].includes(spell.contentId) &&
+      !s.removed.includes(spell.contentId),
+  );
+  const result = {
+    profile: p,
+    name: s.name.trim() || p.name,
+    description: s.description,
+    template,
+    stats,
+    size: swarm ? p.size : size,
+    swarm,
+    tb,
+    wounds,
+    skills: [...skills.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    talents: [
+      ...new Map(
+        talents.map((t) => [
+          t.name,
+          talents
+            .filter((x) => x.name === t.name)
+            .reduce((a, b) => (a.ranks >= b.ranks ? a : b)),
+        ]),
+      ).values(),
+    ],
+    traits: traits.map((t) => (t.name === "Size" ? { ...t, value: size } : t)),
+    attacks,
+    armour,
+    ap,
+    shield: Math.max(0, ...armour.filter((a) => a.shield).map((a) => a.ap)),
+    spells,
+    gear,
+    mutations,
+    issues,
+    warnings,
+    changed,
+  };
+  const allowed = magicChoices(R, result);
+  for (const id of s.spells)
+    if (!allowed.some((x) => x.contentId === id))
+      add(
+        "A selected spell needs a matching magical Lore or deity.",
+        2,
+        "#gm-magic",
+        "magic.lore",
+      );
+  if (template?.magic) {
+    const petty = spells.filter((x) => x.category === "Petty").length,
+      lore = spells.filter(
+        (x) =>
+          x.category !== "Petty" &&
+          x.category !== "Blessing" &&
+          !R.config.gods.includes(x.category),
+      ).length;
+    if (petty > template.magic.petty || lore > template.magic.lore)
+      add(
+        `${template.name} allows up to ${template.magic.petty} Petty and ${template.magic.lore} Lore spells.`,
+        2,
+        "#gm-magic",
+        "magic.count",
+      );
+  }
+  if (s.size === "Large" && p.name === "Giant Spider")
+    warnings.push(
+      "The general Size rule gives Fangs +8. The p. 361 worked example gives +5, omitting the additional Size damage; the user chose the general rule.",
+    );
+  warnings.push(...p.notes);
+  if (
+    traits.some((t) => t.name === "Venom") &&
+    /avoid|pass.*Endurance/.test(p.sections.Traits || "")
+  )
+    warnings.push(
+      "Venom uses the full p. 363 rule: Wounds inflict Poisoned; the Difficulty applies to recovery. Some profile summaries conflict.",
+    );
+  if (template)
+    warnings.push(
+      "Template Skill bonuses use the higher of the printed bonus and template bonus, following the user-approved interpretation. Printed worked examples may differ.",
+    );
+  result.warnings = [...new Set(warnings)];
+  return result;
+}

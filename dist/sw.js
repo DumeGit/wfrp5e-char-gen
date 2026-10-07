@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"b9d2e8ab2c11bc380a88";
+const CACHE=CACHE_PREFIX+"29cd4b3171f099cca5fb";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -35,6 +35,7 @@ const ASSETS=[
  "character-result.mjs",
  "content-references.mjs",
  "context-career.mjs",
+ "creator-switch.mjs",
  "creator-ui.mjs",
  "cults.mjs",
  "data/background.json",
@@ -200,6 +201,20 @@ const ASSETS=[
  "flow-ui.mjs",
  "folio-gear.mjs",
  "folio.mjs",
+ "gm.html",
+ "gm/app.mjs",
+ "gm/content.mjs",
+ "gm/controls.mjs",
+ "gm/data.json",
+ "gm/model.mjs",
+ "gm/pdf.mjs",
+ "gm/print.mjs",
+ "gm/printing.mjs",
+ "gm/references.mjs",
+ "gm/sheet.mjs",
+ "gm/sources/core.json",
+ "gm/style.css",
+ "gm/views.mjs",
  "high-elf-ui.mjs",
  "high-elf.mjs",
  "index.html",

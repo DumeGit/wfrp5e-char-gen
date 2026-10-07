@@ -177,6 +177,6 @@ The Python extraction builders use `scripts/book_build.py` to preserve reviewed 
 
 ## Player-only registry scope
 
-The NPC/Monster creator was removed on 6 October 2026. Manifests no longer declare creator modes and do not accept `creatures`, `templates`, `traits` or `mutations` files. Keep NPC chapters as deferred scope features in coverage rather than claiming imported records. Animal equipment entries remain acquisition-only PC belongings.
+Player manifests retain their existing categories and do not accept `creatures`, `templates`, `traits` or `mutations` files. The newly authorised core-only GM workshop has a separate reviewed source/compiler/catalogue under `dist/gm/`, generated after registry validation. Its counts are recorded separately in GM-CONTENT.md, while the core coverage inventory records the implemented workshop and deferred Career development. Supplement NPC chapters remain deferred until explicitly integrated into the new GM model; enabling a PC book does not import them. Animal shop entries remain PC acquisition-only belongings. See [GM-WORKSHOP.md](GM-WORKSHOP.md).
 
 A cult may declare `careerMiracles`, mapping registered Career IDs to distinct lists of existing Miracles. Its ordinary `miracles` list remains the fallback. Player free/paid grants and saved-purchase validation use this restriction; adding several aspects under one deity must not unlock every aspect’s Miracles.

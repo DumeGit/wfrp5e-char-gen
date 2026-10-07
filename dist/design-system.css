@@ -1452,3 +1452,11 @@ dialog::backdrop {
     font-size: 24px;
   }
 }
+
+/* Shared creator navigation, available on desktop and phone. */
+.creator-switch { display:grid; gap:4px; margin-bottom:16px; padding:4px; border:1px solid var(--color-line-dark); background:var(--color-leather-deep); }
+.creator-switch a { padding:9px 8px; text-align:center; color:var(--color-on-leather-muted); font-size:var(--text-sm); text-decoration:none; border:1px solid transparent; }
+.creator-switch a[aria-current] { background:var(--color-leather-raised); color:var(--color-gold-light); border-color:var(--color-line-dark); }
+.creator-switch a:hover { color:var(--color-on-leather); background:var(--color-leather-raised); }
+.creator-switch a:focus-visible { outline:2px solid var(--color-gold-light); outline-offset:2px; }
+@media(max-width:800px){ .creator-switch { grid-template-columns:1fr 1fr; margin-bottom:10px; } }

@@ -11,7 +11,7 @@
     "generate:books": "node scripts/generate-books.mjs",
     "check:generated": "node scripts/generate-books.mjs --check",
     "check:code": "node scripts/check-code.mjs",
-    "check:format": "prettier --check \"dist/*.mjs\" \"dist/features/*.mjs\" dist/app.js scripts/check-code.mjs scripts/check-offline.mjs scripts/generate-books.mjs",
+    "check:format": "prettier --check \"dist/*.mjs\" \"dist/features/*.mjs\" \"dist/gm/*.mjs\" dist/app.js scripts/check-code.mjs scripts/check-offline.mjs scripts/generate-books.mjs",
     "check:release": "npm run check:books && npm run check:code && npm run check:generated && npm run check:format && npm test && node scripts/check-offline.mjs"
   },
   "dependencies": {

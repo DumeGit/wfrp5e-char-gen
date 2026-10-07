@@ -26,7 +26,7 @@ The user approved these on 6 October 2026:
 
 ## Excluded scope and maintenance
 
-The NPC/Monster creator was removed at the user’s request on 6 October 2026. The book’s NPC/animal profiles, abstract Armour interpretations, hound Trait replacements, training and named NPC equipment are no longer published or active. Earlier NPC decisions remain in Git history and must not be treated as implemented features. Animal prices and acquisition references remain in the PC shop.
+The earlier NPC runtime was removed. The newly authorised GM workshop currently supports the Fifth Edition core only; this supplement’s NPC/animal profiles, abstract Armour interpretations, hound Trait replacements, training and named NPC equipment remain deferred and unpublished. Earlier NPC decisions remain in Git history and are not implemented features of the fresh workshop. Animal prices and acquisition references remain in the PC shop.
 
 Contacts, criminal organisations, burglary/fraud, patrols, bounties, pathfinding/camping, live Ranald’s Gamble and ongoing training remain outside character creation. Old-core page references identify Fourth Edition rather than unrelated Fifth Edition pages. Do not infer further conversions from a generic continue message.
 

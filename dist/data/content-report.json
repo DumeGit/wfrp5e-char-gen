@@ -31,7 +31,7 @@
         "deferred": 0
       },
       "featureCounts": {
-        "implemented": 1,
+        "implemented": 2,
         "adapted": 1,
         "reference-only": 0,
         "unavailable": 0,
@@ -9390,14 +9390,24 @@
           "reason": "Core creation is implemented; live play remains outside the creator."
         },
         {
+          "id": "core:feature:npc-career-development",
+          "name": "NPC Career development",
+          "status": "deferred",
+          "source": {
+            "book": "core",
+            "page": 355
+          },
+          "reason": "Explicitly excluded from the new GM workshop by the user. No Career selection or XP progression is applied."
+        },
+        {
           "id": "core:feature:npc-creation",
           "name": "NPC and monster creation",
-          "status": "deferred",
+          "status": "implemented",
           "source": {
             "book": "core",
             "page": "318–363"
           },
-          "reason": "Removed at the user’s request on 6 October 2026. The application supports player-character creation only; NPC profiles, templates, Traits and exports are outside current scope."
+          "reason": "Fresh core-only Bestiary Workshop: printed profiles, templates, Traits, GM edits, equipment, magic, independent drafts and compact PDF export. Career development and live play are excluded."
         },
         {
           "id": "core:feature:tracker-single",
@@ -20708,7 +20718,7 @@
             "book": "deft-steps",
             "page": "34–134"
           },
-          "reason": "NPC creator removed at the user’s request. Animal shop entries record PC acquisition only; profiles, training and named NPC equipment are outside current scope."
+          "reason": "Supplement NPC integration is deferred: the fresh GM workshop supports the Fifth Edition core only. Animal shop entries remain PC acquisitions; earlier NPC decisions are not active."
         },
         {
           "id": "deft-steps:feature:ranald-lists",

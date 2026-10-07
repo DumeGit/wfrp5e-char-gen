@@ -1,0 +1,63 @@
+# Core Bestiary Workshop
+
+This is the fresh NPC & creature creator authorised in October 2026. It shares the Black Banner presentation system with player creation, but has its own entry point (`dist/gm.html`), draft and calculated result. The removed NPC runtime has not been restored. Only reviewed core-book extraction was reused and recompiled. Supplements, Career development, XP purchases and campaign management are outside this release.
+
+## Workflow
+
+The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. The workshop searches **only the supplied Fifth Edition core**, regardless of the player's selected supplements.
+
+1. **Starting profile:** search/filter 53 profiles, preview the complete block, then apply it. Printed scores, absent values, Skills, attacks, Wounds and Toughness Bonus remain intact. Name, appearance, purpose, motivation and manner are optional. Changing the foundation replaces this GM build, with undo available.
+2. **Customise:** preview one of seven templates before applying it. Replacements clear template choices and selected extra magic, while retaining explicit GM edits, Traits and equipment. Required alternatives are immediately visible above three compact tabs: Characteristics; Traits; Skills & Talents. Size and derived-value overrides are explicit. Creature Traits use their full core definitions; optional profile suggestions do not grant themselves. Training, Corruption choices and recorded dice appear when relevant. Skill edits are final scores. Talents show ranks and permanent effects; situational effects stay as references.
+3. **Equipment & magic:** printed attacks/defences are included, optional kit is explicit, and core equipment can be added without a PC shopping budget. Shield AP stays conditional. Magic follows the chosen Lore or patron; Blessed/Bless permits Blessings, Miracles/Invoke permits Miracles. Spellcaster templates enforce their printed optional spell-count limits. There are no PC free spell allocations or XP prices.
+4. **Review & export:** the same calculated result drives review, folio and PDF. Unresolved choices are shown on every page, with links to the exact control and visible focus. Errors block PDF export; source warnings do not. Source discrepancies stay in the app. The PDF is a compact stat block with all current attacks, defences, Skills, Talent ranks, Traits, magic, Trappings, Corruption and personality. Private notes are included only when explicitly enabled. **Print A4 table cards** opens a temporary batch with six cards (two columns/three rows) or four cards (two columns/two rows) per page. Add the current build, import multiple current-format GM drafts locally, duplicate cards, or remove entries. The batch survives closing the dialog within this page session; it is not a campaign roster and is not persisted across reloads. All entries use the same calculated result and must resolve their issues before printing. Cards list scores, attacks, AP, Skills, Talent ranks, Trait ratings, spell names/CN, Trappings, Corruption names and optional personality/notes. Full ability descriptions and spell parameters remain in the app/full sheet. Text is measured before export, stays at least 7.5 pt, and overflow blocks export with a suggestion to use four cards or the full sheet. Empty slots stay blank; larger batches paginate. PDFs use white paper, greyscale ink and cut borders.
+
+On desktop the folio stays alongside the page and scrolls internally if needed. Medium screens use two columns and put the folio beneath the editor; phones use page flow, a page selector and a fixed status/stat-block/review strip. Editing/search does not replace the active input. Native dialogs, keyboard tab navigation, explicit labels and reduced-motion styling are retained.
+
+## Source decisions and calculations
+
+- Individual variation (p. 318): printed Characteristic −10 + recorded 2d10; rerolls replace the previous base value. Movement is not rolled. Dice use the shared cryptographic rejection-sampling function. Save files contain imported history, not independently verified randomness.
+- Templates (pp. 353–354): one template applies to the baseline. Alternative Skill slots need distinct choices. The user approved using the higher of the printed Skill bonus and template bonus; the app explains this interpretation and the worked-example discrepancies. Explicit GM Skill totals override the result.
+- Size (pp. 360–361): each step changes S/T by 10 and Ag by −5. Five defined Wounds formulae are automated; Tiny needs a manual value. Only primary melee Damage receives the Size bonus. Printed profiles already include their bonuses.
+- Giant Spider (p. 361): Small → Large gives S35/T45/Ag25, W26, Fangs +8 and Bite +6. The user chose the general Size rule over the worked example's Fangs +5. The conflict is shown in source notes.
+- Orc (p. 337): retain printed T30/TB4. Once changing its calculations, require an explicit printed/calculated/manual Toughness Bonus decision. Other reviewed profile conflicts remain in their source notes.
+- Dragon (p. 330): the user approved linking printed **Tracking 70** to **Track** for recalculation, retaining the naming mismatch in its source note. This is a scoped spelling correction, not a Legacy conversion.
+- Venom (p. 363): the full Trait definition wins over conflicting short profile summaries. Wounds cause Poisoned; the Difficulty applies to recovery.
+- Ogre (p. 324): Belligerent, Infected and Tracker appear under a printed Trappings heading; the user approved presenting them as suggested optional Traits.
+- Trained (p. 363): Broken adds a recorded 2d10 to Fellowship, starting at zero if the printed value is absent; War adds WS10; Guard grants Territorial. Other training effects are references for play.
+- Construct substitutes SB for WP Bonus in Wounds and has absent Int/WP/Fel when newly added. Swarm gains WS10, uses five times the normal creature's Wounds and ignores chosen Size adjustments; the normal creature's underlying profile remains the baseline. Hardy adds TB before the applicable Wounds multiplier.
+- Explicit permanent Talent benefits and numeric Corruption table adjustments feed the calculated result. Other printed effects remain visible references; the GM can make an explicit score/Trait adjustment rather than the app inventing a value. Mark of Tzeentch requires a recorded count and alternating Mental/Physical choices. Corruption rolls use pp. 189–190.
+- Quick Armour replaces detailed armour; shields remain conditional. Listed natural protection remains separate. Printed optional armour is never equipped without selection. Weapon quantity records ownership, not extra attacks.
+- Source spelling/table corrections and documented Fifth Edition core ambiguities do not receive Legacy simply because the user chose an interpretation. This workshop has no older-edition imported profiles.
+
+## Engineering and future books
+
+| File | Responsibility |
+| --- | --- |
+| `dist/gm/sources/core.json` | Reviewed extraction with PDF checksum, printed page, source sections and explicit notes; source data only |
+| `dist/gm/content.mjs` | Validates and compiles source records, scoped naming corrections, profile-owned row identities and supported template choices |
+| `dist/gm/data.json` | Generated runtime catalogue; never edit directly |
+| `dist/gm/model.mjs` | Independent draft validation, genuine rolls and one calculated result with structured issues |
+| `dist/gm/views.mjs`, `controls.mjs`, `sheet.mjs` | Compact workflow, safe shared controls and stat-block presentation |
+| `dist/gm/references.mjs` | Persistent core reference search, related-reference history and hover/focus previews |
+| `dist/gm/pdf.mjs` | Full stat-block PDF using the shared result; excludes source warnings/history |
+| `dist/gm/print.mjs`, `printing.mjs` | Measured six/four-per-A4 card layout and local temporary print batch |
+| `dist/gm/app.mjs` | Boot, independent storage, undo, dialogs and events; stable text editing |
+| `dist/gm/style.css` | Responsive workshop layout using shared semantic design tokens |
+
+PC startup imports only the small shared creator-switch module; it does not fetch or execute GM content/runtime. Entering the GM page loads the generated book bundle and GM catalogue, assembling core only. GM saves have their own `wfrp-gm` type, schema, core version and generated content fingerprint; player saves, unknown profiles, malformed dice and unsupported selections are rejected. Undo restores a build while retaining recorded dice history. Local storage failure prompts file backup rather than claiming a save succeeded.
+
+The build validates the original book registry first, then compiles GM data and generates [GM-CONTENT.md](GM-CONTENT.md). GM counts are separate from player catalogue counts. The core coverage inventory records the implemented workshop and deferred Career development. Future supplements require explicit GM source records, provenance, availability/precedence decisions, handlers for new mechanics, independent draft/catalogue validation and tests; enabling a PC supplement does not automatically import its NPCs. Do not restore the old runtime or silently reuse old supplement conversions.
+
+Run `npm run generate:books` after source/compiler changes, and `npm run check:release` before committing. The recursive offline build includes both creator entry points, runtime data, PDFs, local fonts and art. Update this document, README, AGENTS and affected architecture/design/book docs in the same implementation change.
+
+## Verification
+
+Outcome tests cover every untouched profile, source mismatch rejection, Track naming, template alternatives, Size/Tiny/Orc decisions, training, Construct/Swarm/Hardy, equipment/AP, optional kit/removal, compatible magic/count limits, genuine variation, strict saves, escaped markup and compact/multipage PDFs. Table-card tests cover A4 dimensions, six/four slots, pagination, complete mechanical fields, issue blocking and oversized notes. Browser and PDF visual checks are recorded below; do not claim checks that were not performed.
+
+
+### Release checks — 7 October 2026
+
+- `npm run check:release` passed: 18 book packs, 77 application modules, generated-output/format checks, **315 tests** (including 24 GM outcome tests) and the offline inventory of 242 published files.
+- Browser verification used an isolated `?verify=1` draft at 1440×900 and 390×844. Desktop and phone had no horizontal overflow. Checked printed-profile preview/application, stable name editing, Spellcaster alternatives, equipment/AP, compatible magic, review, player/GM switching, saved-draft import/load and undo, reference ambiguity/chaining/Back, and six/four-card batch controls. Tiny's warning appeared before export; both export controls were disabled and its issue link focused the Wounds input.
+- All 53 untouched profiles passed preservation checks and six-card fit measurement. Representative mixed six-card and four-card A4 PDFs, a full Spider sheet and a multipage notes case were generated with the same export modules. Poppler renders were visually checked for spacing, legibility and clipping. Four-card body text is normally 11 pt; six-card text is normally 9.25 pt. Oversized custom entries are blocked at the 7.5 pt minimum.
+- Browser export controls produced success feedback, but the in-app browser's download observer did not return a file. Download retrieval through that observer is unverified; the actual PDF bytes were verified separately through the shared export modules. No production deployment or push was performed.

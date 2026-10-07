@@ -1,5 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { loadBookLibrary } from "../dist/books.mjs";
+import { createHash } from "node:crypto";
+import { loadBookLibrary, assembleBooks } from "../dist/books.mjs";
+import { prepareGM, gmInventory } from "../dist/gm/content.mjs";
 import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
 import {
   buildBookReport,
@@ -23,7 +25,22 @@ const next =
   countSummary(report) +
   "\n" +
   readme.slice(readme.indexOf(end));
+const gm = prepareGM(
+  JSON.parse(
+    await readFile(
+      new URL("../dist/gm/sources/core.json", import.meta.url),
+      "utf8",
+    ),
+  ),
+  assembleBooks(library),
+);
+gm.version = createHash("sha256")
+  .update(JSON.stringify(gm))
+  .digest("hex")
+  .slice(0, 16);
 const outputs = [
+  ["../dist/gm/data.json", JSON.stringify(gm) + "\n"],
+  ["../docs/GM-CONTENT.md", gmInventory(gm)],
   [
     "../dist/data/book-library.json",
     JSON.stringify({

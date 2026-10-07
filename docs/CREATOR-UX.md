@@ -53,4 +53,4 @@ The banner is shorter and has no motion or install controls. Install app sits be
 
 ## Scope boundary
 
-The workspace creates player characters only. NPC/Monster creation was removed at the user’s request on 6 October 2026. There is no creator-mode switch or NPC export path. Animal purchases record belongings without creating companions. Future tools require a new scope decision and their own usability verification.
+Player creation and the fresh core-only Bestiary Workshop have a shared creator switch, styling and responsive controls, with independent drafts and exports. The GM tool uses four pages, optional customisation tabs, immediately visible issue links and a compact stat-block export; source discrepancy notes stay in the app. Review also offers a local, temporary six/four-per-A4 print batch with copies/imports and visible fit/error feedback. Career development/XP and campaign play are excluded. PC animal purchases remain belongings without automatic companions. See [GM-WORKSHOP.md](GM-WORKSHOP.md).

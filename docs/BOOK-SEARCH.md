@@ -37,4 +37,4 @@ Outcome tests cover selected-book isolation, withdrawals, facet joins, stable id
 
 Inactive-book reference search is deferred; adding it requires explicit availability labelling and must never apply content without the corresponding book selection.
 
-Search indexes Careers, Skills, Talents, magic and equipment from the selected player-character catalogue. NPC/creature profiles, templates, Traits and Mutation tables are not published or indexed after removal of the NPC creator.
+Player search indexes Careers, Skills, Talents, magic and equipment from the selected player catalogue. The separate core-only GM workshop has a persistent reference search across core profiles, templates, Creature Traits, Corruption entries and the core player catalogue. It never indexes disabled supplements or mutates a build; related references support click/tap navigation and history. GM source-warning text is not indexed as book content. See [GM-WORKSHOP.md](GM-WORKSHOP.md).

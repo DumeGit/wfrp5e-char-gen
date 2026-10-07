@@ -1,4 +1,5 @@
 import { ledgerEmblem } from "../design-system.mjs";
+import { creatorSwitch } from "../creator-switch.mjs";
 import * as M from "../rules.mjs";
 import {
   characteristicNames,
@@ -35,6 +36,7 @@ export function createFeature(getContext) {
     } = getContext();
     return `<div class="workspace ${setupOpen ? "book-setup-workspace" : ""}">
 <aside class="rail">
+${creatorSwitch("player", typeof location !== "undefined" && new URLSearchParams(location.search).has("verify"))}
 <div class="rail-heading">
 <span class="eyebrow">Character creation</span>
 <strong>Your next chapter</strong>

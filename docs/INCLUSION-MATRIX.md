@@ -62,7 +62,8 @@ Pack `core` · version 1.1.2
 |---|---|---|---|
 | Campaign character management | deferred | Book-wide scope decision | Conditions, combat, spent resources, XP awards and ongoing Career changes remain future manager systems. |
 | Guided creation, XP, equipment and editable exports | implemented | p. 27 | Core creation is implemented; live play remains outside the creator. |
-| NPC and monster creation | deferred | p. 318–363 | Removed at the user’s request on 6 October 2026. The application supports player-character creation only; NPC profiles, templates, Traits and exports are outside current scope. |
+| NPC Career development | deferred | p. 355 | Explicitly excluded from the new GM workshop by the user. No Career selection or XP progression is applied. |
+| NPC and monster creation | implemented | p. 318–363 | Fresh core-only Bestiary Workshop: printed profiles, templates, Traits, GM edits, equipment, magic, independent drafts and compact PDF export. Career development and live play are excluded. |
 | Optional individual Advances and tracker grouping | adapted | p. 364 | The user-approved grouping awards a box after five eligible points in the same Skill/Characteristic; Appendix II does not specify tracker interaction. |
 
 <details>
@@ -624,7 +625,7 @@ Pack `deft-steps` · version 1.0.1
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
 | Campaign procedures and ongoing play | deferred | p. 15 | Ranald’s Gamble, contacts/organisations, crime/fraud, patrols/bounties, pathfinding/camping, hunting and ongoing training remain outside creation. |
-| NPC/animal profiles and hunting training | deferred | p. 34–134 | NPC creator removed at the user’s request. Animal shop entries record PC acquisition only; profiles, training and named NPC equipment are outside current scope. |
+| NPC/animal profiles and hunting training | deferred | p. 34–134 | Supplement NPC integration is deferred: the fresh GM workshop supports the Fifth Edition core only. Animal shop entries remain PC acquisitions; earlier NPC decisions are not active. |
 | Ranald aspect Miracle access | adapted | p. 13 | Four Careers retain separate printed Miracle lists with approved core Invoke/Miracle equivalents. |
 | Tool naming mismatches | implemented | p. 32 | Thin Jimmy/Steel Mummit and Telescopic Pole/Stick use paired table prices and descriptions. |
 

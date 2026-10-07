@@ -44,7 +44,7 @@ Career browsing now has search, Class/source filters and a non-mutating preview.
 
 ## Scope and Deft Steps
 
-The app supports player-character creation only. The NPC/Monster creator was removed at the user’s request on 6 October 2026, including its published profiles, development tools and exports. NPC creation and ongoing character management remain outside current scope.
+The app supports player-character creation and a fresh, separate **NPC & creature** workshop based on the supplied Fifth Edition core only. Switch creators in the desktop rail or above the mobile page selector. The GM workflow has four pages: starting profile, customisation, equipment/magic, and review/export. It preserves printed values, exposes unresolved choices early, supports independent save/load and undo, and exports a compact stat block without discrepancy notes. A temporary print batch supports six or four table cards per A4 page, with current/saved creatures, duplicate copies, readable-size fit checks and pagination. Career development and ongoing character management are excluded. The removed NPC runtime was not restored; supplements have not been imported into the new workshop. See [GM-WORKSHOP.md](docs/GM-WORKSHOP.md) and the generated [core GM inventory](docs/GM-CONTENT.md).
 
 Enable **Deft Steps, Light Fingers** for nine Careers, 32 Miracles and 15 priced tools/clothing/animals. Six optional core Career profiles appear in Career. Ranald aspects retain separate Miracle lists; Art/Stealth and Impassioned Zeal Cause use explicit choices. Purchasing an animal records a belonging, without generating a companion. Actual conversions have selective Legacy explanations. Details: [docs/DEFT-STEPS.md](docs/DEFT-STEPS.md).
 

@@ -61,4 +61,4 @@ Update this document and affected feature docs in the same change. Inspect setup
 
 ## Current product scope
 
-The shared design system serves the player-character creator and component reference. The NPC workspace and tool-mode navigation were removed on 6 October 2026; do not retain GM-only styles or controls. Future authorised features should use the same semantic tokens and accessible compact controls.
+The shared design system serves player creation, the fresh core-only GM workshop and the component reference. `creator-switch.mjs` and `.creator-switch` provide desktop/mobile navigation between independent tools. The workshop uses the same semantic colours, headings, dialogs and controls; `gm/style.css` owns only its compact profile/score/stat-block layout. Desktop folio scrolling, medium-screen flow and phone page navigation remain distinct. The removed NPC runtime/skin has not been restored. See [GM-WORKSHOP.md](GM-WORKSHOP.md).
