@@ -1,4 +1,10 @@
 /* The GM workshop owns layout; all colour and type roles come from Black Banner. */
+.masthead-art {
+  background-image:
+    linear-gradient(90deg, #08101ded, #10162b77 58%, #090d1933),
+    url(../assets/black-banner/bestiary-banner.webp);
+  background-position: center, 66% 54%;
+}
 .gm-workspace {
   align-items: start;
 }

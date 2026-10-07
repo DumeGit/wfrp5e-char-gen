@@ -8,6 +8,8 @@ Workshop status notifications clear after 4.5 seconds. They use the shared empty
 
 The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. Creature creation uses **only the supplied Fifth Edition core**. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
 
+The workshop banner uses original generated undead-army artwork inspired by the user's image, with a moonlit gothic fortress and skeleton ranks. Its compact WebP is cached offline; CSS crops it and supplies title contrast without changing shared banner height or interaction. The player creator keeps its own art. Source, generation prompt and encoding details: [design-assets/bestiary](../design-assets/bestiary/README.md).
+
 1. **Starting profile:** search/filter 53 profiles, preview the complete block, then apply it. Printed scores, absent values, Skills, attacks, Wounds and Toughness Bonus remain intact. Name, appearance, purpose, motivation and manner are optional. Changing the foundation replaces this GM build, with undo available.
 2. **Customise:** preview one of seven templates before applying it. Replacements clear template choices and selected extra magic, while retaining explicit GM edits, Traits and equipment. Required alternatives are immediately visible above three compact tabs: Characteristics; Traits; Skills & Talents. Size and derived-value overrides are explicit. Creature Traits use their full core definitions; optional profile suggestions do not grant themselves. Training, Corruption choices and recorded dice appear when relevant. Skill edits are final scores. Talents show ranks and permanent effects; situational effects stay as references.
 3. **Equipment & magic:** printed attacks/defences are included, optional kit is explicit, and core equipment can be added without a PC shopping budget. Shield AP stays conditional. Magic follows the chosen Lore or patron; Blessed/Bless permits Blessings, Miracles/Invoke permits Miracles. Spellcaster templates enforce their printed optional spell-count limits. There are no PC free spell allocations or XP prices.
@@ -96,3 +98,10 @@ Card headers omit the redundant original profile name when it already equals the
 The previous timer removed a `show` class while shared CSS displayed any nonempty notification. The workshop now clears the message text on expiry and hides its empty node. Its noninteractive notification sits 17 px above the fixed action bar in the checked 390×844 layout, accounting for the bottom safe-area inset. Browser checks applied a Griffon, clicked Review while the message was visible, then confirmed empty text/zero height after the timeout; desktop notifications also cleared. No browser warnings/errors were recorded. The isolated draft left personal storage unchanged.
 
 Release validation: npm run check:release passed with 18 packs, 85 application modules, all 328 tests and offline coverage. No new game rules or save-format changes were introduced.
+
+
+### Undead banner — 7 October 2026
+
+Generated the original 2172 × 724 artwork with the built-in imagegen tool from the user’s visual reference. Published only its full-resolution 375,188-byte WebP encoding; the original PNG and prompt stay in design-assets/bestiary outside dist. Browser checks at 1440×900 and 390×844 verified the actual loaded scene, readable title/search, no horizontal overflow and unchanged player-banner selection. No console warnings/errors were recorded. The new WebP is included in the content-versioned offline asset list. No game data, character calculations or saved formats changed.
+
+Release validation: npm run check:release passed with 18 packs, 85 application modules, all 328 tests and 254 offline assets.

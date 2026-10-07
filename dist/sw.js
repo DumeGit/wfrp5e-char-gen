@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"058ed135f0c54271e74e";
+const CACHE=CACHE_PREFIX+"cf24b90a02f06290eb93";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -7,6 +7,7 @@ const ASSETS=[
  "archives-ui.mjs",
  "assets/LICENSE-pdf-lib.md",
  "assets/black-banner/banner.png",
+ "assets/black-banner/bestiary-banner.webp",
  "assets/black-banner/w.svg",
  "assets/character-sheet.pdf",
  "assets/fonts/cinzel-OFL.txt",
