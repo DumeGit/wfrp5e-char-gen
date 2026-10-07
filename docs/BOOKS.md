@@ -37,7 +37,7 @@ For example, this is a structural template, **not a real book or invented game r
 }
 ```
 
-Registry entries are `{id, path}` relative to the registry file. Data paths are relative to their manifest and must remain inside `dist/data/`. Dependencies load before dependents; duplicates, unknown dependencies and cycles fail. Build and browser use the same loader/validator. All registered packs and their dependency contexts are checked, including disabled packs. Conflicts between independent packs are rejected when combined, rather than resolving by load order.
+Registry entries are `{id, path}` relative to the registry file. Data paths are relative to their manifest and must remain inside `dist/data/`. Dependencies load before dependents; duplicates, unknown dependencies and cycles fail. Build tooling uses the complete source loader/validator, including every installed pack and its dependency contexts. Browser startup uses the validated generated bundle and assembles/checks selected packs; standalone reference text is fetched separately on first search. Conflicts between independent packs are rejected when combined, rather than resolving by load order.
 
 ## Content and references
 
@@ -49,6 +49,7 @@ Supported file keys:
 | species | Object keyed by displayed Species name, using current core creation fields |
 | background | Object keyed by Species, with printed forenames, surnames, eyes, hair and optional clans |
 | skills | Array: name, char, advanced, grouped, options, page; optional sourced `text` description |
+| ruleReferences | Array: namespaced `id`, `name`, `category` (`rule`, `condition`, `psychology`, `property`, `trait`, `skill`), `topic`, printed `page`, nonempty source `text`, optional exact `aliases`. Skill descriptions require a canonical Skill `target`. These are read-only references, not new mechanics. |
 | talents | Array: name, text, page; optional `unavailable` explanation blocks purchase/free grants; special rules need a supported setting or handler |
 | spells | Array: name, category, text, range, target, duration, optional cn, optional distinct `specialisations`, page; expanded learnable names must stay unique. Ritual learning may declare the validated `ritual` object described below. |
 | cults | Array: name, miracles (canonical core divine spell names), text and page; reuses core effects for a supplied patron |
@@ -180,3 +181,9 @@ The Python extraction builders use `scripts/book_build.py` to preserve reviewed 
 Player manifests retain their existing categories and do not accept `creatures`, `templates`, `traits` or `mutations` files. The newly authorised core-only GM workshop has a separate reviewed source/compiler/catalogue under `dist/gm/`, generated after registry validation. Its counts are recorded separately in GM-CONTENT.md, while the core coverage inventory records the implemented workshop and deferred Career development. Supplement NPC chapters remain deferred until explicitly integrated into the new GM model; enabling a PC book does not import them. Animal shop entries remain PC acquisition-only belongings. See [GM-WORKSHOP.md](GM-WORKSHOP.md).
 
 A cult may declare `careerMiracles`, mapping registered Career IDs to distinct lists of existing Miracles. Its ordinary `miracles` list remains the fallback. Player free/paid grants and saved-purchase validation use this restriction; adding several aspects under one deity must not unlock every aspect’s Miracles.
+
+## Standalone rule references
+
+Core `rule-references.json` adds Skills and selected rule topics for global reading/search. References default to **reference-only** in the generated inventory; descriptions of combat, Conditions or prayers do not claim live automation. Identical names in different categories/pages are permitted with different namespaced identities. Do not merge a Psychology Fear rule with the Creature Trait, or impose one source by file order. Skill `target` links enrich the existing canonical Skill/specialisation rows instead of duplicating Skills. Scope and exclusions are documented in [BOOK-SEARCH.md](BOOK-SEARCH.md).
+
+`generate:books` writes full prose to `data/rule-reference-library.json`, the common all-book index to `data/search-library.json`, and keeps only validated rule-reference metadata plus `textRef: true` in the startup bundle. The common index retains each pack’s own dependency context and source variants independently of character book selections. Never write `textRef` in raw pack data, edit any generated library directly, or place internal decisions in reference text. A future supplement rule chapter needs a reviewed source record and book version bump; it does not acquire handlers or creator grants by being indexed. Regenerate all libraries, coverage/counts and the offline worker together.

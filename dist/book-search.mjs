@@ -1,4 +1,4 @@
-// Search is a read-only projection of the assembled, selected-book catalogue.
+// Read-only catalogue projection used by the build-time all-book reference index.
 import * as M from "./rules.mjs";
 import { CONTENT_ALIASES } from "./content-references.mjs";
 import { marketCatalog, formatMoney } from "./market.mjs";
@@ -16,28 +16,35 @@ export const normalizeSearch = (value) =>
     .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim();
 
-export function buildSearchIndex(R) {
+export function buildSearchIndex(
+  R,
+  { references = R.ruleReferences || [] } = {},
+) {
   const rows = [],
     seen = new Set();
   const add = (kind, entry, name = entry.name, extra = {}) => {
     const key = `${kind}:${entry.contentId}:${name}`;
     if (seen.has(key)) return;
     seen.add(key);
-    const aliases = CONTENT_ALIASES.filter(
-      (a) =>
-        a.to === name &&
-        R.books.some((b) => b.id === a.source.book) &&
-        (!a.scope || R.books.some((b) => b.id === a.scope)) &&
-        (a.kind.startsWith(kind) ||
-          (kind === "magic" && /^spells?$/.test(a.kind)) ||
-          (kind === "equipment" && a.kind.startsWith("gear"))),
-    ).map((a) => a.from);
+    const aliases = [
+      ...(entry.aliases || []),
+      ...CONTENT_ALIASES.filter(
+        (a) =>
+          a.to === name &&
+          R.books.some((b) => b.id === a.source.book) &&
+          (!a.scope || R.books.some((b) => b.id === a.scope)) &&
+          (a.kind.startsWith(kind) ||
+            (kind === "magic" && /^spells?$/.test(a.kind)) ||
+            (kind === "equipment" && a.kind.startsWith("gear"))),
+      ).map((a) => a.from),
+    ];
     const fields = [
       searchBookText(entry).text,
       entry.category,
       entry.class,
       entry.lore,
       entry.form,
+      entry.topic,
       entry.properties,
       entry.qualities,
       entry.flaws,
@@ -106,7 +113,11 @@ export function buildSearchIndex(R) {
         for (const raw of l[kind + "s"] || [])
           M.options(R, raw, kind).forEach((n) => names.add(n));
     for (const n of names) {
-      const entry = kind === "skill" ? M.skillInfo(R, n) : M.talentInfo(R, n);
+      let entry = kind === "skill" ? M.skillInfo(R, n) : M.talentInfo(R, n);
+      const description =
+        kind === "skill" &&
+        references.find((x) => x.target === entry?.contentId);
+      if (description?.text) entry = { ...entry, text: description.text };
       if (entry) add(kind, entry, n);
     }
   }
@@ -148,15 +159,39 @@ export function buildSearchIndex(R) {
         ])
         .join(" "),
     });
+  for (const entry of references)
+    if (entry.category !== "skill") add(entry.category, entry);
+  for (const [name, entry] of Object.entries(R.species))
+    if (entry?.source)
+      add("species", entry, name, {
+        keywords: [...(entry.skills || []), ...(entry.talents || [])],
+      });
+  for (const entry of R.origins || [])
+    add("species", entry, entry.name, {
+      keywords: [
+        ...(entry.skills || []),
+        ...(entry.talents || []),
+        ...(entry.languages || []),
+      ],
+    });
   return rows;
 }
 
-export function searchBooks(index, query, limit = 8) {
+export function searchBooks(
+  index,
+  query,
+  limit = 8,
+  { category = "all", offset = 0 } = {},
+) {
   const q = normalizeSearch(query);
-  if (!q) return { total: 0, rows: [] };
-  const words = q.split(" ");
+  if (!q && category === "all") return { total: 0, rows: [] };
+  const words = q ? q.split(" ") : [];
   const matches = index
-    .filter((x) => words.every((w) => x.searchable.includes(w)))
+    .filter(
+      (x) =>
+        (category === "all" || x.kind === category) &&
+        words.every((w) => x.searchable.includes(w)),
+    )
     .map((x) => ({
       ...x,
       excerpt:
@@ -186,7 +221,7 @@ export function searchBooks(index, query, limit = 8) {
         a.name.localeCompare(b.name) ||
         a.key.localeCompare(b.key),
     );
-  return { total: matches.length, rows: matches.slice(0, limit) };
+  return { total: matches.length, rows: matches.slice(offset, offset + limit) };
 }
 
 // Routes only navigate. Existing choice and quote handlers remain authoritative.

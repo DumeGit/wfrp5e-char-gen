@@ -818,7 +818,7 @@ async function boot() {
         toast(e.message);
       }
     } else persist();
-    references = createGMReferences(data, R);
+    references = createGMReferences(library);
     printing = createGMPrinting(data, R, { current: () => s, download, toast });
     render();
   } catch (e) {

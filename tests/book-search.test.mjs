@@ -145,7 +145,19 @@ test("Unified search respects selected books, withdrawals and stable profile ide
   assert.equal(new Set(all.map((x) => x.key)).size, all.length);
   assert.deepEqual(
     new Set(all.map((x) => x.kind)),
-    new Set(["career", "skill", "talent", "magic", "equipment"]),
+    new Set([
+      "career",
+      "skill",
+      "talent",
+      "magic",
+      "equipment",
+      "rule",
+      "condition",
+      "psychology",
+      "property",
+      "trait",
+      "species",
+    ]),
   );
   const dagger = all.filter(
     (x) =>
@@ -252,4 +264,199 @@ test("Unavailable references stay visible and live routes reflect Career locks a
   const broke = searchContext(R, s, strong, characterResult(R, s));
   assert.match(broke.reason, /XP/);
   assert.ok(broke.actions.some((x) => x.step === 6));
+});
+import {
+  loadRuleReferences,
+  validateRuleReference,
+} from "../dist/rule-references.mjs";
+import { ruleTextHTML, searchLabel } from "../dist/search-presentation.mjs";
+
+test("core references provide complete Skill prose and distinguish rules, Conditions, Psychology and properties", () => {
+  const before = JSON.stringify(R);
+  assert.equal(
+    R.ruleReferences.filter((x) => x.category === "skill").length,
+    R.skills.length,
+  );
+  for (const skill of R.skills) {
+    const ref = R.ruleReferences.find((x) => x.target === skill.contentId);
+    assert.ok(ref?.text.length > 60, skill.name);
+    assert.equal(find(core, skill.name, "skill").entry.text, ref.text);
+    for (const row of core.filter(
+      (x) => x.kind === "skill" && x.entry.contentId === skill.contentId,
+    ))
+      assert.equal(row.entry.text, ref.text, row.name);
+  }
+  assert.equal(core.filter((x) => x.kind === "condition").length, 13);
+  assert.equal(core.filter((x) => x.kind === "psychology").length, 5);
+  assert.equal(core.filter((x) => x.kind === "trait").length, 67);
+  assert.equal(find(core, "Bleeding", "condition").entry.source.page, 185);
+  assert.ok(
+    searchBooks(core, "lose Wound", 100, { category: "condition" }).rows.some(
+      (x) => x.name === "Bleeding",
+    ),
+  );
+  const psych = find(core, "Fear (Rating)", "psychology"),
+    trait = find(core, "Fear", "trait");
+  assert.ok(psych && trait && psych.key !== trait.key);
+  assert.equal(searchLabel(psych), "Psychology");
+  assert.equal(searchLabel(trait), "Creature Trait");
+  assert.ok(find(core, "Damaging", "property").entry.text);
+  assert.ok(find(core, "Human", "species"));
+  assert.ok(
+    searchBooks(all, "Language Arabyan", 100, {
+      category: "species",
+    }).rows.some((x) => x.name === "Tilea"),
+  );
+  assert.equal(
+    searchBooks(core, "Language Arabyan", 100, {
+      category: "species",
+    }).rows.some((x) => x.name === "Tilea"),
+    false,
+  );
+  assert.equal(JSON.stringify(R), before);
+});
+
+test("category browsing and offsets preserve ranking without duplicates or omissions", () => {
+  assert.equal(searchBooks(core, "").total, 0);
+  assert.equal(searchBooks(core, "", 100, { category: "condition" }).total, 13);
+  const complete = searchBooks(core, "test", Infinity, { category: "rule" });
+  assert.ok(complete.total > 40);
+  const keys = [];
+  for (let offset = 0; offset < complete.total; offset += 20)
+    keys.push(
+      ...searchBooks(core, "test", 20, { category: "rule", offset }).rows.map(
+        (x) => x.key,
+      ),
+    );
+  assert.deepEqual(
+    keys,
+    complete.rows.map((x) => x.key),
+  );
+  assert.equal(new Set(keys).size, keys.length);
+  assert.ok(complete.rows.every((x) => x.kind === "rule"));
+  assert.equal(
+    searchBooks(core, "unimported-word-zxy", 20, { category: "condition" })
+      .total,
+    0,
+  );
+});
+
+test("source tables retain Fifth Edition numbers and optional individual advances without creator conventions", () => {
+  const enc = find(core, "Encumbrance", "rule");
+  assert.match(enc.entry.text, /200 coins/);
+  assert.doesNotMatch(enc.searchable, /ignore coin|automatically pack/);
+  assert.match(
+    find(core, "Advancement XP Costs", "rule").entry.text,
+    /\| \+45 \| 1800 \| 6150 \| 850 \| 3325 \|/,
+  );
+  const optional = searchBooks(core, "Individual Skill Advances").rows[0];
+  assert.equal(optional.entry.source.page, 364);
+  assert.match(optional.entry.text, /multiple of 5/);
+  assert.match(optional.entry.text, /\| 41 to 45 \| 360 \| 170 \|/);
+  assert.match(
+    ruleTextHTML(find(core, "Combat Modifiers", "rule").entry.text),
+    /<table>/,
+  );
+  assert.match(
+    find(core, "Weapon Range", "rule").entry.text,
+    /Extreme \| Range × 3/,
+  );
+  assert.equal(
+    searchBooks(core, "Trained GM permission", 100).rows.some(
+      (x) => x.kind === "trait",
+    ),
+    false,
+  );
+});
+
+test("reference rendering escapes source text and table cells", () => {
+  const text =
+    "### <script>alert(1)</script>\n\n| Name | Rule |\n| --- | --- |\n| <img onerror=x> | & value |\n\n• <b>text</b>";
+  const html = ruleTextHTML(text);
+  assert.ok(
+    html.includes("<table>") && html.includes("<h3>") && html.includes("<ul>"),
+  );
+  assert.doesNotMatch(html, /<script>|<img|<b>/);
+  assert.match(html, /&lt;img onerror=x&gt;/);
+});
+
+test("lazy references hydrate only selected identities and reject stale or malformed content", async () => {
+  const metadata = structuredClone(R);
+  const records = metadata.ruleReferences.map(
+    ({ source, contentId, bookVersion, ...entry }) => entry,
+  );
+  metadata.ruleReferences = metadata.ruleReferences.map(
+    ({ text, ...entry }) => ({ ...entry, textRef: true }),
+  );
+  const payload = {
+    schemaVersion: 1,
+    books: [
+      {
+        id: "core",
+        version: R.books.find((x) => x.id === "core").version,
+        records,
+      },
+      { id: "inactive", version: "1.0", records: [] },
+    ],
+  };
+  const before = JSON.stringify(metadata);
+  assert.deepEqual(
+    await loadRuleReferences(metadata, () => payload),
+    R.ruleReferences,
+  );
+  assert.equal(JSON.stringify(metadata), before);
+  const stale = structuredClone(payload);
+  stale.books[0].version = "old";
+  await assert.rejects(
+    loadRuleReferences(metadata, () => stale),
+    /out of date/,
+  );
+  const missing = structuredClone(payload);
+  missing.books[0].records = [];
+  await assert.rejects(
+    loadRuleReferences(metadata, () => missing),
+    /out of date/,
+  );
+  const malformed = structuredClone(payload);
+  malformed.books[0].records = null;
+  await assert.rejects(
+    loadRuleReferences(metadata, () => malformed),
+    /out of date/,
+  );
+  const changed = structuredClone(payload);
+  changed.books[0].records[0].page = 99;
+  await assert.rejects(
+    loadRuleReferences(metadata, () => changed),
+    /identity/,
+  );
+  await assert.rejects(
+    loadRuleReferences(metadata, () => ({ schemaVersion: 99, books: [] })),
+    /Unsupported/,
+  );
+  await assert.rejects(
+    loadRuleReferences(metadata, () =>
+      Promise.reject(Error("temporary network failure")),
+    ),
+    /network failure/,
+  );
+  assert.deepEqual(
+    await loadRuleReferences(metadata, () => payload),
+    R.ruleReferences,
+  );
+  assert.throws(
+    () => validateRuleReference({ ...records[0], text: "" }, { source: true }),
+    /Invalid/,
+  );
+  assert.throws(
+    () => validateRuleReference({ ...records[0], name: 1 }, { source: true }),
+    /Invalid/,
+  );
+  assert.throws(
+    () =>
+      validateRuleReference(
+        { ...records.find((x) => x.category === "skill"), target: undefined },
+        { source: true },
+      ),
+    /Invalid/,
+  );
 });

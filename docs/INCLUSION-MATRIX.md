@@ -19,7 +19,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 1 | 0 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 435 | 0 | 0 |
 | Up in Arms | 135 | 12 | 0 | 1 | 0 |
 | Archives of the Empire: Volume I | 31 | 22 | 0 | 0 | 0 |
 | Archives of the Empire: Volume II | 50 | 7 | 0 | 0 | 0 |
@@ -42,7 +42,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.2
+Pack `core` · version 1.1.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -51,6 +51,7 @@ Pack `core` · version 1.1.2
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
+| ruleReferences | 0 | 0 | 434 | 0 | 0 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
 | spells | 225 | 0 | 0 | 0 | 0 |
@@ -64,6 +65,7 @@ Pack `core` · version 1.1.2
 | Guided creation, XP, equipment and editable exports | implemented | p. 27 | Core creation is implemented; live play remains outside the creator. |
 | NPC Career development | deferred | p. 355 | Explicitly excluded from the new GM workshop by the user. No Career selection or XP progression is applied. |
 | NPC and monster creation | implemented | p. 318–363 | Fresh core-only Bestiary Workshop: printed profiles, templates, Traits, GM edits, equipment, magic, independent drafts and compact PDF export. Career development and live play are excluded. |
+| Core rule reference search | reference-only | p. 109–364 | Core Skills, Tests, combat, health, Conditions, Psychology, advancement, prayers, magic, equipment rules/properties and Creature Traits are readable references. This does not automate live play or import every book chapter. |
 | Optional individual Advances and tracker grouping | adapted | p. 364 | The user-approved grouping awards a box after five eligible points in the same Skill/Characteristic; Appendix II does not specify tracker interaction. |
 
 <details>
@@ -72,6 +74,440 @@ Pack `core` · version 1.1.2
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
 | `core:gear:jewellery` — Jewellery | gear | reference-only | p. 308 | No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price. |
+| `core:rule-reference:condition-185-ablaze` — Ablaze | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-185-besmirched` — Besmirched | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-185-bleeding` — Bleeding | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-185-blinded` — Blinded | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-185-broken` — Broken | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-186-deafened` — Deafened | ruleReferences | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-186-entangled` — Entangled | ruleReferences | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-186-fatigued` — Fatigued | ruleReferences | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-186-poisoned` — Poisoned | ruleReferences | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-186-prone` — Prone | ruleReferences | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-186-stunned` — Stunned | ruleReferences | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-187-surprised` — Surprised | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:condition-187-unconscious` — Unconscious | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-298-durable` — Durable | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-298-fine` — Fine | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-298-lightweight` — Lightweight | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-298-practical` — Practical | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-299-bulky` — Bulky | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-299-shoddy` — Shoddy | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-299-ugly` — Ugly | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-299-unreliable` — Unreliable | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-blackpowder` — Blackpowder | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-blast-rating` — Blast (Rating) | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-damaging` — Damaging | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-defensive` — Defensive | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-fast` — Fast | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-hack` — Hack | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-impale` — Impale | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-inflict-condition` — Inflict (Condition) | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-magical` — Magical | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-304-parry` — Parry | ruleReferences | reference-only | p. 304 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-dangerous` — Dangerous | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-imprecise` — Imprecise | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-penetrating` — Penetrating | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-pistol` — Pistol | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-precise` — Precise | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-pummel` — Pummel | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-reload-rating` — Reload (Rating) | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-repeater-rating` — Repeater (Rating) | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-trap-blade` — Trap Blade | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-unbalanced` — Unbalanced | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-unbreakable` — Unbreakable | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-undamaging` — Undamaging | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-305-wrap` — Wrap | ruleReferences | reference-only | p. 305 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-306-flexible` — Flexible | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-306-impenetrable` — Impenetrable | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-306-partial` — Partial | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-306-shield` — Shield | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:property-306-weakpoints` — Weakpoints | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:psychology-183-animosity-target` — Animosity (Target) | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:psychology-183-fear-rating` — Fear (Rating) | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:psychology-184-frenzy` — Frenzy | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:psychology-184-hatred-target` — Hatred (Target) | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:psychology-184-terror-rating` — Terror (Rating) | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-advantage-and-disadvantage` — Advantage and Disadvantage | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-automatic-success-and-failure` — Automatic Success and Failure | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-criticals-and-fumbles` — Criticals and Fumbles | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-darkness-and-tests` — Darkness and Tests | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-making-a-test` — Making a Test | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-modifiers-and-0-sl` — Modifiers and 0 SL | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-repeating-tests` — Repeating Tests | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-131-characteristic-tests` — Characteristic Tests | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-131-difficulty-and-character-modifiers` — Difficulty and Character Modifiers | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-131-extended-tests` — Extended Tests | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-131-opposed-tests` — Opposed Tests | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-131-test-outcomes` — Test Outcomes | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-132-criticals-and-fumbles` — Criticals and Fumbles | ruleReferences | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-132-getting-help` — Getting Help | ruleReferences | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-132-opposed-tests` — Opposed Tests | ruleReferences | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-133-achieving-the-impossible` — Achieving the Impossible | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-133-fate` — Fate | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-133-fate-and-fortune` — Fate and Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-133-replenishing-fate` — Replenishing Fate | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-133-replenishing-fortune` — Replenishing Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-134-casing-the-joint` — Casing the Joint | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-134-keeping-an-eye-out` — Keeping an Eye Out | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-134-sneaking-around` — Sneaking Around | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-134-stealth-and-surveillance` — Stealth and Surveillance | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-135-gambling-and-cheating` — Gambling and Cheating | ruleReferences | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-135-silent-takedowns` — Silent Takedowns | ruleReferences | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-breaking-and-entering` — Breaking and Entering | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-disarming-a-trap` — Disarming a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-picking-locks` — Picking Locks | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-setting-a-trap` — Setting a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-spotting-a-trap` — Spotting a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-traps` — Traps | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-136-triggering-a-trap` — Triggering a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-138-forced-entry` — Forced Entry | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-138-mugging` — Mugging | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-138-picking-pockets` — Picking Pockets | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-138-secret-signs` — Secret Signs | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-139-fraud-and-charlatanry` — Fraud and Charlatanry | ruleReferences | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-140-status-and-social-standing` — Status and Social Standing | ruleReferences | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-141-changing-status` — Changing Status | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-141-maintaining-status` — Maintaining Status | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-141-status-and-social-tests` — Status and Social Tests | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-142-befriend-someone-useful` — Befriend Someone Useful | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-142-make-a-good-impression` — Make a Good Impression | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-143-charming-others` — Charming Others | ruleReferences | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-143-intimidation-tactics` — Intimidation Tactics | ruleReferences | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-143-negotiating-a-discount` — Negotiating a Discount | ruleReferences | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-144-carousing` — Carousing | ruleReferences | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-144-gossip-and-rumours` — Gossip and Rumours | ruleReferences | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-145-lies-and-deception` — Lies and Deception | ruleReferences | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-145-mistaken-identity` — Mistaken Identity | ruleReferences | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-145-public-speaking` — Public Speaking | ruleReferences | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-148-what-you-already-know` — What You Already Know | ruleReferences | reference-only | p. 148 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-150-asking-around` — Asking Around | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-150-gossip` — Gossip | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-150-interrogation` — Interrogation | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-150-investigating` — Investigating | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-150-research` — Research | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-150-searching-a-room` — Searching a Room | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-151-intuition-and-insights` — Intuition and Insights | ruleReferences | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-151-tracking` — Tracking | ruleReferences | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-152-camping` — Camping | ruleReferences | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-152-foraging` — Foraging | ruleReferences | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-152-navigation` — Navigation | ruleReferences | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-153-locating-ingredients` — Locating Ingredients | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-153-making-medicine` — Making Medicine | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-153-repairing-armour` — Repairing Armour | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-153-repairing-weapons` — Repairing Weapons | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-154-alchemical-remedies` — Alchemical Remedies | ruleReferences | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-154-concocting-poison` — Concocting Poison | ruleReferences | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-154-herbal-remedies` — Herbal Remedies | ruleReferences | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-156-climbing` — Climbing | ruleReferences | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-156-leaping` — Leaping | ruleReferences | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-157-jumping-down` — Jumping Down | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-157-riding-a-mount` — Riding a Mount | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-157-swimming` — Swimming | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-157-vehicle-movement` — Vehicle Movement | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-158-drive` — Drive | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-158-pursuit-circumstances` — Pursuit Circumstances | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-158-pursuits` — Pursuits | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-158-row` — Row | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-158-sail` — Sail | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-159-concluding-the-chase` — Concluding the Chase | ruleReferences | reference-only | p. 159 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-159-obstacles` — Obstacles | ruleReferences | reference-only | p. 159 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-161-combat-initiative-order` — Combat Initiative Order | ruleReferences | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-161-surprise` — Surprise | ruleReferences | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-161-timing` — Timing | ruleReferences | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-162-action` — Action | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-162-free-actions` — Free Actions | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-162-move` — Move | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-162-on-the-defensive` — On the Defensive | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-162-taking-your-turn` — Taking Your Turn | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-163-charging` — Charging | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-163-disengaging` — Disengaging | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-163-engaged` — Engaged | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-163-fleeing` — Fleeing | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-163-moving-in-combat` — Moving in Combat | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-163-running` — Running | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-164-1-roll-to-hit` — 1: Roll to Hit | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-164-2-determine-hit-location` — 2: Determine Hit Location | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-164-3-determine-damage` — 3: Determine Damage | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-164-4-apply-damage` — 4: Apply Damage | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-164-damaged-armour` — Damaged Armour | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-164-damaged-weapons` — Damaged Weapons | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-165-critical-hits` — Critical Hits | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-165-fumbles` — Fumbles | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-165-misfires` — Misfires! | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-165-oops-table` — Oops! Table | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-165-opposed-tests-and-fumbles` — Opposed Tests and Fumbles | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-165-ranged-combat` — Ranged Combat | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-166-combat-modifiers` — Combat Modifiers | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-166-melee-weapon-group-special-rules` — Melee Weapon Group Special Rules | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-166-melee-weapon-reach` — Melee Weapon Reach | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-166-weapon-groups` — Weapon Groups | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-aimed-shots` — Aimed Shots | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-called-shots` — Called Shots | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-grappling` — Grappling | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-helpless-targets` — Helpless Targets | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-outnumbering` — Outnumbering | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-shooting-into-a-group` — Shooting into a Group | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-shooting-into-melee` — Shooting into Melee | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-surrounded` — Surrounded | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-two-weapon-fighting` — Two-weapon Fighting | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-unarmed-combat` — Unarmed Combat | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-167-undamaging-and-unarmed-attacks` — Undamaging and Unarmed Attacks | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-168-gaining-momentum` — Gaining Momentum | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-168-losing-momentum` — Losing Momentum | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-168-momentum` — Momentum | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-168-momentum-and-extra-attacks` — Momentum and Extra Attacks | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-168-mounted-combat` — Mounted Combat | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-168-scatter` — Scatter | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-169-drowning-and-suffocation` — Drowning and Suffocation | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-169-falling` — Falling | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-169-intimidate-in-combat` — Intimidate in Combat | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-169-leadership-in-combat` — Leadership in Combat | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-170-exposure` — Exposure | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-170-healing-wounds` — Healing Wounds | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-170-thirst-and-starvation` — Thirst and Starvation | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-170-using-the-heal-skill` — Using the Heal Skill | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-170-wounds` — Wounds | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-171-critical-wounds` — Critical Wounds | ruleReferences | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-171-magic-alchemy-and-healing` — Magic, Alchemy, and Healing | ruleReferences | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-172-death` — Death | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-172-healing-critical-wounds` — Healing Critical Wounds | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-172-medical-attention` — Medical Attention | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-172-surgery` — Surgery | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-176-broken-bones` — Broken Bones | ruleReferences | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-177-amputated-parts` — Amputated Parts | ruleReferences | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-177-torn-muscles` — Torn Muscles | ruleReferences | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-arm` — Arm | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-ear` — Ear | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-eye` — Eye | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-fingers` — Fingers | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-foot` — Foot | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-hand` — Hand | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-leg` — Leg | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-nose` — Nose | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-178-teeth` — Teeth | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-179-black-plague` — Black Plague | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-179-blood-rot` — Blood Rot | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-179-disease-and-infection` — Disease and Infection | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-179-disease-format` — Disease Format | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-179-toes` — Toes | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-179-tongue` — Tongue | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-180-bloody-flux` — Bloody Flux | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-180-festering-wound` — Festering Wound | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-180-galloping-trots` — Galloping Trots | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-180-itching-pox` — Itching Pox | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-180-packer-s-pox` — Packer’s Pox | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-180-ratte-fever` — Ratte Fever | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-blight` — Blight | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-buboes` — Buboes | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-convulsions` — Convulsions | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-coughs-and-sneezes` — Coughs and Sneezes | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-fever` — Fever | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-flux` — Flux | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-sea-sickness` — Sea Sickness | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-181-weevil-cough` — Weevil Cough | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-cures-and-tonics` — Cures and Tonics | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-gangrene` — Gangrene | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-infection` — Infection | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-malaise` — Malaise | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-nausea` — Nausea | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-pox` — Pox | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-182-treatment-of-disease` — Treatment of Disease | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-183-dosage` — Dosage | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-183-poisons` — Poisons | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-183-psychology-test` — Psychology Test | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-184-conditions` — Conditions | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-187-gaining-corruption-points` — Gaining Corruption Points | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-187-minor-corruption` — Minor Corruption | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-187-moderate-corruption` — Moderate Corruption | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-188-corrupting` — Corrupting | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-188-corruption-limits` — Corruption Limits | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-188-dissolution-of-body-and-mind` — Dissolution of Body and Mind | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-188-major-corruption` — Major Corruption | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-188-manifestation-time` — Manifestation Time | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-191-advancement-xp-costs` — Advancement XP Costs | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-191-advancing-careers` — Advancing Careers | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-191-characteristic-advances` — Characteristic Advances | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-191-purchasing-talents` — Purchasing Talents | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-191-skill-advances` — Skill Advances | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-191-spending-xp` — Spending XP | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-217-blessings-and-miracles` — Blessings and Miracles | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-217-limitations` — Limitations | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-217-sin-points` — Sin Points | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-217-the-blessed` — The Blessed | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-218-sin-and-wrath` — Sin and Wrath | ruleReferences | reference-only | p. 218 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-218-wrath-of-the-gods` — Wrath of the Gods | ruleReferences | reference-only | p. 218 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-219-absolution` — Absolution | ruleReferences | reference-only | p. 219 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-219-penance` — Penance | ruleReferences | reference-only | p. 219 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-casting-test` — Casting Test | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-critical-casting` — Critical Casting | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-duration` — Duration | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-fumbled-casting` — Fumbled Casting | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-ingredients` — Ingredients | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-magic-missiles` — Magic Missiles | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-spellcasting-limitations` — Spellcasting Limitations | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-235-touch-spells-in-combat` — Touch Spells in Combat | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-236-channelling` — Channelling | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-236-critical-and-fumbled-channelling` — Critical and Fumbled Channelling | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-236-overcasting` — Overcasting | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-236-second-sight` — Second Sight | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-armour-repels-the-winds` — Armour Repels the Winds | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-dispelling` — Dispelling | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-dispelling-persistent-spells` — Dispelling Persistent Spells | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-grimoires` — Grimoires | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-malignant-influences` — Malignant Influences | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-memorising-spells` — Memorising Spells | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-multiple-arcane-lores` — Multiple Arcane Lores | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-237-using-warpstone` — Using Warpstone | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-296-coin-and-status` — Coin and Status | ruleReferences | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-296-money` — Money | ruleReferences | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-297-availability` — Availability | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-297-clipping` — Clipping | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-297-counterfeiting` — Counterfeiting | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-297-going-to-market` — Going to Market | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-298-bargaining-and-trading` — Bargaining and Trading | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-298-bartering` — Bartering | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-298-craftsmanship` — Craftsmanship | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-298-item-qualities` — Item Qualities | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-298-lowering-the-price` — Lowering the Price | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-298-selling` — Selling | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-beasts-of-burden` — Beasts of Burden | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-encumbrance` — Encumbrance | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-encumbrance-and-attributes` — Encumbrance and Attributes | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-encumbrance-and-travel-fatigue` — Encumbrance and Travel Fatigue | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-item-flaws` — Item Flaws | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-overburdened` — Overburdened | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-oversized-items` — Oversized Items | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-small-items` — Small Items | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-299-worn-items` — Worn Items | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-300-cavalry` — Cavalry | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-300-fencing` — Fencing | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-300-flail` — Flail | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-300-melee-weapon-groups` — Melee Weapon Groups | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-300-weapon-reach` — Weapon Reach | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-300-weapon-reach-and-defence` — Weapon Reach and Defence | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-302-blackpowder-and-explosives` — Blackpowder and Explosives | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-302-crossbows-and-throwing` — Crossbows and Throwing | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-302-engineering` — Engineering | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-302-ranged-weapon-groups` — Ranged Weapon Groups | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-302-weapon-range` — Weapon Range | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-306-armour` — Armour | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-306-armour-and-size` — Armour and Size | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-318-creatures-and-equipment` — Creatures and Equipment | ruleReferences | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-318-customising-creatures` — Customising Creatures | ruleReferences | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-364-individual-characteristic-advances` — Individual Characteristic Advances | ruleReferences | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-animal-care` — Animal Care | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-animal-training` — Animal Training | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-art` — Art | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-athletics` — Athletics | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-bribery` — Bribery | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-channelling` — Channelling | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-charm` — Charm | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-charm-animal` — Charm Animal | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-climb` — Climb | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-consume-alcohol` — Consume Alcohol | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-cool` — Cool | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-dodge` — Dodge | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-drive` — Drive | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-endurance` — Endurance | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-entertain` — Entertain | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-111-evaluate` — Evaluate | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-gamble` — Gamble | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-gossip` — Gossip | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-haggle` — Haggle | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-heal` — Heal | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-intimidate` — Intimidate | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-intuition` — Intuition | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-language` — Language | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-leadership` — Leadership | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-lore` — Lore | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-melee` — Melee | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-navigation` — Navigation | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-112-outdoor-survival` — Outdoor Survival | ruleReferences | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-perception` — Perception | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-perform` — Perform | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-pick-lock` — Pick Lock | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-play` — Play | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-pray` — Pray | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-ranged` — Ranged | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-research` — Research | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-ride` — Ride | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-row` — Row | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-113-sail` — Sail | ruleReferences | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-secret-signs` — Secret Signs | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-set-trap` — Set Trap | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-sleight-of-hand` — Sleight of Hand | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-stealth` — Stealth | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-swim` — Swim | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-track` — Track | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:skill-114-trade` — Trade | ruleReferences | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-afraid` — Afraid | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-amphibious` — Amphibious | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-animosity` — Animosity | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-belligerent` — Belligerent | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-bestial` — Bestial | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-bite` — Bite | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-356-blessed` — Blessed | ruleReferences | reference-only | p. 356 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-bounce` — Bounce | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-breath` — Breath | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-champion` — Champion | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-chill-grasp` — Chill Grasp | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-cold-blooded` — Cold-blooded | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-constrictor` — Constrictor | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-construct` — Construct | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-corrosive-blood` — Corrosive Blood | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-corruption` — Corruption | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-daemonic` — Daemonic | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-357-dark-vision` — Dark Vision | ruleReferences | reference-only | p. 357 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-disease` — Disease | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-distracting` — Distracting | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-ethereal` — Ethereal | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-fear` — Fear | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-fly` — Fly | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-frenzy` — Frenzy | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-ghostly-howl` — Ghostly Howl | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-grim` — Grim | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-hatred` — Hatred | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-horns` — Horns | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-hungry` — Hungry | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-immune-to-psychology` — Immune to Psychology | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-358-immunity` — Immunity | ruleReferences | reference-only | p. 358 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-infected` — Infected | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-infestation` — Infestation | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-magic-resistance` — Magic Resistance | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-magical` — Magical | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-many-heads` — Many Heads | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-mark-of-chaos` — Mark of Chaos | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-mental-corruption` — Mental Corruption | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-359-miracles` — Miracles | ruleReferences | reference-only | p. 359 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-360-mutation` — Mutation | ruleReferences | reference-only | p. 360 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-360-night-vision` — Night Vision | ruleReferences | reference-only | p. 360 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-360-painless` — Painless | ruleReferences | reference-only | p. 360 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-360-petrifying-gaze` — Petrifying Gaze | ruleReferences | reference-only | p. 360 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-360-regeneration` — Regeneration | ruleReferences | reference-only | p. 360 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-360-size` — Size | ruleReferences | reference-only | p. 360 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-361-skittish` — Skittish | ruleReferences | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-361-spellcaster` — Spellcaster | ruleReferences | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-361-sprinter` — Sprinter | ruleReferences | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-361-stealthy` — Stealthy | ruleReferences | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-361-striding-gait` — Striding Gait | ruleReferences | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-stupid` — Stupid | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-swarm` — Swarm | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-tail` — Tail | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-tentacles` — Tentacles | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-territorial` — Territorial | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-terror` — Terror | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-362-tongue` — Tongue | ruleReferences | reference-only | p. 362 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-tracker` — Tracker | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-trained` — Trained | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-undead` — Undead | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-unstable` — Unstable | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-vampiric` — Vampiric | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-venom` — Venom | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-vomit` — Vomit | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-wallcrawler` — Wallcrawler | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-ward` — Ward | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:trait-363-web` — Web | ruleReferences | reference-only | p. 363 | Sourced book rule reference; no live-play automation. |
 
 </details>
 

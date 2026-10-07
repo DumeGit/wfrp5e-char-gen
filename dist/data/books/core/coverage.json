@@ -58,6 +58,16 @@
         "page": 355
       },
       "reason": "Explicitly excluded from the new GM workshop by the user. No Career selection or XP progression is applied."
+    },
+    {
+      "id": "core:feature:rule-reference-search",
+      "name": "Core rule reference search",
+      "status": "reference-only",
+      "source": {
+        "book": "core",
+        "page": "109–364"
+      },
+      "reason": "Core Skills, Tests, combat, health, Conditions, Psychology, advancement, prayers, magic, equipment rules/properties and Creature Traits are readable references. This does not automate live play or import every book chapter."
     }
   ]
 }

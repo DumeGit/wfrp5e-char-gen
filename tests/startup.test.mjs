@@ -10,6 +10,7 @@ import {
 } from "../dist/books.mjs";
 import { buildSearchIndex } from "../dist/book-search.mjs";
 import { characterResult } from "../dist/character-result.mjs";
+import { loadRuleReferences } from "../dist/rule-references.mjs";
 
 const bundle = JSON.parse(
   await readFile(
@@ -19,6 +20,25 @@ const bundle = JSON.parse(
 );
 const loaded = await loadBookBundle(() => structuredClone(bundle));
 const readBundle = (value) => loadBookBundle(() => value);
+const referenceLibrary = JSON.parse(
+  await readFile(
+    new URL("../dist/data/rule-reference-library.json", import.meta.url),
+    "utf8",
+  ),
+);
+const thin = (value) => {
+  const copy = structuredClone(value);
+  for (const pack of copy.packs)
+    if (pack.data.ruleReferences)
+      pack.data.ruleReferences = pack.data.ruleReferences.map(
+        ({ text, ...entry }) => ({ ...entry, textRef: true }),
+      );
+  return copy;
+};
+const hydrate = async (catalogue) => ({
+  ...catalogue,
+  ruleReferences: await loadRuleReferences(catalogue, () => referenceLibrary),
+});
 
 test("startup uses one request and preserves the fully validated source library", async () => {
   const requests = [];
@@ -28,10 +48,15 @@ test("startup uses one request and preserves the fully validated source library"
   });
   assert.equal(requests.length, 1);
   assert.match(requests[0], /\/data\/book-library\.json$/);
-  assert.deepEqual(result, library);
+  assert.deepEqual(result, thin(library));
+  assert.ok(
+    result.packs[0].data.ruleReferences.every(
+      (x) => x.textRef === true && x.text === undefined,
+    ),
+  );
 });
 
-test("bundled core and combined books produce identical rules and search results", () => {
+test("bundled core and combined books produce identical rules and hydrated search results", async () => {
   for (const selection of [
     [library.core],
     library.packs
@@ -39,18 +64,18 @@ test("bundled core and combined books produce identical rules and search results
       .map((pack) => pack.manifest.id),
   ]) {
     const source = assembleBooks(library, selection);
-    const runtime = assembleBooks(loaded, selection);
+    const runtime = await hydrate(assembleBooks(loaded, selection));
     assert.deepEqual(runtime, source);
     assert.deepEqual(buildSearchIndex(runtime), buildSearchIndex(source));
   }
 });
 
-test("bundle preserves explicit Career variants", () => {
+test("bundle preserves explicit Career variants", async () => {
   for (const pack of library.packs.filter(
     (p) => p.manifest.kind === "variant",
   )) {
     assert.deepEqual(
-      assembleBooks(loaded, [pack.manifest.id]),
+      await hydrate(assembleBooks(loaded, [pack.manifest.id])),
       assembleBooks(library, [pack.manifest.id]),
     );
   }

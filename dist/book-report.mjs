@@ -17,7 +17,11 @@ export function buildBookReport(library) {
         const status = entry.unavailable
           ? "unavailable"
           : override?.status ||
-            (isLegacy(R, entry) ? "adapted" : "implemented");
+            (entry.contentKind === "ruleReferences"
+              ? "reference-only"
+              : isLegacy(R, entry)
+                ? "adapted"
+                : "implemented");
         return {
           contentId: entry.contentId,
           kind: entry.contentKind,
@@ -28,7 +32,9 @@ export function buildBookReport(library) {
             entry.unavailable ||
             override?.reason ||
             entry.adaptation ||
-            "Creator profile/choice is supported; situational play effects remain reference text.",
+            (entry.contentKind === "ruleReferences"
+              ? "Sourced book rule reference; no live-play automation."
+              : "Creator profile/choice is supported; situational play effects remain reference text."),
         };
       })
       .sort(

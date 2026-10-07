@@ -4,7 +4,7 @@ This is the fresh NPC & creature creator authorised in October 2026. It shares t
 
 ## Workflow
 
-The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. The workshop searches **only the supplied Fifth Edition core**, regardless of the player's selected supplements.
+The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. Creature creation uses **only the supplied Fifth Edition core**. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
 
 1. **Starting profile:** search/filter 53 profiles, preview the complete block, then apply it. Printed scores, absent values, Skills, attacks, Wounds and Toughness Bonus remain intact. Name, appearance, purpose, motivation and manner are optional. Changing the foundation replaces this GM build, with undo available.
 2. **Customise:** preview one of seven templates before applying it. Replacements clear template choices and selected extra magic, while retaining explicit GM edits, Traits and equipment. Required alternatives are immediately visible above three compact tabs: Characteristics; Traits; Skills & Talents. Size and derived-value overrides are explicit. Creature Traits use their full core definitions; optional profile suggestions do not grant themselves. Training, Corruption choices and recorded dice appear when relevant. Skill edits are final scores. Talents show ranks and permanent effects; situational effects stay as references.
@@ -42,7 +42,7 @@ Six cards per page is the default each time the print dialog opens. Four cards i
 | `dist/gm/data.json` | Generated runtime catalogue; never edit directly |
 | `dist/gm/model.mjs` | Independent draft validation, genuine rolls and one calculated result with structured issues |
 | `dist/gm/views.mjs`, `controls.mjs`, `sheet.mjs` | Compact workflow, safe shared controls and stat-block presentation |
-| `dist/gm/references.mjs` | Persistent core reference search, related-reference history and hover/focus previews |
+| `dist/gm/references.mjs` | Thin adapter for the shared all-book reference reader |
 | `dist/gm/pdf.mjs` | Full stat-block PDF using the shared result; excludes source warnings/history |
 | `dist/gm/pdf-text.mjs` | Shared mixed-weight text wrapping and drawing using exact font measurements |
 | `dist/gm/print.mjs`, `printing.mjs` | Measured six/four-per-A4 card layout and local temporary print batch |
@@ -72,3 +72,7 @@ Outcome tests cover every untouched profile, source mismatch rejection, Track na
 - Poppler renders of mixed six-card and four-card pages, a full Dragon sheet and a full caster/Corruption/personality sheet were visually checked after the typography change. Labels are distinct and no clipping or overlap was found. The representative cards retained 9.25 pt (six) and 11 pt (four) body text.
 - A mixed-weight wrapping regression checks that long unbroken names and paragraphs retain their content and remain within the measured width at 7.5, 9.25 and 11 pt. The existing all-profile fit, overflow blocking and multipage tests remain required. No browser controls changed in this follow-up.
 - `npm run check:release` passed: 18 packs, 78 application modules, generated/format checks, **316 tests** (25 GM tests) and an offline inventory of 243 published files. The default-layout regression also verifies six cards without an explicit layout argument.
+
+### Shared rule search — 7 October 2026
+
+GM references use the same all-book index, reader, category controls and source/Legacy dialogs as PC search. Imported supplement choices remain readable even though creature creation is core-only. Search includes core rules, full Skill descriptions, Conditions, Psychology, equipment properties, Creature Traits, Species and catalogue options, plus reviewed core creature profiles, templates and Corruption. Full text loads on first search from the versioned common asset. Desktop uses the dropdown; phones use the full-screen panel and native category selector. Infinite batches, Load more, linked references and Back preserve the list/query/category without changing the GM build. This does not add live-play management, XP/Career development or supplement creatures. Source warning notes stay outside search matching and PDF sheets.

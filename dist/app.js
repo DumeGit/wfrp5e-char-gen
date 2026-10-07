@@ -646,7 +646,7 @@ $("#app").addEventListener("change", async (e) => {
     toast(err.message);
   }
 });
-const bannerSearch = createBookSearch(getContext, setContext);
+const bannerSearch = createBookSearch(getContext);
 render();
 if (restoreIssue) toast(`Draft could not be restored: ${restoreIssue}`);
 if (document.modelContext?.registerTool) {

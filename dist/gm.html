@@ -55,14 +55,16 @@
             <span class="banner-search-icon" aria-hidden="true">⌕</span
             ><input
               id="book-search"
+              disabled
+              aria-busy="true"
               type="search"
               role="combobox"
-              aria-label="Search the core book"
+              aria-label="Search the books"
               aria-autocomplete="list"
               aria-expanded="false"
               aria-controls="book-search-results"
               autocomplete="off"
-              placeholder="Search core profiles, Traits, Skills, magic and equipment…"
+              placeholder="Search rules, Careers, magic, creatures and more…"
             /><button
               id="book-search-clear"
               type="button"
@@ -79,15 +81,14 @@
               aria-label="Matching rules"
             ></div>
             <p id="book-search-empty" hidden>
-              No matches. Try a shorter name or another word. Only the core book
-              is searched.
+              No matches. Try a shorter name or another word.
             </p>
             <button id="book-search-more" type="button" hidden>
               Show more matches
             </button>
           </div>
         </div>
-        <span class="banner-caption">CORE BOOK REFERENCES</span>
+        <span class="banner-caption">ALL BOOK REFERENCES</span>
       </div>
     </header>
     <div id="app"></div>

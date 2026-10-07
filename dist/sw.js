@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"d630362f5a202f9fcd96";
+const CACHE=CACHE_PREFIX+"08f01864574d62bb3d5e";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -80,6 +80,7 @@ const ASSETS=[
  "data/books/core/coverage.json",
  "data/books/core/manifest.json",
  "data/books/core/market.json",
+ "data/books/core/rule-references.json",
  "data/books/core/tables.json",
  "data/books/core/weapons.json",
  "data/books/deft-steps-dealer/careers.json",
@@ -170,6 +171,8 @@ const ASSETS=[
  "data/careers.json",
  "data/content-report.json",
  "data/gear.json",
+ "data/rule-reference-library.json",
+ "data/search-library.json",
  "data/sheet-fields.json",
  "data/skills.json",
  "data/source.json",
@@ -231,8 +234,14 @@ const ASSETS=[
  "origins.mjs",
  "pwa.mjs",
  "record-sources.mjs",
+ "reference-body.mjs",
+ "reference-search.mjs",
  "regional-careers.mjs",
+ "rule-references.mjs",
  "rules.mjs",
+ "search-controller.mjs",
+ "search-library.mjs",
+ "search-presentation.mjs",
  "source-controls.mjs",
  "sources.mjs",
  "species-mechanics.mjs",

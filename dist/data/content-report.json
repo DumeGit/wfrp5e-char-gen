@@ -21,19 +21,19 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 1,
+        "reference-only": 435,
         "unavailable": 0,
         "deferred": 0
       },
       "featureCounts": {
         "implemented": 2,
         "adapted": 1,
-        "reference-only": 0,
+        "reference-only": 1,
         "unavailable": 0,
         "deferred": 2
       },
@@ -70,6 +70,13 @@
           "implemented": 124,
           "adapted": 0,
           "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "ruleReferences": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 434,
           "unavailable": 0,
           "deferred": 0
         },
@@ -3878,6 +3885,4780 @@
             "page": 301
           },
           "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "core:rule-reference:condition-185-ablaze",
+          "kind": "ruleReferences",
+          "name": "Ablaze",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 185
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-185-besmirched",
+          "kind": "ruleReferences",
+          "name": "Besmirched",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 185
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-185-bleeding",
+          "kind": "ruleReferences",
+          "name": "Bleeding",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 185
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-185-blinded",
+          "kind": "ruleReferences",
+          "name": "Blinded",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 185
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-185-broken",
+          "kind": "ruleReferences",
+          "name": "Broken",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 185
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-186-deafened",
+          "kind": "ruleReferences",
+          "name": "Deafened",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-186-entangled",
+          "kind": "ruleReferences",
+          "name": "Entangled",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-186-fatigued",
+          "kind": "ruleReferences",
+          "name": "Fatigued",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-186-poisoned",
+          "kind": "ruleReferences",
+          "name": "Poisoned",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-186-prone",
+          "kind": "ruleReferences",
+          "name": "Prone",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-186-stunned",
+          "kind": "ruleReferences",
+          "name": "Stunned",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-187-surprised",
+          "kind": "ruleReferences",
+          "name": "Surprised",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:condition-187-unconscious",
+          "kind": "ruleReferences",
+          "name": "Unconscious",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-298-durable",
+          "kind": "ruleReferences",
+          "name": "Durable",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-298-fine",
+          "kind": "ruleReferences",
+          "name": "Fine",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-298-lightweight",
+          "kind": "ruleReferences",
+          "name": "Lightweight",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-298-practical",
+          "kind": "ruleReferences",
+          "name": "Practical",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-299-bulky",
+          "kind": "ruleReferences",
+          "name": "Bulky",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-299-shoddy",
+          "kind": "ruleReferences",
+          "name": "Shoddy",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-299-ugly",
+          "kind": "ruleReferences",
+          "name": "Ugly",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-299-unreliable",
+          "kind": "ruleReferences",
+          "name": "Unreliable",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-blackpowder",
+          "kind": "ruleReferences",
+          "name": "Blackpowder",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-blast-rating",
+          "kind": "ruleReferences",
+          "name": "Blast (Rating)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-damaging",
+          "kind": "ruleReferences",
+          "name": "Damaging",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-defensive",
+          "kind": "ruleReferences",
+          "name": "Defensive",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-fast",
+          "kind": "ruleReferences",
+          "name": "Fast",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-hack",
+          "kind": "ruleReferences",
+          "name": "Hack",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-impale",
+          "kind": "ruleReferences",
+          "name": "Impale",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-inflict-condition",
+          "kind": "ruleReferences",
+          "name": "Inflict (Condition)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-magical",
+          "kind": "ruleReferences",
+          "name": "Magical",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-304-parry",
+          "kind": "ruleReferences",
+          "name": "Parry",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 304
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-dangerous",
+          "kind": "ruleReferences",
+          "name": "Dangerous",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-imprecise",
+          "kind": "ruleReferences",
+          "name": "Imprecise",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-penetrating",
+          "kind": "ruleReferences",
+          "name": "Penetrating",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-pistol",
+          "kind": "ruleReferences",
+          "name": "Pistol",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-precise",
+          "kind": "ruleReferences",
+          "name": "Precise",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-pummel",
+          "kind": "ruleReferences",
+          "name": "Pummel",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-reload-rating",
+          "kind": "ruleReferences",
+          "name": "Reload (Rating)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-repeater-rating",
+          "kind": "ruleReferences",
+          "name": "Repeater (Rating)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-trap-blade",
+          "kind": "ruleReferences",
+          "name": "Trap Blade",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-unbalanced",
+          "kind": "ruleReferences",
+          "name": "Unbalanced",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-unbreakable",
+          "kind": "ruleReferences",
+          "name": "Unbreakable",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-undamaging",
+          "kind": "ruleReferences",
+          "name": "Undamaging",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-305-wrap",
+          "kind": "ruleReferences",
+          "name": "Wrap",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 305
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-306-flexible",
+          "kind": "ruleReferences",
+          "name": "Flexible",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-306-impenetrable",
+          "kind": "ruleReferences",
+          "name": "Impenetrable",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-306-partial",
+          "kind": "ruleReferences",
+          "name": "Partial",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-306-shield",
+          "kind": "ruleReferences",
+          "name": "Shield",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:property-306-weakpoints",
+          "kind": "ruleReferences",
+          "name": "Weakpoints",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:psychology-183-animosity-target",
+          "kind": "ruleReferences",
+          "name": "Animosity (Target)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 183
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:psychology-183-fear-rating",
+          "kind": "ruleReferences",
+          "name": "Fear (Rating)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 183
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:psychology-184-frenzy",
+          "kind": "ruleReferences",
+          "name": "Frenzy",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 184
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:psychology-184-hatred-target",
+          "kind": "ruleReferences",
+          "name": "Hatred (Target)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 184
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:psychology-184-terror-rating",
+          "kind": "ruleReferences",
+          "name": "Terror (Rating)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 184
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-advantage-and-disadvantage",
+          "kind": "ruleReferences",
+          "name": "Advantage and Disadvantage",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-automatic-success-and-failure",
+          "kind": "ruleReferences",
+          "name": "Automatic Success and Failure",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-criticals-and-fumbles",
+          "kind": "ruleReferences",
+          "name": "Criticals and Fumbles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-darkness-and-tests",
+          "kind": "ruleReferences",
+          "name": "Darkness and Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-making-a-test",
+          "kind": "ruleReferences",
+          "name": "Making a Test",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-modifiers-and-0-sl",
+          "kind": "ruleReferences",
+          "name": "Modifiers and 0 SL",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-130-repeating-tests",
+          "kind": "ruleReferences",
+          "name": "Repeating Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 130
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-131-characteristic-tests",
+          "kind": "ruleReferences",
+          "name": "Characteristic Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 131
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-131-difficulty-and-character-modifiers",
+          "kind": "ruleReferences",
+          "name": "Difficulty and Character Modifiers",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 131
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-131-extended-tests",
+          "kind": "ruleReferences",
+          "name": "Extended Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 131
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-131-opposed-tests",
+          "kind": "ruleReferences",
+          "name": "Opposed Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 131
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-131-test-outcomes",
+          "kind": "ruleReferences",
+          "name": "Test Outcomes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 131
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-132-criticals-and-fumbles",
+          "kind": "ruleReferences",
+          "name": "Criticals and Fumbles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 132
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-132-getting-help",
+          "kind": "ruleReferences",
+          "name": "Getting Help",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 132
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-132-opposed-tests",
+          "kind": "ruleReferences",
+          "name": "Opposed Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 132
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-133-achieving-the-impossible",
+          "kind": "ruleReferences",
+          "name": "Achieving the Impossible",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 133
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-133-fate",
+          "kind": "ruleReferences",
+          "name": "Fate",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 133
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-133-fate-and-fortune",
+          "kind": "ruleReferences",
+          "name": "Fate and Fortune",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 133
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-133-replenishing-fate",
+          "kind": "ruleReferences",
+          "name": "Replenishing Fate",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 133
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-133-replenishing-fortune",
+          "kind": "ruleReferences",
+          "name": "Replenishing Fortune",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 133
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-134-casing-the-joint",
+          "kind": "ruleReferences",
+          "name": "Casing the Joint",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 134
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-134-keeping-an-eye-out",
+          "kind": "ruleReferences",
+          "name": "Keeping an Eye Out",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 134
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-134-sneaking-around",
+          "kind": "ruleReferences",
+          "name": "Sneaking Around",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 134
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-134-stealth-and-surveillance",
+          "kind": "ruleReferences",
+          "name": "Stealth and Surveillance",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 134
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-135-gambling-and-cheating",
+          "kind": "ruleReferences",
+          "name": "Gambling and Cheating",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 135
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-135-silent-takedowns",
+          "kind": "ruleReferences",
+          "name": "Silent Takedowns",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 135
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-breaking-and-entering",
+          "kind": "ruleReferences",
+          "name": "Breaking and Entering",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-disarming-a-trap",
+          "kind": "ruleReferences",
+          "name": "Disarming a Trap",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-picking-locks",
+          "kind": "ruleReferences",
+          "name": "Picking Locks",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-setting-a-trap",
+          "kind": "ruleReferences",
+          "name": "Setting a Trap",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-spotting-a-trap",
+          "kind": "ruleReferences",
+          "name": "Spotting a Trap",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-traps",
+          "kind": "ruleReferences",
+          "name": "Traps",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-136-triggering-a-trap",
+          "kind": "ruleReferences",
+          "name": "Triggering a Trap",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 136
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-138-forced-entry",
+          "kind": "ruleReferences",
+          "name": "Forced Entry",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 138
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-138-mugging",
+          "kind": "ruleReferences",
+          "name": "Mugging",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 138
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-138-picking-pockets",
+          "kind": "ruleReferences",
+          "name": "Picking Pockets",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 138
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-138-secret-signs",
+          "kind": "ruleReferences",
+          "name": "Secret Signs",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 138
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-139-fraud-and-charlatanry",
+          "kind": "ruleReferences",
+          "name": "Fraud and Charlatanry",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 139
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-140-status-and-social-standing",
+          "kind": "ruleReferences",
+          "name": "Status and Social Standing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 140
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-141-changing-status",
+          "kind": "ruleReferences",
+          "name": "Changing Status",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 141
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-141-maintaining-status",
+          "kind": "ruleReferences",
+          "name": "Maintaining Status",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 141
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-141-status-and-social-tests",
+          "kind": "ruleReferences",
+          "name": "Status and Social Tests",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 141
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-142-befriend-someone-useful",
+          "kind": "ruleReferences",
+          "name": "Befriend Someone Useful",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 142
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-142-make-a-good-impression",
+          "kind": "ruleReferences",
+          "name": "Make a Good Impression",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 142
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-143-charming-others",
+          "kind": "ruleReferences",
+          "name": "Charming Others",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 143
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-143-intimidation-tactics",
+          "kind": "ruleReferences",
+          "name": "Intimidation Tactics",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 143
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-143-negotiating-a-discount",
+          "kind": "ruleReferences",
+          "name": "Negotiating a Discount",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 143
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-144-carousing",
+          "kind": "ruleReferences",
+          "name": "Carousing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 144
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-144-gossip-and-rumours",
+          "kind": "ruleReferences",
+          "name": "Gossip and Rumours",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 144
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-145-lies-and-deception",
+          "kind": "ruleReferences",
+          "name": "Lies and Deception",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 145
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-145-mistaken-identity",
+          "kind": "ruleReferences",
+          "name": "Mistaken Identity",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 145
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-145-public-speaking",
+          "kind": "ruleReferences",
+          "name": "Public Speaking",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 145
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-148-what-you-already-know",
+          "kind": "ruleReferences",
+          "name": "What You Already Know",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 148
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-150-asking-around",
+          "kind": "ruleReferences",
+          "name": "Asking Around",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 150
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-150-gossip",
+          "kind": "ruleReferences",
+          "name": "Gossip",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 150
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-150-interrogation",
+          "kind": "ruleReferences",
+          "name": "Interrogation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 150
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-150-investigating",
+          "kind": "ruleReferences",
+          "name": "Investigating",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 150
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-150-research",
+          "kind": "ruleReferences",
+          "name": "Research",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 150
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-150-searching-a-room",
+          "kind": "ruleReferences",
+          "name": "Searching a Room",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 150
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-151-intuition-and-insights",
+          "kind": "ruleReferences",
+          "name": "Intuition and Insights",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 151
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-151-tracking",
+          "kind": "ruleReferences",
+          "name": "Tracking",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 151
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-152-camping",
+          "kind": "ruleReferences",
+          "name": "Camping",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 152
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-152-foraging",
+          "kind": "ruleReferences",
+          "name": "Foraging",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 152
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-152-navigation",
+          "kind": "ruleReferences",
+          "name": "Navigation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 152
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-153-locating-ingredients",
+          "kind": "ruleReferences",
+          "name": "Locating Ingredients",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 153
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-153-making-medicine",
+          "kind": "ruleReferences",
+          "name": "Making Medicine",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 153
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-153-repairing-armour",
+          "kind": "ruleReferences",
+          "name": "Repairing Armour",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 153
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-153-repairing-weapons",
+          "kind": "ruleReferences",
+          "name": "Repairing Weapons",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 153
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-154-alchemical-remedies",
+          "kind": "ruleReferences",
+          "name": "Alchemical Remedies",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 154
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-154-concocting-poison",
+          "kind": "ruleReferences",
+          "name": "Concocting Poison",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 154
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-154-herbal-remedies",
+          "kind": "ruleReferences",
+          "name": "Herbal Remedies",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 154
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-156-climbing",
+          "kind": "ruleReferences",
+          "name": "Climbing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 156
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-156-leaping",
+          "kind": "ruleReferences",
+          "name": "Leaping",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 156
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-157-jumping-down",
+          "kind": "ruleReferences",
+          "name": "Jumping Down",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 157
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-157-riding-a-mount",
+          "kind": "ruleReferences",
+          "name": "Riding a Mount",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 157
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-157-swimming",
+          "kind": "ruleReferences",
+          "name": "Swimming",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 157
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-157-vehicle-movement",
+          "kind": "ruleReferences",
+          "name": "Vehicle Movement",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 157
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-158-drive",
+          "kind": "ruleReferences",
+          "name": "Drive",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 158
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-158-pursuit-circumstances",
+          "kind": "ruleReferences",
+          "name": "Pursuit Circumstances",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 158
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-158-pursuits",
+          "kind": "ruleReferences",
+          "name": "Pursuits",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 158
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-158-row",
+          "kind": "ruleReferences",
+          "name": "Row",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 158
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-158-sail",
+          "kind": "ruleReferences",
+          "name": "Sail",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 158
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-159-concluding-the-chase",
+          "kind": "ruleReferences",
+          "name": "Concluding the Chase",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 159
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-159-obstacles",
+          "kind": "ruleReferences",
+          "name": "Obstacles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 159
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-161-combat-initiative-order",
+          "kind": "ruleReferences",
+          "name": "Combat Initiative Order",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 161
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-161-surprise",
+          "kind": "ruleReferences",
+          "name": "Surprise",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 161
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-161-timing",
+          "kind": "ruleReferences",
+          "name": "Timing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 161
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-162-action",
+          "kind": "ruleReferences",
+          "name": "Action",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 162
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-162-free-actions",
+          "kind": "ruleReferences",
+          "name": "Free Actions",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 162
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-162-move",
+          "kind": "ruleReferences",
+          "name": "Move",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 162
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-162-on-the-defensive",
+          "kind": "ruleReferences",
+          "name": "On the Defensive",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 162
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-162-taking-your-turn",
+          "kind": "ruleReferences",
+          "name": "Taking Your Turn",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 162
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-163-charging",
+          "kind": "ruleReferences",
+          "name": "Charging",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-163-disengaging",
+          "kind": "ruleReferences",
+          "name": "Disengaging",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-163-engaged",
+          "kind": "ruleReferences",
+          "name": "Engaged",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-163-fleeing",
+          "kind": "ruleReferences",
+          "name": "Fleeing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-163-moving-in-combat",
+          "kind": "ruleReferences",
+          "name": "Moving in Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-163-running",
+          "kind": "ruleReferences",
+          "name": "Running",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-164-1-roll-to-hit",
+          "kind": "ruleReferences",
+          "name": "1: Roll to Hit",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 164
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-164-2-determine-hit-location",
+          "kind": "ruleReferences",
+          "name": "2: Determine Hit Location",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 164
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-164-3-determine-damage",
+          "kind": "ruleReferences",
+          "name": "3: Determine Damage",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 164
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-164-4-apply-damage",
+          "kind": "ruleReferences",
+          "name": "4: Apply Damage",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 164
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-164-damaged-armour",
+          "kind": "ruleReferences",
+          "name": "Damaged Armour",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 164
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-164-damaged-weapons",
+          "kind": "ruleReferences",
+          "name": "Damaged Weapons",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 164
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-165-critical-hits",
+          "kind": "ruleReferences",
+          "name": "Critical Hits",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-165-fumbles",
+          "kind": "ruleReferences",
+          "name": "Fumbles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-165-misfires",
+          "kind": "ruleReferences",
+          "name": "Misfires!",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-165-oops-table",
+          "kind": "ruleReferences",
+          "name": "Oops! Table",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-165-opposed-tests-and-fumbles",
+          "kind": "ruleReferences",
+          "name": "Opposed Tests and Fumbles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-165-ranged-combat",
+          "kind": "ruleReferences",
+          "name": "Ranged Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-166-combat-modifiers",
+          "kind": "ruleReferences",
+          "name": "Combat Modifiers",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 166
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-166-melee-weapon-group-special-rules",
+          "kind": "ruleReferences",
+          "name": "Melee Weapon Group Special Rules",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 166
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-166-melee-weapon-reach",
+          "kind": "ruleReferences",
+          "name": "Melee Weapon Reach",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 166
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-166-weapon-groups",
+          "kind": "ruleReferences",
+          "name": "Weapon Groups",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 166
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-aimed-shots",
+          "kind": "ruleReferences",
+          "name": "Aimed Shots",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-called-shots",
+          "kind": "ruleReferences",
+          "name": "Called Shots",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-grappling",
+          "kind": "ruleReferences",
+          "name": "Grappling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-helpless-targets",
+          "kind": "ruleReferences",
+          "name": "Helpless Targets",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-outnumbering",
+          "kind": "ruleReferences",
+          "name": "Outnumbering",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-shooting-into-a-group",
+          "kind": "ruleReferences",
+          "name": "Shooting into a Group",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-shooting-into-melee",
+          "kind": "ruleReferences",
+          "name": "Shooting into Melee",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-surrounded",
+          "kind": "ruleReferences",
+          "name": "Surrounded",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-two-weapon-fighting",
+          "kind": "ruleReferences",
+          "name": "Two-weapon Fighting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-unarmed-combat",
+          "kind": "ruleReferences",
+          "name": "Unarmed Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-167-undamaging-and-unarmed-attacks",
+          "kind": "ruleReferences",
+          "name": "Undamaging and Unarmed Attacks",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 167
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-168-gaining-momentum",
+          "kind": "ruleReferences",
+          "name": "Gaining Momentum",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 168
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-168-losing-momentum",
+          "kind": "ruleReferences",
+          "name": "Losing Momentum",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 168
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-168-momentum",
+          "kind": "ruleReferences",
+          "name": "Momentum",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 168
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-168-momentum-and-extra-attacks",
+          "kind": "ruleReferences",
+          "name": "Momentum and Extra Attacks",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 168
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-168-mounted-combat",
+          "kind": "ruleReferences",
+          "name": "Mounted Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 168
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-168-scatter",
+          "kind": "ruleReferences",
+          "name": "Scatter",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 168
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-169-drowning-and-suffocation",
+          "kind": "ruleReferences",
+          "name": "Drowning and Suffocation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 169
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-169-falling",
+          "kind": "ruleReferences",
+          "name": "Falling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 169
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-169-intimidate-in-combat",
+          "kind": "ruleReferences",
+          "name": "Intimidate in Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 169
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-169-leadership-in-combat",
+          "kind": "ruleReferences",
+          "name": "Leadership in Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 169
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-170-exposure",
+          "kind": "ruleReferences",
+          "name": "Exposure",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 170
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-170-healing-wounds",
+          "kind": "ruleReferences",
+          "name": "Healing Wounds",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 170
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-170-thirst-and-starvation",
+          "kind": "ruleReferences",
+          "name": "Thirst and Starvation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 170
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-170-using-the-heal-skill",
+          "kind": "ruleReferences",
+          "name": "Using the Heal Skill",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 170
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-170-wounds",
+          "kind": "ruleReferences",
+          "name": "Wounds",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 170
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-171-critical-wounds",
+          "kind": "ruleReferences",
+          "name": "Critical Wounds",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 171
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-171-magic-alchemy-and-healing",
+          "kind": "ruleReferences",
+          "name": "Magic, Alchemy, and Healing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 171
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-172-death",
+          "kind": "ruleReferences",
+          "name": "Death",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 172
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-172-healing-critical-wounds",
+          "kind": "ruleReferences",
+          "name": "Healing Critical Wounds",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 172
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-172-medical-attention",
+          "kind": "ruleReferences",
+          "name": "Medical Attention",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 172
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-172-surgery",
+          "kind": "ruleReferences",
+          "name": "Surgery",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 172
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-176-broken-bones",
+          "kind": "ruleReferences",
+          "name": "Broken Bones",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 176
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-177-amputated-parts",
+          "kind": "ruleReferences",
+          "name": "Amputated Parts",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 177
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-177-torn-muscles",
+          "kind": "ruleReferences",
+          "name": "Torn Muscles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 177
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-arm",
+          "kind": "ruleReferences",
+          "name": "Arm",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-ear",
+          "kind": "ruleReferences",
+          "name": "Ear",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-eye",
+          "kind": "ruleReferences",
+          "name": "Eye",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-fingers",
+          "kind": "ruleReferences",
+          "name": "Fingers",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-foot",
+          "kind": "ruleReferences",
+          "name": "Foot",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-hand",
+          "kind": "ruleReferences",
+          "name": "Hand",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-leg",
+          "kind": "ruleReferences",
+          "name": "Leg",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-nose",
+          "kind": "ruleReferences",
+          "name": "Nose",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-178-teeth",
+          "kind": "ruleReferences",
+          "name": "Teeth",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-179-black-plague",
+          "kind": "ruleReferences",
+          "name": "Black Plague",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-179-blood-rot",
+          "kind": "ruleReferences",
+          "name": "Blood Rot",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-179-disease-and-infection",
+          "kind": "ruleReferences",
+          "name": "Disease and Infection",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-179-disease-format",
+          "kind": "ruleReferences",
+          "name": "Disease Format",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-179-toes",
+          "kind": "ruleReferences",
+          "name": "Toes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-179-tongue",
+          "kind": "ruleReferences",
+          "name": "Tongue",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-180-bloody-flux",
+          "kind": "ruleReferences",
+          "name": "Bloody Flux",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-180-festering-wound",
+          "kind": "ruleReferences",
+          "name": "Festering Wound",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-180-galloping-trots",
+          "kind": "ruleReferences",
+          "name": "Galloping Trots",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-180-itching-pox",
+          "kind": "ruleReferences",
+          "name": "Itching Pox",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-180-packer-s-pox",
+          "kind": "ruleReferences",
+          "name": "Packer’s Pox",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-180-ratte-fever",
+          "kind": "ruleReferences",
+          "name": "Ratte Fever",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-blight",
+          "kind": "ruleReferences",
+          "name": "Blight",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-buboes",
+          "kind": "ruleReferences",
+          "name": "Buboes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-convulsions",
+          "kind": "ruleReferences",
+          "name": "Convulsions",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-coughs-and-sneezes",
+          "kind": "ruleReferences",
+          "name": "Coughs and Sneezes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-fever",
+          "kind": "ruleReferences",
+          "name": "Fever",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-flux",
+          "kind": "ruleReferences",
+          "name": "Flux",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-sea-sickness",
+          "kind": "ruleReferences",
+          "name": "Sea Sickness",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-181-weevil-cough",
+          "kind": "ruleReferences",
+          "name": "Weevil Cough",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-cures-and-tonics",
+          "kind": "ruleReferences",
+          "name": "Cures and Tonics",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-gangrene",
+          "kind": "ruleReferences",
+          "name": "Gangrene",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-infection",
+          "kind": "ruleReferences",
+          "name": "Infection",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-malaise",
+          "kind": "ruleReferences",
+          "name": "Malaise",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-nausea",
+          "kind": "ruleReferences",
+          "name": "Nausea",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-pox",
+          "kind": "ruleReferences",
+          "name": "Pox",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-182-treatment-of-disease",
+          "kind": "ruleReferences",
+          "name": "Treatment of Disease",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-183-dosage",
+          "kind": "ruleReferences",
+          "name": "Dosage",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 183
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-183-poisons",
+          "kind": "ruleReferences",
+          "name": "Poisons",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 183
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-183-psychology-test",
+          "kind": "ruleReferences",
+          "name": "Psychology Test",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 183
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-184-conditions",
+          "kind": "ruleReferences",
+          "name": "Conditions",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 184
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-187-gaining-corruption-points",
+          "kind": "ruleReferences",
+          "name": "Gaining Corruption Points",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-187-minor-corruption",
+          "kind": "ruleReferences",
+          "name": "Minor Corruption",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-187-moderate-corruption",
+          "kind": "ruleReferences",
+          "name": "Moderate Corruption",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-188-corrupting",
+          "kind": "ruleReferences",
+          "name": "Corrupting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-188-corruption-limits",
+          "kind": "ruleReferences",
+          "name": "Corruption Limits",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-188-dissolution-of-body-and-mind",
+          "kind": "ruleReferences",
+          "name": "Dissolution of Body and Mind",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-188-major-corruption",
+          "kind": "ruleReferences",
+          "name": "Major Corruption",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-188-manifestation-time",
+          "kind": "ruleReferences",
+          "name": "Manifestation Time",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-191-advancement-xp-costs",
+          "kind": "ruleReferences",
+          "name": "Advancement XP Costs",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-191-advancing-careers",
+          "kind": "ruleReferences",
+          "name": "Advancing Careers",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-191-characteristic-advances",
+          "kind": "ruleReferences",
+          "name": "Characteristic Advances",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-191-purchasing-talents",
+          "kind": "ruleReferences",
+          "name": "Purchasing Talents",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-191-skill-advances",
+          "kind": "ruleReferences",
+          "name": "Skill Advances",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-191-spending-xp",
+          "kind": "ruleReferences",
+          "name": "Spending XP",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-217-blessings-and-miracles",
+          "kind": "ruleReferences",
+          "name": "Blessings and Miracles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 217
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-217-limitations",
+          "kind": "ruleReferences",
+          "name": "Limitations",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 217
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-217-sin-points",
+          "kind": "ruleReferences",
+          "name": "Sin Points",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 217
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-217-the-blessed",
+          "kind": "ruleReferences",
+          "name": "The Blessed",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 217
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-218-sin-and-wrath",
+          "kind": "ruleReferences",
+          "name": "Sin and Wrath",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 218
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-218-wrath-of-the-gods",
+          "kind": "ruleReferences",
+          "name": "Wrath of the Gods",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 218
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-219-absolution",
+          "kind": "ruleReferences",
+          "name": "Absolution",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 219
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-219-penance",
+          "kind": "ruleReferences",
+          "name": "Penance",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 219
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-casting-test",
+          "kind": "ruleReferences",
+          "name": "Casting Test",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-critical-casting",
+          "kind": "ruleReferences",
+          "name": "Critical Casting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-duration",
+          "kind": "ruleReferences",
+          "name": "Duration",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-fumbled-casting",
+          "kind": "ruleReferences",
+          "name": "Fumbled Casting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-ingredients",
+          "kind": "ruleReferences",
+          "name": "Ingredients",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-magic-missiles",
+          "kind": "ruleReferences",
+          "name": "Magic Missiles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-spellcasting-limitations",
+          "kind": "ruleReferences",
+          "name": "Spellcasting Limitations",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-235-touch-spells-in-combat",
+          "kind": "ruleReferences",
+          "name": "Touch Spells in Combat",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 235
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-236-channelling",
+          "kind": "ruleReferences",
+          "name": "Channelling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 236
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-236-critical-and-fumbled-channelling",
+          "kind": "ruleReferences",
+          "name": "Critical and Fumbled Channelling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 236
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-236-overcasting",
+          "kind": "ruleReferences",
+          "name": "Overcasting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 236
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-236-second-sight",
+          "kind": "ruleReferences",
+          "name": "Second Sight",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 236
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-armour-repels-the-winds",
+          "kind": "ruleReferences",
+          "name": "Armour Repels the Winds",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-dispelling",
+          "kind": "ruleReferences",
+          "name": "Dispelling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-dispelling-persistent-spells",
+          "kind": "ruleReferences",
+          "name": "Dispelling Persistent Spells",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-grimoires",
+          "kind": "ruleReferences",
+          "name": "Grimoires",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-malignant-influences",
+          "kind": "ruleReferences",
+          "name": "Malignant Influences",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-memorising-spells",
+          "kind": "ruleReferences",
+          "name": "Memorising Spells",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-multiple-arcane-lores",
+          "kind": "ruleReferences",
+          "name": "Multiple Arcane Lores",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-237-using-warpstone",
+          "kind": "ruleReferences",
+          "name": "Using Warpstone",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 237
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-296-coin-and-status",
+          "kind": "ruleReferences",
+          "name": "Coin and Status",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 296
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-296-money",
+          "kind": "ruleReferences",
+          "name": "Money",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 296
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-297-availability",
+          "kind": "ruleReferences",
+          "name": "Availability",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 297
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-297-clipping",
+          "kind": "ruleReferences",
+          "name": "Clipping",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 297
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-297-counterfeiting",
+          "kind": "ruleReferences",
+          "name": "Counterfeiting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 297
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-297-going-to-market",
+          "kind": "ruleReferences",
+          "name": "Going to Market",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 297
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-298-bargaining-and-trading",
+          "kind": "ruleReferences",
+          "name": "Bargaining and Trading",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-298-bartering",
+          "kind": "ruleReferences",
+          "name": "Bartering",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-298-craftsmanship",
+          "kind": "ruleReferences",
+          "name": "Craftsmanship",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-298-item-qualities",
+          "kind": "ruleReferences",
+          "name": "Item Qualities",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-298-lowering-the-price",
+          "kind": "ruleReferences",
+          "name": "Lowering the Price",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-298-selling",
+          "kind": "ruleReferences",
+          "name": "Selling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 298
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-beasts-of-burden",
+          "kind": "ruleReferences",
+          "name": "Beasts of Burden",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-encumbrance",
+          "kind": "ruleReferences",
+          "name": "Encumbrance",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-encumbrance-and-attributes",
+          "kind": "ruleReferences",
+          "name": "Encumbrance and Attributes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-encumbrance-and-travel-fatigue",
+          "kind": "ruleReferences",
+          "name": "Encumbrance and Travel Fatigue",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-item-flaws",
+          "kind": "ruleReferences",
+          "name": "Item Flaws",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-overburdened",
+          "kind": "ruleReferences",
+          "name": "Overburdened",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-oversized-items",
+          "kind": "ruleReferences",
+          "name": "Oversized Items",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-small-items",
+          "kind": "ruleReferences",
+          "name": "Small Items",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-299-worn-items",
+          "kind": "ruleReferences",
+          "name": "Worn Items",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 299
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-300-cavalry",
+          "kind": "ruleReferences",
+          "name": "Cavalry",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 300
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-300-fencing",
+          "kind": "ruleReferences",
+          "name": "Fencing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 300
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-300-flail",
+          "kind": "ruleReferences",
+          "name": "Flail",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 300
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-300-melee-weapon-groups",
+          "kind": "ruleReferences",
+          "name": "Melee Weapon Groups",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 300
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-300-weapon-reach",
+          "kind": "ruleReferences",
+          "name": "Weapon Reach",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 300
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-300-weapon-reach-and-defence",
+          "kind": "ruleReferences",
+          "name": "Weapon Reach and Defence",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 300
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-302-blackpowder-and-explosives",
+          "kind": "ruleReferences",
+          "name": "Blackpowder and Explosives",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 302
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-302-crossbows-and-throwing",
+          "kind": "ruleReferences",
+          "name": "Crossbows and Throwing",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 302
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-302-engineering",
+          "kind": "ruleReferences",
+          "name": "Engineering",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 302
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-302-ranged-weapon-groups",
+          "kind": "ruleReferences",
+          "name": "Ranged Weapon Groups",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 302
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-302-weapon-range",
+          "kind": "ruleReferences",
+          "name": "Weapon Range",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 302
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-306-armour",
+          "kind": "ruleReferences",
+          "name": "Armour",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-306-armour-and-size",
+          "kind": "ruleReferences",
+          "name": "Armour and Size",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 306
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-318-creatures-and-equipment",
+          "kind": "ruleReferences",
+          "name": "Creatures and Equipment",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 318
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-318-customising-creatures",
+          "kind": "ruleReferences",
+          "name": "Customising Creatures",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 318
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:rule-364-individual-characteristic-advances",
+          "kind": "ruleReferences",
+          "name": "Individual Characteristic Advances",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 364
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-animal-care",
+          "kind": "ruleReferences",
+          "name": "Animal Care",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-animal-training",
+          "kind": "ruleReferences",
+          "name": "Animal Training",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-art",
+          "kind": "ruleReferences",
+          "name": "Art",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-athletics",
+          "kind": "ruleReferences",
+          "name": "Athletics",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-bribery",
+          "kind": "ruleReferences",
+          "name": "Bribery",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-channelling",
+          "kind": "ruleReferences",
+          "name": "Channelling",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-charm",
+          "kind": "ruleReferences",
+          "name": "Charm",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-charm-animal",
+          "kind": "ruleReferences",
+          "name": "Charm Animal",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-climb",
+          "kind": "ruleReferences",
+          "name": "Climb",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-consume-alcohol",
+          "kind": "ruleReferences",
+          "name": "Consume Alcohol",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-cool",
+          "kind": "ruleReferences",
+          "name": "Cool",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-dodge",
+          "kind": "ruleReferences",
+          "name": "Dodge",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-drive",
+          "kind": "ruleReferences",
+          "name": "Drive",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-endurance",
+          "kind": "ruleReferences",
+          "name": "Endurance",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-entertain",
+          "kind": "ruleReferences",
+          "name": "Entertain",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-111-evaluate",
+          "kind": "ruleReferences",
+          "name": "Evaluate",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 111
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-gamble",
+          "kind": "ruleReferences",
+          "name": "Gamble",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-gossip",
+          "kind": "ruleReferences",
+          "name": "Gossip",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-haggle",
+          "kind": "ruleReferences",
+          "name": "Haggle",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-heal",
+          "kind": "ruleReferences",
+          "name": "Heal",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-intimidate",
+          "kind": "ruleReferences",
+          "name": "Intimidate",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-intuition",
+          "kind": "ruleReferences",
+          "name": "Intuition",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-language",
+          "kind": "ruleReferences",
+          "name": "Language",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-leadership",
+          "kind": "ruleReferences",
+          "name": "Leadership",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-lore",
+          "kind": "ruleReferences",
+          "name": "Lore",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-melee",
+          "kind": "ruleReferences",
+          "name": "Melee",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-navigation",
+          "kind": "ruleReferences",
+          "name": "Navigation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-112-outdoor-survival",
+          "kind": "ruleReferences",
+          "name": "Outdoor Survival",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 112
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-perception",
+          "kind": "ruleReferences",
+          "name": "Perception",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-perform",
+          "kind": "ruleReferences",
+          "name": "Perform",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-pick-lock",
+          "kind": "ruleReferences",
+          "name": "Pick Lock",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-play",
+          "kind": "ruleReferences",
+          "name": "Play",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-pray",
+          "kind": "ruleReferences",
+          "name": "Pray",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-ranged",
+          "kind": "ruleReferences",
+          "name": "Ranged",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-research",
+          "kind": "ruleReferences",
+          "name": "Research",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-ride",
+          "kind": "ruleReferences",
+          "name": "Ride",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-row",
+          "kind": "ruleReferences",
+          "name": "Row",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-113-sail",
+          "kind": "ruleReferences",
+          "name": "Sail",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 113
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-secret-signs",
+          "kind": "ruleReferences",
+          "name": "Secret Signs",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-set-trap",
+          "kind": "ruleReferences",
+          "name": "Set Trap",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-sleight-of-hand",
+          "kind": "ruleReferences",
+          "name": "Sleight of Hand",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-stealth",
+          "kind": "ruleReferences",
+          "name": "Stealth",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-swim",
+          "kind": "ruleReferences",
+          "name": "Swim",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-track",
+          "kind": "ruleReferences",
+          "name": "Track",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:skill-114-trade",
+          "kind": "ruleReferences",
+          "name": "Trade",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 114
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-afraid",
+          "kind": "ruleReferences",
+          "name": "Afraid",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-amphibious",
+          "kind": "ruleReferences",
+          "name": "Amphibious",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-animosity",
+          "kind": "ruleReferences",
+          "name": "Animosity",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-belligerent",
+          "kind": "ruleReferences",
+          "name": "Belligerent",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-bestial",
+          "kind": "ruleReferences",
+          "name": "Bestial",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-bite",
+          "kind": "ruleReferences",
+          "name": "Bite",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-356-blessed",
+          "kind": "ruleReferences",
+          "name": "Blessed",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 356
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-bounce",
+          "kind": "ruleReferences",
+          "name": "Bounce",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-breath",
+          "kind": "ruleReferences",
+          "name": "Breath",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-champion",
+          "kind": "ruleReferences",
+          "name": "Champion",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-chill-grasp",
+          "kind": "ruleReferences",
+          "name": "Chill Grasp",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-cold-blooded",
+          "kind": "ruleReferences",
+          "name": "Cold-blooded",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-constrictor",
+          "kind": "ruleReferences",
+          "name": "Constrictor",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-construct",
+          "kind": "ruleReferences",
+          "name": "Construct",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-corrosive-blood",
+          "kind": "ruleReferences",
+          "name": "Corrosive Blood",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-corruption",
+          "kind": "ruleReferences",
+          "name": "Corruption",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-daemonic",
+          "kind": "ruleReferences",
+          "name": "Daemonic",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-357-dark-vision",
+          "kind": "ruleReferences",
+          "name": "Dark Vision",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 357
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-disease",
+          "kind": "ruleReferences",
+          "name": "Disease",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-distracting",
+          "kind": "ruleReferences",
+          "name": "Distracting",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-ethereal",
+          "kind": "ruleReferences",
+          "name": "Ethereal",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-fear",
+          "kind": "ruleReferences",
+          "name": "Fear",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-fly",
+          "kind": "ruleReferences",
+          "name": "Fly",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-frenzy",
+          "kind": "ruleReferences",
+          "name": "Frenzy",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-ghostly-howl",
+          "kind": "ruleReferences",
+          "name": "Ghostly Howl",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-grim",
+          "kind": "ruleReferences",
+          "name": "Grim",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-hatred",
+          "kind": "ruleReferences",
+          "name": "Hatred",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-horns",
+          "kind": "ruleReferences",
+          "name": "Horns",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-hungry",
+          "kind": "ruleReferences",
+          "name": "Hungry",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-immune-to-psychology",
+          "kind": "ruleReferences",
+          "name": "Immune to Psychology",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-358-immunity",
+          "kind": "ruleReferences",
+          "name": "Immunity",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 358
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-infected",
+          "kind": "ruleReferences",
+          "name": "Infected",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-infestation",
+          "kind": "ruleReferences",
+          "name": "Infestation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-magic-resistance",
+          "kind": "ruleReferences",
+          "name": "Magic Resistance",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-magical",
+          "kind": "ruleReferences",
+          "name": "Magical",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-many-heads",
+          "kind": "ruleReferences",
+          "name": "Many Heads",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-mark-of-chaos",
+          "kind": "ruleReferences",
+          "name": "Mark of Chaos",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-mental-corruption",
+          "kind": "ruleReferences",
+          "name": "Mental Corruption",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-359-miracles",
+          "kind": "ruleReferences",
+          "name": "Miracles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 359
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-360-mutation",
+          "kind": "ruleReferences",
+          "name": "Mutation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-360-night-vision",
+          "kind": "ruleReferences",
+          "name": "Night Vision",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-360-painless",
+          "kind": "ruleReferences",
+          "name": "Painless",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-360-petrifying-gaze",
+          "kind": "ruleReferences",
+          "name": "Petrifying Gaze",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-360-regeneration",
+          "kind": "ruleReferences",
+          "name": "Regeneration",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-360-size",
+          "kind": "ruleReferences",
+          "name": "Size",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 360
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-361-skittish",
+          "kind": "ruleReferences",
+          "name": "Skittish",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-361-spellcaster",
+          "kind": "ruleReferences",
+          "name": "Spellcaster",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-361-sprinter",
+          "kind": "ruleReferences",
+          "name": "Sprinter",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-361-stealthy",
+          "kind": "ruleReferences",
+          "name": "Stealthy",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-361-striding-gait",
+          "kind": "ruleReferences",
+          "name": "Striding Gait",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 361
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-stupid",
+          "kind": "ruleReferences",
+          "name": "Stupid",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-swarm",
+          "kind": "ruleReferences",
+          "name": "Swarm",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-tail",
+          "kind": "ruleReferences",
+          "name": "Tail",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-tentacles",
+          "kind": "ruleReferences",
+          "name": "Tentacles",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-territorial",
+          "kind": "ruleReferences",
+          "name": "Territorial",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-terror",
+          "kind": "ruleReferences",
+          "name": "Terror",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-362-tongue",
+          "kind": "ruleReferences",
+          "name": "Tongue",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 362
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-tracker",
+          "kind": "ruleReferences",
+          "name": "Tracker",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-trained",
+          "kind": "ruleReferences",
+          "name": "Trained",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-undead",
+          "kind": "ruleReferences",
+          "name": "Undead",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-unstable",
+          "kind": "ruleReferences",
+          "name": "Unstable",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-vampiric",
+          "kind": "ruleReferences",
+          "name": "Vampiric",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-venom",
+          "kind": "ruleReferences",
+          "name": "Venom",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-vomit",
+          "kind": "ruleReferences",
+          "name": "Vomit",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-wallcrawler",
+          "kind": "ruleReferences",
+          "name": "Wallcrawler",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-ward",
+          "kind": "ruleReferences",
+          "name": "Ward",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:rule-reference:trait-363-web",
+          "kind": "ruleReferences",
+          "name": "Web",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 363
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "core:skills:animal-care",
@@ -9408,6 +14189,16 @@
             "page": "318–363"
           },
           "reason": "Fresh core-only Bestiary Workshop: printed profiles, templates, Traits, GM edits, equipment, magic, independent drafts and compact PDF export. Career development and live play are excluded."
+        },
+        {
+          "id": "core:feature:rule-reference-search",
+          "name": "Core rule reference search",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": "109–364"
+          },
+          "reason": "Core Skills, Tests, combat, health, Conditions, Psychology, advancement, prayers, magic, equipment rules/properties and Creature Traits are readable references. This does not automate live play or import every book chapter."
         },
         {
           "id": "core:feature:tracker-single",

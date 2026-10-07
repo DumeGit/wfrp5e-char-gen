@@ -4,6 +4,10 @@ import { loadBookLibrary, assembleBooks } from "../dist/books.mjs";
 import { prepareGM, gmInventory } from "../dist/gm/content.mjs";
 import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
 import {
+  buildReferenceLibrary,
+  compactReferenceLibrary,
+} from "../dist/search-library.mjs";
+import {
   buildBookReport,
   inclusionMarkdown,
   countSummary,
@@ -39,6 +43,25 @@ gm.version = createHash("sha256")
   .digest("hex")
   .slice(0, 16);
 const outputs = [
+  [
+    "../dist/data/search-library.json",
+    JSON.stringify(
+      compactReferenceLibrary(buildReferenceLibrary(library, gm)),
+    ) + "\n",
+  ],
+  [
+    "../dist/data/rule-reference-library.json",
+    JSON.stringify({
+      schemaVersion: 1,
+      books: library.packs
+        .filter((p) => p.data.ruleReferences?.length)
+        .map((p) => ({
+          id: p.manifest.id,
+          version: p.manifest.version,
+          records: p.data.ruleReferences,
+        })),
+    }) + "\n",
+  ],
   ["../dist/gm/data.json", JSON.stringify(gm) + "\n"],
   ["../docs/GM-CONTENT.md", gmInventory(gm)],
   [
@@ -47,7 +70,19 @@ const outputs = [
       format: BOOK_BUNDLE_FORMAT,
       schemaVersion: library.schemaVersion,
       core: library.core,
-      packs: library.packs,
+      packs: library.packs.map((p) => ({
+        ...p,
+        data: {
+          ...p.data,
+          ...(p.data.ruleReferences
+            ? {
+                ruleReferences: p.data.ruleReferences.map(
+                  ({ text, ...entry }) => ({ ...entry, textRef: true }),
+                ),
+              }
+            : {}),
+        },
+      })),
     }) + "\n",
   ],
   ["../dist/data/content-report.json", JSON.stringify(report, null, 2) + "\n"],

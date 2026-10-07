@@ -62,3 +62,9 @@ Update this document and affected feature docs in the same change. Inspect setup
 ## Current product scope
 
 The shared design system serves player creation, the fresh core-only GM workshop and the component reference. `creator-switch.mjs` and `.creator-switch` provide desktop/mobile navigation between independent tools. The workshop uses the same semantic colours, headings, dialogs and controls; `gm/style.css` owns only its compact profile/score/stat-block layout. Desktop folio scrolling, medium-screen flow and phone page navigation remain distinct. The removed NPC runtime/skin has not been restored. See [GM-WORKSHOP.md](GM-WORKSHOP.md).
+
+## Shared book search surfaces
+
+The desktop search ribbon retains its compact dropdown. Its optional native category select and match count form a small header; result rows append without replacing existing rows or the field. A Load more control remains as a keyboard/accessibility fallback. Use the shared category labels for Conditions, Psychology, properties, Traits and catalogue profiles. Same-name categories remain visibly distinct. Rule tables use the same ink, paper and line tokens, with local horizontal scrolling if needed.
+
+At 760 px and below, a banner launcher opens a native full-screen dialog. Move the existing field into it; do not clone inputs/listeners. Keep the heading/Close, 16 px input and native category control above one scrollable result list, with safe-area padding and VisualViewport sizing for the on-screen keyboard. The background page does not scroll behind this panel. Use the shared controller in PC and GM tools. Verify narrow heights and return position; simulated viewports cannot certify real iOS/Android keyboards or OS select menus.

@@ -12,6 +12,7 @@ import { careerSpecies, careerAvailable } from "./origins.mjs";
 import { validateChartState } from "./astrology.mjs";
 import { validateIIIState, oldFaith, spellChoices } from "./archives-iii.mjs";
 import { validateWoMState } from "./winds-of-magic.mjs";
+import { validateRuleReference } from "./rule-references.mjs";
 
 export const BOOK_SCHEMA = 1;
 const arrays = [
@@ -31,6 +32,7 @@ const arrays = [
   "careerUpdates",
   "runes",
   "techniques",
+  "ruleReferences",
 ];
 const files = new Set([
   ...arrays,
@@ -112,6 +114,7 @@ export function validateBackgroundTable(table, label) {
   return table;
 }
 const columns = {
+  ruleReferences: ["category", "topic", "text", "textRef", "target", "aliases"],
   techniques: ["sl", "text"],
   careerUpdates: ["careers", "characteristic", "profile", "unavailable"],
   runes: ["form", "master", "sl", "text"],
@@ -308,7 +311,10 @@ export async function loadBookLibrary(
           return [key, await readJSON(file)];
         }),
       );
-      return { manifest, data: Object.fromEntries(entries) };
+      const data = Object.fromEntries(entries);
+      for (const reference of data.ruleReferences || [])
+        validateRuleReference(reference, { source: true });
+      return { manifest, data };
     }),
   );
   const core = packs.find((p) => p.manifest.id === index.core);
@@ -519,12 +525,14 @@ function mergeEntry(R, pack, kind, value, key) {
     else R[kind][R[kind].indexOf(old)] = entry;
   } else {
     const sameName = (x) =>
-      kind === "talents"
-        ? base(canon(x.name)).toLowerCase() ===
-          base(canon(entry.name)).toLowerCase()
-        : x.name.toLowerCase() === entry.name.toLowerCase() &&
-          (kind !== "weapons" || x.kind === entry.kind) &&
-          (kind !== "runes" || x.form === entry.form);
+      kind === "ruleReferences"
+        ? false
+        : kind === "talents"
+          ? base(canon(x.name)).toLowerCase() ===
+            base(canon(entry.name)).toLowerCase()
+          : x.name.toLowerCase() === entry.name.toLowerCase() &&
+            (kind !== "weapons" || x.kind === entry.kind) &&
+            (kind !== "runes" || x.form === entry.form);
     if (
       list.some(
         (x) =>
@@ -692,6 +700,14 @@ export function assembleBooks(library, ids = [library.core]) {
 
 export function validateCatalog(R) {
   const C = R.config;
+  for (const reference of R.ruleReferences) {
+    validateRuleReference(reference);
+    if (
+      reference.target &&
+      !R.skills.some((x) => x.contentId === reference.target)
+    )
+      fail(`${reference.id}: missing Skill reference target.`);
+  }
   if (R.highElfCreation) validateElfCreation(R);
   for (const x of R.techniques)
     if (
