@@ -69,6 +69,8 @@ Gradient action and active-navigation fills have an opaque primary-colour base. 
 
 GM template previews use the compiled grants in separate Characteristics, Skills, Talents and optional Magic sections. Bonuses and ranks align to the right; long alternative lists use native disclosures with stable template/slot keys. The two-column desktop summary stacks on phones. The preview remains read-only until Apply template; no grant, choice or calculation is inferred from prose.
 
+Customise starts with a template card above its tabs. Choose template is a prominent primary action beneath the heading, becoming Change template after selection. Remove template is secondary. On phones the primary action fills the row; both controls retain normal 44px touch heights. Keep template choice visibly optional without relegating the action to a small side button.
+
 Update this document and affected feature docs in the same change. Inspect setup, all eight steps and reference dialogs on desktop/phone; verify hover/disabled/focus contrast, no horizontal page overflow, heading accessibility, reduced-motion CSS and install behavior after redraws. Run `npm run check:release` after final styles/assets so offline caching covers art, fonts, skin, component module, guide and icons. Preserve PDF/export tests. Commit locally; the user pushes/deploys.
 
 ## Current product scope

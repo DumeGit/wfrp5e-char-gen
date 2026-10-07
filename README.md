@@ -54,6 +54,8 @@ GM PDFs use selective bold labels for easier scanning. Card fit checks measure b
 
 Both creators' gradient action buttons use opaque base fills to prevent a white flash during hover transitions. NPC template previews separate Characteristic adjustments, Skills, Talent ranks and magic limits, with expandable alternatives and a stacked phone layout. See [design standards](docs/DESIGN-SYSTEM.md) and [workshop behavior](docs/GM-WORKSHOP.md).
 
+The NPC Customise page leads with a prominent Choose template action beneath the template heading. After selection it shows Change template and a secondary Remove template action; the main action fills the available width on phones. Applying a template is still optional.
+
 ## Rules and source
 
 ### Archives III

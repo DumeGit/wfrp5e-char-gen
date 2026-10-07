@@ -132,10 +132,27 @@
   color: var(--color-muted);
   display: block;
 }
-.gm-template-bar button {
-  font-size: 12px;
-  padding: 8px;
-  min-height: 36px;
+.gm-template-bar {
+  display: block;
+}
+.gm-template-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.gm-template-bar .gm-template-actions button {
+  font-size: 14px;
+  padding: 10px 15px;
+  min-height: 44px;
+}
+.gm-template-actions .primary {
+  min-width: 180px;
+}
+@media (max-width: 760px) {
+  .gm-template-actions .primary {
+    flex: 1;
+  }
 }
 .gm-template-choices {
   padding: 0 0 20px;
