@@ -51,9 +51,8 @@ const uid = () => `gm-${crypto.randomUUID()}`;
 function toast(text) {
   const node = document.querySelector("#toast");
   node.textContent = text;
-  node.classList.add("show");
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => node.classList.remove("show"), 4500);
+  toastTimer = setTimeout(() => (node.textContent = ""), 4500);
 }
 function persist() {
   if (verify) {

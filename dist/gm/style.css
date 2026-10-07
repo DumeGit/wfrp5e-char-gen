@@ -785,6 +785,17 @@
 .gm-mobile-bar {
   display: none;
 }
+#toast {
+  pointer-events: none;
+}
+#toast:empty {
+  display: none;
+}
+@media (max-width: 760px) {
+  #toast {
+    bottom: calc(70px + env(safe-area-inset-bottom));
+  }
+}
 .gm-reference-metadata {
   font-size: 12px;
   line-height: 1.7;

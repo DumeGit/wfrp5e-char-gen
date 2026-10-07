@@ -4,6 +4,8 @@ This is the fresh NPC & creature creator authorised in October 2026. It shares t
 
 ## Workflow
 
+Workshop status notifications clear after 4.5 seconds. They use the shared empty-text visibility convention, accept no pointer events and sit above the fixed phone action bar with safe-area clearance. Persistent issues remain in the issue panel; they are not hidden by notification expiry.
+
 The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. Creature creation uses **only the supplied Fifth Edition core**. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
 
 1. **Starting profile:** search/filter 53 profiles, preview the complete block, then apply it. Printed scores, absent values, Skills, attacks, Wounds and Toughness Bonus remain intact. Name, appearance, purpose, motivation and manner are optional. Changing the foundation replaces this GM build, with undo available.
@@ -87,3 +89,10 @@ Card headers omit the redundant original profile name when it already equals the
 - `npm run check:release` passed: 18 book packs, 85 application modules, generated/format checks, **327 tests** (27 GM tests) and offline asset verification. Regressions cover actual versus optional Traits, removed and added Traits, changed ratings, escaped descriptions, source conflicts and measured six/four-card overflow.
 - Browser checks used an isolated draft on desktop and at 390×844: profile preview, review, expanded folio and six-card print dialog. Mobile had no horizontal overflow and the Griffon fit at 9.25 pt. No browser errors or warnings were recorded.
 - Latest Poppler renders of mixed six-card and dense four-card pages, a full Griffon and a modified Griffon (Night Vision removed, Bestial added) were visually checked. Bold Trait labels, full descriptions and page boundaries were clean, with no clipping or overlap. Notes and unselected optional Traits stayed out of the PDFs.
+
+
+### Workshop notification fix — 7 October 2026
+
+The previous timer removed a `show` class while shared CSS displayed any nonempty notification. The workshop now clears the message text on expiry and hides its empty node. Its noninteractive notification sits 17 px above the fixed action bar in the checked 390×844 layout, accounting for the bottom safe-area inset. Browser checks applied a Griffon, clicked Review while the message was visible, then confirmed empty text/zero height after the timeout; desktop notifications also cleared. No browser warnings/errors were recorded. The isolated draft left personal storage unchanged.
+
+Release validation: npm run check:release passed with 18 packs, 85 application modules, all 328 tests and offline coverage. No new game rules or save-format changes were introduced.

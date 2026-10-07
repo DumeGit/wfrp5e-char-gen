@@ -39,6 +39,8 @@ Use `chapterHeading(title)` for the page-level heading and normal h2/h3 for sect
 | Rolled scores | `.characteristics-table` | Compact rows with abbreviations, names, inline Career badges and editable assignment selectors |
 | Starting increases | `.career-starting-increases` | Budget and three labelled point inputs in one desktop strip; compact wrapping on phones |
 
+Transient status messages must clear their text when their timer expires: the shared `#toast:not(:empty)` style is content-driven, not class-driven. Workshop notifications expire after 4.5 seconds, do not capture pointer events and clear the fixed mobile action bar plus its safe-area inset. Keep persistent actionable errors in the issue panel.
+
 Use roles such as `--color-paper-raised`, `--color-on-leather`, `--color-crimson`, `--color-on-crimson`, `--color-line` and `--color-focus`. Career-level roles retain L1–L4 text, red/green/grey/gold accents and dashed future availability. Legacy remains selective and separate.
 
 Dense rules/controls use `--font-body`; headings use the readable serif `--font-heading`; `--font-caps` is limited to labels, ornament and folio names; Gothic `--font-banner` is reserved for the masthead. Fonts load locally. Ornament must not inflate purchase rows.
