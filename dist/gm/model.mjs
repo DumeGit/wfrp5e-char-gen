@@ -1,4 +1,5 @@
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
+import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
@@ -242,7 +243,7 @@ export function validateGMDraft(data, R, s) {
     )
       throw Error("Invalid equipment choice.");
   for (const id of s.spells)
-    if (!R.spells.some((p) => p.contentId === id))
+    if (!gmSpellCatalogue(R).some((p) => p.contentId === id))
       throw Error("Unknown spell.");
   for (const id of s.mutations)
     if (!data.mutations.some((p) => p.id === id))
@@ -318,7 +319,7 @@ export function validateGMDraft(data, R, s) {
           (x) => x.key,
         )
       : []),
-    ...R.spells.map((x) => x.contentId),
+    ...gmSpellCatalogue(R).map((x) => x.contentId),
   ]);
   if (
     s.removed.some(
@@ -420,6 +421,19 @@ export const gmSkillCharacteristic = (R, profile, name) =>
   );
 export const gmLoreIssue = (R, profile, lore) =>
   speciesLoreIssue(R, { species: gmSpecies(profile) }, lore);
+// A printed targeted spell is a distinct GM selection, sharing its canonical
+// profile and source. Never grant an unspecified Fellstave or invent targets.
+export function gmSpellCatalogue(R) {
+  return spellChoices(R).map((x) =>
+    x.specialisation
+      ? {
+          ...x,
+          contentId: `${x.contentId}:target:${encodeURIComponent(x.specialisation)}`,
+        }
+      : x,
+  );
+}
+
 export function magicChoices(R, result) {
   const lores = new Set(
     result.talents.map((t) => magicLore(t.name)).filter(Boolean),
@@ -441,7 +455,9 @@ export function magicChoices(R, result) {
     if (/^Invoke \(/.test(t.name))
       miracleGods.push(t.name.match(/\((.*)\)/)[1]);
   });
-  return R.spells.filter(
+  // Old Faith Invoke teaches additional Blessings rather than Miracles (p. 58).
+  if (miracleGods.includes("Old Faith")) blessingGods.push("Old Faith");
+  return gmSpellCatalogue(R).filter(
     (spell) =>
       (spell.category === "Petty" &&
         result.talents.some((t) => t.name === "Petty Magic")) ||
@@ -1155,7 +1171,7 @@ export function calculateGM(data, R, s) {
         );
   }
   for (const [k, v] of Object.entries(layers)) ap[k.split(":")[1]] += v;
-  const spells = R.spells.filter(
+  const spells = gmSpellCatalogue(R).filter(
     (spell) =>
       [...p.spells, ...s.spells].includes(spell.contentId) &&
       !s.removed.includes(spell.contentId),
@@ -1283,6 +1299,17 @@ export function calculateGM(data, R, s) {
     warnings.push(
       "The general Size rule gives Fangs +8. The p. 361 worked example gives +5, omitting the additional Size damage; the user chose the general rule.",
     );
+  const patronTalents = [
+    ...result.talents.map((t) => t.name),
+    ...result.traits
+      .filter((t) => ["Blessed", "Miracles"].includes(t.name))
+      .map((t) => `${t.name === "Blessed" ? "Bless" : "Invoke"} (${t.value})`),
+  ];
+  warnings.push(
+    ...divineReferencesForTalents(R, patronTalents).map(
+      (x) => `${x.text} (${x.source.book} p. ${x.source.page})`,
+    ),
+  );
   warnings.push(...p.notes);
   warnings.push(
     ...[

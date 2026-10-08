@@ -10,6 +10,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Up in Arms | 2 | 0 | Mount profiles, equipment & magic |
 | Archives of the Empire: Volume I | 0 | 0 | Weapons, ammunition, Skill choices & Youngblood · no unnamed profiles |
 | Archives of the Empire: Volume II | 2 | 0 | Rhinox, Typical Sister, Ogre equipment & Great Maw magic |
+| Archives of the Empire: Volume III | 0 | 0 | Prayers, Hedgecraft & Skill choices · no new foundations |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |

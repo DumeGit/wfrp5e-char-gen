@@ -217,8 +217,10 @@ export function freeMagicIssues(R, s, grants, structured = false) {
   return finishIssues(out, structured);
 }
 export function divineReference(R, s) {
-  const talents = derive(R, s).talents,
-    shared = cultReferences(R, talents);
+  return divineReferencesForTalents(R, derive(R, s).talents);
+}
+export function divineReferencesForTalents(R, talents) {
+  const shared = cultReferences(R, talents);
   if (!archivesIII(R)) return shared;
   return [
     ...shared,

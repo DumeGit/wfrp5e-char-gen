@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "archives-iii",
+  "source": {
+    "file": "Archives of the Empire - Volume III.pdf",
+    "sha256": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788"
+  },
+  "summary": "Prayers, Hedgecraft & Skill choices · no new foundations",
+  "profiles": [],
+  "training": [],
+  "review": {
+    "pagesReviewed": "1–96",
+    "profilePages": [
+      30,
+      76,
+      77,
+      78,
+      90,
+      92,
+      93,
+      94
+    ],
+    "profileCount": 12,
+    "included": [
+      "18 previously reviewed Miracles: Handrich, Solkan and Rhya (pp. 47, 55, 74).",
+      "Nine new Hedgecraft spell names (pp. 62–64), including seven explicit Fellstave targets.",
+      "Handrich/Solkan/Old Faith patrons and their printed Blessing options; Old Faith Invoke learns Blessings, not invented Miracles.",
+      "Existing Language (Belthani), Lore (Torture) and Fearless (Magic Users) choices."
+    ],
+    "excluded": [
+      "Six named NPC stat blocks on pp. 30, 90, 92–94.",
+      "Six animal-familiar profiles on pp. 76–78 and familiar creation/progression/bonding: deferred by prior user decision.",
+      "Alternative armour (pp. 34–38): excluded by prior user decision.",
+      "Career development, hirelings, Enterprises, live Channelling/power/Conditions, prices or bonuses invented from descriptive text."
+    ],
+    "decisions": [
+      "Reuse the approved PC book pack; no duplicate equipment, Talent or spell definitions.",
+      "GM spell selection is explicit without PC starting allocations, XP purchases or automatic six/one prayer grants.",
+      "All 24 Cants remain reference-only in GM creation pending the explicit Arcane spell Lore-assignment decision. PC Cant selection is unchanged."
+    ]
+  }
+}

@@ -16,7 +16,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **944 Rules r
 | Up in Arms | 1.0.4 | 98 | 128 | 226 | 12 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
-| Archives of the Empire: Volume III | 1.0.3 | 59 | 105 | 164 | 14 |
+| Archives of the Empire: Volume III | 1.0.4 | 59 | 105 | 164 | 14 |
 | Winds of Magic | 1.0.3 | 172 | 253 | 425 | 55 |
 | Rough Nights & Hard Days | 1.0.2 | 2 | 24 | 26 | 2 |
 | Dwarf Player’s Guide | 1.0.2 | 221 | 107 | 328 | 102 |

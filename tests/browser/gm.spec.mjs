@@ -391,3 +391,54 @@ test("named Worked Examples are absent while generic template choices remain @gm
   await expect(page.getByRole("dialog")).toContainText("Spellcaster");
   await noOverflow(page);
 });
+
+test("Archives III shares prayers and targeted Hedgecraft without adding excluded foundations @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-archives-iii").check();
+  await expect(page.locator(".gm-profile-card")).toHaveCount(49);
+  await applyProfile(page, "Human");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  const add = async (kind, name) => {
+    await page.getByRole("button", { name: kind, exact: true }).click();
+    await page.locator("#gm-picker-search").fill(name);
+    await page
+      .locator(".gm-picker-row")
+      .filter({ has: page.getByText(name, { exact: true }) })
+      .getByRole("button", { name: "Add", exact: true })
+      .click();
+  };
+  await add("Add Trait", "Miracles");
+  await page
+    .locator("select[data-trait]")
+    .filter({ has: page.locator('option[value="Old Faith"]') })
+    .selectOption("Old Faith");
+  await add("Add Trait", "Spellcaster");
+  await page.getByRole("checkbox", { name: "Hedgecraft", exact: true }).check();
+  await page
+    .getByRole("tab", { name: "Skills & Talents", exact: true })
+    .click();
+  await add("Add Skill", "Channelling (Ulgu)");
+  await gmStep(page, "Equipment & magic");
+  await add("Choose magic", "Blessing of Healing");
+  await add("Choose magic", "Fellstave (Beastmen)");
+  await add("Choose magic", "Fellstave (Daemons)");
+  await expect(page.locator("#gm-magic")).toContainText("Fellstave (Beastmen)");
+  await expect(page.locator("#gm-magic")).toContainText("Fellstave (Daemons)");
+  await noOverflow(page);
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await gmStep(page, "Starting profile");
+  await page.locator("#gm-book-archives-iii").uncheck();
+  await gmStep(page, "Equipment & magic");
+  await expect(page.locator("#gm-magic")).not.toContainText("Fellstave");
+  await page
+    .getByRole("button", { name: "\u21b6 Undo last change", exact: true })
+    .click();
+  await gmStep(page, "Equipment & magic");
+  await expect(page.locator("#gm-magic")).toContainText("Fellstave (Daemons)");
+});

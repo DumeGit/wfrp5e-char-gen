@@ -385,6 +385,21 @@ export function pickerEntries(data, R, r, kind) {
       x.name.includes("(") ? `${base(x.name)} (Any)` : x.name,
       "talent",
     );
+    // Fixed Lore Talents printed in Careers (such as Hedgecraft) remain
+    // explicit GM choices alongside the core Colour options.
+    if (base(x.name) === "Arcane Magic")
+      names = [
+        ...new Set([
+          ...names,
+          ...R.careers
+            .flatMap((c) => c.levels.flatMap((l) => l.talents))
+            .filter(
+              (name) =>
+                /^Arcane Magic \([^)]+\)$/.test(name) &&
+                !/Any|All| or |,/.test(name),
+            ),
+        ]),
+      ];
     if (base(x.name) === "Chaos Magic")
       names = ["Nurgle", "Slaanesh", "Tzeentch"].map(
         (n) => `Chaos Magic (${n})`,

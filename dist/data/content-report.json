@@ -22975,7 +22975,7 @@
     {
       "id": "archives-iii",
       "title": "Archives of the Empire: Volume III",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 45,
@@ -22985,9 +22985,9 @@
         "deferred": 12
       },
       "featureCounts": {
-        "implemented": 1,
+        "implemented": 2,
         "adapted": 1,
-        "reference-only": 0,
+        "reference-only": 1,
         "unavailable": 1,
         "deferred": 3
       },
@@ -25015,6 +25015,26 @@
             "page": "75–82"
           },
           "reason": "User deferred the whole chapter until the character manager."
+        },
+        {
+          "id": "archives-iii:feature:gm-cants",
+          "name": "GM Cant choices",
+          "status": "reference-only",
+          "source": {
+            "book": "archives-iii",
+            "page": "85–88"
+          },
+          "reason": "Printed Cants are readable in global search. GM selection awaits the user decision about assigning generic Arcane spells to one Lore for threshold counts; no live Channelling or power tracking is imported."
+        },
+        {
+          "id": "archives-iii:feature:gm-shared",
+          "name": "GM prayers, Hedgecraft and printed specialisations",
+          "status": "implemented",
+          "source": {
+            "book": "archives-iii",
+            "page": "47–74"
+          },
+          "reason": "Shared approved profiles, seven explicit Fellstave targets, Old Faith Invoke selects Blessings. No named/familiar foundations, alternative armour or PC Career/XP grants."
         },
         {
           "id": "archives-iii:feature:old-faith",

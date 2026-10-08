@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume III",
   "shortTitle": "Archives III",
   "edition": 4,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -22,7 +22,7 @@
       "User-approved optional Cants: select free abilities after one, three and six spells of a Colour Lore; live Channelling and power tracking are deferred.",
       "Old Faith: six chosen Blessings from Bless, one additional from Invoke; paid extras use core Miracle prices counting only Invoke and purchased Blessings, as approved by the user.",
       "User skips the alternative armour chapter entirely; core armour remains unchanged.",
-      "User defers familiars to the character-manager phase. Businesses, ongoing armour repair/looting, NPCs and adventures are deferred."
+      "User defers familiars to the character-manager phase. Businesses and ongoing armour repair/looting remain deferred; GM creation enables reviewed prayer/Hedgecraft options without named NPCs, familiars or alternative armour."
     ]
   },
   "files": {

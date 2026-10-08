@@ -60,6 +60,26 @@
         "book": "archives-iii"
       },
       "reason": "Selections/descriptions are available; play systems are deferred."
+    },
+    {
+      "id": "archives-iii:feature:gm-shared",
+      "name": "GM prayers, Hedgecraft and printed specialisations",
+      "status": "implemented",
+      "source": {
+        "book": "archives-iii",
+        "page": "47–74"
+      },
+      "reason": "Shared approved profiles, seven explicit Fellstave targets, Old Faith Invoke selects Blessings. No named/familiar foundations, alternative armour or PC Career/XP grants."
+    },
+    {
+      "id": "archives-iii:feature:gm-cants",
+      "name": "GM Cant choices",
+      "status": "reference-only",
+      "source": {
+        "book": "archives-iii",
+        "page": "85–88"
+      },
+      "reason": "Printed Cants are readable in global search. GM selection awaits the user decision about assigning generic Arcane spells to one Lore for threshold counts; no live Channelling or power tracking is imported."
     }
   ]
 }

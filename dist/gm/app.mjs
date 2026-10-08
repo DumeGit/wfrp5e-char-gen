@@ -8,6 +8,7 @@ import {
   calculateGM,
   individualise,
   applyTemplate,
+  gmSpellCatalogue,
   gmRoll,
 } from "./model.mjs";
 import {
@@ -448,7 +449,7 @@ async function action(el) {
         ...r.profile.talents,
         ...r.profile.attacks,
         ...r.profile.armour,
-        ...R.spells,
+        ...gmSpellCatalogue(R),
       ].find((x) => (x.key || x.contentId) === k)?.name || k;
     modal(
       "Restore removed entries",
@@ -688,7 +689,7 @@ function change(el) {
           ].some((x) => x.contentId === g.id),
         );
         s.spells = s.spells.filter((id) =>
-          allowed.spells.some((x) => x.contentId === id),
+          gmSpellCatalogue(allowed).some((x) => x.contentId === id),
         );
         s.talents = s.talents.filter((t) =>
           allowed.talents.some((x) => base(x.name) === base(t.name)),

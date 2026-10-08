@@ -57,7 +57,7 @@ gm.books = [
   },
 ];
 gm.training = [];
-for (const id of ["up-in-arms", "archives-i", "archives-ii"])
+for (const id of ["up-in-arms", "archives-i", "archives-ii", "archives-iii"])
   gm = addGMSupplement(
     gm,
     JSON.parse(

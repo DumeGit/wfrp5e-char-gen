@@ -1,6 +1,6 @@
 # Archives of the Empire: Volume III
 
-Installed as an opt-in supplement (`archives-iii`, 1.0.0) with a separately selected animal-doctor Hedge Witch variant (`archives-iii-hedge`, 1.0.0). Enable the supplement under Choose books. Choose the animal-doctor variant under Career → Hedge Witch variant when Hedge Witch is selected and Archives III is enabled. Changing books starts a new WIP character; switching the Career variant keeps identity, Species choices and rolls, clears Career-dependent allocations/magic/equipment, and is locked while XP is spent. Neither pack changes random probabilities.
+Installed as an opt-in supplement (`archives-iii`; current version in its manifest) with a separately selected animal-doctor Hedge Witch variant (`archives-iii-hedge`, 1.0.0). Enable the supplement under Choose books. Choose the animal-doctor variant under Career → Hedge Witch variant when Hedge Witch is selected and Archives III is enabled. Changing books starts a new WIP character; switching the Career variant keeps identity, Species choices and rolls, clears Career-dependent allocations/magic/equipment, and is locked while XP is spent. Neither pack changes random probabilities.
 
 Source: supplied `Archives of the Empire - Volume III.pdf`, 96 pages, SHA-256 `e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788`. Printed pages match PDF positions. The first running header says Volume I while the contents identify Volume III. MarkItDown text and PDF verification images remain outside the published app.
 
@@ -41,7 +41,7 @@ Solkan suitability (p. 53), his no-Sin/no-Corruption rule (p. 55), and Handrich'
 
 ## Deferred scope
 
-Enterprises, including optional starting ownership (p. 6), financing/debt, trading and shop management are deferred together to the manager phase. So are armour looting/fit/damage/repair/critical deflection, familiar creation/progression, live casting/Cants, NPCs and adventures. These chapters are not claimed as implemented.
+Enterprises, including optional starting ownership (p. 6), financing/debt, trading and shop management are deferred together to the manager phase. So are armour looting/fit/damage/repair/critical deflection, familiar creation/progression, live casting/Cants, named NPCs and adventures. These chapters are not claimed as implemented.
 
 ## Extraction and verification
 
@@ -51,10 +51,22 @@ Tests cover every supplement combination, unchanged armour/tables, three Careers
 
 ## Reviewed reference imports — 7 October 2026
 
-Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. Core GM creation is unchanged.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. The GM workshop independently enables the reviewed prayer/Hedgecraft options described below.
 
 Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 
 Stoat’s introductory text and complete stat block (p. 78) are consolidated into one retained profile, now outside search. Animal Familiar Characteristics remains a genuine multi-species comparison Table. Familiar creation remains deferred.
+
+## NPC & creature creator — 8 October 2026
+
+Archives III is independently enabled in GM Creation books. Its twelve stat blocks comprise six named NPCs (pp. 30, 90, 92–94) and six animal familiars (pp. 76–78). Named characters are excluded; familiar creation/profiles remain deferred under the earlier user decision. No unnamed non-familiar foundation or generic template is invented. Alternative armour remains excluded, so enabling this book changes neither weapons nor armour.
+
+The workshop reuses all 27 imported spell profiles: six Handrich Miracles, six Solkan Miracles, six additional Rhya Miracles and nine new Hedgecraft names. Core duplicate Hedgecraft definitions remain authoritative. Fellstave has seven distinct target selections with stable derived identities, preserving each chosen target through save/load, removal, undo and exports; an unspecified root Fellstave is not selectable. New Language (Belthani), Lore (Torture) and Fearless (Magic Users) choices reuse the shared registry.
+
+Handrich/Solkan/Old Faith appear in Bless/Invoke Talent and Blessed/Miracles Trait patron controls. Old Faith Invoke opens additional Blessing choices, rather than invented Old Faith Miracles. NPC prayers are selected explicitly; PC six/one free grants, XP pricing and Career development are not applied. Printed cult obligations and Handrich/Solkan/Old Faith reference explanations appear in the app before export, without live Sin/Corruption tracking. Compact sheets contain actual chosen spells/prayers and no adaptation/discrepancy commentary.
+
+Optional GM Cant selection remains pending the user’s Arcane spell Lore-assignment decision. The 24 printed Cants remain available in global reference search, and existing PC Cant creation is unchanged.
+
+Focused verification: 45 affected Node regressions passed, covering the shared PC handler, GM model and exports. The 24 existing GM browser cases passed; the new Archives III scenario passed separately on desktop and mobile after its fixture supplied the required Channelling choice. Quick code/format, registry generation and offline checks passed. No new PDF layout was introduced.
