@@ -32,7 +32,7 @@ test("both creators and previously unopened references work offline @pwa", async
   await expect(
     page.getByRole("heading", { name: "Starting profile", exact: true }),
   ).toBeVisible();
-  await expect(page.locator(".gm-profile-card")).toHaveCount(53);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(49);
 });
 
 test("a waiting offline update applies without losing purchases @pwa", async ({

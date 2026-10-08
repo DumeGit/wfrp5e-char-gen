@@ -7816,11 +7816,9 @@
         {
           "id": "core:reference:356-guzgog-ungor-skirmisher",
           "sourceHash": "aed5986deac1b45a2a454f11515e8e686d9aed5f66e3ef1d7527a558ec51e8e1",
-          "disposition": "existing",
-          "targets": [
-            "core:creatures:guzgog-ungor-skirmisher"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "Named Worked Examples character excluded from the GM catalogue and already outside shared search, by user request."
         },
         {
           "id": "core:reference:356-guzgog-ungor-skirmisher-2",

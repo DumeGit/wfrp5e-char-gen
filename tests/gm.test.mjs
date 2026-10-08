@@ -122,11 +122,13 @@ test("four-card layout measures each profile and never clips oversized content",
   await assert.rejects(blocked.bytes(), /do not fit/);
 });
 
-test("all 53 described core profiles fit four-per-A4, with measured six-card overflow rather than dropped Traits", async () => {
-  const entries = data.profiles.filter(p => p.id.startsWith("core:")).map((p) => {
-    const s = freshGM(data, p.id);
-    return { s, r: result(s) };
-  });
+test("all 49 described core profiles fit four-per-A4, with measured six-card overflow rather than dropped Traits", async () => {
+  const entries = data.profiles
+    .filter((p) => p.id.startsWith("core:"))
+    .map((p) => {
+      const s = freshGM(data, p.id);
+      return { s, r: result(s) };
+    });
   for (let i = 0; i < entries.length; i += 48) {
     const print = await prepareGMPrint(PDFLib, entries.slice(i, i + 48));
     assert.ok(print.cards.every((c) => c.fontSize >= 7.5));
@@ -250,10 +252,13 @@ test("table cards retain mechanical fields and Trait descriptions, omitting disc
   );
 });
 test("every core profile preserves untouched printed values, Skills and attacks", () => {
-  assert.equal(data.profiles.filter(p => p.id.startsWith("core:")).length, 53);
+  assert.equal(
+    data.profiles.filter((p) => p.id.startsWith("core:")).length,
+    49,
+  );
   assert.equal(data.templates.length, 7);
   assert.equal(data.traits.length, 67);
-  for (const p of data.profiles.filter(p => p.id.startsWith("core:"))) {
+  for (const p of data.profiles.filter((p) => p.id.startsWith("core:"))) {
     const s = freshGM(data, p.id),
       r = result(s);
     assert.deepEqual(
@@ -598,4 +603,23 @@ test("Quick Armour is not stacked with detailed armour, and template Talents do 
     result(other).talents.filter((x) => x.name === "Combat Aware").length,
     1,
   );
+});
+
+test("named worked examples are excluded without removing generic foundations or templates", () => {
+  const ids = [
+    "core:creatures:skrakk-bestigor-elite",
+    "core:creatures:ungrakk-gor-beastlord-commander",
+    "core:creatures:swilegrakk-bray-shaman-spellcaster",
+    "core:creatures:guzgog-ungor-skirmisher",
+  ];
+  assert.ok(ids.every((id) => raw.creatures.some((p) => p.id === id)));
+  assert.ok(ids.every((id) => !data.profiles.some((p) => p.id === id)));
+  assert.deepEqual(
+    data.excludedProfiles.map((p) => p.id),
+    ids,
+  );
+  assert.ok(!data.profiles.some((p) => p.category === "Worked Examples"));
+  assert.equal(data.templates.length, 7);
+  const s = freshGM(data, ids[0]);
+  assert.throws(() => validateGMDraft(data, R, s), /profile/i);
 });

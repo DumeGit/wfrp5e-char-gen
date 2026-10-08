@@ -36,8 +36,8 @@
       "dispositions": {
         "included": 224,
         "consolidated": 3,
-        "excluded": 248,
-        "existing": 621
+        "excluded": 249,
+        "existing": 620
       },
       "rulesAudit": {
         "date": "2026-10-08",

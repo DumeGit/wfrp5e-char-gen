@@ -2,6 +2,15 @@
 import { canon, base, options } from "../rules.mjs";
 import { bookId, sourceLabel } from "./books.mjs";
 
+// Named worked examples are retained in the reviewed extraction, but are not
+// selectable foundations. Keep exact source identities rather than name matching.
+const excludedNamedExamples = new Set([
+  "core:creatures:skrakk-bestigor-elite",
+  "core:creatures:ungrakk-gor-beastlord-commander",
+  "core:creatures:swilegrakk-bray-shaman-spellcaster",
+  "core:creatures:guzgog-ungor-skirmisher",
+]);
+
 const quote = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function entries(text, definitions, descriptions = true) {
   const names = definitions
@@ -45,7 +54,10 @@ export function prepareGM(raw, R) {
       ids.add(x.id);
     }
   }
-  const profiles = raw.creatures.map((p) => {
+  const foundations = raw.creatures.filter(
+    (p) => !excludedNamedExamples.has(p.id),
+  );
+  const profiles = foundations.map((p) => {
     const identity = p.id.split(":").at(-1);
     for (const k of [
       "M",
@@ -164,6 +176,14 @@ export function prepareGM(raw, R) {
     coreVersion: R.books[0].version,
     source: raw.source,
     profiles,
+    excludedProfiles: raw.creatures
+      .filter((p) => excludedNamedExamples.has(p.id))
+      .map((p) => ({
+        id: p.id,
+        name: p.name,
+        page: p.page,
+        reason: "Named character in Worked Examples; excluded by user request.",
+      })),
     templates,
     traits: raw.traits,
     mutations: raw.mutations,

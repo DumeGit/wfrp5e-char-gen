@@ -2,11 +2,11 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-57 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.
+53 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
-| Warhammer Fantasy Roleplay, Fifth Edition | 53 | 7 | Core profiles, templates & rules |
+| Warhammer Fantasy Roleplay, Fifth Edition | 49 | 7 | Core profiles, templates & rules |
 | Up in Arms | 2 | 0 | Mount profiles, equipment & magic |
 | Archives of the Empire: Volume I | 0 | 0 | Weapons, ammunition, Skill choices & Youngblood · no unnamed profiles |
 | Archives of the Empire: Volume II | 2 | 0 | Rhinox, Typical Sister, Ogre equipment & Great Maw magic |
@@ -38,7 +38,6 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Goblin | Core · p. 336 | Orcs and Goblins |  |
 | Gor | Core · p. 345 | Beastmen |  |
 | Griffon | Core · p. 332 | Monstrous Beasts |  |
-| Guzgog - Ungor Skirmisher | Core · p. 356 | Worked Examples |  |
 | Halfling | Core · p. 319 | Peoples of the Reikland |  |
 | Halfling Thief | Core · p. 322 | Peoples of the Reikland |  |
 | High Elf or Wood Elf | Core · p. 320 | Peoples of the Reikland |  |
@@ -57,15 +56,12 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Rhinox | Archives II · p. 34 | Mounts | Yes |
 | Riding Horse | Up in Arms · p. 29 | Mounts | Yes |
 | Skeleton | Core · p. 339 | Restless Dead |  |
-| Skrakk - Bestigor (Elite) | Core · p. 354 | Worked Examples |  |
 | Snotling | Core · p. 338 | Orcs and Goblins |  |
 | Stormvermin | Core · p. 352 | Skaven |  |
-| Swilegrakk - Bray Shaman (Spellcaster) | Core · p. 355 | Worked Examples |  |
 | Tomb Banshee | Core · p. 342 | Restless Dead |  |
 | Troll | Core · p. 335 | Monstrous Beasts |  |
 | Typical Sister | Archives II · p. 76 | Peoples of the Reikland |  |
 | Ungor | Core · p. 345 | Beastmen |  |
-| Ungrakk - Gor Beastlord (Commander) | Core · p. 355 | Worked Examples |  |
 | Vampire | Core · p. 343 | Restless Dead |  |
 | Varghulf | Core · p. 344 | Restless Dead |  |
 | Wolf | Core · p. 327 | Beasts of the Reikland |  |

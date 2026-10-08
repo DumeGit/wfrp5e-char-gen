@@ -22,9 +22,9 @@ const draft = (name) =>
 const result = (s) => calculateGM(data, rulesFor(s), s);
 
 test("GM books are independently opt-in, catalogue order is alphabetical and exclusions stay excluded", () => {
-  assert.equal(gmCatalogue(data).profiles.length, 53);
+  assert.equal(gmCatalogue(data).profiles.length, 49);
   const enabled = gmCatalogue(data, ["core", "up-in-arms"]);
-  assert.equal(enabled.profiles.length, 55);
+  assert.equal(enabled.profiles.length, 51);
   assert.equal(enabled.templates.length, 7);
   assert.deepEqual(
     enabled.profiles

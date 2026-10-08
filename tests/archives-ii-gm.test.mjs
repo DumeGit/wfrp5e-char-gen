@@ -35,8 +35,8 @@ const caster = (s) =>
   });
 
 test("Archives II adds only the two reviewed unnamed foundations, opt-in, using shared book data", () => {
-  assert.equal(gmCatalogue(data).profiles.length, 53);
-  assert.equal(gmCatalogue(data, ["core", "archives-ii"]).profiles.length, 55);
+  assert.equal(gmCatalogue(data).profiles.length, 49);
+  assert.equal(gmCatalogue(data, ["core", "archives-ii"]).profiles.length, 51);
   assert.deepEqual(
     raw.profiles.map((p) => p.name),
     ["Rhinox", "Typical Sister"],

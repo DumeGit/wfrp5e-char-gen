@@ -43,7 +43,7 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
 }) => {
   await openGM(page);
   await page.locator("#gm-book-archives-i").check();
-  await expect(page.locator(".gm-profile-card")).toHaveCount(53);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
   await page
@@ -195,9 +195,9 @@ test("Up in Arms mounts are opt-in and alphabetically sorted; Legacy and trainin
   page,
 }) => {
   await openGM(page);
-  await expect(page.locator(".gm-profile-card")).toHaveCount(53);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await page.locator("#gm-book-up-in-arms").check();
-  await expect(page.locator(".gm-profile-card")).toHaveCount(55);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(51);
   const names = await page
     .locator(".gm-profile-card > strong")
     .allTextContents();
@@ -251,7 +251,7 @@ test("removing a mount book requires explicit reset and undo restores its select
   await confirm
     .getByRole("button", { name: "Remove book & start new", exact: true })
     .click();
-  await expect(page.locator(".gm-profile-card")).toHaveCount(53);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await page
     .getByRole("button", { name: "↶ Undo last change", exact: true })
     .click();
@@ -286,7 +286,7 @@ test("Archives II foundations and Legacy work on desktop and mobile @gm @mobile"
 }) => {
   await openGM(page);
   await page.locator("#gm-book-archives-ii").check();
-  await expect(page.locator(".gm-profile-card")).toHaveCount(55);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(51);
   await applyProfile(page, "Rhinox");
   await expect(page.locator("#gm-folio")).toContainText("50");
   await page
@@ -365,5 +365,29 @@ test("Archives II Ogre Spellcaster offers Great Maw and explains unavailable Lor
   await expect(
     page.getByRole("button", { name: "Export PDF", exact: true }),
   ).toBeEnabled();
+  await noOverflow(page);
+});
+test("named Worked Examples are absent while generic template choices remain @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await expect(page.locator(".gm-profile-card")).toHaveCount(49);
+  const names = await page
+    .locator(".gm-profile-card > strong")
+    .allTextContents();
+  expect(names.some((n) => /Skrakk|Ungrakk|Swilegrakk|Guzgog/.test(n))).toBe(
+    false,
+  );
+  expect(
+    await page.locator("#gm-category option").allTextContents(),
+  ).not.toContain("Worked Examples");
+  await applyProfile(page, "Gor");
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("button", { name: "Choose template", exact: true })
+    .click();
+  await expect(page.getByRole("dialog")).toContainText("Elite");
+  await expect(page.getByRole("dialog")).toContainText("Commander");
+  await expect(page.getByRole("dialog")).toContainText("Spellcaster");
   await noOverflow(page);
 });

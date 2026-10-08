@@ -43,7 +43,7 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 - pp. 318–322: Bestiary rules.
 - pp. 350–364: Templates, Traits and appendices.
 
-Candidate sections: included 224; consolidated 3; excluded 248; existing 621.
+Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
 Categories: career 64; skill 269; talent 423; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
 Reviewed printed records retained outside search: 0.

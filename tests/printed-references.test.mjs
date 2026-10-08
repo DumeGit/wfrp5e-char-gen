@@ -471,7 +471,7 @@ test("NPCs and templates stay outside search while reviewed source records and t
   const gm = JSON.parse(
     await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
   );
-  assert.equal(gm.profiles.filter(p => p.id.startsWith("core:")).length, 53);
+  assert.equal(gm.profiles.filter((p) => p.id.startsWith("core:")).length, 49);
   assert.equal(gm.templates.length, 7);
   const before = JSON.stringify(gm);
   const generated = buildReferenceLibrary(library, gm);
