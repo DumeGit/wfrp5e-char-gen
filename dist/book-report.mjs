@@ -17,7 +17,7 @@ export function buildBookReport(library) {
         const status = entry.unavailable
           ? "unavailable"
           : override?.status ||
-            (entry.contentKind === "ruleReferences"
+            (["ruleReferences", "referenceEntries"].includes(entry.contentKind)
               ? "reference-only"
               : isLegacy(R, entry)
                 ? "adapted"
@@ -32,7 +32,7 @@ export function buildBookReport(library) {
             entry.unavailable ||
             override?.reason ||
             entry.adaptation ||
-            (entry.contentKind === "ruleReferences"
+            (["ruleReferences", "referenceEntries"].includes(entry.contentKind)
               ? "Sourced book rule reference; no live-play automation."
               : "Creator profile/choice is supported; situational play effects remain reference text."),
         };

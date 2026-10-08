@@ -1,6 +1,6 @@
 # Archives of the Empire: Volume II — integration review
 
-**Status: installed as the opt-in `archives-ii` pack, version 1.0.2.** All creation decisions below are approved. Unspecified profiles remain unresolved; campaign systems are deferred.
+**Status: installed as the opt-in `archives-ii` pack (see the registry for its current version)** All creation decisions below are approved. Unspecified profiles remain unresolved; campaign systems are deferred.
 
 Source: the supplied `Archives of the Empire - Vol II.pdf`, 96 pages, SHA-256 `95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b`. Printed pages match PDF positions. Some running headers say Volume I; the contents are the second collection covering Ogres, astrology, magical artifice and mass battles. The source PDF and full text remain outside the published app.
 
@@ -63,3 +63,7 @@ Verify core-only and all-book combinations, every Ogre d100 Career face, weighte
 Integration regression coverage is included in the release suite. The rendered Ogre Butcher PDF retains all 556 editable fields; canonical field values, effective values on all 556 widgets and nonempty normal appearances agree. The sheet and companion record were visually inspected for casting, Large Wounds, armour, magic, sources and XP.
 
 Local browser checks verified enabling the book on a pristine draft, Ogre Career choices, an actual initial star-sign roll, traditional name selection and rolls, weighted appearance rolls, replacement age/height rerolls, removal/restoration of the retained-sign XP reward, chart background controls, loading an Ogre save, spell descriptions, doubled ordinary-weapon prices, native equipment prices, purchase/refund and the GM-review explanation for an unavailable Writing Kit. Layouts were inspected at 1920, 390 and 320 pixels without horizontal page overflow. Some layout checks used isolated development fixtures; test quantities/funds and preselected signs are synthetic, not claimed random history. A browser PDF download notification timed out; PDF generation and editable appearances were independently verified through the same export function. The earlier native-dialog input blockage cleared before these interactive checks.
+
+## Expanded reference search — 7 October 2026
+
+Original Ogre/astrology tables, magical artifice and item-generation tables, mass battles/Endeavours, psychological disorders and isolated NPC/creature profiles. Multi-row Ogre and Erzbet profiles preserve every printed stat row. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.

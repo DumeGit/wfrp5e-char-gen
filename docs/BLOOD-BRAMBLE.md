@@ -1,6 +1,6 @@
 # Blood and Bramble integration
 
-Source: the user-supplied `Blood and Bramble.pdf`, 30 PDF pages. Printed pp. 1–22 match PDF positions; the unnumbered spell cards occupy PDF pp. 23–28. MarkItDown provides searchable text, and PDF column extraction preserves continued descriptions. The pack records the source SHA-256 and ships structured creator options only.
+Source: the user-supplied `Blood and Bramble.pdf`, 30 PDF pages. Printed pp. 1–22 match PDF positions; the unnumbered spell cards occupy PDF pp. 23–28. MarkItDown provides searchable text, and PDF column extraction preserves continued descriptions. The pack records the source SHA-256 and ships structured creator options and separately reviewed reference-only gameplay text.
 
 Enable **Blood and Bramble** in Choose books. It adds twelve Hedgecraft and twelve Witchcraft spells from detailed entries pp. 6–17. None duplicates a spell in the other installed books. It adds no Species, Careers, Talents, starting bonuses, random tables or alternate magic-learning system.
 
@@ -26,3 +26,7 @@ Foraging, ingredient consumption, live casting, Conditions, curse removal, spiri
 `scripts/extract-blood-bramble.py` stages PDF pages and column text outside the app. `scripts/prepare-blood-bramble.py` creates the reviewed spell/ingredient pack in `../tmp/pdfs/blood-bramble-prepared`. Run MarkItDown separately as instructed by the skill. Copy only the manifest and its declared files into `dist/data/books/blood-bramble`; never publish raw pages or the source PDF.
 
 Tests cover opt-in behavior and book combinations/load order, all 24 spell profiles, existing grants/prices/access, duplicate learning and undo, complete column continuations, named Difficulty conversions, retained numeric modifiers, Godspakt’s approved profile, the summoning overlap, ingredient price/unknown weight, save/load sources and editable PDF exports. Local browser checks use an isolated `?verify=1` draft.
+
+## Expanded reference search — 7 October 2026
+
+Ingredients, the three Pact Keepers’ tasks/boons, Nameless Summons and isolated NPC stat blocks. Spirits are not automatically summoned/granted. Adventure hooks and biographies remain excluded. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.

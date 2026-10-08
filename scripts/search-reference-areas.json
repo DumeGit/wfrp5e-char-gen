@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "books": {
+    "core": {
+      "areas": [
+        {
+          "first": 23,
+          "last": 42,
+          "topic": "Character creation"
+        },
+        {
+          "first": 128,
+          "last": 169,
+          "topic": "Rules and combat"
+        },
+        {
+          "first": 170,
+          "last": 189,
+          "topic": "Health and Corruption"
+        },
+        {
+          "first": 190,
+          "last": 201,
+          "topic": "Between adventures"
+        },
+        {
+          "first": 202,
+          "last": 217,
+          "topic": "Cult obligations and prayer rules"
+        },
+        {
+          "first": 218,
+          "last": 260,
+          "topic": "Religion and magic"
+        },
+        {
+          "first": 265,
+          "last": 272,
+          "topic": "Gamemaster procedures and rewards"
+        },
+        {
+          "first": 296,
+          "last": 317,
+          "topic": "Consumer guide"
+        },
+        {
+          "first": 318,
+          "last": 322,
+          "topic": "Bestiary rules"
+        },
+        {
+          "first": 350,
+          "last": 364,
+          "topic": "Templates, Traits and appendices"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "up-in-arms": {
+      "areas": [
+        {
+          "first": 8,
+          "last": 9,
+          "topic": "Soldier creation"
+        },
+        {
+          "first": 55,
+          "last": 56,
+          "topic": "Tilean creation"
+        },
+        {
+          "first": 70,
+          "last": 70,
+          "topic": "Myrmidia strictures"
+        },
+        {
+          "first": 78,
+          "last": 104,
+          "topic": "Priests, injuries and armoury"
+        },
+        {
+          "first": 105,
+          "last": 109,
+          "topic": "Mounted combat"
+        },
+        {
+          "first": 110,
+          "last": 117,
+          "topic": "Hirelings"
+        },
+        {
+          "first": 118,
+          "last": 126,
+          "topic": "Siege warfare"
+        },
+        {
+          "first": 127,
+          "last": 132,
+          "topic": "Pursuits"
+        },
+        {
+          "first": 133,
+          "last": 136,
+          "topic": "Group Advantage"
+        },
+        {
+          "first": 137,
+          "last": 141,
+          "topic": "Warrior Endeavours and Talents"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "archives-i": {
+      "areas": [
+        {
+          "first": 28,
+          "last": 32,
+          "topic": "Halfling character rules"
+        },
+        {
+          "first": 52,
+          "last": 55,
+          "topic": "Dwarf character rules"
+        },
+        {
+          "first": 75,
+          "last": 79,
+          "topic": "Eonir character rules"
+        },
+        {
+          "first": 86,
+          "last": 94,
+          "topic": "Careers and equipment"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "archives-ii": {
+      "areas": [
+        {
+          "first": 18,
+          "last": 39,
+          "topic": "Ogres and astrology"
+        },
+        {
+          "first": 40,
+          "last": 49,
+          "topic": "Detailed astrology effects"
+        },
+        {
+          "first": 50,
+          "last": 50,
+          "topic": "Optional astrology"
+        },
+        {
+          "first": 51,
+          "last": 67,
+          "topic": "Magical items and artifice"
+        },
+        {
+          "first": 82,
+          "last": 91,
+          "topic": "Mass battles"
+        },
+        {
+          "first": 92,
+          "last": 92,
+          "topic": "Psychological disorders"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "archives-iii": {
+      "areas": [
+        {
+          "first": 6,
+          "last": 30,
+          "topic": "Enterprises"
+        },
+        {
+          "first": 34,
+          "last": 38,
+          "topic": "Alternative armour"
+        },
+        {
+          "first": 40,
+          "last": 45,
+          "topic": "Handrich obligations"
+        },
+        {
+          "first": 46,
+          "last": 47,
+          "topic": "Handrich"
+        },
+        {
+          "first": 51,
+          "last": 65,
+          "topic": "Minor gods and Hedgecraft"
+        },
+        {
+          "first": 72,
+          "last": 74,
+          "topic": "Rhya"
+        },
+        {
+          "first": 75,
+          "last": 82,
+          "topic": "Familiars"
+        },
+        {
+          "first": 83,
+          "last": 84,
+          "topic": "Altdorf character rules"
+        },
+        {
+          "first": 85,
+          "last": 88,
+          "topic": "Alternative Channelling and Cants"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "winds-of-magic": {
+      "areas": [
+        {
+          "first": 19,
+          "last": 53,
+          "topic": "Spellcasting, ritual magic and specialist magic"
+        },
+        {
+          "first": 56,
+          "last": 57,
+          "topic": "Light Order Career"
+        },
+        {
+          "first": 62,
+          "last": 66,
+          "topic": "Lore of Light"
+        },
+        {
+          "first": 68,
+          "last": 69,
+          "topic": "Gold Order Career"
+        },
+        {
+          "first": 74,
+          "last": 78,
+          "topic": "Lore of Metal"
+        },
+        {
+          "first": 80,
+          "last": 81,
+          "topic": "Jade Order Career"
+        },
+        {
+          "first": 86,
+          "last": 90,
+          "topic": "Lore of Life"
+        },
+        {
+          "first": 92,
+          "last": 93,
+          "topic": "Celestial Order Career"
+        },
+        {
+          "first": 98,
+          "last": 102,
+          "topic": "Lore of Heavens"
+        },
+        {
+          "first": 104,
+          "last": 105,
+          "topic": "Grey Order Career"
+        },
+        {
+          "first": 110,
+          "last": 114,
+          "topic": "Lore of Shadows"
+        },
+        {
+          "first": 116,
+          "last": 117,
+          "topic": "Amethyst Order Career"
+        },
+        {
+          "first": 122,
+          "last": 126,
+          "topic": "Lore of Death"
+        },
+        {
+          "first": 128,
+          "last": 129,
+          "topic": "Bright Order Career"
+        },
+        {
+          "first": 134,
+          "last": 138,
+          "topic": "Lore of Fire"
+        },
+        {
+          "first": 140,
+          "last": 141,
+          "topic": "Amber Order Career"
+        },
+        {
+          "first": 146,
+          "last": 150,
+          "topic": "Lore of Beasts"
+        },
+        {
+          "first": 151,
+          "last": 172,
+          "topic": "Magical artefacts and alchemy"
+        },
+        {
+          "first": 173,
+          "last": 188,
+          "topic": "Magical creatures and familiars"
+        },
+        {
+          "first": 189,
+          "last": 195,
+          "topic": "Magical environments"
+        },
+        {
+          "first": 196,
+          "last": 199,
+          "topic": "Additional magical reference profiles"
+        },
+        {
+          "first": 217,
+          "last": 218,
+          "topic": "Adversary and combined-Wind spells"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "rough-nights": {
+      "areas": [
+        {
+          "first": 87,
+          "last": 90,
+          "topic": "Gnome creation and religion"
+        },
+        {
+          "first": 91,
+          "last": 95,
+          "topic": "Pub games"
+        }
+      ],
+      "pdfOffset": 1
+    },
+    "dwarf-guide": {
+      "areas": [
+        {
+          "first": 38,
+          "last": 59,
+          "topic": "Dwarf creation and Careers"
+        },
+        {
+          "first": 61,
+          "last": 88,
+          "topic": "Careers, Skills, Talents and Grudges"
+        },
+        {
+          "first": 90,
+          "last": 116,
+          "topic": "Equipment, artillery and vehicles"
+        },
+        {
+          "first": 117,
+          "last": 120,
+          "topic": "Runic weapons of renown"
+        },
+        {
+          "first": 121,
+          "last": 132,
+          "topic": "Runesmithing"
+        },
+        {
+          "first": 134,
+          "last": 142,
+          "topic": "Ancestor obligations"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "high-elf": {
+      "areas": [
+        {
+          "first": 32,
+          "last": 37,
+          "topic": "Equipment and magical items"
+        },
+        {
+          "first": 39,
+          "last": 43,
+          "topic": "Naval equipment and creatures"
+        },
+        {
+          "first": 45,
+          "last": 92,
+          "topic": "High Elf creation, Careers and magic"
+        },
+        {
+          "first": 99,
+          "last": 111,
+          "topic": "Elf priest Careers and magic"
+        },
+        {
+          "first": 112,
+          "last": 117,
+          "topic": "Cult obligations and intrigue"
+        },
+        {
+          "first": 118,
+          "last": 125,
+          "topic": "Intrigue"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "blood-bramble": {
+      "areas": [
+        {
+          "first": 5,
+          "last": 17,
+          "topic": "Witchcraft, Hedgecraft and spirit bargains"
+        }
+      ],
+      "pdfOffset": 0
+    },
+    "deft-steps": {
+      "areas": [
+        {
+          "first": 5,
+          "last": 7,
+          "topic": "Ranald aspect obligations"
+        },
+        {
+          "first": 13,
+          "last": 25,
+          "topic": "Ranald Careers and Miracles"
+        },
+        {
+          "first": 27,
+          "last": 33,
+          "topic": "Burglary and equipment"
+        },
+        {
+          "first": 34,
+          "last": 37,
+          "topic": "Grave robbing and treasure hunting"
+        },
+        {
+          "first": 38,
+          "last": 69,
+          "topic": "Fraud, criminal contacts and organisations"
+        },
+        {
+          "first": 70,
+          "last": 85,
+          "topic": "Cult obligations and Taal relics"
+        },
+        {
+          "first": 86,
+          "last": 89,
+          "topic": "Taal Career and Miracles"
+        },
+        {
+          "first": 90,
+          "last": 103,
+          "topic": "Laws, prison and outlaws"
+        },
+        {
+          "first": 106,
+          "last": 110,
+          "topic": "Bounty hunting"
+        },
+        {
+          "first": 112,
+          "last": 117,
+          "topic": "Wilderness travel"
+        },
+        {
+          "first": 118,
+          "last": 121,
+          "topic": "Wilderness events and exploration tables"
+        },
+        {
+          "first": 122,
+          "last": 135,
+          "topic": "Journey, camping and hunting"
+        },
+        {
+          "first": 138,
+          "last": 139,
+          "topic": "Gamekeeper"
+        }
+      ],
+      "pdfOffset": 0
+    }
+  }
+}

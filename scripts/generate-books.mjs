@@ -4,6 +4,11 @@ import { loadBookLibrary, assembleBooks } from "../dist/books.mjs";
 import { prepareGM, gmInventory } from "../dist/gm/content.mjs";
 import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
 import {
+  searchCoverage,
+  searchCoverageMarkdown,
+  referenceContentHash,
+} from "./search-coverage.mjs";
+import {
   buildReferenceLibrary,
   compactReferenceLibrary,
 } from "../dist/search-library.mjs";
@@ -42,13 +47,39 @@ gm.version = createHash("sha256")
   .update(JSON.stringify(gm))
   .digest("hex")
   .slice(0, 16);
+const corpus = buildReferenceLibrary(library, gm);
+const review = JSON.parse(
+  await readFile(
+    new URL("./search-reference-review.json", import.meta.url),
+    "utf8",
+  ),
+);
+for (const pack of library.packs.filter((p) => p.manifest.kind !== "variant")) {
+  const hash = referenceContentHash(
+    await readFile(
+      new URL(
+        `../dist/data/books/${pack.manifest.id}/reference-entries.json`,
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
+  if (hash !== review.books[pack.manifest.id]?.publishedSHA256)
+    throw Error(
+      `Printed references changed without source review: ${pack.manifest.id}`,
+    );
+}
+const searchReport = searchCoverage(library, corpus, review);
 const outputs = [
   [
     "../dist/data/search-library.json",
-    JSON.stringify(
-      compactReferenceLibrary(buildReferenceLibrary(library, gm)),
-    ) + "\n",
+    JSON.stringify(compactReferenceLibrary(corpus)) + "\n",
   ],
+  [
+    "../dist/data/search-coverage.json",
+    JSON.stringify(searchReport, null, 2) + "\n",
+  ],
+  ["../docs/SEARCH-COVERAGE.md", searchCoverageMarkdown(searchReport)],
   [
     "../dist/data/rule-reference-library.json",
     JSON.stringify({
@@ -74,6 +105,7 @@ const outputs = [
         ...p,
         data: {
           ...p.data,
+          ...(p.data.referenceEntries ? { referenceEntries: [] } : {}),
           ...(p.data.ruleReferences
             ? {
                 ruleReferences: p.data.ruleReferences.map(

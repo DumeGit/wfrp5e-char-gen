@@ -18,6 +18,7 @@ export function createSearchController({
   getScope,
   onOpen,
   renderResult,
+  searchIndex,
 }) {
   const banner = document.querySelector(".banner-search"),
     field = banner.querySelector(".banner-search-field"),
@@ -65,7 +66,8 @@ export function createSearchController({
     returnPosition,
     observer,
     sentinel,
-    restoringFocus = false;
+    restoringFocus = false,
+    rankingRequest = 0;
   const updateLaunch = () => {
     launch.textContent = `⌕  ${input.value.trim() || "Search rules and book references…"}`;
     launch.setAttribute(
@@ -117,11 +119,31 @@ export function createSearchController({
     if (visible < ranked.length) observer?.observe(sentinel);
     syncStatus();
   }
-  function showResults({ restore = false } = {}) {
+  async function showResults({ restore = false } = {}) {
     if (!index || !open) return;
     const key = normalizeSearch(input.value) + "\0" + category;
+    const request = ++rankingRequest;
     if (key !== cacheKey) {
-      ranked = searchBooks(index, input.value, Infinity, { category }).rows;
+      // A new request discards the previous cache immediately. Returning to
+      // its query while ranking is pending must not reuse an emptied list.
+      cacheKey = undefined;
+      status.textContent = "Searching book references…";
+      more.hidden = true;
+      empty.hidden = true;
+      end.hidden = true;
+      active = -1;
+      ranked = [];
+      visible = 0;
+      input.removeAttribute("aria-activedescendant");
+      list.replaceChildren();
+      observer?.disconnect();
+      const result = await (searchIndex
+        ? searchIndex(input.value, category)
+        : Promise.resolve(
+            searchBooks(index, input.value, Infinity, { category }),
+          ));
+      if (request !== rankingRequest || !open) return;
+      ranked = result.rows;
       cacheKey = key;
       active = -1;
       input.removeAttribute("aria-activedescendant");
@@ -181,7 +203,7 @@ export function createSearchController({
     if (!index) status.textContent = "Loading book references…";
     await ensure();
     if (!open) return;
-    showResults({ restore });
+    await showResults({ restore });
   }
   async function loadIndex() {
     await ensure();
@@ -203,6 +225,7 @@ export function createSearchController({
         scroll: list.scrollTop,
       };
     open = false;
+    rankingRequest++;
     observer?.disconnect();
     popup.hidden = true;
     input.setAttribute("aria-expanded", "false");

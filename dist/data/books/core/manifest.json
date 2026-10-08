@@ -4,7 +4,7 @@
   "title": "Warhammer Fantasy Roleplay, Fifth Edition",
   "shortTitle": "Core",
   "edition": 5,
-  "version": "1.1.4",
+  "version": "1.1.5",
   "kind": "core",
   "dependsOn": [],
   "source": {
@@ -13,7 +13,8 @@
   },
   "notes": [
     "Fifth Edition core rules are the default authority.",
-    "The full rulebook PDF is not included in this website."
+    "The full rulebook PDF is not included in this website.",
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
   ],
   "files": {
     "species": "../../species.json",
@@ -31,6 +32,7 @@
     "market": "market.json",
     "tables": "tables.json",
     "coverage": "coverage.json",
-    "ruleReferences": "rule-references.json"
+    "ruleReferences": "rule-references.json",
+    "referenceEntries": "reference-entries.json"
   }
 }

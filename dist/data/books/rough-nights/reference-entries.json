@@ -1,0 +1,834 @@
+[
+  {
+    "id": "rough-nights:reference:17-profile-bruno-franke-judicial-champion-gold-3",
+    "name": "Bruno Franke – Judicial Champion (Gold 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 17,
+    "text": "BRUNO FRANKE – JUDICIAL CHAMPION (GOLD 3)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 68 | 47 | 69 | 42 | 53 | 63 | 31 | 25 | 50 | 29 | 17 |\n\nSkills: Dodge 83, Melee (Basic) 73, Melee (Fencing) 83, Melee (Two-handed) 91\n\nTraits: Armour (Full Plate) 5, Weapon (Rapier) +9, Weapon (Sword) +9, Weapon (Zweihänder) +10\n\nTrappings: Bulging Biceps; Franke’s weapons and armour are owned by the gravin and stored in his room"
+  },
+  {
+    "id": "rough-nights:reference:17-profile-gustaf-rechtshandler-barrister-gold-1",
+    "name": "Gustaf Rechtshandler – Barrister (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 17,
+    "text": "GUSTAF RECHTSHANDLER – BARRISTER (GOLD 1)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 26 | 26 | 28 | 29 | 64 | 31 | 48 | 62 | 51 | 42 | 11 |\n\nSkills: Bribery 61, Consume Alcohol 34, Endurance 39, Entertain (Speeches) 62, Haggle 61, Language (Classical) 79, Language (Guilder) 73, Lore (Law) 87, Lore (Nuln) 72, Lore (Theology) 67, Perception 69, Research 78, Secret Signs (Guilder) 73\n\nTraits: Prejudice (Those Who Contradict Him), Weapon (Dagger) +5\n\nTalents: Argumentative 2, Blather, Bookish, Doomed (Thy end shalt be prickly!), Etiquette (Guilder), Etiquette (Scholar) 4, Read/Write, Savvy, Speedreader 2, Suave\n\nTrappings: Lawyer’s Robes, Towering Sense of Self- Importance, Wig"
+  },
+  {
+    "id": "rough-nights:reference:17-profile-maria-ulrike-von-liebwitz-noble-lord-gold-7",
+    "name": "Maria-Ulrike Von Liebwitz – Noble Lord (Gold 7)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 17,
+    "text": "MARIA-ULRIKE VON LIEBWITZ – NOBLE LORD (GOLD 7)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 43 | 31 | 28 | 28 | 47 | 34 | 47 | 54 | 50 | 66 | 11 |\n\nSkills: Bribery 76, Charm 72, Consume Alcohol 39, Gamble 64, Gossip 77, Intimidate 39, Intuition 54, Language (Bretonnian) 59, Language (Classical) 65, Leadership 88, Lore (Heraldry) 66, Lore (Ambosstein) 75, Lore (Nuln) 64, Lore (Politics) 69, Lore (Theology) 64, Melee (Fencing) 53, Melee (Parry) 54, Perception 52, Play (Harpsichord) 58, Ride (Horse) 47\n\nTraits: Prejudice (Liars), Weapon (Fist) +4\n\nTalents: Attractive 3, Carouser, Commanding Presence 2, Doomed (Blood and betrayal bring thee low), Etiquette (Nobles) 4, Iron Will, Luck 3, Noble Blood, Public Speaker 5, Read/Write, Savvy, Suave, Wealthy 5\n\nTrappings: Best Quality Courtly Garb, many Bodyguards (4 of which almost never leave her side), the Duchy of Ambosstein, Jewellery worth 750 GC, Poise, Servants, anything else you feel she requires"
+  },
+  {
+    "id": "rough-nights:reference:18-profile-bodyguards-and-men-at-arms-silver-3",
+    "name": "Bodyguards And Men-At-Arms (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 18,
+    "text": "BODYGUARDS AND MEN-AT-ARMS (SILVER 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 51 | 35 | 43 | 62 | 44 | 46 | 28 | 26 | 44 | 28 | 20 |\n\nSkills: Dodge 54, Melee (Basic) 61\n\nTraits: Armour (Leathers and Plates) 3, Prejudice (Ambosstein Enemies), Tough, Weapon (Sword) +8\n\nTalents: Strike to Stun"
+  },
+  {
+    "id": "rough-nights:reference:18-profile-dominique-herveaux-assassin-gold-1",
+    "name": "Dominique Herveaux – Assassin (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 18,
+    "text": "DOMINIQUE HERVEAUX – ASSASSIN (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 60 | 56 | 38 | 55 | 60 | 55 | 34 | 37 | 34 | 58 | 15 |\n\nSkills: Animal Care 47, Animal Training (Snake) 52, Athletics 75, Bribery 68, Charm 81, Charm Animal 44, Climb 48, Cool 46, Dodge 76, Endurance 70, Entertain (Act) 69, Entertain (Taunt) 63, Gossip 74, Haggle 78, Intimidate 47, Intuition 70, Melee (Basic) 65, Melee (Brawling) 70, Perception 80, Sleight of Hand 75, Stealth (Urban) 65\n\nTraits: Weapon (Dagger) +5\n\nTalents: Combat Reflexes 2, Etiquette (Servants), Marksman, Lip Reading, Luck 2, Read/Write, Relentless 3, Reversal 2, Sixth Sense, Warrior Born\n\nTrappings: Poisoned Dagger (the first Wound it causes inflicts the effects of Heartkill; the blade is coated with enough poison for three strikes), Servant’s Clothing"
+  },
+  {
+    "id": "rough-nights:reference:18-profile-gunni-bart-and-hans-frederick-smugglers-brass-3",
+    "name": "Gunni, Bart, And Hans-Frederick – Smugglers (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 18,
+    "text": "GUNNI, BART, AND HANS-FREDERICK – SMUGGLERS (BRASS 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 31 | 43 | 45 | 44 | 38 | 36 | 28 | 45 | 28 | 16 |\n\nTraits: Weapon (Bone Clubs) +8\n\nTrappings: Face Paint, Morrian Vestments"
+  },
+  {
+    "id": "rough-nights:reference:18-profile-handmaids-and-servants-silver-3",
+    "name": "Handmaids And Servants (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 18,
+    "text": "HANDMAIDS AND SERVANTS (SILVER 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 28 | 32 | 40 | 39 | 37 | 40 | 31 | 28 | 25 | 43 | 12 |\n\nTraits: Weapon (Fist) +6"
+  },
+  {
+    "id": "rough-nights:reference:19-profile-josef-aufwiegler-rabble-rouser-brass-3",
+    "name": "Josef Aufwiegler – Rabble Rouser (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 19,
+    "text": "JOSEF AUFWIEGLER – RABBLE ROUSER (BRASS 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 45 | 40 | 31 | 28 | 38 | 37 | 25 | 46 | 33 | 73 | 10 |\n\nTalents: Weapon (Fist) +5"
+  },
+  {
+    "id": "rough-nights:reference:19-profile-ursula-kopfgeld-master-bounty-hunter-silver-5",
+    "name": "Ursula Kopfgeld – Master Bounty Hunter (Silver 5)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 19,
+    "text": "URSULA KOPFGELD – MASTER BOUNTY HUNTER (SILVER 5)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 47 | 48 | 59 | 50 | 36 | 46 | 31 | 32 | 46 | 27 | 17 |\n\nSkills: Animal Care 37, Athletics 61, Bribery 39, Charm 37, Climb 64, Endurance 65, Gossip 43, Haggle 41, Intimidate 69, Intuition 46, Language (Gospodarinyi) 37, Melee (Basic) 63, Outdoor Survival 45, Perception 46, Ride (Horse) 51, Track 46\n\nTalents: Accurate Shot 4, Doomed (Thine end comes as others go), Shadow, Sprinter 2, Relentless, Very Strong, Very Resilient\n\nTraits: Weapon (Sword) +9, Prejudice (Boors), Ranged (Crossbow) +9\n\nTrappings: Crossbow with 10 Bolts, Manacles, Rope (10 yards)"
+  },
+  {
+    "id": "rough-nights:reference:20-profile-friedrich-von-pfeifraucher-magnate-gold-5",
+    "name": "Friedrich Von Pfeifraucher – Magnate (Gold 5)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 20,
+    "text": "FRIEDRICH VON PFEIFRAUCHER – MAGNATE (GOLD 5)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 46 | 38 | 27 | 25 | 43 | 27 | 38 | 46 | 33 | 52 | 9 |\n\nTraits: Weapon (Fist) +2\n\nTrappings: Courtly Garb, Jewellery worth 45 GC, 6 Poems"
+  },
+  {
+    "id": "rough-nights:reference:20-profile-hanna-lastkahn-townswoman-silver-2",
+    "name": "Hanna Lastkahn – Townswoman (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 20,
+    "text": "HANNA LASTKAHN – TOWNSWOMAN (SILVER 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 33 | 31 | 31 | 41 | 36 | 32 | 46 | 36 | 40 | 12 |\n\nTraits: Weapon (Fist) +3\n\nTrappings: 2 Love Letters, Rose"
+  },
+  {
+    "id": "rough-nights:reference:20-profile-mho-larz-and-curls-thugs-brass-3",
+    "name": "Mho, Larz, And ‘Curls’ – Thugs (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 20,
+    "text": "MHO, LARZ, AND ‘CURLS’ – THUGS (BRASS 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 50 | 33 | 53 | 43 | 42 | 41 | 29 | 27 | 43 | 28 | 17 |\n\nSkills: Dodge 56, Melee (Brawling) 60, (Melee Basic) 55\n\nTraits: Armour (Leathers) 1, Prejudice (Nobles), Weapon (Club) +9, Weapon (Knuckledusters) +7"
+  },
+  {
+    "id": "rough-nights:reference:20-profile-thomas-prahmhandler-master-merchant-gold-1",
+    "name": "Thomas Prahmhandler – Master Merchant (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 20,
+    "text": "THOMAS PRAHMHANDLER – MASTER MERCHANT (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 37 | 38 | 39 | 42 | 42 | 46 | 35 | 50 | 44 | 50 | 15 |\n\nTraits: Armour (Leathers) 1, Prejudice (Betrayers), Ranged (Whip) +5 (6), Weapon (Dagger) +6\n\nTrappings: 27 shillings and 17d, Fine Clothing"
+  },
+  {
+    "id": "rough-nights:reference:21-profile-allrella-elphoise-and-helga-slaanesh-cultists-silver-1",
+    "name": "Allrella, Elphoise, And Helga – Slaanesh Cultists (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 21,
+    "text": "ALLRELLA, ELPHOISE, AND HELGA – SLAANESH CULTISTS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 31 | 39 | 51 | 25 | 32 | 43 | 45 | 41 | 43 | 17 |\n\nTraits: Prejudice (Warriors), (Dagger) +6"
+  },
+  {
+    "id": "rough-nights:reference:21-profile-boatmen-silver-2",
+    "name": "Boatmen (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 21,
+    "text": "BOATMEN (SILVER 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 32 | 37 | 52 | 54 | 51 | 47 | 32 | 33 | 28 | 35 | 17 |\n\nSkills: Armour (Leathers) 1, Prejudice (Coachmen), Weapon (Club) +8"
+  },
+  {
+    "id": "rough-nights:reference:21-profile-coachmen-silver-2",
+    "name": "Coachmen (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 21,
+    "text": "COACHMEN (SILVER 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 33 | 54 | 31 | 45 | 36 | 50 | 38 | 29 | 55 | 29 | 16 |\n\nTraits: Prejudice (Boatmen), Ranged (Blunderbuss) +8 (20), Ranged (Whip) +6 (6), Weapon (Club) +7"
+  },
+  {
+    "id": "rough-nights:reference:21-profile-glimbrin-oddsocks-master-thief-brass-5",
+    "name": "Glimbrin Oddsocks – Master Thief (Brass 5)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 21,
+    "text": "GLIMBRIN ODDSOCKS – MASTER THIEF (BRASS 5)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 33 | 23 | 35 | 24 | 60 | 61 | 69 | 40 | 65 | 27 | 10 |\n\nSkills: Athletics 76, Channelling (Ulgu) 70, Climb 50, Cool 80, Dodge 71, Endurance 39, Gamble 50, Gossip 40, Evaluate 53, Haggle 30, Intuition 75, Language (Ghassally) 45, Language (Magick) 45, Lore (Reikland) 50, Perception 75, Pick Lock 84, Sleight of Hand 86, Stealth (Rural) 64, Stealth (Urban) 74\n\nTraits: Hatred (Greenskins), Prejudice (Witch Hunters), Weapon (Dagger) +6\n\nTalents: Fast Hands 3, Flee! 4, Suffuse with Ulgu, Mimic, Night Vision 2, Nimble Fingered, Read/Write, Sixth Sense, Small, Step Aside 2\n\nTrappings: 2 GC 17 shillings and 45d, Lock Picks, Sack, stolen good hidden in his quarters"
+  },
+  {
+    "id": "rough-nights:reference:22-profile-hans-orf-townsman-silver-2",
+    "name": "Hans Orf – Townsman (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 22,
+    "text": "HANS ORF – TOWNSMAN (SILVER 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 35 | 36 | 38 | 52 | 43 | 37 | 42 | 54 | 52 | 14 |\n\nTraits: Prejudice (Thieves), Weapon (Club) +7"
+  },
+  {
+    "id": "rough-nights:reference:22-profile-mercinellin-seedling-thorncobble-xiii-hustler-brass-1",
+    "name": "Mercinellin ‘Seedling’ Thorncobble Xiii – Hustler (Brass 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 22,
+    "text": "MERCINELLIN ‘SEEDLING’ THORNCOBBLE XIII – HUSTLER (BRASS 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 25 | 37 | 14 | 34 | 37 | 28 | 45 | 35 | 39 | 46 | 9 |\n\nSkills: Bribery 56, Charm 58, Consume Alcohol 44, Entertain (Singing) 52, Gamble 55, Gossip 51, Haggle 54, Intimidate 24, Melee (Basic) 30, Language (Mootish) 40, Leadership 51, Lore (Heraldry) 40, Lore (Reikland) 48, Play (Lyre) 50\n\nTraits: Weapon (Dagger) +4\n\nTalents: Attractive, Blather, Luck 2, Perfect Pitch, Read/ Write, Small\n\nTrappings: 12 shillings and 32d, Lyre, Pack of Cards"
+  },
+  {
+    "id": "rough-nights:reference:22-profile-ol-bess-artisan-silver-1",
+    "name": "Ol’ Bess – Artisan (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 22,
+    "text": "OL’ BESS – ARTISAN (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | 35 | 53 | 45 | 31 | 32 | 48 | 28 | 39 | 28 | 16 |\n\nTalents: Prejudice (Dwarfs), Weapon (Hammer) +9"
+  },
+  {
+    "id": "rough-nights:reference:22-profile-servants-cleaners-and-similar-menials-brass-3",
+    "name": "Servants, Cleaners, And Similar – Menials (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 22,
+    "text": "SERVANTS, CLEANERS, AND SIMILAR – MENIALS (BRASS 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 32 | 32 | 39 | 32 | 43 | 31 | 34 | 37 | 34 | 12 |\n\nTraits: Weapon (Bucket/Tool/Tray/Mop) +5"
+  },
+  {
+    "id": "rough-nights:reference:33-profile-imperial-viper",
+    "name": "Imperial Viper",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 33,
+    "text": "IMPERIAL VIPER\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 40 | – | 25 | 35 | 35 | 35 | – | 5 | 45 | – | 10 |\n\nTraits: Armour (Scales) 1, Bestial, Cold-Blooded, Size (Small), Weapon (Fangs) +4, Venom (Hard)"
+  },
+  {
+    "id": "rough-nights:reference:33-profile-kappans-racketeers-thugs-brass-3",
+    "name": "Kappan’S Racketeers – Thugs (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 33,
+    "text": "KAPPAN’S RACKETEERS – THUGS (BRASS 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 45 | 37 | 50 | 54 | 32 | 34 | 28 | 25 | 43 | 31 | 19 |\n\nTraits: Armour (Leathers) 1, Tough, Weapon (Cosh) +9"
+  },
+  {
+    "id": "rough-nights:reference:33-profile-otto-von-dammenblatz-noble-lord-gold-7",
+    "name": "Otto Von Dammenblatz – Noble Lord (Gold 7)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 33,
+    "text": "OTTO VON DAMMENBLATZ – NOBLE LORD (GOLD 7)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 52 | 67 | 51 | 49 | 41 | 42 | 42 | 47 | 43 | 54 | 17 |\n\nSkills: Bribery 82, Charm 62, Consume Alcohol 65, Gamble 71, Gossip 69, Intimidate 71, Intuition 46, Language (Bretonnian) 57, Leadership 64, Lore (Heraldry) 62, Lore (Wissenland) 57, Lore (Politics) 62, Melee (Fencing) 67, Melee (Parry) 72, Perception 56, Ride (Horse) 47\n\nTraits: Prejudice (Rivals), Weapon (Main Gauche) +7, Weapon (Rapier) +9\n\nTalents: Attractive 1, Carouser 3, Commanding Presence, Doomed (Blood and betrayal bring thee low), Etiquette (Nobles) 2, Iron Will, Marksman, Noble Blood, Public Speaker 2, Read/Write, Savvy, Suave, Wealthy 5\n\nTrappings: Best Quality Courtly Garb, a large retinue of staff, Jewellery worth 500 GC"
+  },
+  {
+    "id": "rough-nights:reference:34-profile-matthias-hubkind-witch-hunter-silver-3",
+    "name": "Matthias Hubkind – Witch Hunter (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 34,
+    "text": "MATTHIAS HUBKIND – WITCH HUNTER (SILVER 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 55 | 51 | 43 | 46 | 38 | 27 | 27 | 35 | 58 | 37 | 29 |\n\nSkills: Charm 47, Cool 73, Consume Alcohol 58, Dodge 45, Endurance 66, Gossip 47, Heal 55, Intimidate 63, Intuition 63, Language (Classical) 50, Language (Khazalid) 43, Lore (Sigmar) 51, Lore (Theology) 45, Lore (Torture) 50, Melee (Brawling) 75, Melee (Basic) 65, Perception 48, Ranged (Blackpowder) 66, Ride (Horse) 37\n\nTraits: Armour (Leathers) 1, Hatred (Heretics), Prejudice (the Indulgent), Prejudice (the Rich), Ranged (Pistol) +8 (20), Weapon (Sword) +8\n\nTalents: Ambidextrous, Berserk Charge, Coolheaded, Flagellant, Furious Assault, Hardy 3, Implacable 3, Marksman, Menacing, Read/Write, Resolute, Shadow, Stone Soup, Very Resilient\n\nTrappings: Book of Sigmar, Finger Bone of St. Helga, Magnificent Hat, 2 Pistols with 20 bullets and shot, 21. Silvered Sword"
+  },
+  {
+    "id": "rough-nights:reference:34-profile-restless-ghost",
+    "name": "Restless Ghost",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 34,
+    "text": "RESTLESS GHOST\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 40 | – | 30 | 32 | 35 | 43 | 18 | 14 | 45 | – | 13 |\n\nTraits: Dark Vision, Ethereal, Fear 2, Fury, Hatred (Matthias Hubkind), Undead, Unstable, Weapon +7"
+  },
+  {
+    "id": "rough-nights:reference:35-profile-8-watchmen-khorne-cultists-silver-1",
+    "name": "8 Watchmen – Khorne Cultists (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 35,
+    "text": "8 WATCHMEN – KHORNE CULTISTS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 55 | 45 | 35 | 35 | 30 | 30 | 30 | 25 | 55 | 25 | 17 |\n\nTraits: Armour (Half-plate) 3, Elite, Frenzy, Fury, Hardy, Weapon (Halberd) +7"
+  },
+  {
+    "id": "rough-nights:reference:35-profile-bloodletters",
+    "name": "Bloodletters",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 35,
+    "text": "BLOODLETTERS\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 55 | 35 | 45 | 35 | 60 | 40 | 30 | 25 | 75 | 15 | 17 |\n\nTraits: Armour (Skin) 5, Champion, Claws, Corruption (Moderate), Daemonic 8+, Fear 3, Frenzy, Horns +8, Painless, Unstable, Weapon +9"
+  },
+  {
+    "id": "rough-nights:reference:35-profile-magistrates-judges-gold-2",
+    "name": "Magistrates – Judges (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 35,
+    "text": "MAGISTRATES – JUDGES (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | 38 | 30 | 26 | 47 | 24 | 34 | 55 | 45 | 48 | 11 |\n\nSkills: Lore (Law) 75\n\nTraits: Prejudice (Liars), Weapon (Gavel) +3\n\nTrappings: Book of Law, Magistrate’s Robes, Wig"
+  },
+  {
+    "id": "rough-nights:reference:35-profile-petra-steinmetz-high-priestess-gold-1",
+    "name": "Petra Steinmetz – High Priestess (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 35,
+    "text": "PETRA STEINMETZ – HIGH PRIESTESS (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 55 | 35 | 41 | 43 | 56 | 39 | 35 | 72 | 63 | 56 | 18 |\n\nSkills: Lore (Law) 84, Melee (Basic) 68, Pray 78\n\nTraits: Blessed (Verena), Miracles (Verena), Weapon (Sword) +3"
+  },
+  {
+    "id": "rough-nights:reference:48-profile-brecht-kavenner-slaanesh-cultist-and-barrister-gold-3",
+    "name": "Brecht Kavenner – Slaanesh Cultist And Barrister (Gold 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 48,
+    "text": "BRECHT KAVENNER – SLAANESH CULTIST AND BARRISTER (GOLD 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 32 | 35 | 32 | 48 | 53 | 26 | 23 | 69 | 55 | 58 | 20 |\n\nTraits: Corrupted (Minor), Clever, Cunning, Hardy, Hatred (Khorne Worshippers), Leader, Magic Resistance (2), Mutation (Cosmetic: Extra mouth on stomach), Spellcaster (Daemonology, Slaanesh: Breath, Distracting, Eavesdrop, Manifest Lesser Daemon, Mundane Aura, Open Lock), Painless, Tough, Weapon (Dagger) +6"
+  },
+  {
+    "id": "rough-nights:reference:48-profile-emmanuelle-von-liebwitz-elector-countess-gold-15",
+    "name": "Emmanuelle Von Liebwitz – Elector Countess (Gold 15)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 48,
+    "text": "EMMANUELLE VON LIEBWITZ – ELECTOR COUNTESS (GOLD 15)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 48 | 31 | 31 | 38 | 67 | 51 | 57 | 59 | 68 | 80 | 15 |\n\nSkills: Art (Calligraphy) 62, Bribery 105, Charm 115, Consume Alcohol 63, Cool 73, Endurance 48, Entertain (Singing) 90, Evaluate 64, Gamble 89, Gossip 110, Haggle 100, Intimidate 63, Intuition 93, Language (Classical) 64, Language (Merogen) 60, Language (Tilean) 79, Leadership 100, Lore (the Arts) 69, Lore (the Empire) 74, Lore (History) 72, Lore (Heraldry) 84, Lore (Law) 64, Lore (Nuln) 89, Lore (Politics) 79, Lore (Wissenland) 69, Melee (Fencing) 54, Perform (Dancing) 76, Perception 91, Play (Harpsichord) 64, Play (Virginal) 62, Play (Violin) 67, Ride (Horse) 71, Ride (Pegasus) 56, Sleight of Hand 62\n\nTalents: Alley Cat, Ambidextrous 2, Argumentative, Attractive 8, Blather 5, Briber, Carouser 3, Cat-tongued 2, Commanding Presence 6, Coolheaded, Dealmaker, Doomed (Thy end is not thy end), Etiquette (Nobles) 8, Frightening 2, Gregarious 4, Inspiring 4, Iron Will, Lip Reading, Luck 4, Master Orator 5, Nimble Fingered, Noble Blood, Public Speaker 8, Read/Write, Resistance (Disease), Savvy, Schemer 5, Sharp, Suave, Tenacious 2, Warleader, Wealthy 25\n\nTrappings: Best Quality Royal Garb, Duchy of Meissen, Grand County of Nuln, Impeccable Taste in Fashion, Royal Jewels of Nuln, Wissenland Runefang (Dammaz Vengryn), Whatever Else She Wants"
+  },
+  {
+    "id": "rough-nights:reference:48-profile-noble-servants-gold-2",
+    "name": "Noble Servants (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 48,
+    "text": "NOBLE SERVANTS (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 29 | 31 | 34 | 37 | 49 | 40 | 33 | 47 | 30 | 45 | 12 |\n\nSkills: Charm 65, Gossip 55\n\nTalents: Noble Blood\n\nTraits: Cunning, Weapon (Fist) +5"
+  },
+  {
+    "id": "rough-nights:reference:49-profile-brocks-and-reiner-spies-silver-3",
+    "name": "Brocks And Reiner – Spies (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 49,
+    "text": "BROCKS AND REINER – SPIES (SILVER 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 42 | 36 | 32 | 29 | 34 | 41 | 33 | 29 | 39 | 37 | 10 |\n\nSkills: Entertain (Act) 48, Melee (Basic) 52, Sleight of Hand 46, Stealth (Urban) 51\n\nTraits: Ranged (Throwing Knife) +5 (6), Weapon (Dagger) +5"
+  },
+  {
+    "id": "rough-nights:reference:49-profile-musicians-silver-1",
+    "name": "Musicians (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 49,
+    "text": "MUSICIANS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 33 | 36 | 36 | 34 | 29 | 30 | 39 | 27 | 27 | 35 | 11 |\n\nSkills: Play (Various) 79\n\nTraits: Weapon (Instrument) +6"
+  },
+  {
+    "id": "rough-nights:reference:49-profile-palace-guards-gold-2",
+    "name": "Palace Guards (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 49,
+    "text": "PALACE GUARDS (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 59 | 55 | 47 | 43 | 43 | 47 | 30 | 28 | 68 | 38 | 22 |\n\nSkills: Dodge 57, Melee (Basic) 79\n\nTalents: Noble Blood\n\nTraits: Armour 3, Elite, Hardy, Tough, Weapon (Spear) +8"
+  },
+  {
+    "id": "rough-nights:reference:49-profile-performers-silver-1",
+    "name": "Performers (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 49,
+    "text": "PERFORMERS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 35 | 41 | 34 | 32 | 40 | 33 | 34 | 29 | 49 | 12 |\n\nSkills: Perform (Various) 79\n\nTraits: Weapon (Fist) +4"
+  },
+  {
+    "id": "rough-nights:reference:49-profile-servants-silver-1",
+    "name": "Servants (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 49,
+    "text": "SERVANTS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 29 | 28 | 33 | 36 | 33 | 37 | 30 | 36 | 34 | 39 | 11 |\n\nTalents: Beneath Notice\n\nTraits: Weapon (Fists) +5"
+  },
+  {
+    "id": "rough-nights:reference:49-profile-stagehands-silver-1",
+    "name": "Stagehands (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 49,
+    "text": "STAGEHANDS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | 31 | 52 | 46 | 31 | 40 | 34 | 25 | 27 | 27 | 15 |\n\nTalents: Well-prepared 4\n\nTraits: Weapon (Improvised) +7"
+  },
+  {
+    "id": "rough-nights:reference:50-profile-cannon-and-mortar-students-student-engineers-brass-4",
+    "name": "Cannon And Mortar Students – Student Engineers (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 50,
+    "text": "CANNON AND MORTAR STUDENTS – STUDENT ENGINEERS (BRASS 4)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 39 | 30 | 32 | 29 | 36 | 38 | 37 | 28 | 32 | 11 |\n\nSkills: Consume Alcohol 42, Ranged (Explosives) 44\n\nTraits: Ranged (Improvised Explosive) +6 (3), Weapon (Knife) +6\n\nTrappings: Half-empty Flasks, Crude Pamphlets, Stolen Small Fireworks"
+  },
+  {
+    "id": "rough-nights:reference:50-profile-edvard-lowenhertz-wyrd-brass-3",
+    "name": "Edvard Lowenhertz – Wyrd (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 50,
+    "text": "EDVARD LOWENHERTZ – WYRD (BRASS 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 31 | 27 | 33 | 31 | 56 | 42 | 34 | 61 | 29 | 25 | 11 |\n\nSkills: Entertain (Acting) 27, Entertain (Comedy) 26\n\nTraits: Armour (Leather Costume) 1, Corrupted (Minor), Clever, Cunning, Fast, Fury, Hatred (Detlef Sierck), Spellcaster (Caress of Laniph, Drain, Entangle, Fearsome, Murmured Whisper, Shock), Weapon (Dagger) +6"
+  },
+  {
+    "id": "rough-nights:reference:50-profile-edwina-lowenhertz-witch-brass-2",
+    "name": "Edwina Lowenhertz – Witch (Brass 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 50,
+    "text": "EDWINA LOWENHERTZ – WITCH (BRASS 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 31 | 32 | 33 | 57 | 49 | 36 | 57 | 32 | 46 | 12 |\n\nTraits: Clever, Cunning, Fast, Hatred (Detlef Sierck), Spellcaster (Drain, Entangle, Fearsome, Murmured Whisper, Shock), Weapon (Dagger) +6"
+  },
+  {
+    "id": "rough-nights:reference:50-profile-erwin-pakker-professor-gold-1",
+    "name": "Erwin Pakker – Professor (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 50,
+    "text": "ERWIN PAKKER – PROFESSOR (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 27 | 47 | 29 | 51 | 57 | 24 | 59 | 62 | 51 | 34 | 17 |\n\nSkills: Cool 63, Leadership 64, Lore (Engineer) 82\n\nTraits: Prejudice (Idiots, Students), Weapon (Fists) +4"
+  },
+  {
+    "id": "rough-nights:reference:51-profile-assassins-silver-1",
+    "name": "Assassins (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 51,
+    "text": "ASSASSINS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 44 | 36 | 34 | 37 | 42 | 47 | 31 | 37 | 33 | 41 | 15 |\n\nSkills: Melee (Basic) 59, Melee (Brawling) 54, Ranged (Crossbow) 46, Stealth (Urban) 57\n\nTraits: Armour (Leathers) 1, Cunning, Fast, Hardy, Hatred (Rival Gangs), Prejudice (Betrayers), Weapon (Dagger) +5, Weapon (Fist +3) • The Valantina Assassin also has the Ranged (Crossbow Pistol) +7 (10) Trait, and a dose of Black Lotus. • The Schatzenheimer assassin uses the profile as presented. • The Huydermans Assassin also has the Elite Trait, several spare Daggers with the Impale Quality, a ring with a hidden compartment containing a dose of Heartkill, and the Attractive (4) Talent."
+  },
+  {
+    "id": "rough-nights:reference:51-profile-detlef-sierck-genius-gold-3",
+    "name": "Detlef Sierck – Genius (Gold 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 51,
+    "text": "DETLEF SIERCK – GENIUS (GOLD 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 49 | 41 | 34 | 53 | 51 | 58 | 55 | 64 | 42 | 75 | 17 |\n\nSkills: Art (Playwriting) 114, Art (Poetry) 104, Athletics 51, Charm 95, Climb 49, Consume Alcohol 63, Cool 52, Dodge 71, Entertain (Acting) 115, Entertain (Comedy) 95, Entertain (Storytelling) 105, Evaluate 69, Gossip 95, Haggle 85, Intuition 61, Language (Bretonnian) 74, Language (Classical) 79, Language (Tilean) 69, Leadership 85, Lore (the Arts) 94, Lore (Heraldry) 74, Lore (History) 69, Melee (Basic) 59, Perception 61, Perform (Miming) 68, Research 74, Ride (Horse) 53, Sleight of Hand 75, Stealth (Urban) 63\n\nTalents: Argumentative, Artistic 4, Attractive 2, Blather 2, Carouser 3, Cat-tongued 4, Coolheaded, Distract, Doomed (What walks from Morr’s Portal shall shepherd you hence), Etiquette (Artists) 2, Etiquette (Nobles) 6, Gregarious 3, Lip Reading 2, Linguistics 3, Luck 3, Magnum Opus, Master of Disguise 6, Master Orator 6, Mimic 3, Nose for Trouble, Public Speaker 6, Read/Write, Savant (the Arts) 3, Savant (History) 2, Savvy, Seasoned Traveller 2, Sharp, Step Aside, Suave, Wealthy 3\n\nTrappings: Very Fne Clothing, Dress Sword (not suitable for use), Gnawing Sense of Loss, Scribbled Notes"
+  },
+  {
+    "id": "rough-nights:reference:52-profile-martyn-ruchen-chaos-cult-leader-and-chaos-sorcerer-silver-3",
+    "name": "Martyn Ruchen – Chaos Cult Leader And Chaos Sorcerer (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 52,
+    "text": "MARTYN RUCHEN – CHAOS CULT LEADER AND CHAOS SORCERER (SILVER 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 43 | 37 | 32 | 57 | 43 | 33 | 33 | 43 | 57 | 43 | 28 |\n\nSkills: Channelling 75, Endurance 89, Intimidate 52, Language (Dark Tongue) 53, Language (Magick) 58, Melee (Basic) 53\n\nTraits: Corrupted (Minor), Cunning, Disease (Itching Pox), Hardy (2), Hatred (Khorne Worshippers), Infected, Magic Resistance (1), Mutation (Cosmetic: Maggoty Tail), Spellcaster (Nurgle: Breath, Corrosive Blood, Reveal the Inner Beauty, Shock, Sleep), Painless, Tail Attack (6), Tough, Weapon (Dagger) +6\n\nTrappings: Many beautiful, blistering boils"
+  },
+  {
+    "id": "rough-nights:reference:52-profile-nurgle-cultists",
+    "name": "Nurgle Cultists",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 52,
+    "text": "NURGLE CULTISTS\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 38 | 32 | 34 | 49 | 33 | 28 | 30 | 29 | 36 | 26 | 18 |\n\nTraits: Corrupted (Minor), Hardy, Infected (Itching Pox), Weapon (Dagger) +7"
+  },
+  {
+    "id": "rough-nights:reference:52-reveal-the-inner-beauty",
+    "name": "Reveal the Inner Beauty",
+    "page": 52,
+    "category": "magic",
+    "text": "CN: 6\n\nRange: Touch\n\nTarget: Special\n\nDuration: Instant\n\nYou cause an object or individual you touch to decay rapidly. If inorganic, this Spell causes the object to become brittle, and unsuitable for use. If organic, the subject ripens rapidly until it begins to spoil, splitting open and spilling its stinking contents everywhere. A living creature must perform a Challenging (+0) Toughness Test to resist this Spell. On a failure, the target ages 2d10 years and permanently loses −1d10% from their Weapon Skill, Ballistic Skill, Strength, Toughness, Agility, and Dexterity Characteristics.",
+    "topic": "Printed spell"
+  },
+  {
+    "id": "rough-nights:reference:53-profile-hubkinds-mob-brass-4",
+    "name": "Hubkind’S Mob (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 53,
+    "text": "HUBKIND’S MOB (BRASS 4)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 33 | 26 | 43 | 31 | 27 | 32 | 31 | 25 | 36 | 30 | 16 |\n\nTraits: Armour (Leathers) 1, Fury, Hardy, Prejudice (Heretics), Weapon (Cudgel) +7"
+  },
+  {
+    "id": "rough-nights:reference:53-profile-nulner-watchmen-silver-1",
+    "name": "Nulner Watchmen (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 53,
+    "text": "NULNER WATCHMEN (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 31 | 33 | 41 | 36 | 30 | 34 | 38 | 28 | 30 | 17 |\n\nTalents: Drilled\n\nTraits: Armour (Half-plate) 3, Hardy, Prejudice (Lawbreakers), Weapon (Halberd) +7"
+  },
+  {
+    "id": "rough-nights:reference:53-profile-operagoer-silver-2",
+    "name": "Operagoer (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 53,
+    "text": "OPERAGOER (SILVER 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 28 | 25 | 28 | 31 | 33 | 32 | 37 | 43 | 30 | 39 | 11 |\n\nTraits: Weapon (Fists) +4"
+  },
+  {
+    "id": "rough-nights:reference:53-profile-watch-sergeant-silver-1",
+    "name": "Watch Sergeant (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 53,
+    "text": "WATCH SERGEANT (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 51 | 51 | 43 | 41 | 36 | 30 | 34 | 38 | 58 | 40 | 17 |\n\nTalents: Drilled, Kingpin\n\nTraits: Armour (Half-plate) 3, Elite, Hardy, Leader, Weapon (Sword and Shield) +8"
+  },
+  {
+    "id": "rough-nights:reference:53-profile-young-noble-gold-1",
+    "name": "Young Noble (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 53,
+    "text": "YOUNG NOBLE (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 36 | 27 | 31 | 30 | 28 | 43 | 41 | 29 | 30 | 35 | 12 |\n\nSkills: Consume Alcohol 40, Intimidate 41, Leadership 50, Melee (Fencing) 51\n\nTalents: Luck, Noble Blood, Wealthy\n\nTraits: Prejudice (the Poor), Weapon (Fists) +5, Weapon (Rapier and Main Gauche) +7"
+  },
+  {
+    "id": "rough-nights:reference:64-profile-wilhelm-von-saponatheim-noble-lord-gold-7",
+    "name": "Wilhelm Von Saponatheim – Noble Lord (Gold 7)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 64,
+    "text": "WILHELM VON SAPONATHEIM – NOBLE LORD (GOLD 7)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 57 | 51 | 31 | 50 | 55 | 38 | 52 | 61 | 46 | 49 | 17 |\n\nSkills: Animal Care 60, Athletics 53, Bribery 54, Consume Alcohol 60, Endurance 65, Gamble 62, Heal 72, Intimidate 51, Intuition 75, Leadership 74, Lore (Heraldry) 67, Lore (Politics) 76, Lore (Reikland) 70, Melee (Basic) 77, Melee (Fencing) 67, Melee (Parry) 77, Outdoor Survival 72, Perception 75, Play (Fife) 72, Ranged (Bow) 69, Ride (Horse) 58\n\nTalents: Carouser, Combat Aware, Commanding Presence, Doomed (Thou shall not face thine end on thine own two feet), Etiquette (Nobles), Iron Will, Luck, Mimic, Nimble Fingered, Noble Blood, Orientation, Read/Write, Savvy, Unshakable, War Leader\n\nTraits: Prejudice (Foreigners), Prejudice (Non-Soldiers), Weapon (Sword) +7"
+  },
+  {
+    "id": "rough-nights:reference:65-profile-inta-dapesht",
+    "name": "Inta-Dapesht",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 65,
+    "text": "INTA-DAPESHT\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 67 | — | 35 | 39 | 14 | 33 | 29 | 27 | 76 | 12 | 19 |\n\nTraits: Chill Grasp, Dark Vision, Ethereal, Frenzy, Hardy, Magical, Painless, Terror 3, Unstable*, Weapon +9 *Note: If Inta-Dapesht ‘dies’ from the Unstable Trait, he will reform after 8 hours at full Wounds."
+  },
+  {
+    "id": "rough-nights:reference:65-profile-joachim-bitterfeld-artisan-silver-1",
+    "name": "Joachim Bitterfeld – Artisan (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 65,
+    "text": "JOACHIM BITTERFELD – ARTISAN (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | 30 | 44 | 46 | 28 | 32 | 43 | 32 | 27 | 48 | 14 |\n\nSkills: Charm 58\n\nTraits: Weapon (Fists) +6"
+  },
+  {
+    "id": "rough-nights:reference:65-profile-nastassia-von-saponatheim-scion-gold-1",
+    "name": "Nastassia Von Saponatheim – Scion (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 65,
+    "text": "NASTASSIA VON SAPONATHEIM – SCION (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 36 | 35 | 25 | 33 | 47 | 36 | 35 | 34 | 32 | 43 | 11 |\n\nTalents: Etiquette (Nobles), Noble Blood, Sharp, Suave\n\nTraits: Weapon (Fists) +5"
+  },
+  {
+    "id": "rough-nights:reference:66-profile-cultists-of-the-jade-sceptre-gold-2",
+    "name": "Cultists Of The Jade Sceptre (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 66,
+    "text": "CULTISTS OF THE JADE SCEPTRE (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 26 | 32 | 34 | 29 | 33 | 28 | 30 | 36 | 36 | 43 | 10 |\n\nTalents: Noble Blood, Suave, Wealthy\n\nTraits: Corrupted (Minor), Spellcaster (Manifest Lesser Daemon)*, Weapon (Dagger) +7 *Note: The Cultists can only cast Manifest Lesser Daemon when they are gathered together. Each casts its once, summoning a Daemonette when they do so."
+  },
+  {
+    "id": "rough-nights:reference:66-profile-manfred-von-saponatheim-prisoner-brass-0",
+    "name": "Manfred Von Saponatheim – Prisoner (Brass 0)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 66,
+    "text": "MANFRED VON SAPONATHEIM – PRISONER (BRASS 0)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | 34 | 48 | 45 | 22 | 31 | 26 | 15 | 25 | 18 | 18 |\n\nTalents: Flee! Noble Blood, Strike Mighty Blow\n\nTraits: Afraid (anyone or anything that looks medical), Animosity (well-dressed Human males), Brute, Frenzy, Hardy, Hatred (his Father), Immunity to Psychology, Stupid."
+  },
+  {
+    "id": "rough-nights:reference:67-profile-clothilde-telland-noble-gold-4",
+    "name": "Clothilde Telland – Noble (Gold 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 67,
+    "text": "CLOTHILDE TELLAND – NOBLE (GOLD 4)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 32 | 29 | 27 | 45 | 34 | 45 | 36 | 31 | 53 | 11 |\n\nTalents: Carouser, Noble Blood, Suave, Wealthy\n\nTraits: Weapon (Fists) +4"
+  },
+  {
+    "id": "rough-nights:reference:67-profile-josef-von-angendorf-cat-burglar-gold-2",
+    "name": "Josef Von Angendorf – Cat Burglar (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 67,
+    "text": "JOSEF VON ANGENDORF – CAT BURGLAR (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 51 | 51 | 60 | 32 | 61 | 74 | 89 | 61 | 62 | 83 | 15 |\n\nSkills: Athletics 104, Climb 90, Cool 92, Dodge 99, Entertain (Acting) 63, Sleight of Hand 54, Stealth 61\n\nTalents: Etiquette (Criminals), Noble Blood\n\nTraits: Clever, Cunning, Elite, Fast, Leader, Weapon (Dagger and Swordbreaker) +7"
+  },
+  {
+    "id": "rough-nights:reference:67-profile-taggees-spies-gold-2",
+    "name": "Taggees – Spies (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 67,
+    "text": "TAGGEES – SPIES (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 56 | 54 | 38 | 43 | 45 | 49 | 38 | 43 | 57 | 41 | 16 |\n\nSkills: Athletics 69, Climb 58, Dodge 64, Melee (Brawling) 61\n\nTraits: Bounce, Champion, Cunning, Distracting, Elite, Fast, Tough, Weapon (Fists) +5, Weapon (Tiger Claws) +6"
+  },
+  {
+    "id": "rough-nights:reference:80-profile-erich-von-holzenauer-noble-gold-2",
+    "name": "Erich Von Holzenauer – Noble (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 80,
+    "text": "ERICH VON HOLZENAUER – NOBLE (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 53 | 60 | 49 | 52 | 43 | 50 | 45 | 39 | 56 | 47 | 19 |\n\nSkills: Charm 58, Leadership 63, Melee (Basic) 63, Melee (Fencing) 73, Ranged (Blackpowder) 83, Ride (Horse) 70\n\nTalents: Attractive 3, Combat Aware, Luck, Noble Blood\n\nTraits: Prejudice (The Dishonourable), Weapon (Axe) +8, Weapon (Foil) +7"
+  },
+  {
+    "id": "rough-nights:reference:80-profile-siegfried-von-saponatheim-noble-gold-2",
+    "name": "Siegfried Von Saponatheim – Noble (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 80,
+    "text": "SIEGFRIED VON SAPONATHEIM – NOBLE (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 53 | 39 | 35 | 32 | 48 | 36 | 50 | 36 | 27 | 57 | 11 |\n\nSkills: Bribery 72, Lore (Poisons) 51, Melee (Fencing) 73, Sleight of Hand 60\n\nTalents: Attractive, Briber, Luck 2, Noble Blood, Read/ Write, Suave\n\nTraits: Prejudice (Political Rivals), Weapon (Foil) +6"
+  },
+  {
+    "id": "rough-nights:reference:81-profile-galina-hohengolfrid-noble-gold-2",
+    "name": "Galina Hohengolfrid – Noble (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 81,
+    "text": "GALINA HOHENGOLFRID – NOBLE (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 41 | 32 | 31 | 29 | 46 | 34 | 48 | 39 | 37 | 49 | 10 |\n\nTalents: Attractive, Etiquette (Nobles) 3, Dealmaker, Pure Soul, Noble Blood, Read/Write\n\nTraits: Weapon (Fists) +3"
+  },
+  {
+    "id": "rough-nights:reference:81-profile-heinrich-von-bruner-magnate-gold-3",
+    "name": "Heinrich Von Bruner – Magnate (Gold 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 81,
+    "text": "HEINRICH VON BRUNER – MAGNATE (GOLD 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 49 | 32 | 40 | 39 | 42 | 31 | 47 | 52 | 29 | 54 | 12 |\n\nSkills: Intimidate 60, Leadership 54\n\nTalents: Noble Blood, Read/Write, Sixth Sense, Wealthy 10\n\nTraits: Corruption (Minor), Prejudice (Aschaffenbergs), Weapon (Fists) +4"
+  },
+  {
+    "id": "rough-nights:reference:81-profile-maximilian-aschaffenburg-scion-gold-1",
+    "name": "Maximilian Aschaffenburg – Scion (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 81,
+    "text": "MAXIMILIAN ASCHAFFENBURG – SCION (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 34 | 31 | 29 | 26 | 36 | 37 | 42 | 37 | 21 | 39 | 8 |\n\nTalents: Argumentative, Blather, Carouser, Noble Blood\n\nTraits: Animosity (Bruners), Weapon (Fists) +2"
+  },
+  {
+    "id": "rough-nights:reference:81-profile-rickard-aschaffenberg-magnate-gold-3",
+    "name": "Rickard Aschaffenberg – Magnate (Gold 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 81,
+    "text": "RICKARD ASCHAFFENBERG – MAGNATE (GOLD 3)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 57 | 32 | 60 | 61 | 44 | 24 | 43 | 46 | 61 | 51 | 24 |\n\nSkills: Leadership 66, Melee (Basic) 79\n\nTalents: Fearless (Combat), Furious Assault, Gregarious 3, Noble Blood, Read/Write\n\nTraits: Hardy, Weapon (Dress Sword) +8"
+  },
+  {
+    "id": "rough-nights:reference:82-profile-florian-pfeifraucher-noble-gold-2",
+    "name": "Florian Pfeifraucher – Noble (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 82,
+    "text": "FLORIAN PFEIFRAUCHER – NOBLE (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 47 | 32 | 33 | 32 | 45 | 37 | 46 | 31 | 24 | 32 | 11 |\n\nSkills: Charm 37, Consume Alcohol 37, Gamble 33, Haggle 34\n\nTalents: Carouser 2, Noble Blood\n\nTraits: Weapon (Fists) +3"
+  },
+  {
+    "id": "rough-nights:reference:82-profile-heinrich-von-falkenhayn-noble-gold-2",
+    "name": "Heinrich Von Falkenhayn – Noble (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 82,
+    "text": "HEINRICH VON FALKENHAYN – NOBLE (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 44 | 35 | 32 | 37 | 67 | 33 | 48 | 48 | 38 | 41 | 12 |\n\nTalents: Acute Sense (Sight), Attractive 2, Noble Blood, Read/Write, Savvy, Sharp\n\nTraits: Weapon (Fists) +3"
+  },
+  {
+    "id": "rough-nights:reference:82-profile-jean-luc-de-cadent-agent-gold-1",
+    "name": "Jean-Luc De Cadent – Agent (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 82,
+    "text": "JEAN-LUC DE CADENT – AGENT (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 69 | 24 | 36 | 34 | 54 | 68 | 44 | 32 | 61 | 53 | 12 |\n\nSkills: Entertain (Act) 73, Intuition 69, Language (Reikspiel) 35, Perception 84\n\nTalents: Attractive, Blather, Cat-tongued, Lip Reading, Master of Disguise, Noble Blood, Read/Write, Secret Identity, Shadow, Sharp\n\nTraits: Armour (Faux-Plate) 1, Prejudice (Rude Folk), Weapon (Sword and Shield) +7"
+  },
+  {
+    "id": "rough-nights:reference:83-profile-borgan-foambeard-guildmaster-gold-1",
+    "name": "Borgan Foambeard – Guildmaster (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 83,
+    "text": "BORGAN FOAMBEARD – GUILDMASTER (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 44 | 37 | 51 | 55 | 33 | 25 | 64 | 39 | 64 | 32 | 21 |\n\nTalents: Acute Sense (Taste), Craftsman (Brewer) 3, Magic Resistance, Master Tradesman (Brewer) 3, Night Vision, Read/Write, Strong-minded, Sturdy\n\nTraits: Animosity (Non-Dwarfs), Armour (Half-plate) 3, Weapon (Kosh) +9"
+  },
+  {
+    "id": "rough-nights:reference:83-profile-ernst-maler-burgomeister-gold-1",
+    "name": "Ernst Maler – Burgomeister (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 83,
+    "text": "ERNST MALER – BURGOMEISTER (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 29 | 27 | 31 | 56 | 43 | 46 | 57 | 49 | 58 | 12 |\n\nSkills: Bribery 85, Charm 72, Consume Alcohol 36, Endurance 51, Evaluate 67, Gossip 78, Haggle 81, Intuation 75, Language (Bretonnian) 63, Language (Clessical) 62, Lore (Law) 65, Lore (Ubersreik) 72, Lore (Politics) 72, Perception 63\n\nTalents: Argumentative, Beneath Notice, Blather 4, Briber 3, Cat-Tongued 2, Dealmaker 3, Embezzle, Ettiquette (Merchants, Nobles), Luck, Public Speaker 5, Read/Write, Schemer 3, Suave, Supportive, Wealthy\n\nTraits: Weapon (Fists) +2"
+  },
+  {
+    "id": "rough-nights:reference:83-profile-otto-krupp-guildmaster-gold-1",
+    "name": "Otto Krupp – Guildmaster (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 83,
+    "text": "OTTO KRUPP – GUILDMASTER (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 33 | 23 | 27 | 36 | 52 | 45 | 57 | 59 | 56 | 48 | 13 |\n\nSkills: Haggle 68, Heal 79\n\nTalents: Dealmaker, Etiqutte (Guilder), Etiqutte (Nobles), Field Dressing, Surgery\n\nTraits: Armour (Plague Doktor’s Leathers) 1, Weapon (Fists) +2"
+  },
+  {
+    "id": "rough-nights:reference:84-profile-gunther-emming-high-priest-gold-1",
+    "name": "Gunther Emming – High Priest (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 84,
+    "text": "GUNTHER EMMING – HIGH PRIEST (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 39 | 30 | 36 | 50 | 31 | 46 | 33 | 59 | 52 | 53 | 17 |\n\nSkills: Charm 73, Leadership 63, Lore (Theology) 72\n\nTalents: Etiquette (Cultists, Soldiers), Savant (The Empire), Savant (Warfare)\n\nTraits: Prejudice (Ulricans), Weapon (Ceremonial Hammer) +6"
+  },
+  {
+    "id": "rough-nights:reference:84-profile-heinrich-gutenberg-high-priest-gold-1",
+    "name": "Heinrich Gutenberg – High Priest (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 84,
+    "text": "HEINRICH GUTENBERG – HIGH PRIEST (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 32 | 31 | 33 | 45 | 52 | 34 | 36 | 59 | 53 | 50 | 16 |\n\nSkills: Charm 70, Cool 93, Entertain (Storytelling) 80, Intuition 72, Lore (Law) 79, Lore (Theology) 69, Research 69\n\nTalents: Etiquette (Cultists, Scholars), Savant (History), Savant (Law), Savvy\n\nTraits: Prejudice (Borderlanders, The Intolerant), Weapon (Fists) +3"
+  },
+  {
+    "id": "rough-nights:reference:84-profile-lorith-silverleaf-envoy-silver-4",
+    "name": "Lorith Silverleaf – Envoy (Silver 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 84,
+    "text": "LORITH SILVERLEAF – ENVOY (SILVER 4)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 71 | 63 | 29 | 46 | 74 | 59 | 43 | 63 | 55 | 44 | 14 |\n\nTalents: Acute Sense (Sight), Night Vision, Savvy, Seasoned Traveller, Second Sight, Read/Write\n\nTraits: Prejudice (Non-Elves), Weapon (Fists) +2"
+  },
+  {
+    "id": "rough-nights:reference:85-profile-andrea-pfeffer-officer-gold-2",
+    "name": "Andrea Pfeffer – Officer (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 85,
+    "text": "ANDREA PFEFFER – OFFICER (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 69 | 32 | 51 | 34 | 58 | 32 | 30 | 54 | 56 | 47 | 19 |\n\nSkills: Intimidate 71, Intuition 68, Leadership 67, Lore (Law) 64, Lore (Politics) 69, Melee (Basic) 89, Perception 73\n\nTalents: Public Speaker, Noble Blood, Robust, Strike to Stun\n\nTraits: Hardy, Weapon (Sword) +9"
+  },
+  {
+    "id": "rough-nights:reference:85-profile-celestine-hoch-priestess-silver-1",
+    "name": "Celestine Hoch – Priestess (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 85,
+    "text": "CELESTINE HOCH – PRIESTESS (SILVER 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 34 | 32 | 32 | 50 | 33 | 51 | 54 | 53 | 51 | 17 |\n\nSkills: Heal 74, Pray 61, Trade (Chemist) 61\n\nTalents: Bless (Shallya), Etiquette (Physicians), Read/ Write, Savant (Medicine), Savant (Theology)\n\nTraits: Prejudice (Warmongers), Weapon (Fists) +5"
+  },
+  {
+    "id": "rough-nights:reference:85-profile-erwin-blucher-officer-gold-2",
+    "name": "Erwin Blucher – Officer (Gold 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 85,
+    "text": "ERWIN BLUCHER – OFFICER (GOLD 2)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 55 | 24 | 48 | 59 | 48 | 27 | 28 | 39 | 41 | 50 | 18 |\n\nSkills: Charm 65, Consume Alcohol 59, Dodge 37, Entertain (Storytelling) 60, Gamble 49, Lore (Ubersreik) 54, Melee (Basic) 75, Perception 58\n\nTalents: Drilled, Etiquette (Soldiers), Noble Blood\n\nTraits: Weapon (Sword) +8"
+  },
+  {
+    "id": "rough-nights:reference:85-profile-jendrik-von-dabernick-officer-gold-1",
+    "name": "Jendrik Von Dabernick – Officer (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 85,
+    "text": "JENDRIK VON DABERNICK – OFFICER (GOLD 1)\n\n| M | WS | BS | S | T | I | Agi | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 75 | 51 | 57 | 62 | 44 | 31 | 46 | 32 | 68 | 43 | 23 |\n\nSkills: Gamble 42, Lore (Warfare) 42, Melee (Basic) 90, Melee (Fencing) 95, Melee (Parrying) 105\n\nTalents: Beat Blade 3, Careful Strike 4, Combat Aware, Ettiquette (Nobles, Soldiers), Inspiring 4, Gregarious 2, Jump Up, Noble Blood, Public Speaking 2, Warrior Born, Warleader 3\n\nTraits: Armour (Half-plate) 3, Weapon (Sabre) +3"
+  },
+  {
+    "id": "rough-nights:reference:87-random-class-and-career-table",
+    "name": "Random Class And Career Table",
+    "category": "table",
+    "topic": "Gnome creation and religion",
+    "page": 87,
+    "text": "Class Career/Species\n\nGnome\n\n| Class | Career/Species | Gnome |\n| --- | --- | --- |\n| ACADEMICS | Apothecary | 01 |\n|  | Lawyer | 02 |\n|  | Physician | 03–04 |\n|  | Priest | 05 |\n|  | Scholar | 06–07 |\n|  | Wizard | 08–14 |\n| BURGHERS | Agitator | 15 |\n|  | Artisan | 16–17 |\n|  | Beggar | 18 |\n|  | Investigator | 19 |\n|  | Merchant | 20–21 |\n|  | Rat Catcher | 22 |\n|  | Townsman | 23–28 |\n|  | Watchman | 29 |\n| COURTIERS | Advisor | 30 |\n|  | Artist | 31 |\n|  | Envoy | 32 |\n|  | Noble | 33 |\n|  | Servant | 34–35 |\n|  | Spy | 36–40 |\n|  | Warden | 41–42 |\n| PEASANTS | Bailiff | 43 |\n|  | Herbalist | 44 |\n|  | Hunter | 45–46 |\n|  | Miner | 47–54 |\n|  | Scout | 55–58 |\n|  | Villager | 59–62 |\n| RANGERS | Bounty Hunter | 63 |\n|  | Entertainer | 64–68 |\n|  | Messenger | 69 |\n|  | Pedlar | 70–75 |\n| RIVERFOLK | Boatman | 76 |\n|  | Riverwoman | 77–80 |\n|  | Smuggler | 81–83 |\n| ROGUE | Bawd | 84–85 |\n|  | Charlatan | 86–90 |\n|  | Fence | 91 |\n|  | Outlaw | 92 |\n|  | Racketeer | 93–94 |\n|  | Thief | 95–98 |\n| WARRIORS | Guard | 99 |\n|  | Soldier | 00 |"
+  },
+  {
+    "id": "rough-nights:reference:87-random-species-table",
+    "name": "Random Species Table",
+    "category": "table",
+    "topic": "Gnome creation and religion",
+    "page": 87,
+    "text": "| 1D100 | Species |\n| --- | --- |\n| 01–89 | Human |\n| 90–93 | Halfling |\n| 94–97 | Dwarf |\n| 98 | Gnome |\n| 99 | High Elf |\n| 00 | Wood Elf |"
+  },
+  {
+    "id": "rough-nights:reference:88-attributes-table",
+    "name": "Attributes Table",
+    "category": "table",
+    "topic": "Gnome creation and religion",
+    "page": 88,
+    "text": "|  |  |\n| --- | --- |\n| Attribute | Gnome |\n| Weapon Skill | 2d10+20 |\n| Ballistic Skill | 2d10+10 |\n| Strength | 2d10+10 |\n| Toughness | 2d10+15 |\n| Initiative | 2d10+30 |\n| Agility | 2d10+30 |\n| Dexterity | 2d10+30 |\n| Intelligence | 2d10+30 |\n| Willpower | 2d10+40 |\n| Fellowship | 2d10+15 |\n| Wounds | (2 × TB)+WPB |\n| Fate | 2 |\n| Resilience | 0 |\n| Extra Points | 2 |\n| Movement | 3 |"
+  },
+  {
+    "id": "rough-nights:reference:90-strictures",
+    "name": "Evawn — Strictures",
+    "category": "rule",
+    "topic": "Gnome creation and religion",
+    "page": 90,
+    "text": "One coin in ten belongs to Evawn. By theft or by barter, make a profit every day. Never be caught in a lie. Never stay in the same location for more than a month. Steal items of use to the Gnommi, and take them back to your clan."
+  },
+  {
+    "id": "rough-nights:reference:90-strictures-2",
+    "name": "Mabyn — Strictures",
+    "category": "rule",
+    "topic": "Gnome creation and religion",
+    "page": 90,
+    "text": "Protect the Gnome burrows, no matter the cost. Always take vengeance for wrongs done to you, your clan, or your burrow. Never reveal the locations of your home burrow to outsiders. Practice with your sword for at least an hour a day. If you seek to be unseen, do not be spotted."
+  },
+  {
+    "id": "rough-nights:reference:90-strictures-3",
+    "name": "Ringil — Strictures",
+    "category": "rule",
+    "topic": "Gnome creation and religion",
+    "page": 90,
+    "text": "Never deny a reasonable request to entertain others. Do not share any secrets outside your clan, cult, or cronies. Don’t let a serious moment pass without a gag, a song, or a trick. A practical joke is the best revenge. Learn a useful secret every week."
+  },
+  {
+    "id": "rough-nights:reference:91-al-zahr",
+    "name": "Al-Zahr",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 91,
+    "text": "Of the many dice games played in the Empire, none are as widespread as Al-zahr. Originally from Araby, Al-zahr is known by several different names across the Old World, including Azar in Estalia, and Hasard in Bretonnia. Its rules are simple, and requires little more than throwing two dice to match a target number. The first player to roll the target number wins the round. It is common for spectators (and players) to bet on the results of each roll, and some pubs have tables with common bets carved into their surfaces.\n\nPlay: Every player adds an equal stake to the pot. The first player then chooses a number between 7–15 to be the target. Play proceeds clockwise, starting with the first player, with each player taking a single roll. On your turn, roll 2d10 and total them for a result from 2–20. If your roll matches the target, or is a 20, you win the round, taking the entire pot. A roll of 16–19 lets you\n\ntake one stake from the pot. A roll of 7–15 that isn’t the target becomes the new target for the next player. A roll of 3–6 forces you to add another stake to the pot or drop out from the round. Finally, a roll of 2 drops you from the round. Play continues until the pot is emptied, or until there is only one player in play, who then wins the remaining pot. A full game usually lasts for as many rounds as there are players, providing each player with an opportunity to roll first.\n\nSpecial: Fortune points can be used on your turn to reroll your result. Further, the Diceman Talent allows you to roll 1 extra die per level in Diceman — you then choose to keep two of the dice to build your total on your turn."
+  },
+  {
+    "id": "rough-nights:reference:91-alvatafl",
+    "name": "Alvatafl",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 91,
+    "text": "Alvatafl is northern boardgame played on a 15x15 squared grid. It has an army of 48 Dwarf pieces surround a centrally placed army of 12 Elves with an Elven prince in his castle at the centre. Said to be as old as the grudge between the two elder species, Alvatafl has the Dwarfs moving very slowly at a single square per go, and the Elves moving swiftly in straight lines. The Dwarfs are trying to kill the prince or capture his castle before he manages to escape the board. Popular in Nordland and Ostland, carved sets of Alvatafl are found in most northern taverns and inns. Larger versions of the game are also common in Kislev — there the game is called Zasada and instead depicts 15 centrally-placed Gospodar Winger Lancers with an Ice Witch surrounded by 60 Trolls.\n\nPlay: Each Round, you make a Challenging (+0) Intelligence or Lore (Warfare) Test, and add your Intelligence Bonus to the SL. The total scored by the Elf player shows how many Dwarf pieces are taken that Round. The total scored by the Dwarf player is quartered, rounding up, to show how many Elf pieces are taken that Round. If you roll a Critical, the game is won automatically if: you are the Dwarf player and the rolled number on the units die is equal or less the number of Elf pieces you have taken; you are the Elf player and the number rolled the units die quadrupled (so a successful roll of 33 would count as 12 as 4 × 3 = 12) is equal or less to the number of Dwarf pieces taken. Otherwise, the first side to take more than half their opponent’s pieces wins. If both sides reach the winning condition in the same Round, the game is a draw."
+  },
+  {
+    "id": "rough-nights:reference:91-options-fast-pub-games",
+    "name": "Options: Fast Pub Games",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 91,
+    "text": "For some groups, involved rolls can get in the way of fun roleplaying. If you want your pub games resolved quickly, enact an appropriate Challenging (+0) Opposed Skill Test, using the Skill marked in the Play section of the pub game you are playing. If there is no Skill marked (such as for Al-zahr), instead make a Challenging (+0) Opposed Gamble Test. The higher SL wins the game."
+  },
+  {
+    "id": "rough-nights:reference:91-pub-games-critical-results",
+    "name": "Pub games — Critical results",
+    "page": 91,
+    "category": "rule",
+    "text": "If any of the rules refer to a ‘Critical’, this means rolling a double on a successful Test, much as described in WFRP on page 159, but without the requirement for it to be in Combat.",
+    "topic": "Pub games"
+  },
+  {
+    "id": "rough-nights:reference:92-arm-wrestling",
+    "name": "Arm Wrestling",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 92,
+    "text": "Arm wrestling is one of the simplest pub sports. It requires two opponents who face each other over a table and grip hands, their elbows touching the table. The goal is to ‘pin’ the opponent’s gripped hand to the table by pushing it down.\n\nThe sport is highly competitive, and it’s common for each pub where arm wrestling is popular to have a champion. These champions often challenge each other to determine the best arm wrestlers in the local town or province.\n\nPlay: Make an Extended Opposed Challenging (+0) Strength Test, adding your Strength Bonus to your SL each Round before determining the winner. The winner of each Round gains +1 Advantage to be used in the bout using the normal rules. The first Character to reach 10+ SL is the winner. For every Toughness Bonus Rounds that pass without a winner, you gain +1 Fatigue Condition (which you will regain after just 5 minutes rest after the bout)."
+  },
+  {
+    "id": "rough-nights:reference:92-beast-among-the-tailors",
+    "name": "Beast Among The Tailors",
+    "category": "table",
+    "topic": "Pub games",
+    "page": 92,
+    "text": "Beast Among the Tailors, or just ‘Beast’ is a popular skittle game of Nordland, Ostland, and Middenland. It involves swinging a metal ball on a 3-foot chain to knock down wide-spaced skittles arranged in a 4x4 square.\n\nThe game takes its name from the Clothier Riots of Middenheim in 1805, where the city’s tailors took exception to the deep satire of their craft offered in the popular play, The Ten Tailors of Todenheim. The riots were eventually put down by troops led by ‘The Beast of Mohl’, Lord Heinrich of Thuggenheim, who is said to have ploughed through the tailors like ‘a bull through Halflings’.\n\nPlay: You have three swings to knock down all 16 skittles. For a swing, make a Very Easy (+60) Ballistic Skill Test and add your Ballistic Skill Bonus. The total is how many skittles you knock down. If you roll a Critical, you knock down all skittles. The Difficulty of any following Tests is dependent on how many skittles remain to be felled, as follows:\n\n|  |  |\n| --- | --- |\n| Skittles | Test |\n| 12–15 | Very Easy (+60) |\n| 10–11 | Easy (+40) |\n| 8–9 | Average (+20) |\n| 6–7 or 1 | Challenging (+0) |\n| 3–5 | Difficult (−10) |\n| 2 | Hard (−20) |"
+  },
+  {
+    "id": "rough-nights:reference:92-bowls",
+    "name": "Bowls",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 92,
+    "text": "Typically played in a pub yard or beer garden, bowls involves throwing or rolling weighted balls at a target ball or stick. The sport is popular enough that some pubs have special lawns set aside for play. Although common across the Empire, it is most often found in Stirland, Averland, and the Mootland.\n\nPlay: Each player has three bowls. On your go, roll a Challenging (+0) Ranged (Throw) Test and record your SL if it’s a Success — any roll of higher than +6 SL counts as +6 SL for recording your success (you are touching the target ball or stick); a Failure means your shot lands out-of-bounds. If you score the same SL or higher than an existing opponent’s bowl, you can lower that bowl’s recorded SL by −1 per SL you spend to knock it aside, to a minimum of 0 (knocking the bowl out- of-bounds). Once all Players have thrown 3 bowls, the Player with the highest recorded SL wins; a draw remains a draw. If playing for points, each bowl you have with a higher SL than any opponent scores one point for that Game. Normally, the most points after 3 games wins."
+  },
+  {
+    "id": "rough-nights:reference:93-bull-ring",
+    "name": "Bull Ring",
+    "category": "table",
+    "topic": "Pub games",
+    "page": 93,
+    "text": "Usually played outdoors where there is more space for long throws, Bull Ring involves throwing rings over a set distance to hoop horns or sticks driven into a bull’s head. Bull Ring is very popular in Ostland, Ostermark, and down into Stirland and the Mootland, but can be found in pubs across the Empire. In Nordland, it is common to find rural communities playing Bull Ring with severed Beastman heads, a practice considered somewhat heretical in most provinces of the Empire.\n\nPlay: Before throwing a ring, choose a target and attempt a Ranged (Throw) Test at the appropriate Difficulty. A Success scores the indicated points. A Critical loops the next target down the table instead, scoring more points. The player with the highest points after 5 throws wins.\n\n|  |  |  |\n| --- | --- | --- |\n| Points | Target | Difficulty |\n| 10 | Nose stick | Very Easy (+60) |\n| 20 | Brow stick | Easy (+40) |\n| 30 | Horns | Average (+20) |\n| 40 | Ear Stick | Challenging (+0) |\n| 50 | Cheek Stick | Difficult (−10) |\n| 75 | Beard Stick | Hard (−20) |\n| 100 | Gorge stick | Very Hard (−30) |\n\nSpecial: If you have the Sharpshooter Talent, you can count all Tests as one step easier. So, a Throw to hoop the horns for 30 points requires an Easy (+40) Ranged (Throw) Test."
+  },
+  {
+    "id": "rough-nights:reference:93-cerevis",
+    "name": "Cerevis",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 93,
+    "text": "Named for the small, circular hats worn by studying academics in the University of Nuln, Cerevis is a popular student drinking game played with cards. The rules require making silly descriptions of any card played, typically concerning recent lectures, hated professors, or local politics. So, playing a duchess card, the player may say ‘It’s Professor Dullich, and her boring lectures!’, and, if an opponent defeated the Duchess with a seven of hammers, it may be followed by ‘Dullich, too clever for her own good, is hammered for being a heretic!’\n\nAdding to the general confusion, everything in the game uses a different name — the cards are ‘cannons’, aces are ‘oblati’, twos are ‘comets’, threes are ‘barrows’, and so on; players who use the normal names for the cards must immediately take a deep drink of beer as a forfeit. Losers of each round chalk owls on the table beside them — each owl is erased when the player drinks half a stein of beer. Because games of Cerevis can leave even the most seasoned drinkers reeling, many universities and colleges have banned the game completely, but this has done little more than increase its popularity.\n\nPlay: A Round of Cerevis requires an Average (+20) Combined Gamble and Initiative Test from all players. The lowest SL on the Gamble Test loses the Round, and has to mark an owl. If the Initiative Test is failed, the player accidentally uses the correct name for one of the cards, and must take a deep drink. For every 3 Initiative Tests you fail, and for every 2 owls you erase, make a Challenging (+0) Consume Alcohol Test. The results of this Test, and its impact on the Stinkin Drunk Table, are found in WFRP, page 121."
+  },
+  {
+    "id": "rough-nights:reference:94-darts",
+    "name": "Darts",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 94,
+    "text": "A perennial favourite of riverside taverns and State Soldiers, darts involves throwing small missiles at a target called a ‘butt’ — usually made from the cross-section of a tree — which is split into segments, with each segment worth a different number of points. Although hotly denied by most folk of the Empire, historians believe the game has its roots with the peasants of Bretonnia, where it is called fléchettes.\n\nPlay: Toss a coin to determine who goes first. On your turn, throw 3 darts. For each dart, make a Challenging (+0) Ranged (Throw) Test. If successful, you score your units or your tens die, or your units or your tens die × 10 in points, you choose — so, a successful roll of 26 could be either 2, 6, 20, or 60 points. If you fail, you score your units die in points — so, a failed roll of 73 scores 3 points. If you roll a Critical, you score any result you wish from 1–100 points. If you roll a Fumble, you miss the board completely. The goal is to score a total of 501 points exactly. If you score more, your turn is over and the points scored by your last dart is ignored.\n\nSpecial: If you have the Sharpshooter Talent, you can modify the result of your units die by 1, to a maximum of 10, and a minimum of 1."
+  },
+  {
+    "id": "rough-nights:reference:94-dominoes",
+    "name": "Dominoes",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 94,
+    "text": "Supposedly imported along the Silk Road from Ind and Cathay to Tilea then beyond, Dominoes uses 28 tiles marked with pips ranging from 0–6 on two parts. Players begin with seven tiles drawn at random, and play them in turn, matching tiles by the numbers of pips in a continuous row, taking an extra tile if they cannot play on their turn. The player who places all their tiles first wins. If this cannot happen, the winner is the player with the fewest pips on their tiles still in hand.\n\nPlay: To play, every player makes an Opposed Average (+20) Gambling Test. On a draw, the drawing players compare the roll on their units die for the Test. The lowest number wins."
+  },
+  {
+    "id": "rough-nights:reference:94-dwile-flonking",
+    "name": "Dwile Flonking",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 94,
+    "text": "Originally a Mootlander game, the summertime pub sport of Dwile Flonking has gained broader acceptance, and is especially popular in Stirland and Reikland. It involves 2 teams of 12, and requires two circles of 11 players dance hand-in-hand around a single opponent who spins in the opposite direction. After a count of three, the central player of each team ‘flonks’ his ‘dwile’ — i.e.: throws a beer-soaked cloth — at the surrounding dancers, trying to hit one, preferably in the face. On a hit, the flonker scores points for his team. On a miss, called a ‘swadge’, the flonker must down a pint of beer from a chamber pot called a ‘gazunder’ before the dwile is fetched by the opposing team and passed down the line of all eleven dancers as they chant ‘pot, pot, pot!’\n\nPlay: When flonking, make an Opposed Ranged (Throw)/ Dodge Test against a random player amongst the 11 dancers. If successful, you score a ‘ripper’ (leg hit) for 1 point. With 3+ SL, you instead score a ‘morther’ (body hit) for 2 points. With 6+ SL, you score a ‘wanton’ (head hit) for 3 points. If you miss, you must down a pint of beer and make a Challenging (+0) Consume Alcohol Test. If you fail, you don’t drink all the beer the from the gazunder before the dwile is passed down the line of your opponents, and your team loses 1 point. At the end of the game, every player who has not rolled on the Stinking Drunk table (see WFRP, page 121) is considered to be too sober and loses a point for their team. The team with the most points wins."
+  },
+  {
+    "id": "rough-nights:reference:94-middenball",
+    "name": "Middenball",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 94,
+    "text": "Middenball is perhaps the largest team sport in the Empire, with informal leagues between pubs played in most provinces. With a history as old as Sigmar, it is said to have its origins with the Teutogen tribe of Middenland, where games of ‘Muddibal’ were played to hone key combat skills. The brutality of this ancient game is still in evidence in the modern version, but is codified with relatively strict rules that no longer allow weapons or the use of a living creature as the ‘ball’.\n\nPlayed with 2 teams of 11 players, the aim is to move a ball into the opponent’s goal by any means possible. Middenball is insanely popular in Middenheim, where it is frequently referred to as ‘Snotball’ as some teams still illegally use tied-up Snotlings as balls.\n\nPlay: Full rules for Middenball are covered in Middenheim: City of the White Wolf. For fast play, each Round have all players take an Average (+20) Melee (Brawling) Test or a Challenging (+0) Athletics Test, and add up the total for each team. The team with the higher total gains +1 Advantage for the next Round (using the normal Advantage rules), and will score a goal if their total is +25 or higher. A game lasts for 2 halves of 3 Rounds (with each Round lasting 10 minutes)."
+  },
+  {
+    "id": "rough-nights:reference:95-muhlen",
+    "name": "Mühlen",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 95,
+    "text": "This 2-player favourite from Reikland and Middenland is played on a gridded board with 24 intersections called ‘oghams’. Each players’ nine pieces are played and moved between these oghams to create ‘mills’ of three pieces in a row, which allows you to remove an opposing piece from the game. Play continues until one player has only two pieces remaining. Many variations of the game exist with larger and smaller boards, and more or fewer pieces.\n\nPlay: Make an Extended Opposed Easy (+40) Intelligence Test, and add your Intelligence Bonus to the total each Round. The first player to reach 9+ SL wins. If both players score 9+ SL on the same Round, the game is a draw."
+  },
+  {
+    "id": "rough-nights:reference:95-pub-quizzes",
+    "name": "Pub Quizzes",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 95,
+    "text": "Popular in the many university districts and towns of the Empire, and where Verena worship is strong, pub quizzes involve teams answering general knowledge questions to score points. Usually, the questions start simple and grow progressively harder. The team with the most points at the end of the quiz wins.\n\nPlay: Every quizzer enacts 7 Rounds of Intelligence Tests, with the Difficulty typically starting at Very Easy, and progressing to Very Hard for the last Round. If at least 1 quizzer in your team passes the Test for the Round, your team scores 1 point. The team with the highest points at the end of the 7 Rounds wins. Draws are settled with ‘tie-breakers’, which are usually a further Round of Very Hard questions. It is common for Rounds to be themed around certain subjects; if you have a relevant Lore for that subject (as determined by the GM — Lore (History) for a round of questions about the Empire’s past, for example) you may use that Skill in place of your Intelligence for the Round."
+  },
+  {
+    "id": "rough-nights:reference:95-scarlet-empress",
+    "name": "Scarlet Empress",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 95,
+    "text": "In 1923 IC, Count Primus von Bildhofen’s claimed Scarlet Empress, the card game named after his grandmother, Empress Molrella III, was more popular than Sigmar. Although it arguably cost him his life — as he was burned for heresy just four months later — some believe he may have had a point, as Scarlett Empress is now widely claimed to be the most popular card game in the Old World.\n\nTypically played with 2–6 players, the game involves securing the best hand possible from two rounds of trading cards and drawing new ones whilst trying to avoid the Scarlet Empress card.\n\nPlay: Everyone playing puts a stake into the pot, then takes an Average (+20) Gambling Test. If it’s a draw, all players either add another stake, or drop out the game. This continues until there is a clear winner who takes the entire pot.\n\nSpecial: If you have the Tower of Memories Talent that lets you count and memorise cards, the Gambling Test to play Scarlet Empress is instead Easy (+40)."
+  },
+  {
+    "id": "rough-nights:reference:95-stones",
+    "name": "Stones",
+    "category": "rule",
+    "topic": "Pub games",
+    "page": 95,
+    "text": "Known by many names, Stones is one of the most common board games played in the Old World and beyond.\n\nPlayed with 2–4 players, either individually or with partners, Stones uses an octagonal, squared board, with each player controlling four larger pieces called ‘stones’ and six smaller pieces called ‘pebbles’. Stones can move 1 square, or take an adjacent, opposing piece by hopping over it. Pebbles can move 1 square, or hop over all adjacent pieces in a straight line. Additionally, moving a piece to the opposite end of the board ‘saves’ it. The game ends when a player has no pieces remaining on the board, where points are then tallied: 1 point per saved piece, 1 point per piece taken, 1 point for ending the game. The highest points win.\n\nThere are many versions of Stones, the most common of which include larger boards capable of taking up to 8 players (this is the standard in Ulthuan, where the game is called Daroirui’uthal), two-player only variants (such as Mel’nitzy in Kislev), and versions that use dice (such as Pedres from Estalia).\n\nPlay: Play requires an Extended Opposed Average (+20) Intelligence Test. The first Character to reach 10+ SL is the winner. If this does not happen for 10 Rounds, the game is a draw."
+  }
+]

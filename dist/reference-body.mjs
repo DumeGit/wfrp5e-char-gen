@@ -24,6 +24,15 @@ function fieldsHTML(entry, fields) {
 }
 export function referenceBodyHTML(row) {
   const x = { ...row.entry, text: searchBookText(row.entry).text };
+  if (row.printedReference) {
+    let html = ruleTextHTML(row.entry.text);
+    if (row.kind === "profile")
+      html = html.replace(
+        /<p>(Skills|Talents|Traits|Optional Traits|Trappings|Attacks|Armour|Weapons):/g,
+        "<p><strong>$1:</strong>",
+      );
+    return `${html}${x.notes ? `<aside class="notice"><strong>Source note</strong><p>${esc(x.notes)}</p></aside>` : ""}`;
+  }
   if (
     ["rule", "condition", "psychology", "property", "trait"].includes(row.kind)
   )

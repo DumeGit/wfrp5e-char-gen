@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume III",
   "shortTitle": "Archives III",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -31,6 +31,10 @@
     "origins": "origins.json",
     "rules": "rules.json",
     "cants": "cants.json",
-    "coverage": "coverage.json"
-  }
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  },
+  "notes": [
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
+  ]
 }

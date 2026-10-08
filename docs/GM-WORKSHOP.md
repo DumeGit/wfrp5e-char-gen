@@ -121,3 +121,7 @@ Implemented the user-selected A palette as an entry-point theme of the shared de
 Inspected the live profile browser/preview, Customise, Equipment & magic, Review & export, and mobile all-book search/rule reader. Checked 1440×900, 821×900 and 390×844 layouts without horizontal page overflow after the fix, plus loaded emblems and readable source/issue panels. Body, secondary, shell, primary and primary-hover role pairs measured at least 4.93:1 text contrast. Shared keyboard focus, reduced-motion rules and monochrome print styles remain in place. The isolated verification draft did not change personal saved characters.
 
 Release validation: npm run check:release passed all 328 tests; final CSS formatting, rebuilt content-versioned worker and offline coverage passed with 18 packs, 85 modules and 254 published assets. No palette preference is saved and no new runtime code or assets are loaded.
+
+## Supplemental reference reading
+
+The workshop’s starting profiles and calculations remain Fifth Edition core-only. Shared global search now includes isolated printed supplemental NPC/creature profiles and gameplay chapters as read-only references, alongside Tables and Endeavours. Edition warnings distinguish unconverted Fourth Edition text from approved adaptations. Opening a reference never selects a starting profile, changes a draft or enables supplemental mechanics. Search coverage is generated separately in SEARCH-COVERAGE.md.

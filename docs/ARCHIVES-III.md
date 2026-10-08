@@ -18,7 +18,7 @@ Source: supplied `Archives of the Empire - Volume III.pdf`, 96 pages, SHA-256 `e
 
 ## User-approved decisions
 
-- **Skip alternative armour entirely** (pp. 34–38). No variants, new layering, helmets or alternate profiles imported; core armour stays unchanged.
+- **Skip alternative armour in creator calculations** (pp. 34–38). No creation variant, new layering, helmets or alternate equipment profiles are enabled; core armour stays unchanged. The later search expansion makes the printed alternative system readable as reference text only.
 - **Old Faith purchase XP excludes the six Bless grants**, counting Invoke's additional Blessing and purchases. This interpretation is explicitly user-approved; the supplement delegates prices to the core Miracle table without defining the count. With one Invoke grant, the next five purchases cost 100 XP each; after six counted Blessings, the next costs 200 XP. Prayers grant no tracker boxes. Undo returns XP and removes the prayer. Duplicates across Bless, Invoke and purchases are prohibited.
 - Retain core Goodwill, Mirkride, Nepenthe, Nostrum, Part the Branches and Protective Charm rather than replacing their definitions.
 - Animal-doctor variant: Lore (Herbs) → Animal Care; Trade (Herbalist) → Animal Training; Craftsman (Herbalist) → Hardy; Master Tradesman (Herbalist) → Robust. Trade (Charms) → Charm Animal remains unavailable because its source Skill is absent from the Fifth Edition Career. Secret Signs (Hedge Witch) uses core Hedgefolk. Extra choices do not increase the eight free Career Advances.
@@ -48,3 +48,7 @@ Enterprises, including optional starting ownership (p. 6), financing/debt, tradi
 `scripts/extract-archives-iii.py` stages text and Career columns/symbols. `scripts/build-archives-iii.py --output-dir dist/data/books/archives-iii` produces the reviewed pack and adjacent optional variant. Source text remains in the parent workspace's `tmp/pdfs/archives-iii-review`; scripts do not push/publish.
 
 Tests cover every supplement combination, unchanged armour/tables, three Careers, five origins, exclusive allocations, Old Faith free/paid/duplicate/undo behavior, XP boundaries, Fellstave, Cant thresholds/Lore restrictions/undo/save validation, variant allocations and editable PDF exports. Browser checks cover desktop/mobile selections and purchases. PDFs retain all 556 editable fields with full magic/Cant references in the appended record.
+
+## Expanded reference search — 7 October 2026
+
+Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.

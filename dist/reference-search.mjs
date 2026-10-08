@@ -6,7 +6,12 @@ import { createReferenceLinker } from "./book-search-links.mjs";
 import { createSearchController } from "./search-controller.mjs";
 import { loadReferenceLibrary } from "./search-library.mjs";
 import { referenceBodyHTML } from "./reference-body.mjs";
-import { searchLabel, linkReferenceNodes } from "./search-presentation.mjs";
+import {
+  searchLabel,
+  linkReferenceNodes,
+  referenceSnippetText,
+} from "./search-presentation.mjs";
+import { createSearchEngine } from "./search-engine.mjs";
 
 export function createReferenceSearch(library) {
   const input = document.querySelector("#book-search"),
@@ -30,15 +35,21 @@ export function createReferenceSearch(library) {
     linkText,
     currentView,
     history = [],
-    previewTarget;
+    previewTarget,
+    engine;
   const controller = createSearchController({
     async getIndex() {
-      const payload = await loadReferenceLibrary(library);
+      const payload = await loadReferenceLibrary(library, undefined, {
+        normalize: false,
+      });
       index = payload.rows;
       books = payload.books;
       linkText = createReferenceLinker(index);
+      engine?.dispose();
+      engine = createSearchEngine(index);
       return index;
     },
+    searchIndex: (query, category) => engine.search(query, category),
     getScope: () => "all supplied books",
     onOpen: (key) => openRule(key),
     renderResult(row) {
@@ -84,14 +95,16 @@ export function createReferenceSearch(library) {
       .join("");
   }
   function snippet(row) {
-    const text =
+    let text =
       row.excerpt ||
+      (row.printedReference ? row.entry.text : "") ||
       searchBookText(row.entry).text ||
       row.entry.class ||
       row.entry.category ||
       (row.kind === "skill"
         ? `${row.entry.advanced ? "Advanced" : "Basic"} · ${characteristicNames[row.entry.char]}`
         : "");
+    if (row.printedReference) text = referenceSnippetText(text);
     const query = normalizeSearch(input.value).split(" ")[0];
     const at = text.toLowerCase().indexOf(query),
       start = at > 70 ? at - 35 : 0;
@@ -99,13 +112,18 @@ export function createReferenceSearch(library) {
   }
   function sourceText(row) {
     const b = books.find((b) => b.id === row.entry.source.book);
-    return `${b?.shortTitle || b?.title || "Core"} · p. ${row.entry.source.page}`;
+    return `${b?.shortTitle || b?.title || "Core"} · p. ${row.entry.source.page}${row.printedReference && b.edition === 4 ? " · Fourth Edition" : ""}`;
   }
   function renderRule(key) {
     const row = index.find((x) => x.key === key);
     if (!row) return;
     document.querySelector("#book-search-title").textContent = row.name;
-    body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(searchLabel(row))}</span> ${ref(row)}</p><div class="search-book-reference">${referenceBodyHTML(row)}</div><div class="search-rule-actions"><button type="button" class="text-button" data-search-back>Back to search</button></div>`;
+    const printedWarning =
+      row.printedReference &&
+      books.find((b) => b.id === row.entry.source.book)?.edition === 4
+        ? '<p class="notice"><strong>Fourth Edition source.</strong> This reference preserves its printed mechanics; no Fifth Edition conversion is implied. References to its core rulebook pages refer to Fourth Edition.</p>'
+        : "";
+    body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(searchLabel(row))}</span> ${ref(row)}</p>${printedWarning}<div class="search-book-reference">${referenceBodyHTML(row)}</div><div class="search-rule-actions"><button type="button" class="text-button" data-search-back>Back to search</button></div>`;
     linkReferences(row);
     if (!box.open) box.showModal();
   }

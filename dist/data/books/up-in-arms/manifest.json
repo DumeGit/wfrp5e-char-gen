@@ -4,7 +4,7 @@
   "title": "Up in Arms",
   "shortTitle": "Up in Arms",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -25,8 +25,9 @@
     ]
   },
   "notes": [
-    "Only character-creation material is integrated. Injury, mounted combat, Pursuits, group Advantage, hireling management, structure damage and Warrior Endeavours remain outside this creator.",
-    "Unpriced descriptive Trappings and unspecified ammunition quantities remain unresolved rather than invented."
+    "Only character-creation mechanics are automated; separate printed gameplay references are searchable. Injury, mounted combat, Pursuits, group Advantage, hireling management, structure damage and Warrior Endeavours remain outside this creator.",
+    "Unpriced descriptive Trappings and unspecified ammunition quantities remain unresolved rather than invented.",
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
   ],
   "files": {
     "careers": "careers.json",
@@ -37,6 +38,7 @@
     "tables": "tables.json",
     "market": "market.json",
     "weapons": "weapons.json",
-    "coverage": "coverage.json"
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
   }
 }

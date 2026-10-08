@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume II",
   "shortTitle": "Archives II",
   "edition": 4,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -42,6 +42,10 @@
     "armour": "armour.json",
     "market": "market.json",
     "astrology": "astrology.json",
-    "coverage": "coverage.json"
-  }
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  },
+  "notes": [
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
+  ]
 }

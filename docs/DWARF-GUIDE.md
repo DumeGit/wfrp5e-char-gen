@@ -1,6 +1,6 @@
 # Dwarf Player’s Guide integration
 
-Source: the user-supplied `Dwarf Player's Guide.pdf`, 144 pages. Printed pages match PDF positions. MarkItDown provides searchable text; PDF tables, columns and Career symbols were checked separately. The pack records its source SHA-256 and includes only structured creator content, not the source PDF.
+Source: the user-supplied `Dwarf Player's Guide.pdf`, 144 pages. Printed pages match PDF positions. MarkItDown provides searchable text; PDF tables, columns and Career symbols were checked separately. The pack records its source SHA-256 and includes structured creator content plus separately reviewed gameplay references, not the source PDF.
 
 Enable **Dwarf Player’s Guide** in Choose books. Fifth Edition core allocations, XP prices, native languages, Creature Traits and existing Talents govern unless a reviewed user decision below says otherwise. This is a creator integration; descriptions of situational or campaign effects do not automate those effects.
 
@@ -60,3 +60,7 @@ Vehicles, artillery, crews, engineering installations, forging, play-time grudge
 `scripts/extract-dwarf-guide.py` stages extraction outside the published app. `scripts/prepare-dwarf-guide.py --output-dir ../tmp/pdfs/dwarf-guide-prepared` applies reviewed conversions. Copy only `manifest.json` and files declared by its `files` object into the pack; never copy full page text or raw extraction into `dist`.
 
 Tests cover all 128 combinations of earlier supplements in both load orders, regional tables, all new Career schemes and complete allocations, name boundaries, Longbeard values, unavailable choices, optional swaps, shared rune limits, Doom grants, grudges, Species restrictions, shop precedence, schema failures and all 556 editable PDF fields. Browser verification uses an isolated draft; exported PDFs are rendered and checked independently of field values.
+
+## Expanded reference search — 7 October 2026
+
+Grudges, original regional/name/Career tables, engineering/artillery/vehicles, runesmithing, named weapon rules and ancestor obligations. Forging, crew/vehicle management and campaign progression remain unautomated. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.

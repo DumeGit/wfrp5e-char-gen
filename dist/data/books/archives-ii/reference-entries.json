@@ -1,0 +1,978 @@
+[
+  {
+    "id": "archives-ii:reference:14-profile-isrogdal-the-urgent-ogre-protagonist-former-pugilist-silver-1",
+    "name": "Isrogdal The Urgent — Ogre Protagonist, Former Pugilist (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 14,
+    "text": "ISROGDAL THE URGENT — OGRE PROTAGONIST, FORMER PUGILIST (SILVER 1)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 41 | 32 | 58 | 52 | 11 | 32 | 25 | 22 | 33 | 26 | 36 |\n\nTraits: Armour 2, Weapon (Club +9, Knuckledusters +9)\n\nSkills: Athletics 45, Bribery 28, Cool 37, Consume Alcohol 57, Dodge 42, Endurance 62, Entertain (Taunt) 27,Gamble 32, Gossip 27, Haggle 27, Intimidate 72, Lore (Ogres) 25, Melee (Basic 51, Brawling 54)\n\nTalents: Combat Reflexes, Dirty Fighting 2, In- fighter, Large, Night Vision, Resistance (Poison (Ingested)), Very Strong, Vice (Food)\n\nTrappings: Gut Plate, Mail Coat and Chausses, Mail Coif, Hand Weapon (Club), Knuckledusters, 2d10 Silver Shillings"
+  },
+  {
+    "id": "archives-ii:reference:14-profile-ugrik-the-lost-ogre-outlaw-brass-2",
+    "name": "Ugrik The Lost — Ogre Outlaw (Brass 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 14,
+    "text": "UGRIK THE LOST — OGRE OUTLAW (BRASS 2)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 48 | 30 | 53 | 50 | 22 | 33 | 25 | 25 | 33 | 22 | 36 |\n\nTraits: Armour 1, Weapon (Bow +8, Club +9)\n\nSkills: Athletics 43, Consume Alcohol 55, Cool 38, Dodge 38, Endurance 55, Gamble 30, Heal 27, Intimidate 58, Language (Reikspeil) 28, Lore (Local 30, Ogres 30), Melee (Basic) 53, Navigation 25, Outdoor Survival 30, Perception 27, Ranged (Bow) 35, Track 5\n\nTalents: Combat Reflexes, Dirty Fighting, In-fighter, Large, Night Vision, Resistance (Poison (Ingested)), Rover, Strike to Stun, Very Strong, Vice (Food)\n\nTrappings: Hand Weapon (Cannon Ball Club), Gut Plate, Hand Weapon (Club), Bow with 12 Arrows, 2d10 Brass Pennies"
+  },
+  {
+    "id": "archives-ii:reference:18-ogres-and-mutation",
+    "name": "Ogres And Mutation",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": "18–19",
+    "text": "Though resistant to the mutating effects of Chaos, Ogres are not immune to mutation. However, the typical Ogre does not fear or loathe the mutant as do most citizens of the Empire. They may find them odd, but then again most people find Ogres odd as well. The odds of an Ogre gaining a physical or mental mutation, as explained on WFRP page 183, are:\n\n|  |  |\n| --- | --- |\n|  | Ogre |\n| Body | 01-10 |\n| Mind | 11-99 |\n\nGrave Robber: Their greed often takes them to the strangest places and the moral qualms of other species mean little to an Ogre, who is more than willing to unearth an unprotected corpse or two for money (and if they are not paid, they just secured a free meal!). Even the whisper of treasure widens the eyes of a greedy Ogre, so it’s not surprising to find many futilely working from grave to grave, desperately hoping for the glint of gold (and possibly a good fight).\n\nGuard: Ogres are often employed as bodyguards by those that can afford their extortionate fees. They excel in their duties for few are willing to openly attack an Ogre if given a choice. However, their sheer bulk can often cause problems as they are incapable of entering many of the establishments their employers may frequent.\n\nHunter: In their homelands, Ogres are renowned for their hunting skills, where they vie to stalk, kill, and eat the biggest creatures they can, outshining their rivals. Many Ogres travel far and wide in search of the biggest kill, for the larger the meal, the bigger the gut!\n\nMiner: Their mighty strength makes Ogres exceptional miners even though their sheer bulk has gotten more than one stuck. It is rumoured that certain Orc and Goblin lairs were excavated at speed by specially commissioned mercenary Ogres.\n\nOutlaw: The Empire’s laws can often confuse an Ogre, who will all too often fall back on their hard-held belief that might is right in any given situation. Thus, many of their kind soon become notorious outlaws without meaning to, fleeing the cities of the Empire rarely understanding what they’ve done wrong.\n\nPedlar: In the end, almost all Ogres become a vagabond of sorts at some point in their lives. Their hunger to know what lies across the horizon drags them from one town to the next, from one nation to the next, never knowing what they’re looking for, and probably never finding it. Along the way, they keep themselves fed by selling their natural talents.\n\nPit Fighter: The bloodsport of pit fighting originally came from the Ogre Kingdoms far to the east. There they carve great pits into the earth to represent their hungry god, the Great Maw, and then make offerings of flesh and stage great combats. Ogres, obviously, love pit fighting, and commonly partake whenever they can, whether it is their chosen career or not.\n\nProtagonist: Although Ogres make natural protagonists, they often go a little too far, as they are prone to killing and eating their marks rather than simply beating them up. Most Ogres don’t even see this as a career, more just the natural way of things: ‘You’ll pay for my meal if I batter summun’? Sure, who you wannus to hit?’"
+  },
+  {
+    "id": "archives-ii:reference:18-random-class-and-career-table",
+    "name": "Random Class And Career Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 18,
+    "text": "| Class | Career/Species | Ogre |\n| --- | --- | --- |\n| ACADEMIC | Ogre Butcher | 01 |\n| BURGHERS | Artisan | 02 |\n|  | Beggar | 03–04 |\n|  | Rat Catcher | 06 |\n|  | Watchman | 07–12 |\n| COURTIERS | Servant | 13 |\n| PEASANTS | Bailiff | 14 |\n|  | Hunter | 15–21 |\n|  | Miner | 22–23 |\n|  | Rhinox Herder | 24-26 |\n| RANGERS | Bounty Hunter | 27–29 |\n|  | Entertainer | 30–32 |\n|  | Pedlar | 33–39 |\n| RIVERFOLK | Seaman | 40 |\n|  | Stevedore | 41–43 |\n| ROGUES | Grave Robber | 44–47 |\n|  | Outlaw | 48–56 |\n|  | Racketeer | 57–61 |\n| WARRIORS | Guard | 62–68 |\n|  | Pit Fighter | 69–79 |\n|  | Protagonist | 80–84 |\n|  | Maneater | 85–91 |\n|  | Soldier | 92–00 |"
+  },
+  {
+    "id": "archives-ii:reference:18-species",
+    "name": "Species",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 18,
+    "text": "If you wish, your Character can be an Ogre. Either choose to play an Ogre, or roll 1d100 and consult the following Random Species Table. You gain +20 XP if you accept the first result."
+  },
+  {
+    "id": "archives-ii:reference:20-new-psychology-vice",
+    "name": "Vice",
+    "category": "psychology",
+    "topic": "Ogres and astrology",
+    "page": 20,
+    "text": "You are plagued by a need to indulge in your Vice constantly, with your thoughts always straying towards them. Indulging in your Vice must be to an unhealthy extent — indulging in food doesn’t mean having a meal, but being a glutton and eating everything you can until you are bloated and made sick. Whenever you are confronted by the Target of your Vice, you must attempt a Psychology Test (WFRP, page 190). If you fail, you must immediately indulge in your Vice, forsaking all other actions and duties. You indulge until you are insensible, gaining one Fatigued Condition. At the end of every subsequent Round, you may attempt another Psychology Test to bring this state to an end. You suffer –20 to all Fellowship Tests towards any Characters who have witnessed your gluttony, as they are repulsed by your behaviour. For each full day you spend having not indulged in your Vice, you gain a cumulative –20 to all Psychology Tests until you do so."
+  },
+  {
+    "id": "archives-ii:reference:20-ogre-attributes-table",
+    "name": "Ogre Attributes Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 20,
+    "text": "Characteristic\n\nRoll Weapon Skill\n\n2d10 + 20 Ballistic Skill\n\n2d10 + 10 Strength\n\n2d10 + 35 Toughness\n\n2d10 + 35 Initiative\n\n2d10 Agility\n\n2d10 + 15 Dexterity\n\n2d10 + 10 Intelligence\n\n2d10 + 10 Willpower\n\n2d10 + 20 Fellowship\n\n2d10 + 10 Wounds\n\n(SB+(2×TB)+WPB)×2 Fate\n\n0 Resilience\n\n3 Extra Points\n\n1 Movement\n\n6"
+  },
+  {
+    "id": "archives-ii:reference:20-ogre-species-skills-and-talents",
+    "name": "Ogre Species Skills and Talents",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 20,
+    "text": "Skills: Athletics, Consume Alcohol, Endurance, Entertain (Storytelling), Intimidate, Language (Grumbarth), Lore (Ogres), Melee (Basic), Melee (Brawling), Navigation, Outdoor Survival, Track\n\nTalents: Dirty Fighting, Large, Resistance (Chaos), Resistance (Poison (Ingested)), Very Resilient or Very Strong, Vice (Food)"
+  },
+  {
+    "id": "archives-ii:reference:20-skills-and-talents",
+    "name": "Skills and Talents",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 20,
+    "text": "Just as with any other Species, you can choose 3 Skills to gain 5 Advances each and 3 Skills to gain 3 Advances each from the Ogre Skills and Talents list. You also gain access to 6 Species Talents; where you are offered a choice between two Talents, you may select one Talent from the choices given. Note: Like other Species, it is assumed that all Imperial Ogres are fluent in Reikspiel."
+  },
+  {
+    "id": "archives-ii:reference:21-age",
+    "name": "Age",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 21,
+    "text": "Though the natural lifespan for Ogres is around 120 years, very few Ogres die of old age. To determine a random starting age, roll 5d10 + 15."
+  },
+  {
+    "id": "archives-ii:reference:21-eye-colour-table",
+    "name": "Eye Colour Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 21,
+    "text": "| 2d10 | Ogre |\n| --- | --- |\n| 2 | Grey |\n| 3 | Green |\n| 4 | Amber |\n| 5–7 | Hazel |\n| 8–11 | Brown |\n| 12–14 | Dark Brown |\n| 15–17 | Sienna |\n| 18 | Black |\n| 19 | Purple Black |\n| 20 | Blue Black |"
+  },
+  {
+    "id": "archives-ii:reference:21-hair-colour-table",
+    "name": "Hair Colour Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 21,
+    "text": "| 2d10 | Ogre | 2d10 | Ogre |\n| --- | --- | --- | --- |\n| 2 | Brown | 12–14 | Dark Brown |\n| 3 | Red Brown | 15–17 | Black |\n| 4 | Terracotta | 18 | Charcoal |\n| 5–7 | Sienna | 19 | Jet Black |\n| 8–11 | Burgundy | 20 | Blue Black |"
+  },
+  {
+    "id": "archives-ii:reference:21-height",
+    "name": "Height",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 21,
+    "text": "On average, male Ogres stand over 9 feet tall and females just marginally shorter. It should be noted that culturally height means very little for an Ogre. Weight is what’s important — the heavier the better. To determine a random height, roll 1d10 + 7’7”."
+  },
+  {
+    "id": "archives-ii:reference:21-not-stupid-just-single-minded",
+    "name": "Not Stupid, Just Single Minded",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 21,
+    "text": "Whilst the outside observer may mistake an Ogre for being stupid, the truth is more complex. Ogres process complex, abstract thought differently to most other Species. They are generally illiterate — like many in the Old World — and rely upon storytelling to pass on their legends and history. They have little patience for art, poetry, metaphor, simile, music, philosophy, and many other things that occupy the slims.\n\nNo Ogre Character may take any Skill or Talent that relies on writing or complex artistry, nor any suitably advanced Lore Skill, without GM permission. Players and GMs should work together to substitute suitable alternatives into any Career the Ogre takes.\n\nThat being said, some Ogres do find themselves in the curious position of being able to read, write, count, sing, and so on. The famous Altdorf playwright Detleif Sierck is on record weeping openly whilst Tergarthash Gutrend performed a beautiful rendition of the Indish opera Lakme, though it was marred slightly when she ate her duet partner for falling out of key."
+  },
+  {
+    "id": "archives-ii:reference:22-ogre-element-1-table",
+    "name": "Ogre Element 1 Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 22,
+    "text": "| Roll | Element | Roll | Element | Roll | Element | Roll | Element | Roll | Element |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 01 | Ar | 21 | Grum | 41 | Nar | 61 | Tar | 81 | Verm |\n| 02 | Ag | 22 | Gurz | 42 | Narg | 62 | Tag | 82 | Vug |\n| 03 | Az | 23 | Hroth | 43 | Nag | 63 | Tazag | 83 | Vuz |\n| 04 | Bargh | 24 | Keggur | 44 | Nagar | 64 | Teg | 84 | Vuzzig |\n| 05 | Blag | 25 | Kug | 45 | Naz | 65 | Terg | 85 | Yar |\n| 06 | Boz | 26 | Kuz | 46 | Nartha | 66 | Thar | 86 | Yamith |\n| 07 | Bur | 27 | Mag | 47 | Ner | 67 | Thag | 87 | Yer |\n| 08 | Dar | 28 | Mar | 48 | Nerg | 68 | Thaz | 88 | Yeg |\n| 09 | Dergh | 29 | Margh | 49 | Neggim | 69 | Thegiz | 89 | Yorgh |\n| 10 | Duth | 30 | Meg | 50 | Nur | 70 | Ther | 90 | Yorz |\n| 11 | Far | 31 | Merrig | 51 | Nug | 71 | Thug | 91 | Yur |\n| 12 | Feg | 32 | Mor | 52 | Nuggith | 72 | Torg | 92 | Yug |\n| 13 | Fer | 33 | Morg | 53 | Rar | 73 | Torz | 93 | Yuz |\n| 14 | Fog | 34 | Morz | 54 | Rag | 74 | Tur | 94 | Zar |\n| 15 | Fuzgh | 35 | Mug | 55 | Raggim | 75 | Turg | 95 | Zargh |\n| 16 | Gar | 36 | Murg | 56 | Raz | 76 | Tuz | 96 | Zag |\n| 17 | Gagh | 37 | Murgog | 57 | Razog | 77 | Var | 97 | Zer |\n| 18 | Geg | 38 | Murz | 58 | Rer | 78 | Varg | 98 | Zeg |\n| 19 | Gez | 39 | Muz | 59 | Reg | 79 | Varz | 99 | Zog |\n| 20 | Gorg | 40 | Murthig | 60 | Skr | 80 | Ver | 00 | Zor |"
+  },
+  {
+    "id": "archives-ii:reference:22-ogre-element-2-table",
+    "name": "Ogre Element 2 Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 22,
+    "text": "| Roll | Element | Roll | Element | Roll | Element | Roll | Element | Roll | Element |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 01 | abba | 21 | ebb | 41 | getha | 61 | ork | 81 | thruta |\n| 02 | addoo | 22 | edd | 42 | gothish | 62 | ort | 82 | thrush |\n| 03 | akka | 23 | ek | 43 | gratoo | 63 | orth | 83 | ubbsh |\n| 04 | ag | 24 | elg | 44 | grethi | 64 | ott | 84 | uddoo |\n| 05 | alloo | 25 | ell | 45 | grothoo | 65 | rag | 85 | ulgoo |\n| 06 | alta | 26 | elt | 46 | gruta | 66 | reg | 86 | ulloo |\n| 07 | algoo | 27 | elg | 47 | guta | 67 | ret | 87 | ultsh |\n| 08 | alza | 28 | elz | 48 | guttash | 68 | reth | 88 | ulgi |\n| 09 | angoosh | 29 | eng | 49 | obbi | 69 | rob | 89 | ulzish |\n| 10 | annash | 30 | emm | 50 | oddi | 70 | rok | 90 | ungish |\n| 11 | argo | 31 | enn | 51 | okka | 71 | roth | 91 | unnoo |\n| 12 | argani | 32 | erg | 52 | olgish | 72 | rug | 92 | urga |\n| 13 | argloo | 33 | ergl | 53 | olloo | 73 | ruk | 93 | urka |\n| 14 | arki | 34 | erk | 54 | oltush | 74 | rut | 94 | urthoo |\n| 15 | arkash | 35 | erkag | 55 | olgtha | 75 | rutag | 95 | urthu |\n| 16 | arkuga | 36 | ert | 56 | olthi | 76 | tag | 96 | urthagish |\n| 17 | artha | 37 | erth | 57 | onga | 77 | teg | 97 | urutoo |\n| 18 | artaga | 38 | ett | 58 | onni | 78 | thorg | 98 | uruzi |\n| 19 | arthash | 39 | ew | 59 | orgoo | 79 | throg | 99 | uttish |\n| 20 | attha | 40 | gat | 60 | orglish | 80 | throt | 00 | yogg |\n\n20 attha 40 gat 60 60 Skr 80 Ver 00 Zor"
+  },
+  {
+    "id": "archives-ii:reference:23-big-names",
+    "name": "Big Names",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 23,
+    "text": "While most Ogre titles are self-appointed, with the exception of some disparaging names bestowed by a rival, certain notable deeds can earn an Ogre truly imposing title, known among all Ogre kind as a Big Name.\n\nWhile there is no formal ritual involved in bestowing such a name, Ogres treat the matter as gravely serious. The notion of claiming a Big Name without earning it is beyond sacrilegious — to bear the name is to have done the deed.\n\nAny time an Ogre either spends or gains a Fate Point, or otherwise completes a truly mighty feat, the GM should consider granting them a Big Name. This is always bestowed by another Ogre who either observed the tale or heard of it, and such tidings spread quickly. Ogre mercenaries often return home after years to find that their tribe has heard nothing of their exploits, but know they have earned a Big Name."
+  },
+  {
+    "id": "archives-ii:reference:23-example-big-names",
+    "name": "Example Big Names",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 23,
+    "text": "Though not exhaustive, the list below details some well known Big Names and the feat required to earn the right to use them. GMs and Players should work together to choose a suitable Big Name if it has been decided that a deed warrants it. Such names are always direct and to the point, much like the Ogres themselves, and are rarely more than one word long.\n\nBig Names have no specific in game effect, though among Ogres they would typically provide a bonus of +20 to Intimidate or Charm Tests.\n\nMawseeker You have travelled far to the east and witnessed the Great Maw with your own eyes. It has left an indeliable impression on you, and a starved look in your eyes which never truly departs.\n\nDaemonswallower You have somehow managed to swallow a Daemonic foe before it was banished back to the Realms of Chaos. A fragment of it still festers in your gut, though its demands are easy to ignore.\n\nGiantbreaker You have snapped the bones of a living Giant, and likely sucked the marrow from them thereafter.\n\nGhoultosser By might, magic, or luck you have ripped a ghost or other spirit apart, spreading the shreds of its essence into the hungry winds.\n\nDeathcheater You have survivied something so perilous and deadly that even most Ogres agree that, by rights, you should be dead.\n\nLongstrider You have travelled far and wide, even by the standards of the most wordly Ogre.\n\nBeastkiller You have single-handedly slain a beast of great note — perhaps a Dragon or other terrible creature.\n\nBrawlerguts You have achieved some fantastic feat of strength, ideally one that utilised only your substantial bulk and bare hands."
+  },
+  {
+    "id": "archives-ii:reference:25-advancing-ogre-characters",
+    "name": "Advancing Ogre Characters",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 25,
+    "text": "Ogre Characters advance just like any other Character, with the only exception being the ‘Not Stupid, Just Single Minded’ rule on page 21, which may restrict certain Skills and Talents. However, many Players may have problems imagining Ogres fitting into the upper echelons of most Classes and Careers. The examples below show ways that an Ogre could find themselves elevated above their humble beginnings.\n\nAssassin: There is nothing an Ogre is more capable at than killing, and getting paid to do it makes it all the sweeter. They may not be the most subtle of assassins, but they do the job with clear enthusiasm.\n\nBoatswain: No Ogre likes to be bossed about, so it is not uncommon to find them trying to rise through the ranks of any establishment they are a part of, be this on land or at sea. However, as they often just bully their lessors, they rarely make popular leaders.\n\nDuellist: Whilst they may not understand the intricacies of why they are fighting on behalf of some skinny Human, the pay and food is often very good.\n\nEntertainer: Few expect Ogres to be good entertainers, and for good reason: they rarely are. But several of their kind still try, loving the competition of out-doing the other acts, and freely intimidating anyone who is better than them.\n\nExplorer: Ogres love to travel, and can be found wandering in every corner of the world. When they eventually, if ever, return to their homelands, great Ogre travellers are admired for the astounding stories they can tell and the impressive trophies they capture.\n\nJudicial Champion: Whilst it is true that many towns and cities have banned Ogre Judicial Champions because they are just too good at it, they are still in popular demand by the rich and foolish of the Empire.\n\nMaster Pilot: While they may not understand the movements of the heavens, Ogres seem to have a good gut instinct for direction, and make surprisingly good navigators. However, their inability to draw clear maps, read maps, or even understand what a map is for, makes relying upon them a little risky.\n\nMerchant: Ogres enjoy trading, as their greed for riches and symbols of wealth are considerable. Many Ogre merchants are less than trustworthy, however, so keen are they to make maximum profits.\n\nOfficer: Many Ogres aspire to lead their own regiment, so rising through the ranks of the State Army, or a mercenary band, is certainly a choice that many will aim for. Most, once they get there, rule with an iron fist, becoming veritable tyrants.\n\nOutlaw Chief: Ogres just can’t help themselves: they break laws. And when they do, they often fall in with other criminals. It doesn’t take long for them to bully their way up to the top.\n\nPit Legend: Ogre champions are to be feared for the incredibly dangerous creatures they are. Everything, and everyone, is potential meat for their platter.\n\nRacketeer: A perfect business for an Ogre. Threaten everyone around you, tell them you won’t eat them if they pay you, and a source of income is suddenly guaranteed. It’s a dirty job, but Ogres like to do it.\n\nScout: Ogres love the wilderness and make natural scouts, enjoying pitting themselves against nature and anything else they may cross. The Imperial Army of Cathay has long learned to fear the Ogre Scout, a silent and ferociously aggressive enemy.\n\nSergeant: It’s not a rare sight to see bands of up-and-coming Ogres clamouring for leadership positions among mercenary bands. They’re usually desperate to prove themselves, and therefore especially dangerous. Some take the more guaranteed route in an established military, but most are sell-swords.\n\nShip’s Master: The life of a sea captain suits an Ogre’s sensibilities very well. Big guns, freedom of movement, big guns, boarding actions, big guns, beating up skinny wimps (often their own crew) and big guns. Could life be any better?\n\nVeteran: A natural Career for Ogres that live long enough. They fight, they get better at it, they fight more.\n\nWitch Hunter: Often an Ogre doesn’t need to do anything at all to get skinny Humans to speak. One look at their massive frame is enough to get anyone to squeal! Sure, they may not know the intricacies of theology or the ‘law’, but they’re an invaluable asset to any cadre of witch-hunting zealots."
+  },
+  {
+    "id": "archives-ii:reference:26-artur-hammerfoot-ogre-artisan",
+    "name": "Artur Hammerfoot, Ogre Artisan",
+    "page": 26,
+    "category": "profile",
+    "text": "| Row | M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Base | 6 | 29 | 19 | 58 | 51 | 3 | 21 | 26 | 25 | 36 | 19 | 36 |\n| Adv. | — | — | — | +10 | +10 | — | — | +10 | — | — | +7 | — |\n| Total | 6 | 29 | 19 | 68 | 61 | 3 | 21 | 36 | 25 | 36 | 26 | 42 |\n\nSkills: Athletics 26, Consume Alcohol 66, Cool 41, Dodge 26, Endurance 71, Evaluate 30, Intimidate 71, Language (Grumbarth) 28, Lore (Ogres) 30, Melee (Basic 32, Brawling 34) , Stealth (Urban) 26, Trade (Blacksmith) 32\n\nTalents: Craftsman (Blacksmith), Dirty Fighting, Large, Night Vision, Resistance (Poison (Ingested)), Very Strong, Vice (Food)\n\nTrappings: Chalk, Cloak, Clothing, Dagger, Guild License, Hat, Leather Jerkin, Lunch, Pouch, Sling Bag, Rags, Trade Tools (Blacksmith)",
+    "topic": "Printed NPC profiles"
+  },
+  {
+    "id": "archives-ii:reference:26-nazzaalta-talltale-ogre-stevedore",
+    "name": "Nazzaalta Talltale, Ogre Stevedore",
+    "page": 26,
+    "category": "profile",
+    "text": "| Row | M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Base | 6 | 36 | 17 | 49 | 43 | 16 | 28 | 26 | 25 | 29 | 19 | 28 |\n| Adv. | — | — | — | — | — | +5 | — | — | — | — | — | — |\n| Total | 6 | 36 | 17 | 49 | 43 | 21 | 28 | 26 | 25 | 29 | 19 | 28 |\n\nAlcohol 53, Dodge 33, Endurance 51, Entertain (Storytelling) 29, Gossip 24, Intimidate 52, Melee (Basic 46, Brawling 39), Swim 54\n\nTalents: Dirty Fighting, Large, Night Vision, Resistance (Poison (Ingested)), Strong Back, Very Strong, Vice (Food)\n\nTrappings: Cloak, Clothing, Dagger, Flask of Spirits, Hand Weapon (Boat Hook), Leather Gloves, Pouch, Sling Bag",
+    "topic": "Printed NPC profiles"
+  },
+  {
+    "id": "archives-ii:reference:28-deathblow",
+    "name": "Deathblow",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 28,
+    "text": "If an Ogre successfully strikes a smaller creature, they may choose to enter that creature’s space and make an additional attack against a different creature. They may do this a number of times equal to their Weapon Skill Bonus, though they may not attack the same creature more than once. The original target does not need to die to activate this feature."
+  },
+  {
+    "id": "archives-ii:reference:28-defending-against-ogres",
+    "name": "Defending Against Ogres",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 28,
+    "text": "Average-sized creatures suffer a –2 SL penalty to Melee Tests to defend against an Ogre’s attacks, though not if they use another Skill such as Dodge to defend. Small creatures suffer –4 SL."
+  },
+  {
+    "id": "archives-ii:reference:28-ogre-equipment",
+    "name": "Ogre Equipment",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 28,
+    "text": "As noted on page 11, most regular weapons and equipment are available in ‘Ogre sizes’. Aside from being heavier, these weapons have no additional effects aside from potentially gaining the Damaging and Impact Qualities and increased damage against Small creatures noted under Size Matters on page 28.\n\nHowever, Ogres do forge and make use of their own arms and armour, most famously their massive clubs and impressive gut plates. The rules for these creations are detailed below. Note that these are Ogre weapons, and as such the Encumbrance numbers are already correct and do not need to be doubled as for other Trappings (see page 31). Needless to say, these weapons are all but useless in the hands of Average creatures, and most Small creatures would struggle even to lift them."
+  },
+  {
+    "id": "archives-ii:reference:28-other-notes",
+    "name": "Other Notes",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 28,
+    "text": "Ogres do not need to Disengage (WFRP, page 165) to move away from smaller opponents in combat. If they wish, an Ogre may spend 1 Advantage to attack a smaller opponent with a SB +0 Damage attack using their Melee (Brawling) Skill. Average and Small creatures both receive a +10 bonus to hit Ogres with both Melee and Ranged Skills.\n\nCombined, these rules for Size have a major impact on combat, and should not be forgotten. The result is that most Ogres make several attacks each turn, doing substantial damage as they go."
+  },
+  {
+    "id": "archives-ii:reference:28-size-matters",
+    "name": "Size Matters",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 28,
+    "text": "The rules for size are admittedly somewhat complex, but knowing how to use them is vital for Ogre Players and GMs. Differences such as the larger number of Wounds Ogres receive are covered in the section on Character Creation above. The major gameplay differences related to an Ogre’s size are summarised below. You can find details in WFRP (page 341)."
+  },
+  {
+    "id": "archives-ii:reference:28-weapon-damage",
+    "name": "Weapon Damage",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 28,
+    "text": "Weapons used by Large creatures such as Ogres gain the Damaging Quality (WFRP, page 297) when used against Average creatures, such as Humans, Dwarfs, and Elves. You may use either the number shown on the units die or the SL to determine the Damage caused by a successful attack .\n\nAgainst Small creatures such as Halflings, Weapons gain the Impact Quality (WFRP, page 298) as well, meaning you also add the number shown on the units die when calculating Damage. After applying all relevant modifiers, the weapon Damage against Small creatures is also doubled. There are many reasons that Halflings tend to befriend Ogres, and this may be first among them."
+  },
+  {
+    "id": "archives-ii:reference:29-ogre-ammunition",
+    "name": "Ogre Ammunition",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 29,
+    "text": "| Weapon | Price | Enc | Availability | Range | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| BLACKPOWDER |  |  |  |  |  |  |\n| Leadbelcher Shot (12) | 4/- | 0 | Scarce | Half Weapon | — | Blast 3 |\n| Leadbelcher Ball (1) | 1 GC ** | 0 | Scarce | As weapon | +4 | Penetrating, Impale, Impact |\n| ENTANGLING |  |  |  |  |  |  |\n| Harpoon (6) | 5/- | 0 | Exotic | As weapon | — | Impale |\n\n* Essentially a cannon ball, the price given for a Leadbelcher Ball includes 2/– for enough powder to fire a single shot. The ball can often be recovered, and may be fired again for just the price of the powder."
+  },
+  {
+    "id": "archives-ii:reference:29-ogre-armour",
+    "name": "Ogre Armour",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 29,
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | APs | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| PLATE |  |  |  |  |  |  |  |\n| Ogre Gutplate* | 20GC | 4 | Rare | – | Body | 3 | Impenetrable |\n\n* Ogre Gutplates are uniquely suited to Ogre anatomy, and indeed even if scaled down would provide incomplete protection to members of species who do not keep most of their vital organs in their gut.\n\nLong SB+6 Damaging, Special**\n\nSBx2 +7 Entangle\n\nAs weapon — Impale"
+  },
+  {
+    "id": "archives-ii:reference:29-ogre-melee-weapons",
+    "name": "Ogre Melee Weapons",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 29,
+    "text": "| Weapon | Price | Enc | Availability* | Reach | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| BASIC |  |  |  |  |  |  |\n| Ogre Club | 1GC | 2 | Common | Average | SB+4 | Special ** |\n| Ironfist | 4GC | 2 | Scarce | Short | SB+3 | Shield 1, Defensive |\n| TWO HANDED |  |  |  |  |  |  |\n| Big Ogre Club | 5GC | 6 | Common | Long | SB+6 | Damaging, Special** |\n\n* Availability is given for the Empire, where some weapons are rarer than they would be in the Mountains of Mourne. ** Ogre Clubs are always personalised to the preferences of the Ogre using them. See the weapon description for more."
+  },
+  {
+    "id": "archives-ii:reference:29-ogre-ranged-weapons",
+    "name": "Ogre Ranged Weapons",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 29,
+    "text": "| Weapon | Price | Enc | Availability* | Range | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| THROWING |  |  |  |  |  |  |\n| Great Throwing Spear | 6/ | 2 | Scarce | SBx3 | SB +4 | Impale |\n| BLACKPOWDER* |  |  |  |  |  |  |\n| (2H)Leadbelcher Gun | 14GC | 8 | Exotic | 50 | +10 | Dangerous, Reload 5 |\n| Ogre Pistol | 9GC | 3 | Exotic | 20 | +8 | Pistol, Reload 1 |\n| ENTANGLE |  |  |  |  |  |  |\n| Harpoon Launcher | 8GC | 5 | Exotic | 20 | +10 | Entangle, Reload 2 |\n| Chain Trap | 1GC | 2 | Scarce | SBx2 | +7 | Entangle |\n\n* Availability is given for the Empire, where some weapons are rarer than they would be in the Mountains of Mourne."
+  },
+  {
+    "id": "archives-ii:reference:30-armour-descriptions",
+    "name": "Armour Descriptions",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 30,
+    "text": "While some Ogres do wear more substantial armour, this is done just as much as a mark of fashion or affiliation as it is for actual protection. Only the gutplate is seen as an item of true protective merit among Ogres."
+  },
+  {
+    "id": "archives-ii:reference:31-ogre-magic",
+    "name": "Ogre Magic",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 31,
+    "text": "Though Arcane in nature, Ogre Magic is inextricably linked to the act of divine worship. Some Ogres, called Firebellies, pay tribute to a great volcanic fire god known as the Fire Mouth, and through terrible trials become capable of channeling Aqshy, the Red Wind of Fire, through their gut. If you wish to play as a Firebelly, modifying the Wizard Career and choosing the Arcane Lore (Aqshy) Talent will suffice, with some modifications.\n\nBy far the more common form of Ogre magic is practiced by Ogre Butchers, devotees of the Great Maw, the ravenous deity that drives every Ogre’s insatiable appetite. Given their love of meat, the act of butchery takes on great significance in Ogre society, not least of all because it requires the self restraint to properly prepare the meat and not simply devour a fresh carcass on the spot.\n\nOgre Butchers do more than merely prepare for feasts, however. They are also emissaries of the Great Maw, viewed with awe by most Ogres. When they ritually slaughter and prepare meat, they channel a mote of the Great Maw’s ravenous hunger, and thereby a glint of its power. Scholars with the interest — and the stomach — to study Ogre magic note that it is distinct from the miracles that sometimes manifest around devotees of Sigmar, Ulric, Taal, and other gods. Despite its purported divine origins, the powers wielded by an Ogre Butcher are almost certainly derived from the same Winds of Magic harnessed by the Collegiate Wizards of the Empire. These same scholars point to the fact that some Butchers wield powers similar to those found in the Lores of Death, Beasts, and Heavens. Quite what part the Great Maw has to play in this is unclear to scholars, but quite obvious to most Ogres — the Great Maw hungers, and rewards those who sacrifice meat in its name."
+  },
+  {
+    "id": "archives-ii:reference:31-ogre-spellcasters",
+    "name": "Ogre Spellcasters",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 31,
+    "text": "Ogres do not practise magic in the same manner as other Species. Though they channel the same Winds of Magic that fuel all spells, they do so in a very unique way. Ogres may only ever learn the Lores of The Great Maw, The Heavens, Death, or the Lore of Beasts. The Great Maw understands these aspects of nature and grants them to its most devoted followers. The only exception is Ogre Firebellies, who derive their power from the Firemouth, another Ogre deity. Ogres may cast the Arcane spells found on WFRP page 242, as any other Wizard.\n\nOgre spellcasting always involves working with meat — either carving a specific slice from a carefully chosen haunch, chewing on a piece of fat, or sucking the bone from some marrow. This meat can be included as part of the Ogre’s substantial cost of living, as the Great Maw takes only a portion of what is consumed. Ogres without access to such supplies can still cast spells, but they become increasingly ravenous as the Great Maw takes its price in meat from the Ogre’s own gut. Ogres deprived of any suitable meat lose 1 Wound for each CN of a spell they attempt to cast. The Great Maw will have its meal, one way or another.\n\nNote that these do not count as ingredients for the purposes for reducing the risk of miscasting (WFRP, page 236). To gain those benefits, the Ogre spell worker must use a more esoteric cut of meat. Spells may call for exotic ingredients, such as bile from a Troll’s belly or the marrow of a Rhinox. The Ogre must acquire these themselves or buy them for the cost of 1 shilling per CN of the spell. If an Ogre spellcaster does not have a suitable ingredient to hand, they must instead lose one Wound for each CN of the spell being cast.\n\nFinally, Ogres may learn the Language (Magick) Skill if it is available to their Career and use it for Casting Tests as any other spellcaster. However, an Ogre’s magic is far more instinctive than intellectual — they do tend to use their gut feeling when employing magic, after all. Ogre spellcasters use Toughness when calculating their Language (Magick) Skill instead of Intelligence."
+  },
+  {
+    "id": "archives-ii:reference:31-people-of-burden",
+    "name": "People Of Burden",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 31,
+    "text": "Ogres are massive, and by extension all of their equipment is massively proportioned compared to that of Human make. The Ogre version of most typical trappings count as twice the listed Encumbrance and cost twice as much. Additionally, Ogres are required to eat and drink at least twice the amount a Human requires in a given day, and take no effect from drugs and poisons unless administered two standard doses. To accommodate this, an Ogre can carry twice the normal Encumbrance of a Human — (Strength Bonus + Toughness Bonus) × 2.\n\nAn Ogre suffers a –20 penalty to any Tests whilst attempting to use trappings not built for their size, and may find some things merely impossible. For example, an Ogre’s finger simply cannot fit onto the trigger of a Human Repeater Pistol."
+  },
+  {
+    "id": "archives-ii:reference:32-the-lore-of-the-great-maw",
+    "name": "The Lore of The Great Maw",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 32,
+    "text": "Sometimes called Gastromancy, or simply Gut Magic, the Lore of The Great Maw only available to Ogres — see the Ogre Butcher Career on page 37. It is a magic of ravenous hunger, gore-splattered feasting, and rampant vitality. Whenever an Ogre Butcher successfully casts a spell from the Lore of The Great Maw, the offering they consume may restore their own health. Roll 1d10. If the result is a 10, or if it is equal to or higher than the CN of the spell being cast, unmodified by Channeling or the use of a Grimoire, the Butcher recovers Wounds equal to the unmodified CN of the spell.\n\nIngredients: Ogres use bloody body parts to fuel their magic, usually from animals, and the fresher the better. They include bloody cuts of meat, bile from the stomachs of unusual creatures, the marrow of towering beasts, or the cured fat of domesticated animals such as pigs or cows. Ogre magic is not a pleasant thing to behold for most, though many Ogres find watching a Butcher work to be positively appetising."
+  },
+  {
+    "id": "archives-ii:reference:34-rhinox",
+    "name": "Rhinox",
+    "page": 34,
+    "category": "profile",
+    "text": "| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 55 | — | 60 | 55 | 25 | 20 | — | 10 | 40 | 20 | 50 |\n\nPainless, Size (Large), Stride, Weapon +9 Optional: Trained (Broken, Mount, War), Tracker",
+    "topic": "Printed creature profiles"
+  },
+  {
+    "id": "archives-ii:reference:39-star-sign-table",
+    "name": "Star Sign Table",
+    "category": "table",
+    "topic": "Ogres and astrology",
+    "page": 39,
+    "text": "| 1d100 | Star Sign | Effect |\n| --- | --- | --- |\n| 01–05 | Wymund the Anchorite | +2 Fellowship, +2 Initiative, −3 Intelligence |\n| 06–10 | The Big Cross | +2 Strength, +2 Willpower, −3 Initiative |\n| 11–15 | The Limner’s Line | +2 Ballistic Skill, +2 Agility, −3 Weapon Skill |\n| 16–20 | Gnuthus the Ox | +2 Toughness, +2 Willpower, −3 Intelligence |\n| 21–25 | Dragomas the Drake | +2 Willpower, +2 Fellowship, −3 Dexterity |\n| 26–30 | The Gloaming | +2 Intelligence, +2 Initiative, −3 Willpower |\n| 31–35 | Grungni ’s Baldric | +2 Weapon Skill, +2 Willpower, −3 Fellowship |\n| 36–40 | Mammit the Wise | +2 Initiative, +2 Intelligence, −3 Fellowship |\n| 41–45 | Mummit the Fool | Gain one level of the Luck Talent, −3 Willpower |\n| 46–50 | The Two Bullocks | Gain one level of the Craftsman Talent, −3 Intelligence |\n| 51–55 | The Dancer | Gain one level of the Impassioned Zeal Talent, −3 Initiative |\n| 56–60 | The Drummer | Gain one level of the Carouser Talent, −3 Willpower |\n| 61–65 | The Piper | +2 Fellowship, +2 Dexterity, −3 Weapon Skill |\n| 66–70 | Vobist the Faint | Gain one level of the Sixth Sense Talent, −3 Initiative |\n| 71–75 | The Broken Cart | Gain one level of the Resistance (Disease) Talent, −3 Willpower |\n| 76–80 | The Greased Goat | Gain one level of the Animal Affinity Talent, −3 Toughness |\n| 81–85 | Rhya’s Cauldron | Gain one level of the Iron Will Talent, −3 Agility |\n| 86–90 | Cackelfax the Cockerel | Gain one level of the Dealmaker Talent, −3 Fellowship |\n| 91–95 | The Bonesaw | +2 Intelligence, +2 Fellowship, −3 Weapon Skill |\n| 96–00 | The Witchling Star | Roll a d10 1-3: Gain the Sixth Sense Talent 4-6: Gain the Second Sight Talent, −3 Strength 7-9: Gain the Petty Magic Talent, −3 Strength 10: Gain the Witch! Talent, −5 Strength |\n\n10: Gain the Witch! Talent, −5 Strength Step 1) Roll 1d100 and consult the Star Sign Table below to see under which star sign you were born. If you stick with this random result, gain 25 XP. If you are unhappy with your star sign, you may choose another, though you gain no bonus XP for this.\n\nStep 2) Each star sign provides some suggestions to help form your Character’s personality, as well as a small in-game effect. Apply any adjustments to your starting Characteristics and continue with Character creation as normal."
+  },
+  {
+    "id": "archives-ii:reference:39-star-signs-and-character-creation",
+    "name": "Star Signs And Character Creation",
+    "category": "rule",
+    "topic": "Ogres and astrology",
+    "page": 39,
+    "text": "The following is an optional system for determining a character’s star chart at character creation. If you wish, you may ignore this section entirely — some people create their own destiny or, perhaps more accurately, have their fate influenced by forces other than the stars above. For some individuals, however, the position of the stars at the moment of their birth leaves a lasting impression .\n\nIf you intend to use this system, you may do so after Step 3 of Character creation, Determining Characteristics (WFRP, page 33)."
+  },
+  {
+    "id": "archives-ii:reference:50-determining-ascendant-sign",
+    "name": "Determining Ascendant Sign",
+    "category": "rule",
+    "topic": "Optional astrology",
+    "page": 50,
+    "text": "Roll a second time on the Star Sign Table on page 39 to determine your ascendant sign. While your character’s star sign reflects an aspect of their truest self, no one is their truest self all the time. The ascendant sign reflects the mask they wear, and how they instinctively present themselves to the world. It determines people’s first impressions of your Character, and may even inform your Character’s instinctive reactions to situations.\n\nExample: Dev rolls a 73 for their Character Marieke’s ascendant: The Broken Cart. People born under the Broken Cart are prideful and over-concerned with appearances… but that’s not who Marieke is, just how she comes across to others, and how she reacts under pressure. Dev had been considering Engineer or Wizard for Marieke’s career, but he changes his mind and decides on either Physician or Lawyer."
+  },
+  {
+    "id": "archives-ii:reference:50-determining-celestial-mansions",
+    "name": "Determining Celestial Mansions",
+    "category": "rule",
+    "topic": "Optional astrology",
+    "page": 50,
+    "text": "The sky is divided into five sections, referred to by astrologers as the celestial mansions, or the mansions of the heavens. The sign that is centermost in a mansion is referred to as its ruler, and influences an entire area of a character’s life. The five mansions are:\n\n1-2: The Mansion of Sense, which rules how a person expresses their emotions.\n\n3-4: The Mansion of Trials, which rules how someone responds to adversity and what they tend to struggle against in their life.\n\n5-6: The Mansion of Thought, which rules the thought processes, and how someone communicates.\n\n7-8: The Mansion of Love, which rules a person’s attitude toward interpersonal relationships, including familial and romantic.\n\n9-10: The Mansion of Coin, which rules a person’s relationship with money and material goods.\n\nRoll to determine each, and interpret as you will.\n\nFor the celestial mansions, Dev rolls 54, 82, 13, 05, and 93. Therefore, Marieke’s Mansion of Sense is ruled by the Dancer: she is passionate, a bit obsessive, and takes rejection poorly. Her Mansion of Trials is ruled by Rhya’s Cauldron, which he decides means that the main struggle in her life will be related to justice in some way. The Limner’s Line rules her Mansion of Thought. Marieke is innately artistic, precise in her thinking, and a perfectionist.\n\nMarieke is definitely a Lawyer, Dev decides. Pretty straightforward, so far. He moves onto the 05 he rolled, which is Wymund the Anchorite, the ruler of Marieke’s Mansion of Love. The Anchorite is a sign of patience and scrutiny — in relationships, Marieke is reserved and measured, and only commits slowly.\n\nFinally, he looks at her Mansion of Coin, which is ruled by the Bonesaw. This one makes a little less immediate sense — what could the sign of the philosopher have to do with possessions and money? But then he notices that the Bonesaw’s pursuit of knowledge is marked by generosity, first and foremost.\n\nHe interprets this to mean that despite being prideful, obsessive, and sensitive to rejection, she can be generous with her money — and time? Her Mansion of Trials is ruled by Rhya’s Cauldron, so perhaps she is a lawyer who takes on cases for the very poor who would otherwise be at the mercy of the Imperial legal system.\n\nIf not everything makes immediate sense, that’s fine. Some of it won’t. Some things you roll may even contradict each other. Astrology is wide open to interpretation, and the star signs are only the starting point for your character. Talk it out with your GM and fellow players, and when in doubt, go with your intuition. And, if you are still at a loss, remember that it might all be bunk anyway!"
+  },
+  {
+    "id": "archives-ii:reference:51-magical-artefact-generation-table",
+    "name": "Magical Artefact Generation Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 51,
+    "text": "| D100 | Result | Cost to Manufacture | Time to Create |\n| --- | --- | --- | --- |\n| 01–43 | A Magical Weapon | (Cost of weapon) × 50 (per ability) | 2 months |\n| 44–45 | A Magical Arrow | (Cost of arrows) × 30 | 2 weeks for 6 arrows |\n| 46–51 | Magical Armour | (Cost of armour) × 50 (per ability) | 4 months |\n| 52–55 | A Magical Shield | (Cost of shield) × 50 (per ability) | 4 months |\n| 56–60 | A Scroll | CN of Spell × 10 | 1 week |\n| 61–65 | A Wand | CN of Spell × 50 | 3 weeks |\n| 66–70 | A Staff | – | 4 weeks |\n| 71–89 | A Ring | CN of Spell × 200 | 4 weeks |\n| 90–97 | A Talisman | – | 8 weeks |\n| 98–00 | An Oddity | – | – |"
+  },
+  {
+    "id": "archives-ii:reference:51-magical-items-and-artifice",
+    "name": "Magical Items And Artifice",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 51,
+    "text": "The Winds of Magic are dangerous to work with, but powerful sources of energy for those with the skill to manipulate them. Wizards employ the winds when casting spells. However, it is also possible to work the Winds of Magic into the forging or construction of certain artefacts, imbuing them with potent powerful abilities.\n\nThere are many ways by which to enchant an artefact. Each of the major magical institutions of the Empire teaches the forging of magical weapons and armour, and the writing of scrolls. Other items are crafted by Dwarfs, who inscribe items with runes as a safe and stable way to bind magical energy. Hedge Magicians have their own traditions for bewitching items, which typically produce weaker, yet more subtle and safer effects. The practitioners of darker forms of magic know well how to bind raw Dhar to an item, imbuing it with foul properties. It is even said that some Chaos Sorcerers can bind a daemon within an item, though such brash magics incur the lasting wrath of the bound entity."
+  },
+  {
+    "id": "archives-ii:reference:52-commissioning-a-magical-artefact",
+    "name": "Commissioning a Magical Artefact",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 52,
+    "text": "Characters can also acquire magical artefacts by commissioning them from an experienced Wizard or Runesmith. This has the benefit that the Character has some say in its construction and can anticipate the qualities of the finished product. However, it is an expensive and exacting process. Wizard artificers capable of creating magical items are rare because they not only have to be powerful magicians but must also must have spent mastering a craft. Creating a magical artefact is not the same thing as merely casting temporary enchantments onto existing objects, as the Wind in question must be permanently bound into the very structure of the item.\n\nCommissioning an artefact should never be a simple matter. Wizards skilled in such things are in constant demand, or in some cases retreat to the wild places of the Old World to escape the demands of nobles and governments. It may be an adventure in itself to find an artificer, and a further trial to convince them to take on the project — if a sufficiently talented individual can even be found. For example, Characters looking for someone to make a magical sword must find a practiced Wizard who is also learned in the skills of a blacksmith."
+  },
+  {
+    "id": "archives-ii:reference:52-identifying-a-magical-artefact",
+    "name": "Identifying A Magical Artefact",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 52,
+    "text": "Most Characters are ignorant of an artefact’s abilities until they engage in research or find out about them through trial and error. For Characters with the Detect Artefact Talent this can be fairly simple — upon touching the item they may make an Intuition Test to learn about the artefact (WFRP, page 135). For other Wizards, the task is more challenging and typically requires one week per attempt, usually in a laboratory or well-equipped library, or other suitable ritual space. This is a frustrating process, as magical items are dangerous when wielded in ignorance. In order to identify a magical artefact, a Character should make an Challenging (+0) Lore (Magic) Test and consult the following table.\n\n|  |  |  |\n| --- | --- | --- |\n| SL | Result | Consequences |\n| +6 or more | Astounding Success | The Character is able to comprehensively identify the item and uncover all its Quirks. |\n| +4 to +5 | Impressive Success | The Character is able to identify the item and knows if it possesses Quirks. However, the GM may keep back details about one Quirk. |\n| +2 to +3 | Success | The Character is able to identify the item. Whilst they are aware of visible Quirks, they do not uncover hidden ones. |\n| +0 to +1 | Marginal Success | The Character is able to identify the item, and they identify one hidden quirk. |\n| 0 to -1 | Marginal Failure | The Character is unable to identify the item but is conscious of that fact. They do not misidentify the artefact. They are aware of clearly visible Quirks. |\n| -2 to -3 | Failure | The Character confuses the artefact with a similar sort of item. They are aware of clearly visible Quirks. |\n| -4 to -5 | Impressive Failure | The Character confuses the artefact with a similar sort of item. They are aware of clearly visible Quirks but they also suspect it has a Quirk it does not actually possess. |\n| -6 or less | Astounding Failure | The Character confuses the artefact with a similar sort of item. They are aware of clearly visible Quirks but they also suspect it has at least two Quirks it does not actually possess. |"
+  },
+  {
+    "id": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
+    "name": "Guarding the Reputation of Wizards",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 53,
+    "text": "Most Wizards would not risk their own reputations by creating powerful artefacts for any old riff raff. In the Empire, the reckless spread of enchanted items could easily be used to support calls for the reinstitution of the persecution of Wizards, such as those levied by Sigmarite zealots.\n\nIndeed, hunting down a reckless Wizard may well make a fine adventure for a group of Witch Hunters and their staunch Sigmarite allies! Therefore, most Wizards are extremely careful in just what they create and for whom. This only adds to the difficulty of finding a willing expert.\n\nDwarf Runesmiths — if they can be found in the Empire at all — have their clan honour to consider. Most Runesmiths would balk at creating an artefact for one who is not a proven friend of the Dwarfs, and even then refrain from attempting their most powerful runes for any outside their own hold. The art of runesmithing risks being lost among the Dwarfs, and those practiced in it struggle to pass on their secrets before their death. They have little time for crafting items of legend for just anyone who happens by.\n\nIf the Characters are of dubious reputation, then only desperate Wizards would risk working for them. The price of such artefacts is high and their quality far from assured. Creating magical items is arduous and dangerous; expect to pay whatever the creator demands, though approximate notions of cost are given in the table above.\n\nNote that highly individualised items such as staffs, talismans, and oddities are much harder to commission, and the asking price will be whatever the maker demands, but the price is always going to be high, and not necessarily expressed in anything as simple as Gold Crowns. Such an item might require slaying a terrible beast, assassinating a troublesome noble family, or burning down a sizeable piece of Altdorf to make way for an extension to the practitioner’s own College."
+  },
+  {
+    "id": "archives-ii:reference:53-time-and-money",
+    "name": "Time and Money",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 53,
+    "text": "Reputable artificers are proud of their work and will only produce items with the Fine and Durable Qualities (WFRP, page 292). Note that this significantly increases the price of the item. A Human Wizard might feasibly be talked out of this, but to ask a Dwarf Runesmith to do so would be an insult, as one would essentially be asking them to produce mediocre work.\n\nMost Dwarfs, and especially most Runesmiths, would consider this an offence worthy of accepting whatever repercussions would follow from inflicting a mild concussion on the questioner.\n\nAlongside a considerable asking price, artificers must invest significant time in creating their works. Provided the artificer has no other work, the item can be made in the period given in the table above. Characters may commission an item using the rules for Endeavours, but its construction takes at least twice as long as the mundane equivalent.\n\nWhile it is recommended that a Character put in the time in game to track down a suitable Wizard or other expert, you may find it expedient to take care of this during the Between Adventures portion of your campaign. If so, the Consult an Expert and Commission Endeavours (WFRP, page 197) must be successfully completed before attempting to create the item.\n\nOnce you have found an expert and agreed a price, you may skip to The Finished Result, on the following page. If you wish to create an item on your own, read on!"
+  },
+  {
+    "id": "archives-ii:reference:54-fine-ill-make-it-myself",
+    "name": "Fine, I’ll Make it Myself!",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 54,
+    "text": "Rather than dealing with flighty Wizards and stubborn Dwarfs, the Characters include just such a flighty or stubborn individual. A Character with the requisite skills could attempt to create a magical artefact themselves using the Crafting Endeavour. It is worth reminding the Character that creating an artefact often requires using exotic ingredients, the acquisition of which may be an interesting adventure for the party. For example, forging many powerful blades requires that the still-hot steel be quenched in fresh dragon’s blood. While this is an assured method of creating a blade as sharp as any barber’s razor, the dragons in question have been known to protest. Having the Characters spend some time acquiring these ingredients makes the final item all the more satisfying. For more on acquiring and using ingredients harvested from dangerous beasts, see The Imperial Zoo.\n\nWhen using the Crafting Endeavour, creating a magical item typically requires 20 SL on the Extended Test (WFRP, page 198). When crafting an item that requires using another Trade Skill, such as a magical blade requiring Trade (Smith), the Wizard in question must make both a Very Hard (–30) Lore (Magic) Test and an appropriate Trade Test with a Difficulty"
+  },
+  {
+    "id": "archives-ii:reference:54-the-finished-result",
+    "name": "The Finished Result",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 54,
+    "text": "Finally, the artificer must make two Tests, a Challenging (+0) Lore (Magic) Test and a Challenging (+0) Trade Test. Calculate the total SL and consult the following table.\n\n|  |  |  |\n| --- | --- | --- |\n| SL | Result | Consequences |\n| +6 or more | Astounding Success | The item is a true work of art and possesses the Unbreakable Item Quality. |\n| +4 to +5 | Impressive Success | An excellent item is created without any complications. Add an Item Quality of your choice (WFRP, page 292). |\n| +2 to +3 | Success | The item is created without any complications. |\n| 0 to +1 | Marginal Success | The item is made without flaws, but the process takes much longer than anticipated. The artefact requires 50% more time to manufacture. |\n| 0 to -11 | Marginal Failure | The item is made but incorporates a Quirk or curse. Roll once on the Quirks and Curses Table (page 56). If this results in the item having no effect or being made with Dwarf runes, reroll, adding +40 to the total to determine the result. |\n| -2 to -3 | Failure | The item incorporates two Quirks or Curses. Roll twice on the Quirks and Curses table, adding +40 to the total to determine the result. If this results in the item having no effect or being made with Dwarf runes, reroll the results. Furthermore, the item is flawed. Add an Item Flaw of your choice (WFRP, page 292). |\n| -4 to -5 | Impressive Failure | The job is a botch and the resulting artefact is useless. The Wizard must begin the process anew. |\n| -6 or less-6 or less | Astounding Failure | The creation of the artefact goes horribly wrong. The item releases a powerful magical explosion, resulting in a hit equal to a Bomb (WFRP, page 295). |\n\nset by the rarity of the item being made. For example, Hand Weapons are Common and therefore would require an Average (+20) Trade Test.\n\nIt is acceptable for a Wizard and a suitable artisan to collaborate when creating an artefact, each focusing on their own speciality. However, in this case, both Characters must spend a Crafting Endeavour to work together.\n\nOnce the Character has made both Tests, add the SL of only the lower result to the running total for the Extended Test. Once you have achieved 20 SL, the item is ready. The Difficulty of the Lore (Magic) Test may be lowered by seeking out particularly obscure and exotic ingredients — a Giant’s stomach bile, skin from a Razorgore, and so on. Once the Crafting Endeavour is complete, you may proceed to the next step.\n\nThe creation of any magic item requires starting from the raw materials. It is not possible to permanently enchant an existing piece of armour or weapon, as the magic must be imbued into the item during the crafting process."
+  },
+  {
+    "id": "archives-ii:reference:55-quietened-mail",
+    "name": "Quietened Mail",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 55,
+    "text": "First commissioned by a late Duke of Carroburg for the same skillful assassin who would ultimately kill him, these full suits of mail (Chausses, Coat and a Coif) have been enchanted to remove the rattle of metal rings that mail armour normally makes. The usual -10 Penalty to Stealth associated with items of Mail armour does not apply. However, the spells used to create this armour were never perfected, and those wearing the Coif can speak no louder than a whisper."
+  },
+  {
+    "id": "archives-ii:reference:55-random-creature-table",
+    "name": "Random Creature Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 55,
+    "text": "Many magical effects only apply in the case of a particular sort of Creature. When determining the specific creature for these magical effects, roll on the table below.\n\n| D100 | Result D100 Goblins and 59–62 Snotlings Orcs 63–65 Daemons of 66–69 Tzeentch Daemons 70–73 of Nurgle Daemons 74–75 of Khorne Daemons of 76–78 Slaanesh Daemons (All) 79–81 Beastmen 82 | Result D100 Skeletons and 83 Zombies Ethereal 84 Undead Skaven and 85 their vile kin Vampires 86 Lizardmen 87-88 Trolls 89–90 Humans 91 Halflings 92 | Result D100 Ogres 93 Dwarfs 94 Elves 95 Giants 96 Spites, Dryads, 97 Tree Kin, Treemen Beasts* 98 Spiders 99 Mutants 00 |  | Result |\n| --- | --- | --- | --- | --- | --- |\n| 0–19 | Goblins and Snotlings |  |  | 93 | The Truly Faithful** |\n| 20–29 |  |  |  |  | Spellcasters*** |\n| 30–32 | Daemons of Tzeentch |  |  | 95 | Giant Spiders |\n| 33–35 |  |  |  |  | Manticores, Chimera |\n| 36–38 | Daemons of Khorne |  |  | 97 | Pegasi |\n| 39–40 |  |  |  |  | Griffons, Hippogriffs, Demigryphs |\n| 41–55 | Daemons (All) |  |  | 99 | Dragons |\n| 56-58 |  |  |  |  | Jabberslythes |\n\n* Creatures with the Bestial Trait ** Creatures with the Bless or Invoke Talents **Creatures with the Petty Magic, Arcane Lore, or Witch! Talent, or the Spellcaster Trait."
+  },
+  {
+    "id": "archives-ii:reference:55-shinsmasher-s-club",
+    "name": "Shinsmasher's Club",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 55,
+    "text": "The providence of this brutal looking club is unknown. It turned up in Altdorf in the hands of a Hook enforcer, but has since changed hands a dozen times. Any Critical Wound inflicted by this hammer on an opponent’s legs enjoys a bonus of +20 to the severity roll. The club otherwise functions as a normal Hand Weapon."
+  },
+  {
+    "id": "archives-ii:reference:55-throatseeker-s-blade",
+    "name": "Throatseeker's Blade",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 55,
+    "text": "These magical Rapiers are created with an innate blood lust all of their own, guiding the tip past even the best defence. A Throatseeker’s Blade ignores any AP provided by armour that has the Weakpoints Flaw. This weapon otherwise functions as a normal Rapier."
+  },
+  {
+    "id": "archives-ii:reference:56-quirks-and-curses",
+    "name": "Quirks And Curses",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": "56–57",
+    "text": "The Winds of Magic are fickle and difficult to control at the best of times, and they do not seem to like being bound to items to serve at the wielder’s beck and call. So much as a brief distraction when creating a magical item can lead to disaster. Even a minor oversight can cause artefacts to manifest weird behaviours, dubbed Quirks. Efforts may go even more disastrously wrong, resulting in a Curse.\n\nSome Wizards have been known to deliberately create Cursed artefacts, often with a specific purpose in mind, sometimes just to cause misery in those who wield them. When randomly generating an artefact, the GM should make a secret roll to see if the item carries a Quirk or Curse. Quirks and Curses do not apply to scrolls, and by long tradition — call it a professional courtesy — most staffs are not cursed.\n\n| D100 | Effect |\n| --- | --- |\n| 01–20 | The artefact does not carry any sort of Quirk or Curse. |\n| 21–35 | Whenever the artefact is used it gives off an eerie blue-green glow. This item was forged with the help of miraculous rites performed by a priest of one of the Empire’s gods. Decide which god, bearing in mind the temperament of the deity. For example, Shallya never assists in the construction of a weapon. The magical effects only work if the wielder first abides by the god’s strictures (WFRP, Chapter 7) for at least 32 consecutive days. |\n| 36–40 | The effect is achieved through runes inscribed by a Dwarf Runesmith. There is no negative effect on the item, and it has the Durable and Fine Item Qualities. However, it is likely the Dwarfs who produced this artefact desire its return and regard the bearer as a thief. The artefact gives off a faint, constant humming noise. This increases the Difficulty of any Stealth Tests the bearer makes by one step, and is rather annoying. |\n| 41–45 | The artefact will only work after the wielder speaks a particular word. What this word might be is left up to the GM, and learning it may take the Character some time and effort. |\n| 46–50 | The Winds of Magic are tenuously bound to this artefact. Every time it is used the bearer must make a Very Easy (+60) Channelling Test. If they fail the Test, the bearer must roll on the Minor Miscast Table (WFRP, page 234) as the Winds escape the artefact. Characters without the Channelling Skill automatically fail this Test. |\n| 51–63 | The effect was produced through a temporary enchantment on the item, the magic used was unstable, or the item is otherwise close to the end of its useful life. After 1d100 days, any magical abilities the item possesses vanish. |\n| 64–69 | The artefact draws on the bearer for some of its strength. Anyone who carries it feels unusually hungry, and must eat twice the normal amount of food or suffer from a permanent Fatigued Condition for as long as they carry the item. |\n| 70–75 | The effect relies on sinister carvings, crude fetishes, or grotesque scrimshaw. The nightmarish item may frighten superstitious folk and draw the unwelcome suspicion of Witch Hunters. The artefact has the Ugly Flaw. |\n| 76–78 | A pinch of Warpstone dust was used in the creation of this artefact. It is a minor source of Corruption (WFRP, page 182). |\n| 79–80 | The item relies on power drawn from either sunlight or moonlight. It only works during the day or night, and does not work indoors or underground. Roll 1d10 to determine the body: 1–6 The Sun, 7–9 Mannslieb, 10 Morrslieb. |\n| 81–84 | The artefact was created by a hermit who shunned the contact of others, and a little of their solitary nature has infected the item. Tests involving the item while others are present suffer -1SL, while Tests made involving it while alone benefit from +1SL. |\n| 85–89 | The item derives its power by leeching the life from its wielder. Every time the item is used the wielder must make a Challenging (+0) Endurance Test. If they fail they gain a Fatigued Condition. |\n| 90–93 | Whilst the person who made this item was a mighty worker of magic, they were a poor craftsman. The artefact has the Unreliable Flaw. |\n\n| D100 | Effect |\n| --- | --- |\n| 94–97 | Wild energies course around the item. Any creature or Character with the Second Sight Talent is able to see the item as if it was a beacon fire, even if it is kept in a scabbard or backpack. The bearer has no hope of hiding from those with Second Sight. |\n| 98–99 | The item is vampiric. Each dawn it must be daubed with a Wound’s worth of the wielder’s blood or its magical effects cease to function until the item is sated. If the item is allowed to go inactive in this way, three Wounds’s worth of the wielder’s blood is required to reactivate it. |\n| 100 | The source of power for this item is a captured Spite, trapped inside a prominent adornment or pommel. It is magically bound, but once a day can make a Hard (–20) Pick Lock Test with a Dex of 58. If it passes, the creature gains temporary control. It is still physically restrained within the artefact, but there is a perceptible rattle as it strains against its bonds. During the subsequent 24 hours it may attempt to cast three spells from the Lore of Life using its WP of 47. It chooses whatever spells most inconveniences or humiliates the bearer (such as healing an opponent in combat). Spites are capricious and cruel; if the creature is released, it may decide to torment its liberators. |\n| 101–111 | Magical energy is weakly bound to the artefact. Every time it is used the bearer must make an Average (+20) Channelling Test. If they fail the Test, the bearer must roll on the Minor Miscast Table (WFRP, page 234) as wild magic is vented of.f Characters without the Channelling Skill automatically fail this Test. |\n| 112–129 | Magical energy swirls about the item. Anyone casting spells within 10 yards of the bearer is subject to the Swirling Winds (WFRP, page 238). |\n| 130–137 | Magical energy is poorly bound to the artefact. Every time it is used the bearer must make a Challenging (+0) Channelling Test. If they fail the Test, the bearer must roll on the Minor Miscast table (WFRP, page 234) as wild magic is vented of.f Characters without the Channelling Skill automatically fail this Test. |\n| 138–140 | A chunk of Warpstone was used in the creation of this artefact. It is a source of Moderate Corruption (WFRP, page 182). |"
+  },
+  {
+    "id": "archives-ii:reference:57-magical-weapons",
+    "name": "Magical Weapons",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 57,
+    "text": "The vast majority of magical weapons produced by Humans are swords, while Dwarfs prefer axes and hammers. The utility of such weapons, the manner of their forging, and the ease with which they are carried make them good candidates for bewitchment.\n\nThis is not to say that other types of magical weapons may not be made, but most artificers are not also versatile armourers, so it is hard to find a Wizard comfortable with making magical polearms, for instance.\n\nIf you need to randomly generate a magical weapon, roll on the following table to determine the type of weapon."
+  },
+  {
+    "id": "archives-ii:reference:57-magical-weapons-table",
+    "name": "Magical Weapons Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 57,
+    "text": "| D100 | Result | D100 | Result |\n| --- | --- | --- | --- |\n| 01–50 | Hand Weapon | 76–78 | Great Axe |\n| 51–60 | Dagger | 79–83 | Warhammer |\n| 61–65 | Rapier | 84–85 | Zweihander |\n| 66–68 | Halberd | 86–90 | Throwing Axe |\n| 69–72 | Spear | 91–98 | Bow |\n| 73–75 | Bastard Sword | 99–00 | Crossbow |"
+  },
+  {
+    "id": "archives-ii:reference:58-magical-weapon-qualities",
+    "name": "Magical Weapon Qualities",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": "58–59",
+    "text": "You can use this table to generate random magical effects for weapons. The weapon’s effect and likely origin for its powers are both described. At the GM’s discretion, the origin may be different to that described. For example, a Hoarfrost Blade might be constructed through a process other than secrets held by the Ice Witches of Kislev — they are merely the best-known artificers of these weapons.\n\nSome of the examples involve divine intervention in the item’s creation. Though magical artefacts and divine relics may use the same rules, the method of their creation, and their place in the world, can be quite different — a fact scholars the Old World over have been arguing since the founding of the Empire.\n\n| D100 | Ability |\n| --- | --- |\n| 01–20 | Touched by the Winds: The weapon has petty enchantments cast upon it. Beyond damaging creatures that are immune to non-magical attacks it has no particular ability. If the weapon is a ranged item, this ability is conferred to its ammunition. |\n| 21–24 | Wreathed in Shadow: These weapons are often made by Grey Wizard artificers. The blade of a melee weapon seems insubstantial and ghostly, while the same effect lingers on the string of a bow or crossbow, and is conferred to any ammunition the weapon fires. Any target hit by the weapon receives no benefit from non- magical armour. |\n| 25–28 | Alight with Flame: Many of these weapons are produced in the forges of the Bright College. Once drawn the weapon bursts into searing flame, but does not harm the wielder or any possessions they carry. If the wielder hits a flammable target with the weapon, the target suffers one Ablaze Condition. |\n| 28–31 | Dolorous: Death magic permeates the weapon, filling foes with fright. The wielder counts as causing Fear (1). |\n| 32–35 | Of Leaping Silver Wroth: Alloys used in constructing this weapon lend it expert balance and surprising lightness. A melee weapon of Leaping Silver has the Fast Quality. A ranged weapon with this enchantment bears the silver alloy in fine filigree about it, granting a wielder +10 Initiative in combat. |\n| 36–39 | Carved of Rage: Often created by the shamans of the Amber Order, animalistic fury and instinct fill the mind of the wielder whenever this weapon is drawn in anger. Once drawn, the wielder of this weapon becomes subject to Frenzy. |\n| 40–43 | Envigoured: The life-giving wind of Ghyran courses through the weapon. The wielder ignores Fatigue Conditions whilst fighting with the weapon. The blade also has the Unbreakable Quality. |\n| 44–47 | Entwined with Fate: Celestial magics have imbued the weapon with subtle prognosticative abilities. At the start of each round of combat, the weapon imbues the wielder with one Advantage. |\n| 48–51 | Of Rigor Wroth: Light magic makes a paragon of this weapon’s wielder. The wielder of such a melee weapon benefits from the following Talents: Strike Mighty Blow, Strike to Injure, and Strike to Stun. The wielder of a ranged weapon gains the benefit of the following Talents: Fast Shot, Sharpshooter, and Sniper. |\n| 52–54 | Of Stalwart Sorcery: These weapons strike true as Verena (though the Verenan cult is at pains to point out they don’t endorse magical weapons as instruments of justice). The weapon has the Precise Quality. |\n| 55–57 | Bewildering: Powerful enchantments of bemusement and misdirection are woven into the weapon. Anyone wounded by the weapon gains the Surprised Condition. |\n| 58–60 | Of Bold Brass: This weapon’s bearer is filled with a sense of vim, is immune to the effects of Fear, and enjoys a +2 SL bonus to resist Terror. |\n\nNote that certain effects are described as applying to a ‘wielder’ and others to a ‘bearer’. A wielder is someone actively using it as their primary weapon in combat, whilst a bearer carries the weapon in their hand or in a scabbard.\n\nAll magical weapons are capable of damaging creatures that are normally immune to non-magical attacks, such as those with the Ethereal Creature Trait.\n\nSome magical abilities confer additional Qualities to the weapon. These Qualities do not stack. For example, if a weapon with the Fast Quality would gain the Fast Quality in some other way, it does not impose a –20 penalty to defending against the attack.\n\n| D100 | Ability |\n| --- | --- |\n| 61–63 | Of the Wolf ’s Wide Jaws: The most favoured Ulrican warriors wield these weapons with wolf ’s head pommels and other lupine motifs. The weapon has the Damaging Quality. |\n| 64–66 | Of Deft and Cunning: Often created with the aid of Myrmidian experts, these deft weapons handle with exquisite precision. The wielder benefits from +20 WS or BS, as appropriate. |\n| 67–69 | Of Salt and Brine: The priests of Manann lend their knowledge to artificers seeking to create weapons that guard against unexpected raiders. The bearer of this weapon may make a free Action in the first Round of any combat. The weapon also has the Fast Quality. |\n| 70–72 | Of Grisly Wounds: Deathly enchantments ensure that wounds caused by this weapon are severe. The weapon has the Damaging Quality. |\n| 73–75 | Of Tooth and Claw: Creatures with the Bestial Creature Trait recognise something of themselves in this weapon. They must pass a Difficult (–10) Willpower Test before attacking the wielder. |\n| 76–78 | Of Deepest Banishing: The energies given off by this weapon are anathema to Daemons and Ethereal Undead. The wielder always counts as having three additional points of Advantage when determining effects of the Unstable Trait. |\n| 79–81 | Of Undue Substance: A master of Chamon has imbued this weapon with strange properties of density and mass. The weapon has the Pummel and Hack Qualities. |\n| 82–84 | Of Languishing Death: Morr calls earnestly to those wounded by this weapon. All Wounds the weapon inflicts are Festering Wounds (WFRP, page 187). |\n| 85–87 | Of Keenest Edge: The tip and edges of this weapon are kept magically keen, or any ammunition it fires becomes so. The weapon has the following Qualities: Hack, Impale, and Penetrating. |\n| 88–90 | Of Bane: The weapon was made with enchantments that increase its deadliness to a given enemy. If it deals damage to a particular type of creature, it inflicts twice the number of Wounds. Roll on the Random Creature Table (see page 55) to determine the affected creature. |\n| 91–92 | Of Ceaseless Cleaving: Powerful enchantments guide the weapon easily through flesh and bone. If a hit from the weapon deals Damage, it inflicts an additional two Wounds. |\n| 93–94 | Of Leaping Gold: This stunning weapon handles like a feather, but lands like a block of lead. The weapon has the following Qualities: Fast, Penetrating, and Precise. |\n| 95–96 | Of Grievous Injury: The injuries inflicted by this weapon are cruel and severe. Whenever the wielder rolls on the Critical Injuries Chart (WFRP, page 174) they can reverse the numbers of the roll and apply whichever is the most damaging result. |\n| 97–98 | Of Form Mercurial: A master of Chamon has created this weapon, allowing it to morph according to the wielder’s movements. When used to thrust, it becomes long and thin. When used to slash or strike, it becomes broad and razor-edged. Each round the weieldger may choose from the following Qualities: Fast, Hack, Impale, Penetrating, and Precise. |\n| 99 | Hoarfrost Blade: These rare and powerful weapons are sometimes created through painstaking rites undergone by the Ice Witches of Kislev. So much as a nick from one of these blades can prove fatal. If a hit from the weapon deals Damage, it inflicts double the number of Wounds, plus four additional Wounds. There is no way to create ranged weapons that imbue their ammunition with this quality. If you roll this result for a ranged weapon, it represents 1d10 pieces of ammunition imbued with the above ability. If you have already rolled Legendary Weapon for a ranged weapon, ignore this result. |\n| 00 | Legendary Weapon: Roll twice more on this table. If you roll this result multiple times, a magical weapon has a maximum of five abilities. Duplicate abilities are not cumulative. |"
+  },
+  {
+    "id": "archives-ii:reference:60-magical-weapon-history-table",
+    "name": "Magical Weapon History Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 60,
+    "text": "| D100 | Effect |\n| --- | --- |\n| 01–17 | The weapon is of no particular historical significance. |\n| 18–29 | Battered: The weapon has been worn and damaged after long years of use and abuse. Choose a Quality from the following list and apply it to the weapon: Ugly, Shoddy, or Unreliable. |\n| 30–37 | Expertly Forged: The weapon was made by a renowned magician artificer, such as Volans, who helped Teclis set up the Colleges of Magic, or the great Hagmar Wyrmschlager. Choose a Quality from the following list and apply it to the weapon: Fine, Durable, Lightweight, or Practical. |\n| 38–44 | Tyrant Borne: This weapon was once wielded by a cruel and petty Old World ruler. Agitators, Verenans, and other champions of the common folk may remember the item as a symbol of brutal injustice. If so, they are subject Prejudice towards the bearer (WFRP, page 190). |\n| 45–51 | Sacrilegious: This weapon became associated with a particular side during the Age of Wars and is seen as a sign of division between Sigmarites and Ulricans. Choose whether the weapon is an affront to Sigmarites or Ulricans. These people are subject to Animosity towards the bearer (WFRP, page 190). |\n| 52–56 | Bewitched: Once an unholy necromancer, witch, or sorcerer of Chaos bore this weapon. Even if the weapon itself is not actually a corrupt artefact, people may perceive it as such. Roll 1d10 to determine the effect. 1: The weapon counts as a minor source of Corruption. 2–5: Generate an additional Quirk or Curse by rolling on the Quirks and Curses Table (see page 56) and adding +40 to the result. 6–10: People who recognise the weapon are subject to Animosity towards the bearer. |\n| 57–73 | Battle Tested: This weapon was once wielded with noted effect at a famous battle against one of the Empire’s many enemies. Maybe it took Skaven heads at the battle of the Howling Hills, shattered skeletons in the Vampire Wars, or slew scores of Goblins following Grom the Paunch. Folk who recognise and respect the weapon’s provenance treat the bearer as having a Status tier (WFRP, page 49) one higher than they actually do (to a maximum of Gold) for the purpose of Intimidate, Leadership, and Charm Tests. |\n| 74–80 | Bitterly Remembered: This weapon once slew a mighty champion of a hostile Species given to holding lasting grudges, and the event has not been forgotten. Members of the Species who recognise the weapon become subject to Hatred toward the bearer (WFRP, page 190). Roll D10 to determine who hates the weapon: 1: Fimir, 2: Dark Elves, 3: Dragons, 4: Daemons, 5–6: The mortal followers of a particular Chaos God, 7–8: Vampires and Necromancers, 9-10: Dwarfs. Others are either beyond such pettiness, resent their own champions, or do not keep detailed histories. |\n| 81–89 | Heirloom: This weapon once belonged to a rich and powerful family. They would most certainly pay handsomely for its return, but they may well resent those who refused to sell it back to them. |\n| 90–96 | Sought: The former owner of this weapon is part of an adventuring band of mercenaries. Having recently finished their last commission, they are now on the trail of the lost weapon. |\n| 97–00 | Storied: Roll twice more on this table. |\n\nExample: Rudi Fleisher has found a sword that was once wielded against Ulrican forces in the Age of Wars. He later goes to a Middenland village populated by Ulricans. The GM decides that the rustic folk who live there do not have enough knowledge of history to recognise the sword. Later he visits an Ulrican shrine. The priests recognise the sword and are subject to Animosity against Rudi. Soon after they come to know that he can be trusted, so the negative psychological effect no longer applies. If Rudi manages to rise to greatness himself, he may even rehabilitate the sword's reputation."
+  },
+  {
+    "id": "archives-ii:reference:60-the-history-of-magical-weapons",
+    "name": "The History of Magical Weapons",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 60,
+    "text": "Magical weapons are often quite storied objects, with names and legacies of their own. If the Characters find a magical weapon, the GM should roll on the following table to see if it has earned a reputation. The Character who comes into possession of the blade may know nothing of this unless they pass a Hard (–20) Lore (History) Test or invest time into researching its history. Certain psychological effects can be produced by this table. These effects only apply to those who recognise the weapon but are unfamiliar with (or already suspicious of) the bearer."
+  },
+  {
+    "id": "archives-ii:reference:61-magical-ammunition-table",
+    "name": "Magical Ammunition Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 61,
+    "text": "| D100 | Ability |\n| --- | --- |\n| 01–54 | Magical Arrow: The arrow is capable of damaging creatures that are immune to non- magical attacks and inflicts +1 Damage, but has no particular ability. |\n| 55–74 | Arrow of Potency: If a hit from an Arrow of Potency deals Damage, it inflicts an additional 1d10 Damage which ignores Armour and Toughness. |\n| 75–91 | Arrow of True Flight: These arrows grant +30 Ballistic Skill when fired. |\n| 92–00 | Hail of Doom Arrow: After firing a Hail of Doom Arrow, it splits into 1d10 arrows in flight. Roll to hit and damage with each arrow. These arrows can all hit the same target, or may hit secondary targets provided they are within 5 feet of the primary target and that the shooter has a clear line of sight to them. |\n\nMagical items are all well and good, if you can keep them safe. Of course, I smuggled mine in when I first arrived until I could put it somewhere safe. Yes, I can be paranoid, but I know Inga has figured out I possess such an artefact. Her questions have become more leading of late. What will she ever do with it – if she finds it? When I think of all the magical items I’ve seen over the years – including Ghal Maraz – which was so disappointing I thought it a touch unreal. Is this what all the fuss is about?"
+  },
+  {
+    "id": "archives-ii:reference:61-magical-arrows-and-bolts",
+    "name": "Magical Arrows and Bolts",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 61,
+    "text": "Although forging magical weapons is exceedingly rare, creating magical ammunition is even rarer. Working enchantments into arrowheads is fiddly and arrows are easily lost or broken. A magical arrow is destroyed if it hits its target. Arrows that miss their targets can usually be recovered unbroken. There is a 90% chance of this occurring in fair conditions, but if the terrain is rocky or swampy, the chance is reduced to 50% or lower."
+  },
+  {
+    "id": "archives-ii:reference:61-temporary-enchantments",
+    "name": "Temporary Enchantments",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 61,
+    "text": "In certain circumstances, even outside of an unlucky roll on the Quirks and Curses Table, an item may not retain its magic indefinitely. Magic still abounds in the Old World, and there are ways by which an item might gain a temporary magical enchantment. In the Empire, many people know that weapons left in the Eternal Fire in Middenheim’s High Temple of Ulric are imbued with magical powers. However, tales suggest that folk heroes have been granted temporary enchantments through divine miracle or from daubing items in the blood of monstrous creatures.\n\nIt is left up to the GM to decide what circumstances might result in an item receiving a temporary enchantment. As a rough guide, most of these enchantments last only 1d100 days and are rarely as powerful as their more indefinitely enchanted kin. To determine the effects of a temporary enchantment, roll on the relative table, but halve the result. The effect only lasts for 1d100 days.\n\nExample: Duri the Dwarf arranges to leave his axe within Middenheim’s Eternal Fire overnight. The next morning he returns to retrieve his weapon. Duri’s Player rolls to see what ability his axe has gained. He rolls 82. This would normally result in his axe having the Languishing Blade effect. However, it is halved to 41, a Blade of Vigour.\n\nThe GM secretly rolls 1d100, resulting in a 16. Duri only has only a fortnight before his axe loses the enchantment."
+  },
+  {
+    "id": "archives-ii:reference:62-armour-size-table",
+    "name": "Armour Size Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 62,
+    "text": "| D10 | Species | Height |\n| --- | --- | --- |\n| 1 | Human | Exceedingly Short |\n| 2 | Human | Short |\n| 3 | Human | Short |\n| 4 | Human | Average |\n| 5 | Human | Average |\n| 6 | Elf | Average |\n| 7 | Elf | Average |\n| 8 | Dwarf | Tall |\n| 9 | Dwarf | Tall |\n| 10 | Halfling | Exceedingly Tall |\n\nExactly how the size of the armour affects the wearer is left up to the GM. In the case of mail armour some wiggle room is allowed, but plate armour may only be worn by someone with suitable proportions. Armour made for a large individual could conceivably be worn by a smaller individual at the cost of an +1 Encumbrance for each piece of such armour to represent the awkward discomfort involved. A skilled smith, ideally one also knowledgeable in magic, may be able to adjust the armour to suit without interfering with the enchantments."
+  },
+  {
+    "id": "archives-ii:reference:62-gromril-and-ithilmar",
+    "name": "Gromril And Ithilmar",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 62,
+    "text": "If the Characters find a piece of magical plate armour made to fit a Dwarf, the GM can either generate its ability from the Magical Armour table or decide it is forged from Gromril.\n\nGromril is derived from meteoric ores — it is not only rare but exceedingly difficult to smelt and work with. Only the Dwarfs have developed the techniques required to work Gromril. It is a hard metal, and the practically-minded Dwarfs reserve it almost exclusively for plate armour. Almost all Gromril armour is made for Dwarfs, but on very rare occasions they may create a suit for someone else. Gromril plate confers 3 APs rather than 2, and renders the wearer immune to Critical Wounds inflicted unless the Character has already been reduced to 0 Wounds.\n\nMagical plate armour made to fit an Elf can either have an ability from the Magical Armour table or the GM can decide it is made from Ithilmar.\n\nIthilmar is an unusual silvery metal only found in the mines of Vaul’s Anvil in Ulthuan. Suits of Ithilmar armour are exceedingly rare outside of the Elven kingdoms, but envoys sometimes bring them as gifts or show pieces used to tout the superiority of Elven craftsmanship. Ithilmar is as strong as steel, but is only a fraction of the weight. Reduce the Encumbrance of any piece of Ithilmar armour by 2 to a minimum of 0.\n\nAll magical armour is imbued with enchantments making it resistant to damage. The first time each day that a piece of magical armour would suffer damage, such as that inflicted by the Hack Quality or from Critical Deflection, ignore it. Magical armour also always provides protection against attacks that ignore non-magical armour.\n\nLeather armour cannot be either Gromril or Ithilmar. Reroll these results if rolling for a piece of leather armor.\n\nNote: Certain effects require a full suit to be effective, whereas others can be applied to a single piece, such as a helmet or chausses. A piece’s magical effect only applies if it is worn on the location struck."
+  },
+  {
+    "id": "archives-ii:reference:62-magical-armour",
+    "name": "Magical Armour",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 62,
+    "text": "Magical armour is even more arduous to create than magical weaponry, and has the disadvantage that it must be made to fit the intended wearer. Most pieces of magical armour are plate, as these durable materials are most worth the effort involved in crafting such an artefact, but occasionally artificers make enchanted leather or mail. If the Characters find a piece of magical armour, roll on the following table to see which piece of armour it is."
+  },
+  {
+    "id": "archives-ii:reference:62-magical-armour-table",
+    "name": "Magical Armour Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 62,
+    "text": "| D100 | Piece | D100 | Piece |\n| --- | --- | --- | --- |\n| 01–03 | Mail Chausses | 46–48 | Leather Skullcap |\n| 04–10 | Mail Coat | 49–51 | Leather Breastplate |\n| 11–15 | Mail Coif | 52–54 | Leather Jack, Leggings, Skullcap and Breastplate |\n| 16–20 | Mail Shirt | 55–70 | Breastplate |\n| 21–25 | Mail Coat and Chausses | 71–75 | Open Helm |\n| 26–35 | Mail Coat, Chausses, and Coif | 76–80 | Bracers |\n| 36–38 | Leather Jack | 81–85 | Plate Leggings |\n| 39–41 | Leather Jerkin | 86-90 | Helm |\n| 42–45 | Leather Leggings | 91–00 | Full Plate Armour |\n\nArmour is made to measure, and a suit of discovered magical armour is not likely to simply fit whoever finds it. If the Characters discover a piece of magical armour, roll twice on the following table to find out the height and species type of the original intended wearer."
+  },
+  {
+    "id": "archives-ii:reference:63-magical-armour-qualities",
+    "name": "Magical Armour Qualities",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 63,
+    "text": "| D100 | Ability |\n| --- | --- |\n| 01–32 | Magical Armour: The armour is enchanted, but has no unusual ability. |\n| 33–38 | Gromril Armour: The armour is made of Gromril, and enjoys all the benefits described above. It bears Runes identifying the Dwarf Hold to which the suit belongs by right, and a message in Khazalid demanding that all honest Dwarfs see to its immediate return should it be found elsewhere. |\n| 39–42 | Ithilmar Armour: The armour is made of Ithilmar, and enjoys all the benefits described above. Eltharin inscription identifies its original owner in a series of rhyming couplets. |\n| 43–44 | Gifted Armour: The armour is one of the very rare suits of Gromril or Ithilmar armour that was made as a gift. It is sized suitably for whoever it was intended, typically a Human who has done some great favour for the Dwarfs, but there are records of Halflings and even one Ogre who earned the honour of such a suit. It bears runes in Khazalid that inform any Dwarf that the Gromril was a gift, and the terms under which it should be eventually returned to the Dwarfs. |\n| 45–51 | Alleviating Armour: Suits such as this are often made in consultation with Jade Wizards or Shallyan priests. This armour is suffused with healing energies. Whenever the wearer suffers a Critical Wound, the attacker must roll twice on the appropriate Critical Wounds table and apply the lower result. |\n| 52–58 | Seamless Armour: Such is the skill of this armour’s forging that even slender blades cannot find a weakpoint. If the armour is mail, it gains the Impenetrable Quality. If it is plate, it loses the Weakpoints Flaw. Full suit required. |\n| 59–65 | Dragon Scale Armour: This armour was made in part from the scales of dragons, and it is remarkable in its ability to withstand heat. If an attack that deals Damage through flames or heat hits an area protected by this armour, reduce the Damage of that attack by 2. If an attack that would inflict the Ablaze Condition hits an area protected by this armour, the wearer ignores the Condition. |\n| 66–76 | Armour of Glittering Silver: Such is the bright lustre of this armour that it can dazzle enemies. If fighting in sunlight (or near another source of strong light), opponents in melee with the wearer must pass an Average (+20) Agility Test at the start of each Round or suffer one Blinded Condition. Full suit required. |\n| 77–88 | Trickster’s Armour: It is said that the artificers of this armour consulted with followers of Ranald to imbue the armour with protective wards. If an attack hits an area protected by this armour, roll 1d10. On a roll of a 10, the wearer ignores the hit. |\n| 89–96 | Armour of Resilience: Powerful enchantments known to practitioners of Chamon ensure that the living flesh of the wearer is as strong as steel. The wearer benefits from +5 Toughness. Full suit required. |\n| 97–99 | Armour of Fortune: The Armour of Fortune does not so much protect the wearer directly but misdirects blows that would otherwise land. If an attack hits an area protected by this armour, roll 1d10. On a roll of a 9 or 10, the wearer ignores the hit. |\n| 00 | Legendary Armour: Roll twice more on this table. If you roll this result multiple times, a piece of magical armour has a maximum of five abilities and duplicate abilities are not cumulative. A suit of armour may never be made of both Gromril and Ithilmar. |"
+  },
+  {
+    "id": "archives-ii:reference:64-magical-shield-table",
+    "name": "Magical Shield Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 64,
+    "text": "| D100 | Piece | D100 | Piece |\n| --- | --- | --- | --- |\n| 01–64 | Shield | 90–00 | Shield (Buckler) |\n| 65–89 | Shield (Large) |  |  |\n\nLike magical armour, all magical shields provide protection against attacks that ignore non-magical armour. Other abilities may apply to the shield. Roll on the table below to determine the ability."
+  },
+  {
+    "id": "archives-ii:reference:64-magical-shields",
+    "name": "Magical Shields",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 64,
+    "text": "Magical Shields often work in much the same way as magical armour, however the wide surface of the shield allows an artificer to work more complicated effects. If the Characters find a magical shield, roll on the following table to determine its design."
+  },
+  {
+    "id": "archives-ii:reference:64-scroll-table",
+    "name": "Scroll Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": "64–65",
+    "text": "| D100 | Lore | Max CN | D100 | Lore | Max CN |\n| --- | --- | --- | --- | --- | --- |\n| 01–03 | Petty | 0 | 74–81 | Light | 7 |\n| 04–25 | Arcane | 1 | 82–89 | Shadows | 8 |\n| 26–33 | Beasts | 2 | 90 | Hedgecraft | 0 |\n| 34–41 | Death | 3 | 91–93 | Witchcraft | 9 |\n| 42–49 | Fire | 4 | 94–96 | Daemonology | 10 |\n| 50–57 | Heavens | 5 | 97–99 | Necromancy | 11 |\n| 58–65 | Metal | 5 | 00 | Chaos Magic (any Chaos God) | 12 |\n| 66–73 | Life | 6 |  |  |  |\n\nScrolls containing dark magic can corrupt those who use them. Making use of a scroll that produces a spell from the Lore of Witchcraft counts as a minor source of Corruption. Making use of a scroll that produces a spell from the Lores of Daemonology, Necromancy, Witchcraft, or Chaos Magic counts as a moderate source of Corruption.\n\nIn order to use a scroll, the wielder must read the command words written upon it. These are usually written in one of the various arcane languages used for spellcasting, but may occasionally be spelt out phonetically in another mundane language. To cast the spell the user must brandish the scroll and read the command words and pass a Challenging (+0) Language (Magick) Test. If the scroll is intended for a non-Wizard, they must pass a Hard (–20) Language Test in whatever language the scroll is written in.\n\nMaking this Test is an Action. If the user passes this Test, they cast the spell and the scroll is destroyed. If they fail, nothing happens and they can make another attempt on subsequent Rounds.\n\nMiscasts may occur when casting a spell from a scroll, but scrolls are made under controlled conditions so that the spells they contain always count as being cast with the aid of ingredients (WFRP, page 236)."
+  },
+  {
+    "id": "archives-ii:reference:64-scrolls",
+    "name": "Scrolls",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 64,
+    "text": "Of the many artefacts Wizards use to bind a spell on the cusp of being cast, scrolls are the most common and the most temporary. Scrolls are typically produced so that a reader, including non-wizards, can cast a spell without having to go through the dangerous business of channelling the Winds of Magic. Instead, the magical energy is encoded within sigils and diagrams — all that needs to be done to cast the spell is to read command words written upon the scroll.\n\nIf the Characters find a scroll, roll twice on the following table. The first roll determines what Lore the spell is derived from, and the second determines the spell’s maximum Casting Number. The GM should choose an appropriate spell from the Lore, which ought to have a CN as close to, but not greater than, the one generated by the roll. If the CN is too low for any spell from the Lore, then select the spell with the lowest CN."
+  },
+  {
+    "id": "archives-ii:reference:64-shield-quality-table",
+    "name": "Shield Quality Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 64,
+    "text": "| D100 | Ability |\n| --- | --- |\n| 01–45 | Magical Shield: The shield is magical, but has no further ability. |\n| 46–56 | Ithilmar Shield: These shields are very light. Reduce Encumbrance by 1 to a minimum of 0. |\n| 57–68 | Gromril Shield: Gromril shields provide +1 to the Shield Quality. So, a large Gromril shield counts as having the Shield 4 Quality. |\n| 69–75 | Shield of Ptolos: These shields are based on a design discovered in tombs to the far south of the Old World. Enchantments on the shield misdirect projectiles. Shields of Ptolos provide +2 to the Shield Quality when defending against a missile weapon. So, a large Shield of Ptolos has the Shield 3 Quality against melee attacks but Shield 5 against missile attacks. |\n| 76–88 | Spell Shield: These shields are enchanted to deflect magic missiles. If such a spell targets the bearer, roll a d100 — if the result is 30 or below, the spell fails. An attempt made made by a spellcaster to dispel a magic missile while bearing this shield gain +3 SL. |\n| 89–00 | Charmed Shield: Enchantments imbue this shield with an enhanced ability to deflect incoming attacks. The Defensive Quality of a Charmed Shield is enhanced so that the bearer benefits from +3 SL to Melee Tests they make when opposing incoming attacks. |"
+  },
+  {
+    "id": "archives-ii:reference:65-staffs",
+    "name": "Staffs",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 65,
+    "text": "Wizards typically bear staffs. They are badges of a Wizard’s office as well as magical tools. A Wizard’s staff is typically designed and decorated in a manner that attracts the Winds of Magic the Wizard works with. For example, a Gold Wizard’s staff is typically constructed from different metals, decorated with alchemical symbols, and lined in gilt edging. An Amber Wizard typically bears a rough wooden staff decorated with the teeth, bones, and claws of fierce animals.\n\nStaffs work by attracting the Winds with which they are associated. If a spellcaster bears a staff made to attract a Wind of Magic, spells from the corresponding Lore have their CN reduced by 1 (to a minimum of 0). If the spellcaster was trained by a College of Magic, this benefit also applies to any Arcane spells they cast. Staffs of foul, corrupt materials that draw Dhar can be created for Lores that use dark magic, such as the Lore of Necromancy.\n\nStaffs attuned to the Lores of Hedgecraft or Witchcraft work in the same way as those used by the Colleges of Magic. These artefacts draw equally from all Winds of Magic, supporting these lesser-known Lores.\n\nIf the Characters find a staff, roll on the Lores Table in the scrolls section (page 64) to see which magical tradition it is associated with (rerolling any results of Petty or Arcane).\n\nGenerally speaking, staffs do not have Quirks or Curses. Only roll on the Quirks and Curses Table if the staff is attuned to one of the following Lores: Hedgecraft, Witchcraft, Necromancy, Daemonology, or Chaos Magic. Furthermore, add +40 to the result of this roll when calculating the result.\n\nReroll any result which implies the staff was made by a Dwarf Runesmith, who has no time for such delicate artefacts."
+  },
+  {
+    "id": "archives-ii:reference:65-wand-table",
+    "name": "Wand Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 65,
+    "text": "| D100 | Ability |\n| --- | --- |\n| 01–32 | Wand of Jade: This wand increases the range of spells. Double the range of any spells cast while holding a Wand of Jade. |\n| 33–52 | Wand of Jet: This wand is used by spellcasters to increase the duration of their spells. A spell cast with the aid of a Wand of Jet has its duration doubled. |\n| 53–74 | Earthing Rod: The wand helps control the dispersion of magical energies. When using the wand, a spellcaster may ignore one Minor Miscast when making a Casting or Channelling Test. The rampant magic is trapped in the wand, and slowly discharged into the earth over the following 24 hours. During this time, the wand cannot be used to ignore another Minor Miscast. |\n| 75–95 | Wand of the Winds: The wand is constructed in such a way that compensates for those times when the Winds of Magic blow weakly. If a spellcaster is in a situation where they receive negative modifiers as a result of the Swirling Winds (WFRP, page 238), they may ignore these modifiers for 1d10 Rounds. After this period the wand is depleted. It takes the wand 24 hours to replenish its own store of magical energy. |\n| 96–00 | Forbidden Rod: This dangerous magical artefact assists channelling the Winds of Magic by leeching the vitality of the wielder. If a spellcaster is attempting to cast a spell but fails, they may choose to lose up to three Wounds, adding +1 SL to the Casting Test for each Wound. After using this ability, the Forbidden Rod cannot be used for 24 hours. |"
+  },
+  {
+    "id": "archives-ii:reference:65-wands",
+    "name": "Wands",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 65,
+    "text": "Wands are short staves up to about a foot in length. Like Wizard staffs, they tend to be constructed from materials suited to attracting and directing magical energies. However, unlike staffs, wands do not make casting spells easier, but can improve their efficacy. In order to benefit from a wand, a Wizard must wield it in their primary hand whilst making a Casting or Channelling Test."
+  },
+  {
+    "id": "archives-ii:reference:66-magical-rings",
+    "name": "Magical Rings",
+    "category": "rule",
+    "topic": "Magical items and artifice",
+    "page": 66,
+    "text": "Magical rings are often large and baroque in their design. In part this is to contain and channel the magical energies that enchant the ring, but their designs are also bold and individual so that an owner can trace them should these precious items be stolen.\n\nMany rings enable the wearer to cast a spell and are often made for non-Wizards, and cast the spell with +0 SL."
+  },
+  {
+    "id": "archives-ii:reference:66-ring-table",
+    "name": "Ring Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 66,
+    "text": "| D100 | Effect |\n| --- | --- |\n| 01–37 | Spell Ring: A Spell Ring works in a similar way as a scroll, allowing the wearer to cast a single spell. Unlike a scroll, the ring is not destroyed after casting the spell and the wearer does not need to make a Language Test. Determine the spell within a Spell Ring using the same method for a scroll. When the wearer casts the spell, the ring may not be used for a period of 24 hours. Spell Rings are rare in the Empire, and to the frustration of Wizards who know better, all are inevitably called ‘The’ Ring of Volans, as the techniques required for Human Wizards to manufacture these artefacts were first taught under his supervision. |\n| 38–64 | Striking Ring: The wearer of this ring may use each of its powers one at a time for one turn in each 24-hour period. The power duplicates the effects of one of the following Talents: Strike Mighty Blow, Strike to Injure, and Strike to Stun. |\n| 65–81 | Ruby Ring of Ruin: The Ruby Ring of Ruin is a type of Spell Ring which can be used to cast the Great Fires of U’Zhul spell (WFRP, page 248) from the Lore of Fire. Unlike normal Spell Rings, a Ruby Ring of Ruin can be used three times during any 24-hour period. |\n| 82–00 | Protection Ring: These rings are enchanted to protect the wearer from a particular sort of Creature. In order to determine what sort of Creature this is, roll on the Random Creature Table on page 55. The wearer halves any Wounds taken from a Creature of this type. |"
+  },
+  {
+    "id": "archives-ii:reference:66-talisman-table",
+    "name": "Talisman Table",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 66,
+    "text": "| D100 | Result |\n| --- | --- |\n| 01–30 | Obsidian Lodestone: These amulets are enchanted to disrupt hostile magics targeting the wearer. If a hostile spell targets the bearer, roll a d100 — if the result is 30 or below, the spell fails. Attempts to dispel hostile magic while wearing this amulet gain +3 SL. |\n| 31–45 | Dawnstone: A Dawnstone is often attached to a piece of armour, imbuing it with a degree of extra protection. If the piece of armour is damaged, the Dawnstone breaks, ignoring the damage. |\n| 46–58 | Opal Amulet: The Opal Amulet contains a powerful healing enchantment. Remove 1d10 Wounds from the first attack the wearer suffers. The amulet can only be used once every 24-hour period. |\n| 59–65 | Seed of Rebirth: These amulets look like simple wooden carvings but are powerful artefacts. The wearer of a Seed of Rebirth counts as having the Regenerate Creature Trait (WFRP, page 341). |\n| 66–73 | Amulet of Thrice-Blessed Copper: This amulet reduces the Damage of all attacks made against the wearer by -1. The wearer of such an amulet also receives a +30 bonus to Endurance Tests made to remove Poisoned Conditions. The amulet also turns green in the presence of poisons. |\n| 74–82 | Amulet of Righteous Silver: The wearer of this amulet does not suffer from the effects of Fear, and gains a +2SL bonus on Tests to resist Terror. |\n| 83–00 | Wanderer’s Charm: These amulets are often crafted by Hedge Wizards, and are beloved by wanderers, pedlars, soldiers and vagabonds. Those who carry them may ignore the first Fatigued Condition they receive each day. |"
+  },
+  {
+    "id": "archives-ii:reference:67-oddities",
+    "name": "Oddities",
+    "category": "table",
+    "topic": "Magical items and artifice",
+    "page": 67,
+    "text": "Oddities are rarer magical artefacts that may have been made for a purpose that may not immediately strike adventurers as useful.\n\n| D100 | Result |\n| --- | --- |\n| 01–15 | Self-Cleaning Commode: These light ceramic pieces of pottery are associated with the city of Marienburg, where the Elven community present them as gifts to their Human neighbours. A Character who makes regular use of such a device gains a +10 bonus to Endurance Tests made to resist contracting a disease. |\n| 16–22 | Illusory Weapon: Sometimes created for rogues or thespians, these weapons look like the real deal but inflict no damage. Illusory weapons are usually daggers, but larger illusory weapons are known and there have even been illusory quivers of arrows. |\n| 23–27 | Self-Tuning Lute: Musical purists may quibble, but a minstrel in possession of one of these lutes is able to concentrate on their performances without worrying about their instruments being off-key. A musician equipped with a Self-Tuning Lute benefits from a +10 bonus to Play (Lute) Tests. |\n| 28–33 | Sand of Flinging: This fine but abrasive substance is said to have been made in Ind. It comes in small pouches containing enough sand for four uses. The sand may be thrown in exactly the same way as a dart. The sand does not inflict any damage, but if the target is hit in the head, they suffer one Blinded Condition. |\n| 34–42 | Writ of the Fifth Lore: When this small scroll is presented to someone with an explanation of what it is, be that a license, a charter, or a letter of introduction, the perceiver must make a Very Difficult (–30) Perception Test. If they fail, the scroll seems to be exactly what the bearer claimed it was. |\n| 43–48 | Dazh’s Flint: These small pieces of flint are said to be blessed by a Kislevite god of fire. When this item is pressed to a flammable source, it automatically catches on fire. |\n| 49—50 | Screaming Stone: An unusual item, even by the standards of such magical oddities, the Screaming Stone is a small skull hewn of polished white granite. Whenever a living creature of size Small or larger is in view of the Stone, it begins screaming loudly. This screaming ends once the skull can no longer see a living creature, for example if it moves out of sight or the skull's eyes are covered. If someone attempts to sneak past the skull, treat it as though it has a Perception of 75. |\n| 51–64 | Trackless Boots: These boots leave no prints behind them, making tracking a Character who wears them very challenging. All Track Tests made against the Character suffer a –20 penalty. |\n| 65–69 | All-Seeing Mirror: These mirrors are made in pairs. Instead of seeing their reflection in the mirror, a Character sees whatever is presented to the sister mirror. The effect is broken if the mirrors are parted by a distance of more than 500 miles. If the Characters find an All-Seeing Mirror, there is a 70% chance the sister mirror is in someone else’s possession. |\n| 70-75 | Bellicose Cup: Several grim drinking vessals hail from Norsca, with a handful making their way to the Empire. They take many forms — some are simply carved from wood, others are human skulls sealed with pitch and clay. They were typically used at the start or end of ritual combat, and many who lost their lives in such bouts subsequently donated their skulls towards the creation of another cup. One person may drink from the cup once each day. Drinking water from the cup lets the user ignore the first Bleeding Condition they acquire that day. Drinking strong alcohol from the cup lets the user ignore the first Critical Wound they suffer that day. Drinking the fresh blood of a fallen enemy from the cup grants the user 100 XP and a single Corruption point. |\n| 76–89 | Elven Cloak: These cloaks are created by Wood Elf mages and provide the wearer with excellent camouflage in rural environments. Any sight-based Perception or Ballistic Skill Tests made against the wearer suffer from a –20 penalty. |\n| 90–00 | Crown of Command: These golden circlets were made by Wizards to assist military commanders when inspiring their soldiers. The wearer of the Crown of Command benefits from a +20 bonus to Leadership Tests. |"
+  },
+  {
+    "id": "archives-ii:reference:74-profile-margaret-von-aschendorf-abbess-shallya-silver-2",
+    "name": "Margaret Von Aschendorf Abbess (Shallya) (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 74,
+    "text": "MARGARET VON ASCHENDORF ABBESS (SHALLYA) (SILVER 2)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 28 | 32 | 31 | 35 | 37 | 32 | 43 | 48 | 42 | 47 | 12 |\n\nSkills: Charm 39, Cool 42, Endurance 38, Entertain (Storyteller) 41, Gossip 45, Heal 43, Leadership 37, Lore (Theology) 45, Perception 41, Pray 41, Research 35, Trade (Herbalist) 41\n\nTalents: Etiquette (Shallyans), Field Dressing, Holy Visions, Invoke (Shallya), Panhandle, Read/Write, Resistance (Disease), Robust, Stone Soup, Stout-hearted\n\nTrappings: Robes, Silver Dove Cloak-Pin"
+  },
+  {
+    "id": "archives-ii:reference:75-profile-anna-lise-levertske-nun-former-apothecary-brass-4",
+    "name": "Anna-Lise Levertske Nun, Former Apothecary (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 75,
+    "text": "ANNA-LISE LEVERTSKE NUN, FORMER APOTHECARY (BRASS 4)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 28 | 34 | 31 | 42 | 31 | 29 | 46 | 48 | 36 | 43 | 12 |\n\nSkills: Charm 40, Cool 38, Endurance 43, Haggle 40, Heal 48, Gossip 42, Language (Classical) 39, Language (Guilder) 36, Lore (Chemistry) 43, Lore (Medicine) 44, Lore (Plants) 41, Lore (Science) 42, Lore (Theology) 42, Perception 40, Pray 41, Research 46, Trade (Apothecary) 42, Trade (Brewer) 38, Trade (Herbalist) 38\n\nTalents: Concoct, Craftsman (Apothecary), Etiquette (Guilder), Etiquette (Scholar), Etiquette (Shallyans), Field Dressing, Pharmacist, Read/Write, Stone Soup\n\nTrappings: Pharmaceutical Equipment, Robes, Silver Dove Cloak-Pin"
+  },
+  {
+    "id": "archives-ii:reference:75-profile-clementine-clausewitz-nun-shallya-brass-4",
+    "name": "Clementine Clausewitz Nun (Shallya) (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 75,
+    "text": "CLEMENTINE CLAUSEWITZ NUN (SHALLYA) (BRASS 4)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 21 | 24 | 27 | 32 | 34 | 32 | 38 | 37 | 35 | 39 | 12 |\n\nSkills: Charm 43, Cool 42, Endurance 32, Entertain (Storytelling) 43, Gossip 40, Heal 43, Lore (Theology) 39, Pray 37, Research 42, Trade (Herbalist) 39\n\nTalents: Bless (Shallya), Etiquette (Shallyans), Field Dressing, Invoke (Shallya), Stone Soup, Panhandle, Read/Write\n\nTrappings: Robes, Silver Dove Cloak-Pin"
+  },
+  {
+    "id": "archives-ii:reference:75-profile-marie-duvallier-nun-shallya-former-physician-brass-4",
+    "name": "Marie Duvallier Nun (Shallya), Former Physician (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 75,
+    "text": "MARIE DUVALLIER NUN (SHALLYA), FORMER PHYSICIAN (BRASS 4)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 34 | 32 | 36 | 32 | 34 | 46 | 49 | 48 | 43 | 12 |\n\nSkills: Charm 41, Cool 46, Endurance 31, Entertain (Storytelling) 35, Gossip 42, Haggle 41, Heal 52, Language (Guilder) 38, Lore (Anatomy ) 37, Lore (Medicine) 43, Lore (Theology) 36, Perception 45, Pray 34, Research 48, Sleight of Hand 35, Trade (Herbalist) 32\n\nTalents: Bookish, Coolheaded, Etiquette (Guilder), Etiquette (Shallyans), Field Dressing, Invoke (Shallya), Stone Soup, Strike to Stun, Panhandle, Read/Write, Surgery\n\nTrappings: Robes, Silver Dove Cloak-Pin, Surgical Tools"
+  },
+  {
+    "id": "archives-ii:reference:76-profile-hanna-bratsch-attendant-former-sergeant-brass-3",
+    "name": "Hanna Bratsch Attendant, Former Sergeant (Brass 3*)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 76,
+    "text": "HANNA BRATSCH ATTENDANT, FORMER SERGEANT (BRASS 3*)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 48 | 34 | 47 | 49 | 41 | 43 | 33 | 37 | 48 | 33 | 12 |\n\nTraits: Armour (Leather Jack and Leggings) 1, Weapon (Club) +8\n\nSkills: Athletics 42, Climb 35, Consume Alcohol 34, Cool 52, Dodge 44, Endurance 42, Gamble 35, Gossip 36, Heal 47, Intuition 33, Language (Battle) 32, Leadership 33, Melee (Basic) 37, Melee (Brawling) 38, Outdoor Survival 31, Perception 42\n\nTalents: Combat Aware, Drilled, Etiquette (Soldiers), Strong Back, Unshakeable, War Leader\n\nTrappings: Leather Jack and Leggings, Hand Weapon (Club), Silver Dove Cloak-Pin\n\nNotes: Hanna’s status is lower than typical due to her position in service to the Nuns who, though respected, are not considered to be of high status in the Empire."
+  },
+  {
+    "id": "archives-ii:reference:76-profile-typical-sister-nun-shallya-brass-4",
+    "name": "Typical Sister — Nun (Shallya) (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 76,
+    "text": "TYPICAL SISTER — NUN (SHALLYA) (BRASS 4)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 25 | 25 | 30 | 30 | 30 | 30 | 35 | 35 | 35 | 35 | 12 |\n\nSkills: Charm 35, Cool 40, Endurance 35, Entertain (Storytelling) 35, Gossip 35, Heal 40, Lore (Theology) 40, Pray 35, Research 30,Trade (Herbalist) 35\n\nTalents: Etiquette (Shallyans), Field Dressing, Stone Soup, Panhandle, Read/Write\n\nTrappings: Robes, Silver Dove Cloak-Pin"
+  },
+  {
+    "id": "archives-ii:reference:77-erzbet-wegener-patient-brass-0",
+    "name": "Erzbet Wegener — Patient (Brass 0)",
+    "page": 77,
+    "category": "profile",
+    "text": "| Row | M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Present condition | 4 | 10 | 10 | 43 | 46 | 10 | 10 | 10 | 10 | 10 | 10 | 11 |\n| If cured | 4 | 65 | 67 | 43 | 46 | 63 | 66 | 64 | 52 | 50 | 55 | 17 |\n\nThe first stat line reflects Erzbet’s present condition. If she were cured, the second would be used.\n\nSkills: Erzbet has many Skills, but in her present condition she cannot access any of them. The first to return is Perform (Dancing), with a score of 72. Her other Skills are a mix of those available to Troubadours, Spies, and Assassins.\n\nTraits: Immunity to Psychology\n\nTalents: Like her Skills, Erzbet cannot use any of her Talents at present. If she is cured they may return, and are consistent with her former Careers.\n\nTrappings: Ragged Clothing",
+    "topic": "Printed NPC profiles"
+  },
+  {
+    "id": "archives-ii:reference:78-profile-adalmann-von-hopfberg-noble-lord-gold-7",
+    "name": "Adalmann Von Hopfberg Noble Lord (Gold 7)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 78,
+    "text": "ADALMANN VON HOPFBERG NOBLE LORD (GOLD 7)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 49 | 32 | 28 | 32 | 39 | 43 | 52 | 55 | 54 | 62 | 12 |\n\nSkills: Charm 65, Consume Alcohol 44, Cool 52, Endurance 35, Entertain (Singing) 52, Gamble 55, Gossip 65*, Language (Estalian) 37, Language (Norse) 42, Leadership 57, Lore (Politics) 65*, Melee (Basic) 35, Melee (Fencing) 43, Navigation 45, Perception 36*, Sail 47, Swim 35 *All Tests connected with his present situation, or anything that has happened in the last 15 years, are Very Hard (−30).\n\nTalents: Carouser, Commanding Presence, Coolheaded, Etiquette (Noble), Old Salt, Orientation, Noble Blood, Pilot, Public Speaking, Read/Write, Savvy, Sea Legs, Seasoned Traveller, Suave, Tenacious\n\nTrappings: Good Quality Clothing, Collection of Books on Naval History, Unfinished Manuscript of his Memoirs."
+  },
+  {
+    "id": "archives-ii:reference:79-profile-isabella-seer-brass-4",
+    "name": "Isabella — Seer (Brass 4)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 79,
+    "text": "ISABELLA — SEER (BRASS 4)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | 29 | 26 | 32 | 47 | 36 | 47 | 44 | 46 | 49 | 12 |\n\nTraits*: Fear 1, Frenzy, Fury, Immunity to Psychology *These Traits only come into play when Isabella is enraged (see above).\n\nSkills: Charm 52, Entertain (Fortune Telling) 41, Entertain (Prophecy) 47, Gossip 49, Intuition 45, Language (Classical) 42, Leadership 37, Perception 39, Play (Lute) 42\n\nTalents: Attractive, Etiquette (Nobles), Holy Visions, Magical Sense, Noble Blood, Read/Write, Second Sight, Sixth Sense, Suave\n\nTrappings: Rich Clothing and Jewellery, Small Collection of Books on Prophecy and Astrology."
+  },
+  {
+    "id": "archives-ii:reference:80-profile-richter-kless-professor-gold-1",
+    "name": "Richter Kless — Professor (Gold 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 80,
+    "text": "RICHTER KLESS — PROFESSOR (GOLD 1)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 29 | 31 | 32 | 47 | 43 | 31 | 45 | 65 | 37 | 42 | 12 |\n\nSkills: Intuition 41, Language (Classical) 47, Language (Dark Tongue of Chaos) 42, Language (Gospodarinyi) 35, Lore (Theology) 45, Lore (Chaos) 79, Perception 43, Research 56,\n\nTraits: Mental Corruption (Chaotic Dreams)\n\nTalents: Bookish, Etiquette (Scholars), Linguistics, Magnum Opus (Liber Chaotica), Read/Write, Savant (Chaos), Savvy, Speedreader, Tower of Memories\n\nTrappings: Ragged Clothes"
+  },
+  {
+    "id": "archives-ii:reference:82-power",
+    "name": "Power",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 82,
+    "text": "Mass Combat requires two or more opposing sides in conflict. Both sides have a Power Attribute which represents their collective Army size, and the relative skill of their fighters. A horde of Greenskins would have a far greater Power than a rabble of peasants, but an equal number of elite Knights Panther might just balance those odds. Power is used during each Battle Round to deal damage to the opposing Army, and is recalculated after each Battle Round to reflect what has happened."
+  },
+  {
+    "id": "archives-ii:reference:83-battlefield-strength",
+    "name": "Battlefield Strength",
+    "category": "table",
+    "topic": "Mass battles",
+    "page": 83,
+    "text": "Before a Battle, the GM must decide on the Power of both Armies. This is a value that ranges from 0 to 100, and reflects the size and strength of each Army. You may use the following table as a guideline for estimating Power Levels. Consider how the Characters’ force compares to their opponents:\n\n|  |  |  |  |\n| --- | --- | --- | --- |\n| Characters’ Army | Ally Power | Foe Power | Examples |\n| Insignificant | 30 | 70 | A provincial city’s defense against a Vampire Count and his undead legions. |\n| Disadvantaged | 40 | 60 | A mercenary company against a Greenskin Waaagh! |\n| Evenly Matched | 50 | 50 | Provincial armies facing each other in the open field. |\n| Advantaged | 60 | 40 | A well-provisioned castle defending against a horde of unorganised Clanrats. |\n| Overwhelming | 70 | 30 | An alliance of Humans and Dwarfs assaulting a Beastmen warcamp. |\n\nExample: An Army composed of a unit of Knights Panther and a peasant militia face off against a similar sized army of Orcs and Goblins. The Knights are Well Equipped and are Veteran Units, so their army has a Power of 50. The Orcs are Veterans, so they have a Power of 40. It seems the Humans have a slight advantage over the Greenskins."
+  },
+  {
+    "id": "archives-ii:reference:83-options-the-cost-of-war",
+    "name": "Options: The Cost Of War",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 83,
+    "text": "The upkeep of an Army can be expensive. Soldiers and horses must be fed, and mercenaries must be paid. The cost of maintaining an Army is the Status of each troop added together. So 100 Knights, with a Status of Silver 5, would have a daily upkeep of 500 silver shillings. The Characters can choose to pay half their normal upkeep, but as a result the Army performs at a disadvantage, suffering a penalty of −10 to all Power Tests. If their upkeep is not paid at all, the Army disperses and leaves after 2 days. A successful Challenging (+0) Leadership Test will raise their morale and have them endure an additional SL days. Unpaid upkeep for an Army results in a penalty of −20 to all Power Tests."
+  },
+  {
+    "id": "archives-ii:reference:83-stand-to-attention",
+    "name": "Stand To Attention!",
+    "category": "table",
+    "topic": "Mass battles",
+    "page": 83,
+    "text": "Rumours abound of cultists infiltrating a military camp. Suitable Characters could be approached by the captain, Ernst Flett, to investigate on his behalf. Flett is convinced that someone in the camp is taking bribes to ensure the Cult remains unnoticed. Prospective candidates will need to be very discreet, have impeccable posture, and be prepared to face the cultists head on, if all hell breaks loose. It is up to you to decide the minor cultists’ numbers and profiles, but on close inspection, all have a very vacant stare. Should a fight break out, the cultists prove to be skilled fighters.\n\nNote: If you would like a greater guide on how to choose starting Power, consider the following aspects of an Army. Start both Armies at 30 Power, and grant them a modifier for each aspect that is true of that Army. Afterwards, subtract 10 from both Armies until they both have a Power that ranges between 0 and 100. If the Power difference between the two Armies is greater than 100, the outcome is already decided.\n\n|  |  |  |\n| --- | --- | --- |\n| Modifiers | Power Modifier | Examples |\n| Badly Equipped | −10 | Light (Armour 1) or less, Improvised Weapons, Weapon +4 or less |\n| Well Equipped | +10 | Heavy Armour (Armour 5), Blackpowder Weapons, Weapon +10 or higher |\n| Includes Spellcasters | +10 | Wizards, Priests, Vampires |\n| Includes Veteran Units | +10 | Melee or Ranged Skill at 45 or higher |\n| Includes Elite Units | +20 | Melee or Ranged Skill at 60 or higher |\n| Includes Small Units | −10 | Halflings, Snotlings |\n| Includes Large Units | +10 | Ogres, Trolls, Horse Cavalry |\n| Includes Enormous Units | +20 | Griffons, Wyverns |\n| Includes Monstrous Units | +30 | Dragons, Giants |"
+  },
+  {
+    "id": "archives-ii:reference:84-battle-endeavours",
+    "name": "Battle Endeavours",
+    "category": "endeavour",
+    "topic": "Mass battles",
+    "page": 84,
+    "text": "‘As honorable as it would be, Master Dwarf, facing the Greenskins in the open field would result in heavy losses. The Orcs’ weakness is their passion for fighting each other. Give me a dozen of our best scouts and I shall turn their camp into a bloodbath of their own making!’ — Lukas Vogel, Explorer and Advisor to the Count There are plenty of things that can be done before a battle to influence its outcome. This section includes additional Endeavours that can be undertaken by Characters Between Adventures. The GM decides how much time the Characters have available, and as normal, they may only engage in up to three Endeavours.\n\nAll Endeavours are detailed as Skill Tests, but they may be played out as scenes or even entire adventures of their own. As an example, an Infiltrate Endeavour gone wrong can suddenly become a combat encounter or a chase to evade capture. Failed Endeavours cannot be attempted again unless a different approach is taken."
+  },
+  {
+    "id": "archives-ii:reference:84-infiltrate",
+    "name": "Infiltrate",
+    "category": "endeavour",
+    "topic": "Mass battles",
+    "page": 84,
+    "text": "After a successful Scout Endeavour, a Character may infiltrate and steal the enemy’s plans by passing a Combined Stealth and Perception Test, with the Difficulty determined by the GM. Alternatively, they may attempt to pass off as a soldier in the enemy army by passing a Combined Entertain (Acting) and Perception Test. Other options may be available depending on the results of the Scout Endeavour. On a Success, the Characters gain a +20 bonus to the Plan Endeavour. On a Failure, the Character is forced to flee the enemy camp or be captured. Note: The Infiltrate Endeavour will be significantly more difficult if the Character is of a different Species!"
+  },
+  {
+    "id": "archives-ii:reference:84-inspiring-speech",
+    "name": "Inspiring Speech",
+    "category": "endeavour",
+    "topic": "Mass battles",
+    "page": 84,
+    "text": "A Character may attempt to inspire their troops to glory in the coming Battle. This requires passing a Leadership Test with a difficulty determined by the difference in Power between the Armies, rounded to the nearest 10. On a success, the Army gains a +10 bonus to the Power Test during the first Battle Round."
+  },
+  {
+    "id": "archives-ii:reference:84-muster-forces",
+    "name": "Muster Forces",
+    "category": "endeavour",
+    "topic": "Mass battles",
+    "page": 84,
+    "text": "A Character may attempt to gather additional troops before an upcoming Battle. There are plenty of ways troops can be gathered. Mercenaries — such as terrifying Ogre shock troops — can be bought; local peasantry can be rallied; and nobles can be charmed, bribed, or intimidated. Some of these will require Skill Tests with a Difficulty determined by the circumstances. Successful mustering increases an Army’s Power by +5. On an Astounding Success (+6), it increases by +10. On an Astounding Failure (−6), it decreases the Army’s Power by −10, perhaps due to a riot, or your troops losing morale and leaving.\n\nExample: With an Army of 200 peasant militia, the Characters attempt to rally the locals with a Leadership Test. They succeed and 10 armed peasants join the Army."
+  },
+  {
+    "id": "archives-ii:reference:84-sabotage",
+    "name": "Sabotage",
+    "category": "endeavour",
+    "topic": "Mass battles",
+    "page": 84,
+    "text": "After a successful Scout Endeavour, a Sabotage Endeavour may be undertaken. Sabotage can range from exploding enemy gunpowder supplies to poisoning their food. The options presented depend on the results of the Scout Endeavour. However, most will require a Stealth or Entertain (Acting) Test and could be carried out as part of an Infiltrate Endeavour. On a Success, decrease the enemy’s Power by −5. On an Astounding Success (+6), decrease it by −10. On a Failure, the Characters will have to either run or fight their way out of the enemy camp."
+  },
+  {
+    "id": "archives-ii:reference:84-scout",
+    "name": "Scout",
+    "category": "endeavour",
+    "topic": "Mass battles",
+    "page": 84,
+    "text": "A Character can attempt a Challenging (+0) Combined Ride and Perception Test to gain intel on the enemy Army: their numbers, their distance, and what troops they have. All of this is valuable information to a general. A successful Test provides all this information, including the Power of the enemy Army, and a bonus of +10 to the Plan Endeavour. On a failed Test, they gather incorrect information or take too long to get back, providing no bonuses. On an Astounding Failure (−6), they might also have to outrun the enemy scouts or be captured."
+  },
+  {
+    "id": "archives-ii:reference:85-other-preparations",
+    "name": "Other Preparations",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 85,
+    "text": "The Characters may come up with other ideas for other possible Endeavours. To create one simply decide on a required Skill Test, a Difficulty, a reward if successful, and a potential penalty in case of an Astounding Failure (−6). Possible rewards include a bonus to Power Tests or other Endeavours, an increase in Army Power or a decrease in the enemy’s. Penalties can be Tests to avoid getting in trouble, combat scenes, a penalty to Power Tests, or a decrease in your army’s Power."
+  },
+  {
+    "id": "archives-ii:reference:85-plan",
+    "name": "Plan",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 85,
+    "text": "Sitting in rooms drinking wine and arguing over a map with wooden figurines, generals plan out the preparation that will have the largest impact: the battle plan. To successfully draw out a plan, a Character must pass a Lore (Warfare) Test. The difficulty of this Test largely depends on the difference in Power between the Armies, the battlefield chosen, and the Plan itself. Any Character with at least one Advance in Lore (Warfare) may assist in the Test. On a success, the Army gains a +10 bonus to all Power Tests during battle. On an Astounding Success (+6), this bonus increases to +20.\n\nWhen drawing up a Battle Plan, the Characters must decide on the following:\n\nLocation of Battlefield: The Characters choose where they will face the enemy, potentially choosing a location that will benefit them most.\n\nStrategy and Tactics: The Characters agree on what their troops will be doing as the battle starts and decide on possible back up plans should certain scenarios occur.\n\nExample: The Characters have decided to create a bottleneck for the enemy Army by defending the only bridge crossing a long, wide, and very deep river. The Army will set up a barricade and assault the enemy with arrows while they attempt to break through. Should the defenses falter, there will be barrels of gunpowder set up to blow up the bridge. The GM decides that fortifying the bridge and setting up the explosives will require Extended Trade (Carpenter) and Trade (Engineer) Tests respectively, and can be attempted with one or more Endeavours. The GM declares a Success will provide the enemy a −10 penalty to all Power Tests, and should the explosives go off, they will reduce the enemy’s Power by an additional −10.\n\nSo as to not spiral into very long discussions between the Characters, GMs are encouraged to keep this short by roleplaying the advisors and acting as intermediaries. Unless, of course, they enjoy doing that! Keep in mind that simple plans are best, and that this stage is only a framing device for the Battle to come."
+  },
+  {
+    "id": "archives-ii:reference:85-the-battle",
+    "name": "The Battle",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 85,
+    "text": "A Battle has one or more Battle Rounds, which consist of the following:\n\nThe Lay of the Land: Start each Battle Round by describing what is happening on the battlefield. This should detail the different Scenes playing out — from heroics to chaotic melees. The Characters may choose to engage in one of the Scenes presented, or may come up with their own proposed Scenes.\n\nCinematic Scenes: The Characters participate in either a few Rounds of Combat or must pass one or more Skill or Characteristic Tests to gain different benefits. GMs should aim to include all Characters in at least one Cinematic Scene in each Battle Round, or alternatively run several short Scenes to accomodate all of the Characters.\n\nDramatic Power Test: Each Army attempts to attack each other with an individual Dramatic Power Test. Both attacks are resolved at the same time using each Army’s current Power, and reducing their opponent’s Power by 10 + SL (minimum 5).\n\nRegroup: All Characters may attempt a Challenging (+0) Endurance Test to Heal Wounds equal to the SL + Toughness Bonus, as they stop to recover. Any Character with the Heal Skill may attempt a Challenging (+0) Heal Test to help them recover additional Wounds. Healing Draughts and other trappings may also be used during this time.\n\nRepeat Steps 1–5 As Required: A small skirmish might require only a single Battle Round, whereas a siege may last as long as 5 Battle Rounds. Whichever side has the highest Power after the allotted Battle Rounds are up, wins the Battle. The opposing side is forced to flee or is destroyed."
+  },
+  {
+    "id": "archives-ii:reference:86-bolster",
+    "name": "Bolster",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 86,
+    "text": "Sometimes the problem isn’t the enemy, but an issue within one’s own Army: injured troops, shattered morale, desertion, etc. A Character can resolve such a problem using a relevant Skill Test in a Bolster Scene. On a Success, increase the Army’s Power by +SL. It can be short and last only a single attempt, or be an Extended Test lasting multiple Battle Rounds. A Bolster Scene can also be a series of different Skill Tests that give an important bonus.\n\nExample: The troops are broken and running away in fear, any Character engaged in the Scene may attempt a Leadership, Intimidate, Charm, or any other Skill Test that would convince the soldiers to return to their post. On a successful Test, recover +SL Power as troops return to their station. Alternatively, a Griffon is out of control and must be calmed down with an Extended Animal Training (Griffon) Test, or be put down."
+  },
+  {
+    "id": "archives-ii:reference:86-charge",
+    "name": "Charge",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 86,
+    "text": "If one or more Characters are charging headlong into combat, they may fight for up to 2 Rounds of Combat. Any side that is charging starts with 1 Advantage, and everyone takes turns in order of Initiative. For each enemy the Characters hit they reduce the opponents Power by 1. For each enemy incapacitated or killed they reduce it by an additional 2.\n\nExample: Eagerly awaiting combat, the overwhelming Greenskin horde storms recklessly downhill. The Characters, alongside other soldiers, anxiously hold their ground. The general waits for the right moment to give the order to charge, and seconds later the two armies violently clash against each other."
+  },
+  {
+    "id": "archives-ii:reference:86-hold-this-ground",
+    "name": "Hold This Ground",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 86,
+    "text": "The Characters have taken control of a vantage point, but the enemy is overwhelming them. Each Round the enemy performs an Opposed Skill test against the Characters, using any Skills deemed appropriate to the situation. The SL is added to a number called the Breaking Point. If the Breaking Point ever reaches 10 or higher, or 5 Rounds have elapsed, the position is overwhelmed, and the Scene ends in a rout; the Characters may have to fight their way out if they were soundly defeated in the previous Rounds. Each Round that the Characters hold their position, before the Breaking Point gets to 10, the enemy Army loses −2 Power, but gains a cumulative +10 bonus to successive Rounds.\n\nExample: The Characters are behind a fortified gate that is currently under attack. A battering ram is slamming against it. It’s only a matter of time before it’s torn to pieces and the enemy rushes in."
+  },
+  {
+    "id": "archives-ii:reference:86-let-it-rain",
+    "name": "Let it Rain",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 86,
+    "text": "If one or more Characters are armed with Ranged weapons, they have up to 2 Rounds to attack the enemy as they approach them. Characters may open fire as soon as they are within their weapon Range. They may continue to shoot until the enemy engages them or they arrive at a safe location. Enemies will be moving at their maximum speed while Sprinting. Each successful attack will decrease the opponent’s Power by 1 for each enemy hit. If they incapacitate or kill a target, it is decreased by an additional 2. Ranged attacks that are aimed at crowds never hit the same target twice. Siege weapons may also be used in these Scenes by Characters capable of using them.\n\nExample: As the enemy troops lay siege to the castle, Characters standing on the battlements will have ample opportunities to lay fire upon them."
+  },
+  {
+    "id": "archives-ii:reference:86-protect",
+    "name": "Protect",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 86,
+    "text": "A powerful ally or weapon must be protected from the enemy for a few Rounds, as they either recover themselves or prepare a powerful attack. This is resolved as 3 Rounds of Combat where the enemy attempts to attack a specific target. The Characters must protect the target for the duration of the Scene. On a Success, reduce the enemy’s Power by −5 or increase the Army’s Power by +5. A Character that successfully uses a Skill Test to Assist the target being protected reduces the number of Rounds by 1.\n\nExample: A captain has fallen off their horse, is surrounded by the enemy, and is in need of healing. A wizard is channelling a powerful spell to ravage the enemy troops, and needs to maintain their focus safe from the enemy… though they could cast the spell a lot faster with another wizard’s help. A catapult is being loaded to fire at the enemy, but the crew are under attack and could use some protection, and the aid of another engineer."
+  },
+  {
+    "id": "archives-ii:reference:87-cinematic-scene-guidelines",
+    "name": "Cinematic Scene Guidelines",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 87,
+    "text": "Cinematic Scenes are best if tailored to the Battle taking place. The GM can use the following guidelines to create their own Scenes:\n\nEngage the Characters: A Scene should engage the Characters in a meaningful way. They should feel like they are having an impact on the Battle, no matter how small. There should never be any doubt as to how a Scene positively or negatively affects the larger Battle.\n\nAvoid Excessive Combat: Don’t make every single Scene a Combat. Add other Scenes for non-combat-oriented Characters.\n\nFocus on the Characters: Keep in mind what the Characters are skilled at, avoiding Scenes where they cannot do anything, or would not be the centre of the action. Consider the Skills and Talents of your Characters, and attempt to draw in as many different pieces as possible.\n\nChoose an Objective: Decide on how the Scene ends. It could be objective-based, ending after a certain number of Rounds, or be a single Skill Test. In any case, make it clear to the Characters what they must do, and what will happen when they Succeed or Fail.\n\nAssign Rewards: A Scene can provide either a fixed increase or decrease in Power, or have it depend on the SL of a Skill Test. Another possible reward is to grant a bonus on future Scenes, or create a new Scene with a bigger reward later!\n\nExample: A captain attempts a Stealth Test to sneak a few soldiers behind enemy lines, which will lead into a Charge Scene with the enemy Surprised. A scout tries a Set Trap Test to injure the first few enemies that get past a certain point, which will reduce the enemy’s Power by −SL.\n\nThe following are more detailed examples of unique Scenes that can be created by a GM."
+  },
+  {
+    "id": "archives-ii:reference:87-options-the-horrors-of-war",
+    "name": "Options: The Horrors Of War",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 87,
+    "text": "Horror makes its mark on all souls in the Old World in different ways. It can strike at any time from observing Chaotic rites or the minions of dread gods to witnessing the mundane violence, brutality and terror that occurs during warfare. Seeing a comrade struck dead by an Orc’s axe, or a field of once proud warriors screaming in agony and clutching a plethora of terrible wounds, is enough to challenge anyone’s sanity.\n\nAppendix I (page 91) provides rules for acquiring new Psychological Traits during play, in particular, a Fear or Terror of specific creatures. Remember for most creatures, being the victim of a cavalry charge by large mounts causes Fear or Terror (WFRP, page 341), and an unease around Warhorses is not uncommon for many who have raised a pike in defence of the Empire.\n\nLosing a hard fought or important battle can also cause a Character to acquire an Animosity or even Hatred of the opposing side. If a Character finds themselves on the losing side of a battle, they may acquire the Animosity (Target) Trait, with the target being whoever was on the winning side — Orks, Elves, anyone who serves Graf Filburg, and so on. If the Character already had such a trait, it may, with the GM’s permission, become a Hatred instead. Acquiring either of these Traits is always optional — some Characters may deal with the realities and trauma of war without requiring a representative game mechanic."
+  },
+  {
+    "id": "archives-ii:reference:88-bring-it-down",
+    "name": "Bring It Down",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 88,
+    "text": "The enemy has released a massive Creature. It’s wreaking havoc among the troops. Defeat it in 3 Rounds to decrease the enemy’s Power by −10. Halve the Creature’s starting Wounds to account for all the other troops attacking it. In the case of a Monstrous Creature, Characters might have to resort to climbing on it or using a nearby siege weapon to kill it. Monstrous Creatures may attempt to shake off anyone climbing them using their action in an Opposed Melee (Brawling)/Climb Test — if successful Characters may attack the creature as though it were Helpless."
+  },
+  {
+    "id": "archives-ii:reference:88-fly-by",
+    "name": "Fly By",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 88,
+    "text": "A flying mount allows Characters a single attempt at surprising the enemy general, deep behind their lines. A successful Challenging (+0) Ride Test will allow Characters to attempt a Ranged attack, or any other Action, at a distance of 15 − SL yards. On an Astounding Success (+6) they are able to get close enough for Melee, Point Blank attacks, or similar Actions. A successful attack will decrease the enemy’s Power by −5. If the enemy general is incapacitated or killed, decrease it by an additional −15. On an Astounding Failure (−6), the Characters fall from a distance of 5 yards as they crash-land in the middle of the battle. During the next Battle Round they must take part in a Charge Scene where only the enemy charges."
+  },
+  {
+    "id": "archives-ii:reference:88-intruders",
+    "name": "Intruders",
+    "category": "table",
+    "topic": "Mass battles",
+    "page": 88,
+    "text": "Drawn by the blood and death of the battle, a group of Blood- letters of Khorne have managed to find their way inside the Character’s camp. The troops are running amok in complete fear and panic. Until they are defeated, all other Scenes receive a −20 penalty to related Tests due to the chaos.\n\n| Weapon | Price | Crew | Availability | Range***/ Reach | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| Ballista | 75GC | 4 | Rare | 150 | +14 | Impale, Penetrating, Reload 2 |\n| Battering Ram* | 10GC | 6 | Scarce | Average | +SB+10 | Siege |\n| Helstorm Rocket Battery | 200GC | 4 | Exotic | 200 | +12 | Dangerous, Reload 5, Blast 15, Imprecise |\n| Helblaster Volley Cannon | 300GC | 4 | Exotic | 100 | +14 | Blackpowder, Dangerous, Reload 5, Repeater 3, Blast 5 |\n| Cannon | 120GC | 4 | Exotic | 120 | +20 | Blackpowder, Dangerous, Reload 3, Blast 3, Siege |\n| Dwarf Flame Cannon | 200GC | 4 | Exotic | 60 | Special | Dangerous, Reload 3, Imprecise, Blast 5 |\n| Mangonel Catapult | 60GC | 6 | Rare | 60 | +10 | Blast 5, Reload 4, Siege |\n| Onager Catapult | 80GC | 6 | Rare | 100 | +12 | Blast 5, Reload, Siege |\n| Trebuchet** | 40GC | 8 | Scarce | 150 | +14 | Blast 5, Reload 5, Siege |\n| Mortar** | 100GC | 6 | Exotic | 200 | +20 | Blackpowder, Blast 5, Dangerous, Imprecise, Reload 2, Siege |\n\n*Battering Rams only deal damage to doors and gates. They are otherwise considered an Improvised Weapon. **Trebuchets and Mortars cannot be used if the distance to the target is less than their Short Range. ***Ranged siege weapons cannot be used at Point Blank."
+  },
+  {
+    "id": "archives-ii:reference:88-war-machines",
+    "name": "War Machines",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": "88–89",
+    "text": "‘We thought we were winning, tearing through their meagre forces, breaking down the castle gates. At last we got to the inner gate, their last line of defence. We smashed the doors down with a battering ram while we revelled in victory songs, only to find three Helblaster Volley Cannons aimed right at us. They weren’t retreating, they were lining us up.’\n\n— Konrad, Veteran\n\nThe following section includes the statistics of war machines that may be used in Combat during any of the Cinematic Scenes. It also includes statistics for structures that may be the target of siege weapons. A Crew is the number of trained people required for a war machine to work properly. Weapons without a full Crew can be used with a penalty of −20. They cannot be used with less than half the Crew required. All war machines have the Damaging and Impact Qualities. They all use the Ranged (War Machine) Skill, except for the Battering Ram, which uses Strength.\n\nImprecise, Reload 2, Siege\n\nBallista: Similar to a crossbow, but much larger, a Ballista can fire large bolts across great distances. It’s far too heavy to be carried, so it’s usually attached to a fixed surface or uses wheels to move around the battlefield.\n\nBattering Ram: Used for tearing down doors and gates, a Battering Ram consists of a heavy tree trunk suspended by chains or ropes on a wooden frame with wheels. Some have a spiked metal end, while others have it forged to resemble a ram’s head.\n\nHelstorm Rocket Battery: Based on fireworks, the Imperial School of Engineers created these extremely dangerous and inaccurate missiles. Known for the piercing sound they make as they fly wildly through the air, and the devastating result of their explosions.\n\nHelblaster Volley Cannon: A Helblaster Volley Cannon has nine barrels divided into groups of three, built around a shaft. The cannon can fire each group separately, or all three of them in quick succession, rapidly laying waste to most enemy troops.\n\nCannon: Using the same principles as Blackpowder weapons, cannons are loaded with powder and a large cannonball in the front, and ignited from the back. The force with which a cannonball strikes is enough to knock down most walls and tear apart troops on the field."
+  },
+  {
+    "id": "archives-ii:reference:89-green-with-envy",
+    "name": "Green With Envy",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 89,
+    "text": "A very remote village on the Border Princes has remained peaceful for a long time, until a week ago when a rampaging horde of malnourished Beastmen, Ungors, raided the village causing untold damage. The village elder, Agna Kline, approaches the party to hire them to defend the village. She knows the Ungors will be back, and this time there will be wilder. There’s two envious Ungors both with small horns vying for power, if the party can ensure they fight amongst themselves, they have a better chance of defeating them. Their envy is sure to get the better of them.\n\nDwarf Flame Cannon: Armed with alchemical concoction within the cannon’s barrel, this weapon uses pressure to release a spray of flesh-searing oil that spreads throughout the enemy ranks. Dwarf Flame Cannons give every affected target 2 + SL Ablaze Conditions.\n\nMangonel Catapult: A Mangonel Catapult holds large projectiles like rock or debris in a large bucket. It flings them by bending the arm holding the bucket backwards and then releasing it.\n\nOnager Catapult: Similar to the Mangonel Catapult, this siege weapon uses a sling to increase its effective range.\n\nTrebuchet: An improvement from the Onager Catapult, the Bretonnian Trebuchet uses a counterweight instead of torsion to release its sling, giving it a much larger range.\n\nMortar: Specifically designed with indirect fire in mind, Mortars are used for arcing shots that go over castle walls to hit the troops inside with an exploding shell of shrapnel."
+  },
+  {
+    "id": "archives-ii:reference:89-siege-quality",
+    "name": "Siege Quality",
+    "category": "rule",
+    "topic": "Mass battles",
+    "page": 89,
+    "text": "A weapon with the Siege Quality deals double its damage to physical structures such as walls, towers, and gates."
+  },
+  {
+    "id": "archives-ii:reference:89-typical-barricades-and-cover",
+    "name": "Typical Barricades And Cover",
+    "category": "table",
+    "topic": "Mass battles",
+    "page": 89,
+    "text": "|  |  |  |  |\n| --- | --- | --- | --- |\n| Structure | TB | Wounds | Qualities and Flaws |\n| Door | 2 | 8 | Resistant |\n| Reinforced Door | 5 | 15 | Resistant |\n| Gate | 10 | 30 | Impervious |\n| Wooden Wall | 6 | 15 | Resistant |\n| Stone Wall | 12 | 40 | Impervious |"
+  },
+  {
+    "id": "archives-ii:reference:90-options-environmental-factors",
+    "name": "Options: Environmental Factors",
+    "category": "table",
+    "topic": "Mass battles",
+    "page": 90,
+    "text": "If you want to add a random factor to a Battle or Battle Round you can roll on the table below, or simply choose one of the results.\n\n| 1d10 | Environmental Factor |\n| --- | --- |\n| 1 | Storm: A powerful storm rolls in as the Battle stretches out; the ground becomes muddy and wet, or covered in snow. All melee combatants smaller than Large suffer a −10 penalty to all Combat Tests, and have their Movement halved. Due to the strong winds and lack of vision, Ranged attackers and flying mounts suffer a −20 to all Combat Tests, while Stealth Tests get a bonus of +20. The storm grants Wizards of the Lore of Heavens a bonus of +10 to all Casting and Channelling Tests. |\n| 2 | Traps: The enemy has filled the battlefield with traps. A trap could be anything from spiked pits, explosives on a pressure trigger, or can even be magical in nature. Whenever Characters move, they must pass a Challenging (+0) Perception Test or activate a trap. The Character activating the trap must pass a Challenging (+0) Dodge Test to avoid its effects. Traps deal 8 Damage and Characters suffer Conditions depending on the type of trap. A bear trap would cause Entangled, and a pit would leave Characters Prone inside a hole. Each time they activate a trap, nearby Characters can attempt a Hard (−20) Perception Test to no longer fall victim to them. Somewhere in the battlefield lies the enemy engineer with a plan marking the locations of all the traps. Should said plan be captured, all traps would be neutralised. |\n| 3 | Siege Weapons: Either by firing cannons or flinging rocks with a catapult, the enemy is attacking with siege weapons of some kind. At the end of each Round, all Characters must succeed at an Easy (+40) Dodge Test or receive a Critical Wound. This effect comes to an end if the Characters manage to defeat the crews handling the siege weapons. After that, they may even use them against the enemy Army. |\n| 4 | Corrupting Influence: The enemy force is strongly tainted by Chaos, and its gathering has made it powerful. At the end of each Battle Round, all Characters must pass a Challenging (+0) Endurance Test or gain 1 Corruption point. The GM can attempt an Easy (+40) Endurance Test with the troop’s average Willpower (typically 35). On a Failure, a nearby ally mutates aggressively, attacking friend and foe alike. |\n| 5 | Toxic Cloud: Either through magic, or some powerful weapon, the enemy has released a cloud of poisonous gas. The cloud obscures as a fog would. At the end of each Combat Round, any Character standing in it must make a Challenging (+0) Endurance Test or gain a Poisoned Condition. The cloud can be ignited by fire, causing 3 Ablaze Conditions to anyone inside it. |\n| 6 | Rough Undergrowth: The grass and plants make fighting difficult, all Movement is halved. A Character that suffers a Fumble also gains an Entangled Condition in addition to any other effects. Using a blade weapon, a Character can spend a Cinematic Scene removing the undergrowth with a successful Melee Test. |\n| 7 | River: A strong river passes through the battlefield. Characters smaller than a size Large or greater receive a penalty of −20 to all Combat tests. Any Character who ends their turn in the river must succeed at a Challenging (+0) Strength Test or be swept away. Taking control of a nearby bridge will force only the enemy to traverse the river. |\n| 8 | Inferno: A roaring fire blazes across the battlefield, its origin being alchemical or magical in nature. When moving through the battlefield, Characters must succeed on a Challenging (+0) Athletics Test or gain 1 Ablaze Condition. Finding the source of the fire, such as an alchemist, wizard, or siege machine, and disabling it, will cause it to cease after 1 Battle Round. |\n| 9 | Undeath: There is a powerful necromancer amongst the enemy troops. For each Power your Army loses, the enemy’s Power increases by 1 as skeletons and zombies rise amongst your dead. Defeating the necromancer causes this effect to stop, and all the Power gained from it is lost as the dead fall to pieces. |\n| 10 | Fear: The enemy is carrying a structure with a terrifying icon. It might be a chaos sculpture, or a platform with flayed people screaming in pain. The Army suffers a penalty of −10 to all Power Tests while the structure stands. |"
+  },
+  {
+    "id": "archives-ii:reference:92-animosity-and-hatred",
+    "name": "Animosity and Hatred",
+    "category": "rule",
+    "topic": "Psychological disorders",
+    "page": 92,
+    "text": "Whenever a Character spends a Fate point to avoid death, they do not escape Morr’s grasp entirely without consequence, for a brush with death is never an easy thing. Whenever a Character avoids death in this way, they must make a Challenging (+0) Cool Test. Should they fail, they gain the Animosity Psychology, with a target appropriate to whomever or whatever it was that almost killed them. If the target is a member of the Character’s own Species, they will most likely be somewhat discerning, gaining an Animosity for Reiklanders, Watchmen, Imperial Dwarfs, and so on, rather than simply Humans or Dwarfs. If the target is a member of another Species, the Character is more likely to develop an Animosity for that entire Species instead, for example Dwarfs, Humans, Orks, or Elves. If a Character gains an Animosity they already had, it is replaced by Hatred."
+  },
+  {
+    "id": "archives-ii:reference:92-fear-of-the-dark",
+    "name": "Fear of the Dark",
+    "category": "rule",
+    "topic": "Psychological disorders",
+    "page": 92,
+    "text": "Whenever a Character suffers from Terror, record the number of Broken Conditions suffered. When a Character’s total tally of Broken Conditions equals or exceeds their current Willpower Characteristic, that Character gains a Phobia (WFRP, page 191). This Phobia is related to the most recent or most common source of Terror they have witnessed. The Phobia should be something related to the creature or situation that might commonly be encountered by the Character. For example, a Witch Hunter who has suffered through too many long nights hunting Vampires might gain a Phobia of mirrors, leeches, or Sylvanian accents.\n\nOnce the Character has gained a Phobia, reduce the tally of Broken Conditions suffered to zero."
+  },
+  {
+    "id": "archives-ii:reference:92-new-endeavour-recuperation",
+    "name": "New Endeavour: Recuperation",
+    "category": "endeavour",
+    "topic": "Psychological disorders",
+    "page": 92,
+    "text": "You make a concerted effort at rest and self reflection, attempting to find what peace you can in a world with little care for the struggles of any individual. Make a Very Hard (–30) Cool Test. The difficulty may be reduced depending on the quality of care received. If you succeed, you may remove one chosen Psychology. Even if you fail, however, you are better for having confronted your troubles — you may reverse one Cool Test made to resist the effects of Psychology during your next adventure."
+  },
+  {
+    "id": "archives-ii:reference:92-things-get-better",
+    "name": "Things Get Better",
+    "category": "rule",
+    "topic": "Psychological disorders",
+    "page": 92,
+    "text": "While the Characters that make up a typical party in the Old World are not always heroes, that does not mean they cannot have heroic moments. Overcoming one’s fears, prejudices, and traumas is an inherently heroic act. The GM is encouraged to reward good roleplay with the opportunity to remove a Psychology, especially if it has already played its part in the Character’s story. Additionally, any time a Character would recover a point of Resilience (WFRP, page 172), they may instead choose to remove an unwanted Psychology.\n\nMany have found succour and respite at The Great Hospice (page 69), or similar places of rest such as monasteries and temples. Those who travel to such institutions may attempt the Recuperation Endeavour (WFRP, page 221)."
+  },
+  {
+    "id": "archives-ii:reference:92-trauma",
+    "name": "Trauma",
+    "category": "rule",
+    "topic": "Psychological disorders",
+    "page": 92,
+    "text": "A traumatic event can become a defining incident in a Character’s life. The death of a loved one, a stunning failure, or a terrible regret can lead to memorable moments in a Character’s life. While defining and dealing with such events is often best left to the player, game effects can add a twist to the experience.\n\nShould a Character witness an event which renders one of their Ambitions entirely impossible (WFRP, pages 40–1), they must make an Average (+20) Cool Test. If they fail, they develop a Trauma Psychology (WFRP, page 191). Suitable Traumas might involve another defined Psychology, but Players should consider the rules for custom Psychologies as well.\n\nExample: One of Deiter’s Short-Term Ambitions is to avenge the death of his comrade Hans. Before he can, Hans’s killer is caught and hanged for an unrelated crime. Many would shrug this off as justice of a sort, but Deiter can’t shake the feeling that Hans has been denied a restful death. He fails the Cool Test, and gains a Trauma Psychology. After discussion with the GM and the other Players, the group decides that this Trauma takes the form of a Proscribed Action (WFRP, page 191). Deiter becomes entirely unwilling to enter any town square where a gallows stands, convinced that if he looks upon the condemned awaiting punishment, he is certain to see Hans’s face among them."
+  }
+]

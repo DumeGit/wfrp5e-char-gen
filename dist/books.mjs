@@ -13,6 +13,7 @@ import { validateChartState } from "./astrology.mjs";
 import { validateIIIState, oldFaith, spellChoices } from "./archives-iii.mjs";
 import { validateWoMState } from "./winds-of-magic.mjs";
 import { validateRuleReference } from "./rule-references.mjs";
+import { validateReferenceEntry } from "./reference-entries.mjs";
 
 export const BOOK_SCHEMA = 1;
 const arrays = [
@@ -46,6 +47,7 @@ const files = new Set([
   "dwarfCreation",
   "highElfCreation",
   "coverage",
+  "referenceEntries",
 ]);
 const settings = new Set([
   "talentEffects",
@@ -114,6 +116,7 @@ export function validateBackgroundTable(table, label) {
   return table;
 }
 const columns = {
+  referenceEntries: ["category", "topic", "text", "aliases", "notes"],
   ruleReferences: ["category", "topic", "text", "textRef", "target", "aliases"],
   techniques: ["sl", "text"],
   careerUpdates: ["careers", "characteristic", "profile", "unavailable"],
@@ -314,6 +317,18 @@ export async function loadBookLibrary(
       const data = Object.fromEntries(entries);
       for (const reference of data.ruleReferences || [])
         validateRuleReference(reference, { source: true });
+      if (
+        data.referenceEntries !== undefined &&
+        !Array.isArray(data.referenceEntries)
+      )
+        fail(`${item.id}: printed references must be an array.`);
+      const referenceIds = new Set();
+      for (const reference of data.referenceEntries || []) {
+        validateReferenceEntry(reference, item.id);
+        if (referenceIds.has(reference.id))
+          fail(`duplicate printed reference ${reference.id}.`);
+        referenceIds.add(reference.id);
+      }
       return { manifest, data };
     }),
   );
@@ -1698,7 +1713,11 @@ function validateCareerProfiles(R) {
 // withdrawals can hide profiles without deleting their integration decisions.
 export function registeredEntries(pack) {
   const out = [];
-  for (const kind of arrays.concat("species", "background")) {
+  for (const kind of arrays.concat(
+    "species",
+    "background",
+    "referenceEntries",
+  )) {
     const data = pack.data[kind];
     if (!data) continue;
     for (const [key, value] of Array.isArray(data)

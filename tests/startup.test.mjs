@@ -28,11 +28,13 @@ const referenceLibrary = JSON.parse(
 );
 const thin = (value) => {
   const copy = structuredClone(value);
-  for (const pack of copy.packs)
+  for (const pack of copy.packs) {
+    if (pack.data.referenceEntries) pack.data.referenceEntries = [];
     if (pack.data.ruleReferences)
       pack.data.ruleReferences = pack.data.ruleReferences.map(
         ({ text, ...entry }) => ({ ...entry, textRef: true }),
       );
+  }
   return copy;
 };
 const hydrate = async (catalogue) => ({
@@ -53,6 +55,12 @@ test("startup uses one request and preserves the fully validated source library"
     result.packs[0].data.ruleReferences.every(
       (x) => x.textRef === true && x.text === undefined,
     ),
+  );
+  assert.ok(result.packs.every((pack) => !pack.data.referenceEntries?.length));
+  assert.ok(
+    library.packs
+      .filter((pack) => pack.manifest.kind !== "variant")
+      .every((pack) => pack.data.referenceEntries.length),
   );
 });
 

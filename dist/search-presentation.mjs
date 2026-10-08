@@ -1,6 +1,8 @@
 export const SEARCH_CATEGORIES = {
   all: "All categories",
   rule: "Rules",
+  table: "Tables",
+  endeavour: "Endeavours",
   condition: "Conditions",
   psychology: "Psychology",
   property: "Qualities & Flaws",
@@ -11,7 +13,7 @@ export const SEARCH_CATEGORIES = {
   talent: "Talents",
   magic: "Magic",
   equipment: "Equipment",
-  profile: "Creatures",
+  profile: "NPCs & Creatures",
   template: "Templates",
   mutation: "Corruption",
 };
@@ -24,7 +26,7 @@ export const searchLabel = (row) =>
         condition: "Condition",
         psychology: "Psychology",
         trait: "Creature Trait",
-        profile: "Creature",
+        profile: "NPC / Creature",
         template: "Template",
         mutation: "Corruption",
       }[row.kind] ||
@@ -39,6 +41,17 @@ const escape = (value) =>
         c
       ],
   );
+// Result excerpts are plain text. Keep printed values/footnote markers, while
+// hiding the Markdown syntax used only to lay out the source reader.
+export function referenceSnippetText(text) {
+  return String(text || "")
+    .replace(/(?:^|\n)\|[\s:|-]+\|(?=\n|$)/g, "")
+    .replaceAll("### ", "")
+    .replaceAll("|", " · ")
+    .replace(/\s+/g, " ")
+    .replace(/(?:\s*·\s*){2,}/g, " · ")
+    .replace(/^[\s·]+|[\s·]+$/g, "");
+}
 // The source catalogue uses paragraphs, headings, bullet lists and simple tables.
 // No HTML, scripts, arbitrary links or Markdown plug-ins are executed.
 export function ruleTextHTML(text) {
@@ -57,11 +70,13 @@ export function ruleTextHTML(text) {
             .split("|")
             .slice(1, -1)
             .map((x) => x.trim());
-        return `<div class="search-table-wrap"><table><thead><tr>${cells(
-          lines[0],
-        )
-          .map((x) => `<th>${escape(x)}</th>`)
-          .join("")}</tr></thead><tbody>${lines
+        const headers = cells(lines[0]);
+        // Some source tables have no separate header or put printed labels in
+        // their first row. Preserve those cells, without adding an empty row.
+        const head = headers.some(Boolean)
+          ? `<thead><tr>${headers.map((x) => `<th>${escape(x)}</th>`).join("")}</tr></thead>`
+          : "";
+        return `<div class="search-table-wrap"><table>${head}<tbody>${lines
           .slice(2)
           .map(
             (line) =>

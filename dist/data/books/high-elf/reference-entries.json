@@ -1,0 +1,741 @@
+[
+  {
+    "id": "high-elf:reference:33-weapons",
+    "name": "Weapons",
+    "category": "table",
+    "topic": "Equipment and magical items",
+    "page": 33,
+    "text": "| Weapon | Price | Enc | Availability | Reach | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| BASIC |  |  |  |  |  |  |\n| Sword | 4 GC | 1 | Common | Average | +SB+4 | Durable 1, Fine 1 |\n| Dagger | 3 GC 4/– | 0 | Common | Very Short | +SB+2 | Durable 1, Fine 1 |\n| Shield | 8 GC | 1 | Common | Very Short | +SB+2 | Defensive, Durable 1, Fine 1, Shield 2 |\n| CAVALRY |  |  |  |  |  |  |\n| Lance | 4 GC | 3 | Rare | Very Long | +SB+6* | Durable 1, Fine 1, Impact, Impale |\n| POLEARM |  |  |  |  |  |  |\n| Halberd | 8 GC | 3 | Common | Long | +SB+4 | Defensive, Durable 1, Fine 1, Hack, Impale |\n| Spear | 3 GC | 2 | Common | Very Long | +SB+4 | Durable 1, Fine 1, Impale |\n| TWO-HANDED |  |  |  |  |  |  |\n| (2H) Great Axe | 16 GC | 3 | Scarce | Long | +SB+6 | Durable 1, Fine 1, Hack, Impact, Tiring |\n| (2H) Greatsword of Hoeth | 2000 GC | 2 | Unique | Long | +SB+6 | Damaging, Durable 3, Fine 3, Hack |\n\n*Lances count as Improvised Weapons if used on a Turn where you have not Charged.\n\nGreatsword of Hoeth: Forged beneath the Tower of Hoeth, using techniques even the priests of Vaul are envious of, the Hoeth-forged magical blade is almost as long as an Elf is tall. Perfectly balanced, with enchantments woven when forging and tempering the\n\nsteel to ensure its perfection, and adorned with ornate patterns on blade and hilt, each is a unique work of art. Whilst they are crafted using magical means, the blades themselves are not enchanted. They are, however, required in order to use sword-dancing techniques (see page 68)."
+  },
+  {
+    "id": "high-elf:reference:34-armour",
+    "name": "Armour",
+    "category": "table",
+    "topic": "Equipment and magical items",
+    "page": "34–35",
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | AP | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| ITHILMAR PLATE* |  |  |  |  |  |  |  |\n| Breastplate | 1280 GC | 1 | Unique | - | Body | 2 | Durable 2, Fine 2, Impenetrable, Weakpoints |\n| Open Helm | 256 GC | 0 | Unique | –10 Perception | Head | 2 | Durable 2, Fine 2, Partial |\n| Bracers | 1024 GC | 1 | Unique | - | Arms | 2 | Durable 2, Fine 2, Impenetrable, Weakpoints |\n| Plate Leggings | 1280 GC | 1 | Unique | –10 Stealth | Legs | 2 | Durable 2, Fine 2, Impenetrable, Weakpoints |\n| Helm | 384 GC | 0 | Unique | –20 Perception | Head | 2 | Durable 2, Fine 2, Impenetrable, Weakpoints |\n| Ithiltaen Helm | 1536 GC | 0 | Unique | –20 Perception | Head |  | Durable 2, Fine 4, Impenetrable, Weakpoints |\n| DRAGON ARMOUR* |  |  |  |  |  |  |  |\n| Breastplate | 10240 GC | 3 | Unique | - | Body | 2 | Durable 3, Fine 2, Impenetrable, Weakpoints |\n| Open Helm | 2048 GC | 1 | Unique | –10 Perception | Head | 2 | Durable 3, Fine 2, Partial |\n| Bracers | 8192 GC | 3 | Unique | - | Arms | 2 | Durable 3, Fine 2, Impenetrable, Weakpoints |\n| Plate Leggings | 10240 GC | 3 | Unique | –10 Stealth | Legs | 2 | Durable 3, Fine 2, Impenetrable, Weakpoints |\n| Helm | 3072 GC | 2 | Unique | –20 Perception | Head | 2 | Durable 3, Fine 2, Impenetrable, Weakpoints |\n| WHITE LION HIDE |  |  |  |  |  |  |  |\n| Cloak | 20 GC | 2 | Exotic | - | Body | 2 | Fine 2, Partial |\n\n* Ithilmar and Dragon Armour behave as Plate in all respects other than where noted, and impose a penalty of –10 to Stealth Tests when worn.\n\nIthilmar Armour: The greatest of the steam-clad Dragon Spine Mountains is the volcano called Vaul’s Anvil, legendary seat of the god of smiths. The world’s only vein of ithilmar is found there. The Elves do not mine the volcano’s slopes but retrieve chunks of ithilmar ore that are shaken loose by tremors.\n\nIthilmar means ‘sky silver’ as it is light, gleaming, and incorruptible, but is also translatable as ‘star steel’, which speaks to its durability. The secrets of properly forging ithilmar are carefully guarded by the smith-priests of Vaul. Over the centuries, many pieces of ithilmar armour have been forged, and those made in the time of Aenarion can be as strong and gleaming as those that are newly forged.\n\nWhilst Ithilmar Armour is light, it is still bulky, and thus a piece of Ithilmar Plate incurs a minimum Enc of 1 when carried rather than worn.\n\nPrices for Ithilmar Plate are given, though it may also be used for the forging of scale, chain, or barding for horses. Ithilmar Armour pieces are always Unique Availability and massively expensive. To work out the price of a piece of Ithilmar Armour, take the listed price for the regular equivalent and double it seven times (multiply it by 128). So a Mail Coif from the WFRP Core Rulebook with a cost of 1 GC would be 128 GC if made from ithilmar, a set of Plate Bracers with a cost of 8 GC would be 1024 GC, and so on. We have worked out the price of common ithilmar items in the table above.\n\nDragon Armour: This magical mail is also forged in the weapon shops of Vaul’s Anvil. It is made of specially crafted enchanted steel that is magically resistant to extremes of heat. Only pieces of plate armour can be Dragon Armour.\n\nIf Dragon Armour is worn on a Hit Location that is struck by an attack that would inflict an Ablaze Condition, the Condition is not inflicted. If a Character wearing a full suit of Dragon Armour encounters a circumstance that would see them suffer Ablaze Conditions regardless of Hit Locations, they are protected, but a Character wearing partial Dragon Armour would not be.\n\nFurthermore, the armour offers a great deal of protection against attacks that inflict Damage due to them being hot. If an attack is heat-based in any way — such as a Dragon’s Fire Breath attack or a spell from the Lore of Fire — then any Hit Location protected by Dragon Armour benefits from the following:\n\nIf the attack is noted as ignoring armour, it may not ignore Dragon Armour.\n\nThe Dragon Armour’s AP is doubled against that attack.\n\nDragon Armour may also provide protection against other forms of heat or fire at the GM’s discretion. Whilst it protects the wearer from short blasts of direct heat, it does not prevent them suffering from lack of air, poisonous fumes, or blinding smoke. A wearer of Dragon Armour still suffers from extreme heat exposure, and if they remain within a hot environment there is only so much the armour can do — a wearer of Dragon Armour could stand to be splashed with hot lava, but they could not go swimming in the caldera of an active volcano.\n\nDragon Armour pieces are always Unique Availability and massively expensive. To work out the price of a piece of Dragon Armour, take the listed price for the regular equivalent and double it ten times (multiply it by 1024). So a Helm from the WFRP Core Rulebook with a cost of 3 GC would be 3072 GC as Dragon Armour, a Breastplate with a cost of 10 GC would be 10240 GC, and so on.\n\nWhite Lion Cloak: The White Lions are fierce predators that roam the wilds of the northernmost kingdoms, particularly Chrace. Their pelts are famed for their thick hides and heavy coats of hair, and can provide a degree of protection. Whilst some White Lion cloaks make it to market, it ought to be noted that in Chrace it is considered vulgar to wear one unless the wearer hunted and slew the White Lion from which the pelt was taken."
+  },
+  {
+    "id": "high-elf:reference:36-herbs-and-elven-markets",
+    "name": "Herbs and Elven Markets",
+    "category": "table",
+    "topic": "Equipment and magical items",
+    "page": 36,
+    "text": "The High Elves are well-versed in the use of herbs and wild plants to supplement their diet and help with healing or restorative practices. The ready availability of herbs in Ulthuan’s markets means that they are among those items that are more commonly available and sometimes cheaper than they are in the Old World.\n\nThe following table gives a revised list of prices and Availability for herbs and related products from the Consumer Guide in the WFRP Core Rulebook in Ulthuan.\n\nCertain items are not available in Ulthuan, however. Map Cap Mushrooms, Ranald’s Delight, and Spit are made from ingredients that aren’t found in the Elven kingdoms, and there is insufficient demand to justify their importation.\n\n| Item | Cost | Enc | Availability |\n| --- | --- | --- | --- |\n| POISONS |  |  |  |\n| Black Lotus | 10 GC | 0 | Scarce |\n| Moonflower | 7 GC | 0 | Exotic |\n| HERBS AND DRAUGHTS |  |  |  |\n| Digestive Tonic | 1/– | 0 | Common |\n| Earth Root | 1 GC | 0 | Common |\n| Faxtoryll | 5/– | 0 | Scarce |\n| Healing Draught | 4/– | 0 | Common |\n| Healing Poultice | 5/– | 0 | Common |\n| Nightshade | 1 GC | 0 | Scarce |\n| Salwort | 4/– | 0 | Common |\n| Vitality Draught | 6/– | 0 | Common |\n\nIn addition, the following items can be found at markets in Ulthuan but are rarely seen elsewhere.\n\nHERBS, DRAUGHTS, AND DRINKS\n\n| Item | Cost | Enc | Availability |\n| --- | --- | --- | --- |\n| Heartleaf (1 halm) | 1 GC | 0 | Exotic |\n| Narinocha Wine, bottle | 6/– | 0 | Scarce |\n| Sunroot Extract, vial | 2 GC | 0 | Scarce |\n| Viridescent Palliative, vial | 1 GC | 0 | Rare |\n\n0 Rare Viridescent Palliative, vial 1 GC\n\nHeartleaf: A dried halm of this herb gives off a pungent smell and fierce bright light when burned. Dragons find the light and the smell stimulating, so the herb is used by the dragonriders of Caledor to rouse their mounts from sleep or summon them to war. A Dragon that inhales the fumes of burning Heartleaf loses 1 Fatigued Condition.\n\nIf Heartleaf is burned where an awakened Dragon can see it or smell it, the Dragon is immediately aware of it. If that Dragon has a history of cooperation with Elves, they know the burning herb is intended to attract their attention and may act accordingly. Even if a Dragon is well-disposed to Elves they may resent being roused, especially if those who sought their attention do not treat them respectfully, expect them to act against their own interests, or do not have a serious reason for interacting with them. Wild or hostile Dragons are unlikely to be friendly if Heartleaf is used to attract their attention.\n\nNarinocha Wine: During the reign of Caradryel, Aevin Thornchanter was transformed into a narinocha plant while attempting to harness the Wind of Ghyran. 750 years later, Alaesir Greydawn dispelled the magic holding Aevin in plant form. The pair used their combined learning to produce a wine fermented from narinocha pods that proved popular in the courts of Ulthuan. It is one of several wines Elves enjoy that instead induce feelings of relaxation and vivid visions.\n\nWhen imbibing a glass of Narinocha Wine, a drinker must make a Challenging (+0) Consume Alcohol Test. Those who fail the Test suffer from the effects of alcohol as normal, but any Elves called upon to roll on the Stinking Drunk table use the alternative results given here."
+  },
+  {
+    "id": "high-elf:reference:36-narinocha-wine",
+    "name": "Narinocha Wine",
+    "category": "table",
+    "topic": "Equipment and magical items",
+    "page": "36–37",
+    "text": "| 1d10 | Effect of Narinocha |\n| --- | --- |\n| 1–2 | Reassuring Mirage. Gain Yenlui (Light). Until you sober up, Perception Tests suffer from –1 SL. |\n| 3–4 | Disquieting Illusion. Gain Yenlui (Dark). Until you sober up, Perception Tests suffer from –1 SL. |\n| 5–6 | Kaleidoscopic Confusion. Until you sober up, Perception Tests suffer from –4 SL. |\n| 7–8 | Vision of the Annuliis. Gain Yenlui (Balanced). |\n| 9 | Dream of Bucolic Avelorn. Gain Yenlui (Dark). Until sober, Perception Tests suffer from –2 SL. |\n| 10 | Nightmare of Mirai. Gain Yenlui (Dark). Until you sober up, Perception Tests suffer from –2 SL. |\n\nSunroot Extract: This health tonic does much to fortify the constitution, but only regular consumption can be shown to be beneficial. A vial contains ten doses, one of which may be added to a glass of spring water in order to create a refreshing drink. If a Character drinks, for the following week they benefit from a +20 bonus to any Tests to resist contracting a disease.\n\nViridescent Palliative: This pale green liquid is consumed by Elves in order to calm their desires. Each vial contains one dose of the palliative. After drinking, for the following 12 hours, an Elf experiences the following effects:\n\nMay not enter Frenzy\n\nYenlui becomes Balanced\n\nMay not benefit from any bonuses (but may ignore any penalties) resulting from a Dream or Obsession\n\nMay reroll failed Cool Tests to avoid Fear or Terror\n\nMust ignore Prejudice, Animosity, or Hatred"
+  },
+  {
+    "id": "high-elf:reference:37-enchanted-items",
+    "name": "Enchanted Items",
+    "category": "table",
+    "topic": "Equipment and magical items",
+    "page": 37,
+    "text": "Whilst serious magical artefacts and weapons usually involve expensive and exacting craftsmanship of a High Elf mage or priest of Vaul, there are some items bearing petty enchantments that turn up for sale at Elven markets.\n\n| Item | Cost | Enc | Availability |\n| --- | --- | --- | --- |\n| ENCHANTED ITEMS |  |  |  |\n| Aethyrolabe | 350 GC | 1 | Exotic |\n| Flamespyre Phoenix Feather | 300 GC | 0 | Exotic |\n| Frostheart Phoenix Feather | 400 GC | 0 | Exotic |\n| Staff of Nightelm | 500 GC | 1 | Exotic |\n| Staff of the Eternal Grove | 350 GC | 1 | Rare |\n| Wayshard | 700 GC | 0 | Rare |\n\n0 Rare Wayshard\n\nAethyrolabe: A device of interlocking brass discs and crystal lenses that is made by mages at the White Tower of Hoeth. The user of an Aethyrolabe can discern the relative concentrations of the Winds of Magic in a given area on a Challenging (+0) Lore (Magic) Test. They may also use the device to point to the nearest concentration of a particular Wind on a Hard (-20) Lore (Magic) Test.\n\nFlamespyre Phoenix Feather: A feather plucked from a Flamespyre Phoenix will continue to burn brightly for about a year, making them prized by those who wish to use them as sources of illumination or combustion. The feather casts light with the same degree of intensity as a lantern, and may set things ablaze as effectively as a torch.\n\nFrostheart Phoenix Feather: A feather plucked from a Frostheart Phoenix remains freezing cold for about a year. They cast a dim, cold light that provides the same sort of illumination as a candle and radiate sub-zero chill that refrigerates with the same efficacy as a brick of ice.\n\nMages, adventurers, and members of cults of pleasure prize Phoenix feathers, though how to safely transport them is a problem left to the buyer.\n\nStaff of Nightelm: Groves of nightelm trees once flourished throughout the realm of Ellyrion but most of them were destroyed during the earliest days of strife between Asur and Druchii. Staffs of Nightelm are said to protect their bearers from hostile magic. If the bearer of a staff is targeted with any spell from the Lores of Witchcraft, Daemonology, Necromancy, Dark Magic, or any Chaos Lore, the bearer counts as having the Magic Resistance 3 Creature Trait. These staffs are sometimes used as the shafts for polearms.\n\nStaff of The Eternal Grove: The trees of the Eternal Grove of Eataine are bathed in the Winds of Magic. They grow slowly and produce wood of exceptional hardness, so much so that those carpenters who work it must go to tremendous efforts to shape the wood. Any attempts to craft an item from the wood suffer from a penalty of –4 SL. Polearms and bows made from a Staff of the Eternal Grove possess the Durable 4 Quality.\n\nWayshard: Wayshards are either the remains of waystones that were shattered, or small pocketable waystones in and of themselves. These shards contain the essence of Elven soulstuff to keep them safe from predatory gods, and they would only be sold to an individual who could be trusted to keep them secure and protected from those who would defile them. Wayshards can be used to find a way to the nearest waystone, and are commonly used to navigate the mists of Yvresse. A bearer of a wayshard may use it to aid in Yenlui meditation (page 46) and may make a Challenging (+0) Pray Test in order to sense the direction of the nearest waystone."
+  },
+  {
+    "id": "high-elf:reference:39-high-elf-warships-2",
+    "name": "High Elf Warships",
+    "category": "rule",
+    "topic": "Naval equipment and creatures",
+    "page": 39,
+    "text": "High Elf ships are truly beautiful, meticulously crafted vessels with sleek lines, pristine paintwork, and billowing sails of silk.\n\nElves fashion each craft from a single starwood tree. Groves of these trees grow in the foothills of the Annulii Mountains, tended by shipwrights who combine the skills of forester, artist, and engineer. After felling a starwood, the shipwright weaves intricate magics into the wood to keep it alive. Before launch, a priestess adorns each craft with the Eye of Isha — an appeal for the Mother Goddess to reason with temperamental Mathlann and keep the ship safe from his anger."
+  },
+  {
+    "id": "high-elf:reference:40-dragonblade-ram",
+    "name": "Dragonblade Ram",
+    "category": "rule",
+    "topic": "Naval equipment and creatures",
+    "page": 40,
+    "text": "A dragonship has one dragonblade ram on each prow. These ancient rams are forged from truesilver, tempered with dragonfire, and shaped by priests of Vaul. With the weight of the ship behind them, they can easily shear through the hull of an enemy vessel. The dragonship has an effective 15 AP to protect against Damage resulting from a frontal collision. If it causes a head on collision, add 20 to its Toughness Bonus when calculating its Collision Rating."
+  },
+  {
+    "id": "high-elf:reference:40-high-elf-warships",
+    "name": "High Elf Warships",
+    "category": "table",
+    "topic": "Naval equipment and creatures",
+    "page": 40,
+    "text": "| Ship name | Crew | Sail M (C) | Man | Size | T | W | Carries | Traits and Upgrades |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Dragonship | 80 | 12 (30) | +2SL | 55 | 75 | 260 | 600 | Armoured, Flying Jib, Dragonblade Ram* |\n| Eagleship | 45 | 12 (15) | +2SL | 45 | 75 | 175 | 350 | Armoured, Flying Jib |\n| Hawkship | 20 | 10 (10) | +3SL | 35 | 65 | 110 | 100 | Armoured, Flying Jib |\n| Bloodhawk | 18 | 11 (8) | +3SL | 30 | 60 | 90 | 75 | Flying Jib |\n| Falcon | 15 | 9 (8) | +2SL | 25 | 55 | 80 | 50 | Flying Jib |\n\nNote: Elven warships may run swifter than the table on Sea of Claws page 104. The following provides additional movement rates:\n\n| Movement | Yards Per Round | Miles Per Hour (approx.) | Knots (very approx.) | Miles Per 2 Hour Shift | Miles Per 8 Hour Shift |\n| --- | --- | --- | --- | --- | --- |\n| 11 | 22 | 8.5 | 7.5 | 17 | 66.5 |\n| 12 | 24 | 9 | 8 | 18 | 72 |\n\nElven warships carry batteries of Eagle Claw Bolt Throwers rather than cannon. These are more powerful than normal Ballistae (Sea of Claws, page 100) and use subtle enchantments to send their bolts further with more force. They have a range of 150 yards, Damage +13, and the Accurate or Volley 6, Crewed 2, and Reload 3 Qualities and Flaws."
+  },
+  {
+    "id": "high-elf:reference:42-high-elf-merchant-ships",
+    "name": "High Elf Merchant Ships",
+    "category": "table",
+    "topic": "Naval equipment and creatures",
+    "page": 42,
+    "text": "| Ship name | Crew | Sail M (C) | Man | Size | T | W | Carries | Traits and Upgrades |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Albatross | 75 | 10 (30) | +1SL | 50 | 65 | 200 | 700 | - |\n| Golden Eagle | 20 | 8 (10) | +1SL | 40 | 65 | 150 | 450 | - |\n| Razorbill | 4 | 6 (2) | +1SL | 20 | 40 | 65 | 50 | - |"
+  },
+  {
+    "id": "high-elf:reference:43-dragon-princes",
+    "name": "Dragon Princes",
+    "category": "rule",
+    "topic": "Naval equipment and creatures",
+    "page": 43,
+    "text": "Despite the royal bloodline of Caledor thinning over time and the diminishing power of the Dragons, pride in ancient deeds remains strong. In the past, all Dragon Princes were beith caradan, beastfriends with an affinity with Dragons, and flew into battle upon mighty fire drakes, but now few can awaken a Dragon, so instead must ride swift horses. All Dragon Princes and their mounts wear dragon armour, forged in the fires of Vaul’s Anvil and stylised after the antique armour of the past. The arrogance of these riders is well known, as are their bravery and skill. Few will chance a confrontation with such intense individuals.\n\nThose who can awaken a Dragon are deemed to symbolise the deep connection of the two species and are considered amongst the mightiest lords of Ulthuan. Only the might of the phoenix king can keep the fiery temperament of these dragonriders under control, as few will risk the threat of banishment from Ulthuan."
+  },
+  {
+    "id": "high-elf:reference:45-playing-a-high-elf",
+    "name": "Playing a High Elf",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 45,
+    "text": "Elves are intelligent, elegant, swift, and adept. Their Characteristics reflect a very real advantage over many of the other species they encounter, which can make them arrogant, insufferable company. Of course, your Character is your own, to play as you see fit. What follows is advice for adding nuance to High Elves and hopefully create more enjoyment in your interactions with fellow PCs and NPCs during your game."
+  },
+  {
+    "id": "high-elf:reference:46-factors-influencing-yenlui",
+    "name": "Factors Influencing Yenlui",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 46,
+    "text": "|  |  |\n| --- | --- |\n| Behaviour | Effect |\n| Acts of cruelty | Move toward Dark |\n| Acts of extreme indulgence | Move toward Dark |\n| Accruing a Corruption point | Move toward Dark |\n| Acts of exceptional kindness | Move toward Light |\n| Abstaining from pleasure | Move toward Light |\n| Deep meditation with a Wayshard or at a Cadai shrine | Move toward Light |"
+  },
+  {
+    "id": "high-elf:reference:46-tracking-yenlui",
+    "name": "Tracking Yenlui",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 46,
+    "text": "Yenlui is tracked as a Psychology Trait. If an Elf behaves with moderation or balances the light and dark sides of their nature, there is no need to note Yenlui. However, if an Elf behaves in an extreme manner, their Yenlui may be recorded as either Yenlui (Light), Yenlui (Balanced), or Yenlui (Dark), depending on the behaviour exhibited.\n\nThe GM may decide that Yenlui is altered as the result of a dramatic act. They may also review an Elf ’s general behaviour at the end of each month or at the commencement of any downtime period and adjust Yenlui accordingly. Certain spell effects may only work if a Character is in a particular State, or may oblige them to move to another State."
+  },
+  {
+    "id": "high-elf:reference:47-effects-of-yenlui",
+    "name": "Effects Of Yenlui",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 47,
+    "text": "|  |  |  |\n| --- | --- | --- |\n| Yenlui State | Casting Test Modifiers | Other Test Modifiers |\n| Dark | High Magic –2 SL | –1 SL to Toughness and Willpower Tests |\n| Balanced | No modifiers | - |\n| Light | Dark Magic –2 SL | –1 SL to Toughness and Initiative Tests |"
+  },
+  {
+    "id": "high-elf:reference:47-effects-of-yenlui-2",
+    "name": "Effects Of Yenlui",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 47,
+    "text": "|  |  |  |\n| --- | --- | --- |\n| Yenlui State | Casting Test Modifiers | Other Test Modifiers |\n| Dark | High Magic –3 SL | –2 SL to Toughness and Willpower Tests – 1 SL to Fellowship Tests |\n| Balanced | No modifiers |  |\n| Light | Dark Magic –3 SL | –2 SL to Toughness and Initiative Tests –1 SL to Fellowship Tests |\n\nElves who are over 870 years of age suffer from the following modifiers if they are in a particular Yenlui State,"
+  },
+  {
+    "id": "high-elf:reference:47-effects-of-yenlui-3",
+    "name": "Effects Of Yenlui",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 47,
+    "text": "|  |  |  |\n| --- | --- | --- |\n| Yenlui State | Casting Test Modifiers | Other Test Modifiers |\n| Dark | High Magic – 4 SL | – 3 SL to Toughness, Willpower, and Fellowship Tests – 2 SL to Agility, Dexterity, and Intelligence Tests |\n| Balanced | No modifiers | - |\n| Light | Dark Magic – 4 SL | – 3 SL to Toughness, Initiative, and Fellowship Tests – 2 SL to Weapon Skill, Ballistic Skill, and Strength Tests |"
+  },
+  {
+    "id": "high-elf:reference:47-the-effects-of-yenlui",
+    "name": "The Effects of Yenlui",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 47,
+    "text": "Should an Elf attain a Yenlui State, they will suffer from the modifiers given in the table below. Note that there are some benefits to attaining a particular Yenlui State, though they tend to be in the performance of specific Skills or spells.\n\nYenlui (Light) You risk becoming jaded or fatalistic by overexposure to the light of the Cadai. This can be portrayed as a tendency towards indecisive, aloof, or insensitive behaviour.\n\nYenlui (Dark) You have become wicked or deviant by overexposure to the darkness of the Cytharai. This can be portrayed as a tendency towards sadistic, wanton, or sociopathic behaviour."
+  },
+  {
+    "id": "high-elf:reference:48-benefits-of-obsession",
+    "name": "Benefits of Obsession",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": "48–49",
+    "text": "Once per session, a player may point out that passing or failing a Psychology Test would go against the spirit of their Obsession. Provided the GM agrees, the player may decide on the result of that Psychology Test without needing to roll.\n\nExample: The High Elf Eiloran has an Obsession to see the Dark Elves vanquished. During a session, a Dark Elf corsair uses Intimidate to cause Fear in Eiloran. Eiloran’s player points out that succumbing to this runs counter to her Obsession. The GM agrees that there is no need to Test."
+  },
+  {
+    "id": "high-elf:reference:48-example-obsessions",
+    "name": "Example Obsessions",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 48,
+    "text": "| 1d10 | Obsession |\n| --- | --- |\n| 1 | To leave an artistic or scholarly legacy. This involves the planning and creation of a great magnum opus that will find admirers for centuries to come. |\n| 2 | To see the Dark Elves defeated once and for all. To convince other High Elves that Ulthuan’s military needs to be reinforced to meet this goal. |\n| 3 | To ensure that a particular kingdom becomes the paramount realm in Ulthuan. This may involve rebuilding a shattered kingdom (such as Yvresse) or maintaining the power of an important kingdom (such as Eataine). |\n| 4 | To reestablish High Elf dominions around the world. To convince other High Elves that Ulthuan’s navies must be reinforced to meet this goal. |\n| 5 | To see that Ulthuan does not risk its people or its treasure in attempts to build alliances with Humans or Dwarfs. |\n| 6 | To view sights no other Elf has seen by travelling to distant lands and exploring their remote regions. |\n| 7 | To find someone in the world with whom you can fully relate through the forging of a solid friendship or true and lasting love. |\n| 8 | To educate others in a system of thought that will lead them to live better lives in time to come. This may be a moral mission, one that seeks to wipe out a source of suffering, or the promotion of a form of pleasure-seeking. |\n| 9 | To garner greater wealth and power with which to secure the safety and comfort of your family, friends, or neighbours. |\n| 10 | To master your emotions, control your nature, and find inner peace. |"
+  },
+  {
+    "id": "high-elf:reference:49-dreams",
+    "name": "Dreams",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 49,
+    "text": "In Asur society, inclination toward prophetic dreams is common enough to be regarded as an acceptable eccentricity. Sensitivity to the Winds of Magic is widespread among Elves and often inspires such dreams since prognostication is carried on Azyr, the Blue Wind. Those with the favour of Lileath (or the less gentle attentions of Morai-Heg) may dream of the future, especially in times of crisis.\n\nIf a player and their GM agree, a High Elf can be inclined to Dreams. When this Character sleeps, the GM may decide that they experienced a significant Dream. This Dream should consist of simple, striking images that relate to but do not literally depict an upcoming challenge. If the Character chooses, they can replace their current Short- term Ambition with the Dream. Otherwise, it is forgotten.\n\nWhen a Character encounters the situation foretold in their Dream, the GM should inform them that the Dream has come to pass. During the foretold events, any successful Tests made by the Character benefit from an additional +1 SL. The length of time this period lasts should be no shorter than an encounter and no longer than a day.\n\nAfter a Character’s Dream comes true, they may choose a new Short-term Ambition at the end of the session.\n\nForeshadowed events should occur within the subsequent few sessions of gameplay. Since fate is a fickle thing, GMs are advised to describe Dreams that could be fulfilled in multiple ways. The table below provides a selection of Dreams and ideas about what they might mean."
+  },
+  {
+    "id": "high-elf:reference:49-negative-effects-of-obsession",
+    "name": "Negative Effects of Obsession",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 49,
+    "text": "The GM may impose a penalty of –2 SL on any Test a Character takes that they feel ought to be compromised by the Obsession.\n\nExample: After dealing with the Dark Elf sorceress, Eiloran is cornered by a trio of Dark Elves who threaten to run her through with their spears. Eiloran decides to see if she can use her Bribery Skill to persuade them to leave her alone. Because she has a Yenlui State of Yenlui (Balanced) the GM can impose negative effects of Obsession once for every time Eiloran benefited from Obsession. They, therefore, rule that the Bribery Test suffers from a penalty of –2 SL (in addition to any other modifiers they see fit to impose)."
+  },
+  {
+    "id": "high-elf:reference:50-example-dreams",
+    "name": "Example Dreams",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 50,
+    "text": "| 1d10 | Dream |\n| --- | --- |\n| 1 | Teh land of Ulthuan is wracked by war, cities burn, and towers topple. To the south, the king and the general clasp their hands in friendship, and the Dragon takes filght. Tihs Dream recollects the story of Phoenix King Morvael and General Mentheus. Perhaps it urges the dreamer to delegate tasks to those more suited to them. It may warn that a friend faces peril or that disaster looms for the dreamer. |\n| 2 | A war rages in the heavens. Two mighty fgiures wearing suits of black iron clash. After a great struggle, one is cast down, and the other yells in triumph. Tihs Dream refelcts Khaine’s victory over Vaul. It may portend that an attempt to exact vengeance will fail or warn that someone is trying to trap the dreamer. |\n| 3 | You have served the master sculptor Oeric all your life. You watch in awe as he chisels fine detail into the hair of an Elf maiden made from bone white marble. The Dream may portend a dangerous temptation, the potential recovery of something thought lost, or the undertaking of a masterwork. |\n| 4 | Storms lash at a high citadel on the northern coast of Ulthuan. A burning green witchfrie shines from the narrow windows in the tall towers. Flocks of harpies circle around its tallest towers, and waves crash at its base. A vision of the tower of Anlec may portend a building that contains great dangers or the fact that enemies are secretly mustering their strength to assail you. |\n| 5 | Multicoloured winds cascade about you. You are tumbled about, spinning uncontrollably in the furious cyclone. Figures dressed in the panoply of mages folat within the tumult, their expressions calm and focused. Tihs vision of the Great Vortex may indicate that the dreamer must make a great sacrifcie to avert disaster or undertake a great or dangerous project. |\n| 6 | A High Elf with noble bearing, wearing clothing that is expertly tailored but has clearly been worn in by years of travel, clasps hands with a Dwarf wearing the regalia of their high kings. Tehy smile in friendship. A vision of Malerion before he tried to claim the Phoenix Trhone, befriending the Dwarf high king Snorri Whitebeard. Perversely, this vision may portend either the chance to forge a valuable friendship or that someone close to you will betray you. |\n| 7 | Teh Bloody-handed God rages. He has been tricked, and his precious treasures have been lost and scattered about, stolen and hidden in the mortal world, where the gods are forbidden to tread. Teh Dream may portend the loss or theft of a precious item or the chance to discover something that had been lost or stolen in the past. Alternatively, the Dream may warn that people who had previously seemed friendly may have changed their position, or that the dreamer should beware of a lover’s manipulations. |\n| 8 | A fortress folats upon a dark sea. Chill winds blow, and mountains of ice drift through the water. Teh admiral aboard his dragonship orders his crew to close with the enemy and brace for a ram. The Dream suggests that a great victory may be won if the dreamer takes bold and decisive action. However, paradoxically, it may warn against overextending an effort and risking disaster if a consolidation of recent gains is not taken before greater victory is sought. |\n| 9 | From their roosting sites among alabaster pillars of rock, gigantic birds with wings of falme take to the air, circling about and calling to one another with harsh cries. Tihs vision of Flamespyre Phoenixes may promise the dreamer an opportunity to reinvent themselves, fnid a new purpose in life, or cheat death. |\n| 10 | Teh ancient Dragon struggles to rouse itself, but the temperature of the world is not to its liking. It shifts its weight onto its other side and yawns and falls to sleep once more. Teh Dream may warn that the dreamer is foolish to ignore a growing threat in favour of enjoying easy comforts. Alternatively, the Dream may hint that the current environment is not conducive to a hoped for course of action. |"
+  },
+  {
+    "id": "high-elf:reference:51-the-madness-of-khaine",
+    "name": "The Madness Of Khaine",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 51,
+    "text": "| 1d100 | Mental Corruption |\n| --- | --- |\n| 01-20 | Hollow Heart |\n| 21-40 | Profane Urgency |\n| 41-60 | Thrill Hunter |\n| 61-74 | Tortured Visions |\n| 75-89 | Unending Malice |\n| 90-00 | Unholy Rage |\n\nYou should discuss with your GM how to play your Character. Given they are over 16, they have likely attended the phoenix king and visited the Shrine of Asuryan. Your Character’s Mutation is, therefore, within the realms of normal Elven personality, if a little extreme at times. Commoners descended from Aenarion may not know of their heritage or may not have been scrutinised at 16.\n\nElves who know of your origins treat you differently to others. Suspicions could boil over into hostility, and some Elves see Aenarion’s descendants as inherently dangerous. These include the members of the secretive Cult of the Forbidden Blade, an order of duellists that aims to eliminate any who might take up the Widowmaker. Others may exalt you. Elves who want to revive the glory of Aenarion’s days may assume you share their ambitions and attempt to recruit you into their intrigues."
+  },
+  {
+    "id": "high-elf:reference:52-centuries-of-experience",
+    "name": "Centuries of Experience",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 52,
+    "text": "For each Time an Elder has lived through – not including the Time of Ending but including the Time of their birth – generate a Career that the Elder pursued during that Time. Use the Random Class and Career Table on page 59 or choose a Career available for your Character. If you choose a Career, you gain 10 Advances to spend on Skills available to the first level of that Career. If you generate a Career randomly, you instead gain 15 Advances. Either way, you cannot invest more than 5 Advances in any single Skill each Time.\n\nIn addition, for each Time you have lived through, you also gain Burdens. You gain the Burdens of all Times you have lived through, including the Time of your birth. However, Burdens relating to Yenlui are not cumulative. Instead, the Burden that relates to the earliest age applies.\n\nExample: Kim is generating a Sea Guard Character, Seluin of Cothique. She decides to make Seluin an Elder, choosing for her to have been born in the Time of Voyages.\n\nKim generates a random Career for each of the three Times Seluin lived through (besides the Time of Ending). She gains the Smuggler Career for the Time of Voyages, the Herbalist Career for the Time of Incursion, and the Advisor Career for the Time of Steel. She spends 15 Advances each on the first level Skills of those different Careers. Although she cannot gain more than 5 Advances each Time for each Skill, the Perception Skill appears in both the Herbalist Career and the Advisor Career – she decides to take 5 Advances in the Skill each Time, giving her 10 Advances in Perception by the time she’s spent all her Elder Advances.\n\nShe gains Burdens associated with the Time of Voyages, the Time of Incursion, and the Time of Steel. The first Burden prevents her from taking more than 1 Endeavour each downtime. The second Burden gives her 5 Corruption. The third Burden means she only starts with 1 Extra Point for Fate and Resilience instead of 2. Kim knocks off the secondpoint of Fate she gave to Seluin in the Attributes step of Character creation. Finally, she must pass a Challenging (+0) Cool Test or gain the Yenlui (Light) Psychology Trait at the end of each week."
+  },
+  {
+    "id": "high-elf:reference:52-elders-of-the-asur",
+    "name": "Elders Of The Asur",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 52,
+    "text": "The natural lifespan of Elves is far longer than Humans, Dwarfs, or Halflings, with some Elves appearing functionally immortal. Whilst the default age for High Elves is much older than other Characters, players may wish to play even older Asur. With experience comes wisdom and expertise, but also melancholy from witnessing their civilisation’s long, unavoidable decline.\n\nDuring the Adding Detail step of Character creation (WFRP, pages 37-41) you may choose to play an Elder. Elder Characters have lived through spans of many years that correspond to a period of upheaval in Asur society. Decide which Time your Elder Character was born in and determine an age for your Character within that range. The Character has lived through all Times after the Time of their birth. For example, a Character born in the Time of Incursion has also lived through the Time of Steel and the Time of Ending."
+  },
+  {
+    "id": "high-elf:reference:53-experience-of-the-elders",
+    "name": "Experience Of The Elders",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 53,
+    "text": "|  |  |  |  |  |\n| --- | --- | --- | --- | --- |\n| Character Age | Random Age | Time of Birth | Life Experience | Burden |\n| 40-130 years old | 30 + 10d10 | Time of Ending | All your life, you have warily anticipated the Rhana Dandra. Whilst you may have been alive during invasions of Ulthuan, you were not of fighting age during the bitterest battles. Your chance to bleed for your homeland will come soon enough. | None – this is the default age range for High Elf Characters. Count from this step to determine how many Times an elder Character has lived through. |\n| 130-210 years old | 120 + 9d10 | Time of Steel | You were of fighting age during the assault on Naggarond and the invasion of Grom the Paunch. You may have been old enough to participate in other campaigns, such as the defence of Couronne, Prince Sigvald’s invasion of Ulthuan, or the sack of Marienburg. | You begin play with only 1 Extra Point (instead of 2) to spend on either Fate or Resilience. At the end of each week make an Easy (+40) Cool Test or move towards the Yenlui (Light) ‘State. |\n| 210-350 years old | 200 + 15d10 | Time of Incursion | You lived through the Great Chaos Incursion – perhaps fighting at the sack of Cothique, the Battle of Finuval Plain, or the Battle at the Gates of Kislev. Between the rampage of the Daemon N’Kari, and the summonings at Wailing Fen. This was a Time when Chaos tainted the very soil of Ulthuan. | You begin play with 5 Corruption points. At the end of each week make an Average (+20) Cool Test or move towards the Yenlui (Light) State. |\n| 350-610 years old | 320 + 30d10 | Time of Voyages | You were born in the early days of the reign of Bel-Hathor before humans were welcome on Ulthuan. You may have joined the voyages of Finubar, perhaps witnessing the Vampire Wars firsthand, or been one of the first Sea Elves to return to the Old World. | You may never undertake more than 1 Endeavour between adventures, excluding your Duties & Responsibilities. At the end of each week make a Challenging (+0) Cool Test or gain the Yenlui (Light) State. |\n| 610-870 years old | 580 + 30d10 | Time of the Sage | You lived through the centuries of escalating Norscan raids that warned of the growing threat posed by Humanity. It took sorcerous enchantment to drive these lesser beings from the seas of your homeland. | You gain the Prejudice (Humans) Psychology Trait. At the end of each week make a Difficult (-10) Cool Test or move towards the Yenlui (Light) State. |\n| 870+ years old | 840 + 30d10 | Time of Shadows | You survived the Night of the Restless Dead, when all the known world was menaced by undead horrors. Those older than 1000 might remember the reigns of phoenix kings before Bel-Hathor, but at your age recalling specifics from your youth is tricky… | Your starting Fate, Fortune, Resilience and Resolve are all set to 0 and cannot rise higher during Character Creation At the end of each week make a Hard (-20) Cool Test or move towards the Yenlui (Light) State. |"
+  },
+  {
+    "id": "high-elf:reference:57-species-skills-and-talents",
+    "name": "Species Skills and Talents",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 57,
+    "text": "Skills: Cool, Endurance, Entertain (Singing), Evaluate, Gossip, Haggle, Language (Elthárin), Language (Any), Melee (Basic), Navigation, Sail, Swim\n\nTalents: Acute Sense (Sight), Night Vision, Old Salt or Sea Legs, Orientation or Sixth Sense, Read/Write, Uncouth Uranai"
+  },
+  {
+    "id": "high-elf:reference:58-high-elf-careers",
+    "name": "High Elf Careers",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 58,
+    "text": "When generating a High Elf Character, you can roll for a Career on the table in the WFRP Rulebook (which primarily represents High Elves in the Old World) or use the following tables to reflect different origins within Ulthuan. Different options are available for Elves of the relatively civilised Inner Kingdoms, the rather rougher Outer Kingdoms, the exceptional circumstances of life in arboreal Avelorn or the wastes of Nagarythe, and the Sea Elves.\n\nNote that certain careers (marked with an *) are not normally available to High Elves. These are careers High Elves would not suffer to follow under a Human regime, but that play a vital role in Ulthuan.\n\nElf Characters cannot become a Priest as a starting Career (see page 99)."
+  },
+  {
+    "id": "high-elf:reference:59-random-class-and-career-table",
+    "name": "Random Class And Career Table",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 59,
+    "text": "| Class | Career | Outer Kingdoms | Nagarythe | Inner Kingdoms | Avelorn | Sea Elf |\n| --- | --- | --- | --- | --- | --- | --- |\n| Academics | Apothecary | 01-03 | 01-03 | 01-03 | 01-04 | 01-02 |\n|  | Lawyer | 04-05 | – | 04-06 | – | 03-04 |\n|  | Mage | 06-08 | 04-05 | 07-09 | 05-09 | 05-07 |\n|  | Physician | 09-12 | 06-07 | 10-11 | 10-12 | 08-11 |\n|  | Scholar | 13-16 | 08-09 | 12-14 | 13-19 | 12-14 |\n| Burghers | Artisan | 17-19 | 10-12 | 15-17 | 18-21 | 15-17 |\n|  | Investigator | 20-21 | 13-15 | 18-19 | – | 18-20 |\n|  | Merchant | 22-24 | 16 | 20-25 | 22 | 21-25 |\n|  | Merchant Adventurer | 25-26 | 17-18 | 26-27 | 23 | 26-27 |\n|  | Townsman | 27-29 | – | 28-29 | – | 28 |\n|  | Watchman | 30 | – | 30-31 | – | 29 |\n| Courtiers | Advisor | 31-32 | 19 | 32-33 | 24-25 | 30-32 |\n|  | Aestheticist | 33-34 | 20 | 34-36 | 26-28 | 33 |\n|  | Artist | 35 | 21 | 37-38 | 29-33 | 34 |\n|  | Duellist | 36 | 22-24 | 39-41 | 34-35 | 35 |\n|  | Envoy | 37-39 | 25-27 | 42-45 | 36-38 | 36-39 |\n|  | Noble | 40-42 | 28-29 | 46-47 | 39-41 | 40-42 |\n|  | Servant* | 43-44 | 30-32 | 48-50 | 42-43 | 43-44 |\n|  | Spy | 45-46 | 33-37 | 51-53 | 44-45 | 45-48 |\n|  | Warden | 47-51 | 38-39 | 54-55 | 46-47 | – |\n| Peasants | Herbalist | 52 | 40-43 | 56 | 48-51 | – |\n|  | Hunter | 53-55 | 44-48 | 57 | 52-55 | – |\n|  | Scout | 56-60 | 49-56 | 58-59 | 56-59 | 49-51 |\n|  | Villager* | 61-63 | 57-59 | 60 | 60-62 | – |\n| Rangers | Bounty Hunter | 64-66 | 60-64 | 61 | 63 | 52-55 |\n|  | Entertainer | 67 | 65-67 | 62-64 | 64-69 | 56-58 |\n|  | Messenger | 68-69 | 68-70 | 65-66 | 70-73 | 59-61 |\n|  | Shadow Warrior | – | 71-74 | – | – | – |\n| Riverfolk | Boatman | 70-71 | 75 | 67-69 | 74 | 62-65 |\n|  | Huffer* | 72-73 | – | 70-72 | – | 66-69 |\n|  | Seaman | 74-77 | – | 73-77 | 75-77 | 70-74 |\n|  | Smuggler | 78 | 76 | 78-80 | 78-79 | 75-77 |\n|  | Stevedore* | – | – | – | – | 78-79 |\n| Rogues | Bawd | 79 | 77-78 | 81-83 | 80-83 | 80-82 |\n|  | Charlatan | 80-81 | 79-82 | 84-85 | 84-86 | 83-86 |\n|  | Outlaw | 82-84 | 83-86 | – | 87 | 87 |\n| Warriors | Cavalryman | 85-88 | 87-90 | 86-87 | 88-91 | 88 |\n|  | Guard | 89-91 | 91 | 88-89 | 92-93 | 89-90 |\n|  | Knight | 91-92 | 92-93 | 90-91 | 94-95 | 91 |\n|  | Sea Guard | 93 | – | 92-95 | – | 92-94 |\n|  | Pit Fighter | 94-95 | 94-95 | 96 | – | 95 |\n|  | Protagonist | 96 | 96-97 | 97 | 96 | 96 |\n|  | Soldier | 97-99 | 98-99 | 98-99 | 97-99 | 97-100 |\n|  | Swordmaster | 100 | 100 | 100 | 100 | – |"
+  },
+  {
+    "id": "high-elf:reference:60-cavalryman",
+    "name": "Cavalryman",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 60,
+    "text": "Cavalry is a staple of Asur armies, epitomised by the renowned Ellyrian Reavers. Not all Elven Cavalrymen belong to an army — some fight as mercenaries or independent companies. For Ulthuan High Elves, replace the Ranged (Blackpowder) Skill with Track and the Pistol Trapping with an Elf Bow and 10 Arrows.\n\nPlayers with Up In Arms can choose to play a ‘Light Cavalry. These High Elves have traded armour for speed and stealth. Such riders may form coastal patrols, particularly in Ellyrion, Nagarythe, and Tiranoc. At Captain level, replace Ranged (Blackpowder) with Secret Signs (Scout) and the Brace of Pistols Trapping with a magic weapon."
+  },
+  {
+    "id": "high-elf:reference:60-pit-fighter",
+    "name": "Pit Fighter",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 60,
+    "text": "Elven gladiators are a relic of ancient times, the centuries after Aenarion, when fighting for display and entertainment was commonplace. These fighters prize elegance and spectacle over brutality — Asur combat displays are highly ritualised and bound by complex rules. For High Elf Pit Fighters, you may choose to replace the level 1 Dirty Fighting Talent with Feint."
+  },
+  {
+    "id": "high-elf:reference:60-soldier",
+    "name": "Soldier",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 60,
+    "text": "Most High Elf Soldiers serve as part of Ulthuan’s many citizen militias. Players with access to Up In Arms may specialise as an Archer or Artillerist specialising in the operation of repeating bolt throwers. Asur siege tactics rely on expertly crafted war engines, intelligence, and astute use of magic rather than cannons. They may not take the Ranged (Blackpowder) Skill."
+  },
+  {
+    "id": "high-elf:reference:61-noble",
+    "name": "Noble",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 61,
+    "text": "A High Elf aristocrat’s position in the hierarchy is a complicated matter, but there are two broad tiers:\n\nThe highborn (tariour) can trace descent from Aenarion or the warrior-princes who fought alongside him. They bear the title of Prince or Princess as a birthright, which cannot be bestowed. The nobility (toriour) have ancestors who were bestowed land and a title by the phoenix king or everqueen. Such gifts are exceptionally rare — hundreds of years can pass before the creation of a new title. They are addressed as Lord or Lady.\n\nAsur Nobles’ position in society is complex and constrained. They are bound by more rules and expectations than Human nobles. They may not always follow those rules, but protocol is not lightly dismissed.\n\nGiven Elven longevity, it may be hundreds or thousands of years before an Asur Noble inherits their position. They have centuries to stave off boredom or build a legacy. They fill this time with warfare and intrigue — you should also roll to see whether you are of the Blood of Aenarion (see page 61)."
+  },
+  {
+    "id": "high-elf:reference:62-artisan",
+    "name": "Artisan",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 62,
+    "text": "High Elf Artisans spend decades or even centuries perfecting their talent. While their profession is a commercial undertaking, they consider it an artform rather than mere craft — even a High Elf cooper strives to make their barrels the most elegantly curved and beautifully turned receptacles. As they advance in proficiency, they learn to weave subtle magical effects into the items they make.\n\nHigh Elf Artisans in the Old World join craft guilds, but on Ulthuan they compete rather than associate with peers. Like any artist, they seek patronage from a noble house, which brings renown and riches by association. An Ulthuan Artisan makes these changes:\n\nLevel 2 (Artisan) — replace Etiquette (Guilder) with Etiquette (Nobles) Skill, replace Guild Licence Trapping with Highborn Patronage Level 3 (Master Artisan) — replace Secret Signs (Guilder) Skill with Lore (Magic) Level 4 (called Exalted Maker rather than Guildmaster) — replace Guild Trapping with Position at Court"
+  },
+  {
+    "id": "high-elf:reference:63-charlatan",
+    "name": "Charlatan",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 63,
+    "text": "No matter how intelligent, it is possible to deceive most Elves if one takes advantage of their obsessions. Asur Charlatans use eloquence and flattery to secure coin, property, or privileges. Others inveigle themselves into circles of entertainers or carnivals, where they take advantage of the relaxed intoxication of revellers. High Elf Charlatans cheerfully con non-Elves out of anything and everything, often with the blessing of more respectable peers."
+  },
+  {
+    "id": "high-elf:reference:63-seaman",
+    "name": "Seaman",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 63,
+    "text": "Elven Sailors are the most accomplished in the world, far superior to those of other species. They are quite unlike the rowdy sea dogs who make up Human crews and are capable of incredible feats of seamanship aboard their elegant Elven vessels. The Seaman Career in the core rulebook represents the more uncouth Elven Sailors found in the Old World or amongst the rougher Sea Elf enclaves. For Sailors aboard the most impressive Elven ships, you can use the following Skills and Talents:\n\nLevel 1 (Landsman) — replace Consume Alcohol and Melee (Brawling) with Athletics and Melee (Basic) Level 2 (Seaman) — replace Athletics with Intuition"
+  },
+  {
+    "id": "high-elf:reference:63-smuggler",
+    "name": "Smuggler",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 63,
+    "text": "Despite the ordered society of Ulthuan, smuggling is a lucrative and surprisingly prevalent crime. The dominance of Lothern’s merchant houses has created opportunities to bring contraband ashore without paying their fees. Certain artefacts, creatures, and persons must be brought to Ulthuan by stealth, a task eagerly taken by Smugglers for the right price or favour."
+  },
+  {
+    "id": "high-elf:reference:68-sword-dancing-tests",
+    "name": "Sword-dancing Tests",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 68,
+    "text": "With intricate and precise movements of body and blade, you channel magic to perform a Sword-dancing technique. To do this, make a Melee (Two-handed) Test. If your SL reaches the target number (the SL listed in the individual technique description), you succeed and perform the technique as explained in its description. If you fail, you lose all Advantage. On an Astounding Failure, you must also roll on the Oops! Table (WRFP, page 160)..\n\nSpiritual balance is required to make the best of Sword- dancing. The Difficulty of the Melee (Two-Handed) Test varies according to the Yenlui State of the Character making the Test.\n\nYenlui (Balanced): Challenging (+0) Yenlui (Light): Challenging (+0) Yenlui (Dark): Very Hard (–30)"
+  },
+  {
+    "id": "high-elf:reference:70-shadow-warrior",
+    "name": "Shadow Warrior",
+    "category": "table",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 70,
+    "text": "High Elf\n\nYou are an avenging shadow who goes to great lengths to root out the foul plots of the Druchii.\n\nShadow Warriors are trained in the art of subterfuge and guerilla warfare, making them skilled scouts who often assist the armies of the phoenix king. Dressed in blue, black, or shades of grey to blend into the shadows, red is occasionally used in heraldry to symbolise the spilt blood of their kin.\n\nSHADOW WARRIOR ADVANCE SCHEME\n\n|  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n|  |  |  |  |  |  |  |  |  |  |"
+  },
+  {
+    "id": "high-elf:reference:71-way-of-the-shadow",
+    "name": "Way of the Shadow",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 71,
+    "text": "The secret arts of the shadows include a wide range of skills, from how to disguise and fade into a crowd and stealthy techniques in movement and concealment to spells that aid a hunt dedicated to Kurnous and Loec.\n\nIn combat, fear is used as a weapon. Shadow Warriors will make hissing noises to emulate the Rephallim of the goddess of the Underworld, Ereth Khial, coming to drag their opponents’ souls to eternal torment. The tools of Shadow Warriors are also diverse, comprising grappling hooks covered in cloth to reduce noise and crescent pendants of the goddess Lileath, the only being they believe can forgive them for their ruthless actions. With their array of skills and equipment, a Shadow Warrior can strike in even the most secure location or leave tokens of their passing to spread fear. Despite performing assassinations, Shadow Warriors have a distaste for the use of poisons and drugs, viewing it as dishonourable as these are tools often used by the Dark Elves. Masters of subtle, and not so subtle, persuasion, even a whispered rumour from the lips of Shadow Warrior can be a weapon."
+  },
+  {
+    "id": "high-elf:reference:78-training-of-a-mage",
+    "name": "Training of a Mage",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 78,
+    "text": "The training requirements of High Magic are exacting. Mages can begin at level 1 having already served Isha, however, learning the High Magic Talent typically requires 10 years of study. Mages who instead choose to study the separate Winds of Magic undergo the same general training process, though their studies at the White Tower can be expedited."
+  },
+  {
+    "id": "high-elf:reference:79-display-basic-proficiency",
+    "name": "Display Basic Proficiency",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 79,
+    "text": "A High Elf aspiring to become a Mage must develop basic magical skills. This is done either by following the Wizard Career in the WFRP Core Rulebook or entering the Mage Career.\n\nHigh Elves following the Wizard Career may be learning magic as an amusing pastime or because their circumstances do not permit them to study magic seriously. Those following the Mage Career are learning under the tutelage of High Elf Mages in preparation for learning High Magic.\n\nAn Elf following the Wizard Career may not learn High Magic during that Career. They may later take up a career as a Mage, but they must do so from level 1. No matter how impressive a spellcaster they may be, they must still undergo their novitiation.\n\nA list of Petty Magic spells is also given on pages 80-81. Before a High Elf Character becomes a Student Mage, they must demonstrate proficiency in these spells, as they are seen as demonstrating the favour of Isha (and are familiar to the tutors who will go on to direct an aspirant’s learning). At least four of these spells must be learned. Even an Elf who has mastered several separate Lores of Magic must learn these Petty spells to begin training in High Magic."
+  },
+  {
+    "id": "high-elf:reference:79-learn-the-lores",
+    "name": "Learn the Lores",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 79,
+    "text": "Unlike Human Wizards, Elf Wizards may learn to channel multiple Winds of Magic. They may take a number of Arcane Lore (Colour) Talents equal to their Willpower Bonus. A High Elf Mage may not purchase a new ‘Arcane Lore (Colour) Talent until they have taken at least 10 Advances in the Channelling Skill of, and learned at least four spells from, the previous Lore. These spells may come from the list of Colour Lore spells given in the WFRP Core Rulebook or Winds of Magic. These stipulations are more lenient than those provided in the WFRP Core Rulebook under the assumption that Elf spellcasters in Ulthuan learn the separate Lores of magic in preparation for learning High Magic. High Elves in other settings or learning from Human institutions are expected to gain 20 Advances in Channelling and eight spells from a particular Lore before being trusted to learn another.\n\nAn Elf spellcaster could fulfil the stipulation to learn four (or eight) spells from the Lore of Fire by learning four (or eight) Arcane spells. However, if you later went on to learn spells from the Lore of Heavens, they would need to be new, different spells.\n\nNormally, any Arcane spells purchased as part of an Arcane Lore benefit from that Lore’s Lore Attribute. This means that if you learn the Arcane Lore spell Bolt as part of your training in the Lore of Fire you ought to record it as Bolt (Fire). If, for some reason, you later wanted to learn Bolt again as part of the Lore of Heavens you could do so, but whilst it would have a similar effect to Bolt (Fire), it would be Bolt (Heavens) and count as a new spell in terms of calculating how much XP it costs to learn.\n\nClearly, there is little utility to be gained from learning the same Arcane spell using multiple Winds, though it does mean you could select from several Lore Attributes when casting it.\n\nElven Arcane Spells A list of Elven Arcane spells can be found on pages 81-82. Unlike regular Arcane Magic spells, these spells may not be cast using any one lore, but if the spellcaster possesses a particular combination of lores. Elven Arcane spells may count towards the minimum eight spells required to learn a particular lore of magic. However, ayou may only purchase them once you have the required Arcane Magic Talents, they will only count towards the minimum four (or eight) spells required to fulfil the criteria for the latest Arcane Magic Talent you are learning."
+  },
+  {
+    "id": "high-elf:reference:80-ready-at-last",
+    "name": "Ready at Last?",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 80,
+    "text": "Before you can take the Blessed by Isha Talent, and begin to learn High Magic, you must possess the following:\n\nLearned the Petty Magic Talent and at least four of the spells listed on pages 81-82 Completed Student Mage level of the Mage Career Willpower of not less than 80 At least 10 Advances in the Channelling (Aqshy) Skill The Arcane Magic (Fire) Talent and at least four spells from the Lore of Fire (including any Arcane Spells or Elven Arcane spells bought as part of the Lore of Fire) At least 10 Advances in the Channelling (Azyr) Skill The Arcane Magic (Heavens) Talent and at least four spells from the Lore of Heavens (including any Arcane spells or Elven Arcane spells bought as part of the Lore of Heavens) At least 10 Advances in the Channelling (Chamon) Skill The Arcane Magic (Metal) Talent and at least four spells from the Lore of Metal (including any Arcane Spells or Elven Arcane Spells bought as part of the Lore of Metal) At least 10 Advances in the Channelling (Ghur) Skill The Arcane Magic (Beasts) Talent and at least four spells from the Lore of Beasts (including any Arcane spells or Elven Arcane spells bought as part of the Lore of Beasts) At least 10 Advances in the Channelling (Ghyran) Skill The Arcane Magic (Life) Talent and at least four spells from the Lore of Life (including any Arcane spells or Elven Arcane spells bought as part of the Lore of Life) At least 10 Advances in the Channelling (Hysh) Skill The Arcane Magic (Light) Talent and at least four spells from the Lore of Light (including any Arcane spells or Elven Arcane spells bought as part of the Lore of Light) At least 10 Advances in the Channelling (Shyish) Skill The Arcane Magic (Death) Talent and at least four spells from the Lore of Death (including any Arcane spells or Elven Arcane spells bought as part of the Lore of Death) At least 10 Advances in the Channelling (Ulgu) Skill\n\nThe Arcane Magic (Shadows) Talent and at least four spells from the Lore of Shadows (including any Arcane spells or Elven Arcane spells bought as part of the Lore of Shadows)"
+  },
+  {
+    "id": "high-elf:reference:81-elven-arcane-spells",
+    "name": "Elven Arcane Spells",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 81,
+    "text": "During their learning, you may learn certain spells that combine certain winds. These Elven Arcane spells may be purchased once you are capable of channelling all the Winds of Magic required to power the spell and once you have purchased all the Arcane Magic (Lore) Talents pertaining to those Winds.\n\nWhen casting an Elven Arcane spell, any Channelling Tests must be made with the Channelling Skill with which the spellcaster is least proficient’ to ‘When Channelling for an Elven Arcane spell, you must make any Challenging Tests with your least proficient Channelling Skill. Furthermore, should any modifiers apply due to the abundance or scarcity of a particular Wind of Magic in a particular circumstance, the least favourable condition is applied.\n\nExample: Hallor, a Student Mage, is preparing to cast the Elven Arcane spell Enchant Plant, which involves a fusion of Ghyran and Chamon. Hallor possesses Channelling (Chamon 70, Ghyran 74). Hallor happens to be standing among the enchanted woods of Avelorn, where Channelling (Ghyran) Tests benefit from +1 SL. However, Chamon is only as abundant there as it is in most places. Hallor must make his Channelling Test against a score of 70 and receives no additional SL\n\nWhen casting Elven Arcane spells, you may choose a Lore Attribute from either of their listed Winds’ Lores. If, for some reason, you do not choose, apply the Lore Attribute ‘of the Lore of the first listed Wind (Ghyran, in the case of Enchant Plant)."
+  },
+  {
+    "id": "high-elf:reference:83-fifth-level-careers",
+    "name": "Fifth Level Careers",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 83,
+    "text": "Certain High Elf spellcasters can enter a fifth level in their Career. These careers are the Mage (page 90), the Smith-priest of Vaul (page 100), the Storm Weaver (page 104), and the Loremaster of Hoeth (page 108).\n\nIn order to complete the fifth level of a Career, you must have 25 Advances in all your Career level’s seven Characteristics and in eight of its available Skills. You must also have at least 1 Talent from your current Career level. Skills and Talents you have gained from advancement prior to entering your current Career may count towards this."
+  },
+  {
+    "id": "high-elf:reference:83-skill-channelling-qhaysh-wp-advanced-unique",
+    "name": "Channelling (Qhaysh) (WP) advanced, unique",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 83,
+    "text": "You have learned how to channel all eight Winds of Magic and combine them into Qhaysh. This Skill is required to learn the High Magic Talent.\n\nA benefit of Qhaysh is that in areas where a particular Wind blows weakly, High Magic may still work, though a drawback is that it is no easier to work in an area where a Wind blows strong. If several Winds are impaired in a particular area, the GM may impose a –1 SL or –2 SL penalty to Channelling Tests using Qhaysh depending on the number of Winds impaired and the severity of the impairment. Equivalent bonuses may be granted where several Winds blow strongly.\n\nYou may never have more Advances in Channelling (Qhaysh) than you do in Channelling (Aqshy), Channelling (Azyr), Channelling (Chamon), Channelling (Ghur), Channelling (Ghyran), Channelling (Hysh), Channelling (Shyish), or Channelling (Ulgu).\n\nNote that some NPC profiles may state that a character has Channelling (Qhaysh) without listing their Channelling scores for other winds. In such cases, the character may be assumed to be able to channel any Wind of Magic, using a number equal to that of their Channelling (Qhaysh).",
+    "aliases": [
+      "Skill: Channelling (Qhaysh) (WP) advanced, unique"
+    ]
+  },
+  {
+    "id": "high-elf:reference:84-casting-high-magic",
+    "name": "Casting High Magic",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 84,
+    "text": "For the most part, High Magic spells are cast using the same rules as Colour Lores, though they offer more Overcasting options than other spells. You can spend Overcasting Success Levels on these effects in addition to increasing Range, Area of Effect, Duration, Targets, or Damage (see WFRP Core Rulebook, page 238, or Winds of Magic, page 23). The High Magic Talent allows you to increase your Overcasting SL for each level in the Talent but take heed: excessive Overcasting with High Magic risks Magical Burnout.\n\nYou cast High Magic spells with the usual verbal requirement, however, material ingredients provide no safety benefits for High Magic spells. Instead, spellcasters inscribe divine runes to mitigate the dangers of spellcasting."
+  },
+  {
+    "id": "high-elf:reference:84-magical-burnout",
+    "name": "Magical Burnout",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 84,
+    "text": "Whilst Elves are powerful spellcasters, even they cannot channel vast quantities of Qhaysh without risking misfortune. Miscasts may occur as a result of casting High Magic spells as normal, and there is also the risk of magical burnout, preventing a mage from accessing the Winds of Magic.\n\nEach time an Elf user of High Magic Overcasts a High Magic spell, compare the total number of SL they spend on Overcasting (including the normal Overcasting options from the WFRP Core Rulebook or Winds of Magic as well as any Overcasting options available for the High Magic spell in question). If the SL spent exceeds the Willpower Bonus of the caster, there is a risk of Magical Burnout. The likelihood of burnout is a % chance equal to the excess number of SL used in Overcasting.\n\nMagical Burnout is rolled for immediately after the spell is cast, so even if Burnout does occur, it does not prevent the spell from taking effect. Magical Burnout prevents all further spellcasting for a number of days equal to the percentile number rolled on the Magical Burnout roll. If the number rolled is a double, Burnout is permanent. You can negate temporary Magical Burnout by spending a Fortune point, and permanent Magical Burnout by spending a Fate point. Magical Burnout does not affect sensory Talents such as Second Sight; it only prevents spellcasting.\n\nExample: Hallor the Mage has a Willpower Bonus of 8. He casts Arcane Unforging and spends a total of 11 SL on Overcasting. He now runs a 3% risk of burnout. After Arcane Unforging is cast, Hallor rolls for Magical Burnout and rolls 02. Hallor loses his magical abilities for two days."
+  },
+  {
+    "id": "high-elf:reference:84-runes-of-the-cadai",
+    "name": "Runes Of The Cadai",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 84,
+    "text": "An Elf spellcaster can enhance High Magic spells and make them safer by inscribing divine runes, which are usually arranged in a circle or mandala and can either be drawn with chalk or inscribed into semi-precious stones. To deploy a rune, a Character must possess the Read/Write Talent and pass a Challenging (+0) Lore (Magic) Test. They must also have a set of stones inscribed with the runes of the Cadai gods, or a writing kit (or equivalent tools). A Cadai rune takes 1 Round to deploy, and a Character may deploy a number of Cadai runes equal to their Willpower Bonus.\n\nOnce Cadai runes are deployed, provided the caster can clearly see the runes and remains within arm’s length of them, they may use each rune to provide one of the following benefits when casting a High Magic spell,\n\nReroll a Channelling Test Reroll a Casting Test Reroll a Miscast result Reroll a Corruption Test Reroll a Magical Burnout roll\n\nIf the caster leaves the area in which they deployed the runes and then later returns to them, they must refocus on them to receive the benefits, which means they must be deployed again."
+  },
+  {
+    "id": "high-elf:reference:85-high-magic-questions-and-answers",
+    "name": "High Magic Questions And Answers",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 85,
+    "text": "Can you use warpstone to boost High Magic as normal?\n\nYes, though bear in mind that the risks associated with warpstone cause its use to be regarded as wantonly stupid and reckless by High Elves, and any mage dabbling with it will make themselves a pariah and may even be hunted down by swordmasters, shadow warriors, or the Cult of the Forbidden Blade.\n\nCan High Magic users wear metal or leather armour?\n\nNormally, casters with the Arcane Magic (Metal) Talent may wear metal armour without penalty; those with the Arcane Magic (Beasts) Talent may wear leather armour without penalty. However, when a caster knows multiple Winds, these exceptions only apply if the caster is solely using the particular Wind of Magic and Lore of Magic that the exception would normally apply to.\n\nSo Hallor, the High Elf Mage, could wear metal armour and be able to cast spells from the Lore of Metal with no penalties. However, if he were to cast a spell from another Lore or an Elven Arcane spell that used Chamon in conjunction with another Wind, he would suffer the normal penalty for wearing armour (-1 SL to all Channelling and Casting Tests for every Armour Point on the location with the most armour).\n\nSpells from the Lore of High Magic are impaired by the wearing of armour like most magic is.\n\nCan Elves get any Arcane Marks from casting High Magic spells?\n\nNo. If an Elf is casting a High Magic spell and causes a Miscast that would result in an Arcane Mark, they suffer 1d10 days of Magical Burnout instead.\n\nAre Qhaysh Power Stones possible?\n\nPotentially, though the creation of one would be an arduous and dangerous process of research and experimentation.\n\nShould the Mage Career get Practical, Standard, and Elaborate Robes like the wizard Careers in Winds of Magic do?\n\nRobes provide a bonus that can be added to any Channelling Tests. Practical Robes confer a bonus of +1 SL, Standard Robes a bonus of +2 SL, and Elaborate Robes a bonus of +3 SL. An Elf Wizard may also wear robes, though such robes will only provide a benefit to a single Wind of Magic, and no single set of robes will help to channel Qhaysh.\n\nDo Elven Enchanted Staffs (Winds of Magic, page 152) all attract multiple Winds, or only ones used by Qhaysh practitioners?\n\nNormally if a spellcaster bears an Enchanted Staff, they reduce the CN of spells from the associated Lore by 1 to a minimum of 0. Such staffs are awarded by institutions such as the Colleges of Magic.\n\nA High Elf Mage who studies at the White Tower of Hoeth receives a staff decorated with the crescent tokens of Lileath, goddess of dreams and visions, when they reach the level of Mage. Such staffs reduce the CN of spells from any Colour Magic Lore and the Lore of High Magic by 1. These are precious artefacts made to exacting processes by priests of Vaul, and if a mage were to lose one, they will not find it easy to earn another."
+  },
+  {
+    "id": "high-elf:reference:86-the-lore-of-high-magic",
+    "name": "The Lore Of High Magic",
+    "category": "rule",
+    "topic": "High Elf creation, Careers and magic",
+    "page": 86,
+    "text": "These spells can only be learned by characters with the High Magic Talent."
+  },
+  {
+    "id": "high-elf:reference:90-mage-printed-career",
+    "name": "Mage — printed Career",
+    "page": 90,
+    "category": "career",
+    "text": "Printed Characteristic scheme: numbers identify the Career level at which the Characteristic becomes available.\n\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 3 | — | — | — | 5 | 4 | 2 | 1 | 1 | 1 |\n\n### Level 1: Novitiate — Silver 1\n\nSkills: Art (Calligraphy or Engraving), Channelling (Any Colour), Charm, Gossip, Heal, Language (Magick), Lore (Magic), Lore (Theology), Perception, Pray\n\nTalents: Aethyric Attunement, Detect Artefact, Petty Magic, Second Sight\n\nTrappings: Chalk or Chisel, Religious Symbol (Isha), Robes\n\n### Level 2: Student Mage — Silver 2\n\nSkills: Channelling (Any Colour), Cool, Intimidate, Language (Any One), Lore (Any One), Research\n\nTalents: Arcane Magic (Any Arcane Lore), Coolheaded, Instinctive Diction, Savvy\n\nTrappings: Grimoire, Religious Symbol (Hoeth)\n\n### Level 3: Mage — Gold 1\n\nSkills: Channelling (Qhaysh), Evaluate, Melee (Polearm), Ride (Horse)\n\nTalents: Blessed by Isha, Dual Wielder, High Magic, Lileath’s Blessing\n\nTrappings: Hand Weapon (Sword), Light Warhorse, Religious Symbol (Lileath), Staff, Wayshard\n\n### Level 4: High Mage — Gold 3\n\nSkills: Lore (Any), Dodge\n\nTalents: Fast Hands, Iron Will, Magical Sense, Menacing\n\nTrappings: Magical Item\n\n### Level 5: Archmage — Gold 6\n\nSkills: Language (Any)\n\nTalents: Combat Aware, Savant (Magic), Sixth Sense, War Wizard\n\nTrappings: Library (Magic), Workshop (Magic)",
+    "topic": "Printed Elf priest and fifth-level Careers",
+    "aliases": [
+      "Mage"
+    ]
+  },
+  {
+    "id": "high-elf:reference:99-priest-careers",
+    "name": "Priest Careers",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 99,
+    "text": "Elven Priest Careers cover levels 3–5. Priests are not listed on the random Career tables and cannot be rolled at Character Creation. Players wishing to enter a Priest Career must complete Mage level 2 (Student Mage) before taking up the mantle of Priest. Characteristic and Talent Advances for Priest level 3 must be completed before progression to level 4 as if they were level 1 prerequisites. Skills may be purchased as normal, and Skills from levels 1 and 2 may be used to fulfil needs for advancement. However, the Earning Skill changes to the one listed in italics for the Level 3 of the Priest Career.\n\nPriests may learn a suite of High Magic spells associated with their traditions, thought to be inspired by the god they represent. These spells are like any other High Magic spell, but they are considered esoteric and befitting those who follow the teachings of a given religious point of view.\n\nA Priest is expected to master the spells associated with their faith before learning spells from the Lore of High Magic listed on pages 86–89. If a Priest does decide to learn other High Magic spells before those associated with their faith, they are regarded as rather eccentric and unserious and will be treated as a Student Mage (Silver 2) for the purposes of Status and Income Endeavours.\n\nOn the other hand, a Mage may learn spells from the lists given for the Smith-priest of Vaul, Storm Weaver, and Loremaster of Hoeth, provided they can find a tutor or be granted access to pertinent reading materials. This will not be easy, as the spells are regarded as befitting those who follow the precepts of their religion. However, it presents a roleplaying challenge in building the right connections rather than a technical barrier to learning the spells\n\nThese restrictions do not count in the case of spells cast from Grimoires, though the secrecy with which these more esoteric High Magic spells are guarded means that few of them are recorded in books."
+  },
+  {
+    "id": "high-elf:reference:99-sacrifices",
+    "name": "Elf priests — Sacrifices",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 99,
+    "text": "Certain spells listed in this chapter require a sacrifice in addition to other casting requirements to access certain Overcasting options. If these sacrifices are not made the Elf spellcaster may only use the normal overcasting options listed in the Warhammer Fantasy Roleplay Core Rulebook or Winds of Magic. Furthermore, the spellcaster may need to be in a certain Yenlui State in order to access Overcasting options, and may have to alter their Yenlui State once the option is chosen.\n\nFurther stipulations pertaining to sacrifices are given in the description of each type of Priest. High Elf Mages using such spells must also perform these sacrifices, though there is extra risk involved as they may not have the opportunity to learn the meditative techniques used to mitigate their effects."
+  },
+  {
+    "id": "high-elf:reference:99-tenets",
+    "name": "Tenets",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 99,
+    "text": "Given the distance between the Elves and their gods, Sin Points and Strictures do not have an effect as they do with Human Priests. However, Elf Priests are still expected to behave with certain priorities in mind to better represent the values associated with their cult and meet the expectations of their fellow Elves.\n\nIf the GM feels that an Elf Priest Character is generally behaves according to the letter and spirit and the tenets of their faith, they may award the following bonuses.\n\nA High Elf Priest Character may choose to adjust the result of any Test that might alter their Yenlui State by +1 to –1 SL. They may benefit from +1 SL to any Fellowship tests they make with other Elves who respect the god they follow."
+  },
+  {
+    "id": "high-elf:reference:100-smith-priest-of-vaul",
+    "name": "Smith-Priest Of Vaul",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 100,
+    "text": "High Elf, Wood Elf\n\nYou seek to combine the power of High Magic, the talents of the smith, and inspiration from the divine example of Vaul to become a peerless crafter of artefacts magical and mundane.\n\nSmith-priests of Vaul forge powerful magical weapons and armour for the Elves. Their skill is rivalled only by Dwarf runesmiths, some of whom may even pay them grudging respect. To emulate their crippled patron god, Smith-priests may blind themselves, and they obtain divine power from this sacrifice."
+  },
+  {
+    "id": "high-elf:reference:100-smith-priest-of-vaul-printed-career",
+    "name": "Smith-priest of Vaul — printed Career",
+    "page": 100,
+    "category": "career",
+    "text": "Printed Characteristic scheme: numbers identify the Career level at which the Characteristic becomes available.\n\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 3 | — | 4 | — | 5 | — | 3 | 3 | 3 | 3 |\n\n### Level 3: Smith-priest — Gold 2\n\nSkills: Art (Engraving), Channelling (Qhaysh), Evaluate, Trade (Smith)\n\nTalents: Artistic, Cadai Meditation, Craftsman (Smith), High Magic\n\nTrappings: Prayer Book, Religious Symbol (Vaul), Trade Tools (Smith)\n\n### Level 4: Master Smith-priest — Gold 4\n\nSkills: Haggle, Intuition\n\nTalents: Master Tradesman (Smith), Mind over Body, Strong Back, Tenacious\n\nTrappings: Blindness, Forge\n\n### Level 5: Arch Forge-priest — Gold 7\n\nSkills: Leadership\n\nTalents: Holy Visions, Magnum Opus, Sixth Sense, Strong-minded\n\nTrappings: Ithilmar Ore, Magical Item, Smith-priest Apprentice",
+    "topic": "Printed Elf priest and fifth-level Careers",
+    "aliases": [
+      "Smith-priest of Vaul"
+    ]
+  },
+  {
+    "id": "high-elf:reference:101-sacrifices",
+    "name": "Vaul — Sacrifices",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 101,
+    "text": "When performing certain spells of Vaul, you must make a sacrifice to benefit from certain Overcasting options. Blindness counts as a permanent sacrifice, so if you are already blind, you may access the Overcasting options but you may not do so until you are blind. You may also sacrifice crafted items to Vaul. These are flammable objects of a minimum 2 GC value that you destroy before commencing Channelling. The sacrifice of an object will count towards the stipulation for 1d10 hours. After this time, if you wish to Overcast the spell, you must sacrifice another object."
+  },
+  {
+    "id": "high-elf:reference:101-talent-cadai-meditation",
+    "name": "Cadai Meditation",
+    "category": "talent",
+    "topic": "Elf priest Careers and magic",
+    "page": 101,
+    "text": "You have learned the basic divine meditation techniques for better achieving a State of Yenlui (Light). Each day during which you meditate for at least an hour and then make an Average (+20) Pray Test. If the Test is successful you can adjust your Yenlui State to Yenlui (Light).",
+    "aliases": [
+      "Talent: Cadai Meditation"
+    ]
+  },
+  {
+    "id": "high-elf:reference:101-talent-mind-over-body",
+    "name": "Mind over Body",
+    "category": "talent",
+    "topic": "Elf priest Careers and magic",
+    "page": 101,
+    "text": "Max: 3 This meditative technique enables an Elf spellcaster to endure physical suffering and even allows them to see after they have been permanently blinded. To make use of this Talent, you must spend no less than twenty minutes in quiet contemplation before making a Challenging (+0) Pray Test. If you pass, you gain the following benefits for 1d10 + SLd10 hours.\n\n1 level: You gain the Painless Creature Trait and do not receive Conditions caused by pain. 2 levels: You gain divine sight. You can see the shapes of objects or creatures in your mind’s eye, but not colours, facial expressions, or fine details, save in crafted objects. You make Trade (Smith) Tests without penalty for blindness, and you are immune to the Blinded Condition, even from magical or divine sources. 3 levels: You can use Resolve to ignore Critical Wound penalties on Extended Tests (such as Crafting Endeavours).",
+    "aliases": [
+      "Talent: Mind over Body"
+    ]
+  },
+  {
+    "id": "high-elf:reference:101-tenets-of-vaul",
+    "name": "Tenets Of Vaul",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 101,
+    "text": "To produce masterworks demands sacrifice. Pieces crafted for enjoyment are merely trinkets. Trust not the eye of the beholder, for it can be pleased by beauty alone. Creative inspiration can be sought anywhere except in Chaos. Defend the forges at all costs. Vaul’s fire must burn eternal. Draw strength from anger, but do not let it guide you. Nothing worthy is created out of spite."
+  },
+  {
+    "id": "high-elf:reference:104-storm-weaver-printed-career",
+    "name": "Storm Weaver — printed Career",
+    "page": 104,
+    "category": "career",
+    "text": "Printed Characteristic scheme: numbers identify the Career level at which the Characteristic becomes available.\n\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 3 | — | — | — | 4 | 5 | 3 | 3 | 3 | 3 |\n\n### Level 3: Mist Mage — Gold 2\n\nSkills: Channelling (Qhaysh), Row, Sail (Any), Swim\n\nTalents: Aethyric Attunement, Cadai Meditation, High Magic, Eye of the Storm\n\nTrappings: Prayer Book, Religious Symbol (Mathlann), Rowboat\n\n### Level 4: Storm Weaver — Gold 5\n\nSkills: Melee (Basic), Navigation\n\nTalents: Fearless (Sea Monsters), Orientation, Sea Legs, Strong Swimmer\n\nTrappings: Sea Charts, Sextant\n\n### Level 5: Caller of the Maelstrom — Gold 7\n\nSkills: Leadership\n\nTalents: Holy Visions, Old Salt, Seasoned Traveller, War Wizard\n\nTrappings: Sailing Ship and Crew, Spyglass",
+    "topic": "Printed Elf priest and fifth-level Careers",
+    "aliases": [
+      "Storm Weaver"
+    ]
+  },
+  {
+    "id": "high-elf:reference:105-sacrifices",
+    "name": "Mathlann — Sacrifices",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 105,
+    "text": "When performing certain High Elf Sea Magic spells, you must make a sacrifice to benefit from certain Overcasting options. Sacrifices are paid immediately when the spell is cast, in the form of gaining Fatigued Conditions and Wounds as your breath joins the storm."
+  },
+  {
+    "id": "high-elf:reference:105-talent-eye-of-the-storm",
+    "name": "Eye of the Storm",
+    "category": "talent",
+    "topic": "Elf priest Careers and magic",
+    "page": 105,
+    "text": "Max: 3 This meditative technique improves the focus and resilience of an Elf spellcaster, and those who fully master it can influence the weather. To make use of this Talent, you must spend no less than twenty minutes in quiet contemplation before making a Challenging (+0) Pray Test. If you pass, you gain the following benefits for 1d10 + SLd10 hours.\n\n1 level: You are immune to any distractions that would normally interrupt Channelling. 2 levels: You recover Fatigued Conditions in half the normal time that has been decided by the GM (WFRP, page 169). In addition, you can ignore penalties to Channelling and Casting Tests from Fatigued Conditions. 3 levels: When rolling on a Weather table (see Sea of Claws, page 106 or Deft Steps Light Fingers, page 114), you may add or subtract 1 from all die rolls.",
+    "aliases": [
+      "Talent: Eye of the Storm"
+    ]
+  },
+  {
+    "id": "high-elf:reference:105-tenets-of-mathlann",
+    "name": "Tenets Of Mathlann",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 105,
+    "text": "Respect the creatures of the sea. Give prayer and sacrifice to Mathlann for his generous bounty. Allow the sea to have its due, for those who anger Mathlann must know his wrath. Never take Mathlann’s grace lightly. Always heed his shrines with prayer and sacrifice. Pray towards the direction of the wind but speak away from it. Bathe in salt water. Scrub the body clean with kelp and beach sand."
+  },
+  {
+    "id": "high-elf:reference:108-loremaster-of-hoeth-printed-career",
+    "name": "Loremaster of Hoeth — printed Career",
+    "page": 108,
+    "category": "career",
+    "text": "Printed Characteristic scheme: numbers identify the Career level at which the Characteristic becomes available.\n\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 3 | — | — | — | 5 | 4 | 3 | 3 | 3 | 3 |\n\n### Level 3: Loremaster — Gold 2\n\nSkills: Channelling (Qhaysh), Language (Any), Lore (Any), Melee (Basic), Pray, Research\n\nTalents: Bookish, Cadai Meditation, High Magic, Sanctuary of the Mind\n\nTrappings: Prayer Book, Religious Symbol (Hoeth), Writing Kit\n\n### Level 4: Grand Loremaster — Gold 5\n\nSkills: Language (Any), Lore (Any)\n\nTalents: Instinctive Diction, Linguistics, Speedreader, Tower of Memories\n\nTrappings: Fine Quality Robes, Rare Books\n\n### Level 5: High Loremaster — Gold 7\n\nSkills: Lore (Any)\n\nTalents: ‘Combat Aware, Magical Sense, Holy Visions, Pure Soul\n\nTrappings: Library, Office",
+    "topic": "Printed Elf priest and fifth-level Careers",
+    "aliases": [
+      "Loremaster of Hoeth"
+    ]
+  },
+  {
+    "id": "high-elf:reference:109-new-talent-sanctuary-of-the-mind",
+    "name": "Sanctuary of the Mind",
+    "category": "talent",
+    "topic": "Elf priest Careers and magic",
+    "page": 109,
+    "text": "Max: 3 Hoeth’s meditative techniques are used by Elf spellcasters to shield their minds from corruption and insanity. To make use of this Talent, you must spend no less than twenty minutes in quiet contemplation before making a Challenging (+0) Pray Test. if you pass, you gain the following benefits for 1d10 + SLd10 hours.\n\n1 level: You are immune to any Corruption points that result from spellcasting. 2 levels: You can add +1 SL to any Research Tests you make. 3 levels: You are exempt from the negative modifiers that result from Yenlui States (see page 47).\n\nPlaying a Priest of Hoeth Loremasters have no priestly duties or strict hierarchy, enabling them to quest abroad for knowledge that cannot be found in their libraries. Even High Loremaster Teclis is seldom found at the White Tower, however the Sapherian order includes many accomplished Loremasters that govern by council in his absence. A Loremaster’s journeys may bring them to Hoeth’s library in the Laurelorn forest, or the High Elven colonies in Lustria or the Southlands.\n\nSocial status and contacts afford Loremasters access to vast information resources and logistical support. Certain challenges simply require casting a spell to communicate with the White Tower. However, Loremasters also bear heavy burdens of responsibility. For every problem that is solved with magic, two more complications usually land on their plates. Players choosing the Loremaster of Hoeth Career should be prepared for embroilment in Asur political intrigues that introduce new enemies regardless of which side they support.",
+    "aliases": [
+      "New Talent: Sanctuary of the Mind"
+    ]
+  },
+  {
+    "id": "high-elf:reference:109-sacrifices",
+    "name": "Hoeth — Sacrifices",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 109,
+    "text": "When performing certain spells of Hoeth, you must make a sacrifice to benefit from certain Overcasting options. Sacrifices come in the form of the deep research and contemplation that it takes to fully comprehend the mysteries of Hoeth. To benefit from the Overcasting options for these spells, you must first pass an Extended Research Test. This Research Test must be made at some point during the week leading up to the spell being performed. If you pass the required Research Test but wait longer than a week before casting the spell, you may make a Very Hard (–30) Research Test on the spot to see if you recall the required information and techniques.\n\nIf you pass the Test, you may access the Overcasting options. If you fail, you may not access the Overcasting options until you make the required sacrifice again.\n\nExtended Research Tests made in a well-stocked spellcaster’s library benefit from +2 SL. Those made with access to the libraries at the White Tower of Hoeth benefit from +5 SL."
+  },
+  {
+    "id": "high-elf:reference:109-tenets-of-hoeth",
+    "name": "Tenets Of Hoeth",
+    "category": "rule",
+    "topic": "Elf priest Careers and magic",
+    "page": 109,
+    "text": "Strive for diversity of academic training in the arts of magic, science, war, and philosophy. Master every discipline studied. Breadth of knowledge is no substitute for depth. No book should be destroyed, for even the darkest tomes hold valuable lore. Maintain purity of mind and body. Share only the knowledge that is needed, not that which is merely desired by the idly curious."
+  },
+  {
+    "id": "high-elf:reference:112-beseeching-atharti",
+    "name": "Beseeching Atharti",
+    "category": "rule",
+    "topic": "Cult obligations and intrigue",
+    "page": 112,
+    "text": "Elves can devote their indulgences to Atharti in hopes of escaping the Dark Prince’s attention. For 24 hours after participating in ritual prayer to Atharti, Elves receive a Challenging (+0) Pray Test to negate any Corruption points gained by association with Slaanesh. However, should this Test fail, the Elf gains an additional number of Corruption points equal to –SL."
+  },
+  {
+    "id": "high-elf:reference:112-dark-deals-with-slaanesh",
+    "name": "Dark Deals with Slaanesh",
+    "category": "rule",
+    "topic": "Cult obligations and intrigue",
+    "page": 112,
+    "text": "Slaanesh is often the first Chaos God to answer the prayers of desperate Elves. Elves who conduct Dark Deals (WFRP, page 182) to reroll Skill Tests pertaining to art, vice, or seduction receive a +2 SL bonus on the reroll. However, the night after making a deal, the Elf will be visited by dreams of Slaanesh, which counts as Minor Exposure to Corruption, requiring a Challenging (+0) Cool Test to resist gaining another Corruption point."
+  },
+  {
+    "id": "high-elf:reference:114-beseeching-khaine",
+    "name": "Beseeching Khaine",
+    "category": "rule",
+    "topic": "Cult obligations and intrigue",
+    "page": 114,
+    "text": "The Kingdom of Cothique is especially vulnerable to Khaine’s influence, due to its long history of suffering Norscan raids and its proximity to the Blighted Isle. When Malerion invaded Ulthuan during the Great Chaos Incursion, using the Daemon N’Kari to transport his Dark Elf armies directly to the heart of Avelorn, Morathi simultaneously attacked Cothique and Chrace at the head of a Chaos marauder army. Morathi’s Human followers sacked most of Cothique before the Witch Queen herself fled back to Naggaroth.\n\nFrom the safety of her sanctum, Morathi watched the Battle of Finuval Plain through an enchanted mirror. She witnessed the High Elf champion Tyrion, Dragon of Cothique, bedecked in Aenarion’s armour, and she inexplicably became infatuated with him. Two centuries later, the battle-hardened Cothiquians have not forgotten the invasion, but many of them blame Human raiders instead of Morathi, and some even attribute their survival to Khaine. Morathi also has not forgotten Tyrion and remains fixated on his home kingdom, planning to spread the influence of the pleasure cults there."
+  },
+  {
+    "id": "high-elf:reference:118-instigating-intrigue",
+    "name": "Instigating Intrigue",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 118,
+    "text": "Four things are required for an Intrigue to commence.\n\nAn Intriguer: The party seeking to advance the Intrigue. They can be a single person or a group of people conspiring to advance the Intrigue.\n\nA Target: An NPC the Intriguer hopes to influence. A Target is usually a single prominent person, such as the Prince of Tiranoc or the admiral of Cothique’s navy.\n\nAgenda: The position or course of action the Intriguer wishes the Target to support.\n\nTactic: The method used to influence the Target. This Tactic will result in a Skill Test, usually Bribery, Charm, Entertain (Acting or Storytelling), Gossip, Intimidate, or Leadership."
+  },
+  {
+    "id": "high-elf:reference:118-intriguing-options",
+    "name": "Intriguing Options",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 118,
+    "text": "The following options might affect the development of an intrigue.\n\nSocial Arenas: Places, events, and circumstances within which a target may be particularly susceptible to certain tactics by the Intriguers.\n\nPriorities: Existing goals of the Target that might complicate an Agenda.\n\nLeverage: A Target’s vulnerabilities that an Intriguer might exploit."
+  },
+  {
+    "id": "high-elf:reference:118-players-and-intrigues",
+    "name": "Players And Intrigues",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 118,
+    "text": "An Intrigue is an attempt by a Character to persuade another to support a position or course of action without alerting the Target to their manipulations. Intriguers do not make clear and open suggestions as to new policies or plans. Instead, they insinuate, plant ideas, lend tacit support or opposition to the notions of others, or even stage-manage events to help illustrate the wisdom of aligning with their hidden agenda.\n\nSkilled Intriguers know that the best way to get a Target to change their way of thinking is to align their goals with what the Target already wants and have the Target believe that the change of mind was their own idea all along.\n\nThe rules in this chapter are intended to assist players and GMs in devising a general structure for how an Intrigue might progress or fail. Whilst the examples given involve the intriguing of High Elves, and whilst they may indulge in intrigues on a grander scale than most other societies, these rules could apply to situations far from Ulthuan, and without the involvement of Elves.\n\nSome adventures and scenarios may well present a particular Intrigue, with its own resolution mechanics, such as Power Behind the Throne. In such cases, the rules given for Intrigues in this chapter should not be used but may help provide inspiration.\n\nNor should the rules in this chapter dictate how events pan out if players perform some inspired argumentation and appropriate roleplaying or if the GM feels that it would not be congruent with the personality of a particular NPC to be vulnerable to a given Intrigue. As noted in the WFRP Core Rulebook, the final decision on how to apply rules is left to the GM."
+  },
+  {
+    "id": "high-elf:reference:118-the-process-of-an-intrigue",
+    "name": "The Process of an Intrigue",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 118,
+    "text": "An Intrigue is carried out as follows:\n\nStep 1 — Decide the Target and Agenda. Step 2 — The Complexity of Intrigue: GM assigns as a Minor, Moderate, or Major Intrigue. Step 3 — The Tactics of Persuasion: Intriguer decides on a Tactic, GM decides if optional factors apply. Step 4 — The Persuasion Test: Determines if Intrigue succeeds, fails, or requires further effort. Step 5 — Developing Intrigue: If the Intrigue continues, the GM should check for any complications before the process returns to Step 3."
+  },
+  {
+    "id": "high-elf:reference:119-deciding-existing-agendas",
+    "name": "Deciding Existing Agendas",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 119,
+    "text": "Many important NPCs in Warhammer Fantasy Roleplay have listed Short-term Ambitions, Long-term Ambitions, and Motivations. For other NPCs, the GM can decide their values and sympathies using the character’s background information.\n\nDuring an intrigue, the Intriguers try to get their Target to adopt a new Agenda. If they fail in their endeavour, the Target may not give the matter further thought or remain unaware of the Agenda.\n\nHowever, even if they are successful, the Target’s commitment to the cause may vary:\n\nFleeting Interest: The Target agrees with the Agenda but does not adopt it with great enthusiasm. The Agenda becomes a Short-term Ambition for the Target. The Target will work to fulfil the Agenda, but if it is not achieved within a matter of months, they will likely adopt a new Short-term Ambition or, if an Elf, experience a Dream that takes its place.\n\nSolid Commitment: The Target adopts the Agenda as a Long-term Ambition. The Target will work to fulfil the Agenda for a year or so, but after that time, they may adopt a new Long-term Ambition or, if an Elf, develop an Obsession instead.\n\nLasting Priority: The Target adopts the Agenda wholeheartedly. It becomes a Motivation or an Obsession. This could persist indefinitely as long as circumstances allow."
+  },
+  {
+    "id": "high-elf:reference:119-step-1-decide-the-agenda",
+    "name": "Step 1 — Decide the Agenda",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 119,
+    "text": "The Intriguer decides who they want to influence (the Target) and what they want them to support (the Agenda)."
+  },
+  {
+    "id": "high-elf:reference:119-step-2-the-complexity-of-intrigue",
+    "name": "Step 2 — The Complexity of Intrigue",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 119,
+    "text": "Sometimes Intrigues are simple challenges. An Intriguer who wants to see more done about pirates operating off the coast of Yvresse may merely need to say ‘someone ought to do something about those Norse reavers’ within earshot of the Warden of Yvresse to succeed. On the other hand, influencing the phoenix king to support a new trading portfolio may require several carefully planned interventions.\n\nMinor Challenge: A Minor Challenge is one that is easy to resolve. Either it involves a small shift in thinking on behalf of the Target, clear and achievable goals, or an obvious chain of command.\n\nExamples: An Elven prince who already hates the Dark Elves being influenced to support a new war effort. A high-ranking officer in the army suggesting to a naval captain to commission a particular Storm weaver to serve on their flagship.\n\nModerate Challenge: A Moderate Challenge involves a degree of complexity and ambiguity. Maybe the Agenda has several moving parts or rules of protocol that oblige the Intriguer to tread carefully around the Target.\n\nExamples: A low-ranking officer in the army is trying to persuade a prince to consider promoting him to general. An envoy to Altdorf is hoping to promote increased investment in artillery made in Nuln in the belief that it will slow down trade with the Dwarfs of Karak Norn.\n\nMajor Challenge: These are ambitious, subtle, and complicated plots that are only likely to succeed if time and care are invested in them.\n\nExamples: A High Elf prince hopes to arrange the marriage of two young members of highborn families who share a history of bitter rivalry. A covert shadow warrior hopes to get a suspected member of a cult of pleasure to reveal their activities and lead them to the cult’s meeting place."
+  },
+  {
+    "id": "high-elf:reference:120-step-3-the-tactics-of-persuasion",
+    "name": "Step 3 — The Tactics of Persuasion",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": "120–121",
+    "text": "When the Intriguer has the chance to exercise their influence, a Skill Test called a Persuasion Test is required to see how effective they have been. The most obvious choices to use for Persuasion Tests are listed here.\n\nBribery: Bribery is considered an unsophisticated tool of intrigue as those who adopt a new position for gain are more interested in the benefit than the position. On the other hand, Targets do not like to admit to venality, so they may back their position with sincerity even if it was initially adopted for profit.\n\nCharm: The most effective tool of subtle persuasion. Skilled diplomats often achieve complex feats of intrigue without arousing suspicion due to their fine manners, apparent personal warmth, and expertly veiled double-talk.\n\nEntertain (Acting or Storytelling): A creative Intriguer may stage a suitable demonstration that illustrates the wisdom of adopting their Agenda. This could be anything from sponsoring the performance of a play with a politically loaded message to spinning a simple tall story.\n\nGossip: Rather than illustrate an Agenda to the Target directly, an Intriguer may hope to spread it about by talking to those who talk to the Target or turning it into a topic of some sensation. This is not a reliable tool, as the tale may well change in the telling.\n\nIntimidate: Intimidation usually involves a direct threat of force to inspire fear in people. In the context of intrigue it is an ineffective tool, but can be used to imply that dire consequences may occur if an Agenda is ignored. When using Intimidate to further an Intrigue, base it on Fellowship rather than Strength.\n\nLeadership: An Intriguer may present themselves as someone who knows how to make decisions and inspire their followers. They may talk of military exploits, religious teachings, or the management of a grand project and, in doing so, illustrate the need to consider their Agenda.\n\nPertinence of Tactic The GM should consider what approaches are likely to impress the Target. Charm is a fairly safe approach in most circumstances. Other approaches may fail to impress a Target or even annoy them. The GM should feel free to impose penalties on any Persuasion Test unless the Intriguer has researched their target, made appropriate preparations, or defaulted to employing Charm.\n\nExercising Leverage Targets can have vulnerabilities that make them more susceptible to a particular Tactic. The Intriguer may outrank the Target, possess knowledge that the Target is susceptible to a certain Tactic, or have information with which the Target could be blackmailed. Leverage may be so massive that it would compromise the Target to the extent that they would agree immediately to adopt the Agenda, but because Intrigues are carried out under the assumption of plausible deniability, it would not do for an Intriguer to admit they know about a form of Leverage. This would blow their cover. But if they know about and can choose a tactic to suit, then the GM may provide additional SL to the Persuasion Test."
+  },
+  {
+    "id": "high-elf:reference:121-common-forms-of-leverage",
+    "name": "Common Forms Of Leverage",
+    "category": "table",
+    "topic": "Intrigue",
+    "page": "121–122",
+    "text": "| 1d100 | Skill Test Leverage Factors Bonus |  |  |\n| --- | --- | --- | --- |\n| 01 to 03 | Bribery | Target owes debts | +1 SL |\n| 04 to 10 | Charm | Target seeking to prove themself open and friendly | +1 SL |\n| 11 to 12 | Entertain (Acting or Storytelling) | Target enjoys spotting allegories in works of fiction | +1 SL |\n| 13 to 17 | Gossip | Target likes to speak rather than listen | +1 SL |\n| 18 to 20 | Intimidate | Target unsure of how to handle conflict | +1 SL |\n| 21 to 24 | Leadership | Target eager to support the efforts of leaders | +1 SL |\n| 25 to 27 | Bribery | Target is facing reduced circumstances | +1 SL |\n| 28 to 34 | Charm | Target is open to flattery | +1 SL |\n| 35 to 36 | Entertain (Acting or Storytelling) | Target looking for distraction | +1 SL |\n| 37 to 41 | Gossip | Target seeks to keep abreast of the latest fashions | +1 SL |\n| 41 to 43 | Intimidate | Target is physically cowardly | +1 SL |\n| 44 to 47 | Leadership | Target looking for inspiration | +1 SL |\n| 48 to 50 | Bribery | Target seeking to back a venture | +2 SL |\n| 51 to 57 | Charm | Target looking for a friend | +2 SL |\n| 58 to 59 | Entertain (Acting or Storytelling) | Target is open to novel experiences | +2 SL |\n| 60 to 64 | Gossip | Target seeks the approval of others or to find out if others disapprove of them | +2 SL |\n| 65 to 67 | Intimidate | Target hiding shameful secrets | +2 SL |\n| 68 to 71 | Leadership | Target looking for someone to emulate | +2 SL |\n| 72 to 74 | Bribery | Target is greedy for wealth | +3 SL |\n| 75 to 81 | Charm | Target wishes to be reassured that they are desirable | +3 SL |\n| 82 to 83 | Entertain (Acting or Storytelling) | Target seeking to prove themself cultured and open-minded | +3 SL |\n| 84 to 88 | Gossip | Target enjoys gossip for its own sake | +3 SL |\n| 89 to 91 | Intimidate | Target in fear for friends or family | +3 SL |\n| 92 to 96 | Leadership | Target lost in life with no calling of their own | +3 SL |\n| 97 to 00 | Charm | Target is as vain as Atharti | +4 SL |\n\nTarget is as vain as Atharti The GM should consider the personality and circumstances of a Target before deciding what forms of Leverage may be suitable for them. If they don’t have clear ideas of their own they can roll or choose results from the following table.\n\nIf a Character spends some time observing a Target before making a Persuasion Test, they can make a Hard (–20) Combined Intuition/Perception Test or a Difficult (-10) Gossip Test to figure out what Leverage might work against the Target.\n\nBackfires and Unexpected Reactions There is a small chance that when Leverage is brought to bear on a Target that they behave in an unexpected manner. A Target who is confident that they can attract admirers and is, indeed, a little tired of suitors may be harder to Charm, one who is aggressive and seeks conflict may be harder to Intimidate, and so on.\n\nThe GM may choose or randomly generate certain types of Leverage that the Target is irritated by or bored by rather than vulnerable to. In this case the associated tactic grants negative SL to Persuasion Tests rather than positive SL.\n\nThere may also be a small chance that a Target is in the wrong sort of mood at the time of the Persuasion Test and that Leverage that might normally arouse their interest instead arouses their ire. In this case a +1 SL would become a -1 SL even if the Target would normally respond well to the Leverage."
+  },
+  {
+    "id": "high-elf:reference:122-discovering-leverage-table",
+    "name": "Discovering Leverage Table",
+    "category": "table",
+    "topic": "Intrigue",
+    "page": "122–123",
+    "text": "|  |  |  |\n| --- | --- | --- |\n| SL | Perception/Intuition Results | Gossip Results |\n| +6 or more | Intriguer gets a good idea of what Leverage Factors apply and the degree to which they apply. No unexpected reaction. | Intriguer gets a good idea of what Leverage Factors apply and the degree to which they apply. No unexpected reaction. |\n| +4 to +5 | Intriguer gets a good idea of what Leverage Factors apply and the degree to which they apply. 5% chance of unexpected reaction. | Intriguer gets a good idea of what Leverage Factors apply and the degree to which they apply. 5% chance of unexpected reaction. |\n| +2 to +3 | Intriguer gets a good idea of what Leverage Factors apply. 10% chance of unexpected reaction. | Intriguer gets a good idea of what Leverage Factors apply. 10% chance of unexpected reaction. |\n| +0 to +1 | Intriguer gets a hint of what Leverage Factors apply. 15% chance of unexpected reaction. | Intriguer gets a hint of what Leverage Factors apply. 15% chance of unexpected reaction. |\n| -0 to -3 | No effect. | No effect. |\n| -4 or less | Target guesses that Intriguer is trying to manipulate them — the Intrigue ends in failure. | Target hears that Intriguer is trying to manipulate them — the Intrigue ends in failure. |\n\nExample: Daendra Stillwater is Lothern’s chief diplomat to Altdorf, and an occasional attendee to meetings of the Emperor’s Privy and State Councils. Whilst she is normally known to listen rather than talk, when she hears Kurt Helborg voice the opinion that funding for the Colleges of Magic be cut in order to spend more on the Imperial School of Engineers, she feels she must dissuade him. Knowing that Helborg is a military man and patriot, she plans to mention a siege during which the High Elf General Mentheus lacked the time and position to deploy artillery but tore down the enemy fortress with the help of his mages.\n\nShe is perceptive and intuitive with plenty of opportunities to observe Helborg at court. Daendra scores +4 SL in her attempt to guess an appropriate Leverage to employ. She intuits that he respects other military commanders and their clever ploys. This could be represented by the Target looking for inspiration Leverage, so if Daendra were to use this Tactic, she would benefit from +1 to a Leadership-based Persuasion Test.\n\nThere is a 5% chance that something causes Helborg to react badly to this ploy. Perhaps he has recently heard that Mentheus’ tactics led to his death and is currently pondering over whether this historical Elf general was a rash fool. If Daendra decides to employ the Tactic, she runs the risk that it might impose a -1 SL penalty despite her keen intuitions.\n\nSocial Arenas A Social Arena is a place or situation in which it might be easier or harder to pursue Intrigue or within which a particular Tactic may be more or less effective. During a religious ceremony or in the public areas of a government building, a Target may feel pressure to behave with conspicuous honour or ensure that they do not misspeak.\n\nExample: Daendra Stillwater knows that should she wish to suggest that the Empire do more to confront the forces of Chaos, she might do so in the weeks leading up to Geheimnisnacht, when Humans most fear Daemons and witches. She also knows that were she to voice criticism of the crude politicking of Dwarf ambassadors at court, it might be best to avoid doing so during midsummer or on a Festag, when the Humans commemorate Sigmar, whose alliance with the Dwarfs they so regrettably revere. She would certainly avoid broaching such opinions within the halls of Altdorf ’s Grand Cathedral, where Sigmar is worshipped with great zeal.\n\nSuggesting to Humans of the Empire that they do more to defy Chaos in the days before Geheimnisnacht: +1 SL. Suggesting to the Humans of the Empire that they rethink their ties with the Dwarfs on a Holy Day of Sigmar: -1 SL. Doing so within the Grand Cathedral of Sigmar: -2 SL."
+  },
+  {
+    "id": "high-elf:reference:123-intrigue-endeavour",
+    "name": "Intrigue Endeavour",
+    "category": "endeavour",
+    "topic": "Intrigue",
+    "page": 123,
+    "text": "An Intrigue can be developed during a period of downtime using an Intrigue Endeavour. This is worked out exactly as it would be in the course of normal game time. The Intriguer may decide on targets and Agendas as normal. When it comes to Leverage, the GM may decide that the opportunity to make Intuition Tests is not provided unless a particular social event is occurring during the period of downtime at which the Intriguer would have time to assess the Target. The GM may decide that no Social Arenas apply in the case of an Intrigue Endeavour unless it is predictable that a Target will attend certain places or honour certain celebrations. For example, if the Target is a well-respected priest of Asuryan who resides in Lothern, it is reasonable to assume they can be encountered at Lothern’s shrine of Asuryan during a downtime period. Persuasion Tests and Complications occur as normal."
+  },
+  {
+    "id": "high-elf:reference:123-step-4-the-persuasion-test",
+    "name": "Step 4 — The Persuasion Test",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 123,
+    "text": "Once the Intriguer has selected their Tactic, they must take a Test to see if the Intrigue develops.\n\nHow often may a Persuasion Test be taken? A Persuasion Test can made under four different circumstances:\n\nAs part of the Intrigue Endeavour As a result of certain Events During normal game time, if the GM feels that the Intriguer Character has had adequate opportunity to advance their Intrigue given the circumstances (this may be the case if the Intriguer is an NPC, or if a player carrying out an Intrigue acts in such a way to advance it without announcing that they are doing so) During a game, if a player controls an Intriguer Character and announces that they are trying to actively influence an available Target\n\nNormally, only one Persuasion Test can be made during a 48-hour period, as Targets do not make their mind up regarding an Intrigue without thinking it over and coming to their own decisions. During important social events or tumultuous times, the GM may decide that Persuasion Tests can be made more regularly.\n\nTaking the Test If a Persuasion Test is carried out in normal game time, it would be best for the GM to wait until the end of a given event or encounter in which the Intriguer is interacting with the Target, so that all their speech and action can be considered before taking the Test.\n\nWhen the GM finds it appropriate the Intriguer should take the Test, modified by any Leverage, Social Arenas, or other factors the GM thinks appropriate to apply.\n\nTargets may be manipulated, but they are not necessarily stupid or whimsical. A Target only adopts an Agenda if it is congruent with their personality. A High Elf prince who is generally opposed to the Dark Elves in principle may back a significant new war effort against Naggaroth. However, were that prince to be privately sympathetic with Malerion’s cause, he might well pay lip service to such a war effort but would never adopt it, no matter how clever an Intriguer may be."
+  },
+  {
+    "id": "high-elf:reference:124-intrigue-development-table",
+    "name": "Intrigue Development Table",
+    "category": "table",
+    "topic": "Intrigue",
+    "page": 124,
+    "text": "|  |  |  |  |\n| --- | --- | --- | --- |\n| SL | Minor Challenge | Moderate Challenge | Major Challenge |\n| +6 or more | The Target adopts the Agenda as a Lasting Priority. | The Target adopts the Agenda as a Fleeting Interest. From now on the Intrigue is treated as a Minor Challenge. | Target is sympathetic to the Agenda, and voices support for it when others mention it, but does not adopt it. From now on, the Intrigue is treated as a Moderate Challenge. |\n| +4 to +5 | The Target adopts the Agenda as a Solid Commitment. | The Target is sympathetic to the Agenda, and voices support for it, when others mention it but does not adopt it. From now on, the Intrigue is treated as a Minor Challenge. | From now on the Intrigue is treated as a Moderate Challenge. |\n| +2 to +3 | The Target adopts the Agenda as a Fleeting Interest. | From now on, the Intrigue is treated as a Minor Challenge. | From now on, the Intrigue is treated as a Moderate Challenge. |\n| +0 to +1 | The Target is sympathetic to the Agenda, and voices support for it when others mention it but does not adopt it. | From now on, the Intrigue is treated as a Minor Challenge. | The Target considers the issue without coming to a conclusion. Future Persuasion Tests benefit from +1 SL. |\n| -0 to -1 | The Target is unaffected. | The Target is unaffected. | The Target is unaffected. |\n| -2 to -3 | From now on, the Intrigue becomes a Moderate Challenge. | From now on, the Intrigue becomes a Major Challenge. | The Target realises that the Intriguer is trying to manipulate them, and to what end. |\n| -4 to -5 | From now on, the Intrigue becomes a Major Challenge. | The Target realises that the Intriguer is trying to manipulate them, and to what end. | The Target realises that the Intriguer is trying to manipulate them, and to what end. |\n| -6 or less | The Target realises that the Intriguer is trying to manipulate them, and to what end. | The Target realises that the Intriguer is trying to manipulate them, and to what end. | The Target realises that the Intriguer is trying to manipulate them, and to what end. |\n\nOf course, given that the Intriguer is trying to make their part in the process plausibly deniable, they will not be able to tell right away if Target has adopted their Agenda or to what degree. If the Intriguer wishes to know in"
+  },
+  {
+    "id": "high-elf:reference:124-target-suspects-table",
+    "name": "Target Suspects Table",
+    "category": "table",
+    "topic": "Intrigue",
+    "page": 124,
+    "text": "|  |  |\n| --- | --- |\n| SL | Result |\n| +4 or more | Intriguer can intuit how the Target feels about the Agenda, how wholeheartedly they have adopted it, and whether the Intrigue can be concluded. |\n| +0 to +3 | Intriguer can intuit whether or not the Target is feeling well-disposed towards the Agenda. |\n| -0 to -3 | Intriguer intuits nothing. |\n| -4 or less | Intriguer intuits nothing and the Target can intuit that they are up to something. |\n\nthe moment whether their efforts are successful they may observe the target’s reactions, but this does run the risk of arousing the Target’s suspicions. This is worked out through an Opposed Intuition Test."
+  },
+  {
+    "id": "high-elf:reference:125-is-the-intrigue-concluded",
+    "name": "Is The Intrigue Concluded?",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 125,
+    "text": "How the Intrigue develops depends partly on the success of the Persuasion Test and whether or not the Target realizes they are being manipulated.\n\nIf the Target comes to adopt the Agenda, then their behaviour over the coming weeks will change as they pursue the Agenda with whatever urgency and resources they are willing to devote to it.\n\nIf the Target is aware that the Intriguer is trying to manipulate them, it is up to them how to respond.\n\nIn diplomatic circles, few take attempts to manipulate them personally unless embarrassing or harmful forms of Leverage were involved. In such cases, the Target will likely view the Intriguer as an enemy and seek to see them punished. Otherwise, the worst that is likely to happen to an Intriguer is that they gain a bad reputation for being a clumsy player of foolish games.\n\nIf the Intriguer is a Courtier, or acting as an envoy or ambassador, they will likely find that their reputation suffers, and they may struggle to find continued employment. A Courtier known to have engaged in Intrigues at court or with members of the nobility as a Target may no longer make Income Endeavours until they have regained the respect of their peers.\n\nIt may suit the Target to pretend not to know they are being manipulated, hoping to learn more about the Intriguer’s own motives before taking action. They may even overlook the actions of the Intriguer if they have reason to sympathise with the Agenda. In such cases the Intrigue carries on as if it were developing rather than concluded, though the Target is likely to devote efforts into discovering what the Intriguer is up to."
+  },
+  {
+    "id": "high-elf:reference:125-step-5-developing-the-intrigue",
+    "name": "Step 5 — Developing the Intrigue",
+    "category": "rule",
+    "topic": "Intrigue",
+    "page": 125,
+    "text": "If the Intriguer wishes to continue the Intrigue, unforeseen complications may arise. These are determined by the GM after the Persuasion Test is resolved, and the GM can decide if the Intriguer is aware of complications. If they are ignorant of important changes in circumstance and merely adopt the same tactic again, the Difficulty of the Persuasion Test should increase."
+  }
+]

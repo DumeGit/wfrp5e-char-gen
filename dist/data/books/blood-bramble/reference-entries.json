@@ -1,0 +1,67 @@
+[
+  {
+    "id": "blood-bramble:reference:6-the-lore-of-hedgecraft",
+    "name": "The Lore of Hedgecraft",
+    "category": "rule",
+    "topic": "Witchcraft, Hedgecraft and spirit bargains",
+    "page": 6,
+    "text": "The Hedgefolk believe their Lore is a gift from the Gods, referring to their spellcasters as the Blessed Few. Due to their ancient traditions and ingrained belief, their spells cannot be cast without ingredients, which are an integral part of their spellcasting process.\n\nFortunately, the ingredients they use are easily found on the fringes of settlements and are usually herbs or plants. You receive 1 + SL ingredients on a successful foraging roll, using Lore (Herbalism), as described under Gathering Food and Herbs on page 127, or you can buy them for 5 brass pennies."
+  },
+  {
+    "id": "blood-bramble:reference:11-bruck-who-babbles",
+    "name": "Brück Who Babbles",
+    "page": 11,
+    "category": "rule",
+    "text": "Tasks\n\nBrück can parley on the Hedgewitch’s behalf with minor river gods such as Grandfather Reik, or Bögenauer (for more details, see WFRP, page 203). She may locate specific boats on any body of water. If well compensated, she can even ensure someone drowns the next time they enter a body of water.\n\nBoons\n\nBrück’s demands always start out small, but become more onerous with future summonings. At first she requests that a morsel of food or a silver coin be tossed into a flowing stream. Eventually her demands will increase, until she finally requests that a living person she has taken a dislike to be brought to her stream in the Middle Mountains and drowned there. Once she has demanded this, she will hound the Hedgewise until her request is granted, even if her services are declined.",
+    "topic": "Pact Keepers"
+  },
+  {
+    "id": "blood-bramble:reference:11-morock-the-bonetaker",
+    "name": "Morock the Bonetaker",
+    "page": 11,
+    "category": "rule",
+    "text": "Tasks\n\nMorock may curse others to break a bone, or become more liable to be injured generally. He knows many other death spirits and can interrogate them with questions. He has no control of the spirits of the dead, but can sense their motivations and communicate with them easily.\n\nBoons\n\nMorock’s demands are always for a bone of some sort, carefully removed and cleaned. For simple requests, he may request the bone of a rat or sheep. For complicated or onerous tasks, he will request a limb bone to be brought to him while its original owner still lives.",
+    "topic": "Pact Keepers"
+  },
+  {
+    "id": "blood-bramble:reference:11-the-shrike-of-unterdell",
+    "name": "The Shrike of Unterdell",
+    "page": 11,
+    "category": "rule",
+    "text": "Tasks\n\nThe Shrike excels at sneaking into places, shadowing her target, and gathering information about them. She can inflict Critical Wounds on foes while they sleep by stabbing them with her spear. She can kill, but despite her bravado, she doesn’t like to do so, and will always demand a heavy price.\n\nBoons\n\nThe Shrike’s demands will usually involve the letting of blood, though if pressed, she will accept animal blood in most cases. The only exception to this is requests for her to kill someone, in which case she will demand the life of the Hedgewise as well. She does this to discourage the request, but will see it through in the unlikely case her demand is met.",
+    "topic": "Pact Keepers"
+  },
+  {
+    "id": "blood-bramble:reference:17-nameless-summons-table",
+    "name": "Nameless Summons Table",
+    "category": "table",
+    "topic": "Witchcraft, Hedgecraft and spirit bargains",
+    "page": 17,
+    "text": "| Result | Entity | Attitude | Suitable Gift |\n| --- | --- | --- | --- |\n| –5 or worse | A greater daemon’s forelimb, which grasps you and drags you into the realm it calls home. | Hostile | Your flesh, blood, and soul. |\n| –4 to –0 | A Lesser Daemon, see WFRP, page 256) or a powerful spirit such as Cairn Wraith or a Tomb Banshee (WFRP, page 329–330) | Hostile | The immediate sacrifice of 1d10 living, sentient creatures. |\n| +0 to +4 | A Lesser Daemon or powerful spirit, as above. | Neutral | The sacrifice of a single living, sentient creature. |\n| +5 to +9 | A Lesser Daemon or powerful spirit, as above. | Favourable | The promise of a sacrifice or great service in the future. |\n| +10 or better | A Greater Daemon with an interest in speaking with you rather than killing you outright. | Neutral if their demands are met, Hostile if not. | A great service in the future, such as establishing a cult in their name, and the promise of your essence at the moment of your death. |\n\nThis spell does not expire while the entity remains inside of the space you have prepared, which is a circle of up to Willpower Bonus Yards in width. If they leave this space, the duration becomes up to entity’s Willpower Bonus Rounds (minimum 1), after which time the entity returns from whence it came.",
+    "notes": "The printed table has overlapping −0 and +0 outcomes; no correction is inferred."
+  },
+  {
+    "id": "blood-bramble:reference:19-profile-old-mar-of-deisdorf-hedge-master-brass-3",
+    "name": "Old Mar Of Deisdorf Hedge Master (Brass 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 19,
+    "text": "OLD MAR OF DEISDORF HEDGE MASTER (BRASS 3)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 28 | 25 | 52 | 41 | 31 | 25 | 56 | 61 | 42 | 18 |\n\nTraits: Weapon (Dagger) +6\n\nSkills: Cool 76, Endurance 67, Gossip, 57 Intuition 56, Language (Magick) 71, Lore (Deisdorf 76, Folklore 71, Herbs 61, Vampires 46), Outdoorf Survival 51, Perception 51, Trade (Herbalist) 45\n\nTalents: Arcane Magic (Hedgecraft), Fast Hands, Petty Magic, Read/Write, Rover, Sixth Sense\n\nTrappings: Good Quality Walking Boots, Poor Quality Clothing, Almanac Fulll of Scrawled Spells, Assortment of Charms and Ingredients, 8 Silver Schillings\n\nSpells (Petty Magick): Drop, Light, Protection from Rain\n\nSpells (Lore of Hedgecraft): Badwill, Bonesetter, Cleanslate, Fertilise, Fetterfetch, Geistbane, Kindle, Nepenthe, Onerion, Part the Branches, Stout Spirit, Tankraft, Woecharm, Godspakt"
+  },
+  {
+    "id": "blood-bramble:reference:20-profile-toll-jagerfund-witch-hunter-silver-3",
+    "name": "Toll Jagerfund Witch Hunter (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 20,
+    "text": "TOLL JAGERFUND WITCH HUNTER (SILVER 3)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 56 | 41 | 51 | 38 | 39 | 43 | 40 | 38 | 39 | 25 | 14 |\n\nTraits: Weapon (Sword) +9, Ranged (Crossbow Pistol) +7 (10)\n\nSkills: Charm 35, Consume Alcohol 48, Heal 50, Intimidate 61, Intuition 59, Lore (Torture) 48, Melee (Basic 66, Brawling 66), Perception 49, Ranged (Crossbow) 51\n\nTalents: Doomed (By Thy Own Hand and the Raven’s Eye Thou Shalt Be Undone), Coolheaded, Read/Write, Resolute, Magical Sense, Marksman, Shadow\n\nTrappings: Hand Weapon (Sword), Long Coat and Travelling Clothes, Crossbow Pistol and 12 bolts, 1 GC"
+  },
+  {
+    "id": "blood-bramble:reference:21-profile-marius-childers-witch-former-merchant-silver-3",
+    "name": "Marius Childers Witch, Former Merchant (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 21,
+    "text": "MARIUS CHILDERS WITCH, FORMER MERCHANT (SILVER 3)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 41 | 29 | 36 | 41 | 28 | 33 | 35 | 47 | 39 | 38 | 14 |\n\nTraits: Weapon (Sword) +7\n\nSkills: Animal Care 57, Bribery 48, Channelling (Dhar) 59, Charm 48, Cool 49, Consume Alcohol 51, Dodge 43, Drive 43, Endurance 51, Gamble 48, Gossip 48, Haggle 48, Intimidate 38, Language (Magick) 57, Sleight of Hand 45, Stealth (Rural) 43\n\nTalents: Arcane Magic (Witchery), Attractive 2, Blather, Briber, Menacing, Petty Magic, Read/Write\n\nTrappings: Chalk, Hand Weapon (Sword), Herbs and other Ingredients, 3 GC 5/6 and access to 50 GC more given a day.\n\nSpells (Petty Magick): Shock, Warning\n\nSpells (Arcane): Aethyric Armour, Entangle, Mundane Aura, Terrifying, Ward\n\nSpells (Lore of Witchcraft): Banishment of Böl, Curse of Ill-Fortune, Fatetheif, Nameless Summons"
+  }
+]

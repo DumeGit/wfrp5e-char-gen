@@ -1,6 +1,7 @@
 import { assembleBooks } from "./books.mjs";
 import { buildSearchIndex, normalizeSearch } from "./book-search.mjs";
 import { legacySources } from "./legacy.mjs";
+import { validateReferenceEntry } from "./reference-entries.mjs";
 
 // Build time only: each pack is read in its own dependency context. Character
 // selections and cross-book withdrawals must not hide a source from the reader.
@@ -15,6 +16,26 @@ export function buildReferenceLibrary(library, gm) {
         continue;
       }
       found.set(row.key, { ...row, legacy: legacySources(R, row.entry) });
+    }
+    for (const entry of pack.data.referenceEntries || []) {
+      validateReferenceEntry(entry, pack.manifest.id);
+      const fields = [entry.text, entry.topic, pack.manifest.title];
+      found.set(entry.id, {
+        key: entry.id,
+        kind: entry.category,
+        name: entry.name,
+        entry: {
+          ...entry,
+          contentId: entry.id,
+          source: { book: pack.manifest.id, page: entry.page },
+        },
+        aliases: entry.aliases || [],
+        textFields: fields,
+        legacy: [],
+        printedReference: true,
+        normalizedName: normalizeSearch(entry.name),
+        searchable: normalizeSearch([entry.name, ...fields].join(" ")),
+      });
     }
   }
   for (const [collection, kind] of [
@@ -74,12 +95,24 @@ export function compactReferenceLibrary(payload) {
           identities.set(identity, entries.length);
           entries.push(entry);
         }
-        return { ...row, entryRef: identities.get(identity) };
+        return {
+          ...row,
+          // Printed prose already lives in the shared profile record.
+          // Rehydrate it once instead of shipping a second full-text copy.
+          ...(row.printedReference
+            ? { textFields: row.textFields.slice(1) }
+            : {}),
+          entryRef: identities.get(identity),
+        };
       },
     ),
   };
 }
-export async function loadReferenceLibrary(library, readJSON) {
+export async function loadReferenceLibrary(
+  library,
+  readJSON,
+  { normalize = true } = {},
+) {
   const read = async () => {
     const response = await fetch(
       new URL("./data/search-library.json", import.meta.url),
@@ -126,7 +159,31 @@ export async function loadReferenceLibrary(library, readJSON) {
       !Array.isArray(row.legacy)
     )
       throw Error("Invalid book reference record.");
+    if (row.printedReference !== undefined && row.printedReference !== true)
+      throw Error("Invalid printed reference marker.");
+    if (row.printedReference) {
+      const { contentId, source, ...record } = row.entry;
+      validateReferenceEntry(record, source.book);
+      if (
+        contentId !== record.id ||
+        row.key !== record.id ||
+        source.page !== record.page ||
+        row.kind !== record.category ||
+        row.name !== record.name ||
+        row.legacy.length ||
+        JSON.stringify(row.aliases) !== JSON.stringify(record.aliases || [])
+      )
+        throw Error("Printed reference identity mismatch.");
+      const title = library.packs.find((p) => p.manifest.id === source.book)
+        .manifest.title;
+      if (
+        JSON.stringify(row.textFields) !== JSON.stringify([record.topic, title])
+      )
+        throw Error("Printed reference search fields mismatch.");
+      row.textFields = [record.text, record.topic, title];
+    }
     keys.add(row.key);
+    if (!normalize) return row;
     return {
       ...row,
       normalizedName: normalizeSearch(row.name),

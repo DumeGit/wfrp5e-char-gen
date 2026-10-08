@@ -58,3 +58,7 @@ Tests cover the 32 existing supplement selections, all twelve Career schemes/cre
 Regression coverage includes the approved Lore prerequisite, Petty grant boundaries, unchanged grants for other Careers, purchase/undo and the subsequent Arcane grant's PDF row placement. Final desktop/mobile checks verify the Alchemist cap explanation and that buying Lore (Alchemy) makes Savant purchasable; undo restores its restriction and refunds XP. Both new character PDFs retain all 556 editable fields and were rendered for inspection.
 
 The complete integration includes the approved Mundane Alchemist conversions and is registered for local use. No push or deployment is performed by the agent; the user controls publishing.
+
+## Expanded reference search — 7 October 2026
+
+Casting/ritual procedures, miscasts, Endeavours, Augury/Psychometry, alchemy/potions, scrolls/grimoires/artefacts, familiars/constructs/elementals, magical environments and isolated adversary profiles/spells. Reading an adversary or combined-Wind spell does not make it a learnable player spell. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.

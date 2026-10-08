@@ -15,7 +15,10 @@ export function createReferenceLinker(index) {
     .map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
     .join("|");
   const matcher = pattern
-    ? new RegExp(`(?<![\\p{L}\\p{N}])(${pattern})(?![\\p{L}\\p{N}])`, "giu")
+    ? new RegExp(
+        `(?<![\\p{L}\\p{N}’'‐‑-])(${pattern})(?![\\p{L}\\p{N}’'‐‑-])`,
+        "giu",
+      )
     : null;
   return (text, current) => {
     const segments = [];

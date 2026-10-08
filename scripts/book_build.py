@@ -22,4 +22,23 @@ def prepare_manifest(filename, value, directory):
     directory.mkdir(parents=True, exist_ok=True)
     if not target.exists():
         target.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
-    return {**value, "files": {**value["files"], "coverage": "coverage.json"}}
+    files = {**value["files"], "coverage": "coverage.json"}
+    manifest_path = installed.parent / "manifest.json"
+    if manifest_path.exists():
+        previous = json.loads(manifest_path.read_text(encoding="utf-8"))
+        # A creator-data rebuild must not withdraw separately reviewed search
+        # material or reset a released pack to an older hard-coded version.
+        if "referenceEntries" in previous["files"]:
+            filename = previous["files"]["referenceEntries"]
+            if Path(filename).name != filename:
+                raise ValueError("Unsafe reference filename")
+            raw = installed.parent / filename
+            output = directory / filename
+            if not output.exists():
+                output.write_bytes(raw.read_bytes())
+            files["referenceEntries"] = filename
+        installed_version = tuple(map(int, previous["version"].split(".")))
+        requested_version = tuple(map(int, value["version"].split(".")))
+        if installed_version > requested_version:
+            value = {**value, "version": previous["version"]}
+    return {**value, "files": files}

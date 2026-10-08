@@ -1,0 +1,1014 @@
+[
+  {
+    "id": "archives-iii:reference:6-enterprises",
+    "name": "Enterprises",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 6,
+    "text": "Precious few citizens of the Old World ever choose to make a living from adventure. Most that do still prefer to supplement their income with more stable work. Even adventurers fortunate enough to stumble upon the odd treasure hoard know these opportunities are fleeting, and having a side hustle to fall back on is essential if they intend to live longer than their heroic campaigns.\n\nEvery Career has an Earning Skill (WFRP pages 51–52) and a Status that determines their Income (WFRP page 198), both comparatively risk-free ways for Characters to earn money after a week’s work. But for most Careers, these gains are modest. Ambitious Players may prefer to invest their earnings for a greater payoff later, which could unlock access to Trappings they could never usually afford. Even Banking (WFRP page 196) may not return sufficient interest to satisfy covetous adventurers.\n\nEnterprises are ways for GMs to fulfil this niche. They are business ventures the Characters can nurture over the course of weeks, months, or even years, by investing their own (or, even better, other people’s) money to stimulate growth. Though they require more consideration, patience, and effort than living off Banking interest, they also reduce the risk of misfortune stealing their money away. Usually, only a Character’s negligence will cause their Enterprise to fail, which GMs can exploit to create new adventures that imperil the Enterprise unless attended to.\n\nPlayers can gain additional benefits from Enterprises, besides the eventual promise of increased Earnings. Enterprises have their own Earning Skills, which the Players may be more interested in developing for their Characters than the Earning Skill dictated by their Career. Enterprises have their own special rules, which expand Player options, and may unlock access to social situations that are barred to less accomplished folk. Finally, Enterprises can be worked on by multiple Characters at once, improving the links of teamwork within a party. All contributing Characters profit when an Enterprise performs well. Should it perform badly, at least they have their business partners with whom to share the blame!"
+  },
+  {
+    "id": "archives-iii:reference:6-starting-an-enterprise",
+    "name": "Starting An Enterprise",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "6–7",
+    "text": "Characters interested in owning an Enterprise begin by choosing one of the ten Enterprise templates listed in this supplement as the basis of their company.\n\nEach template is quite broadly defined to fit a variety of different business types — the examples listed may provide the spark of inspiration, but Players are encouraged to invent their own money-making schemes, and adapt them to the template that suits best! These are:\n\nCourier Service Crafting Workshop Criminal Gang Holy Temple Knightly Order Tavern Market Parlour Noble Estate Performance Troupe Publishing House\n\nCharacters may choose to start with an Enterprise in the Step 5: Trappings stage of character creation after calculating starting wealth (WFRP page 37), spend an Endeavour to acquire one during a period of downtime (WFRP page 195), or even have an opportunity to create or take over an Enterprise during an adventure, if the circumstances are appropriate.\n\nThough each Enterprise template includes a list of Suggested Careers, there is no limitation on which Careers can select specific templates. If multiple Characters choose Enterprises, they may either set up their own separate Enterprises, or partner up with another Character to share an Enterprise. No Character can manage more than one Enterprise at once — such a demand on their time would necessitate abandoning their adventuring life entirely!\n\nIn order to acquire an Enterprise, Characters must pay its Start- Up Costs, which are listed in the Enterprise template. This covers the expense of business premises, establishing supply, recruiting and training necessary personnel, and marketing to a reliable customer base. If a Character, or group of Characters paying collectively, cannot afford the full Start-Up Costs for"
+  },
+  {
+    "id": "archives-iii:reference:7-enterprise-format",
+    "name": "Enterprise Format",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 7,
+    "text": "Each of the Enterprise templates uses a consistent layout. The key below can help to find the relevant information in an Enterprise template, or serve as a guideline for GMs or Players who want to create new Enterprise templates.\n\nExamples: Specific ideas for business types that would suit the general Enterprise template. This list is intended to be inspirational rather than exhaustive. GMs and players may have their own ideas.\n\nSuggested Careers: Careers, or Classes, most likely to consider setting up this kind of Enterprise. Again, this is intended as a guideline, not a restrictive list.\n\nStart-Up Costs: How much money Characters must pay to set up the Enterprise. In the event Characters cannot afford this cost themselves, and must depend on Creditors for funding, the minimum 10% Characters must pay to attract Creditors is also included.\n\nInterest Payments: How much money the Characters invested in an Enterprise must pay between each adventure, in order to satisfy their Creditors. If the Enterprise is no longer in Debt, these payments are not required.\n\nCreditors: A suggested list of individuals who might consider helping the Characters purchase the Enterprise, in return for an ongoing fee.\n\nSources of Income: Possible ways for the business to make its money. For each Source of Income, a suggested Earning Skill is provided for Characters using the Enterprise during an adventure (WFRP pages 51–52), but other Skills may be accepted at the GM’s discretion. Each of these income sources also lists a Status, which Characters may temporarily substitute for their own when working out how much money they make whilst Earning or using the Income Endeavour. Note that a Source of Income can only be used if the Enterprise has the corresponding Trappings.\n\nTrappings: Premises, vehicles, tools, animals, and hirelings the Characters gain access to so long as the Enterprise remains operational. Characters may find these Trappings useful whilst adventuring, but Enterprises that regularly lose Trappings to\n\nan Enterprise — which is not unlikely, especially for starting Characters — they may approach a Creditor to loan them the rest of the capital they need. At a minimum, Character must pay 10% of an Enterprise’s Start-Up Costs when they first acquire it, or they are unable to attract Creditors and cannot afford to set up the business.\n\ntheir owners’ shenanigans may reduce the Status of their income sources, at the GM’s discretion.\n\nSpecial Rules: Advantages or restrictions which apply to all Characters who have invested in the Enterprise, or any way that the template does not abide by the usual Enterprise rules.\n\nExpansion: Three additional levels of development the Enterprise can progress through, one step at a time. Each level lists the cost to expand (including the minimum 10% cost if depending on Creditors), the new cost of Interest Payments, adjustments to the Enterprise’s Status for purposes of Earning or gaining Income, and any additional Trappings or Special Rules acquired.\n\nAlternate Events: Events that are specific to this kind of Enterprise, which should normally be substituted for results 55–57 and 58– 60 on the Enterprise Events Table.\n\nAdventure Hooks: Two ideas of how a Character’s investment in an Enterprise can lead to adventures in their own right, rather than just being a concern for downtime.\n\nFor Sale: A fully worked example of an Enterprise fitting the template, available for Characters to buy if they pay the usual Start-Up Costs. GMs can offer these Enterprises to Players to simplify the decision-making process of working out a new Enterprise’s details from scratch. Alternatively, these examples may inspire Players to come up with their own ideas."
+  },
+  {
+    "id": "archives-iii:reference:8-interest-payments",
+    "name": "Interest Payments",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 8,
+    "text": "Whenever Characters have a period of downtime between adventures, they must pay their Creditor the amount listed in the Enterprise template’s Interest Payments section. This occurs after Events and Endeavours, but before the Characters lose any outstanding cash. Interest Payments do not reduce the Debt owed to a Creditor. Unlike repaying Debt, Interest Payments do not cost an Endeavour (many Creditors deliberately make themselves less available to those trying to break free of the debt cycle)."
+  },
+  {
+    "id": "archives-iii:reference:8-repaying-debt",
+    "name": "Repaying Debt",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 8,
+    "text": "When Characters ask Creditors to cover Start-Up Costs, they should make a note of all remaining costs not paid by the Characters themselves. This is how much money the Enterprise now owes the Creditor as Debt.\n\nAs an Endeavour (WFRP page 195), Characters may seek out their Creditor to pay off some, or all, of their Enterprise’s outstanding Debt. There is no time limit for repaying Debt, but whilst an Enterprise remains in Debt, it cannot Expand, though Characters must continue to make Interest Payments."
+  },
+  {
+    "id": "archives-iii:reference:9-enterprise-events",
+    "name": "Enterprise Events",
+    "category": "table",
+    "topic": "Enterprises",
+    "page": "9–11",
+    "text": "Characters roll on the Events Table (WFRP page 193) between adventures, before they select their Endeavours. If a Character has invested in an Enterprise, they may choose to instead roll on the Enterprise Events Table, which is tailored to how recent happenings have impacted on the Character’s Enterprise, rather than on their personal or adventuring life. If more than one Character is invested in the same Enterprise, only one Character can make this substitute — a single Enterprise cannot be affected by more than one Event in the same downtime phase.\n\n| d100 | Event | Effect |\n| --- | --- | --- |\n| 01–02 | Looming Bankruptcy | Poor investments, the ravages of war, or simple ill-fortune bring the Character’s Enterprise to the brink of failure. If the Enterprise has Expanded, it loses all advantages from its most recent Expansion, but retains the increased Debt and Interest Payments. Only repaying all Debt can restore the lost Expansion benefits. If the Enterprise has not Expanded, the business must close, lay off all staff, and sell its Trappings to cover costs. All outstanding Debts remain. At the GM’s discretion, the Characters may attempt one last desperate scheme to save their Enterprise, as the subject of the next adventure. |\n| 03–05 | Recession | Financial disaster strikes the local economy, and the best the Character can do is keep their Enterprise’s doors open. No Character can use the Enterprise for Earning or Income Endeavours until the end of the next adventure. |\n| 06–08 | Shoplifter Strikes | One of the Enterprise’s Trappings, whatever is most valuable and portable, is stolen. The Character may attempt to reclaim it in the next adventure, or accept its loss as the cost of doing business. |\n| 09–10 | Interest Inflation | The Enterprise’s Creditor grows jealous of their success, and invokes an obscure clause in their contract to demand additional payment. The Enterprise’s Interest Payments are now doubled, until all outstanding Debt is paid off. |\n| 11–13 | Trapping Degrades | One of the Enterprise’s Trappings deteriorates in quality. It may acquire a Flaw (if it is an item), lose a Trained Skill (if it is a Trained animal), or gain a Condition (if it is an employee). Severe afflictions are usually temporary, whilst milder problems usually persist, and already degraded items may be lost or destroyed entirely. The GM should determine the exact mechanical effects. |\n| 14–16 | New Competition | A rival business, providing a similar service to the Character’s Enterprise, starts muscling in on their territory. To keep up, the Character must undertake at least one Income Endeavour with the Enterprise during this batch of Endeavours, but receives only 50% of the usual income. The rival business remains an ongoing threat, and may even interfere with the Character’s adventures. |\n| 17–20 | Forced to Diversify | The GM chooses ones of the Enterprise’s Sources of Income (whichever is most commonly used). The Source of Income is not available for Income Endeavours during this coming set of Endeavours, due to a drop in supply or demand. Other Sources of Income can be used as normal. |\n| 21–23 | The Dreaded Auditors | Auditors from the treasury demand to see the Enterprise’s books. The Character must spend an Endeavour assisting the investigation, or pay 10% of the Enterprise’s most recent Start-Up Costs or Expansion Costs (whichever is higher) in non-compliance fees. |\n| 24–26 | Gimme a Discount | A customer demands a substantial discount on the Enterprise’s services. If the Character refuses, the customer begins to slander the business publicly, threatening its reputation. If the Character acquiesces, other customers follow suit, and the Enterprise’s Income Statuses may reduce. The Character should decide now how to respond, and deal with the consequences next adventure. |\n| 27–30 | I Need a Holiday | The Character experiences severe burnout, and discovers the necessity of taking time off. They cannot choose the Income Endeavour in the next round of Endeavours. Other Characters invested in the Enterprise can use it for Income Endeavours as normal. |\n| 31–33 | Conservative Investments | Hand-wringing bean counters regard the current economic climate with dismay, betting only on sure prospects. No Characters may acquire a Creditor to help Expand an Enterprise during the next round of Endeavours. |\n| 34–36 | The Grind | The Character spends their next week trapped in a non-stop cycle of work and sleep, as exhausting as it is profitable. They must choose an Income Endeavour before the next adventure, if possible, but otherwise no special effects apply. |\n| 37–39 | I Quit! | An NPC member of staff (if one exists) leaves the Enterprise’s employ, due to dissatisfaction, ambition, or untimely death. The employee is replaced by the start of the next adventure — this could be an opportunity for the Character to work more closely with an established NPC contact. |\n| 40–41 | New Creditor | The Enterprise’s Creditor sells the Character’s Debt onto someone else. Depending on how well the Character got on with the old Creditor, this could be considered a cause for celebration, at least until the new Creditor is revealed to be just as much of a bastard as the old one. |\n| 42–44 | Closed for Refurbishment | The Enterprise updates its storefront, offices, or other Trappings that correspond to business accommodation. It cannot be used to collect Income in the next batch of Endeavours, but afterwards the accommodation enjoys a practical and cosmetic uplift, which may provide Skill Test bonuses at the GM’s discretion. |\n| 45–48 | Creditor Visits | The Creditor starts poking around the Enterprise and demanding updates. Whilst annoying, it does provide an opportunity to repay Debts without jumping through the usual hoops. Before the next adventure starts, the Character may repay Debt (see page 8) without using an Endeavour. |\n| 49–51 | New Hire | The Enterprise is profitable enough to recruit an NPC to help with its day-to-day business. Unfortunately, the Enterprise is not profitable enough to hire a particularly qualified, competent, or scrupulous employee, and they will need plenty of training and supervision over the coming adventures and periods of downtime. |\n| 52–54 | Breakup Opportunity | An investor, or even one of the Enterprise’s employees, offers to purchase a less-profitable fraction of the business, in hopes of turning it around. If the Enterprise has Expanded, the Character may accept the offer to lose all Trappings and other benefits from their most recent Expansion, but also pay off all outstanding Debt. Characters invested in the Enterprise may choose to Expand the Enterprise again at a later date, if their fortunes improve. |\n| 55–57 | Alternate Event 1 | Refer to the corresponding Enterprise template for the specific enterprise type to determine this Event’s effects. |\n| 58–60 | Alternate Event 2 | Refer to the corresponding Enterprise template for the specific enterprise type to determine this Event’s effects. |\n| 61–63 | Business as Usual | The Character stays busy with taking stock, networking events, and keeping their customers happy — all the routine activities you would expect whilst running an Enterprise, with no special effects. |\n| 64–66 | Co-Ownership | An investor, or even one of the Enterprise’s employees, offers to buy in to the Enterprise as a co-owner. If the Character accepts, the co- owner pays off half of the Enterprise’s outstanding Debt, but insists on some ‘interesting’ ideas for developing the Enterprise which the Character is now obliged to accommodate. |\n| 67–69 | Upgraded Trapping | The Enterprise is profitable enough to improve one of its Trappings. It may acquire a Quality (if it is an item), gain a Trained Skill (if it is a Trained animal), or gain a new Skill (if it is an employee). Alternatively, a Trapping may lose a Flaw or Condition it is currently afflicted by, if appropriate. The GM should determine the exact mechanical effects. |\n| 70–72 | Merger Opportunity | Another business owner in an adjacent industry offers to join forces with the Character. The Character and their co-investors may choose to immediately Expand their Enterprise. Expansion Costs must be paid as normal, but Expansion does not cost an Endeavour, and may be undertaken even if the Enterprise is still in Debt. Expansion Costs paid by a Creditor are added to the Enterprise’s current Debt. Until all Debt is repaid, Interest Payments are made at the new Expanded rate. |\n| 73–75 | Desperate Customer | A customer has urgent need of the Enterprise’s services, and is willing to pay a premium for it. The Character chooses one of the Enterprise’s Sources of Income. Until the start of the next adventure, the numerical value of the Income Source’s effective Status is increased by 1. |\n| 76–78 | In the Black | The Enterprise is making a tidy profit — nothing spectacular, but good enough to put everyone at ease. No additional effects apply. |\n| 79–81 | Temporary Expansion | The Character loans larger accommodations, extra equipment, and temporary staff to take advantage of a brief, but valuable, surge in demand. Until the end of the next adventure, the Enterprise enjoys all the benefits of having Expanded to the next level. The Character pays no Expansion Costs for this temporary boon, and Interest Payments remain unchanged. |\n| 82–85 | Taking Care of Itself | The Character’s Enterprise is sufficiently established to keep ticking along with minimal supervision. The Character may immediately use the Enterprise to undertake an Income Endeavour. This does not count towards the Character’s maximum number of Endeavours before the next adventure. |\n| 86–88 | Innovation | Thanks to the Character’s ingenuity, the Enterprise gains a new Source of Income. Players and GMs should work out together what the new Source of Income is, what Trappings are required to gain Income from it, and what the exact mechanical effects are. Generally, the effective Status should be equal to the second-highest existing Source of Income, whilst the Earning Skill should be different from any other Earning Skill currently used. |\n| 89–91 | Rolling Profits | Business is booming! The Character reinvests those profits into improving the Enterprise’s capacity to make money in the future. They choose one of the Enterprise’s Sources of Income, and increase the numeric value of its effective Status by 1, on an ongoing basis. |\n| 92–94 | New Trapping | The Character spends the Enterprise’s profits on acquiring a new Trapping. This may be a duplicate of a Trapping the Enterprise already owns. Alternatively, it may be a new Trapping, with a value equal to or less than the Enterprise’s Start-Up Costs or most recent Expansion Costs (whichever is higher). |\n| 95–97 | Unexpected Generosity | Thanks to holiday cheer, their daughter’s wedding, or the death of a wealthy relative, the Character’s Creditor is in an uncharacteristically good mood. The Enterprise does not have to make an Interest Payment during this period of downtime. |\n| 98–100 | Offer to Buy-Out | A wealthy entrepreneur is impressed with what the Character has built, and offers to purchase it wholesale. If the Character and their co-investors accept, they lose any benefits provided by the Enterprise, pay off all outstanding Debt, and gain wealth between them equal to double the Enterprise’s Start-Up Costs or double the most recent Expansion Costs (whichever is greater). The Character may start a new Enterprise, stay on as a consultant, dedicate themself to adventuring full-time, or enjoy an early retirement! |"
+  },
+  {
+    "id": "archives-iii:reference:9-expansion",
+    "name": "Expansion",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 9,
+    "text": "If a Character is fortunate enough to pay off their Creditors, they may start to consider expanding their Enterprise. Expansion unlocks new useful special abilities, improved Status whilst Earning or gaining Income, and access to additional Trappings. However, the increasing costs of operating at a larger scale also require an infusion of cash, exactly like the Start-Up Costs of first acquiring the Enterprise, and usually put the Character straight back into Debt again. Expansion also costs an Endeavour for the Character taking the lead in Expanding the Enterprise.\n\nEach Enterprise template has four levels. The Expansion section lists the Cost of Expanding to the next level, and the advantages it provides. As with Start-Up Costs, Characters may approach a Creditor to help them pay for Expansion, but must provide at least 10% of the cost themselves.\n\nThe Interest Payments for this new Debt will invariably increase, as detailed in the template, but otherwise the rules for Repaying Debt and managing Interest Payments remain the same. Characters may not Expand an Enterprise until they have paid off all their outstanding Debt."
+  },
+  {
+    "id": "archives-iii:reference:12-courier-service",
+    "name": "Courier Service",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "12–13",
+    "text": "Examples: Postal service; river ferry; express deliveries; coaching house; bakery or dairy deliveries; news-sheet deliveries; contraband smuggling.\n\nSuggested Careers: Scout; Coachman; Messenger; Pedlar; Road Warden; Boatman; Huffer; Seaman; Smuggler; Bawd.\n\nStart-Up Costs: 10 gold crowns (minimum 1 gold crown)\n\nInterest Payments: 10 silver shillings per downtime period.\n\nCreditors: Heilwig Foxe, postmaster general and Imperial spy; Odina Faerberg, toll collector and traffic regulator for the River Reik; Lady Griselda, society gossip addict; Aldwin the Spider, criminal mastermind.\n\nSources of Income: Deliveries on foot (Endurance, Brass 4); deliveries on horseback (Ride (Horse), Silver 1); deliveries by wagon (Drive, Silver 2); deliveries by rowboat (Row, Silver 2); deliveries by riverboat (Sail, Silver 3).\n\nUnless the Enterprise has multiple Horses, Wagons, Rowboats, or Riverboats, only one Character may Earn or collect Income using that method of transport during a week.\n\nTrappings: Storage depot with byzantine filing system; ‘Sorry we missed you!’ calling cards; other people’s letters and parcels you absolutely shouldn’t open (that would be wrong). Any one of the following: a Riding Horse; a Rowboat; a Draught Horse and an old Wagon with the Unreliable Flaw; a leaky Riverboat with the Unreliable Flaw.\n\nSpecial Rules: Couriers know the region in which they traffic extremely well. When a Character uses a Courier Service for the Income Endeavour between adventures, for the duration of the following adventure they gain +20 on any Tests to travel or navigate the territory their Enterprise operates in (which is typically the size of a province). If the Enterprise’s patch is relatively small, like a single city or handful of villages, this bonus increases to +40.\n\nExpansion: The first time you Expand a Courier Service, you improve its means of transporting goods. Choose ONE of the following: a Riding Horse for every Character invested in the Enterprise; a Rowboat for every Character invested in the Enterprise; a Draught Horse and Wagon; a Riverboat. You also hire a couple of runners to help with local deliveries. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 5 gold crowns.\n\nThe second time you Expand a Courier Service, its storage facilities grow larger and more secure, allowing you to deliver more packages along a single route. Choose a Source of Income to gain an effective Status of Silver 5. The depot also gains facilities to stable horses, repair wagons, or moor boats on-site, and recruits a couple of employees to organise or protect the site. The Characters are more likely to be trusted with deliveries of sensitive goods, which could link to new adventures. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns). Interest Payments remain at 5 gold crowns.\n\nThe third time you Expand a Courier Service, you recruit enough couriers to expand the size of your territory. The maximum size is a grand province — Characters gain +20 on travel Tests within the area during adventures, so long as they used the Courier Service to gain Income during the previous batch of Endeavours. This bonus increases to +40 if the Enterprise remains focused on a single province, or +60 if it is only centred on a single city or handful of villages. In addition, your storage depot contains a large, customer-facing storefront, selling packaging supplies, general goods, and temporary storage space, counting as another Source of Income (Haggle, Silver 1). Lastly, you gain an additional Wagon or Riverboat. The Expansion Cost is 300 gold crowns (minimum 30 gold crowns), and the new Interest Payments are 15 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): One of the Character’s deliveries is intercepted by bandits, and an important package is lost. The cost to compensate the dissatisfied customer is triple the Enterprise’s current Interest Payment (in addition to the Enterprise’s usual Creditor payment). Alternatively, the Characters may attempt to recover the package in the next adventure, boosting the Enterprise’s reputation if they succeed.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): The Imperial State Army enters the province on campaign, and rapid delivery of intelligence and materiel has never been more in demand. Until the start of the next adventure, any Character using the Courier Service for an Income Endeavour gains +50% to money earned. During the next adventure, the enemy’s infiltrators target the Character, believing that they are harbouring military secrets.\n\nAdventure Hooks: A customer approaches the Courier Service with a bizarre request — he wants this very important package to be delivered to himself, tonight, at midnight precisely. When the Characters make the delivery, they find the customer dead, surrounded by ritual paraphernalia. Were they hired to witness a murder? Or is this an elaborate frame job? Either way, the Characters were some of the last people to see the victim alive, so they’re at risk of being incriminated if they can’t discover the truth and convince the customer’s friends that they are innocent.\n\nWhilst loading up the vehicle for another round of deliveries, one of the packages started… ticking. Opening the package could compromise the Enterprise’s reputation, as their customers depend on discretion. But delivering an explosive device to the nobleman it’s addressed to could implicate the Characters in treason. How will the Characters dispose of the bomb, without anyone learning it entered their possession?\n\nFor Sale: Feiläufer Ferries once was a respected operation, taking packages, letters, and the occasional traveller up and down the Reik between Carroburg and Altdorf. Since the loss of its main barge to River Trolls, its fortunes have steadily plummeted, and the owner is eager to sell.\n\nCaptain Rudolph of the Reikland State Army knows well the importance of retaining this line of communication, and is willing to float the cash to prospective business owners. But Rudolph’s main focus is military, not commercial, and Characters who fall behind on Interest Payments are liable to find their boats requisitioned for attacks against the very same River Trolls who doomed the ferry service’s previous iteration."
+  },
+  {
+    "id": "archives-iii:reference:13-crafting-workshop",
+    "name": "Crafting Workshop",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "13–14",
+    "text": "Examples: Artist studio; blacksmith’s forge; bowyers and fletchers; alchemist’s laboratory; fine tailors; engineering workshop (e.g. siege weapons, clocktowers, experimental firearms); shipwright’s yard; jewel crafters; forger’s workshop; armourer’s smithy; specialist carpentry, glassblowing, stoneworking, tannery, masonry; magical artificers.\n\nSuggested Careers: Apothecary; Engineer; Wizard; Artisan; Artist; Seaman; Charlatan.\n\nStart-Up Costs: 15 gold crowns (minimum 1 gold crown and 10 shillings)\n\nInterest Payments: 15 silver shillings per downtime period.\n\nCreditors: Dunstan Färberg, ‘generous’ patron of the arts; Guildmaster de Groot, trade matriarch of Ubersreik; Grimneth the Maverick, outcast of the Karak Kadrin Engineering Guild; Eike Glitterstep, Wizard of the Gold College.\n\nSources of Income: Mass production of common goods, sold to a retailer (Trade (Any), Brass 5); commission of a unique item (Art (Any) or Trade (Any), Silver 2).\n\nTrappings: Tools and a small Workshop relevant to a specific Trade (WFRP page 305); a steady supply of raw materials; guild licence (real or forged); technical books and other training materials; a distinctive signature.\n\nSpecial Rules: Characters employed at a Crafting Workshop are extremely inventive at finding a use for their Enterprise’s wasted by-products. Choose an Art or Trade Skill Specialisation (WFRP page 118) — any Tests of that Skill within the Crafting Workshop gain an additional +20 modifier. In addition, if a Trade Skill is chosen, and a Character uses that Trade Skill as part of a Crafting Endeavour (WFRP page 197), the Character does not have to pay to acquire raw materials. This benefit does not apply when Inventing, which requires more specific materials.\n\nExpansion: The first time you Expand a Crafting Workshop, you take on apprentices, one for every Character invested in the Enterprise. These apprentices provide Assistance (WFRP page 155) on Trade Tests, make personal deliveries to valued customers, and watch the workshop whilst you’re away on adventures. Apprentices are an investment — eventually they will mature into skilled craftworkers, but in the meantime, they need constant supervision and use up twice as many tools. The Expansion Cost is 5 gold crowns (minimum 10 silver shillings). Interest Payments remain at 15 silver shillings.\n\nThe second time you Expand a Crafting Workshop, your apprentices complete their training. Their Assistance on Trade Tests now provides a +20 bonus, instead of +10. In addition, you increase the size of your Workshop, and gain one of the following additional Sources of Income: rented workspace to other craftworkers (Haggle, Silver 1); Workshop for a new Trade (as per existing Source of Income, also extends the benefit of the Enterprise’s Special Rules to the new Trade Skill); a dedicated storefront (increase the effective Status of mass producing common goods to Silver 2); fine tools for producing specialist items (increase the effective Status of commissioning unique items to Silver 4). NPCs will travel from neighbouring provinces, or even further abroad, to purchase your higher quality goods. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 5 gold crowns.\n\nThe third time you Expand a Crafting Workshop, choose another Source of Income from the second Expansion above. Your large Workshop also constitutes a Guildhall, specialising in your chosen Trade. As well as expanding your influence in local politics, it provides an additional Source of Income: collecting guild dues (Leadership, Gold 1). The Expansion Cost is 200 gold crowns (minimum 20 gold crowns), and the new Interest Payments are 10 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): Supply of a precious resource essential to your craft (e.g. coal, diamond, iron, silk, or gromril) runs dry. Your Enterprise cannot gain Income in the upcoming round of Endeavours. If you discover a new source of supply in the next adventure, any Income Endeavours following that adventure provide double the usual wealth, as you’ll be one step ahead of the competition.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): A demanding customer asks for a complicated item to be produced in a short space of time. To complete the order, the Character must use all their Endeavours before the next adventure on Income Endeavours. If the order is complete, the Character receives a bonus, equivalent to an additional free Income Endeavour. If the Character is unwilling or unable to use all their Endeavours on Income (if they are an Elf, for example), the Event has no effect."
+  },
+  {
+    "id": "archives-iii:reference:14-example-expansion-table",
+    "name": "Example Expansion Table",
+    "category": "table",
+    "topic": "Enterprises",
+    "page": 14,
+    "text": "| Level | Cost | Interest | New Trappings | Effects |\n| --- | --- | --- | --- | --- |\n| 2 | 10/- | 1/6 | Two Apprentices | Apprentices provide +10 to Trade Tests, run deliveries for you, and mind things while you are away. |\n| 3 | 10 GC | 10/- | Former Apprentices become Artisans, plus either Rented Workspace or another Source of Income. | Artisans provide +20 on Trade Tests, and the Enterprise gains one of the following new Sources of Income: Rented Workspace (Haggle, Silver 1), a New Workshop (Any other Trade Skill of your choice), Dedicated Storefront (Status becomes Silver 2), etc |\n| 4 | 20 GC | 1GC | Guildhall, many Apprentices, etc. | Choose another Source of Income, and your Workshop becomes a Guildhall |\n\nAdventure Hooks: An item produced to order by the Characters is claimed to be cursed, haunted, or possessed by a daemon. The allegations may even be true, if it has been misused since leaving the Workshop. Either way, the Characters must answer to the accusations, cleansing their creation or proving the claims are untrue. Their professional reputation depends on it!\n\nJan Vanterhass commissioned a very expensive item from the Characters’ Workshop, and was very pleased with the results! However, Jan has now returned to the Characters screaming that the thing is cursed! True or not, such an accusation could easily bring down the wrath of a Witch Hunter. Is Jan trying to shake down the Characters for a refund, or could it have something to do with the wizard that took lodgings above the Workshop last month?\n\nA valuable item, produced under a veil of utmost secrecy, is stolen from the Workshop the night before it can be delivered to the customer. The Characters must interrogate the field of suspects to recover their masterwork. Who is responsible? The customer themselves, attempting to dodge the fee? One of their political enemies, seeking an advantage in their constant game of one-upmanship and recrimination? Or one of the Characters’ own apprentices, looking for a shortcut to the improved salary of a master craftworker?\n\nFor Sale: Giselmund’s Arsenal, a smithy specialising in production of handguns, long rifles, and other blackpowder weaponry, has never been quite the same since Giselmund himself was killed in the same explosion which blew up half his lab. His widow advises that the Imperial Engineers School of Altdorf has offered significant research grants to any gunsmiths bold enough to continue Giselmund’s production of experimental weaponry — so long as the School continues to reap the benefits. Giselmund’s old neighbours in Auerswald are hardly keen for his forges to restart, for fear their houses burn down once again, and enemies of the Empire keep a wary eye on this centre of emerging military technologies. Anyone resolved to craft guns at the Arsenal should be prepared to use them in the workshop’s defence."
+  },
+  {
+    "id": "archives-iii:reference:15-criminal-gang",
+    "name": "Criminal Gang",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "15–16",
+    "text": "Examples: Heist crew; protection racket; gang of pickpockets; spy ring; band of merry outlaws who rob from the rich; black market traders; revolutionary cell; secret cult; pirate crew; witch-traffickers; underground fight club; paid killers.\n\nSuggested Careers: Apothecary; Lawyer; Agitator; Merchant; Watchman; Spy; Herbalist; Coachman; Smuggler; Stevedore; Wrecker; Pit Fighter; Protagonist; the entire Rogue Class.\n\nStart-Up Costs: 5 gold crowns (minimum 0 — see Special Rules below)\n\nInterest Payments: 10 silver shillings per downtime period.\n\nCreditors: Woder Intz, street-born thug turned city-wide kingpin; Matthias Reinhardt, corrupt magistrate; The Estalian, anonymous unseen mastermind of an Empire-spanning crime syndicate; Magister Xemo, cultist of Tzeentch, eroding the rule of law within the Empire.\n\nSources of Income: Theft (Stealth (Any), Brass 4); trafficking of witches or other outlaws (Stealth (Any), Brass 4); extortion or debt collection (Intimidate, Brass 5); sale of contraband or fraudulent items (Charm, Brass 5); murder-for-hire (Melee (Any), Brass 5).\n\nTrappings: A hidden loft, soundproof cellar, forest hideout, abandoned sewer, or other lair to plot in; a handful of streets, small village, or a patch of road or river considered to be your turf; scars, tattoos, sigils, or other symbols to mark the initiated.\n\nSpecial Rules: A life of crime beckons to those with nothing left to lose. Local ‘creditors’ exploit the desperation of new prospects, establishing even more exploitative systems of tribute. Characters do not need to contribute any of their own money towards the Start-Up Costs of starting a Criminal Gang, and can borrow all of the Start-Up Costs from a Creditor (unfortunately, the Interest Payments are proportionately much higher). In addition, any Character who invests at least 1 gold crown in a Criminal Gang (as Start-Up Costs, Expansion Costs, Debt Repayments or Interest Payments) may choose to gain the Criminal Talent for free (WFRP page 135). A Character may only benefit from this free Talent once.\n\nExpansion: The first time you Expand a Criminal Gang, you gain a dozen or so gang prospects, young toughs looking to you for leadership. Your prospects generally aren’t worth relying upon — they may even rat you out to the law or rival gangs — but you have a private language of code-phrases you can use to communicate with them secretly, and they may provide Assistance (WFRP page 155) if the circumstances are right.\n\nIn addition, you double the size of your turf, and choose one of your Sources of Income to increase its effective Status to Silver 2. The Expansion Cost is 10 gold crown (minimum 1 gold crown), and the new Interest Payments are 2 gold crowns.\n\nThe second time you Expand a Criminal Gang, your surviving prospects mature into fully-fledged gang members, tough and dependable (mostly). From this point on, you enjoy a steady influx of new gang prospects to replace those who betray you, get arrested, become rival gang members, or die. The size of your turf doubles again, and choose one of your Sources of Income to increase its effective Status to Silver 4.\n\nLastly, choose one of the following upgrades for your lair: a constantly changing location, as proof against discovery or infiltration; a secure vault to store your ill-gotten gains, reducing the risk of others discovering your stash when Banking to 1 on the 1d100 (WFRP page 196); a legitimate storefront, useful for money laundering and providing its own Source of Income (Haggle, Silver 1); a well-stocked armoury and a pair of guards, who can defend the lair in your absence. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 20 gold crowns.\n\nThe third time you Expand a Criminal Gang, you buy your way into high society. One Character can immediately purchase the Kingpin Talent for free (WFRP page 140). You gain an additional lair upgrade from the second Expansion, above, and your turf now encompasses an entire rural province or major city — no-one will dare undertake criminal activity in your turf, without treating with you first.\n\nYour Gang is now so large you delegate day-to-day operations to subordinate gang bosses, and whilst those ambitious underlings are amongst your greatest threats, your network of informants keeps you apprised of their schemes. Lastly, you can collect tribute from other gangs (Intimidate, Gold 1) as a new Source of Income. The Expansion Cost is 400 gold crowns (minimum 40 gold crowns), and the new Interest Payments are 80 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): Another gang encroaches onto your Gang’s territory. If you back down, no Characters can use the Enterprise for Income during this round of Endeavours, which is how long it takes for the local crime boss to put things right. If you fight back, it’s gruelling — your Character begins the next adventure with the Fatigued Condition (WFRP page 169), but gains a +20 bonus to interact with local criminals, who respect the ferocity of your defence.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): Your latest score is such a major coup, it draws heat from law enforcement. It would be best to lay low for a while. If you use the Income Endeavour before the next adventure, you gain +50% on your earnings. However, you can only use the Income Endeavour once in this round of Endeavours, and cannot use it at all in the round of Endeavours following the next adventure.\n\nAdventure Hooks: The political appointment of a new magistrate is due to be decided by a council of electors. The frontrunner candidate, Goderburt Feldt, has promised to crack down hard on crime, and could make your life extremely difficult. Dig up, or fabricate, evidence you can use to blackmail him into seeing your point of view. Alternatively, rig the election so a more malleable candidate inherits the position instead.\n\nA crime boss, one step up in the pecking order from yourselves, passes away in suspicious circumstances. The resulting power vacuum is an opportunity to inherit their holdings — or for your rivals to gain strength they will use to destroy you. Seize power in a night of explosive conspiracy, where new alliances might be struck and broken in a matter of minutes. If you can prove yourself the rightful, worthy successor to the departed crime boss, so much the better.\n\nFor Sale: The southern roads out of Kemperbad were renowned for decades as a haunt of brigands and outlaws, until the bribes of the local merchants convinced the town’s council to enact a purge of the surrounding woodlands. Now the traders reckon the route to be safe, and travel aboard stagecoaches loaded with ever more plunder. The last vagabond of Kemperbad has recently surfaced in town, offering to sell a map to his gang’s old hideout, which could serve as a headquarters for raids against the complacent merchant princes. The most amoral traders may even sponsor such attacks themselves, to destroy the fortunes of their business competitors."
+  },
+  {
+    "id": "archives-iii:reference:17-holy-temple",
+    "name": "Holy Temple",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "17–18",
+    "text": "Examples: Local shrine; monastery or nunnery; cemetery; ritual stone circle; sacred pool; consecrated forge; religious school; religious hospital; religious orphanage.\n\nSuggested Careers: Nun; Physician; Priest; Scholar; Hedge Witch; Herbalist; Mystic; Flagellant; Witch Hunter; Riverwoman; Charlatan; Guard; Warrior Priest.\n\nStart-Up Costs: 5 gold crowns (minimum 10 silver shillings)\n\nInterest Payments: 6 brass pennies per downtime period.\n\nCreditors: Gerde Diefenbach, craftswoman charged with upkeep of religious buildings; Zachaeus Kantor, Imperial tithe collector; Rolanda Essen, lector of your cult; Sir Rufus Adhemar, warrior templar and determined crusader.\n\nSources of Income: Donations of the faithful (Charm, Brass 3); ceremonial duties, such as officiating weddings or funerals (Lore (Theology), Silver 1); academic services, such as translations of holy texts (Language (Any) or Lore (Any), Silver 1).\n\nTrappings: Modest-sized place of worship; large religious symbol; wardrobe of religious vestments; holy texts.\n\nSpecial Rules: Temples act as focal points for their patron deity’s divine favour. Choose a god to consecrate the Holy Temple to when you first acquire it. Characters entreating that deity within the Temple’s grounds gain a +20 bonus on any Pray Tests, and may treat Pray as a Basic Skill. In addition, all Characters who invest in the Holy Temple can use the Holy Visions Talent (WFRP page 138) whilst within the Temple’s grounds.\n\nExpansion: The first time you Expand a Holy Temple, it becomes a fully-fledged place of worship, attracting a larger flock. Donations of the faithful now have an effective Status of Silver 1. Your cult awards the Temple a Religious Relic, which you are sworn to protect with your lives. The Expansion Cost is 10 gold crowns (minimum 1 gold crown), and the new Interest Payments are 10 silver shillings.\n\nThe second time you Expand a Holy Temple, it becomes the provincial centre of your cult, and increases in size and importance accordingly. A handful of subordinate priests now attend the Temple in your absence, and donations have an effective Status of Silver 3. You may choose for your Temple to gain one of the following: a library of religious texts; a workshop (choose the Trade it services); fortifications to defend the Temple from attack.\n\nFinally, choose a Blessing from your cult’s Divine Lore — any Characters may enact that Blessing within the borders of the Temple, unless they have the Blessings or Miracles of a different god. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 5 gold crowns.\n\nThe third time you Expand a Holy Temple, it becomes a place of pilgrimage for devotees across the Empire and beyond. For smaller faiths, it may even become the cult’s new Seat of Power — either way, you now have a voice in the cult’s senior leadership and its doctrines. Your place of worship increases to the size of a cathedral, with all the architectural marvels that implies, and the donations of the faithful providing an effective Status of Gold 2. A small army of zealous believers pass through the Temple each day, and can be counted on to defend the Temple from attack in your absence. Finally, choose a Miracle of your god — any Characters may invoke that Miracle within the borders of the Temple, unless they have the Blessings or Miralces of a different god. The Expansion Cost is 400 gold crowns (minimum 40 gold crowns), and the new Interest Payments are 20 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): One of your flock (an NPC chosen by the GM) violates a stricture of your god within the Temple grounds. You may choose: invite your god to smite the NPC, inflicting a harsh or possibly fatal punishment; or accept the trespass as your own failing, and gain 1 Sin point. If you choose the latter, you gain a +20 bonus on all social Tests targeting the grateful lay-person for the duration of the next adventure.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): You devote yourself to supplication before your god, and are rewarded for your show of piety. For the duration of the next adventure, you count the Pray Skill as a Basic Skill (WFRP page 117), and gain the Bless Talent (WFRP page 134), with a Divine Lore matching the god venerated by the Temple. If you already have the Bless Talent for the corresponding Divine Lore, you instead gain access to a Miracle of your god, for the duration of the next adventure. If you already have the Bless Talent for a different Divine Lore, you gain no benefit from this Event.\n\nAdventure Hooks: One of your flock appears to manifest a great miracle on the Temple site. Awestruck onlookers believe they may have what it takes to become a venerated soul, and the news has reached the head of your cult. Your instructions are to interrogate the alleged miracle worker and investigate their activities, to discover if they are genuine, or a fraud channelling the Ruinous Powers. Religious investigators from cult headquarters are en route to verify your findings.\n\nWorshippers of a rival cult are intent on defiling your Temple. The omens of your deity are dark indeed, and harbingers of the opposing creed have been sighted on the borders of the parish. You have a week to prepare for their assault, enough time, you hope, to fortify the site, pray for guidance, entreat your flock to take up arms, and discover what unholy ritual the heretics intend for the day of bloodshed.\n\nFor Sale: The Shrine of the Blue Stag in Bloodpine Woods was officially lost to Spiderclaw Forest Goblins this past season, but for years beforehand it had been neglected and slowly consumed by the wilds. Now the hierarch of Taal is keen to correct this oversight. He’s willing to finance the expedition to recover the nature god’s sanctuary, but expects to be repaid in donations and other offerings he can use to expand the cult’s influence abroad. It will take blood, sweat, and tears to clear Bloodpine Woods of Greenskins, a necessary undertaking if pilgrims are to feel safe revisiting the site. But if Taal’s faithful show appropriate deference to the wilderness around them, many birds and beasts may assist their campaign against the befouling Forest Goblins."
+  },
+  {
+    "id": "archives-iii:reference:18-religious-alternatives",
+    "name": "Religious Alternatives",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 18,
+    "text": "As it explains in the special rules, characters investing in a holy temple may benefit from the Holy Visions Talent whilst they are on the temple grounds. In addition, followers of the gods from the major Old World pantheon may benefit from other Talents whilst on the grounds of the temple they have invested in.\n\nManann: Master and Commander (see Sea of Claws page 63)\n\nMorr: Fearless (Undead)\n\nMyrmidia: War Leader\n\nRanald: Cardsharp\n\nRhya: Animal Affinity (regarding domestic aminals only)\n\nShallya: Surgery\n\nSigmar: Iron Will\n\nTaal: Animal Affinity (regarding wild animals only)\n\nUlric: Furious Assault\n\nVerena: Tower of Memories\n\nIf the character has the Talent already, they count as having an additional level of the Talent (if appropriate) when in the temple."
+  },
+  {
+    "id": "archives-iii:reference:19-knightly-order",
+    "name": "Knightly Order",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "19–20",
+    "text": "Examples: Fortified shrine; border watchtower; hospital; bank and treasure vault; noble fraternity or sorority; crumbling keep.\n\nSuggested Careers: Lawyer; Physician; Priest; Merchant; Advisor; Duellist; Envoy; Noble; Warden; Road Warden; Witch Hunter; River Warden; Cavalryman; Guard; Knight; Soldier; Warrior Priest.\n\nStart-Up Costs: 50 gold crowns (minimum 5 gold crowns)\n\nInterest Payments: 2 gold crowns and 10 shillings.\n\nCreditors: Kirste, Custode del Portale, head of the cult of Morr; Jarl De Vend, disgraced knight of the Reiksguard; Baroness Ludgera, a distant cousin of the Emperor Karl-Franz; Francesco of Miragliano, heavy cavalry mercenary commander.\n\nSources of Income: Financial services, including managing the estates of campaigning knights (Evaluate, Silver 5); charitable donations from the Imperial State Army, religious leaders, or political figures (Charm, Silver 4); plunder won on campaign (Melee, Silver 4).\n\nTrappings: Chapterhouse with assembly hall, chapel, armoury, fortified entrance, and stable for horses; founding charter, detailing expected code of conduct; battle standard of the Order; treasure vault (empty but for a few ancestral weapons and exotic curios).\n\nSpecial Rules: Knightly Orders of the Empire are renowned as the chivalric elite of humanity, and any who wear their heraldry are used to commanding respect. Any Character who has invested at least 1 gold crown into a Knightly Order (as Start Up Costs, Expansion Costs, Debt Repayments, or Interest Payments) gains +20 to all Leadership Tests targeting loyal citizens of the Empire.\n\nIn addition, choose whether your Knightly Order is a secular order or a templar order (if the latter, choose a god they worship). Any character who has invested at least 1 gold crown into a secular order adds the Warrior Born Talent to their Career’s list of available Talents. Any character who has invested at least 1 gold crown into a templar order adds the Holy Visions Talent to their Career’s list of available Talents.\n\nExpansion: The first time you Expand a Knightly Order, three NPC knights join the Order, and bring their retainers and Trappings with them. Your knights seldom meet in person, typically tending their estates and fighting their own campaigns, but they may muster at the chapterhouse on special occasions (feasts, grand campaigns, defence of the Order).\n\nYou gain the collection of membership dues as an additional Source of Income (Leadership, Silver 5), and a pair of Destriers with Saddle, Tack, and Barding as additional Trappings. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 5 gold crowns.\n\nThe second time you Expand a Knightly Order, half a dozen NPC knights join the Order, along with their retainers and Trappings. At least one knight now protects the chapterhouse at all times, and can be depended upon to provide Assistance (WFRP page 155). Choose one of your Sources of Income to increase its effective Status to Gold 2. Finally, choose one of the following upgrades for your chapterhouse: a Library; a Workshop (choose a relevant Trade); improved defences (e.g. a rampart or gatehouse); a platoon of men-at-arms to guard it. The Expansion Cost is 300 gold crowns (minimum 30 gold crowns), and Interest Payments are increased to 15 gold crowns.\n\nThe third time you Expand a Knightly Order, another dozen knights commit their estates to the Order. One of these knights contributes a magic item to the Order’s treasure vaults — a weapon, talisman, standard, or suit of armour. The first knights to join the Order, if they are still alive, gain the title Knights of the Inner Circle. Furthermore, choose one of your Sources of Income to increase its effective Status to Gold 4. Finally, your chapterhouse is upgraded with a perimeter layer of defence — a fortified wall, secondary keep, or moat. The Expansion Cost is 400 gold crowns (minimum 40 gold crowns), and the new Interest Payments are 20 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): One of the Order’s knights is called to crusade beyond the borders of the Empire, and vacates the chapterhouse. They may never return, but if the Character keeps track of their foreign exploits, they may be able to leverage the knight’s adventures to promote the Order. If no NPCs have joined the Order, this Event has no effect.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): The Order is invited to partake in a jousting tournament, hosted by another Imperial Knightly Order, or their rivals in Bretonnia. The tournament is a splendid opportunity to earn valour and renown, not to mention prizes. Until the end of the next adventure, the tournament provides an additional Source of Income (Melee (Cavalry), Gold 2).\n\nAdventure Hooks: Brother Helmn, Knight of the White Wolf, is alleged to have slandered the good name of your Order. The honour of your chapter demands this insult cannot go unanswered, but the warrior templars of Ulric are renowned as formidable soldiers, and many disputes between Knightly Orders have been known to escalate into full-blown conflict when martial pride is on the line.\n\nHow will you respond to this challenge — assuming the allegations are even true, and not manufactured by enemies plotting your downfall?\n\nCount von Schtaff battles to preserve his dominion from the assault of a necromancer and her undead hordes. Though he has petitioned your Order for aid, the decision to ride to war belongs to the Order’s grand master alone. Many grand masters choose to battle only if they are granted full command of the army they ride alongside, a solemn duty not undertaken lightly. Will you refuse the count, fight under his banner, or negotiate with him for the position of general, or some other favour?\n\nFor Sale: The tower of Ironcast was abandoned centuries ago, a border fort that served no purpose when the provincial borders were redrawn several leagues north of its hilltop. Now, Sir Baluin of Bretonnia has generously offered to pay for its refurbishment, if a brotherhood of worthy warriors will take up its post. Baluin is architect of a nascent Bretonnian-Imperial alliance he intends to lead on crusade to the southern continent. He will expect the new Knightly Order to eventually join that war effort, or at least help to finance the expedition."
+  },
+  {
+    "id": "archives-iii:reference:20-alternative-options-for-specific-orders",
+    "name": "Alternative Options For Specific Orders",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 20,
+    "text": "Those who have connections with an existing knightly order, and who set up an enterprise that seeks to establish a new chapter of that order, may experience certain benefits and limitations. On one hand they could benefit from the backing of several influential and wealthy creditors in the form of celebrated knights of the order, but they would also need to extol the virtues and behaviour expected of a knight of the order and may also be expected to support the order on the next occasion that it takes part in a military effort.\n\nAs it explains in the special rules, characters investing in a secular order may benefit from access to the Warrior Born Talent, whilst those who invest in a templar order may benefit from the Holy Visions Talent. Existing orders may instead facilitate access to other Talents. Three examples are given here:\n\nORDER OF THE BLAZING SUN Benefits: Close ties to the Cult of Myrmidia Limitations: Knights are expected to be learned and follow the strictures of the cult of Myrmidia Talent: War Leader\n\nORDER OF THE KNIGHTS GRIFFON Benefits: Close ties to the Cult of Sigmar Limitations: Knights are expected to be learned and follow the strictures of the cult of Myrmidia Talent: Animal Affinity (Demigryphs and Horses only)\n\nORDER OF THE WHITE WOLVES Benefits: Close ties to the Cult of Ulric Limitations: Knights may be seconded to serve as guards to the High Temple in Middenheim, to follow the strictures of the cult of Ulric Talent: Furious Assault"
+  },
+  {
+    "id": "archives-iii:reference:21-tavern",
+    "name": "Tavern",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "21–22",
+    "text": "Examples: Village pub; roadside inn; town hostel; restaurant; embassy; gentlemen’s club; professional hosting service; house of ill-repute.\n\nSuggested Careers: Agitator; Merchant; Townsman; Envoy; Spy; Villager; Riverwoman; Bawd; Racketeer; Guard.\n\nStart-Up Costs: 5 gold crowns (minimum 10 silver shilling)\n\nInterest Payments: 5 silver shillings per downtime period.\n\nCreditors: Irmalinda Bek, stern village matriarch; Randall Wurterkunst, exploitative franchise landlord; Marcus Fairburne, route master for Castle Rock Coaches; Roving Hartung, free company captain.\n\nSources of Income: Serving food and drink (Trade (Cook), Brass 4); servicing rental accommodation (Endurance, Brass 4); buying and selling local gossip and secrets (Gossip, Brass 4).\n\nTrappings: A reliable supply of food and cheap ale; bar and stools; tables and chairs; kitchen and cellar; boarding rooms with beds, dressers, and other basic amenities.\n\nSpecial Rules: Whilst drinking your own source of income is not the most commercially prudent choice, most pub landlords become well acquainted with their own supply. Any Character who considers themself a regular at a local Tavern may add the Consume Alcohol Skill to those available for their Career. In addition, any Character who begins an adventure at a Tavern may choose to begin the adventure Stinking Drunk. Roll 1d10 and consult WFRP page 121 for the effects. Characters who begin the adventure Stinking Drunk gain a free point of Fortune, which can even take them above their starting maximum, though their Fortune resets to its usual maximum at the start of the next session.\n\nExpansion: The first time you Expand a Tavern, you recruit a pair of bar staff, and a bouncer to keep an eye on rowdy patrons. You may optionally choose to upgrade the quality of your Trappings, increasing the effective Status of one Source of Income (your choice) to Silver 1, but pricing out most of your existing customers in favour of newer ones with more disposable income. Finally, the Tavern gains a small stable to house customers’ coaches and horses, and an ostler to take care of them. You gain your own Riding Horse and Saddle to store here too. The Expansion Cost is 50 gold crowns (minimum 5 gold crowns), and the new Interest Payments are increased to 2 gold crowns and 10 silver shillings.\n\nThe second time you Expand a Tavern, you may choose one of your Sources of Income to increase its effective Status to Silver 3. In addition, you invest in barricades, secure locks, and other defences that can be used to fortify the establishment. In times of crisis, you can secure yourself inside the Tavern with a decent supply of consumables, and wait for everything to blow over. Lastly, you gain a Blunderbuss, stashed above or behind the bar. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 5 gold crowns.\n\nThe third time you Expand a Tavern, it becomes the social centre of your community, frequented by local celebrities and travelling entertainers. Your bar staff now double as effective informants, keeping you well apprised of current affairs. Event accommodation becomes a new Source of Income (Haggle, Silver 4). Finally, your stable now houses a Coach, with a driver on hand to transport yourself or very important guests. The Expansion Cost is 200 gold crowns (minimum 20 gold crowns), and the new Interest Payments are 10 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): Your regular supplier of ale raises their prices, and you are forced to water down drinks to maintain your profit margin. Your grumbling patrons tolerate the change until the end of the next adventure. If you haven’t found a more affordable supplier by the end of that adventure, the effective Status of serving food and drink at the Tavern decreases.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): A local festival or other celebration sees an increase in demand for both out-of-town accommodation and alcohol. Characters using the Tavern for the Income Endeavour increase their earnings by +50% until the start of the next adventure. If no Characters use the Income Endeavour, another establishment picks up the custom instead. The GM should provide details of this competing establishment, and introduce them as a rival in future adventures.\n\nAdventure Hooks: A local sub-culture of patrons (watchmen, sailors, Elves, or another of the GM’s choice) adopt the Tavern as their venue of choice. The clique provides good enough custom, but they alienate your regulars with their insularity, and provoke the animosity of a rival sub-culture already patronising the Tavern (gang members, dockworkers, Dwarfs, etc). If the situation is not resolved soon, it could escalate into a full brawl, and cause serious property damage. Find a way to settle the matter without someone setting fire to the Tavern!\n\nA wealthy stranger arrives at the Tavern with a full retinue of soldiers. She buys out every room for the night, bribing all existing patrons to make themselves scarce, and posting sentries on every entrance and exit. Though the stranger tips well, it is clear she is bracing for trouble, and you are hardly surprised when a mysterious force begins picking off her guards one-by- one. Who is this stranger? Why would someone with the wealth\n\nto hire so many soldiers, and pay off the Tavern’s customers, choose to stay in a venue like this? And how will you avoid being caught in the crossfire between her and her pursuer?\n\nFor Sale: The Cups Inn, just outside the Marketplatz of Helmgart, was once quite popular with Bretonnian merchants at the end of their journey through Axe Bite Pass. Unfortunately, its resident con artists and their ‘true stories’ regarding the location of the Holy Grail incurred the vengeful wrath of Bretonnian Questing Knights three years ago, who burned the tavern to the ground. It’s difficult to say if restoring the accommodation for beleaguered merchants will be gratefully received by the Empire’s western neighbour, or if it will provoke them to violence once again. Brandt Kolter, and his fellow partners in finance, are willing to take on a share of risk, if the Characters are prepared to do the same."
+  },
+  {
+    "id": "archives-iii:reference:23-market-parlour",
+    "name": "Market Parlour",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "23–24",
+    "text": "Examples: General goods store; butcher; bakery; chandler (candle shop); cobbler (shoe shop); tailor; cattle market; potter; barber-surgery (grooming and dentistry); engraver; winery; cooper (cask and barrel shop); trade tools shop for fishing, mining, art supplies; apothecary.\n\nSuggested Careers: Apothecary; Physician; Artisan; Merchant; Townsman; Hedge Witch; Herbalist; Hunter; Mystic; Villager; Pedlar; Riverwoman; Bawd; Fence.\n\nStart-Up Costs: 5 gold crowns (minimum 10 silver shillings)\n\nInterest Payments: 5 silver shillings per downtime period.\n\nCreditors: Johann Neuberg, exploitative franchise owner; Sinner Sigritte, crime boss desiring a legitimate front for illegitimate dealings; Burgomeister Raina Brandtdfurt, mistress of the marketplatz; Sassa Beutelg, desperate investor.\n\nSources of Income: Sale of general goods (Haggle, Brass 5); sale of specialist goods, ordered from a contact out of town or made-to-order (Haggle, Brass 5).\n\nTrappings: Covered stall with canvas tarpaulin, mobile and collapsible on non-market days; a steady supply of saleable goods; abacus and secure moneybox; guild licence (if applicable).\n\nSpecial Rules: Market traders are well-versed in the fine art of bartering, not just with customers, but with each other. Exchanges of trade goods, credit, and promises of future assistance are as common to shopkeepers as conventional payment in coin. Characters who spend an Endeavour gaining Income from sale of general goods gain +20 to Haggle Tests until the end of the next adventure. GMs may alternately allow Characters to automatically succeed on Haggle Tests in the next adventure by offering a Favour instead (WFRP page 198), usually repaid by spending Endeavours in the next period of downtime. In addition, Characters who spend an Endeavour gaining Income from sale of specialist goods can often arrange for their own special deliveries at the same time, gaining +20 to Availability Tests (WFRP page 290) until the end of the next adventure.\n\nExpansion: The first time you Expand a Market Parlour, you employ a couple of shopkeepers to help you operate the business. You also exchange your collapsible stall for a permanent shopfront. Your new accommodation is open for business on any day you choose, not just on market day, allowing you to choose one Source of Income and increase its effective Status to Silver 1.\n\nYou may choose to move into the room above or behind your shop as a new convenient residence — it contains all the Trappings you would expect of a modest home. Alternately, you may rent the room out as an alternate Source of Income (Haggle, Silver 1). The Expansion Cost is 50 gold crowns (minimum 5 gold crowns), and the new Interest Payments are 2 gold crowns and 10 silver shillings.\n\nThe second time you Expand a Market Parlour, you expand the size of your store and its back rooms. Choose one of the following to upgrade your store: a Workshop, where you can manufacture items and sell them directly (choose a relevant Trade); a Draught Horse and Wagon, and space to stable them, for special deliveries; a large Warehouse, for purchasing items in bulk, and a guard to defend it from thieves. You also employ another handful of shopkeepers, with a working rota that permits you to take as much time off as you like. Finally, choose a Source of Income, and increase its effective Status to Silver 3. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and the new Interest Payments are 5 gold crowns.\n\nThe third time you Expand a Market Parlour, it transforms into the centre of its own marketplace. You invite other retailers to set up stalls within your sale space, in return for a cut of their profits, which provides its own Source of Income (Haggle, Silver 5). Your shopkeepers now double as effective informants, keeping you apprised of what other retailers are up to, and potential business opportunities. You gain an additional store upgrade from the second Expansion, above. Finally, because your Enterprise is now a target for rioters and looters, you employ a dedicated team of security guards, and invest in barricades and other defences you can use to reinforce the Parlour if necessary. The Expansion Cost is 200 gold crowns (minimum 20 gold crowns), and the new Interest Payments are 10 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): The local council closes market day for the month, to mark a tragedy, religious holiday, or other special event. No Character may use a Market Parlour to earn Income until the start of the next adventure. In the period of downtime following the next adventure, all Income from Market Parlour is increased by 50% to represent the built-up demand from your customers.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): Your business interests and the needs of your stakeholders conveniently align, allowing you to pay off an outstanding debt with spare goods and no additional inconvenience. Choose a Favour owed by you or the Enterprise (WFRP page 198), and downgrade it one level — a Significant Favour becomes a Major Favour, a Major Favour becomes a Minor Favour, or a Minor Favour is repaid entirely.\n\nAdventure Hooks: One of your customers accuses you of selling stolen goods. Depending on how well you know your supplier, the accusations may be true, or the customer may just be looking for a bribe. Either way, the watch is taking an interest, and your regular customers are nervous of being implicated in handling stolen goods themselves.\n\nDiscover the truth, adjust your supply chain as necessary, and make sure all troublemakers are either paid off or otherwise convinced it is in their interest to stay silent.\n\nA gang of shoplifters targets not just your store, but the parlours of other shopkeepers. The watch, as always, is too corrupt or incompetent to stop them. Form a posse of disgruntled shop owners, track down the perpetrators, and enact some vigilante justice — ideally before the stolen goods are fenced out-of- town.\n\nFor Sale: After a lifetime crafting and selling ingenious toys, Harald Tinkerfinger is ready to close down the House of Clockwork Delights, and return to his family in the World’s Edge Mountains. To avoid traumatising the children of Altdorf, who have come to cherish his designs, he is willing to sell his remaining inventory to another entrepreneur, and even provide a little start-up capital to keep the shop open. The toy inventor’s remaining clansmen, however, expect this money to be repaid on schedule. If they are disappointed, the Characters may be surprised to learn just how seriously some people take the business of fun."
+  },
+  {
+    "id": "archives-iii:reference:25-noble-estate",
+    "name": "Noble Estate",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "25–26",
+    "text": "Examples: Manor house; public gardens; aristocrat’s country home; hunting lodge; vineyard; farming serfdom; ancestral castle; wizard’s tower. Characters only run a small part of the Estate, until the Enterprise Expands.\n\nSuggested Careers: Wizard; Merchant; Rat Catcher; Bailiff; Hunter; Villager; Coachman; Charlatan; Guard; Knight; the entire Courtier Class.\n\nStart-Up Costs: 5 gold crowns (minimum 10 silver shillings)\n\nInterest Payments: 5 silver shillings per downtime period.\n\nCreditors: Alastar the Younger, High Elf of Chrace; Baroness Amalia, mistress of the Reikland Botanical Gardens; Governor Kurtz, regent-lord of Penzkirchen; Duchess Salica, Tilean lady in exile.\n\nSources of Income: Domestic labour (Endurance, Brass 4); field labour (Endurance, Brass 3).\n\nTrappings: A single farm, garden, lodge, guesthouse, wing of a mansion, or other small part of the Estate, along with all Trade tools relevant to your position.\n\nSpecial Rules: Characters raised on a Noble Estate are acutely aware of their position in the social pecking order. The divides between farming serfs, supervising agents, and feudal masters are stark and unyielding. Any Character who has invested at least 6 brass pennies into a Noble Estate (as Start-Up Costs, Expansion Costs, Debt Repayments or Interest Payments) doubles the bonuses and penalties of Status on any Skill Tests they undertake (WFRP pages 50–51).\n\nExpansion: The first time you Expand a Noble Estate, you are trusted with oversight of neighbouring sections of the Estate, as well as your own. These administrative duties, such as tax collection, inventory registration, and informing, provide their own Source of Income (Perception, Silver 2).\n\nYour neighbours are expected to provide you Assistance (WFRP page 155) when you ask for it, though their help may be begrudging. Finally, you gain access to a Riding Horse with Saddle and Harness, from the Estate’s stable. The Expansion Cost is 50 gold crowns (minimum 5 gold crowns), and the new Interest Payments are 2 gold crowns and 10 silver shillings.\n\nThe second time you Expand a Noble Estate, you take over the whole Estate, as its feudal master or regent lord.\n\nThe Estate incorporates the labour of two hundred peasants, and any three of the following Trappings: a Library; a Workshop (choose a relevant Trade); an extravagant wardrobe, with a personal tailor at your beck and call; a stable of half a dozen Riding Horses, with Saddles and Harnesses; a garage with a pair of Coaches, Horses to pull them, and valets to drive them; a boathouse with pleasure yacht; a barracks and regiment of men- at-arms, with a captain to lead them. You are now entitled to raise tax revenue from the surrounding districts, which provides its own Source of Income (Leadership, Gold 3). You are also expected to provide soldiers, when required, to support your elector count’s military campaigns. The Expansion Cost is 300 gold crowns (minimum 30 gold crowns), and the new Interest Payments are 3 gold crowns.\n\nThe third time you Expand a Noble Estate, you extend your dominion beyond its inheritance, perhaps by subsuming the territories of less fortunate lords. Choose two additional Trappings from the second Expansion, above, or suggest a new unfeasibly extravagant Trapping to your GM instead (e.g. a monster zoo). The effective Status of raising tax revenue is increased to Gold 5. You are now a major political figure in your grand province, and are expected to involve yourself in high society events accordingly. The Expansion Cost is 500 gold crowns (minimum 50 gold crowns), and the new Interest Payments are 25 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): The Estate’s poorest workers fall upon hard times, and beg for charity that will help them to survive the upcoming season. You may choose to rescue them by paying an amount equal to your current Interest Payments. If you donate, your show of mercy defies the expectations of your social class. You may choose to ignore any penalties on Skill Tests due to your Status until the end of the next adventure.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): Your master is travelling abroad, and places additional responsibility on your shoulders. Excel, and you shall be richly rewarded. Until the start of the next adventure, you may use a Source of Income from the next higher level of Expansion. If you have already Expanded the Estate three times, this Event has no additional effect.\n\nAdventure Hooks: For generations, your Estate has been in competition with the neighbouring Upton Manor, the vendetta between lords as hostile as the rivalry between menials. Now, the Estate is hosting the Baron and Baroness von Kalegan for an annual festivity, along with other landed aristocrats. Every part of the Estate must be decorated and elevated to an impeccable standard, the better to rub it in the noses of those tasteless von Kalegan snobs. Unfortunately, it is expected the nobles will hire saboteurs, specifically to embarrass the Estate in front of their high society contacts.\n\nChilling news of walking dead assaulting vulnerable manor houses has spooked the Estate into erecting fortifications, and bracing for a siege. The defenceless have been sent away, but the remaining militia are poorly trained, and barely prepared to withstand necromantic attack. Drill the militia as best you can, and devise a plan to triumph over the oncoming zombie horde."
+  },
+  {
+    "id": "archives-iii:reference:26-the-reality-of-noble-estates",
+    "name": "The Reality Of Noble Estates",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": 26,
+    "text": "As written, these rules suggest that just about anyone could jump into establishing a noble estate with a small investment. We have included noble estates as part of the legitimate business enterprises chapter because for Characters of the right persuasion and background they could feasibly work in such a way. However, most aristocrats in the Old World would find it distasteful to be thought of as mired in the world of business, instead placing high import in the notion that their lineage grants them the right to rule. There are Barons and Grafs in the Empire who have bought their lands and titles, but such practices are seen as regrettable necessities at best, and at worst a dangerous precedent that undermines what it is to be truly noble.\n\nIn provinces of the Old World where land is held securely, and a respect for aristocratic tradition is strong, there is no chance for an adventurer to be granted the opportunity to set up an estate of their own. A Character either must have the Noble Blood Talent, or to have won the appreciation of very important people and have been granted tenure of an estate in recognition of such services.\n\nFor example, the Barony of Böhrn (WFRP page 278) shows how, in places like the Reikland, every village and tract of forest falls under the governance of several noble families, paying vassalage to an overlord. In this instance Baroness Agetta has granted non-hereditary tenure to Warden Fabian, Warden Luethold, and Castellan Fronika. In the case of the death or disgrace of such individuals she may be inclined to pass the running of their estates to another likely candidate, though she may as easily decide her own household can manage them.\n\nTo the north and east of the Empire there are stretches of marcher territory, where those with the will and means to carve out an estate find fewer obstacles in their way, though the legalities of how to become a recognised landholder in the Empire vary from place to place and are written with an eye to supporting the aristocracy. Further afield the issue becomes even less certain, in Bretonnia for example no commoner claiming ownership of land would be tolerated, whilst in the Border Princes it is said that anyone with the means and will to do so can carve out their own fief.\n\nFor Sale: The grounds of Mankroft House have been overtaken by nature since the passing of Lady Mankroft just last year. Thanks to an unexpected inheritance, and the generous loans of her trustee Gisbert Franc, you have received a small part of the Estate to manage. The local villagers seem reluctant to help, disturbed by stories of unquiet spirits haunting the House, the late Lady Mankroft amongst them. The Characters must labour hard, both to turn a profit on the Estate, and avoid joining its chorus of ghostly inhabitants."
+  },
+  {
+    "id": "archives-iii:reference:27-performance-troupe",
+    "name": "Performance Troupe",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "27–28",
+    "text": "Examples: Circus; dance act; band of bards; travelling fair; professional orchestra; comedy act; marionette show; theatre company; gladiatorial combat.\n\nSuggested Careers: Engineer; Lawyer; Scholar; Agitator; Beggar; Artist; Spy; Mystic; Entertainer; Bawd; Charlatan; Thief; Witch; Pit Fighter.\n\nStart-Up Costs: 5 gold crowns (minimum 10 silver shillings)\n\nInterest Payments: 5 silver shillings per downtime period.\n\nCreditors: Dunstan Färberg, ‘generous’ patron of the arts; Grulessa, Asrai, wardancer of Loec; Asphodel Bridgefoot, retired Halfling ringmaster; Wolfgang Berger, wealthy writer and propagandist.\n\nSources of Income: Donations following public performances (Entertain (Any) or Perform (Any) or Play (Any), Brass 4); bookings for private events (Entertain (Any) or Perform (Any) or Play (Any), Silver 1); sale of merchandise (Haggle, Brass 5).\n\nTrappings: A Draught Horse and Wagon; an eclectic mix of costumes, props, instruments, and scripts, mostly in poor condition.\n\nSpecial Rules: The members of a Performance Troupe perfect their skills through repetition of a shared routine — though mixing it up every now and again is recommended, to prevent their material growing stale. Any Character who has invested at least 6 brass pennies into a Performance Troupe (as Start- Up Costs, Expansion Costs, Debt Repayments, or Interest Payments) can choose to either treat all Perform and Play Skills as Basic Skills (WFRP page 117), or select a single Entertain, Perform, or Play Skill Specialisation and add it to the Skills available for their Career. In addition, any Character working for a Performance Troupe may spend an Endeavour to produce new material for their Troupe. The next three Income Endeavours undertaken using the Performance Troupe and the new routine increase earnings by +50%.\n\nExpansion: The first time you Expand a Performance Troupe, you are joined by five additional performers, who can usually be relied upon to provide Assistance (WFRP page 155). The growth of your Troupe allows you to stage larger productions, perform in two locations at once, or call up an understudy if a performer is ill, drunk, or murdered.\n\nChoose one of your Sources of Income to increase its effective Status to Silver 3. Finally, you adapt your Wagon so it can fold out into its own improvised Stage. The Expansion Cost is 50 gold crowns (minimum 5 gold crowns), and the new Interest Payments are 2 gold crowns and 10 silver shillings.\n\nThe second time you Expand a Performance Troupe, you gain a permanent entertainment venue of your own, such as a theatre, concert hall, or fighting arena. When you aren’t using the venue, you can rent the space out to other performers, which provides its own Source of Income (Haggle, Silver 3). Backstage, the venue has a much greater selection of costumes, props, instruments, and scripts, mostly in decent condition. Finally, each performer in the Troupe now has their own dedicated understudy. The Expansion Cost is 200 gold crowns (minimum 20 gold crowns), and the new Interest Payments are 10 gold crowns.\n\nThe third time you Expand a Performance Troupe, your venue expands to become a popular hangout for the community’s social elites and travelling VIPs. Choose one upgrade for your venue: a spectacular stage, with state-of-the-art special effects made possible by engineering marvels or magic; an expanded backstage, with a huge selection of costumes, props, instruments, and scripts, mostly in superb condition; a Workshop for producing your own props (choose a relevant Trade); a stable of three Trained animals. Lastly, you are occasionally courted by celebrities of your art form, who wish to perform with your Troupe. This provides its own Source of Income (Entertain (Any) or Perform (Any) or Play (Any), Gold 2), but can only be chosen in alternating phases of Endeavours — if you derive Income from this Source after an adventure, you cannot use it in the round of Endeavours following the next adventure. The Expansion Cost is 300 gold crowns (minimum 30 gold crowns), and the new Interest Payments are 3 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): In response to a personal tragedy, a local lord outlaws dance and other frivolities, until their mood improves. If any Characters choose to Earn or gain Income with the Performance Troupe, they are flouting the ban or performing in secret venues. This may result in unpleasant ramifications during the next adventure.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): A wealthy individual reveals themself a fan of the Troupe’s work, though their patronage is not without complications. Roll 1d10 after all future rolls on the Enterprise Event Table. On an 8–10, the Troupe gains double the wealth from Sources of Income until the end of the next adventure, but the patron demands the Troupe make adjustments to their material, undertake a private performance, or provide some other favour. On a 1–2, the Troupe loses the fleeting attention of their benefactor, and this Event has no further effect.\n\nAdventure Hooks: An Imperial Noble hires the Troupe to perform for an aristocratic rival, inserting his own modifications into the Troupe’s routine. The new material is intended to provoke a reaction from the rival Noble, alluding to a crime they are alleged to have committed. Unfortunately, this subtext can be easily misinterpreted. When these cultured patrons escalate to cold-blooded murder, the Troupe must tread carefully in order to avoid being killed in the crossfire, and retain their professional reputation.\n\nAn NPC member of the Troupe suffers an unplanned death mid-performance, to the shock and horror of the audience. The plot thickens when the Characters discover their death was a result of deliberate sabotage — weakening of stage supports, fake locks replaced with real ones, or a prop weapon exchanged for a murder weapon. How did the killer gain access to the Troupe’s backstage? Is one of their fellow performers responsible? The Characters must discover the truth, before they are framed for the crime themselves.\n\nFor Sale: The touring show Wenger’s Warrior Entertainment was a revered spectacle of strongmen, wrestlers, and stage combat performers… at least until all their best performers were conscripted for the grand prince of Reikland’s free companies. Now Wenger is ready to get out of the game, but his show still has brand name recognition, and he is willing to loan it out in return for a cut of the profits. Few people sign up to be beaten by outrageously-dressed bodybuilders for the entertainment of a bloodthirsty crowd, but compared to the usual dangers of adventuring in Reikland, the job sounds positively tranquil."
+  },
+  {
+    "id": "archives-iii:reference:29-publishing-house",
+    "name": "Publishing House",
+    "category": "rule",
+    "topic": "Enterprises",
+    "page": "29–30",
+    "text": "Examples: Newspapers; fiction authorship; script production; foreign or historic translations; hagiography; pamphleteering; record keeping; academic journaling; educational materials; blueprint reproduction; tomes of magic.\n\nSuggested Careers:\n\nAgitator; Investigator; Townsman; Advisor; Artist; Envoy; Spy; Entertainer; Charlatan; Warrior Priest; the entire Academic Class.\n\nStart-Up Costs: 10 gold crowns (minimum 1 gold crown)\n\nInterest Payments: 10 silver shillings per downtime period.\n\nCreditors: Filibert Pewte, professor of Imperial History at the University of Altdorf; Morvaria, exile from the Tower of Hoeth; Percival Curmoch, tyrannical media mogul; Quolos, hierophant of the College of Light Magic.\n\nSources of Income: Mass-printing of popular items (Trade (Printer), Brass 4); limited editions, hand produced or printed- to-order (Trade (Printer), Brass 5); paid advertisements or advertorials (Haggle, Brass 4).\n\nTrappings: Printing press, paper, type pieces, and moulds; office containing desks, chairs, books, and writing kits; small library of records, reference materials, and prior publications.\n\nSpecial Rules: Purveyors of the written word are invariably more literate than the average Imperial citizen. The first time a Character undertakes the Income Endeavour at a Publishing House, they gain the Read/Write Talent (WFRP page 142) for free. If a Character already has the Read/Write Talent, they gain the Speedreader Talent instead (WFRP page 145). In addition, Characters who have invested at least 1 silver shilling into a Publishing House (as Start-Up Costs, Expansion Costs, Debt Repayments or Interest Payments) gain +20 to all Tests made as part of the Research Lore Endeavour (WFRP page 201).\n\nExpansion: The first time you Expand a Publishing House, you employ a staff of three clerks to help operate the printing press, produce content, and help to market the Enterprise. You can instruct them to research specialist topics on your behalf, or provide Assistance (WFRP page 155) whilst you do so. Choose a Source of Income to increase its effective Status to Silver 2; all other Sources of Income increase their effective Status to Silver 1. Finally, you gain a Riding Horse with Saddle and Tack, so you can make special deliveries of made-to-order items. The Expansion Cost is 50 gold crowns (minimum 5 gold crowns), and the new Interest Payments are 2 gold crowns and 10 silver shillings.\n\nThe second time you Expand a Publishing House, you employ a reliable network of informants, to help you find subjects of interest you can turn into new texts or stories. The Publishing House is now considered one of the pre-eminent sources of knowledge regarding your subject of expertise, and patrons may commission you to investigate specialist subjects on their behalf, which provides its own Source of Income (Perception or Research, Silver 4). Lastly, you gain a Draught Horse and Wagon, for mass deliveries of items to retailers (or direct to your customers). The Expansion Cost is 100 gold crowns (minimum 10 gold crowns), and Interest Payments are 5 gold crowns.\n\nThe third time you Expand a Publishing House, you employ another dozen writers. Your Publishing House is now considered a prestige imprint, and celebrity writers within your field will occasionally produce content for you. This provides its own Source of Income (Art (Writing), Gold 2), but can only be chosen in alternating phases of Endeavours — if you derive Income from this Source after an adventure, you cannot use it in the round of Endeavours following the next adventure. Finally, you may choose a Source of Income to increase its effective Status to Silver 5. The Expansion Cost is 100 gold crowns (minimum 10 gold crowns). The new Interest Payments remain at 5 gold crowns.\n\nAlternate Event 1 (55–57 on the Enterprise Event Table): An advertisement you print from a controversial figure, or one selling a dubious product or service, draws the ire of your regular readers. You can choose to pull the ad, halving any Income you gain from paid advertisements until the start of the next adventure, or let it run, and halve any Income gained from all Sources of Income besides advertisements. Whichever you choose, this may have consequences in the next adventure.\n\nAlternate Event 2 (58–60 on the Enterprise Event Table): One of your releases is unexpectedly popular, quickly selling out. Before the next adventure, you may spend an Endeavour fast-tracking the second printing of the text. If you do, you double the earnings from Income Endeavours in the round of Endeavours following the next adventure.\n\nAdventure Hooks: A recent release from your Publishing House has been interpreted, rightly or wrongly, as containing a subversive political message. Activists on either side of the debate rush to champion or condemn the text. Embracing the attention exposes you to hostility from whichever side you come out against, whilst refusing to take a position draws the derision of both factions. If the Characters find the courage to assume a progressive stance, they can use their new platform to enact lasting, positive change.\n\nA disgruntled priest has accused your Publishing House of smuggling heretical dogma into its texts, and has called for a mass book-burning. Even regular customers are starting to cancel orders, fearing the mob will turn on them next. Find a way to battle the rising hysteria, and expose the true agenda behind it, before the Witch Hunters climb onto the bandwagon.\n\nFor Sale: The maverick preacher Sindri Frynd has commissioned the production of a printing press — now he just needs a collection of worthy souls to operate it. Frynd envisions the press will be used to produce holy literature in line with the new revolutionary creed of the Warrior Priest Luthor Huss, but so long as the press is making a profit to support the breakaway sect’s crusade, he will be satisfied. Unfortunately, Frynd’s zealotry has also attracted the suspicion of the established Sigmarite orthodoxy. Whatever the press is used to produce, the Lectors will doubtless find an excuse to level accusations of heresy."
+  },
+  {
+    "id": "archives-iii:reference:30-profile-grafina-griselda-human-magnate-gold-5",
+    "name": "Grafina Griselda — Human Magnate Gold 5",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 30,
+    "text": "GRAFINA GRISELDA — HUMAN MAGNATE GOLD 5\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 41 | 28 | 28 | 26 | 53 | 30 | 51 | 60 | 55 | 57 | 11 |\n\nTraits: Weapon (Dagger) +4\n\nSkills: Animal Care 63, Bribery 77, Charm 82, Consume Alcohol 41, Cool 60, Evaluate 65, Gamble 80, Gossip 82, Haggle 62, Intimidate 43, Intuition 73, Language (Bretonnian 63, Classical 70), Leadership 77, Lore (Heraldry 80, Politics 80, Reikland 63), Melee (Fencing) 46, Play (Lute) 56, Ride (Horse) 45\n\nTalents: Attractive, Carouser, Coolheaded, Doomed, Etiquette (Nobles), Luck, Noble Blood, Read/Write, Savvy, Suave\n\nTrappings: Courtly Garb, Dagger, Hand Mirror, Jewellery worth 200 GC, Pouch containing Writing Kit and 10 sheets of Parchment and 200 GC, Townhouses in Altdorf and Auerswald, Riding Horse with Saddle and Harness"
+  },
+  {
+    "id": "archives-iii:reference:34-armour-and-stealth-tests",
+    "name": "Armour and Stealth Tests",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "Wearing any Chainmail or Plate imposes a penalty of –10 to any Stealth Tests."
+  },
+  {
+    "id": "archives-iii:reference:34-armour-damage",
+    "name": "Armour Damage",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "As blows rain down on your armour it can be damaged, possibly permanently. Whenever you are instructed to damage a piece of armour, the APs in the location are reduced by 1.\n\nIf this lowers the APs to 0 in that location, the armour there is rendered useless.\n\nArmour is generally damaged in one of two ways.\n\n1. A special ability triggers, such as a Spell or Talent, damaging a piece of armour.\n\n2. A Critical Wound is deflected."
+  },
+  {
+    "id": "archives-iii:reference:34-looting-armour",
+    "name": "Looting Armour",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "During the course of their adventures Characters are more likely to come across armour on the bodies of fallen foes and companions rather than commissioning a fitted suit for themselves. This is a great way to save money, but it does mean that many Characters will be wearing armour that was not made for them, and that will therefore be rather poorly fitted.\n\nWhenever a piece of armour is acquired by a Character for whom it was not made, the GM may decide that any given piece of armour will or will not fit (if it was made for a different Species, or a person with a much larger or smaller frame, for example). If it is uncertain whether or not a particular piece might suit a Character, roll on the following table:\n\n| D10 Roll | Leather & Soft Kit | Brigandine and Chainmail | Plate |\n| --- | --- | --- | --- |\n| 1-2 | Suitable Fit | Suitable Fit | Suitable Fit |\n| 3-4 | Suitable Fit | Suitable Fit | Poor Fit |\n| 5-6 | Suitable Fit | Poor Fit | Poor Fit |\n| 7-8 | Poor Fit | Poor Fit | Won't Fit |\n| 9-10 | Won't Fit | Won't Fit | Won't Fit |"
+  },
+  {
+    "id": "archives-iii:reference:34-poor-fit",
+    "name": "Poor Fit",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "The armour is outsized and uncomfortable. It counts as imposing its full ENC even when worn. The armour could be adjusted as per the rules for repairing armour. In order to do this it would need to be comprehensively refitted — this can be done using the rules for repairing armour, just as if their piece in question had been reduced to 0 AP in all locations."
+  },
+  {
+    "id": "archives-iii:reference:34-suitable-fit",
+    "name": "Suitable Fit",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "The armour is a good fit for the looting Character and may be worn as if it were made for them."
+  },
+  {
+    "id": "archives-iii:reference:34-suits-of-steel",
+    "name": "• Suits Of Steel •",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "Armour is a vital part of the toolkit most Characters will acquire in order to protect themselves during the course of the adventures. The rules for armour presented in this chapter provide more options and detail to those given in WFRP pages 299 to 300."
+  },
+  {
+    "id": "archives-iii:reference:34-wont-fit",
+    "name": "Won’t Fit",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 34,
+    "text": "The armour is much too large or too small to be worn by the Character at all.\n\nIf any particular Character does not find a set of armour suitable, the GM may decide that other Characters could roll on the chart to see how well the armour might fit them."
+  },
+  {
+    "id": "archives-iii:reference:35-asking-an-npc-to-repair-armour",
+    "name": "Asking an NPC to Repair Armour",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 35,
+    "text": "If a suitable NPC smith is asked to repair armour it costs 10% of the armour’s base price per AP lost to repair it. So, if you had a Sleeved Chainmail Coat with 1 AP of damage on the Body, and 1 AP of damage on the Arms, it will cost 20% of the armour’s base cost to fix it, in this case 12/–. If a section of your armour is completely broken, it will cost you 30% of the armour's base cost to fix, and you’ll likely be waiting some time before it is completed."
+  },
+  {
+    "id": "archives-iii:reference:35-critical-deflection",
+    "name": "Critical Deflection",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 35,
+    "text": "If a Character suffers a Critical Wound from an incoming attack on a location protected by armour, they can choose to let their armour be damaged by 1 AP to ignore the Critical Wound.\n\nThey still suffer all normal Wounds (and given their APs are now 1 point lower, they probably suffer an additional Wound), but they avoid the Critical Wound effects as the blow is absorbed by their now destroyed armour.\n\nWhen it comes to Critical Wounds caused by reducing your Wounds to below zero, sacrificing armour in this way only has an effect if it prevents Wounds being reduced to below zero."
+  },
+  {
+    "id": "archives-iii:reference:35-repairing-armour",
+    "name": "Repairing Armour",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 35,
+    "text": "When it comes to damaged armour, there are two ways to approach repairing it. A Character may use the Trade Skill to repair their own armour, or that of their companions, if they have the appropriate Trade Skill, Trade Tools and, for plate armour, a Workshop. Alternatively, damaged armour may be left with an NPC artisan who possesses the Skill to repair it."
+  },
+  {
+    "id": "archives-iii:reference:35-repairing-armour-as-an-endeavour",
+    "name": "Repairing Armour as an Endeavour",
+    "category": "endeavour",
+    "topic": "Alternative armour",
+    "page": 35,
+    "text": "A Character who does not have time or expertise to repair their armour during the course of an adventure could try to do so as an Endeavour during downtime. In order to do so they must have access to suitable tools (and a forge or workshop if working with plate).\n\nThe Character may then take a single Average (+20) Trade Test — repairing 1 AP of armour for every SL they score on the Test."
+  },
+  {
+    "id": "archives-iii:reference:35-repairing-armour-with-the-trade-skill",
+    "name": "Repairing Armour With the Trade Skill",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 35,
+    "text": "A Character may attempt to repair a piece of armour if they have the appropriate Skill and meet other criteria depending on the piece of armour.\n\n|  |  |\n| --- | --- |\n| Type of Armour | Trade Skill Used for Repairs |\n| Leather Armour or Brigandine | Trade (Tailor) — Trade Tools needed |\n| Chainmail | Trade (Smith) — Trade Tools needed |\n| Plate | Trade (Smith) — Trade Tools and Forge or Workshop needed |\n\nThey must then carry out an Extended Challenging (+0) Trade Test in order to repair the armour. The Test can be carried out once every hour, and the number of SLs required in order to repair a piece of armour depends on the type of armour being repaired. This represents the amount of time it takes to restore 1 AP to one location.\n\n|  |  |\n| --- | --- |\n| Type of Armour | SL Needed to Repair 1 AP |\n| Leather | 5 |\n| Brigandine | 7 |\n| Chainmail or Reinforced Soft Kit | 10 |\n| Plate | 15 |"
+  },
+  {
+    "id": "archives-iii:reference:36-armour-flaws",
+    "name": "Armour Flaws",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Some armours have a point of weakness, as described by Armour Flaws."
+  },
+  {
+    "id": "archives-iii:reference:36-armour-rules",
+    "name": "Armour Rules",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Armour is listed in the following format:\n\nArmour Type: Each armour is listed according to the material it is constructed from, in order of its effectiveness. Price: The price to buy an average piece of the armour. Enc: The Encumbrance of the armour. Availability: The Availability of the armour. Penalty: Any penalty for wearing the specific piece of armour in addition to Encumbrance. Locations: The Hit Locations the armour protects. APs: The number of Armour Points the armour provides to the protected Hit Locations. Qualities and Flaws: Any Qualities or Flaws that the armour may possess."
+  },
+  {
+    "id": "archives-iii:reference:36-combining-armour",
+    "name": "Combining Armour",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Different grades of armour may be worn on different parts of the body, but the notion that different grades of armour may be layered on top of one another is a misconception. Often suits of plate are finished with areas of mail or leather to cover gaps and points of articulation.\n\nSoft kits are woollen doublets, hose, and padding for the head designed to be worn under armour. They provide cushioning needed to prevent chafing, as well as laces and holes to attach pieces of armour to. They can be worn under any armour and must be worn under certain pieces of plate.\n\nBoiled leather is constructed from thick pieces of hide. It is rigid and tough and cannot be worn under mail or the more complicated pieces of plate. Only brigandine armour or a plate breastplate can be worn over boiled leather.\n\nChainmail is made from thousands of interlocking iron rings. It is heavy and requires regular cleaning and oiling to prevent corrosion. Only brigandine armour or a plate breastplate can be worn over chainmail.\n\nBrigandine consists of padded leather or fabric into which many small metal strips, or lames, have been riveted. Brigandine pieces are bulky and cannot be worn under other forms of armour. Lamellar armour, or scale mail, may look rather different to brigandine, but has the same qualities.\n\nPlate armour is painstakingly crafted from sheets of iron or steel. It is tailor made and close-fitting, so may not be worn over any type of armour other than soft kits. Breastplates are an exception to this rule, and can be worn over boiled leather or chainmail.\n\nExample: Alphonse is looking for as much protection as possible, and has the coin to get it. He can wear a reinforced soft kit with aventail, granting 1 AP to every hit location. A chainmail shirt grants him 2 AP to his body. He chooses plate bracers and leggings, along with a plate breastplate and great helm, granting him 3 AP to each location. In total, this grants him 4 AP to head, legs, and arms, and 6 AP to his body. Unfortunately the complicated plate bracers, leggings, and helm do not allow for the chainmail that grants him the additional 2 AP to his body."
+  },
+  {
+    "id": "archives-iii:reference:36-impenetrable",
+    "name": "Impenetrable",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "The armour is especially resilient, most attacks simply cannot penetrate it. All Critical Wounds caused by attacks scoring an odd number to hit you, such as an 11 or 33, are ignored."
+  },
+  {
+    "id": "archives-iii:reference:36-overcoat",
+    "name": "Overcoat",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Certain types of armour can be worn on top of other types. Brigandine pieces and Plate Breastplates can be worn on top of either Leather or Mail armour."
+  },
+  {
+    "id": "archives-iii:reference:36-partial",
+    "name": "Partial",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "The armour does not cover the entire Hit Location. An opponent who rolls an even number to determine hit location, or a Critical Hit, ignores the partial armour’s APs."
+  },
+  {
+    "id": "archives-iii:reference:36-reinforced",
+    "name": "Reinforced",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Some Soft Kits are designed with sections of mail placed to compensate for chinks in a full suit of plate armour. If a kit like this is worn under plate armour, that plate armour loses the Weakpoints Flaw."
+  },
+  {
+    "id": "archives-iii:reference:36-requires-kit",
+    "name": "Requires Kit",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Armour with this flaw can only be worn if a Soft Kit is worn underneath it."
+  },
+  {
+    "id": "archives-iii:reference:36-visor",
+    "name": "Visor",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "Some helmets come with a visor that can be raised to provide a wider field of vision. If the visor is closed the helmet performs as described. If the visor is opened the helmet loses any special abilities associated with its design and gains the Partial Flaw. Perception Tests are made with a –10% penalty when visors are open. It takes an Action to open or close a visor."
+  },
+  {
+    "id": "archives-iii:reference:36-weakpoints",
+    "name": "Weakpoints",
+    "category": "property",
+    "topic": "Alternative armour",
+    "page": 36,
+    "text": "The armour has small weakpoints where a blade can slip through. If your opponent has a weapon with the Impale Quality and scores a Critical, any APs of your armour are ignored."
+  },
+  {
+    "id": "archives-iii:reference:37-boiled-leather",
+    "name": "Boiled Leather",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 37,
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | APs | Qualities & Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Leather Jack | 12/- | 1 | Common | - | Arms, Body | 1 | - |\n| Leather Jerkin | 10/- | 1 | Common | - | Body | 1 | - |\n| Leather Leggings | 14/- | 1 | Common | - | Legs | 1 | - |\n| Leather Skullcap | 8/- | 0 | Common | - | Head | 1 | - |"
+  },
+  {
+    "id": "archives-iii:reference:37-brigandine",
+    "name": "Brigandine",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 37,
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | APs | Qualities & Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Brigandine Jack | 3GC | 3 | Scarce | - | Arms, Body | 2 | Overcoat |\n| Brigandine Jerkin | 2GC | 2 | Scarce | - | Body | 2 | Overcoat |"
+  },
+  {
+    "id": "archives-iii:reference:37-chainmail",
+    "name": "Chainmail",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 37,
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | APs | Qualities & Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Chainmail Chausses | 2GC | 3 | Scarce | -10 Stealth | Legs | 2 | - |\n| Chainmail Coat | 3GC | 4 | Common | -10 Stealth | Arms, Body | 2 | - |\n| Chainmail Coif | 1GC | 2 | Scarce | -10 Stealth, Perception | Head | 2 | - |\n| Chainmail Shirt | 2GC | 3 | Scarce | -10 Stealth | Body | 2 | - |"
+  },
+  {
+    "id": "archives-iii:reference:37-plate",
+    "name": "Plate",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 37,
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | APs | Qualities & Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Bracers | 8GC | 3 | Rare | -10 Stealth | Arms | 3 | Impenetrable, Requires Kit, Weakpoints |\n| Breastplate | 10GC | 3 | Scarce | -10 Stealth | Body | 3 | Impenetrable, Overcoat, Weakpoints |\n| Open Helm | 2GC | 1 | Common | -10 Perception | Head | 3 | Partial |\n| Plate Leggings | 10GC | 3 | Rare | -10 Stealth | Legs | 3 | Impenetrable, Requires Kit, Weakpoints |\n| Great Helm | 2GC | 2 | Rare | -20 Perception | Head | 3 | Impenetrable, Weakpoints |\n| Bascinet | 3GC | 2 | Rare | –20 Perception | Head | 3 | Impenetrable, Visor, Weakpoints |\n| Armet | 3GC | 2 | Rare | –20 Perception | Head | 3 | Impenetrable, Visor, Weakpoints |\n| Sallet | 4GC | 2 | Rare | –20 Perception | Head | 3 | Impenetrable, Visor, Weakpoints |\n\nPerception Head 1 Partial, Reinforced"
+  },
+  {
+    "id": "archives-iii:reference:37-soft-kits",
+    "name": "Soft Kits",
+    "category": "table",
+    "topic": "Alternative armour",
+    "page": 37,
+    "text": "| Armour | Price | Enc | Availability | Penalty | Locations | APs | Qualities & Flaws |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Soft Kit | 18/- | 1 | Scarce | - | Arms, Body, Legs | - | - |\n| Reinforced Soft Kit | 2GC | 1 | Scarce | - | Arms, Body, Legs | 1 | Partial, Reinforced |\n| Padding | 2/- | 0 | Scarce | - | Head | - |  |\n| Aventail | 12/- | 1 | Scarce | - | Head | 1 | Partial, Reinforced |"
+  },
+  {
+    "id": "archives-iii:reference:38-armet",
+    "name": "Armet",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 38,
+    "text": "The Armet is a Tilean design which fits closely on the head, being narrower around the neck. To facilitate the snug fit the helmet has an integral mechanism that must be worked to open and close it.\n\nThe exacting design of the Armet means that it can withstand blows that might damage other helmets. Every time the helmet might lose a point of AP, roll on the Armet Damage table."
+  },
+  {
+    "id": "archives-iii:reference:38-armet-damage",
+    "name": "Armet Damage",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 38,
+    "text": "D10 Roll\n\nEffect 1-5 The helmet is damaged as normal. 6-9 The helmet is not damaged. The helmet is not damaged, but the mechanism for opening the helmet is jammed. The wearer cannot remove 10 the helmet and must eat and drink through a straw until it is either broken open, or fixed by a Hard (–20) Trade (Blacksmith) Test."
+  },
+  {
+    "id": "archives-iii:reference:38-helmet-designs",
+    "name": "Helmet Designs",
+    "category": "rule",
+    "topic": "Alternative armour",
+    "page": 38,
+    "text": "There are a great many designs of helmet used in conjunction with plate armour, and Tilean, Bretonnian, and Imperial armourers all have their preferred designs. There is little practical difference between these designs, they are all strong, fully enclosed helms with visors which weigh much the same and provide the same sort of protection. However, in some circumstances particular designs may afford extra protection."
+  },
+  {
+    "id": "archives-iii:reference:42-strictures-of-handrich",
+    "name": "Strictures of Handrich",
+    "category": "rule",
+    "topic": "Handrich obligations",
+    "page": "42–43",
+    "text": "Handrich’s worshippers are encouraged to interpret his strictures as they will, keeping to their letter while working to exploit their loopholes. This, they say, encourages the flexibility of thought one needs to succeed. The cult’s critics consider it trickery in the open, dishonesty masquerading as a lawful contract.\n\nNo Day Without Profit A follower of Handrich must ensure the day is profitable. Coin is preferred, but profit can mean many things depending on the person. The important thing is the worshipper should act for their own net gain, whether this be closing an important trade deal, or getting one’s fellows to buy the next round of drinks. It is understood that the greater a person’s station, the more Handrich demands of this stricture.\n\nDeal in Truth The Cult of Handrich forbids false dealing, as trickery erodes the trust all trade is based upon. Followers cannot obscure the value of their wares, nor sell something they have no right to.\n\nWhile they must deal truthfully, this is not the same as dealing honestly. Followers are free to exaggerate benefits, neglect to mention complications, or use information at their disposal to get the upper hand. Lying to gain an advantage would be in violation of this stricture, but using insider knowledge of a competitor’s financial situation would not.\n\nHelp Those Who Help Themselves Handrich earned his godhood and looks down on anyone not willing to do the same. While Handrich’s followers are called to share their earnings to benefit society, it must not be in a way which Handrich views as encouraging laziness.\n\nA priest of Handrich would never give a beggar money for shelter, for example. Instead, they might direct them to a workhouse to earn their keep and contribute to the running of the institution.\n\nSome in the cult interpret this as a condemnation of taxation, which they view as governments taking money not rightfully theirs. They fulfil this stricture by lobbying political figures to enact tax cuts, allowing them to distribute their money as they see fit.\n\nAlways Get the Best Deal Trading is a holy act, a pure competition of wits with only one victor. Therefore, a follower of Handrich must always get the best possible deal, regardless of circumstances. If a person is looking to buy grain, they must pay for it. The fact that their village is starving should not warrant merciful treatment.\n\nHowever, the best deal does not always mean the most profitable. After all, if you take everything a person has, then who will trade with you next time? Sometimes, the best deal is one which builds relationships and leaves everyone happy, so that more profit can be extracted in the future."
+  },
+  {
+    "id": "archives-iii:reference:47-handrichs-blessings",
+    "name": "Handrich’S Blessings",
+    "category": "rule",
+    "topic": "Handrich",
+    "page": 47,
+    "text": "Priests of Handrich can access the following Blessings as per WFRP page 221:\n\nCharisma, Fortune, Hardiness, Protection, Wisdom, Wit"
+  },
+  {
+    "id": "archives-iii:reference:47-miracles-of-handrich",
+    "name": "Miracles Of Handrich",
+    "category": "rule",
+    "topic": "Handrich",
+    "page": 47,
+    "text": "Below are six Handrich Miracles which follow the usual rules on WFRP page 222. Handrich helps those who help themselves — he earned his own godhood after all — and so his Miracles tend to reward the already-successful. As such, they can be invoked after a successful Test to improve its results. Handrich isn’t one for selflessness, and failing to profit from a Handrich Miracle you have invoked will cause you to gain +1 Sin point. Define ‘profit’ as you will, but the GM has final say."
+  },
+  {
+    "id": "archives-iii:reference:51-penances",
+    "name": "Khaine — Penances",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 51,
+    "text": "Those who defy Khaine’s strictures usually make recompense by becoming the next victim. Cunning followers can restore favour by conducting an act of spectacular murder, such as slaughtering a priest of Morr in broad daylight or butchering an entire room of guildsmen.\n\nAll death is sacred, but only murder is sacred to Khaine Murder is an act of devotion, do not rush it Murder is its own reward Do not let an opportunity to kill pass you by — each such moment is a blessing given by Khaine Do not betray the cult, even in death Do not conceal the work of Khaine, even if it leads to your discovery"
+  },
+  {
+    "id": "archives-iii:reference:53-penances",
+    "name": "Solkan — Penances",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 53,
+    "text": "Penances from Solkan are tests of resolve and purity. Typical tasks involve avenging a great wrong or utterly destroying the tainted, especially when they require the penitent to burn something they hold dear. Solkan is never satisfied — penance is common amongst his cult.\n\nRevere the sun’s cleansing light each day Suffer nothing tainted by the Ruinous Powers — seek it out and obliterate it completely without pause or negotiation Suppress all emotions, other than righteous fury Do not tolerate signs of impurity such as flirtation, music, dancing, or frivolity of any kind Never compromise"
+  },
+  {
+    "id": "archives-iii:reference:53-strictures",
+    "name": "Solkan — Strictures",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 53,
+    "text": "Other strong feelings feed the Ruinous Powers and must be controlled. Compassion and moderation are signs of weak resolve which give Chaos a foothold in the world. Solkanites have special enmity for those who use magic or prophecy — powers which draw on Chaotic forces. The cult is disdainful of other Old World gods — although they have learned to keep these views discreet. They believe the ‘soft’ gods accommodate Human failings and allow the pervasive advance of Chaos.\n\nSuch uncompromising followers frequently see deviation and lack of purity in one another — especially when pragmatism overrides dogma. The cult has many splinter orders, ranging from secretive mystery cults in the Empire to powerful organisations in Tilea.\n\nThe Order of Light and Law — An order of inquisitors, powerful in Remas and influential elsewhere in Tilea and Estalia. In 1586 IC, the priesthood was slaughtered by the Daemon Prince Be'lakor as they tortured the oracle Necrodomo. They have lost face in recent years since they failed to protect Remans from a summoned daemon known as the Mardagg. In the Empire, witch hunters who follow Solkan typically align themselves with the Order of Light and Law.\n\nOrder of the Shattered Amulet — A peculiar fellowship of itinerant priests who seek the four fragments of Solkan’s amulet, shattered by a daemon of Khorne. This circular amulet was decorated with an unknown inscription and four serpents, consuming one another in a circle. Recent discoveries suggest the shards have been uncovered by Skaven.\n\nCult of the Vengeful Blaze — A secretive cult in Altdorf, the Cult of the Vengeful Blaze have infiltrated the government and military of the Empire’s capital. For more details, see Altdorf: Crown of the Empire.\n\nKnights of Purity — The Brotherhood of Purity is a charitable organisation in Marienburg, which is a front for the Knights of Purity, xenophobic fanatics dedicated to eradicating the smallest hint of Chaos wherever they see it. The Sword of Solkan is their agent, a mysterious vigilante who hunts and executes mutants in the port city.\n\nSöll’s Faithful — A localised folk religion in ‘Auld Solland’, the priests of vengeful Söll agitate for Solland’s independence and against the earthy rites of Rhya."
+  },
+  {
+    "id": "archives-iii:reference:58-penances",
+    "name": "Old Faith — Penances",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 58,
+    "text": "The most common penance for Old Faith worshippers is to spend time in the wilderness, alone. This is often welcomed as an opportunity to refresh and reflect rather than seen as a punishment.\n\nThe most common punitive penance is to be exiled from one’s home, permanently. This is seen as the painful severing of ties with one's very nature."
+  },
+  {
+    "id": "archives-iii:reference:58-priests-of-the-old-faith",
+    "name": "Priests Of The Old Faith",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 58,
+    "text": "The following Careers could be taken by Characters who venerate the Old Faith:\n\nNun Priest Warrior Priest\n\nHowever, because the gods of the Old Faith are largely faded and forgotten, the powers available to a follower of the Old Faith are less potent than those available to the followers of other gods. They are more varied in their application, however, as a follower of the Old Faith can appeal to their distant pantheon, rather than to a single jealous deity.\n\nWhen a follower of the Old Faith gains the Bless (Old Faith) Talent, they are not given six Blessings as the followers of other gods, but may choose whichever six Blessings they like.\n\nHowever, when the Character acquires the Invoke (Old Faith) Talent, they do not learn any Miracles. Instead they may learn an additional Blessing, and may purchase additional Blessings for the same XP cost that a Character with the Invoke Talent would normally spend on extra Miracles."
+  },
+  {
+    "id": "archives-iii:reference:58-strictures",
+    "name": "Old Faith — Strictures",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 58,
+    "text": "Respect all that is natural Never harm an animal except in self-defence or for food Do not disturb the places of power Care for our holy sites, repair them when they are damaged, honour them when they are disrespected Keep the traditions of the Old Faith and see that they do not die"
+  },
+  {
+    "id": "archives-iii:reference:62-alternative-skills-and-talents",
+    "name": "Alternative Skills And Talents",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 62,
+    "text": "The Hedge Witch Career emphasises herbalism. You could also consider a Hedge Witch to be an animal doctor. Players who want to demonstrate this can swap Lore (Herbs) for Animal Care, Trade (Herbalist) for Animal Training, Trade (Charms) for Charm Animal, Craftsman for Hardy, and Master Craftsman (Herbalist) for Robust.\n\nA first tier Hedge Witch should have Secret Signs (Hedge Witch) and Language (Belthani) along with other Skills. This enables a travelling hedge witch to spot local ones and vice versa, impart warnings of dangers, and share information such as where useful herbs grow and where dangers might lurk.\n\nOther Hedgefolk are expert craftsmen, able to fashion elaborate charms and talismans for various purposes. Lastly, the relatively unknown hedge walkers are masters of the spirit world, known for their ability to ‘walk the hedge’, the boundary between the physical and the immaterial."
+  },
+  {
+    "id": "archives-iii:reference:62-the-lore-of-hedgecraft",
+    "name": "The Lore Of Hedgecraft",
+    "category": "rule",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 62,
+    "text": "Hedgecraft has been practised for uncounted centuries in the Old World. During this time, several distinct traditions have formed. Arguably the most famous are the so-called ‘cunning folk’ or ‘wise ones’, practitioners of folk magic known for their skills at warding against any evil, be it disease, mischievous spirits, or the influence of other witches."
+  },
+  {
+    "id": "archives-iii:reference:63-goodwill",
+    "name": "Goodwill",
+    "category": "magic",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 63,
+    "text": "CN: 0 Range: You Target: AoE (Fellowship Bonus yards) Duration: Willpower Bonus Rounds You create an atmosphere conducive to friendliness and good spirits. All Fellowship Tests within the Area of Effect receive a bonus of +10, and Animosity and Hatred Psychologies have no effect."
+  },
+  {
+    "id": "archives-iii:reference:63-mirkride",
+    "name": "Mirkride",
+    "category": "magic",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 63,
+    "text": "CN: 0 Range: You Target: You Duration: Willpower Bonus minutes Speaking ancient words of magic, your spirit leaves your body, stepping into the Hedge, the dark space between the material world and the spirit realm. For the duration, you stand apart from the world, able to witness it visibly, but not affected in any way. Physical barriers are no impediment to you, and you may walk through non-magical obstacles.\n\nYour spirit form possesses all the Characteristics, Skills, and Talents you had as a physical being, but you are completely invisible and silent to anyone on the physical plane. You are immune to non-magical damage. You may not interact with physical objects but may cast spells which do. The following creatures are visible to you, and you may interact with them: invisible creatures, spirits, ethereal creatures, and Daemons.\n\nYour body remains in place, immobile and insensate, suffering from the Prone Condition. At the end of the spell, you are pulled suddenly back to your body.\n\nYou may also return to your body and touch it to end the spell. If your body is killed while you are walking the Hedge, your spirit wanders aimlessly for eternity."
+  },
+  {
+    "id": "archives-iii:reference:63-nepenthe",
+    "name": "Nepenthe",
+    "category": "magic",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 63,
+    "text": "CN: 0 Range: Touch Target: Special Duration: The drink lasts Willpower Bonus hours, its effects are permanent You must have a cup or other drinking vessel at hand to cast this spell. As you chant the incantations, a thick mist issues from your mouth and coalesces in the cup as a thick silver liquid. If a person drinks the liquid, they immediately forget all they know of a given individual of their choice."
+  },
+  {
+    "id": "archives-iii:reference:63-nostrum",
+    "name": "Nostrum",
+    "category": "magic",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 63,
+    "text": "CN: 0 Range: Touch Target: Special Duration: Willpower Bonus hours You incant a spell over a prepared draught, imbuing it with magical power. If drunk while the spell is in effect, the target immediately heals your Willpower Bonus in Wounds and is cured of one disease of the spellcaster’s choice. For every +2 SL on your Casting Test, the draught cures an extra disease."
+  },
+  {
+    "id": "archives-iii:reference:63-part-the-branches",
+    "name": "Part the Branches",
+    "category": "magic",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 63,
+    "text": "CN: 0 Range: You Target: You Duration: Willpower minutes Your pupils dilate as you complete your incantation, allowing you to see into the spirit world. This allows you to perceive invisible creatures, spirits, and Daemons."
+  },
+  {
+    "id": "archives-iii:reference:64-protective-charm",
+    "name": "Protective Charm",
+    "category": "magic",
+    "topic": "Minor gods and Hedgecraft",
+    "page": 64,
+    "text": "CN: 0 Range: Touch Target: Special Duration: Willpower Bonus days You imbue a charm such as a small piece of jewellery or pocket- sized trinket with a spell of protection. Those bearing the charm gain the Magic Resistance Talent. If they already have that Talent, the charm does nothing."
+  },
+  {
+    "id": "archives-iii:reference:76-abilities-limitations",
+    "name": "Abilities & Limitations",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 76,
+    "text": "Animal familiars provide benefits in addition to the standard Power Familiar spellcasting assistance. The spirit-bond also enhances a caster’s abilities according to the familiar’s species. For example, badger familiars improve the spellcaster’s resilience, foxes aid subterfuge, and so on. These shared abilities are called Companion Traits (see page 81). Animal familiars can only confer Companion Traits and magical assistance when positioned close to the caster (within 4 yards).\n\nAnimal familiars possess useful Creature Traits and are less conspicuous than homunculus familiars. Unlike homunculi, however, animal familiars are not customisable, and their capacity for learning new Skills and Talents is lower.\n\nThe Spirit-Bonding ritual on page 80 replaces the Create Familiar ritual used for homunculus constructs.\n\nAnimals aren’t as capable of following detailed instructions and communicating abstract concepts as homunculi. Combined with their lack of hands and limited language skills, this means that animal familiars cannot be relied upon to run errands or conduct research. Druids and Hedge Witches would argue, however, that animal intelligence is merely different from homunculus intelligence. Animal familiars are in fact more attuned to nature, weather, and the seasons than the average College wizard.\n\nPerhaps the most significant drawbacks of animal familiars are their requirements for food, sleep, and air, and their vulnerability to damage. Small-sized animals might be able to withstand a single attack, but Little animals cannot survive even one blow from a sword. Fortunately, animals have strong survival instincts to keep them out of danger. However, the timidness of animal familiars can sometimes leave spellcasters without magical aid in critical situations."
+  },
+  {
+    "id": "archives-iii:reference:76-npc-animal-familiars",
+    "name": "Npc Animal Familiars",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 76,
+    "text": "These NPC profiles are for a selection of commonly used gifted animals, advanced to tier 2 of the Animal Familiar Career (page 82). New Creature Traits and Talents described later in this chapter are indicated with italics. NPC witches can be assigned the animal most befitting their personality."
+  },
+  {
+    "id": "archives-iii:reference:76-profile-badger",
+    "name": "Badger",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 76,
+    "text": "BADGER\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 35 | - | 15 | 25 | 35 | 30 | - | 15 | 15 | 15 | 5 |\n\nCreature\n\nTraits: Animal Telepathy, Armour 1 (3), Belligerent, Bestial, Companion Trait (Resilience), Hardy, Night Vision, Size (Little), Skittish, Trained (Broken, Magic), Weapon+4\n\nOptional: Arboreal, Messenger, Size (Small), Territorial\n\nSkills: Cool 25, Dodge 35, Endurance 30, Entertain (Any) 20, Intuition 40, Language (Wilds) 20, Outdoor Survival 45, Perception 40, Stealth (Rural) 35, Swim 33\n\nTalents: Acute Sense (Smell), Animal Assistant, Sixth Sense"
+  },
+  {
+    "id": "archives-iii:reference:77-profile-cat",
+    "name": "Cat",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 77,
+    "text": "CAT\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 35 | - | 15 | 15 | 40 | 45 | - | 15 | 20 | 20 | 3 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Companion Trait (Stealth), Night Vision, Size (Little), Skittish, Stealthy, Stride, Trained (Broken, Magic), Weapon+3\n\nOptional: Arboreal, Infected, Messenger, Territorial\n\nSkills: Athletics 48, Climb 50, Cool 25, Dodge 50, Entertain (Any) 25, Intuition 45, Language (Wilds) 20, Outdoor Survival 45, Perception 48, Stealth (Rural and Urban) 50\n\nTalents: Animal Assistant, Luck, Scale Sheer Surface"
+  },
+  {
+    "id": "archives-iii:reference:77-profile-crow",
+    "name": "Crow",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 77,
+    "text": "CROW\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 2 | 30 | - | 10 | 10 | 35 | 30 | - | 20 | 25 | 15 | 3 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Companion Trait (Transformation), Flight 80, Size (Little), Skittish, Trained (Broken, Magic), Weapon+2\n\nOptional: Arboreal, Infected, Messenger, Territorial\n\nSkills: Cool 30, Gossip 20, Entertain (Any) 20, Intuition 45, Language (Barnyard) 23, Language (Wilds) 25, Navigation 40, Outdoor Survival 38, Perception 40, Stealth (Rural) 35\n\nTalents: Animal Assistant, Magical Sense, Super Numerate"
+  },
+  {
+    "id": "archives-iii:reference:77-profile-fox",
+    "name": "Fox",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 77,
+    "text": "FOX\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 35 | - | 15 | 20 | 40 | 35 | - | 20 | 20 | 20 | 4 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Companion Trait (Deception), Night Vision, Size (Little), Skittish, Stride, Tracker, Trained (Broken, Magic), Weapon+3\n\nOptional: Arboreal, Infected, Messenger, Size (Small), Territorial\n\nSkills: Cool 25, Dodge 40, Entertain (Any) 25, Intuition 45, Language (Wilds) 25, Navigation 45, Outdoor Survival 45, Perception 45, Stealth (Rural) 40, Stealth (Urban) 38, Swim 38, Track 45\n\nTalents: Animal Assistant, Magical Sense, Orientation"
+  },
+  {
+    "id": "archives-iii:reference:77-profile-owl",
+    "name": "Owl",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 77,
+    "text": "OWL\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 2 | 35 | - | 10 | 15 | 35 | 30 | - | 15 | 25 | 15 | 3 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Companion Trait (Divination), Night Vision, Flight 60, Size (Little), Skittish, Stealthy, Trained (Broken, Magic), Weapon+3\n\nOptional: Arboreal, Messenger, Territorial\n\nSkills: Cool 30, Dodge 35, Entertain (Any) 20, Intuition 43, Language (Wilds) 20, Outdoor Survival 40, Perception 45, Stealth (Rural) 38, Track 40\n\nTalents: Acute Sense (Sight), Animal Assistant, Luck"
+  },
+  {
+    "id": "archives-iii:reference:78-animal-familiar-characteristics",
+    "name": "Animal Familiar Characteristics",
+    "category": "table",
+    "topic": "Familiars",
+    "page": 78,
+    "text": "|  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  | Badger | Cat | Crow | Fox | Owl | Stoat |\n| Weapon Skill | 2D10 + 25 | 2D10 + 25 | 2D10 + 20 | 2D10 + 25 | 2D10 + 25 | 2D10 + 30 |\n| Ballistic Skill | - | - | - | - | - | - |\n| Strength | D10 + 10 | D10 + 10 | D10 + 5 | D10 + 10 | D10 + 5 | D10 + 5 |\n| Toughness | D10 + 15 | D10 + 10 | D10 + 5 | D10 + 10 | D10 + 10 | D10 + 5 |\n| Initiative | 2D10 + 25 | 2D10 + 30 | 2D10 + 25 | 2D10 + 30 | 2D10 + 20 | 2D10 + 35 |\n| Agility | 2D10 + 25 | 2D10 + 35 | 2D10 + 20 | 2D10 + 30 | 2D10 + 20 | 2D10 + 30 |\n| Dexterity | - | - | - | - | - | - |\n| Intelligence | D10 + 5 | D10 + 5 | D10 + 10 | D10 + 10 | D10 + 5 | D10 + 5 |\n| Willpower | D10 + 5 | D10 + 10 | D10 + 15 | D10 + 10 | D10 + 15 | D10 + 5 |\n| Fellowship | D10 + 5 | D10 + 10 | D10 + 5 | D10 + 10 | D10 + 5 | D10 + 5 |\n| Wounds | TB + WPB | TB + WPB | TB + WPB | TB + WPB | TB + WPB | TB + WPB |\n| Fate | 1 | 2 | 1 | 2 | 2 | 2 |\n| Resilience | 2 | 1 | 2 | 1 | 1 | 1 |\n| Extra Points | - | - | - | - | - | - |\n| Movement | 4 | 5 | 2 | 5 | 2 | 6 |"
+  },
+  {
+    "id": "archives-iii:reference:78-animal-familiar-generation",
+    "name": "Animal Familiar Generation",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 78,
+    "text": "Animal Familiars are generated as Characters after spirit- bonding has been completed (page 82). The bonded Character’s Player usually keeps their familiar’s character sheet and makes XP spending decisions. Personalities and behaviours are determined collaboratively between Player and GM. Animal Familiar generation follows the standard process, with a few exceptions:\n\nIn addition to Skills and Talents, Animal Familiars also have Creature Traits. Animal familiars don’t have Ballistic Skill or Dexterity scores, and they begin with fewer Skills and Talents than regular Characters do. Size (Little) gifted animals add WPB to their Wounds. This is an exception to the Size rules on WFRP page 341. Animal Familiars have access to special Talents and Creature Traits, described on page 79. They cannot use homunculus Familiar Talents from Winds of Magic.\n\nSpellcaster Characters can give a portion of any XP they earn to their Animal Familiars. At GM discretion, Animal Familiars may also receive XP for game sessions in which they played a significant role. The maximum familiar XP award is generally 25–50% of the amount earned by a Character.\n\n5 2 6"
+  },
+  {
+    "id": "archives-iii:reference:78-profile-stoat",
+    "name": "Stoat",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 78,
+    "text": "STOAT\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | Wp | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 40 | - | 10 | 10 | 45 | 40 | - | 15 | 15 | 15 | 2 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Bite+2, Companion Trait (Perception), Night Vision, Size (Little), • Skittish, Stealthy, Trained (Broken, Magic), Weapon+2\n\nOptional: Arboreal, Infected, Messenger, Territorial •\n\nSkills: Climb 45, Cool 20, Dodge 45, Entertain 20, Intuition 50, Language (Wilds) 20, Outdoor Survival 53, Perception 53, Stealth (Rural) 45, Swim 45\n\nTalents: Animal Assistant, Second Sight, Rover"
+  },
+  {
+    "id": "archives-iii:reference:78-stoat",
+    "name": "Stoat",
+    "category": "table",
+    "topic": "Familiars",
+    "page": 78,
+    "text": "Stoat familiars are common amongst Hedge Witches and wizards who subsist on hunting and forage. The stalking ability obtained from stoat-bonding is also useful for espionage and murder. Stoats are challenging familiars that bite when they’re hungry, and sometimes nest in clothing or backpacks. Their reputation as crafty, cold-blooded killers isn’t entirely undeserved.\n\nSTOAT\n\n|  |  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | Wp | Fel | W |\n| 6 | 40 | - | 10 | 10 | 45 | 40 | - | 15 | 15 | 15 | 2 |\n\n6 40 - 10 10 45 40 - 15 15 15 2 Creature Traits: Animal Telepathy, Bestial, Bite+2, Companion Trait (Perception), Night Vision, Size (Little), Skittish, Stealthy, Trained (Broken, Magic), Weapon+2 Optional: Arboreal, Infected, Messenger, Territorial Skills: Climb 45, Cool 20, Dodge 45, Entertain 20, Intuition 50, Language (Wilds) 20, Outdoor Survival 53, Perception 53, Stealth (Rural) 45, Swim 45 Talents: Animal Assistant, Second Sight, Rover"
+  },
+  {
+    "id": "archives-iii:reference:79-animal-skills-parent-characteristics",
+    "name": "Animal Skills & Parent Characteristics",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Physical differences between animals and Humans change the Characteristics used for certain Skills. Animals have natural instincts enabling them to survive in the rugged wilderness where claws, beaks, and keen senses can substitute admirably for hands. Furthermore, animal musculature and bone structures are better suited to activities like climbing and swimming.\n\nOutdoor Survival: Substitute Initiative for Intelligence.\n\nClimb and Swim: Substitute Agility for Strength."
+  },
+  {
+    "id": "archives-iii:reference:79-badger",
+    "name": "Badger — familiar starting choices",
+    "category": "species",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Skills: Cool, Endurance, Intuition, Outdoor Survival, Perception, Swim Talents: Acute Sense (Smell), Second Sight, Sixth Sense Creature Traits: Armour 1, Belligerent, Bestial, Hardy, Night Vision, Size (Little), Skittish, Trained (Broken, Magic), Weapon+4"
+  },
+  {
+    "id": "archives-iii:reference:79-cat",
+    "name": "Cat — familiar starting choices",
+    "category": "species",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Skills: Athletics, Climb, Dodge, Outdoor Survival, Perception, Stealth (Rural or Urban) Talents: Luck, Scale Sheer Surface, Second Sight Creature Traits: Bestial, Night Vision, Size (Little), Skittish, Stealthy, Stride, Trained (Broken, Magic), Weapon+3"
+  },
+  {
+    "id": "archives-iii:reference:79-crow",
+    "name": "Crow — familiar starting choices",
+    "category": "species",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Skills: Gossip, Intuition, Perception, Language (Barnyard or Wild), Navigation, Outdoor Survival Talents: Magical Sense, Sixth Sense, Super Numerate Creature Traits: Bestial, Flight 80, Size (Little), Skittish, Trained (Broken, Magic), Weapon+2"
+  },
+  {
+    "id": "archives-iii:reference:79-finding-a-gifted-animal",
+    "name": "Finding A Gifted Animal",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": "79–80",
+    "text": "Gifted animals can be spotted in the wilderness using Second Sight or Magical Sense. Except for crows, the animals in this chapter are nocturnal, meaning they leave their lairs at night. Each night the caster spends searching for a potential familiar, roll a Hard (–20) Perception Test to determine whether a gifted animal was spotted. Roll randomly for the species of animals spotted by this method (75% are mature; 25% are young).\n\nYoung animals are more adaptable as familiars than mature ones, but they are usually found at the den or nest. An animal lair can be located with a Challenging (+0) Outdoor Survival or Average (+20) Track Test. The caster may choose the species being sought. Each lair has a 50% chance of containing a gifted young animal. Note that wild animals defending their lairs usually gain the optional Territorial Creature Trait, and Charm Animal Tests made at lairs are Very Hard (–30).\n\nAlternatively, casters with the Aethyric Attunement Talent can meditate in the woods to summon a familiar. Each night of meditation, roll a Difficult (–10) Channelling Test to determine if the caster’s spirit-call was answered.\n\nThe Game Master can choose an animal species befitting the caster’s personality (50% are young, 50% are mature). Gifted animals summoned by this method approach within 1 yard of the caster, however they must still be captured or befriended (see Bonding With Animal Familiars below).\n\nThe final option for acquiring a gifted animal is to purchase it from a specialty merchant. Gifted animals count as Exotic Availability, meaning procurement requires the Commission Endeavour (WFRP page 197). The standard cost for a gifted young animal before Haggling is 200 GC (100 GC for a mature animal). The caster may choose the species. Animals purchased by this method have already been tamed. Merchants who capture and sell gifted animals are hated by Wood Elves."
+  },
+  {
+    "id": "archives-iii:reference:79-fox",
+    "name": "Fox — familiar starting choices",
+    "category": "species",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Skills: Navigation, Perception, Outdoor Survival, Stealth (Rural), Swim, Track Talents: Luck, Magical Sense, Orientation Creature Traits: Bestial, Night Vision, Size (Little), Skittish, Stride, Tracker, Trained (Broken, Magic), Weapon+3"
+  },
+  {
+    "id": "archives-iii:reference:79-option-animal-familiar-size-variations",
+    "name": "Option: Animal Familiar Size Variations",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "The animal species in this chapter are Size (Little) by default. Badgers and foxes may instead be Size (Small) to represent bigger varieties. The Wounds score for these larger familiars is (2 x TB) + WPB. Size (Small) wild animals generally elicit more attention than Size (Little) ones do, making them less popular with witches.\n\nMootland badgers can even grow to Size (Average) and be ridden by Halflings as mounts. Familiars of that size are rare, however, because of the danger they’d pose if corrupted by Chaos. Some witches prefer Size (Tiny) familiars such as rats, bats, and toads, which only have 1 Wound but can be easily hidden in a pocket. Very young animals may be treated as a Size class smaller until they mature."
+  },
+  {
+    "id": "archives-iii:reference:79-owl",
+    "name": "Owl — familiar starting choices",
+    "category": "species",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Skills: Dodge, Intuition, Outdoor Survival, Perception, Stealth (Rural), Track Talents: Acute Sense (Sight), Luck, Sixth Sense Creature Traits: Bestial, Flight 60, Night Vision, Size (Little), Skittish, Stealthy, Trained (Broken, Magic), Weapon+3"
+  },
+  {
+    "id": "archives-iii:reference:79-starting-skills-talents-and-traits",
+    "name": "Starting Skills, Talents, and Traits",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "You may choose 2 Skills to gain 5 Advances each, and 2 Skills to gain 3 Advances each. You may select 2 Talents from the 3 choices listed. You begin with all the listed Creature Traits."
+  },
+  {
+    "id": "archives-iii:reference:79-stoat",
+    "name": "Stoat — familiar starting choices",
+    "category": "species",
+    "topic": "Familiars",
+    "page": 79,
+    "text": "Skills: Climb, Dodge, Outdoor Survival, Perception, Stealth (Rural), Swim Talents: Magical Sense, Rover, Second Sight Creature Traits: Bestial, Bite+2, Night Vision, Size (Little), Skittish, Stealthy, Trained (Broken, Magic), Weapon+2"
+  },
+  {
+    "id": "archives-iii:reference:80-animal-communication",
+    "name": "Animal Communication",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 80,
+    "text": "Casters cannot communicate easily with Newly Bonded, tier 1 Animal Familiars. The Charm Animal Skill conveys only basic messages (e.g. stay, calm, run away), otherwise a familiar simply follows its caster around by default. Certain spells such as Beast Tongue (WFRP page 245) enable more nuanced conversation. Communication isn’t required for casters to benefit from Companion Traits or the Animal Assistant Talent.\n\nA tier 2 Animal Familiar can learn the Animal Telepathy Talent. NPC animal familiars are assumed to be tier 2 unless otherwise specified. A more complex relationship develops at this stage because the animal can express emotions and abstract concepts. Spellcasters can also explain plots or situations to their familiar via telepathy.\n\nAt tier 3 (Spirit Companion), Animal Familiars can learn to speak the caster’s native language. Though verbal communication is coarser and more simplistic than telepathy, the ability to speak with a spellcaster’s friends enables the familiar to become an active party member.\n\nAnimals can always communicate with other animals of their own species. Gifted animals can also communicate with different animal species using the Language (Barnyard or Wilds) Skill. The animals included in this chapter generally speak Wilds; only cats, foxes, and crows are likely to speak Barnyard. Wild animal familiars are useful intermediaries with forest creatures, whereas urban familiars can converse with the party’s horses, dogs, and mules."
+  },
+  {
+    "id": "archives-iii:reference:80-animal-familiar-behaviours",
+    "name": "Animal Familiar Behaviours",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 80,
+    "text": "Once animal familiars have spirit-bonded, they instinctively follow the caster everywhere. Most familiars are happy to perch on a shoulder or ride in an open pack. Circumstances such as Psychology or Conditions might physically separate casters from their familiars. If the separation distance is greater than 4 yards, the caster can no longer benefit from either Companion Traits or the Animal Assistant Talent. Spellcasters can dispatch their familiars beyond 4 yards by making an Average (+20) Charm Animal Test.\n\nAnimal familiars cannot follow complex instructions more than 4 yards from their caster. Simple delivery or scouting missions are understood, but anything more complex might require an Intelligence Test by the animal. Spirit-bonded animals aren’t mindless servants — they retain a capacity for independent thought. Should the caster attempt to bring a familiar into a burning building or similarly hostile environment, the familiar can refuse if it succeeds an opposed Cool Test against the caster. If they do so they may instead wait safely outside."
+  },
+  {
+    "id": "archives-iii:reference:80-bonding-with-animal-familiars",
+    "name": "Bonding With Animal Familiars",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 80,
+    "text": "Before a spirit-bonding ritual can be performed, the gifted animal must either be broken or befriended. Both approaches use the Animal Training Endeavour (WFRP page 196). Befriending is resolved using the Charm Animal Skill instead of Animal Training (the Animal Affinity Talent grants auto- success for befriending). Mature wild animals are harder to train; reduce Animal Training or Charm Animal Tests to Difficult (–10). Tamed and befriended animals gain the Trained (Broken) Creature Trait, which negates their Bestial Creature Trait.\n\nAfter the Animal Training Endeavour has been completed, the caster and animal must spend at least a week becoming attuned to each other’s spirits. This requires constant physical proximity (generally within 2–4 yards) except when the caster is sleeping. No die roll is needed, only time and togetherness. Upon completion of attunement, the gifted animal gains the Trained (Magic) Creature Trait, which negates their Skittish Creature Trait. Spirit-bonding can now be performed."
+  },
+  {
+    "id": "archives-iii:reference:80-more-than-one",
+    "name": "More than One?",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 80,
+    "text": "A spellcaster can attempt to bond with several animals, though the CN of the spirit-bonding ritual is doubled for every existing animal familiar the spellcaster has."
+  },
+  {
+    "id": "archives-iii:reference:80-spirit-bonding-ritual",
+    "name": "Spirit-Bonding Ritual",
+    "category": "magic",
+    "topic": "Familiars",
+    "page": 80,
+    "text": "CN: 30 Type: Any Lore Learning XP: 150 Ingredients: You must have a magically gifted animal to become your Power Familiar. Conditions: The animal familiar must already have been broken or befriended (an Animal Training Endeavour) and attuned to your spirit (at least 1 week). Sacrifices: Animal familiars do not require a sacrifice during spirit-bonding. However, you might suffer trauma if your familiar is killed (see Corruption & Death, page 81). Consequences: The ritual fails, and the animal loses its Trained (Magic) Creature Trait. The ritual can only be attempted again after a week of re-attunement."
+  },
+  {
+    "id": "archives-iii:reference:81-companion-traits-new",
+    "name": "Companion Traits (New)",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": "81–82",
+    "text": "Each Animal Familiar species confers a different Companion Trait to its spirit-bonded spellcaster when positioned within 4 yards of them. Companion Traits give the caster access to two Talents. If the listed Talents are already known, add +1 SL. Traits of multiple familiars can be used simultaneously.\n\nCompanion Traits also cause Behavioural Effects that might be considered unnatural by those who notice.\n\nThe caster can suppress these behaviours during an encounter by making an Average (+20) Cool Test. Corruption Side-effects are more extreme behaviours that tend to worsen progressively with every Physical or Mental Mutation gained by the soul- bonded caster.\n\nDeception (Fox) Talents: Blather, Schemer\n\nBehavioural Effects: Caster’s eyes gleam with cunning; speaks in riddles and metaphors; nagging desire to roam about for no apparent reason.\n\nCorruption Side-effect: Caster becomes paranoid and reclusive.\n\nDivination (Owl) Talents: Holy Visions, Sixth Sense\n\nBehavioural Effects: Caster is surrounded by faint magic aura; has a desire to initiate random philosophical discussions; is often deep in contemplation.\n\nCorruption Side-effect: Caster becomes obsessed with minor facts and details.\n\nPerception (Stoat) Talents: Hunter’s Eye, Shadow\n\nBehavioural Effects: Caster’s body movements are jerky; lies and exaggerates for personal gain; constantly looking for new opportunities.\n\nCorruption Side-effect: Caster becomes territorial and misanthropic.\n\nResilience (Badger) Talents: Robust, Tenacious\n\nBehavioural Effects: Caster’s breathing makes a snuffling sound; temptation to be insensitive when giving opinions; focuses single-mindedly on the task at hand.\n\nCorruption Side-effect: Caster becomes argumentative and aggressive.\n\nStealth (Cat) Talents: Alley Cat, Rover\n\nBehavioural Effects: Caster’s footsteps are completely noiseless; vacillates between friendly and cold; frequent insomnia and napping.\n\nCorruption Side-effect: Caster becomes aloof and condescending.\n\nTransformation (Crow) Talents: Nose for Trouble, Master of Disguise\n\nBehavioural Effects: Caster’s voice sounds dry and creaky; interrogates suspected cheaters or liars; fascinated by mysteries and puzzles.\n\nCorruption Side-effect: Caster becomes judgmental and mocking of others."
+  },
+  {
+    "id": "archives-iii:reference:81-corruption-death",
+    "name": "Corruption & Death",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 81,
+    "text": "Spirit-bonding increases the vulnerability of both spellcasters and their animal familiars to corruption and trauma. Whenever animal familiars are exposed to Corrupting Influences (WFRP page 182) the caster must also test for Corruption, and vice versa. If both caster and familiar are exposed to the same Corruption source, just roll once for each of them. Familiars suffer from Corruption the same way Human do, and may develop either mental or physical mutations\n\nThe premature death of a spirit-bonded companion is traumatic. If the familiar dies, the caster must make a Hard (–20) Cool Test or suffer 2d10 Wounds ignoring TB and Armour (Elven wizards can roll at Challenging (+0) Difficulty instead). Additionally, the caster gains a Trauma Psychology (WFRP page 191) appropriate to the situation. Death by natural causes does not cause trauma. Animal Familiars suffer the same fate if their caster dies, though those that survive and spend a Fate Point may live on as minor elementals or nature spirits."
+  },
+  {
+    "id": "archives-iii:reference:81-language-barnyard-or-wilds",
+    "name": "Language (Barnyard or Wilds)",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 81,
+    "text": "These Language Skill specialisations can only be learned by gifted animals, and a select few Beastman bray-shamans and Wood Elf shapeshifters. The creature can speak with either wild or domesticated animals by making strange noises that only beasts can understand. Most animal familiars can learn only one of these dialects, but Crows can learn both."
+  },
+  {
+    "id": "archives-iii:reference:81-new-talents-creature-traits",
+    "name": "New Talents & Creature Traits",
+    "category": "rule",
+    "topic": "Familiars",
+    "page": 81,
+    "text": "The Talents and Creature Traits in this chapter are only available to Animal Familiars. New Creature Traits can be purchased by Animal Familiar Characters at a cost of 100 XP each.\n\nNew Talent: Animal Assistant Max: 1 This Talent is specifically for Power Familiar (Animal) Characters. For the Power Familiar (Homunculus) version, see the Winds of Magic sourcebook, page 186. The Animal Familiar may assist a soul-bonded spellcaster with any Channelling or Language (Magick) Tests they make. The familiar can also assist Outdoor Survival Tests, and Perception Tests that are magical in nature. Each assistant provides the normal +10 bonus (WFRP page 155) whether it knows the Skill or not."
+  },
+  {
+    "id": "archives-iii:reference:82-new-creature-trait-animal-telepathy",
+    "name": "Animal Telepathy",
+    "category": "trait",
+    "topic": "Familiars",
+    "page": 82,
+    "text": "The Animal Familiar can communicate silently with its spirit- bonded spellcaster. Communication is non-verbal and therefore may be as complex as needed (bearing in mind the animal’s Intelligence score). The caster may also initiate communication with the familiar. The maximum range of Animal Telepathy is 4 yards.",
+    "aliases": [
+      "New Creature Trait: Animal Telepathy"
+    ]
+  },
+  {
+    "id": "archives-iii:reference:82-new-creature-trait-invisibility",
+    "name": "Invisibility",
+    "category": "trait",
+    "topic": "Familiars",
+    "page": 82,
+    "text": "Once per day, the Animal Familiar’s body can become fully translucent with a barely perceptible outline. Perception Tests to notice the familiar are Very Hard (–30). When hiding, the familiar can only be spotted by characters with the Magical Sense Talent. Invisibility lasts the familiar’s Willpower score in hours and cannot be deactivated prematurely.",
+    "aliases": [
+      "New Creature Trait: Invisibility"
+    ]
+  },
+  {
+    "id": "archives-iii:reference:82-new-creature-trait-messenger",
+    "name": "Messenger",
+    "category": "trait",
+    "topic": "Familiars",
+    "page": 82,
+    "text": "The Animal Familiar can deliver messages up to its Intelligence miles in distance. No Intelligence Test is needed by the familiar to follow complex instructions when more than 4 yards from its spellcaster. Messages being delivered through unexplored terrain might be delayed or expose the familiar to danger. Messages can be written on letters tied to the animal or spoken by familiars with a relevant Language Skill.",
+    "aliases": [
+      "New Creature Trait: Messenger"
+    ]
+  },
+  {
+    "id": "archives-iii:reference:82-new-creature-trait-sensory-sharing",
+    "name": "Sensory Sharing",
+    "category": "trait",
+    "topic": "Familiars",
+    "page": 82,
+    "text": "The spellcaster can see, hear, and smell through the senses of its spirit-bonded familiar. Spells cannot be cast from the familiar’s body, nor can Animal Telepathy be used for communication beyond 4 yards. The maximum Sensory Sharing range (in miles) is the lower value of either the caster’s or familiar’s Willpower scores.",
+    "aliases": [
+      "New Creature Trait: Sensory Sharing"
+    ]
+  },
+  {
+    "id": "archives-iii:reference:85-channelling",
+    "name": "Channelling",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 85,
+    "text": "‘The finest carpenter in Altdorf can’t make so much as a stool without some wood, nor can the best handgunner strike their target if they lack dry powder. It’s the same for us, only our materials are a bit more useful than wood, and a damn sight more explosive than gunpowder.’\n\n— Albrecht Wint, Magister of the Bright College\n\nWhile the rules presented for Channelling in WFRP (page 237) allow wizards the flexibility to cast powerful spells, they can also require spellcasters to spend quite a bit of time in combat taking no action other than Channelling.\n\nWhile this is fine, and does help to keep powerful spells from being cast too often, it can also be frustrating for some Players. If you feel your game can withstand some more active magic users, the following optional rules may be substituted for those found in the rulebook."
+  },
+  {
+    "id": "archives-iii:reference:85-channelling-test",
+    "name": "Channelling Test",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 85,
+    "text": "Characters can gather the power needed to cast powerful spells by Channelling. To channel magic a Character must decide which wind they wish to Channel, and use their action to make an Extended Channelling Test. Each SL adds to a special pool of power, which the Character may use to reduce the CN of any spell they are capable of casting using the Wind they have Channelled. Each SL generated in this way reduces the CN of a spell by one, to a minimum of 0. Once the Character feels they have gathered enough power, they must make a Casting Test on their turn, casting the spell at the reduced CN.\n\nAny additional power is lost once a spell is cast. If the Casting Test fails, the stored energy is lost and the spellcaster must roll on the Minor Miscast Table. Channelled power may not be used to Overcast a spell, though of course reducing a spells CN sufficently will make Overcasting more likely.\n\nIf a Character wishes to interrupt their Channelling to do something else — other than casting a spell or Cant using their gathered power — they may do so, but this counts as an Interruption (see below).\n\nIf, at the start of their turn, a spellcaster wants to stop channelling they may take an action to safely vent their gathered power."
+  },
+  {
+    "id": "archives-iii:reference:86-cants",
+    "name": "Cants",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "Cants are another use for channelled power. These are semi- informal practices taught in hushed whispers in the Colleges, as no one is quite sure if their use is sanctioned. Most wizards who know of these abilities, however, make good use of them.\n\nIn addition to using channelled power to cast difficult or particularly spectacular spells, practised wizards can carefully shape small motes of this power to achieve minor though not insignificant effects. With power gathered from Channelling, a spellcaster with the appropriate Lore Talent may learn to use any of the Cants listed below. If they expend at least 1 SL of gathered power using a Cant, they do not lose the SL they normally would for spending a Round without Channelling.\n\nThese effects are varied, and in most cases do not require an Action to make use of except where explicitly stated. Even if a Cant does not require an Action, a magic-user may make use of no more than one each Round."
+  },
+  {
+    "id": "archives-iii:reference:86-critical-channelling",
+    "name": "Critical Channelling",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "If a spellcaster rolls a double whilst Channelling, they may immediately add a number of bonus SL to the Extended Channelling Test equal to their Willpower Bonus. However, unless they possess the Aethyric Attunement Talent, they must also roll on the Minor Miscast Table."
+  },
+  {
+    "id": "archives-iii:reference:86-fumbled-channelling",
+    "name": "Fumbled Channelling",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "If the spellcaster fails a Test and rolls doubles during the Extended Channelling Test to cast a spell, they Fumble and must roll on the Minor Miscast Table."
+  },
+  {
+    "id": "archives-iii:reference:86-how-much-is-too-much",
+    "name": "How Much Is Too Much?",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "These rules intentionally place no upper limit on the amount of power that a wizard can channel. Eventually, after a minute or so, this power will start to leak from them catastrophically, which should prevent magic-wielding Characters from claiming that their Character is always in possession of several ‘standby SL’, ready to unleash at a moment’s notice.\n\nIf you do find that Characters have begun stockpiling this power before a fight, you may wish to cap the amount of SL which can be gathered in this way at a number equal to 3 × Willpower Bonus, which should help to keep things under control."
+  },
+  {
+    "id": "archives-iii:reference:86-interruptions",
+    "name": "Interruptions",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "If a spellcaster is distracted by anything whilst channelling, such as receiving damage or taking a Surprised Condition, they must pass a Hard (–20) Cool Test. If they fail thisTest, any SL gener- ated on the Extended Channelling Test to cast a spell are lost and the spellcaster must roll on the Minor Miscast Table."
+  },
+  {
+    "id": "archives-iii:reference:86-key-differences",
+    "name": "Key Differences",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "The updated rules on Channelling are the same as those found on page 22 of Winds of Magic, and are repeated here for those who don’t have access to that book. These rules are optional, but you are encouraged to use them, especially for parties that are blessed (or burdened!) with more than one magic user. The main differences are as follows:\n\nYou no longer need to declare which spell you are trying to cast when you begin Channelling, allowing for more flexibility with magic. You do need to declare which Wind you are gathering, though this should not be an issue for most Human magic-users.\n\nCritical Channelling no longer instantly achieves enough SL to cast the spell on the following Round. Instead it grants you additional bonus SL to your ongoing Test."
+  },
+  {
+    "id": "archives-iii:reference:86-warpstone",
+    "name": "Warpstone",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 86,
+    "text": "A spellcaster who uses Warpstone doubles any SL they generate on Casting Tests or Channelling Tests. However, Warpstone is a dangerous Corrupting Influence (WFRP, page 182) and counts as a Malignant Influence as explained above.\n\nWarpstone is a powerful fuel for magical energy, but it is not limitless. Keep track of how many CN of spellcasting a piece of Warpstone can supply before being entirely consumed. 1 gram of warpstone"
+  },
+  {
+    "id": "archives-iii:reference:87-the-lore-of-beasts",
+    "name": "The Lore of Beasts",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 87,
+    "text": "Face of the Wild By expending 1 SL of gathered power, you sprout fangs, fur, claws, or other intimidating features. You gain the Fear (1) Creature Trait until your next turn.\n\nTalons of Ghur You may expend a number of SL of gathered power, up to a maximum of your Willpower Bonus, to add +1 Damage for each to any unarmed attack you make until your next turn. You may decide to apply this effect after you have made your Melee Test, but before the GM has described the results.\n\nThick Hide By expending 3 SL of gathered power, you reinforce leather armour you are wearing. Add 1 AP to any hit location protected by leather armour until your next turn."
+  },
+  {
+    "id": "archives-iii:reference:87-the-lore-of-death",
+    "name": "The Lore of Death",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 87,
+    "text": "Eyes of Death By expending 1 SL of gathered power, you are granted a vision of another creature's death. You may ask how close a creature you can see is to death. The GM must describe, in relative terms, how many Wounds that creature has remaining.\n\nWhispers of Doom By expending 2 SL of gathered power, you can learn the Dooming of any creature you inflicted at least 1 Wound on during the previous Willpower Bonus minutes.\n\nDeath’s Visage By expending 3 SL of gathered power, you can take on the aspect of the grave. For this round, you no longer need to breathe, and can ignore the effects of Fatigued, disease, and Poisoned. Creatures with the Undead Trait will ignore you unless you attack them directly, or if they are intelligent enough to see through your ruse."
+  },
+  {
+    "id": "archives-iii:reference:87-the-lore-of-fire",
+    "name": "The Lore of Fire",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 87,
+    "text": "Brighten Blaze By expending 1 SL of gathered power, any non-magical fire you can see within Willpower yards grows in intensity. A candle flame burns as violently as a torch, a torch as brightly as a campfire, and so on. This both increases the illumination provided, and may cause nearby creatures to gain an Ablaze Condition if the GM rules they were standing close enough to be caught in the enlarged fire.\n\nSet Alight Any time you strike an opponent with a Melee attack, you may expend 2 SL of gathered power to inflict one Ablaze Condition upon them.\n\nFervent Bellow By shouting your encouragement and expending 3 SL of gathered power, one ally who can hear your voice loses one Broken Condition."
+  },
+  {
+    "id": "archives-iii:reference:87-the-lore-of-heavens",
+    "name": "The Lore of Heavens",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 87,
+    "text": "Visions of Trauma You may expend 1 SL of gathered power to gain +1 SL on any Dodge or Melee Test you make to avoid or parry an attack.\n\nCrackling Blade You may expend a number of SL of gathered power, up to a maximum of your Willpower Bonus, to add +1 Damage for each to any Melee attack you make with a metal weapon. You may decide to apply this effect after you have made your Melee Test, but before the GM has described the results.\n\nVisions of Fortune By expending 3 SL of gathered power, you peer into what is to come and shout a warning or advice to an ally who can hear your voice. They receive a +2 SL bonus to use on any one Test during their next turn. You may not use this cant on yourself."
+  },
+  {
+    "id": "archives-iii:reference:88-the-lore-of-life",
+    "name": "The Lore of Life",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 88,
+    "text": "Staunch By expending 1 SL of gathered power, you remove all Fatigued and Bleeding Conditions from yourself.\n\nInvigorate As an Action, you may expend 2 SL of gathered power and touch another creature. Until your next turn, that creature gains +1 SL to all Tests involving their Strength or Toughness, and automatically passes any Test to resist the effects of disease or poison.\n\nRegenerate At the start of your turn, you may expend 3 SL of gathered power to immediately gain the Regenerate Creature Trait (WFRP page 341) until the start of the next Round."
+  },
+  {
+    "id": "archives-iii:reference:88-the-lore-of-light",
+    "name": "The Lore of Light",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 88,
+    "text": "Brighteyes By expending 1 SL of gathered power, your eyes begin to give off a faint light. You gain the Dark Vision Creature Trait until the beginning of your next turn. Additionally, you become immune to the Blinded Condition while the effect persists. Blinded Conditions you already have are ignored for the duration of this effect but return once it ends.\n\nPurging Light By expending 2 SL of gathered power, a melee weapon you are holding or a single piece of ammunition begins to glow with furious light. Until your next turn, targets struck by a weapon or piece of ammunition under the effects of this Cant must make a Challenging (+0) Endurance Test or gain a Blinded Condition. If the target has the Daemonic Trait, they take an additional +3 Damage from the attack as well.\n\nPerfection of the Self By expending 3 SL of gathered power, you are engulfed in a cleansing light. Until your next turn, you may ignore the effects of any Diseases, Poisons, Critical Wounds, or Mutations that afflict you. Even severed limbs are temporarily replaced by airy constructions of pure Hysh."
+  },
+  {
+    "id": "archives-iii:reference:88-the-lore-of-metal",
+    "name": "The Lore of Metal",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 88,
+    "text": "Reinforcement By expending 1 SL of gathered power, you strengthen metal armour you are wearing. Add 1 AP to any hit location protected by metal armour until your next turn.\n\nHeart of Iron In response to receiving a Critical Wound, you may choose to expend 2 SL of gathered power. The struck location toughens unnaturally, resisting a potentially mortal blow. Your attacker must roll twice on the appropriate Critical Wound chart, choosing the least harmful result.\n\nQuicksilver Blade By expending 3 SL of gathered power, one metal weapon you are holding begins to flow like water. Melee attacks you make this Round count as spells of Chamon and enjoy the benefits listed for spells of the Lore of Metal described on WFRP page 249 — ignoring the AP of metal armour, and inflicting additional Damage equal to the AP of metal armour worn on that Hit Location."
+  },
+  {
+    "id": "archives-iii:reference:88-the-lore-of-shadows",
+    "name": "The Lore of Shadows",
+    "category": "rule",
+    "topic": "Alternative Channelling and Cants",
+    "page": 88,
+    "text": "Ulgu’s Touch By expending 1 SL of gathered power, you cloak yourself in raw Ulgu. You may add a number of SL up to your Willpower Bonus to any Stealth Tests you make this Round, adding them after the dice have been rolled but before the GM has described the result.\n\nNot Your Problem By expending 2 SL of gathered power you become less of a threat in the eyes of others. If there is at least one other viable target which a hostile enemy can attack on their next turn, they will attack that target instead.\n\nA Passing Shadow By expending 3 SL of gathered power, you become impossible to restrain. You may slip free of any existing bonds, and all attempts to grab, hold, or otherwise prevent your movement fail. You may pass through difficult terrain without hindrance, and your almost insubstantial form may even slip past barred windows and through other tight spaces."
+  },
+  {
+    "id": "archives-iii:reference:90-profile-lord-adalbert-knopp-inzel-human-first-knight-and-spy-gold-2",
+    "name": "Lord Adalbert Knopp-Inzel Human First Knight (And Spy) Gold 2",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 90,
+    "text": "LORD ADALBERT KNOPP-INZEL HUMAN FIRST KNIGHT (AND SPY) GOLD 2\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 3 | 60 | 33 | 40 | 25 | 45 | 39 | 30 | 30 | 45 | 45 | 10 |\n\nTraits: Armour 4 (6), Easily Confused, Weapon (Lance) +10 (When charging on horseback), Weapon (Sword) +8\n\nSkills: Animal Care 45, Athletics 49, Bribery 50, Charm 55, Charm Animal 55, Consume Alcohol 35, Cool 55, Dodge 49*, Endurance 40, Gamble 40, Gossip 55, Haggle 50, Heal 40, Intimidate 50, Intuition 55, Leadership 55, Lore (Battle 50, Heraldry 50, Politics 45, Warfare 45), Melee (Basic 80, Cavalry 80), Perception 60, Ride (Horse) 54, Secret Signs (Untersuchung) 45, Stealth (Rural) 49, Trade (Farrier) 45\n\nTalents: Blather, Carouser, Doomed, Etiquette (Nobles), Gregarious, Read/Write, Rough Rider, Shieldsman, Strike Mighty Blow, Suave, War Leader, Warrior Born\n\nTrappings: Charcoal Stick, Destrier with Barding, Hooded Cloak, Lance, Plate Armour, Pouch containing 12 Gold Crowns and 10 Shillings, Reinforced Soft Kit and Great Helm, Saddle and Tack, Sword * Adalbert is still getting used to his prosthetic leg, and may not Dodge until he does so."
+  },
+  {
+    "id": "archives-iii:reference:92-profile-brother-samhel-human-priest-of-morr-silver-1",
+    "name": "Brother Samhel Human Priest Of Morr (Silver 1)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 92,
+    "text": "BROTHER SAMHEL HUMAN PRIEST OF MORR (SILVER 1)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 27 | 29 | 32 | 43 | 28 | 35 | 25 | 42 | 38 | 52 | 14 |\n\nTraits: Weapon (Mace) +7\n\nSkills: Athletics 45, Charm 67, Cool 48, Endurance 53, Entertain (Storytelling) 57, Gossip 62, Heal 52, Intuition 38, Lore (Theology) 57, Melee (Basic) 37, Perception 38, Pray 67, Research 57\n\nTalents: Bless (Morr), Doomed, Invoke (Morr), Read/Write, Savvy, Suave\n\nMiracles: Dooming, Last Rites, Portal’s Threshold\n\nTrappings: Book, Clothing, Hand Weapon (Mace), Pouch containing 19 Shillings, Religious Symbol, Robes"
+  },
+  {
+    "id": "archives-iii:reference:93-profile-ella-terenz-human-con-artist-silver-2",
+    "name": "Ella Terenz Human Con Artist (Silver 2)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 93,
+    "text": "ELLA TERENZ HUMAN CON ARTIST (SILVER 2)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 28 | 29 | 27 | 29 | 53 | 42 | 54 | 42 | 47 | 59 | 10 |\n\nTraits: Weapon (Dagger) +4\n\nSkills: Bribery 79, Charm 74, Consume Alcohol 44, Entertain (Acting 79, Storytelling 74), Evaluate 62, Gamble 67, Gossip 79, Haggle 74, Intuition 63, Language (Thieves’ Tongue) 57, Perception 68, Sleight of Hand 69\n\nTalents: Blather, Cardsharp, Diceman, Doomed, Etiquette (Criminals, Nobles), Fast Hands, Luck, Savvy, Secret Identity, Suave\n\nTrappings: Backpack, Dagger, Deck of Cards, Dice, Expensive Town Clothes, Hood, Poor Town Clothes, Purse with 22 Shillings"
+  },
+  {
+    "id": "archives-iii:reference:94-profile-leonard-human-squire-silver-3",
+    "name": "Leonard Human Squire (Silver 3)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 94,
+    "text": "LEONARD HUMAN SQUIRE (SILVER 3)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 36 | 31 | 42 | 32 | 45 | 45 | 31 | 35 | 30 | 32 | 13 |\n\nTraits: Armour 2 (5), Weapon (Sword) +8\n\nSkills: Animal Care 55, Athletics 65, Charm Animal 50, Heal 55, Lore (Heraldry) 55, Melee (Basic 36, Cavalry 51), Play (Bugle) 36, Ride (Horse) 65, Trade (Farrier) 51\n\nTalents: Doomed, Etiquette (Nobles), Roughrider, Savvy, Sturdy, Warrior Born\n\nTrappings: Bugle, Cloak, Clothing, Mail Shirt, Purse with 18 Shillings, Riding Horse with Saddle and Tack, Shield, Sword, Trade Tools (Farrier)"
+  },
+  {
+    "id": "archives-iii:reference:94-profile-ridrek-blackhelm-dwarf-entertainer-and-spy-brass-5",
+    "name": "Ridrek Blackhelm Dwarf Entertainer (And Spy) (Brass 5)",
+    "category": "profile",
+    "topic": "Printed NPC and creature profiles",
+    "page": 94,
+    "text": "RIDREK BLACKHELM DWARF ENTERTAINER (AND SPY) (BRASS 5)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 3 | 42 | 27 | 30 | 43 | 22 | 33 | 56 | 32 | 57 | 20 | 16 |\n\nTraits: Weapon (Dagger) +5\n\nSkills: Athletics 43, Bribery 30, Charm 30, Cool 67, Entertain (Acting 33, Comedy 23), Gamble 42, Gossip 35, Haggle 30, Language (Khazalid) 42, Melee (Basic) 52, Perception 42, Perform (Juggling) 38, Play (Tin Whistle) 66, Stealth (Urban) 48\n\nTalents: Magic Resistance, Mimic, Night Vision, Public Speaking, Read/Write, Strong-minded, Sturdy\n\nTrappings: Backpack, Blanket, Brightly Coloured Clothing, Dagger, Hooded Cloak, Juggling Balls, Pouch, Tin Whistle, Tinderbox"
+  }
+]

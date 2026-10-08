@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume I",
   "shortTitle": "Archives I",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -26,7 +26,8 @@
   },
   "notes": [
     "Only creator-relevant material is integrated. NPCs, settlements, adventure hooks and campaign activity remain outside this character creator.",
-    "Descriptive or unpriced Trappings retain their printed names; no missing weights, prices, quantities or animal statistics are invented."
+    "Descriptive or unpriced Trappings retain their printed names; no missing weights, prices, quantities or animal statistics are invented.",
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
   ],
   "files": {
     "careers": "careers.json",
@@ -35,6 +36,7 @@
     "rules": "rules.json",
     "market": "market.json",
     "weapons": "weapons.json",
-    "coverage": "coverage.json"
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
   }
 }
