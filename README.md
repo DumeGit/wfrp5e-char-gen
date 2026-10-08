@@ -109,10 +109,13 @@ The folio interface shows readiness from the existing creation validator, links 
 
 ```powershell
 npm install
-npm run check:release
+npm run test:ui:install
+npm run test:ui:smoke
 ```
 
-The release command validates book data, JavaScript, generated documentation, formatting, the full regression suite and offline assets. Run desktop/mobile browser checks separately; automated checks do not establish visual quality.
+Local Playwright suites automate desktop/mobile interactions, real JSON/PDF downloads and offline/update behavior. Use `npm run test:ui:search`, `test:ui:pc`, `test:ui:gm`, `test:ui:storage`, `test:ui:exports` or `test:ui:pwa` for the affected feature. Unchanged prepared assets reuse a content-hash cache; tests own a temporary server on port 8199 and isolated storage, leaving open preview tabs alone. Reports/screenshots/traces stay local and ignored by Git. No GitHub CI is configured.
+
+See [TESTING.md](docs/TESTING.md) for setup, suite coverage, failure diagnosis and the proportional testing policy. `npm run check:quick` plus relevant tests is the routine workflow; `npm run check:release` validates books, JavaScript, generated documentation, formatting, all Node regressions, offline assets and all Chromium browser scenarios before an authorized push/release or substantial shared change. New visual designs and changed PDF layouts still need visual inspection; automation does not establish visual quality.
 
 The tests cover all 64 core Careers and all 15 Up in Arms Careers, every d100 Career outcome for every Species, reference resolution, XP prices and limits, a full 1,000 XP Soldier regression, independent Fate/Fortune bonuses, random sampling, the magic catalog, and editable PDF fields including Priest overflow. Browser checks cover the guided creation flow, a real random-roll record, XP purchase, PDF download, responsive layout, and valid/invalid WebMCP calls.
 

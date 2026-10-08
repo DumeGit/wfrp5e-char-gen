@@ -11,13 +11,30 @@
     "generate:books": "node scripts/generate-books.mjs",
     "check:generated": "node scripts/generate-books.mjs --check",
     "check:code": "node scripts/check-code.mjs",
-    "check:format": "prettier --check \"dist/*.mjs\" \"dist/features/*.mjs\" \"dist/gm/*.mjs\" dist/app.js scripts/check-code.mjs scripts/check-offline.mjs scripts/generate-books.mjs",
-    "check:release": "npm run check:books && npm run check:code && npm run check:generated && npm run check:format && npm test && node scripts/check-offline.mjs"
+    "check:format": "prettier --check \"dist/*.mjs\" \"dist/features/*.mjs\" \"dist/gm/*.mjs\" dist/app.js scripts/check-code.mjs scripts/check-offline.mjs scripts/generate-books.mjs playwright.config.mjs \"tests/browser/*.mjs\" scripts/browser-test-server.mjs scripts/run-browser-tests.mjs scripts/browser-build.mjs tests/browser-build.test.mjs",
+    "check:release": "npm run check:books && npm run check:code && npm run check:generated && npm run check:format && npm test && node scripts/check-offline.mjs && node scripts/run-browser-tests.mjs all --built",
+    "test:ui:smoke": "node scripts/run-browser-tests.mjs smoke",
+    "test:ui:search": "node scripts/run-browser-tests.mjs search",
+    "test:ui:pc": "node scripts/run-browser-tests.mjs pc",
+    "test:ui:gm": "node scripts/run-browser-tests.mjs gm",
+    "test:ui:storage": "node scripts/run-browser-tests.mjs storage",
+    "test:ui:exports": "node scripts/run-browser-tests.mjs exports",
+    "test:ui:mobile": "node scripts/run-browser-tests.mjs mobile",
+    "test:ui:pwa": "node scripts/run-browser-tests.mjs pwa",
+    "test:ui:all": "node scripts/run-browser-tests.mjs all",
+    "test:ui:cross-browser": "node scripts/run-browser-tests.mjs cross-browser",
+    "test:ui": "npm run test:ui:smoke",
+    "test:ui:install": "playwright install chromium",
+    "test:ui:install:all": "playwright install chromium firefox webkit",
+    "test:ui:report": "playwright show-report playwright-report",
+    "check:quick": "npm run check:code && npm run check:format",
+    "test:ui:failed": "node scripts/run-browser-tests.mjs all --last-failed"
   },
   "dependencies": {
     "pdf-lib": "1.17.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
     "acorn": "^8.15.0",
     "eslint-scope": "^8.4.0",
     "prettier": "^3.6.2"

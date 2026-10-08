@@ -66,7 +66,7 @@ PC startup imports only the small shared creator-switch module; it does not fetc
 
 The build validates the original book registry first, then compiles GM data and generates [GM-CONTENT.md](GM-CONTENT.md). GM counts are separate from player catalogue counts. The core coverage inventory records the implemented workshop and deferred Career development. Future supplements require explicit GM source records, provenance, availability/precedence decisions, handlers for new mechanics, independent draft/catalogue validation and tests; enabling a PC supplement does not automatically import its NPCs. Do not restore the old runtime or silently reuse old supplement conversions.
 
-Run `npm run generate:books` after source/compiler changes, and `npm run check:release` before committing. The recursive offline build includes both creator entry points, runtime data, PDFs, local fonts and art. Update this document, README, AGENTS and affected architecture/design/book docs in the same implementation change.
+Run `npm run generate:books` after source/compiler changes. Use affected GM Node regressions and `npm run test:ui:gm` (plus `test:ui:exports` for export changes); follow [TESTING.md](TESTING.md) for the full release policy. The recursive offline build includes both creator entry points, runtime data, PDFs, local fonts and art. Update this document, README, AGENTS and affected architecture/design/book docs in the same implementation change.
 
 ## Verification
 

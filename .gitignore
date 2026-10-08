@@ -4,3 +4,4 @@ node_modules/
 *.tar
 test-results/
 __pycache__/
+playwright-report/
