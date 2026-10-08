@@ -2,13 +2,14 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-55 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.
+57 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
 | Warhammer Fantasy Roleplay, Fifth Edition | 53 | 7 | Core profiles, templates & rules |
 | Up in Arms | 2 | 0 | Mount profiles, equipment & magic |
 | Archives of the Empire: Volume I | 0 | 0 | Weapons, ammunition, Skill choices & Youngblood · no unnamed profiles |
+| Archives of the Empire: Volume II | 2 | 0 | Rhinox, Typical Sister, Ogre equipment & Great Maw magic |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |
@@ -53,6 +54,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Orc | Core · p. 337 | Orcs and Goblins |  |
 | Pegasus | Core · p. 334 | Monstrous Beasts |  |
 | Rat Ogre | Core · p. 352 | Skaven |  |
+| Rhinox | Archives II · p. 34 | Mounts | Yes |
 | Riding Horse | Up in Arms · p. 29 | Mounts | Yes |
 | Skeleton | Core · p. 339 | Restless Dead |  |
 | Skrakk - Bestigor (Elite) | Core · p. 354 | Worked Examples |  |
@@ -61,6 +63,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Swilegrakk - Bray Shaman (Spellcaster) | Core · p. 355 | Worked Examples |  |
 | Tomb Banshee | Core · p. 342 | Restless Dead |  |
 | Troll | Core · p. 335 | Monstrous Beasts |  |
+| Typical Sister | Archives II · p. 76 | Peoples of the Reikland |  |
 | Ungor | Core · p. 345 | Beastmen |  |
 | Ungrakk - Gor Beastlord (Commander) | Core · p. 355 | Worked Examples |  |
 | Vampire | Core · p. 343 | Restless Dead |  |

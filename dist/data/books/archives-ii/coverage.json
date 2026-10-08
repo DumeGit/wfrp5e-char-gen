@@ -70,6 +70,36 @@
         "book": "archives-ii"
       },
       "reason": "Outside creator scope; no manufacturing prices become shop prices."
+    },
+    {
+      "id": "archives-ii:feature:gm-rhinox",
+      "name": "GM Rhinox foundation and approved Trait conversions",
+      "status": "adapted",
+      "source": {
+        "book": "archives-ii",
+        "page": 34
+      },
+      "reason": "Weapon +9 → +15 for core Large Size, Stride → Sprinter, proposed Fury → Frenzy, Hardy → one core Talent rank. Optional training stays optional."
+    },
+    {
+      "id": "archives-ii:feature:gm-sister",
+      "name": "GM Typical Sister foundation",
+      "status": "implemented",
+      "source": {
+        "book": "archives-ii",
+        "page": 76
+      },
+      "reason": "Printed profile, Skill totals, core Talents and Trappings retained. No invented equipment or prayers."
+    },
+    {
+      "id": "archives-ii:feature:gm-orderly",
+      "name": "Typical Orderly standard-profile guidance",
+      "status": "reference-only",
+      "source": {
+        "book": "archives-ii",
+        "page": 76
+      },
+      "reason": "No fixed printed stat block or quantified template; existing Species foundations and GM Skill adjustments implement the manual workflow."
     }
   ]
 }

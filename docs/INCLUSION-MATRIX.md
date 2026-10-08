@@ -988,7 +988,7 @@ Pack `archives-i` · version 1.0.3
 
 ## Archives of the Empire: Volume II
 
-Pack `archives-ii` · version 1.0.5
+Pack `archives-ii` · version 1.0.6
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1008,7 +1008,10 @@ Pack `archives-ii` · version 1.0.5
 |---|---|---|---|
 | Big Names, live magic, artifice, mass battles and psychology | deferred | Book-wide scope decision | Outside creator scope; no manufacturing prices become shop prices. |
 | Firebelly Wizard modifications | unavailable | p. 31 | No complete printed Career modifications; no invented profile. |
+| Typical Orderly standard-profile guidance | reference-only | p. 76 | No fixed printed stat block or quantified template; existing Species foundations and GM Skill adjustments implement the manual workflow. |
 | Ogre restrictions / GM permission reminder | reference-only | p. 21 | Informational rule text only; no acknowledgement checkbox or export gate. |
+| GM Rhinox foundation and approved Trait conversions | adapted | p. 34 | Weapon +9 → +15 for core Large Size, Stride → Sprinter, proposed Fury → Frenzy, Hardy → one core Talent rank. Optional training stays optional. |
+| GM Typical Sister foundation | implemented | p. 76 | Printed profile, Skill totals, core Talents and Trappings retained. No invented equipment or prayers. |
 | Rhinox Herder Harpoon statistics | reference-only | p. 36 | Retain the printed Trapping name; do not assume launcher or ammunition-pack statistics. |
 | Ogre carrying Talent ordering | adapted | p. 31 | Apply core carrying Talents first, then double capacity, as approved. |
 | Typical Ogre equipment sizing categories | adapted | p. 31 | Use user-approved categories; unclear items remain unresolved. |

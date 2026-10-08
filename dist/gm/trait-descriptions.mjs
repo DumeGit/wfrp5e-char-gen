@@ -45,7 +45,11 @@ export function describeTraits(profile, traits) {
     let description = useBrief ? brief : trait.text;
     // A supplement stat block lists training names without short descriptions.
     // Retain the complete definition of each actual training, not unused options.
-    if (profile.source?.book === "up-in-arms" && trait.name === "Trained") {
+    if (
+      profile.source?.book &&
+      profile.source.book !== "core" &&
+      trait.name === "Trained"
+    ) {
       const headings = [
         ...trait.text.matchAll(
           /(?:^|\s)(Broken|Drive|Entertain|Fetch|Guard|Home|Magic|Mount|War|Shock Cavalry):/g,

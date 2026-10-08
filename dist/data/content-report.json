@@ -20848,7 +20848,7 @@
     {
       "id": "archives-ii",
       "title": "Archives of the Empire: Volume II",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 50,
@@ -20858,9 +20858,9 @@
         "deferred": 15
       },
       "featureCounts": {
-        "implemented": 0,
-        "adapted": 3,
-        "reference-only": 2,
+        "implemented": 1,
+        "adapted": 4,
+        "reference-only": 3,
         "unavailable": 1,
         "deferred": 1
       },
@@ -22891,6 +22891,16 @@
           "reason": "No complete printed Career modifications; no invented profile."
         },
         {
+          "id": "archives-ii:feature:gm-orderly",
+          "name": "Typical Orderly standard-profile guidance",
+          "status": "reference-only",
+          "source": {
+            "book": "archives-ii",
+            "page": 76
+          },
+          "reason": "No fixed printed stat block or quantified template; existing Species foundations and GM Skill adjustments implement the manual workflow."
+        },
+        {
           "id": "archives-ii:feature:gm-reminder",
           "name": "Ogre restrictions / GM permission reminder",
           "status": "reference-only",
@@ -22899,6 +22909,26 @@
             "page": 21
           },
           "reason": "Informational rule text only; no acknowledgement checkbox or export gate."
+        },
+        {
+          "id": "archives-ii:feature:gm-rhinox",
+          "name": "GM Rhinox foundation and approved Trait conversions",
+          "status": "adapted",
+          "source": {
+            "book": "archives-ii",
+            "page": 34
+          },
+          "reason": "Weapon +9 → +15 for core Large Size, Stride → Sprinter, proposed Fury → Frenzy, Hardy → one core Talent rank. Optional training stays optional."
+        },
+        {
+          "id": "archives-ii:feature:gm-sister",
+          "name": "GM Typical Sister foundation",
+          "status": "implemented",
+          "source": {
+            "book": "archives-ii",
+            "page": 76
+          },
+          "reason": "Printed profile, Skill totals, core Talents and Trappings retained. No invented equipment or prayers."
         },
         {
           "id": "archives-ii:feature:harpoon",

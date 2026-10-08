@@ -155,5 +155,21 @@
     ],
     "page": 36,
     "reason": "Printed Archives II Talent specialisations using the existing core Talent."
+  },
+  {
+    "id": "archives-ii:rule:vice-options",
+    "path": [
+      "talentOptions",
+      "Vice"
+    ],
+    "operation": "add",
+    "value": [
+      "Alcohol",
+      "Food",
+      "Narcotics",
+      "Pleasure"
+    ],
+    "page": 20,
+    "reason": "Printed Vice examples, using the shared Talent specialisation picker."
   }
 ]

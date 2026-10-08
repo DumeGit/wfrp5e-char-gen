@@ -52,7 +52,7 @@ General meat/ingredient costs and the Great Maw healing benefit are sourced desc
 
 Firebelly describes modifying Wizard “with some modifications” without a complete Career profile (p. 31). Do not invent those modifications. Existing user decisions exclude equipment Quality/Flaw editing; optional Ogre Club customisation stays explanatory until explicitly requested.
 
-Big Names, mutation events, starvation/food consumption, live Vice Psychology, spellcasting effects and Rhinox management are campaign systems. Magical artifice, commissioning, secret curses, random artefacts and crafting (pp. 51–67), Great Hospice NPC/adventure material (pp. 68–81), mass battles (pp. 82–91) and psychological disorders (p. 92) are outside the creator's current scope. Manufacturing cost multipliers are not fixed retail prices and must not become invented shop entries.
+Big Names, mutation events, starvation/food consumption, live Vice Psychology, spellcasting effects and live Rhinox management are campaign systems. Magical artifice, commissioning, secret curses, random artefacts and crafting (pp. 51–67), Named Great Hospice NPC/adventure material (pp. 68–81), mass battles (pp. 82–91) and psychological disorders (p. 92) are outside the creator's current scope. Manufacturing cost multipliers are not fixed retail prices and must not become invented shop entries.
 
 ## Verification
 
@@ -66,10 +66,20 @@ Local browser checks verified enabling the book on a pristine draft, Ogre Career
 
 ## Reviewed reference imports — 7 October 2026
 
-Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. Core GM creation is unchanged.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. The separate GM catalogue now includes the reviewed additions described below.
 
 Original Ogre/astrology tables, magical artifice and item-generation tables, mass battles/Endeavours, psychological disorders and isolated NPC/creature profiles. Multi-row Ogre and Erzbet profiles preserve every printed stat row. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 
 Battlefield Power Modifiers (p. 83) and War Machines (p. 88) retain their genuine lookup rows, with misleading neighbouring adventure-sidebar titles and scene text removed. Their stable reference identities are retained; no battlefield or siege automation is added.
+
+## NPC & creature creator — 8 October 2026
+
+Archives II is now an independent opt-in GM book. It adds Rhinox (p. 34) and the unnamed Typical Sister (p. 76), plus the existing shared Ogre equipment, Skill choices, Vice Talent and Great Maw spells. Named NPCs stay excluded. Typical Orderly is standard-profile guidance rather than a fixed foundation; the existing Species/Skill workflow covers it without invented values.
+
+User-approved Rhinox Legacy changes: apply core Large Size to Weapon +9 → +15, retain Horns +10 as an extra Charging attack, replace Stride with Sprinter, replace undefined Fury with core Frenzy as an explicitly proposed adaptation, and record Hardy as one core Talent rank. Its printed 50 Wounds already includes Hardy: (6 + 3 × 5 + 4) × 2. Training/Tracker are optional. Typical Sister uses its exact printed totals and compatible core Talents without a blanket Legacy tag.
+
+The existing core Ogre foundation uses Toughness for Language (Magick) and the book’s permitted Lores when this book is enabled. Great Maw is Ogre-only. Printed meat/ingredient/healing and GM-permission rules remain references. Ogre equipment use on other foundations is unresolved unless a weapon receives explicit GM attack values; Gutplate has no supported non-Ogre AP conversion. See [GM-WORKSHOP.md](GM-WORKSHOP.md) for workflows and [GM-CONTENT.md](GM-CONTENT.md) for generated counts.
+
+GM verification covers opt-in/excluded profiles, exact printed values, Hardy/Size and removable Horns, optional training, Ogre casting/Lore access, native equipment review, Vice limits and own-book save validation. Both new profiles were visually inspected in a mixed four-card A4 PDF. Local desktop/mobile browser checks cover profile application, Legacy dialogs, Great Maw selection and export readiness; the full local browser suite and offline inventory passed.

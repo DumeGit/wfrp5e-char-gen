@@ -239,12 +239,16 @@ export function addGMSupplement(data, raw, R) {
     const coreProfile = data.profiles.find(
       (x) => x.id === p.descriptionProfile,
     );
-    if (!coreProfile)
+    if (p.descriptionProfile && !coreProfile)
       throw Error(`${p.name}: unknown core description profile.`);
     return {
       ...p,
-      sections: { ...p.sections, Traits: coreProfile.sections.Traits },
-      traitDescriptionSource: { book: "core", page: coreProfile.page },
+      sections: coreProfile
+        ? { ...p.sections, Traits: coreProfile.sections.Traits }
+        : p.sections,
+      ...(coreProfile
+        ? { traitDescriptionSource: { book: "core", page: coreProfile.page } }
+        : {}),
       traits: rows("traits"),
       skills: rows("skills"),
       talents: rows("talents"),

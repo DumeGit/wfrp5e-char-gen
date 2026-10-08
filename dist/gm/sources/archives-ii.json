@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "archives-ii",
+  "source": {
+    "file": "Archives of the Empire - Vol II.pdf",
+    "sha256": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b"
+  },
+  "summary": "Rhinox, Typical Sister, Ogre equipment & Great Maw magic",
+  "profiles": [
+    {
+      "id": "archives-ii:creatures:rhinox",
+      "name": "Rhinox",
+      "page": 34,
+      "source": {
+        "book": "archives-ii",
+        "page": 34
+      },
+      "example": false,
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": null,
+        "S": 60,
+        "T": 55,
+        "I": 25,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 10,
+        "WP": 40,
+        "Fel": 20,
+        "W": 50
+      },
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1,
+          "adaptation": "Printed Hardy Creature Trait is recorded as one rank of the Fifth Edition Hardy Talent (core p. 120), by user approval. It adds one Toughness Bonus before Size multiplication: (6 SB + 3 × 5 TB + 4 WPB) × 2 = 50 Wounds. Do not add it again to the printed 50."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Proposed Fifth Edition adaptation approved by the user: printed Fury is replaced with core Frenzy (p. 358). Fury is not defined in the supplied supplement, so equivalence cannot be verified. Use the core Frenzy rule, not an assumed older effect."
+        },
+        {
+          "name": "Horns",
+          "value": "10",
+          "deriveAttack": true
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride is replaced with Fifth Edition Sprinter (core p. 362), following the approved older-name replacement. Sprinter changes Running movement, not the Movement score."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 15,
+          "printedDamage": 9,
+          "optional": false,
+          "text": "",
+          "adaptation": "Fifth Edition Size (Large), core p. 360, adds Strength Bonus to the primary melee attack: printed Weapon +9 becomes +15. Horns is an extra attack and retains +10."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Body, Forelegs, Rear Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "optionalTraits": [
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "sections": {
+        "Traits": "Size (Large): See page 360 for implications of size",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Toughness Bonus and 50 Wounds are retained. Fifth Edition definitions govern selected Traits and Talents.",
+        "Training and Tracker are optional, not automatically granted. Horns is an extra Free Attack only when Charging."
+      ],
+      "category": "Mounts",
+      "size": "Large",
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Body",
+        "Forelegs",
+        "Rear Legs"
+      ],
+      "adaptation": "Fifth Edition Size (Large), core p. 360, adds Strength Bonus to the primary melee attack: printed Weapon +9 becomes +15. Horns is an extra attack and retains +10. Proposed Fifth Edition adaptation approved by the user: printed Fury is replaced with core Frenzy (p. 358). Fury is not defined in the supplied supplement, so equivalence cannot be verified. Use the core Frenzy rule, not an assumed older effect. Printed Hardy Creature Trait is recorded as one rank of the Fifth Edition Hardy Talent (core p. 120), by user approval. It adds one Toughness Bonus before Size multiplication: (6 SB + 3 × 5 TB + 4 WPB) × 2 = 50 Wounds. Do not add it again to the printed 50. Printed Stride is replaced with Fifth Edition Sprinter (core p. 362), following the approved older-name replacement. Sprinter changes Running movement, not the Movement score.",
+      "text": "RHINOX (Archives II p. 34). M 6, WS 55, BS —, S 60, T 55, I 25, Ag 20, Dex —, Int 10, WP 40, Fel 20, W 50. Traits: Armour 2, Bestial, Fear 1, Fury, Hardy, Horns +10, Painless, Size (Large), Stride, Weapon +9. Optional: Trained (Broken, Mount, War), Tracker."
+    },
+    {
+      "id": "archives-ii:creatures:typical-sister",
+      "name": "Typical Sister",
+      "page": 76,
+      "source": {
+        "book": "archives-ii",
+        "page": 76
+      },
+      "example": false,
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 25,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 35,
+        "WP": 35,
+        "Fel": 35,
+        "W": 12
+      },
+      "skills": [
+        {
+          "name": "Charm",
+          "total": 35
+        },
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 35
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 35
+        },
+        {
+          "name": "Heal",
+          "total": 40
+        },
+        {
+          "name": "Lore (Theology)",
+          "total": 40
+        },
+        {
+          "name": "Pray",
+          "total": 35
+        },
+        {
+          "name": "Research",
+          "total": 30
+        },
+        {
+          "name": "Trade (Herbalist)",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Etiquette (Shallyans)",
+          "ranks": 1
+        },
+        {
+          "name": "Field Dressing",
+          "ranks": 1
+        },
+        {
+          "name": "Stone Soup",
+          "ranks": 1
+        },
+        {
+          "name": "Panhandle",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "optionalTraits": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Robes, Silver Dove Cloak-Pin"
+      },
+      "notes": [
+        "The printed Research 30 is retained even though Intelligence is 35. No weapon, armour, Bless/Invoke Talent or prayer is invented."
+      ],
+      "category": "Peoples of the Reikland",
+      "size": "Average",
+      "toughnessBonus": 3,
+      "referenceId": "archives-ii:reference:76-profile-typical-sister-nun-shallya-brass-4",
+      "text": "TYPICAL SISTER — NUN (SHALLYA) (BRASS 4)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 25 | 25 | 30 | 30 | 30 | 30 | 35 | 35 | 35 | 35 | 12 |\n\nSkills: Charm 35, Cool 40, Endurance 35, Entertain (Storytelling) 35, Gossip 35, Heal 40, Lore (Theology) 40, Pray 35, Research 30,Trade (Herbalist) 35\n\nTalents: Etiquette (Shallyans), Field Dressing, Stone Soup, Panhandle, Read/Write\n\nTrappings: Robes, Silver Dove Cloak-Pin"
+    }
+  ],
+  "training": [],
+  "review": {
+    "pages": [
+      14,
+      26,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "profilePages": [
+      34,
+      76
+    ],
+    "excluded": [
+      "All named NPCs and adventure characters.",
+      "Typical Orderly (p. 76) gives standard-profile guidance, not a fixed stat block or quantified template; use the existing core Human or other Species foundation.",
+      "The multi-row Ogre creation example (p. 26) is not an additional creature profile.",
+      "Hirelings, Career development, astrology rewards, artefact generation, mass battles and campaign systems."
+    ]
+  }
+}

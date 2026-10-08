@@ -281,3 +281,89 @@ test("removing a mount book requires explicit reset and undo restores its select
   ).toHaveCount(0);
   await noOverflow(page);
 });
+test("Archives II foundations and Legacy work on desktop and mobile @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-archives-ii").check();
+  await expect(page.locator(".gm-profile-card")).toHaveCount(55);
+  await applyProfile(page, "Rhinox");
+  await expect(page.locator("#gm-folio")).toContainText("50");
+  await page
+    .locator(".gm-foundation")
+    .getByRole("button", { name: "Read Rhinox adaptation" })
+    .click();
+  await expect(page.getByRole("dialog")).toContainText(
+    "Proposed Fifth Edition adaptation",
+  );
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Close", exact: true })
+    .click();
+  await gmStep(page, "Equipment & magic");
+  await expect(page.getByLabel("Weapon Damage", { exact: true })).toHaveValue(
+    "15",
+  );
+  await expect(
+    page.getByLabel("Horns (10) Damage", { exact: true }),
+  ).toHaveValue("10");
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await noOverflow(page);
+  await gmStep(page, "Starting profile");
+  await page
+    .getByRole("button", { name: "Browse profiles", exact: true })
+    .click();
+  await applyProfile(page, "Typical Sister");
+  await expect(page.locator(".gm-foundation")).toContainText("Archives II");
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await expect(page.locator(".gm-stat-block").first()).toContainText(
+    "Field Dressing",
+  );
+  await noOverflow(page);
+});
+
+test("Archives II Ogre Spellcaster offers Great Maw and explains unavailable Lores @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-archives-ii").check();
+  await applyProfile(page, "Ogre");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  await page.getByRole("button", { name: "Add Trait", exact: true }).click();
+  await page.locator("#gm-picker-search").fill("Spellcaster");
+  await page
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText("Spellcaster", { exact: true }) })
+    .getByRole("button", { name: "Add", exact: true })
+    .click();
+  await page
+    .getByRole("checkbox", { name: "The Great Maw", exact: true })
+    .check();
+  await expect(page.locator('input[data-lore][value="Fire"]')).toBeDisabled();
+  await gmStep(page, "Equipment & magic");
+  await page.getByRole("button", { name: "Choose magic", exact: true }).click();
+  await page.locator("#gm-picker-search").fill("Bullgorger");
+  await page
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText("Bullgorger", { exact: true }) })
+    .getByRole("button", { name: "Add", exact: true })
+    .click();
+  await expect(page.locator("#gm-magic")).toContainText("Bullgorger");
+  await expect(
+    page
+      .locator("#gm-magic")
+      .getByRole("button", { name: "Read Bullgorger adaptation" }),
+  ).toBeVisible();
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await noOverflow(page);
+});

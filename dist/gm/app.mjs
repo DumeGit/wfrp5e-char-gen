@@ -259,7 +259,7 @@ function addEntry(id) {
         name: x.name,
         total:
           r.skills.find((t) => t.name === x.name)?.total ??
-          r.stats[skillInfo(R, x.name)?.char] ??
+          r.stats[x.char ?? skillInfo(R, x.name)?.char] ??
           0,
         origin: "GM",
       });
@@ -297,6 +297,7 @@ async function action(el) {
       ...r.talents,
       ...(picker?.rows || []),
       ...R.talents,
+      ...r.spells,
       ...r.gear.map((g) => g.entry),
     ];
     const x = entries.find(
@@ -649,10 +650,11 @@ function change(el) {
     num = el.value === "" ? null : Number(el.value);
   if (d.book) {
     if (!val && s.profile?.startsWith(`${d.book}:`)) {
+      const book = data.books.find((b) => b.id === d.book);
       el.checked = true;
       modal(
-        "Remove Up in Arms?",
-        `<p>This starting profile requires Up in Arms. Removing the book starts a fresh GM draft. Save it first if needed; Undo can restore it.</p><div class="gm-dialog-actions">${button("Keep book", "close-dialog")}${button("Remove book & start new", "remove-book", "", "primary")}</div>`,
+        `Remove ${book.shortTitle || book.title}?`,
+        `<p>This starting profile requires ${esc(book.title)}. Removing the book starts a fresh GM draft. Save it first if needed; Undo can restore it.</p><div class="gm-dialog-actions">${button("Keep book", "close-dialog")}${button("Remove book & start new", "remove-book", "", "primary")}</div>`,
       );
       dialogBody.querySelector('[data-action="remove-book"]').addEventListener(
         "click",

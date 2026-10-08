@@ -1,6 +1,11 @@
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
+import { equipmentSize } from "../equipment-sizing.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
+import {
+  skillCharacteristic,
+  speciesLoreIssue,
+} from "../species-mechanics.mjs";
 
 export const GM_SCHEMA = 1;
 export const SIZES = [
@@ -404,6 +409,17 @@ const parts = (text) =>
     .filter(Boolean);
 const magicLore = (name) =>
   name.match(/^(?:Arcane Magic|Chaos Magic) \((.*)\)$/)?.[1];
+export const gmSpecies = (profile) =>
+  profile?.species || (profile?.id === "core:creatures:ogre" ? "Ogre" : "");
+export const gmSkillCharacteristic = (R, profile, name) =>
+  skillCharacteristic(
+    R,
+    { species: gmSpecies(profile) },
+    name,
+    skillInfo(R, name)?.char,
+  );
+export const gmLoreIssue = (R, profile, lore) =>
+  speciesLoreIssue(R, { species: gmSpecies(profile) }, lore);
 export function magicChoices(R, result) {
   const lores = new Set(
     result.talents.map((t) => magicLore(t.name)).filter(Boolean),
@@ -411,6 +427,8 @@ export function magicChoices(R, result) {
   for (const t of result.traits)
     if (t.name === "Spellcaster")
       parts(t.value).forEach((x) => lores.add(x.replace(/^Lore of /, "")));
+  for (const lore of lores)
+    if (gmLoreIssue(R, result.profile, lore)) lores.delete(lore);
   const blessingGods = result.traits
       .filter((t) => t.name === "Blessed")
       .map((t) => t.value),
@@ -715,10 +733,15 @@ export function calculateGM(data, R, s) {
     if (s.removed.includes(`skill:${name}`)) return;
     const old = skills.get(name);
     if (!old || total > old.total)
-      skills.set(name, { name, total, origin, char: skillInfo(R, name)?.char });
+      skills.set(name, {
+        name,
+        total,
+        origin,
+        char: gmSkillCharacteristic(R, p, name),
+      });
   };
   for (const x of live(p.skills)) {
-    const char = skillInfo(R, x.name)?.char;
+    const char = gmSkillCharacteristic(R, p, x.name);
     const value =
       changed && char && stats[char] !== null && p.stats[char] !== null
         ? stats[char] + x.total - p.stats[char]
@@ -726,7 +749,7 @@ export function calculateGM(data, R, s) {
     put(x.name, value, "Printed");
   }
   for (const x of templateSkills) {
-    const char = skillInfo(R, x.name)?.char;
+    const char = gmSkillCharacteristic(R, p, x.name);
     if (!char || stats[char] === null)
       add(
         `${x.name} needs an explicit ${char || "Characteristic"} score.`,
@@ -764,6 +787,7 @@ export function calculateGM(data, R, s) {
           Light: "Hysh",
           Metal: "Chamon",
           Shadows: "Ulgu",
+          "The Great Maw": "The Great Maw",
         }[lore];
         if (wind && stats.WP !== null)
           put(`Channelling (${wind})`, stats.WP + 10, "Trait");
@@ -775,11 +799,13 @@ export function calculateGM(data, R, s) {
             "magic.wind",
           );
       }
-      if (stats.Int !== null) put("Language (Magick)", stats.Int + 10, "Trait");
+      const castingChar = gmSkillCharacteristic(R, p, "Language (Magick)");
+      if (stats[castingChar] !== null)
+        put("Language (Magick)", stats[castingChar] + 10, "Trait");
     }
   }
   for (const x of live(s.skills))
-    skills.set(x.name, { ...x, char: skillInfo(R, x.name)?.char });
+    skills.set(x.name, { ...x, char: gmSkillCharacteristic(R, p, x.name) });
   for (const x of s.skills)
     if (!number(x.total))
       add(
@@ -818,6 +844,16 @@ export function calculateGM(data, R, s) {
         "#gm-tab-2",
         "talent.cause",
       );
+  const vices = talents.filter((t) => base(t.name) === "Vice");
+  if (vices.length > (bonus(stats.WP) || 0))
+    issues.push({
+      code: "talent.vice-limit",
+      message:
+        "Vice permits at most Willpower Bonus different Vices (Archives II p. 20). Remove an excess choice or adjust Willpower.",
+      severity: "error",
+      source: { book: "archives-ii", page: 20 },
+      control: { step: 1, target: "#gm-tab-2" },
+    });
   for (const t of newTraits) {
     const param =
       PARAMETER[t.name] ??
@@ -928,6 +964,34 @@ export function calculateGM(data, R, s) {
         (x) => x.contentId === g.id,
       ),
     }));
+  for (const g of gear) {
+    const sizing = equipmentSize(
+      R,
+      { species: gmSpecies(p) },
+      g.entry.name,
+      g.entry,
+    );
+    if (sizing.useUnresolved) {
+      const weapon = R.weapons.some((w) => w.contentId === g.id);
+      const override = s.attackOverrides[g.key] || {};
+      if (!weapon || !own(override, "skill") || !own(override, "damage"))
+        issues.push({
+          code: "equipment.species",
+          message:
+            sizing.note +
+            (weapon
+              ? " Set both attack score and Damage explicitly, or remove this item."
+              : " Remove this item; no reduced armour profile is available."),
+          severity: "error",
+          source: sizing.source,
+          control: {
+            step: 2,
+            target: weapon ? `#attack-${g.key}` : `#gear-${g.key}`,
+          },
+        });
+      warnings.push(sizing.note);
+    }
+  }
   for (const g of gear.filter((g) =>
     R.weapons.some((w) => w.contentId === g.id),
   )) {
@@ -953,14 +1017,17 @@ export function calculateGM(data, R, s) {
       ranged: w.kind === "ranged",
     });
   }
-  for (const t of newTraits) {
+  for (const t of traits.filter((t) => t.origin === "GM" || t.deriveAttack)) {
     if (attacks.some((a) => base(a.name) === t.name)) continue;
     let damage,
       score = stats.WS,
       text = "Free Attack",
       ranged = false;
     if (t.name === "Bite") damage = Number(t.value) || null;
-    if (t.name === "Horns") damage = sb + 4;
+    if (t.name === "Horns") {
+      damage = sb + 4;
+      text = "Free Attack when Charging";
+    }
     if (t.name === "Tail") damage = sb + 2;
     if (t.name === "Tentacles") damage = sb;
     if (t.name === "Tongue") {
@@ -1149,6 +1216,45 @@ export function calculateGM(data, R, s) {
     changed,
   };
   const allowed = magicChoices(R, result);
+  const loreChoices = [
+    ...result.talents.map((t) => ({
+      lore: magicLore(t.name),
+      target: "#gm-tab-2",
+    })),
+    ...result.traits
+      .filter((t) => t.name === "Spellcaster")
+      .flatMap((t) =>
+        parts(t.value).map((lore) => ({
+          lore: lore.replace(/^Lore of /, ""),
+          target: `#trait-${t.key}`,
+        })),
+      ),
+  ];
+  for (const { lore, target } of loreChoices) {
+    const reason = lore && gmLoreIssue(R, p, lore);
+    if (reason)
+      issues.push({
+        code: "magic.species",
+        message: reason,
+        severity: "error",
+        source: {
+          book: "archives-ii",
+          page: lore === "The Great Maw" ? 32 : 31,
+        },
+        control: { step: 1, target },
+      });
+  }
+  if (gmSpecies(p) === "Ogre" && R.species.Ogre?.mechanics) {
+    warnings.push(R.species.Ogre.mechanics.gmApproval);
+    if (loreChoices.some(({ lore }) => lore))
+      warnings.push(
+        ...R.species.Ogre.mechanics.magicReferences
+          .filter(
+            (x) => !x.lore || loreChoices.some(({ lore }) => lore === x.lore),
+          )
+          .map((x) => `${x.text} (Archives II p. ${x.page})`),
+      );
+  }
   for (const id of s.spells)
     if (!allowed.some((x) => x.contentId === id))
       add(
@@ -1179,7 +1285,13 @@ export function calculateGM(data, R, s) {
     );
   warnings.push(...p.notes);
   warnings.push(
-    ...[p, ...result.traits, ...result.attacks, ...result.talents]
+    ...[
+      p,
+      ...result.traits,
+      ...result.attacks,
+      ...result.talents,
+      ...result.spells,
+    ]
       .map((x) => x.adaptation)
       .filter(Boolean),
   );

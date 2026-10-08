@@ -21,6 +21,8 @@ import {
   PARAMETER,
   rowName,
   magicChoices,
+  gmLoreIssue,
+  gmSkillCharacteristic,
 } from "./model.mjs";
 import { statBlock } from "./sheet.mjs";
 export const STEPS = [
@@ -161,7 +163,7 @@ function characteristics(s, r) {
   ${detail("calculations", "How totals are calculated", `<p>Printed scores are the baseline. Template and Size changes, explicit Talent benefits and selected Corruption effects are added to that baseline. Printed Skills retain their difference from the associated Characteristic; a template uses the higher Skill bonus. GM Skill totals override that result.</p><p>Untouched profiles retain printed Wounds, attacks and Toughness Bonus. Changed profiles use the core Size formula (pp. 360–361); Hardy adds Toughness Bonus before multiplication. Construct substitutes Strength Bonus for Willpower Bonus. Swarm uses five times the normal creature’s Wounds and ignores Size changes. Tiny requires a manual Wounds value.</p><p>Primary melee Damage changes with Strength Bonus and the Size bonus. Ranged and extra attacks receive no Size bonus. Situational effects remain reference text.</p>`)}
   ${s.rolls.length ? detail("rolls", `Recorded dice <small>${s.rolls.length}</small>`, `<ol class="gm-roll-list">${s.rolls.map((x) => `<li><strong>${esc(x.label)}</strong> ${x.faces.join(" + ")} = ${x.total}<small>${esc(x.at)} · Core p. ${x.page}</small></li>`).join("")}</ol>`) : ""}`;
 }
-export function traitParameter(data, R, t) {
+export function traitParameter(data, R, t, profile) {
   if (t.name === "Size")
     return `<span class="gm-small">Change Size in Characteristics.</span>`;
   const param =
@@ -201,17 +203,14 @@ export function traitParameter(data, R, t) {
                 : null;
   if (t.name === "Spellcaster")
     return `<fieldset class="gm-training" id="trait-${t.key}"><legend>Magical Lores</legend>${choices
-      .map(
-        (n) =>
-          `<label class="gm-check"><input type="checkbox" data-lore="${t.key}" value="${n}" ${
-            t.value
-              .split(",")
-              .map((x) => x.trim())
-              .includes(n)
-              ? "checked"
-              : ""
-          }>${n}</label>`,
-      )
+      .map((n) => {
+        const selected = t.value
+          .split(",")
+          .map((x) => x.trim())
+          .includes(n);
+        const reason = gmLoreIssue(R, profile, n);
+        return `<label class="gm-check"><input type="checkbox" data-lore="${t.key}" value="${esc(n)}" ${selected ? "checked" : ""} ${reason && !selected ? "disabled" : ""}>${esc(n)}${reason ? `<small>${esc(reason)}</small>` : ""}</label>`;
+      })
       .join("")}</fieldset>`;
   if (t.name === "Trained")
     return `<fieldset class="gm-training" id="trait-${t.key}"><legend>Training</legend>${[
@@ -250,7 +249,7 @@ export function traitParameter(data, R, t) {
       );
 }
 function traits(data, R, s, r) {
-  return `<div class="gm-section-heading"><h2>Creature Traits</h2>${button("Add Trait", "picker", 'data-kind="trait"', "primary")}</div><p class="gm-small">Printed Traits are included. Their full definitions open below; effects used during play stay as references.</p><div class="gm-entry-list">${r.traits.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)} ${t.value ? `<small>(${esc(t.value)})</small>` : ""} ${origin(t)}`, entryBody(t.text, t.page))}${legacyBadge(t)}${t.origin === "GM" ? traitParameter(data, R, t) : t.name === "Trained" ? printedTraining(data, s, t) : ""}</div>${t.name !== "Size" && t.origin !== "Training" ? remove(t.key) : ""}</div>`).join("")}</div>
+  return `<div class="gm-section-heading"><h2>Creature Traits</h2>${button("Add Trait", "picker", 'data-kind="trait"', "primary")}</div><p class="gm-small">Printed Traits are included. Their full definitions open below; effects used during play stay as references.</p><div class="gm-entry-list">${r.traits.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)} ${t.value ? `<small>(${esc(t.value)})</small>` : ""} ${origin(t)}`, entryBody(t.text, t.page))}${legacyBadge(t)}${t.origin === "GM" ? traitParameter(data, R, t, r.profile) : t.name === "Trained" ? printedTraining(data, s, t) : ""}</div>${t.name !== "Size" && t.origin !== "Training" ? remove(t.key) : ""}</div>`).join("")}</div>
   ${r.profile.optionalTraits.length ? detail("optional-traits", "Suggested optional Traits", `<div class="gm-chips">${r.profile.optionalTraits.map((t, i) => button(esc(rowName(t)), "optional-trait", `data-index="${i}"`)).join("")}</div><p class="gm-small">Suggestions from the profile, not automatic grants. Parameters can be changed after adding.</p>`) : ""}
   ${r.traits.some((t) => (t.origin === "GM" || s.extraTraining.includes("Broken")) && t.name === "Trained" && t.value.includes("Broken")) ? `<div class="gm-callout"><p>Broken training adds 2d10 Fellowship; an absent score starts at 0 (p. 363).</p>${button(s.brokenRoll ? `Roll again · ${s.brokenRoll.join(" + ")}` : "Roll 2d10 Fellowship", "broken-roll", 'id="gm-broken-roll"')}</div>` : ""}
   ${r.traits.some((t) => ["Mutation", "Mental Corruption", "Mark of Chaos"].includes(t.name)) ? `<section id="gm-mutations"><div class="gm-section-heading"><h2>Corruption choices</h2>${button("Choose mutation", "picker", 'data-kind="mutation"')}</div>${r.traits.some((t) => t.name === "Mark of Chaos" && t.value === "Tzeentch" && t.origin === "GM") ? `<p class="gm-small">Tzeentch grants ceil(1d10 ÷ 3) alternating Mental/Physical mutations (p. 359).</p>${button(s.markRoll ? `Roll again · ${s.markRoll} → ${Math.ceil(s.markRoll / 3)} mutations` : "Roll Tzeentch mutations", "mark-roll")}` : ""}<div class="gm-chips">${button("Roll Physical", "mutation-roll", 'data-category="Physical"')}${button("Roll Mental", "mutation-roll", 'data-category="Mental"')}</div>${r.mutations.map((m) => `<div class="gm-entry"><div>${detail(m.id, esc(m.name), entryBody(m.text, m.page))}</div>${remove(m.id)}</div>`).join("")}</section>` : ""}`;
@@ -278,7 +277,7 @@ function equipmentMagic(R, s, r) {
       "",
     )}</div>${r.shield ? paragraph(`Shield adds +${r.shield} AP when applicable.`) : ""}${r.armour.map((a) => `<div class="gm-entry"><div><strong>${esc(a.name)}</strong> ${origin(a)}<small class="gm-small">+${a.ap} AP · ${a.shield ? "Shield" : esc(a.locations)}</small></div>${remove(a.key)}</div>`).join("")}
   <h2>Trappings</h2>${(r.trappings ?? r.profile.sections.Trappings) ? paragraph(r.trappings ?? r.profile.sections.Trappings) : ""}${r.gear.length ? r.gear.map((g) => `<div class="gm-entry" id="gear-${g.key}"><div><strong>${esc(g.entry.name)}</strong>${legacyBadge(g.entry)}<small class="gm-small">${esc(sourceLabel(g.entry))}${g.entry.qualities ? ` · ${esc(g.entry.qualities)}` : ""}</small></div><input class="gm-rank" type="number" min="1" step="1" value="${g.quantity}" data-quantity="${g.key}" aria-label="${esc(g.entry.name)} quantity">${remove(g.key)}</div>`).join("") : empty("Add other belongings as needed.")}
-  <section id="gm-magic"><div class="gm-section-heading"><h2>Magic & prayers</h2>${eligible.length ? button("Choose magic", "picker", 'data-kind="magic"', "primary") : ""}</div><p class="gm-small">${eligible.length ? "Choices follow the selected Lore, patron or magical template. No PC starting spell grants or XP are added." : "Add an appropriate magical template, Spellcaster Trait or Bless/Invoke Talent to unlock choices."}${r.template?.magic ? ` ${r.template.name}: up to ${r.template.magic.petty} Petty and ${r.template.magic.lore} Lore spells (p. ${r.template.page}).` : ""}</p>${r.spells.map((x) => `<div class="gm-entry"><div>${detail(x.contentId, `${esc(x.name)} <small>${esc(x.category)}</small>`, `<p class="gm-small">CN ${x.cn ?? "—"} · Range ${esc(x.range || "—")} · Target ${esc(x.target || "—")} · Duration ${esc(x.duration || "—")}</p>${entryBody(x.text, x.page, x)}`)}</div>${remove(x.contentId)}</div>`).join("")}</section>`;
+  <section id="gm-magic"><div class="gm-section-heading"><h2>Magic & prayers</h2>${eligible.length ? button("Choose magic", "picker", 'data-kind="magic"', "primary") : ""}</div><p class="gm-small">${eligible.length ? "Choices follow the selected Lore, patron or magical template. No PC starting spell grants or XP are added." : "Add an appropriate magical template, Spellcaster Trait or Bless/Invoke Talent to unlock choices."}${r.template?.magic ? ` ${r.template.name}: up to ${r.template.magic.petty} Petty and ${r.template.magic.lore} Lore spells (p. ${r.template.page}).` : ""}</p>${r.spells.map((x) => `<div class="gm-entry"><div>${detail(x.contentId, `${esc(x.name)} <small>${esc(x.category)}</small>`, `<p class="gm-small">CN ${x.cn ?? "—"} · Range ${esc(x.range || "—")} · Target ${esc(x.target || "—")} · Duration ${esc(x.duration || "—")}</p>${entryBody(x.text, x.page, x)}`)}${legacyBadge(x)}</div>${remove(x.contentId)}</div>`).join("")}</section>`;
 }
 export function issuePanel(r) {
   return r.issues.length
@@ -370,8 +369,15 @@ export function pickerEntries(data, R, r, kind) {
             ...x,
             name,
             key: name,
+            char: gmSkillCharacteristic(R, r.profile, name),
           }))
-        : [{ ...x, key: x.name }],
+        : [
+            {
+              ...x,
+              key: x.name,
+              char: gmSkillCharacteristic(R, r.profile, x.name),
+            },
+          ],
     );
   return R.talents.flatMap((x) => {
     let names = options(
@@ -388,7 +394,11 @@ export function pickerEntries(data, R, r, kind) {
       ...x,
       name,
       key: name,
-      disabled: x.unavailable,
+      disabled:
+        x.unavailable ||
+        (/^(Arcane|Chaos) Magic \(/.test(name)
+          ? gmLoreIssue(R, r.profile, name.match(/\((.*?)\)/)?.[1])
+          : ""),
     }));
   });
 }
