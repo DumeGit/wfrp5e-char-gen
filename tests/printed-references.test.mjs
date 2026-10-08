@@ -400,6 +400,101 @@ test("related terms can chain to same-book new rules and original Careers", () =
     [{ text: "ill-fortune and Hand-wringing" }],
   );
 });
+test("lookup tables exclude standalone NPC stat blocks, Career grids and written-rule duplicates", () => {
+  const tables = full.rows.filter((r) => r.kind === "table");
+  for (const row of tables) {
+    // An embedded example may accompany a real roll table (e.g. magical weapons).
+    // A lone M/WS/BS profile is never itself a lookup table.
+    if (/\| M \| WS \| BS \|/.test(row.entry.text))
+      assert.match(row.entry.text, /\| D100 \|/, row.key);
+  }
+  for (const [book, name, kind] of [
+    ["winds-of-magic", "Construct", "profile"],
+    ["deft-steps", "A Typical Bounty Hunter Silver 3", "profile"],
+    ["archives-iii", "Stoat", "profile"],
+    ["up-in-arms", "Critical Wounds", "rule"],
+    ["up-in-arms", "Complex Pursuits", "rule"],
+    ["deft-steps", "Congruent With Character", "rule"],
+    ["winds-of-magic", "Panacea Universalis", "equipment"],
+    ["winds-of-magic", "Knuckles of Ignominy", "equipment"],
+    ["rough-nights", "Bull Ring", "rule"],
+  ])
+    assert.equal(get(book, name).kind, kind);
+  for (const name of ["Weather Table", "Terrain Table"])
+    assert.equal(
+      full.rows.filter(
+        (r) => r.name === name && r.entry.source.book === "deft-steps",
+      ).length,
+      1,
+    );
+  assert.match(
+    get("deft-steps", "Weather Table").entry.text,
+    /Roll separately for each column/,
+  );
+  assert.match(
+    get("deft-steps", "Terrain Table").entry.text,
+    /Deep forest.*-2 SL/,
+  );
+  assert.match(
+    get("deft-steps", "Charlatan Income Endeavour Complications").entry.text,
+    /Ranaldans Take Note/,
+  );
+  assert.doesNotMatch(
+    get("deft-steps", "Congruent With Character").entry.text,
+    /\|/,
+  );
+  assert.match(
+    full.rows.find((r) => r.key === "core:reference:131-difficulty-table").entry
+      .text,
+    /Very Easy \| \+6 SL/,
+  );
+  assert.match(
+    get("winds-of-magic", "Construct Traits").entry.text,
+    /Flight \(20\) \| \+30/,
+  );
+  assert.doesNotMatch(
+    get("archives-ii", "War Machines").entry.text,
+    /Blood-letters|Character’s camp/,
+  );
+  assert.doesNotMatch(
+    get("archives-ii", "Battlefield Power Modifiers").entry.text,
+    /Ernst Flett|cultists/,
+  );
+});
+
+test("search omits deferred hireling templates and retains exactly the seven core creature templates", () => {
+  const templates = full.rows.filter((r) => r.kind === "template");
+  assert.equal(templates.length, 7);
+  assert.ok(templates.every((r) => r.entry.source.book === "core"));
+  assert.deepEqual(
+    templates.map((r) => r.name).sort(),
+    [
+      "Soldier",
+      "Skirmisher",
+      "Elite",
+      "Leader",
+      "Commander",
+      "Spellcaster",
+      "Spellcaster Lord",
+    ].sort(),
+  );
+  for (const name of [
+    "Bright Spark",
+    "Old Salt",
+    "Reformed Rogue",
+    "Diamond In The Rough",
+    "Veteran Of Adventures",
+    "Hireling Templates",
+  ])
+    assert.ok(
+      !raw.some((r) => r.name === name && r.entry.source.book === "up-in-arms"),
+      name,
+    );
+  // Ordinary printed hireling prices and background reading remain references.
+  assert.equal(get("core", "Hirelings").kind, "table");
+  assert.equal(get("up-in-arms", "Hireling Profiles").kind, "rule");
+});
+
 test("coverage is generated from registry and frozen review, separate from creator inclusion", async () => {
   const review = JSON.parse(
     await readFile(

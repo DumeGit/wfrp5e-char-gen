@@ -304,14 +304,6 @@
     "text": "With intricate and precise movements of body and blade, you channel magic to perform a Sword-dancing technique. To do this, make a Melee (Two-handed) Test. If your SL reaches the target number (the SL listed in the individual technique description), you succeed and perform the technique as explained in its description. If you fail, you lose all Advantage. On an Astounding Failure, you must also roll on the Oops! Table (WRFP, page 160)..\n\nSpiritual balance is required to make the best of Sword- dancing. The Difficulty of the Melee (Two-Handed) Test varies according to the Yenlui State of the Character making the Test.\n\nYenlui (Balanced): Challenging (+0) Yenlui (Light): Challenging (+0) Yenlui (Dark): Very Hard (–30)"
   },
   {
-    "id": "high-elf:reference:70-shadow-warrior",
-    "name": "Shadow Warrior",
-    "category": "table",
-    "topic": "High Elf creation, Careers and magic",
-    "page": 70,
-    "text": "High Elf\n\nYou are an avenging shadow who goes to great lengths to root out the foul plots of the Druchii.\n\nShadow Warriors are trained in the art of subterfuge and guerilla warfare, making them skilled scouts who often assist the armies of the phoenix king. Dressed in blue, black, or shades of grey to blend into the shadows, red is occasionally used in heraldry to symbolise the spilt blood of their kin.\n\nSHADOW WARRIOR ADVANCE SCHEME\n\n|  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n|  |  |  |  |  |  |  |  |  |  |"
-  },
-  {
     "id": "high-elf:reference:71-way-of-the-shadow",
     "name": "Way of the Shadow",
     "category": "rule",

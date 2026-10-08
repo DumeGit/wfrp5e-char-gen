@@ -21,12 +21,12 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 680,
+        "reference-only": 681,
         "unavailable": 0,
         "deferred": 0
       },
@@ -76,7 +76,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 244,
+          "reference-only": 245,
           "unavailable": 0,
           "deferred": 0
         },
@@ -3930,6 +3930,17 @@
           "contentId": "core:reference:131-difficulty-and-character-modifiers",
           "kind": "referenceEntries",
           "name": "Difficulty And Character Modifiers",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 131
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:131-difficulty-table",
+          "kind": "referenceEntries",
+          "name": "Difficulty Table",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -16917,12 +16928,12 @@
     {
       "id": "up-in-arms",
       "title": "Up in Arms",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 135,
         "adapted": 12,
-        "reference-only": 152,
+        "reference-only": 146,
         "unavailable": 1,
         "deferred": 0
       },
@@ -16958,7 +16969,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 152,
+          "reference-only": 146,
           "unavailable": 0,
           "deferred": 0
         },
@@ -18331,72 +18342,6 @@
           "source": {
             "book": "up-in-arms",
             "page": 114
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:115-bright-spark",
-          "kind": "referenceEntries",
-          "name": "Bright Spark",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:115-diamond-in-the-rough",
-          "kind": "referenceEntries",
-          "name": "Diamond In The Rough",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:115-hireling-templates",
-          "kind": "referenceEntries",
-          "name": "Hireling Templates",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:115-old-salt",
-          "kind": "referenceEntries",
-          "name": "Old Salt",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:115-reformed-rogue",
-          "kind": "referenceEntries",
-          "name": "Reformed Rogue",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:115-veteran-of-adventures",
-          "kind": "referenceEntries",
-          "name": "Veteran Of Adventures",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 115
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -21272,7 +21217,7 @@
     {
       "id": "archives-ii",
       "title": "Archives of the Empire: Volume II",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 50,
@@ -22801,7 +22746,7 @@
         {
           "contentId": "archives-ii:reference:83-stand-to-attention",
           "kind": "referenceEntries",
-          "name": "Stand To Attention!",
+          "name": "Battlefield Power Modifiers",
           "status": "reference-only",
           "source": {
             "book": "archives-ii",
@@ -23010,7 +22955,7 @@
         {
           "contentId": "archives-ii:reference:88-intruders",
           "kind": "referenceEntries",
-          "name": "Intruders",
+          "name": "War Machines",
           "status": "reference-only",
           "source": {
             "book": "archives-ii",
@@ -23413,12 +23358,12 @@
     {
       "id": "archives-iii",
       "title": "Archives of the Empire: Volume III",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 45,
         "adapted": 14,
-        "reference-only": 125,
+        "reference-only": 124,
         "unavailable": 0,
         "deferred": 0
       },
@@ -23454,7 +23399,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 125,
+          "reference-only": 124,
           "unavailable": 0,
           "deferred": 0
         },
@@ -24645,17 +24590,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-iii:reference:78-stoat",
-          "kind": "referenceEntries",
-          "name": "Stoat",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 78
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-iii:reference:79-animal-skills-parent-characteristics",
           "kind": "referenceEntries",
           "name": "Animal Skills & Parent Characteristics",
@@ -25611,12 +25545,12 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 120,
         "adapted": 55,
-        "reference-only": 284,
+        "reference-only": 285,
         "unavailable": 0,
         "deferred": 0
       },
@@ -25645,7 +25579,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 283,
+          "reference-only": 284,
           "unavailable": 0,
           "deferred": 0
         },
@@ -28118,6 +28052,17 @@
           "contentId": "winds-of-magic:reference:30-construct",
           "kind": "referenceEntries",
           "name": "Construct",
+          "status": "reference-only",
+          "source": {
+            "book": "winds-of-magic",
+            "page": 30
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "winds-of-magic:reference:30-construct-traits",
+          "kind": "referenceEntries",
+          "name": "Construct Traits",
           "status": "reference-only",
           "source": {
             "book": "winds-of-magic",
@@ -30807,7 +30752,7 @@
     {
       "id": "rough-nights",
       "title": "Rough Nights & Hard Days",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 3,
@@ -35831,12 +35776,12 @@
     {
       "id": "high-elf",
       "title": "High Elf Player’s Guide",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 55,
         "adapted": 55,
-        "reference-only": 112,
+        "reference-only": 111,
         "unavailable": 0,
         "deferred": 0
       },
@@ -35879,7 +35824,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 89,
+          "reference-only": 88,
           "unavailable": 0,
           "deferred": 0
         },
@@ -37259,17 +37204,6 @@
           "source": {
             "book": "high-elf",
             "page": 68
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "high-elf:reference:70-shadow-warrior",
-          "kind": "referenceEntries",
-          "name": "Shadow Warrior",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 70
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -38866,12 +38800,12 @@
     {
       "id": "deft-steps",
       "title": "Deft Steps, Light Fingers",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 39,
         "adapted": 18,
-        "reference-only": 213,
+        "reference-only": 204,
         "unavailable": 0,
         "deferred": 0
       },
@@ -38907,7 +38841,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 213,
+          "reference-only": 204,
           "unavailable": 0,
           "deferred": 0
         },
@@ -39268,7 +39202,7 @@
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
-            "page": "102–103"
+            "page": 102
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -39280,17 +39214,6 @@
           "source": {
             "book": "deft-steps",
             "page": 102
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:103-outlaw-chief",
-          "kind": "referenceEntries",
-          "name": "Outlaw Chief",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 103
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -39390,17 +39313,6 @@
           "source": {
             "book": "deft-steps",
             "page": 107
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:108-a-typical-bounty-hunter",
-          "kind": "referenceEntries",
-          "name": "A Typical Bounty Hunter",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 108
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -39518,17 +39430,6 @@
           "contentId": "deft-steps:reference:114-temperature",
           "kind": "referenceEntries",
           "name": "Temperature",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 114
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:114-weather-table",
-          "kind": "referenceEntries",
-          "name": "Weather Table",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -39738,17 +39639,6 @@
           "contentId": "deft-steps:reference:124-list-of-common-shortfalls",
           "kind": "referenceEntries",
           "name": "List Of Common Shortfalls",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 124
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:124-terrain-table",
-          "kind": "referenceEntries",
-          "name": "Terrain Table",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -40417,17 +40307,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:34-black-guard-of-morr-knight",
-          "kind": "referenceEntries",
-          "name": "Black Guard Of Morr (Knight)",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 34
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:34-graverobbery-in-operation",
           "kind": "referenceEntries",
           "name": "Graverobbery in Operation",
@@ -40534,6 +40413,17 @@
           "source": {
             "book": "deft-steps",
             "page": 38
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "deft-steps:reference:39-charlatan-income-endeavour-complications",
+          "kind": "referenceEntries",
+          "name": "Charlatan Income Endeavour Complications",
+          "status": "reference-only",
+          "source": {
+            "book": "deft-steps",
+            "page": 39
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -40923,28 +40813,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:48-racketeer",
-          "kind": "referenceEntries",
-          "name": "Racketeer",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 48
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:49-charlatan",
-          "kind": "referenceEntries",
-          "name": "Charlatan",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 49
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:49-profile-charlatan-brass-5",
           "kind": "referenceEntries",
           "name": "Charlatan (Brass 5)",
@@ -40959,17 +40827,6 @@
           "contentId": "deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2",
           "kind": "referenceEntries",
           "name": "Safe House Owner (Townsman) (Silver 2)",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 49
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:49-safe-house-owner-townsman",
-          "kind": "referenceEntries",
-          "name": "Safe House Owner (Townsman)",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -41333,28 +41190,6 @@
           "contentId": "deft-steps:reference:93-watch-presence",
           "kind": "referenceEntries",
           "name": "Watch Presence",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 93
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:93-watch-sergeant",
-          "kind": "referenceEntries",
-          "name": "Watch Sergeant",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 93
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:93-watchman",
-          "kind": "referenceEntries",
-          "name": "Watchman",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",

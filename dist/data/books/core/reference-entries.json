@@ -210,10 +210,10 @@
   {
     "id": "core:reference:131-difficulty-and-character-modifiers",
     "name": "Difficulty And Character Modifiers",
-    "category": "table",
+    "category": "rule",
     "topic": "Rules and combat",
     "page": 131,
-    "text": "Not all Tests are as simple as the one above. The Success Level of a Test can be modified by how difficult it is to succeed, or by the Character’s abilities and equipment: • Difficulty — set by the GM, with easier tasks giving an SL bonus and harder ones giving a penalty (see Difficulty Table). • Character’s modifiers — come from Talents, equipment, Spells, and other effects. These will be clear on the player’s Character Sheet. Combine any SL bonuses or penalties from the Difficulty with the Character’s modifiers to arrive at the final SL modifier for the roll. This could turn a success into a failure, or prise victory from the jaws of defeat!\n\n|  |  |  |\n| --- | --- | --- |\n| DIFFICULTY TABLE Test Difficulty Example Modifeir Noticing the obvious, jumping a small Very Easy +6 SL gap Easy +4 SL Sharpening the edge of a trusty blade Quickly finding pertinent information Average +2 SL in a book you can read Typical Ranged and Melee attack Challenging +0 Tests, climbing a stone wall Recalling an obscure fact about a long- Difficult –1 SL dead noble Swimming upstream in a flooding Hard –2 SL sewer Convincing a witch hunter they’ve Very Hard –3 SL made a terrible mistake If a difficulty is not specified, you should assume it is Challenging (+0 SL). Most Tests made during Combat are Challenging (+0 SL). |  | later in this chapter. |\n|  |  |  |\n| OPPOSED TESTS Resisted actions, such as trying to sneak past someone or hit a foe in combat (page 164), are Opposed Tests. Whichever of you achieved the higher SL wins. You do not need to succeed on your own Test to win, just beat your opponent. The difference |  |  |\n\nbetween your SL is the SL of the Opposed Test. For example, -1 SL beats -4 SL, winning by 3 SL — an Impressive Success.\n\nIn the case of a tie, whoever initiated the roll wins — in combat, the attacker."
+    "text": "Not all Tests are as simple as the one above. The Success Level of a Test can be modified by how difficult it is to succeed, or by the Character’s abilities and equipment: • Difficulty — set by the GM, with easier tasks giving an SL bonus and harder ones giving a penalty (see Difficulty Table). • Character’s modifiers — come from Talents, equipment, Spells, and other effects. These will be clear on the player’s Character Sheet. Combine any SL bonuses or penalties from the Difficulty with the Character’s modifiers to arrive at the final SL modifier for the roll. This could turn a success into a failure, or prise victory from the jaws of defeat!"
   },
   {
     "id": "core:reference:131-summary-outcome",
@@ -1950,5 +1950,13 @@
     "topic": "Templates, Traits and appendices",
     "page": 364,
     "text": "The Difficulty of a Test is now expressed differently, applying an SL modifier rather than changed the value of the Skill being Tested. The following table makes this clear, but simply removing the ‘0’ gives the correct SL modifier."
+  },
+  {
+    "id": "core:reference:131-difficulty-table",
+    "name": "Difficulty Table",
+    "category": "table",
+    "topic": "Rules and combat",
+    "page": 131,
+    "text": "| Difficulty | Test Modifier | Example |\n| --- | --- | --- |\n| Very Easy | +6 SL | Noticing the obvious, jumping a small gap |\n| Easy | +4 SL | Sharpening the edge of a trusty blade |\n| Average | +2 SL | Quickly finding pertinent information in a book you can read |\n| Challenging | +0 | Typical Ranged and Melee attack Tests, climbing a stone wall |\n| Difficult | −1 SL | Recalling an obscure fact about a long-dead noble |\n| Hard | −2 SL | Swimming upstream in a flooding sewer |\n| Very Hard | −3 SL | Convincing a witch hunter they’ve made a terrible mistake |\n\nIf a difficulty is not specified, you should assume it is Challenging (+0 SL). Most Tests made during Combat are Challenging (+0 SL)."
   }
 ]

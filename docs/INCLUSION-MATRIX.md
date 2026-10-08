@@ -19,18 +19,18 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 680 | 0 | 0 |
-| Up in Arms | 135 | 12 | 152 | 1 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 681 | 0 | 0 |
+| Up in Arms | 135 | 12 | 146 | 1 | 0 |
 | Archives of the Empire: Volume I | 31 | 22 | 25 | 0 | 0 |
 | Archives of the Empire: Volume II | 50 | 7 | 122 | 0 | 0 |
-| Archives of the Empire: Volume III | 45 | 14 | 125 | 0 | 0 |
+| Archives of the Empire: Volume III | 45 | 14 | 124 | 0 | 0 |
 | Archives III — Animal-doctor Hedge Witch (variant) | 0 | 1 | 0 | 0 | 0 |
-| Winds of Magic | 120 | 55 | 284 | 0 | 0 |
+| Winds of Magic | 120 | 55 | 285 | 0 | 0 |
 | Rough Nights & Hard Days | 3 | 5 | 104 | 0 | 0 |
 | Dwarf Player’s Guide | 156 | 34 | 131 | 2 | 0 |
-| High Elf Player’s Guide | 55 | 55 | 112 | 0 | 0 |
+| High Elf Player’s Guide | 55 | 55 | 111 | 0 | 0 |
 | Blood and Bramble | 15 | 10 | 8 | 0 | 0 |
-| Deft Steps, Light Fingers | 39 | 18 | 213 | 0 | 0 |
+| Deft Steps, Light Fingers | 39 | 18 | 204 | 0 | 0 |
 | Deft Steps — General Ranald Priest (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Ranald the Dealer (variant) | 1 | 1 | 0 | 0 | 0 |
 | Deft Steps — Taal Priest (variant) | 1 | 0 | 0 | 0 | 0 |
@@ -42,7 +42,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.5
+Pack `core` · version 1.1.6
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -51,7 +51,7 @@ Pack `core` · version 1.1.5
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 244 | 0 | 0 |
+| referenceEntries | 0 | 0 | 245 | 0 | 0 |
 | ruleReferences | 0 | 0 | 435 | 0 | 0 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
@@ -79,6 +79,7 @@ Pack `core` · version 1.1.5
 | `core:reference:130-describe-action` — Describe Action | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
 | `core:reference:130-roll-dice` — Roll Dice | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
 | `core:reference:131-difficulty-and-character-modifiers` — Difficulty And Character Modifiers | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:reference:131-difficulty-table` — Difficulty Table | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
 | `core:reference:131-summary-outcome` — Summary & Outcome | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
 | `core:reference:132-rolling-with-advantage` — Rolling with Advantage | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `core:reference:132-typical-test` — Typical Test | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
@@ -759,14 +760,14 @@ Pack `core` · version 1.1.5
 
 ## Up in Arms
 
-Pack `up-in-arms` · version 1.0.1
+Pack `up-in-arms` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 7 | 8 | 0 | 0 | 0 |
 | market | 70 | 0 | 0 | 0 | 0 |
 | origins | 0 | 3 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 152 | 0 | 0 |
+| referenceEntries | 0 | 0 | 146 | 0 | 0 |
 | spells | 8 | 1 | 0 | 0 | 0 |
 | tables | 7 | 0 | 0 | 0 | 0 |
 | talents | 0 | 0 | 0 | 1 | 0 |
@@ -828,12 +829,6 @@ Pack `up-in-arms` · version 1.0.1
 | `up-in-arms:reference:114-profile-lawyer-silver-3` — Lawyer — Silver 3 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:114-profile-porter-silver-1` — Porter — Silver 1 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:114-profile-scribe-silver-2` — Scribe — Silver 2 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:115-bright-spark` — Bright Spark | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:115-diamond-in-the-rough` — Diamond In The Rough | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:115-hireling-templates` — Hireling Templates | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:115-old-salt` — Old Salt | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:115-reformed-rogue` — Reformed Rogue | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:115-veteran-of-adventures` — Veteran Of Adventures | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:116-physical-quirks` — Physical Quirks | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:116-work-ethic` — Work Ethic | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:117-personality-quirks` — Personality Quirks | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
@@ -1026,7 +1021,7 @@ Pack `archives-i` · version 1.0.1
 
 ## Archives of the Empire: Volume II
 
-Pack `archives-ii` · version 1.0.3
+Pack `archives-ii` · version 1.0.4
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1150,7 +1145,7 @@ Pack `archives-ii` · version 1.0.3
 | `archives-ii:reference:82-power` — Power | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:83-battlefield-strength` — Battlefield Strength | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:83-options-the-cost-of-war` — Options: The Cost Of War | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:83-stand-to-attention` — Stand To Attention! | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:83-stand-to-attention` — Battlefield Power Modifiers | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-battle-endeavours` — Battle Endeavours | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-infiltrate` — Infiltrate | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-inspiring-speech` — Inspiring Speech | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
@@ -1169,7 +1164,7 @@ Pack `archives-ii` · version 1.0.3
 | `archives-ii:reference:87-options-the-horrors-of-war` — Options: The Horrors Of War | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:88-bring-it-down` — Bring It Down | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:88-fly-by` — Fly By | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:88-intruders` — Intruders | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:88-intruders` — War Machines | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:88-war-machines` — War Machines | referenceEntries | reference-only | p. 88–89 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:89-green-with-envy` — Green With Envy | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:89-siege-quality` — Siege Quality | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
@@ -1191,14 +1186,14 @@ Pack `archives-ii` · version 1.0.3
 
 ## Archives of the Empire: Volume III
 
-Pack `archives-iii` · version 1.0.1
+Pack `archives-iii` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | cants | 24 | 0 | 0 | 0 | 0 |
 | careers | 1 | 2 | 0 | 0 | 0 |
 | origins | 0 | 5 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 125 | 0 | 0 |
+| referenceEntries | 0 | 0 | 124 | 0 | 0 |
 | spells | 20 | 7 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -1297,7 +1292,6 @@ Pack `archives-iii` · version 1.0.1
 | `archives-iii:reference:78-animal-familiar-characteristics` — Animal Familiar Characteristics | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:78-animal-familiar-generation` — Animal Familiar Generation | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:78-profile-stoat` — Stoat | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:78-stoat` — Stoat | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-animal-skills-parent-characteristics` — Animal Skills & Parent Characteristics | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-badger` — Badger — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-cat` — Cat — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
@@ -1380,13 +1374,13 @@ Pack `archives-iii-hedge` · version 1.0.0
 
 ## Winds of Magic
 
-Pack `winds-of-magic` · version 1.0.1
+Pack `winds-of-magic` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 10 | 2 | 0 | 0 | 0 |
 | gear | 4 | 0 | 1 | 0 | 0 |
-| referenceEntries | 0 | 0 | 283 | 0 | 0 |
+| referenceEntries | 0 | 0 | 284 | 0 | 0 |
 | skills | 1 | 1 | 0 | 0 | 0 |
 | spells | 101 | 52 | 0 | 0 | 0 |
 | tables | 4 | 0 | 0 | 0 | 0 |
@@ -1616,6 +1610,7 @@ Pack `winds-of-magic` · version 1.0.1
 | `winds-of-magic:reference:29-controlling-elementals` — Controlling Elementals | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:29-the-bloody-hidesman` — the Bloody Hidesman | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:30-construct` — Construct | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:30-construct-traits` — Construct Traits | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:31-create-familiar` — Create Familiar | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:31-minor-elementals` — Minor Elementals | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:34-brew-potion` — Brew Potion | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
@@ -1751,7 +1746,7 @@ Pack `winds-of-magic` · version 1.0.1
 
 ## Rough Nights & Hard Days
 
-Pack `rough-nights` · version 1.0.1
+Pack `rough-nights` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -2087,7 +2082,7 @@ Pack `dwarf-guide` · version 1.0.1
 
 ## High Elf Player’s Guide
 
-Pack `high-elf` · version 1.0.1
+Pack `high-elf` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -2095,7 +2090,7 @@ Pack `high-elf` · version 1.0.1
 | careers | 2 | 4 | 0 | 0 | 0 |
 | gear | 8 | 3 | 12 | 0 | 0 |
 | origins | 0 | 11 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 89 | 0 | 0 |
+| referenceEntries | 0 | 0 | 88 | 0 | 0 |
 | spells | 32 | 27 | 0 | 0 | 0 |
 | tables | 0 | 5 | 0 | 0 | 0 |
 | talents | 5 | 2 | 0 | 0 | 0 |
@@ -2228,7 +2223,6 @@ Pack `high-elf` · version 1.0.1
 | `high-elf:reference:63-seaman` — Seaman | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:63-smuggler` — Smuggler | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:68-sword-dancing-tests` — Sword-dancing Tests | referenceEntries | reference-only | p. 68 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:70-shadow-warrior` — Shadow Warrior | referenceEntries | reference-only | p. 70 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:71-way-of-the-shadow` — Way of the Shadow | referenceEntries | reference-only | p. 71 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:78-training-of-a-mage` — Training of a Mage | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:79-display-basic-proficiency` — Display Basic Proficiency | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
@@ -2330,14 +2324,14 @@ Pack `blood-bramble` · version 1.0.1
 
 ## Deft Steps, Light Fingers
 
-Pack `deft-steps` · version 1.0.2
+Pack `deft-steps` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 1 | 8 | 0 | 0 | 0 |
 | cults | 0 | 1 | 0 | 0 | 0 |
 | gear | 11 | 4 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 213 | 0 | 0 |
+| referenceEntries | 0 | 0 | 204 | 0 | 0 |
 | spells | 27 | 5 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2371,9 +2365,8 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:100-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:101-forming-an-outlaw-band` — Forming an Outlaw Band | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:101-outlaws-ranald` — Outlaws & Ranald | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:102-detailing-outlaw-bands` — Detailing outlaw bands | referenceEntries | reference-only | p. 102–103 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:102-detailing-outlaw-bands` — Detailing outlaw bands | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:102-outlaw-traits` — Outlaw Traits | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:103-outlaw-chief` — Outlaw Chief | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-outlaw-chief-traits` — Outlaw Chief Traits | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-profile-outlaw-brass-2` — Outlaw Brass 2 | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-profile-outlaw-chief-brass-4` — Outlaw Chief Brass 4 | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
@@ -2383,7 +2376,6 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:107-capture` — Capture | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:107-kill` — Kill | referenceEntries | reference-only | p. 107–108 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:107-track` — Track | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:108-a-typical-bounty-hunter` — A Typical Bounty Hunter | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:108-profile-a-typical-bounty-hunter-silver-3` — A Typical Bounty Hunter Silver 3 | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:109-bounty-hunter-warrants` — Bounty Hunter Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:109-random-warrants` — Random Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
@@ -2395,7 +2387,6 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:113-travel-stages-and-distances` — Travel Stages And Distances | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:114-precipitation` — Precipitation | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:114-temperature` — Temperature | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:114-weather-table` — Weather Table | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:114-weather-table-2` — Weather Table | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:115-fire` — Fire | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:115-packs-and-containers` — Packs and Containers | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
@@ -2415,7 +2406,6 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:122-journey-endeavours` — Journey Endeavours | referenceEntries | reference-only | p. 122 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:122-planning-endeavour` — Planning Endeavour | referenceEntries | reference-only | p. 122 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:124-list-of-common-shortfalls` — List Of Common Shortfalls | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:124-terrain-table` — Terrain Table | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:124-terrain-table-2` — Terrain Table | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:125-factors-impacting-navigate-endeavours` — Factors Impacting Navigate Endeavours | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:125-forage-endeavour` — Forage Endeavour | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
@@ -2476,7 +2466,6 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:33-steel-mummit` — Steel Mummit | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:33-steel-mummit-success-table` — Steel Mummit Success Table | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:33-telescopic-stick` — Telescopic Stick | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:34-black-guard-of-morr-knight` — Black Guard Of Morr (Knight) | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:34-graverobbery-in-operation` — Graverobbery in Operation | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:34-profile-black-guard-of-morr-knight-silver-5` — Black Guard Of Morr (Knight) (Silver 5) | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:35-crypt-complications` — Crypt Complications | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
@@ -2487,6 +2476,7 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:38-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:38-false-promises` — False Promises | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:38-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:39-charlatan-income-endeavour-complications` — Charlatan Income Endeavour Complications | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:39-congruent-with-character` — Congruent With Character | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:39-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:40-underworld-rumours` — Underworld Rumours | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
@@ -2522,11 +2512,8 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:48-muscle` — Muscle | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:48-profile-bawd-brass-3` — Bawd (Brass 3) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:48-profile-racketeer-brass-5` — Racketeer (Brass 5) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:48-racketeer` — Racketeer | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:49-charlatan` — Charlatan | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:49-profile-charlatan-brass-5` — Charlatan (Brass 5) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2` — Safe House Owner (Townsman) (Silver 2) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:49-safe-house-owner-townsman` — Safe House Owner (Townsman) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:50-define-the-contact` — Define the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:50-flesh-out-the-contact` — Flesh out the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:50-new-endeavour-establishing-a-contact` — New Endeavour: Establishing A Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
@@ -2560,8 +2547,6 @@ Pack `deft-steps` · version 1.0.2
 | `deft-steps:reference:93-profile-watch-sergeant-silver-3` — Watch Sergeant (Silver 3) | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:93-profile-watchman-silver-1` — Watchman (Silver 1) | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:93-watch-presence` — Watch Presence | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:93-watch-sergeant` — Watch Sergeant | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:93-watchman` — Watchman | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:94-noble-prisoners` — Noble Prisoners | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:95-a-day-in-court` — A Day In Court | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:95-fairer-hearings` — Fairer Hearings | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |

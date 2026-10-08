@@ -738,7 +738,7 @@
   {
     "id": "rough-nights:reference:92-beast-among-the-tailors",
     "name": "Beast Among The Tailors",
-    "category": "table",
+    "category": "rule",
     "topic": "Pub games",
     "page": 92,
     "text": "Beast Among the Tailors, or just ‘Beast’ is a popular skittle game of Nordland, Ostland, and Middenland. It involves swinging a metal ball on a 3-foot chain to knock down wide-spaced skittles arranged in a 4x4 square.\n\nThe game takes its name from the Clothier Riots of Middenheim in 1805, where the city’s tailors took exception to the deep satire of their craft offered in the popular play, The Ten Tailors of Todenheim. The riots were eventually put down by troops led by ‘The Beast of Mohl’, Lord Heinrich of Thuggenheim, who is said to have ploughed through the tailors like ‘a bull through Halflings’.\n\nPlay: You have three swings to knock down all 16 skittles. For a swing, make a Very Easy (+60) Ballistic Skill Test and add your Ballistic Skill Bonus. The total is how many skittles you knock down. If you roll a Critical, you knock down all skittles. The Difficulty of any following Tests is dependent on how many skittles remain to be felled, as follows:\n\n|  |  |\n| --- | --- |\n| Skittles | Test |\n| 12–15 | Very Easy (+60) |\n| 10–11 | Easy (+40) |\n| 8–9 | Average (+20) |\n| 6–7 or 1 | Challenging (+0) |\n| 3–5 | Difficult (−10) |\n| 2 | Hard (−20) |"
@@ -754,7 +754,7 @@
   {
     "id": "rough-nights:reference:93-bull-ring",
     "name": "Bull Ring",
-    "category": "table",
+    "category": "rule",
     "topic": "Pub games",
     "page": 93,
     "text": "Usually played outdoors where there is more space for long throws, Bull Ring involves throwing rings over a set distance to hoop horns or sticks driven into a bull’s head. Bull Ring is very popular in Ostland, Ostermark, and down into Stirland and the Mootland, but can be found in pubs across the Empire. In Nordland, it is common to find rural communities playing Bull Ring with severed Beastman heads, a practice considered somewhat heretical in most provinces of the Empire.\n\nPlay: Before throwing a ring, choose a target and attempt a Ranged (Throw) Test at the appropriate Difficulty. A Success scores the indicated points. A Critical loops the next target down the table instead, scoring more points. The player with the highest points after 5 throws wins.\n\n|  |  |  |\n| --- | --- | --- |\n| Points | Target | Difficulty |\n| 10 | Nose stick | Very Easy (+60) |\n| 20 | Brow stick | Easy (+40) |\n| 30 | Horns | Average (+20) |\n| 40 | Ear Stick | Challenging (+0) |\n| 50 | Cheek Stick | Difficult (−10) |\n| 75 | Beard Stick | Hard (−20) |\n| 100 | Gorge stick | Very Hard (−30) |\n\nSpecial: If you have the Sharpshooter Talent, you can count all Tests as one step easier. So, a Throw to hoop the horns for 30 points requires an Easy (+40) Ranged (Throw) Test."

@@ -62,3 +62,7 @@ The complete integration includes the approved Mundane Alchemist conversions and
 ## Expanded reference search — 7 October 2026
 
 Casting/ritual procedures, miscasts, Endeavours, Augury/Psychometry, alchemy/potions, scrolls/grimoires/artefacts, familiars/constructs/elementals, magical environments and isolated adversary profiles/spells. Reading an adversary or combined-Wind spell does not make it a learnable player spell. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+
+## Search categorisation — 8 October 2026
+
+Construct (p. 30) is an NPCs & Creatures reference; its separate Construct Traits/CN lookup remains in Tables. Spell Familiar’s p. 188 Career introduction is labelled Careers, with the incomplete extracted advance grid omitted and unsupported progression clearly noted. Panacea Universalis and Knuckles of Ignominy are Equipment references retaining their supporting tables. Storms of Magic’s Spellcasting Rules is under Rules. None of these changes enables creation or live-play mechanics.

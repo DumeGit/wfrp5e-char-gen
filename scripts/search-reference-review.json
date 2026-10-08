@@ -915,7 +915,8 @@
         {
           "id": "core:reference:131-difficulty-and-character-modifiers",
           "sourceHash": "60c4eb000b302d72929848048ee295efe90a1bc404314a4d077e180ffc6f98d6",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "PDF p.131 checked: separate difficulty prose, lookup table and Opposed Tests; remove cross-column table extraction artefacts."
         },
         {
           "id": "core:reference:131-characteristic-tests",
@@ -8465,11 +8466,20 @@
           "id": "core:reference:364-advancement-xp-costs",
           "sourceHash": "7e87e5764548ffb30a2cd0457d017a8c97586ef1f591b8eb6396cced08ca0a47",
           "disposition": "included"
+        },
+        {
+          "id": "core:reference:131-difficulty-table",
+          "sourceHash": "1f6c2b94f310a4feae7c0f5beae481d7fe7ebca62d26f611b9bcd81913868352",
+          "disposition": "included",
+          "targets": [
+            "core:reference:131-difficulty-table"
+          ],
+          "reason": "Reviewed standalone Difficulty Table against source p.131, preserving all seven modifiers and examples."
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "5a9489d4bc7925307c95dcd4e83cbe4ab8eb0ee057493db37165239cecfad6b6",
-      "entries": 244
+      "publishedSHA256": "d4bf44882ff1cd775be21acf6f088e7c0a168ae4dae0ac0f77aa00dd2d5b95c1",
+      "entries": 245
     },
     "up-in-arms": {
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
@@ -8763,7 +8773,8 @@
         {
           "id": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
           "sourceHash": "c1fc127ac5be91e8bd623f097322e8cb7360a3ed016b8c194ffef1023fd9f83e",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
         },
         {
           "id": "up-in-arms:reference:80-wounds",
@@ -8773,7 +8784,8 @@
         {
           "id": "up-in-arms:reference:80-critical-wounds",
           "sourceHash": "fca91c45481cb09c4063e46f86ee56f5f2aa0e5073c0d67542f3fb7153c5159b",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
         },
         {
           "id": "up-in-arms:reference:80-inflicting-a-critical-hit-on-an-opponent-with-wounds",
@@ -9348,32 +9360,44 @@
         {
           "id": "up-in-arms:reference:115-hireling-templates",
           "sourceHash": "366925136fe8cdc197a24d641f4a22ca58f56883bced71c9aa0f1e3a50b6e32d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "User deferred hireling-only templates from search on 8 October 2026. Veteran also contained the Infirm template; both are excluded. Core creature templates are unaffected."
         },
         {
           "id": "up-in-arms:reference:115-veteran-of-adventures",
           "sourceHash": "5059d4b6f58746307e8dfd7f4bd8d611810529b9fd164883e852cafbbb0f1856",
-          "disposition": "included"
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "User deferred hireling-only templates from search on 8 October 2026. Veteran also contained the Infirm template; both are excluded. Core creature templates are unaffected."
         },
         {
           "id": "up-in-arms:reference:115-bright-spark",
           "sourceHash": "c427618980f01599a1397e5b311d7f2427895945737f04aa05ca1ad478c4b47b",
-          "disposition": "included"
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "User deferred hireling-only templates from search on 8 October 2026. Veteran also contained the Infirm template; both are excluded. Core creature templates are unaffected."
         },
         {
           "id": "up-in-arms:reference:115-reformed-rogue",
           "sourceHash": "35bc5df199704164031f39917319b090f3163418b5ba31436c68eb52f5e75b41",
-          "disposition": "included"
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "User deferred hireling-only templates from search on 8 October 2026. Veteran also contained the Infirm template; both are excluded. Core creature templates are unaffected."
         },
         {
           "id": "up-in-arms:reference:115-old-salt",
           "sourceHash": "820c2c4aff420d8b0edc0840dfb651f588b315a79beebb1cbf8fdd346a52cb9f",
-          "disposition": "included"
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "User deferred hireling-only templates from search on 8 October 2026. Veteran also contained the Infirm template; both are excluded. Core creature templates are unaffected."
         },
         {
           "id": "up-in-arms:reference:115-diamond-in-the-rough",
           "sourceHash": "7c01dcfc856446313c71419ec56a8b0b97b458a5419b10fce08513e947970e5f",
-          "disposition": "included"
+          "disposition": "excluded",
+          "targets": [],
+          "reason": "User deferred hireling-only templates from search on 8 October 2026. Veteran also contained the Infirm template; both are excluded. Core creature templates are unaffected."
         },
         {
           "id": "up-in-arms:reference:116-physical-quirks",
@@ -9576,7 +9600,8 @@
         {
           "id": "up-in-arms:reference:128-complex-pursuits",
           "sourceHash": "66e50be30dfbd4eca4b1fe0fcd7f64419dd962e425c9502a58dbd46e10c32f0a",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
         },
         {
           "id": "up-in-arms:reference:129-character-progress-table",
@@ -9884,8 +9909,8 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "29958d172c5878aa7e09c4f7b40438cfb154965a40b3e23150ebc6a3cec5e14b",
-      "entries": 152
+      "publishedSHA256": "99fc46496c07086fd22be0f268a55d35d35c5621a25801ad13cae495a56213c4",
+      "entries": 146
     },
     "archives-i": {
       "sourceHash": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7",
@@ -11687,7 +11712,8 @@
         {
           "id": "archives-ii:reference:83-stand-to-attention",
           "sourceHash": "a760b98cb46414e1eac6bf0e354c89d6dbe4cc48631c5ad263629543d94c7f58",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Remove neighbouring adventure hook; retain only the battlefield Power modifier lookup."
         },
         {
           "id": "archives-ii:reference:83-options-the-cost-of-war",
@@ -11817,7 +11843,8 @@
         {
           "id": "archives-ii:reference:88-intruders",
           "sourceHash": "64621ddb54e2c9ece58faec6e610d4df4896d9ab7ae75ccf8930024181e16d2d",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Remove neighbouring adventure scene; retain the separately headed War Machines equipment table and footnotes."
         },
         {
           "id": "archives-ii:reference:88-duel",
@@ -11965,7 +11992,7 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "0813366389b5f37ecb582a8258c96b05c062c67178a0561e282986787ca60f2e",
+      "publishedSHA256": "db67414f8037766e3569d5455056d43aa08f591e5ecb35cab24eed332df19f58",
       "entries": 122
     },
     "archives-iii": {
@@ -13357,7 +13384,11 @@
         {
           "id": "archives-iii:reference:78-stoat",
           "sourceHash": "327b87fefeb73b67019666233944593e9831e4e860ea32fb236fa3a9ba6460fc",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "archives-iii:reference:78-profile-stoat"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "archives-iii:reference:78-animal-familiar-characteristics",
@@ -13680,7 +13711,8 @@
         {
           "id": "archives-iii:reference:78-profile-stoat",
           "sourceHash": "9909d5a739ace6d370790b521510d31bd8b73637ef6f47ef204326d57fc0866c",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Consolidate introductory creature text and its complete profile; keep one NPCs & Creatures result."
         },
         {
           "id": "archives-iii:reference:90-profile-lord-adalbert-knopp-inzel-human-first-knight-and-spy-gold-2",
@@ -13709,8 +13741,8 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "ee8b35700162e6870bf9758027a646e81229ab0a059a18e62d9676e911b4b8a7",
-      "entries": 125
+      "publishedSHA256": "65c965453768c9e427c639e8aad4056830b297eff2bb4682281fed878da95b4c",
+      "entries": 124
     },
     "winds-of-magic": {
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
@@ -14157,7 +14189,8 @@
         {
           "id": "winds-of-magic:reference:30-construct",
           "sourceHash": "721ca243b5e3dd130fd9433dc02a124b30800ac2ccef7bd51f75279703886d68",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Construct stat block belongs to NPCs & Creatures; the ritual Trait/CN lookup is a separate table."
         },
         {
           "id": "winds-of-magic:reference:31-minor-elementals",
@@ -16620,7 +16653,8 @@
         {
           "id": "winds-of-magic:reference:163-panacea-universalis",
           "sourceHash": "05728305c7098c89138bb5f8a40149729dcce0058e883825d2851b30838b86e9",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Named item profile; its supporting outcome table remains in the item description."
         },
         {
           "id": "winds-of-magic:reference:163-potency-draught",
@@ -16767,7 +16801,8 @@
         {
           "id": "winds-of-magic:reference:172-knuckles-of-ignominy",
           "sourceHash": "f3308f0408b2ccc09754d98f831687b8c2fb1cb8696fcefa22b5bd3adb7b2ccd",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Named item profile; its supporting outcome table remains in the item description."
         },
         {
           "id": "winds-of-magic:reference:172-mail-of-stolen-valour",
@@ -17219,7 +17254,8 @@
         {
           "id": "winds-of-magic:reference:188-spell-familiar",
           "sourceHash": "e6d9f8d5707275b1d59f1d61a8e77e42b8915e2ee8b0cd112781c8d0540cfd01",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Printed Career introduction belongs to Careers; omit the incomplete extracted advance grid rather than imply that it is a lookup table."
         },
         {
           "id": "winds-of-magic:reference:188-combat-familiar-advance-scheme",
@@ -17297,7 +17333,8 @@
         {
           "id": "winds-of-magic:reference:192-spellcasting-rules",
           "sourceHash": "def38b417e054ac79bf3121bd6029e5dee77df15093aebb6a28b0418f951929d",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
         },
         {
           "id": "winds-of-magic:reference:192-environmental-rules",
@@ -17594,11 +17631,20 @@
           "id": "winds-of-magic:reference:216-profile-mona-mimn-fimir-matriarch",
           "sourceHash": "528b844cd1d82c23767e6dc36188b1a9df750d4cbecaf0ea24882179231817f7",
           "disposition": "included"
+        },
+        {
+          "id": "winds-of-magic:reference:30-construct-traits",
+          "sourceHash": "689f48c60eb218e0006c96b7f4c673c2fb1801dbe09a6fb99c648355d8d28f58",
+          "disposition": "included",
+          "targets": [
+            "winds-of-magic:reference:30-construct-traits"
+          ],
+          "reason": "Reviewed independent Construct Trait/CN lookup, separated from the creature profile on p.30."
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "bf840d4f6aa1d344ddf548fa5f18fa15b767f4e41ce634713c4a135bf5fa7f15",
-      "entries": 283
+      "publishedSHA256": "1fcb0dbd45688a111f3dc37672516f9d0f2e91d8b7a52f0aea755f0b91e52668",
+      "entries": 284
     },
     "rough-nights": {
       "sourceHash": "08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f7",
@@ -17815,7 +17861,8 @@
         {
           "id": "rough-nights:reference:92-beast-among-the-tailors",
           "sourceHash": "1f01b7fb68ad39c07dfd0a2ae9d26176036bc8e6b8129a87e9e6b1dd7331dcc2",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
         },
         {
           "id": "rough-nights:reference:92-bowls",
@@ -17831,7 +17878,8 @@
         {
           "id": "rough-nights:reference:93-bull-ring",
           "sourceHash": "ca2863f3997216f53522dc67dfdb7916b639166d9394295f70c339df4ba9474e",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
         },
         {
           "id": "rough-nights:reference:93-cerevis",
@@ -18298,7 +18346,7 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "440ad4d6f977b64dda801913145dee188d38c469975e0c872acafdaa6d61daaf",
+      "publishedSHA256": "222115f5cd6edf4ae09050834100e71991945be631404c73bba82724a07e856d",
       "entries": 104
     },
     "dwarf-guide": {
@@ -21567,7 +21615,11 @@
         {
           "id": "high-elf:reference:70-shadow-warrior",
           "sourceHash": "394622d157d3f09dfd44008ec52f565f82fcae5b4503ff24d9721930eadce82e",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "career:high-elf:career:shadow-warrior:Shadow Warrior"
+          ],
+          "reason": "Partial duplicate advance grid is represented by the existing complete Shadow Warrior Career."
         },
         {
           "id": "high-elf:reference:70-career-path",
@@ -22830,8 +22882,8 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "df013183cfa1e8e323389a2112d3055a9aa74687d1c312a946e04847354059eb",
-      "entries": 89
+      "publishedSHA256": "34c6a9e98f7b5ce589b452f2744101d80beccb41850a735f8ad0538dd54a667b",
+      "entries": 88
     },
     "blood-bramble": {
       "sourceHash": "6e62fc57534f2d56cfd99333666389d0bf293ddb81b6f3d8284382b3e2f5b8df",
@@ -23850,7 +23902,11 @@
         {
           "id": "deft-steps:reference:34-black-guard-of-morr-knight",
           "sourceHash": "9bee9262b7e426f58f60d400da33786edf1ea81f12b9b7f46cb9155c332045c5",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:34-profile-black-guard-of-morr-knight-silver-5"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:35-crypt-complications",
@@ -23949,7 +24005,8 @@
         {
           "id": "deft-steps:reference:39-congruent-with-character",
           "sourceHash": "ec47679df49b60fa12ae139de252dd313b2ace29eb153c5e0eaa3cb8dc97aa00",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "PDF p.39 checked: left-hand rule box is separate from the right-hand Charlatan Income table."
         },
         {
           "id": "deft-steps:reference:39-endeavour-complications",
@@ -24123,17 +24180,20 @@
         {
           "id": "deft-steps:reference:47-fences",
           "sourceHash": "49b41736e1550b63bbd5eb96fa8dad5677b09b0c2768c94e2efd34f52971f1ef",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Contact guidance belongs to Rules; its duplicate stat block is represented by the separately reviewed NPC profile."
         },
         {
           "id": "deft-steps:reference:47-forgers-and-counterfeiters",
           "sourceHash": "7f5945687da729f555c44ddb63026d2ab148998949a9a10ef5f5d73d65149a5f",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Contact guidance belongs to Rules; its duplicate stat block is represented by the separately reviewed NPC profile."
         },
         {
           "id": "deft-steps:reference:48-information-brokers",
           "sourceHash": "ad8a1aa85cde06720d7b52fbbc2856b6422b09563bed68fb1afdeb54428bcb02",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Contact guidance belongs to Rules; its duplicate stat block is represented by the separately reviewed NPC profile."
         },
         {
           "id": "deft-steps:reference:48-muscle",
@@ -24143,7 +24203,11 @@
         {
           "id": "deft-steps:reference:48-racketeer",
           "sourceHash": "a095a8bbba55696524ff77739cb90b1931a403aba407fd7f70afabacb0d6a81c",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:48-profile-racketeer-brass-5"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:49-safe-houses",
@@ -24154,7 +24218,11 @@
         {
           "id": "deft-steps:reference:49-safe-house-owner-townsman",
           "sourceHash": "6d5e94b1f322e8f3a20dbc0afbd172f494aa4e1a444aee506e2ad44c32b23e34",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:49-imposters",
@@ -24165,7 +24233,11 @@
         {
           "id": "deft-steps:reference:49-charlatan",
           "sourceHash": "4d3407480020404ad88dd05328939e465e12155d376bdf058b1b59d98c552951",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:49-profile-charlatan-brass-5"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:50-new-endeavour-establishing-a-contact",
@@ -25043,12 +25115,20 @@
         {
           "id": "deft-steps:reference:93-watchman",
           "sourceHash": "d162129716877ffce9126e29524d1e30effc3e30dc01c685736c760046950362",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:93-profile-watchman-silver-1"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:93-watch-sergeant",
           "sourceHash": "01b6c9de96ef705309ae7d71895ab48bddb9ee80d0852e33d0b0bdc4da6fb90a",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:93-profile-watch-sergeant-silver-3"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:94-caught-by-the-watch",
@@ -25222,7 +25302,8 @@
         {
           "id": "deft-steps:reference:102-detailing-outlaw-bands",
           "sourceHash": "b4b0a5c1bb3319e8f3c4d9df17f20d7730e4d3dd5c389d13c80875dc57bc438f",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Outlaw-band generation guidance belongs to Rules; the complete Outlaw profile remains separately indexed."
         },
         {
           "id": "deft-steps:reference:103-outlaw-chief-traits",
@@ -25232,7 +25313,11 @@
         {
           "id": "deft-steps:reference:103-outlaw-chief",
           "sourceHash": "0aae0dee4df6193b6a28fa75ed1941a0fd9f985888177eec04d58a929e642f81",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:103-profile-outlaw-chief-brass-4"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:106-bounty-hunters",
@@ -25291,7 +25376,11 @@
         {
           "id": "deft-steps:reference:108-a-typical-bounty-hunter",
           "sourceHash": "11493213588e707251bfaeaba93dd9fff1217c7cac878aff2236f372356b08e1",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:108-profile-a-typical-bounty-hunter-silver-3"
+          ],
+          "reason": "Duplicate stat block consolidated into the complete NPC profile; a characteristic grid is not a lookup table."
         },
         {
           "id": "deft-steps:reference:109-random-warrants",
@@ -25367,7 +25456,11 @@
         {
           "id": "deft-steps:reference:114-weather-table",
           "sourceHash": "789a39d487657bc153897e4be6b710ac21529a14684964e6b667b2ff48565f97",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:114-weather-table-2"
+          ],
+          "reason": "Table introduction consolidated with its actual lookup rows; do not index a prose-only duplicate as Tables."
         },
         {
           "id": "deft-steps:reference:114-weather-modifiers",
@@ -25383,7 +25476,8 @@
         {
           "id": "deft-steps:reference:114-weather-table-2",
           "sourceHash": "e9d24d5114cc5d4ac6d46ab99107815c6e8c2e9a65ff479cbb90ba3e89c6e92d",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Consolidate the table introduction and lookup rows into one reference."
         },
         {
           "id": "deft-steps:reference:114-precipitation",
@@ -25543,12 +25637,17 @@
         {
           "id": "deft-steps:reference:124-terrain-table",
           "sourceHash": "295c6c4229f879876b5e16d17c5d145c2c7f6ca6f0709affafa0140b0c5af3cf",
-          "disposition": "included"
+          "disposition": "consolidated",
+          "targets": [
+            "deft-steps:reference:124-terrain-table-2"
+          ],
+          "reason": "Table introduction consolidated with its actual lookup rows; do not index a prose-only duplicate as Tables."
         },
         {
           "id": "deft-steps:reference:124-terrain-table-2",
           "sourceHash": "eab6d012ca8492f64056a75232ed3f9d1d4417dd1957941a90937a939637de10",
-          "disposition": "included"
+          "disposition": "included",
+          "reason": "Consolidate the table introduction and lookup rows into one reference."
         },
         {
           "id": "deft-steps:reference:125-forage-endeavour",
@@ -26050,11 +26149,20 @@
           "id": "deft-steps:reference:134-profile-arabyan-redhawk",
           "sourceHash": "cb6c2cd22b50a7cb3b2a5ade01d60b90d734365ae6c1a9b6a5666b3cc5706d13",
           "disposition": "included"
+        },
+        {
+          "id": "deft-steps:reference:39-charlatan-income-endeavour-complications",
+          "sourceHash": "9ff8e95d8635d1aa6e7743dc10b74d3a43b5a0ad138f246a76f75358c134d97a",
+          "disposition": "included",
+          "targets": [
+            "deft-steps:reference:39-charlatan-income-endeavour-complications"
+          ],
+          "reason": "Reviewed distinct right-column Charlatan Income Endeavour Complications table on PDF p.39."
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "df35c7029ea9fed7bc7b8f5a24b3c2d7d659010ffdb11bdfefe763af7a11671a",
-      "entries": 213
+      "publishedSHA256": "f368aa6d638fe010da96d7b72c17ec1df4b3857f2665a8e9647e91cef9b2dd7f",
+      "entries": 204
     }
   }
 }

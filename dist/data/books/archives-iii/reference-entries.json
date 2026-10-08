@@ -629,15 +629,7 @@
     "category": "profile",
     "topic": "Printed NPC and creature profiles",
     "page": 78,
-    "text": "STOAT\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | Wp | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 40 | - | 10 | 10 | 45 | 40 | - | 15 | 15 | 15 | 2 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Bite+2, Companion Trait (Perception), Night Vision, Size (Little), • Skittish, Stealthy, Trained (Broken, Magic), Weapon+2\n\nOptional: Arboreal, Infected, Messenger, Territorial •\n\nSkills: Climb 45, Cool 20, Dodge 45, Entertain 20, Intuition 50, Language (Wilds) 20, Outdoor Survival 53, Perception 53, Stealth (Rural) 45, Swim 45\n\nTalents: Animal Assistant, Second Sight, Rover"
-  },
-  {
-    "id": "archives-iii:reference:78-stoat",
-    "name": "Stoat",
-    "category": "table",
-    "topic": "Familiars",
-    "page": 78,
-    "text": "Stoat familiars are common amongst Hedge Witches and wizards who subsist on hunting and forage. The stalking ability obtained from stoat-bonding is also useful for espionage and murder. Stoats are challenging familiars that bite when they’re hungry, and sometimes nest in clothing or backpacks. Their reputation as crafty, cold-blooded killers isn’t entirely undeserved.\n\nSTOAT\n\n|  |  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | Wp | Fel | W |\n| 6 | 40 | - | 10 | 10 | 45 | 40 | - | 15 | 15 | 15 | 2 |\n\n6 40 - 10 10 45 40 - 15 15 15 2 Creature Traits: Animal Telepathy, Bestial, Bite+2, Companion Trait (Perception), Night Vision, Size (Little), Skittish, Stealthy, Trained (Broken, Magic), Weapon+2 Optional: Arboreal, Infected, Messenger, Territorial Skills: Climb 45, Cool 20, Dodge 45, Entertain 20, Intuition 50, Language (Wilds) 20, Outdoor Survival 53, Perception 53, Stealth (Rural) 45, Swim 45 Talents: Animal Assistant, Second Sight, Rover"
+    "text": "Stoat familiars are common amongst Hedge Witches and wizards who subsist on hunting and forage. The stalking ability obtained from stoat-bonding is also useful for espionage and murder. Stoats are challenging familiars that bite when they’re hungry, and sometimes nest in clothing or backpacks. Their reputation as crafty, cold-blooded killers isn’t entirely undeserved.\n\nSTOAT\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | Wp | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 6 | 40 | - | 10 | 10 | 45 | 40 | - | 15 | 15 | 15 | 2 |\n\nCreature\n\nTraits: Animal Telepathy, Bestial, Bite+2, Companion Trait (Perception), Night Vision, Size (Little), • Skittish, Stealthy, Trained (Broken, Magic), Weapon+2\n\nOptional: Arboreal, Infected, Messenger, Territorial •\n\nSkills: Climb 45, Cool 20, Dodge 45, Entertain 20, Intuition 50, Language (Wilds) 20, Outdoor Survival 53, Perception 53, Stealth (Rural) 45, Swim 45\n\nTalents: Animal Assistant, Second Sight, Rover"
   },
   {
     "id": "archives-iii:reference:79-animal-skills-parent-characteristics",

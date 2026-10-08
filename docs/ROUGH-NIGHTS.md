@@ -62,3 +62,7 @@ No new priced equipment, spells, PC Careers, magic-item grants or adventure rewa
 ## Expanded reference search — 7 October 2026
 
 Original Gnome tables/strictures, all fifteen named pub games and their printed Critical convention, isolated NPC stat blocks and Reveal the Inner Beauty (printed p. 52, PDF p. 53). Adventure scenes/plots and NPC biographies are excluded. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+
+## Search categorisation — 8 October 2026
+
+Beast Among the Tailors (p. 92) and Bull Ring (p. 93) are Rules references rather than Tables. Their supporting difficulty/scoring tables remain in the dialogs without adding gameplay automation.

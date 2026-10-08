@@ -67,3 +67,7 @@ Local browser checks verified enabling the book on a pristine draft, Ogre Career
 ## Expanded reference search — 7 October 2026
 
 Original Ogre/astrology tables, magical artifice and item-generation tables, mass battles/Endeavours, psychological disorders and isolated NPC/creature profiles. Multi-row Ogre and Erzbet profiles preserve every printed stat row. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+
+## Search categorisation — 8 October 2026
+
+Battlefield Power Modifiers (p. 83) and War Machines (p. 88) retain their genuine lookup rows, with misleading neighbouring adventure-sidebar titles and scene text removed. Their stable reference identities are retained; no battlefield or siege automation is added.

@@ -6,21 +6,21 @@ Gameplay references only; setting-only prose, adventure scenes and secrets are e
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded text is not shipped. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **4032 results**, including **1483 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **4017 results**, including **1468 new printed references**. Existing profiles include grouped specialisations and reference variants.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.5 | 1730 | 244 | 1974 | 0 |
-| Up in Arms | 1.0.1 | 98 | 152 | 250 | 12 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.6 | 1730 | 245 | 1975 | 0 |
+| Up in Arms | 1.0.2 | 98 | 146 | 244 | 12 |
 | Archives of the Empire: Volume I | 1.0.1 | 39 | 25 | 64 | 21 |
-| Archives of the Empire: Volume II | 1.0.3 | 24 | 122 | 146 | 7 |
-| Archives of the Empire: Volume III | 1.0.1 | 59 | 125 | 184 | 14 |
-| Winds of Magic | 1.0.1 | 172 | 283 | 455 | 55 |
-| Rough Nights & Hard Days | 1.0.1 | 2 | 104 | 106 | 2 |
+| Archives of the Empire: Volume II | 1.0.4 | 24 | 122 | 146 | 7 |
+| Archives of the Empire: Volume III | 1.0.2 | 59 | 124 | 183 | 14 |
+| Winds of Magic | 1.0.2 | 172 | 284 | 456 | 55 |
+| Rough Nights & Hard Days | 1.0.2 | 2 | 104 | 106 | 2 |
 | Dwarf Player’s Guide | 1.0.1 | 221 | 118 | 339 | 102 |
-| High Elf Player’s Guide | 1.0.1 | 116 | 89 | 205 | 50 |
+| High Elf Player’s Guide | 1.0.2 | 116 | 88 | 204 | 50 |
 | Blood and Bramble | 1.0.1 | 25 | 8 | 33 | 10 |
-| Deft Steps, Light Fingers | 1.0.2 | 56 | 213 | 269 | 17 |
+| Deft Steps, Light Fingers | 1.0.3 | 56 | 204 | 260 | 17 |
 
 ## Source review
 
@@ -41,9 +41,9 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 - pp. 318–322: Bestiary rules.
 - pp. 350–364: Templates, Traits and appendices.
 
-Candidate sections: included 244; consolidated 3; excluded 222; existing 626.
+Candidate sections: included 245; consolidated 3; excluded 222; existing 626.
 
-Categories: career 64; skill 269; talent 423; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 411; trait 67; species 5; table 86; endeavour 16; profile 53; template 7; mutation 40.
+Categories: career 64; skill 269; talent 423; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 412; trait 67; species 5; table 86; endeavour 16; profile 53; template 7; mutation 40.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -62,9 +62,9 @@ Source SHA-256: `9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdf
 - pp. 133–136: Group Advantage.
 - pp. 137–141: Warrior Endeavours and Talents.
 
-Candidate sections: excluded 47; included 152; existing 14; consolidated 12.
+Candidate sections: excluded 53; included 146; existing 14; consolidated 12.
 
-Categories: career 15; talent 12; magic 9; equipment 70; species 3; rule 69; table 46; profile 9; property 7; trait 1; template 3; endeavour 6.
+Categories: career 15; talent 12; magic 9; equipment 70; species 3; rule 72; table 40; profile 9; property 7; trait 1; endeavour 6.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -114,9 +114,9 @@ Source SHA-256: `e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde478
 - pp. 83–84: Altdorf character rules.
 - pp. 85–88: Alternative Channelling and Cants.
 
-Candidate sections: included 125; excluded 106; consolidated 17; existing 30.
+Candidate sections: included 124; excluded 106; consolidated 18; existing 30.
 
-Categories: career 3; magic 58; species 11; rule 77; table 11; profile 12; endeavour 1; property 7; trait 4.
+Categories: career 3; magic 58; species 11; rule 77; table 10; profile 12; endeavour 1; property 7; trait 4.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -147,9 +147,9 @@ Source SHA-256: `28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a15
 - pp. 196–199: Additional magical reference profiles.
 - pp. 217–218: Adversary and combined-Wind spells.
 
-Candidate sections: excluded 132; included 283; existing 161; consolidated 4.
+Candidate sections: excluded 132; included 284; existing 161; consolidated 4.
 
-Categories: career 12; skill 2; magic 229; equipment 5; rule 144; table 33; endeavour 5; profile 20; talent 3; property 1; trait 1.
+Categories: career 13; skill 2; magic 229; equipment 7; rule 145; table 29; profile 21; endeavour 5; talent 3; property 1; trait 1.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -162,7 +162,7 @@ Source SHA-256: `08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f
 
 Candidate sections: excluded 24; included 104; existing 1.
 
-Categories: talent 1; species 1; profile 80; magic 1; table 5; rule 18.
+Categories: talent 1; species 1; profile 80; magic 1; table 3; rule 20.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -194,9 +194,9 @@ Source SHA-256: `16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b
 - pp. 112–117: Cult obligations and intrigue.
 - pp. 118–125: Intrigue.
 
-Candidate sections: excluded 133; included 89; existing 92.
+Candidate sections: excluded 133; included 88; existing 92; consolidated 1.
 
-Categories: career 10; talent 11; magic 69; equipment 23; species 11; table 21; rule 59; endeavour 1.
+Categories: career 10; talent 11; magic 69; equipment 23; species 11; table 20; rule 59; endeavour 1.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -230,9 +230,9 @@ Source SHA-256: `2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537ee
 - pp. 122–135: Journey, camping and hunting.
 - pp. 138–139: Gamekeeper.
 
-Candidate sections: excluded 201; included 213; existing 42; consolidated 5.
+Candidate sections: excluded 201; included 204; existing 42; consolidated 15.
 
-Categories: career 9; magic 32; equipment 15; rule 101; table 58; endeavour 32; profile 22.
+Categories: career 9; magic 32; equipment 15; rule 106; table 44; endeavour 32; profile 22.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 

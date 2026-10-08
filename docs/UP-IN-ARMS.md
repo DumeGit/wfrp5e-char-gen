@@ -48,3 +48,7 @@ Integration verification: Browser checks cover book activation, source-labelled 
 ## Expanded reference search — 7 October 2026
 
 Injury/critical tables, mounted combat, Pursuits, Group Advantage, hirelings, structure/siege rules, Warrior Endeavours and original equipment/property tables. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+
+## Search categorisation — 8 October 2026
+
+Hireling-only templates and their p. 115 selection table are excluded from search by user request until hireling support exists. This includes Infirm, formerly embedded in Veteran of Adventures. Other hireling reading/prices remain reference-only. Critical Wounds explanations and Complex Pursuits are Rules, while genuine critical, equipment and outcome tables remain Tables. Templates contains only core creature templates.

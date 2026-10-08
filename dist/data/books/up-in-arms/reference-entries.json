@@ -58,7 +58,7 @@
   {
     "id": "up-in-arms:reference:80-critical-wounds",
     "name": "Critical Wounds",
-    "category": "table",
+    "category": "rule",
     "topic": "Priests, injuries and armoury",
     "page": 80,
     "text": "There are two ways to generate a Critical Wound. One is to inflict critical damage before your opponent is reduced to 0 Wounds. The other is to inflict any sort of Damage after your opponent has been reduced to 0 Wounds."
@@ -90,7 +90,7 @@
   {
     "id": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
     "name": "Wounds, Critical Wounds, And Death",
-    "category": "table",
+    "category": "rule",
     "topic": "Priests, injuries and armoury",
     "page": 80,
     "text": "Wound loss represents minor cuts, bruises, and depleted reserves of energy. By comparison, Critical Wounds are much more severe, expressing serious injuries, broken bones, torn muscles, and lesions in flesh. Critical Wounds are debilitating and dangerous. Gain too many and you risk death."
@@ -675,54 +675,6 @@
     "text": "SCRIBE — SILVER 2\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 31 | 31 | 31 | 41 | 31 | 31 | 36 | 46 | 41 | 36 | 15 |\n\nTraits: Weapon (Dagger) +5\n\nSkills: Animal Care 51, Art (Writing) 41, Charm 41, Consume Alcohol 51, Cool 44, Entertain (Storytelling) 46, Evaluate 49, Gamble 56, Gossip 46, Haggle 49, Intuition 36, Language (GM’s Choice 51, Classical 56), Lore (History 56, Law 51), Melee (Basic) 36, Perception 36, Research 56, Trade (Scribe) 41\n\nTalents: Artistic, Bookish, Carouser, Doomed, Read/ Write, Savvy, Suave\n\nTrappings: Book, Clothing, Dagger, Pouch, Sling Bag containing Writing Kit and 5 Pieces of Parchment"
   },
   {
-    "id": "up-in-arms:reference:115-bright-spark",
-    "name": "Bright Spark",
-    "category": "template",
-    "topic": "Hirelings",
-    "page": 115,
-    "text": "| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| – | – | – | – | – | +10 | – | – | +10 | +5 | +5 |\n\n– – – – – +10 – – +10 +5 +5 Skills: Intuition +10, Lore (Local) +10, Perception +10 Trappings: Mail Armour, Hand Weapon"
-  },
-  {
-    "id": "up-in-arms:reference:115-diamond-in-the-rough",
-    "name": "Diamond In The Rough",
-    "category": "table",
-    "topic": "Hirelings",
-    "page": 115,
-    "text": "|  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| – | +5 | +5 | +5 | – | +5 | +5 | +5 | – | +5 | +5 |\n\n– +5 +5 +5 – +5 +5 +5 – +5 +5 Talents: Generate an additional 3 random starting Talents as if for a new Character."
-  },
-  {
-    "id": "up-in-arms:reference:115-hireling-templates",
-    "name": "Hireling Templates",
-    "category": "table",
-    "topic": "Hirelings",
-    "page": 115,
-    "text": "Hirelings vary from one another in terms of their abilities. Roll on the Templates table to find out if the Hireling has bonuses or penalties that modify their basic profile. Hirelings may not present their future employers with any expectations about being particularly skilled or infirm, though the GM may well give appropriate clues if Characters subject their Hirelings to interviews.\n\n|  |  |\n| --- | --- |\n| D100 ROLL | TEMPLATE |\n| 01–25 | The Hireling performs as expected, do not apply a template. |\n| 26–40 | The Hireling has experience adventuring and knows how to look after themselves. Apply the Veteran of Adventures template. |\n| 41–55 | The Hireling is regrettably infirm, feeble, or otherwise compromised, though they will not admit this to potential employers. Apply the Infirm template. |\n| 56–69 | The Hireling has an unusual degree of wit to them. Apply the Bright Spark template. |\n| 70–85 | The Hireling has a criminal past. Apply the Reformed Rogue template. |\n| 86–95 | The Hireling has spent a significant time at sea. Apply the Old Salt template. |\n| 96–00 | The Hireling is untested but has great potential. Apply the Diamond in the Rough template. |"
-  },
-  {
-    "id": "up-in-arms:reference:115-old-salt",
-    "name": "Old Salt",
-    "category": "template",
-    "topic": "Hirelings",
-    "page": 115,
-    "text": "| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| – | – | – | +10 | +10 | – | +10 | – | – | – | – |\n\n– – – +10 +10 – +10 – – – – Skills: Consume Alcohol +10, Row +10, Sail +10, Swim +10"
-  },
-  {
-    "id": "up-in-arms:reference:115-reformed-rogue",
-    "name": "Reformed Rogue",
-    "category": "template",
-    "topic": "Hirelings",
-    "page": 115,
-    "text": "| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| – | +5 | – | – | – | – | +10 | +10 | – | – | +5 |\n\n– +5 – – – – +10 +10 – – +5 Skills: Perception +10, Sleight of Hand +10, Stealth (Urban) +10 Talents: Criminal, Etiquette (Criminals) Trappings: 10 yards of Rope, Set of Lockpicks, Mask"
-  },
-  {
-    "id": "up-in-arms:reference:115-veteran-of-adventures",
-    "name": "Veteran Of Adventures",
-    "category": "table",
-    "topic": "Hirelings",
-    "page": 115,
-    "text": "|  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| – | +5 | – | +5 | +5 | +10 | – | – | – | – | – |\n\n– +5 – +5 +5 +10 – – – – – Skills: Cool +10, Dodge +10, Melee (Basic or Polearm) +10 Talents: Combat Reflexes Trappings: Leather Armour, Hand Weapon or Spear, Shield\n\nINFIRM\n\n|  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| –1 | –10 | –10 | –5 | –5 | –10 | –10 | –10 | – | – | – |\n\n–1 –10 –10 –5 –5 –10 –10 –10 – – – Skills: Reduce all Skills by 10"
-  },
-  {
     "id": "up-in-arms:reference:116-physical-quirks",
     "name": "Physical Quirks",
     "category": "table",
@@ -901,7 +853,7 @@
   {
     "id": "up-in-arms:reference:128-complex-pursuits",
     "name": "Complex Pursuits",
-    "category": "table",
+    "category": "rule",
     "topic": "Pursuits",
     "page": 128,
     "text": "The existing rules work well for simple pursuits, and pursuits between an individual Quarry and an individual Pursuer, but they assume that the Quarry all move at the same speed, as do the Pursuers, and that faster Characters are unimpeded by slower comrades. When pursuits involve Characters with varying Movement rates, or when the performance of every individual involved in a pursuit counts, more detail may be required as to the progress of the pursuit.\n\nMore complex pursuits require a little bookkeeping by the GM, as each Character in the pursuit is treated as an individual, and the Distance is more dependent on circumstances.\n\n1: Determine Distance: The GM assigns a number to represent the size of the head start the nearest member of the Quarry has over the closest Pursuer, called the Distance. Each point of Distance represents 10 yards.\n\n|  |  |\n| --- | --- |\n| ENVIRONMENT THE CHASE TAKES PLACE WITHIN | DISTANCE REQUIRED TO ESCAPE |\n| Busy city streets, labyrinthine sewers, hedge maze | 3 |\n| Craggy mountains, dense woodland, foggy fenland | 5 |\n| Sleepy village, light woodland, swamp | 7 |\n| Shrubby meadow, gently rolling hills, rocky beach | 10 |\n| Featureless desert, grassy steppe, limestone pavement | 13 |\n\nThe Distance ranges from 0 (Quarry is caught) to a number the GM feels is appropriate for the Quarry to escape given the environment. The busier the environment, the smaller the number the Quarry must reach to escape.\n\nIf the Quarry are in a tight group, they all count as being at the same Distance, but if any of them lead a Pursuer or another Character in the Quarry group by more than 16 yards, calculate their individual Distance from the Pursuers as appropriate.\n\nThe Pursuers can be treated as a group if they have the same Movement, or split into smaller groups according to their Movement or ability to pass Tests to pursue.\n\n2: Test and Update Distance: In Initiative order, participants involved in the pursuit roll a Test for their Movement. This will be an Average (+20) Athletics Test for those on foot, Average (+20) Ride Test for those mounted on a horse or other riding animal, and Average (+20) Drive Test for those on a coach, chariot, or other vehicle. Consult the following table to determine the results of the Test.\n\nCharacters with Movement Attributes of 3 or less suffer penalties to Athletics Tests for complex pursuits. Characters with Movement 3 must make Challenging (+0) Athletics Tests. Characters with Movement 2 must make Hard (-20) Athletics Tests. Characters with Movement 1 must make Very Hard (-30) Athletics Tests."

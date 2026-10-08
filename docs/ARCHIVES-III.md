@@ -52,3 +52,7 @@ Tests cover every supplement combination, unchanged armour/tables, three Careers
 ## Expanded reference search — 7 October 2026
 
 Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+
+## Search categorisation — 8 October 2026
+
+Stoat’s introductory text and complete stat block (p. 78) are consolidated into one NPCs & Creatures result. Animal Familiar Characteristics remains a genuine multi-species comparison Table. Familiar creation remains deferred.

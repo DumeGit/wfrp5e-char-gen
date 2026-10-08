@@ -59,3 +59,7 @@ High Elf tests exercise opt-in composition, all regional d100 faces, origins/Car
 ## Expanded reference search — 7 October 2026
 
 Yenlui/Elder/Blood procedures, training/sword-dancing/High Magic, naval equipment, intrigue, cult obligations and printed Mage levels 1–5 plus the three priest Careers at levels 3–5. Their references do not add unsupported Career levels or branches to player creation. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+
+## Search categorisation — 8 October 2026
+
+The partial Shadow Warrior advance-grid duplicate (p. 70) is removed from Tables; the complete existing Shadow Warrior Career reference remains available. No Career mechanics are changed.

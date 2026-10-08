@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay references only; setting-only prose, adventure scenes and secrets are excluded. Existing adapted creator profiles are retained. This inventory audits selected gameplay ranges and isolated printed profiles, not every sentence in the PDFs.",
-  "references": 4032,
-  "newlyImported": 1483,
+  "references": 4017,
+  "newlyImported": 1468,
   "books": [
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1974,
-      "newlyImported": 244,
+      "references": 1975,
+      "newlyImported": 245,
       "existingReferences": 1730,
       "adaptedReferences": 0,
       "categories": {
@@ -23,7 +23,7 @@
         "condition": 13,
         "property": 36,
         "psychology": 5,
-        "rule": 411,
+        "rule": 412,
         "trait": 67,
         "species": 5,
         "table": 86,
@@ -33,7 +33,7 @@
         "mutation": 40
       },
       "dispositions": {
-        "included": 244,
+        "included": 245,
         "consolidated": 3,
         "excluded": 222,
         "existing": 626
@@ -95,11 +95,11 @@
     {
       "id": "up-in-arms",
       "title": "Up in Arms",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
-      "references": 250,
-      "newlyImported": 152,
+      "references": 244,
+      "newlyImported": 146,
       "existingReferences": 98,
       "adaptedReferences": 12,
       "categories": {
@@ -108,17 +108,16 @@
         "magic": 9,
         "equipment": 70,
         "species": 3,
-        "rule": 69,
-        "table": 46,
+        "rule": 72,
+        "table": 40,
         "profile": 9,
         "property": 7,
         "trait": 1,
-        "template": 3,
         "endeavour": 6
       },
       "dispositions": {
-        "excluded": 47,
-        "included": 152,
+        "excluded": 53,
+        "included": 146,
         "existing": 14,
         "consolidated": 12
       },
@@ -227,7 +226,7 @@
     {
       "id": "archives-ii",
       "title": "Archives of the Empire: Volume II",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "edition": 4,
       "sourceHash": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b",
       "references": 146,
@@ -288,11 +287,11 @@
     {
       "id": "archives-iii",
       "title": "Archives of the Empire: Volume III",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788",
-      "references": 184,
-      "newlyImported": 125,
+      "references": 183,
+      "newlyImported": 124,
       "existingReferences": 59,
       "adaptedReferences": 14,
       "categories": {
@@ -300,16 +299,16 @@
         "magic": 58,
         "species": 11,
         "rule": 77,
-        "table": 11,
+        "table": 10,
         "profile": 12,
         "endeavour": 1,
         "property": 7,
         "trait": 4
       },
       "dispositions": {
-        "included": 125,
+        "included": 124,
         "excluded": 106,
-        "consolidated": 17,
+        "consolidated": 18,
         "existing": 30
       },
       "areas": [
@@ -364,29 +363,29 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
-      "references": 455,
-      "newlyImported": 283,
+      "references": 456,
+      "newlyImported": 284,
       "existingReferences": 172,
       "adaptedReferences": 55,
       "categories": {
-        "career": 12,
+        "career": 13,
         "skill": 2,
         "magic": 229,
-        "equipment": 5,
-        "rule": 144,
-        "table": 33,
+        "equipment": 7,
+        "rule": 145,
+        "table": 29,
+        "profile": 21,
         "endeavour": 5,
-        "profile": 20,
         "talent": 3,
         "property": 1,
         "trait": 1
       },
       "dispositions": {
         "excluded": 132,
-        "included": 283,
+        "included": 284,
         "existing": 161,
         "consolidated": 4
       },
@@ -507,7 +506,7 @@
     {
       "id": "rough-nights",
       "title": "Rough Nights & Hard Days",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f7",
       "references": 106,
@@ -519,8 +518,8 @@
         "species": 1,
         "profile": 80,
         "magic": 1,
-        "table": 5,
-        "rule": 18
+        "table": 3,
+        "rule": 20
       },
       "dispositions": {
         "excluded": 24,
@@ -604,11 +603,11 @@
     {
       "id": "high-elf",
       "title": "High Elf Player’s Guide",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9",
-      "references": 205,
-      "newlyImported": 89,
+      "references": 204,
+      "newlyImported": 88,
       "existingReferences": 116,
       "adaptedReferences": 50,
       "categories": {
@@ -617,14 +616,15 @@
         "magic": 69,
         "equipment": 23,
         "species": 11,
-        "table": 21,
+        "table": 20,
         "rule": 59,
         "endeavour": 1
       },
       "dispositions": {
         "excluded": 133,
-        "included": 89,
-        "existing": 92
+        "included": 88,
+        "existing": 92,
+        "consolidated": 1
       },
       "areas": [
         {
@@ -694,27 +694,27 @@
     {
       "id": "deft-steps",
       "title": "Deft Steps, Light Fingers",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "edition": 4,
       "sourceHash": "2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537eec",
-      "references": 269,
-      "newlyImported": 213,
+      "references": 260,
+      "newlyImported": 204,
       "existingReferences": 56,
       "adaptedReferences": 17,
       "categories": {
         "career": 9,
         "magic": 32,
         "equipment": 15,
-        "rule": 101,
-        "table": 58,
+        "rule": 106,
+        "table": 44,
         "endeavour": 32,
         "profile": 22
       },
       "dispositions": {
         "excluded": 201,
-        "included": 213,
+        "included": 204,
         "existing": 42,
-        "consolidated": 5
+        "consolidated": 15
       },
       "areas": [
         {

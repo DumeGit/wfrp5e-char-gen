@@ -290,10 +290,10 @@
   {
     "id": "winds-of-magic:reference:30-construct",
     "name": "Construct",
-    "category": "table",
+    "category": "profile",
     "topic": "Spellcasting, ritual magic and specialist magic",
     "page": 30,
-    "text": "|  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| 4 | 25 | – | 45 | 45 | 10 | 20 | 10 | – | – | 32 |\n\n4 25 – 45 45 10 20 10 – – 32 Traits: Construct, Painless, Size (Large), Stupid, Unstable, Weapon +8\n\nWizards may provide their construct with additional Creature Traits, but doing so increases the CN of the ritual. Constructs tend to be lumpen and massive, so Traits that boost their strength and resilience are relatively easy to imbue, whilst Traits that improve their manoeuvrability can be challenging. See WFRP pages 338–343 for more on Creature Traits.\n\n| CONSTRUCT TRAITS | CONSTRUCT TRAITS |\n| --- | --- |\n| Trait | CN |\n| Big | +10 |\n| Brute | +5 |\n| Champion | +10 |\n| Die Hard | +10 |\n| Fast | +20 |\n| Flight (20) | +30 |\n| Hardy | +5 |\n| Horns (SB+3) | +5 |\n| Rear | +5 |\n| Size (Tiny) | –20 |\n| Size (Little) | –15 |\n| Size (Small) | –10 |\n| Size (Average) | –5 |\n| Size (Enormous) | +60 |\n| Size (Monstrous) | +120 |\n| Stride | +20 |\n| Tough | +10 |\n| Wallcrawler | +20 |"
+    "text": "|  |  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n| 4 | 25 | – | 45 | 45 | 10 | 20 | 10 | – | – | 32 |\n\n4 25 – 45 45 10 20 10 – – 32 Traits: Construct, Painless, Size (Large), Stupid, Unstable, Weapon +8\n\nWizards may provide their construct with additional Creature Traits, but doing so increases the CN of the ritual. Constructs tend to be lumpen and massive, so Traits that boost their strength and resilience are relatively easy to imbue, whilst Traits that improve their manoeuvrability can be challenging. See WFRP pages 338–343 for more on Creature Traits."
   },
   {
     "id": "winds-of-magic:reference:31-create-familiar",
@@ -1530,7 +1530,7 @@
   {
     "id": "winds-of-magic:reference:163-panacea-universalis",
     "name": "Panacea Universalis",
-    "category": "table",
+    "category": "equipment",
     "topic": "Magical artefacts and alchemy",
     "page": 163,
     "text": "Onset Time: 1d10 rounds Volatility: Moderate Ingredient Cost: 6 GC Ingredient Locale: Temperate Forest Ingredient Difficulty: -10 Creation Difficulty: -2 SL Creation Time: 1 month Panacea Universalis is a healing draught of tremendous efficacy. Once the potion takes effect, the drinker recovers three times their Toughness Bonus in Wounds immediately. They also recover from any Bleeding or Fatigued Conditions. Critical Injuries may also be healed — refer to the Panacea Universalis Critical Healing table.\n\n| PANACEA UNIVERSALIS CRITICAL HEALING | PANACEA UNIVERSALIS CRITICAL HEALING |\n| --- | --- |\n| Critical Injury | Healed on a… |\n| Minor Broken Bone | Challenging (+0) Endurance Test |\n| Major Broken Bone | Difficult (–10) Endurance Test |\n| Minor Torn Muscle | Easy (+40) Endurance Test |\n| Major Torn Muscle | Average (+20) Endurance Test |\n\nMultiple Critical Injuries may be healed this way, although Amputations are unfortunately beyond the ability of Panacea Universalis to treat.\n\nFinally, any diseases are cured on an Average (+20) Endurance Test. Roll once per disease if the drinker has more than one."
@@ -1698,7 +1698,7 @@
   {
     "id": "winds-of-magic:reference:172-knuckles-of-ignominy",
     "name": "Knuckles of Ignominy",
-    "category": "table",
+    "category": "equipment",
     "topic": "Magical artefacts and alchemy",
     "page": 172,
     "text": "Boon: Impale Quality Bane: Contract a random disease Trigger: When a Critical Hit is caused by the Knuckles Description: These knuckledusters were originally owned by a talkative pit fighter from Tilea, who had a penchant for public insults, and who was cursed by a Tilean courtier (and sometimes warlock) when one of those insults went too far, in too public a space.They appear to be constructed of an ancient, coppery material discoloured with a patina that cannot be removed no matter the effort. On careful inspection, the area where the fingers grip the weapon are ragged and uneven.\n\nAny attacks made with these knuckledusters benefit from the Impale Quality. But when the knuckledusters inflict a Critcal Hit, their bearer automatically contracts a disease from the following table with no Test to avoid it — such is the nature of the curse.\n\nThe onset is sudden, within 1 or 2 days, and most typically in a public or social setting where the rapid onset of such a disease would cause embarrassment or public humiliation. Unlike naturally occurring diseases, the diseases caused by this curse resolve within 24 hours, after the Character has suffered at least one socially awkward interaction. Roll on the following table once for each time the knuckledusters Impale during a single combat.\n\n| 1d10 | Cursed Knuckleduster Diseases |\n| --- | --- |\n| 1–2 | Festering Wound |\n| 3–4 | Itching Pox |\n| 5–7 | Galloping Trots |\n| 8–9 | Packer’s Pox |\n| 10 | Bloody Flux |"
@@ -2019,10 +2019,11 @@
   {
     "id": "winds-of-magic:reference:188-spell-familiar",
     "name": "Spell Familiar",
-    "category": "table",
+    "category": "career",
     "topic": "Magical creatures and familiars",
     "page": 188,
-    "text": "|  |  |  |  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| WS | BS | S | T | I | Ag | Dex | Int | WP | Fel |\n|  |  |  |  |  |  | h | h | h |  |\n\nSpell Familiars are often diminutive imps, tiny golems, or magically animated puppets that have a gift for spellcasting and magical knowledge."
+    "text": "Spell Familiars are often diminutive imps, tiny golems, or magically animated puppets that have a gift for spellcasting and magical knowledge.",
+    "notes": "This printed Career introduction is reference-only. The familiar Career advance scheme and progression are not imported or supported by the creators."
   },
   {
     "id": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
@@ -2075,7 +2076,7 @@
   {
     "id": "winds-of-magic:reference:192-spellcasting-rules",
     "name": "Spellcasting Rules",
-    "category": "table",
+    "category": "rule",
     "topic": "Magical environments",
     "page": 192,
     "text": "During Storms of Magic, Casting Tests are enhanced by +2 SL (cumulative with other bonuses). Every round, roll for Magical Flux on the table below. Spells from the indicated Lore automatically gain the benefit of Critical Casting (page 20) provided the Casting Test succeeds. Wizards who control an arcane fulcrum may attempt a Hard (-20) Channelling Test to choose a Magical Flux for the entire region.\n\n| d10 Roll | Magical Flux |\n| --- | --- |\n| 1 | Lore of Beasts |\n| 2 | Lore of Death |\n| 3 | Lore of Fire |\n| 4 | Lore of Heavens |\n| 5 | Lore of Metal |\n| 6 | Lore of Life |\n| 7 | Lore of Light |\n| 8 | Lore of Shadows |\n| 9 | Witch Magic |\n| 10 | Dark Magic and Chaos Magic |"
@@ -2271,5 +2272,13 @@
     "topic": "Adversary and combined-Wind spells",
     "page": 218,
     "text": "CN: 1 for Ghyran and 3 for Ghur (to be contributed by two different wizards in the same round) Range: The spell affects either one of the casters Target: 1 Duration: Willpower Bonus (use the higher Willpower of the two participants) rounds. Created by the Weissenberg Four, this is a new form of Colour Magic, with two magisters able to combine their power to cast a single spell. While not technically illegal, several interested parties, including the Cult of Sigmar, strongly insist that it should be.\n\nThe caster’s skin grows rough and hard. The wearer gains +20 Toughness."
+  },
+  {
+    "id": "winds-of-magic:reference:30-construct-traits",
+    "name": "Construct Traits",
+    "category": "table",
+    "topic": "Spellcasting, ritual magic and specialist magic",
+    "page": 30,
+    "text": "| CONSTRUCT TRAITS | CONSTRUCT TRAITS |\n| --- | --- |\n| Trait | CN |\n| Big | +10 |\n| Brute | +5 |\n| Champion | +10 |\n| Die Hard | +10 |\n| Fast | +20 |\n| Flight (20) | +30 |\n| Hardy | +5 |\n| Horns (SB+3) | +5 |\n| Rear | +5 |\n| Size (Tiny) | –20 |\n| Size (Little) | –15 |\n| Size (Small) | –10 |\n| Size (Average) | –5 |\n| Size (Enormous) | +60 |\n| Size (Monstrous) | +120 |\n| Stride | +20 |\n| Tough | +10 |\n| Wallcrawler | +20 |"
   }
 ]
