@@ -1,3 +1,4 @@
+import { syncGMCants } from "../dist/gm/cants.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -151,4 +152,121 @@ test("Rhya and Hedgecraft additions preserve core duplicate definitions and disa
   const miracles = magicChoices(R, result(s));
   s.spells = [miracles.find((x) => x.source.book === "archives-iii").contentId];
   assert.throws(() => validateGMDraft(data, core, s), /Unknown spell/);
+});
+
+test("GM Cants count assigned Arcane spells at 1/3/6 and preserve totals across both exports", () => {
+  const s = draft();
+  talent(s, "Arcane Magic (Fire)");
+  s.cants.enabled = true;
+  const R = rulesFor(s),
+    fire = gmSpellCatalogue(R).filter((x) => x.category === "Fire"),
+    arcane = gmSpellCatalogue(R).find((x) => x.category === "Arcane"),
+    cants = R.cants.filter((x) => x.lore === "Fire");
+  for (const [count, grants] of [
+    [1, 1],
+    [2, 1],
+    [3, 2],
+    [5, 2],
+    [6, 3],
+  ]) {
+    s.spells = fire
+      .slice(0, count - 1)
+      .map((x) => x.contentId)
+      .concat(arcane.contentId);
+    s.spellLores = { [arcane.contentId]: "Fire" };
+    s.cants.choices = { Fire: cants.slice(0, grants).map((x) => x.id) };
+    const r = result(s);
+    assert.equal(r.cantGrants[0].spells, count);
+    assert.equal(r.cants.length, grants);
+    assert.deepEqual(r.issues, []);
+    assert.doesNotThrow(() => validateGMDraft(data, R, s));
+    for (const sections of [sheetSections(r, s), cardSections(r, s)]) {
+      const text = JSON.stringify(sections);
+      assert.match(text, new RegExp(cants[0].name));
+      assert.match(text, /Fire/);
+      assert.doesNotMatch(text, /Legacy|conversion|Adaptation/);
+    }
+    const plain = result({ ...s, cants: { enabled: false, choices: {} } });
+    assert.deepEqual(r.stats, plain.stats);
+    assert.deepEqual(r.ap, plain.ap);
+    assert.deepEqual(r.attacks, plain.attacks);
+  }
+});
+test("GM Lore assignments count once, require the Colour Talent and route unresolved choices early", () => {
+  const s = draft();
+  talent(s, "Arcane Magic (Fire)");
+  talent(s, "Arcane Magic (Shadows)");
+  s.cants.enabled = true;
+  const R = rulesFor(s),
+    arcane = gmSpellCatalogue(R).find((x) => x.category === "Arcane");
+  s.spells = [arcane.contentId];
+  assert.ok(
+    result(s).issues.some(
+      (x) =>
+        x.code === "cants.spell-lore" &&
+        x.control.target === "#gm-spell-lore-0",
+    ),
+  );
+  s.spellLores = { [arcane.contentId]: "Shadows" };
+  const r = result(s);
+  assert.equal(r.cantGrants.length, 1);
+  assert.equal(r.cantGrants[0].lore, "Shadows");
+  s.cants.choices = { Shadows: [R.cants.find((x) => x.lore === "Shadows").id] };
+  assert.deepEqual(result(s).issues, []);
+  assert.throws(
+    () =>
+      validateGMDraft(data, R, {
+        ...s,
+        spellLores: { [arcane.contentId]: "Life" },
+      }),
+    /Arcane spell Lore/,
+  );
+  assert.throws(
+    () =>
+      validateGMDraft(data, R, {
+        ...s,
+        cants: {
+          enabled: true,
+          choices: {
+            Shadows: [s.cants.choices.Shadows[0], s.cants.choices.Shadows[0]],
+          },
+        },
+      }),
+    /Cant choices/,
+  );
+  s.talents = [];
+  s.traits.push({
+    key: "gm-wizard",
+    name: "Spellcaster",
+    value: "Shadows",
+    origin: "GM",
+  });
+  s.cants.choices = {};
+  assert.deepEqual(result(s).cants, []);
+  assert.deepEqual(result(s).cantGrants, []);
+});
+test("GM Cant pruning follows spell removal, Lore loss and book disabling, with undo restoring the original snapshot", () => {
+  const s = draft();
+  talent(s, "Arcane Magic (Fire)");
+  s.cants.enabled = true;
+  const R = rulesFor(s),
+    fire = gmSpellCatalogue(R).filter((x) => x.category === "Fire"),
+    cants = R.cants.filter((x) => x.lore === "Fire");
+  s.spells = fire.slice(0, 6).map((x) => x.contentId);
+  s.cants.choices = { Fire: cants.map((x) => x.id) };
+  const before = structuredClone(s);
+  s.spells = s.spells.slice(0, 2);
+  syncGMCants(R, s, result(s));
+  assert.equal(s.cants.choices.Fire.length, 1);
+  assert.equal(result(before).cants.length, 3);
+  s.talents = [];
+  syncGMCants(R, s, result(s));
+  assert.deepEqual(s.cants.choices, {});
+  Object.assign(s, structuredClone(before));
+  s.books = ["core"];
+  const core = rulesFor(s);
+  syncGMCants(core, s, calculateGM(data, core, s));
+  assert.deepEqual(s.cants, { enabled: false, choices: {} });
+  assert.deepEqual(s.spellLores, {});
+  assert.doesNotThrow(() => validateGMDraft(data, core, s));
 });

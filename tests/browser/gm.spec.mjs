@@ -442,3 +442,69 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   await gmStep(page, "Equipment & magic");
   await expect(page.locator("#gm-magic")).toContainText("Fellstave (Daemons)");
 });
+
+test("GM Arcane Lore assignment and Cants have focused issues, compact references and undo @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-archives-iii").check();
+  await applyProfile(page, "Human");
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("tab", { name: "Skills & Talents", exact: true })
+    .click();
+  const add = async (kind, name) => {
+    await page.getByRole("button", { name: kind, exact: true }).click();
+    await page.locator("#gm-picker-search").fill(name);
+    await page
+      .locator(".gm-picker-row")
+      .filter({ has: page.getByText(name, { exact: true }) })
+      .getByRole("button", { name: "Add", exact: true })
+      .click();
+  };
+  await add("Add Talent", "Arcane Magic (Fire)");
+  await add("Add Talent", "Arcane Magic (Shadows)");
+  await gmStep(page, "Equipment & magic");
+  await add("Choose magic", "Aethyric Armour");
+  await page
+    .getByRole("checkbox", { name: "Use Colour Lore Cants", exact: true })
+    .check();
+  const issues = page.getByRole("region", {
+    name: "Choices to finish",
+    exact: true,
+  });
+  await expect(issues).toContainText("Choose a Lore for Aethyric Armour");
+  await issues
+    .getByRole("button", { name: /Choose a Lore for Aethyric Armour/ })
+    .click();
+  const lore = page.getByLabel("Aethyric Armour Lore", { exact: true });
+  await expect(lore).toBeFocused();
+  await lore.selectOption("Fire");
+  await expect(issues).toContainText("Choose 1 distinct Fire Cant");
+  await page
+    .getByLabel("Fire Cant 1", { exact: true })
+    .selectOption({ label: "Set Alight" });
+  await expect(issues).toHaveCount(0);
+  await expect(page.locator("#gm-cants")).toContainText("Set Alight");
+  await noOverflow(page);
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await expect(page.locator(".gm-stat-block").first()).toContainText(
+    "Set Alight",
+  );
+  await gmStep(page, "Equipment & magic");
+  await page
+    .locator("#gm-magic .gm-entry")
+    .getByRole("button", { name: "Remove this entry", exact: true })
+    .click();
+  await expect(page.getByLabel("Fire Cant 1", { exact: true })).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "\u21b6 Undo last change", exact: true })
+    .click();
+  await expect(page.getByLabel("Fire Cant 1", { exact: true })).toHaveValue(
+    "archives-iii:cant:fire-set-alight",
+  );
+  await expect(lore).toHaveValue("Fire");
+});

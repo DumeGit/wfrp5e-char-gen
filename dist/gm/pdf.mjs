@@ -45,9 +45,10 @@ export function sheetSections(r, s) {
       "Magic & prayers",
       r.spells.map(
         (x) =>
-          `${x.name} (${x.category})${x.cn !== undefined ? ` · CN ${x.cn}` : ""} · ${x.range || "—"} · ${x.target || "—"} · ${x.duration || "—"}`,
+          `${x.name} (${x.lore || x.category})${x.cn !== undefined ? ` · CN ${x.cn}` : ""} · ${x.range || "—"} · ${x.target || "—"} · ${x.duration || "—"}`,
       ),
     ],
+    ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore}): ${x.text}`)],
     [
       "Trappings",
       [
@@ -243,13 +244,15 @@ export async function createGMPDF(PDFLib, r, s) {
           ? r.attacks[i].name
           : title === "Magic & prayers"
             ? r.spells[i].name
-            : title === "Corruption"
-              ? r.mutations[i].name + ":"
-              : title === "Creature Traits"
-                ? rowName(r.traits[i]) + ":"
-                : title === "Personality"
-                  ? line.slice(0, line.indexOf(":") + 1)
-                  : "";
+            : title === "Cants"
+              ? r.cants[i].name
+              : title === "Corruption"
+                ? r.mutations[i].name + ":"
+                : title === "Creature Traits"
+                  ? rowName(r.traits[i]) + ":"
+                  : title === "Personality"
+                    ? line.slice(0, line.indexOf(":") + 1)
+                    : "";
       return wrapPDFRuns(
         [
           { text: safe(label), bold: true },

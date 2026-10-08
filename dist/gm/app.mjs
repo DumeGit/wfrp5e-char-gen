@@ -1,3 +1,4 @@
+import { syncGMCants } from "./cants.mjs";
 import { loadBookBundle } from "../book-bundle.mjs";
 import { KEYS, skillInfo, base } from "../rules.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
@@ -73,6 +74,14 @@ function persist() {
 function commit(change, message, full = true) {
   const old = structuredClone(s);
   change();
+  if (
+    s.cants.enabled ||
+    Object.keys(s.spellLores).length ||
+    Object.keys(s.cants.choices).length
+  ) {
+    const rules = rulesFor(s);
+    syncGMCants(rules, s, calculateGM(data, rules, s));
+  }
   if (JSON.stringify(old) === JSON.stringify(s)) return;
   undo.push(old);
   if (undo.length > 30) undo.shift();
@@ -274,6 +283,12 @@ function addEntry(id) {
     if (kind === "magic") {
       s.removed = s.removed.filter((k) => k !== x.key);
       s.spells.push(x.key);
+      if (
+        s.books.includes("archives-iii") &&
+        x.category === "Arcane" &&
+        r.magicLores.length === 1
+      )
+        s.spellLores[x.key] = r.magicLores[0];
     }
     if (kind === "mutation") s.mutations.push(x.key);
   }, `${x.name} added.`);
@@ -717,6 +732,16 @@ function change(el) {
   }
   commit(
     () => {
+      if (d.cantsEnabled !== undefined) s.cants.enabled = Boolean(val);
+      if (d.spellLore) {
+        if (val) s.spellLores[d.spellLore] = val;
+        else delete s.spellLores[d.spellLore];
+      }
+      if (d.cantLore) {
+        const choices = s.cants.choices[d.cantLore] || [];
+        choices[Number(d.cantIndex)] = val;
+        s.cants.choices[d.cantLore] = Array.from(choices, (x) => x || "");
+      }
       if (d.bind) s[d.bind] = ["wounds", "tb"].includes(d.bind) ? num : val;
       if (d.stat) s.stats[d.stat] = num;
       if (d.templateSkill !== undefined) {

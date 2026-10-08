@@ -74,12 +74,12 @@
     {
       "id": "archives-iii:feature:gm-cants",
       "name": "GM Cant choices",
-      "status": "reference-only",
+      "status": "implemented",
       "source": {
         "book": "archives-iii",
         "page": "85–88"
       },
-      "reason": "Printed Cants are readable in global search. GM selection awaits the user decision about assigning generic Arcane spells to one Lore for threshold counts; no live Channelling or power tracking is imported."
+      "reason": "Optional 1/3/6 Colour Lore Cant selections require the matching Talent. User-approved explicit Arcane spell Lore assignments count each spell once. Selections prune on loss and appear in folio/review/exports; live Channelling/power remain deferred."
     }
   ]
 }

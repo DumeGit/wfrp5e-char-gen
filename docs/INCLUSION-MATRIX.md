@@ -1152,7 +1152,7 @@ Pack `archives-ii` · version 1.0.6
 
 ## Archives of the Empire: Volume III
 
-Pack `archives-iii` · version 1.0.4
+Pack `archives-iii` · version 1.0.5
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1169,7 +1169,7 @@ Pack `archives-iii` · version 1.0.4
 | Optional free Cant selections and export | implemented | p. 85–88 | Choose at 1/3/6 learned Colour Lore spells, without live power tracking. |
 | Enterprises, including starting ownership | deferred | p. 6 | User deferred ownership, debt, trade and business management together. |
 | Animal Familiar creation and progression | deferred | p. 75–82 | User deferred the whole chapter until the character manager. |
-| GM Cant choices | reference-only | p. 85–88 | Printed Cants are readable in global search. GM selection awaits the user decision about assigning generic Arcane spells to one Lore for threshold counts; no live Channelling or power tracking is imported. |
+| GM Cant choices | implemented | p. 85–88 | Optional 1/3/6 Colour Lore Cant selections require the matching Talent. User-approved explicit Arcane spell Lore assignments count each spell once. Selections prune on loss and appear in folio/review/exports; live Channelling/power remain deferred. |
 | GM prayers, Hedgecraft and printed specialisations | implemented | p. 47–74 | Shared approved profiles, seven explicit Fellstave targets, Old Faith Invoke selects Blessings. No named/familiar foundations, alternative armour or PC Career/XP grants. |
 | Old Faith extra Blessing prices | adapted | p. 58 | Exclude six Bless-granted prayers; count Invoke and bought prayers for escalating core Miracle prices. |
 

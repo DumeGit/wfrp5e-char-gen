@@ -1,5 +1,6 @@
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
 import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
+import { calculateGMCants, validateGMCants } from "./cants.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
@@ -8,7 +9,7 @@ import {
   speciesLoreIssue,
 } from "../species-mechanics.mjs";
 
-export const GM_SCHEMA = 1;
+export const GM_SCHEMA = 2;
 export const SIZES = [
   "Tiny",
   "Small",
@@ -87,6 +88,8 @@ export function freshGM(data, profile = "", books = ["core"]) {
     talents: [],
     gear: [],
     spells: [],
+    spellLores: {},
+    cants: { enabled: false, choices: {} },
     mutations: [],
     removed: [],
     optionalAttacks: [],
@@ -351,6 +354,7 @@ export function validateGMDraft(data, R, s) {
       !Number.isInteger(r.page)
     )
       throw Error("Invalid recorded dice.");
+  validateGMCants(R, s, calculateGM(data, R, s));
   return s;
 }
 export function gmRoll(s, label, count, sides, page) {
@@ -378,6 +382,8 @@ export function applyTemplate(s, id) {
   s.templateSkills = {};
   s.templateTalents = {};
   s.spells = [];
+  s.spellLores = {};
+  s.cants.choices = {};
 }
 export function woundFormula(
   stats,
@@ -434,7 +440,7 @@ export function gmSpellCatalogue(R) {
   );
 }
 
-export function magicChoices(R, result) {
+export function gmMagicLores(R, result) {
   const lores = new Set(
     result.talents.map((t) => magicLore(t.name)).filter(Boolean),
   );
@@ -443,6 +449,10 @@ export function magicChoices(R, result) {
       parts(t.value).forEach((x) => lores.add(x.replace(/^Lore of /, "")));
   for (const lore of lores)
     if (gmLoreIssue(R, result.profile, lore)) lores.delete(lore);
+  return lores;
+}
+export function magicChoices(R, result) {
+  const lores = gmMagicLores(R, result);
   const blessingGods = result.traits
       .filter((t) => t.name === "Blessed")
       .map((t) => t.value),
@@ -499,6 +509,9 @@ export function calculateGM(data, R, s) {
       attacks: [],
       armour: [],
       spells: [],
+      magicLores: [],
+      cants: [],
+      cantGrants: [],
       gear: [],
       mutations: [],
       size: "",
@@ -1231,6 +1244,16 @@ export function calculateGM(data, R, s) {
     warnings,
     changed,
   };
+  result.magicLores = [...gmMagicLores(R, result)];
+  result.spells = result.spells.map((x) => ({
+    ...x,
+    lore:
+      x.category === "Arcane" ? s.spellLores?.[x.contentId] || "" : x.category,
+  }));
+  const cantResult = calculateGMCants(R, s, result);
+  result.cants = cantResult.cants;
+  result.cantGrants = cantResult.grants;
+  issues.push(...cantResult.issues);
   const allowed = magicChoices(R, result);
   const loreChoices = [
     ...result.talents.map((t) => ({
