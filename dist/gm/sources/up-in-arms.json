@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "id": "up-in-arms",
+  "source": {
+    "file": "Up in Arms.pdf",
+    "sha256": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd"
+  },
+  "profiles": [
+    {
+      "id": "up-in-arms:creatures:riding-horse",
+      "name": "Riding Horse",
+      "page": 29,
+      "source": {
+        "book": "up-in-arms",
+        "page": 29
+      },
+      "descriptionProfile": "core:creatures:horse",
+      "category": "Mounts",
+      "example": false,
+      "stats": {
+        "M": 7,
+        "WS": 25,
+        "BS": null,
+        "S": 30,
+        "T": 45,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 20,
+        "W": 24
+      },
+      "size": "Large",
+      "hitLocations": [
+        "Head",
+        "Body",
+        "Forelegs",
+        "Rear Legs"
+      ],
+      "toughnessBonus": 4,
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride is replaced with the Fifth Edition Sprinter Trait (core p. 362), following the approved older-name replacement. Sprinter changes Running movement, not the Movement score."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount"
+        }
+      ],
+      "skills": [],
+      "talents": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 9,
+          "printedDamage": 6,
+          "optional": false,
+          "text": "",
+          "adaptation": "Fifth Edition Size (Large), core p. 360, adds Strength Bonus to the primary melee attack: printed +6 becomes +9. Extra attacks receive no Size bonus."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "optionalTraits": [],
+      "sections": {
+        "Traits": "Size (Large): See page 360 for implications of size",
+        "Trappings": ""
+      },
+      "text": "RIDING HORSE\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 7 | 25 | - | 30 | 45 | 20 | 30 | - | 10 | 10 | 20 | 24 |\n\nTraits: Size (Large), Skittish, Stride, Trained (Broken, Mount), Weapon +6",
+      "referenceId": "up-in-arms:reference:29-profile-riding-horse",
+      "adaptation": "Fifth Edition Size (Large), core p. 360, adds Strength Bonus to the primary melee attack: printed +6 becomes +9. Extra attacks receive no Size bonus. Printed Stride uses core Sprinter.",
+      "notes": [
+        "Fourth Edition source; printed Characteristics, Wounds and existing training benefits are retained. Added or changed options use Fifth Edition definitions."
+      ]
+    },
+    {
+      "id": "up-in-arms:creatures:demigryph-mount",
+      "name": "Demigryph Mount",
+      "page": 109,
+      "source": {
+        "book": "up-in-arms",
+        "page": 109
+      },
+      "descriptionProfile": "core:creatures:demigryph",
+      "category": "Mounts",
+      "example": false,
+      "stats": {
+        "M": 7,
+        "WS": 55,
+        "BS": null,
+        "S": 55,
+        "T": 45,
+        "I": 40,
+        "Ag": 55,
+        "Dex": null,
+        "Int": 15,
+        "WP": 45,
+        "Fel": 15,
+        "W": 34
+      },
+      "size": "Large",
+      "hitLocations": [
+        "Head",
+        "Body",
+        "Forelegs",
+        "Rear Legs"
+      ],
+      "toughnessBonus": 4,
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride is replaced with the Fifth Edition Sprinter Trait (core p. 362), following the approved older-name replacement. Sprinter changes Running movement, not the Movement score."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, Shock Cavalry, War"
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "skills": [],
+      "talents": [],
+      "attacks": [
+        {
+          "name": "Talons",
+          "skill": 55,
+          "damage": 14,
+          "printedDamage": 9,
+          "optional": false,
+          "text": "",
+          "adaptation": "Fifth Edition Size (Large), core p. 360, adds Strength Bonus to the primary melee attack: printed +9 becomes +14. Extra attacks receive no Size bonus."
+        },
+        {
+          "name": "Bite",
+          "skill": 55,
+          "damage": 9,
+          "optional": false,
+          "text": "Lose Momentum to make this Free Attack"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Body, Forelegs, Rear Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        },
+        {
+          "name": "Barding",
+          "trapping": "Barding (2 AP to Body, Head, Forelegs)",
+          "ap": 2,
+          "locations": "Head, Body, Forelegs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "optionalTraits": [],
+      "sections": {
+        "Traits": "Size (Large): See page 360 for implications of size",
+        "Trappings": "Barding (2 AP to Body, Head, Forelegs)"
+      },
+      "text": "DEMIGRYPH MOUNT\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 7 | 55 | – | 55 | 45 | 40 | 55 | – | 15 | 45 | 15 | 34 |\n\nTraits: Armour (Rear Legs) 1, (Head, Body, and Forelegs) 3, Belligerent, Bestial, Night Vision, Size (Large), Stride, Trained (Broken, Mount, Shock Cavalry, War)\n\nCombat\n\nTraits: Bite +9, Weapon (Talons) +9\n\nTrappings: Barding (2 AP to Body, Head, Forelegs)",
+      "referenceId": "up-in-arms:reference:109-profile-demigryph-mount",
+      "adaptation": "Fifth Edition Size (Large), core p. 360, adds Strength Bonus to the primary melee attack: printed +9 becomes +14. Extra attacks receive no Size bonus. Printed Stride uses core Sprinter.",
+      "notes": [
+        "Fourth Edition source; printed Characteristics, Wounds and existing training benefits are retained. Added or changed options use Fifth Edition definitions.",
+        "The printed Armour values already include Barding: 1 natural AP plus 2 Barding AP on Head, Body and Forelegs; Rear Legs retain 1 AP. Barding is not counted twice.",
+        "The prose lists Trained (Magic), but the stat block does not. The starting profile follows the stat block; Magic can be added explicitly."
+      ],
+      "linkedTrappings": true
+    }
+  ],
+  "training": [
+    {
+      "id": "up-in-arms:training:shock-cavalry",
+      "name": "Shock Cavalry",
+      "source": {
+        "book": "up-in-arms",
+        "page": 107
+      },
+      "page": 107,
+      "requires": "War",
+      "adaptation": "The printed Challenging (+0) Dodge Test uses Fifth Edition Challenging (+0 SL), following core Appendix I p. 364.",
+      "text": "Requires Trained (War). When Charging, a rider may move through smaller creatures to reach their target. Each trampled creature must make a Challenging (+0 SL) Dodge Test or suffer 4 + the mount’s Strength Bonus Damage. Each creature damaged reduces remaining Movement by 2 yards. Creatures the mount’s size or larger stop its progress. At the end of the Charge, enemies within melee range count as Engaged and the Charge is resolved as though one were its target. A smaller creature that has not acted this Round may forgo dodging to make one held-weapon attack against mount or rider. Unless that attack kills or disables the mount, the Charge continues."
+    }
+  ],
+  "review": {
+    "pages": [
+      29,
+      107,
+      109,
+      113,
+      114,
+      115,
+      116,
+      117
+    ],
+    "profilePages": [
+      29,
+      109,
+      113,
+      114,
+      115
+    ],
+    "excluded": [
+      "All named NPCs",
+      "Destrier — Heavy Warhorse (p. 29): user explicitly excluded this profile.",
+      "Hireling profiles, templates, selection table and quirks (pp. 113–117): user explicitly excludes hirelings.",
+      "Mounted combat, Pursuits, Group Advantage, injuries, structure/siege rules, Endeavours and upkeep: live-play/manager systems."
+    ]
+  }
+}

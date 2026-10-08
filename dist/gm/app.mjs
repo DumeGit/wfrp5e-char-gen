@@ -1,5 +1,4 @@
 import { loadBookBundle } from "../book-bundle.mjs";
-import { assembleBooks } from "../books.mjs";
 import { KEYS, skillInfo, base } from "../rules.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
@@ -24,6 +23,7 @@ import { statBlock } from "./sheet.mjs";
 import { createGMReferences } from "./references.mjs";
 import { createGMPDF } from "./pdf.mjs";
 import { createGMPrinting } from "./printing.mjs";
+import { createGMRules, gmCatalogue, sourceLabel } from "./books.mjs";
 import { esc, button } from "./controls.mjs";
 
 const root = document.querySelector("#app"),
@@ -38,6 +38,7 @@ const ui = { tab: 0, profileQuery: "", category: "", browse: false },
   mountInstall = createInstallControl(document.querySelector("#pwa-install"));
 let data,
   R,
+  rulesFor,
   s,
   r,
   references,
@@ -82,6 +83,7 @@ function commit(change, message, full = true) {
 // control. Blur/change runs before click: a full redraw here would swallow it.
 function refreshResult() {
   captureDisclosures(root, disclosures);
+  R = rulesFor(s);
   r = calculateGM(data, R, s);
   const folio = root.querySelector("#gm-folio"),
     scroll = folio.scrollTop;
@@ -117,12 +119,13 @@ function render() {
         ? [focus.selectionStart, focus.selectionEnd]
         : null;
   captureDisclosures(root, disclosures);
+  R = rulesFor(s);
   r = calculateGM(data, R, s);
   const folioScroll = root.querySelector("#gm-folio")?.scrollTop || 0;
   const install = document.querySelector("#pwa-install");
   if (install) document.body.append(install);
   root.innerHTML = workspace(
-    data,
+    gmCatalogue(data, s.books),
     R,
     s,
     r,
@@ -186,11 +189,11 @@ function filename() {
 function profilePreview(id) {
   pendingProfile = id;
   const p = data.profiles.find((p) => p.id === id),
-    draft = freshGM(data, id),
-    result = calculateGM(data, R, draft);
+    draft = freshGM(data, id, s.books),
+    result = calculateGM(data, rulesFor(draft), draft);
   modal(
     p.name,
-    `${statBlock(result, draft)}${result.warnings.length ? `<div class="gm-callout"><strong>Source notes</strong><ul>${result.warnings.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}${s.profile && s.profile !== id ? '<p class="gm-small">Applying a new foundation replaces this NPC’s customisation. Your player character is separate. Undo can restore this draft.</p>' : ""}<div class="gm-dialog-actions">${button("Cancel", "close-dialog")}${button("Use this profile", "apply-profile", "", "primary")}</div>`,
+    `${statBlock(result, draft, { showSource: false })}${result.warnings.length ? `<div class="gm-callout"><strong>Source notes</strong><ul>${result.warnings.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}${s.profile && s.profile !== id ? '<p class="gm-small">Applying a new foundation replaces this NPC’s customisation. Your player character is separate. Undo can restore this draft.</p>' : ""}<div class="gm-dialog-actions">${button("Cancel", "close-dialog")}${button("Use this profile", "apply-profile", "", "primary")}</div>`,
   );
 }
 function templatePreview(id) {
@@ -223,7 +226,7 @@ function pickerResults() {
       `${x.name} ${x.text || ""} ${x.category || ""}`.toLowerCase().includes(q),
     ),
     container = document.querySelector("#gm-picker-results");
-  container.innerHTML = `<p class="gm-results-count">${rows.length} core entries</p>${rows
+  container.innerHTML = `<p class="gm-results-count">${rows.length} available entries</p>${rows
     .slice(0, 60)
     .map((x) => {
       const kind = picker.kind,
@@ -232,7 +235,7 @@ function pickerResults() {
           (kind === "magic" && r.spells.some((t) => t.contentId === x.key)) ||
           (kind === "trait" && r.traits.some((t) => t.name === x.name)) ||
           (kind === "mutation" && s.mutations.includes(x.key));
-      return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · Core p. ${x.page || x.source?.page}</small><p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : x.text?.slice(0, 180) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${x.text?.length > 180 ? "…" : ""}</p></div>${button(owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned ? "disabled" : ""}`, "primary")}</div>`;
+      return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · ${esc(sourceLabel(x))}</small><p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : x.text?.slice(0, 180) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${x.text?.length > 180 ? "…" : ""}</p>${x.disabled ? `<p class="gm-small">${esc(x.disabled)}</p>` : ""}</div>${button(x.disabled ? "Unavailable" : owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned || x.disabled ? "disabled" : ""}`, "primary")}</div>`;
     })
     .join(
       "",
@@ -241,7 +244,7 @@ function pickerResults() {
 function addEntry(id) {
   const x = picker.rows.find((x) => x.key === id),
     kind = picker.kind;
-  if (!x) return;
+  if (!x || x.disabled) return;
   close();
   commit(() => {
     if (kind === "trait")
@@ -288,6 +291,18 @@ function addEntry(id) {
 async function action(el) {
   const a = el.dataset.action;
   textEdit = null;
+  if (a === "legacy") {
+    const entries = [...data.profiles, ...r.traits, ...r.attacks, ...r.talents];
+    const x = entries.find(
+      (x) => (x.key || x.id || x.name) === el.dataset.entry,
+    );
+    if (x?.adaptation)
+      modal(
+        `${x.name} · Legacy`,
+        `<p>${esc(x.adaptation)}</p><p class="gm-small">${esc(sourceLabel({ ...x, source: x.adaptationSource || x.source }))}</p>${button("Close", "close-dialog")}`,
+      );
+    return;
+  }
   if (a === "close-dialog") {
     close();
     return;
@@ -320,15 +335,18 @@ async function action(el) {
     close();
     ui.browse = false;
     commit(() => {
-      s = freshGM(data, id);
+      s = freshGM(data, id, s.books);
     }, "Printed profile applied. You can use it immediately or customise it.");
     return;
   }
   if (a === "template-picker") {
     modal(
       "Choose a core template",
-      `<p class="gm-small">Templates add abilities to this profile; they do not stack (pp. 353–354).</p>${data.templates
-        .map(
+      `<p class="gm-small">Templates add abilities to this profile; they do not stack (pp. 353–354).</p>${gmCatalogue(
+        data,
+        s.books,
+      )
+        .templates.map(
           (t) =>
             `<div class="gm-picker-row"><div><strong>${t.name}</strong><p>${Object.entries(
               t.adjustments,
@@ -523,7 +541,7 @@ async function action(el) {
   }
   if (a === "confirm-new") {
     close();
-    commit(() => (s = freshGM(data)));
+    commit(() => (s = freshGM(data, "", s.books)));
     return;
   }
   if (a === "save") {
@@ -548,7 +566,8 @@ async function action(el) {
         const file = input.files[0];
         if (!file) return;
         if (file.size > 2000000) throw Error("This save is too large.");
-        const draft = validateGMDraft(data, R, JSON.parse(await file.text()));
+        const parsed = JSON.parse(await file.text());
+        const draft = validateGMDraft(data, rulesFor(parsed), parsed);
         modal(
           "Load this GM draft?",
           `<p>Replace this draft with <strong>${esc(draft.name || data.profiles.find((p) => p.id === draft.profile)?.name || "a new draft")}</strong>? Saved dice are imported records, not independently verified randomness.</p><div class="gm-dialog-actions">${button("Cancel", "close-dialog")}${button("Load draft", "apply-load", "", "primary")}</div>`,
@@ -622,6 +641,54 @@ function change(el) {
   const d = el.dataset,
     val = el.type === "checkbox" ? el.checked : el.value,
     num = el.value === "" ? null : Number(el.value);
+  if (d.book) {
+    if (!val && s.profile?.startsWith(`${d.book}:`)) {
+      el.checked = true;
+      modal(
+        "Remove Up in Arms?",
+        `<p>This starting profile requires Up in Arms. Removing the book starts a fresh GM draft. Save it first if needed; Undo can restore it.</p><div class="gm-dialog-actions">${button("Keep book", "close-dialog")}${button("Remove book & start new", "remove-book", "", "primary")}</div>`,
+      );
+      dialogBody.querySelector('[data-action="remove-book"]').addEventListener(
+        "click",
+        () => {
+          close();
+          ui.profileQuery = "";
+          ui.category = "";
+          ui.browse = false;
+          commit(() => (s = freshGM(data)));
+        },
+        { once: true },
+      );
+      return;
+    }
+    commit(() => {
+      s.books = val
+        ? [...s.books, d.book]
+        : s.books.filter((id) => id !== d.book);
+      s.extraTraining = s.extraTraining.filter(
+        (n) =>
+          !data.training.some((t) => t.name === n && t.source.book === d.book),
+      );
+      if (!val) {
+        const allowed = rulesFor(s);
+        s.gear = s.gear.filter((g) =>
+          [
+            ...allowed.weapons,
+            ...allowed.armour,
+            ...allowed.gear,
+            ...allowed.market,
+          ].some((x) => x.contentId === g.id),
+        );
+        s.spells = s.spells.filter((id) =>
+          allowed.spells.some((x) => x.contentId === id),
+        );
+        s.talents = s.talents.filter((t) =>
+          allowed.talents.some((x) => base(x.name) === base(t.name)),
+        );
+      }
+    });
+    return;
+  }
   if (textEdit && textEdit === d.bind) {
     textEdit = null;
     return;
@@ -630,7 +697,7 @@ function change(el) {
     ui[d.ui] = val;
     if (d.ui === "category")
       document.querySelector("#gm-profile-results").innerHTML = profileResults(
-        data,
+        gmCatalogue(data, s.books),
         ui,
       );
     return;
@@ -665,6 +732,10 @@ function change(el) {
             : list.filter((n) => n !== el.value)
         ).join(", ");
       }
+      if (d.extraTraining)
+        s.extraTraining = val
+          ? [...s.extraTraining, el.value]
+          : s.extraTraining.filter((n) => n !== el.value);
       if (d.skill) {
         let row = s.skills.find((x) => x.name === d.skill);
         if (!row) {
@@ -733,7 +804,7 @@ root.addEventListener("input", (e) => {
   if (el.dataset.ui === "profileQuery") {
     ui.profileQuery = el.value;
     document.querySelector("#gm-profile-results").innerHTML = profileResults(
-      data,
+      gmCatalogue(data, s.books),
       ui,
     );
   } else if (
@@ -783,7 +854,7 @@ window.addEventListener("wfrp-before-update", persist);
 window.addEventListener("pagehide", persist);
 async function boot() {
   root.innerHTML =
-    '<main class="panel"><h1>Opening the Bestiary…</h1><p>Loading the core workshop.</p></main>';
+    '<main class="panel"><h1>Opening the Bestiary…</h1><p>Loading the workshop and reviewed books.</p></main>';
   try {
     const read = async (url) => {
       const response = await fetch(url);
@@ -797,8 +868,9 @@ async function boot() {
       loadBookBundle(read),
       read(new URL("./data.json", import.meta.url)),
     ]);
-    R = assembleBooks(library);
     data = gm;
+    rulesFor = createGMRules(library, data);
+    R = rulesFor(freshGM(data));
     if (
       data.schemaVersion !== 1 ||
       data.coreVersion !== R.books[0].version ||
@@ -811,7 +883,10 @@ async function boot() {
     if (!verify) {
       try {
         const saved = localStorage.getItem(storageKey);
-        if (saved) s = validateGMDraft(data, R, JSON.parse(saved));
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          s = validateGMDraft(data, rulesFor(parsed), parsed);
+        }
       } catch (e) {
         saveMessage =
           "Previous GM draft could not be loaded · use a current file";
@@ -819,7 +894,11 @@ async function boot() {
       }
     } else persist();
     references = createGMReferences(library);
-    printing = createGMPrinting(data, R, { current: () => s, download, toast });
+    printing = createGMPrinting(data, rulesFor, {
+      current: () => s,
+      download,
+      toast,
+    });
     render();
   } catch (e) {
     root.innerHTML = `<main class="panel"><h1>The workshop could not open</h1><p>${esc(e.message)}</p><a href="./">Return to player creation</a></main>`;

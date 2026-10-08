@@ -50,6 +50,32 @@
 .gm-fields .field {
   margin: 0;
 }
+.gm-books {
+  margin: 0 0 18px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-recessed);
+}
+.gm-books legend {
+  padding: 0 5px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.gm-books > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+}
+.gm-books .gm-small {
+  margin: 4px 0;
+}
+.gm-books .gm-check {
+  flex-wrap: wrap;
+}
+.gm-profile-card .legacy-tag {
+  pointer-events: none;
+}
 .gm-fields .field label {
   font-size: 12px;
 }

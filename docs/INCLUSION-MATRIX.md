@@ -734,7 +734,7 @@ Pack `core` · version 1.1.7
 
 ## Up in Arms
 
-Pack `up-in-arms` · version 1.0.3
+Pack `up-in-arms` · version 1.0.4
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -751,6 +751,9 @@ Pack `up-in-arms` · version 1.0.3
 |---|---|---|---|
 | Replacement profiles for existing core equipment | unavailable | Book-wide scope decision | User chose to retain core statistics and import only new equipment. |
 | Injuries, mounted/group combat, hirelings and Warrior Endeavours | deferred | Book-wide scope decision | Outside character-creation scope. |
+| GM Destrier profile | unavailable | p. 29 | User explicitly requested skipping the Destrier after reviewing its undefined optional Traits. |
+| GM Riding Horse and Demigryph Mount | adapted | Book-wide scope decision | Two opt-in GM foundations; approved Fifth Edition primary Size Damage and Stride → Sprinter. Printed stats and existing training retained. Named NPCs and hirelings excluded. |
+| GM Shock Cavalry training | adapted | p. 107 | Requires War; printed effects are references, with Challenging (+0) converted to +0 SL under core Appendix I. |
 | Tilean starting allocations | adapted | p. 55–56 | Approved Fifth Edition allocations with printed Tilean choices and native language. |
 
 <details>

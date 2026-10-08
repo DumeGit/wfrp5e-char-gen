@@ -37,7 +37,7 @@ The install command downloads Chromium once for the installed Playwright version
 | `smoke` (also `test:ui`) | Both creators open, navigate, read a rule and fit desktop/mobile widths |
 | `search` | Stable typing/caret, categories, inactive-book availability, keyboard controls, automatic batches, return position and chained references without changing the draft |
 | `pc` | Career rolls, recorded dice, advancement/tracker grouping and undo, repeatable Talents, equipment purchase/removal |
-| `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, early blocking issue and repair |
+| `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, book-removal confirmation/undo, early blocking issue and repair |
 | `storage` | Actual JSON downloads/imports, reload persistence, rejection of the wrong save type |
 | `exports` | Actual browser PDF downloads, editable player fields, compact NPC PDF, six-card A4 default and mixed-draft batch |
 | `mobile` | Scenarios tagged for navigation, narrow layout and search; mobile Chromium only |

@@ -35,7 +35,7 @@ Some starting Trappings are descriptive rather than named equipment profiles. Pa
 
 The review inventory `dist/data/books/up-in-arms/excluded-equipment.json` records 54 excluded rows: existing core items or items without a fixed purchase price. Different printed statistics for the same core item are deliberately not imported. This includes the Grain Flail row whose older table omits the core two-handed label. The new one-handed Warhammer is separate from the existing two-handed core weapon.
 
-Injuries, critical tables, mounted combat, Pursuits, alternative group Advantage, hirelings, siege combat/structure damage, and Warrior Endeavours remain outside the character creator. Costs and equipment references may be read without implementing these campaign systems. No full source PDF is published.
+Injuries, critical tables, mounted combat, Pursuits, alternative group Advantage, hirelings, siege combat/structure damage, and Warrior Endeavours remain outside the creators. The GM workshop includes only the reviewed mount profiles and training described below. Costs and equipment references may be read without implementing these campaign systems. No full source PDF is published.
 
 ## Reproduction and review
 
@@ -47,10 +47,26 @@ Integration verification: Browser checks cover book activation, source-labelled 
 
 ## Reviewed reference imports — 7 October 2026
 
-Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. Core GM creation is unchanged.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. The later GM integration adds only the two reviewed mount foundations and Shock Cavalry training; it does not restore profiles/templates to shared search.
 
 Injury/critical tables, mounted combat, Pursuits, Group Advantage, hirelings, structure/siege rules, Warrior Endeavours and original equipment/property tables. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 
 Hireling-only templates and their p. 115 selection table are excluded from search by user request until hireling support exists. This includes Infirm, formerly embedded in Veteran of Adventures. Other hireling reading/prices remain reference-only. Critical Wounds explanations and Complex Pursuits are Rules, while genuine critical, equipment and outcome tables remain Tables. The later 8 October decision also excludes core creature templates from shared search; they remain available in GM creation.
+
+## Bestiary Workshop integration — 8 October 2026
+
+Enable Up in Arms independently in the GM Starting profile page. The alphabetical catalogue adds **Riding Horse** (29) and **Demigryph Mount** (109). Existing core Horse/Demigryph profiles remain separate. All named NPCs, the six hireling profiles, six hireling templates and their quirk tables are excluded. The user explicitly requested skipping **Destrier — Heavy Warhorse** after reviewing its undefined optional Traits. The answer concerning template quick armour does not re-enable the excluded hireling chapter.
+
+The supplied PDF was scanned for stat-block grids throughout all 144 pages: matches occur on pp. 29, 109, 113, 114 and 115. The applicable mount tables and training were checked visually against the PDF; the hireling pages were reviewed before the explicit exclusion. No additional unnamed creature foundations were found.
+
+Printed Characteristics, Wounds and existing training remain the baseline. The user approved Fifth Edition primary melee Size Damage: Riding Horse Weapon +6 → **+9**; Demigryph Talons +9 → **+14**. Its extra Bite remains **+9**. Printed Stride uses the previously approved **Sprinter** replacement, affecting Running rather than the Movement score. These concrete changes carry Legacy explanations in the app. Existing War/Broken benefits are already represented in the printed profile and are not granted twice.
+
+**Trained (Shock Cavalry)** (107) requires War. Its complete effect remains available as reference text; the old Challenging (+0) Test becomes Challenging (+0 SL) under core Appendix I, with a Legacy explanation. It can be added to printed training without reapplying existing benefits. Missing War produces an immediate structured issue with a link to the training controls, blocking export until resolved. Core-only GM drafts cannot select this training.
+
+Demigryph protection preserves quadruped coverage: Head, Body and Forelegs **3 AP**, Rear Legs **1 AP**. The calculation records 1 natural AP plus 2 Barding AP on the listed locations, without adding Barding twice. Removing Barding leaves 1 AP throughout. The prose additionally mentions Magic training, but the printed stat block does not; Magic is an explicit optional addition, with the mismatch explained in the app. Humanoid limb armour does not silently acquire guessed mount coverage.
+
+The workshop also exposes this book’s already approved equipment and Myrmidian magic through its normal equipment/magic controls. Crew Commander stays unavailable. No hiring, upkeep, contracts, Career/XP development, training Endeavours or live mounted/group combat are implemented. Shared search still excludes NPC profiles and templates. Compact PDF sheets include actual Traits and descriptions; source discrepancies remain in the app.
+
+Reviewed GM source lives in `dist/gm/sources/up-in-arms.json`. `scripts/build-up-in-arms-gm.py` reproduces it from frozen reference records and explicit verified table values/decisions. The generator checks its checksum against the installed pack and produces the runtime catalogue and GM inventory. Run this builder, `npm run generate:books`, the affected GM tests and the local release checks after changes.

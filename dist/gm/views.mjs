@@ -11,7 +11,9 @@ import {
   reference,
   remove,
   empty,
+  legacyBadge,
 } from "./controls.mjs";
+import { sourceLabel } from "./books.mjs";
 import {
   SIZES,
   TRAINING,
@@ -67,19 +69,46 @@ const paragraph = (text) => `<p>${esc(text)}</p>`;
 const origin = (x) => `<span class="gm-origin">${esc(x.origin || "GM")}</span>`;
 const textArea = (label, key, value) =>
   `<div class="field"><label for="gm-${key}">${label}</label><textarea id="gm-${key}" data-bind="${key}" rows="3">${esc(value)}</textarea></div>`;
-const entryBody = (text, page) =>
-  `${paragraph(text)}<small>Core · p. ${page} · Situational effects are references for play.</small>`;
+const entryBody = (text, page, entry = { page }) =>
+  `${paragraph(text)}<small>${esc(sourceLabel(entry))} · Situational effects are references for play.</small>`;
+function bookControls(data, s) {
+  return `<fieldset class="gm-books"><legend>Creation books</legend><div><span class="gm-small">Fifth Edition core · always included</span>${data.books
+    .filter((b) => b.id !== "core")
+    .map(
+      (b) =>
+        `<label class="gm-check"><input id="gm-book-${b.id}" type="checkbox" data-book="${b.id}" ${s.books.includes(b.id) ? "checked" : ""}>${esc(b.title)} <small>Mount profiles, equipment &amp; magic</small></label>`,
+    )
+    .join(
+      "",
+    )}</div><p class="gm-small">Independent of player creation. Shared rule search continues to cover every book.</p></fieldset>`;
+}
+function printedTraining(data, s, t) {
+  const existing =
+    (s.profile &&
+      data.profiles
+        .find((p) => p.id === s.profile)
+        ?.traits.find((x) => x.key === t.key)
+        ?.value.split(",")
+        .map((n) => n.trim())) ||
+    [];
+  const choices = [...TRAINING, ...(data.training || []).map((x) => x.name)];
+  return `<fieldset class="gm-training" id="trait-${t.key}"><legend>Training · add to printed profile</legend>${choices.map((n) => `<label class="gm-check"><input type="checkbox" data-extra-training="1" value="${n}" ${existing.includes(n) || s.extraTraining.includes(n) ? "checked" : ""} ${existing.includes(n) ? "disabled" : ""}>${esc(n)}${existing.includes(n) ? " <small>Printed</small>" : ""}</label>`).join("")}</fieldset>`;
+}
 export function profileResults(data, ui) {
   const q = ui.profileQuery.toLowerCase().trim(),
-    rows = data.profiles.filter(
-      (p) =>
-        (!ui.category || p.category === ui.category) &&
-        (!q || `${p.name} ${p.category}`.toLowerCase().includes(q)),
-    );
-  return `<p class="gm-results-count" role="status">${rows.length} printed profile${rows.length === 1 ? "" : "s"}</p><div class="gm-profile-grid">${rows.map((p) => `<button class="gm-profile-card" type="button" data-action="preview-profile" data-id="${p.id}"><span class="gm-card-category">${esc(p.category)}${p.example ? " · Worked example" : ""}</span><strong>${esc(p.name)}</strong><span class="gm-card-stats"><b>${esc(p.size)}</b><span>M ${score(p.stats.M)} · WS ${score(p.stats.WS)} · W ${p.stats.W}</span></span><small>Core · p. ${p.page}<span>Preview →</span></small></button>`).join("")}</div>${!rows.length ? empty("No matching profiles. Try another name or category.") : ""}`;
+    rows = data.profiles
+      .filter(
+        (p) =>
+          (!ui.category || p.category === ui.category) &&
+          (!q || `${p.name} ${p.category}`.toLowerCase().includes(q)),
+      )
+      .sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { sensitivity: "base" }),
+      );
+  return `<p class="gm-results-count" role="status">${rows.length} printed profile${rows.length === 1 ? "" : "s"}</p><div class="gm-profile-grid">${rows.map((p) => `<button class="gm-profile-card" type="button" data-action="preview-profile" data-id="${p.id}"><span class="gm-card-category">${esc(p.category)}${p.example ? " · Worked example" : ""}</span><strong>${esc(p.name)}</strong><span class="gm-card-stats"><b>${esc(p.size)}</b><span>M ${score(p.stats.M)} · WS ${score(p.stats.WS)} · W ${p.stats.W}</span></span><small>${esc(sourceLabel(p))}${p.adaptation ? ' <span class="legacy-tag">Legacy</span>' : ""}<span>Preview →</span></small></button>`).join("")}</div>${!rows.length ? empty("No matching profiles. Try another name or category.") : ""}`;
 }
 function starting(data, s, r, ui) {
-  return `<p class="lede">Start with a complete printed profile. Keep it as written or make it your own.</p>${r.profile ? `<div class="gm-foundation"><div><span class="eyebrow">Starting profile</span><strong>${esc(r.profile.name)}</strong><small>${esc(r.profile.category)} · Core p. ${r.profile.page}</small></div>${button(ui.browse ? "Close library" : "Browse profiles", "browse")}</div><div class="gm-fields">${field("Name", "gm-name", s.name, `data-bind="name" placeholder="${esc(r.profile.name)}"`)}${field("Short description", "gm-description", s.description, 'data-bind="description" placeholder="Appearance or identifying detail"')}</div>${detail("personality", "Personality & purpose <small>Optional</small>", `<p class="gm-small">Give the NPC a purpose, motivation and manner. Core guidance for roleplaying NPCs; no mechanical bonuses.</p><div class="gm-fields">${field("Purpose / role", "gm-purpose", s.purpose, 'data-bind="purpose"')}${field("Motivation", "gm-motivation", s.motivation, 'data-bind="motivation"')}${field("Manner", "gm-manner", s.manner, 'data-bind="manner"')}</div>`)} ` : ""}
+  return `<p class="lede">Start with a complete printed profile. Keep it as written or make it your own.</p>${bookControls(data, s)}${r.profile ? `<div class="gm-foundation"><div><span class="eyebrow">Starting profile</span><strong>${esc(r.profile.name)}</strong><small>${esc(r.profile.category)} · ${esc(sourceLabel(r.profile))}</small></div>${legacyBadge(r.profile)}${button(ui.browse ? "Close library" : "Browse profiles", "browse")}</div><div class="gm-fields">${field("Name", "gm-name", s.name, `data-bind="name" placeholder="${esc(r.profile.name)}"`)}${field("Short description", "gm-description", s.description, 'data-bind="description" placeholder="Appearance or identifying detail"')}</div>${detail("personality", "Personality & purpose <small>Optional</small>", `<p class="gm-small">Give the NPC a purpose, motivation and manner. Core guidance for roleplaying NPCs; no mechanical bonuses.</p><div class="gm-fields">${field("Purpose / role", "gm-purpose", s.purpose, 'data-bind="purpose"')}${field("Motivation", "gm-motivation", s.motivation, 'data-bind="motivation"')}${field("Manner", "gm-manner", s.manner, 'data-bind="manner"')}</div>`)} ` : ""}
   ${!r.profile || ui.browse ? `<div class="gm-library"><div class="gm-browser-filters">${field("Find a profile", "gm-profile-search", ui.profileQuery, 'type="search" data-ui="profileQuery" placeholder="Human, Goblin, Dragon…"')}${select("Category", "gm-category", [["", "All categories"], ...[...new Set(data.profiles.map((p) => p.category))].map((x) => [x, x])], ui.category, 'data-ui="category"')}</div><div id="gm-profile-results">${profileResults(data, ui)}</div></div>` : ""}`;
 }
 function templateChoices(s, r) {
@@ -185,17 +214,22 @@ export function traitParameter(data, R, t) {
       )
       .join("")}</fieldset>`;
   if (t.name === "Trained")
-    return `<fieldset class="gm-training" id="trait-${t.key}"><legend>Training</legend>${TRAINING.map(
-      (n) =>
-        `<label class="gm-check"><input type="checkbox" data-training="${t.key}" value="${n}" ${
-          t.value
-            .split(",")
-            .map((x) => x.trim())
-            .includes(n)
-            ? "checked"
-            : ""
-        }>${n}</label>`,
-    ).join("")}</fieldset>`;
+    return `<fieldset class="gm-training" id="trait-${t.key}"><legend>Training</legend>${[
+      ...TRAINING,
+      ...(data.training || []).map((x) => x.name),
+    ]
+      .map(
+        (n) =>
+          `<label class="gm-check"><input type="checkbox" data-training="${t.key}" value="${n}" ${
+            t.value
+              .split(",")
+              .map((x) => x.trim())
+              .includes(n)
+              ? "checked"
+              : ""
+          }>${n}</label>`,
+      )
+      .join("")}</fieldset>`;
   return choices
     ? select(
         param,
@@ -216,9 +250,9 @@ export function traitParameter(data, R, t) {
       );
 }
 function traits(data, R, s, r) {
-  return `<div class="gm-section-heading"><h2>Creature Traits</h2>${button("Add Trait", "picker", 'data-kind="trait"', "primary")}</div><p class="gm-small">Printed Traits are included. Their full definitions open below; effects used during play stay as references.</p><div class="gm-entry-list">${r.traits.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)} ${t.value ? `<small>(${esc(t.value)})</small>` : ""} ${origin(t)}`, entryBody(t.text, t.page))}${t.origin === "GM" ? traitParameter(data, R, t) : ""}</div>${t.name !== "Size" && t.origin !== "Training" ? remove(t.key) : ""}</div>`).join("")}</div>
+  return `<div class="gm-section-heading"><h2>Creature Traits</h2>${button("Add Trait", "picker", 'data-kind="trait"', "primary")}</div><p class="gm-small">Printed Traits are included. Their full definitions open below; effects used during play stay as references.</p><div class="gm-entry-list">${r.traits.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)} ${t.value ? `<small>(${esc(t.value)})</small>` : ""} ${origin(t)}`, entryBody(t.text, t.page))}${legacyBadge(t)}${t.origin === "GM" ? traitParameter(data, R, t) : t.name === "Trained" ? printedTraining(data, s, t) : ""}</div>${t.name !== "Size" && t.origin !== "Training" ? remove(t.key) : ""}</div>`).join("")}</div>
   ${r.profile.optionalTraits.length ? detail("optional-traits", "Suggested optional Traits", `<div class="gm-chips">${r.profile.optionalTraits.map((t, i) => button(esc(rowName(t)), "optional-trait", `data-index="${i}"`)).join("")}</div><p class="gm-small">Suggestions from the profile, not automatic grants. Parameters can be changed after adding.</p>`) : ""}
-  ${r.traits.some((t) => t.origin === "GM" && t.name === "Trained" && t.value.includes("Broken")) ? `<div class="gm-callout"><p>Broken training adds 2d10 Fellowship; an absent score starts at 0 (p. 363).</p>${button(s.brokenRoll ? `Roll again · ${s.brokenRoll.join(" + ")}` : "Roll 2d10 Fellowship", "broken-roll", 'id="gm-broken-roll"')}</div>` : ""}
+  ${r.traits.some((t) => (t.origin === "GM" || s.extraTraining.includes("Broken")) && t.name === "Trained" && t.value.includes("Broken")) ? `<div class="gm-callout"><p>Broken training adds 2d10 Fellowship; an absent score starts at 0 (p. 363).</p>${button(s.brokenRoll ? `Roll again · ${s.brokenRoll.join(" + ")}` : "Roll 2d10 Fellowship", "broken-roll", 'id="gm-broken-roll"')}</div>` : ""}
   ${r.traits.some((t) => ["Mutation", "Mental Corruption", "Mark of Chaos"].includes(t.name)) ? `<section id="gm-mutations"><div class="gm-section-heading"><h2>Corruption choices</h2>${button("Choose mutation", "picker", 'data-kind="mutation"')}</div>${r.traits.some((t) => t.name === "Mark of Chaos" && t.value === "Tzeentch" && t.origin === "GM") ? `<p class="gm-small">Tzeentch grants ceil(1d10 ÷ 3) alternating Mental/Physical mutations (p. 359).</p>${button(s.markRoll ? `Roll again · ${s.markRoll} → ${Math.ceil(s.markRoll / 3)} mutations` : "Roll Tzeentch mutations", "mark-roll")}` : ""}<div class="gm-chips">${button("Roll Physical", "mutation-roll", 'data-category="Physical"')}${button("Roll Mental", "mutation-roll", 'data-category="Mental"')}</div>${r.mutations.map((m) => `<div class="gm-entry"><div>${detail(m.id, esc(m.name), entryBody(m.text, m.page))}</div>${remove(m.id)}</div>`).join("")}</section>` : ""}`;
 }
 function skillsTalents(R, s, r) {
@@ -235,7 +269,7 @@ function equipmentMagic(R, s, r) {
     optArmour = r.profile.armour.filter((x) => x.optional),
     eligible = magicChoices(R, r);
   return `<div class="gm-section-heading"><h2>Attacks & equipment</h2>${button("Add equipment", "picker", 'data-kind="equipment"', "primary")}</div><p class="gm-small">The printed attack and armour profiles are included. GM equipment has no shopping budget. Attack scores and Damage can be adjusted explicitly; clearing an override restores the calculation.</p>${optional.length || optArmour.length ? detail("optional-equipment", "Optional printed equipment", `${optional.map((a) => `<label class="gm-check"><input type="checkbox" data-optional-attack="${a.key}" ${s.optionalAttacks.includes(a.key) ? "checked" : ""}>${esc(a.name)} · ${score(a.skill)} / +${a.damage}</label>`).join("")}${optArmour.map((a) => `<label class="gm-check"><input type="checkbox" data-optional-armour="${a.key}" ${s.optionalArmour.includes(a.key) ? "checked" : ""}>${esc(a.name)} · +${a.ap} AP</label>`).join("")}`, true) : ""}
-  <div class="gm-attack-labels"><span>Attack</span><span>Score</span><span>Damage</span><span></span></div>${r.attacks.map((a) => `<div class="gm-attack-row" id="attack-${a.key}"><div><strong>${esc(a.name)}</strong><small>${esc(a.text || "Primary attack")}</small></div><input type="number" min="0" step="1" value="${a.skill ?? ""}" data-attack="${a.key}" data-property="skill" aria-label="${esc(a.name)} attack score"><input type="number" min="0" step="1" value="${a.damage ?? ""}" data-attack="${a.key}" data-property="damage" aria-label="${esc(a.name)} Damage">${remove(a.key)}</div>`).join("")}
+  <div class="gm-attack-labels"><span>Attack</span><span>Score</span><span>Damage</span><span></span></div>${r.attacks.map((a) => `<div class="gm-attack-row" id="attack-${a.key}"><div><strong>${esc(a.name)}</strong><small>${esc(a.text || "Primary attack")}</small>${legacyBadge(a)}</div><input type="number" min="0" step="1" value="${a.skill ?? ""}" data-attack="${a.key}" data-property="skill" aria-label="${esc(a.name)} attack score"><input type="number" min="0" step="1" value="${a.damage ?? ""}" data-attack="${a.key}" data-property="damage" aria-label="${esc(a.name)} Damage">${remove(a.key)}</div>`).join("")}
   <h2>Defence</h2><div class="gm-defence-summary"><strong>TB ${score(r.tb)}</strong>${Object.entries(
     r.ap,
   )
@@ -243,8 +277,8 @@ function equipmentMagic(R, s, r) {
     .join(
       "",
     )}</div>${r.shield ? paragraph(`Shield adds +${r.shield} AP when applicable.`) : ""}${r.armour.map((a) => `<div class="gm-entry"><div><strong>${esc(a.name)}</strong> ${origin(a)}<small class="gm-small">+${a.ap} AP · ${a.shield ? "Shield" : esc(a.locations)}</small></div>${remove(a.key)}</div>`).join("")}
-  <h2>Trappings</h2>${r.profile.sections.Trappings ? paragraph(r.profile.sections.Trappings) : ""}${r.gear.length ? r.gear.map((g) => `<div class="gm-entry"><div><strong>${esc(g.entry.name)}</strong><small class="gm-small">Core p. ${g.entry.source.page}${g.entry.qualities ? ` · ${esc(g.entry.qualities)}` : ""}</small></div><input class="gm-rank" type="number" min="1" step="1" value="${g.quantity}" data-quantity="${g.key}" aria-label="${esc(g.entry.name)} quantity">${remove(g.key)}</div>`).join("") : empty("Add other belongings as needed.")}
-  <section id="gm-magic"><div class="gm-section-heading"><h2>Magic & prayers</h2>${eligible.length ? button("Choose magic", "picker", 'data-kind="magic"', "primary") : ""}</div><p class="gm-small">${eligible.length ? "Choices follow the selected Lore, patron or magical template. No PC starting spell grants or XP are added." : "Add an appropriate magical template, Spellcaster Trait or Bless/Invoke Talent to unlock choices."}${r.template?.magic ? ` ${r.template.name}: up to ${r.template.magic.petty} Petty and ${r.template.magic.lore} Lore spells (p. ${r.template.page}).` : ""}</p>${r.spells.map((x) => `<div class="gm-entry"><div>${detail(x.contentId, `${esc(x.name)} <small>${esc(x.category)}</small>`, `<p class="gm-small">CN ${x.cn ?? "—"} · Range ${esc(x.range || "—")} · Target ${esc(x.target || "—")} · Duration ${esc(x.duration || "—")}</p>${entryBody(x.text, x.page)}`)}</div>${remove(x.contentId)}</div>`).join("")}</section>`;
+  <h2>Trappings</h2>${(r.trappings ?? r.profile.sections.Trappings) ? paragraph(r.trappings ?? r.profile.sections.Trappings) : ""}${r.gear.length ? r.gear.map((g) => `<div class="gm-entry" id="gear-${g.key}"><div><strong>${esc(g.entry.name)}</strong><small class="gm-small">${esc(sourceLabel(g.entry))}${g.entry.qualities ? ` · ${esc(g.entry.qualities)}` : ""}</small></div><input class="gm-rank" type="number" min="1" step="1" value="${g.quantity}" data-quantity="${g.key}" aria-label="${esc(g.entry.name)} quantity">${remove(g.key)}</div>`).join("") : empty("Add other belongings as needed.")}
+  <section id="gm-magic"><div class="gm-section-heading"><h2>Magic & prayers</h2>${eligible.length ? button("Choose magic", "picker", 'data-kind="magic"', "primary") : ""}</div><p class="gm-small">${eligible.length ? "Choices follow the selected Lore, patron or magical template. No PC starting spell grants or XP are added." : "Add an appropriate magical template, Spellcaster Trait or Bless/Invoke Talent to unlock choices."}${r.template?.magic ? ` ${r.template.name}: up to ${r.template.magic.petty} Petty and ${r.template.magic.lore} Lore spells (p. ${r.template.page}).` : ""}</p>${r.spells.map((x) => `<div class="gm-entry"><div>${detail(x.contentId, `${esc(x.name)} <small>${esc(x.category)}</small>`, `<p class="gm-small">CN ${x.cn ?? "—"} · Range ${esc(x.range || "—")} · Target ${esc(x.target || "—")} · Duration ${esc(x.duration || "—")}</p>${entryBody(x.text, x.page, x)}`)}</div>${remove(x.contentId)}</div>`).join("")}</section>`;
 }
 export function issuePanel(r) {
   return r.issues.length
@@ -270,7 +304,7 @@ export function workspace(data, R, s, r, ui, verify, canUndo, saveMessage) {
     () => equipmentMagic(R, s, r),
     () => review(s, r),
   ][s.step]();
-  return `<div class="workspace gm-workspace"><aside class="rail">${creatorSwitch("gm", verify)}<div class="rail-heading"><span class="eyebrow">Game Master's workshop</span><strong>The Bestiary</strong><p>Core book · Fifth Edition</p></div>${select(
+  return `<div class="workspace gm-workspace"><aside class="rail">${creatorSwitch("gm", verify)}<div class="rail-heading"><span class="eyebrow">Game Master's workshop</span><strong>The Bestiary</strong><p>${s.books.length > 1 ? "Core + Up in Arms" : "Core book · Fifth Edition"}</p></div>${select(
     "Workshop page",
     "gm-step-select",
     STEPS.map((x, i) => [i, x]),
@@ -322,6 +356,11 @@ export function pickerEntries(data, R, r, kind) {
         (n) => `Chaos Magic (${n})`,
       );
     if (base(x.name) === "Impassioned Zeal") names = ["Impassioned Zeal ()"];
-    return names.map((name) => ({ ...x, name, key: name }));
+    return names.map((name) => ({
+      ...x,
+      name,
+      key: name,
+      disabled: x.unavailable,
+    }));
   });
 }

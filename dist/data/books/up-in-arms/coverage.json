@@ -29,6 +29,35 @@
         "book": "up-in-arms"
       },
       "reason": "Outside character-creation scope."
+    },
+    {
+      "id": "up-in-arms:feature:gm-mounts",
+      "name": "GM Riding Horse and Demigryph Mount",
+      "status": "adapted",
+      "source": {
+        "book": "up-in-arms"
+      },
+      "reason": "Two opt-in GM foundations; approved Fifth Edition primary Size Damage and Stride → Sprinter. Printed stats and existing training retained. Named NPCs and hirelings excluded."
+    },
+    {
+      "id": "up-in-arms:feature:gm-shock-cavalry",
+      "name": "GM Shock Cavalry training",
+      "status": "adapted",
+      "source": {
+        "book": "up-in-arms",
+        "page": 107
+      },
+      "reason": "Requires War; printed effects are references, with Challenging (+0) converted to +0 SL under core Appendix I."
+    },
+    {
+      "id": "up-in-arms:feature:gm-destrier",
+      "name": "GM Destrier profile",
+      "status": "unavailable",
+      "source": {
+        "book": "up-in-arms",
+        "page": 29
+      },
+      "reason": "User explicitly requested skipping the Destrier after reviewing its undefined optional Traits."
     }
   ]
 }

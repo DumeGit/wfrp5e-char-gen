@@ -1,4 +1,5 @@
 import { KEYS } from "../rules.mjs";
+import { sourceLabel } from "./books.mjs";
 import { rowName } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
@@ -50,7 +51,7 @@ export function sheetSections(r, s) {
     [
       "Trappings",
       [
-        r.profile.sections.Trappings,
+        r.trappings ?? r.profile.sections.Trappings,
         ...r.gear.map((g) => `${g.quantity} × ${g.entry.name}`),
       ].filter(Boolean),
     ],
@@ -189,7 +190,7 @@ export async function createGMPDF(PDFLib, r, s) {
   newPage();
   text(r.name, 26, heading);
   text(
-    [r.profile.name, r.template?.name, r.size, `Core p. ${r.profile.page}`]
+    [r.profile.name, r.template?.name, r.size, sourceLabel(r.profile)]
       .filter(Boolean)
       .join(" · "),
     9,

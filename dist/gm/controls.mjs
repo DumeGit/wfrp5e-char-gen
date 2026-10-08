@@ -38,3 +38,12 @@ export const remove = (key) =>
 export const empty = (text) => `<p class="gm-empty">${esc(text)}</p>`;
 export const listNames = (rows) =>
   rows.map((t) => esc(t.name) + (t.ranks > 1 ? ` ×${t.ranks}` : "")).join(", ");
+export const legacyBadge = (entry) =>
+  entry.adaptation
+    ? button(
+        "Legacy",
+        "legacy",
+        `data-entry="${esc(entry.key || entry.id || entry.name)}" aria-label="Read ${esc(entry.name)} adaptation"`,
+        "legacy-tag",
+      )
+    : "";

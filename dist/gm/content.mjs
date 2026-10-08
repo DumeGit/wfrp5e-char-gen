@@ -1,5 +1,6 @@
 // Compile reviewed PDF extraction into explicit, source-owned GM records.
 import { canon, base, options } from "../rules.mjs";
+import { bookId, sourceLabel } from "./books.mjs";
 
 const quote = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function entries(text, definitions, descriptions = true) {
@@ -169,5 +170,100 @@ export function prepareGM(raw, R) {
   };
 }
 export function gmInventory(data) {
-  return `# Core GM content inventory\n\nGenerated from the reviewed core extraction. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} templates, ${data.traits.length} Creature Traits and ${data.mutations.length} Physical/Mental Corruption table entries. Career development and live play are deferred.\n\n| Profile | Core page | Category |\n| --- | --- | --- |\n${data.profiles.map((p) => `| ${p.name} | ${p.page} | ${p.category} |`).join("\n")}\n`;
+  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} core templates, ${data.traits.length} core Creature Traits, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates |\n| --- | --- | --- |\n${data.books.map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
+    ...data.profiles,
+  ]
+    .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }))
+    .map(
+      (p) =>
+        `| ${p.name} | ${sourceLabel(p)} | ${p.category} | ${p.adaptation ? "Yes" : ""} |`,
+    )
+    .join("\n")}\n`;
+}
+
+export function addGMSupplement(data, raw, R) {
+  const book = R.books.find((b) => b.id === raw.id);
+  if (
+    raw.schemaVersion !== 1 ||
+    !book ||
+    raw.source.sha256 !== book.source.sha256
+  )
+    throw Error("GM supplement source does not match its installed book.");
+  const ids = new Set(
+    [...data.profiles, ...data.templates, ...data.traits].map((x) => x.id),
+  );
+  for (const entry of [...raw.profiles, ...raw.training]) {
+    if (
+      !entry.id?.startsWith(`${book.id}:`) ||
+      ids.has(entry.id) ||
+      !entry.name ||
+      entry.source?.book !== book.id ||
+      !Number.isInteger(entry.page) ||
+      entry.page !== entry.source.page
+    )
+      throw Error("Invalid GM supplement identity or source.");
+    ids.add(entry.id);
+  }
+  const profiles = raw.profiles.map((p) => {
+    for (const key of [
+      "M",
+      "WS",
+      "BS",
+      "S",
+      "T",
+      "I",
+      "Ag",
+      "Dex",
+      "Int",
+      "WP",
+      "Fel",
+      "W",
+    ])
+      if (
+        p.stats[key] !== null &&
+        (!Number.isInteger(p.stats[key]) || p.stats[key] < 0)
+      )
+        throw Error(`${p.name}: invalid ${key}.`);
+    for (const t of [...p.traits, ...p.optionalTraits])
+      if (!data.traits.some((x) => x.name === t.name))
+        throw Error(`${p.name}: unknown core Trait ${t.name}.`);
+    const rows = (kind) =>
+      p[kind].map((x, i) => ({
+        ...x,
+        key: `${book.id}-${p.id.split(":").at(-1)}-${kind}-${i}`,
+        origin: "Printed",
+        source: p.source,
+        ...(x.adaptation ? { adaptationSource: p.source } : {}),
+        page: p.page,
+      }));
+    const coreProfile = data.profiles.find(
+      (x) => x.id === p.descriptionProfile,
+    );
+    if (!coreProfile)
+      throw Error(`${p.name}: unknown core description profile.`);
+    return {
+      ...p,
+      sections: { ...p.sections, Traits: coreProfile.sections.Traits },
+      traitDescriptionSource: { book: "core", page: coreProfile.page },
+      traits: rows("traits"),
+      skills: rows("skills"),
+      talents: rows("talents"),
+      armour: rows("armour"),
+      attacks: rows("attacks"),
+    };
+  });
+  return {
+    ...data,
+    books: [
+      ...data.books,
+      {
+        id: book.id,
+        title: book.title,
+        version: book.version,
+        source: book.source,
+      },
+    ],
+    profiles: [...data.profiles, ...profiles],
+    training: [...data.training, ...raw.training],
+  };
 }

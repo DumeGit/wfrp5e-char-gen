@@ -1,7 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { loadBookLibrary, assembleBooks } from "../dist/books.mjs";
-import { prepareGM, gmInventory } from "../dist/gm/content.mjs";
+import {
+  prepareGM,
+  addGMSupplement,
+  gmInventory,
+} from "../dist/gm/content.mjs";
 import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
 import {
   searchCoverage,
@@ -34,7 +38,7 @@ const next =
   countSummary(report) +
   "\n" +
   readme.slice(readme.indexOf(end));
-const gm = prepareGM(
+let gm = prepareGM(
   JSON.parse(
     await readFile(
       new URL("../dist/gm/sources/core.json", import.meta.url),
@@ -42,6 +46,26 @@ const gm = prepareGM(
     ),
   ),
   assembleBooks(library),
+);
+const coreBook = assembleBooks(library).books[0];
+gm.books = [
+  {
+    id: coreBook.id,
+    title: coreBook.title,
+    version: coreBook.version,
+    source: coreBook.source,
+  },
+];
+gm.training = [];
+gm = addGMSupplement(
+  gm,
+  JSON.parse(
+    await readFile(
+      new URL("../dist/gm/sources/up-in-arms.json", import.meta.url),
+      "utf8",
+    ),
+  ),
+  assembleBooks(library, ["core", "up-in-arms"]),
 );
 gm.version = createHash("sha256")
   .update(JSON.stringify(gm))

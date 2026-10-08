@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"068014ac655df96bad9c";
+const CACHE=CACHE_PREFIX+"3e96577f6455cf7783fa";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -219,6 +219,7 @@ const ASSETS=[
  "folio.mjs",
  "gm.html",
  "gm/app.mjs",
+ "gm/books.mjs",
  "gm/content.mjs",
  "gm/controls.mjs",
  "gm/data.json",
@@ -230,6 +231,7 @@ const ASSETS=[
  "gm/references.mjs",
  "gm/sheet.mjs",
  "gm/sources/core.json",
+ "gm/sources/up-in-arms.json",
  "gm/style.css",
  "gm/trait-descriptions.mjs",
  "gm/views.mjs",

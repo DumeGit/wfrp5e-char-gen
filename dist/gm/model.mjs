@@ -1,5 +1,6 @@
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
+import { bookId, validateGMBooks } from "./books.mjs";
 
 export const GM_SCHEMA = 1;
 export const SIZES = [
@@ -43,12 +44,20 @@ const bonus = (n) => (n === null ? null : Math.floor(n / 10));
 const rowName = (row) => row.name + (row.value ? ` (${row.value})` : "");
 export { rowName };
 
-export function freshGM(data, profile = "") {
+export function freshGM(data, profile = "", books = ["core"]) {
   return {
     type: "wfrp-gm",
     schemaVersion: GM_SCHEMA,
     dataVersion: data.version,
     coreVersion: data.coreVersion,
+    books: [
+      ...new Set([
+        ...books,
+        ...(profile
+          ? [bookId(data.profiles.find((p) => p.id === profile) || {})]
+          : []),
+      ]),
+    ],
     profile,
     name: "",
     description: "",
@@ -67,6 +76,7 @@ export function freshGM(data, profile = "") {
     tb: null,
     recalculate: false,
     traits: [],
+    extraTraining: [],
     skills: [],
     talents: [],
     gear: [],
@@ -111,10 +121,21 @@ export function validateGMDraft(data, R, s) {
   ])
     if (typeof s[k] !== "string" || s[k].length > 20000)
       throw Error(`Invalid ${k} in NPC file.`);
+  validateGMBooks(data, s.books);
   if (s.profile && !data.profiles.some((p) => p.id === s.profile))
     throw Error("Unknown printed profile.");
+  if (
+    s.profile &&
+    !s.books.includes(bookId(data.profiles.find((p) => p.id === s.profile)))
+  )
+    throw Error("The starting profile requires an enabled GM book.");
   if (s.template && !data.templates.some((p) => p.id === s.template))
     throw Error("Unknown creature template.");
+  if (
+    s.template &&
+    !s.books.includes(bookId(data.templates.find((p) => p.id === s.template)))
+  )
+    throw Error("The template requires an enabled GM book.");
   if (s.size && !SIZES.includes(s.size)) throw Error("Unknown Size.");
   if (
     !Number.isInteger(s.step) ||
@@ -145,6 +166,7 @@ export function validateGMDraft(data, R, s) {
       throw Error("Invalid Characteristic override.");
   for (const k of [
     "traits",
+    "extraTraining",
     "skills",
     "talents",
     "gear",
@@ -157,6 +179,26 @@ export function validateGMDraft(data, R, s) {
   ])
     if (!Array.isArray(s[k]) || s[k].length > 1000)
       throw Error(`Invalid ${k} list.`);
+  const printedTraining =
+    data.profiles
+      .find((p) => p.id === s.profile)
+      ?.traits.filter((t) => t.name === "Trained")
+      .flatMap((t) => parts(t.value)) || [];
+  const allowedTraining = [
+    ...TRAINING,
+    ...(data.training || [])
+      .filter((t) => s.books.includes(bookId(t)))
+      .map((t) => t.name),
+  ];
+  if (
+    s.extraTraining.length &&
+    (!printedTraining.length ||
+      new Set(s.extraTraining).size !== s.extraTraining.length ||
+      s.extraTraining.some(
+        (n) => !allowedTraining.includes(n) || printedTraining.includes(n),
+      ))
+  )
+    throw Error("Invalid additional printed-profile training.");
   for (const t of s.traits)
     if (
       !plain(t) ||
@@ -169,6 +211,7 @@ export function validateGMDraft(data, R, s) {
     if (
       !plain(t) ||
       !talentInfo(R, t.name) ||
+      talentInfo(R, t.name).unavailable ||
       !number(t.ranks) ||
       !t.ranks ||
       typeof t.key !== "string"
@@ -406,7 +449,9 @@ export function calculateGM(data, R, s) {
         source: { book: "core", page: code.startsWith("magic") ? 354 : 318 },
         control: { step, target },
       });
-  const p = data.profiles.find((p) => p.id === s.profile);
+  const p = data.profiles.find(
+    (p) => p.id === s.profile && s.books.includes(bookId(p)),
+  );
   if (!p) {
     add("Choose a printed starting profile.", 0, "#gm-profile-search");
     return {
@@ -433,7 +478,40 @@ export function calculateGM(data, R, s) {
     ...t,
     text: data.traits.find((x) => x.name === t.name)?.text || "",
     page: data.traits.find((x) => x.name === t.name)?.page || p.page,
+    source: {
+      book: "core",
+      page: data.traits.find((x) => x.name === t.name)?.page || p.page,
+    },
   }));
+  for (const t of traits.filter(
+    (t) => t.name === "Trained" && t.origin === "Printed",
+  ))
+    t.value = [...new Set([...parts(t.value), ...s.extraTraining])].join(", ");
+  for (const t of traits.filter((t) => t.name === "Trained")) {
+    const choices = parts(t.value);
+    for (const extra of (data.training || []).filter(
+      (x) => s.books.includes(bookId(x)) && choices.includes(x.name),
+    )) {
+      t.text += `\n\n${extra.name}: ${extra.text}`;
+      t.adaptation = extra.adaptation;
+      t.adaptationSource = extra.source;
+      if (
+        extra.requires &&
+        !traits.some(
+          (x) =>
+            x.name === "Trained" && parts(x.value).includes(extra.requires),
+        )
+      ) {
+        issues.push({
+          message: `${extra.name} requires Trained (${extra.requires}).`,
+          code: "training.prerequisite",
+          severity: "error",
+          source: extra.source,
+          control: { step: 1, target: `#trait-${t.key}` },
+        });
+      }
+    }
+  }
   const talents = live([...p.talents, ...s.talents]).map((t) => ({ ...t }));
   for (const t of traits.filter(
     (t) => t.name === "Mark of Chaos" && t.origin === "GM",
@@ -467,6 +545,8 @@ export function calculateGM(data, R, s) {
   const trained = traits
     .filter((t) => t.name === "Trained" && t.origin !== "Printed")
     .flatMap((t) => parts(t.value));
+  if (traits.some((t) => t.name === "Trained" && t.origin === "Printed"))
+    trained.push(...s.extraTraining);
   if (
     trained.includes("Guard") &&
     !traits.some((t) => t.name === "Territorial")
@@ -709,7 +789,16 @@ export function calculateGM(data, R, s) {
         "skill.total",
       );
   for (const t of s.talents)
-    if (
+    if (talentInfo(R, t.name)?.unavailable) {
+      const entry = talentInfo(R, t.name);
+      issues.push({
+        message: entry.unavailable,
+        code: "talent.unavailable",
+        severity: "error",
+        source: entry.source,
+        control: { step: 1, target: "#gm-tab-2" },
+      });
+    } else if (
       !Number.isInteger(t.ranks) ||
       t.ranks < 1 ||
       (R.config.talentLimits[base(t.name)] !== null &&
@@ -762,7 +851,12 @@ export function calculateGM(data, R, s) {
         "Tzeentch",
       ],
       Corruption: ["Minor", "Moderate", "Major"],
-      Trained: TRAINING,
+      Trained: [
+        ...TRAINING,
+        ...(data.training || [])
+          .filter((x) => s.books.includes(bookId(x)))
+          .map((x) => x.name),
+      ],
     }[t.name];
     if (known && parts(t.value).some((v) => !known.includes(v)))
       add(
@@ -940,6 +1034,18 @@ export function calculateGM(data, R, s) {
     R.armour.some((a) => a.contentId === g.id),
   )) {
     const a = g.entry;
+    if (
+      p.hitLocations &&
+      !a.quick &&
+      /\bArms\b|\bLegs\b/.test(a.locations) &&
+      !a.locations.includes("Forelegs")
+    )
+      add(
+        `${a.name} uses humanoid limb locations. Remove it or use armour with supported mount coverage; the creator does not assume which legs it protects.`,
+        2,
+        `#gear-${g.key}`,
+        "armour.locations",
+      );
     armour.push({
       ...a,
       key: g.key,
@@ -947,7 +1053,12 @@ export function calculateGM(data, R, s) {
       shield: a.locations === "Shield",
     });
   }
-  const ap = { Head: 0, Arms: 0, Body: 0, Legs: 0 },
+  const ap = Object.fromEntries(
+      (p.hitLocations || ["Head", "Arms", "Body", "Legs"]).map((loc) => [
+        loc,
+        0,
+      ]),
+    ),
     layers = {};
   const quick = armour.some((a) => a.quick);
   for (const a of armour.filter((a) => !a.shield)) {
@@ -970,7 +1081,7 @@ export function calculateGM(data, R, s) {
               ? "printed"
               : "plate";
     for (const loc of Object.keys(ap))
-      if (a.locations.includes(loc))
+      if (a.locations.includes(loc) || (a.quick && p.hitLocations))
         layers[`${layer}:${loc}`] = Math.max(
           layers[`${layer}:${loc}`] || 0,
           a.ap,
@@ -1012,6 +1123,12 @@ export function calculateGM(data, R, s) {
       text: (a.text || "").replace(/^\s*[,;]\s*/, ""),
     })),
     armour,
+    trappings: p.linkedTrappings
+      ? armour
+          .filter((a) => a.origin === "Printed" && a.trapping)
+          .map((a) => a.trapping)
+          .join("; ")
+      : p.sections.Trappings || "",
     ap,
     shield: Math.max(0, ...armour.filter((a) => a.shield).map((a) => a.ap)),
     spells,
@@ -1051,6 +1168,11 @@ export function calculateGM(data, R, s) {
       "The general Size rule gives Fangs +8. The p. 361 worked example gives +5, omitting the additional Size damage; the user chose the general rule.",
     );
   warnings.push(...p.notes);
+  warnings.push(
+    ...[p, ...result.traits, ...result.attacks]
+      .map((x) => x.adaptation)
+      .filter(Boolean),
+  );
   warnings.push(...result.traits.map((t) => t.descriptionNote).filter(Boolean));
   if (
     traits.some((t) => t.name === "Venom") &&

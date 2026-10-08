@@ -4,7 +4,7 @@
   "title": "Up in Arms",
   "shortTitle": "Up in Arms",
   "edition": 4,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -27,7 +27,8 @@
   "notes": [
     "Only character-creation mechanics are automated; separate printed gameplay references are searchable. Injury, mounted combat, Pursuits, group Advantage, hireling management, structure damage and Warrior Endeavours remain outside this creator.",
     "Unpriced descriptive Trappings and unspecified ammunition quantities remain unresolved rather than invented.",
-    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler.",
+    "The independent GM workshop optionally uses reviewed Riding Horse and Demigryph Mount profiles and Shock Cavalry training. Destrier and hirelings are excluded by user decision; named NPCs are excluded."
   ],
   "files": {
     "careers": "careers.json",

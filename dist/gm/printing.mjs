@@ -4,6 +4,7 @@ import { esc, button } from "./controls.mjs";
 
 // A print batch is temporary and independent of the editable GM/player drafts.
 export function createGMPrinting(data, R, { current, download, toast }) {
+  const rulesFor = typeof R === "function" ? R : () => R;
   const dialog = document.createElement("dialog");
   dialog.className = "creator-dialog gm-print-dialog";
   dialog.setAttribute("aria-labelledby", "gm-print-title");
@@ -15,7 +16,7 @@ export function createGMPrinting(data, R, { current, download, toast }) {
     importErrors = [];
   const snapshot = (s) => {
     const draft = structuredClone(s);
-    return { s: draft, r: calculateGM(data, R, draft) };
+    return { s: draft, r: calculateGM(data, rulesFor(draft), draft) };
   };
   async function render() {
     const version = ++revision;
@@ -60,9 +61,8 @@ export function createGMPrinting(data, R, { current, download, toast }) {
           if (entries.length >= 48)
             throw Error("The print batch already has 48 cards.");
           if (file.size > 2000000) throw Error("This draft is too large.");
-          entries.push(
-            snapshot(validateGMDraft(data, R, JSON.parse(await file.text()))),
-          );
+          const draft = JSON.parse(await file.text());
+          entries.push(snapshot(validateGMDraft(data, rulesFor(draft), draft)));
         } catch (error) {
           importErrors.push(`${file.name}: ${error.message}`);
         }

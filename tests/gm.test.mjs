@@ -123,7 +123,7 @@ test("four-card layout measures each profile and never clips oversized content",
 });
 
 test("all 53 described core profiles fit four-per-A4, with measured six-card overflow rather than dropped Traits", async () => {
-  const entries = data.profiles.map((p) => {
+  const entries = data.profiles.filter(p => p.id.startsWith("core:")).map((p) => {
     const s = freshGM(data, p.id);
     return { s, r: result(s) };
   });
@@ -250,10 +250,10 @@ test("table cards retain mechanical fields and Trait descriptions, omitting disc
   );
 });
 test("every core profile preserves untouched printed values, Skills and attacks", () => {
-  assert.equal(data.profiles.length, 53);
+  assert.equal(data.profiles.filter(p => p.id.startsWith("core:")).length, 53);
   assert.equal(data.templates.length, 7);
   assert.equal(data.traits.length, 67);
-  for (const p of data.profiles) {
+  for (const p of data.profiles.filter(p => p.id.startsWith("core:"))) {
     const s = freshGM(data, p.id),
       r = result(s);
     assert.deepEqual(

@@ -1,4 +1,5 @@
 import { KEYS } from "../rules.mjs";
+import { sourceLabel } from "./books.mjs";
 import { rowName } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
@@ -94,7 +95,7 @@ export function cardSections(r, s) {
     [
       "Trappings",
       [
-        r.profile.sections.Trappings,
+        r.trappings ?? r.profile.sections.Trappings,
         ...r.gear.map((g) => `${g.quantity} × ${g.entry.name}`),
       ]
         .filter(Boolean)
@@ -128,7 +129,7 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
           r.name === r.profile.name ? "" : r.profile.name,
           r.template?.name,
           r.size,
-          `Core p. ${r.profile.page}`,
+          sourceLabel(r.profile),
         ]
           .filter(Boolean)
           .join(" · "),
