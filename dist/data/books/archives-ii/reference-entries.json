@@ -200,14 +200,6 @@
     "text": "Ogres do not need to Disengage (WFRP, page 165) to move away from smaller opponents in combat. If they wish, an Ogre may spend 1 Advantage to attack a smaller opponent with a SB +0 Damage attack using their Melee (Brawling) Skill. Average and Small creatures both receive a +10 bonus to hit Ogres with both Melee and Ranged Skills.\n\nCombined, these rules for Size have a major impact on combat, and should not be forgotten. The result is that most Ogres make several attacks each turn, doing substantial damage as they go."
   },
   {
-    "id": "archives-ii:reference:28-size-matters",
-    "name": "Size Matters",
-    "category": "rule",
-    "topic": "Ogres and astrology",
-    "page": 28,
-    "text": "The rules for size are admittedly somewhat complex, but knowing how to use them is vital for Ogre Players and GMs. Differences such as the larger number of Wounds Ogres receive are covered in the section on Character Creation above. The major gameplay differences related to an Ogre’s size are summarised below. You can find details in WFRP (page 341)."
-  },
-  {
     "id": "archives-ii:reference:28-weapon-damage",
     "name": "Weapon Damage",
     "category": "rule",
@@ -246,14 +238,6 @@
     "topic": "Ogres and astrology",
     "page": 29,
     "text": "| Weapon | Price | Enc | Availability* | Range | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| THROWING |  |  |  |  |  |  |\n| Great Throwing Spear | 6/ | 2 | Scarce | SBx3 | SB +4 | Impale |\n| BLACKPOWDER* |  |  |  |  |  |  |\n| (2H)Leadbelcher Gun | 14GC | 8 | Exotic | 50 | +10 | Dangerous, Reload 5 |\n| Ogre Pistol | 9GC | 3 | Exotic | 20 | +8 | Pistol, Reload 1 |\n| ENTANGLE |  |  |  |  |  |  |\n| Harpoon Launcher | 8GC | 5 | Exotic | 20 | +10 | Entangle, Reload 2 |\n| Chain Trap | 1GC | 2 | Scarce | SBx2 | +7 | Entangle |\n\n* Availability is given for the Empire, where some weapons are rarer than they would be in the Mountains of Mourne."
-  },
-  {
-    "id": "archives-ii:reference:30-armour-descriptions",
-    "name": "Armour Descriptions",
-    "category": "rule",
-    "topic": "Ogres and astrology",
-    "page": 30,
-    "text": "While some Ogres do wear more substantial armour, this is done just as much as a mark of fashion or affiliation as it is for actual protection. Only the gutplate is seen as an item of true protective merit among Ogres."
   },
   {
     "id": "archives-ii:reference:31-ogre-magic",
@@ -336,14 +320,6 @@
     "text": "| D100 | Result | Cost to Manufacture | Time to Create |\n| --- | --- | --- | --- |\n| 01–43 | A Magical Weapon | (Cost of weapon) × 50 (per ability) | 2 months |\n| 44–45 | A Magical Arrow | (Cost of arrows) × 30 | 2 weeks for 6 arrows |\n| 46–51 | Magical Armour | (Cost of armour) × 50 (per ability) | 4 months |\n| 52–55 | A Magical Shield | (Cost of shield) × 50 (per ability) | 4 months |\n| 56–60 | A Scroll | CN of Spell × 10 | 1 week |\n| 61–65 | A Wand | CN of Spell × 50 | 3 weeks |\n| 66–70 | A Staff | – | 4 weeks |\n| 71–89 | A Ring | CN of Spell × 200 | 4 weeks |\n| 90–97 | A Talisman | – | 8 weeks |\n| 98–00 | An Oddity | – | – |"
   },
   {
-    "id": "archives-ii:reference:51-magical-items-and-artifice",
-    "name": "Magical Items And Artifice",
-    "category": "rule",
-    "topic": "Magical items and artifice",
-    "page": 51,
-    "text": "The Winds of Magic are dangerous to work with, but powerful sources of energy for those with the skill to manipulate them. Wizards employ the winds when casting spells. However, it is also possible to work the Winds of Magic into the forging or construction of certain artefacts, imbuing them with potent powerful abilities.\n\nThere are many ways by which to enchant an artefact. Each of the major magical institutions of the Empire teaches the forging of magical weapons and armour, and the writing of scrolls. Other items are crafted by Dwarfs, who inscribe items with runes as a safe and stable way to bind magical energy. Hedge Magicians have their own traditions for bewitching items, which typically produce weaker, yet more subtle and safer effects. The practitioners of darker forms of magic know well how to bind raw Dhar to an item, imbuing it with foul properties. It is even said that some Chaos Sorcerers can bind a daemon within an item, though such brash magics incur the lasting wrath of the bound entity."
-  },
-  {
     "id": "archives-ii:reference:52-commissioning-a-magical-artefact",
     "name": "Commissioning a Magical Artefact",
     "category": "rule",
@@ -358,14 +334,6 @@
     "topic": "Magical items and artifice",
     "page": 52,
     "text": "Most Characters are ignorant of an artefact’s abilities until they engage in research or find out about them through trial and error. For Characters with the Detect Artefact Talent this can be fairly simple — upon touching the item they may make an Intuition Test to learn about the artefact (WFRP, page 135). For other Wizards, the task is more challenging and typically requires one week per attempt, usually in a laboratory or well-equipped library, or other suitable ritual space. This is a frustrating process, as magical items are dangerous when wielded in ignorance. In order to identify a magical artefact, a Character should make an Challenging (+0) Lore (Magic) Test and consult the following table.\n\n|  |  |  |\n| --- | --- | --- |\n| SL | Result | Consequences |\n| +6 or more | Astounding Success | The Character is able to comprehensively identify the item and uncover all its Quirks. |\n| +4 to +5 | Impressive Success | The Character is able to identify the item and knows if it possesses Quirks. However, the GM may keep back details about one Quirk. |\n| +2 to +3 | Success | The Character is able to identify the item. Whilst they are aware of visible Quirks, they do not uncover hidden ones. |\n| +0 to +1 | Marginal Success | The Character is able to identify the item, and they identify one hidden quirk. |\n| 0 to -1 | Marginal Failure | The Character is unable to identify the item but is conscious of that fact. They do not misidentify the artefact. They are aware of clearly visible Quirks. |\n| -2 to -3 | Failure | The Character confuses the artefact with a similar sort of item. They are aware of clearly visible Quirks. |\n| -4 to -5 | Impressive Failure | The Character confuses the artefact with a similar sort of item. They are aware of clearly visible Quirks but they also suspect it has a Quirk it does not actually possess. |\n| -6 or less | Astounding Failure | The Character confuses the artefact with a similar sort of item. They are aware of clearly visible Quirks but they also suspect it has at least two Quirks it does not actually possess. |"
-  },
-  {
-    "id": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
-    "name": "Guarding the Reputation of Wizards",
-    "category": "rule",
-    "topic": "Magical items and artifice",
-    "page": 53,
-    "text": "Most Wizards would not risk their own reputations by creating powerful artefacts for any old riff raff. In the Empire, the reckless spread of enchanted items could easily be used to support calls for the reinstitution of the persecution of Wizards, such as those levied by Sigmarite zealots.\n\nIndeed, hunting down a reckless Wizard may well make a fine adventure for a group of Witch Hunters and their staunch Sigmarite allies! Therefore, most Wizards are extremely careful in just what they create and for whom. This only adds to the difficulty of finding a willing expert.\n\nDwarf Runesmiths — if they can be found in the Empire at all — have their clan honour to consider. Most Runesmiths would balk at creating an artefact for one who is not a proven friend of the Dwarfs, and even then refrain from attempting their most powerful runes for any outside their own hold. The art of runesmithing risks being lost among the Dwarfs, and those practiced in it struggle to pass on their secrets before their death. They have little time for crafting items of legend for just anyone who happens by.\n\nIf the Characters are of dubious reputation, then only desperate Wizards would risk working for them. The price of such artefacts is high and their quality far from assured. Creating magical items is arduous and dangerous; expect to pay whatever the creator demands, though approximate notions of cost are given in the table above.\n\nNote that highly individualised items such as staffs, talismans, and oddities are much harder to commission, and the asking price will be whatever the maker demands, but the price is always going to be high, and not necessarily expressed in anything as simple as Gold Crowns. Such an item might require slaying a terrible beast, assassinating a troublesome noble family, or burning down a sizeable piece of Altdorf to make way for an extension to the practitioner’s own College."
   },
   {
     "id": "archives-ii:reference:53-time-and-money",

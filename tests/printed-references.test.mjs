@@ -417,7 +417,6 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
   for (const [book, name, kind] of [
     ["up-in-arms", "Critical Wounds", "rule"],
     ["up-in-arms", "Complex Pursuits", "rule"],
-    ["deft-steps", "Congruent With Character", "rule"],
     ["winds-of-magic", "Panacea Universalis", "equipment"],
     ["winds-of-magic", "Knuckles of Ignominy", "equipment"],
     ["rough-nights", "Bull Ring", "rule"],
@@ -442,10 +441,7 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
     get("deft-steps", "Charlatan Income Endeavour Complications").entry.text,
     /Ranaldans Take Note/,
   );
-  assert.doesNotMatch(
-    get("deft-steps", "Congruent With Character").entry.text,
-    /\|/,
-  );
+  assert.equal(get("deft-steps", "Congruent With Character"), undefined);
   assert.match(
     full.rows.find((r) => r.key === "core:reference:131-difficulty-table").entry
       .text,
@@ -495,7 +491,7 @@ test("NPCs and templates stay outside search while reviewed source records and t
       !raw.some((r) => r.name === name && r.entry.source.book === "up-in-arms"),
       name,
     );
-  // Ordinary printed hireling prices and background reading remain references.
+  // Ordinary printed hireling prices and procedures remain references.
   assert.equal(get("core", "Hirelings").kind, "table");
   assert.equal(get("up-in-arms", "Hireling Profiles").kind, "rule");
 });
@@ -508,6 +504,7 @@ test("coverage is generated from registry and frozen review, separate from creat
     ),
   );
   const report = searchCoverage(library, full, review, workshop);
+  assert.equal(report.removedNonMechanicalRules, 112);
   assert.equal(report.books.length, 11);
   assert.equal(report.newlyImported, raw.length);
   assert.equal(
@@ -546,5 +543,75 @@ test("coverage is generated from registry and frozen review, separate from creat
   assert.throws(
     () => searchCoverage(library, full, broken, workshop),
     /missing/,
+  );
+  const restored = structuredClone(full);
+  const excluded = review.books.core.rulesAudit.removed[0];
+  restored.rows.push({
+    key: excluded.key,
+    kind: "rule",
+    legacy: [],
+    entry: { source: { book: "core" } },
+  });
+  assert.throws(
+    () => searchCoverage(library, restored, review, workshop),
+    /Excluded non-mechanical rule was restored/,
+  );
+  const stale = structuredClone(review);
+  stale.books.core.rulesAudit.reviewedRuleResults++;
+  assert.throws(
+    () => searchCoverage(library, full, stale, workshop),
+    /Rules audit count is stale/,
+  );
+});
+
+test("Rules omit reviewed flavour and introductions while preserving qualitative requirements and mechanics", async () => {
+  const review = JSON.parse(
+    await readFile(
+      new URL("../scripts/search-reference-review.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const link = createReferenceLinker(full.rows);
+  for (const pack of library.packs) {
+    for (const excluded of review.books[pack.manifest.id]?.rulesAudit
+      ?.removed || []) {
+      assert.ok(!full.rows.some((r) => r.key === excluded.key), excluded.name);
+      assert.ok(
+        ![
+          ...(pack.data.referenceEntries || []),
+          ...(pack.data.ruleReferences || []),
+        ].some((e) => e.id === excluded.id),
+        `${excluded.name} must not ship as a raw reference`,
+      );
+      assert.ok(
+        link(excluded.name).every(
+          (segment) => !segment.keys?.includes(excluded.key),
+        ),
+      );
+    }
+  }
+  for (const [key, expected] of [
+    [
+      "rule:core:rule-reference:rule-167-outnumbering:Outnumbering",
+      /twice as many Engaged/,
+    ],
+    [
+      "rule:core:rule-reference:rule-148-what-you-already-know:What You Already Know",
+      /does not require a Test/,
+    ],
+    ["core:reference:207-strictures", /Respect prisoners of war/],
+    ["archives-iii:reference:58-strictures", /Never harm an animal/],
+    ["high-elf:reference:86-the-lore-of-high-magic", /High Magic Talent/],
+    ["deft-steps:reference:98-notorious-prisons", /Hard \(-20\).*Test/],
+  ]) {
+    const row = full.rows.find((r) => r.key === key);
+    assert.equal(row?.kind, "rule", key);
+    assert.match(row.entry.text, expected);
+  }
+  assert.equal(get("up-in-arms", "Critical Wounds").kind, "rule");
+  assert.equal(get("up-in-arms", "Complex Pursuits").kind, "rule");
+  assert.equal(
+    searchBooks(full.rows, "Fortune", 20, { category: "rule" }).rows[0].name,
+    "Fortune",
   );
 });

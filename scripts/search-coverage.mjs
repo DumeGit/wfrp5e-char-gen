@@ -9,6 +9,59 @@ export const referenceContentHash = (text) =>
     .update(String(text).replaceAll("\r\n", "\n"))
     .digest("hex");
 
+// These are explicit editorial decisions, never a keyword filter at runtime.
+// Keep the removed identities frozen so rebuilding packs cannot restore them.
+function validateRulesAudit(pack, rows, audit, byKey) {
+  if (!audit) return null;
+  const book = pack.manifest.id;
+  const reasons = ["introduction", "setting", "advice", "penance-example"];
+  const sourceIds = new Set(
+    [
+      ...(pack.data.referenceEntries || []),
+      ...(pack.data.ruleReferences || []),
+    ].map((entry) => entry.id),
+  );
+  const ids = new Set(),
+    keys = new Set();
+  if (
+    !/^\d{4}-\d{2}-\d{2}$/.test(audit.date || "") ||
+    !Number.isInteger(audit.reviewedRuleResults) ||
+    audit.reviewedRuleResults < 1 ||
+    !Array.isArray(audit.removed) ||
+    !audit.removed.length
+  )
+    throw Error(`Invalid Rules audit: ${book}`);
+  for (const entry of audit.removed) {
+    if (
+      typeof entry.id !== "string" ||
+      !entry.id.startsWith(`${book}:`) ||
+      typeof entry.key !== "string" ||
+      ![entry.id, `rule:${entry.id}:${entry.name}`].includes(entry.key) ||
+      typeof entry.name !== "string" ||
+      !entry.name.trim() ||
+      !(
+        (Number.isInteger(entry.page) && entry.page > 0) ||
+        (typeof entry.page === "string" &&
+          /^[1-9]\d*[–-][1-9]\d*$/.test(entry.page))
+      ) ||
+      !reasons.includes(entry.reason) ||
+      ids.has(entry.id) ||
+      keys.has(entry.key)
+    )
+      throw Error(`Invalid Rules exclusion: ${book}`);
+    if (sourceIds.has(entry.id) || byKey.has(entry.key))
+      throw Error(`Excluded non-mechanical rule was restored: ${entry.key}`);
+    ids.add(entry.id);
+    keys.add(entry.key);
+  }
+  if (
+    rows.filter((r) => r.kind === "rule").length + audit.removed.length !==
+    audit.reviewedRuleResults
+  )
+    throw Error(`Rules audit count is stale: ${book}`);
+  return audit;
+}
+
 export function searchCoverage(library, corpus, review, gm) {
   if (review?.schemaVersion !== 1 || !review.books || !review.scope)
     throw Error("Missing reviewed search inventory.");
@@ -81,6 +134,7 @@ export function searchCoverage(library, corpus, review, gm) {
         adaptedReferences: rows.filter((row) => row.legacy.length).length,
         categories,
         dispositions,
+        rulesAudit: validateRulesAudit(pack, rows, audit.rulesAudit, byKey),
         areas: audit.areas,
         unresolved: audit.unresolvedProfiles || [],
       };
@@ -91,6 +145,10 @@ export function searchCoverage(library, corpus, review, gm) {
     references: corpus.rows.length,
     newlyImported: books.reduce((sum, b) => sum + b.newlyImported, 0),
     retainedOutsideSearch: retainedOutsideSearch.size,
+    removedNonMechanicalRules: books.reduce(
+      (sum, b) => sum + (b.rulesAudit?.removed.length || 0),
+      0,
+    ),
     books,
   };
 }
@@ -106,6 +164,7 @@ export function searchCoverageMarkdown(report) {
     "",
     `The common PC/GM catalogue contains **${report.references} results**, including **${report.newlyImported} new printed references**. Existing profiles include grouped specialisations and reference variants.`,
     `A further **${report.retainedOutsideSearch} reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.`,
+    `The Rules audit explicitly removed **${report.removedNonMechanicalRules} non-mechanical entries**; **${report.books.reduce((sum, b) => sum + (b.categories.rule || 0), 0)} Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.`,
     "",
     "| Book | Version | Existing results | New printed references | Total | Results with actual adaptations |",
     "|---|---|---:|---:|---:|---:|",
@@ -142,6 +201,18 @@ export function searchCoverageMarkdown(report) {
       `Reviewed printed records retained outside search: ${b.retainedOutsideSearch}.`,
       "",
     );
+    if (b.rulesAudit)
+      lines.push(
+        `Rules audit (${b.rulesAudit.date}): ${b.rulesAudit.reviewedRuleResults} prior results; ${b.rulesAudit.removed.length} excluded. The following standalone entries were removed from published reference sources.`,
+        "",
+        "| Page | Excluded entry | Reason |",
+        "|---:|---|---|",
+        ...b.rulesAudit.removed.map(
+          (e) =>
+            `| ${e.page} | ${e.name.replaceAll("|", "\\|")} | ${e.reason} |`,
+        ),
+        "",
+      );
     if (b.unresolved.length)
       lines.push(
         "Unresolved extraction checks:",
@@ -158,7 +229,7 @@ export function searchCoverageMarkdown(report) {
   lines.push(
     "## Maintenance",
     "",
-    "Keep creator exclusions in INCLUSION-MATRIX.md and book docs distinct from reference-search coverage here. The build checks source and published-content hashes against scripts/search-reference-review.json. Published text hashes use UTF-8/LF content so Git's Windows newline conversion does not invalidate an unchanged review; source PDF hashes remain byte-exact. Review new pages and update that inventory when changing printed references; do not repair a hash mismatch by dropping the check. Raw staging and original PDFs remain outside dist. Extraction tools only stage candidates; they never register or publish them.",
+    "Keep creator exclusions in INCLUSION-MATRIX.md and book docs distinct from reference-search coverage here. Rules must contain a concrete game procedure, calculation, definition, restriction or effect; introductions, history/flavour, empty cross-references and general storytelling advice are excluded. This is source review, not runtime keyword filtering. The build rejects restored Rules-audit identities and stale per-book counts. Review new Rules and update their frozen audit baseline when adding them. The build checks source and published-content hashes against scripts/search-reference-review.json. Published text hashes use UTF-8/LF content so Git's Windows newline conversion does not invalidate an unchanged review; source PDF hashes remain byte-exact. Review new pages and update that inventory when changing printed references; do not repair a hash mismatch by dropping the check. Raw staging and original PDFs remain outside dist. Extraction tools only stage candidates; they never register or publish them.",
     "",
   );
   return lines.join("\n");

@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume II",
   "shortTitle": "Archives II",
   "edition": 4,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "kind": "supplement",
   "dependsOn": [
     "core"

@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
-  "scope": "Gameplay reference search excludes standalone NPC/creature profiles and templates by user request. Reviewed source records are retained separately for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles are retained. This inventory audits selected gameplay ranges and retained printed records, not every sentence in the PDFs.",
-  "references": 3779,
-  "newlyImported": 1290,
+  "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
+  "references": 3667,
+  "newlyImported": 1183,
   "retainedOutsideSearch": 178,
+  "removedNonMechanicalRules": 112,
   "books": [
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.6",
+      "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1915,
-      "newlyImported": 245,
+      "references": 1889,
+      "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1670,
+      "existingReferences": 1665,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
@@ -25,7 +26,7 @@
         "condition": 13,
         "property": 36,
         "psychology": 5,
-        "rule": 412,
+        "rule": 386,
         "trait": 67,
         "species": 5,
         "table": 86,
@@ -33,10 +34,198 @@
         "mutation": 40
       },
       "dispositions": {
-        "included": 245,
+        "included": 224,
         "consolidated": 3,
-        "excluded": 222,
-        "existing": 626
+        "excluded": 248,
+        "existing": 621
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 412,
+        "removed": [
+          {
+            "id": "core:rule-reference:rule-134-stealth-and-surveillance",
+            "key": "rule:core:rule-reference:rule-134-stealth-and-surveillance:Stealth and Surveillance",
+            "name": "Stealth and Surveillance",
+            "page": 134,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-136-breaking-and-entering",
+            "key": "rule:core:rule-reference:rule-136-breaking-and-entering:Breaking and Entering",
+            "name": "Breaking and Entering",
+            "page": 136,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-136-traps",
+            "key": "rule:core:rule-reference:rule-136-traps:Traps",
+            "name": "Traps",
+            "page": 136,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-157-vehicle-movement",
+            "key": "rule:core:rule-reference:rule-157-vehicle-movement:Vehicle Movement",
+            "name": "Vehicle Movement",
+            "page": 157,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-191-advancing-careers",
+            "key": "rule:core:rule-reference:rule-191-advancing-careers:Advancing Careers",
+            "name": "Advancing Careers",
+            "page": 191,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:38-comparing-characteristics",
+            "key": "core:reference:38-comparing-characteristics",
+            "name": "Comparing Characteristics",
+            "page": 38,
+            "reason": "setting"
+          },
+          {
+            "id": "core:reference:133-using-the-rules",
+            "key": "core:reference:133-using-the-rules",
+            "name": "Using The Rules",
+            "page": 133,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:152-life-beyond-the-walls",
+            "key": "core:reference:152-life-beyond-the-walls",
+            "name": "Life Beyond The Walls",
+            "page": 152,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:170-injury-healing-and-death",
+            "key": "core:reference:170-injury-healing-and-death",
+            "name": "Injury, Healing, And Death",
+            "page": 170,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:190-roleplaying-downtime",
+            "key": "core:reference:190-roleplaying-downtime",
+            "name": "Roleplaying Downtime",
+            "page": 190,
+            "reason": "advice"
+          },
+          {
+            "id": "core:reference:205-penances",
+            "key": "core:reference:205-penances",
+            "name": "Manann — Penances",
+            "page": 205,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:206-penances",
+            "key": "core:reference:206-penances",
+            "name": "Morr — Penances",
+            "page": 206,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:207-penances",
+            "key": "core:reference:207-penances",
+            "name": "Myrmidia — Penances",
+            "page": 207,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:208-penances",
+            "key": "core:reference:208-penances",
+            "name": "Ranald — Penances",
+            "page": 208,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:209-penances",
+            "key": "core:reference:209-penances",
+            "name": "Rhya — Penances",
+            "page": 209,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:210-penances",
+            "key": "core:reference:210-penances",
+            "name": "Shallya — Penances",
+            "page": 210,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:211-penances",
+            "key": "core:reference:211-penances",
+            "name": "Sigmar — Penances",
+            "page": 211,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:212-penances",
+            "key": "core:reference:212-penances",
+            "name": "Taal — Penances",
+            "page": 212,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:213-penances",
+            "key": "core:reference:213-penances",
+            "name": "Ulric — Penances",
+            "page": 213,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:214-penances",
+            "key": "core:reference:214-penances",
+            "name": "Verena — Penances",
+            "page": 214,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:240-petty-spells",
+            "key": "core:reference:240-petty-spells",
+            "name": "Petty Spells",
+            "page": 240,
+            "reason": "setting"
+          },
+          {
+            "id": "core:reference:266-extend-caution",
+            "key": "core:reference:266-extend-caution",
+            "name": "Extend Caution",
+            "page": 266,
+            "reason": "advice"
+          },
+          {
+            "id": "core:reference:296-trapping-lists",
+            "key": "core:reference:296-trapping-lists",
+            "name": "Trapping Lists",
+            "page": 296,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:297-criminal-coinage",
+            "key": "core:reference:297-criminal-coinage",
+            "name": "Criminal Coinage",
+            "page": 297,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:306-armour-flaws",
+            "key": "core:reference:306-armour-flaws",
+            "name": "Armour Flaws",
+            "page": 306,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:318-bestiary",
+            "key": "core:reference:318-bestiary",
+            "name": "Bestiary",
+            "page": 318,
+            "reason": "introduction"
+          }
+        ]
       },
       "areas": [
         {
@@ -95,11 +284,11 @@
     {
       "id": "up-in-arms",
       "title": "Up in Arms",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "edition": 4,
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
-      "references": 235,
-      "newlyImported": 137,
+      "references": 226,
+      "newlyImported": 128,
       "retainedOutsideSearch": 9,
       "existingReferences": 98,
       "adaptedReferences": 12,
@@ -109,17 +298,86 @@
         "magic": 9,
         "equipment": 70,
         "species": 3,
-        "rule": 72,
+        "rule": 63,
         "table": 40,
         "property": 7,
         "trait": 1,
         "endeavour": 6
       },
       "dispositions": {
-        "excluded": 53,
-        "included": 146,
+        "excluded": 62,
+        "included": 137,
         "existing": 14,
         "consolidated": 12
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 72,
+        "removed": [
+          {
+            "id": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
+            "key": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
+            "name": "Wounds, Critical Wounds, And Death",
+            "page": 80,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:99-powder-and-shot",
+            "key": "up-in-arms:reference:99-powder-and-shot",
+            "name": "Powder and Shot",
+            "page": "99–100",
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:110-hire-em-and-fire-em",
+            "key": "up-in-arms:reference:110-hire-em-and-fire-em",
+            "name": "Hire ‘Em And Fire ‘Em",
+            "page": 110,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:110-hired-brains",
+            "key": "up-in-arms:reference:110-hired-brains",
+            "name": "Hired Brains",
+            "page": "110–111",
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
+            "key": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
+            "name": "We Can Afford It, but Can We Afford It?",
+            "page": "111–112",
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:112-liability-and-responsibility",
+            "key": "up-in-arms:reference:112-liability-and-responsibility",
+            "name": "Liability and Responsibility",
+            "page": 112,
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:135-changing-creature-traits",
+            "key": "up-in-arms:reference:135-changing-creature-traits",
+            "name": "Changing Creature Traits",
+            "page": 135,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:135-changing-talents",
+            "key": "up-in-arms:reference:135-changing-talents",
+            "name": "Changing Talents",
+            "page": 135,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:70-strictures-of-myrmidia",
+            "key": "up-in-arms:reference:70-strictures-of-myrmidia",
+            "name": "Strictures Of Myrmidia",
+            "page": 70,
+            "reason": "introduction"
+          }
+        ]
       },
       "areas": [
         {
@@ -178,11 +436,11 @@
     {
       "id": "archives-i",
       "title": "Archives of the Empire: Volume I",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7",
-      "references": 51,
-      "newlyImported": 12,
+      "references": 49,
+      "newlyImported": 10,
       "retainedOutsideSearch": 13,
       "existingReferences": 39,
       "adaptedReferences": 21,
@@ -191,13 +449,33 @@
         "talent": 1,
         "equipment": 18,
         "species": 16,
-        "rule": 4,
+        "rule": 2,
         "table": 8
       },
       "dispositions": {
-        "excluded": 70,
-        "included": 25,
+        "excluded": 72,
+        "included": 23,
         "existing": 18
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 4,
+        "removed": [
+          {
+            "id": "archives-i:reference:94-dwarf-handgun-pistol",
+            "key": "archives-i:reference:94-dwarf-handgun-pistol",
+            "name": "Dwarf Handgun & Pistol",
+            "page": 94,
+            "reason": "setting"
+          },
+          {
+            "id": "archives-i:reference:94-eonir-spear",
+            "key": "archives-i:reference:94-eonir-spear",
+            "name": "Eonir Spear",
+            "page": 94,
+            "reason": "setting"
+          }
+        ]
       },
       "areas": [
         {
@@ -226,11 +504,11 @@
     {
       "id": "archives-ii",
       "title": "Archives of the Empire: Volume II",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "edition": 4,
       "sourceHash": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b",
-      "references": 131,
-      "newlyImported": 107,
+      "references": 127,
+      "newlyImported": 103,
       "retainedOutsideSearch": 15,
       "existingReferences": 24,
       "adaptedReferences": 7,
@@ -241,14 +519,48 @@
         "equipment": 12,
         "species": 1,
         "table": 36,
-        "rule": 63,
+        "rule": 59,
         "psychology": 1,
         "endeavour": 7
       },
       "dispositions": {
-        "excluded": 89,
-        "included": 122,
+        "excluded": 93,
+        "included": 118,
         "existing": 16
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 63,
+        "removed": [
+          {
+            "id": "archives-ii:reference:28-size-matters",
+            "key": "archives-ii:reference:28-size-matters",
+            "name": "Size Matters",
+            "page": 28,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-ii:reference:30-armour-descriptions",
+            "key": "archives-ii:reference:30-armour-descriptions",
+            "name": "Armour Descriptions",
+            "page": 30,
+            "reason": "setting"
+          },
+          {
+            "id": "archives-ii:reference:51-magical-items-and-artifice",
+            "key": "archives-ii:reference:51-magical-items-and-artifice",
+            "name": "Magical Items And Artifice",
+            "page": 51,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
+            "key": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
+            "name": "Guarding the Reputation of Wizards",
+            "page": 53,
+            "reason": "setting"
+          }
+        ]
       },
       "areas": [
         {
@@ -287,11 +599,11 @@
     {
       "id": "archives-iii",
       "title": "Archives of the Empire: Volume III",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "edition": 4,
       "sourceHash": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788",
-      "references": 171,
-      "newlyImported": 112,
+      "references": 164,
+      "newlyImported": 105,
       "retainedOutsideSearch": 12,
       "existingReferences": 59,
       "adaptedReferences": 14,
@@ -299,17 +611,72 @@
         "career": 3,
         "magic": 58,
         "species": 11,
-        "rule": 77,
+        "rule": 70,
         "table": 10,
         "endeavour": 1,
         "property": 7,
         "trait": 4
       },
       "dispositions": {
-        "included": 124,
-        "excluded": 106,
+        "excluded": 113,
+        "included": 117,
         "consolidated": 18,
         "existing": 30
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 77,
+        "removed": [
+          {
+            "id": "archives-iii:reference:6-enterprises",
+            "key": "archives-iii:reference:6-enterprises",
+            "name": "Enterprises",
+            "page": 6,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:34-suits-of-steel",
+            "key": "archives-iii:reference:34-suits-of-steel",
+            "name": "• Suits Of Steel •",
+            "page": 34,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:36-armour-flaws",
+            "key": "archives-iii:reference:36-armour-flaws",
+            "name": "Armour Flaws",
+            "page": 36,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:38-helmet-designs",
+            "key": "archives-iii:reference:38-helmet-designs",
+            "name": "Helmet Designs",
+            "page": 38,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:58-penances",
+            "key": "archives-iii:reference:58-penances",
+            "name": "Old Faith — Penances",
+            "page": 58,
+            "reason": "penance-example"
+          },
+          {
+            "id": "archives-iii:reference:62-the-lore-of-hedgecraft",
+            "key": "archives-iii:reference:62-the-lore-of-hedgecraft",
+            "name": "The Lore Of Hedgecraft",
+            "page": 62,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:76-npc-animal-familiars",
+            "key": "archives-iii:reference:76-npc-animal-familiars",
+            "name": "Npc Animal Familiars",
+            "page": 76,
+            "reason": "introduction"
+          }
+        ]
       },
       "areas": [
         {
@@ -363,11 +730,11 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "edition": 4,
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
-      "references": 435,
-      "newlyImported": 263,
+      "references": 425,
+      "newlyImported": 253,
       "retainedOutsideSearch": 21,
       "existingReferences": 172,
       "adaptedReferences": 55,
@@ -376,7 +743,7 @@
         "skill": 2,
         "magic": 229,
         "equipment": 7,
-        "rule": 145,
+        "rule": 135,
         "table": 29,
         "endeavour": 5,
         "talent": 3,
@@ -384,10 +751,86 @@
         "trait": 1
       },
       "dispositions": {
-        "excluded": 132,
-        "included": 284,
+        "excluded": 142,
+        "included": 274,
         "existing": 161,
         "consolidated": 4
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 145,
+        "removed": [
+          {
+            "id": "winds-of-magic:reference:44-new-arcane-skills",
+            "key": "winds-of-magic:reference:44-new-arcane-skills",
+            "name": "New Arcane Skills",
+            "page": 44,
+            "reason": "introduction"
+          },
+          {
+            "id": "winds-of-magic:reference:49-alchemy",
+            "key": "winds-of-magic:reference:49-alchemy",
+            "name": "Alchemy",
+            "page": 49,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
+            "key": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
+            "name": "The Gold Wind of Magic & The Lore of Metal",
+            "page": 66,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
+            "key": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
+            "name": "The Blue Wind of Magic & The Lore of the Heavens",
+            "page": 90,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:161-the-concoct-talent",
+            "key": "winds-of-magic:reference:161-the-concoct-talent",
+            "name": "The Concoct Talent",
+            "page": 161,
+            "reason": "introduction"
+          },
+          {
+            "id": "winds-of-magic:reference:173-incarnate-elementals",
+            "key": "winds-of-magic:reference:173-incarnate-elementals",
+            "name": "Incarnate Elementals",
+            "page": 173,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:176-nature-spirits",
+            "key": "winds-of-magic:reference:176-nature-spirits",
+            "name": "Nature Spirits",
+            "page": 176,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:177-magical-constructs",
+            "key": "winds-of-magic:reference:177-magical-constructs",
+            "name": "Magical Constructs",
+            "page": 177,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:182-familiars-of-chamon",
+            "key": "winds-of-magic:reference:182-familiars-of-chamon",
+            "name": "Familiars of Chamon",
+            "page": 182,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
+            "key": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
+            "name": "The Effects of Magic on the World",
+            "page": 189,
+            "reason": "setting"
+          }
+        ]
       },
       "areas": [
         {
@@ -526,6 +969,7 @@
         "included": 104,
         "existing": 1
       },
+      "rulesAudit": null,
       "areas": [
         {
           "first": 87,
@@ -543,11 +987,11 @@
     {
       "id": "dwarf-guide",
       "title": "Dwarf Player’s Guide",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "74238e8c5660fcaf2df05dd721b0786e277da42b32eacfa03ca08291d4415a7c",
-      "references": 339,
-      "newlyImported": 118,
+      "references": 328,
+      "newlyImported": 107,
       "retainedOutsideSearch": 0,
       "existingReferences": 221,
       "adaptedReferences": 102,
@@ -558,14 +1002,97 @@
         "magic": 71,
         "equipment": 38,
         "species": 11,
-        "rule": 97,
         "table": 18,
+        "rule": 86,
         "property": 3
       },
       "dispositions": {
-        "excluded": 135,
-        "included": 118,
+        "excluded": 146,
+        "included": 107,
         "existing": 107
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 97,
+        "removed": [
+          {
+            "id": "dwarf-guide:reference:38-naming-rites",
+            "key": "dwarf-guide:reference:38-naming-rites",
+            "name": "Naming Rites",
+            "page": 38,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:40-nicknames",
+            "key": "dwarf-guide:reference:40-nicknames",
+            "name": "Nicknames",
+            "page": 40,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:57-dwarf-artforms",
+            "key": "dwarf-guide:reference:57-dwarf-artforms",
+            "name": "Dwarf Artforms",
+            "page": 57,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:59-dwarf-slayer",
+            "key": "dwarf-guide:reference:59-dwarf-slayer",
+            "name": "Dwarf Slayer",
+            "page": 59,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:80-new-skills",
+            "key": "dwarf-guide:reference:80-new-skills",
+            "name": "New Skills",
+            "page": 80,
+            "reason": "introduction"
+          },
+          {
+            "id": "dwarf-guide:reference:90-gromril",
+            "key": "dwarf-guide:reference:90-gromril",
+            "name": "Gromril",
+            "page": 90,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:91-gromril-mining",
+            "key": "dwarf-guide:reference:91-gromril-mining",
+            "name": "Gromril mining",
+            "page": 91,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:91-the-kings-gift",
+            "key": "dwarf-guide:reference:91-the-kings-gift",
+            "name": "The King’S Gift",
+            "page": 91,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:92-personal-wargear",
+            "key": "dwarf-guide:reference:92-personal-wargear",
+            "name": "Personal Wargear",
+            "page": 92,
+            "reason": "introduction"
+          },
+          {
+            "id": "dwarf-guide:reference:93-dwarf-ranged-weapons",
+            "key": "dwarf-guide:reference:93-dwarf-ranged-weapons",
+            "name": "Dwarf Ranged Weapons",
+            "page": 93,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:132-additional-runes",
+            "key": "dwarf-guide:reference:132-additional-runes",
+            "name": "Additional Runes",
+            "page": 132,
+            "reason": "advice"
+          }
+        ]
       },
       "areas": [
         {
@@ -604,11 +1131,11 @@
     {
       "id": "high-elf",
       "title": "High Elf Player’s Guide",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "edition": 4,
       "sourceHash": "16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9",
-      "references": 204,
-      "newlyImported": 88,
+      "references": 197,
+      "newlyImported": 81,
       "retainedOutsideSearch": 0,
       "existingReferences": 116,
       "adaptedReferences": 50,
@@ -619,14 +1146,69 @@
         "equipment": 23,
         "species": 11,
         "table": 20,
-        "rule": 59,
+        "rule": 52,
         "endeavour": 1
       },
       "dispositions": {
-        "excluded": 133,
-        "included": 88,
+        "excluded": 140,
+        "included": 81,
         "existing": 92,
         "consolidated": 1
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 59,
+        "removed": [
+          {
+            "id": "high-elf:reference:39-high-elf-warships-2",
+            "key": "high-elf:reference:39-high-elf-warships-2",
+            "name": "High Elf Warships",
+            "page": 39,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:43-dragon-princes",
+            "key": "high-elf:reference:43-dragon-princes",
+            "name": "Dragon Princes",
+            "page": 43,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:45-playing-a-high-elf",
+            "key": "high-elf:reference:45-playing-a-high-elf",
+            "name": "Playing a High Elf",
+            "page": 45,
+            "reason": "introduction"
+          },
+          {
+            "id": "high-elf:reference:63-charlatan",
+            "key": "high-elf:reference:63-charlatan",
+            "name": "Charlatan",
+            "page": 63,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:63-smuggler",
+            "key": "high-elf:reference:63-smuggler",
+            "name": "Smuggler",
+            "page": 63,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:100-smith-priest-of-vaul",
+            "key": "high-elf:reference:100-smith-priest-of-vaul",
+            "name": "Smith-Priest Of Vaul",
+            "page": 100,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:114-beseeching-khaine",
+            "key": "high-elf:reference:114-beseeching-khaine",
+            "name": "Beseeching Khaine",
+            "page": 114,
+            "reason": "setting"
+          }
+        ]
       },
       "areas": [
         {
@@ -684,6 +1266,7 @@
         "included": 8,
         "existing": 24
       },
+      "rulesAudit": null,
       "areas": [
         {
           "first": 5,
@@ -696,11 +1279,11 @@
     {
       "id": "deft-steps",
       "title": "Deft Steps, Light Fingers",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "edition": 4,
       "sourceHash": "2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537eec",
-      "references": 238,
-      "newlyImported": 182,
+      "references": 202,
+      "newlyImported": 146,
       "retainedOutsideSearch": 22,
       "existingReferences": 56,
       "adaptedReferences": 17,
@@ -708,15 +1291,273 @@
         "career": 9,
         "magic": 32,
         "equipment": 15,
-        "rule": 106,
+        "rule": 70,
         "table": 44,
         "endeavour": 32
       },
       "dispositions": {
-        "excluded": 201,
-        "included": 204,
+        "excluded": 237,
+        "included": 168,
         "existing": 42,
         "consolidated": 15
+      },
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 106,
+        "removed": [
+          {
+            "id": "deft-steps:reference:27-pickpockets",
+            "key": "deft-steps:reference:27-pickpockets",
+            "name": "Pickpockets",
+            "page": 27,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:30-burglars",
+            "key": "deft-steps:reference:30-burglars",
+            "name": "Burglars",
+            "page": 30,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:37-khemri",
+            "key": "deft-steps:reference:37-khemri",
+            "name": "Khemri",
+            "page": 37,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:39-congruent-with-character",
+            "key": "deft-steps:reference:39-congruent-with-character",
+            "name": "Congruent With Character",
+            "page": 39,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:40-underworld-rumours",
+            "key": "deft-steps:reference:40-underworld-rumours",
+            "name": "Underworld Rumours",
+            "page": 40,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:41-stolen-goods",
+            "key": "deft-steps:reference:41-stolen-goods",
+            "name": "Stolen Goods",
+            "page": 41,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:42-embezzlers",
+            "key": "deft-steps:reference:42-embezzlers",
+            "name": "Embezzlers",
+            "page": 42,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:46-priests-of-ranald",
+            "key": "deft-steps:reference:46-priests-of-ranald",
+            "name": "Priests Of Ranald",
+            "page": 46,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:47-fences",
+            "key": "deft-steps:reference:47-fences",
+            "name": "Fences",
+            "page": 47,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:47-forgers-and-counterfeiters",
+            "key": "deft-steps:reference:47-forgers-and-counterfeiters",
+            "name": "Forgers and Counterfeiters",
+            "page": 47,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:48-information-brokers",
+            "key": "deft-steps:reference:48-information-brokers",
+            "name": "Information Brokers",
+            "page": 48,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:48-muscle",
+            "key": "deft-steps:reference:48-muscle",
+            "name": "Muscle",
+            "page": 48,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:50-flesh-out-the-contact",
+            "key": "deft-steps:reference:50-flesh-out-the-contact",
+            "name": "Flesh out the Contact",
+            "page": 50,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:56-contacts-and-the-gm",
+            "key": "deft-steps:reference:56-contacts-and-the-gm",
+            "name": "Contacts And The Gm",
+            "page": 56,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:57-organised-crime",
+            "key": "deft-steps:reference:57-organised-crime",
+            "name": "Organised Crime",
+            "page": 57,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:67-fencing",
+            "key": "deft-steps:reference:67-fencing",
+            "name": "Fencing",
+            "page": 67,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:67-perks-of-membership",
+            "key": "deft-steps:reference:67-perks-of-membership",
+            "name": "Perks Of Membership",
+            "page": 67,
+            "reason": "introduction"
+          },
+          {
+            "id": "deft-steps:reference:67-protection-from-the-law",
+            "key": "deft-steps:reference:67-protection-from-the-law",
+            "name": "Protection From The Law",
+            "page": 67,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:69-gang-war",
+            "key": "deft-steps:reference:69-gang-war",
+            "name": "Gang War",
+            "page": 69,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:90-breaking-the-law",
+            "key": "deft-steps:reference:90-breaking-the-law",
+            "name": "Breaking The Law",
+            "page": 90,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:91-unpopular-edicts",
+            "key": "deft-steps:reference:91-unpopular-edicts",
+            "name": "Unpopular Edicts",
+            "page": 91,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:92-talabheim-the-city-of-laws",
+            "key": "deft-steps:reference:92-talabheim-the-city-of-laws",
+            "name": "Talabheim, The City Of Laws",
+            "page": 92,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:94-noble-prisoners",
+            "key": "deft-steps:reference:94-noble-prisoners",
+            "name": "Noble Prisoners",
+            "page": 94,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:95-a-day-in-court",
+            "key": "deft-steps:reference:95-a-day-in-court",
+            "name": "A Day In Court",
+            "page": 95,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:99-outlaws",
+            "key": "deft-steps:reference:99-outlaws",
+            "name": "Outlaws",
+            "page": 99,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:101-outlaws-ranald",
+            "key": "deft-steps:reference:101-outlaws-ranald",
+            "name": "Outlaws & Ranald",
+            "page": 101,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:112-pathfinding",
+            "key": "deft-steps:reference:112-pathfinding",
+            "name": "Pathfinding",
+            "page": 112,
+            "reason": "introduction"
+          },
+          {
+            "id": "deft-steps:reference:115-fire",
+            "key": "deft-steps:reference:115-fire",
+            "name": "Fire",
+            "page": 115,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:115-packs-and-containers",
+            "key": "deft-steps:reference:115-packs-and-containers",
+            "name": "Packs and Containers",
+            "page": 115,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:115-poor-planning-and-its-consequences",
+            "key": "deft-steps:reference:115-poor-planning-and-its-consequences",
+            "name": "Poor Planning And Its Consequences",
+            "page": 115,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:130-hunter-and-hunted",
+            "key": "deft-steps:reference:130-hunter-and-hunted",
+            "name": "Hunter And Hunted",
+            "page": 130,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:131-a-fast-buck",
+            "key": "deft-steps:reference:131-a-fast-buck",
+            "name": "A Fast Buck",
+            "page": 131,
+            "reason": "introduction"
+          },
+          {
+            "id": "deft-steps:reference:131-skins-and-other-uses",
+            "key": "deft-steps:reference:131-skins-and-other-uses",
+            "name": "Skins and Other Uses",
+            "page": 131,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:131-the-name-of-the-game",
+            "key": "deft-steps:reference:131-the-name-of-the-game",
+            "name": "The Name Of The Game",
+            "page": 131,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:134-hawks",
+            "key": "deft-steps:reference:134-hawks",
+            "name": "Hawks",
+            "page": 134,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:135-a-noble-pursuit",
+            "key": "deft-steps:reference:135-a-noble-pursuit",
+            "name": "A Noble Pursuit",
+            "page": 135,
+            "reason": "setting"
+          }
+        ]
       },
       "areas": [
         {

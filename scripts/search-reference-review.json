@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Gameplay reference search excludes standalone NPC/creature profiles and templates by user request. Reviewed source records are retained separately for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles are retained. This inventory audits selected gameplay ranges and retained printed records, not every sentence in the PDFs.",
+  "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
   "books": {
     "core": {
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
@@ -468,11 +468,8 @@
         {
           "id": "core:reference:38-comparing-characteristics",
           "sourceHash": "02e1741d74c83bf0754327ec9541328ae282fd1aa269fb553c27abf03497af23",
-          "disposition": "included",
-          "reason": "Reviewed complete creation procedure or source table.",
-          "targets": [
-            "core:reference:38-comparing-characteristics"
-          ]
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "core:reference:38-characteristic-table",
@@ -1040,7 +1037,8 @@
         {
           "id": "core:reference:133-using-the-rules",
           "sourceHash": "63e368d6fe45a1f3028092068d9a29de550562fce64656fd69c9264e23d6af42",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:134-theft-and-skullduggery",
@@ -1060,11 +1058,8 @@
         {
           "id": "core:reference:134-stealth-and-surveillance",
           "sourceHash": "dec9d36ea4625cc48c71e8faf0c9033f46706174c6f388a46d496d2395080ade",
-          "disposition": "existing",
-          "targets": [
-            "rule:core:rule-reference:rule-134-stealth-and-surveillance:Stealth and Surveillance"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:134-keeping-an-eye-out",
@@ -1124,11 +1119,8 @@
         {
           "id": "core:reference:136-traps",
           "sourceHash": "3d41ec56eb295e7c11ce01c1ffd7e7b65bae3b51d5d2c1eafe72253134615089",
-          "disposition": "existing",
-          "targets": [
-            "rule:core:rule-reference:rule-136-traps:Traps"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:136-setting-a-trap",
@@ -1174,11 +1166,8 @@
         {
           "id": "core:reference:136-breaking-and-entering",
           "sourceHash": "0f919ef8d5c9c774a736dd3c31254861cf2bda890fb21b7f11180e5ddd6936e4",
-          "disposition": "existing",
-          "targets": [
-            "rule:core:rule-reference:rule-136-breaking-and-entering:Breaking and Entering"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:136-picking-locks",
@@ -1637,7 +1626,8 @@
         {
           "id": "core:reference:152-life-beyond-the-walls",
           "sourceHash": "c3ced2836cd258713baf2ef2e7acfd188c506d388a2e3d0943fa425a4e430fbc",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:152-navigation",
@@ -1827,11 +1817,8 @@
         {
           "id": "core:reference:157-vehicle-movement",
           "sourceHash": "7959a4b517fd17d9628d9559b9b2a5d0ac4b688b1cda128e8f007516237e078f",
-          "disposition": "existing",
-          "targets": [
-            "rule:core:rule-reference:rule-157-vehicle-movement:Vehicle Movement"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:158-drive",
@@ -2427,7 +2414,8 @@
         {
           "id": "core:reference:170-injury-healing-and-death",
           "sourceHash": "8690b4b0e17cd6ac65d930081f7617ae42e6af79470056b21cf2977483c4cfdf",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:170-wounds",
@@ -3311,7 +3299,8 @@
         {
           "id": "core:reference:190-roleplaying-downtime",
           "sourceHash": "70ed621bb228844cb1d2e316e040b5772c3a1591d9334f751a5838b37cff8040",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "core:reference:190-during-downtime",
@@ -3362,11 +3351,8 @@
         {
           "id": "core:reference:191-advancing-careers",
           "sourceHash": "8bc35dc2e3327c60ff346298998941550151fc05f45f433fd476ae6f024f2c4c",
-          "disposition": "existing",
-          "targets": [
-            "rule:core:rule-reference:rule-191-advancing-careers:Advancing Careers"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:192-regional-events",
@@ -3647,7 +3633,8 @@
         {
           "id": "core:reference:205-penances",
           "sourceHash": "63426e930638e4fa37c2977249affc284af3bb163ce2494bbbf94187be26f542",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:205-strictures",
@@ -3675,7 +3662,8 @@
         {
           "id": "core:reference:206-penances",
           "sourceHash": "2a128fa729be726d0e035b93452590f8c6834a668292207a46147f27ba0c4040",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:206-strictures",
@@ -3703,7 +3691,8 @@
         {
           "id": "core:reference:207-penances",
           "sourceHash": "c95ecec0b392e73f7ade2374d159b49cfdebecd99150f3d3caed6266f28e18ea",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:207-strictures",
@@ -3731,7 +3720,8 @@
         {
           "id": "core:reference:208-penances",
           "sourceHash": "e02f3640cc142e5fe5c02c547adb6161b1613850ef8a1fa236b214833a83adf3",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:208-strictures",
@@ -3759,7 +3749,8 @@
         {
           "id": "core:reference:209-penances",
           "sourceHash": "a4acbf0a167844eea2754d1af5fd62379b04e061ce1b10906afb8ec25f400357",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:209-strictures",
@@ -3787,7 +3778,8 @@
         {
           "id": "core:reference:210-penances",
           "sourceHash": "f878588efa642bcbf55d46e3b91c8fa77f8a62458b31db100a71a169b99fddf4",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:210-strictures",
@@ -3815,7 +3807,8 @@
         {
           "id": "core:reference:211-penances",
           "sourceHash": "8e4baa3a07941e6af091c5fef833331a85e62742b37c98394d0a6eafedca991d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:211-strictures",
@@ -3843,7 +3836,8 @@
         {
           "id": "core:reference:212-penances",
           "sourceHash": "42ac7b4263b71260934cd82cd88d029c15f10a8418d7a41d085a13bb74bb3a23",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:212-strictures",
@@ -3871,7 +3865,8 @@
         {
           "id": "core:reference:213-penances",
           "sourceHash": "903f69186fc58ee27cb51df606b0a16472b8abd7387f982baa48a0b24b9c6a58",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:213-strictures",
@@ -3899,7 +3894,8 @@
         {
           "id": "core:reference:214-penances",
           "sourceHash": "db2e5df88df9569898431dd4dc8ddadedf1fef2beccdbfebfbaf8cf8827ee164",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "core:reference:214-strictures",
@@ -5101,7 +5097,8 @@
         {
           "id": "core:reference:240-petty-spells",
           "sourceHash": "433c816552f2bea258690b3f23fd0dab77efc1a83cdee8617675f0891130f1ef",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "core:reference:240-animal-friend",
@@ -6577,7 +6574,8 @@
         {
           "id": "core:reference:266-extend-caution",
           "sourceHash": "33b6744ad27e2d0e98ecb664457269751bf23598306d1f4289183db08a29dffe",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "core:reference:267-awarding-xp",
@@ -6643,7 +6641,8 @@
         {
           "id": "core:reference:296-trapping-lists",
           "sourceHash": "8060abf1f89f908ec49f885c1c678b5305dbdf698f474e429500f17e7c222f9a",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:296-money",
@@ -6666,7 +6665,8 @@
         {
           "id": "core:reference:297-criminal-coinage",
           "sourceHash": "6f5c8eb5c7969ddd48c1ea64d097e51ffeb34ef3b4f088cd43d420dcaf130788",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:297-counterfeiting",
@@ -7341,7 +7341,8 @@
         {
           "id": "core:reference:306-armour-flaws",
           "sourceHash": "7db736617da01be07852b021dfa094065c1c4ed882a1564cf1a1cffb5620bc1d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:306-partial",
@@ -7544,7 +7545,8 @@
         {
           "id": "core:reference:318-bestiary",
           "sourceHash": "45bae6c9198a49995cc33e3c9cca7487f4be68d7276bb0cfea418fa50e356e7e",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "core:reference:318-customising-creatures",
@@ -8478,8 +8480,196 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "d4bf44882ff1cd775be21acf6f088e7c0a168ae4dae0ac0f77aa00dd2d5b95c1",
-      "entries": 245
+      "publishedSHA256": "7c4324d21f7666b0f66b39c6f25e8a4de8c0bf5066eedf20203c9d9cdd7921c3",
+      "entries": 224,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 412,
+        "removed": [
+          {
+            "id": "core:rule-reference:rule-134-stealth-and-surveillance",
+            "key": "rule:core:rule-reference:rule-134-stealth-and-surveillance:Stealth and Surveillance",
+            "name": "Stealth and Surveillance",
+            "page": 134,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-136-breaking-and-entering",
+            "key": "rule:core:rule-reference:rule-136-breaking-and-entering:Breaking and Entering",
+            "name": "Breaking and Entering",
+            "page": 136,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-136-traps",
+            "key": "rule:core:rule-reference:rule-136-traps:Traps",
+            "name": "Traps",
+            "page": 136,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-157-vehicle-movement",
+            "key": "rule:core:rule-reference:rule-157-vehicle-movement:Vehicle Movement",
+            "name": "Vehicle Movement",
+            "page": 157,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:rule-reference:rule-191-advancing-careers",
+            "key": "rule:core:rule-reference:rule-191-advancing-careers:Advancing Careers",
+            "name": "Advancing Careers",
+            "page": 191,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:38-comparing-characteristics",
+            "key": "core:reference:38-comparing-characteristics",
+            "name": "Comparing Characteristics",
+            "page": 38,
+            "reason": "setting"
+          },
+          {
+            "id": "core:reference:133-using-the-rules",
+            "key": "core:reference:133-using-the-rules",
+            "name": "Using The Rules",
+            "page": 133,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:152-life-beyond-the-walls",
+            "key": "core:reference:152-life-beyond-the-walls",
+            "name": "Life Beyond The Walls",
+            "page": 152,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:170-injury-healing-and-death",
+            "key": "core:reference:170-injury-healing-and-death",
+            "name": "Injury, Healing, And Death",
+            "page": 170,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:190-roleplaying-downtime",
+            "key": "core:reference:190-roleplaying-downtime",
+            "name": "Roleplaying Downtime",
+            "page": 190,
+            "reason": "advice"
+          },
+          {
+            "id": "core:reference:205-penances",
+            "key": "core:reference:205-penances",
+            "name": "Manann — Penances",
+            "page": 205,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:206-penances",
+            "key": "core:reference:206-penances",
+            "name": "Morr — Penances",
+            "page": 206,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:207-penances",
+            "key": "core:reference:207-penances",
+            "name": "Myrmidia — Penances",
+            "page": 207,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:208-penances",
+            "key": "core:reference:208-penances",
+            "name": "Ranald — Penances",
+            "page": 208,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:209-penances",
+            "key": "core:reference:209-penances",
+            "name": "Rhya — Penances",
+            "page": 209,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:210-penances",
+            "key": "core:reference:210-penances",
+            "name": "Shallya — Penances",
+            "page": 210,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:211-penances",
+            "key": "core:reference:211-penances",
+            "name": "Sigmar — Penances",
+            "page": 211,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:212-penances",
+            "key": "core:reference:212-penances",
+            "name": "Taal — Penances",
+            "page": 212,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:213-penances",
+            "key": "core:reference:213-penances",
+            "name": "Ulric — Penances",
+            "page": 213,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:214-penances",
+            "key": "core:reference:214-penances",
+            "name": "Verena — Penances",
+            "page": 214,
+            "reason": "penance-example"
+          },
+          {
+            "id": "core:reference:240-petty-spells",
+            "key": "core:reference:240-petty-spells",
+            "name": "Petty Spells",
+            "page": 240,
+            "reason": "setting"
+          },
+          {
+            "id": "core:reference:266-extend-caution",
+            "key": "core:reference:266-extend-caution",
+            "name": "Extend Caution",
+            "page": 266,
+            "reason": "advice"
+          },
+          {
+            "id": "core:reference:296-trapping-lists",
+            "key": "core:reference:296-trapping-lists",
+            "name": "Trapping Lists",
+            "page": 296,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:297-criminal-coinage",
+            "key": "core:reference:297-criminal-coinage",
+            "name": "Criminal Coinage",
+            "page": 297,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:306-armour-flaws",
+            "key": "core:reference:306-armour-flaws",
+            "name": "Armour Flaws",
+            "page": 306,
+            "reason": "introduction"
+          },
+          {
+            "id": "core:reference:318-bestiary",
+            "key": "core:reference:318-bestiary",
+            "name": "Bestiary",
+            "page": 318,
+            "reason": "introduction"
+          }
+        ]
+      }
     },
     "up-in-arms": {
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
@@ -8620,7 +8810,8 @@
         {
           "id": "up-in-arms:reference:70-strictures-of-myrmidia",
           "sourceHash": "bed9643169bbfc88d8b44e21ac79a58fc5d1e871b821f866d2eaf020b5fa9274",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory commentary about Myrmidian subtleties, without the actual strictures or any game procedure. Core Myrmidia strictures remain searchable."
         },
         {
           "id": "up-in-arms:reference:70-dignity-in-all-matters",
@@ -8773,8 +8964,8 @@
         {
           "id": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
           "sourceHash": "c1fc127ac5be91e8bd623f097322e8cb7360a3ed016b8c194ffef1023fd9f83e",
-          "disposition": "included",
-          "reason": "Primary content is a rules procedure, not an independent lookup table; supporting printed tables remain readable in its body."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "up-in-arms:reference:80-wounds",
@@ -9008,7 +9199,8 @@
         {
           "id": "up-in-arms:reference:99-powder-and-shot",
           "sourceHash": "b94162abe0125cfd958f099942a433a6940730c98bfc8c08a22a4a849569be07",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "up-in-arms:reference:100-loading-a-blackpowder-weapon",
@@ -9204,7 +9396,8 @@
         {
           "id": "up-in-arms:reference:110-hire-em-and-fire-em",
           "sourceHash": "97db60fb1bf0348e8ba5bd3214f5852476dc242616a4feec07887ef7536a2769",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "up-in-arms:reference:110-filling-in-the-gaps",
@@ -9220,7 +9413,8 @@
         {
           "id": "up-in-arms:reference:110-hired-brains",
           "sourceHash": "c4b86e9f8799c541b93dc082d0fbce655f1ca5ebd787a3e0307d089b455160de",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "up-in-arms:reference:111-fortunately-your-reputation-precedes-you",
@@ -9237,12 +9431,14 @@
         {
           "id": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
           "sourceHash": "a7820e8c9ce8102d28f77eee63057e79108376663e2d15493783a514570e816a",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "up-in-arms:reference:112-liability-and-responsibility",
           "sourceHash": "f634e3e194ce2a3672d0d4d61e171adf58ee542c7c8e8d500608985ce2f67d68",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "up-in-arms:reference:112-unfortunately-your-reputation-precedes-you",
@@ -9682,12 +9878,14 @@
         {
           "id": "up-in-arms:reference:135-changing-talents",
           "sourceHash": "7d46dfb9edba81b114b3e222e0e792dd9a1f1578d8a5b315911d91b8659bb653",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "up-in-arms:reference:135-changing-creature-traits",
           "sourceHash": "18788937d199ccf8bd68dda1a16a2bae6f318cf9787744fcf5f246a2fdcfa1b3",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "up-in-arms:reference:135-unstable",
@@ -9909,8 +10107,77 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "99fc46496c07086fd22be0f268a55d35d35c5621a25801ad13cae495a56213c4",
-      "entries": 146
+      "publishedSHA256": "966019cf344fa29d2bcb5d447d7a2037bbab2f3ef093553bb074375211f88985",
+      "entries": 137,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 72,
+        "removed": [
+          {
+            "id": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
+            "key": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
+            "name": "Wounds, Critical Wounds, And Death",
+            "page": 80,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:99-powder-and-shot",
+            "key": "up-in-arms:reference:99-powder-and-shot",
+            "name": "Powder and Shot",
+            "page": "99–100",
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:110-hire-em-and-fire-em",
+            "key": "up-in-arms:reference:110-hire-em-and-fire-em",
+            "name": "Hire ‘Em And Fire ‘Em",
+            "page": 110,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:110-hired-brains",
+            "key": "up-in-arms:reference:110-hired-brains",
+            "name": "Hired Brains",
+            "page": "110–111",
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
+            "key": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
+            "name": "We Can Afford It, but Can We Afford It?",
+            "page": "111–112",
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:112-liability-and-responsibility",
+            "key": "up-in-arms:reference:112-liability-and-responsibility",
+            "name": "Liability and Responsibility",
+            "page": 112,
+            "reason": "setting"
+          },
+          {
+            "id": "up-in-arms:reference:135-changing-creature-traits",
+            "key": "up-in-arms:reference:135-changing-creature-traits",
+            "name": "Changing Creature Traits",
+            "page": 135,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:135-changing-talents",
+            "key": "up-in-arms:reference:135-changing-talents",
+            "name": "Changing Talents",
+            "page": 135,
+            "reason": "introduction"
+          },
+          {
+            "id": "up-in-arms:reference:70-strictures-of-myrmidia",
+            "key": "up-in-arms:reference:70-strictures-of-myrmidia",
+            "name": "Strictures Of Myrmidia",
+            "page": 70,
+            "reason": "introduction"
+          }
+        ]
+      }
     },
     "archives-i": {
       "sourceHash": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7",
@@ -10512,7 +10779,8 @@
         {
           "id": "archives-i:reference:94-dwarf-handgun-pistol",
           "sourceHash": "5cd35510c9d7e69b33569d0fc1e2bcfbc9cc664d18fd9f2c60519d75bdd3a5e5",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "archives-i:reference:94-eonir-war-blade",
@@ -10526,7 +10794,8 @@
         {
           "id": "archives-i:reference:94-eonir-spear",
           "sourceHash": "d17b4cca2ae5c0182ded9474affc635ff593b9dc2037b7cdaa5580b370f7fe94",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "archives-i:reference:94-iron-skillet",
@@ -10646,8 +10915,28 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "431d59d2c1f7d5a8aa0f22602c49f23c558a611d15ec6ff25eb762ff39814643",
-      "entries": 25
+      "publishedSHA256": "f5b4b7feef0eb5e2a873f93a5be8ceed8e93812eb67e5461617c9312cc71a3f6",
+      "entries": 23,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 4,
+        "removed": [
+          {
+            "id": "archives-i:reference:94-dwarf-handgun-pistol",
+            "key": "archives-i:reference:94-dwarf-handgun-pistol",
+            "name": "Dwarf Handgun & Pistol",
+            "page": 94,
+            "reason": "setting"
+          },
+          {
+            "id": "archives-i:reference:94-eonir-spear",
+            "key": "archives-i:reference:94-eonir-spear",
+            "name": "Eonir Spear",
+            "page": 94,
+            "reason": "setting"
+          }
+        ]
+      }
     },
     "archives-ii": {
       "sourceHash": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b",
@@ -10973,7 +11262,8 @@
         {
           "id": "archives-ii:reference:28-size-matters",
           "sourceHash": "584509379c703883e5c22438b73e53b509af00d3018228a3257ce8eb07b173c9",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-ii:reference:28-weapon-damage",
@@ -11098,7 +11388,8 @@
         {
           "id": "archives-ii:reference:30-armour-descriptions",
           "sourceHash": "adec8e4fe82ef772359f34d5997966bdb1f0d7b4c0be581a03d19db1800c7336",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "archives-ii:reference:30-gutplate",
@@ -11482,7 +11773,8 @@
         {
           "id": "archives-ii:reference:51-magical-items-and-artifice",
           "sourceHash": "d6096528d02d046aabe9d5ef4bd44b14c7cc553e3e7b56ca171090d3ddbc8687",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-ii:reference:51-paths-to-power",
@@ -11514,7 +11806,8 @@
         {
           "id": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
           "sourceHash": "fa79f7a2a43d1bc56de0b407956b0d4df4a095b477f4b8e063eb8141b792e144",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "archives-ii:reference:53-misspelled",
@@ -11992,8 +12285,42 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "db67414f8037766e3569d5455056d43aa08f591e5ecb35cab24eed332df19f58",
-      "entries": 122
+      "publishedSHA256": "069c43e43700418bbd3ee3071e3283f90eb93ae13fd9df64e318ea046d63eaf6",
+      "entries": 118,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 63,
+        "removed": [
+          {
+            "id": "archives-ii:reference:28-size-matters",
+            "key": "archives-ii:reference:28-size-matters",
+            "name": "Size Matters",
+            "page": 28,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-ii:reference:30-armour-descriptions",
+            "key": "archives-ii:reference:30-armour-descriptions",
+            "name": "Armour Descriptions",
+            "page": 30,
+            "reason": "setting"
+          },
+          {
+            "id": "archives-ii:reference:51-magical-items-and-artifice",
+            "key": "archives-ii:reference:51-magical-items-and-artifice",
+            "name": "Magical Items And Artifice",
+            "page": 51,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
+            "key": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
+            "name": "Guarding the Reputation of Wizards",
+            "page": 53,
+            "reason": "setting"
+          }
+        ]
+      }
     },
     "archives-iii": {
       "sourceHash": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788",
@@ -12048,7 +12375,8 @@
         {
           "id": "archives-iii:reference:6-enterprises",
           "sourceHash": "d7b88a8aaf5ca80f389e809642df93fa507c351f34afb9755d49dfdfe22f5d81",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-iii:reference:6-starting-an-enterprise",
@@ -12454,7 +12782,8 @@
         {
           "id": "archives-iii:reference:34-suits-of-steel",
           "sourceHash": "15399d05b5650e50b1c1d537eb0c24373758501422571050a20abef78e334dee",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-iii:reference:34-looting-armour",
@@ -12545,7 +12874,8 @@
         {
           "id": "archives-iii:reference:36-armour-flaws",
           "sourceHash": "e118b5302b24b6f30d509885f2914da22dd8d199797ea34fdcb7d9bb24945d48",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-iii:reference:36-partial",
@@ -12595,7 +12925,8 @@
         {
           "id": "archives-iii:reference:38-helmet-designs",
           "sourceHash": "42118af59f6698f6cbd8ecac1f2a0fae9f2353e03cd4633cdba885da40985911",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-iii:reference:38-great-helm",
@@ -13030,7 +13361,8 @@
         {
           "id": "archives-iii:reference:58-penances",
           "sourceHash": "361ec8b5cb6f955a20b76e8c7f3d887258f9af30816fa34a477d24607e04705a",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: illustrative penance/adventure suggestions without a mechanical procedure. Penance, Sin/Wrath and actual cult strictures remain searchable."
         },
         {
           "id": "archives-iii:reference:58-strictures",
@@ -13087,7 +13419,8 @@
         {
           "id": "archives-iii:reference:62-the-lore-of-hedgecraft",
           "sourceHash": "ccdcb34200df9b55800e0b72d140be374d164518a61f2af98aa7dede7d6fd965",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-iii:reference:62-alternative-skills-and-talents",
@@ -13349,7 +13682,8 @@
         {
           "id": "archives-iii:reference:76-npc-animal-familiars",
           "sourceHash": "cc157ff01a0fedf222beb3325880aabff767b61040afeb0805933348bcda542a",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "archives-iii:reference:76-badger",
@@ -13741,8 +14075,63 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "65c965453768c9e427c639e8aad4056830b297eff2bb4682281fed878da95b4c",
-      "entries": 124
+      "publishedSHA256": "514231add6d51af0795f59c01b4d1f131fff609375140388887531ac61cdb756",
+      "entries": 117,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 77,
+        "removed": [
+          {
+            "id": "archives-iii:reference:6-enterprises",
+            "key": "archives-iii:reference:6-enterprises",
+            "name": "Enterprises",
+            "page": 6,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:34-suits-of-steel",
+            "key": "archives-iii:reference:34-suits-of-steel",
+            "name": "• Suits Of Steel •",
+            "page": 34,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:36-armour-flaws",
+            "key": "archives-iii:reference:36-armour-flaws",
+            "name": "Armour Flaws",
+            "page": 36,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:38-helmet-designs",
+            "key": "archives-iii:reference:38-helmet-designs",
+            "name": "Helmet Designs",
+            "page": 38,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:58-penances",
+            "key": "archives-iii:reference:58-penances",
+            "name": "Old Faith — Penances",
+            "page": 58,
+            "reason": "penance-example"
+          },
+          {
+            "id": "archives-iii:reference:62-the-lore-of-hedgecraft",
+            "key": "archives-iii:reference:62-the-lore-of-hedgecraft",
+            "name": "The Lore Of Hedgecraft",
+            "page": 62,
+            "reason": "introduction"
+          },
+          {
+            "id": "archives-iii:reference:76-npc-animal-familiars",
+            "key": "archives-iii:reference:76-npc-animal-familiars",
+            "name": "Npc Animal Familiars",
+            "page": 76,
+            "reason": "introduction"
+          }
+        ]
+      }
     },
     "winds-of-magic": {
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
@@ -14512,7 +14901,8 @@
         {
           "id": "winds-of-magic:reference:44-new-arcane-skills",
           "sourceHash": "d4760f50af1c90b43da943441221032ee925a411448f3640f6720486e8535c2f",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "winds-of-magic:reference:44-augury-int",
@@ -14588,7 +14978,8 @@
         {
           "id": "winds-of-magic:reference:49-alchemy",
           "sourceHash": "3d644c974457422110090351ac61b9efa18aaa209fb7bf768e7c6c65ec298c19",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:49-mundane-alchemy",
@@ -14899,7 +15290,8 @@
         {
           "id": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
           "sourceHash": "5655913389d8493bd9f82994bbc24fed1627baa13cfda262b0b0c7bad2a1bb52",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:68-alchemist",
@@ -15348,7 +15740,8 @@
         {
           "id": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
           "sourceHash": "e57e653bd62137956f4588f7fa7d787beafa496a43044f2be5a9a3197cb2a53c",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:92-astromancer",
@@ -16587,7 +16980,8 @@
         {
           "id": "winds-of-magic:reference:161-the-concoct-talent",
           "sourceHash": "87a02d5b2da2c7c3ee7d99d697b995ba2c37d5a9a15ce8799bc92428f4fbdfca",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "winds-of-magic:reference:161-concoct",
@@ -16828,7 +17222,8 @@
         {
           "id": "winds-of-magic:reference:173-incarnate-elementals",
           "sourceHash": "7a6b7684b3d68652fa17c27ac420a68c697a8c3753d9f589ba8dff26e2d14ab6",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:174-incarnate-elemental-of-fire",
@@ -16874,12 +17269,14 @@
         {
           "id": "winds-of-magic:reference:176-nature-spirits",
           "sourceHash": "f240745c3f3a13c3d90ef4baedf51c8c2374df89c40c7a4e626e6314699f0054",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:177-magical-constructs",
           "sourceHash": "5ce936be89445d5b2f58b4895875ccf31e1e1da0b25c3bf333d1f8995e89d11b",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:177-bodyguards",
@@ -17099,7 +17496,8 @@
         {
           "id": "winds-of-magic:reference:182-familiars-of-chamon",
           "sourceHash": "dc67b212918896660e655b99aaff479d5aa9c0d22dc4b492b2eb2a0ab5ed0cc9",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:183-familiars-of-ghyran",
@@ -17278,7 +17676,8 @@
         {
           "id": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
           "sourceHash": "2954ace27dbdec473214744868801542870ddf1b8f4ef3d620d5a39e4aa054ef",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "winds-of-magic:reference:189-environmental-saturation-levels",
@@ -17643,8 +18042,84 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "1fcb0dbd45688a111f3dc37672516f9d0f2e91d8b7a52f0aea755f0b91e52668",
-      "entries": 284
+      "publishedSHA256": "a1b0690850ce27ba901315bbc01c1eb81e31a33ccd01ded04c4cda50baacc793",
+      "entries": 274,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 145,
+        "removed": [
+          {
+            "id": "winds-of-magic:reference:44-new-arcane-skills",
+            "key": "winds-of-magic:reference:44-new-arcane-skills",
+            "name": "New Arcane Skills",
+            "page": 44,
+            "reason": "introduction"
+          },
+          {
+            "id": "winds-of-magic:reference:49-alchemy",
+            "key": "winds-of-magic:reference:49-alchemy",
+            "name": "Alchemy",
+            "page": 49,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
+            "key": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
+            "name": "The Gold Wind of Magic & The Lore of Metal",
+            "page": 66,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
+            "key": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
+            "name": "The Blue Wind of Magic & The Lore of the Heavens",
+            "page": 90,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:161-the-concoct-talent",
+            "key": "winds-of-magic:reference:161-the-concoct-talent",
+            "name": "The Concoct Talent",
+            "page": 161,
+            "reason": "introduction"
+          },
+          {
+            "id": "winds-of-magic:reference:173-incarnate-elementals",
+            "key": "winds-of-magic:reference:173-incarnate-elementals",
+            "name": "Incarnate Elementals",
+            "page": 173,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:176-nature-spirits",
+            "key": "winds-of-magic:reference:176-nature-spirits",
+            "name": "Nature Spirits",
+            "page": 176,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:177-magical-constructs",
+            "key": "winds-of-magic:reference:177-magical-constructs",
+            "name": "Magical Constructs",
+            "page": 177,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:182-familiars-of-chamon",
+            "key": "winds-of-magic:reference:182-familiars-of-chamon",
+            "name": "Familiars of Chamon",
+            "page": 182,
+            "reason": "setting"
+          },
+          {
+            "id": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
+            "key": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
+            "name": "The Effects of Magic on the World",
+            "page": 189,
+            "reason": "setting"
+          }
+        ]
+      }
     },
     "rough-nights": {
       "sourceHash": "08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f7",
@@ -18399,7 +18874,8 @@
         {
           "id": "dwarf-guide:reference:38-naming-rites",
           "sourceHash": "89208df4dc342be4dc8f0491aed2dfaf80402f1eee0a04aeac7e0f1895a52687",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:38-surnames",
@@ -18415,7 +18891,8 @@
         {
           "id": "dwarf-guide:reference:40-nicknames",
           "sourceHash": "4f25a0764038260f1d709dd25d40f3ca62dbf272531956d2bc00c2ae6d85fe88",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:40-clan-names",
@@ -18670,7 +19147,8 @@
         {
           "id": "dwarf-guide:reference:57-dwarf-artforms",
           "sourceHash": "4c81457cb70a10a95cc217b8ac368cca2b60ca2c5ace9467a160a3a00c164328",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:58-dwarf-miner",
@@ -18702,7 +19180,8 @@
         {
           "id": "dwarf-guide:reference:59-dwarf-slayer",
           "sourceHash": "f34ba7e192777c20894fe1fad25b62d0d9f8bd3cd680520177ef08719b623d7e",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:59-slayers-do-not-wear-armour",
@@ -18972,7 +19451,8 @@
         {
           "id": "dwarf-guide:reference:80-new-skills",
           "sourceHash": "79d6d383aed747717634c0fbcd4948db6ca5e7459bd130df72705821d02854c1",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "dwarf-guide:reference:80-lore-runes",
@@ -19277,12 +19757,14 @@
         {
           "id": "dwarf-guide:reference:90-gromril",
           "sourceHash": "d9005b69c57bcec7260c05945de360a12fddddf0a3a825b5687e1f5cb261297d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:91-gromril-mining",
           "sourceHash": "39e813eca9b79b3b2ee65eccb7ba3839b637b958a4ed269fc379ff1bb944643e",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:91-gromril-armour",
@@ -19297,7 +19779,8 @@
         {
           "id": "dwarf-guide:reference:91-the-kings-gift",
           "sourceHash": "971444faca8813f9d81de0100338e665317d014e08dc3646e2b254882e45f87c",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:92-new-weapon-qualities-and-flaws",
@@ -19323,7 +19806,8 @@
         {
           "id": "dwarf-guide:reference:92-personal-wargear",
           "sourceHash": "6eddc2b185cb2aa8d8f4cc6fb318a2c93b35c2c6cc27b25ad7b77d645bc479e5",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "dwarf-guide:reference:92-what-do-manlings-know-of-weaponry",
@@ -19345,7 +19829,8 @@
         {
           "id": "dwarf-guide:reference:93-dwarf-ranged-weapons",
           "sourceHash": "3c5d5869612fbc911aa116c4e374ac5ef6f26f14b8f8455639b4a5b9ece609cf",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:93-dwarf-ammunition",
@@ -20539,7 +21024,8 @@
         {
           "id": "dwarf-guide:reference:132-additional-runes",
           "sourceHash": "f4cc43ffefad3548bc139c46e0eaebb166385e5523e20585b57467beab3078b4",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "dwarf-guide:reference:134-the-priesthood",
@@ -20751,8 +21237,91 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "ac5e7ed628b290f94bf3f0815950b59e8ae08fcd16ecc3bafb1951e8aad5ac0f",
-      "entries": 118
+      "publishedSHA256": "2510c99efde23995bc13b2fe909a7ac08fca7f4917ce4ec1eeea4a71523c880c",
+      "entries": 107,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 97,
+        "removed": [
+          {
+            "id": "dwarf-guide:reference:38-naming-rites",
+            "key": "dwarf-guide:reference:38-naming-rites",
+            "name": "Naming Rites",
+            "page": 38,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:40-nicknames",
+            "key": "dwarf-guide:reference:40-nicknames",
+            "name": "Nicknames",
+            "page": 40,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:57-dwarf-artforms",
+            "key": "dwarf-guide:reference:57-dwarf-artforms",
+            "name": "Dwarf Artforms",
+            "page": 57,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:59-dwarf-slayer",
+            "key": "dwarf-guide:reference:59-dwarf-slayer",
+            "name": "Dwarf Slayer",
+            "page": 59,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:80-new-skills",
+            "key": "dwarf-guide:reference:80-new-skills",
+            "name": "New Skills",
+            "page": 80,
+            "reason": "introduction"
+          },
+          {
+            "id": "dwarf-guide:reference:90-gromril",
+            "key": "dwarf-guide:reference:90-gromril",
+            "name": "Gromril",
+            "page": 90,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:91-gromril-mining",
+            "key": "dwarf-guide:reference:91-gromril-mining",
+            "name": "Gromril mining",
+            "page": 91,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:91-the-kings-gift",
+            "key": "dwarf-guide:reference:91-the-kings-gift",
+            "name": "The King’S Gift",
+            "page": 91,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:92-personal-wargear",
+            "key": "dwarf-guide:reference:92-personal-wargear",
+            "name": "Personal Wargear",
+            "page": 92,
+            "reason": "introduction"
+          },
+          {
+            "id": "dwarf-guide:reference:93-dwarf-ranged-weapons",
+            "key": "dwarf-guide:reference:93-dwarf-ranged-weapons",
+            "name": "Dwarf Ranged Weapons",
+            "page": 93,
+            "reason": "setting"
+          },
+          {
+            "id": "dwarf-guide:reference:132-additional-runes",
+            "key": "dwarf-guide:reference:132-additional-runes",
+            "name": "Additional Runes",
+            "page": 132,
+            "reason": "advice"
+          }
+        ]
+      }
     },
     "high-elf": {
       "sourceHash": "16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9",
@@ -20853,7 +21422,8 @@
         {
           "id": "high-elf:reference:39-high-elf-warships-2",
           "sourceHash": "1a25e2ce3b3fbcf9b564e1d2d0274fa1aadd40d1db4721c107ac246363aa3c50",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "high-elf:reference:40-high-elf-warships",
@@ -20957,7 +21527,8 @@
         {
           "id": "high-elf:reference:43-dragon-princes",
           "sourceHash": "dc486585bd1a949df0541d5fd8b6e9edc3615c4295f77f09ce367d7c8e82055c",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "high-elf:reference:43-dragon-songs",
@@ -20968,7 +21539,8 @@
         {
           "id": "high-elf:reference:45-playing-a-high-elf",
           "sourceHash": "c368c9bcd8cee68fc6041d6bb95738e684a916eb91ace99f263c8ffd7dd1948b",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "high-elf:reference:45-beyond-the-stereotype",
@@ -21384,7 +21956,8 @@
         {
           "id": "high-elf:reference:63-smuggler",
           "sourceHash": "299fad761b6fa888b650be01634219e510d7e692dc6a235c8e6c075c13768fdc",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "high-elf:reference:63-stevedore",
@@ -21401,7 +21974,8 @@
         {
           "id": "high-elf:reference:63-charlatan",
           "sourceHash": "f661636dc0254593a01f67bc01542be0083ab434d9cd5b9509b9fa041f0c6a23",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "high-elf:reference:63-outlaw",
@@ -22175,7 +22749,8 @@
         {
           "id": "high-elf:reference:100-smith-priest-of-vaul",
           "sourceHash": "69f35ad6e3a0f290fa1c0bf2b3cb6fd71291594228e81f1a25d3427178448354",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "high-elf:reference:100-smith-priest-advance-scheme",
@@ -22648,7 +23223,8 @@
         {
           "id": "high-elf:reference:114-beseeching-khaine",
           "sourceHash": "2334a967a0dbefd8b7c63e768a7f12679afd3719a5fa992af2b074436355aae2",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "high-elf:reference:114-khaine-as-god-of-war",
@@ -22882,8 +23458,63 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "34c6a9e98f7b5ce589b452f2744101d80beccb41850a735f8ad0538dd54a667b",
-      "entries": 88
+      "publishedSHA256": "99f7e054b20aabe6af889abbe6f9c2f74474ac526a85c0a754caa6d329ee1fae",
+      "entries": 81,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 59,
+        "removed": [
+          {
+            "id": "high-elf:reference:39-high-elf-warships-2",
+            "key": "high-elf:reference:39-high-elf-warships-2",
+            "name": "High Elf Warships",
+            "page": 39,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:43-dragon-princes",
+            "key": "high-elf:reference:43-dragon-princes",
+            "name": "Dragon Princes",
+            "page": 43,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:45-playing-a-high-elf",
+            "key": "high-elf:reference:45-playing-a-high-elf",
+            "name": "Playing a High Elf",
+            "page": 45,
+            "reason": "introduction"
+          },
+          {
+            "id": "high-elf:reference:63-charlatan",
+            "key": "high-elf:reference:63-charlatan",
+            "name": "Charlatan",
+            "page": 63,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:63-smuggler",
+            "key": "high-elf:reference:63-smuggler",
+            "name": "Smuggler",
+            "page": 63,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:100-smith-priest-of-vaul",
+            "key": "high-elf:reference:100-smith-priest-of-vaul",
+            "name": "Smith-Priest Of Vaul",
+            "page": 100,
+            "reason": "setting"
+          },
+          {
+            "id": "high-elf:reference:114-beseeching-khaine",
+            "key": "high-elf:reference:114-beseeching-khaine",
+            "name": "Beseeching Khaine",
+            "page": 114,
+            "reason": "setting"
+          }
+        ]
+      }
     },
     "blood-bramble": {
       "sourceHash": "6e62fc57534f2d56cfd99333666389d0bf293ddb81b6f3d8284382b3e2f5b8df",
@@ -23735,7 +24366,8 @@
         {
           "id": "deft-steps:reference:27-pickpockets",
           "sourceHash": "49886bd6f9f5fe9f82eabb4f56d287d086ab9359021a9841b3411f7cf81fa1a0",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:27-spotting-a-pickpocket-at-work",
@@ -23786,7 +24418,8 @@
         {
           "id": "deft-steps:reference:30-burglars",
           "sourceHash": "cf573cb3acdb6feb14e4e18b2362ae7b6bf7ca0ee80c4b461efc6d981f6516dc",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:30-burglar-skills-talents-and-trappings",
@@ -23973,7 +24606,8 @@
         {
           "id": "deft-steps:reference:37-khemri",
           "sourceHash": "aebd22364ff23906811826fe6d2276696e7af2a4c0d19a9a437b0ec90694a8fc",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:38-bawds-charlatans-and-fences",
@@ -24005,8 +24639,8 @@
         {
           "id": "deft-steps:reference:39-congruent-with-character",
           "sourceHash": "ec47679df49b60fa12ae139de252dd313b2ace29eb153c5e0eaa3cb8dc97aa00",
-          "disposition": "included",
-          "reason": "PDF p.39 checked: left-hand rule box is separate from the right-hand Charlatan Income table."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "deft-steps:reference:39-endeavour-complications",
@@ -24022,12 +24656,14 @@
         {
           "id": "deft-steps:reference:40-underworld-rumours",
           "sourceHash": "1c22f64896307aac96e97ec467872a0fb8425aebee3ad22c690a4803d8e40c30",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:41-stolen-goods",
           "sourceHash": "b18da8a951d5e1e35a6fbd0a433ef8f08f753176823604b6db7bde19cedb9d5d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:41-fencing-in-downtime",
@@ -24062,7 +24698,8 @@
         {
           "id": "deft-steps:reference:42-embezzlers",
           "sourceHash": "9b55e5fde78c3025e7f2f00b9ab63638bc35e11267313d1e81cead8fe3412a06",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:42-trappings",
@@ -24175,30 +24812,32 @@
         {
           "id": "deft-steps:reference:46-priests-of-ranald",
           "sourceHash": "da6912dfc660a357ddb4b923af7fcd2a4c9809413fcafa7cd65453d73053c276",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:47-fences",
           "sourceHash": "49b41736e1550b63bbd5eb96fa8dad5677b09b0c2768c94e2efd34f52971f1ef",
-          "disposition": "included",
-          "reason": "Contact guidance belongs to Rules; its duplicate stat block is represented by the separately reviewed NPC profile."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:47-forgers-and-counterfeiters",
           "sourceHash": "7f5945687da729f555c44ddb63026d2ab148998949a9a10ef5f5d73d65149a5f",
-          "disposition": "included",
-          "reason": "Contact guidance belongs to Rules; its duplicate stat block is represented by the separately reviewed NPC profile."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:48-information-brokers",
           "sourceHash": "ad8a1aa85cde06720d7b52fbbc2856b6422b09563bed68fb1afdeb54428bcb02",
-          "disposition": "included",
-          "reason": "Contact guidance belongs to Rules; its duplicate stat block is represented by the separately reviewed NPC profile."
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:48-muscle",
           "sourceHash": "7b4fcfa802cc3fa512443a5798448a0a39900fa70a21826ff9c3624a02654fdc",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:48-racketeer",
@@ -24252,7 +24891,8 @@
         {
           "id": "deft-steps:reference:50-flesh-out-the-contact",
           "sourceHash": "76e83fb7c882c538eef63fd3482a1d8ff84d4093174387a51fdaefece320aa9f",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "deft-steps:reference:50-helmgard-trautmann-innkeeper",
@@ -24327,7 +24967,8 @@
         {
           "id": "deft-steps:reference:56-contacts-and-the-gm",
           "sourceHash": "34ac7b3489ca30bf4ba3e79fc16e9e7a776c3850cb1e8651847455bb2bc11661",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "deft-steps:reference:56-new-adventures",
@@ -24338,7 +24979,8 @@
         {
           "id": "deft-steps:reference:57-organised-crime",
           "sourceHash": "26223ede3c93659bdb43a3f58e801f4f503788832d3c86bdd6418455a53480da",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:57-the-holy-hammer-of-sigmar",
@@ -24486,7 +25128,8 @@
         {
           "id": "deft-steps:reference:67-perks-of-membership",
           "sourceHash": "1ee3cc522fdc3e0263b5f4a340f0f1e00667a415922ccc510be4fde42da14ded",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "deft-steps:reference:67-training-and-specialist-help",
@@ -24508,12 +25151,14 @@
         {
           "id": "deft-steps:reference:67-fencing",
           "sourceHash": "340ab2fe462c5317e19305d7cb03bdebcd58747b0aa20db04eb0dfa01f2b796d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:67-protection-from-the-law",
           "sourceHash": "0ca2596a07b43de3d16f2f4cb790540a1cd0d11d930b479cb3e5e8b30db87229",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:68-honour-amongst-thieves",
@@ -24542,7 +25187,8 @@
         {
           "id": "deft-steps:reference:69-gang-war",
           "sourceHash": "a6c8c22e818c6412bc4876fe147f69c08bddc5820c8d7ceaf15ddda55b0dc313",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:70-the-cult-of-taal",
@@ -25067,7 +25713,8 @@
         {
           "id": "deft-steps:reference:90-breaking-the-law",
           "sourceHash": "2d8b15de9dc2911a8ad82d8b7c0000ced420ba9e95cec27fa2cba51dd165de55",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:91-who-makes-the-law",
@@ -25078,12 +25725,14 @@
         {
           "id": "deft-steps:reference:91-unpopular-edicts",
           "sourceHash": "17bc6d70f33ae48ffe53b05c21324a46a8a233b259020ea0dee94a3dc635dc5d",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:92-talabheim-the-city-of-laws",
           "sourceHash": "e939cdabab5600fe8413f6c26c784c86fe60d2120775ce7a474a0b9ce5ca3588",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:92-who-enforces-the-law",
@@ -25145,12 +25794,14 @@
         {
           "id": "deft-steps:reference:94-noble-prisoners",
           "sourceHash": "acd3482a60dfadb5779ecf5640b64acf9fd3d6efb885df8a49a42305e2aefccf",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:95-a-day-in-court",
           "sourceHash": "3e41d6d5b5e2ee9fb2ff4bdeaa68f3585922d74aa2567d8bddbea8e2edd29cec",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:95-the-basic-trial-process",
@@ -25239,7 +25890,8 @@
         {
           "id": "deft-steps:reference:99-outlaws",
           "sourceHash": "1015efa2bf9c099826220ebe033ded7f31ad8894bdf13372973fe339c9899abb",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:99-life-outside-the-law",
@@ -25286,7 +25938,8 @@
         {
           "id": "deft-steps:reference:101-outlaws-ranald",
           "sourceHash": "8158fda5171e2b2978f687e086a278a188ad66386e6e42ab19390235d235ce3b",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:102-building-an-outlaw-fiefdom",
@@ -25419,7 +26072,8 @@
         {
           "id": "deft-steps:reference:112-pathfinding",
           "sourceHash": "62ab53f4abe35ce877dff21767ebd20b463721e6a960c3db9c6a137332c2bdba",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "deft-steps:reference:112-wilderness-travel",
@@ -25510,12 +26164,14 @@
         {
           "id": "deft-steps:reference:115-fire",
           "sourceHash": "18011d1f62dfaec69ac224aefa36d115bea1b76d980626b2ed410399675e13a8",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:115-packs-and-containers",
           "sourceHash": "2d0fccf0b5dc6266d95c45e2d5d025a6c5ba17e93d434f1f25853a642c0739a8",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:115-clothing",
@@ -25537,7 +26193,8 @@
         {
           "id": "deft-steps:reference:115-poor-planning-and-its-consequences",
           "sourceHash": "4b43d6b0ee203360ffbe3ec0ce2d003e7fa6f3ef59baba9f33299cc24d332f3e",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: general storytelling, pacing or homebrew advice without a concrete game procedure or effect."
         },
         {
           "id": "deft-steps:reference:116-wilderness-travel-events",
@@ -25773,7 +26430,8 @@
         {
           "id": "deft-steps:reference:130-hunter-and-hunted",
           "sourceHash": "4c3d9c9960b0e7f5c733096d64d6f86d452f4f3c00b060ae8402f2be4843cb4b",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:130-hunting-as-endeavour",
@@ -25783,17 +26441,20 @@
         {
           "id": "deft-steps:reference:131-the-name-of-the-game",
           "sourceHash": "17d2712120cc3fb6a90a58beb54b690a52badbb9b8281b155ac7c877441e26e6",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:131-skins-and-other-uses",
           "sourceHash": "8908bb188cfae83a33a98041231481124c48f62aa354b25313a66814d6e5a5b0",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:131-a-fast-buck",
           "sourceHash": "51c49833c3aa1a870aa27d7ddf5fe82bc25aca5970b67c61068a1908f8f4cf01",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: introductory heading, catalogue pointer or cross-reference without a self-contained mechanical rule. The substantive rules remain in their own entries."
         },
         {
           "id": "deft-steps:reference:131-the-value-of-game",
@@ -25914,7 +26575,8 @@
         {
           "id": "deft-steps:reference:134-hawks",
           "sourceHash": "fe411d06f043649be5496bad6129d5ccf48ac1e92182b805f5804baa110a8ecd",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:134-dove-hawk",
@@ -25984,7 +26646,8 @@
         {
           "id": "deft-steps:reference:135-a-noble-pursuit",
           "sourceHash": "87cdda7c48ee8a40e1efb17564cf56cb622d217dfb817218ca74e2331780d186",
-          "disposition": "included"
+          "disposition": "excluded",
+          "reason": "Excluded in the 8 October Rules audit: setting/history, descriptive narrative or speculative social guidance; no defined game resolution, calculation, eligibility procedure or effect."
         },
         {
           "id": "deft-steps:reference:135-a-reckless-rampage",
@@ -26161,8 +26824,266 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "f368aa6d638fe010da96d7b72c17ec1df4b3857f2665a8e9647e91cef9b2dd7f",
-      "entries": 204
+      "publishedSHA256": "d12c518beb8e40f7d4e68b889a596b82f02021f48ef4406c27d337895e74d7aa",
+      "entries": 168,
+      "rulesAudit": {
+        "date": "2026-10-08",
+        "reviewedRuleResults": 106,
+        "removed": [
+          {
+            "id": "deft-steps:reference:27-pickpockets",
+            "key": "deft-steps:reference:27-pickpockets",
+            "name": "Pickpockets",
+            "page": 27,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:30-burglars",
+            "key": "deft-steps:reference:30-burglars",
+            "name": "Burglars",
+            "page": 30,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:37-khemri",
+            "key": "deft-steps:reference:37-khemri",
+            "name": "Khemri",
+            "page": 37,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:39-congruent-with-character",
+            "key": "deft-steps:reference:39-congruent-with-character",
+            "name": "Congruent With Character",
+            "page": 39,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:40-underworld-rumours",
+            "key": "deft-steps:reference:40-underworld-rumours",
+            "name": "Underworld Rumours",
+            "page": 40,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:41-stolen-goods",
+            "key": "deft-steps:reference:41-stolen-goods",
+            "name": "Stolen Goods",
+            "page": 41,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:42-embezzlers",
+            "key": "deft-steps:reference:42-embezzlers",
+            "name": "Embezzlers",
+            "page": 42,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:46-priests-of-ranald",
+            "key": "deft-steps:reference:46-priests-of-ranald",
+            "name": "Priests Of Ranald",
+            "page": 46,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:47-fences",
+            "key": "deft-steps:reference:47-fences",
+            "name": "Fences",
+            "page": 47,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:47-forgers-and-counterfeiters",
+            "key": "deft-steps:reference:47-forgers-and-counterfeiters",
+            "name": "Forgers and Counterfeiters",
+            "page": 47,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:48-information-brokers",
+            "key": "deft-steps:reference:48-information-brokers",
+            "name": "Information Brokers",
+            "page": 48,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:48-muscle",
+            "key": "deft-steps:reference:48-muscle",
+            "name": "Muscle",
+            "page": 48,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:50-flesh-out-the-contact",
+            "key": "deft-steps:reference:50-flesh-out-the-contact",
+            "name": "Flesh out the Contact",
+            "page": 50,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:56-contacts-and-the-gm",
+            "key": "deft-steps:reference:56-contacts-and-the-gm",
+            "name": "Contacts And The Gm",
+            "page": 56,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:57-organised-crime",
+            "key": "deft-steps:reference:57-organised-crime",
+            "name": "Organised Crime",
+            "page": 57,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:67-fencing",
+            "key": "deft-steps:reference:67-fencing",
+            "name": "Fencing",
+            "page": 67,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:67-perks-of-membership",
+            "key": "deft-steps:reference:67-perks-of-membership",
+            "name": "Perks Of Membership",
+            "page": 67,
+            "reason": "introduction"
+          },
+          {
+            "id": "deft-steps:reference:67-protection-from-the-law",
+            "key": "deft-steps:reference:67-protection-from-the-law",
+            "name": "Protection From The Law",
+            "page": 67,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:69-gang-war",
+            "key": "deft-steps:reference:69-gang-war",
+            "name": "Gang War",
+            "page": 69,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:90-breaking-the-law",
+            "key": "deft-steps:reference:90-breaking-the-law",
+            "name": "Breaking The Law",
+            "page": 90,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:91-unpopular-edicts",
+            "key": "deft-steps:reference:91-unpopular-edicts",
+            "name": "Unpopular Edicts",
+            "page": 91,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:92-talabheim-the-city-of-laws",
+            "key": "deft-steps:reference:92-talabheim-the-city-of-laws",
+            "name": "Talabheim, The City Of Laws",
+            "page": 92,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:94-noble-prisoners",
+            "key": "deft-steps:reference:94-noble-prisoners",
+            "name": "Noble Prisoners",
+            "page": 94,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:95-a-day-in-court",
+            "key": "deft-steps:reference:95-a-day-in-court",
+            "name": "A Day In Court",
+            "page": 95,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:99-outlaws",
+            "key": "deft-steps:reference:99-outlaws",
+            "name": "Outlaws",
+            "page": 99,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:101-outlaws-ranald",
+            "key": "deft-steps:reference:101-outlaws-ranald",
+            "name": "Outlaws & Ranald",
+            "page": 101,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:112-pathfinding",
+            "key": "deft-steps:reference:112-pathfinding",
+            "name": "Pathfinding",
+            "page": 112,
+            "reason": "introduction"
+          },
+          {
+            "id": "deft-steps:reference:115-fire",
+            "key": "deft-steps:reference:115-fire",
+            "name": "Fire",
+            "page": 115,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:115-packs-and-containers",
+            "key": "deft-steps:reference:115-packs-and-containers",
+            "name": "Packs and Containers",
+            "page": 115,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:115-poor-planning-and-its-consequences",
+            "key": "deft-steps:reference:115-poor-planning-and-its-consequences",
+            "name": "Poor Planning And Its Consequences",
+            "page": 115,
+            "reason": "advice"
+          },
+          {
+            "id": "deft-steps:reference:130-hunter-and-hunted",
+            "key": "deft-steps:reference:130-hunter-and-hunted",
+            "name": "Hunter And Hunted",
+            "page": 130,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:131-a-fast-buck",
+            "key": "deft-steps:reference:131-a-fast-buck",
+            "name": "A Fast Buck",
+            "page": 131,
+            "reason": "introduction"
+          },
+          {
+            "id": "deft-steps:reference:131-skins-and-other-uses",
+            "key": "deft-steps:reference:131-skins-and-other-uses",
+            "name": "Skins and Other Uses",
+            "page": 131,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:131-the-name-of-the-game",
+            "key": "deft-steps:reference:131-the-name-of-the-game",
+            "name": "The Name Of The Game",
+            "page": 131,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:134-hawks",
+            "key": "deft-steps:reference:134-hawks",
+            "name": "Hawks",
+            "page": 134,
+            "reason": "setting"
+          },
+          {
+            "id": "deft-steps:reference:135-a-noble-pursuit",
+            "key": "deft-steps:reference:135-a-noble-pursuit",
+            "name": "A Noble Pursuit",
+            "page": 135,
+            "reason": "setting"
+          }
+        ]
+      }
     }
   }
 }

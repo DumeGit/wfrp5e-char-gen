@@ -4,7 +4,7 @@
   "title": "High Elf Player’s Guide",
   "shortTitle": "High Elf Guide",
   "edition": 4,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "kind": "supplement",
   "dependsOn": [
     "core"

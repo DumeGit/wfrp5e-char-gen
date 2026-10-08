@@ -182,21 +182,5 @@
     "topic": "Careers and equipment",
     "page": 93,
     "text": "| Weapon | Price | Enc | Availability | Range | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| THROWING |  |  |  |  |  |  |\n| Blackbriar Javelin | 2GC | 1 | Exotic | SB×3 | +SB+3 | Impale, Special* |\n\n* So long as it is allowed to rest in fertile earth each night, a Blackbriar Javelin inflicts 1 Poisoned condition on any target which looses at least 1 Wound from the attack. This may be resisted with a Challenging (+0) Endurance Test."
-  },
-  {
-    "id": "archives-i:reference:94-dwarf-handgun-pistol",
-    "name": "Dwarf Handgun & Pistol",
-    "category": "rule",
-    "topic": "Careers and equipment",
-    "page": 94,
-    "text": "Dwarfs often despair at what passes for gun smithing among the humans, whose weapons are often as dangerous to the bearer as their target. Dwarf blackpowder weapons are finely made and carefully reinforced, making them less prone to misfire and imbuing their projectiles with additional punch."
-  },
-  {
-    "id": "archives-i:reference:94-eonir-spear",
-    "name": "Eonir Spear",
-    "category": "rule",
-    "topic": "Careers and equipment",
-    "page": 94,
-    "text": "The bane of mounted forces, these wickedly tipped spears are somewhat lighter than those used in the Empire. Their points are tempered and sharpened by methods known only to the Wood Elves, and they punch through armour with ease."
   }
 ]

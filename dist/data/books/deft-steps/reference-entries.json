@@ -56,14 +56,6 @@
     "text": "|  |  |\n| --- | --- |\n| Pickpocket’s SL | Result |\n| +1 or more | The pickpocket acquires the item, and the victim is not aware it was taken. |\n| Success but no SL | The pickpocket acquires the item but the victim quickly becomes aware that it was taken. Within D10 Rounds of the theft, they raise a hue and cry, loudly declaring that there is a thief in the vicinity. |\n| Fail but no SL | The pickpocket does not acquire the item, but the victim is unaware that an attempt was made to take it. |\n| -1 or less | The pickpocket does not acquire the item, and the victim is aware that they tried to take it. |"
   },
   {
-    "id": "deft-steps:reference:27-pickpockets",
-    "name": "Pickpockets",
-    "category": "rule",
-    "topic": "Burglary and equipment",
-    "page": 27,
-    "text": "Thieves sometimes start as pickpockets, scraping a living by cutting purses. Other criminals may require their talents, with Forgers and Charlatans hiring them to help carry off scams. Despite this, they are looked down upon as petty criminals, unwilling to take risks for rewards greater than those found within unguarded purses.\n\nPickpockets move among their marks, living lives where the slightest mistake leaves them surrounded by enemies. They must learn to work the crowds, to read the flow of people as they move through the streets.\n\nA skilled pickpocket develops a keen understanding of people’s behaviours, and how best to exploit them. They become something part-way between a thief and a thespian. The street is their stage and all those who walk it follow their scripts. Learn those scripts, follow those patterns, cultivate a light touch and soon the world opens to you, and every purse becomes yours for the taking."
-  },
-  {
     "id": "deft-steps:reference:27-pilfering-in-the-game",
     "name": "Pilfering in the Game",
     "category": "rule",
@@ -110,14 +102,6 @@
     "topic": "Burglary and equipment",
     "page": 30,
     "text": "A Burglar Character uses the Thief Career with the following adjustments.\n\nAt Tier 1 (Prowler) they choose from the following Skills: Athletics, Climb, Cool, Dodge, Endurance, Intuition, Lore (Local), Melee (Brawling), Perception, Stealth (Urban)\n\nAt Tier 3 (Master Thief) they make the following change to their available Talents: Swap Trapper for Secret Identity."
-  },
-  {
-    "id": "deft-steps:reference:30-burglars",
-    "name": "Burglars",
-    "category": "rule",
-    "topic": "Burglary and equipment",
-    "page": 30,
-    "text": "Burglars spend years developing their skills in stealth, slipping into homes, slinking through shadows, all while leaving no trace they were ever even there. Cat Burglars are the elite of the criminal underworld, figures whose exploits take on a life of their own, and whose skills are highly sought after. Some content themselves with window fishing, using telescopic poles to snatch valuables through windows — or a simple smash-and-grab. Whatever their approach, all burglars live by a simple motto: get in, get stuff, get out, get gone.\n\nBeing a good burglar takes time and patience. A thief may spend weeks casing a joint, finding the best moment to strike. Even then, getting inside is only the beginning. Guards, traps, dogs… the richer the target, the more security they can afford. Many thieves consider burgling the wealthy more trouble than it’s worth, preferring to break into smaller businesses and helping themselves to the money box. However, no one can deny the glory and profit to be won in escaping with the jewels of the nobility. These criminals become celebrities among those in the know, which isn’t always a good thing — when the wanted posters start appearing, new pastures beckon.\n\nBurglars can come from any walk of life, whether starting out as low-level members of a criminal gang, or bored nobles seeking a thrill. Many maintain a legitimate trade or persona behind which they hide their activities. This protects them from the watch’s attention and provides a means to inspect their mark’s property. Often the first warning a victim gets is a helpful artisan turning up at their house, offering to fix the roof.\n\nThere are places in the Old World with particularly bad reputations for thieves: Bordeleaux, Miragliano, Marienburg, but burglars work in every town and city."
   },
   {
     "id": "deft-steps:reference:31-endeavour-complications",
@@ -248,14 +232,6 @@
     "text": "| 2D10 | Result |\n| --- | --- |\n| 2 | Necrarch Vampire. A powerful Vampire with mastery over necromantic powers contacts the Grave Robber through a wretched servant intermediary. |\n| 3 – 4 | Cannibal Fiend. This customer could be on their way to becoming a Ghoul but may seek to keep such creatures fed for reasons of their own. |\n| 5 – 6 | Necromancer. Looking to improve their mastery of necromantic magic, such people are in constant need of corpses. |\n| 7 – 9 | Intriguer. This person wants to put a body to a political end. They may wish to pin a murder on a rival or use news of a death in service of a cause. |\n| 10 – 12 | Corrupt Physician. This surgeon wishes to better understand the workings of the human body. They pay for fresh, undamaged bodies only. |\n| 13 – 15 | Dubious Scholar. A dusty academic seeks to improve their knowledge of anatomy. |\n| 16 – 17 | Fugitive. This person wishes to use a body to fake a death so that they, a family member, or a client can start up a new life elsewhere. |\n| 18 – 19 | Mad Mage. This is likely an Amethyst Wizard looking to harvest Shyish, but may be a Gold Wizard looking for alchemical components, or a Witch looking for ingredients for their rituals. |\n| 20 | Daemonologist. Whilst living sacrifices make the best ingredients for the pacts of Daemonology, worshippers use body parts for petty favours. |"
   },
   {
-    "id": "deft-steps:reference:37-khemri",
-    "name": "Khemri",
-    "category": "rule",
-    "topic": "Grave robbing and treasure hunting",
-    "page": 37,
-    "text": "Of course, the archetypal destination for Tomb Robbers are the crypt complexes and pyramids of ancient Khemri. The astonishing price that Khemrian artefacts fetch means that a constant trickle of hopeful hunters departs for that land. This is despite Khemri's notorious reputation as a place where the dead do not rest easily, where hideous bas reliefs and statues of stone and bone spring to life and slaughter intruders, and where deadly traps and crippling curses afflict those who manage to survive the horrors of the deserts of that antique land."
-  },
-  {
     "id": "deft-steps:reference:38-endeavour-complications",
     "name": "Endeavour Complications",
     "category": "table",
@@ -280,28 +256,12 @@
     "text": "Whenever a Bawd, Charlatan, or Fence Character takes an Income Endeavour, they may decide to either:\n\nTake the money as normal. Roll on the following table to determine if a further consequence occurs because of their activities (in most cases these results do not reduce the amount earned, but some may do)."
   },
   {
-    "id": "deft-steps:reference:39-congruent-with-character",
-    "name": "Congruent With Character",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 39,
-    "text": "Whilst many of these complications invite the GM to come up with details, they ought to consider the personality and behaviour of the Character when coming up with complications, particularly if they are going to impact play going forward. The GM and player should help each other with complications to help illustrate that the criminal lifestyle does carry consequences, but also to help ensure that the story of a particular Character and their concept is complicated but not totally spoiled as the result of an undesirable dice roll during a Downtime period."
-  },
-  {
     "id": "deft-steps:reference:39-endeavour-complications",
     "name": "Endeavour Complications",
     "category": "table",
     "topic": "Fraud, criminal contacts and organisations",
     "page": 39,
     "text": "| D10 | Result |\n| --- | --- |\n| 1 | Major Favour Owed. You have seriously failed to exercise discretion. Maybe a wealthy customer was exposed whilst in your care, or you gossiped too much about a local kingpin. You now owe this person a Major Favour. |\n| 2 | Blackmail. You have recieved a letter threatening to reveal compromising information about you or your customers unless you pay 2 Gold Crowns by the next period of Downtime. Details of how to pay, whether the writer has information, and how they can be tracked down is up to the GM. |\n| 3 – 4 | Friend in a Low Place. You are approached by a Fence working for a criminal organisation. They need a buyer for some contraband. If you can help out by the next period of Downtime they may provide a share of the profit. |\n| 5 – 6 | Rumour. You hear of a rumour about an opportunity, or a scam that worked in a foreign city and has yet to be tried locally. Details are up to the GM, but some ideas are given on page 40. |\n| 7 – 8 | A Favour Owed. You have earned the ire of a customer. They may call in a Major Favour in time, as the price for your carelessness. |\n| 9 | Contact. Your hustling among the underworld puts you in touch with someone who might make for a significant contact. If you take the Contact Endeavour during this period of Downtime any Tests you make in the course of the Endeavour benefit from +1 SL. |\n| 10 | Friend in a High Place. You host an important personage who wishes to take a tour of the local rookeries, perhaps even a Countess or Lector of the Cult of Sigmar. They may wish to indulge in a vice that might compromise them in the eyes of their peers. You play your part well, and as a result establish a friendly acquaintance with this person. |"
-  },
-  {
-    "id": "deft-steps:reference:40-underworld-rumours",
-    "name": "Underworld Rumours",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 40,
-    "text": "Baron von Bruner’s household is packing up and going on tour, the usual summer jaunt around the rural holdings. It’s something the toffs like to do from time to time. So, the guards at the mansion are down to a skeleton crew until they’re back. Now, don’t get too excited, the Baronial jewels are on the tour with their owners, but there’ll be riches left waiting for anyone with the wit to take them. I’ve been told that prospectors in the Grey Mountains have struck a proper bonanza. Now, don’t be so stupid as to think robbing the mines or ore wagons will net you wealth, not unless you’re personally equipped to process several tonnes of quartz, but there’ll be people wanting to invest, you see, and if you can convince them you’re involved in some way, they might be willing to throw a few crowns your way. So, a friend from Middenheim explained this scam to me. A lady wandered into The Harvest Goose carrying a fiddle and ordered herself a sumptuous meal and a bottle of Pritzstock Reisling. When she’s asked to settle the bill, she finds, to her embarrassment, that she’s forgotten her purse. She agrees that the proprietor can look after the violin while she fetches the money. Well, no sooner has she left when a new customer comes in and sees the instrument. “A genuine Ferring! Fit for Orfeo!” Apparently, this violin is made from the heartwood of a Lornalim tree, and the fretboard is inlaid with fragments of bright stone, worth more than Stirland. “Do you own this? I’ll offer 500 crowns.” The proprietor's interested, and starts asking for more information. The newcomer has to dash to collect the funds but leaves his contact details. So the woman returns and settles her bill but also agrees to sell the violin to the proprietor for 100 crowns. Of course, neither customer is ever heard from again, and when the proprietor takes the fiddle to be valued it's a fake, hardly worth a crown. Word is there’s going to be a riot tonight. It might seem nice and quiet now, but folk with the ear of the rabble-rousers say they’re ready to kick off. Folk are furious about this new hat tax, the moon’s full, and the weather’s right. It might be good news for someone in your line of work. After all, no need to break windows if they’ve had cobblestones put through them. Someone finally had enough of Duffo Lowhaven. Word is the pint-sized kingpin’s new residence is a damp and shallow grave in the Furdienst. So, there’s no one currently taking their dues from anyone who wants to work the poor quarter. The situation probably won’t last forever, so make hay before Mitterbst. Here’s a scam I saw work nicely last time I was in Erengrad. It’s called the Dwarf Mint. You need a metal box with a timed mechanism in it. Place a coin in the slot at the top, and after a minute, another pops out into the tray. What you tell your mark is that the box is a secret invention of the Dwarf Engineers’ Guild and that it will turn a shilling into a crown but that it’ll only work twice a day. Show them how it works and let them have a go themselves. Course, anyone convinced by it will be eager to purchase such a box, so explain that they don’t come cheap, but given that, after a few months, they’ll start to recoup the cost, 100 crowns might be a smart investment. Oh, and if you carry on with this scam, be prepared to give any members of the Dwarf Engineers’ Guild a wide berth for the rest of your life. Just talking to a coachman who drives for Cannonball down the Auerswald road. Says he couldn’t stop for the night at the Kleine farmstead. Burned to the ground by goat-headed fiends he says it was. Sigmar preserve us all! There might be something in it though … you know what Beastmen want? Livestock. Provisions. Captives for their sacrificial stones. You know what they don’t care about? Gold, and some of them country farmers ain’t short of a few crowns. Here’s one you can try if you’ve the nerve to impersonate a man from the Komission. Send word around the smiths of the city that they’ve finally seen sense and decided to scrap the steam bridge — been a few too many accidental dunkings recently after all. Now, urge them to keep it quiet because you don’t want to offend the Dwarfs that built it, but drop into the conversation that you’ll soon be looking for a professional human smith to help organise the disassembly. While you’re at it, mention that life’s been hard recently, the kids need new boots, you know the sort of thing. If Ranald’s a friend to you you’ll soon be raking in a fortune in bribes. I'm going to let you into a little confidence trick I call the Estalian prisoner. Helps to have a friend in a coaching house for this one, so they can help sort out the necessary deliveries. Introduce yourself in a well-written letter to a likely mark, the best choice is someone wealthy who hobnobs with the aristocrats from time to time but isn't actually noble themselves. The more sycophantic this social climber is the better. You want to impersonate a nobleman who isn't currently in town. Explain to your correspondent that you have been arrested for a minor yet embarrassing indiscretion in Bilbali, that your goalers have no idea who you are, and that you need funds to secure your release. You can't ask your family without them asking awkward questions, and you'll prove more than generous in your gratitude upon your eventual return."
   },
   {
     "id": "deft-steps:reference:41-fencing-in-downtime",
@@ -344,14 +304,6 @@
     "text": "Sometimes, an item is too risky to sell on and needs to be broken down into parts. These materials can be sold without fear but for a lower price. Only items made of precious stones or metals may be treated in this way.\n\nA Character may attempt an Challenging (+0) Trade (Any) Test. The Trade required is determined by the GM. On a success, the Character gains the object’s components, their total value being 50% of that of the original item. On a failure, the components are spoiled, their total value being 25% of that of the original item. These can be sold without risk of recognition."
   },
   {
-    "id": "deft-steps:reference:41-stolen-goods",
-    "name": "Stolen Goods",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 41,
-    "text": "Once a thief is in possession of stolen goods they need to get rid of them without attracting undue attention. Fences provide a bridge between the underworld and legitimate markets.\n\nThey make a name for themselves among criminals as trusted buyers and sellers, taking items of dubious origins and moving them on as legitimate products. Most Fences maintain a legitimate business, either as their primary occupation or as a front for their less salubrious activities. Rag and bone pickers, flea market hawkers, tavern keepers, even thief-takers and watchmen: anyone whose life brings them in contact with criminals can turn their skills to fencing goods."
-  },
-  {
     "id": "deft-steps:reference:41-take-a-trip",
     "name": "Take a Trip",
     "category": "rule",
@@ -366,14 +318,6 @@
     "topic": "Fraud, criminal contacts and organisations",
     "page": 42,
     "text": "Embezzlers seek to present a legitimate and respectable image to the world and tend to masquerade as clerks. They count as having the Status of Silver 1 for the purposes of Fellowship Tests. They may not make use of the Criminal Talent unless they have made themselves known as a criminal to those they are interacting with."
-  },
-  {
-    "id": "deft-steps:reference:42-embezzlers",
-    "name": "Embezzlers",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 42,
-    "text": "Embezzlers work legitimate jobs. They may even be good at them, cultivating a reputation as a dedicated worker. However, over time a sharp-eyed employer may realise they are not making the profits they expect — the figures no longer add up, or they’re not selling as many goods as before. At the centre of everything, the embezzler weaves a web of figures to obfuscate their theft.\n\nEmbezzlers play a dangerous game. Should their employer pierce their veils of lies their faces and names are known. They are liable to be cast from respectable society and suffer retribution. For this reason, many embezzlers become full-time thieves. Their skills with numbers and excuses can make them prized advisors to gang bosses."
   },
   {
     "id": "deft-steps:reference:42-random-business-table",
@@ -488,30 +432,6 @@
     "text": "Whilst most criminals in the Old World are opportunistic generalists, those who survive long enough to make it their profession develop specialist skills. Burglars and counterfeiters have different talents. To profit from their activities, they need a network of contacts, who may not be criminals themselves. A thief benefits from knowing fences, information brokers, and those who might provide a safehouse. In WFRP, Rogues have two ways of finding and using criminal contacts. Casual contacts are found during adventures. More significant Contacts – those you’ll develop a longer-term, profitable relationship with – are found using an Endeavour (see page 130)."
   },
   {
-    "id": "deft-steps:reference:46-priests-of-ranald",
-    "name": "Priests Of Ranald",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 46,
-    "text": "Followers and priests of Ranald make excellent criminal contacts. They are well-connected and you can trust they won’t beat you up or go to the authorities when you’re in a tight spot. Followers of the Night Prowler or Trickster could provide expertise in any useful skills relating to felonious activities.\n\nAll Ranald’s followers know to keep their ear to the ground, but followers of the Protector are especially well-informed about what’s going on in their neighbourhood. Shrines of Ranald may also have hiding places to stash contraband or wanted individuals."
-  },
-  {
-    "id": "deft-steps:reference:47-fences",
-    "name": "Fences",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 47,
-    "text": "Theft is one thing, but converting goods into money requires different skills. A fence knows how and where to sell stolen goods. They can find customers who will turn a blind eye to the dubious provenance of the items for sale.\n\nThe quality of a Fence depends on their network, and this can be a major influence on the prices they can secure for stolen goods. A Fence with contacts in the foppish nobility might purchase treasures such as a gold ring set with a Stonehorn gem stolen from a countess’s wardrobe, or a necklace of glowing Brynduraz swiped from a Dwarf queen, but won’t be interested in a few sacks of undyed wool lifted from the deck of an unguarded barge. Conversely, someone who runs a shoddy antiques shop may buy common articles but won’t take a risk on a marble bust of Verena sculpted by Leonardo di Miragliano.\n\nGood thieves get to know several Fences who specialise in flogging various types of loot. The closer the bond of trust between fence and thief, the higher the prices offered for goods. This trust is built on reliability and people without discretion they don’t last long on either end of the deal.\n\nFences can act as patrons from time to time. They are the first people consulted when a client needs something specific, and readily pass that request on to a thief they believe they can trust."
-  },
-  {
-    "id": "deft-steps:reference:47-forgers-and-counterfeiters",
-    "name": "Forgers and Counterfeiters",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 47,
-    "text": "Forgers can provide smugglers with the permits that allow them to bring goods into the city, swindlers with certificates of authenticity for the art they sell (and often the forged art itself), or any type of document imaginable, from bankers’ drafts to a licenses to practice magic issued from the Celestial College in Altdorf.\n\nForgers are usually found in cities and larger towns, for that is where most of their clientele is, and because this is where they can get the materials and tools they need. In addition, the anonymity of a large city makes it easier for them to go about their work unnoticed.\n\nThe time a forger needs to make a product depends both on their skill and how specific the needs of their client are. While a fake entrance permit to the city may be but a work of a few minutes for some, this expedience is bought by the forger having the correct parchment, official seal, and the correct shade of ink. A thief who intends to steal the Staff of Volans from the Supreme Patriarch may desire a forgery to swap out for the genuine article. A forger might takes weeks if not months to undertake this task, if they even have the skills to do so.\n\nThe quality of the forged piece, and the likelihood that it would be recognised as a fake, also influences how much time is needed to craft it. Objects that (hopefully) won’t face close scrutiny won’t need as much work as those that are going to be thoroughly inspected. Added to that, the more time needed to create the object, the more expensive or illegal the materials, and the more unusual the request, all can raise the price of a forgery."
-  },
-  {
     "id": "deft-steps:reference:47-profile-fence-silver-2",
     "name": "Fence (Silver 2)",
     "category": "profile",
@@ -526,22 +446,6 @@
     "topic": "Printed NPC and creature profiles",
     "page": 47,
     "text": "FORGER (Silver 1)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 30 | 30 | 30 | 40 | 40 | 30 | 45 | 40 | 30 | 35 | 14 |\n\nTraits: Weapon (Dagger) +5\n\nSkills: Art (Calligraphy 55, Painting) 40), Bribery 40, Charm 45, Cool 43, Consume Alcohol 50, Evaluate 50, Gamble 45, Gossip 50, Haggle 48, Intuition 50, Melee (Basic) 33 Perception 50, Stealth (Urban) 40, Secret Signs (Thief) 45\n\nTalents: Artistic, Flee!, Nimble-Fingered, Savvy, Suave\n\nTrappings: Clothing, Coin Mould (any currency), Dagger, Hood, Pouch, Sling Bag containing two Candles and five Matches, Trade Tools (Calligrapher, Painter)"
-  },
-  {
-    "id": "deft-steps:reference:48-information-brokers",
-    "name": "Information Brokers",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 48,
-    "text": "Information is power: knowing when a merchant’s coffers are full for payday, having a good bit of leverage for blackmail, or which of the watchmen take bribes to look the other way. This information is often the key to being a successful Rogue. But information doesn’t come out of thin air. To get it, rogues rely on a network of informers. Servants at the local inns who know when wealthy travellers have checked in, chatty clerks at merchant houses who know about their master’s finances, and friendly contacts in the city watch — all people who can tell you the right thing for a few coins.\n\nThe other option is an information broker, someone who makes it their business to know things. Some hang out in gentlemen’s clubs, visit social events of the upper classes and build a network of contacts there, so that they can stay on top of the latest gossip in these circles and identify marks that deserve to be swindled out of their money. Others frequent inns where travellers gather to mingle with the coachmen and sailors. These people make it their business to know about visitors to the city, why they are there, who they know, and whether they would make a good target.\n\nThe information these intermediaries gather is worth money to the right kind of people, and they know how they can profit from it. Some share what they know for a fixed fee, others for a share of the profit that an enterprising criminal stands to make, while others have a standing arrangement with local gangs to provide information for a fixed monthly sum."
-  },
-  {
-    "id": "deft-steps:reference:48-muscle",
-    "name": "Muscle",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 48,
-    "text": "No matter how smart a charlatan is, or how fast a pickpocket can run, sometimes the person being swindled is smarter, faster, or simply stronger and meaner. At such moments, Rogues might need muscle to back up their schemes, or to dissuade a target from attempting to take back what they have stolen. In such situations it is good to have contacts who can provide that service.\n\nMost of the time, these assistants don’t actually have to fight, they just have to look the part. Often, the goal is to intimidate, to make the other party back off, and to not actually use violence. This doesn’t always work, so you need muscle that can back up the threat of violence with the reality of violence. True professionals remain in control, only use the necessary amount of physical intervention, and minimise the mess.\n\nSmart rogues know when to use the threat of violence, and when to deliver on it. They know that too much reliance on this instrument is likely to backfire, because there is always someone who is stronger and meaner."
   },
   {
     "id": "deft-steps:reference:48-profile-bawd-brass-3",
@@ -584,14 +488,6 @@
     "text": "Tell your GM what you want the Contact to be able to do for your character. If you have an idea of what they might do, and what power or influence they wield, that can help too. Are they guards at the city gates, willing to turn a blind eye when you smuggle goods into town? A legal clerk with gambling debts and access to sensitive information? These suggestions help you to agree with the GM the status of the Contact you are trying to make.\n\nNext, the Character must pass a Difficult (-10) Gossip Test and spend money equal to the Contact’s status. This represents the Character trying to identify a suitable Contact and build a relationship with them. If they succeed, they have made a connection and can complete the Endeavour. If they fail, they can try again with another Endeavour."
   },
   {
-    "id": "deft-steps:reference:50-flesh-out-the-contact",
-    "name": "Flesh out the Contact",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 50,
-    "text": "Now it’s over to the GM. If you have an NPC in your campaign who would serve as an appropriate Contact, great! So long as it doesn’t make any difficulties for the ongoing plots, a Contact already involved in the ongoing game adds to the feel of a deep and integrated world.\n\nIf you need to introduce a new NPC, make sure they add flavour to the game and build on the character’s skillset rather than solving all their problems for them. Contacts usually specialise in certain fields, though they might have a secondary use if it makes logical sense. For example, Fences cultivate a circle of clients and are only interested in items of interest to that group, but they might also pick up a range of useful information from their clients. If possible, link the Contact to groups and events from your game, to integrate them into the setting.\n\nOnce the Contact has been identified, flesh out the rest of their details. The chapter on Character, WFRP page 24, may help you pick a name, determine species, age, and the contact’s starting skills, talents, and wealth.\n\nYou can decide how much detail to go into, but at a minimum need a name, description, who of interest they know and the values of their highest relevant skills (see Contact Quality on page 52). The more details you have, and the better you know the network of people the Contact works with, the more opportunities there will be to involve them meaningfully in your game."
-  },
-  {
     "id": "deft-steps:reference:50-new-endeavour-establishing-a-contact",
     "name": "New Endeavour: Establishing A Contact",
     "category": "endeavour",
@@ -622,22 +518,6 @@
     "topic": "Printed NPC and creature profiles",
     "page": 55,
     "text": "AUGUST STERNWACHTER Master Fence, ex-Noble (Silver 3)\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 45 | 24 | 28 | 32 | 58 | 47 | 53 | 52 | 32 | 61 | 11 |\n\nTraits: Weapon (Rapier) +6\n\nSkills: Bribery 71, Charm 81, Consume Alcohol 47, Cool 37, Dodge 62, Evaluate 72, Gamble 67, Gossip 81, Haggle 76, Intimidate 38, Language (Classical 62, Tilean 57), Leadership 71, Lore (Art 62, Heraldry 57), Melee (Basic 60, Fencing 60), Perception 68, Play (Lute) 63, Secret Signs (Thief) 57\n\nTalents: Briber, Criminal 7, Dealmaker, Etiquette (Criminals, Guilders, Nobles, Servants), Gregarious, Kingpin, Noble Blood, Read/Write, Savvy, Suave\n\nTrappings: Eye-glass, Purse containing coins to a value of 10 GC, Rapier, Writing Kit, August owns a modest house in Altdorf’s Fishemarkt district in which he keeps a small library of books and a leger of contacts written in his own secret code"
-  },
-  {
-    "id": "deft-steps:reference:56-contacts-and-the-gm",
-    "name": "Contacts And The Gm",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 56,
-    "text": "Exchanges between Characters and contacts help make a story less abstract. They can clarify where the lockpicks and sleeping draughts a Character uses come from, obtained from actual NPCs. When a Character walks the street or enters an inn they may encounter their Contacts.\n\nContacts can be used in the structure of a plot. They can divulge information to Characters without having to pass Gossip tests. Informants are an obvious channel for this, but any Contact may know things of interest. If Characters are gathering information about a mansion they want to break into, perhaps their fence knows the layout of that location because people living there are among his clients. Or maybe the thugs that the Characters sometimes rely on for more muscle power, have been hired to carry some heavy crates into that house."
-  },
-  {
-    "id": "deft-steps:reference:57-organised-crime",
-    "name": "Organised Crime",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 57,
-    "text": "The romantic notion of the lone highwayman or gentlemen thief is indulged and celebrated — from the lusty novels of the Fishrook to the exploits of the King of Banditti, Rudi Wegener, in the song A Bandit Bold. These tales are largely fictitious – the lone rogue is almost never alone, and organised crime is anything but romantic.\n\nMany criminal schemes need a range of specialist skills to pull off, so co-operation is essential and crime gangs can be found in every major settlement in the Old World. The profits of large or rich territories can fund the growth of immensely powerful gangs with real influence and resources. Organised gangs often discourage other criminals in such places. To maintain their own activities without interruption, they need crime to rank below other challenges to the local rulers. They ruthlessly control criminal activities, eliminating anyone who might prove an effective rival or draw the attention of the watch. The sudden appearance of Big Piet De Groot in a dark Marienburg alley is terrifying, and not just because of his tall and muscular frame. Just as dangerous are the hundred other ruthless men and women whose influence permeates the docks and counting houses of the city.\n\nHowever, the potential rewards tempt individuals to get away with more than their share of the loot, murder their rivals, or rat out erstwhile partners to the authorities. Potential betrayals make everyone nervous, so the unwritten code of honour among thieves is enforced with lethal violence. Terrifyingly final consequences, such as the Fish gang’s habit of drowning informants in the Reik, are an effective deterrent, but there’s always a large enough score or a person desperate enough that few organised criminals trust anyone else completely."
   },
   {
     "id": "deft-steps:reference:58-assemble-the-gang",
@@ -720,38 +600,6 @@
     "text": "|  |  |  |  |  |\n| --- | --- | --- | --- | --- |\n| Organisation Level | Facilitate Links to Contacts: | News and Rumours | Will Help Fence: | Provide Lawyers for Memebers Accused of: |\n| 1 | Bawd, Racketeer | Plans of Public Areas | Goods of a value of up to 10 GC per Month | Trivial and Moderate Crimes |\n| 2 | Bawd, Charlatan, Fence, Racketeer | Schedules of Watch Patrols | Goods of a value of up to 20 GC per Month | Trivial and Moderate Crimes |\n| 3 | Bawd, Charlatan, Fence, Forger, Racketeer | Plans of Sewers and Notable Buildings | Goods of a value of up to 40 GC per Month | Trivial, Moderate and Serious Crimes |\n| 4 | All Contacts | Copied Keys, Friendly Insiders | Goods of a value of up to 80 GC per Month | All Crimes |"
   },
   {
-    "id": "deft-steps:reference:67-fencing",
-    "name": "Fencing",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 67,
-    "text": "A successful rogue may obtain all kinds of objects they can’t value. A thief may make away with swag including a jade statuette of a frog (a worthless imitation), a crystal decanter (a gift from the Ambassador of Lothern worth a small fortune), and a crude stone carving (antique Unberogen, worth significant amounts to a collector).\n\nA skilled fence can accurately value finds and keeps contact with specialists who may not be criminals, but who aren’t terribly ethical either. A rogue with access to such specialists can earn considerably more of an item’s true value than one who does not. Beyond the esoteric, a fence is an efficient way of getting ‘hot’ property off a thief ’s hands quickly. If a particular item of note has been stolen, or if a person with significant influence was the target, a rogue would be wise to get the object out of town fast, and a fence is the best means to achieve this."
-  },
-  {
-    "id": "deft-steps:reference:67-perks-of-membership",
-    "name": "Perks Of Membership",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 67,
-    "text": "When faced with membership of an organisation a rogue may well ask ‘What’s in it for me?’. Whilst the obvious advantage is avoiding being chained to an anchor and thrown into the Reik, there are a considerable number of benefits that aren’t available to a solo operator."
-  },
-  {
-    "id": "deft-steps:reference:67-protection-from-the-law",
-    "name": "Protection From The Law",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 67,
-    "text": "It’s a fact of life that criminals occasionally get caught. A gang member might provide valuable information to the watch, so it obviously behoves the gang to spring such members out of a watch post cell as quickly as possible. The gang may well have members of the watch on the payroll, able to assist a minor gang member go free. However, this cuts (sometimes literally) both ways — if the captured member is not worth the cost and time to be extracted legally from the authorities, a more immediate form of silencing them might be preferred.\n\nThe support a criminal organisation is willing to give to a member who is convicted of a crime varies according to its size, and the seriousness of crime committed (see page 96). It is up to the GM to determine if the organisation helps, and how they do so.\n\n80 GC per Month"
-  },
-  {
-    "id": "deft-steps:reference:69-gang-war",
-    "name": "Gang War",
-    "category": "rule",
-    "topic": "Fraud, criminal contacts and organisations",
-    "page": 69,
-    "text": "A common trait amongst criminals is the desire for more than they can take for themselves. So, it is no surprise that within a criminal organisation, there will be numerous individuals dissatisfied with their position. Whilst promotion by merit is possible, the natural inclination for such individuals will be to obtain promotion by force. The hardest thing for any criminal organisation is to keep it from erupting into war within itself.\n\nOn the streets of Altdorf the ramifications of the Fog Riots of 2506 IC are still being felt. The Hooks play a careful game, assisting the watch by placing their members within the Citizens Vigilance Committee. Whilst their public face is of law-abiding virtue, they prepare to muscle in on any of the Fish’s smuggling operations they can seize. For their part, the Fish are friable; a prospective leader would have to crack their rivals’ heads in order to wrest control of the gang. If they did, the vast smuggling network of the Fish, with offshoots in many cities along the Reik and Talabec, would be theirs for the taking.\n\nIn Middenheim, the Low Kings are mostly satisfied to stick to their territories. The rookeries of Ostwald and the Altquartier provide more than enough work for the larger gangs, and the smaller ones are humble enough to confine their activities to their own districts. However, Bleyden, the Lowest King, is growing old and shedding allies, making his holdings a tempting target for takeover.\n\nIn Marienburg, things are more stable, but trouble is brewing. Despite the best efforts of the Gentlemen Entrepreneurs, the first moves of a coming gang war are already being plotted by Grossbart and his allies.\n\nUrban Myths\n\nJohann the Knife\n\nA bright morning to ye! What can I offer you today? A sword, perhaps, a fine Estalian rapier? Something heavier, like a kriegsmesser? Oh, just a knife? Well, I have many, but you’ll want something special.\n\nHow about this? The jewelled handle? Oh, don’t let its fanciness fool you, this is a solid, fighting knife. It was good enough for Johann the Knife!\n\nEh? Surely, you’ve heard of Johann the Knife? The famed assassin and mercenary of Mordheim? True, some dismiss him as a mere cutthroat, but you don’t build a legend around one who couldn’t handle a blade!\n\nOr should I say blades, for he collected the knives and daggers of his wealthy victims. Aye, they say he was a greasy, filthy character who never cleaned his leathers, but he recognised quality. Decorative blades he stripped of their gems, but he wielded many-a jewelled dagger that knew its business!\n\nOh yes, an assassin and fighter, with a cruel glint in his eye. No, not simply a backstabber: a duellist. A vicious one no doubt, but he defeated master knifemen as well as amateurs. Had a tidy aim with a thrown blade even over the furthest distance too.\n\nTrue, he had his share of scars, but all fighters do. Some say Johann liked a drop of Black Lotus on his blades or a dose of Crimson Shade, but I think that’s the slander of his enemies and rivals.\n\nAlways had a purse full of gold, such was his success. Generous to the barmaids it’s said, but given his scars and smelly leathers, perhaps he had to be. It’s difficult to know the man himself, as few were close to him. But there was talk of a favourite barmaid, even a beloved sister and niece. Perhaps there was an heir to his skills!\n\nAs for this knife, it’s certainly the right style for the time and region of Mordheim. I was sold it as used by Johann himself, left in the body of the seller’s ancestor as a calling card. Who knows, perhaps a little of his ghost lingers about it!"
-  },
-  {
     "id": "deft-steps:reference:81-the-great-horned-helm",
     "name": "The Great Horned Helm",
     "category": "rule",
@@ -776,36 +624,12 @@
     "text": "If a priest of Taal incurs the wrath of their god, he may strike them with his own savage curse.\n\nIf a Player rolls over 151 on the Wrath of the Gods table, you can substitute the result in the Core Rulebook for the Curse of Taal — unless they spend a Fate Point, their mind is reduced to that of a brute animal. Taal forces them under his dominion and replaces reason with brute instinct. From now on they wander the wild places as a feral beast, senseless and filthy."
   },
   {
-    "id": "deft-steps:reference:90-breaking-the-law",
-    "name": "Breaking The Law",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 90,
-    "text": "The laws of the Empire are many and varied. Depending on where a crime is committed and by whom, it could result in a thorough investigation followed by a serious trial and stiff consequence or a more desultory procedure that allows wrongdoers to get away with murder.\n\nWhen a Character breaks the law, the GM should consider a few things before determining how the authorities respond.\n\nWhere is the offence committed? The towns of the Empire are governed well enough that criminals must exercise care to avoid prosecution. Even in the most civilised settlements, there are areas where the Watch are reluctant to tread, such as the anarchic Isle of Eels in Altdorf or the impoverished Ostwald district of Middenheim. In some regions of the Empire, such as the benighted land of Sylvania, the authorities are broadly neglectful of the safety and security of their subjects.\n\nWho Commits the Crime? Even in its civilised quarters the Empire does more to protect the elite than it does the poor and desperate. Many authorities summarily punish miscreants from the Brass Tier to show that they are not shy of enforcing the law, whilst those from the Silver Tier may be treated with more lenience. Those in the Gold Tier, especially the nobility, are not technically above the law but treated with such dignity and deference that their trespasses go unpunished unless they are public and gratuitous enough to embarrass their peers.\n\nWho is the Victim? Conversely, those whose crimes target their social superiors are regarded as not only offending against their victim but against the social order. Should an aristocrat strike a commoner in rage, the courts will likely decide that the impertinent churl deserved it. Should the roles be reversed, the consequences are likely to be severe.\n\nThere is no consistent standard, but the easiest way to avoid being caught, tried, and convicted is to keep your criminal activity confined to the poorest city rookeries."
-  },
-  {
-    "id": "deft-steps:reference:91-unpopular-edicts",
-    "name": "Unpopular Edicts",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 91,
-    "text": "Despite the fact that the Emperor is advised to exercise caution when it comes to issuing edicts, there have been a number of times in the Empire’s history when unpopular laws have been pushed through without due consideration. The Halfling Licensing Proclamation was issued in 2373 IC by Emperor Leopold. This legislation was designed to provide funds for the imperial treasury by obliging anyone who employed a Halfling cook to purchase a license. Following protests by the nobility (amongst whom it was fashionable to employ a Halfling cook) and the grandees of the Moot, the edict was rescinded. In the early years of her troubled reign, Empress Magritta convinced the Prime Estates to back her anchor tax, but they stopped enforcing the legislation when ship’s captains began throwing their anchors overboard and ports became dangerous places due to all the drifting vessels.\n\nLitigants — There is a body of written legislation and an understanding of precedence that justifies a professional legal class trusted to interpret the law. Their influence usually ends at the walls of the larger cities, and they must be aware that the laws they learn about may vary from those of neighbouring regions.\n\nGuilds — Motivated by the need to protect their interests and reputation. The seriousness with which a guild takes the task of enforcing standards and those conditions it recommends for its members vary from place to place, though within the Empire, there is a fairly consistent approach to such matters.\n\nKommissions — Set up to gather public opinion and present it in a digestible form to legislators. In places such as Middenheim, they are considered an integral part of the process of developing laws. More cynical regimes may use them to reassure the populace that they are being listened to, or do away with them altogether.\n\nTown Councils — May govern on behalf of a local noble or in their own right in the case of towns that have been chartered, such as Kemperbad. The growing influence of such councils is a concern to the nobility, who see them as undermining their traditional authority.\n\nVillage Elders — Generally, villages and farmsteads look to the nearest town for protection. If they apprehend a suspect, villagers send word or wait for a travelling magistrate to visit the village. Isolated communities may impose their own justice rather than wait."
-  },
-  {
     "id": "deft-steps:reference:92-determining-watch-presence",
     "name": "Determining Watch Presence",
     "category": "rule",
     "topic": "Laws, prison and outlaws",
     "page": 92,
     "text": "Asuming the Characters are operating in a city or town, then there is a chance that a watch patrol may pass by as they are in the process of committing a crime, or be close enough to respond quickly if a hue and cry is raised by victims or bystanders.\n\nTo determine the presence of a Watch patrol roll on the Watch Presence Table with the the following modifiers:\n\n+1 If the setting is a city. +1 if the neighbourhood is a wealthy district or busy market area. +1 if there is a Watch post or station visible from the scene of the crime. +1 if the Crime Crackdown or Riots Event occured during the last period of downtime. -1 if the setting is a small town. -1 if the neighbourhood is a poor area. -1 if the crime takes place between 11 pm and 5 am. -3 if the neighbourhood is a notorious rookery, or no-go area as far as the Watch are concerned.\n\nOf course, any criminal with their wits about them knows to keep an eye out for the watch, and refrain from criminal activity whilst they are in the vicinity. The easiest way to deal with a watch patrol is simply to wait for it to be on its way. However, in busy markets and thoroughfares, another patrol may be along in short order."
-  },
-  {
-    "id": "deft-steps:reference:92-talabheim-the-city-of-laws",
-    "name": "Talabheim, The City Of Laws",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 92,
-    "text": "Any town with a storied history is likely to have a corpus of laws appended to charters or derived from a patchwork constitution — part precedent, part written documentation, and part received wisdom. The city of Talabheim sits at a geographical and historical crossroads. Sited at the centre of the Empire, it was pivotal during the events that led to the Age of Wars. Perhaps this is why it has ended up with such a bewildering legal system, influenced over years by an Ulrican north, a Sigmarite west, and Taalite traditions. Whilst it was at the centre of political instability, Talabheim has endured, and its records date back to the time of Sigmar and beyond. Members of Talabheim’s Litigants’ Guild are constantly busy collecting and compiling these laws and producing books aimed at interpreting the law for various special interest groups, such as nobles or merchants.\n\nTalabheim’s student lawyers do not learn every law, but they are expected to know how to find them. The need to master the vast library of information can lead to competition between students. In Talabheim it is not unknown for those unfamiliar with the city to be preyed upon by a young litigant, enquiring after such information as the status of their cat license.\n\nHere are some of the laws that Characters may encounter during their time in Talabheim.\n\n“In times of civil strife, citizens may carry weapons no larger than their forearm.” The Zweig Act was drafted after thugs took advantage of a siege and carried swords and polearms to prey upon other citizens.\n\n“Dwarfs are to be granted free and unimpeded entry through the Wizard’s Way on the 5th day of every month.” Passed in 2115 IC after successful lobbying by the Dwarf Iron Guild of Karaz-a-Karak.\n\n“Fish caught in the Talabec are considered property of the Office of the Purse. Fish over three pounds must have one-quarter of its flesh allotted to the Minister for assessment.” Issued in 2240 IC by then High Counsellor Johansberg, former Minister of Taxation. These days this law is only enforced in the case of nuisance angling.\n\n“Consumption of alcohol within the Field of Absolution is limited to one tankard of ale or its equivalent per person, with an additional Witness Tax of 1 shilling per drink.” Part of the Hard Spirits Bill of 2105. Used as a measure to reduce potential rioting during executions."
   },
   {
     "id": "deft-steps:reference:93-crimes-and-the-watch",
@@ -838,22 +662,6 @@
     "topic": "Laws, prison and outlaws",
     "page": 93,
     "text": "| D10 | Result |\n| --- | --- |\n| 1 – 2 | Attention Elsewhere. There are no Watchmen in the vicinity. If a hue and cry is raised it will take 20 minutes or more for a patrol to arrive |\n| 3 – 5 | Round the Block. The nearest watch patrol is a few streets away. If a hue and cry is raised it will take 20 Rounds or more for a patrol to arrive. |\n| 6 – 8 | Patrol in the Vicinity. There is a watch patrol within 100 yards of the location. If a crime is committed in a public area a Watchman may spot it on an Opposed Very Hard (-30) Perception/ Stealth Test. If a hue and cry is raised it will take 10 Rounds for a patrol to arrive. |\n| 9 | Patrol Nearby. There is a watch patrol within 50 yards of the location. If a crime is committed in a public area a Watchman may spot it on an Opposed Difficult (-10) Perception/Stealth Test. If a hue and cry is raised it will take 5 Rounds for a patrol to arrive. |\n| 10 | Patrol Present. There is clearly a patrol either in the same street, or right outside the location in question. If a crime is committed within their line of sight a Watchman may spot it on an Opposed Average (+20) Perception/Stealth Test. If a hue and cry is raised the patrol responds immediately. |"
-  },
-  {
-    "id": "deft-steps:reference:94-noble-prisoners",
-    "name": "Noble Prisoners",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 94,
-    "text": "The fact that nobles are usually spared the rough end of the law does lead certain young baronets to regard it as a form of sport to make a nuisance of themselves at the expense of the common folk. Most aristocratic houses indulge their wayward scions and excuse their misbehaviour as youthful exuberance. However, they do know the pranking and obnoxiousness of young noblemen is ready fodder for the pamphlets and street preaching of agitators. Most noble families see to it that the errant behaviour of their peers is kept in check, even whilst they do all they can to ensure that legislators do not eat away at their ancient privileges.\n\nAny Character who possesses the Noble Blood Talent is likely to be treated with far more consideration than their fellows if they are caught committing an offence or suspected of criminal activity.\n\nIf a criminal is recognised as an aristocrat, they are most likely to be spared immediate consequences such as punitive beatings, fines, or arrests. The watch typically do all they can to look the other way. If the noble’s crimes are so public that it would embarrass the watch to leave them be they may well detain them, but only for so long as it takes to contact a higher authority who knows about the proper way to deal with an errant noble.\n\nThe treatment of the noble prisoner depends on the relationship the rulers of the town have with the noble family in question. If they are friendly, then punishment may be limited to a stern warning and promises of calling in favours in time to come. If they are enemies, then the noble may be held as a hostage until an exorbitant ransom is paid. Imprisonment may result, but the prison itself is likely to be lavish compared to the cells of the local prison. Even nobles who hate one another are usually careful about how they treat aristocratic prisoners, the boot may be on the other foot someday.\n\nFew Watchmen are experts in heraldry or genealogy, so a noble who faces arrest without making it clear they belong to an aristocratic line is treated no better than anyone else. This isn’t hard — merely the sound of an upper-class accent is enough to give a Watchman pause for thought. There are members of the watch who resent the presumption that a noble be spared the consequences of their misbehaviour and do all they can to make the process as difficult as they possibly can without endangering their own livelihoods."
-  },
-  {
-    "id": "deft-steps:reference:95-a-day-in-court",
-    "name": "A Day In Court",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 95,
-    "text": "Despite the efforts of many luminaries of the cult of Verena, who preach that justice ought to be served through a consistent implementation, there is a vast disparity in the experience of those brought before magistrates in the Old World. The degree to which a plaintiff is heard and the consequences for those found guilty differ according to local legal traditions, the social class of the accused and those they offended, and the temperament of presiding magistrates.\n\nEven within the Empire the experience of the accused can vary wildly. In the backwaters of Sylvania, justice is rough and arbitrary. A lord may simply appoint a favoured crony as magistrate, who is ordered to do little more than keep the peace and protect the interests of the nobility. In such places, heinous crimes may be overlooked if they only affect the poor, whilst a trivial trespass against a friend of the powerful might be punished by terrible torture, mutilation, and execution, often in sequence.\n\nEven in more civilized places, trials are often more about keeping the appearance of justice being done rather than allowing the accused a genuine chance to argue their innocence. Typically those determining whether the accused ought to face punishment have made up their minds before the trial begins, and any court proceedings that take place are limited to making a record of the account of those who made the arrest and allowing the accused to prove that they possess the integrity to face their fate with grim stoicism.\n\nYet there are circumstances where a case may be taken more seriously. Nobles and Characters who demonstrate the ability to read and write who are accused of a crime are often allowed to plead their case and may even hire litigants to help them present a legal argument. This is a luxury afforded to the lucky few, and only if the local authorities allow it.\n\nShallyan and Verenan reformers argue that even common folk ought to be afforded the chance to plead their case and that cruel and unusual punishments for minor crimes should not be arbitrarily levied. In cities such as Altdorf and Middenheim they occasionally find sympathetic ears, though their critics are quick to jump on any subsequent unrest as proof that being soft on criminals results in disorder, and a return to traditional harsh measures is usually quick to follow."
   },
   {
     "id": "deft-steps:reference:95-fairer-hearings",
@@ -960,14 +768,6 @@
     "text": "Outlaws face threat of arrest and imprisonment. The severity of the threat depends on the reach of law enforcement, and the wealth or position of the victims. The wrath of an impoverished baronet from the backwaters of Ostland can often be evaded by travelling to Altdorf and changing your name. Escaping justice after robbing a rich merchant from Nuln is more difficult. Road wardens display wanted posters along the Empire’s thoroughfares, and the reward for your arrest can grow large enough to tempt your own mother.\n\nOutlaw characters should agree how and where they became outlawed with the GM. If they come within reach of the authorities they crossed, there is a risk of them being recognised. Disguises and a new identity will allay this risk. Most outlaw characters’ background should have an infrequent, moderate impact on the game – it’s fun for it to come up every now and again, but constant pursuit and conflict would interrupt the flow of the game. NPCs finding out about the character’s past provides leverage, or maybe even previously unknown evidence that could prove their innocence…\n\nRules: When returning to a location where an outlaw (allegedly) committed their crimes, make an Opposed Challenging (+0) Stealth/Perception Test each day. If this is failed, they have been recognised and the GM can decide the consequences of this. Is the watch tipped off, or is it old friends who notice and are delighted to help the outlaw."
   },
   {
-    "id": "deft-steps:reference:99-outlaws",
-    "name": "Outlaws",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 99,
-    "text": "Many outlaws in the Empire are fugitives, evading justice when accused of a crime, or escaping after being convicted. Failure to pay taxes or debts can also lead to this fate, especially when the Electors need coin to field an army. The threat of outlawry often convinces those who can’t pay up to join the state troops instead – the nobles get their way by hook or by crook.\n\nNobles can declare a resident of their fief an outlaw, although many of them would consider it beneath their station and refer the matter to the nearest court. If the crime is serious, or if the local court and its judges are reputed to be biased or cruel, the accused will often run away to start a new life. Watch sergeants aren’t concerned with pursuing convicts beyond the city walls, and road wardens usually consider their job done after wanted bills are posted. Fugitives are rarely caught, unless the victim or their family can afford to hire a competent bounty hunter.\n\nOutlaws can be pardoned by reporting for trial and being found not guilty. The Emperor can grant pardons to any citizen of Sigmar’s lands, and Elector Counts are empowered to pardon outlaws within their provinces."
-  },
-  {
     "id": "deft-steps:reference:100-ambush",
     "name": "Ambush",
     "category": "rule",
@@ -1006,14 +806,6 @@
     "topic": "Laws, prison and outlaws",
     "page": 101,
     "text": "To achieve Tier 3 of the Outlaw career (Outlaw Chief), the character must form a band of outlaws. At a minimum, two outlaws in addition to the chief are needed to constitute a band. Existing Characters from your campaign can be recruited, otherwise, outlaw NPCs can be generated using the tables provided on page 102.\n\nMaintaining an outlaw band while adventuring can be challenging. Outlaws expect their chief to orchestrate regular robberies, and if a band is left without leadership they may find a new chief.\n\nOutlaw Chiefs can set rules and restrictions for their band. The strictures of Ranald (WFRP, page 208) provide a good baseline for a set of rules that most outlaws would consider acceptable.\n\nOutlaws who don’t like their chief ’s rules might confront them or even try to usurp their leadership, however, usually they just join a different band or go it alone.\n\nOutlaws expect rough living conditions, so a chief who understands this and relieves hardship commands more loyalty. A good quality camp and stable food supply can improve the outlaw chief ’s Leadership tests by +2 SL. Outlaws are far more likely to wait for the chief to return from adventuring if they’re treated well. The chief normally nominates a second-in-command to oversee the camp during their absences."
-  },
-  {
-    "id": "deft-steps:reference:101-outlaws-ranald",
-    "name": "Outlaws & Ranald",
-    "category": "rule",
-    "topic": "Laws, prison and outlaws",
-    "page": 101,
-    "text": "Outlaw bands may venerate Ranald the Deceiver. Where this devotion is significant, they incorporate prayers to Ranald in their initiation rituals, asking the god to judge whether the recruit is dishonest in the right way, rather than merely untrustworthy.\n\nVigilante outlaws often petition Ranald the Protector to champion their cause. Many a vigilante band has sat around the campfire telling rousing tales of Ranald unseating despotic rulers.\n\nOutlaws rely on the threat of violence to pull off their crimes, so they find ingenious ways to avoid causing harm without making it obvious to their targets.\n\nBandit Kings are powerful individuals who like to surround themselves with trusted advisors. That may include a Priest of Ranald, who can advise them on matters spiritual and, hopefully, bring the outlaw fiefdom good fortune."
   },
   {
     "id": "deft-steps:reference:102-detailing-outlaw-bands",
@@ -1136,14 +928,6 @@
     "text": "BRUNNER Bounty Hunter General\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 4 | 63 | 57 | 48 | 57 | 61 | 35 | 34 | 45 | 38 | 26 | 23 |\n\nTraits: Armour 3 (8), Ranged (Crossbow Pistol) +7 (10), Weapon (Dagger) +6, Weapon (Drakesmalice) +9\n\nFate Points: 2\n\nSkills: Animal Care 55, Athletics 50, Bribery 46, Charm 46, Climb 58, Drive 40, Endurance 72, Evaluate 50, Gossip 43, Haggle 46, Intimidate 63, Intuition 81, Language (Bretonnian 50, Tilean 55), Lore (Reikland 55, Border Princes 55, Tilea, 50, Law 50), Melee (Basic) 83, Outdoor Survival 65, Perception 81, Ranged (Blackpowder 72, Crossbow 72, Entangling 72, Throwing 67), Ride (Horse) 45, Swim 58, Track 76\n\nTalents: Accurate Shot 2, Careful Strike, Break and Enter 2, Deadeye Shot, Doomed (‘Thy end will be met at the end of all things’), Dual Wielder, Fearless (Outlaws), Hardy, Marksman, Read/Write, Relentless, Savvy, Seasoned Traveller, Sharp, Strike to Stun, Strong Back, Sure Shot 2, Warrior Born\n\nTrappings: Leather Jack, Gromril Breastplate, Plate Bracers & Leggings, Open Helm, Repeater Crossbow Pistol (Skaven design, mounted on plate bracer), Bandolier of Knives, Hidden Throwing Knife (in plate bracer), Pistol (Fine quality), Hatchet, Dagger (‘The Headsman’, serrated for decapitations), Sword (‘Drakesmalice’, see below), Leather Boots (with steel toes), Light Warhorse (‘Fiend’), Draught Horse (‘Paychest’), Bedroll, 4 Pairs of Manacles, Rope, Tinderbox, Warrant Papers, 5d10 gc\n\nArmour by Location: Head 2, Arms 3, Body 4, Legs 2\n\nDrakesmalice: The magical sword used by Brunner is an heirloom of the von Drakenburg family, a fallen noble house. Brunner himself is a von Drakenburg but he doesn’t claim the title openly. Drakesmalice bursts into flame when wielded by Brunner (+1 Damage, targets receive an Aflame Condition)"
   },
   {
-    "id": "deft-steps:reference:112-pathfinding",
-    "name": "Pathfinding",
-    "category": "rule",
-    "topic": "Wilderness travel",
-    "page": 112,
-    "text": "Travel in the Empire is vital to many campaigns but is often fraught with peril. Page 261 of the WFRP Core Rulebook discusses travel by the Empire’s main arteries, its roads and rivers, and more options are added on page 31 of the Enemy in Shadows Companion. But what happens when the Characters leave the comparative safety of the road or river and venture into the wilderness?\n\nDespite Imperial boasts of civilisation and cultivation, most of the Empire’s territory is still untamed. This is terrain with no roads and few landmarks where it is easy to get lost. When you find yourself lost in the wilderness you cannot simply ask a passing farmer or pedlar how far it is to the next coaching inn.\n\nThe following rules are designed to inform wilderness travel by giving ideas for dealing with the planning of an expedition or an inadvertent journey through unknown territory. They are abstracted into Endeavours, but it is just as possible to roleplay the entire journey as you might any other part of a campaign, or simply pick and choose which bits to abstract and which to play out in detail."
-  },
-  {
     "id": "deft-steps:reference:112-wilderness-travel",
     "name": "Wilderness Travel",
     "category": "rule",
@@ -1198,30 +982,6 @@
     "topic": "Wilderness travel",
     "page": 114,
     "text": "This table outlines the sort of weather the Empire recieves. Roll separately for each column. Whilst the GM may alter the weather as often as they like, we recommend a single change per day by default. Results on the table assume the jounrey takes place in summer. In spring and autumn add 2 to each roll, and in winter add 4. For colder climates and high altitude also add 2.\n\n|  |  |  |  |  |\n| --- | --- | --- | --- | --- |\n| 1D10 Roll | Temperature | Precipitation | Visibility | Wind |\n| 1 | Sweltering | None | Clear | Still |\n| 2 | Hot | None | Clear | Light |\n| 3–5 | Comfortable | None | Clear | Medium |\n| 6–8 | Comfortable | Light | Mist | Strong |\n| 9–10 | Chilly | Heavy | Thick Fog | Very Strong |\n| 11 | Chilly | Very Heavy | Mist | Medium |\n| 13 | Bitter | Heavy | Mist | Light |\n| 14+ | Bitter | None | Clear | Still |\n\nNone Chilly Characters travelling in chilly conditions that are not well-equipped with warm clothing should make a Challenging Endurance (+0) Test or suffer the effects of Cold Exposure as explained on page 181 of the WFRP Core Rulebook. If they do not have a decent camp with a fire then they will need to test again for the night.\n\nBitter In bitter conditions, Characters must test for Cold Exposure at least once. If their clothing and equipment is lacking, they should test two times. They will also need a very good shelter with a fire or they should test for the night as well. In bitter cold conditions wearing gloves is a requirement. When they are worn, however, tasks involving Dexterity, suffer a penalty of -2 SL.\n\nUndead Creatures, and those with the Construct Trait, do not suffer penalties for temperature."
-  },
-  {
-    "id": "deft-steps:reference:115-fire",
-    "name": "Fire",
-    "category": "rule",
-    "topic": "Wilderness travel",
-    "page": 115,
-    "text": "In wet conditions making a fire becomes difficult. A tinderbox is a prudent purchase."
-  },
-  {
-    "id": "deft-steps:reference:115-packs-and-containers",
-    "name": "Packs and Containers",
-    "category": "rule",
-    "topic": "Wilderness travel",
-    "page": 115,
-    "text": "Carrying things efficiently is important and versatile baggage will reduce the encumbrance of other items and give quicker access to their contents when they are needed in a hurry. Water-carrying equipment will often be vital and should be considered carefully. Again, waterproofing and protection are important. No one wants to find their matches have got wet or their food spoiled because it got too hot in the sun. Blackpowder may be compromised through exposure to either hot or wet conditions."
-  },
-  {
-    "id": "deft-steps:reference:115-poor-planning-and-its-consequences",
-    "name": "Poor Planning And Its Consequences",
-    "category": "rule",
-    "topic": "Wilderness travel",
-    "page": 115,
-    "text": "If Characters fail to plan properly there are two common outcomes to their disadvantage. The first is that they may suffer from adverse environmental conditions, as described under the effects of weather. The second is that they may suffer shortfalls. A list of common shortfalls and their effects is given on page 124. Note that certain Travel Events and Endeavours may suffer from, or mitigate the effects of, poor planning."
   },
   {
     "id": "deft-steps:reference:115-tents",
@@ -1488,44 +1248,12 @@
     "text": "This involves staying up all or part of the night and keeping watch on behalf of your sleeping comrades. This can be a vital role in enemy territory and woe betide anyone who falls asleep on duty.\n\nThis can be done as an extra Endeavour in addition to the Travel and the Camp ones, but if it is then the watcher will incur an extra Fatigued Condition during the watch. Watching for three hours or less allows the Character enough rest to remove their fatigue. If they have to watch for longer than that they will not get enough sleep to shake any fatigue they may have gained. If they do go on watch whilst suffering a Fatigued Condition, they will need to make an Average (+20) Willpower Test or fall asleep on duty."
   },
   {
-    "id": "deft-steps:reference:130-hunter-and-hunted",
-    "name": "Hunter And Hunted",
-    "category": "rule",
-    "topic": "Journey, camping and hunting",
-    "page": 130,
-    "text": "Since the Unberogens first wandered through the Reik basin, humans of the Reikland have hunted to survive. Even after the introduction of agriculture, hunting is an important part of Imperial life for rich and poor alike. While those in the cities make do with food brought in from surrounding farms, those who live in the countryside have a wealth of food on their doorstep.\n\nThese days, most land around settlements is owned, usually by aristocratic families, and hunting in another’s land is little different from taking food from another’s larder. Even wild beasts belong, under Imperial law, to whoever owns the land they tread upon. The laws surrounding who may hunt where are layered, complex, and usually to the advantage of the nobility.\n\nThose that hunt against the law are known as poachers. The contest between poacher and gamekeeper is a battle of wits often spoken of lightly by both sides, but sometimes it can be more serious than that."
-  },
-  {
     "id": "deft-steps:reference:130-hunting-as-endeavour",
     "name": "Hunting As Endeavour",
     "category": "endeavour",
     "topic": "Journey, camping and hunting",
     "page": 130,
     "text": "Hunting may be carried out as a Travel Endeavour as described on page 125. By default, this endeavour is carried out to find easy game, such as rabbits, squirrels, and birds; enough to make for a nourishing stew, but nothing to boast about.\n\nIf a Character is hoping to bag more impressive game the endeavour is more challenging. The table on page 124 explains the particular terrain and Test difficulty that must be considered in order to take down particular prey. Hounds and hawks may also help provide assistance to a Character undertaking a Hunting Endeavour.\n\nHunting may also be taken as a General Endeavour as described on page 196 of the Warhammer Fantasy Roleplay Core Rulebook. This represents a Character spending a significant time hunting during downtime. Because a downtime endeavour covers a more significant period of time, the Character may make three Tests, and the results are cumulative."
-  },
-  {
-    "id": "deft-steps:reference:131-a-fast-buck",
-    "name": "A Fast Buck",
-    "category": "rule",
-    "topic": "Journey, camping and hunting",
-    "page": 131,
-    "text": "Here is a rough guide to the prices parts of animals can fetch. Bear in mind that these change with the seasons, and with how much the buyer might suspect the goods are illicit. The suggested price is for an animal corpse in fair condition. Mangled specimens, or those showing signs of decay, barely fetch a fraction of this price."
-  },
-  {
-    "id": "deft-steps:reference:131-skins-and-other-uses",
-    "name": "Skins and Other Uses",
-    "category": "rule",
-    "topic": "Journey, camping and hunting",
-    "page": 131,
-    "text": "Wolves are potential quarry. As the wolf is bound up with Ulrican theology, wolf pelts can fetch a high price. Although Ulricans are supposed to catch their own wolf, the less scrupulous have been known to buy them on the black market. A temple of Ulric is a ready purchaser of wolf pelts, too. Bears are hunted in the north and east of the Empire, and in Kislev. Their meat is not particularly pleasant, but their skins are valuable.\n\nA hunter can sell or barter other items obtained from their quarry. The heads of great stags and bears adorn the walls of aspiring gentry who haven’t managed to kill one themselves. Unicorn heads make the ultimate trophy, but are so rare that they are often faked. Large animal teeth make fine jewellery and charms and there is a market for soft bird down and colourful feathers for hat decoration."
-  },
-  {
-    "id": "deft-steps:reference:131-the-name-of-the-game",
-    "name": "The Name Of The Game",
-    "category": "rule",
-    "topic": "Journey, camping and hunting",
-    "page": 131,
-    "text": "The main motivation for the hunter is food. As a rule, herbivores are more palatable than carnivores. Smaller animals like squirrel, rabbit, and rook are easy to find and kill but do not keep a belly full for long. Part of the knowledge of outdoor survival is the ability to prepare a catch for eating, as well as knowing tricks for preserving the food over many days.\n\nFish — Fish like Reikerbream, Reik Eel, Lurkerfish, and Fellchen can be caught with a net or line and make a good meal. Stirpike grow to huge size, but many fishermen avoid them because of their aggressive nature.\n\nRabbits — Rabbits are a staple for peasants the Old World over. Poachers trap them in snares or hunt them with a sling. Most noble estates have no interest in rabbits, so a poacher can often get away with taking a brace.\n\nDeer — Deer are a noble quarry, and killing one of these illegally can result in harsh punishment. They are fast and elusive, requiring skill and patience to track and kill. Maintaining a captive population of deer on a noble’s land is an important job for a gamekeeper.\n\nGoats — Goats are a prized quarry for those who live in the mountains, a respite from the more limited diet of those altitudes and a great test of the hunter’s daring.\n\nBoar — The taste for hunting boar has drifted over from Bretonnia where it is fashionable. Boar are as likely to stand and fight as flee, making hunting these creatures dangerous. Traditionally, the hunters of Wissenland hunt boar on foot using packs of Lockhunds to surround the prey while they dispatch it with long spears.\n\nBirds — Trappers set nets around attractive locations in the hope of catching birds as they land. Because hunting with hawks is a noble pursuit, the eggs of birds of prey are highly prized, but it is a perilous task to reach their nests.\n\nRegional Delicacies — Every region of the Old World has its own delicacies. The Mottled Green Sea Slug of the Grootscher Marsh is delicious when pickled. The giant snail is popular in Bretonnia. Fermented fish is a delicacy in Nordland. Eels are ubiquitous in Altdorf. Razorbill is often smoked and exported to Estalia. And any visitor to the Mootland is likely to get a taste of snark."
   },
   {
     "id": "deft-steps:reference:131-the-value-of-game",
@@ -1584,14 +1312,6 @@
     "text": "NORDLANDER BAMSE\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 25 | - | 20 | 20 | 30 | 20 | - | 12 | 10 | 20 | 6 |\n\nTraits: Bestial, Night Vision, Skittish, Size (Small), Stride, Tracker, Weapon +5\n\nOptional: Trained (Broken, Dig, Entertain, Fetch, Guard, Heel, Hunt, Magic, Point, Round, Track, War) GROOTSCHER MARSH HOUND M WS BS S T I Ag Dex Int WP Fel W 4 30 - 30 30 35 15 - 15 10 15 10\n\nTraits: Bestial, Night Vision, Skittish, Size (Average), Stride, Tracker, Weapon +6"
   },
   {
-    "id": "deft-steps:reference:134-hawks",
-    "name": "Hawks",
-    "category": "rule",
-    "topic": "Journey, camping and hunting",
-    "page": 134,
-    "text": "Hunting with hawks is more of a genteel pastime than a way of feeding oneself, given the cost and time it takes to train a hawk. It is increasingly fashionable in the Empire, though still considered exotic, as the great home of hunting with hawks is Araby.\n\nFalconry is even practised in the city of Altdorf. Hawkers use the city walls as a vantage point for hunting birds. This unfortunately resulted in the loss of many doves from the Temple of Shallya, and several strongly worded missives from the High Priestess. The popularity of hunting with hawks in Altdorf was knocked back recently, when ‘the Warhawk,’ an infamous murderer, used a hawk as his murder weapon.\n\nDove Hawks are the most common hunting hawk in the Empire. They are not large, but are powerful and can easily deal with an adult rabbit. They have white plumage with a brown crest and are humorously nicknamed Shallyan Monkbirds for their looks.\n\nArabyan Redhawks are prized by the nobility for their excellent hunting skills and the prestige they bring. They are proud and fierce but once trained and treated well, extraordinarily loyal. So sought after are they in the Old World that some Arabyan states have banned their export. Redhawks are mostly brown but have bright red patches on their wings. Large, well-trained Redhawks can reach extraordinarily high prices among wealthy aficionados."
-  },
-  {
     "id": "deft-steps:reference:134-hunting-traits",
     "name": "Hunting Traits",
     "category": "rule",
@@ -1614,14 +1334,6 @@
     "topic": "Printed NPC and creature profiles",
     "page": 134,
     "text": "DOVE HAWK\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 2 | 35 | - | 15 | 25 | 25 | 35 | - | 10 | 20 | 5 | 6 |\n\nTraits: Bestial, Fly 100, Night Vision, Size (Small), Skittish, Weapon +4\n\nOptional: Trained (Broken, Circle, Hunt, Return) ARABYAN REDHAWK M WS BS S T I Ag Dex Int WP Fel W 2 40 - 22 35 30 30 - 12 30 5 8\n\nTraits: Bestial, Fly 80, Night Vision, Size (Small), Skittish, Weapon +5"
-  },
-  {
-    "id": "deft-steps:reference:135-a-noble-pursuit",
-    "name": "A Noble Pursuit",
-    "category": "rule",
-    "topic": "Journey, camping and hunting",
-    "page": 135,
-    "text": "They say hunting is a noble pursuit. In Bretonnia they call it the sport of kings, and it is true that many nobles across the Empire indulge in the pastime. The more martially successful nobles, might cynically point out that there is plenty of sport to be had defending the Empire’s borders from her enemies, or even fighting in the incessant minor squabbles that break out between its multitude of baronies. But it is also fair to say that the sort of skills that hunters hone are the ones that often win battles.\n\nIt is a noble tradition that after a kill, the successful hunters drink the blood of their quarry. This is frowned upon as appearing a bit too close to the practices of proscribed gods, but nobles are a law unto themselves.\n\nNobles tend to hunt on horseback with large retinues. They also use teams of beaters or dogs to flush out their quarry, and then they dispatch it with sword, spear, bow, or even firearm, depending on the local fashion. This method is only possible because of the number of servants at their command, and their great wealth. Certainly, it is not done for food, as a good hunt costs more to host than the most lavish banquet.\n\nFinding the hunting grounds on their estates hemmed in by agricultural land and lacking the great sport that their grandparents enjoyed, the nobility have begun to be more careful about their prey. No longer content to pick up the odd wandering deer, they have begun organising their hunting grounds, looking after the animals on their patch so they can be fit for the hunt, and being careful to leave enough breeding pairs so that their stocks increase."
   },
   {
     "id": "deft-steps:reference:39-charlatan-income-endeavour-complications",

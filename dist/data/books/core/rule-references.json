@@ -641,14 +641,6 @@
     "text": "To move unseen, make the appropriate Stealth Test (Rural, Underground, or Urban) opposed by the Perception of whoever you are trying to avoid. If there are multiple observers, use the highest Perception.\n\nA suitable distraction, such as a modest fire, a street brawl, or a blathering guest (page 115), grants Advantage on Stealth Tests."
   },
   {
-    "id": "core:rule-reference:rule-134-stealth-and-surveillance",
-    "name": "Stealth and Surveillance",
-    "category": "rule",
-    "topic": "Social & investigation",
-    "page": 134,
-    "text": "Moving unseen and spotting danger are valuable skills throughout the Empire. Here are some common situations and how to resolve them."
-  },
-  {
     "id": "core:rule-reference:rule-135-gambling-and-cheating",
     "name": "Gambling and Cheating",
     "category": "rule",
@@ -663,14 +655,6 @@
     "topic": "Social & investigation",
     "page": 135,
     "text": "To silently subdue an unaware guard or sentry, make an Opposed Melee Test against the target’s Endurance. If the attacker wins, they inflict damage equal to their Strength Bonus and the target gains the Unconscious Condition.\n\nIf the target wins, they instead gain the Stunned Condition and immediately raise the alarm.\n\nCharacters with the Strike to Stun Talent gain Advantage on this Test. Silent Takedowns can only be attempted outside combat against unaware targets."
-  },
-  {
-    "id": "core:rule-reference:rule-136-breaking-and-entering",
-    "name": "Breaking and Entering",
-    "category": "rule",
-    "topic": "Social & investigation",
-    "page": 136,
-    "text": "Characters will often want something others don’t want them to have, or need to get somewhere they shouldn’t. Locks, barred doors, and similar obstacles may deter casual opportunists, but rarely stop a determined intruder."
   },
   {
     "id": "core:rule-reference:rule-136-disarming-a-trap",
@@ -703,14 +687,6 @@
     "topic": "Social & investigation",
     "page": 136,
     "text": "Spotting a trap requires a Perception Test. The Difficulty is determined by the result of the Set Trap Test made to deploy the mechanism.\n\nIf a Character specifically checks a small area, such as a door or hallway, for a trap, they gain Advantage on the associated Perception Test."
-  },
-  {
-    "id": "core:rule-reference:rule-136-traps",
-    "name": "Traps",
-    "category": "rule",
-    "topic": "Social & investigation",
-    "page": 136,
-    "text": "From simple tripwires to pits filled with spikes, traps are laid across the Old World to hunt animals and deter unwanted interlopers. Encounters with traps may run from the mundane need to snare a brace of rabbits for dinner, to dealing with an ancient mechanism constructed to guard a Nehekharan tomb."
   },
   {
     "id": "core:rule-reference:rule-136-triggering-a-trap",
@@ -1063,14 +1039,6 @@
     "topic": "Travel & crafting",
     "page": 157,
     "text": "A single Advance in Swim is enough to tread water without making a Test — without it, you immediately begin Drowning (page 169) in deep water. You can swim at half your Movement Speed, and a Swim Test can increase the distance covered in the same way as Athletics can when Running (page 163), and generally is used in place of Athletics and Dodge when submerged in water. Rescuing someone who is drowning requires a Difficult (-1 SL) Swim Test, so long as the victim passes a Cool Test. If they don’t, your Swim Test is Opposed by their Strength, regardless of their wishes."
-  },
-  {
-    "id": "core:rule-reference:rule-157-vehicle-movement",
-    "name": "Vehicle Movement",
-    "category": "rule",
-    "topic": "Travel & crafting",
-    "page": 157,
-    "text": "More complex rules for vehicles can be found in various supplements, but the following rules are more than sufficient for most circumstances."
   },
   {
     "id": "core:rule-reference:rule-158-drive",
@@ -2042,14 +2010,6 @@
     "page": 191,
     "topic": "Advancement",
     "text": "| Increase | Characteristic: each | Characteristic: cumulative | Skill: each | Skill: cumulative |\n| --- | --- | --- | --- | --- |\n| +5 | 125 | 125 | 50 | 50 |\n| +10 | 175 | 300 | 75 | 125 |\n| +15 | 250 | 550 | 100 | 225 |\n| +20 | 350 | 900 | 150 | 375 |\n| +25 | 500 | 1400 | 250 | 625 |\n| +30 | 700 | 2100 | 400 | 1025 |\n| +35 | 950 | 3050 | 600 | 1625 |\n| +40 | 1300 | 4350 | 850 | 2475 |\n| +45 | 1800 | 6150 | 850 | 3325 |\n| +50 | 2550 | 8700 | 1700 | 5025 |\n| +55 | 3600 | 12300 | 2500 | 7525 |\n| +60 | 5025 | 17325 | 3500 | 11025 |\n| +65 | 6950 | 24275 | 4750 | 15775 |\n| +70 | 9000 | 33275 | 6500 | 22275 |\n| +75 | 11250 | 44525 | 8500 | 30775 |\n\nWhen you purchase a Skill or Characteristic Advance from your Career, tick a box on the Career Advancement Tracker."
-  },
-  {
-    "id": "core:rule-reference:rule-191-advancing-careers",
-    "name": "Advancing Careers",
-    "category": "rule",
-    "topic": "Advancement",
-    "page": 191,
-    "text": "The rules for increasing your Career Level, or changing to a new Career, can be found under the Advance Career (page 196) and Change Career (page 197) Endeavours. Even if you are not using"
   },
   {
     "id": "core:rule-reference:rule-191-characteristic-advances",

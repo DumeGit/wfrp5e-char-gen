@@ -1,13 +1,5 @@
 [
   {
-    "id": "archives-iii:reference:6-enterprises",
-    "name": "Enterprises",
-    "category": "rule",
-    "topic": "Enterprises",
-    "page": 6,
-    "text": "Precious few citizens of the Old World ever choose to make a living from adventure. Most that do still prefer to supplement their income with more stable work. Even adventurers fortunate enough to stumble upon the odd treasure hoard know these opportunities are fleeting, and having a side hustle to fall back on is essential if they intend to live longer than their heroic campaigns.\n\nEvery Career has an Earning Skill (WFRP pages 51–52) and a Status that determines their Income (WFRP page 198), both comparatively risk-free ways for Characters to earn money after a week’s work. But for most Careers, these gains are modest. Ambitious Players may prefer to invest their earnings for a greater payoff later, which could unlock access to Trappings they could never usually afford. Even Banking (WFRP page 196) may not return sufficient interest to satisfy covetous adventurers.\n\nEnterprises are ways for GMs to fulfil this niche. They are business ventures the Characters can nurture over the course of weeks, months, or even years, by investing their own (or, even better, other people’s) money to stimulate growth. Though they require more consideration, patience, and effort than living off Banking interest, they also reduce the risk of misfortune stealing their money away. Usually, only a Character’s negligence will cause their Enterprise to fail, which GMs can exploit to create new adventures that imperil the Enterprise unless attended to.\n\nPlayers can gain additional benefits from Enterprises, besides the eventual promise of increased Earnings. Enterprises have their own Earning Skills, which the Players may be more interested in developing for their Characters than the Earning Skill dictated by their Career. Enterprises have their own special rules, which expand Player options, and may unlock access to social situations that are barred to less accomplished folk. Finally, Enterprises can be worked on by multiple Characters at once, improving the links of teamwork within a party. All contributing Characters profit when an Enterprise performs well. Should it perform badly, at least they have their business partners with whom to share the blame!"
-  },
-  {
     "id": "archives-iii:reference:6-starting-an-enterprise",
     "name": "Starting An Enterprise",
     "category": "rule",
@@ -216,14 +208,6 @@
     "text": "The armour is a good fit for the looting Character and may be worn as if it were made for them."
   },
   {
-    "id": "archives-iii:reference:34-suits-of-steel",
-    "name": "• Suits Of Steel •",
-    "category": "rule",
-    "topic": "Alternative armour",
-    "page": 34,
-    "text": "Armour is a vital part of the toolkit most Characters will acquire in order to protect themselves during the course of the adventures. The rules for armour presented in this chapter provide more options and detail to those given in WFRP pages 299 to 300."
-  },
-  {
     "id": "archives-iii:reference:34-wont-fit",
     "name": "Won’t Fit",
     "category": "rule",
@@ -270,14 +254,6 @@
     "topic": "Alternative armour",
     "page": 35,
     "text": "A Character may attempt to repair a piece of armour if they have the appropriate Skill and meet other criteria depending on the piece of armour.\n\n|  |  |\n| --- | --- |\n| Type of Armour | Trade Skill Used for Repairs |\n| Leather Armour or Brigandine | Trade (Tailor) — Trade Tools needed |\n| Chainmail | Trade (Smith) — Trade Tools needed |\n| Plate | Trade (Smith) — Trade Tools and Forge or Workshop needed |\n\nThey must then carry out an Extended Challenging (+0) Trade Test in order to repair the armour. The Test can be carried out once every hour, and the number of SLs required in order to repair a piece of armour depends on the type of armour being repaired. This represents the amount of time it takes to restore 1 AP to one location.\n\n|  |  |\n| --- | --- |\n| Type of Armour | SL Needed to Repair 1 AP |\n| Leather | 5 |\n| Brigandine | 7 |\n| Chainmail or Reinforced Soft Kit | 10 |\n| Plate | 15 |"
-  },
-  {
-    "id": "archives-iii:reference:36-armour-flaws",
-    "name": "Armour Flaws",
-    "category": "rule",
-    "topic": "Alternative armour",
-    "page": 36,
-    "text": "Some armours have a point of weakness, as described by Armour Flaws."
   },
   {
     "id": "archives-iii:reference:36-armour-rules",
@@ -408,14 +384,6 @@
     "text": "D10 Roll\n\nEffect 1-5 The helmet is damaged as normal. 6-9 The helmet is not damaged. The helmet is not damaged, but the mechanism for opening the helmet is jammed. The wearer cannot remove 10 the helmet and must eat and drink through a straw until it is either broken open, or fixed by a Hard (–20) Trade (Blacksmith) Test."
   },
   {
-    "id": "archives-iii:reference:38-helmet-designs",
-    "name": "Helmet Designs",
-    "category": "rule",
-    "topic": "Alternative armour",
-    "page": 38,
-    "text": "There are a great many designs of helmet used in conjunction with plate armour, and Tilean, Bretonnian, and Imperial armourers all have their preferred designs. There is little practical difference between these designs, they are all strong, fully enclosed helms with visors which weigh much the same and provide the same sort of protection. However, in some circumstances particular designs may afford extra protection."
-  },
-  {
     "id": "archives-iii:reference:42-strictures-of-handrich",
     "name": "Strictures of Handrich",
     "category": "rule",
@@ -464,14 +432,6 @@
     "text": "Other strong feelings feed the Ruinous Powers and must be controlled. Compassion and moderation are signs of weak resolve which give Chaos a foothold in the world. Solkanites have special enmity for those who use magic or prophecy — powers which draw on Chaotic forces. The cult is disdainful of other Old World gods — although they have learned to keep these views discreet. They believe the ‘soft’ gods accommodate Human failings and allow the pervasive advance of Chaos.\n\nSuch uncompromising followers frequently see deviation and lack of purity in one another — especially when pragmatism overrides dogma. The cult has many splinter orders, ranging from secretive mystery cults in the Empire to powerful organisations in Tilea.\n\nThe Order of Light and Law — An order of inquisitors, powerful in Remas and influential elsewhere in Tilea and Estalia. In 1586 IC, the priesthood was slaughtered by the Daemon Prince Be'lakor as they tortured the oracle Necrodomo. They have lost face in recent years since they failed to protect Remans from a summoned daemon known as the Mardagg. In the Empire, witch hunters who follow Solkan typically align themselves with the Order of Light and Law.\n\nOrder of the Shattered Amulet — A peculiar fellowship of itinerant priests who seek the four fragments of Solkan’s amulet, shattered by a daemon of Khorne. This circular amulet was decorated with an unknown inscription and four serpents, consuming one another in a circle. Recent discoveries suggest the shards have been uncovered by Skaven.\n\nCult of the Vengeful Blaze — A secretive cult in Altdorf, the Cult of the Vengeful Blaze have infiltrated the government and military of the Empire’s capital. For more details, see Altdorf: Crown of the Empire.\n\nKnights of Purity — The Brotherhood of Purity is a charitable organisation in Marienburg, which is a front for the Knights of Purity, xenophobic fanatics dedicated to eradicating the smallest hint of Chaos wherever they see it. The Sword of Solkan is their agent, a mysterious vigilante who hunts and executes mutants in the port city.\n\nSöll’s Faithful — A localised folk religion in ‘Auld Solland’, the priests of vengeful Söll agitate for Solland’s independence and against the earthy rites of Rhya."
   },
   {
-    "id": "archives-iii:reference:58-penances",
-    "name": "Old Faith — Penances",
-    "category": "rule",
-    "topic": "Minor gods and Hedgecraft",
-    "page": 58,
-    "text": "The most common penance for Old Faith worshippers is to spend time in the wilderness, alone. This is often welcomed as an opportunity to refresh and reflect rather than seen as a punishment.\n\nThe most common punitive penance is to be exiled from one’s home, permanently. This is seen as the painful severing of ties with one's very nature."
-  },
-  {
     "id": "archives-iii:reference:58-priests-of-the-old-faith",
     "name": "Priests Of The Old Faith",
     "category": "rule",
@@ -494,14 +454,6 @@
     "topic": "Minor gods and Hedgecraft",
     "page": 62,
     "text": "The Hedge Witch Career emphasises herbalism. You could also consider a Hedge Witch to be an animal doctor. Players who want to demonstrate this can swap Lore (Herbs) for Animal Care, Trade (Herbalist) for Animal Training, Trade (Charms) for Charm Animal, Craftsman for Hardy, and Master Craftsman (Herbalist) for Robust.\n\nA first tier Hedge Witch should have Secret Signs (Hedge Witch) and Language (Belthani) along with other Skills. This enables a travelling hedge witch to spot local ones and vice versa, impart warnings of dangers, and share information such as where useful herbs grow and where dangers might lurk.\n\nOther Hedgefolk are expert craftsmen, able to fashion elaborate charms and talismans for various purposes. Lastly, the relatively unknown hedge walkers are masters of the spirit world, known for their ability to ‘walk the hedge’, the boundary between the physical and the immaterial."
-  },
-  {
-    "id": "archives-iii:reference:62-the-lore-of-hedgecraft",
-    "name": "The Lore Of Hedgecraft",
-    "category": "rule",
-    "topic": "Minor gods and Hedgecraft",
-    "page": 62,
-    "text": "Hedgecraft has been practised for uncounted centuries in the Old World. During this time, several distinct traditions have formed. Arguably the most famous are the so-called ‘cunning folk’ or ‘wise ones’, practitioners of folk magic known for their skills at warding against any evil, be it disease, mischievous spirits, or the influence of other witches."
   },
   {
     "id": "archives-iii:reference:63-goodwill",
@@ -558,14 +510,6 @@
     "topic": "Familiars",
     "page": 76,
     "text": "Animal familiars provide benefits in addition to the standard Power Familiar spellcasting assistance. The spirit-bond also enhances a caster’s abilities according to the familiar’s species. For example, badger familiars improve the spellcaster’s resilience, foxes aid subterfuge, and so on. These shared abilities are called Companion Traits (see page 81). Animal familiars can only confer Companion Traits and magical assistance when positioned close to the caster (within 4 yards).\n\nAnimal familiars possess useful Creature Traits and are less conspicuous than homunculus familiars. Unlike homunculi, however, animal familiars are not customisable, and their capacity for learning new Skills and Talents is lower.\n\nThe Spirit-Bonding ritual on page 80 replaces the Create Familiar ritual used for homunculus constructs.\n\nAnimals aren’t as capable of following detailed instructions and communicating abstract concepts as homunculi. Combined with their lack of hands and limited language skills, this means that animal familiars cannot be relied upon to run errands or conduct research. Druids and Hedge Witches would argue, however, that animal intelligence is merely different from homunculus intelligence. Animal familiars are in fact more attuned to nature, weather, and the seasons than the average College wizard.\n\nPerhaps the most significant drawbacks of animal familiars are their requirements for food, sleep, and air, and their vulnerability to damage. Small-sized animals might be able to withstand a single attack, but Little animals cannot survive even one blow from a sword. Fortunately, animals have strong survival instincts to keep them out of danger. However, the timidness of animal familiars can sometimes leave spellcasters without magical aid in critical situations."
-  },
-  {
-    "id": "archives-iii:reference:76-npc-animal-familiars",
-    "name": "Npc Animal Familiars",
-    "category": "rule",
-    "topic": "Familiars",
-    "page": 76,
-    "text": "These NPC profiles are for a selection of commonly used gifted animals, advanced to tier 2 of the Animal Familiar Career (page 82). New Creature Traits and Talents described later in this chapter are indicated with italics. NPC witches can be assigned the animal most befitting their personality."
   },
   {
     "id": "archives-iii:reference:76-profile-badger",

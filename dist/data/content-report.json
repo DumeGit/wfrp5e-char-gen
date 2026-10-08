@@ -21,12 +21,12 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.6",
+      "version": "1.1.7",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 681,
+        "reference-only": 655,
         "unavailable": 0,
         "deferred": 0
       },
@@ -76,14 +76,14 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 245,
+          "reference-only": 224,
           "unavailable": 0,
           "deferred": 0
         },
         "ruleReferences": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 435,
+          "reference-only": 430,
           "unavailable": 0,
           "deferred": 0
         },
@@ -3993,17 +3993,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:133-using-the-rules",
-          "kind": "referenceEntries",
-          "name": "Using The Rules",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 133
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:134-a-time-for-crime",
           "kind": "referenceEntries",
           "name": "A Time For Crime",
@@ -4389,17 +4378,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:152-life-beyond-the-walls",
-          "kind": "referenceEntries",
-          "name": "Life Beyond The Walls",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 152
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:153-cunning-crafts",
           "kind": "referenceEntries",
           "name": "Cunning Crafts",
@@ -4631,17 +4609,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:170-injury-healing-and-death",
-          "kind": "referenceEntries",
-          "name": "Injury, Healing, And Death",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 170
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:170-the-heal-skill-and-bleeding-conditions",
           "kind": "referenceEntries",
           "name": "The Heal Skill And Bleeding Conditions",
@@ -4854,17 +4821,6 @@
           "contentId": "core:reference:190-during-downtime",
           "kind": "referenceEntries",
           "name": "During Downtime",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 190
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:190-roleplaying-downtime",
-          "kind": "referenceEntries",
-          "name": "Roleplaying Downtime",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -5203,17 +5159,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:205-penances",
-          "kind": "referenceEntries",
-          "name": "Manann — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 205
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:205-strictures",
           "kind": "referenceEntries",
           "name": "Manann — Strictures",
@@ -5221,17 +5166,6 @@
           "source": {
             "book": "core",
             "page": 205
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:206-penances",
-          "kind": "referenceEntries",
-          "name": "Morr — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 206
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -5247,17 +5181,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:207-penances",
-          "kind": "referenceEntries",
-          "name": "Myrmidia — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 207
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:207-strictures",
           "kind": "referenceEntries",
           "name": "Myrmidia — Strictures",
@@ -5265,17 +5188,6 @@
           "source": {
             "book": "core",
             "page": 207
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:208-penances",
-          "kind": "referenceEntries",
-          "name": "Ranald — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 208
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -5291,17 +5203,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:209-penances",
-          "kind": "referenceEntries",
-          "name": "Rhya — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 209
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:209-strictures",
           "kind": "referenceEntries",
           "name": "Rhya — Strictures",
@@ -5309,17 +5210,6 @@
           "source": {
             "book": "core",
             "page": 209
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:210-penances",
-          "kind": "referenceEntries",
-          "name": "Shallya — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 210
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -5335,17 +5225,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:211-penances",
-          "kind": "referenceEntries",
-          "name": "Sigmar — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 211
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:211-strictures",
           "kind": "referenceEntries",
           "name": "Sigmar — Strictures",
@@ -5353,17 +5232,6 @@
           "source": {
             "book": "core",
             "page": 211
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:212-penances",
-          "kind": "referenceEntries",
-          "name": "Taal — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 212
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -5379,17 +5247,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:213-penances",
-          "kind": "referenceEntries",
-          "name": "Ulric — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 213
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:213-strictures",
           "kind": "referenceEntries",
           "name": "Ulric — Strictures",
@@ -5397,17 +5254,6 @@
           "source": {
             "book": "core",
             "page": 213
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:214-penances",
-          "kind": "referenceEntries",
-          "name": "Verena — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 214
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -5588,17 +5434,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:240-petty-spells",
-          "kind": "referenceEntries",
-          "name": "Petty Spells",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 240
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:242-arcane-spells",
           "kind": "referenceEntries",
           "name": "Arcane Spells",
@@ -5753,17 +5588,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:266-extend-caution",
-          "kind": "referenceEntries",
-          "name": "Extend Caution",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 266
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:266-the-gms-test-toolkit",
           "kind": "referenceEntries",
           "name": "The Gm’S Test Toolkit",
@@ -5830,31 +5654,9 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:296-trapping-lists",
-          "kind": "referenceEntries",
-          "name": "Trapping Lists",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 296
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:297-availability-2",
           "kind": "referenceEntries",
           "name": "Availability",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 297
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:297-criminal-coinage",
-          "kind": "referenceEntries",
-          "name": "Criminal Coinage",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -5947,17 +5749,6 @@
           "source": {
             "book": "core",
             "page": 303
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:306-armour-flaws",
-          "kind": "referenceEntries",
-          "name": "Armour Flaws",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 306
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -6226,17 +6017,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:reference:318-bestiary",
-          "kind": "referenceEntries",
-          "name": "Bestiary",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 318
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:reference:318-creature-characteristics",
           "kind": "referenceEntries",
           "name": "Creature Characteristics",
@@ -6427,17 +6207,6 @@
           "contentId": "core:reference:38-characteristic-table",
           "kind": "referenceEntries",
           "name": "Characteristic Table",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 38
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:reference:38-comparing-characteristics",
-          "kind": "referenceEntries",
-          "name": "Comparing Characteristics",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -7447,17 +7216,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "core:rule-reference:rule-134-stealth-and-surveillance",
-          "kind": "ruleReferences",
-          "name": "Stealth and Surveillance",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 134
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "core:rule-reference:rule-135-gambling-and-cheating",
           "kind": "ruleReferences",
           "name": "Gambling and Cheating",
@@ -7476,17 +7234,6 @@
           "source": {
             "book": "core",
             "page": 135
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:rule-reference:rule-136-breaking-and-entering",
-          "kind": "ruleReferences",
-          "name": "Breaking and Entering",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 136
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -7527,17 +7274,6 @@
           "contentId": "core:rule-reference:rule-136-spotting-a-trap",
           "kind": "ruleReferences",
           "name": "Spotting a Trap",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 136
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:rule-reference:rule-136-traps",
-          "kind": "ruleReferences",
-          "name": "Traps",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -8022,17 +7758,6 @@
           "contentId": "core:rule-reference:rule-157-swimming",
           "kind": "ruleReferences",
           "name": "Swimming",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 157
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:rule-reference:rule-157-vehicle-movement",
-          "kind": "ruleReferences",
-          "name": "Vehicle Movement",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -9364,17 +9089,6 @@
           "contentId": "core:rule-reference:rule-191-advancement-xp-costs",
           "kind": "ruleReferences",
           "name": "Advancement XP Costs",
-          "status": "reference-only",
-          "source": {
-            "book": "core",
-            "page": 191
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "core:rule-reference:rule-191-advancing-careers",
-          "kind": "ruleReferences",
-          "name": "Advancing Careers",
           "status": "reference-only",
           "source": {
             "book": "core",
@@ -16928,12 +16642,12 @@
     {
       "id": "up-in-arms",
       "title": "Up in Arms",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 135,
         "adapted": 12,
-        "reference-only": 137,
+        "reference-only": 128,
         "unavailable": 1,
         "deferred": 9
       },
@@ -16969,7 +16683,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 137,
+          "reference-only": 128,
           "unavailable": 0,
           "deferred": 9
         },
@@ -18214,28 +17928,6 @@
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
-          "contentId": "up-in-arms:reference:110-hire-em-and-fire-em",
-          "kind": "referenceEntries",
-          "name": "Hire ‘Em And Fire ‘Em",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 110
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:110-hired-brains",
-          "kind": "referenceEntries",
-          "name": "Hired Brains",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": "110–111"
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "up-in-arms:reference:110-hired-goons",
           "kind": "referenceEntries",
           "name": "Hired Goons",
@@ -18243,28 +17935,6 @@
           "source": {
             "book": "up-in-arms",
             "page": 110
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
-          "kind": "referenceEntries",
-          "name": "We Can Afford It, but Can We Afford It?",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": "111–112"
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:112-liability-and-responsibility",
-          "kind": "referenceEntries",
-          "name": "Liability and Responsibility",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 112
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -18731,28 +18401,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "up-in-arms:reference:135-changing-creature-traits",
-          "kind": "referenceEntries",
-          "name": "Changing Creature Traits",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 135
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:135-changing-talents",
-          "kind": "referenceEntries",
-          "name": "Changing Talents",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 135
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "up-in-arms:reference:135-initial-advantage",
           "kind": "referenceEntries",
           "name": "Initial Advantage",
@@ -19050,17 +18698,6 @@
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
-          "contentId": "up-in-arms:reference:70-strictures-of-myrmidia",
-          "kind": "referenceEntries",
-          "name": "Strictures Of Myrmidia",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 70
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "up-in-arms:reference:80-approach-to-injury",
           "kind": "referenceEntries",
           "name": "Approach To Injury",
@@ -19108,17 +18745,6 @@
           "contentId": "up-in-arms:reference:80-wounds",
           "kind": "referenceEntries",
           "name": "Wounds",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": 80
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
-          "kind": "referenceEntries",
-          "name": "Wounds, Critical Wounds, And Death",
           "status": "reference-only",
           "source": {
             "book": "up-in-arms",
@@ -19563,17 +19189,6 @@
           "source": {
             "book": "up-in-arms",
             "page": 98
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "up-in-arms:reference:99-powder-and-shot",
-          "kind": "referenceEntries",
-          "name": "Powder and Shot",
-          "status": "reference-only",
-          "source": {
-            "book": "up-in-arms",
-            "page": "99–100"
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -20272,12 +19887,12 @@
     {
       "id": "archives-i",
       "title": "Archives of the Empire: Volume I",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 31,
         "adapted": 22,
-        "reference-only": 12,
+        "reference-only": 10,
         "unavailable": 0,
         "deferred": 13
       },
@@ -20313,7 +19928,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 12,
+          "reference-only": 10,
           "unavailable": 0,
           "deferred": 13
         },
@@ -21005,28 +20620,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-i:reference:94-dwarf-handgun-pistol",
-          "kind": "referenceEntries",
-          "name": "Dwarf Handgun & Pistol",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-i",
-            "page": 94
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "archives-i:reference:94-eonir-spear",
-          "kind": "referenceEntries",
-          "name": "Eonir Spear",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-i",
-            "page": 94
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-i:talent:youngblood",
           "kind": "talents",
           "name": "Youngblood",
@@ -21217,12 +20810,12 @@
     {
       "id": "archives-ii",
       "title": "Archives of the Empire: Volume II",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 50,
         "adapted": 7,
-        "reference-only": 107,
+        "reference-only": 103,
         "unavailable": 0,
         "deferred": 15
       },
@@ -21272,7 +20865,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 107,
+          "reference-only": 103,
           "unavailable": 0,
           "deferred": 15
         },
@@ -22007,17 +21600,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-ii:reference:28-size-matters",
-          "kind": "referenceEntries",
-          "name": "Size Matters",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-ii",
-            "page": 28
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-ii:reference:28-weapon-damage",
           "kind": "referenceEntries",
           "name": "Weapon Damage",
@@ -22069,17 +21651,6 @@
           "source": {
             "book": "archives-ii",
             "page": 29
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "archives-ii:reference:30-armour-descriptions",
-          "kind": "referenceEntries",
-          "name": "Armour Descriptions",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-ii",
-            "page": 30
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -22194,17 +21765,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-ii:reference:51-magical-items-and-artifice",
-          "kind": "referenceEntries",
-          "name": "Magical Items And Artifice",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-ii",
-            "page": 51
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-ii:reference:52-commissioning-a-magical-artefact",
           "kind": "referenceEntries",
           "name": "Commissioning a Magical Artefact",
@@ -22223,17 +21783,6 @@
           "source": {
             "book": "archives-ii",
             "page": 52
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "archives-ii:reference:53-guarding-the-reputation-of-wizards",
-          "kind": "referenceEntries",
-          "name": "Guarding the Reputation of Wizards",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-ii",
-            "page": 53
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -23358,12 +22907,12 @@
     {
       "id": "archives-iii",
       "title": "Archives of the Empire: Volume III",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 45,
         "adapted": 14,
-        "reference-only": 112,
+        "reference-only": 105,
         "unavailable": 0,
         "deferred": 12
       },
@@ -23399,7 +22948,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 112,
+          "reference-only": 105,
           "unavailable": 0,
           "deferred": 12
         },
@@ -23985,17 +23534,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-iii:reference:34-suits-of-steel",
-          "kind": "referenceEntries",
-          "name": "• Suits Of Steel •",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 34
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-iii:reference:34-wont-fit",
           "kind": "referenceEntries",
           "name": "Won’t Fit",
@@ -24058,17 +23596,6 @@
           "source": {
             "book": "archives-iii",
             "page": 35
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "archives-iii:reference:36-armour-flaws",
-          "kind": "referenceEntries",
-          "name": "Armour Flaws",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 36
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -24249,17 +23776,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-iii:reference:38-helmet-designs",
-          "kind": "referenceEntries",
-          "name": "Helmet Designs",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 38
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-iii:reference:42-strictures-of-handrich",
           "kind": "referenceEntries",
           "name": "Strictures of Handrich",
@@ -24326,17 +23842,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-iii:reference:58-penances",
-          "kind": "referenceEntries",
-          "name": "Old Faith — Penances",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 58
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-iii:reference:58-priests-of-the-old-faith",
           "kind": "referenceEntries",
           "name": "Priests Of The Old Faith",
@@ -24359,17 +23864,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "archives-iii:reference:6-enterprises",
-          "kind": "referenceEntries",
-          "name": "Enterprises",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 6
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "archives-iii:reference:6-starting-an-enterprise",
           "kind": "referenceEntries",
           "name": "Starting An Enterprise",
@@ -24384,17 +23878,6 @@
           "contentId": "archives-iii:reference:62-alternative-skills-and-talents",
           "kind": "referenceEntries",
           "name": "Alternative Skills And Talents",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 62
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "archives-iii:reference:62-the-lore-of-hedgecraft",
-          "kind": "referenceEntries",
-          "name": "The Lore Of Hedgecraft",
           "status": "reference-only",
           "source": {
             "book": "archives-iii",
@@ -24483,17 +23966,6 @@
           "contentId": "archives-iii:reference:76-abilities-limitations",
           "kind": "referenceEntries",
           "name": "Abilities & Limitations",
-          "status": "reference-only",
-          "source": {
-            "book": "archives-iii",
-            "page": 76
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "archives-iii:reference:76-npc-animal-familiars",
-          "kind": "referenceEntries",
-          "name": "Npc Animal Familiars",
           "status": "reference-only",
           "source": {
             "book": "archives-iii",
@@ -25545,12 +25017,12 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 120,
         "adapted": 55,
-        "reference-only": 264,
+        "reference-only": 254,
         "unavailable": 0,
         "deferred": 21
       },
@@ -25579,7 +25051,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 263,
+          "reference-only": 253,
           "unavailable": 0,
           "deferred": 21
         },
@@ -26542,17 +26014,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "winds-of-magic:reference:161-the-concoct-talent",
-          "kind": "referenceEntries",
-          "name": "The Concoct Talent",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 161
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "winds-of-magic:reference:162-channelpath-potion",
           "kind": "referenceEntries",
           "name": "Channelpath Potion",
@@ -26916,17 +26377,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "winds-of-magic:reference:173-incarnate-elementals",
-          "kind": "referenceEntries",
-          "name": "Incarnate Elementals",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 173
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "winds-of-magic:reference:174-profile-incarnate-elemental-of-fire",
           "kind": "referenceEntries",
           "name": "Incarnate Elemental Of Fire",
@@ -26960,17 +26410,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "winds-of-magic:reference:176-nature-spirits",
-          "kind": "referenceEntries",
-          "name": "Nature Spirits",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 176
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts",
           "kind": "referenceEntries",
           "name": "Incarnate Elemental Of Beasts",
@@ -26980,17 +26419,6 @@
             "page": 176
           },
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
-        },
-        {
-          "contentId": "winds-of-magic:reference:177-magical-constructs",
-          "kind": "referenceEntries",
-          "name": "Magical Constructs",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 177
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "winds-of-magic:reference:179-fenbeasts",
@@ -27044,17 +26472,6 @@
           "source": {
             "book": "winds-of-magic",
             "page": 181
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "winds-of-magic:reference:182-familiars-of-chamon",
-          "kind": "referenceEntries",
-          "name": "Familiars of Chamon",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 182
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -27308,17 +26725,6 @@
           "source": {
             "book": "winds-of-magic",
             "page": 188
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
-          "kind": "referenceEntries",
-          "name": "The Effects of Magic on the World",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 189
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -28192,17 +27598,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "winds-of-magic:reference:44-new-arcane-skills",
-          "kind": "referenceEntries",
-          "name": "New Arcane Skills",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 44
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "winds-of-magic:reference:45-augury-table",
           "kind": "referenceEntries",
           "name": "Augury Table",
@@ -28331,17 +27726,6 @@
           "source": {
             "book": "winds-of-magic",
             "page": 48
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "winds-of-magic:reference:49-alchemy",
-          "kind": "referenceEntries",
-          "name": "Alchemy",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 49
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -28621,17 +28005,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
-          "kind": "referenceEntries",
-          "name": "The Gold Wind of Magic & The Lore of Metal",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 66
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4",
           "kind": "referenceEntries",
           "name": "Balthasar Gelt Alchemist Lord (Gold 4)",
@@ -28848,17 +28221,6 @@
           "source": {
             "book": "winds-of-magic",
             "page": 88
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
-          "kind": "referenceEntries",
-          "name": "The Blue Wind of Magic & The Lore of the Heavens",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 90
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -32071,12 +31433,12 @@
     {
       "id": "dwarf-guide",
       "title": "Dwarf Player’s Guide",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 156,
         "adapted": 34,
-        "reference-only": 131,
+        "reference-only": 120,
         "unavailable": 2,
         "deferred": 0
       },
@@ -32126,7 +31488,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 118,
+          "reference-only": 107,
           "unavailable": 0,
           "deferred": 0
         },
@@ -33532,17 +32894,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "dwarf-guide:reference:132-additional-runes",
-          "kind": "referenceEntries",
-          "name": "Additional Runes",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 132
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "dwarf-guide:reference:132-doom-runes",
           "kind": "referenceEntries",
           "name": "Doom Runes",
@@ -33708,17 +33059,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "dwarf-guide:reference:38-naming-rites",
-          "kind": "referenceEntries",
-          "name": "Naming Rites",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 38
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "dwarf-guide:reference:39-forenames",
           "kind": "referenceEntries",
           "name": "Forenames",
@@ -33726,17 +33066,6 @@
           "source": {
             "book": "dwarf-guide",
             "page": "39–40"
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "dwarf-guide:reference:40-nicknames",
-          "kind": "referenceEntries",
-          "name": "Nicknames",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 40
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -33862,17 +33191,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "dwarf-guide:reference:57-dwarf-artforms",
-          "kind": "referenceEntries",
-          "name": "Dwarf Artforms",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 57
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "dwarf-guide:reference:57-grudgemaster",
           "kind": "referenceEntries",
           "name": "Grudgemaster",
@@ -33939,17 +33257,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "dwarf-guide:reference:59-dwarf-slayer",
-          "kind": "referenceEntries",
-          "name": "Dwarf Slayer",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 59
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "dwarf-guide:reference:59-slayers-do-not-wear-armour",
           "kind": "referenceEntries",
           "name": "Slayers Do Not Wear Armour",
@@ -33990,17 +33297,6 @@
           "source": {
             "book": "dwarf-guide",
             "page": 61
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "dwarf-guide:reference:80-new-skills",
-          "kind": "referenceEntries",
-          "name": "New Skills",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 80
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -34115,31 +33411,9 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "dwarf-guide:reference:90-gromril",
-          "kind": "referenceEntries",
-          "name": "Gromril",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 90
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "dwarf-guide:reference:91-gromril-armour",
           "kind": "referenceEntries",
           "name": "Gromril armour",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 91
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "dwarf-guide:reference:91-gromril-mining",
-          "kind": "referenceEntries",
-          "name": "Gromril mining",
           "status": "reference-only",
           "source": {
             "book": "dwarf-guide",
@@ -34159,31 +33433,9 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "dwarf-guide:reference:91-the-kings-gift",
-          "kind": "referenceEntries",
-          "name": "The King’S Gift",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 91
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "dwarf-guide:reference:92-crewed-rating",
           "kind": "referenceEntries",
           "name": "Crewed (Rating)",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 92
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "dwarf-guide:reference:92-personal-wargear",
-          "kind": "referenceEntries",
-          "name": "Personal Wargear",
           "status": "reference-only",
           "source": {
             "book": "dwarf-guide",
@@ -34217,17 +33469,6 @@
           "contentId": "dwarf-guide:reference:93-dwarf-ammunition",
           "kind": "referenceEntries",
           "name": "Dwarf Ammunition",
-          "status": "reference-only",
-          "source": {
-            "book": "dwarf-guide",
-            "page": 93
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "dwarf-guide:reference:93-dwarf-ranged-weapons",
-          "kind": "referenceEntries",
-          "name": "Dwarf Ranged Weapons",
           "status": "reference-only",
           "source": {
             "book": "dwarf-guide",
@@ -35776,12 +35017,12 @@
     {
       "id": "high-elf",
       "title": "High Elf Player’s Guide",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 55,
         "adapted": 55,
-        "reference-only": 111,
+        "reference-only": 104,
         "unavailable": 0,
         "deferred": 0
       },
@@ -35824,7 +35065,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 88,
+          "reference-only": 81,
           "unavailable": 0,
           "deferred": 0
         },
@@ -36427,17 +35668,6 @@
           "reason": "Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules."
         },
         {
-          "contentId": "high-elf:reference:100-smith-priest-of-vaul",
-          "kind": "referenceEntries",
-          "name": "Smith-Priest Of Vaul",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 100
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "high-elf:reference:100-smith-priest-of-vaul-printed-career",
           "kind": "referenceEntries",
           "name": "Smith-priest of Vaul — printed Career",
@@ -36599,17 +35829,6 @@
           "source": {
             "book": "high-elf",
             "page": 112
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "high-elf:reference:114-beseeching-khaine",
-          "kind": "referenceEntries",
-          "name": "Beseeching Khaine",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 114
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -36845,17 +36064,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "high-elf:reference:39-high-elf-warships-2",
-          "kind": "referenceEntries",
-          "name": "High Elf Warships",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 39
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "high-elf:reference:40-dragonblade-ram",
           "kind": "referenceEntries",
           "name": "Dragonblade Ram",
@@ -36885,28 +36093,6 @@
           "source": {
             "book": "high-elf",
             "page": 42
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "high-elf:reference:43-dragon-princes",
-          "kind": "referenceEntries",
-          "name": "Dragon Princes",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 43
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "high-elf:reference:45-playing-a-high-elf",
-          "kind": "referenceEntries",
-          "name": "Playing a High Elf",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 45
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -37164,31 +36350,9 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "high-elf:reference:63-charlatan",
-          "kind": "referenceEntries",
-          "name": "Charlatan",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 63
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "high-elf:reference:63-seaman",
           "kind": "referenceEntries",
           "name": "Seaman",
-          "status": "reference-only",
-          "source": {
-            "book": "high-elf",
-            "page": 63
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "high-elf:reference:63-smuggler",
-          "kind": "referenceEntries",
-          "name": "Smuggler",
           "status": "reference-only",
           "source": {
             "book": "high-elf",
@@ -38800,12 +37964,12 @@
     {
       "id": "deft-steps",
       "title": "Deft Steps, Light Fingers",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 39,
         "adapted": 18,
-        "reference-only": 182,
+        "reference-only": 146,
         "unavailable": 0,
         "deferred": 22
       },
@@ -38841,7 +38005,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 182,
+          "reference-only": 146,
           "unavailable": 0,
           "deferred": 22
         },
@@ -39185,17 +38349,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:101-outlaws-ranald",
-          "kind": "referenceEntries",
-          "name": "Outlaws & Ranald",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 101
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:102-detailing-outlaw-bands",
           "kind": "referenceEntries",
           "name": "Detailing outlaw bands",
@@ -39361,17 +38514,6 @@
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
-          "contentId": "deft-steps:reference:112-pathfinding",
-          "kind": "referenceEntries",
-          "name": "Pathfinding",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 112
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:112-wilderness-travel",
           "kind": "referenceEntries",
           "name": "Wilderness Travel",
@@ -39445,39 +38587,6 @@
           "source": {
             "book": "deft-steps",
             "page": 114
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:115-fire",
-          "kind": "referenceEntries",
-          "name": "Fire",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:115-packs-and-containers",
-          "kind": "referenceEntries",
-          "name": "Packs and Containers",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 115
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:115-poor-planning-and-its-consequences",
-          "kind": "referenceEntries",
-          "name": "Poor Planning And Its Consequences",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 115
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -39878,17 +38987,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:130-hunter-and-hunted",
-          "kind": "referenceEntries",
-          "name": "Hunter And Hunted",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 130
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:130-hunting-as-endeavour",
           "kind": "referenceEntries",
           "name": "Hunting As Endeavour",
@@ -39896,39 +38994,6 @@
           "source": {
             "book": "deft-steps",
             "page": 130
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:131-a-fast-buck",
-          "kind": "referenceEntries",
-          "name": "A Fast Buck",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 131
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:131-skins-and-other-uses",
-          "kind": "referenceEntries",
-          "name": "Skins and Other Uses",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 131
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:131-the-name-of-the-game",
-          "kind": "referenceEntries",
-          "name": "The Name Of The Game",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 131
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -40010,17 +39075,6 @@
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
-          "contentId": "deft-steps:reference:134-hawks",
-          "kind": "referenceEntries",
-          "name": "Hawks",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 134
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:134-hunting-traits",
           "kind": "referenceEntries",
           "name": "Hunting Traits",
@@ -40052,17 +39106,6 @@
             "page": 134
           },
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
-        },
-        {
-          "contentId": "deft-steps:reference:135-a-noble-pursuit",
-          "kind": "referenceEntries",
-          "name": "A Noble Pursuit",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 135
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "deft-steps:reference:15-ranalds-gamble",
@@ -40101,17 +39144,6 @@
           "contentId": "deft-steps:reference:27-pickpocket-success-table",
           "kind": "referenceEntries",
           "name": "Pickpocket Success Table",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 27
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:27-pickpockets",
-          "kind": "referenceEntries",
-          "name": "Pickpockets",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -40178,17 +39210,6 @@
           "contentId": "deft-steps:reference:30-burglar-skills-talents-and-trappings",
           "kind": "referenceEntries",
           "name": "Burglar Skills, Talents, And Trappings",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 30
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:30-burglars",
-          "kind": "referenceEntries",
-          "name": "Burglars",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -40373,17 +39394,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:37-khemri",
-          "kind": "referenceEntries",
-          "name": "Khemri",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 37
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:38-endeavour-complications",
           "kind": "referenceEntries",
           "name": "Endeavour Complications",
@@ -40428,17 +39438,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:39-congruent-with-character",
-          "kind": "referenceEntries",
-          "name": "Congruent With Character",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 39
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:39-endeavour-complications",
           "kind": "referenceEntries",
           "name": "Endeavour Complications",
@@ -40446,17 +39445,6 @@
           "source": {
             "book": "deft-steps",
             "page": 39
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:40-underworld-rumours",
-          "kind": "referenceEntries",
-          "name": "Underworld Rumours",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 40
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -40516,17 +39504,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:41-stolen-goods",
-          "kind": "referenceEntries",
-          "name": "Stolen Goods",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 41
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:41-take-a-trip",
           "kind": "referenceEntries",
           "name": "Take a Trip",
@@ -40541,17 +39518,6 @@
           "contentId": "deft-steps:reference:42-a-careful-kind-of-crime",
           "kind": "referenceEntries",
           "name": "A Careful Kind of Crime",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 42
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:42-embezzlers",
-          "kind": "referenceEntries",
-          "name": "Embezzlers",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -40714,39 +39680,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:46-priests-of-ranald",
-          "kind": "referenceEntries",
-          "name": "Priests Of Ranald",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 46
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:47-fences",
-          "kind": "referenceEntries",
-          "name": "Fences",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 47
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:47-forgers-and-counterfeiters",
-          "kind": "referenceEntries",
-          "name": "Forgers and Counterfeiters",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 47
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:47-profile-fence-silver-2",
           "kind": "referenceEntries",
           "name": "Fence (Silver 2)",
@@ -40767,28 +39700,6 @@
             "page": 47
           },
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
-        },
-        {
-          "contentId": "deft-steps:reference:48-information-brokers",
-          "kind": "referenceEntries",
-          "name": "Information Brokers",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 48
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:48-muscle",
-          "kind": "referenceEntries",
-          "name": "Muscle",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 48
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "deft-steps:reference:48-profile-bawd-brass-3",
@@ -40846,17 +39757,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:50-flesh-out-the-contact",
-          "kind": "referenceEntries",
-          "name": "Flesh out the Contact",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 50
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:50-new-endeavour-establishing-a-contact",
           "kind": "referenceEntries",
           "name": "New Endeavour: Establishing A Contact",
@@ -40899,28 +39799,6 @@
             "page": 55
           },
           "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
-        },
-        {
-          "contentId": "deft-steps:reference:56-contacts-and-the-gm",
-          "kind": "referenceEntries",
-          "name": "Contacts And The Gm",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 56
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:57-organised-crime",
-          "kind": "referenceEntries",
-          "name": "Organised Crime",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 57
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "deft-steps:reference:58-assemble-the-gang",
@@ -41033,50 +39911,6 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:67-fencing",
-          "kind": "referenceEntries",
-          "name": "Fencing",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 67
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:67-perks-of-membership",
-          "kind": "referenceEntries",
-          "name": "Perks Of Membership",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 67
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:67-protection-from-the-law",
-          "kind": "referenceEntries",
-          "name": "Protection From The Law",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 67
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:69-gang-war",
-          "kind": "referenceEntries",
-          "name": "Gang War",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 69
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:81-the-great-horned-helm",
           "kind": "referenceEntries",
           "name": "The Great Horned Helm",
@@ -41110,42 +39944,9 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
-          "contentId": "deft-steps:reference:90-breaking-the-law",
-          "kind": "referenceEntries",
-          "name": "Breaking The Law",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 90
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:91-unpopular-edicts",
-          "kind": "referenceEntries",
-          "name": "Unpopular Edicts",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 91
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
           "contentId": "deft-steps:reference:92-determining-watch-presence",
           "kind": "referenceEntries",
           "name": "Determining Watch Presence",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 92
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:92-talabheim-the-city-of-laws",
-          "kind": "referenceEntries",
-          "name": "Talabheim, The City Of Laws",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",
@@ -41194,28 +39995,6 @@
           "source": {
             "book": "deft-steps",
             "page": 93
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:94-noble-prisoners",
-          "kind": "referenceEntries",
-          "name": "Noble Prisoners",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 94
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:95-a-day-in-court",
-          "kind": "referenceEntries",
-          "name": "A Day In Court",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 95
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -41355,17 +40134,6 @@
           "contentId": "deft-steps:reference:99-life-outside-the-law",
           "kind": "referenceEntries",
           "name": "Life Outside the Law",
-          "status": "reference-only",
-          "source": {
-            "book": "deft-steps",
-            "page": 99
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "deft-steps:reference:99-outlaws",
-          "kind": "referenceEntries",
-          "name": "Outlaws",
           "status": "reference-only",
           "source": {
             "book": "deft-steps",

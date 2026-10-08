@@ -40,14 +40,6 @@
     "text": "RIDING HORSE\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 7 | 25 | - | 30 | 45 | 20 | 30 | - | 10 | 10 | 20 | 24 |\n\nTraits: Size (Large), Skittish, Stride, Trained (Broken, Mount), Weapon +6"
   },
   {
-    "id": "up-in-arms:reference:70-strictures-of-myrmidia",
-    "name": "Strictures Of Myrmidia",
-    "category": "rule",
-    "topic": "Myrmidia strictures",
-    "page": 70,
-    "text": "More than many deities, Myrmidia’s strictures come with caveats and exceptions. There are several apparent contradictions involved in the practice of Myrmidian faith. Trickery is part of Myrmidia’s domain, yet so is honour; mercy is part of her makeup, but so too is ruthlessness. To abide by her strictures without offending the goddess is to understand their subtleties."
-  },
-  {
     "id": "up-in-arms:reference:80-approach-to-injury",
     "name": "Approach To Injury",
     "category": "rule",
@@ -86,14 +78,6 @@
     "topic": "Priests, injuries and armoury",
     "page": 80,
     "text": "Wounds are lost by sustaining Damage. Each time you suffer a point of damage you lose 1 Wound. Usually your Toughness Bonus and Armour Points reduce the damage you suffer.\n\nSo if you were hit on the arm for 10 Damage and your Toughness Bonus was 3, and you had leather armour on your arm granting 1 Armour Point, you would suffer 6 Wounds (10 – 3 – 1 = 6)."
-  },
-  {
-    "id": "up-in-arms:reference:80-wounds-critical-wounds-and-death",
-    "name": "Wounds, Critical Wounds, And Death",
-    "category": "rule",
-    "topic": "Priests, injuries and armoury",
-    "page": 80,
-    "text": "Wound loss represents minor cuts, bruises, and depleted reserves of energy. By comparison, Critical Wounds are much more severe, expressing serious injuries, broken bones, torn muscles, and lesions in flesh. Critical Wounds are debilitating and dangerous. Gain too many and you risk death."
   },
   {
     "id": "up-in-arms:reference:81-additional-wound-loss-from-critical-damage",
@@ -392,14 +376,6 @@
     "text": "| Weapon | Price | Enc | Availability | Reach TWO-HANDED | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| (2H) Bastard Sword | 8GC | 3 | Scarce | Long | +SB+5 | Damaging, Defensive |\n| (2H) Great Axe | 4GC | 3 | Common | Long | +SB+6 | Hack, Impact, Tiring |\n| (2H) Flamberge Zweihander | 30GC | 3 | Exotic | Long | +SB+5 | Damaging, Hack, Slash (2A) |\n| (2H) Pick | 9/– | 3 | Common | Average | +SB+5 | Damaging, Impale, Slow |\n| (2H) Warhammer | 3GC | 3 | Common | Average | +SB+6 | Damaging, Pummel, Slow |\n| (2H) Zweihander | 10GC | 3 | Scarce | Long | +SB+5 | Damaging, Hack |"
   },
   {
-    "id": "up-in-arms:reference:99-powder-and-shot",
-    "name": "Powder and Shot",
-    "category": "rule",
-    "topic": "Priests, injuries and armoury",
-    "page": "99–100",
-    "text": "Black powder is the only form of propellant in common usage, though the Colleges of Magic have experimented with infusing magic into various substances in the hope of creating a more powerful and reliable explosive.\n\nSome whisper that the inspiration for this was derived from warpstone tainted powder found in certain tunnels beneath the Middle Mountains, though such rumours are rarely repeated. The Dwarfs manufacture a form of black powder that burns very reliably, and so allows for more consistent and precise shooting.\n\nPowder is usually stored in a small pouch or horn and is poured down the muzzle of the weapon. Practised soldiers can do this directly and expect to get the correct measure of powder, though most first pour the powder into a measuring device which holds exactly enough for one shot.\n\nMost shot takes the form of lead balls of various grades and sizes, usually stored in small oiled bags to prevent corrosion that might foul the barrel of a gun. Some weapons have quite tight bores, such as the Hochland Long Rifle, and are designed for accurate fire. Most military blackpowder weapons have bores a good deal wider than the balls of shot they are designed to fire, sacrificing accuracy for more rapid reloading and firing.\n\nHunters prefer rifles, as there is typically time to reload in comfort and rapid firing is less essential than accuracy, especially considering the price of shot and ball. While some do bring rifles to war, their accuracy makes them an extreme danger to officers and others who would rather not be shot at (accurately); carrying a hunting rifle into battle is a sure way to find yourself hanged if captured."
-  },
-  {
     "id": "up-in-arms:reference:101-blackpowder-weapons",
     "name": "Blackpowder Weapons",
     "category": "rule",
@@ -579,44 +555,12 @@
     "text": "DEMIGRYPH MOUNT\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 7 | 55 | – | 55 | 45 | 40 | 55 | – | 15 | 45 | 15 | 34 |\n\nTraits: Armour (Rear Legs) 1, (Head, Body, and Forelegs) 3, Belligerent, Bestial, Night Vision, Size (Large), Stride, Trained (Broken, Mount, Shock Cavalry, War)\n\nCombat\n\nTraits: Bite +9, Weapon (Talons) +9\n\nTrappings: Barding (2 AP to Body, Head, Forelegs)"
   },
   {
-    "id": "up-in-arms:reference:110-hire-em-and-fire-em",
-    "name": "Hire ‘Em And Fire ‘Em",
-    "category": "rule",
-    "topic": "Hirelings",
-    "page": 110,
-    "text": "Adventurers travel far and wide, and often find themselves in unfamiliar territory. Perhaps the locals refuse to speak to a stranger who does not include a prayer to Taal in every sentence. Perhaps they must traverse a dense forest or mountain range but lack the experience to do so. There is almost always someone they can turn to for help with the local people and geography, for a price."
-  },
-  {
-    "id": "up-in-arms:reference:110-hired-brains",
-    "name": "Hired Brains",
-    "category": "rule",
-    "topic": "Hirelings",
-    "page": "110–111",
-    "text": "Adventurers are often called many things, but they are rarely acknowledged as smart. There’s nothing clever about wandering off into dark places and risking terrible death. When faced with mysteries of a cerebral nature, many otherwise talented adventurers are at a loss. Fortunately, the Empire has many fine minds looking for work.\n\nHiring someone with specialised knowledge is generally much more expensive than hiring someone for general labour. Becoming a learned scholar is an expensive undertaking, which gives those who graduate a very acute sense of their own value, and they charge appropriately high fees for their services.\n\nLegal professionals, for example, charge what most adventurers would consider vast amounts of gold for anything more complicated than drafting a simple legal document, with professional translators and historians demanding not much less. Graduates of the Colleges of Magic are a frivolity affordable only for the aristocracy.\n\nA more economical, although also less reliable, alternative is to hire a student. The universities of the Empire charge a great deal of money, and many students jump at the chance of help to pay their debts. The Colleges of Magic even encourage students to engage in ‘freelance’ work (closely monitored in case they fall prey to temptation, of course) to develop a better understanding of their skills and abilities.\n\nThey are considerably less knowledgeable than their teachers or graduates, but very often they know enough to help the adventurers who hire them. When an apprentice wizard solves a magical cipher that protected a priceless treasure hoard, it matters not to the employer if their pronunciation of the ancient glyphs was a bit off."
-  },
-  {
     "id": "up-in-arms:reference:110-hired-goons",
     "name": "Hired Goons",
     "category": "rule",
     "topic": "Hirelings",
     "page": 110,
     "text": "Adventurers often find themselves in over their heads. The pack of Beastmen they hunted turns out to be a whole herd, or a chance discovery makes an enemy of a fearsome cult of killers. At times like these, the hired mercenary is a lifesaver. Even if the party already possesses a skilled warrior or two, the addition of another swordarm can greatly increase everyone’s tactical options, as well as their overall chances of survival.\n\nA party of adventurers with a veteran soldier or two at their side can take on terrible threats and reap greater rewards. They can sleep soundly at night knowing that a hired bodyguard remains alert for threats.\n\nSwords for hire can be found almost anywhere in the Old World. From lethal army veterans who can’t get used to retirement, to back-alley thugs who simply enjoy cracking skulls for coin, there is always someone willing to exchange violence for money.\n\nHired muscle is readily available and, depending on the standards one is willing to accept, quite affordable. A street thug might be happy with a silver shilling or two per day to watch the group’s back and rough up anyone meaning them harm, whereas a respected squad of experienced Tilean mercenaries could easily demand several gold crowns a week for their protection, which can often be fearsome enough to make even a Skaven assassin reconsider (or at least find someone to blame for their failure).\n\nThe cynical adventurer is also aware that having someone else targeted by an eldritch blast of unholy magic is much more agreeable than being the target themselves. There is, alas, very little in the way of oversight and regulation of adventuring groups with a suspiciously high turnover in hired muscle."
-  },
-  {
-    "id": "up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it",
-    "name": "We Can Afford It, but Can We Afford It?",
-    "category": "rule",
-    "topic": "Hirelings",
-    "page": "111–112",
-    "text": "Whether a hireling is carrying a noble’s spare clothing or a mercenary warrior, the majority are doing so for one reason: payment. Even the lowest servant requires a few shillings a week to feed and clothe themselves and hiring particularly skilled people can cost several gold crowns or more a week.\n\nIf their wages are delayed or less than agreed, whether by unfortunate setback or deliberate penny-pinching, they are well within their rights to leave and find more reliable employers. If they feel particularly slighted by their employer’s inability to pay on time, many servants feel justified in absconding with valuable items as compensation! It is therefore essential before hiring to ensure that the long-term costs can be covered.\n\nFor many adventurers, particularly those just starting out or who do not count a noble scion or wealthy trader among their number, this can make hirelings far too expensive an investment. In order to afford the services of a hireling for more than a week or two, such unfortunates must work hard or get a lucky break to amass enough coin or goods to barter. A sudden setback, such as paying for a physician to save the life of a party member, could wipe out the savings of new adventurers.\n\n‘Free to those who can afford it. Very expensive for those who can’t!’ — Vyvian Weisschnell, Second Cousin to Baron Lundgren of Schlügelborscht, on hired help"
-  },
-  {
-    "id": "up-in-arms:reference:112-liability-and-responsibility",
-    "name": "Liability and Responsibility",
-    "category": "rule",
-    "topic": "Hirelings",
-    "page": 112,
-    "text": "Employing a hireling is like any contract: the hireling agrees to do a particular task, and the employer agrees to pay them a certain amount for it, until the task is complete, the contract expires, or any number of possible circumstances are reached. This is seen as just and fair, and the foundation of good business across the Empire. But there is never a shortage of con artists and lowlifes attempting to find contractual loopholes to swindle the other party. Is there someone who can vouch for a hireling’s skills and character?\n\nDoes the hireling have reason to doubt the party’s promises of payment? A group of adventurers that does not honour their contracts quickly finds that hirelings demand payment in advance, if they agree to employment at all, and such a poor reputation will travel quickly through the business world, as merchants raise prices or demand collateral for the risk of doing business with such nefarious folk. Employees, rightly or wrongly, are often seen as an extension of the employer. What a hireling does, whether they are currently ‘on the job’, they do in the party’s name. If a hireling spends their free time carousing and getting thrown out of pubs, or accusing the village priest of cheating at dice, for example, it will be the party employing them that must deal with the consequences."
   },
   {
     "id": "up-in-arms:reference:113-hireling-profiles",
@@ -953,22 +897,6 @@
     "topic": "Group Advantage",
     "page": 134,
     "text": "The GM should assess the conflict at the end of the Round. If one side has more combatants, their side is dominant and the other side suppressed. If the number of combatants is equal, decide by which side holds a tactical advantage, such as having higher ground or surrounding their opponents. Once decided, move 1 Advantage from the suppressed Advantage Pool to the dominant Advantage Pool. If there is no Advantage in the suppressed Advantage Pool, the dominant Advantage Pool gains 1 Advantage."
-  },
-  {
-    "id": "up-in-arms:reference:135-changing-creature-traits",
-    "name": "Changing Creature Traits",
-    "category": "rule",
-    "topic": "Group Advantage",
-    "page": 135,
-    "text": "The following Creature Trait has been changed to fit these alternative Advantage rules."
-  },
-  {
-    "id": "up-in-arms:reference:135-changing-talents",
-    "name": "Changing Talents",
-    "category": "rule",
-    "topic": "Group Advantage",
-    "page": 135,
-    "text": "Several Talents have been changed to fit these alternative Advantage rules. Refer to New and Updated Talents on page 140 to see how the following Talents are affected: Beat Blade, Distract, Drilled, Gunner, Rapid Reload, Relentless, Reversal, and Shieldsman."
   },
   {
     "id": "up-in-arms:reference:135-initial-advantage",

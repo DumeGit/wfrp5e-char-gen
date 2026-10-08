@@ -47,7 +47,7 @@ Integration verification: Browser checks cover book activation, source-labelled 
 
 ## Reviewed reference imports — 7 October 2026
 
-Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; only other rules/options remain searchable. Core GM creation is unchanged.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. Core GM creation is unchanged.
 
 Injury/critical tables, mounted combat, Pursuits, Group Advantage, hirelings, structure/siege rules, Warrior Endeavours and original equipment/property tables. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 

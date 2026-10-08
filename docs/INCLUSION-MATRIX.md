@@ -19,18 +19,18 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 681 | 0 | 0 |
-| Up in Arms | 135 | 12 | 137 | 1 | 9 |
-| Archives of the Empire: Volume I | 31 | 22 | 12 | 0 | 13 |
-| Archives of the Empire: Volume II | 50 | 7 | 107 | 0 | 15 |
-| Archives of the Empire: Volume III | 45 | 14 | 112 | 0 | 12 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 655 | 0 | 0 |
+| Up in Arms | 135 | 12 | 128 | 1 | 9 |
+| Archives of the Empire: Volume I | 31 | 22 | 10 | 0 | 13 |
+| Archives of the Empire: Volume II | 50 | 7 | 103 | 0 | 15 |
+| Archives of the Empire: Volume III | 45 | 14 | 105 | 0 | 12 |
 | Archives III — Animal-doctor Hedge Witch (variant) | 0 | 1 | 0 | 0 | 0 |
-| Winds of Magic | 120 | 55 | 264 | 0 | 21 |
+| Winds of Magic | 120 | 55 | 254 | 0 | 21 |
 | Rough Nights & Hard Days | 3 | 5 | 24 | 0 | 80 |
-| Dwarf Player’s Guide | 156 | 34 | 131 | 2 | 0 |
-| High Elf Player’s Guide | 55 | 55 | 111 | 0 | 0 |
+| Dwarf Player’s Guide | 156 | 34 | 120 | 2 | 0 |
+| High Elf Player’s Guide | 55 | 55 | 104 | 0 | 0 |
 | Blood and Bramble | 15 | 10 | 2 | 0 | 6 |
-| Deft Steps, Light Fingers | 39 | 18 | 182 | 0 | 22 |
+| Deft Steps, Light Fingers | 39 | 18 | 146 | 0 | 22 |
 | Deft Steps — General Ranald Priest (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Ranald the Dealer (variant) | 1 | 1 | 0 | 0 | 0 |
 | Deft Steps — Taal Priest (variant) | 1 | 0 | 0 | 0 | 0 |
@@ -42,7 +42,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.6
+Pack `core` · version 1.1.7
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -51,8 +51,8 @@ Pack `core` · version 1.1.6
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 245 | 0 | 0 |
-| ruleReferences | 0 | 0 | 435 | 0 | 0 |
+| referenceEntries | 0 | 0 | 224 | 0 | 0 |
+| ruleReferences | 0 | 0 | 430 | 0 | 0 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
 | spells | 225 | 0 | 0 | 0 | 0 |
@@ -84,7 +84,6 @@ Pack `core` · version 1.1.6
 | `core:reference:132-rolling-with-advantage` — Rolling with Advantage | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `core:reference:132-typical-test` — Typical Test | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `core:reference:133-spend-a-fortune-point-to` — Spend a Fortune Point to: | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:reference:133-using-the-rules` — Using The Rules | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `core:reference:134-a-time-for-crime` — A Time For Crime | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `core:reference:134-common-forms-of-skullduggery` — Common Forms Of Skullduggery | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `core:reference:134-theft-and-skullduggery` — Theft And Skullduggery | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
@@ -120,7 +119,6 @@ Pack `core` · version 1.1.6
 | `core:reference:150-good-roleplay` — Good Roleplay | referenceEntries | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
 | `core:reference:151-example-outcomes` — Worked example — Challenging (+0 SL) Perception | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
 | `core:reference:152-example-navigation-difficulties` — Example Navigation Difficulties | referenceEntries | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
-| `core:reference:152-life-beyond-the-walls` — Life Beyond The Walls | referenceEntries | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
 | `core:reference:153-cunning-crafts` — Cunning Crafts | referenceEntries | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
 | `core:reference:153-locating-herbs-for-remedies` — Locating Herbs For Remedies | referenceEntries | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
 | `core:reference:154-remedy-creation-difficulty` — Remedy Creation Difficulty | referenceEntries | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
@@ -142,7 +140,6 @@ Pack `core` · version 1.1.6
 | `core:reference:166-melee-attack-modifiers` — Melee Attack Modifiers | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
 | `core:reference:166-ranged-attack-modifiers-add-all-that-apply` — Ranged Attack Modifiers - Add All That Apply | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
 | `core:reference:168-scatter` — Scatter | referenceEntries | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:reference:170-injury-healing-and-death` — Injury, Healing, And Death | referenceEntries | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
 | `core:reference:170-the-heal-skill-and-bleeding-conditions` — The Heal Skill And Bleeding Conditions | referenceEntries | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
 | `core:reference:171-healing-animals` — Healing Animals | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
 | `core:reference:171-open-wounds` — Open Wounds | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
@@ -163,7 +160,6 @@ Pack `core` · version 1.1.6
 | `core:reference:189-mental-corruption-table` — Mental Corruption Table | referenceEntries | reference-only | p. 189 | Sourced book rule reference; no live-play automation. |
 | `core:reference:189-physical-corruption-table` — Physical Corruption Table | referenceEntries | reference-only | p. 189 | Sourced book rule reference; no live-play automation. |
 | `core:reference:190-during-downtime` — During Downtime | referenceEntries | reference-only | p. 190 | Sourced book rule reference; no live-play automation. |
-| `core:reference:190-roleplaying-downtime` — Roleplaying Downtime | referenceEntries | reference-only | p. 190 | Sourced book rule reference; no live-play automation. |
 | `core:reference:191-advancement-xp-costs` — Advancement Xp Costs | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `core:reference:192-regional-events` — Regional Events Table | referenceEntries | reference-only | p. 192–193 | Sourced book rule reference; no live-play automation. |
 | `core:reference:194-character-events` — Character Events Table | referenceEntries | reference-only | p. 194–195 | Sourced book rule reference; no live-play automation. |
@@ -194,25 +190,15 @@ Pack `core` · version 1.1.6
 | `core:reference:201-study-a-mark` — Study a Mark | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
 | `core:reference:201-training` — Training | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
 | `core:reference:201-unusual-learning` — Unusual Learning | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
-| `core:reference:205-penances` — Manann — Penances | referenceEntries | reference-only | p. 205 | Sourced book rule reference; no live-play automation. |
 | `core:reference:205-strictures` — Manann — Strictures | referenceEntries | reference-only | p. 205 | Sourced book rule reference; no live-play automation. |
-| `core:reference:206-penances` — Morr — Penances | referenceEntries | reference-only | p. 206 | Sourced book rule reference; no live-play automation. |
 | `core:reference:206-strictures` — Morr — Strictures | referenceEntries | reference-only | p. 206 | Sourced book rule reference; no live-play automation. |
-| `core:reference:207-penances` — Myrmidia — Penances | referenceEntries | reference-only | p. 207 | Sourced book rule reference; no live-play automation. |
 | `core:reference:207-strictures` — Myrmidia — Strictures | referenceEntries | reference-only | p. 207 | Sourced book rule reference; no live-play automation. |
-| `core:reference:208-penances` — Ranald — Penances | referenceEntries | reference-only | p. 208 | Sourced book rule reference; no live-play automation. |
 | `core:reference:208-strictures` — Ranald — Strictures | referenceEntries | reference-only | p. 208 | Sourced book rule reference; no live-play automation. |
-| `core:reference:209-penances` — Rhya — Penances | referenceEntries | reference-only | p. 209 | Sourced book rule reference; no live-play automation. |
 | `core:reference:209-strictures` — Rhya — Strictures | referenceEntries | reference-only | p. 209 | Sourced book rule reference; no live-play automation. |
-| `core:reference:210-penances` — Shallya — Penances | referenceEntries | reference-only | p. 210 | Sourced book rule reference; no live-play automation. |
 | `core:reference:210-strictures` — Shallya — Strictures | referenceEntries | reference-only | p. 210 | Sourced book rule reference; no live-play automation. |
-| `core:reference:211-penances` — Sigmar — Penances | referenceEntries | reference-only | p. 211 | Sourced book rule reference; no live-play automation. |
 | `core:reference:211-strictures` — Sigmar — Strictures | referenceEntries | reference-only | p. 211 | Sourced book rule reference; no live-play automation. |
-| `core:reference:212-penances` — Taal — Penances | referenceEntries | reference-only | p. 212 | Sourced book rule reference; no live-play automation. |
 | `core:reference:212-strictures` — Taal — Strictures | referenceEntries | reference-only | p. 212 | Sourced book rule reference; no live-play automation. |
-| `core:reference:213-penances` — Ulric — Penances | referenceEntries | reference-only | p. 213 | Sourced book rule reference; no live-play automation. |
 | `core:reference:213-strictures` — Ulric — Strictures | referenceEntries | reference-only | p. 213 | Sourced book rule reference; no live-play automation. |
-| `core:reference:214-penances` — Verena — Penances | referenceEntries | reference-only | p. 214 | Sourced book rule reference; no live-play automation. |
 | `core:reference:214-strictures` — Verena — Strictures | referenceEntries | reference-only | p. 214 | Sourced book rule reference; no live-play automation. |
 | `core:reference:218-wrath-of-the-gods` — Wrath of the Gods Table | referenceEntries | reference-only | p. 218–219 | Sourced book rule reference; no live-play automation. |
 | `core:reference:220-blessings` — Blessings | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
@@ -229,7 +215,6 @@ Pack `core` · version 1.1.6
 | `core:reference:236-types-of-magic-in-the-old-world` — Types Of Magic In The Old World | referenceEntries | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
 | `core:reference:238-minor-miscast-table` — Minor Miscast Table | referenceEntries | reference-only | p. 238 | Sourced book rule reference; no live-play automation. |
 | `core:reference:239-major-miscast-table` — Major Miscast Table | referenceEntries | reference-only | p. 239 | Sourced book rule reference; no live-play automation. |
-| `core:reference:240-petty-spells` — Petty Spells | referenceEntries | reference-only | p. 240 | Sourced book rule reference; no live-play automation. |
 | `core:reference:242-arcane-spells` — Arcane Spells | referenceEntries | reference-only | p. 242 | Sourced book rule reference; no live-play automation. |
 | `core:reference:247-lore-of-death` — Lore of Death | referenceEntries | reference-only | p. 247 | Sourced book rule reference; no live-play automation. |
 | `core:reference:248-lore-of-fire` — Lore of Fire | referenceEntries | reference-only | p. 248 | Sourced book rule reference; no live-play automation. |
@@ -244,16 +229,13 @@ Pack `core` · version 1.1.6
 | `core:reference:259-lore-of-nurgle` — Lore of Nurgle | referenceEntries | reference-only | p. 259 | Sourced book rule reference; no live-play automation. |
 | `core:reference:260-lore-of-slaanesh` — Lore of Slaanesh | referenceEntries | reference-only | p. 260 | Sourced book rule reference; no live-play automation. |
 | `core:reference:260-lore-of-tzeentch` — Lore of Tzeentch | referenceEntries | reference-only | p. 260 | Sourced book rule reference; no live-play automation. |
-| `core:reference:266-extend-caution` — Extend Caution | referenceEntries | reference-only | p. 266 | Sourced book rule reference; no live-play automation. |
 | `core:reference:266-the-gms-test-toolkit` — The Gm’S Test Toolkit | referenceEntries | reference-only | p. 266 | Sourced book rule reference; no live-play automation. |
 | `core:reference:267-awarding-xp` — Awarding XP | referenceEntries | reference-only | p. 267 | Sourced book rule reference; no live-play automation. |
 | `core:reference:268-travelling-by-road` — Travelling By Road | referenceEntries | reference-only | p. 268 | Sourced book rule reference; no live-play automation. |
 | `core:reference:269-travel-times` — Travel Times | referenceEntries | reference-only | p. 269 | Sourced book rule reference; no live-play automation. |
 | `core:reference:269-travelling-by-river` — Travelling By River | referenceEntries | reference-only | p. 269 | Sourced book rule reference; no live-play automation. |
 | `core:reference:296-consumer-guide` — Consumer Guide | referenceEntries | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
-| `core:reference:296-trapping-lists` — Trapping Lists | referenceEntries | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
 | `core:reference:297-availability-2` — Availability | referenceEntries | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
-| `core:reference:297-criminal-coinage` — Criminal Coinage | referenceEntries | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
 | `core:reference:299-encumbrance-examples` — Encumbrance Examples | referenceEntries | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
 | `core:reference:299-overburdened-examples` — Overburdened Examples | referenceEntries | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
 | `core:reference:300-weapons` — Weapons | referenceEntries | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
@@ -262,7 +244,6 @@ Pack `core` · version 1.1.6
 | `core:reference:302-calculating-range-bands` — Calculating Range Bands | referenceEntries | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
 | `core:reference:302-example-weapon-ranges` — Example Weapon Ranges | referenceEntries | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
 | `core:reference:303-ranged-weapons` — Ranged Weapons | referenceEntries | reference-only | p. 303 | Sourced book rule reference; no live-play automation. |
-| `core:reference:306-armour-flaws` — Armour Flaws | referenceEntries | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
 | `core:reference:307-armour` — Armour | referenceEntries | reference-only | p. 307 | Sourced book rule reference; no live-play automation. |
 | `core:reference:307-quick-armour` — Quick Armour | referenceEntries | reference-only | p. 307 | Sourced book rule reference; no live-play automation. |
 | `core:reference:308-clothing-and-accessories-2` — Clothing And Accessories | referenceEntries | reference-only | p. 308–309 | Sourced book rule reference; no live-play automation. |
@@ -287,7 +268,6 @@ Pack `core` · version 1.1.6
 | `core:reference:316-miscellaneous-trappings-2` — Miscellaneous Trappings | referenceEntries | reference-only | p. 316 | Sourced book rule reference; no live-play automation. |
 | `core:reference:317-henchmen` — Henchmen | referenceEntries | reference-only | p. 317 | Sourced book rule reference; no live-play automation. |
 | `core:reference:317-hirelings` — Hirelings | referenceEntries | reference-only | p. 317 | Sourced book rule reference; no live-play automation. |
-| `core:reference:318-bestiary` — Bestiary | referenceEntries | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
 | `core:reference:318-creature-characteristics` — Creature Characteristics | referenceEntries | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
 | `core:reference:318-creature-hit-locations` — Creature Hit Locations | referenceEntries | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
 | `core:reference:36-2-class-and-career` — Choosing Class and Career | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
@@ -306,7 +286,6 @@ Pack `core` · version 1.1.6
 | `core:reference:38-4-skills` — Starting Skill Advances | referenceEntries | reference-only | p. 38–39 | Sourced book rule reference; no live-play automation. |
 | `core:reference:38-characteristic-bonuses` — Characteristic Bonuses | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `core:reference:38-characteristic-table` — Characteristic Table | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `core:reference:38-comparing-characteristics` — Comparing Characteristics | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `core:reference:39-5-talents-trappings-and-final-game-details` — Starting Talents and Trappings | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `core:reference:39-class-trappings` — Class Trappings Table | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `core:reference:39-starting-wealth` — Starting Wealth | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
@@ -398,15 +377,12 @@ Pack `core` · version 1.1.6
 | `core:rule-reference:rule-134-casing-the-joint` — Casing the Joint | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-134-keeping-an-eye-out` — Keeping an Eye Out | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-134-sneaking-around` — Sneaking Around | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-134-stealth-and-surveillance` — Stealth and Surveillance | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-135-gambling-and-cheating` — Gambling and Cheating | ruleReferences | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-135-silent-takedowns` — Silent Takedowns | ruleReferences | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-breaking-and-entering` — Breaking and Entering | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-136-disarming-a-trap` — Disarming a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-136-picking-locks` — Picking Locks | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-136-setting-a-trap` — Setting a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-136-spotting-a-trap` — Spotting a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-traps` — Traps | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-136-triggering-a-trap` — Triggering a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-138-forced-entry` — Forced Entry | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-138-mugging` — Mugging | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
@@ -451,7 +427,6 @@ Pack `core` · version 1.1.6
 | `core:rule-reference:rule-157-jumping-down` — Jumping Down | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-157-riding-a-mount` — Riding a Mount | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-157-swimming` — Swimming | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-157-vehicle-movement` — Vehicle Movement | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-158-drive` — Drive | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-158-pursuit-circumstances` — Pursuit Circumstances | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-158-pursuits` — Pursuits | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
@@ -573,7 +548,6 @@ Pack `core` · version 1.1.6
 | `core:rule-reference:rule-188-major-corruption` — Major Corruption | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-188-manifestation-time` — Manifestation Time | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-191-advancement-xp-costs` — Advancement XP Costs | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-191-advancing-careers` — Advancing Careers | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-191-characteristic-advances` — Characteristic Advances | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-191-purchasing-talents` — Purchasing Talents | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:rule-191-skill-advances` — Skill Advances | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
@@ -760,14 +734,14 @@ Pack `core` · version 1.1.6
 
 ## Up in Arms
 
-Pack `up-in-arms` · version 1.0.2
+Pack `up-in-arms` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 7 | 8 | 0 | 0 | 0 |
 | market | 70 | 0 | 0 | 0 | 0 |
 | origins | 0 | 3 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 137 | 0 | 9 |
+| referenceEntries | 0 | 0 | 128 | 0 | 9 |
 | spells | 8 | 1 | 0 | 0 | 0 |
 | tables | 7 | 0 | 0 | 0 | 0 |
 | talents | 0 | 0 | 0 | 1 | 0 |
@@ -817,11 +791,7 @@ Pack `up-in-arms` · version 1.0.2
 | `up-in-arms:reference:108-falling-from-a-mount` — Falling from a Mount | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:109-acquiring-a-demigrpyh` — Acquiring a Demigrpyh | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:109-profile-demigryph-mount` — Demigryph Mount | referenceEntries | deferred | p. 109 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `up-in-arms:reference:110-hire-em-and-fire-em` — Hire ‘Em And Fire ‘Em | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:110-hired-brains` — Hired Brains | referenceEntries | reference-only | p. 110–111 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:110-hired-goons` — Hired Goons | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it` — We Can Afford It, but Can We Afford It? | referenceEntries | reference-only | p. 111–112 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:112-liability-and-responsibility` — Liability and Responsibility | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:113-hireling-profiles` — Hireling Profiles | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:113-profile-local-scout-silver-1` — Local Scout — Silver 1 | referenceEntries | deferred | p. 113 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:113-profile-seasoned-mercenary-silver-3` — Seasoned Mercenary — Silver 3 | referenceEntries | deferred | p. 113 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
@@ -864,8 +834,6 @@ Pack `up-in-arms` · version 1.0.2
 | `up-in-arms:reference:133-group-advantage` — Group Advantage | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:134-benefits-of-advantage` — Benefits Of Advantage | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:134-losing-advantage` — Losing Advantage | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:135-changing-creature-traits` — Changing Creature Traits | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:135-changing-talents` — Changing Talents | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:135-initial-advantage` — Initial Advantage | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:135-seeding-the-advantage-pools` — Seeding the Advantage Pools | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:135-unstable` — Unstable | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
@@ -893,13 +861,11 @@ Pack `up-in-arms` · version 1.0.2
 | `up-in-arms:reference:141-strike-to-injure` — Strike to Injure | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:29-profile-destrier-heavy-warhorse` — Destrier — Heavy Warhorse | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:29-profile-riding-horse` — Riding Horse | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `up-in-arms:reference:70-strictures-of-myrmidia` — Strictures Of Myrmidia | referenceEntries | reference-only | p. 70 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-approach-to-injury` — Approach To Injury | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-critical-wounds` — Critical Wounds | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-inflicting-a-critical-hit-on-an-opponent-with-wounds` — Inflicting a Critical Hit on an Opponent with Wounds | referenceEntries | reference-only | p. 80–81 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-updates-to-the-bleeding-condition` — Updates To The Bleeding Condition | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-wounds` — Wounds | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:80-wounds-critical-wounds-and-death` — Wounds, Critical Wounds, And Death | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:81-additional-wound-loss-from-critical-damage` — Additional Wound Loss from Critical Damage | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:81-inflicting-a-critical-hit-on-an-opponent-with-0-wounds` — Inflicting a Critical Hit on an Opponent with 0 Wounds | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:82-death` — Death | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
@@ -940,7 +906,6 @@ Pack `up-in-arms` · version 1.0.2
 | `up-in-arms:reference:98-crossbow` — Crossbow | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:98-traditional-ammunition-table` — Traditional Ammunition Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:98-two-handed-weapons-table` — Two-Handed Weapons Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:99-powder-and-shot` — Powder and Shot | referenceEntries | reference-only | p. 99–100 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:miracle:in-good-order` — In Good Order | spells | adapted | p. 79 | Fourth Edition Advantage references converted to Momentum (core Appendix I). |
 | `up-in-arms:talent:crew-commander` — Crew Commander | talents | unavailable | p. 140 | Unavailable: Crew Commander has no Fifth Edition core equivalent. Its Fourth Edition repeat limit and Talent Test bonus need an agreed conversion (Up in Arms p. 140). |
 
@@ -948,14 +913,14 @@ Pack `up-in-arms` · version 1.0.2
 
 ## Archives of the Empire: Volume I
 
-Pack `archives-i` · version 1.0.1
+Pack `archives-i` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 0 | 4 | 0 | 0 | 0 |
 | market | 17 | 1 | 0 | 0 | 0 |
 | origins | 1 | 15 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 12 | 0 | 13 |
+| referenceEntries | 0 | 0 | 10 | 0 | 13 |
 | talents | 0 | 1 | 0 | 0 | 0 |
 | weapons | 13 | 1 | 0 | 0 | 0 |
 
@@ -1012,8 +977,6 @@ Pack `archives-i` · version 1.0.1
 | `archives-i:reference:93-dwarf-ranged-weapons` — Dwarf Ranged Weapons | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:93-eonir-ammunition` — Eonir Ammunition | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:93-eonir-ranged-weapons` — Eonir Ranged Weapons | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:94-dwarf-handgun-pistol` — Dwarf Handgun & Pistol | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:94-eonir-spear` — Eonir Spear | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
 | `archives-i:talent:youngblood` — Youngblood | talents | adapted | p. 78 | Fourth Edition per-rank bonus on the listed Tests omitted; printed limit and effects retained under the approved Fifth Edition adaptation. |
 | `archives-i:weapon:blackbriar-javelin` — Blackbriar Javelin | weapons | adapted | p. 93 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 
@@ -1021,7 +984,7 @@ Pack `archives-i` · version 1.0.1
 
 ## Archives of the Empire: Volume II
 
-Pack `archives-ii` · version 1.0.4
+Pack `archives-ii` · version 1.0.5
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1030,7 +993,7 @@ Pack `archives-ii` · version 1.0.4
 | background | 1 | 0 | 0 | 0 | 0 |
 | careers | 2 | 1 | 0 | 0 | 0 |
 | market | 12 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 107 | 0 | 15 |
+| referenceEntries | 0 | 0 | 103 | 0 | 15 |
 | species | 0 | 1 | 0 | 0 | 0 |
 | spells | 3 | 4 | 0 | 0 | 0 |
 | tables | 2 | 0 | 0 | 0 | 0 |
@@ -1078,13 +1041,11 @@ Pack `archives-ii` · version 1.0.4
 | `archives-ii:reference:28-defending-against-ogres` — Defending Against Ogres | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:28-ogre-equipment` — Ogre Equipment | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:28-other-notes` — Other Notes | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:28-size-matters` — Size Matters | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:28-weapon-damage` — Weapon Damage | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-ammunition` — Ogre Ammunition | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-armour` — Ogre Armour | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-melee-weapons` — Ogre Melee Weapons | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-ranged-weapons` — Ogre Ranged Weapons | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:30-armour-descriptions` — Armour Descriptions | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:31-ogre-magic` — Ogre Magic | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:31-ogre-spellcasters` — Ogre Spellcasters | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:31-people-of-burden` — People Of Burden | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
@@ -1095,10 +1056,8 @@ Pack `archives-ii` · version 1.0.4
 | `archives-ii:reference:50-determining-ascendant-sign` — Determining Ascendant Sign | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:50-determining-celestial-mansions` — Determining Celestial Mansions | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:51-magical-artefact-generation-table` — Magical Artefact Generation Table | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:51-magical-items-and-artifice` — Magical Items And Artifice | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:52-commissioning-a-magical-artefact` — Commissioning a Magical Artefact | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:52-identifying-a-magical-artefact` — Identifying A Magical Artefact | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:53-guarding-the-reputation-of-wizards` — Guarding the Reputation of Wizards | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:53-time-and-money` — Time and Money | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:54-fine-ill-make-it-myself` — Fine, I’ll Make it Myself! | referenceEntries | reference-only | p. 54 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:54-the-finished-result` — The Finished Result | referenceEntries | reference-only | p. 54 | Sourced book rule reference; no live-play automation. |
@@ -1186,14 +1145,14 @@ Pack `archives-ii` · version 1.0.4
 
 ## Archives of the Empire: Volume III
 
-Pack `archives-iii` · version 1.0.2
+Pack `archives-iii` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | cants | 24 | 0 | 0 | 0 | 0 |
 | careers | 1 | 2 | 0 | 0 | 0 |
 | origins | 0 | 5 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 112 | 0 | 12 |
+| referenceEntries | 0 | 0 | 105 | 0 | 12 |
 | spells | 20 | 7 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -1237,14 +1196,12 @@ Pack `archives-iii` · version 1.0.2
 | `archives-iii:reference:34-looting-armour` — Looting Armour | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:34-poor-fit` — Poor Fit | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:34-suitable-fit` — Suitable Fit | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:34-suits-of-steel` — • Suits Of Steel • | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:34-wont-fit` — Won’t Fit | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:35-asking-an-npc-to-repair-armour` — Asking an NPC to Repair Armour | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:35-critical-deflection` — Critical Deflection | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:35-repairing-armour` — Repairing Armour | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:35-repairing-armour-as-an-endeavour` — Repairing Armour as an Endeavour | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:35-repairing-armour-with-the-trade-skill` — Repairing Armour With the Trade Skill | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:36-armour-flaws` — Armour Flaws | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:36-armour-rules` — Armour Rules | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:36-combining-armour` — Combining Armour | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:36-impenetrable` — Impenetrable | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
@@ -1261,20 +1218,16 @@ Pack `archives-iii` · version 1.0.2
 | `archives-iii:reference:37-soft-kits` — Soft Kits | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:38-armet` — Armet | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:38-armet-damage` — Armet Damage | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:38-helmet-designs` — Helmet Designs | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:42-strictures-of-handrich` — Strictures of Handrich | referenceEntries | reference-only | p. 42–43 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:47-handrichs-blessings` — Handrich’S Blessings | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:47-miracles-of-handrich` — Miracles Of Handrich | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:51-penances` — Khaine — Penances | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:53-penances` — Solkan — Penances | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:53-strictures` — Solkan — Strictures | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:58-penances` — Old Faith — Penances | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:58-priests-of-the-old-faith` — Priests Of The Old Faith | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:58-strictures` — Old Faith — Strictures | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:6-enterprises` — Enterprises | referenceEntries | reference-only | p. 6 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:6-starting-an-enterprise` — Starting An Enterprise | referenceEntries | reference-only | p. 6–7 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:62-alternative-skills-and-talents` — Alternative Skills And Talents | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:62-the-lore-of-hedgecraft` — The Lore Of Hedgecraft | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-goodwill` — Goodwill | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-mirkride` — Mirkride | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-nepenthe` — Nepenthe | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
@@ -1283,7 +1236,6 @@ Pack `archives-iii` · version 1.0.2
 | `archives-iii:reference:64-protective-charm` — Protective Charm | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:7-enterprise-format` — Enterprise Format | referenceEntries | reference-only | p. 7 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:76-abilities-limitations` — Abilities & Limitations | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:76-npc-animal-familiars` — Npc Animal Familiars | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:76-profile-badger` — Badger | referenceEntries | deferred | p. 76 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:77-profile-cat` — Cat | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:77-profile-crow` — Crow | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
@@ -1374,13 +1326,13 @@ Pack `archives-iii-hedge` · version 1.0.0
 
 ## Winds of Magic
 
-Pack `winds-of-magic` · version 1.0.2
+Pack `winds-of-magic` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 10 | 2 | 0 | 0 | 0 |
 | gear | 4 | 0 | 1 | 0 | 0 |
-| referenceEntries | 0 | 0 | 263 | 0 | 21 |
+| referenceEntries | 0 | 0 | 253 | 0 | 21 |
 | skills | 1 | 1 | 0 | 0 | 0 |
 | spells | 101 | 52 | 0 | 0 | 0 |
 | tables | 4 | 0 | 0 | 0 | 0 |
@@ -1472,7 +1424,6 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:161-boars-musk` — Boar’s Musk | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:161-brewing-disasters` — Brewing Disasters | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:161-concoct` — Concoct | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:161-the-concoct-talent` — The Concoct Talent | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:162-channelpath-potion` — Channelpath Potion | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:162-debauchs-friend` — Debauch’s Friend | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:162-draught-of-power` — Draught of Power | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
@@ -1506,19 +1457,15 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:172-mail-of-stolen-valour` — Mail of Stolen Valour | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:172-pistol-of-involuntary-solitude` — Pistol of Involuntary Solitude | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:172-sword-of-holding` — Sword of Holding | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:173-incarnate-elementals` — Incarnate Elementals | referenceEntries | reference-only | p. 173 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:174-profile-incarnate-elemental-of-fire` — Incarnate Elemental Of Fire | referenceEntries | deferred | p. 174 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:175-profile-incarnate-elemental-of-death` — Incarnate Elemental Of Death | referenceEntries | deferred | p. 175 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:176-creature-trait-grim-rating` — Grim (Rating) | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:176-nature-spirits` — Nature Spirits | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts` — Incarnate Elemental Of Beasts | referenceEntries | deferred | p. 176 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `winds-of-magic:reference:177-magical-constructs` — Magical Constructs | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:179-fenbeasts` — Fenbeasts | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:179-profile-fenbeast` — Fenbeast | referenceEntries | deferred | p. 179 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:180-lores-and-familiars` — Lores And Familiars | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:181-can-they-talk` — Can They Talk? | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:181-familiar-personality` — Familiar Personality | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:182-familiars-of-chamon` — Familiars of Chamon | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:182-improving-familiars` — Improving Familiars | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:182-profile-combat-familiar` — Combat Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:182-profile-power-familiar` — Power Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
@@ -1542,7 +1489,6 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:187-familiars-and-corruption` — Familiars and Corruption | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:187-familiars-and-disease` — Familiars and Disease | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:188-spell-familiar` — Spell Familiar | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:189-the-effects-of-magic-on-the-world` — The Effects of Magic on the World | referenceEntries | reference-only | p. 189 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:19-grimoires` — Grimoires | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:19-memorising-spells` — Memorising Spells | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:19-second-sight` — Second Sight | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
@@ -1622,7 +1568,6 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:35-randomly-generating-new-careers` — Randomly Generating New Careers | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:39-alchemists-as-spellcasters` — Alchemists As Spellcasters | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:44-augury-int` — Augury (Int) | referenceEntries | reference-only | p. 44–45 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:44-new-arcane-skills` — New Arcane Skills | referenceEntries | reference-only | p. 44 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:45-augury-table` — Augury Table | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:45-symbol-table` — Symbol Table | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:46-augury-and-existing-careers` — Augury and Existing Careers | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
@@ -1635,7 +1580,6 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:47-psychometry-int` — Psychometry (Int) | referenceEntries | reference-only | p. 47–48 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:47-weirdroot` — Weirdroot | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:48-psychometery-result-table` — Psychometery Result Table | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:49-alchemy` — Alchemy | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:49-mundane-alchemy` — Mundane Alchemy | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:49-what-trade-does-what-job` — What Trade Does What Job? | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:50-caustic-or-corrosive-substances` — Caustic or Corrosive Substances | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
@@ -1661,7 +1605,6 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:64-net-of-amyntok` — Net of Amyntok | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:65-phas-protection` — Phâ’s Protection | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:65-speed-of-thought` — Speed of Thought | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal` — The Gold Wind of Magic & The Lore of Metal | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4` — Balthasar Gelt Alchemist Lord (Gold 4) | referenceEntries | deferred | p. 73 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:74-crucible-of-chamon` — Crucible of Chamon | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:74-enchant-weapon` — Enchant Weapon | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
@@ -1682,7 +1625,6 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:88-lie-of-the-land` — Lie of the Land | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:88-lifebloom` — Lifebloom | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:88-regenerate` — Regenerate | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens` — The Blue Wind of Magic & The Lore of the Heavens | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:97-profile-raphael-julevno-grand-astromancer-gold-1` — Raphael Julevno Grand Astromancer (Gold 1) | referenceEntries | deferred | p. 97 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:98-cerulean-shield` — Cerulean Shield | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:98-comet-of-casandora` — Comet of Casandora | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
@@ -1881,7 +1823,7 @@ Pack `rough-nights` · version 1.0.2
 
 ## Dwarf Player’s Guide
 
-Pack `dwarf-guide` · version 1.0.1
+Pack `dwarf-guide` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1890,7 +1832,7 @@ Pack `dwarf-guide` · version 1.0.1
 | careers | 6 | 4 | 0 | 0 | 0 |
 | gear | 30 | 0 | 8 | 0 | 0 |
 | origins | 0 | 11 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 118 | 0 | 0 |
+| referenceEntries | 0 | 0 | 107 | 0 | 0 |
 | runes | 63 | 8 | 0 | 0 | 0 |
 | skills | 2 | 1 | 0 | 0 | 0 |
 | tables | 11 | 0 | 0 | 0 | 0 |
@@ -1982,7 +1924,6 @@ Pack `dwarf-guide` · version 1.0.1
 | `dwarf-guide:reference:127-list-of-runes` — List Of Runes | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:128-armour-runes` — Armour Runes | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:130-protection-runes` — Protection Runes | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:132-additional-runes` — Additional Runes | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:132-doom-runes` — Doom Runes | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:137-cult-runic-magic` — Grungni — Cult Runic Magic | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:137-strictures` — Grungni — Strictures | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
@@ -1998,9 +1939,7 @@ Pack `dwarf-guide` · version 1.0.1
 | `dwarf-guide:reference:141-strictures` — Thungni / Morgrim — Strictures | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:141-strictures-2` — Thungni / Morgrim — Strictures | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:142-strictures` — Ancestors — Strictures | referenceEntries | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:38-naming-rites` — Naming Rites | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:39-forenames` — Forenames | referenceEntries | reference-only | p. 39–40 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:40-nicknames` — Nicknames | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:41-place-of-origin` — Place of Origin | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:42-physical-attributes` — Physical Attributes | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:51-dwarf-random-class-and-career-table` — Dwarf Random Class And Career Table | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
@@ -2012,19 +1951,16 @@ Pack `dwarf-guide` · version 1.0.1
 | `dwarf-guide:reference:56-guild-engineer` — Guild Engineer | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:56-outcast-engineer` — Outcast Engineer | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:56-sky-pilot` — Sky Pilot | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:57-dwarf-artforms` — Dwarf Artforms | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:57-grudgemaster` — Grudgemaster | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:57-reckoner` — Reckoner | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:57-stoneshaper` — Stoneshaper | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:58-karak-miner` — Karak Miner | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:58-lodefinder` — Lodefinder | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:58-runebearer` — Runebearer | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:59-dwarf-slayer` — Dwarf Slayer | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:59-slayers-do-not-wear-armour` — Slayers Do Not Wear Armour | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:61-axefighter` — Axefighter | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:61-quarreller` — Quarreller | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:61-thunderer` — Thunderer | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:80-new-skills` — New Skills | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:80-new-skills-and-talents` — New Skills And Talents | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:84-blood-grudge` — Blood Grudge | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:84-grudges` — Grudges | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
@@ -2035,17 +1971,12 @@ Pack `dwarf-guide` · version 1.0.1
 | `dwarf-guide:reference:86-party-grudges` — Party Grudges | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:86-suggested-restitution-for-grudges` — Suggested Restitution For Grudges | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:86-unresolved-grudges` — Unresolved Grudges | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:90-gromril` — Gromril | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:91-gromril-armour` — Gromril armour | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:91-gromril-mining` — Gromril mining | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:91-gromril-weapons` — Gromril weapons | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:91-the-kings-gift` — The King’S Gift | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:92-crewed-rating` — Crewed (Rating) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:92-personal-wargear` — Personal Wargear | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:92-salvo-rating` — Salvo (Rating) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:92-spread-rating` — Spread (Rating) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:93-dwarf-ammunition` — Dwarf Ammunition | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:93-dwarf-ranged-weapons` — Dwarf Ranged Weapons | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:93-melee-weapons` — Melee Weapons | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:94-ranged-weapons` — Ranged Weapons | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:95-dwarf-armour` — Dwarf Armour | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
@@ -2082,7 +2013,7 @@ Pack `dwarf-guide` · version 1.0.1
 
 ## High Elf Player’s Guide
 
-Pack `high-elf` · version 1.0.2
+Pack `high-elf` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -2090,7 +2021,7 @@ Pack `high-elf` · version 1.0.2
 | careers | 2 | 4 | 0 | 0 | 0 |
 | gear | 8 | 3 | 12 | 0 | 0 |
 | origins | 0 | 11 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 88 | 0 | 0 |
+| referenceEntries | 0 | 0 | 81 | 0 | 0 |
 | spells | 32 | 27 | 0 | 0 | 0 |
 | tables | 0 | 5 | 0 | 0 | 0 |
 | talents | 5 | 2 | 0 | 0 | 0 |
@@ -2152,7 +2083,6 @@ Pack `high-elf` · version 1.0.2
 | `high-elf:origin:the-shadowlands` — The Shadowlands | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `high-elf:origin:tiranoc` — Tiranoc | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `high-elf:origin:yvresse` — Yvresse | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
-| `high-elf:reference:100-smith-priest-of-vaul` — Smith-Priest Of Vaul | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:100-smith-priest-of-vaul-printed-career` — Smith-priest of Vaul — printed Career | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:101-sacrifices` — Vaul — Sacrifices | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:101-talent-cadai-meditation` — Cadai Meditation | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
@@ -2168,7 +2098,6 @@ Pack `high-elf` · version 1.0.2
 | `high-elf:reference:109-tenets-of-hoeth` — Tenets Of Hoeth | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:112-beseeching-atharti` — Beseeching Atharti | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:112-dark-deals-with-slaanesh` — Dark Deals with Slaanesh | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:114-beseeching-khaine` — Beseeching Khaine | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:118-instigating-intrigue` — Instigating Intrigue | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:118-intriguing-options` — Intriguing Options | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:118-players-and-intrigues` — Players And Intrigues | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
@@ -2190,12 +2119,9 @@ Pack `high-elf` · version 1.0.2
 | `high-elf:reference:36-herbs-and-elven-markets` — Herbs and Elven Markets | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:36-narinocha-wine` — Narinocha Wine | referenceEntries | reference-only | p. 36–37 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:37-enchanted-items` — Enchanted Items | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:39-high-elf-warships-2` — High Elf Warships | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:40-dragonblade-ram` — Dragonblade Ram | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:40-high-elf-warships` — High Elf Warships | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:42-high-elf-merchant-ships` — High Elf Merchant Ships | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:43-dragon-princes` — Dragon Princes | referenceEntries | reference-only | p. 43 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:45-playing-a-high-elf` — Playing a High Elf | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:46-factors-influencing-yenlui` — Factors Influencing Yenlui | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:46-tracking-yenlui` — Tracking Yenlui | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:47-effects-of-yenlui` — Effects Of Yenlui | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
@@ -2219,9 +2145,7 @@ Pack `high-elf` · version 1.0.2
 | `high-elf:reference:60-soldier` — Soldier | referenceEntries | reference-only | p. 60 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:61-noble` — Noble | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:62-artisan` — Artisan | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:63-charlatan` — Charlatan | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:63-seaman` — Seaman | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:63-smuggler` — Smuggler | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:68-sword-dancing-tests` — Sword-dancing Tests | referenceEntries | reference-only | p. 68 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:71-way-of-the-shadow` — Way of the Shadow | referenceEntries | reference-only | p. 71 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:78-training-of-a-mage` — Training of a Mage | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
@@ -2324,14 +2248,14 @@ Pack `blood-bramble` · version 1.0.2
 
 ## Deft Steps, Light Fingers
 
-Pack `deft-steps` · version 1.0.3
+Pack `deft-steps` · version 1.0.4
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 1 | 8 | 0 | 0 | 0 |
 | cults | 0 | 1 | 0 | 0 | 0 |
 | gear | 11 | 4 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 182 | 0 | 22 |
+| referenceEntries | 0 | 0 | 146 | 0 | 22 |
 | spells | 27 | 5 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2364,7 +2288,6 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:100-robbery` — Robbery | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:100-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:101-forming-an-outlaw-band` — Forming an Outlaw Band | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:101-outlaws-ranald` — Outlaws & Ranald | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:102-detailing-outlaw-bands` — Detailing outlaw bands | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:102-outlaw-traits` — Outlaw Traits | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-outlaw-chief-traits` — Outlaw Chief Traits | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
@@ -2380,7 +2303,6 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:109-bounty-hunter-warrants` — Bounty Hunter Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:109-random-warrants` — Random Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:111-profile-brunner-bounty-hunter-general` — Brunner Bounty Hunter General | referenceEntries | deferred | p. 111 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:112-pathfinding` — Pathfinding | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:112-wilderness-travel` — Wilderness Travel | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:113-provisions` — Provisions | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:113-travel` — Travel | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
@@ -2388,9 +2310,6 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:114-precipitation` — Precipitation | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:114-temperature` — Temperature | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:114-weather-table-2` — Weather Table | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:115-fire` — Fire | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:115-packs-and-containers` — Packs and Containers | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:115-poor-planning-and-its-consequences` — Poor Planning And Its Consequences | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:115-tents` — Tents | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:115-visibility` — Visibility | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:116-wilderness-travel-events` — Wilderness Travel Events | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
@@ -2427,11 +2346,7 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:13-blessings` — Blessings | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:13-luck-out` — Luck Out? | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:13-miracles` — Miracles | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:130-hunter-and-hunted` — Hunter And Hunted | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:130-hunting-as-endeavour` — Hunting As Endeavour | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:131-a-fast-buck` — A Fast Buck | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:131-skins-and-other-uses` — Skins and Other Uses | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:131-the-name-of-the-game` — The Name Of The Game | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:131-the-value-of-game` — The Value Of Game | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:132-animals-and-equipment` — Animals and Equipment | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:132-hunting-considerations` — Hunting Considerations | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
@@ -2439,23 +2354,19 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:133-profile-grootscher-marsh-hound` — Grootscher Marsh Hound | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:133-profile-hochland-lockhund` — Hochland Lockhund | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:133-profile-nordlander-bamse` — Nordlander Bamse | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:134-hawks` — Hawks | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:134-hunting-traits` — Hunting Traits | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:134-profile-arabyan-redhawk` — Arabyan Redhawk | referenceEntries | deferred | p. 134 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:134-profile-dove-hawk` — Dove Hawk | referenceEntries | deferred | p. 134 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:135-a-noble-pursuit` — A Noble Pursuit | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:15-ranalds-gamble` — Ranald’S Gamble | referenceEntries | reference-only | p. 15 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:27-expectations-and-complications` — Expectations and Complications | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:27-pickpocket-skills-talents-and-trappings` — Pickpocket Skills, Talents, And Trappings | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:27-pickpocket-success-table` — Pickpocket Success Table | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:27-pickpockets` — Pickpockets | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:27-pilfering-in-the-game` — Pilfering in the Game | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:27-spotting-a-pickpocket-at-work` — Spotting a Pickpocket at Work | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:28-incriminating-artefact` — Incriminating Artefact | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:28-the-contents-of-a-purse` — The Contents Of A Purse | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:29-victim-quirk-table` — Victim Quirk Table | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:30-burglar-skills-talents-and-trappings` — Burglar Skills, Talents, And Trappings | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:30-burglars` — Burglars | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:31-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:31-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:31-thieves-in-downtime` — Thieves In Downtime | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
@@ -2472,23 +2383,18 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:36-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:36-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:37-creepy-customer-table` — Creepy Customer Table | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:37-khemri` — Khemri | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:38-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:38-false-promises` — False Promises | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:38-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:39-charlatan-income-endeavour-complications` — Charlatan Income Endeavour Complications | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:39-congruent-with-character` — Congruent With Character | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:39-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:40-underworld-rumours` — Underworld Rumours | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:41-fencing-in-downtime` — Fencing in Downtime | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:41-fencing-lessons` — Fencing Lessons | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:41-file-off-the-markings` — File Off the Markings | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:41-item-recognition` — Item Recognition | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:41-safer-to-scrap-it` — Safer to Scrap It | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:41-stolen-goods` — Stolen Goods | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:41-take-a-trip` — Take a Trip | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:42-a-careful-kind-of-crime` — A Careful Kind of Crime | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:42-embezzlers` — Embezzlers | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:42-random-business-table` — Random Business Table | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:42-random-businesses` — Random Businesses | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:42-trappings` — Trappings | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
@@ -2503,25 +2409,17 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:45-forged-artwork` — Forged Artwork | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:46-casual-contacts` — Casual Contacts | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:46-contacts` — Contacts | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:46-priests-of-ranald` — Priests Of Ranald | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:47-fences` — Fences | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:47-forgers-and-counterfeiters` — Forgers and Counterfeiters | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:47-profile-fence-silver-2` — Fence (Silver 2) | referenceEntries | deferred | p. 47 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:47-profile-forger-silver-1` — Forger (Silver 1) | referenceEntries | deferred | p. 47 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:48-information-brokers` — Information Brokers | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:48-muscle` — Muscle | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:48-profile-bawd-brass-3` — Bawd (Brass 3) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:48-profile-racketeer-brass-5` — Racketeer (Brass 5) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:49-profile-charlatan-brass-5` — Charlatan (Brass 5) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2` — Safe House Owner (Townsman) (Silver 2) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:50-define-the-contact` — Define the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:50-flesh-out-the-contact` — Flesh out the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:50-new-endeavour-establishing-a-contact` — New Endeavour: Establishing A Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:52-contact-quality-table` — Contact Quality Table | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:53-contact-development-table` — Contact Development Table | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:55-profile-august-sternwachter-master-fence-ex-noble-silver-3` — August Sternwachter Master Fence, Ex-Noble (Silver 3) | referenceEntries | deferred | p. 55 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:56-contacts-and-the-gm` — Contacts And The Gm | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:57-organised-crime` — Organised Crime | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:58-assemble-the-gang` — Assemble the Gang | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:58-build-gang` — Build Gang | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:58-new-endeavours` — New Endeavours | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
@@ -2532,23 +2430,14 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:64-profile-albrecht-the-fish-gang-boss-silver-3-organisation-level-2` — Albrecht ‘The Fish’ — Gang Boss Silver 3 - Organisation Level 2 | referenceEntries | deferred | p. 64 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:65-profile-gunna-von-sperren-smuggler-king-silver-3-organisation-level-3` — Gunna Von Sperren — Smuggler King Silver 3 - Organisation Level 3 | referenceEntries | deferred | p. 65 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:67-criminal-enterprise-perks` — Criminal Enterprise Perks | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:67-fencing` — Fencing | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:67-perks-of-membership` — Perks Of Membership | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:67-protection-from-the-law` — Protection From The Law | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:69-gang-war` — Gang War | referenceEntries | reference-only | p. 69 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:81-the-great-horned-helm` — The Great Horned Helm | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:83-profile-father-pedragar-priest-of-taal` — Father Pedragar, Priest Of Taal | referenceEntries | deferred | p. 83 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:87-curse-of-taal` — Curse Of Taal | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:90-breaking-the-law` — Breaking The Law | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:91-unpopular-edicts` — Unpopular Edicts | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:92-determining-watch-presence` — Determining Watch Presence | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:92-talabheim-the-city-of-laws` — Talabheim, The City Of Laws | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:93-crimes-and-the-watch` — Crimes and the Watch | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:93-profile-watch-sergeant-silver-3` — Watch Sergeant (Silver 3) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:93-profile-watchman-silver-1` — Watchman (Silver 1) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:93-watch-presence` — Watch Presence | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:94-noble-prisoners` — Noble Prisoners | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:95-a-day-in-court` — A Day In Court | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:95-fairer-hearings` — Fairer Hearings | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:95-rough-justice` — Rough Justice | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:96-typical-punishments` — Typical Punishments | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
@@ -2562,7 +2451,6 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:98-notorious-prisons` — Notorious Prisons | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:98-willingness-to-take-a-bribe` — Willingness To Take A Bribe | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:99-life-outside-the-law` — Life Outside the Law | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:99-outlaws` — Outlaws | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:spell:bamboozle` — Bamboozle | spells | adapted | p. 24 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
 | `deft-steps:spell:earthshudder` — Earthshudder | spells | adapted | p. 88 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
 | `deft-steps:spell:under-my-protection` — Under my Protection | spells | adapted | p. 25 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |

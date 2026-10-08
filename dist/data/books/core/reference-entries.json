@@ -72,14 +72,6 @@
     "text": "| Characteristic | Human | Dwarf | Halfling | Wood Elf | High Elf |\n| --- | --- | --- | --- | --- | --- |\n| Weapon Skill | 2d10+20 | 2d10+30 | 2d10+10 | 2d10+30 | 2d10+30 |\n| Ballistic Skill | 2d10+20 | 2d10+20 | 2d10+30 | 2d10+30 | 2d10+30 |\n| Strength | 2d10+20 | 2d10+20 | 2d10+10 | 2d10+20 | 2d10+20 |\n| Toughness | 2d10+20 | 2d10+30 | 2d10+10 | 2d10+20 | 2d10+20 |\n| Initiative | 2d10+20 | 2d10+10 | 2d10+40 | 2d10+40 | 2d10+40 |\n| Agility | 2d10+20 | 2d10+10 | 2d10+20 | 2d10+30 | 2d10+30 |\n| Dexterity | 2d10+20 | 2d10+30 | 2d10+30 | 2d10+30 | 2d10+30 |\n| Intelligence | 2d10+20 | 2d10+20 | 2d10+20 | 2d10+30 | 2d10+30 |\n| Willpower | 2d10+20 | 2d10+40 | 2d10+30 | 2d10+30 | 2d10+30 |\n| Fellowship | 2d10+20 | 2d10+10 | 2d10+30 | 2d10+20 | 2d10+20 |"
   },
   {
-    "id": "core:reference:38-comparing-characteristics",
-    "name": "Comparing Characteristics",
-    "category": "rule",
-    "topic": "Character creation",
-    "page": 38,
-    "text": "A Characteristic score of 30 is the Human average, with a score of 40 indicating a gifted individual, and a sore of 60 or more being truly exceptional. Non-human Species have different ranges of ability — the average Elf is far more graceful than the most humans, and Dwarfs are far more strong willed."
-  },
-  {
     "id": "core:reference:39-5-talents-trappings-and-final-game-details",
     "name": "Starting Talents and Trappings",
     "category": "rule",
@@ -246,14 +238,6 @@
     "topic": "Rules and combat",
     "page": 133,
     "text": "Gain Advantage on a Test before rolling. Reroll a Test, keeping the new result. You may spend another Fortune to reroll again. Remove one Condition (page 184)."
-  },
-  {
-    "id": "core:reference:133-using-the-rules",
-    "name": "Using The Rules",
-    "category": "rule",
-    "topic": "Rules and combat",
-    "page": 133,
-    "text": "The core rules on the preceding pages are everything you need to know to start playing Warhammer Fantasy Roleplay. The following sections cover specific applications of the rules in greater detail, and deal with the situations you are most likely to encounter.\n\nTheft and Skullduggery, page 134 Flattery, Bribery, and Status, page 140 Nosing Around, page 146 Life Beyond the Walls, page 152 Cunning Crafts, page 153 Getting Around, page 156 Combat, page 161 Injury, Healing, and Death, page 170 Disease and Infection, page 179 Psychology, page 183 Conditions, page 184 Corruption and Mutation, page 187"
   },
   {
     "id": "core:reference:134-a-time-for-crime",
@@ -536,14 +520,6 @@
     "text": "| Difficulty | Conditions |\n| --- | --- |\n| Very Easy (+6 SL) | An evening’s stroll in fair conditions following a well travelled path. |\n| Easy (+4 SL) | A short hike up a modest hill, or a ride to the next town over. |\n| Average (+2 SL) | A day’s travel across open terrain, or through a forest in a region for which the Characters have a map, or at least one Advance in the appropriate Lore (Local) Skill. |\n| Challenging (+0 SL) | A two-day trip to a place the Characters know of but have not been, or a short river journey through a frequently travelled part of the Talabec. |\n| Difficult (-1 SL) | A hasty night time ride on rarely travelled back roads, or a hunt through the trackless Barren Hills in search of a rumoured chapel. |\n| Hard (-2 SL) | A slog through the Mirror Moors in search of signs of gnomish settlements, or a descent through a section of a river known for its rapids and hidden rocks. |\n| Very Hard (-3 SL) | A hopeless journey through the sweltering jungles of Lustria with few supplies, or an hours-long ascent from within a lightless cavern without so much as a candle. |"
   },
   {
-    "id": "core:reference:152-life-beyond-the-walls",
-    "name": "Life Beyond The Walls",
-    "category": "rule",
-    "topic": "Rules and combat",
-    "page": 152,
-    "text": "Beyond the walls of the cities and towns of the Empire, the landscape is anything but welcoming. Aside from a few hardy farmers, daring merchants, and cautious Roadwardens, travellers are unlikely to meet a friendly face among the bandits and beastmen that trouble them. Occasional relief can be had at a price from Coaching Houses along the Empire’s highways, but otherwise Characters must fend for themselves."
-  },
-  {
     "id": "core:reference:153-cunning-crafts",
     "name": "Cunning Crafts",
     "category": "rule",
@@ -712,14 +688,6 @@
     "text": "On a failed Ranged (Throwing) Test, roll 1d10 and consult the following diagram to see where your weapon lands. ‘T’ marks the Target.\n\n|  |  |  |\n| --- | --- | --- |\n| 1 | 2 | 3 |\n| 4 | T | 5 |\n| 6 | 7 | 8 |\n\nA roll of 1–8 provides a direction: roll 2d10 to determine the distance the weapon scatters in yards — it scatters no more than half the distance between you and the target. A roll of 9 and the weapon lands at your feet. A 10, and it lands at your target’s feet.\n\nScatter can be used whenever a random direction is required."
   },
   {
-    "id": "core:reference:170-injury-healing-and-death",
-    "name": "Injury, Healing, And Death",
-    "category": "rule",
-    "topic": "Health and Corruption",
-    "page": 170,
-    "text": "Getting hurt is all but unavoidable. Combat, accidents, spells gone awry, and simple bad luck can all lead to lost Wounds, hideous infections, or an untimely trip to the Garden of Morr."
-  },
-  {
     "id": "core:reference:170-the-heal-skill-and-bleeding-conditions",
     "name": "The Heal Skill And Bleeding Conditions",
     "category": "rule",
@@ -878,14 +846,6 @@
     "topic": "Between adventures",
     "page": 190,
     "text": "Characters recover all Wounds.\n\nPlayers may spend XP to purchase Characteristics, Skills, and Talents.\n\nThe GM rolls a Regional Event table to determine what’s taking place in the world around the Characters.\n\nEach player rolls a Character Event to find out what’s happening to their Character during Downtime.\n\nCharacters may purchase items and Trappings from shops before they undertake Endeavours.\n\nEach Character engages in a variety of activities called Endeavours and resolves any matters that arise from their choices.\n\nAside from money gained or saved due to Endeavours, all of the Characters’ money is spent.\n\nCharacters are then ready to start their next adventure."
-  },
-  {
-    "id": "core:reference:190-roleplaying-downtime",
-    "name": "Roleplaying Downtime",
-    "category": "rule",
-    "topic": "Between adventures",
-    "page": 190,
-    "text": "The Between Adventures part of a game should be quickly resolved at the end of an adventure, or between the GM and each player individually, before the next adventure begins. Events or Endeavours shouldn’t ordinarily turn into small RPG sessions, as this risks over-focusing on the instigating player or derailing the ongoing campaign. If your group loves roleplaying all their Characters’ interactions, focus on the key relationships and spend a minute or two on each. Adding more detail to the NPC who fences stolen goods for them, for example, makes the world come alive more vividly, and makes it feel much more personal for the player if something threatens that NPC as part of a subsequent adventure.\n\n– Leopold Seidel, Proprietor of The Stuck Pig"
   },
   {
     "id": "core:reference:191-advancement-xp-costs",
@@ -1128,28 +1088,12 @@
     "text": "It is one thing to pick up a Skill that can be readily practised, quite another to awaken a Talent. This Endeavour allows you to learn the first level of a Talent outside your Career. It cannot be used to gain additional levels in a Talent you already possess.\n\nYou must first find a suitable tutor. In most large cities this is straightforward, but particularly obscure Talents, or those sought far from civilisation, may require you to undertake Consult an Expert first. Once you have found a tutor, training costs 4d10 silver shillings."
   },
   {
-    "id": "core:reference:205-penances",
-    "name": "Manann — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 205,
-    "text": "Penances from Manann often involve hazardous, maritime pilgrimages, tests of sailing skills, or expeditions against the sea god’s enemies, especially followers of the heretical Cult of Stromfels, god of predators."
-  },
-  {
     "id": "core:reference:205-strictures",
     "name": "Manann — Strictures",
     "category": "rule",
     "topic": "Cult obligations and prayer rules",
     "page": 205,
     "text": "No whistling or swearing when at sea or on holy ground. Never harm an albatross. First catch to Manann. A silver and fish to every Manannite temple and shrine approached. Hunt down the servants of Stromfels wherever they may hide."
-  },
-  {
-    "id": "core:reference:206-penances",
-    "name": "Morr — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 206,
-    "text": "Morr’s penances typically involve hunting necromancers and destroying undead, or finding and restoring burial places and holy sites fallen to disuse and disrepair. He also occasionally requires servants of Khaine be stopped from fulfilling their dark deeds."
   },
   {
     "id": "core:reference:206-strictures",
@@ -1160,28 +1104,12 @@
     "text": "Respect and protect the dead. Hunt down necromancers and the undead wherever they may gather. Pay heed to your dreams. Never refuse to conduct a funeral service. At no time be a party to raising the dead, unless allowed by Morr."
   },
   {
-    "id": "core:reference:207-penances",
-    "name": "Myrmidia — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 207,
-    "text": "Penances from Myrmidia are usually military in nature. A cultist may be ordered to defeat an enemy champion in single combat, or to train a group of peasants and lead them in the defence of their village. Protecting pilgrimage routes to sites of importance to Myrmidia are also not uncommon."
-  },
-  {
     "id": "core:reference:207-strictures",
     "name": "Myrmidia — Strictures",
     "category": "rule",
     "topic": "Cult obligations and prayer rules",
     "page": 207,
     "text": "Act with honour and dignity in all matters. Respect prisoners of war, and never kill an enemy who surrenders. Show no mercy to the unrepentant enemies of Humanity. Obey all honourable orders. Preserve the weak from the horrors of war."
-  },
-  {
-    "id": "core:reference:208-penances",
-    "name": "Ranald — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 208,
-    "text": "Ranald’s penances usually involve stealing into locked and guarded locations to recover precious items or leave a token. Humiliating oppressors of the poor is also common — perhaps by framing a brutal watch captain for a ludicrous crime, for example, or locking him in his own cells. Ranald often sends favoured and disfavoured cultists alike on a Pilgrimage of Fingers, a set of tasks proving capability and loyalty."
   },
   {
     "id": "core:reference:208-strictures",
@@ -1192,28 +1120,12 @@
     "text": "One coin in ten belongs to Ranald. Never betray another to the authorities; there is no greater sin than informing. Violence is prohibited except in self-defence. It is better to live free and die than live under oppression. There is no honour among thieves, but there is amongst Ranaldans."
   },
   {
-    "id": "core:reference:209-penances",
-    "name": "Rhya — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 209,
-    "text": "Rhyan penances may involve replanting devastated areas, helping broken households, and maintaining sacred groves. It is also common to find Rhyans tasked to protect helpless families, which can often put them at odds with local bailiffs and law enforcement."
-  },
-  {
     "id": "core:reference:209-strictures",
     "name": "Rhya — Strictures",
     "category": "rule",
     "topic": "Cult obligations and prayer rules",
     "page": 209,
     "text": "Defend families, children, and crops from all harm. Never feel shame for the flesh Rhya gave you. Life is sacred, do no harm lest another life is in danger. Never judge whom another loves. Interrupt the work of the Prince of Excess wherever it may thirst."
-  },
-  {
-    "id": "core:reference:210-penances",
-    "name": "Shallya — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 210,
-    "text": "Penances set by Shallya always involve helping the sick, poor, or downtrodden. A cultist might be sent to a village struck by a plague to tend the sick until the disease has passed. Shallya often tasks her servants to help the wounded at war, or patrol popular pilgrimage routes for those unable to complete their journeys due to ill health."
   },
   {
     "id": "core:reference:210-strictures",
@@ -1224,28 +1136,12 @@
     "text": "Always render assistance without judgement, based only on a person’s need. Never kill, except in self-defence. Suffer not pestilence, nor those who would spread it. Shallya’s work is never done, so turn not to self-indulgence. Never take up arms; a walking stick and courage will suffice."
   },
   {
-    "id": "core:reference:211-penances",
-    "name": "Sigmar — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 211,
-    "text": "Sigmarite cultists may be ordered to destroy a cell of Chaos worshippers, or expose a corrupt official who is secretly in league with the Ruinous Powers or a foreign power. It is also common to be tasked with building, or rebuilding, local communities to better promote unity and strength in the Empire."
-  },
-  {
     "id": "core:reference:211-strictures",
     "name": "Sigmar — Strictures",
     "category": "rule",
     "topic": "Cult obligations and prayer rules",
     "page": 211,
     "text": "Obey your orders. Aid dwarf-folk, never do them harm. Promote the unity of the Empire. Bear true allegiance to the imperial throne. Root out orcs and goblins, Chaos worshippers, and foul witches without mercy."
-  },
-  {
-    "id": "core:reference:212-penances",
-    "name": "Taal — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 212,
-    "text": "Taal’s penances usually involve clearing diseased or mutated monsters from wild areas, replanting sacred trees, and maintaining groves important to the cult. A cultist might also be ordered to climb a high mountain and leave a stone on a cairn at the top, or clear an obstruction at the top of a waterfall. Whatever the specific task that must be undertaken, Taal’s penances almost always challenge the cultist to survive in the wild."
   },
   {
     "id": "core:reference:212-strictures",
@@ -1256,28 +1152,12 @@
     "text": "Offer a prayer of thanks for every animal taken. Spend a week alone communing with the wilderness every year. Eschew metal armour; clad yourself in the hides of Taal. Rely on your own skill, not the advances of gunpowder or cold technology. Never harm an animal except in self-defence or for food or sacrifice."
   },
   {
-    "id": "core:reference:213-penances",
-    "name": "Ulric — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 213,
-    "text": "Penances set by Ulric are almost always tests of strength, courage, and martial skill. Slaying a powerful monster, or clearing out a nest of beastmen or outlaws, are typical tasks."
-  },
-  {
     "id": "core:reference:213-strictures",
     "name": "Ulric — Strictures",
     "category": "rule",
     "topic": "Cult obligations and prayer rules",
     "page": 213,
     "text": "Obey your betters. Defend your honour in all matters, and never refuse a challenge. Stand honest and true; outside an ambush, trickery and deception are forbidden. Only wear pelts from wolves killed by weapons crafted of your own hands. Blackpowder weapons are not befitting a follower of Ulric."
-  },
-  {
-    "id": "core:reference:214-penances",
-    "name": "Verena — Penances",
-    "category": "rule",
-    "topic": "Cult obligations and prayer rules",
-    "page": 214,
-    "text": "Penances set by Verena normally involve the recovery or preservation of knowledge, the righting of an injustice, or the resolution of a dispute. Cultists may also be sent to recover a long-forgotten book of lore, or to mediate in a difficult quarrel. This could be anything from a farmers’ boundary dispute to unpicking the complicated politics of two realms on the brink of war."
   },
   {
     "id": "core:reference:214-strictures",
@@ -1392,14 +1272,6 @@
     "text": "| d100 | Effect |\n| --- | --- |\n| 05 or less | Jibbering: You gabble unintelligibly for 1d10 Rounds. During this time, you cannot communicate verbally or use the Language Skill, although you may otherwise act normally. |\n| 06–10 | Hellish Stench: You now smell really bad! You gain the Distracting Creature Trait (see page 358), and probably the enmity of anyone with a sense of smell. This lasts for 1d10 hours. |\n| 11–15 | Ragdoll: You are flung 1d10 yards through the air in a random direction, taking 1d10 Damage on landing, ignoring Armour Points, and receiving the Prone Condition. |\n| 16–20 | Power Drain: You are unable to use the Talent used to cast the Spell (usually Arcane Magic, though it could be Chaos Magic, or a similar Talent), for 1d10 minutes. |\n| 21–25 | Levitation: You are borne aloft on the Winds of Magic, floating 1d10 yards above the ground for 1d10 minutes. Other creatures may forcibly move you, and you may move using Spells, wings, or similar, but will continually return to your levitating position if otherwise left alone. Refer to the Falling rules (see page 169) for what happens when Levitation ends. |\n| 26–30 | Aethyric Shock: You suffer 1d10 Wounds, ignoring your Toughness Bonus and Armour Points. Pass an Average (+2 SL) Endurance Test or also gain a Stunned Condition. |\n| 31–35 | Chaos Quake: All creatures within 1d100 yards must pass an Average (+2 SL) Athletics Test or gain the Prone Condition. |\n| 36–40 | Hexeyes: Your eyes turn an unnatural colour associated with your Lore for 1d10 hours. While your eyes are discoloured, you have 1 Blinded Condition that cannot be resolved by any means. You lose the ability to use the Magical Sense and Second Sight Talents during this time. |\n| 41–45 | Limb Frozen: One limb (randomly determined) is frozen in place for 1d10 hours. The limb is useless, as if it had been amputated (see page 177). |\n| 46–50 | Death Walker: Your footsteps leave death in their wake. For the next 1d10 hours, any plant life you tread upon withers and dies. |\n| 51–55 | Aethyric Repulsion: You send the Winds around you into a turmoil, swirling about you and refusing to coalesce. It becomes difficult to gather and control magical energy. Suffer -3 SL to all Casting and Channelling Tests for 2d10 hours. |\n| 56–60 | Magefire: Gain an Ablaze Condition as you are wreathed in unholy flames with a colour associated with your Lore. |\n| 61–65 | Swarmed: You are Engaged by a swarm of aethyric Rats, Giant Spiders, Snakes, or similar (GM’s choice). Use the standard profiles for the relevant creature type, adding the Swarm Creature Trait. After 1d10 Rounds, if not yet destroyed, the swarm retreats. |\n| 66–70 | Chaotic Foresight: For the rest of the session, gain 1 Fortune Point, but every time you spend a Fortune Point, gain 1 Corruption Point. |\n| 71–75 | Blight: Willpower Bonus fields within Willpower Bonus miles suffer a blight, and all crops rot overnight. |\n| 76–80 | Foul Enfeeblement: Gain 1 Corruption Point, a Fatigued Condition, the Prone Condition. |\n| 81–85 | Traitor’s Heart: The Dark Gods entice you to commit horrendous perfidy. You may no longer regain Fortune Points until the next downtime or until you attack or otherwise betray another Character. |\n| 86–90 | Ghostly Voices: The caster and all characters within Willpower Bonus yards hear darkly seductive whispering of voices emanating from the Realm of Chaos. They must pass an Average (+2 SL) Cool Test or gain 1 Corruption Point. |\n| 91–95 | Slipped from Memory: The Spell you are attempting to cast becomes unfamiliar and strange to you. If held in memory, you lose access to the Spell and must learn it again. |\n| 96+ | Aethyric Feedback: Everyone within a number of yards equal to your Willpower Bonus — friend and foe alike — suffers 1d10 wounds, ignoring Toughness Bonus and Armour Points, and receives the Prone Condition. If there are no targets in range, the magic has nowhere to vent, so your head explodes, killing you instantly. |"
   },
   {
-    "id": "core:reference:240-petty-spells",
-    "name": "Petty Spells",
-    "category": "rule",
-    "topic": "Religion and magic",
-    "page": 240,
-    "text": "For the few humans blessed — or cursed, depending upon your point of view — with the spark of magic, it generally manifests around puberty, and almost always before 25 summers have passed. The first indications of impending witchery are often little tricks, knacks, cantrips, or similar, showing the wizard-to- be should probably be trained for everyone else’s safety.\n\nFor elves, this is just a part of growing up, and those with interest in magic are schooled to develop their burgeoning talents. For humans, assuming they avoid being lynched, it likely means years of training as an apprentice to a wizard from one of the Eight Colleges of Magic, after which they should never use the little tricks they learned when young again. But most do.\n\nAs Petty Spells are not formally codified, they have many different names. Players are encouraged to devise their own, more characterful names, reflecting their personality."
-  },
-  {
     "id": "core:reference:242-arcane-spells",
     "name": "Arcane Spells",
     "category": "rule",
@@ -1512,14 +1384,6 @@
     "text": "Tzeentch is the Master of Magic, Treachery, and Lies. The Lore of Tzeentch epitomises this, as it boasts a multitude of powerful spells focusing upon change, all drawing heavily from the Grey, Gold, Blue, and Bright Winds.\n\nLore Attribute: Those affected by Spells of the Lore of Tzeentch are riven by the transformative magic of Chaos. They must pass a Corruption Test or gain +1 Corruption Point. Should they pass, they instead gain +1 Fortune Point, which can be used until the end of the encounter. Such are the whims of Tzeentch."
   },
   {
-    "id": "core:reference:266-extend-caution",
-    "name": "Extend Caution",
-    "category": "rule",
-    "topic": "Gamemaster procedures and rewards",
-    "page": 266,
-    "text": "Why are Extended Tests explained here rather than in the Rules chapter? Because they are a tool for the GM to use in particular circumstances. Overused, they can bog down the game and feel anticlimactic. When a significant task needs to feel exciting, a series of repeated dice rolls without tension may fail to deliver.\n\nExtended Tests work best for short, tense situations: you have three Turns to pick this complicated lock before the guard arrives — go! They can also show how much of a larger task the Characters can complete before time runs out, such as repairing a fortress before the orc horde arrives. Avoid using them for adventure climaxes, or when a single Test can resolve the situation just as well."
-  },
-  {
     "id": "core:reference:266-the-gms-test-toolkit",
     "name": "The Gm’S Test Toolkit",
     "category": "rule",
@@ -1568,28 +1432,12 @@
     "text": "‘Had this feller in here the other day who expected to just be able to pay for a suit of armour and carry it out the same day. Words didn’t seem to have much impact on him, so I invited him to try on a set of greaves I’ve been working on. After they pinched him black and blue he agreed to put a deposit down and made an appointment to get measured next Marktag.’\n\nThe Trappings you receive from your Class and Career (see Chapter 2: Character) are enough to get you started, but you might want more equipment. During Character Creation, additional items can be purchased from the lists in this chapter without restriction. However, once you start to play, the availability of some Trappings is limited, so make sure you buy everything you want and can afford before you begin play."
   },
   {
-    "id": "core:reference:296-trapping-lists",
-    "name": "Trapping Lists",
-    "category": "rule",
-    "topic": "Consumer guide",
-    "page": 296,
-    "text": "Weapons: Page 301, 303\n\nArmour: Page 307\n\nPacks and Containers: Page 308\n\nClothing and Accessories: Page 308\n\nFood, Drink, and Lodging: Page 309\n\nTools and Kits: Page 310\n\nBooks and Documents: Page 311\n\nTrade Tools and Workshops: Page 312\n\nAnimals and Vehicles: Page 312\n\nPoisons: Page 313\n\nHerbs and Remedies: Page 314\n\nProsthetics: Page 315\n\nMiscellaneous Trappings: Page 316\n\nMagical Items: Page 315\n\nHirelings: Page 317\n\n— Hertwig Schmidt, Reiklander Armourer"
-  },
-  {
     "id": "core:reference:297-availability-2",
     "name": "Availability",
     "category": "table",
     "topic": "Consumer guide",
     "page": 297,
     "text": "|  |  |  |  |\n| --- | --- | --- | --- |\n|  | Village | Town | City |\n| Common | In stock! | In stock! | In stock! |\n| Scarce | 30% | 60% | 90% |\n| Rare | 15% | 30% | 45% |\n| Exotic | Not in stock | Not in stock | Not in stock |\n\nIf you fail an Availability Test for Scarce or Rare items, you can either reroll when you arrive at a new settlement or you can try again next week if the settlement is Town-size or larger.\n\nThe GM may overrule Availability as dictated by local details. For example, basic rowboats are automatically available if the adventure is located in a fishing village that features a renowned boat-builder. Availability percentages can be increased by +10% or +20% if you are especially diligent, belong to a relevant Career such as Merchant or Fence, or spend an entire day shopping and making Gossip Tests."
-  },
-  {
-    "id": "core:reference:297-criminal-coinage",
-    "name": "Criminal Coinage",
-    "category": "rule",
-    "topic": "Consumer guide",
-    "page": 297,
-    "text": "Of course, if there is money involved, there will be folk looking to take any advantage they can, including criminal options. For the Rogues in your party, two schemes concerning coins are worth knowing."
   },
   {
     "id": "core:reference:299-encumbrance-examples",
@@ -1654,14 +1502,6 @@
     "topic": "Consumer guide",
     "page": 303,
     "text": "| Weapon | Price | Enc | Availability | Range | Damage | Qualities and Flaws |\n| --- | --- | --- | --- | --- | --- | --- |\n| BLACKPOWDER* |  |  |  |  |  |  |\n| (2H)Blunderbuss | 10 GC | 2 | Scarce | 20 | +8 | Blast 3, Dangerous, Reload 3 |\n| (2H)Handgun | 16 GC | 2 | Scarce | 40 | +10 | Reload 3 |\n| Pistol | 20 GC | 0 | Rare | 20 | +9 | Pistol, Reload 2 |\n| BOW |  |  |  |  |  |  |\n| (2H)Bow | 4 GC | 2 | Common | 50 | +SB + 4 | – |\n| (2H)Longbow | 8 GC | 3 | Scarce | 60 | +SB + 4 | – |\n| (2H)Shortbow | 3 GC | 1 | Common | 40 | +SB + 3 | – |\n| CROSSBOW |  |  |  |  |  |  |\n| (2H)Crossbow | 5 GC | 2 | Common | 50 | +9 | Reload 1 |\n| Crossbow Pistol | 6 G | 0 | Rare | 20 | +7 | Pistol, Reload 1 |\n| (2H)Heavy Crossbow | 8 GC | 3 | Scarce | 60 | +10 | Reload 2 |\n| ENGINEERING* |  |  |  |  |  |  |\n| (2H)Repeater Handgun | 50 GC | 3 | Rare | 40 | +10 | Repeater 4, Dangerous, Reload 5 |\n| Repeater Pistol | 40 GC | 1 | Rare | 20 | +9 | Pistol, Repeater 4, Dangerous, Reload 4 |\n| (2H)Hochland Long Rifle | 100 GC | 3 | Exotic | 100 | +10 | Precise, Reload 4 |\n| ENTANGLING |  |  |  |  |  |  |\n| Bolas | 10/– | 0 | Rare | SB × 3 | +SB | Inflict (Entangled 35), Inflict (Prone), Undamaging*** |\n| (2H)Lasso** | 6/– | 1 | Common | SB x 2 | – | Inflict (Entangled 45) |\n| Net | 6/– | 1 | Common | SB | – | Inflict (Entangled 50) |\n| EXPLOSIVES* |  |  |  |  |  |  |\n| Bomb | 3 GC | 0 | Rare | SB | 12 | Blast 5, Inflict (Deafened), Dangerous |\n| Incendiary | 1GC | 0 | Scarce | SB | 8 | Blast 4, Inflict (Ablaze), Dangerous |\n| SLING |  |  |  |  |  |  |\n| Sling | 1/– | 0 | Common | 40 | +6 | – |\n| (2H)Staff Sling | 4/– | 2 | Common | 50 | +7 | – |\n| THROWING |  |  |  |  |  |  |\n| Javelin | 10/6 | 1 | Scarce | SB × 3 | +SB + 3 | Impale |\n| Rock | – | 0 | – | SB × 3 | +SB | Undamaging |\n| Throwing Axe | 1 GC | 1 | Scarce | SB × 2 | +SB + 3 | Hack |\n| Throwing Knife | 18/– | 0 | Scarce | SB × 2 | +SB + 2 | – |\n| * All Blackpowder, Engineering, and Explosive weapons have the Blackpowder and Damaging Qualities. ** Lassos have no range bands, just the listed range. *** Bolas only inflict Entangled and Prone when hitting the Legs Hit Location. |  |  |  |  |  |  |"
-  },
-  {
-    "id": "core:reference:306-armour-flaws",
-    "name": "Armour Flaws",
-    "category": "rule",
-    "topic": "Consumer guide",
-    "page": 306,
-    "text": "Some armours have points of weakness, as described by Armour Flaws."
   },
   {
     "id": "core:reference:307-armour",
@@ -1854,14 +1694,6 @@
     "topic": "Consumer guide",
     "page": 317,
     "text": "If you need extra muscle or brains whilst adventuring, you may pay Hireling NPCs to accompany you. You can hire any Career with GM permission, and they are paid an amount of coin equal to their Social Status for a quick job, or paid triple for a full day’s work. The GM may increase or decrease this amount according to individual personality and local circumstances.\n\nIf the job at hand is unexpectedly dangerous, Hirelings will expect double the normal pay unless a Leadership Test is passed. Leadership Tests may also be required when Hirelings are assigned complex, independent tasks, or if they have good reason to flee from an encounter. Quick Hireling profiles are created by adding 5 Advances to every Career Characteristic and Skill per level of the Career hired, and 1 Talent per level. Hirelings with more experience than this usually cost more.\n\nIf you are looking for the cost of a hireling you should refer to their status tier and adjust as follows according to the length of time they are hired for.\n\nA quick job: equal to their status tier. A day rate: equal to their status tier times 3. A weekly cost: equal to their status tier times 24.\n\n|  |  |  |  |  |\n| --- | --- | --- | --- | --- |\n| Hireling | Quick Job | Daily Cost | Weekly Cost | Notes |\n| Local Scout | 5d | 15d | 10/– | Works independently without Leadership Tests |\n| Seasoned Mercenary | 3/– | 9/– | 3 GC 12/– | Demands a share of loot in lieu of danger pay |\n| Lawyer | 3/– | 9/– | 3 GC 12/– | Drafting a simple legal document costs 2–4 shillings. |\n| Porter | 1/– | 3/– | 1 GC 4/– | Carries 10 Encumbrance Points |\n| Scribe | 2/– | 6/– | 2 GC 8/– | Also translates 1–2 other common languages |\n| Doktor | 5/– | 15/– | 5 GC | A single visit costs 4–6 shillings for medical attention. |"
-  },
-  {
-    "id": "core:reference:318-bestiary",
-    "name": "Bestiary",
-    "category": "rule",
-    "topic": "Bestiary rules",
-    "page": 318,
-    "text": "‘Throughout the forests, mountains, and shadowed reaches of the Old World and lands beyond, creatures of cunning and deadly habits dwell. This volume catalogues their forms, behaviours, and the hazards they pose, so that scholars may study them, the unwary recognise peril before it claims life, and that students may gape at the depictions of their monstrous forms and appendages.’\n\n— Dr. Heironymous Blitzen, Professor of Bestiaria, University of Altdorf\n\nMany terrible and wondrous creatures dwell in the wild places of the Empire and beyond its borders. No less deadly are those threats originating in the cities, towns, and villages of those we tend to assume are our friends, countrymen, or allies. This bestiary gives you game information for a range of opponents, associates, or passers-by the Characters might encounter in the course of their adventures."
   },
   {
     "id": "core:reference:318-creature-characteristics",

@@ -40,14 +40,6 @@
     "text": "Whilst serious magical artefacts and weapons usually involve expensive and exacting craftsmanship of a High Elf mage or priest of Vaul, there are some items bearing petty enchantments that turn up for sale at Elven markets.\n\n| Item | Cost | Enc | Availability |\n| --- | --- | --- | --- |\n| ENCHANTED ITEMS |  |  |  |\n| Aethyrolabe | 350 GC | 1 | Exotic |\n| Flamespyre Phoenix Feather | 300 GC | 0 | Exotic |\n| Frostheart Phoenix Feather | 400 GC | 0 | Exotic |\n| Staff of Nightelm | 500 GC | 1 | Exotic |\n| Staff of the Eternal Grove | 350 GC | 1 | Rare |\n| Wayshard | 700 GC | 0 | Rare |\n\n0 Rare Wayshard\n\nAethyrolabe: A device of interlocking brass discs and crystal lenses that is made by mages at the White Tower of Hoeth. The user of an Aethyrolabe can discern the relative concentrations of the Winds of Magic in a given area on a Challenging (+0) Lore (Magic) Test. They may also use the device to point to the nearest concentration of a particular Wind on a Hard (-20) Lore (Magic) Test.\n\nFlamespyre Phoenix Feather: A feather plucked from a Flamespyre Phoenix will continue to burn brightly for about a year, making them prized by those who wish to use them as sources of illumination or combustion. The feather casts light with the same degree of intensity as a lantern, and may set things ablaze as effectively as a torch.\n\nFrostheart Phoenix Feather: A feather plucked from a Frostheart Phoenix remains freezing cold for about a year. They cast a dim, cold light that provides the same sort of illumination as a candle and radiate sub-zero chill that refrigerates with the same efficacy as a brick of ice.\n\nMages, adventurers, and members of cults of pleasure prize Phoenix feathers, though how to safely transport them is a problem left to the buyer.\n\nStaff of Nightelm: Groves of nightelm trees once flourished throughout the realm of Ellyrion but most of them were destroyed during the earliest days of strife between Asur and Druchii. Staffs of Nightelm are said to protect their bearers from hostile magic. If the bearer of a staff is targeted with any spell from the Lores of Witchcraft, Daemonology, Necromancy, Dark Magic, or any Chaos Lore, the bearer counts as having the Magic Resistance 3 Creature Trait. These staffs are sometimes used as the shafts for polearms.\n\nStaff of The Eternal Grove: The trees of the Eternal Grove of Eataine are bathed in the Winds of Magic. They grow slowly and produce wood of exceptional hardness, so much so that those carpenters who work it must go to tremendous efforts to shape the wood. Any attempts to craft an item from the wood suffer from a penalty of –4 SL. Polearms and bows made from a Staff of the Eternal Grove possess the Durable 4 Quality.\n\nWayshard: Wayshards are either the remains of waystones that were shattered, or small pocketable waystones in and of themselves. These shards contain the essence of Elven soulstuff to keep them safe from predatory gods, and they would only be sold to an individual who could be trusted to keep them secure and protected from those who would defile them. Wayshards can be used to find a way to the nearest waystone, and are commonly used to navigate the mists of Yvresse. A bearer of a wayshard may use it to aid in Yenlui meditation (page 46) and may make a Challenging (+0) Pray Test in order to sense the direction of the nearest waystone."
   },
   {
-    "id": "high-elf:reference:39-high-elf-warships-2",
-    "name": "High Elf Warships",
-    "category": "rule",
-    "topic": "Naval equipment and creatures",
-    "page": 39,
-    "text": "High Elf ships are truly beautiful, meticulously crafted vessels with sleek lines, pristine paintwork, and billowing sails of silk.\n\nElves fashion each craft from a single starwood tree. Groves of these trees grow in the foothills of the Annulii Mountains, tended by shipwrights who combine the skills of forester, artist, and engineer. After felling a starwood, the shipwright weaves intricate magics into the wood to keep it alive. Before launch, a priestess adorns each craft with the Eye of Isha — an appeal for the Mother Goddess to reason with temperamental Mathlann and keep the ship safe from his anger."
-  },
-  {
     "id": "high-elf:reference:40-dragonblade-ram",
     "name": "Dragonblade Ram",
     "category": "rule",
@@ -70,22 +62,6 @@
     "topic": "Naval equipment and creatures",
     "page": 42,
     "text": "| Ship name | Crew | Sail M (C) | Man | Size | T | W | Carries | Traits and Upgrades |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Albatross | 75 | 10 (30) | +1SL | 50 | 65 | 200 | 700 | - |\n| Golden Eagle | 20 | 8 (10) | +1SL | 40 | 65 | 150 | 450 | - |\n| Razorbill | 4 | 6 (2) | +1SL | 20 | 40 | 65 | 50 | - |"
-  },
-  {
-    "id": "high-elf:reference:43-dragon-princes",
-    "name": "Dragon Princes",
-    "category": "rule",
-    "topic": "Naval equipment and creatures",
-    "page": 43,
-    "text": "Despite the royal bloodline of Caledor thinning over time and the diminishing power of the Dragons, pride in ancient deeds remains strong. In the past, all Dragon Princes were beith caradan, beastfriends with an affinity with Dragons, and flew into battle upon mighty fire drakes, but now few can awaken a Dragon, so instead must ride swift horses. All Dragon Princes and their mounts wear dragon armour, forged in the fires of Vaul’s Anvil and stylised after the antique armour of the past. The arrogance of these riders is well known, as are their bravery and skill. Few will chance a confrontation with such intense individuals.\n\nThose who can awaken a Dragon are deemed to symbolise the deep connection of the two species and are considered amongst the mightiest lords of Ulthuan. Only the might of the phoenix king can keep the fiery temperament of these dragonriders under control, as few will risk the threat of banishment from Ulthuan."
-  },
-  {
-    "id": "high-elf:reference:45-playing-a-high-elf",
-    "name": "Playing a High Elf",
-    "category": "rule",
-    "topic": "High Elf creation, Careers and magic",
-    "page": 45,
-    "text": "Elves are intelligent, elegant, swift, and adept. Their Characteristics reflect a very real advantage over many of the other species they encounter, which can make them arrogant, insufferable company. Of course, your Character is your own, to play as you see fit. What follows is advice for adding nuance to High Elves and hopefully create more enjoyment in your interactions with fellow PCs and NPCs during your game."
   },
   {
     "id": "high-elf:reference:46-factors-influencing-yenlui",
@@ -272,28 +248,12 @@
     "text": "High Elf Artisans spend decades or even centuries perfecting their talent. While their profession is a commercial undertaking, they consider it an artform rather than mere craft — even a High Elf cooper strives to make their barrels the most elegantly curved and beautifully turned receptacles. As they advance in proficiency, they learn to weave subtle magical effects into the items they make.\n\nHigh Elf Artisans in the Old World join craft guilds, but on Ulthuan they compete rather than associate with peers. Like any artist, they seek patronage from a noble house, which brings renown and riches by association. An Ulthuan Artisan makes these changes:\n\nLevel 2 (Artisan) — replace Etiquette (Guilder) with Etiquette (Nobles) Skill, replace Guild Licence Trapping with Highborn Patronage Level 3 (Master Artisan) — replace Secret Signs (Guilder) Skill with Lore (Magic) Level 4 (called Exalted Maker rather than Guildmaster) — replace Guild Trapping with Position at Court"
   },
   {
-    "id": "high-elf:reference:63-charlatan",
-    "name": "Charlatan",
-    "category": "rule",
-    "topic": "High Elf creation, Careers and magic",
-    "page": 63,
-    "text": "No matter how intelligent, it is possible to deceive most Elves if one takes advantage of their obsessions. Asur Charlatans use eloquence and flattery to secure coin, property, or privileges. Others inveigle themselves into circles of entertainers or carnivals, where they take advantage of the relaxed intoxication of revellers. High Elf Charlatans cheerfully con non-Elves out of anything and everything, often with the blessing of more respectable peers."
-  },
-  {
     "id": "high-elf:reference:63-seaman",
     "name": "Seaman",
     "category": "rule",
     "topic": "High Elf creation, Careers and magic",
     "page": 63,
     "text": "Elven Sailors are the most accomplished in the world, far superior to those of other species. They are quite unlike the rowdy sea dogs who make up Human crews and are capable of incredible feats of seamanship aboard their elegant Elven vessels. The Seaman Career in the core rulebook represents the more uncouth Elven Sailors found in the Old World or amongst the rougher Sea Elf enclaves. For Sailors aboard the most impressive Elven ships, you can use the following Skills and Talents:\n\nLevel 1 (Landsman) — replace Consume Alcohol and Melee (Brawling) with Athletics and Melee (Basic) Level 2 (Seaman) — replace Athletics with Intuition"
-  },
-  {
-    "id": "high-elf:reference:63-smuggler",
-    "name": "Smuggler",
-    "category": "rule",
-    "topic": "High Elf creation, Careers and magic",
-    "page": 63,
-    "text": "Despite the ordered society of Ulthuan, smuggling is a lucrative and surprisingly prevalent crime. The dominance of Lothern’s merchant houses has created opportunities to bring contraband ashore without paying their fees. Certain artefacts, creatures, and persons must be brought to Ulthuan by stealth, a task eagerly taken by Smugglers for the right price or favour."
   },
   {
     "id": "high-elf:reference:68-sword-dancing-tests",
@@ -446,14 +406,6 @@
     "text": "Given the distance between the Elves and their gods, Sin Points and Strictures do not have an effect as they do with Human Priests. However, Elf Priests are still expected to behave with certain priorities in mind to better represent the values associated with their cult and meet the expectations of their fellow Elves.\n\nIf the GM feels that an Elf Priest Character is generally behaves according to the letter and spirit and the tenets of their faith, they may award the following bonuses.\n\nA High Elf Priest Character may choose to adjust the result of any Test that might alter their Yenlui State by +1 to –1 SL. They may benefit from +1 SL to any Fellowship tests they make with other Elves who respect the god they follow."
   },
   {
-    "id": "high-elf:reference:100-smith-priest-of-vaul",
-    "name": "Smith-Priest Of Vaul",
-    "category": "rule",
-    "topic": "Elf priest Careers and magic",
-    "page": 100,
-    "text": "High Elf, Wood Elf\n\nYou seek to combine the power of High Magic, the talents of the smith, and inspiration from the divine example of Vaul to become a peerless crafter of artefacts magical and mundane.\n\nSmith-priests of Vaul forge powerful magical weapons and armour for the Elves. Their skill is rivalled only by Dwarf runesmiths, some of whom may even pay them grudging respect. To emulate their crippled patron god, Smith-priests may blind themselves, and they obtain divine power from this sacrifice."
-  },
-  {
     "id": "high-elf:reference:100-smith-priest-of-vaul-printed-career",
     "name": "Smith-priest of Vaul — printed Career",
     "page": 100,
@@ -593,14 +545,6 @@
     "topic": "Cult obligations and intrigue",
     "page": 112,
     "text": "Slaanesh is often the first Chaos God to answer the prayers of desperate Elves. Elves who conduct Dark Deals (WFRP, page 182) to reroll Skill Tests pertaining to art, vice, or seduction receive a +2 SL bonus on the reroll. However, the night after making a deal, the Elf will be visited by dreams of Slaanesh, which counts as Minor Exposure to Corruption, requiring a Challenging (+0) Cool Test to resist gaining another Corruption point."
-  },
-  {
-    "id": "high-elf:reference:114-beseeching-khaine",
-    "name": "Beseeching Khaine",
-    "category": "rule",
-    "topic": "Cult obligations and intrigue",
-    "page": 114,
-    "text": "The Kingdom of Cothique is especially vulnerable to Khaine’s influence, due to its long history of suffering Norscan raids and its proximity to the Blighted Isle. When Malerion invaded Ulthuan during the Great Chaos Incursion, using the Daemon N’Kari to transport his Dark Elf armies directly to the heart of Avelorn, Morathi simultaneously attacked Cothique and Chrace at the head of a Chaos marauder army. Morathi’s Human followers sacked most of Cothique before the Witch Queen herself fled back to Naggaroth.\n\nFrom the safety of her sanctum, Morathi watched the Battle of Finuval Plain through an enchanted mirror. She witnessed the High Elf champion Tyrion, Dragon of Cothique, bedecked in Aenarion’s armour, and she inexplicably became infatuated with him. Two centuries later, the battle-hardened Cothiquians have not forgotten the invasion, but many of them blame Human raiders instead of Morathi, and some even attribute their survival to Khaine. Morathi also has not forgotten Tyrion and remains fixated on his home kingdom, planning to spread the influence of the pleasure cults there."
   },
   {
     "id": "high-elf:reference:118-instigating-intrigue",

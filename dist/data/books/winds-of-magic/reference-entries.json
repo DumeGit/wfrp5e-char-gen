@@ -384,14 +384,6 @@
     "text": "Augury is an Advanced Skill. It is the ability to glean insights into the future. There are many methods by which a person can use this Skill, but some of the most common in the Old World are:\n\nPriests of Morr or Sisters of Sigmar receiving prophetic visions or interpreting dreams. Celestial Wizards reading the future in the stars. Mystics using tools such as cards or dice to tell fortunes. Consulting the Thaumodivinator in Altdorf. Consorting with Daemons such as Kairos Fateweaver or a Keeper of Secrets.\n\nA Character can make a single Augury Test once per day. Characters may also make Augury Tests on behalf of others, but usefully communicating prophetic insights is complicated. These Tests are Difficult (–10) Augury Tests.\n\nThe GM should decide what information to provide a successful Augury Test. With a success, the augur could discern likely plot developments or a key NPC’s motivations. Failures result in misleading and often dangerous misinformation. If the GM does not want to give away such information, there is a system for using augury in a more symbolic way as an alternative.\n\nConsult the Augury Table to determine the effect of fortune telling. After determining the result, roll or choose from the Symbol Table. If you roll the same symbol more than once, the subsequent rolls are wasted — Augury is fickle in that way. You may not choose reversed symbols.\n\nTake note of any symbols and related Tests generated through successful Augury Tests. After receiving an augury, a Character may benefit from +1 SL (or –1 SL if they prefer) to the first Test they take related to the Skill listed in the Symbol Table. This represents a forewarning regarding such activities."
   },
   {
-    "id": "winds-of-magic:reference:44-new-arcane-skills",
-    "name": "New Arcane Skills",
-    "category": "rule",
-    "topic": "Spellcasting, ritual magic and specialist magic",
-    "page": 44,
-    "text": "Winds of Magic introduces new and revised skills — Augury and Psychometry — and extra detail on the Trade Skill when used with Alchemy.\n\nThere are certain practices that seem, to the easily mystified common folk, to be sorcerous, but carry only a passing similarity to working the Winds of Magic into spells.\n\nAugurs and scryers may not be able to work spells, but their abilities do rely on some connection to the Winds of Magic and are like those of magicians. They may be suspected of sorcery and witchcraft by those who lack the nuance to distinguish between spells and premonitions.\n\nEven mundane alchemists may demonstrate more in common with wizards than they do with engineers or other scientific tinkerers. Low Alchemy, as the Gold College calls it, such as isolating metals from ore or constructing simple optical devices, can be the work of any scholar, but High Alchemy involves manipulating Chamon in a way that might easily be confused with spellcraft."
-  },
-  {
     "id": "winds-of-magic:reference:45-augury-table",
     "name": "Augury Table",
     "category": "table",
@@ -486,14 +478,6 @@
     "topic": "Spellcasting, ritual magic and specialist magic",
     "page": 48,
     "text": "|  |  |  |  |\n| --- | --- | --- | --- |\n| SL | Result | General | Burglary Example |\n| +6 or more | Astounding Success | At least three pieces of information are received; one is of significant pertinence. | The Scryer feels a pronounced sense of fear. They see a group of loutish folk break a window. A voice speaks ‘You ain’t seen nothing, got it?’. |\n| +4 to +5 | Impressive Success | Two pieces of information are received. | The Scryer sees one of the racketeers approach a window with a rock in their hand and feels unable to speak. |\n| +2 to +3 | Success | A piece of information is received. | The Scryer hears glass breaking. |\n| +0 to +1 | Marginal Success | Vague impression of the event. A piece of information is revealed metaphorically. | The Scryer sees a fish swimming in water. The gang of racketeers belong to an organisation known as ‘the Fish’. |\n| –0 to –1 | Marginal Failure | No information is received. | The Scryer fails to read anything useful. |\n| –2 to –3 | Failure | A vaguely misleading piece of information is received. | The Scryer understands that the victim was afraid of someone entirely unconnected with the crime. |\n| –4 to –5 | Impressive Failure | The Scryer receives disturbing and misleading impressions. | Emotions and images flood the Scryer’s mind, but nothing stands out as relevant. |\n| –6 or less | Astounding Failure | Overwhelmed by nightmarish impressions. Gain a point of Corruption. | The Scryer is overwhelmed by feelings of fear, impotence, and shame and gains a point of Corruption. |\n\nTo represent this difficulty, a Character can take the Psychometry Skill at character creation if they give up a random Species Talent. Furthermore, the Character would have to begin as or enter one of the following Careers before they can spend Experience Points on advancing the Skill: Mystic\n\nWarrior Priest Hedge Witch\n\nWitch Nun\n\nWizard (from the WFRP Core Rulebook, Priest\n\nor this book). Scryer\n\nThese limitations do not apply to Characters who generate a Scryer as their starting Career. Only Human characters may take the Psychometry Skill."
-  },
-  {
-    "id": "winds-of-magic:reference:49-alchemy",
-    "name": "Alchemy",
-    "category": "rule",
-    "topic": "Spellcasting, ritual magic and specialist magic",
-    "page": 49,
-    "text": "Alchemy is a wide field that shares practices with those of engineers, apothecaries and herbalists, and even Gold Wizards. Mundane, or ‘Low’, Alchemists satisfy themselves with working to understand base matter, isolating and recombining elements, gleaning insights into the properties of light, and so on.\n\nThese scholars of the material world may be able to work wonders simply through their mastery of scientific thought, able to use their abilities to create draughts or poultices from parts harvested from the bodies of animals (see The Imperial Zoo, page 98) or have a go at creating other alchemical potions (see page 154).\n\nHigh Alchemists are those who possess and make use of the Second Sight Talent in their work. Not only can they combine the physical properties of materials to their best effect, but they can work with any magical energy imbued within those materials to create true artefacts of power."
   },
   {
     "id": "winds-of-magic:reference:49-mundane-alchemy",
@@ -696,14 +680,6 @@
     "text": "CN: 8 Range: You Target: You Duration: Willpower Bonus rounds A lattice of Hysh overlays your mind, allowing you to think rapidly. Gain +20 to Intelligence and Initiative."
   },
   {
-    "id": "winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal",
-    "name": "The Gold Wind of Magic & The Lore of Metal",
-    "category": "rule",
-    "topic": "Lore of Light",
-    "page": 66,
-    "text": "‘What am I to think of these past several years? For much of my life, I said the prayers and conducted the rituals. I counselled supplicants and provided witness to contracts. I did all that my Lord Haendryk — “Handrich” to the Reiklanders I now live among — required to make our city and the Empire at large prosper. And He rewarded me with the gift of channelling a small piece of His power.\n\nBut, I perceived things my brother priests could not, and I learned for my own safety not to speak of them. What they took on faith, I saw as a logical process, a sequence of steps that would lead to a predictable outcome. No god required! But, more than that, I saw Chamon, the Gold Wind. I saw it blow from the Great Rift in the north, seeding the world with metals. Not just gold, but iron and lead and all of them. I saw how those metals were suffused with Chamon’s magic and how I, with the right words and enough will, could do things Haendryk never taught us.\n\nI was ashamed of my heresy. I lived in fear of the Inquisitors. I denied what I knew to be true, even to myself.\n\nBut, no more! When Asavar Kul led his army against the civilised lands, I renounced the priesthood and answered Magnus’s call. I survived — barely! — Teclis’s tests and proved my worth on the battlefield. And when it was over, I learned. Oh, such wonders I learned! Not just magic undreamt of by hedge witches, but real knowledge. And I was free to seek more and teach others.\n\nI was no longer a heretic. I was and am a Magister of the Golden Order.’\n\n\b Excerpt from the diary of Cas Meijer, \b first Patriarch of the Gold College, year 2314 IC"
-  },
-  {
     "id": "winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4",
     "name": "Balthasar Gelt Alchemist Lord (Gold 4)",
     "category": "profile",
@@ -862,14 +838,6 @@
     "topic": "Lore of Life",
     "page": 88,
     "text": "CN: 6 Range: Touch Target: 1 Duration: Willpower Bonus rounds Your target gains the Regenerate Creature Trait (WFRP, page 341)."
-  },
-  {
-    "id": "winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens",
-    "name": "The Blue Wind of Magic & The Lore of the Heavens",
-    "category": "rule",
-    "topic": "Lore of Life",
-    "page": 90,
-    "text": "‘Azyr. The breath of the firmament. To discern the Blue Wind is to witness a panoramic spectacle, as it drifts, swirls, and eddies across the vast theatre of the heavens. We unfortunate groundlings can only gaze in reverence as the stars pirouette above us, their motions orchestrating the beautiful harmonies of Azyr. If we attend to their song, we may learn of events yet to come.\n\nMany nights I have gazed aloft to contemplate Azyr. Does the intricate interplay of stars and planets give rise to the Celestial Wind? Or do those zephyrs propel the stellar bodies on their ceaseless procession across the sky? We may never know, and Azyr cares not. Its spirals shape both physical matter and the immaterial substance of the mind alike.\n\nMaster Ceruleus and I have discoursed on the nature of Azyr, as the sapphire current eddies high above us. We speculate on how it sways the weather, how it wrings rain from the clouds or sparks lightning from the storm. Ceruleus believes the very air is subservient to Azyr. Indeed, at his incantation a still summer day becomes a raging tempest in an instant. I have even seen him borne aloft by a cradle of air.\n\nHowever, Azyr exerts its most subtle influence on the mind. It is the timeless wind, unbound by the present, past, or future. Shyish marks the inevitable progress of time, but Azyr defies its relentless forward march. Lord Teclis told us it flows gently across the temporal realms, bringing intimations of possible destinies. Azyr can untangle fate through divination and augury. Yet our Astromancers should be wary, for perhaps our earthbound minds are not fit for gazing into what may come?’\n\n\b — from Volans’ fourth letter to the Colleges of Magic"
   },
   {
     "id": "winds-of-magic:reference:97-profile-raphael-julevno-grand-astromancer-gold-1",
@@ -1456,14 +1424,6 @@
     "text": "Max: Intelligence Bonus Tests: Trade (Apothecary) and Trade (Alchemist) You are skilled at making potions, philtres, and draughts on the go. You may take one free Crafting Endeavour or Brew Potion Endeavour to use Trade (Apothecary) or Trade (Alchemist) without the need for a workshop or laboratory. Other Crafting Endeavours are not affected."
   },
   {
-    "id": "winds-of-magic:reference:161-the-concoct-talent",
-    "name": "The Concoct Talent",
-    "category": "rule",
-    "topic": "Magical artefacts and alchemy",
-    "page": 161,
-    "text": "The Concoct Talent provides some advantages to the process of creating potions. Use the following updated rules:"
-  },
-  {
     "id": "winds-of-magic:reference:162-channelpath-potion",
     "name": "Channelpath Potion",
     "category": "rule",
@@ -1728,14 +1688,6 @@
     "text": "Boon: +20 to Melee (Basic), Hack Quality Bane: Sword lodged in armour Trigger: Successful attack with 2 SLs or less Description: This one-handed serrated sword is a thing of obvious antiquity and a beauty marred only by strings of blackened ichor near the blade’s base and crossguard. This sword served its wielders well until it struck and killed a Bloodletter and became lodged in the ruin of its corpse. Unable to remove the blade, its owner died a horrific death at the hands of the Daemon’s cohorts, and the blade remains cursed to repeat these tragic events over and over. It has the Hack Quality, granting it a unique ability to destroy armour unheard of in a sword this size. It also appears to be made of considerable craftsmanship, and grants the wielder a +20 to Melee (Basic).\n\nFor each successful strike with this cursed sword, 1 AP is removed from the armour at the struck location, as per the Hack Quality. If, however, the attack has 2 SLs or less, the sword then also becomes lodged in that portion of the victim’s armour. Removing the embedded sword requires an action and a Hard (–20) Strength Test, during which time the cursed victim is distressingly vulnerable to attack.\n\nIf the opponent is not wearing any armour, the cursed blade continues to grant a +20 to Melee (Basic), but then becomes lodged in the flesh and bones of the opponent, with the same effects as listed above, on the first critical hit it inflicts."
   },
   {
-    "id": "winds-of-magic:reference:173-incarnate-elementals",
-    "name": "Incarnate Elementals",
-    "category": "rule",
-    "topic": "Magical creatures and familiars",
-    "page": 173,
-    "text": "When magic reaches high concentrations in the environment, or when a Storm of Magic gathers, wizards may dare to summon the purest and most destructive essence of one of the Winds of Magic and bind it to the shape of spirit creatures forged of tempestuous force. These Incarnate Elementals are manifestations of limited sentience, embodying the characteristics of a particular magical wind.\n\nThe phenomena that create Incarnate Elementals are poorly understood. They embody a certain quintessence of the wind with which they are associated, but they tend to only display the most destructive aspects of that wind. Furthermore, only three Incarnates have been properly documented, with codified summoning rituals recorded to conjure them. These are the Incarnates of Fire, Death, and Beasts. These colossal monsters have been summoned by battle wizards of the Amber, Bright, and Amethyst Colleges after lengthy and complicated rites that take place at ritual sites, arcane fulcrums, or magically saturated environments. Monstrous elementals occasionally manifest independently at places where concentrations of a particular wind are abundant, such as the Incarnate Elementals of Beasts that are occasionally found deep within the Fauschlag rock.\n\nMany other forms of elemental are thought to exist. Sailors have reported seeing creatures formed purely out of water and are supposed by scholars of magic to be Incarnate Elementals of Life. The Ungols and Hobgoblins who rove the eastern steppes tell of ‘Wind Daemons’ that some suppose may be Incarnates of Light. The Ifrits said to haunt southern deserts resemble elementals in a lesser aspect. The Gospodars speak of their gods manifesting as massive bears formed of rock and ice. Tales of creatures made of living rock or metal are shared by miners and mountaineers. Altdorf ’s wizards would dearly love to find out if such tales have any truth to them and, if so, whether these beings might be Incarnate Elementals of winds other than Ghur, Aqshy, and Shyish."
-  },
-  {
     "id": "winds-of-magic:reference:174-profile-incarnate-elemental-of-fire",
     "name": "Incarnate Elemental Of Fire",
     "category": "profile",
@@ -1763,28 +1715,12 @@
     ]
   },
   {
-    "id": "winds-of-magic:reference:176-nature-spirits",
-    "name": "Nature Spirits",
-    "category": "rule",
-    "topic": "Magical creatures and familiars",
-    "page": 176,
-    "text": "The term ‘nature spirit’ is used loosely by citizens of the Empire to describe any mysterious woodland creature they might chance upon. Collegiate wizards and Elves understand that nature spirits are distinct from elementals and other aethyric manifestations. Every single tree and rock hosts a minor spirit that can awaken under the right conditions. Druids and Wood Elf mages commune with these dormant spirits. Though many nature spirits might appear incorporeal, they are living entities that can be slain.\n\nNature spirits have existed longer than the Elves, though their origins remain unknown even to denizens of the Laurelorn. Nature spirits such as Dryads, Naiads, and Spites thrive in regions of constant magical saturation. The powerful Treemen dwell in forests that have remained saturated for centuries. Elder nature spirits can appear in a variety of different forms, ranging from Unicorns and Great Stags to giant toads, serpents, and bizarre humanoid beings."
-  },
-  {
     "id": "winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts",
     "name": "Incarnate Elemental Of Beasts",
     "category": "profile",
     "topic": "Printed NPC and creature profiles",
     "page": 176,
     "text": "INCARNATE ELEMENTAL OF BEASTS\n\n| M | WS | BS | S | T | I | Ag | Dex | Int | WP | Fel | W |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 7 | 56 | – | 75 | 62 | 45 | 49 | 15 | – | – | – | 104 |\n\nTraits: Armour (Hide) 2 (8), Construct, Grim 3, Horns +10, Immune (Ghur), Size (Enormous), Stride, Terror 3, Unstable, Ward (8), Weapon (Claws) +11\n\nHowl of the Great Beast: The howling of the Bloody Hidesman strikes fear into all those who hear it. On its turn, it can spend 1 Advantage to howl at its enemies as a free attack. All living targets within a number of yards equal to the creature’s Initiative (45) immediately gain 3 Deafened Conditions and must pass a Difficult (–10) Cool Test or receive 3 Broken Conditions. A Character who passes such a test once does not need to test again for the remainder of the encounter"
-  },
-  {
-    "id": "winds-of-magic:reference:177-magical-constructs",
-    "name": "Magical Constructs",
-    "category": "rule",
-    "topic": "Magical creatures and familiars",
-    "page": 177,
-    "text": "The defining feature of constructs is in their name: they are constructed, things built from raw materials. Construction may be an extremely simple process or involve painstaking craftsmanship, such as a puppet with individually carved finger bones, artfully wired together and fully articulated. Some wizards like to do this work themselves, but most get more impressive results by hiring an experienced artisan.\n\nThe wizard explains what they want, and the artisan explains what’s possible. Hopefully the partnership finds a sensible middle ground, but some wizards are quite obstinate. Sometimes artisans just shrug their shoulders and do what they are asked, even if it’s a bad idea, such as the giant wickerman that was to be built from antlers, provoking a small army of angry Taalites.\n\nConstructs are frequently strong and enduring, regardless of what they’re made of: a construct made of straw might catch fire, but it takes far longer to burn than you’d expect and packs a punch as powerful as a construct made of wrought iron.\n\nThese are not merely physical objects brought to life; they are magical fabrications and their materials do not always act naturally after enchantment. A granite wolf probably sinks if it’s forced off a barge but may paddle back to the river’s edge (and it could still walk the river bottom and track the barge).\n\nWhile constructs are unintelligent, their mindlessness provides a significant advantage over mortal servants and agents: they do what they are told and only what they are told. This may seem like a disadvantage, but many a cunning and careful plan has been upended by hirelings who think they have a better idea.\n\nSimilarly, constructs lack emotion, whereas mortals are prone to fear, doubt, and sudden attacks of conscience and morality. If a construct is ordered to commit an atrocity it will jolly well get on and commit it! When it’s set on fire, it doesn’t start screaming and rolling on the ground, but carries on with what it was told to do until it no longer can. However, this does mean that orders and instructions must be very carefully considered and worded before they are issued.\n\nAssembling constructs can be time-consuming and costly so they are rarely assembled without a specific purpose in mind. This may be simply showing off to other wizards or for research, but they are usually for more pragmatic ends.\n\nSee page 30 for details of the Create Construct Ritual."
   },
   {
     "id": "winds-of-magic:reference:179-fenbeasts",
@@ -1825,14 +1761,6 @@
     "topic": "Magical creatures and familiars",
     "page": 181,
     "text": "| D10 | Aqshy | Azyr | Chamon | Ghur | Ghyran | Hysh | Shyish | Ulgu |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 1 | Dynamic | Arrogant | Ambitious | Feral | Rustic | Haughty | Morbid | Secretive |\n| 2 | Snarky | Dreamer | Avaricious | Shy | Folksy | Thoughtful | Morose | Reticent |\n| 3 | Grudgeful | Idealist | Epicurean | Predatory | Caring | Sublime | Sardonic | Guarded |\n| 4 | Peevish | Selenophile | Mercurial | Aloof | Gentle | Pious | Grim | Shy |\n| 5 | Lively | Knowing | Miserly | Anxious | Diligent | Pompous | Sombre | Cynical |\n| 6 | Manic | Snooty | Bureaucratic | Fierce | Friendly | Uptight | Aloof | Sly |\n| 7 | Wrathful | Proud | Confident | Fearful | Bucolic | Bookish | Slothful | Devious |\n| 8 | Apoplectic | Inspired | Humorous | Physical | Solid | Solipsistic | Stoic | Shrewd |\n| 9 | Blustery | Pretentious | Generous | Quick | Verbose | Traditional | Fatalistic | Ironic |\n| 10 | Brooding | Graceful | Bloviating | Savage | Vulgar | Spiritual | Doomed | Aloof |"
-  },
-  {
-    "id": "winds-of-magic:reference:182-familiars-of-chamon",
-    "name": "Familiars of Chamon",
-    "category": "rule",
-    "topic": "Magical creatures and familiars",
-    "page": 182,
-    "text": "Combat: A sturdy homunculus, two to three feet tall, clad head to toe in thick iron plate armour. It wields a sword almost as long as it is tall.\n\nPower: A silvery metal ball or cylinder, the size of a large apple. It appears inanimate but can roll and jump under its own volition. It is known to weep stinging acid if handled by one other than its master.\n\nSpell: A broad-shouldered, hirsute, man-like homunculus no more than a foot tall, appearing like a stereotypical blacksmith. It carries a small anvil and hammer; it strikes its anvil to cast a spell."
   },
   {
     "id": "winds-of-magic:reference:182-improving-familiars",
@@ -2024,14 +1952,6 @@
     "page": 188,
     "text": "Spell Familiars are often diminutive imps, tiny golems, or magically animated puppets that have a gift for spellcasting and magical knowledge.",
     "notes": "This printed Career introduction is reference-only. The familiar Career advance scheme and progression are not imported or supported by the creators."
-  },
-  {
-    "id": "winds-of-magic:reference:189-the-effects-of-magic-on-the-world",
-    "name": "The Effects of Magic on the World",
-    "category": "rule",
-    "topic": "Magical environments",
-    "page": 189,
-    "text": "Magical energy emanates from the poles and courses through the world. Natural environments constantly absorb the Winds of Magic. Wherever magical energy is absorbed at higher rates than it dissipates, the environment becomes saturated with magic.\n\nThere’s no limit to the quantity of magic that can be absorbed. However at a certain threshold the affected geography loses cohesion and becomes part of the Realms of Chaos.\n\nThe dominance of specific colours is governed by sympathetic attraction. Ghyran is usually dominant in forests, Chamon in mountains, Azyr at sea, and so on. A forested mountainside might be saturated with both Ghyran and Chamon. Weather, plant growth, and animal behaviours are affected according to the dominant winds. Common folk attribute these anomalies to the gods and pray for favourable conditions."
   },
   {
     "id": "winds-of-magic:reference:190-environmental-saturation-effects",

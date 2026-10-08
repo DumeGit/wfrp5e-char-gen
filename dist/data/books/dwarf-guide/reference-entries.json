@@ -1,27 +1,11 @@
 [
   {
-    "id": "dwarf-guide:reference:38-naming-rites",
-    "name": "Naming Rites",
-    "category": "rule",
-    "topic": "Dwarf creation and Careers",
-    "page": 38,
-    "text": "Dwarf forenames (or given names) tend to be short, usually one or two syllables. Some names may reflect traditional names handed down from one generation to another, while others commemorate a venerated clan ancestor or great hero. As an example of the latter, generations after the War of Vengeance, many newborn males were given the name of Gotrek after the victorious High King who put an end to the insufferable Phoenix King of Ulthuan. A few given names reflect virtues that parents hope their offspring will emulate. Gorm is often associated with wisdom, Grim with prowess in battle, and Dwinbar with skill at craftsmanship."
-  },
-  {
     "id": "dwarf-guide:reference:39-forenames",
     "name": "Forenames",
     "category": "table",
     "topic": "Dwarf creation and Careers",
     "page": "39–40",
     "text": "001-009 Alaric Akilinda\n\n| D1000 | Male | Female |\n| --- | --- | --- |\n| 001-009 | Alaric | Akilinda |\n| 010-018 | Algrim | Adalni |\n| 019-027 | Alrik | Alrika |\n| 028-037 | Baragor | Arin |\n| 038-045 | Bardin | Askima |\n| 046-053 | Belegar | Astrid |\n| 054-061 | Bel(e)gol | Beodinga |\n| 062-070 | Borgin | Beothilt |\n| 071-079 | Borin | Berit |\n| 080-088 | Bradni | Berta |\n| 089-098 | Brogar | Boria |\n| 099-107 | Brokk | Breda |\n| 108-115 | Brond(I) | Brit(t)a |\n| 116-121 | Bronn | Brondra |\n| 122-129 | Burlok | Brun(n)a |\n| 130-137 | Cranneg | Bunna |\n| 138-145 | Darbli | Daedbet |\n| 146-153 | Dargo | Daril |\n| 154-161 | Dern | Darna |\n| 162-170 | Dimrond | Derna |\n| 171-179 | Dimzad | Devoni |\n| 180-184 | Dorin | Dorbi |\n| 185-188 | Drong | Duree |\n| 189-200 | Drumin | Edlyn |\n| 201-209 | Durak | Eilianhilt |\n| 210-218 | Duregar | Eldrida |\n| 219-227 | Durgin | Engilfrit |\n| 228-234 | Dwinbar | Eonhilt |\n| 235-239 | Elmador | Esma |\n| 240-246 | Enlag | Fenna |\n| 247-253 | Fenni | Fonsa |\n| 254-261 | Fimbur | Freda |\n| 262-270 | Finn | Frenchin |\n| 271-279 | Furgil | Friga |\n| 280-288 | Garil | Fronika |\n| 289-300 | Goddi | Galan |\n| 301-309 | Gomrund | Galea |\n| 310-318 | Gorazin | Gamila |\n| 319-327 | Gorim | Gemmon |\n| 328-337 | Gorm | Gamona |\n\n| D1000 | Male | Female |\n| --- | --- | --- |\n| 338-345 | Gotrek | Gennadea |\n| 346-353 | Gottri | Gert(r)a |\n| 354-361 | Grim | Gloren |\n| 362-370 | Grimli | Gottra |\n| 371-379 | Grindol | Grida |\n| 380-390 | Grom | Grizal |\n| 391-400 | Grond | Grondi |\n| 401-409 | Groth | Grunna |\n| 410-418 | Grum | Harga |\n| 419-427 | Grumdin | Heldin |\n| 428-437 | Grundi | Helga |\n| 438-445 | Grung | Helgar |\n| 446-453 | Grunni | Holda |\n| 454-461 | Guttri | Hunni |\n| 462-470 | Haakon | Husina |\n| 471-479 | Hadra | Inga |\n| 480-489 | Harek | Ingardas |\n| 490-499 | Hargin | Ingeida |\n| 500-507 | Hargrim | Ingina |\n| 508-512 | Harok | Ingundas |\n| 513-518 | Heganbor | Irmina |\n| 519-527 | Hergar | Kalea |\n| 528-537 | Hugnir | Karelia |\n| 538-545 | Hurgar | Karga |\n| 546-553 | Kadri | Karstin |\n| 554-561 | Kadrin | Katrin |\n| 562-570 | Kallon | Kemma |\n| 571-579 | Kargun | Kettra |\n| 580-589 | Katalin | Kotafrit |\n| 590-600 | Kazadar | Kotahilt |\n| 601-609 | Kazgar | Laka |\n| 610-618 | Kazran | Lakin |\n| 619-627 | Kazrik | Leena |\n| 628-637 | Ketil | Lenka |\n| 638-645 | Kettri | Loera |\n| 646-653 | Kragg | Lorata |\n| 654-661 | Krudd | Lora |\n| 662-670 | Kurgan | Magda |\n| 671-679 | Largs | Mehthilt |\n| 680-689 | Logan | Melanna |\n\n328-337 Gorm Gamona 680-689 Logan\n\n| D1000 | Male | Female |\n| --- | --- | --- |\n| 690-700 | Logazor | Menni |\n| 701-707 | Lunn | Minna |\n| 708-718 | Mendri | Mistila |\n| 719-727 | Mordin | Modra |\n| 728-737 | Morek | Morga |\n| 738-753 | Morgrim | Nanda |\n| 746-753 | Mundri | Nanna |\n| 754-761 | Norgrim | Olka |\n| 762-768 | Oldor | Osanna |\n| 769-775 | Ragni | Reiarin |\n| 776-784 | Rogni | Rihilt |\n| 785-790 | Rorek | Sanne |\n| 791-800 | Rungni | Sifna |\n| 801-812 | Skag | Sigifrit |\n| 813-820 | Skaldor | Sigifrith |\n| 821-830 | Skalf | Sigrid |\n| 831-838 | Skalli | Sigrun |\n| 839-844 | Skorri | Skorina |\n| 845-851 | Sindri | Solveig |\n| 852-860 | Snorri | Sunni |\n| 861-866 | Stromni | Svenrina |\n| 867-874 | Storri | Tarni |\n| 875-882 | Sundrim | Tharma |\n| 883-890 | Sven | Theodfirt |\n| 891-900 | Thingrim | Thindra |\n| 901-909 | Thori | Thoda |\n| 910-920 | Thrund | Thora |\n| 921-929 | Thungni | Throlin |\n| 930-936 | Thurgrom | Thurma |\n| 937-942 | Thyk | Trunni |\n| 943-950 | Ulfar | Ulla |\n| 951-957 | Ulther | Uote |\n| 958-965 | Vikram | Vala |\n| 966-972 | Vragni | Valma |\n| 973-980 | Yadri | Vanyra |\n| 981-988 | Yanni | Winnifer |\n| 989-993 | Yorri | Woda |\n| 994-000 | Zamnil | Zylra |\n\nThe formal surname of ‘Khazadsson’ or ‘Khazadsdottir’ is used in the extremely rare occurrences where a newborn Dwarf is a foundling of unknown descent. Once the foundling is adopted by another Dwarf, the youngling adds another name consisting of the foster parent’s name with the suffix ‘sfind’ (found by). For example, the foundling Dwarf named Grim and raised by Kazran Moreksson would be Grim Khazadsson-Kazransfind.\n\nWhen they come of age, Imperial Dwarf foundlings may opt to petition the elders of their adopted clan to change their surname. Usually, these foundlings replace their adopted surname with the (Reikspiel equivalent of) their clan name. In extremely rare cases, Imperial Dwarf clans may decide to go it alone without a surname until they can earn a surname through deed or achievement."
-  },
-  {
-    "id": "dwarf-guide:reference:40-nicknames",
-    "name": "Nicknames",
-    "category": "rule",
-    "topic": "Dwarf creation and Careers",
-    "page": 40,
-    "text": "A fair number of Dwarfs also have nicknames. These are derived from outstanding deeds, personality quirks, or distinguished physical features. In less formal settings, these nicknames sometimes replace a Dwarf ’s actual surname. For example, Brokk Furgilsson earned his nickname ‘Burned-Thumb’ from the time the apprentice picked up a still-hot, recently-cast blank brooch. Dwarfs may not choose their own nickname. It must be bestowed upon them by a Master of a Craftguild or Clan consensus. Dwarfs must take great care to avoid gaining an unflattering nickname.\n\nThose bestowing nicknames also must take care that the conferred nickname accurately represents a true characteristic or deed of the Dwarf in question. Granting an inaccurate nickname reflects poorly on the bestower and may be considered an insult to the Dwarf or clan. Such insults would need to be answered.\n\nNicknames are not fixed in stone like their other names. As Dwarfs age and accrue deeds, one nickname may get replaced by a new, more accurate one. For example, Brokk Burned-Thumb might slay Orc Warboss Gronk in battle years later and become Brokk Grontslayer in honour of his great deed. Still later, Brokk may lose an eye fighting against a (rather lucky) Goblin. He would then become Brokk Scar-Eyed.\n\nNicknames must be as unique as possible. Advocating for the same nickname as an older Dwarf, especially a great king or hero, is presumptuous and an insult to the original bearer of the nickname. The only acceptable way this could be done is if it is the original bearer of the nickname bestowing it upon the younger Dwarf.\n\nFew nicknames do not require the approval of a Craftguild Master or consensus of an Elder Council. Suitors may give nicknames that flatter their intended’s achievements, appearance or temperament. Nicknames such as ‘the Fair’ or ‘the Beautiful’ have been over-used in recent centuries and fallen out of favour. Nicknames such as ‘Ravenhair’, ‘Emerald-Eyes’, and ‘Radiant Smile’ are still popular among suitors. It is a sign of great favour when the intended accepts the nickname given by a suitor."
   },
   {
     "id": "dwarf-guide:reference:41-place-of-origin",
@@ -112,14 +96,6 @@
     "text": "Gyrocopters and other skycraft are still distrusted by the Guild’s elders, but many of the most daring Engineers are experts at maintaining and piloting them. Even the most disapproving Dwarf generals can appreciate the tactical advantage of reconnaissance from a bird’s eye view.\n\nSky Pilots replace the 3rd level of the Engineer (WFRP Core Rulebook) Career. They replace their Career level’s corresponding Characteristic with Agility.\n\nSky Pilot — Silver 3 Skills: Charm, Navigation, Outdoor Survival, Sail (Skycraft) Talents: Acute Sense (Sight), Maverick*, Seasoned Traveller, Short Fuse* Trappings: Pilot’s Licence, Dwarf Pistol, Telescope"
   },
   {
-    "id": "dwarf-guide:reference:57-dwarf-artforms",
-    "name": "Dwarf Artforms",
-    "category": "rule",
-    "topic": "Dwarf creation and Careers",
-    "page": 57,
-    "text": "There is no truth to the Elven slander that Dwarfs cannot appreciate beauty — though it’s fair to say that what they consider appealing is different from most other cultures. Dwarf Art is an intensely physical process, requiring more strength than is usually expected from Artists. Sculpture is the most popular art form, but engraving and beard weaving are also regarded. Painting, in contrast, is dismissed as a trivial vanity. Dwarfs Entertain each other with work and, drinking songs, and long (often rambling) poetic sagas. Contrary to popular belief, Dwarfs do have a sense of humour — though it manifests as dry, sardonic remarks on matters that others might find grave and serious, stoic acknowledgement of disasters when others around them are panicking, begrudging admiration of things others find awe- inspiring, and boisterous, competitive boasting when others would prefer things to be civil.\n\nThe Perform Skill is seldom used by Dwarfs, as they are more impressed by feats of endurance than agility: ox lifting, stone hauling, anvil heaving, and bellowing. Some beardlings practise juggling with crafting tools, though they are encouraged to abandon such frivolity by their elders, and treat their labours with the seriousness it deserves. Though Dwarfs Play all kinds of musical instruments, the most popular are those that echo far through their mountain holds: driving percussion and sonorous horns. The largest horns are sometimes used to communicate with distant outposts and summon the clans to war."
-  },
-  {
     "id": "dwarf-guide:reference:57-grudgemaster",
     "name": "Grudgemaster",
     "category": "rule",
@@ -168,14 +144,6 @@
     "text": "Runebearers are long-distance runners who deliver vital messages between holds. Though expected to cross any terrain necessary to reach their destination, they specialise in navigating the tunnels of the Underway. Every Runebearer dreams of setting a new record on the Kislev Run, the longest distance ever travelled in a single mission.\n\nRunebearers replace the 2nd level of the Messenger (WFRP Core Rulebook) Career.\n\nRunebearer — Silver 1 Skills: Cool, Melee (Basic), Ranged (Crossbow), Secret Signs (Ranger), Stealth (Any One), Swim Talents: Orientation, Seasoned Traveller, Strider (Rocky), Tireless* Trappings: Dwarf Axe, Dwarf Crossbow and Ammunition, Leather Jack"
   },
   {
-    "id": "dwarf-guide:reference:59-dwarf-slayer",
-    "name": "Dwarf Slayer",
-    "category": "rule",
-    "topic": "Dwarf creation and Careers",
-    "page": 59,
-    "text": "Becoming a Slayer is a means of atonement, not a career choice. Dwarfs who lost honour through such acts as oathbreaking, cowardice fighting against traditional Dwarf enemies, or betrayal of the clan can only find redemption through their heroic death against overwhelming odds.\n\nDisgraced Dwarfs journey to the Temple of Grimnir at the nearest Dwarf hold where they undergo the Slayer Ritual (Drengidumar). They are stripped of all personal possessions; hair shaved on the heads other than a strip over the crown of their head; remaining hair dyed with a bright, unnatural colour (usually bright orange) in order to distinguish their dishonoured status from afar; hair spiked with animal fat; and ritually tattooed with symbols marking their shame, including Grimnir’s Rune. The would-be Slayer is then inducted into the cult of Grimnir the Slayer. No oath is taken as the oath of a disgraced Dwarf has no value.\n\nThe new Slayer may join with other Slayers as shock troops for a Dwarf hold. Most depart their homes and make their way through the manling realms or wilderness to find their redeeming death.\n\nSlayers tend to avoid other Dwarfs as their company reminds Slayers of what they have lost. Slayers tend to gravitate towards adventuring types who promise danger and chance of honourable death. Dwarf adventurers and Slayers interact with an uncomfortable degree of informality. The two types of Dwarfs can only travel together if there are manlings in the group to afford the Dwarf and Slayer some separation. If a Slayer is forced by circumstance to travel with a group of Dwarfs, the Slayer gloomily accepts such a fate as the will of the Ancestor Gods to add bitterness to the Slayer’s punishment.\n\nDwarf attitudes towards Slayers are mixed. On one hand, the words and lives of these disgraced, contemptible outcasts are worthless. On the other, the Slayers’ terrifying ferocity and suicidal bravery command the respect of the warrior-respecting Dwarfs. In addition, the presence of Slayers reminds Dwarfs of how far they can fall if they stray from the values of their culture.\n\nSlayers forsake membership of clan, guild, and hold, and so fall outside the usual structure of Dwarf society. By convention, their seniority is denoted by the largest, most dangerous monster they’ve slain, but exceptions to this hierarchy are noticeable when a Slayer Army musters at"
-  },
-  {
     "id": "dwarf-guide:reference:59-slayers-do-not-wear-armour",
     "name": "Slayers Do Not Wear Armour",
     "category": "rule",
@@ -206,14 +174,6 @@
     "topic": "Careers, Skills, Talents and Grudges",
     "page": 61,
     "text": "Still considered new-fangled after centuries of use, Dwarf handguns are far more precise and reliable than Imperial counterparts. Their wielders are well-named, for the cacophonous roar of a Thunderer’s missile volley is terrifying enough to put survivors to flight.\n\nThunderers replace the 2nd level of the Soldier (WFRP Core Rulebook) or Handgunner (Up In Arms page 16) Career.\n\nThunderer — Silver 3 Skills: Evaluate, Gamble, Intimidate, Outdoor Survival, Ranged (Engineering), Trade (Gunsmith) Talents: Dragon Belcher*, Drilled, Tireless*, Unshakeable Trappings: Dwarf Handgun and Ammunition, Breastplate, Mail Skirt, Plate Helm (Open)"
-  },
-  {
-    "id": "dwarf-guide:reference:80-new-skills",
-    "name": "New Skills",
-    "category": "rule",
-    "topic": "Careers, Skills, Talents and Grudges",
-    "page": 80,
-    "text": "This section includes two new Specialisations for existing Skills, and a brand new Skill."
   },
   {
     "id": "dwarf-guide:reference:80-new-skills-and-talents",
@@ -296,28 +256,12 @@
     "text": "Dwarfs do not subscribe to the vision of the afterlife evangelised by the priests of Morr. Instead, they believe that the spirits of their dead reside deep beneath the earth, in the Halls of the Ancestors, where they are judged by their gods and awarded a seat at the great feast table proportional to their deeds in life. It is said that Dwarfs with many Grudges left unresolved will be seated furthest from their most prestigious ancestors, and deprived of the best food and ale.\n\nIf a Dwarf Character dies, their player’s new Character starts with additional XP, equal to half the XP the deceased Character acquired in play. However, this bonus XP is reduced by 25 XP for every outstanding Grudge the deceased Character had upon death, and reduced by an additional 25 XP (50 XP total) for every outstanding Blood Grudge. If the player’s new Character considers the deceased Character to be kin, any outstanding Grudges of the deceased Character are transferred directly into the new Character’s book of Grudges.\n\nsee options for leniency above"
   },
   {
-    "id": "dwarf-guide:reference:90-gromril",
-    "name": "Gromril",
-    "category": "rule",
-    "topic": "Equipment, artillery and vehicles",
-    "page": 90,
-    "text": "’Keep your coin, manling. This gromril axe is worth more than all the gold in the counting houses of your stinking city.’\n\n— A Karaz Ankor Dwarf to a Marienburg collector\n\nThe hardest metal known, gromril is the greatest treasure of the Dawi, and they would sooner part with everything else than give up an ounce of it to a non-Dwarf. To say it is valuable to them would be an injustice, for that implies a Dwarf could — or would — set a price on it. No Dwarf can. To the Dawi, gromril is their birthright, the Ancestors’ greatest gift to them. Their reverence for gromril is shown by the other name they give it, ‘Grungni’s Blood’.\n\nDwarf Law reserves the wearing and wielding of gromril to just a few — the Dwarf kings of the holds and the heads of the noble clans, their guards, and the elite warriors of a hold’s army. Gromril also serves to decorate the stones that seal the tombs of the Dwarf kings, its eternal lustre reflecting the eternal glory of the tomb’s occupant.\n\nDwarfs spare no effort to recover gromril that falls into others’ possession. If by accident or with no malicious intent, the Dwarfs offer gold in exchange, making it clear that refusal would be unwise. Pity the poor fool greedy enough to steal gromril, however, for such a thief earns an eternal, deadly grudge, and the Dawi spare no effort to recover it. Even Dwarfs from other holds and Imperial towns hunt the thief, such is the hold gromril has over the Dawi heart."
-  },
-  {
     "id": "dwarf-guide:reference:91-gromril-armour",
     "name": "Gromril armour",
     "category": "rule",
     "topic": "Equipment, artillery and vehicles",
     "page": 91,
     "text": "Gromril armour is almost always only made for Dwarfs, as giving away Grungni’s gift is unthinkable to most. Only once or twice in all Dawi history has a suit been made for an outsider, that person having proven themself a true Dwarf friend. Gromril is rare, expensive, and difficult to work, but due to its unsurpassed hardness it is most commonly used in the construction of suits of armour, though such monumentally expensive suits are reserved for the mightiest Dwarf heroes and their elite tunnel fighters, the Ironbreakers.\n\nGromril is a legendarily durable material, the most precious metal worked by Dwarfs. Items forged from gromril will not break, corrode, or lose their edge in almost all circumstances. In addition to other qualities possessed by a piece of armour a piece of gromril armour always possesses Fine 1 and Durable 4.\n\nAny attacks against locations protected by Gromril armour do not inflict Critical Wounds if they roll a Critical. An attack can still inflict Critical Wounds if it inflicts the target Character to 0 Wounds, as normal."
-  },
-  {
-    "id": "dwarf-guide:reference:91-gromril-mining",
-    "name": "Gromril mining",
-    "category": "rule",
-    "topic": "Equipment, artillery and vehicles",
-    "page": 91,
-    "text": "In 657 IC a Dwarf prospector called Thori Gundrikson made a discovery in the lands around the Black Water. Veins of an unfamiliar metal were found in caves around the lake, as bright and incorruptible as silver, as workable as iron, and harder than any other metal known to engineers and alchemists alike. Karak Varn, already a major mining settlement famed for its gold production, became a hub of activity, as the new metal was pulled from the ground and transported to Zhufbar for smelting and working.\n\nSince then, the Dwarfs have ventured ever deeper in search of gromril, and the discovery of a new vein is met with joy in all the holds. But the extraction of gromril has become harder over the years. The Dwarfs of Karak Varn carved their tunnels and pits into the land around Black Water with heedless haste, and soon the mines were beset by disasters, flooding, cave ins, and incursions from Skaven and Night Goblins. It became increasingly difficult to work there and the hold was overrun by the enemies of the Dwarfs.\n\nOver the millennia, the Dwarfs have learned to mine, smelt, and work gromril into weapons and armour, secrets they have never revealed to anyone else. As the supply from Karak Varn has become increasingly difficult to find, and dangerous to extract and transport, the Dwarfs search far afield for more sources of the metal though, to their growing despair, the lands around Karak Varn seem to be the only natural source of the metal in the world."
   },
   {
     "id": "dwarf-guide:reference:91-gromril-weapons",
@@ -328,28 +272,12 @@
     "text": "Gromril weapons are the finest known, and only the most skilled Dwarf smiths forge weapons from it. Meant for the Dwarfkings and their elite guards, gromril weapons are also given as gifts to the great heroes of Karaz Ankor after a legendary deed. Runesmiths will often inscribe runes of power on gromril weapons, making them even more fearsome.\n\nAll gromril weapons, regardless of the presence of wounds, have the Durable 4 Quality. Axes will also have Damaging, while hammers have the Impact Quality.\n\nTo work out the price of an item made from gromril double the base cost of the item seven times. So a sword (1 GC) would cost 128 GC if made from gromril. Really, this is a minimum price for an item that somehow made its way to market. Gromril items are regarded by Dwarfs as prized military and cultural assets and they do not part with such things lightly."
   },
   {
-    "id": "dwarf-guide:reference:91-the-kings-gift",
-    "name": "The King’S Gift",
-    "category": "rule",
-    "topic": "Equipment, artillery and vehicles",
-    "page": 91,
-    "text": "While exploring the wild foothills of the World’s Edge Mountains between Grenzstadt and the Blue Reach, Characters from the Empire strike it rich. Clearing a cave of Orcs, they find a gromril helmet made for an adult Human. A rare treasure, it was crafted long-ago for an Elector Count of Averland who had saved the heir of the Dwarf king of Karak Angazhar. The helm was lost when the Dwarf ambassador delivering it and his party were ambushed and slaughtered. Word of its discovery of course leaks out and the Characters find themselves beset by factions demanding its surrender. The current Elector- Count claims it as an heirloom of office. The Dwarfs of Karak Angazhar want it back, insisting it was only a loan to that particular Count. Agents of the Gold College see a rare opportunity to closely study gromril’s properties and claim it in the name of Imperial interests. Even the High King of Karaz Ankor demands it be handed over to him as a sacred treasure of the Dwarfs.\n\nMeanwhile, the helm itself is worth a fortune to the right buyer. Whom do the Characters please, and whom do they anger?"
-  },
-  {
     "id": "dwarf-guide:reference:92-crewed-rating",
     "name": "Crewed (Rating)",
     "category": "property",
     "topic": "Equipment, artillery and vehicles",
     "page": 92,
     "text": "For this weapon to operate optimally, it must be crewed by the number of characters equal to its Rating, all with the relevant Ranged skill (e.g. a Crewed (3) weapon requires 3 trained crew to operate efficiently). Only one crewmember can fire the weapon each Round, but additional crew can move or reload the weapon in their Turn. Misfires (WFRP Core Rulebook) damage all characters crewing the weapon, to a random hit location instead of the Primary Arm.\n\nA Crewed weapon with insufficient crew doubles its Reload Rating. In addition, the weapon gains the Imprecise Flaw if it is short 2 or more crew, and the Dangerous Flaw if it is short 3 or more crew. If this effect would duplicate Flaws the weapon already has, it inflicts −10 on Ranged Tests per duplicated Flaw."
-  },
-  {
-    "id": "dwarf-guide:reference:92-personal-wargear",
-    "name": "Personal Wargear",
-    "category": "rule",
-    "topic": "Equipment, artillery and vehicles",
-    "page": 92,
-    "text": "This section details Trappings small enough for one or two Dwarf Characters to carry on their person, such as personal weapons, armour, and battle platforms."
   },
   {
     "id": "dwarf-guide:reference:92-salvo-rating",
@@ -374,14 +302,6 @@
     "topic": "Equipment, artillery and vehicles",
     "page": 93,
     "text": "For ease of use, the effects that ammunition have on the Range, Damage, Qualities, and Flaws of ranged weapons have been included in the weapon profiles listed in this chapter. When replacing spent ammunition for personal weapons, Dwarfs can buy 12 bullets and powder for 3/3, and 12 crossbow bolts for 5/- (both have Common Availability). 12 shots of Drakefire can either be purchased for 1GC (Rare Availability), or concocted as an Endeavour.\n\nReplacing ammunition for artillery is usually outside the budget of most adventuring parties. Characters determined to pay their way — or use variant ammunition like grapeshot, incendiary rounds, or animal carcasses — can find additional detail in Up in Arms (page 124)."
-  },
-  {
-    "id": "dwarf-guide:reference:93-dwarf-ranged-weapons",
-    "name": "Dwarf Ranged Weapons",
-    "category": "rule",
-    "topic": "Equipment, artillery and vehicles",
-    "page": 93,
-    "text": "’I call these “dual-purpose weapons”, lad. First, they kill a lot more of the enemy a lot faster. Second, they scare the tar out of the survivors.’\n\n— A Karak Master Gunner training a new recruit\n\nThe Dawi are famous for their use of arquebuses and cannons, but few know the variety of their creations. Many of these are useful on the land, under the land, and on the sea. Dwarf ranged weaponry is constantly evolving, with “Drakefire” weapons the most recent development. Though regular handguns are dismissed by some elders as new-fangled nonsense, Dwarf blackpowder weapons are the most reliable ever invented, about as safe to use as any other weapon.\n\nReach Damage Qualities and Flaws\n\nPersonal +SB+7 Pummel, Shield (1)"
   },
   {
     "id": "dwarf-guide:reference:93-melee-weapons",
@@ -814,14 +734,6 @@
     "topic": "Runesmithing",
     "page": 130,
     "text": "Protection runes can only be forged upon items of communal significance, such as religious icons, ale kegs, war banners, or permanent installations (sculptures, gatehouses, etc.). Their creation blurs the line between craft and ceremony, and is often undertaken by a priest of the Ancestor Gods. Unlike other runes, which only apply their effects to the bearer, a Protection Rune’s range of effect extends 6 yards, affecting any Dwarf allies within range. Especially well-displayed Protection Runes may extend their benefit further, at the GM’s discretion."
-  },
-  {
-    "id": "dwarf-guide:reference:132-additional-runes",
-    "name": "Additional Runes",
-    "category": "rule",
-    "topic": "Runesmithing",
-    "page": 132,
-    "text": "The runes in this chapter are but a fraction of those that have been used throughout Dwarf history. Some runes are still in regular use, albeit for more niche purposes than those listed here. Other runes were once considered commonplace, but the knowledge to craft them has been lost. Runesmiths seek out and study items that still bear the rune, hoping to reverse-engineer the knowledge to recreate new runic items in their image.\n\nMost fabled of all are the so-called ‘ancestor runes’ — forged millennia ago, rendered inert by the passage of time, but rechargeable when the Winds of Magic are at their most tempestuous. When storms of magic roll across the Old World, the boldest Runesmiths retrieve these masterworks and ascend to loci of arcane energy, striking the runes to awaken their godlike power.\n\nVery occasionally, a sufficiently skilled Runesmith may create a brand new rune. Like all Dwarf institutions, the Runesmith clans view this deviation from ancestral practices with suspicion. All of the great Runelords with master runes named after them had to defy tradition to create their masterworks.\n\nIf a player is interested in learning, discovering, or creating a rune not listed in this chapter, GMs should work with them to fulfil their ambitions. The runes in this chapter should serve as a template to write rules for whatever new creations your players can imagine."
   },
   {
     "id": "dwarf-guide:reference:132-doom-runes",
