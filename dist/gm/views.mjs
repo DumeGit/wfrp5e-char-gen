@@ -76,7 +76,7 @@ function bookControls(data, s) {
     .filter((b) => b.id !== "core")
     .map(
       (b) =>
-        `<label class="gm-check"><input id="gm-book-${b.id}" type="checkbox" data-book="${b.id}" ${s.books.includes(b.id) ? "checked" : ""}>${esc(b.title)} <small>Mount profiles, equipment &amp; magic</small></label>`,
+        `<label class="gm-check"><input id="gm-book-${b.id}" type="checkbox" data-book="${b.id}" ${s.books.includes(b.id) ? "checked" : ""}>${esc(b.title)} <small>${esc(b.summary)}</small></label>`,
     )
     .join(
       "",
@@ -257,7 +257,7 @@ function traits(data, R, s, r) {
 }
 function skillsTalents(R, s, r) {
   return `<div class="gm-section-heading"><h2>Skills</h2>${button("Add Skill", "picker", 'data-kind="skill"', "primary")}</div><p class="gm-small">Scores below are final totals. Edit a total to make an explicit GM adjustment.</p><div class="gm-entry-list">${r.skills.map((t) => `<div class="gm-skill-row"><div><strong>${esc(t.name)}</strong><small>${esc(t.origin)} · ${t.char || "Printed total"}</small></div><input type="number" min="0" step="1" value="${t.total}" data-skill="${esc(t.name)}" aria-label="${esc(t.name)} total">${button("?", "reference", `data-kind="skill" data-name="${esc(t.name)}" aria-label="Read ${esc(t.name)}"`)}${remove(t.key || `skill:${t.name}`)}</div>`).join("")}</div>
-  <div class="gm-section-heading"><h2>Talents</h2>${button("Add Talent", "picker", 'data-kind="talent"', "primary")}</div>${r.talents.length ? r.talents.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""} ${origin(t)}`, entryBody(talentInfo(R, t.name)?.text || "Printed Talent; see source.", talentInfo(R, t.name)?.page || r.profile.page))}${t.origin === "GM" && base(t.name) === "Impassioned Zeal" ? field("Cause", `cause-${t.key}`, t.name.match(/\((.*?)\)/)?.[1] || "", `data-cause="${t.key}"`) : ""}</div>${t.origin === "GM" ? `<input class="gm-rank" type="number" min="1" ${R.config.talentLimits[base(t.name)] === null ? "" : `max="${R.config.talentLimits[base(t.name)] ?? 1}"`} value="${t.ranks}" data-rank="${t.key}" aria-label="${esc(t.name)} ranks">` : ""}${t.origin === "Template" || t.origin === "Trait" ? "" : remove(t.key)}</div>`).join("") : empty("No Talents included yet.")}`;
+  <div class="gm-section-heading"><h2>Talents</h2>${button("Add Talent", "picker", 'data-kind="talent"', "primary")}</div>${r.talents.length ? r.talents.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""} ${origin(t)}`, entryBody(talentInfo(R, t.name)?.text || "Printed Talent; see source.", talentInfo(R, t.name)?.page || r.profile.page, talentInfo(R, t.name) || r.profile))}${legacyBadge(t)}${t.origin === "GM" && base(t.name) === "Impassioned Zeal" ? field("Cause", `cause-${t.key}`, t.name.match(/\((.*?)\)/)?.[1] || "", `data-cause="${t.key}"`) : ""}</div>${t.origin === "GM" ? `<input class="gm-rank" type="number" min="1" ${R.config.talentLimits[base(t.name)] === null ? "" : `max="${R.config.talentLimits[base(t.name)] ?? 1}"`} value="${t.ranks}" data-rank="${t.key}" aria-label="${esc(t.name)} ranks">` : ""}${t.origin === "Template" || t.origin === "Trait" ? "" : remove(t.key)}</div>`).join("") : empty("No Talents included yet.")}`;
 }
 function customise(data, R, s, r, ui) {
   if (!r.profile) return empty("Choose a starting profile first.");
@@ -277,7 +277,7 @@ function equipmentMagic(R, s, r) {
     .join(
       "",
     )}</div>${r.shield ? paragraph(`Shield adds +${r.shield} AP when applicable.`) : ""}${r.armour.map((a) => `<div class="gm-entry"><div><strong>${esc(a.name)}</strong> ${origin(a)}<small class="gm-small">+${a.ap} AP · ${a.shield ? "Shield" : esc(a.locations)}</small></div>${remove(a.key)}</div>`).join("")}
-  <h2>Trappings</h2>${(r.trappings ?? r.profile.sections.Trappings) ? paragraph(r.trappings ?? r.profile.sections.Trappings) : ""}${r.gear.length ? r.gear.map((g) => `<div class="gm-entry" id="gear-${g.key}"><div><strong>${esc(g.entry.name)}</strong><small class="gm-small">${esc(sourceLabel(g.entry))}${g.entry.qualities ? ` · ${esc(g.entry.qualities)}` : ""}</small></div><input class="gm-rank" type="number" min="1" step="1" value="${g.quantity}" data-quantity="${g.key}" aria-label="${esc(g.entry.name)} quantity">${remove(g.key)}</div>`).join("") : empty("Add other belongings as needed.")}
+  <h2>Trappings</h2>${(r.trappings ?? r.profile.sections.Trappings) ? paragraph(r.trappings ?? r.profile.sections.Trappings) : ""}${r.gear.length ? r.gear.map((g) => `<div class="gm-entry" id="gear-${g.key}"><div><strong>${esc(g.entry.name)}</strong>${legacyBadge(g.entry)}<small class="gm-small">${esc(sourceLabel(g.entry))}${g.entry.qualities ? ` · ${esc(g.entry.qualities)}` : ""}</small></div><input class="gm-rank" type="number" min="1" step="1" value="${g.quantity}" data-quantity="${g.key}" aria-label="${esc(g.entry.name)} quantity">${remove(g.key)}</div>`).join("") : empty("Add other belongings as needed.")}
   <section id="gm-magic"><div class="gm-section-heading"><h2>Magic & prayers</h2>${eligible.length ? button("Choose magic", "picker", 'data-kind="magic"', "primary") : ""}</div><p class="gm-small">${eligible.length ? "Choices follow the selected Lore, patron or magical template. No PC starting spell grants or XP are added." : "Add an appropriate magical template, Spellcaster Trait or Bless/Invoke Talent to unlock choices."}${r.template?.magic ? ` ${r.template.name}: up to ${r.template.magic.petty} Petty and ${r.template.magic.lore} Lore spells (p. ${r.template.page}).` : ""}</p>${r.spells.map((x) => `<div class="gm-entry"><div>${detail(x.contentId, `${esc(x.name)} <small>${esc(x.category)}</small>`, `<p class="gm-small">CN ${x.cn ?? "—"} · Range ${esc(x.range || "—")} · Target ${esc(x.target || "—")} · Duration ${esc(x.duration || "—")}</p>${entryBody(x.text, x.page, x)}`)}</div>${remove(x.contentId)}</div>`).join("")}</section>`;
 }
 export function issuePanel(r) {
@@ -304,7 +304,7 @@ export function workspace(data, R, s, r, ui, verify, canUndo, saveMessage) {
     () => equipmentMagic(R, s, r),
     () => review(s, r),
   ][s.step]();
-  return `<div class="workspace gm-workspace"><aside class="rail">${creatorSwitch("gm", verify)}<div class="rail-heading"><span class="eyebrow">Game Master's workshop</span><strong>The Bestiary</strong><p>${s.books.length > 1 ? "Core + Up in Arms" : "Core book · Fifth Edition"}</p></div>${select(
+  return `<div class="workspace gm-workspace"><aside class="rail">${creatorSwitch("gm", verify)}<div class="rail-heading"><span class="eyebrow">Game Master's workshop</span><strong>The Bestiary</strong><p>${s.books.length > 1 ? esc(["Core", ...data.books.filter((b) => b.id !== "core" && s.books.includes(b.id)).map((b) => b.shortTitle || b.title)].join(" + ")) : "Core book · Fifth Edition"}</p></div>${select(
     "Workshop page",
     "gm-step-select",
     STEPS.map((x, i) => [i, x]),

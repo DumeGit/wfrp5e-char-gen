@@ -4,7 +4,7 @@ import { assembleBooks } from "../books.mjs";
 export const bookId = (entry) =>
   entry.source?.book || entry.id?.split(":")[0] || "core";
 export const sourceLabel = (entry) =>
-  `${{ core: "Core", "up-in-arms": "Up in Arms" }[bookId(entry)] || bookId(entry)} · p. ${entry.source?.page || entry.page}`;
+  `${{ core: "Core", "up-in-arms": "Up in Arms", "archives-i": "Archives I" }[bookId(entry)] || bookId(entry)} · p. ${entry.source?.page || entry.page}`;
 export function gmCatalogue(data, books = ["core"]) {
   return {
     ...data,

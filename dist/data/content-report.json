@@ -19916,7 +19916,7 @@
     {
       "id": "archives-i",
       "title": "Archives of the Empire: Volume I",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 31,
@@ -19926,7 +19926,7 @@
         "deferred": 13
       },
       "featureCounts": {
-        "implemented": 0,
+        "implemented": 1,
         "adapted": 0,
         "reference-only": 0,
         "unavailable": 1,
@@ -20815,6 +20815,15 @@
         }
       ],
       "features": [
+        {
+          "id": "archives-i:feature:gm-options",
+          "name": "Bestiary Workshop: weapons, ammunition, Skill choices and Youngblood",
+          "status": "implemented",
+          "source": {
+            "book": "archives-i"
+          },
+          "reason": "Reuses approved registered data through independent GM book selection; no named NPCs, animal foundations, Career development or extra starting allocations. Youngblood and Blackbriar preserve their specific existing Legacy metadata."
+        },
         {
           "id": "archives-i:feature:kindred",
           "name": "Kindred trials, followers and animal management",

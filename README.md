@@ -167,6 +167,8 @@ Origins uses tighter spacing, adjacent dice buttons, a compact starting-resource
 
 Enable **Archives of the Empire: Volume I** in Choose books to add four Careers, twelve Halfling clan profiles, Mootland origin, three Eonir kindreds, fourteen weapons and four ammunition entries. It works with core alone or with Up in Arms. Fifth Edition creation and advancement remain authoritative; reviewed user decisions, source pages, exclusions and limitations are documented in [docs/ARCHIVES-I.md](docs/ARCHIVES-I.md).
 
+In the NPC creator, enable Archives I separately under **Starting profile → Creation books** to use the existing weapon/ammunition profiles, Skill specialisations and Youngblood. These share PC catalogue data and have no GM shopping budget. All thirteen printed profiles are named NPCs and stay excluded; this book adds no creature foundations or templates. No badger statistics are inferred from Career Trappings.
+
 Cityborn uses High Elf Careers while retaining Wood Elf starting benefits. Younger receives Youngblood as an additional kindred Talent. Mootland access and Thorncobble Noble Blood requirements are checked before export; Badger Rider's gaming-table approval requirement is explained. Lip Reading's erroneous Skill entry remains visibly unavailable. Existing core equipment is unchanged; when both supplements are enabled the Up in Arms Precision Shot and Powder price takes precedence, as agreed. Exports include the complete source and conversion record.
 
 ## Archives of the Empire II

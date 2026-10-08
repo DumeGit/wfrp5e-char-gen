@@ -38,6 +38,70 @@ test("Trait picker prioritises names while typing and keeps description search @
   await expect(page.locator(".gm-entry-list")).toContainText("Trained");
 });
 
+test("Archives I reuses equipment and Youngblood with selective Legacy and independent books @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-archives-i").check();
+  await expect(page.locator(".gm-profile-card")).toHaveCount(53);
+  await applyProfile(page, "Human");
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("tab", { name: "Skills & Talents", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Add Talent", exact: true }).click();
+  await page.locator("#gm-picker-search").fill("Youngblood");
+  const row = page.locator("#gm-picker-results .gm-picker-row").first();
+  await expect(row).toContainText("Archives I · p. 78");
+  await row
+    .getByRole("button", { name: "Read Youngblood adaptation", exact: true })
+    .click();
+  await expect(
+    page.getByRole("dialog", { name: "Youngblood · Legacy", exact: true }),
+  ).toContainText("per-rank");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Close", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Add Talent", exact: true }).click();
+  await page.locator("#gm-picker-search").fill("Youngblood");
+  await row.getByRole("button", { name: "Add", exact: true }).click();
+  await expect(
+    page.getByLabel("Youngblood ranks", { exact: true }),
+  ).toHaveAttribute("max", "1");
+  await expect(
+    page
+      .locator(".gm-entry")
+      .filter({ has: page.getByLabel("Youngblood ranks", { exact: true }) })
+      .getByRole("button", { name: "Read Youngblood adaptation", exact: true }),
+  ).toBeVisible();
+  await gmStep(page, "Equipment & magic");
+  await page
+    .getByRole("button", { name: "Add equipment", exact: true })
+    .click();
+  await page.locator("#gm-picker-search").fill("Eonir War Blade");
+  await expect(row).toContainText("Archives I · p. 92");
+  await expect(row.getByRole("button", { name: /adaptation/ })).toHaveCount(0);
+  await row.getByRole("button", { name: "Add", exact: true }).click();
+  await expect(
+    page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
+  ).toBeVisible();
+  await noOverflow(page);
+  await gmStep(page, "Starting profile");
+  await page.locator("#gm-book-archives-i").uncheck();
+  await gmStep(page, "Equipment & magic");
+  await expect(
+    page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
+  ).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "↶ Undo last change", exact: true })
+    .click();
+  await gmStep(page, "Equipment & magic");
+  await expect(
+    page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
+  ).toBeVisible();
+});
+
 test("profile notification clears and editing keeps focus @gm @mobile", async ({
   page,
 }) => {

@@ -57,16 +57,17 @@ gm.books = [
   },
 ];
 gm.training = [];
-gm = addGMSupplement(
-  gm,
-  JSON.parse(
-    await readFile(
-      new URL("../dist/gm/sources/up-in-arms.json", import.meta.url),
-      "utf8",
+for (const id of ["up-in-arms", "archives-i"])
+  gm = addGMSupplement(
+    gm,
+    JSON.parse(
+      await readFile(
+        new URL(`../dist/gm/sources/${id}.json`, import.meta.url),
+        "utf8",
+      ),
     ),
-  ),
-  assembleBooks(library, ["core", "up-in-arms"]),
-);
+    assembleBooks(library, ["core", id]),
+  );
 gm.version = createHash("sha256")
   .update(JSON.stringify(gm))
   .digest("hex")

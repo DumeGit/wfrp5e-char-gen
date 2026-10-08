@@ -25,7 +25,7 @@ import { createGMReferences } from "./references.mjs";
 import { createGMPDF } from "./pdf.mjs";
 import { createGMPrinting } from "./printing.mjs";
 import { createGMRules, gmCatalogue, sourceLabel } from "./books.mjs";
-import { esc, button } from "./controls.mjs";
+import { esc, button, legacyBadge } from "./controls.mjs";
 
 const root = document.querySelector("#app"),
   dialog = document.querySelector("#creator-dialog"),
@@ -233,7 +233,7 @@ function pickerResults() {
           (kind === "magic" && r.spells.some((t) => t.contentId === x.key)) ||
           (kind === "trait" && r.traits.some((t) => t.name === x.name)) ||
           (kind === "mutation" && s.mutations.includes(x.key));
-      return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · ${esc(sourceLabel(x))}</small><p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : x.text?.slice(0, 180) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${x.text?.length > 180 ? "…" : ""}</p>${x.disabled ? `<p class="gm-small">${esc(x.disabled)}</p>` : ""}</div>${button(x.disabled ? "Unavailable" : owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned || x.disabled ? "disabled" : ""}`, "primary")}</div>`;
+      return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · ${esc(sourceLabel(x))}</small>${legacyBadge(x)}<p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : x.text?.slice(0, 180) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${x.text?.length > 180 ? "…" : ""}</p>${x.disabled ? `<p class="gm-small">${esc(x.disabled)}</p>` : ""}</div>${button(x.disabled ? "Unavailable" : owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned || x.disabled ? "disabled" : ""}`, "primary")}</div>`;
     })
     .join(
       "",
@@ -290,7 +290,15 @@ async function action(el) {
   const a = el.dataset.action;
   textEdit = null;
   if (a === "legacy") {
-    const entries = [...data.profiles, ...r.traits, ...r.attacks, ...r.talents];
+    const entries = [
+      ...data.profiles,
+      ...r.traits,
+      ...r.attacks,
+      ...r.talents,
+      ...(picker?.rows || []),
+      ...R.talents,
+      ...r.gear.map((g) => g.entry),
+    ];
     const x = entries.find(
       (x) => (x.key || x.id || x.name) === el.dataset.entry,
     );

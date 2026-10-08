@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "archives-i",
+  "source": {
+    "file": "Archives of the Empire - Vol I.pdf",
+    "sha256": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7"
+  },
+  "summary": "Weapons, ammunition, Skill choices & Youngblood · no unnamed profiles",
+  "profiles": [],
+  "training": [],
+  "review": {
+    "pagesReviewed": "1–96",
+    "profilePages": [23, 24, 27, 28, 29, 30, 31, 56, 57, 62, 63],
+    "profileCount": 13,
+    "included": [
+      "14 previously reviewed weapon profiles (pp. 92–93).",
+      "Four previously reviewed ammunition entries and descriptions (pp. 93–94).",
+      "Printed Skill specialisations from the existing pack, using core grouped Skill definitions.",
+      "Youngblood (p. 78), using the existing approved maximum-one adaptation and contextual Eonir Status effect."
+    ],
+    "excluded": [
+      "All 13 stat blocks are named NPCs; no unnamed creature profiles or templates were found.",
+      "Badger Rider (p. 91) names tamed badgers and barding but gives no badger statistics; no animal foundation is invented.",
+      "Career development, PC origin/clan creation allocations, followers, hirelings and campaign activity remain outside the GM creator scope."
+    ],
+    "decisions": [
+      "Reuse approved PC equipment and Talent data; do not duplicate profiles or change core equipment.",
+      "Precision Shot and Powder uses Archives I's price alone and the approved Up in Arms price when both are enabled.",
+      "Only actual adaptations receive Legacy; unchanged equipment is not tagged merely for being Fourth Edition."
+    ]
+  }
+}

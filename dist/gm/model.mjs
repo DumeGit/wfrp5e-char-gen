@@ -1113,7 +1113,17 @@ export function calculateGM(data, R, s) {
             .reduce((a, b) => (a.ranks >= b.ranks ? a : b)),
         ]),
       ).values(),
-    ],
+    ].map((t) => {
+      const definition = talentInfo(R, t.name);
+      return definition?.adaptation
+        ? {
+            ...t,
+            adaptation: definition.adaptation,
+            source: definition.source,
+            page: definition.page,
+          }
+        : t;
+    }),
     traits: describeTraits(
       p,
       traits.map((t) => (t.name === "Size" ? { ...t, value: size } : t)),
@@ -1169,7 +1179,7 @@ export function calculateGM(data, R, s) {
     );
   warnings.push(...p.notes);
   warnings.push(
-    ...[p, ...result.traits, ...result.attacks]
+    ...[p, ...result.traits, ...result.attacks, ...result.talents]
       .map((x) => x.adaptation)
       .filter(Boolean),
   );

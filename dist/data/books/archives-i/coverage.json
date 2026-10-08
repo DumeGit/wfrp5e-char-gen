@@ -20,6 +20,15 @@
         "book": "archives-i"
       },
       "reason": "Starting origins and Career choices are supported; campaign progression is deferred."
+    },
+    {
+      "id": "archives-i:feature:gm-options",
+      "name": "Bestiary Workshop: weapons, ammunition, Skill choices and Youngblood",
+      "status": "implemented",
+      "source": {
+        "book": "archives-i"
+      },
+      "reason": "Reuses approved registered data through independent GM book selection; no named NPCs, animal foundations, Career development or extra starting allocations. Youngblood and Blackbriar preserve their specific existing Legacy metadata."
     }
   ]
 }

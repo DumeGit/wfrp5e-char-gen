@@ -4,10 +4,11 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 
 55 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.
 
-| Book | Profiles | Templates |
-| --- | --- | --- |
-| Warhammer Fantasy Roleplay, Fifth Edition | 53 | 7 |
-| Up in Arms | 2 | 0 |
+| Book | Profiles | Templates | GM options |
+| --- | --- | --- | --- |
+| Warhammer Fantasy Roleplay, Fifth Edition | 53 | 7 | Core profiles, templates & rules |
+| Up in Arms | 2 | 0 | Mount profiles, equipment & magic |
+| Archives of the Empire: Volume I | 0 | 0 | Weapons, ammunition, Skill choices & Youngblood · no unnamed profiles |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |

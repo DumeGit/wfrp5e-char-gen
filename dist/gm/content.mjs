@@ -170,7 +170,7 @@ export function prepareGM(raw, R) {
   };
 }
 export function gmInventory(data) {
-  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} core templates, ${data.traits.length} core Creature Traits, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates |\n| --- | --- | --- |\n${data.books.map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
+  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} core templates, ${data.traits.length} core Creature Traits, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates | GM options |\n| --- | --- | --- | --- |\n${data.books.map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} | ${b.summary || "Core profiles, templates & rules"} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
     ...data.profiles,
   ]
     .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }))
@@ -259,6 +259,8 @@ export function addGMSupplement(data, raw, R) {
       {
         id: book.id,
         title: book.title,
+        shortTitle: book.shortTitle,
+        summary: raw.summary || "Mount profiles, equipment & magic",
         version: book.version,
         source: book.source,
       },

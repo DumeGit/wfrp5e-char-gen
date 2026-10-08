@@ -916,7 +916,7 @@ Pack `up-in-arms` · version 1.0.4
 
 ## Archives of the Empire: Volume I
 
-Pack `archives-i` · version 1.0.2
+Pack `archives-i` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -929,6 +929,7 @@ Pack `archives-i` · version 1.0.2
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
+| Bestiary Workshop: weapons, ammunition, Skill choices and Youngblood | implemented | Book-wide scope decision | Reuses approved registered data through independent GM book selection; no named NPCs, animal foundations, Career development or extra starting allocations. Youngblood and Blackbriar preserve their specific existing Legacy metadata. |
 | Kindred trials, followers and animal management | deferred | Book-wide scope decision | Starting origins and Career choices are supported; campaign progression is deferred. |
 | Ghost Strider: Lip Reading in Skill list | unavailable | p. 88 | Printed under Skills but is a core Talent; user chose to leave this entry unavailable. |
 

@@ -1,6 +1,6 @@
 # Archives of the Empire: Volume I
 
-Installed as the optional `archives-i` pack, version 1.0.0. Enable it in **Choose books**. It can run with the core alone or alongside Up in Arms. Changing enabled books starts a new WIP character. No source PDF is bundled or published.
+Installed as the optional `archives-i` pack, version 1.0.3. Enable it in **Choose books**. It can run with the core alone or alongside Up in Arms. Changing enabled books starts a new WIP character. No source PDF is bundled or published.
 
 Source: the user's supplied `Archives of the Empire - Vol I.pdf`, 96 pages, SHA-256 `d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7`. Printed page numbers match PDF page positions. MarkItDown provided the full text; Career blocks, coloured Characteristic symbols, clan table and equipment tables were checked against the original PDF.
 
@@ -49,9 +49,21 @@ Precision Shot and Powder has the same modifiers but different prices: Archives 
 
 Printed Entangling OR Throwing and Basic OR Cavalry weapon choices use the corresponding actual profiles. Counted lowercase arrows and differently capitalised Trade tools resolve as spelling variants without changing their quantities or weights. Descriptive names with no unambiguous profile retain their original text and unknown weight: personally crafted Elf Bow, Selection of Traps, Map of local area, Sling stones, Blackpowder Weapon with uncounted Ammunition, Grappling Hook & Rope, Boiled Leather Breastplate, Tamed Badger with Saddle/Tack and other unspecified Trappings. No badger statistics, weight, purchase price, carrying capacity or saddle contents are invented. Existing unapproved Up in Arms Trapping aliases remain unresolved.
 
+## Bestiary Workshop integration — 8 October 2026
+
+Enable Archives I under **Starting profile → Creation books**, independently of player creation. **Equipment & magic → Add equipment** exposes the same fourteen weapons and four ammunition entries already approved for the PC catalogue. **Customise → Skills & Talents** exposes its additional grouped Skill choices and Youngblood. Equipment has no GM shopping budget; quantities, attacks and exports use the shared registered profiles. Core values and approved combined-book Precision Shot and Powder precedence remain unchanged.
+
+Youngblood retains its approved maximum of one, contextual Eonir Status description and Legacy explanation for omitted Fourth Edition per-rank Test bonuses. It does not grant PC origin allocations, alter a general Status score or automate kindred trials. Compatible equipment remains untagged; Blackbriar's actual Test Difficulty conversion retains Legacy. Source/Legacy explanations appear in pickers, selected controls and the folio; compact PDFs contain the selected stat block without discrepancy commentary.
+
+The entire supplied 96-page PDF was checked for characteristic grids. All thirteen profiles on pp. 23, 24, 27–31, 56–57 and 62–63 are named NPCs and are excluded. No unnamed creature profiles, creature templates or new Creature Traits/training were found. Page 91 lists tamed badgers, a large tame badger and Barding as Career Trappings but provides no animal stat block; no foundation, weight or price is invented. The NPC creator therefore still has 53 core profiles, or 55 with Up in Arms enabled.
+
+`dist/gm/sources/archives-i.json` records this review, exclusions and original PDF checksum; it adds no duplicate equipment records. The GM compiler validates that checksum against the installed pack, while `books.mjs` assembles the existing registry for each GM draft/print entry. Disabling the book removes its explicit added gear/Talents using the existing reset/undo flow. Shared all-book reference search remains unchanged and continues to exclude NPC profiles/templates.
+
+Verification: the 49 existing affected core-GM, Up in Arms GM and PC Archives I regressions passed. Three new Archives I GM regressions passed, covering opt-in isolation, unchanged core profiles, shared equipment/Skill choices, selective adaptations, calculations, save validation, one-rank Youngblood issues, compact export sections and combined-book ammunition precedence. The focused desktop/mobile Chromium scenario passed book activation, source/Legacy dialogs, Talent/equipment addition, book removal/undo and narrow-layout overflow checks. No PDF layout or rendering code changed; the existing GM PDF regressions and new export-section assertions verify content. Full release testing was not repeated for this reuse of existing handlers.
+
 ## Deferred material
 
-Provincial/settlement descriptions, clan society, NPC statistics, adventure hooks, campaign kindred trials, animal combat/barding management, follower management and later Career changes are outside this character creator. Character/GM notes can record fictional details; no mechanical province benefits or new random background tables are invented from narrative descriptions. There are no additional Spells or Miracles in this book's creator material.
+Provincial/settlement descriptions, clan society, named NPC statistics, adventure hooks, campaign kindred trials, animal combat/barding management, follower management and later Career changes are outside this character creator. Character/GM notes can record fictional details; no mechanical province benefits or new random background tables are invented from narrative descriptions. There are no additional Spells or Miracles in this book's creator material.
 
 ## Extraction and verification
 
@@ -61,6 +73,6 @@ Automated coverage checks opt-in isolation, standalone/combined books and price 
 
 ## Reviewed reference imports — 7 October 2026
 
-Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. Core GM creation is unchanged.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. GM core profiles and templates are unchanged; this book now independently enables its approved equipment/Skill/Talent options in the workshop.
 
 Printed clan/Eonir creation passages, weapon tables/qualifications and isolated NPC stat blocks. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.

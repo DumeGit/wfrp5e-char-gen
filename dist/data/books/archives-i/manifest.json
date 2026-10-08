@@ -4,7 +4,7 @@
   "title": "Archives of the Empire: Volume I",
   "shortTitle": "Archives I",
   "edition": 4,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -27,7 +27,8 @@
   "notes": [
     "Only creator-relevant material is integrated. NPCs, settlements, adventure hooks and campaign activity remain outside this character creator.",
     "Descriptive or unpriced Trappings retain their printed names; no missing weights, prices, quantities or animal statistics are invented.",
-    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler."
+    "Global search also includes reviewed printed gameplay references independently of creator support. These preserve source mechanics and old core-page references; Fourth Edition source warnings do not imply an adaptation or creator handler.",
+    "The independently enabled GM pack reuses approved weapons, ammunition, grouped Skill choices and Youngblood. All 13 printed profiles are named NPCs and remain excluded; no badger statistics or Career development are invented."
   ],
   "files": {
     "careers": "careers.json",

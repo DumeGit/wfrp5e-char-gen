@@ -1,12 +1,12 @@
 # Bestiary Workshop
 
-This is the fresh NPC & creature creator authorised in October 2026. It shares the Black Banner presentation system with player creation, but has its own entry point (`dist/gm.html`), draft and calculated result. The removed NPC runtime has not been restored. Only reviewed core-book extraction was reused and recompiled. The core is always enabled. Up in Arms is independently opt-in for its reviewed mount profiles and training. Other supplements, Career development, hirelings, XP purchases and campaign management remain outside this release.
+This is the fresh NPC & creature creator authorised in October 2026. It shares the Black Banner presentation system with player creation, but has its own entry point (`dist/gm.html`), draft and calculated result. The removed NPC runtime has not been restored. Only reviewed core-book extraction was reused and recompiled. The core is always enabled. Up in Arms is independently opt-in for its reviewed mount profiles and training. Archives I independently enables approved equipment, Skill choices and Youngblood without adding foundations. Other supplements, Career development, hirelings, XP purchases and campaign management remain outside this release.
 
 ## Workflow
 
 Workshop status notifications clear after 4.5 seconds. They use the shared empty-text visibility convention, accept no pointer events and sit above the fixed phone action bar with safe-area clearance. Persistent issues remain in the issue panel; they are not hidden by notification expiry.
 
-The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. Creature creation uses the supplied Fifth Edition core and separately enabled, reviewed GM supplements. Enable Up in Arms in the compact Creation books fieldset on Starting profile; player book choices are independent. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
+The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. Creature creation uses the supplied Fifth Edition core and separately enabled, reviewed GM supplements. Enable Up in Arms or Archives I in the compact Creation books fieldset on Starting profile; player book choices are independent. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
 
 The workshop banner uses original generated undead-army artwork inspired by the user's image, with a moonlit gothic fortress and skeleton ranks. Its compact WebP is cached offline; CSS crops it and supplies title contrast without changing shared banner height or interaction. The player creator keeps its own art. Source, generation prompt and encoding details: [design-assets/bestiary](../design-assets/bestiary/README.md).
 
@@ -70,7 +70,7 @@ The build validates the original book registry first, then compiles GM data and 
 
 Run `npm run generate:books` after source/compiler changes. Use affected GM Node regressions and `npm run test:ui:gm` (plus `test:ui:exports` for export changes); follow [TESTING.md](TESTING.md) for the full release policy. The recursive offline build includes both creator entry points, runtime data, PDFs, local fonts and art. Update this document, README, AGENTS and affected architecture/design/book docs in the same implementation change.
 
-Up in Arms decisions and review: [UP-IN-ARMS.md](UP-IN-ARMS.md). Removing a book required by the current foundation asks explicitly before starting a new GM draft; Undo restores it. Added training is stored separately from locked printed training, so War/Broken cannot apply twice. Print batches validate each imported draft’s own enabled catalogue. New WIP content fingerprints invalidate earlier-format GM drafts; migrations are not required by the project’s agreed policy.
+Supplement decisions and review: [UP-IN-ARMS.md](UP-IN-ARMS.md) and [ARCHIVES-I.md](ARCHIVES-I.md). Removing a book required by the current foundation asks explicitly before starting a new GM draft; Undo restores it. Added training is stored separately from locked printed training, so War/Broken cannot apply twice. Print batches validate each imported draft’s own enabled catalogue. New WIP content fingerprints invalidate earlier-format GM drafts; migrations are not required by the project’s agreed policy.
 
 ## Verification
 
@@ -133,6 +133,8 @@ The full local release check passed 353 Node regressions and 48 desktop/mobile C
 Visual checks at 1440×900 and 390×844 showed no horizontal overflow. Rendered full-sheet and mixed four-card PDFs had no clipping or overlap, retained actual Trait descriptions, and omitted discrepancy commentary. Riding Horse fits the default six-per-A4 layout; Demigryph's longer training text requires four. Measured PDF regressions verify the final text still fits four without truncation. Physical-phone behavior was not verified.
 
 ## Supplemental reference reading
+
+Archives I is independently enabled for its shared PC-registry weapons, ammunition, grouped Skill choices and Youngblood, with no GM shopping budget. All thirteen printed profiles are named NPCs, so this pack adds no creature foundations/templates. Its creation-book summary and generated GM inventory explicitly distinguish those contributions from Up in Arms mounts/training. Selected adapted Talents/equipment retain source and Legacy access in the app; export sections contain actual choices without discrepancy text. Review and focused verification: [ARCHIVES-I.md](ARCHIVES-I.md).
 
 GM Add-option pickers search names, descriptions and categories. Matching names are ranked first (exact, prefix, then substring); description-only matches follow. Ties use alphabetical names, and an empty query preserves the catalogue's browsing order. This ranking applies to Traits, Skills, Talents, equipment, magic and Corruption without changing availability or the shared reference search.
 

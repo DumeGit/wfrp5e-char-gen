@@ -14,7 +14,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **944 Rules r
 |---|---|---:|---:|---:|---:|
 | Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1665 | 224 | 1889 | 0 |
 | Up in Arms | 1.0.4 | 98 | 128 | 226 | 12 |
-| Archives of the Empire: Volume I | 1.0.2 | 39 | 10 | 49 | 21 |
+| Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.5 | 24 | 103 | 127 | 7 |
 | Archives of the Empire: Volume III | 1.0.3 | 59 | 105 | 164 | 14 |
 | Winds of Magic | 1.0.3 | 172 | 253 | 425 | 55 |
