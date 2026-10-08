@@ -134,4 +134,8 @@ Visual checks at 1440×900 and 390×844 showed no horizontal overflow. Rendered 
 
 ## Supplemental reference reading
 
+GM Add-option pickers search names, descriptions and categories. Matching names are ranked first (exact, prefix, then substring); description-only matches follow. Ties use alphabetical names, and an empty query preserves the catalogue's browsing order. This ranking applies to Traits, Skills, Talents, equipment, magic and Corruption without changing availability or the shared reference search.
+
+Picker-ranking verification (8 October 2026): two focused Node regressions and the desktop/mobile Chromium scenario passed. The browser scenario checks partial Trained queries, retained focus/caret, description-only Fetch lookup and adding the chosen Trait. Quick code/format checks passed and the offline worker was rebuilt; no full release rerun or PDF inspection was needed for this ordering change.
+
 The workshop uses Fifth Edition core rules with independently enabled, reviewed Up in Arms mounts. Shared global search includes gameplay chapters, Tables and Endeavours, but excludes all standalone NPC/creature profiles and templates by the latest 8 October user decision. This does not remove the workshop’s own 53 core starting profiles or seven template choices; two reviewed Up in Arms mounts are available separately, while other supplemental source records remain retained for future review. Edition warnings distinguish unconverted Fourth Edition text from approved adaptations. Opening a reference never selects a starting profile, changes a draft or enables supplemental mechanics. Search coverage is generated separately in SEARCH-COVERAGE.md.

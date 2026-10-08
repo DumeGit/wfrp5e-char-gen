@@ -14,6 +14,7 @@ import {
   workspace,
   profileResults,
   pickerEntries,
+  searchPickerEntries,
   issuePanel,
   sourceNotes,
   templateOverview,
@@ -221,10 +222,7 @@ function showPicker(kind) {
   document.querySelector("#gm-picker-search").focus();
 }
 function pickerResults() {
-  const q = picker.query.toLowerCase().trim(),
-    rows = picker.rows.filter((x) =>
-      `${x.name} ${x.text || ""} ${x.category || ""}`.toLowerCase().includes(q),
-    ),
+  const rows = searchPickerEntries(picker.rows, picker.query),
     container = document.querySelector("#gm-picker-results");
   container.innerHTML = `<p class="gm-results-count">${rows.length} available entries</p>${rows
     .slice(0, 60)

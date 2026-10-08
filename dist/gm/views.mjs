@@ -314,6 +314,34 @@ export function workspace(data, R, s, r, ui, verify, canUndo, saveMessage) {
   <main class="panel gm-panel"><div class="gm-page-heading"><span class="eyebrow">THE BESTIARY · ${String(s.step + 1).padStart(2, "0")} / 04</span>${chapterHeading(STEPS[s.step])}</div><div id="gm-feedback">${issuePanel(r)}${sourceNotes(r)}</div>${body}<footer class="gm-page-footer">${s.step ? button("← Previous", "step", `data-step="${s.step - 1}"`) : ""}${s.step < 3 ? button(`${STEPS[s.step + 1]} →`, "step", `data-step="${s.step + 1}"`, "primary") : ""}</footer></main>
   <aside class="sheet gm-folio" id="gm-folio" aria-label="Current stat block"><div class="sheet-title"><span class="folio-crest" aria-hidden="true">${ledgerEmblem()}</span><span class="eyebrow">The creature folio</span></div>${statBlock(r, s, { compact: true })}<div class="gm-folio-footer"><span>${r.issues.length ? `${r.issues.length} choice${r.issues.length === 1 ? "" : "s"} left` : r.profile ? "Ready to export" : "Choose a profile"}</span>${button("Review & export", "step", 'data-step="3"')}</div></aside></div><div class="mobile-workspace-bar gm-mobile-bar"><span>${r.issues.length ? `${r.issues.length} choice${r.issues.length === 1 ? "" : "s"} left` : r.profile ? "Ready for the table" : "Choose a profile"}</span>${button("Stat block", "folio")}${button("Review", "step", 'data-step="3"')}</div>`;
 }
+export function searchPickerEntries(entries, query) {
+  const q = query.toLowerCase().trim();
+  if (!q) return entries;
+  return entries
+    .map((entry) => {
+      const name = entry.name.toLowerCase(),
+        rank =
+          name === q
+            ? 0
+            : name.startsWith(q)
+              ? 1
+              : name.includes(q)
+                ? 2
+                : `${entry.text || ""} ${entry.category || ""}`
+                      .toLowerCase()
+                      .includes(q)
+                  ? 3
+                  : -1;
+      return { entry, rank };
+    })
+    .filter(({ rank }) => rank >= 0)
+    .sort(
+      (a, b) =>
+        a.rank - b.rank ||
+        a.entry.name.localeCompare(b.entry.name, "en", { sensitivity: "base" }),
+    )
+    .map(({ entry }) => entry);
+}
 export function pickerEntries(data, R, r, kind) {
   if (kind === "trait")
     return data.traits

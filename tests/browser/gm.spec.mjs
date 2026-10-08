@@ -7,6 +7,37 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("Trait picker prioritises names while typing and keeps description search @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await applyProfile(page, "Human");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  await page.getByRole("button", { name: "Add Trait", exact: true }).click();
+  const search = page.locator("#gm-picker-search"),
+    names = page.locator("#gm-picker-results .gm-picker-row strong");
+  await search.pressSequentially("tra");
+  await expect(names).toContainText(["Trained"]);
+  expect((await names.allTextContents()).indexOf("Trained")).toBeLessThan(3);
+  await search.pressSequentially("i");
+  await expect(names.first()).toHaveText("Trained");
+  await expect(search).toBeFocused();
+  await expect(search).toHaveValue("trai");
+  await expect.poll(() => search.evaluate((e) => e.selectionStart)).toBe(4);
+  await search.fill("trained");
+  await expect(names.first()).toHaveText("Trained");
+  await search.fill("Fetch");
+  await expect(names).toContainText(["Trained"]);
+  await search.fill("trai");
+  await page
+    .locator("#gm-picker-results .gm-picker-row")
+    .first()
+    .getByRole("button", { name: "Add", exact: true })
+    .click();
+  await expect(page.locator(".gm-entry-list")).toContainText("Trained");
+});
+
 test("profile notification clears and editing keeps focus @gm @mobile", async ({
   page,
 }) => {
