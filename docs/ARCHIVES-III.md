@@ -49,10 +49,12 @@ Enterprises, including optional starting ownership (p. 6), financing/debt, tradi
 
 Tests cover every supplement combination, unchanged armour/tables, three Careers, five origins, exclusive allocations, Old Faith free/paid/duplicate/undo behavior, XP boundaries, Fellstave, Cant thresholds/Lore restrictions/undo/save validation, variant allocations and editable PDF exports. Browser checks cover desktop/mobile selections and purchases. PDFs retain all 556 editable fields with full magic/Cant references in the appended record.
 
-## Expanded reference search — 7 October 2026
+## Reviewed reference imports — 7 October 2026
 
-Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; only other rules/options remain searchable. Core GM creation is unchanged.
+
+Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 
-Stoat’s introductory text and complete stat block (p. 78) are consolidated into one NPCs & Creatures result. Animal Familiar Characteristics remains a genuine multi-species comparison Table. Familiar creation remains deferred.
+Stoat’s introductory text and complete stat block (p. 78) are consolidated into one retained profile, now outside search. Animal Familiar Characteristics remains a genuine multi-species comparison Table. Familiar creation remains deferred.

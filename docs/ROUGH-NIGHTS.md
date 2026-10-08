@@ -59,9 +59,11 @@ Checks cover all 64 combinations of the six existing optional packs, every Gnome
 
 No new priced equipment, spells, PC Careers, magic-item grants or adventure rewards were inferred from NPCs. Pub games, live dispelling/casting, tracking strictures and campaign progression remain deferred.
 
-## Expanded reference search — 7 October 2026
+## Reviewed reference imports — 7 October 2026
 
-Original Gnome tables/strictures, all fifteen named pub games and their printed Critical convention, isolated NPC stat blocks and Reveal the Inner Beauty (printed p. 52, PDF p. 53). Adventure scenes/plots and NPC biographies are excluded. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; only other rules/options remain searchable. Core GM creation is unchanged.
+
+Original Gnome tables/strictures, all fifteen named pub games and their printed Critical convention, isolated NPC stat blocks and Reveal the Inner Beauty (printed p. 52, PDF p. 53). Adventure scenes/plots and NPC biographies are excluded. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 

@@ -1,7 +1,10 @@
 import { assembleBooks } from "./books.mjs";
 import { buildSearchIndex, normalizeSearch } from "./book-search.mjs";
 import { legacySources } from "./legacy.mjs";
-import { validateReferenceEntry } from "./reference-entries.mjs";
+import {
+  validateReferenceEntry,
+  isSearchCategoryEnabled,
+} from "./reference-entries.mjs";
 
 // Build time only: each pack is read in its own dependency context. Character
 // selections and cross-book withdrawals must not hide a source from the reader.
@@ -10,6 +13,7 @@ export function buildReferenceLibrary(library, gm) {
   for (const pack of library.packs) {
     const R = assembleBooks(library, [pack.manifest.id]);
     for (const row of buildSearchIndex(R)) {
+      if (!isSearchCategoryEnabled(row.kind)) continue;
       const previous = found.get(row.key);
       if (previous) {
         previous.aliases = [...new Set([...previous.aliases, ...row.aliases])];
@@ -19,6 +23,7 @@ export function buildReferenceLibrary(library, gm) {
     }
     for (const entry of pack.data.referenceEntries || []) {
       validateReferenceEntry(entry, pack.manifest.id);
+      if (!isSearchCategoryEnabled(entry.category)) continue;
       const fields = [entry.text, entry.topic, pack.manifest.title];
       found.set(entry.id, {
         key: entry.id,
@@ -38,11 +43,7 @@ export function buildReferenceLibrary(library, gm) {
       });
     }
   }
-  for (const [collection, kind] of [
-    ["profiles", "profile"],
-    ["templates", "template"],
-    ["mutations", "mutation"],
-  ])
+  for (const [collection, kind] of [["mutations", "mutation"]])
     for (const x of gm[collection]) {
       const { notes, ...entry } = x;
       const fields = [x.text || "", x.category || ""];
@@ -148,6 +149,7 @@ export async function loadReferenceLibrary(
     const row = { ...wire, entry: payload.entries[wire?.entryRef] };
     if (
       !row?.key ||
+      !isSearchCategoryEnabled(row.kind) ||
       keys.has(row.key) ||
       !row.name ||
       !row.entry?.source ||

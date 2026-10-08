@@ -1,5 +1,6 @@
 // Build-only audit. Creator inclusion status and search availability are separate.
 import { createHash } from "node:crypto";
+import { isSearchCategoryEnabled } from "../dist/reference-entries.mjs";
 
 // Git can convert text files to CRLF on Windows. Review the UTF-8/LF content,
 // so a fresh checkout does not invalidate an unchanged source review.
@@ -8,10 +9,22 @@ export const referenceContentHash = (text) =>
     .update(String(text).replaceAll("\r\n", "\n"))
     .digest("hex");
 
-export function searchCoverage(library, corpus, review) {
+export function searchCoverage(library, corpus, review, gm) {
   if (review?.schemaVersion !== 1 || !review.books || !review.scope)
     throw Error("Missing reviewed search inventory.");
   const byKey = new Map(corpus.rows.map((row) => [row.key, row]));
+  const retainedOutsideSearch = new Set(
+    library.packs.flatMap((p) =>
+      (p.data.referenceEntries || [])
+        .filter((e) => !isSearchCategoryEnabled(e.category))
+        .map((e) => e.id),
+    ),
+  );
+  const retainedReviewTargets = new Set([
+    ...retainedOutsideSearch,
+    ...(gm?.profiles || []).map((e) => e.id),
+    ...(gm?.templates || []).map((e) => e.id),
+  ]);
   const books = library.packs
     .filter((p) => p.manifest.kind !== "variant")
     .map((pack) => {
@@ -21,7 +34,15 @@ export function searchCoverage(library, corpus, review) {
         throw Error(`Search source review is stale: ${id}`);
       const rows = corpus.rows.filter((row) => row.entry.source.book === id);
       const imported = rows.filter((row) => row.printedReference);
-      if (audit.entries !== imported.length)
+      const retained = pack.data.referenceEntries || [];
+      if (
+        audit.entries !== retained.length ||
+        retained.some((e) =>
+          isSearchCategoryEnabled(e.category)
+            ? !byKey.get(e.id)?.printedReference
+            : byKey.has(e.id),
+        )
+      )
         throw Error(`Search import count differs from its review: ${id}`);
       const dispositions = {};
       for (const record of audit.records) {
@@ -39,7 +60,7 @@ export function searchCoverage(library, corpus, review) {
           (dispositions[record.disposition] || 0) + 1;
         for (const target of record.targets ||
           (record.disposition === "included" ? [record.id] : []))
-          if (!byKey.has(target))
+          if (!byKey.has(target) && !retainedReviewTargets.has(target))
             throw Error(`Search review target is missing: ${target}`);
       }
       const categories = {};
@@ -53,6 +74,9 @@ export function searchCoverage(library, corpus, review) {
         sourceHash: audit.sourceHash,
         references: rows.length,
         newlyImported: imported.length,
+        retainedOutsideSearch: retained.filter(
+          (e) => !isSearchCategoryEnabled(e.category),
+        ).length,
         existingReferences: rows.length - imported.length,
         adaptedReferences: rows.filter((row) => row.legacy.length).length,
         categories,
@@ -66,6 +90,7 @@ export function searchCoverage(library, corpus, review) {
     scope: review.scope,
     references: corpus.rows.length,
     newlyImported: books.reduce((sum, b) => sum + b.newlyImported, 0),
+    retainedOutsideSearch: retainedOutsideSearch.size,
     books,
   };
 }
@@ -77,9 +102,10 @@ export function searchCoverageMarkdown(report) {
     "",
     report.scope,
     "",
-    "Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded text is not shipped. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.",
+    "Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.",
     "",
     `The common PC/GM catalogue contains **${report.references} results**, including **${report.newlyImported} new printed references**. Existing profiles include grouped specialisations and reference variants.`,
+    `A further **${report.retainedOutsideSearch} reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.`,
     "",
     "| Book | Version | Existing results | New printed references | Total | Results with actual adaptations |",
     "|---|---|---:|---:|---:|---:|",
@@ -113,6 +139,7 @@ export function searchCoverageMarkdown(report) {
       `Categories: ${Object.entries(b.categories)
         .map(([k, v]) => `${k} ${v}`)
         .join("; ")}.`,
+      `Reviewed printed records retained outside search: ${b.retainedOutsideSearch}.`,
       "",
     );
     if (b.unresolved.length)

@@ -13,8 +13,6 @@ export const SEARCH_CATEGORIES = {
   talent: "Talents",
   magic: "Magic",
   equipment: "Equipment",
-  profile: "NPCs & Creatures",
-  template: "Templates",
   mutation: "Corruption",
 };
 export const searchLabel = (row) =>

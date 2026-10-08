@@ -195,6 +195,9 @@ const wire = JSON.parse(
   ),
 );
 const full = await loadReferenceLibrary(library, () => wire);
+const workshop = JSON.parse(
+  await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+);
 const raw = full.rows.filter((row) => row.printedReference);
 const get = (book, name) =>
   raw.find(
@@ -210,10 +213,10 @@ test("all eleven supplied books publish gameplay references, without enabling cr
     "archives-ii": "Magical Artefact Generation Table",
     "archives-iii": "Enterprise Events",
     "winds-of-magic": "Minor Miscast Table",
-    "rough-nights": "Al-Zahr",
+    "rough-nights": "Bull Ring",
     "dwarf-guide": "Crafting Runes",
     "high-elf": "Priest Careers",
-    "blood-bramble": "Morock the Bonetaker",
+    "blood-bramble": "The Lore of Hedgecraft",
     "deft-steps": "Black Market",
   };
   for (const [book, name] of Object.entries(samples)) {
@@ -338,11 +341,14 @@ test("old profiles and unconverted systems remain distinct from approved adapted
       (r) => r.name === "Mage" && !r.printedReference && r.legacy.length,
     ),
   );
-  const multi = get("archives-ii", "Artur Hammerfoot, Ogre Artisan");
-  assert.match(multi.entry.text, /Base \| 6 \| 29/);
-  assert.match(multi.entry.text, /Total \| 6 \| 29.*\| 68 \| 61/);
-  assert.match(referenceBodyHTML(multi), /<strong>Skills:<\/strong>/);
-  assert.match(referenceBodyHTML(multi), /<strong>Talents:<\/strong>/);
+  const multi = library.packs
+    .find((p) => p.manifest.id === "archives-ii")
+    .data.referenceEntries.find(
+      (e) => e.name === "Artur Hammerfoot, Ogre Artisan",
+    );
+  assert.match(multi.text, /Base \| 6 \| 29/);
+  assert.match(multi.text, /Total \| 6 \| 29.*\| 68 \| 61/);
+  assert.ok(!full.rows.some((r) => r.key === multi.id));
   const source = get("rough-nights", "Reveal the Inner Beauty");
   assert.equal(source.entry.page, 52);
   assert.match(source.entry.text, /Challenging \(\+0\) Toughness/);
@@ -409,9 +415,6 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
       assert.match(row.entry.text, /\| D100 \|/, row.key);
   }
   for (const [book, name, kind] of [
-    ["winds-of-magic", "Construct", "profile"],
-    ["deft-steps", "A Typical Bounty Hunter Silver 3", "profile"],
-    ["archives-iii", "Stoat", "profile"],
     ["up-in-arms", "Critical Wounds", "rule"],
     ["up-in-arms", "Complex Pursuits", "rule"],
     ["deft-steps", "Congruent With Character", "rule"],
@@ -462,22 +465,24 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
   );
 });
 
-test("search omits deferred hireling templates and retains exactly the seven core creature templates", () => {
-  const templates = full.rows.filter((r) => r.kind === "template");
-  assert.equal(templates.length, 7);
-  assert.ok(templates.every((r) => r.entry.source.book === "core"));
-  assert.deepEqual(
-    templates.map((r) => r.name).sort(),
-    [
-      "Soldier",
-      "Skirmisher",
-      "Elite",
-      "Leader",
-      "Commander",
-      "Spellcaster",
-      "Spellcaster Lord",
-    ].sort(),
+test("NPCs and templates stay outside search while reviewed source records and the workshop remain intact", async () => {
+  assert.ok(!full.rows.some((r) => ["profile", "template"].includes(r.kind)));
+  const retained = library.packs
+    .flatMap((p) => p.data.referenceEntries || [])
+    .filter((e) => ["profile", "template"].includes(e.category));
+  assert.ok(retained.length > 100);
+  assert.ok(retained.every((e) => !full.rows.some((r) => r.key === e.id)));
+  const gm = JSON.parse(
+    await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
   );
+  assert.equal(gm.profiles.length, 53);
+  assert.equal(gm.templates.length, 7);
+  const before = JSON.stringify(gm);
+  const generated = buildReferenceLibrary(library, gm);
+  assert.ok(
+    !generated.rows.some((r) => ["profile", "template"].includes(r.kind)),
+  );
+  assert.equal(JSON.stringify(gm), before);
   for (const name of [
     "Bright Spark",
     "Old Salt",
@@ -502,9 +507,15 @@ test("coverage is generated from registry and frozen review, separate from creat
       "utf8",
     ),
   );
-  const report = searchCoverage(library, full, review);
+  const report = searchCoverage(library, full, review, workshop);
   assert.equal(report.books.length, 11);
   assert.equal(report.newlyImported, raw.length);
+  assert.equal(
+    report.retainedOutsideSearch,
+    library.packs
+      .flatMap((p) => p.data.referenceEntries || [])
+      .filter((e) => ["profile", "template"].includes(e.category)).length,
+  );
   for (const b of report.books) {
     const bytes = await readFile(
       new URL(
@@ -525,12 +536,15 @@ test("coverage is generated from registry and frozen review, separate from creat
   }
   const broken = structuredClone(review);
   broken.books.core.sourceHash = "stale";
-  assert.throws(() => searchCoverage(library, full, broken), /stale/);
+  assert.throws(() => searchCoverage(library, full, broken, workshop), /stale/);
   broken.books.core.sourceHash = review.books.core.sourceHash;
   broken.books.core.records.push({
     id: "bad",
     disposition: "included",
     targets: ["missing"],
   });
-  assert.throws(() => searchCoverage(library, full, broken), /missing/);
+  assert.throws(
+    () => searchCoverage(library, full, broken, workshop),
+    /missing/,
+  );
 });

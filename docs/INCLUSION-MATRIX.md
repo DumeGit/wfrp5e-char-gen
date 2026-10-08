@@ -20,17 +20,17 @@ Each source inventory remains visible even when another selected book supersedes
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 681 | 0 | 0 |
-| Up in Arms | 135 | 12 | 146 | 1 | 0 |
-| Archives of the Empire: Volume I | 31 | 22 | 25 | 0 | 0 |
-| Archives of the Empire: Volume II | 50 | 7 | 122 | 0 | 0 |
-| Archives of the Empire: Volume III | 45 | 14 | 124 | 0 | 0 |
+| Up in Arms | 135 | 12 | 137 | 1 | 9 |
+| Archives of the Empire: Volume I | 31 | 22 | 12 | 0 | 13 |
+| Archives of the Empire: Volume II | 50 | 7 | 107 | 0 | 15 |
+| Archives of the Empire: Volume III | 45 | 14 | 112 | 0 | 12 |
 | Archives III — Animal-doctor Hedge Witch (variant) | 0 | 1 | 0 | 0 | 0 |
-| Winds of Magic | 120 | 55 | 285 | 0 | 0 |
-| Rough Nights & Hard Days | 3 | 5 | 104 | 0 | 0 |
+| Winds of Magic | 120 | 55 | 264 | 0 | 21 |
+| Rough Nights & Hard Days | 3 | 5 | 24 | 0 | 80 |
 | Dwarf Player’s Guide | 156 | 34 | 131 | 2 | 0 |
 | High Elf Player’s Guide | 55 | 55 | 111 | 0 | 0 |
-| Blood and Bramble | 15 | 10 | 8 | 0 | 0 |
-| Deft Steps, Light Fingers | 39 | 18 | 204 | 0 | 0 |
+| Blood and Bramble | 15 | 10 | 2 | 0 | 6 |
+| Deft Steps, Light Fingers | 39 | 18 | 182 | 0 | 22 |
 | Deft Steps — General Ranald Priest (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Ranald the Dealer (variant) | 1 | 1 | 0 | 0 | 0 |
 | Deft Steps — Taal Priest (variant) | 1 | 0 | 0 | 0 | 0 |
@@ -767,7 +767,7 @@ Pack `up-in-arms` · version 1.0.2
 | careers | 7 | 8 | 0 | 0 | 0 |
 | market | 70 | 0 | 0 | 0 | 0 |
 | origins | 0 | 3 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 146 | 0 | 0 |
+| referenceEntries | 0 | 0 | 137 | 0 | 9 |
 | spells | 8 | 1 | 0 | 0 | 0 |
 | tables | 7 | 0 | 0 | 0 | 0 |
 | talents | 0 | 0 | 0 | 1 | 0 |
@@ -816,19 +816,19 @@ Pack `up-in-arms` · version 1.0.2
 | `up-in-arms:reference:108-conditions-while-mounted` — Conditions While Mounted | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:108-falling-from-a-mount` — Falling from a Mount | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:109-acquiring-a-demigrpyh` — Acquiring a Demigrpyh | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:109-profile-demigryph-mount` — Demigryph Mount | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:109-profile-demigryph-mount` — Demigryph Mount | referenceEntries | deferred | p. 109 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:110-hire-em-and-fire-em` — Hire ‘Em And Fire ‘Em | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:110-hired-brains` — Hired Brains | referenceEntries | reference-only | p. 110–111 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:110-hired-goons` — Hired Goons | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:111-we-can-afford-it-but-can-we-afford-it` — We Can Afford It, but Can We Afford It? | referenceEntries | reference-only | p. 111–112 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:112-liability-and-responsibility` — Liability and Responsibility | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:113-hireling-profiles` — Hireling Profiles | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:113-profile-local-scout-silver-1` — Local Scout — Silver 1 | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:113-profile-seasoned-mercenary-silver-3` — Seasoned Mercenary — Silver 3 | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:114-profile-doktor-silver-5` — Doktor — Silver 5 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:114-profile-lawyer-silver-3` — Lawyer — Silver 3 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:114-profile-porter-silver-1` — Porter — Silver 1 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:114-profile-scribe-silver-2` — Scribe — Silver 2 | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:113-profile-local-scout-silver-1` — Local Scout — Silver 1 | referenceEntries | deferred | p. 113 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `up-in-arms:reference:113-profile-seasoned-mercenary-silver-3` — Seasoned Mercenary — Silver 3 | referenceEntries | deferred | p. 113 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `up-in-arms:reference:114-profile-doktor-silver-5` — Doktor — Silver 5 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `up-in-arms:reference:114-profile-lawyer-silver-3` — Lawyer — Silver 3 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `up-in-arms:reference:114-profile-porter-silver-1` — Porter — Silver 1 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `up-in-arms:reference:114-profile-scribe-silver-2` — Scribe — Silver 2 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:116-physical-quirks` — Physical Quirks | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:116-work-ethic` — Work Ethic | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:117-personality-quirks` — Personality Quirks | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
@@ -891,8 +891,8 @@ Pack `up-in-arms` · version 1.0.2
 | `up-in-arms:reference:141-roughrider` — Roughrider | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:141-shieldsman` — Shieldsman | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:141-strike-to-injure` — Strike to Injure | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:29-profile-destrier-heavy-warhorse` — Destrier — Heavy Warhorse | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:29-profile-riding-horse` — Riding Horse | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:29-profile-destrier-heavy-warhorse` — Destrier — Heavy Warhorse | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `up-in-arms:reference:29-profile-riding-horse` — Riding Horse | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:70-strictures-of-myrmidia` — Strictures Of Myrmidia | referenceEntries | reference-only | p. 70 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-approach-to-injury` — Approach To Injury | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:80-critical-wounds` — Critical Wounds | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
@@ -955,7 +955,7 @@ Pack `archives-i` · version 1.0.1
 | careers | 0 | 4 | 0 | 0 | 0 |
 | market | 17 | 1 | 0 | 0 | 0 |
 | origins | 1 | 15 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 25 | 0 | 0 |
+| referenceEntries | 0 | 0 | 12 | 0 | 13 |
 | talents | 0 | 1 | 0 | 0 | 0 |
 | weapons | 13 | 1 | 0 | 0 | 0 |
 
@@ -989,21 +989,21 @@ Pack `archives-i` · version 1.0.1
 | `archives-i:origin:skelfsider` — Skelfsider clan (Reikland) | origins | adapted | p. 32 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `archives-i:origin:thorncobble` — Thorncobble clan (Reikland) | origins | adapted | p. 32 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `archives-i:origin:tumbleberry` — Tumbleberry clan (Reikland) | origins | adapted | p. 32 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
-| `archives-i:reference:23-profile-misodoctakleidist-doc-ashfield-soldier-silver-3` — Misodoctakleidist ‘Doc’ Ashfield Soldier (Silver 3) | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:24-profile-thomasina-tina-brambledown-bargeswain-silver-3` — Thomasina ‘Tina’ Brambledown Bargeswain (Silver 3) | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:27-profile-luitpoldstrasse-louis-lostpockets-master-beggar-brass-4` — Luitpoldstrasse ‘Louis’ Lostpockets Master Beggar (Brass 4) | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:28-profile-belliquotious-bella-lowhaven-iv-racketeer-brass-5` — Belliquotious ‘Bella’ Lowhaven Iv Racketeer (Brass 5) | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:29-profile-suffonsification-suffy-rumster-lvi-apprentice-artisan-brass-2` — Suffonsification ‘Suffy’ Rumster Lvi Apprentice Artisan (Brass 2) | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:30-profile-spoondrift-spoony-skelfsider-grave-robber-brass-3` — Spoondrift ‘Spoony’ Skelfsider – Grave Robber (Brass 3) | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
+| `archives-i:reference:23-profile-misodoctakleidist-doc-ashfield-soldier-silver-3` — Misodoctakleidist ‘Doc’ Ashfield Soldier (Silver 3) | referenceEntries | deferred | p. 23 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:24-profile-thomasina-tina-brambledown-bargeswain-silver-3` — Thomasina ‘Tina’ Brambledown Bargeswain (Silver 3) | referenceEntries | deferred | p. 24 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:27-profile-luitpoldstrasse-louis-lostpockets-master-beggar-brass-4` — Luitpoldstrasse ‘Louis’ Lostpockets Master Beggar (Brass 4) | referenceEntries | deferred | p. 27 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:28-profile-belliquotious-bella-lowhaven-iv-racketeer-brass-5` — Belliquotious ‘Bella’ Lowhaven Iv Racketeer (Brass 5) | referenceEntries | deferred | p. 28 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:29-profile-suffonsification-suffy-rumster-lvi-apprentice-artisan-brass-2` — Suffonsification ‘Suffy’ Rumster Lvi Apprentice Artisan (Brass 2) | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:30-profile-spoondrift-spoony-skelfsider-grave-robber-brass-3` — Spoondrift ‘Spoony’ Skelfsider – Grave Robber (Brass 3) | referenceEntries | deferred | p. 30 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:31-options-halfling-nobles` — Options: Halfling Nobles | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:31-profile-thelonius-hardcastle-monkenbridge-thorncobble-xii-scion-gold-1` — Thelonius Hardcastle Monkenbridge Thorncobble Xii – Scion (Gold 1) | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
+| `archives-i:reference:31-profile-thelonius-hardcastle-monkenbridge-thorncobble-xii-scion-gold-1` — Thelonius Hardcastle Monkenbridge Thorncobble Xii – Scion (Gold 1) | referenceEntries | deferred | p. 31 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:32-options-halfling-clan-skills-and-talents` — Options: Halfling Clan Skills and Talents | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:56-profile-alrik-skagsson-inquisitor-silver-5` — Alrik Skagsson – Inquisitor (Silver 5) | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:56-profile-karstin-largsdottir-agent-gold-1` — Karstin Largsdottir – Agent (Gold 1) | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:57-profile-thyk-hurgarsson-fellow-silver-5` — Thyk Hurgarsson – Fellow (Silver 5) | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:62-profile-volund-sliverscar-chartered-engineer-gold-2` — Volund Sliverscar Chartered Engineer (Gold 2) | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:63-profile-gurniksson-hammerback-miner-foreman-silver-4` — Gurniksson Hammerback – Miner Foreman (Silver 4) | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
-| `archives-i:reference:63-profile-ragni-thorisson-officer-gold-1` — Ragni Thorisson – Officer (Gold 1) | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
+| `archives-i:reference:56-profile-alrik-skagsson-inquisitor-silver-5` — Alrik Skagsson – Inquisitor (Silver 5) | referenceEntries | deferred | p. 56 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:56-profile-karstin-largsdottir-agent-gold-1` — Karstin Largsdottir – Agent (Gold 1) | referenceEntries | deferred | p. 56 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:57-profile-thyk-hurgarsson-fellow-silver-5` — Thyk Hurgarsson – Fellow (Silver 5) | referenceEntries | deferred | p. 57 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:62-profile-volund-sliverscar-chartered-engineer-gold-2` — Volund Sliverscar Chartered Engineer (Gold 2) | referenceEntries | deferred | p. 62 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:63-profile-gurniksson-hammerback-miner-foreman-silver-4` — Gurniksson Hammerback – Miner Foreman (Silver 4) | referenceEntries | deferred | p. 63 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-i:reference:63-profile-ragni-thorisson-officer-gold-1` — Ragni Thorisson – Officer (Gold 1) | referenceEntries | deferred | p. 63 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:78-eonir-player-characters` — Eonir Player Characters | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:92-dwarf-melee-weapons` — Dwarf Melee Weapons | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:92-eonir-melee-weapons` — Eonir Melee Weapons | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
@@ -1030,7 +1030,7 @@ Pack `archives-ii` · version 1.0.4
 | background | 1 | 0 | 0 | 0 | 0 |
 | careers | 2 | 1 | 0 | 0 | 0 |
 | market | 12 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 122 | 0 | 0 |
+| referenceEntries | 0 | 0 | 107 | 0 | 15 |
 | species | 0 | 1 | 0 | 0 | 0 |
 | spells | 3 | 4 | 0 | 0 | 0 |
 | tables | 2 | 0 | 0 | 0 | 0 |
@@ -1053,8 +1053,8 @@ Pack `archives-ii` · version 1.0.4
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
 | `archives-ii:career:rhinox-herder` — Rhinox Herder | careers | adapted | p. 36 | Older Talent options replaced with Fifth Edition definitions: Striding Gait, Trick Rider. |
-| `archives-ii:reference:14-profile-isrogdal-the-urgent-ogre-protagonist-former-pugilist-silver-1` — Isrogdal The Urgent — Ogre Protagonist, Former Pugilist (Silver 1) | referenceEntries | reference-only | p. 14 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:14-profile-ugrik-the-lost-ogre-outlaw-brass-2` — Ugrik The Lost — Ogre Outlaw (Brass 2) | referenceEntries | reference-only | p. 14 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:14-profile-isrogdal-the-urgent-ogre-protagonist-former-pugilist-silver-1` — Isrogdal The Urgent — Ogre Protagonist, Former Pugilist (Silver 1) | referenceEntries | deferred | p. 14 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:14-profile-ugrik-the-lost-ogre-outlaw-brass-2` — Ugrik The Lost — Ogre Outlaw (Brass 2) | referenceEntries | deferred | p. 14 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:18-ogres-and-mutation` — Ogres And Mutation | referenceEntries | reference-only | p. 18–19 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:18-random-class-and-career-table` — Random Class And Career Table | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:18-species` — Species | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
@@ -1072,8 +1072,8 @@ Pack `archives-ii` · version 1.0.4
 | `archives-ii:reference:23-big-names` — Big Names | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:23-example-big-names` — Example Big Names | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:25-advancing-ogre-characters` — Advancing Ogre Characters | referenceEntries | reference-only | p. 25 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:26-artur-hammerfoot-ogre-artisan` — Artur Hammerfoot, Ogre Artisan | referenceEntries | reference-only | p. 26 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:26-nazzaalta-talltale-ogre-stevedore` — Nazzaalta Talltale, Ogre Stevedore | referenceEntries | reference-only | p. 26 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:26-artur-hammerfoot-ogre-artisan` — Artur Hammerfoot, Ogre Artisan | referenceEntries | deferred | p. 26 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:26-nazzaalta-talltale-ogre-stevedore` — Nazzaalta Talltale, Ogre Stevedore | referenceEntries | deferred | p. 26 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:28-deathblow` — Deathblow | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:28-defending-against-ogres` — Defending Against Ogres | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:28-ogre-equipment` — Ogre Equipment | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
@@ -1089,7 +1089,7 @@ Pack `archives-ii` · version 1.0.4
 | `archives-ii:reference:31-ogre-spellcasters` — Ogre Spellcasters | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:31-people-of-burden` — People Of Burden | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:32-the-lore-of-the-great-maw` — The Lore of The Great Maw | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:34-rhinox` — Rhinox | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:34-rhinox` — Rhinox | referenceEntries | deferred | p. 34 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:39-star-sign-table` — Star Sign Table | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:39-star-signs-and-character-creation` — Star Signs And Character Creation | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:50-determining-ascendant-sign` — Determining Ascendant Sign | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
@@ -1132,16 +1132,16 @@ Pack `archives-ii` · version 1.0.4
 | `archives-ii:reference:66-ring-table` — Ring Table | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:66-talisman-table` — Talisman Table | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:67-oddities` — Oddities | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:74-profile-margaret-von-aschendorf-abbess-shallya-silver-2` — Margaret Von Aschendorf Abbess (Shallya) (Silver 2) | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:75-profile-anna-lise-levertske-nun-former-apothecary-brass-4` — Anna-Lise Levertske Nun, Former Apothecary (Brass 4) | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:75-profile-clementine-clausewitz-nun-shallya-brass-4` — Clementine Clausewitz Nun (Shallya) (Brass 4) | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:75-profile-marie-duvallier-nun-shallya-former-physician-brass-4` — Marie Duvallier Nun (Shallya), Former Physician (Brass 4) | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:76-profile-hanna-bratsch-attendant-former-sergeant-brass-3` — Hanna Bratsch Attendant, Former Sergeant (Brass 3*) | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:76-profile-typical-sister-nun-shallya-brass-4` — Typical Sister — Nun (Shallya) (Brass 4) | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:77-erzbet-wegener-patient-brass-0` — Erzbet Wegener — Patient (Brass 0) | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:78-profile-adalmann-von-hopfberg-noble-lord-gold-7` — Adalmann Von Hopfberg Noble Lord (Gold 7) | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:79-profile-isabella-seer-brass-4` — Isabella — Seer (Brass 4) | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:80-profile-richter-kless-professor-gold-1` — Richter Kless — Professor (Gold 1) | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:74-profile-margaret-von-aschendorf-abbess-shallya-silver-2` — Margaret Von Aschendorf Abbess (Shallya) (Silver 2) | referenceEntries | deferred | p. 74 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:75-profile-anna-lise-levertske-nun-former-apothecary-brass-4` — Anna-Lise Levertske Nun, Former Apothecary (Brass 4) | referenceEntries | deferred | p. 75 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:75-profile-clementine-clausewitz-nun-shallya-brass-4` — Clementine Clausewitz Nun (Shallya) (Brass 4) | referenceEntries | deferred | p. 75 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:75-profile-marie-duvallier-nun-shallya-former-physician-brass-4` — Marie Duvallier Nun (Shallya), Former Physician (Brass 4) | referenceEntries | deferred | p. 75 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:76-profile-hanna-bratsch-attendant-former-sergeant-brass-3` — Hanna Bratsch Attendant, Former Sergeant (Brass 3*) | referenceEntries | deferred | p. 76 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:76-profile-typical-sister-nun-shallya-brass-4` — Typical Sister — Nun (Shallya) (Brass 4) | referenceEntries | deferred | p. 76 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:77-erzbet-wegener-patient-brass-0` — Erzbet Wegener — Patient (Brass 0) | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:78-profile-adalmann-von-hopfberg-noble-lord-gold-7` — Adalmann Von Hopfberg Noble Lord (Gold 7) | referenceEntries | deferred | p. 78 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:79-profile-isabella-seer-brass-4` — Isabella — Seer (Brass 4) | referenceEntries | deferred | p. 79 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-ii:reference:80-profile-richter-kless-professor-gold-1` — Richter Kless — Professor (Gold 1) | referenceEntries | deferred | p. 80 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:82-power` — Power | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:83-battlefield-strength` — Battlefield Strength | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:83-options-the-cost-of-war` — Options: The Cost Of War | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
@@ -1193,7 +1193,7 @@ Pack `archives-iii` · version 1.0.2
 | cants | 24 | 0 | 0 | 0 | 0 |
 | careers | 1 | 2 | 0 | 0 | 0 |
 | origins | 0 | 5 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 124 | 0 | 0 |
+| referenceEntries | 0 | 0 | 112 | 0 | 12 |
 | spells | 20 | 7 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -1231,7 +1231,7 @@ Pack `archives-iii` · version 1.0.2
 | `archives-iii:reference:26-the-reality-of-noble-estates` — The Reality Of Noble Estates | referenceEntries | reference-only | p. 26 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:27-performance-troupe` — Performance Troupe | referenceEntries | reference-only | p. 27–28 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:29-publishing-house` — Publishing House | referenceEntries | reference-only | p. 29–30 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:30-profile-grafina-griselda-human-magnate-gold-5` — Grafina Griselda — Human Magnate Gold 5 | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:30-profile-grafina-griselda-human-magnate-gold-5` — Grafina Griselda — Human Magnate Gold 5 | referenceEntries | deferred | p. 30 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:34-armour-and-stealth-tests` — Armour and Stealth Tests | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:34-armour-damage` — Armour Damage | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:34-looting-armour` — Looting Armour | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
@@ -1284,14 +1284,14 @@ Pack `archives-iii` · version 1.0.2
 | `archives-iii:reference:7-enterprise-format` — Enterprise Format | referenceEntries | reference-only | p. 7 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:76-abilities-limitations` — Abilities & Limitations | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:76-npc-animal-familiars` — Npc Animal Familiars | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:76-profile-badger` — Badger | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:77-profile-cat` — Cat | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:77-profile-crow` — Crow | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:77-profile-fox` — Fox | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:77-profile-owl` — Owl | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:76-profile-badger` — Badger | referenceEntries | deferred | p. 76 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:77-profile-cat` — Cat | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:77-profile-crow` — Crow | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:77-profile-fox` — Fox | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:77-profile-owl` — Owl | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:78-animal-familiar-characteristics` — Animal Familiar Characteristics | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:78-animal-familiar-generation` — Animal Familiar Generation | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:78-profile-stoat` — Stoat | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:78-profile-stoat` — Stoat | referenceEntries | deferred | p. 78 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:79-animal-skills-parent-characteristics` — Animal Skills & Parent Characteristics | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-badger` — Badger — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-cat` — Cat — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
@@ -1336,11 +1336,11 @@ Pack `archives-iii` · version 1.0.2
 | `archives-iii:reference:88-the-lore-of-shadows` — The Lore of Shadows | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:9-enterprise-events` — Enterprise Events | referenceEntries | reference-only | p. 9–11 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:9-expansion` — Expansion | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:90-profile-lord-adalbert-knopp-inzel-human-first-knight-and-spy-gold-2` — Lord Adalbert Knopp-Inzel Human First Knight (And Spy) Gold 2 | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:92-profile-brother-samhel-human-priest-of-morr-silver-1` — Brother Samhel Human Priest Of Morr (Silver 1) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:93-profile-ella-terenz-human-con-artist-silver-2` — Ella Terenz Human Con Artist (Silver 2) | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:94-profile-leonard-human-squire-silver-3` — Leonard Human Squire (Silver 3) | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:94-profile-ridrek-blackhelm-dwarf-entertainer-and-spy-brass-5` — Ridrek Blackhelm Dwarf Entertainer (And Spy) (Brass 5) | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:90-profile-lord-adalbert-knopp-inzel-human-first-knight-and-spy-gold-2` — Lord Adalbert Knopp-Inzel Human First Knight (And Spy) Gold 2 | referenceEntries | deferred | p. 90 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:92-profile-brother-samhel-human-priest-of-morr-silver-1` — Brother Samhel Human Priest Of Morr (Silver 1) | referenceEntries | deferred | p. 92 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:93-profile-ella-terenz-human-con-artist-silver-2` — Ella Terenz Human Con Artist (Silver 2) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:94-profile-leonard-human-squire-silver-3` — Leonard Human Squire (Silver 3) | referenceEntries | deferred | p. 94 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `archives-iii:reference:94-profile-ridrek-blackhelm-dwarf-entertainer-and-spy-brass-5` — Ridrek Blackhelm Dwarf Entertainer (And Spy) (Brass 5) | referenceEntries | deferred | p. 94 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:spell:dagger-of-the-art` — Dagger of the Art | spells | adapted | p. 62 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `archives-iii:spell:fellstave` — Fellstave | spells | adapted | p. 62 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `archives-iii:spell:rhyas-taming` — Rhya’s Taming | spells | adapted | p. 74 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -1380,7 +1380,7 @@ Pack `winds-of-magic` · version 1.0.2
 |---|---:|---:|---:|---:|---:|
 | careers | 10 | 2 | 0 | 0 | 0 |
 | gear | 4 | 0 | 1 | 0 | 0 |
-| referenceEntries | 0 | 0 | 284 | 0 | 0 |
+| referenceEntries | 0 | 0 | 263 | 0 | 21 |
 | skills | 1 | 1 | 0 | 0 | 0 |
 | spells | 101 | 52 | 0 | 0 | 0 |
 | tables | 4 | 0 | 0 | 0 | 0 |
@@ -1408,7 +1408,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:101-the-first-portent-of-amul` — The First Portent of Amul | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:101-the-second-portent-of-amul` — The Second Portent of Amul | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:101-the-third-portent-of-amul` — The Third Portent of Amul | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:109-profile-immanuel-ferrand-holswig-schliestein-human-spymaster-gold-4` — Immanuel-Ferrand Holswig-Schliestein Human Spymaster (Gold 4) | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:109-profile-immanuel-ferrand-holswig-schliestein-human-spymaster-gold-4` — Immanuel-Ferrand Holswig-Schliestein Human Spymaster (Gold 4) | referenceEntries | deferred | p. 109 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:110-bewilder` — Bewilder | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:110-choking-shadows` — Choking Shadows | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:110-the-lore-of-shadows` — The Lore Of Shadows | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
@@ -1419,7 +1419,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:113-shadowsteed` — Shadowsteed | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:113-shadowstep` — Shadowstep | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:113-shroud-of-invisibility` — Shroud of Invisibility | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:121-profile-elspeth-von-draken-human-wizard-lord-gold-2` — Elspeth Von Draken Human Wizard Lord (Gold 2) | referenceEntries | reference-only | p. 121 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:121-profile-elspeth-von-draken-human-wizard-lord-gold-2` — Elspeth Von Draken Human Wizard Lord (Gold 2) | referenceEntries | deferred | p. 121 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:122-the-lore-of-death` — The Lore Of Death | referenceEntries | reference-only | p. 122 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:123-caress-of-laniph` — Caress of Laniph | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:123-crystal-maze` — Crystal Maze | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
@@ -1430,7 +1430,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:124-soul-vortex` — Soul Vortex | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:125-steal-life` — Steal Life | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:125-swift-passing` — Swift Passing | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:133-profile-sergov-pfeiffer-human-bright-wizard-silver-3` — Sergov Pfeiffer Human Bright Wizard (Silver 3) | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:133-profile-sergov-pfeiffer-human-bright-wizard-silver-3` — Sergov Pfeiffer Human Bright Wizard (Silver 3) | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:134-aqshys-aegis` — Aqshy’s Aegis | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:134-the-lore-of-fire` — The Lore Of Fire | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:135-cauterise` — Cauterise | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
@@ -1440,7 +1440,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:135-flaming-sword-of-rhuin` — Flaming Sword of Rhuin | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:136-great-fires-of-uzhul` — Great Fires of U’Zhul | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:137-purge` — Purge | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:145-profile-gregor-martak-human-shaman-lord-gold-2` — Gregor Martak Human Shaman Lord (Gold 2) | referenceEntries | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:145-profile-gregor-martak-human-shaman-lord-gold-2` — Gregor Martak Human Shaman Lord (Gold 2) | referenceEntries | deferred | p. 145 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:146-amber-talons` — Amber Talons | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:146-beast-form` — Beast Form | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:146-beast-master` — Beast Master | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
@@ -1507,22 +1507,22 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:172-pistol-of-involuntary-solitude` — Pistol of Involuntary Solitude | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:172-sword-of-holding` — Sword of Holding | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:173-incarnate-elementals` — Incarnate Elementals | referenceEntries | reference-only | p. 173 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:174-profile-incarnate-elemental-of-fire` — Incarnate Elemental Of Fire | referenceEntries | reference-only | p. 174 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:175-profile-incarnate-elemental-of-death` — Incarnate Elemental Of Death | referenceEntries | reference-only | p. 175 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:174-profile-incarnate-elemental-of-fire` — Incarnate Elemental Of Fire | referenceEntries | deferred | p. 174 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:175-profile-incarnate-elemental-of-death` — Incarnate Elemental Of Death | referenceEntries | deferred | p. 175 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:176-creature-trait-grim-rating` — Grim (Rating) | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:176-nature-spirits` — Nature Spirits | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts` — Incarnate Elemental Of Beasts | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts` — Incarnate Elemental Of Beasts | referenceEntries | deferred | p. 176 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:177-magical-constructs` — Magical Constructs | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:179-fenbeasts` — Fenbeasts | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:179-profile-fenbeast` — Fenbeast | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:179-profile-fenbeast` — Fenbeast | referenceEntries | deferred | p. 179 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:180-lores-and-familiars` — Lores And Familiars | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:181-can-they-talk` — Can They Talk? | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:181-familiar-personality` — Familiar Personality | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:182-familiars-of-chamon` — Familiars of Chamon | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:182-improving-familiars` — Improving Familiars | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:182-profile-combat-familiar` — Combat Familiar | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:182-profile-power-familiar` — Power Familiar | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:182-profile-spell-familiar` — Spell Familiar | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:182-profile-combat-familiar` — Combat Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:182-profile-power-familiar` — Power Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:182-profile-spell-familiar` — Spell Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:184-the-bond-between-spellcasters-and-familiars` — The Bond Between Spellcasters and Familiars | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:184-the-challenges-of-playing-familiars` — The Challenges of Playing Familiars | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:184-the-wind` — The Wind | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
@@ -1575,11 +1575,11 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:21-spellcasting-limitations` — Spellcasting Limitations | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:21-touch-spells-in-combat` — Touch Spells in Combat | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:21-vortex-movement-table` — Vortex Movement Table | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:210-profile-egrimm-van-horstmann` — Egrimm Van Horstmann | referenceEntries | reference-only | p. 210 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:213-profile-library-disc-of-tzeentch` — Library Disc Of Tzeentch | referenceEntries | reference-only | p. 213 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:213-profile-ptarix-the-one-who-writes` — P’Tarix – The One Who Writes | referenceEntries | reference-only | p. 213 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:213-profile-xiratp-the-one-who-reads` — Xirat’P – The One Who Reads | referenceEntries | reference-only | p. 213 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:216-profile-mona-mimn-fimir-matriarch` — Mòna Mimn — Fimir Matriarch | referenceEntries | reference-only | p. 216 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:210-profile-egrimm-van-horstmann` — Egrimm Van Horstmann | referenceEntries | deferred | p. 210 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:213-profile-library-disc-of-tzeentch` — Library Disc Of Tzeentch | referenceEntries | deferred | p. 213 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:213-profile-ptarix-the-one-who-writes` — P’Tarix – The One Who Writes | referenceEntries | deferred | p. 213 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:213-profile-xiratp-the-one-who-reads` — Xirat’P – The One Who Reads | referenceEntries | deferred | p. 213 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `winds-of-magic:reference:216-profile-mona-mimn-fimir-matriarch` — Mòna Mimn — Fimir Matriarch | referenceEntries | deferred | p. 216 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:217-a-bite-of-midges` — A Bite of Midges | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:217-bale-eye` — Bale Eye | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:217-despondent-slough` — Despondent Slough | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
@@ -1609,7 +1609,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:27-silence` — Silence | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:29-controlling-elementals` — Controlling Elementals | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:29-the-bloody-hidesman` — the Bloody Hidesman | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:30-construct` — Construct | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:30-construct` — Construct | referenceEntries | deferred | p. 30 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:30-construct-traits` — Construct Traits | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:31-create-familiar` — Create Familiar | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:31-minor-elementals` — Minor Elementals | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
@@ -1651,7 +1651,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:53-compass-of-meteoric-silver` — Compass of Meteoric Silver | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:53-leonardos-alchemical-powder` — Leonardo’s Alchemical Powder | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:53-prism-of-power` — Prism of Power | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:61-profile-ashamira-dib-hierophant-silver-3` — Ashamira Dib Hierophant (Silver 3) | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:61-profile-ashamira-dib-hierophant-silver-3` — Ashamira Dib Hierophant (Silver 3) | referenceEntries | deferred | p. 61 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:62-banishment` — Banishment | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:62-blinding-light` — Blinding Light | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:62-clarity-of-thought` — Clarity of Thought | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
@@ -1662,7 +1662,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:65-phas-protection` — Phâ’s Protection | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:65-speed-of-thought` — Speed of Thought | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:66-the-gold-wind-of-magic-the-lore-of-metal` — The Gold Wind of Magic & The Lore of Metal | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4` — Balthasar Gelt Alchemist Lord (Gold 4) | referenceEntries | reference-only | p. 73 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4` — Balthasar Gelt Alchemist Lord (Gold 4) | referenceEntries | deferred | p. 73 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:74-crucible-of-chamon` — Crucible of Chamon | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:74-enchant-weapon` — Enchant Weapon | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:74-the-lore-of-metal` — The Lore Of Metal | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
@@ -1672,7 +1672,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:75-glittering-robe` — Glittering Robe | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:77-mutable-metal` — Mutable Metal | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:77-transmutation-of-chamon` — Transmutation of Chamon | referenceEntries | reference-only | p. 77 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:85-profile-tochter-grunfeld-human-wizard-lord-gold-2` — Tochter Grunfeld Human Wizard Lord (Gold 2) | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:85-profile-tochter-grunfeld-human-wizard-lord-gold-2` — Tochter Grunfeld Human Wizard Lord (Gold 2) | referenceEntries | deferred | p. 85 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:86-barkskin` — Barkskin | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:86-earthblood` — Earthblood | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:86-earthpool` — Earthpool | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
@@ -1683,7 +1683,7 @@ Pack `winds-of-magic` · version 1.0.2
 | `winds-of-magic:reference:88-lifebloom` — Lifebloom | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:88-regenerate` — Regenerate | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:90-the-blue-wind-of-magic-the-lore-of-the-heavens` — The Blue Wind of Magic & The Lore of the Heavens | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:97-profile-raphael-julevno-grand-astromancer-gold-1` — Raphael Julevno Grand Astromancer (Gold 1) | referenceEntries | reference-only | p. 97 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:97-profile-raphael-julevno-grand-astromancer-gold-1` — Raphael Julevno Grand Astromancer (Gold 1) | referenceEntries | deferred | p. 97 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:98-cerulean-shield` — Cerulean Shield | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:98-comet-of-casandora` — Comet of Casandora | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:98-the-lore-of-heavens` — The Lore Of Heavens | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
@@ -1752,7 +1752,7 @@ Pack `rough-nights` · version 1.0.2
 |---|---:|---:|---:|---:|---:|
 | background | 1 | 0 | 0 | 0 | 0 |
 | cults | 1 | 2 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 104 | 0 | 0 |
+| referenceEntries | 0 | 0 | 24 | 0 | 80 |
 | species | 0 | 1 | 0 | 0 | 0 |
 | tables | 1 | 1 | 0 | 0 | 0 |
 | talents | 0 | 1 | 0 | 0 | 0 |
@@ -1769,87 +1769,87 @@ Pack `rough-nights` · version 1.0.2
 |---|---|---|---|---|
 | `rough-nights:cult:evawn` — Evawn | cults | adapted | p. 90 | One printed Fourth Edition Miracle replaced with its revised Fifth Edition core equivalent. |
 | `rough-nights:cult:mabyn` — Mabyn | cults | adapted | p. 90 | One printed Fourth Edition Miracle replaced with its revised Fifth Edition core equivalent. |
-| `rough-nights:reference:17-profile-bruno-franke-judicial-champion-gold-3` — Bruno Franke – Judicial Champion (Gold 3) | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:17-profile-gustaf-rechtshandler-barrister-gold-1` — Gustaf Rechtshandler – Barrister (Gold 1) | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:17-profile-maria-ulrike-von-liebwitz-noble-lord-gold-7` — Maria-Ulrike Von Liebwitz – Noble Lord (Gold 7) | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:18-profile-bodyguards-and-men-at-arms-silver-3` — Bodyguards And Men-At-Arms (Silver 3) | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:18-profile-dominique-herveaux-assassin-gold-1` — Dominique Herveaux – Assassin (Gold 1) | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:18-profile-gunni-bart-and-hans-frederick-smugglers-brass-3` — Gunni, Bart, And Hans-Frederick – Smugglers (Brass 3) | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:18-profile-handmaids-and-servants-silver-3` — Handmaids And Servants (Silver 3) | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:19-profile-josef-aufwiegler-rabble-rouser-brass-3` — Josef Aufwiegler – Rabble Rouser (Brass 3) | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:19-profile-ursula-kopfgeld-master-bounty-hunter-silver-5` — Ursula Kopfgeld – Master Bounty Hunter (Silver 5) | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:20-profile-friedrich-von-pfeifraucher-magnate-gold-5` — Friedrich Von Pfeifraucher – Magnate (Gold 5) | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:20-profile-hanna-lastkahn-townswoman-silver-2` — Hanna Lastkahn – Townswoman (Silver 2) | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:20-profile-mho-larz-and-curls-thugs-brass-3` — Mho, Larz, And ‘Curls’ – Thugs (Brass 3) | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:20-profile-thomas-prahmhandler-master-merchant-gold-1` — Thomas Prahmhandler – Master Merchant (Gold 1) | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:21-profile-allrella-elphoise-and-helga-slaanesh-cultists-silver-1` — Allrella, Elphoise, And Helga – Slaanesh Cultists (Silver 1) | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:21-profile-boatmen-silver-2` — Boatmen (Silver 2) | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:21-profile-coachmen-silver-2` — Coachmen (Silver 2) | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:21-profile-glimbrin-oddsocks-master-thief-brass-5` — Glimbrin Oddsocks – Master Thief (Brass 5) | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:22-profile-hans-orf-townsman-silver-2` — Hans Orf – Townsman (Silver 2) | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:22-profile-mercinellin-seedling-thorncobble-xiii-hustler-brass-1` — Mercinellin ‘Seedling’ Thorncobble Xiii – Hustler (Brass 1) | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:22-profile-ol-bess-artisan-silver-1` — Ol’ Bess – Artisan (Silver 1) | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:22-profile-servants-cleaners-and-similar-menials-brass-3` — Servants, Cleaners, And Similar – Menials (Brass 3) | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:33-profile-imperial-viper` — Imperial Viper | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:33-profile-kappans-racketeers-thugs-brass-3` — Kappan’S Racketeers – Thugs (Brass 3) | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:33-profile-otto-von-dammenblatz-noble-lord-gold-7` — Otto Von Dammenblatz – Noble Lord (Gold 7) | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:34-profile-matthias-hubkind-witch-hunter-silver-3` — Matthias Hubkind – Witch Hunter (Silver 3) | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:34-profile-restless-ghost` — Restless Ghost | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:35-profile-8-watchmen-khorne-cultists-silver-1` — 8 Watchmen – Khorne Cultists (Silver 1) | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:35-profile-bloodletters` — Bloodletters | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:35-profile-magistrates-judges-gold-2` — Magistrates – Judges (Gold 2) | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:35-profile-petra-steinmetz-high-priestess-gold-1` — Petra Steinmetz – High Priestess (Gold 1) | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:48-profile-brecht-kavenner-slaanesh-cultist-and-barrister-gold-3` — Brecht Kavenner – Slaanesh Cultist And Barrister (Gold 3) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:48-profile-emmanuelle-von-liebwitz-elector-countess-gold-15` — Emmanuelle Von Liebwitz – Elector Countess (Gold 15) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:48-profile-noble-servants-gold-2` — Noble Servants (Gold 2) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:49-profile-brocks-and-reiner-spies-silver-3` — Brocks And Reiner – Spies (Silver 3) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:49-profile-musicians-silver-1` — Musicians (Silver 1) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:49-profile-palace-guards-gold-2` — Palace Guards (Gold 2) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:49-profile-performers-silver-1` — Performers (Silver 1) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:49-profile-servants-silver-1` — Servants (Silver 1) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:49-profile-stagehands-silver-1` — Stagehands (Silver 1) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:50-profile-cannon-and-mortar-students-student-engineers-brass-4` — Cannon And Mortar Students – Student Engineers (Brass 4) | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:50-profile-edvard-lowenhertz-wyrd-brass-3` — Edvard Lowenhertz – Wyrd (Brass 3) | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:50-profile-edwina-lowenhertz-witch-brass-2` — Edwina Lowenhertz – Witch (Brass 2) | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:50-profile-erwin-pakker-professor-gold-1` — Erwin Pakker – Professor (Gold 1) | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:51-profile-assassins-silver-1` — Assassins (Silver 1) | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:51-profile-detlef-sierck-genius-gold-3` — Detlef Sierck – Genius (Gold 3) | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:52-profile-martyn-ruchen-chaos-cult-leader-and-chaos-sorcerer-silver-3` — Martyn Ruchen – Chaos Cult Leader And Chaos Sorcerer (Silver 3) | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:52-profile-nurgle-cultists` — Nurgle Cultists | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
+| `rough-nights:reference:17-profile-bruno-franke-judicial-champion-gold-3` — Bruno Franke – Judicial Champion (Gold 3) | referenceEntries | deferred | p. 17 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:17-profile-gustaf-rechtshandler-barrister-gold-1` — Gustaf Rechtshandler – Barrister (Gold 1) | referenceEntries | deferred | p. 17 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:17-profile-maria-ulrike-von-liebwitz-noble-lord-gold-7` — Maria-Ulrike Von Liebwitz – Noble Lord (Gold 7) | referenceEntries | deferred | p. 17 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:18-profile-bodyguards-and-men-at-arms-silver-3` — Bodyguards And Men-At-Arms (Silver 3) | referenceEntries | deferred | p. 18 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:18-profile-dominique-herveaux-assassin-gold-1` — Dominique Herveaux – Assassin (Gold 1) | referenceEntries | deferred | p. 18 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:18-profile-gunni-bart-and-hans-frederick-smugglers-brass-3` — Gunni, Bart, And Hans-Frederick – Smugglers (Brass 3) | referenceEntries | deferred | p. 18 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:18-profile-handmaids-and-servants-silver-3` — Handmaids And Servants (Silver 3) | referenceEntries | deferred | p. 18 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:19-profile-josef-aufwiegler-rabble-rouser-brass-3` — Josef Aufwiegler – Rabble Rouser (Brass 3) | referenceEntries | deferred | p. 19 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:19-profile-ursula-kopfgeld-master-bounty-hunter-silver-5` — Ursula Kopfgeld – Master Bounty Hunter (Silver 5) | referenceEntries | deferred | p. 19 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:20-profile-friedrich-von-pfeifraucher-magnate-gold-5` — Friedrich Von Pfeifraucher – Magnate (Gold 5) | referenceEntries | deferred | p. 20 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:20-profile-hanna-lastkahn-townswoman-silver-2` — Hanna Lastkahn – Townswoman (Silver 2) | referenceEntries | deferred | p. 20 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:20-profile-mho-larz-and-curls-thugs-brass-3` — Mho, Larz, And ‘Curls’ – Thugs (Brass 3) | referenceEntries | deferred | p. 20 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:20-profile-thomas-prahmhandler-master-merchant-gold-1` — Thomas Prahmhandler – Master Merchant (Gold 1) | referenceEntries | deferred | p. 20 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:21-profile-allrella-elphoise-and-helga-slaanesh-cultists-silver-1` — Allrella, Elphoise, And Helga – Slaanesh Cultists (Silver 1) | referenceEntries | deferred | p. 21 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:21-profile-boatmen-silver-2` — Boatmen (Silver 2) | referenceEntries | deferred | p. 21 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:21-profile-coachmen-silver-2` — Coachmen (Silver 2) | referenceEntries | deferred | p. 21 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:21-profile-glimbrin-oddsocks-master-thief-brass-5` — Glimbrin Oddsocks – Master Thief (Brass 5) | referenceEntries | deferred | p. 21 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:22-profile-hans-orf-townsman-silver-2` — Hans Orf – Townsman (Silver 2) | referenceEntries | deferred | p. 22 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:22-profile-mercinellin-seedling-thorncobble-xiii-hustler-brass-1` — Mercinellin ‘Seedling’ Thorncobble Xiii – Hustler (Brass 1) | referenceEntries | deferred | p. 22 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:22-profile-ol-bess-artisan-silver-1` — Ol’ Bess – Artisan (Silver 1) | referenceEntries | deferred | p. 22 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:22-profile-servants-cleaners-and-similar-menials-brass-3` — Servants, Cleaners, And Similar – Menials (Brass 3) | referenceEntries | deferred | p. 22 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:33-profile-imperial-viper` — Imperial Viper | referenceEntries | deferred | p. 33 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:33-profile-kappans-racketeers-thugs-brass-3` — Kappan’S Racketeers – Thugs (Brass 3) | referenceEntries | deferred | p. 33 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:33-profile-otto-von-dammenblatz-noble-lord-gold-7` — Otto Von Dammenblatz – Noble Lord (Gold 7) | referenceEntries | deferred | p. 33 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:34-profile-matthias-hubkind-witch-hunter-silver-3` — Matthias Hubkind – Witch Hunter (Silver 3) | referenceEntries | deferred | p. 34 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:34-profile-restless-ghost` — Restless Ghost | referenceEntries | deferred | p. 34 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:35-profile-8-watchmen-khorne-cultists-silver-1` — 8 Watchmen – Khorne Cultists (Silver 1) | referenceEntries | deferred | p. 35 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:35-profile-bloodletters` — Bloodletters | referenceEntries | deferred | p. 35 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:35-profile-magistrates-judges-gold-2` — Magistrates – Judges (Gold 2) | referenceEntries | deferred | p. 35 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:35-profile-petra-steinmetz-high-priestess-gold-1` — Petra Steinmetz – High Priestess (Gold 1) | referenceEntries | deferred | p. 35 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:48-profile-brecht-kavenner-slaanesh-cultist-and-barrister-gold-3` — Brecht Kavenner – Slaanesh Cultist And Barrister (Gold 3) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:48-profile-emmanuelle-von-liebwitz-elector-countess-gold-15` — Emmanuelle Von Liebwitz – Elector Countess (Gold 15) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:48-profile-noble-servants-gold-2` — Noble Servants (Gold 2) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:49-profile-brocks-and-reiner-spies-silver-3` — Brocks And Reiner – Spies (Silver 3) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:49-profile-musicians-silver-1` — Musicians (Silver 1) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:49-profile-palace-guards-gold-2` — Palace Guards (Gold 2) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:49-profile-performers-silver-1` — Performers (Silver 1) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:49-profile-servants-silver-1` — Servants (Silver 1) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:49-profile-stagehands-silver-1` — Stagehands (Silver 1) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:50-profile-cannon-and-mortar-students-student-engineers-brass-4` — Cannon And Mortar Students – Student Engineers (Brass 4) | referenceEntries | deferred | p. 50 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:50-profile-edvard-lowenhertz-wyrd-brass-3` — Edvard Lowenhertz – Wyrd (Brass 3) | referenceEntries | deferred | p. 50 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:50-profile-edwina-lowenhertz-witch-brass-2` — Edwina Lowenhertz – Witch (Brass 2) | referenceEntries | deferred | p. 50 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:50-profile-erwin-pakker-professor-gold-1` — Erwin Pakker – Professor (Gold 1) | referenceEntries | deferred | p. 50 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:51-profile-assassins-silver-1` — Assassins (Silver 1) | referenceEntries | deferred | p. 51 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:51-profile-detlef-sierck-genius-gold-3` — Detlef Sierck – Genius (Gold 3) | referenceEntries | deferred | p. 51 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:52-profile-martyn-ruchen-chaos-cult-leader-and-chaos-sorcerer-silver-3` — Martyn Ruchen – Chaos Cult Leader And Chaos Sorcerer (Silver 3) | referenceEntries | deferred | p. 52 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:52-profile-nurgle-cultists` — Nurgle Cultists | referenceEntries | deferred | p. 52 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `rough-nights:reference:52-reveal-the-inner-beauty` — Reveal the Inner Beauty | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:53-profile-hubkinds-mob-brass-4` — Hubkind’S Mob (Brass 4) | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:53-profile-nulner-watchmen-silver-1` — Nulner Watchmen (Silver 1) | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:53-profile-operagoer-silver-2` — Operagoer (Silver 2) | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:53-profile-watch-sergeant-silver-1` — Watch Sergeant (Silver 1) | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:53-profile-young-noble-gold-1` — Young Noble (Gold 1) | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:64-profile-wilhelm-von-saponatheim-noble-lord-gold-7` — Wilhelm Von Saponatheim – Noble Lord (Gold 7) | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:65-profile-inta-dapesht` — Inta-Dapesht | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:65-profile-joachim-bitterfeld-artisan-silver-1` — Joachim Bitterfeld – Artisan (Silver 1) | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:65-profile-nastassia-von-saponatheim-scion-gold-1` — Nastassia Von Saponatheim – Scion (Gold 1) | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:66-profile-cultists-of-the-jade-sceptre-gold-2` — Cultists Of The Jade Sceptre (Gold 2) | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:66-profile-manfred-von-saponatheim-prisoner-brass-0` — Manfred Von Saponatheim – Prisoner (Brass 0) | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:67-profile-clothilde-telland-noble-gold-4` — Clothilde Telland – Noble (Gold 4) | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:67-profile-josef-von-angendorf-cat-burglar-gold-2` — Josef Von Angendorf – Cat Burglar (Gold 2) | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:67-profile-taggees-spies-gold-2` — Taggees – Spies (Gold 2) | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:80-profile-erich-von-holzenauer-noble-gold-2` — Erich Von Holzenauer – Noble (Gold 2) | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:80-profile-siegfried-von-saponatheim-noble-gold-2` — Siegfried Von Saponatheim – Noble (Gold 2) | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:81-profile-galina-hohengolfrid-noble-gold-2` — Galina Hohengolfrid – Noble (Gold 2) | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:81-profile-heinrich-von-bruner-magnate-gold-3` — Heinrich Von Bruner – Magnate (Gold 3) | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:81-profile-maximilian-aschaffenburg-scion-gold-1` — Maximilian Aschaffenburg – Scion (Gold 1) | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:81-profile-rickard-aschaffenberg-magnate-gold-3` — Rickard Aschaffenberg – Magnate (Gold 3) | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:82-profile-florian-pfeifraucher-noble-gold-2` — Florian Pfeifraucher – Noble (Gold 2) | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:82-profile-heinrich-von-falkenhayn-noble-gold-2` — Heinrich Von Falkenhayn – Noble (Gold 2) | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:82-profile-jean-luc-de-cadent-agent-gold-1` — Jean-Luc De Cadent – Agent (Gold 1) | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:83-profile-borgan-foambeard-guildmaster-gold-1` — Borgan Foambeard – Guildmaster (Gold 1) | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:83-profile-ernst-maler-burgomeister-gold-1` — Ernst Maler – Burgomeister (Gold 1) | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:83-profile-otto-krupp-guildmaster-gold-1` — Otto Krupp – Guildmaster (Gold 1) | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:84-profile-gunther-emming-high-priest-gold-1` — Gunther Emming – High Priest (Gold 1) | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:84-profile-heinrich-gutenberg-high-priest-gold-1` — Heinrich Gutenberg – High Priest (Gold 1) | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:84-profile-lorith-silverleaf-envoy-silver-4` — Lorith Silverleaf – Envoy (Silver 4) | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:85-profile-andrea-pfeffer-officer-gold-2` — Andrea Pfeffer – Officer (Gold 2) | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:85-profile-celestine-hoch-priestess-silver-1` — Celestine Hoch – Priestess (Silver 1) | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:85-profile-erwin-blucher-officer-gold-2` — Erwin Blucher – Officer (Gold 2) | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:85-profile-jendrik-von-dabernick-officer-gold-1` — Jendrik Von Dabernick – Officer (Gold 1) | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
+| `rough-nights:reference:53-profile-hubkinds-mob-brass-4` — Hubkind’S Mob (Brass 4) | referenceEntries | deferred | p. 53 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:53-profile-nulner-watchmen-silver-1` — Nulner Watchmen (Silver 1) | referenceEntries | deferred | p. 53 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:53-profile-operagoer-silver-2` — Operagoer (Silver 2) | referenceEntries | deferred | p. 53 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:53-profile-watch-sergeant-silver-1` — Watch Sergeant (Silver 1) | referenceEntries | deferred | p. 53 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:53-profile-young-noble-gold-1` — Young Noble (Gold 1) | referenceEntries | deferred | p. 53 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:64-profile-wilhelm-von-saponatheim-noble-lord-gold-7` — Wilhelm Von Saponatheim – Noble Lord (Gold 7) | referenceEntries | deferred | p. 64 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:65-profile-inta-dapesht` — Inta-Dapesht | referenceEntries | deferred | p. 65 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:65-profile-joachim-bitterfeld-artisan-silver-1` — Joachim Bitterfeld – Artisan (Silver 1) | referenceEntries | deferred | p. 65 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:65-profile-nastassia-von-saponatheim-scion-gold-1` — Nastassia Von Saponatheim – Scion (Gold 1) | referenceEntries | deferred | p. 65 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:66-profile-cultists-of-the-jade-sceptre-gold-2` — Cultists Of The Jade Sceptre (Gold 2) | referenceEntries | deferred | p. 66 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:66-profile-manfred-von-saponatheim-prisoner-brass-0` — Manfred Von Saponatheim – Prisoner (Brass 0) | referenceEntries | deferred | p. 66 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:67-profile-clothilde-telland-noble-gold-4` — Clothilde Telland – Noble (Gold 4) | referenceEntries | deferred | p. 67 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:67-profile-josef-von-angendorf-cat-burglar-gold-2` — Josef Von Angendorf – Cat Burglar (Gold 2) | referenceEntries | deferred | p. 67 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:67-profile-taggees-spies-gold-2` — Taggees – Spies (Gold 2) | referenceEntries | deferred | p. 67 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:80-profile-erich-von-holzenauer-noble-gold-2` — Erich Von Holzenauer – Noble (Gold 2) | referenceEntries | deferred | p. 80 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:80-profile-siegfried-von-saponatheim-noble-gold-2` — Siegfried Von Saponatheim – Noble (Gold 2) | referenceEntries | deferred | p. 80 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:81-profile-galina-hohengolfrid-noble-gold-2` — Galina Hohengolfrid – Noble (Gold 2) | referenceEntries | deferred | p. 81 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:81-profile-heinrich-von-bruner-magnate-gold-3` — Heinrich Von Bruner – Magnate (Gold 3) | referenceEntries | deferred | p. 81 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:81-profile-maximilian-aschaffenburg-scion-gold-1` — Maximilian Aschaffenburg – Scion (Gold 1) | referenceEntries | deferred | p. 81 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:81-profile-rickard-aschaffenberg-magnate-gold-3` — Rickard Aschaffenberg – Magnate (Gold 3) | referenceEntries | deferred | p. 81 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:82-profile-florian-pfeifraucher-noble-gold-2` — Florian Pfeifraucher – Noble (Gold 2) | referenceEntries | deferred | p. 82 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:82-profile-heinrich-von-falkenhayn-noble-gold-2` — Heinrich Von Falkenhayn – Noble (Gold 2) | referenceEntries | deferred | p. 82 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:82-profile-jean-luc-de-cadent-agent-gold-1` — Jean-Luc De Cadent – Agent (Gold 1) | referenceEntries | deferred | p. 82 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:83-profile-borgan-foambeard-guildmaster-gold-1` — Borgan Foambeard – Guildmaster (Gold 1) | referenceEntries | deferred | p. 83 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:83-profile-ernst-maler-burgomeister-gold-1` — Ernst Maler – Burgomeister (Gold 1) | referenceEntries | deferred | p. 83 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:83-profile-otto-krupp-guildmaster-gold-1` — Otto Krupp – Guildmaster (Gold 1) | referenceEntries | deferred | p. 83 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:84-profile-gunther-emming-high-priest-gold-1` — Gunther Emming – High Priest (Gold 1) | referenceEntries | deferred | p. 84 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:84-profile-heinrich-gutenberg-high-priest-gold-1` — Heinrich Gutenberg – High Priest (Gold 1) | referenceEntries | deferred | p. 84 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:84-profile-lorith-silverleaf-envoy-silver-4` — Lorith Silverleaf – Envoy (Silver 4) | referenceEntries | deferred | p. 84 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:85-profile-andrea-pfeffer-officer-gold-2` — Andrea Pfeffer – Officer (Gold 2) | referenceEntries | deferred | p. 85 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:85-profile-celestine-hoch-priestess-silver-1` — Celestine Hoch – Priestess (Silver 1) | referenceEntries | deferred | p. 85 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:85-profile-erwin-blucher-officer-gold-2` — Erwin Blucher – Officer (Gold 2) | referenceEntries | deferred | p. 85 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `rough-nights:reference:85-profile-jendrik-von-dabernick-officer-gold-1` — Jendrik Von Dabernick – Officer (Gold 1) | referenceEntries | deferred | p. 85 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `rough-nights:reference:87-random-class-and-career-table` — Random Class And Career Table | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `rough-nights:reference:87-random-species-table` — Random Species Table | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `rough-nights:reference:88-attributes-table` — Attributes Table | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
@@ -2283,12 +2283,12 @@ Pack `high-elf` · version 1.0.2
 
 ## Blood and Bramble
 
-Pack `blood-bramble` · version 1.0.1
+Pack `blood-bramble` · version 1.0.2
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | gear | 1 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 8 | 0 | 0 |
+| referenceEntries | 0 | 0 | 2 | 0 | 6 |
 | spells | 14 | 10 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2301,13 +2301,13 @@ Pack `blood-bramble` · version 1.0.1
 
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
-| `blood-bramble:reference:11-bruck-who-babbles` — Brück Who Babbles | referenceEntries | reference-only | p. 11 | Sourced book rule reference; no live-play automation. |
-| `blood-bramble:reference:11-morock-the-bonetaker` — Morock the Bonetaker | referenceEntries | reference-only | p. 11 | Sourced book rule reference; no live-play automation. |
-| `blood-bramble:reference:11-the-shrike-of-unterdell` — The Shrike of Unterdell | referenceEntries | reference-only | p. 11 | Sourced book rule reference; no live-play automation. |
+| `blood-bramble:reference:11-bruck-who-babbles` — Brück Who Babbles | referenceEntries | deferred | p. 11 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `blood-bramble:reference:11-morock-the-bonetaker` — Morock the Bonetaker | referenceEntries | deferred | p. 11 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `blood-bramble:reference:11-the-shrike-of-unterdell` — The Shrike of Unterdell | referenceEntries | deferred | p. 11 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `blood-bramble:reference:17-nameless-summons-table` — Nameless Summons Table | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
-| `blood-bramble:reference:19-profile-old-mar-of-deisdorf-hedge-master-brass-3` — Old Mar Of Deisdorf Hedge Master (Brass 3) | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
-| `blood-bramble:reference:20-profile-toll-jagerfund-witch-hunter-silver-3` — Toll Jagerfund Witch Hunter (Silver 3) | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `blood-bramble:reference:21-profile-marius-childers-witch-former-merchant-silver-3` — Marius Childers Witch, Former Merchant (Silver 3) | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
+| `blood-bramble:reference:19-profile-old-mar-of-deisdorf-hedge-master-brass-3` — Old Mar Of Deisdorf Hedge Master (Brass 3) | referenceEntries | deferred | p. 19 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `blood-bramble:reference:20-profile-toll-jagerfund-witch-hunter-silver-3` — Toll Jagerfund Witch Hunter (Silver 3) | referenceEntries | deferred | p. 20 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `blood-bramble:reference:21-profile-marius-childers-witch-former-merchant-silver-3` — Marius Childers Witch, Former Merchant (Silver 3) | referenceEntries | deferred | p. 21 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `blood-bramble:reference:6-the-lore-of-hedgecraft` — The Lore of Hedgecraft | referenceEntries | reference-only | p. 6 | Sourced book rule reference; no live-play automation. |
 | `blood-bramble:spell:bonesnapper` — Bonesnapper | spells | adapted | p. 12 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `blood-bramble:spell:congeal` — Congeal | spells | adapted | p. 13 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -2331,7 +2331,7 @@ Pack `deft-steps` · version 1.0.3
 | careers | 1 | 8 | 0 | 0 | 0 |
 | cults | 0 | 1 | 0 | 0 | 0 |
 | gear | 11 | 4 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 204 | 0 | 0 |
+| referenceEntries | 0 | 0 | 182 | 0 | 22 |
 | spells | 27 | 5 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2368,18 +2368,18 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:102-detailing-outlaw-bands` — Detailing outlaw bands | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:102-outlaw-traits` — Outlaw Traits | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-outlaw-chief-traits` — Outlaw Chief Traits | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:103-profile-outlaw-brass-2` — Outlaw Brass 2 | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:103-profile-outlaw-chief-brass-4` — Outlaw Chief Brass 4 | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:103-profile-outlaw-brass-2` — Outlaw Brass 2 | referenceEntries | deferred | p. 103 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:103-profile-outlaw-chief-brass-4` — Outlaw Chief Brass 4 | referenceEntries | deferred | p. 103 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:106-conflicts-of-jurisdiction` — Conflicts Of Jurisdiction | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:106-reward-conditions` — Reward Conditions | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:106-warrants-wanted-posters` — Warrants & Wanted Posters | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:107-capture` — Capture | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:107-kill` — Kill | referenceEntries | reference-only | p. 107–108 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:107-track` — Track | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:108-profile-a-typical-bounty-hunter-silver-3` — A Typical Bounty Hunter Silver 3 | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:108-profile-a-typical-bounty-hunter-silver-3` — A Typical Bounty Hunter Silver 3 | referenceEntries | deferred | p. 108 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:109-bounty-hunter-warrants` — Bounty Hunter Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:109-random-warrants` — Random Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:111-profile-brunner-bounty-hunter-general` — Brunner Bounty Hunter General | referenceEntries | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:111-profile-brunner-bounty-hunter-general` — Brunner Bounty Hunter General | referenceEntries | deferred | p. 111 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:112-pathfinding` — Pathfinding | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:112-wilderness-travel` — Wilderness Travel | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:113-provisions` — Provisions | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
@@ -2436,13 +2436,13 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:132-animals-and-equipment` — Animals and Equipment | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:132-hunting-considerations` — Hunting Considerations | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:133-hunting-traits` — Hunting Traits | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:133-profile-grootscher-marsh-hound` — Grootscher Marsh Hound | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:133-profile-hochland-lockhund` — Hochland Lockhund | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:133-profile-nordlander-bamse` — Nordlander Bamse | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:133-profile-grootscher-marsh-hound` — Grootscher Marsh Hound | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:133-profile-hochland-lockhund` — Hochland Lockhund | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:133-profile-nordlander-bamse` — Nordlander Bamse | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:134-hawks` — Hawks | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:134-hunting-traits` — Hunting Traits | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:134-profile-arabyan-redhawk` — Arabyan Redhawk | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:134-profile-dove-hawk` — Dove Hawk | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:134-profile-arabyan-redhawk` — Arabyan Redhawk | referenceEntries | deferred | p. 134 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:134-profile-dove-hawk` — Dove Hawk | referenceEntries | deferred | p. 134 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:135-a-noble-pursuit` — A Noble Pursuit | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:15-ranalds-gamble` — Ranald’S Gamble | referenceEntries | reference-only | p. 15 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:27-expectations-and-complications` — Expectations and Complications | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
@@ -2467,7 +2467,7 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:33-steel-mummit-success-table` — Steel Mummit Success Table | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:33-telescopic-stick` — Telescopic Stick | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:34-graverobbery-in-operation` — Graverobbery in Operation | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:34-profile-black-guard-of-morr-knight-silver-5` — Black Guard Of Morr (Knight) (Silver 5) | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:34-profile-black-guard-of-morr-knight-silver-5` — Black Guard Of Morr (Knight) (Silver 5) | referenceEntries | deferred | p. 34 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:35-crypt-complications` — Crypt Complications | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:36-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:36-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
@@ -2506,20 +2506,20 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:46-priests-of-ranald` — Priests Of Ranald | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:47-fences` — Fences | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:47-forgers-and-counterfeiters` — Forgers and Counterfeiters | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:47-profile-fence-silver-2` — Fence (Silver 2) | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:47-profile-forger-silver-1` — Forger (Silver 1) | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:47-profile-fence-silver-2` — Fence (Silver 2) | referenceEntries | deferred | p. 47 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:47-profile-forger-silver-1` — Forger (Silver 1) | referenceEntries | deferred | p. 47 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:48-information-brokers` — Information Brokers | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:48-muscle` — Muscle | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:48-profile-bawd-brass-3` — Bawd (Brass 3) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:48-profile-racketeer-brass-5` — Racketeer (Brass 5) | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:49-profile-charlatan-brass-5` — Charlatan (Brass 5) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2` — Safe House Owner (Townsman) (Silver 2) | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:48-profile-bawd-brass-3` — Bawd (Brass 3) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:48-profile-racketeer-brass-5` — Racketeer (Brass 5) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:49-profile-charlatan-brass-5` — Charlatan (Brass 5) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2` — Safe House Owner (Townsman) (Silver 2) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:50-define-the-contact` — Define the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:50-flesh-out-the-contact` — Flesh out the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:50-new-endeavour-establishing-a-contact` — New Endeavour: Establishing A Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:52-contact-quality-table` — Contact Quality Table | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:53-contact-development-table` — Contact Development Table | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:55-profile-august-sternwachter-master-fence-ex-noble-silver-3` — August Sternwachter Master Fence, Ex-Noble (Silver 3) | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:55-profile-august-sternwachter-master-fence-ex-noble-silver-3` — August Sternwachter Master Fence, Ex-Noble (Silver 3) | referenceEntries | deferred | p. 55 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:56-contacts-and-the-gm` — Contacts And The Gm | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:57-organised-crime` — Organised Crime | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:58-assemble-the-gang` — Assemble the Gang | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
@@ -2529,23 +2529,23 @@ Pack `deft-steps` · version 1.0.3
 | `deft-steps:reference:59-maintain-influence` — Maintain Influence | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:59-organising-crime` — Organising Crime | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:60-criminal-events` — Criminal Events | referenceEntries | reference-only | p. 60–61 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:64-profile-albrecht-the-fish-gang-boss-silver-3-organisation-level-2` — Albrecht ‘The Fish’ — Gang Boss Silver 3 - Organisation Level 2 | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:65-profile-gunna-von-sperren-smuggler-king-silver-3-organisation-level-3` — Gunna Von Sperren — Smuggler King Silver 3 - Organisation Level 3 | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:64-profile-albrecht-the-fish-gang-boss-silver-3-organisation-level-2` — Albrecht ‘The Fish’ — Gang Boss Silver 3 - Organisation Level 2 | referenceEntries | deferred | p. 64 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:65-profile-gunna-von-sperren-smuggler-king-silver-3-organisation-level-3` — Gunna Von Sperren — Smuggler King Silver 3 - Organisation Level 3 | referenceEntries | deferred | p. 65 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:67-criminal-enterprise-perks` — Criminal Enterprise Perks | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:67-fencing` — Fencing | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:67-perks-of-membership` — Perks Of Membership | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:67-protection-from-the-law` — Protection From The Law | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:69-gang-war` — Gang War | referenceEntries | reference-only | p. 69 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:81-the-great-horned-helm` — The Great Horned Helm | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:83-profile-father-pedragar-priest-of-taal` — Father Pedragar, Priest Of Taal | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:83-profile-father-pedragar-priest-of-taal` — Father Pedragar, Priest Of Taal | referenceEntries | deferred | p. 83 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:87-curse-of-taal` — Curse Of Taal | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:90-breaking-the-law` — Breaking The Law | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:91-unpopular-edicts` — Unpopular Edicts | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:92-determining-watch-presence` — Determining Watch Presence | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:92-talabheim-the-city-of-laws` — Talabheim, The City Of Laws | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:93-crimes-and-the-watch` — Crimes and the Watch | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:93-profile-watch-sergeant-silver-3` — Watch Sergeant (Silver 3) | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:93-profile-watchman-silver-1` — Watchman (Silver 1) | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:93-profile-watch-sergeant-silver-3` — Watch Sergeant (Silver 3) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
+| `deft-steps:reference:93-profile-watchman-silver-1` — Watchman (Silver 1) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:93-watch-presence` — Watch Presence | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:94-noble-prisoners` — Noble Prisoners | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:95-a-day-in-court` — A Day In Court | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |

@@ -86,8 +86,7 @@ test("one all-book reference corpus includes inactive books, explicit variants a
   );
   assert.ok(named("Bearded Axe", "equipment").length);
   assert.ok(named("Dwarf Axe", "equipment").length);
-  assert.ok(named("Dragon", "profile").length);
-  assert.ok(full.rows.some((r) => r.kind === "template"));
+  assert.ok(!full.rows.some((r) => ["profile", "template"].includes(r.kind)));
   assert.ok(full.rows.some((r) => r.kind === "mutation"));
   assert.equal(new Set(full.rows.map((r) => r.key)).size, full.rows.length);
   assert.equal(JSON.stringify(draft), before);
@@ -114,9 +113,6 @@ test("global references retain selective Legacy metadata, source text and safe r
   const spell = named("Godspakt", "magic")[0];
   assert.match(referenceBodyHTML(spell), /Range<\/dt><dd>You/);
   assert.doesNotMatch(referenceBodyHTML(spell), /Source discrepancy/);
-  const dragon = referenceBodyHTML(named("Dragon", "profile")[0]);
-  assert.match(dragon, /<table>/);
-  assert.doesNotMatch(dragon, /data-action|recalculation|sourceWarnings/);
   assert.match(
     referenceBodyHTML({
       ...compatible,
@@ -169,6 +165,14 @@ test("lazy global library rejects stale versions, invalid profile pointers and d
     loadReferenceLibrary(library, () => duplicate),
     /Invalid/,
   );
+  for (const kind of ["profile", "template"]) {
+    const hidden = structuredClone(wire);
+    hidden.rows[0].kind = kind;
+    await assert.rejects(
+      loadReferenceLibrary(library, () => hidden),
+      /Invalid/,
+    );
+  }
   await assert.rejects(
     loadReferenceLibrary(library, () =>
       Promise.reject(Error("temporary network failure")),

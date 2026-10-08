@@ -56,9 +56,11 @@ Deferred by user choice: Archmage fifth Career level and three advanced priest C
 
 High Elf tests exercise opt-in composition, all regional d100 faces, origins/Careers, exact Elder budgets/roll histories, resource precedence, all Psychology rows, legal discount limits/ritual interpretation, 4+10 training, duplicate generic spell counts, High Magic prerequisites/bands/caps, techniques, qualified equipment and editable PDF output. Browser QA uses an isolated `?verify=1` draft; source books are never bundled in the public app.
 
-## Expanded reference search — 7 October 2026
+## Reviewed reference imports — 7 October 2026
 
-Yenlui/Elder/Blood procedures, training/sword-dancing/High Magic, naval equipment, intrigue, cult obligations and printed Mage levels 1–5 plus the three priest Careers at levels 3–5. Their references do not add unsupported Career levels or branches to player creation. These additions are readable in both creators regardless of enabled creation books. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; only other rules/options remain searchable. Core GM creation is unchanged.
+
+Yenlui/Elder/Blood procedures, training/sword-dancing/High Magic, naval equipment, intrigue, cult obligations and printed Mage levels 1–5 plus the three priest Careers at levels 3–5. Their references do not add unsupported Career levels or branches to player creation. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Gameplay references only; setting-only prose, adventure scenes and secrets are excluded. Existing adapted creator profiles are retained. This inventory audits selected gameplay ranges and isolated printed profiles, not every sentence in the PDFs.",
+  "scope": "Gameplay reference search excludes standalone NPC/creature profiles and templates by user request. Reviewed source records are retained separately for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles are retained. This inventory audits selected gameplay ranges and retained printed records, not every sentence in the PDFs.",
   "books": {
     "core": {
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
@@ -23036,7 +23036,7 @@
           "id": "blood-bramble:reference:11-morock-the-bonetaker",
           "sourceHash": "b99357b4c84f3a9892305140e53c30596ffbccd6011a93e48caac5f0b6cdffab",
           "disposition": "included",
-          "reason": "Reviewed source section.",
+          "reason": "Named NPC spirit Tasks/Boons retained as a profile for future use, excluded from shared search by the 8 October user decision.",
           "targets": [
             "blood-bramble:reference:11-morock-the-bonetaker"
           ]
@@ -23057,7 +23057,7 @@
           "id": "blood-bramble:reference:11-bruck-who-babbles",
           "sourceHash": "f06321b87fc97f292f70d9a8534a8907be01b90cb9b3278b460ee20d66e3b0ee",
           "disposition": "included",
-          "reason": "Reviewed source section.",
+          "reason": "Named NPC spirit Tasks/Boons retained as a profile for future use, excluded from shared search by the 8 October user decision.",
           "targets": [
             "blood-bramble:reference:11-bruck-who-babbles"
           ]
@@ -23078,7 +23078,7 @@
           "id": "blood-bramble:reference:11-the-shrike-of-unterdell",
           "sourceHash": "5ff5a08fe9d4757e35715185550d38cd127949efbef76f50fef2837985ffbd54",
           "disposition": "included",
-          "reason": "Reviewed source section.",
+          "reason": "Named NPC spirit Tasks/Boons retained as a profile for future use, excluded from shared search by the 8 October user decision.",
           "targets": [
             "blood-bramble:reference:11-the-shrike-of-unterdell"
           ]
@@ -23231,7 +23231,7 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "bc849de5c2c8b74a0a97ca115b98fa19f6284fd3a24e9273bd0468dd59e6834e",
+      "publishedSHA256": "1f4a23971b56a998beda28db93dff716f40e0844a9cc7c6fa8a292542c872011",
       "entries": 8
     },
     "deft-steps": {

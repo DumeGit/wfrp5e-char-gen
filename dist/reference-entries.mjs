@@ -18,6 +18,11 @@ export const REFERENCE_CATEGORIES = [
   "template",
   "mutation",
 ];
+// Keep reviewed NPC sources for a future search extension. The current shared
+// reader excludes stat blocks and templates; GM creation uses its own catalogue.
+export const isSearchCategoryEnabled = (category) =>
+  category !== "profile" && category !== "template";
+
 export function validateReferenceEntry(entry, book) {
   const nonempty = (value) => typeof value === "string" && !!value.trim();
   const page = String(entry?.page || "")

@@ -16933,9 +16933,9 @@
       "recordCounts": {
         "implemented": 135,
         "adapted": 12,
-        "reference-only": 146,
+        "reference-only": 137,
         "unavailable": 1,
-        "deferred": 0
+        "deferred": 9
       },
       "featureCounts": {
         "implemented": 0,
@@ -16969,9 +16969,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 146,
+          "reference-only": 137,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 9
         },
         "spells": {
           "implemented": 8,
@@ -18206,12 +18206,12 @@
           "contentId": "up-in-arms:reference:109-profile-demigryph-mount",
           "kind": "referenceEntries",
           "name": "Demigryph Mount",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 109
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:110-hire-em-and-fire-em",
@@ -18283,67 +18283,67 @@
           "contentId": "up-in-arms:reference:113-profile-local-scout-silver-1",
           "kind": "referenceEntries",
           "name": "Local Scout — Silver 1",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 113
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:113-profile-seasoned-mercenary-silver-3",
           "kind": "referenceEntries",
           "name": "Seasoned Mercenary — Silver 3",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 113
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:114-profile-doktor-silver-5",
           "kind": "referenceEntries",
           "name": "Doktor — Silver 5",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 114
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:114-profile-lawyer-silver-3",
           "kind": "referenceEntries",
           "name": "Lawyer — Silver 3",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 114
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:114-profile-porter-silver-1",
           "kind": "referenceEntries",
           "name": "Porter — Silver 1",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 114
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:114-profile-scribe-silver-2",
           "kind": "referenceEntries",
           "name": "Scribe — Silver 2",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 114
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:116-physical-quirks",
@@ -19031,23 +19031,23 @@
           "contentId": "up-in-arms:reference:29-profile-destrier-heavy-warhorse",
           "kind": "referenceEntries",
           "name": "Destrier — Heavy Warhorse",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 29
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:29-profile-riding-horse",
           "kind": "referenceEntries",
           "name": "Riding Horse",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "up-in-arms",
             "page": 29
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "up-in-arms:reference:70-strictures-of-myrmidia",
@@ -20277,9 +20277,9 @@
       "recordCounts": {
         "implemented": 31,
         "adapted": 22,
-        "reference-only": 25,
+        "reference-only": 12,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 13
       },
       "featureCounts": {
         "implemented": 0,
@@ -20313,9 +20313,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 25,
+          "reference-only": 12,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 13
         },
         "talents": {
           "implemented": 0,
@@ -20755,67 +20755,67 @@
           "contentId": "archives-i:reference:23-profile-misodoctakleidist-doc-ashfield-soldier-silver-3",
           "kind": "referenceEntries",
           "name": "Misodoctakleidist ‘Doc’ Ashfield Soldier (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 23
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:24-profile-thomasina-tina-brambledown-bargeswain-silver-3",
           "kind": "referenceEntries",
           "name": "Thomasina ‘Tina’ Brambledown Bargeswain (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 24
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:27-profile-luitpoldstrasse-louis-lostpockets-master-beggar-brass-4",
           "kind": "referenceEntries",
           "name": "Luitpoldstrasse ‘Louis’ Lostpockets Master Beggar (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 27
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:28-profile-belliquotious-bella-lowhaven-iv-racketeer-brass-5",
           "kind": "referenceEntries",
           "name": "Belliquotious ‘Bella’ Lowhaven Iv Racketeer (Brass 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 28
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:29-profile-suffonsification-suffy-rumster-lvi-apprentice-artisan-brass-2",
           "kind": "referenceEntries",
           "name": "Suffonsification ‘Suffy’ Rumster Lvi Apprentice Artisan (Brass 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 29
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:30-profile-spoondrift-spoony-skelfsider-grave-robber-brass-3",
           "kind": "referenceEntries",
           "name": "Spoondrift ‘Spoony’ Skelfsider – Grave Robber (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 30
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:31-options-halfling-nobles",
@@ -20832,12 +20832,12 @@
           "contentId": "archives-i:reference:31-profile-thelonius-hardcastle-monkenbridge-thorncobble-xii-scion-gold-1",
           "kind": "referenceEntries",
           "name": "Thelonius Hardcastle Monkenbridge Thorncobble Xii – Scion (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 31
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:32-options-halfling-clan-skills-and-talents",
@@ -20854,67 +20854,67 @@
           "contentId": "archives-i:reference:56-profile-alrik-skagsson-inquisitor-silver-5",
           "kind": "referenceEntries",
           "name": "Alrik Skagsson – Inquisitor (Silver 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 56
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:56-profile-karstin-largsdottir-agent-gold-1",
           "kind": "referenceEntries",
           "name": "Karstin Largsdottir – Agent (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 56
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:57-profile-thyk-hurgarsson-fellow-silver-5",
           "kind": "referenceEntries",
           "name": "Thyk Hurgarsson – Fellow (Silver 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 57
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:62-profile-volund-sliverscar-chartered-engineer-gold-2",
           "kind": "referenceEntries",
           "name": "Volund Sliverscar Chartered Engineer (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 62
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:63-profile-gurniksson-hammerback-miner-foreman-silver-4",
           "kind": "referenceEntries",
           "name": "Gurniksson Hammerback – Miner Foreman (Silver 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 63
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:63-profile-ragni-thorisson-officer-gold-1",
           "kind": "referenceEntries",
           "name": "Ragni Thorisson – Officer (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-i",
             "page": 63
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-i:reference:78-eonir-player-characters",
@@ -21222,9 +21222,9 @@
       "recordCounts": {
         "implemented": 50,
         "adapted": 7,
-        "reference-only": 122,
+        "reference-only": 107,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 15
       },
       "featureCounts": {
         "implemented": 0,
@@ -21272,9 +21272,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 122,
+          "reference-only": 107,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 15
         },
         "species": {
           "implemented": 0,
@@ -21735,23 +21735,23 @@
           "contentId": "archives-ii:reference:14-profile-isrogdal-the-urgent-ogre-protagonist-former-pugilist-silver-1",
           "kind": "referenceEntries",
           "name": "Isrogdal The Urgent — Ogre Protagonist, Former Pugilist (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 14
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:14-profile-ugrik-the-lost-ogre-outlaw-brass-2",
           "kind": "referenceEntries",
           "name": "Ugrik The Lost — Ogre Outlaw (Brass 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 14
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:18-ogres-and-mutation",
@@ -21944,23 +21944,23 @@
           "contentId": "archives-ii:reference:26-artur-hammerfoot-ogre-artisan",
           "kind": "referenceEntries",
           "name": "Artur Hammerfoot, Ogre Artisan",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 26
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:26-nazzaalta-talltale-ogre-stevedore",
           "kind": "referenceEntries",
           "name": "Nazzaalta Talltale, Ogre Stevedore",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 26
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:28-deathblow",
@@ -22131,12 +22131,12 @@
           "contentId": "archives-ii:reference:34-rhinox",
           "kind": "referenceEntries",
           "name": "Rhinox",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 34
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:39-star-sign-table",
@@ -22604,111 +22604,111 @@
           "contentId": "archives-ii:reference:74-profile-margaret-von-aschendorf-abbess-shallya-silver-2",
           "kind": "referenceEntries",
           "name": "Margaret Von Aschendorf Abbess (Shallya) (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 74
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:75-profile-anna-lise-levertske-nun-former-apothecary-brass-4",
           "kind": "referenceEntries",
           "name": "Anna-Lise Levertske Nun, Former Apothecary (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 75
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:75-profile-clementine-clausewitz-nun-shallya-brass-4",
           "kind": "referenceEntries",
           "name": "Clementine Clausewitz Nun (Shallya) (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 75
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:75-profile-marie-duvallier-nun-shallya-former-physician-brass-4",
           "kind": "referenceEntries",
           "name": "Marie Duvallier Nun (Shallya), Former Physician (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 75
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:76-profile-hanna-bratsch-attendant-former-sergeant-brass-3",
           "kind": "referenceEntries",
           "name": "Hanna Bratsch Attendant, Former Sergeant (Brass 3*)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 76
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:76-profile-typical-sister-nun-shallya-brass-4",
           "kind": "referenceEntries",
           "name": "Typical Sister — Nun (Shallya) (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 76
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:77-erzbet-wegener-patient-brass-0",
           "kind": "referenceEntries",
           "name": "Erzbet Wegener — Patient (Brass 0)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 77
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:78-profile-adalmann-von-hopfberg-noble-lord-gold-7",
           "kind": "referenceEntries",
           "name": "Adalmann Von Hopfberg Noble Lord (Gold 7)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 78
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:79-profile-isabella-seer-brass-4",
           "kind": "referenceEntries",
           "name": "Isabella — Seer (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 79
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:80-profile-richter-kless-professor-gold-1",
           "kind": "referenceEntries",
           "name": "Richter Kless — Professor (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-ii",
             "page": 80
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-ii:reference:82-power",
@@ -23363,9 +23363,9 @@
       "recordCounts": {
         "implemented": 45,
         "adapted": 14,
-        "reference-only": 124,
+        "reference-only": 112,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 12
       },
       "featureCounts": {
         "implemented": 1,
@@ -23399,9 +23399,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 124,
+          "reference-only": 112,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 12
         },
         "spells": {
           "implemented": 20,
@@ -23922,12 +23922,12 @@
           "contentId": "archives-iii:reference:30-profile-grafina-griselda-human-magnate-gold-5",
           "kind": "referenceEntries",
           "name": "Grafina Griselda — Human Magnate Gold 5",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 30
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:34-armour-and-stealth-tests",
@@ -24505,56 +24505,56 @@
           "contentId": "archives-iii:reference:76-profile-badger",
           "kind": "referenceEntries",
           "name": "Badger",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 76
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:77-profile-cat",
           "kind": "referenceEntries",
           "name": "Cat",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 77
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:77-profile-crow",
           "kind": "referenceEntries",
           "name": "Crow",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 77
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:77-profile-fox",
           "kind": "referenceEntries",
           "name": "Fox",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 77
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:77-profile-owl",
           "kind": "referenceEntries",
           "name": "Owl",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 77
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:78-animal-familiar-characteristics",
@@ -24582,12 +24582,12 @@
           "contentId": "archives-iii:reference:78-profile-stoat",
           "kind": "referenceEntries",
           "name": "Stoat",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 78
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:79-animal-skills-parent-characteristics",
@@ -25077,56 +25077,56 @@
           "contentId": "archives-iii:reference:90-profile-lord-adalbert-knopp-inzel-human-first-knight-and-spy-gold-2",
           "kind": "referenceEntries",
           "name": "Lord Adalbert Knopp-Inzel Human First Knight (And Spy) Gold 2",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 90
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:92-profile-brother-samhel-human-priest-of-morr-silver-1",
           "kind": "referenceEntries",
           "name": "Brother Samhel Human Priest Of Morr (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 92
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:93-profile-ella-terenz-human-con-artist-silver-2",
           "kind": "referenceEntries",
           "name": "Ella Terenz Human Con Artist (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 93
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:94-profile-leonard-human-squire-silver-3",
           "kind": "referenceEntries",
           "name": "Leonard Human Squire (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 94
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:reference:94-profile-ridrek-blackhelm-dwarf-entertainer-and-spy-brass-5",
           "kind": "referenceEntries",
           "name": "Ridrek Blackhelm Dwarf Entertainer (And Spy) (Brass 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "archives-iii",
             "page": 94
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "archives-iii:spell:a-deals-a-deal",
@@ -25550,9 +25550,9 @@
       "recordCounts": {
         "implemented": 120,
         "adapted": 55,
-        "reference-only": 285,
+        "reference-only": 264,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 21
       },
       "featureCounts": {
         "implemented": 1,
@@ -25579,9 +25579,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 284,
+          "reference-only": 263,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 21
         },
         "skills": {
           "implemented": 1,
@@ -25841,12 +25841,12 @@
           "contentId": "winds-of-magic:reference:109-profile-immanuel-ferrand-holswig-schliestein-human-spymaster-gold-4",
           "kind": "referenceEntries",
           "name": "Immanuel-Ferrand Holswig-Schliestein Human Spymaster (Gold 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 109
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:110-bewilder",
@@ -25962,12 +25962,12 @@
           "contentId": "winds-of-magic:reference:121-profile-elspeth-von-draken-human-wizard-lord-gold-2",
           "kind": "referenceEntries",
           "name": "Elspeth Von Draken Human Wizard Lord (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 121
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:122-the-lore-of-death",
@@ -26083,12 +26083,12 @@
           "contentId": "winds-of-magic:reference:133-profile-sergov-pfeiffer-human-bright-wizard-silver-3",
           "kind": "referenceEntries",
           "name": "Sergov Pfeiffer Human Bright Wizard (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 133
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:134-aqshys-aegis",
@@ -26193,12 +26193,12 @@
           "contentId": "winds-of-magic:reference:145-profile-gregor-martak-human-shaman-lord-gold-2",
           "kind": "referenceEntries",
           "name": "Gregor Martak Human Shaman Lord (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 145
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:146-amber-talons",
@@ -26930,23 +26930,23 @@
           "contentId": "winds-of-magic:reference:174-profile-incarnate-elemental-of-fire",
           "kind": "referenceEntries",
           "name": "Incarnate Elemental Of Fire",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 174
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:175-profile-incarnate-elemental-of-death",
           "kind": "referenceEntries",
           "name": "Incarnate Elemental Of Death",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 175
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:176-creature-trait-grim-rating",
@@ -26974,12 +26974,12 @@
           "contentId": "winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts",
           "kind": "referenceEntries",
           "name": "Incarnate Elemental Of Beasts",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 176
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:177-magical-constructs",
@@ -27007,12 +27007,12 @@
           "contentId": "winds-of-magic:reference:179-profile-fenbeast",
           "kind": "referenceEntries",
           "name": "Fenbeast",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 179
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:180-lores-and-familiars",
@@ -27073,34 +27073,34 @@
           "contentId": "winds-of-magic:reference:182-profile-combat-familiar",
           "kind": "referenceEntries",
           "name": "Combat Familiar",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 182
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:182-profile-power-familiar",
           "kind": "referenceEntries",
           "name": "Power Familiar",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 182
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:182-profile-spell-familiar",
           "kind": "referenceEntries",
           "name": "Spell Familiar",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 182
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:184-the-bond-between-spellcasters-and-familiars",
@@ -27678,56 +27678,56 @@
           "contentId": "winds-of-magic:reference:210-profile-egrimm-van-horstmann",
           "kind": "referenceEntries",
           "name": "Egrimm Van Horstmann",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 210
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:213-profile-library-disc-of-tzeentch",
           "kind": "referenceEntries",
           "name": "Library Disc Of Tzeentch",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 213
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:213-profile-ptarix-the-one-who-writes",
           "kind": "referenceEntries",
           "name": "P’Tarix – The One Who Writes",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 213
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:213-profile-xiratp-the-one-who-reads",
           "kind": "referenceEntries",
           "name": "Xirat’P – The One Who Reads",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 213
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:216-profile-mona-mimn-fimir-matriarch",
           "kind": "referenceEntries",
           "name": "Mòna Mimn — Fimir Matriarch",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 216
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:217-a-bite-of-midges",
@@ -28052,12 +28052,12 @@
           "contentId": "winds-of-magic:reference:30-construct",
           "kind": "referenceEntries",
           "name": "Construct",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 30
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:30-construct-traits",
@@ -28514,12 +28514,12 @@
           "contentId": "winds-of-magic:reference:61-profile-ashamira-dib-hierophant-silver-3",
           "kind": "referenceEntries",
           "name": "Ashamira Dib Hierophant (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 61
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:62-banishment",
@@ -28635,12 +28635,12 @@
           "contentId": "winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4",
           "kind": "referenceEntries",
           "name": "Balthasar Gelt Alchemist Lord (Gold 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 73
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:74-crucible-of-chamon",
@@ -28745,12 +28745,12 @@
           "contentId": "winds-of-magic:reference:85-profile-tochter-grunfeld-human-wizard-lord-gold-2",
           "kind": "referenceEntries",
           "name": "Tochter Grunfeld Human Wizard Lord (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 85
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:86-barkskin",
@@ -28866,12 +28866,12 @@
           "contentId": "winds-of-magic:reference:97-profile-raphael-julevno-grand-astromancer-gold-1",
           "kind": "referenceEntries",
           "name": "Raphael Julevno Grand Astromancer (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "winds-of-magic",
             "page": 97
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "winds-of-magic:reference:98-cerulean-shield",
@@ -30757,9 +30757,9 @@
       "recordCounts": {
         "implemented": 3,
         "adapted": 5,
-        "reference-only": 104,
+        "reference-only": 24,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 80
       },
       "featureCounts": {
         "implemented": 0,
@@ -30786,9 +30786,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 104,
+          "reference-only": 24,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 80
         },
         "species": {
           "implemented": 0,
@@ -30861,518 +30861,518 @@
           "contentId": "rough-nights:reference:17-profile-bruno-franke-judicial-champion-gold-3",
           "kind": "referenceEntries",
           "name": "Bruno Franke – Judicial Champion (Gold 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 17
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:17-profile-gustaf-rechtshandler-barrister-gold-1",
           "kind": "referenceEntries",
           "name": "Gustaf Rechtshandler – Barrister (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 17
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:17-profile-maria-ulrike-von-liebwitz-noble-lord-gold-7",
           "kind": "referenceEntries",
           "name": "Maria-Ulrike Von Liebwitz – Noble Lord (Gold 7)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 17
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:18-profile-bodyguards-and-men-at-arms-silver-3",
           "kind": "referenceEntries",
           "name": "Bodyguards And Men-At-Arms (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 18
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:18-profile-dominique-herveaux-assassin-gold-1",
           "kind": "referenceEntries",
           "name": "Dominique Herveaux – Assassin (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 18
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:18-profile-gunni-bart-and-hans-frederick-smugglers-brass-3",
           "kind": "referenceEntries",
           "name": "Gunni, Bart, And Hans-Frederick – Smugglers (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 18
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:18-profile-handmaids-and-servants-silver-3",
           "kind": "referenceEntries",
           "name": "Handmaids And Servants (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 18
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:19-profile-josef-aufwiegler-rabble-rouser-brass-3",
           "kind": "referenceEntries",
           "name": "Josef Aufwiegler – Rabble Rouser (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 19
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:19-profile-ursula-kopfgeld-master-bounty-hunter-silver-5",
           "kind": "referenceEntries",
           "name": "Ursula Kopfgeld – Master Bounty Hunter (Silver 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 19
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:20-profile-friedrich-von-pfeifraucher-magnate-gold-5",
           "kind": "referenceEntries",
           "name": "Friedrich Von Pfeifraucher – Magnate (Gold 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 20
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:20-profile-hanna-lastkahn-townswoman-silver-2",
           "kind": "referenceEntries",
           "name": "Hanna Lastkahn – Townswoman (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 20
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:20-profile-mho-larz-and-curls-thugs-brass-3",
           "kind": "referenceEntries",
           "name": "Mho, Larz, And ‘Curls’ – Thugs (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 20
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:20-profile-thomas-prahmhandler-master-merchant-gold-1",
           "kind": "referenceEntries",
           "name": "Thomas Prahmhandler – Master Merchant (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 20
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:21-profile-allrella-elphoise-and-helga-slaanesh-cultists-silver-1",
           "kind": "referenceEntries",
           "name": "Allrella, Elphoise, And Helga – Slaanesh Cultists (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 21
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:21-profile-boatmen-silver-2",
           "kind": "referenceEntries",
           "name": "Boatmen (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 21
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:21-profile-coachmen-silver-2",
           "kind": "referenceEntries",
           "name": "Coachmen (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 21
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:21-profile-glimbrin-oddsocks-master-thief-brass-5",
           "kind": "referenceEntries",
           "name": "Glimbrin Oddsocks – Master Thief (Brass 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 21
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:22-profile-hans-orf-townsman-silver-2",
           "kind": "referenceEntries",
           "name": "Hans Orf – Townsman (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 22
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:22-profile-mercinellin-seedling-thorncobble-xiii-hustler-brass-1",
           "kind": "referenceEntries",
           "name": "Mercinellin ‘Seedling’ Thorncobble Xiii – Hustler (Brass 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 22
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:22-profile-ol-bess-artisan-silver-1",
           "kind": "referenceEntries",
           "name": "Ol’ Bess – Artisan (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 22
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:22-profile-servants-cleaners-and-similar-menials-brass-3",
           "kind": "referenceEntries",
           "name": "Servants, Cleaners, And Similar – Menials (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 22
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:33-profile-imperial-viper",
           "kind": "referenceEntries",
           "name": "Imperial Viper",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 33
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:33-profile-kappans-racketeers-thugs-brass-3",
           "kind": "referenceEntries",
           "name": "Kappan’S Racketeers – Thugs (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 33
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:33-profile-otto-von-dammenblatz-noble-lord-gold-7",
           "kind": "referenceEntries",
           "name": "Otto Von Dammenblatz – Noble Lord (Gold 7)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 33
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:34-profile-matthias-hubkind-witch-hunter-silver-3",
           "kind": "referenceEntries",
           "name": "Matthias Hubkind – Witch Hunter (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 34
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:34-profile-restless-ghost",
           "kind": "referenceEntries",
           "name": "Restless Ghost",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 34
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:35-profile-8-watchmen-khorne-cultists-silver-1",
           "kind": "referenceEntries",
           "name": "8 Watchmen – Khorne Cultists (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 35
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:35-profile-bloodletters",
           "kind": "referenceEntries",
           "name": "Bloodletters",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 35
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:35-profile-magistrates-judges-gold-2",
           "kind": "referenceEntries",
           "name": "Magistrates – Judges (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 35
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:35-profile-petra-steinmetz-high-priestess-gold-1",
           "kind": "referenceEntries",
           "name": "Petra Steinmetz – High Priestess (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 35
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:48-profile-brecht-kavenner-slaanesh-cultist-and-barrister-gold-3",
           "kind": "referenceEntries",
           "name": "Brecht Kavenner – Slaanesh Cultist And Barrister (Gold 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 48
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:48-profile-emmanuelle-von-liebwitz-elector-countess-gold-15",
           "kind": "referenceEntries",
           "name": "Emmanuelle Von Liebwitz – Elector Countess (Gold 15)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 48
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:48-profile-noble-servants-gold-2",
           "kind": "referenceEntries",
           "name": "Noble Servants (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 48
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:49-profile-brocks-and-reiner-spies-silver-3",
           "kind": "referenceEntries",
           "name": "Brocks And Reiner – Spies (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:49-profile-musicians-silver-1",
           "kind": "referenceEntries",
           "name": "Musicians (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:49-profile-palace-guards-gold-2",
           "kind": "referenceEntries",
           "name": "Palace Guards (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:49-profile-performers-silver-1",
           "kind": "referenceEntries",
           "name": "Performers (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:49-profile-servants-silver-1",
           "kind": "referenceEntries",
           "name": "Servants (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:49-profile-stagehands-silver-1",
           "kind": "referenceEntries",
           "name": "Stagehands (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:50-profile-cannon-and-mortar-students-student-engineers-brass-4",
           "kind": "referenceEntries",
           "name": "Cannon And Mortar Students – Student Engineers (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 50
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:50-profile-edvard-lowenhertz-wyrd-brass-3",
           "kind": "referenceEntries",
           "name": "Edvard Lowenhertz – Wyrd (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 50
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:50-profile-edwina-lowenhertz-witch-brass-2",
           "kind": "referenceEntries",
           "name": "Edwina Lowenhertz – Witch (Brass 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 50
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:50-profile-erwin-pakker-professor-gold-1",
           "kind": "referenceEntries",
           "name": "Erwin Pakker – Professor (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 50
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:51-profile-assassins-silver-1",
           "kind": "referenceEntries",
           "name": "Assassins (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 51
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:51-profile-detlef-sierck-genius-gold-3",
           "kind": "referenceEntries",
           "name": "Detlef Sierck – Genius (Gold 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 51
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:52-profile-martyn-ruchen-chaos-cult-leader-and-chaos-sorcerer-silver-3",
           "kind": "referenceEntries",
           "name": "Martyn Ruchen – Chaos Cult Leader And Chaos Sorcerer (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 52
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:52-profile-nurgle-cultists",
           "kind": "referenceEntries",
           "name": "Nurgle Cultists",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 52
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:52-reveal-the-inner-beauty",
@@ -31389,364 +31389,364 @@
           "contentId": "rough-nights:reference:53-profile-hubkinds-mob-brass-4",
           "kind": "referenceEntries",
           "name": "Hubkind’S Mob (Brass 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 53
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:53-profile-nulner-watchmen-silver-1",
           "kind": "referenceEntries",
           "name": "Nulner Watchmen (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 53
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:53-profile-operagoer-silver-2",
           "kind": "referenceEntries",
           "name": "Operagoer (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 53
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:53-profile-watch-sergeant-silver-1",
           "kind": "referenceEntries",
           "name": "Watch Sergeant (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 53
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:53-profile-young-noble-gold-1",
           "kind": "referenceEntries",
           "name": "Young Noble (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 53
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:64-profile-wilhelm-von-saponatheim-noble-lord-gold-7",
           "kind": "referenceEntries",
           "name": "Wilhelm Von Saponatheim – Noble Lord (Gold 7)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 64
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:65-profile-inta-dapesht",
           "kind": "referenceEntries",
           "name": "Inta-Dapesht",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 65
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:65-profile-joachim-bitterfeld-artisan-silver-1",
           "kind": "referenceEntries",
           "name": "Joachim Bitterfeld – Artisan (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 65
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:65-profile-nastassia-von-saponatheim-scion-gold-1",
           "kind": "referenceEntries",
           "name": "Nastassia Von Saponatheim – Scion (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 65
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:66-profile-cultists-of-the-jade-sceptre-gold-2",
           "kind": "referenceEntries",
           "name": "Cultists Of The Jade Sceptre (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 66
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:66-profile-manfred-von-saponatheim-prisoner-brass-0",
           "kind": "referenceEntries",
           "name": "Manfred Von Saponatheim – Prisoner (Brass 0)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 66
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:67-profile-clothilde-telland-noble-gold-4",
           "kind": "referenceEntries",
           "name": "Clothilde Telland – Noble (Gold 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 67
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:67-profile-josef-von-angendorf-cat-burglar-gold-2",
           "kind": "referenceEntries",
           "name": "Josef Von Angendorf – Cat Burglar (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 67
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:67-profile-taggees-spies-gold-2",
           "kind": "referenceEntries",
           "name": "Taggees – Spies (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 67
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:80-profile-erich-von-holzenauer-noble-gold-2",
           "kind": "referenceEntries",
           "name": "Erich Von Holzenauer – Noble (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 80
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:80-profile-siegfried-von-saponatheim-noble-gold-2",
           "kind": "referenceEntries",
           "name": "Siegfried Von Saponatheim – Noble (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 80
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:81-profile-galina-hohengolfrid-noble-gold-2",
           "kind": "referenceEntries",
           "name": "Galina Hohengolfrid – Noble (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 81
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:81-profile-heinrich-von-bruner-magnate-gold-3",
           "kind": "referenceEntries",
           "name": "Heinrich Von Bruner – Magnate (Gold 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 81
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:81-profile-maximilian-aschaffenburg-scion-gold-1",
           "kind": "referenceEntries",
           "name": "Maximilian Aschaffenburg – Scion (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 81
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:81-profile-rickard-aschaffenberg-magnate-gold-3",
           "kind": "referenceEntries",
           "name": "Rickard Aschaffenberg – Magnate (Gold 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 81
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:82-profile-florian-pfeifraucher-noble-gold-2",
           "kind": "referenceEntries",
           "name": "Florian Pfeifraucher – Noble (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 82
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:82-profile-heinrich-von-falkenhayn-noble-gold-2",
           "kind": "referenceEntries",
           "name": "Heinrich Von Falkenhayn – Noble (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 82
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:82-profile-jean-luc-de-cadent-agent-gold-1",
           "kind": "referenceEntries",
           "name": "Jean-Luc De Cadent – Agent (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 82
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:83-profile-borgan-foambeard-guildmaster-gold-1",
           "kind": "referenceEntries",
           "name": "Borgan Foambeard – Guildmaster (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 83
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:83-profile-ernst-maler-burgomeister-gold-1",
           "kind": "referenceEntries",
           "name": "Ernst Maler – Burgomeister (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 83
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:83-profile-otto-krupp-guildmaster-gold-1",
           "kind": "referenceEntries",
           "name": "Otto Krupp – Guildmaster (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 83
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:84-profile-gunther-emming-high-priest-gold-1",
           "kind": "referenceEntries",
           "name": "Gunther Emming – High Priest (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 84
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:84-profile-heinrich-gutenberg-high-priest-gold-1",
           "kind": "referenceEntries",
           "name": "Heinrich Gutenberg – High Priest (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 84
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:84-profile-lorith-silverleaf-envoy-silver-4",
           "kind": "referenceEntries",
           "name": "Lorith Silverleaf – Envoy (Silver 4)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 84
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:85-profile-andrea-pfeffer-officer-gold-2",
           "kind": "referenceEntries",
           "name": "Andrea Pfeffer – Officer (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 85
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:85-profile-celestine-hoch-priestess-silver-1",
           "kind": "referenceEntries",
           "name": "Celestine Hoch – Priestess (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 85
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:85-profile-erwin-blucher-officer-gold-2",
           "kind": "referenceEntries",
           "name": "Erwin Blucher – Officer (Gold 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 85
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:85-profile-jendrik-von-dabernick-officer-gold-1",
           "kind": "referenceEntries",
           "name": "Jendrik Von Dabernick – Officer (Gold 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "rough-nights",
             "page": 85
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "rough-nights:reference:87-random-class-and-career-table",
@@ -38371,14 +38371,14 @@
     {
       "id": "blood-bramble",
       "title": "Blood and Bramble",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 15,
         "adapted": 10,
-        "reference-only": 8,
+        "reference-only": 2,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 6
       },
       "featureCounts": {
         "implemented": 0,
@@ -38398,9 +38398,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 8,
+          "reference-only": 2,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 6
         },
         "spells": {
           "implemented": 14,
@@ -38426,34 +38426,34 @@
           "contentId": "blood-bramble:reference:11-bruck-who-babbles",
           "kind": "referenceEntries",
           "name": "Brück Who Babbles",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "blood-bramble",
             "page": 11
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "blood-bramble:reference:11-morock-the-bonetaker",
           "kind": "referenceEntries",
           "name": "Morock the Bonetaker",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "blood-bramble",
             "page": 11
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "blood-bramble:reference:11-the-shrike-of-unterdell",
           "kind": "referenceEntries",
           "name": "The Shrike of Unterdell",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "blood-bramble",
             "page": 11
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "blood-bramble:reference:17-nameless-summons-table",
@@ -38470,34 +38470,34 @@
           "contentId": "blood-bramble:reference:19-profile-old-mar-of-deisdorf-hedge-master-brass-3",
           "kind": "referenceEntries",
           "name": "Old Mar Of Deisdorf Hedge Master (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "blood-bramble",
             "page": 19
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "blood-bramble:reference:20-profile-toll-jagerfund-witch-hunter-silver-3",
           "kind": "referenceEntries",
           "name": "Toll Jagerfund Witch Hunter (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "blood-bramble",
             "page": 20
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "blood-bramble:reference:21-profile-marius-childers-witch-former-merchant-silver-3",
           "kind": "referenceEntries",
           "name": "Marius Childers Witch, Former Merchant (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "blood-bramble",
             "page": 21
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "blood-bramble:reference:6-the-lore-of-hedgecraft",
@@ -38805,9 +38805,9 @@
       "recordCounts": {
         "implemented": 39,
         "adapted": 18,
-        "reference-only": 204,
+        "reference-only": 182,
         "unavailable": 0,
-        "deferred": 0
+        "deferred": 22
       },
       "featureCounts": {
         "implemented": 1,
@@ -38841,9 +38841,9 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 204,
+          "reference-only": 182,
           "unavailable": 0,
-          "deferred": 0
+          "deferred": 22
         },
         "spells": {
           "implemented": 27,
@@ -39232,23 +39232,23 @@
           "contentId": "deft-steps:reference:103-profile-outlaw-brass-2",
           "kind": "referenceEntries",
           "name": "Outlaw Brass 2",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 103
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:103-profile-outlaw-chief-brass-4",
           "kind": "referenceEntries",
           "name": "Outlaw Chief Brass 4",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 103
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:106-conflicts-of-jurisdiction",
@@ -39320,12 +39320,12 @@
           "contentId": "deft-steps:reference:108-profile-a-typical-bounty-hunter-silver-3",
           "kind": "referenceEntries",
           "name": "A Typical Bounty Hunter Silver 3",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 108
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:109-bounty-hunter-warrants",
@@ -39353,12 +39353,12 @@
           "contentId": "deft-steps:reference:111-profile-brunner-bounty-hunter-general",
           "kind": "referenceEntries",
           "name": "Brunner Bounty Hunter General",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 111
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:112-pathfinding",
@@ -39980,34 +39980,34 @@
           "contentId": "deft-steps:reference:133-profile-grootscher-marsh-hound",
           "kind": "referenceEntries",
           "name": "Grootscher Marsh Hound",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 133
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:133-profile-hochland-lockhund",
           "kind": "referenceEntries",
           "name": "Hochland Lockhund",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 133
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:133-profile-nordlander-bamse",
           "kind": "referenceEntries",
           "name": "Nordlander Bamse",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 133
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:134-hawks",
@@ -40035,23 +40035,23 @@
           "contentId": "deft-steps:reference:134-profile-arabyan-redhawk",
           "kind": "referenceEntries",
           "name": "Arabyan Redhawk",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 134
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:134-profile-dove-hawk",
           "kind": "referenceEntries",
           "name": "Dove Hawk",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 134
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:135-a-noble-pursuit",
@@ -40321,12 +40321,12 @@
           "contentId": "deft-steps:reference:34-profile-black-guard-of-morr-knight-silver-5",
           "kind": "referenceEntries",
           "name": "Black Guard Of Morr (Knight) (Silver 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 34
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:35-crypt-complications",
@@ -40750,23 +40750,23 @@
           "contentId": "deft-steps:reference:47-profile-fence-silver-2",
           "kind": "referenceEntries",
           "name": "Fence (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 47
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:47-profile-forger-silver-1",
           "kind": "referenceEntries",
           "name": "Forger (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 47
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:48-information-brokers",
@@ -40794,45 +40794,45 @@
           "contentId": "deft-steps:reference:48-profile-bawd-brass-3",
           "kind": "referenceEntries",
           "name": "Bawd (Brass 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 48
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:48-profile-racketeer-brass-5",
           "kind": "referenceEntries",
           "name": "Racketeer (Brass 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 48
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:49-profile-charlatan-brass-5",
           "kind": "referenceEntries",
           "name": "Charlatan (Brass 5)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2",
           "kind": "referenceEntries",
           "name": "Safe House Owner (Townsman) (Silver 2)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 49
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:50-define-the-contact",
@@ -40893,12 +40893,12 @@
           "contentId": "deft-steps:reference:55-profile-august-sternwachter-master-fence-ex-noble-silver-3",
           "kind": "referenceEntries",
           "name": "August Sternwachter Master Fence, Ex-Noble (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 55
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:56-contacts-and-the-gm",
@@ -41003,23 +41003,23 @@
           "contentId": "deft-steps:reference:64-profile-albrecht-the-fish-gang-boss-silver-3-organisation-level-2",
           "kind": "referenceEntries",
           "name": "Albrecht ‘The Fish’ — Gang Boss Silver 3 - Organisation Level 2",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 64
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:65-profile-gunna-von-sperren-smuggler-king-silver-3-organisation-level-3",
           "kind": "referenceEntries",
           "name": "Gunna Von Sperren — Smuggler King Silver 3 - Organisation Level 3",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 65
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:67-criminal-enterprise-perks",
@@ -41091,12 +41091,12 @@
           "contentId": "deft-steps:reference:83-profile-father-pedragar-priest-of-taal",
           "kind": "referenceEntries",
           "name": "Father Pedragar, Priest Of Taal",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 83
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:87-curse-of-taal",
@@ -41168,23 +41168,23 @@
           "contentId": "deft-steps:reference:93-profile-watch-sergeant-silver-3",
           "kind": "referenceEntries",
           "name": "Watch Sergeant (Silver 3)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 93
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:93-profile-watchman-silver-1",
           "kind": "referenceEntries",
           "name": "Watchman (Silver 1)",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "deft-steps",
             "page": 93
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation."
         },
         {
           "contentId": "deft-steps:reference:93-watch-presence",

@@ -1,8 +1,9 @@
 {
   "schemaVersion": 1,
-  "scope": "Gameplay references only; setting-only prose, adventure scenes and secrets are excluded. Existing adapted creator profiles are retained. This inventory audits selected gameplay ranges and isolated printed profiles, not every sentence in the PDFs.",
-  "references": 4017,
-  "newlyImported": 1468,
+  "scope": "Gameplay reference search excludes standalone NPC/creature profiles and templates by user request. Reviewed source records are retained separately for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles are retained. This inventory audits selected gameplay ranges and retained printed records, not every sentence in the PDFs.",
+  "references": 3779,
+  "newlyImported": 1290,
+  "retainedOutsideSearch": 178,
   "books": [
     {
       "id": "core",
@@ -10,9 +11,10 @@
       "version": "1.1.6",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1975,
+      "references": 1915,
       "newlyImported": 245,
-      "existingReferences": 1730,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 1670,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
@@ -28,8 +30,6 @@
         "species": 5,
         "table": 86,
         "endeavour": 16,
-        "profile": 53,
-        "template": 7,
         "mutation": 40
       },
       "dispositions": {
@@ -98,8 +98,9 @@
       "version": "1.0.2",
       "edition": 4,
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
-      "references": 244,
-      "newlyImported": 146,
+      "references": 235,
+      "newlyImported": 137,
+      "retainedOutsideSearch": 9,
       "existingReferences": 98,
       "adaptedReferences": 12,
       "categories": {
@@ -110,7 +111,6 @@
         "species": 3,
         "rule": 72,
         "table": 40,
-        "profile": 9,
         "property": 7,
         "trait": 1,
         "endeavour": 6
@@ -181,8 +181,9 @@
       "version": "1.0.1",
       "edition": 4,
       "sourceHash": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7",
-      "references": 64,
-      "newlyImported": 25,
+      "references": 51,
+      "newlyImported": 12,
+      "retainedOutsideSearch": 13,
       "existingReferences": 39,
       "adaptedReferences": 21,
       "categories": {
@@ -190,7 +191,6 @@
         "talent": 1,
         "equipment": 18,
         "species": 16,
-        "profile": 13,
         "rule": 4,
         "table": 8
       },
@@ -229,8 +229,9 @@
       "version": "1.0.4",
       "edition": 4,
       "sourceHash": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b",
-      "references": 146,
-      "newlyImported": 122,
+      "references": 131,
+      "newlyImported": 107,
+      "retainedOutsideSearch": 15,
       "existingReferences": 24,
       "adaptedReferences": 7,
       "categories": {
@@ -239,7 +240,6 @@
         "magic": 7,
         "equipment": 12,
         "species": 1,
-        "profile": 15,
         "table": 36,
         "rule": 63,
         "psychology": 1,
@@ -290,8 +290,9 @@
       "version": "1.0.2",
       "edition": 4,
       "sourceHash": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788",
-      "references": 183,
-      "newlyImported": 124,
+      "references": 171,
+      "newlyImported": 112,
+      "retainedOutsideSearch": 12,
       "existingReferences": 59,
       "adaptedReferences": 14,
       "categories": {
@@ -300,7 +301,6 @@
         "species": 11,
         "rule": 77,
         "table": 10,
-        "profile": 12,
         "endeavour": 1,
         "property": 7,
         "trait": 4
@@ -366,8 +366,9 @@
       "version": "1.0.2",
       "edition": 4,
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
-      "references": 456,
-      "newlyImported": 284,
+      "references": 435,
+      "newlyImported": 263,
+      "retainedOutsideSearch": 21,
       "existingReferences": 172,
       "adaptedReferences": 55,
       "categories": {
@@ -377,7 +378,6 @@
         "equipment": 7,
         "rule": 145,
         "table": 29,
-        "profile": 21,
         "endeavour": 5,
         "talent": 3,
         "property": 1,
@@ -509,14 +509,14 @@
       "version": "1.0.2",
       "edition": 4,
       "sourceHash": "08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f7",
-      "references": 106,
-      "newlyImported": 104,
+      "references": 26,
+      "newlyImported": 24,
+      "retainedOutsideSearch": 80,
       "existingReferences": 2,
       "adaptedReferences": 2,
       "categories": {
         "talent": 1,
         "species": 1,
-        "profile": 80,
         "magic": 1,
         "table": 3,
         "rule": 20
@@ -548,6 +548,7 @@
       "sourceHash": "74238e8c5660fcaf2df05dd721b0786e277da42b32eacfa03ca08291d4415a7c",
       "references": 339,
       "newlyImported": 118,
+      "retainedOutsideSearch": 0,
       "existingReferences": 221,
       "adaptedReferences": 102,
       "categories": {
@@ -608,6 +609,7 @@
       "sourceHash": "16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9",
       "references": 204,
       "newlyImported": 88,
+      "retainedOutsideSearch": 0,
       "existingReferences": 116,
       "adaptedReferences": 50,
       "categories": {
@@ -663,19 +665,19 @@
     {
       "id": "blood-bramble",
       "title": "Blood and Bramble",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "edition": 4,
       "sourceHash": "6e62fc57534f2d56cfd99333666389d0bf293ddb81b6f3d8284382b3e2f5b8df",
-      "references": 33,
-      "newlyImported": 8,
+      "references": 27,
+      "newlyImported": 2,
+      "retainedOutsideSearch": 6,
       "existingReferences": 25,
       "adaptedReferences": 10,
       "categories": {
         "magic": 24,
         "equipment": 1,
-        "rule": 4,
-        "table": 1,
-        "profile": 3
+        "rule": 1,
+        "table": 1
       },
       "dispositions": {
         "excluded": 11,
@@ -697,8 +699,9 @@
       "version": "1.0.3",
       "edition": 4,
       "sourceHash": "2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537eec",
-      "references": 260,
-      "newlyImported": 204,
+      "references": 238,
+      "newlyImported": 182,
+      "retainedOutsideSearch": 22,
       "existingReferences": 56,
       "adaptedReferences": 17,
       "categories": {
@@ -707,8 +710,7 @@
         "equipment": 15,
         "rule": 106,
         "table": 44,
-        "endeavour": 32,
-        "profile": 22
+        "endeavour": 32
       },
       "dispositions": {
         "excluded": 201,

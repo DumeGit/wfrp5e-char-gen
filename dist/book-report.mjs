@@ -2,6 +2,7 @@ import { registeredEntries, assembleBooks } from "./books.mjs";
 import { INCLUSION_STATUSES } from "./book-coverage.mjs";
 import { isLegacy } from "./legacy.mjs";
 import { marketCatalog } from "./market.mjs";
+import { isSearchCategoryEnabled } from "./reference-entries.mjs";
 const emptyCounts = () =>
   Object.fromEntries(INCLUSION_STATUSES.map((s) => [s, 0]));
 const count = (rows) =>
@@ -14,14 +15,21 @@ export function buildBookReport(library) {
         const override = pack.data.coverage.records.find(
           (x) => x.contentId === entry.contentId,
         );
+        const deferredSearch =
+          entry.contentKind === "referenceEntries" &&
+          !isSearchCategoryEnabled(entry.category);
         const status = entry.unavailable
           ? "unavailable"
-          : override?.status ||
-            (["ruleReferences", "referenceEntries"].includes(entry.contentKind)
-              ? "reference-only"
-              : isLegacy(R, entry)
-                ? "adapted"
-                : "implemented");
+          : deferredSearch
+            ? "deferred"
+            : override?.status ||
+              (["ruleReferences", "referenceEntries"].includes(
+                entry.contentKind,
+              )
+                ? "reference-only"
+                : isLegacy(R, entry)
+                  ? "adapted"
+                  : "implemented");
         return {
           contentId: entry.contentId,
           kind: entry.contentKind,
@@ -30,6 +38,8 @@ export function buildBookReport(library) {
           source: entry.source,
           reason:
             entry.unavailable ||
+            (deferredSearch &&
+              "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation.") ||
             override?.reason ||
             entry.adaptation ||
             (["ruleReferences", "referenceEntries"].includes(entry.contentKind)

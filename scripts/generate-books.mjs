@@ -69,7 +69,7 @@ for (const pack of library.packs.filter((p) => p.manifest.kind !== "variant")) {
       `Printed references changed without source review: ${pack.manifest.id}`,
     );
 }
-const searchReport = searchCoverage(library, corpus, review);
+const searchReport = searchCoverage(library, corpus, review, gm);
 const outputs = [
   [
     "../dist/data/search-library.json",

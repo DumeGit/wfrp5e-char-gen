@@ -4,7 +4,7 @@
   "title": "Blood and Bramble",
   "shortTitle": "Blood & Bramble",
   "edition": 4,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "supplement",
   "dependsOn": [
     "core"
