@@ -259,6 +259,24 @@ test("Cants and prayers share one searchable category, and load failure can be r
       .getByRole("option", { name: "Rules", exact: true }),
   ).toBeAttached();
   await categoryFilters(page, "magic");
+  const lorePatron = page.getByRole("combobox", {
+    name: "Lore / Patron",
+    exact: true,
+  });
+  await expect(
+    lorePatron.locator('optgroup[label="Lores"] option[value="Fire"]'),
+  ).toBeAttached();
+  await expect(
+    lorePatron.locator('optgroup[label="Patrons"] option[value="Ranald"]'),
+  ).toBeAttached();
+  await expect(
+    lorePatron.locator(
+      'optgroup[label="Lores"] option[value="Ranald"], optgroup[label="Patrons"] option[value="Fire"]',
+    ),
+  ).toHaveCount(0);
+  await expect(
+    lorePatron.locator('optgroup[label="Other"] option[value="Not specified"]'),
+  ).toBeAttached();
   await page
     .getByRole("combobox", { name: "Spell type", exact: true })
     .selectOption("Cant");

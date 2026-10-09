@@ -3,7 +3,7 @@ import { SEARCH_CATEGORIES, searchLabel } from "./search-presentation.mjs";
 import {
   CATEGORY_FILTERS,
   CHARACTERISTICS,
-  filterOptions,
+  filterOptionGroups,
   searchCategory,
 } from "./search-filters.mjs";
 
@@ -153,15 +153,22 @@ export function createSearchController({
     filtersPanel.querySelector(".search-filter-fields").innerHTML = fields
       .map(
         ([key, label]) =>
-          `<label>${esc(label)}<select aria-label="${esc(label)}" data-search-filter="${key}"><option value="">All</option>${filterOptions(
+          `<label>${esc(label)}<select aria-label="${esc(label)}" data-search-filter="${key}"><option value="">All</option>${filterOptionGroups(
             index,
             category,
             key,
           )
-            .map(
-              (value) =>
-                `<option value="${esc(value)}"${values[key] === value ? " selected" : ""}>${esc(CHARACTERISTICS[value] || value)}</option>`,
-            )
+            .map(({ label: groupLabel, values: options }) => {
+              const html = options
+                .map(
+                  (value) =>
+                    `<option value="${esc(value)}"${values[key] === value ? " selected" : ""}>${esc(CHARACTERISTICS[value] || value)}</option>`,
+                )
+                .join("");
+              return groupLabel
+                ? `<optgroup label="${esc(groupLabel)}">${html}</optgroup>`
+                : html;
+            })
             .join("")}</select></label>`,
       )
       .join("");

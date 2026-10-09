@@ -110,3 +110,30 @@ export function filterOptions(rows, category, key) {
     ),
   ].sort((a, b) => a.localeCompare(b));
 }
+
+// Native option groups separate magical traditions from divine patrons.
+// Membership follows the generated spell/prayer type, never name guesses.
+export function filterOptionGroups(rows, category, key) {
+  const values = filterOptions(rows, category, key);
+  if (category !== "magic" || key !== "lore") return [{ label: "", values }];
+  const groups = new Map([
+    ["Lores", new Set()],
+    ["Patrons", new Set()],
+    ["Other", new Set()],
+  ]);
+  for (const row of rows.filter((row) => searchCategory(row) === "magic")) {
+    const label = row.filterValues.type.some((type) =>
+      ["Blessing", "Miracle"].includes(type),
+    )
+      ? "Patrons"
+      : "Lores";
+    for (const value of row.filterValues.lore)
+      groups.get(value === "Not specified" ? "Other" : label).add(value);
+  }
+  return [...groups]
+    .map(([label, members]) => ({
+      label,
+      values: values.filter((value) => members.has(value)),
+    }))
+    .filter((group) => group.values.length);
+}
