@@ -50,3 +50,20 @@ Three proposals are in `design-previews/bestiary-colours.html`, outside `dist`. 
 `bestiary-screen.html` captures the actual isolated core Skeleton Customise screen with the shared production styles. Each proposal overrides semantic colour roles through `bestiary-colours.css`; a few preview-only overrides remove warm fixed overlays and retain contrast when primary buttons use light gold. No layout redesign, new artwork, sound or rules are introduced. The gallery scales the same desktop snapshot into three thumbnails. Full-size links expose normal responsive layout and a native Palette selector for comparison. Disclosures work, but creator actions are inert and there is no rules engine, save/load, service worker or local-storage access in these studies. The supplied Skeleton data is unchanged. The galleries remain historical; production A has its own verification in GM-WORKSHOP.md.
 
 Verification: inspected the three thumbnails and full-size palettes, switched the native selector, checked both W images load, and inspected the gallery/full-size phone layouts at 390×844 without horizontal page overflow. Gallery thumbnails are inert and hidden from the accessibility tree; labelled full-size links provide access. Reviewed body, secondary text, shell and primary-button contrast; selected navigation captions retain readable contrast in B. Palette changes are immediate to avoid mixed-colour transitions during comparison. `npm run check:release` passed all 328 tests and offline coverage; the previews stay outside the 254 published/offline assets. Preview module syntax and formatting checks passed. No creator code, rules, save format or published assets changed.
+
+
+## Marijan Mode colour studies — 9 October 2026
+
+The new gallery is `design-previews/marijan-colours.html`; run `node design-previews/serve.mjs` and open port 8110 at that path. Full-size `marijan-screen.html` supports native style switching and responsive layout. Production remains unchanged pending selection.
+
+| Study | Direction |
+| --- | --- |
+| A — Ivory Ascendancy | Ivory parchment, storm-blue framing and pale gold; familiar bright editing |
+| B — Stormglass | Dark teal working page, moon-silver edging and mint actions; an arcane console |
+| C — The Forbidden Grimoire | Midnight violet, ivory text and antique gold; a forbidden spellbook |
+
+All three use one original generated elven battle banner inspired by the supplied reference, with provenance and exact prompt in [design-assets/marijan](../design-assets/marijan/README.md). Preview colour roles remain isolated in `marijan-colours.css`; no live theme picker or save preference is introduced.
+
+The screen reuses the current Marijan `workspace` output and shared controls/fonts/borders, with a shortened static identity display and deliberately unrestricted demo values. Skills, Talents and equipment remain inspectable through native disclosures; creator actions are inert. It imports no runtime, saves nothing and registers no worker. Header Search/Menu symbols on phones are decorative placeholders, not implemented launchers. The gallery scales desktop snapshots; full-size links provide accessible comparison. No new sounds or motion.
+
+Verification: desktop and 390px previews inspected; no broken images, browser exceptions or horizontal page overflow across the three palettes and gallery. No full release suite is needed for isolated design studies.

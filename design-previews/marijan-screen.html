@@ -1,0 +1,2875 @@
+<!doctype html>
+<html lang="en" data-palette="ivory">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Build a Fifth Edition character freely on one page. Direct values, all integrated books and manual overrides."
+    />
+    <title>Marijan Mode · WFRP Character Ledger</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../dist/assets/black-banner/w.svg"
+    />
+    <link rel="manifest" href="../dist/manifest.webmanifest" />
+    <meta name="theme-color" content="#251c17" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Character Ledger" />
+    <link rel="apple-touch-icon" href="../dist/assets/icon-180.png" />
+    <link rel="stylesheet" href="../dist/styles.css?v=pwa-1" />
+    <link rel="stylesheet" href="../dist/workspace.css" />
+    <link rel="stylesheet" href="../dist/book-search.css" />
+    <link rel="stylesheet" href="../dist/design-tokens.css" />
+    <link rel="stylesheet" href="../dist/design-system.css" />
+    <link rel="stylesheet" href="../dist/marijan/style.css" />
+    <link rel="stylesheet" href="../dist/mobile-shell.css" />
+    <link rel="stylesheet" href="marijan-colours.css" />
+  </head>
+  <body>
+    <div class="preview-tools">
+      <strong id="preview-title">A — Ivory Ascendancy</strong
+      ><label for="palette">Style</label
+      ><select id="palette">
+        <option value="ivory">A · Ivory Ascendancy</option>
+        <option value="teal">B · Stormglass</option>
+        <option value="violet">C · The Forbidden Grimoire</option></select
+      ><a href="marijan-colours.html">All previews</a
+      ><small>Style study · invented demo values · no saving</small>
+    </div>
+    <header class="masthead">
+      <div class="masthead-art" aria-hidden="true"></div>
+      <div class="banner-atmosphere" aria-hidden="true">
+        <i style="--particle: 0"></i><i style="--particle: 1"></i
+        ><i style="--particle: 2"></i><i style="--particle: 3"></i
+        ><i style="--particle: 4"></i><i style="--particle: 5"></i>
+      </div>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"
+          ><img
+            class="ledger-emblem"
+            src="../dist/assets/black-banner/w.svg"
+            alt=""
+            width="108"
+            height="100"
+        /></span>
+        <div class="brand-title">
+          <span class="brand-world">WARHAMMER FANTASY ROLEPLAY</span
+          ><strong>Marijan Mode</strong><small>FIFTH EDITION · NO LIMITS</small>
+        </div>
+      </div>
+      <div class="masthead-actions">
+        <span class="edition">YOUR WILL. YOUR WORLD.</span>
+      </div>
+      <div class="banner-search-ribbon">
+        <span class="banner-caption">UNRESTRICTED</span>
+        <div class="banner-search">
+          <div class="banner-search-field">
+            <span class="banner-search-icon" aria-hidden="true">⌕</span
+            ><input
+              id="book-search"
+              disabled
+              aria-busy="true"
+              type="search"
+              role="combobox"
+              aria-label="Search the books"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="book-search-results"
+              autocomplete="off"
+              placeholder="Search rules, Careers, magic and trappings…"
+            /><button
+              id="book-search-clear"
+              type="button"
+              aria-label="Clear book search"
+            >
+              ×
+            </button>
+          </div>
+          <div id="book-search-dropdown" class="book-search-dropdown" hidden>
+            <p id="book-search-status" role="status" aria-live="polite"></p>
+            <div
+              id="book-search-results"
+              role="listbox"
+              aria-label="Matching rules"
+            ></div>
+            <p id="book-search-empty" hidden>
+              No matches. Try a shorter name or another word.
+            </p>
+            <button id="book-search-more" type="button" hidden>
+              Show more matches
+            </button>
+          </div>
+        </div>
+        <span class="banner-caption">ALL BOOK REFERENCES</span>
+      </div>
+    </header>
+    <div id="app">
+      <div class="mm-workspace">
+        <aside class="rail mm-rail">
+          <nav class="creator-switch" aria-label="Creator">
+            <a href="./?verify=1">Player character</a
+            ><a href="gm.html?verify=1">NPC &amp; creature</a
+            ><a href="marijan.html?verify=1" aria-current="page"
+              >Marijan Mode</a
+            >
+          </nav>
+          <div class="rail-heading">
+            <span class="eyebrow">Marijan Mode</span
+            ><strong>Freehand character</strong>
+            <p class="mm-rail-intro">One page. Your values.</p>
+          </div>
+          <nav class="mm-section-nav" aria-label="Editor sections">
+            <a href="#mm-section-identity">Identity</a
+            ><a href="#mm-section-characteristics">Characteristics</a
+            ><a href="#mm-section-resources">Resources</a
+            ><a href="#mm-section-skills">Skills</a
+            ><a href="#mm-section-talents">Talents</a
+            ><a href="#mm-section-magic">Magic</a
+            ><a href="#mm-section-gear">Equipment</a
+            ><a href="#mm-section-extras">Extras</a
+            ><a href="#mm-section-notes">Notes</a>
+          </nav>
+          <div class="mm-rail-tools">
+            <button type="button" class="quiet" data-action="undo" disabled>
+              Undo</button
+            ><button type="button" class="quiet" data-action="redo" disabled>
+              Redo</button
+            ><button type="button" class="quiet" data-action="save">
+              Save character</button
+            ><button type="button" class="quiet" data-action="load">
+              Load character</button
+            ><button type="button" class="quiet" data-action="copy-player">
+              Copy player character</button
+            ><button type="button" class="quiet" data-action="new">
+              New character</button
+            ><button type="button" class="primary" data-action="export">
+              Export PDF
+            </button>
+          </div>
+          <div id="mm-install"></div>
+          <small id="mm-save-status" role="status"></small>
+        </aside>
+        <main class="panel mm-page">
+          <h1 class="chapter-title" aria-label="Marijan Mode">
+            <span class="chapter-initial" aria-hidden="true"
+              ><span>M</span></span
+            ><span aria-hidden="true">arijan Mode</span>
+          </h1>
+          <p class="mm-intro">
+            Unrestricted character creation. Values and choices are yours; XP
+            and money are never deducted.
+          </p>
+          <div class="mm-generation">
+            <p>
+              Start from a random Fifth Edition character, then edit freely.
+            </p>
+            <button type="button" class="primary" data-action="generate">
+              Generate character
+            </button>
+          </div>
+          <div id="mm-generation-record"></div>
+          <section
+            class="mm-section"
+            id="mm-section-identity"
+            aria-labelledby="mm-heading-identity"
+          >
+            <h2 id="mm-heading-identity">Identity</h2>
+            <div class="mm-fields">
+              <div class="field">
+                <label for="mm-name">Name</label
+                ><input
+                  id="mm-name"
+                  type="text"
+                  value="Marijan the Unbound"
+                  data-path="name"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-species">Species</label
+                ><select id="mm-species" data-path="species">
+                  <option value="Human">Human</option>
+                  <option value="Dwarf">Dwarf</option>
+                  <option value="Halfling">Halfling</option>
+                  <option value="High Elf" selected>High Elf</option>
+                  <option value="Wood Elf">Wood Elf</option>
+                  <option value="Ogre">Ogre</option>
+                  <option value="Gnome">Gnome</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="mm-origin">Origin / background</label
+                ><input
+                  id="mm-origin"
+                  type="text"
+                  value=""
+                  data-path="origin"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-level">Career level</label
+                ><input
+                  id="mm-level"
+                  type="number"
+                  value="4"
+                  data-path="level"
+                  step="any"
+                />
+              </div>
+            </div>
+            <div class="mm-career-tools">
+              <div class="field">
+                <label for="mm-career-search">Find a Career</label
+                ><input
+                  id="mm-career-search"
+                  type="search"
+                  placeholder="Filter Careers by name…"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-career">Career</label
+                ><select id="mm-career" data-path="career">
+                  <option value="">No Career</option>
+                  <option value="core:careers:adviser">Adviser · Core</option>
+                  <option value="high-elf:career:aestheticist">
+                    Aestheticist · High Elf Guide
+                  </option>
+                  <option value="core:careers:agitator">Agitator · Core</option>
+                  <option value="winds-of-magic:career:alchemist">
+                    Alchemist · Winds of Magic
+                  </option>
+                  <option value="core:careers:apothecary">
+                    Apothecary · Core
+                  </option>
+                  <option value="up-in-arms:career:archer">
+                    Archer · Up in Arms
+                  </option>
+                  <option value="up-in-arms:career:artillerist">
+                    Artillerist · Up in Arms
+                  </option>
+                  <option value="core:careers:artisan">Artisan · Core</option>
+                  <option value="core:careers:artist">Artist · Core</option>
+                  <option value="winds-of-magic:career:astromancer">
+                    Astromancer · Winds of Magic
+                  </option>
+                  <option value="archives-i:career:badger-rider">
+                    Badger Rider · Archives I
+                  </option>
+                  <option value="core:careers:bailiff">Bailiff · Core</option>
+                  <option value="winds-of-magic:career:beadle">
+                    Beadle · Winds of Magic
+                  </option>
+                  <option value="core:careers:beggar">Beggar · Core</option>
+                  <option value="core:careers:boatman">Boatman · Core</option>
+                  <option value="core:careers:bounty-hunter">
+                    Bounty Hunter · Core
+                  </option>
+                  <option value="dwarf-guide:career:brewer">
+                    Brewer · Dwarf Guide
+                  </option>
+                  <option value="up-in-arms:career:camp-follower">
+                    Camp Follower · Up in Arms
+                  </option>
+                  <option value="up-in-arms:career:cartographer">
+                    Cartographer · Up in Arms
+                  </option>
+                  <option value="core:careers:cavalryman">
+                    Cavalryman · Core
+                  </option>
+                  <option value="core:careers:charlatan">
+                    Charlatan · Core
+                  </option>
+                  <option value="core:careers:coachman">Coachman · Core</option>
+                  <option value="dwarf-guide:career:doom-priest">
+                    Doom Priest · Dwarf Guide
+                  </option>
+                  <option value="winds-of-magic:career:druid">
+                    Druid · Winds of Magic
+                  </option>
+                  <option value="core:careers:duellist">Duellist · Core</option>
+                  <option value="core:careers:engineer">Engineer · Core</option>
+                  <option value="core:careers:entertainer">
+                    Entertainer · Core
+                  </option>
+                  <option value="core:careers:envoy">Envoy · Core</option>
+                  <option value="core:careers:fence">Fence · Core</option>
+                  <option value="archives-i:career:fieldwarden">
+                    Fieldwarden · Archives I
+                  </option>
+                  <option value="core:careers:flagellant">
+                    Flagellant · Core
+                  </option>
+                  <option value="dwarf-guide:career:forge-priest">
+                    Forge Priest · Dwarf Guide
+                  </option>
+                  <option value="deft-steps:career:forger">
+                    Forger · Deft Steps
+                  </option>
+                  <option value="up-in-arms:career:freelance">
+                    Freelance · Up in Arms
+                  </option>
+                  <option value="deft-steps:career:gambler-priest">
+                    Gambler-Priest · Deft Steps
+                  </option>
+                  <option value="deft-steps:career:gamekeeper">
+                    Gamekeeper · Deft Steps
+                  </option>
+                  <option value="archives-i:career:ghost-strider">
+                    Ghost Strider · Archives I
+                  </option>
+                  <option value="core:careers:grave-robber">
+                    Grave Robber · Core
+                  </option>
+                  <option value="up-in-arms:career:greatsword">
+                    Greatsword · Up in Arms
+                  </option>
+                  <option value="core:careers:guard">Guard · Core</option>
+                  <option value="up-in-arms:career:halberdier">
+                    Halberdier · Up in Arms
+                  </option>
+                  <option value="dwarf-guide:career:hammerer">
+                    Hammerer · Dwarf Guide
+                  </option>
+                  <option value="up-in-arms:career:handgunner">
+                    Handgunner · Up in Arms
+                  </option>
+                  <option value="dwarf-guide:career:hearth-priest">
+                    Hearth Priest · Dwarf Guide
+                  </option>
+                  <option value="archives-iii-hedge:career:hedge-witch">
+                    Hedge Witch · Hedge Witch variant
+                  </option>
+                  <option value="core:careers:hedge-witch">
+                    Hedge Witch · Core
+                  </option>
+                  <option value="core:careers:herbalist">
+                    Herbalist · Core
+                  </option>
+                  <option value="winds-of-magic:career:hierophant">
+                    Hierophant · Winds of Magic
+                  </option>
+                  <option value="core:careers:hunter">Hunter · Core</option>
+                  <option value="core:careers:investigator">
+                    Investigator · Core
+                  </option>
+                  <option value="dwarf-guide:career:ironbreaker">
+                    Ironbreaker · Dwarf Guide
+                  </option>
+                  <option value="archives-i:career:karak-ranger">
+                    Karak Ranger · Archives I
+                  </option>
+                  <option value="dwarf-guide:career:karak-ranger">
+                    Karak Ranger · Dwarf Guide
+                  </option>
+                  <option value="core:careers:knave">Knave · Core</option>
+                  <option value="core:careers:knight">Knight · Core</option>
+                  <option value="up-in-arms:career:knight-of-the-blazing-sun">
+                    Knight of the Blazing Sun · Up in Arms
+                  </option>
+                  <option value="up-in-arms:career:knight-of-the-white-wolf">
+                    Knight of the White Wolf · Up in Arms
+                  </option>
+                  <option value="up-in-arms:career:knight-panther">
+                    Knight Panther · Up in Arms
+                  </option>
+                  <option value="core:careers:lawyer">Lawyer · Core</option>
+                  <option value="deft-steps:career:liberator-priest">
+                    Liberator-Priest · Deft Steps
+                  </option>
+                  <option value="up-in-arms:career:light-cavalry">
+                    Light Cavalry · Up in Arms
+                  </option>
+                  <option value="high-elf:career:mage">
+                    Mage · High Elf Guide
+                  </option>
+                  <option value="winds-of-magic:career:magister-vigilant">
+                    Magister Vigilant · Winds of Magic
+                  </option>
+                  <option value="archives-ii:career:maneater">
+                    Maneater · Archives II
+                  </option>
+                  <option value="core:careers:merchant">Merchant · Core</option>
+                  <option value="high-elf:career:merchant-adventurer">
+                    Merchant Adventurer · High Elf Guide
+                  </option>
+                  <option value="core:careers:messenger">
+                    Messenger · Core
+                  </option>
+                  <option value="core:careers:miner">Miner · Core</option>
+                  <option value="deft-steps:career:muleskinner">
+                    Muleskinner · Deft Steps
+                  </option>
+                  <option value="winds-of-magic:career:mundane-alchemist">
+                    Mundane Alchemist · Winds of Magic
+                  </option>
+                  <option value="core:careers:mystic">Mystic · Core</option>
+                  <option value="core:careers:noble">Noble · Core</option>
+                  <option value="core:careers:nun">Nun · Core</option>
+                  <option value="deft-steps-white-stag:career:nun">
+                    Nun · White Stag / Hermit
+                  </option>
+                  <option value="archives-ii:career:ogre-butcher">
+                    Ogre Butcher · Archives II
+                  </option>
+                  <option value="core:careers:outlaw">Outlaw · Core</option>
+                  <option value="core:careers:pedlar">Pedlar · Core</option>
+                  <option value="core:careers:physician">
+                    Physician · Core
+                  </option>
+                  <option value="up-in-arms:career:pikeman">
+                    Pikeman · Up in Arms
+                  </option>
+                  <option value="core:careers:pilot">Pilot · Core</option>
+                  <option value="core:careers:pit-fighter">
+                    Pit Fighter · Core
+                  </option>
+                  <option value="deft-steps:career:poacher">
+                    Poacher · Deft Steps
+                  </option>
+                  <option value="core:careers:priest">Priest · Core</option>
+                  <option value="deft-steps-dealer:career:priest">
+                    Priest · Ranald the Dealer
+                  </option>
+                  <option value="deft-steps-ranald-priest:career:priest">
+                    Priest · General Ranald Priest
+                  </option>
+                  <option value="deft-steps-taal-priest:career:priest">
+                    Priest · Taal Priest
+                  </option>
+                  <option value="archives-iii:career:priest-of-handrich">
+                    Priest of Handrich · Archives III
+                  </option>
+                  <option value="up-in-arms:career:priest-of-myrmidia">
+                    Priest of Myrmidia · Up in Arms
+                  </option>
+                  <option value="archives-iii:career:priest-of-solkan">
+                    Priest of Solkan · Archives III
+                  </option>
+                  <option value="archives-iii:career:priestess-of-rhya">
+                    Priestess of Rhya · Archives III
+                  </option>
+                  <option value="core:careers:protagonist">
+                    Protagonist · Core
+                  </option>
+                  <option value="winds-of-magic:career:pyromancer">
+                    Pyromancer · Winds of Magic
+                  </option>
+                  <option value="core:careers:racketeer">
+                    Racketeer · Core
+                  </option>
+                  <option value="deft-steps:career:ranger-priest-of-taal">
+                    Ranger-Priest of Taal · Deft Steps
+                  </option>
+                  <option value="core:careers:rat-catcher">
+                    Rat Catcher · Core
+                  </option>
+                  <option value="archives-ii:career:rhinox-herder">
+                    Rhinox Herder · Archives II
+                  </option>
+                  <option value="core:careers:riverwarden">
+                    Riverwarden · Core
+                  </option>
+                  <option value="core:careers:riverwoman">
+                    Riverwoman · Core
+                  </option>
+                  <option value="core:careers:roadwarden">
+                    Roadwarden · Core
+                  </option>
+                  <option value="dwarf-guide:career:runescribe">
+                    Runescribe · Dwarf Guide
+                  </option>
+                  <option value="dwarf-guide:career:runesmith">
+                    Runesmith · Dwarf Guide
+                  </option>
+                  <option value="core:careers:sailor">Sailor · Core</option>
+                  <option value="core:careers:scholar">Scholar · Core</option>
+                  <option value="core:careers:scout">Scout · Core</option>
+                  <option value="deft-steps-longshanks:career:scout">
+                    Scout · Longshanks Scout
+                  </option>
+                  <option value="winds-of-magic:career:scryer">
+                    Scryer · Winds of Magic
+                  </option>
+                  <option value="high-elf:career:sea-guard">
+                    Sea Guard · High Elf Guide
+                  </option>
+                  <option value="core:careers:servant">Servant · Core</option>
+                  <option value="high-elf:career:shadow-warrior">
+                    Shadow Warrior · High Elf Guide
+                  </option>
+                  <option value="winds-of-magic:career:shadowmancer">
+                    Shadowmancer · Winds of Magic
+                  </option>
+                  <option value="winds-of-magic:career:shaman">
+                    Shaman · Winds of Magic
+                  </option>
+                  <option value="up-in-arms:career:siege-specialist">
+                    Siege Specialist · Up in Arms
+                  </option>
+                  <option value="core:careers:slayer">Slayer · Core</option>
+                  <option value="core:careers:smuggler">Smuggler · Core</option>
+                  <option value="core:careers:soldier">Soldier · Core</option>
+                  <option value="winds-of-magic:career:spiriter">
+                    Spiriter · Winds of Magic
+                  </option>
+                  <option value="core:careers:spy">Spy · Core</option>
+                  <option value="core:careers:stevedore">
+                    Stevedore · Core
+                  </option>
+                  <option value="high-elf:career:swordmaster">
+                    Swordmaster · High Elf Guide
+                  </option>
+                  <option value="dwarf-guide:career:thane">
+                    Thane · Dwarf Guide
+                  </option>
+                  <option value="core:careers:thief">Thief · Core</option>
+                  <option value="deft-steps-pickpocket:career:thief">
+                    Thief · Pickpocket
+                  </option>
+                  <option value="deft-steps:career:thief-priest">
+                    Thief-Priest · Deft Steps
+                  </option>
+                  <option value="core:careers:townsman">Townsman · Core</option>
+                  <option value="deft-steps:career:trickster-priest">
+                    Trickster-Priest · Deft Steps
+                  </option>
+                  <option value="core:careers:villager">Villager · Core</option>
+                  <option value="core:careers:warden">Warden · Core</option>
+                  <option value="core:careers:warrior-priest">
+                    Warrior Priest · Core
+                  </option>
+                  <option value="core:careers:watchman">Watchman · Core</option>
+                  <option value="core:careers:witch">Witch · Core</option>
+                  <option value="core:careers:witch-hunter">
+                    Witch Hunter · Core
+                  </option>
+                  <option value="core:careers:wizard" selected>
+                    Wizard · Core
+                  </option>
+                  <option value="core:careers:wrecker">Wrecker · Core</option>
+                </select>
+              </div>
+              <button type="button" class="quiet" data-action="defaults">
+                Species defaults
+              </button>
+            </div>
+            <small id="mm-career-summary"
+              >Academic · Wizard Lord · Core · p. 107</small
+            >
+            <p id="mm-species-source" class="small"></p>
+            <details data-detail-key="marijan:custom-species">
+              <summary>Custom Species or Career</summary>
+              <div class="mm-fields">
+                <div class="field">
+                  <label for="mm-species-name">Species name</label
+                  ><input
+                    id="mm-species-name"
+                    type="text"
+                    value="High Elf"
+                    data-path="species"
+                  />
+                </div>
+                <div class="field">
+                  <label for="mm-career-name">Career name</label
+                  ><input
+                    id="mm-career-name"
+                    type="text"
+                    value="core:careers:wizard"
+                    data-path="career"
+                  />
+                </div>
+              </div>
+              <p class="small">Custom names carry no automatic defaults.</p>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-characteristics"
+            aria-labelledby="mm-heading-characteristics"
+          >
+            <h2 id="mm-heading-characteristics">Characteristics</h2>
+            <div class="mm-inline-tools">
+              <button type="button" class="secondary" data-action="roll">
+                Roll starting values</button
+              ><label class="mm-check"
+                ><input type="checkbox" data-path="talentEffects" checked />
+                Apply Characteristic & Movement Talent bonuses</label
+              >
+            </div>
+            <p class="mm-char-help">
+              Starting → Total · includes Advances, Other and enabled Talent
+              bonuses
+            </p>
+            <div class="mm-char-overview">
+              <div class="mm-char-cell">
+                <abbr title="Weapon Skill">WS</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-WS-initial"
+                    >Weapon Skill initial</label
+                  ><input
+                    id="mm-characteristics-WS-initial"
+                    type="number"
+                    value="100"
+                    data-path="characteristics.WS.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:WS" aria-label="Weapon Skill total"
+                  >100</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Ballistic Skill">BS</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-BS-initial"
+                    >Ballistic Skill initial</label
+                  ><input
+                    id="mm-characteristics-BS-initial"
+                    type="number"
+                    value="75"
+                    data-path="characteristics.BS.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:BS" aria-label="Ballistic Skill total"
+                  >75</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Strength">S</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-S-initial"
+                    >Strength initial</label
+                  ><input
+                    id="mm-characteristics-S-initial"
+                    type="number"
+                    value="65"
+                    data-path="characteristics.S.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:S" aria-label="Strength total"
+                  >65</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Toughness">T</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-T-initial"
+                    >Toughness initial</label
+                  ><input
+                    id="mm-characteristics-T-initial"
+                    type="number"
+                    value="80"
+                    data-path="characteristics.T.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:T" aria-label="Toughness total"
+                  >80</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Initiative">I</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-I-initial"
+                    >Initiative initial</label
+                  ><input
+                    id="mm-characteristics-I-initial"
+                    type="number"
+                    value="95"
+                    data-path="characteristics.I.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:I" aria-label="Initiative total"
+                  >95</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Agility">Ag</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-Ag-initial"
+                    >Agility initial</label
+                  ><input
+                    id="mm-characteristics-Ag-initial"
+                    type="number"
+                    value="90"
+                    data-path="characteristics.Ag.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:Ag" aria-label="Agility total"
+                  >90</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Dexterity">Dex</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-Dex-initial"
+                    >Dexterity initial</label
+                  ><input
+                    id="mm-characteristics-Dex-initial"
+                    type="number"
+                    value="80"
+                    data-path="characteristics.Dex.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:Dex" aria-label="Dexterity total"
+                  >80</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Intelligence">Int</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-Int-initial"
+                    >Intelligence initial</label
+                  ><input
+                    id="mm-characteristics-Int-initial"
+                    type="number"
+                    value="120"
+                    data-path="characteristics.Int.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:Int" aria-label="Intelligence total"
+                  >120</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Willpower">WP</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-WP-initial"
+                    >Willpower initial</label
+                  ><input
+                    id="mm-characteristics-WP-initial"
+                    type="number"
+                    value="140"
+                    data-path="characteristics.WP.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:WP" aria-label="Willpower total"
+                  >140</output
+                >
+              </div>
+              <div class="mm-char-cell">
+                <abbr title="Fellowship">Fel</abbr>
+                <div class="field">
+                  <label for="mm-characteristics-Fel-initial"
+                    >Fellowship initial</label
+                  ><input
+                    id="mm-characteristics-Fel-initial"
+                    type="number"
+                    value="85"
+                    data-path="characteristics.Fel.initial"
+                    step="any"
+                  />
+                </div>
+                <output data-result="stat:Fel" aria-label="Fellowship total"
+                  >85</output
+                >
+              </div>
+            </div>
+            <details
+              class="mm-char-adjustments"
+              data-detail-key="marijan:characteristic-adjustments"
+            >
+              <summary>Advances & other modifiers</summary>
+              <div class="mm-char-adjustment-grid">
+                <div>
+                  <strong title="Weapon Skill">WS</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-WS-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-WS-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.WS.advances"
+                      step="any"
+                      aria-label="Weapon Skill advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-WS-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-WS-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.WS.modifier"
+                      step="any"
+                      aria-label="Weapon Skill modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Ballistic Skill">BS</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-BS-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-BS-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.BS.advances"
+                      step="any"
+                      aria-label="Ballistic Skill advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-BS-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-BS-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.BS.modifier"
+                      step="any"
+                      aria-label="Ballistic Skill modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Strength">S</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-S-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-S-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.S.advances"
+                      step="any"
+                      aria-label="Strength advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-S-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-S-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.S.modifier"
+                      step="any"
+                      aria-label="Strength modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Toughness">T</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-T-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-T-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.T.advances"
+                      step="any"
+                      aria-label="Toughness advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-T-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-T-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.T.modifier"
+                      step="any"
+                      aria-label="Toughness modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Initiative">I</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-I-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-I-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.I.advances"
+                      step="any"
+                      aria-label="Initiative advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-I-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-I-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.I.modifier"
+                      step="any"
+                      aria-label="Initiative modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Agility">Ag</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-Ag-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-Ag-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Ag.advances"
+                      step="any"
+                      aria-label="Agility advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-Ag-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-Ag-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Ag.modifier"
+                      step="any"
+                      aria-label="Agility modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Dexterity">Dex</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-Dex-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-Dex-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Dex.advances"
+                      step="any"
+                      aria-label="Dexterity advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-Dex-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-Dex-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Dex.modifier"
+                      step="any"
+                      aria-label="Dexterity modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Intelligence">Int</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-Int-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-Int-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Int.advances"
+                      step="any"
+                      aria-label="Intelligence advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-Int-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-Int-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Int.modifier"
+                      step="any"
+                      aria-label="Intelligence modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Willpower">WP</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-WP-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-WP-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.WP.advances"
+                      step="any"
+                      aria-label="Willpower advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-WP-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-WP-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.WP.modifier"
+                      step="any"
+                      aria-label="Willpower modifier"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <strong title="Fellowship">Fel</strong>
+                  <div class="field">
+                    <label for="mm-characteristics-Fel-advances">Adv</label
+                    ><input
+                      id="mm-characteristics-Fel-advances"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Fel.advances"
+                      step="any"
+                      aria-label="Fellowship advances"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-characteristics-Fel-modifier">Other</label
+                    ><input
+                      id="mm-characteristics-Fel-modifier"
+                      type="number"
+                      value="0"
+                      data-path="characteristics.Fel.modifier"
+                      step="any"
+                      aria-label="Fellowship modifier"
+                    />
+                  </div>
+                </div>
+              </div>
+            </details>
+            <details data-detail-key="marijan:calculations">
+              <summary>How totals work</summary>
+              <p>
+                Starting + Advances + Other, plus the printed +5 Characteristic
+                Talents when enabled. Roll replaces Starting with your Species
+                modifier + 2d10; Advances and Other stay intact. No XP is spent.
+                Situational effects, Traits and mutations remain references.
+              </p>
+              <div class="field">
+                <label for="mm-sturdyRule">Sturdy formula</label
+                ><select id="mm-sturdyRule" data-path="sturdyRule">
+                  <option value="creation" selected>
+                    Creation: double capacity
+                  </option>
+                  <option value="talent">Talent: add Strength Bonus</option>
+                </select>
+              </div>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-resources"
+            aria-labelledby="mm-heading-resources"
+          >
+            <h2 id="mm-heading-resources">Resources</h2>
+            <div class="mm-fields mm-resource-fields">
+              <div class="field">
+                <label for="mm-fate">Fate</label
+                ><input
+                  id="mm-fate"
+                  type="number"
+                  value="9"
+                  data-path="fate"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-fortune">Fortune</label
+                ><input
+                  id="mm-fortune"
+                  type="number"
+                  value="99"
+                  data-path="fortune"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-xpSpent">XP spent</label
+                ><input
+                  id="mm-xpSpent"
+                  type="number"
+                  value="0"
+                  data-path="xpSpent"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-xpUnspent">XP unspent</label
+                ><input
+                  id="mm-xpUnspent"
+                  type="number"
+                  value="99999"
+                  data-path="xpUnspent"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-status">Status</label
+                ><input
+                  id="mm-status"
+                  type="text"
+                  value=""
+                  data-path="status"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-standing">Standing</label
+                ><input
+                  id="mm-standing"
+                  type="number"
+                  value="0"
+                  data-path="standing"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-tracker">Tracker boxes</label
+                ><input
+                  id="mm-tracker"
+                  type="number"
+                  value="0"
+                  data-path="tracker"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-sin">Sin</label
+                ><input
+                  id="mm-sin"
+                  type="number"
+                  value="0"
+                  data-path="sin"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-corruption">Corruption</label
+                ><input
+                  id="mm-corruption"
+                  type="number"
+                  value="0"
+                  data-path="corruption"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-coins-gc">Gold crowns</label
+                ><input
+                  id="mm-coins-gc"
+                  type="number"
+                  value="999"
+                  data-path="coins.gc"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-coins-ss">Silver shillings</label
+                ><input
+                  id="mm-coins-ss"
+                  type="number"
+                  value="0"
+                  data-path="coins.ss"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-coins-d">Brass pennies</label
+                ><input
+                  id="mm-coins-d"
+                  type="number"
+                  value="0"
+                  data-path="coins.d"
+                  step="any"
+                />
+              </div>
+              <div class="field">
+                <label for="mm-size">Size</label
+                ><select id="mm-size" data-path="size">
+                  <option value="Tiny">Tiny</option>
+                  <option value="Small">Small</option>
+                  <option value="Average" selected>Average</option>
+                  <option value="Large">Large</option>
+                  <option value="Enormous">Enormous</option>
+                  <option value="Monstrous">Monstrous</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="mm-baseMovement">Base Movement</label
+                ><input
+                  id="mm-baseMovement"
+                  type="number"
+                  value="4"
+                  data-path="baseMovement"
+                  step="any"
+                />
+              </div>
+            </div>
+            <div class="mm-derived-grid">
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-wounds">Wounds</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="wounds"
+                    aria-label="Wounds: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-wounds"
+                  aria-label="Wounds"
+                  type="number"
+                  step="any"
+                  data-override="wounds"
+                  value="36"
+                  readonly
+                /><small data-auto-label="wounds">Calculated 36</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-movement">Movement</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="movement"
+                    aria-label="Movement: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-movement"
+                  aria-label="Movement"
+                  type="number"
+                  step="any"
+                  data-override="movement"
+                  value="4"
+                  readonly
+                /><small data-auto-label="movement">Calculated 4</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-capacity">Carrying capacity</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="capacity"
+                    aria-label="Carrying capacity: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-capacity"
+                  aria-label="Carrying capacity"
+                  type="number"
+                  step="any"
+                  data-override="capacity"
+                  value="14"
+                  readonly
+                /><small data-auto-label="capacity">Calculated 14</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-enc">Listed Enc</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="enc"
+                    aria-label="Listed Enc: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-enc"
+                  aria-label="Listed Enc"
+                  type="number"
+                  step="any"
+                  data-override="enc"
+                  value="2"
+                  readonly
+                /><small data-auto-label="enc">Calculated 2</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-head">Head AP</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="head"
+                    aria-label="Head AP: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-head"
+                  aria-label="Head AP"
+                  type="number"
+                  step="any"
+                  data-override="head"
+                  value="0"
+                  readonly
+                /><small data-auto-label="head">Calculated 0</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-arms">Arms AP</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="arms"
+                    aria-label="Arms AP: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-arms"
+                  aria-label="Arms AP"
+                  type="number"
+                  step="any"
+                  data-override="arms"
+                  value="0"
+                  readonly
+                /><small data-auto-label="arms">Calculated 0</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-body">Body AP</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="body"
+                    aria-label="Body AP: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-body"
+                  aria-label="Body AP"
+                  type="number"
+                  step="any"
+                  data-override="body"
+                  value="1"
+                  readonly
+                /><small data-auto-label="body">Calculated 1</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-legs">Legs AP</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="legs"
+                    aria-label="Legs AP: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-legs"
+                  aria-label="Legs AP"
+                  type="number"
+                  step="any"
+                  data-override="legs"
+                  value="0"
+                  readonly
+                /><small data-auto-label="legs">Calculated 0</small>
+              </div>
+              <div class="mm-derived">
+                <div class="mm-derived-heading">
+                  <label for="mm-override-shield">Shield AP</label
+                  ><button
+                    type="button"
+                    class="quiet mm-mode"
+                    data-action="mode"
+                    data-field="shield"
+                    aria-label="Shield AP: switch to manual"
+                    aria-pressed="false"
+                  >
+                    Auto
+                  </button>
+                </div>
+                <input
+                  id="mm-override-shield"
+                  aria-label="Shield AP"
+                  type="number"
+                  step="any"
+                  data-override="shield"
+                  value="0"
+                  readonly
+                /><small data-auto-label="shield">Calculated 0</small>
+              </div>
+            </div>
+            <p class="small muted">
+              Auto follows the calculated value. Manual stays at your number.
+              Blank manual fields return to Auto. Resource values are entered
+              directly; Luck does not silently change Fortune.
+            </p>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-skills"
+            aria-labelledby="mm-heading-skills"
+          >
+            <details
+              class="mm-section-disclosure"
+              data-detail-key="marijan:section:skills"
+              open
+            >
+              <summary><h2 id="mm-heading-skills">Skills</h2></summary>
+              <div>
+                <div class="mm-starter-actions">
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="starting-choices"
+                    data-group="skills"
+                  >
+                    Add Species Skills</button
+                  ><small>Random choices; existing entries kept.</small>
+                </div>
+                <div class="mm-add-bar">
+                  <div class="field">
+                    <label for="mm-find-skills">Add skills</label
+                    ><input
+                      id="mm-find-skills"
+                      type="search"
+                      autocomplete="off"
+                      data-find="skills"
+                      placeholder="Find by name…"
+                      aria-controls="mm-results-skills"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-book-skills">Book</label
+                    ><select id="mm-book-skills" data-book-filter="skills">
+                      <option value="" selected>All books</option>
+                      <option value="core">Core</option>
+                      <option value="winds-of-magic">Winds of Magic</option>
+                      <option value="dwarf-guide">Dwarf Guide</option>
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="custom"
+                    data-group="skills"
+                  >
+                    + Custom
+                  </button>
+                </div>
+                <div
+                  id="mm-results-skills"
+                  class="mm-search-results"
+                  hidden
+                ></div>
+                <div class="mm-entries" id="mm-list-skills">
+                  <article
+                    class="mm-entry mm-entry-skills"
+                    id="mm-entry-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                          data-group="skills"
+                        >
+                          Melee (Basic)
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            >Adv</label
+                          ><input
+                            id="mm-amount-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            type="number"
+                            value="0"
+                            data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            data-group="skills"
+                            data-entry-field="amount"
+                            aria-label="Melee (Basic) advances"
+                            step="any"
+                          />
+                        </div>
+                        <div class="mm-skill-total">
+                          <label
+                            for="mm-total-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            >Total</label
+                          ><input
+                            id="mm-total-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            aria-label="Melee (Basic) total"
+                            type="number"
+                            step="any"
+                            value="100"
+                            data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            data-group="skills"
+                            data-entry-field="total"
+                            readonly
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                          data-group="skills"
+                          aria-label="Remove Melee (Basic)"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                    >
+                      <summary
+                        aria-label="Edit Melee (Basic) details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 112</small>
+                        <div class="mm-fields">
+                          <div class="field">
+                            <label
+                              for="mm-char-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                              >Char</label
+                            ><select
+                              id="mm-char-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                              data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                              data-group="skills"
+                              data-entry-field="char"
+                              aria-label="Melee (Basic) Characteristic"
+                            >
+                              <option value="WS" selected>WS</option>
+                              <option value="BS">BS</option>
+                              <option value="S">S</option>
+                              <option value="T">T</option>
+                              <option value="I">I</option>
+                              <option value="Ag">Ag</option>
+                              <option value="Dex">Dex</option>
+                              <option value="Int">Int</option>
+                              <option value="WP">WP</option>
+                              <option value="Fel">Fel</option>
+                            </select>
+                          </div>
+                          <div class="field">
+                            <span class="label">Total calculation</span
+                            ><button
+                              type="button"
+                              class="quiet mm-mode"
+                              data-action="skill-mode"
+                              data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                              data-group="skills"
+                              aria-label="Melee (Basic) total: switch to manual"
+                            >
+                              Auto
+                            </button>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label
+                            for="mm-description-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            rows="2"
+                            data-key="ac510c9a-fb46-4146-9918-d5951d6c8e40"
+                            data-group="skills"
+                            data-entry-field="text"
+                          ></textarea>
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                  <article
+                    class="mm-entry mm-entry-skills"
+                    id="mm-entry-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                          data-group="skills"
+                        >
+                          Perception
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            >Adv</label
+                          ><input
+                            id="mm-amount-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            type="number"
+                            value="0"
+                            data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            data-group="skills"
+                            data-entry-field="amount"
+                            aria-label="Perception advances"
+                            step="any"
+                          />
+                        </div>
+                        <div class="mm-skill-total">
+                          <label
+                            for="mm-total-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            >Total</label
+                          ><input
+                            id="mm-total-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            aria-label="Perception total"
+                            type="number"
+                            step="any"
+                            value="95"
+                            data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            data-group="skills"
+                            data-entry-field="total"
+                            readonly
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                          data-group="skills"
+                          aria-label="Remove Perception"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                    >
+                      <summary
+                        aria-label="Edit Perception details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 113</small>
+                        <div class="mm-fields">
+                          <div class="field">
+                            <label
+                              for="mm-char-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                              >Char</label
+                            ><select
+                              id="mm-char-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                              data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                              data-group="skills"
+                              data-entry-field="char"
+                              aria-label="Perception Characteristic"
+                            >
+                              <option value="WS">WS</option>
+                              <option value="BS">BS</option>
+                              <option value="S">S</option>
+                              <option value="T">T</option>
+                              <option value="I" selected>I</option>
+                              <option value="Ag">Ag</option>
+                              <option value="Dex">Dex</option>
+                              <option value="Int">Int</option>
+                              <option value="WP">WP</option>
+                              <option value="Fel">Fel</option>
+                            </select>
+                          </div>
+                          <div class="field">
+                            <span class="label">Total calculation</span
+                            ><button
+                              type="button"
+                              class="quiet mm-mode"
+                              data-action="skill-mode"
+                              data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                              data-group="skills"
+                              aria-label="Perception total: switch to manual"
+                            >
+                              Auto
+                            </button>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label
+                            for="mm-description-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            rows="2"
+                            data-key="5bcead46-0bff-4557-93f8-47ad8ba4a69b"
+                            data-group="skills"
+                            data-entry-field="text"
+                          ></textarea>
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                  <article
+                    class="mm-entry mm-entry-skills"
+                    id="mm-entry-40423ad7-79f6-416d-81f2-e103444c484e"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                          data-group="skills"
+                        >
+                          Channelling (Hysh)
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-40423ad7-79f6-416d-81f2-e103444c484e"
+                            >Adv</label
+                          ><input
+                            id="mm-amount-40423ad7-79f6-416d-81f2-e103444c484e"
+                            type="number"
+                            value="0"
+                            data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                            data-group="skills"
+                            data-entry-field="amount"
+                            aria-label="Channelling (Hysh) advances"
+                            step="any"
+                          />
+                        </div>
+                        <div class="mm-skill-total">
+                          <label
+                            for="mm-total-40423ad7-79f6-416d-81f2-e103444c484e"
+                            >Total</label
+                          ><input
+                            id="mm-total-40423ad7-79f6-416d-81f2-e103444c484e"
+                            aria-label="Channelling (Hysh) total"
+                            type="number"
+                            step="any"
+                            value="140"
+                            data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                            data-group="skills"
+                            data-entry-field="total"
+                            readonly
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                          data-group="skills"
+                          aria-label="Remove Channelling (Hysh)"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:40423ad7-79f6-416d-81f2-e103444c484e"
+                    >
+                      <summary
+                        aria-label="Edit Channelling (Hysh) details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 111</small>
+                        <div class="mm-fields">
+                          <div class="field">
+                            <label
+                              for="mm-char-40423ad7-79f6-416d-81f2-e103444c484e"
+                              >Char</label
+                            ><select
+                              id="mm-char-40423ad7-79f6-416d-81f2-e103444c484e"
+                              data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                              data-group="skills"
+                              data-entry-field="char"
+                              aria-label="Channelling (Hysh) Characteristic"
+                            >
+                              <option value="WS">WS</option>
+                              <option value="BS">BS</option>
+                              <option value="S">S</option>
+                              <option value="T">T</option>
+                              <option value="I">I</option>
+                              <option value="Ag">Ag</option>
+                              <option value="Dex">Dex</option>
+                              <option value="Int">Int</option>
+                              <option value="WP" selected>WP</option>
+                              <option value="Fel">Fel</option>
+                            </select>
+                          </div>
+                          <div class="field">
+                            <span class="label">Total calculation</span
+                            ><button
+                              type="button"
+                              class="quiet mm-mode"
+                              data-action="skill-mode"
+                              data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                              data-group="skills"
+                              aria-label="Channelling (Hysh) total: switch to manual"
+                            >
+                              Auto
+                            </button>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label
+                            for="mm-description-40423ad7-79f6-416d-81f2-e103444c484e"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-40423ad7-79f6-416d-81f2-e103444c484e"
+                            rows="2"
+                            data-key="40423ad7-79f6-416d-81f2-e103444c484e"
+                            data-group="skills"
+                            data-entry-field="text"
+                          ></textarea>
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-talents"
+            aria-labelledby="mm-heading-talents"
+          >
+            <details
+              class="mm-section-disclosure"
+              data-detail-key="marijan:section:talents"
+              open
+            >
+              <summary><h2 id="mm-heading-talents">Talents</h2></summary>
+              <div>
+                <div class="mm-starter-actions">
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="starting-choices"
+                    data-group="talents"
+                  >
+                    Add Species Talents</button
+                  ><small>Random choices; existing entries kept.</small>
+                </div>
+                <div class="mm-add-bar">
+                  <div class="field">
+                    <label for="mm-find-talents">Add talents</label
+                    ><input
+                      id="mm-find-talents"
+                      type="search"
+                      autocomplete="off"
+                      data-find="talents"
+                      placeholder="Find by name…"
+                      aria-controls="mm-results-talents"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-book-talents">Book</label
+                    ><select id="mm-book-talents" data-book-filter="talents">
+                      <option value="" selected>All books</option>
+                      <option value="core">Core</option>
+                      <option value="up-in-arms">Up in Arms</option>
+                      <option value="archives-i">Archives I</option>
+                      <option value="archives-ii">Archives II</option>
+                      <option value="rough-nights">Rough Nights</option>
+                      <option value="dwarf-guide">Dwarf Guide</option>
+                      <option value="high-elf">High Elf Guide</option>
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="custom"
+                    data-group="talents"
+                  >
+                    + Custom
+                  </button>
+                </div>
+                <div
+                  id="mm-results-talents"
+                  class="mm-search-results"
+                  hidden
+                ></div>
+                <div class="mm-entries" id="mm-list-talents">
+                  <article
+                    class="mm-entry mm-entry-talents"
+                    id="mm-entry-51e19913-7241-4267-9167-f7da4ff6dad7"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="51e19913-7241-4267-9167-f7da4ff6dad7"
+                          data-group="talents"
+                        >
+                          Aethyric Attunement
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-51e19913-7241-4267-9167-f7da4ff6dad7"
+                            >Ranks</label
+                          ><input
+                            id="mm-amount-51e19913-7241-4267-9167-f7da4ff6dad7"
+                            type="number"
+                            value="3"
+                            data-key="51e19913-7241-4267-9167-f7da4ff6dad7"
+                            data-group="talents"
+                            data-entry-field="amount"
+                            aria-label="Aethyric Attunement ranks"
+                            step="any"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="51e19913-7241-4267-9167-f7da4ff6dad7"
+                          data-group="talents"
+                          aria-label="Remove Aethyric Attunement"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:51e19913-7241-4267-9167-f7da4ff6dad7"
+                    >
+                      <summary
+                        aria-label="Edit Aethyric Attunement details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 114</small>
+                        <div class="field">
+                          <label
+                            for="mm-description-51e19913-7241-4267-9167-f7da4ff6dad7"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-51e19913-7241-4267-9167-f7da4ff6dad7"
+                            rows="2"
+                            data-key="51e19913-7241-4267-9167-f7da4ff6dad7"
+                            data-group="talents"
+                            data-entry-field="text"
+                          >
+Your experience, talent, or training lets you accumulate magical energy with a reduced risk of miscasts. If you would roll on the Minor Miscast Table, you may roll twice and choose whichever result you prefer. You may purchase this Talent a second time to gain the same benefit when rolling on the Major Miscast Table.</textarea
+                          >
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                  <article
+                    class="mm-entry mm-entry-talents"
+                    id="mm-entry-8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                          data-group="talents"
+                        >
+                          Fast Hands
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                            >Ranks</label
+                          ><input
+                            id="mm-amount-8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                            type="number"
+                            value="3"
+                            data-key="8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                            data-group="talents"
+                            data-entry-field="amount"
+                            aria-label="Fast Hands ranks"
+                            step="any"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                          data-group="talents"
+                          aria-label="Remove Fast Hands"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                    >
+                      <summary
+                        aria-label="Edit Fast Hands details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 119</small>
+                        <div class="field">
+                          <label
+                            for="mm-description-8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                            rows="2"
+                            data-key="8b413dbd-b15d-4055-a57a-4cc0cab66410"
+                            data-group="talents"
+                            data-entry-field="text"
+                          >
+You can move your hands with surprising dexterity. You can use Sleight of Hand to entertain people by making small objects vanish or appear. You gain Advantage on Sleight of Hand Tests, as well as Melee (Brawling) Tests made to touch an opponent, such as those required by some spells.</textarea
+                          >
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                  <article
+                    class="mm-entry mm-entry-talents"
+                    id="mm-entry-9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                          data-group="talents"
+                        >
+                          Night Vision
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                            >Ranks</label
+                          ><input
+                            id="mm-amount-9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                            type="number"
+                            value="3"
+                            data-key="9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                            data-group="talents"
+                            data-entry-field="amount"
+                            aria-label="Night Vision ranks"
+                            step="any"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                          data-group="talents"
+                          aria-label="Remove Night Vision"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                    >
+                      <summary
+                        aria-label="Edit Night Vision details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 123</small>
+                        <div class="field">
+                          <label
+                            for="mm-description-9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                            rows="2"
+                            data-key="9f7fcea9-ac9a-4c67-8584-79bb1cc21591"
+                            data-group="talents"
+                            data-entry-field="text"
+                          >
+You can see very well in natural darkness. Assuming you have at least a faint source of light (such as moonlight obscured by a Marienburg fog, the glowing eyes of a wight, or a bioluminescent fungus) you can see clearly for 20 yards and can extend the effective illumination distance of any light sources by a further 20 yards.</textarea
+                          >
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-magic"
+            aria-labelledby="mm-heading-magic"
+          >
+            <details
+              class="mm-section-disclosure"
+              data-detail-key="marijan:section:magic"
+              open
+            >
+              <summary><h2 id="mm-heading-magic">Magic & prayers</h2></summary>
+              <div>
+                <div class="mm-add-bar">
+                  <div class="field">
+                    <label for="mm-find-magic">Add magic & prayers</label
+                    ><input
+                      id="mm-find-magic"
+                      type="search"
+                      autocomplete="off"
+                      data-find="magic"
+                      placeholder="Find by name…"
+                      aria-controls="mm-results-magic"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-book-magic">Book</label
+                    ><select id="mm-book-magic" data-book-filter="magic">
+                      <option value="" selected>All books</option>
+                      <option value="core">Core</option>
+                      <option value="up-in-arms">Up in Arms</option>
+                      <option value="archives-ii">Archives II</option>
+                      <option value="archives-iii">Archives III</option>
+                      <option value="winds-of-magic">Winds of Magic</option>
+                      <option value="high-elf">High Elf Guide</option>
+                      <option value="blood-bramble">Blood &amp; Bramble</option>
+                      <option value="deft-steps">Deft Steps</option>
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="custom"
+                    data-group="magic"
+                  >
+                    + Custom
+                  </button>
+                </div>
+                <div
+                  id="mm-results-magic"
+                  class="mm-search-results"
+                  hidden
+                ></div>
+                <div class="mm-entries" id="mm-list-magic">
+                  <p class="mm-empty">
+                    No magic & prayers added. Search above or add your own.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-gear"
+            aria-labelledby="mm-heading-gear"
+          >
+            <details
+              class="mm-section-disclosure"
+              data-detail-key="marijan:section:gear"
+              open
+            >
+              <summary><h2 id="mm-heading-gear">Equipment</h2></summary>
+              <div>
+                <div class="mm-starter-actions">
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="starting-choices"
+                    data-group="gear"
+                  >
+                    Add starting equipment</button
+                  ><small>Random choices; existing entries kept.</small>
+                </div>
+                <div class="mm-add-bar">
+                  <div class="field">
+                    <label for="mm-find-gear">Add equipment</label
+                    ><input
+                      id="mm-find-gear"
+                      type="search"
+                      autocomplete="off"
+                      data-find="gear"
+                      placeholder="Find by name…"
+                      aria-controls="mm-results-gear"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-book-gear">Book</label
+                    ><select id="mm-book-gear" data-book-filter="gear">
+                      <option value="" selected>All books</option>
+                      <option value="core">Core</option>
+                      <option value="up-in-arms">Up in Arms</option>
+                      <option value="archives-i">Archives I</option>
+                      <option value="archives-ii">Archives II</option>
+                      <option value="winds-of-magic">Winds of Magic</option>
+                      <option value="dwarf-guide">Dwarf Guide</option>
+                      <option value="high-elf">High Elf Guide</option>
+                      <option value="blood-bramble">Blood &amp; Bramble</option>
+                      <option value="deft-steps">Deft Steps</option>
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="custom"
+                    data-group="gear"
+                  >
+                    + Custom
+                  </button>
+                </div>
+                <div
+                  id="mm-results-gear"
+                  class="mm-search-results"
+                  hidden
+                ></div>
+                <div class="mm-entries" id="mm-list-gear">
+                  <article
+                    class="mm-entry mm-entry-gear"
+                    id="mm-entry-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                          data-group="gear"
+                        >
+                          Hand Weapon
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                            >Qty</label
+                          ><input
+                            id="mm-amount-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                            type="number"
+                            value="1"
+                            data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                            data-group="gear"
+                            data-entry-field="amount"
+                            aria-label="Hand Weapon quantity"
+                            step="any"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                          data-group="gear"
+                          aria-label="Remove Hand Weapon"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:d5c5b494-954d-4a96-9db9-a14167bd578a"
+                    >
+                      <summary
+                        aria-label="Edit Hand Weapon details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 301 · Melee weapons</small>
+                        <div class="mm-fields">
+                          <div class="field">
+                            <label
+                              for="mm-state-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              >Hand Weapon location</label
+                            ><select
+                              id="mm-state-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-group="gear"
+                              data-entry-field="state"
+                            >
+                              <option value="equipped" selected>
+                                Equipped
+                              </option>
+                              <option value="worn">Worn</option>
+                              <option value="carried">Carried</option>
+                              <option value="stored">Stored</option>
+                            </select>
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-enc-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              >Unit Enc</label
+                            ><input
+                              id="mm-enc-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              type="number"
+                              value="1"
+                              data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-group="gear"
+                              data-entry-field="enc"
+                              step="any"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-ap-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              >AP</label
+                            ><input
+                              id="mm-ap-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              type="number"
+                              value=""
+                              data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-group="gear"
+                              data-entry-field="ap"
+                              step="any"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-damage-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              >Damage</label
+                            ><input
+                              id="mm-damage-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              type="text"
+                              value="SB+4"
+                              data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-group="gear"
+                              data-entry-field="damage"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-locations-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              >Locations</label
+                            ><input
+                              id="mm-locations-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              type="text"
+                              value=""
+                              data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-group="gear"
+                              data-entry-field="locations"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-qualities-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              >Qualities / flaws</label
+                            ><input
+                              id="mm-qualities-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              type="text"
+                              value="Unbalanced"
+                              data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                              data-group="gear"
+                              data-entry-field="qualities"
+                            />
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label
+                            for="mm-description-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-d5c5b494-954d-4a96-9db9-a14167bd578a"
+                            rows="2"
+                            data-key="d5c5b494-954d-4a96-9db9-a14167bd578a"
+                            data-group="gear"
+                            data-entry-field="text"
+                          ></textarea>
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                  <article
+                    class="mm-entry mm-entry-gear"
+                    id="mm-entry-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                  >
+                    <div class="mm-entry-line">
+                      <div class="mm-entry-name">
+                        <button
+                          type="button"
+                          class="mm-name-button"
+                          data-action="inspect"
+                          data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                          data-group="gear"
+                        >
+                          Leather Jerkin
+                        </button>
+                      </div>
+                      <div class="mm-entry-controls">
+                        <div class="field">
+                          <label
+                            for="mm-amount-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                            >Qty</label
+                          ><input
+                            id="mm-amount-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                            type="number"
+                            value="1"
+                            data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                            data-group="gear"
+                            data-entry-field="amount"
+                            aria-label="Leather Jerkin quantity"
+                            step="any"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="quiet mm-remove"
+                          data-action="remove"
+                          data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                          data-group="gear"
+                          aria-label="Remove Leather Jerkin"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </div>
+                    <details
+                      class="mm-entry-disclosure"
+                      data-detail-key="marijan-entry:96744bae-98de-4538-a5db-b3c4a323b7cb"
+                    >
+                      <summary
+                        aria-label="Edit Leather Jerkin details"
+                        title="Details & overrides"
+                      >
+                        <span aria-hidden="true">⌄</span>
+                      </summary>
+                      <div class="mm-entry-detail">
+                        <small>Core · p. 307 · Armour and shields</small>
+                        <div class="mm-fields">
+                          <div class="field">
+                            <label
+                              for="mm-state-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              >Leather Jerkin location</label
+                            ><select
+                              id="mm-state-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-group="gear"
+                              data-entry-field="state"
+                            >
+                              <option value="equipped">Equipped</option>
+                              <option value="worn" selected>Worn</option>
+                              <option value="carried">Carried</option>
+                              <option value="stored">Stored</option>
+                            </select>
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-enc-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              >Unit Enc</label
+                            ><input
+                              id="mm-enc-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              type="number"
+                              value="1"
+                              data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-group="gear"
+                              data-entry-field="enc"
+                              step="any"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-ap-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              >AP</label
+                            ><input
+                              id="mm-ap-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              type="number"
+                              value="1"
+                              data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-group="gear"
+                              data-entry-field="ap"
+                              step="any"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-damage-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              >Damage</label
+                            ><input
+                              id="mm-damage-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              type="text"
+                              value=""
+                              data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-group="gear"
+                              data-entry-field="damage"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-locations-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              >Locations</label
+                            ><input
+                              id="mm-locations-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              type="text"
+                              value="Body"
+                              data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-group="gear"
+                              data-entry-field="locations"
+                            />
+                          </div>
+                          <div class="field">
+                            <label
+                              for="mm-qualities-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              >Qualities / flaws</label
+                            ><input
+                              id="mm-qualities-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              type="text"
+                              value=""
+                              data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                              data-group="gear"
+                              data-entry-field="qualities"
+                            />
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label
+                            for="mm-description-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                            >Description / personal notes</label
+                          ><textarea
+                            id="mm-description-96744bae-98de-4538-a5db-b3c4a323b7cb"
+                            rows="2"
+                            data-key="96744bae-98de-4538-a5db-b3c4a323b7cb"
+                            data-group="gear"
+                            data-entry-field="text"
+                          ></textarea>
+                        </div>
+                        <small
+                          >Profile edits apply only to this character. The book
+                          reference stays unchanged.</small
+                        >
+                      </div>
+                    </details>
+                  </article>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-extras"
+            aria-labelledby="mm-heading-extras"
+          >
+            <details
+              class="mm-section-disclosure"
+              data-detail-key="marijan:section:extras"
+              open
+            >
+              <summary>
+                <h2 id="mm-heading-extras">Traits, mutations & runes</h2>
+              </summary>
+              <div>
+                <div class="mm-add-bar">
+                  <div class="field">
+                    <label for="mm-find-extras"
+                      >Add traits, mutations & runes</label
+                    ><input
+                      id="mm-find-extras"
+                      type="search"
+                      autocomplete="off"
+                      data-find="extras"
+                      placeholder="Find by name…"
+                      aria-controls="mm-results-extras"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-book-extras">Book</label
+                    ><select id="mm-book-extras" data-book-filter="extras">
+                      <option value="" selected>All books</option>
+                      <option value="core">Core</option>
+                      <option value="dwarf-guide">Dwarf Guide</option>
+                      <option value="high-elf">High Elf Guide</option>
+                      <option value="night-parade">Night Parade</option>
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    class="quiet"
+                    data-action="custom"
+                    data-group="extras"
+                  >
+                    + Custom
+                  </button>
+                </div>
+                <div
+                  id="mm-results-extras"
+                  class="mm-search-results"
+                  hidden
+                ></div>
+                <div class="mm-entries" id="mm-list-extras">
+                  <p class="mm-empty">
+                    No traits, mutations & runes added. Search above or add your
+                    own.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section
+            class="mm-section"
+            id="mm-section-notes"
+            aria-labelledby="mm-heading-notes"
+          >
+            <details
+              class="mm-section-disclosure"
+              data-detail-key="marijan:section:notes"
+              open
+            >
+              <summary>
+                <h2 id="mm-heading-notes">Notes & appearance</h2>
+              </summary>
+              <div>
+                <div class="field">
+                  <label for="mm-appearance">Appearance</label
+                  ><textarea
+                    id="mm-appearance"
+                    data-path="appearance"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="mm-fields">
+                  <div class="field">
+                    <label for="mm-ambition">Personal ambition</label
+                    ><input
+                      id="mm-ambition"
+                      type="text"
+                      value=""
+                      data-path="ambition"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="mm-partyAmbition">Party ambition</label
+                    ><input
+                      id="mm-partyAmbition"
+                      type="text"
+                      value=""
+                      data-path="partyAmbition"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="mm-notes">Notes</label
+                  ><textarea
+                    id="mm-notes"
+                    data-path="notes"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <details data-detail-key="marijan:rolls">
+                  <summary>Recorded rolls</summary>
+                  <div id="mm-rolls">No rolls yet.</div>
+                </details>
+              </div>
+            </details>
+          </section>
+          <div class="mm-page-footer">
+            <button type="button" class="primary" data-action="export">
+              Export character sheet PDF</button
+            ><button type="button" class="quiet" data-action="backup">
+              Download JSON backup
+            </button>
+          </div>
+        </main>
+        <aside class="sheet mm-folio" aria-label="Character summary">
+          <div class="mm-folio-emblem">
+            <img
+              class="ledger-emblem"
+              src="../dist/assets/black-banner/w.svg"
+              alt=""
+              width="108"
+              height="100"
+            />
+          </div>
+          <h2 id="mm-folio-name">Marijan the Unbound</h2>
+          <p id="mm-folio-identity">High Elf</p>
+          <div class="mm-folio-stats">
+            <div><span>WS</span><strong data-result="stat:WS">100</strong></div>
+            <div><span>BS</span><strong data-result="stat:BS">75</strong></div>
+            <div><span>S</span><strong data-result="stat:S">65</strong></div>
+            <div><span>T</span><strong data-result="stat:T">80</strong></div>
+            <div><span>I</span><strong data-result="stat:I">95</strong></div>
+            <div><span>Ag</span><strong data-result="stat:Ag">90</strong></div>
+            <div>
+              <span>Dex</span><strong data-result="stat:Dex">80</strong>
+            </div>
+            <div>
+              <span>Int</span><strong data-result="stat:Int">120</strong>
+            </div>
+            <div><span>WP</span><strong data-result="stat:WP">140</strong></div>
+            <div>
+              <span>Fel</span><strong data-result="stat:Fel">85</strong>
+            </div>
+          </div>
+          <dl class="mm-folio-resources">
+            <div>
+              <dt>Wounds</dt>
+              <dd data-result="derived:wounds">36</dd>
+            </div>
+            <div>
+              <dt>Movement</dt>
+              <dd data-result="derived:movement">4</dd>
+            </div>
+            <div>
+              <dt>Carrying capacity</dt>
+              <dd data-result="derived:capacity">14</dd>
+            </div>
+            <div>
+              <dt>Listed Enc</dt>
+              <dd data-result="derived:enc">2</dd>
+            </div>
+            <div>
+              <dt>Total XP</dt>
+              <dd data-result="xp">99999</dd>
+            </div>
+          </dl>
+          <div id="mm-counts"></div>
+          <div id="mm-warnings" class="mm-warnings"></div>
+          <button type="button" class="primary" data-action="export">
+            Export PDF</button
+          ><small>Marijan Mode · unrestricted</small>
+        </aside>
+      </div>
+    </div>
+    <div id="pwa-status" class="pwa-status" role="status" aria-live="polite">
+      Preparing offline access, including PDF exports…
+    </div>
+    <aside id="pwa-update" class="pwa-update" aria-label="App update" hidden>
+      <span>Update available. Your saved character will be kept.</span>
+      <div>
+        <button id="pwa-update-now" class="primary" type="button">
+          Update now</button
+        ><button id="pwa-update-later" class="quiet" type="button">
+          Later
+        </button>
+      </div>
+    </aside>
+    <dialog
+      id="pwa-install-dialog"
+      class="pwa-dialog"
+      aria-labelledby="pwa-install-title"
+    >
+      <h2 id="pwa-install-title">Install Character Ledger</h2>
+      <p id="pwa-install-instructions"></p>
+      <p class="small muted">
+        Open the app online once and wait for “Available offline” before using
+        it without a connection. Characters stay on this device; Save character
+        creates a backup.
+      </p>
+      <button id="pwa-install-close" class="primary" type="button">
+        Got it
+      </button>
+    </dialog>
+    <dialog
+      id="creator-dialog"
+      class="creator-dialog"
+      aria-labelledby="creator-dialog-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="creator-dialog-title"></h2>
+        <button
+          type="button"
+          class="quiet"
+          data-action="close-dialog"
+          aria-label="Close dialog"
+        >
+          Close
+        </button>
+      </div>
+      <div id="creator-dialog-body"></div>
+    </dialog>
+    <section
+      id="book-search-dialog"
+      class="search-reader"
+      role="region"
+      hidden
+      aria-labelledby="book-search-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="book-search-title" tabindex="-1"></h2>
+      </div>
+      <div id="book-search-body"></div>
+    </section>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div hidden>
+      <button id="pwa-install" class="install-app" type="button" hidden>
+        Install app
+      </button>
+    </div>
+
+    <script type="module" src="marijan-colours.mjs"></script>
+  </body>
+</html>

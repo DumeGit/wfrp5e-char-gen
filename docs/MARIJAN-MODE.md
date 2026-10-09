@@ -53,3 +53,8 @@ Initial verification (9 October 2026): the release check passed 404 Node tests a
 Compact layout/generation verification: 15 targeted Node tests and 14 desktop/mobile Marijan Playwright cases passed, with quick checks and offline asset validation. Desktop/phone layouts and generated editable sheet/record pages were visually inspected. Unchanged player/GM release suites were not repeated.
 
 Compact-entry search keeps the query, Book and custom-entry action on one phone row. Leaving a search for an editor control hides results only once the click has reached its target, preventing layout movement between pointerdown and click. No rule values or save formats change.
+
+
+## Pending visual studies
+
+Three elven-banner palette previews are available in `design-previews/marijan-colours.html`: Ivory Ascendancy, Stormglass and The Forbidden Grimoire. These are static studies outside the shipped app; Marijan continues using Black Banner until the user chooses a proposal. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md) and [banner provenance](../design-assets/marijan/README.md).

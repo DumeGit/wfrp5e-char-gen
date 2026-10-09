@@ -199,3 +199,6 @@ Archives II also adds the independently enabled GM Rhinox and Typical Sister fou
 The Night Parade integration: see [NIGHT-PARADE.md](docs/NIGHT-PARADE.md). Its pack shares three Ride specialisations; GM foundations/templates are opt-in. Supplement template operations live in `dist/gm/templates.mjs`, validated and compiled from reviewed `dist/gm/sources/*.json`. Book generation discovers registered GM source files automatically; no hardcoded supplement list is maintained.
 
 Marijan Mode uses compact Starting/Total Characteristic grids and selected Skill/Talent/equipment rows. Advances/Other and detailed entry overrides expand on demand; normal amounts, Skill totals, references and selective Legacy access remain available. Mobile preserves 44px touch controls.
+
+
+Marijan visual studies (not shipped): run `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/marijan-colours.html` to compare three elven-banner styles. Details and artwork provenance are in [the design preview notes](docs/DESIGN-PREVIEWS.md).

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Marijan Mode colour studies</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #0d1726;
+        color: #e9e1cb;
+        font:
+          16px/1.6 "Segoe UI",
+          sans-serif;
+      }
+      main {
+        max-width: 1520px;
+        margin: auto;
+        padding: 32px 24px;
+      }
+      h1 {
+        font:
+          36px/1.2 Georgia,
+          serif;
+        margin: 0 0 12px;
+      }
+      p {
+        color: #bbc8d5;
+        margin: 0 0 24px;
+        max-width: 880px;
+      }
+      .studies {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      article {
+        border: 1px solid #52657a;
+        background: #17263a;
+        min-width: 0;
+      }
+      .image {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+        background: #101c2b;
+      }
+      iframe {
+        position: absolute;
+        width: 1320px;
+        height: 960px;
+        border: 0;
+        transform-origin: top left;
+        pointer-events: none;
+      }
+      .caption {
+        padding: 20px;
+      }
+      h2 {
+        font:
+          24px/1.2 Georgia,
+          serif;
+        margin: 0 0 12px;
+        color: #e6d2a0;
+      }
+      .caption p {
+        font-size: 14px;
+        min-height: 68px;
+        margin-bottom: 16px;
+      }
+      .swatches {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .swatch {
+        width: 30px;
+        height: 20px;
+        border: 1px solid #ffffff55;
+      }
+      .open {
+        display: inline-block;
+        padding: 8px 14px;
+        color: #f3e4ba;
+        background: #294362;
+        border: 1px solid #7a91aa;
+        text-decoration: none;
+      }
+      .open:hover {
+        background: #365779;
+      }
+      .open:focus-visible {
+        outline: 3px solid #e6cf94;
+        outline-offset: 3px;
+      }
+      .note {
+        margin-top: 24px;
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .studies {
+          grid-template-columns: 1fr;
+        }
+        .image {
+          height: 300px;
+        }
+        .caption p {
+          min-height: 0;
+        }
+        main {
+          padding: 24px 16px;
+        }
+        h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Marijan Mode · beyond the rules</h1>
+      <p>
+        Three styles inspired by the new elven battle artwork. A familiar
+        compact editor, with an unmistakably unrestricted identity. Preview
+        values are deliberately excessive, not a legal character. The live
+        creators are unchanged.
+      </p>
+      <div class="studies">
+        <article>
+          <div class="image">
+            <iframe
+              aria-hidden="true"
+              inert
+              title="A — Ivory Ascendancy preview"
+              src="marijan-screen.html?palette=ivory&amp;thumbnail=1"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>A — Ivory Ascendancy</h2>
+            <p>
+              Luminous ivory parchment, deep storm-blue framing and pale gold.
+              Regal and familiar: the easiest to read for long editing sessions.
+            </p>
+            <div class="swatches" aria-label="Style palette">
+              <span class="swatch" style="background: #10243a"></span
+              ><span class="swatch" style="background: #324c69"></span
+              ><span class="swatch" style="background: #eeece2"></span
+              ><span class="swatch" style="background: #285875"></span
+              ><span class="swatch" style="background: #b1a175"></span>
+            </div>
+            <a class="open" href="marijan-screen.html?palette=ivory"
+              >Open A at full size</a
+            >
+          </div>
+        </article>
+        <article>
+          <div class="image">
+            <iframe
+              aria-hidden="true"
+              inert
+              title="B — Stormglass preview"
+              src="marijan-screen.html?palette=teal&amp;thumbnail=1"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>B — Stormglass</h2>
+            <p>
+              Dark teal working surfaces, moon-silver borders and mint actions.
+              A magical instrument panel for bending every limit.
+            </p>
+            <div class="swatches" aria-label="Style palette">
+              <span class="swatch" style="background: #09222b"></span
+              ><span class="swatch" style="background: #173a44"></span
+              ><span class="swatch" style="background: #ecf4ef"></span
+              ><span class="swatch" style="background: #a7dace"></span
+              ><span class="swatch" style="background: #99bcbf"></span>
+            </div>
+            <a class="open" href="marijan-screen.html?palette=teal"
+              >Open B at full size</a
+            >
+          </div>
+        </article>
+        <article>
+          <div class="image">
+            <iframe
+              aria-hidden="true"
+              inert
+              title="C — The Forbidden Grimoire preview"
+              src="marijan-screen.html?palette=violet&amp;thumbnail=1"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>C — The Forbidden Grimoire</h2>
+            <p>
+              Midnight violet, warm ivory lettering and antique gold actions. A
+              forbidden spellbook: the strongest cheat-mode personality.
+            </p>
+            <div class="swatches" aria-label="Style palette">
+              <span class="swatch" style="background: #1a192e"></span
+              ><span class="swatch" style="background: #2a273d"></span
+              ><span class="swatch" style="background: #f0eae3"></span
+              ><span class="swatch" style="background: #d4b382"></span
+              ><span class="swatch" style="background: #bda679"></span>
+            </div>
+            <a class="open" href="marijan-screen.html?palette=violet"
+              >Open C at full size</a
+            >
+          </div>
+        </article>
+      </div>
+      <p class="note">
+        Open a study to compare full-size text, fields, buttons and the folio.
+        The palette selector switches all three in place. No sound or
+        saved-character changes. Expand sections to inspect the reused
+        components; editing and exporting are inactive.
+      </p>
+    </main>
+    <script>
+      const resize = () =>
+        document.querySelectorAll(".image").forEach((frame) => {
+          const scale = frame.clientWidth / 1320;
+          frame.querySelector("iframe").style.transform = `scale(${scale})`;
+          frame.style.height = `${Math.round(960 * scale)}px`;
+        });
+      new ResizeObserver(resize).observe(document.querySelector(".studies"));
+      resize();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+/* Exploratory only. Production palettes and creator behaviour are unchanged. */
+:root {
+  --color-title-veil: #071b2cc9;
+  --color-search-veil: #071b2ccc;
+  --color-dialog-backdrop: #08101bd9;
+  --color-chapter-initial: var(--color-on-crimson);
+  --surface-working-leaf:
+    radial-gradient(ellipse at 50% 0, #ffffff12, transparent 70%),
+    var(--color-paper);
+  --shadow-working-leaf: inset 0 0 30px #00142512;
+  --surface-folio-crest: linear-gradient(135deg, #cee8ec12, #00142544);
+  --shadow-folio-crest: inset 0 0 0 2px #d4e5ec22;
+  --surface-rail-glow: radial-gradient(
+    ellipse at 0 50%,
+    #8bd7ef12,
+    transparent 40%
+  );
+  --surface-folio-glow: radial-gradient(
+    ellipse at 100% 70%,
+    #8bd7ef12,
+    transparent 40%
+  );
+}
+:root[data-palette="ivory"] {
+  color-scheme: light;
+  --color-world: #101e30;
+  --color-leather: #1b314b;
+  --color-leather-deep: #10243a;
+  --color-leather-raised: #324c69;
+  --color-on-leather: #f1eee2;
+  --color-on-leather-muted: #b6cad9;
+  --color-line-dark: #839cae;
+  --color-paper: #eeece2;
+  --color-paper-raised: #faf9f2;
+  --color-paper-recessed: #dee3df;
+  --color-paper-hover: #e2ebef;
+  --color-ink: #21364b;
+  --color-muted: #516376;
+  --color-line: #a0b2bf;
+  --color-line-soft: #c4cdd0;
+  --color-gold: #b1a175;
+  --color-gold-light: #eee3ba;
+  --color-gold-dark: #87734a;
+  --color-crimson: #285875;
+  --color-crimson-hover: #194158;
+  --color-on-crimson: #fff7dc;
+  --color-focus: #246c98;
+}
+:root[data-palette="teal"] {
+  color-scheme: dark;
+  --color-world: #081a21;
+  --color-leather: #102d35;
+  --color-leather-deep: #09222b;
+  --color-leather-raised: #25434c;
+  --color-on-leather: #e1f2ed;
+  --color-on-leather-muted: #adc8cc;
+  --color-line-dark: #607f8b;
+  --color-paper: #173a44;
+  --color-paper-raised: #204955;
+  --color-paper-recessed: #102f38;
+  --color-paper-hover: #29515a;
+  --color-ink: #ecf4ef;
+  --color-muted: #bad0d2;
+  --color-line: #65848a;
+  --color-line-soft: #42636d;
+  --color-gold: #99bcbf;
+  --color-gold-light: #e0eeea;
+  --color-gold-dark: #61858d;
+  --color-crimson: #a7dace;
+  --color-crimson-hover: #c4eee1;
+  --color-on-crimson: #10313a;
+  --color-focus: #b6e8de;
+}
+:root[data-palette="violet"] {
+  color-scheme: dark;
+  --color-world: #141422;
+  --color-leather: #26233a;
+  --color-leather-deep: #1a192e;
+  --color-leather-raised: #423956;
+  --color-on-leather: #eee9e2;
+  --color-on-leather-muted: #c3b7d2;
+  --color-line-dark: #8e829f;
+  --color-paper: #2a273d;
+  --color-paper-raised: #39344c;
+  --color-paper-recessed: #201e32;
+  --color-paper-hover: #413a54;
+  --color-ink: #f0eae3;
+  --color-muted: #c6bacf;
+  --color-line: #8c7f9f;
+  --color-line-soft: #5e536e;
+  --color-gold: #bda679;
+  --color-gold-light: #f3dfae;
+  --color-gold-dark: #8a7150;
+  --color-crimson: #d4b382;
+  --color-crimson-hover: #ead0a4;
+  --color-on-crimson: #282037;
+  --color-focus: #d7bdf2;
+  --color-title-veil: #17142ac9;
+  --color-search-veil: #17142acc;
+}
+.masthead-art {
+  background:
+    linear-gradient(90deg, #092033dd, #0b233944 48%, #09182422),
+    url(../design-assets/marijan/sundering-banner.webp) 50% 42% / cover;
+}
+.masthead-art::after {
+  background: linear-gradient(0deg, #081b2b66, transparent 65%);
+}
+.page::before {
+  opacity: 0.12;
+}
+.chapter-initial {
+  background: var(--color-crimson);
+  color: var(--color-on-crimson);
+}
+.mm-folio .primary,
+.rail .primary {
+  color: var(--color-on-crimson);
+}
+.mm-section-nav a {
+  border-color: var(--color-line-dark);
+}
+.mm-section-nav a:first-child {
+  background: var(--color-crimson);
+  color: var(--color-on-crimson);
+  border-color: var(--color-gold);
+}
+.mm-name-button,
+.mm-empty {
+  color: var(--color-ink);
+}
+input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+.preview-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #0b1626;
+  color: #e4e9ec;
+  padding: 10px 24px;
+  border-bottom: 1px solid #71869a;
+  font:
+    13px/1.4 "Segoe UI",
+    sans-serif;
+}
+.preview-tools strong {
+  margin-right: auto;
+}
+.preview-tools label {
+  margin: 0;
+}
+.preview-tools select {
+  width: auto;
+  min-height: 36px;
+  background: #26394c;
+  color: #f0eee4;
+  padding: 4px 8px;
+  border-color: #8699aa;
+}
+.preview-tools a {
+  color: #ecddb5;
+}
+.preview-tools small {
+  color: #b8c8d6;
+}
+.preview-tools[hidden],
+#pwa-status,
+#pwa-update,
+#mm-save-status {
+  display: none;
+}
+.mm-rail,
+.mm-folio {
+  position: static;
+  max-height: none;
+}
+.mm-workspace {
+  padding-top: 16px;
+}
+.mm-page {
+  padding: 20px 24px;
+}
+.mm-page > h1 {
+  margin-bottom: 4px;
+}
+.mm-preview-notice {
+  border-left: 3px solid var(--color-crimson);
+  padding: 7px 12px;
+  margin: 10px 0 18px;
+  color: var(--color-muted);
+  background: var(--color-paper-recessed);
+  font-size: 13px;
+}
+.mm-page > p.small,
+#mm-section-resources,
+#mm-section-extras,
+#mm-section-notes,
+.mm-page-footer {
+  display: none;
+}
+/* Keep the authentic editor controls; collapse its lengthy Identity form for comparison. */
+#mm-section-identity .mm-fields,
+#mm-section-identity details,
+#mm-section-identity .mm-inline-tools {
+  display: none;
+}
+#mm-section-identity {
+  margin-bottom: 12px;
+}
+#mm-section-identity .preview-identity {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  color: var(--color-muted);
+  padding: 6px 0;
+}
+.mm-folio small {
+  color: var(--color-on-leather-muted);
+}
+@media (max-width: 760px) {
+  .preview-tools {
+    padding: 10px 12px;
+  }
+  .preview-tools small {
+    flex-basis: 100%;
+  }
+  .mm-page {
+    padding: 16px;
+  }
+  .mm-rail-intro,
+  .mm-rail-tools,
+  .creator-switch {
+    display: none;
+  }
+  .mm-rail {
+    padding: 6px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.preview-phone-icon {
+  display: none;
+}
+@media (max-width: 760px) {
+  .preview-phone-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-line-dark);
+    font-size: 24px;
+  }
+}
+
+.mm-intro {
+  display: none;
+}
+@media (max-width: 760px) {
+  .mm-rail .creator-switch,
+  .mm-rail .mm-rail-tools {
+    display: none;
+  }
+}
