@@ -4,6 +4,7 @@ import { loadBookBundle } from "../book-bundle.mjs";
 import { KEYS, skillInfo, base } from "../rules.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
+import { createMobileShell } from "../mobile-shell.mjs";
 import {
   freshGM,
   validateGMDraft,
@@ -47,6 +48,7 @@ const ui = {
   disclosures = new Map(),
   undo = [],
   mountInstall = createInstallControl(document.querySelector("#pwa-install"));
+const mobileShell = createMobileShell();
 let data,
   R,
   rulesFor,
@@ -129,6 +131,7 @@ function refreshResult() {
   root.querySelector('[data-action="undo"]').disabled = !undo.length;
   restoreDisclosures(root, disclosures);
   folio.scrollTop = scroll;
+  mobileShell.refresh();
 }
 function render() {
   if (ui.profileBook && !s.books.includes(ui.profileBook)) ui.profileBook = "";
@@ -155,6 +158,7 @@ function render() {
     saveMessage,
   );
   mountInstall(root);
+  mobileShell.mount(root);
   restoreDisclosures(root, disclosures);
   root.querySelector("#gm-folio").scrollTop = folioScroll;
   if (s.removed.length) {
@@ -681,6 +685,7 @@ async function action(el) {
     return;
   }
   if (a === "folio") {
+    mobileShell.expand();
     root.querySelector("#gm-folio").scrollIntoView({ block: "start" });
     return;
   }

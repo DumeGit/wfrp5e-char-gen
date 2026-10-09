@@ -3,6 +3,7 @@ import { loadBookBundle } from "../book-bundle.mjs";
 import { createReferenceSearch } from "../reference-search.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
+import { createMobileShell } from "../mobile-shell.mjs";
 import { esc, button, field, score, select } from "../controls.mjs";
 import {
   createMarijanCatalogue,
@@ -21,6 +22,7 @@ import {
   fromPlayer,
 } from "./model.mjs";
 import { workspace, rowHTML, LABELS } from "./views.mjs";
+const mobileShell = createMobileShell();
 
 const root = document.querySelector("#app"),
   dialog = document.querySelector("#creator-dialog"),
@@ -122,6 +124,7 @@ function render() {
   r = calculateMarijan(catalogue, s);
   root.innerHTML = workspace(catalogue, s, r, verify);
   install(root.querySelector("#mm-install"));
+  mobileShell.mount(root);
   restoreDisclosures(root, disclosures);
   for (const group of GROUPS) {
     root.querySelector(`[data-find="${group}"]`).value = searches[group].query;
@@ -204,6 +207,7 @@ function refresh() {
   root.querySelector("#mm-save-status").textContent = message;
   root.querySelector('[data-action="undo"]').disabled = !undo.length;
   root.querySelector('[data-action="redo"]').disabled = !redo.length;
+  mobileShell.refresh();
 }
 function renderList(group) {
   captureDisclosures(root, disclosures);

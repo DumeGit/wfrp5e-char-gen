@@ -4,6 +4,7 @@ import {
   downloadBytes,
   noOverflow,
   pcDraft,
+  revealCreatorTool,
 } from "./helpers.mjs";
 import { PDFDocument } from "pdf-lib";
 const open = async (page) => {
@@ -72,10 +73,18 @@ test("manual resource override and undo survive saving and reloading @marijan @s
   const draft = JSON.parse(save.bytes.toString());
   expect(draft.type).toBe("wfrp-marijan");
   expect(draft.overrides.wounds).toBe(77);
+  await revealCreatorTool(
+    page,
+    page.getByRole("button", { name: "New character", exact: true }),
+  );
   await page
     .getByRole("button", { name: "New character", exact: true })
     .click();
   await expect(page.getByLabel("Wounds", { exact: true })).toHaveValue("0");
+  await revealCreatorTool(
+    page,
+    page.getByRole("button", { name: "Load character", exact: true }),
+  );
   await page
     .getByRole("button", { name: "Load character", exact: true })
     .click();
@@ -121,6 +130,10 @@ test("copy Player character does not alter its original draft @marijan @storage"
     { pc, key },
   );
   await open(page);
+  await revealCreatorTool(
+    page,
+    page.getByRole("button", { name: "Copy player character", exact: true }),
+  );
   await page
     .getByRole("button", { name: "Copy player character", exact: true })
     .click();
@@ -162,9 +175,22 @@ test("creator switch uses shared bordered rail and compact desktop fields @marij
 }, info) => {
   await open(page);
   const rail = page.locator(".rail.mm-rail");
-  await expect(
-    rail.getByRole("navigation", { name: "Creator", exact: true }),
-  ).toBeVisible();
+  if (info.project.name === "mobile") {
+    await page
+      .getByRole("button", { name: "Open creator menu", exact: true })
+      .click();
+    await expect(
+      page
+        .getByRole("dialog", { name: "Creator menu", exact: true })
+        .getByRole("navigation", { name: "Creator", exact: true }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Close creator menu", exact: true })
+      .click();
+  } else
+    await expect(
+      rail.getByRole("navigation", { name: "Creator", exact: true }),
+    ).toBeVisible();
   await expect(page.locator("#app > .creator-switch")).toHaveCount(0);
   await noOverflow(page);
   await page.screenshot({ path: info.outputPath("marijan-compact.png") });

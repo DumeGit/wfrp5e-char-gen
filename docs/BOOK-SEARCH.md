@@ -147,3 +147,5 @@ The four source-only High Elf Careers previously shown under Not specified are A
 Focused verification: 21 search-filter/printed-reference tests passed, covering Academic filtering, removed search/chaining targets, retained Create Familiar and source-review consistency. Build and syntax/format checks passed. No UI changes were made for this correction.
 
 The Night Parade integration: see [NIGHT-PARADE.md](NIGHT-PARADE.md). Its pack shares three Ride specialisations; GM foundations/templates are opt-in. Supplement template operations live in `dist/gm/templates.mjs`, validated and compiled from reviewed `dist/gm/sources/*.json`. Book generation discovers registered GM source files automatically; no hardcoded supplement list is maintained.
+
+The launcher stays in the wide desktop search ribbon; on phones its existing button moves to a 44px magnifying-glass icon at the top right, beside the shared creator menu. All three modes use the same controller/dialog; opening and closing behavior, filters, reference history and lazy loading are unchanged.

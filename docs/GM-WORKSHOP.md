@@ -186,3 +186,5 @@ Profile-browser follow-up (9 October 2026): contribution counts use the complete
 The Night Parade integration: see [NIGHT-PARADE.md](NIGHT-PARADE.md). Its pack shares three Ride specialisations; GM foundations/templates are opt-in. Supplement template operations live in `dist/gm/templates.mjs`, validated and compiled from reviewed `dist/gm/sources/*.json`. Book generation discovers registered GM source files automatically; no hardcoded supplement list is maintained.
 
 The template chooser includes a native Book filter showing only enabled sources with templates, plus All enabled books. Filtering changes only the displayed list, preserves the selection when returning from a preview, and resets when opening the chooser afresh. It is transient UI state, not draft data.
+
+Phone navigation follows the shared shell: top-right Search and Menu icons, mode switching and save/load/new/install tools inside the menu, the Workshop page selector and Undo beside the workflow, and the folio hidden until the bottom Stat block action opens it. Desktop keeps the full bordered rail and sticky folio. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).

@@ -1,0 +1,269 @@
+/* Shared mobile shell; the desktop rails and folios retain their layout. */
+.mobile-menu-launcher,
+.mobile-folio-heading {
+  display: none;
+}
+.mobile-folio-content {
+  display: contents;
+}
+.book-search-launcher svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+html:has(.mobile-creator-menu[open]) {
+  overflow: hidden;
+}
+@media (max-width: 760px) {
+  .sheet:not(.expanded):not(.mobile-folio-open) {
+    display: none;
+  }
+  .mm-workspace {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-bottom: 85px;
+  }
+  .gm-workspace {
+    gap: 12px;
+  }
+  .mobile-marijan-bar > strong {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+  }
+  .mobile-marijan-bar {
+    z-index: 45;
+  }
+  .mobile-marijan-bar > button {
+    flex: none;
+  }
+  .mm-workspace > .mm-folio {
+    margin-top: 0;
+  }
+  .gm-workspace .rail > .quiet {
+    min-height: 44px;
+  }
+  .masthead {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 8px 3%;
+    gap: 8px;
+  }
+  .masthead .brand {
+    grid-column: 1;
+    gap: 7px;
+    min-width: 0;
+  }
+  .masthead .brand-mark {
+    width: 26px;
+    height: 34px;
+  }
+  .masthead .brand-title {
+    padding: 3px 0;
+    min-width: 0;
+  }
+  .masthead .brand strong {
+    font-size: clamp(17px, 4.7vw, 24px);
+    margin: 3px 0;
+  }
+  .masthead .brand-world,
+  .masthead .brand small {
+    font-size: 7px;
+  }
+  .masthead .masthead-actions {
+    display: flex;
+    grid-column: 2;
+    gap: 4px;
+    flex-wrap: nowrap;
+    max-width: none;
+  }
+  .masthead .banner-search-ribbon {
+    display: none;
+  }
+  .banner-atmosphere {
+    bottom: 0;
+  }
+  .masthead-actions .book-search-launcher,
+  .masthead-actions .mobile-menu-launcher {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid var(--color-line-dark);
+    border-radius: var(--radius-control);
+    background: var(--color-leather-deep);
+    color: var(--color-gold-light);
+  }
+  .masthead-actions .search-launch-label {
+    display: none;
+  }
+  .masthead-actions svg {
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+  .masthead-actions .quiet:hover,
+  .masthead-actions .quiet:focus-visible {
+    background: var(--color-leather-raised);
+    color: var(--color-on-leather);
+  }
+  .mobile-creator-menu {
+    width: min(420px, calc(100vw - 24px));
+    max-height: calc(100dvh - 32px);
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .mobile-creator-menu .dialog-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    position: static;
+  }
+  .mobile-creator-menu .dialog-heading > .quiet {
+    width: auto;
+    flex: none;
+    padding: 7px 12px;
+  }
+  .mobile-creator-menu [data-install-slot] {
+    grid-column: 1 / -1;
+  }
+  .mobile-creator-menu h2 {
+    margin: 0;
+    font-size: 25px;
+  }
+  .mobile-creator-menu h3 {
+    margin: 20px 0 9px;
+    font-size: 16px;
+  }
+  .mobile-creator-menu .header-actions,
+  .mobile-menu-actions,
+  .mobile-menu-extra {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .mobile-creator-menu .quiet,
+  .mobile-creator-menu .install-app,
+  .mobile-creator-menu .text-button {
+    width: 100%;
+    min-height: 44px;
+    font-size: 14px;
+  }
+  .mobile-creator-menu .save-status,
+  .mobile-creator-menu #mm-save-status {
+    color: var(--color-muted);
+    font-size: 12px;
+    margin: 4px 0;
+  }
+  .mobile-creator-menu .creator-switch {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .mobile-creator-menu .creator-switch a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+  }
+  .mobile-creator-menu .creator-switch a[aria-current]::after {
+    content: " · Current";
+    font-size: 12px;
+    margin-left: 4px;
+  }
+  .rail .mobile-step {
+    margin: 0;
+  }
+  .rail .mobile-step label,
+  .gm-workspace .rail > .field label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .rail .mobile-step select {
+    min-height: 44px;
+    font-size: 16px;
+  }
+  .mobile-workspace-bar .quiet,
+  .sheet .summary-toggle {
+    min-height: 44px;
+  }
+  .mobile-folio-heading {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-folio-heading strong {
+    font: 20px/1.2 var(--font-heading);
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .mobile-folio-heading button {
+    min-height: 44px;
+    flex: none;
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+  .mobile-fold-folio:not(.mobile-folio-open) .mobile-folio-content {
+    display: none;
+  }
+  .mobile-folio-open .mobile-folio-content {
+    display: block;
+    margin-top: 16px;
+  }
+  .gm-workspace > .gm-folio {
+    order: 1;
+  }
+  .gm-workspace > .gm-panel {
+    order: 2;
+  }
+  .gm-workspace .rail > .field {
+    margin-bottom: 0;
+  }
+  .gm-workspace .gm-rail-note {
+    display: none;
+  }
+  .mm-workspace > .mm-folio {
+    order: 1;
+  }
+  .mm-workspace > .mm-page {
+    order: 2;
+  }
+  .mm-rail .mm-rail-tools {
+    display: flex;
+    gap: 8px;
+  }
+  .mm-rail-tools button {
+    flex: 1;
+  }
+  .mm-rail #mm-install:empty {
+    display: none;
+  }
+}
+@media print {
+  .mobile-menu-launcher,
+  .mobile-creator-menu,
+  .mobile-folio-heading {
+    display: none !important;
+  }
+}

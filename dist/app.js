@@ -1,4 +1,5 @@
 import { createInstallControl } from "./install-control.mjs";
+import { createMobileShell } from "./mobile-shell.mjs";
 import { createFeature as createWorkspaceShell } from "./features/workspace-shell.mjs";
 import { captureDisclosures, restoreDisclosures } from "./disclosures.mjs";
 import { createFeature as create_controls } from "./features/controls.mjs";
@@ -49,6 +50,7 @@ import { cantPanel } from "./archives-iii-ui.mjs";
 const mountInstallControl = createInstallControl(
   document.getElementById("pwa-install"),
 );
+const mobileShell = createMobileShell();
 
 const library = await loadBookBundle(async (url) => {
   const r = await fetch(url);
@@ -458,6 +460,7 @@ function render() {
     ready,
   });
   mountInstallControl($("#app"));
+  mobileShell.mount($("#app"));
   restoreDisclosures(document.querySelector("main"), detailsState);
 
   filterMarket();

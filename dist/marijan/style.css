@@ -387,7 +387,8 @@
   margin: 10px 0;
   overflow-wrap: anywhere;
 }
-.mm-folio > p {
+.mm-folio > p,
+.mm-folio .mobile-folio-content > p {
   text-align: center;
   font-size: 12px;
 }
@@ -419,11 +420,13 @@
 .mm-folio-resources dd {
   font-weight: bold;
 }
-.mm-folio > button {
+.mm-folio > button,
+.mm-folio .mobile-folio-content > button {
   width: 100%;
   margin: 12px 0;
 }
-.mm-folio > small {
+.mm-folio > small,
+.mm-folio .mobile-folio-content > small {
   display: block;
   text-align: center;
   font-size: 10px;
@@ -665,7 +668,8 @@
     display: block;
   }
   .mm-folio h2,
-  .mm-folio > p {
+  .mm-folio > p,
+  .mm-folio .mobile-folio-content > p {
     display: none;
   }
   .mm-section {

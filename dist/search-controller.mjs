@@ -55,6 +55,13 @@ export function createSearchController({
   launch.className = "quiet book-search-launcher";
   launch.setAttribute("aria-haspopup", "dialog");
   banner.prepend(launch);
+  const headerActions = document.querySelector(".masthead-actions");
+  const placeLauncher = () => {
+    if (mobile.matches && headerActions) headerActions.prepend(launch);
+    else banner.prepend(launch);
+  };
+  mobile.addEventListener("change", placeLauncher);
+  placeLauncher();
   select.id = "book-search-category";
   select.setAttribute("aria-label", "Search category");
   select.innerHTML = '<option value="all">All categories</option>';
@@ -107,7 +114,10 @@ export function createSearchController({
     restoringFocus = false,
     rankingRequest = 0;
   const updateLaunch = () => {
-    launch.textContent = `⌕  ${input.value.trim() || "Search rules and book references…"}`;
+    launch.innerHTML =
+      '<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="search-launch-label"></span>';
+    launch.querySelector("span").textContent =
+      input.value.trim() || "Search rules and book references…";
     launch.setAttribute(
       "aria-label",
       input.value.trim()

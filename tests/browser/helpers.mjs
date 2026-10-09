@@ -193,6 +193,7 @@ export async function noOverflow(page) {
   }
 }
 export async function fileUpload(page, trigger, object, filename) {
+  await revealCreatorTool(page, trigger);
   const choosing = page.waitForEvent("filechooser");
   await trigger.click();
   await (
@@ -203,7 +204,15 @@ export async function fileUpload(page, trigger, object, filename) {
     buffer: Buffer.from(JSON.stringify(object)),
   });
 }
+export async function revealCreatorTool(page, trigger) {
+  if (!(await trigger.isVisible()))
+    await page
+      .getByRole("button", { name: "Open creator menu", exact: true })
+      .click();
+  await expect(trigger).toBeVisible();
+}
 export async function downloadBytes(page, trigger) {
+  await revealCreatorTool(page, trigger);
   const pending = page.waitForEvent("download");
   await trigger.click();
   const download = await pending;

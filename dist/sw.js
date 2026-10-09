@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"8a00682a8578bf4d8cfb";
+const CACHE=CACHE_PREFIX+"58ccc3408cdfb5253846";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -268,6 +268,8 @@ const ASSETS=[
  "marijan/style.css",
  "marijan/views.mjs",
  "market.mjs",
+ "mobile-shell.css",
+ "mobile-shell.mjs",
  "origins.mjs",
  "pdf-text.mjs",
  "pwa.mjs",
