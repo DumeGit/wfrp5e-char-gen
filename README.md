@@ -20,6 +20,10 @@ Enable **Dwarf Player’s Guide** for eleven regional profiles and automatic reg
 
 Enable **Blood and Bramble** for twelve new Hedgecraft and twelve Witchcraft spells with source descriptions, existing Fifth Edition learning rules and a qualified 5-penny ingredient shop entry. Godspakt uses the approved detailed You/You profile; ingredient quantities/weights remain unspecified and live spell effects remain references. Details: [docs/BLOOD-BRAMBLE.md](docs/BLOOD-BRAMBLE.md).
 
+## Marijan Mode
+
+**Marijan Mode** is a separate one-page unrestricted editor, available from the shared creator switch or `marijan.html`. Enter scores and resources directly, add options from all integrated books or custom entries, and override calculated totals. It has independent autosave, named local saves, Undo/Redo, JSON backups, player-snapshot copying and the supplied editable PDF with a complete appended record. XP, money, prerequisites and creation limits are not enforced. The normal player creator and GM workshop retain their rules. Calculations and deliberate limits: [Marijan Mode](docs/MARIJAN-MODE.md).
+
 ## Use
 
 The NPC creator uses the selected **A — Moonlit Vellum** palette: storm-blue framing, bone parchment, cobalt actions and old gold. It inherits the shared Black Banner components through central theme tokens; the player creator retains its original colours. The three historical static studies remain at `design-previews/bestiary-colours.html` when serving the repository root. Details: [design system](docs/DESIGN-SYSTEM.md) and [design previews](docs/DESIGN-PREVIEWS.md).

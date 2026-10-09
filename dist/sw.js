@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"8c09d43c17b82077ed3d";
+const CACHE=CACHE_PREFIX+"df579c87013b65b17f99";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -36,8 +36,10 @@ const ASSETS=[
  "character-result.mjs",
  "content-references.mjs",
  "context-career.mjs",
+ "controls.mjs",
  "creator-switch.mjs",
  "creator-ui.mjs",
+ "creature-calculations.mjs",
  "cults.mjs",
  "data/background.json",
  "data/book-library.json",
@@ -257,8 +259,16 @@ const ASSETS=[
  "legacy.mjs",
  "magic-browser.mjs",
  "manifest.webmanifest",
+ "marijan.html",
+ "marijan/app.mjs",
+ "marijan/catalogue.mjs",
+ "marijan/model.mjs",
+ "marijan/pdf.mjs",
+ "marijan/style.css",
+ "marijan/views.mjs",
  "market.mjs",
  "origins.mjs",
+ "pdf-text.mjs",
  "pwa.mjs",
  "record-sources.mjs",
  "reference-body.mjs",

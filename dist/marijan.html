@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Build a Fifth Edition character freely on one page. Direct values, all integrated books and manual overrides."
+    />
+    <title>Marijan Mode · WFRP Character Ledger</title>
+    <link rel="icon" type="image/svg+xml" href="assets/black-banner/w.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#251c17" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Character Ledger" />
+    <link rel="apple-touch-icon" href="assets/icon-180.png" />
+    <link rel="stylesheet" href="styles.css?v=pwa-1" />
+    <link rel="stylesheet" href="workspace.css" />
+    <link rel="stylesheet" href="book-search.css" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="design-system.css" />
+    <link rel="stylesheet" href="marijan/style.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-art" aria-hidden="true"></div>
+      <div class="banner-atmosphere" aria-hidden="true">
+        <i style="--particle: 0"></i><i style="--particle: 1"></i
+        ><i style="--particle: 2"></i><i style="--particle: 3"></i
+        ><i style="--particle: 4"></i><i style="--particle: 5"></i>
+      </div>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"
+          ><img
+            class="ledger-emblem"
+            src="assets/black-banner/w.svg"
+            alt=""
+            width="108"
+            height="100"
+        /></span>
+        <div class="brand-title">
+          <span class="brand-world">WARHAMMER FANTASY ROLEPLAY</span
+          ><strong>Marijan Mode</strong
+          ><small>FIFTH EDITION · UNRESTRICTED CREATION</small>
+        </div>
+      </div>
+      <div class="masthead-actions">
+        <span class="edition">BY INK AND OATH</span>
+      </div>
+      <div class="banner-search-ribbon">
+        <span class="banner-caption">THE OLD WORLD</span>
+        <div class="banner-search">
+          <div class="banner-search-field">
+            <span class="banner-search-icon" aria-hidden="true">⌕</span
+            ><input
+              id="book-search"
+              disabled
+              aria-busy="true"
+              type="search"
+              role="combobox"
+              aria-label="Search the books"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="book-search-results"
+              autocomplete="off"
+              placeholder="Search rules, Careers, magic and trappings…"
+            /><button
+              id="book-search-clear"
+              type="button"
+              aria-label="Clear book search"
+            >
+              ×
+            </button>
+          </div>
+          <div id="book-search-dropdown" class="book-search-dropdown" hidden>
+            <p id="book-search-status" role="status" aria-live="polite"></p>
+            <div
+              id="book-search-results"
+              role="listbox"
+              aria-label="Matching rules"
+            ></div>
+            <p id="book-search-empty" hidden>
+              No matches. Try a shorter name or another word.
+            </p>
+            <button id="book-search-more" type="button" hidden>
+              Show more matches
+            </button>
+          </div>
+        </div>
+        <span class="banner-caption">ALL BOOK REFERENCES</span>
+      </div>
+    </header>
+    <div id="app"></div>
+    <div id="pwa-status" class="pwa-status" role="status" aria-live="polite">
+      Preparing offline access, including PDF exports…
+    </div>
+    <aside id="pwa-update" class="pwa-update" aria-label="App update" hidden>
+      <span>Update available. Your saved character will be kept.</span>
+      <div>
+        <button id="pwa-update-now" class="primary" type="button">
+          Update now</button
+        ><button id="pwa-update-later" class="quiet" type="button">
+          Later
+        </button>
+      </div>
+    </aside>
+    <dialog
+      id="pwa-install-dialog"
+      class="pwa-dialog"
+      aria-labelledby="pwa-install-title"
+    >
+      <h2 id="pwa-install-title">Install Character Ledger</h2>
+      <p id="pwa-install-instructions"></p>
+      <p class="small muted">
+        Open the app online once and wait for “Available offline” before using
+        it without a connection. Characters stay on this device; Save character
+        creates a backup.
+      </p>
+      <button id="pwa-install-close" class="primary" type="button">
+        Got it
+      </button>
+    </dialog>
+    <dialog
+      id="creator-dialog"
+      class="creator-dialog"
+      aria-labelledby="creator-dialog-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="creator-dialog-title"></h2>
+        <button
+          type="button"
+          class="quiet"
+          data-action="close-dialog"
+          aria-label="Close dialog"
+        >
+          Close
+        </button>
+      </div>
+      <div id="creator-dialog-body"></div>
+    </dialog>
+    <section
+      id="book-search-dialog"
+      class="search-reader"
+      role="region"
+      hidden
+      aria-labelledby="book-search-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="book-search-title" tabindex="-1"></h2>
+      </div>
+      <div id="book-search-body"></div>
+    </section>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div hidden>
+      <button id="pwa-install" class="install-app" type="button" hidden>
+        Install app
+      </button>
+    </div>
+    <script src="assets/pdf-lib.min.js" defer></script>
+    <script type="module" src="marijan/app.mjs"></script>
+    <script type="module" src="pwa.mjs"></script>
+  </body>
+</html>

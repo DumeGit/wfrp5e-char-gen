@@ -34,15 +34,16 @@ The install command downloads Chromium once for the installed Playwright version
 
 | Command suffix (`npm run test:ui:<suffix>`) | Coverage |
 | --- | --- |
-| `smoke` (also `test:ui`) | Both creators open, navigate, read a rule and fit desktop/mobile widths |
+| `smoke` (also `test:ui`) | Player/GM creators open, navigate, read a rule and fit desktop/mobile widths |
 | `search` | Stable typing/caret, categories/book/combined filters and memory, Rune labels, Cants/prayers, loading retry, inactive-book availability, keyboard controls, automatic batches, return position and chained references without changing the draft |
 | `pc` | Career rolls, recorded dice, advancement/tracker grouping and undo, repeatable Talents, equipment purchase/removal |
+| `marijan` | Unrestricted one-page editing, additions, custom entries, overrides, Undo, independent saves/reload, player copying and editable PDF downloads |
 | `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, book-removal confirmation/undo, early blocking issue and repair |
 | `storage` | Actual JSON downloads/imports, reload persistence, rejection of the wrong save type |
 | `exports` | Actual browser PDF downloads, editable player fields, compact NPC PDF, six-card A4 default and mixed-draft batch |
 | `mobile` | Scenarios tagged for navigation, narrow layout and search; mobile Chromium only |
 | `pwa` | Real worker precache, offline reload and unopened references/GM entry, waiting update and retained purchases |
-| `all` | Every scenario in desktop and mobile Chromium |
+| `all` | Every scenario, including Marijan Mode, in desktop and mobile Chromium |
 | `cross-browser` | Smoke only in Chromium desktop/mobile, Firefox desktop and WebKit mobile |
 | `failed` | Rerun only failures from the last local run |
 | `report` | Open the latest HTML report |
@@ -66,3 +67,5 @@ Automated checks replace repetitive interaction testing. They establish outcomes
 `npm run check:release` passed 346 Node regressions and 44 browser cases (22 scenarios in desktop/mobile Chromium), alongside book, generated-output, format and offline checks. The Node portion took 204 seconds and the complete browser suite 71 seconds. A focused search run passed 14 cases in 14 seconds. A normal smoke command including its first asset preparation took 50 seconds; the unchanged cached repeat passed four cases in 9 seconds. These are local observations, not timing guarantees. Failure runs also produced screenshots, traces, error contexts and attached diagnostics before the test assumptions were corrected.
 
 Optional broader smoke passed all six Chromium/WebKit cases. Both Firefox cases failed before opening the app because its downloaded executable could not launch on this Windows host (`spawn UNKNOWN`); Firefox coverage is unverified. The command retains that failure rather than skipping it. The test listener on port 8199 was absent after completion, and no production app/data files changed. No real-phone or fresh visual-design inspection was required for this infrastructure-only change.
+
+Marijan Mode's focused Node checks are in `tests/marijan.test.mjs`, and browser scenarios in `tests/browser/marijan.spec.mjs` (`npm run test:ui:marijan`). The mode uses independent verification storage and actual downloaded JSON/PDFs. Shared controls, Wounds or PDF helper changes also require their affected GM tests; they remain re-exported at the existing GM import paths. All checks remain local.

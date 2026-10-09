@@ -8,7 +8,7 @@ import {
 } from "./helpers.mjs";
 
 test.use({ serviceWorkers: "allow" });
-test("both creators and previously unopened references work offline @pwa", async ({
+test("all three tools and previously unopened references work offline @pwa", async ({
   page,
   context,
 }) => {
@@ -33,6 +33,15 @@ test("both creators and previously unopened references work offline @pwa", async
     page.getByRole("heading", { name: "Starting profile", exact: true }),
   ).toBeVisible();
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
+  await page.goto("/marijan.html?verify=1");
+  await expect(
+    page.getByRole("heading", { name: "Marijan Mode", exact: true }),
+  ).toBeVisible();
+  await page.getByLabel("Name", { exact: true }).fill("Offline Marijan");
+  await page.reload();
+  await expect(page.getByLabel("Name", { exact: true })).toHaveValue(
+    "Offline Marijan",
+  );
 });
 
 test("a waiting offline update applies without losing purchases @pwa", async ({

@@ -1,3 +1,5 @@
+import { woundFormula } from "../creature-calculations.mjs";
+export { woundFormula } from "../creature-calculations.mjs";
 import {
   templateRowKey,
   templateTraits,
@@ -409,28 +411,6 @@ export function applyTemplate(s, id) {
   s.spells = [];
   s.spellLores = {};
   s.cants.choices = {};
-}
-export function woundFormula(
-  stats,
-  size,
-  construct = false,
-  swarm = false,
-  hardy = 0,
-  toughnessBonus = bonus(stats.T),
-) {
-  const tb = toughnessBonus,
-    sb = bonus(stats.S),
-    wp = construct ? sb : bonus(stats.WP);
-  if (tb === null) return null;
-  if (swarm)
-    return sb === null || wp === null ? null : (sb + (2 + hardy) * tb + wp) * 5;
-  if (size === "Tiny") return null;
-  if (size === "Small") return (2 + hardy) * tb;
-  if (sb === null || wp === null) return null;
-  return (
-    (sb + (2 + hardy) * tb + wp) *
-    ({ Average: 1, Large: 2, Enormous: 4, Monstrous: 8 }[size] || 1)
-  );
 }
 const sizeDamage = (size, sb) =>
   sb * ({ Large: 1, Enormous: 1, Monstrous: 2 }[size] || 0);
