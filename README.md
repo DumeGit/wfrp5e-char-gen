@@ -22,7 +22,7 @@ Enable **Blood and Bramble** for twelve new Hedgecraft and twelve Witchcraft spe
 
 ## Marijan Mode
 
-**Marijan Mode** is a separate one-page unrestricted editor, available from the shared creator switch or `marijan.html`. Enter scores and resources directly, add options from all integrated books or custom entries, and override calculated totals. It has independent autosave, named local saves, Undo/Redo, JSON backups, player-snapshot copying and the supplied editable PDF with a complete appended record. XP, money, prerequisites and creation limits are not enforced. The normal player creator and GM workshop retain their rules. Calculations and deliberate limits: [Marijan Mode](docs/MARIJAN-MODE.md).
+**Marijan Mode** is a separate one-page unrestricted editor, available from the shared creator switch or `marijan.html`. Enter scores and resources directly, add options from all integrated books or custom entries, and override calculated totals. It has independent autosave, named local saves, Undo/Redo, JSON backups, player-snapshot copying and the supplied editable PDF with a complete appended record. XP, money, prerequisites and creation limits are not enforced. It also previews random Fifth Edition characters at levels 1–4: core starting allocations, then the approved 10/12/14 tracker method with recorded XP purchases. Starting-list buttons add rolled Species Skills/Talents or basic/Class/first-level Career equipment without clearing existing entries. Its compact layout uses the shared bordered rail and creator switch. The normal player creator and GM workshop retain their rules. Calculations and deliberate limits: [Marijan Mode](docs/MARIJAN-MODE.md).
 
 ## Use
 

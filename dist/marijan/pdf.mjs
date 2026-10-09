@@ -82,7 +82,9 @@ export async function marijanRecord(
   line(s.name || "Unnamed character");
   line(
     "Mode: ",
-    "Directly entered values; creation legality, XP and purchases are not enforced. No verified creation or XP purchase history is claimed.",
+    s.generation
+      ? "Random Fifth Edition baseline followed by unrestricted editing. The original generation purchase record is included below; no played-session XP history is claimed."
+      : "Directly entered values; creation legality, XP and purchases are not enforced. No verified creation or XP purchase history is claimed.",
   );
   line(
     "Identity: ",
@@ -97,6 +99,12 @@ export async function marijanRecord(
   if (r.career?.adaptation)
     line("Legacy Career reference: ", r.career.adaptation);
   if (s.copiedFrom) line("Copied snapshot: ", s.copiedFrom);
+  if (s.generationOrigin)
+    line(
+      "Generation origin: ",
+      catalogue.origins.find((o) => o.id === s.generationOrigin)?.name ||
+        s.generationOrigin,
+    );
   section("Characteristics");
   for (const k of KEYS)
     line(
@@ -166,7 +174,20 @@ export async function marijanRecord(
     for (const roll of s.rolls)
       line(
         roll.label + ": ",
-        `${roll.faces.join(" + ")} = ${roll.faces.reduce((a, b) => a + b, 0)}; ${roll.at}. Imported roll history is not verified randomness.`,
+        `${roll.faces.join(" + ")} = ${roll.faces.reduce((a, b) => a + b, 0)}; d${roll.sides ?? 10}; ${roll.at}${roll.source ? `; ${entrySource(catalogue, { source: roll.source })}` : ""}. Imported roll history is not verified randomness.`,
+      );
+  }
+  if (s.generation) {
+    section("Original automatic generation record");
+    line(
+      "",
+      "Records the generated baseline. Subsequent unrestricted edits do not rewrite these purchases.",
+    );
+    for (const note of s.generation.notes) line("", note);
+    for (const q of s.generation.purchases)
+      line(
+        `${q.name}: `,
+        `${q.type}${["char", "skill"].includes(q.type) ? " +5" : ""}; ${q.cost} XP; ${entrySource(catalogue, q)}`,
       );
   }
   doc.setTitle(`${s.name || "Character"} - Marijan Mode record`);

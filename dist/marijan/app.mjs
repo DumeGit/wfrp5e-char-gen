@@ -3,7 +3,7 @@ import { loadBookBundle } from "../book-bundle.mjs";
 import { createReferenceSearch } from "../reference-search.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
-import { esc, button, field, score } from "../controls.mjs";
+import { esc, button, field, score, select } from "../controls.mjs";
 import {
   createMarijanCatalogue,
   findEntries,
@@ -44,6 +44,34 @@ let catalogue,
   timer,
   message = "",
   saved = [];
+let pendingGenerated, generationRequest;
+async function generationDialog(reusing = false) {
+  const { availableGenerationCareers } = await import("./generation.mjs");
+  const draft = {
+      ...s,
+      generationOrigin:
+        (reusing
+          ? body.querySelector("#mm-generate-origin")?.value
+          : undefined) ??
+        s.generationOrigin ??
+        "",
+    },
+    choices = availableGenerationCareers(catalogue, draft),
+    current =
+      (reusing
+        ? body.querySelector("#mm-generate-career")?.value
+        : undefined) ??
+      r.career?.contentId ??
+      s.career,
+    target =
+      (reusing
+        ? Number(body.querySelector("#mm-generate-level")?.value)
+        : undefined) ?? Math.min(4, Math.max(1, s.level));
+  modal(
+    "Generate Fifth Edition character",
+    `<p>Choose Species in Identity first. Generation replaces all values and entries, keeping the name and selected Species/Career. Review the random result before applying it; Undo restores your draft.</p><div class="mm-fields">${select("Origin rules", "mm-generate-origin", [["", "Base Species profile"], ...catalogue.origins.filter((o) => o.species === s.species).map((o) => [o.id, o.name])], draft.generationOrigin)}${select("Target Career level", "mm-generate-level", [1, 2, 3, 4], target)}${select("Starting Career", "mm-generate-career", [["", "Choose a Career"], ...choices.map((c) => [c.contentId, careerLabel(catalogue, c)])], current)}</div><p class="small">Core creation: five Species Skills, native languages, eight Career Skill Advances, Species Talents, one Career Talent, first-level and Class equipment. Levels 2–4 use the approved 10/12/14 tracker method with core XP prices. Higher-level Trappings are not awarded.</p>${button("Preview random character", "generate-preview", "", "primary")}<div id="mm-generation-preview"></div>`,
+  );
+}
 function toast(text) {
   const el = document.querySelector("#toast");
   el.textContent = text;
@@ -326,6 +354,56 @@ async function action(el) {
     dialog.close();
     return;
   }
+  if (a === "generate") {
+    pendingGenerated = null;
+    await generationDialog();
+    return;
+  }
+  if (a === "generate-preview") {
+    const { generateCharacter } = await import("./generation.mjs");
+    generationRequest = {
+      ...s,
+      career: body.querySelector("#mm-generate-career").value,
+      generationOrigin: body.querySelector("#mm-generate-origin").value,
+    };
+    pendingGenerated = generateCharacter(
+      catalogue,
+      generationRequest,
+      Number(body.querySelector("#mm-generate-level").value),
+    );
+    const result = calculateMarijan(catalogue, pendingGenerated);
+    body.querySelector("#mm-generation-preview").innerHTML =
+      `<div class="notice"><strong>Random result · ${esc(result.career.name)}, level ${pendingGenerated.level}</strong><p>${pendingGenerated.xpSpent} XP spent · ${pendingGenerated.tracker} tracker boxes · ${pendingGenerated.entries.skills.length} Skills · ${pendingGenerated.entries.talents.length} Talents · ${pendingGenerated.entries.gear.length} equipment entries.</p><p>${Object.entries(
+        result.stats,
+      )
+        .map(([k, v]) => `${k} ${v}`)
+        .join(
+          " · ",
+        )}</p>${pendingGenerated.generation.notes.map((n) => `<p class="small">${esc(n)}</p>`).join("")}${button("Use generated character", "generate-apply", "", "primary")}</div>`;
+    return;
+  }
+  if (a === "generate-apply") {
+    if (!pendingGenerated) return;
+    const next = validateMarijan(pendingGenerated);
+    commit(() => (s = next), true);
+    pendingGenerated = null;
+    dialog.close();
+    toast(
+      "Random Fifth Edition character applied. Undo restores the previous draft.",
+    );
+    return;
+  }
+  if (a === "starting-choices") {
+    const { rollStartingChoices, addStartingChoices } = await import(
+        "./generation.mjs"
+      ),
+      rolled = rollStartingChoices(catalogue, s, group);
+    commit(() => addStartingChoices(catalogue, s, rolled), true);
+    toast(
+      "Random starting choices added. Existing entries kept; duplicate values were not stacked.",
+    );
+    return;
+  }
   if (a === "undo" || a === "redo") {
     const from = a === "undo" ? undo : redo,
       to = a === "undo" ? redo : undo;
@@ -597,6 +675,17 @@ root.addEventListener("click", (e) => {
 dialog.addEventListener("click", (e) => {
   const el = e.target.closest("[data-action]");
   if (el) action(el).catch((error) => toast(error.message));
+});
+dialog.addEventListener("change", async (e) => {
+  if (e.target.id === "mm-generate-origin") {
+    pendingGenerated = null;
+    await generationDialog(true);
+  } else if (
+    ["mm-generate-level", "mm-generate-career"].includes(e.target.id)
+  ) {
+    pendingGenerated = null;
+    body.querySelector("#mm-generation-preview").innerHTML = "";
+  }
 });
 dialog.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && e.target.id === "mm-custom-name") {

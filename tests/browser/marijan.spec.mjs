@@ -156,3 +156,93 @@ test("custom identity stays visible and every input has a unique id @marijan @mo
   });
   expect(duplicates).toEqual([]);
 });
+
+test("creator switch uses shared bordered rail and compact desktop fields @marijan @mobile", async ({
+  page,
+}, info) => {
+  await open(page);
+  const rail = page.locator(".rail.mm-rail");
+  await expect(
+    rail.getByRole("navigation", { name: "Creator", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("#app > .creator-switch")).toHaveCount(0);
+  await noOverflow(page);
+  await page.screenshot({ path: info.outputPath("marijan-compact.png") });
+});
+
+test("random 5e generation previews, records promotions, exports and undoes replacement @marijan @mobile @exports", async ({
+  page,
+}, info) => {
+  await open(page);
+  await page.getByLabel("Name", { exact: true }).fill("Random tester");
+  await page
+    .getByLabel("Career", { exact: true })
+    .selectOption("core:careers:soldier");
+  await page.getByLabel("XP unspent", { exact: true }).fill("321");
+  await page
+    .getByRole("button", { name: "Generate character", exact: true })
+    .click();
+  await page
+    .getByLabel("Target Career level", { exact: true })
+    .selectOption("2");
+  await page
+    .getByRole("button", { name: "Preview random character", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Use generated character", exact: true }),
+  ).toBeVisible();
+  await expect(page.getByLabel("XP unspent", { exact: true })).toHaveValue(
+    "321",
+  );
+  await page
+    .getByRole("button", { name: "Use generated character", exact: true })
+    .click();
+  await expect(page.getByLabel("Career level", { exact: true })).toHaveValue(
+    "2",
+  );
+  await expect(page.getByLabel("Tracker boxes", { exact: true })).toHaveValue(
+    "10",
+  );
+  await expect(page.getByLabel("XP unspent", { exact: true })).toHaveValue("0");
+  const record = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem("wfrp-marijan-v1-verification")),
+  );
+  expect(
+    record.generation.purchases.filter((x) => x.type === "promotion"),
+  ).toHaveLength(1);
+  expect(record.xpSpent).toBe(
+    record.generation.purchases.reduce((n, x) => n + x.cost, 0),
+  );
+  const downloaded = await downloadBytes(
+    page,
+    page.getByRole("button", {
+      name: "Export character sheet PDF",
+      exact: true,
+    }),
+  );
+  const pdf = await PDFDocument.load(downloaded.bytes);
+  expect(pdf.getForm().getTextField("XP_Spent").getText()).toBe(
+    String(record.xpSpent),
+  );
+  await info.attach("marijan-generated.pdf", {
+    body: downloaded.bytes,
+    contentType: "application/pdf",
+  });
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(page.getByLabel("Career level", { exact: true })).toHaveValue(
+    "1",
+  );
+  await expect(page.getByLabel("XP unspent", { exact: true })).toHaveValue(
+    "321",
+  );
+  await page
+    .getByRole("button", { name: "Add Species Skills", exact: true })
+    .click();
+  await expect(
+    page.getByLabel("Language (Reikspiel) advances", { exact: true }),
+  ).toHaveValue("30");
+  await expect(page.getByLabel("XP unspent", { exact: true })).toHaveValue(
+    "321",
+  );
+  await noOverflow(page);
+});

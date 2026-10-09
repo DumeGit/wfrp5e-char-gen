@@ -36,6 +36,7 @@ export function freshMarijan() {
     name: "",
     species: "Human",
     origin: "",
+    generationOrigin: "",
     career: "",
     level: 1,
     appearance: "",
@@ -169,8 +170,24 @@ export function validateMarijan(s) {
         !text(r.label) ||
         !text(r.at) ||
         !Array.isArray(r.faces) ||
-        r.faces.some((n) => !Number.isInteger(n) || n < 1 || n > 10),
+        (r.sides !== undefined &&
+          (!Number.isInteger(r.sides) || r.sides < 1 || r.sides > 10000)) ||
+        r.faces.some(
+          (n) => !Number.isInteger(n) || n < 1 || n > (r.sides ?? 10),
+        ),
     )
+  )
+    fail();
+  if (s.generationOrigin !== undefined && !text(s.generationOrigin)) fail();
+  if (
+    s.generation &&
+    (!Array.isArray(s.generation.purchases) ||
+      !Array.isArray(s.generation.notes) ||
+      !number(s.generation.target) ||
+      s.generation.notes.some((n) => !text(n)) ||
+      s.generation.purchases.some(
+        (q) => !q || !text(q.name) || !text(q.type) || !number(q.cost),
+      ))
   )
     fail();
   return structuredClone(s);
