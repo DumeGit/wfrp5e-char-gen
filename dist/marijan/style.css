@@ -1,3 +1,9 @@
+/* Selected Marijan artwork; shared skin still owns masthead geometry. */
+.masthead-art {
+  background:
+    linear-gradient(90deg, #0d0d0fe6, #0d0d0f55 48%, #09090a33),
+    url(../assets/marijan/banner.webp) 50% 42% / cover;
+}
 /* Layout only: colours, type, buttons and paper come from the shared skin. */
 .mm-workspace {
   display: grid;

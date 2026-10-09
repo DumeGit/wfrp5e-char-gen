@@ -172,3 +172,52 @@
     transparent 20%
   );
 }
+
+/* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
+:root[data-theme="ash-vellum"] {
+  --color-title-veil: #101012d9;
+  --color-search-veil: #101012dd;
+  --color-dialog-backdrop: #080809d9;
+  --color-chapter-initial: var(--color-on-crimson);
+  --surface-working-leaf:
+    radial-gradient(ellipse at 50% 0, #ffffff12, transparent 70%),
+    var(--color-paper);
+  --shadow-working-leaf: inset 0 0 30px #00000012;
+  --surface-folio-crest: linear-gradient(135deg, #ffffff12, #00000044);
+  --shadow-folio-crest: inset 0 0 0 2px #ffffff22;
+  --surface-rail-glow: radial-gradient(
+    ellipse at 0 50%,
+    #c9323b12,
+    transparent 40%
+  );
+  --surface-folio-glow: radial-gradient(
+    ellipse at 100% 70%,
+    #c9323b12,
+    transparent 40%
+  );
+  color-scheme: light;
+  --color-world: #151517;
+  --color-leather: #262629;
+  --color-leather-deep: #18181b;
+  --color-leather-raised: #3f3f43;
+  --color-on-leather: #f2f2f2;
+  --color-on-leather-muted: #bcbcc3;
+  --color-line-dark: #77777e;
+  --color-paper: #e6e6e7;
+  --color-paper-raised: #fafafa;
+  --color-paper-recessed: #d8d8da;
+  --color-paper-hover: #eeeeef;
+  --color-ink: #242426;
+  --color-muted: #606067;
+  --color-line: #a2a2a9;
+  --color-line-soft: #c4c4c8;
+  --color-gold: #8b8b92;
+  --color-gold-light: #f1f1f2;
+  --color-gold-dark: #5d5d64;
+  --color-crimson: #962e38;
+  --color-crimson-hover: #75212a;
+  --color-on-crimson: #ffffff;
+  --color-focus: #ac3540;
+  --color-step-number-active: var(--color-on-crimson);
+  --color-step-caption-active: var(--color-on-crimson);
+}

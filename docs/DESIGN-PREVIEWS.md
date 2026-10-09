@@ -54,7 +54,7 @@ Verification: inspected the three thumbnails and full-size palettes, switched th
 
 ## Marijan Mode colour studies — 9 October 2026
 
-The new gallery is `design-previews/marijan-colours.html`; run `node design-previews/serve.mjs` and open port 8110 at that path. Full-size `marijan-screen.html` supports native style switching and responsive layout. Production remains unchanged pending selection.
+The new gallery is `design-previews/marijan-colours.html`; run `node design-previews/serve.mjs` and open port 8110 at that path. Full-size `marijan-screen.html` supports native style switching and responsive layout. The user subsequently selected A; production now uses its central Ash & Vellum theme.
 
 | Study | Direction |
 | --- | --- |
@@ -68,4 +68,6 @@ The screen reuses the current Marijan `workspace` output and shared controls/fon
 
 Verification: desktop and 390px previews inspected; no broken images, browser exceptions or horizontal page overflow across the three palettes and gallery. No full release suite is needed for isolated design studies.
 
-The user redirected these Marijan proposals to black/grey/white/red on 9 October. These three replace the earlier blue/teal/violet studies at the same URLs. The artwork and native W source remain unchanged; preview CSS desaturates them, with monochrome framing and red controls. No new image generation was needed. Production is still unchanged pending a selection.
+The user redirected these Marijan proposals to black/grey/white/red on 9 October. These three replace the earlier blue/teal/violet studies at the same URLs. The artwork and native W source remain unchanged; preview CSS desaturates them, with monochrome framing and red controls. No new image generation was needed. A has now been selected and implemented; B/C remain alternatives.
+
+Selected A was implemented on 9 October with a second imagegen edit adding crimson cloth to an otherwise monochrome battle painting. A's preview now uses that final artwork without the desaturation filter; B/C retain the earlier CSS-only treatment. Production reuses semantic tokens and existing layout, not the static preview's shortened Identity or disabled controls.

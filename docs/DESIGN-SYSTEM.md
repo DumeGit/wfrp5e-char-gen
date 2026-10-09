@@ -2,13 +2,13 @@
 
 The user selected **C — The Black Banner** on 5 October 2026 and authorised implementation. This is the creator's active design: painted Old World heraldry, dark leather, parchment, muted antique gold and oxblood. Gothic lettering belongs to the masthead; the working interface stays compact and readable. The W uses the approved softened bevel and centred folio placement. Decorative initials are optically centred. There is no logo glint or sound.
 
-The user selected **A — Moonlit Vellum** for the Bestiary Workshop on 7 October 2026. It uses storm-blue framing, pale bone parchment, cobalt actions and muted old gold, drawn from the workshop's undead banner. Player creation retains the original Black Banner palette. The shared Black Banner component/layout system serves both. Historical palette studies remain in `design-previews/bestiary-colours.html`; see [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md).
+The user selected **A — Moonlit Vellum** for the Bestiary Workshop on 7 October 2026. It uses storm-blue framing, pale bone parchment, cobalt actions and muted old gold, drawn from the workshop's undead banner. Player creation retains the original Black Banner palette. The shared Black Banner component/layout system serves all three modes. Historical palette studies remain in `design-previews/bestiary-colours.html`; see [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md).
 
 ## Ownership
 
 | File | Responsibility |
 | --- | --- |
-| `dist/design-tokens.css` | Semantic colours, decorative surfaces, typography, spacing, radii, control heights, layout widths and motion durations; local fonts and the approved Moonlit Vellum theme |
+| `dist/design-tokens.css` | Semantic colours, decorative surfaces, typography, spacing, radii, control heights, layout widths and motion durations; local fonts and approved Moonlit Vellum/Ash & Vellum themes |
 | `dist/design-system.css` | Shared component skin, shell, responsive adaptations, print and reduced motion |
 | `dist/design-system.mjs` | Escaped accessible chapter headings and shared emblem markup |
 | `dist/install-control.mjs` | Reparents the existing install button into the redrawable rail, preserving its listeners and browser state |
@@ -91,7 +91,7 @@ Results append without replacing existing rows or the field. Load more appears o
 
 ## Marijan Mode
 
-The unrestricted editor uses the existing Black Banner masthead, `.panel` working parchment, `.sheet` leather summary, chapter heading/emblem, primitive labelled fields/buttons, native disclosures and shared reference dialogs. `marijan/style.css` owns only the one-page layout, compact score table, inline entry searches, editable list rows and Auto/Manual controls; it uses existing semantic palette roles. Source/Legacy access stays next to known entries and Species/Career references. Desktop has section links, main paper and sticky summary; intermediate widths put the summary below; phones stack everything with horizontal section links, 16px fields and 44px touch controls. Collection/notes sections can collapse; section navigation opens the destination. No new palette, artwork, sound or motion is added. Creator navigation wraps for all three tools. See [MARIJAN-MODE.md](MARIJAN-MODE.md).
+The unrestricted editor uses the shared Black Banner system with its fixed Ash & Vellum palette, `.panel` working parchment, `.sheet` leather summary, chapter heading/emblem, primitive labelled fields/buttons, native disclosures and shared reference dialogs. `marijan/style.css` owns only the one-page layout, compact score table, inline entry searches, editable list rows and Auto/Manual controls; it uses existing semantic palette roles. Source/Legacy access stays next to known entries and Species/Career references. Desktop has section links, main paper and sticky summary; intermediate widths put the summary below; phones stack everything with horizontal section links, 16px fields and 44px touch controls. Collection/notes sections can collapse; section navigation opens the destination. No new palette, artwork, sound or motion is added. Creator navigation wraps for all three tools. See [MARIJAN-MODE.md](MARIJAN-MODE.md).
 
 Marijan Mode's desktop creator switch belongs inside the existing bordered `.rail`, alongside its section links and save controls; phones use the shared banner menu. Do not move it to a top-centred bar. Dense desktop fields use 32px controls and 11px labels; calculated resources use short label/value/mode rows rather than large cards. Phones retain 16px input text and 44px touch controls. Generation uses the existing dialog, with a preview before replacement, explicit policy/reminders, and Undo. Starting-list actions stay beside their respective collections.
 
@@ -102,6 +102,8 @@ Marijan Mode's desktop creator switch belongs inside the existing bordered `.rai
 Marijan density: Characteristics use a five-column Starting/Total grid, reducing to two columns on phones, with Advances/Other behind a shared native disclosure. Selected entries use border-separated rows rather than padded cards, with immediate amounts/Skill totals and a labelled chevron for details, source text and uncommon overrides. Keep Legacy access visible. Desktop uses 32px controls; phone inputs, remove buttons, names and disclosure targets retain 44px hit areas and 16px numeric text. Do not shrink touch targets to create density.
 
 
-Pending Marijan studies: the elven battle banner and three proposals in `design-previews/marijan-colours.html` are isolated from production. They reuse existing semantic roles and compact Marijan components; adopting a chosen style should add a centrally defined theme instead of copying preview CSS wholesale. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md).
+## Ash & Vellum — selected Marijan theme
 
-Marijan preview palette direction is now black/grey/white/red, as explicitly requested on 9 October; the isolated proposals are Ash & Vellum, The Black Seal and Crimson Grimoire. The CSS-only image desaturation is presentation, not a changed source asset. No production palette has been selected yet.
+The user selected A on 9 October 2026. `marijan.html` opts into `data-theme="ash-vellum"`; colours and decorative surfaces are defined centrally in `design-tokens.css`. Grey vellum, charcoal framing, silver/white decoration and oxblood actions follow the approved study. Shared semantic success/error/warning/Legacy roles remain distinct. Search, native fields, mobile menus and controls inherit the fixed theme; it is not saved with a character. The root theme-colour is charcoal. The native W source is unchanged, with scoped greyscale presentation.
+
+`marijan/style.css` chooses `assets/marijan/banner.webp` and its crop/contrast veil. The artwork itself was edited with imagegen to retain the elven battle composition, neutralise blue/gold tones and add crimson banners/cloaks. It needs no desaturation filter that would remove those accents. Original/edit prompts and PNGs are preserved in [design-assets/marijan](../design-assets/marijan/README.md). Existing reduced-motion behaviour and compact controls remain. Historical B/C studies stay outside production.

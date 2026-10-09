@@ -1507,3 +1507,11 @@ dialog::backdrop {
     margin-bottom: 10px;
   }
 }
+
+/* Marijan's fixed theme inherits all controls and semantic feedback roles. */
+:root[data-theme="ash-vellum"] .ledger-emblem {
+  filter: grayscale(1);
+}
+:root[data-theme="ash-vellum"] .masthead-art::after {
+  background: linear-gradient(0deg, #08080988, transparent 65%);
+}

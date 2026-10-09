@@ -44,7 +44,7 @@ PDF uses the supplied editable character-sheet template and local pdf-lib. All e
 
 ## Shared components and checks
 
-Primitive `esc`, `score`, `button`, `field` and `select` controls are in `dist/controls.mjs`; GM controls re-export them. Wounds live in `dist/creature-calculations.mjs`, re-exported by the GM model. Mixed-weight PDF wrapping/drawing is in `dist/pdf-text.mjs`, re-exported by the GM helper. All tools share `creatorSwitch`, design tokens/skin, headings/emblem, disclosure capture/restore, reference search, install control and PWA runtime. Marijan-specific CSS owns layout only and uses the Black Banner palette. Its modules load only from its entry point; PDF export and player-copy calculations load on demand.
+Primitive `esc`, `score`, `button`, `field` and `select` controls are in `dist/controls.mjs`; GM controls re-export them. Wounds live in `dist/creature-calculations.mjs`, re-exported by the GM model. Mixed-weight PDF wrapping/drawing is in `dist/pdf-text.mjs`, re-exported by the GM helper. All tools share `creatorSwitch`, design tokens/skin, headings/emblem, disclosure capture/restore, reference search, install control and PWA runtime. Marijan-specific CSS owns layout and its banner image/crop; colours use the central Ash & Vellum theme of the shared Black Banner system. Its modules load only from its entry point; PDF export and player-copy calculations load on demand.
 
 Focused checks: `node --test tests/marijan.test.mjs tests/marijan-generation.test.mjs` and `npm run test:ui:marijan`. Local Playwright covers desktop/mobile editing, inline additions, overrides, Undo, saving/reloading, actual PDFs and copying without changing the player draft. Shared component or release changes follow `docs/TESTING.md`. No GitHub tests or deployment actions are added.
 
@@ -55,6 +55,8 @@ Compact layout/generation verification: 15 targeted Node tests and 14 desktop/mo
 Compact-entry search keeps the query, Book and custom-entry action on one phone row. Leaving a search for an editor control hides results only once the click has reached its target, preventing layout movement between pointerdown and click. No rule values or save formats change.
 
 
-## Pending visual studies
+## Selected visual theme
 
-Three elven-banner palette previews are available in `design-previews/marijan-colours.html`: Ash & Vellum, The Black Seal and Crimson Grimoire. These are static studies outside the shipped app; Marijan continues using Black Banner until the user chooses a proposal. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md) and [banner provenance](../design-assets/marijan/README.md).
+The user selected **A — Ash & Vellum** on 9 October 2026. `marijan.html` fixes `data-theme="ash-vellum"`; its centrally defined roles provide grey vellum, charcoal framing, white/silver lettering and oxblood actions. The emblem is silver through a scoped CSS filter. The original generated banner was edited with imagegen to use monochrome architecture/armour/sky and crimson cloth; its WebP is shipped at `dist/assets/marijan/banner.webp`. Shared component geometry, mobile shell, controls, calculations and drafts are unchanged. No palette preference is stored. Historical alternatives remain in `design-previews/marijan-colours.html`; selected A shows the final artwork. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md) and [banner provenance](../design-assets/marijan/README.md).
+
+Theme verification: both focused desktop/mobile shell/layout cases passed. The rendered creator screenshots were inspected, and offline asset validation includes the final WebP. This visual change does not alter rules, draft data or export content.

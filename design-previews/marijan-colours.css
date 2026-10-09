@@ -278,3 +278,11 @@ input::placeholder {
 :root[data-palette="crimson"] .mm-folio {
   border-color: var(--color-crimson);
 }
+
+/* The selected study now shows its final monochrome/red painted artwork. */
+:root[data-palette="ash"] .masthead-art {
+  background-image:
+    linear-gradient(90deg, #0d0d0fe6, #0d0d0f55 48%, #09090a33),
+    url(../design-assets/marijan/ash-vellum-banner.webp);
+  filter: none;
+}
