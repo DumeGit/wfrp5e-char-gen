@@ -26,7 +26,7 @@ test("both creators and previously unopened references work offline @pwa", async
   await search(page, "Fortune");
   await page.getByRole("option", { name: /^Fortune Rule/ }).click();
   await expect(
-    page.getByRole("dialog", { name: "Fortune", exact: true }),
+    page.getByRole("region", { name: "Fortune", exact: true }),
   ).toBeVisible();
   await page.goto("/gm.html?verify=1");
   await expect(

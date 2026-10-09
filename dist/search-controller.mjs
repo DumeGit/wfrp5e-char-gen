@@ -1,5 +1,11 @@
 import { searchBooks, normalizeSearch } from "./book-search.mjs";
 import { SEARCH_CATEGORIES, searchLabel } from "./search-presentation.mjs";
+import {
+  CATEGORY_FILTERS,
+  CHARACTERISTICS,
+  filterOptions,
+  searchCategory,
+} from "./search-filters.mjs";
 
 const esc = (value) =>
   String(value ?? "").replace(
@@ -12,13 +18,15 @@ const esc = (value) =>
 const BATCH = 20;
 
 // One transient search interaction for both creators. The input node is never
-// replaced; on phones it moves into a native modal rather than cloning a field.
+// replaced. Desktop and phone share one modal with native filter controls.
 export function createSearchController({
   getIndex,
   getScope,
   onOpen,
   renderResult,
   searchIndex,
+  getBooks,
+  reader,
 }) {
   const banner = document.querySelector(".banner-search"),
     field = banner.querySelector(".banner-search-field"),
@@ -33,11 +41,14 @@ export function createSearchController({
     select = document.createElement("select"),
     tools = document.createElement("div"),
     end = document.createElement("p"),
+    bookSelect = document.createElement("select"),
+    filtersPanel = document.createElement("details"),
+    chips = document.createElement("div"),
     mobile = window.matchMedia("(max-width: 760px)");
   panel.className = "creator-dialog book-search-panel";
   panel.setAttribute("aria-labelledby", "search-panel-title");
   panel.innerHTML =
-    '<div class="dialog-heading"><h2 id="search-panel-title">Search the books</h2><button type="button" class="quiet" data-close-search aria-label="Close search">Close</button></div><div class="search-panel-content"></div>';
+    '<div class="dialog-heading search-panel-heading"><h2 id="search-panel-title">Search the books</h2><button type="button" class="quiet" data-close-search aria-label="Close search">Close</button></div><div class="search-panel-controls"></div><div class="search-panel-content"><div class="search-results-pane"></div><div class="search-reader-placeholder"><span class="eyebrow">Book reference</span><h3>Choose a result to read</h3><p>Explore the supplied books without changing your character.</p></div></div>';
   document.body.append(panel);
   launch.type = "button";
   launch.className = "quiet book-search-launcher";
@@ -47,8 +58,32 @@ export function createSearchController({
   select.setAttribute("aria-label", "Search category");
   select.innerHTML = '<option value="all">All categories</option>';
   tools.className = "search-result-tools";
-  tools.append(select, status);
-  popup.prepend(tools);
+  select.title = "Category";
+  bookSelect.id = "book-search-book";
+  bookSelect.setAttribute("aria-label", "Book");
+  tools.append(
+    controlLabel("Category", select),
+    controlLabel("Book", bookSelect),
+  );
+  filtersPanel.className = "search-category-filters";
+  filtersPanel.innerHTML =
+    '<summary>More filters</summary><div class="search-filter-fields"></div>';
+  filtersPanel.open = !mobile.matches;
+  chips.className = "search-filter-chips";
+  chips.setAttribute("aria-label", "Active search filters");
+  panel
+    .querySelector(".search-panel-controls")
+    .append(field, tools, filtersPanel, chips);
+  panel.querySelector(".search-results-pane").append(popup);
+  popup.prepend(status);
+  reader.className = "search-reader";
+  reader.hidden = true;
+  panel.querySelector(".search-panel-content").append(reader);
+  function controlLabel(text, control) {
+    const label = document.createElement("label");
+    label.append(document.createTextNode(text), control);
+    return label;
+  }
   end.className = "search-results-end";
   end.hidden = true;
   popup.append(end);
@@ -59,6 +94,8 @@ export function createSearchController({
     generation = 0,
     open = false,
     category = "all",
+    book = "",
+    categoryValues = new Map(),
     ranked = [],
     visible = 0,
     active = -1,
@@ -80,20 +117,94 @@ export function createSearchController({
   const optionId = (i) => `book-search-option-${i}`;
   function options() {
     select.innerHTML = Object.entries(SEARCH_CATEGORIES)
-      .filter(([key]) => key === "all" || index.some((row) => row.kind === key))
+      .filter(
+        ([key]) =>
+          key === "all" || index.some((row) => searchCategory(row) === key),
+      )
       .map(([key, label]) => `<option value="${key}">${esc(label)}</option>`)
       .join("");
     if (![...select.options].some((option) => option.value === category))
       category = "all";
     select.value = category;
+    bookSelect.innerHTML =
+      '<option value="">All books</option>' +
+      getBooks()
+        .filter(
+          (b) =>
+            b.kind !== "variant" &&
+            index.some((row) => row.filterValues.book.includes(b.id)),
+        )
+        .map(
+          (b) =>
+            `<option value="${esc(b.id)}">${esc(b.shortTitle || b.title)}</option>`,
+        )
+        .join("");
+    bookSelect.value = book;
+    renderCategoryFilters();
+  }
+  const currentFilters = () => ({
+    book,
+    ...(categoryValues.get(category) || {}),
+  });
+  function renderCategoryFilters() {
+    const fields = CATEGORY_FILTERS[category] || [];
+    const values = categoryValues.get(category) || {};
+    filtersPanel.hidden = !fields.length;
+    filtersPanel.querySelector(".search-filter-fields").innerHTML = fields
+      .map(
+        ([key, label]) =>
+          `<label>${esc(label)}<select aria-label="${esc(label)}" data-search-filter="${key}"><option value="">All</option>${filterOptions(
+            index,
+            category,
+            key,
+          )
+            .map(
+              (value) =>
+                `<option value="${esc(value)}"${values[key] === value ? " selected" : ""}>${esc(CHARACTERISTICS[value] || value)}</option>`,
+            )
+            .join("")}</select></label>`,
+      )
+      .join("");
+    renderChips();
+  }
+  function renderChips() {
+    const values = currentFilters(),
+      fields = [["book", "Book"], ...(CATEGORY_FILTERS[category] || [])];
+    const activeFilters = fields.filter(([key]) => values[key]);
+    chips.hidden = !activeFilters.length;
+    chips.innerHTML =
+      activeFilters
+        .map(([key, label]) => {
+          const value = values[key],
+            name =
+              key === "book"
+                ? getBooks().find((b) => b.id === value)?.shortTitle || value
+                : CHARACTERISTICS[value] || value;
+          return `<button type="button" class="quiet search-filter-chip" data-remove-filter="${key}" aria-label="Remove ${esc(label)} filter: ${esc(name)}">${esc(label)}: ${esc(name)} <span aria-hidden="true">×</span></button>`;
+        })
+        .join("") +
+      (activeFilters.length
+        ? '<button type="button" class="text-button" data-clear-filters>Clear filters</button>'
+        : "");
+    const count = activeFilters.filter(([key]) => key !== "book").length;
+    filtersPanel.querySelector("summary").textContent =
+      `More filters${count ? ` · ${count} active` : ""}`;
+  }
+  function changeFilters() {
+    returnPosition = null;
+    renderChips();
+    showResults();
   }
   function syncStatus() {
     status.textContent =
-      input.value.trim() || category !== "all"
+      input.value.trim() || category !== "all" || book
         ? `${ranked.length} match${ranked.length === 1 ? "" : "es"} · ${getScope()}`
         : `Search ${getScope()}, or choose a category to browse.`;
     more.hidden = Boolean(observer) || visible >= ranked.length;
-    empty.hidden = !(input.value.trim() && ranked.length === 0);
+    empty.hidden = !(
+      (input.value.trim() || category !== "all" || book) &&
+      ranked.length === 0
+    );
     end.hidden = !ranked.length || visible < ranked.length;
     end.textContent = "All matching references shown.";
   }
@@ -121,7 +232,12 @@ export function createSearchController({
   }
   async function showResults({ restore = false } = {}) {
     if (!index || !open) return;
-    const key = normalizeSearch(input.value) + "\0" + category;
+    const filters = currentFilters();
+    const key = JSON.stringify([
+      normalizeSearch(input.value),
+      category,
+      filters,
+    ]);
     const request = ++rankingRequest;
     if (key !== cacheKey) {
       // A new request discards the previous cache immediately. Returning to
@@ -138,9 +254,9 @@ export function createSearchController({
       list.replaceChildren();
       observer?.disconnect();
       const result = await (searchIndex
-        ? searchIndex(input.value, category)
+        ? searchIndex(input.value, category, filters)
         : Promise.resolve(
-            searchBooks(index, input.value, Infinity, { category }),
+            searchBooks(index, input.value, Infinity, { category, filters }),
           ));
       if (request !== rankingRequest || !open) return;
       ranked = result.rows;
@@ -185,17 +301,15 @@ export function createSearchController({
     }
   }
   function mountPanel() {
-    if (!mobile.matches || panel.open) return;
-    panel.querySelector(".search-panel-content").append(field, popup);
-    panel.showModal();
+    if (!panel.open) panel.showModal();
   }
   function unmountPanel() {
     if (panel.open) panel.close();
-    if (field.parentElement !== banner) banner.append(field, popup);
   }
   async function show({ restore = false, focus = true } = {}) {
     open = true;
     mountPanel();
+    panel.dataset.view = "results";
     popup.hidden = false;
     input.setAttribute("aria-expanded", "true");
     if (focus && document.activeElement !== input)
@@ -216,8 +330,8 @@ export function createSearchController({
     }
     return index;
   }
-  function hide({ remember = false, focus = false } = {}) {
-    if (remember)
+  function hide({ remember = true, focus = false } = {}) {
+    if (remember && (!mobile.matches || panel.dataset.view !== "reference"))
       returnPosition = {
         key: cacheKey,
         visible,
@@ -236,7 +350,7 @@ export function createSearchController({
     updateLaunch();
     if (focus) {
       restoringFocus = true;
-      (mobile.matches ? launch : input).focus({ preventScroll: true });
+      launch.focus({ preventScroll: true });
       restoringFocus = false;
     }
   }
@@ -256,7 +370,9 @@ export function createSearchController({
         ?.scrollIntoView({ block: "nearest" });
   }
   function choose(key) {
-    hide({ remember: true });
+    returnPosition = { key: cacheKey, visible, active, scroll: list.scrollTop };
+    const n = ranked.findIndex((row) => row.key === key);
+    if (n >= 0) activate(n, false);
     input.blur();
     onOpen(key);
   }
@@ -306,7 +422,39 @@ export function createSearchController({
   select.addEventListener("change", () => {
     category = select.value;
     returnPosition = null;
+    renderCategoryFilters();
     showResults();
+  });
+  bookSelect.addEventListener("change", () => {
+    book = bookSelect.value;
+    changeFilters();
+  });
+  filtersPanel.addEventListener("change", (event) => {
+    const key = event.target.dataset.searchFilter;
+    if (!key) return;
+    categoryValues.set(category, {
+      ...categoryValues.get(category),
+      [key]: event.target.value,
+    });
+    changeFilters();
+  });
+  chips.addEventListener("click", (event) => {
+    const remove = event.target.closest("[data-remove-filter]"),
+      clear = event.target.closest("[data-clear-filters]");
+    if (!remove && !clear) return;
+    if (clear) {
+      book = "";
+      categoryValues.set(category, {});
+    } else if (remove.dataset.removeFilter === "book") book = "";
+    else
+      categoryValues.set(category, {
+        ...categoryValues.get(category),
+        [remove.dataset.removeFilter]: "",
+      });
+    bookSelect.value = book;
+    renderCategoryFilters();
+    changeFilters();
+    input.focus({ preventScroll: true });
   });
   field.addEventListener("click", (event) => {
     if (!event.target.closest("input,button")) input.focus();
@@ -339,29 +487,18 @@ export function createSearchController({
     event.preventDefault();
     hide({ focus: true });
   });
-  document.addEventListener("pointerdown", (event) => {
-    if (open && !mobile.matches && !banner.contains(event.target)) hide();
-  });
-  banner.addEventListener("focusout", (event) => {
-    if (
-      !mobile.matches &&
-      open &&
-      event.relatedTarget &&
-      !banner.contains(event.relatedTarget)
-    )
-      hide();
-  });
   mobile.addEventListener("change", () => {
-    if (open) {
-      if (mobile.matches) mountPanel();
-      else unmountPanel();
-    }
+    filtersPanel.open = !mobile.matches;
+    fitViewport();
   });
   const fitViewport = () => {
     const viewport = window.visualViewport;
-    if (viewport && panel.open) {
+    if (viewport && panel.open && mobile.matches) {
       panel.style.height = `${viewport.height}px`;
       panel.style.top = `${viewport.offsetTop}px`;
+    } else {
+      panel.style.removeProperty("height");
+      panel.style.removeProperty("top");
     }
   };
   window.visualViewport?.addEventListener("resize", fitViewport);
@@ -380,10 +517,23 @@ export function createSearchController({
       visible = 0;
       returnPosition = null;
       category = "all";
+      book = "";
+      categoryValues.clear();
       hide();
       list.replaceChildren();
     },
     restore: () => show({ restore: true }),
+    showReader() {
+      open = true;
+      mountPanel();
+      popup.hidden = false;
+      reader.hidden = false;
+      panel.querySelector(".search-reader-placeholder").hidden = true;
+      panel.dataset.view = "reference";
+      input.setAttribute("aria-expanded", "true");
+      reader.scrollTop = 0;
+      reader.querySelector("h2").focus({ preventScroll: true });
+    },
     dismiss: () => hide({ focus: true }),
     refresh() {
       if (open) show({ focus: false });

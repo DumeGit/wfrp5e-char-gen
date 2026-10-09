@@ -1,3 +1,5 @@
+import { addSearchMetadata } from "./search-metadata.mjs";
+import { validateSearchFilters } from "./search-filters.mjs";
 import { assembleBooks } from "./books.mjs";
 import { buildSearchIndex, normalizeSearch } from "./book-search.mjs";
 import { legacySources } from "./legacy.mjs";
@@ -9,9 +11,11 @@ import {
 // Build time only: each pack is read in its own dependency context. Character
 // selections and cross-book withdrawals must not hide a source from the reader.
 export function buildReferenceLibrary(library, gm) {
-  const found = new Map();
+  const found = new Map(),
+    contexts = [];
   for (const pack of library.packs) {
     const R = assembleBooks(library, [pack.manifest.id]);
+    contexts.push(R);
     for (const row of buildSearchIndex(R)) {
       if (!isSearchCategoryEnabled(row.kind)) continue;
       const previous = found.get(row.key);
@@ -64,9 +68,13 @@ export function buildReferenceLibrary(library, gm) {
       });
     }
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     books: library.packs.map((p) => p.manifest),
-    rows: [...found.values()].map((row) => {
+    rows: addSearchMetadata(
+      [...found.values()],
+      contexts,
+      library.packs.map((pack) => pack.manifest),
+    ).map((row) => {
       const { shop, keywords, normalizedAliases, ...rest } = row;
       return {
         ...rest,
@@ -128,7 +136,7 @@ export async function loadReferenceLibrary(
         throw error;
       }));
   if (
-    payload?.schemaVersion !== 1 ||
+    payload?.schemaVersion !== 2 ||
     !Array.isArray(payload.books) ||
     !Array.isArray(payload.rows)
   )
@@ -184,6 +192,7 @@ export async function loadReferenceLibrary(
         throw Error("Printed reference search fields mismatch.");
       row.textFields = [record.text, record.topic, title];
     }
+    validateSearchFilters(row, payload.books);
     keys.add(row.key);
     if (!normalize) return row;
     return {

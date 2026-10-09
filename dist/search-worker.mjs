@@ -12,7 +12,7 @@ export function prepareSearchRows(rows) {
 }
 export function createWorkerHandler(send) {
   let index;
-  return ({ id, type, rows, query, category }) => {
+  return ({ id, type, rows, query, category, filters }) => {
     try {
       if (type === "init") index = prepareSearchRows(rows);
       else if (type !== "search" || !index)
@@ -20,7 +20,7 @@ export function createWorkerHandler(send) {
       const matches =
         type === "init"
           ? null
-          : searchBooks(index, query, Infinity, { category });
+          : searchBooks(index, query, Infinity, { category, filters });
       send({
         id,
         result:

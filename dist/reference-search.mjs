@@ -25,6 +25,13 @@ export function createReferenceSearch(library) {
   previous.textContent = "← Back";
   previous.setAttribute("aria-label", "Back to previous reference");
   box.querySelector(".dialog-heading").prepend(previous);
+  const resultsBack = document.createElement("button");
+  resultsBack.type = "button";
+  resultsBack.className = "quiet search-return-to-results";
+  resultsBack.dataset.searchBack = "";
+  resultsBack.textContent = "← Results";
+  resultsBack.setAttribute("aria-label", "Back to search results");
+  box.querySelector(".dialog-heading").prepend(resultsBack);
   hover.className = "search-term-preview";
   hover.id = "search-term-preview";
   hover.setAttribute("role", "tooltip");
@@ -49,7 +56,10 @@ export function createReferenceSearch(library) {
       engine = createSearchEngine(index);
       return index;
     },
-    searchIndex: (query, category) => engine.search(query, category),
+    searchIndex: (query, category, filters) =>
+      engine.search(query, category, filters),
+    getBooks: () => books,
+    reader: box,
     getScope: () => "all supplied books",
     onOpen: (key) => openRule(key),
     renderResult(row) {
@@ -125,7 +135,6 @@ export function createReferenceSearch(library) {
         : "";
     body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(searchLabel(row))}</span> ${ref(row)}</p>${printedWarning}<div class="search-book-reference">${referenceBodyHTML(row)}</div><div class="search-rule-actions"><button type="button" class="text-button" data-search-back>Back to search</button></div>`;
     linkReferences(row);
-    if (!box.open) box.showModal();
   }
   function linkReferences(row) {
     linkReferenceNodes(
@@ -138,7 +147,8 @@ export function createReferenceSearch(library) {
   function showView(view, { push = false, reset = false } = {}) {
     hidePreview();
     if (reset) history = [];
-    if (push && currentView) history.push(currentView);
+    if (push && currentView)
+      history.push({ view: currentView, scroll: box.scrollTop });
     currentView = view;
     previous.hidden = !history.length;
     if (view.key) renderRule(view.key);
@@ -151,8 +161,8 @@ export function createReferenceSearch(library) {
         })
         .join("")}</div>`;
     }
-    if (!box.open) box.showModal();
-    box.scrollTop = 0;
+
+    controller.showReader();
     if (push) previous.focus({ preventScroll: true });
   }
   function openRule(key) {
@@ -194,7 +204,6 @@ export function createReferenceSearch(library) {
     }
     if (e.target.closest("[data-search-close], [data-search-back]")) {
       hidePreview();
-      box.close();
       if (e.target.closest("[data-search-back]")) controller.restore();
       else controller.dismiss();
       return;
@@ -211,17 +220,15 @@ export function createReferenceSearch(library) {
       );
     }
   });
-  box.addEventListener("cancel", (event) => {
-    event.preventDefault();
-    hidePreview();
-    box.close();
-    controller.dismiss();
-  });
+  box.closest("dialog").addEventListener("close", hidePreview);
   previous.addEventListener("click", () => {
-    if (history.length) showView(history.pop());
+    if (history.length) {
+      const { view, scroll } = history.pop();
+      showView(view);
+      box.scrollTop = scroll;
+    }
     if (history.length) previous.focus({ preventScroll: true });
-    else
-      box.querySelector("[data-search-close]").focus({ preventScroll: true });
+    else box.querySelector("#book-search-title").focus({ preventScroll: true });
   });
   body.addEventListener("pointerover", (e) => {
     const button = e.target.closest("[data-reference-keys]");

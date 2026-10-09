@@ -64,7 +64,7 @@
               aria-expanded="false"
               aria-controls="book-search-results"
               autocomplete="off"
-              placeholder="Search rules, Careers, magic, creatures and more…"
+              placeholder="Search rules, Careers, magic and trappings…"
             /><button
               id="book-search-clear"
               type="button"
@@ -139,17 +139,16 @@
       </div>
       <div id="creator-dialog-body"></div>
     </dialog>
-    <dialog
+    <section
       id="book-search-dialog"
-      class="book-search-dialog"
+      class="search-reader" role="region" hidden
       aria-labelledby="book-search-title"
     >
       <div class="dialog-heading">
-        <h2 id="book-search-title"></h2>
-        <button type="button" class="quiet" data-search-close>Close</button>
+        <h2 id="book-search-title" tabindex="-1"></h2>
       </div>
       <div id="book-search-body"></div>
-    </dialog>
+    </section>
     <div id="toast" role="status" aria-live="polite"></div>
     <div hidden>
       <button id="pwa-install" class="install-app" type="button" hidden>

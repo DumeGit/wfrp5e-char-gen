@@ -33,7 +33,7 @@ for (const creator of ["PC", "GM"]) {
       .getByRole("combobox", { name: "Search category", exact: true })
       .selectOption({ label: "Rules" });
     await page.getByRole("option", { name: /^Fortune Rule/ }).click();
-    const reader = page.getByRole("dialog", { name: "Fortune", exact: true });
+    const reader = page.getByRole("region", { name: "Fortune", exact: true });
     await expect(
       reader.getByRole("heading", {
         name: "Replenishing Fortune",

@@ -1,3 +1,4 @@
+import { matchesSearchFilters } from "./search-filters.mjs";
 export const normalizeSearch = (value) =>
   String(value ?? "")
     .normalize("NFKD")
@@ -10,15 +11,15 @@ export function searchBooks(
   index,
   query,
   limit = 8,
-  { category = "all", offset = 0 } = {},
+  { category = "all", offset = 0, filters = {} } = {},
 ) {
   const q = normalizeSearch(query);
-  if (!q && category === "all") return { total: 0, rows: [] };
+  if (!q && category === "all" && !filters.book) return { total: 0, rows: [] };
   const words = q ? q.split(" ") : [];
   const matches = index
     .filter(
       (x) =>
-        (category === "all" || x.kind === category) &&
+        matchesSearchFilters(x, category, filters) &&
         words.every((w) => x.searchable.includes(w)),
     )
     .map((x) => ({

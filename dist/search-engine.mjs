@@ -11,13 +11,17 @@ export function createSearchEngine(
     }),
 ) {
   const byKey = new Map(rows.map((row) => [row.key, row]));
-  const projection = rows.map(({ key, name, kind, aliases, textFields }) => ({
-    key,
-    name,
-    kind,
-    aliases,
-    textFields,
-  }));
+  const projection = rows.map(
+    ({ key, name, kind, label, filterValues, aliases, textFields }) => ({
+      key,
+      name,
+      kind,
+      label,
+      filterValues,
+      aliases,
+      textFields,
+    }),
+  );
   let worker,
     fallback,
     serial = 0;
@@ -67,19 +71,19 @@ export function createSearchEngine(
     ready = Promise.resolve();
   }
   return {
-    async search(query, category = "all") {
+    async search(query, category = "all", filters = {}) {
       await ready;
       let result;
       if (worker) {
         try {
-          result = await request({ type: "search", query, category });
+          result = await request({ type: "search", query, category, filters });
         } catch {
           fail(Error("Search worker unavailable."));
         }
       }
       if (!result) {
         fallback ??= prepareSearchRows(projection);
-        result = searchBooks(fallback, query, Infinity, { category });
+        result = searchBooks(fallback, query, Infinity, { category, filters });
       }
       return {
         total: result.total,

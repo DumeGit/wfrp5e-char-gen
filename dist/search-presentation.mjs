@@ -11,9 +11,11 @@ export const SEARCH_CATEGORIES = {
   career: "Careers",
   skill: "Skills",
   talent: "Talents",
-  magic: "Magic",
-  equipment: "Equipment",
-  mutation: "Corruption",
+  magic: "Spells, Prayers & Cants",
+  rune: "Runes",
+  technique: "Techniques",
+  equipment: "Trappings",
+  mutation: "Mutations",
 };
 export const searchLabel = (row) =>
   row.kind === "rule" || row.kind === "property"
@@ -21,12 +23,17 @@ export const searchLabel = (row) =>
     : row.label ||
       {
         species: "Species / Origin",
+        career: "Career",
+        skill: "Skill",
+        talent: "Talent",
+        magic: "Spell",
+        equipment: "Trapping",
         condition: "Condition",
         psychology: "Psychology",
         trait: "Creature Trait",
         profile: "NPC / Creature",
         template: "Template",
-        mutation: "Corruption",
+        mutation: "Mutations",
       }[row.kind] ||
       SEARCH_CATEGORIES[row.kind]?.replace(/s$/, "") ||
       row.kind;
