@@ -14,7 +14,7 @@ import {
   magicChoices,
   gmTalentLimit,
 } from "../dist/gm/model.mjs";
-import { pickerEntries, workspace } from "../dist/gm/views.mjs";
+import { pickerEntries, workspace, profileResults } from "../dist/gm/views.mjs";
 import { sheetSections } from "../dist/gm/pdf.mjs";
 import { cardSections } from "../dist/gm/print.mjs";
 
@@ -93,6 +93,33 @@ test("source-only books never appear as selectable GM books", () => {
       b.id,
     );
   assert.match(html, /Profile &amp; template books|Profile & template books/);
+});
+
+test("book contributions remain constant while profile filters combine book, category and name", () => {
+  const core = gmCatalogue(data),
+    all = gmCatalogue(data, ["core", "up-in-arms", "archives-ii"]);
+  assert.deepEqual(core.books, all.books);
+  assert.equal(core.books.find((b) => b.id === "up-in-arms").profileCount, 2);
+  assert.equal(core.books.find((b) => b.id === "archives-ii").profileCount, 2);
+  const ui = { profileQuery: "", category: "", profileBook: "archives-ii" };
+  let html = profileResults(all, ui);
+  assert.match(html, /2 printed profiles/);
+  assert.match(html, /Typical Sister/);
+  assert.match(html, /Rhinox/);
+  assert.doesNotMatch(html, /Demigryph Mount/);
+  html = profileResults(all, { ...ui, profileQuery: "rhin" });
+  assert.match(html, /1 printed profile/);
+  assert.doesNotMatch(html, /Typical Sister/);
+  const rhinox = data.profiles.find((p) => p.name === "Rhinox");
+  assert.match(
+    profileResults(all, {
+      ...ui,
+      category: rhinox.category,
+      profileQuery: "rhin",
+    }),
+    /1 printed profile/,
+  );
+  assert.match(profileResults(core, ui), /0 printed profiles/);
 });
 
 test("shared Skill, Talent and equipment choices survive save and profile-book changes with provenance", () => {

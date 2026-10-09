@@ -19,6 +19,15 @@ export const foundationBooks = (data) =>
 export function gmCatalogue(data, books = ["core"]) {
   return {
     ...data,
+    books: data.books.map((book) => ({
+      ...book,
+      profileCount:
+        book.profileCount ??
+        data.profiles.filter((p) => bookId(p) === book.id).length,
+      templateCount:
+        book.templateCount ??
+        data.templates.filter((t) => bookId(t) === book.id).length,
+    })),
     profiles: data.profiles.filter((p) => books.includes(bookId(p))),
     templates: data.templates.filter((p) => books.includes(bookId(p))),
     training: data.training || [],

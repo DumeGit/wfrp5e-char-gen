@@ -196,7 +196,7 @@
 }
 .gm-browser-filters {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 24px 0 0;
 }

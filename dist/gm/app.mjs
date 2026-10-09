@@ -35,7 +35,13 @@ const root = document.querySelector("#app"),
   dialogTitle = document.querySelector("#creator-dialog-title"),
   verify = new URLSearchParams(location.search).has("verify"),
   storageKey = "wfrp-gm-workshop-v1";
-const ui = { tab: 0, profileQuery: "", category: "", browse: false },
+const ui = {
+    tab: 0,
+    profileQuery: "",
+    category: "",
+    profileBook: "",
+    browse: false,
+  },
   disclosures = new Map(),
   undo = [],
   mountInstall = createInstallControl(document.querySelector("#pwa-install"));
@@ -123,6 +129,7 @@ function refreshResult() {
   folio.scrollTop = scroll;
 }
 function render() {
+  if (ui.profileBook && !s.books.includes(ui.profileBook)) ui.profileBook = "";
   const focus = document.activeElement,
     focusId = root.contains(focus) ? focus.id : null,
     selection =
@@ -679,6 +686,7 @@ function change(el) {
           close();
           ui.profileQuery = "";
           ui.category = "";
+          ui.profileBook = "";
           ui.browse = false;
           commit(() => (s = freshGM(data)));
         },
@@ -709,7 +717,7 @@ function change(el) {
   }
   if (d.ui) {
     ui[d.ui] = val;
-    if (d.ui === "category")
+    if (["category", "profileBook"].includes(d.ui))
       document.querySelector("#gm-profile-results").innerHTML = profileResults(
         gmCatalogue(data, s.books),
         ui,

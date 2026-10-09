@@ -7,6 +7,48 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("profile books show fixed contribution counts and combine with browser filters @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  const bookRow = (id) => page.locator(`label:has(#gm-book-${id})`);
+  for (const id of ["up-in-arms", "archives-ii"])
+    await expect(bookRow(id)).toContainText("2 profiles · 0 templates");
+  const filter = page
+    .locator(".gm-library")
+    .getByLabel("Book", { exact: true });
+  await expect(filter.locator("option")).toHaveCount(2);
+  await page.locator("#gm-book-up-in-arms").check();
+  await page.locator("#gm-book-archives-ii").check();
+  await filter.selectOption("archives-ii");
+  await expect(page.locator(".gm-profile-card")).toHaveCount(2);
+  await page.getByLabel("Find a profile", { exact: true }).fill("Rhinox");
+  await expect(page.locator(".gm-profile-card")).toHaveCount(1);
+  await expect(page.locator(".gm-profile-card")).toContainText("Rhinox");
+  await expect(filter).toHaveValue("archives-ii");
+  await page.getByLabel("Find a profile", { exact: true }).fill("");
+  await filter.selectOption("up-in-arms");
+  await expect(page.locator(".gm-profile-card")).toHaveCount(2);
+  await expect(page.locator("#gm-profile-results")).toContainText(
+    "Riding Horse",
+  );
+  await page
+    .locator(".gm-library")
+    .getByLabel("Category", { exact: true })
+    .selectOption({ label: "Mounts" });
+  await expect(page.locator(".gm-profile-card")).toHaveCount(2);
+  await noOverflow(page);
+  await page.locator("#gm-book-up-in-arms").uncheck();
+  await expect(filter).toHaveValue("");
+  await expect(filter.locator('option[value="up-in-arms"]')).toHaveCount(0);
+  await expect(bookRow("up-in-arms")).toContainText("2 profiles · 0 templates");
+  await page
+    .locator(".gm-library")
+    .getByLabel("Category", { exact: true })
+    .selectOption("");
+  await expect(page.locator(".gm-profile-card")).toHaveCount(51);
+});
+
 test("all-book knowledge is available without option-only book checkboxes @gm @mobile", async ({
   page,
 }) => {
