@@ -85,6 +85,26 @@ dialog.book-search-panel .search-panel-heading{position:static;display:flex;alig
 .search-return-to-results{display:none}
 .search-reader .search-chain-back[hidden]{display:none}
 .book-search-panel .search-term-preview{max-height:45dvh;overflow:hidden}
+/* Compact desktop toolbar: keep most dialog height for results and reading. */
+@media(min-width:761px){
+ dialog.book-search-panel{padding:16px}
+ dialog.book-search-panel[open]{gap:8px}
+ .book-search-panel .search-panel-heading h2{font-size:22px}
+ .book-search-panel .search-panel-heading button{min-height:var(--control-height-compact);padding:6px 12px}
+ .book-search-panel .search-panel-controls{display:grid;grid-template-columns:minmax(160px,1fr) minmax(0,1.65fr);align-items:center;gap:5px 12px}
+ .book-search-panel .banner-search-field{min-height:var(--control-height-compact)}
+ .book-search-panel .banner-search-icon{font-size:18px;margin:0 9px 0 11px}
+ .book-search-panel #book-search{min-height:0;height:34px;padding:6px 0;font-size:14px;line-height:1.3}
+ .book-search-panel #book-search-clear{min-height:34px;min-width:32px;padding:0 6px;font-size:18px}
+ .book-search-panel .search-result-tools{gap:12px;flex-wrap:nowrap;min-width:0}
+ .book-search-panel .search-result-tools label,.book-search-panel .search-filter-fields label{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:7px;white-space:nowrap;font-size:12px}
+ .book-search-panel select{min-width:0;min-height:var(--control-height-compact);height:var(--control-height-compact);padding:5px 24px 5px 8px;font-size:13px}
+ .book-search-panel .search-category-filters,.book-search-panel .search-filter-chips{grid-column:1/-1}
+ .book-search-panel .search-filter-fields{gap:12px}
+ .book-search-panel .search-filter-fields label{flex:0 1 340px;min-width:0}
+ .book-search-panel .search-filter-chips{gap:5px}
+ .book-search-panel .search-filter-chip,.book-search-panel .search-filter-chips .text-button{min-height:28px;padding:3px 8px;font-size:12px}
+}
 @media(max-width:760px){
  dialog.book-search-panel{width:100vw;max-width:100vw;height:100dvh;max-height:none;margin:0;padding:calc(12px + env(safe-area-inset-top)) 14px calc(12px + env(safe-area-inset-bottom));border:0;border-radius:0}
  .search-panel-heading h2{font-size:22px}
