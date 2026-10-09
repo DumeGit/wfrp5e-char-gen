@@ -23,6 +23,7 @@ export function createSearchController({
   getIndex,
   getScope,
   onOpen,
+  onClose,
   renderResult,
   searchIndex,
   getBooks,
@@ -120,6 +121,9 @@ export function createSearchController({
       .filter(
         ([key]) =>
           key === "all" || index.some((row) => searchCategory(row) === key),
+      )
+      .sort(([a, labelA], [b, labelB]) =>
+        a === "all" ? -1 : b === "all" ? 1 : labelA.localeCompare(labelB),
       )
       .map(([key, label]) => `<option value="${key}">${esc(label)}</option>`)
       .join("");
@@ -337,17 +341,31 @@ export function createSearchController({
     }
     return index;
   }
-  function hide({ remember = true, focus = false } = {}) {
-    if (remember && (!mobile.matches || panel.dataset.view !== "reference"))
-      returnPosition = {
-        key: cacheKey,
-        visible,
-        active,
-        scroll: list.scrollTop,
-      };
+  function hide({ focus = false } = {}) {
     open = false;
     rankingRequest++;
     observer?.disconnect();
+    input.value = "";
+    category = "all";
+    book = "";
+    categoryValues.clear();
+    select.value = category;
+    bookSelect.value = book;
+    cacheKey = undefined;
+    returnPosition = null;
+    ranked = [];
+    visible = 0;
+    active = -1;
+    list.replaceChildren();
+    list.scrollTop = 0;
+    sentinel = null;
+    reader.hidden = true;
+    panel.querySelector(".search-reader-placeholder").hidden = false;
+    panel.dataset.view = "results";
+    filtersPanel.open = !mobile.matches;
+    renderCategoryFilters();
+    syncStatus();
+    onClose?.();
     popup.hidden = true;
     input.setAttribute("aria-expanded", "false");
     input.removeAttribute("aria-activedescendant");

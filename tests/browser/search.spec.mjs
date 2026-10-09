@@ -87,6 +87,11 @@ for (const creator of ["PC", "GM"]) {
         name: /^(NPCs?|Templates?|Creatures?)(?:$|\s*\/)/i,
       }),
     ).toHaveCount(0);
+    const labels = await category.locator("option").allTextContents();
+    expect(labels[0]).toBe("All categories");
+    expect(labels.slice(1)).toEqual(
+      labels.slice(1).sort((a, b) => a.localeCompare(b)),
+    );
     await expect(page.getByRole("option", { name: /^Godspakt / })).toHaveCount(
       1,
     );
@@ -108,7 +113,7 @@ for (const creator of ["PC", "GM"]) {
       await expect(launch).toBeFocused();
       await launch.click();
     }
-    await expect(input).toHaveValue("Godspakt");
+    await expect(input).toHaveValue("");
     await expect(input).toBeFocused();
     await noOverflow(page);
   });
@@ -231,6 +236,36 @@ for (const creator of ["PC", "GM"]) {
       .getByRole("button", { name: /Remove Rune label filter:/ })
       .click();
     await expect(list.getByRole("option").first()).toBeVisible();
+    await page.locator("#book-search").fill("Rune");
+    await page.locator("#book-search-book").selectOption("dwarf-guide");
+    await page
+      .getByRole("button", { name: "Close search", exact: true })
+      .click();
+    await page
+      .getByRole("button", {
+        name: "Search rules and book references",
+        exact: true,
+      })
+      .click();
+    await expect(page.locator("#book-search")).toHaveValue("");
+    await expect(page.locator("#book-search-category")).toHaveValue("all");
+    await expect(page.locator("#book-search-book")).toHaveValue("");
+    await expect(list.getByRole("option")).toHaveCount(0);
+    await expect(page.locator("#book-search-dialog")).toBeHidden();
+    await categoryFilters(page, "skill");
+    await expect(
+      page.getByRole("combobox", { name: "Skill type", exact: true }),
+    ).toHaveValue("");
+    await expect(
+      page.getByRole("combobox", { name: "Characteristic", exact: true }),
+    ).toHaveValue("");
+    await categoryFilters(page, "rune");
+    await expect(
+      page.getByRole("combobox", { name: "Rune label", exact: true }),
+    ).toHaveValue("");
+    await expect(
+      page.getByRole("combobox", { name: "Applicable to", exact: true }),
+    ).toHaveValue("");
     await noOverflow(page);
   });
 }

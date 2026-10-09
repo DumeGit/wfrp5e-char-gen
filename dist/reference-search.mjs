@@ -62,6 +62,13 @@ export function createReferenceSearch(library) {
     reader: box,
     getScope: () => "all supplied books",
     onOpen: (key) => openRule(key),
+    onClose() {
+      hidePreview();
+      history = [];
+      currentView = null;
+      previous.hidden = true;
+      body.replaceChildren();
+    },
     renderResult(row) {
       return `<span class="book-search-result-name"><strong>${highlight(row.name)}</strong><span class="search-kind">${esc(searchLabel(row))}</span></span><span class="book-search-result-source">${esc(sourceText(row))}${legacyTag(row) ? " · Legacy" : ""}</span><span class="book-search-excerpt">${highlight(snippet(row))}</span>`;
     },
