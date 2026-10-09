@@ -103,3 +103,5 @@ Marijan density: Characteristics use a five-column Starting/Total grid, reducing
 
 
 Pending Marijan studies: the elven battle banner and three proposals in `design-previews/marijan-colours.html` are isolated from production. They reuse existing semantic roles and compact Marijan components; adopting a chosen style should add a centrally defined theme instead of copying preview CSS wholesale. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md).
+
+Marijan preview palette direction is now black/grey/white/red, as explicitly requested on 9 October; the isolated proposals are Ash & Vellum, The Black Seal and Crimson Grimoire. The CSS-only image desaturation is presentation, not a changed source asset. No production palette has been selected yet.

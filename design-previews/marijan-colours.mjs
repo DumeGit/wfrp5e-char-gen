@@ -1,12 +1,12 @@
 const names = {
-  ivory: "A — Ivory Ascendancy",
-  teal: "B — Stormglass",
-  violet: "C — The Forbidden Grimoire",
+  ash: "A — Ash & Vellum",
+  seal: "B — The Black Seal",
+  crimson: "C — Crimson Grimoire",
 };
 const url = new URL(location.href);
 const select = document.querySelector("#palette");
 function choose(value) {
-  const palette = Object.hasOwn(names, value) ? value : "ivory";
+  const palette = Object.hasOwn(names, value) ? value : "ash";
   document.documentElement.dataset.palette = palette;
   document.querySelector("#preview-title").textContent = names[palette];
   select.value = palette;

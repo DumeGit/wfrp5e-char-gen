@@ -57,4 +57,4 @@ Compact-entry search keeps the query, Book and custom-entry action on one phone 
 
 ## Pending visual studies
 
-Three elven-banner palette previews are available in `design-previews/marijan-colours.html`: Ivory Ascendancy, Stormglass and The Forbidden Grimoire. These are static studies outside the shipped app; Marijan continues using Black Banner until the user chooses a proposal. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md) and [banner provenance](../design-assets/marijan/README.md).
+Three elven-banner palette previews are available in `design-previews/marijan-colours.html`: Ash & Vellum, The Black Seal and Crimson Grimoire. These are static studies outside the shipped app; Marijan continues using Black Banner until the user chooses a proposal. See [DESIGN-PREVIEWS.md](DESIGN-PREVIEWS.md) and [banner provenance](../design-assets/marijan/README.md).

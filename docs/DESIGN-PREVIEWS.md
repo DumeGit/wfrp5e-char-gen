@@ -58,12 +58,14 @@ The new gallery is `design-previews/marijan-colours.html`; run `node design-prev
 
 | Study | Direction |
 | --- | --- |
-| A — Ivory Ascendancy | Ivory parchment, storm-blue framing and pale gold; familiar bright editing |
-| B — Stormglass | Dark teal working page, moon-silver edging and mint actions; an arcane console |
-| C — The Forbidden Grimoire | Midnight violet, ivory text and antique gold; a forbidden spellbook |
+| A — Ash & Vellum | Pale grey vellum, black framing, white headings and oxblood actions |
+| B — The Black Seal | Charcoal working page, silver edging, white text and restrained red actions |
+| C — Crimson Grimoire | Near-black pages, white lettering and prominent crimson accents |
 
 All three use one original generated elven battle banner inspired by the supplied reference, with provenance and exact prompt in [design-assets/marijan](../design-assets/marijan/README.md). Preview colour roles remain isolated in `marijan-colours.css`; no live theme picker or save preference is introduced.
 
 The screen reuses the current Marijan `workspace` output and shared controls/fonts/borders, with a shortened static identity display and deliberately unrestricted demo values. Skills, Talents and equipment remain inspectable through native disclosures; creator actions are inert. It imports no runtime, saves nothing and registers no worker. Header Search/Menu symbols on phones are decorative placeholders, not implemented launchers. The gallery scales desktop snapshots; full-size links provide accessible comparison. No new sounds or motion.
 
 Verification: desktop and 390px previews inspected; no broken images, browser exceptions or horizontal page overflow across the three palettes and gallery. No full release suite is needed for isolated design studies.
+
+The user redirected these Marijan proposals to black/grey/white/red on 9 October. These three replace the earlier blue/teal/violet studies at the same URLs. The artwork and native W source remain unchanged; preview CSS desaturates them, with monochrome framing and red controls. No new image generation was needed. Production is still unchanged pending a selection.
