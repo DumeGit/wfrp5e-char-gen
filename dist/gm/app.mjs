@@ -28,7 +28,7 @@ import { createGMReferences } from "./references.mjs";
 import { createGMPDF } from "./pdf.mjs";
 import { createGMPrinting } from "./printing.mjs";
 import { createGMRules, gmCatalogue, sourceLabel } from "./books.mjs";
-import { esc, button, legacyBadge } from "./controls.mjs";
+import { esc, button, legacyBadge, select } from "./controls.mjs";
 
 const root = document.querySelector("#app"),
   dialog = document.querySelector("#creator-dialog"),
@@ -41,6 +41,7 @@ const ui = {
     profileQuery: "",
     category: "",
     profileBook: "",
+    templateBook: "",
     browse: false,
   },
   disclosures = new Map(),
@@ -215,12 +216,23 @@ function profilePreview(id) {
     `${statBlock(result, draft, { showSource: false })}${result.warnings.length ? `<div class="gm-callout"><strong>Source notes</strong><ul>${result.warnings.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}${s.profile && s.profile !== id ? '<p class="gm-small">Applying a new foundation replaces this NPC’s customisation. Your player character is separate. Undo can restore this draft.</p>' : ""}<div class="gm-dialog-actions">${button("Cancel", "close-dialog")}${button("Use this profile", "apply-profile", "", "primary")}</div>`,
   );
 }
+function renderTemplateResults() {
+  const templates = gmCatalogue(data, s.books).templates.filter(
+    (t) => !ui.templateBook || (t.source?.book || "core") === ui.templateBook,
+  );
+  dialogBody.querySelector("#gm-template-results").innerHTML = templates
+    .map(
+      (t) =>
+        `<div class="gm-picker-row"><div><strong>${esc(t.name)}</strong><p>${esc(templateSummary(t))}</p><small>${esc(sourceLabel(t))} ${t.adaptation ? '<span class="legacy-tag">Legacy</span>' : ""}</small></div>${button("Preview", "preview-template", `data-id="${t.id}"`)}</div>`,
+    )
+    .join("");
+}
 function templatePreview(id) {
   pendingTemplate = id;
   const t = data.templates.find((t) => t.id === id);
   modal(
     t.name,
-    `${templateOverview(t)}${templateEligibility(t, r.profile) ? `<p class="gm-callout">${esc(templateEligibility(t, r.profile))}</p>` : ""}<div class="gm-dialog-actions">${button("Back to templates", "template-picker")}${button("Apply template", "apply-template", templateEligibility(t, r.profile) ? "disabled" : "", "primary")}</div>`,
+    `${templateOverview(t)}${templateEligibility(t, r.profile) ? `<p class="gm-callout">${esc(templateEligibility(t, r.profile))}</p>` : ""}<div class="gm-dialog-actions">${button("Back to templates", "template-picker", 'data-back="1"')}${button("Apply template", "apply-template", templateEligibility(t, r.profile) ? "disabled" : "", "primary")}</div>`,
   );
 }
 function showPicker(kind) {
@@ -373,18 +385,13 @@ async function action(el) {
     return;
   }
   if (a === "template-picker") {
+    if (!el.dataset.back) ui.templateBook = "";
+    const catalogue = gmCatalogue(data, s.books);
     modal(
       "Choose a creature template",
-      `<p class="gm-small">Choose one template from the enabled books. Source-specific foundations and required choices are explained in its preview.</p>${gmCatalogue(
-        data,
-        s.books,
-      )
-        .templates.map(
-          (t) =>
-            `<div class="gm-picker-row"><div><strong>${t.name}</strong><p>${esc(templateSummary(t))}</p><small>${esc(sourceLabel(t))} ${t.adaptation ? '<span class="legacy-tag">Legacy</span>' : ""}</small></div>${button("Preview", "preview-template", `data-id="${t.id}"`)}</div>`,
-        )
-        .join("")}`,
+      `<p class="gm-small">Choose one template from the enabled books. Source-specific foundations and required choices are explained in its preview.</p>${select("Book", "gm-template-book", [["", "All enabled books"], ...catalogue.books.filter((b) => catalogue.templates.some((t) => (t.source?.book || "core") === b.id)).map((b) => [b.id, b.shortTitle || b.title])], ui.templateBook, 'data-template-book="1"')}<div id="gm-template-results"></div>`,
     );
+    renderTemplateResults();
     return;
   }
   if (a === "preview-template") {
@@ -697,6 +704,11 @@ function change(el) {
   const d = el.dataset,
     val = el.type === "checkbox" ? el.checked : el.value,
     num = el.value === "" ? null : Number(el.value);
+  if (d.templateBook !== undefined) {
+    ui.templateBook = val;
+    renderTemplateResults();
+    return;
+  }
   if (d.book) {
     if (!val && s.profile?.startsWith(`${d.book}:`)) {
       const book = data.books.find((b) => b.id === d.book);
@@ -885,6 +897,9 @@ root.addEventListener("input", (e) => {
     persist();
     refreshResult();
   }
+});
+dialog.addEventListener("change", (e) => {
+  if (e.target.matches("[data-template-book]")) change(e.target);
 });
 dialog.addEventListener("input", (e) => {
   if (e.target.id === "gm-picker-search") {

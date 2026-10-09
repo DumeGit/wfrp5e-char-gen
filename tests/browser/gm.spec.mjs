@@ -20,6 +20,28 @@ test("Night Parade has opt-in content and complete reversible template equipment
   await page
     .getByRole("button", { name: "Choose template", exact: true })
     .click();
+  const filter = page.locator("#gm-template-book");
+  await expect(filter.locator("option")).toHaveCount(3);
+  await filter.selectOption("core");
+  await expect(page.locator("#gm-template-results .gm-picker-row")).toHaveCount(
+    7,
+  );
+  await expect(page.locator("#gm-template-results")).not.toContainText("Wight");
+  await filter.selectOption("night-parade");
+  await expect(page.locator("#gm-template-results .gm-picker-row")).toHaveCount(
+    7,
+  );
+
+  await page
+    .getByRole("dialog")
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText("Wight", { exact: true }) })
+    .getByRole("button", { name: "Preview", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Back to templates", exact: true })
+    .click();
+  await expect(filter).toHaveValue("night-parade");
   await page
     .getByRole("dialog")
     .locator(".gm-picker-row")
