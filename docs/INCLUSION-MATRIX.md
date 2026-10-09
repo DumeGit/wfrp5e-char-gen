@@ -8,7 +8,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 11 |
+| books | 12 |
 | careers | 126 |
 | magicProfiles | 536 |
 | rituals | 17 |
@@ -37,6 +37,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Deft Steps — White Stag / Hermit (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Longshanks Scout (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Pickpocket (variant) | 1 | 0 | 0 | 0 | 0 |
+| The Night Parade | 0 | 0 | 4 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2543,6 +2544,33 @@ Pack `deft-steps-pickpocket` · version 1.0.1
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
 | Pickpocket Talent swap | reference-only | p. 27 | Core Fifth Edition Thief already has Fast Hands and no level-one Strike to Stun; no further swap or free Talent is added. |
+
+## The Night Parade
+
+Pack `night-parade` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| referenceEntries | 0 | 0 | 4 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Vigor Mortis and Balefire Brazier | reference-only | p. 19 | Actual selected abilities print descriptions; live aura effects are not automated. |
+| Die Hard | unavailable | p. 19 | Removed by user decision; no direct core equivalent. |
+| Undead templates and Corpse Cart | adapted | p. 8 | Seven reviewed templates and one foundation use approved Fifth Edition conversions. |
+| Named NPCs and adventures | deferred | p. 12 | Named characters, warband management and adventure prose excluded by scope. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `night-parade:reference:balefire-brazier` — Balefire Brazier | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+| `night-parade:reference:mounts` — Undead Mounts | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `night-parade:reference:templates` — Applying Undead Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
+| `night-parade:reference:vigor-mortis` — Vigor Mortis | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+
+</details>
 
 ## Reviewed aliases
 

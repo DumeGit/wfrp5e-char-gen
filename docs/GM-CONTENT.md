@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-53 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+54 printed profiles, 14 templates, 69 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
@@ -17,6 +17,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | High Elf Player’s Guide | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 | Blood and Bramble | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 | Deft Steps, Light Fingers | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| The Night Parade | 1 | 7 | Profiles/templates selectable; shared PC options always available |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |
@@ -27,6 +28,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Cave Squig | Core · p. 329 | Monstrous Beasts |  |
 | Chaos Warrior | Core · p. 348 | Cultists and Mutants |  |
 | Clanrat | Core · p. 351 | Skaven |  |
+| Corpse Cart | Night Parade · p. 19 | Undead | Yes |
 | Crypt Ghoul | Core · p. 338 | Restless Dead |  |
 | Cultist | Core · p. 347 | Cultists and Mutants |  |
 | Daemonette of Slaanesh | Core · p. 350 | Daemons |  |

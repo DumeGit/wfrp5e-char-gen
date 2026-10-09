@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "night-parade:feature:gm",
+      "name": "Undead templates and Corpse Cart",
+      "status": "adapted",
+      "source": {
+        "book": "night-parade",
+        "page": 8
+      },
+      "reason": "Seven reviewed templates and one foundation use approved Fifth Edition conversions."
+    },
+    {
+      "id": "night-parade:feature:auras",
+      "name": "Vigor Mortis and Balefire Brazier",
+      "status": "reference-only",
+      "source": {
+        "book": "night-parade",
+        "page": 19
+      },
+      "reason": "Actual selected abilities print descriptions; live aura effects are not automated."
+    },
+    {
+      "id": "night-parade:feature:named",
+      "name": "Named NPCs and adventures",
+      "status": "deferred",
+      "source": {
+        "book": "night-parade",
+        "page": 12
+      },
+      "reason": "Named characters, warband management and adventure prose excluded by scope."
+    },
+    {
+      "id": "night-parade:feature:die-hard",
+      "name": "Die Hard",
+      "status": "unavailable",
+      "source": {
+        "book": "night-parade",
+        "page": 19
+      },
+      "reason": "Removed by user decision; no direct core equivalent."
+    }
+  ]
+}

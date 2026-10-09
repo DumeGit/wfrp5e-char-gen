@@ -1,0 +1,34 @@
+[
+  {
+    "id": "night-parade:reference:templates",
+    "name": "Applying Undead Advancement Templates",
+    "category": "rule",
+    "topic": "Undead",
+    "page": 3,
+    "text": "Add or subtract the template's Advances to the base creature's Characteristics and add its listed Skills, Talents and Trappings. Recalculate Wounds when Strength, Toughness or Willpower changes."
+  },
+  {
+    "id": "night-parade:reference:mounts",
+    "name": "Undead Mounts",
+    "category": "rule",
+    "topic": "Undead",
+    "page": 10,
+    "text": "The mount templates apply to creatures that could normally have Trained (Mount), of Large Size or smaller. Halved values round down. Skeletons, Zombies, Wights and Liches may take Ride (Rotting Mount) +20 or Ride (Skeletal Steed) +20; Liches and Necromancers may also take Ride (Corpse Cart) +20."
+  },
+  {
+    "id": "night-parade:reference:vigor-mortis",
+    "name": "Vigor Mortis",
+    "category": "rule",
+    "topic": "Undead",
+    "page": 19,
+    "text": "Any Undead within 8 of the Corpse Cart are no longer subject to Unstable; the Cart itself remains subject to it. Necromancy spells cast within 8 receive +20. These effects end when the Cart is destroyed."
+  },
+  {
+    "id": "night-parade:reference:balefire-brazier",
+    "name": "Balefire Brazier",
+    "category": "rule",
+    "topic": "Undead",
+    "page": 19,
+    "text": "Replaces the normal Necromancy casting benefit of Vigor Mortis: all Lore (Magic) checks within 8 suffer −20. The protection of nearby Undead from Unstable remains."
+  }
+]

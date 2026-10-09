@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"65f2fc8d7d3c9c2f1073";
+const CACHE=CACHE_PREFIX+"59eebf3e1a3f977be65c";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -148,6 +148,10 @@ const ASSETS=[
  "data/books/high-elf/techniques.json",
  "data/books/high-elf/weapons.json",
  "data/books/index.json",
+ "data/books/night-parade/coverage.json",
+ "data/books/night-parade/manifest.json",
+ "data/books/night-parade/reference-entries.json",
+ "data/books/night-parade/rules.json",
  "data/books/rough-nights/background.json",
  "data/books/rough-nights/coverage.json",
  "data/books/rough-nights/cults.json",
@@ -236,8 +240,10 @@ const ASSETS=[
  "gm/sources/archives-ii.json",
  "gm/sources/archives-iii.json",
  "gm/sources/core.json",
+ "gm/sources/night-parade.json",
  "gm/sources/up-in-arms.json",
  "gm/style.css",
+ "gm/templates.mjs",
  "gm/trait-descriptions.mjs",
  "gm/views.mjs",
  "high-elf-ui.mjs",

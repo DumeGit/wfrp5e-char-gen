@@ -73,6 +73,10 @@
     {
       "id": "deft-steps-pickpocket",
       "path": "deft-steps-pickpocket/manifest.json"
+    },
+    {
+      "id": "night-parade",
+      "path": "night-parade/manifest.json"
     }
   ]
 }

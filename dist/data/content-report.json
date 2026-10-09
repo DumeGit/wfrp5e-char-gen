@@ -8,7 +8,7 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 11,
+    "books": 12,
     "careers": 126,
     "magicProfiles": 536,
     "rituals": 17,
@@ -40898,6 +40898,123 @@
             "page": 27
           },
           "reason": "Core Fifth Edition Thief already has Fast Hands and no level-one Strike to Stun; no further swap or free Talent is added."
+        }
+      ]
+    },
+    {
+      "id": "night-parade",
+      "title": "The Night Parade",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 4,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 1,
+        "unavailable": 1,
+        "deferred": 1
+      },
+      "kinds": {
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 4,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "night-parade:reference:balefire-brazier",
+          "kind": "referenceEntries",
+          "name": "Balefire Brazier",
+          "status": "reference-only",
+          "source": {
+            "book": "night-parade",
+            "page": 19
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "night-parade:reference:mounts",
+          "kind": "referenceEntries",
+          "name": "Undead Mounts",
+          "status": "reference-only",
+          "source": {
+            "book": "night-parade",
+            "page": 10
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "night-parade:reference:templates",
+          "kind": "referenceEntries",
+          "name": "Applying Undead Advancement Templates",
+          "status": "reference-only",
+          "source": {
+            "book": "night-parade",
+            "page": 3
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "night-parade:reference:vigor-mortis",
+          "kind": "referenceEntries",
+          "name": "Vigor Mortis",
+          "status": "reference-only",
+          "source": {
+            "book": "night-parade",
+            "page": 19
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        }
+      ],
+      "features": [
+        {
+          "id": "night-parade:feature:auras",
+          "name": "Vigor Mortis and Balefire Brazier",
+          "status": "reference-only",
+          "source": {
+            "book": "night-parade",
+            "page": 19
+          },
+          "reason": "Actual selected abilities print descriptions; live aura effects are not automated."
+        },
+        {
+          "id": "night-parade:feature:die-hard",
+          "name": "Die Hard",
+          "status": "unavailable",
+          "source": {
+            "book": "night-parade",
+            "page": 19
+          },
+          "reason": "Removed by user decision; no direct core equivalent."
+        },
+        {
+          "id": "night-parade:feature:gm",
+          "name": "Undead templates and Corpse Cart",
+          "status": "adapted",
+          "source": {
+            "book": "night-parade",
+            "page": 8
+          },
+          "reason": "Seven reviewed templates and one foundation use approved Fifth Edition conversions."
+        },
+        {
+          "id": "night-parade:feature:named",
+          "name": "Named NPCs and adventures",
+          "status": "deferred",
+          "source": {
+            "book": "night-parade",
+            "page": 12
+          },
+          "reason": "Named characters, warband management and adventure prose excluded by scope."
         }
       ]
     }

@@ -1,5 +1,6 @@
 // Compile reviewed PDF extraction into explicit, source-owned GM records.
 import { canon, base, options } from "../rules.mjs";
+import { templateEquipment } from "./templates.mjs";
 import { bookId, sourceLabel, registerGMSourceBooks } from "./books.mjs";
 
 // Named worked examples are retained in the reviewed extraction, but are not
@@ -191,7 +192,7 @@ export function prepareGM(raw, R) {
   };
 }
 export function gmInventory(data) {
-  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} core templates, ${data.traits.length} core Creature Traits, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates | GM options |\n| --- | --- | --- | --- |\n${(data.optionBooks || data.books).map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} | ${data.books.some((x) => x.id === b.id) ? "Profiles/templates selectable; shared PC options always available" : "Shared PC options always available; no selectable profiles/templates"} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
+  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} templates, ${data.traits.length} Creature Traits/abilities, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates | GM options |\n| --- | --- | --- | --- |\n${(data.optionBooks || data.books).map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} | ${data.books.some((x) => x.id === b.id) ? "Profiles/templates selectable; shared PC options always available" : "Shared PC options always available; no selectable profiles/templates"} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
     ...data.profiles,
   ]
     .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }))
@@ -213,7 +214,12 @@ export function addGMSupplement(data, raw, R) {
   const ids = new Set(
     [...data.profiles, ...data.templates, ...data.traits].map((x) => x.id),
   );
-  for (const entry of [...raw.profiles, ...raw.training]) {
+  for (const entry of [
+    ...raw.profiles,
+    ...raw.training,
+    ...(raw.templates || []),
+    ...(raw.traits || []),
+  ]) {
     if (
       !entry.id?.startsWith(`${book.id}:`) ||
       ids.has(entry.id) ||
@@ -225,6 +231,153 @@ export function addGMSupplement(data, raw, R) {
       throw Error("Invalid GM supplement identity or source.");
     ids.add(entry.id);
   }
+  const definitions = [...data.traits, ...(raw.traits || [])];
+  for (const trait of raw.traits || [])
+    if (
+      !trait.text?.trim() ||
+      definitions.filter((x) => x.name === trait.name).length !== 1
+    )
+      throw Error("Invalid or duplicate supplement ability.");
+  const templates = (raw.templates || []).map((t) => {
+    const fields = [
+      "id",
+      "name",
+      "page",
+      "source",
+      "adjustments",
+      "skills",
+      "talents",
+      "traits",
+      "optionalTraits",
+      "gear",
+      "notes",
+      "eligibility",
+      "setStats",
+      "restoreStats",
+      "halveStats",
+      "removeTraits",
+      "halveTraits",
+      "armour",
+      "trappings",
+      "magicGroups",
+      "matchWind",
+      "adaptation",
+    ];
+    if (Object.keys(t).some((key) => !fields.includes(key)))
+      throw Error("Unsupported template field.");
+    if (t.armour !== undefined && (!Number.isInteger(t.armour) || t.armour < 1))
+      throw Error("Invalid template armour.");
+    if (!["undead", "zombie", "mount"].includes(t.eligibility))
+      throw Error("Unsupported template foundation restriction.");
+    for (const [key, amount] of Object.entries(t.adjustments))
+      if (
+        ![
+          "M",
+          "WS",
+          "BS",
+          "S",
+          "T",
+          "I",
+          "Ag",
+          "Dex",
+          "Int",
+          "WP",
+          "Fel",
+        ].includes(key) ||
+        !Number.isInteger(amount)
+      )
+        throw Error("Invalid template Characteristic adjustment.");
+    for (const key of [
+      ...(t.restoreStats || []),
+      ...(t.halveStats || []),
+      ...Object.keys(t.setStats || {}),
+    ])
+      if (
+        ![
+          "M",
+          "WS",
+          "BS",
+          "S",
+          "T",
+          "I",
+          "Ag",
+          "Dex",
+          "Int",
+          "WP",
+          "Fel",
+        ].includes(key)
+      )
+        throw Error("Invalid template Characteristic operation.");
+    if (
+      Object.values(t.setStats || {}).some((n) => !Number.isInteger(n) || n < 0)
+    )
+      throw Error("Invalid template fixed score.");
+    for (const name of [
+      ...(t.removeTraits || []),
+      ...(t.halveTraits || []),
+      ...(t.traits || []).map((x) => x.name),
+      ...(t.optionalTraits || []).map((x) => x.name),
+    ])
+      if (!definitions.some((x) => x.name === name))
+        throw Error(`Unknown template Trait ${name}.`);
+    const expand = (slots, kind) =>
+      slots.map((slot) => {
+        const names = [
+          ...new Set(slot.options.flatMap((name) => options(R, name, kind))),
+        ];
+        const catalogue = kind === "skill" ? R.skills : R.talents;
+        if (
+          !names.length ||
+          names.some(
+            (name) => !catalogue.some((x) => base(name) === base(x.name)),
+          )
+        )
+          throw Error("Unknown template Skill/Talent.");
+        if (
+          kind === "skill"
+            ? !Number.isInteger(slot.bonus) ||
+              slot.bonus < 0 ||
+              !Number.isInteger(slot.count) ||
+              slot.count < 1
+            : !Number.isInteger(slot.ranks) || slot.ranks < 1
+        )
+          throw Error("Invalid template grant amount.");
+        return { ...slot, options: names };
+      });
+    const gear = (t.gear || []).map((slot) => {
+      const entries = templateEquipment(R, slot);
+      if (!entries.length)
+        throw Error(`No core equipment choices for ${slot.label}.`);
+      return {
+        ...slot,
+        options: entries.map((x) => ({ id: x.contentId, name: x.name })),
+      };
+    });
+    for (const group of t.magicGroups || [])
+      if (
+        !Number.isInteger(group.count) ||
+        group.count < 1 ||
+        !Array.isArray(group.categories) ||
+        group.categories.some((c) => !R.spells.some((x) => x.category === c))
+      )
+        throw Error("Invalid template spell group.");
+    return {
+      ...t,
+      traits: (t.traits || []).map((x) => ({
+        ...x,
+        source: t.source,
+        ...(x.adaptation ? { adaptationSource: t.source } : {}),
+      })),
+      optionalTraits: (t.optionalTraits || []).map((x) => ({
+        ...x,
+        source: t.source,
+        ...(x.adaptation ? { adaptationSource: t.source } : {}),
+      })),
+      skills: expand(t.skills, "skill"),
+      talents: expand(t.talents, "talent"),
+      gear,
+    };
+  });
   const profiles = raw.profiles.map((p) => {
     for (const key of [
       "M",
@@ -246,7 +399,7 @@ export function addGMSupplement(data, raw, R) {
       )
         throw Error(`${p.name}: invalid ${key}.`);
     for (const t of [...p.traits, ...p.optionalTraits])
-      if (!data.traits.some((x) => x.name === t.name))
+      if (!definitions.some((x) => x.name === t.name))
         throw Error(`${p.name}: unknown core Trait ${t.name}.`);
     const rows = (kind) =>
       p[kind].map((x, i) => ({
@@ -270,6 +423,11 @@ export function addGMSupplement(data, raw, R) {
       ...(coreProfile
         ? { traitDescriptionSource: { book: "core", page: coreProfile.page } }
         : {}),
+      optionalTraits: p.optionalTraits.map((x) => ({
+        ...x,
+        source: p.source,
+        ...(x.adaptation ? { adaptationSource: p.source } : {}),
+      })),
       traits: rows("traits"),
       skills: rows("skills"),
       talents: rows("talents"),
@@ -291,6 +449,8 @@ export function addGMSupplement(data, raw, R) {
       },
     ],
     profiles: [...data.profiles, ...profiles],
+    templates: [...data.templates, ...templates],
+    traits: definitions,
     training: [...data.training, ...raw.training],
   };
 }

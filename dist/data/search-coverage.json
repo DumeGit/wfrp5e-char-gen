@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3666,
-  "newlyImported": 1182,
+  "references": 3673,
+  "newlyImported": 1186,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,14 +12,14 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1889,
+      "references": 1892,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1665,
+      "existingReferences": 1668,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 269,
+        "skill": 272,
         "talent": 423,
         "magic": 225,
         "equipment": 254,
@@ -1624,6 +1624,35 @@
           "first": 138,
           "last": 139,
           "topic": "Gamekeeper"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "night-parade",
+      "title": "The Night Parade",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "f8bb99e7da5163cbb094208f78c183410b1d1b0490d01188f09a8dbddca25b53",
+      "references": 4,
+      "newlyImported": 4,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {
+        "rule": 4
+      },
+      "dispositions": {
+        "included": 12,
+        "excluded": 2,
+        "existing": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 3,
+          "last": 19,
+          "topic": "Undead template procedures, mount Skills and Corpse Cart abilities"
         }
       ],
       "unresolved": []

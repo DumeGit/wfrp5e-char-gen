@@ -1,3 +1,10 @@
+import {
+  templateRowKey,
+  templateTraits,
+  templateStats,
+  templateIssues,
+  supplementAbilityText,
+} from "./templates.mjs";
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
 import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
 import { calculateGMCants, validateGMCants } from "./cants.mjs";
@@ -77,6 +84,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     template: "",
     templateSkills: {},
     templateTalents: {},
+    templateGear: {},
     stats: {},
     size: "",
     wounds: null,
@@ -162,6 +170,7 @@ export function validateGMDraft(data, R, s) {
     "stats",
     "templateSkills",
     "templateTalents",
+    "templateGear",
     "attackOverrides",
   ])
     if (
@@ -266,6 +275,9 @@ export function validateGMDraft(data, R, s) {
   for (const [key, value] of Object.entries(s.templateTalents))
     if (!/^\d+$/.test(key) || typeof value !== "string")
       throw Error("Invalid template Talent choices.");
+  for (const [i, id] of Object.entries(s.templateGear))
+    if (!/^\d+$/.test(i) || typeof id !== "string")
+      throw Error("Invalid template equipment choices.");
   for (const v of Object.values(s.attackOverrides))
     if (
       !plain(v) ||
@@ -298,6 +310,9 @@ export function validateGMDraft(data, R, s) {
   for (const [i, name] of Object.entries(s.templateTalents))
     if (!t?.talents[i]?.options.includes(name))
       throw Error("Unknown template Talent choice.");
+  for (const [i, id] of Object.entries(s.templateGear))
+    if (!t?.gear?.[i]?.options.some((x) => x.id === id))
+      throw Error("Unknown template equipment choice.");
   for (const key of s.optionalAttacks)
     if (!p?.attacks.some((a) => a.key === key && a.optional))
       throw Error("Unknown optional attack.");
@@ -321,6 +336,9 @@ export function validateGMDraft(data, R, s) {
           (x) => x.key,
         )
       : []),
+    ...(t?.traits || []).map((x, i) => templateRowKey(t, "trait", i)),
+    ...(t?.gear || []).map((x, i) => templateRowKey(t, "gear", i)),
+    ...(t?.armour ? [templateRowKey(t, "armour", 0)] : []),
     ...gmSpellCatalogue(R).map((x) => x.contentId),
   ]);
   if (
@@ -335,7 +353,8 @@ export function validateGMDraft(data, R, s) {
     Object.keys(s.attackOverrides).some(
       (k) =>
         !p?.attacks.some((a) => a.key === k) &&
-        ![...s.gear, ...s.traits].some((x) => x.key === k),
+        ![...s.gear, ...s.traits].some((x) => x.key === k) &&
+        !(t?.gear || []).some((x, i) => templateRowKey(t, "gear", i) === k),
     )
   )
     throw Error("Unknown attack override.");
@@ -377,9 +396,16 @@ export function individualise(s, p, key) {
   s.stats[key] = p.stats[key] - 10 + faces.reduce((a, b) => a + b, 0);
 }
 export function applyTemplate(s, id) {
+  const previous = s.template;
+  if (previous) {
+    s.removed = s.removed.filter((key) => !key.startsWith(previous + ":"));
+    for (const key of Object.keys(s.attackOverrides))
+      if (key.startsWith(previous + ":")) delete s.attackOverrides[key];
+  }
   s.template = id;
   s.templateSkills = {};
   s.templateTalents = {};
+  s.templateGear = {};
   s.spells = [];
   s.spellLores = {};
   s.cants.choices = {};
@@ -529,12 +555,15 @@ export function magicChoices(R, result) {
 export function calculateGM(data, R, s) {
   const issues = [],
     warnings = [],
-    add = (message, step, target, code = "choice") =>
+    add = (message, step, target, code = "choice", source) =>
       issues.push({
         message,
         code,
         severity: "error",
-        source: { book: "core", page: code.startsWith("magic") ? 354 : 318 },
+        source: source || {
+          book: "core",
+          page: code.startsWith("magic") ? 354 : 318,
+        },
         control: { step, target },
       });
   const p = data.profiles.find(
@@ -566,15 +595,17 @@ export function calculateGM(data, R, s) {
   }
   const template = data.templates.find((t) => t.id === s.template);
   const live = (rows) => rows.filter((x) => !s.removed.includes(x.key));
-  const traits = live([...p.traits, ...s.traits]).map((t) => ({
-    ...t,
-    text: data.traits.find((x) => x.name === t.name)?.text || "",
-    page: data.traits.find((x) => x.name === t.name)?.page || p.page,
-    source: {
-      book: "core",
+  const traits = live(templateTraits(template, [...p.traits, ...s.traits])).map(
+    (t) => ({
+      ...t,
+      text: data.traits.find((x) => x.name === t.name)?.text || "",
       page: data.traits.find((x) => x.name === t.name)?.page || p.page,
-    },
-  }));
+      source: data.traits.find((x) => x.name === t.name)?.source || {
+        book: "core",
+        page: data.traits.find((x) => x.name === t.name)?.page || p.page,
+      },
+    }),
+  );
   for (const t of traits.filter(
     (t) => t.name === "Trained" && t.origin === "Printed",
   ))
@@ -660,14 +691,23 @@ export function calculateGM(data, R, s) {
         `Choose ${slot.options.length > 2 ? "a magical Lore Talent" : slot.options.join(" or ")} for ${template.name}.`,
         1,
         `#template-talent-${i}`,
+        "template.talent",
+        template.source,
       );
       continue;
     }
+    const prior = talents.find((x) => x.name === name);
+    if (prior && prior.ranks >= slot.ranks) continue;
+    if (prior) talents.splice(talents.indexOf(prior), 1);
     talents.push({
       key: `template-talent-${i}`,
       name,
       ranks: slot.ranks,
       origin: "Template",
+      source: template.source || { book: "core", page: template.page },
+      ...(slot.adaptation
+        ? { adaptation: slot.adaptation, adaptationSource: template.source }
+        : {}),
     });
   }
   for (const [i, slot] of (template?.skills || []).entries()) {
@@ -682,6 +722,8 @@ export function calculateGM(data, R, s) {
         `Choose ${slot.count === 1 ? "a" : "two different"} ${base(slot.options[0])} specialisation${slot.count > 1 ? "s" : ""} for ${template.name}.`,
         1,
         `#template-skill-${i}`,
+        "template.skill",
+        template.source,
       );
       continue;
     }
@@ -691,7 +733,12 @@ export function calculateGM(data, R, s) {
   const stats = {};
   for (const key of ["M", ...KEYS])
     stats[key] = own(s.stats, key) ? s.stats[key] : p.stats[key];
+  templateStats(template, stats);
   const adjustments = { ...(template?.adjustments || {}) };
+  // A subtraction cannot restore an absent score. Mounts retain absent BS.
+  for (const key of Object.keys(adjustments))
+    if (template?.eligibility === "mount" && stats[key] === null)
+      delete adjustments[key];
   for (const t of talents.filter((x) => x.origin !== "Printed")) {
     const key = R.config.talentEffects[base(t.name)];
     if (key) adjustments[key] = (adjustments[key] || 0) + 5 * t.ranks;
@@ -722,7 +769,7 @@ export function calculateGM(data, R, s) {
   for (const m of mutations)
     for (const [key, v] of Object.entries(m.adjustments || {}))
       adjustments[key] = (adjustments[key] || 0) + v;
-  const newTraits = traits.filter((t) => t.origin === "GM");
+  const newTraits = traits.filter((t) => ["GM", "Template"].includes(t.origin));
   if (newTraits.some((t) => t.name === "Swarm"))
     adjustments.WS = (adjustments.WS || 0) + 10;
   if (newTraits.some((t) => t.name === "Mark of Chaos" && t.value === "Nurgle"))
@@ -1019,7 +1066,23 @@ export function calculateGM(data, R, s) {
         free,
       };
     });
-  const gear = s.gear
+  const grantedGear = (template?.gear || []).flatMap((slot, i) => {
+    const id =
+      !slot.choose && slot.options.length === 1
+        ? slot.options[0].id
+        : s.templateGear[i];
+    return slot.options.some((x) => x.id === id)
+      ? [
+          {
+            id,
+            quantity: 1,
+            key: templateRowKey(template, "gear", i),
+            origin: "Template",
+          },
+        ]
+      : [];
+  });
+  const gear = live([...grantedGear, ...s.gear])
     .filter((g) => !g.id.startsWith("printed-attack-"))
     .map((g) => ({
       ...g,
@@ -1058,8 +1121,12 @@ export function calculateGM(data, R, s) {
   for (const g of gear.filter((g) =>
     R.weapons.some((w) => w.contentId === g.id),
   )) {
-    const w = g.entry,
-      char = w.kind === "ranged" ? "BS" : "WS",
+    const w = g.entry;
+    // A listed Trapping does not create another attack with a weapon already
+    // present in the printed foundation. Preserve its sourced attack profile.
+    if (g.origin === "Template" && attacks.some((a) => a.name === w.name))
+      continue;
+    const char = w.kind === "ranged" ? "BS" : "WS",
       name = `${w.kind === "ranged" ? "Ranged" : "Melee"} (${w.group})`;
     const skill = skills.get(name)?.total ?? stats[char];
     let damage = null;
@@ -1218,6 +1285,19 @@ export function calculateGM(data, R, s) {
         );
   }
   for (const [k, v] of Object.entries(layers)) ap[k.split(":")[1]] += v;
+  if (
+    template?.armour &&
+    !s.removed.includes(templateRowKey(template, "armour", 0))
+  ) {
+    for (const loc of Object.keys(ap)) ap[loc] += template.armour;
+    armour.push({
+      name: "Skeletal protection",
+      ap: template.armour,
+      locations: Object.keys(ap).join(", "),
+      key: templateRowKey(template, "armour", 0),
+      origin: "Template",
+    });
+  }
   const spells = gmSpellCatalogue(R).filter(
     (spell) =>
       ([...p.spells, ...s.spells].includes(spell.contentId) ||
@@ -1259,8 +1339,11 @@ export function calculateGM(data, R, s) {
     }),
     traits: describeTraits(
       p,
-      traits.map((t) => (t.name === "Size" ? { ...t, value: size } : t)),
+      supplementAbilityText(traits).map((t) =>
+        t.name === "Size" ? { ...t, value: size } : t,
+      ),
     ),
+    optionalTraits: [...p.optionalTraits, ...(template?.optionalTraits || [])],
     attacks: attacks.map((a) => ({
       ...a,
       text: (a.text || "").replace(/^\s*[,;]\s*/, ""),
@@ -1271,7 +1354,7 @@ export function calculateGM(data, R, s) {
           .filter((a) => a.origin === "Printed" && a.trapping)
           .map((a) => a.trapping)
           .join("; ")
-      : p.sections.Trappings || "",
+      : [p.sections.Trappings, template?.trappings].filter(Boolean).join("; "),
     ap,
     shield: Math.max(0, ...armour.filter((a) => a.shield).map((a) => a.ap)),
     spells,
@@ -1281,6 +1364,27 @@ export function calculateGM(data, R, s) {
     warnings,
     changed,
   };
+  templateIssues(
+    template,
+    p,
+    stats,
+    talents,
+    templateSkills,
+    spells,
+    grantedGear,
+    add,
+  );
+  result.undeadRidingOptions = [];
+  if (
+    ["core:creatures:zombie", "core:creatures:skeleton"].includes(p.id) &&
+    traits.some((x) => x.name === "Undead")
+  )
+    result.undeadRidingOptions.push(
+      "Ride (Rotting Mount)",
+      "Ride (Skeletal Steed)",
+    );
+  if (talents.some((x) => x.name === "Arcane Magic (Necromancy)"))
+    result.undeadRidingOptions.push("Ride (Corpse Cart)");
   result.runes = knownRunes(
     R,
     s,
@@ -1377,10 +1481,11 @@ export function calculateGM(data, R, s) {
       (x) => `${x.text} (${x.source.book} p. ${x.source.page})`,
     ),
   );
-  warnings.push(...p.notes);
+  warnings.push(...p.notes, ...(template?.notes || []));
   warnings.push(
     ...[
       p,
+      ...(template ? [template] : []),
       ...result.traits,
       ...result.attacks,
       ...result.talents,

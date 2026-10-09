@@ -63,17 +63,24 @@ gm.books = [
   },
 ];
 gm.training = [];
-for (const id of ["up-in-arms", "archives-i", "archives-ii", "archives-iii"])
-  gm = addGMSupplement(
-    gm,
-    JSON.parse(
+for (const pack of library.packs.filter(
+  (p) => p.manifest.kind !== "variant" && p.manifest.id !== "core",
+)) {
+  let raw;
+  try {
+    raw = JSON.parse(
       await readFile(
-        new URL(`../dist/gm/sources/${id}.json`, import.meta.url),
+        new URL(`../dist/gm/sources/${pack.manifest.id}.json`, import.meta.url),
         "utf8",
       ),
-    ),
-    gmRules,
-  );
+    );
+  } catch (error) {
+    if (error.code === "ENOENT") continue;
+    throw error;
+  }
+  gm = addGMSupplement(gm, raw, gmRules);
+}
+
 gm.optionBooks = gmRules.books.map(
   ({ id, title, shortTitle, version, source }) => ({
     id,

@@ -256,8 +256,8 @@ test("every core profile preserves untouched printed values, Skills and attacks"
     data.profiles.filter((p) => p.id.startsWith("core:")).length,
     49,
   );
-  assert.equal(data.templates.length, 7);
-  assert.equal(data.traits.length, 67);
+  assert.equal(data.templates.filter(t => t.id.startsWith("core:")).length, 7);
+  assert.equal(data.traits.filter(t => t.id.startsWith("core:")).length, 67);
   for (const p of data.profiles.filter((p) => p.id.startsWith("core:"))) {
     const s = freshGM(data, p.id),
       r = result(s);
@@ -619,7 +619,7 @@ test("named worked examples are excluded without removing generic foundations or
     ids,
   );
   assert.ok(!data.profiles.some((p) => p.category === "Worked Examples"));
-  assert.equal(data.templates.length, 7);
+  assert.equal(data.templates.filter(t => t.id.startsWith("core:")).length, 7);
   const s = freshGM(data, ids[0]);
   assert.throws(() => validateGMDraft(data, R, s), /profile/i);
 });

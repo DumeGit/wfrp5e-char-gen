@@ -1,3 +1,4 @@
+import { templateEligibility, templateSummary } from "./templates.mjs";
 import { syncGMCants } from "./cants.mjs";
 import { loadBookBundle } from "../book-bundle.mjs";
 import { KEYS, skillInfo, base } from "../rules.mjs";
@@ -219,7 +220,7 @@ function templatePreview(id) {
   const t = data.templates.find((t) => t.id === id);
   modal(
     t.name,
-    `${templateOverview(t)}<div class="gm-dialog-actions">${button("Back to templates", "template-picker")}${button("Apply template", "apply-template", "", "primary")}</div>`,
+    `${templateOverview(t)}${templateEligibility(t, r.profile) ? `<p class="gm-callout">${esc(templateEligibility(t, r.profile))}</p>` : ""}<div class="gm-dialog-actions">${button("Back to templates", "template-picker")}${button("Apply template", "apply-template", templateEligibility(t, r.profile) ? "disabled" : "", "primary")}</div>`,
   );
 }
 function showPicker(kind) {
@@ -315,6 +316,7 @@ async function action(el) {
   if (a === "legacy") {
     const entries = [
       ...data.profiles,
+      ...data.templates,
       ...r.traits,
       ...r.attacks,
       ...r.talents,
@@ -372,20 +374,14 @@ async function action(el) {
   }
   if (a === "template-picker") {
     modal(
-      "Choose a core template",
-      `<p class="gm-small">Templates add abilities to this profile; they do not stack (pp. 353–354).</p>${gmCatalogue(
+      "Choose a creature template",
+      `<p class="gm-small">Choose one template from the enabled books. Source-specific foundations and required choices are explained in its preview.</p>${gmCatalogue(
         data,
         s.books,
       )
         .templates.map(
           (t) =>
-            `<div class="gm-picker-row"><div><strong>${t.name}</strong><p>${Object.entries(
-              t.adjustments,
-            )
-              .map(([k, v]) => `${k} +${v}`)
-              .join(
-                " · ",
-              )}</p><small>Core · p. ${t.page}</small></div>${button("Preview", "preview-template", `data-id="${t.id}"`)}</div>`,
+            `<div class="gm-picker-row"><div><strong>${t.name}</strong><p>${esc(templateSummary(t))}</p><small>${esc(sourceLabel(t))} ${t.adaptation ? '<span class="legacy-tag">Legacy</span>' : ""}</small></div>${button("Preview", "preview-template", `data-id="${t.id}"`)}</div>`,
         )
         .join("")}`,
     );
@@ -397,6 +393,13 @@ async function action(el) {
   }
   if (a === "apply-template") {
     const id = pendingTemplate;
+    const t = data.templates.find((x) => x.id === id);
+    if (
+      !t ||
+      !s.books.includes(t.source?.book || "core") ||
+      templateEligibility(t, r.profile)
+    )
+      return;
     close();
     commit(
       () => applyTemplate(s, id),
@@ -416,8 +419,30 @@ async function action(el) {
     addEntry(el.dataset.id);
     return;
   }
+  if (a === "undead-ride") {
+    const name = el.dataset.name;
+    if (!r.undeadRidingOptions.includes(name) || r.stats.Ag === null) return;
+    commit(() => {
+      const total = Math.max(
+        r.stats.Ag + 20,
+        r.skills.find((x) => x.name === name)?.total || 0,
+      );
+      s.removed = s.removed.filter((k) => k !== `skill:${name}`);
+      const old = s.skills.find((x) => x.name === name);
+      if (old) old.total = total;
+      else
+        s.skills.push({
+          key: uid(),
+          name,
+          total,
+          origin: "GM",
+          source: { book: "night-parade", page: 10 },
+        });
+    }, `${name} added at +20 or its higher existing bonus.`);
+    return;
+  }
   if (a === "optional-trait") {
-    const x = r.profile.optionalTraits[Number(el.dataset.index)];
+    const x = r.optionalTraits[Number(el.dataset.index)];
     if (x.name === "Size") {
       ui.tab = 0;
       render();
@@ -704,9 +729,7 @@ function change(el) {
           (t) => t.id === s.template && t.source?.book === d.book,
         )
       ) {
-        s.template = "";
-        s.templateSkills = {};
-        s.templateTalents = {};
+        applyTemplate(s, "");
       }
     });
     return;
@@ -746,6 +769,10 @@ function change(el) {
         const list = s.templateSkills[d.templateSkill] || [];
         list[Number(d.choice)] = val;
         s.templateSkills[d.templateSkill] = Array.from(list, (x) => x || "");
+      }
+      if (d.templateGear !== undefined) {
+        if (val) s.templateGear[d.templateGear] = val;
+        else delete s.templateGear[d.templateGear];
       }
       if (d.templateTalent !== undefined) {
         if (val) s.templateTalents[d.templateTalent] = val;

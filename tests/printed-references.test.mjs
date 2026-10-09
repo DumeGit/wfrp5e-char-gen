@@ -205,7 +205,7 @@ const get = (book, name) =>
       r.entry.source.book === book &&
       r.name.toLowerCase() === name.toLowerCase(),
   );
-test("all eleven supplied books publish gameplay references, without enabling creator systems", () => {
+test("all twelve supplied books publish gameplay references, without enabling creator systems", () => {
   const samples = {
     core: "Head Critical Wounds",
     "up-in-arms": "Alcatini Method",
@@ -218,6 +218,7 @@ test("all eleven supplied books publish gameplay references, without enabling cr
     "high-elf": "Priest Careers",
     "blood-bramble": "The Lore of Hedgecraft",
     "deft-steps": "Black Market",
+    "night-parade": "Vigor Mortis",
   };
   for (const [book, name] of Object.entries(samples)) {
     const row = get(book, name);
@@ -472,7 +473,7 @@ test("NPCs and templates stay outside search while reviewed source records and t
     await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
   );
   assert.equal(gm.profiles.filter((p) => p.id.startsWith("core:")).length, 49);
-  assert.equal(gm.templates.length, 7);
+  assert.equal(gm.templates.filter(t => t.id.startsWith("core:")).length, 7);
   const before = JSON.stringify(gm);
   const generated = buildReferenceLibrary(library, gm);
   assert.ok(
@@ -505,7 +506,7 @@ test("coverage is generated from registry and frozen review, separate from creat
   );
   const report = searchCoverage(library, full, review, workshop);
   assert.equal(report.removedNonMechanicalRules, 112);
-  assert.equal(report.books.length, 11);
+  assert.equal(report.books.length, 12);
   assert.equal(report.newlyImported, raw.length);
   assert.equal(
     report.retainedOutsideSearch,

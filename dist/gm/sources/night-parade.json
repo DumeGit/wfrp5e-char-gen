@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": 1,
+  "id": "night-parade",
+  "source": {
+    "file": "The Night Parade.pdf",
+    "sha256": "f8bb99e7da5163cbb094208f78c183410b1d1b0490d01188f09a8dbddca25b53"
+  },
+  "summary": "Seven undead templates & Corpse Cart",
+  "profiles": [
+    {
+      "id": "night-parade:creatures:corpse-cart",
+      "name": "Corpse Cart",
+      "page": 19,
+      "source": {
+        "book": "night-parade",
+        "page": 19
+      },
+      "example": false,
+      "stats": {
+        "M": 4,
+        "WS": 20,
+        "BS": null,
+        "S": 40,
+        "T": 50,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 10,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 36
+      },
+      "size": "Large",
+      "category": "Undead",
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Constrictor",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate",
+          "adaptation": "Legacy: printed Corrupted (2) uses core Corruption (Moderate), by user-approved conversion."
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "3"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Vigor Mortis",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Balefire Brazier",
+          "value": ""
+        },
+        {
+          "name": "Disease",
+          "value": "",
+          "adaptation": "Legacy: printed Diseased uses core Disease; the book does not identify a disease, so the GM must name one explicitly."
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Mount"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Flailing Limb 1",
+          "skill": 20,
+          "damage": 11,
+          "printedDamage": 7,
+          "text": "One of five Flailing Limbs",
+          "optional": false,
+          "adaptation": "The five Flailing Limbs use +11 rather than printed +7: core Large Size adds SB 4. This is an approved Legacy adaptation."
+        },
+        {
+          "name": "Flailing Limb 2",
+          "skill": 20,
+          "damage": 11,
+          "printedDamage": 7,
+          "text": "One of five Flailing Limbs",
+          "optional": false,
+          "adaptation": "The five Flailing Limbs use +11 rather than printed +7: core Large Size adds SB 4. This is an approved Legacy adaptation."
+        },
+        {
+          "name": "Flailing Limb 3",
+          "skill": 20,
+          "damage": 11,
+          "printedDamage": 7,
+          "text": "One of five Flailing Limbs",
+          "optional": false,
+          "adaptation": "The five Flailing Limbs use +11 rather than printed +7: core Large Size adds SB 4. This is an approved Legacy adaptation."
+        },
+        {
+          "name": "Flailing Limb 4",
+          "skill": 20,
+          "damage": 11,
+          "printedDamage": 7,
+          "text": "One of five Flailing Limbs",
+          "optional": false,
+          "adaptation": "The five Flailing Limbs use +11 rather than printed +7: core Large Size adds SB 4. This is an approved Legacy adaptation."
+        },
+        {
+          "name": "Flailing Limb 5",
+          "skill": 20,
+          "damage": 11,
+          "printedDamage": 7,
+          "text": "One of five Flailing Limbs",
+          "optional": false,
+          "adaptation": "The five Flailing Limbs use +11 rather than printed +7: core Large Size adds SB 4. This is an approved Legacy adaptation."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Corpse Cart Armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Die Hard is removed by user decision; no Fifth Edition equivalent or resurrection rule is granted.",
+        "Rear is covered by Fifth Edition Size/Stomp: a larger creature loses Momentum to make a Melee (Brawling) Free Attack dealing Strength Bonus Damage (core pp. 360–361).",
+        "The five Flailing Limbs use +11 rather than printed +7: core Large Size adds SB 4. This is an approved Legacy adaptation.",
+        "Vigor Mortis/Balefire retain the printed range ‘within 8’; the book specifies no distance unit. Printed +20/−20 bonuses stay reference text, without automatic conversion or live aura tracking."
+      ],
+      "adaptation": "Legacy: Rear uses core Size/Stomp, five Flailing Limbs become +11 under Large Size, and Die Hard is removed by user decision."
+    }
+  ],
+  "templates": [
+    {
+      "id": "night-parade:template:mass-grave-dead",
+      "name": "Mass Grave Dead",
+      "page": 8,
+      "source": {
+        "book": "night-parade",
+        "page": 8
+      },
+      "adjustments": {
+        "S": 20,
+        "T": 20,
+        "Ag": -5,
+        "Dex": -5
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "adaptation": "Legacy: printed Corrupted (1) uses core Corruption (Minor), by user-approved conversion."
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Stupid",
+          "value": ""
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "gear": [],
+      "notes": [],
+      "eligibility": "undead",
+      "setStats": {
+        "BS": 0
+      },
+      "adaptation": "Legacy: printed Corrupted (1) uses core Corruption (Minor), by user-approved conversion."
+    },
+    {
+      "id": "night-parade:template:liche-corpsemaster",
+      "name": "Liche Corpsemaster",
+      "page": 8,
+      "source": {
+        "book": "night-parade",
+        "page": 8
+      },
+      "adjustments": {
+        "WS": 10,
+        "BS": 20,
+        "T": 10,
+        "I": 15,
+        "Int": 40,
+        "WP": 45,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Nehekharan)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Arcane Magic (Beasts)",
+            "Arcane Magic (Death)",
+            "Arcane Magic (Fire)",
+            "Arcane Magic (Heavens)",
+            "Arcane Magic (Life)",
+            "Arcane Magic (Light)",
+            "Arcane Magic (Metal)",
+            "Arcane Magic (Shadows)"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Arcane Magic (Necromancy)"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Dark Magic (Necromancy) is replaced by the core Arcane Magic (Necromancy) Talent."
+        },
+        {
+          "options": [
+            "Hardy"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Read/Write"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Staff — choose its core weapon profile",
+          "kind": "weapon",
+          "group": "Polearm",
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Staff is not silently mapped to Quarterstaff: explicitly select its core Polearm profile. Descriptive robes and ritual components have no invented quantities or statistics."
+      ],
+      "eligibility": "zombie",
+      "removeTraits": [
+        "Construct"
+      ],
+      "restoreStats": [
+        "BS",
+        "Int",
+        "WP",
+        "Fel"
+      ],
+      "trappings": "Mouldering Robes; Pouches containing ritual components",
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "count": 3
+        },
+        {
+          "categories": [
+            "Arcane"
+          ],
+          "count": 2
+        },
+        {
+          "categories": [
+            "Necromancy"
+          ],
+          "count": 1
+        }
+      ],
+      "matchWind": true,
+      "adaptation": "Legacy: Dark Magic (Necromancy) uses core Arcane Magic (Necromancy); absent Characteristics increased by this template start from zero, as approved. The printed template explicitly removes Construct."
+    },
+    {
+      "id": "night-parade:template:liche-lord",
+      "name": "Liche Lord",
+      "page": 8,
+      "source": {
+        "book": "night-parade",
+        "page": 8
+      },
+      "adjustments": {
+        "WS": 20,
+        "BS": 20,
+        "T": 20,
+        "I": 30,
+        "Dex": 10,
+        "Int": 65,
+        "WP": 70,
+        "Fel": 20
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Shyish)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Nehekharan)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Aethyric Attunement"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Arcane Magic (Death)"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Arcane Magic (Shyish) uses core Arcane Magic (Death)."
+        },
+        {
+          "options": [
+            "Arcane Magic (Necromancy)"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Dark Magic (Necromancy) is replaced by the core Arcane Magic (Necromancy) Talent."
+        },
+        {
+          "options": [
+            "Hardy"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Instinctive Diction"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Magical Sense"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Menacing 2 becomes one rank, respecting the core Talent's nonrepeatable limit."
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Read/Write"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "War Wizard"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Staff — choose its core weapon profile",
+          "kind": "weapon",
+          "group": "Polearm",
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Printed Aetheric Attunement uses the canonical spelling Aethyric Attunement."
+      ],
+      "eligibility": "zombie",
+      "removeTraits": [
+        "Construct"
+      ],
+      "restoreStats": [
+        "BS",
+        "Int",
+        "WP",
+        "Fel"
+      ],
+      "trappings": "Mouldering Robes; Pouches containing ritual components",
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "count": 4
+        },
+        {
+          "categories": [
+            "Arcane",
+            "Death"
+          ],
+          "count": 8
+        },
+        {
+          "categories": [
+            "Necromancy"
+          ],
+          "count": 3
+        }
+      ],
+      "adaptation": "Legacy: Dark Magic (Necromancy) uses core Arcane Magic (Necromancy); absent Characteristics increased by this template start from zero, as approved. The printed template explicitly removes Construct. Printed Shyish uses Death; Menacing 2 becomes one rank."
+    },
+    {
+      "id": "night-parade:template:wight",
+      "name": "Wight",
+      "page": 9,
+      "source": {
+        "book": "night-parade",
+        "page": 9
+      },
+      "adjustments": {
+        "WS": 15,
+        "BS": 10,
+        "S": 10,
+        "T": 15,
+        "I": 10,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Two-Handed)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Drilled"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Robust"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Mail Armour — choose a core quick profile",
+          "kind": "armour",
+          "quick": true,
+          "choose": true
+        },
+        {
+          "label": "Shield or Two-Handed Weapon",
+          "kind": "weapon-or-shield",
+          "choose": true
+        }
+      ],
+      "notes": [
+        "The supplement allows its undead advancement templates on basic Skeletons or Zombies (p. 9). This app uses the Fifth Edition foundations, not the duplicated older basic profiles. Select a core armour profile explicitly; no armour pieces are inferred."
+      ],
+      "eligibility": "undead",
+      "removeTraits": [
+        "Construct"
+      ],
+      "restoreStats": [
+        "BS",
+        "Int",
+        "WP",
+        "Fel"
+      ],
+      "adaptation": "Proposed Legacy adaptation approved by the user: restore the template's absent Characteristics from a zero baseline. Wights lose Construct so their printed mental increases and Leadership can work in Fifth Edition."
+    },
+    {
+      "id": "night-parade:template:wight-champion",
+      "name": "Wight Champion",
+      "page": 9,
+      "source": {
+        "book": "night-parade",
+        "page": 9
+      },
+      "adjustments": {
+        "WS": 30,
+        "BS": 20,
+        "S": 20,
+        "T": 25,
+        "I": 20,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 30
+      },
+      "skills": [
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Two-Handed)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Classical)"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (History)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Drilled"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Robust"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Strike Mighty Blow"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Strike Mighty Blow 2 becomes one rank, respecting the core nonrepeatable limit."
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Plate Armour — choose a core quick profile",
+          "kind": "armour",
+          "quick": true,
+          "choose": true
+        },
+        {
+          "label": "Shield or Two-Handed Weapon",
+          "kind": "weapon-or-shield",
+          "choose": true
+        }
+      ],
+      "notes": [
+        "The supplement allows its undead advancement templates on basic Skeletons or Zombies (p. 9). This app uses the Fifth Edition foundations, not the duplicated older basic profiles. Select a core armour profile explicitly; no armour pieces are inferred."
+      ],
+      "eligibility": "undead",
+      "removeTraits": [
+        "Construct"
+      ],
+      "restoreStats": [
+        "BS",
+        "Int",
+        "WP",
+        "Fel"
+      ],
+      "adaptation": "Proposed Legacy adaptation approved by the user: restore the template's absent Characteristics from a zero baseline. Wights lose Construct so their printed mental increases and Leadership can work in Fifth Edition. Printed Strike Mighty Blow 2 becomes one rank."
+    },
+    {
+      "id": "night-parade:template:skeletal-steed",
+      "name": "Skeletal Steed",
+      "page": 10,
+      "source": {
+        "book": "night-parade",
+        "page": 10
+      },
+      "adjustments": {
+        "WS": -10,
+        "BS": -10,
+        "I": -10,
+        "Ag": -10
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "gear": [],
+      "notes": [],
+      "eligibility": "mount",
+      "removeTraits": [
+        "Fly"
+      ],
+      "armour": 2,
+      "adaptation": "Legacy: the printed zero Intelligence, Willpower and Fellowship become absent Characteristics under core Construct. Printed Flight uses core Fly."
+    },
+    {
+      "id": "night-parade:template:rotting-mount",
+      "name": "Rotting Mount",
+      "page": 10,
+      "source": {
+        "book": "night-parade",
+        "page": 10
+      },
+      "adjustments": {
+        "M": -1,
+        "I": -25,
+        "Ag": -20
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "",
+          "adaptation": "Legacy: printed Diseased uses core Disease; the book does not identify a disease, so the GM must name one explicitly."
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "gear": [],
+      "notes": [],
+      "eligibility": "mount",
+      "halveStats": [
+        "WS"
+      ],
+      "halveTraits": [
+        "Fly"
+      ],
+      "adaptation": "Legacy: the printed zero Intelligence, Willpower and Fellowship become absent Characteristics under core Construct. Printed Flight uses core Fly."
+    }
+  ],
+  "training": [],
+  "traits": [
+    {
+      "id": "night-parade:trait:vigor-mortis",
+      "name": "Vigor Mortis",
+      "page": 19,
+      "source": {
+        "book": "night-parade",
+        "page": 19
+      },
+      "parameter": "",
+      "text": "Any Undead within 8 of the Corpse Cart are no longer subject to Unstable; the Cart itself remains subject to it. Necromancy spells cast within 8 receive +20. These effects end when the Cart is destroyed."
+    },
+    {
+      "id": "night-parade:trait:balefire-brazier",
+      "name": "Balefire Brazier",
+      "page": 19,
+      "source": {
+        "book": "night-parade",
+        "page": 19
+      },
+      "parameter": "",
+      "text": "Replaces the normal Necromancy casting benefit of Vigor Mortis: all Lore (Magic) checks within 8 suffer −20. The protection of nearby Undead from Unstable remains."
+    }
+  ]
+}

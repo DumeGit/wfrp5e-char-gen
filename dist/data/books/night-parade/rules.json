@@ -1,0 +1,17 @@
+[
+  {
+    "id": "night-parade:skills:ride",
+    "path": [
+      "skillOptions",
+      "Ride"
+    ],
+    "operation": "append",
+    "value": [
+      "Rotting Mount",
+      "Skeletal Steed",
+      "Corpse Cart"
+    ],
+    "page": 10,
+    "reason": "Printed undead mount specialisations; their optional GM +20 bonuses are separate from PC creation allocations."
+  }
+]

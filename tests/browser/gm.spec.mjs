@@ -7,6 +7,85 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("Night Parade has opt-in content and complete reversible template equipment choices @gm @mobile", async ({
+  page,
+}, testInfo) => {
+  await openGM(page);
+  await expect(page.locator("label:has(#gm-book-night-parade)")).toContainText(
+    "1 profiles · 7 templates",
+  );
+  await page.locator("#gm-book-night-parade").check();
+  await applyProfile(page, "Skeleton");
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("button", { name: "Choose template", exact: true })
+    .click();
+  await page
+    .getByRole("dialog")
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText("Wight", { exact: true }) })
+    .getByRole("button", { name: "Preview", exact: true })
+    .click();
+  const preview = page.getByRole("dialog", { name: "Wight", exact: true });
+  await expect(preview).toContainText("Night Parade");
+  await expect(
+    preview.getByRole("heading", { name: "Trappings", exact: true }),
+  ).toBeVisible();
+  await preview
+    .getByRole("button", { name: "Apply template", exact: true })
+    .click();
+  await expect(page.locator("#template-skill-1")).toBeVisible();
+  await page.locator("#template-skill-1").selectOption("Melee (Basic)");
+  await page
+    .locator("#template-gear-1")
+    .selectOption({ label: "Medium Armour" });
+  await page.locator("#template-gear-2").selectOption({ label: "Shield" });
+  await expect(page.locator(".gm-issues")).toHaveCount(0);
+  await noOverflow(page);
+  await page.screenshot({
+    path: testInfo.outputPath("night-parade-choices.png"),
+    fullPage: true,
+  });
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("button", { name: "Remove template", exact: true })
+    .click();
+  await expect(page.locator("#template-gear-1")).toHaveCount(0);
+  await page.getByRole("button", { name: /Undo last change/ }).click();
+  await expect(page.locator("#template-gear-1")).toHaveValue("core:armour:17");
+});
+
+test("Corpse Cart optional brazier changes actual descriptions and Disease is highlighted early @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-night-parade").check();
+  await applyProfile(page, "Corpse Cart");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  await page
+    .locator('details[data-detail-key="gm:optional-traits"] > summary')
+    .click();
+  await page
+    .getByRole("button", { name: "Balefire Brazier", exact: true })
+    .click();
+  const vigor = page.locator(".gm-entry").filter({
+    has: page.locator("summary").filter({ hasText: "Vigor Mortis" }),
+  });
+  await vigor.locator("summary").click();
+  await expect(vigor).toContainText("replaces its Necromancy casting benefit");
+  await expect(vigor).not.toContainText("+20");
+  await page.getByRole("button", { name: "Disease", exact: true }).click();
+  await expect(page.locator("#gm-feedback")).toContainText(
+    "Set type for Disease",
+  );
+  await noOverflow(page);
+});
+
 test("profile books show fixed contribution counts and combine with browser filters @gm @mobile", async ({
   page,
 }) => {
@@ -53,7 +132,7 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   page,
 }) => {
   await openGM(page);
-  await expect(page.locator(".gm-books input[data-book]")).toHaveCount(2);
+  await expect(page.locator(".gm-books input[data-book]")).toHaveCount(3);
   await expect(page.locator("#gm-book-high-elf")).toHaveCount(0);
   await expect(page.locator("#gm-book-dwarf-guide")).toHaveCount(0);
   await applyProfile(page, "High Elf or Wood Elf");
@@ -219,7 +298,7 @@ test("template preview applies and can be removed and undone @gm", async ({
     .getByRole("button", { name: "Choose template", exact: true })
     .click();
   const picker = page.getByRole("dialog", {
-    name: "Choose a core template",
+    name: "Choose a creature template",
     exact: true,
   });
   await picker

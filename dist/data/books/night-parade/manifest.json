@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "night-parade",
+  "title": "The Night Parade",
+  "shortTitle": "Night Parade",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "The Night Parade.pdf",
+    "sha256": "f8bb99e7da5163cbb094208f78c183410b1d1b0490d01188f09a8dbddca25b53"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Seven GM templates use Fifth Edition foundations and approved zero-baseline/Construct conversions. Named characters are excluded.",
+      "Approved core Talent replacements and repeat limits; Corpse Cart uses Size/Stomp and +11 Damage, with Die Hard removed.",
+      "Three Ride specialisations are shared options. No extra free PC Advances, Species or Careers."
+    ]
+  },
+  "files": {
+    "rules": "rules.json",
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

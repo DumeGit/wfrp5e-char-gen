@@ -165,7 +165,7 @@ for (const creator of ["PC", "GM"]) {
   }) => {
     await (creator === "PC" ? openPC(page) : openGM(page));
     await search(page);
-    await expect(page.locator("#book-search-book option")).toHaveCount(12);
+    await expect(page.locator("#book-search-book option")).toHaveCount(13);
     await categoryFilters(page, "career");
     await page
       .getByRole("combobox", { name: "Class", exact: true })
@@ -174,9 +174,7 @@ for (const creator of ["PC", "GM"]) {
       .locator(".book-search-panel")
       .getByRole("combobox", { name: "Species", exact: true })
       .selectOption("Human");
-    await page
-      .getByRole("combobox", { name: "Book", exact: true })
-      .selectOption("core");
+    await page.locator("#book-search-book").selectOption("core");
     await expect(
       page.getByRole("option", { name: /^Soldier Career/ }),
     ).toBeAttached();
@@ -204,9 +202,7 @@ for (const creator of ["PC", "GM"]) {
     await page
       .getByRole("button", { name: "Clear filters", exact: true })
       .click();
-    await expect(
-      page.getByRole("combobox", { name: "Book", exact: true }),
-    ).toHaveValue("");
+    await expect(page.locator("#book-search-book")).toHaveValue("");
     await categoryFilters(page, "rune");
     await page
       .getByRole("combobox", { name: "Rune label", exact: true })

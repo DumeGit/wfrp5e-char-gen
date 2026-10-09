@@ -27082,6 +27082,121 @@
           }
         ]
       }
+    },
+    "night-parade": {
+      "sourceHash": "f8bb99e7da5163cbb094208f78c183410b1d1b0490d01188f09a8dbddca25b53",
+      "publishedSHA256": "35fc35ceeef67371ea4bbc5a33162b9ef9da1757d830f4d8e108e8858a434a3f",
+      "entries": 4,
+      "areas": [
+        {
+          "first": 3,
+          "last": 19,
+          "topic": "Undead template procedures, mount Skills and Corpse Cart abilities"
+        }
+      ],
+      "records": [
+        {
+          "id": "night-parade:reference:templates",
+          "name": "Applying Undead Advancement Templates",
+          "page": 3,
+          "disposition": "included"
+        },
+        {
+          "id": "night-parade:reference:mounts",
+          "name": "Undead Mounts",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "night-parade:reference:vigor-mortis",
+          "name": "Vigor Mortis",
+          "page": 19,
+          "disposition": "included"
+        },
+        {
+          "id": "night-parade:reference:balefire-brazier",
+          "name": "Balefire Brazier",
+          "page": 19,
+          "disposition": "included"
+        },
+        {
+          "id": "night-parade:template:mass-grave-dead",
+          "name": "Mass Grave Dead",
+          "page": 8,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:template:liche-corpsemaster",
+          "name": "Liche Corpsemaster",
+          "page": 8,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:template:liche-lord",
+          "name": "Liche Lord",
+          "page": 8,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:template:wight",
+          "name": "Wight",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:template:wight-champion",
+          "name": "Wight Champion",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:template:skeletal-steed",
+          "name": "Skeletal Steed",
+          "page": 10,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:template:rotting-mount",
+          "name": "Rotting Mount",
+          "page": 10,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:creatures:corpse-cart",
+          "name": "Corpse Cart",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Retained for GM creation; excluded from global search."
+        },
+        {
+          "id": "night-parade:excluded:named-npcs",
+          "name": "Old Jasper, Mheava, The Herald and Charnel Chorus",
+          "page": "12–14",
+          "disposition": "excluded",
+          "reason": "Named character foundations excluded by user scope."
+        },
+        {
+          "id": "night-parade:excluded:basic-profiles",
+          "name": "Basic Skeleton and Zombie",
+          "page": 9,
+          "disposition": "existing",
+          "reason": "Use the supplied Fifth Edition core foundations, not duplicate Fourth Edition profiles."
+        },
+        {
+          "id": "night-parade:excluded:adventures",
+          "name": "Setting, warband disposition and adventure hooks",
+          "page": "4–18",
+          "disposition": "excluded",
+          "reason": "No standalone mechanical reference or creator option."
+        }
+      ]
     }
   }
 }
