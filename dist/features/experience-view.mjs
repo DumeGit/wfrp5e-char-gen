@@ -217,15 +217,6 @@ export function createFeature(getContext, setContext) {
     if (xpTab === "Skills") rows = experienceSkills();
     if (xpTab === "Talents") rows = grudgePanel(R, s) + experienceTalents();
     if (xpTab === "Magic") rows = spellShop();
-    const last = s.ledger.at(-1),
-      undo = last
-        ? button(
-            "undo",
-            `Undo last: ${esc(last.name)}${["char", "skill"].includes(last.type) ? ` +${last.amount === 1 ? 1 : 5}` : ""}`,
-            "",
-            "quiet",
-          )
-        : "";
     return `<span class="eyebrow">07 / Experience</span>${chapterHeading("Spend experience")}
 <p class="muted">Each purchase has an exact price, source, and tracker effect. ${page("191, 364")}</p>
 <div class="xp-balance xp-sticky-balance"><div><span>XP budget</span><strong>${d.xpTotal.toLocaleString()}</strong>${d.xpBonus ? `<small>${s.xp.toLocaleString()} base + ${d.xpBonus} star-sign XP</small>` : ""}</div>
@@ -234,7 +225,7 @@ export function createFeature(getContext, setContext) {
 </div>
 <details data-detail-key="${detailKey("experience-view:experience:0")}" class="budget-edit"><summary>Edit XP budget</summary><div class="budget-form"><div class="field"><label for="xp">Base XP budget</label><input id="xp" type="number" min="${Math.max(0, d.spent - d.xpBonus)}" step="1" value="${s.xp}"></div>${button("set-xp", "Update budget", "", "secondary")}</div>
 <p class="small muted">Includes spent XP. Star-sign XP is added separately. Unspent experience can be kept.</p>
-</details>${undo ? `<div class="undo-bar">${undo}<span class="minilabel">Recalculates XP and tracker boxes.</span></div>` : ""}${e.length ? issuePanel(e, "Finish creation to spend XP") : ""}<div class="career-progress"><div class="split"><strong>${esc(c.levels[d.level - 1].name)} ${legacyTag(R, c)}</strong><span class="level-pill">Career level ${d.level}</span></div>${trackerBoxes(d)}${
+</details>${e.length ? issuePanel(e, "Finish creation to spend XP") : ""}<div class="career-progress"><div class="split"><strong>${esc(c.levels[d.level - 1].name)} ${legacyTag(R, c)}</strong><span class="level-pill">Career level ${d.level}</span></div>${trackerBoxes(d)}${
       d.level < 4
         ? `<p>${button("promote", "Advance Career · 100 XP", `${q.error || e.length ? "disabled" : ""} title="${esc(q.error)}"`, "secondary")}</p>
 <small>Requires the Advance Career Endeavour (p. 196). Using this button records that requirement as met.</small>`

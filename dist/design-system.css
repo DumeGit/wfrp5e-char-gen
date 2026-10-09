@@ -1508,6 +1508,43 @@ dialog::backdrop {
   }
 }
 
+/* One compact history control, mounted by the shared shell in every mode. */
+.history-controls {
+  display: flex;
+  gap: 4px;
+  margin: 8px 0;
+  flex: none;
+}
+.history-controls .history-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  color: var(--color-on-leather);
+  background: var(--color-leather-deep);
+  border: 1px solid var(--color-line-dark);
+}
+.history-controls .history-button:hover:not(:disabled),
+.history-controls .history-button:focus-visible {
+  color: var(--color-on-leather);
+  background: var(--color-leather-raised);
+}
+.history-controls svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.history-redo-icon {
+  transform: scaleX(-1);
+}
+
 /* Marijan's fixed theme inherits all controls and semantic feedback roles. */
 :root[data-theme="ash-vellum"] .masthead .brand-title {
   background: var(--color-title-veil);

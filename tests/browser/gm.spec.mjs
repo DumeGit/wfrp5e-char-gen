@@ -77,7 +77,7 @@ test("Night Parade has opt-in content and complete reversible template equipment
     .getByRole("button", { name: "Remove template", exact: true })
     .click();
   await expect(page.locator("#template-gear-1")).toHaveCount(0);
-  await page.getByRole("button", { name: /Undo last change/ }).click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(page.locator("#template-gear-1")).toHaveValue("core:armour:17");
 });
 
@@ -281,9 +281,7 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
   await expect(
     page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
   ).toBeVisible();
-  await page
-    .getByRole("button", { name: "↶ Undo last change", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await gmStep(page, "Equipment & magic");
   await expect(
     page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
@@ -345,9 +343,7 @@ test("template preview applies and can be removed and undone @gm", async ({
   await expect(
     page.getByRole("button", { name: "Choose template", exact: true }),
   ).toBeVisible();
-  await page
-    .getByRole("button", { name: "↶ Undo last change", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(page.locator(".gm-template-bar")).toContainText("Soldier");
 });
 test("Tiny warns before export, routes to Wounds and resolves after a manual value @gm", async ({
@@ -440,9 +436,7 @@ test("removing a mount book requires explicit reset and undo restores its select
     .getByRole("button", { name: "Remove book & start new", exact: true })
     .click();
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
-  await page
-    .getByRole("button", { name: "↶ Undo last change", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(page.locator(".gm-foundation")).toContainText("Demigryph Mount");
   await expect(page.locator("#gm-book-up-in-arms")).toBeChecked();
   await gmStep(page, "Equipment & magic");
@@ -624,9 +618,7 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   await page.locator("#gm-book-up-in-arms").check();
   await gmStep(page, "Equipment & magic");
   await expect(page.locator("#gm-magic")).toContainText("Fellstave (Daemons)");
-  await page
-    .getByRole("button", { name: "\u21b6 Undo last change", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await gmStep(page, "Equipment & magic");
   await expect(page.locator("#gm-magic")).toContainText("Fellstave (Daemons)");
 });
@@ -688,9 +680,7 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
     .getByRole("button", { name: "Remove this entry", exact: true })
     .click();
   await expect(page.getByLabel("Fire Cant 1", { exact: true })).toHaveCount(0);
-  await page
-    .getByRole("button", { name: "\u21b6 Undo last change", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(page.getByLabel("Fire Cant 1", { exact: true })).toHaveValue(
     "archives-iii:cant:fire-set-alight",
   );

@@ -28,6 +28,7 @@ import {
   restoreDisclosures,
 } from "../dist/disclosures.mjs";
 import { createFeature as createActions } from "../dist/features/actions.mjs";
+import { createDraftHistory } from "../dist/draft-history.mjs";
 import { createFeature as createResets } from "../dist/features/creation-state.mjs";
 import { createFeature as createExperience } from "../dist/features/experience-view.mjs";
 import { runeShopRows } from "../dist/dwarf-guide-ui.mjs";
@@ -294,17 +295,21 @@ test("disclosure identity survives translated labels and repeated profile names"
   assert.equal(nodes[0].open, true);
 });
 
-test("extracted actions publish replacement state before render, including purchase and undo", async () => {
+test("extracted purchases publish state to shared history before undo/redo recalculation", async () => {
   let s = soldier(),
     Rcurrent = R,
     setupOpen = false,
     renders = [];
+  const history = createDraftHistory({ draft: s, document: "player" });
+  const render = () => {
+    renders.push(characterResult(Rcurrent, s));
+    history.record({ draft: s, document: "player" });
+  };
   const context = () => ({
     s,
     R: Rcurrent,
     setupOpen,
-    undoChoice: null,
-    render: () => renders.push(characterResult(Rcurrent, s)),
+    render,
     result: () => characterResult(Rcurrent, s),
     errors: () => characterResult(Rcurrent, s).issues,
     toast: () => {},
@@ -323,8 +328,12 @@ test("extracted actions publish replacement state before render, including purch
     dataset: { action: "buy", type: "skill", name: "Cool" },
   });
   assert.equal(renders.at(-1).derived.spent, 75);
-  await actions.action({ dataset: { action: "undo" } });
+  s = history.travel("undo").draft;
+  render();
   assert.equal(renders.at(-1).derived.spent, 0);
+  s = history.travel("redo").draft;
+  render();
+  assert.equal(renders.at(-1).derived.spent, 75);
   const resets = createResets(context, setter);
   resets.changeCareer("wizard");
   assert.equal(s.career, "wizard");

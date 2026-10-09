@@ -54,7 +54,6 @@ export function createFeature(getContext, setContext) {
 
   async function action(el) {
     let {
-      undoChoice,
       R,
       s,
       xpTab,
@@ -85,6 +84,7 @@ export function createFeature(getContext, setContext) {
       result,
       errors,
       fullAppendix,
+      startHistoryDocument,
     } = getContext();
 
     const a = el.dataset.action;
@@ -133,7 +133,6 @@ export function createFeature(getContext, setContext) {
       return;
     }
     if (a === "choose-free-magic") {
-      setContext("undoChoice", (undoChoice = null));
       s.spells[Number(el.dataset.index)] = el.dataset.name;
       $("#creator-dialog").close();
       render();
@@ -196,29 +195,6 @@ export function createFeature(getContext, setContext) {
           ?.scrollIntoView({ block: "start", behavior: "instant" });
       return;
     }
-    if (a === "undo-choice") {
-      if (!undoChoice) return;
-      const previous = undoChoice;
-      setContext("undoChoice", (undoChoice = null));
-      setContext("R", (R = previous.R));
-      setContext("s", (s = previous.s));
-      setContext("careerPreview", (careerPreview = ""));
-      render();
-      toast("Choice undone; previous allocations restored.");
-      return;
-    }
-    if (
-      ![
-        "step",
-        "xp-tab",
-        "summary-toggle",
-        "advance-size",
-        "sheet",
-        "record",
-        "apply-books",
-      ].includes(a)
-    )
-      setContext("undoChoice", (undoChoice = null));
     if (
       elfAction(R, s, el, (sides, p, label, source, count = 1) => {
         const n = M.roll(s, label, count, sides, p).reduce((a, b) => a + b, 0);
@@ -244,6 +220,7 @@ export function createFeature(getContext, setContext) {
       )
         return;
       setContext("s", (s = newCharacter()));
+      startHistoryDocument();
       setContext("setupOpen", (setupOpen = true));
     }
     if (a === "save-file") {
@@ -288,8 +265,8 @@ export function createFeature(getContext, setContext) {
         return;
       setContext("R", (R = next));
       setContext("s", (s = newCharacter()));
+      startHistoryDocument();
       setContext("setupOpen", (setupOpen = false));
-      setContext("undoChoice", (undoChoice = null));
       setContext("careerPreview", (careerPreview = ""));
       setContext("careerFilter", (careerFilter = "All classes"));
       detailsState.clear();
@@ -727,20 +704,6 @@ export function createFeature(getContext, setContext) {
         $("#owned-trapping").value,
       );
     }
-    if (a === "undo") {
-      s.ledger.pop();
-      if (s.grudgeTargets)
-        s.grudgeTargets = s.grudgeTargets.slice(
-          0,
-          result().derived.talents.filter(
-            (t) => M.base(t) === "Ancestral Grudge",
-          ).length,
-        );
-      s.spells = s.spells.slice(
-        0,
-        M.spellGrants(R, s).reduce((a, g) => a + g.count, 0),
-      );
-    }
     if (a === "sheet" || a === "record") {
       if (errors().length) throw Error("Finish creation before exporting.");
       el.disabled = true;
@@ -780,7 +743,6 @@ export function createFeature(getContext, setContext) {
       proposedCareer,
       showImpact,
       toast,
-      undoChoice,
       setupOpen,
       careerFilter,
       resetDependent,
@@ -876,24 +838,15 @@ export function createFeature(getContext, setContext) {
         return;
       if (elfChange(R, s, el)) {
         if (key === "careerVariant") clearCareerSelections(s);
-        setContext(
-          "undoChoice",
-          (undoChoice = {
-            ...before,
-            label: el.dataset.key || "background choice",
-          }),
-        );
         render();
         return;
       }
       if (bind === "bookName") {
-        setContext("undoChoice", (undoChoice = null));
         if (el.value) setNamePart(s, key, el.value);
         render();
         return;
       }
       if (bind === "backgroundChoice") {
-        setContext("undoChoice", (undoChoice = null));
         if (el.value) (s.background ??= {})[key] = el.value;
         render();
         return;
@@ -1125,24 +1078,6 @@ export function createFeature(getContext, setContext) {
             delete s.careerSkills["c1-wom-augury"];
         }
       }
-      if (
-        !["stepSwitch", "careerFilter", "rollTable"].includes(bind) &&
-        JSON.stringify(before.s) !== JSON.stringify(s)
-      )
-        setContext(
-          "undoChoice",
-          (undoChoice = {
-            ...before,
-            label:
-              bind === "species"
-                ? "Species change"
-                : bind === "origin"
-                  ? "origin change"
-                  : bind === "career"
-                    ? "Career change"
-                    : "last creation choice",
-          }),
-        );
       render();
     } catch (err) {
       setContext("s", (s = before.s));

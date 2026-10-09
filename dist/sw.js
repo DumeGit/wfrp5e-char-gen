@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"ca5830fca9f20dde9f57";
+const CACHE=CACHE_PREFIX+"146b7e0bbab319022517";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -205,6 +205,7 @@ const ASSETS=[
  "design-system.mjs",
  "design-tokens.css",
  "disclosures.mjs",
+ "draft-history.mjs",
  "dwarf-guide-ui.mjs",
  "dwarf-guide.mjs",
  "equipment-sizing.mjs",
@@ -251,6 +252,7 @@ const ASSETS=[
  "gm/views.mjs",
  "high-elf-ui.mjs",
  "high-elf.mjs",
+ "history-controls.mjs",
  "index.html",
  "install-control.mjs",
  "inventory.mjs",

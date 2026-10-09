@@ -92,9 +92,7 @@ test("five individual Characteristic points earn one box; undo refunds XP and th
       }),
     ).toBeVisible();
   }
-  await page
-    .getByRole("button", { name: "Undo last: WS +1", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(balance).toHaveText("900");
   await expect(
     page.getByRole("img", {
@@ -107,6 +105,14 @@ test("five individual Characteristic points earn one box; undo refunds XP and th
   );
   expect(saved.ledger).toHaveLength(4);
   expect(saved.ledger.every((e) => e.amount === 1 && e.cost === 25)).toBe(true);
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  await expect(balance).toHaveText("875");
+  await expect(
+    page.getByRole("img", {
+      name: "1 of 10 Career tracker boxes",
+      exact: true,
+    }),
+  ).toBeVisible();
   await noOverflow(page);
 });
 test("repeatable Talent purchase updates ranks and undo restores them @pc", async ({
@@ -123,9 +129,12 @@ test("repeatable Talent purchase updates ranks and undo restores them @pc", asyn
     page.locator(".known-talent").filter({ hasText: "Strong Back" }),
   ).toContainText("2 ranks owned");
   await expect(page.locator(".xp-balance .remaining strong")).toHaveText("800");
-  await page
-    .getByRole("button", { name: "Undo last: Strong Back", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(row).toContainText("1 ranks owned");
   await expect(page.locator(".xp-balance .remaining strong")).toHaveText("900");
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  await expect(
+    page.locator(".known-talent").filter({ hasText: "Strong Back" }),
+  ).toContainText("2 ranks owned");
+  await expect(page.locator(".xp-balance .remaining strong")).toHaveText("800");
 });

@@ -23,7 +23,6 @@ export function createFeature(getContext) {
       s,
       button,
       locked,
-      undoChoice,
       esc,
       hasColourMagic,
       R,
@@ -78,11 +77,6 @@ ${creatorSwitch("player", typeof location !== "undefined" && new URLSearchParams
         ? `<div class="notice">Creation is locked while XP is spent. ${button("unlock", "Clear advancement & edit creation")}</div>
 <div class="creation-lock">${body}</div>`
         : body
-    }${
-      undoChoice && !setupOpen
-        ? `<div class="choice-undo">${button("undo-choice", `Undo ${esc(undoChoice.label)}`)}<small>Available until the next character edit or roll.</small>
-</div>`
-        : ""
     }${!setupOpen && s.step === 4 && hasColourMagic() ? cantPanel(R, s) : ""}${!setupOpen && s.step === 5 ? marketShop() + penaltySummary(R, s) : ""}${!setupOpen ? `<div class="step-footer">${s.step ? button("step", "Back", `data-step="${s.step - 1}"`) : "<span></span>"}<span class="footer-position">${s.step + 1} / ${steps.length}</span>${s.step < reviewStep ? button("step", `Continue to ${steps[s.step + 1]}`, `data-step="${s.step + 1}"`, "primary") : button("step", "Back to Experience", `data-step="${experienceStep}"`)}</div>` : ""}</main>
 <aside class="sheet ${summaryExpanded ? "expanded" : ""}" aria-label="Character summary">
 <div class="sheet-heading">

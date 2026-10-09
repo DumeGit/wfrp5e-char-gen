@@ -1,5 +1,9 @@
 // Shared phone chrome. Controls remain inside #app so the existing delegated
 // actions still work; install controls keep their original node and listeners.
+import {
+  historyControls,
+  refreshHistoryControls,
+} from "./history-controls.mjs";
 export function createMobileShell() {
   const mobile = matchMedia("(max-width: 760px)"),
     launcher = document.createElement("button");
@@ -36,6 +40,13 @@ export function createMobileShell() {
     if (!root) return;
     restore();
     if (!mobile.matches) return;
+    move(
+      root.querySelector(".history-controls"),
+      root.querySelector(".mobile-workspace-bar"),
+    );
+    root
+      .querySelector(".mobile-workspace-bar")
+      ?.prepend(root.querySelector(".history-controls"));
     menu = document.createElement("dialog");
     menu.className = "creator-dialog mobile-creator-menu";
     menu.setAttribute("aria-labelledby", "mobile-menu-title");
@@ -105,13 +116,15 @@ export function createMobileShell() {
       : root.querySelector(".gm-workspace")
         ? "View creature"
         : "View character";
-    const barToggle = root.querySelector(".mobile-marijan-bar button");
+    const barToggle = root.querySelector(
+      ".mobile-marijan-bar [data-mobile-view]",
+    );
     if (barToggle) {
       barToggle.textContent = expanded ? "Back to editor" : "View character";
       barToggle.setAttribute("aria-expanded", String(expanded));
     }
   }
-  function mount(nextRoot) {
+  function mount(nextRoot, history) {
     restore();
     root = nextRoot;
     const folio = root.querySelector(".gm-folio,.mm-folio");
@@ -135,7 +148,7 @@ export function createMobileShell() {
         const bar = document.createElement("div");
         bar.className = "mobile-workspace-bar mobile-marijan-bar";
         bar.innerHTML =
-          '<strong></strong><button type="button" class="quiet" aria-controls="mobile-folio-content">View character</button>';
+          '<strong></strong><button type="button" class="quiet" data-mobile-view aria-controls="mobile-folio-content">View character</button>';
         root.append(bar);
         bar.querySelector("button").addEventListener("click", () => {
           if (expanded) {
@@ -151,8 +164,20 @@ export function createMobileShell() {
         refresh();
       }
     }
+    const rail = root.querySelector(".rail"),
+      controls = document.createElement("div");
+    controls.innerHTML = historyControls();
+    const anchor = rail.querySelector(".header-actions,.mm-rail-tools");
+    if (anchor) anchor.before(controls.firstElementChild);
+    else rail.append(controls.firstElementChild);
+    refreshHistoryControls(root, history);
     place();
   }
   mobile.addEventListener("change", place);
-  return { mount, refresh, expand: () => setExpanded(true) };
+  return {
+    mount,
+    refresh,
+    refreshHistory: (history) => refreshHistoryControls(root, history),
+    expand: () => setExpanded(true),
+  };
 }

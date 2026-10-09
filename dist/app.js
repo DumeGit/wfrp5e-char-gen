@@ -1,5 +1,6 @@
 import { createInstallControl } from "./install-control.mjs";
 import { createMobileShell } from "./mobile-shell.mjs";
+import { createDraftHistory, restoreDraftSnapshot } from "./draft-history.mjs";
 import { createFeature as createWorkspaceShell } from "./features/workspace-shell.mjs";
 import { captureDisclosures, restoreDisclosures } from "./disclosures.mjs";
 import { createFeature as create_controls } from "./features/controls.mjs";
@@ -70,7 +71,6 @@ const newCharacter = () => ({
 let s = newCharacter(),
   restoreIssue = "",
   setupOpen = !localStorage.getItem(STORAGE),
-  undoChoice = null,
   pendingChange = null,
   choiceReturn = null;
 try {
@@ -100,6 +100,31 @@ let folioOpen = new Set(),
   openedSkillGroups = new Set(),
   marketSearch = "",
   openedMarketGroups = new Set();
+let historyDocument = crypto.randomUUID();
+const historySnapshot = () => ({
+  draft: s,
+  document: historyDocument,
+  setupOpen,
+});
+const history = createDraftHistory(historySnapshot(), {
+  restore: (target, current) =>
+    restoreDraftSnapshot(target, current, { player: true }),
+});
+function startHistoryDocument() {
+  historyDocument = crypto.randomUUID();
+}
+function travelHistory(direction) {
+  const next = history.travel(direction);
+  if (!next) return;
+  s = next.draft;
+  historyDocument = next.document;
+  setupOpen = next.setupOpen;
+  R = catalogForCharacter(library, s);
+  careerPreview = "";
+  pendingChange = null;
+  render();
+  toast(direction === "undo" ? "Change undone." : "Change redone.");
+}
 let careerSearch = "",
   careerBook = "all",
   careerPreview = "",
@@ -150,7 +175,9 @@ const $ = (q) => document.querySelector(q),
     );
 
 const locked = () => s.ledger.length > 0;
-function save() {
+function save(group = null) {
+  history.record(historySnapshot(), { group });
+  mobileShell.refreshHistory(history);
   try {
     localStorage.setItem(STORAGE, JSON.stringify(s));
   } catch {
@@ -213,7 +240,6 @@ function getContext() {
     pendingChange,
     setupOpen,
     render,
-    undoChoice,
     sourceInfo,
     dialog,
     showCalculation,
@@ -231,6 +257,7 @@ function getContext() {
     locked,
     proposedCareer,
     showImpact,
+    startHistoryDocument,
   };
 }
 function setContext(name, value) {
@@ -246,9 +273,6 @@ function setContext(name, value) {
       break;
     case "setupOpen":
       setupOpen = value;
-      break;
-    case "undoChoice":
-      undoChoice = value;
       break;
     case "pendingChange":
       pendingChange = value;
@@ -460,7 +484,7 @@ function render() {
     ready,
   });
   mountInstallControl($("#app"));
-  mobileShell.mount($("#app"));
+  mobileShell.mount($("#app"), history);
   restoreDisclosures(document.querySelector("main"), detailsState);
 
   filterMarket();
@@ -515,6 +539,10 @@ $("#app").addEventListener(
 $("#app").addEventListener("click", (e) => {
   const el = e.target.closest("[data-action]");
   if (!el || el.disabled || el.closest("fieldset[disabled]")) return;
+  if (["undo", "redo"].includes(el.dataset.action)) {
+    travelHistory(el.dataset.action);
+    return;
+  }
   if (["legacy-info", "source-info"].includes(el.dataset.action)) {
     e.preventDefault();
     e.stopPropagation();
@@ -572,9 +600,8 @@ $("#app").addEventListener("input", (e) => {
   }
   const { bind, key } = e.target.dataset;
   if (bind === "namePart") {
-    undoChoice = null;
     setNamePart(s, key, e.target.value);
-    save();
+    save(e.target);
     if ($(".sheet h2")) $(".sheet h2").textContent = s.name || "Your character";
     if ($(".identity-preview strong"))
       $(".identity-preview strong").textContent = s.name || "Your character";
@@ -586,9 +613,8 @@ $("#app").addEventListener("input", (e) => {
     return;
   }
   if (bind === "background") {
-    undoChoice = null;
     (s.background ??= {})[key] = e.target.value;
-    save();
+    save(e.target);
     const picker = $("#book-" + key);
     if (picker)
       picker.value = [...picker.options].some((x) => x.value === e.target.value)
@@ -599,15 +625,15 @@ $("#app").addEventListener("input", (e) => {
   if (
     ["name", "appearance", "ambition", "partyAmbition", "notes"].includes(bind)
   ) {
-    undoChoice = null;
     s[bind] = e.target.value;
-    save();
+    save(e.target);
     if (bind === "name" && $(".sheet h2"))
       $(".sheet h2").textContent = s.name || "Your character";
   }
 });
 
 $("#app").addEventListener("change", handleChange);
+$("#app").addEventListener("focusout", () => history.breakGroup());
 $("#app").addEventListener("change", async (e) => {
   if (e.target.id !== "import-file") return;
   try {
@@ -639,7 +665,7 @@ $("#app").addEventListener("change", async (e) => {
       throw Error("Character file contains invalid values.");
     }
     setupOpen = false;
-    undoChoice = null;
+    startHistoryDocument();
     careerPreview = "";
     render();
     toast(

@@ -187,4 +187,8 @@ The Night Parade integration: see [NIGHT-PARADE.md](NIGHT-PARADE.md). Its pack s
 
 The template chooser includes a native Book filter showing only enabled sources with templates, plus All enabled books. Filtering changes only the displayed list, preserves the selection when returning from a preview, and resets when opening the chooser afresh. It is transient UI state, not draft data.
 
-Phone navigation follows the shared shell: top-right Search and Menu icons, mode switching and save/load/new/install tools inside the menu, the Workshop page selector and Undo beside the workflow, and the folio hidden until the bottom Stat block action opens it. Desktop keeps the full bordered rail and sticky folio. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
+Phone navigation follows the shared shell: top-right Search and Menu icons, mode switching and save/load/new/install tools inside the menu, the Workshop page selector beside the workflow and shared Undo/Redo icons in the bottom bar, and the folio hidden until the bottom Stat block action opens it. Desktop keeps the full bordered rail and sticky folio. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
+
+## Shared edit history
+
+The workshop shares the same Undo/Redo history and 44px icon controls as Player and Marijan: one pair in the desktop rail, moved into the mobile bottom bar. Both directions restore edits, profiles, templates, books, training and draft replacement. Continuous text editing is grouped until focus leaves. Navigation/search/export and no-ops do not consume history or discard redo; a new edit clears redo. Up to 60 session entries are retained, with empty history after reload. Within one draft, recorded dice survive restoration; replacing a foundation or loading/starting a draft keeps its separate dice audit. Current navigation is retained when undoing ordinary edits. See [ARCHITECTURE.md](ARCHITECTURE.md) and [TESTING.md](TESTING.md).

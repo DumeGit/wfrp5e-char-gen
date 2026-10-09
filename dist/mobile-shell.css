@@ -207,6 +207,34 @@ html:has(.mobile-creator-menu[open]) {
   .sheet .summary-toggle {
     min-height: 44px;
   }
+  .mobile-workspace-bar {
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+  .book-setup-workspace ~ .mobile-workspace-bar {
+    display: flex;
+  }
+  #toast {
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    pointer-events: none;
+  }
+  .mobile-workspace-bar .history-controls {
+    margin: 0;
+  }
+  .mobile-workspace-bar > span,
+  .mobile-workspace-bar > strong {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .mobile-workspace-bar > button {
+    flex: none;
+    padding: 7px 8px;
+    font-size: 11px;
+  }
   .mobile-folio-heading {
     display: flex;
     gap: 12px;

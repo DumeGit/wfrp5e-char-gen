@@ -5,6 +5,7 @@ import { KEYS, skillInfo, base } from "../rules.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
 import { createMobileShell } from "../mobile-shell.mjs";
+import { createDraftHistory } from "../draft-history.mjs";
 import {
   freshGM,
   validateGMDraft,
@@ -46,10 +47,10 @@ const ui = {
     browse: false,
   },
   disclosures = new Map(),
-  undo = [],
   mountInstall = createInstallControl(document.querySelector("#pwa-install"));
 const mobileShell = createMobileShell();
 let data,
+  history,
   R,
   rulesFor,
   s,
@@ -62,6 +63,8 @@ let data,
   saveMessage = "Saved on this device",
   toastTimer,
   textEdit;
+let historyDocument = crypto.randomUUID();
+const historySnapshot = () => ({ draft: s, document: historyDocument });
 const uid = () => `gm-${crypto.randomUUID()}`;
 function toast(text) {
   const node = document.querySelector("#toast");
@@ -83,6 +86,8 @@ function persist() {
 }
 function commit(change, message, full = true) {
   const old = structuredClone(s);
+  const previousDraft = s;
+  textEdit = null;
   change();
   if (
     s.cants.enabled ||
@@ -93,8 +98,8 @@ function commit(change, message, full = true) {
     syncGMCants(rules, s, calculateGM(data, rules, s));
   }
   if (JSON.stringify(old) === JSON.stringify(s)) return;
-  undo.push(old);
-  if (undo.length > 30) undo.shift();
+  if (s !== previousDraft) historyDocument = crypto.randomUUID();
+  history.record(historySnapshot());
   persist();
   if (full) render();
   else refreshResult();
@@ -128,7 +133,7 @@ function refreshResult() {
   ))
     node.textContent = status;
   root.querySelector(".save-status").textContent = saveMessage;
-  root.querySelector('[data-action="undo"]').disabled = !undo.length;
+  mobileShell.refreshHistory(history);
   restoreDisclosures(root, disclosures);
   folio.scrollTop = scroll;
   mobileShell.refresh();
@@ -136,6 +141,9 @@ function refreshResult() {
 function render() {
   if (ui.profileBook && !s.books.includes(ui.profileBook)) ui.profileBook = "";
   const focus = document.activeElement,
+    historyFocus = focus?.closest(".history-controls")
+      ? focus.dataset.action
+      : null,
     focusId = root.contains(focus) ? focus.id : null,
     selection =
       focus?.tagName === "INPUT" && ["text", "search"].includes(focus.type)
@@ -154,11 +162,10 @@ function render() {
     r,
     ui,
     verify,
-    undo.length > 0,
     saveMessage,
   );
   mountInstall(root);
-  mobileShell.mount(root);
+  mobileShell.mount(root, history);
   restoreDisclosures(root, disclosures);
   root.querySelector("#gm-folio").scrollTop = folioScroll;
   if (s.removed.length) {
@@ -176,6 +183,10 @@ function render() {
     if (selection && next?.setSelectionRange)
       next.setSelectionRange(...selection);
   }
+  if (historyFocus)
+    root
+      .querySelector(`.history-controls [data-action="${historyFocus}"]`)
+      ?.focus({ preventScroll: true });
 }
 function modal(title, body) {
   dialogTitle.textContent = title;
@@ -587,15 +598,16 @@ async function action(el) {
     });
     return;
   }
-  if (a === "undo") {
-    const old = undo.pop();
-    if (old) {
-      const rolls = s.rolls;
-      s = old;
-      s.rolls = rolls;
+  if (a === "undo" || a === "redo") {
+    history.record(historySnapshot());
+    const next = history.travel(a);
+    if (next) {
+      s = next.draft;
+      historyDocument = next.document;
+      textEdit = null;
       persist();
       render();
-      toast("Last change restored; recorded dice history is retained.");
+      toast(a === "undo" ? "Change undone." : "Change redone.");
     }
     return;
   }
@@ -893,16 +905,14 @@ root.addEventListener("input", (e) => {
       "notes",
     ].includes(key)
   ) {
-    if (textEdit !== key) {
-      undo.push(structuredClone(s));
-      if (undo.length > 30) undo.shift();
-      textEdit = key;
-    }
+    textEdit = key;
     s[key] = el.value;
+    history.record(historySnapshot(), { group: el });
     persist();
     refreshResult();
   }
 });
+root.addEventListener("focusout", () => history.breakGroup());
 dialog.addEventListener("change", (e) => {
   if (e.target.matches("[data-template-book]")) change(e.target);
 });
@@ -973,6 +983,7 @@ async function boot() {
       }
     } else persist();
     references = createGMReferences(library);
+    history = createDraftHistory(historySnapshot());
     printing = createGMPrinting(data, rulesFor, {
       current: () => s,
       download,

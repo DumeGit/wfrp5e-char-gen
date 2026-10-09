@@ -4,6 +4,7 @@ import { createReferenceSearch } from "../reference-search.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
 import { createMobileShell } from "../mobile-shell.mjs";
+import { createDraftHistory } from "../draft-history.mjs";
 import { esc, button, field, score, select } from "../controls.mjs";
 import {
   createMarijanCatalogue,
@@ -31,22 +32,22 @@ const root = document.querySelector("#app"),
   verify = new URLSearchParams(location.search).has("verify"),
   storage = "wfrp-marijan-v1" + (verify ? "-verification" : ""),
   savedKey = storage + "-saves",
-  undo = [],
-  redo = [],
   disclosures = new Map(),
   searches = Object.fromEntries(
     GROUPS.map((g) => [g, { query: "", book: "", count: 8 }]),
   ),
   install = createInstallControl(document.querySelector("#pwa-install"));
 let catalogue,
+  history,
   s,
   r,
   references,
-  editSession = null,
   timer,
   message = "",
   saved = [];
 let pendingGenerated, generationRequest;
+let historyDocument = crypto.randomUUID();
+const historySnapshot = () => ({ draft: s, document: historyDocument });
 async function generationDialog(reusing = false) {
   const { availableGenerationCareers } = await import("./generation.mjs");
   const draft = {
@@ -104,27 +105,25 @@ function persist() {
     message = "Device storage unavailable; download a JSON backup.";
   }
 }
-function remember() {
-  undo.push(structuredClone(s));
-  if (undo.length > 60) undo.shift();
-  redo.length = 0;
-}
 function commit(change, full = false) {
-  editSession = null;
-  const before = JSON.stringify(s);
-  remember();
+  const previousDraft = s;
   change();
-  if (before === JSON.stringify(s)) undo.pop();
+  if (s !== previousDraft) historyDocument = crypto.randomUUID();
+  history.record(historySnapshot());
   persist();
   if (full) render();
   else refresh();
 }
 function render() {
+  const focused = document.activeElement,
+    historyFocus = focused?.closest(".history-controls")
+      ? focused.dataset.action
+      : null;
   captureDisclosures(root, disclosures);
   r = calculateMarijan(catalogue, s);
   root.innerHTML = workspace(catalogue, s, r, verify);
   install(root.querySelector("#mm-install"));
-  mobileShell.mount(root);
+  mobileShell.mount(root, history);
   restoreDisclosures(root, disclosures);
   for (const group of GROUPS) {
     root.querySelector(`[data-find="${group}"]`).value = searches[group].query;
@@ -132,6 +131,10 @@ function render() {
       searches[group].book;
   }
   refresh();
+  if (historyFocus)
+    root
+      .querySelector(`.history-controls [data-action="${historyFocus}"]`)
+      ?.focus({ preventScroll: true });
 }
 function refresh() {
   r = calculateMarijan(catalogue, s);
@@ -205,8 +208,7 @@ function refresh() {
     .map((w) => `<p>${esc(w)}</p>`)
     .join("");
   root.querySelector("#mm-save-status").textContent = message;
-  root.querySelector('[data-action="undo"]').disabled = !undo.length;
-  root.querySelector('[data-action="redo"]').disabled = !redo.length;
+  mobileShell.refreshHistory(history);
   mobileShell.refresh();
 }
 function renderList(group) {
@@ -244,12 +246,6 @@ function results(group) {
 }
 function entry(group, key) {
   return s.entries[group]?.find((x) => x.key === key);
-}
-function startEdit(key) {
-  if (editSession !== key) {
-    remember();
-    editSession = key;
-  }
 }
 function input(el, final = false) {
   const d = el.dataset;
@@ -297,22 +293,20 @@ function input(el, final = false) {
       obj = parts.slice(0, -1).reduce((o, k) => o[k], s),
       key = parts.at(-1);
     if (obj[key] === value) return;
-    startEdit(d.path);
     obj[key] = value;
   } else if (d.entryField) {
     const x = entry(d.group, d.key);
     if (!x || x[d.entryField] === value) return;
-    startEdit(d.key + ":" + d.entryField);
     x[d.entryField] = value;
   } else if (d.override) {
     if (s.overrides[d.override] === value) return;
-    startEdit("override:" + d.override);
     s.overrides[d.override] = value;
     if (value === null) {
       el.readOnly = true;
       el.previousElementSibling.querySelector("button").textContent = "Auto";
     }
   } else return;
+  history.record(historySnapshot(), { group: el });
   persist();
   refresh();
 }
@@ -409,12 +403,10 @@ async function action(el) {
     return;
   }
   if (a === "undo" || a === "redo") {
-    const from = a === "undo" ? undo : redo,
-      to = a === "undo" ? redo : undo;
-    if (!from.length) return;
-    to.push(structuredClone(s));
-    s = from.pop();
-    editSession = null;
+    const next = history.travel(a);
+    if (!next) return;
+    s = next.draft;
+    historyDocument = next.document;
     persist();
     render();
     return;
@@ -650,6 +642,7 @@ async function action(el) {
   }
 }
 root.addEventListener("input", (e) => input(e.target));
+root.addEventListener("focusout", () => history.breakGroup());
 root.addEventListener("change", (e) => {
   if (e.target.dataset.find || e.target.id === "mm-career-search") return;
   input(e.target, true);
@@ -734,6 +727,7 @@ try {
     message = error.message;
   }
   references = createReferenceSearch(library);
+  history = createDraftHistory(historySnapshot());
   render();
 } catch (error) {
   root.innerHTML = `<main class="page"><h1>Marijan Mode</h1><p class="error">${esc(error.message)}</p>${button("Reload", "reload")}</main>`;
