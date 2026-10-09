@@ -71,3 +71,5 @@ Verification: desktop and 390px previews inspected; no broken images, browser ex
 The user redirected these Marijan proposals to black/grey/white/red on 9 October. These three replace the earlier blue/teal/violet studies at the same URLs. The artwork and native W source remain unchanged; preview CSS desaturates them, with monochrome framing and red controls. No new image generation was needed. A has now been selected and implemented; B/C remain alternatives.
 
 Selected A was implemented on 9 October with a second imagegen edit adding crimson cloth to an otherwise monochrome battle painting. A's preview now uses that final artwork without the desaturation filter; B/C retain the earlier CSS-only treatment. Production reuses semantic tokens and existing layout, not the static preview's shortened Identity or disabled controls.
+
+A later banner-only revision restored blue/ivory/gold to the generated painting while preserving the crimson cloth. The selected A preview follows that colourful artwork; the Ash & Vellum UI remains neutral with oxblood accents.

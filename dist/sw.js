@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"fa72187fa7044a0b2037";
+const CACHE=CACHE_PREFIX+"9d4f13ef19d2c7312e66";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
