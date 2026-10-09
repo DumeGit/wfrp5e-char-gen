@@ -48,7 +48,7 @@ test("GM books are independently opt-in, catalogue order is alphabetical and exc
       ),
     ),
   );
-  assert.equal(rulesFor(freshGM(data)).books.length, 1);
+  assert.equal(rulesFor(freshGM(data)).books.length, 11);
 });
 test("supplement compilation validates provenance, numeric tables and core Trait identities", () => {
   const base = prepareGM(core, rulesFor(freshGM(data)));
@@ -143,7 +143,7 @@ test("humanoid limb armour has a focused unresolved issue instead of guessed mou
   s.gear = [];
   assert.equal(result(s).issues.length, 0);
 });
-test("Shock Cavalry is book-scoped and requires War; added War applies once", () => {
+test("Shock Cavalry is always available and requires War; added War applies once", () => {
   const s = draft("Riding Horse");
   s.extraTraining = ["Shock Cavalry"];
   let r = result(s);
@@ -163,6 +163,18 @@ test("Shock Cavalry is book-scoped and requires War; added War applies once", ()
   assert.throws(
     () => validateGMDraft(data, rulesFor(coreHorse), coreHorse),
     /training/,
+  );
+  coreHorse.extraTraining = [];
+  coreHorse.traits.push({
+    key: "gm-core-training",
+    name: "Trained",
+    value: "War, Shock Cavalry",
+    ranks: 1,
+    origin: "GM",
+  });
+  assert.deepEqual(result(coreHorse).issues, []);
+  assert.doesNotThrow(() =>
+    validateGMDraft(data, rulesFor(coreHorse), coreHorse),
   );
 });
 test("mixed-book saved drafts validate their own catalogues and reject hidden/unsupported books", () => {

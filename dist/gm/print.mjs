@@ -93,9 +93,17 @@ export function cardSections(r, s) {
           (x) =>
             x.name +
             (x.category === "Arcane" && x.lore ? ` (${x.lore})` : "") +
-            (x.cn !== undefined ? ` (CN ${x.cn})` : ""),
+            (x.cn !== undefined
+              ? ` (CN ${x.cn})`
+              : x.sl !== undefined
+                ? ` (SL ${x.sl})`
+                : ""),
         )
         .join("; "),
+    ],
+    [
+      "Rune knowledge",
+      (r.runes || []).map((x) => `${x.name} (${x.form})`).join("; "),
     ],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore})`).join("; ")],
     [

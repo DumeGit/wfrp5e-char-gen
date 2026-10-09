@@ -45,9 +45,10 @@ export function sheetSections(r, s) {
       "Magic & prayers",
       r.spells.map(
         (x) =>
-          `${x.name} (${x.lore || x.category})${x.cn !== undefined ? ` · CN ${x.cn}` : ""} · ${x.range || "—"} · ${x.target || "—"} · ${x.duration || "—"}`,
+          `${x.name} (${x.lore || x.category})${x.cn !== undefined ? ` · CN ${x.cn}` : x.sl !== undefined ? ` · SL ${x.sl}` : ""} · ${x.range || "—"} · ${x.target || "—"} · ${x.duration || "—"}`,
       ),
     ],
+    ["Rune knowledge", (r.runes || []).map((x) => `${x.name} (${x.form})`)],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore}): ${x.text}`)],
     [
       "Trappings",

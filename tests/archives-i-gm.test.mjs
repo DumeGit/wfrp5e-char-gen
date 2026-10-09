@@ -16,10 +16,7 @@ const [library, data, raw] = await Promise.all([
 ]);
 const rulesFor = createGMRules(library, data);
 const draft = () =>
-  freshGM(data, data.profiles.find((p) => p.name === "Human").id, [
-    "core",
-    "archives-i",
-  ]);
+  freshGM(data, data.profiles.find((p) => p.name === "Human").id, ["core"]);
 const result = (s) => calculateGM(data, rulesFor(s), s);
 
 test("Archives I GM selection shares approved PC data without adding named NPCs or invented animals", () => {
@@ -39,7 +36,7 @@ test("Archives I GM selection shares approved PC data without adding named NPCs 
   );
   assert.equal(
     R.weapons.filter((w) => w.source.book === "archives-i").length,
-    14,
+    6,
   );
   assert.equal(
     R.market.filter(
@@ -47,11 +44,11 @@ test("Archives I GM selection shares approved PC data without adding named NPCs 
         w.source.book === "archives-i" &&
         !R.weapons.some((x) => x.name === w.name),
     ).length,
-    4,
+    3,
   );
   assert.deepEqual(
     R.weapons.filter((w) => w.source.book === "core"),
-    core.weapons,
+    core.weapons.filter((w) => w.source.book === "core"),
   );
   const names = pickerEntries(data, R, result(s), "skill").map((x) => x.name);
   assert.ok(names.includes("Ride (Badger)"));
@@ -62,9 +59,8 @@ test("Archives I GM selection shares approved PC data without adding named NPCs 
     category: "",
     browse: false,
   });
-  assert.match(html, /Core \+ Archives I/);
-  assert.match(html, /no unnamed profiles/);
-  assert.ok(!core.weapons.some((w) => w.name === "Eonir War Blade"));
+  assert.doesNotMatch(html, /id="gm-book-archives-i"/);
+  assert.ok(core.weapons.some((w) => w.name === "Eonir War Blade"));
 });
 
 test("selected Archives I gear and Youngblood retain calculation, provenance, Legacy and validated save behavior", () => {
@@ -109,26 +105,20 @@ test("selected Archives I gear and Youngblood retain calculation, provenance, Le
   );
   invalid.talents[0].ranks = 1;
   invalid.books = ["core"];
-  assert.throws(
-    () => validateGMDraft(data, rulesFor(invalid), invalid),
-    /equipment|Talent/i,
-  );
+  assert.doesNotThrow(() => validateGMDraft(data, rulesFor(invalid), invalid));
 });
 
 test("combined GM books retain approved ammunition precedence regardless of selection order", () => {
   for (const books of [
-    ["core", "archives-i"],
-    ["core", "archives-i", "up-in-arms"],
-    ["core", "up-in-arms", "archives-i"],
+    ["core"],
+    ["core", "up-in-arms"],
+    ["core", "archives-ii", "up-in-arms"],
   ]) {
     const R = rulesFor({ ...draft(), books });
     const entries = R.market.filter(
       (x) => x.name === "Precision Shot and Powder",
     );
     assert.equal(entries.length, 1);
-    assert.equal(
-      entries[0].source.book,
-      books.includes("up-in-arms") ? "up-in-arms" : "archives-i",
-    );
+    assert.equal(entries[0].source.book, "up-in-arms");
   }
 });

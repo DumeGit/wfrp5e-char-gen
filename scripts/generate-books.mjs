@@ -38,6 +38,12 @@ const next =
   countSummary(report) +
   "\n" +
   readme.slice(readme.indexOf(end));
+const gmRules = assembleBooks(
+  library,
+  library.packs
+    .filter((p) => p.manifest.kind !== "variant")
+    .map((p) => p.manifest.id),
+);
 let gm = prepareGM(
   JSON.parse(
     await readFile(
@@ -45,7 +51,7 @@ let gm = prepareGM(
       "utf8",
     ),
   ),
-  assembleBooks(library),
+  gmRules,
 );
 const coreBook = assembleBooks(library).books[0];
 gm.books = [
@@ -66,8 +72,22 @@ for (const id of ["up-in-arms", "archives-i", "archives-ii", "archives-iii"])
         "utf8",
       ),
     ),
-    assembleBooks(library, ["core", id]),
+    gmRules,
   );
+gm.optionBooks = gmRules.books.map(
+  ({ id, title, shortTitle, version, source }) => ({
+    id,
+    title,
+    shortTitle,
+    version,
+    source,
+  }),
+);
+gm.books = gm.books.filter((book) =>
+  [...gm.profiles, ...gm.templates].some(
+    (entry) => (entry.source?.book || entry.id.split(":")[0]) === book.id,
+  ),
+);
 gm.version = createHash("sha256")
   .update(JSON.stringify(gm))
   .digest("hex")

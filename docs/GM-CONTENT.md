@@ -2,15 +2,21 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-53 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.
+53 printed profiles, 7 core templates, 67 core Creature Traits, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
-| Warhammer Fantasy Roleplay, Fifth Edition | 49 | 7 | Core profiles, templates & rules |
-| Up in Arms | 2 | 0 | Mount profiles, equipment & magic |
-| Archives of the Empire: Volume I | 0 | 0 | Weapons, ammunition, Skill choices & Youngblood · no unnamed profiles |
-| Archives of the Empire: Volume II | 2 | 0 | Rhinox, Typical Sister, Ogre equipment & Great Maw magic |
-| Archives of the Empire: Volume III | 0 | 0 | Prayers, Hedgecraft, Cants & Skill choices · no new foundations |
+| Warhammer Fantasy Roleplay, Fifth Edition | 49 | 7 | Profiles/templates selectable; shared PC options always available |
+| Up in Arms | 2 | 0 | Profiles/templates selectable; shared PC options always available |
+| Archives of the Empire: Volume I | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| Archives of the Empire: Volume II | 2 | 0 | Profiles/templates selectable; shared PC options always available |
+| Archives of the Empire: Volume III | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| Winds of Magic | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| Rough Nights & Hard Days | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| Dwarf Player’s Guide | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| High Elf Player’s Guide | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| Blood and Bramble | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
+| Deft Steps, Light Fingers | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |

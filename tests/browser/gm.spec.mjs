@@ -7,6 +7,51 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("all-book knowledge is available without option-only book checkboxes @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await expect(page.locator(".gm-books input[data-book]")).toHaveCount(2);
+  await expect(page.locator("#gm-book-high-elf")).toHaveCount(0);
+  await expect(page.locator("#gm-book-dwarf-guide")).toHaveCount(0);
+  await applyProfile(page, "High Elf or Wood Elf");
+  const add = async (kind, name) => {
+    await page.getByRole("button", { name: kind, exact: true }).click();
+    await page.locator("#gm-picker-search").fill(name);
+    await page
+      .locator(".gm-picker-row")
+      .filter({ has: page.getByText(name, { exact: true }) })
+      .getByRole("button", { name: "Add", exact: true })
+      .click();
+  };
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("tab", { name: "Skills & Talents", exact: true })
+    .click();
+  await add("Add Talent", "Sword-dancing");
+  await gmStep(page, "Equipment & magic");
+  await expect(page.locator("#gm-magic")).toContainText("Ritual of Cleansing");
+  await add("Choose magic", "Flight of the Phoenix");
+  const technique = page
+    .locator("#gm-magic .gm-entry")
+    .filter({ hasText: "Flight of the Phoenix" });
+  await technique.locator("summary").click();
+  await expect(technique).toContainText("SL 1");
+  await expect(technique).toContainText("High Elf Guide");
+  await noOverflow(page);
+  await gmStep(page, "Starting profile");
+  await page.locator("#gm-book-up-in-arms").check();
+  await page.locator("#gm-book-up-in-arms").uncheck();
+  await gmStep(page, "Equipment & magic");
+  await expect(page.locator("#gm-magic")).toContainText(
+    "Flight of the Phoenix",
+  );
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+});
+
 test("Trait picker prioritises names while typing and keeps description search @gm @mobile", async ({
   page,
 }) => {
@@ -42,7 +87,7 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
   page,
 }) => {
   await openGM(page);
-  await page.locator("#gm-book-archives-i").check();
+  await expect(page.locator("#gm-book-archives-i")).toHaveCount(0);
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
@@ -88,11 +133,11 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
   ).toBeVisible();
   await noOverflow(page);
   await gmStep(page, "Starting profile");
-  await page.locator("#gm-book-archives-i").uncheck();
+  await page.locator("#gm-book-up-in-arms").check();
   await gmStep(page, "Equipment & magic");
   await expect(
     page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
-  ).toHaveCount(0);
+  ).toBeVisible();
   await page
     .getByRole("button", { name: "↶ Undo last change", exact: true })
     .click();
@@ -396,7 +441,7 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   page,
 }) => {
   await openGM(page);
-  await page.locator("#gm-book-archives-iii").check();
+  await expect(page.locator("#gm-book-archives-iii")).toHaveCount(0);
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
@@ -433,9 +478,9 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
     page.getByRole("button", { name: "Export PDF", exact: true }),
   ).toBeEnabled();
   await gmStep(page, "Starting profile");
-  await page.locator("#gm-book-archives-iii").uncheck();
+  await page.locator("#gm-book-up-in-arms").check();
   await gmStep(page, "Equipment & magic");
-  await expect(page.locator("#gm-magic")).not.toContainText("Fellstave");
+  await expect(page.locator("#gm-magic")).toContainText("Fellstave (Daemons)");
   await page
     .getByRole("button", { name: "\u21b6 Undo last change", exact: true })
     .click();
@@ -447,7 +492,7 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
   page,
 }) => {
   await openGM(page);
-  await page.locator("#gm-book-archives-iii").check();
+  await expect(page.locator("#gm-book-archives-iii")).toHaveCount(0);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
   await page

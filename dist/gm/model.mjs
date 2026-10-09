@@ -1,6 +1,7 @@
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
 import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
 import { calculateGMCants, validateGMCants } from "./cants.mjs";
+import { knownRunes } from "../dwarf-guide.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
@@ -195,9 +196,7 @@ export function validateGMDraft(data, R, s) {
       .flatMap((t) => parts(t.value)) || [];
   const allowedTraining = [
     ...TRAINING,
-    ...(data.training || [])
-      .filter((t) => s.books.includes(bookId(t)))
-      .map((t) => t.name),
+    ...(data.training || []).map((t) => t.name),
   ];
   if (
     s.extraTraining.length &&
@@ -429,8 +428,19 @@ export const gmLoreIssue = (R, profile, lore) =>
   speciesLoreIssue(R, { species: gmSpecies(profile) }, lore);
 // A printed targeted spell is a distinct GM selection, sharing its canonical
 // profile and source. Never grant an unspecified Fellstave or invent targets.
+export function gmTalentLimit(R, stats, name) {
+  const limit = talentInfo(R, name)?.limit;
+  if (Array.isArray(limit))
+    return limit.reduce((total, char) => total + (bonus(stats[char]) || 0), 0);
+  if (Number.isInteger(limit)) return limit;
+  const configured = R.config.talentLimits[base(name)];
+  return configured === null ? Infinity : (configured ?? 1);
+}
 export function gmSpellCatalogue(R) {
-  return spellChoices(R).map((x) =>
+  return [
+    ...spellChoices(R),
+    ...R.techniques.map((x) => ({ ...x, category: "Technique" })),
+  ].map((x) =>
     x.specialisation
       ? {
           ...x,
@@ -440,10 +450,30 @@ export function gmSpellCatalogue(R) {
   );
 }
 
+export function gmCastableLores(R) {
+  const otherTypes = new Set([
+    "Petty",
+    "Arcane",
+    "Elven Arcane",
+    "Blessing",
+    "Ritual",
+    ...R.config.gods,
+  ]);
+  return [
+    ...new Set([
+      ...R.config.colours,
+      ...R.spells
+        .filter((spell) => !otherTypes.has(spell.category) && !spell.ritual)
+        .map((spell) => spell.category),
+    ]),
+  ];
+}
 export function gmMagicLores(R, result) {
   const lores = new Set(
     result.talents.map((t) => magicLore(t.name)).filter(Boolean),
   );
+  if (result.talents.some((t) => t.name === "High Magic"))
+    lores.add("High Magic");
   for (const t of result.traits)
     if (t.name === "Spellcaster")
       parts(t.value).forEach((x) => lores.add(x.replace(/^Lore of /, "")));
@@ -467,19 +497,33 @@ export function magicChoices(R, result) {
   });
   // Old Faith Invoke teaches additional Blessings rather than Miracles (p. 58).
   if (miracleGods.includes("Old Faith")) blessingGods.push("Old Faith");
-  return gmSpellCatalogue(R).filter(
-    (spell) =>
-      (spell.category === "Petty" &&
-        result.talents.some((t) => t.name === "Petty Magic")) ||
-      lores.has(spell.category) ||
-      (spell.category === "Arcane" && lores.size) ||
-      (spell.category === "Blessing" &&
-        blessingGods.some((god) =>
-          R.config.blessings[god]?.some(
-            (name) => spell.name === `Blessing of ${name}`,
-          ),
-        )) ||
-      (miracleGods.includes(spell.category) && !spell.ritual),
+  const arcane = result.talents
+    .map((t) => t.name.match(/^Arcane Magic \((.*)\)$/)?.[1])
+    .filter(Boolean);
+  return gmSpellCatalogue(R).filter((spell) =>
+    spell.ritual
+      ? arcane.some(
+          (lore) =>
+            spell.ritual.lores.includes("*") ||
+            spell.ritual.lores.includes(lore),
+        )
+      : spell.category === "Technique"
+        ? result.talents.some((t) => t.name === "Sword-dancing")
+        : (spell.category === "Petty" &&
+            result.talents.some((t) => t.name === "Petty Magic")) ||
+          lores.has(spell.category) ||
+          (result.talents.some((t) => t.name === "Witch!") &&
+            [...R.config.colours, "Witchcraft"].includes(spell.category) &&
+            !gmLoreIssue(R, result.profile, spell.category)) ||
+          (["Arcane", "Elven Arcane"].includes(spell.category) &&
+            [...lores].some((lore) => lore !== "High Magic")) ||
+          (spell.category === "Blessing" &&
+            blessingGods.some((god) =>
+              R.config.blessings[god]?.some(
+                (name) => spell.name === `Blessing of ${name}`,
+              ),
+            )) ||
+          (miracleGods.includes(spell.category) && !spell.ritual),
   );
 }
 export function calculateGM(data, R, s) {
@@ -509,6 +553,7 @@ export function calculateGM(data, R, s) {
       attacks: [],
       armour: [],
       spells: [],
+      runes: [],
       magicLores: [],
       cants: [],
       cantGrants: [],
@@ -536,8 +581,8 @@ export function calculateGM(data, R, s) {
     t.value = [...new Set([...parts(t.value), ...s.extraTraining])].join(", ");
   for (const t of traits.filter((t) => t.name === "Trained")) {
     const choices = parts(t.value);
-    for (const extra of (data.training || []).filter(
-      (x) => s.books.includes(bookId(x)) && choices.includes(x.name),
+    for (const extra of (data.training || []).filter((x) =>
+      choices.includes(x.name),
     )) {
       t.text += `\n\n${extra.name}: ${extra.text}`;
       t.adaptation = extra.adaptation;
@@ -856,11 +901,14 @@ export function calculateGM(data, R, s) {
     } else if (
       !Number.isInteger(t.ranks) ||
       t.ranks < 1 ||
-      (R.config.talentLimits[base(t.name)] !== null &&
-        t.ranks > (R.config.talentLimits[base(t.name)] ?? 1))
+      (talentInfo(R, t.name)?.limit
+        ? s.talents
+            .filter((x) => base(x.name) === base(t.name))
+            .reduce((sum, x) => sum + x.ranks, 0)
+        : t.ranks) > gmTalentLimit(R, stats, t.name)
     )
       add(
-        `${t.name} exceeds its core purchase limit.`,
+        `${t.name} exceeds its printed purchase limit.`,
         1,
         "#gm-tab-2",
         "talent.limit",
@@ -905,23 +953,9 @@ export function calculateGM(data, R, s) {
       "Mark of Chaos": ["Khorne", "Nurgle", "Slaanesh", "Tzeentch"],
       Blessed: R.config.gods,
       Miracles: R.config.gods,
-      Spellcaster: [
-        ...R.config.colours,
-        "Hedgecraft",
-        "Witchcraft",
-        "Daemonology",
-        "Necromancy",
-        "Nurgle",
-        "Slaanesh",
-        "Tzeentch",
-      ],
+      Spellcaster: gmCastableLores(R),
       Corruption: ["Minor", "Moderate", "Major"],
-      Trained: [
-        ...TRAINING,
-        ...(data.training || [])
-          .filter((x) => s.books.includes(bookId(x)))
-          .map((x) => x.name),
-      ],
+      Trained: [...TRAINING, ...(data.training || []).map((x) => x.name)],
     }[t.name];
     if (known && parts(t.value).some((v) => !known.includes(v)))
       add(
@@ -1186,7 +1220,10 @@ export function calculateGM(data, R, s) {
   for (const [k, v] of Object.entries(layers)) ap[k.split(":")[1]] += v;
   const spells = gmSpellCatalogue(R).filter(
     (spell) =>
-      [...p.spells, ...s.spells].includes(spell.contentId) &&
+      ([...p.spells, ...s.spells].includes(spell.contentId) ||
+        (spell.category === "Technique" &&
+          spell.name === "Ritual of Cleansing" &&
+          talents.some((t) => t.name === "Sword-dancing"))) &&
       !s.removed.includes(spell.contentId),
   );
   const result = {
@@ -1244,6 +1281,11 @@ export function calculateGM(data, R, s) {
     warnings,
     changed,
   };
+  result.runes = knownRunes(
+    R,
+    s,
+    result.talents.map((t) => t.name),
+  );
   result.magicLores = [...gmMagicLores(R, result)];
   result.spells = result.spells.map((x) => ({
     ...x,
@@ -1307,6 +1349,8 @@ export function calculateGM(data, R, s) {
       lore = spells.filter(
         (x) =>
           x.category !== "Petty" &&
+          x.category !== "Technique" &&
+          !x.ritual &&
           x.category !== "Blessing" &&
           !R.config.gods.includes(x.category),
       ).length;

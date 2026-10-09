@@ -1,6 +1,6 @@
 // Compile reviewed PDF extraction into explicit, source-owned GM records.
 import { canon, base, options } from "../rules.mjs";
-import { bookId, sourceLabel } from "./books.mjs";
+import { bookId, sourceLabel, registerGMSourceBooks } from "./books.mjs";
 
 // Named worked examples are retained in the reviewed extraction, but are not
 // selectable foundations. Keep exact source identities rather than name matching.
@@ -32,6 +32,7 @@ function entries(text, definitions, descriptions = true) {
     );
 }
 export function prepareGM(raw, R) {
+  registerGMSourceBooks(R.books);
   if (raw.schemaVersion !== 1 || raw.source.sha256 !== R.books[0].source.sha256)
     throw Error("GM source does not match the supplied core book.");
   const ids = new Set();
@@ -190,7 +191,7 @@ export function prepareGM(raw, R) {
   };
 }
 export function gmInventory(data) {
-  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} core templates, ${data.traits.length} core Creature Traits, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. Books are enabled independently of player creation. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates | GM options |\n| --- | --- | --- | --- |\n${data.books.map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} | ${b.summary || "Core profiles, templates & rules"} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
+  return `# GM content inventory\n\nGenerated from reviewed supplied-book sources. Do not edit by hand.\n\n${data.profiles.length} printed profiles, ${data.templates.length} core templates, ${data.traits.length} core Creature Traits, ${data.training.length} supplementary training option and ${data.mutations.length} Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.\n\n| Book | Profiles | Templates | GM options |\n| --- | --- | --- | --- |\n${(data.optionBooks || data.books).map((b) => `| ${b.title} | ${data.profiles.filter((p) => bookId(p) === b.id).length} | ${data.templates.filter((p) => bookId(p) === b.id).length} | ${data.books.some((x) => x.id === b.id) ? "Profiles/templates selectable; shared PC options always available" : "Shared PC options always available; no selectable profiles/templates"} |`).join("\n")}\n\n| Profile | Source | Category | Legacy |\n| --- | --- | --- | --- |\n${[
     ...data.profiles,
   ]
     .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }))

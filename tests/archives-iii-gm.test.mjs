@@ -21,7 +21,7 @@ const [library, data, raw] = await Promise.all([
   json("../dist/gm/sources/archives-iii.json"),
 ]);
 const rulesFor = createGMRules(library, data),
-  draft = () => freshGM(data, "core:creatures:human", ["core", "archives-iii"]),
+  draft = () => freshGM(data, "core:creatures:human", ["core"]),
   result = (s) => calculateGM(data, rulesFor(s), s),
   talent = (s, name) =>
     s.talents.push({
@@ -43,7 +43,7 @@ test("Archives III adds shared options without named NPCs, familiars or alternat
   );
   assert.deepEqual(R.armour, core.armour);
   assert.deepEqual(R.weapons, core.weapons);
-  assert.equal(R.spells.length, core.spells.length + 27);
+  assert.equal(R.spells.length, core.spells.length);
   assert.equal(R.cants.length, 24);
   assert.ok(
     pickerEntries(data, R, result(s), "skill").some(
@@ -125,7 +125,7 @@ test("Fellstave exposes seven distinct printed targets with source/Legacy and va
   s.spells = [R.spells.find((x) => x.name === "Fellstave").contentId];
   assert.throws(() => validateGMDraft(data, R, s), /Unknown spell/);
 });
-test("Rhya and Hedgecraft additions preserve core duplicate definitions and disappear with the book", () => {
+test("Rhya and Hedgecraft additions preserve core duplicate definitions and remain available independently of profile books", () => {
   const s = draft();
   talent(s, "Invoke (Rhya)");
   const R = rulesFor(s);
@@ -146,12 +146,10 @@ test("Rhya and Hedgecraft additions preserve core duplicate definitions and disa
       "core",
     );
   const core = rulesFor({ ...s, books: ["core"] });
-  assert.ok(
-    !gmSpellCatalogue(core).some((x) => x.name.startsWith("Fellstave")),
-  );
+  assert.ok(gmSpellCatalogue(core).some((x) => x.name.startsWith("Fellstave")));
   const miracles = magicChoices(R, result(s));
   s.spells = [miracles.find((x) => x.source.book === "archives-iii").contentId];
-  assert.throws(() => validateGMDraft(data, core, s), /Unknown spell/);
+  assert.doesNotThrow(() => validateGMDraft(data, core, s));
 });
 
 test("GM Cants count assigned Arcane spells at 1/3/6 and preserve totals across both exports", () => {
@@ -245,7 +243,7 @@ test("GM Lore assignments count once, require the Colour Talent and route unreso
   assert.deepEqual(result(s).cants, []);
   assert.deepEqual(result(s).cantGrants, []);
 });
-test("GM Cant pruning follows spell removal, Lore loss and book disabling, with undo restoring the original snapshot", () => {
+test("GM Cant pruning follows spell removal, Lore loss but remains independent of profile books, with undo restoring the original snapshot", () => {
   const s = draft();
   talent(s, "Arcane Magic (Fire)");
   s.cants.enabled = true;
@@ -266,7 +264,7 @@ test("GM Cant pruning follows spell removal, Lore loss and book disabling, with 
   s.books = ["core"];
   const core = rulesFor(s);
   syncGMCants(core, s, calculateGM(data, core, s));
-  assert.deepEqual(s.cants, { enabled: false, choices: {} });
-  assert.deepEqual(s.spellLores, {});
+  assert.deepEqual(s.cants, before.cants);
+  assert.deepEqual(s.spellLores, before.spellLores);
   assert.doesNotThrow(() => validateGMDraft(data, core, s));
 });

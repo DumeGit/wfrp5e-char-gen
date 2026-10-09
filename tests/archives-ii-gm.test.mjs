@@ -50,7 +50,7 @@ test("Archives II adds only the two reviewed unnamed foundations, opt-in, using 
     core = rulesFor(freshGM(data));
   assert.deepEqual(
     R.weapons.filter((w) => w.source.book === "core"),
-    core.weapons,
+    core.weapons.filter((w) => w.source.book === "core"),
   );
   assert.equal(
     R.weapons.filter((w) => w.source.book === "archives-ii").length,
@@ -210,7 +210,7 @@ test("Great Maw is Ogre-only, uses Toughness for Magick, and rejects illegal Ogr
     pickerEntries(data, rulesFor(core), result(core), "skill").find(
       (x) => x.name === "Language (Magick)",
     ).char,
-    "Int",
+    "T",
   );
 });
 test("Ogre equipment preserves native profiles and flags unsupported other-Species use before export", () => {

@@ -284,7 +284,7 @@ function addEntry(id) {
       s.removed = s.removed.filter((k) => k !== x.key);
       s.spells.push(x.key);
       if (
-        s.books.includes("archives-iii") &&
+        R.cants.length &&
         x.category === "Arcane" &&
         r.magicLores.length === 1
       )
@@ -314,6 +314,7 @@ async function action(el) {
       ...(picker?.rows || []),
       ...R.talents,
       ...r.spells,
+      ...(r.runes || []),
       ...r.gear.map((g) => g.entry),
     ];
     const x = entries.find(
@@ -689,26 +690,15 @@ function change(el) {
       s.books = val
         ? [...s.books, d.book]
         : s.books.filter((id) => id !== d.book);
-      s.extraTraining = s.extraTraining.filter(
-        (n) =>
-          !data.training.some((t) => t.name === n && t.source.book === d.book),
-      );
-      if (!val) {
-        const allowed = rulesFor(s);
-        s.gear = s.gear.filter((g) =>
-          [
-            ...allowed.weapons,
-            ...allowed.armour,
-            ...allowed.gear,
-            ...allowed.market,
-          ].some((x) => x.contentId === g.id),
-        );
-        s.spells = s.spells.filter((id) =>
-          gmSpellCatalogue(allowed).some((x) => x.contentId === id),
-        );
-        s.talents = s.talents.filter((t) =>
-          allowed.talents.some((x) => base(x.name) === base(t.name)),
-        );
+      if (
+        !val &&
+        data.templates.some(
+          (t) => t.id === s.template && t.source?.book === d.book,
+        )
+      ) {
+        s.template = "";
+        s.templateSkills = {};
+        s.templateTalents = {};
       }
     });
     return;
