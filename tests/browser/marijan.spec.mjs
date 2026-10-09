@@ -27,6 +27,7 @@ test("one-page unrestricted editing and stable inline additions @marijan @mobile
   await open(page);
   await page.getByLabel("Name", { exact: true }).fill("Marijan Test");
   await page.getByLabel("Strength initial", { exact: true }).fill("45");
+  await page.getByText("Advances & other modifiers", { exact: true }).click();
   await page.getByLabel("Strength advances", { exact: true }).fill("17");
   await page.getByLabel("XP unspent", { exact: true }).fill("-99");
   await page.getByLabel("Career level", { exact: true }).fill("8");
@@ -38,6 +39,7 @@ test("one-page unrestricted editing and stable inline additions @marijan @mobile
   await add(page, "talents", "Strong Back");
   await page.getByLabel("Strong Back ranks", { exact: true }).fill("7");
   await add(page, "magic", "Blessing of Battle");
+  await page.getByLabel("Edit Climb details", { exact: true }).click();
   await page
     .getByLabel("Climb total: switch to manual", { exact: true })
     .click();
@@ -271,4 +273,73 @@ test("random 5e generation previews, records promotions, exports and undoes repl
     "321",
   );
   await noOverflow(page);
+});
+
+test("compact scores and entry rows keep quick edits and detailed overrides accessible @marijan @mobile", async ({
+  page,
+}, info) => {
+  await open(page);
+  await page.getByLabel("Strength initial", { exact: true }).fill("42");
+  const overview = page.locator(".mm-char-overview");
+  expect((await overview.boundingBox()).height).toBeLessThan(
+    info.project.name === "mobile" ? 280 : 120,
+  );
+  await expect(
+    page.getByLabel("Strength advances", { exact: true }),
+  ).toBeHidden();
+  await page.getByText("Advances & other modifiers", { exact: true }).click();
+  await page.getByLabel("Strength advances", { exact: true }).fill("7");
+  await expect(overview.locator('[data-result="stat:S"]')).toHaveText("49");
+  await page.getByText("Advances & other modifiers", { exact: true }).click();
+  await page.locator("#mm-section-characteristics").scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: info.outputPath("compact-characteristics.png"),
+  });
+  for (const name of ["Climb", "Dodge", "Perception"])
+    await add(page, "skills", name);
+  await add(page, "talents", "Strong Back");
+  await add(page, "talents", "Hardy");
+  await add(page, "gear", "Leather Jerkin");
+  for (const group of ["skills", "talents", "gear"]) {
+    for (const row of await page.locator(`#mm-list-${group} .mm-entry`).all()) {
+      expect((await row.boundingBox()).height).toBeLessThan(
+        info.project.name === "mobile" ? 95 : 75,
+      );
+    }
+    await page.locator(`#mm-section-${group}`).scrollIntoViewIfNeeded();
+    await noOverflow(page);
+    await page.screenshot({ path: info.outputPath(`compact-${group}.png`) });
+  }
+  await page.getByLabel("Edit Climb details", { exact: true }).click();
+  await page
+    .getByLabel("Climb Characteristic", { exact: true })
+    .selectOption("Ag");
+  await page
+    .getByLabel("Climb total: switch to manual", { exact: true })
+    .click();
+  await page.getByLabel("Climb total", { exact: true }).fill("88");
+  await expect(page.getByLabel("Climb total", { exact: true })).toHaveValue(
+    "88",
+  );
+  await page.getByLabel("Strong Back ranks", { exact: true }).fill("3");
+  await page.getByLabel("Leather Jerkin quantity", { exact: true }).fill("2");
+  await page.getByLabel("Edit Leather Jerkin details", { exact: true }).click();
+  await page
+    .getByLabel("Leather Jerkin location", { exact: true })
+    .selectOption("worn");
+  await noOverflow(page);
+  await page.reload();
+  await expect(page.getByLabel("Climb total", { exact: true })).toHaveValue(
+    "88",
+  );
+  await expect(
+    page.getByLabel("Strong Back ranks", { exact: true }),
+  ).toHaveValue("3");
+  await expect(
+    page.getByLabel("Leather Jerkin quantity", { exact: true }),
+  ).toHaveValue("2");
+  if (info.project.name === "mobile") {
+    await page.setViewportSize({ width: 320, height: 844 });
+    await noOverflow(page);
+  }
 });

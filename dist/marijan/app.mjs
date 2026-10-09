@@ -658,6 +658,9 @@ root.addEventListener("focusin", (e) => {
   if (e.target.dataset.find) results(e.target.dataset.find);
 });
 root.addEventListener("focusout", (e) => {
+  // A focus move within the editor is followed by click/input. Collapsing
+  // search results here moves the target between pointerdown and click.
+  if (e.relatedTarget && root.contains(e.relatedTarget)) return;
   if (
     !e.relatedTarget ||
     !e.relatedTarget.closest(".mm-add-bar,.mm-search-results")
@@ -667,6 +670,10 @@ root.addEventListener("focusout", (e) => {
   }
 });
 root.addEventListener("click", (e) => {
+  if (!e.target.closest(".mm-add-bar,.mm-search-results")) {
+    for (const g of GROUPS)
+      root.querySelector(`#mm-results-${g}`).hidden = true;
+  }
   const jump = e.target.closest('a[href^="#mm-section-"]');
   if (jump) {
     const target = root.querySelector(jump.getAttribute("href"));

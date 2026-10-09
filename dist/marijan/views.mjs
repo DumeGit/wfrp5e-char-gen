@@ -67,7 +67,7 @@ const optionSelect = (label, path, values, value) =>
     `data-path="${path}"`,
   );
 export function characteristicGrid(s, r) {
-  return `<div class="mm-table-wrap"><table class="mm-characteristics"><thead><tr><th scope="col">Characteristic</th><th scope="col">Starting</th><th scope="col">Advances</th><th scope="col">Other</th><th scope="col">Total</th></tr></thead><tbody>${KEYS.map((k) => `<tr><th scope="row"><abbr title="${characteristicNames[k]}">${k}</abbr><span>${characteristicNames[k]}</span></th>${["initial", "advances", "modifier"].map((part) => `<td>${num(`${characteristicNames[k]} ${part}`, `characteristics.${k}.${part}`, s.characteristics[k][part])}</td>`).join("")}<td><output data-result="stat:${k}">${r.stats[k]}</output></td></tr>`).join("")}</tbody></table></div>`;
+  return `<p class="mm-char-help">Starting → Total · includes Advances, Other and enabled Talent bonuses</p><div class="mm-char-overview">${KEYS.map((k) => `<div class="mm-char-cell"><abbr title="${characteristicNames[k]}">${k}</abbr>${num(`${characteristicNames[k]} initial`, `characteristics.${k}.initial`, s.characteristics[k].initial)}<output data-result="stat:${k}" aria-label="${characteristicNames[k]} total">${r.stats[k]}</output></div>`).join("")}</div><details class="mm-char-adjustments" data-detail-key="marijan:characteristic-adjustments"><summary>Advances & other modifiers</summary><div class="mm-char-adjustment-grid">${KEYS.map((k) => `<div><strong title="${characteristicNames[k]}">${k}</strong>${["advances", "modifier"].map((part) => num(part === "advances" ? "Adv" : "Other", `characteristics.${k}.${part}`, s.characteristics[k][part], `aria-label="${esc(characteristicNames[k])} ${part}"`)).join("")}</div>`).join("")}</div></details>`;
 }
 function derivedFields(s, r) {
   return `<div class="mm-derived-grid">${AUTO_FIELDS.map((k) => `<div class="mm-derived"><div class="mm-derived-heading"><label for="mm-override-${k}">${LABELS[k]}</label>${button(s.overrides[k] === null ? "Auto" : "Manual", "mode", `data-field="${k}" aria-label="${LABELS[k]}: ${s.overrides[k] === null ? "switch to manual" : "return to automatic"}" aria-pressed="${s.overrides[k] !== null}"`, "quiet mm-mode")}</div><input id="mm-override-${k}" aria-label="${LABELS[k]}" type="number" step="any" data-override="${k}" value="${r.values[k] ?? ""}" ${s.overrides[k] === null ? "readonly" : ""}><small data-auto-label="${k}">Calculated ${score(r.auto[k])}</small></div>`).join("")}</div>`;
@@ -83,7 +83,7 @@ export function rowHTML(catalogue, s, r, group, x) {
             ? "Quantity"
             : "Count",
     amount = field(
-      label,
+      label === "Advances" ? "Adv" : label === "Quantity" ? "Qty" : label,
       `mm-amount-${x.key}`,
       x.amount,
       `${attrs} data-entry-field="amount" aria-label="${esc(x.name)} ${label.toLowerCase()}" step="any"`,
@@ -98,20 +98,22 @@ export function rowHTML(catalogue, s, r, group, x) {
     legacy = x.adaptation
       ? button("Legacy", "inspect", attrs, "legacy-tag")
       : "";
-  let controls = amount;
+  let controls = amount,
+    secondary = "";
   if (group === "skills") {
     const total = r.skills.find((row) => row.key === x.key)?.total;
-    controls += select(
+    secondary += select(
       "Char",
       `mm-char-${x.key}`,
       KEYS,
       x.char,
       `${attrs} data-entry-field="char" aria-label="${esc(x.name)} Characteristic"`,
     );
-    controls += `<div class="mm-skill-total"><label for="mm-total-${x.key}">Total</label><div><input id="mm-total-${x.key}" aria-label="${esc(x.name)} total" type="number" step="any" value="${total}" ${attrs} data-entry-field="total" ${x.total === null ? "readonly" : ""}>${button(x.total === null ? "Auto" : "Manual", "skill-mode", `${attrs} aria-label="${esc(x.name)} total: ${x.total === null ? "switch to manual" : "return to automatic"}"`, "quiet mm-mode")}</div></div>`;
+    controls += `<div class="mm-skill-total"><label for="mm-total-${x.key}">Total</label><input id="mm-total-${x.key}" aria-label="${esc(x.name)} total" type="number" step="any" value="${total}" ${attrs} data-entry-field="total" ${x.total === null ? "readonly" : ""}></div>`;
+    secondary += `<div class="field"><span class="label">Total calculation</span>${button(x.total === null ? "Auto" : "Manual", "skill-mode", `${attrs} aria-label="${esc(x.name)} total: ${x.total === null ? "switch to manual" : "return to automatic"}"`, "quiet mm-mode")}</div>`;
   }
   if (group === "gear")
-    controls += select(
+    secondary += select(
       `${x.name} location`,
       `mm-state-${x.key}`,
       [
@@ -140,7 +142,7 @@ export function rowHTML(catalogue, s, r, group, x) {
     group === "magic"
       ? `<div class="mm-fields">${["cn", "range", "target", "duration"].map((k) => field(k === "cn" ? "Casting Number" : k[0].toUpperCase() + k.slice(1), `mm-${k}-${x.key}`, x[k] ?? "", `${attrs} data-entry-field="${k}"`)).join("")}</div>`
       : "";
-  return `<article class="mm-entry" id="mm-entry-${x.key}"><div class="mm-entry-line"><div class="mm-entry-name">${x.custom ? field("Custom name", `mm-name-${x.key}`, x.name, `${attrs} data-entry-field="name"`) : button(esc(x.name), "inspect", attrs, "mm-name-button")}<small>${esc(entrySource(catalogue, x))}${x.category ? ` · ${esc(x.category)}` : ""}</small>${legacy}</div><div class="mm-entry-controls">${controls}${remove}</div></div><details data-detail-key="${detailKey("marijan-entry", x.key)}"><summary>${x.custom ? "Edit custom entry" : "Details & overrides"}</summary><div class="mm-entry-detail">${profileFields ? `<div class="mm-fields">${profileFields}</div>` : ""}${magicProfile}<div class="field"><label for="mm-description-${x.key}">Description / personal notes</label><textarea id="mm-description-${x.key}" rows="2" ${attrs} data-entry-field="text">${esc(x.text)}</textarea></div><small>${x.custom ? "User-defined; no printed source or automatic effects." : "Profile edits apply only to this character. The book reference stays unchanged."}</small></div></details></article>`;
+  return `<article class="mm-entry mm-entry-${group}" id="mm-entry-${x.key}"><div class="mm-entry-line"><div class="mm-entry-name">${x.custom ? field("Custom name", `mm-name-${x.key}`, x.name, `${attrs} data-entry-field="name"`) : button(esc(x.name), "inspect", attrs, "mm-name-button")}${legacy}</div><div class="mm-entry-controls">${controls}${remove}</div></div><details class="mm-entry-disclosure" data-detail-key="${detailKey("marijan-entry", x.key)}"><summary aria-label="Edit ${esc(x.name)} details" title="Details & overrides"><span aria-hidden="true">⌄</span></summary><div class="mm-entry-detail"><small>${esc(entrySource(catalogue, x))}${x.category ? ` · ${esc(x.category)}` : ""}</small>${secondary || profileFields ? `<div class="mm-fields">${secondary}${profileFields}</div>` : ""}${magicProfile}<div class="field"><label for="mm-description-${x.key}">Description / personal notes</label><textarea id="mm-description-${x.key}" rows="2" ${attrs} data-entry-field="text">${esc(x.text)}</textarea></div><small>${x.custom ? "User-defined; no printed source or automatic effects." : "Profile edits apply only to this character. The book reference stays unchanged."}</small></div></details></article>`;
 }
 function collection(catalogue, s, r, group, title) {
   const starters = {
