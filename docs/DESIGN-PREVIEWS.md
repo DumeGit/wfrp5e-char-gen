@@ -72,4 +72,4 @@ The user redirected these Marijan proposals to black/grey/white/red on 9 October
 
 Selected A was implemented on 9 October with a second imagegen edit adding crimson cloth to an otherwise monochrome battle painting. A's preview now uses that final artwork without the desaturation filter; B/C retain the earlier CSS-only treatment. Production reuses semantic tokens and existing layout, not the static preview's shortened Identity or disabled controls.
 
-A later banner-only revision restored blue/ivory/gold to the generated painting while preserving the crimson cloth. The selected A preview follows that colourful artwork; the Ash & Vellum UI remains neutral with oxblood accents.
+A later image revision restored blue/ivory/gold to the painting, but the user clarified that colour was intended for the **Marijan Mode title plaque**, not the picture. Selected A and production therefore use the monochrome/crimson artwork again, with an oxblood title plaque on desktop and mobile. The full-colour image remains unselected source history.

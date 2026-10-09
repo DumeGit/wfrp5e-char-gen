@@ -10,20 +10,20 @@ The original study assets are outside `dist`. The user selected A — Ash & Vell
 
 Run `node design-previews/serve.mjs` from the repository root, then open http://127.0.0.1:8110/design-previews/marijan-colours.html. This local design server serves only preview/assets/dist paths and rejects PDF requests. The existing app preview remains on port 8104.
 
-## Earlier monochrome/red artwork
+## Selected monochrome/red artwork
 
 - `ash-vellum-original.png`: unchanged built-in imagegen edit of `sundering-original.png`, preserving the scene with black/grey/white and selectively crimson cloth.
-- `ash-vellum-banner.webp`: Pillow WebP quality 85 / method 6, 2171 × 724 and 390,482 bytes; previously copied into `dist/assets/marijan/banner.webp`. No post-generation retouching or crop.
+- `ash-vellum-banner.webp`: Pillow WebP quality 85 / method 6, 2171 × 724 and 390,482 bytes; identical bytes shipped as `dist/assets/marijan/banner.webp`. No post-generation retouching or crop.
 - `ash-vellum-prompt.txt`: exact edit prompt.
 
 Production applies only the banner contrast veil and responsive crop; no greyscale filter removes the painted red accents. All generated PNGs are retained non-destructively.
 
-## Current colourful banner
+## Unselected full-colour iteration
 
-The user asked for more colour in the masthead after selecting the neutral UI. A built-in imagegen edit of `ash-vellum-original.png` restored storm blue, ivory/silver, warm gold and natural landscape colour, preserving crimson cloth. The editor palette remains Ash & Vellum.
+A request for more colour in the banner was initially interpreted as an artwork change. A built-in imagegen edit of `ash-vellum-original.png` restored storm blue, ivory/silver, warm gold and natural landscape colour, preserving crimson cloth. The user clarified that they meant the title plaque containing “Marijan Mode”, so the monochrome/crimson artwork was restored and the plaque given an oxblood background. The editor palette remains Ash & Vellum.
 
 - `colour-banner-original.png`: unchanged generated colour edit, 2171 × 724.
-- `colour-banner.webp`: Pillow WebP quality 85 / method 6; identical bytes shipped as `dist/assets/marijan/banner.webp`.
+- `colour-banner.webp`: Pillow WebP quality 85 / method 6; unselected historical asset, not shipped in production.
 - `colour-banner-prompt.txt`: exact edit prompt.
 
-The selected A preview uses this same colourful WebP. Earlier image variants remain available as source history.
+The selected A preview uses `ash-vellum-banner.webp` and the oxblood title plaque. All image variants remain available as source history.

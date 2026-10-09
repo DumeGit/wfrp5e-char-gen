@@ -1509,6 +1509,18 @@ dialog::backdrop {
 }
 
 /* Marijan's fixed theme inherits all controls and semantic feedback roles. */
+:root[data-theme="ash-vellum"] .masthead .brand-title {
+  background: var(--color-title-veil);
+  border-block: 1px solid var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .masthead .brand-title strong {
+  color: var(--color-on-crimson);
+}
+@media (max-width: 760px) {
+  :root[data-theme="ash-vellum"] .masthead .brand-title {
+    padding: 3px 6px;
+  }
+}
 :root[data-theme="ash-vellum"] .ledger-emblem {
   filter: grayscale(1);
 }

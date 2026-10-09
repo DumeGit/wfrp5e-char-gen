@@ -175,7 +175,7 @@
 
 /* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
 :root[data-theme="ash-vellum"] {
-  --color-title-veil: #101012d9;
+  --color-title-veil: #681e29ed;
   --color-search-veil: #101012dd;
   --color-dialog-backdrop: #080809d9;
   --color-chapter-initial: var(--color-on-crimson);
