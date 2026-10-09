@@ -5,6 +5,7 @@ import { library } from "./fixture.mjs";
 import { loadReferenceLibrary } from "../dist/search-library.mjs";
 import { searchBooks } from "../dist/search-ranking.mjs";
 import { RUNE_LABELS, filterOptions } from "../dist/search-filters.mjs";
+import { createReferenceLinker } from "../dist/book-search-links.mjs";
 import { createSearchEngine } from "../dist/search-engine.mjs";
 import { createWorkerHandler } from "../dist/search-worker.mjs";
 const wire = JSON.parse(
@@ -202,4 +203,33 @@ test("worker and fallback return identical filtered results under concurrent sea
   assert.ok(results[1].rows.every((row) => row.entry.char === "Dex"));
   worker.dispose();
   fallback.dispose();
+});
+
+test("printed High Elf Careers are Academic and Spell Familiar stays outside search and chaining", () => {
+  const academic = browse("career", { class: "Academic", book: "high-elf" });
+  for (const name of [
+    "Mage",
+    "Smith-priest of Vaul",
+    "Storm Weaver",
+    "Loremaster of Hoeth",
+  ])
+    assert.ok(
+      academic.some((row) => row.name === `${name} — printed Career`),
+      name,
+    );
+  assert.ok(!filterOptions(rows, "career", "class").includes("Not specified"));
+  const key = "winds-of-magic:reference:188-spell-familiar";
+  assert.ok(!rows.some((row) => row.key === key));
+  assert.ok(
+    !browse("all", {}, "Spell Familiar").some((row) => row.key === key),
+  );
+  assert.ok(
+    !createReferenceLinker(rows)("Spell Familiar").some((part) =>
+      part.keys?.includes(key),
+    ),
+  );
+  assert.ok(
+    browse("magic", { book: "winds-of-magic" }, "Create Familiar").length > 0,
+    "removing the introduction must retain the familiar ritual",
+  );
 });

@@ -4,7 +4,7 @@
   "title": "Winds of Magic",
   "shortTitle": "Winds of Magic",
   "edition": 4,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "kind": "supplement",
   "dependsOn": [
     "core"

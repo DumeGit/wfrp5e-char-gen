@@ -7,6 +7,13 @@ import {
   validateSearchFilters,
 } from "./search-filters.mjs";
 const unknown = "Not specified";
+// Reviewed printed High Elf Careers: explicit class metadata, independent of drafts.
+const careerClasses = {
+  "high-elf:reference:90-mage-printed-career": "Academic",
+  "high-elf:reference:100-smith-priest-of-vaul-printed-career": "Academic",
+  "high-elf:reference:104-storm-weaver-printed-career": "Academic",
+  "high-elf:reference:108-loremaster-of-hoeth-printed-career": "Academic",
+};
 const colourLores = [
   "Beasts",
   "Death",
@@ -113,7 +120,7 @@ export function addSearchMetadata(rows, contexts, books) {
       category = searchCategory(row),
       f = { book: [searchBookId(x.source.book, books)] };
     if (category === "career") {
-      f.class = [x.class || unknown];
+      f.class = [x.class || careerClasses[row.key] || unknown];
       f.species = [
         ...new Set([
           ...(x.species || []),

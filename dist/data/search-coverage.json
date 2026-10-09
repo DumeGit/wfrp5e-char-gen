@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3667,
-  "newlyImported": 1183,
+  "references": 3666,
+  "newlyImported": 1182,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -730,16 +730,16 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "edition": 4,
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
-      "references": 425,
-      "newlyImported": 253,
+      "references": 424,
+      "newlyImported": 252,
       "retainedOutsideSearch": 21,
       "existingReferences": 172,
       "adaptedReferences": 55,
       "categories": {
-        "career": 13,
+        "career": 12,
         "skill": 2,
         "magic": 229,
         "equipment": 7,
@@ -751,8 +751,8 @@
         "trait": 1
       },
       "dispositions": {
-        "excluded": 142,
-        "included": 274,
+        "excluded": 143,
+        "included": 273,
         "existing": 161,
         "consolidated": 4
       },

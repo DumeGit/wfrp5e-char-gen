@@ -17650,8 +17650,8 @@
         {
           "id": "winds-of-magic:reference:188-spell-familiar",
           "sourceHash": "e6d9f8d5707275b1d59f1d61a8e77e42b8915e2ee8b0cd112781c8d0540cfd01",
-          "disposition": "included",
-          "reason": "Printed Career introduction belongs to Careers; omit the incomplete extracted advance grid rather than imply that it is a lookup table."
+          "disposition": "excluded",
+          "reason": "User decision, 9 October 2026: remove the Spell Familiar introduction from shared search; it is not a player Career. Familiar creation/progression remains deferred. Other familiar gameplay references are retained."
         },
         {
           "id": "winds-of-magic:reference:188-combat-familiar-advance-scheme",
@@ -18040,8 +18040,8 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "a1b0690850ce27ba901315bbc01c1eb81e31a33ccd01ded04c4cda50baacc793",
-      "entries": 274,
+      "publishedSHA256": "325d1681fb27bc6152a33fcbd1ee5e070a000d356b7c8e81c93d32e24b8cf252",
+      "entries": 273,
       "rulesAudit": {
         "date": "2026-10-08",
         "reviewedRuleResults": 145,

@@ -6,7 +6,7 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **3667 results**, including **1183 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **3666 results**, including **1182 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
 The Rules audit explicitly removed **112 non-mechanical entries**; **944 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
@@ -17,7 +17,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **944 Rules r
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
 | Archives of the Empire: Volume III | 1.0.5 | 59 | 105 | 164 | 14 |
-| Winds of Magic | 1.0.3 | 172 | 253 | 425 | 55 |
+| Winds of Magic | 1.0.4 | 172 | 252 | 424 | 55 |
 | Rough Nights & Hard Days | 1.0.2 | 2 | 24 | 26 | 2 |
 | Dwarf Player’s Guide | 1.0.2 | 221 | 107 | 328 | 102 |
 | High Elf Player’s Guide | 1.0.3 | 116 | 81 | 197 | 50 |
@@ -227,9 +227,9 @@ Source SHA-256: `28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a15
 - pp. 196–199: Additional magical reference profiles.
 - pp. 217–218: Adversary and combined-Wind spells.
 
-Candidate sections: excluded 142; included 274; existing 161; consolidated 4.
+Candidate sections: excluded 143; included 273; existing 161; consolidated 4.
 
-Categories: career 13; skill 2; magic 229; equipment 7; rule 135; table 29; endeavour 5; talent 3; property 1; trait 1.
+Categories: career 12; skill 2; magic 229; equipment 7; rule 135; table 29; endeavour 5; talent 3; property 1; trait 1.
 Reviewed printed records retained outside search: 21.
 
 Rules audit (2026-10-08): 145 prior results; 10 excluded. The following standalone entries were removed from published reference sources.

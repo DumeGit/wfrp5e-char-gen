@@ -67,4 +67,4 @@ Casting/ritual procedures, miscasts, Endeavours, Augury/Psychometry, alchemy/pot
 
 ## Search categorisation — 8 October 2026
 
-Construct (p. 30) is a retained creature profile outside search; its separate Construct Traits/CN lookup remains in Tables. Spell Familiar’s p. 188 Career introduction is labelled Careers, with the incomplete extracted advance grid omitted and unsupported progression clearly noted. Panacea Universalis and Knuckles of Ignominy are Equipment references retaining their supporting tables. Storms of Magic’s Spellcasting Rules is under Rules. None of these changes enables creation or live-play mechanics.
+Construct (p. 30) is a retained creature profile outside search; its separate Construct Traits/CN lookup remains in Tables. Spell Familiar’s p. 188 introduction was removed from shared search on 9 October by user instruction; familiar creation/progression remains deferred. Other familiar gameplay rules remain searchable. Panacea Universalis and Knuckles of Ignominy are Equipment references retaining their supporting tables. Storms of Magic’s Spellcasting Rules is under Rules. None of these changes enables creation or live-play mechanics.

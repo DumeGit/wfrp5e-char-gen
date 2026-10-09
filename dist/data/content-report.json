@@ -25105,12 +25105,12 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 120,
         "adapted": 55,
-        "reference-only": 254,
+        "reference-only": 253,
         "unavailable": 0,
         "deferred": 21
       },
@@ -25139,7 +25139,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 253,
+          "reference-only": 252,
           "unavailable": 0,
           "deferred": 21
         },
@@ -26802,17 +26802,6 @@
           "source": {
             "book": "winds-of-magic",
             "page": 187
-          },
-          "reason": "Sourced book rule reference; no live-play automation."
-        },
-        {
-          "contentId": "winds-of-magic:reference:188-spell-familiar",
-          "kind": "referenceEntries",
-          "name": "Spell Familiar",
-          "status": "reference-only",
-          "source": {
-            "book": "winds-of-magic",
-            "page": 188
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },

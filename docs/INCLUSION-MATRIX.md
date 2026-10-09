@@ -25,7 +25,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Archives of the Empire: Volume II | 50 | 7 | 103 | 0 | 15 |
 | Archives of the Empire: Volume III | 45 | 14 | 105 | 0 | 12 |
 | Archives III — Animal-doctor Hedge Witch (variant) | 0 | 1 | 0 | 0 | 0 |
-| Winds of Magic | 120 | 55 | 254 | 0 | 21 |
+| Winds of Magic | 120 | 55 | 253 | 0 | 21 |
 | Rough Nights & Hard Days | 3 | 5 | 24 | 0 | 80 |
 | Dwarf Player’s Guide | 156 | 34 | 120 | 2 | 0 |
 | High Elf Player’s Guide | 55 | 55 | 104 | 0 | 0 |
@@ -1335,13 +1335,13 @@ Pack `archives-iii-hedge` · version 1.0.0
 
 ## Winds of Magic
 
-Pack `winds-of-magic` · version 1.0.3
+Pack `winds-of-magic` · version 1.0.4
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 10 | 2 | 0 | 0 | 0 |
 | gear | 4 | 0 | 1 | 0 | 0 |
-| referenceEntries | 0 | 0 | 253 | 0 | 21 |
+| referenceEntries | 0 | 0 | 252 | 0 | 21 |
 | skills | 1 | 1 | 0 | 0 | 0 |
 | spells | 101 | 52 | 0 | 0 | 0 |
 | tables | 4 | 0 | 0 | 0 | 0 |
@@ -1497,7 +1497,6 @@ Pack `winds-of-magic` · version 1.0.3
 | `winds-of-magic:reference:187-familiars-and-conditions` — Familiars and Conditions | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:187-familiars-and-corruption` — Familiars and Corruption | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:187-familiars-and-disease` — Familiars and Disease | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:188-spell-familiar` — Spell Familiar | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:19-grimoires` — Grimoires | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:19-memorising-spells` — Memorising Spells | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:19-second-sight` — Second Sight | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |

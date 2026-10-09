@@ -1945,15 +1945,6 @@
     "text": "Familiars do not suffer from disease or infected wounds unless the disease is caused by a magical spell, magical item, or creature with the Magical Trait."
   },
   {
-    "id": "winds-of-magic:reference:188-spell-familiar",
-    "name": "Spell Familiar",
-    "category": "career",
-    "topic": "Magical creatures and familiars",
-    "page": 188,
-    "text": "Spell Familiars are often diminutive imps, tiny golems, or magically animated puppets that have a gift for spellcasting and magical knowledge.",
-    "notes": "This printed Career introduction is reference-only. The familiar Career advance scheme and progression are not imported or supported by the creators."
-  },
-  {
     "id": "winds-of-magic:reference:190-environmental-saturation-effects",
     "name": "Environmental Saturation Effects",
     "category": "table",
