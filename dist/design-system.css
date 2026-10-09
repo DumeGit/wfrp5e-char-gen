@@ -1515,3 +1515,50 @@ dialog::backdrop {
 :root[data-theme="ash-vellum"] .masthead-art::after {
   background: linear-gradient(0deg, #08080988, transparent 65%);
 }
+
+/* Oxblood landmarks keep the neutral Marijan editor from feeling flat. */
+:root[data-theme="ash-vellum"] .mm-section h2,
+:root[data-theme="ash-vellum"] .mm-char-cell output {
+  color: var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .mm-section summary::marker {
+  color: var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .mm-section {
+  border-top-color: color-mix(
+    in srgb,
+    var(--color-crimson) 28%,
+    var(--color-line)
+  );
+}
+:root[data-theme="ash-vellum"] .mm-generation {
+  border-left: 3px solid var(--color-crimson);
+  background: color-mix(
+    in srgb,
+    var(--color-crimson) 6%,
+    var(--color-paper-raised)
+  );
+}
+:root[data-theme="ash-vellum"] .mm-folio {
+  box-shadow:
+    inset 0 2px var(--color-crimson),
+    var(--shadow-surface);
+}
+:root[data-theme="ash-vellum"] .mm-folio-stats > div {
+  border-top-color: var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .creator-switch a[aria-current="page"] {
+  background: var(--color-crimson);
+  border-color: var(--color-crimson);
+  color: var(--color-on-crimson);
+}
+:root[data-theme="ash-vellum"] .mm-section-nav a:hover,
+:root[data-theme="ash-vellum"] .mm-section-nav a:focus-visible {
+  border-color: var(--color-crimson);
+  background: color-mix(
+    in srgb,
+    var(--color-crimson) 20%,
+    var(--color-leather)
+  );
+  color: var(--color-on-leather);
+}
