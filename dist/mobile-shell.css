@@ -281,6 +281,9 @@ html:has(.mobile-creator-menu[open]) {
     display: flex;
     gap: 8px;
   }
+  .mm-rail .mm-rail-tools:empty {
+    display: none;
+  }
   .mm-rail-tools button {
     flex: 1;
   }

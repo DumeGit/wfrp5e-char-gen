@@ -644,6 +644,18 @@ async function action(el) {
 root.addEventListener("input", (e) => input(e.target));
 root.addEventListener("focusout", () => history.breakGroup());
 root.addEventListener("change", (e) => {
+  if (e.target.id === "mm-section-jump") {
+    const target = root.querySelector(`#mm-section-${e.target.value}`);
+    e.target.value = ""; // Allow another jump to the same section later.
+    if (!target) return;
+    const details = target.querySelector(".mm-section-disclosure");
+    if (details) details.open = true;
+    target.scrollIntoView({ block: "start", behavior: "instant" });
+    const heading = target.querySelector("summary,h2");
+    if (heading?.tagName === "H2") heading.setAttribute("tabindex", "-1");
+    heading?.focus({ preventScroll: true });
+    return;
+  }
   if (e.target.dataset.find || e.target.id === "mm-career-search") return;
   input(e.target, true);
 });

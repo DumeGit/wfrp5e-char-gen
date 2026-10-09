@@ -57,10 +57,9 @@ export function createMobileShell() {
       extra = menu.querySelector(".mobile-menu-extra"),
       rail = root.querySelector(".rail");
     move(rail.querySelector(".header-actions"), actions);
-    // Freehand edit/Undo/Export controls stay beside the editor; only file tools
-    // move to the menu, using the same existing handlers as desktop.
+    // Move Marijan file tools and export as live nodes, retaining their handlers.
     for (const node of rail.querySelectorAll(
-      '.mm-rail-tools [data-action="save"],.mm-rail-tools [data-action="load"],.mm-rail-tools [data-action="new"],.mm-rail-tools [data-action="copy-player"],#mm-install,#mm-save-status',
+      ".mm-rail-tools [data-action],#mm-install,#mm-save-status",
     ))
       move(node, actions);
     move(rail.querySelector(".save-status"), actions);

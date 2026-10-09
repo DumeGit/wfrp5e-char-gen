@@ -21,6 +21,66 @@ async function add(page, group, name) {
     .getByRole("button", { name: `Add ${name}`, exact: true })
     .click();
 }
+
+test("section navigation stays compact and export moves with the tools @marijan @mobile", async ({
+  page,
+}, info) => {
+  await open(page);
+  const jump = page.getByLabel("Jump to section", { exact: true });
+  const rail = page.locator(".mm-rail");
+  const skills = page.locator("#mm-section-skills .mm-section-disclosure");
+  await page.getByLabel("Name", { exact: true }).fill("Navigation test");
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await skills.locator("summary").click();
+  if (info.project.name === "mobile") {
+    for (const width of [320, 390]) {
+      await page.setViewportSize({ width, height: 844 });
+      await expect(jump).toBeVisible();
+      await expect(rail.locator(".mm-section-nav")).not.toBeVisible();
+      await expect(rail.locator(".mm-rail-tools")).not.toBeVisible();
+      expect((await rail.boundingBox()).height).toBeLessThan(85);
+      await noOverflow(page);
+    }
+    await jump.selectOption("skills");
+    await expect(jump).toHaveValue("");
+    await expect(skills.locator("summary")).toBeFocused();
+    // Returning to the same destination must work, even after collapsing it.
+    await skills.locator("summary").click();
+    await jump.selectOption("skills");
+  } else {
+    await expect(jump).not.toBeVisible();
+    await rail.getByRole("link", { name: "Skills", exact: true }).click();
+  }
+  await expect(skills).toHaveAttribute("open", "");
+  await expect(
+    page.getByRole("button", { name: "Redo", exact: true }),
+  ).toBeEnabled();
+
+  // One live export node follows resize and retains its existing download action.
+  await page.setViewportSize({ width: 390, height: 844 });
+  const exportButton = page.locator(
+    '.mobile-creator-menu [data-action="export"]',
+  );
+  await expect(exportButton).toHaveCount(1);
+  const downloaded = await downloadBytes(page, exportButton);
+  expect(downloaded.name).toMatch(/-marijan\.pdf$/);
+  expect(
+    (await PDFDocument.load(downloaded.bytes)).getPageCount(),
+  ).toBeGreaterThan(0);
+  await expect(
+    page.getByRole("dialog", { name: "Creator menu", exact: true }),
+  ).not.toBeVisible();
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await expect(rail.locator('[data-action="export"]')).toHaveCount(1);
+  await expect(rail.locator('[data-action="export"]')).toBeVisible();
+  await expect(jump).not.toBeVisible();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(exportButton).toHaveCount(1);
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await page.screenshot({
+    path: info.outputPath("marijan-section-navigation.png"),
+  });
+});
 test("one-page unrestricted editing and stable inline additions @marijan @mobile", async ({
   page,
 }, info) => {

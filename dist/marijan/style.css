@@ -37,6 +37,9 @@
   display: grid;
   gap: 3px;
 }
+.mm-mobile-section {
+  display: none;
+}
 .mm-rail .mm-section-nav a {
   padding: 8px 12px;
   border-left: 2px solid var(--color-line);
@@ -505,32 +508,21 @@
     display: none;
   }
   .mm-rail .mm-section-nav {
-    display: flex;
-    gap: 5px;
-    overflow-x: auto;
-    padding-bottom: 8px;
+    display: none;
   }
-  .mm-rail .mm-section-nav a {
-    white-space: nowrap;
-    min-height: 44px;
-    padding: 10px 12px;
-    border: 1px solid var(--color-line);
-    border-radius: 4px;
+  .mm-mobile-section {
+    display: block;
+    margin: 0;
   }
-  .mm-rail-tools {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 6px 0;
+  .mm-mobile-section label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
   }
-  .mm-rail-tools button:nth-child(n + 3) {
-    grid-column: auto;
-  }
-  .mm-rail-tools button {
-    font-size: 12px;
-    padding: 7px;
-    min-height: 44px;
-  }
-  .mm-rail-tools button:last-child {
-    grid-column: span 2;
+  .mm-mobile-section select {
+    width: 100%;
   }
   .mm-rail small {
     font-size: 10px;
