@@ -121,7 +121,7 @@ export function createReferenceSearch(library) {
       (row.kind === "skill"
         ? `${row.entry.advanced ? "Advanced" : "Basic"} · ${characteristicNames[row.entry.char]}`
         : "");
-    if (row.printedReference) text = referenceSnippetText(text);
+    text = referenceSnippetText(text);
     const query = normalizeSearch(input.value).split(" ")[0];
     const at = text.toLowerCase().indexOf(query),
       start = at > 70 ? at - 35 : 0;

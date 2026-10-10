@@ -139,7 +139,7 @@ ${creatorSwitch("player", typeof location !== "undefined" && new URLSearchParams
 </aside>
 </div>
 <div class="mobile-workspace-bar">
-<span>${d.remaining.toLocaleString()} XP · ${s.wealth ? formatMoney(result().wallet.remaining) : "Coin unrolled"}</span>${button("mobile-folio", "View character")}${button("mobile-choice", "Back to choice")}</div>
+<span>${d.remaining.toLocaleString()} XP · ${s.wealth ? formatMoney(result().wallet.remaining) : "Coin unrolled"}</span>${summaryExpanded ? button("mobile-choice", "Back to choice") : button("mobile-folio", "View character")}</div>
 <footer class="footer-note">Rules from your selected books · Your draft stays on this device</footer>`;
   }
   return { workspaceShell };

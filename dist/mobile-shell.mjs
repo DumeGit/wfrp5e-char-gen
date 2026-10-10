@@ -4,6 +4,7 @@ import {
   historyControls,
   refreshHistoryControls,
 } from "./history-controls.mjs";
+import { enhanceInterface } from "./interface-kit.mjs";
 export function createMobileShell() {
   const mobile = matchMedia("(max-width: 760px)"),
     launcher = document.createElement("button");
@@ -126,6 +127,7 @@ export function createMobileShell() {
   function mount(nextRoot, history) {
     restore();
     root = nextRoot;
+    enhanceInterface(root);
     const folio = root.querySelector(".gm-folio,.mm-folio");
     if (folio) {
       folio.classList.add("mobile-fold-folio");

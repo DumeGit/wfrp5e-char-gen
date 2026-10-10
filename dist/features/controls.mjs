@@ -1,4 +1,5 @@
 import { detailKey } from "../disclosures.mjs";
+import { button as sharedButton } from "../controls.mjs";
 import { runeChoiceDescription } from "../dwarf-guide-ui.mjs";
 import * as M from "../rules.mjs";
 import { characteristicNames } from "../ui.mjs";
@@ -56,7 +57,7 @@ export function createFeature(getContext, setContext) {
   }
 
   function button(action, label, attrs = "", style = "quiet") {
-    return `<button type="button" class="${style}" data-action="${action}" ${attrs}>${label}</button>`;
+    return sharedButton(label, action, attrs, style);
   }
 
   function page(p) {
@@ -126,9 +127,9 @@ export function createFeature(getContext, setContext) {
     return `<span class="characteristic-badge" title="${esc(characteristicTitle(k))}">${compact ? `L${unlock}${available ? " · ✓" : ""}` : `Career L${unlock} · ${available ? "✓ available" : "later level"}`}</span>`;
   }
 
-  function characteristicLegend() {
+  function characteristicLegend({ compact = false } = {}) {
     return `<div class="career-legend" aria-label="Career Characteristic colours">${[1, 2, 3, 4].map((level) => `<span class="career-level-${level}"><i aria-hidden="true"></i>Level ${level}${level === 1 ? " · starting" : ""}</span>`).join("")}</div>
-<p class="small muted">✓ marks currently available Career Characteristics. Later levels become Career Characteristics when you reach that level; non-career purchases cost double. ${page(191)}</p>`;
+${compact ? "" : `<p class="small muted">✓ marks currently available Career Characteristics. Later levels become Career Characteristics when you reach that level; non-career purchases cost double. ${page(191)}</p>`}`;
   }
 
   function spellDetailsBody(x, { includeCreatorNote = true } = {}) {

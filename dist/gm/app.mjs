@@ -28,6 +28,11 @@ import {
 import { statBlock } from "./sheet.mjs";
 import { createGMReferences } from "./references.mjs";
 import { createGMPDF } from "./pdf.mjs";
+import {
+  connectIssues,
+  enhanceInterface,
+  withBusy,
+} from "../interface-kit.mjs";
 import { createGMPrinting } from "./printing.mjs";
 import { createGMRules, gmCatalogue, sourceLabel } from "./books.mjs";
 import { esc, button, legacyBadge, select } from "./controls.mjs";
@@ -123,11 +128,11 @@ function refreshResult() {
     const key = node.querySelector("[data-stat]").dataset.stat;
     node.querySelector(".gm-char-final b").textContent = r.stats[key] ?? "—";
   }
-  const status = r.issues.length
-    ? `${r.issues.length} choice${r.issues.length === 1 ? "" : "s"} left`
-    : r.profile
-      ? "Ready to export"
-      : "Choose a profile";
+  const status = !r.profile
+    ? "Choose a profile"
+    : r.issues.length
+      ? `${r.issues.length} choice${r.issues.length === 1 ? "" : "s"} left`
+      : "Ready to export";
   for (const node of root.querySelectorAll(
     ".gm-folio-footer>span,.gm-mobile-bar>span",
   ))
@@ -137,6 +142,8 @@ function refreshResult() {
   restoreDisclosures(root, disclosures);
   folio.scrollTop = scroll;
   mobileShell.refresh();
+  enhanceInterface(root);
+  connectIssues(root, r.issues, { unstarted: !r.profile });
 }
 function render() {
   if (ui.profileBook && !s.books.includes(ui.profileBook)) ui.profileBook = "";
@@ -166,6 +173,7 @@ function render() {
   );
   mountInstall(root);
   mobileShell.mount(root, history);
+  connectIssues(root, r.issues, { unstarted: !r.profile });
   restoreDisclosures(root, disclosures);
   root.querySelector("#gm-folio").scrollTop = folioScroll;
   if (s.removed.length) {
@@ -191,6 +199,7 @@ function render() {
 function modal(title, body) {
   dialogTitle.textContent = title;
   dialogBody.innerHTML = body;
+  enhanceInterface(dialogBody);
   if (!dialog.open) dialog.showModal();
   dialog.scrollTop = 0;
 }
@@ -702,18 +711,14 @@ async function action(el) {
     return;
   }
   if (a === "pdf") {
-    el.disabled = true;
-    el.textContent = "Preparing…";
-    try {
+    await withBusy(el, "Preparing…", async () => {
       download(
         await createGMPDF(window.PDFLib, r, s),
         filename() + ".pdf",
         "application/pdf",
       );
       toast("Compact stat block exported.");
-    } finally {
-      render();
-    }
+    });
     return;
   }
 }

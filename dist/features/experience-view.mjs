@@ -1,3 +1,4 @@
+import { tab } from "../controls.mjs";
 import { chapterHeading } from "../design-system.mjs";
 import { detailKey } from "../disclosures.mjs";
 import { grudgePanel, runeShopRows } from "../dwarf-guide-ui.mjs";
@@ -213,12 +214,12 @@ export function createFeature(getContext, setContext) {
     let rows = "";
     if (xpTab === "Characteristics")
       rows =
-        characteristicLegend() + M.KEYS.map((k) => xpRow("char", k)).join("");
+        characteristicLegend({ compact: true }) +
+        M.KEYS.map((k) => xpRow("char", k)).join("");
     if (xpTab === "Skills") rows = experienceSkills();
     if (xpTab === "Talents") rows = grudgePanel(R, s) + experienceTalents();
     if (xpTab === "Magic") rows = spellShop();
     return `<span class="eyebrow">07 / Experience</span>${chapterHeading("Spend experience")}
-<p class="muted">Each purchase has an exact price, source, and tracker effect. ${page("191, 364")}</p>
 <div class="xp-balance xp-sticky-balance"><div><span>XP budget</span><strong>${d.xpTotal.toLocaleString()}</strong>${d.xpBonus ? `<small>${s.xp.toLocaleString()} base + ${d.xpBonus} star-sign XP</small>` : ""}</div>
 <div><span>Spent</span><strong>${d.spent.toLocaleString()}</strong></div>
 <div class="remaining"><span>Available to spend</span><strong>${d.remaining.toLocaleString()}</strong></div>
@@ -227,15 +228,15 @@ export function createFeature(getContext, setContext) {
 <p class="small muted">Includes spent XP. Star-sign XP is added separately. Unspent experience can be kept.</p>
 </details>${e.length ? issuePanel(e, "Finish creation to spend XP") : ""}<div class="career-progress"><div class="split"><strong>${esc(c.levels[d.level - 1].name)} ${legacyTag(R, c)}</strong><span class="level-pill">Career level ${d.level}</span></div>${trackerBoxes(d)}${
       d.level < 4
-        ? `<p>${button("promote", "Advance Career · 100 XP", `${q.error || e.length ? "disabled" : ""} title="${esc(q.error)}"`, "secondary")}</p>
-<small>Requires the Advance Career Endeavour (p. 196). Using this button records that requirement as met.</small>`
+        ? `<p class="promotion-action">${button("promote", "Advance Career · 100 XP", `${q.error || e.length ? "disabled" : ""} aria-describedby="promotion-reason"`, "secondary")}</p>
+<details class="promotion-help" data-detail-key="experience:promotion-help"><summary>Career advancement${q.error ? " · not ready" : ""}</summary><p id="promotion-reason">${esc(e.length ? "Finish the highlighted creation choices before advancing the Career." : q.error || "Your tracker and XP allow this advancement.")}</p><p>Requires the Advance Career Endeavour (p. 196). Using this button records that requirement as met.</p></details>`
         : ""
     }</div>
-<div class="xp-browser-controls"><label class="check-row"><input type="checkbox" data-bind="xpCareerOnly" ${xpCareerOnly ? "checked" : ""}>Career only</label><label class="check-row"><input type="checkbox" data-bind="xpAffordable" ${xpAffordable ? "checked" : ""}>Affordable now</label><span class="small muted">Filters hide rows; prices and eligibility stay the same. Career-only applies to Characteristics, Skills and Talents; magic uses its own access filters.</span></div>
-<div class="page-tabs" role="tablist" aria-label="XP purchases">${["Characteristics", "Skills", "Talents", "Magic"].map((t) => `<button role="tab" id="xp-tab-${t}" aria-controls="xp-content" tabindex="${t === xpTab ? 0 : -1}" aria-selected="${t === xpTab}" class="quiet" data-action="xp-tab" data-tab="${t}">${t}</button>`).join("")}</div>${
+<div class="xp-browser-controls"><label class="check-row"><input type="checkbox" data-bind="xpCareerOnly" ${xpCareerOnly ? "checked" : ""}>Career only</label><label class="check-row"><input type="checkbox" data-bind="xpAffordable" ${xpAffordable ? "checked" : ""}>Affordable now</label><details class="browser-help" data-detail-key="experience:filter-help"><summary aria-label="About filters"><span aria-hidden="true">?</span></summary><p>Filters hide rows; prices and eligibility stay the same. Career-only applies to Characteristics, Skills and Talents; magic uses its own access filters.</p></details></div>
+<div class="page-tabs" role="tablist" aria-label="XP purchases">${["Characteristics", "Skills", "Talents", "Magic"].map((t) => tab(t, { id: `xp-tab-${t}`, panel: "xp-content", selected: t === xpTab, action: "xp-tab", value: t, short: t === "Characteristics" ? "Stats" : t })).join("")}</div>${
       ["Characteristics", "Skills"].includes(xpTab)
         ? `<div class="advance-choice"><span class="label">Advance by</span><div class="inline-choice" role="group" aria-label="Advance size">${[5, 1].map((n) => button("advance-size", `+${n}`, `data-size="${n}" aria-pressed="${s.advanceSize === n}"`, s.advanceSize === n ? "quiet active" : "quiet")).join("")}</div>
-<span class="small muted">${s.advanceSize === 1 ? "Optional individual Advances: Appendix II, p. 364. Five +1 Advances in the same Career Skill or Characteristic earn one tracker box." : "+5 Advances: p. 191. An incomplete +1 band must reach five before returning to +5 on that Skill or Characteristic."}</span></div>`
+<details class="advance-help" data-detail-key="experience:advance-help"><summary>Advance rules</summary><p>Each purchase shows its price, source and tracker effect. ${page("191, 364")}</p><p>${s.advanceSize === 1 ? "Optional individual Advances: Appendix II, p. 364. Five +1 Advances in the same Career Skill or Characteristic earn one tracker box." : "+5 Advances: p. 191. An incomplete +1 band must reach five before returning to +5 on that Skill or Characteristic."}</p><p>✓ marks currently available Career Characteristics. Later levels become Career Characteristics when you reach that level; non-career purchases cost double.</p></details></div>`
         : ""
     }<div id="xp-content" role="tabpanel" aria-labelledby="xp-tab-${xpTab}" ${e.length ? 'class="unavailable"' : ""}>${rows}</div>
 <details data-detail-key="${detailKey("experience-view:experience:1")}" class="section-gap"><summary>Acquire a higher-level Career Trapping ${legacyTag(R, c)}</summary><p>Only record an item from the next Career level, actually obtained with your GM. This does not create free gear or deduct coin. Each different next-level Trapping earns one box (pp. 43–44).</p>

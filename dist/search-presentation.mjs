@@ -51,7 +51,8 @@ const escape = (value) =>
 export function referenceSnippetText(text) {
   return String(text || "")
     .replace(/(?:^|\n)\|[\s:|-]+\|(?=\n|$)/g, "")
-    .replaceAll("### ", "")
+    .replace(/(^|\n)[ \t]*#{1,6}[\s\u00a0]+/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
     .replaceAll("|", " · ")
     .replace(/\s+/g, " ")
     .replace(/(?:\s*·\s*){2,}/g, " · ")

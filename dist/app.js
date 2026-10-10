@@ -1,5 +1,6 @@
 import { createInstallControl } from "./install-control.mjs";
 import { createMobileShell } from "./mobile-shell.mjs";
+import { connectIssues } from "./interface-kit.mjs";
 import { createDraftHistory, restoreDraftSnapshot } from "./draft-history.mjs";
 import { createFeature as createWorkspaceShell } from "./features/workspace-shell.mjs";
 import { captureDisclosures, restoreDisclosures } from "./disclosures.mjs";
@@ -489,6 +490,7 @@ function render() {
 
   filterMarket();
   lockCreationControls();
+  connectIssues($("#app"), issues);
   save();
   document.querySelector(".sheet").scrollTop = folioScroll;
   let focused = focusId ? document.getElementById(focusId) : null;
@@ -549,7 +551,7 @@ $("#app").addEventListener("click", (e) => {
   }
   action(el).catch((err) => {
     toast(err.message);
-    render();
+    if (!err.uiOperation) render();
   });
 });
 $("#app").addEventListener("keydown", (e) => {

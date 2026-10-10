@@ -1406,34 +1406,6 @@ dialog::backdrop {
 .budget-edit {
   padding-bottom: 8px;
 }
-.career-progress {
-  padding: 12px 14px;
-  margin: 14px 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 7px 16px;
-}
-.career-progress > .split {
-  grid-column: 1 / -1;
-}
-.career-progress > .tracker-boxes {
-  margin: 3px 0 0;
-}
-.career-progress > p.small {
-  grid-column: 1;
-  grid-row: 3;
-  margin: 0;
-}
-.career-progress > p:not(.small) {
-  grid-column: 2;
-  grid-row: 2 / span 2;
-  margin: 0;
-  align-self: center;
-}
-.career-progress > small {
-  grid-column: 1 / -1;
-  font-size: 11px;
-}
 .xp-browser-controls {
   margin: 12px 0;
   gap: 6px 18px;
@@ -1454,14 +1426,6 @@ dialog::backdrop {
 @media (max-width: 760px) {
   .advance-choice {
     top: 0;
-  }
-  .career-progress {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .career-progress > p.small,
-  .career-progress > p:not(.small) {
-    grid-column: 1;
-    grid-row: auto;
   }
   .xp-balance > div {
     padding: 12px 9px;

@@ -62,3 +62,7 @@ The user selected **A — Ash & Vellum** on 9 October 2026. `marijan.html` fixes
 Theme verification: both focused desktop/mobile shell/layout cases passed. The rendered creator screenshots were inspected, and offline asset validation includes the final WebP. This visual change does not alter rules, draft data or export content.
 
 Ash & Vellum accents: section titles, disclosure markers and calculated Characteristic totals use oxblood; the generation callout has a pale red tint and red leading edge. The folio has a restrained red top edge and score borders, and the current creator link uses a solid oxblood fill with white text. Section navigation gains red edging on hover/focus. These are shared skin rules scoped to the selected theme; the grey vellum, neutral fields and existing density remain.
+
+## October 10 shared interface refinement
+
+The approved Ash & Vellum skin remains. Supporting labels/notes use the shared readable scale; numeric folio values use aligned body digits. Native input intent, dice/disclosure geometry and skip navigation match the other creators, with 44px/16px phone controls. Generation previews and PDF exports show the shared busy state before heavy work, prevent duplicate activation and leave retryable failures nearby. Freehand editing/export remains unrestricted; Player/GM issue gates have not been imported.

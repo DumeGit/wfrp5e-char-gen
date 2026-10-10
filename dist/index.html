@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="design-tokens.css" />
     <link rel="stylesheet" href="design-system.css" />
     <link rel="stylesheet" href="mobile-shell.css" />
+    <link rel="stylesheet" href="interface.css" />
   </head>
   <body>
+    <a class="skip-link" href="#creator-main">Skip to editor</a>
     <header class="masthead">
       <div class="masthead-art" aria-hidden="true"></div>
       <div class="banner-atmosphere" aria-hidden="true">
@@ -91,7 +93,7 @@
         <span class="banner-caption">ALL BOOK REFERENCES</span>
       </div>
     </header>
-    <div id="app"></div>
+    <div id="app"><main id="creator-main" class="panel" tabindex="-1" aria-busy="true"><h1>Opening the Character Ledger…</h1><p role="status">Loading the creator and reviewed books.</p></main></div>
     <div id="pwa-status" class="pwa-status" role="status" aria-live="polite">
       Preparing offline access, including PDF exports…
     </div>

@@ -149,3 +149,7 @@ Focused verification: 21 search-filter/printed-reference tests passed, covering 
 The Night Parade integration: see [NIGHT-PARADE.md](NIGHT-PARADE.md). Its pack shares three Ride specialisations; GM foundations/templates are opt-in. Supplement template operations live in `dist/gm/templates.mjs`, validated and compiled from reviewed `dist/gm/sources/*.json`. Book generation discovers registered GM source files automatically; no hardcoded supplement list is maintained.
 
 The launcher stays in the wide desktop search ribbon; on phones its existing button moves to a 44px magnifying-glass icon at the top right, beside the shared creator menu. All three modes use the same controller/dialog; opening and closing behavior, filters, reference history and lazy loading are unchanged.
+
+## October 10 presentation refinement
+
+Every result excerpt passes through the same plain-text layout cleaner, including core Rule excerpts: heading/bold/table syntax is removed while numerical values and footnote markers remain. Full reader content is unchanged. Selected rows remain highlighted across Results/Back; reader prose is bounded to 75 characters where space permits. The empty reading hint is quieter. Mobile Close/Clear are 44px controls. Filters, source/Legacy distinctions, all-book scope, chaining, lazy worker loading and automatic 20-result batches are unchanged.

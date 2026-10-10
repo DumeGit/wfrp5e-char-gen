@@ -1,6 +1,7 @@
 import { calculateGM, validateGMDraft } from "./model.mjs";
 import { prepareGMPrint } from "./print.mjs";
 import { esc, button } from "./controls.mjs";
+import { enhanceInterface, withBusy } from "../interface-kit.mjs";
 
 // A print batch is temporary and independent of the editable GM/player drafts.
 export function createGMPrinting(data, R, { current, download, toast }) {
@@ -23,6 +24,7 @@ export function createGMPrinting(data, R, { current, download, toast }) {
     prepared = null;
     dialog.innerHTML = `<div class="gm-dialog-heading"><h2 id="gm-print-title">Print table cards</h2>${button("Close", "print-close")}</div><p>Six compact stat blocks per A4 page, or four with more room. Actual Traits include their descriptions, with no unselected optional Traits. Other abilities retain compact names and ratings. Larger profiles may need four cards or a full sheet. Source discrepancies stay in the app.</p><div class="gm-print-toolbar"><div class="field"><label for="gm-print-layout">Cards per A4 page</label><select id="gm-print-layout"><option value="6" ${perPage === 6 ? "selected" : ""}>6 cards · 2 columns × 3 rows</option><option value="4" ${perPage === 4 ? "selected" : ""}>4 cards · 2 columns × 2 rows</option></select></div>${button("Add current creature", "print-current", entries.length >= 48 ? "disabled" : "")}${button("Add saved drafts…", "print-import")}</div><p class="gm-small">Use Copy for duplicates. Saved drafts are read locally and do not replace your character. This print batch is kept until you reload the page. Up to 48 cards; empty slots remain blank.</p><ol class="gm-print-list">${entries.map(({ r }, i) => `<li><div><strong>${esc(r.name)}</strong><small>${esc(r.profile?.name || "No starting profile")} · ${esc(r.size || "")}</small>${r.issues.length ? `<ul class="gm-print-errors">${r.issues.map((x) => `<li>${esc(x.message)}</li>`).join("")}</ul>` : ""}</div><div class="gm-print-actions">${button("Copy", "print-copy", `data-index="${i}" ${entries.length >= 48 ? "disabled" : ""}`)}${button("Remove", "print-remove", `data-index="${i}"`)}</div></li>`).join("")}</ol>${importErrors.length ? `<div class="gm-print-errors" role="alert"><strong>Drafts not added</strong><ul>${importErrors.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}<div id="gm-print-status" role="status">Checking card sizes…</div><div class="gm-dialog-actions">${button("Back to workshop", "print-close")}${button("Download A4 PDF", "print-export", "disabled", "primary")}</div><input id="gm-print-files" type="file" multiple accept=".json,application/json" hidden>`;
     let status;
+    enhanceInterface(dialog);
     const issues = entries.some((e) => e.r.issues.length || !e.r.profile);
     if (!entries.length) status = "Add a creature or saved draft to begin.";
     else if (issues)
@@ -98,22 +100,22 @@ export function createGMPrinting(data, R, { current, download, toast }) {
           return;
         case "print-export":
           if (!prepared || prepared.overflow.length) return;
-          target.disabled = true;
-          target.textContent = "Preparing…";
-          download(
-            await prepared.bytes(),
-            `Bestiary-${perPage}-per-A4.pdf`,
-            "application/pdf",
-          );
-          toast("A4 table cards exported.");
-          break;
+          await withBusy(target, "Preparing…", async () => {
+            download(
+              await prepared.bytes(),
+              `Bestiary-${perPage}-per-A4.pdf`,
+              "application/pdf",
+            );
+            toast("A4 table cards exported.");
+          });
+          return;
         default:
           return;
       }
       await render();
     } catch (error) {
       toast(error.message);
-      await render();
+      if (!error.uiOperation) await render();
     }
   });
   dialog.addEventListener("cancel", () => revision++);

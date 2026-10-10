@@ -21,6 +21,7 @@
     "test:ui:storage": "node scripts/run-browser-tests.mjs storage",
     "test:ui:exports": "node scripts/run-browser-tests.mjs exports",
     "test:ui:mobile": "node scripts/run-browser-tests.mjs mobile",
+    "test:ui:interface": "node scripts/run-browser-tests.mjs interface",
     "test:ui:pwa": "node scripts/run-browser-tests.mjs pwa",
     "test:ui:all": "node scripts/run-browser-tests.mjs all",
     "test:ui:cross-browser": "node scripts/run-browser-tests.mjs cross-browser",

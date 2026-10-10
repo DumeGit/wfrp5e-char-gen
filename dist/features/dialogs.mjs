@@ -2,6 +2,7 @@ import { detailKey } from "../disclosures.mjs";
 import * as M from "../rules.mjs";
 import { assembleBooks } from "../books.mjs";
 import { calculation } from "../workspace.mjs";
+import { enhanceInterface } from "../interface-kit.mjs";
 
 // Live context keeps rendering state outside the saved character. Unusual book
 // mechanics remain explicit handlers rather than generic configuration rules.
@@ -12,6 +13,7 @@ export function createFeature(getContext, setContext) {
     const box = $("#creator-dialog");
     $("#creator-dialog-title").textContent = title;
     $("#creator-dialog-body").innerHTML = html;
+    enhanceInterface($("#creator-dialog-body"));
     if (!box.open) box.showModal();
   }
 

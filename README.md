@@ -202,3 +202,9 @@ Marijan Mode uses compact Starting/Total Characteristic grids and selected Skill
 
 
 Marijan uses the selected Ash & Vellum theme with grey vellum, charcoal framing, oxblood headings/score totals/actions and an oxblood title plaque over monochrome elven artwork with crimson cloth. Historical visual studies: run `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/marijan-colours.html` to compare three elven-banner styles. Details and artwork provenance are in [the design preview notes](docs/DESIGN-PREVIEWS.md).
+
+## Shared interface refinement — 10 October 2026
+
+The three creators now share input intent, dice icons, tab semantics, disclosures, inline field issues and retryable Preparing states. Phones retain 44px primary controls and 16px fields. Player's bottom action switches between View character and Back to choice. Experience has a compact XP/tracker/promotion overview with expandable explanations; search shows clean excerpts and retains reference chaining. The approved Black Banner, Moonlit Vellum and Ash & Vellum artwork/palettes remain.
+
+See [UI-UX-IMPLEMENTATION.md](docs/UI-UX-IMPLEMENTATION.md) for the completed 14-point review, evidence and limits. `npm run test:ui:interface` runs the focused local regressions; no hosted CI was added.

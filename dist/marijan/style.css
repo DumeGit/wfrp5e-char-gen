@@ -154,7 +154,7 @@
 .mm-mode {
   min-height: 28px !important;
   padding: 3px 7px !important;
-  font-size: 11px !important;
+  font-size: var(--text-note);
 }
 .mm-derived input {
   width: 100%;

@@ -12,6 +12,7 @@ const scopes = [
   "storage",
   "exports",
   "mobile",
+  "interface",
   "pwa",
   "all",
   "cross-browser",

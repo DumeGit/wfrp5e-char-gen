@@ -7,6 +7,7 @@ import { hasCharacterChanges } from "../ui.mjs";
 import { gearSlots, recordAcquisition } from "../equipment.mjs";
 import { buyTrapping, formatMoney } from "../market.mjs";
 import { exportSheet, exportRecord } from "../export.mjs";
+import { withBusy } from "../interface-kit.mjs";
 import {
   setAgeHeight,
   suggestion,
@@ -184,9 +185,18 @@ export function createFeature(getContext, setContext) {
       saveFolioPreferences();
       render();
       $(".sheet")?.scrollIntoView({ block: "start", behavior: "instant" });
+      $(".mobile-workspace-bar [data-action=mobile-choice]")?.focus({
+        preventScroll: true,
+      });
       return;
     }
     if (a === "mobile-choice") {
+      setContext("summaryExpanded", (summaryExpanded = false));
+      saveFolioPreferences();
+      render();
+      $(".mobile-workspace-bar [data-action=mobile-folio]")?.focus({
+        preventScroll: true,
+      });
       if (choiceReturn?.step === s.step)
         window.scrollTo({ top: choiceReturn.y, behavior: "instant" });
       else
@@ -706,21 +716,22 @@ export function createFeature(getContext, setContext) {
     }
     if (a === "sheet" || a === "record") {
       if (errors().length) throw Error("Finish creation before exporting.");
-      el.disabled = true;
-      toast("Preparing your PDF…");
-      const bytes =
-        a === "sheet"
-          ? await exportSheet(R, s, undefined, undefined, {
-              fullAppendix,
-              result: result(),
-            })
-          : await exportRecord(R, s, { fullAppendix, result: result() });
-      download(
-        bytes,
-        `${s.name || "Character"}_${a === "sheet" ? "Character_Sheet" : "Creation_and_XP_Record"}.pdf`,
-        "application/pdf",
-      );
-      toast("Your PDF is ready.");
+      await withBusy(el, "Preparing…", async () => {
+        const bytes =
+          a === "sheet"
+            ? await exportSheet(R, s, undefined, undefined, {
+                fullAppendix,
+                result: result(),
+              })
+            : await exportRecord(R, s, { fullAppendix, result: result() });
+        download(
+          bytes,
+          `${s.name || "Character"}_${a === "sheet" ? "Character_Sheet" : "Creation_and_XP_Record"}.pdf`,
+          "application/pdf",
+        );
+        toast("Your PDF is ready.");
+      });
+      return;
     }
     render();
   }

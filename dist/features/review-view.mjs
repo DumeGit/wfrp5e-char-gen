@@ -109,7 +109,7 @@ export function createFeature(getContext, setContext) {
     const goal = [10, 12, 14, 0][d.level - 1];
     return goal
       ? `<div class="tracker-boxes" role="img" aria-label="${d.ticks} of ${goal} Career tracker boxes">${Array.from({ length: goal }, (_, i) => `<span class="${i < d.ticks ? "filled" : ""}" aria-hidden="true">${i < d.ticks ? "✓" : ""}</span>`).join("")}</div>
-<p class="small muted">${d.ticks} / ${goal} boxes toward level ${d.level + 1}</p>`
+<p class="small muted tracker-caption">${d.ticks} / ${goal} boxes toward level ${d.level + 1}</p>`
       : '<p class="small muted">Final Career level reached.</p>';
   }
 

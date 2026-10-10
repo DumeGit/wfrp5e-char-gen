@@ -192,3 +192,9 @@ Phone navigation follows the shared shell: top-right Search and Menu icons, mode
 ## Shared edit history
 
 The workshop shares the same Undo/Redo history and 44px icon controls as Player and Marijan: one pair in the desktop rail, moved into the mobile bottom bar. Both directions restore edits, profiles, templates, books, training and draft replacement. Continuous text editing is grouped until focus leaves. Navigation/search/export and no-ops do not consume history or discard redo; a new edit clears redo. Up to 60 session entries are retained, with empty history after reload. Within one draft, recorded dice survive restoration; replacing a foundation or loading/starting a draft keeps its separate dice audit. Current navigation is retained when undoing ordinary edits. See [ARCHITECTURE.md](ARCHITECTURE.md) and [TESTING.md](TESTING.md).
+
+## October 10 interface refinement
+
+A fresh workshop shows a neutral invitation to choose a profile. Once a profile exists, real unresolved choices retain the visible issue list/export gate and now get inline messages and ARIA associations at visible destination fields. Resolving the choice clears the field feedback. Numeric inputs, dice and tabs use 44px phone touch targets; printed baseline notes use readable supporting text. Shared native disclosures preserve their state.
+
+Individual and A4 PDF actions use the common Preparing/duplicate/retry contract, with persistent failures near the action. Initial book loading has a status and stable skip-to-editor target. Compact exports, actual Trait descriptions, six-card default and source-note separation are unchanged.

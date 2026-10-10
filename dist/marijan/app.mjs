@@ -4,6 +4,7 @@ import { createReferenceSearch } from "../reference-search.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
 import { createMobileShell } from "../mobile-shell.mjs";
+import { enhanceInterface, withBusy } from "../interface-kit.mjs";
 import { createDraftHistory } from "../draft-history.mjs";
 import { esc, button, field, score, select } from "../controls.mjs";
 import {
@@ -84,6 +85,7 @@ function toast(text) {
 function modal(label, html) {
   title.textContent = label;
   body.innerHTML = html;
+  enhanceInterface(body);
   if (!dialog.open) dialog.showModal();
 }
 function download(bytes, type, name) {
@@ -210,6 +212,7 @@ function refresh() {
   root.querySelector("#mm-save-status").textContent = message;
   mobileShell.refreshHistory(history);
   mobileShell.refresh();
+  enhanceInterface(root);
 }
 function renderList(group) {
   captureDisclosures(root, disclosures);
@@ -358,26 +361,28 @@ async function action(el) {
     return;
   }
   if (a === "generate-preview") {
-    const { generateCharacter } = await import("./generation.mjs");
-    generationRequest = {
-      ...s,
-      career: body.querySelector("#mm-generate-career").value,
-      generationOrigin: body.querySelector("#mm-generate-origin").value,
-    };
-    pendingGenerated = generateCharacter(
-      catalogue,
-      generationRequest,
-      Number(body.querySelector("#mm-generate-level").value),
-    );
-    const result = calculateMarijan(catalogue, pendingGenerated);
-    body.querySelector("#mm-generation-preview").innerHTML =
-      `<div class="notice"><strong>Random result · ${esc(result.career.name)}, level ${pendingGenerated.level}</strong><p>${pendingGenerated.xpSpent} XP spent · ${pendingGenerated.tracker} tracker boxes · ${pendingGenerated.entries.skills.length} Skills · ${pendingGenerated.entries.talents.length} Talents · ${pendingGenerated.entries.gear.length} equipment entries.</p><p>${Object.entries(
-        result.stats,
-      )
-        .map(([k, v]) => `${k} ${v}`)
-        .join(
-          " · ",
-        )}</p>${pendingGenerated.generation.notes.map((n) => `<p class="small">${esc(n)}</p>`).join("")}${button("Use generated character", "generate-apply", "", "primary")}</div>`;
+    await withBusy(el, "Generating…", async () => {
+      const { generateCharacter } = await import("./generation.mjs");
+      generationRequest = {
+        ...s,
+        career: body.querySelector("#mm-generate-career").value,
+        generationOrigin: body.querySelector("#mm-generate-origin").value,
+      };
+      pendingGenerated = generateCharacter(
+        catalogue,
+        generationRequest,
+        Number(body.querySelector("#mm-generate-level").value),
+      );
+      const result = calculateMarijan(catalogue, pendingGenerated);
+      body.querySelector("#mm-generation-preview").innerHTML =
+        `<div class="notice"><strong>Random result · ${esc(result.career.name)}, level ${pendingGenerated.level}</strong><p>${pendingGenerated.xpSpent} XP spent · ${pendingGenerated.tracker} tracker boxes · ${pendingGenerated.entries.skills.length} Skills · ${pendingGenerated.entries.talents.length} Talents · ${pendingGenerated.entries.gear.length} equipment entries.</p><p>${Object.entries(
+          result.stats,
+        )
+          .map(([k, v]) => `${k} ${v}`)
+          .join(
+            " · ",
+          )}</p>${pendingGenerated.generation.notes.map((n) => `<p class="small">${esc(n)}</p>`).join("")}${button("Use generated character", "generate-apply", "", "primary")}</div>`;
+    });
     return;
   }
   if (a === "generate-apply") {
@@ -626,8 +631,7 @@ async function action(el) {
     return;
   }
   if (a === "export") {
-    el.disabled = true;
-    try {
+    await withBusy(el, "Preparing…", async () => {
       const { exportMarijanSheet } = await import("./pdf.mjs");
       download(
         await exportMarijanSheet(catalogue, s, r),
@@ -635,9 +639,7 @@ async function action(el) {
         fileName() + "-marijan.pdf",
       );
       toast("Editable sheet and complete unrestricted record exported.");
-    } finally {
-      el.disabled = false;
-    }
+    });
     return;
   }
 }

@@ -90,6 +90,10 @@
   --font-caps: "Ledger Caps", Georgia, serif;
   --font-banner: "Ledger Display", Georgia, serif;
   --text-xs: 0.75rem;
+  --text-note: var(--text-xs);
+  --text-control: var(--text-sm);
+  --control-touch: 44px;
+  --color-focus-on-dark: var(--color-gold-light);
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-heading: clamp(1.9rem, 2.5vw, 2.5rem);

@@ -1,7 +1,7 @@
-import { esc, button } from "../controls.mjs";
+import { esc, button, disclosure } from "../controls.mjs";
 export { esc, score, button, field, select } from "../controls.mjs";
 export const detail = (key, title, body, open = false) =>
-  `<details data-detail-key="gm:${esc(key)}" ${open ? "open" : ""}><summary>${title}</summary><div class="gm-detail-body">${body}</div></details>`;
+  disclosure(`gm:${key}`, title, body, { open, bodyClass: "gm-detail-body" });
 export const reference = (kind, name, page) =>
   button(
     `Core · p. ${page}`,
