@@ -1,0 +1,1235 @@
+{
+  "schemaVersion": 1,
+  "id": "bayl-many-eyes",
+  "source": {
+    "file": "The Warband of Bayl of Many Eyes.pdf",
+    "sha256": "bf5839ff86537d1d4aee619d4d4095904b58de8d86295383d5695703114b4a6e"
+  },
+  "summary": "Chaos Warrior profiles and advancement templates",
+  "profiles": [
+    {
+      "id": "bayl-many-eyes:creatures:chaos-warrior-of-nurgle",
+      "name": "Chaos Warrior of Nurgle",
+      "page": 8,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 8
+      },
+      "example": false,
+      "category": "Cultists and Mutants",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 30,
+        "S": 45,
+        "T": 55,
+        "I": 45,
+        "Ag": 55,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 55,
+        "Fel": 25,
+        "W": 19
+      },
+      "size": "Average",
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Etiquette (Followers of Nurgle)",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Overt followers of Tzeentch",
+          "adaptation": "Legacy: the p. 19 summary gives +1 SL to attacks and a passed-Test Fellowship penalty. Core Animosity instead applies +1 SL to Fellowship-based opposition/disparagement; use the full core Psychology rule."
+        },
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Disease",
+          "value": "Itching Pox"
+        },
+        {
+          "name": "Distracting",
+          "value": "",
+          "adaptation": "Legacy: the printed −20 Test penalty becomes the core −2 SL penalty, following Appendix I p. 364."
+        },
+        {
+          "name": "Mark of Chaos",
+          "value": "Nurgle"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Heavy Armour",
+          "ap": 5,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": true,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Mark of Nurgle is the existing core Mark of Chaos (Nurgle), core p. 359. Its +10 Toughness is already included in T55, and its Etiquette grant is recorded once.",
+        "The supplement prints only a Weapon +8 rating, not separate Skill totals. No extra core Chaos Warrior Skill advances are silently copied into this distinct printed profile.",
+        "Core Animosity, Distracting, Disease and Talent descriptions replace the outdated summaries on p. 19."
+      ]
+    },
+    {
+      "id": "bayl-many-eyes:creatures:chaos-steed",
+      "name": "Chaos Steed",
+      "page": 8,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 8
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 8,
+        "WS": 35,
+        "BS": null,
+        "S": 55,
+        "T": 35,
+        "I": 31,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": 10,
+        "W": 24
+      },
+      "size": "Large",
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Body",
+        "Forelegs",
+        "Rear Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Legacy: printed Stride uses core Sprinter; Large Size adds SB5 to Hooves and Horns, changing printed +8 to +13."
+        },
+        {
+          "name": "Trained",
+          "value": "War"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hooves and Horns",
+          "skill": 35,
+          "damage": 13,
+          "printedDamage": 8,
+          "optional": false,
+          "text": "Primary melee attack",
+          "free": false,
+          "adaptation": "Legacy: printed Stride uses core Sprinter; Large Size adds SB5 to Hooves and Horns, changing printed +8 to +13."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Barding",
+          "ap": 3,
+          "locations": "Head, Body, Forelegs, Rear Legs",
+          "optional": true,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed WS35 already includes its War training; it is not added twice. Printed 24 Wounds are preserved until an explicit build change. Hooves and Horns are one printed Weapon attack, not an additional Horns Free Attack."
+      ],
+      "adaptation": "Legacy: printed Stride uses core Sprinter; Large Size adds SB5 to Hooves and Horns, changing printed +8 to +13."
+    }
+  ],
+  "templates": [
+    {
+      "id": "bayl-many-eyes:template:chosen",
+      "name": "Chosen",
+      "page": 8,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 8
+      },
+      "adjustments": {
+        "WS": 10,
+        "S": 5,
+        "T": 5,
+        "I": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Battle)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 20,
+          "count": 2
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Full Plate Armour — core Heavy Armour (5 AP)",
+          "kind": "armour",
+          "names": [
+            "Heavy Armour"
+          ]
+        },
+        {
+          "label": "Hand Weapon or Flail",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "groups": [
+            "Flail"
+          ],
+          "choose": true
+        },
+        {
+          "label": "Shield, Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "names": [
+            "Shield"
+          ],
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ],
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Full Plate Armour uses the core Heavy Armour quick profile (5 AP); weapon alternatives require explicit shared core profiles."
+      ],
+      "eligibility": "any",
+      "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+    },
+    {
+      "id": "bayl-many-eyes:template:chaos-knight",
+      "name": "Chaos Knight",
+      "page": 8,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 8
+      },
+      "adjustments": {
+        "WS": 10,
+        "S": 5,
+        "Ag": 5,
+        "Dex": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Athletics"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Animal Care"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Battle)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Cavalry)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Roughrider"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Strike Mighty Blow"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Full Plate Armour — core Heavy Armour (5 AP)",
+          "kind": "armour",
+          "names": [
+            "Heavy Armour"
+          ]
+        },
+        {
+          "label": "Lance",
+          "kind": "weapon",
+          "names": [
+            "Lance"
+          ]
+        },
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        }
+      ],
+      "notes": [
+        "Full Plate Armour uses the core Heavy Armour quick profile (5 AP); weapon alternatives require explicit shared core profiles.",
+        "Printed Rough Rider uses core Roughrider spelling. Ride has no printed specialisation; choose it explicitly."
+      ],
+      "eligibility": "any",
+      "trappings": "Chaos Steed (create its separate mount sheet)"
+    },
+    {
+      "id": "bayl-many-eyes:template:exalted-hero",
+      "name": "Exalted Hero",
+      "page": 9,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 9
+      },
+      "adjustments": {
+        "WS": 25,
+        "BS": 10,
+        "S": 15,
+        "T": 15,
+        "I": 25,
+        "Ag": 20,
+        "Int": 10,
+        "WP": 25,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Battle)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 20,
+          "count": 2
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 20,
+          "count": 1,
+          "optional": true,
+          "emptyLabel": "No mount",
+          "label": "Optional Chaos Steed · Ride specialisation"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Master"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests."
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Full Plate Armour — core Heavy Armour (5 AP)",
+          "kind": "armour",
+          "names": [
+            "Heavy Armour"
+          ]
+        },
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        },
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ],
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Full Plate Armour uses the core Heavy Armour quick profile (5 AP); weapon alternatives require explicit shared core profiles.",
+        "Chaos Steed is a separate starting profile, not an extra creature silently added to this sheet. Choose its Ride specialisation above when mounted.",
+        "Printed Warleader / Unshakable use core War Leader / Unshakeable spelling."
+      ],
+      "eligibility": "any",
+      "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition. Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+    },
+    {
+      "id": "bayl-many-eyes:template:chaos-lord",
+      "name": "Chaos Lord",
+      "page": 9,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 9
+      },
+      "adjustments": {
+        "WS": 35,
+        "BS": 10,
+        "S": 25,
+        "T": 30,
+        "I": 30,
+        "Ag": 25,
+        "Int": 15,
+        "WP": 35,
+        "Fel": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Battle)"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 20,
+          "count": 2
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 20,
+          "count": 1,
+          "optional": true,
+          "emptyLabel": "No mount",
+          "label": "Optional Chaos Steed · Ride specialisation"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Master"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests."
+        },
+        {
+          "options": [
+            "Luck"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        },
+        {
+          "options": [
+            "Unshakeable"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Full Plate Armour — core Heavy Armour (5 AP)",
+          "kind": "armour",
+          "names": [
+            "Heavy Armour"
+          ]
+        },
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        },
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ],
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Full Plate Armour uses the core Heavy Armour quick profile (5 AP); weapon alternatives require explicit shared core profiles.",
+        "Chaos Steed is a separate starting profile, not an extra creature silently added to this sheet. Choose its Ride specialisation above when mounted.",
+        "Printed Warleader / Unshakable use core War Leader / Unshakeable spelling."
+      ],
+      "eligibility": "any",
+      "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition. Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+    },
+    {
+      "id": "bayl-many-eyes:template:forsaken",
+      "name": "Forsaken",
+      "page": 8,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 8
+      },
+      "adjustments": {
+        "WS": -15,
+        "BS": -30,
+        "I": -10,
+        "Ag": -10,
+        "Int": -20,
+        "WP": 15,
+        "Fel": -20
+      },
+      "skills": [
+        {
+          "options": [
+            "Melee (Brawling)"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Fearless (Everything)"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: retain printed Fearless (Everything) as an exceptional adaptation approved by the user, rather than narrowing it to an ordinary enemy group."
+        },
+        {
+          "options": [
+            "Frenzy"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Implacable"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Full Plate Armour — core Heavy Armour (5 AP)",
+          "kind": "armour",
+          "names": [
+            "Heavy Armour"
+          ]
+        }
+      ],
+      "notes": [
+        "Full Plate Armour uses the core Heavy Armour quick profile (5 AP); weapon alternatives require explicit shared core profiles.",
+        "Forsaken bear several GM-selected mutations; no mutation count or random distribution is printed. Beweaponed Extremities are common rather than mandatory: add the explicit core mutation/Knuckledusters equivalent if selected."
+      ],
+      "eligibility": "any",
+      "adaptation": "Legacy: retain printed Fearless (Everything) as an exceptional adaptation approved by the user, rather than narrowing it to an ordinary enemy group."
+    },
+    {
+      "id": "bayl-many-eyes:template:chaos-sorcerer",
+      "name": "Chaos Sorcerer",
+      "page": 9,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 9
+      },
+      "adjustments": {
+        "T": 10,
+        "I": 15,
+        "Dex": 10,
+        "Int": 20,
+        "WP": 20,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 20,
+          "count": 1,
+          "optional": true,
+          "emptyLabel": "No mount",
+          "label": "Optional Chaos Steed · Ride specialisation"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Arcane Magic (Fire)",
+            "Arcane Magic (Death)",
+            "Arcane Magic (Metal)",
+            "Arcane Magic (Shadows)"
+          ],
+          "ranks": 1,
+          "label": "Chaos Sorcerer · Colour Lore"
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Staff — choose its core Polearm profile",
+          "kind": "weapon",
+          "groups": [
+            "Polearm"
+          ],
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Chaos Steed is a separate starting profile, not an extra creature silently added to this sheet. Choose its Ride specialisation above when mounted.",
+        "Printed Lore of Shadow uses core Shadows. Channelling must match the chosen Colour Lore. A god’s spells require its matching Mark and Chaos Magic Talent.",
+        "No robes, Magic Item, armour protection or spellcasting immunity is invented. Add an explicit armour profile and record whether it is mundane or Chaos Armour in GM notes."
+      ],
+      "eligibility": "any",
+      "trappings": "GM chooses robes or armour and an unspecified Magic Item; none has automatic statistics. Optional Chaos Steed requires its own sheet.",
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "count": 3
+        },
+        {
+          "categories": [
+            "Arcane",
+            "Fire",
+            "Death",
+            "Metal",
+            "Shadows",
+            "Tzeentch",
+            "Slaanesh",
+            "Nurgle"
+          ],
+          "minimum": 0,
+          "count": 6
+        }
+      ],
+      "matchWind": true,
+      "chaosLores": [
+        "Fire",
+        "Death",
+        "Metal",
+        "Shadows"
+      ]
+    },
+    {
+      "id": "bayl-many-eyes:template:chaos-sorcerer-lord",
+      "name": "Chaos Sorcerer Lord",
+      "page": 9,
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 9
+      },
+      "adjustments": {
+        "WS": 10,
+        "S": 5,
+        "T": 15,
+        "I": 20,
+        "Ag": 15,
+        "Dex": 20,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Theology)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 20,
+          "count": 1,
+          "optional": true,
+          "emptyLabel": "No mount",
+          "label": "Optional Chaos Steed · Ride specialisation"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Aethyric Attunement"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Arcane Magic (Fire)",
+            "Arcane Magic (Death)",
+            "Arcane Magic (Metal)",
+            "Arcane Magic (Shadows)"
+          ],
+          "ranks": 1,
+          "label": "Chaos Sorcerer · Colour Lore"
+        },
+        {
+          "options": [
+            "Instinctive Diction"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Instinctive Diction 2 is reduced to one core rank; the Fifth Edition Talent is not repeatable."
+        },
+        {
+          "options": [
+            "Luck"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Magical Sense"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Sixth Sense"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Staff — choose its core Polearm profile",
+          "kind": "weapon",
+          "groups": [
+            "Polearm"
+          ],
+          "choose": true
+        }
+      ],
+      "notes": [
+        "Chaos Steed is a separate starting profile, not an extra creature silently added to this sheet. Choose its Ride specialisation above when mounted.",
+        "Printed Lore of Shadow uses core Shadows. Channelling must match the chosen Colour Lore. A god’s spells require its matching Mark and Chaos Magic Talent.",
+        "No robes, Magic Item, armour protection or spellcasting immunity is invented. Add an explicit armour profile and record whether it is mundane or Chaos Armour in GM notes."
+      ],
+      "eligibility": "any",
+      "trappings": "GM chooses robes or armour and an unspecified Magic Item; none has automatic statistics. Optional Chaos Steed requires its own sheet.",
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "count": 6
+        },
+        {
+          "categories": [
+            "Arcane",
+            "Fire",
+            "Death",
+            "Metal",
+            "Shadows",
+            "Tzeentch",
+            "Slaanesh",
+            "Nurgle"
+          ],
+          "minimum": 0,
+          "count": 12
+        }
+      ],
+      "matchWind": true,
+      "chaosLores": [
+        "Fire",
+        "Death",
+        "Metal",
+        "Shadows"
+      ],
+      "adaptation": "Legacy: Instinctive Diction 2 becomes one nonrepeatable core rank."
+    }
+  ],
+  "training": []
+}

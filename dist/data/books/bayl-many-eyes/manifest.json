@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bayl-many-eyes",
+  "title": "The Warband of Bayl of Many Eyes",
+  "shortTitle": "Bayl’s Warband",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "The Warband of Bayl of Many Eyes.pdf",
+    "sha256": "bf5839ff86537d1d4aee619d4d4095904b58de8d86295383d5695703114b4a6e"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Core Fifth Edition Traits, Talents, shared equipment and explicit GM template choices govern. Named characters and adventure content are excluded.",
+      "Mark of Nurgle reuses core Mark of Chaos (Nurgle), without applying its Toughness benefit twice.",
+      "Reviewed optional mount choices and bounded spell lists are separate from PC creation and campaign play."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

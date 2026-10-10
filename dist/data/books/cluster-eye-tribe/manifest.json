@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cluster-eye-tribe",
+  "title": "The Cluster-Eye Tribe",
+  "shortTitle": "Cluster-Eye Tribe",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "The Cluster-Eye Tribe.pdf",
+    "sha256": "ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8a"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Printed Forest Goblin statistics are retained; current core Afraid, Infected and Flee! definitions carry selective Legacy notes.",
+      "Arboreal is an unchanged situational SL bonus, not a permanent Skill increase.",
+      "Two profiles and seven templates use the user-approved Size, armour, Longbow and spellcasting conversions. Named NPCs, setting and adventures are excluded."
+    ]
+  },
+  "files": {
+    "rules": "rules.json",
+    "ruleReferences": "rule-references.json",
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

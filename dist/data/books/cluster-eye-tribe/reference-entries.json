@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cluster-eye-tribe:reference:applying-templates",
+    "name": "Applying Creature Advancement Templates",
+    "category": "rule",
+    "topic": "Creature templates",
+    "page": 3,
+    "text": "Add the template's Characteristic Advances and its Skill Advances, Talents and Trappings to a basic creature. Options may further customise it. Recalculate Wounds after changing Strength, Toughness or Willpower."
+  },
+  {
+    "id": "cluster-eye-tribe:reference:shaman-spell-lists",
+    "name": "Shaman Spell Lists",
+    "category": "rule",
+    "topic": "Creature templates",
+    "page": 8,
+    "text": "Ogre, Skaven and Greenskin Shamans use Petty Magic and Arcane spells. Fimir Shamans additionally use either Daemonology or Witchcraft, and may choose Fire or Shadows. Beastmen Shamans additionally choose Beasts, Death or Shadows."
+  },
+  {
+    "id": "cluster-eye-tribe:reference:shaman-armour",
+    "name": "Shamans and Armour",
+    "category": "rule",
+    "topic": "Creature templates",
+    "page": 9,
+    "text": "Remove the basic creature's Armour Trait when applying a Shaman template. Certain Skaven spellcasters, such as Warlock-Engineers, may be exceptions that wear armour while casting."
+  },
+  {
+    "id": "cluster-eye-tribe:reference:mounted-skills",
+    "name": "Goblin and Orc Mount Skills",
+    "category": "rule",
+    "topic": "Creature templates",
+    "page": 9,
+    "text": "Any Goblin may optionally take Ride (Spider) +20 or Ride (Wolf) +20. Any Orc may optionally take Ride (Boar) +20 as an additional Skill."
+  },
+  {
+    "id": "cluster-eye-tribe:reference:venom-arrows",
+    "name": "Spider Venom Arrows",
+    "category": "rule",
+    "topic": "Creature templates",
+    "page": 10,
+    "text": "A target wounded by an arrow dipped in Spider Venom makes a Challenging (+0) Endurance Test; failure inflicts one Poisoned Condition. A target reduced to 0 Wounds while suffering this arrow's poison becomes Unconscious, but remaining Poisoned Conditions do not put it at risk of death."
+  }
+]

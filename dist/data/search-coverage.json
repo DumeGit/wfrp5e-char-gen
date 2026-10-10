@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3673,
-  "newlyImported": 1186,
+  "references": 3685,
+  "newlyImported": 1194,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,14 +12,14 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1892,
+      "references": 1895,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1668,
+      "existingReferences": 1671,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 272,
+        "skill": 275,
         "talent": 423,
         "magic": 225,
         "equipment": 254,
@@ -1653,6 +1653,65 @@
           "first": 3,
           "last": 19,
           "topic": "Undead template procedures, mount Skills and Corpse Cart abilities"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "bayl-many-eyes",
+      "title": "The Warband of Bayl of Many Eyes",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "bf5839ff86537d1d4aee619d4d4095904b58de8d86295383d5695703114b4a6e",
+      "references": 3,
+      "newlyImported": 3,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {
+        "rule": 3
+      },
+      "dispositions": {
+        "included": 12,
+        "existing": 2,
+        "excluded": 2
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 3,
+          "last": 19,
+          "topic": "Reviewed template procedures and Sorcerer rules; stat blocks/named NPCs excluded from search"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "cluster-eye-tribe",
+      "title": "The Cluster-Eye Tribe",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8a",
+      "references": 6,
+      "newlyImported": 5,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 1,
+      "adaptedReferences": 0,
+      "categories": {
+        "trait": 1,
+        "rule": 5
+      },
+      "dispositions": {
+        "included": 14,
+        "excluded": 2,
+        "existing": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 3,
+          "last": 19,
+          "topic": "Creature templates, mounts, spell restrictions, Arboreal and nonlethal venom arrows"
         }
       ],
       "unresolved": []

@@ -8,7 +8,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 12 |
+| books | 14 |
 | careers | 126 |
 | magicProfiles | 536 |
 | rituals | 17 |
@@ -38,6 +38,8 @@ Each source inventory remains visible even when another selected book supersedes
 | Deft Steps — Longshanks Scout (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Pickpocket (variant) | 1 | 0 | 0 | 0 | 0 |
 | The Night Parade | 0 | 0 | 4 | 0 | 0 |
+| The Warband of Bayl of Many Eyes | 0 | 0 | 3 | 0 | 0 |
+| The Cluster-Eye Tribe | 0 | 0 | 6 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2569,6 +2571,64 @@ Pack `night-parade` · version 1.0.0
 | `night-parade:reference:mounts` — Undead Mounts | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
 | `night-parade:reference:templates` — Applying Undead Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
 | `night-parade:reference:vigor-mortis` — Vigor Mortis | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+
+</details>
+
+## The Warband of Bayl of Many Eyes
+
+Pack `bayl-many-eyes` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| referenceEntries | 0 | 0 | 3 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Chaos Warrior profiles and templates | adapted | p. 8 | Reviewed generic profiles/templates use shared Fifth Edition definitions and explicit alternatives. |
+| Mark of Nurgle | implemented | p. 10 | Already defined by core Mark of Chaos (Nurgle); reuse without duplicating effects. |
+| Named characters and adventures | deferred | p. 12 | Bayl, Dónalegur, Ryðklumpur and Tannpína, unique mutations, warband management and adventure scenes excluded. |
+| Chaos Warrior template and Sorcerer rules | reference-only | p. 3 | Three mechanical references; no new live casting or XP development. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `bayl-many-eyes:reference:applying-templates` — Applying Chaos Warrior Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
+| `bayl-many-eyes:reference:sorcerer-armour` — Chaos Sorcerers and Armour | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `bayl-many-eyes:reference:sorcerer-lores` — Chaos Sorcerer Spell Lists | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+
+</details>
+
+## The Cluster-Eye Tribe
+
+Pack `cluster-eye-tribe` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| referenceEntries | 0 | 0 | 5 | 0 | 0 |
+| ruleReferences | 0 | 0 | 1 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Arboreal | implemented | p. 19 | Printed situational SL effect; no permanent Skill calculation or Legacy conversion. |
+| Named characters and adventures | deferred | p. 12 | Named Vish, Bograt, Nurd and Bugshot, setting and encounters excluded by user scope. |
+| Fimir Shaman spell lists | reference-only | p. 8 | No installed Fimir foundation; Ogre Lore restrictions remain enforced without invented grants. |
+| Two profiles and seven advancement templates | adapted | p. 8 | Approved Size, core armour/Longbow, bounded Shaman spells, explicit choices and core Talent/Trait definitions. |
+| Goblin and Orc mount Skills | implemented | p. 9 | Explicit optional +20 Ride grants; no automatic mount sheet or PC advances. |
+| Spider Venom Arrows | reference-only | p. 10 | Specific nonlethal ammunition rule; no printed purchase profile or live poison tracking. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `cluster-eye-tribe:reference:applying-templates` — Applying Creature Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
+| `cluster-eye-tribe:reference:mounted-skills` — Goblin and Orc Mount Skills | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `cluster-eye-tribe:reference:shaman-armour` — Shamans and Armour | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `cluster-eye-tribe:reference:shaman-spell-lists` — Shaman Spell Lists | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
+| `cluster-eye-tribe:reference:venom-arrows` — Spider Venom Arrows | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `cluster-eye-tribe:rule-reference:arboreal` — Arboreal | ruleReferences | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 
 </details>
 

@@ -43,6 +43,20 @@ export function describeTraits(profile, traits) {
       /\bAdvantage\b/.test(brief) && /\bMomentum\b/.test(trait.text);
     const useBrief = brief && trait.name !== "Venom" && !oldWording;
     let description = useBrief ? brief : trait.text;
+    // A marked creature prints its own god's effects, not every unused Mark.
+    if (!useBrief && trait.name === "Mark of Chaos" && trait.value) {
+      const headings = [
+        ...trait.text.matchAll(/(?:^|\s)(Khorne|Nurgle|Slaanesh|Tzeentch):/g),
+      ];
+      const index = headings.findIndex((m) => m[1] === trait.value);
+      if (index >= 0)
+        description = trait.text
+          .slice(
+            headings[index].index + headings[index][0].length,
+            headings[index + 1]?.index ?? trait.text.length,
+          )
+          .trim();
+    }
     // A supplement stat block lists training names without short descriptions.
     // Retain the complete definition of each actual training, not unused options.
     if (

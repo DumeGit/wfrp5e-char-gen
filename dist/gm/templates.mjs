@@ -1,6 +1,29 @@
 // Explicit reviewed supplement operations. Core templates remain additive.
 
 export const templateRowKey = (t, kind, i) => `${t.id}:${kind}:${i}`;
+export const templateSlotEnabled = (slot, profile) =>
+  !slot.forProfiles || slot.forProfiles.includes(profile?.id);
+export const templateGearEnabled = (slot, selectedSkills) =>
+  slot.whenSkill === undefined ||
+  Boolean(selectedSkills[slot.whenSkill]?.length);
+
+export function resolveTemplate(template, profile, selectedLore) {
+  if (!template?.shaman) return template;
+  const lore =
+    profile.category === "Beastmen" ? selectedLore || "Arcane" : "Arcane";
+  return {
+    ...template,
+    castingLore: lore,
+    traits: template.traits.map((trait) =>
+      trait.name === "Spellcaster" ? { ...trait, value: lore } : trait,
+    ),
+    magicGroups: template.magicGroups.map((group) =>
+      group.categories.includes("Arcane") && lore !== "Arcane"
+        ? { ...group, categories: ["Arcane", lore] }
+        : group,
+    ),
+  };
+}
 const windByLore = {
   Beasts: "Ghur",
   Death: "Shyish",
@@ -14,6 +37,7 @@ const windByLore = {
 
 export function templateEligibility(t, p) {
   if (!t?.eligibility) return "";
+  if (t.eligibility === "any") return "";
   if (t.eligibility === "zombie")
     return p?.id === "core:creatures:zombie"
       ? ""
@@ -35,7 +59,7 @@ export function templateEligibility(t, p) {
     : "Choose a creature with printed or optional Trained (Mount), of Large Size or smaller (Night Parade p. 10).";
 }
 
-export function templateTraits(t, original) {
+export function templateTraits(t, original, removed = []) {
   if (!t) return original;
   let rows = original
     .filter((x) => !(t.removeTraits || []).includes(x.name))
@@ -47,6 +71,9 @@ export function templateTraits(t, original) {
         : x,
     );
   for (const [i, trait] of (t.traits || []).entries()) {
+    // An explicitly removed grant must not overwrite a GM replacement of the
+    // same Trait when the draft is recalculated.
+    if (removed.includes(templateRowKey(t, "trait", i))) continue;
     const previous = rows.findIndex((x) => x.name === trait.name);
     // Replacing a printed rating does not apply a permanent Trait benefit twice.
     if (previous >= 0) rows[previous] = { ...rows[previous], ...trait };
@@ -71,10 +98,17 @@ export function templateStats(t, stats) {
 }
 
 export function templateEquipment(R, slot) {
-  const rows = [...R.weapons, ...R.armour];
+  const rows =
+    slot.kind === "ammunition" ? R.market : [...R.weapons, ...R.armour];
   return rows.filter((x) => {
     if (x.source.book !== "core") return false;
-    if (slot.names) return slot.names.includes(x.name);
+    if (slot.names || slot.groups)
+      return (
+        slot.names?.includes(x.name) ||
+        slot.groups?.some(
+          (group) => x.group?.toLowerCase() === group.toLowerCase(),
+        )
+      );
     if (slot.quick) return x.quick;
     if (slot.group) return x.group?.toLowerCase() === slot.group.toLowerCase();
     return (
@@ -93,6 +127,8 @@ export function templateIssues(
   spells,
   gear,
   add,
+  traits = [],
+  selectedTalents = {},
 ) {
   if (!t) return;
   const issue = (message, target, code, step = 1) =>
@@ -105,16 +141,22 @@ export function templateIssues(
       "template.foundation",
     );
   if (t.matchWind) {
-    const lore = talents
-      .find(
-        (x) =>
-          x.origin === "Template" &&
-          /^Arcane Magic \(/.test(x.name) &&
-          x.name !== "Arcane Magic (Necromancy)",
-      )
-      ?.name.match(/\((.*)\)/)?.[1];
+    const index = t.talents.findIndex((slot) =>
+      slot.options.some(
+        (name) =>
+          /^Arcane Magic \(/.test(name) && name !== "Arcane Magic (Necromancy)",
+      ),
+    );
+    const slot = t.talents[index];
+    const name =
+      slot?.options.length === 1 ? slot.options[0] : selectedTalents[index];
+    const lore = t.castingLore || name?.match(/\((.*)\)/)?.[1];
     const channel = templateSkills.find((x) => /^Channelling \(/.test(x.name));
-    if (lore && channel && channel.name !== `Channelling (${windByLore[lore]})`)
+    if (
+      windByLore[lore] &&
+      channel &&
+      channel.name !== `Channelling (${windByLore[lore]})`
+    )
       issue(
         `Channelling must match the selected ${lore} Lore: choose ${windByLore[lore]}.`,
         "#template-skill-0",
@@ -122,20 +164,46 @@ export function templateIssues(
       );
   }
   for (const [i, slot] of (t.gear || []).entries()) {
+    if (
+      slot.whenSkill !== undefined &&
+      !templateSkills.some((skill) => skill.slot === slot.whenSkill)
+    )
+      continue;
     if (!gear.some((x) => x.key === templateRowKey(t, "gear", i)))
       issue(
         `Choose ${slot.label} for ${t.name}.`,
         `#template-gear-${i}`,
         "template.equipment",
       );
+    if (slot.forWeapon !== undefined) {
+      const weapon = gear.find(
+        (x) => x.key === templateRowKey(t, "gear", slot.forWeapon),
+      );
+      const item = gear.find((x) => x.key === templateRowKey(t, "gear", i));
+      const weaponName = t.gear[slot.forWeapon].options.find(
+        (x) => x.id === weapon?.id,
+      )?.name;
+      const ammoName = slot.options.find((x) => x.id === item?.id)?.name;
+      if (
+        weaponName &&
+        ammoName &&
+        !slot.ammunitionFor[weaponName]?.includes(ammoName)
+      )
+        issue(
+          "Choose ammunition for the selected weapon.",
+          `#template-gear-${i}`,
+          "template.ammunition",
+        );
+    }
   }
   for (const group of t.magicGroups || []) {
     const count = spells.filter(
       (x) => !x.ritual && group.categories.includes(x.category),
     ).length;
-    if (count !== group.count)
+    const minimum = group.minimum ?? group.count;
+    if (count < minimum || count > group.count)
       issue(
-        `${t.name}: choose ${group.count} ${group.categories.join(" / ")} spells (${count} selected).`,
+        `${t.name}: choose ${minimum === group.count ? group.count : `${minimum}–${group.count}`} ${group.categories.join(" / ")} spells (${count} selected).`,
         "#gm-magic",
         "template.spells",
         2,
@@ -155,6 +223,52 @@ export function templateIssues(
       "template.spell-list",
       2,
     );
+  if (t.chaosLores) {
+    for (const spell of spells) {
+      if (!["Tzeentch", "Slaanesh", "Nurgle"].includes(spell.category))
+        continue;
+      if (
+        !traits.some(
+          (trait) =>
+            trait.name === "Mark of Chaos" && trait.value === spell.category,
+        ) ||
+        !talents.some(
+          (talent) => talent.name === `Chaos Magic (${spell.category})`,
+        )
+      )
+        issue(
+          `${spell.category} spells require its matching Mark of Chaos and Chaos Magic Talent for this template.`,
+          "#gm-magic",
+          "template.chaos-lore",
+          2,
+        );
+    }
+    for (const spell of spells) {
+      if (
+        spell.category === "Petty" ||
+        ["Tzeentch", "Slaanesh", "Nurgle"].includes(spell.category)
+      )
+        continue;
+      if (
+        spell.category !== "Arcane" &&
+        !talents.some(
+          (talent) =>
+            talent.name === `Arcane Magic (${spell.category})` &&
+            t.chaosLores.includes(spell.category),
+        )
+      )
+        issue(
+          "Choose spells from the selected Chaos Sorcerer Colour Lore or its permitted Chaos Lore.",
+          "#gm-magic",
+          "template.colour-lore",
+          2,
+        );
+    }
+  }
+}
+
+export function templateMagicLabel(group) {
+  return `${group.minimum === undefined || group.minimum === group.count ? group.count : `Up to ${group.count}`} ${group.categories.join(" / ")}`;
 }
 
 export function templateSummary(t) {

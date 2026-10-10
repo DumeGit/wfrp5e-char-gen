@@ -27197,6 +27197,257 @@
           "reason": "No standalone mechanical reference or creator option."
         }
       ]
+    },
+    "bayl-many-eyes": {
+      "sourceHash": "bf5839ff86537d1d4aee619d4d4095904b58de8d86295383d5695703114b4a6e",
+      "publishedSHA256": "daf4a0c75f32fa8cbe59a44fc3ce3fba4da16c4fc19305e8ff55970b805d7811",
+      "entries": 3,
+      "areas": [
+        {
+          "first": 3,
+          "last": 19,
+          "topic": "Reviewed template procedures and Sorcerer rules; stat blocks/named NPCs excluded from search"
+        }
+      ],
+      "records": [
+        {
+          "id": "bayl-many-eyes:reference:applying-templates",
+          "name": "Applying Chaos Warrior Advancement Templates",
+          "page": 3,
+          "disposition": "included"
+        },
+        {
+          "id": "bayl-many-eyes:reference:sorcerer-lores",
+          "name": "Chaos Sorcerer Spell Lists",
+          "page": 9,
+          "disposition": "included"
+        },
+        {
+          "id": "bayl-many-eyes:reference:sorcerer-armour",
+          "name": "Chaos Sorcerers and Armour",
+          "page": 9,
+          "disposition": "included"
+        },
+        {
+          "id": "bayl-many-eyes:creatures:chaos-warrior-of-nurgle",
+          "name": "Chaos Warrior of Nurgle",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:creatures:chaos-steed",
+          "name": "Chaos Steed",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:chosen",
+          "name": "Chosen",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:chaos-knight",
+          "name": "Chaos Knight",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:exalted-hero",
+          "name": "Exalted Hero",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:chaos-lord",
+          "name": "Chaos Lord",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:forsaken",
+          "name": "Forsaken",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:chaos-sorcerer",
+          "name": "Chaos Sorcerer",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:template:chaos-sorcerer-lord",
+          "name": "Chaos Sorcerer Lord",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from global search."
+        },
+        {
+          "id": "bayl-many-eyes:excluded:mark",
+          "name": "Mark of Nurgle",
+          "page": 10,
+          "disposition": "existing",
+          "reason": "Core Mark of Chaos (Nurgle), p. 359, already provides this rule."
+        },
+        {
+          "id": "bayl-many-eyes:excluded:named",
+          "name": "Bayl, Dónalegur, Ryðklumpur, Tannpína and their unique mutations",
+          "page": "12–15",
+          "disposition": "excluded",
+          "reason": "Named characters excluded by user scope."
+        },
+        {
+          "id": "bayl-many-eyes:excluded:prose",
+          "name": "Incunabulum, warband disposition and adventure encounters",
+          "page": "4–18",
+          "disposition": "excluded",
+          "reason": "Setting, campaign and adventure content, not standalone creator mechanics."
+        },
+        {
+          "id": "bayl-many-eyes:excluded:summary",
+          "name": "Talent and Trait summary",
+          "page": 19,
+          "disposition": "existing",
+          "reason": "Use current Fifth Edition definitions instead of duplicated older rules."
+        }
+      ]
+    },
+    "cluster-eye-tribe": {
+      "sourceHash": "ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8a",
+      "publishedSHA256": "80b0b794195115c6ff64c028b4ece766ff477b801b1f7729b3666bae0eddf68e",
+      "entries": 5,
+      "areas": [
+        {
+          "first": 3,
+          "last": 19,
+          "topic": "Creature templates, mounts, spell restrictions, Arboreal and nonlethal venom arrows"
+        }
+      ],
+      "records": [
+        {
+          "id": "cluster-eye-tribe:reference:applying-templates",
+          "name": "Applying Creature Advancement Templates",
+          "page": 3,
+          "disposition": "included"
+        },
+        {
+          "id": "cluster-eye-tribe:reference:shaman-spell-lists",
+          "name": "Shaman Spell Lists",
+          "page": 8,
+          "disposition": "included"
+        },
+        {
+          "id": "cluster-eye-tribe:reference:shaman-armour",
+          "name": "Shamans and Armour",
+          "page": 9,
+          "disposition": "included"
+        },
+        {
+          "id": "cluster-eye-tribe:reference:mounted-skills",
+          "name": "Goblin and Orc Mount Skills",
+          "page": 9,
+          "disposition": "included"
+        },
+        {
+          "id": "cluster-eye-tribe:reference:venom-arrows",
+          "name": "Spider Venom Arrows",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "cluster-eye-tribe:creatures:forest-goblin",
+          "name": "Forest Goblin",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:creatures:drakwald-mancatcher",
+          "name": "Drakwald Mancatcher",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:skirmisher",
+          "name": "Skirmisher",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:soldier",
+          "name": "Soldier",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:elite",
+          "name": "Elite",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:chief",
+          "name": "Chief",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:warlord",
+          "name": "Warlord",
+          "page": 8,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:shaman",
+          "name": "Shaman",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:template:shaman-lord",
+          "name": "Shaman Lord",
+          "page": 9,
+          "disposition": "included",
+          "reason": "GM creator only; excluded from shared search."
+        },
+        {
+          "id": "cluster-eye-tribe:excluded:named",
+          "name": "Vish Venombarb, Bograt the Blasted, Blackhearted Nurd and Bugshot",
+          "page": "12–15",
+          "disposition": "excluded",
+          "reason": "Named characters excluded by user scope."
+        },
+        {
+          "id": "cluster-eye-tribe:excluded:prose",
+          "name": "Incunabulum, disposition, adventures and encounter scenes",
+          "page": "4–18",
+          "disposition": "excluded",
+          "reason": "Setting and adventure content, not standalone mechanical references."
+        },
+        {
+          "id": "cluster-eye-tribe:excluded:summary",
+          "name": "Older Talent and Trait summaries",
+          "page": 19,
+          "disposition": "existing",
+          "reason": "Reuse current core definitions; Arboreal is imported separately as a sourced Trait reference."
+        }
+      ]
     }
   }
 }

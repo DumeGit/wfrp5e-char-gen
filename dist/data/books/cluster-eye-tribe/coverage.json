@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "cluster-eye-tribe:feature:gm",
+      "name": "Two profiles and seven advancement templates",
+      "status": "adapted",
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "reason": "Approved Size, core armour/Longbow, bounded Shaman spells, explicit choices and core Talent/Trait definitions."
+    },
+    {
+      "id": "cluster-eye-tribe:feature:arboreal",
+      "name": "Arboreal",
+      "status": "implemented",
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 19
+      },
+      "reason": "Printed situational SL effect; no permanent Skill calculation or Legacy conversion."
+    },
+    {
+      "id": "cluster-eye-tribe:feature:riding",
+      "name": "Goblin and Orc mount Skills",
+      "status": "implemented",
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 9
+      },
+      "reason": "Explicit optional +20 Ride grants; no automatic mount sheet or PC advances."
+    },
+    {
+      "id": "cluster-eye-tribe:feature:venom-arrows",
+      "name": "Spider Venom Arrows",
+      "status": "reference-only",
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 10
+      },
+      "reason": "Specific nonlethal ammunition rule; no printed purchase profile or live poison tracking."
+    },
+    {
+      "id": "cluster-eye-tribe:feature:fimir",
+      "name": "Fimir Shaman spell lists",
+      "status": "reference-only",
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "reason": "No installed Fimir foundation; Ogre Lore restrictions remain enforced without invented grants."
+    },
+    {
+      "id": "cluster-eye-tribe:feature:excluded",
+      "name": "Named characters and adventures",
+      "status": "deferred",
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 12
+      },
+      "reason": "Named Vish, Bograt, Nurd and Bugshot, setting and encounters excluded by user scope."
+    }
+  ]
+}

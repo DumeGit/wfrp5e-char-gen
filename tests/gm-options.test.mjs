@@ -57,10 +57,20 @@ test("GM reuses all registered base-book options once, while books gate only fou
     "cants",
   ])
     assert.deepEqual(R[collection], expected[collection], collection);
-  assert.equal(R.books.length, 12);
+  assert.deepEqual(
+    R.books.map((b) => b.id),
+    expected.books.map((b) => b.id),
+  );
   assert.deepEqual(
     foundationBooks(data).map((b) => b.id),
-    ["core", "up-in-arms", "archives-ii", "night-parade"],
+    [
+      "core",
+      "up-in-arms",
+      "archives-ii",
+      "night-parade",
+      "bayl-many-eyes",
+      "cluster-eye-tribe",
+    ],
   );
   assert.equal(gmCatalogue(data, s.books).profiles.length, 49);
   s.books.push("up-in-arms", "archives-ii");

@@ -8,7 +8,7 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 12,
+    "books": 14,
     "careers": 126,
     "magicProfiles": 536,
     "rituals": 17,
@@ -41015,6 +41015,278 @@
             "page": 12
           },
           "reason": "Named characters, warband management and adventure prose excluded by scope."
+        }
+      ]
+    },
+    {
+      "id": "bayl-many-eyes",
+      "title": "The Warband of Bayl of Many Eyes",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 3,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 1,
+        "adapted": 1,
+        "reference-only": 1,
+        "unavailable": 0,
+        "deferred": 1
+      },
+      "kinds": {
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 3,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "bayl-many-eyes:reference:applying-templates",
+          "kind": "referenceEntries",
+          "name": "Applying Chaos Warrior Advancement Templates",
+          "status": "reference-only",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 3
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "bayl-many-eyes:reference:sorcerer-armour",
+          "kind": "referenceEntries",
+          "name": "Chaos Sorcerers and Armour",
+          "status": "reference-only",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 9
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "bayl-many-eyes:reference:sorcerer-lores",
+          "kind": "referenceEntries",
+          "name": "Chaos Sorcerer Spell Lists",
+          "status": "reference-only",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 9
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        }
+      ],
+      "features": [
+        {
+          "id": "bayl-many-eyes:feature:gm",
+          "name": "Chaos Warrior profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 8
+          },
+          "reason": "Reviewed generic profiles/templates use shared Fifth Edition definitions and explicit alternatives."
+        },
+        {
+          "id": "bayl-many-eyes:feature:mark",
+          "name": "Mark of Nurgle",
+          "status": "implemented",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 10
+          },
+          "reason": "Already defined by core Mark of Chaos (Nurgle); reuse without duplicating effects."
+        },
+        {
+          "id": "bayl-many-eyes:feature:named",
+          "name": "Named characters and adventures",
+          "status": "deferred",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 12
+          },
+          "reason": "Bayl, Dónalegur, Ryðklumpur and Tannpína, unique mutations, warband management and adventure scenes excluded."
+        },
+        {
+          "id": "bayl-many-eyes:feature:references",
+          "name": "Chaos Warrior template and Sorcerer rules",
+          "status": "reference-only",
+          "source": {
+            "book": "bayl-many-eyes",
+            "page": 3
+          },
+          "reason": "Three mechanical references; no new live casting or XP development."
+        }
+      ]
+    },
+    {
+      "id": "cluster-eye-tribe",
+      "title": "The Cluster-Eye Tribe",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 6,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 2,
+        "adapted": 1,
+        "reference-only": 2,
+        "unavailable": 0,
+        "deferred": 1
+      },
+      "kinds": {
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 5,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "ruleReferences": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 1,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "cluster-eye-tribe:reference:applying-templates",
+          "kind": "referenceEntries",
+          "name": "Applying Creature Advancement Templates",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 3
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "cluster-eye-tribe:reference:mounted-skills",
+          "kind": "referenceEntries",
+          "name": "Goblin and Orc Mount Skills",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 9
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "cluster-eye-tribe:reference:shaman-armour",
+          "kind": "referenceEntries",
+          "name": "Shamans and Armour",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 9
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "cluster-eye-tribe:reference:shaman-spell-lists",
+          "kind": "referenceEntries",
+          "name": "Shaman Spell Lists",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 8
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "cluster-eye-tribe:reference:venom-arrows",
+          "kind": "referenceEntries",
+          "name": "Spider Venom Arrows",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 10
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "cluster-eye-tribe:rule-reference:arboreal",
+          "kind": "ruleReferences",
+          "name": "Arboreal",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 19
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        }
+      ],
+      "features": [
+        {
+          "id": "cluster-eye-tribe:feature:arboreal",
+          "name": "Arboreal",
+          "status": "implemented",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 19
+          },
+          "reason": "Printed situational SL effect; no permanent Skill calculation or Legacy conversion."
+        },
+        {
+          "id": "cluster-eye-tribe:feature:excluded",
+          "name": "Named characters and adventures",
+          "status": "deferred",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 12
+          },
+          "reason": "Named Vish, Bograt, Nurd and Bugshot, setting and encounters excluded by user scope."
+        },
+        {
+          "id": "cluster-eye-tribe:feature:fimir",
+          "name": "Fimir Shaman spell lists",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 8
+          },
+          "reason": "No installed Fimir foundation; Ogre Lore restrictions remain enforced without invented grants."
+        },
+        {
+          "id": "cluster-eye-tribe:feature:gm",
+          "name": "Two profiles and seven advancement templates",
+          "status": "adapted",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 8
+          },
+          "reason": "Approved Size, core armour/Longbow, bounded Shaman spells, explicit choices and core Talent/Trait definitions."
+        },
+        {
+          "id": "cluster-eye-tribe:feature:riding",
+          "name": "Goblin and Orc mount Skills",
+          "status": "implemented",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 9
+          },
+          "reason": "Explicit optional +20 Ride grants; no automatic mount sheet or PC advances."
+        },
+        {
+          "id": "cluster-eye-tribe:feature:venom-arrows",
+          "name": "Spider Venom Arrows",
+          "status": "reference-only",
+          "source": {
+            "book": "cluster-eye-tribe",
+            "page": 10
+          },
+          "reason": "Specific nonlethal ammunition rule; no printed purchase profile or live poison tracking."
         }
       ]
     }

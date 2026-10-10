@@ -64,7 +64,13 @@ test("category filters combine with the book and text query; browsing stays alph
       (row) => row.entry.source.book === "archives-iii-hedge",
     ),
   );
-  assert.equal(new Set(rows.map((row) => row.filterValues.book[0])).size, 12);
+  assert.deepEqual(
+    [...new Set(rows.map((row) => row.filterValues.book[0]))].sort(),
+    library.packs
+      .filter((p) => p.manifest.kind !== "variant")
+      .map((p) => p.manifest.id)
+      .sort(),
+  );
   assert.equal(
     browse("all", { class: "Warrior" }, "Soldier").length,
     0,

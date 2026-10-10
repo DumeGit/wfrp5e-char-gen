@@ -261,14 +261,31 @@ export function addGMSupplement(data, raw, R) {
       "trappings",
       "magicGroups",
       "matchWind",
+      "chaosLores",
       "adaptation",
+      "shaman",
+      "removeArmour",
     ];
     if (Object.keys(t).some((key) => !fields.includes(key)))
       throw Error("Unsupported template field.");
+    if (
+      (t.shaman !== undefined &&
+        (t.shaman !== true || book.id !== "cluster-eye-tribe")) ||
+      (t.removeArmour !== undefined && t.removeArmour !== true)
+    )
+      throw Error("Invalid Shaman template operation.");
     if (t.armour !== undefined && (!Number.isInteger(t.armour) || t.armour < 1))
       throw Error("Invalid template armour.");
-    if (!["undead", "zombie", "mount"].includes(t.eligibility))
+    if (!["any", "undead", "zombie", "mount"].includes(t.eligibility))
       throw Error("Unsupported template foundation restriction.");
+    if (
+      t.chaosLores &&
+      (!Array.isArray(t.chaosLores) ||
+        !t.chaosLores.length ||
+        new Set(t.chaosLores).size !== t.chaosLores.length ||
+        t.chaosLores.some((lore) => !R.config.colours.includes(lore)))
+    )
+      throw Error("Invalid template Chaos Sorcerer Lores.");
     for (const [key, amount] of Object.entries(t.adjustments))
       if (
         ![
@@ -342,9 +359,41 @@ export function addGMSupplement(data, raw, R) {
             : !Number.isInteger(slot.ranks) || slot.ranks < 1
         )
           throw Error("Invalid template grant amount.");
+        if (slot.optional !== undefined && typeof slot.optional !== "boolean")
+          throw Error("Invalid optional template grant.");
+        if (
+          slot.forProfiles &&
+          (!slot.optional ||
+            !Array.isArray(slot.forProfiles) ||
+            !slot.forProfiles.length ||
+            slot.forProfiles.some(
+              (id) =>
+                ![...data.profiles, ...raw.profiles].some((p) => p.id === id),
+            ))
+        )
+          throw Error("Invalid optional template foundations.");
         return { ...slot, options: names };
       });
     const gear = (t.gear || []).map((slot) => {
+      if (
+        slot.whenSkill !== undefined &&
+        (!Number.isInteger(slot.whenSkill) ||
+          !t.skills[slot.whenSkill]?.optional)
+      )
+        throw Error("Invalid conditional template equipment.");
+      if (
+        slot.forWeapon !== undefined &&
+        (!Number.isInteger(slot.forWeapon) ||
+          slot.forWeapon < 0 ||
+          slot.forWeapon >= t.gear.length ||
+          !slot.ammunitionFor ||
+          Object.values(slot.ammunitionFor).some(
+            (names) =>
+              !Array.isArray(names) ||
+              names.some((name) => !slot.names?.includes(name)),
+          ))
+      )
+        throw Error("Invalid template ammunition link.");
       const entries = templateEquipment(R, slot);
       if (!entries.length)
         throw Error(`No core equipment choices for ${slot.label}.`);
@@ -357,6 +406,10 @@ export function addGMSupplement(data, raw, R) {
       if (
         !Number.isInteger(group.count) ||
         group.count < 1 ||
+        (group.minimum !== undefined &&
+          (!Number.isInteger(group.minimum) ||
+            group.minimum < 0 ||
+            group.minimum > group.count)) ||
         !Array.isArray(group.categories) ||
         group.categories.some((c) => !R.spells.some((x) => x.category === c))
       )
@@ -401,6 +454,12 @@ export function addGMSupplement(data, raw, R) {
     for (const t of [...p.traits, ...p.optionalTraits])
       if (!definitions.some((x) => x.name === t.name))
         throw Error(`${p.name}: unknown core Trait ${t.name}.`);
+      else if (
+        t.requiresParameter !== undefined &&
+        (t.requiresParameter !== true ||
+          !definitions.find((x) => x.name === t.name)?.parameter)
+      )
+        throw Error(`${p.name}: invalid required Trait parameter.`);
     const rows = (kind) =>
       p[kind].map((x, i) => ({
         ...x,

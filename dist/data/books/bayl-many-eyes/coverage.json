@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "bayl-many-eyes:feature:gm",
+      "name": "Chaos Warrior profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 8
+      },
+      "reason": "Reviewed generic profiles/templates use shared Fifth Edition definitions and explicit alternatives."
+    },
+    {
+      "id": "bayl-many-eyes:feature:references",
+      "name": "Chaos Warrior template and Sorcerer rules",
+      "status": "reference-only",
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 3
+      },
+      "reason": "Three mechanical references; no new live casting or XP development."
+    },
+    {
+      "id": "bayl-many-eyes:feature:mark",
+      "name": "Mark of Nurgle",
+      "status": "implemented",
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 10
+      },
+      "reason": "Already defined by core Mark of Chaos (Nurgle); reuse without duplicating effects."
+    },
+    {
+      "id": "bayl-many-eyes:feature:named",
+      "name": "Named characters and adventures",
+      "status": "deferred",
+      "source": {
+        "book": "bayl-many-eyes",
+        "page": 12
+      },
+      "reason": "Bayl, Dónalegur, Ryðklumpur and Tannpína, unique mutations, warband management and adventure scenes excluded."
+    }
+  ]
+}

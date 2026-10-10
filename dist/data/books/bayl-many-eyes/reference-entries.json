@@ -1,0 +1,26 @@
+[
+  {
+    "id": "bayl-many-eyes:reference:applying-templates",
+    "name": "Applying Chaos Warrior Advancement Templates",
+    "category": "rule",
+    "topic": "Chaos Warriors",
+    "page": 3,
+    "text": "Add the indicated Advances to the base creature’s Characteristics and add its listed Skill Advances, Talents and Trappings. Some templates also include customisation options. Recalculate Wounds after adjusting Strength, Toughness and Willpower."
+  },
+  {
+    "id": "bayl-many-eyes:reference:sorcerer-lores",
+    "name": "Chaos Sorcerer Spell Lists",
+    "category": "rule",
+    "topic": "Chaos Warriors",
+    "page": 9,
+    "text": "Chaos Sorcerers use one of the Lores of Fire, Death, Metal or Shadow. A Sorcerer bearing a Chaos god’s Mark may also use the Lore of Tzeentch, Slaanesh or Nurgle respectively."
+  },
+  {
+    "id": "bayl-many-eyes:reference:sorcerer-armour",
+    "name": "Chaos Sorcerers and Armour",
+    "category": "rule",
+    "topic": "Chaos Warriors",
+    "page": 9,
+    "text": "Ordinary armour inhibits Chaos Sorcerers’ spellcasting as it does other spellcasters. Chaos Armour gifted by their patrons does not inhibit spellcasting. When designing a Sorcerer, choose no armour, mundane armour or Chaos Armour; the passage supplies no separate armour protection values."
+  }
+]

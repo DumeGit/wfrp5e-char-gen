@@ -48,7 +48,15 @@ test("GM books are independently opt-in, catalogue order is alphabetical and exc
       ),
     ),
   );
-  assert.equal(rulesFor(freshGM(data)).books.length, 12);
+  assert.deepEqual(
+    rulesFor(freshGM(data))
+      .books.map((b) => b.id)
+      .sort(),
+    library.packs
+      .filter((p) => p.manifest.kind !== "variant")
+      .map((p) => p.manifest.id)
+      .sort(),
+  );
 });
 test("supplement compilation validates provenance, numeric tables and core Trait identities", () => {
   const base = prepareGM(core, rulesFor(freshGM(data)));

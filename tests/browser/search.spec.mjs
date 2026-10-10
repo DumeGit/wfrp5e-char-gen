@@ -165,7 +165,12 @@ for (const creator of ["PC", "GM"]) {
   }) => {
     await (creator === "PC" ? openPC(page) : openGM(page));
     await search(page);
-    await expect(page.locator("#book-search-book option")).toHaveCount(13);
+    await expect(
+      page.locator('#book-search-book option[value="bayl-many-eyes"]'),
+    ).toBeAttached();
+    await expect(
+      page.locator('#book-search-book option[value="cluster-eye-tribe"]'),
+    ).toBeAttached();
     await categoryFilters(page, "career");
     await page
       .getByRole("combobox", { name: "Class", exact: true })

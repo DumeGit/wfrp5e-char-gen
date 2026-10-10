@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cluster-eye-tribe:skills:ride",
+    "path": [
+      "skillOptions",
+      "Ride"
+    ],
+    "operation": "append",
+    "value": [
+      "Spider",
+      "Wolf",
+      "Boar"
+    ],
+    "page": 9,
+    "reason": "Printed mount specialisations; optional GM bonuses are separate from PC creation allocations."
+  }
+]

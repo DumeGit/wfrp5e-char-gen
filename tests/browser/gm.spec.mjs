@@ -154,7 +154,7 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   page,
 }) => {
   await openGM(page);
-  await expect(page.locator(".gm-books input[data-book]")).toHaveCount(3);
+  await expect(page.locator("#gm-book-up-in-arms")).toBeVisible();
   await expect(page.locator("#gm-book-high-elf")).toHaveCount(0);
   await expect(page.locator("#gm-book-dwarf-guide")).toHaveCount(0);
   await applyProfile(page, "High Elf or Wood Elf");
@@ -685,4 +685,212 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
     "archives-iii:cant:fire-set-alight",
   );
   await expect(lore).toHaveValue("Fire");
+});
+
+test("Bayl Warband uses shared profile/template filters, explicit choices and optional mounted Skills @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await expect(
+    page.locator("label:has(#gm-book-bayl-many-eyes)"),
+  ).toContainText("2 profiles · 7 templates");
+  await page.locator("#gm-book-bayl-many-eyes").check();
+  await page.locator("#gm-profile-book").selectOption("bayl-many-eyes");
+  await expect(page.locator(".gm-profile-card")).toHaveCount(2);
+  await applyProfile(page, "Chaos Warrior of Nurgle");
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("button", { name: "Choose template", exact: true })
+    .click();
+  await page.locator("#gm-template-book").selectOption("bayl-many-eyes");
+  await expect(page.locator("#gm-template-results .gm-picker-row")).toHaveCount(
+    7,
+  );
+  await page
+    .getByRole("dialog")
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText("Exalted Hero", { exact: true }) })
+    .getByRole("button", { name: "Preview", exact: true })
+    .click();
+  const preview = page.getByRole("dialog", {
+    name: "Exalted Hero",
+    exact: true,
+  });
+  await expect(preview).toContainText("Optional");
+  await preview
+    .getByRole("button", { name: "Apply template", exact: true })
+    .click();
+  const riding = page.getByLabel(
+    "Optional Chaos Steed · Ride specialisation · +20",
+    { exact: true },
+  );
+  await expect(riding).toHaveValue("");
+  for (const select of await page.locator("[data-template-skill]").all()) {
+    if ((await select.getAttribute("id")) === (await riding.getAttribute("id")))
+      continue;
+    const choice = await select
+      .locator("option")
+      .nth((await select.getAttribute("data-choice")) === "1" ? 2 : 1)
+      .getAttribute("value");
+    await select.selectOption(choice);
+  }
+  for (const select of await page.locator("[data-template-gear]").all())
+    await select.selectOption(
+      await select.locator("option").nth(1).getAttribute("value"),
+    );
+  await expect(
+    page.getByRole("region", { name: "Choices to finish" }),
+  ).toHaveCount(0);
+  await riding.selectOption(
+    await riding.locator("option").nth(1).getAttribute("value"),
+  );
+  await expect(riding).not.toHaveValue("");
+  await riding.selectOption("");
+  await expect(riding).toHaveValue("");
+  await page
+    .getByRole("button", { name: "Remove template", exact: true })
+    .click();
+  await expect(page.locator("[data-template-skill]")).toHaveCount(0);
+  await noOverflow(page);
+});
+
+test("Cluster-Eye exposes missing targets early and validates template ammunition on desktop and phones @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await expect(
+    page.locator("label:has(#gm-book-cluster-eye-tribe)"),
+  ).toContainText("2 profiles · 7 templates");
+  await page.locator("#gm-book-cluster-eye-tribe").check();
+  await page.locator("#gm-profile-book").selectOption("cluster-eye-tribe");
+  await applyProfile(page, "Forest Goblin");
+  const issues = page.getByRole("region", { name: "Choices to finish" });
+  await issues
+    .getByRole("button", { name: /Set target for Animosity/ })
+    .click();
+  const target = page.getByLabel("Target", { exact: true });
+  await expect(target).toBeFocused();
+  await target.fill("Rival Goblin tribe");
+  await target.press("Tab");
+  await expect(issues).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "Choose template", exact: true })
+    .click();
+  await page.locator("#gm-template-book").selectOption("cluster-eye-tribe");
+  await page
+    .getByRole("dialog")
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText("Skirmisher", { exact: true }) })
+    .getByRole("button", { name: "Preview", exact: true })
+    .click();
+  await page
+    .getByRole("dialog", { name: "Skirmisher", exact: true })
+    .getByRole("button", { name: "Apply template", exact: true })
+    .click();
+  await page.locator("#template-skill-2").selectOption("Ranged (Bow)");
+  await page.locator("#template-skill-3").selectOption("Stealth (Rural)");
+  await page.locator("#template-gear-1").selectOption({ label: "Bow (2H)" });
+  await page
+    .locator("#template-gear-2")
+    .selectOption({ label: "Stone Bullet (12)" });
+  await expect(issues).toContainText(
+    "Choose ammunition for the selected weapon.",
+  );
+  await page.locator("#template-gear-2").selectOption({ label: "Arrow (12)" });
+  await expect(issues).toHaveCount(0);
+  await page
+    .getByRole("tab", { name: "Skills & Talents", exact: true })
+    .click();
+  await page
+    .getByText("Optional Greenskin mount Skills", { exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Ride (Spider) +20", exact: true })
+    .click();
+  await expect(
+    page.getByRole("spinbutton", { name: "Ride (Spider) total", exact: true }),
+  ).toHaveValue("65");
+  await noOverflow(page);
+});
+
+async function applyBookTemplate(page, book, name) {
+  await page
+    .getByRole("button", { name: "Choose template", exact: true })
+    .click();
+  await page.locator("#gm-template-book").selectOption(book);
+  await page
+    .getByRole("dialog")
+    .locator(".gm-picker-row")
+    .filter({ has: page.getByText(name, { exact: true }) })
+    .getByRole("button", { name: "Preview", exact: true })
+    .click();
+  await page
+    .getByRole("dialog", { name, exact: true })
+    .getByRole("button", { name: "Apply template", exact: true })
+    .click();
+}
+test("Cluster-Eye Mancatcher routes missing Venom recovery Difficulty to a native selector @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-cluster-eye-tribe").check();
+  await page.locator("#gm-profile-book").selectOption("cluster-eye-tribe");
+  await applyProfile(page, "Drakwald Mancatcher");
+  const issues = page.getByRole("region", { name: "Choices to finish" });
+  await issues
+    .getByRole("button", { name: /Set difficulty for Venom/i })
+    .click();
+  const difficulty = page.getByLabel("Difficulty", { exact: true });
+  await expect(difficulty).toBeFocused();
+  await difficulty.selectOption("Difficult");
+  await expect(issues).toHaveCount(0);
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+  await expect(page.locator(".gm-panel")).toContainText("Fangs");
+  await noOverflow(page);
+});
+test("Cluster-Eye Goblin Warlord optional bow package adds and removes Skill and ammunition together @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await page.locator("#gm-book-cluster-eye-tribe").check();
+  await applyProfile(page, "Forest Goblin");
+  await gmStep(page, "Customise");
+  await applyBookTemplate(page, "cluster-eye-tribe", "Warlord");
+  const bow = page.locator("#template-skill-8");
+  await expect(bow).toHaveValue("");
+  await bow.selectOption("Ranged (Bow)");
+  await gmStep(page, "Equipment & magic");
+  await expect(page.locator(".gm-panel")).toContainText("Arrow (12)");
+  await gmStep(page, "Customise");
+  await bow.selectOption("");
+  await gmStep(page, "Equipment & magic");
+  await expect(page.locator(".gm-panel")).not.toContainText("Arrow (12)");
+  await noOverflow(page);
+});
+test("Cluster-Eye Beastman Shaman Lore selector changes the Trait and matching Wind requirement @gm @mobile", async ({
+  page,
+}, testInfo) => {
+  await openGM(page);
+  await page.locator("#gm-book-cluster-eye-tribe").check();
+  await applyProfile(page, "Gor");
+  await gmStep(page, "Customise");
+  await applyBookTemplate(page, "cluster-eye-tribe", "Shaman");
+  await page.getByLabel("Shaman Lore", { exact: true }).selectOption("Death");
+  await page.locator("#template-skill-0").selectOption("Channelling (Aqshy)");
+  const issues = page.getByRole("region", { name: "Choices to finish" });
+  await expect(issues).toContainText(
+    "Channelling must match the selected Death Lore",
+  );
+  await page.locator("#template-skill-0").selectOption("Channelling (Shyish)");
+  await expect(issues).not.toContainText("Channelling must match");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  await expect(page.locator(".gm-panel")).toContainText("Spellcaster (Death)");
+  await noOverflow(page);
+  await page.screenshot({
+    path: testInfo.outputPath("cluster-shaman-choices.png"),
+    fullPage: true,
+  });
 });

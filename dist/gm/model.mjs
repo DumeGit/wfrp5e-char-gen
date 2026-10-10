@@ -6,6 +6,9 @@ import {
   templateStats,
   templateIssues,
   supplementAbilityText,
+  resolveTemplate,
+  templateSlotEnabled,
+  templateGearEnabled,
 } from "./templates.mjs";
 import { KEYS, base, canon, skillInfo, talentInfo, die } from "../rules.mjs";
 import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
@@ -47,6 +50,15 @@ export const BREATH = [
   "Poison",
   "Smoke",
 ];
+export const VENOM_DIFFICULTIES = [
+  "Very Easy",
+  "Easy",
+  "Average",
+  "Challenging",
+  "Difficult",
+  "Hard",
+  "Very Hard",
+];
 export const PARAMETER = {
   Bite: "Damage",
   Breath: "Type",
@@ -87,6 +99,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     templateSkills: {},
     templateTalents: {},
     templateGear: {},
+    templateLore: "",
     stats: {},
     size: "",
     wounds: null,
@@ -94,6 +107,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     tb: null,
     recalculate: false,
     traits: [],
+    traitParameters: {},
     extraTraining: [],
     skills: [],
     talents: [],
@@ -174,6 +188,7 @@ export function validateGMDraft(data, R, s) {
     "templateTalents",
     "templateGear",
     "attackOverrides",
+    "traitParameters",
   ])
     if (
       !plain(s[k]) ||
@@ -301,9 +316,27 @@ export function validateGMDraft(data, R, s) {
     throw Error("Invalid Mark roll.");
   const p = data.profiles.find((p) => p.id === s.profile),
     t = data.templates.find((t) => t.id === s.template);
+  if (
+    typeof s.templateLore !== "string" ||
+    (s.templateLore &&
+      (!t?.shaman ||
+        p?.category !== "Beastmen" ||
+        !["Arcane", "Beasts", "Death", "Shadows"].includes(s.templateLore)))
+  )
+    throw Error("Invalid template Lore.");
+  for (const [key, value] of Object.entries(s.traitParameters))
+    if (
+      !p?.traits.some(
+        (trait) => trait.key === key && trait.requiresParameter,
+      ) ||
+      typeof value !== "string" ||
+      value.length > 1000
+    )
+      throw Error("Invalid printed Trait parameter.");
   for (const [i, names] of Object.entries(s.templateSkills))
     if (
       !t?.skills[i] ||
+      !templateSlotEnabled(t.skills[i], p) ||
       names.length > t.skills[i].count ||
       names.some((n) => n && !t.skills[i].options.includes(n)) ||
       new Set(names.filter(Boolean)).size !== names.filter(Boolean).length
@@ -408,6 +441,7 @@ export function applyTemplate(s, id) {
   s.templateSkills = {};
   s.templateTalents = {};
   s.templateGear = {};
+  s.templateLore = "";
   s.spells = [];
   s.spellLores = {};
   s.cants.choices = {};
@@ -467,6 +501,7 @@ export function gmCastableLores(R) {
   ]);
   return [
     ...new Set([
+      "Arcane",
       ...R.config.colours,
       ...R.spells
         .filter((spell) => !otherTypes.has(spell.category) && !spell.ritual)
@@ -573,19 +608,27 @@ export function calculateGM(data, R, s) {
       wounds: null,
     };
   }
-  const template = data.templates.find((t) => t.id === s.template);
-  const live = (rows) => rows.filter((x) => !s.removed.includes(x.key));
-  const traits = live(templateTraits(template, [...p.traits, ...s.traits])).map(
-    (t) => ({
-      ...t,
-      text: data.traits.find((x) => x.name === t.name)?.text || "",
-      page: data.traits.find((x) => x.name === t.name)?.page || p.page,
-      source: data.traits.find((x) => x.name === t.name)?.source || {
-        book: "core",
-        page: data.traits.find((x) => x.name === t.name)?.page || p.page,
-      },
-    }),
+  const template = resolveTemplate(
+    data.templates.find((t) => t.id === s.template),
+    p,
+    s.templateLore,
   );
+  const live = (rows) => rows.filter((x) => !s.removed.includes(x.key));
+  const printedTraits = p.traits.map((t) => ({
+    ...t,
+    value: s.traitParameters[t.key] ?? t.value,
+  }));
+  const traits = live(
+    templateTraits(template, [...printedTraits, ...s.traits], s.removed),
+  ).map((t) => ({
+    ...t,
+    text: data.traits.find((x) => x.name === t.name)?.text || "",
+    page: data.traits.find((x) => x.name === t.name)?.page || p.page,
+    source: data.traits.find((x) => x.name === t.name)?.source || {
+      book: "core",
+      page: data.traits.find((x) => x.name === t.name)?.page || p.page,
+    },
+  }));
   for (const t of traits.filter(
     (t) => t.name === "Trained" && t.origin === "Printed",
   ))
@@ -668,7 +711,7 @@ export function calculateGM(data, R, s) {
       slot.options.length === 1 ? slot.options[0] : s.templateTalents[i];
     if (!slot.options.includes(name)) {
       add(
-        `Choose ${slot.options.length > 2 ? "a magical Lore Talent" : slot.options.join(" or ")} for ${template.name}.`,
+        `Choose ${slot.label || (slot.options.length > 2 ? "a magical Lore Talent" : slot.options.join(" or "))} for ${template.name}.`,
         1,
         `#template-talent-${i}`,
         "template.talent",
@@ -691,6 +734,8 @@ export function calculateGM(data, R, s) {
     });
   }
   for (const [i, slot] of (template?.skills || []).entries()) {
+    if (!templateSlotEnabled(slot, p)) continue;
+    if (slot.optional && !s.templateSkills[i]?.length) continue;
     const names =
       slot.options.length === 1 ? [slot.options[0]] : s.templateSkills[i] || [];
     if (
@@ -708,7 +753,12 @@ export function calculateGM(data, R, s) {
       continue;
     }
     for (const name of names)
-      templateSkills.push({ name, bonus: slot.bonus, origin: "Template" });
+      templateSkills.push({
+        name,
+        bonus: slot.bonus,
+        origin: "Template",
+        slot: i,
+      });
   }
   const stats = {};
   for (const key of ["M", ...KEYS])
@@ -877,7 +927,11 @@ export function calculateGM(data, R, s) {
     }
     if (t.name === "Amphibious" && stats.S !== null)
       put("Swim", stats.S, "Trait");
-    if (t.name === "Spellcaster" && !template?.magic) {
+    if (
+      t.name === "Spellcaster" &&
+      !template?.magic &&
+      !template?.magicGroups
+    ) {
       for (const lore of parts(t.value)) {
         const wind = {
           Beasts: "Ghur",
@@ -958,7 +1012,10 @@ export function calculateGM(data, R, s) {
       source: { book: "archives-ii", page: 20 },
       control: { step: 1, target: "#gm-tab-2" },
     });
-  for (const t of newTraits) {
+  for (const t of [
+    ...newTraits,
+    ...traits.filter((t) => t.origin === "Printed" && t.requiresParameter),
+  ]) {
     const param =
       PARAMETER[t.name] ??
       data.traits.find((x) => x.name === t.name)?.parameter;
@@ -974,7 +1031,10 @@ export function calculateGM(data, R, s) {
         `#trait-${t.key}`,
       );
   }
-  for (const t of newTraits) {
+  for (const t of [
+    ...newTraits,
+    ...traits.filter((t) => t.origin === "Printed" && t.requiresParameter),
+  ]) {
     const known = {
       Breath: BREATH,
       "Mark of Chaos": ["Khorne", "Nurgle", "Slaanesh", "Tzeentch"],
@@ -983,6 +1043,7 @@ export function calculateGM(data, R, s) {
       Spellcaster: gmCastableLores(R),
       Corruption: ["Minor", "Moderate", "Major"],
       Trained: [...TRAINING, ...(data.training || []).map((x) => x.name)],
+      Venom: VENOM_DIFFICULTIES,
     }[t.name];
     if (known && parts(t.value).some((v) => !known.includes(v)))
       add(
@@ -1001,8 +1062,9 @@ export function calculateGM(data, R, s) {
         /Bow|Sling|Crossbow|Rocks|Breath|Vomit/.test(a.name) ||
         /yards/.test(a.text);
       const free =
-        /Bite|Horns|Tail|Tentacle|Breath|Vomit|Grasp|Howl/.test(a.name) ||
-        /Free Attack/.test(a.text);
+        a.free ??
+        (/Bite|Horns|Tail|Tentacle|Breath|Vomit|Grasp|Howl/.test(a.name) ||
+          /Free Attack/.test(a.text));
       const weapon = R.weapons.find((w) => a.name.startsWith(w.name));
       const char = ranged ? "BS" : "WS",
         skillName = weapon
@@ -1047,6 +1109,12 @@ export function calculateGM(data, R, s) {
       };
     });
   const grantedGear = (template?.gear || []).flatMap((slot, i) => {
+    if (!templateGearEnabled(slot, s.templateSkills)) return [];
+    if (
+      slot.whenSkill !== undefined &&
+      !templateSlotEnabled(template.skills[slot.whenSkill], p)
+    )
+      return [];
     const id =
       !slot.choose && slot.options.length === 1
         ? slot.options[0].id
@@ -1058,18 +1126,34 @@ export function calculateGM(data, R, s) {
             quantity: 1,
             key: templateRowKey(template, "gear", i),
             origin: "Template",
+            ...(slot.adaptation
+              ? {
+                  adaptation: slot.adaptation,
+                  adaptationSource: template.source,
+                }
+              : {}),
           },
         ]
       : [];
   });
   const gear = live([...grantedGear, ...s.gear])
     .filter((g) => !g.id.startsWith("printed-attack-"))
-    .map((g) => ({
-      ...g,
-      entry: [...R.weapons, ...R.armour, ...R.gear, ...R.market].find(
+    .map((g) => {
+      const entry = [...R.weapons, ...R.armour, ...R.gear, ...R.market].find(
         (x) => x.contentId === g.id,
-      ),
-    }));
+      );
+      return {
+        ...g,
+        entry: g.adaptation
+          ? {
+              ...entry,
+              key: g.key,
+              adaptation: g.adaptation,
+              adaptationSource: g.adaptationSource,
+            }
+          : entry,
+      };
+    });
   for (const g of gear) {
     const sizing = equipmentSize(
       R,
@@ -1125,6 +1209,9 @@ export function calculateGM(data, R, s) {
       text: [w.reach, w.qualities].filter(Boolean).join(" · "),
       origin: "GM",
       ranged: w.kind === "ranged",
+      ...(w.adaptation
+        ? { adaptation: w.adaptation, adaptationSource: w.adaptationSource }
+        : {}),
     });
   }
   for (const t of traits.filter((t) => t.origin === "GM" || t.deriveAttack)) {
@@ -1205,7 +1292,11 @@ export function calculateGM(data, R, s) {
       );
   }
   let armour = live(
-    p.armour.filter((a) => !a.optional || s.optionalArmour.includes(a.key)),
+    p.armour.filter(
+      (a) =>
+        !template?.removeArmour &&
+        (!a.optional || s.optionalArmour.includes(a.key)),
+    ),
   );
   for (const g of gear.filter((g) =>
     R.armour.some((a) => a.contentId === g.id),
@@ -1226,7 +1317,7 @@ export function calculateGM(data, R, s) {
     armour.push({
       ...a,
       key: g.key,
-      origin: "GM",
+      origin: g.origin || "GM",
       shield: a.locations === "Shield",
     });
   }
@@ -1353,6 +1444,8 @@ export function calculateGM(data, R, s) {
     spells,
     grantedGear,
     add,
+    traits,
+    s.templateTalents,
   );
   result.undeadRidingOptions = [];
   if (
@@ -1365,6 +1458,28 @@ export function calculateGM(data, R, s) {
     );
   if (talents.some((x) => x.name === "Arcane Magic (Necromancy)"))
     result.undeadRidingOptions.push("Ride (Corpse Cart)");
+  result.ridingOptions = result.undeadRidingOptions.map((name) => ({
+    name,
+    bonus: 20,
+    source: { book: "night-parade", page: 10 },
+  }));
+  if (R.books.some((b) => b.id === "cluster-eye-tribe")) {
+    const mounts = [
+      "core:creatures:goblin",
+      "cluster-eye-tribe:creatures:forest-goblin",
+    ].includes(p.id)
+      ? ["Spider", "Wolf"]
+      : p.id === "core:creatures:orc"
+        ? ["Boar"]
+        : [];
+    result.ridingOptions.push(
+      ...mounts.map((mount) => ({
+        name: `Ride (${mount})`,
+        bonus: 20,
+        source: { book: "cluster-eye-tribe", page: 9 },
+      })),
+    );
+  }
   result.runes = knownRunes(
     R,
     s,
@@ -1406,7 +1521,25 @@ export function calculateGM(data, R, s) {
           book: "archives-ii",
           page: lore === "The Great Maw" ? 32 : 31,
         },
-        control: { step: 1, target },
+        control: {
+          step: 1,
+          target:
+            template?.shaman && target.startsWith("#trait-")
+              ? "#gm-tab-1"
+              : target,
+        },
+      });
+  }
+  if (template?.shaman) {
+    const channel = templateSkills.find(
+      (skill) => base(skill.name) === "Channelling",
+    );
+    const wind = channel?.name.match(/\((.*)\)/)?.[1];
+    const reason = wind && gmLoreIssue(R, p, wind);
+    if (reason)
+      add(reason, 1, "#template-skill-0", "magic.species-wind", {
+        book: "archives-ii",
+        page: 31,
       });
   }
   if (gmSpecies(p) === "Ogre" && R.species.Ogre?.mechanics) {

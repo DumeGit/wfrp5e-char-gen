@@ -450,12 +450,13 @@ async function action(el) {
     addEntry(el.dataset.id);
     return;
   }
-  if (a === "undead-ride") {
+  if (a === "undead-ride" || a === "book-ride") {
     const name = el.dataset.name;
-    if (!r.undeadRidingOptions.includes(name) || r.stats.Ag === null) return;
+    const choice = r.ridingOptions.find((x) => x.name === name);
+    if (!choice || r.stats.Ag === null) return;
     commit(() => {
       const total = Math.max(
-        r.stats.Ag + 20,
+        r.stats.Ag + choice.bonus,
         r.skills.find((x) => x.name === name)?.total || 0,
       );
       s.removed = s.removed.filter((k) => k !== `skill:${name}`);
@@ -467,9 +468,9 @@ async function action(el) {
           name,
           total,
           origin: "GM",
-          source: { book: "night-parade", page: 10 },
+          source: choice.source,
         });
-    }, `${name} added at +20 or its higher existing bonus.`);
+    }, `${name} added at +${choice.bonus} or its higher existing bonus.`);
     return;
   }
   if (a === "optional-trait") {
@@ -803,6 +804,9 @@ function change(el) {
         const list = s.templateSkills[d.templateSkill] || [];
         list[Number(d.choice)] = val;
         s.templateSkills[d.templateSkill] = Array.from(list, (x) => x || "");
+        const template = data.templates.find((t) => t.id === s.template);
+        if (!val && template?.skills[d.templateSkill]?.optional)
+          delete s.templateSkills[d.templateSkill];
       }
       if (d.templateGear !== undefined) {
         if (val) s.templateGear[d.templateGear] = val;
@@ -812,7 +816,13 @@ function change(el) {
         if (val) s.templateTalents[d.templateTalent] = val;
         else delete s.templateTalents[d.templateTalent];
       }
-      if (d.trait) s.traits.find((t) => t.key === d.trait).value = String(val);
+      if (d.templateLore !== undefined) s.templateLore = String(val);
+      if (d.trait) {
+        const trait = s.traits.find((t) => t.key === d.trait);
+        if (trait) trait.value = String(val);
+        else if (r.traits.some((t) => t.key === d.trait && t.requiresParameter))
+          s.traitParameters[d.trait] = String(val);
+      }
       if (d.training || d.lore) {
         const t = s.traits.find((t) => t.key === (d.training || d.lore)),
           list = t.value

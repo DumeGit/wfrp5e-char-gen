@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-54 printed profiles, 14 templates, 69 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+58 printed profiles, 28 templates, 70 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
@@ -18,6 +18,8 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Blood and Bramble | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 | Deft Steps, Light Fingers | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 | The Night Parade | 1 | 7 | Profiles/templates selectable; shared PC options always available |
+| The Warband of Bayl of Many Eyes | 2 | 7 | Profiles/templates selectable; shared PC options always available |
+| The Cluster-Eye Tribe | 2 | 7 | Profiles/templates selectable; shared PC options always available |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |
@@ -26,7 +28,9 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Bog Octopus | Core · p. 328 | Monstrous Beasts |  |
 | Cairn Wraith | Core · p. 342 | Restless Dead |  |
 | Cave Squig | Core · p. 329 | Monstrous Beasts |  |
+| Chaos Steed | Bayl’s Warband · p. 8 | Mounts | Yes |
 | Chaos Warrior | Core · p. 348 | Cultists and Mutants |  |
+| Chaos Warrior of Nurgle | Bayl’s Warband · p. 8 | Cultists and Mutants |  |
 | Clanrat | Core · p. 351 | Skaven |  |
 | Corpse Cart | Night Parade · p. 19 | Undead | Yes |
 | Crypt Ghoul | Core · p. 338 | Restless Dead |  |
@@ -37,8 +41,10 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Dire Wolf | Core · p. 341 | Restless Dead |  |
 | Dog | Core · p. 325 | Beasts of the Reikland |  |
 | Dragon | Core · p. 330 | Monstrous Beasts |  |
+| Drakwald Mancatcher | Cluster-Eye Tribe · p. 9 | Mounts | Yes |
 | Dwarf | Core · p. 320 | Peoples of the Reikland |  |
 | Fenbeast | Core · p. 331 | Monstrous Beasts |  |
+| Forest Goblin | Cluster-Eye Tribe · p. 9 | Greenskins | Yes |
 | Ghost | Core · p. 341 | Restless Dead |  |
 | Giant | Core · p. 332 | Monstrous Beasts |  |
 | Giant Rat | Core · p. 326 | Beasts of the Reikland |  |

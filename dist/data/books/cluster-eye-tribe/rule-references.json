@@ -1,0 +1,10 @@
+[
+  {
+    "id": "cluster-eye-tribe:rule-reference:arboreal",
+    "name": "Arboreal",
+    "category": "trait",
+    "topic": "Creature Traits",
+    "page": 19,
+    "text": "Add the creature's Agility Bonus in SL to Stealth and Climb Tests in woodlands."
+  }
+]

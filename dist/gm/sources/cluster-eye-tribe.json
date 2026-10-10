@@ -1,0 +1,1274 @@
+{
+  "schemaVersion": 1,
+  "id": "cluster-eye-tribe",
+  "source": {
+    "file": "The Cluster-Eye Tribe.pdf",
+    "sha256": "ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8a"
+  },
+  "summary": "Forest Goblin, Drakwald Mancatcher and seven creature advancement templates",
+  "profiles": [
+    {
+      "id": "cluster-eye-tribe:creatures:forest-goblin",
+      "name": "Forest Goblin",
+      "page": 9,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 9
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves",
+          "adaptation": "Legacy: the p. 19 summary gives −1 SL against Elves until a Cool Test is passed. Use core Afraid/Fear instead: no Momentum and the feared opponent's Melee attacks gain Advantage until the Extended Psychology Test is completed."
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "adaptation": "Legacy: the p. 19 Easy (+40) Endurance Test uses core Easy (+4 SL), following Appendix I p. 364."
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "text": "Printed Weapon +7; no specific weapon is named."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Forest Goblin Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: the p. 19 summary gives −1 SL against Elves until a Cool Test is passed. Use core Afraid/Fear instead: no Momentum and the feared opponent's Melee attacks gain Advantage until the Extended Psychology Test is completed. Legacy: the p. 19 Easy (+40) Endurance Test uses core Easy (+4 SL), following Appendix I p. 364.",
+      "notes": [
+        "This is the book's Basic Forest Goblin profile, not the Fifth Edition core Goblin with its different Characteristics.",
+        "Animosity has no printed target: enter one explicitly before export. Armour 1 does not silently become a Shield or a particular armour piece.",
+        "The optional Ranged +7 (25) entry names no weapon. Add an explicit ranged weapon from shared equipment rather than inventing its profile.",
+        "Arboreal's woodlands-only bonus remains reference text. Goblins may explicitly add Ride (Spider) or Ride (Wolf) +20 (p. 9); a mount is a separate sheet."
+      ]
+    },
+    {
+      "id": "cluster-eye-tribe:creatures:drakwald-mancatcher",
+      "name": "Drakwald Mancatcher",
+      "page": 9,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 9
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 7,
+        "WS": 35,
+        "BS": null,
+        "S": 35,
+        "T": 29,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 14,
+        "WP": 35,
+        "Fel": null,
+        "W": 20
+      },
+      "size": "Large",
+      "toughnessBonus": 2,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Venom",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Trained",
+          "value": "Mount"
+        },
+        {
+          "name": "Wallcrawler",
+          "value": ""
+        },
+        {
+          "name": "Web",
+          "value": "40"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "skill": 35,
+          "damage": 10,
+          "printedDamage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Primary melee attack",
+          "adaptation": "Legacy: core Large Size adds SB3 to the primary melee attack, changing printed Fangs +7 to +10."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Mancatcher Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Large Size adds SB3 to the primary melee attack, changing printed Fangs +7 to +10.",
+      "notes": [
+        "The book does not specify Venom's recovery Difficulty. The GM must select it explicitly before export; no default is inferred.",
+        "Use core Venom (p. 363): Wounds inflict Poisoned; the Difficulty applies to recovery. Spider Venom Arrows (p. 10) are a separate, nonlethal ammunition rule."
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "cluster-eye-tribe:template:skirmisher",
+      "name": "Skirmisher",
+      "page": 8,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "BS": 5,
+        "I": 10,
+        "Ag": 10,
+        "WP": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Bow)",
+            "Ranged (Sling)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Stealth (Rural)",
+            "Stealth (Underground)"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Flee!"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 increases Movement when fleeing. Core Flee! instead grants an extra Move when Disengaging, prevents Broken when Fleeing, and grants +1 SL to Pursuit Tests when escaping."
+        },
+        {
+          "options": [
+            "Marksman"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Bow or Sling",
+          "names": [
+            "Bow (2H)",
+            "Sling"
+          ],
+          "kind": "weapon",
+          "choose": true
+        },
+        {
+          "label": "Ammunition for 12 shots",
+          "names": [
+            "Arrow (12)",
+            "Lead Bullet (12)",
+            "Stone Bullet (12)"
+          ],
+          "kind": "ammunition",
+          "choose": true,
+          "forWeapon": 1,
+          "ammunitionFor": {
+            "Bow (2H)": [
+              "Arrow (12)"
+            ],
+            "Sling": [
+              "Lead Bullet (12)",
+              "Stone Bullet (12)"
+            ]
+          }
+        }
+      ],
+      "adaptation": "Legacy: p. 19 increases Movement when fleeing. Core Flee! instead grants an extra Move when Disengaging, prevents Broken when Fleeing, and grants +1 SL to Pursuit Tests when escaping.",
+      "notes": [
+        "This book's Skirmisher is a separately sourced template; it does not replace the core version.",
+        "The Characteristic table explicitly grants BS +5. Core Marksman independently grants another +5 BS. The named Bugshot example appears to include only one of those bonuses; use the template table and current Talent rule, without copying that example's total.",
+        "Choose the weapon, matching ammunition and Skill specialisations explicitly. One ammunition pack supplies the printed 12 shots; no free extra packs are added."
+      ]
+    },
+    {
+      "id": "cluster-eye-tribe:template:soldier",
+      "name": "Soldier",
+      "page": 8,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 5,
+        "S": 5,
+        "T": 5,
+        "I": 10,
+        "WP": 5,
+        "Fel": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Leather Armour — core Light Armour (1 AP)",
+          "names": [
+            "Light Armour"
+          ],
+          "kind": "armour",
+          "adaptation": "Legacy: printed Leather Armour uses core Light Armour (1 AP)."
+        },
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Spear",
+          "names": [
+            "Spear (2H)"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Shield",
+          "names": [
+            "Shield"
+          ],
+          "kind": "armour"
+        }
+      ],
+      "notes": [],
+      "adaptation": "Legacy: printed Leather Armour uses core Light Armour (1 AP). Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+    },
+    {
+      "id": "cluster-eye-tribe:template:elite",
+      "name": "Elite",
+      "page": 8,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 10,
+        "S": 10,
+        "T": 10,
+        "I": 20,
+        "Ag": 10,
+        "WP": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)",
+            "Melee (Two-Handed)"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Feint"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Mail Armour — core Medium Armour (3 AP)",
+          "names": [
+            "Medium Armour"
+          ],
+          "kind": "armour",
+          "adaptation": "Legacy: printed Mail or Leather-and-Mail uses core Medium Armour (3 AP); Plate uses core Heavy Armour (5 AP)."
+        },
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Shield",
+          "names": [
+            "Shield"
+          ],
+          "kind": "armour"
+        },
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ]
+        }
+      ],
+      "notes": [],
+      "adaptation": "Legacy: printed Mail or Leather-and-Mail uses core Medium Armour (3 AP); Plate uses core Heavy Armour (5 AP). Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+    },
+    {
+      "id": "cluster-eye-tribe:template:chief",
+      "name": "Chief",
+      "page": 8,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 25,
+        "BS": 10,
+        "S": 15,
+        "T": 15,
+        "I": 25,
+        "Ag": 20,
+        "Int": 10,
+        "WP": 25,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 20,
+          "count": 2
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Bow)"
+          ],
+          "bonus": 10,
+          "count": 1,
+          "optional": true,
+          "forProfiles": [
+            "core:creatures:goblin",
+            "cluster-eye-tribe:creatures:forest-goblin"
+          ],
+          "label": "Optional Goblin bow · includes Bow and 12 arrows",
+          "emptyLabel": "No bow"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Feint"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests."
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Mail / Leather-and-Mail (3 AP) or Plate (5 AP)",
+          "names": [
+            "Medium Armour",
+            "Heavy Armour"
+          ],
+          "kind": "armour",
+          "choose": true,
+          "adaptation": "Legacy: printed Mail or Leather-and-Mail uses core Medium Armour (3 AP); Plate uses core Heavy Armour (5 AP)."
+        },
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Shield",
+          "names": [
+            "Shield"
+          ],
+          "kind": "armour"
+        },
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ]
+        },
+        {
+          "label": "Optional Goblin Bow",
+          "names": [
+            "Bow (2H)"
+          ],
+          "kind": "weapon",
+          "whenSkill": 8
+        },
+        {
+          "label": "12 arrows for optional Goblin bow",
+          "names": [
+            "Arrow (12)"
+          ],
+          "kind": "ammunition",
+          "whenSkill": 8
+        }
+      ],
+      "notes": [
+        "The optional bow package is restricted to Goblin foundations. Selecting its Skill also grants exactly one Bow and one pack of 12 arrows; removing the choice removes both.",
+        "Printed Warleader / Unshakable use core War Leader / Unshakeable spelling."
+      ],
+      "adaptation": "Legacy: printed Mail or Leather-and-Mail uses core Medium Armour (3 AP); Plate uses core Heavy Armour (5 AP). Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition. Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+    },
+    {
+      "id": "cluster-eye-tribe:template:warlord",
+      "name": "Warlord",
+      "page": 8,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 8
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 35,
+        "BS": 10,
+        "S": 25,
+        "T": 30,
+        "I": 30,
+        "Ag": 25,
+        "Int": 15,
+        "WP": 35,
+        "Fel": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 20,
+          "count": 2
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Bow)"
+          ],
+          "bonus": 10,
+          "count": 1,
+          "optional": true,
+          "forProfiles": [
+            "core:creatures:goblin",
+            "cluster-eye-tribe:creatures:forest-goblin"
+          ],
+          "label": "Optional Goblin bow · includes Bow and 12 arrows",
+          "emptyLabel": "No bow"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result."
+        },
+        {
+          "options": [
+            "Feint"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests."
+        },
+        {
+          "options": [
+            "Luck"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition."
+        },
+        {
+          "options": [
+            "Unshakeable"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Mail / Leather-and-Mail (3 AP) or Plate (5 AP)",
+          "names": [
+            "Medium Armour",
+            "Heavy Armour"
+          ],
+          "kind": "armour",
+          "choose": true,
+          "adaptation": "Legacy: printed Mail or Leather-and-Mail uses core Medium Armour (3 AP); Plate uses core Heavy Armour (5 AP)."
+        },
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Shield",
+          "names": [
+            "Shield"
+          ],
+          "kind": "armour"
+        },
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ]
+        },
+        {
+          "label": "Optional Goblin Longbow — core Bow (2H)",
+          "names": [
+            "Bow (2H)"
+          ],
+          "kind": "weapon",
+          "whenSkill": 8,
+          "adaptation": "Legacy: printed Longbow uses the core Bow (2H) profile."
+        },
+        {
+          "label": "12 arrows for optional Goblin bow",
+          "names": [
+            "Arrow (12)"
+          ],
+          "kind": "ammunition",
+          "whenSkill": 8
+        }
+      ],
+      "notes": [
+        "The optional bow package is restricted to Goblin foundations. Selecting its Skill also grants exactly one Bow and one pack of 12 arrows; removing the choice removes both.",
+        "Printed Warleader / Unshakable use core War Leader / Unshakeable spelling."
+      ],
+      "adaptation": "Legacy: printed Mail or Leather-and-Mail uses core Medium Armour (3 AP); Plate uses core Heavy Armour (5 AP). Legacy: printed Longbow uses the core Bow (2H) profile. Legacy: p. 19 gives a fixed Initiative bonus for turn order; core Combat Reflexes instead rolls Combat Initiative twice and chooses the preferred result. Legacy: p. 19 extends Leadership to a number of followers; core Inspiring instead grants Advantage on combat Leadership Tests. Legacy: p. 19 grants extra Strength Bonus when Charging; core Resolute instead permits a Cool Test to retain Momentum when gaining a Condition. Legacy: p. 19 grants an ally +1 SL on a Willpower Test; core War Leader instead lets influenced allies use Leadership rather than Cool to resist Fear."
+    },
+    {
+      "id": "cluster-eye-tribe:template:shaman",
+      "name": "Shaman",
+      "page": 9,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 9
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "T": 5,
+        "I": 15,
+        "Dex": 10,
+        "Int": 15,
+        "WP": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Spellcaster",
+          "value": "Arcane",
+          "adaptation": "Legacy: unspecified printed Arcane Magic becomes core Spellcaster (Arcane), with an explicit Channelling Wind. Beastmen may instead choose Beasts, Death or Shadows alongside Arcane spells."
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Staff — choose its core Polearm profile",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm"
+          ]
+        }
+      ],
+      "notes": [
+        "Printed spell counts are exact: six Petty and nine Arcane spells for Shaman Lord, or three of each for Shaman. Beastmen can use their selected additional Lore within the same Arcane-spell count, not as extra spells.",
+        "The template removes the foundation's printed armour. Add explicit armour only when using a GM exception such as a Skaven Warlock-Engineer; no casting immunity is automated.",
+        "Fimir spell-list options remain references because no Fimir foundation is installed. Ogre core-compatible Lore restrictions still apply: remove incompatible Spellcaster (Arcane), add an explicitly permitted Lore, choose a permitted Wind, and retain the printed spell-list/count limits. No Great Maw spells are granted by this template."
+      ],
+      "shaman": true,
+      "removeArmour": true,
+      "matchWind": true,
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "count": 3
+        },
+        {
+          "categories": [
+            "Arcane"
+          ],
+          "count": 3
+        }
+      ],
+      "trappings": "Ritual Dress incorporating ingredients and fetishes (no quantities or equipment statistics printed)",
+      "adaptation": "Legacy: unspecified printed Arcane Magic becomes core Spellcaster (Arcane), with an explicit Channelling Wind. Beastmen may instead choose Beasts, Death or Shadows alongside Arcane spells."
+    },
+    {
+      "id": "cluster-eye-tribe:template:shaman-lord",
+      "name": "Shaman Lord",
+      "page": 9,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 9
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 10,
+        "S": 5,
+        "T": 15,
+        "I": 20,
+        "Ag": 15,
+        "Dex": 20,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Theology)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 30,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Aethyric Attunement"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Instinctive Diction"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Instinctive Diction 2 is reduced to one core rank; the Fifth Edition Talent is not repeatable."
+        },
+        {
+          "options": [
+            "Luck"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Magical Sense"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Sixth Sense"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Spellcaster",
+          "value": "Arcane",
+          "adaptation": "Legacy: unspecified printed Arcane Magic becomes core Spellcaster (Arcane), with an explicit Channelling Wind. Beastmen may instead choose Beasts, Death or Shadows alongside Arcane spells."
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Staff — choose its core Polearm profile",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm"
+          ]
+        }
+      ],
+      "notes": [
+        "Printed spell counts are exact: six Petty and nine Arcane spells for Shaman Lord, or three of each for Shaman. Beastmen can use their selected additional Lore within the same Arcane-spell count, not as extra spells.",
+        "The template removes the foundation's printed armour. Add explicit armour only when using a GM exception such as a Skaven Warlock-Engineer; no casting immunity is automated.",
+        "Fimir spell-list options remain references because no Fimir foundation is installed. Ogre core-compatible Lore restrictions still apply: remove incompatible Spellcaster (Arcane), add an explicitly permitted Lore, choose a permitted Wind, and retain the printed spell-list/count limits. No Great Maw spells are granted by this template."
+      ],
+      "shaman": true,
+      "removeArmour": true,
+      "matchWind": true,
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "count": 6
+        },
+        {
+          "categories": [
+            "Arcane"
+          ],
+          "count": 9
+        }
+      ],
+      "trappings": "Ritual Dress incorporating ingredients and fetishes (no quantities or equipment statistics printed)",
+      "adaptation": "Legacy: unspecified printed Arcane Magic becomes core Spellcaster (Arcane), with an explicit Channelling Wind. Beastmen may instead choose Beasts, Death or Shadows alongside Arcane spells. Legacy: printed Instinctive Diction 2 is reduced to one core rank; the Fifth Edition Talent is not repeatable."
+    }
+  ],
+  "training": [],
+  "traits": [
+    {
+      "id": "cluster-eye-tribe:trait:arboreal",
+      "name": "Arboreal",
+      "page": 19,
+      "source": {
+        "book": "cluster-eye-tribe",
+        "page": 19
+      },
+      "parameter": "",
+      "text": "Add the creature's Agility Bonus in SL to Stealth and Climb Tests in woodlands."
+    }
+  ]
+}

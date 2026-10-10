@@ -77,6 +77,14 @@
     {
       "id": "night-parade",
       "path": "night-parade/manifest.json"
+    },
+    {
+      "id": "bayl-many-eyes",
+      "path": "bayl-many-eyes/manifest.json"
+    },
+    {
+      "id": "cluster-eye-tribe",
+      "path": "cluster-eye-tribe/manifest.json"
     }
   ]
 }

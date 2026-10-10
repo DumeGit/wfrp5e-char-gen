@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"bb5597c2fb697be9bd94";
+const CACHE=CACHE_PREFIX+"433dcb6d1c481c1748b9";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -78,11 +78,19 @@ const ASSETS=[
  "data/books/archives-iii/reference-entries.json",
  "data/books/archives-iii/rules.json",
  "data/books/archives-iii/spells.json",
+ "data/books/bayl-many-eyes/coverage.json",
+ "data/books/bayl-many-eyes/manifest.json",
+ "data/books/bayl-many-eyes/reference-entries.json",
  "data/books/blood-bramble/coverage.json",
  "data/books/blood-bramble/gear.json",
  "data/books/blood-bramble/manifest.json",
  "data/books/blood-bramble/reference-entries.json",
  "data/books/blood-bramble/spells.json",
+ "data/books/cluster-eye-tribe/coverage.json",
+ "data/books/cluster-eye-tribe/manifest.json",
+ "data/books/cluster-eye-tribe/reference-entries.json",
+ "data/books/cluster-eye-tribe/rule-references.json",
+ "data/books/cluster-eye-tribe/rules.json",
  "data/books/core/armour.json",
  "data/books/core/config.json",
  "data/books/core/coverage.json",
@@ -243,6 +251,8 @@ const ASSETS=[
  "gm/sources/archives-i.json",
  "gm/sources/archives-ii.json",
  "gm/sources/archives-iii.json",
+ "gm/sources/bayl-many-eyes.json",
+ "gm/sources/cluster-eye-tribe.json",
  "gm/sources/core.json",
  "gm/sources/night-parade.json",
  "gm/sources/up-in-arms.json",
