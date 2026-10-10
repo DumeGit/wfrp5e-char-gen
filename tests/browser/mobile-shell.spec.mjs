@@ -33,6 +33,25 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       await expect(menuButton).toBeHidden();
       await expect(page.locator(".rail .creator-switch")).toBeVisible();
       await expect(save).toBeVisible();
+      await page.setViewportSize({ width: 1280, height: 720 });
+      await page.evaluate(() => document.fonts.ready);
+      expect(
+        (await page.locator(".masthead").boundingBox()).height,
+      ).toBeLessThan(96);
+      const rail = page.locator(".rail");
+      const bounds = await rail.boundingBox();
+      expect(bounds.y + bounds.height).toBeLessThanOrEqual(720);
+      for (const nav of await rail.locator("nav").all()) {
+        expect(
+          await nav.evaluate((el) => ({
+            overflow: getComputedStyle(el).overflowY,
+            clipped: el.scrollHeight > el.clientHeight + 1,
+          })),
+        ).toEqual({ overflow: "visible", clipped: false });
+      }
+      await page.setViewportSize({ width: 900, height: 600 });
+      await expect(rail).toHaveCSS("position", "static");
+      await noOverflow(page);
       return;
     }
     await expect(menuButton).toBeVisible();

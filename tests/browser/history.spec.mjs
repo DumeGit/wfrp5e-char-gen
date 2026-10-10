@@ -71,7 +71,9 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       await noOverflow(page);
       const bounds = await redo.boundingBox();
       expect(bounds.width).toBeGreaterThanOrEqual(44);
-      expect(bounds.height).toBeGreaterThanOrEqual(44);
+      expect(bounds.height).toBeGreaterThanOrEqual(
+        width <= 760 || info.project.name === "mobile" ? 44 : 32,
+      );
     }
     await page.setViewportSize(
       info.project.name === "mobile"

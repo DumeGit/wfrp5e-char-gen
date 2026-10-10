@@ -1,5 +1,127 @@
 /* Shared interface contract. Feature styles own layout; theme tokens own colour. */
 
+/* Desktop chrome uses natural height: navigation must never become a scroller.
+   Short windows scroll the page instead; the folio keeps its independent scroll. */
+@media (min-width: 761px) {
+  .masthead {
+    grid-template-columns: minmax(300px, 1fr) minmax(280px, 1.4fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding-block: 8px;
+  }
+  .masthead .brand strong { font-size: 28px; margin-block: 2px; }
+  .masthead .brand small { display: none; }
+  .masthead .banner-search-ribbon {
+    grid-column: 2;
+    grid-row: 1;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  .masthead .banner-caption { display: none; }
+  .workspace { margin-block: 16px; }
+  .mm-workspace { grid-template-columns: var(--layout-rail) minmax(0, 1fr) 270px; }
+  .rail,
+  .gm-workspace .rail,
+  .mm-workspace .mm-rail {
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    overflow: visible;
+    padding: 10px;
+  }
+  .rail nav,
+  .gm-workspace .rail nav,
+  .mm-rail .mm-section-nav {
+    flex: none;
+    overflow: visible;
+  }
+  .rail .creator-switch {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    padding: 3px;
+    margin-bottom: 8px;
+  }
+  .rail .creator-switch a {
+    display: grid;
+    place-items: center;
+    padding: 4px 2px;
+    min-height: 32px;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .rail .creator-switch a:first-child { grid-column: 1 / -1; }
+  .rail .rail-heading { padding: 0 4px 6px; }
+  .rail-heading > .eyebrow,
+  .rail-heading > strong { display: none; }
+  .rail .rail-heading p { margin: 0 0 5px; line-height: 1.4; }
+  .rail .steps button {
+    position: relative;
+    min-height: 32px;
+    padding: 3px 6px;
+    font-size: 13px;
+  }
+  .rail .steps small {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .rail .step-number { height: 24px; }
+  .rail .history-controls { gap: 6px; margin: 8px 0 0; }
+  .rail .history-controls .history-button {
+    flex: 1;
+    width: auto;
+    height: 32px;
+    min-height: 32px;
+  }
+  .rail .header-actions {
+    margin-top: 8px;
+    padding-top: 8px;
+    gap: 6px;
+  }
+  .rail .header-actions > [data-action="new"],
+  .rail .header-actions [data-install-slot] { grid-column: auto; }
+  .rail .header-actions .quiet,
+  .rail .install-app { min-height: 32px; padding: 5px 4px; white-space: normal; }
+  .rail [data-install-slot] .install-app { width: 100%; }
+  .rail .save-status { margin: 6px 0; }
+  .mm-rail .mm-section-nav { gap: 0; }
+  .mm-rail .mm-section-nav a { min-height: 32px; padding: 5px 8px; }
+  .mm-rail-tools { margin-top: 8px; }
+  .mm-rail-tools button:nth-child(n + 4) { grid-column: auto; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .masthead { grid-template-columns: minmax(300px, 1fr) minmax(280px, 1fr); }
+  .masthead-actions .edition { display: none; }
+  .masthead .brand strong { font-size: 26px; }
+}
+@media (min-width: 761px) and (max-width: 1200px) {
+  .mm-workspace { grid-template-columns: var(--layout-rail) minmax(0, 1fr); }
+}
+@media (min-width: 1500px) {
+  .mm-workspace { grid-template-columns: var(--layout-rail) minmax(0, 1fr) 310px; }
+}
+@media (min-width: 761px) and (max-height: 800px) {
+  .rail,
+  .gm-workspace .rail,
+  .mm-workspace .mm-rail { position: static; }
+}
+@media (min-width: 761px) and (pointer: coarse) {
+  .rail .steps button,
+  .rail .creator-switch a,
+  .rail .history-controls .history-button,
+  .rail .header-actions .quiet,
+  .rail .install-app,
+  .mm-rail-tools button,
+  .mm-rail .mm-section-nav a { min-height: 44px; }
+}
+
 html {
   scroll-padding-bottom: 90px;
 }
