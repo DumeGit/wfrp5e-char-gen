@@ -149,7 +149,7 @@ const columns = {
     "alternativeFor",
   ],
   skills: ["char", "advanced", "grouped", "options", "text", "speciesOnly"],
-  talents: ["text", "unavailable", "limit", "speciesOnly"],
+  talents: ["text", "unavailable", "limit", "speciesOnly", "songs"],
   spells: [
     "category",
     "text",
@@ -934,6 +934,26 @@ export function validateCatalog(R) {
       (!strings(x.speciesOnly) || x.speciesOnly.some((n) => !R.species[n]))
     )
       fail(`${x.name}: invalid Talent Species restriction.`);
+    if (
+      x.songs !== undefined &&
+      (x.name !== "Chanty (Any)" ||
+        x.source.book !== "sea-of-claws" ||
+        !Array.isArray(x.songs) ||
+        !x.songs.length ||
+        x.songs.some(
+          (song) =>
+            !plain(song) ||
+            Object.keys(song).some(
+              (k) => !["name", "text", "page"].includes(k),
+            ) ||
+            !nonempty(song.name) ||
+            !nonempty(song.text) ||
+            !pageOK(song.page),
+        ) ||
+        JSON.stringify(x.songs.map((song) => song.name)) !==
+          JSON.stringify(C.talentOptions.Chanty))
+    )
+      fail(`${x.name}: invalid printed Chanty choices.`);
   }
   for (const x of R.talents)
     if (

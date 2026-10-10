@@ -1,0 +1,80 @@
+[
+  {
+    "id": "sea-of-claws-artillery:weapon:ballista",
+    "name": "Ballista",
+    "kind": "ranged",
+    "group": "Crossbow",
+    "enc": 20,
+    "reach": "100 yards",
+    "damage": "12",
+    "qualities": "Accurate, Crewed 2, Reload 3",
+    "page": 100,
+    "replaces": "up-in-arms:weapon:ballista",
+    "reason": "Explicit Sea of Claws naval artillery alternative, selected by the user; retains its printed range and properties."
+  },
+  {
+    "id": "sea-of-claws-artillery:weapon:cannon-small",
+    "name": "Cannon (small)",
+    "kind": "ranged",
+    "group": "Blackpowder",
+    "enc": 30,
+    "reach": "50 yards",
+    "damage": "10",
+    "qualities": "Crewed 2, Dangerous, Reload 4",
+    "page": 100,
+    "replaces": "up-in-arms:weapon:cannon-small",
+    "reason": "Explicit Sea of Claws naval artillery alternative, selected by the user; retains its printed range and properties."
+  },
+  {
+    "id": "sea-of-claws-artillery:weapon:cannon-medium",
+    "name": "Cannon (medium)",
+    "kind": "ranged",
+    "group": "Blackpowder",
+    "enc": 50,
+    "reach": "75 yards",
+    "damage": "14",
+    "qualities": "Crewed 3, Dangerous, Reload 6",
+    "page": 100,
+    "replaces": "up-in-arms:weapon:cannon-medium",
+    "reason": "Explicit Sea of Claws naval artillery alternative, selected by the user; retains its printed range and properties."
+  },
+  {
+    "id": "sea-of-claws-artillery:weapon:cannon-large",
+    "name": "Cannon (large)",
+    "kind": "ranged",
+    "group": "Blackpowder",
+    "enc": 75,
+    "reach": "150 yards",
+    "damage": "16",
+    "qualities": "Crewed 4, Dangerous, Reload 8",
+    "page": 100,
+    "replaces": "up-in-arms:weapon:cannon-large",
+    "reason": "Explicit Sea of Claws naval artillery alternative, selected by the user; retains its printed range and properties."
+  },
+  {
+    "id": "sea-of-claws-artillery:weapon:mortar",
+    "name": "Mortar",
+    "kind": "ranged",
+    "group": "Blackpowder",
+    "enc": 50,
+    "reach": "100 yards",
+    "damage": "—",
+    "qualities": "Crewed 3, Reload 4",
+    "page": 100,
+    "replaces": "up-in-arms:weapon:mortar",
+    "reason": "Explicit Sea of Claws naval artillery alternative, selected by the user; retains its printed range and properties."
+  },
+  {
+    "id": "sea-of-claws-artillery:weapon:swivel-gun",
+    "name": "Swivel Gun",
+    "kind": "ranged",
+    "group": "Blackpowder",
+    "enc": 5,
+    "reach": "30 yards",
+    "damage": "14",
+    "qualities": "Dangerous, Reload 4",
+    "page": 100,
+    "replaces": "up-in-arms:weapon:swivel-gun",
+    "reason": "Explicit Sea of Claws naval artillery alternative, selected by the user; retains its printed range and properties."
+  }
+]

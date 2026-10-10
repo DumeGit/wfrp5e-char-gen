@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sea-of-claws:reference:chanty-we-re-all-in-this-together-so-heave-ho-heave-ho",
+    "name": "Chanty: We’re all in this together so, heave ho, heave ho…",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This Chanty will spread a spirit of cooperation and make the crew knuckle down and go about the running of the ship with vigour and confidence. It gives a +10 modifier to the individual Tests of every crew member involved in any Crew Test."
+  },
+  {
+    "id": "sea-of-claws:reference:chanty-jacques-bret-came-sailing-to-meet-our-steel",
+    "name": "Chanty: Jacques Bret came sailing to meet our steel!",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This rousing Chanty tells of heroic feats in bloody battles. It pumps the blood of the crew and stirs them for the fight. It gives everyone in the crew +1 SL on any successful Melee Test."
+  },
+  {
+    "id": "sea-of-claws:reference:chanty-of-all-the-terrors-upon-the-sea",
+    "name": "Chanty: Of all the terrors upon the sea…",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This steady, heart-warming melody can steel the hearts of a wavering crew. It gives them +1 SL to Cool Tests."
+  },
+  {
+    "id": "sea-of-claws:reference:chanty-you-band-of-shipmates-gather-round",
+    "name": "Chanty: You band of shipmates gather round…",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This is a round that encourages others to join in, and its gentle tempo and lyrics induce calm. It gives anyone in the crew +1 SL to any Fellowship Test intended to befriend or placate other members of the crew."
+  },
+  {
+    "id": "sea-of-claws:reference:chanty-all-arise-for-the-night-has-eyes",
+    "name": "Chanty: All arise, for the night has eyes…",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This Chanty is a soft melodic one, but the words have an implicit warning. It is usually sung at night; it helps make everyone on board the ship calm and restful but keeps those on watch alert. Anyone trying to remain awake gets +20 on any Test that might result in them falling asleep, and they also get +10 to any Perception Test."
+  },
+  {
+    "id": "sea-of-claws:reference:chanty-the-ladies-of-l-anguille",
+    "name": "Chanty: The ladies of L’Anguille…",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This bawdy song has countless verses, and sailors are encouraged to add their own to the risqué litany. This is designed to amuse and lift morale. Anyone joining in the song can ignore one Condition."
+  },
+  {
+    "id": "sea-of-claws:reference:chanty-they-do-say-do-as-the-captain-do-say",
+    "name": "Chanty: They do say do as the Captain do say…",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 67,
+    "text": "This song about the many heroic deeds of the fictional Captain Vriez Van Vijnen instils a sense of optimism and trust in the ship’s captain. Any Fellowship Test attempted by the Captain, or other authority figure on board, targeted at the crew, gets a +20 bonus."
+  },
+  {
+    "id": "sea-of-claws:reference:hullbreaker",
+    "name": "Hullbreaker",
+    "category": "property",
+    "topic": "Seafaring",
+    "page": 44,
+    "text": "This ammunition is designed to smash through wooden structures and leave large holes. When striking a wooden structure, such as a ship, the ammunition inflicts +2 Damage and gains the Damaging Quality."
+  },
+  {
+    "id": "sea-of-claws:reference:grubark-gearing-system",
+    "name": "Grubark Gearing System",
+    "category": "equipment",
+    "topic": "Seafaring",
+    "page": 44,
+    "text": "Cost: 400 GC for Little to Average ships; may not be applied to larger ships. Weight: 120 Encumbrance. The minimum rowing crew is reduced to one quarter, rounding up. Rowers gain +1 SL to Endurance Tests for exhaustion after a shift. If Oars takes a Critical Hit, roll d10: on 5 or more, the gearing is ruined in addition to other Critical effects."
+  },
+  {
+    "id": "sea-of-claws:reference:skaeling-mark-of-khorne",
+    "name": "Skaeling Mark of Khorne",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 56,
+    "text": "A Skaeling generating Pure Soul as a random Talent may take Mark of Khorne instead. The printed Mark gives Frenzy and Etiquette (Followers of Khorne), mutual Animosity with overt followers of Slaanesh, forbids Language (Magick)/Channelling except dispelling, and adds Berserk Charge, Combat Aware, Combat Reflexes, Furious Assault, Implacable, Magic Resistance, Resistance (Magic), Resolute, Strike Mighty Blow and Warrior Born to Career purchases.",
+    "notes": "Optional PC replacement remains reference-only by user decision; no extra Traits or Talent access is granted."
+  },
+  {
+    "id": "sea-of-claws:reference:norse-skill-and-equipment-advice",
+    "name": "Norse Skill and Equipment Advice",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 57,
+    "text": "A Norse Character can replace Ranged (Blackpowder, Engineering or Crossbow) with Ranged (Throwing), Melee (Fencing) with Melee (Two-Handed), and Plate Armour with Chainmail. Suitable alternatives depend on the character's circumstances; a Norse Character starting elsewhere may ignore these restrictions.",
+    "notes": "Reference only: no unspecified replacement weapon, armour piece or ammunition quantity is invented."
+  },
+  {
+    "id": "sea-of-claws:reference:riverfolk-lore-of-oceans",
+    "name": "Riverfolk Lore of Oceans",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 63,
+    "text": "Riverfolk Characters with Lore (Riverways) may substitute Lore (Oceans)."
+  },
+  {
+    "id": "sea-of-claws:reference:stromfels-and-sin",
+    "name": "Stromfels and Sin",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 91,
+    "text": "Stromfels will not grant the ability to use Invoke with two or more Sin Points, or Bless with five or more Sin Points. This applies in addition to other consequences of Sin.",
+    "notes": "Gameplay reference; the creator does not track live Sin Points."
+  },
+  {
+    "id": "sea-of-claws:reference:stromfels-strength-stricture",
+    "name": "Stromfels Strength Stricture",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 89,
+    "text": "A Priest of Stromfels must develop Strength to the minimum required to reach the next Career tier before developing other Characteristics, or earn Sin Points until they do so.",
+    "notes": "The old tier minimum is retained as a Legacy reference without an invented Fifth Edition XP restriction, by user decision."
+  },
+  {
+    "id": "sea-of-claws:reference:feast-of-bones",
+    "name": "Feast of Bones",
+    "category": "rule",
+    "topic": "Seafaring",
+    "page": 144,
+    "text": "A Kharibdyss generates a lot of momentum whilst fighting as its many heads variously snap, grasp, and entangle its foes. Should the Kharibdyss gain a point of Advantage whilst Engaged during a combat, its Grim 2 Rating rises to Grim 4. It remains Grim 4 provided the Kharibdyss remains Engaged with an opponent.",
+    "notes": "The printed effect depends on old ranked Grim. Current core Grim is unranked; this effect remains an older-edition reference and does not change the effective Trait."
+  },
+  {
+    "id": "sea-of-claws:reference:norse-class-and-career-table",
+    "name": "Norse Class and Career Table",
+    "category": "table",
+    "topic": "Seafaring",
+    "page": 57,
+    "text": "Class | Career | d100 Roll ACADEMICS | Nun | 01–02 | Scholar | 03–04 BURGHERS | Agitator | 05–06 | Artisan | 08–10 | Beggar | 11–12 | Rat Catcher | 13 | Merchant | 14–15 COURTIERS | Advisor | 16–18 | Artist | 19 | Noble | 20 | Servant | 21–27 PEASANTS | Herbalist | 28–30 | Hunter | 31–34 | Mystic | 35–37 | Scout | 38–40 | Villager | 41–46 RANGERS | Entertainer | 47–48 | Messenger | 49 | Pedlar | 50–52 ROGUES | Charlatan | 53–54 | Outlaw | 55–57 | Thief | 58–61 | Witch | 62–64 SEAFARERS | Beachcomber | 65–66 | Huffer | 67–69 | Sailor | 70–77 | Wrecker | 78–82 WARRIORS | Cavalryman | 83–85 | Pit Fighter | 86–89 | Protagonist | 90–92 | Soldier | 93–100",
+    "notes": "Printed source values; the creator's agreed alternatives/corrections are documented separately."
+  },
+  {
+    "id": "sea-of-claws:reference:seafarer-class-table",
+    "name": "Seafarer Class Table",
+    "category": "table",
+    "topic": "Seafaring",
+    "page": 63,
+    "text": "Career | Human | Dwarf | Halfling | High Elf | Wood Elf Beachcomber | 61–62 | – | 69–72 | – | – Chantyman | 63 | – | – | 64 | – Huffer | 64 | 68–69 | 73–74 | 65 | – Officer | 65–66 | 70–71 | – | 66–69 | – Sailor-Priest of Manann | 67 | – | – | – | – Sailor | 69–71 | 72–74 | 75–80 | 70–79 | – Ship’s Gunner | 72–73 | 75–77 | 81–82 | 80 | – Wrecker | 74 | 78 | – | – | 79",
+    "notes": "Printed source values; the creator's agreed alternatives/corrections are documented separately."
+  },
+  {
+    "id": "sea-of-claws:reference:naval-artillery-profiles",
+    "name": "Naval Artillery Profiles",
+    "category": "table",
+    "topic": "Seafaring",
+    "page": 100,
+    "text": "Weapon | Price | Enc | Availability | Range | Damage | Qualities and Flaws Ballista | 30 GC | 20 | Scarce | 100 | +12 | Accurate, Crewed 2, Reload 3 Cannon (small) | 40 GC | 30 | Scarce | 50 | +10 | Crewed 2, Dangerous, Reload 4 Cannon (medium) | 100 GC | 50 | Exotic | 75 | +14 | Crewed 3, Dangerous, Reload 6 Cannon (large) | 250 GC | 75 | Exotic | 150 | +16 | Crewed 4, Dangerous, Reload 8 Mortar | 50 GC | 50 | Exotic | 100 | — | Crewed 3, Reload 4 Swivel Gun | 20 GC | 5 | Rare | 30 | +14 | Dangerous, Reload 4",
+    "notes": "Printed source values; the creator's agreed alternatives/corrections are documented separately."
+  },
+  {
+    "id": "sea-of-claws:reference:naval-artillery-ammunition",
+    "name": "Naval Artillery Ammunition",
+    "category": "table",
+    "topic": "Seafaring",
+    "page": 101,
+    "text": "Ballista Bolt: 4/–, Enc 0, Scarce, range as weapon, Damage —, Impale, Penetrating. Cannon Ball and Powder: 8/–, Enc 1, Scarce, range as weapon, Damage —, Blast +2. Cannon Grapeshot and Powder: 6/6, Enc 0, Exotic, quarter range, Damage −5, Spread +5. Mortar Bomb: 3 GC, Enc 0, Rare, range as weapon, Damage +12, Blast +5, Dangerous, Impact. Mortar Incendiary: 1 GC, Enc 0, Scarce, half range, special Damage, Blast +4, Dangerous; inflicts 1 + SL Ablaze Conditions. Swivel Gun Bullets/Powder for one shot: 2/2, Enc 0, Common, range as weapon, Damage +1, Impale, Penetrating, Spread +3. Swivel Small Shot/Powder for one shot: 2/2, Enc 0, Common, range as weapon, Damage —, Spread +6."
+  }
+]

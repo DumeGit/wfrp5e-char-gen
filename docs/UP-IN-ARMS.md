@@ -10,17 +10,17 @@ This opt-in pack uses the supplied 144-page PDF, SHA-256 `9d0a5cc54b6e2a81076c4e
 - Luccini's optional Doomed replacement takes the place of one Species starting Talent; it does not add a sixth Talent or overwrite the original random result.
 - Nine additional Myrmidian Miracles (79), with their rules available alongside the core Miracles and included in the sheet/record.
 - Seventy additional fixed-price shop entries and 43 new weapon profiles from pp. 88, 91–102, 123–124. Armoury duplicates retain core values. Additional printed Skill/Talent specialisations feed Career choices and the existing Any menus.
-- Crew Commander (140) is displayed with its printed description and an explicit unavailable reason. It cannot be granted or purchased.
+- Crew Commander (140) is allowed under the later Sea of Claws decision: printed Initiative Bonus purchase limit and explicit Leadership/crew effect, no old default rank bonus, with a Legacy warning. Its situational effect is reference-only.
 
 ## Explicit user decisions
 
-These decisions were supplied in this conversation on October 2–3, 2026. They are applied in the pack and included as source/conversion notes in exported records.
+The initial decisions were supplied on October 2–3, 2026; Crew Commander was subsequently approved during the Sea of Claws integration on October 10. They are applied in the pack and included as source/conversion notes in exported records.
 
 | Issue | Agreed behavior |
 |---|---|
 | Fourth Edition Tilean Skill allocation | Select five Skills at +5 with Fifth Edition limits, using the printed Tilean choices and native Tilean +30. Keep the two printed Talent choices and three random Talents. Human physical Characteristics, Fate, Fortune, age and height use core values. |
 | Alternative armoury | Keep core statistics; add only new equipment. No replacement armoury pack is enabled. |
-| Crew Commander | Grey it out and explain that its old repeat cap and Talent Test bonus need an agreed Fifth Edition conversion. |
+| Crew Commander | Later Sea of Claws approval supersedes the grey-out decision: printed Initiative Bonus limit and explicit effect, no old default Talent Test bonus, Legacy warning. |
 | Numeric bonuses in new references | Keep printed modifiers such as +10 Leadership/WS/BS in descriptions. Do not turn them into permanent Characteristic bonuses or invent a blanket SL conversion. |
 | Illegal Species result on p. 9 | Keep the original legal Career, log the rolled unavailable result, and explain it. Do not reroll again. |
 | Handgunner's Ranged (Engineer), p. 16 | Use Ranged (Engineering), documenting the naming mismatch. |
@@ -41,7 +41,7 @@ Injuries, critical tables, mounted combat, Pursuits, alternative group Advantage
 
 `scripts/extract-up-in-arms.py` extracts staged text/tables, Career schemes from PDF coordinates/colours, and relevant Miracles/names. It does not register unreviewed material. `scripts/build-up-in-arms.py` applies the explicit decisions above to that staged output. The staged extraction defaults to the parent workspace's `tmp/pdfs/up-in-arms-review`; the runtime pack lives in `dist/data/books/up-in-arms`.
 
-The source loader validates all records, references and conditional d100 tables during builds/tests even while the pack is disabled. Browser startup loads the generated library bundle and validates the selected catalogue. New data and modules are included in the offline build. Tests cover all fifteen Careers, preserved core profiles/probabilities, regional allocations/replacements, legal and illegal extra rolls, unavailable Crew Commander, the new shop/magic choices, and editable PDF export. UI verification uses an isolated draft with `?verify=1`.
+The source loader validates all records, references and conditional d100 tables during builds/tests even while the pack is disabled. Browser startup loads the generated library bundle and validates the selected catalogue. New data and modules are included in the offline build. Tests cover all fifteen Careers, preserved core profiles/probabilities, regional allocations/replacements, legal and illegal extra rolls, Crew Commander purchase limits, the new shop/magic choices, and editable PDF export. UI verification uses an isolated draft with `?verify=1`.
 
 Integration verification: Browser checks cover book activation, source-labelled Tilean name rolls, the one-time military refinement and keeping its original result, Luccinan replacement display, Myrmidian rules/free choices, and a Bandoleer purchase with purse deduction. Desktop, 390 px and 320 px layouts have no horizontal overflow. A valid advanced Myrmidian fixture exports 556 editable fields and 556 widgets; canonical values, widget values and appearances agree. Rendered sheet and companion pages are legible. The browser automation could not capture its PDF-download event; the export output was independently generated and inspected with the same engine.
 
@@ -67,6 +67,6 @@ Printed Characteristics, Wounds and existing training remain the baseline. The u
 
 Demigryph protection preserves quadruped coverage: Head, Body and Forelegs **3 AP**, Rear Legs **1 AP**. The calculation records 1 natural AP plus 2 Barding AP on the listed locations, without adding Barding twice. Removing Barding leaves 1 AP throughout. The prose additionally mentions Magic training, but the printed stat block does not; Magic is an explicit optional addition, with the mismatch explained in the app. Humanoid limb armour does not silently acquire guessed mount coverage.
 
-The workshop also exposes this book’s already approved equipment and Myrmidian magic through its normal equipment/magic controls. Crew Commander stays unavailable. No hiring, upkeep, contracts, Career/XP development, training Endeavours or live mounted/group combat are implemented. Shared search still excludes NPC profiles and templates. Compact PDF sheets include actual Traits and descriptions; source discrepancies remain in the app.
+The workshop also exposes this book’s already approved equipment and Myrmidian magic through its normal equipment/magic controls. Crew Commander uses its approved Legacy adaptation. No hiring, upkeep, contracts, Career/XP development, training Endeavours or live mounted/group combat are implemented. Shared search still excludes NPC profiles and templates. Compact PDF sheets include actual Traits and descriptions; source discrepancies remain in the app.
 
 Reviewed GM source lives in `dist/gm/sources/up-in-arms.json`. `scripts/build-up-in-arms-gm.py` reproduces it from frozen reference records and explicit verified table values/decisions. The generator checks its checksum against the installed pack and produces the runtime catalogue and GM inventory. Run this builder, `npm run generate:books`, the affected GM tests and the local release checks after changes.

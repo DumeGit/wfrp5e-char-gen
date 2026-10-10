@@ -89,6 +89,14 @@
     {
       "id": "tribes-tribulations",
       "path": "tribes-tribulations/manifest.json"
+    },
+    {
+      "id": "sea-of-claws",
+      "path": "sea-of-claws/manifest.json"
+    },
+    {
+      "id": "sea-of-claws-artillery",
+      "path": "sea-of-claws-artillery/manifest.json"
     }
   ]
 }

@@ -8,14 +8,14 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 15,
-    "careers": 126,
-    "magicProfiles": 564,
+    "books": 16,
+    "careers": 135,
+    "magicProfiles": 585,
     "rituals": 17,
     "cants": 24,
     "techniques": 10,
     "runes": 71,
-    "pricedShopEntries": 405
+    "pricedShopEntries": 408
   },
   "books": [
     {
@@ -16642,13 +16642,13 @@
     {
       "id": "up-in-arms",
       "title": "Up in Arms",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 135,
-        "adapted": 12,
+        "adapted": 13,
         "reference-only": 128,
-        "unavailable": 1,
+        "unavailable": 0,
         "deferred": 9
       },
       "featureCounts": {
@@ -16703,9 +16703,9 @@
         },
         "talents": {
           "implemented": 0,
-          "adapted": 0,
+          "adapted": 1,
           "reference-only": 0,
-          "unavailable": 1,
+          "unavailable": 0,
           "deferred": 0
         },
         "weapons": {
@@ -19372,12 +19372,12 @@
           "contentId": "up-in-arms:talent:crew-commander",
           "kind": "talents",
           "name": "Crew Commander",
-          "status": "unavailable",
+          "status": "adapted",
           "source": {
             "book": "up-in-arms",
             "page": 140
           },
-          "reason": "Unavailable: Crew Commander has no Fifth Edition core equivalent. Its Fourth Edition repeat limit and Talent Test bonus need an agreed conversion (Up in Arms p. 140)."
+          "reason": "User-approved Fourth Edition adaptation: printed Initiative Bonus purchase limit and explicit Leadership/crew effect retained. No old default per-rank Talent Test bonus; situational crew effects are reference-only."
         },
         {
           "contentId": "up-in-arms:weapon:ahlspiess-2h",
@@ -31510,13 +31510,13 @@
     {
       "id": "dwarf-guide",
       "title": "Dwarf Player’s Guide",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 156,
-        "adapted": 34,
+        "adapted": 35,
         "reference-only": 120,
-        "unavailable": 2,
+        "unavailable": 1,
         "deferred": 0
       },
       "featureCounts": {
@@ -31592,9 +31592,9 @@
         },
         "talents": {
           "implemented": 9,
-          "adapted": 10,
+          "adapted": 11,
           "reference-only": 0,
-          "unavailable": 1,
+          "unavailable": 0,
           "deferred": 0
         },
         "weapons": {
@@ -34635,12 +34635,12 @@
           "contentId": "dwarf-guide:talent:crew-commander",
           "kind": "talents",
           "name": "Crew Commander",
-          "status": "unavailable",
+          "status": "adapted",
           "source": {
             "book": "dwarf-guide",
             "page": 81
           },
-          "reason": "Crew Commander has no agreed Fifth Edition conversion; left unavailable by user decision."
+          "reason": "User-approved Fourth Edition adaptation: printed Initiative Bonus purchase limit and explicit Leadership/crew effect retained. No old default per-rank Talent Test bonus; situational crew effects are reference-only."
         },
         {
           "contentId": "dwarf-guide:talent:demolisher",
@@ -42162,6 +42162,1261 @@
             "page": 16
           },
           "reason": "Current core Talents/armour, explicit equipment and species/Lore limits."
+        }
+      ]
+    },
+    {
+      "id": "sea-of-claws",
+      "title": "Sea of Claws",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 30,
+        "adapted": 15,
+        "reference-only": 34,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 1,
+        "adapted": 6,
+        "reference-only": 1,
+        "unavailable": 0,
+        "deferred": 2
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 2,
+          "adapted": 7,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "market": {
+          "implemented": 3,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "origins": {
+          "implemented": 0,
+          "adapted": 4,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 19,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "ruleReferences": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 15,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "spells": {
+          "implemented": 19,
+          "adapted": 2,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "tables": {
+          "implemented": 6,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "talents": {
+          "implemented": 0,
+          "adapted": 2,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "sea-of-claws:career:beachcomber",
+          "kind": "careers",
+          "name": "Beachcomber",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 64
+          },
+          "reason": "Strider uses current core Striding Gait effects."
+        },
+        {
+          "contentId": "sea-of-claws:career:chantyman",
+          "kind": "careers",
+          "name": "Chantyman",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 66
+          },
+          "reason": "Strider uses current core Striding Gait effects."
+        },
+        {
+          "contentId": "sea-of-claws:career:officer",
+          "kind": "careers",
+          "name": "Officer",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 70
+          },
+          "reason": "Public Speaking uses current core Public Speaker effects."
+        },
+        {
+          "contentId": "sea-of-claws:career:pilot",
+          "kind": "careers",
+          "name": "Pilot",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 68
+          },
+          "reason": "Printed Huffer uses the current Pilot Career name; the four Seafarer levels remain source-specific."
+        },
+        {
+          "contentId": "sea-of-claws:career:priest-of-stromfels",
+          "kind": "careers",
+          "name": "Priest of Stromfels",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 90
+          },
+          "reason": "Old Strength-tier advancement stricture retained as reference only, without an invented tracker/XP restriction."
+        },
+        {
+          "contentId": "sea-of-claws:career:sailor",
+          "kind": "careers",
+          "name": "Sailor",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 72
+          },
+          "reason": "Strider uses current core Striding Gait effects. Public Speaking uses current core Public Speaker effects."
+        },
+        {
+          "contentId": "sea-of-claws:career:sailor-priest-of-manann",
+          "kind": "careers",
+          "name": "Sailor-Priest of Manann",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 74
+          },
+          "reason": "Public Speaking uses current core Public Speaker effects."
+        },
+        {
+          "contentId": "sea-of-claws:career:ship-s-gunner",
+          "kind": "careers",
+          "name": "Ship’s Gunner",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 76
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:career:wrecker",
+          "kind": "careers",
+          "name": "Wrecker",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 78
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:item:mortar-bomb",
+          "kind": "market",
+          "name": "Bomb (Mortar)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 101
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:item:mortar-incendiary",
+          "kind": "market",
+          "name": "Incendiary (Mortar)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 101
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:item:norse-dwarf-bolt",
+          "kind": "market",
+          "name": "Norse Dwarf Bolt",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 44
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:origin:bjornling",
+          "kind": "origins",
+          "name": "Bjornling Norse",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 56
+          },
+          "reason": "User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations."
+        },
+        {
+          "contentId": "sea-of-claws:origin:norse-dwarf",
+          "kind": "origins",
+          "name": "Norse Dwarf",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 41
+          },
+          "reason": "User-approved core five Skills at +5, physical profile, creation limits and native Khazalid/Reikspiel with printed regional choices."
+        },
+        {
+          "contentId": "sea-of-claws:origin:sarl",
+          "kind": "origins",
+          "name": "Sarl Norse",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 56
+          },
+          "reason": "User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations."
+        },
+        {
+          "contentId": "sea-of-claws:origin:skaeling",
+          "kind": "origins",
+          "name": "Skaeling Norse",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 56
+          },
+          "reason": "User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-all-arise-for-the-night-has-eyes",
+          "kind": "referenceEntries",
+          "name": "Chanty: All arise, for the night has eyes…",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-jacques-bret-came-sailing-to-meet-our-steel",
+          "kind": "referenceEntries",
+          "name": "Chanty: Jacques Bret came sailing to meet our steel!",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-of-all-the-terrors-upon-the-sea",
+          "kind": "referenceEntries",
+          "name": "Chanty: Of all the terrors upon the sea…",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-the-ladies-of-l-anguille",
+          "kind": "referenceEntries",
+          "name": "Chanty: The ladies of L’Anguille…",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-they-do-say-do-as-the-captain-do-say",
+          "kind": "referenceEntries",
+          "name": "Chanty: They do say do as the Captain do say…",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-we-re-all-in-this-together-so-heave-ho-heave-ho",
+          "kind": "referenceEntries",
+          "name": "Chanty: We’re all in this together so, heave ho, heave ho…",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:chanty-you-band-of-shipmates-gather-round",
+          "kind": "referenceEntries",
+          "name": "Chanty: You band of shipmates gather round…",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 67
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:feast-of-bones",
+          "kind": "referenceEntries",
+          "name": "Feast of Bones",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 144
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:grubark-gearing-system",
+          "kind": "referenceEntries",
+          "name": "Grubark Gearing System",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 44
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:hullbreaker",
+          "kind": "referenceEntries",
+          "name": "Hullbreaker",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 44
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:naval-artillery-ammunition",
+          "kind": "referenceEntries",
+          "name": "Naval Artillery Ammunition",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 101
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:naval-artillery-profiles",
+          "kind": "referenceEntries",
+          "name": "Naval Artillery Profiles",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 100
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:norse-class-and-career-table",
+          "kind": "referenceEntries",
+          "name": "Norse Class and Career Table",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 57
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:norse-skill-and-equipment-advice",
+          "kind": "referenceEntries",
+          "name": "Norse Skill and Equipment Advice",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 57
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:riverfolk-lore-of-oceans",
+          "kind": "referenceEntries",
+          "name": "Riverfolk Lore of Oceans",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:seafarer-class-table",
+          "kind": "referenceEntries",
+          "name": "Seafarer Class Table",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:skaeling-mark-of-khorne",
+          "kind": "referenceEntries",
+          "name": "Skaeling Mark of Khorne",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 56
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:stromfels-and-sin",
+          "kind": "referenceEntries",
+          "name": "Stromfels and Sin",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:reference:stromfels-strength-stricture",
+          "kind": "referenceEntries",
+          "name": "Stromfels Strength Stricture",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:boat-crusher",
+          "kind": "ruleReferences",
+          "name": "Boat Crusher",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 143
+          },
+          "reason": "Printed Test Difficulty uses current SL modifiers."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:devastating-assault",
+          "kind": "ruleReferences",
+          "name": "Devastating Assault",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 147
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:electrical-discharge",
+          "kind": "ruleReferences",
+          "name": "Electrical Discharge",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 143
+          },
+          "reason": "Printed Test Difficulty uses current SL modifiers. Printed Advantage uses Momentum."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:fire-resistant",
+          "kind": "ruleReferences",
+          "name": "Fire Resistant",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 142
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:immersion",
+          "kind": "ruleReferences",
+          "name": "Immersion",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 142
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:love-the-light",
+          "kind": "ruleReferences",
+          "name": "Love the Light",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 141
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:lure-of-the-leviathan",
+          "kind": "ruleReferences",
+          "name": "Lure of the Leviathan",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 147
+          },
+          "reason": "Printed Test Difficulty uses current SL modifiers."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:lure-of-the-lurkerfish",
+          "kind": "ruleReferences",
+          "name": "Lure of the Lurkerfish",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 140
+          },
+          "reason": "Printed Test Difficulty uses current SL modifiers."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:marine-creature",
+          "kind": "ruleReferences",
+          "name": "Marine Creature",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 140
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:mindless-spellcaster",
+          "kind": "ruleReferences",
+          "name": "Mindless Spellcaster",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 142
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:on-a-different-scale",
+          "kind": "ruleReferences",
+          "name": "On a Different Scale",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 147
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:resistant-to-cold",
+          "kind": "ruleReferences",
+          "name": "Resistant to Cold",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 147
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:slimy",
+          "kind": "ruleReferences",
+          "name": "Slimy",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 141
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:syreen-s-call",
+          "kind": "ruleReferences",
+          "name": "Syreen’s Call",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 145
+          },
+          "reason": "Printed Test Difficulty uses current SL modifiers."
+        },
+        {
+          "contentId": "sea-of-claws:rule-reference:whale-bane",
+          "kind": "ruleReferences",
+          "name": "Whale Bane",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 145
+          },
+          "reason": "Uses full Fifth Edition Venom rather than the older on-hit interpretation."
+        },
+        {
+          "contentId": "sea-of-claws:spell:blessed-voyage",
+          "kind": "spells",
+          "name": "Blessed Voyage",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:blessing-of-the-albatross",
+          "kind": "spells",
+          "name": "Blessing of the Albatross",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:blessing-of-the-mariner",
+          "kind": "spells",
+          "name": "Blessing of the Mariner",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:blessings-of-bel-shanaar",
+          "kind": "spells",
+          "name": "Blessings of Bel Shanaar",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:blood-trail",
+          "kind": "spells",
+          "name": "Blood Trail",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Printed Test Difficulty uses Fifth Edition SL modifiers (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "sea-of-claws:spell:breathe-water",
+          "kind": "spells",
+          "name": "Breathe Water",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:curse-of-the-harsh-mistress",
+          "kind": "spells",
+          "name": "Curse of the Harsh Mistress",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Printed Test Difficulty uses Fifth Edition SL modifiers (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "sea-of-claws:spell:living-mire",
+          "kind": "spells",
+          "name": "Living Mire",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:manann-s-mood-made-meaningless",
+          "kind": "spells",
+          "name": "Manann’s Mood Made Meaningless",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:niezlib-s-optimal-firing-solution",
+          "kind": "spells",
+          "name": "Niezlib’s Optimal Firing Solution",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:quell-waters",
+          "kind": "spells",
+          "name": "Quell Waters",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:raging-seas",
+          "kind": "spells",
+          "name": "Raging Seas",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:repel-sea-beast",
+          "kind": "spells",
+          "name": "Repel Sea Beast",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:rip-tides",
+          "kind": "spells",
+          "name": "Rip Tides",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:sea-curse",
+          "kind": "spells",
+          "name": "Sea Curse",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 87
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:sea-of-glass",
+          "kind": "spells",
+          "name": "Sea of Glass",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:seasickness",
+          "kind": "spells",
+          "name": "Seasickness",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:send-em-to-stromfels",
+          "kind": "spells",
+          "name": "Send ‘em to Stromfels",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:storm-winds",
+          "kind": "spells",
+          "name": "Storm Winds",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 91
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:water-water-everywhere",
+          "kind": "spells",
+          "name": "Water Water Everywhere",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:spell:whirlpool",
+          "kind": "spells",
+          "name": "Whirlpool",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:table:norse-careers",
+          "kind": "tables",
+          "name": "Norse Human Careers",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 57
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:table:seafarer-dwarf",
+          "kind": "tables",
+          "name": "Optional Seafarer Careers (Dwarf)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:table:seafarer-halfling",
+          "kind": "tables",
+          "name": "Optional Seafarer Careers (Halfling)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:table:seafarer-high-elf",
+          "kind": "tables",
+          "name": "Optional Seafarer Careers (High Elf)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:table:seafarer-human",
+          "kind": "tables",
+          "name": "Optional Seafarer Careers (Human)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:table:seafarer-wood-elf",
+          "kind": "tables",
+          "name": "Optional Seafarer Careers (Wood Elf)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws:talent:chanty",
+          "kind": "talents",
+          "name": "Chanty (Any)",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "User-approved printed Intelligence Bonus limit and effects; old default per-rank Test bonuses omitted. Songs use their printed effects as references only."
+        },
+        {
+          "contentId": "sea-of-claws:talent:master-and-commander",
+          "kind": "talents",
+          "name": "Master and Commander",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "User-approved printed Fellowship Bonus limit and explicit per-rank Leadership effect retained. No additional old default Test bonus; situational effect is not automated."
+        }
+      ],
+      "features": [
+        {
+          "id": "sea-of-claws:feature:artillery",
+          "name": "Optional naval artillery variant",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 100
+          },
+          "reason": "Explicit compatible statistics alternative; never a silent overwrite."
+        },
+        {
+          "id": "sea-of-claws:feature:bestiary",
+          "name": "13 generic sea creatures",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 140
+          },
+          "reason": "Approved Size and current Trait/Talent replacements; source-specific Strength casting."
+        },
+        {
+          "id": "sea-of-claws:feature:careers",
+          "name": "Nine Career paths and optional Career tables",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Explicit core alternatives, current Talents and documented 07/68 table corrections."
+        },
+        {
+          "id": "sea-of-claws:feature:crew",
+          "name": "Crew Commander",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Approved Initiative Bonus limit and explicit effect; shared existing definition, no old default rank bonus."
+        },
+        {
+          "id": "sea-of-claws:feature:gameplay",
+          "name": "Ship handling, crew and voyage management",
+          "status": "deferred",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 103
+          },
+          "reason": "No new management systems; current curated search entries do not claim exhaustive chapter coverage."
+        },
+        {
+          "id": "sea-of-claws:feature:khorne",
+          "name": "Skaeling Mark of Khorne PC replacement",
+          "status": "reference-only",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 56
+          },
+          "reason": "User retains this optional replacement as a reference without invented PC Trait mechanics."
+        },
+        {
+          "id": "sea-of-claws:feature:magic",
+          "name": "21 spells and Miracles",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 15
+          },
+          "reason": "Labelled Test Difficulty conversions and chosen Seasickness duration; unchanged effects retain source values."
+        },
+        {
+          "id": "sea-of-claws:feature:named",
+          "name": "Named captains and Triton",
+          "status": "deferred",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 148
+          },
+          "reason": "Excluded from foundations and global search."
+        },
+        {
+          "id": "sea-of-claws:feature:origins",
+          "name": "Four Norse origins",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 41
+          },
+          "reason": "Approved Fifth Edition starting allocations and native languages; printed choices retained."
+        },
+        {
+          "id": "sea-of-claws:feature:talents",
+          "name": "Chanty and Master and Commander",
+          "status": "adapted",
+          "source": {
+            "book": "sea-of-claws",
+            "page": 63
+          },
+          "reason": "Approved printed limits and explicit effects; no default old per-rank Test bonus. Each Chanty rank selects a different song."
+        }
+      ]
+    },
+    {
+      "id": "sea-of-claws-artillery",
+      "title": "Sea of Claws — Naval artillery",
+      "version": "1.0.0",
+      "kind": "variant",
+      "recordCounts": {
+        "implemented": 14,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {
+        "market": {
+          "implemented": 8,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "weapons": {
+          "implemented": 6,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "sea-of-claws-artillery:item:ball-and-powder-cannon",
+          "kind": "market",
+          "name": "Ball and Powder (Cannon)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 101
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:ballista",
+          "kind": "market",
+          "name": "Ballista",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:cannon-large",
+          "kind": "market",
+          "name": "Cannon (large)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:cannon-medium",
+          "kind": "market",
+          "name": "Cannon (medium)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:cannon-small",
+          "kind": "market",
+          "name": "Cannon (small)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:grapeshot-and-powder-cannon",
+          "kind": "market",
+          "name": "Grapeshot and Powder (Cannon)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 101
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:mortar",
+          "kind": "market",
+          "name": "Mortar",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:item:swivel-gun",
+          "kind": "market",
+          "name": "Swivel Gun",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:weapon:ballista",
+          "kind": "weapons",
+          "name": "Ballista",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:weapon:cannon-large",
+          "kind": "weapons",
+          "name": "Cannon (large)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:weapon:cannon-medium",
+          "kind": "weapons",
+          "name": "Cannon (medium)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:weapon:cannon-small",
+          "kind": "weapons",
+          "name": "Cannon (small)",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:weapon:mortar",
+          "kind": "weapons",
+          "name": "Mortar",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "sea-of-claws-artillery:weapon:swivel-gun",
+          "kind": "weapons",
+          "name": "Swivel Gun",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": [
+        {
+          "id": "sea-of-claws-artillery:feature:naval-artillery",
+          "name": "Six naval artillery profiles and two ammunition alternatives",
+          "status": "implemented",
+          "source": {
+            "book": "sea-of-claws-artillery",
+            "page": 100
+          },
+          "reason": "Explicit user-selected alternative; GM options retain both sources as distinct labelled choices."
         }
       ]
     }

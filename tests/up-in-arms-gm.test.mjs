@@ -53,7 +53,7 @@ test("GM books are independently opt-in, catalogue order is alphabetical and exc
       .books.map((b) => b.id)
       .sort(),
     library.packs
-      .filter((p) => p.manifest.kind !== "variant")
+      .filter((p) => p.manifest.kind !== "variant" || p.manifest.id === "sea-of-claws-artillery")
       .map((p) => p.manifest.id)
       .sort(),
   );
@@ -203,14 +203,16 @@ test("mixed-book saved drafts validate their own catalogues and reject hidden/un
     crew = pickerEntries(data, R, result(s), "talent").find(
       (t) => t.name === "Crew Commander",
     );
-  assert.ok(crew.disabled);
+  assert.ok(!crew.disabled);
   s.talents.push({
     key: "gm-crew",
     name: "Crew Commander",
     origin: "GM",
     ranks: 1,
   });
-  assert.throws(() => validateGMDraft(data, R, s), /Talent/);
+  assert.doesNotThrow(() => validateGMDraft(data, R, s));
+  s.talents[0].ranks = 99;
+  assert.ok(result(s).issues.some(x => x.code === "talent.limit"));
 });
 test("both mount PDF formats show actual rules without discrepancy commentary, and fit four cards", async () => {
   const entries = ["Riding Horse", "Demigryph Mount"].map((name) => {

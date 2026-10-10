@@ -1,0 +1,1096 @@
+[
+  {
+    "id": "sea-of-claws:career:beachcomber",
+    "name": "Beachcomber",
+    "class": "Seafarer",
+    "species": [
+      "Halfling",
+      "Human"
+    ],
+    "page": 64,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 1,
+      "Ag": 2,
+      "Dex": null,
+      "Int": 1,
+      "WP": 3,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Scavenger",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Climb",
+          "Dodge",
+          "Gossip",
+          "Haggle",
+          "Lore (Coasts and Tides)",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Row",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Fisherman",
+          "Orientation",
+          "Striding Gait (Coastal)",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Fishing Net",
+          "String Bag"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Beachcomber",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Endurance",
+          "Lore (Any)",
+          "Ranged (Sling)",
+          "Set Trap",
+          "Swim"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Flee!",
+          "Rover",
+          "Stone Soup"
+        ],
+        "trappings": [
+          "Found Boots",
+          "Leather Jerkin",
+          "Rain Hat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Drifter",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Charm",
+          "Evaluate",
+          "Gamble",
+          "Sail"
+        ],
+        "talents": [
+          "Old Salt",
+          "Savant (Coasts and Tides)",
+          "Sea Legs",
+          "Tinker"
+        ],
+        "trappings": [
+          "Boat",
+          "Hut",
+          "Storm Lantern"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master of the Beach",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Leadership",
+          "Trade (Boatbuilder)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "River Guide",
+          "Seasoned Traveller",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Wreck Dwelling"
+        ]
+      }
+    ],
+    "adaptation": "Strider uses current core Striding Gait effects."
+  },
+  {
+    "id": "sea-of-claws:career:chantyman",
+    "name": "Chantyman",
+    "class": "Seafarer",
+    "species": [
+      "High Elf",
+      "Human"
+    ],
+    "page": 66,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 4,
+      "Ag": 2,
+      "Dex": 1,
+      "Int": 1,
+      "WP": 3,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Chanter",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Consume Alcohol",
+          "Dodge",
+          "Entertain (Singing)",
+          "Gossip",
+          "Melee (Brawling)",
+          "Play (Fiddle, Squeezebox or Tin Whistle)",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Etiquette (Crew)",
+          "Perfect Pitch",
+          "Sea Legs",
+          "Striding Gait (Coastal)"
+        ],
+        "trappings": [
+          "Musical Instrument",
+          "Rain Hat"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Chantyman",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Endurance",
+          "Gamble",
+          "Melee (Basic)",
+          "Perform (Any)"
+        ],
+        "talents": [
+          "Chanty (Any)",
+          "Jump Up",
+          "Seasoned Traveller",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Sealskin Coat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Chanty Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Language (Any)",
+          "Leadership",
+          "Perception"
+        ],
+        "talents": [
+          "Carouser",
+          "Fisherman",
+          "Old Salt",
+          "Public Speaker"
+        ],
+        "trappings": [
+          "Quality Instrument"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Chanty Master",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Lore (Oceans)",
+          "Navigation"
+        ],
+        "talents": [
+          "Tenacious",
+          "Magnum Opus",
+          "Orientation",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Quality Hat"
+        ]
+      }
+    ],
+    "adaptation": "Strider uses current core Striding Gait effects."
+  },
+  {
+    "id": "sea-of-claws:career:pilot",
+    "name": "Pilot",
+    "class": "Seafarer",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 68,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": 3,
+      "WP": 2,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Portguide",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Consume Alcohol",
+          "Gossip",
+          "Intuition",
+          "Lore (Local)",
+          "Lore (Oceans)",
+          "Melee (Basic)",
+          "Navigation",
+          "Perception",
+          "Row",
+          "Swim"
+        ],
+        "talents": [
+          "Fisherman",
+          "Night Vision",
+          "Orientation",
+          "Waterman"
+        ],
+        "trappings": [
+          "Hand Weapon (Boat Hook)",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Huffer",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Climb",
+          "Cool",
+          "Entertain (Storytelling)",
+          "Language (Any)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Etiquette (Guilder)",
+          "Nose for Trouble",
+          "Old Salt"
+        ],
+        "trappings": [
+          "Leather Jerkin",
+          "Rope",
+          "Row Boat"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pilot",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Haggle",
+          "Intimidate",
+          "Lore (Local)",
+          "Lore (Wrecks)"
+        ],
+        "talents": [
+          "Acute Sense (Sight)",
+          "Pilot",
+          "Sea Legs",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Pole",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Pilot",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Sail"
+        ],
+        "talents": [
+          "Sharp",
+          "Sixth Sense",
+          "Strong Swimmer",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Boathand",
+          "Small Boat"
+        ]
+      }
+    ],
+    "alternativeFor": "pilot",
+    "text": "Printed as Huffer, Sea of Claws p. 68. An explicit alternative to the Fifth Edition Pilot Career.",
+    "adaptation": "Printed Huffer uses the current Pilot Career name; the four Seafarer levels remain source-specific."
+  },
+  {
+    "id": "sea-of-claws:career:officer",
+    "name": "Officer",
+    "class": "Seafarer",
+    "species": [
+      "Dwarf",
+      "High Elf",
+      "Human"
+    ],
+    "page": 70,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 2,
+      "S": null,
+      "T": 3,
+      "I": null,
+      "Ag": null,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Midshipman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Gossip",
+          "Leadership",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Etiquette (Crew)",
+          "Orientation",
+          "Read/Write",
+          "Sea Legs"
+        ],
+        "trappings": [
+          "Hand Weapon",
+          "Uniform"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Officer",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Endurance",
+          "Intimidate",
+          "Lore (Oceans)",
+          "Navigation",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Old Salt",
+          "Master and Commander",
+          "Pilot"
+        ],
+        "trappings": [
+          "Quality Uniform",
+          "Ship’s Chest"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Captain",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Art (Cartography)",
+          "Charm",
+          "Dodge",
+          "Intuition"
+        ],
+        "talents": [
+          "Inspiring",
+          "Seasoned Traveller",
+          "War Leader",
+          "Suave"
+        ],
+        "trappings": [
+          "Big Hat",
+          "Boat to Command",
+          "Captain’s Log"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Admiral",
+        "status": "Gold",
+        "standing": 5,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Commanding Presence",
+          "Iron Will",
+          "Public Speaker",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "A Fleet"
+        ]
+      }
+    ],
+    "adaptation": "Public Speaking uses current core Public Speaker effects."
+  },
+  {
+    "id": "sea-of-claws:career:sailor",
+    "name": "Sailor",
+    "class": "Seafarer",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 72,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": null,
+      "T": null,
+      "I": 3,
+      "Ag": 1,
+      "Dex": 1,
+      "Int": 4,
+      "WP": null,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Landsman",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Climb",
+          "Consume Alcohol",
+          "Gamble",
+          "Gossip",
+          "Lore (Oceans)",
+          "Melee (Brawling)",
+          "Play (Pennywhistle)",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Fisherman",
+          "Striding Gait (Coastal)",
+          "Strong Back",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Brush",
+          "Bucket",
+          "Mop"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Sailor",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Dodge",
+          "Endurance",
+          "Entertain (Singing)",
+          "Language (Any)",
+          "Melee (Basic)"
+        ],
+        "talents": [
+          "Catfall",
+          "Sea Legs",
+          "Seasoned Traveller",
+          "Strong Legs"
+        ],
+        "trappings": [
+          "Boat Hook",
+          "Leather Jerkin"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Boatswain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Cool",
+          "Leadership",
+          "Perception",
+          "Trade (Carpenter)"
+        ],
+        "talents": [
+          "Old Salt",
+          "Strike Mighty Blow",
+          "Tenacious",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Trade Tools (Carpenter)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Ship’s Master",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Charm",
+          "Navigation"
+        ],
+        "talents": [
+          "Orientation",
+          "Pilot",
+          "Public Speaker",
+          "Savvy"
+        ],
+        "trappings": [
+          "Sailing Ship and Crew",
+          "Sextant",
+          "Shipping Charts",
+          "Spyglass"
+        ]
+      }
+    ],
+    "alternativeFor": "sailor",
+    "adaptation": "Strider uses current core Striding Gait effects. Public Speaking uses current core Public Speaker effects."
+  },
+  {
+    "id": "sea-of-claws:career:sailor-priest-of-manann",
+    "name": "Sailor-Priest of Manann",
+    "class": "Seafarer",
+    "species": [
+      "Human"
+    ],
+    "page": 74,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Athletics",
+          "Consume Alcohol",
+          "Cool",
+          "Endurance",
+          "Language (Classical)",
+          "Lore (Manann)",
+          "Pray",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Bless (Manann)",
+          "Holy Visions",
+          "Sea Legs",
+          "Very Strong"
+        ],
+        "trappings": [
+          "Blue or Green or Turquoise Robes",
+          "Cutlass",
+          "Symbol of Manann"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Sailor-Priest",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Intuition",
+          "Entertain (Singing)",
+          "Gamble",
+          "Intimidate",
+          "Melee (Polearm)",
+          "Navigation"
+        ],
+        "talents": [
+          "Invoke (Manann)",
+          "Public Speaker",
+          "Read/Write",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Holy Book of Manann",
+          "Trident (counts as Spear)"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Priest-Captain",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Leadership",
+          "Lore (Oceans)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Hatred (Followers of Stromfels)",
+          "Old Salt",
+          "Pilot",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Ceremonial Boat",
+          "Quality Robes",
+          "Subordinate Priests",
+          "Temple"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Wave Lord",
+        "status": "Gold",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Lore (Politics)"
+        ],
+        "talents": [
+          "Chanty (Any)",
+          "Inspiring",
+          "Pure Soul",
+          "Seasoned Traveller"
+        ],
+        "trappings": [
+          "Flotilla of Ships",
+          "Holy Relic",
+          "Subordinate High Priests"
+        ]
+      }
+    ],
+    "adaptation": "Public Speaking uses current core Public Speaker effects."
+  },
+  {
+    "id": "sea-of-claws:career:ship-s-gunner",
+    "name": "Ship’s Gunner",
+    "class": "Seafarer",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 76,
+    "advanceScheme": {
+      "WS": null,
+      "BS": 1,
+      "S": null,
+      "T": 3,
+      "I": 2,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": 4,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Powder Monkey",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Climb",
+          "Dodge",
+          "Endurance",
+          "Language (Battle)",
+          "Melee (Brawling)",
+          "Perception",
+          "Ranged (Blackpowder)",
+          "Row",
+          "Swim"
+        ],
+        "talents": [
+          "Old Salt",
+          "Rapid Reload",
+          "Sea Legs",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Bucket",
+          "Hammock"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Ship’s Gunner",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Consume Alcohol",
+          "Cool",
+          "Gamble",
+          "Gossip",
+          "Melee (Basic)",
+          "Sail"
+        ],
+        "talents": [
+          "Etiquette (Crew)",
+          "Gunner",
+          "Marksman",
+          "Sniper"
+        ],
+        "trappings": [
+          "Hat",
+          "Sea Chest",
+          "Tools"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Gunnery Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Leadership",
+          "Lore (Artillery)",
+          "Navigation",
+          "Trade (Gunsmith)"
+        ],
+        "talents": [
+          "Combat Aware",
+          "Crew Commander",
+          "Orientation",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Crew",
+          "Telescope"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Master Gunner",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Charm",
+          "Lore (Oceans)"
+        ],
+        "talents": [
+          "Accurate Shot",
+          "Inspiring",
+          "Seasoned Traveller",
+          "Stout-hearted"
+        ],
+        "trappings": [
+          "Cabin",
+          "Quality Uniform"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sea-of-claws:career:wrecker",
+    "name": "Wrecker",
+    "class": "Seafarer",
+    "species": [
+      "Dwarf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 78,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 3,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 2,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Cargo Scavenger",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Consume Alcohol",
+          "Dodge",
+          "Endurance",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Ranged (Sling)",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Break and Enter",
+          "Criminal",
+          "Fisherman",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Crowbar",
+          "Large Sack",
+          "Leather Gloves"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Wrecker",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Bribery",
+          "Cool",
+          "Intuition",
+          "Navigation",
+          "Perception",
+          "Set Trap"
+        ],
+        "talents": [
+          "Flee!",
+          "Rover",
+          "Strong Swimmer",
+          "Trapper"
+        ],
+        "trappings": [
+          "Boat Hook",
+          "Leather Jack",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pirate",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Gossip",
+          "Intimidate",
+          "Ranged (Crossbow)",
+          "Stealth (Rural)"
+        ],
+        "talents": [
+          "Dirty Fighting",
+          "Etiquette (Criminals)",
+          "Menacing",
+          "Waterman"
+        ],
+        "trappings": [
+          "Crossbow with 10 Bolts",
+          "Grappling Hook and Rope",
+          "Riverboat"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Pirate Captain",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Leadership",
+          "Lore (Oceans)"
+        ],
+        "talents": [
+          "Furious Assault",
+          "In-fighter",
+          "Master and Commander",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Fleet of Riverboats and Wrecker Crew",
+          "Keg of Ale",
+          "Manacles"
+        ]
+      }
+    ],
+    "alternativeFor": "wrecker"
+  },
+  {
+    "id": "sea-of-claws:career:priest-of-stromfels",
+    "name": "Priest of Stromfels",
+    "class": "Seafarer",
+    "species": [
+      "Human"
+    ],
+    "page": 90,
+    "advanceScheme": {
+      "WS": 1,
+      "BS": 4,
+      "S": 1,
+      "T": null,
+      "I": 1,
+      "Ag": 3,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": 2
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Initiate",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Climb",
+          "Consume Alcohol",
+          "Endurance",
+          "Intimidate",
+          "Intuition",
+          "Melee (Basic)",
+          "Pray",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Bless (Stromfels)",
+          "Criminal",
+          "Holy Visions",
+          "Strong Swimmer"
+        ],
+        "trappings": [
+          "Crowbar",
+          "Hand Weapon",
+          "Large Sack",
+          "Leather Jerkin",
+          "Leather Gloves"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Priest of Stromfels",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Cool",
+          "Entertain (Singing)",
+          "Lore (Stromfels)",
+          "Navigation",
+          "Perception",
+          "Track"
+        ],
+        "talents": [
+          "Fearless (Any)",
+          "Flee!",
+          "Invoke (Stromfels)",
+          "Menacing"
+        ],
+        "trappings": [
+          "Leather Jack",
+          "Storm Lantern and Oil"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pirate Priest",
+        "status": "Silver",
+        "standing": 4,
+        "skills": [
+          "Gossip",
+          "Leadership",
+          "Lore (Oceans)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Hatred (Manannites or Followers of Chaos)",
+          "Impassioned Zeal",
+          "Master Orator",
+          "Rover"
+        ],
+        "trappings": [
+          "Grappling Hook and Rope",
+          "Religious Relic",
+          "Riverboat"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Priest Captain",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Melee (Any)",
+          "Ranged (Blackpowder)"
+        ],
+        "talents": [
+          "Furious Assault",
+          "In-fighter",
+          "Pilot",
+          "Warrior Born"
+        ],
+        "trappings": [
+          "Group of Cultists",
+          "Pistol with 10 Shots"
+        ]
+      }
+    ],
+    "text": "Sea of Claws p. 89 requires a Priest of Stromfels to develop Strength to the minimum for the next Career tier before other Characteristics, or earn Sin Points. This old tier-minimum stricture is a legacy reference: Fifth Edition uses trackers and no XP gate is invented. Other cult strictures remain rules for play.",
+    "adaptation": "Old Strength-tier advancement stricture retained as reference only, without an invented tracker/XP restriction."
+  }
+]

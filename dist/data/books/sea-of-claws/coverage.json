@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "sea-of-claws:feature:origins",
+      "name": "Four Norse origins",
+      "status": "adapted",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 41
+      },
+      "reason": "Approved Fifth Edition starting allocations and native languages; printed choices retained."
+    },
+    {
+      "id": "sea-of-claws:feature:careers",
+      "name": "Nine Career paths and optional Career tables",
+      "status": "adapted",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 63
+      },
+      "reason": "Explicit core alternatives, current Talents and documented 07/68 table corrections."
+    },
+    {
+      "id": "sea-of-claws:feature:talents",
+      "name": "Chanty and Master and Commander",
+      "status": "adapted",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 63
+      },
+      "reason": "Approved printed limits and explicit effects; no default old per-rank Test bonus. Each Chanty rank selects a different song."
+    },
+    {
+      "id": "sea-of-claws:feature:magic",
+      "name": "21 spells and Miracles",
+      "status": "adapted",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 15
+      },
+      "reason": "Labelled Test Difficulty conversions and chosen Seasickness duration; unchanged effects retain source values."
+    },
+    {
+      "id": "sea-of-claws:feature:bestiary",
+      "name": "13 generic sea creatures",
+      "status": "adapted",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 140
+      },
+      "reason": "Approved Size and current Trait/Talent replacements; source-specific Strength casting."
+    },
+    {
+      "id": "sea-of-claws:feature:artillery",
+      "name": "Optional naval artillery variant",
+      "status": "implemented",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 100
+      },
+      "reason": "Explicit compatible statistics alternative; never a silent overwrite."
+    },
+    {
+      "id": "sea-of-claws:feature:khorne",
+      "name": "Skaeling Mark of Khorne PC replacement",
+      "status": "reference-only",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 56
+      },
+      "reason": "User retains this optional replacement as a reference without invented PC Trait mechanics."
+    },
+    {
+      "id": "sea-of-claws:feature:crew",
+      "name": "Crew Commander",
+      "status": "adapted",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 63
+      },
+      "reason": "Approved Initiative Bonus limit and explicit effect; shared existing definition, no old default rank bonus."
+    },
+    {
+      "id": "sea-of-claws:feature:gameplay",
+      "name": "Ship handling, crew and voyage management",
+      "status": "deferred",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 103
+      },
+      "reason": "No new management systems; current curated search entries do not claim exhaustive chapter coverage."
+    },
+    {
+      "id": "sea-of-claws:feature:named",
+      "name": "Named captains and Triton",
+      "status": "deferred",
+      "source": {
+        "book": "sea-of-claws",
+        "page": 148
+      },
+      "reason": "Excluded from foundations and global search."
+    }
+  ]
+}

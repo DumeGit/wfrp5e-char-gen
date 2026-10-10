@@ -1,0 +1,102 @@
+[
+  {
+    "id": "sea-of-claws-artillery:item:ballista",
+    "name": "Ballista",
+    "price": "30 GC",
+    "enc": 20,
+    "availability": "Scarce",
+    "category": "Siege weapons",
+    "page": 100,
+    "replaces": "up-in-arms:item:ballista",
+    "reason": "Price/profile source belongs to the explicitly selected naval artillery alternative."
+  },
+  {
+    "id": "sea-of-claws-artillery:item:cannon-small",
+    "name": "Cannon (small)",
+    "price": "40 GC",
+    "enc": 30,
+    "availability": "Scarce",
+    "category": "Siege weapons",
+    "page": 100,
+    "replaces": "up-in-arms:item:cannon-small",
+    "reason": "Price/profile source belongs to the explicitly selected naval artillery alternative."
+  },
+  {
+    "id": "sea-of-claws-artillery:item:cannon-medium",
+    "name": "Cannon (medium)",
+    "price": "100 GC",
+    "enc": 50,
+    "availability": "Exotic",
+    "category": "Siege weapons",
+    "page": 100,
+    "replaces": "up-in-arms:item:cannon-medium",
+    "reason": "Price/profile source belongs to the explicitly selected naval artillery alternative."
+  },
+  {
+    "id": "sea-of-claws-artillery:item:cannon-large",
+    "name": "Cannon (large)",
+    "price": "250 GC",
+    "enc": 75,
+    "availability": "Exotic",
+    "category": "Siege weapons",
+    "page": 100,
+    "replaces": "up-in-arms:item:cannon-large",
+    "reason": "Price/profile source belongs to the explicitly selected naval artillery alternative."
+  },
+  {
+    "id": "sea-of-claws-artillery:item:mortar",
+    "name": "Mortar",
+    "price": "50 GC",
+    "enc": 50,
+    "availability": "Exotic",
+    "category": "Siege weapons",
+    "page": 100,
+    "replaces": "up-in-arms:item:mortar",
+    "reason": "Price/profile source belongs to the explicitly selected naval artillery alternative."
+  },
+  {
+    "id": "sea-of-claws-artillery:item:swivel-gun",
+    "name": "Swivel Gun",
+    "price": "20 GC",
+    "enc": 5,
+    "availability": "Rare",
+    "category": "Siege weapons",
+    "page": 100,
+    "replaces": "up-in-arms:item:swivel-gun",
+    "reason": "Price/profile source belongs to the explicitly selected naval artillery alternative."
+  },
+  {
+    "name": "Ball and Powder (Cannon)",
+    "price": "8/–",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "id": "sea-of-claws-artillery:item:ball-and-powder-cannon",
+    "page": 101,
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Blast +2"
+    },
+    "text": "Printed Sea of Claws naval artillery ammunition; modifiers are reference-only.",
+    "replaces": "up-in-arms:item:ball-and-powder-cannon",
+    "reason": "Explicit naval ammunition alternative: use printed Sea of Claws modifiers rather than silently changing Up in Arms."
+  },
+  {
+    "name": "Grapeshot and Powder (Cannon)",
+    "price": "6/6",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "id": "sea-of-claws-artillery:item:grapeshot-and-powder-cannon",
+    "page": 101,
+    "ammunition": {
+      "range": "Quarter weapon",
+      "damage": "−5",
+      "qualities": "Spread +5"
+    },
+    "text": "Printed Sea of Claws naval artillery ammunition; modifiers are reference-only.",
+    "replaces": "up-in-arms:item:grapeshot-and-powder-cannon",
+    "reason": "Explicit naval ammunition alternative: use printed Sea of Claws modifiers rather than silently changing Up in Arms."
+  }
+]

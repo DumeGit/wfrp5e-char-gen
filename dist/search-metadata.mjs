@@ -25,6 +25,7 @@ const colourLores = [
   "Shadows",
 ];
 const propertyOverrides = {
+  "sea-of-claws:reference:hullbreaker": ["Quality", "Weapons"],
   "up-in-arms:reference:89-slash-xa": ["Quality", "Weapons"],
   "up-in-arms:reference:89-spread-rating": ["Quality", "Weapons"],
   "up-in-arms:reference:89-trip": ["Quality", "Weapons"],

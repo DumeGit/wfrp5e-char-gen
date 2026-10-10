@@ -4,7 +4,7 @@
   "title": "Dwarf Player’s Guide",
   "shortTitle": "Dwarf Guide",
   "edition": 4,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -22,7 +22,7 @@
       "User-corrected tables: names Morgrim/Nanda 738–745; birthplace Nuln 11–12, Karak Kadrin 19–25. Huffer uses Pilot; Advisor uses Adviser; Seaman uses Sailor.",
       "User-approved Dwarf Hammer wording in Guide Careers uses the Guide Dwarf Warhammer table profile; the naming mismatch is documented.",
       "Optional p. 55 Career equipment and matching weapon Skill swaps are user-approved; ammunition quantities remain unresolved. Guide p. 92 removes older Archives I Dwarf weapons when both books are enabled.",
-      "Axefighter and Crew Commander remain unavailable. Printed situational numeric modifiers stay in descriptions; named Test Difficulties use core SL conversions.",
+      "Axefighter remains unavailable; Crew Commander uses its approved adaptation. Printed situational numeric modifiers stay in descriptions; named Test Difficulties use core SL conversions.",
       "No runic items are granted by learning runes. Campaign grudges/XP rewards, rune forging, machinery crews, vehicles and live combat effects remain deferred.",
       "Appearance table referenced on p. 42 is absent from the supplied PDF; core appearance choices remain. Gromril suits and ammunition quantities stay unresolved where unspecified."
     ]

@@ -56,9 +56,9 @@ test("GM reuses all registered base-book options once, while books gate only fou
     "techniques",
     "cants",
   ])
-    assert.deepEqual(R[collection], expected[collection], collection);
+    assert.deepEqual(R[collection].filter(x => x.source?.book !== "sea-of-claws-artillery"), expected[collection], collection);
   assert.deepEqual(
-    R.books.map((b) => b.id),
+    R.books.filter(b => b.id !== "sea-of-claws-artillery").map((b) => b.id),
     expected.books.map((b) => b.id),
   );
   assert.deepEqual(
@@ -71,6 +71,7 @@ test("GM reuses all registered base-book options once, while books gate only fou
       "bayl-many-eyes",
       "cluster-eye-tribe",
       "tribes-tribulations",
+      "sea-of-claws",
     ],
   );
   assert.equal(gmCatalogue(data, s.books).profiles.length, 49);

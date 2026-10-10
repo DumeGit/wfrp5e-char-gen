@@ -1,0 +1,128 @@
+[
+  {
+    "id": "sea-of-claws:rule:stromfels-patron",
+    "path": [
+      "gods"
+    ],
+    "operation": "append",
+    "value": [
+      "Stromfels"
+    ],
+    "page": 91,
+    "reason": "Printed patron of the seven new Miracles; matching Bless/Invoke remains required."
+  },
+  {
+    "id": "sea-of-claws:rule:stromfels-blessings",
+    "path": [
+      "blessings",
+      "Stromfels"
+    ],
+    "operation": "add",
+    "value": [
+      "Battle",
+      "Breath",
+      "Courage",
+      "Hardiness",
+      "Savagery",
+      "Tenacity"
+    ],
+    "page": 91,
+    "reason": "Six printed Blessings reuse current core effects."
+  },
+  {
+    "id": "sea-of-claws:rule:classkit-seafarer",
+    "path": [
+      "classKit",
+      "Seafarer"
+    ],
+    "operation": "add",
+    "value": [
+      "Cloak",
+      "Clothing",
+      "Dagger",
+      "Pouch",
+      "Sling Bag containing 10 yards of Rope and a Flask of Spirits"
+    ],
+    "page": 63,
+    "reason": "Printed Seafarer Class Trappings."
+  },
+  {
+    "id": "sea-of-claws:rule:skilloptions-lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "include",
+    "value": [
+      "Coasts and Tides",
+      "Manann",
+      "Stromfels",
+      "Norsca",
+      "Khorne"
+    ],
+    "page": 63,
+    "reason": "Printed Sea of Claws specialisations; current core Skill definition and advancement apply."
+  },
+  {
+    "id": "sea-of-claws:rule:skilloptions-play",
+    "path": [
+      "skillOptions",
+      "Play"
+    ],
+    "operation": "include",
+    "value": [
+      "Fiddle",
+      "Squeezebox",
+      "Tin Whistle"
+    ],
+    "page": 66,
+    "reason": "Printed Sea of Claws specialisations; current core Skill definition and advancement apply."
+  },
+  {
+    "id": "sea-of-claws:rule:talentoptions-chanty",
+    "path": [
+      "talentOptions",
+      "Chanty"
+    ],
+    "operation": "add",
+    "value": [
+      "We’re all in this together so, heave ho, heave ho…",
+      "Jacques Bret came sailing to meet our steel!",
+      "Of all the terrors upon the sea…",
+      "You band of shipmates gather round…",
+      "All arise, for the night has eyes…",
+      "The ladies of L’Anguille…",
+      "They do say do as the Captain do say…"
+    ],
+    "page": 67,
+    "reason": "One distinct printed song per Chanty purchase; no additional XP or tracker box for selecting the song."
+  },
+  {
+    "id": "sea-of-claws:rule:talentoptions-etiquette",
+    "path": [
+      "talentOptions",
+      "Etiquette"
+    ],
+    "operation": "append",
+    "value": [
+      "Crew"
+    ],
+    "page": 66,
+    "reason": "Explicit printed Career Talent specialisations; current core effects apply."
+  },
+  {
+    "id": "sea-of-claws:rule:talentoptions-hatred",
+    "path": [
+      "talentOptions",
+      "Hatred"
+    ],
+    "operation": "append",
+    "value": [
+      "Followers of Stromfels",
+      "Manannites",
+      "Followers of Chaos"
+    ],
+    "page": 74,
+    "reason": "Explicit printed Career Talent specialisations; current core effects apply."
+  }
+]

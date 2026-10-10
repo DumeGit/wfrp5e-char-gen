@@ -27814,6 +27814,242 @@
           "reason": "User excludes named characters; no adventure/flavour entries in mechanical search."
         }
       ]
+    },
+    "sea-of-claws": {
+      "sourceHash": "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c",
+      "publishedSHA256": "df1b2cbfdc260d6e96f5b67571aea782ec4228c52d3ea18859f2121108977333",
+      "entries": 19,
+      "areas": [
+        {
+          "first": 41,
+          "last": 67,
+          "topic": "Norse creation, artillery and Chanties"
+        },
+        {
+          "first": 89,
+          "last": 101,
+          "topic": "Stromfels and naval artillery"
+        },
+        {
+          "first": 140,
+          "last": 147,
+          "topic": "Sea creature abilities"
+        }
+      ],
+      "records": [
+        {
+          "id": "sea-of-claws:reference:chanty-we-re-all-in-this-together-so-heave-ho-heave-ho",
+          "name": "Chanty: We’re all in this together so, heave ho, heave ho…",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:chanty-jacques-bret-came-sailing-to-meet-our-steel",
+          "name": "Chanty: Jacques Bret came sailing to meet our steel!",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:chanty-of-all-the-terrors-upon-the-sea",
+          "name": "Chanty: Of all the terrors upon the sea…",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:chanty-you-band-of-shipmates-gather-round",
+          "name": "Chanty: You band of shipmates gather round…",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:chanty-all-arise-for-the-night-has-eyes",
+          "name": "Chanty: All arise, for the night has eyes…",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:chanty-the-ladies-of-l-anguille",
+          "name": "Chanty: The ladies of L’Anguille…",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:chanty-they-do-say-do-as-the-captain-do-say",
+          "name": "Chanty: They do say do as the Captain do say…",
+          "page": 67,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:hullbreaker",
+          "name": "Hullbreaker",
+          "page": 44,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:grubark-gearing-system",
+          "name": "Grubark Gearing System",
+          "page": 44,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:skaeling-mark-of-khorne",
+          "name": "Skaeling Mark of Khorne",
+          "page": 56,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:norse-skill-and-equipment-advice",
+          "name": "Norse Skill and Equipment Advice",
+          "page": 57,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:riverfolk-lore-of-oceans",
+          "name": "Riverfolk Lore of Oceans",
+          "page": 63,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:stromfels-and-sin",
+          "name": "Stromfels and Sin",
+          "page": 91,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:stromfels-strength-stricture",
+          "name": "Stromfels Strength Stricture",
+          "page": 89,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:feast-of-bones",
+          "name": "Feast of Bones",
+          "page": 144,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:norse-class-and-career-table",
+          "name": "Norse Class and Career Table",
+          "page": 57,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:seafarer-class-table",
+          "name": "Seafarer Class Table",
+          "page": 63,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:naval-artillery-profiles",
+          "name": "Naval Artillery Profiles",
+          "page": 100,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:reference:naval-artillery-ammunition",
+          "name": "Naval Artillery Ammunition",
+          "page": 101,
+          "disposition": "included"
+        },
+        {
+          "id": "sea-of-claws:creatures:lurkerfish",
+          "name": "Lurkerfish",
+          "page": 140,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:gymmcrab",
+          "name": "Gymmcrab",
+          "page": 141,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:latch-eel",
+          "name": "Latch-Eel",
+          "page": 141,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:daggerfish",
+          "name": "Daggerfish",
+          "page": 141,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:sea-elemental",
+          "name": "Sea Elemental",
+          "page": 142,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:gargantuan",
+          "name": "Gargantuan",
+          "page": 143,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:kharibdyss",
+          "name": "Kharibdyss",
+          "page": 144,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:merwyrm",
+          "name": "Merwyrm",
+          "page": 145,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:syreen",
+          "name": "Syreen",
+          "page": 145,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:bone-hydra",
+          "name": "Bone Hydra",
+          "page": 146,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:leech-wyrm",
+          "name": "Leech Wyrm",
+          "page": 146,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:orb-leviathan",
+          "name": "Orb Leviathan",
+          "page": 147,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:creatures:black-leviathan",
+          "name": "Black Leviathan",
+          "page": 147,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from global search."
+        },
+        {
+          "id": "sea-of-claws:excluded:named-captains",
+          "name": "Named captains and Triton",
+          "page": "148–158",
+          "disposition": "excluded",
+          "reason": "Named characters are outside the requested creator scope."
+        }
+      ]
     }
   }
 }

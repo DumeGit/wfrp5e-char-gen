@@ -158,7 +158,7 @@ test("Great Maw is Ogre-only, uses Toughness for Magick, and rejects illegal Ogr
     r.stats.T + 10,
   );
   assert.equal(
-    magicChoices(R, r).filter((x) => x.category === "The Great Maw").length,
+    magicChoices(R, r).filter((x) => x.category === "The Great Maw" && x.source.book === "archives-ii").length,
     7,
   );
   assert.equal(
@@ -174,21 +174,23 @@ test("Great Maw is Ogre-only, uses Toughness for Magick, and rejects illegal Ogr
     r.profile,
   );
   assert.match(html, /The Great Maw/);
-  assert.match(html, /value="Fire"[^>]*disabled/);
+  // Tribes and Tribulations adds Firebelly support to the shared GM catalogue.
+  assert.match(html, /value="Fire"(?![^>]*disabled)/);
+  assert.match(html, /value="Life"[^>]*disabled/);
   s.spells = [
     magicChoices(R, r).find((x) => x.name === "Bullgorger").contentId,
   ];
   r = result(s);
   assert.ok(r.spells[0].adaptation);
   assert.deepEqual(r.issues, []);
-  s.traits[0].value = "Fire";
+  s.traits[0].value = "Life";
   r = result(s);
   assert.ok(
     r.issues.some(
       (x) => x.code === "magic.species" && x.control.target === "#trait-gm-maw",
     ),
   );
-  assert.ok(!magicChoices(R, r).some((x) => x.category === "Fire"));
+  assert.ok(!magicChoices(R, r).some((x) => x.category === "Life"));
   for (const name of ["Human", "Rhinox"]) {
     const non = draft(name);
     caster(non);

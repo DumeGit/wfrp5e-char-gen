@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3751,
-  "newlyImported": 1209,
+  "references": 3858,
+  "newlyImported": 1228,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,15 +12,15 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1897,
+      "references": 1916,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1673,
+      "existingReferences": 1692,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 277,
-        "talent": 423,
+        "skill": 285,
+        "talent": 434,
         "magic": 225,
         "equipment": 254,
         "condition": 13,
@@ -284,14 +284,14 @@
     {
       "id": "up-in-arms",
       "title": "Up in Arms",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "edition": 4,
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
       "references": 226,
       "newlyImported": 128,
       "retainedOutsideSearch": 9,
       "existingReferences": 98,
-      "adaptedReferences": 12,
+      "adaptedReferences": 13,
       "categories": {
         "career": 15,
         "talent": 12,
@@ -987,14 +987,14 @@
     {
       "id": "dwarf-guide",
       "title": "Dwarf Player’s Guide",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "edition": 4,
       "sourceHash": "74238e8c5660fcaf2df05dd721b0786e277da42b32eacfa03ca08291d4415a7c",
       "references": 328,
       "newlyImported": 107,
       "retainedOutsideSearch": 0,
       "existingReferences": 221,
-      "adaptedReferences": 102,
+      "adaptedReferences": 103,
       "categories": {
         "career": 10,
         "skill": 3,
@@ -1754,6 +1754,52 @@
           "first": 82,
           "last": 101,
           "topic": "Gut Magic, Trolls and Waaagh!"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "sea-of-claws",
+      "title": "Sea of Claws",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c",
+      "references": 80,
+      "newlyImported": 19,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 61,
+      "adaptedReferences": 28,
+      "categories": {
+        "career": 9,
+        "talent": 9,
+        "magic": 21,
+        "equipment": 4,
+        "trait": 15,
+        "species": 4,
+        "rule": 13,
+        "property": 1,
+        "table": 4
+      },
+      "dispositions": {
+        "included": 32,
+        "excluded": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 41,
+          "last": 67,
+          "topic": "Norse creation, artillery and Chanties"
+        },
+        {
+          "first": 89,
+          "last": 101,
+          "topic": "Stromfels and naval artillery"
+        },
+        {
+          "first": 140,
+          "last": 147,
+          "topic": "Sea creature abilities"
         }
       ],
       "unresolved": []

@@ -57,7 +57,7 @@ test('Longbeard reduces independent Fate/Fortune, retains random bonuses, requir
 test('Optional Career levels consistently change Skills, Characteristics and gear; Axefighter stays unavailable',()=>{
  const s=dwarf('engineer');s.dwarfCareerUpdates={3:'dwarf-guide:update:sky-pilot'};const c=M.career(B,s);assert.equal(c.levels[2].name,'Sky Pilot');assert.equal(c.advanceScheme.Ag,3);assert.ok(M.careerSkillSlots(B,s).some(x=>x.name==='Sail (Skycraft)'&&x.source.book==='dwarf-guide'));
  s.bonusGear=[0];s.dwarfCareerUpdates={2:'dwarf-guide:update:guild-engineer'};assert.equal(M.career(B,s).levels[1].name,'Guild Engineer');assert.ok(gearSlots(B,s).some(x=>x.name==='Trade Tools (Engineer)'));
- const invalid=dwarf();invalid.dwarfCareerUpdates={2:'dwarf-guide:update:axefighter'};assert.throws(()=>catalogForCharacter(library,invalid),/available Dwarf Career/);assert.equal(M.career(B,invalid).levels[1].name,'Soldier');assert.match(M.invalidTalent(B,s,'Crew Commander'),/unavailable/);
+ const invalid=dwarf();invalid.dwarfCareerUpdates={2:'dwarf-guide:update:axefighter'};assert.throws(()=>catalogForCharacter(library,invalid),/available Dwarf Career/);assert.equal(M.career(B,invalid).levels[1].name,'Soldier');assert.equal(M.invalidTalent(B,s,'Crew Commander'),'');assert.deepEqual(M.talentInfo(B,'Crew Commander').limit,['I']);
 });
 test('Optional equipment swaps preserve originals and Class gear, replace bow ammunition, and expose matching weapon Skills',()=>{
  const s=dwarf('hunter');s.dwarfTrappingSwaps=true;

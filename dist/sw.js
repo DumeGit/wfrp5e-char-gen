@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"87a7717422b274284f6e";
+const CACHE=CACHE_PREFIX+"e1f4f85d4c6d13e9f80e";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -172,6 +172,21 @@ const ASSETS=[
  "data/books/rough-nights/species.json",
  "data/books/rough-nights/tables.json",
  "data/books/rough-nights/talents.json",
+ "data/books/sea-of-claws-artillery/coverage.json",
+ "data/books/sea-of-claws-artillery/manifest.json",
+ "data/books/sea-of-claws-artillery/market.json",
+ "data/books/sea-of-claws-artillery/weapons.json",
+ "data/books/sea-of-claws/careers.json",
+ "data/books/sea-of-claws/coverage.json",
+ "data/books/sea-of-claws/manifest.json",
+ "data/books/sea-of-claws/market.json",
+ "data/books/sea-of-claws/origins.json",
+ "data/books/sea-of-claws/reference-entries.json",
+ "data/books/sea-of-claws/rule-references.json",
+ "data/books/sea-of-claws/rules.json",
+ "data/books/sea-of-claws/spells.json",
+ "data/books/sea-of-claws/tables.json",
+ "data/books/sea-of-claws/talents.json",
  "data/books/tribes-tribulations/coverage.json",
  "data/books/tribes-tribulations/gear.json",
  "data/books/tribes-tribulations/manifest.json",
@@ -264,6 +279,7 @@ const ASSETS=[
  "gm/sources/cluster-eye-tribe.json",
  "gm/sources/core.json",
  "gm/sources/night-parade.json",
+ "gm/sources/sea-of-claws.json",
  "gm/sources/tribes-tribulations.json",
  "gm/sources/up-in-arms.json",
  "gm/style.css",

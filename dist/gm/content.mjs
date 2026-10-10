@@ -496,6 +496,14 @@ export function addGMSupplement(data, raw, R) {
     };
   });
   const profiles = raw.profiles.map((p) => {
+    if (
+      p.magicCharacteristic !== undefined &&
+      (book.id !== "sea-of-claws" ||
+        p.id !== "sea-of-claws:creatures:sea-elemental" ||
+        p.magicCharacteristic !== "S" ||
+        !p.traits.some((t) => t.name === "Mindless Spellcaster"))
+    )
+      throw Error(`${p.name}: unsupported casting Characteristic.`);
     for (const key of [
       "M",
       "WS",

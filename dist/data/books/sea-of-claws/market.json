@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sea-of-claws:item:norse-dwarf-bolt",
+    "name": "Norse Dwarf Bolt",
+    "page": 44,
+    "price": "8/–",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Hullbreaker, Impale, Penetrating"
+    },
+    "text": "Ballista ammunition. Hullbreaker inflicts +2 Damage against wooden structures and gains Damaging. No ammunition is assumed loaded."
+  },
+  {
+    "id": "sea-of-claws:item:mortar-bomb",
+    "name": "Bomb (Mortar)",
+    "page": 101,
+    "price": "3 GC",
+    "enc": 0,
+    "availability": "Rare",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+12",
+      "qualities": "Blast +5, Dangerous, Impact"
+    },
+    "text": "Mortar ammunition. Printed unit/bundle quantity is not explicitly specified; do not invent a bundle."
+  },
+  {
+    "id": "sea-of-claws:item:mortar-incendiary",
+    "name": "Incendiary (Mortar)",
+    "page": 101,
+    "price": "1 GC",
+    "enc": 0,
+    "availability": "Scarce",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "Half weapon",
+      "damage": "Special",
+      "qualities": "Blast +4, Dangerous"
+    },
+    "text": "Mortar ammunition, separate from the core Incendiary weapon. Inflicts 1 + SL Ablaze Conditions. Printed unit/bundle quantity is not explicitly specified."
+  }
+]

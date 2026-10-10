@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sea-of-claws:talent:chanty",
+    "name": "Chanty (Any)",
+    "page": 63,
+    "songs": [
+      {
+        "name": "We’re all in this together so, heave ho, heave ho…",
+        "page": 67,
+        "text": "This Chanty will spread a spirit of cooperation and make the crew knuckle down and go about the running of the ship with vigour and confidence. It gives a +10 modifier to the individual Tests of every crew member involved in any Crew Test."
+      },
+      {
+        "name": "Jacques Bret came sailing to meet our steel!",
+        "page": 67,
+        "text": "This rousing Chanty tells of heroic feats in bloody battles. It pumps the blood of the crew and stirs them for the fight. It gives everyone in the crew +1 SL on any successful Melee Test."
+      },
+      {
+        "name": "Of all the terrors upon the sea…",
+        "page": 67,
+        "text": "This steady, heart-warming melody can steel the hearts of a wavering crew. It gives them +1 SL to Cool Tests."
+      },
+      {
+        "name": "You band of shipmates gather round…",
+        "page": 67,
+        "text": "This is a round that encourages others to join in, and its gentle tempo and lyrics induce calm. It gives anyone in the crew +1 SL to any Fellowship Test intended to befriend or placate other members of the crew."
+      },
+      {
+        "name": "All arise, for the night has eyes…",
+        "page": 67,
+        "text": "This Chanty is a soft melodic one, but the words have an implicit warning. It is usually sung at night; it helps make everyone on board the ship calm and restful but keeps those on watch alert. Anyone trying to remain awake gets +20 on any Test that might result in them falling asleep, and they also get +10 to any Perception Test."
+      },
+      {
+        "name": "The ladies of L’Anguille…",
+        "page": 67,
+        "text": "This bawdy song has countless verses, and sailors are encouraged to add their own to the risqué litany. This is designed to amuse and lift morale. Anyone joining in the song can ignore one Condition."
+      },
+      {
+        "name": "They do say do as the Captain do say…",
+        "page": 67,
+        "text": "This song about the many heroic deeds of the fictional Captain Vriez Van Vijnen instils a sense of optimism and trust in the ship’s captain. Any Fellowship Test attempted by the Captain, or other authority figure on board, targeted at the crew, gets a +20 bonus."
+      }
+    ],
+    "text": "This Talent allows a Character to learn a chanty (see page 67). Whenever a Character buys a new level in the Talent they learn a new song. A Chanty affects an entire crew. To use the talent the Chantyman should find a location within earshot of as many of the crew as possible and pass an Entertain (Singing) Test. It takes 30 seconds for a Chantyman to establish the chanty, after which the effect lasts for three minutes plus a number of minutes equal to the SL on the Entertain (Singing) Test. The only combat action the Chantyman can make while the Chanty is being performed is a Dodge. Other actions can be made at the GM’s discretion, such as Perception Tests or Cool Tests. If the Chantyman takes damage or fails any Opposed Test their Chanty ends. A Chanty may be sung at each watch. There’s only so much inspiration a crew can take. Each purchase selects one different song from p. 67.",
+    "limit": [
+      "Int"
+    ],
+    "adaptation": "User-approved printed Intelligence Bonus limit and effects; old default per-rank Test bonuses omitted. Songs use their printed effects as references only."
+  },
+  {
+    "id": "sea-of-claws:talent:master-and-commander",
+    "name": "Master and Commander",
+    "page": 63,
+    "text": "You are respected and trusted by your crew. Any appropriate Leadership Test on board your ship or involving your crew gains an SL bonus equal to your levels in Master and Commander. This bonus applies to Crew Tests as well as individual Leadership Tests.",
+    "limit": [
+      "Fel"
+    ],
+    "adaptation": "User-approved printed Fellowship Bonus limit and explicit per-rank Leadership effect retained. No additional old default Test bonus; situational effect is not automated."
+  }
+]

@@ -75,10 +75,12 @@ test('printed Tilean Career alternatives and permitted Flagellant patrons are en
  s.career='priest';s.regionalCareerBase='flagellant';s.freeTalent='';assert.match(M.invalidTalent(on,s,'Bless (Sigmar)'),/Tilean Flagellant/);assert.equal(M.invalidTalent(on,s,'Bless (Myrmidia)'),'');
 });
 
-test('Crew Commander remains described but cannot be purchased or granted',()=>{
+test('Crew Commander uses the newly approved Initiative limit without an old default rank bonus',()=>{
  const c=on.careers.find(c=>c.name==='Artillerist'),s=madeCareer(c);s.ledger=[{type:'promotion',cost:100,name:'Artillerist'}];
- const q=M.quote(on,s,'talent','Crew Commander');assert.equal(q.cost,100);assert.match(q.error,/no Fifth Edition core equivalent/);assert.throws(()=>M.purchase(on,s,'talent','Crew Commander'),/agreed conversion/);
- assert.match(M.talentInfo(on,'Crew Commander').text,/Max: Initiative Bonus/);
+ const info=M.talentInfo(on,'Crew Commander');assert.deepEqual(info.limit,['I']);assert.ok(info.adaptation);assert.ok(!info.unavailable);
+ const cap=Math.floor(M.derive(on,s).stats.I/10);
+ for(let i=0;i<cap;i++){assert.equal(M.quote(on,s,'talent','Crew Commander').cost,100);M.purchase(on,s,'talent','Crew Commander');}
+ assert.match(M.quote(on,s,'talent','Crew Commander').error,/purchase limit/);
 });
 
 test('regional and equipment additions reject invalid references and unsupported mechanics',()=>{

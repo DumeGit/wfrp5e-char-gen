@@ -8,26 +8,26 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 15 |
-| careers | 126 |
-| magicProfiles | 564 |
+| books | 16 |
+| careers | 135 |
+| magicProfiles | 585 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
 | runes | 71 |
-| pricedShopEntries | 405 |
+| pricedShopEntries | 408 |
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 655 | 0 | 0 |
-| Up in Arms | 135 | 12 | 128 | 1 | 9 |
+| Up in Arms | 135 | 13 | 128 | 0 | 9 |
 | Archives of the Empire: Volume I | 31 | 22 | 10 | 0 | 13 |
 | Archives of the Empire: Volume II | 50 | 7 | 103 | 0 | 15 |
 | Archives of the Empire: Volume III | 45 | 14 | 105 | 0 | 12 |
 | Archives III — Animal-doctor Hedge Witch (variant) | 0 | 1 | 0 | 0 | 0 |
 | Winds of Magic | 120 | 55 | 253 | 0 | 21 |
 | Rough Nights & Hard Days | 3 | 5 | 24 | 0 | 80 |
-| Dwarf Player’s Guide | 156 | 34 | 120 | 2 | 0 |
+| Dwarf Player’s Guide | 156 | 35 | 120 | 1 | 0 |
 | High Elf Player’s Guide | 55 | 55 | 104 | 0 | 0 |
 | Blood and Bramble | 15 | 10 | 2 | 0 | 6 |
 | Deft Steps, Light Fingers | 39 | 18 | 146 | 0 | 22 |
@@ -41,6 +41,8 @@ Each source inventory remains visible even when another selected book supersedes
 | The Warband of Bayl of Many Eyes | 0 | 0 | 3 | 0 | 0 |
 | The Cluster-Eye Tribe | 0 | 0 | 6 | 0 | 0 |
 | Tribes and Tribulations | 33 | 10 | 24 | 0 | 0 |
+| Sea of Claws | 30 | 15 | 34 | 0 | 0 |
+| Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -738,7 +740,7 @@ Pack `core` · version 1.1.7
 
 ## Up in Arms
 
-Pack `up-in-arms` · version 1.0.4
+Pack `up-in-arms` · version 1.0.5
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -748,7 +750,7 @@ Pack `up-in-arms` · version 1.0.4
 | referenceEntries | 0 | 0 | 128 | 0 | 9 |
 | spells | 8 | 1 | 0 | 0 | 0 |
 | tables | 7 | 0 | 0 | 0 | 0 |
-| talents | 0 | 0 | 0 | 1 | 0 |
+| talents | 0 | 1 | 0 | 0 | 0 |
 | weapons | 43 | 0 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -914,7 +916,7 @@ Pack `up-in-arms` · version 1.0.4
 | `up-in-arms:reference:98-traditional-ammunition-table` — Traditional Ammunition Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:98-two-handed-weapons-table` — Two-Handed Weapons Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:miracle:in-good-order` — In Good Order | spells | adapted | p. 79 | Fourth Edition Advantage references converted to Momentum (core Appendix I). |
-| `up-in-arms:talent:crew-commander` — Crew Commander | talents | unavailable | p. 140 | Unavailable: Crew Commander has no Fifth Edition core equivalent. Its Fourth Edition repeat limit and Talent Test bonus need an agreed conversion (Up in Arms p. 140). |
+| `up-in-arms:talent:crew-commander` — Crew Commander | talents | adapted | p. 140 | User-approved Fourth Edition adaptation: printed Initiative Bonus purchase limit and explicit Leadership/crew effect retained. No old default per-rank Talent Test bonus; situational crew effects are reference-only. |
 
 </details>
 
@@ -1835,7 +1837,7 @@ Pack `rough-nights` · version 1.0.2
 
 ## Dwarf Player’s Guide
 
-Pack `dwarf-guide` · version 1.0.2
+Pack `dwarf-guide` · version 1.0.3
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1848,7 +1850,7 @@ Pack `dwarf-guide` · version 1.0.2
 | runes | 63 | 8 | 0 | 0 | 0 |
 | skills | 2 | 1 | 0 | 0 | 0 |
 | tables | 11 | 0 | 0 | 0 | 0 |
-| talents | 9 | 10 | 0 | 1 | 0 |
+| talents | 9 | 11 | 0 | 0 | 0 |
 | weapons | 19 | 0 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2010,7 +2012,7 @@ Pack `dwarf-guide` · version 1.0.2
 | `dwarf-guide:rune:talisman-rune-of-luck` — Rune of Luck | runes | adapted | p. 129 | Permanent Resilience expenditure converted to maximum Fortune (core Appendix I). |
 | `dwarf-guide:skill:sail-skycraft` — Sail (Skycraft) | skills | adapted | p. 80 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `dwarf-guide:talent:bludgeoner` — Bludgeoner | talents | adapted | p. 81 | Fourth Edition per-rank bonus on the listed Tests omitted; printed purchase limit and effects retained, by user-approved adaptation. |
-| `dwarf-guide:talent:crew-commander` — Crew Commander | talents | unavailable | p. 81 | Crew Commander has no agreed Fifth Edition conversion; left unavailable by user decision. |
+| `dwarf-guide:talent:crew-commander` — Crew Commander | talents | adapted | p. 81 | User-approved Fourth Edition adaptation: printed Initiative Bonus purchase limit and explicit Leadership/crew effect retained. No old default per-rank Talent Test bonus; situational crew effects are reference-only. |
 | `dwarf-guide:talent:demolisher` — Demolisher | talents | adapted | p. 81 | Fourth Edition per-rank bonus on the listed Tests omitted; printed purchase limit and effects retained, by user-approved adaptation. |
 | `dwarf-guide:talent:entrenchment` — Entrenchment | talents | adapted | p. 81 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). Fourth Edition per-rank bonus on the listed Tests omitted; printed purchase limit and effects retained, by user-approved adaptation. |
 | `dwarf-guide:talent:liquid-fortification` — Liquid Fortification | talents | adapted | p. 82 | Fourth Edition per-rank bonus on the listed Tests omitted; printed purchase limit and effects retained, by user-approved adaptation. |
@@ -2697,6 +2699,104 @@ Pack `tribes-tribulations` · version 1.0.0
 | `tribes-tribulations:spell:waaagh` — WAAAGH! | spells | adapted | p. 101 | Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted. |
 
 </details>
+
+## Sea of Claws
+
+Pack `sea-of-claws` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 2 | 7 | 0 | 0 | 0 |
+| market | 3 | 0 | 0 | 0 | 0 |
+| origins | 0 | 4 | 0 | 0 | 0 |
+| referenceEntries | 0 | 0 | 19 | 0 | 0 |
+| ruleReferences | 0 | 0 | 15 | 0 | 0 |
+| spells | 19 | 2 | 0 | 0 | 0 |
+| tables | 6 | 0 | 0 | 0 | 0 |
+| talents | 0 | 2 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Optional naval artillery variant | implemented | p. 100 | Explicit compatible statistics alternative; never a silent overwrite. |
+| 13 generic sea creatures | adapted | p. 140 | Approved Size and current Trait/Talent replacements; source-specific Strength casting. |
+| Nine Career paths and optional Career tables | adapted | p. 63 | Explicit core alternatives, current Talents and documented 07/68 table corrections. |
+| Crew Commander | adapted | p. 63 | Approved Initiative Bonus limit and explicit effect; shared existing definition, no old default rank bonus. |
+| Ship handling, crew and voyage management | deferred | p. 103 | No new management systems; current curated search entries do not claim exhaustive chapter coverage. |
+| Skaeling Mark of Khorne PC replacement | reference-only | p. 56 | User retains this optional replacement as a reference without invented PC Trait mechanics. |
+| 21 spells and Miracles | adapted | p. 15 | Labelled Test Difficulty conversions and chosen Seasickness duration; unchanged effects retain source values. |
+| Named captains and Triton | deferred | p. 148 | Excluded from foundations and global search. |
+| Four Norse origins | adapted | p. 41 | Approved Fifth Edition starting allocations and native languages; printed choices retained. |
+| Chanty and Master and Commander | adapted | p. 63 | Approved printed limits and explicit effects; no default old per-rank Test bonus. Each Chanty rank selects a different song. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `sea-of-claws:career:beachcomber` — Beachcomber | careers | adapted | p. 64 | Strider uses current core Striding Gait effects. |
+| `sea-of-claws:career:chantyman` — Chantyman | careers | adapted | p. 66 | Strider uses current core Striding Gait effects. |
+| `sea-of-claws:career:officer` — Officer | careers | adapted | p. 70 | Public Speaking uses current core Public Speaker effects. |
+| `sea-of-claws:career:pilot` — Pilot | careers | adapted | p. 68 | Printed Huffer uses the current Pilot Career name; the four Seafarer levels remain source-specific. |
+| `sea-of-claws:career:priest-of-stromfels` — Priest of Stromfels | careers | adapted | p. 90 | Old Strength-tier advancement stricture retained as reference only, without an invented tracker/XP restriction. |
+| `sea-of-claws:career:sailor` — Sailor | careers | adapted | p. 72 | Strider uses current core Striding Gait effects. Public Speaking uses current core Public Speaker effects. |
+| `sea-of-claws:career:sailor-priest-of-manann` — Sailor-Priest of Manann | careers | adapted | p. 74 | Public Speaking uses current core Public Speaker effects. |
+| `sea-of-claws:origin:bjornling` — Bjornling Norse | origins | adapted | p. 56 | User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations. |
+| `sea-of-claws:origin:norse-dwarf` — Norse Dwarf | origins | adapted | p. 41 | User-approved core five Skills at +5, physical profile, creation limits and native Khazalid/Reikspiel with printed regional choices. |
+| `sea-of-claws:origin:sarl` — Sarl Norse | origins | adapted | p. 56 | User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations. |
+| `sea-of-claws:origin:skaeling` — Skaeling Norse | origins | adapted | p. 56 | User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations. |
+| `sea-of-claws:reference:chanty-all-arise-for-the-night-has-eyes` — Chanty: All arise, for the night has eyes… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-jacques-bret-came-sailing-to-meet-our-steel` — Chanty: Jacques Bret came sailing to meet our steel! | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-of-all-the-terrors-upon-the-sea` — Chanty: Of all the terrors upon the sea… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-the-ladies-of-l-anguille` — Chanty: The ladies of L’Anguille… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-they-do-say-do-as-the-captain-do-say` — Chanty: They do say do as the Captain do say… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-we-re-all-in-this-together-so-heave-ho-heave-ho` — Chanty: We’re all in this together so, heave ho, heave ho… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-you-band-of-shipmates-gather-round` — Chanty: You band of shipmates gather round… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:feast-of-bones` — Feast of Bones | referenceEntries | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:grubark-gearing-system` — Grubark Gearing System | referenceEntries | reference-only | p. 44 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:hullbreaker` — Hullbreaker | referenceEntries | reference-only | p. 44 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:naval-artillery-ammunition` — Naval Artillery Ammunition | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:naval-artillery-profiles` — Naval Artillery Profiles | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:norse-class-and-career-table` — Norse Class and Career Table | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:norse-skill-and-equipment-advice` — Norse Skill and Equipment Advice | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:riverfolk-lore-of-oceans` — Riverfolk Lore of Oceans | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:seafarer-class-table` — Seafarer Class Table | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:skaeling-mark-of-khorne` — Skaeling Mark of Khorne | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:stromfels-and-sin` — Stromfels and Sin | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:stromfels-strength-stricture` — Stromfels Strength Stricture | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:boat-crusher` — Boat Crusher | ruleReferences | reference-only | p. 143 | Printed Test Difficulty uses current SL modifiers. |
+| `sea-of-claws:rule-reference:devastating-assault` — Devastating Assault | ruleReferences | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:electrical-discharge` — Electrical Discharge | ruleReferences | reference-only | p. 143 | Printed Test Difficulty uses current SL modifiers. Printed Advantage uses Momentum. |
+| `sea-of-claws:rule-reference:fire-resistant` — Fire Resistant | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:immersion` — Immersion | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:love-the-light` — Love the Light | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:lure-of-the-leviathan` — Lure of the Leviathan | ruleReferences | reference-only | p. 147 | Printed Test Difficulty uses current SL modifiers. |
+| `sea-of-claws:rule-reference:lure-of-the-lurkerfish` — Lure of the Lurkerfish | ruleReferences | reference-only | p. 140 | Printed Test Difficulty uses current SL modifiers. |
+| `sea-of-claws:rule-reference:marine-creature` — Marine Creature | ruleReferences | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:mindless-spellcaster` — Mindless Spellcaster | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:on-a-different-scale` — On a Different Scale | ruleReferences | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:resistant-to-cold` — Resistant to Cold | ruleReferences | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:slimy` — Slimy | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:rule-reference:syreen-s-call` — Syreen’s Call | ruleReferences | reference-only | p. 145 | Printed Test Difficulty uses current SL modifiers. |
+| `sea-of-claws:rule-reference:whale-bane` — Whale Bane | ruleReferences | reference-only | p. 145 | Uses full Fifth Edition Venom rather than the older on-hit interpretation. |
+| `sea-of-claws:spell:blood-trail` — Blood Trail | spells | adapted | p. 91 | Printed Test Difficulty uses Fifth Edition SL modifiers (core Appendix I p. 364). |
+| `sea-of-claws:spell:curse-of-the-harsh-mistress` — Curse of the Harsh Mistress | spells | adapted | p. 91 | Printed Test Difficulty uses Fifth Edition SL modifiers (core Appendix I p. 364). |
+| `sea-of-claws:talent:chanty` — Chanty (Any) | talents | adapted | p. 63 | User-approved printed Intelligence Bonus limit and effects; old default per-rank Test bonuses omitted. Songs use their printed effects as references only. |
+| `sea-of-claws:talent:master-and-commander` — Master and Commander | talents | adapted | p. 63 | User-approved printed Fellowship Bonus limit and explicit per-rank Leadership effect retained. No additional old default Test bonus; situational effect is not automated. |
+
+</details>
+
+## Sea of Claws — Naval artillery
+
+Pack `sea-of-claws-artillery` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| market | 8 | 0 | 0 | 0 | 0 |
+| weapons | 6 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Six naval artillery profiles and two ammunition alternatives | implemented | p. 100 | Explicit user-selected alternative; GM options retain both sources as distinct labelled choices. |
 
 ## Reviewed aliases
 

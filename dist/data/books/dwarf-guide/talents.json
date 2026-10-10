@@ -37,13 +37,13 @@
     "speciesOnly": [
       "Dwarf"
     ],
-    "conversion": "Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only.",
-    "unavailable": "Crew Commander has no agreed Fifth Edition conversion; left unavailable by user decision.",
+    "conversion": "User-approved Fourth Edition adaptation: printed Initiative Bonus purchase limit and explicit Leadership/crew effect retained. No old default per-rank Talent Test bonus; situational crew effects are reference-only.",
     "supersededBy": {
       "book": "up-in-arms",
       "contentId": "up-in-arms:talent:crew-commander",
-      "reason": "The existing unavailable Up in Arms entry retains the user’s decision; the Dwarf Guide does not unlock it."
-    }
+      "reason": "Uses the shared approved Up in Arms adaptation when both books are enabled."
+    },
+    "adaptation": "User-approved Fourth Edition adaptation: printed Initiative Bonus purchase limit and explicit Leadership/crew effect retained. No old default per-rank Talent Test bonus; situational crew effects are reference-only."
   },
   {
     "id": "dwarf-guide:talent:demolisher",

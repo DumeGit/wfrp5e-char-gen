@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "sea-of-claws-artillery",
+  "title": "Sea of Claws — Naval artillery",
+  "shortTitle": "Naval artillery",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "variant",
+  "dependsOn": [
+    "sea-of-claws",
+    "up-in-arms"
+  ],
+  "source": {
+    "file": "Sea of Claws (1).pdf",
+    "sha256": "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "User approved an explicitly enabled naval artillery variant. Printed compatible statistics are retained; no edition rule is invented.",
+      "In GM creation, source-labelled equipment alternatives are all available without changing the baseline catalogue or profile books."
+    ]
+  },
+  "files": {
+    "weapons": "weapons.json",
+    "market": "market.json",
+    "coverage": "coverage.json"
+  }
+}

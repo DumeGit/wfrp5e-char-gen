@@ -12,9 +12,9 @@ export function woundFormula(
     sb = characteristicBonus(stats.S),
     wp = construct ? sb : characteristicBonus(stats.WP);
   if (tb === null) return null;
+  if (size === "Tiny") return null;
   if (swarm)
     return sb === null || wp === null ? null : (sb + (2 + hardy) * tb + wp) * 5;
-  if (size === "Tiny") return null;
   if (size === "Small") return (2 + hardy) * tb;
   if (sb === null || wp === null) return null;
   return (

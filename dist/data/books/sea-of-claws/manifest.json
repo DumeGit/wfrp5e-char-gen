@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "sea-of-claws",
+  "title": "Sea of Claws",
+  "shortTitle": "Sea of Claws",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core",
+    "up-in-arms"
+  ],
+  "source": {
+    "file": "Sea of Claws (1).pdf",
+    "sha256": "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Fifth Edition creation and advancement govern. Explicit user decisions are in scripts/sea-of-claws-decisions.json and docs/SEA-OF-CLAWS.md.",
+      "Only actual conversions carry Legacy explanations; unchanged material has its source reference.",
+      "Crew Commander reuses the newly approved shared adaptation. Named NPCs and live campaign systems are excluded."
+    ]
+  },
+  "files": {
+    "careers": "careers.json",
+    "origins": "origins.json",
+    "tables": "tables.json",
+    "talents": "talents.json",
+    "spells": "spells.json",
+    "market": "market.json",
+    "rules": "rules.json",
+    "coverage": "coverage.json",
+    "ruleReferences": "rule-references.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

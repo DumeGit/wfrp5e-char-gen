@@ -1,0 +1,1543 @@
+{
+  "schemaVersion": 1,
+  "id": "sea-of-claws",
+  "source": {
+    "file": "Sea of Claws (1).pdf",
+    "sha256": "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c"
+  },
+  "summary": "13 generic sea creatures; named captains and Triton excluded",
+  "profiles": [
+    {
+      "id": "sea-of-claws:creatures:lurkerfish",
+      "name": "Lurkerfish",
+      "page": 140,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 140
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": null,
+        "S": 45,
+        "T": 35,
+        "I": 30,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 5,
+        "WP": 40,
+        "Fel": null,
+        "W": 3
+      },
+      "size": "Tiny",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Berserk Charge",
+          "ranks": 1
+        },
+        {
+          "name": "Furious Assault",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Lure of the Lurkerfish",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Size",
+          "value": "Average"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Horrific Fangs",
+          "skill": 40,
+          "damage": 8,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Horrific Fangs) +8."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed 3 Wounds retained. Tiny has no supplied core Wounds formula; after changes, set Wounds manually."
+      ],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Old Little is mapped to Tiny; no Wounds formula is invented. Printed Berserk Charge 3 becomes one nonrepeatable core rank. Printed Furious Assault 2 becomes one nonrepeatable core rank."
+    },
+    {
+      "id": "sea-of-claws:creatures:gymmcrab",
+      "name": "Gymmcrab",
+      "page": 141,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 141
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 5,
+        "WS": 45,
+        "BS": null,
+        "S": 35,
+        "T": 25,
+        "I": 10,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 5,
+        "WP": 35,
+        "Fel": null,
+        "W": 4
+      },
+      "size": "Small",
+      "toughnessBonus": 2,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Combat Aware",
+          "ranks": 1
+        },
+        {
+          "name": "Combat Master",
+          "ranks": 1
+        },
+        {
+          "name": "Disarm",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pincer",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Pincer) +6."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "adaptation": "Old Little is mapped to Tiny; no Wounds formula is invented. Core Small Wounds (2 × TB) changes printed 7 to 4."
+    },
+    {
+      "id": "sea-of-claws:creatures:latch-eel",
+      "name": "Latch-Eel",
+      "page": 141,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 141
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": null,
+        "S": 40,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 5,
+        "WP": 35,
+        "Fel": null,
+        "W": 6
+      },
+      "size": "Small",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Slimy",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "10"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 10,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Fangs",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Fangs) +8."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "adaptation": "Old Little is mapped to Tiny; no Wounds formula is invented. Core Small Wounds (2 × TB) changes printed 13 to 6."
+    },
+    {
+      "id": "sea-of-claws:creatures:daggerfish",
+      "name": "Daggerfish",
+      "page": 141,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 141
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 10,
+        "WS": 32,
+        "BS": 35,
+        "S": 35,
+        "T": 36,
+        "I": 30,
+        "Ag": 48,
+        "Dex": null,
+        "Int": 4,
+        "WP": 18,
+        "Fel": null,
+        "W": 3
+      },
+      "size": "Tiny",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bounce",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Love the Light",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ranged (Own Body)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "20 yards; uses its own body as the projectile."
+        },
+        {
+          "name": "Slashing Fins",
+          "skill": 32,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Slashing Fins) +7."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed 3 Wounds retained. Tiny has no supplied core Wounds formula; after changes, set Wounds manually."
+      ],
+      "adaptation": "Old Little is mapped to Tiny; no Wounds formula is invented."
+    },
+    {
+      "id": "sea-of-claws:creatures:sea-elemental",
+      "name": "Sea Elemental",
+      "page": 142,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 142
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 12,
+        "WS": 55,
+        "BS": null,
+        "S": 59,
+        "T": 59,
+        "I": 55,
+        "Ag": 55,
+        "Dex": 21,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 80
+      },
+      "size": "Enormous",
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Life"
+        },
+        {
+          "name": "Terror",
+          "value": "3"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Ward",
+          "value": "8"
+        },
+        {
+          "name": "Immersion",
+          "value": ""
+        },
+        {
+          "name": "Fire Resistant",
+          "value": ""
+        },
+        {
+          "name": "Mindless Spellcaster",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Fists",
+          "skill": 55,
+          "damage": 15,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Fists) +10."
+        }
+      ],
+      "armour": [],
+      "spells": [
+        "sea-of-claws:spell:living-mire",
+        "sea-of-claws:spell:whirlpool"
+      ],
+      "sections": {},
+      "notes": [
+        "Mindless Spellcaster uses Strength for casting and Channelling. Printed 80 Wounds are retained as its source baseline; explicit recalculation uses current core Size."
+      ],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Printed Rear is replaced by current core Size/Stomp. Core Size adds 5 to the primary melee attack: printed +10 becomes +15.",
+      "magicCharacteristic": "S"
+    },
+    {
+      "id": "sea-of-claws:creatures:gargantuan",
+      "name": "Gargantuan",
+      "page": 143,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 143
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 12,
+        "WS": 60,
+        "BS": null,
+        "S": 75,
+        "T": 75,
+        "I": 30,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 7,
+        "WP": 55,
+        "Fel": null,
+        "W": 104
+      },
+      "size": "Monstrous",
+      "toughnessBonus": 7,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Constrictor",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        },
+        {
+          "name": "Boat Crusher",
+          "value": ""
+        },
+        {
+          "name": "Electrical Discharge",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Razor-sharp Teeth",
+          "skill": 60,
+          "damage": 25,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Razor-sharp Teeth) +11."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Printed Rear is replaced by current core Size/Stomp. Core Size adds 14 to the primary melee attack: printed +11 becomes +25."
+    },
+    {
+      "id": "sea-of-claws:creatures:kharibdyss",
+      "name": "Kharibdyss",
+      "page": 144,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 144
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": null,
+        "S": 65,
+        "T": 55,
+        "I": 40,
+        "Ag": 15,
+        "Dex": null,
+        "Int": 5,
+        "WP": 25,
+        "Fel": null,
+        "W": 68
+      },
+      "size": "Enormous",
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Constrictor",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": "Howling"
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "Difficult"
+        },
+        {
+          "name": "Bite",
+          "value": "9"
+        },
+        {
+          "name": "Tail",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 55,
+          "damage": 9,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Tail",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Fangs and Claws",
+          "skill": 55,
+          "damage": 16,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Fangs and Claws) +10."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Feast of Bones (p. 144) raises old Grim 2 to Grim 4 whilst Engaged. The approved core unranked Grim replacement has no numeric rating; this older effect is reference-only and does not add another effective Trait."
+      ],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Core Size adds 6 to the primary melee attack: printed +10 becomes +16."
+    },
+    {
+      "id": "sea-of-claws:creatures:merwyrm",
+      "name": "Merwyrm",
+      "page": 145,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 145
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 6,
+        "WS": 62,
+        "BS": null,
+        "S": 65,
+        "T": 60,
+        "I": 45,
+        "Ag": 26,
+        "Dex": null,
+        "Int": 15,
+        "WP": 38,
+        "Fel": 10,
+        "W": 76
+      },
+      "size": "Enormous",
+      "toughnessBonus": 6,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Immunity",
+          "value": "Psychology"
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Whale Bane",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "11"
+        },
+        {
+          "name": "Tail",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite (Fanged Maw)",
+          "skill": 62,
+          "damage": 11,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Tail",
+          "skill": 62,
+          "damage": 8,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Fanged Maw",
+          "skill": 62,
+          "damage": 17,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Fanged Maw) +11."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Core Tail uses SB + 2: printed +13 becomes +8. Core Size adds 6 to the primary melee attack: printed +11 becomes +17."
+    },
+    {
+      "id": "sea-of-claws:creatures:syreen",
+      "name": "Syreen",
+      "page": 145,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 145
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 20,
+        "Fel": 20,
+        "W": 13
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Ethereal",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Terror",
+          "value": "3"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Syreen’s Call",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ghostly Blade",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Ghostly Blade) +7."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "adaptation": "Printed Corrupting (Minor) uses core Corruption (Minor). Proposed user-approved Fury → core Frenzy; the old effect is not verified as equivalent."
+    },
+    {
+      "id": "sea-of-claws:creatures:bone-hydra",
+      "name": "Bone Hydra",
+      "page": 146,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 146
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 6,
+        "WS": 40,
+        "BS": 30,
+        "S": 75,
+        "T": 75,
+        "I": 15,
+        "Ag": 15,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 224
+      },
+      "size": "Monstrous",
+      "toughnessBonus": 7,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "10"
+        },
+        {
+          "name": "Breath",
+          "value": "Poison",
+          "deriveAttack": true,
+          "adaptation": "Core Poison Breath uses TB + 2 = 9 instead of printed +10; full core Venom governs Poisoned and recovery."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 40,
+          "damage": 10,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Snapping Jaws",
+          "skill": 40,
+          "damage": 25,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Snapping Jaws) +11."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Breath lists Hard (−20) poison Difficulty; the current Breath/Venom definitions govern instead of importing an older poison save."
+      ],
+      "adaptation": "Printed Poison Breath +10 uses current TB + 2 (9). Core Size adds 14 to the primary melee attack: printed +11 becomes +25."
+    },
+    {
+      "id": "sea-of-claws:creatures:leech-wyrm",
+      "name": "Leech Wyrm",
+      "page": 146,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 146
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 4,
+        "WS": 33,
+        "BS": null,
+        "S": 80,
+        "T": 80,
+        "I": 5,
+        "Ag": 5,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 256
+      },
+      "size": "Monstrous",
+      "toughnessBonus": 8,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        },
+        {
+          "name": "Bite",
+          "value": "11"
+        },
+        {
+          "name": "Tail",
+          "value": ""
+        },
+        {
+          "name": "Vomit",
+          "value": "",
+          "deriveAttack": true
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 33,
+          "damage": 11,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Tail",
+          "skill": 33,
+          "damage": 10,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Snapping Jaws",
+          "skill": 33,
+          "damage": 28,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Snapping Jaws) +12."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The printed profile has no Ballistic Skill, but core Vomit requires an Opposed BS/Dodge Test. Set an explicit Vomit attack score before export; no BS is invented."
+      ],
+      "adaptation": "Core Tail uses SB + 2: printed +11 becomes +10. Core Size adds 16 to the primary melee attack: printed +12 becomes +28."
+    },
+    {
+      "id": "sea-of-claws:creatures:orb-leviathan",
+      "name": "Orb Leviathan",
+      "page": 147,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 147
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 3,
+        "WS": 40,
+        "BS": null,
+        "S": 65,
+        "T": 65,
+        "I": 15,
+        "Ag": 10,
+        "Dex": null,
+        "Int": 5,
+        "WP": 30,
+        "Fel": null,
+        "W": 168
+      },
+      "size": "Monstrous",
+      "toughnessBonus": 6,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        },
+        {
+          "name": "Lure of the Leviathan",
+          "value": ""
+        },
+        {
+          "name": "Resistant to Cold",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Vast Fangs",
+          "skill": 40,
+          "damage": 22,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Vast Fangs) +10."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Core Size adds 12 to the primary melee attack: printed +10 becomes +22."
+    },
+    {
+      "id": "sea-of-claws:creatures:black-leviathan",
+      "name": "Black Leviathan",
+      "page": 147,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 147
+      },
+      "example": false,
+      "category": "Sea creatures",
+      "stats": {
+        "M": 10,
+        "WS": 55,
+        "BS": null,
+        "S": 125,
+        "T": 145,
+        "I": 25,
+        "Ag": 10,
+        "Dex": null,
+        "Int": 5,
+        "WP": 45,
+        "Fel": null,
+        "W": 360
+      },
+      "size": "Monstrous",
+      "toughnessBonus": 14,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        },
+        {
+          "name": "Devastating Assault",
+          "value": ""
+        },
+        {
+          "name": "On a Different Scale",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "14"
+        },
+        {
+          "name": "Tail",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 55,
+          "damage": 14,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Tail",
+          "skill": 55,
+          "damage": 14,
+          "optional": false,
+          "free": true,
+          "text": "Lose Momentum to make this Free Attack."
+        },
+        {
+          "name": "Vast Fangs",
+          "skill": 55,
+          "damage": 40,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Vast Fangs) +16."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Natural armour",
+          "ap": 6,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Armour 6 (18) conflicts with Toughness 145: TB 14 + 6 AP = 20 protection. Keep the sourced AP and calculated TB; do not silently use the parenthetical total."
+      ],
+      "adaptation": "Printed ranked Grim uses the current unranked core Trait. Core Size adds 24 to the primary melee attack: printed +16 becomes +40."
+    }
+  ],
+  "templates": [],
+  "training": [],
+  "traits": [
+    {
+      "id": "sea-of-claws:trait:lure-of-the-lurkerfish",
+      "name": "Lure of the Lurkerfish",
+      "page": 140,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 140
+      },
+      "text": "The gently oscillating blue- green lights seen by the riverbank at dusk and dawn are sometimes mistaken for fireflies. Any Character passing a Hard (−2 SL) Lore (Riverways) Test will know that these are likely to be the lures of Lurkerfish. Those who fail the Lore Test must make an Easy (+4 SL) Cool Test or become beguiled by the sight and unable to perform any action except moving towards the light — effectively acquiring the Unconscious Condition.",
+      "adaptation": "Printed Test Difficulty uses current SL modifiers."
+    },
+    {
+      "id": "sea-of-claws:trait:slimy",
+      "name": "Slimy",
+      "page": 141,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 141
+      },
+      "text": "Latch-eels can produce a surprising quantity of slime, in or out of the water. If a Latch-eel is ever Grappled by an opponent, it may make a Toughness Test. If it succeeds, it produces a clump of slime, benefiting from +4 SL to subsequent Tests to break free. The opponent must make a Challenging (+0 SL) Athletics Test. Failure means that slime has covered their face, and the opponent must either release the Latch-eel or start to suffer suffocation (WFRP, page 181)."
+    },
+    {
+      "id": "sea-of-claws:trait:love-the-light",
+      "name": "Love the Light",
+      "page": 141,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 141
+      },
+      "text": "Daggerfish are attracted to light. Attempts to use fire to deter them only encourages them further. Whilst they possess the Bestial trait, they do not shy from fire or take Broken Conditions from being struck by flaming attacks."
+    },
+    {
+      "id": "sea-of-claws:trait:immersion",
+      "name": "Immersion",
+      "page": 142,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 142
+      },
+      "text": "The Sea Elemental may attempt to immerse its opponents by making a Grapple. If the Sea Elemental inflicts an Entangled Condition on its opponent, it draws them into its own body. The immersed character suffers from Suffocation as detailed on WFRP, page 181. They may attempt to escape by freeing themselves from the Entangled Condition as if they were Grappled by the Sea Elemental, making Opposed Strength Tests against its Strength of 59 to break free. However, the Sea Elemental does not need to actively maintain the Grapple — it may act as if the immersed character were not there and does not count as being Engaged."
+    },
+    {
+      "id": "sea-of-claws:trait:fire-resistant",
+      "name": "Fire Resistant",
+      "page": 142,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 142
+      },
+      "text": "Sea Elementals never suffer from Ablaze Conditions."
+    },
+    {
+      "id": "sea-of-claws:trait:mindless-spellcaster",
+      "name": "Mindless Spellcaster",
+      "page": 142,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 142
+      },
+      "text": "Sea Elementals may use their Strength Characteristic for the purpose of casting spells and channelling."
+    },
+    {
+      "id": "sea-of-claws:trait:boat-crusher",
+      "name": "Boat Crusher",
+      "page": 143,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 143
+      },
+      "text": "The Gargantuan may attempt to constrict a vessel of Size Large or smaller. To constrict a vessel, it must spend one turn wrapping itself about the vessel for every 10 points of Size the vessel possesses. Once the vessel is wrapped up, the Gargantuan starts to squeeze — making an Extended Opposed Strength Test against the boat’s Toughness. Once the SL reaches the boat’s Wounds, the boat shatters, reduced to a mass of flotsam. During this time, the boat’s crew may attack the Gargantuan or attempt to lever it from the boat. Attacks that inflict more than 7 Wounds may cause the Gargantuan to let go if it fails a subsequent Average (+2 SL) Cool Test. Levering the Gargantuan requires making an Opposed Strength Test against the creature. A result of 0 to 4 SL prevents it from squeezing the boat that turn, and a result of 5 SL or more forces it to release the boat.",
+      "adaptation": "Printed Test Difficulty uses current SL modifiers."
+    },
+    {
+      "id": "sea-of-claws:trait:electrical-discharge",
+      "name": "Electrical Discharge",
+      "page": 143,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 143
+      },
+      "text": "If the creature successfully Grapples an opponent, then at the start of its subsequent turns, the creature can spend 1 Momentum to deliver an electric shock to the Grappled character. The electrical discharge inflicts a hit of 10 Damage which ignores non- magical metal armour. Any Character taking Wounds from the electrical attack must also pass a Difficult (−1 SL) Endurance Test or suffer a Stunned Condition. The Gargantuan cannot make electrical attacks with impunity. Each time it uses the attack, it must make an Average (+2 SL) Endurance Test. Failure indicates that it suffers a Fatigued Condition. Whilst the Gargantuan is under the effects of a Fatigued Condition, electrical discharge attacks only inflict Damage 6 hits which ignore non-magical metal armour. The Gargantuan may also discharge electricity when it has Grappled a boat. This does no damage against the boat, but the crew all receive a jolt, suffering a Damage 6 hit (reduced to a Damage 3 hit if the Gargantuan has a Fatigued Condition).",
+      "adaptation": "Printed Test Difficulty uses current SL modifiers. Printed Advantage uses Momentum."
+    },
+    {
+      "id": "sea-of-claws:trait:whale-bane",
+      "name": "Whale Bane",
+      "page": 145,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 145
+      },
+      "text": "All Fanged Maw attacks have core Venom (Difficult −1 SL recovery): causing Wounds inflicts Poisoned; the Difficulty applies to recovery.",
+      "adaptation": "Uses full Fifth Edition Venom rather than the older on-hit interpretation."
+    },
+    {
+      "id": "sea-of-claws:trait:syreen-s-call",
+      "name": "Syreen’s Call",
+      "page": 145,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 145
+      },
+      "text": "As an action the Syreen may sing its luring song. Characters within a number of yards equal to the Syreen’s Initiative must make an Difficult (−1 SL) Cool Test or become beguiled by the call and unable to perform any action except moving towards the Syreen — effectively acquiring the Unconscious Condition.",
+      "adaptation": "Printed Test Difficulty uses current SL modifiers."
+    },
+    {
+      "id": "sea-of-claws:trait:resistant-to-cold",
+      "name": "Resistant to Cold",
+      "page": 147,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 147
+      },
+      "text": "Any weapon, spell, or effect that inflicts damage or impairment due to cold will likely have a reduced impact on an Orb Leviathan. It may make an Endurance Test to ignore any ill effects from cold and ice."
+    },
+    {
+      "id": "sea-of-claws:trait:lure-of-the-leviathan",
+      "name": "Lure of the Leviathan",
+      "page": 147,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 147
+      },
+      "text": "The first sign of an approaching attack by an Orb Leviathan is a lambent yellow light drifting slowly underwater. Any Character passing a Hard (−2 SL) Lore (Oceans) Test will have heard about the lure of the Orb Leviathan, and may look away before it takes effect. Those who fail the Lore Test must succeed on an Easy (+4 SL) Cool Test or acquire the Stunned Condition.",
+      "adaptation": "Printed Test Difficulty uses current SL modifiers."
+    },
+    {
+      "id": "sea-of-claws:trait:devastating-assault",
+      "name": "Devastating Assault",
+      "page": 147,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 147
+      },
+      "text": "When a Black Leviathan charges a ship, it causes a collision with a CR of 50."
+    },
+    {
+      "id": "sea-of-claws:trait:on-a-different-scale",
+      "name": "On a Different Scale",
+      "page": 147,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 147
+      },
+      "text": "The Black Leiviathan possesses the Bestial Trait and can be scared by fire. However, guttering torches are too small to attract its notice, let alone scare it. To benefit from the frightening qualities of fire, the blaze must be the size and intensity of a large bonfire; anything less isn’t going to concern the Black Leviathan. When considering the psychological impact of other sources of Fear and Terror, the GM should consider that unless the source is something the Black Leviathan should respect in terms of size, it is unlikely to bother the beast. Unearthly as Daemonettes, Zombies, and wizards with flaming heads may be, the Black Leviathan regards them all as fish food."
+    },
+    {
+      "id": "sea-of-claws:trait:marine-creature",
+      "name": "Marine Creature",
+      "page": 140,
+      "source": {
+        "book": "sea-of-claws",
+        "page": 140
+      },
+      "text": "The creature is at home in the ocean and unsuited to life on land. Its printed profile assumes an aquatic environment and it moves its full Movement in water. Out of water, Movement drops to 1 and all its Tests suffer −2 SL. It must be regularly doused with water or begin to suffocate (core Suffocation)."
+    }
+  ]
+}

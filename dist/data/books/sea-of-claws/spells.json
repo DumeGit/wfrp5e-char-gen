@@ -1,0 +1,222 @@
+[
+  {
+    "id": "sea-of-claws:spell:blessings-of-bel-shanaar",
+    "name": "Blessings of Bel Shanaar",
+    "category": "Heavens",
+    "page": 15,
+    "cn": 2,
+    "range": "You",
+    "target": "Self",
+    "duration": "1 day",
+    "text": "This spell must be cast while on a journey with a set destination, the location of which is known to the caster. Closing your eyes, you focus your Second Sight on the heavens, tracing Azyr’s path as it crackles across the sky, seeming to jump from star to star. For an instant a bolt of Azyr connects you to your destination, leaving a shimmering blue afterimage in your vision. For the duration of the spell, all Navigation Tests made by the wizard (or involving the wizard, in the case of Crew Tests) benefit from +2 SL."
+  },
+  {
+    "id": "sea-of-claws:spell:niezlib-s-optimal-firing-solution",
+    "name": "Niezlib’s Optimal Firing Solution",
+    "category": "Heavens",
+    "page": 15,
+    "cn": 6,
+    "range": "Willpower Bonus yards",
+    "target": "One ship",
+    "duration": "One Round",
+    "text": "This spell is a variation of one created by Lord Astromancer Wilfried-Gotthelm Niezlib, who sought to use it to prove his theories about the movement of celestial objects. He later realised it had more practical applications, and modified it to determine the exact moment a ship should fire a broadside. The caster can calculate the roll of the ship, distance to the target, weight of the cannonballs, and the power of each shot. For the duration of the spell, Tests made to fire a cannon benefit from +1 SL."
+  },
+  {
+    "id": "sea-of-claws:spell:sea-of-glass",
+    "name": "Sea of Glass",
+    "category": "Heavens",
+    "page": 15,
+    "cn": 10,
+    "range": "You",
+    "target": "AoE (Willpower Bonus miles)",
+    "duration": "Willpower Bonus minutes",
+    "text": "You call on everyone on your vessel to be quiet, then close your eyes. An eerie silence envelops first your ship, then the surrounding sea. The sails go slack and the waves calm. The Doldrums effect from the Wind Effect Table (page 107) applies for the duration of the spell.",
+    "conversion": "Printed WiIlpower spelling normalised to Willpower; no rule change."
+  },
+  {
+    "id": "sea-of-claws:spell:living-mire",
+    "name": "Living Mire",
+    "category": "Life",
+    "page": 15,
+    "cn": 8,
+    "range": "Willpower yards × 10",
+    "target": "One ship",
+    "duration": "Willpower Bonus minutes",
+    "text": "Facing a ship at sea, you produce a stream of seaweed. The slimy algae surrounds the vessel, which becomes enmeshed. Whilst caught in the mire the vessel suffers –2 to its Movement Characteristic, and adjusts its Manoeuvre Characteristic by –3 SL. A crew can be ordered to cut the ship free with an Extended Challenging (+0 SL) Boat Handling Test, to a target number equal to the caster’s Willpower Bonus + SLs."
+  },
+  {
+    "id": "sea-of-claws:spell:water-water-everywhere",
+    "name": "Water Water Everywhere",
+    "category": "Life",
+    "page": 15,
+    "cn": 6,
+    "range": "You",
+    "target": "One ship",
+    "duration": "Instant",
+    "text": "You gather Ghyran from the sea, taking small amounts of water with it. Cleansed of impurities, this water flows to the ship’s stores, replenishing any empty barrels of water."
+  },
+  {
+    "id": "sea-of-claws:spell:whirlpool",
+    "name": "Whirlpool",
+    "category": "Life",
+    "page": 15,
+    "cn": 6,
+    "range": "Willpower yards × 10",
+    "target": "AoE (Willpower yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "You pull on the Ghyran surrounding the target area, moving it around and around. The water starts to churn, and a whirlpool forms in the target area. Whirlpools are described on page 114. The spell creates an area of Gentle Rotation, but SL can be spent on making the whirlpool larger as per the Overcasting rules. Overcasting: 5 SL — Whirlpool; 8 SL — Powerful Vortex; 13 SL — A Maelstrom; 21+ SL — The Maelstrom."
+  },
+  {
+    "id": "sea-of-claws:spell:breathe-water",
+    "name": "Breathe Water",
+    "category": "Manann",
+    "page": 87,
+    "range": "Touch",
+    "target": "1",
+    "duration": "Fellowship Bonus minutes",
+    "text": "Your prayers allow a character to breathe water as if it were air. When it comes to drowning in water, the character can ignore the Suffocation rules on WFRP page 181 for the duration of the Miracle. It is not possible to perform this Miracle while your own mouth is underwater."
+  },
+  {
+    "id": "sea-of-claws:spell:quell-waters",
+    "name": "Quell Waters",
+    "category": "Manann",
+    "page": 87,
+    "range": "Fellowship yards × 10",
+    "target": "1 strait or whirlpool",
+    "duration": "Fellowship Bonus Rounds",
+    "text": "You can chant this prayer, quelling a strong current. The M rating of a strait or whirlpool is reduced to 0 whilst the miracle is in effect."
+  },
+  {
+    "id": "sea-of-claws:spell:sea-curse",
+    "name": "Sea Curse",
+    "category": "Manann",
+    "page": 87,
+    "range": "Fellowship yards × 10",
+    "target": "1 ship",
+    "duration": "Fellowship Bonus Rounds",
+    "text": "You call doom down on the enemies of Manann. Provided the targeted ship is crewed by those who do not warrant the respect of Manann (followers of Chaos, worshippers of Stromfels, Orcs and Goblins, Skaven, crews who have a negative Manann’s Mood score), that crew suffer from a curse. Add 2 to the Damage of all hits the crew receives whilst the Miracle is in effect."
+  },
+  {
+    "id": "sea-of-claws:spell:repel-sea-beast",
+    "name": "Repel Sea Beast",
+    "category": "Manann",
+    "page": 87,
+    "range": "Fellowship yards × 10",
+    "target": "1 creature with the Aquatic Trait (see Death on the Reik Companion, page 90) or the Marine Creature Trait (see page 140)",
+    "duration": "Fellowship Bonus Rounds",
+    "text": "You can chant this prayer to a sea creature, causing it to forget all rage and hunger whilst the miracle is in effect. For the duration of the miracle the creature will not make any hostile actions, provided that it suffers no damage or adverse Conditions."
+  },
+  {
+    "id": "sea-of-claws:spell:rip-tides",
+    "name": "Rip Tides",
+    "category": "Manann",
+    "page": 87,
+    "range": "Fellowship yards × 10",
+    "target": "1 ship",
+    "duration": "Fellowship Bonus Rounds",
+    "text": "You can chant this prayer at a ship you can see. The ship suffers –1 M and –1 SL to Man."
+  },
+  {
+    "id": "sea-of-claws:spell:blessed-voyage",
+    "name": "Blessed Voyage",
+    "category": "Manann",
+    "page": 87,
+    "range": "Touch",
+    "target": "1 ship",
+    "duration": "Instant",
+    "text": "This Miracle may be performed whenever it is time for a ship to calculate Manann’s Mood. You perform the rites thought best to supplicate Manann. His mood improves by 2d10, –1 for each Sin Point you currently have."
+  },
+  {
+    "id": "sea-of-claws:spell:blessing-of-the-albatross",
+    "name": "Blessing of the Albatross",
+    "category": "Manann",
+    "page": 87,
+    "range": "Touch",
+    "target": "1 ship",
+    "duration": "Willpower Bonus days",
+    "text": "Upon completing the invocation, an albatross descends from the clouds and follows the ship. The albatross waits up to 1 hour for the ship to sail, and after that, it stays with the ship until the duration expires. As long as the albatross is present, the ship cannot sink, no matter how much damage it takes. Should the albatross be killed, the ship suffers from –d10 Morale and –2d10 for Manann’s Mood (should you need statistics for an albatross, treat it as a pigeon from WFRP, page 316, though its Size is Small and it has 3 Wounds)."
+  },
+  {
+    "id": "sea-of-claws:spell:blessing-of-the-mariner",
+    "name": "Blessing of the Mariner",
+    "category": "Manann",
+    "page": 87,
+    "range": "Touch",
+    "target": "1",
+    "duration": "1 day",
+    "text": "Your blessing grants a character an instinctive feel for the sea and sailing. Any Row, Sail, or Swim Tests they make benefit from +1 SL."
+  },
+  {
+    "id": "sea-of-claws:spell:raging-seas",
+    "name": "Raging Seas",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "Strength yards × 10",
+    "target": "See text",
+    "duration": "Instant",
+    "text": "You command the sea to form a massive wave that crashes into a specific target, such as a person in the water or on the shore, a boat, or a lighthouse. The wave counts as having a CR of 15."
+  },
+  {
+    "id": "sea-of-claws:spell:send-em-to-stromfels",
+    "name": "Send ‘em to Stromfels",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "Strength yards × 10",
+    "target": "1 ship with a Holed Rating",
+    "duration": "Instant",
+    "text": "You focus on a stricken vessel, exerting your will to ensure that none escape. Splits and tears in the target ship’s hull widen as a result of the miracle. Double the target ship’s Holed Rating (see page 117)."
+  },
+  {
+    "id": "sea-of-claws:spell:storm-winds",
+    "name": "Storm Winds",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "Strength yards × 10",
+    "target": "1 ship",
+    "duration": "Strength minutes",
+    "text": "You call the winds to blow with greater force into the sails of 1 ship. Increase the intensity of the wind by 1 step for the duration of the miracle (see page 107). The direction of the wind is not affected."
+  },
+  {
+    "id": "sea-of-claws:spell:blood-trail",
+    "name": "Blood Trail",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "You",
+    "target": "You",
+    "duration": "1 hour",
+    "text": "When trying to track someone who has been injured, you smell the smallest drops of blood even if some attempt has been made to remove them. You can follow their trail over land and water by passing an Easy (+4 SL) Track Test.",
+    "adaptation": "Printed Test Difficulty uses Fifth Edition SL modifiers (core Appendix I p. 364)."
+  },
+  {
+    "id": "sea-of-claws:spell:curse-of-the-harsh-mistress",
+    "name": "Curse of the Harsh Mistress",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "Touch",
+    "target": "1",
+    "duration": "Strength Bonus days",
+    "text": "You inflict nightmares upon your target that make it impossible for them to get a good night’s sleep, resulting in lethargy and weakness. The nightmares are extremely vivid, disturbing, and connected to the ocean in some way; they commonly involve a woman draped in fronds of bloodwrack walking from the sea to torment the victim. Whilst under the influence of the Miracle the target must pass a Difficult (−1 SL) Cool Test every time they take some rest to recover from Fatigued Conditions. If the Test is failed, the Fatigued Condition remains.",
+    "adaptation": "Printed Test Difficulty uses Fifth Edition SL modifiers (core Appendix I p. 364)."
+  },
+  {
+    "id": "sea-of-claws:spell:manann-s-mood-made-meaningless",
+    "name": "Manann’s Mood Made Meaningless",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "See text",
+    "target": "See text",
+    "duration": "Strength Bonus days",
+    "text": "You proclaim that Stromfels is the true lord of the sea, and that the superstitions of those who respect Manann are delusions. Once the miracle is in effect, roll on the table below and apply the result to the Manann’s Mood score for the ship you are currently aboard (see page 130). Add 1 to the roll for every Sin Point you possess. 1 to 4: Stromfels Triumphant! Whilst the miracle is in effect, treat Manann’s Mood as 0. 5 to 8: Stromfels Ascends! Roll 5d10. The number may be added to Manann’s Mood if it is currently negative, or subtracted from it if it is positive. 9: No effect. Manann’s Mood is calculated as normal. 10 or more: Manann Provoked! Roll 5d10. The number is subtracted from Manann’s Mood."
+  },
+  {
+    "id": "sea-of-claws:spell:seasickness",
+    "name": "Seasickness",
+    "category": "Stromfels",
+    "page": 91,
+    "range": "Strength yards × 10",
+    "target": "1",
+    "duration": "Strength Bonus hours",
+    "text": "You curse someone, even the saltiest of seadogs, with a bout of seasickness for the duration. See Sea of Claws p. 125 for Seasickness.",
+    "conversion": "User chose the printed Duration field (Strength Bonus hours) over the description's contradictory one hour; both source statements are documented."
+  }
+]

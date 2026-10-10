@@ -44,11 +44,40 @@ export function validateGMBooks(data, books) {
   return books;
 }
 // One immutable all-book options context. Draft books gate only foundations.
-export function createGMRules(library, data) {
+export function assembleGMOptions(library) {
   const ids = library.packs
     .filter((pack) => pack.manifest.kind !== "variant")
     .map((pack) => pack.manifest.id);
   const rules = assembleBooks(library, ids);
+  // Equipment-only variants are explicit source alternatives in the GM picker,
+  // never replacements of its baseline catalogue or foundation-book toggles.
+  for (const pack of library.packs.filter(
+    (p) =>
+      p.manifest.kind === "variant" &&
+      p.data.weapons?.length &&
+      Object.keys(p.data).every((key) =>
+        [
+          "weapons",
+          "market",
+          "coverage",
+          "referenceEntries",
+          "ruleReferences",
+        ].includes(key),
+      ),
+  )) {
+    const alternate = assembleBooks(library, [...ids, pack.manifest.id]);
+    for (const kind of ["weapons", "market"])
+      for (const entry of alternate[kind].filter(
+        (x) => x.source.book === pack.manifest.id,
+      ))
+        rules[kind].push({
+          ...entry,
+          name: `${entry.name} (${pack.manifest.shortTitle})`,
+        });
+    rules.books.push(
+      alternate.books.find((book) => book.id === pack.manifest.id),
+    );
+  }
   // Waaagh! is a GM option, not a playable PC Colour Lore.
   if (ids.includes("tribes-tribulations"))
     rules.config.colours = [
@@ -56,6 +85,10 @@ export function createGMRules(library, data) {
       "Little Waaagh!",
       "Big Waaagh!",
     ];
+  return rules;
+}
+export function createGMRules(library, data) {
+  const rules = assembleGMOptions(library);
   sourceBooks = rules.books;
   for (const book of data.optionBooks || []) {
     const pack = rules.books.find((b) => b.id === book.id);

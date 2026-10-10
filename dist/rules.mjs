@@ -178,9 +178,16 @@ export function skillInfo(R, name, s) {
     : info;
 }
 export function talentInfo(R, name) {
-  return R.talents.find(
+  const entry = R.talents.find(
     (x) => base(x.name).toLowerCase() === base(canon(name)).toLowerCase(),
   );
+  const song = entry?.songs?.find((x) => name === `Chanty (${x.name})`);
+  return song
+    ? {
+        ...entry,
+        text: `${entry.text}\n\n${song.name} (p. ${song.page}): ${song.text}`,
+      }
+    : entry;
 }
 export function options(R, raw, type = "skill", s) {
   if (s && type === "skill") raw = speciesSkillName(R, s, raw);
@@ -736,6 +743,8 @@ export function invalidTalent(R, s, name) {
       (x) => base(x) === "Channelling" && d.skills[x],
     );
   const elf = highElfTalentIssue(R, s, name, d);
+  if (b === "Chanty" && d.talents.includes(name))
+    return "This Chanty is already learned; choose a different printed song (Sea of Claws p. 67).";
   if (elf) return elf;
   const dwarf = dwarfTalentIssue(R, s, name, d);
   if (dwarf) return dwarf;

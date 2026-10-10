@@ -6,20 +6,20 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **3751 results**, including **1209 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **3858 results**, including **1228 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
-The Rules audit explicitly removed **112 non-mechanical entries**; **969 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
+The Rules audit explicitly removed **112 non-mechanical entries**; **982 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1673 | 224 | 1897 | 0 |
-| Up in Arms | 1.0.4 | 98 | 128 | 226 | 12 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1692 | 224 | 1916 | 0 |
+| Up in Arms | 1.0.5 | 98 | 128 | 226 | 13 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
 | Archives of the Empire: Volume III | 1.0.5 | 59 | 105 | 164 | 14 |
 | Winds of Magic | 1.0.4 | 172 | 252 | 424 | 55 |
 | Rough Nights & Hard Days | 1.0.2 | 2 | 24 | 26 | 2 |
-| Dwarf Player’s Guide | 1.0.2 | 221 | 107 | 328 | 102 |
+| Dwarf Player’s Guide | 1.0.3 | 221 | 107 | 328 | 103 |
 | High Elf Player’s Guide | 1.0.3 | 116 | 81 | 197 | 50 |
 | Blood and Bramble | 1.0.2 | 25 | 2 | 27 | 10 |
 | Deft Steps, Light Fingers | 1.0.4 | 56 | 146 | 202 | 17 |
@@ -27,6 +27,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **969 Rules r
 | The Warband of Bayl of Many Eyes | 1.0.0 | 0 | 3 | 3 | 0 |
 | The Cluster-Eye Tribe | 1.0.0 | 1 | 5 | 6 | 0 |
 | Tribes and Tribulations | 1.0.0 | 49 | 15 | 64 | 12 |
+| Sea of Claws | 1.0.0 | 61 | 19 | 80 | 28 |
 
 ## Source review
 
@@ -49,7 +50,7 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 
 Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 277; talent 423; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
+Categories: career 64; skill 285; talent 434; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
 Reviewed printed records retained outside search: 0.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.
@@ -460,6 +461,21 @@ Source SHA-256: `008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6
 Candidate sections: included 50; excluded 1.
 
 Categories: magic 28; equipment 12; trait 9; rule 13; table 2.
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Sea of Claws
+
+Source SHA-256: `30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c`.
+
+- pp. 41–67: Norse creation, artillery and Chanties.
+- pp. 89–101: Stromfels and naval artillery.
+- pp. 140–147: Sea creature abilities.
+
+Candidate sections: included 32; excluded 1.
+
+Categories: career 9; talent 9; magic 21; equipment 4; trait 15; species 4; rule 13; property 1; table 4.
 Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.

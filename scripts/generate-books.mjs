@@ -7,6 +7,7 @@ import {
   gmInventory,
 } from "../dist/gm/content.mjs";
 import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
+import { assembleGMOptions } from "../dist/gm/books.mjs";
 import {
   searchCoverage,
   searchCoverageMarkdown,
@@ -38,12 +39,7 @@ const next =
   countSummary(report) +
   "\n" +
   readme.slice(readme.indexOf(end));
-const gmRules = assembleBooks(
-  library,
-  library.packs
-    .filter((p) => p.manifest.kind !== "variant")
-    .map((p) => p.manifest.id),
-);
+const gmRules = assembleGMOptions(library);
 let gm = prepareGM(
   JSON.parse(
     await readFile(

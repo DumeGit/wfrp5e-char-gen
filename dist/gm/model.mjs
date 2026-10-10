@@ -419,6 +419,7 @@ export function validateGMDraft(data, R, s) {
     Object.keys(s.attackOverrides).some(
       (k) =>
         !p?.attacks.some((a) => a.key === k) &&
+        !p?.traits.some((t) => t.deriveAttack && t.key === k) &&
         ![...s.gear, ...s.traits].some((x) => x.key === k) &&
         !(t?.gear || []).some((x, i) => templateRowKey(t, "gear", i) === k),
     )
@@ -489,13 +490,22 @@ const magicLore = (name) =>
   name.match(/^(?:Arcane Magic|Chaos Magic) \((.*)\)$/)?.[1];
 export const gmSpecies = (profile) =>
   profile?.species || (profile?.id === "core:creatures:ogre" ? "Ogre" : "");
-export const gmSkillCharacteristic = (R, profile, name) =>
-  skillCharacteristic(
-    R,
-    { species: gmSpecies(profile) },
-    name,
-    skillInfo(R, name)?.char,
-  );
+export const gmSkillCharacteristic = (
+  R,
+  profile,
+  name,
+  traits = profile?.traits,
+) =>
+  profile?.magicCharacteristic === "S" &&
+  traits?.some((trait) => trait.name === "Mindless Spellcaster") &&
+  (name === "Language (Magick)" || base(name) === "Channelling")
+    ? "S"
+    : skillCharacteristic(
+        R,
+        { species: gmSpecies(profile) },
+        name,
+        skillInfo(R, name)?.char,
+      );
 export const gmLoreIssue = (R, profile, lore) => {
   if (
     gmSpecies(profile) === "Ogre" &&
@@ -912,7 +922,7 @@ export function calculateGM(data, R, s) {
     changed || hardy !== printedHardy
       ? woundFormula(stats, size, construct, swarm, hardy, tb)
       : p.stats.W;
-  if (swarm) {
+  if (swarm && !p.traits.some((t) => t.name === "Swarm")) {
     const normalChanged =
         s.recalculate ||
         template ||
@@ -940,11 +950,11 @@ export function calculateGM(data, R, s) {
         name,
         total,
         origin,
-        char: gmSkillCharacteristic(R, p, name),
+        char: gmSkillCharacteristic(R, p, name, traits),
       });
   };
   for (const x of live(p.skills)) {
-    const char = gmSkillCharacteristic(R, p, x.name);
+    const char = gmSkillCharacteristic(R, p, x.name, traits);
     const value =
       changed && char && stats[char] !== null && p.stats[char] !== null
         ? stats[char] + x.total - p.stats[char]
@@ -952,7 +962,7 @@ export function calculateGM(data, R, s) {
     put(x.name, value, "Printed");
   }
   for (const x of templateSkills) {
-    const char = gmSkillCharacteristic(R, p, x.name);
+    const char = gmSkillCharacteristic(R, p, x.name, traits);
     if (!char || stats[char] === null)
       add(
         `${x.name} needs an explicit ${char || "Characteristic"} score.`,
@@ -961,7 +971,16 @@ export function calculateGM(data, R, s) {
       );
     else put(x.name, stats[char] + x.bonus, "Template");
   }
-  for (const t of newTraits) {
+  const skillGrantTraits = [
+    ...newTraits,
+    ...traits.filter(
+      (t) =>
+        p.magicCharacteristic === "S" &&
+        t.origin === "Printed" &&
+        t.name === "Spellcaster",
+    ),
+  ];
+  for (const t of skillGrantTraits) {
     const grant = {
       Tracker: ["Track", "Int"],
       Stealthy: ["Stealth (Rural)", "Ag"],
@@ -996,8 +1015,10 @@ export function calculateGM(data, R, s) {
           Shadows: "Ulgu",
           "The Great Maw": "The Great Maw",
         }[lore];
-        if (wind && stats.WP !== null)
-          put(`Channelling (${wind})`, stats.WP + 10, "Trait");
+        const channelName = `Channelling (${wind})`;
+        const channelChar = gmSkillCharacteristic(R, p, channelName, traits);
+        if (wind && stats[channelChar] !== null)
+          put(channelName, stats[channelChar] + 10, "Trait");
         if (!wind && !s.skills.some((x) => base(x.name) === "Channelling"))
           add(
             "Choose a Channelling Wind Skill for this magical Lore.",
@@ -1006,13 +1027,21 @@ export function calculateGM(data, R, s) {
             "magic.wind",
           );
       }
-      const castingChar = gmSkillCharacteristic(R, p, "Language (Magick)");
+      const castingChar = gmSkillCharacteristic(
+        R,
+        p,
+        "Language (Magick)",
+        traits,
+      );
       if (stats[castingChar] !== null)
         put("Language (Magick)", stats[castingChar] + 10, "Trait");
     }
   }
   for (const x of live(s.skills))
-    skills.set(x.name, { ...x, char: gmSkillCharacteristic(R, p, x.name) });
+    skills.set(x.name, {
+      ...x,
+      char: gmSkillCharacteristic(R, p, x.name, traits),
+    });
   for (const x of s.skills)
     if (!number(x.total))
       add(
@@ -1020,6 +1049,19 @@ export function calculateGM(data, R, s) {
         1,
         "#gm-tab-2",
         "skill.total",
+      );
+  for (const t of s.talents)
+    if (
+      base(t.name) === "Chanty" &&
+      talents
+        .filter((x) => x.name === t.name)
+        .reduce((n, x) => n + x.ranks, 0) !== 1
+    )
+      add(
+        "Each Chanty purchase learns a different song; keep one rank per selected Chanty (Sea of Claws p. 67).",
+        1,
+        "#gm-tab-2",
+        "talent.chanty-song",
       );
   for (const t of s.talents)
     if (talentInfo(R, t.name)?.unavailable) {

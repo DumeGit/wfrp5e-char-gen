@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "sea-of-claws-artillery:feature:naval-artillery",
+      "name": "Six naval artillery profiles and two ammunition alternatives",
+      "status": "implemented",
+      "source": {
+        "book": "sea-of-claws-artillery",
+        "page": 100
+      },
+      "reason": "Explicit user-selected alternative; GM options retain both sources as distinct labelled choices."
+    }
+  ]
+}
