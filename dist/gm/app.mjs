@@ -242,7 +242,9 @@ function profilePreview(id) {
 }
 function renderTemplateResults() {
   const templates = gmCatalogue(data, s.books).templates.filter(
-    (t) => !ui.templateBook || (t.source?.book || "core") === ui.templateBook,
+    (t) =>
+      t.trollRole !== "modifier" &&
+      (!ui.templateBook || (t.source?.book || "core") === ui.templateBook),
   );
   dialogBody.querySelector("#gm-template-results").innerHTML = templates
     .map(
@@ -816,7 +818,23 @@ function change(el) {
         if (val) s.templateTalents[d.templateTalent] = val;
         else delete s.templateTalents[d.templateTalent];
       }
-      if (d.templateLore !== undefined) s.templateLore = String(val);
+      if (d.templateLore !== undefined) {
+        s.templateLore = String(val);
+        s.templateSkills = {};
+        s.templateTalents = {};
+      }
+      if (d.trollModifier) {
+        for (const key of Object.keys(s.attackOverrides))
+          if (key.startsWith(s.template + ":")) delete s.attackOverrides[key];
+        s.templateModifiers = val
+          ? [...s.templateModifiers, d.trollModifier]
+          : s.templateModifiers.filter((id) => id !== d.trollModifier);
+        s.templateSkills = {};
+        s.templateTalents = {};
+        s.removed = s.removed.filter(
+          (key) => !key.startsWith(s.template + ":"),
+        );
+      }
       if (d.trait) {
         const trait = s.traits.find((t) => t.key === d.trait);
         if (trait) trait.value = String(val);

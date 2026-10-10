@@ -8,9 +8,9 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 14,
+    "books": 15,
     "careers": 126,
-    "magicProfiles": 536,
+    "magicProfiles": 564,
     "rituals": 17,
     "cants": 24,
     "techniques": 10,
@@ -41287,6 +41287,881 @@
             "page": 10
           },
           "reason": "Specific nonlethal ammunition rule; no printed purchase profile or live poison tracking."
+        }
+      ]
+    },
+    {
+      "id": "tribes-tribulations",
+      "title": "Tribes and Tribulations",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 33,
+        "adapted": 10,
+        "reference-only": 24,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 4,
+        "reference-only": 2,
+        "unavailable": 0,
+        "deferred": 1
+      },
+      "kinds": {
+        "gear": {
+          "implemented": 8,
+          "adapted": 1,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "market": {
+          "implemented": 3,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 15,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "ruleReferences": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 9,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "spells": {
+          "implemented": 19,
+          "adapted": 9,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "weapons": {
+          "implemented": 3,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "tribes-tribulations:gear:copper-staff",
+          "kind": "gear",
+          "name": "Copper Staff",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 97
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:dangly-wotnotz",
+          "kind": "gear",
+          "name": "Dangly Wotnotz",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 97
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:effigy-of-gork",
+          "kind": "gear",
+          "name": "Effigy of Gork",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 97
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:effigy-of-mork",
+          "kind": "gear",
+          "name": "Effigy of Mork",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 97
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:glowy-green-amulet",
+          "kind": "gear",
+          "name": "Glowy Green Amulet",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 97
+          },
+          "reason": "Legacy: printed Magic Resistance 2 becomes one core Talent rank; its fixed Fifth Edition effects apply."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:shaman-staff",
+          "kind": "gear",
+          "name": "Shaman Staff",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 97
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:war-machine-bolt",
+          "kind": "gear",
+          "name": "War Machine Bolt",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:war-machine-stone",
+          "kind": "gear",
+          "name": "War Machine Stone",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:gear:wulfang-s-pelt",
+          "kind": "gear",
+          "name": "Wulfang’s Pelt",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 63
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:market:doom-diver",
+          "kind": "market",
+          "name": "Doom Diver",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:market:rock-lobber",
+          "kind": "market",
+          "name": "Rock Lobber",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:market:spear-chukka",
+          "kind": "market",
+          "name": "Spear Chukka",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:big-waaagh-lore-benefit",
+          "kind": "referenceEntries",
+          "name": "Big Waaagh! Lore Benefit",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:black-orc-restrictions",
+          "kind": "referenceEntries",
+          "name": "Black Orc Restrictions",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 11
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:crewed-war-machines",
+          "kind": "referenceEntries",
+          "name": "Crewed War Machines",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:gut-magic",
+          "kind": "referenceEntries",
+          "name": "Gut Magic",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 82
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:gut-magic-miscast-table",
+          "kind": "referenceEntries",
+          "name": "Gut Magic Miscast Table",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 83
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:idols-of-gork-and-mork",
+          "kind": "referenceEntries",
+          "name": "Idols of Gork and Mork",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 101
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:little-waaagh-lore-benefit",
+          "kind": "referenceEntries",
+          "name": "Little Waaagh! Lore Benefit",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:mounted-warband-skills",
+          "kind": "referenceEntries",
+          "name": "Mounted Warband Skills",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:purple-skullback-bite",
+          "kind": "referenceEntries",
+          "name": "Purple Skullback Bite",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:savage-orc-armour",
+          "kind": "referenceEntries",
+          "name": "Savage Orc Armour",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:shaman-shrooms",
+          "kind": "referenceEntries",
+          "name": "Shaman Shrooms",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:snotling-puffballs",
+          "kind": "referenceEntries",
+          "name": "Snotling Puffballs",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 13
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:waaagh-channelling-and-miscasts",
+          "kind": "referenceEntries",
+          "name": "Waaagh! Channelling and Miscasts",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 94
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:waaagh-lore-access",
+          "kind": "referenceEntries",
+          "name": "Waaagh! Lore Access",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 95
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:reference:waaagh-miscast-table",
+          "kind": "referenceEntries",
+          "name": "Waaagh! Miscast Table",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 96
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:bileful-vomit",
+          "kind": "ruleReferences",
+          "name": "Bileful Vomit",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 88
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:corrupting-vomit",
+          "kind": "ruleReferences",
+          "name": "Corrupting Vomit",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 88
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:die-hard",
+          "kind": "ruleReferences",
+          "name": "Die Hard",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 10
+          },
+          "reason": "User-supplied older-edition definition retained; no direct Fifth Edition equivalent."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:purple-skullback-bite",
+          "kind": "ruleReferences",
+          "name": "Purple Skullback Bite",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Printed Average (+20) uses core Average (+2 SL); current Venom inflicts Poisoned on Wounds without an avoidance Test."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:rotten-regeneration",
+          "kind": "ruleReferences",
+          "name": "Rotten Regeneration",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 88
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:sated",
+          "kind": "ruleReferences",
+          "name": "Sated",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:starving",
+          "kind": "ruleReferences",
+          "name": "Starving",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:that-s-no-mound",
+          "kind": "ruleReferences",
+          "name": "That’s No Mound",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:rule-reference:water-wise",
+          "kind": "ruleReferences",
+          "name": "Water Wise",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:ard-as-nails",
+          "kind": "spells",
+          "name": "‘Ard as Nails",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:bash-em-lads",
+          "kind": "spells",
+          "name": "Bash ‘Em Lads!",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:behave",
+          "kind": "spells",
+          "name": "Behave!",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:bilebrew",
+          "kind": "spells",
+          "name": "Bilebrew",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 82
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:bloodgruel",
+          "kind": "spells",
+          "name": "Bloodgruel",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 82
+          },
+          "reason": "Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:brainbursta",
+          "kind": "spells",
+          "name": "Brainbursta",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:cunnin-words",
+          "kind": "spells",
+          "name": "Cunnin’ Words",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:curse-of-da-bad-moon",
+          "kind": "spells",
+          "name": "Curse of Da Bad Moon",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:eadbutt",
+          "kind": "spells",
+          "name": "‘Eadbutt",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Legacy: user-approved Target 1 resolves printed Target You conflicting with the magic-missile effect."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:ere-we-go",
+          "kind": "spells",
+          "name": "‘Ere We Go!",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:fists-of-gork",
+          "kind": "spells",
+          "name": "Fists of Gork",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:foot-of-gork",
+          "kind": "spells",
+          "name": "Foot of Gork",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 101
+          },
+          "reason": "Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364)."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:gaze-of-mork",
+          "kind": "spells",
+          "name": "Gaze of Mork",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 101
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:get-some-guts",
+          "kind": "spells",
+          "name": "Get Some Guts",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 82
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:gift-of-the-spider-god",
+          "kind": "spells",
+          "name": "Gift of the Spider-God",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364). Use current core Venom: Wounds inflict Poisoned; Challenging or Difficult specifies recovery Difficulty."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:gork-ll-fix-it",
+          "kind": "spells",
+          "name": "Gork’ll Fix It",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:itchy-nuisance",
+          "kind": "spells",
+          "name": "Itchy Nuisance",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:mork-save-us",
+          "kind": "spells",
+          "name": "Mork Save Us!",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 101
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:mork-wants-ya",
+          "kind": "spells",
+          "name": "Mork Wants Ya!",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:night-shroud",
+          "kind": "spells",
+          "name": "Night Shroud",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:nikkit",
+          "kind": "spells",
+          "name": "Nikkit!",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:sneaky-stabbin",
+          "kind": "spells",
+          "name": "Sneaky Stabbin’",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:the-evil-sun",
+          "kind": "spells",
+          "name": "The Evil Sun",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 100
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:the-great-green-spite",
+          "kind": "spells",
+          "name": "The Great Green Spite",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 98
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:the-hand-of-gork",
+          "kind": "spells",
+          "name": "The Hand of Gork",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 101
+          },
+          "reason": "Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:toothcracker",
+          "kind": "spells",
+          "name": "Toothcracker",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 82
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:vindictive-glare",
+          "kind": "spells",
+          "name": "Vindictive Glare",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 99
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:spell:waaagh",
+          "kind": "spells",
+          "name": "WAAAGH!",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 101
+          },
+          "reason": "Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted."
+        },
+        {
+          "contentId": "tribes-tribulations:weapons:doom-diver",
+          "kind": "weapons",
+          "name": "Doom Diver",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:weapons:rock-lobber",
+          "kind": "weapons",
+          "name": "Rock Lobber",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "tribes-tribulations:weapons:spear-chukka",
+          "kind": "weapons",
+          "name": "Spear Chukka",
+          "status": "implemented",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": [
+        {
+          "id": "tribes-tribulations:feature:equipment",
+          "name": "War machines, ammunition and seven magic items",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 41
+          },
+          "reason": "No supplied prices; acquired/reference profiles, unknown weights remain unresolved."
+        },
+        {
+          "id": "tribes-tribulations:feature:excluded",
+          "name": "Named characters, adventures and narrative Nemesis traits",
+          "status": "deferred",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 26
+          },
+          "reason": "Explicit user scope; not selectable or global search content."
+        },
+        {
+          "id": "tribes-tribulations:feature:live",
+          "name": "Conditional abilities, casting and campaign play",
+          "status": "reference-only",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 94
+          },
+          "reason": "Descriptions only; no live resurrection, Conditions, healing or staff rolls automated."
+        },
+        {
+          "id": "tribes-tribulations:feature:magic",
+          "name": "24 Waaagh! and four Great Maw spells",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 82
+          },
+          "reason": "Difficulty/Momentum compatibility, Target 1 correction and Magick Channelling decision."
+        },
+        {
+          "id": "tribes-tribulations:feature:profiles",
+          "name": "19 generic profiles",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 9
+          },
+          "reason": "Core Size, Sprinter, Snotling Wounds and Die Hard decisions; printed values otherwise preserved."
+        },
+        {
+          "id": "tribes-tribulations:feature:trolls",
+          "name": "Four Troll types and four combinable character templates",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 88
+          },
+          "reason": "Approved Swamp-strider and core Striding Gait/Magic Resistance replacements; conditional abilities remain references."
+        },
+        {
+          "id": "tribes-tribulations:feature:warband",
+          "name": "Seven warband templates and artillery crew",
+          "status": "adapted",
+          "source": {
+            "book": "tribes-tribulations",
+            "page": 16
+          },
+          "reason": "Current core Talents/armour, explicit equipment and species/Lore limits."
         }
       ]
     }

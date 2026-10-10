@@ -1,0 +1,3242 @@
+{
+  "schemaVersion": 1,
+  "id": "tribes-tribulations",
+  "source": {
+    "file": "Tribes and Tribulations.pdf",
+    "sha256": "008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e"
+  },
+  "summary": "19 generic profiles, seven warband templates, eight Troll templates and artillery crew",
+  "profiles": [
+    {
+      "id": "tribes-tribulations:creatures:basic-goblin",
+      "name": "Basic Goblin",
+      "page": 9,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 9
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +7."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Goblin protection",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-gnoblar",
+      "name": "Basic Gnoblar",
+      "page": 9,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 9
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 25,
+        "T": 30,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 18,
+        "Fel": 15,
+        "W": 9
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 25,
+          "damage": 6,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +6."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-forest-goblin",
+      "name": "Basic Forest Goblin",
+      "page": 9,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 9
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +7."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Forest Goblin protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-night-goblin",
+      "name": "Basic Night Goblin",
+      "page": 9,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 9
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 18,
+        "Fel": 20,
+        "W": 10
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Hatred",
+          "value": "Dwarfs"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +7."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Night Goblin protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-orc",
+      "name": "Basic Orc",
+      "page": 10,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 10
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 45,
+        "I": 20,
+        "Ag": 25,
+        "Dex": 20,
+        "Int": 20,
+        "WP": 35,
+        "Fel": 20,
+        "W": 14
+      },
+      "size": "Average",
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "adaptation": "Legacy: retained with the user-supplied older-edition definition; no direct Fifth Edition equivalent."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Choppa",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Choppa) +8."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Orc protection",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": " Legacy: Die Hard retains the user-supplied older-edition definition; resurrection is reference only.",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-savage-orc",
+      "name": "Basic Savage Orc",
+      "page": 10,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 10
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 45,
+        "I": 20,
+        "Ag": 25,
+        "Dex": 20,
+        "Int": 20,
+        "WP": 35,
+        "Fel": 20,
+        "W": 14
+      },
+      "size": "Average",
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Ward",
+          "value": "10"
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "adaptation": "Legacy: retained with the user-supplied older-edition definition; no direct Fifth Edition equivalent."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Stone Axe",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Stone Axe) +7."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Savage Orc protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": " Legacy: Die Hard retains the user-supplied older-edition definition; resurrection is reference only.",
+      "notes": [
+        "Normally only Shields are worn; enchanted warpaint grants Ward 10 while maintained. No live faith/warpaint tracking."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-black-orc",
+      "name": "Basic Black Orc",
+      "page": 11,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 11
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 45,
+        "T": 45,
+        "I": 20,
+        "Ag": 25,
+        "Dex": 20,
+        "Int": 20,
+        "WP": 45,
+        "Fel": 20,
+        "W": 16
+      },
+      "size": "Average",
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "adaptation": "Legacy: retained with the user-supplied older-edition definition; no direct Fifth Edition equivalent."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Choppa",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Choppa) +9."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Black Orc protection",
+          "ap": 5,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": " Legacy: Die Hard retains the user-supplied older-edition definition; resurrection is reference only.",
+      "notes": [
+        "No missile weapons; only Soldier, Elite, Chief or Warlord warband templates (p. 11)."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-hobgoblin",
+      "name": "Basic Hobgoblin",
+      "page": 12,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 12
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 35,
+        "S": 30,
+        "T": 35,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 25,
+        "Fel": 20,
+        "W": 11
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +7."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Hobgoblin protection",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-snotling",
+      "name": "Basic Snotling",
+      "page": 13,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 13
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 15,
+        "S": 25,
+        "T": 20,
+        "I": 20,
+        "Ag": 30,
+        "Dex": 15,
+        "Int": 15,
+        "WP": 30,
+        "Fel": 15,
+        "W": 4
+      },
+      "size": "Small",
+      "toughnessBonus": 2,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Immunity",
+          "value": "Poison"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Fetch, Guard"
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging (+0 SL)"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 25,
+          "damage": 4,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +4."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: printed 7 Wounds becomes 4 under Fifth Edition Small (2 × TB).",
+      "notes": [
+        "Only Soldier or Skirmisher templates. Only throwing weapons such as knives, rocks or Javelins benefit them (p. 13)."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-ogre",
+      "name": "Basic Ogre",
+      "page": 14,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 14
+      },
+      "example": false,
+      "category": "Ogres",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": 20,
+        "S": 45,
+        "T": 45,
+        "I": 20,
+        "Ag": 25,
+        "Dex": 20,
+        "Int": 20,
+        "WP": 30,
+        "Fel": 20,
+        "W": 30
+      },
+      "size": "Large",
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Prejudice",
+          "value": "Thin People"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 30,
+          "damage": 12,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +8.",
+          "printedDamage": 8,
+          "adaptation": "Legacy: core Size adds 4 to the primary melee attack, changing printed Hand Weapon +8 to +12."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Ogre protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 4 to the primary melee attack, changing printed Hand Weapon +8 to +12.",
+      "notes": [],
+      "species": "Ogre"
+    },
+    {
+      "id": "tribes-tribulations:creatures:basic-common-troll",
+      "name": "Basic Common Troll",
+      "page": 15,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 15
+      },
+      "example": false,
+      "category": "Trolls",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": 15,
+        "S": 55,
+        "T": 45,
+        "I": 10,
+        "Ag": 15,
+        "Dex": 15,
+        "Int": 10,
+        "WP": 20,
+        "Fel": 5,
+        "W": 30
+      },
+      "size": "Large",
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Stupid",
+          "value": ""
+        },
+        {
+          "name": "Vomit",
+          "value": "",
+          "deriveAttack": true
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "adaptation": "Legacy: retained with the user-supplied older-edition definition; no direct Fifth Edition equivalent."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 30,
+          "damage": 14,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Hand Weapon) +9.",
+          "printedDamage": 9,
+          "adaptation": "Legacy: core Size adds 5 to the primary melee attack, changing printed Hand Weapon +9 to +14."
+        },
+        {
+          "name": "Bite",
+          "skill": 30,
+          "damage": 8,
+          "free": true,
+          "optional": false,
+          "text": "Lose Momentum to make this Free Attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Basic Common Troll protection",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 5 to the primary melee attack, changing printed Hand Weapon +9 to +14. Legacy: Die Hard retains the user-supplied older-edition definition; resurrection is reference only.",
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:creatures:war-boar",
+      "name": "War Boar",
+      "page": 19,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 19
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 7,
+        "WS": 45,
+        "BS": null,
+        "S": 33,
+        "T": 35,
+        "I": 33,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 10,
+        "WP": 35,
+        "Fel": 10,
+        "W": 24
+      },
+      "size": "Large",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "7",
+          "deriveAttack": true
+        },
+        {
+          "name": "Sprinter",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Magic, Mount, War"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Weapon) +6.",
+          "printedDamage": 6,
+          "adaptation": "Legacy: core Size adds 3 to the primary melee attack, changing printed Weapon +6 to +9."
+        }
+      ],
+      "armour": [
+        {
+          "name": "War Boar protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 3 to the primary melee attack, changing printed Weapon +6 to +9. Legacy: printed Stride uses the user-approved core Sprinter Trait.",
+      "notes": [
+        "Printed Trained benefits are already included in the profile; Broken Fellowship and War WS are not applied twice."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:giant-wolf",
+      "name": "Giant Wolf",
+      "page": 19,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 19
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 9,
+        "WS": 45,
+        "BS": null,
+        "S": 35,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": 10,
+        "W": 20
+      },
+      "size": "Large",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Magic, Mount, War"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Weapon) +6.",
+          "printedDamage": 6,
+          "adaptation": "Legacy: core Size adds 3 to the primary melee attack, changing printed Weapon +6 to +9."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Giant Wolf protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 3 to the primary melee attack, changing printed Weapon +6 to +9. Legacy: printed Stride uses the user-approved core Sprinter Trait.",
+      "notes": [
+        "Printed Trained benefits are already included in the profile; Broken Fellowship and War WS are not applied twice."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:giant-spider",
+      "name": "Giant Spider",
+      "page": 19,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 19
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 7,
+        "WS": 35,
+        "BS": null,
+        "S": 35,
+        "T": 29,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 14,
+        "WP": 35,
+        "Fel": 10,
+        "W": 20
+      },
+      "size": "Large",
+      "toughnessBonus": 2,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Magic, Mount"
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging (+0 SL)"
+        },
+        {
+          "name": "Wallcrawler",
+          "value": ""
+        },
+        {
+          "name": "Web",
+          "value": "40"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "skill": 35,
+          "damage": 10,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Fangs) +7.",
+          "printedDamage": 7,
+          "adaptation": "Legacy: core Size adds 3 to the primary melee attack, changing printed Fangs +7 to +10."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Giant Spider protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 3 to the primary melee attack, changing printed Fangs +7 to +10.",
+      "notes": [
+        "Printed Trained benefits are already included in the profile; Broken Fellowship and War WS are not applied twice."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:hopping-squig",
+      "name": "Hopping Squig",
+      "page": 19,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 19
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": null,
+        "S": 50,
+        "T": 30,
+        "I": 10,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 5,
+        "WP": 15,
+        "Fel": 10,
+        "W": 12
+      },
+      "size": "Average",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bounce",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Weapon) +9."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": [
+        "Printed Trained benefits are already included in the profile; Broken Fellowship and War WS are not applied twice."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:giant-squig",
+      "name": "Giant Squig",
+      "page": 19,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 19
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 58,
+        "T": 38,
+        "I": 10,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 5,
+        "WP": 15,
+        "Fel": 10,
+        "W": 24
+      },
+      "size": "Large",
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bounce",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 14,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Weapon) +9.",
+          "printedDamage": 9,
+          "adaptation": "Legacy: core Size adds 5 to the primary melee attack, changing printed Weapon +9 to +14."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 5 to the primary melee attack, changing printed Weapon +9 to +14.",
+      "notes": [
+        "Printed Trained benefits are already included in the profile; Broken Fellowship and War WS are not applied twice."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:mournfang",
+      "name": "Mournfang",
+      "page": 19,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 19
+      },
+      "example": false,
+      "category": "Mounts",
+      "stats": {
+        "M": 8,
+        "WS": 50,
+        "BS": null,
+        "S": 55,
+        "T": 45,
+        "I": 25,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 35,
+        "Fel": 10,
+        "W": 64
+      },
+      "size": "Enormous",
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "9",
+          "deriveAttack": true
+        },
+        {
+          "name": "Sprinter",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 14,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Weapon) +9.",
+          "printedDamage": 9,
+          "adaptation": "Legacy: core Size adds 5 to the primary melee attack, changing printed Weapon +9 to +14."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Mournfang protection",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "adaptation": "Legacy: core Size adds 5 to the primary melee attack, changing printed Weapon +9 to +14. Legacy: printed Stride uses the user-approved core Sprinter Trait.",
+      "notes": [
+        "Printed Trained benefits are already included in the profile; Broken Fellowship and War WS are not applied twice."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:night-goblin-chief",
+      "name": "Night Goblin Chief",
+      "page": 16,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 16
+      },
+      "example": true,
+      "category": "Greenskins",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 45,
+        "S": 45,
+        "T": 45,
+        "I": 55,
+        "Ag": 55,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 33,
+        "Fel": 30,
+        "W": 15
+      },
+      "size": "Average",
+      "toughnessBonus": 4,
+      "skills": [
+        {
+          "name": "Cool",
+          "total": 48,
+          "bonus": 15
+        },
+        {
+          "name": "Dodge",
+          "total": 70,
+          "bonus": 15
+        },
+        {
+          "name": "Intimidate",
+          "total": 60,
+          "bonus": 15
+        },
+        {
+          "name": "Intuition",
+          "total": 70,
+          "bonus": 15
+        },
+        {
+          "name": "Leadership",
+          "total": 45,
+          "bonus": 15
+        },
+        {
+          "name": "Lore (Warfare)",
+          "total": 45,
+          "bonus": 10
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 70,
+          "bonus": 20
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 70,
+          "bonus": 20
+        },
+        {
+          "name": "Perception",
+          "total": 65,
+          "bonus": 10
+        }
+      ],
+      "talents": [
+        {
+          "name": "Combat Aware",
+          "ranks": 1
+        },
+        {
+          "name": "Combat Reflexes",
+          "ranks": 1
+        },
+        {
+          "name": "Furious Assault",
+          "ranks": 1
+        },
+        {
+          "name": "Inspiring",
+          "ranks": 1
+        },
+        {
+          "name": "Resolute",
+          "ranks": 1
+        },
+        {
+          "name": "War Leader",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Greenskins"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Hatred",
+          "value": "Dwarfs"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Spear",
+          "skill": 70,
+          "damage": 8,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Spear) +8."
+        },
+        {
+          "name": "Sword",
+          "skill": 70,
+          "damage": 8,
+          "free": false,
+          "optional": false,
+          "text": "Printed Weapon (Sword) +8."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Night Goblin Chief protection",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "quick": false,
+          "shield": false,
+          "optional": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather and Mail Armour, Shield, Spear, Sword"
+      },
+      "adaptation": "",
+      "notes": [
+        "Generic worked example: printed Melee totals imply +20, while the Chief template grants +15. This foundation preserves the printed example; applying a template is a separate explicit change."
+      ]
+    },
+    {
+      "id": "tribes-tribulations:creatures:purple-skullback-spider",
+      "name": "Purple Skullback Spider",
+      "page": 99,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 99
+      },
+      "example": false,
+      "category": "Greenskins",
+      "stats": {
+        "M": 3,
+        "WS": 35,
+        "BS": null,
+        "S": 5,
+        "T": 5,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 5,
+        "WP": 5,
+        "Fel": null,
+        "W": 1
+      },
+      "size": "Tiny",
+      "toughnessBonus": 0,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging (+0 SL)"
+        },
+        {
+          "name": "Wallcrawler",
+          "value": ""
+        },
+        {
+          "name": "Purple Skullback Bite",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "skill": 35,
+          "damage": 2,
+          "optional": false,
+          "free": false,
+          "text": "Printed Weapon (Fangs) +2."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "adaptation": "",
+      "notes": [
+        "Tiny has no core automated Wounds formula. Keep printed 1 Wound until modified; supply a manual Wounds value after changes."
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "tribes-tribulations:template:soldier",
+      "name": "Soldier",
+      "page": 16,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 16
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 5,
+        "S": 5,
+        "T": 5,
+        "I": 10,
+        "WP": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Leather Armour — core Light Armour (1 AP)",
+          "kind": "armour",
+          "names": [
+            "Light Armour"
+          ],
+          "adaptation": "Legacy: unspecified Leather Armour uses core Light Armour."
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        },
+        {
+          "label": "Spear",
+          "kind": "weapon",
+          "names": [
+            "Spear (2H)"
+          ]
+        }
+      ],
+      "notes": [],
+      "warband": true,
+      "adaptation": "Legacy: unspecified Leather Armour uses core Light Armour."
+    },
+    {
+      "id": "tribes-tribulations:template:skirmisher",
+      "name": "Skirmisher",
+      "page": 16,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 16
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "BS": 5,
+        "I": 10,
+        "Ag": 10,
+        "WP": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Bow)",
+            "Ranged (Sling)",
+            "Ranged (Throwing)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Stealth (Rural)",
+            "Stealth (Underground)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Accurate Shot"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Flee!"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Bow, Shortbow, Sling or Throwing Weapon",
+          "kind": "weapon",
+          "names": [
+            "Bow (2H)",
+            "Shortbow (2H)",
+            "Sling"
+          ],
+          "choose": true,
+          "groups": [
+            "Throwing"
+          ]
+        },
+        {
+          "label": "12 shots for Bow / Sling",
+          "kind": "ammunition",
+          "names": [
+            "Arrow (12)",
+            "Lead Bullet (12)",
+            "Stone Bullet (12)"
+          ],
+          "choose": true,
+          "forWeapon": 1,
+          "ammunitionFor": {
+            "Bow (2H)": [
+              "Arrow (12)"
+            ],
+            "Shortbow (2H)": [
+              "Arrow (12)"
+            ],
+            "Sling": [
+              "Lead Bullet (12)",
+              "Stone Bullet (12)"
+            ]
+          },
+          "skipForGroups": [
+            "Throwing"
+          ]
+        }
+      ],
+      "notes": [
+        "Throwing weapons have no printed quantity; select the weapon and enter an explicit quantity rather than invent a bundle."
+      ],
+      "warband": true,
+      "adaptation": ""
+    },
+    {
+      "id": "tribes-tribulations:template:elite",
+      "name": "Elite",
+      "page": 16,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 16
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 10,
+        "S": 10,
+        "T": 10,
+        "I": 20,
+        "Ag": 10,
+        "WP": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)",
+            "Melee (Two-Handed)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ]
+        },
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Mail Armour — core Medium Armour (3 AP)",
+          "kind": "armour",
+          "names": [
+            "Medium Armour"
+          ],
+          "adaptation": "Legacy: unspecified Mail Armour uses core Medium Armour."
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        }
+      ],
+      "notes": [],
+      "warband": true,
+      "adaptation": "Legacy: unspecified Mail Armour uses core Medium Armour."
+    },
+    {
+      "id": "tribes-tribulations:template:chief",
+      "name": "Chief",
+      "page": 17,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 17
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 25,
+        "BS": 10,
+        "S": 15,
+        "T": 15,
+        "I": 25,
+        "Ag": 20,
+        "Dex": 0,
+        "Int": 10,
+        "WP": 25,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 15,
+          "count": 2
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Bow)"
+          ],
+          "bonus": 10,
+          "count": 1,
+          "optional": true,
+          "label": "Optional Bow and 12 arrows"
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Furious Assault"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ]
+        },
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Mail / Leather-and-Mail or Plate",
+          "kind": "armour",
+          "names": [
+            "Medium Armour",
+            "Heavy Armour"
+          ],
+          "choose": true,
+          "adaptation": "Legacy: unspecified armour uses core Medium (3 AP) or Heavy (5 AP)."
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        },
+        {
+          "label": "Optional Bow",
+          "kind": "weapon",
+          "names": [
+            "Bow (2H)"
+          ],
+          "whenSkill": 8
+        },
+        {
+          "label": "12 arrows",
+          "kind": "ammunition",
+          "names": [
+            "Arrow (12)"
+          ],
+          "whenSkill": 8
+        }
+      ],
+      "notes": [],
+      "warband": true,
+      "adaptation": "Legacy: unspecified armour uses core Medium (3 AP) or Heavy (5 AP)."
+    },
+    {
+      "id": "tribes-tribulations:template:warlord",
+      "name": "Warlord",
+      "page": 17,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 17
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 35,
+        "BS": 10,
+        "S": 25,
+        "T": 30,
+        "I": 30,
+        "Ag": 25,
+        "Dex": 0,
+        "Int": 15,
+        "WP": 35,
+        "Fel": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Warfare)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 20,
+          "count": 2
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Bow)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional Bow and 12 arrows"
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Combat Aware"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Furious Assault"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Luck"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Resolute"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Unshakeable"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "War Leader"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Polearm or Two-Handed Weapon",
+          "kind": "weapon",
+          "choose": true,
+          "groups": [
+            "Polearm",
+            "Two-Handed"
+          ]
+        },
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Mail / Leather-and-Mail or Plate",
+          "kind": "armour",
+          "names": [
+            "Medium Armour",
+            "Heavy Armour"
+          ],
+          "choose": true,
+          "adaptation": "Legacy: unspecified armour uses core Medium (3 AP) or Heavy (5 AP)."
+        },
+        {
+          "label": "Shield",
+          "kind": "armour",
+          "names": [
+            "Shield"
+          ]
+        },
+        {
+          "label": "Optional Bow",
+          "kind": "weapon",
+          "names": [
+            "Bow (2H)"
+          ],
+          "whenSkill": 8
+        },
+        {
+          "label": "12 arrows",
+          "kind": "ammunition",
+          "names": [
+            "Arrow (12)"
+          ],
+          "whenSkill": 8
+        }
+      ],
+      "notes": [],
+      "warband": true,
+      "adaptation": "Legacy: unspecified armour uses core Medium (3 AP) or Heavy (5 AP)."
+    },
+    {
+      "id": "tribes-tribulations:template:shaman",
+      "name": "Shaman",
+      "page": 17,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 17
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "I": 5,
+        "Ag": 15,
+        "Int": 10,
+        "WP": 15,
+        "Fel": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Staff — core Quarterstaff",
+          "kind": "weapon",
+          "names": [
+            "Quarterstaff (2H)"
+          ]
+        }
+      ],
+      "notes": [
+        "Choose up to the printed spell limits; spellcasting in armour follows core rules."
+      ],
+      "warbandShaman": true,
+      "removeArmour": true,
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "minimum": 0,
+          "count": 3
+        },
+        {
+          "categories": [
+            "Little Waaagh!",
+            "Big Waaagh!",
+            "The Great Maw",
+            "Fire"
+          ],
+          "minimum": 0,
+          "count": 3
+        }
+      ],
+      "trappings": "Ritual Dress incorporating ingredients and fetishes (no quantities or Encumbrance specified)",
+      "warband": true,
+      "adaptation": " Legacy: Waaagh! uses Channelling (Magick) as a user-approved proposed adaptation."
+    },
+    {
+      "id": "tribes-tribulations:template:shaman-lord",
+      "name": "Shaman Lord",
+      "page": 17,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 17
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 10,
+        "S": 5,
+        "T": 15,
+        "I": 20,
+        "Ag": 15,
+        "Dex": 20,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 25,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Theology)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 30,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1,
+          "optional": true,
+          "label": "Optional mounted Skill (mount is a separate sheet)"
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Aethyric Attunement"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Instinctive Diction"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Luck"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Magical Sense"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Sixth Sense"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "kind": "weapon",
+          "names": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "label": "Staff — core Quarterstaff",
+          "kind": "weapon",
+          "names": [
+            "Quarterstaff (2H)"
+          ]
+        }
+      ],
+      "notes": [
+        "Choose up to the printed spell limits; spellcasting in armour follows core rules."
+      ],
+      "warbandShaman": true,
+      "removeArmour": true,
+      "magicGroups": [
+        {
+          "categories": [
+            "Petty"
+          ],
+          "minimum": 0,
+          "count": 6
+        },
+        {
+          "categories": [
+            "Little Waaagh!",
+            "Big Waaagh!",
+            "The Great Maw",
+            "Fire"
+          ],
+          "minimum": 0,
+          "count": 9
+        }
+      ],
+      "trappings": "Ritual Dress incorporating ingredients and fetishes (no quantities or Encumbrance specified)",
+      "warband": true,
+      "adaptation": " Legacy: Waaagh! uses Channelling (Magick) as a user-approved proposed adaptation. Printed Instinctive Diction 2 becomes one nonrepeatable core rank."
+    },
+    {
+      "id": "tribes-tribulations:template:goblin-artillery-crew",
+      "name": "Goblin Artillery Crew",
+      "page": 41,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 41
+      },
+      "eligibility": "goblin",
+      "adjustments": {},
+      "skills": [
+        {
+          "options": [
+            "Ranged (Crossbow)",
+            "Ranged (Catapult)"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": []
+    },
+    {
+      "id": "tribes-tribulations:template:stone-troll",
+      "name": "Stone Troll",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "T": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Climb"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Rover"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Striding Gait (Rocky)"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: printed Strider uses the user-approved core Striding Gait Talent."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Magic Resistance",
+          "value": "",
+          "adaptation": "Legacy: printed Magic Resistance 2 uses the fixed core Trait (−3 SL to spells targeting it), without an invented second rank."
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [],
+      "trollRole": "type",
+      "armour": 3,
+      "replaceArmour": true,
+      "adaptation": "Legacy: printed Magic Resistance 2 uses the fixed core Trait (−3 SL to spells targeting it), without an invented second rank. Legacy: printed Strider uses the user-approved core Striding Gait Talent."
+    },
+    {
+      "id": "tribes-tribulations:template:river-troll",
+      "name": "River Troll",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "T": 5
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "adaptation": "Legacy: proposed replacement of undefined Swamp-strider by core Striding Gait (Wetland), approved by the user."
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [],
+      "trollRole": "type",
+      "adaptation": "Legacy: proposed replacement of undefined Swamp-strider by core Striding Gait (Wetland), approved by the user."
+    },
+    {
+      "id": "tribes-tribulations:template:chaos-troll",
+      "name": "Chaos Troll",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "WS": 10,
+        "S": 5,
+        "I": 5,
+        "WP": 10
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Corrupting Vomit",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Roll twice on the core Physical Corruption table; the Enemy in Shadows Companion alternative is outside the supplied books."
+      ],
+      "trollRole": "type",
+      "physicalMutations": 2
+    },
+    {
+      "id": "tribes-tribulations:template:bile-troll",
+      "name": "Bile Troll",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "BS": -10,
+        "T": 10,
+        "I": 5,
+        "WP": 10
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corrosive Blood",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Disease",
+          "value": "The Bloody Flux"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Rotten Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Bileful Vomit",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [],
+      "trollRole": "type",
+      "removeTraits": [
+        "Regeneration",
+        "Vomit"
+      ]
+    },
+    {
+      "id": "tribes-tribulations:template:old-troll",
+      "name": "Old Troll",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "M": -1,
+        "WS": 10,
+        "S": 10,
+        "T": 10,
+        "I": -5,
+        "WP": 5
+      },
+      "skills": [],
+      "talents": [
+        {
+          "options": [
+            "Striding Gait (Any)"
+          ],
+          "ranks": 1,
+          "label": "Home terrain",
+          "adaptation": "Legacy: printed Strider uses the user-approved core Striding Gait Talent."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "That’s No Mound",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [],
+      "trollRole": "modifier",
+      "adaptation": "Legacy: printed Strider uses the user-approved core Striding Gait Talent."
+    },
+    {
+      "id": "tribes-tribulations:template:hungry-troll",
+      "name": "Hungry Troll",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "M": 1,
+        "WS": 10,
+        "I": 10,
+        "Ag": 5,
+        "Int": -5,
+        "WP": -10
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Sated",
+          "value": ""
+        },
+        {
+          "name": "Starving",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [],
+      "trollRole": "modifier"
+    },
+    {
+      "id": "tribes-tribulations:template:hulking-troll",
+      "name": "Hulking Troll",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "M": -1,
+        "S": 5,
+        "T": 5,
+        "I": -3,
+        "Ag": -5
+      },
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [],
+      "trollRole": "modifier"
+    },
+    {
+      "id": "tribes-tribulations:template:river-troll-hag",
+      "name": "River Troll Hag",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "eligibility": "troll",
+      "adjustments": {
+        "S": 10,
+        "T": 10,
+        "I": 5,
+        "Int": 30,
+        "WP": 20
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Shyish)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Aethyric Attunement"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Arcane Magic (Death)"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Blather"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Instinctive Diction"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Magical Sense"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "War Wizard"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Breath",
+          "value": "Poison",
+          "deriveAttack": true,
+          "adaptation": "Legacy: printed Breath +10 (Poison) uses core Poison Breath Damage TB +2, recalculated from the final Toughness."
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Water Wise",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "The printed Petty spells are granted directly; the book does not grant a Petty Magic Talent. Water Wise suppresses Stupid only while in water."
+      ],
+      "trollRole": "modifier",
+      "requiresTemplate": "tribes-tribulations:template:river-troll",
+      "fixedSpells": [
+        "core:spells:bearings",
+        "core:spells:careful-step",
+        "core:spells:drain",
+        "core:spells:marsh-lights",
+        "core:spells:terrifying",
+        "core:spells:ward",
+        "core:spells:caress-of-laniph",
+        "core:spells:soul-vortex",
+        "core:spells:steal-life"
+      ],
+      "adaptation": "Legacy: printed Breath +10 (Poison) uses core Poison Breath Damage TB +2, recalculated from the final Toughness."
+    }
+  ],
+  "training": [],
+  "traits": [
+    {
+      "id": "tribes-tribulations:trait:die-hard",
+      "name": "Die Hard",
+      "page": 10,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 10
+      },
+      "parameter": "",
+      "text": "All Critical Wounds can be healed. For Toughness Bonus Rounds after death, at the start of each Round make a Challenging (+0 SL) Endurance Test. On success, return to life with 1 Wound.",
+      "adaptation": "User-supplied older-edition definition retained; no direct Fifth Edition equivalent."
+    },
+    {
+      "id": "tribes-tribulations:trait:prejudice",
+      "name": "Prejudice",
+      "page": 14,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 14
+      },
+      "parameter": "Thin People",
+      "text": "Printed Prejudice (Thin People); no Fifth Edition mechanical definition is supplied. This entry is a reference only, without invented Test modifiers."
+    },
+    {
+      "id": "tribes-tribulations:trait:corrupting-vomit",
+      "name": "Corrupting Vomit",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "parameter": "",
+      "text": "Those hit by a Chaos Troll’s vomit risk exposure to Corruption (Moderate)."
+    },
+    {
+      "id": "tribes-tribulations:trait:rotten-regeneration",
+      "name": "Rotten Regeneration",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "parameter": "",
+      "text": "Use core Regeneration, but the Wounds restored are 1d10 divided by 2, rounded down (Tribes and Tribulations p. 88)."
+    },
+    {
+      "id": "tribes-tribulations:trait:bileful-vomit",
+      "name": "Bileful Vomit",
+      "page": 88,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "parameter": "",
+      "text": "The Troll’s Vomit follows core Stream of Corruption: CN: 9 Range: Special Target: Special Duration: Instant Your maw distends horrifically before you vomit forth a foul stream of diseased filth and horror. Immediately make an Unopposed Acid- and Poison-type Breath attack (see page 357). It counts as a magic missile with a Damage equal to your Toughness Bonus, and it ignores Armour Points. Further, any targets that take more than their TB in Wounds must pass a Challenging (+0 SL) Endurance Test or contract Blood Rot (see page 179)."
+    },
+    {
+      "id": "tribes-tribulations:trait:that-s-no-mound",
+      "name": "That’s No Mound",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "parameter": "",
+      "text": "The Troll has Stealthy only while it has not moved or taken an Action."
+    },
+    {
+      "id": "tribes-tribulations:trait:sated",
+      "name": "Sated",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "parameter": "",
+      "text": "After consuming a creature of Average Size or larger in peace, the Hungry Troll template no longer applies."
+    },
+    {
+      "id": "tribes-tribulations:trait:starving",
+      "name": "Starving",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "parameter": "",
+      "text": "If the Hungry Troll does not eat within 24 hours it begins to suffer Starvation."
+    },
+    {
+      "id": "tribes-tribulations:trait:water-wise",
+      "name": "Water Wise",
+      "page": 89,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 89
+      },
+      "parameter": "",
+      "text": "While within a body of water, the River Troll Hag does not suffer from Stupid. Stupid otherwise remains active."
+    },
+    {
+      "id": "tribes-tribulations:trait:purple-skullback-bite",
+      "name": "Purple Skullback Bite",
+      "page": 99,
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 99
+      },
+      "parameter": "",
+      "text": "A creature wounded and Poisoned by this bite takes an Average (+2 SL) Cool Test or gains 1 Corruption point. A Forest Goblin Shaman still takes damage and poison, but for 2d10 hours gains a printed +2d10 bonus to Channelling and Language (Magick), and may reroll Waaagh! Miscast results. Situational bonuses are not added permanently.",
+      "adaptation": "Printed Average (+20) uses core Average (+2 SL); current Venom inflicts Poisoned on Wounds without an avoidance Test."
+    }
+  ]
+}

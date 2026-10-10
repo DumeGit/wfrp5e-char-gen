@@ -49,6 +49,13 @@ export function createGMRules(library, data) {
     .filter((pack) => pack.manifest.kind !== "variant")
     .map((pack) => pack.manifest.id);
   const rules = assembleBooks(library, ids);
+  // Waaagh! is a GM option, not a playable PC Colour Lore.
+  if (ids.includes("tribes-tribulations"))
+    rules.config.colours = [
+      ...rules.config.colours,
+      "Little Waaagh!",
+      "Big Waaagh!",
+    ];
   sourceBooks = rules.books;
   for (const book of data.optionBooks || []) {
     const pack = rules.books.find((b) => b.id === book.id);

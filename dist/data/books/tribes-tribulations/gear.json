@@ -1,0 +1,104 @@
+[
+  {
+    "id": "tribes-tribulations:gear:copper-staff",
+    "name": "Copper Staff",
+    "page": 97,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Magical artefacts",
+    "text": "Some of the more cunning and cautious Shamans have discovered that copper provides a suitable vector for excess Waaagh! energy. Whilst holding the staff, they count as isolated from other Orcs and Goblins (with a –2 SL penalty to Channelling or Casting Tests) and they ignore the presence of Orcs, Hobgoblins, and Goblins when rolling on the Waaagh! Miscast Table. No price or Encumbrance is supplied; acquired/reference only."
+  },
+  {
+    "id": "tribes-tribulations:gear:dangly-wotnotz",
+    "name": "Dangly Wotnotz",
+    "page": 97,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Magical artefacts",
+    "text": "Many Orc and Goblin Shamans wear bangles and pendants bedecked with bones, teeth, and petty fetishes. These items are imbued with Waaagh! power and help regulate the magical power gathered by the Shaman for the purpose of working magic. A Shaman in possession of Dangly Wotnotz may reroll a successful Casting Test in the hope of getting a better result if they wish. They must accept the results of the second roll. No price or Encumbrance is supplied; acquired/reference only."
+  },
+  {
+    "id": "tribes-tribulations:gear:effigy-of-mork",
+    "name": "Effigy of Mork",
+    "page": 97,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Magical artefacts",
+    "text": "Formed from dried and enchanted Orc dung, the Effigy of Mork provides a Shaman with insights into how to avoid the blows of his enemies. A Shaman in possession of an Effigy of Mork may reroll any Dodge Tests or Melee Tests made to oppose an attack. The results of the rerolled test must stand as the final result, even if they produce worse consequences for the Shaman. No price or Encumbrance is supplied; acquired/reference only."
+  },
+  {
+    "id": "tribes-tribulations:gear:effigy-of-gork",
+    "name": "Effigy of Gork",
+    "page": 97,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Magical artefacts",
+    "text": "The Effigy of Gork provides insights into how to inflict harm. A Shaman in possession of an Effigy of Gork may reroll any Melee Tests made to attack an opponent. The results of the rerolled test must stand as the final result, even if they produce worse consequences for the Shaman. No price or Encumbrance is supplied; acquired/reference only."
+  },
+  {
+    "id": "tribes-tribulations:gear:glowy-green-amulet",
+    "name": "Glowy Green Amulet",
+    "page": 97,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Magical artefacts",
+    "text": "This small and unobtrusive amulet grows with green power every time the wearer is made the target of a hostile spell. The enchantment upon the amulet is powerful but unstable. The bearer is granted the Magic Resistance Talent. However, every time the bearer is targeted by a spell roll 1d100. On the result of a 01 the amulet violently vents its energies. The Shaman suffers 1d10 Wounds (ignore TB and Armour) and the Prone Condition. No price or Encumbrance is supplied; acquired/reference only.",
+    "adaptation": "Legacy: printed Magic Resistance 2 becomes one core Talent rank; its fixed Fifth Edition effects apply."
+  },
+  {
+    "id": "tribes-tribulations:gear:shaman-staff",
+    "name": "Shaman Staff",
+    "page": 97,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Not specified",
+    "category": "Magical artefacts",
+    "text": "The most common magic item possessed by a Shaman is a staff adorned with all manner of gruesome trophies and shiny trinkets. These staffs attract Waaagh! energy even when other Orcs and Goblins are nowhere to be seen. Roll 1d10 for any given staff. The Shaman always counts as being within Willpower Bonus yards of this many Orcs when Channelling, Casting, or rolling on the Waaagh! Miscast Table. No price or Encumbrance is supplied; acquired/reference only."
+  },
+  {
+    "id": "tribes-tribulations:gear:war-machine-bolt",
+    "name": "War Machine Bolt",
+    "page": 41,
+    "price": "n/a",
+    "enc": 1,
+    "availability": "Not specified",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Impale, Penetrating"
+    },
+    "text": "Printed name: Bolt. Range: as weapon; Damage: —; Impale, Penetrating. No price supplied."
+  },
+  {
+    "id": "tribes-tribulations:gear:war-machine-stone",
+    "name": "War Machine Stone",
+    "page": 41,
+    "price": "n/a",
+    "enc": 3,
+    "availability": "Not specified",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "—",
+      "qualities": "Damaging, Impact"
+    },
+    "text": "Printed name: Stone. Range: as weapon; Damage: —; Damaging, Impact. No price supplied."
+  },
+  {
+    "id": "tribes-tribulations:gear:wulfang-s-pelt",
+    "name": "Wulfang’s Pelt",
+    "page": 63,
+    "price": "n/a",
+    "enc": null,
+    "availability": "Unique artefact",
+    "category": "Magical artefacts",
+    "wearable": true,
+    "text": "Grants the wearer one rank of core Rough Rider while worn and their mount +1 Movement. Printed name Roughrider uses the documented core spelling. No price or Encumbrance supplied; acquired/reference only. The conditional Talent and mount bonus are not permanent creator grants."
+  }
+]

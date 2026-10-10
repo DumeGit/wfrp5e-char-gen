@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tribes-tribulations:skills:ranged-catapult",
+    "path": [
+      "skillOptions",
+      "Ranged"
+    ],
+    "operation": "include",
+    "value": [
+      "Catapult"
+    ],
+    "page": 41,
+    "reason": "Printed artillery Skill specialisation."
+  },
+  {
+    "id": "tribes-tribulations:skills:ride-mounts",
+    "path": [
+      "skillOptions",
+      "Ride"
+    ],
+    "operation": "include",
+    "value": [
+      "Spider",
+      "Wolf",
+      "Boar",
+      "Squig",
+      "Mournfang"
+    ],
+    "page": 19,
+    "reason": "Printed mounts; no free PC Skill advances."
+  }
+]

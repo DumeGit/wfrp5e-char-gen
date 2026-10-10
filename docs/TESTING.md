@@ -38,7 +38,7 @@ The install command downloads Chromium once for the installed Playwright version
 | `search` | Stable typing/caret, categories/book/combined filters and memory, Rune labels, Cants/prayers, loading retry, inactive-book availability, keyboard controls, automatic batches, return position and chained references without changing the draft |
 | `pc` | Career rolls, recorded dice, advancement/tracker grouping and undo, repeatable Talents, equipment purchase/removal |
 | `marijan` | Unrestricted one-page editing, additions, custom entries, overrides, Undo, independent saves/reload, player copying and editable PDF downloads |
-| `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, book-removal confirmation/undo, early blocking issue and repair |
+| `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, Tribes Troll composition/Hag spells and Shaman Lore controls, book-removal confirmation/undo, early blocking issue and repair |
 | `storage` | Actual JSON downloads/imports, reload persistence, rejection of the wrong save type |
 | `exports` | Actual browser PDF downloads, editable player fields, compact NPC PDF, six-card A4 default and mixed-draft batch |
 | `mobile` | Scenarios tagged for navigation, narrow layout and search; mobile Chromium only |

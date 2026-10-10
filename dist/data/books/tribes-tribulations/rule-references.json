@@ -1,0 +1,76 @@
+[
+  {
+    "id": "tribes-tribulations:rule-reference:die-hard",
+    "name": "Die Hard",
+    "page": 10,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "All Critical Wounds can be healed. For Toughness Bonus Rounds after death, at the start of each Round make a Challenging (+0 SL) Endurance Test. On success, return to life with 1 Wound.",
+    "adaptation": "User-supplied older-edition definition retained; no direct Fifth Edition equivalent."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:corrupting-vomit",
+    "name": "Corrupting Vomit",
+    "page": 88,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "Those hit by a Chaos Troll’s vomit risk exposure to Corruption (Moderate)."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:rotten-regeneration",
+    "name": "Rotten Regeneration",
+    "page": 88,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "Use core Regeneration, but the Wounds restored are 1d10 divided by 2, rounded down (Tribes and Tribulations p. 88)."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:bileful-vomit",
+    "name": "Bileful Vomit",
+    "page": 88,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "The Troll’s Vomit follows core Stream of Corruption: CN: 9 Range: Special Target: Special Duration: Instant Your maw distends horrifically before you vomit forth a foul stream of diseased filth and horror. Immediately make an Unopposed Acid- and Poison-type Breath attack (see page 357). It counts as a magic missile with a Damage equal to your Toughness Bonus, and it ignores Armour Points. Further, any targets that take more than their TB in Wounds must pass a Challenging (+0 SL) Endurance Test or contract Blood Rot (see page 179)."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:that-s-no-mound",
+    "name": "That’s No Mound",
+    "page": 89,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "The Troll has Stealthy only while it has not moved or taken an Action."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:sated",
+    "name": "Sated",
+    "page": 89,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "After consuming a creature of Average Size or larger in peace, the Hungry Troll template no longer applies."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:starving",
+    "name": "Starving",
+    "page": 89,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "If the Hungry Troll does not eat within 24 hours it begins to suffer Starvation."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:water-wise",
+    "name": "Water Wise",
+    "page": 89,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "While within a body of water, the River Troll Hag does not suffer from Stupid. Stupid otherwise remains active."
+  },
+  {
+    "id": "tribes-tribulations:rule-reference:purple-skullback-bite",
+    "name": "Purple Skullback Bite",
+    "page": 99,
+    "category": "trait",
+    "topic": "Creature abilities",
+    "text": "A creature wounded and Poisoned by this bite takes an Average (+2 SL) Cool Test or gains 1 Corruption point. A Forest Goblin Shaman still takes damage and poison, but for 2d10 hours gains a printed +2d10 bonus to Channelling and Language (Magick), and may reroll Waaagh! Miscast results. Situational bonuses are not added permanently.",
+    "adaptation": "Printed Average (+20) uses core Average (+2 SL); current Venom inflicts Poisoned on Wounds without an avoidance Test."
+  }
+]

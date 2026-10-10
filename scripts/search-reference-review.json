@@ -27448,6 +27448,372 @@
           "reason": "Reuse current core definitions; Arboreal is imported separately as a sourced Trait reference."
         }
       ]
+    },
+    "tribes-tribulations": {
+      "sourceHash": "008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e",
+      "publishedSHA256": "c272302067a2ddf949188d6e7b733c58606e84e0d36bafaa640fd451a650c30b",
+      "entries": 15,
+      "areas": [
+        {
+          "first": 9,
+          "last": 19,
+          "topic": "Generic creatures and advancement"
+        },
+        {
+          "first": 41,
+          "last": 41,
+          "topic": "Artillery"
+        },
+        {
+          "first": 82,
+          "last": 101,
+          "topic": "Gut Magic, Trolls and Waaagh!"
+        }
+      ],
+      "records": [
+        {
+          "id": "tribes-tribulations:reference:waaagh-channelling-and-miscasts",
+          "name": "Waaagh! Channelling and Miscasts",
+          "page": 94,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:waaagh-lore-access",
+          "name": "Waaagh! Lore Access",
+          "page": 95,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:little-waaagh-lore-benefit",
+          "name": "Little Waaagh! Lore Benefit",
+          "page": 98,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:big-waaagh-lore-benefit",
+          "name": "Big Waaagh! Lore Benefit",
+          "page": 100,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:shaman-shrooms",
+          "name": "Shaman Shrooms",
+          "page": 99,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:purple-skullback-bite",
+          "name": "Purple Skullback Bite",
+          "page": 99,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:idols-of-gork-and-mork",
+          "name": "Idols of Gork and Mork",
+          "page": 101,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:gut-magic",
+          "name": "Gut Magic",
+          "page": 82,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:gut-magic-miscast-table",
+          "name": "Gut Magic Miscast Table",
+          "page": 83,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:waaagh-miscast-table",
+          "name": "Waaagh! Miscast Table",
+          "page": 96,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:crewed-war-machines",
+          "name": "Crewed War Machines",
+          "page": 41,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:snotling-puffballs",
+          "name": "Snotling Puffballs",
+          "page": 13,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:savage-orc-armour",
+          "name": "Savage Orc Armour",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:mounted-warband-skills",
+          "name": "Mounted Warband Skills",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:reference:black-orc-restrictions",
+          "name": "Black Orc Restrictions",
+          "page": 11,
+          "disposition": "included"
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-goblin",
+          "name": "Basic Goblin",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-gnoblar",
+          "name": "Basic Gnoblar",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-forest-goblin",
+          "name": "Basic Forest Goblin",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-night-goblin",
+          "name": "Basic Night Goblin",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-orc",
+          "name": "Basic Orc",
+          "page": 10,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-savage-orc",
+          "name": "Basic Savage Orc",
+          "page": 10,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-black-orc",
+          "name": "Basic Black Orc",
+          "page": 11,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-hobgoblin",
+          "name": "Basic Hobgoblin",
+          "page": 12,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-snotling",
+          "name": "Basic Snotling",
+          "page": 13,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-ogre",
+          "name": "Basic Ogre",
+          "page": 14,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:basic-common-troll",
+          "name": "Basic Common Troll",
+          "page": 15,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:war-boar",
+          "name": "War Boar",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:giant-wolf",
+          "name": "Giant Wolf",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:giant-spider",
+          "name": "Giant Spider",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:hopping-squig",
+          "name": "Hopping Squig",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:giant-squig",
+          "name": "Giant Squig",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:mournfang",
+          "name": "Mournfang",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:night-goblin-chief",
+          "name": "Night Goblin Chief",
+          "page": 16,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:creatures:purple-skullback-spider",
+          "name": "Purple Skullback Spider",
+          "page": 99,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:soldier",
+          "name": "Soldier",
+          "page": 16,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:skirmisher",
+          "name": "Skirmisher",
+          "page": 16,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:elite",
+          "name": "Elite",
+          "page": 16,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:chief",
+          "name": "Chief",
+          "page": 17,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:warlord",
+          "name": "Warlord",
+          "page": 17,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:shaman",
+          "name": "Shaman",
+          "page": 17,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:shaman-lord",
+          "name": "Shaman Lord",
+          "page": 17,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:goblin-artillery-crew",
+          "name": "Goblin Artillery Crew",
+          "page": 41,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:stone-troll",
+          "name": "Stone Troll",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:river-troll",
+          "name": "River Troll",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:chaos-troll",
+          "name": "Chaos Troll",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:bile-troll",
+          "name": "Bile Troll",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:old-troll",
+          "name": "Old Troll",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:hungry-troll",
+          "name": "Hungry Troll",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:hulking-troll",
+          "name": "Hulking Troll",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:template:river-troll-hag",
+          "name": "River Troll Hag",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Creator profile/template only; excluded from global search."
+        },
+        {
+          "id": "tribes-tribulations:excluded:named-and-adventures",
+          "name": "Named characters and adventures",
+          "page": "20–81, 90–93, 102–112",
+          "disposition": "excluded",
+          "reason": "User excludes named characters; no adventure/flavour entries in mechanical search."
+        }
+      ]
     }
   }
 }

@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"9be3a23e7d9e6754978c";
+const CACHE=CACHE_PREFIX+"87a7717422b274284f6e";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -172,6 +172,15 @@ const ASSETS=[
  "data/books/rough-nights/species.json",
  "data/books/rough-nights/tables.json",
  "data/books/rough-nights/talents.json",
+ "data/books/tribes-tribulations/coverage.json",
+ "data/books/tribes-tribulations/gear.json",
+ "data/books/tribes-tribulations/manifest.json",
+ "data/books/tribes-tribulations/market.json",
+ "data/books/tribes-tribulations/reference-entries.json",
+ "data/books/tribes-tribulations/rule-references.json",
+ "data/books/tribes-tribulations/rules.json",
+ "data/books/tribes-tribulations/spells.json",
+ "data/books/tribes-tribulations/weapons.json",
  "data/books/up-in-arms/careers.json",
  "data/books/up-in-arms/coverage.json",
  "data/books/up-in-arms/excluded-equipment.json",
@@ -255,10 +264,12 @@ const ASSETS=[
  "gm/sources/cluster-eye-tribe.json",
  "gm/sources/core.json",
  "gm/sources/night-parade.json",
+ "gm/sources/tribes-tribulations.json",
  "gm/sources/up-in-arms.json",
  "gm/style.css",
  "gm/templates.mjs",
  "gm/trait-descriptions.mjs",
+ "gm/tribes.mjs",
  "gm/views.mjs",
  "high-elf-ui.mjs",
  "high-elf.mjs",

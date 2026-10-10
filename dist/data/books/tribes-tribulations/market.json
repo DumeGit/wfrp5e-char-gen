@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tribes-tribulations:market:spear-chukka",
+    "name": "Spear Chukka",
+    "page": 41,
+    "price": "n/a",
+    "enc": 20,
+    "availability": "Not specified",
+    "category": "War machines",
+    "text": "No purchase price is supplied. Acquired/reference profile only."
+  },
+  {
+    "id": "tribes-tribulations:market:doom-diver",
+    "name": "Doom Diver",
+    "page": 41,
+    "price": "n/a",
+    "enc": 20,
+    "availability": "Not specified",
+    "category": "War machines",
+    "text": "No purchase price is supplied. Acquired/reference profile only."
+  },
+  {
+    "id": "tribes-tribulations:market:rock-lobber",
+    "name": "Rock Lobber",
+    "page": 41,
+    "price": "n/a",
+    "enc": 40,
+    "availability": "Not specified",
+    "category": "War machines",
+    "text": "No purchase price is supplied. Acquired/reference profile only."
+  }
+]

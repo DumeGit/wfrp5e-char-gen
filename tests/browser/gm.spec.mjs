@@ -510,7 +510,7 @@ test("Archives II foundations and Legacy work on desktop and mobile @gm @mobile"
   await noOverflow(page);
 });
 
-test("Archives II Ogre Spellcaster offers Great Maw and explains unavailable Lores @gm @mobile", async ({
+test("Ogre Spellcaster offers Great Maw and Firebelly Fire while excluding other Lores @gm @mobile", async ({
   page,
 }) => {
   await openGM(page);
@@ -528,7 +528,8 @@ test("Archives II Ogre Spellcaster offers Great Maw and explains unavailable Lor
   await page
     .getByRole("checkbox", { name: "The Great Maw", exact: true })
     .check();
-  await expect(page.locator('input[data-lore][value="Fire"]')).toBeDisabled();
+  await expect(page.locator('input[data-lore][value="Fire"]')).toBeEnabled();
+  await expect(page.locator('input[data-lore][value="Metal"]')).toBeDisabled();
   await gmStep(page, "Equipment & magic");
   await page.getByRole("button", { name: "Choose magic", exact: true }).click();
   await page.locator("#gm-picker-search").fill("Bullgorger");

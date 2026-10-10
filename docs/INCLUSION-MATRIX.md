@@ -8,9 +8,9 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 14 |
+| books | 15 |
 | careers | 126 |
-| magicProfiles | 536 |
+| magicProfiles | 564 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
@@ -40,6 +40,7 @@ Each source inventory remains visible even when another selected book supersedes
 | The Night Parade | 0 | 0 | 4 | 0 | 0 |
 | The Warband of Bayl of Many Eyes | 0 | 0 | 3 | 0 | 0 |
 | The Cluster-Eye Tribe | 0 | 0 | 6 | 0 | 0 |
+| Tribes and Tribulations | 33 | 10 | 24 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2629,6 +2630,71 @@ Pack `cluster-eye-tribe` · version 1.0.0
 | `cluster-eye-tribe:reference:shaman-spell-lists` — Shaman Spell Lists | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
 | `cluster-eye-tribe:reference:venom-arrows` — Spider Venom Arrows | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
 | `cluster-eye-tribe:rule-reference:arboreal` — Arboreal | ruleReferences | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+
+</details>
+
+## Tribes and Tribulations
+
+Pack `tribes-tribulations` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| gear | 8 | 1 | 0 | 0 | 0 |
+| market | 3 | 0 | 0 | 0 | 0 |
+| referenceEntries | 0 | 0 | 15 | 0 | 0 |
+| ruleReferences | 0 | 0 | 9 | 0 | 0 |
+| spells | 19 | 9 | 0 | 0 | 0 |
+| weapons | 3 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| War machines, ammunition and seven magic items | reference-only | p. 41 | No supplied prices; acquired/reference profiles, unknown weights remain unresolved. |
+| Named characters, adventures and narrative Nemesis traits | deferred | p. 26 | Explicit user scope; not selectable or global search content. |
+| Conditional abilities, casting and campaign play | reference-only | p. 94 | Descriptions only; no live resurrection, Conditions, healing or staff rolls automated. |
+| 24 Waaagh! and four Great Maw spells | adapted | p. 82 | Difficulty/Momentum compatibility, Target 1 correction and Magick Channelling decision. |
+| 19 generic profiles | adapted | p. 9 | Core Size, Sprinter, Snotling Wounds and Die Hard decisions; printed values otherwise preserved. |
+| Four Troll types and four combinable character templates | adapted | p. 88 | Approved Swamp-strider and core Striding Gait/Magic Resistance replacements; conditional abilities remain references. |
+| Seven warband templates and artillery crew | adapted | p. 16 | Current core Talents/armour, explicit equipment and species/Lore limits. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `tribes-tribulations:gear:glowy-green-amulet` — Glowy Green Amulet | gear | adapted | p. 97 | Legacy: printed Magic Resistance 2 becomes one core Talent rank; its fixed Fifth Edition effects apply. |
+| `tribes-tribulations:reference:big-waaagh-lore-benefit` — Big Waaagh! Lore Benefit | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:black-orc-restrictions` — Black Orc Restrictions | referenceEntries | reference-only | p. 11 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:crewed-war-machines` — Crewed War Machines | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:gut-magic` — Gut Magic | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:gut-magic-miscast-table` — Gut Magic Miscast Table | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:idols-of-gork-and-mork` — Idols of Gork and Mork | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:little-waaagh-lore-benefit` — Little Waaagh! Lore Benefit | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:mounted-warband-skills` — Mounted Warband Skills | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:purple-skullback-bite` — Purple Skullback Bite | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:savage-orc-armour` — Savage Orc Armour | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:shaman-shrooms` — Shaman Shrooms | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:snotling-puffballs` — Snotling Puffballs | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:waaagh-channelling-and-miscasts` — Waaagh! Channelling and Miscasts | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:waaagh-lore-access` — Waaagh! Lore Access | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:waaagh-miscast-table` — Waaagh! Miscast Table | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:bileful-vomit` — Bileful Vomit | ruleReferences | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:corrupting-vomit` — Corrupting Vomit | ruleReferences | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:die-hard` — Die Hard | ruleReferences | reference-only | p. 10 | User-supplied older-edition definition retained; no direct Fifth Edition equivalent. |
+| `tribes-tribulations:rule-reference:purple-skullback-bite` — Purple Skullback Bite | ruleReferences | reference-only | p. 99 | Printed Average (+20) uses core Average (+2 SL); current Venom inflicts Poisoned on Wounds without an avoidance Test. |
+| `tribes-tribulations:rule-reference:rotten-regeneration` — Rotten Regeneration | ruleReferences | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:sated` — Sated | ruleReferences | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:starving` — Starving | ruleReferences | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:that-s-no-mound` — That’s No Mound | ruleReferences | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:rule-reference:water-wise` — Water Wise | ruleReferences | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:spell:bash-em-lads` — Bash ‘Em Lads! | spells | adapted | p. 100 | Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted. |
+| `tribes-tribulations:spell:bloodgruel` — Bloodgruel | spells | adapted | p. 82 | Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364). |
+| `tribes-tribulations:spell:brainbursta` — Brainbursta | spells | adapted | p. 100 | Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364). |
+| `tribes-tribulations:spell:eadbutt` — ‘Eadbutt | spells | adapted | p. 100 | Legacy: user-approved Target 1 resolves printed Target You conflicting with the magic-missile effect. |
+| `tribes-tribulations:spell:ere-we-go` — ‘Ere We Go! | spells | adapted | p. 100 | Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted. |
+| `tribes-tribulations:spell:foot-of-gork` — Foot of Gork | spells | adapted | p. 101 | Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364). |
+| `tribes-tribulations:spell:gift-of-the-spider-god` — Gift of the Spider-God | spells | adapted | p. 98 | Printed Test Difficulty converted to Fifth Edition SL (core Appendix I p. 364). Use current core Venom: Wounds inflict Poisoned; Challenging or Difficult specifies recovery Difficulty. |
+| `tribes-tribulations:spell:the-hand-of-gork` — The Hand of Gork | spells | adapted | p. 101 | Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted. |
+| `tribes-tribulations:spell:waaagh` — WAAAGH! | spells | adapted | p. 101 | Printed individual Advantage uses Momentum; the Fourth Edition Group Advantage alternative is omitted. |
 
 </details>
 

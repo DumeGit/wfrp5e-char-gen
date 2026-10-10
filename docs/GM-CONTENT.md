@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-58 printed profiles, 28 templates, 70 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+77 printed profiles, 44 templates, 80 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
@@ -20,9 +20,21 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | The Night Parade | 1 | 7 | Profiles/templates selectable; shared PC options always available |
 | The Warband of Bayl of Many Eyes | 2 | 7 | Profiles/templates selectable; shared PC options always available |
 | The Cluster-Eye Tribe | 2 | 7 | Profiles/templates selectable; shared PC options always available |
+| Tribes and Tribulations | 19 | 16 | Profiles/templates selectable; shared PC options always available |
 
 | Profile | Source | Category | Legacy |
 | --- | --- | --- | --- |
+| Basic Black Orc | Tribes & Tribulations · p. 11 | Greenskins | Yes |
+| Basic Common Troll | Tribes & Tribulations · p. 15 | Trolls | Yes |
+| Basic Forest Goblin | Tribes & Tribulations · p. 9 | Greenskins |  |
+| Basic Gnoblar | Tribes & Tribulations · p. 9 | Greenskins |  |
+| Basic Goblin | Tribes & Tribulations · p. 9 | Greenskins |  |
+| Basic Hobgoblin | Tribes & Tribulations · p. 12 | Greenskins |  |
+| Basic Night Goblin | Tribes & Tribulations · p. 9 | Greenskins |  |
+| Basic Ogre | Tribes & Tribulations · p. 14 | Ogres | Yes |
+| Basic Orc | Tribes & Tribulations · p. 10 | Greenskins | Yes |
+| Basic Savage Orc | Tribes & Tribulations · p. 10 | Greenskins | Yes |
+| Basic Snotling | Tribes & Tribulations · p. 13 | Greenskins | Yes |
 | Bloodletter of Khorne | Core · p. 349 | Daemons |  |
 | Boar | Core · p. 325 | Beasts of the Reikland |  |
 | Bog Octopus | Core · p. 328 | Monstrous Beasts |  |
@@ -49,6 +61,9 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Giant | Core · p. 332 | Monstrous Beasts |  |
 | Giant Rat | Core · p. 326 | Beasts of the Reikland |  |
 | Giant Spider | Core · p. 326 | Beasts of the Reikland |  |
+| Giant Spider | Tribes & Tribulations · p. 19 | Mounts | Yes |
+| Giant Squig | Tribes & Tribulations · p. 19 | Mounts | Yes |
+| Giant Wolf | Tribes & Tribulations · p. 19 | Mounts | Yes |
 | Gnome | Core · p. 323 | Peoples of the Reikland |  |
 | Goblin | Core · p. 336 | Orcs and Goblins |  |
 | Gor | Core · p. 345 | Beastmen |  |
@@ -56,6 +71,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Halfling | Core · p. 319 | Peoples of the Reikland |  |
 | Halfling Thief | Core · p. 322 | Peoples of the Reikland |  |
 | High Elf or Wood Elf | Core · p. 320 | Peoples of the Reikland |  |
+| Hopping Squig | Tribes & Tribulations · p. 19 | Mounts |  |
 | Horse | Core · p. 327 | Beasts of the Reikland |  |
 | Human | Core · p. 319 | Peoples of the Reikland |  |
 | Human Merchant | Core · p. 321 | Peoples of the Reikland |  |
@@ -63,10 +79,13 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Human Watchman | Core · p. 321 | Peoples of the Reikland |  |
 | Manticore | Core · p. 333 | Monstrous Beasts |  |
 | Minotaur | Core · p. 346 | Beastmen |  |
+| Mournfang | Tribes & Tribulations · p. 19 | Mounts | Yes |
 | Mutant | Core · p. 347 | Cultists and Mutants |  |
+| Night Goblin Chief | Tribes & Tribulations · p. 16 | Greenskins |  |
 | Ogre | Core · p. 324 | Peoples of the Reikland |  |
 | Orc | Core · p. 337 | Orcs and Goblins |  |
 | Pegasus | Core · p. 334 | Monstrous Beasts |  |
+| Purple Skullback Spider | Tribes & Tribulations · p. 99 | Greenskins |  |
 | Rat Ogre | Core · p. 352 | Skaven |  |
 | Rhinox | Archives II · p. 34 | Mounts | Yes |
 | Riding Horse | Up in Arms · p. 29 | Mounts | Yes |
@@ -79,5 +98,6 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Ungor | Core · p. 345 | Beastmen |  |
 | Vampire | Core · p. 343 | Restless Dead |  |
 | Varghulf | Core · p. 344 | Restless Dead |  |
+| War Boar | Tribes & Tribulations · p. 19 | Mounts | Yes |
 | Wolf | Core · p. 327 | Beasts of the Reikland |  |
 | Zombie | Core · p. 340 | Restless Dead |  |

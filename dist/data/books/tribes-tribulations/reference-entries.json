@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tribes-tribulations:reference:waaagh-channelling-and-miscasts",
+    "name": "Waaagh! Channelling and Miscasts",
+    "page": 94,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "When isolated from other Orcs and Goblins, a Shaman suffers −2 SL to Channelling and Casting. When Channelling, gain +1 SL per Orc, Hobgoblin or two Goblins within Willpower yards. Use the Waaagh! Miscast table and add 2 per Orc, Hobgoblin or two Goblins within Willpower Bonus yards. The two ranges differ as printed."
+  },
+  {
+    "id": "tribes-tribulations:reference:waaagh-lore-access",
+    "name": "Waaagh! Lore Access",
+    "page": 95,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Orc and Savage Orc Shamans use Big Waaagh!; Goblin, Night Goblin and Forest Goblin Shamans use Little Waaagh!. Hobgoblins may choose either; Shaman Lords can have both, with no more than two spells from one of the Talents."
+  },
+  {
+    "id": "tribes-tribulations:reference:little-waaagh-lore-benefit",
+    "name": "Little Waaagh! Lore Benefit",
+    "page": 98,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "A Shaman may use Casting SL to Overcast or to buy a single Fortune point. This may exceed normal maximum Fortune, but the excess lasts only until the end of the encounter."
+  },
+  {
+    "id": "tribes-tribulations:reference:big-waaagh-lore-benefit",
+    "name": "Big Waaagh! Lore Benefit",
+    "page": 100,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Whenever a Big Waaagh! spell is cast, any Orcs, Hobgoblins or Goblins within Willpower yards lose their Broken Conditions."
+  },
+  {
+    "id": "tribes-tribulations:reference:shaman-shrooms",
+    "name": "Shaman Shrooms",
+    "page": 99,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Eating a piece is an Action. For 2d10 Rounds make Casting and Channelling Tests as if 2d10 additional Goblins were within Willpower Bonus yards; also add this number to Waaagh! Miscast results. Shroom Spurt has a specific additional consequence for an affected Night Goblin Shaman."
+  },
+  {
+    "id": "tribes-tribulations:reference:purple-skullback-bite",
+    "name": "Purple Skullback Bite",
+    "page": 99,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "On a Wound and Poisoned from the bite, make an Average (+20) Cool Test or gain 1 Corruption point. Forest Goblin Shamans instead gain a printed +2d10 Channelling and Language (Magick) bonus for 2d10 hours, and may reroll Waaagh! Miscasts. They still suffer damage and poison; Fifth Edition uses its full Venom rule."
+  },
+  {
+    "id": "tribes-tribulations:reference:idols-of-gork-and-mork",
+    "name": "Idols of Gork and Mork",
+    "page": 101,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Within Willpower yards of an idol, an Orc or Goblin Shaman gains +1 SL to Casting and Channelling. An idol of Mork additionally grants +1 SL to successfully cast Little Waaagh! spells; Gork does the same for Big Waaagh!. Animated Rogue Idols refer to the separate constructs system; no new profile is specified here."
+  },
+  {
+    "id": "tribes-tribulations:reference:gut-magic",
+    "name": "Gut Magic",
+    "page": 82,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Sometimes known as Shamanic Victuals, Gastromancy, Thaumaphagy, or Corpomancy, Gut Magic is a series of shamanistic rites involving the consumption of particular ingredients to channel the power of the Great Maw. The Lore of The Great Maw is detailed in Archives of the Empire Volume 2. These additional spells are used by Rulg Deathcheater and may also be learned by Ogre Characters who use the Lore of the Great Maw. Whenever an Ogre Butcher successfully casts a spell from the Lore of The Great Maw, the offering they consume may restore their health. Roll 1d10. If the result is a 10, or if it is equal to or higher than the CN of the spell being cast, the Butcher recovers Wounds equal to the CN. When Butchers suffer a miscast they do not roll on the normal miscasts table. Instead, roll 1d100 on the Gut Magic Miscast Table on the facing page. If the miscast is a Major Miscast, add 20 to the roll."
+  },
+  {
+    "id": "tribes-tribulations:reference:gut-magic-miscast-table",
+    "name": "Gut Magic Miscast Table",
+    "page": 83,
+    "category": "table",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "1d100 Effect 01–15 Besmirched. The Butcher loses control of their bowels, with predictably messy results. Ogres, a crude folk, do not set much store by cleanliness, but this is embarrassing nevertheless. The Butcher suffers –2 SL to all Fellowship Tests until they clean themselves up. 16–20 Gobstopper. The Butcher bites their tongue. They must make a Hard (–20) Endurance Test. If the test is failed they may not speak (so may not cast Gut Magic) as they struggle with the pain. This lasts for 1d10 Rounds. 21–30 Rage of the Maw. A part of the Great Maw possesses the Butcher as they open up a direct channel to the power of their god. The Butcher becomes subject to Frenzy. 31–35 Green Around the Gills. The Butcher suffers from the Nausea symptom for the next 1d10 hours. 36–40 Dental Mishap. The Butcher loses a single tooth. 41–45 Runny Guts. The Butcher immediately contracts the Bloody Flux. 46–50 Famishing. The Butcher is wracked by excruciating pangs of hunger. Within the next 2d10 Rounds, they must consume a pound of flesh or suffer the effects of Starvation as if they had gone 2 days without food. 51–55 Rampant Ravenous Rage. All creatures and Characters within 3d10 yards gain the Hungry Creature Trait. If a creature or Character within range already has the Hungry Creature Trait, it must make a Challenging (+0) Cool Test or immediately try to consume the nearest edible item or creature. 56–60 Roiling Reflux. The Butcher vurps up caustic gobbets of stomach acid. For the next 1d10 Rounds they must take a Challenging (+0) Endurance Test each Turn and suffer 1 Wound every time they fail the test. During this time they benefit from the Vomit Creature Trait. 61–65 Flatulent Eruption. The Butcher’s gut churns and writhes, emitting a great cloud of magical by-product. Any Character within 20 yards of the Butcher must take a Challenging (+0) Endurance Test. Those who fail suffer from the Nausea symptom for the next 1d10 hours. 66–70 Shattered Teeth. The Butcher loses 1d10 teeth. 71–75 Trapped Wind. A painful build-up of gas causes crippling pain. The Butcher suffers from three Poisoned Conditions. These are removed in the normal way. When the last Poisoned Condition is removed, the gas is vented, with the same effect as the Flatulent Eruption result above. 76–80 Displeasure of the Maw. Iridescent light shines from the Butcher’s mouth and eyes and they bellow in pain as their god shows his displeasure. The Butcher suffers a hit of 1d10 Damage to their Body Location. 81–85 Corpomantic Maelstrom. The Butcher reels and retches. For the next 1d10 Turns, the Butcher must take a Difficult (-10) Endurance Test. If the test is failed, they vomit copiously. Any Characters (friend or foe) within 5 Yards of the Butcher must succeed a Hard (–20) Dodge Test to avoid the vomit. Those who fail are hit with a Weapon Damage of the Butcher’s Toughness Bonus +4 and must take a Stunned Condition. 86–90 Maimed Tongue. The Butcher bites off a chunk of their own tongue. They suffer a Wound and may not speak (and thus may not cast Gut Magic) for 1d10 days after the miscast. After this time, the wound heals, but the Butcher suffers –2 SL to Language Tests or any other tests involving speech. 91–95 Gastromantic Ravaging. The Butcher turns white, emitting a thin wail as their system is ravaged. The Butcher suffers a hit of 2d10 Damage to their Body Location. 96–100 Jawbreaker. The Butcher suffers the Broken Jaw Critical Wound: They gain 3 Stunned Conditions, must pass a Challenging (+0) Endurance Test or gain an Unconscious Condition, and suffer a Broken Bone (Major) injury. 101–115 Suppurating Ulcers. The Butcher drops to their knees, blood pouring from their mouth as the Great Maw eats away at them from the inside. The Butcher suffers a hit of 3d10 Damage to their Body Location. 116–120 Thaumaphagic Catastrophe. The Butcher spasms and squeals as their magic goes horribly awry before bursting apart in an explosion of stinking offal. The Butcher is killed. Any Characters (friend or foe) within 10 yards of the Butcher must succeed a Hard (–20) Dodge Test to avoid the explosion. Those who fail are hit with a Weapon Damage of the Butcher’s Toughness Bonus +6 and must take a Stunned Condition. MATTHOGG’S PAYSWORDS"
+  },
+  {
+    "id": "tribes-tribulations:reference:waaagh-miscast-table",
+    "name": "Waaagh! Miscast Table",
+    "page": 96,
+    "category": "table",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Roll Effect 01–10 Green Haze: The Shaman is surrounded by a cloud of green fog with a horrible musty smell. 11–15 Mad Yatterin’: The Shaman’s eyes roll back, and he gabbles unintelligibly for 1d10 Rounds. During this period, he cannot communicate verbally or make any Casting or Channelling Tests. 16–20 Ungodly Racket: The Shaman vents Waaagh! Energy as a deafening bellow. He gains the Deafened Condition, as does anyone with Acute Sense (Hearing) Talent within 10 yards. 21–25 Shroom Spurt: A crop of fungi grows over the Shaman’s skin, sapping their vitality. Gain a Fatigued Condition. If a Night Goblin Shaman suffers a Shroom Spurt under the influence of Shaman Shrooms, he must make a Challenging (+0) Endurance Test. Those who fail transform into a patch of Shaman Shrooms themselves. 26–30 Fzzzaap!: Bolts of energy rocket from the Shaman’s ears, nose, and mouth, and he gains a Stunned Condition. 31–35 Body Shock: The Shaman is rocked by uncontrolled magical energy. Suffer two Wounds, ignoring Toughness Bonus and Armour Points. Pass an Average (+20) Endurance Test, or also gain a Stunned Condition. 36–40 Squig Magnet: A snarling squig claws itself out of the ground at the Shaman’s feet… seemingly from nowhere. It attacks the Shaman (use profile on page 318 of WFRP). 41–45 Whoops!: The spell casts at a random target within 10 yards, including the Shaman himself. 46–50 Yuuurgh!: Weird lights flash from the Shaman’s head as he struggles for control. He gains 1 Stunned Condition for every SL gained from his last Channelling Test or Casting Test, to a minimum of 1. 51–55 Get Angry!: Energy arcs from the Shaman’s head to other Orcs, Goblins, and Hobgoblins. The Shaman takes 3 Wounds (ignoring TB and Armour Points) and any Orcs, Goblins, and Hobgoblins within 5 yards must pass a Challenging (+0) Endurance Test or take 1 Wound (ignore TB and Armour) and become subject to Frenzy. 56–60 Flying Rocks: Small rocks and pebbles lift off the ground and fly around. The Shaman is hit 1d10 times with a Weapon Damage of 2 and anyone within 10 yards is hit once with a Weapon Damage of 2. 61–65 Pretty Colours!: Mesmerising technicoloured shapes and lights float around the Shaman’s head. Gain the Blinded Condition for 2 Rounds and 1 Fatigued Condition. 66–70 I’z Gone on Fire!: The Shaman bursts into flames and gains an Ablaze Condition. 71–75 Gertcha!: Gork (or possibly Mork) takes offence at the Shaman’s spellcasting and delivers a mystical slap. Take 1d10 Wounds (ignore TB and Armour) and the Prone Condition. 76–80 Sorcerous Spew: The Shaman projectile vomits everywhere. Gain 3 Stunned Conditions. 81–85 Weird Flailing: Mork (or possibly Gork) grabs the Shaman and shakes him about. Gain 2 Stunned Conditions. Anyone within 1d10 yards of the Shaman must make a Challenging (+0) Dodge Test or suffer a hit of 3 Damage to a random Hit Location. 86–90 Me ‘Ead ‘Urts!: The Shaman’s head swells with pressure and his eyes bulge. Gain 2 Stunned Conditions and suffer 1d10 Wounds to the head (ignoring TB and Armour). 91–95 I’ve Forgot!: The Shaman suffers a catastrophic brainstorm and permanently forgets one of his spells, determined at random. He also gains a Blinded Condition. 96–100 I Fink I’m Gonna…: An explosive blast of green energy erupts from the Shaman’s head, and he falls to the ground. Gain the Unconscious Condition. Orcs and Goblins within 10 yards gain a Stunned Condition. 101–105 Eye Melta: The Waaagh! energy escapes through the Shaman’s eyes, melting them out of their sockets. The Shaman loses both eyes as if they were amputated and suffers 1d10+3 Wounds to the head. 106–110 ‘EADBANG!: The Shaman’s head explodes with the force of raw magic power. He is very dead. 111 or more ‘EADBANGERZ!: The Shaman’s head explodes. Any Orc, Hobgoblin, or Goblin within 10 yards failing a Very Hard (–30) Cool Test suffers the same messy fate."
+  },
+  {
+    "id": "tribes-tribulations:reference:crewed-war-machines",
+    "name": "Crewed War Machines",
+    "page": 41,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "The full crew needs the relevant Ranged Skill and nominates one shooter. Crew shortages impose cumulative penalties: one missing member doubles Reload time; two missing members add Imprecise; three add Shoddy. Gaining an already-owned Flaw instead adds the printed −10 Ranged Test penalty. One crew member can assist reloading Tests. Misfires affect the entire crew. Doom Divers shoot Goblins equipped with leather batwings and have no Crewed Flaw."
+  },
+  {
+    "id": "tribes-tribulations:reference:snotling-puffballs",
+    "name": "Snotling Puffballs",
+    "page": 13,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Puffballs use Rock range and Damage. A Wound also inflicts Venom of Challenging potency; use current core Venom for Poisoned and recovery."
+  },
+  {
+    "id": "tribes-tribulations:reference:savage-orc-armour",
+    "name": "Savage Orc Armour",
+    "page": 17,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Under normal circumstances Savage Orcs wear no armour except a Shield. They retain enchanted warpaint and Ward 10."
+  },
+  {
+    "id": "tribes-tribulations:reference:mounted-warband-skills",
+    "name": "Mounted Warband Skills",
+    "page": 16,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "A mounted character may add Ride (Any) +15. A mount is selected separately; no additional automatic characteristic or career grant is printed."
+  },
+  {
+    "id": "tribes-tribulations:reference:black-orc-restrictions",
+    "name": "Black Orc Restrictions",
+    "page": 11,
+    "category": "rule",
+    "topic": "Greenskins, Ogres and Trolls",
+    "text": "Only Soldier, Elite, Chief and Warlord templates are appropriate. Black Orcs do not use missile weapons."
+  }
+]

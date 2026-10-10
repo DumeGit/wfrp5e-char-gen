@@ -605,14 +605,20 @@ function applyRules(R, p, rules) {
     if (rule.operation === "add") {
       if (existing) fail(`${rule.id}: setting already exists.`);
       target[field] = structuredClone(rule.value);
-    } else if (rule.operation === "append") {
+    } else if (rule.operation === "append" || rule.operation === "include") {
       if (
         !Array.isArray(target[field]) ||
         !strings(rule.value) ||
-        rule.value.some((x) => target[field].includes(x))
+        (rule.operation === "include" &&
+          new Set(rule.value).size !== rule.value.length) ||
+        (rule.operation === "include" && group !== "skillOptions") ||
+        (rule.operation === "append" &&
+          rule.value.some((x) => target[field].includes(x)))
       )
         fail(`${rule.id}: append requires new array options.`);
-      target[field].push(...rule.value);
+      target[field].push(
+        ...rule.value.filter((x) => !target[field].includes(x)),
+      );
     } else if (rule.operation === "replace") {
       if (p.kind !== "variant" || !existing)
         fail(`${rule.id}: rule replacement requires a selected variant.`);

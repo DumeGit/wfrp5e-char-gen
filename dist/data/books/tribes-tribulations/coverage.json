@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "tribes-tribulations:feature:profiles",
+      "name": "19 generic profiles",
+      "status": "adapted",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 9
+      },
+      "reason": "Core Size, Sprinter, Snotling Wounds and Die Hard decisions; printed values otherwise preserved."
+    },
+    {
+      "id": "tribes-tribulations:feature:warband",
+      "name": "Seven warband templates and artillery crew",
+      "status": "adapted",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 16
+      },
+      "reason": "Current core Talents/armour, explicit equipment and species/Lore limits."
+    },
+    {
+      "id": "tribes-tribulations:feature:trolls",
+      "name": "Four Troll types and four combinable character templates",
+      "status": "adapted",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 88
+      },
+      "reason": "Approved Swamp-strider and core Striding Gait/Magic Resistance replacements; conditional abilities remain references."
+    },
+    {
+      "id": "tribes-tribulations:feature:magic",
+      "name": "24 Waaagh! and four Great Maw spells",
+      "status": "adapted",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 82
+      },
+      "reason": "Difficulty/Momentum compatibility, Target 1 correction and Magick Channelling decision."
+    },
+    {
+      "id": "tribes-tribulations:feature:equipment",
+      "name": "War machines, ammunition and seven magic items",
+      "status": "reference-only",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 41
+      },
+      "reason": "No supplied prices; acquired/reference profiles, unknown weights remain unresolved."
+    },
+    {
+      "id": "tribes-tribulations:feature:live",
+      "name": "Conditional abilities, casting and campaign play",
+      "status": "reference-only",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 94
+      },
+      "reason": "Descriptions only; no live resurrection, Conditions, healing or staff rolls automated."
+    },
+    {
+      "id": "tribes-tribulations:feature:excluded",
+      "name": "Named characters, adventures and narrative Nemesis traits",
+      "status": "deferred",
+      "source": {
+        "book": "tribes-tribulations",
+        "page": 26
+      },
+      "reason": "Explicit user scope; not selectable or global search content."
+    }
+  ]
+}

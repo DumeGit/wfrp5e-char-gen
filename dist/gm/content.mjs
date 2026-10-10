@@ -265,6 +265,13 @@ export function addGMSupplement(data, raw, R) {
       "adaptation",
       "shaman",
       "removeArmour",
+      "warband",
+      "warbandShaman",
+      "trollRole",
+      "requiresTemplate",
+      "fixedSpells",
+      "physicalMutations",
+      "replaceArmour",
     ];
     if (Object.keys(t).some((key) => !fields.includes(key)))
       throw Error("Unsupported template field.");
@@ -276,8 +283,49 @@ export function addGMSupplement(data, raw, R) {
       throw Error("Invalid Shaman template operation.");
     if (t.armour !== undefined && (!Number.isInteger(t.armour) || t.armour < 1))
       throw Error("Invalid template armour.");
-    if (!["any", "undead", "zombie", "mount"].includes(t.eligibility))
+    if (
+      !["any", "undead", "zombie", "mount", "troll", "goblin"].includes(
+        t.eligibility,
+      )
+    )
       throw Error("Unsupported template foundation restriction.");
+    if (
+      ["troll", "goblin"].includes(t.eligibility) &&
+      book.id !== "tribes-tribulations"
+    )
+      throw Error("Invalid Tribes template restriction.");
+    for (const flag of ["warband", "warbandShaman", "replaceArmour"])
+      if (
+        t[flag] !== undefined &&
+        (book.id !== "tribes-tribulations" || t[flag] !== true)
+      )
+        throw Error("Invalid Tribes template operation.");
+    if (
+      t.trollRole !== undefined &&
+      (book.id !== "tribes-tribulations" ||
+        !["type", "modifier"].includes(t.trollRole) ||
+        t.eligibility !== "troll")
+    )
+      throw Error("Invalid Troll template role.");
+    if (
+      t.requiresTemplate &&
+      !raw.templates.some(
+        (x) => x.id === t.requiresTemplate && x.trollRole === "type",
+      )
+    )
+      throw Error("Unknown required Troll type.");
+    if (
+      t.physicalMutations !== undefined &&
+      (book.id !== "tribes-tribulations" || t.physicalMutations !== 2)
+    )
+      throw Error("Invalid Chaos Troll mutation grant.");
+    if (
+      t.fixedSpells &&
+      (!Array.isArray(t.fixedSpells) ||
+        new Set(t.fixedSpells).size !== t.fixedSpells.length ||
+        t.fixedSpells.some((id) => !R.spells.some((s) => s.contentId === id)))
+    )
+      throw Error("Unknown fixed template spell.");
     if (
       t.chaosLores &&
       (!Array.isArray(t.chaosLores) ||
@@ -394,12 +442,28 @@ export function addGMSupplement(data, raw, R) {
           ))
       )
         throw Error("Invalid template ammunition link.");
+      if (
+        slot.skipForGroups !== undefined &&
+        (book.id !== "tribes-tribulations" ||
+          slot.forWeapon === undefined ||
+          !Array.isArray(slot.skipForGroups) ||
+          !slot.skipForGroups.length ||
+          new Set(slot.skipForGroups).size !== slot.skipForGroups.length ||
+          slot.skipForGroups.some(
+            (group) => !R.weapons.some((w) => w.group === group),
+          ))
+      )
+        throw Error("Invalid template ammunition exception.");
       const entries = templateEquipment(R, slot);
       if (!entries.length)
         throw Error(`No core equipment choices for ${slot.label}.`);
       return {
         ...slot,
-        options: entries.map((x) => ({ id: x.contentId, name: x.name })),
+        options: entries.map((x) => ({
+          id: x.contentId,
+          name: x.name,
+          group: x.group,
+        })),
       };
     });
     for (const group of t.magicGroups || [])

@@ -85,6 +85,10 @@
     {
       "id": "cluster-eye-tribe",
       "path": "cluster-eye-tribe/manifest.json"
+    },
+    {
+      "id": "tribes-tribulations",
+      "path": "tribes-tribulations/manifest.json"
     }
   ]
 }

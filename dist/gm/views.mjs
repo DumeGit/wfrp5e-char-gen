@@ -1,4 +1,5 @@
 import { tab } from "../controls.mjs";
+import { trollModifiers } from "./tribes.mjs";
 import {
   templateSummary,
   templateMagicLabel,
@@ -66,7 +67,7 @@ export function templateOverview(t) {
         return `<li><div>${names}${choice}</div><strong>${amount}</strong></li>`;
       })
       .join("")}</ul>`;
-  return `<div class="gm-template-preview"><p class="gm-template-source">${esc(sourceLabel(t))} · One template at a time ${legacyBadge(t)}</p>
+  return `<div class="gm-template-preview"><p class="gm-template-source">${esc(sourceLabel(t))} · ${t.trollRole === "type" ? "One type plus optional modifiers" : "One template at a time"} ${legacyBadge(t)}</p>
     <section><h3>Characteristics</h3><dl class="gm-template-adjustments">${Object.entries(
       t.adjustments,
     )
@@ -79,7 +80,7 @@ export function templateOverview(t) {
       )}</dl><p class="gm-small">${esc(templateSummary(t))}. Wounds are recalculated after applying the template.</p></section>
     <div class="gm-template-columns"><section><h3>Skills</h3>${rows(t.skills, "Skill")}<p class="gm-small">Uses the higher of the existing Skill bonus and the template bonus.</p></section><section><h3>Talents</h3>${t.talents.length ? rows(t.talents, "Talent") : '<p class="gm-small">No Talents granted.</p>'}${t.magic ? `<h3>Magic</h3><ul class="gm-template-grants"><li><span>Petty spells</span><strong>Up to ${t.magic.petty}</strong></li><li><span>Spells from a suitable Lore</span><strong>Up to ${t.magic.lore}</strong></li></ul><p class="gm-small">Choose compatible spells in Equipment &amp; magic.</p>` : ""}</section></div>
     ${t.traits?.length || t.removeTraits?.length ? `<section><h3>Creature Traits</h3><p>${t.traits.map((x) => esc(rowName(x))).join(", ") || "No added Traits"}</p>${t.removeTraits?.length ? `<p>Remove: ${t.removeTraits.map(esc).join(", ")}</p>` : ""}</section>` : ""}
-    ${t.armour ? `<section><h3>Armour</h3><p>Additional protection: +${t.armour} AP</p></section>` : ""}
+    ${t.armour ? `<section><h3>Armour</h3><p>${t.replaceArmour ? "Replaces printed protection:" : "Additional protection:"} ${t.armour} AP</p></section>` : ""}
     ${t.gear?.length ? `<section><h3>Trappings</h3><ul class="gm-template-grants">${t.gear.map((x) => `<li>${esc(x.label)}${x.choose ? " · explicit choice" : ""}</li>`).join("")}</ul>${t.trappings ? `<p>${esc(t.trappings)}</p>` : ""}</section>` : ""}
     ${t.magicGroups ? `<section><h3>Magic</h3><ul class="gm-template-grants">${t.magicGroups.map((g) => `<li><span>${g.categories.map(esc).join(" / ")}</span><strong>${g.minimum === undefined || g.minimum === g.count ? `Choose ${g.count}` : `Choose up to ${g.count}`}</strong></li>`).join("")}</ul></section>` : ""}
     <p class="gm-template-footnote">Replacing a template clears its previous choices and chosen magic. Explicit GM scores, equipment and Traits remain. Undo restores the previous build.</p></div>`;
@@ -131,7 +132,7 @@ function starting(data, s, r, ui) {
   return `<p class="lede">Start with a complete printed profile. Keep it as written or make it your own.</p>${bookControls(data, s)}${r.profile ? `<div class="gm-foundation"><div><span class="eyebrow">Starting profile</span><strong>${esc(r.profile.name)}</strong><small>${esc(r.profile.category)} · ${esc(sourceLabel(r.profile))}</small></div>${legacyBadge(r.profile)}${button(ui.browse ? "Close library" : "Browse profiles", "browse")}</div><div class="gm-fields">${field("Name", "gm-name", s.name, `data-bind="name" placeholder="${esc(r.profile.name)}"`)}${field("Short description", "gm-description", s.description, 'data-bind="description" placeholder="Appearance or identifying detail"')}</div>${detail("personality", "Personality & purpose <small>Optional</small>", `<p class="gm-small">Give the NPC a purpose, motivation and manner. Core guidance for roleplaying NPCs; no mechanical bonuses.</p><div class="gm-fields">${field("Purpose / role", "gm-purpose", s.purpose, 'data-bind="purpose"')}${field("Motivation", "gm-motivation", s.motivation, 'data-bind="motivation"')}${field("Manner", "gm-manner", s.manner, 'data-bind="manner"')}</div>`)} ` : ""}
   ${!r.profile || ui.browse ? `<div class="gm-library"><div class="gm-browser-filters">${field("Find a profile", "gm-profile-search", ui.profileQuery, 'type="search" data-ui="profileQuery" placeholder="Human, Goblin, Dragon…"')}${select("Category", "gm-category", [["", "All categories"], ...[...new Set(data.profiles.map((p) => p.category))].map((x) => [x, x])], ui.category, 'data-ui="category"')}${select("Book", "gm-profile-book", [["", "All enabled books"], ...data.books.filter((b) => data.profiles.some((p) => bookId(p) === b.id)).map((b) => [b.id, b.shortTitle || b.title])], ui.profileBook || "", 'data-ui="profileBook"')}</div><div id="gm-profile-results">${profileResults(data, ui)}</div></div>` : ""}`;
 }
-function templateChoices(s, r) {
+function templateChoices(data, s, r) {
   const t = r.template;
   if (!t) return "";
   const skills = t.skills.flatMap((slot, i) =>
@@ -171,7 +172,7 @@ function templateChoices(s, r) {
       : [],
   );
   const gear = (t.gear || []).flatMap((slot, i) =>
-    templateGearEnabled(slot, s.templateSkills) &&
+    templateGearEnabled(slot, s.templateSkills, s.templateGear, t) &&
     (slot.choose || slot.options.length > 1)
       ? [
           select(
@@ -184,28 +185,54 @@ function templateChoices(s, r) {
         ]
       : [],
   );
+  const modifiers =
+    t.trollRole === "type"
+      ? `<fieldset class="gm-training" id="gm-troll-modifiers"><legend>Troll modifiers · combine as needed</legend>${trollModifiers(
+          data,
+        )
+          .map(
+            (x) =>
+              `<label class="gm-check"><input type="checkbox" data-troll-modifier="${x.id}" ${s.templateModifiers.includes(x.id) ? "checked" : ""} ${x.requiresTemplate && x.requiresTemplate !== t.id && !s.templateModifiers.includes(x.id) ? "disabled" : ""}>${esc(x.name)} ${legacyBadge(x)} <small>${esc(templateSummary(x))}${x.requiresTemplate ? " · River Troll only" : ""}</small></label>`,
+          )
+          .join("")}</fieldset>`
+      : "";
   const lore =
-    t.shaman && r.profile.category === "Beastmen"
+    t.warbandShaman && t.loreChoices.length > 1
       ? select(
           "Shaman Lore",
           "template-lore",
           [
-            ["Arcane", "Arcane only"],
-            ["Beasts", "Arcane + Beasts"],
-            ["Death", "Arcane + Death"],
-            ["Shadows", "Arcane + Shadows"],
+            ["", "Choose…"],
+            ...t.loreChoices,
+            ...(r.profile.id.endsWith(":basic-hobgoblin") &&
+            t.name === "Shaman Lord"
+              ? [["Both", "Both · one Lore limited to two spells"]]
+              : []),
           ],
-          s.templateLore || "Arcane",
+          s.templateLore,
           'data-template-lore="1"',
         )
-      : "";
-  return skills.length || talents.length || gear.length || lore
-    ? `<section class="gm-template-choices"><h2>${esc(t.name)} choices</h2>${t.removeArmour ? '<p class="gm-small">This template removes the foundation’s printed armour. Add armour explicitly only when using an applicable GM exception, such as a Skaven Warlock-Engineer.</p>' : ""}<div class="gm-fields">${[lore, ...talents, ...skills, ...gear].join("")}</div></section>`
+      : t.shaman && r.profile.category === "Beastmen"
+        ? select(
+            "Shaman Lore",
+            "template-lore",
+            [
+              ["Arcane", "Arcane only"],
+              ["Beasts", "Arcane + Beasts"],
+              ["Death", "Arcane + Death"],
+              ["Shadows", "Arcane + Shadows"],
+            ],
+            s.templateLore || "Arcane",
+            'data-template-lore="1"',
+          )
+        : "";
+  return skills.length || talents.length || gear.length || lore || modifiers
+    ? `<section class="gm-template-choices"><h2>${esc(t.name)} choices</h2>${t.removeArmour ? '<p class="gm-small">This template removes the foundation’s printed armour. Add armour explicitly only when using an applicable GM exception, such as a Skaven Warlock-Engineer.</p>' : ""}<div class="gm-fields">${[lore, ...talents, ...skills, ...gear].join("")}</div>${modifiers}</section>`
     : "";
 }
 function characteristics(s, r) {
   return `<div class="gm-section-heading"><h2>Characteristics</h2>${button("Roll individual variation", "roll-all", `title="Printed score −10 + 2d10, core p. 318"`)}</div><p class="gm-small">Edit the starting score; template, Talent and Size changes are added once. Individual variation uses printed score −10 + 2d10 (p. 318).</p><div class="gm-characteristics">${["M", ...KEYS].map((k) => `<div class="gm-char-row"><label for="stat-${k}"><b>${k}</b><small>Printed ${score(r.profile.stats[k])}</small></label><input aria-label="${k} starting score" id="stat-${k}" type="number" min="0" step="1" placeholder="—" value="${esc(Object.hasOwn(s.stats, k) ? (s.stats[k] ?? "") : (r.profile.stats[k] ?? ""))}" data-stat="${k}"><span class="gm-char-final">→ <b>${score(r.stats[k])}</b></span>${k !== "M" && r.profile.stats[k] !== null ? button("⚄", "roll-stat", `data-key="${k}" aria-label="Roll individual variation for ${k}"`) : ""}${Object.hasOwn(s.stats, k) ? button("↶", "reset-stat", `data-key="${k}" aria-label="Restore printed ${k}"`) : ""}</div>`).join("")}</div>
-  <h2>Size & derived values</h2><div class="gm-fields">${select("Size", "gm-size", SIZES, s.size || r.profile.size, `data-bind="size" ${r.swarm ? 'disabled title="Swarm ignores Size changes"' : ""}`)}${field("Wounds override", "gm-wounds", s.wounds ?? "", 'data-bind="wounds" min="0" step="1" placeholder="Calculated / printed"', "number")}${select(
+  <h2>Size & derived values</h2><div class="gm-fields">${select("Size", "gm-size", SIZES, s.size || r.size, `data-bind="size" ${r.swarm ? 'disabled title="Swarm ignores Size changes"' : ""}`)}${field("Wounds override", "gm-wounds", s.wounds ?? "", 'data-bind="wounds" min="0" step="1" placeholder="Calculated / printed"', "number")}${select(
     "Toughness Bonus",
     "gm-tb-mode",
     [
@@ -292,7 +319,7 @@ function traits(data, R, s, r) {
   return `<div class="gm-section-heading"><h2>Creature Traits</h2>${button("Add Trait", "picker", 'data-kind="trait"', "primary")}</div><p class="gm-small">Printed Traits are included. Their full definitions open below; effects used during play stay as references.</p><div class="gm-entry-list">${r.traits.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)} ${t.value ? `<small>(${esc(t.value)})</small>` : ""} ${origin(t)}`, entryBody(t.text, t.page, t))}${legacyBadge(t)}${t.origin === "GM" || t.requiresParameter ? traitParameter(data, R, t, r.profile) : t.name === "Trained" ? printedTraining(data, s, t) : ""}</div>${t.name !== "Size" && t.origin !== "Training" ? remove(t.key) : ""}</div>`).join("")}</div>
   ${r.optionalTraits.length ? detail("optional-traits", "Suggested optional Traits", `<div class="gm-chips">${r.optionalTraits.map((t, i) => button(esc(rowName(t)), "optional-trait", `data-index="${i}"`)).join("")}</div><p class="gm-small">Suggestions from the profile, not automatic grants. Parameters can be changed after adding.</p>`) : ""}
   ${r.traits.some((t) => (t.origin === "GM" || s.extraTraining.includes("Broken")) && t.name === "Trained" && t.value.includes("Broken")) ? `<div class="gm-callout"><p>Broken training adds 2d10 Fellowship; an absent score starts at 0 (p. 363).</p>${button(s.brokenRoll ? `Roll again · ${s.brokenRoll.join(" + ")}` : "Roll 2d10 Fellowship", "broken-roll", 'id="gm-broken-roll"')}</div>` : ""}
-  ${r.traits.some((t) => ["Mutation", "Mental Corruption", "Mark of Chaos"].includes(t.name)) ? `<section id="gm-mutations"><div class="gm-section-heading"><h2>Corruption choices</h2>${button("Choose mutation", "picker", 'data-kind="mutation"')}</div>${r.traits.some((t) => t.name === "Mark of Chaos" && t.value === "Tzeentch" && t.origin === "GM") ? `<p class="gm-small">Tzeentch grants ceil(1d10 ÷ 3) alternating Mental/Physical mutations (p. 359).</p>${button(s.markRoll ? `Roll again · ${s.markRoll} → ${Math.ceil(s.markRoll / 3)} mutations` : "Roll Tzeentch mutations", "mark-roll")}` : ""}<div class="gm-chips">${button("Roll Physical", "mutation-roll", 'data-category="Physical"')}${button("Roll Mental", "mutation-roll", 'data-category="Mental"')}</div>${r.mutations.map((m) => `<div class="gm-entry"><div>${detail(m.id, esc(m.name), entryBody(m.text, m.page))}</div>${remove(m.id)}</div>`).join("")}</section>` : ""}`;
+  ${r.template?.physicalMutations || r.traits.some((t) => ["Mutation", "Mental Corruption", "Mark of Chaos"].includes(t.name)) ? `<section id="gm-mutations"><div class="gm-section-heading"><h2>Corruption choices</h2>${button("Choose mutation", "picker", 'data-kind="mutation"')}</div>${r.traits.some((t) => t.name === "Mark of Chaos" && t.value === "Tzeentch" && t.origin === "GM") ? `<p class="gm-small">Tzeentch grants ceil(1d10 ÷ 3) alternating Mental/Physical mutations (p. 359).</p>${button(s.markRoll ? `Roll again · ${s.markRoll} → ${Math.ceil(s.markRoll / 3)} mutations` : "Roll Tzeentch mutations", "mark-roll")}` : ""}<div class="gm-chips">${button("Roll Physical", "mutation-roll", 'data-category="Physical"')}${button("Roll Mental", "mutation-roll", 'data-category="Mental"')}</div>${r.mutations.map((m) => `<div class="gm-entry"><div>${detail(m.id, esc(m.name), entryBody(m.text, m.page))}</div>${remove(m.id)}</div>`).join("")}</section>` : ""}`;
 }
 function skillsTalents(R, s, r) {
   return `<div class="gm-section-heading"><h2>Skills</h2>${button("Add Skill", "picker", 'data-kind="skill"', "primary")}</div><p class="gm-small">Scores below are final totals. Edit a total to make an explicit GM adjustment.</p><div class="gm-entry-list">${r.skills.map((t) => `<div class="gm-skill-row"><div><strong>${esc(t.name)}</strong><small>${esc(t.origin)} · ${t.char || "Printed total"}</small></div><input type="number" min="0" step="1" value="${t.total}" data-skill="${esc(t.name)}" aria-label="${esc(t.name)} total">${button("?", "reference", `data-kind="skill" data-name="${esc(t.name)}" aria-label="Read ${esc(t.name)}"`)}${remove(t.key || `skill:${t.name}`)}</div>`).join("")}</div>
@@ -319,7 +346,7 @@ function skillsTalents(R, s, r) {
 }
 function customise(data, R, s, r, ui) {
   if (!r.profile) return empty("Choose a starting profile first.");
-  return `<div class="gm-template-bar"><div><span class="eyebrow">Creature template</span><strong>${esc(r.template?.name || "Develop this profile")}</strong><small>${r.template ? `${esc(sourceLabel(r.template))} · one template at a time` : "Optional · develop the profile with a source-reviewed template"}</small></div><div class="gm-template-actions">${button(r.template ? "Change template" : "Choose template", "template-picker", "", "primary")}${r.template ? button("Remove template", "clear-template") : ""}</div></div>${r.template ? legacyBadge(r.template) : ""}${templateChoices(s, r)}<div class="page-tabs" role="tablist" aria-label="Customisation">${TABS.map((name, i) => tab(name, { id: `gm-tab-${i}`, panel: "gm-custom-content", selected: ui.tab === i, action: "tab", value: i })).join("")}</div><div id="gm-custom-content" role="tabpanel" aria-labelledby="gm-tab-${ui.tab}">${ui.tab === 0 ? characteristics(s, r) : ui.tab === 1 ? traits(data, R, s, r) : skillsTalents(R, s, r)}</div>`;
+  return `<div class="gm-template-bar"><div><span class="eyebrow">Creature template</span><strong>${esc(r.template?.name || "Develop this profile")}</strong><small>${r.template ? `${esc(sourceLabel(r.template))} · ${r.template.trollRole === "type" ? "one type plus optional modifiers" : "one template at a time"}` : "Optional · develop the profile with a source-reviewed template"}</small></div><div class="gm-template-actions">${button(r.template ? "Change template" : "Choose template", "template-picker", "", "primary")}${r.template ? button("Remove template", "clear-template") : ""}</div></div>${r.template ? legacyBadge(r.template) : ""}${templateChoices(data, s, r)}<div class="page-tabs" role="tablist" aria-label="Customisation">${TABS.map((name, i) => tab(name, { id: `gm-tab-${i}`, panel: "gm-custom-content", selected: ui.tab === i, action: "tab", value: i })).join("")}</div><div id="gm-custom-content" role="tabpanel" aria-labelledby="gm-tab-${ui.tab}">${ui.tab === 0 ? characteristics(s, r) : ui.tab === 1 ? traits(data, R, s, r) : skillsTalents(R, s, r)}</div>`;
 }
 function equipmentMagic(R, s, r) {
   if (!r.profile) return empty("Choose a starting profile first.");

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "tribes-tribulations",
+  "title": "Tribes and Tribulations",
+  "shortTitle": "Tribes & Tribulations",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Tribes and Tribulations.pdf",
+    "sha256": "008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Generic foundations remain separately sourced; named characters and adventures are excluded.",
+      "Only actual Fifth Edition replacements receive Legacy explanations.",
+      "Die Hard retains the user-supplied older-edition definition; no automatic resurrection."
+    ]
+  },
+  "files": {
+    "ruleReferences": "rule-references.json",
+    "spells": "spells.json",
+    "weapons": "weapons.json",
+    "market": "market.json",
+    "gear": "gear.json",
+    "rules": "rules.json",
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

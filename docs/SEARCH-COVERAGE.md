@@ -6,13 +6,13 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **3685 results**, including **1194 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **3751 results**, including **1209 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
-The Rules audit explicitly removed **112 non-mechanical entries**; **956 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
+The Rules audit explicitly removed **112 non-mechanical entries**; **969 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1671 | 224 | 1895 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1673 | 224 | 1897 | 0 |
 | Up in Arms | 1.0.4 | 98 | 128 | 226 | 12 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
@@ -26,6 +26,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **956 Rules r
 | The Night Parade | 1.0.0 | 0 | 4 | 4 | 0 |
 | The Warband of Bayl of Many Eyes | 1.0.0 | 0 | 3 | 3 | 0 |
 | The Cluster-Eye Tribe | 1.0.0 | 1 | 5 | 6 | 0 |
+| Tribes and Tribulations | 1.0.0 | 49 | 15 | 64 | 12 |
 
 ## Source review
 
@@ -48,7 +49,7 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 
 Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 275; talent 423; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
+Categories: career 64; skill 277; talent 423; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
 Reviewed printed records retained outside search: 0.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.
@@ -444,6 +445,21 @@ Source SHA-256: `ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8
 Candidate sections: included 14; excluded 2; existing 1.
 
 Categories: trait 1; rule 5.
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Tribes and Tribulations
+
+Source SHA-256: `008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e`.
+
+- pp. 9–19: Generic creatures and advancement.
+- pp. 41: Artillery.
+- pp. 82–101: Gut Magic, Trolls and Waaagh!.
+
+Candidate sections: included 50; excluded 1.
+
+Categories: magic 28; equipment 12; trait 9; rule 13; table 2.
 Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.

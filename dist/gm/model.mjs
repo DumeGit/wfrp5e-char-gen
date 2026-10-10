@@ -17,6 +17,7 @@ import { knownRunes } from "../dwarf-guide.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
+import { trollModifiers, warbandLoreChoices, tribesIssues } from "./tribes.mjs";
 import {
   skillCharacteristic,
   speciesLoreIssue,
@@ -100,6 +101,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     templateTalents: {},
     templateGear: {},
     templateLore: "",
+    templateModifiers: [],
     stats: {},
     size: "",
     wounds: null,
@@ -314,14 +316,43 @@ export function validateGMDraft(data, R, s) {
     (!number(s.markRoll) || s.markRoll < 1 || s.markRoll > 10)
   )
     throw Error("Invalid Mark roll.");
-  const p = data.profiles.find((p) => p.id === s.profile),
-    t = data.templates.find((t) => t.id === s.template);
+  const p = data.profiles.find((p) => p.id === s.profile);
+  const originalTemplate = data.templates.find((t) => t.id === s.template);
+  if (
+    !Array.isArray(s.templateModifiers) ||
+    new Set(s.templateModifiers).size !== s.templateModifiers.length ||
+    s.templateModifiers.length > 4 ||
+    s.templateModifiers.some(
+      (id) =>
+        !trollModifiers(data).some(
+          (x) => x.id === id && s.books.includes(bookId(x)),
+        ),
+    ) ||
+    (s.templateModifiers.length && originalTemplate?.trollRole !== "type")
+  )
+    throw Error("Invalid Troll modifier choices.");
+  const t = resolveTemplate(
+    originalTemplate,
+    p,
+    s.templateLore,
+    data,
+    s.templateModifiers,
+    R,
+  );
   if (
     typeof s.templateLore !== "string" ||
     (s.templateLore &&
-      (!t?.shaman ||
-        p?.category !== "Beastmen" ||
-        !["Arcane", "Beasts", "Death", "Shadows"].includes(s.templateLore)))
+      !(t?.warbandShaman
+        ? [
+            ...warbandLoreChoices(p),
+            ...(p?.id.endsWith(":basic-hobgoblin") &&
+            originalTemplate.name === "Shaman Lord"
+              ? ["Both"]
+              : []),
+          ].includes(s.templateLore)
+        : t?.shaman &&
+          p?.category === "Beastmen" &&
+          ["Arcane", "Beasts", "Death", "Shadows"].includes(s.templateLore)))
   )
     throw Error("Invalid template Lore.");
   for (const [key, value] of Object.entries(s.traitParameters))
@@ -442,6 +473,7 @@ export function applyTemplate(s, id) {
   s.templateTalents = {};
   s.templateGear = {};
   s.templateLore = "";
+  s.templateModifiers = [];
   s.spells = [];
   s.spellLores = {};
   s.cants.choices = {};
@@ -464,8 +496,15 @@ export const gmSkillCharacteristic = (R, profile, name) =>
     name,
     skillInfo(R, name)?.char,
   );
-export const gmLoreIssue = (R, profile, lore) =>
-  speciesLoreIssue(R, { species: gmSpecies(profile) }, lore);
+export const gmLoreIssue = (R, profile, lore) => {
+  if (
+    gmSpecies(profile) === "Ogre" &&
+    lore === "Fire" &&
+    R.books.some((x) => x.id === "tribes-tribulations")
+  )
+    return "";
+  return speciesLoreIssue(R, { species: gmSpecies(profile) }, lore);
+};
 // A printed targeted spell is a distinct GM selection, sharing its canonical
 // profile and source. Never grant an unspecified Fellstave or invent targets.
 export function gmTalentLimit(R, stats, name) {
@@ -612,6 +651,9 @@ export function calculateGM(data, R, s) {
     data.templates.find((t) => t.id === s.template),
     p,
     s.templateLore,
+    data,
+    s.templateModifiers,
+    R,
   );
   const live = (rows) => rows.filter((x) => !s.removed.includes(x.key));
   const printedTraits = p.traits.map((t) => ({
@@ -623,6 +665,12 @@ export function calculateGM(data, R, s) {
   ).map((t) => ({
     ...t,
     text: data.traits.find((x) => x.name === t.name)?.text || "",
+    ...(data.traits.find((x) => x.name === t.name)?.adaptation && !t.adaptation
+      ? {
+          adaptation: data.traits.find((x) => x.name === t.name).adaptation,
+          adaptationSource: data.traits.find((x) => x.name === t.name).source,
+        }
+      : {}),
     page: data.traits.find((x) => x.name === t.name)?.page || p.page,
     source: data.traits.find((x) => x.name === t.name)?.source || {
       book: "core",
@@ -808,9 +856,13 @@ export function calculateGM(data, R, s) {
     swarm = traits.some((t) => t.name === "Swarm");
   if (newTraits.some((t) => t.name === "Construct"))
     for (const k of ["Int", "WP", "Fel"]) stats[k] = null;
-  let size = s.size || p.size;
-  if (!swarm && size !== p.size) {
-    const steps = SIZES.indexOf(size) - SIZES.indexOf(p.size);
+  // A template's printed Characteristics already describe its printed Size.
+  // Only a further manual resize adds the generic Size-adjustment recipe.
+  const templateSize =
+    template?.traits?.find((t) => t.name === "Size")?.value || p.size;
+  let size = s.size || templateSize;
+  if (!swarm && size !== templateSize) {
+    const steps = SIZES.indexOf(size) - SIZES.indexOf(templateSize);
     adjustments.S = (adjustments.S || 0) + 10 * steps;
     adjustments.T = (adjustments.T || 0) + 10 * steps;
     adjustments.Ag = (adjustments.Ag || 0) - 5 * steps;
@@ -1109,7 +1161,8 @@ export function calculateGM(data, R, s) {
       };
     });
   const grantedGear = (template?.gear || []).flatMap((slot, i) => {
-    if (!templateGearEnabled(slot, s.templateSkills)) return [];
+    if (!templateGearEnabled(slot, s.templateSkills, s.templateGear, template))
+      return [];
     if (
       slot.whenSkill !== undefined &&
       !templateSlotEnabled(template.skills[slot.whenSkill], p)
@@ -1123,7 +1176,7 @@ export function calculateGM(data, R, s) {
       ? [
           {
             id,
-            quantity: 1,
+            quantity: slot.quantity || 1,
             key: templateRowKey(template, "gear", i),
             origin: "Template",
             ...(slot.adaptation
@@ -1295,6 +1348,7 @@ export function calculateGM(data, R, s) {
     p.armour.filter(
       (a) =>
         !template?.removeArmour &&
+        !template?.replaceArmour &&
         (!a.optional || s.optionalArmour.includes(a.key)),
     ),
   );
@@ -1362,7 +1416,7 @@ export function calculateGM(data, R, s) {
   ) {
     for (const loc of Object.keys(ap)) ap[loc] += template.armour;
     armour.push({
-      name: "Skeletal protection",
+      name: template.replaceArmour ? "Troll protection" : "Skeletal protection",
       ap: template.armour,
       locations: Object.keys(ap).join(", "),
       key: templateRowKey(template, "armour", 0),
@@ -1371,7 +1425,9 @@ export function calculateGM(data, R, s) {
   }
   const spells = gmSpellCatalogue(R).filter(
     (spell) =>
-      ([...p.spells, ...s.spells].includes(spell.contentId) ||
+      ([...p.spells, ...s.spells, ...(template?.fixedSpells || [])].includes(
+        spell.contentId,
+      ) ||
         (spell.category === "Technique" &&
           spell.name === "Ritual of Cleansing" &&
           talents.some((t) => t.name === "Sword-dancing"))) &&
@@ -1447,6 +1503,7 @@ export function calculateGM(data, R, s) {
     traits,
     s.templateTalents,
   );
+  tribesIssues(template, p, s, result, add);
   result.undeadRidingOptions = [];
   if (
     ["core:creatures:zombie", "core:creatures:skeleton"].includes(p.id) &&

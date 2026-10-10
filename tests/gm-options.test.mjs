@@ -70,6 +70,7 @@ test("GM reuses all registered base-book options once, while books gate only fou
       "night-parade",
       "bayl-many-eyes",
       "cluster-eye-tribe",
+      "tribes-tribulations",
     ],
   );
   assert.equal(gmCatalogue(data, s.books).profiles.length, 49);

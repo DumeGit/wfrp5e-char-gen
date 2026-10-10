@@ -1,13 +1,43 @@
 // Explicit reviewed supplement operations. Core templates remain additive.
+import {
+  composeTroll,
+  resolveWarband,
+  resolveWarbandEquipment,
+  tribesEligibility,
+} from "./tribes.mjs";
 
 export const templateRowKey = (t, kind, i) => `${t.id}:${kind}:${i}`;
 export const templateSlotEnabled = (slot, profile) =>
   !slot.forProfiles || slot.forProfiles.includes(profile?.id);
-export const templateGearEnabled = (slot, selectedSkills) =>
-  slot.whenSkill === undefined ||
-  Boolean(selectedSkills[slot.whenSkill]?.length);
+export const templateGearEnabled = (
+  slot,
+  selectedSkills,
+  selectedGear = {},
+  template,
+) => {
+  if (slot.disabled) return false;
+  if (slot.whenSkill !== undefined && !selectedSkills[slot.whenSkill]?.length)
+    return false;
+  const weaponSlot = template?.gear[slot.forWeapon];
+  const weapon =
+    weaponSlot?.options.find((x) => x.id === selectedGear[slot.forWeapon]) ||
+    (!weaponSlot?.choose && weaponSlot?.options.length === 1
+      ? weaponSlot.options[0]
+      : undefined);
+  return !slot.skipForGroups?.includes(weapon?.group);
+};
 
-export function resolveTemplate(template, profile, selectedLore) {
+export function resolveTemplate(
+  template,
+  profile,
+  selectedLore,
+  data,
+  modifiers = [],
+  R,
+) {
+  if (data) template = composeTroll(template, data, modifiers);
+  template = resolveWarband(template, profile, selectedLore);
+  template = resolveWarbandEquipment(template, profile, R);
   if (!template?.shaman) return template;
   const lore =
     profile.category === "Beastmen" ? selectedLore || "Arcane" : "Arcane";
@@ -36,8 +66,17 @@ const windByLore = {
 };
 
 export function templateEligibility(t, p) {
+  const special = tribesEligibility(t, p);
+  if (special || t?.trollRole) return special;
   if (!t?.eligibility) return "";
   if (t.eligibility === "any") return "";
+  if (t.eligibility === "goblin")
+    return [
+      "core:creatures:goblin",
+      "tribes-tribulations:creatures:basic-goblin",
+    ].includes(p?.id)
+      ? ""
+      : "Artillery crew uses a Common Goblin foundation (p. 41).";
   if (t.eligibility === "zombie")
     return p?.id === "core:creatures:zombie"
       ? ""
@@ -164,6 +203,14 @@ export function templateIssues(
       );
   }
   for (const [i, slot] of (t.gear || []).entries()) {
+    const selectedGear = Object.fromEntries(
+      gear.map((x) => [Number(x.key.split(":").at(-1)), x.id]),
+    );
+    if (
+      !templateGearEnabled(slot, {}, selectedGear, t) &&
+      slot.whenSkill === undefined
+    )
+      continue;
     if (
       slot.whenSkill !== undefined &&
       !templateSkills.some((skill) => skill.slot === slot.whenSkill)

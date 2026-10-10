@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3685,
-  "newlyImported": 1194,
+  "references": 3751,
+  "newlyImported": 1209,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,14 +12,14 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1895,
+      "references": 1897,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1671,
+      "existingReferences": 1673,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 275,
+        "skill": 277,
         "talent": 423,
         "magic": 225,
         "equipment": 254,
@@ -1712,6 +1712,48 @@
           "first": 3,
           "last": 19,
           "topic": "Creature templates, mounts, spell restrictions, Arboreal and nonlethal venom arrows"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "tribes-tribulations",
+      "title": "Tribes and Tribulations",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e",
+      "references": 64,
+      "newlyImported": 15,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 49,
+      "adaptedReferences": 12,
+      "categories": {
+        "magic": 28,
+        "equipment": 12,
+        "trait": 9,
+        "rule": 13,
+        "table": 2
+      },
+      "dispositions": {
+        "included": 50,
+        "excluded": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 9,
+          "last": 19,
+          "topic": "Generic creatures and advancement"
+        },
+        {
+          "first": 41,
+          "last": 41,
+          "topic": "Artillery"
+        },
+        {
+          "first": 82,
+          "last": 101,
+          "topic": "Gut Magic, Trolls and Waaagh!"
         }
       ],
       "unresolved": []

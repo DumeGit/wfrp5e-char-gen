@@ -1,0 +1,35 @@
+[
+  {
+    "id": "tribes-tribulations:weapons:spear-chukka",
+    "name": "Spear Chukka",
+    "page": 41,
+    "kind": "ranged",
+    "group": "Crossbow",
+    "enc": 20,
+    "reach": "150",
+    "damage": "12",
+    "qualities": "Accurate, Crewed 2, Dangerous, Reload 3"
+  },
+  {
+    "id": "tribes-tribulations:weapons:doom-diver",
+    "name": "Doom Diver",
+    "page": 41,
+    "kind": "ranged",
+    "group": "Catapult",
+    "enc": 20,
+    "reach": "120",
+    "damage": "13",
+    "qualities": "Accurate, Dangerous, Impact, Reload 3"
+  },
+  {
+    "id": "tribes-tribulations:weapons:rock-lobber",
+    "name": "Rock Lobber",
+    "page": 41,
+    "kind": "ranged",
+    "group": "Catapult",
+    "enc": 40,
+    "reach": "100",
+    "damage": "15",
+    "qualities": "Crewed 3, Dangerous, Imprecise, Reload 3"
+  }
+]
