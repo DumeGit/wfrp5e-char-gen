@@ -158,13 +158,18 @@ function templateChoices(data, s, r) {
       : [],
   );
   const talents = t.talents.flatMap((slot, i) =>
-    slot.options.length > 1
+    templateSlotEnabled(slot, r.profile) &&
+    (slot.options.length > 1 || slot.optional)
       ? [
           select(
             slot.label ||
+              (slot.optional ? `Optional · ${slot.options[0]}` : "") ||
               (slot.options.length > 2 ? "Magical Lore" : "Casting Talent"),
             `template-talent-${i}`,
-            [["", "Choose…"], ...slot.options],
+            [
+              ["", slot.optional ? "Skip optional Talent" : "Choose…"],
+              ...slot.options,
+            ],
             s.templateTalents[i] || "",
             `data-template-talent="${i}"`,
           ),

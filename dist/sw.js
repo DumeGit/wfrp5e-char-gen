@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"73fdcf0df52bd5d2f4d1";
+const CACHE=CACHE_PREFIX+"45a9e371ada862905585";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -100,6 +100,11 @@ const ASSETS=[
  "data/books/core/rule-references.json",
  "data/books/core/tables.json",
  "data/books/core/weapons.json",
+ "data/books/corsairs-flariel/coverage.json",
+ "data/books/corsairs-flariel/manifest.json",
+ "data/books/corsairs-flariel/reference-entries.json",
+ "data/books/corsairs-flariel/spells.json",
+ "data/books/corsairs-flariel/weapons.json",
  "data/books/deft-steps-dealer/careers.json",
  "data/books/deft-steps-dealer/coverage.json",
  "data/books/deft-steps-dealer/cults.json",
@@ -282,6 +287,7 @@ const ASSETS=[
  "gm/sources/bayl-many-eyes.json",
  "gm/sources/cluster-eye-tribe.json",
  "gm/sources/core.json",
+ "gm/sources/corsairs-flariel.json",
  "gm/sources/night-parade.json",
  "gm/sources/sea-of-claws.json",
  "gm/sources/taverns-old-world.json",

@@ -765,8 +765,12 @@ export function calculateGM(data, R, s) {
     });
   const templateSkills = [];
   for (const [i, slot] of (template?.talents || []).entries()) {
+    if (!templateSlotEnabled(slot, p)) continue;
+    if (slot.optional && !s.templateTalents[i]) continue;
     const name =
-      slot.options.length === 1 ? slot.options[0] : s.templateTalents[i];
+      !slot.optional && slot.options.length === 1
+        ? slot.options[0]
+        : s.templateTalents[i];
     if (!slot.options.includes(name)) {
       add(
         `Choose ${slot.label || (slot.options.length > 2 ? "a magical Lore Talent" : slot.options.join(" or "))} for ${template.name}.`,

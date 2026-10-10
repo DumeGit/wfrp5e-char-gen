@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3915,
-  "newlyImported": 1277,
+  "references": 3924,
+  "newlyImported": 1281,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -1840,6 +1840,41 @@
           "first": 9,
           "last": 10,
           "topic": "Selected mechanical hazards"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "corsairs-flariel",
+      "title": "The Corsairs of Captain Flariel",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb",
+      "references": 9,
+      "newlyImported": 4,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 5,
+      "adaptedReferences": 3,
+      "categories": {
+        "magic": 4,
+        "equipment": 4,
+        "rule": 1
+      },
+      "dispositions": {
+        "included": 10,
+        "excluded": 5
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 6,
+          "last": 8,
+          "topic": "Generic sea-raider profiles/templates, cloak and Dark Magic"
+        },
+        {
+          "first": 10,
+          "last": 13,
+          "topic": "Selected generic equipment and creature recipes"
         }
       ],
       "unresolved": []

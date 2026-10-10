@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "ranged",
+    "group": "Crossbow",
+    "enc": 20,
+    "reach": "100 yards",
+    "damage": "12",
+    "qualities": "Accurate, Crewed 2, Reload 3, Salvo 6",
+    "id": "corsairs-flariel:weapon:reaper",
+    "name": "Reaper",
+    "page": 10,
+    "text": "Use the naval Ballista profile (Sea of Claws p. 100) with Salvo (6), as explicitly directed on Corsairs p. 10. Acquired/reference profile only: no extra retail price is inferred."
+  }
+]

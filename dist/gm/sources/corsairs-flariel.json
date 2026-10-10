@@ -1,0 +1,1010 @@
+{
+  "schemaVersion": 1,
+  "id": "corsairs-flariel",
+  "source": {
+    "file": "The Corsairs of Captain Flariel.pdf",
+    "sha256": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb"
+  },
+  "summary": "Dark Elf foundation and five sea-raider templates",
+  "profiles": [
+    {
+      "id": "corsairs-flariel:creatures:dark-elf",
+      "name": "Dark Elf",
+      "page": 6,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 6
+      },
+      "example": false,
+      "category": "Elves",
+      "species": "Dark Elf",
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": 40,
+        "S": 30,
+        "T": 30,
+        "I": 50,
+        "Ag": 40,
+        "Dex": 40,
+        "Int": 40,
+        "WP": 40,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Hatred",
+          "value": "High Elves",
+          "adaptation": "Legacy: core Hatred uses a Psychology Test and the current Melee/Ranged and immunity rules, replacing the p. 18 summary."
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "adaptation": "Legacy: core Night Vision works in natural darkness without the dim-light prerequisite printed on p. 18."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hand Weapon",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged attack",
+          "skill": 40,
+          "damage": 9,
+          "optional": true,
+          "text": "Range 60 yards."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Medium Armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": true,
+          "quick": true,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "adaptation": "Legacy: core Hatred and Night Vision replace the differing p. 18 summaries; printed Characteristics, Wounds and Damage are unchanged.",
+      "notes": [
+        "Generic GM foundation only; this is not a playable Dark Elf Species. Printed optional Armour 3 is an unspecified protection profile, not invented pieces.",
+        "Printed Weapon +7 is unnamed. Optional Ranged +9 has range 60 yards and no named weapon. Optional Spellcaster requires an explicit Lore."
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "corsairs-flariel:template:chief-mate",
+      "name": "Chief Mate",
+      "page": 6,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 6
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 15,
+        "BS": 10,
+        "S": 10,
+        "T": 10,
+        "I": 15,
+        "Ag": 15,
+        "Dex": 10,
+        "Int": 5,
+        "WP": 10,
+        "Fel": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Athletics"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Climb"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Endurance"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Any)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 10,
+          "count": 2
+        },
+        {
+          "options": [
+            "Navigation"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Any)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Row"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Sail"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Swim"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Dual Wielder"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Dual Wielder uses Fifth Edition two-weapon/free-attack and Parry rules, replacing the p. 18–19 reversed-dice, off-hand and defence penalties.",
+          "optional": true
+        },
+        {
+          "options": [
+            "Furious Assault"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Furious Assault loses Momentum for the additional attack; the printed Move alternative on p. 19 is not retained.",
+          "optional": true
+        },
+        {
+          "options": [
+            "In-fighter"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core In-fighter uses an Opposed Melee Action to begin in-fighting and its Improvised Weapon rules, replacing the p. 18–19 longer-weapon immunity/+10 summary.",
+          "optional": true
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Menacing grants Advantage on Intimidation, replacing the p. 19 +1 SL summary.",
+          "optional": true
+        },
+        {
+          "options": [
+            "Pilot"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Pilot grants Advantage on Row and Sail, replacing the p. 18–19 failed-roll reversal.",
+          "optional": true
+        },
+        {
+          "options": [
+            "Public Speaker"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Printed Public Speaking uses core Public Speaker: group Charm Advantage and subsequent Leadership, replacing the p. 19 five-times audience effect.",
+          "optional": true
+        },
+        {
+          "options": [
+            "Read/Write"
+          ],
+          "ranks": 1,
+          "optional": true
+        },
+        {
+          "options": [
+            "Sea Legs"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sea Legs grants Advantage when a seasickness Test is required, replacing the printed abnormal-condition penalty immunity.",
+          "optional": true
+        },
+        {
+          "options": [
+            "Strong Swimmer"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Strong Swimmer grants Swim Advantage and +2 SL in swimming Pursuits, replacing the p. 18–19 breath-holding Toughness Bonus.",
+          "optional": true
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon 1 of 2",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Hand Weapon 2 of 2",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Leather or Mail Armour",
+          "names": [
+            "Light Armour",
+            "Medium Armour"
+          ],
+          "kind": "armour",
+          "choose": true,
+          "adaptation": "Legacy: unspecified Leather/Mail Armour uses core Light/Medium quick armour, following the previously approved conversion."
+        },
+        {
+          "label": "Ranged Weapon",
+          "groups": [
+            "blackpowder",
+            "bow",
+            "crossbow",
+            "engineering",
+            "entangling",
+            "explosives",
+            "sling",
+            "throwing"
+          ],
+          "kind": "weapon",
+          "choose": true
+        }
+      ],
+      "trappings": "",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
+        "Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
+    {
+      "id": "corsairs-flariel:template:corsair",
+      "name": "Corsair",
+      "page": 6,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 6
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 10,
+        "BS": 5,
+        "S": 5,
+        "T": 5,
+        "I": 10,
+        "Ag": 5,
+        "Dex": 5,
+        "WP": 5,
+        "Fel": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Athletics"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Climb"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Navigation"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Any)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Row"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Sail"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Swim"
+          ],
+          "bonus": 5,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Dual Wielder"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Dual Wielder uses Fifth Edition two-weapon/free-attack and Parry rules, replacing the p. 18–19 reversed-dice, off-hand and defence penalties."
+        },
+        {
+          "options": [
+            "In-fighter"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core In-fighter uses an Opposed Melee Action to begin in-fighting and its Improvised Weapon rules, replacing the p. 18–19 longer-weapon immunity/+10 summary."
+        },
+        {
+          "options": [
+            "Sea Legs"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sea Legs grants Advantage when a seasickness Test is required, replacing the printed abnormal-condition penalty immunity."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon 1 of 2",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Hand Weapon 2 of 2",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Leather or Mail Armour",
+          "names": [
+            "Light Armour",
+            "Medium Armour"
+          ],
+          "kind": "armour",
+          "choose": true,
+          "adaptation": "Legacy: unspecified Leather/Mail Armour uses core Light/Medium quick armour, following the previously approved conversion."
+        },
+        {
+          "label": "Ranged Weapon",
+          "groups": [
+            "blackpowder",
+            "bow",
+            "crossbow",
+            "engineering",
+            "entangling",
+            "explosives",
+            "sling",
+            "throwing"
+          ],
+          "kind": "weapon",
+          "choose": true
+        }
+      ],
+      "trappings": "",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
+        "Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
+    {
+      "id": "corsairs-flariel:template:lookout",
+      "name": "Lookout",
+      "page": 7,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 7
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "I": 10,
+        "Ag": 5,
+        "Dex": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Climb"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Any)"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Sail"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Stealth (Rural)"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Swim"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Flee!"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Flee! grants an extra Move when Disengaging, prevents Broken when Fleeing and gives +1 SL in escape Pursuits, replacing the p. 18 +1 Movement."
+        },
+        {
+          "options": [
+            "Old Salt"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Old Salt can use the units die as SL on successful ocean Row/Sail Tests, replacing the p. 18 poor-condition immunity; the two-crew benefit remains."
+        },
+        {
+          "options": [
+            "Sea Legs"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sea Legs grants Advantage when a seasickness Test is required, replacing the printed abnormal-condition penalty immunity."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Knife",
+          "names": [
+            "Knife"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Ranged Weapon",
+          "groups": [
+            "blackpowder",
+            "bow",
+            "crossbow",
+            "engineering",
+            "entangling",
+            "explosives",
+            "sling",
+            "throwing"
+          ],
+          "kind": "weapon",
+          "choose": true
+        }
+      ],
+      "trappings": "",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
+        "The duplicated printed 'Skills: Skills:' heading is corrected without changing its entries."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
+    {
+      "id": "corsairs-flariel:template:oarsman",
+      "name": "Oarsman",
+      "page": 7,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 7
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "S": 10,
+        "T": 5,
+        "Fel": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Endurance"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Row"
+          ],
+          "bonus": 20,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Old Salt"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Old Salt can use the units die as SL on successful ocean Row/Sail Tests, replacing the p. 18 poor-condition immunity; the two-crew benefit remains."
+        },
+        {
+          "options": [
+            "Sea Legs"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sea Legs grants Advantage when a seasickness Test is required, replacing the printed abnormal-condition penalty immunity."
+        },
+        {
+          "options": [
+            "Stone Soup"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Stone Soup grants food through party Foraging, replacing the p. 18 half-rations/starvation timing."
+        },
+        {
+          "options": [
+            "Strong Back"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "trappings": "Chains, Ragged Garments",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
+    {
+      "id": "corsairs-flariel:template:reaver-captain",
+      "name": "Reaver Captain",
+      "page": 6,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 6
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 20,
+        "BS": 20,
+        "S": 10,
+        "T": 10,
+        "I": 20,
+        "Ag": 20,
+        "Dex": 10,
+        "Int": 10,
+        "WP": 20,
+        "Fel": 20
+      },
+      "skills": [
+        {
+          "options": [
+            "Athletics"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Climb"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Endurance"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Any)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Any)"
+          ],
+          "bonus": 15,
+          "count": 2
+        },
+        {
+          "options": [
+            "Navigation"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Any)"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Row"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Sail"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Swim"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Catfall"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Catfall treats falls as deliberate and grants Advantage on falling Athletics Tests, replacing the p. 19 yards-per-SL summary."
+        },
+        {
+          "options": [
+            "Combat Reflexes"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Combat Reflexes rolls Combat Initiative twice and chooses a result, replacing the p. 19 +10 Initiative."
+        },
+        {
+          "options": [
+            "Dual Wielder"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Dual Wielder uses Fifth Edition two-weapon/free-attack and Parry rules, replacing the p. 18–19 reversed-dice, off-hand and defence penalties."
+        },
+        {
+          "options": [
+            "Furious Assault"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Furious Assault loses Momentum for the additional attack; the printed Move alternative on p. 19 is not retained."
+        },
+        {
+          "options": [
+            "In-fighter"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core In-fighter uses an Opposed Melee Action to begin in-fighting and its Improvised Weapon rules, replacing the p. 18–19 longer-weapon immunity/+10 summary."
+        },
+        {
+          "options": [
+            "Inspiring"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Inspiring grants Advantage on combat Leadership, replacing the p. 19 five-times audience multiplier."
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Menacing grants Advantage on Intimidation, replacing the p. 19 +1 SL summary."
+        },
+        {
+          "options": [
+            "Pilot"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Pilot grants Advantage on Row and Sail, replacing the p. 18–19 failed-roll reversal."
+        },
+        {
+          "options": [
+            "Public Speaker"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Printed Public Speaking uses core Public Speaker: group Charm Advantage and subsequent Leadership, replacing the p. 19 five-times audience effect."
+        },
+        {
+          "options": [
+            "Read/Write"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Sea Legs"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sea Legs grants Advantage when a seasickness Test is required, replacing the printed abnormal-condition penalty immunity."
+        },
+        {
+          "options": [
+            "Strong Swimmer"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Strong Swimmer grants Swim Advantage and +2 SL in swimming Pursuits, replacing the p. 18–19 breath-holding Toughness Bonus."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon 1 of 2",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Hand Weapon 2 of 2",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        },
+        {
+          "label": "Leather or Mail Armour",
+          "names": [
+            "Light Armour",
+            "Medium Armour"
+          ],
+          "kind": "armour",
+          "choose": true,
+          "adaptation": "Legacy: unspecified Leather/Mail Armour uses core Light/Medium quick armour, following the previously approved conversion."
+        },
+        {
+          "label": "Ranged Weapon",
+          "groups": [
+            "blackpowder",
+            "bow",
+            "crossbow",
+            "engineering",
+            "entangling",
+            "explosives",
+            "sling",
+            "throwing"
+          ],
+          "kind": "weapon",
+          "choose": true
+        }
+      ],
+      "trappings": "",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
+        "Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    }
+  ],
+  "traits": [],
+  "training": []
+}

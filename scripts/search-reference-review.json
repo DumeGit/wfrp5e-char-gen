@@ -28459,6 +28459,120 @@
           "reason": "Not mechanical rules or complete generic profiles; no NPC/template search."
         }
       ]
+    },
+    "corsairs-flariel": {
+      "sourceHash": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb",
+      "publishedSHA256": "98e471114319051fe9889305130eaeac45fe397bae95ea9088bf18dda0d996e7",
+      "entries": 4,
+      "areas": [
+        {
+          "first": 6,
+          "last": 8,
+          "topic": "Generic sea-raider profiles/templates, cloak and Dark Magic"
+        },
+        {
+          "first": 10,
+          "last": 13,
+          "topic": "Selected generic equipment and creature recipes"
+        }
+      ],
+      "records": [
+        {
+          "id": "corsairs-flariel:reference:lore-of-dark-magic-additional-hits",
+          "name": "Lore of Dark Magic: additional hits",
+          "page": 8,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:reference:sea-dragon-cloak",
+          "name": "Sea Dragon Cloak",
+          "page": 6,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:reference:reaper-bolt-thrower",
+          "name": "Reaper bolt thrower",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:reference:ravenship",
+          "name": "Ravenship",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:creatures:dark-elf",
+          "name": "Dark Elf",
+          "page": 6,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:chief-mate",
+          "name": "Chief Mate",
+          "page": 6,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:corsair",
+          "name": "Corsair",
+          "page": 6,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:lookout",
+          "name": "Lookout",
+          "page": 7,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:oarsman",
+          "name": "Oarsman",
+          "page": 7,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:reaver-captain",
+          "name": "Reaver Captain",
+          "page": 6,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:excluded:named-characters-ship-scenes-and-adventures",
+          "name": "Named characters, ship scenes and adventures",
+          "page": "3–17",
+          "disposition": "excluded",
+          "reason": "Outside creator and mechanical reference scope."
+        },
+        {
+          "id": "corsairs-flariel:excluded:ship-s-crew-and-druchii-sorceress",
+          "name": "Ship's Crew and Druchii Sorceress",
+          "page": 7,
+          "disposition": "excluded",
+          "reason": "Adaptation questions pending."
+        },
+        {
+          "id": "corsairs-flariel:excluded:warhound-recipe",
+          "name": "Warhound recipe",
+          "page": 13,
+          "disposition": "excluded",
+          "reason": "Size/training question pending; named owner/pack excluded."
+        },
+        {
+          "id": "corsairs-flariel:excluded:beastmaster",
+          "name": "Beastmaster",
+          "page": 7,
+          "disposition": "excluded",
+          "reason": "Crop/Whip/Net equipment clarification pending."
+        },
+        {
+          "id": "corsairs-flariel:excluded:older-talent-and-trait-summaries",
+          "name": "Older Talent and Trait summaries",
+          "page": "18–19",
+          "disposition": "excluded",
+          "reason": "Reuse reviewed current core definitions; actual differences appear on affected grants, not duplicated old rule results."
+        }
+      ]
     }
   }
 }

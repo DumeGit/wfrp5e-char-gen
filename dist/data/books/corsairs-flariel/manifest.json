@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "corsairs-flariel",
+  "title": "The Corsairs of Captain Flariel",
+  "shortTitle": "Corsairs",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "The Corsairs of Captain Flariel.pdf",
+    "sha256": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Generic foundations and templates only; named characters excluded.",
+      "Core Talents/Traits replace reviewed differing summaries with selective Legacy notes. Sparse table bonuses follow their printed columns.",
+      "Four Dark Magic spells and acquired Reaper statistics are shared catalogues, without invented PC magic access or playable Species."
+    ]
+  },
+  "files": {
+    "spells": "spells.json",
+    "weapons": "weapons.json",
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

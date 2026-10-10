@@ -8,9 +8,9 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 17 |
+| books | 18 |
 | careers | 135 |
-| magicProfiles | 585 |
+| magicProfiles | 589 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
@@ -44,6 +44,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Sea of Claws | 30 | 15 | 34 | 0 | 0 |
 | Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
 | Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
+| The Corsairs of Captain Flariel | 2 | 3 | 4 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2870,6 +2871,43 @@ Pack `taverns-old-world` · version 1.0.0
 | `taverns-old-world:reference:tavern-hazard-hex` — Tavern hazard: Hex | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-hazard-trapped-treasures` — Tavern hazard: Trapped Treasures | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-hazard-yellow-mould` — Tavern hazard: Yellow Mould | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+
+</details>
+
+## The Corsairs of Captain Flariel
+
+Pack `corsairs-flariel` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| referenceEntries | 0 | 0 | 4 | 0 | 0 |
+| spells | 1 | 3 | 0 | 0 | 0 |
+| weapons | 1 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Beastmaster | deferred | p. 7 | Crop/Whip/Net equipment compatibility awaits clarification; no unchosen alternative is exported as an actual belonging. |
+| Dark Elf foundation | adapted | p. 6 | Printed baseline and reviewed current core Trait definitions; no playable Species. |
+| Five sea-raider templates | adapted | p. 6 | Exact geometric Characteristic columns, explicit specialisations, optional Chief Mate Talents and selective core Talent/quick-armour replacements. |
+| Four Dark Magic spells | adapted | p. 8 | Printed spell parameters, core Appendix I Test Difficulties and reference-only live effects. |
+| Named characters, ships and adventures | deferred | p. 11 | No named foundations, ship manager, encounter generator or adventure scenes. |
+| Reaper | implemented | p. 10 | Explicit naval Ballista cross-reference plus Salvo 6; no invented price. |
+| Sea Dragon Cloak | reference-only | p. 6 | Printed additional Body protection/maintenance; acquired armour awaits clarification. |
+| Ship's Crew and Druchii Sorceress | deferred | p. 7 | Fixed-profile/Skill-heading and mixed-Lore adaptations await user answers. |
+| Warhounds | deferred | p. 13 | Dog/Size/training recipe awaits clarification; named pack is excluded. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `corsairs-flariel:reference:lore-of-dark-magic-additional-hits` — Lore of Dark Magic: additional hits | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
+| `corsairs-flariel:reference:ravenship` — Ravenship | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `corsairs-flariel:reference:reaper-bolt-thrower` — Reaper bolt thrower | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `corsairs-flariel:reference:sea-dragon-cloak` — Sea Dragon Cloak | referenceEntries | reference-only | p. 6 | Sourced book rule reference; no live-play automation. |
+| `corsairs-flariel:spell:arnzipal-s-black-horror` — Arnzipal’s Black Horror | spells | adapted | p. 8 | Legacy: Difficult (–10) becomes Difficult (−1 SL) under core Appendix I p. 364. |
+| `corsairs-flariel:spell:doombolt` — Doombolt | spells | adapted | p. 8 | Legacy: Hard (–20) becomes Hard (−2 SL) under core Appendix I p. 364. |
+| `corsairs-flariel:spell:word-of-pain` — Word of Pain | spells | adapted | p. 8 | Legacy: Difficult (–10) becomes Difficult (−1 SL) under core Appendix I p. 364. |
 
 </details>
 

@@ -101,6 +101,10 @@
     {
       "id": "taverns-old-world",
       "path": "taverns-old-world/manifest.json"
+    },
+    {
+      "id": "corsairs-flariel",
+      "path": "corsairs-flariel/manifest.json"
     }
   ]
 }

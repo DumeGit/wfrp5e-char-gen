@@ -1,0 +1,38 @@
+[
+  {
+    "id": "corsairs-flariel:reference:lore-of-dark-magic-additional-hits",
+    "name": "Lore of Dark Magic: additional hits",
+    "page": 8,
+    "category": "rule",
+    "topic": "Dark Elf raiders",
+    "text": "Any target who takes damage from a Lore of Dark Magic spell experiences the sorceress’s vicious spite. In addition to Overcasting, any success with 3+ SL over the CN inflicts 2 x SL additional hits to the Body Hit Location with Damage equal to the base CN of the spell that ignores Armour Points.",
+    "notes": "Printed SL/CN wording is retained as a reference; no live additional-hit calculation."
+  },
+  {
+    "id": "corsairs-flariel:reference:sea-dragon-cloak",
+    "name": "Sea Dragon Cloak",
+    "page": 6,
+    "category": "equipment",
+    "topic": "Dark Elf raiders",
+    "text": "Dark Elf corsairs wear cloaks fashioned from the hide of a sea dragon. These mark their status and offer protection from the elements and from hostile attacks. You can equip Druchii Reaver Captains, Chief Mates, and Corsairs with a Sea Dragon Cloak — providing an additional 2 AP to the Body Hit Location, with the Partial Flaw. Wearers must treat their cloak regularly with a special slime of reptilian origin — if not slathered, it begins to disintegrate, a process that takes one week. A fresh application of slime restores the cloak to normal.",
+    "notes": "Price, Encumbrance and Availability are not printed. Acquired-armour integration is pending clarification."
+  },
+  {
+    "id": "corsairs-flariel:reference:reaper-bolt-thrower",
+    "name": "Reaper bolt thrower",
+    "page": 10,
+    "category": "equipment",
+    "topic": "Dark Elf raiders",
+    "text": "Use the Ballista profile from Sea of Claws p. 100 with the Salvo (6) Quality.",
+    "notes": "Reuses the explicitly cross-referenced naval Ballista statistics. No additional retail price or ammunition grant is inferred."
+  },
+  {
+    "id": "corsairs-flariel:reference:ravenship",
+    "name": "Ravenship",
+    "page": 10,
+    "category": "equipment",
+    "topic": "Dark Elf raiders",
+    "text": "| Ship name | Crew | Sail M (C) | Oar M (C) | Man | Size | T | W | Carries | Traits and Upgrades |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Ravenship | 65 | 10 (18) | 4 (30) | +1 SL | 50 | 75 | 180 | 350 | Armoured, Flying Jib |",
+    "notes": "Generic printed ship profile only. The named vessel, story and tactics are excluded; ship creation and management are deferred."
+  }
+]

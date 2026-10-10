@@ -1,5 +1,7 @@
 # Adding supplied books
 
+The Corsairs of Captain Flariel is registered through `scripts/build-corsairs.py`. Its initial batch uses existing source/pack fields plus independently optional template Talent slots. Sparse Characteristic tables use geometry, not flattened text order. See [CORSAIRS.md](CORSAIRS.md) for implemented options and five pending clarifications; do not activate those proposed conversions without answers.
+
 The app loads a registered core pack plus explicitly selected supplements/variants. It does not read PDFs at runtime and is not a general-purpose Fourth Edition rules engine. `AGENTS.md` holds project instructions; the README describes creator behavior and interpretations.
 
 ## Integration workflow

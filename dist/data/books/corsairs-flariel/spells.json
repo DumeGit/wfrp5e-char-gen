@@ -1,0 +1,53 @@
+[
+  {
+    "id": "corsairs-flariel:spell:arnzipal-s-black-horror",
+    "name": "Arnzipal’s Black Horror",
+    "page": 8,
+    "category": "Dark Magic",
+    "cn": "13",
+    "range": "Willpower yards (or Random Vortex)",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "The sorceress tears the veil between reality and the Aethyr, and a black cloud of roiling energy sweeps across the land, trailing slimy tentacles that drag unfortunate victims to an unknown fate. All who fall within the Area of Effect must take a Difficult (−1 SL) Strength Test or suffer 3 Wounds. Those who Fumble the Strength Test must spend a Fate Point or are dragged into the Aethyr, which costs them their lives. The vortex moves 1d10 + 5 yards in a random direction each Turn — use the random vortex rules from Winds of Magic pages 20–21 if available, otherwise determine the direction randomly as you see fit.",
+    "conversion": "Printed effects remain descriptions; live casting, Conditions, extra hits and vortex movement are not automated. No playable Dark Elf Species or PC Dark Magic grant is invented.",
+    "adaptation": "Legacy: Difficult (–10) becomes Difficult (−1 SL) under core Appendix I p. 364."
+  },
+  {
+    "id": "corsairs-flariel:spell:doombolt",
+    "name": "Doombolt",
+    "page": 8,
+    "category": "Dark Magic",
+    "cn": "7",
+    "range": "Willpower yards",
+    "target": "1",
+    "duration": "Instant",
+    "text": "The sorceress invokes the name of an otherworldly beast and unleashes its blasphemous energy as a bolt of pure darkness. This is a magic missile with Damage +8, increased by +4 if the caster passes an optional Hard (−2 SL) Language (Magick) Test. Failure in this additional Test causes a roll on the Major Miscast Table.",
+    "conversion": "Printed effects remain descriptions; live casting, Conditions, extra hits and vortex movement are not automated. No playable Dark Elf Species or PC Dark Magic grant is invented.",
+    "adaptation": "Legacy: Hard (–20) becomes Hard (−2 SL) under core Appendix I p. 364."
+  },
+  {
+    "id": "corsairs-flariel:spell:shroud-of-despair",
+    "name": "Shroud of Despair",
+    "page": 8,
+    "category": "Dark Magic",
+    "cn": "8",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "The sorceress gestures with elaborate movements to bring a pall of gloom to engulf her enemies. Suffocating darkness suffuses all targets within the Area of Effect, sapping their will and energy. They suffer from 1 Fatigued Condition for every SL from the casting roll and unless they pass a Challenging (+0 SL) Cool Test, they gain a Broken Condition.",
+    "conversion": "Printed effects remain descriptions; live casting, Conditions, extra hits and vortex movement are not automated. No playable Dark Elf Species or PC Dark Magic grant is invented."
+  },
+  {
+    "id": "corsairs-flariel:spell:word-of-pain",
+    "name": "Word of Pain",
+    "page": 8,
+    "category": "Dark Magic",
+    "cn": "7",
+    "range": "Willpower yards",
+    "target": "AoE (Willpower Bonus yards)",
+    "duration": "Willpower Bonus Rounds",
+    "text": "As the sorceress utters a forbidden name, the bodies of her enemies bend and buckle, wracked with waves of agony. Targets within the Area of Effect must pass a Difficult (−1 SL) Cool Test, subtracting any SL from the casting roll to the result. If they fail, reduce all Melee or Ranged Tests they make by the same SL.",
+    "conversion": "Printed effects remain descriptions; live casting, Conditions, extra hits and vortex movement are not automated. No playable Dark Elf Species or PC Dark Magic grant is invented.",
+    "adaptation": "Legacy: Difficult (–10) becomes Difficult (−1 SL) under core Appendix I p. 364."
+  }
+]
