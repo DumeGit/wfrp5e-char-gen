@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3927,
-  "newlyImported": 1281,
+  "references": 3989,
+  "newlyImported": 1326,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,15 +12,15 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1918,
+      "references": 1924,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1694,
+      "existingReferences": 1700,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 286,
-        "talent": 435,
+        "skill": 290,
+        "talent": 437,
         "magic": 225,
         "equipment": 254,
         "condition": 13,
@@ -1875,6 +1875,55 @@
           "first": 10,
           "last": 13,
           "topic": "Selected generic equipment and creature recipes"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "lustria",
+      "title": "Lustria",
+      "version": "0.1.0",
+      "edition": 4,
+      "sourceHash": "8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844",
+      "references": 56,
+      "newlyImported": 45,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 11,
+      "adaptedReferences": 1,
+      "categories": {
+        "career": 4,
+        "magic": 3,
+        "equipment": 6,
+        "property": 1,
+        "rule": 35,
+        "table": 2,
+        "trait": 5
+      },
+      "dispositions": {
+        "included": 45,
+        "excluded": 3
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 81,
+          "last": 89,
+          "topic": "Selected magic/artillery mechanics"
+        },
+        {
+          "first": 151,
+          "last": 166,
+          "topic": "New Traits and weapon/armour rules"
+        },
+        {
+          "first": 186,
+          "last": 188,
+          "topic": "Disease and symptoms"
+        },
+        {
+          "first": 191,
+          "last": 204,
+          "topic": "Selected creation and expedition procedures"
         }
       ],
       "unresolved": []

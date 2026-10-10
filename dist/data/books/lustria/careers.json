@@ -1,0 +1,498 @@
+[
+  {
+    "id": "lustria:career:interpreter",
+    "name": "Interpreter",
+    "class": "Academic",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 194,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": null,
+      "Dex": 4,
+      "Int": 1,
+      "WP": 2,
+      "Fel": 1
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Translator",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Bribery",
+          "Charm",
+          "Dodge",
+          "Gossip",
+          "Haggle",
+          "Language (Any)",
+          "Melee (Basic)",
+          "Perception",
+          "Research",
+          "Secret Signs (Any)"
+        ],
+        "talents": [
+          "Linguistics",
+          "Lip Reading",
+          "Read/Write",
+          "Speedreader"
+        ],
+        "trappings": [
+          "Magnifying Glass",
+          "Phrase Book"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Interpreter",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Charm Animal",
+          "Consume Alcohol",
+          "Cool",
+          "Evaluate",
+          "Language (Any)",
+          "Navigation"
+        ],
+        "talents": [
+          "Briber",
+          "Dealmaker",
+          "Etiquette (Any)",
+          "Supportive"
+        ],
+        "trappings": [
+          "Amulet",
+          "Clothing (In a Local Style)",
+          "Deck of Cards"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Polyglot",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Art (Any)",
+          "Intimidate",
+          "Language (Any)",
+          "Outdoor Survival"
+        ],
+        "talents": [
+          "Acute Sense (Hearing)",
+          "Blather",
+          "Bookish",
+          "Mimic"
+        ],
+        "trappings": [
+          "Book (Cryptography)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Polymath",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Language (Any)",
+          "Lore (Any)"
+        ],
+        "talents": [
+          "Impassioned Zeal (Cause)",
+          "Numismatics",
+          "Perfect Pitch",
+          "Tower of Memories"
+        ],
+        "trappings": [
+          "Impressive personal library"
+        ]
+      }
+    ],
+    "conversion": "Uses current core Skills/Talents and Fifth Edition creation/advancement. Unspecified Trappings remain descriptive with no invented prices, ammunition quantities or equipment grants."
+  },
+  {
+    "id": "lustria:career:oracle",
+    "name": "Oracle",
+    "class": "Peasant",
+    "species": [
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 196,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 4,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 2,
+      "WP": 1,
+      "Fel": 3
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Visionary",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Charm Animal",
+          "Dodge",
+          "Intuition",
+          "Navigation",
+          "Outdoor Survival",
+          "Perception",
+          "Ranged (Throwing)",
+          "Ride (Any)",
+          "Secret Signs (Lizardman)",
+          "Track"
+        ],
+        "talents": [
+          "Coolheaded",
+          "Detect Artefact",
+          "Second Sight",
+          "Sixth Sense"
+        ],
+        "trappings": [
+          "Quarterstaff"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Oracle",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Animal Care",
+          "Animal Training (Any)",
+          "Cool",
+          "Evaluate",
+          "Intimidate",
+          "Melee (Polearm)"
+        ],
+        "talents": [
+          "Magical Sense",
+          "Orientation",
+          "Roughrider",
+          "Sure Shot"
+        ],
+        "trappings": [
+          "Divining Rod",
+          "Javelin",
+          "Mask of the Old Ones"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Priest of the Old Ones",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Heal",
+          "Language (Magick)",
+          "Leadership",
+          "Lore (Magic)"
+        ],
+        "talents": [
+          "Arcane Magic (Beasts or Heavens)",
+          "Petty Magic",
+          "Luck",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Collection of Feathers and Amulets"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Polymath",
+        "status": "Silver",
+        "standing": 5,
+        "skills": [
+          "Channelling (Azyr or Ghur)",
+          "Lore (Old Ones)"
+        ],
+        "talents": [
+          "Aethyric Attunement",
+          "Instinctive Diction",
+          "Pure Soul",
+          "War Wizard"
+        ],
+        "trappings": [
+          "Recovered Magical Item"
+        ]
+      }
+    ],
+    "conversion": "Uses current core Skills/Talents and Fifth Edition creation/advancement. Unspecified Trappings remain descriptive with no invented prices, ammunition quantities or equipment grants."
+  },
+  {
+    "id": "lustria:career:survivalist",
+    "name": "Survivalist",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 198,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": 3,
+      "T": 1,
+      "I": 2,
+      "Ag": 4,
+      "Dex": null,
+      "Int": 1,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Subsister",
+        "status": "Brass",
+        "standing": 1,
+        "skills": [
+          "Cool",
+          "Dodge",
+          "Endurance",
+          "Heal",
+          "Intuition",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Perception",
+          "Stealth (Rural)",
+          "Swim"
+        ],
+        "talents": [
+          "Hardy",
+          "Sixth Sense",
+          "Stone Soup",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Hand Weapon"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Survivalist",
+        "status": "Brass",
+        "standing": 4,
+        "skills": [
+          "Consume Alcohol",
+          "Intimidate",
+          "Lore (Local)",
+          "Navigation",
+          "Ranged (Any)",
+          "Set Trap"
+        ],
+        "talents": [
+          "Field Dressing",
+          "Implacable",
+          "Iron Jaw",
+          "Resistant (Any)"
+        ],
+        "trappings": [
+          "Bedroll",
+          "Rope",
+          "Sling with Ammunition",
+          "Sturdy Boots",
+          "Waterskin"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Wild Whisperer",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Athletics",
+          "Charm Animal",
+          "Secret Signs (Ranger)",
+          "Track"
+        ],
+        "talents": [
+          "Hunter’s Eye",
+          "Menacing",
+          "Orientation",
+          "Trapper"
+        ],
+        "trappings": [
+          "Animal Traps",
+          "Repertoire of Bird Calls"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Wilderness Instructor",
+        "status": "Silver",
+        "standing": 3,
+        "skills": [
+          "Animal Care",
+          "Leadership"
+        ],
+        "talents": [
+          "Acute Sense (Hearing)",
+          "Careful Strike",
+          "Iron Will",
+          "Well-prepared"
+        ],
+        "trappings": [
+          "Antitoxin Kit",
+          "Bandage",
+          "Extra Day of Rations",
+          "Map"
+        ]
+      }
+    ],
+    "conversion": "Uses current core Skills/Talents and Fifth Edition creation/advancement. Unspecified Trappings remain descriptive with no invented prices, ammunition quantities or equipment grants."
+  },
+  {
+    "id": "lustria:career:trailblazer",
+    "name": "Trailblazer",
+    "class": "Ranger",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human",
+      "Wood Elf"
+    ],
+    "page": 200,
+    "advanceScheme": {
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 2,
+      "I": 1,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 1,
+      "WP": 3,
+      "Fel": 4
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Pioneer",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Climb",
+          "Cool",
+          "Endurance",
+          "Melee (Basic)",
+          "Navigation",
+          "Outdoor Survival",
+          "Perception",
+          "Row",
+          "Sail",
+          "Swim"
+        ],
+        "talents": [
+          "Fleet-footed",
+          "Orientation",
+          "Striding Gait (Any)",
+          "Tenacious"
+        ],
+        "trappings": [
+          "Cooking Pot",
+          "Machete",
+          "Sturdy Boots",
+          "Walking Stick",
+          "Waterskin"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Trailblazer",
+        "status": "Silver",
+        "standing": 1,
+        "skills": [
+          "Athletics",
+          "Gossip",
+          "Ranged (Blackpowder)",
+          "Ride (Horse)",
+          "Stealth (Rural)",
+          "Trade (Cartographer)"
+        ],
+        "talents": [
+          "Acute Sense (Sight)",
+          "Jump Up",
+          "Rover",
+          "Scale Sheer Surface"
+        ],
+        "trappings": [
+          "Chalk",
+          "Map",
+          "Pistol with 10 Shots",
+          "Telescope"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Pacesetter",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Bribery",
+          "Dodge",
+          "Drive",
+          "Research"
+        ],
+        "talents": [
+          "Flee!",
+          "Hardy",
+          "Seasoned Traveller",
+          "Sprinter"
+        ],
+        "trappings": [
+          "Bedroll",
+          "Grappling Hook",
+          "Trade Tools (Navigator)"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Expedition Leader",
+        "status": "Gold",
+        "standing": 1,
+        "skills": [
+          "Evaluate",
+          "Leadership"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Etiquette (Soldiers)",
+          "Inspiring",
+          "Read/Write"
+        ],
+        "trappings": [
+          "Company of Explorers",
+          "Riding Horse with Saddle and Tack",
+          "Tent",
+          "Walking Cane"
+        ]
+      }
+    ],
+    "conversion": "Uses current core Skills/Talents and Fifth Edition creation/advancement. Unspecified Trappings remain descriptive with no invented prices, ammunition quantities or equipment grants.",
+    "adaptation": "Printed Strider (Any) uses current core Striding Gait (Any), with core movement/terrain effects."
+  }
+]

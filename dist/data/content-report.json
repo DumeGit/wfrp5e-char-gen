@@ -8,14 +8,14 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 18,
-    "careers": 135,
-    "magicProfiles": 589,
+    "books": 19,
+    "careers": 139,
+    "magicProfiles": 590,
     "rituals": 17,
     "cants": 24,
     "techniques": 10,
     "runes": 71,
-    "pricedShopEntries": 416
+    "pricedShopEntries": 422
   },
   "books": [
     {
@@ -44400,9 +44400,864 @@
           "reason": "Approved core Dog/Size/training recipe; recorded Broken roll; named pack excluded."
         }
       ]
+    },
+    {
+      "id": "lustria",
+      "title": "Lustria",
+      "version": "0.1.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 15,
+        "adapted": 1,
+        "reference-only": 45,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 3,
+        "adapted": 0,
+        "reference-only": 1,
+        "unavailable": 1,
+        "deferred": 4
+      },
+      "kinds": {
+        "careers": {
+          "implemented": 3,
+          "adapted": 1,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "market": {
+          "implemented": 6,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 45,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "spells": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "weapons": {
+          "implemented": 5,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "lustria:career:interpreter",
+          "kind": "careers",
+          "name": "Interpreter",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 194
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:career:oracle",
+          "kind": "careers",
+          "name": "Oracle",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 196
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:career:survivalist",
+          "kind": "careers",
+          "name": "Survivalist",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 198
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:career:trailblazer",
+          "kind": "careers",
+          "name": "Trailblazer",
+          "status": "adapted",
+          "source": {
+            "book": "lustria",
+            "page": 200
+          },
+          "reason": "Printed Strider (Any) uses current core Striding Gait (Any), with core movement/terrain effects."
+        },
+        {
+          "contentId": "lustria:item:blowpipe",
+          "kind": "market",
+          "name": "Blowpipe",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:item:blowpipe-dart-12",
+          "kind": "market",
+          "name": "Blowpipe Dart (12)",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:item:eagle-claw",
+          "kind": "market",
+          "name": "Eagle Claw",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:item:eagle-eye",
+          "kind": "market",
+          "name": "Eagle Eye",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:item:obsinite-club",
+          "kind": "market",
+          "name": "Obsinite Club",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:item:obsinite-spiked-maul",
+          "kind": "market",
+          "name": "Obsinite Spiked Maul",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:reference:a-bit-of-a-beast",
+          "kind": "referenceEntries",
+          "name": "A Bit of a Beast",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:all-is-well",
+          "kind": "referenceEntries",
+          "name": "All is Well",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:bilious-ague",
+          "kind": "referenceEntries",
+          "name": "Bilious Ague",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:blackwater-fever",
+          "kind": "referenceEntries",
+          "name": "Blackwater Fever",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:bleeding-eyerot",
+          "kind": "referenceEntries",
+          "name": "Bleeding Eyerot",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:blindwyrm-fits",
+          "kind": "referenceEntries",
+          "name": "Blindwyrm Fits",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:brain-rot",
+          "kind": "referenceEntries",
+          "name": "Brain Rot",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 186
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:cataleptic-ague",
+          "kind": "referenceEntries",
+          "name": "Cataleptic Ague",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:chameleon",
+          "kind": "referenceEntries",
+          "name": "Chameleon",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 151
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:choking-lungblight",
+          "kind": "referenceEntries",
+          "name": "Choking Lungblight",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:cloak-of-mathlann-mathlann-prayer",
+          "kind": "referenceEntries",
+          "name": "Cloak of Mathlann — Mathlann prayer",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 81
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:contracting-thought-fog",
+          "kind": "referenceEntries",
+          "name": "Contracting Thought Fog",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:disorientation",
+          "kind": "referenceEntries",
+          "name": "Disorientation",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:exceptional-circumstances",
+          "kind": "referenceEntries",
+          "name": "Exceptional Circumstances",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 204
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:find-shelter",
+          "kind": "referenceEntries",
+          "name": "Find Shelter",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:flammable",
+          "kind": "referenceEntries",
+          "name": "Flammable",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:forage-for-food",
+          "kind": "referenceEntries",
+          "name": "Forage for Food",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:fungal-takeover",
+          "kind": "referenceEntries",
+          "name": "Fungal Takeover",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:generating-an-oracle",
+          "kind": "referenceEntries",
+          "name": "Generating an Oracle",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 197
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:ghyran-up-the-amaxon",
+          "kind": "referenceEntries",
+          "name": "Ghyran up the Amaxon",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:grim-lustria",
+          "kind": "referenceEntries",
+          "name": "Grim (Lustria)",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 165
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:keep-watch",
+          "kind": "referenceEntries",
+          "name": "Keep Watch",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 204
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:lingering-vapours",
+          "kind": "referenceEntries",
+          "name": "Lingering Vapours",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:lizardman-scales-and-armour",
+          "kind": "referenceEntries",
+          "name": "Lizardman scales and armour",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:lizardman-weapon-training-and-blowpipes",
+          "kind": "referenceEntries",
+          "name": "Lizardman weapon training and Blowpipes",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:lustrian-weather",
+          "kind": "referenceEntries",
+          "name": "Lustrian Weather",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 202
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:make-camp",
+          "kind": "referenceEntries",
+          "name": "Make Camp",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 204
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:map-the-route",
+          "kind": "referenceEntries",
+          "name": "Map the Route",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 204
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:necrotic-foot-rot",
+          "kind": "referenceEntries",
+          "name": "Necrotic Foot Rot",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:organ-failure",
+          "kind": "referenceEntries",
+          "name": "Organ Failure",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:parasitization",
+          "kind": "referenceEntries",
+          "name": "Parasitization",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:practise-a-skill",
+          "kind": "referenceEntries",
+          "name": "Practise a Skill",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 204
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:rain-showers",
+          "kind": "referenceEntries",
+          "name": "Rain Showers",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:repair-a-boat",
+          "kind": "referenceEntries",
+          "name": "Repair a Boat",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 204
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:stationary-attacker",
+          "kind": "referenceEntries",
+          "name": "Stationary Attacker",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 166
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:stifling-humidity",
+          "kind": "referenceEntries",
+          "name": "Stifling Humidity",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 202
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:telepathy",
+          "kind": "referenceEntries",
+          "name": "Telepathy",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 151
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:thought-fog",
+          "kind": "referenceEntries",
+          "name": "Thought Fog",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 187
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:torrential-downpour",
+          "kind": "referenceEntries",
+          "name": "Torrential Downpour",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:travel-endeavours-and-fatigue",
+          "kind": "referenceEntries",
+          "name": "Travel Endeavours and fatigue",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:tropical-storm",
+          "kind": "referenceEntries",
+          "name": "Tropical Storm",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 203
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:volley",
+          "kind": "referenceEntries",
+          "name": "Volley",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:warpdust-typhoons",
+          "kind": "referenceEntries",
+          "name": "Warpdust Typhoons",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 89
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:waterlungs-mathlann-prayer",
+          "kind": "referenceEntries",
+          "name": "Waterlungs — Mathlann prayer",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 81
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:yellow-skull-fever",
+          "kind": "referenceEntries",
+          "name": "Yellow-Skull Fever",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 188
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:spell:shroud-of-fog",
+          "kind": "spells",
+          "name": "Shroud of Fog",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 81
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:weapon:blowpipe",
+          "kind": "weapons",
+          "name": "Blowpipe",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:weapon:eagle-claw",
+          "kind": "weapons",
+          "name": "Eagle Claw",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:weapon:eagle-eye",
+          "kind": "weapons",
+          "name": "Eagle Eye",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 89
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:weapon:obsinite-club",
+          "kind": "weapons",
+          "name": "Obsinite Club",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:weapon:obsinite-spiked-maul",
+          "kind": "weapons",
+          "name": "Obsinite Spiked Maul",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        }
+      ],
+      "features": [
+        {
+          "id": "lustria:feature:curated-mechanical-references",
+          "name": "Curated mechanical references",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 186
+          },
+          "reason": "Disease/symptom procedures, weather, expedition actions and new Traits. No live disease, travel or combat automation."
+        },
+        {
+          "id": "lustria:feature:five-weapon-profiles-and-six-purchases",
+          "name": "Five weapon profiles and six purchases",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 163
+          },
+          "reason": "Printed weapon profiles, prices, weights and quantities; Blowpipe group added. Existing duplicate profiles are not overwritten."
+        },
+        {
+          "id": "lustria:feature:four-player-careers",
+          "name": "Four player Careers",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 194
+          },
+          "reason": "Interpreter, Oracle, Survivalist and Trailblazer reuse core Skills/Talents and current advancement; no automatic core Career replacements."
+        },
+        {
+          "id": "lustria:feature:generic-creatures-and-caste-mark-templates",
+          "name": "Generic creatures and caste/mark templates",
+          "status": "deferred",
+          "source": {
+            "book": "lustria",
+            "page": 139
+          },
+          "reason": "Geometric source inventory extracted; publication awaits the user's requested Size, Trait and sacred-mark conversions."
+        },
+        {
+          "id": "lustria:feature:high-magic-and-mathlann-prayers",
+          "name": "High Magic and Mathlann prayers",
+          "status": "deferred",
+          "source": {
+            "book": "lustria",
+            "page": 127
+          },
+          "reason": "Awaiting explicit duplicate-definition policy and distinct patron options; original prayers remain readable references."
+        },
+        {
+          "id": "lustria:feature:lustrian-career-roll-table",
+          "name": "Lustrian Career roll table",
+          "status": "unavailable",
+          "source": {
+            "book": "lustria",
+            "page": 192
+          },
+          "reason": "Multiple overlapping/missing ranges, including High Elf Sailor/Smuggler and Dwarf/Halfling Smuggler/Stevedore. Probabilities are not guessed."
+        },
+        {
+          "id": "lustria:feature:named-characters-and-campaign-management",
+          "name": "Named characters and campaign management",
+          "status": "deferred",
+          "source": {
+            "book": "lustria",
+            "page": 210
+          },
+          "reason": "Named foundations, colony/ship managers, live play and adventure scenes remain outside creator scope."
+        },
+        {
+          "id": "lustria:feature:playable-skinks-and-chameleon-skinks",
+          "name": "Playable Skinks and Chameleon Skinks",
+          "status": "deferred",
+          "source": {
+            "book": "lustria",
+            "page": 160
+          },
+          "reason": "Awaiting the user's Fifth Edition allocations, inherent-Trait and Fate/Fortune decisions; no invented starting values."
+        },
+        {
+          "id": "lustria:feature:shroud-of-fog",
+          "name": "Shroud of Fog",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 81
+          },
+          "reason": "Compatible new Shadows spell; situational effects are descriptive."
+        }
+      ]
     }
   ],
   "aliases": [
+    {
+      "kind": "talents",
+      "from": "Fleet Footed",
+      "to": "Fleet-footed",
+      "scope": "lustria",
+      "source": {
+        "book": "lustria",
+        "page": 200
+      },
+      "reason": "Printed spelling uses the canonical core Talent; no effect changes."
+    },
+    {
+      "kind": "talents",
+      "from": "Resistance (Any)",
+      "to": "Resistant (Any)",
+      "scope": "lustria",
+      "source": {
+        "book": "lustria",
+        "page": 198
+      },
+      "reason": "Printed heading uses the canonical core Resistant Talent."
+    },
+    {
+      "kind": "talents",
+      "from": "Strider (Any)",
+      "to": "Striding Gait (Any)",
+      "scope": "lustria",
+      "source": {
+        "book": "lustria",
+        "page": 200
+      },
+      "reason": "Previously approved core equivalent; Trailblazer explains the actual conversion as Legacy."
+    },
     {
       "kind": "gear-weight",
       "from": "Large Sack",

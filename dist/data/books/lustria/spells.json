@@ -1,0 +1,13 @@
+[
+  {
+    "id": "lustria:spell:shroud-of-fog",
+    "name": "Shroud of Fog",
+    "category": "Shadows",
+    "page": 81,
+    "cn": "8",
+    "range": "You",
+    "target": "AoE (Willpower Bonus Miles)",
+    "duration": "Willpower minutes",
+    "text": "You summon a thick fog that blankets the region. Visibility is reduced to 10 yards. The fog is non-magical and cannot be Dispelled."
+  }
+]

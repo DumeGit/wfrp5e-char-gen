@@ -1,0 +1,62 @@
+[
+  {
+    "id": "lustria:weapon:obsinite-club",
+    "name": "Obsinite Club",
+    "kind": "melee",
+    "group": "Basic",
+    "enc": 1,
+    "reach": "Short",
+    "damage": "SB+3",
+    "qualities": "Penetrating",
+    "page": 163,
+    "text": "Printed Lustrian-market price and Availability; Old World prices are not specified."
+  },
+  {
+    "id": "lustria:weapon:obsinite-spiked-maul",
+    "name": "Obsinite Spiked Maul",
+    "kind": "melee",
+    "group": "Basic",
+    "enc": 2,
+    "reach": "Average",
+    "damage": "SB+4",
+    "qualities": "Penetrating, Pummel",
+    "page": 163,
+    "text": "Printed Lustrian-market price and Availability; Old World prices are not specified."
+  },
+  {
+    "id": "lustria:weapon:blowpipe",
+    "name": "Blowpipe",
+    "kind": "ranged",
+    "group": "Blowpipe",
+    "enc": 1,
+    "reach": "20 yards",
+    "damage": "0",
+    "qualities": "Reload 1",
+    "page": 163,
+    "text": "Printed Lustrian-market price and Availability; Old World prices are not specified."
+  },
+  {
+    "id": "lustria:weapon:eagle-claw",
+    "name": "Eagle Claw",
+    "kind": "ranged",
+    "group": "Engineering",
+    "enc": 25,
+    "reach": "150 yards",
+    "damage": "13",
+    "qualities": "Accurate or Volley 6, Crewed 2, Reload 3",
+    "page": 89,
+    "text": "Printed Elven artillery profile. Volley reduces Damage by 4 and rolls each shot separately."
+  },
+  {
+    "id": "lustria:weapon:eagle-eye",
+    "name": "Eagle Eye",
+    "kind": "ranged",
+    "group": "Engineering",
+    "enc": 4,
+    "reach": "90 yards",
+    "damage": "11",
+    "qualities": "Damaging, Crewed 1, Reload 1",
+    "page": 89,
+    "text": "Printed compact Eagle Eye bolt thrower."
+  }
+]

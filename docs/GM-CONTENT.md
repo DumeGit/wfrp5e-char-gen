@@ -24,6 +24,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Sea of Claws | 13 | 0 | Profiles/templates selectable; shared PC options always available |
 | Taverns of the Old World | 12 | 0 | Profiles/templates selectable; shared PC options always available |
 | The Corsairs of Captain Flariel | 2 | 8 | Profiles/templates selectable; shared PC options always available |
+| Lustria | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 | Sea of Claws — Naval artillery | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 
 | Profile | Source | Category | Legacy |

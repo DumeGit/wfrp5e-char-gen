@@ -1,0 +1,67 @@
+[
+  {
+    "id": "lustria:item:obsinite-club",
+    "name": "Obsinite Club",
+    "page": 163,
+    "price": "1 GC",
+    "enc": 1,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Printed Lustrian-market price and Availability; Old World prices are not specified."
+  },
+  {
+    "id": "lustria:item:obsinite-spiked-maul",
+    "name": "Obsinite Spiked Maul",
+    "page": 163,
+    "price": "2 GC",
+    "enc": 2,
+    "availability": "Scarce",
+    "category": "Weapons",
+    "text": "Printed Lustrian-market price and Availability; Old World prices are not specified."
+  },
+  {
+    "id": "lustria:item:blowpipe",
+    "name": "Blowpipe",
+    "page": 163,
+    "price": "3 GC",
+    "enc": 1,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Printed Lustrian-market price and Availability; Old World prices are not specified."
+  },
+  {
+    "id": "lustria:item:eagle-claw",
+    "name": "Eagle Claw",
+    "page": 89,
+    "price": "200 GC",
+    "enc": 25,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Printed Elven artillery profile. Volley reduces Damage by 4 and rolls each shot separately."
+  },
+  {
+    "id": "lustria:item:eagle-eye",
+    "name": "Eagle Eye",
+    "page": 89,
+    "price": "45 GC",
+    "enc": 4,
+    "availability": "Exotic",
+    "category": "Weapons",
+    "text": "Printed compact Eagle Eye bolt thrower."
+  },
+  {
+    "id": "lustria:item:blowpipe-dart-12",
+    "name": "Blowpipe Dart (12)",
+    "page": 163,
+    "price": "10/–",
+    "enc": 0,
+    "availability": "Exotic",
+    "category": "Ammunition",
+    "ammunition": {
+      "range": "As weapon",
+      "damage": "+1",
+      "qualities": "—"
+    },
+    "text": "Twelve printed darts. Poison is separate and is not automatically supplied. Price/Availability assume a suitable Lustrian market."
+  }
+]

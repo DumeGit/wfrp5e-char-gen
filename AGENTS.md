@@ -2,6 +2,8 @@
 
 ## Product and authority
 
+- Read docs/LUSTRIA.md before extending Lustria. Its initial independent batch contains four Careers, five weapons/six purchases, Shroud of Fog and 45 mechanical reading references. Playable Skinks, bestiary/caste/sacred-mark templates, conflicting Career ranges and duplicate magic await ten explicit conversion decisions; proposals are not approvals. Preserve core Lawyer/Mystic and random tables, single-slot Oracle alternatives and selective Legacy notes. Reuse GM shared options, but do not expose a GM switch with zero foundations/templates. Update partial-scope warnings and coverage after approved batches.
+
 - Read docs/CORSAIRS.md before extending The Corsairs of Captain Flariel. Its five outstanding conversions are now approved: fixed Ship’s Crew Skills with Entertain/instrument choices; Sorceress exact mixed spell counts and explicit matching Lore/Wind; Dog-only Warhound with core Average Size and recorded Broken roll; optional acquired additional Body armour; Beastmaster core Whip and explicit Net. Preserve geometric table columns (Corsair Dex, Oarsman Fel, Lookout Dex), individually optional Chief Mate Talents and selective Legacy notes. Crop remains unavailable; cloak price/weight remain unknown; Reaper follows its explicit Sea of Claws cross-reference without invented prices. Named characters, ships and adventures stay excluded.
 
 - This is a WFRP Fifth Edition **character creator**, currently WIP. Campaign play and ongoing character management are deferred: no conditions, combat tracking, spent Fortune, XP awards, selling, haggling, hireling management, or downtime/career-change systems unless the user requests them.

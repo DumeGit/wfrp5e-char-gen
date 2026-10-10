@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"4ed35fe5d5cf56162d18";
+const CACHE=CACHE_PREFIX+"8adf5de5e03fefe5747f";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -166,6 +166,14 @@ const ASSETS=[
  "data/books/high-elf/techniques.json",
  "data/books/high-elf/weapons.json",
  "data/books/index.json",
+ "data/books/lustria/careers.json",
+ "data/books/lustria/coverage.json",
+ "data/books/lustria/manifest.json",
+ "data/books/lustria/market.json",
+ "data/books/lustria/reference-entries.json",
+ "data/books/lustria/rules.json",
+ "data/books/lustria/spells.json",
+ "data/books/lustria/weapons.json",
  "data/books/night-parade/coverage.json",
  "data/books/night-parade/manifest.json",
  "data/books/night-parade/reference-entries.json",

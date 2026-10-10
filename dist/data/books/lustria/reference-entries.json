@@ -1,0 +1,363 @@
+[
+  {
+    "id": "lustria:reference:waterlungs-mathlann-prayer",
+    "name": "Waterlungs — Mathlann prayer",
+    "page": 81,
+    "category": "magic",
+    "topic": "Mathlann",
+    "text": "These Miracles are only available to Elven Priests of Mathlann. Waterlungs Range: Fellowship yards Target: 1 Duration: Fellowship Bonus Hours Targets can breathe underwater, but in air they’re subject to Suffocation and Drowning (WFRP page 181). Affected targets feel drawn to water and require only a bucketful for breathing. You may affect an extra target for every +2 SL."
+  },
+  {
+    "id": "lustria:reference:cloak-of-mathlann-mathlann-prayer",
+    "name": "Cloak of Mathlann — Mathlann prayer",
+    "page": 81,
+    "category": "magic",
+    "topic": "Mathlann",
+    "text": "These Miracles are only available to Elven Priests of Mathlann. Cloak of Mathlann Range: Fellowship yards Target: 1 boat or ship Duration: Fellowship minutes You turn a ship invisible, along with its crew. The interior of the ship remains visible to everyone onboard. Crew members become visible upon leaving the ship. Invisible ships still leave a wake behind them, and create eddies in the fog, which can be noticed with a Challenging (+0) Perception Test. Ships with more than a single mast require +2 SL per extra mast to cloak. Black Arks and sea monsters cannot be cloaked."
+  },
+  {
+    "id": "lustria:reference:volley",
+    "name": "Volley",
+    "page": 89,
+    "category": "property",
+    "topic": "Weapon Quality",
+    "text": "NEW WEAPON QUALITY: VOLLEY The weapon can discharge multiple shots at once, the number of which is indicated by this quality’s level. Each shot rolls to hit separately. Damage rating is reduced by 4 when fired in Volley mode."
+  },
+  {
+    "id": "lustria:reference:warpdust-typhoons",
+    "name": "Warpdust Typhoons",
+    "page": 89,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "Ships caught in a typhoon must Batten Down (Sea of Claws, page 107) or the sails are torn to shreds. A Challenging (+0) Boat Handling Test must be rolled to avoid capsizing. For every round of direct exposure, creatures must take 1d10+1 Damage, test for Minor Corruption, and pass an Average (+20) Strength Test or fly 1d10 feet in a random direction and receive the Prone Condition. Warpdust Typhoons typically last 5–10 rounds before moving on."
+  },
+  {
+    "id": "lustria:reference:lizardman-scales-and-armour",
+    "name": "Lizardman scales and armour",
+    "page": 163,
+    "category": "rule",
+    "topic": "Lizardmen",
+    "text": "Weapons and Armour Skinks possess scaly hides that provide them with 1 Point of Armour on all locations at all times. This does not impose encumbrance. The scaly armour can be sacrificed to ignore a Critical just like normal armour, with the assumption being that the blow has hewn off many of the scales on that part of the body, leaving a painful flesh wound in their place. This wound will heal over time, but will be soft and tender until it does so. It generally takes a Skink six months to regrow scales lost in this way.\n\nSpells and chemical effects that ruin armour through corrosive or caustic effects do not affect Lizardman scales. Count scales as leather for the purpose of other rules such as spell effects.\n\nLizardmen do not like to wear steel plate or chainmail armour, finding the experience one to which they have a strong natural aversion. A Lizardman could conceivably be forced to wear such armour, but that armour would count twice its ENC (rather than half) when worn by a Lizardman. They can and do sometimes wear armour constructed out of bone, rope, and beaten plates of copper. This ‘Lustrian Armour’ offers the same sort of protection as Leather Armour, and can be worn over Lizardmen scales. Each piece imposes an additional point of ENC compared to its Leather equivalent due to the heavier, bulkier components. Count Lustrian Armour as leather for the purpose of other rules such as spell effects.\n\nLeather Armour could also be worn, but tends to become distressed and rotten in the humid conditions of the Lustrian jungle. Lizardmen make use of shields normally."
+  },
+  {
+    "id": "lustria:reference:lizardman-weapon-training-and-blowpipes",
+    "name": "Lizardman weapon training and Blowpipes",
+    "page": 163,
+    "category": "rule",
+    "topic": "Weapons",
+    "text": "Skinks tend not to adapt to weaponry for which special training is required. Fencing weapons, parrying weapons, cavalry weapons, flail weapons, double-handed weapons, and polearms other than spears involve techniques that are not understood by Skinks; likewise crossbows, blackpowder weapons, and engineering weapons. It is feasible that a Skink could develop skill with such weapons, but only as a result of an Endeavour, under the correct circumstances (willing teacher and so on), and only if the GM agrees that the Skink in question should be afforded such exceptional training.\n\nBlowpipes represent a new group of ranged weapons. If a Character lacks Ranged (Blowpipe) they may use the weapon with their Ballistic Skill, however, the weapon gains the Dangerous Weapon Quality if used by an untrained Character. Blowpipe darts do little physical damage. Rather, they deliver a dose of poison to their targets. There are a variety of poisons available in Lustria, most infamously the venom of the Lustrian Treefrog (see page 170). Other poisons used on blowpipe darts could be the equivalent to Black Lotus, Heartkill, Moonflower, or Spit (see WFRP page 306)."
+  },
+  {
+    "id": "lustria:reference:a-bit-of-a-beast",
+    "name": "A Bit of a Beast",
+    "page": 191,
+    "category": "rule",
+    "topic": "Magic",
+    "text": "A BIT OF A BEAST SLs from Channelling (Ghur) Tests are doubled in the jungles of Lustria, but a Critical Channelling results in a Major Miscast rather than a Minor Miscast. If you have the Aethyric Attunement Talent, roll on the Minor Miscast Table instead."
+  },
+  {
+    "id": "lustria:reference:ghyran-up-the-amaxon",
+    "name": "Ghyran up the Amaxon",
+    "page": 191,
+    "category": "rule",
+    "topic": "Magic",
+    "text": "GHYRAN UP THE AMAXON SLs from Channelling (Ghyran) Tests are doubled on the rivers and in the swamps, but a Critical Channelling results in a Major Miscast rather than a Minor Miscast. If you have the Aethyric Attunement Talent, roll on the Minor Miscast Table instead."
+  },
+  {
+    "id": "lustria:reference:generating-an-oracle",
+    "name": "Generating an Oracle",
+    "page": 197,
+    "category": "rule",
+    "topic": "Character creation",
+    "text": "GENERATING AN ORACLE In Lustria the Oracle Career replaces the Mystic Career. Any other Careers which replace the Mystic can be selected or rolled for as normal by Players who generate an Oracle.\n\nIf a Player generates a Mystic under circumstances where the influence of the Old Ones is not intended to be the focus of the adventure, they may still choose to be an Oracle if the GM agrees.\n\nA Mystic Character arriving in Lustria does not become an Oracle; they must spend XP to adopt the career as usual."
+  },
+  {
+    "id": "lustria:reference:stifling-humidity",
+    "name": "Stifling Humidity",
+    "page": 202,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "Stifling Humidity The temperature is so high that Characters might abandon heavy gear to prevent heat stroke. All Characters immediately take a Difficulty (−10) Endurance Test to avoid heat Exposure. If the weather persists across the expedition, Characters may accumulate multiple failures, with the effects listed on WFRP page 181."
+  },
+  {
+    "id": "lustria:reference:all-is-well",
+    "name": "All is Well",
+    "page": 203,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "All is Well The weather is as tolerable as can be reasonably expected, and applies no further effects."
+  },
+  {
+    "id": "lustria:reference:find-shelter",
+    "name": "Find Shelter",
+    "page": 203,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Find Shelter You anticipate upcoming weather conditions, and make sure your company is somewhere safe and covered when the worst hits. Make a Difficult (−10) Outdoor Survival Test, with a −10 modifier in Torrential Downpour, or a −20 modifier in a Tropical Storm. If you succeed, all Characters may ignore ongoing Test penalties due to Exposure or rainfall for the rest of the Stage, and avoid suffering injuries in a Tropical Storm."
+  },
+  {
+    "id": "lustria:reference:forage-for-food",
+    "name": "Forage for Food",
+    "page": 203,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Forage for Food Acquiring supplies in the jungle is a great way to reduce the weight of rations — so long as you can distinguish the nutritious from the toxic. Make a Difficult (−10) Outdoor Survival Test to find something to forage on your journey. If you succeed, see the options for Gathering Food and Herbs on WFRP page 127 to calculate how many travelling companions you can feed this Stage. If you suffer an Impressive or Astounding Failure, you ingest something poisonous instead, and gain a Poisoned Condition (instead of a Fatigued Condition). You suffer 1 Wound, spend Resolve or Test Endurance or Heal (with the Condition’s −10 modifier) to remove the Condition, and repeat this process until you remove the Condition or perish."
+  },
+  {
+    "id": "lustria:reference:lingering-vapours",
+    "name": "Lingering Vapours",
+    "page": 203,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "Lingering Vapours A thin coating of mist persists in the early hours of the day. When forced to take action at these times, visibility is decreased to 25 yards, and shooting attacks take a −20 penalty. Jungle Encounters (page 205) and other hazards may well be timed to occur whilst the fog is still lingering."
+  },
+  {
+    "id": "lustria:reference:rain-showers",
+    "name": "Rain Showers",
+    "page": 203,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "Rain Showers Persistent precipitation reduces visibility to 25 yards, imposes a −10 on all attack Tests, and leaves everyone in a bad mood. The damp conditions facilitate the transmission of disease, imposing a penalty of −1 SL on any Endurance Tests to avoid contraction."
+  },
+  {
+    "id": "lustria:reference:torrential-downpour",
+    "name": "Torrential Downpour",
+    "page": 203,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "Torrential Downpour Black clouds barely glimpsed through treetops deposit a constant hail of rain. Visibility is reduced to near zero, sounds below a shout are impossible to hear, and all physical Tests suffer a −10 penalty. Ranged attacks suffer a −20 penalty, and exposed gunpowder is immediately ruined. Anything not under cover is soaked through within minutes, imposing a −10 penalty on Tests to avoid disease contraction. Characters should make Average (+20) Charm Animal or Ride Tests to prevent animals with the Skittish Trait from bolting at crashes of thunder."
+  },
+  {
+    "id": "lustria:reference:tropical-storm",
+    "name": "Tropical Storm",
+    "page": 203,
+    "category": "rule",
+    "topic": "Weather",
+    "text": "Tropical Storm The lethal winds of an approaching typhoon temporarily grounds the party. Increase the number of Stages in the expedition by +1; there can be no travelling through this storm, only attempts to find cover. In addition to the effects of Torrential Downpour, the Characters forgo the opportunity to undertake any Endeavours this Stage, except to Find Shelter. If no Character successfully Finds Shelter, all Characters are hit on the body for 12 Damage."
+  },
+  {
+    "id": "lustria:reference:travel-endeavours-and-fatigue",
+    "name": "Travel Endeavours and fatigue",
+    "page": 203,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Each Character may choose one Endeavour per Stage, resolved before Encounters, in whatever order the Players choose. The strain of jungle travel is tiring enough that extra stresses can push a Character to their limit. A Character who fails a Test as part of an Endeavour gains a Fatigued Condition (WFRP page 169). Fatigued Conditions cannot usually be removed until the Characters make it to the safety of a New World colony or similar shelter, unless a Character uses the Make Camp Endeavour (page 204)."
+  },
+  {
+    "id": "lustria:reference:keep-watch",
+    "name": "Keep Watch",
+    "page": 204,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Keep Watch You stay vigilant at all times, scouting ahead and volunteering for additional watch duties, to try and keep your companions safe. With a successful Difficult (−10) Perception Test, you and your allies cannot be Surprised during this Stage of your expedition. On an Impressive or Astounding Failure, the GM may choose to reverse the tens and units digits of their next roll on the Jungle Encounters Table, as paranoia redirects the company into an even more hazardous situation."
+  },
+  {
+    "id": "lustria:reference:map-the-route",
+    "name": "Map the Route",
+    "page": 204,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Map the Route The shifting trails of the jungle defy attempts at permanent recording, but keeping track of your steps can be very useful if you’re about to retrace them. If you have the necessary materials (paper, quills, ink), you can produce a map with an Extended Challenging (+0) Trade (Cartography) or Art (Drawing) Test, requiring SL equal to twice the number of Stages in the expedition. Test each time the Endeavour is selected. If you complete the map before reaching your destination, and make a return journey along the same path, the company gains +20 on its Lore or Navigation Test before setting off home. You may also sell the map during the next period of downtime, but due to the degrading accuracy over time, the base selling price is only 1 Gold Crown."
+  },
+  {
+    "id": "lustria:reference:make-camp",
+    "name": "Make Camp",
+    "page": 204,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Make Camp A little extra effort to make stops on the journey comfortable can work wonders to soothe the stresses of travel. Make a Difficult (−10) Outdoor Survival or Heal Test, removing 1 Fatigued Condition from yourself or an ally on a success, and additional Fatigued Conditions equal to the SL. Alternatively, a successful Heal Test can provide benefits as per WFRP page 123."
+  },
+  {
+    "id": "lustria:reference:exceptional-circumstances",
+    "name": "Exceptional Circumstances",
+    "page": 204,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "EXCEPTIONAL CIRCUMSTANCES Most Endeavours attempted between adventures require access to the amenities of civilisation, and are not suitable for undertaking in the jungle. However, GMs may allow Characters to use other Endeavours (such as those in WFRP pages 196–201), with sufficient justification. In this way, a Character might Train an Animal to fetch, collect Income as the Hunter for a larger company, or interrogate the Secret Signs of other Rangers for The Latest News. Note that the With Great Power… and Elf Improvement rules that reduce the use of Endeavours between adventures (WFRP page 195) do not apply in the middle of jungle expeditions."
+  },
+  {
+    "id": "lustria:reference:practise-a-skill",
+    "name": "Practise a Skill",
+    "page": 204,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Practise a Skill Embracing challenge as a way to hone your skillset is a good way to combat the monotony of travel. Make a Difficult (−10) Test of a Skill you’d have an opportunity to practise during a jungle expedition — Outdoor Survival, Trade (Herbalism), Set Traps, etc. If you succeed, you may choose to reverse one Test roll of that Skill during the expedition or the rest of the adventure."
+  },
+  {
+    "id": "lustria:reference:repair-a-boat",
+    "name": "Repair a Boat",
+    "page": 204,
+    "category": "rule",
+    "topic": "Jungle expeditions",
+    "text": "Repair a Boat Lasting boat repairs require specialist facilities and a team of professionals, but a Character with appropriate Trade Tools (Shipwright, Carpenter, etc.) can implement temporary repairs to their vessel to last until the end of the expedition. Make a Difficult (−10) Trade (Boatbuilding or Carpentry) Test to restore 1d10+SL Wounds to your boat, or remove the ongoing penalties from a river Encounter (page 206)."
+  },
+  {
+    "id": "lustria:reference:disorientation",
+    "name": "Disorientation",
+    "page": 188,
+    "category": "rule",
+    "topic": "Disease symptoms",
+    "text": "All Tests based on Ag, Dex, or Int suffer −1 SL while suffering Disorientation. Treatment: There is no treatment, the symptom simply ends when the disease that causes it does."
+  },
+  {
+    "id": "lustria:reference:organ-failure",
+    "name": "Organ Failure",
+    "page": 188,
+    "category": "rule",
+    "topic": "Disease symptoms",
+    "text": "Organ Failure Part of your body is severely affected by the disease. Consult the table below to determine the effects depending on which part of the body is stricken.\n\nEyes Perception Tests that rely on sight suffer a –3 SL penalty.\n\nNose Perception Tests that rely on smell suffer a –3 SL penalty.\n\nEars Perception Tests that rely on hearing suffer a –3 SL penalty.\n\nMouth Language Tests suffer a –3 SL penalty.\n\nTreatment: Soothing unguents can be bought from all good apothecaries — ten doses for a shilling. Application of a dose alleviates the symptom for 1d10 hours."
+  },
+  {
+    "id": "lustria:reference:parasitization",
+    "name": "Parasitization",
+    "page": 188,
+    "category": "rule",
+    "topic": "Disease symptoms",
+    "text": "Parasitization Parasitization is not so much a symptom as an underlying cause. The effects of the parasitization are actually the other symptoms listed alongside it. These are caused by the fact that the Character suffering from the disease is playing host to an organism living within their body.\n\nDiseases involving parasitization can be particularly lengthy and gruelling, and whilst other symptoms of the disease may be treated individually, they will remain a danger until the parasitization itself is resolved.\n\nTreatment: The only reliable way to deal with parasitization is to make the body a hostile environment for the organism using it as a habitat. This involves the host creature suffering from one or more Poisoned Conditions for a number of Rounds equal to the Toughness Bonus of the creature that caused the disease. After that number of Rounds has passed, the parasitic creature must make a Challenging (+0) Endurance Test, and if this is failed, the parasite is killed. Provided they survive the ordeal, the Character recovers from the disease the following day.\n\nExample: The Dwarf Explorer Grum Durisson is bitten by a Blindwyrm, and contracts Blindwyrm Fits. A Blindwyrm has a Toughness of 25, so Grum must suffer from a Poisoned Condition for 2 Rounds, after which the Blindwyrm must score 25 or less on an Endurance Test. If the Blindwyrm fails the Test, it is killed and Grum may begin his recovery. If the Blindwyrm succeeds Grum continues to suffer from the disease, but may try to rid himself of it again by taking yet more poison."
+  },
+  {
+    "id": "lustria:reference:bilious-ague",
+    "name": "Bilious Ague",
+    "page": 186,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: If you fail an Easy (+40) Endurance Test after contact is made with an infected individual. Incubation: 2d10 minutes Duration: 1d10 days of the Nausea symptom followed by 2d10 hours of the Fever symptom, then 2d10 days of the Malaise symptom Symptoms: Nausea then Fever then Malaise Bleeding Eyerot This infection causes a frothy yellow-green discharge to issue from the eyes, obscuring the sufferer’s vision. The sufferer weeps a steady stream of bloody tears and finds it increasingly difficult to see. Whilst the disease is rarely deadly, it leaves its victims weakened and disabled."
+  },
+  {
+    "id": "lustria:reference:bleeding-eyerot",
+    "name": "Bleeding Eyerot",
+    "page": 186,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: If you fail an Average (+20) Endurance Test after drinking infected water. Incubation: 3d10 + 5 days Duration: 3d10 + 8 days Symptoms: Lingering (Challenging), Organ Failure (Eyes)"
+  },
+  {
+    "id": "lustria:reference:blindwyrm-fits",
+    "name": "Blindwyrm Fits",
+    "page": 186,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: Blindwyrm Fits may be contracted as a result of being bitten by a Pallid Blindwyrm. Incubation: 1d10 hours Duration: The disease lasts until the Parasitization symptom is resolved Symptoms: Flux, Nausea, Parasitization Blackwater Fever Victims of this insidious illness experience days of intermittent fever, scabrous pustules, and dark urine that is painful to pass."
+  },
+  {
+    "id": "lustria:reference:blackwater-fever",
+    "name": "Blackwater Fever",
+    "page": 186,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: If you fail an Easy (+40) Endurance Test after drinking infected water. Incubation: 1d10 hours Duration: 1d10 days Symptoms: Fever, Malaise, Pox Brain Rot Brain Rot is a dreaded disease caused by the Brainfluke, an aquatic parasitic worm. In its larval state, the Brainfluke can enter a swimming or bathing victim through any orifice. The Brainfluke makes its way to the brain where it feeds on blood while it incubates."
+  },
+  {
+    "id": "lustria:reference:brain-rot",
+    "name": "Brain Rot",
+    "page": 186,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: The disease is contracted if the victim suffers a Critical Hit to the head when attacked by a Brainfluke. Incubation: 1d10 days Duration: The disease lasts until the Parasitization symptom is resolved Symptoms: Convulsions, Disorientation, Organ Failure (Eyes and Nose), Parasitization"
+  },
+  {
+    "id": "lustria:reference:cataleptic-ague",
+    "name": "Cataleptic Ague",
+    "page": 187,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: If you fail an Challenging (+0) Endurance Test after being bitten by a Blood Bat. Incubation: 1d10 hours Duration: 3d10 hours Symptoms: Blight, Convulsions, Fever Choking Lungblight The combination of extreme humidity, spores from moulds, and the foetid gases that leak from swamps and pools in Lustria can lead to an affliction involving the lungs. Choking Lungblight narrows the airways and causes a wracking cough followed by a stridorous whoop during inhalation."
+  },
+  {
+    "id": "lustria:reference:choking-lungblight",
+    "name": "Choking Lungblight",
+    "page": 187,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: Every day spent in the more humid parts of the Lustrian jungle, or the more miasmic area of the Lustrian swamps, a Character should take an Average (+20) Endurance Test. If the test is failed they contract Choking Lungblight. Incubation: 2d10 hours Duration: 1d10 days Symptoms: Coughs and Sneezes, Fever, Lingering, Malaise Fungal Takeover This horrendous disease can result from blundering into a Blood Hungry Spore Cloud (page 167). Not only do the spores rasp their way into warm-blooded flesh, but once inside the bloodstream they can take root within the body’s nervous system, and grow until the sufferer is reduced to a hideous hybrid, with fungal growths sprouting from their living flesh."
+  },
+  {
+    "id": "lustria:reference:fungal-takeover",
+    "name": "Fungal Takeover",
+    "page": 187,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: A warm-blooded creature that receives a Bleeding Condition from a Blood Hungry Spore Cloud must take an Average (+20) Endurance Test. If the test is failed they suffer from Fungal Takeover. Incubation: 2d10 days Duration: As per the Paratization symptom Symptoms: Disorientation, Gangrene, Malaise, Paratization, Wounded"
+  },
+  {
+    "id": "lustria:reference:necrotic-foot-rot",
+    "name": "Necrotic Foot Rot",
+    "page": 187,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: If a warm-blooded Character spends a week wandering Lustria’s swamps and jungles they must make a Challenging (+0) Outdoor Survival Test. Failure indicates they have contracted Necrotic Foot Rot. Incubation: 1d10 hours Duration: 4+1d10 days Symptoms: Buboes, Gangrene (affecting the Legs), Malaise, Wounded Thought Fog By the design of the Old Ones, powerful wards once cloaked Lustria, disorientating invaders. At their most potent, these wards guarded the land from all intrusion, but these days, they have weakened, and travellers can make their way to Lustria without becoming bewildered. Nevertheless, they can still be felt, and cause some visitors to experience dizziness and mood swings."
+  },
+  {
+    "id": "lustria:reference:thought-fog",
+    "name": "Thought Fog",
+    "page": 187,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: Thought Fog affects warm-blooded people who visit Lustria. Not everyone suffers from Thought Fog, though why the wards work in some cases and not in others is a mystery. A Character who arrives in Lustria should Test when they first glimpse sight of the continent. Roll on the table below to see if they succumb.\n\nIncubation: Instant. Duration: Thought Fog can become chronic, but most visitors to Lustria grow used to it. Every week a Character spends in Lustria, they should Test to avoid Thought Fog again, if they succeed they are not subject to it unless they spend time away from Lustria, and then return. Symptoms: Disorientation"
+  },
+  {
+    "id": "lustria:reference:yellow-skull-fever",
+    "name": "Yellow-Skull Fever",
+    "page": 188,
+    "category": "rule",
+    "topic": "Jungle maladies",
+    "text": "Contraction: If you fail an Easy (+40) Endurance Test after contact is made with an infected individual. This disease only affects cold-blooded creatures. Incubation: 2d10 hours Duration: 2d10 days Symptoms: Convulsions, Fever, Lingering"
+  },
+  {
+    "id": "lustria:reference:contracting-thought-fog",
+    "name": "Contracting Thought Fog",
+    "page": 187,
+    "category": "table",
+    "topic": "Jungle maladies",
+    "text": "| 1d10 | Test to avoid Thought Fog |\n| --- | --- |\n| 1 | Challenging (+0) Endurance |\n| 2 | Difficult (−10) Endurance |\n| 3 | Hard (−20) Endurance |\n| 4–6 | Challenging (+0) Cool |\n| 7–8 | Difficult (−10) Cool |\n| 9–10 | Hard (−20) Cool |"
+  },
+  {
+    "id": "lustria:reference:lustrian-weather",
+    "name": "Lustrian Weather",
+    "page": 202,
+    "category": "table",
+    "topic": "Weather",
+    "text": "At the beginning of each expedition Stage, the GM rolls 1d10 to determine the weather, and directs players to apply the corresponding effects and modifiers.\n\n| Weather | Wet season d10 | Dry season d10 |\n| --- | --- | --- |\n| Stifling Humidity | 1 | 1–4 |\n| All is Well | 2 | 5–6 |\n| Lingering Vapours | 3–4 | 7 |\n| Rain Showers | 5–6 | 8 |\n| Torrential Downpour | 7–8 | 9 |\n| Tropical Storm | 9–10 | 10 |"
+  },
+  {
+    "id": "lustria:reference:telepathy",
+    "name": "Telepathy",
+    "page": 151,
+    "category": "trait",
+    "topic": "Creature Traits",
+    "text": "The creature can communicate without words, using the power of its mind to transmit and read thoughts. If the subject wants to resist their thoughts being read, they must pass an Average (+20) Cool Test."
+  },
+  {
+    "id": "lustria:reference:chameleon",
+    "name": "Chameleon",
+    "page": 151,
+    "category": "trait",
+    "topic": "Creature Traits",
+    "text": "The creature can change colour to blend into its surroundings, which makes it very hard to see. Perception Tests to spot the creature suffer a –4 SL penalty, reduced to –2 if the creature is moving. Shooting at the creature suffers a –2 SL penalty to the Ranged Test."
+  },
+  {
+    "id": "lustria:reference:flammable",
+    "name": "Flammable",
+    "page": 165,
+    "category": "trait",
+    "topic": "Creature Traits",
+    "text": "Many plants and some animals are particularly susceptible to damage caused by heat and flame. Any Tests the creature makes to avoid suffering an Ablaze Condition suffer a penalty of –20. Furthermore, creatures with the Flammable Trait suffer twice as many Wounds as they otherwise would from Ablaze Conditions."
+  },
+  {
+    "id": "lustria:reference:grim-lustria",
+    "name": "Grim (Lustria)",
+    "page": 165,
+    "category": "trait",
+    "topic": "Creature Traits",
+    "text": "(Rating) If, at the beginning of its turn, this creature does not have at least its Grim Rating in Advantage, its Advantage pool immediately increases to its Grim Rating. If the creature currently has an Entangled, Surprised, or Unconscious Condition, it does not gain this Advantage. If using the Group Advantage rules from Up in Arms, the creature generates its Grim Rating in Advantage for the Adversary Advantage Pool.",
+    "notes": "Printed Fourth Edition rule for reading; current core Grim remains the creator definition."
+  },
+  {
+    "id": "lustria:reference:stationary-attacker",
+    "name": "Stationary Attacker",
+    "page": 166,
+    "category": "trait",
+    "topic": "Creature Traits",
+    "text": "Many plants and simple invertebrates are not fully mobile and active the way that opponents in Warhammer Fantasy Roleplay are normally considered to be. Instead, they behave more like traps or environmental hazards than they do creatures. Plants such as Impaling Spikethorn, or sessile creatures such as Pallid Blindwyrms are examples of stationary attackers. Creatures with the Stationary Attacker Trait have the Immunity to Psychology Trait. They occupy a particular location, and whilst they are hostile towards suitable prey that blunder into that location, they are not able to pursue them or manoeuvre around them. They may not take Charge, Flee, Leap, Run, or Climb Actions, or any other actions besides those which are associated with their attacks and Traits. However, if an unsuspecting target moves within reach of a creature with the Stationary Attacker Trait, that creature counts as Engaged with them, and may spring an attack, inflicting the Surprised Condition on the target as it does so. The reach of a Stationary Attacker depends on its Size. Usually, Stationary Attackers blend in with the undergrowth, appearing unassuming until they make their attacks. For a Character to recognise the threat, they must first pass a Challenging (+0) Perception Test to notice the presence of the Stationary Attacker, followed by a suitable Lore Test to identify it. If either test is failed, the Character does not recognise the threat.\n\n| Size | Reach |\n| --- | --- |\n| Tiny or Little | Very Short |\n| Small | Short |\n| Average | Medium |\n| Large | Long |\n| Enormous | Very Long |\n| Monstrous | Massive |"
+  }
+]

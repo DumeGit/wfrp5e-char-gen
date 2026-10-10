@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lustria:rule:lore-choices",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "include",
+    "value": [
+      "Lustria",
+      "Old Ones"
+    ],
+    "page": 196,
+    "reason": "Printed regional and Oracle Lore choices, using core Lore rules."
+  },
+  {
+    "id": "lustria:rule:lizardman-signs",
+    "path": [
+      "skillOptions",
+      "Secret Signs"
+    ],
+    "operation": "include",
+    "value": [
+      "Lizardman"
+    ],
+    "page": 196,
+    "reason": "Printed Oracle first-level Skill."
+  },
+  {
+    "id": "lustria:rule:blowpipe-skill",
+    "path": [
+      "skillOptions",
+      "Ranged"
+    ],
+    "operation": "include",
+    "value": [
+      "Blowpipe"
+    ],
+    "page": 163,
+    "reason": "Printed new ranged group uses the existing core Ranged Skill rules."
+  }
+]

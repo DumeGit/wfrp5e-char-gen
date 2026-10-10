@@ -83,6 +83,8 @@ New Species must provide compatible starting data, background suggestions and an
 
 Unknown printed weights use `null`; unknown/variable prices are not offered as fixed-price shop purchases. Equipment profiles and capacity data feed the existing automatic creator packing. Record unresolved descriptive Trappings as text rather than guessing their contents.
 
+Lustria's initial pack is explicitly partial: four compatible Careers, equipment and one Shadows spell are available; Skink Species and GM foundations/templates await conversion decisions. Read [LUSTRIA.md](LUSTRIA.md) before expanding it. Do not infer approval from proposed conversions or enable a GM book switch without actual profiles/templates.
+
 ## Explicit variants
 
 An ordinary supplement adds options; it cannot overwrite existing entries or settings. To offer an alternate definition, create a separate `kind: "variant"` pack (it can depend on its parent supplement). It is opt-in. Career-specific variants can be selected in the Career section instead of the book selector; the animal-doctor Hedge Witch appears there when Hedge Witch and Archives III are selected. Its underlying pack selection is still recorded for save/load, export and offline use.

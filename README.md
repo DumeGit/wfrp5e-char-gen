@@ -1,5 +1,7 @@
 # WFRP Character Ledger
 
+**Lustria — initial batch** adds four opt-in Careers, five weapon profiles/six purchases, Shroud of Fog and 45 mechanical search references. GM shared catalogues reuse these options. Playable Skinks and the bestiary/templates are **pending conversion decisions**, not yet available. Sources, scope and pending questions: [LUSTRIA.md](docs/LUSTRIA.md).
+
 **The Corsairs of Captain Flariel** adds two Dark Elf GM foundations, eight sea-raider/Warhound templates, four Dark Magic spells, acquired Reaper statistics and Sea Dragon Cloak additional armour. Ship’s Crew Skill specialisations, Sorceress Lore/Wind and exact spell counts, Warhound’s Broken roll, and Beastmaster’s Net type are explicit choices. Chief Mate Talents and Dark Elf cloak grants are optional. All five clarification decisions are applied; Crop remains unavailable and unprinted cloak price/weight stay unknown. Details: [CORSAIRS.md](docs/CORSAIRS.md).
 
 **Taverns of the Old World** adds twelve generic staff profiles to the GM workshop, eight distinct fair-price consumables to the shared catalogue, and 49 mechanical references to search. Core prices remain unchanged; unlisted weights remain unknown. It adds no player Careers or tavern-management system. Sources and scope: [TAVERNS.md](docs/TAVERNS.md).
@@ -9,7 +11,7 @@ Enable **Sea of Claws** for four Norse origins, nine Career paths (including exp
 A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms**, **Archives of the Empire I, II and III**, **Winds of Magic**, **Rough Nights & Hard Days**, **High Elf Player’s Guide**, **Dwarf Player’s Guide**, **Blood and Bramble**, **Deft Steps, Light Fingers**, **The Night Parade**, **The Warband of Bayl of Many Eyes**, **The Cluster-Eye Tribe**, **Tribes and Tribulations**, **Sea of Claws** and **Taverns of the Old World** and **The Corsairs of Captain Flariel** are installed. Bayl and Cluster-Eye each add two GM profiles and seven advancement templates with documented, user-approved Fifth Edition conversions. Compatibility decisions and exclusions are documented separately for each supplement.
 
 <!-- registry-counts:start -->
-With all 18 books enabled: **135 Career profiles**, **589 magic profiles** (including **17 rituals**), **24 Cants**, **10 Sword-dancing techniques**, **71 rune entries**, and **416 fixed-price shop entries**. Career alternatives remain explicit choices. Source counts, adaptations and exclusions: [inclusion matrix](docs/INCLUSION-MATRIX.md).
+With all 19 books enabled: **139 Career profiles**, **590 magic profiles** (including **17 rituals**), **24 Cants**, **10 Sword-dancing techniques**, **71 rune entries**, and **422 fixed-price shop entries**. Career alternatives remain explicit choices. Source counts, adaptations and exclusions: [inclusion matrix](docs/INCLUSION-MATRIX.md).
 <!-- registry-counts:end -->
 
 **Legacy** tags identify actual printed rules changed for Fifth Edition, including both Player’s Guides. Compatible material used unchanged has only its source reference. Each badge explains its specific conversion; tags follow affected choices into the folio, review, XP ledger and exports without relabelling every item from an older book. Policy and audit examples: [docs/LEGACY.md](docs/LEGACY.md).

@@ -1,5 +1,32 @@
 // Reviewed aliases have a kind, source and scope. Similar names never imply equivalence.
 export const CONTENT_ALIASES = Object.freeze([
+  ...[
+    [
+      "Fleet Footed",
+      "Fleet-footed",
+      200,
+      "Printed spelling uses the canonical core Talent; no effect changes.",
+    ],
+    [
+      "Resistance (Any)",
+      "Resistant (Any)",
+      198,
+      "Printed heading uses the canonical core Resistant Talent.",
+    ],
+    [
+      "Strider (Any)",
+      "Striding Gait (Any)",
+      200,
+      "Previously approved core equivalent; Trailblazer explains the actual conversion as Legacy.",
+    ],
+  ].map(([from, to, page, reason]) => ({
+    kind: "talents",
+    from,
+    to,
+    scope: "lustria",
+    source: { book: "lustria", page },
+    reason,
+  })),
   {
     kind: "gear-weight",
     from: "Large Sack",

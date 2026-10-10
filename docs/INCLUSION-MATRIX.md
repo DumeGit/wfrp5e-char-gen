@@ -8,14 +8,14 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 18 |
-| careers | 135 |
-| magicProfiles | 589 |
+| books | 19 |
+| careers | 139 |
+| magicProfiles | 590 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
 | runes | 71 |
-| pricedShopEntries | 416 |
+| pricedShopEntries | 422 |
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -45,6 +45,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
 | Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
 | The Corsairs of Captain Flariel | 3 | 3 | 4 | 0 | 0 |
+| Lustria | 15 | 1 | 45 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2913,12 +2914,93 @@ Pack `corsairs-flariel` · version 1.1.0
 
 </details>
 
+## Lustria
+
+Pack `lustria` · version 0.1.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 3 | 1 | 0 | 0 | 0 |
+| market | 6 | 0 | 0 | 0 | 0 |
+| referenceEntries | 0 | 0 | 45 | 0 | 0 |
+| spells | 1 | 0 | 0 | 0 | 0 |
+| weapons | 5 | 0 | 0 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Curated mechanical references | reference-only | p. 186 | Disease/symptom procedures, weather, expedition actions and new Traits. No live disease, travel or combat automation. |
+| Five weapon profiles and six purchases | implemented | p. 163 | Printed weapon profiles, prices, weights and quantities; Blowpipe group added. Existing duplicate profiles are not overwritten. |
+| Four player Careers | implemented | p. 194 | Interpreter, Oracle, Survivalist and Trailblazer reuse core Skills/Talents and current advancement; no automatic core Career replacements. |
+| Generic creatures and caste/mark templates | deferred | p. 139 | Geometric source inventory extracted; publication awaits the user's requested Size, Trait and sacred-mark conversions. |
+| High Magic and Mathlann prayers | deferred | p. 127 | Awaiting explicit duplicate-definition policy and distinct patron options; original prayers remain readable references. |
+| Lustrian Career roll table | unavailable | p. 192 | Multiple overlapping/missing ranges, including High Elf Sailor/Smuggler and Dwarf/Halfling Smuggler/Stevedore. Probabilities are not guessed. |
+| Named characters and campaign management | deferred | p. 210 | Named foundations, colony/ship managers, live play and adventure scenes remain outside creator scope. |
+| Playable Skinks and Chameleon Skinks | deferred | p. 160 | Awaiting the user's Fifth Edition allocations, inherent-Trait and Fate/Fortune decisions; no invented starting values. |
+| Shroud of Fog | implemented | p. 81 | Compatible new Shadows spell; situational effects are descriptive. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `lustria:career:trailblazer` — Trailblazer | careers | adapted | p. 200 | Printed Strider (Any) uses current core Striding Gait (Any), with core movement/terrain effects. |
+| `lustria:reference:a-bit-of-a-beast` — A Bit of a Beast | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:all-is-well` — All is Well | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:bilious-ague` — Bilious Ague | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:blackwater-fever` — Blackwater Fever | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:bleeding-eyerot` — Bleeding Eyerot | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:blindwyrm-fits` — Blindwyrm Fits | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:brain-rot` — Brain Rot | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:cataleptic-ague` — Cataleptic Ague | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:chameleon` — Chameleon | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:choking-lungblight` — Choking Lungblight | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:cloak-of-mathlann-mathlann-prayer` — Cloak of Mathlann — Mathlann prayer | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:contracting-thought-fog` — Contracting Thought Fog | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:disorientation` — Disorientation | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:exceptional-circumstances` — Exceptional Circumstances | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:find-shelter` — Find Shelter | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:flammable` — Flammable | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:forage-for-food` — Forage for Food | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:fungal-takeover` — Fungal Takeover | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:generating-an-oracle` — Generating an Oracle | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:ghyran-up-the-amaxon` — Ghyran up the Amaxon | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:grim-lustria` — Grim (Lustria) | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:keep-watch` — Keep Watch | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:lingering-vapours` — Lingering Vapours | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:lizardman-scales-and-armour` — Lizardman scales and armour | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:lizardman-weapon-training-and-blowpipes` — Lizardman weapon training and Blowpipes | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:lustrian-weather` — Lustrian Weather | referenceEntries | reference-only | p. 202 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:make-camp` — Make Camp | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:map-the-route` — Map the Route | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:necrotic-foot-rot` — Necrotic Foot Rot | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:organ-failure` — Organ Failure | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:parasitization` — Parasitization | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:practise-a-skill` — Practise a Skill | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:rain-showers` — Rain Showers | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:repair-a-boat` — Repair a Boat | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:stationary-attacker` — Stationary Attacker | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:stifling-humidity` — Stifling Humidity | referenceEntries | reference-only | p. 202 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:telepathy` — Telepathy | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:thought-fog` — Thought Fog | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:torrential-downpour` — Torrential Downpour | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:travel-endeavours-and-fatigue` — Travel Endeavours and fatigue | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:tropical-storm` — Tropical Storm | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:volley` — Volley | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:warpdust-typhoons` — Warpdust Typhoons | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:waterlungs-mathlann-prayer` — Waterlungs — Mathlann prayer | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:yellow-skull-fever` — Yellow-Skull Fever | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+
+</details>
+
 ## Reviewed aliases
 
 Aliases are exact and scoped; they are not fuzzy substitutions. The active `contentId` is required to distinguish same-name Career alternatives. No mapping is invented for the withdrawn Archives I Dwarf weapons.
 
 | Kind / scope | Printed name | Canonical name | Source | Decision |
 |---|---|---|---|---|
+| talents / lustria | Fleet Footed | Fleet-footed | lustria p. 200 | Printed spelling uses the canonical core Talent; no effect changes. |
+| talents / lustria | Resistance (Any) | Resistant (Any) | lustria p. 198 | Printed heading uses the canonical core Resistant Talent. |
+| talents / lustria | Strider (Any) | Striding Gait (Any) | lustria p. 200 | Previously approved core equivalent; Trailblazer explains the actual conversion as Legacy. |
 | gear-weight / shared | Large Sack | Sack, Large | core p. 308 | Existing creator weight interpretation; no new contents or profile inferred. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision. |
 | gear-weight / shared | Canvas Tarpaulin | Canvas Tarp | core p. 316 | Existing creator weight interpretation; no new contents or profile inferred. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision. |
 | gear-weight / shared | Charcoal Stick | Charcoal stick | core p. 316 | Existing creator weight interpretation; no new contents or profile inferred. Source identifies the canonical profile; the equivalence is the recorded interpretation/decision. |

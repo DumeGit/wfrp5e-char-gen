@@ -105,6 +105,10 @@
     {
       "id": "corsairs-flariel",
       "path": "corsairs-flariel/manifest.json"
+    },
+    {
+      "id": "lustria",
+      "path": "lustria/manifest.json"
     }
   ]
 }

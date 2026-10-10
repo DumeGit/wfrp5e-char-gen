@@ -28583,6 +28583,326 @@
           "reason": "Reuse reviewed current core definitions; actual differences appear on affected grants, not duplicated old rule results."
         }
       ]
+    },
+    "lustria": {
+      "sourceHash": "8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844",
+      "publishedSHA256": "5f6f01459d22b6b06313d0d388b8f5c33456ddc1e080a9c50cadb1c0e6e8c7e7",
+      "entries": 45,
+      "areas": [
+        {
+          "first": 81,
+          "last": 89,
+          "topic": "Selected magic/artillery mechanics"
+        },
+        {
+          "first": 151,
+          "last": 166,
+          "topic": "New Traits and weapon/armour rules"
+        },
+        {
+          "first": 186,
+          "last": 188,
+          "topic": "Disease and symptoms"
+        },
+        {
+          "first": 191,
+          "last": 204,
+          "topic": "Selected creation and expedition procedures"
+        }
+      ],
+      "records": [
+        {
+          "id": "lustria:reference:waterlungs-mathlann-prayer",
+          "name": "Waterlungs — Mathlann prayer",
+          "page": 81,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:cloak-of-mathlann-mathlann-prayer",
+          "name": "Cloak of Mathlann — Mathlann prayer",
+          "page": 81,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:volley",
+          "name": "Volley",
+          "page": 89,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:warpdust-typhoons",
+          "name": "Warpdust Typhoons",
+          "page": 89,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:lizardman-scales-and-armour",
+          "name": "Lizardman scales and armour",
+          "page": 163,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:lizardman-weapon-training-and-blowpipes",
+          "name": "Lizardman weapon training and Blowpipes",
+          "page": 163,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:a-bit-of-a-beast",
+          "name": "A Bit of a Beast",
+          "page": 191,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:ghyran-up-the-amaxon",
+          "name": "Ghyran up the Amaxon",
+          "page": 191,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:generating-an-oracle",
+          "name": "Generating an Oracle",
+          "page": 197,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:stifling-humidity",
+          "name": "Stifling Humidity",
+          "page": 202,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:all-is-well",
+          "name": "All is Well",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:find-shelter",
+          "name": "Find Shelter",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:forage-for-food",
+          "name": "Forage for Food",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:lingering-vapours",
+          "name": "Lingering Vapours",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:rain-showers",
+          "name": "Rain Showers",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:torrential-downpour",
+          "name": "Torrential Downpour",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:tropical-storm",
+          "name": "Tropical Storm",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:travel-endeavours-and-fatigue",
+          "name": "Travel Endeavours and fatigue",
+          "page": 203,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:keep-watch",
+          "name": "Keep Watch",
+          "page": 204,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:map-the-route",
+          "name": "Map the Route",
+          "page": 204,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:make-camp",
+          "name": "Make Camp",
+          "page": 204,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:exceptional-circumstances",
+          "name": "Exceptional Circumstances",
+          "page": 204,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:practise-a-skill",
+          "name": "Practise a Skill",
+          "page": 204,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:repair-a-boat",
+          "name": "Repair a Boat",
+          "page": 204,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:disorientation",
+          "name": "Disorientation",
+          "page": 188,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:organ-failure",
+          "name": "Organ Failure",
+          "page": 188,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:parasitization",
+          "name": "Parasitization",
+          "page": 188,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:bilious-ague",
+          "name": "Bilious Ague",
+          "page": 186,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:bleeding-eyerot",
+          "name": "Bleeding Eyerot",
+          "page": 186,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:blindwyrm-fits",
+          "name": "Blindwyrm Fits",
+          "page": 186,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:blackwater-fever",
+          "name": "Blackwater Fever",
+          "page": 186,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:brain-rot",
+          "name": "Brain Rot",
+          "page": 186,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:cataleptic-ague",
+          "name": "Cataleptic Ague",
+          "page": 187,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:choking-lungblight",
+          "name": "Choking Lungblight",
+          "page": 187,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:fungal-takeover",
+          "name": "Fungal Takeover",
+          "page": 187,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:necrotic-foot-rot",
+          "name": "Necrotic Foot Rot",
+          "page": 187,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:thought-fog",
+          "name": "Thought Fog",
+          "page": 187,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:yellow-skull-fever",
+          "name": "Yellow-Skull Fever",
+          "page": 188,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:contracting-thought-fog",
+          "name": "Contracting Thought Fog",
+          "page": 187,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:lustrian-weather",
+          "name": "Lustrian Weather",
+          "page": 202,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:telepathy",
+          "name": "Telepathy",
+          "page": 151,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:chameleon",
+          "name": "Chameleon",
+          "page": 151,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:flammable",
+          "name": "Flammable",
+          "page": 165,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:grim-lustria",
+          "name": "Grim (Lustria)",
+          "page": 165,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:stationary-attacker",
+          "name": "Stationary Attacker",
+          "page": 166,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:excluded:setting-and-adventure-prose",
+          "name": "Setting and adventure prose",
+          "page": "4–224",
+          "disposition": "excluded",
+          "reason": "Not mechanical reference content."
+        },
+        {
+          "id": "lustria:excluded:npc-and-template-search-results",
+          "name": "NPC and template search results",
+          "page": "42–182",
+          "disposition": "excluded",
+          "reason": "Profiles/templates are excluded from shared search by user instruction."
+        },
+        {
+          "id": "lustria:excluded:unresolved-random-career-tables",
+          "name": "Unresolved random Career tables",
+          "page": "161–193",
+          "disposition": "excluded",
+          "reason": "Overlaps require explicit decisions; not exposed as working random tables."
+        }
+      ]
     }
   }
 }
