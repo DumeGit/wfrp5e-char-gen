@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3924,
+  "references": 3927,
   "newlyImported": 1281,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
@@ -12,15 +12,15 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1916,
+      "references": 1918,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1692,
+      "existingReferences": 1694,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 285,
-        "talent": 434,
+        "skill": 286,
+        "talent": 435,
         "magic": 225,
         "equipment": 254,
         "condition": 13,
@@ -1847,22 +1847,22 @@
     {
       "id": "corsairs-flariel",
       "title": "The Corsairs of Captain Flariel",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "edition": 4,
       "sourceHash": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb",
-      "references": 9,
+      "references": 10,
       "newlyImported": 4,
       "retainedOutsideSearch": 0,
-      "existingReferences": 5,
+      "existingReferences": 6,
       "adaptedReferences": 3,
       "categories": {
         "magic": 4,
-        "equipment": 4,
+        "equipment": 5,
         "rule": 1
       },
       "dispositions": {
-        "included": 10,
-        "excluded": 5
+        "included": 14,
+        "excluded": 3
       },
       "rulesAudit": null,
       "areas": [

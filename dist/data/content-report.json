@@ -44140,23 +44140,30 @@
     {
       "id": "corsairs-flariel",
       "title": "The Corsairs of Captain Flariel",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "kind": "supplement",
       "recordCounts": {
-        "implemented": 2,
+        "implemented": 3,
         "adapted": 3,
         "reference-only": 4,
         "unavailable": 0,
         "deferred": 0
       },
       "featureCounts": {
-        "implemented": 1,
-        "adapted": 3,
-        "reference-only": 1,
-        "unavailable": 0,
-        "deferred": 4
+        "implemented": 2,
+        "adapted": 6,
+        "reference-only": 0,
+        "unavailable": 1,
+        "deferred": 1
       },
       "kinds": {
+        "armour": {
+          "implemented": 1,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
@@ -44180,6 +44187,17 @@
         }
       },
       "records": [
+        {
+          "contentId": "corsairs-flariel:armour:sea-dragon-cloak",
+          "kind": "armour",
+          "name": "Sea Dragon Cloak",
+          "status": "implemented",
+          "source": {
+            "book": "corsairs-flariel",
+            "page": 6
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
         {
           "contentId": "corsairs-flariel:reference:lore-of-dark-magic-additional-hits",
           "kind": "referenceEntries",
@@ -44284,12 +44302,22 @@
         {
           "id": "corsairs-flariel:feature:beastmaster",
           "name": "Beastmaster",
-          "status": "deferred",
+          "status": "adapted",
           "source": {
             "book": "corsairs-flariel",
             "page": 7
           },
-          "reason": "Crop/Whip/Net equipment compatibility awaits clarification; no unchosen alternative is exported as an actual belonging."
+          "reason": "Approved core Whip and explicit melee/ranged Net, with unchanged Skill bonuses and unavailable Crop."
+        },
+        {
+          "id": "corsairs-flariel:feature:crop",
+          "name": "Crop",
+          "status": "unavailable",
+          "source": {
+            "book": "corsairs-flariel",
+            "page": 7
+          },
+          "reason": "No supplied weapon profile; the approved core Whip is used instead."
         },
         {
           "id": "corsairs-flariel:feature:dark-elf-foundation",
@@ -44302,8 +44330,8 @@
           "reason": "Printed baseline and reviewed current core Trait definitions; no playable Species."
         },
         {
-          "id": "corsairs-flariel:feature:five-sea-raider-templates",
-          "name": "Five sea-raider templates",
+          "id": "corsairs-flariel:feature:eight-sea-raider-and-warhound-templates",
+          "name": "Eight sea-raider and Warhound templates",
           "status": "adapted",
           "source": {
             "book": "corsairs-flariel",
@@ -44344,32 +44372,32 @@
         {
           "id": "corsairs-flariel:feature:sea-dragon-cloak",
           "name": "Sea Dragon Cloak",
-          "status": "reference-only",
+          "status": "implemented",
           "source": {
             "book": "corsairs-flariel",
             "page": 6
           },
-          "reason": "Printed additional Body protection/maintenance; acquired armour awaits clarification."
+          "reason": "Acquired additional Body 2 AP/Partial with printed maintenance; price and Encumbrance remain unknown."
         },
         {
           "id": "corsairs-flariel:feature:ship-s-crew-and-druchii-sorceress",
           "name": "Ship's Crew and Druchii Sorceress",
-          "status": "deferred",
+          "status": "adapted",
           "source": {
             "book": "corsairs-flariel",
             "page": 7
           },
-          "reason": "Fixed-profile/Skill-heading and mixed-Lore adaptations await user answers."
+          "reason": "Approved fixed Skills profile and mixed-Lore template, with explicit performance/instrument and Lore/Wind choices."
         },
         {
           "id": "corsairs-flariel:feature:warhounds",
           "name": "Warhounds",
-          "status": "deferred",
+          "status": "adapted",
           "source": {
             "book": "corsairs-flariel",
             "page": 13
           },
-          "reason": "Dog/Size/training recipe awaits clarification; named pack is excluded."
+          "reason": "Approved core Dog/Size/training recipe; recorded Broken roll; named pack excluded."
         }
       ]
     }

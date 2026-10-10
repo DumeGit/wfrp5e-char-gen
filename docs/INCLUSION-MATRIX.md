@@ -44,7 +44,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Sea of Claws | 30 | 15 | 34 | 0 | 0 |
 | Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
 | Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
-| The Corsairs of Captain Flariel | 2 | 3 | 4 | 0 | 0 |
+| The Corsairs of Captain Flariel | 3 | 3 | 4 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2876,25 +2876,27 @@ Pack `taverns-old-world` · version 1.0.0
 
 ## The Corsairs of Captain Flariel
 
-Pack `corsairs-flariel` · version 1.0.0
+Pack `corsairs-flariel` · version 1.1.0
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
+| armour | 1 | 0 | 0 | 0 | 0 |
 | referenceEntries | 0 | 0 | 4 | 0 | 0 |
 | spells | 1 | 3 | 0 | 0 | 0 |
 | weapons | 1 | 0 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
-| Beastmaster | deferred | p. 7 | Crop/Whip/Net equipment compatibility awaits clarification; no unchosen alternative is exported as an actual belonging. |
+| Beastmaster | adapted | p. 7 | Approved core Whip and explicit melee/ranged Net, with unchanged Skill bonuses and unavailable Crop. |
+| Crop | unavailable | p. 7 | No supplied weapon profile; the approved core Whip is used instead. |
 | Dark Elf foundation | adapted | p. 6 | Printed baseline and reviewed current core Trait definitions; no playable Species. |
-| Five sea-raider templates | adapted | p. 6 | Exact geometric Characteristic columns, explicit specialisations, optional Chief Mate Talents and selective core Talent/quick-armour replacements. |
+| Eight sea-raider and Warhound templates | adapted | p. 6 | Exact geometric Characteristic columns, explicit specialisations, optional Chief Mate Talents and selective core Talent/quick-armour replacements. |
 | Four Dark Magic spells | adapted | p. 8 | Printed spell parameters, core Appendix I Test Difficulties and reference-only live effects. |
 | Named characters, ships and adventures | deferred | p. 11 | No named foundations, ship manager, encounter generator or adventure scenes. |
 | Reaper | implemented | p. 10 | Explicit naval Ballista cross-reference plus Salvo 6; no invented price. |
-| Sea Dragon Cloak | reference-only | p. 6 | Printed additional Body protection/maintenance; acquired armour awaits clarification. |
-| Ship's Crew and Druchii Sorceress | deferred | p. 7 | Fixed-profile/Skill-heading and mixed-Lore adaptations await user answers. |
-| Warhounds | deferred | p. 13 | Dog/Size/training recipe awaits clarification; named pack is excluded. |
+| Sea Dragon Cloak | implemented | p. 6 | Acquired additional Body 2 AP/Partial with printed maintenance; price and Encumbrance remain unknown. |
+| Ship's Crew and Druchii Sorceress | adapted | p. 7 | Approved fixed Skills profile and mixed-Lore template, with explicit performance/instrument and Lore/Wind choices. |
+| Warhounds | adapted | p. 13 | Approved core Dog/Size/training recipe; recorded Broken roll; named pack excluded. |
 
 <details>
 <summary>Profile exceptions and adaptations</summary>

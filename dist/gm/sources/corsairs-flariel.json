@@ -5,7 +5,7 @@
     "file": "The Corsairs of Captain Flariel.pdf",
     "sha256": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb"
   },
-  "summary": "Dark Elf foundation and five sea-raider templates",
+  "summary": "Two Dark Elf foundations and eight sea-raider/Warhound templates",
   "profiles": [
     {
       "id": "corsairs-flariel:creatures:dark-elf",
@@ -105,9 +105,272 @@
         "Generic GM foundation only; this is not a playable Dark Elf Species. Printed optional Armour 3 is an unspecified protection profile, not invented pieces.",
         "Printed Weapon +7 is unnamed. Optional Ranged +9 has range 60 yards and no named weapon. Optional Spellcaster requires an explicit Lore."
       ]
+    },
+    {
+      "id": "corsairs-flariel:creatures:dark-elf-ship-s-crew",
+      "name": "Dark Elf Ship's Crew",
+      "page": 7,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 7
+      },
+      "example": false,
+      "category": "Elves",
+      "species": "Dark Elf",
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": 40,
+        "S": 30,
+        "T": 30,
+        "I": 50,
+        "Ag": 40,
+        "Dex": 40,
+        "Int": 40,
+        "WP": 40,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Climb",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Endurance",
+          "total": 35
+        },
+        {
+          "name": "Navigation",
+          "total": 55
+        },
+        {
+          "name": "Row",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Sail",
+          "total": 50
+        },
+        {
+          "name": "Swim",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Old Salt",
+          "ranks": 1,
+          "adaptation": "Legacy: Core Old Salt can use the units die as SL on successful ocean Row/Sail Tests, replacing the p. 18 poor-condition immunity; the two-crew benefit remains."
+        },
+        {
+          "name": "Pilot",
+          "ranks": 1,
+          "adaptation": "Legacy: Core Pilot grants Advantage on Row and Sail, replacing the p. 18–19 failed-roll reversal."
+        },
+        {
+          "name": "Sea Legs",
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sea Legs grants Advantage when a seasickness Test is required, replacing the printed abnormal-condition penalty immunity."
+        },
+        {
+          "name": "Strong Swimmer",
+          "ranks": 1,
+          "adaptation": "Legacy: Core Strong Swimmer grants Swim Advantage and +2 SL in swimming Pursuits, replacing the p. 18–19 breath-holding Toughness Bonus."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Bucket, Knife, Rope"
+      },
+      "adaptation": "Legacy: Perform Singing/Storytelling uses core Entertain; the four core sailing Talents replace the specific differing older effects noted on their grants.",
+      "notes": [
+        "The p. 7 heading 'Traits' contains Skills; they are recorded as Skills. This is the printed fixed Dark Elf Ship's Crew profile, not bonuses applied over another foundation. Choose one performance and one instrument. Named Trappings retain their printed quantities and do not invent attack statistics."
+      ],
+      "skillSlots": [
+        {
+          "label": "Singing or Storytelling",
+          "options": [
+            "Entertain (Singing)",
+            "Entertain (Storytelling)"
+          ],
+          "bonus": 5,
+          "adaptation": "Legacy: printed Perform (Singing or Storytelling) uses core Entertain and Fellowship, with the printed +5 Skill bonus."
+        },
+        {
+          "label": "Instrument",
+          "options": [
+            "Play (Any)"
+          ],
+          "bonus": 5
+        }
+      ]
     }
   ],
   "templates": [
+    {
+      "id": "corsairs-flariel:template:beastmaster",
+      "name": "Beastmaster",
+      "page": 7,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 7
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 5,
+        "BS": 10,
+        "I": 5,
+        "Ag": 5,
+        "Int": 5,
+        "WP": 5
+      },
+      "skills": [
+        {
+          "options": [
+            "Animal Care"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Animal Training"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Charm Animal"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Drive"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 5,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ranged (Entangling)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Ride (Any)"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Track"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Animal Affinity"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Animal Affinity concerns non-aggressive wild animals, replacing the p. 19 Bestial-Trait condition."
+        },
+        {
+          "options": [
+            "Crack the Whip"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Crack the Whip uses Drive, animal Actions/Tests and Pursuit Movement, replacing the p. 19 whip-dependent fleeing/running bonus."
+        },
+        {
+          "options": [
+            "Read/Write"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Whip",
+          "names": [
+            "Whip"
+          ],
+          "kind": "weapon",
+          "adaptation": "Legacy: use the core Melee (Flail) Whip; the printed Ranged (Entangling) Skill bonus is retained unchanged. Crop has no supplied profile and is unavailable."
+        },
+        {
+          "label": "Net type",
+          "names": [
+            "Net"
+          ],
+          "kind": "weapon",
+          "choose": true
+        }
+      ],
+      "trappings": "",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
+        "Choose a mount specialisation for Ride +15 and an explicit melee or ranged Net. Crop is unavailable; the approved core Whip is granted without changing the printed Skill bonuses. No animal is automatically granted."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
     {
       "id": "corsairs-flariel:template:chief-mate",
       "name": "Chief Mate",
@@ -357,12 +620,24 @@
           ],
           "kind": "weapon",
           "choose": true
+        },
+        {
+          "label": "Optional Sea Dragon Cloak",
+          "contentIds": [
+            "corsairs-flariel:armour:sea-dragon-cloak"
+          ],
+          "kind": "armour",
+          "optional": true,
+          "forProfiles": [
+            "corsairs-flariel:creatures:dark-elf",
+            "corsairs-flariel:creatures:dark-elf-ship-s-crew"
+          ]
         }
       ],
       "trappings": "",
       "notes": [
         "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
-        "Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification."
+        "Dark Elf foundations may explicitly add a Sea Dragon Cloak: additional Body 2 AP/Partial; its unprinted Encumbrance and price remain unknown."
       ],
       "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
     },
@@ -522,14 +797,239 @@
           ],
           "kind": "weapon",
           "choose": true
+        },
+        {
+          "label": "Optional Sea Dragon Cloak",
+          "contentIds": [
+            "corsairs-flariel:armour:sea-dragon-cloak"
+          ],
+          "kind": "armour",
+          "optional": true,
+          "forProfiles": [
+            "corsairs-flariel:creatures:dark-elf",
+            "corsairs-flariel:creatures:dark-elf-ship-s-crew"
+          ]
         }
       ],
       "trappings": "",
       "notes": [
         "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
-        "Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification."
+        "Dark Elf foundations may explicitly add a Sea Dragon Cloak: additional Body 2 AP/Partial; its unprinted Encumbrance and price remain unknown."
       ],
       "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
+    {
+      "id": "corsairs-flariel:template:druchii-sorceress",
+      "name": "Druchii Sorceress",
+      "page": 7,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 7
+      },
+      "eligibility": "any",
+      "adjustments": {
+        "WS": 5,
+        "I": 10,
+        "Ag": 5,
+        "Dex": 5,
+        "Int": 20,
+        "WP": 20,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Aqshy)",
+            "Channelling (Azyr)",
+            "Channelling (Chamon)",
+            "Channelling (Ghur)",
+            "Channelling (Ghyran)",
+            "Channelling (Hysh)",
+            "Channelling (Shyish)",
+            "Channelling (Ulgu)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Cool"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Dodge"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 15,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Language (Magick)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Leadership"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Dark Magic)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Lore (Magic)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 15,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Aethyric Attunement"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Aethyric Attunement uses the current Minor/Major Miscast choices, replacing the printed successful-Casting-doubles immunity. The printed '(Any)' is removed because this is not a grouped core Talent."
+        },
+        {
+          "options": [
+            "Arcane Magic (Beasts)",
+            "Arcane Magic (Death)",
+            "Arcane Magic (Fire)",
+            "Arcane Magic (Heavens)",
+            "Arcane Magic (Life)",
+            "Arcane Magic (Light)",
+            "Arcane Magic (Metal)",
+            "Arcane Magic (Shadows)"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Attractive"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Attractive grants Charm Advantage for targets attracted to the character, replacing the printed Charm bonus without that condition."
+        },
+        {
+          "options": [
+            "Instinctive Diction"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Instinctive Diction reduces Minor Miscast results by 20, replacing the printed successful-Language (Magick)-doubles immunity."
+        },
+        {
+          "options": [
+            "Petty Magic"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Read/Write"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Second Sight"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Sixth Sense"
+          ],
+          "ranks": 1,
+          "adaptation": "Legacy: Core Sixth Sense uses the current Intuition warning for traps and hidden danger; the printed automatic Surprise immunity is not retained."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Spellcaster",
+          "value": "Beasts, Death, Fire, Heavens, Life, Light, Metal, Shadows, Witchcraft, Dark Magic",
+          "adaptation": "Legacy: the approved core Spellcaster grant preserves this template's printed mixed-Colour, Witchcraft and Dark Magic access; Arcane Magic and Channelling still require explicit matching choices."
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [
+        {
+          "label": "Hand Weapon",
+          "names": [
+            "Hand Weapon"
+          ],
+          "kind": "weapon"
+        }
+      ],
+      "trappings": "Diadem, Robes",
+      "notes": [
+        "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
+        "Choose a core Colour Lore for Arcane Magic and its matching Channelling Wind. The approved Spellcaster adaptation permits exactly seven spells across the eight Colour Lores, Witchcraft and Dark Magic, plus five Petty spells. No PC starting allocation or playable Dark Elf Species is granted."
+      ],
+      "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants.",
+      "matchWind": true,
+      "magicGroups": [
+        {
+          "count": 5,
+          "categories": [
+            "Petty"
+          ]
+        },
+        {
+          "count": 7,
+          "categories": [
+            "Beasts",
+            "Death",
+            "Fire",
+            "Heavens",
+            "Life",
+            "Light",
+            "Metal",
+            "Shadows",
+            "Witchcraft",
+            "Dark Magic"
+          ]
+        }
+      ]
     },
     {
       "id": "corsairs-flariel:template:lookout",
@@ -995,14 +1495,67 @@
           ],
           "kind": "weapon",
           "choose": true
+        },
+        {
+          "label": "Optional Sea Dragon Cloak",
+          "contentIds": [
+            "corsairs-flariel:armour:sea-dragon-cloak"
+          ],
+          "kind": "armour",
+          "optional": true,
+          "forProfiles": [
+            "corsairs-flariel:creatures:dark-elf",
+            "corsairs-flariel:creatures:dark-elf-ship-s-crew"
+          ]
         }
       ],
       "trappings": "",
       "notes": [
         "Template Skill bonuses use the higher of existing advances and the printed bonus, following the reviewed core-template interpretation. All printed Characteristic columns are applied exactly; current core Talent definitions govern.",
-        "Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification."
+        "Dark Elf foundations may explicitly add a Sea Dragon Cloak: additional Body 2 AP/Partial; its unprinted Encumbrance and price remain unknown."
       ],
       "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."
+    },
+    {
+      "id": "corsairs-flariel:template:warhound",
+      "name": "Warhound",
+      "page": 13,
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 13
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "core:creatures:dog"
+      ],
+      "foundationLabel": "core Dog (p. 325)",
+      "adjustments": {
+        "S": 10,
+        "T": 10,
+        "Ag": -5
+      },
+      "skills": [],
+      "talents": [],
+      "gear": [],
+      "optionalTraits": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Average"
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Guard, War"
+        }
+      ],
+      "adaptation": "Legacy: the printed Fourth Edition Dog reference uses the core Fifth Edition Dog and Small-to-Average Size adjustment (+10 S/T, −5 Ag). Broken uses a recorded 2d10 Fellowship roll; Guard grants Territorial and War adds +10 WS under core p. 363.",
+      "notes": [
+        "Generic Warhound recipe only; no named owner or pack. Existing printed Tracker is retained once. Broken allows ignoring Bestial; War allows ignoring Skittish for loud noises. Those Traits remain listed because training does not remove their other effects."
+      ]
     }
   ],
   "traits": [],

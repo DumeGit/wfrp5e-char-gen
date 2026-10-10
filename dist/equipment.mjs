@@ -495,15 +495,18 @@ export function equipment(R, s) {
   }
   const byLayer = {};
   for (const a of armour.filter((a) => a.active)) {
-    const layer = a.quick
-      ? "quick"
-      : a.layer === "leather" || a.name.startsWith("Leather")
-        ? "leather"
-        : a.name.startsWith("Mail")
-          ? "mail"
-          : a.locations === "Shield"
-            ? "shield"
-            : "plate";
+    const layer =
+      a.layer === "additional"
+        ? "additional"
+        : a.quick
+          ? "quick"
+          : a.layer === "leather" || a.name.startsWith("Leather")
+            ? "leather"
+            : a.name.startsWith("Mail")
+              ? "mail"
+              : a.locations === "Shield"
+                ? "shield"
+                : "plate";
     for (const loc of Object.keys(ap))
       if (a.locations.includes(loc)) {
         const k = `${layer}-${loc}`;
@@ -513,7 +516,13 @@ export function equipment(R, s) {
   const activeQuick = armour.some((a) => a.active && a.quick);
   if (
     activeQuick &&
-    armour.some((a) => a.active && !a.quick && a.locations !== "Shield")
+    armour.some(
+      (a) =>
+        a.active &&
+        !a.quick &&
+        a.layer !== "additional" &&
+        a.locations !== "Shield",
+    )
   )
     warnings.push(
       issue(
@@ -527,7 +536,8 @@ export function equipment(R, s) {
     );
   for (const [key, val] of Object.entries(byLayer)) {
     const [layer, loc] = key.split("-");
-    if (!activeQuick || ["quick", "shield"].includes(layer)) ap[loc] += val;
+    if (!activeQuick || ["quick", "shield", "additional"].includes(layer))
+      ap[loc] += val;
   }
   function penalty(a, value) {
     return Math.max(
@@ -536,7 +546,9 @@ export function equipment(R, s) {
         (a.itemQualities.includes("Practical") ? 1 : 0),
     );
   }
-  const wornArmour = armour.filter((a) => a.worn && (!activeQuick || a.quick)),
+  const wornArmour = armour.filter(
+      (a) => a.worn && (!activeQuick || a.quick || a.layer === "additional"),
+    ),
     stealth = -["mail", "plate"].reduce(
       (n, layer) =>
         n +
@@ -548,7 +560,8 @@ export function equipment(R, s) {
                 ? a.layer === "mail" ||
                   a.name.startsWith("Mail") ||
                   (a.quick && a.ap >= 3)
-                : a.layer !== "leather" &&
+                : a.layer !== "additional" &&
+                  a.layer !== "leather" &&
                   !a.name.startsWith("Leather") &&
                   !a.name.startsWith("Mail") &&
                   (!a.quick || a.ap >= 5),
@@ -576,7 +589,8 @@ export function equipment(R, s) {
     for (const a of wornArmour) {
       const leather = a.layer === "leather" || a.name.startsWith("Leather"),
         metal =
-          a.name.startsWith("Mail") || (!leather && a.locations !== "Shield");
+          a.name.startsWith("Mail") ||
+          (!leather && a.layer !== "additional" && a.locations !== "Shield");
       let value = a.ap;
       if (a.quick) {
         value =
@@ -588,13 +602,16 @@ export function equipment(R, s) {
               : 0);
       } else if ((lore === "Metal" && metal) || (lore === "Beasts" && leather))
         continue;
-      const layer = a.quick
-        ? "quick"
-        : leather
-          ? "leather"
-          : a.name.startsWith("Mail")
-            ? "mail"
-            : "plate";
+      const layer =
+        a.layer === "additional"
+          ? "additional"
+          : a.quick
+            ? "quick"
+            : leather
+              ? "leather"
+              : a.name.startsWith("Mail")
+                ? "mail"
+                : "plate";
       for (const loc of ["Head", "Arms", "Body", "Legs"])
         if (a.locations.includes(loc)) {
           const key = `${layer}:${loc}`;

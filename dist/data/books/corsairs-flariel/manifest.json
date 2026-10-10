@@ -4,7 +4,7 @@
   "title": "The Corsairs of Captain Flariel",
   "shortTitle": "Corsairs",
   "edition": 4,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -22,6 +22,8 @@
     ]
   },
   "files": {
+    "rules": "rules.json",
+    "armour": "armour.json",
     "spells": "spells.json",
     "weapons": "weapons.json",
     "coverage": "coverage.json",

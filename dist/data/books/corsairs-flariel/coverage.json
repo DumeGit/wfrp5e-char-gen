@@ -13,8 +13,8 @@
       "reason": "Printed baseline and reviewed current core Trait definitions; no playable Species."
     },
     {
-      "id": "corsairs-flariel:feature:five-sea-raider-templates",
-      "name": "Five sea-raider templates",
+      "id": "corsairs-flariel:feature:eight-sea-raider-and-warhound-templates",
+      "name": "Eight sea-raider and Warhound templates",
       "status": "adapted",
       "source": {
         "book": "corsairs-flariel",
@@ -45,42 +45,52 @@
     {
       "id": "corsairs-flariel:feature:sea-dragon-cloak",
       "name": "Sea Dragon Cloak",
-      "status": "reference-only",
+      "status": "implemented",
       "source": {
         "book": "corsairs-flariel",
         "page": 6
       },
-      "reason": "Printed additional Body protection/maintenance; acquired armour awaits clarification."
+      "reason": "Acquired additional Body 2 AP/Partial with printed maintenance; price and Encumbrance remain unknown."
     },
     {
       "id": "corsairs-flariel:feature:ship-s-crew-and-druchii-sorceress",
       "name": "Ship's Crew and Druchii Sorceress",
-      "status": "deferred",
+      "status": "adapted",
       "source": {
         "book": "corsairs-flariel",
         "page": 7
       },
-      "reason": "Fixed-profile/Skill-heading and mixed-Lore adaptations await user answers."
+      "reason": "Approved fixed Skills profile and mixed-Lore template, with explicit performance/instrument and Lore/Wind choices."
     },
     {
       "id": "corsairs-flariel:feature:warhounds",
       "name": "Warhounds",
-      "status": "deferred",
+      "status": "adapted",
       "source": {
         "book": "corsairs-flariel",
         "page": 13
       },
-      "reason": "Dog/Size/training recipe awaits clarification; named pack is excluded."
+      "reason": "Approved core Dog/Size/training recipe; recorded Broken roll; named pack excluded."
     },
     {
       "id": "corsairs-flariel:feature:beastmaster",
       "name": "Beastmaster",
-      "status": "deferred",
+      "status": "adapted",
       "source": {
         "book": "corsairs-flariel",
         "page": 7
       },
-      "reason": "Crop/Whip/Net equipment compatibility awaits clarification; no unchosen alternative is exported as an actual belonging."
+      "reason": "Approved core Whip and explicit melee/ranged Net, with unchanged Skill bonuses and unavailable Crop."
+    },
+    {
+      "id": "corsairs-flariel:feature:crop",
+      "name": "Crop",
+      "status": "unavailable",
+      "source": {
+        "book": "corsairs-flariel",
+        "page": 7
+      },
+      "reason": "No supplied weapon profile; the approved core Whip is used instead."
     },
     {
       "id": "corsairs-flariel:feature:named-characters-ships-and-adventures",

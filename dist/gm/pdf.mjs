@@ -1,6 +1,6 @@
 import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName } from "./model.mjs";
+import { rowName, armourLabel } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
 // The sheet consumes exactly the same result as review and the folio.
@@ -21,7 +21,7 @@ export function sheetSections(r, s) {
           .map(([k, v]) => `${k} ${v} AP`)
           .join(" · ") +
           (r.shield ? ` · Shield +${r.shield} AP when applicable` : ""),
-        ...(r.armour.length ? [r.armour.map((a) => a.name).join(", ")] : []),
+        ...(r.armour.length ? [r.armour.map(armourLabel).join(", ")] : []),
       ],
     ],
     [

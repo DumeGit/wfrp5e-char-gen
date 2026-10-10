@@ -1,0 +1,15 @@
+[
+  {
+    "id": "corsairs-flariel:rule:lore-dark-magic",
+    "page": 7,
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "append",
+    "value": [
+      "Dark Magic"
+    ],
+    "reason": "Printed Lore (Dark Magic) Skill choice for Druchii Sorceress."
+  }
+]

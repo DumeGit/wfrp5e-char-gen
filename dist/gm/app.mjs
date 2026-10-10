@@ -357,6 +357,7 @@ async function action(el) {
       ...data.templates,
       ...r.traits,
       ...r.attacks,
+      ...r.skills,
       ...r.talents,
       ...(picker?.rows || []),
       ...R.talents,
@@ -802,6 +803,10 @@ function change(el) {
       }
       if (d.bind) s[d.bind] = ["wounds", "tb"].includes(d.bind) ? num : val;
       if (d.stat) s.stats[d.stat] = num;
+      if (d.profileSkill !== undefined) {
+        if (val) s.profileSkills[d.profileSkill] = val;
+        else delete s.profileSkills[d.profileSkill];
+      }
       if (d.templateSkill !== undefined) {
         const list = s.templateSkills[d.templateSkill] || [];
         list[Number(d.choice)] = val;

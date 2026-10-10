@@ -14,8 +14,9 @@ export const templateGearEnabled = (
   selectedSkills,
   selectedGear = {},
   template,
+  profile,
 ) => {
-  if (slot.disabled) return false;
+  if (slot.disabled || !templateSlotEnabled(slot, profile)) return false;
   if (slot.whenSkill !== undefined && !selectedSkills[slot.whenSkill]?.length)
     return false;
   const weaponSlot = template?.gear[slot.forWeapon];
@@ -66,6 +67,8 @@ const windByLore = {
 };
 
 export function templateEligibility(t, p) {
+  if (t?.profileIds && !t.profileIds.includes(p?.id))
+    return `This template requires its listed foundation: ${t.foundationLabel || t.profileIds.join(", ")}.`;
   const special = tribesEligibility(t, p);
   if (special || t?.trollRole) return special;
   if (!t?.eligibility) return "";
@@ -140,6 +143,7 @@ export function templateEquipment(R, slot) {
   const rows =
     slot.kind === "ammunition" ? R.market : [...R.weapons, ...R.armour];
   return rows.filter((x) => {
+    if (slot.contentIds) return slot.contentIds.includes(x.contentId);
     if (x.source.book !== "core") return false;
     if (slot.names || slot.groups)
       return (
@@ -207,7 +211,7 @@ export function templateIssues(
       gear.map((x) => [Number(x.key.split(":").at(-1)), x.id]),
     );
     if (
-      !templateGearEnabled(slot, {}, selectedGear, t) &&
+      !templateGearEnabled(slot, {}, selectedGear, t, p) &&
       slot.whenSkill === undefined
     )
       continue;
@@ -216,7 +220,10 @@ export function templateIssues(
       !templateSkills.some((skill) => skill.slot === slot.whenSkill)
     )
       continue;
-    if (!gear.some((x) => x.key === templateRowKey(t, "gear", i)))
+    if (
+      !slot.optional &&
+      !gear.some((x) => x.key === templateRowKey(t, "gear", i))
+    )
       issue(
         `Choose ${slot.label} for ${t.name}.`,
         `#template-gear-${i}`,

@@ -28462,7 +28462,7 @@
     },
     "corsairs-flariel": {
       "sourceHash": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb",
-      "publishedSHA256": "98e471114319051fe9889305130eaeac45fe397bae95ea9088bf18dda0d996e7",
+      "publishedSHA256": "fbf454ab652d431491c6cf923d0d7c476ba3a60b5a6333e9c22137ccd849ea96",
       "entries": 4,
       "areas": [
         {
@@ -28508,6 +28508,18 @@
           "disposition": "included"
         },
         {
+          "id": "corsairs-flariel:creatures:dark-elf-ship-s-crew",
+          "name": "Dark Elf Ship's Crew",
+          "page": 7,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:beastmaster",
+          "name": "Beastmaster",
+          "page": 7,
+          "disposition": "included"
+        },
+        {
           "id": "corsairs-flariel:template:chief-mate",
           "name": "Chief Mate",
           "page": 6,
@@ -28517,6 +28529,12 @@
           "id": "corsairs-flariel:template:corsair",
           "name": "Corsair",
           "page": 6,
+          "disposition": "included"
+        },
+        {
+          "id": "corsairs-flariel:template:druchii-sorceress",
+          "name": "Druchii Sorceress",
+          "page": 7,
           "disposition": "included"
         },
         {
@@ -28538,6 +28556,12 @@
           "disposition": "included"
         },
         {
+          "id": "corsairs-flariel:template:warhound",
+          "name": "Warhound",
+          "page": 13,
+          "disposition": "included"
+        },
+        {
           "id": "corsairs-flariel:excluded:named-characters-ship-scenes-and-adventures",
           "name": "Named characters, ship scenes and adventures",
           "page": "3–17",
@@ -28545,25 +28569,11 @@
           "reason": "Outside creator and mechanical reference scope."
         },
         {
-          "id": "corsairs-flariel:excluded:ship-s-crew-and-druchii-sorceress",
-          "name": "Ship's Crew and Druchii Sorceress",
+          "id": "corsairs-flariel:excluded:crop",
+          "name": "Crop",
           "page": 7,
           "disposition": "excluded",
-          "reason": "Adaptation questions pending."
-        },
-        {
-          "id": "corsairs-flariel:excluded:warhound-recipe",
-          "name": "Warhound recipe",
-          "page": 13,
-          "disposition": "excluded",
-          "reason": "Size/training question pending; named owner/pack excluded."
-        },
-        {
-          "id": "corsairs-flariel:excluded:beastmaster",
-          "name": "Beastmaster",
-          "page": 7,
-          "disposition": "excluded",
-          "reason": "Crop/Whip/Net equipment clarification pending."
+          "reason": "Unavailable: no supplied weapon profile; approved Whip is used instead."
         },
         {
           "id": "corsairs-flariel:excluded:older-talent-and-trait-summaries",

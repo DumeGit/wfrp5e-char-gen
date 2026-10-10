@@ -252,6 +252,8 @@ export function addGMSupplement(data, raw, R) {
       "gear",
       "notes",
       "eligibility",
+      "profileIds",
+      "foundationLabel",
       "setStats",
       "restoreStats",
       "halveStats",
@@ -289,6 +291,16 @@ export function addGMSupplement(data, raw, R) {
       )
     )
       throw Error("Unsupported template foundation restriction.");
+    if (
+      t.profileIds &&
+      (!Array.isArray(t.profileIds) ||
+        !t.profileIds.length ||
+        new Set(t.profileIds).size !== t.profileIds.length ||
+        t.profileIds.some(
+          (id) => ![...data.profiles, ...raw.profiles].some((p) => p.id === id),
+        ))
+    )
+      throw Error("Invalid explicit template foundations.");
     if (
       ["troll", "goblin"].includes(t.eligibility) &&
       book.id !== "tribes-tribulations"
@@ -424,6 +436,26 @@ export function addGMSupplement(data, raw, R) {
       });
     const gear = (t.gear || []).map((slot) => {
       if (
+        (slot.optional !== undefined && typeof slot.optional !== "boolean") ||
+        (slot.forProfiles &&
+          (!slot.optional ||
+            !Array.isArray(slot.forProfiles) ||
+            !slot.forProfiles.length ||
+            slot.forProfiles.some(
+              (id) =>
+                ![...data.profiles, ...raw.profiles].some((p) => p.id === id),
+            ))) ||
+        (slot.contentIds &&
+          (!Array.isArray(slot.contentIds) ||
+            !slot.contentIds.length ||
+            new Set(slot.contentIds).size !== slot.contentIds.length ||
+            slot.contentIds.some(
+              (id) =>
+                ![...R.weapons, ...R.armour].some((x) => x.contentId === id),
+            )))
+      )
+        throw Error("Invalid explicit template equipment choice.");
+      if (
         slot.whenSkill !== undefined &&
         (!Number.isInteger(slot.whenSkill) ||
           !t.skills[slot.whenSkill]?.optional)
@@ -456,13 +488,14 @@ export function addGMSupplement(data, raw, R) {
         throw Error("Invalid template ammunition exception.");
       const entries = templateEquipment(R, slot);
       if (!entries.length)
-        throw Error(`No core equipment choices for ${slot.label}.`);
+        throw Error(`No equipment choices for ${slot.label}.`);
       return {
         ...slot,
         options: entries.map((x) => ({
           id: x.contentId,
           name: x.name,
           group: x.group,
+          kind: x.kind,
         })),
       };
     });
@@ -541,6 +574,19 @@ export function addGMSupplement(data, raw, R) {
         ...(x.adaptation ? { adaptationSource: p.source } : {}),
         page: p.page,
       }));
+    const skillSlots = (p.skillSlots || []).map((slot) => {
+      const names = [
+        ...new Set(slot.options.flatMap((name) => options(R, name, "skill"))),
+      ];
+      if (
+        !names.length ||
+        !Number.isInteger(slot.bonus) ||
+        slot.bonus < 0 ||
+        names.some((name) => !R.skills.some((x) => base(x.name) === base(name)))
+      )
+        throw Error(`${p.name}: invalid printed Skill choice.`);
+      return { ...slot, options: names };
+    });
     const coreProfile = data.profiles.find(
       (x) => x.id === p.descriptionProfile,
     );
@@ -548,6 +594,7 @@ export function addGMSupplement(data, raw, R) {
       throw Error(`${p.name}: unknown core description profile.`);
     return {
       ...p,
+      skillSlots,
       sections: coreProfile
         ? { ...p.sections, Traits: coreProfile.sections.Traits }
         : p.sections,

@@ -1,6 +1,6 @@
 import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName } from "./model.mjs";
+import { rowName, armourLabel } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
 export const PRINT_LAYOUTS = [6, 4];
@@ -73,7 +73,7 @@ export function cardSections(r, s) {
         .map(([k, v]) => `${k} ${v}`)
         .join(" · ") +
         (r.shield ? ` · Shield +${r.shield} AP (conditional)` : "") +
-        (r.armour.length ? " · " + r.armour.map((a) => a.name).join(", ") : ""),
+        (r.armour.length ? " · " + r.armour.map(armourLabel).join(", ") : ""),
     ],
     ["Skills", r.skills.map((x) => `${x.name} ${x.total}`).join("; ")],
     [

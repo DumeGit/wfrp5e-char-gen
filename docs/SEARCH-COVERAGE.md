@@ -6,13 +6,13 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **3924 results**, including **1281 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **3927 results**, including **1281 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
 The Rules audit explicitly removed **112 non-mechanical entries**; **1004 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1692 | 224 | 1916 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1694 | 224 | 1918 | 0 |
 | Up in Arms | 1.0.5 | 98 | 128 | 226 | 13 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
@@ -29,7 +29,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **1004 Rules 
 | Tribes and Tribulations | 1.0.0 | 49 | 15 | 64 | 12 |
 | Sea of Claws | 1.0.0 | 61 | 19 | 80 | 28 |
 | Taverns of the Old World | 1.0.0 | 8 | 49 | 57 | 0 |
-| The Corsairs of Captain Flariel | 1.0.0 | 5 | 4 | 9 | 3 |
+| The Corsairs of Captain Flariel | 1.1.0 | 6 | 4 | 10 | 3 |
 
 ## Source review
 
@@ -52,7 +52,7 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 
 Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 285; talent 434; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
+Categories: career 64; skill 286; talent 435; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
 Reviewed printed records retained outside search: 0.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.
@@ -504,9 +504,9 @@ Source SHA-256: `fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ce
 - pp. 6–8: Generic sea-raider profiles/templates, cloak and Dark Magic.
 - pp. 10–13: Selected generic equipment and creature recipes.
 
-Candidate sections: included 10; excluded 5.
+Candidate sections: included 14; excluded 3.
 
-Categories: magic 4; equipment 4; rule 1.
+Categories: magic 4; equipment 5; rule 1.
 Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.

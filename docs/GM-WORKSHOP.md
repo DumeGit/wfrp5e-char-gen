@@ -1,6 +1,6 @@
 # Bestiary Workshop
 
-**Corsairs** adds a Dark Elf foundation and five sea-raider templates. Chief Mate's optional Talents use native Skip/add selects and are not automatic grants or export requirements. Core definition replacements have individual Legacy notes. See [CORSAIRS.md](CORSAIRS.md) for the initial batch and pending Ship’s Crew/Sorceress/Warhound/cloak/Beastmaster decisions.
+**Corsairs** adds two Dark Elf foundations and eight templates, including explicit Ship’s Crew Skill choices, Sorceress Lore/Wind/spell counts, Dog-only Warhound training, Beastmaster Whip/Net and acquired Sea Dragon Cloak additional protection. Chief Mate Talents and eligible cloak slots are optional. Native selectors, early routed issues and selective Legacy notes use the existing workshop interface. See [CORSAIRS.md](CORSAIRS.md) for all approved decisions and remaining scope exclusions.
 
 **Taverns of the Old World** adds twelve compatible generic Human staff foundations, selected through the existing book/profile filters. Printed baseline Talents are not reapplied, Leather Jerkin covers Body only, and shared consumables retain unknown weights. No hireling or tavern-management system is introduced. See [TAVERNS.md](TAVERNS.md).
 

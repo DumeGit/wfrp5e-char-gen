@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"45a9e371ada862905585";
+const CACHE=CACHE_PREFIX+"4ed35fe5d5cf56162d18";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -100,9 +100,11 @@ const ASSETS=[
  "data/books/core/rule-references.json",
  "data/books/core/tables.json",
  "data/books/core/weapons.json",
+ "data/books/corsairs-flariel/armour.json",
  "data/books/corsairs-flariel/coverage.json",
  "data/books/corsairs-flariel/manifest.json",
  "data/books/corsairs-flariel/reference-entries.json",
+ "data/books/corsairs-flariel/rules.json",
  "data/books/corsairs-flariel/spells.json",
  "data/books/corsairs-flariel/weapons.json",
  "data/books/deft-steps-dealer/careers.json",

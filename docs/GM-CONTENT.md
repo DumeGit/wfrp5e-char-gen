@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-103 printed profiles, 49 templates, 95 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+104 printed profiles, 52 templates, 95 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
@@ -23,7 +23,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Tribes and Tribulations | 19 | 16 | Profiles/templates selectable; shared PC options always available |
 | Sea of Claws | 13 | 0 | Profiles/templates selectable; shared PC options always available |
 | Taverns of the Old World | 12 | 0 | Profiles/templates selectable; shared PC options always available |
-| The Corsairs of Captain Flariel | 1 | 5 | Profiles/templates selectable; shared PC options always available |
+| The Corsairs of Captain Flariel | 2 | 8 | Profiles/templates selectable; shared PC options always available |
 | Sea of Claws — Naval artillery | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 
 | Profile | Source | Category | Legacy |
@@ -57,6 +57,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Daemonette of Slaanesh | Core · p. 350 | Daemons |  |
 | Daggerfish | Sea of Claws · p. 141 | Sea creatures | Yes |
 | Dark Elf | Corsairs · p. 6 | Elves | Yes |
+| Dark Elf Ship's Crew | Corsairs · p. 7 | Elves | Yes |
 | Demigryph | Core · p. 329 | Monstrous Beasts |  |
 | Demigryph Mount | Up in Arms · p. 109 | Mounts | Yes |
 | Dire Wolf | Core · p. 341 | Restless Dead |  |

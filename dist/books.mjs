@@ -183,7 +183,7 @@ const columns = {
     "ogreSized",
   ],
   weapons: ["group", "enc", "reach", "damage", "qualities", "kind", "text"],
-  armour: ["enc", "locations", "ap", "qualities", "quick", "layer"],
+  armour: ["enc", "locations", "ap", "qualities", "quick", "layer", "text"],
   species: [
     "offsets",
     "languages",
@@ -1357,10 +1357,10 @@ export function validateCatalog(R) {
   for (const a of R.armour)
     if (
       (a.layer !== undefined &&
-        !["leather", "mail", "plate"].includes(a.layer)) ||
+        !["leather", "mail", "plate", "additional"].includes(a.layer)) ||
       !nonempty(a.locations) ||
-      !Number.isFinite(a.enc) ||
-      a.enc < 0 ||
+      (a.enc !== null && (!Number.isFinite(a.enc) || a.enc < 0)) ||
+      (a.text !== undefined && !nonempty(a.text)) ||
       !Number.isInteger(a.ap) ||
       a.ap < 0 ||
       typeof a.qualities !== "string"

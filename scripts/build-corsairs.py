@@ -71,6 +71,10 @@ LEGACY = {
     "Stone Soup": "Core Stone Soup grants food through party Foraging, replacing the p. 18 half-rations/starvation timing.",
     "Animal Affinity": "Core Animal Affinity concerns non-aggressive wild animals, replacing the p. 19 Bestial-Trait condition.",
     "Crack the Whip": "Core Crack the Whip uses Drive, animal Actions/Tests and Pursuit Movement, replacing the p. 19 whip-dependent fleeing/running bonus.",
+    "Aethyric Attunement": "Core Aethyric Attunement uses the current Minor/Major Miscast choices, replacing the printed successful-Casting-doubles immunity. The printed '(Any)' is removed because this is not a grouped core Talent.",
+    "Instinctive Diction": "Core Instinctive Diction reduces Minor Miscast results by 20, replacing the printed successful-Language (Magick)-doubles immunity.",
+    "Attractive": "Core Attractive grants Charm Advantage for targets attracted to the character, replacing the printed Charm bonus without that condition.",
+    "Sixth Sense": "Core Sixth Sense uses the current Intuition warning for traps and hidden danger; the printed automatic Surprise immunity is not retained.",
 }
 
 
@@ -85,6 +89,8 @@ def skills(text):
             name = "Melee (Any)"
         if name == "Ride":
             name = "Ride (Any)"
+        if name == "Channelling":
+            name = "Channelling (Any)"
         result.append({"options": [name], "bonus": int(match[2]), "count": count})
     return result
 
@@ -92,7 +98,7 @@ def skills(text):
 def talents(text, optional=False):
     result = []
     for name in text.split(", "):
-        name = name.replace("Public Speaking", "Public Speaker")
+        name = name.replace("Public Speaking", "Public Speaker").replace("Aethyric Attunement (Any)", "Aethyric Attunement")
         row = {"options": [name], "ranks": 1}
         if name in LEGACY:
             row["adaptation"] = "Legacy: " + LEGACY[name]
@@ -111,9 +117,11 @@ def templates(doc):
         ("Oarsman", 7, 10, 11, 12, 13, 14),
         ("Lookout", 7, 22, 23, 24, 25, 26),
         ("Beastmaster", 7, 16, 17, 18, 19, 20),
+        ("Druchii Sorceress", 7, 29, 30, 31, 32, 33),
     ]:
         blocks = doc[page - 1].get_text("blocks")
         skill_text = clean(blocks[skill_block][4]).replace("Skills: Skills:", "Skills:").split(":", 1)[1].strip()
+        skill_text = skill_text.replace("Lore (Dark Magic +20, Magic +20)", "Lore (Dark Magic) +20, Lore (Magic) +20")
         talent_text = clean(blocks[talent_block][4]).split(":", 1)[1].strip()
         trapping_text = clean(blocks[trapping_block][4]).split(":", 1)[1].strip()
         gear = []
@@ -124,24 +132,68 @@ def templates(doc):
                 "adaptation": "Legacy: unspecified Leather/Mail Armour uses core Light/Medium quick armour, following the previously approved conversion."},
                 {"label": "Ranged Weapon", "groups": ["blackpowder", "bow", "crossbow", "engineering", "entangling", "explosives", "sling", "throwing"], "kind": "weapon", "choose": True}]
             trapping_text = ""
-            notes.append("Dark Elf users may add a Sea Dragon Cloak; its printed additional Body 2 AP/Partial and maintenance are references pending the acquired-armour clarification.")
+            gear.append({"label": "Optional Sea Dragon Cloak", "contentIds": [ident("armour", "Sea Dragon Cloak")], "kind": "armour", "optional": True,
+                "forProfiles": [ident("creatures", "Dark Elf"), ident("creatures", "Dark Elf Ship's Crew")]})
+            notes.append("Dark Elf foundations may explicitly add a Sea Dragon Cloak: additional Body 2 AP/Partial; its unprinted Encumbrance and price remain unknown.")
         elif name == "Lookout":
             gear = [{"label": "Knife", "names": ["Knife"], "kind": "weapon"},
                 {"label": "Ranged Weapon", "groups": ["blackpowder", "bow", "crossbow", "engineering", "entangling", "explosives", "sling", "throwing"], "kind": "weapon", "choose": True}]
             trapping_text = ""
             notes.append("The duplicated printed 'Skills: Skills:' heading is corrected without changing its entries.")
         elif name == "Beastmaster":
-            notes.append("Choose a mount specialisation for the printed ungrouped Ride +15. Crop has no supplied weapon profile; Crop or Whip and Net remain named Trappings for explicit GM equipment selection. Core Whip and both Net profiles are available separately; no statistics or ambiguous Net type are invented. No animal is automatically granted.")
+            gear = [{"label": "Whip", "names": ["Whip"], "kind": "weapon", "adaptation": "Legacy: use the core Melee (Flail) Whip; the printed Ranged (Entangling) Skill bonus is retained unchanged. Crop has no supplied profile and is unavailable."},
+                {"label": "Net type", "names": ["Net"], "kind": "weapon", "choose": True}]
+            trapping_text = ""
+            notes.append("Choose a mount specialisation for Ride +15 and an explicit melee or ranged Net. Crop is unavailable; the approved core Whip is granted without changing the printed Skill bonuses. No animal is automatically granted.")
+        elif name == "Druchii Sorceress":
+            gear = [{"label": "Hand Weapon", "names": ["Hand Weapon"], "kind": "weapon"}]
+            trapping_text = "Diadem, Robes"
+            notes.append("Choose a core Colour Lore for Arcane Magic and its matching Channelling Wind. The approved Spellcaster adaptation permits exactly seven spells across the eight Colour Lores, Witchcraft and Dark Magic, plus five Petty spells. No PC starting allocation or playable Dark Elf Species is granted.")
         result.append({"id": ident("template", name), "name": name, "page": page, "source": source(page),
             "eligibility": "any", "adjustments": adjustments(doc[page - 1], head, nums),
             "skills": skills(skill_text), "talents": talents(talent_text, optional=name == "Chief Mate"),
             "traits": [], "optionalTraits": [], "gear": gear, "trappings": trapping_text, "notes": notes,
             "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."})
+        if name == "Druchii Sorceress":
+            lores = ["Beasts", "Death", "Fire", "Heavens", "Life", "Light", "Metal", "Shadows", "Witchcraft", "Dark Magic"]
+            core_colours = read(ROOT / "dist/data/books/core/config.json")["colours"]
+            for slot in result[-1]["talents"]:
+                if slot["options"] == ["Arcane Magic (Any)"]:
+                    slot["options"] = [f"Arcane Magic ({lore})" for lore in core_colours]
+            result[-1]["skills"][0]["options"] = [f"Channelling ({wind})" for wind in ["Aqshy", "Azyr", "Chamon", "Ghur", "Ghyran", "Hysh", "Shyish", "Ulgu"]]
+            result[-1].update({"matchWind": True, "magicGroups": [{"count": 5, "categories": ["Petty"]}, {"count": 7, "categories": lores}],
+                "traits": [{"name": "Spellcaster", "value": ", ".join(lores), "adaptation": "Legacy: the approved core Spellcaster grant preserves this template's printed mixed-Colour, Witchcraft and Dark Magic access; Arcane Magic and Channelling still require explicit matching choices."}]})
     by_name = {t["name"]: t for t in result}
     assert by_name["Corsair"]["adjustments"] == {"WS": 10, "BS": 5, "S": 5, "T": 5, "I": 10, "Ag": 5, "Dex": 5, "WP": 5, "Fel": 5}
     assert by_name["Oarsman"]["adjustments"] == {"S": 10, "T": 5, "Fel": 5}
     assert by_name["Lookout"]["adjustments"] == {"I": 10, "Ag": 5, "Dex": 5}
     return sorted(result, key=lambda t: t["name"])
+
+
+def ship_crew():
+    p = dark_elf()
+    p.update({"id": ident("creatures", "Dark Elf Ship's Crew"), "name": "Dark Elf Ship's Crew", "page": 7, "source": source(7),
+        "traits": [], "optionalTraits": [], "attacks": [], "armour": [],
+        "talents": [{"name": row["options"][0], "ranks": 1, "adaptation": row["adaptation"]} for row in talents("Old Salt, Pilot, Sea Legs, Strong Swimmer")],
+        "skills": [{"name": name, "total": p["stats"][char] + bonus} for name, char, bonus in [
+            ("Climb", "S", 5), ("Consume Alcohol", "T", 5), ("Dodge", "Ag", 5), ("Endurance", "T", 5),
+            ("Navigation", "I", 5), ("Row", "S", 5), ("Melee (Basic)", "WS", 5), ("Sail", "Ag", 10), ("Swim", "S", 10)]],
+        "skillSlots": [{"label": "Singing or Storytelling", "options": ["Entertain (Singing)", "Entertain (Storytelling)"], "bonus": 5,
+            "adaptation": "Legacy: printed Perform (Singing or Storytelling) uses core Entertain and Fellowship, with the printed +5 Skill bonus."},
+            {"label": "Instrument", "options": ["Play (Any)"], "bonus": 5}],
+        "sections": {"Traits": "", "Trappings": "Bucket, Knife, Rope"},
+        "adaptation": "Legacy: Perform Singing/Storytelling uses core Entertain; the four core sailing Talents replace the specific differing older effects noted on their grants.",
+        "notes": ["The p. 7 heading 'Traits' contains Skills; they are recorded as Skills. This is the printed fixed Dark Elf Ship's Crew profile, not bonuses applied over another foundation. Choose one performance and one instrument. Named Trappings retain their printed quantities and do not invent attack statistics."]})
+    return p
+
+
+def warhound():
+    return {"id": ident("template", "Warhound"), "name": "Warhound", "page": 13, "source": source(13),
+        "eligibility": "any", "profileIds": ["core:creatures:dog"], "foundationLabel": "core Dog (p. 325)",
+        "adjustments": {"S": 10, "T": 10, "Ag": -5}, "skills": [], "talents": [], "gear": [], "optionalTraits": [],
+        "traits": [{"name": "Size", "value": "Average"}, {"name": "Tracker", "value": ""}, {"name": "Trained", "value": "Broken, Guard, War"}],
+        "adaptation": "Legacy: the printed Fourth Edition Dog reference uses the core Fifth Edition Dog and Small-to-Average Size adjustment (+10 S/T, −5 Ag). Broken uses a recorded 2d10 Fellowship roll; Guard grants Territorial and War adds +10 WS under core p. 363.",
+        "notes": ["Generic Warhound recipe only; no named owner or pack. Existing printed Tracker is retained once. Broken allows ignoring Bestial; War allows ignoring Skittish for loud noises. Those Traits remain listed because training does not remove their other effects."]}
 
 
 def dark_elf():
@@ -190,7 +242,7 @@ def references(doc):
         "topic": "Dark Elf raiders", "text": text, **({"notes": notes} if notes else {})}
         for name, page, category, text, notes in [
             ("Lore of Dark Magic: additional hits", 8, "rule", block(8, 14), "Printed SL/CN wording is retained as a reference; no live additional-hit calculation."),
-            ("Sea Dragon Cloak", 6, "equipment", block(6, 26).removeprefix("SEA DRAGON CLOAKS "), "Price, Encumbrance and Availability are not printed. Acquired-armour integration is pending clarification."),
+            ("Sea Dragon Cloak", 6, "equipment", block(6, 26).removeprefix("SEA DRAGON CLOAKS "), "Price, Encumbrance and Availability are not printed. The acquired profile adds Body 2 AP / Partial to other armour."),
             ("Reaper bolt thrower", 10, "equipment", "Use the Ballista profile from Sea of Claws p. 100 with the Salvo (6) Quality.", "Reuses the explicitly cross-referenced naval Ballista statistics. No additional retail price or ammunition grant is inferred."),
             ("Ravenship", 10, "equipment", "| Ship name | Crew | Sail M (C) | Oar M (C) | Man | Size | T | W | Carries | Traits and Upgrades |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Ravenship | 65 | 10 (18) | 4 (30) | +1 SL | 50 | 75 | 180 | 350 | Armoured, Flying Jib |", "Generic printed ship profile only. The named vessel, story and tactics are excluded; ship creation and management are deferred."),
         ]]
@@ -200,9 +252,8 @@ def main():
     assert hashlib.sha256(PDF.read_bytes()).hexdigest() == SHA, "Supplied source changed"
     doc = pymupdf.open(PDF)
     assert len(doc) == 21
-    profile_rows = [dark_elf()]
-    reviewed_templates = templates(doc)
-    template_rows = [t for t in reviewed_templates if t["name"] != "Beastmaster"]
+    profile_rows = [dark_elf(), ship_crew()]
+    template_rows = sorted(templates(doc) + [warhound()], key=lambda t: t["name"])
     spell_rows = spells(doc)
     refs = references(doc)
     ballista = next(w for w in read(ROOT / "dist/data/books/sea-of-claws-artillery/weapons.json") if w["name"] == "Ballista")
@@ -211,24 +262,28 @@ def main():
         "text": "Use the naval Ballista profile (Sea of Claws p. 100) with Salvo (6), as explicitly directed on Corsairs p. 10. Acquired/reference profile only: no extra retail price is inferred."})
     features = [
         ("Dark Elf foundation", "adapted", 6, "Printed baseline and reviewed current core Trait definitions; no playable Species."),
-        ("Five sea-raider templates", "adapted", 6, "Exact geometric Characteristic columns, explicit specialisations, optional Chief Mate Talents and selective core Talent/quick-armour replacements."),
+        ("Eight sea-raider and Warhound templates", "adapted", 6, "Exact geometric Characteristic columns, explicit specialisations, optional Chief Mate Talents and selective core Talent/quick-armour replacements."),
         ("Four Dark Magic spells", "adapted", 8, "Printed spell parameters, core Appendix I Test Difficulties and reference-only live effects."),
         ("Reaper", "implemented", 10, "Explicit naval Ballista cross-reference plus Salvo 6; no invented price."),
-        ("Sea Dragon Cloak", "reference-only", 6, "Printed additional Body protection/maintenance; acquired armour awaits clarification."),
-        ("Ship's Crew and Druchii Sorceress", "deferred", 7, "Fixed-profile/Skill-heading and mixed-Lore adaptations await user answers."),
-        ("Warhounds", "deferred", 13, "Dog/Size/training recipe awaits clarification; named pack is excluded."),
-        ("Beastmaster", "deferred", 7, "Crop/Whip/Net equipment compatibility awaits clarification; no unchosen alternative is exported as an actual belonging."),
+        ("Sea Dragon Cloak", "implemented", 6, "Acquired additional Body 2 AP/Partial with printed maintenance; price and Encumbrance remain unknown."),
+        ("Ship's Crew and Druchii Sorceress", "adapted", 7, "Approved fixed Skills profile and mixed-Lore template, with explicit performance/instrument and Lore/Wind choices."),
+        ("Warhounds", "adapted", 13, "Approved core Dog/Size/training recipe; recorded Broken roll; named pack excluded."),
+        ("Beastmaster", "adapted", 7, "Approved core Whip and explicit melee/ranged Net, with unchanged Skill bonuses and unavailable Crop."),
+        ("Crop", "unavailable", 7, "No supplied weapon profile; the approved core Whip is used instead."),
         ("Named characters, ships and adventures", "deferred", 11, "No named foundations, ship manager, encounter generator or adventure scenes."),
     ]
     coverage = {"schemaVersion": 1, "records": [], "features": [{"id": ident("feature", name), "name": name, "status": status, "source": source(page), "reason": reason} for name, status, page, reason in features]}
     manifest = {"schemaVersion": 1, "id": BOOK, "title": "The Corsairs of Captain Flariel", "shortTitle": "Corsairs", "edition": 4,
-        "version": "1.0.0", "kind": "supplement", "dependsOn": ["core"], "source": {"file": PDF.name, "sha256": SHA},
+        "version": "1.1.0", "kind": "supplement", "dependsOn": ["core"], "source": {"file": PDF.name, "sha256": SHA},
         "compatibility": {"reviewed": True, "notes": ["Generic foundations and templates only; named characters excluded.", "Core Talents/Traits replace reviewed differing summaries with selective Legacy notes. Sparse table bonuses follow their printed columns.", "Four Dark Magic spells and acquired Reaper statistics are shared catalogues, without invented PC magic access or playable Species."]},
-        "files": {"spells": "spells.json", "weapons": "weapons.json", "coverage": "coverage.json", "referenceEntries": "reference-entries.json"}}
-    for name, data in [("manifest", manifest), ("spells", spell_rows), ("weapons", [reaper]), ("coverage", coverage), ("reference-entries", refs)]:
+        "files": {"rules": "rules.json", "armour": "armour.json", "spells": "spells.json", "weapons": "weapons.json", "coverage": "coverage.json", "referenceEntries": "reference-entries.json"}}
+    cloak = {"id": ident("armour", "Sea Dragon Cloak"), "name": "Sea Dragon Cloak", "page": 6, "enc": None, "locations": "Body", "ap": 2, "qualities": "Partial", "layer": "additional",
+        "text": "Adds Body 2 AP / Partial to other armour. Must be maintained with reptilian slime; begins to disintegrate without application, a process taking one week. A fresh application restores the cloak to normal. Price, Encumbrance and Availability are not printed. Acquired equipment only."}
+    rules = [{"id": ident("rule", "lore-dark-magic"), "page": 7, "path": ["skillOptions", "Lore"], "operation": "append", "value": ["Dark Magic"], "reason": "Printed Lore (Dark Magic) Skill choice for Druchii Sorceress."}]
+    for name, data in [("manifest", manifest), ("rules", rules), ("armour", [cloak]), ("spells", spell_rows), ("weapons", [reaper]), ("coverage", coverage), ("reference-entries", refs)]:
         write(PACK / f"{name}.json", data)
     write(ROOT / f"dist/gm/sources/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": manifest["source"],
-        "summary": "Dark Elf foundation and five sea-raider templates", "profiles": profile_rows, "templates": template_rows, "traits": [], "training": []})
+        "summary": "Two Dark Elf foundations and eight sea-raider/Warhound templates", "profiles": profile_rows, "templates": template_rows, "traits": [], "training": []})
     path = ROOT / "dist/data/books/index.json"
     registry = read(path)
     if not any(p["id"] == BOOK for p in registry["packs"]):
@@ -241,12 +296,10 @@ def main():
         "records": [{"id": r["id"], "name": r["name"], "page": r["page"], "disposition": "included"} for r in refs + profile_rows + template_rows]
         + [{"id": ident("excluded", name), "name": name, "page": page, "disposition": "excluded", "reason": reason} for name, page, reason in [
             ("Named characters, ship scenes and adventures", "3–17", "Outside creator and mechanical reference scope."),
-            ("Ship's Crew and Druchii Sorceress", 7, "Adaptation questions pending."),
-            ("Warhound recipe", 13, "Size/training question pending; named owner/pack excluded."),
-            ("Beastmaster", 7, "Crop/Whip/Net equipment clarification pending."),
+            ("Crop", 7, "Unavailable: no supplied weapon profile; approved Whip is used instead."),
             ("Older Talent and Trait summaries", "18–19", "Reuse reviewed current core definitions; actual differences appear on affected grants, not duplicated old rule results.")]]}
     write(path, audit)
-    print(f"Published {len(profile_rows)} foundation, {len(template_rows)} templates, {len(spell_rows)} spells, Reaper and {len(refs)} references; unresolved adaptations remain pending.")
+    print(f"Published {len(profile_rows)} foundations, {len(template_rows)} templates, {len(spell_rows)} spells, Reaper, Sea Dragon Cloak and {len(refs)} references; all five reviewed decisions applied.")
 
 
 if __name__ == "__main__":

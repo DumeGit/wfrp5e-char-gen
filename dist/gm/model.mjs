@@ -73,6 +73,10 @@ const number = (n) => Number.isInteger(n) && n >= 0;
 const bonus = (n) => (n === null ? null : Math.floor(n / 10));
 const rowName = (row) => row.name + (row.value ? ` (${row.value})` : "");
 export { rowName };
+export const armourLabel = (a) =>
+  a.layer === "additional"
+    ? `${a.name} (${a.locations} +${a.ap} AP${a.qualities ? `; ${a.qualities}` : ""})`
+    : a.name;
 
 export function freshGM(data, profile = "", books = ["core"]) {
   return {
@@ -98,6 +102,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     step: 0,
     template: "",
     templateSkills: {},
+    profileSkills: {},
     templateTalents: {},
     templateGear: {},
     templateLore: "",
@@ -187,6 +192,7 @@ export function validateGMDraft(data, R, s) {
   for (const k of [
     "stats",
     "templateSkills",
+    "profileSkills",
     "templateTalents",
     "templateGear",
     "attackOverrides",
@@ -373,6 +379,9 @@ export function validateGMDraft(data, R, s) {
       new Set(names.filter(Boolean)).size !== names.filter(Boolean).length
     )
       throw Error("Unknown template Skill choice.");
+  for (const [i, name] of Object.entries(s.profileSkills))
+    if (!p?.skillSlots?.[i]?.options.includes(name))
+      throw Error("Unknown printed Skill choice.");
   for (const [i, name] of Object.entries(s.templateTalents))
     if (!t?.talents[i]?.options.includes(name))
       throw Error("Unknown template Talent choice.");
@@ -848,6 +857,8 @@ export function calculateGM(data, R, s) {
         "Roll the 2d10 Fellowship increase for Broken training.",
         1,
         "#gm-broken-roll",
+        "training.broken-roll",
+        { book: "core", page: 363 },
       );
     else {
       if (stats.Fel === null) stats.Fel = 0;
@@ -946,7 +957,7 @@ export function calculateGM(data, R, s) {
       "#gm-wounds",
     );
   const skills = new Map();
-  const put = (name, total, origin) => {
+  const put = (name, total, origin, metadata = {}) => {
     if (s.removed.includes(`skill:${name}`)) return;
     const old = skills.get(name);
     if (!old || total > old.total)
@@ -955,6 +966,7 @@ export function calculateGM(data, R, s) {
         total,
         origin,
         char: gmSkillCharacteristic(R, p, name, traits),
+        ...metadata,
       });
   };
   for (const x of live(p.skills)) {
@@ -974,6 +986,35 @@ export function calculateGM(data, R, s) {
         `#template-skill-${template.skills.findIndex((v) => v.options.includes(x.name))}`,
       );
     else put(x.name, stats[char] + x.bonus, "Template");
+  }
+  for (const [i, slot] of (p.skillSlots || []).entries()) {
+    const name = s.profileSkills[i];
+    if (!slot.options.includes(name)) {
+      add(
+        `Choose ${slot.label || base(slot.options[0])} for ${p.name}.`,
+        1,
+        `#profile-skill-${i}`,
+        "profile.skill",
+        p.source,
+      );
+      continue;
+    }
+    const char = gmSkillCharacteristic(R, p, name, traits);
+    if (!char || stats[char] === null)
+      add(
+        `${name} needs an explicit ${char || "Characteristic"} score.`,
+        1,
+        `#profile-skill-${i}`,
+        "profile.skill-score",
+        p.source,
+      );
+    else
+      put(name, stats[char] + slot.bonus, "Printed", {
+        source: p.source,
+        ...(slot.adaptation
+          ? { adaptation: slot.adaptation, adaptationSource: p.source }
+          : {}),
+      });
   }
   const skillGrantTraits = [
     ...newTraits,
@@ -1207,15 +1248,18 @@ export function calculateGM(data, R, s) {
       };
     });
   const grantedGear = (template?.gear || []).flatMap((slot, i) => {
-    if (!templateGearEnabled(slot, s.templateSkills, s.templateGear, template))
+    if (
+      !templateGearEnabled(slot, s.templateSkills, s.templateGear, template, p)
+    )
       return [];
+    if (slot.optional && !s.templateGear[i]) return [];
     if (
       slot.whenSkill !== undefined &&
       !templateSlotEnabled(template.skills[slot.whenSkill], p)
     )
       return [];
     const id =
-      !slot.choose && slot.options.length === 1
+      !slot.optional && !slot.choose && slot.options.length === 1
         ? slot.options[0].id
         : s.templateGear[i];
     return slot.options.some((x) => x.id === id)
@@ -1431,23 +1475,26 @@ export function calculateGM(data, R, s) {
   const quick = armour.some((a) => a.quick);
   for (const a of armour.filter((a) => !a.shield)) {
     const natural = /Hide|Scales|Bark/.test(a.name);
-    if (quick && !a.quick && !natural) {
+    if (quick && !a.quick && !natural && a.layer !== "additional") {
       warnings.push(
         "Quick Armour replaces detailed armour; they are not stacked (p. 307).",
       );
       continue;
     }
-    const layer = natural
-      ? "natural"
-      : a.quick
-        ? "quick"
-        : a.name.startsWith("Leather")
-          ? "leather"
-          : a.name.startsWith("Mail")
-            ? "mail"
-            : a.origin === "Printed"
-              ? "printed"
-              : "plate";
+    const layer =
+      a.layer === "additional"
+        ? "additional"
+        : natural
+          ? "natural"
+          : a.quick
+            ? "quick"
+            : a.name.startsWith("Leather")
+              ? "leather"
+              : a.name.startsWith("Mail")
+                ? "mail"
+                : a.origin === "Printed"
+                  ? "printed"
+                  : "plate";
     for (const loc of Object.keys(ap))
       if (a.locations.includes(loc) || (a.quick && p.hitLocations))
         layers[`${layer}:${loc}`] = Math.max(

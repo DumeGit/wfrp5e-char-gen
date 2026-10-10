@@ -1,0 +1,13 @@
+[
+  {
+    "id": "corsairs-flariel:armour:sea-dragon-cloak",
+    "name": "Sea Dragon Cloak",
+    "page": 6,
+    "enc": null,
+    "locations": "Body",
+    "ap": 2,
+    "qualities": "Partial",
+    "layer": "additional",
+    "text": "Adds Body 2 AP / Partial to other armour. Must be maintained with reptilian slime; begins to disintegrate without application, a process taking one week. A fresh application restores the cloak to normal. Price, Encumbrance and Availability are not printed. Acquired equipment only."
+  }
+]

@@ -1,7 +1,7 @@
 import { KEYS } from "../rules.mjs";
 import { esc, score, detail, empty, legacyBadge } from "./controls.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName } from "./model.mjs";
+import { rowName, armourLabel } from "./model.mjs";
 
 export function statBlock(r, s, { compact = false, showSource = true } = {}) {
   if (!r.profile)
@@ -21,7 +21,7 @@ export function statBlock(r, s, { compact = false, showSource = true } = {}) {
       .map(([k, v]) => `${k} <b>${v}</b>`)
       .join(
         " · ",
-      )}${r.shield ? `<br>Shield +${r.shield} AP when applicable` : ""}</p>${r.armour.length ? `<p class="gm-small">${r.armour.map((a) => esc(a.name)).join(", ")}</p>` : ""}`,
+      )}${r.shield ? `<br>Shield +${r.shield} AP when applicable` : ""}</p>${r.armour.length ? `<p class="gm-small">${r.armour.map((a) => esc(armourLabel(a))).join(", ")}</p>` : ""}`,
   )}
   ${r.skills.length ? section("skills", `Skills <small>${r.skills.length}</small>`, `<div class="gm-mini-list">${r.skills.map((x) => `<div><span>${esc(x.name)}</span><b>${x.total}</b></div>`).join("")}</div>`) : ""}
   ${r.talents.length ? section("talents", `Talents <small>${r.talents.length}</small>`, `<p>${r.talents.map((t) => `${esc(t.name)}${t.ranks > 1 ? ` ×${t.ranks}` : ""} ${legacyBadge(t)}`).join(", ")}</p>`) : ""}
