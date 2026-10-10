@@ -4,6 +4,8 @@ The app loads a registered core pack plus explicitly selected supplements/varian
 
 ## Integration workflow
 
+Taverns of the Old World uses only existing profile, market and printed-reference schemas. See [TAVERNS.md](TAVERNS.md) for compatible staff baselines, unchanged core duplicate prices, unknown consumable weights and curated mechanical search scope. Its hash-checked builder freezes the review; it adds no runtime handler or venue-management system.
+
 Sea of Claws is registered with an explicit naval-artillery variant. See [SEA-OF-CLAWS.md](SEA-OF-CLAWS.md) for approved decisions, reproducible extraction, shared Talent definitions and source-specific casting. Equipment-only variants are independently assembled by `assembleGMOptions` and added as named source alternatives; they never overwrite the GM baseline catalogue or add foundation-book checkboxes. The build and runtime use this same helper.
 
 Blood and Bramble uses the existing spell and gear schema with no new rule handler. See [BLOOD-BRAMBLE.md](BLOOD-BRAMBLE.md) for approved source discrepancies, ingredient purchase limits and scope. Detailed spell entries are canonical for this pack; cards are not additional spells.

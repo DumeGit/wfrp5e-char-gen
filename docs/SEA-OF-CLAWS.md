@@ -80,8 +80,9 @@ Feast of Bones depends on older ranked Grim and remains reference-only. Grubark
 is a ship upgrade reference, not a character purchase/packing mechanic.
 
 Named captains and Triton (148–158), hiring, ship/crew/voyage management and live
-effects are excluded/deferred. Taverns of the Old World and The Corsairs of
-Captain Flariel remain queued separately; nothing from them is included here.
+effects are excluded/deferred. Taverns of the Old World is integrated separately
+(see `TAVERNS.md`); The Corsairs of Captain Flariel remains queued. Neither book
+is part of this Sea of Claws pack.
 
 ## Reproduction and verification
 

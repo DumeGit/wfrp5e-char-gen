@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "taverns-old-world",
+  "title": "Taverns of the Old World",
+  "shortTitle": "Taverns",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Taverns of the Old World.pdf",
+    "sha256": "07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Generic staff retain printed scores, Skill totals, Wounds and Damage. Use canonical Fifth Edition Talents, without reapplying baseline benefits.",
+      "Standalone printed references retain original Fourth Edition wording and warnings; no live play automation or automatic Legacy tagging.",
+      "Core duplicate equipment stays unchanged; only distinct fixed-price consumables are added with unknown weights and Availability."
+    ]
+  },
+  "files": {
+    "market": "market.json",
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

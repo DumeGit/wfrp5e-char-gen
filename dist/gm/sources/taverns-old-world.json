@@ -1,0 +1,1715 @@
+{
+  "schemaVersion": 1,
+  "id": "taverns-old-world",
+  "source": {
+    "file": "Taverns of the Old World.pdf",
+    "sha256": "07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c"
+  },
+  "summary": "Twelve generic tavern staff profiles",
+  "profiles": [
+    {
+      "id": "taverns-old-world:creatures:chef",
+      "name": "Chef",
+      "page": 15,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 15
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Evaluate",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 35
+        },
+        {
+          "name": "Trade (Cook)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Craftsman (Cook)",
+          "ranks": 1
+        },
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Savvy",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Pouch containing 10 Brass Pennies, Trade Tools"
+      },
+      "notes": [
+        "Printed Status: Brass 2. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline."
+      ],
+      "text": "CHEF (BRASS 2) 4 30 30 35 35 30 30 35 30 30 30 12 Traits: Weapon (Dagger) +5 Skills: Athletics 35, Cool 35, Consume Alcohol 40, Dodge 35, Endurance 40, Evaluate 35, Melee (Basic) 35, Stealth (Urban) 35, Trade (Cook) 40 Talents: Craftsman (Cook), Doomed, Savvy Trappings: Dagger, Pouch containing 10 Brass Pennies, Trade Tools"
+    },
+    {
+      "id": "taverns-old-world:creatures:doorman",
+      "name": "Doorman",
+      "page": 15,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 15
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 45
+        },
+        {
+          "name": "Intuition",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 50
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        },
+        {
+          "name": "Warrior Born",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 50,
+          "damage": 5,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Sword",
+          "skillName": "Melee (Basic)",
+          "skill": 50,
+          "damage": 7,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Leather Jerkin, Pouch containing 5 Silver Shillings, Sword"
+      },
+      "notes": [
+        "Printed Status: Silver 1. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline."
+      ],
+      "text": "DOORMAN (SILVER 1) 4 40 30 30 35 30 35 30 30 30 35 12 Traits: Armour 1 (4), Weapon (Dagger) +5, Weapon (Sword) +7 Skills: Consume Alcohol 40, Endurance 40, Entertain (Storytelling) 40, Gamble 35, Gossip 45, Intuition 35, Melee (Basic) 50, Perception 35 Talents: Doomed, Strike to Stun, Suave, Warrior Born Trappings: Dagger, Leather Jerkin, Pouch containing 5 Silver Shillings, Sword"
+    },
+    {
+      "id": "taverns-old-world:creatures:excellent-chef",
+      "name": "Excellent Chef",
+      "page": 15,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 15
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 45,
+        "T": 45,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 50,
+        "Int": 30,
+        "WP": 45,
+        "Fel": 45,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Charm",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 55
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 60
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Endurance",
+          "total": 55
+        },
+        {
+          "name": "Evaluate",
+          "total": 45
+        },
+        {
+          "name": "Haggle",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 50
+        },
+        {
+          "name": "Research",
+          "total": 40
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 45
+        },
+        {
+          "name": "Trade (Cook)",
+          "total": 65
+        }
+      ],
+      "talents": [
+        {
+          "name": "Acute Sense (Taste)",
+          "ranks": 1
+        },
+        {
+          "name": "Craftsman (Cook)",
+          "ranks": 1
+        },
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Master Tradesman (Cook)",
+          "ranks": 1
+        },
+        {
+          "name": "Nimble-fingered",
+          "ranks": 1
+        },
+        {
+          "name": "Savvy",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Guild License, Pouch containing 15 Silver Shillings, Trade Tools"
+      },
+      "notes": [
+        "Printed Status: Silver 3. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline.",
+        "Printed Nimble Fingered uses the canonical core spelling Nimble-fingered; this naming correction is not a rule adaptation."
+      ],
+      "text": "EXCELLENT CHEF (SILVER 3) 4 30 30 45 45 30 30 50 30 45 45 16 Traits: Weapon (Dagger) +6 Skills: Athletics 45, Charm 55, Cool 55, Consume Alcohol 60, Dodge 45, Endurance 55, Evaluate 45, Haggle 55, Melee (Basic) 35, Perception 50, Research 40, Stealth (Urban) 45, Trade (Cook) 65 Talents: Acute Sense (Taste), Craftsman (Cook), Doomed, Master Tradesman (Cook), Nimble Fingered, Savvy Trappings: Dagger, Guild License, Pouch containing 15 Silver Shillings, Trade Tools"
+    },
+    {
+      "id": "taverns-old-world:creatures:excellent-doorman",
+      "name": "Excellent Doorman",
+      "page": 15,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 15
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 30,
+        "S": 45,
+        "T": 45,
+        "I": 45,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 60
+        },
+        {
+          "name": "Endurance",
+          "total": 55
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 40
+        },
+        {
+          "name": "Intimidate",
+          "total": 60
+        },
+        {
+          "name": "Gamble",
+          "total": 40
+        },
+        {
+          "name": "Gossip",
+          "total": 50
+        },
+        {
+          "name": "Haggle",
+          "total": 45
+        },
+        {
+          "name": "Heal",
+          "total": 40
+        },
+        {
+          "name": "Intuition",
+          "total": 60
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 55
+        },
+        {
+          "name": "Perception",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Disarm",
+          "ranks": 1
+        },
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "In-fighter",
+          "ranks": 1
+        },
+        {
+          "name": "Menacing",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        },
+        {
+          "name": "Warrior Born",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 60,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Knuckledusters",
+          "skillName": "Melee (Brawling)",
+          "skill": 55,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Sword",
+          "skillName": "Melee (Basic)",
+          "skill": 60,
+          "damage": 8,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Knuckledusters, Leather Jerkin, Pouch containing 20 Silver Shillings, Sword"
+      },
+      "notes": [
+        "Printed Status: Silver 4. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline.",
+        "Printed grouped Skill totals are expanded into separate specialisations without changing any numbers."
+      ],
+      "text": "EXCELLENT DOORMAN (SILVER 4) 4 55 30 45 45 45 45 30 30 30 35 15 Traits: Armour 1 (5), Weapon (Dagger) +6, Weapon (Knuckledusters) +6, Weapon (Sword) +8 Skills: Athletics 55, Consume Alcohol 55, Cool 40, Dodge 60, Endurance 55, Entertain (Storytelling) 40, Intimidate 60, Gamble 40, Gossip 50, Haggle 45, Heal 40, Intuition 60, Melee (Basic 60, Brawling 55), Perception 60 Talents: Disarm, Doomed, In-fighter, Menacing, Strike to Stun, Suave, Warrior Born Trappings: Dagger, Knuckledusters, Leather Jerkin, Pouch containing 20 Silver Shillings, Sword"
+    },
+    {
+      "id": "taverns-old-world:creatures:excellent-landlord",
+      "name": "Excellent Landlord",
+      "page": 14,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 45,
+        "T": 45,
+        "I": 45,
+        "Ag": 45,
+        "Dex": 45,
+        "Int": 45,
+        "WP": 45,
+        "Fel": 55,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Bribery",
+          "total": 60
+        },
+        {
+          "name": "Charm",
+          "total": 65
+        },
+        {
+          "name": "Climb",
+          "total": 55
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 65
+        },
+        {
+          "name": "Cool",
+          "total": 55
+        },
+        {
+          "name": "Drive",
+          "total": 60
+        },
+        {
+          "name": "Dodge",
+          "total": 65
+        },
+        {
+          "name": "Endurance",
+          "total": 60
+        },
+        {
+          "name": "Evaluate",
+          "total": 60
+        },
+        {
+          "name": "Gamble",
+          "total": 60
+        },
+        {
+          "name": "Gossip",
+          "total": 70
+        },
+        {
+          "name": "Haggle",
+          "total": 75
+        },
+        {
+          "name": "Intuition",
+          "total": 60
+        },
+        {
+          "name": "Language (Guilder)",
+          "total": 55
+        },
+        {
+          "name": "Leadership",
+          "total": 65
+        },
+        {
+          "name": "Lore (Law)",
+          "total": 55
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 60
+        },
+        {
+          "name": "Research",
+          "total": 50
+        },
+        {
+          "name": "Secret Signs (Guilder)",
+          "total": 50
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 60
+        },
+        {
+          "name": "Trade (Brewer)",
+          "total": 65
+        }
+      ],
+      "talents": [
+        {
+          "name": "Craftsman (Brewer)",
+          "ranks": 1
+        },
+        {
+          "name": "Dealmaker",
+          "ranks": 1
+        },
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Master Tradesman (Brewer)",
+          "ranks": 1
+        },
+        {
+          "name": "Gregarious",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Back",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Knuckledusters",
+          "skillName": "Melee (Brawling)",
+          "skill": 40,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Brewers’ Guild Licence, Dagger, Knuckledusters, Modest Townhouse or Cottage, Pouch containing 5 Gold Crowns, Sturdy Boots, Trade Tools"
+      },
+      "notes": [
+        "Printed Status: Gold 1. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline.",
+        "Printed grouped Skill totals are expanded into separate specialisations without changing any numbers."
+      ],
+      "text": "EXCELLENT LANDLORD (GOLD 1) 4 30 30 45 45 45 45 45 45 45 55 16 Traits: Weapon (Knuckledusters) +6, Weapon (Dagger) +6 Skills: Athletics 55, Bribery 60, Charm 65, Climb 55, Consume Alcohol 65, Cool 55, Drive 60, Dodge 65, Endurance 60, Evaluate 60, Gamble 60, Gossip 70, Haggle 75, Intuition 60, Language (Guilder) 55, Leadership 65, Lore (Law 55, Local 55), Melee (Basic 35, Brawling 40), Perception 60, Research 50, Secret Signs (Guilder) 50, Stealth (Urban) 60, Trade (Brewer) 65 Talents: Craftsman (Brewer), Dealmaker, Doomed, Master Tradesman (Brewer), Gregarious, Read/Write, Strong Back, Sturdy, Suave Trappings: Brewers’ Guild Licence, Dagger, Knuckledusters, Modest Townhouse or Cottage, Pouch containing 5 Gold Crowns, Sturdy Boots, Trade Tools"
+    },
+    {
+      "id": "taverns-old-world:creatures:landlord",
+      "name": "Landlord",
+      "page": 14,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 35,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 40,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Charm",
+          "total": 45
+        },
+        {
+          "name": "Climb",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Drive",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Evaluate",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 40
+        },
+        {
+          "name": "Gossip",
+          "total": 45
+        },
+        {
+          "name": "Haggle",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        },
+        {
+          "name": "Trade (Brewer)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Back",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Brewers’ Guild Licence, Dagger, Lodgings, Pouch containing 5 Silver Shillings, Sturdy Boots, Trade Tools"
+      },
+      "notes": [
+        "Printed Status: Silver 1. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline."
+      ],
+      "text": "LANDLORD (SILVER 1) 4 30 30 35 35 30 35 35 35 30 40 12 Traits: Weapon (Dagger) +5 Skills: Athletics 40, Charm 45, Climb 35, Consume Alcohol 40, Cool 35, Drive 40, Dodge 45, Endurance 40, Evaluate 40, Gamble 40, Gossip 45, Haggle 45, Melee (Basic) 35, Stealth (Urban) 40, Trade (Brewer) 40 Talents: Doomed, Read/Write, Strong Back, Sturdy, Suave Trappings: Brewers’ Guild Licence, Dagger, Lodgings, Pouch containing 5 Silver Shillings, Sturdy Boots, Trade Tools"
+    },
+    {
+      "id": "taverns-old-world:creatures:menial",
+      "name": "Menial",
+      "page": 14,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Climb",
+          "total": 40
+        },
+        {
+          "name": "Drive",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Intuition",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Floor Brush, Pouch containing 5 Brass Pennies"
+      },
+      "notes": [
+        "Printed Status: Brass 1. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline."
+      ],
+      "text": "MENIAL (BRASS 1) 4 30 30 35 35 30 35 30 30 30 35 12 Traits: Weapon (Dagger) +5 Skills: Athletics 40, Climb 40, Drive 40, Dodge 40, Endurance 40, Intuition 35, Melee (Basic) 35, Perception 35, Stealth (Urban) 40 Talents: Doomed, Sturdy, Suave Trappings: Dagger, Floor Brush, Pouch containing 5 Brass Pennies"
+    },
+    {
+      "id": "taverns-old-world:creatures:poor-landlord",
+      "name": "Poor Landlord",
+      "page": 14,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 40,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Charm",
+          "total": 45
+        },
+        {
+          "name": "Climb",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 35
+        },
+        {
+          "name": "Drive",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 40
+        },
+        {
+          "name": "Gossip",
+          "total": 45
+        },
+        {
+          "name": "Haggle",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Lodgings, Pouch containing 5 Silver Shillings, Sturdy Boots"
+      },
+      "notes": [
+        "Printed Status: Silver 1. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline."
+      ],
+      "text": "POOR LANDLORD (SILVER 1) 4 30 30 30 30 30 35 30 35 30 40 12 Traits: Weapon (Dagger) +5 Skills: Charm 45, Climb 35, Consume Alcohol 35, Drive 40, Dodge 40, Gamble 40, Gossip 45, Haggle 45, Melee (Basic) 35 Talents: Doomed, Sturdy, Suave Trappings: Dagger, Lodgings, Pouch containing 5 Silver Shillings, Sturdy Boots"
+    },
+    {
+      "id": "taverns-old-world:creatures:quality-chef",
+      "name": "Quality Chef",
+      "page": 15,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 15
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 45,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 40,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Charm",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Evaluate",
+          "total": 40
+        },
+        {
+          "name": "Haggle",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        },
+        {
+          "name": "Trade (Cook)",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Craftsman (Cook)",
+          "ranks": 1
+        },
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Nimble-fingered",
+          "ranks": 1
+        },
+        {
+          "name": "Savvy",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Pouch containing 5 Silver Shillings, Trade Tools"
+      },
+      "notes": [
+        "Printed Status: Silver 1. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline.",
+        "Printed Nimble Fingered uses the canonical core spelling Nimble-fingered; this naming correction is not a rule adaptation."
+      ],
+      "text": "QUALITY CHEF (SILVER 1) 4 30 30 40 40 30 30 45 30 30 40 15 Traits: Weapon (Dagger) +6 Skills: Athletics 40, Charm 45, Cool 40, Consume Alcohol 50, Dodge 40, Endurance 45, Evaluate 40, Haggle 45, Melee (Basic) 35, Perception 40, Stealth (Urban) 40, Trade (Cook) 55 Talents: Craftsman (Cook), Doomed, Nimble Fingered, Savvy Trappings: Dagger, Pouch containing 5 Silver Shillings, Trade Tools"
+    },
+    {
+      "id": "taverns-old-world:creatures:quality-doorman",
+      "name": "Quality Doorman",
+      "page": 15,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 15
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 35,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 40
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 45
+        },
+        {
+          "name": "Intuition",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 55
+        },
+        {
+          "name": "Perception",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "In-fighter",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        },
+        {
+          "name": "Warrior Born",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 60,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Knuckledusters",
+          "skillName": "Melee (Brawling)",
+          "skill": 55,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Sword",
+          "skillName": "Melee (Basic)",
+          "skill": 60,
+          "damage": 8,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Knuckledusters, Leather Jerkin, Pouch containing 10 Silver Shillings, Sword"
+      },
+      "notes": [
+        "Printed Status: Silver 2. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline.",
+        "Printed grouped Skill totals are expanded into separate specialisations without changing any numbers."
+      ],
+      "text": "QUALITY DOORMAN (SILVER 2) 4 50 30 40 40 35 40 30 30 30 35 15 Traits: Armour 1 (5), Weapon (Dagger) +6, Weapon (Knuckledusters) +6, Weapon (Sword) +8 Skills: Athletics 45, Consume Alcohol 45, Cool 35, Dodge 45, Endurance 45, Entertain (Storytelling) 40, Intimidate 50, Gamble 35, Gossip 45, Intuition 45, Melee (Basic 60, Brawling 55), Perception 45 Talents: Doomed, In-fighter, Strike to Stun, Suave, Warrior Born Trappings: Dagger, Knuckledusters, Leather Jerkin, Pouch containing 10 Silver Shillings, Sword"
+    },
+    {
+      "id": "taverns-old-world:creatures:quality-landlord",
+      "name": "Quality Landlord",
+      "page": 14,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 40,
+        "Ag": 40,
+        "Dex": 40,
+        "Int": 40,
+        "WP": 30,
+        "Fel": 50,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Bribery",
+          "total": 55
+        },
+        {
+          "name": "Charm",
+          "total": 60
+        },
+        {
+          "name": "Climb",
+          "total": 50
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Drive",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Endurance",
+          "total": 50
+        },
+        {
+          "name": "Evaluate",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 50
+        },
+        {
+          "name": "Gossip",
+          "total": 60
+        },
+        {
+          "name": "Haggle",
+          "total": 65
+        },
+        {
+          "name": "Intuition",
+          "total": 50
+        },
+        {
+          "name": "Language (Guilder)",
+          "total": 50
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 50
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 50
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 50
+        },
+        {
+          "name": "Trade (Brewer)",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Craftsman (Brewer)",
+          "ranks": 1
+        },
+        {
+          "name": "Dealmaker",
+          "ranks": 1
+        },
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Gregarious",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Back",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Knuckledusters",
+          "skillName": "Melee (Brawling)",
+          "skill": 40,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        },
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Brewers’ Guild Licence, Dagger, Knuckledusters, Modest Townhouse or Cottage, Pouch containing 25 Silver Shillings, Sturdy Boots, Trade Tools"
+      },
+      "notes": [
+        "Printed Status: Silver 5. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline.",
+        "Printed grouped Skill totals are expanded into separate specialisations without changing any numbers."
+      ],
+      "text": "QUALITY LANDLORD (SILVER 5) 4 30 30 40 40 40 40 40 40 30 50 15 Traits: Weapon (Knuckledusters) +6, Weapon (Dagger) +6 Skills: Athletics 50, Bribery 55, Charm 60, Climb 50, Consume Alcohol 55, Cool 40, Drive 50, Dodge 55, Endurance 50, Evaluate 50, Gamble 50, Gossip 60, Haggle 65, Intuition 50, Language (Guilder) 50, Lore (Local) 50, Melee (Basic 35, Brawling 40), Perception 50, Stealth (Urban) 50, Trade (Brewer) 55 Talents: Craftsman (Brewer), Dealmaker, Doomed, Gregarious, Read/Write, Strong Back, Sturdy, Suave Trappings: Brewers’ Guild Licence, Dagger, Knuckledusters, Modest Townhouse or Cottage, Pouch containing 25 Silver Shillings, Sturdy Boots, Trade Tools"
+    },
+    {
+      "id": "taverns-old-world:creatures:servant",
+      "name": "Servant",
+      "page": 14,
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "example": false,
+      "category": "Tavern staff",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 35,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 35
+        },
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Climb",
+          "total": 50
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 50
+        },
+        {
+          "name": "Drive",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 50
+        },
+        {
+          "name": "Endurance",
+          "total": 50
+        },
+        {
+          "name": "Evaluate",
+          "total": 35
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Intuition",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 45
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 50
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Back",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Dagger, Floor Brush, Pouch containing 1 Silver Shilling and 5 Brass Pennies"
+      },
+      "notes": [
+        "Printed Status: Brass 3. Printed scores, Skill totals and weapon Damage are retained; core Talent definitions govern. Permanent Talent benefits are already included in this baseline."
+      ],
+      "text": "SERVANT (BRASS 3) 4 30 30 40 40 35 40 30 30 30 35 15 Traits: Weapon (Dagger) +6 Skills: Animal Care 35, Athletics 50, Climb 50, Consume Alcohol 50, Drive 50, Dodge 50, Endurance 50, Evaluate 35, Gamble 35, Intuition 40, Melee (Basic) 35, Perception 45, Stealth (Urban) 50 Talents: Doomed, Strong Back, Sturdy, Suave Trappings: Dagger, Floor Brush, Pouch containing 1 Silver Shilling and 5 Brass Pennies"
+    }
+  ],
+  "templates": [],
+  "traits": [],
+  "training": []
+}

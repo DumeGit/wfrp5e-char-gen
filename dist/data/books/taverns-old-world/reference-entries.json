@@ -1,0 +1,396 @@
+[
+  {
+    "id": "taverns-old-world:reference:tavern-drink-ale",
+    "name": "Tavern drink: Ale",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Ale (A) Ubiquitous and popular, a venue without a stock of ale can hardly be considered a tavern. Beer, mead, or cider may be served instead of, or alongside, ale for a similar price. Examples: Eilhart Brown, Forlorn Hops, Kiegel’s Natural Pig Swill, Marienburg Pale, Old Dog Puke, Shramleben Dark Ale Fair Price: 3d for a pint. Average (+20) Consume Alcohol Test per pint."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-dwarf-ale",
+    "name": "Tavern drink: Dwarf Ale",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Dwarf Ale (DA) The most celebrated ales by renowned Dwarf breweries. Examples of other Dwarf ales: Bugman’s Castle XXXXXXXXX, Bugman’s Special Brew, Durgrund’s Hellfire, Korben’s Finest, Old Fortitude, One-finger’s Tar Drop, Thengeln’s Golden Preserve, Troll Brew, Zhufbar Ale Fair Price: 9d for a pint. Three Average (+20) Consume Alcohol Tests per pint."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-excellent-spirits",
+    "name": "Tavern drink: Excellent Spirits",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Excellent Spirits (ES) Brandies, schnapps, and liqueurs of fine quality. Examples: Albion Uisce, Alte Geheerentode Rum, Echte Brandenburger (the Emperor’s favourite brandy) Fair Price: 8d per shot, 4/- for a pint bottle (8 shots). Average (+20) Consume Alcohol Test per shot."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-fine-wine",
+    "name": "Tavern drink: Fine Wine",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Fine Wine (FW) Respectable vintages from reliable sources. Examples: Gewürzstraminek Dessert Wine, Grenzstadter Deep Wine, Pritzstock Riesling, Whistler’s Finest Rose Wine Fair Price: 8d per glass, 2/8 per bottle (5 glasses). Average (+20) Consume Alcohol Test per glass."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-legendary-wine",
+    "name": "Tavern drink: Legendary Wine",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Legendary Wine (LW) The best wines come from Bretonnia and Tilea, and which nation produces the superior wine is cause for ineluctable debate between connoisseurs. Few wines in the Empire can compare, though a batch from a famous year may achieve renown. Examples: Annaliese, Bilbali Vino Tinto, Gewürzstraminek 08, Manann’s Own, Morceaux Vin Sec, Ravolan Frizzante Fair Price: Prices can reach extortionate costs and start at no less than 4/- per glass, 18/- per bottle (5 glasses). Average (+20) Consume Alcohol Test per glass."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-rough-spirits",
+    "name": "Tavern drink: Rough Spirits",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Rough Spirits (RS) Cheap brandies, schnapps, and liqueurs with a pronounced bitter taste. Examples: Dwarf Gragrint, Kislevite Samogon, Orc Bitters Fair Price: 2d per shot, 1/- for a pint bottle (8 shots). Average (+20) Consume Alcohol Test per shot."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-spirits",
+    "name": "Tavern drink: Spirits",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Spirits (S) Brandies, schnapps, and liqueurs of average quality. Examples: Egling Geist, Eilhart Obstler, Oberwil Infusion Fair Price: 4d per shot, 2/- for a pint bottle (8 shots). Average (+20) Consume Alcohol Test per shot."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-small-beer",
+    "name": "Tavern drink: Small Beer",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Small Beer (SB) Watered-down ale is often sold openly in cheap taverns. It may be weak and tasteless, but it is still safer than drinking water. Fair Price: 2d for a pint. Easy (+40) Consume Alcohol Test per pint."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-strong-ale",
+    "name": "Tavern drink: Strong Ale",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Strong Ale (SA) The result of more exacting and time-consuming brewing processes, strong ales are more expensive than regular ales but admired for their flavour and alcoholic kick. Examples: Braakbroew Ale, Orc’s Headwrecker, Stromdorf Gewitterwasser Fair Price: 5d for a pint. Challenging (+0) Consume Alcohol Test per pint."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-drink-wine",
+    "name": "Tavern drink: Wine",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 16,
+    "text": "Wine (W) The Empire’s climate may not be the best for viticulture, but their Hocks and Rieslings still have their admirers. Examples: Aulenbacher, Gewürzstraminek Hock, Heisenberg Rotwein, Loningbruck Ruby, Wurtbader Weißwein Fair Price: 4d per glass, 1/4 per bottle (5 glasses). Average (+20) Consume Alcohol Test per glass."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-snacks",
+    "name": "Tavern fare: Snacks",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Snacks Snacks may stave off hunger but are hardly nourishing. A visitor to a tavern who tries to live off snacks could do so for a number of days equal to their Toughness Bonus but have to test for Starvation if they persist beyond this time without proper food. Examples: Dried Hagercryb Shaggy Strips, Fried Vorbergland Hog Rinds, Trinkwort Crisps, StrigoiToast Fair Price: 2d"
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-stew",
+    "name": "Tavern fare: Stew",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Stew Stews and soups are often served at taverns together with hunks of stale bread. They are easy to make and nutritious enough that a Character may subsist on stew and never have to worry about Starvation. Examples: Fleeceback Stew, Goulash in the Sylvanian Style, Reconstituted Stockfish Fair Price: 4d"
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-simple-meal",
+    "name": "Tavern fare: Simple Meal",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Simple Meal Simple meals tend to be made from locally sourced food, cheap vegetables, and less desirable cuts of meat. Examples: Vorbergland Hog chops with Sauerkraut and a slice of Bread, chunks of boiled Fleeceback with mashed Turnips, stewed tail of Stolz Fathead with Root Vegetables Fair Price: 10d"
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-meal",
+    "name": "Tavern fare: Meal",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Meal A square meal in the empire consists of a mixture of grains, vegetables, and meat or fish, accompanied by slices of fresh bread. Examples: Lurkerfish and Gymmcrab Soup, Slice of Reik Eel Pie, Fathead Tripes with Sauerkraut, Kuri (spiced goat meat prepared according to a Dwarf recipe) Fair Price: 1/-"
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-menu",
+    "name": "Tavern fare: Menu",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Menu A menu consists of a variety of food, enabling patrons to buy either stews, simple meals, or meals at normal prices."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-fine-menu",
+    "name": "Tavern fare: Fine Menu",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Fine Menu Prepared by a trained cook, a fine menu consists of fine quality meals at double the normal price. Not only will the food be expertly prepared, but it will be served with side dishes and a sweet dessert. Fine quality snacks and stews will also be available. Examples: Razorbeak Eggs and Spinach, Roast Daggerfish with Seabeet, Silverside of Stimmigen Dairy baked with Tarrabeth and served with Turnip Mash, Terrine of Stirpike with Peas and Artichokes, Fillet of Averland Shorthorn with Honey-Glazed Roast Parsnips, Sauerapfel Pie with Cream"
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-fare-lavish-menu",
+    "name": "Tavern fare: Lavish Menu",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "Lavish Menu A lavish menu consists of dishes prepared from the finest ingredients and cooked by some of the best chefs in the Empire. This food is excellent but costs three times the usual price. Fine quality snacks and stews will also be available, though the proprietors may expect them to be consumed as part of a meal and may regard a guest who lives on such food as tight-fisted and déclassé. Examples: A single meal may involve Tilean Olives stuffed with Sprinthof Smoked Cheese as an Amuse Bouche, Gymmcrab Bisque to start, Ribeye of Stolz Fathead with Roast Vegetables as a main meal, and a choice selection of Friedendorf Sweetmeats"
+  },
+  {
+    "id": "taverns-old-world:reference:poor-quality-food-and-drink",
+    "name": "Poor quality food and drink",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 17,
+    "text": "POOR QUALITY FOOD AND DRINK Poor meals tend to be the same sort of food as regular meals but may be noticeably stale, made with fewer ingredients, or served undercooked or burned. Bacteria and mould can propagate in such food and make people ill. Poor quality drinks do not tend to harbour infection due to their alcoholic content but may still cause illness due to poisonous chemicals or a nauseating taste. A Character may notice that food or drink is of poor quality if they pass an Easy (+40) Perception (Smell), Perception (Taste), Trade (Brewer), or Trade (Cook) Test. Poor meals cost half the price of a regular meal, but anyone consuming them runs a risk of illness. The GM should make a Secret Test, rolling a 1d10 for each Character who consumes poor quality food or drink. On a roll of 1, that Character risks becoming ill and must test for contraction of the Galloping Trots (see WFRP, page 187).",
+    "notes": "The printed WFRP p. 187 disease cross-reference belongs to Fourth Edition; use the current core disease definition. No illness is rolled by the creator."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-board-board-and-coaching-inns",
+    "name": "Tavern board: Board and Coaching Inns",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "Board and Coaching Inns Coaching inns usually count as Silver Tier venues, but they always have board available. Add 3 to the roll for board when dealing with a coaching inn."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-board-common-room",
+    "name": "Tavern board: Common Room",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "Common Room (CR) Often known as a bunk room, a common room contains several simple single beds. Sleepers share the room with strangers and there is no hope of privacy. In poorer venues, the only toilet facility may be a shared bucket, but landlords who are wary of letting the room get too noisome may arrange for the bucket to be placed in a closet or small adjoining room. The number in brackets indicates the number of beds in the room. Fair Price: 10d per night per person."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-board-room",
+    "name": "Tavern board: Room",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "Room (R) A small room with 2 single beds or a double bed. A ceramic container is provided for night soil. In many taverns, the purchaser of the room may be provided with a key, though poor- quality rooms lack such basic security. The number in brackets indicates the number of rooms in the inn. Fair Price: 10/- per night per room."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-board-large-room",
+    "name": "Tavern board: Large Room",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "Large Room (L) As a room, but larger and with an additional 2 single beds or double bed. The number in brackets indicates the number of large rooms in the inn. Fair Price: 14/- per night per room."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-board-fine-room",
+    "name": "Tavern board: Fine Room",
+    "category": "equipment",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "Fine Room (FR) A spacious room with 2 single beds or a double bed. A porcelain commode is provided as a toilet. The room will also contain features such as a mirror, a dresser, wardrobe, warm bedpan, vases of flowers, and attractive figurines or paintings. Any guests staying in room will be provided with a key. The number in brackets indicates the number of fine rooms in the inn. Fair Price: 1 GC per night per room."
+  },
+  {
+    "id": "taverns-old-world:reference:poor-quality-board",
+    "name": "Poor quality board",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "POOR QUALITY BOARD Some rougher taverns have slovenly sleeping areas, with damp sheets, rancid bedding, and biting parasitic bugs. Poor rooms cost half the price of a regular room. The GM should make a Secret Test, rolling a 1d10 for each Character who spends a night in the room. On a roll of 1 that Character risks becoming ill and must test for contraction of the Itching Pox (see WFRP, page 187).",
+    "notes": "The printed WFRP p. 187 disease cross-reference belongs to Fourth Edition. Lodging is a reference, not a starting equipment purchase."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-booths-and-privacy",
+    "name": "Tavern booths and privacy",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 18,
+    "text": "Booth A private area of the tavern in which a single table is separated from the surrounding bar by curtains or screens. It is considered impolite to disturb other guests who have occupied a booth, and Characters who occupy one can be assured of reasonable privacy. Sleight of Hand or Perception Tests made against those occupying a booth suffer from –1 SL."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-games-invitations-and-stakes",
+    "name": "Tavern games: invitations and stakes",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Games Many taverns keep the equipment needed to run a certain game on the premises. The GM should decide if any of the customers in the taproom are looking for a game or would be willing to play if asked. An unwilling customer might be willing to play a game if a Character asks them and passes a Charm Test (use the difficulty modifier to Gossip Tests for the purposes of Charm Tests). Most games are played for stakes determined by the status of the venue. A typical stake will be three pennies in a Brass Tier Venue, two shillings in a Silver Tier venue, and a Gold Crown in a Gold Tier venue. A Character who wants to play for fun, or for extra money, may make appropriate Charm or Haggle Tests, but if such tests are failed, they may be viewed as either a hustler or a time waster by other customers."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-discouraged-games",
+    "name": "Tavern game: Discouraged games",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Discouraged Not only does this tavern not provide any equipment for games, but the landlord actively discourages competition. They may regard games as too déclassé for their establishment, too likely to result in brawls, or a form of immoral behaviour in and of themselves. If customers insist on playing a game, members of staff in the same room may take a Perception Test every 10 Rounds to spot them and will ask gamers to either desist or leave once they are spotted."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-al-zahr",
+    "name": "Tavern game: Al-Zahr",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Al-Zahr A simple dice game. 2 dice are rolled, with participants trying to achieve a target number. To play, decide on players, add stakes to the pot for each player, first player chooses a number between 7 and 15, the players take turns to roll, and the first player to roll the target or 20 wins the pot."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-alvatafl",
+    "name": "Tavern game: Alvatafl",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Alvatafl A chess-like game in which a besieging army of 48 Dwarf pieces take on a centrally placed army of 12 Elves. Players should make Challenging (+0) Intelligence or Lore (Warfare) Tests each turn, and total their SL. The first player to reach 10 SL or roll a Critical success wins. If both players achieve the victory condition in the same turn, the game is a draw."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-arm-wrestling",
+    "name": "Tavern game: Arm Wrestling",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Arm Wrestling No equipment is needed to arm wrestle, though it may be discouraged as coarse behaviour in Gold Tier venues. Players make Extended Opposed Challenging (+0) Strength Tests. The first Character to 10 SL wins. In case of a draw, the game goes to the Character with the highest Strength."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-beast-among-the-tailors",
+    "name": "Tavern game: Beast Among the Tailors",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Beast Among the Tailors 16 skittles are set up, and a participant may take up to three attempts to knock them down with a metal ball swinging on the end of a chain. Participants may make up to three Average (+20) Ballistic Skill Tests. The total SL indicates the number of skittles knocked down."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-bowls",
+    "name": "Tavern game: Bowls",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Bowls Usually played in the tavern yard or beer garden. Players take three Challenging (+0) Ballistic Skill or Ranged (Throwing) Tests, recording their total SL. The highest SL wins the game."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-cerevis",
+    "name": "Tavern game: Cerevis",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Cerevis A drinking game played with cards. An alternative vocabulary must be adopted, and players who lose a round earn a mark called an ‘owl’. Each turn an Average (+20) Combined Gamble and Initiative Test is required from all players. The lowest score on the Gamble Test earns an owl. The lowest score on the Initiative Test forgets the alternative vocabulary and must forfeit. For every forfeit, a player must drink a pint of beer. They may also drink a pint to erase an owl. By the time everyone is bored of the game the player with the fewest owls wins."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-darts",
+    "name": "Tavern game: Darts",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Darts Each Round, each player makes three Challenging (+0) Ballistic Skill or Ranged (Throwing) Tests. If the test is successful, record the number thrown on the dice. Total these numbers up. The first player to reach 501 wins the game."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-dominos",
+    "name": "Tavern game: Dominos",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Dominos Each player makes an Opposed Average (+20) Gambling Test. In case of a draw, the lowest number wins the game."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-m-hlen",
+    "name": "Tavern game: Mühlen",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Mühlen A 2-player game in which nine pieces are moved about on a grid. Players should make Extended Opposed Easy (+40) Intelligence Tests. The first player to reach 9 or more SL wins. If both players reach 9 or more SL on the same Turn, the game is a draw."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-scarlet-empress",
+    "name": "Tavern game: Scarlet Empress",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Scarlet Empress The most popular card game in the Empire. To play, everyone adds a stake to the pot and makes an Average (+20) Gambling Test. A clear winner wins the pot. On a draw, players either add another stake or retire from the game."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-game-stones",
+    "name": "Tavern game: Stones",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 24,
+    "text": "Stones A popular game for two to four players where stones of different sizes are moved about on an octagonal board. Players should make Extended Opposed Average (+20) Intelligence Tests. The first player to reach 10 or more SL wins. If both players reach 10 or more SL on the same Turn, the game is a draw."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-hazard-trapped-treasures",
+    "name": "Tavern hazard: Trapped Treasures",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 9,
+    "text": "Trapped Treasures. The owner of the tavern has gone to great expense to ensure that the walls are hung with expensive artworks and silver decorations. Anticipating that a thief will one day help themselves to these prizes, he has secreted poisoned needles behind some of the mountings. A character taking a trapped piece from the wall must pass a Challenging (+0) Sleight of Hand Test or be stabbed by a needle, and must pass a Hard (–20) Endurance Test or gain 1 Poisoned Condition, plus a further 1 Poisoned Condition per –SL."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-hazard-hex",
+    "name": "Tavern hazard: Hex",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 10,
+    "text": "Hex. One of the bedrooms carries the germ of a curse. Maybe there is an unquiet spirit here, or a previous occupant offended the Spites. Should anyone spend the night here, they must take a Challenging (+0) Cool Test. Those that fail suffer horrifying nightmares and lose all remaining Fortune points for the remainder of the session."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-hazard-blue-mould",
+    "name": "Tavern hazard: Blue Mould",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 10,
+    "text": "Blue Mould. A patch of Blue Mould is growing underneath one of the beds in the tavern. It will be triggered if the bed is shifted or rocked violently. If triggered, the mould releases a cloud of spores for 5 yards around the bed. The cloud lasts for 1d10 Rounds. Characters in the area must pass an Average (+20) Endurance Test or gain 1 Poisoned Condition, plus a further 1 Poisoned Condition per –SL."
+  },
+  {
+    "id": "taverns-old-world:reference:tavern-hazard-yellow-mould",
+    "name": "Tavern hazard: Yellow Mould",
+    "category": "rule",
+    "topic": "Taverns",
+    "page": 10,
+    "text": "Yellow Mould. A patch of Yellow Mould is growing in a forgotten part of the cellars. Characters who enter the area can avoid triggering the mould on a Difficult (–10) Stealth Test. If triggered, the mould releases a cloud of spores for 5 yards to either side of the patch. The cloud lasts for 1d10 Rounds. Characters in the area must pass an Average (+20) Endurance Test or gain 1 Blinded condition, plus a further 1 Blinded condition per –SL. Also, all Characters receive 1 Wound for every Round spent in the cloud."
+  },
+  {
+    "id": "taverns-old-world:reference:random-tavern-tier-table",
+    "name": "Random Tavern Tier Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 4,
+    "text": "Roll 2d10. 2–12: Urban Location: Brass; Rural Location: Brass.\n\n13–15: Urban Location: Silver; Rural Location: Brass.\n\n16–17: Urban Location: Silver; Rural Location: Silver.\n\n18–19: Urban Location: Gold; Rural Location: Silver.\n\n20: Urban Location: Gold; Rural Location: Gold."
+  },
+  {
+    "id": "taverns-old-world:reference:brass-tavern-venue-vital-statistics-table",
+    "name": "Brass Tavern Venue Vital Statistics Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 12,
+    "text": "Roll d10.\n\n1: Staff: Landlord; Drinks: Small Beer (Poor); Fare: None; Board: None.\n\n2: Staff: Landlord; Drinks: Small Beer; Fare: None; Board: None.\n\n3: Staff: Skeleton Staff; Drinks: Ale (Poor); Fare: Snacks (Poor); Board: None.\n\n4: Staff: Skeleton Staff; Drinks: Ale; Fare: Snacks; Board: None.\n\n5: Staff: Skeleton Staff; Drinks: Ale; Fare: Snacks and roll again; Board: CR (12) (Poor).\n\n6: Staff: Adequate Staff; Drinks: Small Beer, Ale; Fare: Stew (Poor); Board: CR (12).\n\n7: Staff: Adequate Staff; Drinks: Ale, Strong Ale; Fare: Stew; Board: CR (18) (Poor).\n\n8: Staff: Adequate Staff; Drinks: A, SA, RS; Fare: Stew and roll again; Board: CR (18).\n\n9: Staff: Adequate Staff; Drinks: A, RS, W; Fare: Simple Meal (Poor); Board: CR (12), R (2) (Poor).\n\n10: Staff: Adequate Staff; Drinks: A, SA, RS, W; Fare: Simple Meal; Board: CR (12), R (2).\n\nA: Ale; DA: Dwarf Ale; ES: Excellent Spirits; FW: Fine Wine; LW: Legendary Wine; RS: Rough Spirits; S: Spirits; SB: Small Beer; SA: Strong Ale; W: Wine. CR: Common Room; R: Room; L: Large Room; FR: Fine Room."
+  },
+  {
+    "id": "taverns-old-world:reference:silver-tavern-venue-vital-statistics-table",
+    "name": "Silver Tavern Venue Vital Statistics Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 12,
+    "text": "Roll d10.\n\n1: Staff: Skeleton Staff; Drinks: Ale; Fare: Snacks; Board: None.\n\n2: Staff: Adequate Staff; Drinks: Ale; Fare: Stew; Board: CR (12).\n\n3: Staff: Adequate Staff; Drinks: Ale, Strong Ale; Fare: Simple Meal (Poor); Board: CR (18).\n\n4: Staff: Adequate Staff; Drinks: Ale, Strong Ale; Fare: Simple Meal and roll again; Board: CR (12), R (2).\n\n5: Staff: Adequate Staff; Drinks: A, SA, RS; Fare: Simple Meal; Board: CR (12), R (6).\n\n6: Staff: Adequate Staff; Drinks: A, SA, W; Fare: Meal (Poor); Board: CR (12), R (2), L (2).\n\n7: Staff: Adequate Staff; Drinks: A, DA, SA, RS, W; Fare: Meal; Board: CR (12), R (6), L (4).\n\n8: Staff: Quality Staff; Drinks: A, SA, S, W; Fare: Meal and roll again; Board: R (6), L (2).\n\n9: Staff: Quality Staff; Drinks: A, SA, S, W; Fare: Menu; Board: R (8), L (4).\n\n10: Staff: Quality Staff; Drinks: A, DA, SA, S, W, FW; Fare: Menu; Board: R (8), L (4), FR (2).\n\nA: Ale; DA: Dwarf Ale; ES: Excellent Spirits; FW: Fine Wine; LW: Legendary Wine; RS: Rough Spirits; S: Spirits; SB: Small Beer; SA: Strong Ale; W: Wine. CR: Common Room; R: Room; L: Large Room; FR: Fine Room."
+  },
+  {
+    "id": "taverns-old-world:reference:gold-tavern-venue-vital-statistics-table",
+    "name": "Gold Tavern Venue Vital Statistics Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 13,
+    "text": "Roll d10.\n\n1: Staff: Adequate Staff; Drinks: A, SA, S, W; Fare: Snacks; Board: None.\n\n2: Staff: Adequate Staff; Drinks: A, SA, S, W, FW; Fare: Meal; Board: None.\n\n3: Staff: Adequate Staff; Drinks: A, SA, S, W, FW; Fare: Menu; Board: R (6), L (2).\n\n4: Staff: Adequate Staff; Drinks: A, DA, SA, S, W, FW; Fare: Menu; Board: R (8), L (4).\n\n5: Staff: Adequate Staff; Drinks: A, SA, S, FW, ES; Fare: Menu; Board: R (8), L (4), FR (2).\n\n6: Staff: Quality Staff; Drinks: A, DA, SA, S, FW, ES; Fare: Fine Menu; Board: FR (6).\n\n7: Staff: Quality Staff; Drinks: A, SA, S, FW, LW; Fare: Fine Menu; Board: FR (6).\n\n8: Staff: Quality Staff; Drinks: A, SA, S, FW, ES, LW; Fare: Fine Menu; Board: FR (6).\n\n9: Staff: Excellent Staff; Drinks: A, SA, S, FW, ES, LW; Fare: Lavish Menu; Board: FR (12).\n\n10: Staff: Excellent Staff; Drinks: A, DA, S, FW, ES, LW; Fare: Lavish Menu; Board: FR (12).\n\nA: Ale; DA: Dwarf Ale; ES: Excellent Spirits; FW: Fine Wine; LW: Legendary Wine; RS: Rough Spirits; S: Spirits; SB: Small Beer; SA: Strong Ale; W: Wine. CR: Common Room; R: Room; L: Large Room; FR: Fine Room."
+  },
+  {
+    "id": "taverns-old-world:reference:brass-tavern-capacity-games-and-entertainment-table",
+    "name": "Brass Tavern Capacity, Games and Entertainment Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 19,
+    "text": "Roll d10.\n\n1: Capacity: 1d10 Stools; Games: None; Entertainment: None.\n\n2: Capacity: 1d10 Stools; Games: Beast Among the Tailors; Entertainment: None.\n\n3: Capacity: 1d10 Stools and roll again; Games: Stones; Entertainment: Rat baits.\n\n4: Capacity: 2 Benches; Games: Mühlen; Entertainment: Cock fights.\n\n5: Capacity: 2 Benches and roll again; Games: Scarlet Empress; Entertainment: Bear baits.\n\n6: Capacity: 2 Tables; Games: Scarlet Empress; Entertainment: Comic skits (poor).\n\n7: Capacity: 2 Tables and roll again; Games: Al-zahr; Entertainment: Comic skits.\n\n8: Capacity: 4 Tables; Games: Dominos; Entertainment: Storytelling.\n\n9: Capacity: 4 Tables, 1 Booth; Games: Darts; Entertainment: Folk music sessions (poor).\n\n10: Capacity: 4 Tables, 2 Booths; Games: Alvatafl; Entertainment: Folk music sessions."
+  },
+  {
+    "id": "taverns-old-world:reference:silver-tavern-capacity-games-and-entertainment-table",
+    "name": "Silver Tavern Capacity, Games and Entertainment Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 19,
+    "text": "Roll d10.\n\n1: Capacity: 6 Stools, 4 Tables; Games: None; Entertainment: None.\n\n2: Capacity: 6 Stools, 6 Tables; Games: Stones; Entertainment: Cock Fights.\n\n3: Capacity: 6 Stools, 8 Tables; Games: Mühlen; Entertainment: Comic skits.\n\n4: Capacity: 8 Tables; Games: Scarlet Empress; Entertainment: Storytelling.\n\n5: Capacity: 10 Tables; Games: Cerevis; Entertainment: Folk music sessions (poor).\n\n6: Capacity: 12 Tables; Games: Al-zahr; Entertainment: Folk music sessions.\n\n7: Capacity: 6 Tables, 2 Booths; Games: Dominos; Entertainment: Folk music sessions (quality).\n\n8: Capacity: 8 Tables, 4 Booths; Games: Darts; Entertainment: Mummers.\n\n9: Capacity: 10 Tables, 2 Booths; Games: Alvatafl; Entertainment: Mummers.\n\n10: Capacity: 10 Tables, 4 Booths; Games: Bowls; Entertainment: Class act (music or drama)."
+  },
+  {
+    "id": "taverns-old-world:reference:gold-tavern-capacity-games-and-entertainment-table",
+    "name": "Gold Tavern Capacity, Games and Entertainment Table",
+    "category": "table",
+    "topic": "Taverns",
+    "page": 19,
+    "text": "Roll d10.\n\n1: Capacity: 8 Tables; Games: Discouraged; Entertainment: None.\n\n2: Capacity: 8 Tables; Games: Discouraged; Entertainment: None.\n\n3: Capacity: 10 Tables; Games: None; Entertainment: None.\n\n4: Capacity: 10 Tables; Games: Mühlen; Entertainment: None.\n\n5: Capacity: 12 Tables; Games: Scarlet Empress; Entertainment: Class act (music or drama).\n\n6: Capacity: 12 Tables; Games: Cerevis; Entertainment: Class act (music or drama).\n\n7: Capacity: 8 Tables, 4 Booths; Games: Bowls; Entertainment: Class act (music or drama).\n\n8: Capacity: 8 Tables, 4 Booths; Games: Alvatafl; Entertainment: Class act (music or drama).\n\n9: Capacity: 12 Tables, 6 Booths; Games: Alvatafl; Entertainment: Class act (carnival).\n\n10: Capacity: 12 Tables, 6 Booths; Games: Alvatafl; Entertainment: Class act (carnival)."
+  }
+]

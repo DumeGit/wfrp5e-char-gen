@@ -1,0 +1,82 @@
+[
+  {
+    "id": "taverns-old-world:item:rough-spirits-pint-bottle",
+    "name": "Rough Spirits, pint bottle",
+    "page": 16,
+    "price": "1/–",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for 8 shots. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:excellent-spirits-pint-bottle",
+    "name": "Excellent Spirits, pint bottle",
+    "page": 16,
+    "price": "4/–",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for 8 shots. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:fine-wine-bottle",
+    "name": "Fine Wine, bottle",
+    "page": 16,
+    "price": "2/8",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for 5 glasses. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:small-beer-pint",
+    "name": "Small Beer, pint",
+    "page": 16,
+    "price": "2d",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for 1 pint. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:strong-ale-pint",
+    "name": "Strong Ale, pint",
+    "page": 16,
+    "price": "5d",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for 1 pint. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:snacks-tavern-serving",
+    "name": "Snacks, tavern serving",
+    "page": 17,
+    "price": "2d",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for one serving; no printed portion size. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:stew-tavern-serving",
+    "name": "Stew, tavern serving",
+    "page": 17,
+    "price": "4d",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for one serving; no printed portion size. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  },
+  {
+    "id": "taverns-old-world:item:simple-meal-tavern-serving",
+    "name": "Simple Meal, tavern serving",
+    "page": 17,
+    "price": "10d",
+    "enc": null,
+    "availability": "Unlisted",
+    "category": "Food, drink and lodging",
+    "text": "Printed tavern fair price for one meal; no printed portion size. Encumbrance and Availability are not specified. This purchase records the item only; consumption, illness and venue discounts are not automated."
+  }
+]

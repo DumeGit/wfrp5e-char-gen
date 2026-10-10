@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3858,
-  "newlyImported": 1228,
+  "references": 3915,
+  "newlyImported": 1277,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -1800,6 +1800,46 @@
           "first": 140,
           "last": 147,
           "topic": "Sea creature abilities"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "taverns-old-world",
+      "title": "Taverns of the Old World",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c",
+      "references": 57,
+      "newlyImported": 49,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 8,
+      "adaptedReferences": 0,
+      "categories": {
+        "equipment": 29,
+        "rule": 21,
+        "table": 7
+      },
+      "dispositions": {
+        "included": 61,
+        "excluded": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 12,
+          "last": 19,
+          "topic": "Staff, prices, illness and actual venue tables"
+        },
+        {
+          "first": 24,
+          "last": 24,
+          "topic": "Abstract game procedures"
+        },
+        {
+          "first": 9,
+          "last": 10,
+          "topic": "Selected mechanical hazards"
         }
       ],
       "unresolved": []

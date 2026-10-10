@@ -28050,6 +28050,415 @@
           "reason": "Named characters are outside the requested creator scope."
         }
       ]
+    },
+    "taverns-old-world": {
+      "sourceHash": "07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c",
+      "publishedSHA256": "e8546ac201caf2dcfd0e378f45c687caafc08b29dae8a7e82803abf4b342ca2d",
+      "entries": 49,
+      "areas": [
+        {
+          "first": 12,
+          "last": 19,
+          "topic": "Staff, prices, illness and actual venue tables"
+        },
+        {
+          "first": 24,
+          "last": 24,
+          "topic": "Abstract game procedures"
+        },
+        {
+          "first": 9,
+          "last": 10,
+          "topic": "Selected mechanical hazards"
+        }
+      ],
+      "records": [
+        {
+          "id": "taverns-old-world:reference:tavern-drink-ale",
+          "name": "Tavern drink: Ale",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-dwarf-ale",
+          "name": "Tavern drink: Dwarf Ale",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-excellent-spirits",
+          "name": "Tavern drink: Excellent Spirits",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-fine-wine",
+          "name": "Tavern drink: Fine Wine",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-legendary-wine",
+          "name": "Tavern drink: Legendary Wine",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-rough-spirits",
+          "name": "Tavern drink: Rough Spirits",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-spirits",
+          "name": "Tavern drink: Spirits",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-small-beer",
+          "name": "Tavern drink: Small Beer",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-strong-ale",
+          "name": "Tavern drink: Strong Ale",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-drink-wine",
+          "name": "Tavern drink: Wine",
+          "page": 16,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-snacks",
+          "name": "Tavern fare: Snacks",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-stew",
+          "name": "Tavern fare: Stew",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-simple-meal",
+          "name": "Tavern fare: Simple Meal",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-meal",
+          "name": "Tavern fare: Meal",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-menu",
+          "name": "Tavern fare: Menu",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-fine-menu",
+          "name": "Tavern fare: Fine Menu",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-fare-lavish-menu",
+          "name": "Tavern fare: Lavish Menu",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:poor-quality-food-and-drink",
+          "name": "Poor quality food and drink",
+          "page": 17,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-board-board-and-coaching-inns",
+          "name": "Tavern board: Board and Coaching Inns",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-board-common-room",
+          "name": "Tavern board: Common Room",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-board-room",
+          "name": "Tavern board: Room",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-board-large-room",
+          "name": "Tavern board: Large Room",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-board-fine-room",
+          "name": "Tavern board: Fine Room",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:poor-quality-board",
+          "name": "Poor quality board",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-booths-and-privacy",
+          "name": "Tavern booths and privacy",
+          "page": 18,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-games-invitations-and-stakes",
+          "name": "Tavern games: invitations and stakes",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-discouraged-games",
+          "name": "Tavern game: Discouraged games",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-al-zahr",
+          "name": "Tavern game: Al-Zahr",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-alvatafl",
+          "name": "Tavern game: Alvatafl",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-arm-wrestling",
+          "name": "Tavern game: Arm Wrestling",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-beast-among-the-tailors",
+          "name": "Tavern game: Beast Among the Tailors",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-bowls",
+          "name": "Tavern game: Bowls",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-cerevis",
+          "name": "Tavern game: Cerevis",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-darts",
+          "name": "Tavern game: Darts",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-dominos",
+          "name": "Tavern game: Dominos",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-m-hlen",
+          "name": "Tavern game: Mühlen",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-scarlet-empress",
+          "name": "Tavern game: Scarlet Empress",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-game-stones",
+          "name": "Tavern game: Stones",
+          "page": 24,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-hazard-trapped-treasures",
+          "name": "Tavern hazard: Trapped Treasures",
+          "page": 9,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-hazard-hex",
+          "name": "Tavern hazard: Hex",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-hazard-blue-mould",
+          "name": "Tavern hazard: Blue Mould",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:tavern-hazard-yellow-mould",
+          "name": "Tavern hazard: Yellow Mould",
+          "page": 10,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:random-tavern-tier-table",
+          "name": "Random Tavern Tier Table",
+          "page": 4,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:brass-tavern-venue-vital-statistics-table",
+          "name": "Brass Tavern Venue Vital Statistics Table",
+          "page": 12,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:silver-tavern-venue-vital-statistics-table",
+          "name": "Silver Tavern Venue Vital Statistics Table",
+          "page": 12,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:gold-tavern-venue-vital-statistics-table",
+          "name": "Gold Tavern Venue Vital Statistics Table",
+          "page": 13,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:brass-tavern-capacity-games-and-entertainment-table",
+          "name": "Brass Tavern Capacity, Games and Entertainment Table",
+          "page": 19,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:silver-tavern-capacity-games-and-entertainment-table",
+          "name": "Silver Tavern Capacity, Games and Entertainment Table",
+          "page": 19,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:reference:gold-tavern-capacity-games-and-entertainment-table",
+          "name": "Gold Tavern Capacity, Games and Entertainment Table",
+          "page": 19,
+          "disposition": "included"
+        },
+        {
+          "id": "taverns-old-world:creatures:chef",
+          "name": "Chef",
+          "page": 15,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:doorman",
+          "name": "Doorman",
+          "page": 15,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:excellent-chef",
+          "name": "Excellent Chef",
+          "page": 15,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:excellent-doorman",
+          "name": "Excellent Doorman",
+          "page": 15,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:excellent-landlord",
+          "name": "Excellent Landlord",
+          "page": 14,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:landlord",
+          "name": "Landlord",
+          "page": 14,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:menial",
+          "name": "Menial",
+          "page": 14,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:poor-landlord",
+          "name": "Poor Landlord",
+          "page": 14,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:quality-chef",
+          "name": "Quality Chef",
+          "page": 15,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:quality-doorman",
+          "name": "Quality Doorman",
+          "page": 15,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:quality-landlord",
+          "name": "Quality Landlord",
+          "page": 14,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:creatures:servant",
+          "name": "Servant",
+          "page": 14,
+          "disposition": "included",
+          "reason": "GM foundation only; excluded from shared search."
+        },
+        {
+          "id": "taverns-old-world:excluded:descriptive-material",
+          "name": "Flavour, customer encounters and named example venues",
+          "page": "3–27",
+          "disposition": "excluded",
+          "reason": "Not mechanical rules or complete generic profiles; no NPC/template search."
+        }
+      ]
     }
   }
 }

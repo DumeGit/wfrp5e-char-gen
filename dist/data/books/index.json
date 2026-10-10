@@ -97,6 +97,10 @@
     {
       "id": "sea-of-claws-artillery",
       "path": "sea-of-claws-artillery/manifest.json"
+    },
+    {
+      "id": "taverns-old-world",
+      "path": "taverns-old-world/manifest.json"
     }
   ]
 }

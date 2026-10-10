@@ -8,14 +8,14 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 16 |
+| books | 17 |
 | careers | 135 |
 | magicProfiles | 585 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
 | runes | 71 |
-| pricedShopEntries | 408 |
+| pricedShopEntries | 416 |
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -43,6 +43,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Tribes and Tribulations | 33 | 10 | 24 | 0 | 0 |
 | Sea of Claws | 30 | 15 | 34 | 0 | 0 |
 | Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
+| Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2797,6 +2798,80 @@ Pack `sea-of-claws-artillery` · version 1.0.0
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
 | Six naval artillery profiles and two ammunition alternatives | implemented | p. 100 | Explicit user-selected alternative; GM options retain both sources as distinct labelled choices. |
+
+## Taverns of the Old World
+
+Pack `taverns-old-world` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| market | 8 | 0 | 0 | 0 | 0 |
+| referenceEntries | 0 | 0 | 49 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Eight distinct fixed-price consumables | implemented | p. 16 | Printed fair prices; missing weights/Availability remain unresolved. Core duplicate profiles retained. |
+| Named taverns, patrons and descriptive encounters | deferred | p. 26 | Outside creator and mechanical-rule search scope; not published. |
+| Tavern games, hazards, prices and generator tables | reference-only | p. 24 | Concrete printed procedures in shared search, not live play or a tavern generator. |
+| Tavern generation and management | deferred | p. 3 | No venue editor, customer generator, service purchases or live illness/gambling systems. |
+| Twelve generic tavern staff profiles | implemented | p. 14 | Printed baseline profiles, core definitions and explicit Skill specialisations; no named NPCs or hiring system. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `taverns-old-world:reference:brass-tavern-capacity-games-and-entertainment-table` — Brass Tavern Capacity, Games and Entertainment Table | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:brass-tavern-venue-vital-statistics-table` — Brass Tavern Venue Vital Statistics Table | referenceEntries | reference-only | p. 12 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:gold-tavern-capacity-games-and-entertainment-table` — Gold Tavern Capacity, Games and Entertainment Table | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:gold-tavern-venue-vital-statistics-table` — Gold Tavern Venue Vital Statistics Table | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:poor-quality-board` — Poor quality board | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:poor-quality-food-and-drink` — Poor quality food and drink | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:random-tavern-tier-table` — Random Tavern Tier Table | referenceEntries | reference-only | p. 4 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:silver-tavern-capacity-games-and-entertainment-table` — Silver Tavern Capacity, Games and Entertainment Table | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:silver-tavern-venue-vital-statistics-table` — Silver Tavern Venue Vital Statistics Table | referenceEntries | reference-only | p. 12 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-board-board-and-coaching-inns` — Tavern board: Board and Coaching Inns | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-board-common-room` — Tavern board: Common Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-board-fine-room` — Tavern board: Fine Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-board-large-room` — Tavern board: Large Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-board-room` — Tavern board: Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-booths-and-privacy` — Tavern booths and privacy | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-ale` — Tavern drink: Ale | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-dwarf-ale` — Tavern drink: Dwarf Ale | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-excellent-spirits` — Tavern drink: Excellent Spirits | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-fine-wine` — Tavern drink: Fine Wine | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-legendary-wine` — Tavern drink: Legendary Wine | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-rough-spirits` — Tavern drink: Rough Spirits | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-small-beer` — Tavern drink: Small Beer | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-spirits` — Tavern drink: Spirits | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-strong-ale` — Tavern drink: Strong Ale | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-drink-wine` — Tavern drink: Wine | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-fine-menu` — Tavern fare: Fine Menu | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-lavish-menu` — Tavern fare: Lavish Menu | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-meal` — Tavern fare: Meal | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-menu` — Tavern fare: Menu | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-simple-meal` — Tavern fare: Simple Meal | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-snacks` — Tavern fare: Snacks | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-fare-stew` — Tavern fare: Stew | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-al-zahr` — Tavern game: Al-Zahr | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-alvatafl` — Tavern game: Alvatafl | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-arm-wrestling` — Tavern game: Arm Wrestling | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-beast-among-the-tailors` — Tavern game: Beast Among the Tailors | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-bowls` — Tavern game: Bowls | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-cerevis` — Tavern game: Cerevis | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-darts` — Tavern game: Darts | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-discouraged-games` — Tavern game: Discouraged games | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-dominos` — Tavern game: Dominos | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-m-hlen` — Tavern game: Mühlen | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-scarlet-empress` — Tavern game: Scarlet Empress | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-stones` — Tavern game: Stones | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-games-invitations-and-stakes` — Tavern games: invitations and stakes | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-hazard-blue-mould` — Tavern hazard: Blue Mould | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-hazard-hex` — Tavern hazard: Hex | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-hazard-trapped-treasures` — Tavern hazard: Trapped Treasures | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-hazard-yellow-mould` — Tavern hazard: Yellow Mould | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+
+</details>
 
 ## Reviewed aliases
 

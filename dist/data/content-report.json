@@ -8,14 +8,14 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 16,
+    "books": 17,
     "careers": 135,
     "magicProfiles": 585,
     "rituals": 17,
     "cants": 24,
     "techniques": 10,
     "runes": 71,
-    "pricedShopEntries": 408
+    "pricedShopEntries": 416
   },
   "books": [
     {
@@ -43417,6 +43417,723 @@
             "page": 100
           },
           "reason": "Explicit user-selected alternative; GM options retain both sources as distinct labelled choices."
+        }
+      ]
+    },
+    {
+      "id": "taverns-old-world",
+      "title": "Taverns of the Old World",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 8,
+        "adapted": 0,
+        "reference-only": 49,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 2,
+        "adapted": 0,
+        "reference-only": 1,
+        "unavailable": 0,
+        "deferred": 2
+      },
+      "kinds": {
+        "market": {
+          "implemented": 8,
+          "adapted": 0,
+          "reference-only": 0,
+          "unavailable": 0,
+          "deferred": 0
+        },
+        "referenceEntries": {
+          "implemented": 0,
+          "adapted": 0,
+          "reference-only": 49,
+          "unavailable": 0,
+          "deferred": 0
+        }
+      },
+      "records": [
+        {
+          "contentId": "taverns-old-world:item:excellent-spirits-pint-bottle",
+          "kind": "market",
+          "name": "Excellent Spirits, pint bottle",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:fine-wine-bottle",
+          "kind": "market",
+          "name": "Fine Wine, bottle",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:rough-spirits-pint-bottle",
+          "kind": "market",
+          "name": "Rough Spirits, pint bottle",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:simple-meal-tavern-serving",
+          "kind": "market",
+          "name": "Simple Meal, tavern serving",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:small-beer-pint",
+          "kind": "market",
+          "name": "Small Beer, pint",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:snacks-tavern-serving",
+          "kind": "market",
+          "name": "Snacks, tavern serving",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:stew-tavern-serving",
+          "kind": "market",
+          "name": "Stew, tavern serving",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:item:strong-ale-pint",
+          "kind": "market",
+          "name": "Strong Ale, pint",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "taverns-old-world:reference:brass-tavern-capacity-games-and-entertainment-table",
+          "kind": "referenceEntries",
+          "name": "Brass Tavern Capacity, Games and Entertainment Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 19
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:brass-tavern-venue-vital-statistics-table",
+          "kind": "referenceEntries",
+          "name": "Brass Tavern Venue Vital Statistics Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 12
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:gold-tavern-capacity-games-and-entertainment-table",
+          "kind": "referenceEntries",
+          "name": "Gold Tavern Capacity, Games and Entertainment Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 19
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:gold-tavern-venue-vital-statistics-table",
+          "kind": "referenceEntries",
+          "name": "Gold Tavern Venue Vital Statistics Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 13
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:poor-quality-board",
+          "kind": "referenceEntries",
+          "name": "Poor quality board",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:poor-quality-food-and-drink",
+          "kind": "referenceEntries",
+          "name": "Poor quality food and drink",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:random-tavern-tier-table",
+          "kind": "referenceEntries",
+          "name": "Random Tavern Tier Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 4
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:silver-tavern-capacity-games-and-entertainment-table",
+          "kind": "referenceEntries",
+          "name": "Silver Tavern Capacity, Games and Entertainment Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 19
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:silver-tavern-venue-vital-statistics-table",
+          "kind": "referenceEntries",
+          "name": "Silver Tavern Venue Vital Statistics Table",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 12
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-board-board-and-coaching-inns",
+          "kind": "referenceEntries",
+          "name": "Tavern board: Board and Coaching Inns",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-board-common-room",
+          "kind": "referenceEntries",
+          "name": "Tavern board: Common Room",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-board-fine-room",
+          "kind": "referenceEntries",
+          "name": "Tavern board: Fine Room",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-board-large-room",
+          "kind": "referenceEntries",
+          "name": "Tavern board: Large Room",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-board-room",
+          "kind": "referenceEntries",
+          "name": "Tavern board: Room",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-booths-and-privacy",
+          "kind": "referenceEntries",
+          "name": "Tavern booths and privacy",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 18
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-ale",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Ale",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-dwarf-ale",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Dwarf Ale",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-excellent-spirits",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Excellent Spirits",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-fine-wine",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Fine Wine",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-legendary-wine",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Legendary Wine",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-rough-spirits",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Rough Spirits",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-small-beer",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Small Beer",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-spirits",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Spirits",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-strong-ale",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Strong Ale",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-drink-wine",
+          "kind": "referenceEntries",
+          "name": "Tavern drink: Wine",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-fine-menu",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Fine Menu",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-lavish-menu",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Lavish Menu",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-meal",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Meal",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-menu",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Menu",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-simple-meal",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Simple Meal",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-snacks",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Snacks",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-fare-stew",
+          "kind": "referenceEntries",
+          "name": "Tavern fare: Stew",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 17
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-al-zahr",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Al-Zahr",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-alvatafl",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Alvatafl",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-arm-wrestling",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Arm Wrestling",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-beast-among-the-tailors",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Beast Among the Tailors",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-bowls",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Bowls",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-cerevis",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Cerevis",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-darts",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Darts",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-discouraged-games",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Discouraged games",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-dominos",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Dominos",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-m-hlen",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Mühlen",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-scarlet-empress",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Scarlet Empress",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-game-stones",
+          "kind": "referenceEntries",
+          "name": "Tavern game: Stones",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-games-invitations-and-stakes",
+          "kind": "referenceEntries",
+          "name": "Tavern games: invitations and stakes",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-hazard-blue-mould",
+          "kind": "referenceEntries",
+          "name": "Tavern hazard: Blue Mould",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 10
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-hazard-hex",
+          "kind": "referenceEntries",
+          "name": "Tavern hazard: Hex",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 10
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-hazard-trapped-treasures",
+          "kind": "referenceEntries",
+          "name": "Tavern hazard: Trapped Treasures",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 9
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "taverns-old-world:reference:tavern-hazard-yellow-mould",
+          "kind": "referenceEntries",
+          "name": "Tavern hazard: Yellow Mould",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 10
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        }
+      ],
+      "features": [
+        {
+          "id": "taverns-old-world:feature:eight-distinct-fixed-price-consumables",
+          "name": "Eight distinct fixed-price consumables",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 16
+          },
+          "reason": "Printed fair prices; missing weights/Availability remain unresolved. Core duplicate profiles retained."
+        },
+        {
+          "id": "taverns-old-world:feature:named-taverns-patrons-and-descriptive-encounters",
+          "name": "Named taverns, patrons and descriptive encounters",
+          "status": "deferred",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 26
+          },
+          "reason": "Outside creator and mechanical-rule search scope; not published."
+        },
+        {
+          "id": "taverns-old-world:feature:tavern-games-hazards-prices-and-generator-tables",
+          "name": "Tavern games, hazards, prices and generator tables",
+          "status": "reference-only",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 24
+          },
+          "reason": "Concrete printed procedures in shared search, not live play or a tavern generator."
+        },
+        {
+          "id": "taverns-old-world:feature:tavern-generation-and-management",
+          "name": "Tavern generation and management",
+          "status": "deferred",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 3
+          },
+          "reason": "No venue editor, customer generator, service purchases or live illness/gambling systems."
+        },
+        {
+          "id": "taverns-old-world:feature:twelve-generic-tavern-staff-profiles",
+          "name": "Twelve generic tavern staff profiles",
+          "status": "implemented",
+          "source": {
+            "book": "taverns-old-world",
+            "page": 14
+          },
+          "reason": "Printed baseline profiles, core definitions and explicit Skill specialisations; no named NPCs or hiring system."
         }
       ]
     }

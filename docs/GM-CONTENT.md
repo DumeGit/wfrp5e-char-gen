@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-90 printed profiles, 44 templates, 95 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+102 printed profiles, 44 templates, 95 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
@@ -22,6 +22,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | The Cluster-Eye Tribe | 2 | 7 | Profiles/templates selectable; shared PC options always available |
 | Tribes and Tribulations | 19 | 16 | Profiles/templates selectable; shared PC options always available |
 | Sea of Claws | 13 | 0 | Profiles/templates selectable; shared PC options always available |
+| Taverns of the Old World | 12 | 0 | Profiles/templates selectable; shared PC options always available |
 | Sea of Claws — Naval artillery | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 
 | Profile | Source | Category | Legacy |
@@ -47,6 +48,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Chaos Steed | Bayl’s Warband · p. 8 | Mounts | Yes |
 | Chaos Warrior | Core · p. 348 | Cultists and Mutants |  |
 | Chaos Warrior of Nurgle | Bayl’s Warband · p. 8 | Cultists and Mutants |  |
+| Chef | Taverns · p. 15 | Tavern staff |  |
 | Clanrat | Core · p. 351 | Skaven |  |
 | Corpse Cart | Night Parade · p. 19 | Undead | Yes |
 | Crypt Ghoul | Core · p. 338 | Restless Dead |  |
@@ -57,9 +59,13 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Demigryph Mount | Up in Arms · p. 109 | Mounts | Yes |
 | Dire Wolf | Core · p. 341 | Restless Dead |  |
 | Dog | Core · p. 325 | Beasts of the Reikland |  |
+| Doorman | Taverns · p. 15 | Tavern staff |  |
 | Dragon | Core · p. 330 | Monstrous Beasts |  |
 | Drakwald Mancatcher | Cluster-Eye Tribe · p. 9 | Mounts | Yes |
 | Dwarf | Core · p. 320 | Peoples of the Reikland |  |
+| Excellent Chef | Taverns · p. 15 | Tavern staff |  |
+| Excellent Doorman | Taverns · p. 15 | Tavern staff |  |
+| Excellent Landlord | Taverns · p. 14 | Tavern staff |  |
 | Fenbeast | Core · p. 331 | Monstrous Beasts |  |
 | Forest Goblin | Cluster-Eye Tribe · p. 9 | Greenskins | Yes |
 | Gargantuan | Sea of Claws · p. 143 | Sea creatures | Yes |
@@ -85,10 +91,12 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Human Thug | Core · p. 322 | Peoples of the Reikland |  |
 | Human Watchman | Core · p. 321 | Peoples of the Reikland |  |
 | Kharibdyss | Sea of Claws · p. 144 | Sea creatures | Yes |
+| Landlord | Taverns · p. 14 | Tavern staff |  |
 | Latch-Eel | Sea of Claws · p. 141 | Sea creatures | Yes |
 | Leech Wyrm | Sea of Claws · p. 146 | Sea creatures | Yes |
 | Lurkerfish | Sea of Claws · p. 140 | Sea creatures | Yes |
 | Manticore | Core · p. 333 | Monstrous Beasts |  |
+| Menial | Taverns · p. 14 | Tavern staff |  |
 | Merwyrm | Sea of Claws · p. 145 | Sea creatures | Yes |
 | Minotaur | Core · p. 346 | Beastmen |  |
 | Mournfang | Tribes & Tribulations · p. 19 | Mounts | Yes |
@@ -98,11 +106,16 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Orb Leviathan | Sea of Claws · p. 147 | Sea creatures | Yes |
 | Orc | Core · p. 337 | Orcs and Goblins |  |
 | Pegasus | Core · p. 334 | Monstrous Beasts |  |
+| Poor Landlord | Taverns · p. 14 | Tavern staff |  |
 | Purple Skullback Spider | Tribes & Tribulations · p. 99 | Greenskins |  |
+| Quality Chef | Taverns · p. 15 | Tavern staff |  |
+| Quality Doorman | Taverns · p. 15 | Tavern staff |  |
+| Quality Landlord | Taverns · p. 14 | Tavern staff |  |
 | Rat Ogre | Core · p. 352 | Skaven |  |
 | Rhinox | Archives II · p. 34 | Mounts | Yes |
 | Riding Horse | Up in Arms · p. 29 | Mounts | Yes |
 | Sea Elemental | Sea of Claws · p. 142 | Sea creatures | Yes |
+| Servant | Taverns · p. 14 | Tavern staff |  |
 | Skeleton | Core · p. 339 | Restless Dead |  |
 | Snotling | Core · p. 338 | Orcs and Goblins |  |
 | Stormvermin | Core · p. 352 | Skaven |  |

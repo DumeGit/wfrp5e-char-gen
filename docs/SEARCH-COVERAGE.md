@@ -6,9 +6,9 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **3858 results**, including **1228 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **3915 results**, including **1277 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
-The Rules audit explicitly removed **112 non-mechanical entries**; **982 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
+The Rules audit explicitly removed **112 non-mechanical entries**; **1003 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
@@ -28,6 +28,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **982 Rules r
 | The Cluster-Eye Tribe | 1.0.0 | 1 | 5 | 6 | 0 |
 | Tribes and Tribulations | 1.0.0 | 49 | 15 | 64 | 12 |
 | Sea of Claws | 1.0.0 | 61 | 19 | 80 | 28 |
+| Taverns of the Old World | 1.0.0 | 8 | 49 | 57 | 0 |
 
 ## Source review
 
@@ -476,6 +477,21 @@ Source SHA-256: `30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62
 Candidate sections: included 32; excluded 1.
 
 Categories: career 9; talent 9; magic 21; equipment 4; trait 15; species 4; rule 13; property 1; table 4.
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Taverns of the Old World
+
+Source SHA-256: `07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c`.
+
+- pp. 12–19: Staff, prices, illness and actual venue tables.
+- pp. 24: Abstract game procedures.
+- pp. 9–10: Selected mechanical hazards.
+
+Candidate sections: included 61; excluded 1.
+
+Categories: equipment 29; rule 21; table 7.
 Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.

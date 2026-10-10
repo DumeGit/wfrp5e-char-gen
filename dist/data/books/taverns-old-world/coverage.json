@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "taverns-old-world:feature:twelve-generic-tavern-staff-profiles",
+      "name": "Twelve generic tavern staff profiles",
+      "status": "implemented",
+      "source": {
+        "book": "taverns-old-world",
+        "page": 14
+      },
+      "reason": "Printed baseline profiles, core definitions and explicit Skill specialisations; no named NPCs or hiring system."
+    },
+    {
+      "id": "taverns-old-world:feature:eight-distinct-fixed-price-consumables",
+      "name": "Eight distinct fixed-price consumables",
+      "status": "implemented",
+      "source": {
+        "book": "taverns-old-world",
+        "page": 16
+      },
+      "reason": "Printed fair prices; missing weights/Availability remain unresolved. Core duplicate profiles retained."
+    },
+    {
+      "id": "taverns-old-world:feature:tavern-games-hazards-prices-and-generator-tables",
+      "name": "Tavern games, hazards, prices and generator tables",
+      "status": "reference-only",
+      "source": {
+        "book": "taverns-old-world",
+        "page": 24
+      },
+      "reason": "Concrete printed procedures in shared search, not live play or a tavern generator."
+    },
+    {
+      "id": "taverns-old-world:feature:tavern-generation-and-management",
+      "name": "Tavern generation and management",
+      "status": "deferred",
+      "source": {
+        "book": "taverns-old-world",
+        "page": 3
+      },
+      "reason": "No venue editor, customer generator, service purchases or live illness/gambling systems."
+    },
+    {
+      "id": "taverns-old-world:feature:named-taverns-patrons-and-descriptive-encounters",
+      "name": "Named taverns, patrons and descriptive encounters",
+      "status": "deferred",
+      "source": {
+        "book": "taverns-old-world",
+        "page": 26
+      },
+      "reason": "Outside creator and mechanical-rule search scope; not published."
+    }
+  ]
+}

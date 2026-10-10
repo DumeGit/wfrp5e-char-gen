@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"e1f4f85d4c6d13e9f80e";
+const CACHE=CACHE_PREFIX+"73fdcf0df52bd5d2f4d1";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -187,6 +187,10 @@ const ASSETS=[
  "data/books/sea-of-claws/spells.json",
  "data/books/sea-of-claws/tables.json",
  "data/books/sea-of-claws/talents.json",
+ "data/books/taverns-old-world/coverage.json",
+ "data/books/taverns-old-world/manifest.json",
+ "data/books/taverns-old-world/market.json",
+ "data/books/taverns-old-world/reference-entries.json",
  "data/books/tribes-tribulations/coverage.json",
  "data/books/tribes-tribulations/gear.json",
  "data/books/tribes-tribulations/manifest.json",
@@ -280,6 +284,7 @@ const ASSETS=[
  "gm/sources/core.json",
  "gm/sources/night-parade.json",
  "gm/sources/sea-of-claws.json",
+ "gm/sources/taverns-old-world.json",
  "gm/sources/tribes-tribulations.json",
  "gm/sources/up-in-arms.json",
  "gm/style.css",
