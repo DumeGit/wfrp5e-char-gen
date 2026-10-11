@@ -1051,9 +1051,11 @@ export function createFeature(getContext, setContext) {
           s[bind].push(value);
         } else s[bind] = s[bind].filter((x) => x !== value);
       } else if (["points", "boost", "assignment"].includes(bind)) {
-        const n = Number(el.value);
-        if (!Number.isInteger(n)) throw Error("Use a whole number.");
-        if (bind === "points" && (n < 4 || n > 16))
+        const n =
+          bind === "points" && el.value === "" ? null : Number(el.value);
+        if (n !== null && !Number.isInteger(n))
+          throw Error("Use a whole number.");
+        if (bind === "points" && n !== null && (n < 4 || n > 16))
           throw Error("Allocate 4–16 points per Characteristic.");
         if (bind === "boost" && (n < 0 || n > 6))
           throw Error("Starting increases must be 0–6.");

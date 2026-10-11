@@ -160,7 +160,7 @@ ${careerBrowser(R, s, { query: careerSearch, className: careerFilter, book: care
               k,
               i,
             ) => `<div class="field characteristic-cell ${characteristicClass(k)}"><label for="point-${i}" title="${characteristicNames[k]}">${k}</label><div class="characteristic-meta">${characteristicBadge(k)}</div>
-<input type="number" id="point-${i}" data-bind="points" data-key="${i}" min="4" max="16" value="${s.points[i]}"><small class="muted">+ ${sp.offsets[k]} Species</small></div>`,
+<input type="number" id="point-${i}" data-bind="points" data-key="${i}" min="4" max="16" step="1" placeholder="4–16" value="${s.points[i] ?? ""}"><small class="muted">+ ${sp.offsets[k]} Species</small></div>`,
           ).join("")}</div>`
         : `<table class="characteristics-table"><thead><tr><th>Characteristic</th><th>2d10</th><th>Species</th><th>Initial</th></tr></thead><tbody>${M.KEYS.map(
             (k, i) =>

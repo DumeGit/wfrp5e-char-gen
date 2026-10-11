@@ -7,6 +7,62 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("point allocation starts blank, validates edits and survives reload/method changes @pc", async ({
+  page,
+}) => {
+  await openPC(page);
+  await pcStep(page, "Characteristics");
+  const inputs = page.locator('[data-bind="points"]');
+  const counter = page
+    .locator(".counter")
+    .filter({ hasText: "points allocated" });
+  const ws = page.locator("#point-0");
+  const bs = page.locator("#point-1");
+  const commit = async (input, value) => {
+    await input.fill(value);
+    await input.press("Tab");
+  };
+  await expect(inputs).toHaveCount(10);
+  for (const input of await inputs.all()) await expect(input).toHaveValue("");
+  await expect(counter).toHaveText("0 / 100 points allocated");
+  for (let i = 0; i < 10; i++) await commit(inputs.nth(i), "10");
+  await expect(counter).toHaveText("100 / 100 points allocated");
+  await expect(page.locator(".stage-meta .ready-status")).toBeVisible();
+  await commit(ws, "16");
+  await commit(bs, "14");
+  await expect(counter).toHaveText("110 / 100 points allocated");
+  await expect(page.locator(".stage-meta .pending-status")).toBeVisible();
+  await commit(ws, "4");
+  await commit(bs, "6");
+  await expect(counter).toHaveText("90 / 100 points allocated");
+  await expect(page.locator(".stage-meta .pending-status")).toBeVisible();
+  await commit(bs, "16");
+  for (const invalid of ["3", "17", "4.5"]) {
+    await commit(ws, invalid);
+    await expect(ws).toHaveValue("4");
+    await expect(counter).toHaveText("100 / 100 points allocated");
+  }
+  await commit(ws, "");
+  await expect(ws).toHaveValue("");
+  await expect(counter).toHaveText("96 / 100 points allocated");
+  await expect(page.locator(".stage-meta .pending-status")).toBeVisible();
+  await page.reload();
+  await expect(ws).toHaveValue("");
+  await expect(counter).toHaveText("96 / 100 points allocated");
+  await commit(ws, "4");
+  await page
+    .getByRole("button", { name: "Roll 10 × 2d10", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Allocate 100 points", exact: true })
+    .click();
+  await expect(ws).toHaveValue("4");
+  await expect(bs).toHaveValue("16");
+  await expect(counter).toHaveText("100 / 100 points allocated");
+  await expect(page.locator(".stage-meta .ready-status")).toBeVisible();
+  await noOverflow(page);
+});
+
 test("Career typing retains its caret and a roll populates the chosen Career @pc", async ({
   page,
 }) => {

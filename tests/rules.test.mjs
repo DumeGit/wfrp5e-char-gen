@@ -1,6 +1,32 @@
 import {tableResult} from '../dist/books.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';
 import * as M from '../dist/rules.mjs';import {equipment} from '../dist/equipment.mjs';import {R,soldier,advancedSoldier} from './fixture.mjs';
+test('point allocation starts blank and applies Species modifiers without roll bonuses', () => {
+  const s = M.fresh();
+  assert.deepEqual(s.points, Array(10).fill(null));
+  assert.equal(s.points.reduce((a, b) => a + b, 0), 0);
+  s.points = [4, 16, 4, 16, 10, 10, 10, 10, 10, 10];
+  s.charRolls = Array(10).fill(20);
+  assert.deepEqual(M.initial(R, s), Object.fromEntries(M.KEYS.map((k, i) => [k, R.species.Human.offsets[k] + s.points[i]])));
+  assert.equal(M.validation(R, s, true).some(x => x.code === 'characteristics.points'), false);
+  s.boost = { WS: 1 };
+  assert.ok(M.validation(R, s, true).some(x => x.code === 'characteristics.boost'));
+});
+test('point allocation rejects wrong totals, missing entries, out-of-range and non-integer values', () => {
+  const invalid = [
+    Array(10).fill(null), Array(10).fill(9), Array(10).fill(11),
+    [3, 17, ...Array(8).fill(10)],
+    [9.5, 10.5, ...Array(8).fill(10)],
+    [null, 16, 14, ...Array(7).fill(10)],
+    [NaN, ...Array(9).fill(10)],
+    ['10', ...Array(9).fill(10)],
+    [12, ...Array(8).fill(11)],
+  ];
+  for (const points of invalid) {
+    const s = { ...M.fresh(), points };
+    assert.ok(M.validation(R, s, true).some(x => x.code === 'characteristics.points'), JSON.stringify(points));
+  }
+});
 test('new characters start with no base XP and cannot spend until a budget is set',()=>{const s=soldier();s.xp=M.fresh().xp;assert.equal(s.xp,0);assert.equal(M.derive(R,s).remaining,0);assert.ok(M.quote(R,s,'char','WS',5).error);s.xp=125;assert.equal(M.quote(R,s,'char','WS',5).error,'');});
 test('new characters have no Career grants and require an explicit Career choice',()=>{const s=M.fresh();assert.equal(s.career,'');assert.deepEqual(M.careerSkillSlots(R,s),[]);assert.deepEqual(M.careerTalentOptions(R,s),[]);assert.deepEqual(M.bonusTrappingSlots(R,s),[]);assert.deepEqual(M.career(R,s).advanceScheme,{});assert.equal(M.derive(R,s).status,'—');assert.ok(M.validation(R,s,true).some(x=>x.code==='career.unavailable'));});
 test('all 64 careers have four complete levels and the published six characteristic markers',()=>{assert.equal(R.careers.length,64);for(const c of R.careers){assert.equal(c.levels.length,4,c.name);assert.equal(c.levels[0].skills.length,10,c.name);assert.deepEqual(Object.values(c.advanceScheme).filter(Boolean).sort(),[1,1,1,2,3,4],c.name);}});

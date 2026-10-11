@@ -143,7 +143,7 @@ export function fresh() {
     charRolls: [],
     charAttempts: 0,
     assignment: KEYS.map((_, i) => i),
-    points: KEYS.map(() => 10),
+    points: KEYS.map(() => null),
     boost: {},
     speciesSkills: [],
     skillChoices: {},
@@ -1060,13 +1060,17 @@ export function validation(R, s, structured = false) {
     );
   if (
     s.charMode === "points" &&
-    (s.points.reduce((a, b) => a + b, 0) !== 100 ||
-      s.points.some((x) => x < 4 || x > 16))
+    (s.points.length !== KEYS.length ||
+      s.points.reduce((a, b) => a + b, 0) !== 100 ||
+      KEYS.some(
+        (_, i) =>
+          !Number.isInteger(s.points[i]) || s.points[i] < 4 || s.points[i] > 16,
+      ))
   )
     e.push(
       issue(
         "characteristics.points",
-        "Allocate exactly 100 Characteristic points, 4–16 in each.",
+        "Allocate exactly 100 Characteristic points, 4–16 whole points in each.",
         2,
         "#point-0",
         { book: "core", page: 38 },
