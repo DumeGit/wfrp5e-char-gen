@@ -363,7 +363,13 @@ test("compact scores and entry rows keep quick edits and detailed overrides acce
   for (const group of ["skills", "talents", "gear"]) {
     for (const row of await page.locator(`#mm-list-${group} .mm-entry`).all()) {
       expect((await row.boundingBox()).height).toBeLessThan(
-        info.project.name === "mobile" ? 95 : 75,
+        group === "gear"
+          ? info.project.name === "mobile"
+            ? 95
+            : 75
+          : info.project.name === "mobile"
+            ? 60
+            : 42,
       );
     }
     await page.locator(`#mm-section-${group}`).scrollIntoViewIfNeeded();
@@ -398,6 +404,66 @@ test("compact scores and entry rows keep quick edits and detailed overrides acce
   await expect(
     page.getByLabel("Leather Jerkin quantity", { exact: true }),
   ).toHaveValue("2");
+  if (info.project.name === "mobile") {
+    await page.setViewportSize({ width: 320, height: 844 });
+    await noOverflow(page);
+  }
+});
+
+test("resources are grouped by purpose and retain direct values and automatic overrides @marijan @mobile", async ({
+  page,
+}, info) => {
+  await open(page);
+  const resources = page.locator("#mm-section-resources");
+  for (const name of [
+    "Fate & Fortune",
+    "Experience",
+    "Social status",
+    "Money",
+    "Corruption & Sin",
+    "Size & movement",
+    "Wounds & carrying",
+    "Armour protection",
+  ])
+    await expect(
+      resources.getByRole("group", { name, exact: true }),
+    ).toBeVisible();
+  await resources
+    .getByRole("group", { name: "Fate & Fortune", exact: true })
+    .getByLabel("Fortune", { exact: true })
+    .fill("6");
+  await resources
+    .getByRole("group", { name: "Money", exact: true })
+    .getByLabel("Silver shillings", { exact: true })
+    .fill("23");
+  await resources
+    .getByRole("group", { name: "Experience", exact: true })
+    .getByLabel("XP unspent", { exact: true })
+    .fill("321");
+  await resources
+    .getByRole("group", { name: "Armour protection", exact: true })
+    .getByRole("button", { name: "Head AP: switch to manual", exact: true })
+    .click();
+  await page.getByLabel("Head AP", { exact: true }).fill("7");
+  await expect(page.getByLabel("Fortune", { exact: true })).toHaveValue("6");
+  await expect(page.getByLabel("XP unspent", { exact: true })).toHaveValue(
+    "321",
+  );
+  await expect(
+    page.getByLabel("Silver shillings", { exact: true }),
+  ).toHaveValue("23");
+  await page
+    .getByRole("button", { name: "Head AP: return to automatic", exact: true })
+    .click();
+  await expect(page.getByLabel("Head AP", { exact: true })).toHaveAttribute(
+    "readonly",
+    "",
+  );
+  await resources.scrollIntoViewIfNeeded();
+  await noOverflow(page);
+  await page.screenshot({
+    path: info.outputPath("marijan-resource-groups.png"),
+  });
   if (info.project.name === "mobile") {
     await page.setViewportSize({ width: 320, height: 844 });
     await noOverflow(page);

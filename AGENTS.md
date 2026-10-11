@@ -28,6 +28,8 @@
 
 ## Engineering and delivery
 
+- Marijan lists use shared column headings and compact inline Skill/Talent controls, keeping accessible field labels, stable native details, selective Legacy access and 44px phone targets. Resources are semantic labelled groups rather than a mixed input grid; keep all direct values and Auto/Manual overrides accessible, with calculated comparisons for manual values. See docs/MARIJAN-MODE.md. Verify changed layouts with the focused local Marijan suite and inspect its screenshots; do not repeat unrelated book/rule suites for a scoped layout edit.
+
 - Keep documentation up to date in the same change as the implementation. Update README.md and the affected feature/book docs whenever behavior, scope, architecture or release steps change; update AGENTS.md when project decisions or maintenance requirements change. Regenerate registry-derived documentation instead of hand-editing it, and check for stale descriptions before committing.
 - Git repo and Vercel project root is this character-generator directory. The app is static/browser-only, in dist; npm run build generates the content-versioned offline worker. Keep book-pack files, exports and PDF assets usable offline.
 - Add supplements through the validated book-pack registry. New PC books and GM profile/template books are opt-in; GM shared options use all integrated non-variant PC packs automatically; don't silently replace core rules or change random probabilities. Same-name conflicts require an explicit variant/replacement, not last-file-wins behavior. Supported data additions are different from new mechanics, which require implemented handlers and tests.

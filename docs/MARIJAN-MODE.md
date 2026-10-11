@@ -66,3 +66,9 @@ Ash & Vellum accents: section titles, disclosure markers and calculated Characte
 ## October 10 shared interface refinement
 
 The approved Ash & Vellum skin remains. Supporting labels/notes use the shared readable scale; numeric folio values use aligned body digits. Native input intent, dice/disclosure geometry and skip navigation match the other creators, with 44px/16px phone controls. Generation previews and PDF exports show the shared busy state before heavy work, prevent duplicate activation and leave retryable failures nearby. Freehand editing/export remains unrestricted; Player/GM issue gates have not been imported.
+
+## Compact lists and organised resources — 11 October 2026
+
+Skills and Talents use one column heading per list instead of labels above each row's numbers. Names, Advances/Total or Ranks, details and removal align on one line. Closed rows target roughly 39px on desktop and 53px on phones for short names; longer names wrap naturally. Labels remain available to assistive technology. Reference access, selective Legacy tags, custom names and expanded overrides retain their original controls and stable disclosure keys. Phones keep 44px controls and 16px numeric text.
+
+Resources use labelled fieldsets: Fate & Fortune, Experience, Social status, Money, Corruption & Sin, Size & movement, Wounds & carrying, and Armour protection. Desktop pairs the smaller groups; phones use a single column. Derived values place Auto/Manual beside their number, with the calculated comparison shown only for manual overrides. General calculation help expands on demand. Every existing resource, binding and override remains available; calculations, saves, generation and PDF content are unchanged. Local Marijan browser tests check compact rows, editable groups, overrides, reloads and narrow layouts; screenshots cover the reorganised resources and lists.
