@@ -1,5 +1,11 @@
 # Application structure and shared results
 
+## Page-view analytics
+
+Player, GM and Marijan each load the independent `analytics.mjs` module. It uses the official `@vercel/analytics` browser SDK, copied with its MIT licence by `scripts/build-analytics.mjs` during `npm run build`, before offline assets are generated. There is no browser bare-package import or new bundler. It injects the production Analytics script on nonlocal HTTPS pages, excluding verification URLs, and filters events to page views without query strings/fragments. No creator state or custom events are supplied. Vercel Web Analytics must be enabled for the project; local servers make no Insights requests. The service worker includes the local integration/SDK, while the dynamic `/_vercel/insights/*` endpoints remain network-only under the existing asset allowlist. Analytics runs independently of creator startup and is not required for offline editing/export. Policy, SDK parity and the three pages are covered by targeted Node/Playwright checks.
+
+## Book content and creator results
+
 Salzenmund reuses the book registry and shared creator controls. GM templates support validated explicit `printedTotal` Skill slots for source totals below their Characteristic, and sourced Trait parameters shared with profiles. Template replacement clears its parameter keys. Approved converted printed Trained entries opt into derived effects with `deriveTraining`; normal printed baselines remain unchanged. See [SALZENMUND.md](SALZENMUND.md) and [BOOKS.md](BOOKS.md) for these contracts and exclusions.
 
 Lustria-specific GM composition lives in `dist/gm/lustria.mjs`: an optional ordinary Skink caste plus independently selected eligible sacred marks, with summed Characteristic modifiers and one natural-armour increment. Saved `lustriaMarks` and `profileLores` arrays participate in shared history and current-save validation. Slann Lore/Wind rows derive from printed magic baselines; no spell list is generated. `dist/lustria.mjs` shares explicit Slann-only/Elven-priest magic access with PC and GM. See [LUSTRIA.md](LUSTRIA.md).

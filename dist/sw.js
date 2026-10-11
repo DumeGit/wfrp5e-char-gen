@@ -1,6 +1,7 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"cb13973f4636f2114200";
+const CACHE=CACHE_PREFIX+"99685d128dd15e695ec6";
 const ASSETS=[
+ "analytics.mjs",
  "app.js",
  "archives-iii-ui.mjs",
  "archives-iii.mjs",
@@ -22,6 +23,8 @@ const ASSETS=[
  "assets/icon-maskable-512.png",
  "assets/marijan/banner.webp",
  "assets/pdf-lib.min.js",
+ "assets/vercel-analytics-LICENSE.txt",
+ "assets/vercel-analytics.mjs",
  "astrology.mjs",
  "background.mjs",
  "book-bundle.mjs",

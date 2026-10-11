@@ -147,6 +147,8 @@ Regression tests cover folio Skill totals, Talent purchase/undo counts, automati
 
 The GitHub repository contains this `character-generator` directory and automatically deploys to Vercel. The root `vercel.json` builds the PWA assets with `npm run build` and serves `dist`. A headers-only configuration in `dist` also supports projects configured to serve that folder directly. The manifest and service worker are revalidated so new deployments can be detected. `.openai/hosting.json` records the earlier Sites hosting setup; it is not used for the current Vercel deployment. There is no server database or account system. Do not put the full rulebook PDF or credentials into the published assets.
 
+Vercel Web Analytics uses the installed `@vercel/analytics` library on all three creator pages. Enable **Web Analytics** for the project in Vercel, then deploy. The build copies the browser SDK and MIT licence into `dist/assets`; no framework or bundler is required. The shared `analytics.mjs` starts page-view tracking only on HTTPS, excluding localhost and `?verify` sessions. Query strings/fragments are removed before sending; no character data or custom events are tracked. Analytics does not gate creator startup or offline use. See [Vercel’s setup guide](https://vercel.com/docs/analytics/quickstart).
+
 ## Install and use offline
 
 The app is an installable PWA with a home-screen icon and standalone window. On Android Chrome, use **Install app** or the browser's installation menu. On iPhone/iPad, open it in Safari, choose **Share → Add to Home Screen**, and enable **Open as Web App** if offered. The Install app button shows instructions when the browser does not provide a native installation prompt. It disappears when the app is running as an installed app.
