@@ -97,9 +97,11 @@ button.legacy-tag:hover{background:#ded1f0;color:#3d285f}
 .origins-editor select { min-height: var(--control-height-compact); padding: 7px 9px; font-size: 14px; }
 .origins-editor textarea { min-height: 76px; padding: 8px 10px; font-size: 14px; }
 .origins-editor .quiet { min-height: var(--control-height-compact); padding: 7px 11px; font-size: 12px; }
-.origins-editor .origin-species { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 10px; }
-.origins-editor .origin-species .field { margin: 0; }
-.origins-editor .origin-species > button { width: auto; min-height: var(--control-height-compact); padding: 7px 12px; }
+.origins-editor .origin-species { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 6px 10px; }
+.origins-editor .origin-species .field { display: contents; }
+.origins-editor .origin-species .field > label { grid-column: 1; grid-row: 1; margin: 0; }
+.origins-editor .origin-species .field > select { grid-column: 1; grid-row: 2; }
+.origins-editor .origin-species > button { grid-column: 2; grid-row: 2; align-self: stretch; width: auto; min-height: var(--control-height-compact); padding: 7px 12px; }
 .origins-editor .origin-resources { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; padding: 8px 10px; background: var(--color-paper-recessed); border: 1px solid var(--color-line); font-size: 12px; }
 .origin-resources strong { margin-left: 5px; font-variant-numeric: tabular-nums; }
 .origins-editor .origin-roll-help { padding: 7px 0; margin: 0; border: 0; }

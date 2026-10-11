@@ -12,7 +12,18 @@ test("Origins starts without a Species, saves that state and supports choice and
 }) => {
   await openPC(page, { species: "" });
   const species = page.getByLabel("Species", { exact: true });
+  const expectAlignedSpeciesRoll = async () => {
+    const selectBox = await species.boundingBox();
+    const rollBox = await page
+      .getByRole("button", { name: "Roll Species · d100", exact: true })
+      .boundingBox();
+    expect(Math.abs(selectBox.y - rollBox.y)).toBeLessThanOrEqual(1);
+    expect(
+      Math.abs(selectBox.y + selectBox.height - rollBox.y - rollBox.height),
+    ).toBeLessThanOrEqual(1);
+  };
   await expect(species).toHaveValue("");
+  await expectAlignedSpeciesRoll();
   await expect(page.locator(".origin-resources")).toHaveCount(0);
   await expect(page.locator(".sheet .stat-grid")).toHaveCount(0);
   await page.reload();
@@ -38,6 +49,7 @@ test("Origins starts without a Species, saves that state and supports choice and
   await species.selectOption("Human");
   await page.getByRole("button", { name: "Apply change", exact: true }).click();
   await expect(species).toHaveValue("Human");
+  await expectAlignedSpeciesRoll();
   await expect(page.locator(".origin-resources")).toContainText(
     "Starting Fate",
   );
