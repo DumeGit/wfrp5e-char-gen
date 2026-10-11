@@ -1,12 +1,14 @@
 # Archives of the Empire: Volume II — integration review
 
+Pack 1.0.7 makes the printed Striding Gait (Mountains) choice idempotent when independently enabled with Salzenmund; the terrain’s mechanics are unchanged. Explicit Talent specialisations now support the same shared `include` operation as Skill options, while derived lists remain protected.
+
 **Status: installed as the opt-in `archives-ii` pack (see the registry for its current version)** All creation decisions below are approved. Unspecified profiles remain unresolved; campaign systems are deferred.
 
 Source: the supplied `Archives of the Empire - Vol II.pdf`, 96 pages, SHA-256 `95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b`. Printed pages match PDF positions. Some running headers say Volume I; the contents are the second collection covering Ogres, astrology, magical artifice and mass battles. The source PDF and full text remain outside the published app.
 
 MarkItDown text is in the parent workspace's `tmp/pdfs/archives-ii.md`. `scripts/extract-archives-ii.py` stages Career columns and coloured schemes, raw tables, two complete Ogre d100 name-element tables, weighted 2d10 appearance tables, and source metadata in `tmp/pdfs/archives-ii-review`. Staging does not register a book.
 
-`scripts/build-archives-ii.py` prepares reviewed runtime data outside the app by default; pass `--output-dir dist/data/books/archives-ii` to regenerate the installed pack. Registration is explicit in `dist/data/books/index.json`. The pack adds one Species, three Careers, seven Great Maw spells, twelve priced shop entries and twenty optional star signs. With all four supplied books selected the catalog contains 86 Careers and 241 spells/Blessings/Miracles.
+`scripts/build-archives-ii.py` prepares reviewed runtime data outside the app by default; pass `--output-dir dist/data/books/archives-ii` to regenerate the installed pack. Registration is explicit in `dist/data/books/index.json`. The pack adds one Species, three Careers, seven Great Maw spells, twelve priced shop entries and twenty optional star signs. Current combined catalogue counts are generated in [INCLUSION-MATRIX.md](INCLUSION-MATRIX.md).
 
 ## Creator material identified
 

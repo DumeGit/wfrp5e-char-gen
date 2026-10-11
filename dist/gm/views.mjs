@@ -52,7 +52,12 @@ export function templateOverview(t) {
       .map((slot, index) => {
         const choices = slot.options.length > 1,
           label = slot.options.map(esc).join(" or "),
-          amount = kind === "Skill" ? `+${slot.bonus}` : `×${slot.ranks}`,
+          amount =
+            kind === "Skill"
+              ? slot.printedTotal !== undefined
+                ? String(slot.printedTotal)
+                : `+${slot.bonus}`
+              : `×${slot.ranks}`,
           choice =
             choices || slot.optional
               ? `<small class="gm-template-choice">${slot.optional ? "Optional · " : ""}Choose ${slot.count || 1}${slot.count > 1 ? " different" : ""}</small>`
@@ -79,7 +84,7 @@ export function templateOverview(t) {
       .join(
         "",
       )}</dl><p class="gm-small">${esc(templateSummary(t))}. Wounds are recalculated after applying the template.</p></section>
-    <div class="gm-template-columns"><section><h3>Skills</h3>${rows(t.skills, "Skill")}<p class="gm-small">Uses the higher of the existing Skill bonus and the template bonus.</p></section><section><h3>Talents</h3>${t.talents.length ? rows(t.talents, "Talent") : '<p class="gm-small">No Talents granted.</p>'}${t.magic ? `<h3>Magic</h3><ul class="gm-template-grants"><li><span>Petty spells</span><strong>Up to ${t.magic.petty}</strong></li><li><span>Spells from a suitable Lore</span><strong>Up to ${t.magic.lore}</strong></li></ul><p class="gm-small">Choose compatible spells in Equipment &amp; magic.</p>` : ""}</section></div>
+    <div class="gm-template-columns"><section><h3>Skills</h3>${rows(t.skills, "Skill")}<p class="gm-small">${t.skills.some((slot) => slot.printedTotal !== undefined) ? "Unprefixed numbers are printed totals; Characteristic changes adjust them by their difference. Other grants use the higher existing or template bonus." : "Uses the higher of the existing Skill bonus and the template bonus."}</p></section><section><h3>Talents</h3>${t.talents.length ? rows(t.talents, "Talent") : '<p class="gm-small">No Talents granted.</p>'}${t.magic ? `<h3>Magic</h3><ul class="gm-template-grants"><li><span>Petty spells</span><strong>Up to ${t.magic.petty}</strong></li><li><span>Spells from a suitable Lore</span><strong>Up to ${t.magic.lore}</strong></li></ul><p class="gm-small">Choose compatible spells in Equipment &amp; magic.</p>` : ""}</section></div>
     ${t.traits?.length || t.removeTraits?.length ? `<section><h3>Creature Traits</h3><p>${t.traits.map((x) => esc(rowName(x))).join(", ") || "No added Traits"}</p>${t.removeTraits?.length ? `<p>Remove: ${t.removeTraits.map(esc).join(", ")}</p>` : ""}</section>` : ""}
     ${t.magicGroups?.length ? `<section><h3>Spell choices</h3><p>${t.magicGroups.map(templateMagicLabel).map(esc).join("; ")}.</p><p class="gm-small">Choose these exact lists in Equipment &amp; magic. Missing or extra spells must be resolved before export.</p></section>` : ""}
     ${t.armour ? `<section><h3>Armour</h3><p>${t.replaceArmour ? "Replaces printed protection:" : "Additional protection:"} ${t.armour} AP</p></section>` : ""}
@@ -384,7 +389,7 @@ export function traitParameter(data, R, t, profile) {
 function traits(data, R, s, r) {
   return `<div class="gm-section-heading"><h2>Creature Traits</h2>${button("Add Trait", "picker", 'data-kind="trait"', "primary")}</div><p class="gm-small">Printed Traits are included. Their full definitions open below; effects used during play stay as references.</p><div class="gm-entry-list">${r.traits.map((t) => `<div class="gm-entry"><div>${detail(t.key, `${esc(t.name)} ${t.value ? `<small>(${esc(t.value)})</small>` : ""} ${origin(t)}`, entryBody(t.text, t.page, t))}${legacyBadge(t)}${t.origin === "GM" || t.requiresParameter ? traitParameter(data, R, t, r.profile) : t.name === "Trained" && t.origin === "Printed" ? printedTraining(data, s, t) : ""}</div>${t.name !== "Size" && t.origin !== "Training" ? remove(t.key) : ""}</div>`).join("")}</div>
   ${r.optionalTraits.length ? detail("optional-traits", "Suggested optional Traits", `<div class="gm-chips">${r.optionalTraits.map((t, i) => button(esc(rowName(t)), "optional-trait", `data-index="${i}"`)).join("")}</div><p class="gm-small">Suggestions from the profile, not automatic grants. Parameters can be changed after adding.</p>`) : ""}
-  ${r.traits.some((t) => (t.origin !== "Printed" || s.extraTraining.includes("Broken")) && t.name === "Trained" && t.value.includes("Broken")) ? `<div class="gm-callout"><p>Broken training adds 2d10 Fellowship; an absent score starts at 0 (p. 363).</p>${button(s.brokenRoll ? `Roll again · ${s.brokenRoll.join(" + ")}` : "Roll 2d10 Fellowship", "broken-roll", 'id="gm-broken-roll"')}</div>` : ""}
+  ${r.traits.some((t) => (t.origin !== "Printed" || t.deriveTraining || s.extraTraining.includes("Broken")) && t.name === "Trained" && t.value.includes("Broken")) ? `<div class="gm-callout"><p>Broken training adds 2d10 Fellowship; an absent score starts at 0 (p. 363).</p>${button(s.brokenRoll ? `Roll again · ${s.brokenRoll.join(" + ")}` : "Roll 2d10 Fellowship", "broken-roll", 'id="gm-broken-roll"')}</div>` : ""}
   ${r.template?.physicalMutations || r.traits.some((t) => ["Mutation", "Mental Corruption", "Mark of Chaos"].includes(t.name)) ? `<section id="gm-mutations"><div class="gm-section-heading"><h2>Corruption choices</h2>${button("Choose mutation", "picker", 'data-kind="mutation"')}</div>${r.traits.some((t) => t.name === "Mark of Chaos" && t.value === "Tzeentch" && t.origin === "GM") ? `<p class="gm-small">Tzeentch grants ceil(1d10 ÷ 3) alternating Mental/Physical mutations (p. 359).</p>${button(s.markRoll ? `Roll again · ${s.markRoll} → ${Math.ceil(s.markRoll / 3)} mutations` : "Roll Tzeentch mutations", "mark-roll")}` : ""}<div class="gm-chips">${button("Roll Physical", "mutation-roll", 'data-category="Physical"')}${button("Roll Mental", "mutation-roll", 'data-category="Mental"')}</div>${r.mutations.map((m) => `<div class="gm-entry"><div>${detail(m.id, esc(m.name), entryBody(m.text, m.page))}</div>${remove(m.id)}</div>`).join("")}</section>` : ""}`;
 }
 function skillsTalents(R, s, r) {

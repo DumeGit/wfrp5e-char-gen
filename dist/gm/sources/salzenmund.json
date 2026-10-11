@@ -1,0 +1,1226 @@
+{
+  "schemaVersion": 1,
+  "id": "salzenmund",
+  "source": {
+    "file": "Salzenmund - City Of Salt & Silver (1).pdf",
+    "sha256": "a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea"
+  },
+  "summary": "Seven generic profiles and four Spite templates",
+  "profiles": [
+    {
+      "id": "salzenmund:creatures:miner",
+      "name": "Miner",
+      "page": 122,
+      "source": {
+        "book": "salzenmund",
+        "page": 122
+      },
+      "example": false,
+      "category": "Townsfolk",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 40,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Climb",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 45
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 45
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Intuition",
+          "total": 40
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Two-Handed)",
+          "total": 45
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Swim",
+          "total": 50
+        }
+      ],
+      "skillSlots": [],
+      "talents": [
+        {
+          "name": "Striding Gait (Rocky)",
+          "ranks": 1,
+          "adaptation": "Printed Strider (Rocky) uses core Striding Gait (Rocky)."
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Very Strong",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Pick",
+          "skillName": "Melee (Basic)",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Charcoal Stick, Crude Map, Davrich Lamp, Hand Weapon (Pick), Lamp Oil, Leather Jack, Pan, Spade"
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time.",
+        "Printed Melee (Two-Handed) 45 is retained, while the Hand Weapon (Pick) is Basic. Its listed +8 Damage is retained; no unprinted Melee (Basic) advance is granted. Status: Brass 4."
+      ],
+      "text": "Traits: Armour 1, Weapon (Pick) +8 Skills: Climb 40, Cool 45, Consume Alcohol 45, Endurance 45, Intuition 40, Lore (Local) 40, Melee (Two-Handed) 45, Outdoor Survival 40, Perception 40, Swim 50 Talents: Strider (Rocky), Sturdy, Very Strong Trappings: Charcoal Stick, Crude Map, Davrich Lamp, Hand Weapon (Pick), Lamp Oil, Leather Jack, Pan, Spade"
+    },
+    {
+      "id": "salzenmund:creatures:revenant-agent-of-the-doom-lord",
+      "name": "Revenant Agent of the Doom Lord",
+      "page": 110,
+      "source": {
+        "book": "salzenmund",
+        "page": 110
+      },
+      "example": false,
+      "category": "Undead",
+      "species": "Human",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 35,
+        "S": 35,
+        "T": 30,
+        "I": 20,
+        "Ag": 30,
+        "Dex": 25,
+        "Int": 40,
+        "WP": 50,
+        "Fel": 35,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "skillSlots": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "adaptation": "Reuses the user-approved older-edition Die Hard adaptation from Tribes and Tribulations; no direct Fifth Edition equivalent or automatic resurrection."
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [
+        {
+          "name": "Printed armour",
+          "ap": 1,
+          "locations": "Unspecified",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time.",
+        "The source gives Armour 1 without locations or pieces. Protection remains labelled Unspecified; no armour pieces or location coverage are invented."
+      ],
+      "text": "Traits: Armour 1, Dark Vision, Die Hard, Painless, Regeneration, Undead, Weapon+7",
+      "adaptation": "Reuses the user-approved older-edition Die Hard adaptation from Tribes and Tribulations; no direct Fifth Edition equivalent or automatic resurrection."
+    },
+    {
+      "id": "salzenmund:creatures:shiny-moon-goblins",
+      "name": "Shiny Moon Goblins",
+      "page": 129,
+      "source": {
+        "book": "salzenmund",
+        "page": 129
+      },
+      "example": false,
+      "category": "Greenskins",
+      "species": "Goblin",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 38,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 39,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 44
+        },
+        {
+          "name": "Climb",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 45
+        }
+      ],
+      "skillSlots": [
+        {
+          "options": [
+            "Melee (Basic)",
+            "Melee (Polearm)"
+          ],
+          "bonus": 5,
+          "label": "Melee specialisation (printed 35)"
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Sword",
+          "skillName": "Melee (Basic)",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Printed alternative Sword or Spear; choose the relevant Melee specialisation."
+        },
+        {
+          "name": "Spear",
+          "skillName": "Melee (Polearm)",
+          "skill": 30,
+          "damage": 7,
+          "optional": true,
+          "ranged": false,
+          "free": false,
+          "text": "Printed alternative Sword or Spear; choose the relevant Melee specialisation."
+        },
+        {
+          "name": "Shortbow",
+          "skillName": "Ranged (Bow)",
+          "skill": 45,
+          "damage": 5,
+          "ranged": true,
+          "free": false,
+          "optional": true,
+          "text": "Printed alternative to Spear and Shield; Quiver with 10 arrows."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Printed armour",
+          "ap": 1,
+          "locations": "Unspecified",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Spear and Shield or Shortbow and Quiver of 10 Arrows, Sword, Robe"
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time.",
+        "The source gives Armour 1 without locations or pieces. Protection remains labelled Unspecified; no armour pieces or location coverage are invented."
+      ],
+      "text": "Traits: Afraid (Elves), Animosity (Everything), Armour 1, Infected, Night Vision, Ranged (Shortbow) +5, Stealthy, Weapon (Sword or Spear) +7 Skills: Athletics 44, Climb 35, Dodge 45, Endurance 40, Melee (Basic or Polearm) 35, Ranged (Bow) 45 Trappings: Spear and Shield or Shortbow and Quiver of 10 Arrows, Sword, Robe"
+    },
+    {
+      "id": "salzenmund:creatures:shiny-moon-runts",
+      "name": "Shiny Moon Runts",
+      "page": 129,
+      "source": {
+        "book": "salzenmund",
+        "page": 129
+      },
+      "example": false,
+      "category": "Greenskins",
+      "species": "Goblin",
+      "size": "Small",
+      "stats": {
+        "M": 4,
+        "WS": 20,
+        "BS": 30,
+        "S": 20,
+        "T": 26,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 20,
+        "Fel": 20,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Climb",
+          "total": 28
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 30
+        },
+        {
+          "name": "Ranged (Entangling)",
+          "total": 40,
+          "adaptation": "User-approved Ranged (Net) → core Ranged (Entangling), retaining the printed total of 40. The distinct Night Goblin Net equipment profile remains reference-only."
+        },
+        {
+          "name": "Set Trap",
+          "total": 32
+        }
+      ],
+      "skillSlots": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Knife",
+          "skillName": "Melee (Basic)",
+          "skill": 20,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Knife, Net, Robe"
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time."
+      ],
+      "text": "Traits: Afraid (Elves), Animosity (Everything), Infected, Night Vision, Size (Small), Weapon +4 Skills: Climb 28, Dodge 40, Outdoor Survival 30, Ranged (Net) 40, Set Trap 32 Trappings: Knife, Net, Robe",
+      "adaptation": "User-approved Ranged (Net) → core Ranged (Entangling), retaining the printed total of 40. The distinct Night Goblin Net equipment profile remains reference-only. Printed 6 Wounds uses core Small (2 × TB): 4 Wounds."
+    },
+    {
+      "id": "salzenmund:creatures:shiny-moon-skulkas",
+      "name": "Shiny Moon Skulkas",
+      "page": 129,
+      "source": {
+        "book": "salzenmund",
+        "page": 129
+      },
+      "example": false,
+      "category": "Greenskins",
+      "species": "Goblin",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 35,
+        "S": 30,
+        "T": 35,
+        "I": 28,
+        "Ag": 45,
+        "Dex": 32,
+        "Int": 30,
+        "WP": 26,
+        "Fel": 18,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Climb",
+          "total": 35
+        },
+        {
+          "name": "Cool",
+          "total": 30
+        },
+        {
+          "name": "Dodge",
+          "total": 50
+        },
+        {
+          "name": "Endurance",
+          "total": 42
+        },
+        {
+          "name": "Intuition",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 38
+        },
+        {
+          "name": "Set Trap",
+          "total": 40
+        },
+        {
+          "name": "Stealth (Underground)",
+          "total": 52
+        }
+      ],
+      "skillSlots": [],
+      "talents": [
+        {
+          "name": "Enclosed Fighter",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Injure",
+          "ranks": 1
+        },
+        {
+          "name": "Tunnel Fighter",
+          "ranks": 1,
+          "adaptation": "Printed Tunnel Rat uses the user-approved core Tunnel Fighter replacement."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Dagger",
+          "skillName": "Melee (Basic)",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Printed armour",
+          "ap": 1,
+          "locations": "Unspecified",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Robes, Dagger (One or Two), Traps"
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time.",
+        "The source gives Armour 1 without locations or pieces. Protection remains labelled Unspecified; no armour pieces or location coverage are invented."
+      ],
+      "text": "Traits: Afraid (Elves), Animosity (Everything), Armour 1, Infected, Night Vision, Stealthy, Tracker, Weapon (Dagger) +5 Skills: Athletics 50, Climb 35, Cool 30, Dodge 50, Endurance 42, Intuition 35, Melee (Basic) 45, Perception 38, Set Trap 40, Stealth (Underground) 52 Talents: Enclosed Fighter, Strike to Injure, Tunnel Rat Trappings: Robes, Dagger (One or Two), Traps"
+    },
+    {
+      "id": "salzenmund:creatures:shiny-moon-snotlings",
+      "name": "Shiny Moon Snotlings",
+      "page": 130,
+      "source": {
+        "book": "salzenmund",
+        "page": 130
+      },
+      "example": false,
+      "category": "Greenskins",
+      "species": "Snotling",
+      "size": "Small",
+      "stats": {
+        "M": 4,
+        "WS": 20,
+        "BS": 15,
+        "S": 25,
+        "T": 20,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 30,
+        "Fel": null,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "skillSlots": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "adaptation": "Printed Broken uses core Trained (Broken), with a recorded 2d10 Fellowship roll. An absent Fellowship becomes the roll total.",
+          "deriveTraining": true
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Sharp rocks",
+          "skillName": "Melee (Basic)",
+          "skill": 20,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Sharp rocks"
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time."
+      ],
+      "text": "Traits: Bestial, Broken, Infected, Night Vision, Size (Small), Skittish, Weapon +4 Trappings: Sharp rocks",
+      "adaptation": "Printed Broken uses core Trained (Broken), with a recorded 2d10 Fellowship roll. An absent Fellowship becomes the roll total. Printed 6 Wounds uses core Small (2 × TB): 4 Wounds."
+    },
+    {
+      "id": "salzenmund:creatures:spite",
+      "name": "Spite",
+      "page": 115,
+      "source": {
+        "book": "salzenmund",
+        "page": 115
+      },
+      "example": false,
+      "category": "Forest spirits",
+      "species": "Spite",
+      "size": "Tiny",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 48,
+        "S": 19,
+        "T": 10,
+        "I": 30,
+        "Ag": 62,
+        "Dex": 50,
+        "Int": 25,
+        "WP": 63,
+        "Fel": 41,
+        "W": 1
+      },
+      "toughnessBonus": 1,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Charm Animal",
+          "total": 46
+        },
+        {
+          "name": "Dodge",
+          "total": 68
+        },
+        {
+          "name": "Language (Elthárin)",
+          "total": 40
+        },
+        {
+          "name": "Language (Reikspiel)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 38
+        }
+      ],
+      "skillSlots": [
+        {
+          "options": [
+            "Stealth (Any)"
+          ],
+          "bonus": 8,
+          "label": "Stealth specialisation (printed 70)"
+        }
+      ],
+      "talents": [
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Flee!",
+          "ranks": 1
+        },
+        {
+          "name": "Magical Sense",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "ranks": 1
+        },
+        {
+          "name": "Rover",
+          "ranks": 1
+        },
+        {
+          "name": "Second Sight",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Proposed user-approved Fast → core Sprinter replacement. Run movement is ×1.5; this differs from the supplied older +1 Movement/+10 Agility effect. Printed M 4 / Ag 62 remain the baseline, without adding bonuses again."
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Wallcrawler",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "",
+          "adaptation": "Printed Venom (2) provides no recovery Difficulty. Choose a core Difficulty; use full Fifth Edition Venom’s on-Wounds Poisoned effect and recovery Test.",
+          "requiresParameter": true
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Fly",
+          "value": "6"
+        },
+        {
+          "name": "Size",
+          "value": "Tiny",
+          "adaptation": "Printed optional Little uses Tiny with manual Wounds after changes."
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Claws, Teeth, or Sharp Sticks"
+      },
+      "notes": [
+        "Printed scores and Skill totals are the starting baseline; existing Talent benefits are not applied a second time.",
+        "Claws, Teeth or Sharp Sticks have no printed attack Damage; choose an explicit attack rather than invent a value.",
+        "Optional Consume Alcohol has no printed Skill total; add an explicit GM total if wanted. Old Little uses Tiny/manual Wounds; core Tiny has no automated formula.",
+        "Spites serving Naiads may replace Arboreal with Amphibious (p. 116). Eltharin/Reikspeil use canonical Elthárin/Reikspiel spellings."
+      ],
+      "text": "Traits: Arboreal, Fast, Magical, Size (Tiny), Wallcrawler, Venom (2) Skills: Charm Animal 46, Dodge 68, Language (Eltharin 40, Reikspeil 40), Perception 38, Stealth 70 Talents: Blather, Flee!, Magical Sense, Night Vision, Rover, Second Sight Trappings: Claws, Teeth, or Sharp Sticks",
+      "adaptation": "Proposed user-approved Fast → core Sprinter replacement. Run movement is ×1.5; this differs from the supplied older +1 Movement/+10 Agility effect. Printed M 4 / Ag 62 remain the baseline, without adding bonuses again. Printed Venom (2) provides no recovery Difficulty. Choose a core Difficulty; use full Fifth Edition Venom’s on-Wounds Poisoned effect and recovery Test."
+    }
+  ],
+  "templates": [
+    {
+      "id": "salzenmund:templates:despair",
+      "name": "Despair",
+      "page": 116,
+      "source": {
+        "book": "salzenmund",
+        "page": 116
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "salzenmund:creatures:spite"
+      ],
+      "foundationLabel": "Spite",
+      "adjustments": {
+        "WS": -10,
+        "BS": -10,
+        "T": 15,
+        "I": 15,
+        "Ag": -20,
+        "Int": 20,
+        "WP": 10,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Charm"
+          ],
+          "bonus": 0,
+          "count": 1,
+          "printedTotal": 47
+        },
+        {
+          "options": [
+            "Channelling (Ghyran)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Entertain (Prophecy)"
+          ],
+          "bonus": 20,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intuition"
+          ],
+          "bonus": 10,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Detect Artefact"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Sixth Sense"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dooming",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Life"
+        },
+        {
+          "name": "Ward",
+          "value": "",
+          "requiresParameter": true
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "fixedSpells": [
+        "core:spells:forest-of-thorns",
+        "core:spells:dooming"
+      ],
+      "notes": [
+        "Printed Charm 47 is below its resulting Fel; retain the explicit total, not invented negative Advances. Later Characteristic changes adjust that total by their difference.",
+        "Ward has no printed rating: choose it explicitly before export. Dooming is the innate Spite Trait using Willpower; it does not grant Bless/Invoke or require worship of Morr."
+      ],
+      "adaptation": "Printed Channelling 60 is replaced by core Spellcaster’s WP +10 (83 on this foundation), with an explicit Ghyran Wind for Life."
+    },
+    {
+      "id": "salzenmund:templates:mischief",
+      "name": "Mischief",
+      "page": 115,
+      "source": {
+        "book": "salzenmund",
+        "page": 115
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "salzenmund:creatures:spite"
+      ],
+      "foundationLabel": "Spite",
+      "adjustments": {
+        "WS": 10,
+        "I": 10,
+        "Int": 20,
+        "WP": 10,
+        "Fel": 15
+      },
+      "skills": [
+        {
+          "options": [
+            "Channelling (Any)"
+          ],
+          "bonus": 10,
+          "count": 1
+        },
+        {
+          "options": [
+            "Charm"
+          ],
+          "bonus": 6,
+          "count": 1
+        },
+        {
+          "options": [
+            "Perform (Dancing)"
+          ],
+          "bonus": 3,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Attractive"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Distract"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Mimic"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Fly",
+          "value": "6"
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Petty"
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "fixedSpells": [
+        "core:spells:marsh-lights",
+        "core:spells:sleep"
+      ],
+      "notes": [],
+      "adaptation": "Printed Channelling 56 is replaced by core Spellcaster’s WP +10 (83 on this foundation), with an explicit Wind choice."
+    },
+    {
+      "id": "salzenmund:templates:shrike",
+      "name": "Shrike",
+      "page": 115,
+      "source": {
+        "book": "salzenmund",
+        "page": 115
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "salzenmund:creatures:spite"
+      ],
+      "foundationLabel": "Spite",
+      "adjustments": {
+        "WS": 10,
+        "BS": 5,
+        "T": 5,
+        "I": 10,
+        "Dex": 6,
+        "Int": -5,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 8,
+          "count": 1
+        },
+        {
+          "options": [
+            "Track"
+          ],
+          "bonus": 7,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Berserk Charge"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Careful Strike"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Strike to Injure"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Fly",
+          "value": "8"
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Proposed user-approved Fury → core Frenzy replacement; equivalence of the older effect is not verified."
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "fixedSpells": [],
+      "notes": [
+        "Core Tiny has no defined Wounds formula, including for its Swarm; set Wounds explicitly after applying the template.",
+        "Core Swarm adds +10 WS after the printed template adjustments. Template Skills retain their printed bonus relative to the adjusted foundation, so Melee (Basic) becomes 68 with Swarm; GM totals can be overridden explicitly."
+      ],
+      "adaptation": "Proposed user-approved Fury → core Frenzy replacement; equivalence of the older effect is not verified."
+    },
+    {
+      "id": "salzenmund:templates:terror",
+      "name": "Terror",
+      "page": 115,
+      "source": {
+        "book": "salzenmund",
+        "page": 115
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "salzenmund:creatures:spite"
+      ],
+      "foundationLabel": "Spite",
+      "adjustments": {
+        "WS": 5,
+        "S": -15,
+        "I": 20,
+        "Int": 5,
+        "WP": 10,
+        "Fel": 10
+      },
+      "skills": [
+        {
+          "options": [
+            "Charm"
+          ],
+          "bonus": 7,
+          "count": 1
+        },
+        {
+          "options": [
+            "Intimidate"
+          ],
+          "bonus": 60,
+          "count": 1
+        },
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 7,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Menacing"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Shadow"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Terror",
+          "value": "2"
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "fixedSpells": [],
+      "notes": []
+    }
+  ],
+  "traits": [
+    {
+      "id": "salzenmund:trait:dooming",
+      "name": "Dooming",
+      "page": 116,
+      "source": {
+        "book": "salzenmund",
+        "page": 116
+      },
+      "text": "The Dooming trait works as if the creature had the Blessed (Morr) Trait and access to the Dooming Miracle. However, Despairs are not beholden to any Human god, and while their abilities mirror those of priests of Morr, they are an innate talent of the Spites. The Spite uses its Willpower for Dooming, not the Invoke Talent."
+    }
+  ],
+  "training": []
+}

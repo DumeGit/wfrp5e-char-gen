@@ -6,16 +6,16 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **4006 results**, including **1335 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **4043 results**, including **1359 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
-The Rules audit explicitly removed **112 non-mechanical entries**; **1039 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
+The Rules audit explicitly removed **112 non-mechanical entries**; **1050 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1702 | 224 | 1926 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1710 | 224 | 1934 | 0 |
 | Up in Arms | 1.0.5 | 98 | 128 | 226 | 13 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
-| Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
+| Archives of the Empire: Volume II | 1.0.7 | 24 | 103 | 127 | 7 |
 | Archives of the Empire: Volume III | 1.0.5 | 59 | 105 | 164 | 14 |
 | Winds of Magic | 1.0.4 | 172 | 252 | 424 | 55 |
 | Rough Nights & Hard Days | 1.0.2 | 2 | 24 | 26 | 2 |
@@ -31,6 +31,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **1039 Rules 
 | Taverns of the Old World | 1.0.0 | 8 | 49 | 57 | 0 |
 | The Corsairs of Captain Flariel | 1.1.0 | 6 | 4 | 10 | 3 |
 | Lustria | 1.0.0 | 17 | 54 | 71 | 5 |
+| Salzenmund: City of Salt and Silver | 1.0.0 | 5 | 24 | 29 | 5 |
 
 ## Source review
 
@@ -53,7 +54,7 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 
 Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 291; talent 438; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
+Categories: career 64; skill 294; talent 443; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
 Reviewed printed records retained outside search: 0.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.
@@ -525,6 +526,23 @@ Source SHA-256: `8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee7315784
 Candidate sections: included 54; excluded 3.
 
 Categories: career 4; magic 13; equipment 11; property 1; rule 35; table 2; trait 5.
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Salzenmund: City of Salt and Silver
+
+Source SHA-256: `a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea`.
+
+- pp. 57–62: Bounded magic effects.
+- pp. 100–101: Morning Fury and fate rewards.
+- pp. 115–117: Spite rules.
+- pp. 125–130: Mining tables and traps.
+- pp. 136–142: Smuggling and creation.
+
+Candidate sections: included 35; excluded 3.
+
+Categories: career 1; species 4; table 11; rule 11; trait 1; equipment 1.
 Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.

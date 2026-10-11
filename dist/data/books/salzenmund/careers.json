@@ -1,0 +1,128 @@
+[
+  {
+    "id": "salzenmund:career:owler",
+    "name": "Owler",
+    "class": "Riverfolk",
+    "species": [
+      "Dwarf",
+      "Halfling",
+      "High Elf",
+      "Human"
+    ],
+    "page": 141,
+    "advanceScheme": {
+      "WS": 2,
+      "BS": null,
+      "S": null,
+      "T": 1,
+      "I": 3,
+      "Ag": 1,
+      "Dex": null,
+      "Int": 4,
+      "WP": 1,
+      "Fel": null
+    },
+    "levels": [
+      {
+        "level": 1,
+        "name": "Legger",
+        "status": "Brass",
+        "standing": 2,
+        "skills": [
+          "Animal Care",
+          "Bribery",
+          "Consume Alcohol",
+          "Endurance",
+          "Evaluate",
+          "Haggle",
+          "Melee (Basic)",
+          "Outdoor Survival",
+          "Ride (Horse)",
+          "Stealth (Rural or Urban)"
+        ],
+        "talents": [
+          "Criminal",
+          "Hunter’s Eye",
+          "Striding Gait (Forests)",
+          "Strong Back"
+        ],
+        "trappings": [
+          "Cranky Mule",
+          "Large Sack",
+          "Mask or Scarves",
+          "Tinderbox"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Owler",
+        "status": "Brass",
+        "standing": 3,
+        "skills": [
+          "Athletics",
+          "Charm",
+          "Gossip",
+          "Lore (Local)",
+          "Perception",
+          "Secret Signs (Smuggler)"
+        ],
+        "talents": [
+          "Dealmaker",
+          "Etiquette (Criminals)",
+          "Orientation",
+          "Very Strong"
+        ],
+        "trappings": [
+          "2 Barrels",
+          "Hand Weapon",
+          "Leather Jack",
+          "Cart"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Master Owler",
+        "status": "Brass",
+        "standing": 5,
+        "skills": [
+          "Intimidate",
+          "Intuition",
+          "Lore (Law)",
+          "Lore (Roadways)"
+        ],
+        "talents": [
+          "Briber",
+          "Fearless (Roadwardens)",
+          "Seasoned Traveller",
+          "Strong Legs"
+        ],
+        "trappings": [
+          "Draught Horse",
+          "Wagon with false floor"
+        ]
+      },
+      {
+        "level": 4,
+        "name": "Owler King",
+        "status": "Silver",
+        "standing": 2,
+        "skills": [
+          "Language (Any)",
+          "Leadership"
+        ],
+        "talents": [
+          "Kingpin",
+          "Savvy",
+          "Striding Gait (Mountains)",
+          "Sturdy"
+        ],
+        "trappings": [
+          "Disguise Kit",
+          "Network of subordinate Owlers"
+        ]
+      }
+    ],
+    "conversion": "Explicit selectable alternative to Smuggler using Smuggler’s Riverfolk Class (the source prints no separate Class). Strider (Forests/Mountains) uses core Striding Gait with the printed terrain choices. Fearless (Road Wardens) uses canonical Roadwardens. Seasoned Traveller is already a core Talent and remains unchanged.",
+    "adaptation": "Printed Strider uses current core Striding Gait effects. Riverfolk Class is inherited from the explicitly replaced Smuggler Career by user decision."
+  }
+]

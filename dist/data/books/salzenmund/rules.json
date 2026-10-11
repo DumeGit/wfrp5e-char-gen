@@ -1,0 +1,43 @@
+[
+  {
+    "id": "salzenmund:rule:lore",
+    "path": [
+      "skillOptions",
+      "Lore"
+    ],
+    "operation": "include",
+    "value": [
+      "Nordland",
+      "Roadways"
+    ],
+    "page": 142,
+    "reason": "Printed regional/Career Lore choices use core Lore."
+  },
+  {
+    "id": "salzenmund:rule:trade",
+    "path": [
+      "skillOptions",
+      "Trade"
+    ],
+    "operation": "include",
+    "value": [
+      "Silversmith"
+    ],
+    "page": 142,
+    "reason": "Printed Cragforge Trade choice uses core Trade."
+  },
+  {
+    "id": "salzenmund:rule:striding-gait",
+    "path": [
+      "talentOptions",
+      "Striding Gait"
+    ],
+    "operation": "include",
+    "value": [
+      "Forests",
+      "Mountains"
+    ],
+    "page": 141,
+    "reason": "Preserve printed terrain names as core Striding Gait choices; the core list gives examples, not a closed list."
+  }
+]

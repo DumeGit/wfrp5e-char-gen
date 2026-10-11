@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "salzenmund:feature:four-regional-origins",
+      "name": "Four regional origins",
+      "status": "adapted",
+      "source": {
+        "book": "salzenmund",
+        "page": 142
+      },
+      "reason": "Approved five Skills at +5, native Languages and core limits; Nordlander Doomed/random is one exclusive slot."
+    },
+    {
+      "id": "salzenmund:feature:owler-smuggler-variant",
+      "name": "Owler Smuggler variant",
+      "status": "adapted",
+      "source": {
+        "book": "salzenmund",
+        "page": 141
+      },
+      "reason": "Explicit Riverfolk alternative; printed scheme and Career options, Strider → Striding Gait. Core Smuggler and roll probabilities stay unchanged."
+    },
+    {
+      "id": "salzenmund:feature:seven-generic-foundations-and-four-spite-templates",
+      "name": "Seven generic foundations and four Spite templates",
+      "status": "adapted",
+      "source": {
+        "book": "salzenmund",
+        "page": 115
+      },
+      "reason": "Approved core Size, Sprinter, Frenzy, Die Hard, Tunnel Fighter and Trained conversions; explicit Stealth/Melee/Wind/Venom/Ward choices. No named NPCs."
+    },
+    {
+      "id": "salzenmund:feature:dooming-spite-ability",
+      "name": "Dooming Spite ability",
+      "status": "implemented",
+      "source": {
+        "book": "salzenmund",
+        "page": 116
+      },
+      "reason": "Printed innate Willpower-based Dooming with core Miracle reference, no invented worship/Talents."
+    },
+    {
+      "id": "salzenmund:feature:curated-mechanical-rules-and-tables",
+      "name": "Curated mechanical rules and tables",
+      "status": "reference-only",
+      "source": {
+        "book": "salzenmund",
+        "page": 125
+      },
+      "reason": "Bounded mining/smuggling, mask and magic procedures; original source wording with separate discrepancy/scope notes."
+    },
+    {
+      "id": "salzenmund:feature:night-goblin-net",
+      "name": "Night Goblin Net",
+      "status": "reference-only",
+      "source": {
+        "book": "salzenmund",
+        "page": 129
+      },
+      "reason": "Unknown core weapon Group/price/weight is not guessed; core Net stays unchanged."
+    },
+    {
+      "id": "salzenmund:feature:mine-enterprises-hirelings-live-smuggling-and-magical-rewards",
+      "name": "Mine enterprises, hirelings, live smuggling and magical rewards",
+      "status": "deferred",
+      "source": {
+        "book": "salzenmund",
+        "page": 126
+      },
+      "reason": "No campaign/enterprise/hiring manager, mask bonuses or automatically granted boons."
+    },
+    {
+      "id": "salzenmund:feature:named-characters-rumours-encounters-and-setting-prose",
+      "name": "Named characters, rumours, encounters and setting prose",
+      "status": "deferred",
+      "source": {
+        "book": "salzenmund",
+        "page": 118
+      },
+      "reason": "Named characters and flavour-only material are excluded from foundations and shared rules search."
+    }
+  ]
+}

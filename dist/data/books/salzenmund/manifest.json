@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "salzenmund",
+  "title": "Salzenmund: City of Salt and Silver",
+  "shortTitle": "Salzenmund",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Salzenmund - City Of Salt & Silver (1).pdf",
+    "sha256": "a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Explicit user-approved Fifth Edition origins and Riverfolk Owler alternative; existing core careers/equipment remain unchanged.",
+      "Generic profiles use current Traits/Talents and approved individual conversions with selective Legacy notes. Printed baseline benefits are not reapplied.",
+      "Four Spite templates require their Spite foundation, explicit missing parameters and Tiny/manual Wounds. Spellcaster uses current WP +10 Channelling rather than conflicting source totals.",
+      "Standalone source references retain printed Fourth Edition wording. Named NPCs, hireling systems, enterprise/live-play managers and flavour-only prose are excluded."
+    ]
+  },
+  "files": {
+    "origins": "origins.json",
+    "careers": "careers.json",
+    "rules": "rules.json",
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 4006,
-  "newlyImported": 1335,
+  "references": 4043,
+  "newlyImported": 1359,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,15 +12,15 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1926,
+      "references": 1934,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1702,
+      "existingReferences": 1710,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 291,
-        "talent": 438,
+        "skill": 294,
+        "talent": 443,
         "magic": 225,
         "equipment": 254,
         "condition": 13,
@@ -504,7 +504,7 @@
     {
       "id": "archives-ii",
       "title": "Archives of the Empire: Volume II",
-      "version": "1.0.6",
+      "version": "1.0.7",
       "edition": 4,
       "sourceHash": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b",
       "references": 127,
@@ -1929,6 +1929,59 @@
           "first": 191,
           "last": 204,
           "topic": "Selected creation and expedition procedures"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "salzenmund",
+      "title": "Salzenmund: City of Salt and Silver",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea",
+      "references": 29,
+      "newlyImported": 24,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 5,
+      "adaptedReferences": 5,
+      "categories": {
+        "career": 1,
+        "species": 4,
+        "table": 11,
+        "rule": 11,
+        "trait": 1,
+        "equipment": 1
+      },
+      "dispositions": {
+        "included": 35,
+        "excluded": 3
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 57,
+          "last": 62,
+          "topic": "Bounded magic effects"
+        },
+        {
+          "first": 100,
+          "last": 101,
+          "topic": "Morning Fury and fate rewards"
+        },
+        {
+          "first": 115,
+          "last": 117,
+          "topic": "Spite rules"
+        },
+        {
+          "first": 125,
+          "last": 130,
+          "topic": "Mining tables and traps"
+        },
+        {
+          "first": 136,
+          "last": 142,
+          "topic": "Smuggling and creation"
         }
       ],
       "unresolved": []

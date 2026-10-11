@@ -437,6 +437,15 @@ export function addGMSupplement(data, raw, R) {
         if (slot.optional !== undefined && typeof slot.optional !== "boolean")
           throw Error("Invalid optional template grant.");
         if (
+          slot.printedTotal !== undefined &&
+          (kind !== "skill" ||
+            !Number.isInteger(slot.printedTotal) ||
+            slot.printedTotal < 0 ||
+            slot.bonus !== 0 ||
+            slot.count !== 1)
+        )
+          throw Error("Invalid printed template Skill total.");
+        if (
           slot.forProfiles &&
           (!slot.optional ||
             !Array.isArray(slot.forProfiles) ||
@@ -449,6 +458,13 @@ export function addGMSupplement(data, raw, R) {
           throw Error("Invalid optional template foundations.");
         return { ...slot, options: names };
       });
+    for (const trait of [...(t.traits || []), ...(t.optionalTraits || [])])
+      if (
+        trait.requiresParameter !== undefined &&
+        (trait.requiresParameter !== true ||
+          !definitions.find((x) => x.name === trait.name)?.parameter)
+      )
+        throw Error("Invalid required template Trait parameter.");
     const gear = (t.gear || []).map((slot) => {
       if (
         (slot.optional !== undefined && typeof slot.optional !== "boolean") ||
@@ -611,6 +627,12 @@ export function addGMSupplement(data, raw, R) {
           !definitions.find((x) => x.name === t.name)?.parameter)
       )
         throw Error(`${p.name}: invalid required Trait parameter.`);
+    for (const t of p.traits)
+      if (
+        t.deriveTraining !== undefined &&
+        (t.deriveTraining !== true || t.name !== "Trained")
+      )
+        throw Error(`${p.name}: invalid derived training.`);
     const rows = (kind) =>
       p[kind].map((x, i) => ({
         ...x,

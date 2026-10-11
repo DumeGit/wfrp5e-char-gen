@@ -8,8 +8,8 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 19 |
-| careers | 139 |
+| books | 20 |
+| careers | 140 |
 | magicProfiles | 596 |
 | rituals | 17 |
 | cants | 24 |
@@ -46,6 +46,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
 | The Corsairs of Captain Flariel | 3 | 3 | 4 | 0 | 0 |
 | Lustria | 17 | 5 | 54 | 0 | 0 |
+| Salzenmund: City of Salt and Silver | 0 | 5 | 24 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -997,7 +998,7 @@ Pack `archives-i` · version 1.0.3
 
 ## Archives of the Empire: Volume II
 
-Pack `archives-ii` · version 1.0.6
+Pack `archives-ii` · version 1.0.7
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -3006,12 +3007,78 @@ Pack `lustria` · version 1.0.0
 
 </details>
 
+## Salzenmund: City of Salt and Silver
+
+Pack `salzenmund` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+| careers | 0 | 1 | 0 | 0 | 0 |
+| origins | 0 | 4 | 0 | 0 | 0 |
+| referenceEntries | 0 | 0 | 24 | 0 | 0 |
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Curated mechanical rules and tables | reference-only | p. 125 | Bounded mining/smuggling, mask and magic procedures; original source wording with separate discrepancy/scope notes. |
+| Dooming Spite ability | implemented | p. 116 | Printed innate Willpower-based Dooming with core Miracle reference, no invented worship/Talents. |
+| Four regional origins | adapted | p. 142 | Approved five Skills at +5, native Languages and core limits; Nordlander Doomed/random is one exclusive slot. |
+| Mine enterprises, hirelings, live smuggling and magical rewards | deferred | p. 126 | No campaign/enterprise/hiring manager, mask bonuses or automatically granted boons. |
+| Named characters, rumours, encounters and setting prose | deferred | p. 118 | Named characters and flavour-only material are excluded from foundations and shared rules search. |
+| Night Goblin Net | reference-only | p. 129 | Unknown core weapon Group/price/weight is not guessed; core Net stays unchanged. |
+| Owler Smuggler variant | adapted | p. 141 | Explicit Riverfolk alternative; printed scheme and Career options, Strider → Striding Gait. Core Smuggler and roll probabilities stay unchanged. |
+| Seven generic foundations and four Spite templates | adapted | p. 115 | Approved core Size, Sprinter, Frenzy, Die Hard, Tunnel Fighter and Trained conversions; explicit Stealth/Melee/Wind/Venom/Ward choices. No named NPCs. |
+
+<details>
+<summary>Profile exceptions and adaptations</summary>
+
+| Content ID / name | Kind | Status | Source | Decision |
+|---|---|---|---|---|
+| `salzenmund:career:owler` — Owler | careers | adapted | p. 141 | Printed Strider uses current core Striding Gait effects. Riverfolk Class is inherited from the explicitly replaced Smuggler Career by user decision. |
+| `salzenmund:origin:cragforge-clan` — Cragforge Clan | origins | adapted | p. 142 | Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules. |
+| `salzenmund:origin:grumsson-clan` — Grumsson Clan | origins | adapted | p. 142 | Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules. |
+| `salzenmund:origin:nordlander` — Nordlander | origins | adapted | p. 142 | Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules. |
+| `salzenmund:origin:salzenmunder` — Salzenmunder | origins | adapted | p. 142 | Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules. |
+| `salzenmund:reference:bribery-for-smuggled-cargo` — Bribery for smuggled cargo | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:caught-smuggling` — Caught smuggling | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:chokan-s-fate-rewards` — Chokan’s Fate rewards | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:community-size-ratings` — Community Size ratings | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:community-wealth-ratings` — Community Wealth ratings | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:deadfall-shiny-moon-trap` — Deadfall — Shiny Moon trap | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:dooming-spite-ability` — Dooming — Spite ability | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:enchanted-masks` — Enchanted Masks | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:finding-contraband` — Finding contraband | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:fulcrum-of-azyr` — Fulcrum of Azyr | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:join-the-dance-resisting-spite-enchantment` — Join the Dance — resisting Spite enchantment | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:mine-events` — Mine Events | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:mining-equipment` — Mining Equipment | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:morning-fury` — Morning Fury | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:night-goblin-net` — Night Goblin Net | referenceEntries | reference-only | p. 129 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:prospecting-factors` — Prospecting Factors | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:prospecting-for-a-mineral-strike` — Prospecting for a mineral strike | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:selling-smuggled-goods` — Selling smuggled goods | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:size-of-strike` — Size of Strike | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:smuggled-goods-generator` — Smuggled Goods Generator | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:smuggling-events` — Smuggling Events | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:snare-shiny-moon-trap` — Snare — Shiny Moon trap | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:spiky-pit-shiny-moon-trap` — Spiky Pit — Shiny Moon trap | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:spites-serving-naiads` — Spites serving Naiads | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
+
+</details>
+
 ## Reviewed aliases
 
 Aliases are exact and scoped; they are not fuzzy substitutions. The active `contentId` is required to distinguish same-name Career alternatives. No mapping is invented for the withdrawn Archives I Dwarf weapons.
 
 | Kind / scope | Printed name | Canonical name | Source | Decision |
 |---|---|---|---|---|
+| talents / salzenmund | Strider (Forests) | Striding Gait (Forests) | salzenmund p. 141 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| talents / salzenmund | Strider (Mountains) | Striding Gait (Mountains) | salzenmund p. 141 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| talents / salzenmund | Strider (Rocky) | Striding Gait (Rocky) | salzenmund p. 122 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| talents / salzenmund | Tunnel Rat | Tunnel Fighter | salzenmund p. 129 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| skills / salzenmund | Language (Norscan) | Language (Norse) | salzenmund p. 142 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| skills / salzenmund | Language (Reikspeil) | Language (Reikspiel) | salzenmund p. 115 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| skills / salzenmund | Language (Eltharin) | Language (Elthárin) | salzenmund p. 115 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
+| skills / salzenmund | Ranged (Net) | Ranged (Entangling) | salzenmund p. 129 | Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator. |
 | talents / lustria | Fleet Footed | Fleet-footed | lustria p. 200 | Printed spelling uses the canonical core Talent; no effect changes. |
 | talents / lustria | Resistance (Any) | Resistant (Any) | lustria p. 198 | Printed heading uses the canonical core Resistant Talent. |
 | talents / lustria | Strider (Any) | Striding Gait (Any) | lustria p. 200 | Previously approved core equivalent; Trailblazer explains the actual conversion as Legacy. |

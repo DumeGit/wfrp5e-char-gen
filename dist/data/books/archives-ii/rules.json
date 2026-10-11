@@ -149,7 +149,7 @@
       "talentOptions",
       "Striding Gait"
     ],
-    "operation": "append",
+    "operation": "include",
     "value": [
       "Mountains"
     ],

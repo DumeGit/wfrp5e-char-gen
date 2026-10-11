@@ -28962,6 +28962,282 @@
           "reason": "Overlaps require explicit decisions; not exposed as working random tables."
         }
       ]
+    },
+    "salzenmund": {
+      "sourceHash": "a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea",
+      "publishedSHA256": "e2a8bd5560c206deae251df0015be5aabe39d547ffaf672d3fdeda58429dc5de",
+      "entries": 24,
+      "areas": [
+        {
+          "first": 57,
+          "last": 62,
+          "topic": "Bounded magic effects"
+        },
+        {
+          "first": 100,
+          "last": 101,
+          "topic": "Morning Fury and fate rewards"
+        },
+        {
+          "first": 115,
+          "last": 117,
+          "topic": "Spite rules"
+        },
+        {
+          "first": 125,
+          "last": 130,
+          "topic": "Mining tables and traps"
+        },
+        {
+          "first": 136,
+          "last": 142,
+          "topic": "Smuggling and creation"
+        }
+      ],
+      "records": [
+        {
+          "id": "salzenmund:reference:enchanted-masks",
+          "name": "Enchanted Masks",
+          "page": 57,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:fulcrum-of-azyr",
+          "name": "Fulcrum of Azyr",
+          "page": 62,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:morning-fury",
+          "name": "Morning Fury",
+          "page": 100,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:chokan-s-fate-rewards",
+          "name": "Chokan’s Fate rewards",
+          "page": 101,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:dooming-spite-ability",
+          "name": "Dooming — Spite ability",
+          "page": 116,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:spites-serving-naiads",
+          "name": "Spites serving Naiads",
+          "page": 116,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:join-the-dance-resisting-spite-enchantment",
+          "name": "Join the Dance — resisting Spite enchantment",
+          "page": 117,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:prospecting-for-a-mineral-strike",
+          "name": "Prospecting for a mineral strike",
+          "page": 125,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:prospecting-factors",
+          "name": "Prospecting Factors",
+          "page": 125,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:size-of-strike",
+          "name": "Size of Strike",
+          "page": 126,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:mining-equipment",
+          "name": "Mining Equipment",
+          "page": 126,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:mine-events",
+          "name": "Mine Events",
+          "page": 127,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:night-goblin-net",
+          "name": "Night Goblin Net",
+          "page": 129,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:deadfall-shiny-moon-trap",
+          "name": "Deadfall — Shiny Moon trap",
+          "page": 130,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:spiky-pit-shiny-moon-trap",
+          "name": "Spiky Pit — Shiny Moon trap",
+          "page": 130,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:snare-shiny-moon-trap",
+          "name": "Snare — Shiny Moon trap",
+          "page": 130,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:bribery-for-smuggled-cargo",
+          "name": "Bribery for smuggled cargo",
+          "page": 136,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:caught-smuggling",
+          "name": "Caught smuggling",
+          "page": 136,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:community-size-ratings",
+          "name": "Community Size ratings",
+          "page": 138,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:community-wealth-ratings",
+          "name": "Community Wealth ratings",
+          "page": 138,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:finding-contraband",
+          "name": "Finding contraband",
+          "page": 138,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:smuggled-goods-generator",
+          "name": "Smuggled Goods Generator",
+          "page": 139,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:selling-smuggled-goods",
+          "name": "Selling smuggled goods",
+          "page": 139,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:reference:smuggling-events",
+          "name": "Smuggling Events",
+          "page": 140,
+          "disposition": "included"
+        },
+        {
+          "id": "salzenmund:creatures:miner",
+          "name": "Miner",
+          "page": 122,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:creatures:revenant-agent-of-the-doom-lord",
+          "name": "Revenant Agent of the Doom Lord",
+          "page": 110,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:creatures:shiny-moon-goblins",
+          "name": "Shiny Moon Goblins",
+          "page": 129,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:creatures:shiny-moon-runts",
+          "name": "Shiny Moon Runts",
+          "page": 129,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:creatures:shiny-moon-skulkas",
+          "name": "Shiny Moon Skulkas",
+          "page": 129,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:creatures:shiny-moon-snotlings",
+          "name": "Shiny Moon Snotlings",
+          "page": 130,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:creatures:spite",
+          "name": "Spite",
+          "page": 115,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:templates:despair",
+          "name": "Despair",
+          "page": 116,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:templates:mischief",
+          "name": "Mischief",
+          "page": 115,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:templates:shrike",
+          "name": "Shrike",
+          "page": 115,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:templates:terror",
+          "name": "Terror",
+          "page": 115,
+          "disposition": "included",
+          "reason": "GM catalogue only; no NPC/template search."
+        },
+        {
+          "id": "salzenmund:excluded:named-characters-and-named-spites",
+          "name": "Named characters and named Spites",
+          "page": "18–137",
+          "disposition": "excluded",
+          "reason": "User excludes named foundations/encounters."
+        },
+        {
+          "id": "salzenmund:excluded:attendant-spites-and-mine-staff-hiring",
+          "name": "Attendant Spites and mine staff hiring",
+          "page": "116–126",
+          "disposition": "excluded",
+          "reason": "Hireling systems deferred."
+        },
+        {
+          "id": "salzenmund:excluded:setting-adventures-and-rumours",
+          "name": "Setting, adventures and rumours",
+          "page": "4–140",
+          "disposition": "excluded",
+          "reason": "No flavour-only rules results or named NPCs."
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "salzenmund:origin:nordlander",
+    "name": "Nordlander",
+    "species": "Human",
+    "page": 142,
+    "skills": [
+      "Consume Alcohol",
+      "Evaluate",
+      "Gossip",
+      "Haggle",
+      "Language (Norse)",
+      "Language (Wastelander)",
+      "Lore (Nordland)",
+      "Melee (Basic)",
+      "Ranged (Bow)",
+      "Sail",
+      "Swim",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Fisherman",
+        "Rover"
+      ],
+      [
+        "Stout-hearted",
+        "Very Resilient"
+      ]
+    ],
+    "randomTalents": 3,
+    "languages": [
+      "Reikspiel"
+    ],
+    "conversion": "Use core Fifth Edition attributes, five Species Skills at +5, native Languages and Talent limits. Printed Norscan uses the existing Norse language; Sail (Any) uses the ungrouped core Sail Skill. No regional Career-roll probabilities are invented.",
+    "adaptation": "Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules.",
+    "randomTalentAlternative": "Doomed"
+  },
+  {
+    "id": "salzenmund:origin:salzenmunder",
+    "name": "Salzenmunder",
+    "species": "Human",
+    "page": 142,
+    "skills": [
+      "Charm",
+      "Cool",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Gossip",
+      "Haggle",
+      "Language (Norse)",
+      "Leadership",
+      "Lore (Nordland)",
+      "Melee (Basic)",
+      "Ranged (Bow)",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Doomed"
+      ],
+      [
+        "Savvy",
+        "Suave"
+      ]
+    ],
+    "randomTalents": 3,
+    "languages": [
+      "Reikspiel"
+    ],
+    "conversion": "Use core Fifth Edition attributes, five Species Skills at +5, native Languages and Talent limits. Printed Norscan uses the existing Norse language; Sail (Any) uses the ungrouped core Sail Skill. No regional Career-roll probabilities are invented.",
+    "adaptation": "Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules."
+  },
+  {
+    "id": "salzenmund:origin:cragforge-clan",
+    "name": "Cragforge Clan",
+    "species": "Dwarf",
+    "page": 142,
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Intimidate",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Lore (Geology)",
+      "Lore (Metallurgy)",
+      "Melee (Basic)",
+      "Trade (Silversmith)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Read/Write",
+        "Relentless"
+      ],
+      [
+        "Resolute",
+        "Strong-minded"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "randomTalents": 0,
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "conversion": "Use core Fifth Edition attributes, five Species Skills at +5, native Languages and Talent limits. Printed Norscan uses the existing Norse language; Sail (Any) uses the ungrouped core Sail Skill. No regional Career-roll probabilities are invented.",
+    "adaptation": "Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules."
+  },
+  {
+    "id": "salzenmund:origin:grumsson-clan",
+    "name": "Grumsson Clan",
+    "species": "Dwarf",
+    "page": 142,
+    "skills": [
+      "Consume Alcohol",
+      "Cool",
+      "Endurance",
+      "Entertain (Storytelling)",
+      "Evaluate",
+      "Intimidate",
+      "Language (Norse)",
+      "Language (Khazalid)",
+      "Lore (Dwarfs)",
+      "Melee (Basic)",
+      "Sail",
+      "Trade (Any)"
+    ],
+    "talents": [
+      [
+        "Magic Resistance"
+      ],
+      [
+        "Night Vision"
+      ],
+      [
+        "Relentless",
+        "Strong-minded"
+      ],
+      [
+        "Sturdy"
+      ]
+    ],
+    "randomTalents": 1,
+    "languages": [
+      "Khazalid",
+      "Reikspiel"
+    ],
+    "conversion": "Use core Fifth Edition attributes, five Species Skills at +5, native Languages and Talent limits. Printed Norscan uses the existing Norse language; Sail (Any) uses the ungrouped core Sail Skill. No regional Career-roll probabilities are invented.",
+    "adaptation": "Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules."
+  }
+]

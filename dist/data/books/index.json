@@ -109,6 +109,10 @@
     {
       "id": "lustria",
       "path": "lustria/manifest.json"
+    },
+    {
+      "id": "salzenmund",
+      "path": "salzenmund/manifest.json"
     }
   ]
 }

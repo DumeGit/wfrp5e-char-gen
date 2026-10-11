@@ -1,6 +1,24 @@
 // Reviewed aliases have a kind, source and scope. Similar names never imply equivalence.
 export const CONTENT_ALIASES = Object.freeze([
   ...[
+    ["talents", "Strider (Forests)", "Striding Gait (Forests)", 141],
+    ["talents", "Strider (Mountains)", "Striding Gait (Mountains)", 141],
+    ["talents", "Strider (Rocky)", "Striding Gait (Rocky)", 122],
+    ["talents", "Tunnel Rat", "Tunnel Fighter", 129],
+    ["skills", "Language (Norscan)", "Language (Norse)", 142],
+    ["skills", "Language (Reikspeil)", "Language (Reikspiel)", 115],
+    ["skills", "Language (Eltharin)", "Language (Elthárin)", 115],
+    ["skills", "Ranged (Net)", "Ranged (Entangling)", 129],
+  ].map(([kind, from, to, page]) => ({
+    kind,
+    from,
+    to,
+    scope: "salzenmund",
+    source: { book: "salzenmund", page },
+    reason:
+      "Reviewed Salzenmund naming/conversion; actual effect changes carry selective Legacy notes in the creator.",
+  })),
+  ...[
     [
       "Fleet Footed",
       "Fleet-footed",

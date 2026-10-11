@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"7e9831180f78aa878246";
+const CACHE=CACHE_PREFIX+"f6d9b44c43c7417ff919";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -187,6 +187,12 @@ const ASSETS=[
  "data/books/rough-nights/species.json",
  "data/books/rough-nights/tables.json",
  "data/books/rough-nights/talents.json",
+ "data/books/salzenmund/careers.json",
+ "data/books/salzenmund/coverage.json",
+ "data/books/salzenmund/manifest.json",
+ "data/books/salzenmund/origins.json",
+ "data/books/salzenmund/reference-entries.json",
+ "data/books/salzenmund/rules.json",
  "data/books/sea-of-claws-artillery/coverage.json",
  "data/books/sea-of-claws-artillery/manifest.json",
  "data/books/sea-of-claws-artillery/market.json",
@@ -301,6 +307,7 @@ const ASSETS=[
  "gm/sources/corsairs-flariel.json",
  "gm/sources/lustria.json",
  "gm/sources/night-parade.json",
+ "gm/sources/salzenmund.json",
  "gm/sources/sea-of-claws.json",
  "gm/sources/taverns-old-world.json",
  "gm/sources/tribes-tribulations.json",

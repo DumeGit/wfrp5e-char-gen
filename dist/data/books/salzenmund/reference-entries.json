@@ -1,0 +1,200 @@
+[
+  {
+    "id": "salzenmund:reference:enchanted-masks",
+    "name": "Enchanted Masks",
+    "page": 57,
+    "category": "table",
+    "topic": "Magic items",
+    "text": "Choose a suitable personality or roll d10.\n\n1–2: Character: Angry, Warlike, Proud; Mask Type: Aspect of Kharnath; Example Masks: Hound, Bold Man, Enraged Woman, Bull, Spiked Mask; Effects: Gain Frenzy and Magic Resistance Talents. Cannot cast Spells or pray for Blessings and Miracles. +30 WS, +10 I, –20 Fel.\n\n3–4: Character: Humorous, Pessimistic, Kindly; Mask Type: Aspect of Neiglen; Example Masks: Crow, Smiling Man, Starving Woman, Pitted Wood; Effects: Gain Hardy Talent. –20 to all attempts to resist Disease. +20 T, –10 Ag, +5 Fel.\n\n5–6: Character: Greedy, Lustful, Friendly; Mask Type: Aspect of Shornaal; Example Masks: Beautiful Man, Leering Woman, Serpent, Dragonfly; Effects: Gain Ambidextrous and Distract Talents. +10 I, +20 Ag, +10 Fel, -15 WP.\n\n7–8: Character: Cautious, Cunning, Patient; Mask Type: Aspect of Tchar; Example Masks: Eagle, Sly Woman, Trickster, Swirling Patterns, Faceless; Effects: Gain Scheming and Second Sight Talents. +20 Int, +10 WP + 1 Corruption point if exposure Test is failed..\n\n9–10: Character: Moody, Acquisitive, Flexible; Mask Type: Aspect of Mermedus; Example Masks: Fish, Drowned Man, Carved Scales, Eel, Seaweed-covered Face; Effects: Gain Furious Assault and Sea Legs Talents. +50 to Swim Tests You can breathe underwater..\n\nIf someone wears a mask for more than an hour or benefits from any of its effects, they are exposed to Moderate Corruption. The mask can be removed, but the effects remain for d10+4 days. Once removed, the mask loses its enchantment.",
+    "notes": "Printed magical rewards for reading only; no price, Encumbrance or automatic mask effects are invented. Older Talent names/bonuses remain source wording."
+  },
+  {
+    "id": "salzenmund:reference:fulcrum-of-azyr",
+    "name": "Fulcrum of Azyr",
+    "page": 62,
+    "category": "rule",
+    "topic": "Magic",
+    "text": "The Great Orrery draws down the elusive wind of Azyr to help Astromancers with their magical research. Any Characters attempting Casting or Channelling Tests for spells from the Lore of Heavens in the tower receive a bonus of +2 SL. Should this bonus make the difference between success and failure, pass a Challenging (+0) Willpower Test or gain 1 Corruption point."
+  },
+  {
+    "id": "salzenmund:reference:morning-fury",
+    "name": "Morning Fury",
+    "page": 100,
+    "category": "rule",
+    "topic": "Psychology",
+    "text": "Anyone who stays in Salzenmund for eight consecutive nights has a 1% chance of dreaming of the Crimson Warrior. If this happens, the Character needs to pass an Easy (+40) Cool Test to avoid recalling the events of the dream and entering a Frenzy. On a failure, they will attack anyone nearby, including friends and allies. \n\nAnyone watching a fight at the Pits has a 5% chance of a red dream that night (10% if they saw someone killed). The subsequent Cool Test against Morning Fury is taken at Average (+20) difficulty. "
+  },
+  {
+    "id": "salzenmund:reference:chokan-s-fate-rewards",
+    "name": "Chokan’s Fate rewards",
+    "page": 101,
+    "category": "table",
+    "topic": "Fate and Fortune",
+    "text": "A supplicant offering a shiny object and praying has a 5% chance of receiving a reward. Roll d100.\n\n01–33: RESULT: A pivotal moment. Chokan tells of a single instance which will alter your fate. Increase Fortune by 2 points. This may take you over your maximum — when you regain points at the next session they will be equal to your Fate as usual. The next time you spend a Fortune point, gain 1 Corruption point (with no Test to resist)..\n\n34–66: RESULT: Clear foresight. Chokan tells of recurring patterns in your future. Gain the Luck Talent. The next time you spend a Fortune point, gain 1 Corruption point and Test as usual (against Cool) to avoid another point..\n\n67–00: RESULT: Fate revealed. Chokan tells you of a coming event where your fate splits between life and death. Gain 1 Fate point. The next time you spend a Fate point, gain 2 Corruption points (with no Test to resist)..",
+    "notes": "Printed Fourth Edition reward/refill rules are references only; Fifth Edition Fate and Fortune are separate. No creator rewards are granted."
+  },
+  {
+    "id": "salzenmund:reference:dooming-spite-ability",
+    "name": "Dooming — Spite ability",
+    "page": 116,
+    "category": "trait",
+    "topic": "Creature Traits",
+    "text": "The Dooming trait works as if the creature had the Blessed (Morr) Trait and access to the Dooming Miracle. However, Despairs are not beholden to any Human god, and while their abilities mirror those of priests of Morr, they are an innate talent of the Spites. The Spite uses its Willpower for Dooming, not the Invoke Talent."
+  },
+  {
+    "id": "salzenmund:reference:spites-serving-naiads",
+    "name": "Spites serving Naiads",
+    "page": 116,
+    "category": "rule",
+    "topic": "Creature Traits",
+    "text": "Spites who serve Naiads may swap the Arboreal Trait for Amphibious."
+  },
+  {
+    "id": "salzenmund:reference:join-the-dance-resisting-spite-enchantment",
+    "name": "Join the Dance — resisting Spite enchantment",
+    "page": 117,
+    "category": "rule",
+    "topic": "Magic",
+    "text": "Anyone wandering into these celebrations must make an Average (+20) WP Test to resist the urge to start dancing. To break free once enchanted, they must first be made aware of the need to do so by another, before making a Challenging (+0) WP Test. Dancing Spites don’t mind people walking among them, but turn violent should they try to take away the spirits’ dancing partners. They might be open to a trade, however."
+  },
+  {
+    "id": "salzenmund:reference:prospecting-for-a-mineral-strike",
+    "name": "Prospecting for a mineral strike",
+    "page": 125,
+    "category": "rule",
+    "topic": "Mining",
+    "text": "A Character spending at least a week exploring an area — assuming it is an area the GM thinks could hold mineral wealth — can make a Very Hard (–30) Perception Test to see if they find something. The Perception Test can be modified by various factors."
+  },
+  {
+    "id": "salzenmund:reference:prospecting-factors",
+    "name": "Prospecting Factors",
+    "page": 125,
+    "category": "table",
+    "topic": "Mining",
+    "text": "Character (or accompanying friend) passes an initial Challenging (+0) Lore (Geology) Test.: Modifier: +1 SL.\n\nCharacter (or accompanying friend) possesses the Second Sight Talent and can recognise Chamon.: Modifier: +1 SL.\n\nCharacter (or accompanying friend) passes an initial Difficult (–10) Lore (Local) Test.: Modifier: +1 SL.\n\nCharacter (or accompanying friend) passes an initial Challenging (–20) Gossip Test.: Modifier: +1 SL.\n\nThe entity known as Gnistre has been in (or under) the vicinity recently.: Modifier: +2 SL.\n\nAdditional 2 weeks or more spent searching.: Modifier: +1 SL.\n\nOther prospectors are searching around the vicinity.: Modifier: –1 SL.\n\nArea has been picked over by prospectors before.: Modifier: –2 SL.\n\nArea has been picked over by Dwarf prospectors before.: Modifier: –4 SL.",
+    "notes": "The source prints Challenging (−20) Gossip, an inconsistent label/modifier. This reference preserves that ambiguity; the creator does not resolve or roll prospecting."
+  },
+  {
+    "id": "salzenmund:reference:size-of-strike",
+    "name": "Size of Strike",
+    "page": 126,
+    "category": "table",
+    "topic": "Mining",
+    "text": "+6 or more: Result: Motherlode. Up to twenty miners can work the mine..\n\n+4 to +5: Result: Rich Vein. Up to ten miners can work the mine..\n\n+2 to +3: Result: Lucky Strike. Up to five miners can work the mine..\n\n+0 to +1: Result: Hardscrabble. Up to two miners can work the mine..\n\n–0 to –1: Result: Nothing. Try elsewhere..\n\n–2 to –3: Result: Nothing. Broken tool..\n\n–4 to –5: Result: Nothing. Broken tool. Suffer a fall of d10 yards..\n\n–6 or more: Result: Nothing. Prospectors stray into the territory of Beastmen, Goblins, or Dwarfs. Run!.",
+    "notes": "Printed +0 to +1 and −0 to −1 both include zero; no automatic result or invented correction is supplied."
+  },
+  {
+    "id": "salzenmund:reference:mining-equipment",
+    "name": "Mining Equipment",
+    "page": 126,
+    "category": "table",
+    "topic": "Mining",
+    "text": "Bellows: Cost: 20 GC; Maintenance: 1 GC each Month; Benefit: You may ignore the Suffocation Event..\n\nCaged Canaries: Cost: 1 GC; Maintenance: —; Benefit: Helps to mitigate the Bad Air Event..\n\nElevator: Cost: 20 GC; Maintenance: 1 GC each Month; Benefit: Each Miner produces 10 shillings extra of ore per week..\n\nFortification: Cost: 40 GC; Maintenance: —; Benefit: You may ignore the Attack! Event..\n\nGuild Membership: Cost: 20 GC; Maintenance: 20% of profits; Benefit: Mitigates certain Events. Your status improves by 1 Tier for the purpose of Charm and Gossip Tests and you may take the Skills Language (Guilder), Secret Signs (Guilder), and the Etiquette (Guilders) Talent as if they were available to your career..\n\nPumps: Cost: 40 GC; Maintenance: 2 GC each Month; Benefit: You may ignore the Flooding Event..",
+    "notes": "Mine-enterprise assets and maintenance are references, not ordinary carried equipment. No missing weights or campaign manager are invented."
+  },
+  {
+    "id": "salzenmund:reference:mine-events",
+    "name": "Mine Events",
+    "page": 127,
+    "category": "table",
+    "topic": "Mining",
+    "text": "Mine Events At the end of every month, or during any period of downtime, the owner of the mine must roll to see if any event occurs at the mine.\n\n01–50: Quiet Month Nothing occurs this month, and the mine operates as it usually does.\n\n51–53: Petering Out It isn’t possible to draw as much wealth from the mine as it was previously. If the strike was a Motherlode, it becomes a Rich Vein. If it was a Rich Vein, it becomes a Lucky Strike. If it was a Lucky Strike, it becomes Hardscrabble. If it was Hardscrabble, it stops producing altogether.\n\n54–55: New Find Another promising area is discovered. If the owner is actively managing the site they may make a Challenging (+0) Perception Test to discover a new strike. If they are not, then one of their employees claims the area and sets themself up as a competitor.\n\n56–65: Flooding Unless the mine is equipped with pumps, it floods; d10 Miners must make Challenging (+0) Swim Tests or be drowned, and the mine cannot be worked for two weeks.\n\n66–68: Inspired Workforce Everyone seems to be getting on well with their work this month. Each miner produces an extra 1 GC worth of ore.\n\n69–74: Attack! Claim jumpers, robber barons, or Greenskins try to seize the mine. If the mine is fortified, the attackers seek easier pickings elsewhere. Otherwise 2d10 employees are lost. If this reduces the employees to zero the mine is overrun by the attackers. The guild help organise a military force to retake the mine if you are a paid-up member.\n\n75–78: Legal Entanglements Someone contests your claim in court. If you have a Lawyer as an employee, or are a member of a guild, this is settled without further consequence. If not, d10 months of productivity are lost and you must either hire a Lawyer during this time or lose the mine unless you pass a Very Hard (–30) Charm Test.\n\n79–83: Labour Strike The Miners want to be paid more money. If you are a member of a guild then mutinous elements of the workforce are easily replaced. Otherwise you (or the Foreman) must make a Challenging (+0) Leadership Test. If the Test is failed the Miners stop working unless their pay is increased by –/6 per week.\n\n84–87: Corruption Randomly determine a member of the workforce. They steal 2d10 shillings worth of ore from you each week. At the end of the next month, you may make a Hard (–20) Gossip Test to work out which member of staff it is, but if the Test is failed they learn of your investigation, and abscond with d10 GC worth of ore.\n\n88–90: Bad Air Noxious and explosive gasses seep into the mine. Each Miner must make a Difficult (–10) Endurance Test or succumb to the gas. If you have equipped the mine with Caged Canaries this becomes an Average (+20) Endurance Test.\n\n91–94: Suffocation Miners in the deepest parts of the mine use up their air supply. If the mine is equipped with bellows, there is no detrimental effect. If not, d10 Miners are lost.\n\n95–97: Cave In A large section of the mine collapses. The owner of the mine, or an Engineer employed at the mine, can take a Difficult (–10) Trade (Engineer) Test. If this is passed, the early signs of the cave-in are spotted in time and the only consequence is a lost week of work as Miners are employed in excavating earth and placing props. If not, 2d10 Miners are trapped and must pass a Difficult (–10) Climb Test or are lost.\n\n98–99: Equipment Malfunction A randomly determined piece of equipment wears out. The owner of the mine, or an Engineer employed at the mine, can take a Hard (–20) Trade (Engineer) Test. If this is passed, running repairs rescue the equipment in time; if not, a new piece of equipment must be sourced.\n\n00: New Seam Another seam of ore is discovered in the mine. An additional five Miners may be employed to work the site."
+  },
+  {
+    "id": "salzenmund:reference:night-goblin-net",
+    "name": "Night Goblin Net",
+    "page": 129,
+    "category": "equipment",
+    "topic": "Weapons",
+    "text": "NETS Nets, weighted down with rocks, are a favoured Night Goblin weapon. Da Shiny Moons set traps with them, catching up unsuspecting creatures or hapless wanderers to take back to the tribe.\n\nNet: Group: Night Goblins; Reach: SB x 2; Damage: -; Qualities: Entangle (Strength 40).",
+    "notes": "Printed Night Goblins Group/Strength 40 Entangle profile is reference-only; it does not replace the existing core Net or invent a Ranged group, price or weight."
+  },
+  {
+    "id": "salzenmund:reference:deadfall-shiny-moon-trap",
+    "name": "Deadfall — Shiny Moon trap",
+    "page": 130,
+    "category": "rule",
+    "topic": "Traps",
+    "text": "Deadfall – A net (see above) or rocks (1d10 + 3 damage) fall from above. This trap may be spotted before it is triggered on a Challenging (+0) Perception Test. Once the Deadfall has been sprung, it can be avoided by making a Difficult (–10) Dodge Test."
+  },
+  {
+    "id": "salzenmund:reference:spiky-pit-shiny-moon-trap",
+    "name": "Spiky Pit — Shiny Moon trap",
+    "page": 130,
+    "category": "rule",
+    "topic": "Traps",
+    "text": "Spiky Pit – A hole opens up, a yard deep and lined with spikes. A victim falling in suffers 1d10 + 6 damage. This trap may be spotted before it is triggered on a Difficult (–10) Perception Test. Once the Pit has been stumbled into, injury can be avoided by making a Difficult (–10) Athletics Test."
+  },
+  {
+    "id": "salzenmund:reference:snare-shiny-moon-trap",
+    "name": "Snare — Shiny Moon trap",
+    "page": 130,
+    "category": "rule",
+    "topic": "Traps",
+    "text": "Snare – The victim gains the Prone and Entangled Conditions. The Snare counts as Strength 25. This trap may be spotted before it is triggered on a Very Hard (–30) Perception Test."
+  },
+  {
+    "id": "salzenmund:reference:bribery-for-smuggled-cargo",
+    "name": "Bribery for smuggled cargo",
+    "page": 136,
+    "category": "table",
+    "topic": "Smuggling",
+    "text": "Corruption is a fact of life in the Empire, and sometimes the smuggler’s best friend is the watchman with an outstretched palm and mouths to feed at home. In a tight spot, the Bribery Skill (WFRP, page 120) is an essential survival tool. As it stands, the Skill suggests the GM adjust the Test to reflect the target’s honesty and the risk involved. The table below can help guide your judgement for Bribery tests, based on the item smuggled and keeping in mind relevant Skills and Talents. Barring special circumstances, it is never easier than a Challenging (+0) difficulty to convince the authorities to just keep quiet and look the other way.\n\nChallenging: Modifier: 0; Types of Item: Taxed common items such as wool or cloth, leather goods, beer, paper.\n\nDifficult: Modifier: –10; Types of Item: Luxury items such as fine wines or liquors, high quality cloth or silks, perfumes, fancy feathers.\n\nHard: Modifier: –20; Types of Item: Banned normal items such as weapons, armour, or intoxicants.\n\nVery Hard: Modifier: –30; Types of Item: Treasonous or heretical items, such as anti-Sigmarite tracts, necromantic ingredients, warpstone, or forbidden tomes."
+  },
+  {
+    "id": "salzenmund:reference:caught-smuggling",
+    "name": "Caught smuggling",
+    "page": 136,
+    "category": "rule",
+    "topic": "Smuggling",
+    "text": "If caught, the smuggler faces the long arm of the law. In cases of mundane items and tax evasion, a successful Charm or Lore (Law) Test with appropriate modifiers results in a spot fine to buy the needed paperwork — and sometimes that fine even gets to the proper authorities. A failed roll results in a fine, confiscation of the goods, and\n\narrest if the result is a Fumble. Repeat offenders surely suffer confiscation, probable jailing, and perhaps even branding, assuming the local noble hasn’t decided to go straight to hanging. "
+  },
+  {
+    "id": "salzenmund:reference:community-size-ratings",
+    "name": "Community Size ratings",
+    "page": 138,
+    "category": "table",
+    "topic": "Smuggling",
+    "text": "Village: Population Size: 1–200; Rating: 1.\n\nSmall Town: Population Size: 201–1,500; Rating: 2.\n\nTown: Population Size: 1,501–10,000; Rating: 3.\n\nCity: Population Size: More than 10,000; Rating: 4."
+  },
+  {
+    "id": "salzenmund:reference:community-wealth-ratings",
+    "name": "Community Wealth ratings",
+    "page": 138,
+    "category": "table",
+    "topic": "Smuggling",
+    "text": "Squalid: Rating: 0.\n\nPoor: Rating: 1.\n\nAverage: Rating: 2.\n\nBustling: Rating: 3.\n\nProsperous: Rating: 4.\n\nWealthy: Rating: 5."
+  },
+  {
+    "id": "salzenmund:reference:finding-contraband",
+    "name": "Finding contraband",
+    "page": 138,
+    "category": "rule",
+    "topic": "Smuggling",
+    "text": "Add the Size and Wealth ratings together, then multiply that by 10 to find the chance that a particular location has contraband. If the town has ‘Trade’ listed under the ‘Produces’ column, add 20% to the chance to reflect the greater likelihood of something being available. For example, Beeckerhoven is a Small Town (Size 2) with a Bustling economy (Wealth 3), giving a base 50% chance of there being something to smuggle. With ‘Trade’ also listed under ‘Produces’, add a further 20% for a total of 70%. On a roll of 01–70, our Smuggler finds someone willing to sell something ‘under the table’. The question is, what?"
+  },
+  {
+    "id": "salzenmund:reference:smuggled-goods-generator",
+    "name": "Smuggled Goods Generator",
+    "page": 139,
+    "category": "table",
+    "topic": "Smuggling",
+    "text": "Roll d100.\n\n01–60: Type Available: Taxed, Ordinary; Cost Modifier: 50%; Notes: Everyday trade items such as cloth, wool, dried foods, metal ores.\n\n61–85: Type Available: Taxed, Luxury; Cost Modifier: 60%; Notes: Luxury goods such as fine brandy, good wine, quality cloth, silks, and fine artworks.\n\n86–95: Type Available: Banned, Ordinary; Cost Modifier: 70%; Notes: Any ordinary or luxury item that is banned.\n\n96–99: Type Available: Banned, Special; Cost Modifier: 80%; Notes: Suppressed dangerous items, such as gunpowder or weapons, stolen unique luxury items, heretical tracts, or magic items.\n\n00: Type Available: Treason!; Cost Modifier: 90%; Notes: Anything to do with necromancy, daemonology, or Chaos, or anything that might jeopardise the safety or rule of an Elector.\n\nItems that are Taxed Ordinary, Taxed Luxury, and Banned Ordinary sell for their list price in the Consumers’ Guide (WFRP, page 288). The Cost Modifier represents the average price after discount on an item, based on tax rates and legal status. This is what the average Smuggler would expect to pay — the greater the risk, the greater the discount. Items under Banned Special and Treason! should have their price set by the Gamemaster. Regardless, this is the starting point for bargaining. A Character can try an opposed Challenging (+0) Haggle Test to obtain an additional 10% off, except for Treason! items. GMs should make bargaining for these a matter of roleplaying. Failure, however, means the seller stands firm."
+  },
+  {
+    "id": "salzenmund:reference:selling-smuggled-goods",
+    "name": "Selling smuggled goods",
+    "page": 139,
+    "category": "rule",
+    "topic": "Smuggling",
+    "text": "Making a Profit Having found something to smuggle, the Smuggler then must deliver it — hopefully for a profit! Unlike the travelling Merchant, Smugglers don’t often buy a cargo without first knowing who is going to buy it and how much they’ll pay. The business is too risky already. A Character operating like this can attempt an opposed Challenging (+0) Haggle Test to get a better deal from the buyer — ‘You want your Dream Wine? Price has gone up. A schilling just doesn’t buy what it used to.’\n\nMore freewheeling Smuggler Characters may try the riskier path, however, travelling from place to place with contraband, hoping to make a sale. To find a buyer, follow the same process as above, adding the Size and Wealth ratings and multiplying by 10 — adding 20 if a Trade town — to obtain the chance of finding a buyer. The Character sets their own sale price. If the Gamemaster thinks it within reason — don’t forget the buyer’s Evaluate Skill, if present! — then the bargaining begins.\n\nIf the Character is successful with an Opposed Challenging (+0) Haggle Test, the buyer’s top offer is\n\n10% over what the Character paid, 20% if the Character has the Dealmaker Talent. If the Character loses the Test, the buyer offers 20% less than what was paid, 10% if the Character has Dealmaker. A Character may improve their result by 1 SL on a successful Challenging (+0) Charm Test but suffers –1 SL on a failure."
+  },
+  {
+    "id": "salzenmund:reference:smuggling-events",
+    "name": "Smuggling Events",
+    "page": 140,
+    "category": "table",
+    "topic": "Smuggling",
+    "text": "During a period of downtime, any Smuggler Character who wishes to make an Income Endeavour should also roll on the Smuggling Events Table in addition to any other events that occur during that period. As with the Income Endeavour in general, questions raised in Smuggling Events are intended for flavour rather than serious consequences, though the GM may well like to elaborate on any interesting situations in subsequent adventures.\n\nRoll d10.\n\n1: Event: Ratted Out! Someone — a competitor, enemy, or even an upstanding citizen — has snitched on you to the law. The heat is on. Make a Hard (–20) Stealth Test. If you fail, you earn nothing from the Income Endeavour..\n\n2: Event: Desperate Seller. Someone is willing to let contraband go for a steal, meaning more profit for you. When determining income you may make 50% extra. But what is the item and why is the seller so anxious?.\n\n3: Event: Help! The Watch! While stopping to eat or sleep, someone finds your goods and steals them. To whom does a crook turn? Unless you pass a Hard (–20) Perception Test you earn nothing from this Endeavour..\n\n4: Event: Flooded Market. You arrive in town only to find someone has beaten you to market. Nobody wants what you’re selling. When determining income you may make 50% less..\n\n5: Event: Lucky Find. You thought it was ordinary contraband but hidden inside you find something someone would pay a lot for. But where did it come from, and what if you’re caught? Earn d10 GC on top of your normal income..\n\n6: Event: New Partners. Your business is successful. Too successful. People have noticed. Earn double the normal amount, but unless you pass a Difficult (–10) Charm Test the local crime boss wants a 60% cut as your ‘employer’..\n\n7: Event: It Must Be Mine! The buyer wants what you have and is willing to pay. If you pass an Average (+20) Haggle Test you double the amount earned. Triple it if you have the Dealmaker Talent..\n\n8: Event: Switcheroo. This isn't what you paid for. You've been sold worthless fakes or spoiled goods. Unless you pass a Hard (–20) Evaluate Test you earn nothing from this Endeavour..\n\n9: Event: Market Day. You have several buyers and can take the best offer. Roll Earnings twice and take the highest..\n\n10: Event: Corruption. Not only does the Watch take your bribe, but your goods, too. You earn nothing from this Endeavour. Furthermore, unless you pay d10 shillings in bribes, you will be unable to take the Income Endeavour again unless you move to another town or city.."
+  }
+]

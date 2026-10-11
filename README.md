@@ -1,5 +1,7 @@
 # WFRP Character Ledger
 
+**Salzenmund: City of Salt and Silver** adds four opt-in regional origins, the Riverfolk Owler alternative, seven generic GM profiles/four Spite templates and 24 mechanical references. Missing Venom/Ward/Wind and Skill specialisations require explicit choices; approved conversions have Legacy notes. Core Smuggler/equipment remain unchanged. Scope and source discrepancies: [SALZENMUND.md](docs/SALZENMUND.md).
+
 **Lustria** adds four opt-in Careers, 55 generic GM profiles, six Skink castes and nine stacking sacred marks, five weapon profiles/six purchases, seven spells/prayers and 54 mechanical reading references (including five artillery references). Skinks are NPC-only by user choice. Slann choose explicit Lores/Winds; duplicate High Elf spells remain unchanged. Scope, conversions and source gaps: [LUSTRIA.md](docs/LUSTRIA.md).
 
 **The Corsairs of Captain Flariel** adds two Dark Elf GM foundations, eight sea-raider/Warhound templates, four Dark Magic spells, acquired Reaper statistics and Sea Dragon Cloak additional armour. Ship’s Crew Skill specialisations, Sorceress Lore/Wind and exact spell counts, Warhound’s Broken roll, and Beastmaster’s Net type are explicit choices. Chief Mate Talents and Dark Elf cloak grants are optional. All five clarification decisions are applied; Crop remains unavailable and unprinted cloak price/weight stay unknown. Details: [CORSAIRS.md](docs/CORSAIRS.md).
@@ -8,10 +10,10 @@
 
 Enable **Sea of Claws** for four Norse origins, nine Career paths (including explicit Pilot/Sailor/Wrecker alternatives), Chanties, Stromfels and 21 new magic profiles. The GM workshop adds 13 generic sea creatures. Naval artillery is an explicit optional Player variant and a labelled GM equipment alternative. Approved conversions, source conflicts and scope: [SEA-OF-CLAWS.md](docs/SEA-OF-CLAWS.md).
 
-A browser-based Fifth Edition character generator built from the supplied books. The core book and opt-in **Up in Arms**, **Archives of the Empire I, II and III**, **Winds of Magic**, **Rough Nights & Hard Days**, **High Elf Player’s Guide**, **Dwarf Player’s Guide**, **Blood and Bramble**, **Deft Steps, Light Fingers**, **The Night Parade**, **The Warband of Bayl of Many Eyes**, **The Cluster-Eye Tribe**, **Tribes and Tribulations**, **Sea of Claws** and **Taverns of the Old World** and **The Corsairs of Captain Flariel** are installed. Bayl and Cluster-Eye each add two GM profiles and seven advancement templates with documented, user-approved Fifth Edition conversions. Compatibility decisions and exclusions are documented separately for each supplement.
+A browser-based Fifth Edition character generator built from the supplied books. The installed core, opt-in supplements and variants are listed in the generated registry summary below and [inclusion matrix](docs/INCLUSION-MATRIX.md). Book-specific documents record compatibility decisions and exclusions.
 
 <!-- registry-counts:start -->
-With all 19 books enabled: **139 Career profiles**, **596 magic profiles** (including **17 rituals**), **24 Cants**, **10 Sword-dancing techniques**, **71 rune entries**, and **422 fixed-price shop entries**. Career alternatives remain explicit choices. Source counts, adaptations and exclusions: [inclusion matrix](docs/INCLUSION-MATRIX.md).
+With all 20 books enabled: **140 Career profiles**, **596 magic profiles** (including **17 rituals**), **24 Cants**, **10 Sword-dancing techniques**, **71 rune entries**, and **422 fixed-price shop entries**. Career alternatives remain explicit choices. Source counts, adaptations and exclusions: [inclusion matrix](docs/INCLUSION-MATRIX.md).
 <!-- registry-counts:end -->
 
 **Legacy** tags identify actual printed rules changed for Fifth Edition, including both Player’s Guides. Compatible material used unchanged has only its source reference. Each badge explains its specific conversion; tags follow affected choices into the folio, review, XP ledger and exports without relabelling every item from an older book. Policy and audit examples: [docs/LEGACY.md](docs/LEGACY.md).

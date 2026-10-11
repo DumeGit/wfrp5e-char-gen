@@ -92,7 +92,7 @@ test("Forest Goblin preserves printed values and exposes its unresolved target b
     "An invented replacement";
   assert.throws(
     () => validateGMDraft(data, rulesFor(s), invalid),
-    /printed Trait parameter/,
+    /sourced Trait parameter/,
   );
   assert.ok(r.traits.find((t) => t.name === "Afraid").adaptation);
   assert.ok(!r.traits.find((t) => t.name === "Arboreal").adaptation);

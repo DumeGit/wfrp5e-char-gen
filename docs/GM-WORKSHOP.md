@@ -1,5 +1,7 @@
 # Bestiary Workshop
 
+**Salzenmund** adds seven generic foundations and four Spite-only templates. Explicit Skill/Wind/Venom/Ward choices use existing native controls and early issue routing. Snotling Broken requires a recorded Fellowship roll; core Small gives 4 Wounds, while changed Tiny needs manual Wounds. Approved Sprinter/Frenzy/Talent conversions carry selective Legacy. Despair’s Charm 47 is an explicit source total; Channelling uses approved core WP +10. See [SALZENMUND.md](SALZENMUND.md). Template Trait parameters now share sourced parameter validation and clear on replacement; printed training derives effects only when its source explicitly marks a conversion requiring them.
+
 **Corsairs** adds two Dark Elf foundations and eight templates, including explicit Ship’s Crew Skill choices, Sorceress Lore/Wind/spell counts, Dog-only Warhound training, Beastmaster Whip/Net and acquired Sea Dragon Cloak additional protection. Chief Mate Talents and eligible cloak slots are optional. Native selectors, early routed issues and selective Legacy notes use the existing workshop interface. See [CORSAIRS.md](CORSAIRS.md) for all approved decisions and remaining scope exclusions.
 
 **Taverns of the Old World** adds twelve compatible generic Human staff foundations, selected through the existing book/profile filters. Printed baseline Talents are not reapplied, Leather Jerkin covers Body only, and shared consumables retain unknown weights. No hireling or tavern-management system is introduced. See [TAVERNS.md](TAVERNS.md).

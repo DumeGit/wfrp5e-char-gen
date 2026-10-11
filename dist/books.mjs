@@ -611,7 +611,8 @@ function applyRules(R, p, rules) {
         !strings(rule.value) ||
         (rule.operation === "include" &&
           new Set(rule.value).size !== rule.value.length) ||
-        (rule.operation === "include" && group !== "skillOptions") ||
+        (rule.operation === "include" &&
+          !["skillOptions", "talentOptions"].includes(group)) ||
         (rule.operation === "append" &&
           rule.value.some((x) => target[field].includes(x)))
       )

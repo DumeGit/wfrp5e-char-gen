@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-159 printed profiles, 67 templates, 126 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+166 printed profiles, 71 templates, 127 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |
@@ -25,6 +25,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Taverns of the Old World | 12 | 0 | Profiles/templates selectable; shared PC options always available |
 | The Corsairs of Captain Flariel | 2 | 8 | Profiles/templates selectable; shared PC options always available |
 | Lustria | 55 | 15 | Profiles/templates selectable; shared PC options always available |
+| Salzenmund: City of Salt and Silver | 7 | 4 | Profiles/templates selectable; shared PC options always available |
 | Sea of Claws — Naval artillery | 0 | 0 | Shared PC options always available; no selectable profiles/templates |
 
 | Profile | Source | Category | Legacy |
@@ -132,6 +133,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Manticore | Core · p. 333 | Monstrous Beasts |  |
 | Menial | Taverns · p. 14 | Tavern staff |  |
 | Merwyrm | Sea of Claws · p. 145 | Sea creatures | Yes |
+| Miner | Salzenmund · p. 122 | Townsfolk |  |
 | Minotaur | Core · p. 346 | Beastmen |  |
 | Mournfang | Tribes & Tribulations · p. 19 | Mounts | Yes |
 | Mutant | Core · p. 347 | Cultists and Mutants |  |
@@ -150,6 +152,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Quality Landlord | Taverns · p. 14 | Tavern staff |  |
 | Rat Ogre | Core · p. 352 | Skaven |  |
 | Razordon | Lustria · p. 175 | Lustrian beasts | Yes |
+| Revenant Agent of the Doom Lord | Salzenmund · p. 110 | Undead | Yes |
 | Rhinox | Archives II · p. 34 | Mounts | Yes |
 | Riding Horse | Up in Arms · p. 29 | Mounts | Yes |
 | Ripperdactyl | Lustria · p. 176 | Lustrian beasts | Yes |
@@ -163,6 +166,10 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Sea Elemental | Sea of Claws · p. 142 | Sea creatures | Yes |
 | Serpents Of Sotek | Lustria · p. 57 | Lustrian beasts |  |
 | Servant | Taverns · p. 14 | Tavern staff |  |
+| Shiny Moon Goblins | Salzenmund · p. 129 | Greenskins |  |
+| Shiny Moon Runts | Salzenmund · p. 129 | Greenskins | Yes |
+| Shiny Moon Skulkas | Salzenmund · p. 129 | Greenskins |  |
+| Shiny Moon Snotlings | Salzenmund · p. 130 | Greenskins | Yes |
 | Skeleton | Core · p. 339 | Restless Dead |  |
 | Skink | Lustria · p. 136 | Lizardmen | Yes |
 | Slann Of The Fifth Generation | Lustria · p. 123 | Lizardmen | Yes |
@@ -171,6 +178,7 @@ Generated from reviewed supplied-book sources. Do not edit by hand.
 | Slann Of The Second Generation | Lustria · p. 124 | Lizardmen | Yes |
 | Slann Of The Third Generation | Lustria · p. 124 | Lizardmen | Yes |
 | Snotling | Core · p. 338 | Orcs and Goblins |  |
+| Spite | Salzenmund · p. 115 | Forest spirits | Yes |
 | Stegadon | Lustria · p. 177 | Lustrian beasts | Yes |
 | Stormvermin | Core · p. 352 | Skaven |  |
 | Swiftfeather Roc | Lustria · p. 89 | Lustrian beasts | Yes |

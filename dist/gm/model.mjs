@@ -398,13 +398,13 @@ export function validateGMDraft(data, R, s) {
     throw Error("Invalid template Lore.");
   for (const [key, value] of Object.entries(s.traitParameters))
     if (
-      !p?.traits.some(
+      !templateTraits(t, p?.traits || []).some(
         (trait) => trait.key === key && trait.requiresParameter,
       ) ||
       typeof value !== "string" ||
       value.length > 1000
     )
-      throw Error("Invalid printed Trait parameter.");
+      throw Error("Invalid sourced Trait parameter.");
   for (const [i, names] of Object.entries(s.templateSkills))
     if (
       !t?.skills[i] ||
@@ -514,6 +514,8 @@ export function applyTemplate(s, id) {
     s.removed = s.removed.filter((key) => !key.startsWith(previous + ":"));
     for (const key of Object.keys(s.attackOverrides))
       if (key.startsWith(previous + ":")) delete s.attackOverrides[key];
+    for (const key of Object.keys(s.traitParameters))
+      if (key.startsWith(previous + ":")) delete s.traitParameters[key];
   }
   s.template = id;
   s.templateSkills = {};
@@ -607,6 +609,7 @@ export function gmCastableLores(R) {
   return [
     ...new Set([
       "Arcane",
+      "Petty",
       ...R.config.colours,
       ...R.spells
         .filter((spell) => !otherTypes.has(spell.category) && !spell.ritual)
@@ -733,6 +736,7 @@ export function calculateGM(data, R, s) {
     templateTraits(template, [...printedTraits, ...s.traits], s.removed),
   ).map((t) => ({
     ...t,
+    value: s.traitParameters[t.key] ?? t.value,
     text: data.traits.find((x) => x.name === t.name)?.text || "",
     ...(data.traits.find((x) => x.name === t.name)?.adaptation && !t.adaptation
       ? {
@@ -810,7 +814,10 @@ export function calculateGM(data, R, s) {
       );
   }
   const trained = traits
-    .filter((t) => t.name === "Trained" && t.origin !== "Printed")
+    .filter(
+      (t) =>
+        t.name === "Trained" && (t.origin !== "Printed" || t.deriveTraining),
+    )
     .flatMap((t) => parts(t.value));
   if (traits.some((t) => t.name === "Trained" && t.origin === "Printed"))
     trained.push(...s.extraTraining);
@@ -885,6 +892,7 @@ export function calculateGM(data, R, s) {
       templateSkills.push({
         name,
         bonus: slot.bonus,
+        printedTotal: slot.printedTotal,
         origin: "Template",
         slot: i,
       });
@@ -1045,7 +1053,25 @@ export function calculateGM(data, R, s) {
         1,
         `#template-skill-${template.skills.findIndex((v) => v.options.includes(x.name))}`,
       );
-    else put(x.name, stats[char] + x.bonus, "Template");
+    else {
+      const baseline = { ...p.stats };
+      templateStats(template, baseline);
+      const total =
+        x.printedTotal === undefined
+          ? stats[char] + x.bonus
+          : x.printedTotal +
+            stats[char] -
+            (baseline[char] + (template.adjustments[char] || 0));
+      if (!number(total))
+        add(
+          `${x.name} needs a nonnegative Skill total after these changes.`,
+          1,
+          "#gm-tab-2",
+          "template.skill-total",
+          template.source,
+        );
+      else put(x.name, total, "Template");
+    }
   }
   for (const [i, slot] of (p.skillSlots || []).entries()) {
     const name = s.profileSkills[i];
@@ -1124,7 +1150,12 @@ export function calculateGM(data, R, s) {
         const channelChar = gmSkillCharacteristic(R, p, channelName, traits);
         if (wind && stats[channelChar] !== null)
           put(channelName, stats[channelChar] + 10, "Trait");
-        if (!wind && !s.skills.some((x) => base(x.name) === "Channelling"))
+        if (
+          !wind &&
+          ![...s.skills, ...templateSkills].some(
+            (x) => base(x.name) === "Channelling",
+          )
+        )
           add(
             "Choose a Channelling Wind Skill for this magical Lore.",
             1,
@@ -1218,8 +1249,20 @@ export function calculateGM(data, R, s) {
     const param =
       PARAMETER[t.name] ??
       data.traits.find((x) => x.name === t.name)?.parameter;
+    const parameterSource =
+      t.origin === "Template"
+        ? template.source
+        : t.requiresParameter
+          ? p.source
+          : t.source;
     if (param && !t.value.trim())
-      add(`Set ${param.toLowerCase()} for ${t.name}.`, 1, `#trait-${t.key}`);
+      add(
+        `Set ${param.toLowerCase()} for ${t.name}.`,
+        1,
+        `#trait-${t.key}`,
+        "trait.parameter",
+        parameterSource,
+      );
     if (
       ["Rating", "Number", "Damage"].includes(param) &&
       (!/^\d+$/.test(t.value) || Number(t.value) < 1)
@@ -1228,6 +1271,8 @@ export function calculateGM(data, R, s) {
         `${t.name} needs a positive whole-number ${param.toLowerCase()}.`,
         1,
         `#trait-${t.key}`,
+        "trait.parameter",
+        parameterSource,
       );
   }
   for (const t of [
@@ -1250,6 +1295,11 @@ export function calculateGM(data, R, s) {
         1,
         `#trait-${t.key}`,
         "trait.parameter",
+        t.origin === "Template"
+          ? template.source
+          : t.requiresParameter
+            ? p.source
+            : t.source,
       );
   }
   const sb = bonus(stats.S) || 0,
@@ -1277,7 +1327,7 @@ export function calculateGM(data, R, s) {
       let score = a.skill,
         damage = a.damage;
       if (
-        (changed || s.skills.length) &&
+        (changed || s.skills.length || Object.keys(s.profileSkills).length) &&
         score !== null &&
         stats[char] !== null &&
         p.stats[char] !== null

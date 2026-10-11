@@ -73,7 +73,7 @@ for group in ['Etiquette', 'Fearless', 'Striding Gait']:
                 if match and match[1] not in core_config['talentOptions'].get(group, []):
                     printed[match[1]] = c['page']
     if printed:
-        rules.append({'id': 'archives-ii:rule:talent-'+slug(group), 'path': ['talentOptions', group], 'operation': 'append', 'value': list(printed), 'page': min(printed.values()), 'reason': 'Printed Archives II Talent specialisations using the existing core Talent.'})
+        rules.append({'id': 'archives-ii:rule:talent-'+slug(group), 'path': ['talentOptions', group], 'operation': 'include' if group == 'Striding Gait' else 'append', 'value': list(printed), 'page': min(printed.values()), 'reason': 'Printed Archives II Talent specialisations using the existing core Talent.'})
 write('rules.json', rules)
 
 species = {'Ogre': {
