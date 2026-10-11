@@ -338,8 +338,7 @@ export function createFeature(getContext, setContext) {
       s.careerAttempts = 0;
       s.careerMode = "choose";
       s.careerOffers = [];
-      if (!careerAvailable(R, s, M.career(R, s)))
-        s.career = R.careers.find((x) => careerAvailable(R, s, x)).id;
+      if (!careerAvailable(R, s, M.career(R, s))) s.career = "";
       toast(`d100 ${n} → ${s.species}`);
     }
     if (a === "age" && birthEra(R, s)) {
@@ -920,8 +919,7 @@ export function createFeature(getContext, setContext) {
         s.careerAttempts = 0;
         s.careerMode = "choose";
         s.careerOffers = [];
-        if (!careerAvailable(R, s, M.career(R, s)))
-          s.career = R.careers.find((x) => careerAvailable(R, s, x)).id;
+        if (!careerAvailable(R, s, M.career(R, s))) s.career = "";
       } else if (bind === "origin") {
         if (s.ledger.length)
           throw Error("Undo or clear advancement before changing your origin.");
@@ -931,8 +929,7 @@ export function createFeature(getContext, setContext) {
         s.careerAttempts = 0;
         s.careerOffers = [];
         delete s.rollTables.career;
-        if (!careerAvailable(R, s, M.career(R, s)))
-          s.career = R.careers.find((c) => careerAvailable(R, s, c)).id;
+        if (!careerAvailable(R, s, M.career(R, s))) s.career = "";
       } else if (bind === "originTalentMode") {
         if (s.ledger.length)
           throw Error(

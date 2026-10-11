@@ -104,7 +104,7 @@ export function createFeature(getContext, setContext) {
       ? [
           "Species and Career Skill allocations, selected specialisations and starting Talents are cleared.",
           "Career roll choices, starting increases, equipment, purchases and wealth are reset.",
-          "Regional options are recalculated; an unavailable Career is replaced with a legal one.",
+          "Regional options are recalculated; an unavailable Career is cleared so you can choose or roll again.",
         ]
       : talentsOnly
         ? [

@@ -16,6 +16,8 @@
 
 ## Agreed creator behavior
 
+- New Player drafts start with 0 base XP and no selected Career. Keep the empty-Career state usable and saveable, with no Career grants or Class kit; clear an unavailable Career after Species/origin changes rather than automatically choosing a replacement.
+
 - Guided choices with optional real random rolls; all supported Careers. Dice use crypto.getRandomValues with rejection sampling. Log die faces, sums, timestamps, sources and duplicate rerolls. Never claim imported history is verified randomness.
 - Exports include the editable supplied PDF sheet and a full creation/XP record, including overflow. XP purchase/undo and folio totals must agree. Fate and Fortune are separate.
 - Optional +1 advances follow Appendix II p. 364. Five purchased points in the same eligible Career Skill or Characteristic give one tracker box; +1 alone does not. This tracker grouping is the user's interpretation, not explicit Appendix II text. Return to +5 only at a multiple of five. Preserve the printed +45 Skill price rather than inventing errata.

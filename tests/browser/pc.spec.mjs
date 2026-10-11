@@ -12,6 +12,25 @@ test("Career typing retains its caret and a roll populates the chosen Career @pc
 }) => {
   await openPC(page);
   await pcStep(page, "Career");
+  await expect(
+    page.getByRole("heading", { name: "No Career selected", exact: true }),
+  ).toBeVisible();
+  await page.reload();
+  await expect(
+    page.getByRole("heading", { name: "No Career selected", exact: true }),
+  ).toBeVisible();
+  for (const step of [
+    "Characteristics",
+    "Skills",
+    "Talents",
+    "Gear & money",
+    "Experience",
+    "Review",
+  ]) {
+    await pcStep(page, step);
+    await noOverflow(page);
+  }
+  await pcStep(page, "Career");
   const input = page.getByLabel("Find a Career", { exact: true });
   await input.fill("Soldier");
   await input.press("Home");

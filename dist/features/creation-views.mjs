@@ -86,6 +86,11 @@ export function createFeature(getContext, setContext) {
     const c = M.career(R, s),
       available = R.careers.filter((x) => careerAvailable(R, s, x)),
       bonus = M.bonusTrappingLimit(R, s);
+    if (!s.career)
+      return `${chapterHeading("Choose your Career")}
+<section class="career-roll-controls" aria-label="Roll a Career"><div class="actions">${button("career-roll", "Roll Career · d100", randomTable(R, s, "career") ? "" : "disabled", "primary")}</div>${tablePicker(R, s, "career")}</section>
+<section class="chosen-career" aria-label="Chosen Career"><h2>No Career selected</h2><p class="small muted">Roll a Career above, or preview a Career below and choose it.</p></section>
+${careerBrowser(R, s, { query: careerSearch, className: careerFilter, book: careerBook, preview: careerPreview, limit: careerLimit })}`;
     return `${chapterHeading("Choose your Career")}
 <section class="career-roll-controls" aria-label="Roll a Career"><div class="actions">${button("career-roll", s.careerAttempts ? "Roll another Career" : "Roll Career · d100", randomTable(R, s, "career") ? "" : 'disabled title="Choose a printed Career roll table, or choose a Career directly"', "primary")}${s.careerAttempts === 1 && randomTable(R, s, "career") ? button("career-three", "Roll two more") : ""}</div>${tablePicker(R, s, "career")}</section>
 <section class="chosen-career" aria-label="Chosen Career"><span class="eyebrow">Chosen Career</span><h2>${esc(c.name)} ${legacyTag(R, c)}</h2><span class="small muted">${esc(c.class)} · ${sourceButton(R, c)}</span><p>Begin as <strong>${esc(c.levels[0].name)}</strong> — ${c.levels[0].status} ${c.levels[0].standing}. Starting Characteristics: ${Object.entries(

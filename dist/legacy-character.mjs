@@ -58,7 +58,7 @@ export function legacyOption(R, s, kind, name) {
   }
   if (kind === "talent") {
     if (
-      c.source.book === "deft-steps" &&
+      c.source?.book === "deft-steps" &&
       M.careerTalentOptions(R, s, d.level).includes(name) &&
       (name === "Invoke (Ranald)" || M.base(name) === "Impassioned Zeal")
     )

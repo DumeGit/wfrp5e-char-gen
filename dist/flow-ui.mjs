@@ -58,12 +58,16 @@ export function careerBrowser(R, s, filters) {
     )
     .join(
       "",
-    )}</div>${results.length > filters.limit ? '<button type="button" class="quiet" data-action="career-more">Show more Careers</button>' : ""}${!results.length ? '<p class="empty">No matching Careers. Try another search or filter.</p>' : ""}<article class="career-preview"><div class="split"><h3>${esc(preview.name)} ${legacyTag(R, effective)}</h3>
+    )}</div>${results.length > filters.limit ? '<button type="button" class="quiet" data-action="career-more">Show more Careers</button>' : ""}${!results.length ? '<p class="empty">No matching Careers. Try another search or filter.</p>' : ""}${
+    preview.id
+      ? `<article class="career-preview"><div class="split"><h3>${esc(preview.name)} ${legacyTag(R, effective)}</h3>
 <span class="counter">${preview.id === s.career ? "Current Career" : "Preview only"}</span></div>
 <p>${esc(first.name)} · ${first.status} ${first.standing} · ${esc(sourceLabel(R, effective, { legacy: false }))}</p>
 <p><strong>Starting Skills:</strong> ${esc(first.skills.join(", "))}</p>
 <p><strong>Starting Talents:</strong> ${esc(first.talents.join(", "))}</p>
-<p><strong>Starting kit:</strong> ${esc(first.trappings.join(", "))}</p>${preview.id !== s.career ? `<button type="button" class="primary" data-action="career-apply" data-id="${esc(preview.id)}" ${s.ledger.length ? "disabled" : ""}>Choose ${esc(preview.name)}</button>` : ""}</article></section>`;
+<p><strong>Starting kit:</strong> ${esc(first.trappings.join(", "))}</p>${preview.id !== s.career ? `<button type="button" class="primary" data-action="career-apply" data-id="${esc(preview.id)}" ${s.ledger.length ? "disabled" : ""}>Choose ${esc(preview.name)}</button>` : ""}</article>`
+      : ""
+  }</section>`;
 }
 
 export function careerOptions(R, s) {

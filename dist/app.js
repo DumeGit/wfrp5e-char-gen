@@ -81,7 +81,7 @@ try {
     const next = catalogForCharacter(library, saved);
     if (
       !next.species[saved.species] ||
-      !next.careers.some((c) => c.id === saved.career)
+      (saved.career !== "" && !next.careers.some((c) => c.id === saved.career))
     )
       throw Error("Saved character options are unavailable.");
     R = next;
@@ -647,7 +647,8 @@ $("#app").addEventListener("change", async (e) => {
     if (
       incoming.version !== 2 ||
       !next.species[incoming.species] ||
-      !next.careers.some((c) => c.id === incoming.career) ||
+      (incoming.career !== "" &&
+        !next.careers.some((c) => c.id === incoming.career)) ||
       !Array.isArray(incoming.ledger) ||
       !Array.isArray(incoming.rolls)
     )

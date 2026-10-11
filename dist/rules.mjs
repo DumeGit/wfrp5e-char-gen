@@ -134,7 +134,7 @@ export function fresh() {
     species: "Human",
     speciesMode: "choose",
     speciesAttempts: 0,
-    career: "soldier",
+    career: "",
     careerMode: "choose",
     careerAttempts: 0,
     careerOffers: [],
@@ -728,7 +728,7 @@ export function derive(R, s) {
     tb,
     wpb,
     currentSkills,
-    status: `${status.status} ${status.standing}`,
+    status: c.id ? `${status.status} ${status.standing}` : "—",
     notices: uniqueIssues(warnings),
     warnings: warnings.map((x) => x.message),
   };

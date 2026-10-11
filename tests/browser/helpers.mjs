@@ -54,6 +54,7 @@ export async function pcDraft({ complete = false } = {}) {
   if (complete)
     Object.assign(s, {
       xp: 1000,
+      career: "soldier",
       name: "Browser Test Soldier",
       appearance: "Test fixture",
       points: [16, 6, 15, 15, 9, 12, 5, 6, 12, 4],

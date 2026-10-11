@@ -83,7 +83,7 @@ ${creatorSwitch("player", typeof location !== "undefined" && new URLSearchParams
 <span class="eyebrow">Character folio</span><div class="folio-crest" aria-hidden="true">${ledgerEmblem()}</div>
 <h2>${esc(s.name || "Your character")}</h2>
 <p>${esc(sheetSpecies(R, s))} · ${esc(c.name)} ${legacyTag(R, legacyContext(R, s))}</p>
-<span class="profile-badge">${esc(c.levels[d.level - 1].name)} · ${d.status}</span>${button("summary-toggle", summaryExpanded ? "Hide details" : "View character", `aria-expanded="${summaryExpanded}" aria-controls="sheet-body"`, "summary-toggle")}</div>
+${s.career ? `<span class="profile-badge">${esc(c.levels[d.level - 1].name)} · ${d.status}</span>` : ""}${button("summary-toggle", summaryExpanded ? "Hide details" : "View character", `aria-expanded="${summaryExpanded}" aria-controls="sheet-body"`, "summary-toggle")}</div>
 <div class="mobile-totals">
 <span>
 <strong>${d.remaining.toLocaleString()}</strong> XP left</span>
