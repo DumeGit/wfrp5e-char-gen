@@ -80,7 +80,7 @@ try {
     if (saved.version !== 2) throw Error("Start a new WIP character.");
     const next = catalogForCharacter(library, saved);
     if (
-      !next.species[saved.species] ||
+      (saved.species !== "" && !next.species[saved.species]) ||
       (saved.career !== "" && !next.careers.some((c) => c.id === saved.career))
     )
       throw Error("Saved character options are unavailable.");
@@ -458,16 +458,18 @@ function render() {
   s.step = Math.max(0, Math.min(steps.length - 1, s.step));
   const body = setupOpen
       ? bookSetup(library, R)
-      : [
-          origins,
-          careerView,
-          characteristics,
-          skills,
-          talents,
-          gear,
-          experience,
-          review,
-        ][s.step](),
+      : !s.species && s.step !== 0
+        ? `<h1>Choose a Species first</h1><p class="muted">Your Species determines the available Careers, starting Characteristics and Species training.</p>${button("step", "Choose or roll a Species", 'data-step="0"', "primary")}`
+        : [
+            origins,
+            careerView,
+            characteristics,
+            skills,
+            talents,
+            gear,
+            experience,
+            review,
+          ][s.step](),
     ready =
       creationStepCount -
       new Set(
@@ -646,7 +648,7 @@ $("#app").addEventListener("change", async (e) => {
       next = catalogForCharacter(library, incoming);
     if (
       incoming.version !== 2 ||
-      !next.species[incoming.species] ||
+      (incoming.species !== "" && !next.species[incoming.species]) ||
       (incoming.career !== "" &&
         !next.careers.some((c) => c.id === incoming.career)) ||
       !Array.isArray(incoming.ledger) ||

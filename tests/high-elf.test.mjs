@@ -15,7 +15,7 @@ import {quoteRitual} from '../dist/winds-of-magic.mjs';
 import {elfOriginPanel,elfSkillsPanel,elfMagicShop,elfCareerPanel} from '../dist/high-elf-ui.mjs';
 const R=assembleBooks(library,['high-elf']);
 function character(career='high-elf:career:sea-guard',origin='high-elf:origin:eataine',catalog=R){
- const s=M.fresh();Object.assign(s,{version:2,books:bookSelection(catalog),rollTables:{},name:'High Elf verification',species:'High Elf',origin,career,xp:100000,wealth:{amount:1000,currency:'gold crowns'}});
+ const s=M.fresh();s.points=Array(10).fill(10);Object.assign(s,{version:2,books:bookSelection(catalog),rollTables:{},name:'High Elf verification',species:'High Elf',origin,career,xp:100000,wealth:{amount:1000,currency:'gold crowns'}});
  s.speciesSkills=M.speciesSkillSlots(catalog,s).slice(0,5).map(x=>x.key);
  for(const slot of M.careerSkillSlots(catalog,s,1).slice(0,8))s.careerSkills[slot.key]=1;
  s.freeTalent=M.careerTalentOptions(catalog,s).find(n=>!M.freeTalents(catalog,s).includes(n)&&!M.invalidTalent(catalog,s,n));

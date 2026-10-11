@@ -8,7 +8,7 @@ import {careerVariantPanel,switchCareerVariant} from '../dist/career-variants.mj
 
 const B=assembleBooks(library,['archives-iii','winds-of-magic']);
 test('Career variants appear only with their Career and parent book, outside the book picker',()=>{
- const s={...M.fresh(),career:'hedge-witch'};
+ const s={...M.fresh(),species:'Human',points:Array(10).fill(10),career:'hedge-witch'};
  assert.equal(careerVariantPanel(R,s),'');
  assert.equal(careerVariantPanel(B,{...s,career:'soldier'}),'');
  assert.match(careerVariantPanel(B,s),/Animal-doctor Hedge Witch/);
@@ -19,7 +19,7 @@ test('Career variants appear only with their Career and parent book, outside the
  assert.match(bookPanel(library,V,s),/3 selected books/);
 });
 test('Switching Career variants clears dependent choices, preserves creation rolls, and round trips saved sources',()=>{
- const s={...M.fresh(),version:2,books:bookSelection(B),career:'hedge-witch',name:'Test',origin:'',speciesSkills:['s-0'],randomTalents:['Strong Back'],talentChoices:{'species-0':'Doomed'},careerMode:'first',careerAttempts:1,careerOffers:['hedge-witch'],rolls:[{label:'Career',dice:'1d100',values:[18],total:18}],charMode:'first',charRolls:Array(10).fill(10),background:{eyes:'Brown'},careerSkills:{'c1-0':2},freeTalent:'Petty Magic',spells:['Open Lock'],spellLores:{'Open Lock':'Petty Magic'},gearChoices:{x:'old'},purchases:[{id:'old'}],wealth:{amount:10,currency:'silver shillings'}};
+ const s={...M.fresh(),species:'Human',points:Array(10).fill(10),version:2,books:bookSelection(B),career:'hedge-witch',name:'Test',origin:'',speciesSkills:['s-0'],randomTalents:['Strong Back'],talentChoices:{'species-0':'Doomed'},careerMode:'first',careerAttempts:1,careerOffers:['hedge-witch'],rolls:[{label:'Career',dice:'1d100',values:[18],total:18}],charMode:'first',charRolls:Array(10).fill(10),background:{eyes:'Brown'},careerSkills:{'c1-0':2},freeTalent:'Petty Magic',spells:['Open Lock'],spellLores:{'Open Lock':'Petty Magic'},gearChoices:{x:'old'},purchases:[{id:'old'}],wealth:{amount:10,currency:'silver shillings'}};
  s.skillChoices={'s-2':'Melee (Basic)','c1-0':'Channelling (Magick)'};s.boost={I:2};
  const original=structuredClone(s),V=switchCareerVariant(library,B,s,'archives-iii-hedge');
  for(const key of ['name','species','speciesSkills','randomTalents','talentChoices','careerMode','careerAttempts','careerOffers','rolls','charMode','charRolls','background'])assert.deepEqual(s[key],original[key],key);
@@ -34,7 +34,7 @@ test('Switching Career variants clears dependent choices, preserves creation rol
 });
 test('Unavailable or XP-locked variant changes fail without altering character',()=>{
  for(const [catalog,career,id,ledger] of [[R,'hedge-witch','archives-iii-hedge',[]],[B,'soldier','archives-iii-hedge',[]],[B,'hedge-witch','unknown',[]],[B,'hedge-witch','archives-iii-hedge',[{type:'skill',name:'Animal Care',cost:50}]]]){
-  const s={...M.fresh(),career,ledger,books:bookSelection(catalog)},before=structuredClone(s);
+  const s={...M.fresh(),species:'Human',points:Array(10).fill(10),career,ledger,books:bookSelection(catalog)},before=structuredClone(s);
   assert.throws(()=>switchCareerVariant(library,catalog,s,id),/unavailable|advancement/);assert.deepEqual(s,before);
  }
 });

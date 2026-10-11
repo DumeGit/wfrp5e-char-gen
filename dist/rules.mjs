@@ -131,7 +131,7 @@ export function fresh() {
     ambition: "",
     partyAmbition: "",
     notes: "",
-    species: "Human",
+    species: "",
     speciesMode: "choose",
     speciesAttempts: 0,
     career: "",
@@ -386,7 +386,7 @@ export function freeTalents(R, s, includeChart = true) {
   return includeChart ? [...grants, ...chartGrants(R, s, grants)] : grants;
 }
 export function initial(R, s) {
-  const sp = R.species[s.species],
+  const sp = creationSpecies(R, s),
     ts = freeTalents(R, s);
   return Object.fromEntries(
     KEYS.map((k, i) => [
@@ -415,7 +415,7 @@ export function freeSkills(R, s) {
   return out;
 }
 export function derive(R, s) {
-  const sp = R.species[s.species],
+  const sp = creationSpecies(R, s),
     c = career(R, s),
     stats = initial(R, s),
     charAdv = Object.fromEntries(KEYS.map((k) => [k, 0])),
@@ -1009,6 +1009,13 @@ export function validation(R, s, structured = false) {
   const e = [],
     sp = creationSpecies(R, s),
     c = career(R, s);
+  if (!R.species[s.species])
+    e.push(
+      issue("species.unavailable", "Choose or roll a Species.", 0, "#species", {
+        book: "core",
+        page: 23,
+      }),
+    );
   if (s.origin && !originProfile(R, s))
     e.push(
       issue(

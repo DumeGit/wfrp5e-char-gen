@@ -186,7 +186,7 @@ export function talentCalculation(R, name) {
 export function calculation(R, s, kind, name, result) {
   const d = result?.derived || M.derive(R, s),
     eq = result?.equipment || equipment(R, s),
-    sp = R.species[s.species];
+    sp = creationSpecies(R, s);
   if (kind === "char") {
     const i = M.KEYS.indexOf(name),
       rolled =

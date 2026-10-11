@@ -23,6 +23,7 @@ const gm = (name) => freshGM(data, `${B}:creatures:${name}`);
 const calc = (s) => calculateGM(data, rulesFor(s), s);
 function character(career, origin = "", species = "Human") {
   const s = M.fresh();
+  s.points = Array(10).fill(10);
   Object.assign(s, {
     career,
     origin,
@@ -112,7 +113,7 @@ test("source Career tables cover every face; optional Seafarer rolls do not chan
   const s = character("soldier");
   assert.deepEqual(
     randomTable(R, s, "career"),
-    randomTable(core, M.fresh(), "career"),
+    randomTable(core, { ...M.fresh(), species: "Human" }, "career"),
   );
   for (const table of R.tables.filter((t) => t.source.book === B)) {
     s.species = table.species;

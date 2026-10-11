@@ -20,7 +20,7 @@ const esc = (value) =>
       ],
   );
 export function speciesRulePanel(R, s) {
-  const text = R.species[s.species].mechanics?.gmApproval;
+  const text = R.species[s.species]?.mechanics?.gmApproval;
   return (
     (text
       ? `<div class="notice"><p>${esc(text)}</p>

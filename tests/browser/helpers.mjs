@@ -43,10 +43,11 @@ async function fixtures() {
   ]).then(([library, gm]) => ({ library, gm, R: assembleBooks(library) }));
   return content;
 }
-export async function pcDraft({ complete = false } = {}) {
+export async function pcDraft({ complete = false, species = "Human" } = {}) {
   const { R } = await fixtures();
   const s = {
     ...rules.fresh(),
+    species,
     version: 2,
     books: bookSelection(R),
     rollTables: {},

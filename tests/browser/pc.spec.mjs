@@ -7,6 +7,66 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("Origins starts without a Species, saves that state and supports choice and rolls @pc", async ({
+  page,
+}) => {
+  await openPC(page, { species: "" });
+  const species = page.getByLabel("Species", { exact: true });
+  await expect(species).toHaveValue("");
+  await expect(page.locator(".origin-resources")).toHaveCount(0);
+  await expect(page.locator(".sheet .stat-grid")).toHaveCount(0);
+  await page.reload();
+  await expect(species).toHaveValue("");
+  for (const step of [
+    "Career",
+    "Characteristics",
+    "Skills",
+    "Talents",
+    "Gear & money",
+    "Experience",
+    "Review",
+  ]) {
+    await pcStep(page, step);
+    await expect(
+      page.getByRole("heading", {
+        name: "Choose a Species first",
+        exact: true,
+      }),
+    ).toBeVisible();
+  }
+  await pcStep(page, "Origins");
+  await species.selectOption("Human");
+  await page.getByRole("button", { name: "Apply change", exact: true }).click();
+  await expect(species).toHaveValue("Human");
+  await expect(page.locator(".origin-resources")).toContainText(
+    "Starting Fate",
+  );
+  await pcStep(page, "Career");
+  await expect(
+    page.getByRole("heading", { name: "No Career selected", exact: true }),
+  ).toBeVisible();
+  await pcStep(page, "Origins");
+  await species.selectOption("");
+  await page.getByRole("button", { name: "Apply change", exact: true }).click();
+  await expect(species).toHaveValue("");
+  await page
+    .getByRole("button", { name: "Roll Species · d100", exact: true })
+    .click();
+  await expect(species).not.toHaveValue("");
+  await expect(
+    page.getByText("+1 Fortune · first roll accepted", { exact: true }),
+  ).toBeVisible();
+  const saved = JSON.parse(
+    await page.evaluate((key) => localStorage.getItem(key), PC_STORAGE),
+  );
+  expect(saved.species).not.toBe("");
+  expect(saved.speciesMode).toBe("first");
+  expect(saved.rolls.at(-1).label).toBe("Species");
+  await page.reload();
+  await expect(species).toHaveValue(saved.species);
+  await noOverflow(page);
+});
+
 test("point allocation starts blank, validates edits and survives reload/method changes @pc", async ({
   page,
 }) => {

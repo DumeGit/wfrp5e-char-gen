@@ -1,4 +1,20 @@
 import { dwarfBackground } from "./dwarf-guide.mjs";
+// Empty drafts have no Species grants; this is not a selectable game profile.
+const unselectedSpecies = {
+  offsets: Object.fromEntries(
+    ["WS", "BS", "S", "T", "I", "Ag", "Dex", "Int", "WP", "Fel"].map((k) => [
+      k,
+      0,
+    ]),
+  ),
+  fate: 0,
+  fortune: 0,
+  movement: 0,
+  languages: [],
+  skills: [],
+  talents: [],
+  randomTalents: 0,
+};
 // Regional creation profiles extend a Species without creating a new Species.
 export function originProfile(R, s) {
   return (
@@ -8,7 +24,7 @@ export function originProfile(R, s) {
   );
 }
 export function creationSpecies(R, s) {
-  const sp = R.species[s.species],
+  const sp = s.species === "" ? unselectedSpecies : R.species[s.species],
     o = originProfile(R, s);
   if (!o) return sp;
   const profile = {

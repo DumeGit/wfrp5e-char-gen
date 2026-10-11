@@ -13,7 +13,7 @@ import {exportSheet} from '../dist/export.mjs';
 
 const B=assembleBooks(library,['dwarf-guide']);
 export function dwarf(career='soldier',catalog=B,origin){
- const s=M.fresh();Object.assign(s,{version:2,books:bookSelection(catalog),name:'Dwarf verification',species:'Dwarf',career,xp:30000,wealth:{amount:100,currency:'gold crowns'},...(origin?{origin}:{})});
+ const s=M.fresh();s.points=Array(10).fill(10);Object.assign(s,{version:2,books:bookSelection(catalog),name:'Dwarf verification',species:'Dwarf',career,xp:30000,wealth:{amount:100,currency:'gold crowns'},...(origin?{origin}:{})});
  s.speciesSkills=M.speciesSkillSlots(catalog,s).filter(x=>!x.name.startsWith('Language (')).slice(0,5).map(x=>x.key);
  for(let i=0;i<creationSpecies(catalog,s).talents.length;i++)s.talentChoices[`species-${i}`]=M.speciesTalentOptions(catalog,s,i).find(x=>x!=='Ancestral Grudge')||M.speciesTalentOptions(catalog,s,i)[0];
  for(const slot of M.careerSkillSlots(catalog,s,1).slice(0,8))s.careerSkills[slot.key]=1;

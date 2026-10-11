@@ -16,7 +16,7 @@
 
 ## Agreed creator behavior
 
-- New Player drafts start with 0 base XP, no selected Career and blank Characteristic point allocations (null in the draft). Require ten whole-number allocations of 4–16 totaling 100; allow clearing a field, and preserve deliberate allocations when switching methods. Keep the empty-Career state usable and saveable, with no Career grants or Class kit; clear an unavailable Career after Species/origin changes rather than automatically choosing a replacement.
+- New Player drafts start with 0 base XP, no selected Species or Career and blank Characteristic point allocations (null in the draft). Require ten whole-number allocations of 4–16 totaling 100; allow clearing a field, and preserve deliberate allocations when switching methods. Keep empty Species/Career states usable and saveable; prompt for Species before showing dependent screens/resources. Keep the empty-Career state with no Career grants or Class kit; clear an unavailable Career after Species/origin changes rather than automatically choosing a replacement.
 
 - Guided choices with optional real random rolls; all supported Careers. Dice use crypto.getRandomValues with rejection sampling. Log die faces, sums, timestamps, sources and duplicate rerolls. Never claim imported history is verified randomness.
 - Exports include the editable supplied PDF sheet and a full creation/XP record, including overflow. XP purchase/undo and folio totals must agree. Fate and Fortune are separate.

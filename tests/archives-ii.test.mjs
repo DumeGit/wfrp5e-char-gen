@@ -17,7 +17,7 @@ import {speciesMagicReferences} from '../dist/species-mechanics.mjs';
 import {speciesRulePanel} from '../dist/archives-ui.mjs';
 const B=assembleBooks(library,['archives-ii']);
 export function ogre(career='archives-ii:career:maneater'){
- const s=M.fresh();Object.assign(s,{name:'Arabba Goldtooth',species:'Ogre',career,freeTalent:career.endsWith('maneater')?'Sturdy':career.endsWith('rhinox-herder')?'Marksman':'Petty Magic',speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'}});
+ const s=M.fresh();s.points=Array(10).fill(10);s.xp=1000;Object.assign(s,{name:'Arabba Goldtooth',species:'Ogre',career,freeTalent:career.endsWith('maneater')?'Sturdy':career.endsWith('rhinox-herder')?'Marksman':'Petty Magic',speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'}});
  return s;
 }
 function sign(s,n){const row=B.astrology.find(x=>n>=x.min&&n<=x.max);s.chart={enabled:true,sign:row.id,rolledSign:row.id,witchling:0,talent:'',ascendant:'',mansions:[]};return row;}

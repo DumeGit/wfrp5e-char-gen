@@ -12,7 +12,7 @@ import {folioData} from '../dist/folio.mjs';
 import {exportSheet} from '../dist/export.mjs';
 const B=assembleBooks(library,['archives-iii']);
 export function iiiPriest(career='priest',talent='Bless (Old Faith)'){
- const s=M.fresh();Object.assign(s,{name:'Archives III test priest',career,freeTalent:talent,randomTalents:['Read/Write','Cardsharp','Attractive','Strong Back'],speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'},xp:30000});return s;
+ const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);Object.assign(s,{name:'Archives III test priest',career,freeTalent:talent,randomTalents:['Read/Write','Cardsharp','Attractive','Strong Back'],speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'},xp:30000});return s;
 }
 export function oldFaithPriest(){
  const s=iiiPriest();s.spells=B.spells.filter(x=>x.category==='Blessing').slice(0,6).map(x=>x.name);

@@ -14,7 +14,7 @@ import {exportSheet} from '../dist/export.mjs';
 
 const on=assembleBooks(library,['up-in-arms']);
 function madeCareer(c,origin=''){
- const s=M.fresh();s.career=c.id;s.origin=origin;s.name='Luchinus Fabbro';
+ const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);s.xp=1000;s.career=c.id;s.origin=origin;s.name='Luchinus Fabbro';
  s.randomTalents=creationSpecies(on,s).randomTalents===3?['Read/Write','Attractive','Super Numerate']:['Read/Write','Attractive','Super Numerate','Cardsharp'];
  s.freeTalent=M.careerTalentOptions(on,s).find(t=>!M.freeTalents(on,s).includes(t)&&!M.invalidTalent(on,s,t));
  const used=new Set();for(const slot of M.speciesSkillSlots(on,s)){if(!used.has(slot.name)&&!creationSpecies(on,s).languages.includes(slot.name.slice(10,-1))){s.speciesSkills.push(slot.key);used.add(slot.name);}if(used.size===5)break;}

@@ -61,6 +61,9 @@ export function createFeature(getContext, setContext) {
   function origins() {
     let { R, s, library, select, button, ref, page, esc } = getContext();
 
+    const speciesChoice = `<div class="origin-species"><div class="field"><label for="species">Species</label>${select('id="species" data-bind="species"', Object.keys(R.species), s.species, true)}</div>${button("species-roll", "Roll · d100", 'aria-label="Roll Species · d100"', "primary")}</div>${tablePicker(R, s, "species")}`;
+    if (!s.species)
+      return `<section class="origins-editor"><span class="eyebrow">01 / Origins</span>${chapterHeading("Origins & identity")}${bookPanel(library, R)}${speciesChoice}<p class="notice">Choose or roll your Species to see its starting resources, regional origins, names and appearance options.</p></section>`;
     const sp = R.species[s.species],
       b = creationBackground(R, s),
       parts = nameParts(s),
@@ -75,7 +78,7 @@ export function createFeature(getContext, setContext) {
                 ? "Surname / clan name"
                 : "Surname";
     return `<section class="origins-editor"><span class="eyebrow">01 / Origins</span>${chapterHeading("Origins & identity")}${bookPanel(library, R)}
-<div class="origin-species"><div class="field"><label for="species">Species</label>${select('id="species" data-bind="species"', Object.keys(R.species), s.species)}</div>${button("species-roll", "Roll · d100", 'aria-label="Roll Species · d100"', "primary")}</div>${tablePicker(R, s, "species")}<p class="small muted">${s.speciesMode === "first" ? "+1 Fortune · first roll accepted" : s.speciesAttempts ? "Later roll / choice · no bonus" : "Chosen Species · no random bonus"}</p>
+${speciesChoice}<p class="small muted">${s.speciesMode === "first" ? "+1 Fortune · first roll accepted" : s.speciesAttempts ? "Later roll / choice · no bonus" : "Chosen Species · no random bonus"}</p>
 <div class="origin-resources"><span>Starting Fate <strong>${sp.fate}</strong></span><span>Fortune <strong>${sp.fortune}</strong></span><span>Movement <strong>${sp.movement}</strong></span>${ref(sp)}</div><details class="origin-roll-help" data-detail-key="origins:roll-bonuses"><summary>Random creation bonuses ${page("23, 40")}</summary><p class="small muted">Fate and Fortune are separate values. Accepting your first Species roll adds 1 Fortune. Accepting the first Species, Career and Characteristics rolls adds 1 Fate.</p></details>${speciesRulePanel(R, s)}${regionalOrigins()}${dwarfOriginPanel(R, s)}${elfOriginPanel(R, s)}<h2>Your name ${sourceButton(R, b)}</h2>${nameStylePanel(R, s, { select })}<p class="origin-help muted">Type, choose a book suggestion or roll.</p>
 <div class="cols">${originSuggestionField("First name", "forename", "forenames", parts.forename, true)}${originSuggestionField(surnameLabel, "surname", "surnames", parts.surname, true)}</div>
 <div class="identity-preview"><strong aria-live="polite">${esc(s.name || "Your character")}</strong>${button("suggest-name", b.nameElements ? "Roll given name & title" : "Roll full name")}</div>${nameElementPanel(R, s, { select, button })}<h2>Appearance ${sourceButton(R, R.background[s.species])}</h2>

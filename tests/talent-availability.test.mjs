@@ -26,7 +26,7 @@ test('an otherwise valid purchase still explains insufficient XP',()=>{
 
 test('level-two Priest Invoke matches Bless for every patron and rejects other deities',()=>{
  for(const god of R.config.gods){
-  const s=M.fresh();s.career='priest';s.freeTalent=`Bless (${god})`;s.xp=100000;
+  const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);s.career='priest';s.freeTalent=`Bless (${god})`;s.xp=100000;
   for(let i=0;i<10;i++)M.purchase(R,s,'char','Int');
   M.purchase(R,s,'promotion','');
   assert.equal(M.derive(R,s).level,2);
@@ -44,7 +44,7 @@ test('level-two Priest Invoke matches Bless for every patron and rejects other d
 });
 
 test('Bless also matches an already established Invoke patron',()=>{
- const s=M.fresh();s.career='priest';s.freeTalent='';s.ledger.push({type:'talent',name:'Invoke (Shallya)',cost:100,tick:true});
+ const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);s.career='priest';s.freeTalent='';s.ledger.push({type:'talent',name:'Invoke (Shallya)',cost:100,tick:true});
  assert.equal(M.invalidTalent(R,s,'Bless (Shallya)'),'');
  assert.match(M.invalidTalent(R,s,'Bless (Ulric)'),/Requires Bless \(Shallya\).*Invoke \(Shallya\)/);
 });

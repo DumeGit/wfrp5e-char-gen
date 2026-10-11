@@ -82,7 +82,7 @@ ${creatorSwitch("player", typeof location !== "undefined" && new URLSearchParams
 <div class="sheet-heading">
 <span class="eyebrow">Character folio</span><div class="folio-crest" aria-hidden="true">${ledgerEmblem()}</div>
 <h2>${esc(s.name || "Your character")}</h2>
-<p>${esc(sheetSpecies(R, s))} · ${esc(c.name)} ${legacyTag(R, legacyContext(R, s))}</p>
+<p>${esc(sheetSpecies(R, s) || "Choose a Species")}${s.species ? ` · ${esc(c.name)} ${legacyTag(R, legacyContext(R, s))}` : ""}</p>
 ${s.career ? `<span class="profile-badge">${esc(c.levels[d.level - 1].name)} · ${d.status}</span>` : ""}${button("summary-toggle", summaryExpanded ? "Hide details" : "View character", `aria-expanded="${summaryExpanded}" aria-controls="sheet-body"`, "summary-toggle")}</div>
 <div class="mobile-totals">
 <span>
@@ -91,28 +91,34 @@ ${s.career ? `<span class="profile-badge">${esc(c.levels[d.level - 1].name)} · 
 <strong>${s.wealth ? formatMoney(result().wallet.remaining) : "—"}</strong> coin</span>
 </div>
 <div id="sheet-body" class="sheet-body">
-<div class="stat-grid">${M.KEYS.map(
-      (
-        k,
-      ) => `<button type="button" class="stat-calculation ${characteristicClass(k)}" data-action="calculation" data-kind="char" data-name="${k}" title="${esc(characteristicNames[k] + ": " + characteristicTitle(k))}" aria-label="Calculate ${esc(characteristicNames[k])}">
+${
+  !s.species
+    ? '<p class="empty">Choose or roll a Species in Origins to begin.</p>'
+    : `<div class="stat-grid">${M.KEYS.map(
+        (
+          k,
+        ) => `<button type="button" class="stat-calculation ${characteristicClass(k)}" data-action="calculation" data-kind="char" data-name="${k}" title="${esc(characteristicNames[k] + ": " + characteristicTitle(k))}" aria-label="Calculate ${esc(characteristicNames[k])}">
 <small>${k}${c.advanceScheme[k] ? ` · L${c.advanceScheme[k]}` : ""}</small>
 <strong>${k === "Ag" && eq.penalties.complete ? eq.penalties.agility : d.stats[k]}</strong>
 </button>`,
-    ).join("")}</div>
+      ).join("")}</div>
 <div class="derived">${[
-      ["Wounds", d.wounds],
-      ["Movement", eq.penalties.complete ? eq.penalties.movement : d.movement],
-      ["Fate", d.fate],
-      ["Fortune", d.fortune],
-    ]
-      .map(
-        ([k, v]) =>
-          `<button type="button" class="derived-calculation" data-action="calculation" data-kind="derived" data-name="${k}">
+        ["Wounds", d.wounds],
+        [
+          "Movement",
+          eq.penalties.complete ? eq.penalties.movement : d.movement,
+        ],
+        ["Fate", d.fate],
+        ["Fortune", d.fortune],
+      ]
+        .map(
+          ([k, v]) =>
+            `<button type="button" class="derived-calculation" data-action="calculation" data-kind="derived" data-name="${k}">
 <span title="${k}">${k === "Movement" ? "Move" : k}</span>
 <strong>${v}</strong>
 </button>`,
-      )
-      .join("")}</div>
+        )
+        .join("")}</div>
 <div class="folio-balances">
 <div class="folio-xp">
 <span>XP remaining</span>
@@ -133,7 +139,8 @@ ${s.career ? `<span class="profile-badge">${esc(c.levels[d.level - 1].name)} · 
 <span>${eq.unknown.length ? "Known Enc / capacity" : "Enc / capacity"}</span>
 <strong>${eq.total} / ${d.capacity} <small>ⓘ</small>
 </strong>
-</button>${eq.penalties.complete && eq.penalties.band ? `<p class="packing-warning">${eq.penalties.immobile ? "Unable to move" : `Load: Move ${eq.penalties.movement}, Ag ${eq.penalties.agility}`} (p. 299)</p>` : ""}${folioMenus()}<div class="folio-status ${issues.length ? "pending" : "complete"}">
+</button>${eq.penalties.complete && eq.penalties.band ? `<p class="packing-warning">${eq.penalties.immobile ? "Unable to move" : `Load: Move ${eq.penalties.movement}, Ag ${eq.penalties.agility}`} (p. 299)</p>` : ""}${folioMenus()}`
+}<div class="folio-status ${issues.length ? "pending" : "complete"}">
 <span>${issues.length ? `${issues.length} choices remaining` : "✓ Creation complete"}</span>${issues.length ? button("issue", "Finish choices", `data-step="${issueTarget(R, s, issues[0]).step}" data-target="${esc(issueTarget(R, s, issues[0]).target)}"`) : button("step", "Review & export", `data-step="${reviewStep}"`)}</div>
 </div>
 </aside>

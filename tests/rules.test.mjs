@@ -1,8 +1,20 @@
 import {tableResult} from '../dist/books.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';
 import * as M from '../dist/rules.mjs';import {equipment} from '../dist/equipment.mjs';import {R,soldier,advancedSoldier} from './fixture.mjs';
+test('new drafts have no Species grants and a Species issue routed to Origins', () => {
+  const s = M.fresh(), d = M.derive(R, s);
+  assert.equal(s.species, '');
+  assert.deepEqual(M.speciesSkillSlots(R, s), []);
+  assert.deepEqual(M.freeTalents(R, s), []);
+  assert.deepEqual(M.freeSkills(R, s), {});
+  assert.equal(d.fate, 0);
+  assert.equal(d.fortune, 0);
+  assert.equal(d.movement, 0);
+  const problem = M.validation(R, s, true).find(x => x.code === 'species.unavailable');
+  assert.deepEqual(problem.control, { step: 0, target: '#species' });
+});
 test('point allocation starts blank and applies Species modifiers without roll bonuses', () => {
-  const s = M.fresh();
+  const s = { ...M.fresh(), species: 'Human' };
   assert.deepEqual(s.points, Array(10).fill(null));
   assert.equal(s.points.reduce((a, b) => a + b, 0), 0);
   s.points = [4, 16, 4, 16, 10, 10, 10, 10, 10, 10];

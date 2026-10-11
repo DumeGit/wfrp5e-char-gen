@@ -14,7 +14,7 @@ import {regionalCareer} from '../dist/regional-careers.mjs';
 
 const on=assembleBooks(library,['archives-i']);
 export function archivesCharacter(species,career,origin=''){
- const s=M.fresh();s.species=species;s.career=career;s.origin=origin;s.name='Archives QA';
+ const s=M.fresh();s.points=Array(10).fill(10);s.xp=1000;s.species=species;s.career=career;s.origin=origin;s.name='Archives QA';
  const sp=creationSpecies(on,s);s.randomTalents=['Attractive','Super Numerate','Cardsharp','Read/Write'].slice(0,sp.randomTalents);
  const used=new Set();for(const slot of M.speciesSkillSlots(on,s)){if(!used.has(slot.name)&&!sp.languages.includes(slot.name.slice(10,-1))){s.speciesSkills.push(slot.key);used.add(slot.name);}if(used.size===5)break;}
  let remaining=8;for(const slot of M.careerSkillSlots(on,s,1)){const room=Math.max(0,3-(M.freeSkills(on,s)[slot.name]||0)),n=Math.min(remaining,room);s.careerSkills[slot.key]=n;remaining-=n;if(!remaining)break;}

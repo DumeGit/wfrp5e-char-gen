@@ -18,7 +18,7 @@ import {gearSlots} from '../dist/equipment.mjs';
 
 const B=assembleBooks(library,['rough-nights']);
 export function gnome(career='soldier',catalog=B){
- const s=M.fresh();Object.assign(s,{version:2,books:bookSelection(catalog),rollTables:{},name:'Elowen Thorne',species:'Gnome',career,xp:30000,wealth:{amount:100,currency:'silver shillings'},speciesSkills:['s-1','s-2','s-3','s-5','s-6'],talentChoices:{'species-0':'Beneath Notice','species-1':'Mimic','species-3':'Fisherman','species-4':'Sixth Sense'}});
+ const s=M.fresh();s.points=Array(10).fill(10);Object.assign(s,{version:2,books:bookSelection(catalog),rollTables:{},name:'Elowen Thorne',species:'Gnome',career,xp:30000,wealth:{amount:100,currency:'silver shillings'},speciesSkills:['s-1','s-2','s-3','s-5','s-6'],talentChoices:{'species-0':'Beneath Notice','species-1':'Mimic','species-3':'Fisherman','species-4':'Sixth Sense'}});
  if(career==='wizard')s.college='Shadows';
  for(const slot of M.careerSkillSlots(catalog,s,1).slice(0,8))s.careerSkills[slot.key]=1;
  s.freeTalent=M.careerTalentOptions(catalog,s).find(t=>!M.freeTalents(catalog,{...s,freeTalent:''}).includes(t)&&!M.invalidTalent(catalog,{...s,freeTalent:''},t));

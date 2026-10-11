@@ -15,7 +15,7 @@ import {CAUSE_KEY,CAUSE_PLACEHOLDER,namedCause} from '../dist/talent-targets.mjs
 const B=assembleBooks(library,['deft-steps']);
 const source=(x)=>x.source.book==='deft-steps';
 function madeCareer(c){
- const s=M.fresh();s.books=bookSelection(B);s.career=c.id;s.name='Reviewed creation';
+ const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);s.xp=1000;s.books=bookSelection(B);s.career=c.id;s.name='Reviewed creation';
  s.randomTalents=['Read/Write','Attractive','Super Numerate','Cardsharp'];
  s.freeTalent=M.careerTalentOptions(B,s).find(t=>!M.freeTalents(B,s).includes(t)&&!M.invalidTalent(B,s,t));
  const used=new Set();for(const slot of M.speciesSkillSlots(B,s)){if(!used.has(slot.name)&&slot.name!=='Language (Reikspiel)'){s.speciesSkills.push(slot.key);used.add(slot.name);}if(used.size===5)break;}
@@ -41,7 +41,7 @@ test('source counts and unusual Career listings survive approved corrections',()
 });
 test('four printed Ranald alternatives retain the rolled Priest bonus without inventing probability',()=>{
  for(const c of B.careers.filter(c=>c.randomAlternativeFor==='priest')){
-  const s=M.fresh();s.career='priest';s.careerMode='first';s.careerAttempts=1;
+  const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);s.career='priest';s.careerMode='first';s.careerAttempts=1;
   assert.equal(regionalCareer(B,s,c.id).base,'priest');
  }
  assert.equal(B.careers.filter(c=>c.randomAlternativeFor==='priest').length,4);
@@ -66,7 +66,7 @@ test('Career-specific Miracle lists reject nonexistent, empty and duplicate refe
  }
 });
 test('Career variant switching removes siblings, preserves identity and grants no extra Advances',()=>{
- const s=M.fresh();s.career='priest';s.name='Preserved';s.boost.WP=2;
+ const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);s.career='priest';s.name='Preserved';s.boost.WP=2;
  let V=switchCareerVariant(library,B,s,'deft-steps-dealer');
  assert.equal(miracleChoices(V,'Ranald','priest').length,11);assert.equal(M.career(V,s).levels[0].skills.length,12);
  V=switchCareerVariant(library,V,s,'deft-steps-ranald-priest');
