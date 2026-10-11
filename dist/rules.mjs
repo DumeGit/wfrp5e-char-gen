@@ -162,7 +162,7 @@ export function fresh() {
     coinStorage: "carried",
     background: {},
     dooming: "",
-    xp: 1000,
+    xp: 0,
     advanceSize: 5,
     ledger: [],
     rolls: [],
