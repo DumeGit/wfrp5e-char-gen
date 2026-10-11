@@ -38,5 +38,30 @@
     ],
     "page": 163,
     "reason": "Printed new ranged group uses the existing core Ranged Skill rules."
+  },
+  {
+    "id": "lustria:rule:animal-training-npc-choices",
+    "path": [
+      "skillOptions",
+      "Animal Training"
+    ],
+    "operation": "include",
+    "value": [
+      "Reptile"
+    ],
+    "page": 139,
+    "reason": "Printed NPC specialisations use the shared core Skill definition."
+  },
+  {
+    "id": "lustria:rule:mathlann-miracles",
+    "path": [
+      "gods"
+    ],
+    "operation": "append",
+    "value": [
+      "Mathlann"
+    ],
+    "page": 81,
+    "reason": "Two printed Elven-priest Miracles. No Blessing list is printed; the explicit handler does not invent one."
   }
 ]

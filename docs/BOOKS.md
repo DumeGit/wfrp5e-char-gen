@@ -83,7 +83,7 @@ New Species must provide compatible starting data, background suggestions and an
 
 Unknown printed weights use `null`; unknown/variable prices are not offered as fixed-price shop purchases. Equipment profiles and capacity data feed the existing automatic creator packing. Record unresolved descriptive Trappings as text rather than guessing their contents.
 
-Lustria's initial pack is explicitly partial: four compatible Careers, equipment and one Shadows spell are available; Skink Species and GM foundations/templates await conversion decisions. Read [LUSTRIA.md](LUSTRIA.md) before expanding it. Do not infer approval from proposed conversions or enable a GM book switch without actual profiles/templates.
+Lustria adds four Careers, five weapons/six purchases, seven spells/prayers, 54 mechanical references (including five artillery entries with unresolved Skill groups) and 55 generic GM profiles plus six castes/nine stacking marks. Skinks remain NPC-only. See [LUSTRIA.md](LUSTRIA.md) for approved adaptations and exclusions. Explicit handlers preserve missing Mathlann Blessings, Slann Lore/Wind choices, independent sacred marks and unresolved Aquatic; duplicate High Elf definitions remain unchanged.
 
 ## Explicit variants
 

@@ -20,7 +20,17 @@
         "book": "lustria",
         "page": 163
       },
-      "reason": "Printed weapon profiles, prices, weights and quantities; Blowpipe group added. Existing duplicate profiles are not overwritten."
+      "reason": "Printed market options remain; duplicate profiles are not overwritten."
+    },
+    {
+      "id": "lustria:feature:lizardman-artillery",
+      "name": "Lizardman artillery",
+      "status": "reference-only",
+      "source": {
+        "book": "lustria",
+        "page": 178
+      },
+      "reason": "Five readable profiles. Ranged Skill groups and prices are omitted in the source; no mechanical groups or purchases are invented."
     },
     {
       "id": "lustria:feature:shroud-of-fog",
@@ -50,27 +60,27 @@
         "book": "lustria",
         "page": 160
       },
-      "reason": "Awaiting the user's Fifth Edition allocations, inherent-Trait and Fate/Fortune decisions; no invented starting values."
+      "reason": "User explicitly chose NPC-only Skinks; no PC Species, starting resources or Career table is introduced."
     },
     {
       "id": "lustria:feature:generic-creatures-and-caste-mark-templates",
       "name": "Generic creatures and caste/mark templates",
-      "status": "deferred",
+      "status": "adapted",
       "source": {
         "book": "lustria",
         "page": 139
       },
-      "reason": "Geometric source inventory extracted; publication awaits the user's requested Size, Trait and sacred-mark conversions."
+      "reason": "55 generic profiles, six castes and nine stacking sacred marks use the approved Size, Trait and Talent conversions. Named characters excluded."
     },
     {
       "id": "lustria:feature:high-magic-and-mathlann-prayers",
       "name": "High Magic and Mathlann prayers",
-      "status": "deferred",
+      "status": "adapted",
       "source": {
         "book": "lustria",
         "page": 127
       },
-      "reason": "Awaiting explicit duplicate-definition policy and distinct patron options; original prayers remain readable references."
+      "reason": "Four new High Magic spells and two distinct Elven-only Mathlann Miracles. Existing High Elf definitions remain; Slann choose explicit Lores/matching Winds."
     },
     {
       "id": "lustria:feature:lustrian-career-roll-table",

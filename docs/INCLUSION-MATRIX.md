@@ -10,7 +10,7 @@ Each source inventory remains visible even when another selected book supersedes
 |---|---:|
 | books | 19 |
 | careers | 139 |
-| magicProfiles | 590 |
+| magicProfiles | 596 |
 | rituals | 17 |
 | cants | 24 |
 | techniques | 10 |
@@ -45,7 +45,7 @@ Each source inventory remains visible even when another selected book supersedes
 | Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
 | Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
 | The Corsairs of Captain Flariel | 3 | 3 | 4 | 0 | 0 |
-| Lustria | 15 | 1 | 45 | 0 | 0 |
+| Lustria | 17 | 5 | 54 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -2916,26 +2916,27 @@ Pack `corsairs-flariel` · version 1.1.0
 
 ## Lustria
 
-Pack `lustria` · version 0.1.0
+Pack `lustria` · version 1.0.0
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | careers | 3 | 1 | 0 | 0 | 0 |
 | market | 6 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 45 | 0 | 0 |
-| spells | 1 | 0 | 0 | 0 | 0 |
+| referenceEntries | 0 | 0 | 54 | 0 | 0 |
+| spells | 3 | 4 | 0 | 0 | 0 |
 | weapons | 5 | 0 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
 | Curated mechanical references | reference-only | p. 186 | Disease/symptom procedures, weather, expedition actions and new Traits. No live disease, travel or combat automation. |
-| Five weapon profiles and six purchases | implemented | p. 163 | Printed weapon profiles, prices, weights and quantities; Blowpipe group added. Existing duplicate profiles are not overwritten. |
+| Five weapon profiles and six purchases | implemented | p. 163 | Printed market options remain; duplicate profiles are not overwritten. |
 | Four player Careers | implemented | p. 194 | Interpreter, Oracle, Survivalist and Trailblazer reuse core Skills/Talents and current advancement; no automatic core Career replacements. |
-| Generic creatures and caste/mark templates | deferred | p. 139 | Geometric source inventory extracted; publication awaits the user's requested Size, Trait and sacred-mark conversions. |
-| High Magic and Mathlann prayers | deferred | p. 127 | Awaiting explicit duplicate-definition policy and distinct patron options; original prayers remain readable references. |
+| Generic creatures and caste/mark templates | adapted | p. 139 | 55 generic profiles, six castes and nine stacking sacred marks use the approved Size, Trait and Talent conversions. Named characters excluded. |
+| High Magic and Mathlann prayers | adapted | p. 127 | Four new High Magic spells and two distinct Elven-only Mathlann Miracles. Existing High Elf definitions remain; Slann choose explicit Lores/matching Winds. |
+| Lizardman artillery | reference-only | p. 178 | Five readable profiles. Ranged Skill groups and prices are omitted in the source; no mechanical groups or purchases are invented. |
 | Lustrian Career roll table | unavailable | p. 192 | Multiple overlapping/missing ranges, including High Elf Sailor/Smuggler and Dwarf/Halfling Smuggler/Stevedore. Probabilities are not guessed. |
 | Named characters and campaign management | deferred | p. 210 | Named foundations, colony/ship managers, live play and adventure scenes remain outside creator scope. |
-| Playable Skinks and Chameleon Skinks | deferred | p. 160 | Awaiting the user's Fifth Edition allocations, inherent-Trait and Fate/Fortune decisions; no invented starting values. |
+| Playable Skinks and Chameleon Skinks | deferred | p. 160 | User explicitly chose NPC-only Skinks; no PC Species, starting resources or Career table is introduced. |
 | Shroud of Fog | implemented | p. 81 | Compatible new Shadows spell; situational effects are descriptive. |
 
 <details>
@@ -2946,6 +2947,8 @@ Pack `lustria` · version 0.1.0
 | `lustria:career:trailblazer` — Trailblazer | careers | adapted | p. 200 | Printed Strider (Any) uses current core Striding Gait (Any), with core movement/terrain effects. |
 | `lustria:reference:a-bit-of-a-beast` — A Bit of a Beast | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:all-is-well` — All is Well | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:apotheosis-lustria` — Apotheosis — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:arcane-unforging-lustria` — Arcane Unforging — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:bilious-ague` — Bilious Ague | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:blackwater-fever` — Blackwater Fever | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:bleeding-eyerot` — Bleeding Eyerot | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
@@ -2957,6 +2960,9 @@ Pack `lustria` · version 0.1.0
 | `lustria:reference:cloak-of-mathlann-mathlann-prayer` — Cloak of Mathlann — Mathlann prayer | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:contracting-thought-fog` — Contracting Thought Fog | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:disorientation` — Disorientation | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:drain-magic-lustria` — Drain Magic — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:engine-of-the-gods-burning-alignment` — Engine of the Gods’ Burning Alignment | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:engine-of-the-gods-power-of-the-ancients` — Engine of the Gods’ Power of the Ancients | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:exceptional-circumstances` — Exceptional Circumstances | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:find-shelter` — Find Shelter | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:flammable` — Flammable | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
@@ -2964,6 +2970,8 @@ Pack `lustria` · version 0.1.0
 | `lustria:reference:fungal-takeover` — Fungal Takeover | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:generating-an-oracle` — Generating an Oracle | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:ghyran-up-the-amaxon` — Ghyran up the Amaxon | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:giant-blowpipe` — Giant Blowpipe | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:giant-bow` — Giant Bow | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:grim-lustria` — Grim (Lustria) | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:keep-watch` — Keep Watch | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:lingering-vapours` — Lingering Vapours | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
@@ -2978,6 +2986,7 @@ Pack `lustria` · version 0.1.0
 | `lustria:reference:practise-a-skill` — Practise a Skill | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:rain-showers` — Rain Showers | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:repair-a-boat` — Repair a Boat | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:solar-engine-s-beam-of-chotec` — Solar Engine’s Beam of Chotec | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:stationary-attacker` — Stationary Attacker | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:stifling-humidity` — Stifling Humidity | referenceEntries | reference-only | p. 202 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:telepathy` — Telepathy | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
@@ -2986,9 +2995,14 @@ Pack `lustria` · version 0.1.0
 | `lustria:reference:travel-endeavours-and-fatigue` — Travel Endeavours and fatigue | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:tropical-storm` — Tropical Storm | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:volley` — Volley | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:walk-between-worlds-lustria` — Walk Between Worlds — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:warpdust-typhoons` — Warpdust Typhoons | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:waterlungs-mathlann-prayer` — Waterlungs — Mathlann prayer | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:yellow-skull-fever` — Yellow-Skull Fever | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:spell:earth-line` — Earth Line | spells | adapted | p. 129 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
+| `lustria:spell:mental-blast` — Mental Blast | spells | adapted | p. 129 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
+| `lustria:spell:ruination-of-cities` — Ruination of Cities | spells | adapted | p. 129 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
+| `lustria:spell:uproot-the-mountains` — Uproot the Mountains | spells | adapted | p. 128 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
 
 </details>
 

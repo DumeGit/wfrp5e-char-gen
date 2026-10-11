@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"8adf5de5e03fefe5747f";
+const CACHE=CACHE_PREFIX+"7e9831180f78aa878246";
 const ASSETS=[
  "app.js",
  "archives-iii-ui.mjs",
@@ -284,6 +284,7 @@ const ASSETS=[
  "gm/content.mjs",
  "gm/controls.mjs",
  "gm/data.json",
+ "gm/lustria.mjs",
  "gm/model.mjs",
  "gm/pdf-text.mjs",
  "gm/pdf.mjs",
@@ -298,6 +299,7 @@ const ASSETS=[
  "gm/sources/cluster-eye-tribe.json",
  "gm/sources/core.json",
  "gm/sources/corsairs-flariel.json",
+ "gm/sources/lustria.json",
  "gm/sources/night-parade.json",
  "gm/sources/sea-of-claws.json",
  "gm/sources/taverns-old-world.json",
@@ -320,6 +322,7 @@ const ASSETS=[
  "issues.mjs",
  "legacy-character.mjs",
  "legacy.mjs",
+ "lustria.mjs",
  "magic-browser.mjs",
  "manifest.webmanifest",
  "marijan.html",

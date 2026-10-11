@@ -1,0 +1,1047 @@
+[
+  {
+    "page": 57,
+    "name": "SERPENTS OF SOTEK",
+    "stats": {
+      "M": 3,
+      "WS": 45,
+      "BS": null,
+      "S": 30,
+      "T": 35,
+      "I": 70,
+      "Ag": 65,
+      "Dex": null,
+      "Int": 20,
+      "WP": 35,
+      "Fel": null,
+      "W": 45
+    },
+    "body": "Traits: Armour 2 (5), Bestial, Cold-Blooded, Size\n(Small), Swarm, Venom (Hard), Weapon +6"
+  },
+  {
+    "page": 58,
+    "name": "MALFORMED SAURUS SPAWN",
+    "stats": {
+      "M": 3,
+      "WS": 53,
+      "BS": null,
+      "S": 58,
+      "T": 55,
+      "I": 25,
+      "Ag": 35,
+      "Dex": 25,
+      "Int": 11,
+      "WP": 20,
+      "Fel": null,
+      "W": 17
+    },
+    "body": "Traits: Armour (Scales) 3 (8), Bestial, Cold-blooded,\nDisease (Yellow Skull Fever), Infected, Weapon +9"
+  },
+  {
+    "page": 89,
+    "name": "SWIFTFEATHER ROC",
+    "stats": {
+      "M": 2,
+      "WS": 45,
+      "BS": null,
+      "S": 40,
+      "T": 40,
+      "I": 50,
+      "Ag": 55,
+      "Dex": null,
+      "Int": 25,
+      "WP": 45,
+      "Fel": null,
+      "W": 32
+    },
+    "body": "Traits: Bestial, Bite +6, Flight 160, Night Vision, Size\n(Large), Weapon (Talons) +8\nOptional:  Frenzy, Trained (Broken, Drive, Magic,\nWar)\nChariots of the Asur: Only Swiftfeather Rocs willingly\npull a Skycutter chariot, and an Elf’s reflexes are\nrequired to fly one safely and effectively."
+  },
+  {
+    "page": 123,
+    "name": "SLANN OF THE FIFTH GENERATION",
+    "stats": {
+      "M": 4,
+      "WS": 45,
+      "BS": 35,
+      "S": 35,
+      "T": 55,
+      "I": 20,
+      "Ag": 15,
+      "Dex": 30,
+      "Int": 85,
+      "WP": 85,
+      "Fel": 30,
+      "W": 42
+    },
+    "body": "Traits: Cold-blooded, Size (Large), Spellcaster, Weapon\n(Claws) +5\nSkills: Channelling 105, Cool 105, Intuition 40,\nLanguage (Magick) 105, Lore (Chaos 95, History 135,\nLustria 105, Magic 105, Science 115, Warfare 105),\nMelee (Brawling) 55, Perception 50, Research 100\nTalents: Aethyric Attunement, Arcane Magic, Bookish,\nDetect Artefact, Fast Hands, High Magic, Instinctive\nDiction 2, Luck 2, Magical Sense, Petty Magic, Read/\nWrite, Savant (Magic), Second Sight, Sixth Sense,\nSpeedreader, Super Numerate, Tower of Memories, War\nWizard\nSlann Special Rules: Auger and Scryer, Contemplation,\nEmergency Teleportation, Palanquin, Telepathy"
+  },
+  {
+    "page": 123,
+    "name": "SLANN OF THE FOURTH GENERATION",
+    "stats": {
+      "M": 4,
+      "WS": 45,
+      "BS": 35,
+      "S": 35,
+      "T": 60,
+      "I": 15,
+      "Ag": 15,
+      "Dex": 30,
+      "Int": 95,
+      "WP": 95,
+      "Fel": 35,
+      "W": 48
+    },
+    "body": "Traits: Cold-blooded, Size (Large), Spellcaster, Weapon\n(Claws) +5\nSkills: Channelling 115, Cool 120, Intuition 40,\nLanguage (Magick) 120, Lore (Chaos 110, History 155,\nLustria 115, Magic 120, Science 130, Warfare 115),\nMelee (Brawling) 55, Perception 45, Research 115\nTalents: Aethyric Attunement 2, Arcane Magic,\nBookish, Detect Artefact, Fast Hands, High Magic,\nInstinctive Diction 3, Luck 3, Magical Sense, Petty\nMagic, Read/Write, Savant (Magic), Second Sight,\nSixth Sense, Speedreader, Super Numerate, Tower of\nMemories, War Wizard\nSlann Special Rules: Auger and Scryer, Contemplation,\nEmergency Teleportation, Master of Magical Mishaps,\nPalanquin, Telepathy"
+  },
+  {
+    "page": 124,
+    "name": "SLANN OF THE SECOND GENERATION",
+    "stats": {
+      "M": 4,
+      "WS": 40,
+      "BS": 35,
+      "S": 35,
+      "T": 65,
+      "I": 15,
+      "Ag": 10,
+      "Dex": 30,
+      "Int": 105,
+      "WP": 105,
+      "Fel": 35,
+      "W": 50
+    },
+    "body": "Traits: Cold-blooded, Size (Large), Spellcaster, Weapon\n(Claws) +5\nSkills: Channelling 135, Cool 140, Intuition 50,\nLanguage (Magick) 140, Lore (Chaos 130, History 180,\nLustria 130, Magic 140, Science 150, Warfare 140),\nMelee (Brawling) 45, Perception 35, Research 135\nTalents: Aethyric Attunement 3, Arcane Magic, Bookish\n2, Detect Artefact 2, Fast Hands, Hardy, High Magic,\nInstinctive Diction 4, Luck 5, Magical Sense, Petty\nMagic, Read/Write, Savant (Chaos, History, Magic),\nSecond Sight, Sixth Sense 2, Speedreader, Super\nNumerate, Tower of Memories, War Wizard\nSlann Special Rules: Auger and Scryer, Contemplation,\nEmergency Teleportation, Knack for Total Power, Master\nof Magical Mishaps, Palanquin, Telepathy"
+  },
+  {
+    "page": 124,
+    "name": "SLANN OF THE FIRST GENERATION",
+    "stats": {
+      "M": null,
+      "WS": 25,
+      "BS": null,
+      "S": 35,
+      "T": 65,
+      "I": 15,
+      "Ag": null,
+      "Dex": null,
+      "Int": 110,
+      "WP": 110,
+      "Fel": 35,
+      "W": 58
+    },
+    "body": "Traits: Cold-blooded, Ethereal, Flammable, Size\n(Large), Spellcaster\nSkills: Channelling 140, Cool 145, Intuition 50,\nLanguage (Magick) 145, Lore (Chaos 135, History 185,\nLustria 135, Magic 145, Science 155, Warfare 145),\nPerception 20, Research 140\nTalents: Aethyric Attunement 3, Arcane Magic,\nBookish 2, Detect Artefact 2, Fast Hands, Hardy, High\nMagic, Instinctive Diction 5, Luck 6, Magical Sense,\nPetty Magic, Read/Write, Savant (Chaos, History,\nMagic), Second Sight, Sixth Sense 2, Speedreader,\nSuper Numerate, Tower of Memories, War Wizard\nSlann Special Rules: Auger and Scryer, Contemplation,\nEmergency Teleportation, Knack for Total Power,\nMaster of Magical Mishaps, Palanquin, Relic Priest,\nTelepathy"
+  },
+  {
+    "page": 124,
+    "name": "SLANN OF THE THIRD GENERATION",
+    "stats": {
+      "M": 4,
+      "WS": 45,
+      "BS": 35,
+      "S": 35,
+      "T": 65,
+      "I": 15,
+      "Ag": 10,
+      "Dex": 30,
+      "Int": 100,
+      "WP": 100,
+      "Fel": 35,
+      "W": 50
+    },
+    "body": "Traits: Cold-blooded, Size (Large), Spellcaster,\nWeapon (Claws) +5\nSkills: Channelling 125, Cool 130, Intuition 45,\nLanguage (Magick) 130, Lore (Chaos 120, History 170,\nLustria 120, Magic 130, Science 140, Warfare 130),\nMelee (Brawling) 45, Perception 40, Research 125\nTalents: Aethyric Attunement 3, Arcane Magic,\nBookish 2, Detect Artefact 2, Fast Hands, High Magic,\nInstinctive Diction 4, Luck 4, Magical Sense, Petty\nMagic, Read/Write, Savant (Chaos, History, Magic),\nSecond Sight, Sixth Sense 2, Speedreader, Super\nNumerate, Tower of Memories, War Wizard\nSlann Special Rules: Auger and Scryer, Contemplation,\nEmergency Teleportation, Master of Magical Mishaps,\nPalanquin, Telepathy"
+  },
+  {
+    "page": 136,
+    "name": "SKINK",
+    "stats": {
+      "M": 6,
+      "WS": 20,
+      "BS": 35,
+      "S": 30,
+      "T": 25,
+      "I": 40,
+      "Ag": 40,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 25,
+      "Fel": 25,
+      "W": 6
+    },
+    "body": "Traits: Amphibious, Arboreal, Armour 2 (4), Cold-\nblooded, Night Vision, Size (Small), Weapon +7\nOptional: Champion, Stealthy, Swamp-strider\nSkills: Melee (Basic) 30, Ranged (Throwing) 45"
+  },
+  {
+    "page": 142,
+    "name": "CHAMELEON SKINK",
+    "stats": {
+      "M": 6,
+      "WS": 20,
+      "BS": 45,
+      "S": 30,
+      "T": 25,
+      "I": 40,
+      "Ag": 45,
+      "Dex": 30,
+      "Int": 30,
+      "WP": 25,
+      "Fel": 20,
+      "W": 6
+    },
+    "body": "Traits: Acute Sense (Sight), Amphibious, Arboreal,\nArmour 2 (4), Blowpipe +1 (20), Chameleon, Cold-\nblooded, Night Vision, Size (Small), Stealthy\nOptional: Champion, Clever, Swamp-strider, Tracker,\nWallcrawler\nSkills: Dodge 50, Ranged (Blowpipe) 55, Stealth\n(Rural) 55"
+  },
+  {
+    "page": 143,
+    "name": "SAURUS",
+    "stats": {
+      "M": 4,
+      "WS": 35,
+      "BS": 5,
+      "S": 45,
+      "T": 45,
+      "I": 15,
+      "Ag": 20,
+      "Dex": 18,
+      "Int": 25,
+      "WP": 65,
+      "Fel": 20,
+      "W": 18
+    },
+    "body": "Traits: Armour 3 (7), Bite +4, Cold-blooded, Night\nVision, Tail Attack +7, Weapon +8\nOptional: Belligerent, Swamp-strider\nSkills: Melee (Basic 50, Polearm 50)"
+  },
+  {
+    "page": 145,
+    "name": "SAURUS TEMPLE GUARD",
+    "stats": {
+      "M": 4,
+      "WS": 45,
+      "BS": 5,
+      "S": 45,
+      "T": 45,
+      "I": 25,
+      "Ag": 20,
+      "Dex": 18,
+      "Int": 25,
+      "WP": 65,
+      "Fel": 20,
+      "W": 18
+    },
+    "body": "Traits: Armour 4 (8), Bite +4, Cold-blooded, Night\nVision, Tail Attack +7, Weapon +8\nSkills: Melee (Basic 65, Polearm 65)\nTalents: Combate Aware, Combat Master, Drilled,\nShieldsman"
+  },
+  {
+    "page": 148,
+    "name": "KROXIGOR",
+    "stats": {
+      "M": 6,
+      "WS": 30,
+      "BS": 5,
+      "S": 45,
+      "T": 45,
+      "I": 15,
+      "Ag": 20,
+      "Dex": 20,
+      "Int": 20,
+      "WP": 30,
+      "Fel": 15,
+      "W": 30
+    },
+    "body": "Traits: Amphibious, Armour 4 (8), Bite +5, Cold-\nblooded, Grim 1, Night Vision, Size (Large), Stupid,\nTail Attack +7, Weapon +10\nSkills: Endurance 55, Melee (Two Handed) 40\nOptional: Arboreal, Bestial, Distracting, Hungry,\nPainless, Swamp-strider"
+  },
+  {
+    "page": 153,
+    "name": "COATL",
+    "stats": {
+      "M": 2,
+      "WS": 51,
+      "BS": null,
+      "S": 35,
+      "T": 55,
+      "I": 35,
+      "Ag": 20,
+      "Dex": null,
+      "Int": 75,
+      "WP": 85,
+      "Fel": 20,
+      "W": 42
+    },
+    "body": "Traits: Arboreal, Armour 4 (9), Bite +10, Cold-\nblooded, Flight 90, Grim 1, Magical, Night Vision, Size\n(Large), Spellcaster (Heavens, Life, Light), Telepathy,\nTerritorial, Terror 1, Ward 8+\nOptional: Constrictor, Horns +6, Size (Enormous),\nSpellcaster (Aqshy, Chamon, Ghur, Shyish or Ulgu),\nStealthy, Venom"
+  },
+  {
+    "page": 167,
+    "name": "BLOOD HUNGRY SPORE CLOUD",
+    "stats": {
+      "M": null,
+      "WS": null,
+      "BS": null,
+      "S": null,
+      "T": 45,
+      "I": null,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Disease (Fungal Takeover), Size (Tiny),\nStationary Attacker\nBlood Hungry Spore Cloud: When disturbed by the\nmovement of Human-sized or larger warm-blooded\ncreatures occurring within one yard, the Bloated Pink\nPolypore emits a cloud of pale spores which cover an\narea with a 5-yard radius, 3 yards in height. The cloud\npersists for 2d10 Rounds. Any warm-blooded creature\ncaught in this cloud must make a Difficult (–10)\nEndurance Test or suffer 1 Bleeding Condition."
+  },
+  {
+    "page": 167,
+    "name": "IMPALING SPIKETHORN",
+    "stats": {
+      "M": null,
+      "WS": 33,
+      "BS": null,
+      "S": 40,
+      "T": 30,
+      "I": 60,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": null,
+      "W": 10
+    },
+    "body": "Traits: Flammable, Painless, Size (Average), Stationary\nAttacker\nAttack Traits: Weapon (Spines) +8\nOptional: Size (Large)\nImpale Attack: Attacks from the Impaling Spikethorn\nalways target the legs of its opponent, without suffering\nthe usual -20 penalty for called shots. They ignore\nleather armour and possess the Impale Weapon Quality."
+  },
+  {
+    "page": 167,
+    "name": "VYPERVINE",
+    "stats": {
+      "M": null,
+      "WS": 33,
+      "BS": null,
+      "S": 32,
+      "T": 31,
+      "I": 60,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": null,
+      "Fel": null,
+      "W": 9
+    },
+    "body": "Traits: Flammable, Painless, Size (Average), Stationary\nAttacker, Venom (Difficult)\nAttack Traits: Weapon (Spines) +4\nOptional: Size (Small or Large)"
+  },
+  {
+    "page": 167,
+    "name": "GRASPING CREEPER VINE",
+    "stats": {
+      "M": null,
+      "WS": 33,
+      "BS": null,
+      "S": 31,
+      "T": 33,
+      "I": 60,
+      "Ag": null,
+      "Dex": null,
+      "Int": null,
+      "WP": 20,
+      "Fel": null,
+      "W": 22
+    },
+    "body": "Traits: Constrictor, Flammable, Painless, Size (Large),\nStationary Attacker\nAttack Traits: Weapon (Vines) +5\nOptional: Size (Little to Average)\nEntangled Attack: Grasping Creeper Vine only attacks\nwarm-blooded creatures. It may not use its Weapon\nattack against targets until it has inflicted an Entangled\nCondition upon them.  Once the vine subjects its prey\nto an Entangled Condition, it strikes them once per turn\nwith its Weapon attack until they break free or die."
+  },
+  {
+    "page": 168,
+    "name": "ITXI GRUB",
+    "stats": {
+      "M": 1,
+      "WS": 31,
+      "BS": null,
+      "S": 5,
+      "T": 22,
+      "I": 10,
+      "Ag": 12,
+      "Dex": null,
+      "Int": 3,
+      "WP": 10,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Bestial, Cold-blooded, Magical, Size (Tiny),\nWallcrawler\nAttack Traits: Weapon (Mandibles) +2\nMagical Snack: Itxi Grubs are edible (though they\nare an aquired taste). A spellcaster who consumes\nan Itxi Grub benefits from +1 SL to all Casting and\nChannelling Tests for the following 3d10 Rounds. This\neffect is not cumulative."
+  },
+  {
+    "page": 168,
+    "name": "FIRELEECH",
+    "stats": {
+      "M": 1,
+      "WS": 32,
+      "BS": null,
+      "S": 23,
+      "T": 21,
+      "I": 30,
+      "Ag": 22,
+      "Dex": null,
+      "Int": 3,
+      "WP": 14,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Amphibious, Bestial, Cold-blooded, Painless,\nSize (Tiny), Swamp Strider\nAttack Traits: Weapon (Raspy Teeth) +4\nOptional: Swarm\nPosterior Flame: The Fireleech will resort to producing\nflames if it is subjected to stress such as being roughly\nhandled, or suddenly disturbed by a warm-blooded\ncreature. The Fireleech will produce a gout of flame\nthat persists for 1d10 Rounds. During this time, any\ncharacter or flammable item that is in contact with the\nFireleech receives an Ablaze Condition.\nUse as Ammunition: Cold-blooded creatures may\nhandle Fireleeches by passing a Very Easy (+60) Animal\nCare Test, and warm-blooded creatures by passing a\nHard (–20) Animal Care Test. Up to six Fireleeches\ncan be stored in a damp leather pouch where, provided\nthey are not jostled too badly, they will remain docile for\n24 hours. A Character could throw a Fireleech or use it\nas ammunition for a sling. A second Animal Care Test\nmust be passed to prepare the Fireleech. If this Test\nis failed, the Character trying to use the Fireleech as\nammunition receives an Ablaze Condition. If the Test is\nsuccessful, the Fireleech may be thrown or shot."
+  },
+  {
+    "page": 168,
+    "name": "BRAINFLUKE",
+    "stats": {
+      "M": 1,
+      "WS": 25,
+      "BS": null,
+      "S": 20,
+      "T": 32,
+      "I": 10,
+      "Ag": 12,
+      "Dex": null,
+      "Int": 5,
+      "WP": 10,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Aquatic, Bestial, Cold-blooded, Size (Tiny)\nAttack Traits: Weapon (Teeth) +3\nOptional: Swarm\nBrain Rot: If a Brainfluke should ever inflict a Critical\nHit upon the head of a warm-blooded opponent, then\nin addition to any Damage it inflicts, the Brainfluke\nburrows into the victim’s cranium and they contract the\nBrain Rot disease (see page 186)."
+  },
+  {
+    "page": 169,
+    "name": "PALLID BLINDWYRM",
+    "stats": {
+      "M": null,
+      "WS": 33,
+      "BS": null,
+      "S": 42,
+      "T": 25,
+      "I": 60,
+      "Ag": 12,
+      "Dex": null,
+      "Int": 3,
+      "WP": 10,
+      "Fel": null,
+      "W": 5
+    },
+    "body": "Traits: Bestial, Cold-blooded, Infected (Blindwyrm\nFits), Size (Small), Stationary Attacker\nAttack Traits: Weapon (Jaws) +6\nOptional: Painless, Size (Little)"
+  },
+  {
+    "page": 169,
+    "name": "CARRION ANT",
+    "stats": {
+      "M": 3,
+      "WS": 30,
+      "BS": null,
+      "S": 26,
+      "T": 26,
+      "I": 32,
+      "Ag": 34,
+      "Dex": null,
+      "Int": 6,
+      "WP": 12,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Size (Tiny),\nVenom (Average)\nAttack Traits: Bite +3, Weapon (Stinging Tail) +3\nOptional: Hungry, Swarm"
+  },
+  {
+    "page": 169,
+    "name": "BLOODWASP",
+    "stats": {
+      "M": 3,
+      "WS": 31,
+      "BS": null,
+      "S": 31,
+      "T": 24,
+      "I": 33,
+      "Ag": 32,
+      "Dex": null,
+      "Int": 12,
+      "WP": 18,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Flight 40,\nPainless, Size (Tiny), Venom (Hard)\nAttack Traits: Weapon (Sting) +5\nOptional: Belligerent, Swarm\nExcruciating Sting: A Bloodwasp sting is notoriously\npainful. As long as the victim of a Bloodwasp sting\nsuffers from any associated Poisoned Condition, they\nmust struggle to ignore the terrible agony of the sting.\nThey must pass a Difficult (–10) Cool Test at the\nbeginning of their Turn. If the Test is failed, they\nreceive a Stunned Condition."
+  },
+  {
+    "page": 169,
+    "name": "HUNTIPEDE",
+    "stats": {
+      "M": 4,
+      "WS": 33,
+      "BS": null,
+      "S": 33,
+      "T": 33,
+      "I": 32,
+      "Ag": 30,
+      "Dex": null,
+      "Int": 8,
+      "WP": 14,
+      "Fel": null,
+      "W": 7
+    },
+    "body": "Traits: Arboreal, Armour 1 (4), Bestial, Cold-blooded,\nPainless, Size (Small), Stealthy, Venom (Difficult),\nWallcrawler\nAttack Traits: Bite +4, Weapon (Fangs) +5"
+  },
+  {
+    "page": 169,
+    "name": "BLOODMAGGOT",
+    "stats": {
+      "M": 1,
+      "WS": 23,
+      "BS": null,
+      "S": 32,
+      "T": 24,
+      "I": 32,
+      "Ag": 18,
+      "Dex": null,
+      "Int": 3,
+      "WP": 10,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Painless, Size\n(Tiny), Wallcrawler\nAttack Traits: Weapon (Proboscis) +4\nOptional: Infected, Swarm"
+  },
+  {
+    "page": 170,
+    "name": "LUSTRIAN TREEFROG",
+    "stats": {
+      "M": 3,
+      "WS": 18,
+      "BS": null,
+      "S": 18,
+      "T": 18,
+      "I": 30,
+      "Ag": 33,
+      "Dex": null,
+      "Int": 10,
+      "WP": 16,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Amphibious, Arboreal, Bestial, Bounce, Cold-\nblooded, Size (Tiny), Venom (Very Hard), Wallcrawler\nAttack Traits: Weapon (Claws) +2"
+  },
+  {
+    "page": 170,
+    "name": "BLOT TOAD",
+    "stats": {
+      "M": 3,
+      "WS": 33,
+      "BS": null,
+      "S": 34,
+      "T": 32,
+      "I": 31,
+      "Ag": 33,
+      "Dex": null,
+      "Int": 12,
+      "WP": 32,
+      "Fel": null,
+      "W": 9
+    },
+    "body": "Traits: Amphibious, Arboreal, Bestial, Bounce, Cold-\nblooded, Distracting, Size (Small), Swamp-strider\nAttack Traits: Weapon (Teeth) +4\nOdour Attack: When harassed, these repulsive creatures\nare known to emit a noxious odour that spreads around\nthe Toad to a distance of 1d10 yards. Any cold-\nblooded creature caught within the area must make a\nChallenging (+0) Endurance Test. Those who fail suffer\nfrom the Nausea Disease Symptom (WFRP, page 189)\nfor 1d10 hours. Warm-blooded creatures notice a bad\nsmell, but do not suffer from the symptom."
+  },
+  {
+    "page": 171,
+    "name": "PIRANHA LIZARD",
+    "stats": {
+      "M": 4,
+      "WS": 38,
+      "BS": null,
+      "S": 36,
+      "T": 33,
+      "I": 33,
+      "Ag": 35,
+      "Dex": null,
+      "Int": 16,
+      "WP": 26,
+      "Fel": null,
+      "W": 11
+    },
+    "body": "Traits: Amphibious, Bestial, Cold-blooded, Size\n(Average), Stealthy, Swamp-strider, Tracker\nAttack Traits: Tail Attack +4, Weapon (Teeth) +5\nOptional: Frenzy, Hungry"
+  },
+  {
+    "page": 171,
+    "name": "SCALEMANE REPTILION",
+    "stats": {
+      "M": 5,
+      "WS": 37,
+      "BS": null,
+      "S": 36,
+      "T": 38,
+      "I": 35,
+      "Ag": 32,
+      "Dex": null,
+      "Int": 16,
+      "WP": 30,
+      "Fel": null,
+      "W": 24
+    },
+    "body": "Traits: Armour 1 (4), Bestial, Cold-blooded, Hungry,\nSize (Large), Stealthy, Tracker, Venom (Hard)\nAttack Traits: Tail Attack +4, Weapon (Teeth) +6\nVenomous Bite: The poisonous bite of a Scalemane\nReptilion is particularly potent. Opponents affected by\nits Venom Trait take two Poisoned Conditions rather\nthan the usual one."
+  },
+  {
+    "page": 171,
+    "name": "HYENADON",
+    "stats": {
+      "M": 4,
+      "WS": 35,
+      "BS": null,
+      "S": 33,
+      "T": 32,
+      "I": 31,
+      "Ag": 32,
+      "Dex": null,
+      "Int": 14,
+      "WP": 30,
+      "Fel": null,
+      "W": 12
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Frenzy,\nInfected, Size (Average), Tracker\nAttack Traits: Armour 3 (6), Tail Attack +4, Weapon\n(Teeth) +7"
+  },
+  {
+    "page": 171,
+    "name": "TIGUANA",
+    "stats": {
+      "M": 5,
+      "WS": 26,
+      "BS": 40,
+      "S": 24,
+      "T": 22,
+      "I": 28,
+      "Ag": 33,
+      "Dex": null,
+      "Int": 10,
+      "WP": 24,
+      "Fel": null,
+      "W": 6
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Night Vision,\nSize (Small), Skittish, Tracker, Wallcrawler\nAttack Traits: Tongue Attack +3 (5), Weapon (Bite) +3\nOptional: Trained (Guard)"
+  },
+  {
+    "page": 172,
+    "name": "BLUE-RINGED ASP",
+    "stats": {
+      "M": 3,
+      "WS": 40,
+      "BS": null,
+      "S": 32,
+      "T": 25,
+      "I": 25,
+      "Ag": 40,
+      "Dex": null,
+      "Int": 10,
+      "WP": 25,
+      "Fel": null,
+      "W": 6
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Size (Small),\nTracker, Venom (Difficult)\nAttack Traits: Weapon (Bite) +5\nOptional: Swarm\nVenomous Bite: Opponents affected by its Venom\nTrait take a Bleeding Condition as well as a Poisoned\nCondition. The Bleeding Condition lasts until the\nPoisoned Condition is resolved."
+  },
+  {
+    "page": 172,
+    "name": "BORER SNAKE",
+    "stats": {
+      "M": 5,
+      "WS": 33,
+      "BS": null,
+      "S": 28,
+      "T": 22,
+      "I": 22,
+      "Ag": 31,
+      "Dex": null,
+      "Int": 10,
+      "WP": 20,
+      "Fel": null,
+      "W": 2
+    },
+    "body": "Traits: Arboreal, Bestial, Cold-blooded, Hungry, Size\n(Little), Stealthy\nAttack Traits: Weapon (Bite) +4\nBoring Attack: Attacks from Borer Snakes count as\nhaving the Damaging and Impale Qualities."
+  },
+  {
+    "page": 172,
+    "name": "AMAXON SWAMP PYTHON",
+    "stats": {
+      "M": 3,
+      "WS": 45,
+      "BS": null,
+      "S": 65,
+      "T": 58,
+      "I": 33,
+      "Ag": 40,
+      "Dex": null,
+      "Int": 24,
+      "WP": 52,
+      "Fel": null,
+      "W": 84
+    },
+    "body": "Traits: Amphibious, Armour 2 (7), Bestial, Cold-\nblooded, Constrictor, Fear 2, Grim 2, Size (Enormous),\nTracker\nAttack Traits: Weapon (Bite) +10\nOptional: Size (Average, Large, or Monstrous)"
+  },
+  {
+    "page": 173,
+    "name": "GIANT BAT",
+    "stats": {
+      "M": 1,
+      "WS": 33,
+      "BS": null,
+      "S": 36,
+      "T": 32,
+      "I": 30,
+      "Ag": 34,
+      "Dex": null,
+      "Int": 14,
+      "WP": 24,
+      "Fel": null,
+      "W": 8
+    },
+    "body": "Traits: Bestial, Dark Vision, Size (Small), Tracker\nAttack Traits: Weapon (Teeth) +5\nOptional: Hungry, Infected, Stealthy, Swarm"
+  },
+  {
+    "page": 173,
+    "name": "BLOOD BAT",
+    "stats": {
+      "M": 3,
+      "WS": 33,
+      "BS": null,
+      "S": 22,
+      "T": 22,
+      "I": 32,
+      "Ag": 34,
+      "Dex": null,
+      "Int": 14,
+      "WP": 24,
+      "Fel": null,
+      "W": 1
+    },
+    "body": "Traits: Bestial, Dark Vision, Disease (Cataleptic Ague),\nFlight 80, Size (Tiny), Stealthy, Tracker, Wallcrawler\nAttack Traits: Weapon (Fangs) +4\nOptional: Infected"
+  },
+  {
+    "page": 173,
+    "name": "CULCHAN",
+    "stats": {
+      "M": 8,
+      "WS": 45,
+      "BS": null,
+      "S": 55,
+      "T": 45,
+      "I": 45,
+      "Ag": 52,
+      "Dex": null,
+      "Int": 14,
+      "WP": 38,
+      "Fel": 10,
+      "W": 32
+    },
+    "body": "Traits: Bestial, Fear 1, Grim 1, Size (Large), Stride,\nTracker\nAttack Traits: Bite +9, Weapon (Claws) +8\nOptional: Hungry, Territorial, Trained (Guard,\nMount)"
+  },
+  {
+    "page": 173,
+    "name": "JAGUAR",
+    "stats": {
+      "M": 8,
+      "WS": 55,
+      "BS": null,
+      "S": 43,
+      "T": 35,
+      "I": 50,
+      "Ag": 60,
+      "Dex": null,
+      "Int": 15,
+      "WP": 30,
+      "Fel": 5,
+      "W": 26
+    },
+    "body": "Traits: Armour 1 (4), Bestial, Grim 1, Night Vision,\nSize (Large), Stride, Stealthy, Tracker\nAttack Traits: Bite +6, Weapon (Claws) +6\nOptional: Amphibious, Arboreal, Swamp-strider,\nTerritorial, Trained (Guard)"
+  },
+  {
+    "page": 174,
+    "name": "COLD ONE",
+    "stats": {
+      "M": 7,
+      "WS": 42,
+      "BS": null,
+      "S": 42,
+      "T": 45,
+      "I": 25,
+      "Ag": 30,
+      "Dex": null,
+      "Int": 15,
+      "WP": 35,
+      "Fel": null,
+      "W": 30
+    },
+    "body": "Traits: Armour 2 (6), Bestial, Cold-blooded, Size\n(Large), Stride\nAttack Traits: Bite +8, Weapon (Claws) +8\nOptional: Arboreal, Belligerent, Stealthy, Stupid,\nSwamp-strider, Trained (Broken, Guard, Mount, War)"
+  },
+  {
+    "page": 175,
+    "name": "HORNED ONE",
+    "stats": {
+      "M": 8,
+      "WS": 42,
+      "BS": null,
+      "S": 42,
+      "T": 45,
+      "I": 25,
+      "Ag": 30,
+      "Dex": null,
+      "Int": 15,
+      "WP": 35,
+      "Fel": null,
+      "W": 30
+    },
+    "body": "Traits: Armour 2 (6), Bestial, Cold-blooded, Grim 1,\nSize (Large), Stride, Territorial, Tracker\nAttack Traits: Bite +8, Horns +9, Weapon (Claws) +8\nOptional: Arboreal, Belligerent, Stealthy, Stupid,\nSwamp-strider, Trained (Broken, Guard, Mount, War)"
+  },
+  {
+    "page": 175,
+    "name": "RAZORDON",
+    "stats": {
+      "M": 6,
+      "WS": 40,
+      "BS": 45,
+      "S": 41,
+      "T": 43,
+      "I": 22,
+      "Ag": 24,
+      "Dex": null,
+      "Int": 14,
+      "WP": 32,
+      "Fel": null,
+      "W": 30
+    },
+    "body": "Traits: Armour 2 (6), Bestial, Cold-blooded, Grim 1,\nSize (Large), Swamp-strider\nAttack Traits: Bite +5, Ranged +8 (30), Weapon\n(Spines) +6\nShooting Spine Attack: Whether on the hunt or being\nprodded by Skinks during combat, Razordons can shoot\ntheir spines either singularly or en masse. It takes a day\nfor the spines to regenerate.\nOptional: Amphibious, Infected, Stealthy, Tracker,\nTrained (War)"
+  },
+  {
+    "page": 175,
+    "name": "SALAMANDER",
+    "stats": {
+      "M": 6,
+      "WS": 43,
+      "BS": 48,
+      "S": 44,
+      "T": 46,
+      "I": 28,
+      "Ag": 26,
+      "Dex": null,
+      "Int": 14,
+      "WP": 32,
+      "Fel": null,
+      "W": 30
+    },
+    "body": "Traits: Amphibious, Armour 2 (6), Bestial, Breath +12\n(Fire), Cold-blooded, Grim 1, Size (Large), Swamp-\nstrider\nAttack Traits: Bite +6, Weapon (Claws) +6\nOptional: Infected, Stealthy, Tracker, Trained (War)"
+  },
+  {
+    "page": 176,
+    "name": "RIPPERDACTYL",
+    "stats": {
+      "M": 2,
+      "WS": 45,
+      "BS": null,
+      "S": 38,
+      "T": 36,
+      "I": 33,
+      "Ag": 44,
+      "Dex": null,
+      "Int": 12,
+      "WP": 36,
+      "Fel": null,
+      "W": 24
+    },
+    "body": "Traits: Acute Sense (Vision: as Character Talent),\nBestial, Cold-blooded, Fear 1, Flight 100, Hatred (Blot\nToads), Size (Large)\nAttack Traits: Tail Attack +3, Weapon (Teeth) +4\nOptional: Belligerent, Trained (Mount, War)"
+  },
+  {
+    "page": 176,
+    "name": "TERRADON",
+    "stats": {
+      "M": 2,
+      "WS": 45,
+      "BS": null,
+      "S": 42,
+      "T": 38,
+      "I": 36,
+      "Ag": 42,
+      "Dex": null,
+      "Int": 12,
+      "WP": 38,
+      "Fel": null,
+      "W": 26
+    },
+    "body": "Traits:  Acute Sense (Vision: as Character Talent),\nBestial, Cold-blooded, Fear 1, Flight 100, Size (Large)\nAttack Traits: Bite +5, Claws +6, Weapon (Teeth) +5\nOptional: Trained (Mount, War)"
+  },
+  {
+    "page": 177,
+    "name": "STEGADON",
+    "stats": {
+      "M": 6,
+      "WS": 35,
+      "BS": null,
+      "S": 56,
+      "T": 65,
+      "I": 21,
+      "Ag": 15,
+      "Dex": null,
+      "Int": 18,
+      "WP": 35,
+      "Fel": 10,
+      "W": 80
+    },
+    "body": "Traits: Armour 6 (12), Bestial, Cold-blooded, Grim 2,\nImmunity to Psychology, Night Vision, Painless, Size\n(Enormous), Swamp-strider\nAttack Traits: Bite +9, Horns +9, Tail Attack +11,\nWeapon (Trampling Feet) +10\nUnstoppable Charge: A Stegadon gains +3 Advantage\nwhen they charge.\nOptional: Size (Monstrous), Territorial, Trained"
+  },
+  {
+    "page": 178,
+    "name": "ARCANADON",
+    "stats": {
+      "M": 6,
+      "WS": 25,
+      "BS": null,
+      "S": 55,
+      "T": 65,
+      "I": 15,
+      "Ag": 15,
+      "Dex": null,
+      "Int": 15,
+      "WP": 55,
+      "Fel": 10,
+      "W": 88
+    },
+    "body": "Traits: Arboreal, Armour 4 (10), Bestial, Cold-blooded,\nGrim 2, Immunity to Psychology, Night Vision,\nPainless, Size (Enormous), Swamp-strider\nAttack Traits: Bite +5, Weapons (Horns) +8\nOptional: Trained (Mount, War)"
+  },
+  {
+    "page": 178,
+    "name": "BASTILADON",
+    "stats": {
+      "M": 4,
+      "WS": 31,
+      "BS": null,
+      "S": 45,
+      "T": 55,
+      "I": 14,
+      "Ag": 14,
+      "Dex": null,
+      "Int": 10,
+      "WP": 62,
+      "Fel": null,
+      "W": 80
+    },
+    "body": "Traits: Armour 8 (13), Bestial, Cold-blooded, Grim 2,\nImmunity to Psychology, Night Vision, Painless, Size\n(Enormous)\nAttack Traits: Bite +8, Tail Attack +9, Weapon\n(Shoulder Spikes) +8\nOptional: Size (Monstrous), Trained (Mount, War)"
+  },
+  {
+    "page": 179,
+    "name": "PLIODON",
+    "stats": {
+      "M": 5,
+      "WS": 48,
+      "BS": null,
+      "S": 58,
+      "T": 68,
+      "I": 15,
+      "Ag": 17,
+      "Dex": null,
+      "Int": 22,
+      "WP": 58,
+      "Fel": null,
+      "W": 88
+    },
+    "body": "Traits: Amphibious, Armour 4 (10), Bestial, Cold-\nblooded, Grim 2, Immunity to Psychology, Night\nVision, Painless, Size (Enormous)\nAttack Traits: Bite +8, Tail Attack +7, Weapon\n(Claws) +7\nRamming Attack: Pliodons are known to sink\nriver boats (perceived as a sort of rival predator) by\nramming them repeatedly until the vessels take on\nwater. Healthy Pliodons start with a Collision Rating\nof 14 when determining the results of this attack\nmode.\nOptional: Frenzy, Stealthy, Trained (Mount)"
+  },
+  {
+    "page": 180,
+    "name": "CARNOSAUR",
+    "stats": {
+      "M": 7,
+      "WS": 65,
+      "BS": null,
+      "S": 75,
+      "T": 55,
+      "I": 20,
+      "Ag": 20,
+      "Dex": null,
+      "Int": 25,
+      "WP": 55,
+      "Fel": null,
+      "W": 88
+    },
+    "body": "Traits: Armour 4 (9), Belligerent, Bestial, Cold-\nblooded, Grim 2, Night Vision, Size (Enormous), Stride\nAttack Traits: Bite +13, Tail Attack +11, Weapon\n(Claws) +11\nBlood Frenzy: Once a Carnosaur causes a Wound in\ncombat, it immediately becomes Frenzied until all foes\nin range of its senses are slain.\nOptional: Arboreal, Champion, Painless, Size\n(Monstrous), Trained (Guard, Mount, War), Tracker"
+  },
+  {
+    "page": 180,
+    "name": "TROGLODON",
+    "stats": {
+      "M": 7,
+      "WS": 62,
+      "BS": 15,
+      "S": 72,
+      "T": 54,
+      "I": 24,
+      "Ag": 25,
+      "Dex": null,
+      "Int": 22,
+      "WP": 56,
+      "Fel": null,
+      "W": 88
+    },
+    "body": "Traits: Acute Sense (Hearing: as Character Talent), \nArmour 4 (9), Bestial, Fear 1, Grim 2, Immunity \nto Psychology, Painless, Size (Enormous), Tracker, \nVenomous (Hard)\nAttack Traits: Bite +11, Weapon (Claws) +11\nToxic Bile: Troglodons can project an acidic toxic bile up \nto 15 yards. The victim’s bile-caused wounds make a loud, \nsizzling sound as it burns, inflicting an Ablaze Condition \non any Charcter hit by the bile).\nOptional: Stealthy, Territorial, Trained (Mount, War)"
+  },
+  {
+    "page": 181,
+    "name": "DREAD SAURIAN",
+    "stats": {
+      "M": 7,
+      "WS": 45,
+      "BS": null,
+      "S": 85,
+      "T": 75,
+      "I": 35,
+      "Ag": 25,
+      "Dex": null,
+      "Int": 15,
+      "WP": 30,
+      "Fel": null,
+      "W": 200
+    },
+    "body": "Traits: Armour 5 (12), Belligerent, Bestial, Cold-\nblooded, Fear 2, Grim 3, Hunger, Night Vision,\nPainless, Size (Monstrous), Stride, Tracker\nAttack Traits: Bite +14, Tail Attack +12, Weapon\n(Claws) +12\nFearsome Roar: The Dread Saurian’s roar requires\nother Enormous- or Monstrous-Sized predators to\npass a Difficult (–10) Cool Test.  If failed, the affected\ncreatures suffer from Fear and must depart the area\nimmediately. Prey or other smaller creatures must pass a\nHard (–20) Cool Test to avoid fleeing in Fear.\nOptional: Trained (Mount, War)"
+  },
+  {
+    "page": 182,
+    "name": "SAVAGE ORC",
+    "stats": {
+      "M": 4,
+      "WS": 35,
+      "BS": 30,
+      "S": 35,
+      "T": 45,
+      "I": 20,
+      "Ag": 25,
+      "Dex": 20,
+      "Int": 25,
+      "WP": 35,
+      "Fel": 20,
+      "W": 14
+    },
+    "body": "Traits: Animosity (Greenskins), Armour 1 (5),\nBelligerent, Die Hard, Frenzy, Infected, Night Vision,\nWard 10\nAttack Traits:  Weapon (Stone Axe) +7\nOptional: Painless, Ranged +6 (50)"
+  },
+  {
+    "page": 182,
+    "name": "SAVAGE ORC SHAMAN",
+    "stats": {
+      "M": 4,
+      "WS": 35,
+      "BS": 30,
+      "S": 35,
+      "T": 50,
+      "I": 35,
+      "Ag": 25,
+      "Dex": 30,
+      "Int": 40,
+      "WP": 50,
+      "Fel": 20,
+      "W": 18
+    },
+    "body": "Traits: Animosity (Greenskins), Belligerent, Die Hard,\nFrenzy, Infected, Night Vision, Ward 10\nAttack Traits: Weapon (Stone Axe) +7\nOptional: Painless, Ranged +6 (50)\nSkills: Channelling (Petty, WAAAGH!) 55, Cool 65,\nDodge 35, Entertain (Storytelling) 55, Intuition 50,\nLanguage (Magick) 50, Lore (Magic) 50, Melee (Basic)\n45, Perception 55\nTalents: Arcane Magic (WAAAGH!), Petty Magic,\nSecond Sight"
+  },
+  {
+    "page": 182,
+    "name": "SAVAGE ORC CHIEF",
+    "stats": {
+      "M": 4,
+      "WS": 60,
+      "BS": 40,
+      "S": 50,
+      "T": 60,
+      "I": 45,
+      "Ag": 45,
+      "Dex": 20,
+      "Int": 35,
+      "WP": 60,
+      "Fel": 30,
+      "W": 23
+    },
+    "body": "Traits: Animosity (Greenskins), Armour 1 (7),\nBelligerent, Die Hard, Frenzy, Infected, Night Vision,\nWard 10\nAttack Traits: Weapon (Stone Axe) +9\nOptional: Painless, Ranged +8 (50)\nSkills: Cool 75, Dodge 60, Intimidate 65, Intuition 60,\nLeadership 45, Lore (Warfare) 45, Melee (Basic) 80,\nPerception 55\nTalents: Combat Aware, Combat Reflexes, Feint,\nInspiring, Resolute, Warleader"
+  }
+]

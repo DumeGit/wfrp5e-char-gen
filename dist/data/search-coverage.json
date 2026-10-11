@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3989,
-  "newlyImported": 1326,
+  "references": 4006,
+  "newlyImported": 1335,
   "retainedOutsideSearch": 178,
   "removedNonMechanicalRules": 112,
   "books": [
@@ -12,15 +12,15 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1924,
+      "references": 1926,
       "newlyImported": 224,
       "retainedOutsideSearch": 0,
-      "existingReferences": 1700,
+      "existingReferences": 1702,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
-        "skill": 290,
-        "talent": 437,
+        "skill": 291,
+        "talent": 438,
         "magic": 225,
         "equipment": 254,
         "condition": 13,
@@ -1882,25 +1882,25 @@
     {
       "id": "lustria",
       "title": "Lustria",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "edition": 4,
       "sourceHash": "8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844",
-      "references": 56,
-      "newlyImported": 45,
+      "references": 71,
+      "newlyImported": 54,
       "retainedOutsideSearch": 0,
-      "existingReferences": 11,
-      "adaptedReferences": 1,
+      "existingReferences": 17,
+      "adaptedReferences": 5,
       "categories": {
         "career": 4,
-        "magic": 3,
-        "equipment": 6,
+        "magic": 13,
+        "equipment": 11,
         "property": 1,
         "rule": 35,
         "table": 2,
         "trait": 5
       },
       "dispositions": {
-        "included": 45,
+        "included": 54,
         "excluded": 3
       },
       "rulesAudit": null,
@@ -1914,6 +1914,11 @@
           "first": 151,
           "last": 166,
           "topic": "New Traits and weapon/armour rules"
+        },
+        {
+          "first": 178,
+          "last": 178,
+          "topic": "Lizardman artillery reference profiles"
         },
         {
           "first": 186,

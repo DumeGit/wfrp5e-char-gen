@@ -10,7 +10,7 @@
   "activeCounts": {
     "books": 19,
     "careers": 139,
-    "magicProfiles": 590,
+    "magicProfiles": 596,
     "rituals": 17,
     "cants": 24,
     "techniques": 10,
@@ -44404,21 +44404,21 @@
     {
       "id": "lustria",
       "title": "Lustria",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "kind": "supplement",
       "recordCounts": {
-        "implemented": 15,
-        "adapted": 1,
-        "reference-only": 45,
+        "implemented": 17,
+        "adapted": 5,
+        "reference-only": 54,
         "unavailable": 0,
         "deferred": 0
       },
       "featureCounts": {
         "implemented": 3,
-        "adapted": 0,
-        "reference-only": 1,
+        "adapted": 2,
+        "reference-only": 2,
         "unavailable": 1,
-        "deferred": 4
+        "deferred": 2
       },
       "kinds": {
         "careers": {
@@ -44438,13 +44438,13 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 45,
+          "reference-only": 54,
           "unavailable": 0,
           "deferred": 0
         },
         "spells": {
-          "implemented": 1,
-          "adapted": 0,
+          "implemented": 3,
+          "adapted": 4,
           "reference-only": 0,
           "unavailable": 0,
           "deferred": 0
@@ -44591,6 +44591,28 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "lustria:reference:apotheosis-lustria",
+          "kind": "referenceEntries",
+          "name": "Apotheosis — Lustria version",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 128
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:arcane-unforging-lustria",
+          "kind": "referenceEntries",
+          "name": "Arcane Unforging — Lustria version",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 128
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "lustria:reference:bilious-ague",
           "kind": "referenceEntries",
           "name": "Bilious Ague",
@@ -44712,6 +44734,39 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "lustria:reference:drain-magic-lustria",
+          "kind": "referenceEntries",
+          "name": "Drain Magic — Lustria version",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 128
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:engine-of-the-gods-burning-alignment",
+          "kind": "referenceEntries",
+          "name": "Engine of the Gods’ Burning Alignment",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:engine-of-the-gods-power-of-the-ancients",
+          "kind": "referenceEntries",
+          "name": "Engine of the Gods’ Power of the Ancients",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "lustria:reference:exceptional-circumstances",
           "kind": "referenceEntries",
           "name": "Exceptional Circumstances",
@@ -44785,6 +44840,28 @@
           "source": {
             "book": "lustria",
             "page": 191
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:giant-blowpipe",
+          "kind": "referenceEntries",
+          "name": "Giant Blowpipe",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "lustria:reference:giant-bow",
+          "kind": "referenceEntries",
+          "name": "Giant Bow",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 178
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -44943,6 +45020,17 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "lustria:reference:solar-engine-s-beam-of-chotec",
+          "kind": "referenceEntries",
+          "name": "Solar Engine’s Beam of Chotec",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "lustria:reference:stationary-attacker",
           "kind": "referenceEntries",
           "name": "Stationary Attacker",
@@ -45031,6 +45119,17 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "lustria:reference:walk-between-worlds-lustria",
+          "kind": "referenceEntries",
+          "name": "Walk Between Worlds — Lustria version",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 128
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "lustria:reference:warpdust-typhoons",
           "kind": "referenceEntries",
           "name": "Warpdust Typhoons",
@@ -45064,9 +45163,75 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "lustria:spell:cloak-of-mathlann-mathlann",
+          "kind": "spells",
+          "name": "Cloak of Mathlann (Mathlann)",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 81
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:spell:earth-line",
+          "kind": "spells",
+          "name": "Earth Line",
+          "status": "adapted",
+          "source": {
+            "book": "lustria",
+            "page": 129
+          },
+          "reason": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+        },
+        {
+          "contentId": "lustria:spell:mental-blast",
+          "kind": "spells",
+          "name": "Mental Blast",
+          "status": "adapted",
+          "source": {
+            "book": "lustria",
+            "page": 129
+          },
+          "reason": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+        },
+        {
+          "contentId": "lustria:spell:ruination-of-cities",
+          "kind": "spells",
+          "name": "Ruination of Cities",
+          "status": "adapted",
+          "source": {
+            "book": "lustria",
+            "page": 129
+          },
+          "reason": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+        },
+        {
           "contentId": "lustria:spell:shroud-of-fog",
           "kind": "spells",
           "name": "Shroud of Fog",
+          "status": "implemented",
+          "source": {
+            "book": "lustria",
+            "page": 81
+          },
+          "reason": "Creator profile/choice is supported; situational play effects remain reference text."
+        },
+        {
+          "contentId": "lustria:spell:uproot-the-mountains",
+          "kind": "spells",
+          "name": "Uproot the Mountains",
+          "status": "adapted",
+          "source": {
+            "book": "lustria",
+            "page": 128
+          },
+          "reason": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+        },
+        {
+          "contentId": "lustria:spell:waterlungs-mathlann",
+          "kind": "spells",
+          "name": "Waterlungs (Mathlann)",
           "status": "implemented",
           "source": {
             "book": "lustria",
@@ -45149,7 +45314,7 @@
             "book": "lustria",
             "page": 163
           },
-          "reason": "Printed weapon profiles, prices, weights and quantities; Blowpipe group added. Existing duplicate profiles are not overwritten."
+          "reason": "Printed market options remain; duplicate profiles are not overwritten."
         },
         {
           "id": "lustria:feature:four-player-careers",
@@ -45164,22 +45329,32 @@
         {
           "id": "lustria:feature:generic-creatures-and-caste-mark-templates",
           "name": "Generic creatures and caste/mark templates",
-          "status": "deferred",
+          "status": "adapted",
           "source": {
             "book": "lustria",
             "page": 139
           },
-          "reason": "Geometric source inventory extracted; publication awaits the user's requested Size, Trait and sacred-mark conversions."
+          "reason": "55 generic profiles, six castes and nine stacking sacred marks use the approved Size, Trait and Talent conversions. Named characters excluded."
         },
         {
           "id": "lustria:feature:high-magic-and-mathlann-prayers",
           "name": "High Magic and Mathlann prayers",
-          "status": "deferred",
+          "status": "adapted",
           "source": {
             "book": "lustria",
             "page": 127
           },
-          "reason": "Awaiting explicit duplicate-definition policy and distinct patron options; original prayers remain readable references."
+          "reason": "Four new High Magic spells and two distinct Elven-only Mathlann Miracles. Existing High Elf definitions remain; Slann choose explicit Lores/matching Winds."
+        },
+        {
+          "id": "lustria:feature:lizardman-artillery",
+          "name": "Lizardman artillery",
+          "status": "reference-only",
+          "source": {
+            "book": "lustria",
+            "page": 178
+          },
+          "reason": "Five readable profiles. Ranged Skill groups and prices are omitted in the source; no mechanical groups or purchases are invented."
         },
         {
           "id": "lustria:feature:lustrian-career-roll-table",
@@ -45209,7 +45384,7 @@
             "book": "lustria",
             "page": 160
           },
-          "reason": "Awaiting the user's Fifth Edition allocations, inherent-Trait and Fate/Fortune decisions; no invented starting values."
+          "reason": "User explicitly chose NPC-only Skinks; no PC Species, starting resources or Career table is introduced."
         },
         {
           "id": "lustria:feature:shroud-of-fog",

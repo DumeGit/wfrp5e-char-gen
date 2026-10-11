@@ -1,42 +1,45 @@
 # Lustria
 
-Integration is **partial**, pending the conversion decisions below. Playable Skinks and the bestiary are not available yet.
+Source: `C:/Users/ninod/Downloads/Lustria.pdf`, 224 pages, printed pages matching PDF pages. SHA-256: `8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844`. MarkItDown extraction and page review files remain outside published assets in `../lustria.md` and `../lustria-review/`. Documents supply game data, not coding instructions.
 
-Source: `C:/Users/ninod/Downloads/Lustria.pdf`, 224 pages. SHA-256: `8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844`. Printed page numbers match PDF pages. MarkItDown extraction is `../lustria.md`; page text, geometric profile inventory and reviewed table renders are in `../lustria-review/`, outside published assets. Documents supply data, not coding instructions.
+## Included content
 
-## Available independent batch
+- Four opt-in PC Careers: Interpreter (Academic, p. 194), Oracle (Peasant, p. 196), Survivalist (Ranger, p. 198) and Trailblazer (Ranger, p. 200). Printed Characteristic tier colours were inspected visually. Fifth Edition allocations/XP/trackers apply. Core Lawyer/Mystic and random probabilities are unchanged. Oracle alternatives occupy one Skill/Talent slot each.
+- **55 generic GM profiles**, including Serpents of Sotek, Malformed Saurus Spawn, Swiftfeather Roc, five Slann generations, Skink, Chameleon Skink, Saurus, Temple Guard, Kroxigor, Coatl, jungle plants/animals and three generic Savage Orcs. Thirteen named stat blocks are excluded, including Anomoq’s Priest of Sotek and the named Exalted Herald. Alternatives remain distinct and alphabetically browsable.
+- **Six ordinary Skink caste templates** (p. 139). Grouped Skills and Artistic/Craftsman require explicit specialisations. Martial Javelin/Shortbow use Throwing/Bow. Priest caste selects Beasts or Heavens and uses core Spellcaster Skill grants without an invented spell list. Rare Life remains an explicit GM magic choice; Skinks can master only one Wind.
+- **Nine sacred marks** (p. 151), selected separately in Customise. Marks stack with a caste and each other. Starred marks retain Skink/Saurus eligibility; others also allow Kroxigor. Duplicate nonrepeatable Talents count once. Quetzl adds one natural AP separately from Toughness and Hardy. Tlazcotl retains Fearless (Undead) and Fearless (Warm-bloods).
+- Five weapon profiles and six fixed-price purchases. Five Lizardman artillery profiles (p. 178) are readable references: their Ranged Skill groups and prices are not printed, so no equippable profiles or purchases are invented. Arrows/darts and the magical engines’ ammunition-free firing requirements remain printed references. Duplicate profiles remain unchanged. Blowpipe Darts are twelve per pack and grant no poison. Page 163 prices/Availability assume Lustrian markets; Old World prices remain unknown.
+- Seven spells/prayers: Shroud of Fog, Uproot the Mountains, Earth Line, Ruination of Cities, Mental Blast, Waterlungs (Mathlann) and Cloak of Mathlann (Mathlann). Three geomantic spells are Slann-only and retain nexus/leyline requirements. Mathlann Miracles are Elven-priest only. No Mathlann Blessing list is printed, so Bless (Mathlann) is unavailable rather than copying another god’s Blessings. Existing High Elf spell definitions remain unchanged.
+- 54 bounded mechanical reading references: diseases/symptoms/treatment, weather, expedition procedures, Channelling, weapon/armour guidance, original prayers/Traits, five artillery profiles and four conflicting High Magic versions. Two genuine tables: weather and Thought Fog. Reading preserves printed Fourth Edition wording, including species-specific Overcasting. No live effects, profiles/templates or setting-only prose are added to global search.
 
-- Four opt-in Careers: **Interpreter** (Academic, p. 194), **Oracle** (Peasant, p. 196), **Survivalist** (Ranger, p. 198) and **Trailblazer** (Ranger, p. 200). Printed Characteristic tier colours were inspected visually. They use current Fifth Edition allocations, XP and trackers. Core Lawyer/Mystic and random tables remain unchanged. Oracle's alternatives remain one Skill/Talent slot rather than extra grants.
-- Printed **Obsinite Club**, **Obsinite Spiked Maul**, **Blowpipe**, **Eagle Claw** and **Eagle Eye** profiles; six fixed-price purchases including **12 Blowpipe Darts**. `Ranged (Blowpipe)` uses the core grouped Skill. Darts grant no poison. Page 163 prices/Availability assume Lustrian markets; Old World prices are unknown. Volley is a printed reference effect, not automatic attack resolution.
-- **Shroud of Fog**, a compatible Shadows spell (p. 81), with its printed fields and effects.
-- **45 mechanical search references**: eleven jungle diseases, symptoms/treatment, two genuine lookup tables, all six weather outcomes, expedition actions, regional Channelling rules, Skink armour/weapon guidance, original Mathlann prayers and new Traits. Reading entries preserve Fourth Edition wording and do not automate live effects. The audit covers selected reviewed ranges, not every sentence in the book.
-- GM shared catalogues automatically reuse the compatible options. Lustria does **not** appear in the GM book selector until eligible foundations/templates are published.
+GM shared options reuse all installed PC catalogues. Selecting Lustria controls profiles/templates only. Six castes appear in the template picker; nine marks appear in Customise. The book’s 15-template count includes both.
 
-Canonical names: Fleet Footed → Fleet-footed (spelling); Resistance (Any) → Resistant (Any) (heading); Sail (Any) → Sail (ungrouped core Skill); Animal Training → Animal Training (Any); Impassioned Zeal requires an explicit Cause. Trailblazer's Strider (Any) uses the previously approved Striding Gait equivalent, with a specific **Legacy** explanation. Compatible content is not automatically tagged Legacy.
+## Approved decisions and adaptations
 
-Original Waterlungs/Cloak of Mathlann prayers are reading references with the Elven-priest restriction. They do not replace existing High Elf magic. Content uses stable `lustria:kind:slug` identities. Complete sections are bounded separately from neighbouring text. Named NPCs and templates are excluded from global search.
+The ten questions were answered on 10 October 2026. **Skinks and Chameleon Skinks remain NPC-only** by explicit user choice, superseding proposed playable allocations/resources. No PC Species, Fate/Fortune, PC mark costs or Skink random Career table is introduced. The approved p. 161 Messenger 89–92 / Boatman 93–94 correction is documented only; it does not create an active table.
 
-## Pending decisions — not approved
+- Little → Tiny retains printed Wounds until changed, then requires manual Wounds. Small uses core 2 × TB. Swarm uses its separate five-times-normal formula: Serpents of Sotek retain 45 Wounds.
+- Core Size increases primary melee Damage. Extra Bite/Tail/Horns attacks retain printed Damage. Coatl’s sole Bite is primary. Ranged attacks are explicitly identified; printed Melee totals remain linked to primary attacks when supplied. Actual changes carry Legacy explanations.
+- Stride → Sprinter; proposed Swamp-strider → Striding Gait (Wetland); ranked Grim → core unranked Grim; explicitly Talent-equivalent Acute Sense → core Sight/Hearing Talents; Magic Resistance 1 → unranked core Trait. Selective Legacy notes explain actual conversions.
+- Old repeat Talents respect core limits, including Instinctive Diction one, Aethyric Attunement two and Luck three. Printed permanent Talent benefits are already in baseline scores and are not added twice.
+- Slann explicitly select Colour Lores, with each matching Wind using the printed Channelling total and retaining its difference from WP after edits. No spells are generated; p. 123 counts are guidance. High Magic retains the shared definition without the Elf-only Blessed by Isha prerequisite. Qhaysh remains a separate Skill choice; printed Quaysh spelling is documented.
+- Named Test Difficulties use core SL modifiers in implemented new spells/abilities. Other numeric situational bonuses remain printed descriptions. Emergency Teleportation, Contemplation, Palanquin, Slann Telepathy, Relic Priest and special abilities are reference effects, without live tracking. Relic Priest has no damaging melee attack. Palanquin Fly/Ward/cover apply while riding it.
+- Four duplicate High Magic definitions remain separate Lustria reading references; existing High Elf creator definitions are unchanged. Mathlann prayers have distinct names to avoid collisions.
 
-The clickable questions propose the following. These proposals must not be treated as user approval.
+Spelling/heading fixes are untagged: Fleet Footed → Fleet-footed, Combate Aware → Combat Aware, Read/ Write → Read/Write, Warleader → War Leader, Resistance → Resistant, Flight → Fly, Tail Attack → Tail, Venomous → Venom and Hunger → Hungry. Sail uses the ungrouped core Skill. Compatible old-edition content is not automatically Legacy.
 
-1. **Skink allocations, pp. 160–163:** five Skills at +5, two chosen Talents, inherent Traits, core Small Wounds (2 × TB); retain Chameleon differences. Requires an explicit Species handler.
-2. **Fate/Fortune:** proposed Skink 1/2, Chameleon 0/2, no additional distribution; marked ordinary Skink 1/0 to represent the printed two-point cost. No direct Fifth Edition conversion is printed.
-3. **Skink random Career table, p. 161:** proposed Boatman 93–94 to resolve overlap with Messenger 89–92. Huffer uses the established Pilot mapping.
-4. **Bestiary:** Little → Tiny/manual after changes; core Small Wounds and Size primary melee Damage; Stride → Sprinter; Swamp-strider → proposed Striding Gait (Wetland); core limits on old repeated Talents, with individual Legacy explanations.
-5. **High Magic, pp. 127–129:** retain existing High Elf definitions, add only new spells, keep conflicting Lustria versions readable; explicit Slann Lores/Winds.
-6. **Sacred marks, p. 151:** Magic Resistance (1) → core Trait; undefined Leader visibly unavailable; other bonuses retain printed values with explicit Talent/Fearless choices.
-7. **Caste/profile entries:** explicitly Talent-equivalent Acute Sense Traits → core Talents; undefined Clever unavailable; Javelin/Shortbow Skill groups → Throwing/Bow.
-8. **Lustrian Career table, pp. 192–193:** defer its multiple overlapping/missing ranges; four Careers remain selectable manually.
-9. **Mathlann prayers, p. 81:** distinct patron-qualified prayer names and Elven restriction, retaining existing High Magic versions.
-10. **Slann, pp. 123–127:** explicit Lores/matching Winds, printed Channelling totals, suggested spell-count guidance rather than invented fixed lists; High Magic handled separately from the Elf Blessed by Isha prerequisite.
+## Unavailable and deferred
 
-Generic creature foundations, caste templates and sacred marks are extracted for the next batch. Named NPCs, colony/ship management, live travel/play, adventure scenes and familiar progression remain outside creator scope. Further review may reveal other decisions. Never guess missing probabilities, spell lists, native languages, prices, weights or quantities.
+Optional Clever and Mark of the Old Ones’ Leader are undefined in the supplied rules: visible explanations, never invented grants. Brainfluke’s **Aquatic** is also undefined here and in the supplied core. It remains visibly unresolved, with an early structured issue blocking export until the GM removes it; no assumed Amphibious replacement.
 
-## Maintenance
+The optional pp. 192–193 Career table remains unavailable because of overlaps/gaps; four new Careers are manually selectable. Named characters, ships, colony/expedition management, live disease/combat, automated meditations, campaign progression and familiars remain outside scope. No missing prices, quantities or alternate armour construction are guessed. Giant Bat gains no invented Flight value.
 
-Run `python scripts/build-lustria.py`, then `npm run build`. The builder verifies the PDF hash and refreshes the source-reference audit hash. Keep the manifest's partial-scope warning, coverage, this document and generated inclusion/search reports aligned.
+App notes explain discrepancies before export. Compact GM sheets contain actual selected Traits/descriptions, never unselected optional suggestions or discrepancy notes.
 
-Focused checks: `node --test tests/lustria.test.mjs`; after building, `npx playwright test tests/browser/lustria.spec.mjs`. They cover real creation validation, unchanged core defaults, compatible shared GM reuse, printed equipment/magic, complete source boundaries and desktop/mobile selection/search. No UI layout or PDF format changes. Follow `TESTING.md`; this batch is not a full Lustria release.
+## Maintenance and checks
 
-Initial-batch verification passed registry/build checks, code/format checks, 17 focused Lustria/architecture tests, four desktop/mobile browser checks and offline asset coverage. The new browser scenarios explicitly accept the existing Career-reset confirmation and choose a GM foundation before opening equipment. After completing the Stationary Attacker reach table, the four book tests passed again.
+Run `python scripts/build-lustria.py`, `python scripts/build-lustria-gm.py`, then `npm run build`. Both builders verify the PDF hash. The GM builder uses the reviewed generic inventory in `scripts/review/lustria-profiles.json` and bounded PDF ability text. Inventory fixes three extraction boundaries and the missing Troglodon body; named blocks are explicitly excluded. Regenerate catalogues/counts/inclusion/search reports instead of editing generated files.
+
+Source operations live in `dist/gm/lustria.mjs`; shared magic access in `dist/lustria.mjs`. Validated template fields: `lustriaRole`, `lustriaPriest`, `naturalArmour`. Draft arrays `lustriaMarks` and `profileLores` participate in shared undo/redo and validated save/load. WIP migrations are not required.
+
+Focused Node checks cover all profiles’ named Skills/Talents, Size/Damage/Tiny/Swarm, stacking/removing marks, eligibility, Priest Lore, Slann Wind totals/no free spells, unchanged duplicates, explicit magic access and unresolved Aquatic. Local Playwright covers PC selection/search and GM sharing/castes/marks/Slann on desktop and phone. Follow TESTING.md and keep README, AGENTS and generated reports current.

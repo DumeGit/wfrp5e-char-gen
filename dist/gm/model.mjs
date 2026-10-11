@@ -1,4 +1,12 @@
 import { woundFormula } from "../creature-calculations.mjs";
+import {
+  sacredMarks,
+  slannTalents,
+  slannSkills,
+  lustriaIssues,
+  LORE_WINDS,
+} from "./lustria.mjs";
+import { lustriaSpellIssue, lustriaTalentIssue } from "../lustria.mjs";
 export { woundFormula } from "../creature-calculations.mjs";
 import {
   templateRowKey,
@@ -107,6 +115,8 @@ export function freshGM(data, profile = "", books = ["core"]) {
     templateGear: {},
     templateLore: "",
     templateModifiers: [],
+    lustriaMarks: [],
+    profileLores: [],
     stats: {},
     size: "",
     wounds: null,
@@ -324,6 +334,28 @@ export function validateGMDraft(data, R, s) {
     throw Error("Invalid Mark roll.");
   const p = data.profiles.find((p) => p.id === s.profile);
   const originalTemplate = data.templates.find((t) => t.id === s.template);
+  if (originalTemplate?.lustriaRole === "mark")
+    throw Error(
+      "Sacred marks belong in the mark choices, alongside an optional caste.",
+    );
+  if (
+    !Array.isArray(s.lustriaMarks) ||
+    new Set(s.lustriaMarks).size !== s.lustriaMarks.length ||
+    s.lustriaMarks.some(
+      (id) =>
+        !sacredMarks(data, p).some(
+          (t) => t.id === id && s.books.includes(bookId(t)),
+        ),
+    )
+  )
+    throw Error("Invalid Lustria sacred marks.");
+  if (
+    !Array.isArray(s.profileLores) ||
+    new Set(s.profileLores).size !== s.profileLores.length ||
+    s.profileLores.some((l) => !LORE_WINDS[l]) ||
+    (s.profileLores.length && p?.lustriaMagic !== "slann")
+  )
+    throw Error("Invalid Slann Colour Lores.");
   if (
     !Array.isArray(s.templateModifiers) ||
     new Set(s.templateModifiers).size !== s.templateModifiers.length ||
@@ -344,6 +376,7 @@ export function validateGMDraft(data, R, s) {
     data,
     s.templateModifiers,
     R,
+    s.lustriaMarks,
   );
   if (
     typeof s.templateLore !== "string" ||
@@ -356,9 +389,11 @@ export function validateGMDraft(data, R, s) {
               ? ["Both"]
               : []),
           ].includes(s.templateLore)
-        : t?.shaman &&
-          p?.category === "Beastmen" &&
-          ["Arcane", "Beasts", "Death", "Shadows"].includes(s.templateLore)))
+        : t?.lustriaPriest
+          ? ["Beasts", "Heavens"].includes(s.templateLore)
+          : t?.shaman &&
+            p?.category === "Beastmen" &&
+            ["Arcane", "Beasts", "Death", "Shadows"].includes(s.templateLore)))
   )
     throw Error("Invalid template Lore.");
   for (const [key, value] of Object.entries(s.traitParameters))
@@ -406,6 +441,8 @@ export function validateGMDraft(data, R, s) {
     if (t.origin !== "GM" || t.name.length > 1000 || t.value?.length > 1000)
       throw Error("Invalid GM row provenance or text.");
   const removable = new Set([
+    ...(p?.unavailableTraits || []).map((x, i) => `unavailable:${i}`),
+    ...slannTalents(p, s.profileLores).map((x) => x.key),
     ...(p
       ? [...p.traits, ...p.skills, ...p.talents, ...p.attacks, ...p.armour].map(
           (x) => x.key,
@@ -498,7 +535,12 @@ const parts = (text) =>
 const magicLore = (name) =>
   name.match(/^(?:Arcane Magic|Chaos Magic) \((.*)\)$/)?.[1];
 export const gmSpecies = (profile) =>
-  profile?.species || (profile?.id === "core:creatures:ogre" ? "Ogre" : "");
+  profile?.species ||
+  (profile?.id === "core:creatures:ogre"
+    ? "Ogre"
+    : profile?.id === "core:creatures:high-elf-or-wood-elf"
+      ? "High Elf or Wood Elf"
+      : "");
 export const gmSkillCharacteristic = (
   R,
   profile,
@@ -516,6 +558,11 @@ export const gmSkillCharacteristic = (
         skillInfo(R, name)?.char,
       );
 export const gmLoreIssue = (R, profile, lore) => {
+  if (
+    profile?.species === "Skink" &&
+    !["Beasts", "Ghur", "Heavens", "Azyr", "Life", "Ghyran"].includes(lore)
+  )
+    return "Skink Priests can use one Wind: Beasts, Heavens, or rare Life (Lustria p. 139).";
   if (
     gmSpecies(profile) === "Ogre" &&
     lore === "Fire" &&
@@ -599,31 +646,33 @@ export function magicChoices(R, result) {
   const arcane = result.talents
     .map((t) => t.name.match(/^Arcane Magic \((.*)\)$/)?.[1])
     .filter(Boolean);
-  return gmSpellCatalogue(R).filter((spell) =>
-    spell.ritual
-      ? arcane.some(
-          (lore) =>
-            spell.ritual.lores.includes("*") ||
-            spell.ritual.lores.includes(lore),
-        )
-      : spell.category === "Technique"
-        ? result.talents.some((t) => t.name === "Sword-dancing")
-        : (spell.category === "Petty" &&
-            result.talents.some((t) => t.name === "Petty Magic")) ||
-          lores.has(spell.category) ||
-          (result.talents.some((t) => t.name === "Witch!") &&
-            [...R.config.colours, "Witchcraft"].includes(spell.category) &&
-            !gmLoreIssue(R, result.profile, spell.category)) ||
-          (["Arcane", "Elven Arcane"].includes(spell.category) &&
-            [...lores].some((lore) => lore !== "High Magic")) ||
-          (spell.category === "Blessing" &&
-            blessingGods.some((god) =>
-              R.config.blessings[god]?.some(
-                (name) => spell.name === `Blessing of ${name}`,
-              ),
-            )) ||
-          (miracleGods.includes(spell.category) && !spell.ritual),
-  );
+  return gmSpellCatalogue(R)
+    .filter((spell) => !lustriaSpellIssue(spell, gmSpecies(result.profile)))
+    .filter((spell) =>
+      spell.ritual
+        ? arcane.some(
+            (lore) =>
+              spell.ritual.lores.includes("*") ||
+              spell.ritual.lores.includes(lore),
+          )
+        : spell.category === "Technique"
+          ? result.talents.some((t) => t.name === "Sword-dancing")
+          : (spell.category === "Petty" &&
+              result.talents.some((t) => t.name === "Petty Magic")) ||
+            lores.has(spell.category) ||
+            (result.talents.some((t) => t.name === "Witch!") &&
+              [...R.config.colours, "Witchcraft"].includes(spell.category) &&
+              !gmLoreIssue(R, result.profile, spell.category)) ||
+            (["Arcane", "Elven Arcane"].includes(spell.category) &&
+              [...lores].some((lore) => lore !== "High Magic")) ||
+            (spell.category === "Blessing" &&
+              blessingGods.some((god) =>
+                R.config.blessings[god]?.some(
+                  (name) => spell.name === `Blessing of ${name}`,
+                ),
+              )) ||
+            (miracleGods.includes(spell.category) && !spell.ritual),
+    );
 }
 export function calculateGM(data, R, s) {
   const issues = [],
@@ -673,6 +722,7 @@ export function calculateGM(data, R, s) {
     data,
     s.templateModifiers,
     R,
+    s.lustriaMarks,
   );
   const live = (rows) => rows.filter((x) => !s.removed.includes(x.key));
   const printedTraits = p.traits.map((t) => ({
@@ -725,7 +775,11 @@ export function calculateGM(data, R, s) {
       }
     }
   }
-  const talents = live([...p.talents, ...s.talents]).map((t) => ({ ...t }));
+  const talents = live([
+    ...p.talents,
+    ...slannTalents(p, s.profileLores),
+    ...s.talents,
+  ]).map((t) => ({ ...t }));
   for (const t of traits.filter(
     (t) => t.name === "Mark of Chaos" && t.origin === "GM",
   )) {
@@ -798,9 +852,13 @@ export function calculateGM(data, R, s) {
       name,
       ranks: slot.ranks,
       origin: "Template",
-      source: template.source || { book: "core", page: template.page },
+      source: slot.source ||
+        template.source || { book: "core", page: template.page },
       ...(slot.adaptation
-        ? { adaptation: slot.adaptation, adaptationSource: template.source }
+        ? {
+            adaptation: slot.adaptation,
+            adaptationSource: slot.source || template.source,
+          }
         : {}),
     });
   }
@@ -977,6 +1035,8 @@ export function calculateGM(data, R, s) {
         : x.total;
     put(x.name, value, "Printed");
   }
+  for (const x of slannSkills(p, stats, s.profileLores))
+    put(x.name, x.total, "Printed", { source: x.source });
   for (const x of templateSkills) {
     const char = gmSkillCharacteristic(R, p, x.name, traits);
     if (!char || stats[char] === null)
@@ -1198,17 +1258,20 @@ export function calculateGM(data, R, s) {
     .filter((a) => !a.optional || s.optionalAttacks.includes(a.key))
     .map((a) => {
       const ranged =
-        /Bow|Sling|Crossbow|Rocks|Breath|Vomit/.test(a.name) ||
-        /yards/.test(a.text);
+        a.ranged ??
+        (/Bow|Sling|Crossbow|Rocks|Breath|Vomit/.test(a.name) ||
+          /yards/.test(a.text));
       const free =
         a.free ??
         (/Bite|Horns|Tail|Tentacle|Breath|Vomit|Grasp|Howl/.test(a.name) ||
           /Free Attack/.test(a.text));
       const weapon = R.weapons.find((w) => a.name.startsWith(w.name));
       const char = ranged ? "BS" : "WS",
-        skillName = weapon
-          ? `${ranged ? "Ranged" : "Melee"} (${weapon.group})`
-          : `Melee (Brawling)`;
+        skillName =
+          a.skillName ||
+          (weapon
+            ? `${ranged ? "Ranged" : "Melee"} (${weapon.group})`
+            : `Melee (Brawling)`);
       const trainedSkill =
         skills.get(skillName) || skills.get(ranged ? "Ranged" : "Melee");
       let score = a.skill,
@@ -1442,6 +1505,21 @@ export function calculateGM(data, R, s) {
         (!a.optional || s.optionalArmour.includes(a.key)),
     ),
   );
+  if (template?.naturalArmour) {
+    const natural = armour.filter((a) => /Hide|Scales|Bark/.test(a.name));
+    if (natural.length)
+      armour = armour.map((a) =>
+        natural.includes(a) ? { ...a, ap: a.ap + template.naturalArmour } : a,
+      );
+    else
+      armour.push({
+        name: "Sacred Scales",
+        ap: template.naturalArmour,
+        locations: "Head, Arms, Body, Legs",
+        key: "lustria-natural-armour",
+        origin: "Template",
+      });
+  }
   for (const g of gear.filter((g) =>
     R.armour.some((a) => a.contentId === g.id),
   )) {
@@ -1597,6 +1675,23 @@ export function calculateGM(data, R, s) {
     s.templateTalents,
   );
   tribesIssues(template, p, s, result, add);
+  lustriaIssues(s, result, add);
+  for (const t of talents) {
+    const reason = lustriaTalentIssue(t.name, gmSpecies(p));
+    if (reason)
+      add(reason, 1, "#gm-tab-2", "magic.mathlann", {
+        book: "lustria",
+        page: 81,
+      });
+  }
+  if (traits.some((t) => t.name === "Blessed" && t.value === "Mathlann"))
+    add(
+      "Lustria does not supply Mathlann Blessings; select Miracles instead (p. 81).",
+      1,
+      "#gm-tab-1",
+      "magic.mathlann-blessings",
+      { book: "lustria", page: 81 },
+    );
   result.undeadRidingOptions = [];
   if (
     ["core:creatures:zombie", "core:creatures:skeleton"].includes(p.id) &&

@@ -1512,11 +1512,16 @@ export function validateCatalog(R) {
       fail(`${cult.name}: invalid Career-specific Miracle references.`);
   }
   for (const god of C.gods) {
+    // Lustria prints two Mathlann Miracles but no Blessing list. Its explicit
+    // access handler disables Bless rather than guessing Manann's Blessings.
+    const miraclesOnly =
+      god === "Mathlann" && R.books.some((b) => b.id === "lustria");
     if (
-      !C.blessings[god]?.length ||
-      C.blessings[god].some(
-        (n) => !R.spells.some((x) => x.name === `Blessing of ${n}`),
-      )
+      !miraclesOnly &&
+      (!C.blessings[god]?.length ||
+        C.blessings[god].some(
+          (n) => !R.spells.some((x) => x.name === `Blessing of ${n}`),
+        ))
     )
       fail(`${god}: missing Blessings.`);
     if (

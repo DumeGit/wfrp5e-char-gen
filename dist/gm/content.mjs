@@ -274,9 +274,24 @@ export function addGMSupplement(data, raw, R) {
       "fixedSpells",
       "physicalMutations",
       "replaceArmour",
+      "lustriaRole",
+      "lustriaPriest",
+      "naturalArmour",
     ];
     if (Object.keys(t).some((key) => !fields.includes(key)))
       throw Error("Unsupported template field.");
+    if (
+      (t.lustriaRole !== undefined &&
+        (book.id !== "lustria" ||
+          !["caste", "mark"].includes(t.lustriaRole))) ||
+      (t.lustriaPriest !== undefined &&
+        (t.lustriaRole !== "caste" || t.lustriaPriest !== true)) ||
+      (t.naturalArmour !== undefined &&
+        (book.id !== "lustria" ||
+          t.lustriaRole !== "mark" ||
+          t.naturalArmour !== 1))
+    )
+      throw Error("Invalid Lustria template operation.");
     if (
       (t.shaman !== undefined &&
         (t.shaman !== true || book.id !== "cluster-eye-tribe")) ||
@@ -529,6 +544,37 @@ export function addGMSupplement(data, raw, R) {
     };
   });
   const profiles = raw.profiles.map((p) => {
+    if (
+      p.lustriaMagic !== undefined &&
+      (book.id !== "lustria" ||
+        p.lustriaMagic !== "slann" ||
+        p.species !== "Slann" ||
+        !Number.isInteger(p.channellingTotal) ||
+        p.channellingTotal < 0)
+    )
+      throw Error(`${p.name}: invalid Slann magic baseline.`);
+    if (
+      p.optionalTalents !== undefined &&
+      (!Array.isArray(p.optionalTalents) ||
+        p.optionalTalents.some(
+          (t) =>
+            !R.talents.some((x) => base(x.name) === base(t.name)) ||
+            !Number.isInteger(t.ranks) ||
+            t.ranks < 1,
+        ))
+    )
+      throw Error(`${p.name}: invalid optional Talent.`);
+    if (
+      p.unavailableTraits !== undefined &&
+      (!Array.isArray(p.unavailableTraits) ||
+        p.unavailableTraits.some(
+          (t) =>
+            !t.name?.trim() ||
+            !t.reason?.trim() ||
+            typeof t.optional !== "boolean",
+        ))
+    )
+      throw Error(`${p.name}: invalid unavailable Trait reference.`);
     if (
       p.magicCharacteristic !== undefined &&
       (book.id !== "sea-of-claws" ||

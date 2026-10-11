@@ -6,13 +6,13 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **3989 results**, including **1326 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The common PC/GM catalogue contains **4006 results**, including **1335 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
 The Rules audit explicitly removed **112 non-mechanical entries**; **1039 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1700 | 224 | 1924 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1702 | 224 | 1926 | 0 |
 | Up in Arms | 1.0.5 | 98 | 128 | 226 | 13 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
 | Archives of the Empire: Volume II | 1.0.6 | 24 | 103 | 127 | 7 |
@@ -30,7 +30,7 @@ The Rules audit explicitly removed **112 non-mechanical entries**; **1039 Rules 
 | Sea of Claws | 1.0.0 | 61 | 19 | 80 | 28 |
 | Taverns of the Old World | 1.0.0 | 8 | 49 | 57 | 0 |
 | The Corsairs of Captain Flariel | 1.1.0 | 6 | 4 | 10 | 3 |
-| Lustria | 0.1.0 | 11 | 45 | 56 | 1 |
+| Lustria | 1.0.0 | 17 | 54 | 71 | 5 |
 
 ## Source review
 
@@ -53,7 +53,7 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 
 Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 290; talent 437; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
+Categories: career 64; skill 291; talent 438; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
 Reviewed printed records retained outside search: 0.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.
@@ -518,12 +518,13 @@ Source SHA-256: `8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee7315784
 
 - pp. 81–89: Selected magic/artillery mechanics.
 - pp. 151–166: New Traits and weapon/armour rules.
+- pp. 178: Lizardman artillery reference profiles.
 - pp. 186–188: Disease and symptoms.
 - pp. 191–204: Selected creation and expedition procedures.
 
-Candidate sections: included 45; excluded 3.
+Candidate sections: included 54; excluded 3.
 
-Categories: career 4; magic 3; equipment 6; property 1; rule 35; table 2; trait 5.
+Categories: career 4; magic 13; equipment 11; property 1; rule 35; table 2; trait 5.
 Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.

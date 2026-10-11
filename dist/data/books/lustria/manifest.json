@@ -4,7 +4,7 @@
   "title": "Lustria",
   "shortTitle": "Lustria",
   "edition": 4,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -16,9 +16,10 @@
   "compatibility": {
     "reviewed": true,
     "notes": [
-      "Current core Skills/Talents and Fifth Edition advancement govern. Printed Strider uses Striding Gait; Resistance uses the core Resistant heading.",
-      "Only the independent, reviewed batch is published; unresolved playable Species, creature/template conversions, conflicting tables and duplicate magic are explicitly pending.",
-      "Read-only source references preserve printed Fourth Edition wording. Named NPCs, campaign managers and setting/adventure prose are excluded."
+      "Current core Skills/Talents and Fifth Edition advancement govern; approved conversions carry selective Legacy notes.",
+      "Skinks are NPC-only by user choice. Castes and sacred marks stack; Slann choose Colour Lores and matching Winds at their printed Channelling total, without invented spell lists.",
+      "Existing duplicate High Elf spells remain unchanged. Distinct Mathlann prayers are Elven-only; no missing Blessings are invented.",
+      "Read-only source references preserve printed Fourth Edition wording. Conflicting optional Career probabilities, named NPCs, campaign managers and setting/adventure prose remain excluded."
     ]
   },
   "files": {

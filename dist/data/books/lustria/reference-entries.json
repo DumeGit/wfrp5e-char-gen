@@ -359,5 +359,86 @@
     "category": "trait",
     "topic": "Creature Traits",
     "text": "Many plants and simple invertebrates are not fully mobile and active the way that opponents in Warhammer Fantasy Roleplay are normally considered to be. Instead, they behave more like traps or environmental hazards than they do creatures. Plants such as Impaling Spikethorn, or sessile creatures such as Pallid Blindwyrms are examples of stationary attackers. Creatures with the Stationary Attacker Trait have the Immunity to Psychology Trait. They occupy a particular location, and whilst they are hostile towards suitable prey that blunder into that location, they are not able to pursue them or manoeuvre around them. They may not take Charge, Flee, Leap, Run, or Climb Actions, or any other actions besides those which are associated with their attacks and Traits. However, if an unsuspecting target moves within reach of a creature with the Stationary Attacker Trait, that creature counts as Engaged with them, and may spring an attack, inflicting the Surprised Condition on the target as it does so. The reach of a Stationary Attacker depends on its Size. Usually, Stationary Attackers blend in with the undergrowth, appearing unassuming until they make their attacks. For a Character to recognise the threat, they must first pass a Challenging (+0) Perception Test to notice the presence of the Stationary Attacker, followed by a suitable Lore Test to identify it. If either test is failed, the Character does not recognise the threat.\n\n| Size | Reach |\n| --- | --- |\n| Tiny or Little | Very Short |\n| Small | Short |\n| Average | Medium |\n| Large | Long |\n| Enormous | Very Long |\n| Monstrous | Massive |"
+  },
+  {
+    "id": "lustria:reference:giant-blowpipe",
+    "name": "Giant Blowpipe",
+    "page": 178,
+    "category": "equipment",
+    "topic": "Lizardman artillery",
+    "text": "Encumbrance: 6. Range: 40 yards. Damage: +0. Qualities and Flaws: Reload 1. Uses darts (p. 163). Uses the artillery rules in Sea of Claws or Up in Arms.",
+    "notes": "Reference only: no Ranged Skill group or purchase price is printed. No group, price or ammunition quantity is assumed."
+  },
+  {
+    "id": "lustria:reference:giant-bow",
+    "name": "Giant Bow",
+    "page": 178,
+    "category": "equipment",
+    "topic": "Lizardman artillery",
+    "text": "Encumbrance: 15. Range: 100 yards. Damage: +10. Qualities and Flaws: Accurate, Crewed 2, Reload 2. Uses arrows. Uses the artillery rules in Sea of Claws or Up in Arms.",
+    "notes": "Reference only: no Ranged Skill group or purchase price is printed. No group, price or ammunition quantity is assumed."
+  },
+  {
+    "id": "lustria:reference:engine-of-the-gods-burning-alignment",
+    "name": "Engine of the Gods’ Burning Alignment",
+    "page": 178,
+    "category": "equipment",
+    "topic": "Lizardman artillery",
+    "text": "Encumbrance: 75. Range: 60 yards. Damage: +8. Qualities and Flaws: Blast 5, Crewed 3, Magical, Salvo 1d10. Every affected target also receives 1 + SL Ablaze Conditions. Requires the Winds of Magic; does not require ammunition. Uses the artillery rules in Sea of Claws or Up in Arms.",
+    "notes": "Reference only: no Ranged Skill group or purchase price is printed. No group, price or ammunition quantity is assumed."
+  },
+  {
+    "id": "lustria:reference:engine-of-the-gods-power-of-the-ancients",
+    "name": "Engine of the Gods’ Power of the Ancients",
+    "page": 178,
+    "category": "equipment",
+    "topic": "Lizardman artillery",
+    "text": "Encumbrance: 40. Range: 150 yards. Damage: +15. Qualities and Flaws: Crewed 3, Imprecise, Magical, Reload 3. Every affected target also receives 1 + SL Ablaze Conditions. Requires the Winds of Magic; does not require ammunition. Uses the artillery rules in Sea of Claws or Up in Arms.",
+    "notes": "Reference only: no Ranged Skill group or purchase price is printed. No group, price or ammunition quantity is assumed."
+  },
+  {
+    "id": "lustria:reference:solar-engine-s-beam-of-chotec",
+    "name": "Solar Engine’s Beam of Chotec",
+    "page": 178,
+    "category": "equipment",
+    "topic": "Lizardman artillery",
+    "text": "Encumbrance: 75. Range: 60 yards. Damage: +1d10. Qualities and Flaws: Crewed 3, Magical, Repeater 5. Every affected target also receives 1 + SL Ablaze Conditions. Requires the Winds of Magic; does not require ammunition. Uses the artillery rules in Sea of Claws or Up in Arms.",
+    "notes": "Reference only: no Ranged Skill group or purchase price is printed. No group, price or ammunition quantity is assumed."
+  },
+  {
+    "id": "lustria:reference:apotheosis-lustria",
+    "name": "Apotheosis — Lustria version",
+    "page": 128,
+    "category": "magic",
+    "topic": "High Magic",
+    "text": "CN: 4 Range: Half Willpower yards Target: 1 Duration: 1 Round You infuse the target with pure magic to heal and inspire fear. They recover your Willpower Bonus in Wounds and temporarily gain the Fear 1 Creature Trait. Overcasting: Every +3 SL can increase the number of healed Wounds by your Willpower Bonus. +6 SL the target can heal a Critical Wound. Slann: Every +2 SL can increase the target’s Fear rating by 1.",
+    "notes": "Printed Lustria version for reading, including species-specific Overcasting. Existing High Elf spell definitions remain the creator options."
+  },
+  {
+    "id": "lustria:reference:arcane-unforging-lustria",
+    "name": "Arcane Unforging — Lustria version",
+    "page": 128,
+    "category": "magic",
+    "topic": "High Magic",
+    "text": "CN: 9 Range: Willpower yards Target: 1 Duration: Instant You summon the powers of unmaking to injure armoured enemies and destroy their magic items. The target suffers 1 Damage to the body for every 2 Armour Points worn. Example: a target with 3 Armour Points on all six hit locations would have a total of 18 armour points and so suffer 9 Damage. Toughness Bonus is subtracted as normal, but Armour Points are ignored. In addition, one of the target’s magic items (randomly determined) is destroyed if you pass a Challenging (+0) Willpower Test. Overcasting: Every +1 SL can destroy 1 Armour Point worth of metal or leather armour. +8 SL the spell’s damage can be increased to 1 Damage per Armour Point. Slann: Every +5 SL allows another destruction attempt roll against a random magic item.",
+    "notes": "Printed Lustria version for reading, including species-specific Overcasting. Existing High Elf spell definitions remain the creator options."
+  },
+  {
+    "id": "lustria:reference:drain-magic-lustria",
+    "name": "Drain Magic — Lustria version",
+    "page": 128,
+    "category": "magic",
+    "topic": "High Magic",
+    "text": "CN: 6 Range: Half Willpower yards Target: AoE (Willpower Bonus Yards) Duration: Instant You expel magic from the world by conjuring an aethyric vortex. All persistent spells within the AoE are immediately dispelled without an Extended Test. Magic items and innate magical auras are unaffected. Overcasting: +5 SL the AoE can be increased to Willpower yards. +7 SL persistent Divine Blessings and Miracles are also dispelled. Slann: Every +4 SL allows the caster to drain some environmental magic within AoE (see Winds of Magic, page 189). Each increment can either desaturate a leyline nexus or reduce environmental saturation by 1 level.",
+    "notes": "Printed Lustria version for reading, including species-specific Overcasting. Existing High Elf spell definitions remain the creator options."
+  },
+  {
+    "id": "lustria:reference:walk-between-worlds-lustria",
+    "name": "Walk Between Worlds — Lustria version",
+    "page": 128,
+    "category": "magic",
+    "topic": "High Magic",
+    "text": "CN: 7 Range: Willpower yards Target: AoE (Willpower Bonus Yards) Duration: 1 Round You open the paths between worlds for your allies. Selected targets gain the Ethereal Creature Trait, and their Movement scores are doubled. Overcasting: Slann: +4 SL targets at an appropriate geomantic nexus may traverse the Paths of the Old Ones to arrive at another nexus. You decide which nexus they travel to. There is no limit to the distance travelled. High Elves: +8 SL targets may traverse the Paths of the Old Ones, as described above. Wood Elves: +6 SL targets in a magical forest may traverse the Worldroots to arrive at another Weave. Targets may decide which paths to follow, but without guidance they may become lost.",
+    "notes": "Printed Lustria version for reading, including species-specific Overcasting. Existing High Elf spell definitions remain the creator options."
   }
 ]

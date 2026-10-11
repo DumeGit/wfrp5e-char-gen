@@ -28586,8 +28586,8 @@
     },
     "lustria": {
       "sourceHash": "8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844",
-      "publishedSHA256": "5f6f01459d22b6b06313d0d388b8f5c33456ddc1e080a9c50cadb1c0e6e8c7e7",
-      "entries": 45,
+      "publishedSHA256": "1b07d1a1b4b8e0de12a45f006a3edbb4c5085f6af7685d0bc9aba1d421119207",
+      "entries": 54,
       "areas": [
         {
           "first": 81,
@@ -28598,6 +28598,11 @@
           "first": 151,
           "last": 166,
           "topic": "New Traits and weapon/armour rules"
+        },
+        {
+          "first": 178,
+          "last": 178,
+          "topic": "Lizardman artillery reference profiles"
         },
         {
           "first": 186,
@@ -28879,6 +28884,60 @@
           "id": "lustria:reference:stationary-attacker",
           "name": "Stationary Attacker",
           "page": 166,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:giant-blowpipe",
+          "name": "Giant Blowpipe",
+          "page": 178,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:giant-bow",
+          "name": "Giant Bow",
+          "page": 178,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:engine-of-the-gods-burning-alignment",
+          "name": "Engine of the Gods’ Burning Alignment",
+          "page": 178,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:engine-of-the-gods-power-of-the-ancients",
+          "name": "Engine of the Gods’ Power of the Ancients",
+          "page": 178,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:solar-engine-s-beam-of-chotec",
+          "name": "Solar Engine’s Beam of Chotec",
+          "page": 178,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:apotheosis-lustria",
+          "name": "Apotheosis — Lustria version",
+          "page": 128,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:arcane-unforging-lustria",
+          "name": "Arcane Unforging — Lustria version",
+          "page": 128,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:drain-magic-lustria",
+          "name": "Drain Magic — Lustria version",
+          "page": 128,
+          "disposition": "included"
+        },
+        {
+          "id": "lustria:reference:walk-between-worlds-lustria",
+          "name": "Walk Between Worlds — Lustria version",
+          "page": 128,
           "disposition": "included"
         },
         {

@@ -244,6 +244,7 @@ function renderTemplateResults() {
   const templates = gmCatalogue(data, s.books).templates.filter(
     (t) =>
       t.trollRole !== "modifier" &&
+      t.lustriaRole !== "mark" &&
       (!ui.templateBook || (t.source?.book || "core") === ui.templateBook),
   );
   dialogBody.querySelector("#gm-template-results").innerHTML = templates
@@ -474,6 +475,21 @@ async function action(el) {
           source: choice.source,
         });
     }, `${name} added at +${choice.bonus} or its higher existing bonus.`);
+    return;
+  }
+  if (a === "optional-talent") {
+    const x = r.profile.optionalTalents[Number(el.dataset.index)];
+    if (r.talents.some((t) => t.name === x.name)) return;
+    commit(
+      () =>
+        s.talents.push({
+          ...x,
+          key: uid(),
+          origin: "GM",
+          source: r.profile.source,
+        }),
+      `${x.name} added.`,
+    );
     return;
   }
   if (a === "optional-trait") {
@@ -803,6 +819,19 @@ function change(el) {
       }
       if (d.bind) s[d.bind] = ["wounds", "tb"].includes(d.bind) ? num : val;
       if (d.stat) s.stats[d.stat] = num;
+      if (d.profileLore)
+        s.profileLores = val
+          ? [...s.profileLores, d.profileLore]
+          : s.profileLores.filter((l) => l !== d.profileLore);
+      if (d.sacredMark) {
+        s.lustriaMarks = val
+          ? [...s.lustriaMarks, d.sacredMark]
+          : s.lustriaMarks.filter((id) => id !== d.sacredMark);
+        s.templateSkills = {};
+        s.templateTalents = {};
+        const prefix = s.template || "lustria:marks";
+        s.removed = s.removed.filter((key) => !key.startsWith(prefix + ":"));
+      }
       if (d.profileSkill !== undefined) {
         if (val) s.profileSkills[d.profileSkill] = val;
         else delete s.profileSkills[d.profileSkill];

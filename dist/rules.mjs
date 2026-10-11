@@ -1,4 +1,5 @@
 import { canonicalRuleName } from "./content-references.mjs";
+import { lustriaSpellIssue, lustriaTalentIssue } from "./lustria.mjs";
 import {
   CAUSE_KEY,
   CAUSE_PLACEHOLDER,
@@ -248,7 +249,7 @@ export function options(R, raw, type = "skill", s) {
       const dynamic = {
         Artistic: expanded("Art"),
         "Arcane Magic": R.config.colours,
-        Bless: R.config.gods,
+        Bless: R.config.gods.filter((god) => god !== "Mathlann"),
         Invoke: R.config.gods,
         Craftsman: expanded("Trade"),
         "Master Tradesman": expanded("Trade"),
@@ -733,6 +734,8 @@ export function derive(R, s) {
   };
 }
 export function invalidTalent(R, s, name) {
+  const lustria = lustriaTalentIssue(name, s.species);
+  if (lustria) return lustria;
   if (causeIssue(name)) return causeIssue(name);
   const d = derive(R, s),
     b = base(name),
@@ -1272,7 +1275,12 @@ export function spellGrants(R, s) {
     else continue;
     const cult = b === "Invoke" && R.cults.find((x) => x.name === category);
     const choices = (cult ? miracleChoices(R, category, s.career) : spells)
-      .filter((x) => !x.ritual && womSpellAllowed(R, s, x))
+      .filter(
+        (x) =>
+          !x.ritual &&
+          womSpellAllowed(R, s, x) &&
+          !lustriaSpellIssue(x, s.species),
+      )
       .filter((x) =>
         category === "Old Faith"
           ? x.category === "Blessing"
@@ -1344,6 +1352,12 @@ export function knownSpells(R, s) {
 }
 export function quoteSpell(R, s, name, talent) {
   const elf = quoteElfSpell(R, s, name, talent);
+  const access = lustriaSpellIssue(
+    R.spells.find((x) => x.name === name),
+    s.species,
+  );
+  if (access && elf) return { ...elf, error: access };
+  if (access) return null;
   if (elf) return elf;
   const ritual = quoteRitual(R, s, name, talent);
   if (ritual) return ritual;

@@ -9,5 +9,73 @@
     "target": "AoE (Willpower Bonus Miles)",
     "duration": "Willpower minutes",
     "text": "You summon a thick fog that blankets the region. Visibility is reduced to 10 yards. The fog is non-magical and cannot be Dispelled."
+  },
+  {
+    "id": "lustria:spell:uproot-the-mountains",
+    "name": "Uproot the Mountains",
+    "category": "High Magic",
+    "page": 128,
+    "cn": 8,
+    "range": "Line of Sight",
+    "target": "1",
+    "duration": "1 Round",
+    "text": "You cause a hill or mountain to tremble and shake. Targets on the terrain feature must pass a Very Hard (−3 SL) Athletics Test at the start of their Round, otherwise they can take no actions or movement, and they receive the Prone Condition. Overcasting: For every Round the spell’s Duration is extended with Overcasting, the hill or mountain can be moved Willpower Bonus yards. Targets in the path of this movement must pass an Average (+2 SL) Athletics Test or suffer 10 Damage to a random body location. +5 SL this spell can trigger an avalanche. Targets in the path of falling rocks must pass a Challenging (+0 SL) Dodge Test or suffer 15 Damage to a random body location.",
+    "adaptation": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+  },
+  {
+    "id": "lustria:spell:earth-line",
+    "name": "Earth Line",
+    "category": "High Magic",
+    "page": 129,
+    "cn": 10,
+    "range": "Line of Sight",
+    "target": "Special",
+    "duration": "Instant",
+    "text": "Slann only; requires a geomantic nexus or leyline within Willpower Bonus miles. The Slann causes earth energies to surge through a geomantic leyline. Anyone on the leyline must pass a Hard (−2 SL) Endurance Test or suffer 15 Damge to the body (modified for Toughness Bonus, but not Armour). The energy surge can be sent any direction the Slann chooses, and it continues until it reaches the next geomantic nexus. Overcasting: +4 SL a bridge can be created across water of any depth. The water is either parted, or an earthen causeway rises from it. The bridge is 8 yards wide and can be any length, provided it follows the leyline. The bridge lasts for Willpower Bonus hours and cannot be dispelled. +6 SL a path can be cleared through jungles and forests. Trees are knocked aside, creating a path 8 yards wide along the leyline.",
+    "adaptation": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+  },
+  {
+    "id": "lustria:spell:ruination-of-cities",
+    "name": "Ruination of Cities",
+    "category": "High Magic",
+    "page": 129,
+    "cn": 12,
+    "range": "Line of Sight",
+    "target": "1 building",
+    "duration": "Instant",
+    "text": "Slann only; requires a geomantic nexus or leyline within Willpower Bonus miles. The Slann causes an unfortified building, wall, or bridge to collapse. The target is reduced to rubble, counting as Difficult terrain. Everyone inside a collapsing building must pass a Hard (−2 SL) Dodge Test or be crushed for 20 Damage to the body and buried alive. Buried victims are subject to Suffocation (WFRP page 181). Overcasting: Additional targets added with Overcasting must be those nearest to the primary target. The ground between targets opens into a crevasse 2 yards wide by 4 yards deep. Anyone on the crevasse must pass a Challenging (+0 SL) Dodge Test or suffer falling damage. Marginal Failures allow victims to grab onto the edge. +6 SL the target can be a fortified structure such as a castle wall or tower.",
+    "adaptation": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+  },
+  {
+    "id": "lustria:spell:mental-blast",
+    "name": "Mental Blast",
+    "category": "High Magic",
+    "page": 129,
+    "cn": 7,
+    "range": "Line of Sight",
+    "target": "AoE (Willpower Bonus Yards)",
+    "duration": "Instant",
+    "text": "Slann only; requires a geomantic nexus or leyline within Willpower Bonus miles. The Slann directs a burst of mental energy against their foes. Enemies suffer Damage equal to the Slann’s Intelligence Bonus + 6 Damage. Creatures with the Daemonic or Undead Traits suffer 6 additional Damage. Toughness Bonus is subtracted, but not Armour. Additionally, targets must pass an Average (+2 SL) Intelligence Test or gain a Stunned Condition. Overcasting: +6 SL this spell can be cast as ‘The Deliverance of Itza’. Increase the Target diameter to AoE (Half Willpower yards) but must be centred on the caster. AoE can be increased with Overcasting as normal. + 9 SL this spell can be cast as ‘The Great Leveller’. The Slann sacrifices their own life to turn the tide of a losing battle. All outnumbering enemies within Line of Sight are automatically killed, reducing their numbers to equal the Slann’s allies. Remove casualties with the lowest Intelligence scores first. Only a Fate Point prevents the instant death of a Character in these circumstances.",
+    "adaptation": "Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved."
+  },
+  {
+    "id": "lustria:spell:waterlungs-mathlann",
+    "name": "Waterlungs (Mathlann)",
+    "category": "Mathlann",
+    "page": 81,
+    "range": "Fellowship yards",
+    "target": "1",
+    "duration": "Fellowship Bonus Hours",
+    "text": "Only available to Elven Priests of Mathlann. Targets can breathe underwater, but in air they’re subject to Suffocation and Drowning (WFRP page 181). Affected targets feel drawn to water and require only a bucketful for breathing. You may affect an extra target for every +2 SL."
+  },
+  {
+    "id": "lustria:spell:cloak-of-mathlann-mathlann",
+    "name": "Cloak of Mathlann (Mathlann)",
+    "category": "Mathlann",
+    "page": 81,
+    "range": "Fellowship yards",
+    "target": "1 boat or ship",
+    "duration": "Fellowship minutes",
+    "text": "Only available to Elven Priests of Mathlann. You turn a ship invisible, along with its crew. The interior of the ship remains visible to everyone onboard. Crew members become visible upon leaving the ship. Invisible ships still leave a wake behind them, and create eddies in the fog, which can be noticed with a Challenging (+0) Perception Test. Ships with more than a single mast require +2 SL per extra mast to cloak. Black Arks and sea monsters cannot be cloaked."
   }
 ]

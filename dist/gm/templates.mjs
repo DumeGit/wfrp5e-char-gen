@@ -5,6 +5,7 @@ import {
   resolveWarbandEquipment,
   tribesEligibility,
 } from "./tribes.mjs";
+import { composeLustria } from "./lustria.mjs";
 
 export const templateRowKey = (t, kind, i) => `${t.id}:${kind}:${i}`;
 export const templateSlotEnabled = (slot, profile) =>
@@ -35,8 +36,11 @@ export function resolveTemplate(
   data,
   modifiers = [],
   R,
+  marks = [],
 ) {
   if (data) template = composeTroll(template, data, modifiers);
+  if (data)
+    template = composeLustria(template, profile, data, marks, selectedLore);
   template = resolveWarband(template, profile, selectedLore);
   template = resolveWarbandEquipment(template, profile, R);
   if (!template?.shaman) return template;
