@@ -12,7 +12,7 @@ def prepare_manifest(filename, value, directory):
         raise ValueError("Book output needs a valid registered book ID")
     directory = Path(directory)
     target = directory / "coverage.json"
-    installed = Path(__file__).resolve().parent.parent / "dist" / "data" / "books" / book_id / "coverage.json"
+    installed = Path(__file__).resolve().parent.parent / "content" / "sources" / "data" / "books" / book_id / "coverage.json"
     source = target if target.exists() else installed
     if not source.exists():
         raise ValueError(f"Review and create coverage.json for {book_id} before generating its manifest")

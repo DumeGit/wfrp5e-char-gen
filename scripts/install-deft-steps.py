@@ -9,7 +9,7 @@ parser.add_argument('--input-dir',type=Path,default=ROOT.parent/'tmp/pdfs/deft-s
 args=parser.parse_args()
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 if read(args.input_dir/'pending.json'):raise ValueError('Unanswered source choices')
-target=ROOT/'dist/data/books/deft-steps'
+target=ROOT/'content/sources/data/books/deft-steps'
 target.mkdir(parents=True,exist_ok=True)
 files={kind:kind+'.json' for kind in ['careers','spells','gear','rules','cults']}
 for filename in files.values():shutil.copyfile(args.input_dir/filename,target/filename)
@@ -32,10 +32,10 @@ manifest={'schemaVersion':1,'id':'deft-steps','title':'Deft Steps, Light Fingers
  ]},'files':files}
 manifest=prepare_manifest('manifest.json',manifest,target)
 (target/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-path=ROOT/'dist/data/books/index.json'
+path=ROOT/'content/sources/data/books/index.json'
 registry=read(path)
 if not any(p['id']=='deft-steps' for p in registry['packs']):registry['packs'].append({'id':'deft-steps','path':'deft-steps/manifest.json'})
-core_careers={c['id']:c for c in read(ROOT/'dist/data/careers.json')}
+core_careers={c['id']:c for c in read(ROOT/'content/sources/data/careers.json')}
 variants=[
  ('ranald-priest','priest','General Ranald Priest',13,['Athletics','Bribery','Cool','Endurance','Gamble','Intuition','Lore (Theology)','Perception','Pray','Stealth (Urban)']),
  ('dealer','priest','Ranald the Dealer',24,None),

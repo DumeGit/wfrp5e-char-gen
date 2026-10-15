@@ -16,7 +16,7 @@ const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
 const data = await json("../dist/gm/data.json");
 const library = await json("../dist/data/book-library.json");
-const raw = await json("../dist/gm/sources/cluster-eye-tribe.json");
+const raw = await json("../content/sources/gm/books/cluster-eye-tribe.json");
 const rulesFor = createGMRules(library, data);
 const profile = data.profiles.find(
   (p) => p.id === "cluster-eye-tribe:creatures:forest-goblin",

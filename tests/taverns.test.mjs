@@ -12,7 +12,7 @@ const book = "taverns-old-world";
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
 const data = await json("../dist/gm/data.json");
-const raw = await json("../dist/gm/sources/taverns-old-world.json");
+const raw = await json("../content/sources/gm/books/taverns-old-world.json");
 const rulesFor = createGMRules(library, data);
 const draft = (name) =>
   freshGM(data, raw.profiles.find((p) => p.name === name).id);
@@ -108,7 +108,7 @@ test("Only distinct fair-price consumables enter the shared shop; unknown weight
 
 test("Search retains concrete game rules and genuine tables, without NPCs, flavour or unreviewed Legacy tags", async () => {
   const refs = await json(
-    "../dist/data/books/taverns-old-world/reference-entries.json",
+    "../content/sources/data/books/taverns-old-world/reference-entries.json",
   );
   assert.equal(refs.length, 49);
   assert.equal(refs.filter((x) => x.category === "table").length, 7);

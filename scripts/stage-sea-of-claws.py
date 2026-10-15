@@ -62,8 +62,8 @@ def stage(review, output):
         if changes:
             row["adaptation"] = " ".join(changes)
         candidates.append(row)
-    installed = read(ROOT / "dist/data/spells.json")
-    for filename in (ROOT / "dist/data/books").glob("*/spells.json"):
+    installed = read(ROOT / "content/sources/data/spells.json")
+    for filename in (ROOT / "content/sources/data/books").glob("*/spells.json"):
         installed.extend(read(filename))
     names = {entry["name"] for entry in installed}
     overlap = [entry["name"] for entry in candidates if entry["name"] in names]

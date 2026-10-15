@@ -16,7 +16,7 @@ const R = assembleBooks(library, [B]);
 const refs = JSON.parse(
   await readFile(
     new URL(
-      "../dist/data/books/lustria/reference-entries.json",
+      "../content/sources/data/books/lustria/reference-entries.json",
       import.meta.url,
     ),
     "utf8",

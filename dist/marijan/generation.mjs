@@ -312,7 +312,7 @@ export function addStartingChoices(catalogue, draft, rolled) {
         ? x.placement
         : "carried";
       if (x.quantity === null)
-        entry.text +=
+        entry.descriptionNote =
           "\nPrinted quantity unspecified; one reference entry recorded, not a verified unit quantity.";
       const old = draft.entries.gear.find(
         (r) => r.name === entry.name && r.state === entry.state,

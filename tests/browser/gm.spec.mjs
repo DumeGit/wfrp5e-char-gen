@@ -918,7 +918,7 @@ test("Cluster-Eye Beastman Shaman Lore selector changes the Trait and matching W
   });
 });
 
-test("GM summaries expand to full rules and template filters hide incompatible foundations @gm @mobile", async ({
+test("GM canonical summaries and template filters hide incompatible foundations @gm @mobile @descriptions", async ({
   page,
 }, testInfo) => {
   await openGM(page);
@@ -934,11 +934,8 @@ test("GM summaries expand to full rules and template filters hide incompatible f
   const full = size.locator(
     'details[data-detail-key="gm:trait-rule:griffon-trait-2"]',
   );
-  await expect(full).not.toHaveAttribute("open", "");
-  await expect(size).toContainText("Full rule");
-  await full.locator(":scope > summary").click();
-  await expect(full).toContainText("ADJUSTING A CREATURE");
-  await full.locator(":scope > summary").click();
+  await expect(full).toHaveCount(0);
+  await expect(size).toContainText("+10 S/T");
   await page.screenshot({
     path: testInfo.outputPath("compact-traits.png"),
     fullPage: true,

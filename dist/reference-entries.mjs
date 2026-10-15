@@ -61,6 +61,8 @@ export function validateReferenceEntry(entry, book) {
           "topic",
           "page",
           "text",
+          "descriptionId",
+          "descriptionStatus",
           "aliases",
           "notes",
         ].includes(key),

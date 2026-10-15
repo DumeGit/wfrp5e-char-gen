@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {loadBookLibrary,assembleBooks} from '../dist/books.mjs';
+import {assembleBooks} from '../dist/books.mjs';
+import {loadBookBundle} from '../dist/book-bundle.mjs';
 
 const dist=new URL('../dist/',import.meta.url),worker=await readFile(new URL('sw.js',dist),'utf8');
 const assets=JSON.parse(worker.match(/const ASSETS=(\[[\s\S]*?\]);/)[1]);
@@ -54,7 +55,7 @@ test('a complete offline install serves navigation, versioned modules, rules and
  const h=await harness();await h.lifecycle('install');h.offline();
  const home=await h.request('/?verify=1',{mode:'navigate'});assert.match(await home.text(),/manifest.webmanifest/);
  assert.match(await (await h.request('/rules.mjs?v=patron-1')).text(),/export/);
- assert.equal(JSON.parse(await (await h.request('/data/careers.json')).text()).length,64);
+ const bundle=JSON.parse(await (await h.request('/data/book-library.json')).text());assert.equal(bundle.packs.find(p=>p.manifest.id==='core').data.careers.length,64);
  assert.ok((await (await h.request('/assets/character-sheet.pdf')).arrayBuffer()).byteLength>12000000);
  assert.equal(await h.request('/unknown',{mode:'navigate'}),undefined);
  assert.equal(await h.request('https://other.example/rules.mjs'),undefined);
@@ -71,11 +72,11 @@ test('updates wait for the user; activation removes only old ledger caches',asyn
 
 test('the real book loader can assemble installed books entirely from offline assets',async()=>{
  const h=await harness();await h.lifecycle('install');h.offline();
- const library=await loadBookLibrary(async url=>{
+ const library=await loadBookBundle(async url=>{
   const response=await h.request(url.href);assert.ok(response,`Missing cached book data ${url}`);return response.json();
- },new URL('data/books/index.json',base));
+ },new URL('data/book-library.json',base));
  const R=assembleBooks(library);assert.equal(R.careers.length,64);assert.equal(R.weapons.length,50);assert.equal(R.books[0].id,'core');
- for(const {manifest}of library.packs)assert.ok(assets.includes(`data/books/${manifest.id}/manifest.json`));
+ assert.ok(assets.includes('data/book-library.json'));assert.ok(!assets.some(x=>x.startsWith('content/')));
 });
 
 test('a failed download cannot leave a partially prepared offline version',async()=>{

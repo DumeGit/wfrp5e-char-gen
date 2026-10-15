@@ -2,6 +2,7 @@ import { esc } from "./workspace.mjs";
 import { characteristicNames } from "./ui.mjs";
 import { searchBookText } from "./book-search-text.mjs";
 import { ruleTextHTML, speciesReferenceHTML } from "./search-presentation.mjs";
+import { descriptionNotice } from "./descriptions.mjs";
 
 const valueText = (value) =>
   Array.isArray(value)
@@ -23,6 +24,14 @@ function fieldsHTML(entry, fields) {
     .join("")}</dl>`;
 }
 export function referenceBodyHTML(row) {
+  return (
+    referenceContentHTML(row) +
+    (row.entry.text
+      ? `<p class="small muted">${esc(descriptionNotice(row.entry))}</p>`
+      : "")
+  );
+}
+function referenceContentHTML(row) {
   const x = { ...row.entry, text: searchBookText(row.entry).text };
   if (row.printedReference) {
     let html = ruleTextHTML(row.entry.text);

@@ -28,8 +28,8 @@ def convert(s):
 aliases={'Cat Fall':'Catfall','Detect Artifact':'Detect Artefact','Nimble Fingered':'Nimble-fingered','Sea legs':'Sea Legs','Strike to Injure.':'Strike to Injure','Strider (Coastal)':'Striding Gait (Coastal)','Strider (Woodlands)':'Striding Gait (Woodland)'}
 canon=lambda n:aliases.get(n,n)
 base=lambda n:n.split(' (')[0]
-core_skills=read(ROOT/'dist/data/skills.json')
-core_talents=read(ROOT/'dist/data/talents.json')
+core_skills=read(ROOT/'content/sources/data/skills.json')
+core_talents=read(ROOT/'content/sources/data/talents.json')
 skills={s['name']:s for s in core_skills}
 talents={base(t['name']) for t in core_talents}
 extras={};talent_extras={}
@@ -67,7 +67,7 @@ for c in careers:
 write('careers.json',careers)
 
 table_ids={'Outer Kingdoms':'outer','Nagarythe':'nagarythe','Inner Kingdoms':'inner','Avelorn':'avelorn','Sea Elf':'sea-elf'}
-core_careers=read(ROOT/'dist/data/careers.json')
+core_careers=read(ROOT/'content/sources/data/careers.json')
 career_ids={c['name']:c['id'] for c in core_careers+careers}
 career_aliases={'Advisor':'Adviser','Huffer':'Pilot','Seaman':'Sailor','Bawd':'Knave'}
 tables=[]
@@ -93,7 +93,7 @@ for o in origins:
     o['text']='Printed regional Career table is selected by default; the core table remains an explicit alternative. Ulthuan Career adaptations apply to the ten kingdom origins; Sea Elf career context remains its printed enclave background.'
     if name=='Sea Elf':
         o['sheetSpecies']='High Elf (Sea Elf)'
-        o['background']={'page':57,'forenames':read(ROOT/'dist/data/background.json')['High Elf']['forenames'],'surnames':['Bluestrait','Cloudspear','Farborn','Greenbreeze','Seablade','Starfoam','Starguided','Wavestrider','Whitecrest']}
+        o['background']={'page':57,'forenames':read(ROOT/'content/sources/data/background.json')['High Elf']['forenames'],'surnames':['Bluestrait','Cloudspear','Farborn','Greenbreeze','Seablade','Starfoam','Starguided','Wavestrider','Whitecrest']}
         o['text']='Choose an enclave and an Ulthuan kingdom of heritage. These are background choices and do not add the kingdom’s starting Skills/Talents. Uncouth Uranai’s −1 Standing applies only to interactions with Caledor, Ellyrion, Avelorn or Saphery Elves; it does not lower the displayed general Status.'
 write('origins.json',origins)
 for t in tables:t['origins']=[o['id'] for o in origins if o['careerTable']==t['id']]
@@ -129,7 +129,7 @@ for name,page,limit,body in [
 write('talents.json',talent_entries)
 
 rules=[]
-config=read(ROOT/'dist/data/books/core/config.json')
+config=read(ROOT/'content/sources/data/books/core/config.json')
 # Only actual new choices are appended; duplicated options use existing sources.
 for group,entries in extras.items():
     if group=='Channelling':entries.pop('Qhaysh',None)

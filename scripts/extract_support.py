@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,re,collections,pdfplumber
 from pypdf import PdfReader
-root=Path('character-generator'); dest=root/'dist/data'; reader=PdfReader(r'C:\Users\ninod\Downloads\Warhammer Fantasy Roleplay (2).pdf'); pdf=pdfplumber.open(r'C:\Users\ninod\Downloads\Warhammer Fantasy Roleplay (2).pdf')
+root=Path('character-generator'); dest=root/'content/sources/data'; reader=PdfReader(r'C:\Users\ninod\Downloads\Warhammer Fantasy Roleplay (2).pdf'); pdf=pdfplumber.open(r'C:\Users\ninod\Downloads\Warhammer Fantasy Roleplay (2).pdf')
 def clean(s):return re.sub(r'\s+',' ',s.replace('�',"'").replace('ﬂ','fl').replace('ﬁ','fi').replace('\u00ad','')).strip()
 def write(n,v):(dest/n).write_text(json.dumps(v,ensure_ascii=False,indent=2),encoding='utf-8')
 species={}

@@ -1,5 +1,7 @@
 # Marijan Mode
 
+Shared descriptions resolve by canonical ID rather than saved wording copies. Personal descriptions override only that character; clearing one restores the shared definition. Custom entries stay independent; generated quantity notes remain separate. Results and PDFs use the same resolved entries. See [DESCRIPTIONS.md](DESCRIPTIONS.md).
+
 A separate, unrestricted one-page character editor at `dist/marijan.html`. The user authorised this mode on 9 October 2026, using Hammergen as an interaction reference, not a rules source or copied interface. The guided player creator and GM workshop remain independent.
 
 ## Editing and calculations

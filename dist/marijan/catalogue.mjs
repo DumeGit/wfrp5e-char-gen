@@ -2,6 +2,7 @@ import { assembleBooks } from "../books.mjs";
 import { options, skillInfo, talentInfo, base } from "../rules.mjs";
 import { spellChoices } from "../archives-iii.mjs";
 import { sourceLabel } from "../sources.mjs";
+import { traitSummary } from "../description-rules.mjs";
 
 export const GROUPS = ["skills", "talents", "magic", "gear", "extras"];
 const identity = (entry) => entry.contentId || entry.id;
@@ -107,10 +108,33 @@ export function createMarijanCatalogue(library, creatureOptions) {
         a.source.book.localeCompare(b.source.book),
     ),
     byId: new Map(rows.map((x) => [x.id, x])),
+    descriptions: new Map(
+      rows.filter((x) => x.descriptionId).map((x) => [x.descriptionId, x]),
+    ),
     books: library.packs.map((p) => p.manifest),
     species: R.species,
     origins: R.origins,
   };
+}
+export function entryDescription(catalogue, entry) {
+  if (entry.custom || entry.descriptionOverride)
+    return [entry.text, entry.descriptionNote].filter(Boolean).join("\n");
+  if (!entry.descriptionId && entry.text)
+    return [entry.text, entry.descriptionNote].filter(Boolean).join("\n");
+  const canonical =
+    catalogue.descriptions?.get(entry.descriptionId) ||
+    catalogue.byId.get(entry.id);
+  const text = canonical?.text ?? entry.text ?? "";
+  const description =
+    entry.kind === "trait"
+      ? traitSummary({
+          ...canonical,
+          ...entry,
+          text,
+          value: entry.rating || "",
+        })
+      : text;
+  return [description, entry.descriptionNote].filter(Boolean).join("\n");
 }
 export function findEntries(catalogue, group, query = "", book = "") {
   const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);

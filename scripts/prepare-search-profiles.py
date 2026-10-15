@@ -21,7 +21,7 @@ def slug(s):
 for book, recipe in recipes.items():
     if book == 'core': continue  # The reviewed GM compiler supplies core profiles.
     layout = json.loads((STAGE/f'{book}.json').read_text(encoding='utf-8'))
-    manifest = json.loads((ROOT/'dist/data/books'/book/'manifest.json').read_text(encoding='utf-8'))
+    manifest = json.loads((ROOT/'content/sources/data/books'/book/'manifest.json').read_text(encoding='utf-8'))
     if layout['sha256'] != manifest['source']['sha256']:
         raise ValueError(f'Staged profile source differs from the registered PDF: {book}')
     records=[]; unresolved=[]

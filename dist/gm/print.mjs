@@ -134,7 +134,7 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
   const { r, s } = entry,
     inner = width - 20;
   for (let size = maxSize; size >= MIN_FONT; size -= 0.25) {
-    const lineHeight = size + 1.25,
+    const lineHeight = size + 0.75,
       sectionGap = 2;
     const title = wrap(bold, r.name, 12, inner),
       subtitle = wrap(

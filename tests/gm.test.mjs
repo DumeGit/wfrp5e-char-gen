@@ -28,7 +28,7 @@ const R = assembleBooks(
     await readFile(new URL("../dist/gm/data.json", import.meta.url)),
   ),
   raw = JSON.parse(
-    await readFile(new URL("../dist/gm/sources/core.json", import.meta.url)),
+    await readFile(new URL("../content/sources/gm/books/core.json", import.meta.url)),
   );
 const profile = (name) => data.profiles.find((p) => p.name === name),
   draft = (name) => freshGM(data, profile(name).id),
@@ -156,7 +156,7 @@ test("Griffon sheet uses compact descriptions for its three actual Traits, never
     r.traits[1].description,
     /extend the illumination distance.*20 yards/,
   );
-  assert.match(r.traits[2].description, /page 360/);
+  assert.match(r.traits[2].description, /pp. 360–361/);
   for (const text of [
     JSON.stringify(sheetSections(r, s)),
     JSON.stringify(cardSections(r, s)),
@@ -178,7 +178,7 @@ test("Griffon sheet uses compact descriptions for its three actual Traits, never
   );
 });
 
-test("added Traits and updated ratings use current mechanical summaries; full definitions and source conflict notes remain available", () => {
+test("added Traits and updated ratings use shared mechanics and preserve source conflict notes", () => {
   const s = draft("Griffon");
   s.removed.push(profile("Griffon").traits.find((t) => t.name === "Fly").key);
   trait(s, "Fly", "40");
@@ -194,7 +194,7 @@ test("added Traits and updated ratings use current mechanical summaries; full de
   );
   assert.match(
     r.traits.find((t) => t.name === "Bestial").description,
-    /half its Wounds.*Territorial/,
+    /half (?:its )?Wounds.*Territorial/,
   );
   assert.doesNotMatch(
     JSON.stringify(cardSections(r, s)),
@@ -210,7 +210,7 @@ test("added Traits and updated ratings use current mechanical summaries; full de
     result(draft("Bloodletter of Khorne")).traits.find(
       (t) => t.name === "Frenzy",
     ).description,
-    /Test WP to enter Frenzy: Free Attack/,
+    /WP Test to enter: Free Attack each Round/,
   );
   assert.match(
     result(draft("Orc")).traits.find((t) => t.name === "Belligerent")

@@ -14,6 +14,7 @@ import { validateIIIState, oldFaith, spellChoices } from "./archives-iii.mjs";
 import { validateWoMState } from "./winds-of-magic.mjs";
 import { validateRuleReference } from "./rule-references.mjs";
 import { validateReferenceEntry } from "./reference-entries.mjs";
+import { hydrateDescriptions } from "./description-data.mjs";
 
 export const BOOK_SCHEMA = 1;
 const arrays = [
@@ -276,8 +277,17 @@ export function validateManifest(p) {
 // Full source validation for builds/tests; browser startup uses book-bundle.mjs.
 export async function loadBookLibrary(
   readJSON,
-  registryURL = new URL("./data/books/index.json", import.meta.url),
+  registryURL = new URL(
+    "../content/sources/data/books/index.json",
+    import.meta.url,
+  ),
 ) {
+  const canonicalRoot = new URL("../content/sources/", import.meta.url);
+  const descriptions = registryURL.href.startsWith(canonicalRoot.href)
+    ? await readJSON(
+        new URL("../content/descriptions/catalogue.json", import.meta.url),
+      )
+    : null;
   const index = await readJSON(registryURL);
   if (
     index.schemaVersion !== BOOK_SCHEMA ||
@@ -311,7 +321,19 @@ export async function loadBookLibrary(
             !file.href.startsWith(dataRoot.href)
           )
             fail(`${item.id}: data must stay inside the data directory.`);
-          return [key, await readJSON(file)];
+          const value = await readJSON(file);
+          return [
+            key,
+            descriptions
+              ? hydrateDescriptions(
+                  value,
+                  descriptions,
+                  decodeURIComponent(
+                    file.href.slice(canonicalRoot.href.length),
+                  ),
+                )
+              : value,
+          ];
         }),
       );
       const data = Object.fromEntries(entries);
@@ -333,6 +355,23 @@ export async function loadBookLibrary(
     }),
   );
   const core = packs.find((p) => p.manifest.id === index.core);
+  // Explicit Skill targets already identify the canonical definition. Hydrate
+  // creator profiles as well as search, without a runtime lookup/download.
+  for (const pack of packs) {
+    for (const reference of pack.data.ruleReferences || []) {
+      if (reference.category !== "skill") continue;
+      const skill = (pack.data.skills || []).find(
+        (x) =>
+          entryFor(pack.manifest, "skills", x).contentId === reference.target,
+      );
+      if (skill && !skill.text)
+        Object.assign(skill, {
+          text: reference.text,
+          descriptionId: reference.descriptionId,
+          descriptionStatus: reference.descriptionStatus,
+        });
+    }
+  }
   if (
     !core ||
     core.manifest.kind !== "core" ||
@@ -457,6 +496,8 @@ function entryFor(pack, kind, value, key) {
   const allowed = new Set([
     "id",
     "contentId",
+    "descriptionId",
+    "descriptionStatus",
     "name",
     "page",
     "conversion",

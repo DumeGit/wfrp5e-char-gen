@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOOK = "lustria"
 PDF = Path(r"C:\Users\ninod\Downloads\Lustria.pdf")
 SHA = "8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844"
-PACK = ROOT / "dist/data/books" / BOOK
+PACK = ROOT / "content/sources/data/books" / BOOK
 
 
 def clean(text):
@@ -234,7 +234,7 @@ def main():
     manifest = {"schemaVersion":1,"id":BOOK,"title":"Lustria","shortTitle":"Lustria","edition":4,"version":"1.0.0","kind":"supplement","dependsOn":["core"],"source":{"file":PDF.name,"sha256":SHA},"compatibility":{"reviewed":True,"notes":["Current core Skills/Talents and Fifth Edition advancement govern; approved conversions carry selective Legacy notes.","Skinks are NPC-only by user choice. Castes and sacred marks stack; Slann choose Colour Lores and matching Winds at their printed Channelling total, without invented spell lists.","Existing duplicate High Elf spells remain unchanged. Distinct Mathlann prayers are Elven-only; no missing Blessings are invented.","Read-only source references preserve printed Fourth Edition wording. Conflicting optional Career probabilities, named NPCs, campaign managers and setting/adventure prose remain excluded."]},"files":{key:filename+".json" for key,filename in [("careers","careers"),("weapons","weapons"),("market","market"),("spells","spells"),("rules","rules"),("coverage","coverage"),("referenceEntries","reference-entries")]}}
     for filename,data in [("manifest",manifest),("careers",career_rows),("weapons",weapon_rows),("market",market),("spells",spells),("rules",rules),("coverage",coverage),("reference-entries",refs)]:
         write(PACK/f"{filename}.json",data)
-    path=ROOT/"dist/data/books/index.json";registry=read(path)
+    path=ROOT/"content/sources/data/books/index.json";registry=read(path)
     if not any(p["id"]==BOOK for p in registry["packs"]):registry["packs"].append({"id":BOOK,"path":f"{BOOK}/manifest.json"})
     write(path,registry)
     path=ROOT/"scripts/search-reference-review.json";audit=read(path)

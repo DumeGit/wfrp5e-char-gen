@@ -7,6 +7,11 @@ import {
   gmInventory,
 } from "../dist/gm/content.mjs";
 import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
+import {
+  checkDescriptions,
+  loadDescriptionCatalogue,
+} from "./descriptions.mjs";
+import { hydrateDescriptions } from "../dist/description-data.mjs";
 import { assembleGMOptions } from "../dist/gm/books.mjs";
 import {
   searchCoverage,
@@ -22,6 +27,8 @@ import {
   inclusionMarkdown,
   countSummary,
 } from "../dist/book-report.mjs";
+const descriptions = await loadDescriptionCatalogue();
+const descriptionReport = await checkDescriptions(descriptions);
 const library = await loadBookLibrary(async (url) =>
     JSON.parse(await readFile(url, "utf8")),
   ),
@@ -41,11 +48,15 @@ const next =
   readme.slice(readme.indexOf(end));
 const gmRules = assembleGMOptions(library);
 let gm = prepareGM(
-  JSON.parse(
-    await readFile(
-      new URL("../dist/gm/sources/core.json", import.meta.url),
-      "utf8",
+  hydrateDescriptions(
+    JSON.parse(
+      await readFile(
+        new URL("../content/sources/gm/books/core.json", import.meta.url),
+        "utf8",
+      ),
     ),
+    descriptions,
+    "gm/books/core.json",
   ),
   gmRules,
 );
@@ -66,7 +77,10 @@ for (const pack of library.packs.filter(
   try {
     raw = JSON.parse(
       await readFile(
-        new URL(`../dist/gm/sources/${pack.manifest.id}.json`, import.meta.url),
+        new URL(
+          `../content/sources/gm/books/${pack.manifest.id}.json`,
+          import.meta.url,
+        ),
         "utf8",
       ),
     );
@@ -74,7 +88,11 @@ for (const pack of library.packs.filter(
     if (error.code === "ENOENT") continue;
     throw error;
   }
-  gm = addGMSupplement(gm, raw, gmRules);
+  gm = addGMSupplement(
+    gm,
+    hydrateDescriptions(raw, descriptions, `gm/books/${pack.manifest.id}.json`),
+    gmRules,
+  );
 }
 
 gm.optionBooks = gmRules.books.map(
@@ -106,7 +124,7 @@ for (const pack of library.packs.filter((p) => p.manifest.kind !== "variant")) {
   const hash = referenceContentHash(
     await readFile(
       new URL(
-        `../dist/data/books/${pack.manifest.id}/reference-entries.json`,
+        `../content/sources/data/books/${pack.manifest.id}/reference-entries.json`,
         import.meta.url,
       ),
       "utf8",
@@ -119,6 +137,20 @@ for (const pack of library.packs.filter((p) => p.manifest.kind !== "variant")) {
 }
 const searchReport = searchCoverage(library, corpus, review, gm);
 const outputs = [
+  [
+    "../dist/description-rules.mjs",
+    "// Generated from content/descriptions/trait-rules.mjs. Edit the authoring source.\n" +
+      (
+        await readFile(
+          new URL("../content/descriptions/trait-rules.mjs", import.meta.url),
+          "utf8",
+        )
+      ).replaceAll("\r\n", "\n"),
+  ],
+  [
+    "../docs/DESCRIPTION-COVERAGE.md",
+    `# Description coverage\n\nGenerated from the canonical description catalogue.\n\n- ${descriptionReport.records} canonical descriptions; ${descriptionReport.bindings} source bindings.\n- ${descriptionReport.reviewed} reviewed mechanical summaries.\n- ${descriptionReport.records - descriptionReport.reviewed} imported descriptions awaiting editorial review.\n\nRegistration centralises wording; it does not certify that imported wording is paraphrased. Conditional Trait summaries are authored in the same description directory. Book/page and Legacy notes remain separate. See [DESCRIPTIONS.md](DESCRIPTIONS.md).\n`,
+  ],
   [
     "../dist/data/search-library.json",
     JSON.stringify(compactReferenceLibrary(corpus)) + "\n",

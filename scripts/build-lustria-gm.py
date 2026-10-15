@@ -26,7 +26,7 @@ def difficulty(text):
 
 
 def build(doc):
-    catalogue = {"config": read(ROOT / "dist/data/books/core/config.json")}
+    catalogue = {"config": read(ROOT / "content/sources/data/books/core/config.json")}
     core_traits = read(ROOT / "dist/gm/data.json")["traits"]
     definitions = {x["name"] for x in core_traits if x.get("source", {}).get("book") != BOOK}
     traits, profiles = [], []
@@ -227,7 +227,7 @@ def main():
     assert hashlib.sha256(PDF.read_bytes()).hexdigest()==SHA
     doc=pymupdf.open(PDF)
     profiles,traits=build(doc)
-    write(ROOT/"dist/gm/sources/lustria.json",{"schemaVersion":1,"id":BOOK,"source":{"file":PDF.name,"sha256":SHA},"summary":"55 generic profiles, Skink castes and sacred marks","profiles":profiles,"templates":templates(profiles),"traits":traits,"training":[]})
+    write(ROOT/"content/sources/gm/books/lustria.json",{"schemaVersion":1,"id":BOOK,"source":{"file":PDF.name,"sha256":SHA},"summary":"55 generic profiles, Skink castes and sacred marks","profiles":profiles,"templates":templates(profiles),"traits":traits,"training":[]})
     print(f"Published {len(profiles)} generic profiles, 15 templates and {len(traits)} abilities.")
 
 

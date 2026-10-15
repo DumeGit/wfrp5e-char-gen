@@ -5,7 +5,7 @@ import pdfplumber
 from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=Path(r'C:\Users\ninod\Downloads\Warhammer Fantasy Roleplay (2).pdf')
-DEST=ROOT/'dist/data'
+DEST=ROOT/'content/sources/data'
 pdf=pdfplumber.open(SOURCE); reader=PdfReader(SOURCE)
 def norm(s):
  return re.sub(r'\s+',' ',re.sub(r'([-\/])\s+', r'\1', s.replace('\u00ad','').replace('ﬂ','fl').replace('ﬁ','fi'))).strip()

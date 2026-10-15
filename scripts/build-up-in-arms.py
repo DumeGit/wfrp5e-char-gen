@@ -10,7 +10,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGED = ROOT.parent/'tmp/pdfs/up-in-arms-review'
-DEST = ROOT/'dist/data/books/up-in-arms'
+DEST = ROOT/'content/sources/data/books/up-in-arms'
 DEST.mkdir(parents=True, exist_ok=True)
 read = lambda path: json.loads(path.read_text(encoding='utf-8-sig'))
 slug = lambda s: re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
@@ -23,11 +23,11 @@ def write(name, value):
     (DEST/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 
-core_skills = read(ROOT/'dist/data/skills.json')
-core_talents = read(ROOT/'dist/data/talents.json')
-core_shop = read(ROOT/'dist/data/gear.json')+read(ROOT/'dist/data/books/core/market.json')
-core_weapons = read(ROOT/'dist/data/books/core/weapons.json')
-config = read(ROOT/'dist/data/books/core/config.json')
+core_skills = read(ROOT/'content/sources/data/skills.json')
+core_talents = read(ROOT/'content/sources/data/talents.json')
+core_shop = read(ROOT/'content/sources/data/gear.json')+read(ROOT/'content/sources/data/books/core/market.json')
+core_weapons = read(ROOT/'content/sources/data/books/core/weapons.json')
+config = read(ROOT/'content/sources/data/books/core/config.json')
 careers = read(STAGED/'careers.raw.json')
 talent_map = {'Diceman': 'Dicer', 'Strider': 'Striding Gait', 'Tunnel Rat': 'Tunnel Fighter', 'Public Speaking': 'Public Speaker', 'Trick Riding': 'Trick Rider', 'Warleader': 'War Leader', 'Unshakable': 'Unshakeable', 'Rough Rider': 'Roughrider', 'Nimble Fingered': 'Nimble-fingered'}
 rules = []
@@ -90,7 +90,7 @@ for key, name in [('tilea', 'Tilea'), ('luccini', 'Luccini (Tilea)'), ('imperial
         o.update({'skills': tilea['skills'], 'talents': tilea['talents'], 'randomTalents': 3, 'languages': ['Tilean'], 'careerChoices': regional, 'allowedPatrons': ['Myrmidia', 'Morr', 'Verena', 'Shallya', 'Ranald']})
         o['conversion'] += ' User approved native Tilean +30, the two printed Talent choices and three random Talents; Fourth Edition +5/+3 Skill allocations are not used.'
     else:
-        human = read(ROOT/'dist/data/species.json')['Human']
+        human = read(ROOT/'content/sources/data/species.json')['Human']
         o['skills'] = [s.replace('Language (Wastelander)', 'Language (Tilean)') for s in human['skills']]
         o['conversion'] += ' The printed Wasteland language option corresponds to core Language (Wastelander) and is replaced by Language (Tilean); native Reikspiel and core Human Talents remain.'
     if key == 'luccini':

@@ -13,8 +13,8 @@ const json = async (path) =>
 const [library, data, raw, core] = await Promise.all([
   json("../dist/data/book-library.json"),
   json("../dist/gm/data.json"),
-  json("../dist/gm/sources/up-in-arms.json"),
-  json("../dist/gm/sources/core.json"),
+  json("../content/sources/gm/books/up-in-arms.json"),
+  json("../content/sources/gm/books/core.json"),
 ]);
 const rulesFor = createGMRules(library, data);
 const draft = (name) =>

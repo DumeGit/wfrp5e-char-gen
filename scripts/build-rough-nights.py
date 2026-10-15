@@ -28,7 +28,7 @@ def write(name, value):
 
 pages = read(STAGED/'pages.json')
 tables = read(STAGED/'tables.raw.json')
-core = read(ROOT/'dist/data/careers.json')
+core = read(ROOT/'content/sources/data/careers.json')
 aliases = {'Advisor':'Adviser'}
 if args.bawd == 'knave': aliases['Bawd']='Knave'
 career_rows = []
@@ -68,7 +68,7 @@ talent = {'id':'rough-nights:talent:suffuse-with-ulgu','name':'Suffuse with Ulgu
 if args.suffuse=='unavailable':talent['unavailable']='No Fifth Edition equivalent; the user deferred adapting this Talent. Choose Beneath Notice in the Species slot instead (Rough Nights p. 88).'
 write('talents.json',[talent])
 
-core_skills=read(ROOT/'dist/data/skills.json')
+core_skills=read(ROOT/'content/sources/data/skills.json')
 rules=[]
 language=next(x for x in core_skills if x['name']=='Language')
 if 'Ghassally' not in language['options']:rules.append({'id':'rough-nights:rule:ghassally','path':['skillOptions','Language'],'operation':'append','value':['Ghassally'],'page':88,'reason':'Printed Gnome language specialisation; core Language definition applies.'})

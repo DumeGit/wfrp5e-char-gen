@@ -8,7 +8,7 @@ PDF = Path(r"C:\Users\ninod\Downloads\The Cluster-Eye Tribe.pdf")
 SHA = "ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8a"
 assert hashlib.sha256(PDF.read_bytes()).hexdigest() == SHA
 BOOK = "cluster-eye-tribe"
-PACK = ROOT / f"dist/data/books/{BOOK}"
+PACK = ROOT / f"content/sources/data/books/{BOOK}"
 PACK.mkdir(exist_ok=True)
 
 def write(path, value):
@@ -104,14 +104,14 @@ refs = [{"id": identity("reference", slug), "name": name, "category": "rule", "t
     ("venom-arrows", "Spider Venom Arrows", 10, "A target wounded by an arrow dipped in Spider Venom makes a Challenging (+0) Endurance Test; failure inflicts one Poisoned Condition. A target reduced to 0 Wounds while suffering this arrow's poison becomes Unconscious, but remaining Poisoned Conditions do not put it at risk of death.")
 ]]
 ability = {"id": identity("trait", "arboreal"), "name": "Arboreal", "page": 19, "source": source(19), "parameter": "", "text": arboreal}
-write(ROOT/f"dist/gm/sources/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": {"file": PDF.name, "sha256": SHA}, "summary": "Forest Goblin, Drakwald Mancatcher and seven creature advancement templates", "profiles": profiles, "templates": templates, "training": [], "traits": [ability]})
+write(ROOT/f"content/sources/gm/books/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": {"file": PDF.name, "sha256": SHA}, "summary": "Forest Goblin, Drakwald Mancatcher and seven creature advancement templates", "profiles": profiles, "templates": templates, "training": [], "traits": [ability]})
 write(PACK/"manifest.json", {"schemaVersion": 1, "id": BOOK, "title": "The Cluster-Eye Tribe", "shortTitle": "Cluster-Eye Tribe", "edition": 4, "version": "1.0.0", "kind": "supplement", "dependsOn": ["core"], "source": {"file": PDF.name, "sha256": SHA}, "compatibility": {"reviewed": True, "notes": ["Printed Forest Goblin statistics are retained; current core Afraid, Infected and Flee! definitions carry selective Legacy notes.", "Arboreal is an unchanged situational SL bonus, not a permanent Skill increase.", "Two profiles and seven templates use the user-approved Size, armour, Longbow and spellcasting conversions. Named NPCs, setting and adventures are excluded."]}, "files": {"rules": "rules.json", "ruleReferences": "rule-references.json", "coverage": "coverage.json", "referenceEntries": "reference-entries.json"}})
 write(PACK/"rules.json", [{"id": identity("skills", "ride"), "path": ["skillOptions", "Ride"], "operation": "append", "value": ["Spider", "Wolf", "Boar"], "page": 9, "reason": "Printed mount specialisations; optional GM bonuses are separate from PC creation allocations."}])
 write(PACK/"rule-references.json", [{"id": identity("rule-reference", "arboreal"), "name": "Arboreal", "category": "trait", "topic": "Creature Traits", "page": 19, "text": arboreal}])
 write(PACK/"reference-entries.json", refs)
 features = [("gm", "Two profiles and seven advancement templates", "adapted", 8, "Approved Size, core armour/Longbow, bounded Shaman spells, explicit choices and core Talent/Trait definitions."), ("arboreal", "Arboreal", "implemented", 19, "Printed situational SL effect; no permanent Skill calculation or Legacy conversion."), ("riding", "Goblin and Orc mount Skills", "implemented", 9, "Explicit optional +20 Ride grants; no automatic mount sheet or PC advances."), ("venom-arrows", "Spider Venom Arrows", "reference-only", 10, "Specific nonlethal ammunition rule; no printed purchase profile or live poison tracking."), ("fimir", "Fimir Shaman spell lists", "reference-only", 8, "No installed Fimir foundation; Ogre Lore restrictions remain enforced without invented grants."), ("excluded", "Named characters and adventures", "deferred", 12, "Named Vish, Bograt, Nurd and Bugshot, setting and encounters excluded by user scope.")]
 write(PACK/"coverage.json", {"schemaVersion": 1, "records": [], "features": [{"id": identity("feature", slug), "name": name, "status": status, "source": source(page), "reason": reason} for slug,name,status,page,reason in features]})
-index = ROOT/"dist/data/books/index.json"
+index = ROOT/"content/sources/data/books/index.json"
 registry = json.loads(index.read_text(encoding="utf-8"))
 if not any(x["id"] == BOOK for x in registry["packs"]): registry["packs"].append({"id": BOOK, "path": f"{BOOK}/manifest.json"})
 write(index, registry)

@@ -18,9 +18,9 @@ args = parser.parse_args()
 if args.output.resolve().is_relative_to((ROOT / 'dist').resolve()):
     raise ValueError('Stage source extraction outside dist; raw PDFs are not published assets')
 args.output.mkdir(parents=True, exist_ok=True)
-registry = json.loads((ROOT / 'dist/data/books/index.json').read_text(encoding='utf-8'))
+registry = json.loads((ROOT / 'content/sources/data/books/index.json').read_text(encoding='utf-8'))
 for item in registry['packs']:
-    manifest = json.loads((ROOT / 'dist/data/books' / item['path']).read_text(encoding='utf-8'))
+    manifest = json.loads((ROOT / 'content/sources/data/books' / item['path']).read_text(encoding='utf-8'))
     if manifest['kind'] == 'variant' or (args.book and item['id'] != args.book):
         continue
     source = args.pdf_root / manifest['source']['file']

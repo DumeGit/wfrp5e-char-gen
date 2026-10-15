@@ -18,7 +18,7 @@ const json = async (p) =>
 const [library, data, raw] = await Promise.all([
   json("../dist/data/book-library.json"),
   json("../dist/gm/data.json"),
-  json("../dist/gm/sources/archives-iii.json"),
+  json("../content/sources/gm/books/archives-iii.json"),
 ]);
 const rulesFor = createGMRules(library, data),
   draft = () => freshGM(data, "core:creatures:human", ["core"]),

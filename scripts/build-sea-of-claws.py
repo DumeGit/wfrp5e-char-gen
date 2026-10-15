@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOOK = "sea-of-claws"
 PDF = Path(r"C:\Users\ninod\Downloads\Sea of Claws (1).pdf")
 SHA = "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c"
-PACK = ROOT / f"dist/data/books/{BOOK}"
+PACK = ROOT / f"content/sources/data/books/{BOOK}"
 REVIEW = ROOT.parent / "sea-of-claws-review"
 
 
@@ -60,7 +60,7 @@ def gm_source(doc):
     marine="The creature is at home in the ocean and unsuited to life on land. Its printed profile assumes an aquatic environment and it moves its full Movement in water. Out of water, Movement drops to 1 and all its Tests suffer −2 SL. It must be regularly doused with water or begin to suffocate (core Suffocation)."
     abilities.append({"id":ident("trait","marine-creature"),"name":"Marine Creature","page":140,"source":source(140),"text":marine})
     extras={"Lurkerfish":["Lure of the Lurkerfish"],"Latch-Eel":["Slimy"],"Daggerfish":["Love the Light"],"Sea Elemental":["Immersion","Fire Resistant","Mindless Spellcaster"],"Gargantuan":["Boat Crusher","Electrical Discharge"],"Merwyrm":["Whale Bane"],"Syreen":["Syreen’s Call"],"Orb Leviathan":["Lure of the Leviathan","Resistant to Cold"],"Black Leviathan":["Devastating Assault","On a Different Scale"]}
-    core=read(ROOT / "dist/gm/sources/core.json")
+    core=read(ROOT / "content/sources/gm/books/core.json")
     allowed={t["name"] for t in core["traits"]}|{t["name"] for t in abilities}
     for raw in read(REVIEW / "profiles.raw.json"):
         name,page,stats=raw["name"],raw["page"],raw["stats"]
@@ -134,7 +134,7 @@ def gm_source(doc):
             profile["magicCharacteristic"]="S"
             notes.append("Mindless Spellcaster uses Strength for casting and Channelling. Printed 80 Wounds are retained as its source baseline; explicit recalculation uses current core Size.")
         profiles.append(profile)
-    write(ROOT / f"dist/gm/sources/{BOOK}.json",{"schemaVersion":1,"id":BOOK,"source":{"file":PDF.name,"sha256":SHA},"summary":"13 generic sea creatures; named captains and Triton excluded","profiles":profiles,"templates":[],"training":[],"traits":abilities})
+    write(ROOT / f"content/sources/gm/books/{BOOK}.json",{"schemaVersion":1,"id":BOOK,"source":{"file":PDF.name,"sha256":SHA},"summary":"13 generic sea creatures; named captains and Triton excluded","profiles":profiles,"templates":[],"training":[],"traits":abilities})
     return profiles,abilities
 
 
@@ -163,10 +163,10 @@ def publish(doc, careers, origins, chanties):
     write(PACK / "coverage.json",{"schemaVersion":1,"records":[],"features":[{"id":ident("feature",key),"name":name,"status":status,"source":source(page),"reason":reason} for key,name,status,page,reason in features]})
     write(PACK / "manifest.json",{"schemaVersion":1,"id":BOOK,"title":"Sea of Claws","shortTitle":"Sea of Claws","edition":4,"version":"1.0.0","kind":"supplement","dependsOn":["core","up-in-arms"],"source":{"file":PDF.name,"sha256":SHA},"compatibility":{"reviewed":True,"notes":["Fifth Edition creation and advancement govern. Explicit user decisions are in scripts/sea-of-claws-decisions.json and docs/SEA-OF-CLAWS.md.","Only actual conversions carry Legacy explanations; unchanged material has its source reference.","Crew Commander reuses the newly approved shared adaptation. Named NPCs and live campaign systems are excluded."]},"files":{key:key.replace("References","-references").replace("Entries","-entries")+".json" for key in ["careers","origins","tables","talents","spells","market","rules","coverage","ruleReferences","referenceEntries"]}})
     artillery_variant()
-    index=read(ROOT / "dist/data/books/index.json")
+    index=read(ROOT / "content/sources/data/books/index.json")
     for book in [BOOK,BOOK+"-artillery"]:
         if not any(p["id"]==book for p in index["packs"]):index["packs"].append({"id":book,"path":book+"/manifest.json"})
-    write(ROOT / "dist/data/books/index.json",index)
+    write(ROOT / "content/sources/data/books/index.json",index)
     audit=read(ROOT / "scripts/search-reference-review.json")
     audit["books"][BOOK]={"sourceHash":SHA,"publishedSHA256":hashlib.sha256((PACK / "reference-entries.json").read_bytes()).hexdigest(),"entries":len(refs),"areas":[{"first":41,"last":67,"topic":"Norse creation, artillery and Chanties"},{"first":89,"last":101,"topic":"Stromfels and naval artillery"},{"first":140,"last":147,"topic":"Sea creature abilities"}],"records":[{"id":r["id"],"name":r["name"],"page":r["page"],"disposition":"included"} for r in refs]+[{"id":p["id"],"name":p["name"],"page":p["page"],"disposition":"included","reason":"GM foundation only; excluded from global search."} for p in profiles]+[{"id":ident("excluded","named-captains"),"name":"Named captains and Triton","page":"148–158","disposition":"excluded","reason":"Named characters are outside the requested creator scope."}]}
     write(ROOT / "scripts/search-reference-review.json",audit)
@@ -267,14 +267,14 @@ def build():
         ("Trade",["Boatbuilder"],64), ("Play",["Fiddle","Squeezebox","Tin Whistle","Pennywhistle"],66),
         ("Language",["Norse","Gospodarinyi"],56),
     ]:
-        base_options=next(s["options"] for s in read(ROOT / "dist/data/skills.json") if s["name"]==group)
+        base_options=next(s["options"] for s in read(ROOT / "content/sources/data/skills.json") if s["name"]==group)
         additions=[value for value in values if value not in base_options]
         if additions:rule("skillOptions",group,additions,page,"Printed Sea of Claws specialisations; current core Skill definition and advancement apply.")
     chanties = read(REVIEW / "chanties.raw.json")
     rule("talentOptions","Chanty",[c["name"] for c in chanties],67,"One distinct printed song per Chanty purchase; no additional XP or tracker box for selecting the song.","add")
     for key, values, page in [("Striding Gait",["Coastal"],64),("Etiquette",["Crew"],66),("Hatred",["Followers of Stromfels","Manannites","Followers of Chaos"],74)]:
         # An existing setting can be extended idempotently only with include.
-        config = read(ROOT / "dist/data/books/core/config.json")
+        config = read(ROOT / "content/sources/data/books/core/config.json")
         existing = config["talentOptions"].get(key)
         additions = [value for value in values if value not in (existing or [])]
         if additions:
@@ -307,7 +307,7 @@ def build():
     # Tables: replace exactly the Riverfolk intervals; retain the remainder
     # of the supplied Fifth Edition table, rather than inventing new weights.
     raw_tables = read(REVIEW / "tables.raw.json")
-    core_careers = read(ROOT / "dist/data/careers.json")
+    core_careers = read(ROOT / "content/sources/data/careers.json")
     by_name = {c["name"]:c["id"] for c in core_careers}
     by_name.update({c["name"]:c["id"] for c in careers})
     by_name["Huffer"] = ident("career","pilot")
@@ -323,7 +323,7 @@ def build():
         norse_rows.append({"min":span[0],"max":span[-1],"result":by_name[clean(name)]})
     tables.append({"id":ident("table","norse-careers"),"name":"Norse Human Careers","kind":"career","species":"Human","origins":[o["id"] for o in origins if o["species"]=="Human"],"sides":100,"page":57,"rows":norse_rows,"conversion":"User-approved Artisan 07–10 resolves missing 07. Advisor uses core Adviser; Huffer uses source Pilot alternative. Other printed weights remain unchanged."})
     sea_rows = next(t["cells"] for t in raw_tables if t["page"]==63)
-    core_rolls = read(ROOT / "dist/data/career-rolls.json")
+    core_rolls = read(ROOT / "content/sources/data/career-rolls.json")
     for column, species in enumerate(["Human","Dwarf","Halfling","High Elf","Wood Elf"],1):
         replacement=[]
         for row in sea_rows[1:]:

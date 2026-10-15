@@ -20,7 +20,7 @@ def convert(t):
         t=re.sub(re.escape(name)+r' \([+−–-]?'+str(abs(number))+r'\)',name+' ('+('+' if number>=0 else '−')+str(abs(number)//10)+' SL)',t)
     return t.replace('Resistance (','Resistant (').replace('Strider (','Striding Gait (').replace('Arcane Lore (','Arcane Magic (').replace('Advantage','Momentum')
 
-careers=read(STAGED/'careers.raw.json'); skills=read(ROOT/'dist/data/skills.json'); config=read(ROOT/'dist/data/books/core/config.json')
+careers=read(STAGED/'careers.raw.json'); skills=read(ROOT/'content/sources/data/skills.json'); config=read(ROOT/'content/sources/data/books/core/config.json')
 extra={}; talents={}
 colleges={'Hierophant':'Light','Alchemist':'Metal','Druid':'Life','Astromancer':'Heavens','Shadowmancer':'Shadows','Spiriter':'Death','Pyromancer':'Fire','Shaman':'Beasts'}
 for c in careers:
@@ -56,7 +56,7 @@ for path,entries in [(('skillOptions',k),v) for k,v in extra.items()]+[(('talent
     rules.append({'id':'winds-of-magic:rule:'+slug('-'.join(path)),'path':list(path),'operation':'append','value':list(entries),'page':min(entries.values()),'reason':'Additional specialisations explicitly printed in Winds of Magic Careers.'})
 write('rules.json',rules)
 write('skills.json',[{'id':'winds-of-magic:skill:'+slug(name),'name':name,'char':'Int','advanced':True,'grouped':False,'options':[],'page':page,'text':text} for name,page,text in [('Augury',44,'Interpret signs and portents to receive visions of the future. Only Humans and Elves may learn Augury; it cannot be possessed with Psychometry. See pp. 44–46 for readings and conditional first-level Career access.'),('Psychometry',47,'An innate Human ability to receive visions of recent events or unspoken thoughts while in a related place or touching an associated object or person. Each Test requires an Average (+2 SL) Endurance Test or a Fatigued Condition (p. 48). It cannot be possessed with Augury.')]])
-core={x['name'] for x in read(ROOT/'dist/data/spells.json')}
+core={x['name'] for x in read(ROOT/'content/sources/data/spells.json')}
 spells=[]; duplicates=[]
 for s in read(STAGED/'spells.raw.json'):
     if s['name'] in core or s['name']=='Fat of the Land':

@@ -17,7 +17,7 @@ const json = async (p) =>
 const data = await json("../dist/gm/data.json");
 const library = await json("../dist/data/book-library.json");
 const rulesFor = createGMRules(library, data);
-const raw = await json("../dist/gm/sources/bayl-many-eyes.json");
+const raw = await json("../content/sources/gm/books/bayl-many-eyes.json");
 const draft = (name = "Chaos Warrior of Nurgle", template = "") => {
   const p = data.profiles.find((p) => p.name === name);
   const s = freshGM(data, p.id, ["core", "bayl-many-eyes"]);

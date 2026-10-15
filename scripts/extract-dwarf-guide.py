@@ -93,7 +93,7 @@ for o,name in zip(origins,origin_names):
 write('origins.json',origins)
 
 tables=[{'id':'dwarf-guide:table:'+slug(name),'name':name+' Dwarf Careers','kind':'career','species':'Dwarf','origin':o['id'],'page':'51–52','sides':100,'rows':[]} for o,name in zip(origins,origin_names)]
-core=json.loads((ROOT/'dist/data/careers.json').read_text(encoding='utf-8'))
+core=json.loads((ROOT/'content/sources/data/careers.json').read_text(encoding='utf-8'))
 lookup={c['name']:c['id'] for c in core+careers};lookup.update(Advisor=lookup['Adviser'],Huffer=lookup['Pilot'],Seaman=lookup['Sailor'])
 for n in [51,52]:
     page=pdf.pages[n-1];ws=page.extract_words()

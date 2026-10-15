@@ -51,7 +51,7 @@ Potion ingredient costs and alchemical market/sales values are not retail prices
 
 ## Extraction and verification
 
-`scripts/extract-winds-of-magic.py` stages text, Career columns and schemes. `scripts/build-winds-of-magic.py --output-dir dist/data/books/winds-of-magic` produces data but does not register the pack. Raw staged files are under the parent workspace's `tmp/pdfs/winds-of-magic-review`.
+`scripts/extract-winds-of-magic.py` stages text, Career columns and schemes. `scripts/build-winds-of-magic.py --output-dir content/sources/data/books/winds-of-magic` produces data but does not register the pack. Raw staged files are under the parent workspace's `tmp/pdfs/winds-of-magic-review`.
 
 Tests cover the 32 existing supplement selections, all twelve Career schemes/creation allocations, optional Career roll boundaries, College restrictions, psychic Skill access/Talent sacrifice, printed Alchemist spell choices, ritual XP/duplicates/eligibility/undo/count exclusions, strict learning-rule schema, actual robe money/Encumbrance and all 556 editable PDF fields. Desktop and 390-pixel mobile preview checks verify purchase/refund, visible disabled reasons, no horizontal overflow and ready-to-export state. The actual browser-generated PDF has 556 editable fields and matching XP/ritual values; the sheet and attached record were rendered and visually inspected.
 

@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PDF = Path(r"C:\Users\ninod\Downloads\Tribes and Tribulations.pdf")
 SHA = "008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e"
 BOOK = "tribes-tribulations"
-PACK = ROOT / f"dist/data/books/{BOOK}"
+PACK = ROOT / f"content/sources/data/books/{BOOK}"
 KEYS = ["M", "WS", "BS", "S", "T", "I", "Ag", "Dex", "Int", "WP", "Fel", "W"]
 
 def write(path, value):
@@ -239,7 +239,7 @@ def build(decisions):
     abilities[-1]['adaptation'] = 'Printed Average (+20) uses core Average (+2 SL); current Venom inflicts Poisoned on Wounds without an avoidance Test.'
     write(PACK/'rule-references.json',[{'id':identity('rule-reference',a['name']),'name':a['name'],'page':a['page'],'category':'trait','topic':'Creature abilities','text':a['text'],**({'adaptation':a['adaptation']} if a.get('adaptation') else {})} for a in abilities if a['name'] != 'Prejudice'])
     write(PACK/'spells.json',spells)
-    write(ROOT/f'dist/gm/sources/{BOOK}.json',{'schemaVersion':1,'id':BOOK,'source':{'file':PDF.name,'sha256':SHA},'summary':'19 generic profiles, seven warband templates, eight Troll templates and artillery crew','profiles':profiles,'templates':templates,'training':[],'traits':abilities})
+    write(ROOT/f'content/sources/gm/books/{BOOK}.json',{'schemaVersion':1,'id':BOOK,'source':{'file':PDF.name,'sha256':SHA},'summary':'19 generic profiles, seven warband templates, eight Troll templates and artillery crew','profiles':profiles,'templates':templates,'training':[],'traits':abilities})
     write(PACK/'manifest.json',{'schemaVersion':1,'id':BOOK,'title':'Tribes and Tribulations','shortTitle':'Tribes & Tribulations','edition':4,'version':'1.0.0','kind':'supplement','dependsOn':['core'],'source':{'file':PDF.name,'sha256':SHA},'compatibility':{'reviewed':True,'notes':['Generic foundations remain separately sourced; named characters and adventures are excluded.','Only actual Fifth Edition replacements receive Legacy explanations.','Die Hard retains the user-supplied older-edition definition; no automatic resurrection.']},'files':{'ruleReferences':'rule-references.json','spells':'spells.json','weapons':'weapons.json','market':'market.json','gear':'gear.json','rules':'rules.json','coverage':'coverage.json','referenceEntries':'reference-entries.json'}})
     write(PACK/'rules.json',[{'id':identity('skills','ranged-catapult'),'path':['skillOptions','Ranged'],'operation':'include','value':['Catapult'],'page':41,'reason':'Printed artillery Skill specialisation.'},{'id':identity('skills','ride-mounts'),'path':['skillOptions','Ride'],'operation':'include','value':['Spider','Wolf','Boar','Squig','Mournfang'],'page':19,'reason':'Printed mounts; no free PC Skill advances.'}])
     weapons = [{'id':identity('weapons',n),'name':n,'page':41,'kind':'ranged','group':g,'enc':enc,'reach':str(r),'damage':str(d),'qualities':q} for n,g,enc,r,d,q in [('Spear Chukka','Crossbow',20,150,12,'Accurate, Crewed 2, Dangerous, Reload 3'),('Doom Diver','Catapult',20,120,13,'Accurate, Dangerous, Impact, Reload 3'),('Rock Lobber','Catapult',40,100,15,'Crewed 3, Dangerous, Imprecise, Reload 3')]]
@@ -291,7 +291,7 @@ def build(decisions):
     write(PACK/'reference-entries.json',refs)
     features = [('profiles','19 generic profiles','adapted',9,'Core Size, Sprinter, Snotling Wounds and Die Hard decisions; printed values otherwise preserved.'),('warband','Seven warband templates and artillery crew','adapted',16,'Current core Talents/armour, explicit equipment and species/Lore limits.'),('trolls','Four Troll types and four combinable character templates','adapted',88,'Approved Swamp-strider and core Striding Gait/Magic Resistance replacements; conditional abilities remain references.'),('magic','24 Waaagh! and four Great Maw spells','adapted',82,'Difficulty/Momentum compatibility, Target 1 correction and Magick Channelling decision.'),('equipment','War machines, ammunition and seven magic items','reference-only',41,'No supplied prices; acquired/reference profiles, unknown weights remain unresolved.'),('live','Conditional abilities, casting and campaign play','reference-only',94,'Descriptions only; no live resurrection, Conditions, healing or staff rolls automated.'),('excluded','Named characters, adventures and narrative Nemesis traits','deferred',26,'Explicit user scope; not selectable or global search content.')]
     write(PACK/'coverage.json',{'schemaVersion':1,'records':[],'features':[{'id':identity('feature',s),'name':n,'status':status,'source':source(page),'reason':reason} for s,n,status,page,reason in features]})
-    index = ROOT/'dist/data/books/index.json'
+    index = ROOT/'content/sources/data/books/index.json'
     registry = json.loads(index.read_text(encoding='utf-8'))
     if not any(p['id'] == BOOK for p in registry['packs']): registry['packs'].append({'id':BOOK,'path':f'{BOOK}/manifest.json'})
     write(index,registry)

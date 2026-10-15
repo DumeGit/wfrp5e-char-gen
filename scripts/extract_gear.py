@@ -10,5 +10,5 @@ for n in [308,309,310,311,316]:
   if m:
    name={'Stein':'Pewter Stein','Cryptography':'Book, Cryptography'}.get(m[1],m[1])
    items.append(dict(name=name,price=m[2],enc=int(m[3]),capacity=int(m[4]) if m[4] else None,availability=m[5],page=n))
-(Path(__file__).resolve().parents[1]/'dist/data/gear.json').write_text(json.dumps(items,ensure_ascii=False,indent=2),encoding='utf8')
+(Path(__file__).resolve().parents[1]/'content/sources/data/gear.json').write_text(json.dumps(items,ensure_ascii=False,indent=2),encoding='utf8')
 print(len(items),'equipment table entries')

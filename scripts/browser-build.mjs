@@ -20,6 +20,7 @@ export async function buildFingerprint(root) {
   };
   await visit("dist");
   await visit("scripts");
+  await visit("content");
   for (const file of ["package.json", "package-lock.json"]) {
     hash.update(file);
     hash.update(await readFile(path.join(root, file)));

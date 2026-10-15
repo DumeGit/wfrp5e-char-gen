@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOOK = "corsairs-flariel"
 PDF = Path(r"C:\Users\ninod\Downloads\The Corsairs of Captain Flariel.pdf")
 SHA = "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb"
-PACK = ROOT / "dist/data/books" / BOOK
+PACK = ROOT / "content/sources/data/books" / BOOK
 
 
 def clean(text):
@@ -156,7 +156,7 @@ def templates(doc):
             "adaptation": "Legacy: current core Talent definitions replace the specific older effects explained on the affected Talent grants."})
         if name == "Druchii Sorceress":
             lores = ["Beasts", "Death", "Fire", "Heavens", "Life", "Light", "Metal", "Shadows", "Witchcraft", "Dark Magic"]
-            core_colours = read(ROOT / "dist/data/books/core/config.json")["colours"]
+            core_colours = read(ROOT / "content/sources/data/books/core/config.json")["colours"]
             for slot in result[-1]["talents"]:
                 if slot["options"] == ["Arcane Magic (Any)"]:
                     slot["options"] = [f"Arcane Magic ({lore})" for lore in core_colours]
@@ -256,7 +256,7 @@ def main():
     template_rows = sorted(templates(doc) + [warhound()], key=lambda t: t["name"])
     spell_rows = spells(doc)
     refs = references(doc)
-    ballista = next(w for w in read(ROOT / "dist/data/books/sea-of-claws-artillery/weapons.json") if w["name"] == "Ballista")
+    ballista = next(w for w in read(ROOT / "content/sources/data/books/sea-of-claws-artillery/weapons.json") if w["name"] == "Ballista")
     reaper = {k: ballista[k] for k in ["kind", "group", "enc", "reach", "damage", "qualities"]}
     reaper.update({"id": ident("weapon", "Reaper"), "name": "Reaper", "page": 10, "qualities": reaper["qualities"] + ", Salvo 6",
         "text": "Use the naval Ballista profile (Sea of Claws p. 100) with Salvo (6), as explicitly directed on Corsairs p. 10. Acquired/reference profile only: no extra retail price is inferred."})
@@ -282,9 +282,9 @@ def main():
     rules = [{"id": ident("rule", "lore-dark-magic"), "page": 7, "path": ["skillOptions", "Lore"], "operation": "append", "value": ["Dark Magic"], "reason": "Printed Lore (Dark Magic) Skill choice for Druchii Sorceress."}]
     for name, data in [("manifest", manifest), ("rules", rules), ("armour", [cloak]), ("spells", spell_rows), ("weapons", [reaper]), ("coverage", coverage), ("reference-entries", refs)]:
         write(PACK / f"{name}.json", data)
-    write(ROOT / f"dist/gm/sources/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": manifest["source"],
+    write(ROOT / f"content/sources/gm/books/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": manifest["source"],
         "summary": "Two Dark Elf foundations and eight sea-raider/Warhound templates", "profiles": profile_rows, "templates": template_rows, "traits": [], "training": []})
-    path = ROOT / "dist/data/books/index.json"
+    path = ROOT / "content/sources/data/books/index.json"
     registry = read(path)
     if not any(p["id"] == BOOK for p in registry["packs"]):
         registry["packs"].append({"id": BOOK, "path": f"{BOOK}/manifest.json"})

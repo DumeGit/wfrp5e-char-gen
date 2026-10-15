@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = 'archives-ii'
-pack = ROOT / 'dist/data/books' / BOOK
+pack = ROOT / 'content/sources/data/books' / BOOK
 manifest = json.loads((pack / 'manifest.json').read_text(encoding='utf-8'))
 refs = json.loads((pack / 'reference-entries.json').read_text(encoding='utf-8'))
 KEYS = ['M','WS','BS','S','T','I','Ag','Dex','Int','WP','Fel','W']
@@ -38,5 +38,5 @@ s.update(skills=[dict(name=n,total=v) for n,v in [('Charm',35),('Cool',40),('End
     sections=dict(Traits='',Trappings='Robes, Silver Dove Cloak-Pin'),referenceId=ref['id'],text=ref['text'],
     notes=['The printed Research 30 is retained even though Intelligence is 35. No weapon, armour, Bless/Invoke Talent or prayer is invented.'])
 output = dict(schemaVersion=1,id=BOOK,source=manifest['source'],summary='Rhinox, Typical Sister, Ogre equipment & Great Maw magic',profiles=[r,s],training=[],review=dict(pages=[14,26,28,29,31,32,33,34,74,75,76,77,78,79,80],profilePages=[34,76],excluded=['All named NPCs and adventure characters.','Typical Orderly (p. 76) gives standard-profile guidance, not a fixed stat block or quantified template; use the existing core Human or other Species foundation.','The multi-row Ogre creation example (p. 26) is not an additional creature profile.','Hirelings, Career development, astrology rewards, artefact generation, mass battles and campaign systems.']))
-(ROOT/'dist/gm/sources/archives-ii.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'content/sources/gm/books/archives-ii.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Wrote Rhinox and Typical Sister GM profiles.')

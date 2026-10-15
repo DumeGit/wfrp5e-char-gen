@@ -328,6 +328,7 @@ function input(el, final = false) {
     const x = entry(d.group, d.key);
     if (!x || x[d.entryField] === value) return;
     x[d.entryField] = value;
+    if (d.entryField === "text") x.descriptionOverride = !!value.trim();
   } else if (d.override) {
     if (s.overrides[d.override] === value) return;
     s.overrides[d.override] = value;

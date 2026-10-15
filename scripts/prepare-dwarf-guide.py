@@ -39,7 +39,7 @@ for r in runes:
 write('runes.json',runes)
 skills=[{'id':'dwarf-guide:skill:lore-runes','name':'Lore (Runes)','char':'Int','advanced':True,'grouped':False,'options':[],'page':80,'speciesOnly':['Dwarf'],'text':'Runelore covers rune history, materials, identification and effects. The Runesmiths Guild passes it on orally; it cannot be learned from books.'},{'id':'dwarf-guide:skill:runesmithing','name':'Runesmithing','char':'Dex','advanced':True,'grouped':False,'options':[],'page':80,'speciesOnly':['Dwarf'],'text':'Used to craft, reawaken or deactivate magical runes. Rune forging is deferred to character management; no item is granted by learning a rune.'},{'id':'dwarf-guide:skill:sail-skycraft','name':'Sail (Skycraft)','char':'Ag','advanced':True,'grouped':False,'options':[],'page':80,'speciesOnly':['Dwarf'],'text':'Advanced flying-machine operation. Take-off and landing require Average (+2 SL) Tests. Normal Sail does not unlock Skycraft, and Skycraft does not grant normal Sail. Situational operations are references only.'}]
 write('skills.json',skills)
-rules=[];coreSkills=json.loads((ROOT/'dist/data/skills.json').read_text())
+rules=[];coreSkills=json.loads((ROOT/'content/sources/data/skills.json').read_text())
 for group,values,page in [('Lore',['Runes'],80),('Art',['Tattoo','Engraving','Writing'],64),('Melee',['Engineering'],93),('Trade',['Mason'],57),('Secret Signs',['Brotherhood of Grimnir'],60)]:
  current=next(x for x in coreSkills if x['name']==group)['options']
  values=[v for v in values if v not in current]

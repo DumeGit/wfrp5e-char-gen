@@ -1,4 +1,4 @@
-import { speciesEntry } from "./catalogue.mjs";
+import { speciesEntry, entryDescription } from "./catalogue.mjs";
 import { KEYS, die } from "../rules.mjs";
 import {
   characteristicBonus,
@@ -131,6 +131,13 @@ export function validateMarijan(s) {
       )
         fail();
       keys.add(x.key);
+      if (x.descriptionId !== undefined && !text(x.descriptionId)) fail();
+      if (x.descriptionNote !== undefined && !text(x.descriptionNote)) fail();
+      if (
+        x.descriptionOverride !== undefined &&
+        typeof x.descriptionOverride !== "boolean"
+      )
+        fail();
       for (const k of ["amount"]) if (!number(x[k])) fail();
       for (const k of ["total", "enc", "ap"]) if (!nullable(x[k])) fail();
       for (const k of [
@@ -208,7 +215,8 @@ export function makeEntry(row, group) {
         extras: "trait",
       }[group],
     custom: !!row.custom,
-    text: row.text || "",
+    text: !row.custom && row.descriptionId ? "" : row.text || "",
+    descriptionOverride: !!row.custom,
     amount: group === "skills" ? 0 : 1,
     char: row.char || "Int",
     total: null,
@@ -245,6 +253,15 @@ export function addEntry(s, group, row) {
   return entry.key;
 }
 export function calculateMarijan(catalogue, s) {
+  const entries = Object.fromEntries(
+    GROUPS.map((group) => [
+      group,
+      s.entries[group].map((x) => ({
+        ...x,
+        text: entryDescription(catalogue, x),
+      })),
+    ]),
+  );
   const talents = s.entries.talents.filter((x) => !x.custom && x.amount > 0),
     has = (name) => talents.some((x) => x.name === name),
     effects = catalogue.R.config.talentEffects,
@@ -309,7 +326,7 @@ export function calculateMarijan(catalogue, s) {
   const values = Object.fromEntries(
       AUTO_FIELDS.map((k) => [k, s.overrides[k] ?? auto[k]]),
     ),
-    skills = s.entries.skills.map((x) => ({
+    skills = entries.skills.map((x) => ({
       ...x,
       total: x.total ?? stats[x.char] + x.amount,
     })),
@@ -338,6 +355,7 @@ export function calculateMarijan(catalogue, s) {
       `${x.name}: its printed +5 Characteristic benefit is applied once; extra unrestricted ranks have no invented effect.`,
     );
   return {
+    entries,
     stats,
     sb,
     tb,
@@ -457,7 +475,7 @@ export function fromPlayer(catalogue, pc, result, pcRules) {
       e.qualities = x.weapon.qualities || "";
     }
     if (x.quantity === null)
-      e.text +=
+      e.descriptionNote =
         "\nThe copied printed quantity is unresolved; one reference entry is recorded, not a verified item quantity.";
     e.state = x.worn ? "worn" : x.weapon ? "equipped" : "carried";
   }

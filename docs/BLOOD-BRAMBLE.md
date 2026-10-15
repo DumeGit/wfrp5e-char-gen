@@ -23,7 +23,7 @@ Foraging, ingredient consumption, live casting, Conditions, curse removal, spiri
 
 ## Maintenance and verification
 
-`scripts/extract-blood-bramble.py` stages PDF pages and column text outside the app. `scripts/prepare-blood-bramble.py` creates the reviewed spell/ingredient pack in `../tmp/pdfs/blood-bramble-prepared`. Run MarkItDown separately as instructed by the skill. Copy only the manifest and its declared files into `dist/data/books/blood-bramble`; never publish raw pages or the source PDF.
+`scripts/extract-blood-bramble.py` stages PDF pages and column text outside the app. `scripts/prepare-blood-bramble.py` creates the reviewed spell/ingredient pack in `../tmp/pdfs/blood-bramble-prepared`. Run MarkItDown separately as instructed by the skill. Copy only the manifest and its declared files into `content/sources/data/books/blood-bramble`; never publish raw pages or the source PDF.
 
 Tests cover opt-in behavior and book combinations/load order, all 24 spell profiles, existing grants/prices/access, duplicate learning and undo, complete column continuations, named Difficulty conversions, retained numeric modifiers, Godspakt’s approved profile, the summoning overlap, ingredient price/unknown weight, save/load sources and editable PDF exports. Local browser checks use an isolated `?verify=1` draft.
 

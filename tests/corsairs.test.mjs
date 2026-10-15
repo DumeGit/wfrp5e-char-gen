@@ -20,7 +20,7 @@ const book = "corsairs-flariel";
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
 const data = await json("../dist/gm/data.json");
-const raw = await json("../dist/gm/sources/corsairs-flariel.json");
+const raw = await json("../content/sources/gm/books/corsairs-flariel.json");
 const rulesFor = createGMRules(library, data);
 const draft = () => freshGM(data, `${book}:creatures:dark-elf`);
 const result = (s) => calculateGM(data, rulesFor(s), s);

@@ -45,7 +45,7 @@ Enterprises, including optional starting ownership (p. 6), financing/debt, tradi
 
 ## Extraction and verification
 
-`scripts/extract-archives-iii.py` stages text and Career columns/symbols. `scripts/build-archives-iii.py --output-dir dist/data/books/archives-iii` produces the reviewed pack and adjacent optional variant. Source text remains in the parent workspace's `tmp/pdfs/archives-iii-review`; scripts do not push/publish.
+`scripts/extract-archives-iii.py` stages text and Career columns/symbols. `scripts/build-archives-iii.py --output-dir content/sources/data/books/archives-iii` produces the reviewed pack and adjacent optional variant. Source text remains in the parent workspace's `tmp/pdfs/archives-iii-review`; scripts do not push/publish.
 
 Tests cover every supplement combination, unchanged armour/tables, three Careers, five origins, exclusive allocations, Old Faith free/paid/duplicate/undo behavior, XP boundaries, Fellstave, Cant thresholds/Lore restrictions/undo/save validation, variant allocations and editable PDF exports. Browser checks cover desktop/mobile selections and purchases. PDFs retain all 556 editable fields with full magic/Cant references in the appended record.
 

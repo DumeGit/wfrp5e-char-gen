@@ -10,7 +10,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGED = ROOT.parent/'tmp/pdfs/archives-i-review'
-DEST = ROOT/'dist/data/books/archives-i'
+DEST = ROOT/'content/sources/data/books/archives-i'
 DEST.mkdir(parents=True, exist_ok=True)
 read = lambda p: json.loads(p.read_text(encoding='utf-8-sig'))
 slug = lambda s: re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
@@ -23,8 +23,8 @@ def write(name, value):
     (DEST/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 
-core_skills = read(ROOT/'dist/data/skills.json')
-config = read(ROOT/'dist/data/books/core/config.json')
+core_skills = read(ROOT/'content/sources/data/skills.json')
+config = read(ROOT/'content/sources/data/books/core/config.json')
 careers = read(STAGED/'careers.raw.json')
 mapping = {'Fleet Footed': 'Fleet-footed', 'Scale sheer Surface': 'Scale Sheer Surface', 'Strider': 'Striding Gait', 'Trick Riding': 'Trick Rider', 'Tunnel Rat': 'Tunnel Fighter'}
 rules = []

@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = "up-in-arms"
-pack = ROOT / "dist/data/books" / BOOK
+pack = ROOT / "content/sources/data/books" / BOOK
 manifest = json.loads((pack / "manifest.json").read_text(encoding="utf-8"))
 references = json.loads((pack / "reference-entries.json").read_text(encoding="utf-8"))
 names = ["Riding Horse", "Destrier — Heavy Warhorse", "Demigryph Mount"]
@@ -46,5 +46,5 @@ for index, name in enumerate(names):
 
 shock = dict(id=f"{BOOK}:training:shock-cavalry",name="Shock Cavalry",source=dict(book=BOOK,page=107),page=107,requires="War",adaptation="The printed Challenging (+0) Dodge Test uses Fifth Edition Challenging (+0 SL), following core Appendix I p. 364.",text="Requires Trained (War). When Charging, a rider may move through smaller creatures to reach their target. Each trampled creature must make a Challenging (+0 SL) Dodge Test or suffer 4 + the mount’s Strength Bonus Damage. Each creature damaged reduces remaining Movement by 2 yards. Creatures the mount’s size or larger stop its progress. At the end of the Charge, enemies within melee range count as Engaged and the Charge is resolved as though one were its target. A smaller creature that has not acted this Round may forgo dodging to make one held-weapon attack against mount or rider. Unless that attack kills or disables the mount, the Charge continues.")
 output = dict(schemaVersion=1,id=BOOK,source=manifest["source"],profiles=profiles,training=[shock],review=dict(pages=[29,107,109,113,114,115,116,117],profilePages=[29,109,113,114,115],excluded=["All named NPCs", "Destrier — Heavy Warhorse (p. 29): user explicitly excluded this profile.","Hireling profiles, templates, selection table and quirks (pp. 113–117): user explicitly excludes hirelings.","Mounted combat, Pursuits, Group Advantage, injuries, structure/siege rules, Endeavours and upkeep: live-play/manager systems."] ))
-(ROOT / "dist/gm/sources/up-in-arms.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+(ROOT / "content/sources/gm/books/up-in-arms.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("Wrote 2 reviewed Up in Arms mount profiles and Shock Cavalry training.")

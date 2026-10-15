@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOOK = "salzenmund"
 PDF = Path(r"C:\Users\ninod\Downloads\Salzenmund - City Of Salt & Silver (1).pdf")
 SHA = "a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea"
-PACK = ROOT / "dist/data/books" / BOOK
+PACK = ROOT / "content/sources/data/books" / BOOK
 KEYS = ["M", "WS", "BS", "S", "T", "I", "Ag", "Dex", "Int", "WP", "Fel", "W"]
 
 
@@ -151,8 +151,8 @@ def gm_source(doc):
         profiles.append({"id": ident("creatures", name), "name": name, "page": page, "source": source(page), "example": False, "category": "Forest spirits" if name == "Spite" else "Greenskins" if name.startswith("Shiny Moon") else "Undead" if name.startswith("Revenant") else "Townsfolk", "species": "Spite" if name == "Spite" else "Snotling" if name.endswith("Snotlings") else "Goblin" if name.startswith("Shiny Moon") else "Human", "size": size, "stats": stats, "toughnessBonus": stats["T"] // 10, "hitLocations": ["Head", "Arms", "Body", "Legs"], "skills": skill_rows, "skillSlots": slots, "talents": talents, "traits": traits, "optionalTraits": optional, "attacks": attacks, "armour": armour, "spells": [], "sections": {"Traits": "", "Trappings": sections.get("Trappings", "")}, "notes": notes, "text": printed, **({"adaptation": " ".join(changes)} if changes else {})})
     templates = []
     spite = next(p for p in profiles if p["name"] == "Spite")
-    skill_chars = {s["name"]: s["char"] for s in read(ROOT / "dist/data/skills.json")}
-    spell_ids = {s["name"]: "core:spells:" + slug(s["name"]) for s in read(ROOT / "dist/data/spells.json")}
+    skill_chars = {s["name"]: s["char"] for s in read(ROOT / "content/sources/data/skills.json")}
+    spell_ids = {s["name"]: "core:spells:" + slug(s["name"]) for s in read(ROOT / "content/sources/data/spells.json")}
     for name, page, start in [("Shrike", 115, 17), ("Mischief", 115, 23), ("Terror", 115, 30), ("Despair", 116, 11)]:
         blocks = doc[page-1].get_text("blocks")
         assert clean(blocks[start][4]) == name.upper() + " TEMPLATE"
@@ -250,8 +250,8 @@ def main():
     files = {key:key+".json" for key in ["origins","careers","rules","coverage"]}; files["referenceEntries"] = "reference-entries.json"
     manifest = {"schemaVersion":1,"id":BOOK,"title":"Salzenmund: City of Salt and Silver","shortTitle":"Salzenmund","edition":4,"version":"1.0.0","kind":"supplement","dependsOn":["core"],"source":{"file":PDF.name,"sha256":SHA},"compatibility":{"reviewed":True,"notes":["Explicit user-approved Fifth Edition origins and Riverfolk Owler alternative; existing core careers/equipment remain unchanged.","Generic profiles use current Traits/Talents and approved individual conversions with selective Legacy notes. Printed baseline benefits are not reapplied.","Four Spite templates require their Spite foundation, explicit missing parameters and Tiny/manual Wounds. Spellcaster uses current WP +10 Channelling rather than conflicting source totals.","Standalone source references retain printed Fourth Edition wording. Named NPCs, hireling systems, enterprise/live-play managers and flavour-only prose are excluded."]},"files":files}
     for name,data in [("manifest",manifest),("origins",origins()),("careers",careers()),("rules",rules),("coverage",coverage),("reference-entries",refs)]: write(PACK / (name+".json"),data)
-    write(ROOT / "dist/gm/sources/salzenmund.json",gm)
-    path = ROOT / "dist/data/books/index.json"; registry = read(path)
+    write(ROOT / "content/sources/gm/books/salzenmund.json",gm)
+    path = ROOT / "content/sources/data/books/index.json"; registry = read(path)
     if not any(p["id"] == BOOK for p in registry["packs"]): registry["packs"].append({"id":BOOK,"path":f"{BOOK}/manifest.json"})
     write(path,registry)
     path = ROOT / "scripts/search-reference-review.json"; audit = read(path)

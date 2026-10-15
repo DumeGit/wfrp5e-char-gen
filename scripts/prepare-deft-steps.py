@@ -18,9 +18,9 @@ read = lambda p: json.loads(p.read_text(encoding='utf-8-sig'))
 slug = lambda s: re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
 clean = lambda s: re.sub(r'\s+', ' ', s.replace('\u00ad', '')).strip()
 pages = read(args.input_dir/'pages.json')
-core_skills = read(ROOT/'dist/data/skills.json')
-core_talents = read(ROOT/'dist/data/talents.json')
-config = read(ROOT/'dist/data/books/core/config.json')
+core_skills = read(ROOT/'content/sources/data/skills.json')
+core_talents = read(ROOT/'content/sources/data/talents.json')
+config = read(ROOT/'content/sources/data/books/core/config.json')
 known_talents = {t['name'].split(' (')[0].lower(): t['name'].split(' (')[0] for t in core_talents}
 
 # These equivalent names were explicitly approved for earlier supplied books.
@@ -111,7 +111,7 @@ for spell in spells:
         spell['adaptation'] = 'Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged.'
     spell['conversion'] = 'Miracle effects remain reference text. No temporary Characteristic changes, Conditions, command Tests, travel rerolls or campaign actions are applied to the created character.'
 
-core_ranald = [s['name'] for s in read(ROOT/'dist/data/spells.json') if s['category'] == 'Ranald']
+core_ranald = [s['name'] for s in read(ROOT/'content/sources/data/spells.json') if s['category'] == 'Ranald']
 equivalents = {'Stay Lucky':'Cheat the Odds', 'Rich Man, Poor Man, Beggar Man, Thief':'Trickster’s Glamour', 'You Ain’t Seen Me Right?':'You Saw Nothing'}
 aspect_lists = {
  'Thief-Priest':('The Night Prowler',['An Invitation','Cat’s Eyes','Ranald’s Grace','Stay Lucky','You Ain’t Seen Me Right?']),

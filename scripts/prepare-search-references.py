@@ -19,7 +19,7 @@ args = parser.parse_args()
 if args.stage.resolve().is_relative_to((ROOT / 'dist').resolve()):
     raise ValueError('Stage review candidates outside dist; publishing requires source review')
 recipe = json.loads((ROOT/'scripts/search-reference-areas.json').read_text())['books'][args.book]
-pack = ROOT/'dist/data/books'/args.book
+pack = ROOT/'content/sources/data/books'/args.book
 manifest = json.loads((pack/'manifest.json').read_text(encoding='utf-8'))
 layout = json.loads((args.stage/(args.book+'.json')).read_text(encoding='utf-8'))
 if layout['sha256'] != manifest['source']['sha256']:

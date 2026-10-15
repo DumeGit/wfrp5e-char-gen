@@ -8,7 +8,7 @@ Source: the supplied `Archives of the Empire - Vol II.pdf`, 96 pages, SHA-256 `9
 
 MarkItDown text is in the parent workspace's `tmp/pdfs/archives-ii.md`. `scripts/extract-archives-ii.py` stages Career columns and coloured schemes, raw tables, two complete Ogre d100 name-element tables, weighted 2d10 appearance tables, and source metadata in `tmp/pdfs/archives-ii-review`. Staging does not register a book.
 
-`scripts/build-archives-ii.py` prepares reviewed runtime data outside the app by default; pass `--output-dir dist/data/books/archives-ii` to regenerate the installed pack. Registration is explicit in `dist/data/books/index.json`. The pack adds one Species, three Careers, seven Great Maw spells, twelve priced shop entries and twenty optional star signs. Current combined catalogue counts are generated in [INCLUSION-MATRIX.md](INCLUSION-MATRIX.md).
+`scripts/build-archives-ii.py` prepares reviewed runtime data outside the app by default; pass `--output-dir content/sources/data/books/archives-ii` to regenerate the installed pack. Registration is explicit in `content/sources/data/books/index.json`. The pack adds one Species, three Careers, seven Great Maw spells, twelve priced shop entries and twenty optional star signs. Current combined catalogue counts are generated in [INCLUSION-MATRIX.md](INCLUSION-MATRIX.md).
 
 ## Creator material identified
 

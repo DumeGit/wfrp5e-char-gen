@@ -523,7 +523,7 @@ test("coverage is generated from registry and frozen review, separate from creat
   for (const b of report.books) {
     const bytes = await readFile(
       new URL(
-        `../dist/data/books/${b.id}/reference-entries.json`,
+        `../content/sources/data/books/${b.id}/reference-entries.json`,
         import.meta.url,
       ),
     );

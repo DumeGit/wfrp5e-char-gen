@@ -1,5 +1,9 @@
 # Local testing
 
+Description changes: run `npm run check:descriptions`, `tests/descriptions.test.mjs` and affected rule/render/export tests. Browser preparation includes `content/`, so canonical edits invalidate its cache. Original extraction stays outside the test server's `dist` root; offline tests load the generated book bundle instead of build-time manifests.
+
+The focused local `@descriptions` browser cases cover shared reference-summary labels, GM parameter-aware descriptions/template controls and Marijan personal descriptions through reload on desktop and mobile. Canonical migration also checks real PDF records and all 49 core profiles at four cards per A4; dense cards were visually inspected with the 7.5 pt minimum unchanged.
+
 Browser checks run locally with Playwright. There is no GitHub Actions workflow, deployment hook, or hosted test service. Test code and browser dependencies are development-only; Vercel still serves `dist`.
 
 ## First setup

@@ -6,6 +6,8 @@
   "scripts": {
     "pretest": "npm run build",
     "check:books": "node scripts/check-books.mjs",
+    "check:descriptions": "node scripts/descriptions.mjs",
+    "descriptions:register": "node scripts/descriptions.mjs --register",
     "build": "npm run check:books && npm run generate:books && node scripts/build-pwa.mjs",
     "test": "node --test tests/*.test.mjs",
     "generate:books": "node scripts/generate-books.mjs",

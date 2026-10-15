@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BOOK = "taverns-old-world"
 PDF = Path(r"C:\Users\ninod\Downloads\Taverns of the Old World.pdf")
 SHA = "07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c"
-PACK = ROOT / "dist/data/books" / BOOK
+PACK = ROOT / "content/sources/data/books" / BOOK
 
 
 def clean(text):
@@ -185,8 +185,8 @@ def main():
         "compatibility": {"reviewed": True, "notes": ["Generic staff retain printed scores, Skill totals, Wounds and Damage. Use canonical Fifth Edition Talents, without reapplying baseline benefits.", "Standalone printed references retain original Fourth Edition wording and warnings; no live play automation or automatic Legacy tagging.", "Core duplicate equipment stays unchanged; only distinct fixed-price consumables are added with unknown weights and Availability."]}, "files": files}
     for name, data in [("manifest", manifest), ("market", market), ("coverage", coverage), ("reference-entries", refs)]:
         write(PACK / f"{name}.json", data)
-    write(ROOT / f"dist/gm/sources/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": manifest["source"], "summary": "Twelve generic tavern staff profiles", "profiles": staff, "templates": [], "traits": [], "training": []})
-    registry_path = ROOT / "dist/data/books/index.json"
+    write(ROOT / f"content/sources/gm/books/{BOOK}.json", {"schemaVersion": 1, "id": BOOK, "source": manifest["source"], "summary": "Twelve generic tavern staff profiles", "profiles": staff, "templates": [], "traits": [], "training": []})
+    registry_path = ROOT / "content/sources/data/books/index.json"
     registry = read(registry_path)
     if not any(p["id"] == BOOK for p in registry["packs"]):
         registry["packs"].append({"id": BOOK, "path": f"{BOOK}/manifest.json"})

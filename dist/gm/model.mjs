@@ -738,6 +738,9 @@ export function calculateGM(data, R, s) {
     ...t,
     value: s.traitParameters[t.key] ?? t.value,
     text: data.traits.find((x) => x.name === t.name)?.text || "",
+    descriptionId: data.traits.find((x) => x.name === t.name)?.descriptionId,
+    descriptionStatus: data.traits.find((x) => x.name === t.name)
+      ?.descriptionStatus,
     ...(data.traits.find((x) => x.name === t.name)?.adaptation && !t.adaptation
       ? {
           adaptation: data.traits.find((x) => x.name === t.name).adaptation,

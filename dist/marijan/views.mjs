@@ -5,7 +5,7 @@ import { characteristicNames } from "../ui.mjs";
 import { KEYS } from "../rules.mjs";
 import { detailKey } from "../disclosures.mjs";
 import { AUTO_FIELDS, SIZES } from "./model.mjs";
-import { entrySource, careerLabel } from "./catalogue.mjs";
+import { entrySource, careerLabel, entryDescription } from "./catalogue.mjs";
 
 export const SECTIONS = [
   ["identity", "Identity"],
@@ -174,7 +174,7 @@ export function rowHTML(catalogue, s, r, group, x) {
     group === "magic"
       ? `<div class="mm-fields">${["cn", "range", "target", "duration"].map((k) => field(k === "cn" ? "Casting Number" : k[0].toUpperCase() + k.slice(1), `mm-${k}-${x.key}`, x[k] ?? "", `${attrs} data-entry-field="${k}"`)).join("")}</div>`
       : "";
-  return `<article class="mm-entry mm-entry-${group}" id="mm-entry-${x.key}"><div class="mm-entry-line"><div class="mm-entry-name">${entryName}${legacy}</div><div class="mm-entry-controls">${controls}${remove}</div></div><details class="mm-entry-disclosure" data-detail-key="${detailKey("marijan-entry", x.key)}"><summary aria-label="Edit ${esc(x.name)} details" title="Details & overrides"><svg class="mm-entry-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mm-entry-detail">${rename}<small>${esc(entrySource(catalogue, x))}${x.category ? ` · ${esc(x.category)}` : ""}</small>${secondary || profileFields ? `<div class="mm-fields">${secondary}${profileFields}</div>` : ""}${magicProfile}<div class="field"><label for="mm-description-${x.key}">Description / personal notes</label><textarea id="mm-description-${x.key}" rows="2" ${attrs} data-entry-field="text">${esc(x.text)}</textarea></div><small>${x.custom ? "User-defined; no printed source or automatic effects." : "Profile edits apply only to this character. The book reference stays unchanged."}</small></div></details></article>`;
+  return `<article class="mm-entry mm-entry-${group}" id="mm-entry-${x.key}"><div class="mm-entry-line"><div class="mm-entry-name">${entryName}${legacy}</div><div class="mm-entry-controls">${controls}${remove}</div></div><details class="mm-entry-disclosure" data-detail-key="${detailKey("marijan-entry", x.key)}"><summary aria-label="Edit ${esc(x.name)} details" title="Details & overrides"><svg class="mm-entry-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mm-entry-detail">${rename}<small>${esc(entrySource(catalogue, x))}${x.category ? ` · ${esc(x.category)}` : ""}</small>${secondary || profileFields ? `<div class="mm-fields">${secondary}${profileFields}</div>` : ""}${magicProfile}${!x.custom ? `<p class="small">${esc(entryDescription(catalogue, { ...x, descriptionOverride: false }))}</p>` : ""}<div class="field"><label for="mm-description-${x.key}">${x.custom ? "Description" : "Personal description (optional)"}</label><textarea id="mm-description-${x.key}" rows="2" ${attrs} data-entry-field="text">${esc(x.text)}</textarea></div><small>${x.custom ? "User-defined; no printed source or automatic effects." : "Profile edits apply only to this character. The book reference stays unchanged."}</small></div></details></article>`;
 }
 function collection(catalogue, s, r, group, title) {
   const starters = {

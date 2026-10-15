@@ -15,11 +15,13 @@ test("browser preparation cache rejects same-length edits and removed assets", a
   });
   await mkdir(path.join(root, "dist"));
   await mkdir(path.join(root, "scripts"));
+  await mkdir(path.join(root, "content"));
   for (const file of [
     "package.json",
     "package-lock.json",
     "dist/app.js",
     "scripts/build.mjs",
+    "content/descriptions.json",
   ])
     await writeFile(path.join(root, file), "original");
   const original = await buildFingerprint(root);

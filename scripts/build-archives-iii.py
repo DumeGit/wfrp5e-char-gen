@@ -95,16 +95,16 @@ def rule(path, operation, value, page, reason):
 rule(['gods'],'append',['Handrich','Solkan','Old Faith'],58,'Printed cult patron options (Handrich p. 47, Solkan p. 55, Old Faith p. 58); use matching Bless/Invoke patrons.')
 for god, blessings, page in [('Handrich',['Charisma','Fortune','Hardiness','Protection','Wisdom','Wit'],47),('Solkan',['Battle','Conscience','Courage','Hardiness','Might','Tenacity'],55)]:
     rule(['blessings',god],'add',blessings,page,'Six fixed Blessings printed for this cult.')
-all_blessings = [x['name'].removeprefix('Blessing of ') for x in read(ROOT/'dist/data/spells.json') if x['category']=='Blessing']
+all_blessings = [x['name'].removeprefix('Blessing of ') for x in read(ROOT/'content/sources/data/spells.json') if x['category']=='Blessing']
 rule(['blessings','Old Faith'],'add',all_blessings,58,'Choose six distinct Blessings with Bless and one additional with Invoke. User-approved cost count excludes the six Bless grants; extra Blessings use core Miracle prices.')
 # Only explicitly printed new specialisations, with core grouped Skill definitions.
-core_skills = read(ROOT/'dist/data/skills.json')
+core_skills = read(ROOT/'content/sources/data/skills.json')
 for group, choices, page in [('Language',['Belthani'],62),('Lore',['Politics','Torture'],54),('Secret Signs',['Guilder'],46)]:
     existing = next(x['options'] for x in core_skills if x['name']==group)
     added = [c for c in choices if c not in existing]
     if added:
         rule(['skillOptions',group],'append',added,page,'Explicitly printed Career specialisations; no extra free Advances.')
-config = read(ROOT/'dist/data/books/core/config.json')
+config = read(ROOT/'content/sources/data/books/core/config.json')
 if 'Magic Users' not in config['talentOptions']['Fearless']:
     rule(['talentOptions','Fearless'],'append',['Magic Users'],54,'Printed Solkan Fearless target; use the core Talent.')
 write('rules.json', rules)
@@ -138,7 +138,7 @@ manifest={'schemaVersion':1,'id':'archives-iii','title':'Archives of the Empire:
 manifest['source'].pop('pages',None)
 write('manifest.json',manifest)
 
-hedge = read(ROOT/'dist/data/careers.json')
+hedge = read(ROOT/'content/sources/data/careers.json')
 hedge = next(c for c in hedge if c['id']=='hedge-witch')
 hedge = json.loads(json.dumps(hedge))
 hedge.update({'id':'archives-iii-hedge:career:hedge-witch','runtimeId':'hedge-witch','page':62,'replaces':'core:careers:hedge-witch','reason':'User-approved optional Archives III animal-doctor adaptation.','conversion':'Lore (Herbs) → Animal Care; Trade (Herbalist) → Animal Training; Craftsman (Herbalist) → Hardy; Master Tradesman (Herbalist) → Robust. Secret Signs (Hedge Witch) uses core Hedgefolk. Extra first-level Skill choices give no extra free Advances. Printed Trade (Charms) is absent from core and its swap remains unavailable.'})

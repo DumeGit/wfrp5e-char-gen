@@ -143,8 +143,8 @@ export async function marijanRecord(
         extras: "Traits, mutations & runes",
       }[group],
     );
-    if (!s.entries[group].length) line("None recorded.");
-    for (const x of s.entries[group]) {
+    if (!r.entries[group].length) line("None recorded.");
+    for (const x of r.entries[group]) {
       const value =
         group === "skills"
           ? `${x.char}; ${x.amount} Advances; total ${r.skills.find((row) => row.key === x.key).total}${x.total !== null ? " (manual)" : ""}`
@@ -278,7 +278,7 @@ export function marijanFieldValues(catalogue, s, r) {
     values[key + "_Adv"] = row.amount;
     values[key + "_Skill"] = row.total;
   }
-  s.entries.talents.forEach((x, i) => {
+  r.entries.talents.forEach((x, i) => {
     const n = String(i + 1).padStart(2, "0");
     values[`Talent_${n}_Name`] = `${x.name} x${x.amount}`;
     values[`Talent_${n}_Description`] = x.text;
@@ -313,7 +313,7 @@ export function marijanFieldValues(catalogue, s, r) {
       values[`Trapping_${String(++trapping).padStart(2, "0")}`] =
         `${x.name} x${x.amount} (${x.state})`;
   }
-  s.entries.magic.forEach((x, i) => {
+  r.entries.magic.forEach((x, i) => {
     for (const [k, v] of Object.entries({
       Name: x.name,
       CN: x.cn ?? "",

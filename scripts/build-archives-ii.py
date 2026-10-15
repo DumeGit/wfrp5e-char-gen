@@ -25,8 +25,8 @@ def write(name, value):
     (args.output_dir/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 
-core_skills = read(ROOT/'dist/data/skills.json')
-core_config = read(ROOT/'dist/data/books/core/config.json')
+core_skills = read(ROOT/'content/sources/data/skills.json')
+core_config = read(ROOT/'content/sources/data/books/core/config.json')
 careers = read(STAGED/'careers.raw.json')
 mapping = {'Strider': 'Striding Gait', 'Trick Riding': 'Trick Rider', 'Warleader': 'War Leader'}
 extra_skills = {'Language': {'Grumbarth': 20}, 'Lore': {'Ogres': 20}, 'Ride': {'Rhinox': 34}}
@@ -92,7 +92,7 @@ species['Ogre']['mechanics']['magicReferences'] = [
 ]
 write('species.json', species)
 appearance = read(STAGED/'appearance.raw.json')
-human = read(ROOT/'dist/data/background.json')['Human']
+human = read(ROOT/'content/sources/data/background.json')['Human']
 write('background.json', {'Ogre': {'id': 'archives-ii:background:ogre', 'page': 21,
       'forenames': human['forenames'], 'surnames': ['Goldtooth', 'Ironskin', 'Thundermaw', 'Bloodguzzler', 'Eyebiter', 'Onetusk', 'Bullgorger'],
       'eyes': [row['result'] for row in appearance['eyes']['rows']], 'hair': [row['result'] for row in appearance['hair']['rows']],
