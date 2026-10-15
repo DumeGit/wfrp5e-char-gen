@@ -1,0 +1,173 @@
+/* Standalone studies only. No production tokens or creator behaviour changed. */
+.texture-scene {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  background: var(--color-world);
+}
+.texture-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  color: var(--color-on-leather);
+  border-bottom: 1px solid var(--color-line-dark);
+  font: 14px var(--font-body);
+}
+.texture-tools a {
+  color: inherit;
+}
+.texture-tools label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.texture-tools select {
+  width: auto;
+  min-height: 40px;
+  padding: 8px;
+  font: inherit;
+}
+.texture-tools span {
+  font-size: 12px;
+  color: var(--color-on-leather-muted);
+}
+.texture-pair.texture-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 330px);
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  padding: 20px;
+  gap: 20px;
+  margin: 0;
+}
+.texture-pair.texture-pair > :is(.rail, .sheet) {
+  display: block !important;
+  position: relative;
+  inset: auto;
+  width: auto;
+  min-width: 0;
+  grid-row: auto;
+  grid-column: auto;
+  margin: 0;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  align-self: stretch;
+}
+.texture-pair.texture-pair > .rail {
+  padding: 14px 12px;
+}
+.texture-pair.texture-pair > .sheet {
+  padding: 20px 16px;
+}
+.texture-pair .rail-heading {
+  display: block !important;
+}
+.texture-pair :is(.steps, .gm-step-nav, .mm-section-nav, .creator-switch) {
+  display: grid !important;
+}
+.texture-pair
+  :is(
+    .mobile-folio-heading,
+    .mobile-section-nav,
+    .mm-mobile-section,
+    .gm-mobile-step
+  ) {
+  display: none !important;
+}
+.texture-pair > :is(.rail, .sheet)::before {
+  display: block;
+  background: var(--texture-image);
+  background-size: 256px 256px;
+  opacity: var(--texture-opacity, 0.3);
+  mix-blend-mode: soft-light;
+  animation: none;
+  z-index: 0;
+}
+.texture-pair > :is(.rail, .sheet) > * {
+  position: relative;
+  z-index: 1;
+}
+html:not(.texture-off) .texture-pair > :is(.rail, .sheet) {
+  background:
+    radial-gradient(ellipse at 30% 0%, #ffffff09, transparent 75%),
+    var(--texture-base);
+  box-shadow:
+    inset 0 0 32px #0005,
+    0 8px 24px #0003;
+}
+.texture-off .texture-pair > :is(.rail, .sheet)::before {
+  opacity: 0;
+}
+[data-preview-mode="player"] {
+  --texture-base: #30221b;
+  --texture-image: url(textures/leather.svg);
+}
+[data-preview-mode="gm"] {
+  --texture-base: #1c2c3c;
+  --texture-image: url(textures/hide.svg);
+}
+[data-preview-mode="marijan"] {
+  --texture-base: #242326;
+  --texture-image: url(textures/vellum.svg);
+}
+.is-thumbnail .texture-tools {
+  display: none;
+}
+.is-thumbnail .texture-pair {
+  padding: 16px;
+  gap: 16px;
+}
+@media (max-width: 540px) {
+  .texture-pair.texture-pair {
+    grid-template-columns: minmax(0, 360px);
+    padding: 16px;
+  }
+  .texture-tools {
+    padding: 16px;
+  }
+  .texture-tools select {
+    font-size: 16px;
+  }
+}
+
+/* These paired studies intentionally show the desktop panel bodies even when
+   embedded at thumbnail width. Full-size phone views stack the same panels. */
+.texture-pair .rail nav[aria-label="Character creation steps"] {
+  display: block !important;
+}
+.texture-pair .sheet-body {
+  display: block !important;
+}
+.texture-pair :is(.mobile-step, .mobile-totals, .summary-toggle) {
+  display: none !important;
+}
+.texture-pair :is(.folio-crest, .mm-folio-emblem) {
+  display: grid !important;
+}
+.texture-pair .sheet .eyebrow {
+  display: block;
+}
+.texture-pair .sheet h2 {
+  display: block !important;
+  padding-right: 0;
+  margin: 10px 0;
+  font-size: 26px;
+}
+.texture-pair :is(.folio-xp, .folio-coin) {
+  display: block !important;
+}
+.texture-pair .sheet-heading {
+  text-align: center;
+}
+.texture-pair .sheet-heading > p {
+  margin-bottom: 12px;
+}
+.texture-pair .sheet .derived {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}

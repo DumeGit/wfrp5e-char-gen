@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Panel texture preview</title>
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <link rel="stylesheet" href="/dist/workspace.css" />
+    <link rel="stylesheet" href="/dist/design-tokens.css" />
+    <link rel="stylesheet" href="/dist/design-system.css" />
+    <link rel="stylesheet" id="mode-style" />
+    <link rel="stylesheet" href="panel-textures.css" />
+  </head>
+  <body class="texture-scene">
+    <header class="texture-tools">
+      <a href="panel-textures.html">All three examples</a
+      ><label
+        >Texture
+        <select id="strength">
+          <option value="0">Off / current surfaces</option>
+          <option value="0.15">Subtle</option>
+          <option value="0.30" selected>Tactile</option>
+        </select></label
+      ><span>Appearance only · no saving</span>
+    </header>
+    <main id="sample"></main>
+    <script type="module" src="panel-texture-screen.mjs"></script>
+  </body>
+</html>
