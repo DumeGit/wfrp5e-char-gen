@@ -84,7 +84,7 @@
   display: block;
   background: var(--texture-image);
   background-size: var(--texture-size, 256px 256px);
-  opacity: var(--texture-opacity, 0.15);
+  opacity: calc(var(--texture-opacity, 0.15) * var(--texture-gain, 1));
   mix-blend-mode: soft-light;
   animation: none;
   z-index: 0;
@@ -111,8 +111,17 @@ html:not(.texture-off) .texture-pair > :is(.rail, .sheet) {
 }
 [data-preview-mode="gm"] {
   --texture-base: #1c2c3c;
-  --texture-image: url(textures/ossuary.svg);
+  --texture-image: url(textures/crypt-slate.svg);
   --texture-size: 384px 640px;
+}
+[data-preview-mode="gm"][data-material="hide"] {
+  --texture-image: url(textures/basilisk-hide.svg);
+  --texture-gain: 0.65;
+  --texture-size: 256px 320px;
+}
+[data-preview-mode="gm"][data-material="iron"] {
+  --texture-image: url(textures/blackened-iron.svg);
+  --texture-size: 256px 256px;
 }
 [data-preview-mode="marijan"] {
   --texture-base: #242326;
@@ -172,4 +181,8 @@ html:not(.texture-off) .texture-pair > :is(.rail, .sheet) {
 }
 .texture-pair .sheet .derived {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.texture-tools [hidden] {
+  display: none !important;
 }

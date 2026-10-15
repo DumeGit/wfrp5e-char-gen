@@ -82,7 +82,7 @@ A later image revision restored blue/ivory/gold to the painting, but the user cl
 | Example | Mode | Shared panel surface |
 | --- | --- | --- |
 | A — Tavern oak | Player | Dark tavern floorboards, long grain, staggered joints, knots and sparse nail heads; existing old gold and oxblood accents |
-| B — The ossuary | GM | Storm-blue stone with faint engraved skulls, ribs and scattered bones; existing bone, cobalt and brass accents |
+| B — Bestiary materials | GM | Crypt slate, Basilisk hide or Blackened iron; physical mineral/hide/metal grain in storm blue, with existing bone, cobalt and brass accents |
 | C — Pressed ash vellum | Marijan | Charcoal fine directional grain; existing silver and crimson accents |
 
 The paired panels use identical base colours and texture images, rather than separate menu/folio materials. Original procedural SVG textures live in `design-previews/textures/`; no source-book images, external textures, new dependencies or generated raster assets are required. Static textures remain visible with reduced motion; no texture is animated. Production textures, theme tokens, rules and offline assets are unchanged.
@@ -93,3 +93,6 @@ Verification: visually inspected the desktop gallery after adjusting grain contr
 
 
 Follow-up direction: the user requested tavern-style wooden panelling for Player and a skeletal treatment for GM, while keeping Marijan’s ash vellum and making every texture subtle. The revised examples use `tavern-wood.svg` and `ossuary.svg` respectively; both are original native vector/procedural surfaces. Marijan’s material is unchanged. The initial leather/hide SVG studies remain unused source history. Subtle defaults to 0.15 opacity on all modes; the optional stronger Tactile comparison remains 0.30. The paired panels still share the exact same material and base colour. Visually checked the revised desktop gallery and verified the default, loaded assets, absence of browser errors and phone gallery overflow. This remains an isolated preview, without production changes.
+
+
+The user rejected the literal skeletal engravings: Bestiary must have a material texture, rather than illustrated symbols. The ossuary SVG is now unused source history. The current GM card offers three native texture choices through its Surface selector: Crypt slate (mineral strata/chalky pitting), Basilisk hide (irregular pebbled relief) and Blackened iron (matte hammered surface). Each is a new procedural SVG height/lighting texture with no pictorial marks. `bestiary-materials.mjs` owns preview names/descriptions; gallery and full-size screen use the same choices and propagate selection into the full-size link. All default to Subtle; the coarser hide grain has a 0.65 gain to keep it quiet. Both panels share the selected finish. Player’s wood and Marijan’s vellum are unchanged. Verified loading/selection of all three materials, identical paired surfaces, full-size switching, Off behavior, browser errors and phone overflow; visually inspected slate and hide previews. These remain isolated proposals, not production settings.

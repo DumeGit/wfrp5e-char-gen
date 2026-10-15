@@ -1,3 +1,4 @@
+import { materials, materialKey } from "./bestiary-materials.mjs";
 const params = new URLSearchParams(location.search);
 const mode = ["player", "gm", "marijan"].includes(params.get("mode"))
   ? params.get("mode")
@@ -41,3 +42,19 @@ window.addEventListener("message", (e) => {
     setStrength(e.data.value);
 });
 setStrength(params.get("strength") || "0.15");
+
+const materialField = document.getElementById("material-field");
+materialField.hidden = mode !== "gm";
+const material = document.getElementById("material");
+material.innerHTML = Object.entries(materials)
+  .map(([key, m]) => `<option value="${key}">${m.name}</option>`)
+  .join("");
+material.value = materialKey(params.get("material"));
+function applyMaterial() {
+  document.documentElement.dataset.material = materialKey(material.value);
+  const url = new URL(location.href);
+  url.searchParams.set("material", material.value);
+  history.replaceState(null, "", url);
+}
+material.addEventListener("change", applyMaterial);
+applyMaterial();

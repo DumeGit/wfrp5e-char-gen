@@ -196,12 +196,14 @@
             ></iframe>
           </div>
           <div class="caption">
-            <h2>B · The ossuary</h2>
+            <h2>B · Bestiary materials</h2>
             <div class="tag">NPC &amp; creature creator</div>
-            <p>
-              Storm-blue stone with faint engraved skulls, ribs and scattered
-              bones. Skeletal detail stays quiet beneath the text.
-            </p>
+            <label for="gm-material">Surface</label>
+            <select
+              id="gm-material"
+              style="width: 100%; margin: 6px 0 12px"
+            ></select>
+            <p id="gm-material-description"></p>
             <a class="open" href="panel-texture-screen.html?mode=gm"
               >Inspect GM panels</a
             >
@@ -235,8 +237,30 @@
       </p>
     </main>
     <script type="module">
+      import { materials, materialKey } from "./bestiary-materials.mjs";
       const frames = [...document.querySelectorAll("iframe")];
       const strength = document.getElementById("strength");
+      const material = document.getElementById("gm-material");
+      material.innerHTML = Object.entries(materials)
+        .map(([key, m]) => `<option value="${key}">${m.name}</option>`)
+        .join("");
+      material.value = "slate";
+      function applyMaterial() {
+        const key = materialKey(material.value);
+        document.getElementById("gm-material-description").textContent =
+          materials[key].description;
+        const frame = frames[1];
+        const url = new URL(frame.src);
+        url.searchParams.set("material", key);
+        url.searchParams.set("strength", strength.value);
+        frame.src = url;
+        const link = document.querySelectorAll("a.open")[1];
+        const full = new URL(link.href);
+        full.searchParams.set("material", key);
+        link.href = full;
+      }
+      material.addEventListener("change", applyMaterial);
+      applyMaterial();
       function apply() {
         for (const f of frames)
           f.contentWindow.postMessage(
