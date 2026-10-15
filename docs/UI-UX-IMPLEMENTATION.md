@@ -4,6 +4,8 @@
 
 Phone screenshots exposed three sibling-layout failures: Characteristic allocation feedback stretched the first score cell, Career Skill feedback entered the +/- stepper, and 44px touch help buttons overlapped XP actions in a reserved 32px column. The shared issue connector now places those messages at the grid/row level. Responsive point columns keep at least 72px per cell; XP help tracks and buttons share one size. Validation rules, amounts and calculations are unchanged. `tests/browser/mobile-allocation.spec.mjs` checks message placement, control separation and touch bounds at 320/390/430px, plus XP geometry at 790/1440px and coarse-pointer widths. These are emulated checks, not physical-phone certification.
 
+Focused verification passed: 22 interface/layout browser cases (four conditional skips), the extra desktop allocation checks at 1024/1440px, three shared presentation tests, syntax/format and offline inclusion. Mobile and desktop screenshots were reviewed. The broader release gate did not pass; its unrelated outstanding checks are recorded in TESTING.md and were not folded into this UI fix.
+
 ## Additional UI guidance — 15 October 2026
 
 Installed the `emil-design-eng`, `mobile-native` and `break-ui` skills from `emilkowalski/skills` in the local Codex skills directory. Use the relevant guide for interaction polish, mobile platform behavior or realistic edge-case reviews respectively, alongside the existing UI/UX Pro Max, Web Design Guidelines and Frontend Design skills. Project instructions retain this preference for future chats. This installation does not add runtime packages or change the app's artwork, theme or animation policy.

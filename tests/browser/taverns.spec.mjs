@@ -27,8 +27,8 @@ test("Tavern staff use shared foundation filters and display usable printed defe
   await expect(page.locator("#creator-main")).toContainText("Sword");
   await noOverflow(page);
   await search(page, "Tavern booths and privacy");
-  await expect(page.getByRole("dialog")).toContainText(
-    "Tavern booths and privacy",
-  );
+  await expect(
+    page.getByRole("option", { name: /^Tavern booths and privacy / }),
+  ).toHaveCount(0);
   await noOverflow(page);
 });

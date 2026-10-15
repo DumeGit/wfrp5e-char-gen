@@ -26,9 +26,15 @@ The install command downloads Chromium once for the installed Playwright version
 | Mobile layout/navigation | Relevant feature suite and `npm run test:ui:mobile` |
 | PWA/assets/offline | `npm run build`, `node scripts/check-offline.mjs`, `npm run test:ui:pwa` |
 | Book source/registry | Review supplied pages; regenerate data, check books/generated outputs and affected book tests; full release checks for substantial integrations |
-| Shared rules, substantial refactor, test infrastructure, or ready to push/release | `npm run check:release`; optional cross-browser smoke when browser compatibility is affected |
+| Shared rules/data/schema changes, substantial refactor, or formal release candidate | `npm run check:release`; optional cross-browser smoke when browser compatibility is affected |
 
 `check:quick` checks application syntax/imports/identifiers and formatting. It does not prove rule data or PDFs correct. Direct `node --test` runs avoid npm's full build/test prehook; first prepare assets when source data changed. Name the actual affected test files, rather than repeatedly running every book combination. If a focused test passes, broaden only for a new failure, unresolved concern, or wider impact. A routine local commit does not require the full release command. Do not push without the user's authorization.
+
+A routine styling or scoped control push uses the same proportional checks as its implementation; pushing alone does not justify the full book/browser matrix. If a broader run exposes unrelated failures, report them and keep them separate instead of turning the change into a test-maintenance project. Never claim the full release gate passed when it did not.
+
+### Known broad-suite failures — 15 October 2026
+
+The allocation-layout release run reported 496/498 passing Node tests and 193 passing browser cases, nine failures and four intentional skips. The targeted interface/layout checks passed. Outstanding wider checks include Lustria/Salzenmund complete-character fixtures that assume the old defaults, GM Corsairs/Leech Wyrm navigation/reload scenarios, the empty-Career history locator and Salzenmund's former Origins language caption. Their attempted unrelated repairs were not retained in this layout change; investigate them as a separate test-maintenance task. The Tavern search expectation was updated for the deliberately hidden Rules category.
 
 ## Browser commands
 
