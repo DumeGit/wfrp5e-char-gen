@@ -4,9 +4,13 @@ Lustria's initial batch adds 45 reviewed mechanical references plus its implemen
 
 The masthead search launcher opens the same **Search the books** workspace in both creators. Desktop uses a large centred modal with results on the left and a reading pane on the right. Phones use a full-screen modal with separate results/reference views; **Back to search** restores the results. The input node stays stable throughout. Existing Career, Experience, magic and shop filters remain independent.
 
+## Rules visibility — 15 October 2026
+
+The Rules category is hidden in every mode, including All categories, queries and related-term chaining. The shared reference-search controller removes these rows before supplying the reader or worker; Category does not list Rules. Source-reviewed Rules and generated coverage counts remain intact and distributed. This is a visibility change, not removal of copyrighted source data or public-launch clearance. Other named categories remain visible. Coverage reports describe the retained source inventory, not only currently visible categories.
+
 ## Categories and results
 
-**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Rules, Tables, Endeavours, Conditions, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
+**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
 
 | Category | Additional filters |
 | --- | --- |

@@ -36,6 +36,7 @@ The install command downloads Chromium once for the installed Playwright version
 | --- | --- |
 | `smoke` (also `test:ui`) | Player/GM creators open, navigate, read a rule and fit desktop/mobile widths |
 | `search` | Stable typing/caret, categories/book/combined filters and memory, Rune labels, Cants/prayers, loading retry, inactive-book availability, keyboard controls, automatic batches, return position and chained references without changing the draft |
+| `notices` | All three modes on desktop/mobile and a production-shaped HTTPS origin: independent emblem, unofficial notices and working legal/privacy/contact links, no analytics requests, Rules absent from the search category/results with other references still available |
 | `pc` | Career rolls, recorded dice, advancement/tracker grouping and undo, repeatable Talents, equipment purchase/removal |
 | `marijan` | Unrestricted one-page editing, additions, custom entries, overrides, Undo, independent saves/reload, player copying and editable PDF downloads |
 | `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, Tribes Troll composition/Hag spells and Shaman Lore controls, book-removal confirmation/undo, early blocking issue and repair |

@@ -1,6 +1,5 @@
 export const SEARCH_CATEGORIES = {
   all: "All categories",
-  rule: "Rules",
   table: "Tables",
   endeavour: "Endeavours",
   condition: "Conditions",

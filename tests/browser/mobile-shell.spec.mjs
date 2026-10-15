@@ -111,7 +111,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     const bytes = await downloadBytes(page, save);
     expect(JSON.parse(bytes.bytes).name).toBeDefined();
     await expect(menu).not.toBeVisible();
-    await search(page, "Fortune");
+    await search(page, "Trained");
     await expect(
       page.getByRole("dialog", { name: "Search the books", exact: true }),
     ).toBeVisible();

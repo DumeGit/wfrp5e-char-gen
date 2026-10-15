@@ -20,9 +20,12 @@ test("Lustria manual Careers and complete source references work on desktop and 
     .getByRole("button", { name: "Choose books", exact: true })
     .click();
   await page.locator('[data-book="lustria"]').check();
+  page.once("dialog", (dialog) => dialog.accept());
   await page
     .getByRole("button", { name: "Use selected books", exact: true })
     .click();
+  await page.getByLabel("Species", { exact: true }).selectOption("Human");
+  await page.getByRole("button", { name: "Apply change", exact: true }).click();
   await pcStep(page, "Career");
   await page.locator("#career-book").selectOption("lustria");
   await expect(page.locator(".career-result")).toHaveCount(4);

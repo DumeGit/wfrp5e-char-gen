@@ -1,7 +1,6 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"1b3b598251ae485a20e5";
+const CACHE=CACHE_PREFIX+"5d01178583dce88fa3fc";
 const ASSETS=[
- "analytics.mjs",
  "app.js",
  "archives-iii-ui.mjs",
  "archives-iii.mjs",
@@ -9,7 +8,6 @@ const ASSETS=[
  "assets/LICENSE-pdf-lib.md",
  "assets/black-banner/banner.png",
  "assets/black-banner/bestiary-banner.webp",
- "assets/black-banner/w.svg",
  "assets/character-sheet.pdf",
  "assets/fonts/cinzel-OFL.txt",
  "assets/fonts/cinzel.ttf",
@@ -21,13 +19,12 @@ const ASSETS=[
  "assets/icon-192.png",
  "assets/icon-512.png",
  "assets/icon-maskable-512.png",
+ "assets/ledger-emblem.svg",
  "assets/marijan/banner.webp",
  "assets/panel-textures/crypt-masonry.svg",
  "assets/panel-textures/tavern-wood.svg",
  "assets/panel-textures/vellum.svg",
  "assets/pdf-lib.min.js",
- "assets/vercel-analytics-LICENSE.txt",
- "assets/vercel-analytics.mjs",
  "astrology.mjs",
  "background.mjs",
  "book-bundle.mjs",
@@ -337,6 +334,7 @@ const ASSETS=[
  "issues.mjs",
  "legacy-character.mjs",
  "legacy.mjs",
+ "legal.html",
  "lustria.mjs",
  "magic-browser.mjs",
  "manifest.webmanifest",
@@ -369,6 +367,7 @@ const ASSETS=[
  "search-presentation.mjs",
  "search-ranking.mjs",
  "search-worker.mjs",
+ "site-notices.css",
  "source-controls.mjs",
  "sources.mjs",
  "species-mechanics.mjs",

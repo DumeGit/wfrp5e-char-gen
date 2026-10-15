@@ -208,13 +208,13 @@ test("Search excerpts are plain text and Back retains the selected result @inter
   page,
 }) => {
   await openPC(page);
-  const input = await search(page, "Fortune");
-  const result = page.getByRole("option", { name: /^Fortune Rule/ });
+  const input = await search(page, "Trained");
+  const result = page.getByRole("option", { name: /^Trained Creature Trait/ });
   await expect(result).toBeVisible();
   await expect(result).not.toContainText("###");
   await input.press("ArrowDown");
   await input.press("Enter");
-  await expect(page.locator("#book-search-title")).toHaveText("Fortune");
+  await expect(page.locator("#book-search-title")).toHaveText("Trained");
   await page
     .getByRole("button", { name: "Back to search", exact: true })
     .click();

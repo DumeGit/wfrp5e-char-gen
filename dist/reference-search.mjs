@@ -5,6 +5,7 @@ import { searchBookText } from "./book-search-text.mjs";
 import { createReferenceLinker } from "./book-search-links.mjs";
 import { createSearchController } from "./search-controller.mjs";
 import { loadReferenceLibrary } from "./search-library.mjs";
+import { isSearchCategoryVisible } from "./reference-entries.mjs";
 import { referenceBodyHTML } from "./reference-body.mjs";
 import {
   searchLabel,
@@ -49,7 +50,7 @@ export function createReferenceSearch(library) {
       const payload = await loadReferenceLibrary(library, undefined, {
         normalize: false,
       });
-      index = payload.rows;
+      index = payload.rows.filter((row) => isSearchCategoryVisible(row.kind));
       books = payload.books;
       linkText = createReferenceLinker(index);
       engine?.dispose();

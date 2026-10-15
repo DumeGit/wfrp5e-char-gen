@@ -23,6 +23,11 @@ export const REFERENCE_CATEGORIES = [
 export const isSearchCategoryEnabled = (category) =>
   category !== "profile" && category !== "template";
 
+// Visibility is separate from the frozen source inventory. Rules remain in
+// reviewed data, but never enter live results, workers or related-term links.
+export const isSearchCategoryVisible = (category) =>
+  isSearchCategoryEnabled(category) && category !== "rule";
+
 export function validateReferenceEntry(entry, book) {
   const nonempty = (value) => typeof value === "string" && !!value.trim();
   const page = String(entry?.page || "")

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 100">
+  <title>The Character Ledger</title>
+  <path d="M24 14L80 14L86 20L86 86L24 86Z" fill="#b89a62"/>
+  <path d="M30 18L78 18L82 22L82 80L30 80Z" fill="#e6d7b1"/>
+  <path d="M22 12L76 12L76 76L22 76Z" fill="#734047"/>
+  <path d="M22 12L30 12L30 76L22 76Z" fill="#b89a62"/>
+  <path d="M38 27L65 27L65 47L38 47Z" fill="#e6d7b1"/>
+  <path d="M42 32L61 32L61 35L42 35Z" fill="#734047"/>
+  <path d="M42 39L56 39L56 42L42 42Z" fill="#734047"/>
+  <path d="M57 57L67 57L67 83L62 79L57 83Z" fill="#b89a62"/>
+</svg>

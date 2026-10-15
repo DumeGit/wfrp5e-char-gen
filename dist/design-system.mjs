@@ -21,5 +21,5 @@ export function chapterHeading(title) {
 }
 
 export function ledgerEmblem() {
-  return '<img class="ledger-emblem" src="assets/black-banner/w.svg" alt="" width="108" height="100">';
+  return '<img class="ledger-emblem" src="assets/ledger-emblem.svg" alt="" width="108" height="100">';
 }

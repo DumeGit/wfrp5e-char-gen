@@ -8,7 +8,7 @@
       content="Build a Fifth Edition character freely on one page. Direct values, all integrated books and manual overrides."
     />
     <title>Marijan Mode · WFRP Character Ledger</title>
-    <link rel="icon" type="image/svg+xml" href="assets/black-banner/w.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/ledger-emblem.svg" />
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="theme-color" content="#18181b" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="marijan/style.css" />
     <link rel="stylesheet" href="mobile-shell.css" />
     <link rel="stylesheet" href="interface.css" />
+    <link rel="stylesheet" href="site-notices.css" />
   </head>
   <body>
     <a class="skip-link" href="#creator-main">Skip to editor</a>
@@ -37,13 +38,13 @@
         <span class="brand-mark" aria-hidden="true"
           ><img
             class="ledger-emblem"
-            src="assets/black-banner/w.svg"
+            src="assets/ledger-emblem.svg"
             alt=""
             width="108"
             height="100"
         /></span>
         <div class="brand-title">
-          <span class="brand-world">WARHAMMER FANTASY ROLEPLAY</span
+          <span class="brand-world">UNOFFICIAL · WFRP FIFTH EDITION</span
           ><strong>Marijan Mode</strong
           ><small>FIFTH EDITION · UNRESTRICTED CREATION</small>
         </div>
@@ -67,7 +68,7 @@
               aria-expanded="false"
               aria-controls="book-search-results"
               autocomplete="off"
-              placeholder="Search rules, Careers, magic and trappings…"
+              placeholder="Search Careers, magic and trappings…"
             /><button
               id="book-search-clear"
               type="button"
@@ -95,6 +96,14 @@
       </div>
     </header>
     <div id="app"><main id="creator-main" class="panel" tabindex="-1" aria-busy="true"><h1>Opening the Marijan Mode…</h1><p role="status">Loading the creator and reviewed books.</p></main></div>
+    <footer class="site-notice" aria-label="Project information">
+      <p><strong>Unofficial companion.</strong> Not affiliated with or endorsed by Games Workshop or Cubicle 7.</p>
+      <nav aria-label="About this project">
+        <a href="legal.html#credits">Credits &amp; rights</a>
+        <a href="legal.html#privacy">Privacy</a>
+        <a href="legal.html#contact">Contact</a>
+      </nav>
+    </footer>
     <div id="pwa-status" class="pwa-status" role="status" aria-live="polite">
       Preparing offline access, including PDF exports…
     </div>
@@ -163,6 +172,5 @@
     <script src="assets/pdf-lib.min.js" defer></script>
     <script type="module" src="marijan/app.mjs"></script>
     <script type="module" src="pwa.mjs"></script>
-    <script type="module" src="analytics.mjs"></script>
   </body>
 </html>

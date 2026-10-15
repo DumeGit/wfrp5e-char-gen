@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "WFRP Character Ledger",
+  "name": "The Character Ledger",
   "short_name": "Character Ledger",
-  "description": "Create and advance WFRP Fifth Edition characters, with recorded rolls, an XP ledger and PDF exports.",
+  "description": "An independent, unofficial companion for WFRP Fifth Edition, with character creation, recorded rolls and PDF exports.",
   "lang": "en",
   "start_url": "./",
   "scope": "./",

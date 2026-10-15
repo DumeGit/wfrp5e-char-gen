@@ -6,6 +6,7 @@ const scope = process.argv[2] || "smoke";
 const scopes = [
   "smoke",
   "search",
+  "notices",
   "pc",
   "gm",
   "marijan",

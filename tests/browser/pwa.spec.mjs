@@ -23,10 +23,10 @@ test("all three tools and previously unopened references work offline @pwa", asy
   await expect(
     page.getByRole("heading", { name: "Origins & identity", exact: true }),
   ).toBeVisible();
-  await search(page, "Fortune");
-  await page.getByRole("option", { name: /^Fortune Rule/ }).click();
+  await search(page, "Trained");
+  await page.getByRole("option", { name: /^Trained Creature Trait/ }).click();
   await expect(
-    page.getByRole("region", { name: "Fortune", exact: true }),
+    page.getByRole("region", { name: "Trained", exact: true }),
   ).toBeVisible();
   await page.goto("/gm.html?verify=1");
   await expect(

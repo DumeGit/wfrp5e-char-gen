@@ -164,7 +164,7 @@ export async function search(page, text = "") {
   await expect(
     page
       .getByRole("combobox", { name: "Search category", exact: true })
-      .getByRole("option", { name: "Rules", exact: true }),
+      .getByRole("option", { name: "Talents", exact: true }),
   ).toBeAttached();
   return input;
 }

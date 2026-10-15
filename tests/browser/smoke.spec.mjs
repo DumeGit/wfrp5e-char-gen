@@ -28,23 +28,18 @@ for (const creator of ["PC", "GM"]) {
         page.getByRole("button", { name: "Choose template", exact: true }),
       ).toBeVisible();
     }
-    const input = await search(page, "Fortune");
+    const input = await search(page, "Trained");
     await page
       .getByRole("combobox", { name: "Search category", exact: true })
-      .selectOption({ label: "Rules" });
-    await page.getByRole("option", { name: /^Fortune Rule/ }).click();
-    const reader = page.getByRole("region", { name: "Fortune", exact: true });
-    await expect(
-      reader.getByRole("heading", {
-        name: "Replenishing Fortune",
-        exact: true,
-      }),
-    ).toBeVisible();
+      .selectOption({ label: "Creature Traits" });
+    await page.getByRole("option", { name: /^Trained Creature Trait/ }).click();
+    const reader = page.getByRole("region", { name: "Trained", exact: true });
+    await expect(reader).toContainText("Trained");
     await noOverflow(page);
     await reader
       .getByRole("button", { name: "Back to search", exact: true })
       .click();
-    await expect(input).toHaveValue("Fortune");
+    await expect(input).toHaveValue("Trained");
     await noOverflow(page);
   });
 }

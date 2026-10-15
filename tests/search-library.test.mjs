@@ -5,6 +5,8 @@ import { library, R, soldier } from "./fixture.mjs";
 import { loadReferenceLibrary } from "../dist/search-library.mjs";
 import { searchBooks } from "../dist/book-search.mjs";
 import { referenceBodyHTML } from "../dist/reference-body.mjs";
+import { isSearchCategoryVisible } from "../dist/reference-entries.mjs";
+import { createReferenceLinker } from "../dist/book-search-links.mjs";
 
 const wire = JSON.parse(
   await readFile(
@@ -15,6 +17,34 @@ const wire = JSON.parse(
 const full = await loadReferenceLibrary(library, () => wire);
 const named = (name, kind) =>
   full.rows.filter((row) => row.name === name && (!kind || row.kind === kind));
+
+test("the live search projection hides Rules from all results and related-term chaining", () => {
+  const visible = full.rows.filter((row) => isSearchCategoryVisible(row.kind));
+  assert.ok(full.rows.some((row) => row.kind === "rule"));
+  assert.ok(!visible.some((row) => row.kind === "rule"));
+  for (const query of [
+    "Fortune",
+    "Achieving the Impossible",
+    "Replenishing Fate",
+  ])
+    assert.ok(
+      searchBooks(visible, query, Infinity).rows.every(
+        (row) => row.kind !== "rule",
+      ),
+    );
+  const rule = named("Achieving the Impossible", "rule")[0];
+  assert.ok(rule);
+  assert.ok(
+    createReferenceLinker(visible)(rule.name).every(
+      (segment) => !segment.keys?.includes(rule.key),
+    ),
+  );
+  assert.ok(
+    searchBooks(visible, "Trained", 20).rows.some(
+      (row) => row.kind === "trait",
+    ),
+  );
+});
 
 test("core Fate and Fortune references include all spending and replenishment rules", () => {
   const fate = named("Fate", "rule")[0],

@@ -12,38 +12,38 @@ for (const creator of ["PC", "GM"]) {
     page,
   }) => {
     await (creator === "PC" ? openPC(page) : openGM(page));
-    const input = await search(page, "Fortune");
+    const input = await search(page, "Trained");
     await input.press("Tab");
     await page
       .locator(".banner-search-field")
       .click({ position: { x: 4, y: 20 } });
     await expect(input).toBeFocused();
     await expect(
-      page.getByRole("option", { name: /^Fortune Rule/ }),
+      page.getByRole("option", { name: /^Trained Creature Trait/ }),
     ).toBeVisible();
     await input.press("Home");
     await input.press("ArrowRight");
     await input.pressSequentially("X");
-    await expect(input).toHaveValue("FXortune");
+    await expect(input).toHaveValue("TXrained");
     await expect(input).toBeFocused();
     await expect.poll(() => input.evaluate((e) => e.selectionStart)).toBe(2);
     await input.fill("Burning");
-    await input.fill("Fortune");
+    await input.fill("Trained");
     await expect(
-      page.getByRole("option", { name: /^Fortune Rule/ }),
+      page.getByRole("option", { name: /^Trained Creature Trait/ }),
     ).toBeVisible();
     await expect(
       page.getByRole("option", { name: /^Burning Condition/ }),
     ).toHaveCount(0);
   });
-  test(`${creator} appends Rules automatically and preserves the list on Back @search @mobile`, async ({
+  test(`${creator} appends Talents automatically and preserves the list on Back @search @mobile`, async ({
     page,
   }) => {
     await (creator === "PC" ? openPC(page) : openGM(page));
     await search(page);
     await page
       .getByRole("combobox", { name: "Search category", exact: true })
-      .selectOption({ label: "Rules" });
+      .selectOption({ label: "Talents" });
     const list = page.getByRole("listbox", {
       name: "Matching rules",
       exact: true,
@@ -66,7 +66,7 @@ for (const creator of ["PC", "GM"]) {
       .click();
     await expect(
       page.getByRole("combobox", { name: "Search category", exact: true }),
-    ).toHaveValue("rule");
+    ).toHaveValue("talent");
     await expect(list.locator(`[data-search-key="${key}"]`)).toBeVisible();
     await noOverflow(page);
   });
@@ -167,7 +167,7 @@ for (const creator of ["PC", "GM"]) {
     await search(page);
     await expect(
       page.locator('#book-search-book option[value="bayl-many-eyes"]'),
-    ).toBeAttached();
+    ).toHaveCount(0);
     await expect(
       page.locator('#book-search-book option[value="cluster-eye-tribe"]'),
     ).toBeAttached();
@@ -292,7 +292,7 @@ test("Cants and prayers share one searchable category, and load failure can be r
   await expect(
     page
       .getByRole("combobox", { name: "Search category", exact: true })
-      .getByRole("option", { name: "Rules", exact: true }),
+      .getByRole("option", { name: "Talents", exact: true }),
   ).toBeAttached();
   await categoryFilters(page, "magic");
   const lorePatron = page.getByRole("combobox", {

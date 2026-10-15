@@ -1,8 +1,8 @@
 # Application structure and shared results
 
-## Page-view analytics
+## Public notices and privacy
 
-Player, GM and Marijan each load the independent `analytics.mjs` module. It uses the official `@vercel/analytics` browser SDK, copied with its MIT licence by `scripts/build-analytics.mjs` during `npm run build`, before offline assets are generated. There is no browser bare-package import or new bundler. It injects the production Analytics script on nonlocal HTTPS pages, excluding verification URLs, and filters events to page views without query strings/fragments. No creator state or custom events are supplied. Vercel Web Analytics must be enabled for the project; local servers make no Insights requests. The service worker includes the local integration/SDK, while the dynamic `/_vercel/insights/*` endpoints remain network-only under the existing asset allowlist. Analytics runs independently of creator startup and is not required for offline editing/export. Policy, SDK parity and the three pages are covered by targeted Node/Playwright checks.
+All three entry pages carry static unofficial notices and links to `legal.html`; they work before creator JavaScript loads. `site-notices.css` uses existing theme tokens and leaves space above the fixed phone controls. The independent ledger emblem is shared by mastheads, folios and PWA icons. There is no client analytics module, SDK, tracking script or analytics build dependency. Hosting request/security logs remain separate from app telemetry. See PUBLIC-NOTICES.md for attribution, contact and remaining clearance work.
 
 ## Book content and creator results
 
