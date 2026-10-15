@@ -77,12 +77,12 @@ A later image revision restored blue/ivory/gold to the painting, but the user cl
 
 ## Matching panel textures — 15 October 2026
 
-`design-previews/panel-textures.html` compares one material shared by the left menu and folio within each mode. Run `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/panel-textures.html`. Full-size links show each pair with native disclosures. A Texture strength selector compares Off (current surfaces), Subtle and Tactile; no production selection has been made.
+`design-previews/panel-textures.html` compares one material shared by the left menu and folio within each mode. Run `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/panel-textures.html`. Full-size links show each pair with native disclosures. A Texture strength selector compares Off (current surfaces), Subtle and Tactile; Subtle is the default in both gallery and individual previews. No production selection has been made.
 
 | Example | Mode | Shared panel surface |
 | --- | --- | --- |
-| A — Worn leather | Player | Warm brown, fine pores, soft wear; existing old gold and oxblood accents |
-| B — Weathered hide | GM | Storm-blue irregular grain; existing bone, cobalt and brass accents |
+| A — Tavern oak | Player | Dark tavern floorboards, long grain, staggered joints, knots and sparse nail heads; existing old gold and oxblood accents |
+| B — The ossuary | GM | Storm-blue stone with faint engraved skulls, ribs and scattered bones; existing bone, cobalt and brass accents |
 | C — Pressed ash vellum | Marijan | Charcoal fine directional grain; existing silver and crimson accents |
 
 The paired panels use identical base colours and texture images, rather than separate menu/folio materials. Original procedural SVG textures live in `design-previews/textures/`; no source-book images, external textures, new dependencies or generated raster assets are required. Static textures remain visible with reduced motion; no texture is animated. Production textures, theme tokens, rules and offline assets are unchanged.
@@ -90,3 +90,6 @@ The paired panels use identical base colours and texture images, rather than sep
 `panel-texture-snapshots.json` contains the actual current rail/folio markup captured from the isolated demo fixtures for all three creators. The static screen loads existing fonts, controls and theme styles but no creator runtime or saved data. Character-changing controls are inert. Preview-only rules keep desktop panel bodies visible within small gallery frames; full-size phone layouts stack the pair. Captions, full-size links and Off/Subtle/Tactile controls are accessible outside the inert thumbnails.
 
 Verification: visually inspected the desktop gallery after adjusting grain contrast, checked the phone gallery and full-size stack for horizontal overflow, identical background/texture styles on both panels in all three modes, strength synchronisation and static texture visibility with reduced motion. No browser errors or missing assets were observed. These isolated studies do not need a production build or full rule suite.
+
+
+Follow-up direction: the user requested tavern-style wooden panelling for Player and a skeletal treatment for GM, while keeping Marijan’s ash vellum and making every texture subtle. The revised examples use `tavern-wood.svg` and `ossuary.svg` respectively; both are original native vector/procedural surfaces. Marijan’s material is unchanged. The initial leather/hide SVG studies remain unused source history. Subtle defaults to 0.15 opacity on all modes; the optional stronger Tactile comparison remains 0.30. The paired panels still share the exact same material and base colour. Visually checked the revised desktop gallery and verified the default, loaded assets, absence of browser errors and phone gallery overflow. This remains an isolated preview, without production changes.

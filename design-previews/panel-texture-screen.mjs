@@ -40,4 +40,4 @@ window.addEventListener("message", (e) => {
   )
     setStrength(e.data.value);
 });
-setStrength(params.get("strength") || "0.30");
+setStrength(params.get("strength") || "0.15");
