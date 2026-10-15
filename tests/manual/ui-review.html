@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Local UI review</title>
+  <style>
+    body {
+      margin: 0;
+      background: #eee;
+      font: 14px system-ui;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      height: calc(100dvh - 65px);
+      border: 0;
+    }
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      background: #e3e3e3;
+      border-top: 1px solid #aaa;
+    }
+    select {
+      font: inherit;
+      padding: 8px;
+    }
+    span {
+      font-size: 12px;
+    }
+  </style>
+  <iframe title="Actual creator with isolated review data"></iframe>
+  <nav aria-label="Development review controls">
+    <select aria-label="Creator">
+      <option value="player">Player</option>
+      <option value="gm">GM</option>
+      <option value="marijan">Marijan</option></select
+    ><select aria-label="Review data">
+      <option value="demo">Demo data</option>
+      <option value="worst">Worst case</option>
+      <option value="empty">Empty</option>
+      <option value="one">One</option>
+      <option value="catalogue">Core Skill catalogue</option></select
+    ><span>Local fixtures · not your saved characters</span>
+  </nav>
+  <script type="module">
+    const fixtures = await fetch("/__ui-review-fixtures").then((r) => r.json());
+    const controls = document.querySelectorAll("select"),
+      frame = document.querySelector("iframe");
+    const keys = {
+        player: "wfrp-fifth-character-ledger-v2",
+        gm: "wfrp-gm-workshop-v1",
+        marijan: "wfrp-marijan-v1",
+      },
+      pages = { player: "/", gm: "/gm.html", marijan: "/marijan.html" };
+    const params = new URLSearchParams(location.search);
+    controls[0].value = params.get("mode") || "player";
+    controls[1].value = params.get("data") || "demo";
+    function apply() {
+      const mode = controls[0].value,
+        data = controls[1].value;
+      history.replaceState(null, "", `?mode=${mode}&data=${data}`);
+      localStorage.setItem(keys[mode], JSON.stringify(fixtures[mode][data]));
+      frame.src = pages[mode];
+    }
+    controls.forEach((c) => c.addEventListener("change", apply));
+    apply();
+  </script>
+</html>
