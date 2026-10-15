@@ -10,9 +10,9 @@ const esc = (v) =>
   );
 const fmt = (n) =>
   Number.isFinite(n) ? Number(n.toFixed(3)).toLocaleString() : "?";
-export function penaltySummary(R, s) {
-  const e = equipment(R, s),
-    d = derive(R, s),
+export function penaltySummary(R, s, snapshot = null) {
+  const e = snapshot?.equipment || equipment(R, s),
+    d = snapshot?.derived || derive(R, s),
     p = e.penalties,
     modifiers = [
       ...(p.stealth ? [`Stealth ${p.stealth} SL`] : []),

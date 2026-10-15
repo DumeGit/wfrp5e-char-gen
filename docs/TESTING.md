@@ -38,6 +38,8 @@ The allocation-layout release run reported 496/498 passing Node tests and 193 pa
 
 ## Browser commands
 
+Player review layout: run `node --test tests/review-sheet.test.mjs` and `npx playwright test tests/browser/review.spec.mjs`. These focused checks cover shared current scores, distinct resources, Talent rank counts, unknown data, escaping, descriptions/PDF options, notes editing, section shortcuts, actionable export blockers and 320/390px fit. The existing Player PDF-download case in `storage-exports.spec.mjs` checks both unchanged downloads. Inspect the generated desktop/phone screenshots once for visual changes; this presentation-only work does not require unrelated book suites or a full release run.
+
 | Command suffix (`npm run test:ui:<suffix>`) | Coverage |
 | --- | --- |
 | `smoke` (also `test:ui`) | Player/GM creators open, navigate, read a rule and fit desktop/mobile widths |

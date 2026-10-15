@@ -1,5 +1,9 @@
 # Shared UI/UX implementation — 10 October 2026
 
+## Player Review sheet — 15 October 2026
+
+Replaced the long review tables and export explanations with a compact sheet: identity/rank, current Characteristic cells, resource and XP/money strips, trained Skills with totals, Talent ranks, magic and structured weapons/armour/belongings. Current load effects come from the shared character result. Native disclosures retain breakdowns, descriptions, untrained Basic Skills, PDF options, background/ambitions, notes, XP/dice history and book-specific references. Missing creation choices stay visible and actionable before export; section Edit controls return to existing steps. Scoped `review-sheet.css` inherits the Black Banner tokens, pairs desktop columns and stacks phone sections with 44px targets. Export files and rules are unchanged. Focused review and actual PDF-download checks use desktop/mobile Chromium; physical phones are not claimed.
+
 ## Mobile allocation feedback — 15 October 2026
 
 Phone screenshots exposed three sibling-layout failures: Characteristic allocation feedback stretched the first score cell, Career Skill feedback entered the +/- stepper, and 44px touch help buttons overlapped XP actions in a reserved 32px column. The shared issue connector now places those messages at the grid/row level. Responsive point columns keep at least 72px per cell; XP help tracks and buttons share one size. Validation rules, amounts and calculations are unchanged. `tests/browser/mobile-allocation.spec.mjs` checks message placement, control separation and touch bounds at 320/390/430px, plus XP geometry at 790/1440px and coarse-pointer widths. These are emulated checks, not physical-phone certification.

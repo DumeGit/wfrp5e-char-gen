@@ -1,0 +1,495 @@
+/* Player review: one readable sheet, using the shared Black Banner palette. */
+.review-sheet {
+  min-width: 0;
+}
+.review-sheet .chapter-title {
+  margin-bottom: 12px;
+}
+.review-sheet h3,
+.review-sheet h4,
+.review-sheet p,
+.review-sheet dl {
+  margin: 0;
+}
+.review-sheet h3 {
+  font-size: 1.35rem;
+}
+.review-sheet h4 {
+  font: 600 0.8rem var(--font-body);
+  color: var(--color-muted);
+  margin: 12px 0 6px;
+}
+.review-identity {
+  border-bottom: 2px solid var(--color-gold-dark);
+  padding-bottom: 14px;
+}
+.review-identity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.review-identity-grid > div {
+  min-width: 0;
+}
+.review-identity-grid dt,
+.review-resources dt,
+.review-armour dt {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.review-identity-grid dd {
+  margin: 2px 0 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.review-export {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.review-export-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px 12px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.review-export-status span {
+  color: var(--color-muted);
+}
+.review-ready strong {
+  color: var(--color-success);
+}
+.review-incomplete strong {
+  color: var(--color-error);
+}
+.review-export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.review-export-actions button {
+  min-height: 36px;
+  font-size: 0.8rem;
+  padding: 7px 12px;
+}
+.review-sheet .review-detail {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-line-soft);
+  border-radius: 0;
+  background: transparent;
+}
+.review-sheet .review-detail > summary {
+  padding: 9px 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.review-sheet .review-detail > summary,
+.review-sheet .talent-description > summary,
+.review-sheet .spell-description > summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin-bottom: 0;
+}
+.review-sheet .review-detail > summary::-webkit-details-marker,
+.review-sheet .talent-description > summary::-webkit-details-marker,
+.review-sheet .spell-description > summary::-webkit-details-marker {
+  display: none;
+}
+.review-sheet .review-detail > summary::before,
+.review-sheet .talent-description > summary::before,
+.review-sheet .spell-description > summary::before {
+  content: "›";
+  position: static;
+  inset: auto;
+  transform: none;
+  display: inline-block;
+  flex: 0 0 9px;
+  color: var(--color-gold-dark);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.review-sheet .review-detail[open] > summary::before,
+.review-sheet .talent-description[open] > summary::before,
+.review-sheet .spell-description[open] > summary::before {
+  transform: rotate(90deg);
+}
+.review-sheet .spell-description > summary {
+  display: block;
+}
+.review-sheet .spell-description > summary::before {
+  margin-right: 7px;
+}
+.review-sheet .review-background {
+  margin: 0 0 12px;
+}
+.review-background > div {
+  margin-bottom: 8px;
+}
+.review-background dt {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+.review-background dd {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.review-sheet .review-detail-body {
+  padding: 0 0 12px;
+  min-width: 0;
+}
+.review-sheet .review-detail-body p + p {
+  margin-top: 8px;
+}
+.review-export .review-detail {
+  border: 0;
+  margin-top: 2px;
+}
+.review-export .review-detail > summary {
+  padding-bottom: 0;
+  color: var(--color-muted);
+}
+.review-export .review-detail[open] > summary {
+  padding-bottom: 8px;
+}
+.review-block {
+  padding: 12px 0;
+  min-width: 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.review-block-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.review-sheet .review-edit {
+  min-height: 30px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+.review-count {
+  font: 400 0.8rem var(--font-body);
+  color: var(--color-muted);
+}
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-raised);
+}
+.review-stats > div {
+  text-align: center;
+  min-width: 0;
+  border-right: 1px solid var(--color-line-soft);
+}
+.review-stats > div:last-child {
+  border-right: 0;
+}
+.review-stats dt {
+  padding-top: 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.review-stats abbr {
+  text-decoration: none;
+}
+.review-stats dd {
+  margin: 0;
+}
+.review-sheet .review-stat-button {
+  display: block;
+  width: 100%;
+  min-height: 36px;
+  padding: 2px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.review-sheet .review-caption {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin: 6px 0 0;
+}
+.review-resources {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.review-resources dd {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 3px 0 0;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.review-resources small {
+  font-size: 0.7rem;
+  color: var(--color-warning);
+}
+.review-balance {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 18px;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--color-gold-dark);
+  font-size: 0.8rem;
+}
+.review-balance small {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+.review-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.review-columns > div {
+  min-width: 0;
+}
+.review-sheet ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.review-skill-heading,
+.review-skills > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 38px 40px;
+  align-items: center;
+  gap: 6px;
+}
+.review-sheet .issue-panel ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.review-skill-heading {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-line);
+  padding: 0 0 5px;
+}
+.review-skill-heading > :not(:first-child),
+.review-skills > li > :not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.review-skills > li {
+  border-bottom: 1px solid var(--color-line-soft);
+  padding: 4px 0;
+  font-size: 0.8rem;
+}
+.review-skills > li > span:first-child {
+  min-width: 0;
+}
+.review-skills small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.68rem;
+}
+.review-sheet .review-skill-name {
+  display: inline;
+  padding: 0;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  text-align: left;
+  font: 600 0.8rem var(--font-body);
+  overflow-wrap: anywhere;
+}
+.review-skills strong {
+  font-size: 1rem;
+}
+.review-sheet .talent-description,
+.review-sheet .spell-description {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-line-soft);
+  border-radius: 0;
+}
+.review-sheet .talent-description > summary,
+.review-sheet .spell-description > summary {
+  position: relative;
+  padding: 8px 0;
+  font: 600 0.8rem var(--font-body);
+  overflow-wrap: anywhere;
+}
+.review-sheet .talent-description > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.review-sheet .talent-description > summary > span:first-child {
+  flex: 1;
+  min-width: 0;
+}
+.review-rank {
+  font: 600 0.8rem var(--font-body);
+  flex-shrink: 0;
+}
+.review-sheet .talent-description > p,
+.review-sheet .spell-description > p,
+.review-sheet .spell-meta {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+}
+.review-equipment-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+.review-weapons li {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--color-line-soft);
+  font-size: 0.8rem;
+}
+.review-weapons li > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.review-weapons small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+.review-damage {
+  text-align: right;
+  flex-shrink: 0;
+}
+.review-damage strong {
+  font-size: 1rem;
+}
+.review-armour {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 6px 0;
+  border-block: 1px solid var(--color-line-soft);
+}
+.review-armour dd {
+  margin: 1px 0 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.review-belongings li {
+  font-size: 0.8rem;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--color-line-soft);
+  overflow-wrap: anywhere;
+}
+.review-belongings small {
+  color: var(--color-muted);
+  display: block;
+  font-size: 0.72rem;
+}
+.review-sheet .review-empty {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  padding: 4px 0;
+}
+.review-sheet .review-weight-warning {
+  color: var(--color-warning);
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+.review-records {
+  margin-top: 6px;
+}
+.review-records textarea {
+  min-height: 90px;
+}
+.review-sheet .review-detail-body .table-wrap {
+  margin: 8px 0;
+}
+.review-sheet .review-detail-body table {
+  font-size: 0.8rem;
+}
+.review-sheet .review-detail-body th,
+.review-sheet .review-detail-body td {
+  padding: 6px;
+}
+@media (max-width: 1200px) {
+  .review-stats {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .review-stats > div:nth-child(5) {
+    border-right: 0;
+  }
+  .review-stats > div:nth-child(n + 6) {
+    border-top: 1px solid var(--color-line-soft);
+  }
+  .review-columns,
+  .review-equipment-grid {
+    gap: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .review-columns,
+  .review-equipment-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .review-resources {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 6px;
+  }
+  .review-identity-grid {
+    gap: 10px 18px;
+  }
+  .review-identity-grid > div {
+    flex: 1 1 40%;
+  }
+  .review-export-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .review-sheet .review-export-actions button,
+  .review-sheet .review-edit,
+  .review-sheet summary,
+  .review-sheet .review-stat-button {
+    min-height: 44px;
+  }
+  .review-sheet .review-skill-name {
+    min-height: 44px;
+  }
+  .review-sheet .review-detail > summary {
+    display: flex;
+    align-items: center;
+  }
+  .review-sheet .talent-description > summary,
+  .review-sheet .spell-description > summary {
+    padding-block: 10px;
+  }
+  .review-sheet .review-skills li {
+    padding-block: 0;
+  }
+  .review-sheet .review-skills small {
+    margin: -5px 0 5px;
+  }
+}

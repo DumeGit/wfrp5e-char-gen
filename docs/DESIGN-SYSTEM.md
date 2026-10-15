@@ -11,6 +11,7 @@ The user selected **A — Moonlit Vellum** for the Bestiary Workshop on 7 Octobe
 | `dist/design-tokens.css` | Semantic colours, decorative surfaces, typography, spacing, radii, control heights, layout widths and motion durations; local fonts and approved Moonlit Vellum/Ash & Vellum themes |
 | `dist/design-system.css` | Shared component skin, shell, responsive adaptations, print and reduced motion |
 | `dist/design-system.mjs` | Escaped accessible chapter headings and shared emblem markup |
+| `dist/review-sheet.mjs`, `dist/review-sheet.css` | Player Review sheet composition and scoped density; consumes the shared calculated result and inherits semantic tokens |
 | `dist/install-control.mjs` | Reparents the existing install button into the redrawable rail, preserving its listeners and browser state |
 | `dist/styles.css`, `workspace.css`, `book-search.css` | Existing feature structure, density and interactions; loaded before the skin |
 | `dist/design-system.html` | Live component reference, independent of character data and rules |
