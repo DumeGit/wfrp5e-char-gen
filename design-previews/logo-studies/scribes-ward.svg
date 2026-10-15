@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 144">
+  <title>A — The Scribe’s Ward</title>
+  <defs>
+    <linearGradient id="metal" x2=".7" y2="1"><stop stop-color="#f0d596"/><stop offset=".47" stop-color="#c6a267"/><stop offset="1" stop-color="#806037"/></linearGradient>
+    <linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#a24648"/><stop offset="1" stop-color="#54242e"/></linearGradient>
+  </defs>
+  <!-- An original heraldic shield and cut-feather quill, not a faction crest. -->
+  <path d="M14 15L38 19L64 9L90 19L114 15V66Q114 104 64 135Q14 104 14 66Z" fill="#251d18" stroke="#6e4e2e" stroke-width="3"/>
+  <path d="M19 22L39 26L64 17L89 26L109 22V65Q109 100 64 127Q19 100 19 65Z" fill="url(#metal)"/>
+  <path d="M25 30L40 33L64 25L88 33L103 30V65Q103 95 64 119Q25 95 25 65Z" fill="url(#cloth)" stroke="#37231d" stroke-width="2"/>
+  <path d="M64 26V118Q103 94 103 65V30L88 33Z" fill="#241f1b"/>
+  <path d="M34 42L37 43M91 42L94 41M64 108V111" stroke="#caa468" stroke-width="2"/>
+  <path d="M43 96Q58 66 89 36Q90 58 78 72L68 73L72 80L61 82L62 89L51 92Z" fill="url(#metal)" stroke="#2a2018" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M38 105Q54 77 84 43M53 83L52 68M64 70L64 57M72 60L80 59" fill="none" stroke="#f0d596" stroke-width="2"/>
+  <path d="M36 108L43 97L45 99L39 110Z" fill="#e9d2a0"/>
+  <path d="M23 53V69Q26 86 38 96M104 54V66" fill="none" stroke="#e2c385" stroke-width="1" opacity=".65"/>
+</svg>

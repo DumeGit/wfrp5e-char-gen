@@ -102,3 +102,10 @@ The next user direction was crypt cobblestone walls. Added **Crypt masonry** as 
 
 
 The user approved implementation of the final three panel materials. Production now uses Tavern oak, Crypt masonry and Pressed ash vellum at fixed Subtle (0.15) strength through shared theme tokens. Other Bestiary alternatives and the strength selector remain standalone studies. Source SVGs here retain full strength for comparison; production copies wrap the artwork at 0.15 opacity. Off is now labelled **Off / flat surfaces** and explicitly clears the production texture in the preview. Current production no longer has candle pseudo-overlays, so the preview supplies its own static overlay geometry independently. No preview runtime or captured character markup is imported into the creators. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) and [texture provenance](../design-assets/panel-textures/README.md).
+
+
+## Ledger logo studies — 15 October 2026
+
+`design-previews/ledger-logos.html` compares four original vector marks: **A — The Scribe’s Ward** (quill and divided shield), **B — Fate’s Seal** (ten-sided die and burning trail), **C — The Illuminated Ledger** (custom angular C/L monogram), and **D — The Carrion Standard** (skull and ragged pennon). Each has a large view, a header-sized sample, 48/32/24px comparisons and a vellum/folio sample. Their source SVGs and saved comparison are in `design-previews/logo-studies/`.
+
+Run the existing `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/ledger-logos.html`. The gallery was visually inspected with all assets loaded; SVG XML and local image references were checked. These studies use local fonts, original paths and the existing brass/oxblood/vellum palette; no copied Warhammer wordmark or faction crest is embedded. Production logo, PWA icons and all creator behavior remain unchanged pending a chosen direction. No production build or creator regression suite is needed for these isolated previews.

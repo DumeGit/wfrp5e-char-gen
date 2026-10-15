@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 144">
+  <title>C — The Illuminated Ledger</title>
+  <defs>
+    <linearGradient id="gold" x2=".7" y2="1"><stop stop-color="#f2dda3"/><stop offset=".5" stop-color="#c7a367"/><stop offset="1" stop-color="#89613a"/></linearGradient>
+    <linearGradient id="red" x2="1" y2="1"><stop stop-color="#ac4d4d"/><stop offset="1" stop-color="#6b2d36"/></linearGradient>
+  </defs>
+  <!-- Custom drawn C and L: angular manuscript strokes with cut serifs. -->
+  <path d="M27 21L18 31V109L29 122M99 21L110 31V109L99 122M35 16L64 8L93 16M35 128L64 136L93 128" fill="none" stroke="#927044" stroke-width="2"/>
+  <path d="M89 35L76 20H43L25 39V99L43 117H76L91 102L80 89L71 101H49L40 92V46L49 36H69L80 48Z" fill="#201c18" stroke="#211b17" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M89 31L76 16H43L25 35V95L43 113H76L91 98L80 85L71 97H49L40 88V42L49 32H69L80 44Z" fill="url(#gold)" stroke="#735332" stroke-width="1"/>
+  <path d="M50 44L69 37L80 44L72 53V84H88L99 72L95 105H52L60 95V54Z" fill="#231b18" stroke="#231b18" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M50 41L69 34L80 41L72 50V81H88L99 69L95 102H52L60 92V51Z" fill="url(#red)" stroke="#e1bc7b" stroke-width="1.5"/>
+  <path d="M64 49L67 46V87H88M32 39V91L45 105" fill="none" stroke="#f0d597" stroke-width="1" opacity=".65"/>
+  <path d="M11 69L16 64L21 69L16 74ZM107 69L112 64L117 69L112 74Z" fill="#b7975c"/>
+</svg>

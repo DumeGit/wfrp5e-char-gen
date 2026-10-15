@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 144">
+  <title>B — Fate’s Seal</title>
+  <defs>
+    <linearGradient id="gold" x2=".7" y2="1"><stop stop-color="#f2dca3"/><stop offset=".45" stop-color="#cfad6f"/><stop offset="1" stop-color="#8e673d"/></linearGradient>
+    <linearGradient id="red" x2="0" y2="1"><stop stop-color="#a74548"/><stop offset="1" stop-color="#54242d"/></linearGradient>
+  </defs>
+  <!-- A ten-sided die under a burning trail, framed as an old printer’s device. -->
+  <path d="M31 62Q15 43 20 19Q24 34 37 39Q39 15 53 5Q47 28 62 42Q71 20 86 13Q72 35 78 55Q99 35 110 34Q95 48 93 71Z" fill="url(#red)" stroke="#3c251f" stroke-width="2"/>
+  <path d="M31 55Q24 42 25 33M47 38Q44 26 48 17M76 48Q77 36 83 29M92 61L101 48" fill="none" stroke="#d7b06e" stroke-width="2"/>
+  <path d="M64 43L106 70L104 107L64 135L24 107L22 70Z" fill="#211c18" stroke="#7c5b34" stroke-width="3"/>
+  <path d="M64 49L99 73L97 103L64 127L31 103L29 73Z" fill="url(#gold)"/>
+  <path d="M64 51L39 84L64 123L89 84Z" fill="#3b2921" stroke="#e8cb8e" stroke-width="2"/>
+  <path d="M30 73L39 84L32 102M98 73L89 84L96 102M64 50V66M64 107V124" fill="none" stroke="#61452d" stroke-width="2"/>
+  <path d="M47 83L53 78V98M48 98H59M65 82L70 78L76 82V94L70 99L65 94Z" fill="none" stroke="#e8cb8e" stroke-width="3" stroke-linejoin="miter"/>
+  <path d="M57 136L64 140L71 136" fill="none" stroke="#c5a36b" stroke-width="2"/>
+</svg>
