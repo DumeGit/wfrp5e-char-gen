@@ -88,7 +88,8 @@ export function connectIssues(root, issues, { unstarted = false } = {}) {
     )
       continue;
     const container =
-      target.closest(".field,.gm-entry,.gm-char-row,.xp-row") ||
+      target.closest(".points-grid") ||
+      target.closest(".field,.gm-entry,.gm-char-row,.xp-row,.skill-row") ||
       target.parentElement;
     if (!container || container.closest("[hidden],dialog:not([open])"))
       continue;

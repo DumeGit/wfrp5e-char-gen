@@ -69,6 +69,8 @@ The player banner is the preview's original imagegen artwork, copied without pix
 
 ## Maintenance and release
 
+Allocation feedback uses the full available group width: Characteristic point errors sit below the grid and Career Skill errors below their row, outside the +/- stepper. On phones the points grid adapts with a 72px minimum cell width. XP Skill and Characteristic rows share `--advance-help-size`: 32px for fine-pointer desktop, 44px on phones/coarse pointers. Their column and button use the same dimension, preserving the gap before the XP action.
+
 Gradient action and active-navigation fills have an opaque primary-colour base. Never leave the base transparent when a hover state removes a gradient: the background-colour transition would briefly expose the pale page. Both creator palettes use the same fix and retain their readable hover foregrounds.
 
 GM template previews use the compiled grants in separate Characteristics, Skills, Talents and optional Magic sections. Bonuses and ranks align to the right; long alternative lists use native disclosures with stable template/slot keys. The two-column desktop summary stacks on phones. The preview remains read-only until Apply template; no grant, choice or calculation is inferred from prose.

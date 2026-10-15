@@ -247,6 +247,17 @@ summary {
   font: var(--text-note) / 1.5 var(--font-body);
   margin: 6px 0 0;
 }
+/* Group validation belongs below the group, never inside a score cell or
+   horizontal +/- control. Keep long messages within the available row. */
+.points-grid > .ui-field-issue,
+.skill-row > .ui-field-issue {
+  min-width: 0;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+.skill-row > div:first-child {
+  min-width: 0;
+}
 [aria-invalid="true"] {
   border-color: var(--color-error);
 }

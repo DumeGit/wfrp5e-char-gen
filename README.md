@@ -74,6 +74,8 @@ The NPC Customise page leads with a prominent Choose template action beneath the
 
 ## Rules and source
 
+Mobile allocation feedback stays below the Characteristic grid or Career Skill row, outside individual score cells and +/- controls. Point columns adapt to available width; XP help and purchase actions retain separate touch areas. The focused interface suite checks these layouts at narrow widths.
+
 ### Archives III
 
 Adds Priest of Handrich, Priest of Solkan and Priestess of Rhya, 18 Miracles, nine new Hedgecraft spell names, five Altdorf origins and optional Cants. Old Faith offers six chosen Blessings with Bless and one additional with Invoke; extra purchases use core Miracle prices, excluding the six Bless grants from the count by user decision. Eastender chooses Criminal or one random Talent. The animal-doctor Hedge Witch is chosen in Career → Hedge Witch variant, available with Archives III enabled. Switching clears Career-dependent choices while keeping identity, Species choices and rolls; undo or clear XP advancement first. Cants unlock free at 1/3/6 Colour Lore spells and appear in the folio, review and exported record. Alternative armour is excluded from creator calculations; its printed rules, familiars and Enterprises are now searchable references. Their automation and live magic remain deferred. In the GM workshop, Archives III prayer/Hedgecraft options and seven separate Fellstave targets are always available from the shared registry; Old Faith Invoke offers Blessings. No named NPCs or deferred familiar profiles are added. Optional GM Cants use explicit Arcane spell Lore assignments and require the matching Colour Lore Talent; live effects remain references. Full sources and decisions: [docs/ARCHIVES-III.md](docs/ARCHIVES-III.md).
