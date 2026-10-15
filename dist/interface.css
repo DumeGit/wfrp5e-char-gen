@@ -105,7 +105,19 @@
   .mm-workspace { grid-template-columns: var(--layout-rail) minmax(0, 1fr); }
 }
 @media (min-width: 1500px) {
-  .mm-workspace { grid-template-columns: var(--layout-rail) minmax(0, 1fr) 310px; }
+  .mm-workspace { grid-template-columns: var(--layout-rail) minmax(0, 1fr) clamp(310px, 12vw, 380px); }
+}
+
+/* Wider logical viewports (including browser zoom-out) reveal more choices. */
+@media (min-width: 1800px) {
+  .book-grid,
+  .career-results,
+  .gm-profile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .mm-resource-groups {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 @media (min-width: 761px) and (max-height: 800px) {
   .rail,

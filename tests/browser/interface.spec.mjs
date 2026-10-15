@@ -11,6 +11,64 @@ import {
 } from "./helpers.mjs";
 
 for (const mode of ["Player", "GM", "Marijan"]) {
+  test(`${mode} workspace grows with the viewport instead of leaving capped margins @interface`, async ({
+    page,
+  }, info) => {
+    test.skip(
+      info.project.name !== "desktop",
+      "This case checks desktop-to-phone resize in one session.",
+    );
+    if (mode === "Player") await openPC(page, { complete: true });
+    else if (mode === "GM") await openGM(page);
+    else {
+      await page.goto("/marijan.html?verify=1");
+      await expect(page.getByLabel("Name", { exact: true })).toBeVisible();
+    }
+    let previousEditorWidth = 0;
+    for (const width of [1440, 1920, 2560, 3840]) {
+      await page.setViewportSize({ width, height: 1000 });
+      const shell = await page
+        .locator(".workspace, .mm-workspace")
+        .boundingBox();
+      const editor = await page.locator("main").boundingBox();
+      const rail = await page.locator(".rail").boundingBox();
+      const folio = await page.locator(".sheet").boundingBox();
+      expect(shell.width).toBeGreaterThan(width * 0.96);
+      expect(editor.width).toBeGreaterThan(previousEditorWidth);
+      expect(rail.width).toBeLessThanOrEqual(240);
+      expect(folio.width).toBeGreaterThanOrEqual(270);
+      expect(folio.width).toBeLessThanOrEqual(420);
+      expect(rail.x).toBeGreaterThanOrEqual(16);
+      expect(rail.x).toBeLessThanOrEqual(40);
+      const brand = await page.locator(".brand").boundingBox();
+      expect(Math.abs(brand.x - rail.x)).toBeLessThanOrEqual(1);
+      previousEditorWidth = editor.width;
+      await noOverflow(page);
+      if (width === 2560)
+        await page.screenshot({
+          path: info.outputPath(`${mode.toLowerCase()}-fluid-wide.png`),
+        });
+    }
+    if (mode === "Player") {
+      await page
+        .getByRole("button", { name: "Choose books", exact: true })
+        .first()
+        .click();
+      await expect(
+        page.getByRole("heading", { name: "Choose your books", exact: true }),
+      ).toBeVisible();
+      expect(
+        (await page.locator(".workspace, .mm-workspace").boundingBox()).width,
+      ).toBeGreaterThan(3700);
+    }
+    for (const width of [960, 390]) {
+      await page.setViewportSize({ width, height: 844 });
+      await noOverflow(page);
+    }
+  });
+}
+
+for (const mode of ["Player", "GM", "Marijan"]) {
   test(`${mode} shared input and keyboard contract @interface @mobile`, async ({
     page,
   }, info) => {

@@ -9,9 +9,9 @@
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr) 270px;
   gap: 20px;
-  max-width: 1700px;
+  max-width: none;
   margin: 0 auto;
-  padding: 22px 24px 40px;
+  padding: 22px var(--layout-gutter) 40px;
   align-items: start;
 }
 .mm-page {

@@ -110,7 +110,7 @@
   --line-ornament: 3px double var(--color-gold);
   --control-height: 44px;
   --control-height-compact: 36px;
-  --layout-max: 1700px;
+  --layout-gutter: clamp(16px, 1.25vw, 40px);
   --layout-rail: 230px;
   --layout-folio: 310px;
   --motion-control: 160ms;
