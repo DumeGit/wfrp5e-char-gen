@@ -274,17 +274,17 @@ mark {
   border: var(--line-ornament);
   border-radius: 0;
   background:
-    linear-gradient(100deg, #0003, transparent 35%, #0002), var(--color-leather);
+    var(--surface-panel-texture) 0 0 / var(--surface-panel-texture-size) repeat,
+    radial-gradient(ellipse at 30% 0%, #ffffff09, transparent 75%) var(--color-panel);
+  background-blend-mode: soft-light, normal;
   color: var(--color-on-leather);
-  box-shadow: var(--shadow-surface);
+  box-shadow: var(--shadow-panel);
   scrollbar-color: var(--color-gold-dark) var(--color-leather-deep);
 }
 .rail {
   padding: 14px 12px;
 }
 .sheet {
-  background:
-    linear-gradient(110deg, #0004, transparent 35%), var(--color-leather-deep);
   padding: 20px 16px;
   max-height: calc(100dvh - 32px);
 }
@@ -1134,19 +1134,6 @@ dialog::backdrop {
   opacity: 0.3;
   animation: ledger-mist var(--motion-mist) ease-in-out infinite alternate;
 }
-.rail::before,
-.sheet::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: var(--surface-rail-glow);
-  opacity: 0.5;
-  animation: ledger-candle var(--motion-candle) ease-in-out infinite alternate;
-}
-.sheet::before {
-  background: var(--surface-folio-glow);
-}
 @keyframes ledger-ash {
   0% {
     transform: translate(0, 0);
@@ -1173,23 +1160,6 @@ dialog::backdrop {
     opacity: 0.5;
   }
 }
-@keyframes ledger-candle {
-  0%,
-  30%,
-  74% {
-    opacity: 0.3;
-  }
-  20%,
-  61%,
-  100% {
-    opacity: 0.7;
-  }
-  40%,
-  83% {
-    opacity: 0.5;
-  }
-}
-
 @media (min-width: 1500px) {
   :root {
     --layout-folio: clamp(350px, 14vw, 420px);
@@ -1295,7 +1265,6 @@ dialog::backdrop {
     position: static;
     padding: 12px;
     border: 1px solid var(--color-line-dark);
-    background: var(--color-leather);
     color: var(--color-on-leather);
   }
   .rail .mobile-step label,
@@ -1425,9 +1394,7 @@ dialog::backdrop {
     scroll-behavior: auto !important;
   }
   .banner-atmosphere,
-  .masthead-art::after,
-  .rail::before,
-  .sheet::before {
+  .masthead-art::after {
     display: none;
   }
 }

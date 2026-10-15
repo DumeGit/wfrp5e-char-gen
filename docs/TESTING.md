@@ -96,3 +96,6 @@ The focused `tests/browser/emil-polish.spec.mjs` cases cover hover-rule capabili
 
 
 GM Trait summaries: `node --test tests/gm-trait-summaries.test.mjs tests/gm.test.mjs` checks editorial coverage for all long integrated definitions, conditional Size/Breath/Mark/training mechanics, preserved full sources, actual-only descriptions and measured card overflow. Template eligibility is exercised across foundation restrictions and nested modifiers/marks. For the paired interaction change, run the GM browser cases matching `GM summaries|Night Parade has opt-in` on desktop/mobile; these cover Full rule expansion, template/book filtering, preview/back and applying a compatible template. Book-specific conditional text handlers retain their own tests (notably Night Parade’s brazier replacement).
+
+
+Panel material changes use the focused `tests/browser/panel-materials.spec.mjs` cases (included by `@interface`): all three modes on desktop/phone, equal menu/folio surfaces, actual local asset decoding, mobile folio opening, no overflow, reduced-motion consistency and plain print backgrounds. Run this file directly for material-only changes instead of unrelated creator/book flows, then rebuild/check offline assets. Native SVG texture strength is baked at 0.15; no character data or PDF layout is involved.

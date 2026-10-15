@@ -228,3 +228,6 @@ October 15 polish: Starting profile places the selected foundation and identity 
 
 
 15 October Trait/template verification: 66 focused Node checks passed, including all long definitions having a reviewed summary, conditional mechanics, source-text preservation, book-specific replacements, eligible foundations and measured four-card fitting for all 49 core profiles and both Up in Arms mounts. Four focused desktop/mobile browser cases passed: summaries/full-rule disclosure, incompatible template/book exclusion and compatible Night Parade selection/back/application. Quick code/format and offline checks passed. No rules calculations, source fingerprints, saved draft format or PDF layout were changed.
+
+
+Selected panel material — 15 October: the menu and stat-block folio now share the approved subtle **Crypt masonry** background: irregular worn blue-grey blocks with recessed mortar. There are no skeletal drawings or live material settings. It uses the shared design-system surface tokens and a local offline SVG, remains static with reduced motion, and is removed in print. The working paper, source/Legacy controls, calculations and PDF content/layout are unchanged. The focused desktop/phone material cases passed, including expanded stat-block use and print behavior.

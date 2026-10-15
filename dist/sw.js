@@ -1,5 +1,5 @@
 const CACHE_PREFIX='wfrp-ledger-offline-';
-const CACHE=CACHE_PREFIX+"f24284c5af84729360ee";
+const CACHE=CACHE_PREFIX+"1b3b598251ae485a20e5";
 const ASSETS=[
  "analytics.mjs",
  "app.js",
@@ -22,6 +22,9 @@ const ASSETS=[
  "assets/icon-512.png",
  "assets/icon-maskable-512.png",
  "assets/marijan/banner.webp",
+ "assets/panel-textures/crypt-masonry.svg",
+ "assets/panel-textures/tavern-wood.svg",
+ "assets/panel-textures/vellum.svg",
  "assets/pdf-lib.min.js",
  "assets/vercel-analytics-LICENSE.txt",
  "assets/vercel-analytics.mjs",

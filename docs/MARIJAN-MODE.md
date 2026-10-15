@@ -76,3 +76,6 @@ Resources use labelled fieldsets: Fate & Fortune, Experience, Social status, Mon
 October 15 polish: custom Skills show a compact name and their complete name plus Rename Skill field in expanded details. This applies to every custom Skill, without altering Talent/equipment editors. Amount/total fields size to their digits and hide only the native spinner decoration; keyboard/numeric semantics remain. At 360px and below the controls may occupy a second row with visible labels. Names and sizing refresh during edits and survive save/reload. Folio totals use shared display-only number formatting.
 
 Copy player character also accepts an unfinished Player draft with no Career, preserving an empty Career and neutral Standing rather than producing an invalid save.
+
+
+Selected panel material — 15 October: the desktop menu and folio (including its phone expansion) now share the approved subtle charcoal **Pressed ash vellum** grain. The central Ash & Vellum surface tokens own it; the SVG is local/offline, fixed at 0.15 strength and painted behind text/controls. Red/silver accents and the working paper are unchanged. Static grain survives reduced motion and is omitted from print; no texture setting is saved and PDFs are unchanged. The focused desktop/phone material cases passed.

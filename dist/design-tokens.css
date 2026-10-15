@@ -19,6 +19,11 @@
   --color-world: #201a16;
   --color-leather: #30221b;
   --color-leather-deep: #251c17;
+  /* One fixed, static Subtle material shared by menu and folio. */
+  --color-panel: #30221b;
+  --surface-panel-texture: url(assets/panel-textures/tavern-wood.svg);
+  --surface-panel-texture-size: 384px 768px;
+  --shadow-panel: inset 0 0 32px #0005, 0 8px 24px #0003;
   --color-leather-raised: #493328;
   --color-on-leather: #f2dfb7;
   --color-on-leather-muted: #c7af88;
@@ -69,16 +74,6 @@
   --shadow-working-leaf: inset 0 0 24px #79532a18;
   --surface-folio-crest: linear-gradient(135deg, #b8975f13, #17120f44);
   --shadow-folio-crest: inset 0 0 0 2px #b4986026;
-  --surface-rail-glow: radial-gradient(
-    ellipse at 0 50%,
-    #ef9b3820,
-    transparent 25%
-  );
-  --surface-folio-glow: radial-gradient(
-    ellipse at 100% 70%,
-    #ef9b381c,
-    transparent 20%
-  );
   --color-career-start-tint: #eee0d2;
   --color-career-later: #62646b;
   --color-career-later-tint: #e4e1d6;
@@ -116,7 +111,6 @@
   --motion-control: 160ms;
   --motion-ash: 16s;
   --motion-mist: 22s;
-  --motion-candle: 7s;
   /* Existing features consume these aliases; new code uses semantic roles above. */
   --ink: var(--color-ink);
   --paper: var(--color-paper);
@@ -133,6 +127,9 @@
   --color-world: #101b2c;
   --color-leather: #192b43;
   --color-leather-deep: #122136;
+  --color-panel: #1c2c3c;
+  --surface-panel-texture: url(assets/panel-textures/crypt-masonry.svg);
+  --surface-panel-texture-size: 512px 640px;
   --color-leather-raised: #304560;
   --color-on-leather: #e9dfc4;
   --color-on-leather-muted: #bac8d4;
@@ -165,16 +162,6 @@
   --shadow-working-leaf: inset 0 0 24px #07172d12;
   --surface-folio-crest: #8ca8bb0c;
   --shadow-folio-crest: inset 0 0 0 2px #afc3ce22;
-  --surface-rail-glow: radial-gradient(
-    ellipse at 0 50%,
-    #72aad514,
-    transparent 25%
-  );
-  --surface-folio-glow: radial-gradient(
-    ellipse at 100% 70%,
-    #72aad514,
-    transparent 20%
-  );
 }
 
 /* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
@@ -189,20 +176,13 @@
   --shadow-working-leaf: inset 0 0 30px #00000012;
   --surface-folio-crest: linear-gradient(135deg, #ffffff12, #00000044);
   --shadow-folio-crest: inset 0 0 0 2px #ffffff22;
-  --surface-rail-glow: radial-gradient(
-    ellipse at 0 50%,
-    #c9323b12,
-    transparent 40%
-  );
-  --surface-folio-glow: radial-gradient(
-    ellipse at 100% 70%,
-    #c9323b12,
-    transparent 40%
-  );
   color-scheme: light;
   --color-world: #151517;
   --color-leather: #262629;
   --color-leather-deep: #18181b;
+  --color-panel: #242326;
+  --surface-panel-texture: url(assets/panel-textures/vellum.svg);
+  --surface-panel-texture-size: 256px 256px;
   --color-leather-raised: #3f3f43;
   --color-on-leather: #f2f2f2;
   --color-on-leather-muted: #bcbcc3;

@@ -81,6 +81,10 @@
   display: none !important;
 }
 .texture-pair > :is(.rail, .sheet)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   display: block;
   background: var(--texture-image);
   background-size: var(--texture-size, 256px 256px);
@@ -97,6 +101,7 @@ html:not(.texture-off) .texture-pair > :is(.rail, .sheet) {
   background:
     radial-gradient(ellipse at 30% 0%, #ffffff09, transparent 75%),
     var(--texture-base);
+  background-blend-mode: normal;
   box-shadow:
     inset 0 0 32px #0005,
     0 8px 24px #0003;
@@ -189,4 +194,9 @@ html:not(.texture-off) .texture-pair > :is(.rail, .sheet) {
 
 .texture-tools [hidden] {
   display: none !important;
+}
+
+.texture-off .texture-pair > :is(.rail, .sheet) {
+  background: var(--texture-base);
+  background-blend-mode: normal;
 }

@@ -77,7 +77,7 @@ A later image revision restored blue/ivory/gold to the painting, but the user cl
 
 ## Matching panel textures — 15 October 2026
 
-`design-previews/panel-textures.html` compares one material shared by the left menu and folio within each mode. Run `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/panel-textures.html`. Full-size links show each pair with native disclosures. A Texture strength selector compares Off (current surfaces), Subtle and Tactile; Subtle is the default in both gallery and individual previews. No production selection has been made.
+`design-previews/panel-textures.html` compares one material shared by the left menu and folio within each mode. Run `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/panel-textures.html`. Full-size links show each pair with native disclosures. A Texture strength selector compares Off (flat surfaces), Subtle and Tactile; Subtle is the default in both gallery and individual previews. The final three materials are now selected and implemented; alternatives remain preview-only.
 
 | Example | Mode | Shared panel surface |
 | --- | --- | --- |
@@ -85,7 +85,7 @@ A later image revision restored blue/ivory/gold to the painting, but the user cl
 | B — Bestiary materials | GM | Crypt masonry (default), Crypt slate, Basilisk hide or Blackened iron; physical stone/mineral/hide/metal grain in storm blue, with existing bone, cobalt and brass accents |
 | C — Pressed ash vellum | Marijan | Charcoal fine directional grain; existing silver and crimson accents |
 
-The paired panels use identical base colours and texture images, rather than separate menu/folio materials. Original procedural SVG textures live in `design-previews/textures/`; no source-book images, external textures, new dependencies or generated raster assets are required. Static textures remain visible with reduced motion; no texture is animated. Production textures, theme tokens, rules and offline assets are unchanged.
+The paired panels use identical base colours and texture images, rather than separate menu/folio materials. Original procedural SVG textures live in `design-previews/textures/`; no source-book images, external textures, new dependencies or generated raster assets are required. Static textures remain visible with reduced motion; no texture is animated. The initial studies left production unchanged; the selected materials now use the production surface roles described below, while alternatives remain isolated.
 
 `panel-texture-snapshots.json` contains the actual current rail/folio markup captured from the isolated demo fixtures for all three creators. The static screen loads existing fonts, controls and theme styles but no creator runtime or saved data. Character-changing controls are inert. Preview-only rules keep desktop panel bodies visible within small gallery frames; full-size phone layouts stack the pair. Captions, full-size links and Off/Subtle/Tactile controls are accessible outside the inert thumbnails.
 
@@ -99,3 +99,6 @@ The user rejected the literal skeletal engravings: Bestiary must have a material
 
 
 The next user direction was crypt cobblestone walls. Added **Crypt masonry** as the default Bestiary preview: uneven staggered stone blocks, recessed mortar, rounded worn edges, fine pitting and restrained blue-grey faces. `crypt-masonry.svg` is original procedural/vector material artwork, shared identically on the menu and folio. The three previous material alternatives remain available; Player/Marijan and the Subtle default are unchanged. Gallery default/full-size fallback now choose masonry. Inspected the revised desktop gallery and checked default selection, browser errors and phone gallery overflow. No production assets or settings changed.
+
+
+The user approved implementation of the final three panel materials. Production now uses Tavern oak, Crypt masonry and Pressed ash vellum at fixed Subtle (0.15) strength through shared theme tokens. Other Bestiary alternatives and the strength selector remain standalone studies. Source SVGs here retain full strength for comparison; production copies wrap the artwork at 0.15 opacity. Off is now labelled **Off / flat surfaces** and explicitly clears the production texture in the preview. Current production no longer has candle pseudo-overlays, so the preview supplies its own static overlay geometry independently. No preview runtime or captured character markup is imported into the creators. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) and [texture provenance](../design-assets/panel-textures/README.md).
