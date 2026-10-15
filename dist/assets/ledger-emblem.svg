@@ -1,11 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 100">
-  <title>The Character Ledger</title>
-  <path d="M24 14L80 14L86 20L86 86L24 86Z" fill="#b89a62"/>
-  <path d="M30 18L78 18L82 22L82 80L30 80Z" fill="#e6d7b1"/>
-  <path d="M22 12L76 12L76 76L22 76Z" fill="#734047"/>
-  <path d="M22 12L30 12L30 76L22 76Z" fill="#b89a62"/>
-  <path d="M38 27L65 27L65 47L38 47Z" fill="#e6d7b1"/>
-  <path d="M42 32L61 32L61 35L42 35Z" fill="#734047"/>
-  <path d="M42 39L56 39L56 42L42 42Z" fill="#734047"/>
-  <path d="M57 57L67 57L67 83L62 79L57 83Z" fill="#b89a62"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 144">
+  <title>The Character Ledger — Carrion Standard</title>
+  <defs>
+    <linearGradient id="bone" x2=".8" y2="1"><stop stop-color="#f0dfb8"/><stop offset=".55" stop-color="#cfb584"/><stop offset="1" stop-color="#8b704a"/></linearGradient>
+    <linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#a44548"/><stop offset="1" stop-color="#51272e"/></linearGradient>
+  </defs>
+  <!-- A skull on a ragged muster pennon, with no faction insignia. -->
+  <path d="M64 5L69 13L64 23L59 13Z" fill="#c9a96c"/>
+  <path d="M64 20V137M14 31H114" stroke="#947044" stroke-width="5"/>
+  <path d="M24 29H104V117L88 111L91 132L67 120L50 135L45 117L24 124Z" fill="url(#cloth)" stroke="#2a201b" stroke-width="3"/>
+  <path d="M30 33V113L44 109M98 33V107M35 38H93" fill="none" stroke="#c09a5b" stroke-width="2"/>
+  <path d="M39 61Q38 41 64 40Q90 41 89 61L85 80L77 85L76 103L69 100L64 105L59 100L52 103L51 85L43 80Z" fill="url(#bone)" stroke="#34271d" stroke-width="2.5"/>
+  <path d="M45 62L60 67L56 78L46 75ZM83 62L68 67L72 78L82 75ZM64 76L58 87H69Z" fill="#29231e"/>
+  <path d="M55 91H73M59 91V99M65 91V101M71 91V98M64 43L61 51L66 57" fill="none" stroke="#6d5235" stroke-width="2"/>
+  <path d="M37 33V38M52 33V38M76 33V38M91 33V38" stroke="#e4c388" stroke-width="3"/>
+  <path d="M11 31L16 26L21 31L16 36ZM107 31L112 26L117 31L112 36Z" fill="#c9a96c"/>
 </svg>
