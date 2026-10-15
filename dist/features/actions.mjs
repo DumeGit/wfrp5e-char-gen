@@ -6,7 +6,7 @@ import * as M from "../rules.mjs";
 import { hasCharacterChanges } from "../ui.mjs";
 import { gearSlots, recordAcquisition } from "../equipment.mjs";
 import { buyTrapping, formatMoney } from "../market.mjs";
-import { exportSheet, exportRecord } from "../export.mjs";
+import { loadPDFLibrary } from "../pdf-runtime.mjs";
 import { withBusy } from "../interface-kit.mjs";
 import {
   setAgeHeight,
@@ -716,6 +716,10 @@ export function createFeature(getContext, setContext) {
     if (a === "sheet" || a === "record") {
       if (errors().length) throw Error("Finish creation before exporting.");
       await withBusy(el, "Preparing…", async () => {
+        const [{ exportSheet, exportRecord }] = await Promise.all([
+          import("../export.mjs"),
+          loadPDFLibrary(),
+        ]);
         const bytes =
           a === "sheet"
             ? await exportSheet(R, s, undefined, undefined, {

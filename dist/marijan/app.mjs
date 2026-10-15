@@ -1,5 +1,6 @@
 import { speciesEntry } from "./catalogue.mjs";
 import { loadBookBundle } from "../book-bundle.mjs";
+import { loadPDFLibrary } from "../pdf-runtime.mjs";
 import { createReferenceSearch } from "../reference-search.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
 import { createInstallControl } from "../install-control.mjs";
@@ -658,7 +659,10 @@ async function action(el) {
   }
   if (a === "export") {
     await withBusy(el, "Preparing…", async () => {
-      const { exportMarijanSheet } = await import("./pdf.mjs");
+      const [{ exportMarijanSheet }] = await Promise.all([
+        import("./pdf.mjs"),
+        loadPDFLibrary(),
+      ]);
       download(
         await exportMarijanSheet(catalogue, s, r),
         "application/pdf",

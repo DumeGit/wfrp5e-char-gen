@@ -15,6 +15,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Character Ledger" />
     <link rel="apple-touch-icon" href="assets/icon-180.png" />
+    <link rel="preload" href="data/book-library.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="gm/data.json" as="fetch" crossorigin="anonymous" />
+    <link rel="modulepreload" href="book-bundle.mjs" />
     <link rel="stylesheet" href="styles.css?v=pwa-1" />
     <link rel="stylesheet" href="workspace.css" />
     <link rel="stylesheet" href="book-search.css" />
@@ -169,7 +172,6 @@
         Install app
       </button>
     </div>
-    <script src="assets/pdf-lib.min.js" defer></script>
     <script type="module" src="marijan/app.mjs"></script>
     <script type="module" src="pwa.mjs"></script>
   </body>

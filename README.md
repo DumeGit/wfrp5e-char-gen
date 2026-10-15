@@ -12,6 +12,8 @@ Enable **Sea of Claws** for four Norse origins, nine Career paths (including exp
 
 A browser-based Fifth Edition character generator built from the supplied books. The installed core, opt-in supplements and variants are listed in the generated registry summary below and [inclusion matrix](docs/INCLUSION-MATRIX.md). Book-specific documents record compatibility decisions and exclusions.
 
+Mode startup now indexes exact content aliases, requests book data early and defers PDF tools until export/printing. Draft isolation, content validation and offline PDF support remain unchanged. The local cold-load diagnostic and before/after measurements are documented in [startup performance](docs/STARTUP-PERFORMANCE.md).
+
 <!-- registry-counts:start -->
 With all 20 books enabled: **140 Career profiles**, **596 magic profiles** (including **17 rituals**), **24 Cants**, **10 Sword-dancing techniques**, **71 rune entries**, and **422 fixed-price shop entries**. Career alternatives remain explicit choices. Source counts, adaptations and exclusions: [inclusion matrix](docs/INCLUSION-MATRIX.md).
 <!-- registry-counts:end -->

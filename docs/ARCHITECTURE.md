@@ -2,6 +2,8 @@
 
 ## Public notices and privacy
 
+Mode startup uses early shared-data fetch/module preloads and exact indexed alias resolution. `pdf-runtime.mjs` deduplicates the on-demand local pdf-lib load and permits retry; Player/GM export modules and GM print-dialog creation are deferred until requested. Marijan awaits that same runtime before its existing lazy exporter. Catalogue validation, separate drafts and offline precaching remain intact. Measurements, local profiling and focused checks: [STARTUP-PERFORMANCE.md](STARTUP-PERFORMANCE.md).
+
 All three entry pages carry static unofficial notices and links to `legal.html`; they work before creator JavaScript loads. `site-notices.css` uses existing theme tokens and leaves space above the fixed phone controls. The independent ledger emblem is shared by mastheads, folios and PWA icons. There is no client analytics module, SDK, tracking script or analytics build dependency. Hosting request/security logs remain separate from app telemetry. See PUBLIC-NOTICES.md for attribution, contact and remaining clearance work.
 
 ## Book content and creator results

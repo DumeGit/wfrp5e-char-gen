@@ -32,13 +32,12 @@ import {
 import { statBlock } from "./sheet.mjs";
 import { traitSummary } from "./trait-summaries.mjs";
 import { createGMReferences } from "./references.mjs";
-import { createGMPDF } from "./pdf.mjs";
+import { loadPDFLibrary } from "../pdf-runtime.mjs";
 import {
   connectIssues,
   enhanceInterface,
   withBusy,
 } from "../interface-kit.mjs";
-import { createGMPrinting } from "./printing.mjs";
 import { createGMRules, gmCatalogue, sourceLabel } from "./books.mjs";
 import { esc, button, legacyBadge, select } from "./controls.mjs";
 
@@ -674,7 +673,18 @@ async function action(el) {
     return;
   }
   if (a === "print-cards") {
-    await printing.open();
+    await withBusy(el, "Preparing…", async () => {
+      const [{ createGMPrinting }] = await Promise.all([
+        import("./printing.mjs"),
+        loadPDFLibrary(),
+      ]);
+      printing ||= createGMPrinting(data, rulesFor, {
+        current: () => s,
+        download,
+        toast,
+      });
+      await printing.open();
+    });
     return;
   }
   if (a === "load") {
@@ -744,8 +754,12 @@ async function action(el) {
   }
   if (a === "pdf") {
     await withBusy(el, "Preparing…", async () => {
+      const [{ createGMPDF }, PDFLib] = await Promise.all([
+        import("./pdf.mjs"),
+        loadPDFLibrary(),
+      ]);
       download(
-        await createGMPDF(window.PDFLib, r, s),
+        await createGMPDF(PDFLib, r, s),
         filename() + ".pdf",
         "application/pdf",
       );
@@ -1063,11 +1077,6 @@ async function boot() {
     } else persist();
     references = createGMReferences(library);
     history = createDraftHistory(historySnapshot());
-    printing = createGMPrinting(data, rulesFor, {
-      current: () => s,
-      download,
-      toast,
-    });
     render();
   } catch (e) {
     root.innerHTML = `<main class="panel"><h1>The workshop could not open</h1><p>${esc(e.message)}</p><a href="./">Return to player creation</a></main>`;

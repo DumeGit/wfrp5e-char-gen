@@ -752,11 +752,20 @@ export const CONTENT_ALIASES = Object.freeze([
     reason,
   })),
 ]);
+// The reviewed inventory is static. Index by exact kind/name once, retaining
+// declaration order so global/scoped aliases keep their existing precedence.
+const aliasesByKind = new Map();
+for (const alias of CONTENT_ALIASES) {
+  if (!aliasesByKind.has(alias.kind)) aliasesByKind.set(alias.kind, new Map());
+  const names = aliasesByKind.get(alias.kind);
+  if (!names.has(alias.from)) names.set(alias.from, []);
+  names.get(alias.from).push(alias);
+}
 export function canonicalName(kind, name, scope) {
-  const alias = CONTENT_ALIASES.find(
-    (x) =>
-      x.kind === kind && x.from === name && (!x.scope || x.scope === scope),
-  );
+  const alias = aliasesByKind
+    .get(kind)
+    ?.get(name)
+    ?.find((x) => !x.scope || x.scope === scope);
   return alias?.to || name;
 }
 export function canonicalRuleName(name) {

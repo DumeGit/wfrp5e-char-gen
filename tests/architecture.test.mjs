@@ -128,10 +128,12 @@ test("folio, review, calculation and editable PDF share load-adjusted Skill/XP/r
     () => context,
     () => {},
   ).review();
-  assert.match(
-    review,
-    /<td>.*Dodge.*<\/td><td>\+5<\/td><td>\+5<\/td><td>42<\/td>/,
-  );
+  const dodge = review.match(
+    /<li><span><button[^>]*data-name="Dodge"[^>]*>[\s\S]*?<\/li>/,
+  )?.[0];
+  assert.ok(dodge, "Review includes the calculated Dodge row");
+  assert.match(dodge, /<span>\+10<\/span>/);
+  assert.match(dodge, /<strong>42<\/strong>/);
   const sheet = await PDFLib.PDFDocument.load(
     await exportSheet(
       R,
@@ -224,6 +226,30 @@ test("alias validation rejects duplicate identifiers and cycles", () => {
     },
     b = { ...a, from: "b", to: "a" };
   assert.throws(() => validateAliases([a, b], ids), /cycle/);
+});
+
+test("indexed aliases retain exact names, scope boundaries and declaration precedence", () => {
+  const scopes = [
+    undefined,
+    null,
+    "uninstalled-book",
+    ...library.packs.map((p) => p.manifest.id),
+  ];
+  for (const alias of CONTENT_ALIASES)
+    for (const scope of scopes) {
+      const original = CONTENT_ALIASES.find(
+        (x) =>
+          x.kind === alias.kind &&
+          x.from === alias.from &&
+          (!x.scope || x.scope === scope),
+      );
+      assert.equal(
+        canonicalName(alias.kind, alias.from, scope),
+        original?.to || alias.from,
+      );
+    }
+  assert.equal(canonicalName("careers", "Solider"), "Solider");
+  assert.equal(canonicalName("skills", "melee (basic)"), "melee (basic)");
 });
 
 test("generated integration inventory includes every source record and distinguishes unchanged old material", () => {
