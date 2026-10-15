@@ -18,5 +18,8 @@ const unselectedCareer = {
     trappings: [],
   })),
 };
-export const effectiveCareer = (R, s) =>
-  s.career === "" ? unselectedCareer : highElfCareer(R, s, dwarfCareer(R, s));
+export function effectiveCareer(R, s) {
+  return s.career === ""
+    ? unselectedCareer
+    : highElfCareer(R, s, dwarfCareer(R, s));
+}

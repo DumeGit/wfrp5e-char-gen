@@ -1,4 +1,5 @@
 import { dwarfGearIssue } from "./dwarf-guide.mjs";
+import { displayNumber } from "./display-number.mjs";
 import { rawGearSlots, rolledName, coinValue } from "./inventory.mjs";
 import { equipmentSize } from "./equipment-sizing.mjs";
 // Listed prices and Availability from the supplied Consumer Guide, pp. 301, 303, 307, 312–315.
@@ -14,7 +15,10 @@ const CACHE = new WeakMap();
 export function priceInPennies(price) {
   if (typeof price !== "string" || /^(Varies|n\/a)$/i.test(price.trim()))
     return null;
-  const s = price.replace(/[–—−]/g, "-").trim(),
+  const s = price
+      .replace(/,(?=\d{3}(?:\D|$))/g, "")
+      .replace(/[–—−]/g, "-")
+      .trim(),
     gc = s.match(/(\d+)\s*GC/),
     sh = s.match(/(\d+|-)\/(\d+|-)/),
     d = s.match(/(\d+)d\b/);
@@ -33,7 +37,7 @@ export function formatMoney(pennies) {
     d = pennies % 12;
   return (
     [
-      gc ? `${gc} GC` : "",
+      gc ? `${displayNumber(gc)} GC` : "",
       ss ? `${ss}/${d || "–"}` : d && gc ? `–/${d}` : "",
       !gc && !ss ? `${d}d` : "",
     ]

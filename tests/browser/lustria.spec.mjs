@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -54,6 +55,7 @@ test("GM reuses Lustria equipment without requiring foundation-book selection @g
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("label:has(#gm-book-lustria)")).toContainText(
     "55 profiles · 15 templates",
   );
@@ -72,6 +74,7 @@ test("Lustria Skink castes and stacking marks are usable on desktop and phone @g
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-lustria").check();
   await page.locator("#gm-profile-book").selectOption("lustria");
   await applyProfile(page, "Skink");
@@ -110,6 +113,7 @@ test("Slann Lore choices are required early and unlock their restricted spells @
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-lustria").check();
   await applyProfile(page, "Slann Of The Fifth Generation");
   await expect(page.locator(".gm-issues")).toContainText(

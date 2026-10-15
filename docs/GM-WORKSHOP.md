@@ -222,3 +222,5 @@ Shamans use source-reviewed species/Lore restrictions and maximum spell counts. 
 ## Lustria
 
 55 generic profiles and 15 template records: six ordinary Skink castes and nine independently stacking sacred marks. Castes use the template picker; eligible marks use an optional disclosure in Customise. Slann have early required Colour Lore controls and matching printed Channelling totals, without generated spells. Undefined Aquatic blocks export until removed; optional Clever/Leader remain explained unavailable entries. Shared controls, history, source notes and compact export are reused. See [LUSTRIA.md](LUSTRIA.md).
+
+October 15 polish: Starting profile places the selected foundation and identity above a closed-by-default Profile & template books disclosure, whose summary reports the selected supplements. Existing source/opt-in rules remain unchanged. The compact folio shows statistics before an expandable Description; phone layouts use one shared visible name heading. The complete description remains in full review and exports. Hover uses pointer capability queries, focus remains independent and press feedback is shared with Player/Marijan.

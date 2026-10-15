@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -48,6 +49,7 @@ test("Spite Ward and Venom are repairable native controls before export; templat
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("label:has(#gm-book-salzenmund)")).toContainText(
     "7 profiles · 4 templates",
   );

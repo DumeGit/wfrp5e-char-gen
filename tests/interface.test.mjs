@@ -1,7 +1,21 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { referenceSnippetText } from "../dist/search-presentation.mjs";
-import { field, select, tab } from "../dist/controls.mjs";
+import { field, select, tab, score } from "../dist/controls.mjs";
+import { displayNumber } from "../dist/display-number.mjs";
+import { formatMoney, priceInPennies } from "../dist/market.mjs";
+
+test("display numbers group totals without changing input values or money parsing", () => {
+  assert.equal(displayNumber(2000000), "2,000,000");
+  assert.equal(score(-1250.5), "-1,250.5");
+  assert.equal(score(0), "0");
+  assert.equal(score(null), "—");
+  assert.equal(score("SB + 3"), "SB + 3");
+  assert.match(field("XP", "xp", 1000000, "", "number"), /value="1000000"/);
+  const coins = 1000000 * 240 + 19 * 12 + 11;
+  assert.equal(formatMoney(coins), "1,000,000 GC 19/11");
+  assert.equal(priceInPennies(formatMoney(coins)), coins);
+});
 
 test("reader excerpts remove layout syntax while preserving printed mechanics", () => {
   assert.equal(

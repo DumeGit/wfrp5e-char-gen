@@ -1,5 +1,21 @@
 /* Shared interface contract. Feature styles own layout; theme tokens own colour. */
 
+/* Immediate touch feedback without movement; content stays selectable. */
+button,
+summary,
+.creator-switch a,
+.mm-section-nav a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+button:not(:disabled):active,
+summary:active,
+.creator-switch a:active,
+.mm-section-nav a:active {
+  filter: brightness(0.88);
+}
+
 /* Desktop chrome uses natural height: navigation must never become a scroller.
    Short windows scroll the page instead; the folio keeps its independent scroll. */
 @media (min-width: 761px) {
@@ -799,4 +815,47 @@ input[type="number"] {
   .career-progress .tracker-caption {
     grid-row: 3;
   }
+}
+
+/* Edge-to-edge artwork, with interactive content kept inside the safe area. */
+.masthead {
+  padding-inline: calc(var(--layout-gutter) + env(safe-area-inset-left, 0px)) calc(var(--layout-gutter) + env(safe-area-inset-right, 0px));
+}
+.workspace,
+.mm-workspace {
+  padding-inline: calc(var(--layout-gutter) + env(safe-area-inset-left, 0px)) calc(var(--layout-gutter) + env(safe-area-inset-right, 0px));
+}
+@media (min-width: 761px) {
+  .masthead { padding-top: calc(8px + env(safe-area-inset-top, 0px)); }
+}
+@media (max-width: 760px) {
+  .masthead {
+    padding-top: calc(8px + env(safe-area-inset-top, 0px));
+    padding-inline: calc(3% + env(safe-area-inset-left, 0px)) calc(3% + env(safe-area-inset-right, 0px));
+  }
+  .workspace {
+    padding-inline: calc(3% + env(safe-area-inset-left, 0px)) calc(3% + env(safe-area-inset-right, 0px));
+  }
+  .mm-workspace {
+    padding-inline: calc(10px + env(safe-area-inset-left, 0px)) calc(10px + env(safe-area-inset-right, 0px));
+  }
+  .mobile-workspace-bar {
+    padding-left: calc(10px + env(safe-area-inset-left, 0px));
+    padding-right: calc(10px + env(safe-area-inset-right, 0px));
+  }
+  dialog.book-search-panel {
+    padding-left: calc(14px + env(safe-area-inset-left, 0px));
+    padding-right: calc(14px + env(safe-area-inset-right, 0px));
+  }
+  .creator-dialog {
+    max-width: calc(100vw - 24px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  }
+  .gm-folio .gm-stat-name { display: none; }
+  .gm-folio .gm-stat-compact { padding: 0; }
+  .gm-folio .gm-stat-compact header { margin-bottom: 10px; }
+}
+
+@media print {
+  .workspace, .mm-workspace { padding-inline: 0; }
+  .gm-folio .gm-stat-name { display: block; }
 }

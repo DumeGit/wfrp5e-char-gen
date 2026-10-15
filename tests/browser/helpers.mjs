@@ -114,6 +114,11 @@ export async function openGM(page) {
     page.getByRole("heading", { name: "Starting profile", exact: true }),
   ).toBeVisible();
 }
+export async function openGMBooks(page) {
+  const picker = page.locator(".gm-book-picker");
+  if ((await picker.getAttribute("open")) === null)
+    await picker.locator(":scope > summary").click();
+}
 export async function pcStep(page, name) {
   const select = page.getByRole("combobox", {
     name: "Creation step",

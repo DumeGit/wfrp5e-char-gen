@@ -30,6 +30,8 @@
 
 ## Engineering and delivery
 
+- Shared hover rules require `(hover: hover) and (pointer: fine)`; keep focus-visible and non-moving press feedback independent. Match viewport-fit=cover to safe-area padding on headers, workspace, fixed bars and dialogs. Format display totals through display-number.mjs/score without formatting numeric input values; grouped currency must round-trip through priceInPennies. Custom Skill names/renaming belong in expanded Marijan details; numeric controls must retain all digits. GM profile-book choices stay in a native disclosure after selected identity, and compact-folio descriptions expand below statistics.
+
 - Use the installed Emil Kowalski skills selectively for relevant UI work: `emil-design-eng` for interaction/motion polish, `mobile-native` for mobile browser and touch behavior, and `break-ui` for realistic edge-case audits. Their SKILL.md files live under `~/.codex/skills/<name>/`. Read the relevant skill when applying it rather than loading the entire collection for every change. Preserve the approved Warhammer themes, current motion restrictions, native controls and accessibility; do not add a framework, animation library or decorative motion merely because an example uses one. Keep worst-case fixtures/dev switches out of production and distinguish emulated checks from physical-phone verification. Continue proportional local testing.
 
 - Keep all three creator shells fluid, without a fixed desktop width cap. Use the shared layout gutter, bounded rail/folio widths, readable prose and adaptive catalogue columns; verify desktop, wide logical viewports (zoom-out), tablet and phone without horizontal page overflow.

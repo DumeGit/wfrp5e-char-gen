@@ -206,10 +206,14 @@ h3 {
 #book-search-clear {
   color: var(--color-muted);
 }
+@media (hover: hover) and (pointer: fine) {
+
 #book-search-clear:hover {
   background: var(--color-paper-hover);
   color: var(--color-crimson);
 }
+}
+
 .book-search-dropdown {
   background: var(--color-paper-raised);
   border-color: var(--color-gold);
@@ -225,12 +229,19 @@ h3 {
 #book-search-results [role="option"] {
   border-color: var(--color-line-soft);
 }
+#book-search-results [aria-selected="true"]{
+  background: var(--color-paper-hover);
+  color: var(--color-ink);
+}
+@media (hover: hover) and (pointer: fine) {
+
 #book-search-results [role="option"]:hover,
-#book-search-results [aria-selected="true"],
 #book-search-more:hover {
   background: var(--color-paper-hover);
   color: var(--color-ink);
 }
+}
+
 .search-kind {
   background: var(--color-paper-recessed);
   color: var(--color-muted);
@@ -335,10 +346,14 @@ mark {
   color: var(--color-on-leather);
   padding: 9px 8px;
 }
+@media (hover: hover) and (pointer: fine) {
+
 .steps button:hover {
   background: var(--color-leather-raised);
   color: var(--color-on-crimson);
 }
+}
+
 .steps button.active {
   background:
     linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
@@ -455,6 +470,8 @@ mark {
   color: var(--color-on-leather);
   border-radius: var(--radius-control);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .rail .quiet:hover:not(:disabled),
 .masthead .quiet:hover:not(:disabled),
 .install-app:hover,
@@ -464,10 +481,16 @@ mark {
   color: var(--color-on-crimson);
   border-color: var(--color-gold);
 }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
 .rail > .text-button:hover,
 .sheet .source-button:hover {
   color: var(--color-gold-light);
 }
+}
+
 .sheet-heading {
   text-align: center;
 }
@@ -508,9 +531,13 @@ mark {
   border-radius: 0;
   border-bottom: 1px solid var(--color-line-dark);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .sheet .stat-calculation:hover {
   background: var(--color-leather-raised);
 }
+}
+
 .stat-grid small,
 .derived span,
 .folio-xp > span,
@@ -567,15 +594,23 @@ mark {
   color: var(--color-on-crimson);
   border-color: var(--color-gold-dark);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .folio-status button:hover:not(:disabled) {
   background: var(--color-crimson-hover);
   color: var(--color-on-crimson);
   border-color: var(--color-gold);
 }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
 .derived-calculation:hover,
 .capacity-calculation:hover {
   background: var(--color-leather-raised);
 }
+}
+
 
 /* Shared controls and information surfaces. New features reuse these classes. */
 input,
@@ -586,11 +621,15 @@ textarea {
   background: var(--color-paper-raised);
   color: var(--color-ink);
 }
+@media (hover: hover) and (pointer: fine) {
+
 input:hover,
 select:hover,
 textarea:hover {
   border-color: var(--color-gold-dark);
 }
+}
+
 .primary,
 .secondary,
 .quiet,
@@ -607,37 +646,53 @@ textarea:hover {
   color: var(--color-on-crimson);
   box-shadow: 0 2px 3px #50231822;
 }
+@media (hover: hover) and (pointer: fine) {
+
 .primary:hover:not(:disabled) {
   background: var(--color-crimson-hover);
   color: var(--color-on-crimson);
 }
+}
+
 .secondary {
   background: var(--color-leather);
   border-color: var(--color-line-dark);
   color: var(--color-on-leather);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .secondary:hover:not(:disabled) {
   background: var(--color-leather-raised);
   color: var(--color-on-crimson);
 }
+}
+
 .quiet {
   background: var(--color-paper-raised);
   border-color: var(--color-line);
   color: var(--color-ink);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .quiet:hover:not(:disabled) {
   background: var(--color-paper-hover);
   color: var(--color-ink);
   border-color: var(--color-gold-dark);
 }
+}
+
 .source-button,
 .text-button {
   color: var(--color-muted);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .source-button:hover,
 .text-button:hover {
   color: var(--color-crimson);
 }
+}
+
 .page-tabs {
   border-color: var(--color-gold-dark);
   gap: 4px;
@@ -655,14 +710,22 @@ textarea:hover {
   color: var(--color-on-leather);
   box-shadow: inset 0 2px var(--color-gold);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .page-tabs button:hover {
   background: var(--color-paper-hover);
   color: var(--color-ink);
 }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
 .page-tabs button[aria-selected="true"]:hover {
   background: var(--color-leather-raised);
   color: var(--color-on-leather);
 }
+}
+
 .inline-choice .active {
   background: var(--color-leather);
   color: var(--color-on-leather);
@@ -680,11 +743,15 @@ textarea:hover {
   color: var(--color-muted);
   border-color: var(--color-line);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .advance-calculation-help:hover {
   background: var(--color-paper-hover);
   color: var(--color-ink);
   border-color: var(--color-gold-dark);
 }
+}
+
 .xp-balance,
 .market-balance,
 .allocation-budgets {
@@ -743,10 +810,14 @@ textarea:hover {
   background: var(--color-success-surface);
   border-color: var(--color-success-line);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .career-result:hover {
   background: var(--color-paper-hover);
   border-color: var(--color-gold-dark);
 }
+}
+
 .career-result.previewed {
   border-color: var(--color-crimson);
 }
@@ -801,9 +872,13 @@ textarea:hover {
   border-color: var(--color-line);
   border-radius: var(--radius-control);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .stepper button:hover {
   background: var(--color-paper-hover);
 }
+}
+
 th {
   background: var(--color-paper-recessed);
 }
@@ -909,19 +984,27 @@ summary::marker {
   color: var(--color-legacy);
   border-radius: var(--radius-control);
 }
+@media (hover: hover) and (pointer: fine) {
+
 button.legacy-tag:hover {
   background: var(--color-legacy-line);
   color: var(--color-ink);
 }
+}
+
 .sheet .legacy-tag {
   background: var(--color-legacy);
   color: var(--color-legacy-surface);
   border-color: var(--color-legacy-line);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .sheet .legacy-tag:hover {
   background: var(--color-legacy-line);
   color: var(--color-leather-deep);
 }
+}
+
 .career-level-1 {
   --career-color: var(--color-crimson);
   --career-tint: var(--color-career-start-tint);
@@ -987,11 +1070,18 @@ dialog::backdrop {
   color: var(--color-crimson);
   border-bottom-color: var(--color-gold-dark);
 }
-.search-term-link:hover,
 .search-term-link:focus-visible {
   background: var(--color-warning-surface);
   color: var(--color-crimson-hover);
 }
+@media (hover: hover) and (pointer: fine) {
+
+.search-term-link:hover{
+  background: var(--color-warning-surface);
+  color: var(--color-crimson-hover);
+}
+}
+
 .search-career-level h3 small,
 .search-profile-fields dt,
 .search-rule-status {
@@ -1461,10 +1551,14 @@ dialog::backdrop {
   color: var(--color-gold-light);
   border-color: var(--color-line-dark);
 }
+@media (hover: hover) and (pointer: fine) {
+
 .creator-switch a:hover {
   color: var(--color-on-leather);
   background: var(--color-leather-raised);
 }
+}
+
 .creator-switch a:focus-visible {
   outline: 2px solid var(--color-gold-light);
   outline-offset: 2px;
@@ -1495,11 +1589,18 @@ dialog::backdrop {
   background: var(--color-leather-deep);
   border: 1px solid var(--color-line-dark);
 }
-.history-controls .history-button:hover:not(:disabled),
 .history-controls .history-button:focus-visible {
   color: var(--color-on-leather);
   background: var(--color-leather-raised);
 }
+@media (hover: hover) and (pointer: fine) {
+
+.history-controls .history-button:hover:not(:disabled){
+  color: var(--color-on-leather);
+  background: var(--color-leather-raised);
+}
+}
+
 .history-controls svg {
   width: 21px;
   height: 21px;
@@ -1569,7 +1670,6 @@ dialog::backdrop {
   border-color: var(--color-crimson);
   color: var(--color-on-crimson);
 }
-:root[data-theme="ash-vellum"] .mm-section-nav a:hover,
 :root[data-theme="ash-vellum"] .mm-section-nav a:focus-visible {
   border-color: var(--color-crimson);
   background: color-mix(
@@ -1578,4 +1678,16 @@ dialog::backdrop {
     var(--color-leather)
   );
   color: var(--color-on-leather);
+}
+@media (hover: hover) and (pointer: fine) {
+
+:root[data-theme="ash-vellum"] .mm-section-nav a:hover{
+  border-color: var(--color-crimson);
+  background: color-mix(
+    in srgb,
+    var(--color-crimson) 20%,
+    var(--color-leather)
+  );
+  color: var(--color-on-leather);
+}
 }

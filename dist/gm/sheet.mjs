@@ -10,9 +10,10 @@ export function statBlock(r, s, { compact = false, showSource = true } = {}) {
     compact
       ? detail(`folio:${key}`, name, body, key === "attacks")
       : `<section class="gm-stat-section"><h3>${name}</h3>${body}</section>`;
-  return `<article class="gm-stat-block ${compact ? "gm-stat-compact" : ""}"><header><span class="eyebrow">${esc(r.profile.category)}</span><h2>${esc(r.name)}</h2><p>${esc([r.profile.name, r.template?.name, r.size].filter(Boolean).join(" · "))}</p>${s.description ? `<p>${esc(s.description)}</p>` : ""}${showSource ? `<p class="gm-small">${esc(sourceLabel(r.profile))} ${legacyBadge(r.profile)}</p>` : ""}</header>
+  return `<article class="gm-stat-block ${compact ? "gm-stat-compact" : ""}"><header><span class="eyebrow">${esc(r.profile.category)}</span><h2 class="gm-stat-name">${esc(r.name)}</h2><p>${esc([r.profile.name, r.template?.name, r.size].filter(Boolean).join(" · "))}</p>${s.description && !compact ? `<p>${esc(s.description)}</p>` : ""}${showSource ? `<p class="gm-small">${esc(sourceLabel(r.profile))} ${legacyBadge(r.profile)}</p>` : ""}</header>
   <div class="gm-stat-grid">${["M", ...KEYS].map((k) => `<div><span>${k}</span><strong>${score(r.stats[k])}</strong></div>`).join("")}</div>
   <div class="gm-derived"><div><span>Wounds</span><strong>${score(r.wounds)}</strong></div><div><span>TB</span><strong>${score(r.tb)}</strong></div><div><span>Size${r.swarm ? " (ignored)" : ""}</span><strong>${esc(r.size)}</strong></div></div>
+  ${s.description && compact ? detail("folio:description", "Description", `<p>${esc(s.description)}</p>`) : ""}
   ${section("attacks", "Attacks", r.attacks.length ? `<div class="gm-stat-attacks">${r.attacks.map((a) => `<div><strong>${esc(a.name)}</strong><span>${score(a.skill)} / ${a.damage === null ? "—" : "+" + a.damage}</span>${a.text ? `<small>${esc(a.text)}</small>` : ""}</div>`).join("")}</div>` : empty("No attacks listed."))}
   ${section(
     "defence",

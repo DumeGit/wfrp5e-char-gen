@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -26,6 +27,7 @@ test("Troll type, modifiers and printed Hag magic share desktop/mobile controls 
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(
     page.locator("label:has(#gm-book-tribes-tribulations)"),
   ).toContainText("19 profiles · 16 templates");
@@ -61,6 +63,7 @@ test("Orc Shaman grants one Big Waaagh Lore and permits zero chosen spells @gm @
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-tribes-tribulations").check();
   await applyProfile(page, "Basic Orc");
   await gmStep(page, "Customise");

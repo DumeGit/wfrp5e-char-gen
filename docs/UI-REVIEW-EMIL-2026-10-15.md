@@ -1,6 +1,6 @@
 # Focused interface review — 15 October 2026
 
-Applied the installed emil-design-eng, mobile-native and break-ui skills to the shared shell, mobile controls and folios of Player, GM and Marijan creation. This is a focused review, not a complete audit of every creation rule, book, export or screen. No production application files were changed.
+Applied the installed emil-design-eng, mobile-native and break-ui skills to the shared shell, mobile controls and folios of Player, GM and Marijan creation. This is a focused review, not a complete audit of every creation rule, book, export or screen. No production application files were changed during the initial audit. The subsequent implementation is recorded below.
 
 ## Data boundaries
 
@@ -58,3 +58,7 @@ Run `node scripts/ui-review-preview.mjs`, then open http://127.0.0.1:8211/__ui-r
 Run `node scripts/ui-review-audit.mjs` while that server runs for the scoped measurements and captures; `node scripts/ui-review-probes.mjs` adds GM mobile folio, large-root-font and catalogue probes. Captures/measurements are ignored under test-results/emil-review. Both audit scripts use settled workspace rendering rather than the startup placeholder.
 
 A physical iOS/Android device, its software keyboard, real safe-area insets, tap highlight and sticky-hover behavior were not tested. The preview is intentionally local; no deployment/push and no production UI changes were made.
+
+## Implementation follow-up — 15 October 2026
+
+The user authorised all eight items, including custom Skill details. Implemented value-sized numeric controls, expanded custom Skill names/renaming, compact GM folio descriptions and a single mobile name, identity-first/collapsible GM books, shared number grouping and grouped-currency parsing, capability-gated hover, safe-area opt-in/padding and immediate non-moving press feedback. The review table above is the historical before-state. Focused regressions and remaining physical-device limits are documented in TESTING.md and UI-UX-IMPLEMENTATION.md. No framework, animation library or new rules were added.

@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -11,6 +12,7 @@ test("Night Parade has opt-in content and complete reversible template equipment
   page,
 }, testInfo) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("label:has(#gm-book-night-parade)")).toContainText(
     "1 profiles · 7 templates",
   );
@@ -85,6 +87,7 @@ test("Corpse Cart optional brazier changes actual descriptions and Disease is hi
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-night-parade").check();
   await applyProfile(page, "Corpse Cart");
   await gmStep(page, "Customise");
@@ -112,6 +115,7 @@ test("profile books show fixed contribution counts and combine with browser filt
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   const bookRow = (id) => page.locator(`label:has(#gm-book-${id})`);
   for (const id of ["up-in-arms", "archives-ii"])
     await expect(bookRow(id)).toContainText("2 profiles · 0 templates");
@@ -154,6 +158,7 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("#gm-book-up-in-arms")).toBeVisible();
   await expect(page.locator("#gm-book-high-elf")).toHaveCount(0);
   await expect(page.locator("#gm-book-dwarf-guide")).toHaveCount(0);
@@ -199,6 +204,7 @@ test("Trait picker prioritises names while typing and keeps description search @
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
   await page.getByRole("tab", { name: "Traits", exact: true }).click();
@@ -230,6 +236,7 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("#gm-book-archives-i")).toHaveCount(0);
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await applyProfile(page, "Human");
@@ -292,6 +299,7 @@ test("profile notification clears and editing keeps focus @gm @mobile", async ({
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await applyProfile(page, "Human");
   const name = page.getByRole("textbox", { name: "Name", exact: true });
   await name.fill("Test Guard");
@@ -312,6 +320,7 @@ test("template preview applies and can be removed and undone @gm", async ({
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
   await page
@@ -350,6 +359,7 @@ test("Tiny warns before export, routes to Wounds and resolves after a manual val
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
   await page
@@ -379,6 +389,7 @@ test("Up in Arms mounts are opt-in and alphabetically sorted; Legacy and trainin
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await page.locator("#gm-book-up-in-arms").check();
   await expect(page.locator(".gm-profile-card")).toHaveCount(51);
@@ -424,6 +435,7 @@ test("removing a mount book requires explicit reset and undo restores its select
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-up-in-arms").check();
   await applyProfile(page, "Demigryph Mount");
   await expect(page.locator("#gm-folio")).toContainText("Forelegs");
@@ -467,6 +479,7 @@ test("Archives II foundations and Legacy work on desktop and mobile @gm @mobile"
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-archives-ii").check();
   await expect(page.locator(".gm-profile-card")).toHaveCount(51);
   await applyProfile(page, "Rhinox");
@@ -514,6 +527,7 @@ test("Ogre Spellcaster offers Great Maw and Firebelly Fire while excluding other
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-archives-ii").check();
   await applyProfile(page, "Ogre");
   await gmStep(page, "Customise");
@@ -554,6 +568,7 @@ test("named Worked Examples are absent while generic template choices remain @gm
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   const names = await page
     .locator(".gm-profile-card > strong")
@@ -579,6 +594,7 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("#gm-book-archives-iii")).toHaveCount(0);
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
   await applyProfile(page, "Human");
@@ -628,6 +644,7 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("#gm-book-archives-iii")).toHaveCount(0);
   await applyProfile(page, "Human");
   await gmStep(page, "Customise");
@@ -692,6 +709,7 @@ test("Bayl Warband uses shared profile/template filters, explicit choices and op
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(
     page.locator("label:has(#gm-book-bayl-many-eyes)"),
   ).toContainText("2 profiles · 7 templates");
@@ -759,6 +777,7 @@ test("Cluster-Eye exposes missing targets early and validates template ammunitio
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(
     page.locator("label:has(#gm-book-cluster-eye-tribe)"),
   ).toContainText("2 profiles · 7 templates");
@@ -834,6 +853,7 @@ test("Cluster-Eye Mancatcher routes missing Venom recovery Difficulty to a nativ
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-cluster-eye-tribe").check();
   await page.locator("#gm-profile-book").selectOption("cluster-eye-tribe");
   await applyProfile(page, "Drakwald Mancatcher");
@@ -856,6 +876,7 @@ test("Cluster-Eye Goblin Warlord optional bow package adds and removes Skill and
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-cluster-eye-tribe").check();
   await applyProfile(page, "Forest Goblin");
   await gmStep(page, "Customise");
@@ -875,6 +896,7 @@ test("Cluster-Eye Beastman Shaman Lore selector changes the Trait and matching W
   page,
 }, testInfo) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-cluster-eye-tribe").check();
   await applyProfile(page, "Gor");
   await gmStep(page, "Customise");

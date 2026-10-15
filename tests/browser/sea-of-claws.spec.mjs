@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -39,6 +40,7 @@ test("Sea Elemental shows Strength magic and both artillery source alternatives 
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(page.locator("label:has(#gm-book-sea-of-claws)")).toContainText(
     "13 profiles · 0 templates",
   );
@@ -74,6 +76,7 @@ test("Leech Wyrm warns before export and accepts a persisted manual Vomit score 
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   // A fresh Playwright context isolates this real autosave/reload check.
   await page.goto("/gm.html");
   await page.locator("#gm-book-sea-of-claws").check();

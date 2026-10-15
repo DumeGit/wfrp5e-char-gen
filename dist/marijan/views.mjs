@@ -89,6 +89,8 @@ function resources(s, r) {
   </div><details class="mm-resource-help" data-detail-key="marijan:resource-help"><summary>Automatic values & overrides</summary><p>Auto follows the calculated value. Choose Manual to enter any number; a blank manual field returns to Auto. Resource values are entered directly. Luck does not change Fortune.</p></details>`;
 }
 export function rowHTML(catalogue, s, r, group, x) {
+  const numericSize = (value) =>
+    `${Math.max(6, String(value ?? "").length + 2)}ch`;
   const attrs = `data-key="${x.key}" data-group="${group}"`,
     label =
       group === "skills"
@@ -98,13 +100,13 @@ export function rowHTML(catalogue, s, r, group, x) {
           : group === "gear"
             ? "Quantity"
             : "Count",
-    amount = field(
+    amount = `<div class="mm-entry-number" style="--mm-number-size:${numericSize(x.amount)}">${field(
       label === "Advances" ? "Adv" : label === "Quantity" ? "Qty" : label,
       `mm-amount-${x.key}`,
       x.amount,
       `${attrs} data-entry-field="amount" aria-label="${esc(x.name)} ${label.toLowerCase()}" step="any"`,
       "number",
-    ),
+    )}</div>`,
     remove = button(
       "×",
       "remove",
@@ -125,7 +127,7 @@ export function rowHTML(catalogue, s, r, group, x) {
       x.char,
       `${attrs} data-entry-field="char" aria-label="${esc(x.name)} Characteristic"`,
     );
-    controls += `<div class="mm-skill-total"><label for="mm-total-${x.key}">Total</label><input id="mm-total-${x.key}" aria-label="${esc(x.name)} total" type="number" step="any" value="${total}" ${attrs} data-entry-field="total" ${x.total === null ? "readonly" : ""}></div>`;
+    controls += `<div class="mm-skill-total" style="--mm-number-size:${numericSize(total)}"><label for="mm-total-${x.key}">Total</label><input id="mm-total-${x.key}" aria-label="${esc(x.name)} total" type="number" step="any" value="${total}" ${attrs} data-entry-field="total" ${x.total === null ? "readonly" : ""}></div>`;
     secondary += `<div class="field"><span class="label">Total calculation</span>${button(x.total === null ? "Auto" : "Manual", "skill-mode", `${attrs} aria-label="${esc(x.name)} total: ${x.total === null ? "switch to manual" : "return to automatic"}"`, "quiet mm-mode")}</div>`;
   }
   if (group === "gear")
@@ -154,11 +156,25 @@ export function rowHTML(catalogue, s, r, group, x) {
       : group === "magic"
         ? `${field("Lore / patron", `mm-lore-${x.key}`, x.lore, `${attrs} data-entry-field="lore"`)}${field("Type", `mm-category-${x.key}`, x.category, `${attrs} data-entry-field="category"`)}`
         : "";
+  const customSkill = x.custom && group === "skills";
+  const rename = customSkill
+    ? `<h3 class="mm-custom-skill-title">${esc(x.name)}</h3>${field("Rename Skill", `mm-name-${x.key}`, x.name, `${attrs} data-entry-field="name"`)}`
+    : "";
+  const entryName = customSkill
+    ? `<span class="mm-custom-skill-name">${esc(x.name)}</span>`
+    : x.custom
+      ? field(
+          "Custom name",
+          `mm-name-${x.key}`,
+          x.name,
+          `${attrs} data-entry-field="name"`,
+        )
+      : button(esc(x.name), "inspect", attrs, "mm-name-button");
   const magicProfile =
     group === "magic"
       ? `<div class="mm-fields">${["cn", "range", "target", "duration"].map((k) => field(k === "cn" ? "Casting Number" : k[0].toUpperCase() + k.slice(1), `mm-${k}-${x.key}`, x[k] ?? "", `${attrs} data-entry-field="${k}"`)).join("")}</div>`
       : "";
-  return `<article class="mm-entry mm-entry-${group}" id="mm-entry-${x.key}"><div class="mm-entry-line"><div class="mm-entry-name">${x.custom ? field("Custom name", `mm-name-${x.key}`, x.name, `${attrs} data-entry-field="name"`) : button(esc(x.name), "inspect", attrs, "mm-name-button")}${legacy}</div><div class="mm-entry-controls">${controls}${remove}</div></div><details class="mm-entry-disclosure" data-detail-key="${detailKey("marijan-entry", x.key)}"><summary aria-label="Edit ${esc(x.name)} details" title="Details & overrides"><svg class="mm-entry-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mm-entry-detail"><small>${esc(entrySource(catalogue, x))}${x.category ? ` · ${esc(x.category)}` : ""}</small>${secondary || profileFields ? `<div class="mm-fields">${secondary}${profileFields}</div>` : ""}${magicProfile}<div class="field"><label for="mm-description-${x.key}">Description / personal notes</label><textarea id="mm-description-${x.key}" rows="2" ${attrs} data-entry-field="text">${esc(x.text)}</textarea></div><small>${x.custom ? "User-defined; no printed source or automatic effects." : "Profile edits apply only to this character. The book reference stays unchanged."}</small></div></details></article>`;
+  return `<article class="mm-entry mm-entry-${group}" id="mm-entry-${x.key}"><div class="mm-entry-line"><div class="mm-entry-name">${entryName}${legacy}</div><div class="mm-entry-controls">${controls}${remove}</div></div><details class="mm-entry-disclosure" data-detail-key="${detailKey("marijan-entry", x.key)}"><summary aria-label="Edit ${esc(x.name)} details" title="Details & overrides"><svg class="mm-entry-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mm-entry-detail">${rename}<small>${esc(entrySource(catalogue, x))}${x.category ? ` · ${esc(x.category)}` : ""}</small>${secondary || profileFields ? `<div class="mm-fields">${secondary}${profileFields}</div>` : ""}${magicProfile}<div class="field"><label for="mm-description-${x.key}">Description / personal notes</label><textarea id="mm-description-${x.key}" rows="2" ${attrs} data-entry-field="text">${esc(x.text)}</textarea></div><small>${x.custom ? "User-defined; no printed source or automatic effects." : "Profile edits apply only to this character. The book reference stays unchanged."}</small></div></details></article>`;
 }
 function collection(catalogue, s, r, group, title) {
   const starters = {
@@ -199,7 +215,7 @@ export function workspace(catalogue, s, r, verify) {
     ${section("resources", "Resources", resources(s, r))}
     ${collection(catalogue, s, r, "skills", "Skills")}${collection(catalogue, s, r, "talents", "Talents")}${collection(catalogue, s, r, "magic", "Magic & prayers")}${collection(catalogue, s, r, "gear", "Equipment")}${collection(catalogue, s, r, "extras", "Traits, mutations & runes")}
     ${section("notes", "Notes & appearance", `${textarea("Appearance", "appearance", s.appearance)}<div class="mm-fields">${input("Personal ambition", "ambition", s.ambition)}${input("Party ambition", "partyAmbition", s.partyAmbition)}</div>${textarea("Notes", "notes", s.notes)}<details data-detail-key="marijan:rolls"><summary>Recorded rolls</summary><div id="mm-rolls">${s.rolls.length ? s.rolls.map((x) => `<p class="small">${esc(x.label)}: ${x.faces.join(" + ")} = ${x.faces.reduce((a, b) => a + b, 0)}</p>`).join("") : "No rolls yet."}</div></details>`)}
-    <div class="mm-page-footer">${button("Export character sheet PDF", "export", "", "primary")}${button("Download JSON backup", "backup")}</div></main><aside class="sheet mm-folio" aria-label="Character summary"><div class="mm-folio-emblem">${ledgerEmblem()}</div><h2 id="mm-folio-name">${esc(s.name || "Your character")}</h2><p id="mm-folio-identity">${esc(s.species)}</p><div class="mm-folio-stats">${KEYS.map((k) => `<div><span>${k}</span><strong data-result="stat:${k}">${r.stats[k]}</strong></div>`).join("")}</div><dl class="mm-folio-resources">${["wounds", "movement", "capacity", "enc"].map((k) => `<div><dt>${LABELS[k]}</dt><dd data-result="derived:${k}">${score(r.values[k])}</dd></div>`).join("")}<div><dt>Total XP</dt><dd data-result="xp">${r.xpTotal}</dd></div></dl><div id="mm-counts"></div><div id="mm-warnings" class="mm-warnings"></div>${button("Export PDF", "export", "", "primary")}<small>Marijan Mode · unrestricted</small></aside></div>`;
+    <div class="mm-page-footer">${button("Export character sheet PDF", "export", "", "primary")}${button("Download JSON backup", "backup")}</div></main><aside class="sheet mm-folio" aria-label="Character summary"><div class="mm-folio-emblem">${ledgerEmblem()}</div><h2 id="mm-folio-name">${esc(s.name || "Your character")}</h2><p id="mm-folio-identity">${esc(s.species)}</p><div class="mm-folio-stats">${KEYS.map((k) => `<div><span>${k}</span><strong data-result="stat:${k}">${r.stats[k]}</strong></div>`).join("")}</div><dl class="mm-folio-resources">${["wounds", "movement", "capacity", "enc"].map((k) => `<div><dt>${LABELS[k]}</dt><dd data-result="derived:${k}">${score(r.values[k])}</dd></div>`).join("")}<div><dt>Total XP</dt><dd data-result="xp">${score(r.xpTotal)}</dd></div></dl><div id="mm-counts"></div><div id="mm-warnings" class="mm-warnings"></div>${button("Export PDF", "export", "", "primary")}<small>Marijan Mode · unrestricted</small></aside></div>`;
 }
 
 export function generationRecord(s) {

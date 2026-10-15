@@ -1,3 +1,4 @@
+import { displayNumber } from "./display-number.mjs";
 export const esc = (value) =>
   String(value ?? "").replace(
     /[&<>"']/g,
@@ -7,7 +8,11 @@ export const esc = (value) =>
       ],
   );
 export const score = (value) =>
-  value === null || value === undefined ? "—" : value;
+  value === null || value === undefined
+    ? "—"
+    : typeof value === "number"
+      ? displayNumber(value)
+      : value;
 export const button = (label, action, attrs = "", style = "quiet") =>
   `<button type="button" class="${style}" data-action="${action}" ${attrs}>${label}</button>`;
 export const fieldIntent = (id, type = "text", attrs = "") =>

@@ -224,11 +224,15 @@
   min-width: 0;
   box-shadow: 0 2px 4px #24150b0d;
 }
+@media (hover: hover) and (pointer: fine) {
+
 .gm-profile-card:hover {
   border-color: var(--color-crimson);
   background: var(--color-paper-hover);
   color: var(--color-ink);
 }
+}
+
 .gm-profile-card strong {
   display: block;
   font: 21px/1.4 var(--font-heading);
@@ -373,10 +377,14 @@
   line-height: 1;
   font-size: 19px;
 }
+@media (hover: hover) and (pointer: fine) {
+
 .gm-remove:hover {
   background: var(--color-error-surface);
   color: var(--color-error);
 }
+}
+
 .gm-chips {
   display: flex;
   flex-wrap: wrap;
@@ -1347,3 +1355,7 @@
     min-height: 40px;
   }
 }
+
+.gm-book-picker { margin-block: 16px; }
+.gm-book-picker > summary small { margin-left: 8px; color: var(--color-muted); }
+.gm-book-picker .gm-books { margin-top: 10px; }

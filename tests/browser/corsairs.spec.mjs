@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -11,6 +12,7 @@ test("Corsairs book filters and Chief Mate optional Talents work on desktop and 
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(
     page.locator("label:has(#gm-book-corsairs-flariel)"),
   ).toContainText("2 profiles · 8 templates");
@@ -64,6 +66,7 @@ test("Sorceress offers exactly core Colour Lores/Winds and explains its remainin
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.locator("#gm-book-corsairs-flariel").check();
   await applyProfile(page, "Dark Elf");
   await gmStep(page, "Customise");
@@ -101,6 +104,7 @@ test("Ship's Crew choices route early, retain one performance/instrument and sur
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.goto("/gm.html");
   await page.locator("#gm-book-corsairs-flariel").check();
   await applyProfile(page, "Dark Elf Ship's Crew");
@@ -147,6 +151,7 @@ test("Warhound's Broken roll issue opens the real recorded roll control @gm @mob
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await page.goto("/gm.html");
   await page.locator("#gm-book-corsairs-flariel").check();
   await applyProfile(page, "Dog");

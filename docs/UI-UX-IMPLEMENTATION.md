@@ -42,3 +42,22 @@ Physical iOS/Android keyboards, OS native selectors and full screen-reader behav
 Verification completed: syntax/import checks, formatting, validated book/generated outputs, all 417 Node regressions and offline inclusion of 303 published assets passed. The release browser run passed 121 cases, with two Marijan density failures and one deliberately phone-only scenario skipped on desktop. After correcting the shared disclosure's placement in compact rows, the focused follow-up passed all 17 applicable cases (the two failed density cases plus the interface regressions); one desktop phone-only case remained skipped. Combined coverage is 123 distinct passing browser cases, one intentional skip. The unchanged rule suite was not repeated for that CSS fix.
 
 The final generated worker includes the corrected interface. Commit locally; do not push without the user's separate authorization.
+
+## Emil review implementation — 15 October 2026
+
+Implemented the eight authorised findings in UI-REVIEW-EMIL-2026-10-15.md:
+
+| Before | After | Purpose |
+| --- | --- | --- |
+| Fixed narrow Marijan numeric columns | Value-sized fields; spinner decoration removed; second control row at up to 360px | Keep all digits readable while retaining numeric semantics |
+| Custom Skill names shown only in narrow inline inputs | Compact name plus full heading and Rename Skill in expanded details | Preserve row density and readable identity |
+| Repeated mobile GM name and full description above statistics | One visible phone heading; Description disclosure below statistics | Keep the stat block easy to reach |
+| Profile books before selected GM identity | Foundation/identity first, then a native book-selection disclosure | Keep secondary configuration accessible without dominating the screen |
+| Raw large display totals | Shared displayNumber/score grouping and round-trip-safe grouped money | Scan totals accurately without changing saved/input numbers |
+| Ungated hover styles | Capability-gated hover rules throughout the creator stylesheets | Avoid mouse hover treatment on coarse touch input; preserve keyboard focus |
+| Incomplete safe-area contract | viewport-fit=cover and top/side/bottom safe-area spacing on the shared surfaces | Keep edge-to-edge art and inset controls |
+| Hover-only general button feedback | Immediate brightness press feedback; tap-highlight suppression scoped to controls | Respond to touch without extra animation |
+
+The context-Career resolver is a hoisted function to keep its existing circular import graph safe when formatting/market helpers are imported independently. This changes no creation mechanics. Existing VisualViewport keyboard handling, per-mode colours, native selectors, shared Undo/Redo and motion restrictions remain. GM full review/PDF descriptions remain complete. Physical notched-device and software-keyboard behavior still needs a real phone; local desktop/mobile checks are not hardware certification.
+
+Verification: focused hover/focus/press and GM folio cases passed on desktop/mobile; the renamed custom Skill and persistence cases passed after correcting a test locator to the open details panel. Existing mobile-shell, resource editing, unrestricted editing and compact-row checks passed, as did the Night Parade book-picker/template flow. All 24 local review-fixture combinations still had no horizontal page overflow. Display/money round-trip tests and the affected rule/Marijan checks passed; the copy test exposed the unfinished-Career snapshot issue and passed after preserving empty Career/neutral Standing. Quick checks and the 375-file offline worker passed. No live deployment was tested or pushed.

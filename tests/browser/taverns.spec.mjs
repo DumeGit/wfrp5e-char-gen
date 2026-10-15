@@ -1,3 +1,4 @@
+import { openGMBooks } from "./helpers.mjs";
 import {
   test,
   expect,
@@ -12,6 +13,7 @@ test("Tavern staff use shared foundation filters and display usable printed defe
   page,
 }) => {
   await openGM(page);
+  await openGMBooks(page);
   await expect(
     page.locator("label:has(#gm-book-taverns-old-world)"),
   ).toContainText("12 profiles · 0 templates");

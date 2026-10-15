@@ -164,6 +164,32 @@ function refresh() {
     )
       el.value = row.total;
   }
+  for (const input of root.querySelectorAll(
+    '.mm-entry-controls input[type="number"]',
+  )) {
+    input
+      .closest(".mm-entry-number,.mm-skill-total")
+      ?.style.setProperty(
+        "--mm-number-size",
+        `${Math.max(6, input.value.length + 2)}ch`,
+      );
+  }
+  for (const x of s.entries.skills.filter((x) => x.custom)) {
+    const row = document.getElementById(`mm-entry-${x.key}`);
+    for (const title of row?.querySelectorAll(
+      ".mm-custom-skill-name,.mm-custom-skill-title",
+    ) || [])
+      title.textContent = x.name;
+    row
+      ?.querySelector("summary")
+      ?.setAttribute("aria-label", `Edit ${x.name} details`);
+    row
+      ?.querySelector('[data-entry-field="amount"]')
+      ?.setAttribute("aria-label", `${x.name} advances`);
+    row
+      ?.querySelector('[data-entry-field="total"]')
+      ?.setAttribute("aria-label", `${x.name} total`);
+  }
   for (const [id, value] of [
     ["mm-species", s.species],
     ["mm-career", r.career?.contentId || s.career],
