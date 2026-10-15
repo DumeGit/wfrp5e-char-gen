@@ -1,5 +1,11 @@
 # Shared UI/UX implementation — 10 October 2026
 
+## Additional UI guidance — 15 October 2026
+
+Installed the `emil-design-eng`, `mobile-native` and `break-ui` skills from `emilkowalski/skills` in the local Codex skills directory. Use the relevant guide for interaction polish, mobile platform behavior or realistic edge-case reviews respectively, alongside the existing UI/UX Pro Max, Web Design Guidelines and Frontend Design skills. Project instructions retain this preference for future chats. This installation does not add runtime packages or change the app's artwork, theme or animation policy.
+
+Apply their recommendations to observed problems: preserve readable focus/press states and reduced motion, prefer capability queries and existing native controls on mobile, and exercise plausible long names, empty/one-item lists and accepted numeric limits through development fixtures. Load only the relevant skill/reference and run checks proportional to the change. Keep physical-device verification limits explicit; a desktop mobile viewport does not certify iOS/Android behavior.
+
 Implements the approved fourteen-point review using UI/UX Pro Max, Vercel Web Design Guidelines and Frontend Design. The original planning document remains in the parent workspace at UI-UX-REVIEW-PLAN.md. The approved three material-fantasy themes are retained; no art, sound, framework, rules, prices, saved schemas or export payloads are changed.
 
 ## Completed changes
