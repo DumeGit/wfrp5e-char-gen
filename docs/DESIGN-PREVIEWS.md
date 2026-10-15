@@ -82,7 +82,7 @@ A later image revision restored blue/ivory/gold to the painting, but the user cl
 | Example | Mode | Shared panel surface |
 | --- | --- | --- |
 | A — Tavern oak | Player | Dark tavern floorboards, long grain, staggered joints, knots and sparse nail heads; existing old gold and oxblood accents |
-| B — Bestiary materials | GM | Crypt slate, Basilisk hide or Blackened iron; physical mineral/hide/metal grain in storm blue, with existing bone, cobalt and brass accents |
+| B — Bestiary materials | GM | Crypt masonry (default), Crypt slate, Basilisk hide or Blackened iron; physical stone/mineral/hide/metal grain in storm blue, with existing bone, cobalt and brass accents |
 | C — Pressed ash vellum | Marijan | Charcoal fine directional grain; existing silver and crimson accents |
 
 The paired panels use identical base colours and texture images, rather than separate menu/folio materials. Original procedural SVG textures live in `design-previews/textures/`; no source-book images, external textures, new dependencies or generated raster assets are required. Static textures remain visible with reduced motion; no texture is animated. Production textures, theme tokens, rules and offline assets are unchanged.
@@ -96,3 +96,6 @@ Follow-up direction: the user requested tavern-style wooden panelling for Player
 
 
 The user rejected the literal skeletal engravings: Bestiary must have a material texture, rather than illustrated symbols. The ossuary SVG is now unused source history. The current GM card offers three native texture choices through its Surface selector: Crypt slate (mineral strata/chalky pitting), Basilisk hide (irregular pebbled relief) and Blackened iron (matte hammered surface). Each is a new procedural SVG height/lighting texture with no pictorial marks. `bestiary-materials.mjs` owns preview names/descriptions; gallery and full-size screen use the same choices and propagate selection into the full-size link. All default to Subtle; the coarser hide grain has a 0.65 gain to keep it quiet. Both panels share the selected finish. Player’s wood and Marijan’s vellum are unchanged. Verified loading/selection of all three materials, identical paired surfaces, full-size switching, Off behavior, browser errors and phone overflow; visually inspected slate and hide previews. These remain isolated proposals, not production settings.
+
+
+The next user direction was crypt cobblestone walls. Added **Crypt masonry** as the default Bestiary preview: uneven staggered stone blocks, recessed mortar, rounded worn edges, fine pitting and restrained blue-grey faces. `crypt-masonry.svg` is original procedural/vector material artwork, shared identically on the menu and folio. The three previous material alternatives remain available; Player/Marijan and the Subtle default are unchanged. Gallery default/full-size fallback now choose masonry. Inspected the revised desktop gallery and checked default selection, browser errors and phone gallery overflow. No production assets or settings changed.

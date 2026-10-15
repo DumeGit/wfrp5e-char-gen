@@ -1,5 +1,10 @@
 // Preview-only material choices; none are production theme settings.
 export const materials = {
+  masonry: {
+    name: "Crypt masonry",
+    description:
+      "Uneven old stone blocks, deep mortar joints and softly worn faces. The cool blue-grey wall of a long-forgotten crypt.",
+  },
   slate: {
     name: "Crypt slate",
     description:
@@ -17,4 +22,4 @@ export const materials = {
   },
 };
 export const materialKey = (value) =>
-  Object.hasOwn(materials, value) ? value : "slate";
+  Object.hasOwn(materials, value) ? value : "masonry";

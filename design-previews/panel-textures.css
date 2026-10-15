@@ -111,6 +111,10 @@ html:not(.texture-off) .texture-pair > :is(.rail, .sheet) {
 }
 [data-preview-mode="gm"] {
   --texture-base: #1c2c3c;
+  --texture-image: url(textures/crypt-masonry.svg);
+  --texture-size: 512px 640px;
+}
+[data-preview-mode="gm"][data-material="slate"] {
   --texture-image: url(textures/crypt-slate.svg);
   --texture-size: 384px 640px;
 }

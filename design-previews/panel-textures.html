@@ -244,7 +244,7 @@
       material.innerHTML = Object.entries(materials)
         .map(([key, m]) => `<option value="${key}">${m.name}</option>`)
         .join("");
-      material.value = "slate";
+      material.value = "masonry";
       function applyMaterial() {
         const key = materialKey(material.value);
         document.getElementById("gm-material-description").textContent =
