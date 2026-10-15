@@ -105,6 +105,18 @@ export function templateEligibility(t, p) {
     : "Choose a creature with printed or optional Trained (Mount), of Large Size or smaller (Night Parade p. 10).";
 }
 
+// The picker and its Book filter share the same foundation eligibility rules.
+// Modifiers/marks are selected within their parent template, never as templates.
+export function selectableTemplates(templates, profile) {
+  if (!profile) return [];
+  return templates.filter(
+    (t) =>
+      t.trollRole !== "modifier" &&
+      t.lustriaRole !== "mark" &&
+      !templateEligibility(t, profile),
+  );
+}
+
 export function templateTraits(t, original, removed = []) {
   if (!t) return original;
   let rows = original

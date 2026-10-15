@@ -1,4 +1,8 @@
-import { templateEligibility, templateSummary } from "./templates.mjs";
+import {
+  templateEligibility,
+  templateSummary,
+  selectableTemplates,
+} from "./templates.mjs";
 import { syncGMCants } from "./cants.mjs";
 import { loadBookBundle } from "../book-bundle.mjs";
 import { KEYS, skillInfo, base } from "../rules.mjs";
@@ -26,6 +30,7 @@ import {
   TABS,
 } from "./views.mjs";
 import { statBlock } from "./sheet.mjs";
+import { traitSummary } from "./trait-summaries.mjs";
 import { createGMReferences } from "./references.mjs";
 import { createGMPDF } from "./pdf.mjs";
 import {
@@ -241,18 +246,20 @@ function profilePreview(id) {
   );
 }
 function renderTemplateResults() {
-  const templates = gmCatalogue(data, s.books).templates.filter(
-    (t) =>
-      t.trollRole !== "modifier" &&
-      t.lustriaRole !== "mark" &&
-      (!ui.templateBook || (t.source?.book || "core") === ui.templateBook),
+  const templates = selectableTemplates(
+    gmCatalogue(data, s.books).templates,
+    r.profile,
+  ).filter(
+    (t) => !ui.templateBook || (t.source?.book || "core") === ui.templateBook,
   );
-  dialogBody.querySelector("#gm-template-results").innerHTML = templates
-    .map(
-      (t) =>
-        `<div class="gm-picker-row"><div><strong>${esc(t.name)}</strong><p>${esc(templateSummary(t))}</p><small>${esc(sourceLabel(t))} ${t.adaptation ? '<span class="legacy-tag">Legacy</span>' : ""}</small></div>${button("Preview", "preview-template", `data-id="${t.id}"`)}</div>`,
-    )
-    .join("");
+  dialogBody.querySelector("#gm-template-results").innerHTML =
+    templates
+      .map(
+        (t) =>
+          `<div class="gm-picker-row"><div><strong>${esc(t.name)}</strong><p>${esc(templateSummary(t))}</p><small>${esc(sourceLabel(t))} ${t.adaptation ? '<span class="legacy-tag">Legacy</span>' : ""}</small></div>${button("Preview", "preview-template", `data-id="${t.id}"`)}</div>`,
+      )
+      .join("") ||
+    '<p class="gm-empty">No templates are available for this foundation in the selected books.</p>';
 }
 function templatePreview(id) {
   pendingTemplate = id;
@@ -290,7 +297,7 @@ function pickerResults() {
           (kind === "magic" && r.spells.some((t) => t.contentId === x.key)) ||
           (kind === "trait" && r.traits.some((t) => t.name === x.name)) ||
           (kind === "mutation" && s.mutations.includes(x.key));
-      return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · ${esc(sourceLabel(x))}</small>${legacyBadge(x)}<p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : x.text?.slice(0, 180) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${x.text?.length > 180 ? "…" : ""}</p>${x.disabled ? `<p class="gm-small">${esc(x.disabled)}</p>` : ""}</div>${button(x.disabled ? "Unavailable" : owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned || x.disabled ? "disabled" : ""}`, "primary")}</div>`;
+      return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · ${esc(sourceLabel(x))}</small>${legacyBadge(x)}<p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : (kind === "trait" ? traitSummary(x) : x.text?.slice(0, 180)) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${kind !== "trait" && x.text?.length > 180 ? "…" : ""}</p>${x.disabled ? `<p class="gm-small">${esc(x.disabled)}</p>` : ""}</div>${button(x.disabled ? "Unavailable" : owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned || x.disabled ? "disabled" : ""}`, "primary")}</div>`;
     })
     .join(
       "",
@@ -415,9 +422,14 @@ async function action(el) {
   if (a === "template-picker") {
     if (!el.dataset.back) ui.templateBook = "";
     const catalogue = gmCatalogue(data, s.books);
+    const eligible = selectableTemplates(catalogue.templates, r.profile);
+    const books = catalogue.books.filter((b) =>
+      eligible.some((t) => (t.source?.book || "core") === b.id),
+    );
+    if (!books.some((b) => b.id === ui.templateBook)) ui.templateBook = "";
     modal(
       "Choose a creature template",
-      `<p class="gm-small">Choose one template from the enabled books. Source-specific foundations and required choices are explained in its preview.</p>${select("Book", "gm-template-book", [["", "All enabled books"], ...catalogue.books.filter((b) => catalogue.templates.some((t) => (t.source?.book || "core") === b.id)).map((b) => [b.id, b.shortTitle || b.title])], ui.templateBook, 'data-template-book="1"')}<div id="gm-template-results"></div>`,
+      `<p class="gm-small">Showing templates compatible with this foundation from the enabled books. Preview the changes and any required choices before applying.</p>${select("Book", "gm-template-book", [["", "All enabled books"], ...books.map((b) => [b.id, b.shortTitle || b.title])], ui.templateBook, 'data-template-book="1"')}<div id="gm-template-results"></div>`,
     );
     renderTemplateResults();
     return;

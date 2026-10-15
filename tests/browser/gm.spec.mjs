@@ -31,7 +31,7 @@ test("Night Parade has opt-in content and complete reversible template equipment
   await expect(page.locator("#gm-template-results")).not.toContainText("Wight");
   await filter.selectOption("night-parade");
   await expect(page.locator("#gm-template-results .gm-picker-row")).toHaveCount(
-    7,
+    3,
   );
 
   await page
@@ -914,6 +914,50 @@ test("Cluster-Eye Beastman Shaman Lore selector changes the Trait and matching W
   await noOverflow(page);
   await page.screenshot({
     path: testInfo.outputPath("cluster-shaman-choices.png"),
+    fullPage: true,
+  });
+});
+
+test("GM summaries expand to full rules and template filters hide incompatible foundations @gm @mobile", async ({
+  page,
+}, testInfo) => {
+  await openGM(page);
+  await openGMBooks(page);
+  await page.locator("#gm-book-night-parade").check();
+  await page.locator("#gm-book-salzenmund").check();
+  await applyProfile(page, "Griffon");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  const size = page.locator('details[data-detail-key="gm:griffon-trait-2"]');
+  await size.locator(":scope > summary").click();
+  await expect(size).toContainText("Counts as 3");
+  const full = size.locator(
+    'details[data-detail-key="gm:trait-rule:griffon-trait-2"]',
+  );
+  await expect(full).not.toHaveAttribute("open", "");
+  await expect(size).toContainText("Full rule");
+  await full.locator(":scope > summary").click();
+  await expect(full).toContainText("ADJUSTING A CREATURE");
+  await full.locator(":scope > summary").click();
+  await page.screenshot({
+    path: testInfo.outputPath("compact-traits.png"),
+    fullPage: true,
+  });
+  await page
+    .getByRole("button", { name: "Choose template", exact: true })
+    .click();
+  const books = page.locator("#gm-template-book");
+  await expect(books.locator('option[value="salzenmund"]')).toHaveCount(0);
+  // Enormous Griffons cannot take Night Parade's Large-or-smaller mounts.
+  await expect(books.locator('option[value="night-parade"]')).toHaveCount(0);
+  await expect(page.locator("#gm-template-results .gm-picker-row")).toHaveCount(
+    7,
+  );
+  await expect(page.locator("#gm-template-results")).not.toContainText("Wight");
+  await expect(page.locator("#gm-template-results")).not.toContainText("Liche");
+  await noOverflow(page);
+  await page.screenshot({
+    path: testInfo.outputPath("eligible-templates.png"),
     fullPage: true,
   });
 });

@@ -143,7 +143,7 @@ test("all 49 described core profiles fit four-per-A4, with measured six-card ove
   }
 });
 
-test("Griffon sheet uses the three printed Trait descriptions, never suggested optional Traits", () => {
+test("Griffon sheet uses compact descriptions for its three actual Traits, never optional Traits", () => {
   const s = draft("Griffon"),
     r = result(s);
   assert.deepEqual(
@@ -178,19 +178,23 @@ test("Griffon sheet uses the three printed Trait descriptions, never suggested o
   );
 });
 
-test("added Traits and updated ratings use full definitions without stale profile summaries; rule conflicts retain the full core rule", () => {
+test("added Traits and updated ratings use current mechanical summaries; full definitions and source conflict notes remain available", () => {
   const s = draft("Griffon");
   s.removed.push(profile("Griffon").traits.find((t) => t.name === "Fly").key);
   trait(s, "Fly", "40");
   trait(s, "Bestial");
   const r = result(s);
-  assert.equal(
+  assert.match(
     r.traits.find((t) => t.name === "Fly").description,
-    data.traits.find((t) => t.name === "Fly").text,
+    /fly up to 40 yards/,
   );
   assert.equal(
+    r.traits.find((t) => t.name === "Fly").text,
+    data.traits.find((t) => t.name === "Fly").text,
+  );
+  assert.match(
     r.traits.find((t) => t.name === "Bestial").description,
-    data.traits.find((t) => t.name === "Bestial").text,
+    /half its Wounds.*Territorial/,
   );
   assert.doesNotMatch(
     JSON.stringify(cardSections(r, s)),
@@ -198,9 +202,9 @@ test("added Traits and updated ratings use full definitions without stale profil
   );
   const spider = draft("Giant Spider");
   trait(spider, "Venom", "Average");
-  assert.equal(
+  assert.match(
     result(spider).traits.find((t) => t.name === "Venom").description,
-    data.traits.find((t) => t.name === "Venom").text,
+    /Causing Wounds inflicts Poisoned.*recover.*not to avoid/,
   );
   assert.match(
     result(draft("Bloodletter of Khorne")).traits.find(
@@ -256,8 +260,11 @@ test("every core profile preserves untouched printed values, Skills and attacks"
     data.profiles.filter((p) => p.id.startsWith("core:")).length,
     49,
   );
-  assert.equal(data.templates.filter(t => t.id.startsWith("core:")).length, 7);
-  assert.equal(data.traits.filter(t => t.id.startsWith("core:")).length, 67);
+  assert.equal(
+    data.templates.filter((t) => t.id.startsWith("core:")).length,
+    7,
+  );
+  assert.equal(data.traits.filter((t) => t.id.startsWith("core:")).length, 67);
   for (const p of data.profiles.filter((p) => p.id.startsWith("core:"))) {
     const s = freshGM(data, p.id),
       r = result(s);
@@ -619,7 +626,10 @@ test("named worked examples are excluded without removing generic foundations or
     ids,
   );
   assert.ok(!data.profiles.some((p) => p.category === "Worked Examples"));
-  assert.equal(data.templates.filter(t => t.id.startsWith("core:")).length, 7);
+  assert.equal(
+    data.templates.filter((t) => t.id.startsWith("core:")).length,
+    7,
+  );
   const s = freshGM(data, ids[0]);
   assert.throws(() => validateGMDraft(data, R, s), /profile/i);
 });
