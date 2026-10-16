@@ -98,7 +98,6 @@ function measure(font, bold, { r, sections }, width, size) {
     r.name !== r.profile.name && r.profile.name,
     r.template?.name,
     r.size + (r.swarm ? " (Size ignored)" : ""),
-    `TB ${r.tb}`,
   ]
     .filter(Boolean)
     .join(" · ");

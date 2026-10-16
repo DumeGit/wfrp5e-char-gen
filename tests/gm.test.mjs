@@ -131,7 +131,7 @@ test("six complete table cards share one portrait A4 page, with additional cards
   const s = draft("Human"),
     r = result(s),
     entries = Array.from({ length: 6 }, () => ({ s, r }));
-  const print = await prepareGMPrint(PDFLib, entries);
+  const print = await prepareGMPrint(PDFLib, entries, { perPage: 6 });
   assert.equal(print.perPage, 6);
   assert.deepEqual(print.overflow, []);
   assert.ok(print.cards.every((c) => c.fontSize >= 7.5));

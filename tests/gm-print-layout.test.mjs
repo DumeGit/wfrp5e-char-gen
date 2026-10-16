@@ -80,10 +80,9 @@ test("flexible PDF fits more than six short creatures without shrinking to fill 
   const entries = Array.from({ length: 8 }, (_, i) =>
     entry("Human", i % 2 ? "Red hair; a scar across one cheek." : ""),
   );
-  const fixed = await prepareGMPrint(PDFLib, entries);
-  const flexible = await prepareGMPrint(PDFLib, entries, {
-    perPage: "flexible",
-  });
+  const fixed = await prepareGMPrint(PDFLib, entries, { perPage: 6 });
+  const flexible = await prepareGMPrint(PDFLib, entries);
+  assert.equal(flexible.perPage, "flexible");
   assert.equal(fixed.pages, 2);
   assert.equal(flexible.pages, 1);
   assert.deepEqual(flexible.overflow, []);

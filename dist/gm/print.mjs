@@ -71,7 +71,11 @@ export function cardSections(r, s) {
   ].filter(([, value]) => value);
 }
 
-export async function prepareGMPrint(PDFLib, entries, { perPage = 6 } = {}) {
+export async function prepareGMPrint(
+  PDFLib,
+  entries,
+  { perPage = "flexible" } = {},
+) {
   const geometry = printGeometry(perPage);
   if (!Array.isArray(entries) || !entries.length || entries.length > 48)
     throw Error("Add between 1 and 48 creatures to the print sheet.");

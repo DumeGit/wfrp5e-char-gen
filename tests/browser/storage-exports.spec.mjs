@@ -124,7 +124,7 @@ test("PC browser downloads an editable sheet and complete record @exports", asyn
     0,
   );
 });
-test("GM browser downloads compact PDF and six-card A4 sheet @exports @gm", async ({
+test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", async ({
   page,
 }) => {
   await openGM(page);
@@ -147,7 +147,10 @@ test("GM browser downloads compact PDF and six-card A4 sheet @exports @gm", asyn
   });
   await expect(
     print.getByLabel("Cards per A4 page", { exact: true }),
-  ).toHaveValue("6");
+  ).toHaveValue("flexible");
+  await print
+    .getByLabel("Cards per A4 page", { exact: true })
+    .selectOption("6");
   const other = await gmDraft("Halfling");
   await fileUpload(
     page,
@@ -160,6 +163,7 @@ test("GM browser downloads compact PDF and six-card A4 sheet @exports @gm", asyn
     page,
     print.getByRole("button", { name: "Download A4 PDF", exact: true }),
   );
+  expect(cards.name).toBe("Bestiary-6-per-A4.pdf");
   const doc = await PDFDocument.load(cards.bytes);
   expect(doc.getPageCount()).toBe(1);
   const { width, height } = doc.getPages()[0].getSize();
@@ -184,5 +188,5 @@ test("GM browser downloads compact PDF and six-card A4 sheet @exports @gm", asyn
     .click();
   await expect(
     print.getByLabel("Cards per A4 page", { exact: true }),
-  ).toHaveValue("6");
+  ).toHaveValue("flexible");
 });
