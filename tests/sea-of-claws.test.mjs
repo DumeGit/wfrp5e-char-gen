@@ -136,8 +136,15 @@ test("distinct Chanties share the Intelligence limit, cost normal XP, and cannot
   const songs = R.config.talentOptions.Chanty.map((n) => `Chanty (${n})`);
   assert.match(
     M.talentInfo(R, songs[0]).text,
-    /individual Tests of every crew member/,
+    /Crew members gain \+10 to their individual Tests within a Crew Test/,
   );
+  assert.match(M.talentInfo(R, songs[0]).text, /30 seconds/);
+  assert.match(M.talentInfo(R, songs[0]).text, /three minutes plus SL minutes/);
+  assert.match(
+    M.talentInfo(R, songs[0]).text,
+    /Damage or any failed Opposed Test ends it/,
+  );
+  assert.match(M.talentInfo(R, songs[0]).text, /one chanty each watch/);
   s.ledger = [{ type: "promotion", name: "Chantyman", cost: 100 }];
   M.purchase(R, s, "talent", songs[0]);
   assert.match(M.invalidTalent(R, s, songs[0]), /already learned/);

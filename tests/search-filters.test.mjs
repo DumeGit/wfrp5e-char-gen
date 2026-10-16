@@ -67,10 +67,22 @@ test("category filters combine with the book and text query; browsing stays alph
   assert.deepEqual(
     [...new Set(rows.map((row) => row.filterValues.book[0]))].sort(),
     library.packs
-      .filter((p) => p.manifest.kind !== "variant")
+      .filter(
+        (p) =>
+          p.manifest.kind !== "variant" &&
+          !["bayl-many-eyes", "night-parade"].includes(p.manifest.id),
+      )
       .map((p) => p.manifest.id)
       .sort(),
   );
+  for (const book of ["bayl-many-eyes", "night-parade"]) {
+    assert.ok(wire.books.some((entry) => entry.id === book));
+    assert.equal(
+      browse("all", { book }).length,
+      0,
+      "books with only excluded Rules/profiles have no available filter results",
+    );
+  }
   assert.equal(
     browse("all", { class: "Warrior" }, "Soldier").length,
     0,

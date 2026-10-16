@@ -19,34 +19,34 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 655 | 0 | 0 |
-| Up in Arms | 135 | 13 | 128 | 0 | 9 |
-| Archives of the Empire: Volume I | 31 | 22 | 10 | 0 | 13 |
-| Archives of the Empire: Volume II | 50 | 7 | 103 | 0 | 15 |
-| Archives of the Empire: Volume III | 45 | 14 | 105 | 0 | 12 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 269 | 0 | 386 |
+| Up in Arms | 135 | 13 | 59 | 0 | 78 |
+| Archives of the Empire: Volume I | 31 | 22 | 8 | 0 | 15 |
+| Archives of the Empire: Volume II | 50 | 7 | 44 | 0 | 74 |
+| Archives of the Empire: Volume III | 45 | 14 | 35 | 0 | 82 |
 | Archives III — Animal-doctor Hedge Witch (variant) | 0 | 1 | 0 | 0 | 0 |
-| Winds of Magic | 120 | 55 | 253 | 0 | 21 |
-| Rough Nights & Hard Days | 3 | 5 | 24 | 0 | 80 |
-| Dwarf Player’s Guide | 156 | 35 | 120 | 1 | 0 |
-| High Elf Player’s Guide | 55 | 55 | 104 | 0 | 0 |
-| Blood and Bramble | 15 | 10 | 2 | 0 | 6 |
-| Deft Steps, Light Fingers | 39 | 18 | 146 | 0 | 22 |
+| Winds of Magic | 120 | 55 | 118 | 0 | 156 |
+| Rough Nights & Hard Days | 3 | 5 | 4 | 0 | 100 |
+| Dwarf Player’s Guide | 156 | 35 | 34 | 1 | 86 |
+| High Elf Player’s Guide | 55 | 55 | 52 | 0 | 52 |
+| Blood and Bramble | 15 | 10 | 1 | 0 | 7 |
+| Deft Steps, Light Fingers | 39 | 18 | 76 | 0 | 92 |
 | Deft Steps — General Ranald Priest (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Ranald the Dealer (variant) | 1 | 1 | 0 | 0 | 0 |
 | Deft Steps — Taal Priest (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — White Stag / Hermit (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Longshanks Scout (variant) | 1 | 0 | 0 | 0 | 0 |
 | Deft Steps — Pickpocket (variant) | 1 | 0 | 0 | 0 | 0 |
-| The Night Parade | 0 | 0 | 4 | 0 | 0 |
-| The Warband of Bayl of Many Eyes | 0 | 0 | 3 | 0 | 0 |
-| The Cluster-Eye Tribe | 0 | 0 | 6 | 0 | 0 |
-| Tribes and Tribulations | 33 | 10 | 24 | 0 | 0 |
-| Sea of Claws | 30 | 15 | 34 | 0 | 0 |
+| The Night Parade | 0 | 0 | 0 | 0 | 4 |
+| The Warband of Bayl of Many Eyes | 0 | 0 | 0 | 0 | 3 |
+| The Cluster-Eye Tribe | 0 | 0 | 1 | 0 | 5 |
+| Tribes and Tribulations | 33 | 10 | 11 | 0 | 13 |
+| Sea of Claws | 30 | 15 | 21 | 0 | 13 |
 | Sea of Claws — Naval artillery (variant) | 14 | 0 | 0 | 0 | 0 |
-| Taverns of the Old World | 8 | 0 | 49 | 0 | 0 |
-| The Corsairs of Captain Flariel | 3 | 3 | 4 | 0 | 0 |
-| Lustria | 17 | 5 | 54 | 0 | 0 |
-| Salzenmund: City of Salt and Silver | 0 | 5 | 24 | 0 | 0 |
+| Taverns of the Old World | 8 | 0 | 28 | 0 | 21 |
+| The Corsairs of Captain Flariel | 3 | 3 | 3 | 0 | 1 |
+| Lustria | 17 | 5 | 19 | 0 | 35 |
+| Salzenmund: City of Salt and Silver | 0 | 5 | 13 | 0 | 11 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -61,8 +61,8 @@ Pack `core` · version 1.1.7
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 224 | 0 | 0 |
-| ruleReferences | 0 | 0 | 430 | 0 | 0 |
+| referenceEntries | 0 | 0 | 102 | 0 | 122 |
+| ruleReferences | 0 | 0 | 166 | 0 | 264 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
 | spells | 225 | 0 | 0 | 0 | 0 |
@@ -85,100 +85,100 @@ Pack `core` · version 1.1.7
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
 | `core:gear:jewellery` — Jewellery | gear | reference-only | p. 308 | No fixed ordinary shop price; retained as a profile/reference without inventing a purchase price. |
-| `core:reference:129-tests` — Tests | referenceEntries | reference-only | p. 129 | Sourced book rule reference; no live-play automation. |
-| `core:reference:130-describe-action` — Describe Action | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:reference:130-roll-dice` — Roll Dice | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:reference:131-difficulty-and-character-modifiers` — Difficulty And Character Modifiers | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
+| `core:reference:129-tests` — Tests | referenceEntries | deferred | p. 129 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:130-describe-action` — Describe Action | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:130-roll-dice` — Roll Dice | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:131-difficulty-and-character-modifiers` — Difficulty And Character Modifiers | referenceEntries | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:131-difficulty-table` — Difficulty Table | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:reference:131-summary-outcome` — Summary & Outcome | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:reference:132-rolling-with-advantage` — Rolling with Advantage | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `core:reference:132-typical-test` — Typical Test | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `core:reference:133-spend-a-fortune-point-to` — Spend a Fortune Point to: | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:reference:134-a-time-for-crime` — A Time For Crime | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `core:reference:131-summary-outcome` — Summary & Outcome | referenceEntries | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:132-rolling-with-advantage` — Rolling with Advantage | referenceEntries | deferred | p. 132 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:132-typical-test` — Typical Test | referenceEntries | deferred | p. 132 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:133-spend-a-fortune-point-to` — Spend a Fortune Point to: | referenceEntries | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:134-a-time-for-crime` — A Time For Crime | referenceEntries | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:134-common-forms-of-skullduggery` — Common Forms Of Skullduggery | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `core:reference:134-theft-and-skullduggery` — Theft And Skullduggery | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `core:reference:134-theft-and-skullduggery` — Theft And Skullduggery | referenceEntries | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:135-example-difficulties-of-common-underhanded-tasks` — Example Difficulties Of Common Underhanded Tasks | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `core:reference:135-example-outcomes` — Worked example — Stealth (Rural) | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `core:reference:136-example-outcomes` — Worked example — Sleight of Hand | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `core:reference:135-example-outcomes` — Worked example — Stealth (Rural) | referenceEntries | deferred | p. 135 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:136-example-outcomes` — Worked example — Sleight of Hand | referenceEntries | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:137-lock-difficulty` — Lock Difficulty | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
 | `core:reference:137-selection-of-traps` — Selection of Traps | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
 | `core:reference:137-trap-spot-difficulty` — Trap Spot Difficulty | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
-| `core:reference:138-example-outcomes` — Worked example — Secret Signs | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `core:reference:139-criminal-coinage` — Criminal Coinage | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `core:reference:139-example-outcomes` — Worked example — Charm | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
+| `core:reference:138-example-outcomes` — Worked example — Secret Signs | referenceEntries | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:139-criminal-coinage` — Criminal Coinage | referenceEntries | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:139-example-outcomes` — Worked example — Charm | referenceEntries | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:140-common-social-tests` — Common Social Tests | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `core:reference:140-difficulty-factors-of-social-tests` — Difficulty Factors of Social Tests | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `core:reference:140-flattery-bribery-and-status` — Flattery, Bribery, And Status | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
+| `core:reference:140-difficulty-factors-of-social-tests` — Difficulty Factors of Social Tests | referenceEntries | deferred | p. 140 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:140-flattery-bribery-and-status` — Flattery, Bribery, And Status | referenceEntries | deferred | p. 140 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:141-example-difficulties-of-common-social-actions` — Example Difficulties Of Common Social Actions | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `core:reference:141-social-test-difficulty-factors` — Social Test Difficulty Factors | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `core:reference:142-example-outcomes` — Worked example — Charm | referenceEntries | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
-| `core:reference:142-example-outcomes-2` — Worked example — Intimidate | referenceEntries | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
-| `core:reference:143-example-outcomes` — Worked example — Charm | referenceEntries | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
-| `core:reference:143-success-and-consequence` — Success And Consequence | referenceEntries | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
-| `core:reference:144-example-outcomes` — Worked example — Hard (-2 SL) Gossip | referenceEntries | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
-| `core:reference:145-example-outcomes` — Worked example — Hard (-2 SL) Charm | referenceEntries | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
+| `core:reference:142-example-outcomes` — Worked example — Charm | referenceEntries | deferred | p. 142 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:142-example-outcomes-2` — Worked example — Intimidate | referenceEntries | deferred | p. 142 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:143-example-outcomes` — Worked example — Charm | referenceEntries | deferred | p. 143 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:143-success-and-consequence` — Success And Consequence | referenceEntries | deferred | p. 143 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:144-example-outcomes` — Worked example — Hard (-2 SL) Gossip | referenceEntries | deferred | p. 144 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:145-example-outcomes` — Worked example — Hard (-2 SL) Charm | referenceEntries | deferred | p. 145 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:145-stinking-drunk` — Stinking Drunk | referenceEntries | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
 | `core:reference:146-common-means-of-investigation-and-research` — Common Means Of Investigation And Research | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
-| `core:reference:146-hiding-clues` — Hiding Clues | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
+| `core:reference:146-hiding-clues` — Hiding Clues | referenceEntries | deferred | p. 146 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:147-common-means-of-investigation-and-research` — Common Means Of Investigation And Research | referenceEntries | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
 | `core:reference:147-example-difficulties-of-common-investigative-tasks` — Example Difficulties Of Common Investigative Tasks | referenceEntries | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
-| `core:reference:148-battle-tongue` — Battle Tongue | referenceEntries | reference-only | p. 148 | Sourced book rule reference; no live-play automation. |
+| `core:reference:148-battle-tongue` — Battle Tongue | referenceEntries | deferred | p. 148 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:148-common-lore-specialisations` — Common Lore Specialisations | referenceEntries | reference-only | p. 148 | Sourced book rule reference; no live-play automation. |
 | `core:reference:149-family` — Languages and language families | referenceEntries | reference-only | p. 149 | Sourced book rule reference; no live-play automation. |
-| `core:reference:150-example-outcomes` — Worked example — Average (+2 SL) Gossip | referenceEntries | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:reference:150-good-roleplay` — Good Roleplay | referenceEntries | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:reference:151-example-outcomes` — Worked example — Challenging (+0 SL) Perception | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
+| `core:reference:150-example-outcomes` — Worked example — Average (+2 SL) Gossip | referenceEntries | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:150-good-roleplay` — Good Roleplay | referenceEntries | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:151-example-outcomes` — Worked example — Challenging (+0 SL) Perception | referenceEntries | deferred | p. 151 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:152-example-navigation-difficulties` — Example Navigation Difficulties | referenceEntries | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
-| `core:reference:153-cunning-crafts` — Cunning Crafts | referenceEntries | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
+| `core:reference:153-cunning-crafts` — Cunning Crafts | referenceEntries | deferred | p. 153 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:153-locating-herbs-for-remedies` — Locating Herbs For Remedies | referenceEntries | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
 | `core:reference:154-remedy-creation-difficulty` — Remedy Creation Difficulty | referenceEntries | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
 | `core:reference:154-remedy-effectiveness` — Remedy Effectiveness | referenceEntries | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
 | `core:reference:155-selection-of-poisons` — Selection Of Poisons | referenceEntries | reference-only | p. 155 | Sourced book rule reference; no live-play automation. |
 | `core:reference:156-example-difficulties-of-common-movement-actions` — Example Difficulties Of Common Movement Actions | referenceEntries | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
-| `core:reference:156-getting-around` — Getting Around | referenceEntries | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
-| `core:reference:157-how-far-though` — How Far, Though? | referenceEntries | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
+| `core:reference:156-getting-around` — Getting Around | referenceEntries | deferred | p. 156 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:157-how-far-though` — How Far, Though? | referenceEntries | deferred | p. 157 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:158-pursuit-factors` — Pursuit Factors | referenceEntries | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
 | `core:reference:159-obstacle-table` — Obstacle Table | referenceEntries | reference-only | p. 159 | Sourced book rule reference; no live-play automation. |
-| `core:reference:161-rounds-outside-combat` — Rounds Outside Combat | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
+| `core:reference:161-rounds-outside-combat` — Rounds Outside Combat | referenceEntries | deferred | p. 161 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:163-movement-table` — Movement Table | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:reference:164-attacking` — Attacking | referenceEntries | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:reference:164-damaging-weapons-and-armour` — Damaging Weapons And Armour | referenceEntries | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `core:reference:164-attacking` — Attacking | referenceEntries | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:164-damaging-weapons-and-armour` — Damaging Weapons And Armour | referenceEntries | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:164-hit-locations` — Hit Locations | referenceEntries | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:reference:165-critical-hits-and-fumbles` — Critical Hits and Fumbles | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `core:reference:165-critical-hits-and-fumbles` — Critical Hits and Fumbles | referenceEntries | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:165-misfire-table` — Misfire Table | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
 | `core:reference:165-oops-table` — Oops! Table | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
 | `core:reference:166-melee-attack-modifiers` — Melee Attack Modifiers | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
 | `core:reference:166-ranged-attack-modifiers-add-all-that-apply` — Ranged Attack Modifiers - Add All That Apply | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
 | `core:reference:168-scatter` — Scatter | referenceEntries | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:reference:170-the-heal-skill-and-bleeding-conditions` — The Heal Skill And Bleeding Conditions | referenceEntries | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `core:reference:171-healing-animals` — Healing Animals | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `core:reference:171-open-wounds` — Open Wounds | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `core:reference:171-pulling-your-blows` — Pulling Your Blows | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
+| `core:reference:170-the-heal-skill-and-bleeding-conditions` — The Heal Skill And Bleeding Conditions | referenceEntries | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:171-healing-animals` — Healing Animals | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:171-open-wounds` — Open Wounds | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:171-pulling-your-blows` — Pulling Your Blows | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:173-head-critical-wounds` — Head Critical Wounds | referenceEntries | reference-only | p. 173 | Sourced book rule reference; no live-play automation. |
 | `core:reference:174-arm-critical-wounds` — Arm Critical Wounds | referenceEntries | reference-only | p. 174 | Sourced book rule reference; no live-play automation. |
 | `core:reference:175-body-critical-wounds` — Body Critical Wounds | referenceEntries | reference-only | p. 175 | Sourced book rule reference; no live-play automation. |
-| `core:reference:176-injuries` — Injuries | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
+| `core:reference:176-injuries` — Injuries | referenceEntries | deferred | p. 176 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:176-leg-critical-wounds` — Leg Critical Wounds | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
-| `core:reference:177-characteristic-loss` — Characteristic Loss | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
-| `core:reference:177-healing-times-and-downtime` — Healing Times And Downtime | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
-| `core:reference:178-impressive-scars` — Impressive Scars | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:177-characteristic-loss` — Characteristic Loss | referenceEntries | deferred | p. 177 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:177-healing-times-and-downtime` — Healing Times And Downtime | referenceEntries | deferred | p. 177 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:178-impressive-scars` — Impressive Scars | referenceEntries | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:182-effect-of-pre-prepared-cures` — Effect Of Pre-Prepared Cures | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `core:reference:183-creature-size-and-dosage` — Creature Size And Dosage | referenceEntries | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
-| `core:reference:184-conditions-and-fortune` — Conditions And Fortune | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
-| `core:reference:184-multiple-conditions` — Multiple Conditions | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
+| `core:reference:184-conditions-and-fortune` — Conditions And Fortune | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:184-multiple-conditions` — Multiple Conditions | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:186-strength-of-materials` — Strength Of Materials | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
 | `core:reference:189-mental-corruption-table` — Mental Corruption Table | referenceEntries | reference-only | p. 189 | Sourced book rule reference; no live-play automation. |
 | `core:reference:189-physical-corruption-table` — Physical Corruption Table | referenceEntries | reference-only | p. 189 | Sourced book rule reference; no live-play automation. |
-| `core:reference:190-during-downtime` — During Downtime | referenceEntries | reference-only | p. 190 | Sourced book rule reference; no live-play automation. |
+| `core:reference:190-during-downtime` — During Downtime | referenceEntries | deferred | p. 190 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:191-advancement-xp-costs` — Advancement Xp Costs | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `core:reference:192-regional-events` — Regional Events Table | referenceEntries | reference-only | p. 192–193 | Sourced book rule reference; no live-play automation. |
 | `core:reference:194-character-events` — Character Events Table | referenceEntries | reference-only | p. 194–195 | Sourced book rule reference; no live-play automation. |
-| `core:reference:195-money-to-burn` — Money To Burn | referenceEntries | reference-only | p. 195 | Sourced book rule reference; no live-play automation. |
+| `core:reference:195-money-to-burn` — Money To Burn | referenceEntries | deferred | p. 195 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:196-advance-career` — Advance Career | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
-| `core:reference:196-burdens-of-power` — Burdens of Power | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
+| `core:reference:196-burdens-of-power` — Burdens of Power | referenceEntries | deferred | p. 196 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:196-common-endeavours` — Common Endeavours | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
-| `core:reference:196-duties-responsibilities` — Duties & Responsibilities | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
-| `core:reference:196-elves-and-yenlui` — Elves and Yenlui | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
+| `core:reference:196-duties-responsibilities` — Duties & Responsibilities | referenceEntries | deferred | p. 196 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:196-elves-and-yenlui` — Elves and Yenlui | referenceEntries | deferred | p. 196 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:196-endeavours` — Endeavours | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
 | `core:reference:197-banking` — Banking | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
 | `core:reference:197-change-career` — Change Career | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
@@ -188,127 +188,127 @@ Pack `core` · version 1.1.7
 | `core:reference:198-crafting` — Crafting | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
 | `core:reference:198-crafting-difficulty` — Crafting Difficulty | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
 | `core:reference:198-crafting-sl-required` — Crafting Sl Required | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
-| `core:reference:198-custom-gear` — Custom Gear | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
+| `core:reference:198-custom-gear` — Custom Gear | referenceEntries | deferred | p. 198 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:198-foment-dissent` — Foment Dissent | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
 | `core:reference:199-earned-income` — Earned Income | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
-| `core:reference:199-hardly-working` — Hardly Working | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
+| `core:reference:199-hardly-working` — Hardly Working | referenceEntries | deferred | p. 199 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:199-income` — Income | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
-| `core:reference:199-invent` — Invent! | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
-| `core:reference:200-do-me-a-favour` — Do Me A Favour! | referenceEntries | reference-only | p. 200 | Sourced book rule reference; no live-play automation. |
+| `core:reference:199-invent` — Invent! | referenceEntries | deferred | p. 199 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:200-do-me-a-favour` — Do Me A Favour! | referenceEntries | deferred | p. 200 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:200-research-lore` — Research Lore | referenceEntries | reference-only | p. 200 | Sourced book rule reference; no live-play automation. |
 | `core:reference:200-the-latest-news` — The Latest News | referenceEntries | reference-only | p. 200 | Sourced book rule reference; no live-play automation. |
 | `core:reference:201-study-a-mark` — Study a Mark | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
 | `core:reference:201-training` — Training | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
 | `core:reference:201-unusual-learning` — Unusual Learning | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
-| `core:reference:205-strictures` — Manann — Strictures | referenceEntries | reference-only | p. 205 | Sourced book rule reference; no live-play automation. |
-| `core:reference:206-strictures` — Morr — Strictures | referenceEntries | reference-only | p. 206 | Sourced book rule reference; no live-play automation. |
-| `core:reference:207-strictures` — Myrmidia — Strictures | referenceEntries | reference-only | p. 207 | Sourced book rule reference; no live-play automation. |
-| `core:reference:208-strictures` — Ranald — Strictures | referenceEntries | reference-only | p. 208 | Sourced book rule reference; no live-play automation. |
-| `core:reference:209-strictures` — Rhya — Strictures | referenceEntries | reference-only | p. 209 | Sourced book rule reference; no live-play automation. |
-| `core:reference:210-strictures` — Shallya — Strictures | referenceEntries | reference-only | p. 210 | Sourced book rule reference; no live-play automation. |
-| `core:reference:211-strictures` — Sigmar — Strictures | referenceEntries | reference-only | p. 211 | Sourced book rule reference; no live-play automation. |
-| `core:reference:212-strictures` — Taal — Strictures | referenceEntries | reference-only | p. 212 | Sourced book rule reference; no live-play automation. |
-| `core:reference:213-strictures` — Ulric — Strictures | referenceEntries | reference-only | p. 213 | Sourced book rule reference; no live-play automation. |
-| `core:reference:214-strictures` — Verena — Strictures | referenceEntries | reference-only | p. 214 | Sourced book rule reference; no live-play automation. |
+| `core:reference:205-strictures` — Manann — Strictures | referenceEntries | deferred | p. 205 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:206-strictures` — Morr — Strictures | referenceEntries | deferred | p. 206 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:207-strictures` — Myrmidia — Strictures | referenceEntries | deferred | p. 207 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:208-strictures` — Ranald — Strictures | referenceEntries | deferred | p. 208 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:209-strictures` — Rhya — Strictures | referenceEntries | deferred | p. 209 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:210-strictures` — Shallya — Strictures | referenceEntries | deferred | p. 210 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:211-strictures` — Sigmar — Strictures | referenceEntries | deferred | p. 211 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:212-strictures` — Taal — Strictures | referenceEntries | deferred | p. 212 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:213-strictures` — Ulric — Strictures | referenceEntries | deferred | p. 213 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:214-strictures` — Verena — Strictures | referenceEntries | deferred | p. 214 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:218-wrath-of-the-gods` — Wrath of the Gods Table | referenceEntries | reference-only | p. 218–219 | Sourced book rule reference; no live-play automation. |
-| `core:reference:220-blessings` — Blessings | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
+| `core:reference:220-blessings` — Blessings | referenceEntries | deferred | p. 220 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:220-blessings-by-cult` — Blessings By Cult | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
-| `core:reference:220-divine-manifestations` — Divine Manifestations | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
-| `core:reference:220-petty-concerns` — Petty Concerns | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
-| `core:reference:220-prayer-format` — Prayer Format | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
-| `core:reference:220-success-levels` — Success Levels | referenceEntries | reference-only | p. 220 | Sourced book rule reference; no live-play automation. |
-| `core:reference:222-success-levels` — Success Levels | referenceEntries | reference-only | p. 222 | Sourced book rule reference; no live-play automation. |
-| `core:reference:222-touch-miracles-in-combat` — Touch Miracles in Combat | referenceEntries | reference-only | p. 222 | Sourced book rule reference; no live-play automation. |
-| `core:reference:23-1-species` — Choosing a Species | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
+| `core:reference:220-divine-manifestations` — Divine Manifestations | referenceEntries | deferred | p. 220 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:220-petty-concerns` — Petty Concerns | referenceEntries | deferred | p. 220 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:220-prayer-format` — Prayer Format | referenceEntries | deferred | p. 220 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:220-success-levels` — Success Levels | referenceEntries | deferred | p. 220 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:222-success-levels` — Success Levels | referenceEntries | deferred | p. 222 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:222-touch-miracles-in-combat` — Touch Miracles in Combat | referenceEntries | deferred | p. 222 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:23-1-species` — Choosing a Species | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:23-random-talents` — Random Talents Table | referenceEntries | reference-only | p. 23–25 | Sourced book rule reference; no live-play automation. |
 | `core:reference:236-overcast-table` — Overcast Table | referenceEntries | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
 | `core:reference:236-types-of-magic-in-the-old-world` — Types Of Magic In The Old World | referenceEntries | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
 | `core:reference:238-minor-miscast-table` — Minor Miscast Table | referenceEntries | reference-only | p. 238 | Sourced book rule reference; no live-play automation. |
 | `core:reference:239-major-miscast-table` — Major Miscast Table | referenceEntries | reference-only | p. 239 | Sourced book rule reference; no live-play automation. |
-| `core:reference:242-arcane-spells` — Arcane Spells | referenceEntries | reference-only | p. 242 | Sourced book rule reference; no live-play automation. |
-| `core:reference:247-lore-of-death` — Lore of Death | referenceEntries | reference-only | p. 247 | Sourced book rule reference; no live-play automation. |
-| `core:reference:248-lore-of-fire` — Lore of Fire | referenceEntries | reference-only | p. 248 | Sourced book rule reference; no live-play automation. |
-| `core:reference:249-lore-of-heavens` — Lore of Heavens | referenceEntries | reference-only | p. 249 | Sourced book rule reference; no live-play automation. |
-| `core:reference:250-lore-of-life` — Lore of Life | referenceEntries | reference-only | p. 250 | Sourced book rule reference; no live-play automation. |
-| `core:reference:250-mystics` — Mystics | referenceEntries | reference-only | p. 250 | Sourced book rule reference; no live-play automation. |
-| `core:reference:251-lore-of-light` — Lore of Light | referenceEntries | reference-only | p. 251 | Sourced book rule reference; no live-play automation. |
-| `core:reference:252-lore-of-metal` — Lore of Metal | referenceEntries | reference-only | p. 252 | Sourced book rule reference; no live-play automation. |
-| `core:reference:254-lore-of-shadows` — Lore of Shadows | referenceEntries | reference-only | p. 254 | Sourced book rule reference; no live-play automation. |
-| `core:reference:255-lore-of-hedgecraft` — Lore of Hedgecraft | referenceEntries | reference-only | p. 255 | Sourced book rule reference; no live-play automation. |
-| `core:reference:256-lore-of-witchcraft` — Lore of Witchcraft | referenceEntries | reference-only | p. 256 | Sourced book rule reference; no live-play automation. |
-| `core:reference:259-lore-of-nurgle` — Lore of Nurgle | referenceEntries | reference-only | p. 259 | Sourced book rule reference; no live-play automation. |
-| `core:reference:260-lore-of-slaanesh` — Lore of Slaanesh | referenceEntries | reference-only | p. 260 | Sourced book rule reference; no live-play automation. |
-| `core:reference:260-lore-of-tzeentch` — Lore of Tzeentch | referenceEntries | reference-only | p. 260 | Sourced book rule reference; no live-play automation. |
-| `core:reference:266-the-gms-test-toolkit` — The Gm’S Test Toolkit | referenceEntries | reference-only | p. 266 | Sourced book rule reference; no live-play automation. |
-| `core:reference:267-awarding-xp` — Awarding XP | referenceEntries | reference-only | p. 267 | Sourced book rule reference; no live-play automation. |
+| `core:reference:242-arcane-spells` — Arcane Spells | referenceEntries | deferred | p. 242 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:247-lore-of-death` — Lore of Death | referenceEntries | deferred | p. 247 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:248-lore-of-fire` — Lore of Fire | referenceEntries | deferred | p. 248 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:249-lore-of-heavens` — Lore of Heavens | referenceEntries | deferred | p. 249 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:250-lore-of-life` — Lore of Life | referenceEntries | deferred | p. 250 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:250-mystics` — Mystics | referenceEntries | deferred | p. 250 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:251-lore-of-light` — Lore of Light | referenceEntries | deferred | p. 251 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:252-lore-of-metal` — Lore of Metal | referenceEntries | deferred | p. 252 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:254-lore-of-shadows` — Lore of Shadows | referenceEntries | deferred | p. 254 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:255-lore-of-hedgecraft` — Lore of Hedgecraft | referenceEntries | deferred | p. 255 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:256-lore-of-witchcraft` — Lore of Witchcraft | referenceEntries | deferred | p. 256 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:259-lore-of-nurgle` — Lore of Nurgle | referenceEntries | deferred | p. 259 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:260-lore-of-slaanesh` — Lore of Slaanesh | referenceEntries | deferred | p. 260 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:260-lore-of-tzeentch` — Lore of Tzeentch | referenceEntries | deferred | p. 260 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:266-the-gms-test-toolkit` — The Gm’S Test Toolkit | referenceEntries | deferred | p. 266 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:267-awarding-xp` — Awarding XP | referenceEntries | deferred | p. 267 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:268-travelling-by-road` — Travelling By Road | referenceEntries | reference-only | p. 268 | Sourced book rule reference; no live-play automation. |
-| `core:reference:269-travel-times` — Travel Times | referenceEntries | reference-only | p. 269 | Sourced book rule reference; no live-play automation. |
+| `core:reference:269-travel-times` — Travel Times | referenceEntries | deferred | p. 269 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:269-travelling-by-river` — Travelling By River | referenceEntries | reference-only | p. 269 | Sourced book rule reference; no live-play automation. |
-| `core:reference:296-consumer-guide` — Consumer Guide | referenceEntries | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
+| `core:reference:296-consumer-guide` — Consumer Guide | referenceEntries | deferred | p. 296 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:297-availability-2` — Availability | referenceEntries | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
 | `core:reference:299-encumbrance-examples` — Encumbrance Examples | referenceEntries | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
 | `core:reference:299-overburdened-examples` — Overburdened Examples | referenceEntries | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:reference:300-weapons` — Weapons | referenceEntries | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
+| `core:reference:300-weapons` — Weapons | referenceEntries | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:301-melee-weapons` — Melee Weapons | referenceEntries | reference-only | p. 301 | Sourced book rule reference; no live-play automation. |
 | `core:reference:302-ammunition` — Ammunition | referenceEntries | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
-| `core:reference:302-calculating-range-bands` — Calculating Range Bands | referenceEntries | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
+| `core:reference:302-calculating-range-bands` — Calculating Range Bands | referenceEntries | deferred | p. 302 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:302-example-weapon-ranges` — Example Weapon Ranges | referenceEntries | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
 | `core:reference:303-ranged-weapons` — Ranged Weapons | referenceEntries | reference-only | p. 303 | Sourced book rule reference; no live-play automation. |
 | `core:reference:307-armour` — Armour | referenceEntries | reference-only | p. 307 | Sourced book rule reference; no live-play automation. |
 | `core:reference:307-quick-armour` — Quick Armour | referenceEntries | reference-only | p. 307 | Sourced book rule reference; no live-play automation. |
 | `core:reference:308-clothing-and-accessories-2` — Clothing And Accessories | referenceEntries | reference-only | p. 308–309 | Sourced book rule reference; no live-play automation. |
-| `core:reference:308-packs-and-containers` — Packs And Containers | referenceEntries | reference-only | p. 308 | Sourced book rule reference; no live-play automation. |
+| `core:reference:308-packs-and-containers` — Packs And Containers | referenceEntries | deferred | p. 308 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:308-packs-and-containers-2` — Packs And Containers | referenceEntries | reference-only | p. 308 | Sourced book rule reference; no live-play automation. |
-| `core:reference:309-food-drink-and-lodging` — Food, Drink, And Lodging | referenceEntries | reference-only | p. 309 | Sourced book rule reference; no live-play automation. |
+| `core:reference:309-food-drink-and-lodging` — Food, Drink, And Lodging | referenceEntries | deferred | p. 309 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:309-food-drink-and-lodging-2` — Food, Drink, And Lodging | referenceEntries | reference-only | p. 309 | Sourced book rule reference; no live-play automation. |
-| `core:reference:310-guilders` — Guilders | referenceEntries | reference-only | p. 310 | Sourced book rule reference; no live-play automation. |
-| `core:reference:310-tools-and-kits` — Tools And Kits | referenceEntries | reference-only | p. 310 | Sourced book rule reference; no live-play automation. |
+| `core:reference:310-guilders` — Guilders | referenceEntries | deferred | p. 310 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:310-tools-and-kits` — Tools And Kits | referenceEntries | deferred | p. 310 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:310-tools-and-kits-2` — Tools And Kits | referenceEntries | reference-only | p. 310 | Sourced book rule reference; no live-play automation. |
 | `core:reference:311-books-and-documents-2` — Books And Documents | referenceEntries | reference-only | p. 311 | Sourced book rule reference; no live-play automation. |
 | `core:reference:312-animals-and-vehicles-2` — Animals And Vehicles | referenceEntries | reference-only | p. 312–313 | Sourced book rule reference; no live-play automation. |
-| `core:reference:312-trade-tools-and-workshops` — Trade Tools And Workshops | referenceEntries | reference-only | p. 312 | Sourced book rule reference; no live-play automation. |
+| `core:reference:312-trade-tools-and-workshops` — Trade Tools And Workshops | referenceEntries | deferred | p. 312 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:312-trade-tools-and-workshops-2` — Trade Tools And Workshops | referenceEntries | reference-only | p. 312 | Sourced book rule reference; no live-play automation. |
 | `core:reference:313-poisons-2` — Poisons | referenceEntries | reference-only | p. 313 | Sourced book rule reference; no live-play automation. |
-| `core:reference:313-travel-prices` — Travel Prices | referenceEntries | reference-only | p. 313 | Sourced book rule reference; no live-play automation. |
+| `core:reference:313-travel-prices` — Travel Prices | referenceEntries | deferred | p. 313 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:313-travel-prices-2` — Travel Prices | referenceEntries | reference-only | p. 313 | Sourced book rule reference; no live-play automation. |
 | `core:reference:314-herbs-and-remedies-2` — Herbs And Remedies | referenceEntries | reference-only | p. 314 | Sourced book rule reference; no live-play automation. |
 | `core:reference:314-quack-remedies` — Quack Remedies | referenceEntries | reference-only | p. 314 | Sourced book rule reference; no live-play automation. |
 | `core:reference:315-magical-items-2` — Magical Items | referenceEntries | reference-only | p. 315 | Sourced book rule reference; no live-play automation. |
 | `core:reference:315-prosthetics-2` — Prosthetics | referenceEntries | reference-only | p. 315 | Sourced book rule reference; no live-play automation. |
 | `core:reference:316-miscellaneous-trappings-2` — Miscellaneous Trappings | referenceEntries | reference-only | p. 316 | Sourced book rule reference; no live-play automation. |
-| `core:reference:317-henchmen` — Henchmen | referenceEntries | reference-only | p. 317 | Sourced book rule reference; no live-play automation. |
+| `core:reference:317-henchmen` — Henchmen | referenceEntries | deferred | p. 317 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:317-hirelings` — Hirelings | referenceEntries | reference-only | p. 317 | Sourced book rule reference; no live-play automation. |
-| `core:reference:318-creature-characteristics` — Creature Characteristics | referenceEntries | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
-| `core:reference:318-creature-hit-locations` — Creature Hit Locations | referenceEntries | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
-| `core:reference:36-2-class-and-career` — Choosing Class and Career | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
-| `core:reference:36-career-level` — Career Level | referenceEntries | reference-only | p. 36–37 | Sourced book rule reference; no live-play automation. |
+| `core:reference:318-creature-characteristics` — Creature Characteristics | referenceEntries | deferred | p. 318 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:318-creature-hit-locations` — Creature Hit Locations | referenceEntries | deferred | p. 318 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:36-2-class-and-career` — Choosing Class and Career | referenceEntries | deferred | p. 36 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:36-career-level` — Career Level | referenceEntries | deferred | p. 36–37 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:36-random-class-and-career-table` — Random Class and Career Table | referenceEntries | reference-only | p. 36–37 | Sourced book rule reference; no live-play automation. |
-| `core:reference:361-adjusting-a-creatures-size` — Adjusting A Creature’S Size | referenceEntries | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
-| `core:reference:361-stomp` — Stomp | referenceEntries | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
+| `core:reference:361-adjusting-a-creatures-size` — Adjusting A Creature’S Size | referenceEntries | deferred | p. 361 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:361-stomp` — Stomp | referenceEntries | deferred | p. 361 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:361-wounds` — Wounds | referenceEntries | reference-only | p. 361 | Sourced book rule reference; no live-play automation. |
 | `core:reference:364-advancement-xp-costs` — Advancement Xp Costs | referenceEntries | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
-| `core:reference:364-advantage-and-momentum` — Advantage and Momentum | referenceEntries | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
-| `core:reference:364-creature-traits` — Creature Traits | referenceEntries | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
+| `core:reference:364-advantage-and-momentum` — Advantage and Momentum | referenceEntries | deferred | p. 364 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:364-creature-traits` — Creature Traits | referenceEntries | deferred | p. 364 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:364-difficulty-table` — Difficulty Table | referenceEntries | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
-| `core:reference:364-resilience-and-resolve` — Resilience and Resolve | referenceEntries | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
-| `core:reference:364-test-difficulty` — Test Difficulty | referenceEntries | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
-| `core:reference:38-3-characteristics` — Generating Characteristics | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `core:reference:38-4-skills` — Starting Skill Advances | referenceEntries | reference-only | p. 38–39 | Sourced book rule reference; no live-play automation. |
-| `core:reference:38-characteristic-bonuses` — Characteristic Bonuses | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
+| `core:reference:364-resilience-and-resolve` — Resilience and Resolve | referenceEntries | deferred | p. 364 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:364-test-difficulty` — Test Difficulty | referenceEntries | deferred | p. 364 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:38-3-characteristics` — Generating Characteristics | referenceEntries | deferred | p. 38 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:38-4-skills` — Starting Skill Advances | referenceEntries | deferred | p. 38–39 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:38-characteristic-bonuses` — Characteristic Bonuses | referenceEntries | deferred | p. 38 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:38-characteristic-table` — Characteristic Table | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `core:reference:39-5-talents-trappings-and-final-game-details` — Starting Talents and Trappings | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
+| `core:reference:39-5-talents-trappings-and-final-game-details` — Starting Talents and Trappings | referenceEntries | deferred | p. 39 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:39-class-trappings` — Class Trappings Table | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `core:reference:39-starting-wealth` — Starting Wealth | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `core:reference:39-types-of-skills` — Types Of Skills | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `core:reference:40-creating-a-magician-or-priest` — Creating A Magician Or Priest | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
-| `core:reference:40-maximum-encumbrance` — Starting carrying capacity | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
+| `core:reference:39-types-of-skills` — Types Of Skills | referenceEntries | deferred | p. 39 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:40-creating-a-magician-or-priest` — Creating A Magician Or Priest | referenceEntries | deferred | p. 40 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:40-maximum-encumbrance` — Starting carrying capacity | referenceEntries | deferred | p. 40 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:40-movement-distances` — Movement Distances | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
-| `core:reference:40-movement-m` — Starting Movement | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
-| `core:reference:40-oh-fickle-fate` — Oh Fickle Fate | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
-| `core:reference:40-wounds` — Starting Wounds | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
-| `core:reference:41-achieving-your-ambitions` — Achieving Your Ambitions | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `core:reference:41-choose-an-ambition` — Choose an Ambition | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `core:reference:42-party-ambition` — Party Ambition | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
+| `core:reference:40-movement-m` — Starting Movement | referenceEntries | deferred | p. 40 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:40-oh-fickle-fate` — Oh Fickle Fate | referenceEntries | deferred | p. 40 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:40-wounds` — Starting Wounds | referenceEntries | deferred | p. 40 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:41-achieving-your-ambitions` — Achieving Your Ambitions | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:41-choose-an-ambition` — Choose an Ambition | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:42-party-ambition` — Party Ambition | referenceEntries | deferred | p. 42 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:rule-reference:condition-185-ablaze` — Ablaze | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:condition-185-besmirched` — Besmirched | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:condition-185-bleeding` — Bleeding | ruleReferences | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
@@ -363,270 +363,270 @@ Pack `core` · version 1.1.7
 | `core:rule-reference:psychology-184-frenzy` — Frenzy | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:psychology-184-hatred-target` — Hatred (Target) | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:psychology-184-terror-rating` — Terror (Rating) | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-advantage-and-disadvantage` — Advantage and Disadvantage | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-automatic-success-and-failure` — Automatic Success and Failure | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-criticals-and-fumbles` — Criticals and Fumbles | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-darkness-and-tests` — Darkness and Tests | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-making-a-test` — Making a Test | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-modifiers-and-0-sl` — Modifiers and 0 SL | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-130-repeating-tests` — Repeating Tests | ruleReferences | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-131-characteristic-tests` — Characteristic Tests | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-131-difficulty-and-character-modifiers` — Difficulty and Character Modifiers | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-131-extended-tests` — Extended Tests | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-131-opposed-tests` — Opposed Tests | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-131-test-outcomes` — Test Outcomes | ruleReferences | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-132-criticals-and-fumbles` — Criticals and Fumbles | ruleReferences | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-132-getting-help` — Getting Help | ruleReferences | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-132-opposed-tests` — Opposed Tests | ruleReferences | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-133-achieving-the-impossible` — Achieving the Impossible | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-133-fate` — Fate | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-133-fate-and-fortune` — Fate and Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-133-fortune` — Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-133-replenishing-fate` — Replenishing Fate | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-133-replenishing-fortune` — Replenishing Fortune | ruleReferences | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-134-casing-the-joint` — Casing the Joint | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-134-keeping-an-eye-out` — Keeping an Eye Out | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-134-sneaking-around` — Sneaking Around | ruleReferences | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-135-gambling-and-cheating` — Gambling and Cheating | ruleReferences | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-135-silent-takedowns` — Silent Takedowns | ruleReferences | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-disarming-a-trap` — Disarming a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-picking-locks` — Picking Locks | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-setting-a-trap` — Setting a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-spotting-a-trap` — Spotting a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-136-triggering-a-trap` — Triggering a Trap | ruleReferences | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-138-forced-entry` — Forced Entry | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-138-mugging` — Mugging | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-138-picking-pockets` — Picking Pockets | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-138-secret-signs` — Secret Signs | ruleReferences | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-139-fraud-and-charlatanry` — Fraud and Charlatanry | ruleReferences | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-140-status-and-social-standing` — Status and Social Standing | ruleReferences | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-141-changing-status` — Changing Status | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-141-maintaining-status` — Maintaining Status | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-141-status-and-social-tests` — Status and Social Tests | ruleReferences | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-142-befriend-someone-useful` — Befriend Someone Useful | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-142-make-a-good-impression` — Make a Good Impression | ruleReferences | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-143-charming-others` — Charming Others | ruleReferences | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-143-intimidation-tactics` — Intimidation Tactics | ruleReferences | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-143-negotiating-a-discount` — Negotiating a Discount | ruleReferences | reference-only | p. 143 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-144-carousing` — Carousing | ruleReferences | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-144-gossip-and-rumours` — Gossip and Rumours | ruleReferences | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-145-lies-and-deception` — Lies and Deception | ruleReferences | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-145-mistaken-identity` — Mistaken Identity | ruleReferences | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-145-public-speaking` — Public Speaking | ruleReferences | reference-only | p. 145 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-148-what-you-already-know` — What You Already Know | ruleReferences | reference-only | p. 148 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-150-asking-around` — Asking Around | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-150-gossip` — Gossip | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-150-interrogation` — Interrogation | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-150-investigating` — Investigating | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-150-research` — Research | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-150-searching-a-room` — Searching a Room | ruleReferences | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-151-intuition-and-insights` — Intuition and Insights | ruleReferences | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-151-tracking` — Tracking | ruleReferences | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-152-camping` — Camping | ruleReferences | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-152-foraging` — Foraging | ruleReferences | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-152-navigation` — Navigation | ruleReferences | reference-only | p. 152 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-153-locating-ingredients` — Locating Ingredients | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-153-making-medicine` — Making Medicine | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-153-repairing-armour` — Repairing Armour | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-153-repairing-weapons` — Repairing Weapons | ruleReferences | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-154-alchemical-remedies` — Alchemical Remedies | ruleReferences | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-154-concocting-poison` — Concocting Poison | ruleReferences | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-154-herbal-remedies` — Herbal Remedies | ruleReferences | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-156-climbing` — Climbing | ruleReferences | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-156-leaping` — Leaping | ruleReferences | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-157-jumping-down` — Jumping Down | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-157-riding-a-mount` — Riding a Mount | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-157-swimming` — Swimming | ruleReferences | reference-only | p. 157 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-158-drive` — Drive | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-158-pursuit-circumstances` — Pursuit Circumstances | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-158-pursuits` — Pursuits | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-158-row` — Row | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-158-sail` — Sail | ruleReferences | reference-only | p. 158 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-159-concluding-the-chase` — Concluding the Chase | ruleReferences | reference-only | p. 159 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-159-obstacles` — Obstacles | ruleReferences | reference-only | p. 159 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-161-combat-initiative-order` — Combat Initiative Order | ruleReferences | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-161-surprise` — Surprise | ruleReferences | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-161-timing` — Timing | ruleReferences | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-162-action` — Action | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-162-free-actions` — Free Actions | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-162-move` — Move | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-162-on-the-defensive` — On the Defensive | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-162-taking-your-turn` — Taking Your Turn | ruleReferences | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-163-charging` — Charging | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-163-disengaging` — Disengaging | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-163-engaged` — Engaged | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-163-fleeing` — Fleeing | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-163-moving-in-combat` — Moving in Combat | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-163-running` — Running | ruleReferences | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-164-1-roll-to-hit` — 1: Roll to Hit | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-164-2-determine-hit-location` — 2: Determine Hit Location | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-164-3-determine-damage` — 3: Determine Damage | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-164-4-apply-damage` — 4: Apply Damage | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-164-damaged-armour` — Damaged Armour | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-164-damaged-weapons` — Damaged Weapons | ruleReferences | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-165-critical-hits` — Critical Hits | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-165-fumbles` — Fumbles | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-165-misfires` — Misfires! | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-165-oops-table` — Oops! Table | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-165-opposed-tests-and-fumbles` — Opposed Tests and Fumbles | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-165-ranged-combat` — Ranged Combat | ruleReferences | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-166-combat-modifiers` — Combat Modifiers | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-166-melee-weapon-group-special-rules` — Melee Weapon Group Special Rules | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-166-melee-weapon-reach` — Melee Weapon Reach | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-166-weapon-groups` — Weapon Groups | ruleReferences | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-aimed-shots` — Aimed Shots | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-called-shots` — Called Shots | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-grappling` — Grappling | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-helpless-targets` — Helpless Targets | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-outnumbering` — Outnumbering | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-shooting-into-a-group` — Shooting into a Group | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-shooting-into-melee` — Shooting into Melee | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-surrounded` — Surrounded | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-two-weapon-fighting` — Two-weapon Fighting | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-unarmed-combat` — Unarmed Combat | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-167-undamaging-and-unarmed-attacks` — Undamaging and Unarmed Attacks | ruleReferences | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-168-gaining-momentum` — Gaining Momentum | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-168-losing-momentum` — Losing Momentum | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-168-momentum` — Momentum | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-168-momentum-and-extra-attacks` — Momentum and Extra Attacks | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-168-mounted-combat` — Mounted Combat | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-168-scatter` — Scatter | ruleReferences | reference-only | p. 168 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-169-drowning-and-suffocation` — Drowning and Suffocation | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-169-falling` — Falling | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-169-intimidate-in-combat` — Intimidate in Combat | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-169-leadership-in-combat` — Leadership in Combat | ruleReferences | reference-only | p. 169 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-170-exposure` — Exposure | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-170-healing-wounds` — Healing Wounds | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-170-thirst-and-starvation` — Thirst and Starvation | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-170-using-the-heal-skill` — Using the Heal Skill | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-170-wounds` — Wounds | ruleReferences | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-171-critical-wounds` — Critical Wounds | ruleReferences | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-171-magic-alchemy-and-healing` — Magic, Alchemy, and Healing | ruleReferences | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-172-death` — Death | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-172-healing-critical-wounds` — Healing Critical Wounds | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-172-medical-attention` — Medical Attention | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-172-surgery` — Surgery | ruleReferences | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-176-broken-bones` — Broken Bones | ruleReferences | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-177-amputated-parts` — Amputated Parts | ruleReferences | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-177-torn-muscles` — Torn Muscles | ruleReferences | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-arm` — Arm | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-ear` — Ear | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-eye` — Eye | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-fingers` — Fingers | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-foot` — Foot | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-hand` — Hand | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-leg` — Leg | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-nose` — Nose | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-178-teeth` — Teeth | ruleReferences | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-179-black-plague` — Black Plague | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-179-blood-rot` — Blood Rot | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-179-disease-and-infection` — Disease and Infection | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-179-disease-format` — Disease Format | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-179-toes` — Toes | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-179-tongue` — Tongue | ruleReferences | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-180-bloody-flux` — Bloody Flux | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-180-festering-wound` — Festering Wound | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-180-galloping-trots` — Galloping Trots | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-180-itching-pox` — Itching Pox | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-180-packer-s-pox` — Packer’s Pox | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-180-ratte-fever` — Ratte Fever | ruleReferences | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-blight` — Blight | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-buboes` — Buboes | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-convulsions` — Convulsions | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-coughs-and-sneezes` — Coughs and Sneezes | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-fever` — Fever | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-flux` — Flux | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-sea-sickness` — Sea Sickness | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-181-weevil-cough` — Weevil Cough | ruleReferences | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-cures-and-tonics` — Cures and Tonics | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-gangrene` — Gangrene | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-infection` — Infection | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-malaise` — Malaise | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-nausea` — Nausea | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-pox` — Pox | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-182-treatment-of-disease` — Treatment of Disease | ruleReferences | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-183-dosage` — Dosage | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-183-poisons` — Poisons | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-183-psychology-test` — Psychology Test | ruleReferences | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-184-conditions` — Conditions | ruleReferences | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-187-gaining-corruption-points` — Gaining Corruption Points | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-187-minor-corruption` — Minor Corruption | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-187-moderate-corruption` — Moderate Corruption | ruleReferences | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-188-corrupting` — Corrupting | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-188-corruption-limits` — Corruption Limits | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-188-dissolution-of-body-and-mind` — Dissolution of Body and Mind | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-188-major-corruption` — Major Corruption | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-188-manifestation-time` — Manifestation Time | ruleReferences | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-191-advancement-xp-costs` — Advancement XP Costs | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-191-characteristic-advances` — Characteristic Advances | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-191-purchasing-talents` — Purchasing Talents | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-191-skill-advances` — Skill Advances | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-191-spending-xp` — Spending XP | ruleReferences | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-217-blessings-and-miracles` — Blessings and Miracles | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-217-limitations` — Limitations | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-217-sin-points` — Sin Points | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-217-the-blessed` — The Blessed | ruleReferences | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-218-sin-and-wrath` — Sin and Wrath | ruleReferences | reference-only | p. 218 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-218-wrath-of-the-gods` — Wrath of the Gods | ruleReferences | reference-only | p. 218 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-219-absolution` — Absolution | ruleReferences | reference-only | p. 219 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-219-penance` — Penance | ruleReferences | reference-only | p. 219 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-casting-test` — Casting Test | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-critical-casting` — Critical Casting | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-duration` — Duration | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-fumbled-casting` — Fumbled Casting | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-ingredients` — Ingredients | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-magic-missiles` — Magic Missiles | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-spellcasting-limitations` — Spellcasting Limitations | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-235-touch-spells-in-combat` — Touch Spells in Combat | ruleReferences | reference-only | p. 235 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-236-channelling` — Channelling | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-236-critical-and-fumbled-channelling` — Critical and Fumbled Channelling | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-236-overcasting` — Overcasting | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-236-second-sight` — Second Sight | ruleReferences | reference-only | p. 236 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-armour-repels-the-winds` — Armour Repels the Winds | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-dispelling` — Dispelling | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-dispelling-persistent-spells` — Dispelling Persistent Spells | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-grimoires` — Grimoires | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-malignant-influences` — Malignant Influences | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-memorising-spells` — Memorising Spells | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-multiple-arcane-lores` — Multiple Arcane Lores | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-237-using-warpstone` — Using Warpstone | ruleReferences | reference-only | p. 237 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-296-coin-and-status` — Coin and Status | ruleReferences | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-296-money` — Money | ruleReferences | reference-only | p. 296 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-297-availability` — Availability | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-297-clipping` — Clipping | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-297-counterfeiting` — Counterfeiting | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-297-going-to-market` — Going to Market | ruleReferences | reference-only | p. 297 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-298-bargaining-and-trading` — Bargaining and Trading | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-298-bartering` — Bartering | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-298-craftsmanship` — Craftsmanship | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-298-item-qualities` — Item Qualities | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-298-lowering-the-price` — Lowering the Price | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-298-selling` — Selling | ruleReferences | reference-only | p. 298 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-beasts-of-burden` — Beasts of Burden | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-encumbrance` — Encumbrance | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-encumbrance-and-attributes` — Encumbrance and Attributes | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-encumbrance-and-travel-fatigue` — Encumbrance and Travel Fatigue | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-item-flaws` — Item Flaws | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-overburdened` — Overburdened | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-oversized-items` — Oversized Items | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-small-items` — Small Items | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-299-worn-items` — Worn Items | ruleReferences | reference-only | p. 299 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-300-cavalry` — Cavalry | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-300-fencing` — Fencing | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-300-flail` — Flail | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-300-melee-weapon-groups` — Melee Weapon Groups | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-300-weapon-reach` — Weapon Reach | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-300-weapon-reach-and-defence` — Weapon Reach and Defence | ruleReferences | reference-only | p. 300 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-302-blackpowder-and-explosives` — Blackpowder and Explosives | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-302-crossbows-and-throwing` — Crossbows and Throwing | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-302-engineering` — Engineering | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-302-ranged-weapon-groups` — Ranged Weapon Groups | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-302-weapon-range` — Weapon Range | ruleReferences | reference-only | p. 302 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-306-armour` — Armour | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-306-armour-and-size` — Armour and Size | ruleReferences | reference-only | p. 306 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-318-creatures-and-equipment` — Creatures and Equipment | ruleReferences | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-318-customising-creatures` — Customising Creatures | ruleReferences | reference-only | p. 318 | Sourced book rule reference; no live-play automation. |
-| `core:rule-reference:rule-364-individual-characteristic-advances` — Individual Characteristic Advances | ruleReferences | reference-only | p. 364 | Sourced book rule reference; no live-play automation. |
+| `core:rule-reference:rule-130-advantage-and-disadvantage` — Advantage and Disadvantage | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-130-automatic-success-and-failure` — Automatic Success and Failure | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-130-criticals-and-fumbles` — Criticals and Fumbles | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-130-darkness-and-tests` — Darkness and Tests | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-130-making-a-test` — Making a Test | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-130-modifiers-and-0-sl` — Modifiers and 0 SL | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-130-repeating-tests` — Repeating Tests | ruleReferences | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-131-characteristic-tests` — Characteristic Tests | ruleReferences | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-131-difficulty-and-character-modifiers` — Difficulty and Character Modifiers | ruleReferences | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-131-extended-tests` — Extended Tests | ruleReferences | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-131-opposed-tests` — Opposed Tests | ruleReferences | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-131-test-outcomes` — Test Outcomes | ruleReferences | deferred | p. 131 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-132-criticals-and-fumbles` — Criticals and Fumbles | ruleReferences | deferred | p. 132 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-132-getting-help` — Getting Help | ruleReferences | deferred | p. 132 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-132-opposed-tests` — Opposed Tests | ruleReferences | deferred | p. 132 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-133-achieving-the-impossible` — Achieving the Impossible | ruleReferences | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-133-fate` — Fate | ruleReferences | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-133-fate-and-fortune` — Fate and Fortune | ruleReferences | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-133-fortune` — Fortune | ruleReferences | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-133-replenishing-fate` — Replenishing Fate | ruleReferences | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-133-replenishing-fortune` — Replenishing Fortune | ruleReferences | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-134-casing-the-joint` — Casing the Joint | ruleReferences | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-134-keeping-an-eye-out` — Keeping an Eye Out | ruleReferences | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-134-sneaking-around` — Sneaking Around | ruleReferences | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-135-gambling-and-cheating` — Gambling and Cheating | ruleReferences | deferred | p. 135 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-135-silent-takedowns` — Silent Takedowns | ruleReferences | deferred | p. 135 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-136-disarming-a-trap` — Disarming a Trap | ruleReferences | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-136-picking-locks` — Picking Locks | ruleReferences | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-136-setting-a-trap` — Setting a Trap | ruleReferences | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-136-spotting-a-trap` — Spotting a Trap | ruleReferences | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-136-triggering-a-trap` — Triggering a Trap | ruleReferences | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-138-forced-entry` — Forced Entry | ruleReferences | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-138-mugging` — Mugging | ruleReferences | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-138-picking-pockets` — Picking Pockets | ruleReferences | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-138-secret-signs` — Secret Signs | ruleReferences | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-139-fraud-and-charlatanry` — Fraud and Charlatanry | ruleReferences | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-140-status-and-social-standing` — Status and Social Standing | ruleReferences | deferred | p. 140 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-141-changing-status` — Changing Status | ruleReferences | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-141-maintaining-status` — Maintaining Status | ruleReferences | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-141-status-and-social-tests` — Status and Social Tests | ruleReferences | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-142-befriend-someone-useful` — Befriend Someone Useful | ruleReferences | deferred | p. 142 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-142-make-a-good-impression` — Make a Good Impression | ruleReferences | deferred | p. 142 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-143-charming-others` — Charming Others | ruleReferences | deferred | p. 143 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-143-intimidation-tactics` — Intimidation Tactics | ruleReferences | deferred | p. 143 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-143-negotiating-a-discount` — Negotiating a Discount | ruleReferences | deferred | p. 143 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-144-carousing` — Carousing | ruleReferences | deferred | p. 144 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-144-gossip-and-rumours` — Gossip and Rumours | ruleReferences | deferred | p. 144 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-145-lies-and-deception` — Lies and Deception | ruleReferences | deferred | p. 145 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-145-mistaken-identity` — Mistaken Identity | ruleReferences | deferred | p. 145 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-145-public-speaking` — Public Speaking | ruleReferences | deferred | p. 145 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-148-what-you-already-know` — What You Already Know | ruleReferences | deferred | p. 148 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-150-asking-around` — Asking Around | ruleReferences | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-150-gossip` — Gossip | ruleReferences | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-150-interrogation` — Interrogation | ruleReferences | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-150-investigating` — Investigating | ruleReferences | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-150-research` — Research | ruleReferences | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-150-searching-a-room` — Searching a Room | ruleReferences | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-151-intuition-and-insights` — Intuition and Insights | ruleReferences | deferred | p. 151 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-151-tracking` — Tracking | ruleReferences | deferred | p. 151 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-152-camping` — Camping | ruleReferences | deferred | p. 152 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-152-foraging` — Foraging | ruleReferences | deferred | p. 152 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-152-navigation` — Navigation | ruleReferences | deferred | p. 152 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-153-locating-ingredients` — Locating Ingredients | ruleReferences | deferred | p. 153 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-153-making-medicine` — Making Medicine | ruleReferences | deferred | p. 153 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-153-repairing-armour` — Repairing Armour | ruleReferences | deferred | p. 153 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-153-repairing-weapons` — Repairing Weapons | ruleReferences | deferred | p. 153 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-154-alchemical-remedies` — Alchemical Remedies | ruleReferences | deferred | p. 154 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-154-concocting-poison` — Concocting Poison | ruleReferences | deferred | p. 154 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-154-herbal-remedies` — Herbal Remedies | ruleReferences | deferred | p. 154 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-156-climbing` — Climbing | ruleReferences | deferred | p. 156 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-156-leaping` — Leaping | ruleReferences | deferred | p. 156 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-157-jumping-down` — Jumping Down | ruleReferences | deferred | p. 157 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-157-riding-a-mount` — Riding a Mount | ruleReferences | deferred | p. 157 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-157-swimming` — Swimming | ruleReferences | deferred | p. 157 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-158-drive` — Drive | ruleReferences | deferred | p. 158 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-158-pursuit-circumstances` — Pursuit Circumstances | ruleReferences | deferred | p. 158 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-158-pursuits` — Pursuits | ruleReferences | deferred | p. 158 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-158-row` — Row | ruleReferences | deferred | p. 158 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-158-sail` — Sail | ruleReferences | deferred | p. 158 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-159-concluding-the-chase` — Concluding the Chase | ruleReferences | deferred | p. 159 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-159-obstacles` — Obstacles | ruleReferences | deferred | p. 159 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-161-combat-initiative-order` — Combat Initiative Order | ruleReferences | deferred | p. 161 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-161-surprise` — Surprise | ruleReferences | deferred | p. 161 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-161-timing` — Timing | ruleReferences | deferred | p. 161 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-162-action` — Action | ruleReferences | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-162-free-actions` — Free Actions | ruleReferences | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-162-move` — Move | ruleReferences | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-162-on-the-defensive` — On the Defensive | ruleReferences | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-162-taking-your-turn` — Taking Your Turn | ruleReferences | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-163-charging` — Charging | ruleReferences | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-163-disengaging` — Disengaging | ruleReferences | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-163-engaged` — Engaged | ruleReferences | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-163-fleeing` — Fleeing | ruleReferences | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-163-moving-in-combat` — Moving in Combat | ruleReferences | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-163-running` — Running | ruleReferences | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-164-1-roll-to-hit` — 1: Roll to Hit | ruleReferences | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-164-2-determine-hit-location` — 2: Determine Hit Location | ruleReferences | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-164-3-determine-damage` — 3: Determine Damage | ruleReferences | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-164-4-apply-damage` — 4: Apply Damage | ruleReferences | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-164-damaged-armour` — Damaged Armour | ruleReferences | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-164-damaged-weapons` — Damaged Weapons | ruleReferences | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-165-critical-hits` — Critical Hits | ruleReferences | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-165-fumbles` — Fumbles | ruleReferences | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-165-misfires` — Misfires! | ruleReferences | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-165-oops-table` — Oops! Table | ruleReferences | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-165-opposed-tests-and-fumbles` — Opposed Tests and Fumbles | ruleReferences | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-165-ranged-combat` — Ranged Combat | ruleReferences | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-166-combat-modifiers` — Combat Modifiers | ruleReferences | deferred | p. 166 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-166-melee-weapon-group-special-rules` — Melee Weapon Group Special Rules | ruleReferences | deferred | p. 166 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-166-melee-weapon-reach` — Melee Weapon Reach | ruleReferences | deferred | p. 166 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-166-weapon-groups` — Weapon Groups | ruleReferences | deferred | p. 166 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-aimed-shots` — Aimed Shots | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-called-shots` — Called Shots | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-grappling` — Grappling | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-helpless-targets` — Helpless Targets | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-outnumbering` — Outnumbering | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-shooting-into-a-group` — Shooting into a Group | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-shooting-into-melee` — Shooting into Melee | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-surrounded` — Surrounded | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-two-weapon-fighting` — Two-weapon Fighting | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-unarmed-combat` — Unarmed Combat | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-167-undamaging-and-unarmed-attacks` — Undamaging and Unarmed Attacks | ruleReferences | deferred | p. 167 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-168-gaining-momentum` — Gaining Momentum | ruleReferences | deferred | p. 168 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-168-losing-momentum` — Losing Momentum | ruleReferences | deferred | p. 168 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-168-momentum` — Momentum | ruleReferences | deferred | p. 168 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-168-momentum-and-extra-attacks` — Momentum and Extra Attacks | ruleReferences | deferred | p. 168 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-168-mounted-combat` — Mounted Combat | ruleReferences | deferred | p. 168 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-168-scatter` — Scatter | ruleReferences | deferred | p. 168 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-169-drowning-and-suffocation` — Drowning and Suffocation | ruleReferences | deferred | p. 169 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-169-falling` — Falling | ruleReferences | deferred | p. 169 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-169-intimidate-in-combat` — Intimidate in Combat | ruleReferences | deferred | p. 169 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-169-leadership-in-combat` — Leadership in Combat | ruleReferences | deferred | p. 169 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-170-exposure` — Exposure | ruleReferences | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-170-healing-wounds` — Healing Wounds | ruleReferences | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-170-thirst-and-starvation` — Thirst and Starvation | ruleReferences | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-170-using-the-heal-skill` — Using the Heal Skill | ruleReferences | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-170-wounds` — Wounds | ruleReferences | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-171-critical-wounds` — Critical Wounds | ruleReferences | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-171-magic-alchemy-and-healing` — Magic, Alchemy, and Healing | ruleReferences | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-172-death` — Death | ruleReferences | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-172-healing-critical-wounds` — Healing Critical Wounds | ruleReferences | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-172-medical-attention` — Medical Attention | ruleReferences | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-172-surgery` — Surgery | ruleReferences | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-176-broken-bones` — Broken Bones | ruleReferences | deferred | p. 176 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-177-amputated-parts` — Amputated Parts | ruleReferences | deferred | p. 177 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-177-torn-muscles` — Torn Muscles | ruleReferences | deferred | p. 177 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-arm` — Arm | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-ear` — Ear | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-eye` — Eye | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-fingers` — Fingers | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-foot` — Foot | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-hand` — Hand | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-leg` — Leg | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-nose` — Nose | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-178-teeth` — Teeth | ruleReferences | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-179-black-plague` — Black Plague | ruleReferences | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-179-blood-rot` — Blood Rot | ruleReferences | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-179-disease-and-infection` — Disease and Infection | ruleReferences | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-179-disease-format` — Disease Format | ruleReferences | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-179-toes` — Toes | ruleReferences | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-179-tongue` — Tongue | ruleReferences | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-180-bloody-flux` — Bloody Flux | ruleReferences | deferred | p. 180 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-180-festering-wound` — Festering Wound | ruleReferences | deferred | p. 180 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-180-galloping-trots` — Galloping Trots | ruleReferences | deferred | p. 180 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-180-itching-pox` — Itching Pox | ruleReferences | deferred | p. 180 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-180-packer-s-pox` — Packer’s Pox | ruleReferences | deferred | p. 180 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-180-ratte-fever` — Ratte Fever | ruleReferences | deferred | p. 180 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-blight` — Blight | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-buboes` — Buboes | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-convulsions` — Convulsions | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-coughs-and-sneezes` — Coughs and Sneezes | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-fever` — Fever | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-flux` — Flux | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-sea-sickness` — Sea Sickness | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-181-weevil-cough` — Weevil Cough | ruleReferences | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-cures-and-tonics` — Cures and Tonics | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-gangrene` — Gangrene | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-infection` — Infection | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-malaise` — Malaise | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-nausea` — Nausea | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-pox` — Pox | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-182-treatment-of-disease` — Treatment of Disease | ruleReferences | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-183-dosage` — Dosage | ruleReferences | deferred | p. 183 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-183-poisons` — Poisons | ruleReferences | deferred | p. 183 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-183-psychology-test` — Psychology Test | ruleReferences | deferred | p. 183 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-184-conditions` — Conditions | ruleReferences | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-187-gaining-corruption-points` — Gaining Corruption Points | ruleReferences | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-187-minor-corruption` — Minor Corruption | ruleReferences | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-187-moderate-corruption` — Moderate Corruption | ruleReferences | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-188-corrupting` — Corrupting | ruleReferences | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-188-corruption-limits` — Corruption Limits | ruleReferences | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-188-dissolution-of-body-and-mind` — Dissolution of Body and Mind | ruleReferences | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-188-major-corruption` — Major Corruption | ruleReferences | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-188-manifestation-time` — Manifestation Time | ruleReferences | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-191-advancement-xp-costs` — Advancement XP Costs | ruleReferences | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-191-characteristic-advances` — Characteristic Advances | ruleReferences | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-191-purchasing-talents` — Purchasing Talents | ruleReferences | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-191-skill-advances` — Skill Advances | ruleReferences | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-191-spending-xp` — Spending XP | ruleReferences | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-217-blessings-and-miracles` — Blessings and Miracles | ruleReferences | deferred | p. 217 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-217-limitations` — Limitations | ruleReferences | deferred | p. 217 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-217-sin-points` — Sin Points | ruleReferences | deferred | p. 217 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-217-the-blessed` — The Blessed | ruleReferences | deferred | p. 217 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-218-sin-and-wrath` — Sin and Wrath | ruleReferences | deferred | p. 218 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-218-wrath-of-the-gods` — Wrath of the Gods | ruleReferences | deferred | p. 218 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-219-absolution` — Absolution | ruleReferences | deferred | p. 219 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-219-penance` — Penance | ruleReferences | deferred | p. 219 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-casting-test` — Casting Test | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-critical-casting` — Critical Casting | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-duration` — Duration | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-fumbled-casting` — Fumbled Casting | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-ingredients` — Ingredients | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-magic-missiles` — Magic Missiles | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-spellcasting-limitations` — Spellcasting Limitations | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-235-touch-spells-in-combat` — Touch Spells in Combat | ruleReferences | deferred | p. 235 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-236-channelling` — Channelling | ruleReferences | deferred | p. 236 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-236-critical-and-fumbled-channelling` — Critical and Fumbled Channelling | ruleReferences | deferred | p. 236 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-236-overcasting` — Overcasting | ruleReferences | deferred | p. 236 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-236-second-sight` — Second Sight | ruleReferences | deferred | p. 236 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-armour-repels-the-winds` — Armour Repels the Winds | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-dispelling` — Dispelling | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-dispelling-persistent-spells` — Dispelling Persistent Spells | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-grimoires` — Grimoires | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-malignant-influences` — Malignant Influences | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-memorising-spells` — Memorising Spells | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-multiple-arcane-lores` — Multiple Arcane Lores | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-237-using-warpstone` — Using Warpstone | ruleReferences | deferred | p. 237 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-296-coin-and-status` — Coin and Status | ruleReferences | deferred | p. 296 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-296-money` — Money | ruleReferences | deferred | p. 296 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-297-availability` — Availability | ruleReferences | deferred | p. 297 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-297-clipping` — Clipping | ruleReferences | deferred | p. 297 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-297-counterfeiting` — Counterfeiting | ruleReferences | deferred | p. 297 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-297-going-to-market` — Going to Market | ruleReferences | deferred | p. 297 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-298-bargaining-and-trading` — Bargaining and Trading | ruleReferences | deferred | p. 298 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-298-bartering` — Bartering | ruleReferences | deferred | p. 298 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-298-craftsmanship` — Craftsmanship | ruleReferences | deferred | p. 298 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-298-item-qualities` — Item Qualities | ruleReferences | deferred | p. 298 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-298-lowering-the-price` — Lowering the Price | ruleReferences | deferred | p. 298 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-298-selling` — Selling | ruleReferences | deferred | p. 298 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-beasts-of-burden` — Beasts of Burden | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-encumbrance` — Encumbrance | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-encumbrance-and-attributes` — Encumbrance and Attributes | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-encumbrance-and-travel-fatigue` — Encumbrance and Travel Fatigue | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-item-flaws` — Item Flaws | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-overburdened` — Overburdened | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-oversized-items` — Oversized Items | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-small-items` — Small Items | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-299-worn-items` — Worn Items | ruleReferences | deferred | p. 299 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-300-cavalry` — Cavalry | ruleReferences | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-300-fencing` — Fencing | ruleReferences | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-300-flail` — Flail | ruleReferences | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-300-melee-weapon-groups` — Melee Weapon Groups | ruleReferences | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-300-weapon-reach` — Weapon Reach | ruleReferences | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-300-weapon-reach-and-defence` — Weapon Reach and Defence | ruleReferences | deferred | p. 300 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-302-blackpowder-and-explosives` — Blackpowder and Explosives | ruleReferences | deferred | p. 302 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-302-crossbows-and-throwing` — Crossbows and Throwing | ruleReferences | deferred | p. 302 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-302-engineering` — Engineering | ruleReferences | deferred | p. 302 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-302-ranged-weapon-groups` — Ranged Weapon Groups | ruleReferences | deferred | p. 302 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-302-weapon-range` — Weapon Range | ruleReferences | deferred | p. 302 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-306-armour` — Armour | ruleReferences | deferred | p. 306 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-306-armour-and-size` — Armour and Size | ruleReferences | deferred | p. 306 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-318-creatures-and-equipment` — Creatures and Equipment | ruleReferences | deferred | p. 318 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-318-customising-creatures` — Customising Creatures | ruleReferences | deferred | p. 318 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:rule-reference:rule-364-individual-characteristic-advances` — Individual Characteristic Advances | ruleReferences | deferred | p. 364 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:rule-reference:skill-111-animal-care` — Animal Care | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:skill-111-animal-training` — Animal Training | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
 | `core:rule-reference:skill-111-art` — Art | ruleReferences | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
@@ -751,7 +751,7 @@ Pack `up-in-arms` · version 1.0.5
 | careers | 7 | 8 | 0 | 0 | 0 |
 | market | 70 | 0 | 0 | 0 | 0 |
 | origins | 0 | 3 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 128 | 0 | 9 |
+| referenceEntries | 0 | 0 | 59 | 0 | 78 |
 | spells | 8 | 1 | 0 | 0 | 0 |
 | tables | 7 | 0 | 0 | 0 | 0 |
 | talents | 0 | 1 | 0 | 0 | 0 |
@@ -782,85 +782,85 @@ Pack `up-in-arms` · version 1.0.5
 | `up-in-arms:origin:imperial-tilean` — Imperial Tilean | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `up-in-arms:origin:luccini` — Luccini (Tilea) | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `up-in-arms:origin:tilea` — Tilea | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
-| `up-in-arms:reference:101-blackpowder-weapons` — Blackpowder Weapons | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:101-blackpowder-weapons` — Blackpowder Weapons | referenceEntries | deferred | p. 101 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:101-gunpowder-weapons-table` — Gunpowder Weapons Table | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:102-blackpowder-ammunition` — Blackpowder Ammunition | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:103-blackpowder-ammunition` — Blackpowder Ammunition | referenceEntries | reference-only | p. 103–104 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:103-engineering-weapons` — Engineering Weapons | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:105-animal-care` — Animal Care | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:105-movement-and-initiative` — Movement and Initiative | referenceEntries | reference-only | p. 105–106 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:105-what-counts-as-a-mount` — What Counts as a Mount? | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:106-attacking-and-defending` — Attacking and Defending | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:106-fear-and-terror` — Fear and Terror | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:106-mount-actions` — Mount Actions | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:106-mounts-and-advantage` — Mounts and Advantage | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:103-blackpowder-ammunition` — Blackpowder Ammunition | referenceEntries | deferred | p. 103–104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:103-engineering-weapons` — Engineering Weapons | referenceEntries | deferred | p. 103 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:105-animal-care` — Animal Care | referenceEntries | deferred | p. 105 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:105-movement-and-initiative` — Movement and Initiative | referenceEntries | deferred | p. 105–106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:105-what-counts-as-a-mount` — What Counts as a Mount? | referenceEntries | deferred | p. 105 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:106-attacking-and-defending` — Attacking and Defending | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:106-fear-and-terror` — Fear and Terror | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:106-mount-actions` — Mount Actions | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:106-mounts-and-advantage` — Mounts and Advantage | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:106-the-skittish-trait` — The Skittish Trait | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:106-training` — Training | referenceEntries | reference-only | p. 106–107 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:107-attacks-on-quadrupeds-2` — Attacks On Quadrupeds | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:106-training` — Training | referenceEntries | deferred | p. 106–107 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:107-attacks-on-quadrupeds-2` — Attacks On Quadrupeds | referenceEntries | deferred | p. 107 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:107-new-trait-trained-shock-cavalry` — Trained (Shock Cavalry) | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:107-trained-magic` — Trained (Magic) | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:107-trained-war` — Trained (War) | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:108-conditions-while-mounted` — Conditions While Mounted | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:108-falling-from-a-mount` — Falling from a Mount | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:109-acquiring-a-demigrpyh` — Acquiring a Demigrpyh | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:107-trained-magic` — Trained (Magic) | referenceEntries | deferred | p. 107 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:107-trained-war` — Trained (War) | referenceEntries | deferred | p. 107 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:108-conditions-while-mounted` — Conditions While Mounted | referenceEntries | deferred | p. 108 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:108-falling-from-a-mount` — Falling from a Mount | referenceEntries | deferred | p. 108 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:109-acquiring-a-demigrpyh` — Acquiring a Demigrpyh | referenceEntries | deferred | p. 109 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:109-profile-demigryph-mount` — Demigryph Mount | referenceEntries | deferred | p. 109 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `up-in-arms:reference:110-hired-goons` — Hired Goons | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:113-hireling-profiles` — Hireling Profiles | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:110-hired-goons` — Hired Goons | referenceEntries | deferred | p. 110 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:113-hireling-profiles` — Hireling Profiles | referenceEntries | deferred | p. 113 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:113-profile-local-scout-silver-1` — Local Scout — Silver 1 | referenceEntries | deferred | p. 113 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:113-profile-seasoned-mercenary-silver-3` — Seasoned Mercenary — Silver 3 | referenceEntries | deferred | p. 113 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:114-profile-doktor-silver-5` — Doktor — Silver 5 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:114-profile-lawyer-silver-3` — Lawyer — Silver 3 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:114-profile-porter-silver-1` — Porter — Silver 1 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:114-profile-scribe-silver-2` — Scribe — Silver 2 | referenceEntries | deferred | p. 114 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `up-in-arms:reference:116-physical-quirks` — Physical Quirks | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:116-work-ethic` — Work Ethic | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:117-personality-quirks` — Personality Quirks | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:118-cover-penalty` — Cover Penalty | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:118-enc-and-encumbrance-limit` — ENC and Encumbrance Limit | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:118-sample-structures` — Sample Structures | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:116-physical-quirks` — Physical Quirks | referenceEntries | deferred | p. 116 | Hireling-only generation table for physical appearance, mutations and amputations; outside the authorised character creator/search scope and not a generic price table. |
+| `up-in-arms:reference:116-work-ethic` — Work Ethic | referenceEntries | deferred | p. 116 | Hireling-only work-contract and management generation table; outside the authorised character creator/search scope and not a generic price table. |
+| `up-in-arms:reference:117-personality-quirks` — Personality Quirks | referenceEntries | deferred | p. 117 | Hireling-only personality generation table; outside the authorised character creator/search scope and not a generic price table. |
+| `up-in-arms:reference:118-cover-penalty` — Cover Penalty | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:118-enc-and-encumbrance-limit` — ENC and Encumbrance Limit | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:118-sample-structures` — Sample Structures | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:119-common-structures-table` — Common Structures Table | referenceEntries | reference-only | p. 119 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:119-riverboats` — Riverboats | referenceEntries | reference-only | p. 119 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:119-structures` — Structures | referenceEntries | reference-only | p. 119–120 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:120-attacks-on-structures` — Attacks on Structures | referenceEntries | reference-only | p. 120 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:120-attacks-on-structures` — Attacks on Structures | referenceEntries | deferred | p. 120 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:120-structure-damage` — Structure Damage | referenceEntries | reference-only | p. 120–121 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:121-structure-critical-damage` — Structure Critical Damage | referenceEntries | reference-only | p. 121 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:121-structure-critical-hits` — Structure Critical Hits | referenceEntries | reference-only | p. 121 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:122-repairing-structures` — Repairing Structures | referenceEntries | reference-only | p. 122 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:122-siege-weapons` — Siege Weapons | referenceEntries | reference-only | p. 122–123 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:121-structure-critical-hits` — Structure Critical Hits | referenceEntries | deferred | p. 121 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:122-repairing-structures` — Repairing Structures | referenceEntries | deferred | p. 122 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:122-siege-weapons` — Siege Weapons | referenceEntries | deferred | p. 122–123 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:123-siege-weapons` — Siege Weapons Table | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:124-siege-ammunition` — Siege Ammunition | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:125-crewed` — Crewed | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:126-salvo` — Salvo | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:126-salvo-artillery-misfire-table` — Salvo Artillery Misfire Table | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:127-breaking-from-combat` — Breaking from Combat | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:127-pursuits` — Pursuits | referenceEntries | reference-only | p. 127–128 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:128-complex-pursuits` — Complex Pursuits | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:127-breaking-from-combat` — Breaking from Combat | referenceEntries | deferred | p. 127 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:127-pursuits` — Pursuits | referenceEntries | deferred | p. 127–128 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:128-complex-pursuits` — Complex Pursuits | referenceEntries | deferred | p. 128 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:129-character-progress-table` — Character Progress Table | referenceEntries | reference-only | p. 129 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:129-impeded-movement` — Impeded Movement | referenceEntries | reference-only | p. 129 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:130-creating-obstacles` — Creating Obstacles | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:130-exhaustion` — Exhaustion | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:130-obstacles` — Obstacles | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:129-impeded-movement` — Impeded Movement | referenceEntries | deferred | p. 129 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:130-creating-obstacles` — Creating Obstacles | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:130-exhaustion` — Exhaustion | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:130-obstacles` — Obstacles | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:131-obstacles-table` — Obstacles Table | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:132-exhaustion-table` — Exhaustion Table | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:132-simple-vs-complex-pursuits` — Simple vs Complex Pursuits | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:133-gaining-advantage` — Gaining Advantage | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:133-group-advantage` — Group Advantage | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:133-gaining-advantage` — Gaining Advantage | referenceEntries | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:133-group-advantage` — Group Advantage | referenceEntries | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:134-benefits-of-advantage` — Benefits Of Advantage | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:134-losing-advantage` — Losing Advantage | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:134-losing-advantage` — Losing Advantage | referenceEntries | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:135-initial-advantage` — Initial Advantage | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:135-seeding-the-advantage-pools` — Seeding the Advantage Pools | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:135-unstable` — Unstable | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:136-altered-actions-in-combat` — Altered Actions in Combat | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:135-seeding-the-advantage-pools` — Seeding the Advantage Pools | referenceEntries | deferred | p. 135 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:135-unstable` — Unstable | referenceEntries | deferred | p. 135 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:136-altered-actions-in-combat` — Altered Actions in Combat | referenceEntries | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:137-fanmariss-perfect-shot` — Fanmaris’s Perfect Shot | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:137-the-leitdorf-defence` — The Leitdorf Defence | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:137-warrior-endeavours` — Warrior Endeavours | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:138-alcatini-method` — Alcatini Method | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:138-count-punchausens-narrative-auction` — Count Punchausen’s Narrative Auction | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:138-the-quartermaster-shuffle` — The Quartermaster Shuffle | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:139-job-generator` — Job Generator | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:139-location-table` — Location Table | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:139-objective-table` — Objective Table | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:139-personality-table` — Personality Table | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:139-job-generator` — Job Generator | referenceEntries | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:139-location-table` — Location Table | referenceEntries | deferred | p. 139 | Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope. |
+| `up-in-arms:reference:139-objective-table` — Objective Table | referenceEntries | deferred | p. 139 | Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope. |
+| `up-in-arms:reference:139-personality-table` — Personality Table | referenceEntries | deferred | p. 139 | Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope. |
 | `up-in-arms:reference:140-beat-blade` — Beat Blade | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:140-distract` — Distract | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:140-drilled` — Drilled | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
@@ -874,48 +874,48 @@ Pack `up-in-arms` · version 1.0.5
 | `up-in-arms:reference:141-strike-to-injure` — Strike to Injure | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:29-profile-destrier-heavy-warhorse` — Destrier — Heavy Warhorse | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `up-in-arms:reference:29-profile-riding-horse` — Riding Horse | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `up-in-arms:reference:80-approach-to-injury` — Approach To Injury | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:80-critical-wounds` — Critical Wounds | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:80-inflicting-a-critical-hit-on-an-opponent-with-wounds` — Inflicting a Critical Hit on an Opponent with Wounds | referenceEntries | reference-only | p. 80–81 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:80-updates-to-the-bleeding-condition` — Updates To The Bleeding Condition | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:80-wounds` — Wounds | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:81-additional-wound-loss-from-critical-damage` — Additional Wound Loss from Critical Damage | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:81-inflicting-a-critical-hit-on-an-opponent-with-0-wounds` — Inflicting a Critical Hit on an Opponent with 0 Wounds | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:82-death` — Death | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:82-options-sudden-death` — Options: Sudden Death | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:82-pulling-your-blows` — Pulling Your Blows | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:82-trivial-injuries` — Trivial Injuries | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:80-approach-to-injury` — Approach To Injury | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:80-critical-wounds` — Critical Wounds | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:80-inflicting-a-critical-hit-on-an-opponent-with-wounds` — Inflicting a Critical Hit on an Opponent with Wounds | referenceEntries | deferred | p. 80–81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:80-updates-to-the-bleeding-condition` — Updates To The Bleeding Condition | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:80-wounds` — Wounds | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:81-additional-wound-loss-from-critical-damage` — Additional Wound Loss from Critical Damage | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:81-inflicting-a-critical-hit-on-an-opponent-with-0-wounds` — Inflicting a Critical Hit on an Opponent with 0 Wounds | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:82-death` — Death | referenceEntries | deferred | p. 82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:82-options-sudden-death` — Options: Sudden Death | referenceEntries | deferred | p. 82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:82-pulling-your-blows` — Pulling Your Blows | referenceEntries | deferred | p. 82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:82-trivial-injuries` — Trivial Injuries | referenceEntries | deferred | p. 82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:83-head-critical-wounds` — Head Critical Wounds | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:84-arm-critical-wounds` — Arm Critical Wounds | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:85-body-critical-wounds` — Body Critical Wounds | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:86-leg-critical-wounds` — Leg Critical Wounds | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:87-a-soldiers-burden` — A Soldier’S Burden | referenceEntries | reference-only | p. 87–88 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:87-a-soldiers-burden` — A Soldier’S Burden | referenceEntries | deferred | p. 87–88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:88-equipment` — Equipment | referenceEntries | reference-only | p. 88–89 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:89-new-qualities-and-flaws` — New Qualities and Flaws | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:89-new-qualities-and-flaws` — New Qualities and Flaws | referenceEntries | deferred | p. 89 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:89-slash-xa` — Slash (XA) | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:89-spread-rating` — Spread (Rating) | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:89-trip` — Trip | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:89-unbalanced` — Unbalanced | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:9-10-skills` — 10 Skills? | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:9-new-careers` — New Careers | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:9-10-skills` — 10 Skills? | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:9-new-careers` — New Careers | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:9-new-careers-2` — New Careers | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:90-basic-weapons` — Basic Weapons | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:90-basic-weapons` — Basic Weapons | referenceEntries | deferred | p. 90 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:90-the-shield-quality` — The Shield Quality | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:91-basic-weapons-table` — Basic Weapons Table | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:92-shield-table` — Shield Table | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:92-shields` — Shields | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:93-cavalry-weapons` — Cavalry Weapons | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:92-shields` — Shields | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:93-cavalry-weapons` — Cavalry Weapons | referenceEntries | deferred | p. 93 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:93-cavalry-weapons-table` — Cavalry Weapons Table | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:93-fencing-weapons-table` — Fencing Weapons Table | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:94-brawling-weapons` — Brawling Weapons | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:94-brawling-weapons` — Brawling Weapons | referenceEntries | deferred | p. 94 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:94-brawling-weapons-table` — Brawling Weapons Table | referenceEntries | reference-only | p. 94–95 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:95-flail-weapons-table` — Flail Weapons Table | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:95-parrying-weapons` — Parrying Weapons | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:95-parrying-weapons` — Parrying Weapons | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:95-parrying-weapons-table` — Parrying Weapons Table | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:96-polearm-weapons-table` — Polearm Weapons Table | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:96-polearms` — Polearms | referenceEntries | reference-only | p. 96–97 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:97-two-handed-weapons` — Two-Handed Weapons | referenceEntries | reference-only | p. 97 | Sourced book rule reference; no live-play automation. |
-| `up-in-arms:reference:98-ammunition` — Ammunition | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
+| `up-in-arms:reference:96-polearms` — Polearms | referenceEntries | deferred | p. 96–97 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:97-two-handed-weapons` — Two-Handed Weapons | referenceEntries | deferred | p. 97 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `up-in-arms:reference:98-ammunition` — Ammunition | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `up-in-arms:reference:98-crossbow` — Crossbow | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:98-traditional-ammunition-table` — Traditional Ammunition Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `up-in-arms:reference:98-two-handed-weapons-table` — Two-Handed Weapons Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
@@ -933,7 +933,7 @@ Pack `archives-i` · version 1.0.3
 | careers | 0 | 4 | 0 | 0 | 0 |
 | market | 17 | 1 | 0 | 0 | 0 |
 | origins | 1 | 15 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 10 | 0 | 13 |
+| referenceEntries | 0 | 0 | 8 | 0 | 15 |
 | talents | 0 | 1 | 0 | 0 | 0 |
 | weapons | 13 | 1 | 0 | 0 | 0 |
 
@@ -974,7 +974,7 @@ Pack `archives-i` · version 1.0.3
 | `archives-i:reference:28-profile-belliquotious-bella-lowhaven-iv-racketeer-brass-5` — Belliquotious ‘Bella’ Lowhaven Iv Racketeer (Brass 5) | referenceEntries | deferred | p. 28 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:29-profile-suffonsification-suffy-rumster-lvi-apprentice-artisan-brass-2` — Suffonsification ‘Suffy’ Rumster Lvi Apprentice Artisan (Brass 2) | referenceEntries | deferred | p. 29 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:30-profile-spoondrift-spoony-skelfsider-grave-robber-brass-3` — Spoondrift ‘Spoony’ Skelfsider – Grave Robber (Brass 3) | referenceEntries | deferred | p. 30 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `archives-i:reference:31-options-halfling-nobles` — Options: Halfling Nobles | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
+| `archives-i:reference:31-options-halfling-nobles` — Options: Halfling Nobles | referenceEntries | deferred | p. 31 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-i:reference:31-profile-thelonius-hardcastle-monkenbridge-thorncobble-xii-scion-gold-1` — Thelonius Hardcastle Monkenbridge Thorncobble Xii – Scion (Gold 1) | referenceEntries | deferred | p. 31 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:32-options-halfling-clan-skills-and-talents` — Options: Halfling Clan Skills and Talents | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:56-profile-alrik-skagsson-inquisitor-silver-5` — Alrik Skagsson – Inquisitor (Silver 5) | referenceEntries | deferred | p. 56 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
@@ -983,7 +983,7 @@ Pack `archives-i` · version 1.0.3
 | `archives-i:reference:62-profile-volund-sliverscar-chartered-engineer-gold-2` — Volund Sliverscar Chartered Engineer (Gold 2) | referenceEntries | deferred | p. 62 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:63-profile-gurniksson-hammerback-miner-foreman-silver-4` — Gurniksson Hammerback – Miner Foreman (Silver 4) | referenceEntries | deferred | p. 63 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-i:reference:63-profile-ragni-thorisson-officer-gold-1` — Ragni Thorisson – Officer (Gold 1) | referenceEntries | deferred | p. 63 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `archives-i:reference:78-eonir-player-characters` — Eonir Player Characters | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
+| `archives-i:reference:78-eonir-player-characters` — Eonir Player Characters | referenceEntries | deferred | p. 78 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-i:reference:92-dwarf-melee-weapons` — Dwarf Melee Weapons | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:92-eonir-melee-weapons` — Eonir Melee Weapons | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `archives-i:reference:92-halfling-melee-weapons` — Halfling Melee Weapons | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
@@ -1007,7 +1007,7 @@ Pack `archives-ii` · version 1.0.7
 | background | 1 | 0 | 0 | 0 | 0 |
 | careers | 2 | 1 | 0 | 0 | 0 |
 | market | 12 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 103 | 0 | 15 |
+| referenceEntries | 0 | 0 | 44 | 0 | 74 |
 | species | 0 | 1 | 0 | 0 | 0 |
 | spells | 3 | 4 | 0 | 0 | 0 |
 | tables | 2 | 0 | 0 | 0 | 0 |
@@ -1037,74 +1037,74 @@ Pack `archives-ii` · version 1.0.7
 | `archives-ii:reference:14-profile-ugrik-the-lost-ogre-outlaw-brass-2` — Ugrik The Lost — Ogre Outlaw (Brass 2) | referenceEntries | deferred | p. 14 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:18-ogres-and-mutation` — Ogres And Mutation | referenceEntries | reference-only | p. 18–19 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:18-random-class-and-career-table` — Random Class And Career Table | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:18-species` — Species | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:18-species` — Species | referenceEntries | deferred | p. 18 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:20-new-psychology-vice` — Vice | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:20-ogre-attributes-table` — Ogre Attributes Table | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:20-ogre-species-skills-and-talents` — Ogre Species Skills and Talents | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:20-skills-and-talents` — Skills and Talents | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:21-age` — Age | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:20-ogre-species-skills-and-talents` — Ogre Species Skills and Talents | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:20-skills-and-talents` — Skills and Talents | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:21-age` — Age | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:21-eye-colour-table` — Eye Colour Table | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:21-hair-colour-table` — Hair Colour Table | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:21-height` — Height | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:21-not-stupid-just-single-minded` — Not Stupid, Just Single Minded | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:21-height` — Height | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:21-not-stupid-just-single-minded` — Not Stupid, Just Single Minded | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:22-ogre-element-1-table` — Ogre Element 1 Table | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:22-ogre-element-2-table` — Ogre Element 2 Table | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:23-big-names` — Big Names | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:23-example-big-names` — Example Big Names | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:25-advancing-ogre-characters` — Advancing Ogre Characters | referenceEntries | reference-only | p. 25 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:23-big-names` — Big Names | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:23-example-big-names` — Example Big Names | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:25-advancing-ogre-characters` — Advancing Ogre Characters | referenceEntries | deferred | p. 25 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:26-artur-hammerfoot-ogre-artisan` — Artur Hammerfoot, Ogre Artisan | referenceEntries | deferred | p. 26 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:26-nazzaalta-talltale-ogre-stevedore` — Nazzaalta Talltale, Ogre Stevedore | referenceEntries | deferred | p. 26 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `archives-ii:reference:28-deathblow` — Deathblow | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:28-defending-against-ogres` — Defending Against Ogres | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:28-ogre-equipment` — Ogre Equipment | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:28-other-notes` — Other Notes | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:28-weapon-damage` — Weapon Damage | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:28-deathblow` — Deathblow | referenceEntries | deferred | p. 28 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:28-defending-against-ogres` — Defending Against Ogres | referenceEntries | deferred | p. 28 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:28-ogre-equipment` — Ogre Equipment | referenceEntries | deferred | p. 28 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:28-other-notes` — Other Notes | referenceEntries | deferred | p. 28 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:28-weapon-damage` — Weapon Damage | referenceEntries | deferred | p. 28 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:29-ogre-ammunition` — Ogre Ammunition | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-armour` — Ogre Armour | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-melee-weapons` — Ogre Melee Weapons | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:29-ogre-ranged-weapons` — Ogre Ranged Weapons | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:31-ogre-magic` — Ogre Magic | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:31-ogre-spellcasters` — Ogre Spellcasters | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:31-people-of-burden` — People Of Burden | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:32-the-lore-of-the-great-maw` — The Lore of The Great Maw | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:31-ogre-magic` — Ogre Magic | referenceEntries | deferred | p. 31 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:31-ogre-spellcasters` — Ogre Spellcasters | referenceEntries | deferred | p. 31 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:31-people-of-burden` — People Of Burden | referenceEntries | deferred | p. 31 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:32-the-lore-of-the-great-maw` — The Lore of The Great Maw | referenceEntries | deferred | p. 32 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:34-rhinox` — Rhinox | referenceEntries | deferred | p. 34 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:39-star-sign-table` — Star Sign Table | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:39-star-signs-and-character-creation` — Star Signs And Character Creation | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:50-determining-ascendant-sign` — Determining Ascendant Sign | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:50-determining-celestial-mansions` — Determining Celestial Mansions | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:39-star-signs-and-character-creation` — Star Signs And Character Creation | referenceEntries | deferred | p. 39 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:50-determining-ascendant-sign` — Determining Ascendant Sign | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:50-determining-celestial-mansions` — Determining Celestial Mansions | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:51-magical-artefact-generation-table` — Magical Artefact Generation Table | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:52-commissioning-a-magical-artefact` — Commissioning a Magical Artefact | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:52-commissioning-a-magical-artefact` — Commissioning a Magical Artefact | referenceEntries | deferred | p. 52 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:52-identifying-a-magical-artefact` — Identifying A Magical Artefact | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:53-time-and-money` — Time and Money | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:54-fine-ill-make-it-myself` — Fine, I’ll Make it Myself! | referenceEntries | reference-only | p. 54 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:53-time-and-money` — Time and Money | referenceEntries | deferred | p. 53 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:54-fine-ill-make-it-myself` — Fine, I’ll Make it Myself! | referenceEntries | deferred | p. 54 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:54-the-finished-result` — The Finished Result | referenceEntries | reference-only | p. 54 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:55-quietened-mail` — Quietened Mail | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:55-quietened-mail` — Quietened Mail | referenceEntries | deferred | p. 55 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:55-random-creature-table` — Random Creature Table | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:55-shinsmasher-s-club` — Shinsmasher's Club | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:55-throatseeker-s-blade` — Throatseeker's Blade | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:55-shinsmasher-s-club` — Shinsmasher's Club | referenceEntries | deferred | p. 55 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:55-throatseeker-s-blade` — Throatseeker's Blade | referenceEntries | deferred | p. 55 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:56-quirks-and-curses` — Quirks And Curses | referenceEntries | reference-only | p. 56–57 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:57-magical-weapons` — Magical Weapons | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:57-magical-weapons` — Magical Weapons | referenceEntries | deferred | p. 57 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:57-magical-weapons-table` — Magical Weapons Table | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:58-magical-weapon-qualities` — Magical Weapon Qualities | referenceEntries | reference-only | p. 58–59 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:60-magical-weapon-history-table` — Magical Weapon History Table | referenceEntries | reference-only | p. 60 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:60-the-history-of-magical-weapons` — The History of Magical Weapons | referenceEntries | reference-only | p. 60 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:60-the-history-of-magical-weapons` — The History of Magical Weapons | referenceEntries | deferred | p. 60 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:61-magical-ammunition-table` — Magical Ammunition Table | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:61-magical-arrows-and-bolts` — Magical Arrows and Bolts | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:61-temporary-enchantments` — Temporary Enchantments | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:61-magical-arrows-and-bolts` — Magical Arrows and Bolts | referenceEntries | deferred | p. 61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:61-temporary-enchantments` — Temporary Enchantments | referenceEntries | deferred | p. 61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:62-armour-size-table` — Armour Size Table | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:62-gromril-and-ithilmar` — Gromril And Ithilmar | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:62-magical-armour` — Magical Armour | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:62-gromril-and-ithilmar` — Gromril And Ithilmar | referenceEntries | deferred | p. 62 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:62-magical-armour` — Magical Armour | referenceEntries | deferred | p. 62 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:62-magical-armour-table` — Magical Armour Table | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:63-magical-armour-qualities` — Magical Armour Qualities | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:64-magical-shield-table` — Magical Shield Table | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:64-magical-shields` — Magical Shields | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:64-magical-shields` — Magical Shields | referenceEntries | deferred | p. 64 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:64-scroll-table` — Scroll Table | referenceEntries | reference-only | p. 64–65 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:64-scrolls` — Scrolls | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:64-scrolls` — Scrolls | referenceEntries | deferred | p. 64 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:64-shield-quality-table` — Shield Quality Table | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:65-staffs` — Staffs | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:65-staffs` — Staffs | referenceEntries | deferred | p. 65 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:65-wand-table` — Wand Table | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:65-wands` — Wands | referenceEntries | reference-only | p. 65 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:66-magical-rings` — Magical Rings | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:65-wands` — Wands | referenceEntries | deferred | p. 65 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:66-magical-rings` — Magical Rings | referenceEntries | deferred | p. 66 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:66-ring-table` — Ring Table | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:66-talisman-table` — Talisman Table | referenceEntries | reference-only | p. 66 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:67-oddities` — Oddities | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
@@ -1118,9 +1118,9 @@ Pack `archives-ii` · version 1.0.7
 | `archives-ii:reference:78-profile-adalmann-von-hopfberg-noble-lord-gold-7` — Adalmann Von Hopfberg Noble Lord (Gold 7) | referenceEntries | deferred | p. 78 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:79-profile-isabella-seer-brass-4` — Isabella — Seer (Brass 4) | referenceEntries | deferred | p. 79 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-ii:reference:80-profile-richter-kless-professor-gold-1` — Richter Kless — Professor (Gold 1) | referenceEntries | deferred | p. 80 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `archives-ii:reference:82-power` — Power | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:82-power` — Power | referenceEntries | deferred | p. 82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:83-battlefield-strength` — Battlefield Strength | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:83-options-the-cost-of-war` — Options: The Cost Of War | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:83-options-the-cost-of-war` — Options: The Cost Of War | referenceEntries | deferred | p. 83 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:83-stand-to-attention` — Battlefield Power Modifiers | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-battle-endeavours` — Battle Endeavours | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-infiltrate` — Infiltrate | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
@@ -1128,29 +1128,29 @@ Pack `archives-ii` · version 1.0.7
 | `archives-ii:reference:84-muster-forces` — Muster Forces | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-sabotage` — Sabotage | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:84-scout` — Scout | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:85-other-preparations` — Other Preparations | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:85-plan` — Plan | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:85-the-battle` — The Battle | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:86-bolster` — Bolster | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:86-charge` — Charge | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:86-hold-this-ground` — Hold This Ground | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:86-let-it-rain` — Let it Rain | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:86-protect` — Protect | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:87-cinematic-scene-guidelines` — Cinematic Scene Guidelines | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:87-options-the-horrors-of-war` — Options: The Horrors Of War | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:88-bring-it-down` — Bring It Down | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:88-fly-by` — Fly By | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:85-other-preparations` — Other Preparations | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:85-plan` — Plan | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:85-the-battle` — The Battle | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:86-bolster` — Bolster | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:86-charge` — Charge | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:86-hold-this-ground` — Hold This Ground | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:86-let-it-rain` — Let it Rain | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:86-protect` — Protect | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:87-cinematic-scene-guidelines` — Cinematic Scene Guidelines | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:87-options-the-horrors-of-war` — Options: The Horrors Of War | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:88-bring-it-down` — Bring It Down | referenceEntries | deferred | p. 88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:88-fly-by` — Fly By | referenceEntries | deferred | p. 88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:88-intruders` — War Machines | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:88-war-machines` — War Machines | referenceEntries | reference-only | p. 88–89 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:89-green-with-envy` — Green With Envy | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:89-siege-quality` — Siege Quality | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:88-war-machines` — War Machines | referenceEntries | deferred | p. 88–89 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:89-green-with-envy` — Green With Envy | referenceEntries | deferred | p. 89 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:89-siege-quality` — Siege Quality | referenceEntries | deferred | p. 89 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:89-typical-barricades-and-cover` — Typical Barricades And Cover | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `archives-ii:reference:90-options-environmental-factors` — Options: Environmental Factors | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:92-animosity-and-hatred` — Animosity and Hatred | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:92-fear-of-the-dark` — Fear of the Dark | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:92-animosity-and-hatred` — Animosity and Hatred | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:92-fear-of-the-dark` — Fear of the Dark | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:reference:92-new-endeavour-recuperation` — New Endeavour: Recuperation | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:92-things-get-better` — Things Get Better | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `archives-ii:reference:92-trauma` — Trauma | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
+| `archives-ii:reference:92-things-get-better` — Things Get Better | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-ii:reference:92-trauma` — Trauma | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-ii:species:ogre` — Ogre | species | adapted | p. 20 | User-approved Fifth Edition starting Fate/Fortune, five Skills at +5 and separate Size instead of the old Size Talent. |
 | `archives-ii:spell:bullgorger` — Bullgorger | spells | adapted | p. 32 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `archives-ii:spell:feast-of-the-fallen` — Feast of the Fallen | spells | adapted | p. 33 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -1169,7 +1169,7 @@ Pack `archives-iii` · version 1.0.5
 | cants | 24 | 0 | 0 | 0 | 0 |
 | careers | 1 | 2 | 0 | 0 | 0 |
 | origins | 0 | 5 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 105 | 0 | 12 |
+| referenceEntries | 0 | 0 | 35 | 0 | 82 |
 | spells | 20 | 7 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -1195,34 +1195,34 @@ Pack `archives-iii` · version 1.0.5
 | `archives-iii:origin:eastender` — Altdorf — Eastender | origins | adapted | p. 83 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `archives-iii:origin:hexxerbezrik` — Altdorf — Hexxerbezrik | origins | adapted | p. 84 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `archives-iii:origin:south-banker` — Altdorf — South Banker | origins | adapted | p. 83 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
-| `archives-iii:reference:12-courier-service` — Courier Service | referenceEntries | reference-only | p. 12–13 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:13-crafting-workshop` — Crafting Workshop | referenceEntries | reference-only | p. 13–14 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:12-courier-service` — Courier Service | referenceEntries | deferred | p. 12–13 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:13-crafting-workshop` — Crafting Workshop | referenceEntries | deferred | p. 13–14 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:14-example-expansion-table` — Example Expansion Table | referenceEntries | reference-only | p. 14 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:15-criminal-gang` — Criminal Gang | referenceEntries | reference-only | p. 15–16 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:17-holy-temple` — Holy Temple | referenceEntries | reference-only | p. 17–18 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:18-religious-alternatives` — Religious Alternatives | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:19-knightly-order` — Knightly Order | referenceEntries | reference-only | p. 19–20 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:20-alternative-options-for-specific-orders` — Alternative Options For Specific Orders | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:21-tavern` — Tavern | referenceEntries | reference-only | p. 21–22 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:23-market-parlour` — Market Parlour | referenceEntries | reference-only | p. 23–24 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:25-noble-estate` — Noble Estate | referenceEntries | reference-only | p. 25–26 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:26-the-reality-of-noble-estates` — The Reality Of Noble Estates | referenceEntries | reference-only | p. 26 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:27-performance-troupe` — Performance Troupe | referenceEntries | reference-only | p. 27–28 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:29-publishing-house` — Publishing House | referenceEntries | reference-only | p. 29–30 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:15-criminal-gang` — Criminal Gang | referenceEntries | deferred | p. 15–16 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:17-holy-temple` — Holy Temple | referenceEntries | deferred | p. 17–18 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:18-religious-alternatives` — Religious Alternatives | referenceEntries | deferred | p. 18 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:19-knightly-order` — Knightly Order | referenceEntries | deferred | p. 19–20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:20-alternative-options-for-specific-orders` — Alternative Options For Specific Orders | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:21-tavern` — Tavern | referenceEntries | deferred | p. 21–22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:23-market-parlour` — Market Parlour | referenceEntries | deferred | p. 23–24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:25-noble-estate` — Noble Estate | referenceEntries | deferred | p. 25–26 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:26-the-reality-of-noble-estates` — The Reality Of Noble Estates | referenceEntries | deferred | p. 26 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:27-performance-troupe` — Performance Troupe | referenceEntries | deferred | p. 27–28 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:29-publishing-house` — Publishing House | referenceEntries | deferred | p. 29–30 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:30-profile-grafina-griselda-human-magnate-gold-5` — Grafina Griselda — Human Magnate Gold 5 | referenceEntries | deferred | p. 30 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `archives-iii:reference:34-armour-and-stealth-tests` — Armour and Stealth Tests | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:34-armour-damage` — Armour Damage | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:34-armour-and-stealth-tests` — Armour and Stealth Tests | referenceEntries | deferred | p. 34 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:34-armour-damage` — Armour Damage | referenceEntries | deferred | p. 34 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:34-looting-armour` — Looting Armour | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:34-poor-fit` — Poor Fit | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:34-suitable-fit` — Suitable Fit | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:34-wont-fit` — Won’t Fit | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:35-asking-an-npc-to-repair-armour` — Asking an NPC to Repair Armour | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:35-critical-deflection` — Critical Deflection | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:35-repairing-armour` — Repairing Armour | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:34-poor-fit` — Poor Fit | referenceEntries | deferred | p. 34 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:34-suitable-fit` — Suitable Fit | referenceEntries | deferred | p. 34 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:34-wont-fit` — Won’t Fit | referenceEntries | deferred | p. 34 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:35-asking-an-npc-to-repair-armour` — Asking an NPC to Repair Armour | referenceEntries | deferred | p. 35 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:35-critical-deflection` — Critical Deflection | referenceEntries | deferred | p. 35 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:35-repairing-armour` — Repairing Armour | referenceEntries | deferred | p. 35 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:35-repairing-armour-as-an-endeavour` — Repairing Armour as an Endeavour | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:35-repairing-armour-with-the-trade-skill` — Repairing Armour With the Trade Skill | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:36-armour-rules` — Armour Rules | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:36-combining-armour` — Combining Armour | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:36-armour-rules` — Armour Rules | referenceEntries | deferred | p. 36 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:36-combining-armour` — Combining Armour | referenceEntries | deferred | p. 36 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:36-impenetrable` — Impenetrable | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:36-overcoat` — Overcoat | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:36-partial` — Partial | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
@@ -1235,78 +1235,78 @@ Pack `archives-iii` · version 1.0.5
 | `archives-iii:reference:37-chainmail` — Chainmail | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:37-plate` — Plate | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:37-soft-kits` — Soft Kits | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:38-armet` — Armet | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:38-armet-damage` — Armet Damage | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:42-strictures-of-handrich` — Strictures of Handrich | referenceEntries | reference-only | p. 42–43 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:47-handrichs-blessings` — Handrich’S Blessings | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:47-miracles-of-handrich` — Miracles Of Handrich | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:51-penances` — Khaine — Penances | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:53-penances` — Solkan — Penances | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:53-strictures` — Solkan — Strictures | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:58-priests-of-the-old-faith` — Priests Of The Old Faith | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:58-strictures` — Old Faith — Strictures | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:6-starting-an-enterprise` — Starting An Enterprise | referenceEntries | reference-only | p. 6–7 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:62-alternative-skills-and-talents` — Alternative Skills And Talents | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:38-armet` — Armet | referenceEntries | deferred | p. 38 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:38-armet-damage` — Armet Damage | referenceEntries | deferred | p. 38 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:42-strictures-of-handrich` — Strictures of Handrich | referenceEntries | deferred | p. 42–43 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:47-handrichs-blessings` — Handrich’S Blessings | referenceEntries | deferred | p. 47 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:47-miracles-of-handrich` — Miracles Of Handrich | referenceEntries | deferred | p. 47 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:51-penances` — Khaine — Penances | referenceEntries | deferred | p. 51 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:53-penances` — Solkan — Penances | referenceEntries | deferred | p. 53 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:53-strictures` — Solkan — Strictures | referenceEntries | deferred | p. 53 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:58-priests-of-the-old-faith` — Priests Of The Old Faith | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:58-strictures` — Old Faith — Strictures | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:6-starting-an-enterprise` — Starting An Enterprise | referenceEntries | deferred | p. 6–7 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:62-alternative-skills-and-talents` — Alternative Skills And Talents | referenceEntries | deferred | p. 62 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:63-goodwill` — Goodwill | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-mirkride` — Mirkride | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-nepenthe` — Nepenthe | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-nostrum` — Nostrum | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:63-part-the-branches` — Part the Branches | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:64-protective-charm` — Protective Charm | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:7-enterprise-format` — Enterprise Format | referenceEntries | reference-only | p. 7 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:76-abilities-limitations` — Abilities & Limitations | referenceEntries | reference-only | p. 76 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:7-enterprise-format` — Enterprise Format | referenceEntries | deferred | p. 7 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:76-abilities-limitations` — Abilities & Limitations | referenceEntries | deferred | p. 76 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:76-profile-badger` — Badger | referenceEntries | deferred | p. 76 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:77-profile-cat` — Cat | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:77-profile-crow` — Crow | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:77-profile-fox` — Fox | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:77-profile-owl` — Owl | referenceEntries | deferred | p. 77 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:78-animal-familiar-characteristics` — Animal Familiar Characteristics | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:78-animal-familiar-generation` — Animal Familiar Generation | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:78-animal-familiar-generation` — Animal Familiar Generation | referenceEntries | deferred | p. 78 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:78-profile-stoat` — Stoat | referenceEntries | deferred | p. 78 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `archives-iii:reference:79-animal-skills-parent-characteristics` — Animal Skills & Parent Characteristics | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:79-animal-skills-parent-characteristics` — Animal Skills & Parent Characteristics | referenceEntries | deferred | p. 79 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:79-badger` — Badger — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-cat` — Cat — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:79-crow` — Crow — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:79-finding-a-gifted-animal` — Finding A Gifted Animal | referenceEntries | reference-only | p. 79–80 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:79-finding-a-gifted-animal` — Finding A Gifted Animal | referenceEntries | deferred | p. 79–80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:79-fox` — Fox — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:79-option-animal-familiar-size-variations` — Option: Animal Familiar Size Variations | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:79-option-animal-familiar-size-variations` — Option: Animal Familiar Size Variations | referenceEntries | deferred | p. 79 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:79-owl` — Owl — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:79-starting-skills-talents-and-traits` — Starting Skills, Talents, and Traits | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:79-starting-skills-talents-and-traits` — Starting Skills, Talents, and Traits | referenceEntries | deferred | p. 79 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:79-stoat` — Stoat — familiar starting choices | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:8-interest-payments` — Interest Payments | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:8-repaying-debt` — Repaying Debt | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:80-animal-communication` — Animal Communication | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:80-animal-familiar-behaviours` — Animal Familiar Behaviours | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:80-bonding-with-animal-familiars` — Bonding With Animal Familiars | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:80-more-than-one` — More than One? | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:8-interest-payments` — Interest Payments | referenceEntries | deferred | p. 8 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:8-repaying-debt` — Repaying Debt | referenceEntries | deferred | p. 8 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:80-animal-communication` — Animal Communication | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:80-animal-familiar-behaviours` — Animal Familiar Behaviours | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:80-bonding-with-animal-familiars` — Bonding With Animal Familiars | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:80-more-than-one` — More than One? | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:80-spirit-bonding-ritual` — Spirit-Bonding Ritual | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:81-companion-traits-new` — Companion Traits (New) | referenceEntries | reference-only | p. 81–82 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:81-corruption-death` — Corruption & Death | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:81-language-barnyard-or-wilds` — Language (Barnyard or Wilds) | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:81-new-talents-creature-traits` — New Talents & Creature Traits | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:81-companion-traits-new` — Companion Traits (New) | referenceEntries | deferred | p. 81–82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:81-corruption-death` — Corruption & Death | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:81-language-barnyard-or-wilds` — Language (Barnyard or Wilds) | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:81-new-talents-creature-traits` — New Talents & Creature Traits | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:82-new-creature-trait-animal-telepathy` — Animal Telepathy | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:82-new-creature-trait-invisibility` — Invisibility | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:82-new-creature-trait-messenger` — Messenger | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
 | `archives-iii:reference:82-new-creature-trait-sensory-sharing` — Sensory Sharing | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:85-channelling` — Channelling | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:85-channelling-test` — Channelling Test | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-cants` — Cants | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-critical-channelling` — Critical Channelling | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-fumbled-channelling` — Fumbled Channelling | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-how-much-is-too-much` — How Much Is Too Much? | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-interruptions` — Interruptions | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-key-differences` — Key Differences | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:86-warpstone` — Warpstone | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:87-the-lore-of-beasts` — The Lore of Beasts | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:87-the-lore-of-death` — The Lore of Death | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:87-the-lore-of-fire` — The Lore of Fire | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:87-the-lore-of-heavens` — The Lore of Heavens | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:88-the-lore-of-life` — The Lore of Life | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:88-the-lore-of-light` — The Lore of Light | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:88-the-lore-of-metal` — The Lore of Metal | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:88-the-lore-of-shadows` — The Lore of Shadows | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:85-channelling` — Channelling | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:85-channelling-test` — Channelling Test | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-cants` — Cants | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-critical-channelling` — Critical Channelling | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-fumbled-channelling` — Fumbled Channelling | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-how-much-is-too-much` — How Much Is Too Much? | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-interruptions` — Interruptions | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-key-differences` — Key Differences | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:86-warpstone` — Warpstone | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:87-the-lore-of-beasts` — The Lore of Beasts | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:87-the-lore-of-death` — The Lore of Death | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:87-the-lore-of-fire` — The Lore of Fire | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:87-the-lore-of-heavens` — The Lore of Heavens | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:88-the-lore-of-life` — The Lore of Life | referenceEntries | deferred | p. 88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:88-the-lore-of-light` — The Lore of Light | referenceEntries | deferred | p. 88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:88-the-lore-of-metal` — The Lore of Metal | referenceEntries | deferred | p. 88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `archives-iii:reference:88-the-lore-of-shadows` — The Lore of Shadows | referenceEntries | deferred | p. 88 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:9-enterprise-events` — Enterprise Events | referenceEntries | reference-only | p. 9–11 | Sourced book rule reference; no live-play automation. |
-| `archives-iii:reference:9-expansion` — Expansion | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `archives-iii:reference:9-expansion` — Expansion | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `archives-iii:reference:90-profile-lord-adalbert-knopp-inzel-human-first-knight-and-spy-gold-2` — Lord Adalbert Knopp-Inzel Human First Knight (And Spy) Gold 2 | referenceEntries | deferred | p. 90 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:92-profile-brother-samhel-human-priest-of-morr-silver-1` — Brother Samhel Human Priest Of Morr (Silver 1) | referenceEntries | deferred | p. 92 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `archives-iii:reference:93-profile-ella-terenz-human-con-artist-silver-2` — Ella Terenz Human Con Artist (Silver 2) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
@@ -1351,7 +1351,7 @@ Pack `winds-of-magic` · version 1.0.4
 |---|---:|---:|---:|---:|---:|
 | careers | 10 | 2 | 0 | 0 | 0 |
 | gear | 4 | 0 | 1 | 0 | 0 |
-| referenceEntries | 0 | 0 | 252 | 0 | 21 |
+| referenceEntries | 0 | 0 | 117 | 0 | 156 |
 | skills | 1 | 1 | 0 | 0 | 0 |
 | spells | 101 | 52 | 0 | 0 | 0 |
 | tables | 4 | 0 | 0 | 0 | 0 |
@@ -1382,7 +1382,7 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:109-profile-immanuel-ferrand-holswig-schliestein-human-spymaster-gold-4` — Immanuel-Ferrand Holswig-Schliestein Human Spymaster (Gold 4) | referenceEntries | deferred | p. 109 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:110-bewilder` — Bewilder | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:110-choking-shadows` — Choking Shadows | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:110-the-lore-of-shadows` — The Lore Of Shadows | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:110-the-lore-of-shadows` — The Lore Of Shadows | referenceEntries | deferred | p. 110 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:111-doppelganger` — Doppelganger | referenceEntries | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:111-illusion` — Illusion | referenceEntries | reference-only | p. 111 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:112-mindslip` — Mindslip | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
@@ -1391,7 +1391,7 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:113-shadowstep` — Shadowstep | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:113-shroud-of-invisibility` — Shroud of Invisibility | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:121-profile-elspeth-von-draken-human-wizard-lord-gold-2` — Elspeth Von Draken Human Wizard Lord (Gold 2) | referenceEntries | deferred | p. 121 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `winds-of-magic:reference:122-the-lore-of-death` — The Lore Of Death | referenceEntries | reference-only | p. 122 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:122-the-lore-of-death` — The Lore Of Death | referenceEntries | deferred | p. 122 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:123-caress-of-laniph` — Caress of Laniph | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:123-crystal-maze` — Crystal Maze | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:123-dying-words` — Dying Words | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
@@ -1403,7 +1403,7 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:125-swift-passing` — Swift Passing | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:133-profile-sergov-pfeiffer-human-bright-wizard-silver-3` — Sergov Pfeiffer Human Bright Wizard (Silver 3) | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:134-aqshys-aegis` — Aqshy’s Aegis | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:134-the-lore-of-fire` — The Lore Of Fire | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:134-the-lore-of-fire` — The Lore Of Fire | referenceEntries | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:135-cauterise` — Cauterise | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:135-crown-of-flame` — Crown of Flame | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:135-firewall` — Firewall | referenceEntries | reference-only | p. 135 | Sourced book rule reference; no live-play automation. |
@@ -1415,129 +1415,129 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:146-amber-talons` — Amber Talons | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:146-beast-form` — Beast Form | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:146-beast-master` — Beast Master | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:146-the-lore-of-beasts` — The Lore Of Beasts | referenceEntries | reference-only | p. 146 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:146-the-lore-of-beasts` — The Lore Of Beasts | referenceEntries | deferred | p. 146 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:147-beast-tongue` — Beast Tongue | referenceEntries | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:147-beast-unbroken` — Beast Unbroken | referenceEntries | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:147-flock-of-doom` — Flock of Doom | referenceEntries | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:148-hunters-hide` — Hunter’s Hide | referenceEntries | reference-only | p. 148 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:148-the-amber-spear` — The Amber Spear | referenceEntries | reference-only | p. 148 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:149-wyssans-wildform` — Wyssan’s Wildform | referenceEntries | reference-only | p. 149 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:150-beast-form-and-other-transformation-spells` — Beast Form And Other Transformation Spells | referenceEntries | reference-only | p. 150 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:150-beast-form-and-other-transformation-spells` — Beast Form And Other Transformation Spells | referenceEntries | deferred | p. 150 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:151-wizards-robes` — Wizard’s Robes | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:153-scroll-lores` — Scroll Lores | referenceEntries | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:153-scrolls` — Scrolls | referenceEntries | reference-only | p. 153 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:153-writing-scrolls` — Writing Scrolls | referenceEntries | reference-only | p. 153–154 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:154-magic-potions` — Magic Potions | referenceEntries | reference-only | p. 154 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:155-potion-characteristics` — Potion Characteristics | referenceEntries | reference-only | p. 155 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:155-using-potions` — Using Potions | referenceEntries | reference-only | p. 155 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:153-scrolls` — Scrolls | referenceEntries | deferred | p. 153 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:153-writing-scrolls` — Writing Scrolls | referenceEntries | deferred | p. 153–154 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:154-magic-potions` — Magic Potions | referenceEntries | deferred | p. 154 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:155-potion-characteristics` — Potion Characteristics | referenceEntries | deferred | p. 155 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:155-using-potions` — Using Potions | referenceEntries | deferred | p. 155 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:156-potion-spoilage-chance` — Potion Spoilage Chance | referenceEntries | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:156-potion-spoilage-effects` — Potion Spoilage Effects | referenceEntries | reference-only | p. 156 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:156-potion-spoilage-effects` — Potion Spoilage Effects | referenceEntries | deferred | p. 156 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:157-potion-spoilage-effects` — Potion Spoilage Effects | referenceEntries | reference-only | p. 157–159 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:159-sensory-loss-table` — Sensory Loss Table | referenceEntries | reference-only | p. 159 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:160-benefits-of-second-sight` — Benefits Of Second Sight | referenceEntries | reference-only | p. 160–161 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:160-brewing` — Brewing | referenceEntries | reference-only | p. 160 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:160-brewing-potions` — Brewing Potions | referenceEntries | reference-only | p. 160 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:160-benefits-of-second-sight` — Benefits Of Second Sight | referenceEntries | deferred | p. 160–161 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:160-brewing` — Brewing | referenceEntries | deferred | p. 160 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:160-brewing-potions` — Brewing Potions | referenceEntries | deferred | p. 160 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:160-brewing-skill-test` — Brewing Skill Test | referenceEntries | reference-only | p. 160 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:160-ingredients` — Ingredients | referenceEntries | reference-only | p. 160 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:160-ingredients` — Ingredients | referenceEntries | deferred | p. 160 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:160-potion-brewers-requirements` — Potion Brewer’S Requirements | referenceEntries | reference-only | p. 160 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:161-boars-musk` — Boar’s Musk | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:161-boars-musk` — Boar’s Musk | referenceEntries | deferred | p. 161 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:161-brewing-disasters` — Brewing Disasters | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:161-concoct` — Concoct | referenceEntries | reference-only | p. 161 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-channelpath-potion` — Channelpath Potion | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-debauchs-friend` — Debauch’s Friend | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-draught-of-power` — Draught of Power | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-hair-tonic` — Hair Tonic | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-lucidity-tonic` — Lucidity Tonic | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-nectar-of-beauty` — Nectar of Beauty | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-nectar-of-veracity` — Nectar of Veracity | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:162-nectar-of-vitality` — Nectar of Vitality | referenceEntries | reference-only | p. 162 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:162-channelpath-potion` — Channelpath Potion | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-debauchs-friend` — Debauch’s Friend | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-draught-of-power` — Draught of Power | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-hair-tonic` — Hair Tonic | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-lucidity-tonic` — Lucidity Tonic | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-nectar-of-beauty` — Nectar of Beauty | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-nectar-of-veracity` — Nectar of Veracity | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:162-nectar-of-vitality` — Nectar of Vitality | referenceEntries | deferred | p. 162 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:163-panacea-universalis` — Panacea Universalis | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:163-potency-draught` — Potency Draught | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:163-potion-of-flight` — Potion of Flight | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:163-potion-of-fortune` — Potion of Fortune | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:163-potion-of-invisibility` — Potion of Invisibility | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:164-grimoires` — Grimoires | referenceEntries | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:164-using-grimoires` — Using Grimoires | referenceEntries | reference-only | p. 164 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:163-potency-draught` — Potency Draught | referenceEntries | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:163-potion-of-flight` — Potion of Flight | referenceEntries | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:163-potion-of-fortune` — Potion of Fortune | referenceEntries | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:163-potion-of-invisibility` — Potion of Invisibility | referenceEntries | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:164-grimoires` — Grimoires | referenceEntries | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:164-using-grimoires` — Using Grimoires | referenceEntries | deferred | p. 164 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:165-grimoire-miscast-table` — Grimoire Miscast Table | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:165-krampis-tome-of-power` — Krampi’s Tome of Power | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:165-krampis-tome-of-power` — Krampi’s Tome of Power | referenceEntries | deferred | p. 165 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:166-random-grimoires` — Random Grimoires | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:167-power-stones` — Power Stones | referenceEntries | reference-only | p. 167 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:167-properties-of-power-stones` — Properties of Power Stones | referenceEntries | reference-only | p. 167–169 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:170-axe-of-unrelenting-fury` — Axe of Unrelenting Fury | referenceEntries | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:170-cursed-items` — Cursed Items | referenceEntries | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:167-properties-of-power-stones` — Properties of Power Stones | referenceEntries | deferred | p. 167–169 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:170-axe-of-unrelenting-fury` — Axe of Unrelenting Fury | referenceEntries | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:170-cursed-items` — Cursed Items | referenceEntries | deferred | p. 170 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:170-the-cursed-quality` — The Cursed Quality | referenceEntries | reference-only | p. 170 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:171-boots-of-sudden-remorse` — Boots of Sudden Remorse | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:171-bow-of-bloody-empathy` — Bow of Bloody Empathy | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:171-brooch-of-unwanted-attraction` — Brooch of Unwanted Attraction | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:171-dagger-of-stolen-luck` — Dagger of Stolen Luck | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:171-fellowship-sunderer` — Fellowship Sunderer | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:171-flail-of-unsolicited-attention` — Flail of Unsolicited Attention | referenceEntries | reference-only | p. 171 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:171-boots-of-sudden-remorse` — Boots of Sudden Remorse | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:171-bow-of-bloody-empathy` — Bow of Bloody Empathy | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:171-brooch-of-unwanted-attraction` — Brooch of Unwanted Attraction | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:171-dagger-of-stolen-luck` — Dagger of Stolen Luck | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:171-fellowship-sunderer` — Fellowship Sunderer | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:171-flail-of-unsolicited-attention` — Flail of Unsolicited Attention | referenceEntries | deferred | p. 171 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:172-knuckles-of-ignominy` — Knuckles of Ignominy | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:172-mail-of-stolen-valour` — Mail of Stolen Valour | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:172-pistol-of-involuntary-solitude` — Pistol of Involuntary Solitude | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:172-sword-of-holding` — Sword of Holding | referenceEntries | reference-only | p. 172 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:172-mail-of-stolen-valour` — Mail of Stolen Valour | referenceEntries | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:172-pistol-of-involuntary-solitude` — Pistol of Involuntary Solitude | referenceEntries | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:172-sword-of-holding` — Sword of Holding | referenceEntries | deferred | p. 172 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:174-profile-incarnate-elemental-of-fire` — Incarnate Elemental Of Fire | referenceEntries | deferred | p. 174 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:175-profile-incarnate-elemental-of-death` — Incarnate Elemental Of Death | referenceEntries | deferred | p. 175 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:176-creature-trait-grim-rating` — Grim (Rating) | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:176-profile-incarnate-elemental-of-beasts` — Incarnate Elemental Of Beasts | referenceEntries | deferred | p. 176 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `winds-of-magic:reference:179-fenbeasts` — Fenbeasts | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:179-fenbeasts` — Fenbeasts | referenceEntries | deferred | p. 179 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:179-profile-fenbeast` — Fenbeast | referenceEntries | deferred | p. 179 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:180-lores-and-familiars` — Lores And Familiars | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:181-can-they-talk` — Can They Talk? | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:181-can-they-talk` — Can They Talk? | referenceEntries | deferred | p. 181 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:181-familiar-personality` — Familiar Personality | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:182-improving-familiars` — Improving Familiars | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:182-improving-familiars` — Improving Familiars | referenceEntries | deferred | p. 182 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:182-profile-combat-familiar` — Combat Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:182-profile-power-familiar` — Power Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:182-profile-spell-familiar` — Spell Familiar | referenceEntries | deferred | p. 182 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `winds-of-magic:reference:184-the-bond-between-spellcasters-and-familiars` — The Bond Between Spellcasters and Familiars | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:184-the-challenges-of-playing-familiars` — The Challenges of Playing Familiars | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:184-the-wind` — The Wind | referenceEntries | reference-only | p. 184 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:184-the-bond-between-spellcasters-and-familiars` — The Bond Between Spellcasters and Familiars | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:184-the-challenges-of-playing-familiars` — The Challenges of Playing Familiars | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:184-the-wind` — The Wind | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:185-characteristics` — Characteristics | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:185-combat-familiar` — Combat Familiar | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:185-familiars-and-language` — Familiars and Language | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:185-familiars-class-and-status` — Familiars, Class and Status | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:185-power-familiars` — Power Familiars | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:185-skills-and-talents` — Skills and Talents | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:185-spell-familiar` — Spell Familiar | referenceEntries | reference-only | p. 185 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:185-combat-familiar` — Combat Familiar | referenceEntries | deferred | p. 185 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:185-familiars-and-language` — Familiars and Language | referenceEntries | deferred | p. 185 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:185-familiars-class-and-status` — Familiars, Class and Status | referenceEntries | deferred | p. 185 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:185-power-familiars` — Power Familiars | referenceEntries | deferred | p. 185 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:185-skills-and-talents` — Skills and Talents | referenceEntries | deferred | p. 185 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:185-spell-familiar` — Spell Familiar | referenceEntries | deferred | p. 185 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:186-new-talent-magical-assistant` — Magical Assistant | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:186-new-talent-suffuse-with-wind` — Suffuse With (Wind) | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:186-trappings` — Trappings | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:187-advancing-familiars` — Advancing Familiars | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:187-damage-and-healing-for-familiars` — Damage and Healing for Familiars | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:187-familiars-and-conditions` — Familiars and Conditions | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:187-familiars-and-corruption` — Familiars and Corruption | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:187-familiars-and-disease` — Familiars and Disease | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:19-grimoires` — Grimoires | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:19-memorising-spells` — Memorising Spells | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:19-second-sight` — Second Sight | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:186-trappings` — Trappings | referenceEntries | deferred | p. 186 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:187-advancing-familiars` — Advancing Familiars | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:187-damage-and-healing-for-familiars` — Damage and Healing for Familiars | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:187-familiars-and-conditions` — Familiars and Conditions | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:187-familiars-and-corruption` — Familiars and Corruption | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:187-familiars-and-disease` — Familiars and Disease | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:19-grimoires` — Grimoires | referenceEntries | deferred | p. 19 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:19-memorising-spells` — Memorising Spells | referenceEntries | deferred | p. 19 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:19-second-sight` — Second Sight | referenceEntries | deferred | p. 19 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:190-environmental-saturation-effects` — Environmental Saturation Effects | referenceEntries | reference-only | p. 190 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:190-spellcasting-rules` — Spellcasting Rules | referenceEntries | reference-only | p. 190 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:190-spellcasting-rules` — Spellcasting Rules | referenceEntries | deferred | p. 190 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:191-chaotic-corruption-effects` — Chaotic Corruption Effects | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:191-necromantic-corruption-effects` — Necromantic Corruption Effects | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:192-environmental-rules` — Environmental Rules | referenceEntries | reference-only | p. 192 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:192-spellcasting-rules` — Spellcasting Rules | referenceEntries | reference-only | p. 192 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:193-natural-and-planned-leylines` — Natural and Planned Leylines | referenceEntries | reference-only | p. 193 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:194-amplification` — Amplification | referenceEntries | reference-only | p. 194 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:194-dampening` — Dampening | referenceEntries | reference-only | p. 194 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:194-refraction` — Refraction | referenceEntries | reference-only | p. 194 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:195-ogham-circles` — Ogham Circles | referenceEntries | reference-only | p. 195 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:197-corruption-of-leylines-and-waystones` — Corruption of Leylines and Waystones | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:197-leyline-junctions` — Leyline Junctions | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:198-corruption-of-nexuses-and-fulcrums` — Corruption of Nexuses and Fulcrums | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:198-saturated-junctions` — Saturated Junctions | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:198-warp-rifts` — Warp Rifts | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:192-environmental-rules` — Environmental Rules | referenceEntries | deferred | p. 192 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:192-spellcasting-rules` — Spellcasting Rules | referenceEntries | deferred | p. 192 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:193-natural-and-planned-leylines` — Natural and Planned Leylines | referenceEntries | deferred | p. 193 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:194-amplification` — Amplification | referenceEntries | deferred | p. 194 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:194-dampening` — Dampening | referenceEntries | deferred | p. 194 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:194-refraction` — Refraction | referenceEntries | deferred | p. 194 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:195-ogham-circles` — Ogham Circles | referenceEntries | deferred | p. 195 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:197-corruption-of-leylines-and-waystones` — Corruption of Leylines and Waystones | referenceEntries | deferred | p. 197 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:197-leyline-junctions` — Leyline Junctions | referenceEntries | deferred | p. 197 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:198-corruption-of-nexuses-and-fulcrums` — Corruption of Nexuses and Fulcrums | referenceEntries | deferred | p. 198 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:198-saturated-junctions` — Saturated Junctions | referenceEntries | deferred | p. 198 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:198-warp-rifts` — Warp Rifts | referenceEntries | deferred | p. 198 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:199-summary-of-arcane-phenomena` — summary of arcane phenomena | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-anatomy-of-a-spell` — Anatomy Of A Spell | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-casting-test` — Casting Test | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-critical-casting` — Critical Casting | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-duration` — Duration | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-fumbled-casting` — Fumbled Casting | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-magic-missiles` — Magic Missiles | referenceEntries | reference-only | p. 20 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:20-random-vortices` — Random Vortices | referenceEntries | reference-only | p. 20–21 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:21-advantage-and-magic` — Advantage and Magic | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:21-ingredients` — Ingredients | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:21-spellcasting-limitations` — Spellcasting Limitations | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:21-touch-spells-in-combat` — Touch Spells in Combat | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:20-anatomy-of-a-spell` — Anatomy Of A Spell | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:20-casting-test` — Casting Test | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:20-critical-casting` — Critical Casting | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:20-duration` — Duration | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:20-fumbled-casting` — Fumbled Casting | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:20-magic-missiles` — Magic Missiles | referenceEntries | deferred | p. 20 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:20-random-vortices` — Random Vortices | referenceEntries | deferred | p. 20–21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:21-advantage-and-magic` — Advantage and Magic | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:21-ingredients` — Ingredients | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:21-spellcasting-limitations` — Spellcasting Limitations | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:21-touch-spells-in-combat` — Touch Spells in Combat | referenceEntries | deferred | p. 21 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:21-vortex-movement-table` — Vortex Movement Table | referenceEntries | reference-only | p. 21 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:210-profile-egrimm-van-horstmann` — Egrimm Van Horstmann | referenceEntries | deferred | p. 210 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:213-profile-library-disc-of-tzeentch` — Library Disc Of Tzeentch | referenceEntries | deferred | p. 213 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
@@ -1545,79 +1545,79 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:213-profile-xiratp-the-one-who-reads` — Xirat’P – The One Who Reads | referenceEntries | deferred | p. 213 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:216-profile-mona-mimn-fimir-matriarch` — Mòna Mimn — Fimir Matriarch | referenceEntries | deferred | p. 216 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:217-a-bite-of-midges` — A Bite of Midges | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:217-bale-eye` — Bale Eye | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:217-bale-eye` — Bale Eye | referenceEntries | deferred | p. 217 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:217-despondent-slough` — Despondent Slough | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:217-inculcate-mizzle` — Inculcate Mizzle | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:217-mystic-mist` — Mystic Mist | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:217-o-mere-be-more` — O Mere Be More | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:217-turned-around` — Turned Around | referenceEntries | reference-only | p. 217 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:218-skin-of-bone-and-bark` — Skin Of Bone And Bark | referenceEntries | reference-only | p. 218 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-channelling-test` — Channelling Test | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-critical-channelling` — Critical Channelling | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-fumbled-channelling` — Fumbled Channelling | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-interruptions` — Interruptions | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-malignant-influences` — Malignant Influences | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-repelling-the-winds` — Repelling the Winds | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:22-warpstone` — Warpstone | referenceEntries | reference-only | p. 22 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:23-dispelling` — Dispelling | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:23-dispelling-persistent-spells` — Dispelling Persistent Spells | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:23-multiple-arcane-lores` — Multiple Arcane Lores | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:22-channelling-test` — Channelling Test | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:22-critical-channelling` — Critical Channelling | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:22-fumbled-channelling` — Fumbled Channelling | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:22-interruptions` — Interruptions | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:22-malignant-influences` — Malignant Influences | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:22-repelling-the-winds` — Repelling the Winds | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:22-warpstone` — Warpstone | referenceEntries | deferred | p. 22 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:23-dispelling` — Dispelling | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:23-dispelling-persistent-spells` — Dispelling Persistent Spells | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:23-multiple-arcane-lores` — Multiple Arcane Lores | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:23-overcast-table` — Overcast Table | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:23-overcasting` — Overcasting | referenceEntries | reference-only | p. 23 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:23-overcasting` — Overcasting | referenceEntries | deferred | p. 23 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:24-minor-miscast-table` — Minor Miscast Table | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:25-major-miscast-table` — Major Miscast Table | referenceEntries | reference-only | p. 25 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:26-new-arcane-spells` — New Arcane Spells | referenceEntries | reference-only | p. 26 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:27-anatomy-of-a-ritual` — Anatomy Of A Ritual | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:27-grimoires-and-rituals` — Grimoires and Rituals | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:27-rituals` — Rituals | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:26-new-arcane-spells` — New Arcane Spells | referenceEntries | deferred | p. 26 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:27-anatomy-of-a-ritual` — Anatomy Of A Ritual | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:27-grimoires-and-rituals` — Grimoires and Rituals | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:27-rituals` — Rituals | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:27-silence` — Silence | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:29-controlling-elementals` — Controlling Elementals | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:29-controlling-elementals` — Controlling Elementals | referenceEntries | deferred | p. 29 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:29-the-bloody-hidesman` — the Bloody Hidesman | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:30-construct` — Construct | referenceEntries | deferred | p. 30 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:30-construct-traits` — Construct Traits | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:31-create-familiar` — Create Familiar | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:31-minor-elementals` — Minor Elementals | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:31-minor-elementals` — Minor Elementals | referenceEntries | deferred | p. 31 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:34-brew-potion` — Brew Potion | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:34-gather-ingredients` — Gather Ingredients | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:34-improve-familiar` — Improve Familiar | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:34-new-endeavours` — New Endeavours | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:34-perform-ritual` — Perform Ritual | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:35-10-starting-skills` — 10 Starting Skills? | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:35-10-starting-skills` — 10 Starting Skills? | referenceEntries | deferred | p. 35 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:35-randomly-generating-new-careers` — Randomly Generating New Careers | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:39-alchemists-as-spellcasters` — Alchemists As Spellcasters | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:44-augury-int` — Augury (Int) | referenceEntries | reference-only | p. 44–45 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:39-alchemists-as-spellcasters` — Alchemists As Spellcasters | referenceEntries | deferred | p. 39 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:44-augury-int` — Augury (Int) | referenceEntries | deferred | p. 44–45 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:45-augury-table` — Augury Table | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:45-symbol-table` — Symbol Table | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:46-augury-and-existing-careers` — Augury and Existing Careers | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:46-augury-and-existing-careers` — Augury and Existing Careers | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:46-augury-spells-overcast-table` — Augury Spells Overcast Table | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:46-dreamwine` — Dreamwine | referenceEntries | reference-only | p. 46–47 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:46-intoxicants-and-augury` — Intoxicants and Augury | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:46-portentous-spells` — Portentous Spells | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:46-the-thaumodivinator` — The Thaumodivinator | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:47-other-intoxicants` — Other Intoxicants | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:47-psychometry-int` — Psychometry (Int) | referenceEntries | reference-only | p. 47–48 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:47-weirdroot` — Weirdroot | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:46-dreamwine` — Dreamwine | referenceEntries | deferred | p. 46–47 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:46-intoxicants-and-augury` — Intoxicants and Augury | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:46-portentous-spells` — Portentous Spells | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:46-the-thaumodivinator` — The Thaumodivinator | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:47-other-intoxicants` — Other Intoxicants | referenceEntries | deferred | p. 47 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:47-psychometry-int` — Psychometry (Int) | referenceEntries | deferred | p. 47–48 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:47-weirdroot` — Weirdroot | referenceEntries | deferred | p. 47 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:48-psychometery-result-table` — Psychometery Result Table | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:49-mundane-alchemy` — Mundane Alchemy | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:49-what-trade-does-what-job` — What Trade Does What Job? | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:50-caustic-or-corrosive-substances` — Caustic or Corrosive Substances | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:50-finding-a-customer` — Finding a Customer | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:50-isolating-basic-elements` — Isolating Basic Elements | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:50-magnetism` — Magnetism | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:50-optics` — Optics | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:50-producing-simple-compounds` — Producing Simple Compounds | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:49-mundane-alchemy` — Mundane Alchemy | referenceEntries | deferred | p. 49 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:49-what-trade-does-what-job` — What Trade Does What Job? | referenceEntries | deferred | p. 49 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:50-caustic-or-corrosive-substances` — Caustic or Corrosive Substances | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:50-finding-a-customer` — Finding a Customer | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:50-isolating-basic-elements` — Isolating Basic Elements | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:50-magnetism` — Magnetism | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:50-optics` — Optics | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:50-producing-simple-compounds` — Producing Simple Compounds | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:51-alchemical-products` — Alchemical Products | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:51-alchemical-products-2` — Alchemical Products | referenceEntries | reference-only | p. 51–52 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:52-al-kahest` — Al-kahest | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:52-high-alchemy` — High Alchemy | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:53-compass-of-meteoric-silver` — Compass of Meteoric Silver | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:53-leonardos-alchemical-powder` — Leonardo’s Alchemical Powder | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:53-prism-of-power` — Prism of Power | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:51-alchemical-products-2` — Alchemical Products | referenceEntries | deferred | p. 51–52 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:52-al-kahest` — Al-kahest | referenceEntries | deferred | p. 52 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:52-high-alchemy` — High Alchemy | referenceEntries | deferred | p. 52 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:53-compass-of-meteoric-silver` — Compass of Meteoric Silver | referenceEntries | deferred | p. 53 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:53-leonardos-alchemical-powder` — Leonardo’s Alchemical Powder | referenceEntries | deferred | p. 53 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `winds-of-magic:reference:53-prism-of-power` — Prism of Power | referenceEntries | deferred | p. 53 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:61-profile-ashamira-dib-hierophant-silver-3` — Ashamira Dib Hierophant (Silver 3) | referenceEntries | deferred | p. 61 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:62-banishment` — Banishment | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:62-blinding-light` — Blinding Light | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:62-clarity-of-thought` — Clarity of Thought | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:62-the-lore-of-light` — The Lore Of Light | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:62-the-lore-of-light` — The Lore Of Light | referenceEntries | deferred | p. 62 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:63-daemonbane` — Daemonbane | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:63-healing-light` — Healing Light | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:64-net-of-amyntok` — Net of Amyntok | referenceEntries | reference-only | p. 64 | Sourced book rule reference; no live-play automation. |
@@ -1626,7 +1626,7 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:73-profile-balthasar-gelt-alchemist-lord-gold-4` — Balthasar Gelt Alchemist Lord (Gold 4) | referenceEntries | deferred | p. 73 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:74-crucible-of-chamon` — Crucible of Chamon | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:74-enchant-weapon` — Enchant Weapon | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:74-the-lore-of-metal` — The Lore Of Metal | referenceEntries | reference-only | p. 74 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:74-the-lore-of-metal` — The Lore Of Metal | referenceEntries | deferred | p. 74 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:75-feather-of-lead` — Feather of Lead | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:75-fools-gold` — Fool’s Gold | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:75-forge-of-chamon` — Forge of Chamon | referenceEntries | reference-only | p. 75 | Sourced book rule reference; no live-play automation. |
@@ -1637,7 +1637,7 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:86-barkskin` — Barkskin | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:86-earthblood` — Earthblood | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:86-earthpool` — Earthpool | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:86-the-lore-of-life` — The Lore Of Life | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:86-the-lore-of-life` — The Lore Of Life | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:87-fat-of-the-land` — Fat of the Land | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:87-forest-of-thorns` — Forest of Thorns | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:88-lie-of-the-land` — Lie of the Land | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
@@ -1646,7 +1646,7 @@ Pack `winds-of-magic` · version 1.0.4
 | `winds-of-magic:reference:97-profile-raphael-julevno-grand-astromancer-gold-1` — Raphael Julevno Grand Astromancer (Gold 1) | referenceEntries | deferred | p. 97 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `winds-of-magic:reference:98-cerulean-shield` — Cerulean Shield | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:reference:98-comet-of-casandora` — Comet of Casandora | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `winds-of-magic:reference:98-the-lore-of-heavens` — The Lore Of Heavens | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
+| `winds-of-magic:reference:98-the-lore-of-heavens` — The Lore Of Heavens | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `winds-of-magic:reference:99-fates-fickle-fingers` — Fate’s Fickle Fingers | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
 | `winds-of-magic:skill:psychometry` — Psychometry | skills | adapted | p. 47 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `winds-of-magic:ritual:bind-monstrous-beast` — Bind Monstrous Beast | spells | adapted | p. 28 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -1712,7 +1712,7 @@ Pack `rough-nights` · version 1.0.2
 |---|---:|---:|---:|---:|---:|
 | background | 1 | 0 | 0 | 0 | 0 |
 | cults | 1 | 2 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 24 | 0 | 80 |
+| referenceEntries | 0 | 0 | 4 | 0 | 100 |
 | species | 0 | 1 | 0 | 0 | 0 |
 | tables | 1 | 1 | 0 | 0 | 0 |
 | talents | 0 | 1 | 0 | 0 | 0 |
@@ -1813,26 +1813,26 @@ Pack `rough-nights` · version 1.0.2
 | `rough-nights:reference:87-random-class-and-career-table` — Random Class And Career Table | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `rough-nights:reference:87-random-species-table` — Random Species Table | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
 | `rough-nights:reference:88-attributes-table` — Attributes Table | referenceEntries | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:90-strictures` — Evawn — Strictures | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:90-strictures-2` — Mabyn — Strictures | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:90-strictures-3` — Ringil — Strictures | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:91-al-zahr` — Al-Zahr | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:91-alvatafl` — Alvatafl | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:91-options-fast-pub-games` — Options: Fast Pub Games | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:91-pub-games-critical-results` — Pub games — Critical results | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:92-arm-wrestling` — Arm Wrestling | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:92-beast-among-the-tailors` — Beast Among The Tailors | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:92-bowls` — Bowls | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:93-bull-ring` — Bull Ring | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:93-cerevis` — Cerevis | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:94-darts` — Darts | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:94-dominoes` — Dominoes | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:94-dwile-flonking` — Dwile Flonking | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:94-middenball` — Middenball | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:95-muhlen` — Mühlen | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:95-pub-quizzes` — Pub Quizzes | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:95-scarlet-empress` — Scarlet Empress | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
-| `rough-nights:reference:95-stones` — Stones | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
+| `rough-nights:reference:90-strictures` — Evawn — Strictures | referenceEntries | deferred | p. 90 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:90-strictures-2` — Mabyn — Strictures | referenceEntries | deferred | p. 90 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:90-strictures-3` — Ringil — Strictures | referenceEntries | deferred | p. 90 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:91-al-zahr` — Al-Zahr | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:91-alvatafl` — Alvatafl | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:91-options-fast-pub-games` — Options: Fast Pub Games | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:91-pub-games-critical-results` — Pub games — Critical results | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:92-arm-wrestling` — Arm Wrestling | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:92-beast-among-the-tailors` — Beast Among The Tailors | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:92-bowls` — Bowls | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:93-bull-ring` — Bull Ring | referenceEntries | deferred | p. 93 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:93-cerevis` — Cerevis | referenceEntries | deferred | p. 93 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:94-darts` — Darts | referenceEntries | deferred | p. 94 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:94-dominoes` — Dominoes | referenceEntries | deferred | p. 94 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:94-dwile-flonking` — Dwile Flonking | referenceEntries | deferred | p. 94 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:94-middenball` — Middenball | referenceEntries | deferred | p. 94 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:95-muhlen` — Mühlen | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:95-pub-quizzes` — Pub Quizzes | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:95-scarlet-empress` — Scarlet Empress | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `rough-nights:reference:95-stones` — Stones | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `rough-nights:species:gnome` — Gnome | species | adapted | p. 88 | User-approved Fifth Edition starting Fate/Fortune, five Skills at +5 and separate Size instead of the old Size Talent. |
 | `rough-nights:table:gnome-careers` — Gnome Careers | tables | adapted | p. 87 | Printed Bawd result uses the revised Fifth Edition Knave Career profile. |
 | `rough-nights:talent:suffuse-with-ulgu` — Suffuse with Ulgu | talents | adapted | p. 88 | Fourth Edition per-rank bonus on the listed Tests omitted; printed limit and effects retained under the approved Fifth Edition adaptation. |
@@ -1850,7 +1850,7 @@ Pack `dwarf-guide` · version 1.0.3
 | careers | 6 | 4 | 0 | 0 | 0 |
 | gear | 30 | 0 | 8 | 0 | 0 |
 | origins | 0 | 11 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 107 | 0 | 0 |
+| referenceEntries | 0 | 0 | 21 | 0 | 86 |
 | runes | 63 | 8 | 0 | 0 | 0 |
 | skills | 2 | 1 | 0 | 0 | 0 |
 | tables | 11 | 0 | 0 | 0 | 0 |
@@ -1899,112 +1899,112 @@ Pack `dwarf-guide` · version 1.0.3
 | `dwarf-guide:origin:karaz-a-karak` — Karaz-a-Karak | origins | adapted | p. 48 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `dwarf-guide:origin:norse` — Norse | origins | adapted | p. 50 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `dwarf-guide:origin:zhufbar` — Zhufbar | origins | adapted | p. 49 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
-| `dwarf-guide:reference:100-bombard` — Bombard | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:100-cannon` — Cannon | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:100-mortar` — Mortar | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:100-swivel-gun` — Swivel Gun | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:101-volley-gun` — Volley Gun | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:102-weapon-installations` — Weapon Installations | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:100-bombard` — Bombard | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:100-cannon` — Cannon | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:100-mortar` — Mortar | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:100-swivel-gun` — Swivel Gun | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:101-volley-gun` — Volley Gun | referenceEntries | deferred | p. 101 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:102-weapon-installations` — Weapon Installations | referenceEntries | deferred | p. 102 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:103-installed-weapons` — Installed Weapons | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:104-aerial-bombs` — Aerial Bombs | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:104-breaker-cannon` — Breaker Cannon | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:104-brimstone-gun` — Brimstone Gun | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:104-steam-gun` — Steam Gun | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:104-tempest-cannon` — Tempest Cannon | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:104-thunder-cannon` — Thunder Cannon | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:104-aerial-bombs` — Aerial Bombs | referenceEntries | deferred | p. 104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:104-breaker-cannon` — Breaker Cannon | referenceEntries | deferred | p. 104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:104-brimstone-gun` — Brimstone Gun | referenceEntries | deferred | p. 104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:104-steam-gun` — Steam Gun | referenceEntries | deferred | p. 104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:104-tempest-cannon` — Tempest Cannon | referenceEntries | deferred | p. 104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:104-thunder-cannon` — Thunder Cannon | referenceEntries | deferred | p. 104 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:105-steamcraft` — Steamcraft | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:105-vehicle-rules` — Vehicle Rules | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:106-earth-borer-mining-drill` — Earth Borer Mining Drill | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:105-vehicle-rules` — Vehicle Rules | referenceEntries | deferred | p. 105 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:106-earth-borer-mining-drill` — Earth Borer Mining Drill | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:108-skycraft` — Skycraft | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:108-whats-mine-is-mine` — What’S Mine Is Mine | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:109-gyrocopter-and-variants` — Gyrocopter and variants | referenceEntries | reference-only | p. 109–110 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:110-aerial-bombs` — Aerial Bombs | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:110-war-balloon` — War Balloon | referenceEntries | reference-only | p. 110 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:111-watercraft` — Watercraft | referenceEntries | reference-only | p. 111–112 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:108-whats-mine-is-mine` — What’S Mine Is Mine | referenceEntries | deferred | p. 108 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:109-gyrocopter-and-variants` — Gyrocopter and variants | referenceEntries | deferred | p. 109–110 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:110-aerial-bombs` — Aerial Bombs | referenceEntries | deferred | p. 110 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:110-war-balloon` — War Balloon | referenceEntries | deferred | p. 110 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:111-watercraft` — Watercraft | referenceEntries | deferred | p. 111–112 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:112-watercraft` — Watercraft | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:113-gunboat` — Gunboat | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:113-steam-barge` — Steam Barge | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:114-dreadnought` — Dreadnought | referenceEntries | reference-only | p. 114–115 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:114-ironclad` — Ironclad | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:114-monitor` — Monitor | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:115-nautilus-submersible` — Nautilus Submersible | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:116-torpedo-2` — Torpedo | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:113-gunboat` — Gunboat | referenceEntries | deferred | p. 113 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:113-steam-barge` — Steam Barge | referenceEntries | deferred | p. 113 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:114-dreadnought` — Dreadnought | referenceEntries | deferred | p. 114–115 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:114-ironclad` — Ironclad | referenceEntries | deferred | p. 114 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:114-monitor` — Monitor | referenceEntries | deferred | p. 114 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:115-nautilus-submersible` — Nautilus Submersible | referenceEntries | deferred | p. 115 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:116-torpedo-2` — Torpedo | referenceEntries | deferred | p. 116 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:116-torpedo-misfires` — Torpedo Misfires | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:117-barrakul` — Barrakul | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:118-ghal-maraz` — Ghal Maraz | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:119-gnoldron` — Gnoldron | referenceEntries | reference-only | p. 119 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:119-grimmaz` — Grimmaz | referenceEntries | reference-only | p. 119–120 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:125-crafting-runes` — Crafting Runes | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:125-rule-of-three` — Rule of Three | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:126-flawed-creations` — Flawed Creations | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:126-rule-of-form` — Rule of Form | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:117-barrakul` — Barrakul | referenceEntries | deferred | p. 117 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:118-ghal-maraz` — Ghal Maraz | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:119-gnoldron` — Gnoldron | referenceEntries | deferred | p. 119 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:119-grimmaz` — Grimmaz | referenceEntries | deferred | p. 119–120 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:125-crafting-runes` — Crafting Runes | referenceEntries | deferred | p. 125 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:125-rule-of-three` — Rule of Three | referenceEntries | deferred | p. 125 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:126-flawed-creations` — Flawed Creations | referenceEntries | deferred | p. 126 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:126-rule-of-form` — Rule of Form | referenceEntries | deferred | p. 126 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:126-runic-flaws-table` — Runic Flaws Table | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:127-list-of-runes` — List Of Runes | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:128-armour-runes` — Armour Runes | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:130-protection-runes` — Protection Runes | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:132-doom-runes` — Doom Runes | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:137-cult-runic-magic` — Grungni — Cult Runic Magic | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:137-strictures` — Grungni — Strictures | referenceEntries | reference-only | p. 137 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:138-cult-runic-magic` — Valaya — Cult Runic Magic | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:138-strictures` — Valaya — Strictures | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:139-cult-runic-magic` — Grimnir — Cult Runic Magic | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:139-strictures` — Grimnir — Strictures | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:140-cult-runic-magic` — Gazul / Smednir — Cult Runic Magic | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:140-strictures` — Gazul / Smednir — Strictures | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:140-strictures-2` — Gazul / Smednir — Strictures | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:141-cult-runic-magic` — Thungni / Morgrim — Cult Runic Magic | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:141-cult-runic-magic-2` — Thungni / Morgrim — Cult Runic Magic | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:141-strictures` — Thungni / Morgrim — Strictures | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:141-strictures-2` — Thungni / Morgrim — Strictures | referenceEntries | reference-only | p. 141 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:142-strictures` — Ancestors — Strictures | referenceEntries | reference-only | p. 142 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:127-list-of-runes` — List Of Runes | referenceEntries | deferred | p. 127 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:128-armour-runes` — Armour Runes | referenceEntries | deferred | p. 128 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:130-protection-runes` — Protection Runes | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:132-doom-runes` — Doom Runes | referenceEntries | deferred | p. 132 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:137-cult-runic-magic` — Grungni — Cult Runic Magic | referenceEntries | deferred | p. 137 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:137-strictures` — Grungni — Strictures | referenceEntries | deferred | p. 137 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:138-cult-runic-magic` — Valaya — Cult Runic Magic | referenceEntries | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:138-strictures` — Valaya — Strictures | referenceEntries | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:139-cult-runic-magic` — Grimnir — Cult Runic Magic | referenceEntries | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:139-strictures` — Grimnir — Strictures | referenceEntries | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:140-cult-runic-magic` — Gazul / Smednir — Cult Runic Magic | referenceEntries | deferred | p. 140 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:140-strictures` — Gazul / Smednir — Strictures | referenceEntries | deferred | p. 140 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:140-strictures-2` — Gazul / Smednir — Strictures | referenceEntries | deferred | p. 140 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:141-cult-runic-magic` — Thungni / Morgrim — Cult Runic Magic | referenceEntries | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:141-cult-runic-magic-2` — Thungni / Morgrim — Cult Runic Magic | referenceEntries | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:141-strictures` — Thungni / Morgrim — Strictures | referenceEntries | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:141-strictures-2` — Thungni / Morgrim — Strictures | referenceEntries | deferred | p. 141 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:142-strictures` — Ancestors — Strictures | referenceEntries | deferred | p. 142 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:39-forenames` — Forenames | referenceEntries | reference-only | p. 39–40 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:41-place-of-origin` — Place of Origin | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:42-physical-attributes` — Physical Attributes | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:42-physical-attributes` — Physical Attributes | referenceEntries | deferred | p. 42 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:51-dwarf-random-class-and-career-table` — Dwarf Random Class And Career Table | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:52-dwarf-random-class-and-career-table` — Dwarf Random Class And Career Table | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:54-dwarf-career-updates` — Dwarf Career Updates | referenceEntries | reference-only | p. 54 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:54-reading-new-careers` — Reading New Careers | referenceEntries | reference-only | p. 54 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:55-dwarf-rogues` — Dwarf Rogues | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:55-dwarf-trappings` — Dwarf Trappings | referenceEntries | reference-only | p. 55 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:56-guild-engineer` — Guild Engineer | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:56-outcast-engineer` — Outcast Engineer | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:56-sky-pilot` — Sky Pilot | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:57-grudgemaster` — Grudgemaster | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:57-reckoner` — Reckoner | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:57-stoneshaper` — Stoneshaper | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:58-karak-miner` — Karak Miner | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:58-lodefinder` — Lodefinder | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:58-runebearer` — Runebearer | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:59-slayers-do-not-wear-armour` — Slayers Do Not Wear Armour | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:61-axefighter` — Axefighter | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:61-quarreller` — Quarreller | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:61-thunderer` — Thunderer | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:80-new-skills-and-talents` — New Skills And Talents | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:84-blood-grudge` — Blood Grudge | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:84-grudges` — Grudges | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:84-recording-grudges` — Recording Grudges | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:85-interacting-with-perpetrators` — Interacting with Perpetrators | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:85-new-grudges` — New Grudges | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:85-resolving-grudges` — Resolving Grudges | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:86-party-grudges` — Party Grudges | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:54-dwarf-career-updates` — Dwarf Career Updates | referenceEntries | deferred | p. 54 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:54-reading-new-careers` — Reading New Careers | referenceEntries | deferred | p. 54 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:55-dwarf-rogues` — Dwarf Rogues | referenceEntries | deferred | p. 55 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:55-dwarf-trappings` — Dwarf Trappings | referenceEntries | deferred | p. 55 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:56-guild-engineer` — Guild Engineer | referenceEntries | deferred | p. 56 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:56-outcast-engineer` — Outcast Engineer | referenceEntries | deferred | p. 56 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:56-sky-pilot` — Sky Pilot | referenceEntries | deferred | p. 56 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:57-grudgemaster` — Grudgemaster | referenceEntries | deferred | p. 57 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:57-reckoner` — Reckoner | referenceEntries | deferred | p. 57 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:57-stoneshaper` — Stoneshaper | referenceEntries | deferred | p. 57 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:58-karak-miner` — Karak Miner | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:58-lodefinder` — Lodefinder | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:58-runebearer` — Runebearer | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:59-slayers-do-not-wear-armour` — Slayers Do Not Wear Armour | referenceEntries | deferred | p. 59 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:61-axefighter` — Axefighter | referenceEntries | deferred | p. 61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:61-quarreller` — Quarreller | referenceEntries | deferred | p. 61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:61-thunderer` — Thunderer | referenceEntries | deferred | p. 61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:80-new-skills-and-talents` — New Skills And Talents | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:84-blood-grudge` — Blood Grudge | referenceEntries | deferred | p. 84 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:84-grudges` — Grudges | referenceEntries | deferred | p. 84 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:84-recording-grudges` — Recording Grudges | referenceEntries | deferred | p. 84 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:85-interacting-with-perpetrators` — Interacting with Perpetrators | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:85-new-grudges` — New Grudges | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:85-resolving-grudges` — Resolving Grudges | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:86-party-grudges` — Party Grudges | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:86-suggested-restitution-for-grudges` — Suggested Restitution For Grudges | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:86-unresolved-grudges` — Unresolved Grudges | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:91-gromril-armour` — Gromril armour | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:91-gromril-weapons` — Gromril weapons | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:86-unresolved-grudges` — Unresolved Grudges | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:91-gromril-armour` — Gromril armour | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:91-gromril-weapons` — Gromril weapons | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:92-crewed-rating` — Crewed (Rating) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:92-salvo-rating` — Salvo (Rating) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:92-spread-rating` — Spread (Rating) | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:93-dwarf-ammunition` — Dwarf Ammunition | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:93-dwarf-ammunition` — Dwarf Ammunition | referenceEntries | deferred | p. 93 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:93-melee-weapons` — Melee Weapons | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:94-ranged-weapons` — Ranged Weapons | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:95-dwarf-armour` — Dwarf Armour | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:95-dwarf-armour` — Dwarf Armour | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:95-dwarf-armour-2` — Dwarf Armour | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:95-lighting-2` — Lighting | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:96-ancestral-heirlooms-2` — Ancestral Heirlooms | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:reference:96-tools-and-materials` — Tools And Materials | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:98-dwarf-artillery` — Dwarf Artillery | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:98-misfires` — Misfires | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `dwarf-guide:reference:98-misfires-2` — Misfires | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
+| `dwarf-guide:reference:98-dwarf-artillery` — Dwarf Artillery | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:98-misfires` — Misfires | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `dwarf-guide:reference:98-misfires-2` — Misfires | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `dwarf-guide:reference:99-siege-weapons` — Siege Weapons | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
 | `dwarf-guide:rune:doom-rune-of-hearth-and-home` — Rune of Hearth and Home | runes | adapted | p. 132 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `dwarf-guide:rune:doom-rune-of-oath-and-steel` — Rune of Oath and Steel | runes | adapted | p. 132 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -2039,7 +2039,7 @@ Pack `high-elf` · version 1.0.3
 | careers | 2 | 4 | 0 | 0 | 0 |
 | gear | 8 | 3 | 12 | 0 | 0 |
 | origins | 0 | 11 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 81 | 0 | 0 |
+| referenceEntries | 0 | 0 | 29 | 0 | 52 |
 | spells | 32 | 27 | 0 | 0 | 0 |
 | tables | 0 | 5 | 0 | 0 | 0 |
 | talents | 5 | 2 | 0 | 0 | 0 |
@@ -2102,86 +2102,86 @@ Pack `high-elf` · version 1.0.3
 | `high-elf:origin:tiranoc` — Tiranoc | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `high-elf:origin:yvresse` — Yvresse | origins | adapted | p. 55 | Printed regional starting allocations adapted to Fifth Edition five Skills at +5 and native-language rules. |
 | `high-elf:reference:100-smith-priest-of-vaul-printed-career` — Smith-priest of Vaul — printed Career | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:101-sacrifices` — Vaul — Sacrifices | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:101-sacrifices` — Vaul — Sacrifices | referenceEntries | deferred | p. 101 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:101-talent-cadai-meditation` — Cadai Meditation | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:101-talent-mind-over-body` — Mind over Body | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:101-tenets-of-vaul` — Tenets Of Vaul | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:101-tenets-of-vaul` — Tenets Of Vaul | referenceEntries | deferred | p. 101 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:104-storm-weaver-printed-career` — Storm Weaver — printed Career | referenceEntries | reference-only | p. 104 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:105-sacrifices` — Mathlann — Sacrifices | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:105-sacrifices` — Mathlann — Sacrifices | referenceEntries | deferred | p. 105 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:105-talent-eye-of-the-storm` — Eye of the Storm | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:105-tenets-of-mathlann` — Tenets Of Mathlann | referenceEntries | reference-only | p. 105 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:105-tenets-of-mathlann` — Tenets Of Mathlann | referenceEntries | deferred | p. 105 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:108-loremaster-of-hoeth-printed-career` — Loremaster of Hoeth — printed Career | referenceEntries | reference-only | p. 108 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:109-new-talent-sanctuary-of-the-mind` — Sanctuary of the Mind | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:109-sacrifices` — Hoeth — Sacrifices | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:109-tenets-of-hoeth` — Tenets Of Hoeth | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:112-beseeching-atharti` — Beseeching Atharti | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:112-dark-deals-with-slaanesh` — Dark Deals with Slaanesh | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:118-instigating-intrigue` — Instigating Intrigue | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:118-intriguing-options` — Intriguing Options | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:118-players-and-intrigues` — Players And Intrigues | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:118-the-process-of-an-intrigue` — The Process of an Intrigue | referenceEntries | reference-only | p. 118 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:119-deciding-existing-agendas` — Deciding Existing Agendas | referenceEntries | reference-only | p. 119 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:119-step-1-decide-the-agenda` — Step 1 — Decide the Agenda | referenceEntries | reference-only | p. 119 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:119-step-2-the-complexity-of-intrigue` — Step 2 — The Complexity of Intrigue | referenceEntries | reference-only | p. 119 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:120-step-3-the-tactics-of-persuasion` — Step 3 — The Tactics of Persuasion | referenceEntries | reference-only | p. 120–121 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:109-sacrifices` — Hoeth — Sacrifices | referenceEntries | deferred | p. 109 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:109-tenets-of-hoeth` — Tenets Of Hoeth | referenceEntries | deferred | p. 109 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:112-beseeching-atharti` — Beseeching Atharti | referenceEntries | deferred | p. 112 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:112-dark-deals-with-slaanesh` — Dark Deals with Slaanesh | referenceEntries | deferred | p. 112 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:118-instigating-intrigue` — Instigating Intrigue | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:118-intriguing-options` — Intriguing Options | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:118-players-and-intrigues` — Players And Intrigues | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:118-the-process-of-an-intrigue` — The Process of an Intrigue | referenceEntries | deferred | p. 118 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:119-deciding-existing-agendas` — Deciding Existing Agendas | referenceEntries | deferred | p. 119 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:119-step-1-decide-the-agenda` — Step 1 — Decide the Agenda | referenceEntries | deferred | p. 119 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:119-step-2-the-complexity-of-intrigue` — Step 2 — The Complexity of Intrigue | referenceEntries | deferred | p. 119 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:120-step-3-the-tactics-of-persuasion` — Step 3 — The Tactics of Persuasion | referenceEntries | deferred | p. 120–121 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:121-common-forms-of-leverage` — Common Forms Of Leverage | referenceEntries | reference-only | p. 121–122 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:122-discovering-leverage-table` — Discovering Leverage Table | referenceEntries | reference-only | p. 122–123 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:123-intrigue-endeavour` — Intrigue Endeavour | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:123-step-4-the-persuasion-test` — Step 4 — The Persuasion Test | referenceEntries | reference-only | p. 123 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:123-step-4-the-persuasion-test` — Step 4 — The Persuasion Test | referenceEntries | deferred | p. 123 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:124-intrigue-development-table` — Intrigue Development Table | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:124-target-suspects-table` — Target Suspects Table | referenceEntries | reference-only | p. 124 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:125-is-the-intrigue-concluded` — Is The Intrigue Concluded? | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:125-step-5-developing-the-intrigue` — Step 5 — Developing the Intrigue | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:125-is-the-intrigue-concluded` — Is The Intrigue Concluded? | referenceEntries | deferred | p. 125 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:125-step-5-developing-the-intrigue` — Step 5 — Developing the Intrigue | referenceEntries | deferred | p. 125 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:33-weapons` — Weapons | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:34-armour` — Armour | referenceEntries | reference-only | p. 34–35 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:36-herbs-and-elven-markets` — Herbs and Elven Markets | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:36-narinocha-wine` — Narinocha Wine | referenceEntries | reference-only | p. 36–37 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:37-enchanted-items` — Enchanted Items | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:40-dragonblade-ram` — Dragonblade Ram | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:40-dragonblade-ram` — Dragonblade Ram | referenceEntries | deferred | p. 40 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:40-high-elf-warships` — High Elf Warships | referenceEntries | reference-only | p. 40 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:42-high-elf-merchant-ships` — High Elf Merchant Ships | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:46-factors-influencing-yenlui` — Factors Influencing Yenlui | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:46-tracking-yenlui` — Tracking Yenlui | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:46-tracking-yenlui` — Tracking Yenlui | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:47-effects-of-yenlui` — Effects Of Yenlui | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:47-effects-of-yenlui-2` — Effects Of Yenlui | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:47-effects-of-yenlui-3` — Effects Of Yenlui | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:47-the-effects-of-yenlui` — The Effects of Yenlui | referenceEntries | reference-only | p. 47 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:48-benefits-of-obsession` — Benefits of Obsession | referenceEntries | reference-only | p. 48–49 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:47-the-effects-of-yenlui` — The Effects of Yenlui | referenceEntries | deferred | p. 47 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:48-benefits-of-obsession` — Benefits of Obsession | referenceEntries | deferred | p. 48–49 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:48-example-obsessions` — Example Obsessions | referenceEntries | reference-only | p. 48 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:49-dreams` — Dreams | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:49-negative-effects-of-obsession` — Negative Effects of Obsession | referenceEntries | reference-only | p. 49 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:49-dreams` — Dreams | referenceEntries | deferred | p. 49 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:49-negative-effects-of-obsession` — Negative Effects of Obsession | referenceEntries | deferred | p. 49 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:50-example-dreams` — Example Dreams | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `high-elf:reference:51-the-madness-of-khaine` — The Madness Of Khaine | referenceEntries | reference-only | p. 51 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:52-centuries-of-experience` — Centuries of Experience | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:52-elders-of-the-asur` — Elders Of The Asur | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:52-centuries-of-experience` — Centuries of Experience | referenceEntries | deferred | p. 52 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:52-elders-of-the-asur` — Elders Of The Asur | referenceEntries | deferred | p. 52 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:53-experience-of-the-elders` — Experience Of The Elders | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:57-species-skills-and-talents` — Species Skills and Talents | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:58-high-elf-careers` — High Elf Careers | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:57-species-skills-and-talents` — Species Skills and Talents | referenceEntries | deferred | p. 57 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:58-high-elf-careers` — High Elf Careers | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:59-random-class-and-career-table` — Random Class And Career Table | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:60-cavalryman` — Cavalryman | referenceEntries | reference-only | p. 60 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:60-pit-fighter` — Pit Fighter | referenceEntries | reference-only | p. 60 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:60-soldier` — Soldier | referenceEntries | reference-only | p. 60 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:61-noble` — Noble | referenceEntries | reference-only | p. 61 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:62-artisan` — Artisan | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:63-seaman` — Seaman | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:68-sword-dancing-tests` — Sword-dancing Tests | referenceEntries | reference-only | p. 68 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:71-way-of-the-shadow` — Way of the Shadow | referenceEntries | reference-only | p. 71 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:78-training-of-a-mage` — Training of a Mage | referenceEntries | reference-only | p. 78 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:79-display-basic-proficiency` — Display Basic Proficiency | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:79-learn-the-lores` — Learn the Lores | referenceEntries | reference-only | p. 79 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:80-ready-at-last` — Ready at Last? | referenceEntries | reference-only | p. 80 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:81-elven-arcane-spells` — Elven Arcane Spells | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:83-fifth-level-careers` — Fifth Level Careers | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:83-skill-channelling-qhaysh-wp-advanced-unique` — Channelling (Qhaysh) (WP) advanced, unique | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:84-casting-high-magic` — Casting High Magic | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:84-magical-burnout` — Magical Burnout | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:84-runes-of-the-cadai` — Runes Of The Cadai | referenceEntries | reference-only | p. 84 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:85-high-magic-questions-and-answers` — High Magic Questions And Answers | referenceEntries | reference-only | p. 85 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:86-the-lore-of-high-magic` — The Lore Of High Magic | referenceEntries | reference-only | p. 86 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:60-cavalryman` — Cavalryman | referenceEntries | deferred | p. 60 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:60-pit-fighter` — Pit Fighter | referenceEntries | deferred | p. 60 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:60-soldier` — Soldier | referenceEntries | deferred | p. 60 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:61-noble` — Noble | referenceEntries | deferred | p. 61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:62-artisan` — Artisan | referenceEntries | deferred | p. 62 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:63-seaman` — Seaman | referenceEntries | deferred | p. 63 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:68-sword-dancing-tests` — Sword-dancing Tests | referenceEntries | deferred | p. 68 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:71-way-of-the-shadow` — Way of the Shadow | referenceEntries | deferred | p. 71 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:78-training-of-a-mage` — Training of a Mage | referenceEntries | deferred | p. 78 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:79-display-basic-proficiency` — Display Basic Proficiency | referenceEntries | deferred | p. 79 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:79-learn-the-lores` — Learn the Lores | referenceEntries | deferred | p. 79 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:80-ready-at-last` — Ready at Last? | referenceEntries | deferred | p. 80 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:81-elven-arcane-spells` — Elven Arcane Spells | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:83-fifth-level-careers` — Fifth Level Careers | referenceEntries | deferred | p. 83 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:83-skill-channelling-qhaysh-wp-advanced-unique` — Channelling (Qhaysh) (WP) advanced, unique | referenceEntries | deferred | p. 83 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:84-casting-high-magic` — Casting High Magic | referenceEntries | deferred | p. 84 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:84-magical-burnout` — Magical Burnout | referenceEntries | deferred | p. 84 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:84-runes-of-the-cadai` — Runes Of The Cadai | referenceEntries | deferred | p. 84 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:85-high-magic-questions-and-answers` — High Magic Questions And Answers | referenceEntries | deferred | p. 85 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:86-the-lore-of-high-magic` — The Lore Of High Magic | referenceEntries | deferred | p. 86 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:reference:90-mage-printed-career` — Mage — printed Career | referenceEntries | reference-only | p. 90 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:99-priest-careers` — Priest Careers | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:99-sacrifices` — Elf priests — Sacrifices | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
-| `high-elf:reference:99-tenets` — Tenets | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
+| `high-elf:reference:99-priest-careers` — Priest Careers | referenceEntries | deferred | p. 99 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:99-sacrifices` — Elf priests — Sacrifices | referenceEntries | deferred | p. 99 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `high-elf:reference:99-tenets` — Tenets | referenceEntries | deferred | p. 99 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `high-elf:spell:apotheosis` — Apotheosis | spells | adapted | p. 86 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `high-elf:spell:arcane-insight` — Arcane Insight | spells | adapted | p. 110 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `high-elf:spell:arcane-unforging` — Arcane Unforging | spells | adapted | p. 86 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -2230,7 +2230,7 @@ Pack `blood-bramble` · version 1.0.2
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | gear | 1 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 2 | 0 | 6 |
+| referenceEntries | 0 | 0 | 1 | 0 | 7 |
 | spells | 14 | 10 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2250,7 +2250,7 @@ Pack `blood-bramble` · version 1.0.2
 | `blood-bramble:reference:19-profile-old-mar-of-deisdorf-hedge-master-brass-3` — Old Mar Of Deisdorf Hedge Master (Brass 3) | referenceEntries | deferred | p. 19 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `blood-bramble:reference:20-profile-toll-jagerfund-witch-hunter-silver-3` — Toll Jagerfund Witch Hunter (Silver 3) | referenceEntries | deferred | p. 20 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `blood-bramble:reference:21-profile-marius-childers-witch-former-merchant-silver-3` — Marius Childers Witch, Former Merchant (Silver 3) | referenceEntries | deferred | p. 21 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `blood-bramble:reference:6-the-lore-of-hedgecraft` — The Lore of Hedgecraft | referenceEntries | reference-only | p. 6 | Sourced book rule reference; no live-play automation. |
+| `blood-bramble:reference:6-the-lore-of-hedgecraft` — The Lore of Hedgecraft | referenceEntries | deferred | p. 6 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `blood-bramble:spell:bonesnapper` — Bonesnapper | spells | adapted | p. 12 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `blood-bramble:spell:congeal` — Congeal | spells | adapted | p. 13 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
 | `blood-bramble:spell:curse-of-the-treacherous-tongue` — Curse of the Treacherous Tongue | spells | adapted | p. 13 | Printed Test Difficulty modifiers converted to Fifth Edition SL modifiers (core Appendix I). |
@@ -2273,7 +2273,7 @@ Pack `deft-steps` · version 1.0.4
 | careers | 1 | 8 | 0 | 0 | 0 |
 | cults | 0 | 1 | 0 | 0 | 0 |
 | gear | 11 | 4 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 146 | 0 | 22 |
+| referenceEntries | 0 | 0 | 76 | 0 | 92 |
 | spells | 27 | 5 | 0 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2301,36 +2301,36 @@ Pack `deft-steps` · version 1.0.4
 | `deft-steps:gear:caltrops-12` — Caltrops (12) | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
 | `deft-steps:gear:glass-cutter` — Glass Cutter | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
 | `deft-steps:gear:thin-jimmy` — Thin Jimmy | gear | adapted | p. 32 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). |
-| `deft-steps:reference:100-ambush` — Ambush | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:100-ambush` — Ambush | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:100-outlaw-income-endeavour-complications` — Outlaw Income Endeavour Complications | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:100-robbery` — Robbery | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:100-robbery` — Robbery | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:100-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:101-forming-an-outlaw-band` — Forming an Outlaw Band | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:102-detailing-outlaw-bands` — Detailing outlaw bands | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:101-forming-an-outlaw-band` — Forming an Outlaw Band | referenceEntries | deferred | p. 101 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:102-detailing-outlaw-bands` — Detailing outlaw bands | referenceEntries | deferred | p. 102 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:102-outlaw-traits` — Outlaw Traits | referenceEntries | reference-only | p. 102 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-outlaw-chief-traits` — Outlaw Chief Traits | referenceEntries | reference-only | p. 103 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:103-profile-outlaw-brass-2` — Outlaw Brass 2 | referenceEntries | deferred | p. 103 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:103-profile-outlaw-chief-brass-4` — Outlaw Chief Brass 4 | referenceEntries | deferred | p. 103 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:106-conflicts-of-jurisdiction` — Conflicts Of Jurisdiction | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:106-reward-conditions` — Reward Conditions | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:106-warrants-wanted-posters` — Warrants & Wanted Posters | referenceEntries | reference-only | p. 106 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:107-capture` — Capture | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:107-kill` — Kill | referenceEntries | reference-only | p. 107–108 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:107-track` — Track | referenceEntries | reference-only | p. 107 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:106-conflicts-of-jurisdiction` — Conflicts Of Jurisdiction | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:106-reward-conditions` — Reward Conditions | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:106-warrants-wanted-posters` — Warrants & Wanted Posters | referenceEntries | deferred | p. 106 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:107-capture` — Capture | referenceEntries | deferred | p. 107 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:107-kill` — Kill | referenceEntries | deferred | p. 107–108 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:107-track` — Track | referenceEntries | deferred | p. 107 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:108-profile-a-typical-bounty-hunter-silver-3` — A Typical Bounty Hunter Silver 3 | referenceEntries | deferred | p. 108 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:109-bounty-hunter-warrants` — Bounty Hunter Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:109-random-warrants` — Random Warrants | referenceEntries | reference-only | p. 109 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:109-random-warrants` — Random Warrants | referenceEntries | deferred | p. 109 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:111-profile-brunner-bounty-hunter-general` — Brunner Bounty Hunter General | referenceEntries | deferred | p. 111 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:112-wilderness-travel` — Wilderness Travel | referenceEntries | reference-only | p. 112 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:113-provisions` — Provisions | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:113-travel` — Travel | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:112-wilderness-travel` — Wilderness Travel | referenceEntries | deferred | p. 112 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:113-provisions` — Provisions | referenceEntries | deferred | p. 113 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:113-travel` — Travel | referenceEntries | deferred | p. 113 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:113-travel-stages-and-distances` — Travel Stages And Distances | referenceEntries | reference-only | p. 113 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:114-precipitation` — Precipitation | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:114-temperature` — Temperature | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:114-precipitation` — Precipitation | referenceEntries | deferred | p. 114 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:114-temperature` — Temperature | referenceEntries | deferred | p. 114 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:114-weather-table-2` — Weather Table | referenceEntries | reference-only | p. 114 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:115-tents` — Tents | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:115-visibility` — Visibility | referenceEntries | reference-only | p. 115 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:116-wilderness-travel-events` — Wilderness Travel Events | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:115-tents` — Tents | referenceEntries | deferred | p. 115 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:115-visibility` — Visibility | referenceEntries | deferred | p. 115 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:116-wilderness-travel-events` — Wilderness Travel Events | referenceEntries | deferred | p. 116 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:116-wilderness-travel-events-table-1-light-woodland-hills-and-temperate-plains` — Wilderness Travel Events Table 1 - Light Woodland, Hills, And Temperate Plains | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:117-wilderness-travel-events-table-2-mountains` — Wilderness Travel Events Table 2 - Mountains | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:117-wilderness-travel-events-table-3-deep-forest` — Wilderness Travel Events Table 3 - Deep Forest | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
@@ -2361,114 +2361,114 @@ Pack `deft-steps` · version 1.0.4
 | `deft-steps:reference:127-recuperate-endeavour` — Recuperate Endeavour | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:127-trap-endeavour` — Trap Endeavour | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:127-watch-endeavour` — Watch Endeavour | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:13-blessings` — Blessings | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:13-luck-out` — Luck Out? | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:13-miracles` — Miracles | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:13-blessings` — Blessings | referenceEntries | deferred | p. 13 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:13-luck-out` — Luck Out? | referenceEntries | deferred | p. 13 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:13-miracles` — Miracles | referenceEntries | deferred | p. 13 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:130-hunting-as-endeavour` — Hunting As Endeavour | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:131-the-value-of-game` — The Value Of Game | referenceEntries | reference-only | p. 131 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:132-animals-and-equipment` — Animals and Equipment | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:132-hunting-considerations` — Hunting Considerations | referenceEntries | reference-only | p. 132 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:133-hunting-traits` — Hunting Traits | referenceEntries | reference-only | p. 133 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:133-hunting-traits` — Hunting Traits | referenceEntries | deferred | p. 133 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:133-profile-grootscher-marsh-hound` — Grootscher Marsh Hound | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:133-profile-hochland-lockhund` — Hochland Lockhund | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:133-profile-nordlander-bamse` — Nordlander Bamse | referenceEntries | deferred | p. 133 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:134-hunting-traits` — Hunting Traits | referenceEntries | reference-only | p. 134 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:134-hunting-traits` — Hunting Traits | referenceEntries | deferred | p. 134 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:134-profile-arabyan-redhawk` — Arabyan Redhawk | referenceEntries | deferred | p. 134 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:134-profile-dove-hawk` — Dove Hawk | referenceEntries | deferred | p. 134 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:15-ranalds-gamble` — Ranald’S Gamble | referenceEntries | reference-only | p. 15 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:27-expectations-and-complications` — Expectations and Complications | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:27-pickpocket-skills-talents-and-trappings` — Pickpocket Skills, Talents, And Trappings | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:15-ranalds-gamble` — Ranald’S Gamble | referenceEntries | deferred | p. 15 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:27-expectations-and-complications` — Expectations and Complications | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:27-pickpocket-skills-talents-and-trappings` — Pickpocket Skills, Talents, And Trappings | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:27-pickpocket-success-table` — Pickpocket Success Table | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:27-pilfering-in-the-game` — Pilfering in the Game | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:27-spotting-a-pickpocket-at-work` — Spotting a Pickpocket at Work | referenceEntries | reference-only | p. 27 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:27-pilfering-in-the-game` — Pilfering in the Game | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:27-spotting-a-pickpocket-at-work` — Spotting a Pickpocket at Work | referenceEntries | deferred | p. 27 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:28-incriminating-artefact` — Incriminating Artefact | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:28-the-contents-of-a-purse` — The Contents Of A Purse | referenceEntries | reference-only | p. 28 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:29-victim-quirk-table` — Victim Quirk Table | referenceEntries | reference-only | p. 29 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:30-burglar-skills-talents-and-trappings` — Burglar Skills, Talents, And Trappings | referenceEntries | reference-only | p. 30 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:30-burglar-skills-talents-and-trappings` — Burglar Skills, Talents, And Trappings | referenceEntries | deferred | p. 30 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:31-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:31-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:31-thieves-in-downtime` — Thieves In Downtime | referenceEntries | reference-only | p. 31 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:32-caltrops` — Caltrops | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:32-crampons` — Crampons | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:31-thieves-in-downtime` — Thieves In Downtime | referenceEntries | deferred | p. 31 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:32-caltrops` — Caltrops | referenceEntries | deferred | p. 32 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:32-crampons` — Crampons | referenceEntries | deferred | p. 32 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:32-tools-of-the-trade` — Tools Of The Trade | referenceEntries | reference-only | p. 32 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:33-glass-cutting-success-table` — Glass Cutting Success Table | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:33-steel-mummit` — Steel Mummit | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:33-steel-mummit` — Steel Mummit | referenceEntries | deferred | p. 33 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:33-steel-mummit-success-table` — Steel Mummit Success Table | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:33-telescopic-stick` — Telescopic Stick | referenceEntries | reference-only | p. 33 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:34-graverobbery-in-operation` — Graverobbery in Operation | referenceEntries | reference-only | p. 34 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:33-telescopic-stick` — Telescopic Stick | referenceEntries | deferred | p. 33 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:34-graverobbery-in-operation` — Graverobbery in Operation | referenceEntries | deferred | p. 34 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:34-profile-black-guard-of-morr-knight-silver-5` — Black Guard Of Morr (Knight) (Silver 5) | referenceEntries | deferred | p. 34 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:35-crypt-complications` — Crypt Complications | referenceEntries | reference-only | p. 35 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:36-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:36-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 36 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:37-creepy-customer-table` — Creepy Customer Table | referenceEntries | reference-only | p. 37 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:38-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:38-false-promises` — False Promises | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:38-false-promises` — False Promises | referenceEntries | deferred | p. 38 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:38-the-income-endeavour` — The Income Endeavour | referenceEntries | reference-only | p. 38 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:39-charlatan-income-endeavour-complications` — Charlatan Income Endeavour Complications | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:39-endeavour-complications` — Endeavour Complications | referenceEntries | reference-only | p. 39 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:41-fencing-in-downtime` — Fencing in Downtime | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:41-fencing-lessons` — Fencing Lessons | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:41-file-off-the-markings` — File Off the Markings | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:41-fencing-in-downtime` — Fencing in Downtime | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:41-fencing-lessons` — Fencing Lessons | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:41-file-off-the-markings` — File Off the Markings | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:41-item-recognition` — Item Recognition | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:41-safer-to-scrap-it` — Safer to Scrap It | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:41-take-a-trip` — Take a Trip | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:42-a-careful-kind-of-crime` — A Careful Kind of Crime | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:41-safer-to-scrap-it` — Safer to Scrap It | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:41-take-a-trip` — Take a Trip | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:42-a-careful-kind-of-crime` — A Careful Kind of Crime | referenceEntries | deferred | p. 42 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:42-random-business-table` — Random Business Table | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:42-random-businesses` — Random Businesses | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:42-trappings` — Trappings | referenceEntries | reference-only | p. 42 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:42-random-businesses` — Random Businesses | referenceEntries | deferred | p. 42 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:42-trappings` — Trappings | referenceEntries | deferred | p. 42 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:43-black-market` — Black Market | referenceEntries | reference-only | p. 43 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:43-criminal-endeavours` — Criminal Endeavours | referenceEntries | reference-only | p. 43 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:43-gambling-den` — Gambling Den | referenceEntries | reference-only | p. 43 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:43-plant-identities` — Plant Identities | referenceEntries | reference-only | p. 43 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:43-whisper-campaign` — Whisper Campaign | referenceEntries | reference-only | p. 43 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:45-bogus-documents-and-seals` — Bogus Documents and Seals | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:45-counterfeit-coins` — Counterfeit Coins | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:45-fake-it-til-you-make-it` — Fake It ‘Til You Make It | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:45-forged-artwork` — Forged Artwork | referenceEntries | reference-only | p. 45 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:46-casual-contacts` — Casual Contacts | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:46-contacts` — Contacts | referenceEntries | reference-only | p. 46 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:45-bogus-documents-and-seals` — Bogus Documents and Seals | referenceEntries | deferred | p. 45 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:45-counterfeit-coins` — Counterfeit Coins | referenceEntries | deferred | p. 45 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:45-fake-it-til-you-make-it` — Fake It ‘Til You Make It | referenceEntries | deferred | p. 45 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:45-forged-artwork` — Forged Artwork | referenceEntries | deferred | p. 45 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:46-casual-contacts` — Casual Contacts | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:46-contacts` — Contacts | referenceEntries | deferred | p. 46 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:47-profile-fence-silver-2` — Fence (Silver 2) | referenceEntries | deferred | p. 47 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:47-profile-forger-silver-1` — Forger (Silver 1) | referenceEntries | deferred | p. 47 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:48-profile-bawd-brass-3` — Bawd (Brass 3) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:48-profile-racketeer-brass-5` — Racketeer (Brass 5) | referenceEntries | deferred | p. 48 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:49-profile-charlatan-brass-5` — Charlatan (Brass 5) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:49-profile-safe-house-owner-townsman-silver-2` — Safe House Owner (Townsman) (Silver 2) | referenceEntries | deferred | p. 49 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:50-define-the-contact` — Define the Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:50-define-the-contact` — Define the Contact | referenceEntries | deferred | p. 50 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:50-new-endeavour-establishing-a-contact` — New Endeavour: Establishing A Contact | referenceEntries | reference-only | p. 50 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:52-contact-quality-table` — Contact Quality Table | referenceEntries | reference-only | p. 52 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:53-contact-development-table` — Contact Development Table | referenceEntries | reference-only | p. 53 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:55-profile-august-sternwachter-master-fence-ex-noble-silver-3` — August Sternwachter Master Fence, Ex-Noble (Silver 3) | referenceEntries | deferred | p. 55 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:58-assemble-the-gang` — Assemble the Gang | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:58-build-gang` — Build Gang | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:58-assemble-the-gang` — Assemble the Gang | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:58-build-gang` — Build Gang | referenceEntries | deferred | p. 58 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:58-new-endeavours` — New Endeavours | referenceEntries | reference-only | p. 58 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:59-criminal-enterprises` — Criminal Enterprises | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:59-maintain-influence` — Maintain Influence | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:59-organising-crime` — Organising Crime | referenceEntries | reference-only | p. 59 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:60-criminal-events` — Criminal Events | referenceEntries | reference-only | p. 60–61 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:59-maintain-influence` — Maintain Influence | referenceEntries | deferred | p. 59 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:59-organising-crime` — Organising Crime | referenceEntries | deferred | p. 59 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:60-criminal-events` — Criminal Events | referenceEntries | deferred | p. 60–61 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:64-profile-albrecht-the-fish-gang-boss-silver-3-organisation-level-2` — Albrecht ‘The Fish’ — Gang Boss Silver 3 - Organisation Level 2 | referenceEntries | deferred | p. 64 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:65-profile-gunna-von-sperren-smuggler-king-silver-3-organisation-level-3` — Gunna Von Sperren — Smuggler King Silver 3 - Organisation Level 3 | referenceEntries | deferred | p. 65 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:67-criminal-enterprise-perks` — Criminal Enterprise Perks | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:81-the-great-horned-helm` — The Great Horned Helm | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:81-the-great-horned-helm` — The Great Horned Helm | referenceEntries | deferred | p. 81 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:83-profile-father-pedragar-priest-of-taal` — Father Pedragar, Priest Of Taal | referenceEntries | deferred | p. 83 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
-| `deft-steps:reference:87-curse-of-taal` — Curse Of Taal | referenceEntries | reference-only | p. 87 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:92-determining-watch-presence` — Determining Watch Presence | referenceEntries | reference-only | p. 92 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:93-crimes-and-the-watch` — Crimes and the Watch | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:87-curse-of-taal` — Curse Of Taal | referenceEntries | deferred | p. 87 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:92-determining-watch-presence` — Determining Watch Presence | referenceEntries | deferred | p. 92 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:93-crimes-and-the-watch` — Crimes and the Watch | referenceEntries | deferred | p. 93 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:93-profile-watch-sergeant-silver-3` — Watch Sergeant (Silver 3) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:93-profile-watchman-silver-1` — Watchman (Silver 1) | referenceEntries | deferred | p. 93 | Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation. |
 | `deft-steps:reference:93-watch-presence` — Watch Presence | referenceEntries | reference-only | p. 93 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:95-fairer-hearings` — Fairer Hearings | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:95-rough-justice` — Rough Justice | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:96-typical-punishments` — Typical Punishments | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:95-fairer-hearings` — Fairer Hearings | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:95-rough-justice` — Rough Justice | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:96-typical-punishments` — Typical Punishments | referenceEntries | deferred | p. 96 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:97-endeavours-in-gaol` — Endeavours in Gaol | referenceEntries | reference-only | p. 97 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:97-events-in-gaol` — Events in Gaol | referenceEntries | reference-only | p. 97 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:97-passing-the-time` — Passing the Time | referenceEntries | reference-only | p. 97 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:97-the-intervention-of-patrons` — The Intervention of Patrons | referenceEntries | reference-only | p. 97 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:98-bribery` — Bribery | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:97-events-in-gaol` — Events in Gaol | referenceEntries | deferred | p. 97 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:97-passing-the-time` — Passing the Time | referenceEntries | deferred | p. 97 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:97-the-intervention-of-patrons` — The Intervention of Patrons | referenceEntries | deferred | p. 97 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `deft-steps:reference:98-bribery` — Bribery | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:98-bribery-skill-test-table` — Bribery Skill Test Table | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
 | `deft-steps:reference:98-new-endeavour-gaol-break` — New Endeavour: Gaol Break | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:98-notorious-prisons` — Notorious Prisons | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:98-notorious-prisons` — Notorious Prisons | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:reference:98-willingness-to-take-a-bribe` — Willingness To Take A Bribe | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `deft-steps:reference:99-life-outside-the-law` — Life Outside the Law | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
+| `deft-steps:reference:99-life-outside-the-law` — Life Outside the Law | referenceEntries | deferred | p. 99 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `deft-steps:spell:bamboozle` — Bamboozle | spells | adapted | p. 24 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
 | `deft-steps:spell:earthshudder` — Earthshudder | spells | adapted | p. 88 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
 | `deft-steps:spell:under-my-protection` — Under my Protection | spells | adapted | p. 25 | Named Fourth Edition Test Difficulties use Fifth Edition SL modifiers (core Appendix I p. 364). Ordinary printed numerical bonuses remain unchanged. |
@@ -2560,7 +2560,7 @@ Pack `night-parade` · version 1.0.0
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| referenceEntries | 0 | 0 | 4 | 0 | 0 |
+| referenceEntries | 0 | 0 | 0 | 0 | 4 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
@@ -2574,10 +2574,10 @@ Pack `night-parade` · version 1.0.0
 
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
-| `night-parade:reference:balefire-brazier` — Balefire Brazier | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
-| `night-parade:reference:mounts` — Undead Mounts | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
-| `night-parade:reference:templates` — Applying Undead Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
-| `night-parade:reference:vigor-mortis` — Vigor Mortis | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
+| `night-parade:reference:balefire-brazier` — Balefire Brazier | referenceEntries | deferred | p. 19 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `night-parade:reference:mounts` — Undead Mounts | referenceEntries | deferred | p. 10 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `night-parade:reference:templates` — Applying Undead Advancement Templates | referenceEntries | deferred | p. 3 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `night-parade:reference:vigor-mortis` — Vigor Mortis | referenceEntries | deferred | p. 19 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 
 </details>
 
@@ -2587,7 +2587,7 @@ Pack `bayl-many-eyes` · version 1.0.0
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| referenceEntries | 0 | 0 | 3 | 0 | 0 |
+| referenceEntries | 0 | 0 | 0 | 0 | 3 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
@@ -2601,9 +2601,9 @@ Pack `bayl-many-eyes` · version 1.0.0
 
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
-| `bayl-many-eyes:reference:applying-templates` — Applying Chaos Warrior Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
-| `bayl-many-eyes:reference:sorcerer-armour` — Chaos Sorcerers and Armour | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `bayl-many-eyes:reference:sorcerer-lores` — Chaos Sorcerer Spell Lists | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
+| `bayl-many-eyes:reference:applying-templates` — Applying Chaos Warrior Advancement Templates | referenceEntries | deferred | p. 3 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `bayl-many-eyes:reference:sorcerer-armour` — Chaos Sorcerers and Armour | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `bayl-many-eyes:reference:sorcerer-lores` — Chaos Sorcerer Spell Lists | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 
 </details>
 
@@ -2613,7 +2613,7 @@ Pack `cluster-eye-tribe` · version 1.0.0
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| referenceEntries | 0 | 0 | 5 | 0 | 0 |
+| referenceEntries | 0 | 0 | 0 | 0 | 5 |
 | ruleReferences | 0 | 0 | 1 | 0 | 0 |
 
 | Feature / scope | Status | Source | Decision |
@@ -2630,11 +2630,11 @@ Pack `cluster-eye-tribe` · version 1.0.0
 
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
-| `cluster-eye-tribe:reference:applying-templates` — Applying Creature Advancement Templates | referenceEntries | reference-only | p. 3 | Sourced book rule reference; no live-play automation. |
-| `cluster-eye-tribe:reference:mounted-skills` — Goblin and Orc Mount Skills | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `cluster-eye-tribe:reference:shaman-armour` — Shamans and Armour | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `cluster-eye-tribe:reference:shaman-spell-lists` — Shaman Spell Lists | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
-| `cluster-eye-tribe:reference:venom-arrows` — Spider Venom Arrows | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `cluster-eye-tribe:reference:applying-templates` — Applying Creature Advancement Templates | referenceEntries | deferred | p. 3 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `cluster-eye-tribe:reference:mounted-skills` — Goblin and Orc Mount Skills | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `cluster-eye-tribe:reference:shaman-armour` — Shamans and Armour | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `cluster-eye-tribe:reference:shaman-spell-lists` — Shaman Spell Lists | referenceEntries | deferred | p. 8 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `cluster-eye-tribe:reference:venom-arrows` — Spider Venom Arrows | referenceEntries | deferred | p. 10 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `cluster-eye-tribe:rule-reference:arboreal` — Arboreal | ruleReferences | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 
 </details>
@@ -2647,7 +2647,7 @@ Pack `tribes-tribulations` · version 1.0.0
 |---|---:|---:|---:|---:|---:|
 | gear | 8 | 1 | 0 | 0 | 0 |
 | market | 3 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 15 | 0 | 0 |
+| referenceEntries | 0 | 0 | 2 | 0 | 13 |
 | ruleReferences | 0 | 0 | 9 | 0 | 0 |
 | spells | 19 | 9 | 0 | 0 | 0 |
 | weapons | 3 | 0 | 0 | 0 | 0 |
@@ -2668,20 +2668,20 @@ Pack `tribes-tribulations` · version 1.0.0
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
 | `tribes-tribulations:gear:glowy-green-amulet` — Glowy Green Amulet | gear | adapted | p. 97 | Legacy: printed Magic Resistance 2 becomes one core Talent rank; its fixed Fifth Edition effects apply. |
-| `tribes-tribulations:reference:big-waaagh-lore-benefit` — Big Waaagh! Lore Benefit | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:black-orc-restrictions` — Black Orc Restrictions | referenceEntries | reference-only | p. 11 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:crewed-war-machines` — Crewed War Machines | referenceEntries | reference-only | p. 41 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:gut-magic` — Gut Magic | referenceEntries | reference-only | p. 82 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:big-waaagh-lore-benefit` — Big Waaagh! Lore Benefit | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:black-orc-restrictions` — Black Orc Restrictions | referenceEntries | deferred | p. 11 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:crewed-war-machines` — Crewed War Machines | referenceEntries | deferred | p. 41 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:gut-magic` — Gut Magic | referenceEntries | deferred | p. 82 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `tribes-tribulations:reference:gut-magic-miscast-table` — Gut Magic Miscast Table | referenceEntries | reference-only | p. 83 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:idols-of-gork-and-mork` — Idols of Gork and Mork | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:little-waaagh-lore-benefit` — Little Waaagh! Lore Benefit | referenceEntries | reference-only | p. 98 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:mounted-warband-skills` — Mounted Warband Skills | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:purple-skullback-bite` — Purple Skullback Bite | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:savage-orc-armour` — Savage Orc Armour | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:shaman-shrooms` — Shaman Shrooms | referenceEntries | reference-only | p. 99 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:snotling-puffballs` — Snotling Puffballs | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:waaagh-channelling-and-miscasts` — Waaagh! Channelling and Miscasts | referenceEntries | reference-only | p. 94 | Sourced book rule reference; no live-play automation. |
-| `tribes-tribulations:reference:waaagh-lore-access` — Waaagh! Lore Access | referenceEntries | reference-only | p. 95 | Sourced book rule reference; no live-play automation. |
+| `tribes-tribulations:reference:idols-of-gork-and-mork` — Idols of Gork and Mork | referenceEntries | deferred | p. 101 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:little-waaagh-lore-benefit` — Little Waaagh! Lore Benefit | referenceEntries | deferred | p. 98 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:mounted-warband-skills` — Mounted Warband Skills | referenceEntries | deferred | p. 16 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:purple-skullback-bite` — Purple Skullback Bite | referenceEntries | deferred | p. 99 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:savage-orc-armour` — Savage Orc Armour | referenceEntries | deferred | p. 17 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:shaman-shrooms` — Shaman Shrooms | referenceEntries | deferred | p. 99 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:snotling-puffballs` — Snotling Puffballs | referenceEntries | deferred | p. 13 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:waaagh-channelling-and-miscasts` — Waaagh! Channelling and Miscasts | referenceEntries | deferred | p. 94 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `tribes-tribulations:reference:waaagh-lore-access` — Waaagh! Lore Access | referenceEntries | deferred | p. 95 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `tribes-tribulations:reference:waaagh-miscast-table` — Waaagh! Miscast Table | referenceEntries | reference-only | p. 96 | Sourced book rule reference; no live-play automation. |
 | `tribes-tribulations:rule-reference:bileful-vomit` — Bileful Vomit | ruleReferences | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
 | `tribes-tribulations:rule-reference:corrupting-vomit` — Corrupting Vomit | ruleReferences | reference-only | p. 88 | Sourced book rule reference; no live-play automation. |
@@ -2713,7 +2713,7 @@ Pack `sea-of-claws` · version 1.0.0
 | careers | 2 | 7 | 0 | 0 | 0 |
 | market | 3 | 0 | 0 | 0 | 0 |
 | origins | 0 | 4 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 19 | 0 | 0 |
+| referenceEntries | 0 | 0 | 6 | 0 | 13 |
 | ruleReferences | 0 | 0 | 15 | 0 | 0 |
 | spells | 19 | 2 | 0 | 0 | 0 |
 | tables | 6 | 0 | 0 | 0 | 0 |
@@ -2748,25 +2748,25 @@ Pack `sea-of-claws` · version 1.0.0
 | `sea-of-claws:origin:norse-dwarf` — Norse Dwarf | origins | adapted | p. 41 | User-approved core five Skills at +5, physical profile, creation limits and native Khazalid/Reikspiel with printed regional choices. |
 | `sea-of-claws:origin:sarl` — Sarl Norse | origins | adapted | p. 56 | User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations. |
 | `sea-of-claws:origin:skaeling` — Skaeling Norse | origins | adapted | p. 56 | User-approved Fifth Edition starting Skill allocations and native-language handling replace old +5/+3 allocations. |
-| `sea-of-claws:reference:chanty-all-arise-for-the-night-has-eyes` — Chanty: All arise, for the night has eyes… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:chanty-jacques-bret-came-sailing-to-meet-our-steel` — Chanty: Jacques Bret came sailing to meet our steel! | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:chanty-of-all-the-terrors-upon-the-sea` — Chanty: Of all the terrors upon the sea… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:chanty-the-ladies-of-l-anguille` — Chanty: The ladies of L’Anguille… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:chanty-they-do-say-do-as-the-captain-do-say` — Chanty: They do say do as the Captain do say… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:chanty-we-re-all-in-this-together-so-heave-ho-heave-ho` — Chanty: We’re all in this together so, heave ho, heave ho… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:chanty-you-band-of-shipmates-gather-round` — Chanty: You band of shipmates gather round… | referenceEntries | reference-only | p. 67 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:feast-of-bones` — Feast of Bones | referenceEntries | reference-only | p. 144 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:chanty-all-arise-for-the-night-has-eyes` — Chanty: All arise, for the night has eyes… | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:chanty-jacques-bret-came-sailing-to-meet-our-steel` — Chanty: Jacques Bret came sailing to meet our steel! | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:chanty-of-all-the-terrors-upon-the-sea` — Chanty: Of all the terrors upon the sea… | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:chanty-the-ladies-of-l-anguille` — Chanty: The ladies of L’Anguille… | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:chanty-they-do-say-do-as-the-captain-do-say` — Chanty: They do say do as the Captain do say… | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:chanty-we-re-all-in-this-together-so-heave-ho-heave-ho` — Chanty: We’re all in this together so, heave ho, heave ho… | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:chanty-you-band-of-shipmates-gather-round` — Chanty: You band of shipmates gather round… | referenceEntries | deferred | p. 67 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:feast-of-bones` — Feast of Bones | referenceEntries | deferred | p. 144 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `sea-of-claws:reference:grubark-gearing-system` — Grubark Gearing System | referenceEntries | reference-only | p. 44 | Sourced book rule reference; no live-play automation. |
 | `sea-of-claws:reference:hullbreaker` — Hullbreaker | referenceEntries | reference-only | p. 44 | Sourced book rule reference; no live-play automation. |
 | `sea-of-claws:reference:naval-artillery-ammunition` — Naval Artillery Ammunition | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `sea-of-claws:reference:naval-artillery-profiles` — Naval Artillery Profiles | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
 | `sea-of-claws:reference:norse-class-and-career-table` — Norse Class and Career Table | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:norse-skill-and-equipment-advice` — Norse Skill and Equipment Advice | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:riverfolk-lore-of-oceans` — Riverfolk Lore of Oceans | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:norse-skill-and-equipment-advice` — Norse Skill and Equipment Advice | referenceEntries | deferred | p. 57 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:riverfolk-lore-of-oceans` — Riverfolk Lore of Oceans | referenceEntries | deferred | p. 63 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `sea-of-claws:reference:seafarer-class-table` — Seafarer Class Table | referenceEntries | reference-only | p. 63 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:skaeling-mark-of-khorne` — Skaeling Mark of Khorne | referenceEntries | reference-only | p. 56 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:stromfels-and-sin` — Stromfels and Sin | referenceEntries | reference-only | p. 91 | Sourced book rule reference; no live-play automation. |
-| `sea-of-claws:reference:stromfels-strength-stricture` — Stromfels Strength Stricture | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `sea-of-claws:reference:skaeling-mark-of-khorne` — Skaeling Mark of Khorne | referenceEntries | deferred | p. 56 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:stromfels-and-sin` — Stromfels and Sin | referenceEntries | deferred | p. 91 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `sea-of-claws:reference:stromfels-strength-stricture` — Stromfels Strength Stricture | referenceEntries | deferred | p. 89 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `sea-of-claws:rule-reference:boat-crusher` — Boat Crusher | ruleReferences | reference-only | p. 143 | Printed Test Difficulty uses current SL modifiers. |
 | `sea-of-claws:rule-reference:devastating-assault` — Devastating Assault | ruleReferences | reference-only | p. 147 | Sourced book rule reference; no live-play automation. |
 | `sea-of-claws:rule-reference:electrical-discharge` — Electrical Discharge | ruleReferences | reference-only | p. 143 | Printed Test Difficulty uses current SL modifiers. Printed Advantage uses Momentum. |
@@ -2809,7 +2809,7 @@ Pack `taverns-old-world` · version 1.0.0
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | market | 8 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 49 | 0 | 0 |
+| referenceEntries | 0 | 0 | 28 | 0 | 21 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
@@ -2828,17 +2828,17 @@ Pack `taverns-old-world` · version 1.0.0
 | `taverns-old-world:reference:brass-tavern-venue-vital-statistics-table` — Brass Tavern Venue Vital Statistics Table | referenceEntries | reference-only | p. 12 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:gold-tavern-capacity-games-and-entertainment-table` — Gold Tavern Capacity, Games and Entertainment Table | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:gold-tavern-venue-vital-statistics-table` — Gold Tavern Venue Vital Statistics Table | referenceEntries | reference-only | p. 13 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:poor-quality-board` — Poor quality board | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:poor-quality-food-and-drink` — Poor quality food and drink | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:poor-quality-board` — Poor quality board | referenceEntries | deferred | p. 18 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:poor-quality-food-and-drink` — Poor quality food and drink | referenceEntries | deferred | p. 17 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `taverns-old-world:reference:random-tavern-tier-table` — Random Tavern Tier Table | referenceEntries | reference-only | p. 4 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:silver-tavern-capacity-games-and-entertainment-table` — Silver Tavern Capacity, Games and Entertainment Table | referenceEntries | reference-only | p. 19 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:silver-tavern-venue-vital-statistics-table` — Silver Tavern Venue Vital Statistics Table | referenceEntries | reference-only | p. 12 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-board-board-and-coaching-inns` — Tavern board: Board and Coaching Inns | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-board-board-and-coaching-inns` — Tavern board: Board and Coaching Inns | referenceEntries | deferred | p. 18 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `taverns-old-world:reference:tavern-board-common-room` — Tavern board: Common Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-board-fine-room` — Tavern board: Fine Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-board-large-room` — Tavern board: Large Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-board-room` — Tavern board: Room | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-booths-and-privacy` — Tavern booths and privacy | referenceEntries | reference-only | p. 18 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-booths-and-privacy` — Tavern booths and privacy | referenceEntries | deferred | p. 18 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `taverns-old-world:reference:tavern-drink-ale` — Tavern drink: Ale | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-drink-dwarf-ale` — Tavern drink: Dwarf Ale | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-drink-excellent-spirits` — Tavern drink: Excellent Spirits | referenceEntries | reference-only | p. 16 | Sourced book rule reference; no live-play automation. |
@@ -2856,23 +2856,23 @@ Pack `taverns-old-world` · version 1.0.0
 | `taverns-old-world:reference:tavern-fare-simple-meal` — Tavern fare: Simple Meal | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-fare-snacks` — Tavern fare: Snacks | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
 | `taverns-old-world:reference:tavern-fare-stew` — Tavern fare: Stew | referenceEntries | reference-only | p. 17 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-al-zahr` — Tavern game: Al-Zahr | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-alvatafl` — Tavern game: Alvatafl | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-arm-wrestling` — Tavern game: Arm Wrestling | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-beast-among-the-tailors` — Tavern game: Beast Among the Tailors | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-bowls` — Tavern game: Bowls | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-cerevis` — Tavern game: Cerevis | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-darts` — Tavern game: Darts | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-discouraged-games` — Tavern game: Discouraged games | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-dominos` — Tavern game: Dominos | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-m-hlen` — Tavern game: Mühlen | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-scarlet-empress` — Tavern game: Scarlet Empress | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-game-stones` — Tavern game: Stones | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-games-invitations-and-stakes` — Tavern games: invitations and stakes | referenceEntries | reference-only | p. 24 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-hazard-blue-mould` — Tavern hazard: Blue Mould | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-hazard-hex` — Tavern hazard: Hex | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-hazard-trapped-treasures` — Tavern hazard: Trapped Treasures | referenceEntries | reference-only | p. 9 | Sourced book rule reference; no live-play automation. |
-| `taverns-old-world:reference:tavern-hazard-yellow-mould` — Tavern hazard: Yellow Mould | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
+| `taverns-old-world:reference:tavern-game-al-zahr` — Tavern game: Al-Zahr | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-alvatafl` — Tavern game: Alvatafl | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-arm-wrestling` — Tavern game: Arm Wrestling | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-beast-among-the-tailors` — Tavern game: Beast Among the Tailors | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-bowls` — Tavern game: Bowls | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-cerevis` — Tavern game: Cerevis | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-darts` — Tavern game: Darts | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-discouraged-games` — Tavern game: Discouraged games | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-dominos` — Tavern game: Dominos | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-m-hlen` — Tavern game: Mühlen | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-scarlet-empress` — Tavern game: Scarlet Empress | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-game-stones` — Tavern game: Stones | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-games-invitations-and-stakes` — Tavern games: invitations and stakes | referenceEntries | deferred | p. 24 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-hazard-blue-mould` — Tavern hazard: Blue Mould | referenceEntries | deferred | p. 10 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-hazard-hex` — Tavern hazard: Hex | referenceEntries | deferred | p. 10 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-hazard-trapped-treasures` — Tavern hazard: Trapped Treasures | referenceEntries | deferred | p. 9 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `taverns-old-world:reference:tavern-hazard-yellow-mould` — Tavern hazard: Yellow Mould | referenceEntries | deferred | p. 10 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 
 </details>
 
@@ -2883,7 +2883,7 @@ Pack `corsairs-flariel` · version 1.1.0
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
 | armour | 1 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 4 | 0 | 0 |
+| referenceEntries | 0 | 0 | 3 | 0 | 1 |
 | spells | 1 | 3 | 0 | 0 | 0 |
 | weapons | 1 | 0 | 0 | 0 | 0 |
 
@@ -2905,7 +2905,7 @@ Pack `corsairs-flariel` · version 1.1.0
 
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
-| `corsairs-flariel:reference:lore-of-dark-magic-additional-hits` — Lore of Dark Magic: additional hits | referenceEntries | reference-only | p. 8 | Sourced book rule reference; no live-play automation. |
+| `corsairs-flariel:reference:lore-of-dark-magic-additional-hits` — Lore of Dark Magic: additional hits | referenceEntries | deferred | p. 8 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `corsairs-flariel:reference:ravenship` — Ravenship | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
 | `corsairs-flariel:reference:reaper-bolt-thrower` — Reaper bolt thrower | referenceEntries | reference-only | p. 10 | Sourced book rule reference; no live-play automation. |
 | `corsairs-flariel:reference:sea-dragon-cloak` — Sea Dragon Cloak | referenceEntries | reference-only | p. 6 | Sourced book rule reference; no live-play automation. |
@@ -2923,7 +2923,7 @@ Pack `lustria` · version 1.0.0
 |---|---:|---:|---:|---:|---:|
 | careers | 3 | 1 | 0 | 0 | 0 |
 | market | 6 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 54 | 0 | 0 |
+| referenceEntries | 0 | 0 | 19 | 0 | 35 |
 | spells | 3 | 4 | 0 | 0 | 0 |
 | weapons | 5 | 0 | 0 | 0 | 0 |
 
@@ -2946,60 +2946,60 @@ Pack `lustria` · version 1.0.0
 | Content ID / name | Kind | Status | Source | Decision |
 |---|---|---|---|---|
 | `lustria:career:trailblazer` — Trailblazer | careers | adapted | p. 200 | Printed Strider (Any) uses current core Striding Gait (Any), with core movement/terrain effects. |
-| `lustria:reference:a-bit-of-a-beast` — A Bit of a Beast | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:all-is-well` — All is Well | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:a-bit-of-a-beast` — A Bit of a Beast | referenceEntries | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:all-is-well` — All is Well | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:apotheosis-lustria` — Apotheosis — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:arcane-unforging-lustria` — Arcane Unforging — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:bilious-ague` — Bilious Ague | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:blackwater-fever` — Blackwater Fever | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:bleeding-eyerot` — Bleeding Eyerot | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:blindwyrm-fits` — Blindwyrm Fits | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:brain-rot` — Brain Rot | referenceEntries | reference-only | p. 186 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:cataleptic-ague` — Cataleptic Ague | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:bilious-ague` — Bilious Ague | referenceEntries | deferred | p. 186 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:blackwater-fever` — Blackwater Fever | referenceEntries | deferred | p. 186 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:bleeding-eyerot` — Bleeding Eyerot | referenceEntries | deferred | p. 186 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:blindwyrm-fits` — Blindwyrm Fits | referenceEntries | deferred | p. 186 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:brain-rot` — Brain Rot | referenceEntries | deferred | p. 186 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:cataleptic-ague` — Cataleptic Ague | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:chameleon` — Chameleon | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:choking-lungblight` — Choking Lungblight | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:choking-lungblight` — Choking Lungblight | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:cloak-of-mathlann-mathlann-prayer` — Cloak of Mathlann — Mathlann prayer | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:contracting-thought-fog` — Contracting Thought Fog | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:disorientation` — Disorientation | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:disorientation` — Disorientation | referenceEntries | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:drain-magic-lustria` — Drain Magic — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:engine-of-the-gods-burning-alignment` — Engine of the Gods’ Burning Alignment | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:engine-of-the-gods-power-of-the-ancients` — Engine of the Gods’ Power of the Ancients | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:exceptional-circumstances` — Exceptional Circumstances | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:find-shelter` — Find Shelter | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:exceptional-circumstances` — Exceptional Circumstances | referenceEntries | deferred | p. 204 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:find-shelter` — Find Shelter | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:flammable` — Flammable | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:forage-for-food` — Forage for Food | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:fungal-takeover` — Fungal Takeover | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:generating-an-oracle` — Generating an Oracle | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:ghyran-up-the-amaxon` — Ghyran up the Amaxon | referenceEntries | reference-only | p. 191 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:forage-for-food` — Forage for Food | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:fungal-takeover` — Fungal Takeover | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:generating-an-oracle` — Generating an Oracle | referenceEntries | deferred | p. 197 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:ghyran-up-the-amaxon` — Ghyran up the Amaxon | referenceEntries | deferred | p. 191 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:giant-blowpipe` — Giant Blowpipe | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:giant-bow` — Giant Bow | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:grim-lustria` — Grim (Lustria) | referenceEntries | reference-only | p. 165 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:keep-watch` — Keep Watch | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:lingering-vapours` — Lingering Vapours | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:lizardman-scales-and-armour` — Lizardman scales and armour | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:lizardman-weapon-training-and-blowpipes` — Lizardman weapon training and Blowpipes | referenceEntries | reference-only | p. 163 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:keep-watch` — Keep Watch | referenceEntries | deferred | p. 204 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:lingering-vapours` — Lingering Vapours | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:lizardman-scales-and-armour` — Lizardman scales and armour | referenceEntries | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:lizardman-weapon-training-and-blowpipes` — Lizardman weapon training and Blowpipes | referenceEntries | deferred | p. 163 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:lustrian-weather` — Lustrian Weather | referenceEntries | reference-only | p. 202 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:make-camp` — Make Camp | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:map-the-route` — Map the Route | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:necrotic-foot-rot` — Necrotic Foot Rot | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:organ-failure` — Organ Failure | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:parasitization` — Parasitization | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:practise-a-skill` — Practise a Skill | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:rain-showers` — Rain Showers | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:repair-a-boat` — Repair a Boat | referenceEntries | reference-only | p. 204 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:make-camp` — Make Camp | referenceEntries | deferred | p. 204 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:map-the-route` — Map the Route | referenceEntries | deferred | p. 204 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:necrotic-foot-rot` — Necrotic Foot Rot | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:organ-failure` — Organ Failure | referenceEntries | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:parasitization` — Parasitization | referenceEntries | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:practise-a-skill` — Practise a Skill | referenceEntries | deferred | p. 204 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:rain-showers` — Rain Showers | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:repair-a-boat` — Repair a Boat | referenceEntries | deferred | p. 204 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:solar-engine-s-beam-of-chotec` — Solar Engine’s Beam of Chotec | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:stationary-attacker` — Stationary Attacker | referenceEntries | reference-only | p. 166 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:stifling-humidity` — Stifling Humidity | referenceEntries | reference-only | p. 202 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:stifling-humidity` — Stifling Humidity | referenceEntries | deferred | p. 202 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:telepathy` — Telepathy | referenceEntries | reference-only | p. 151 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:thought-fog` — Thought Fog | referenceEntries | reference-only | p. 187 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:torrential-downpour` — Torrential Downpour | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:travel-endeavours-and-fatigue` — Travel Endeavours and fatigue | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:tropical-storm` — Tropical Storm | referenceEntries | reference-only | p. 203 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:thought-fog` — Thought Fog | referenceEntries | deferred | p. 187 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:torrential-downpour` — Torrential Downpour | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:travel-endeavours-and-fatigue` — Travel Endeavours and fatigue | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `lustria:reference:tropical-storm` — Tropical Storm | referenceEntries | deferred | p. 203 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:volley` — Volley | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
 | `lustria:reference:walk-between-worlds-lustria` — Walk Between Worlds — Lustria version | referenceEntries | reference-only | p. 128 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:warpdust-typhoons` — Warpdust Typhoons | referenceEntries | reference-only | p. 89 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:warpdust-typhoons` — Warpdust Typhoons | referenceEntries | deferred | p. 89 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:reference:waterlungs-mathlann-prayer` — Waterlungs — Mathlann prayer | referenceEntries | reference-only | p. 81 | Sourced book rule reference; no live-play automation. |
-| `lustria:reference:yellow-skull-fever` — Yellow-Skull Fever | referenceEntries | reference-only | p. 188 | Sourced book rule reference; no live-play automation. |
+| `lustria:reference:yellow-skull-fever` — Yellow-Skull Fever | referenceEntries | deferred | p. 188 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `lustria:spell:earth-line` — Earth Line | spells | adapted | p. 129 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
 | `lustria:spell:mental-blast` — Mental Blast | spells | adapted | p. 129 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
 | `lustria:spell:ruination-of-cities` — Ruination of Cities | spells | adapted | p. 129 | Printed named Test Difficulties use Fifth Edition SL modifiers; existing High Magic definitions and learning rules are preserved. |
@@ -3015,7 +3015,7 @@ Pack `salzenmund` · version 1.0.0
 |---|---:|---:|---:|---:|---:|
 | careers | 0 | 1 | 0 | 0 | 0 |
 | origins | 0 | 4 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 24 | 0 | 0 |
+| referenceEntries | 0 | 0 | 13 | 0 | 11 |
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
@@ -3039,29 +3039,29 @@ Pack `salzenmund` · version 1.0.0
 | `salzenmund:origin:nordlander` — Nordlander | origins | adapted | p. 142 | Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules. |
 | `salzenmund:origin:salzenmunder` — Salzenmunder | origins | adapted | p. 142 | Printed Fourth Edition starting Skill allocations use the approved Fifth Edition five Skills at +5 and native-language rules. |
 | `salzenmund:reference:bribery-for-smuggled-cargo` — Bribery for smuggled cargo | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:caught-smuggling` — Caught smuggling | referenceEntries | reference-only | p. 136 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:caught-smuggling` — Caught smuggling | referenceEntries | deferred | p. 136 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `salzenmund:reference:chokan-s-fate-rewards` — Chokan’s Fate rewards | referenceEntries | reference-only | p. 101 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:community-size-ratings` — Community Size ratings | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:community-wealth-ratings` — Community Wealth ratings | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:deadfall-shiny-moon-trap` — Deadfall — Shiny Moon trap | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:deadfall-shiny-moon-trap` — Deadfall — Shiny Moon trap | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `salzenmund:reference:dooming-spite-ability` — Dooming — Spite ability | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:enchanted-masks` — Enchanted Masks | referenceEntries | reference-only | p. 57 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:finding-contraband` — Finding contraband | referenceEntries | reference-only | p. 138 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:fulcrum-of-azyr` — Fulcrum of Azyr | referenceEntries | reference-only | p. 62 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:join-the-dance-resisting-spite-enchantment` — Join the Dance — resisting Spite enchantment | referenceEntries | reference-only | p. 117 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:finding-contraband` — Finding contraband | referenceEntries | deferred | p. 138 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `salzenmund:reference:fulcrum-of-azyr` — Fulcrum of Azyr | referenceEntries | deferred | p. 62 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `salzenmund:reference:join-the-dance-resisting-spite-enchantment` — Join the Dance — resisting Spite enchantment | referenceEntries | deferred | p. 117 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `salzenmund:reference:mine-events` — Mine Events | referenceEntries | reference-only | p. 127 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:mining-equipment` — Mining Equipment | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:morning-fury` — Morning Fury | referenceEntries | reference-only | p. 100 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:morning-fury` — Morning Fury | referenceEntries | deferred | p. 100 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `salzenmund:reference:night-goblin-net` — Night Goblin Net | referenceEntries | reference-only | p. 129 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:prospecting-factors` — Prospecting Factors | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:prospecting-for-a-mineral-strike` — Prospecting for a mineral strike | referenceEntries | reference-only | p. 125 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:selling-smuggled-goods` — Selling smuggled goods | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:prospecting-for-a-mineral-strike` — Prospecting for a mineral strike | referenceEntries | deferred | p. 125 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `salzenmund:reference:selling-smuggled-goods` — Selling smuggled goods | referenceEntries | deferred | p. 139 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `salzenmund:reference:size-of-strike` — Size of Strike | referenceEntries | reference-only | p. 126 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:smuggled-goods-generator` — Smuggled Goods Generator | referenceEntries | reference-only | p. 139 | Sourced book rule reference; no live-play automation. |
 | `salzenmund:reference:smuggling-events` — Smuggling Events | referenceEntries | reference-only | p. 140 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:snare-shiny-moon-trap` — Snare — Shiny Moon trap | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:spiky-pit-shiny-moon-trap` — Spiky Pit — Shiny Moon trap | referenceEntries | reference-only | p. 130 | Sourced book rule reference; no live-play automation. |
-| `salzenmund:reference:spites-serving-naiads` — Spites serving Naiads | referenceEntries | reference-only | p. 116 | Sourced book rule reference; no live-play automation. |
+| `salzenmund:reference:snare-shiny-moon-trap` — Snare — Shiny Moon trap | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `salzenmund:reference:spiky-pit-shiny-moon-trap` — Spiky Pit — Shiny Moon trap | referenceEntries | deferred | p. 130 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `salzenmund:reference:spites-serving-naiads` — Spites serving Naiads | referenceEntries | deferred | p. 116 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 
 </details>
 

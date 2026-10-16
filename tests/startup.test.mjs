@@ -28,12 +28,13 @@ const referenceLibrary = JSON.parse(
 );
 const thin = (value) => {
   const copy = structuredClone(value);
+  delete copy.referenceExclusions;
   for (const pack of copy.packs) {
     if (pack.data.referenceEntries) pack.data.referenceEntries = [];
     if (pack.data.ruleReferences)
-      pack.data.ruleReferences = pack.data.ruleReferences.map(
-        ({ text, ...entry }) => ({ ...entry, textRef: true }),
-      );
+      pack.data.ruleReferences = pack.data.ruleReferences
+        .filter((entry) => entry.category !== "rule")
+        .map(({ text, ...entry }) => ({ ...entry, textRef: true }));
   }
   return copy;
 };

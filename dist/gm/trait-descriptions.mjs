@@ -44,6 +44,10 @@ export function describeTraits(profile, traits) {
     // Likewise use the definition when a blurb still says old "Advantage".
     const oldWording =
       /\bAdvantage\b/.test(brief) && /\bMomentum\b/.test(trait.text);
+    const savedNote =
+      baseline && trait.value === baseline.value
+        ? profile.traitDescriptionNotes?.[trait.name]
+        : "";
     const summary = traitSummary(trait, {
       swarm: traits.some((t) => t.name === "Swarm"),
     });
@@ -51,9 +55,11 @@ export function describeTraits(profile, traits) {
       ...trait,
       summary,
       description: summary,
-      ...(oldWording
+      ...(oldWording || savedNote
         ? {
-            descriptionNote: `${trait.name}: the profile summary (p. ${profile.page}) uses Advantage; the sheet follows the full core Trait definition (p. ${trait.page}), which uses Momentum.`,
+            descriptionNote:
+              savedNote ||
+              `${trait.name}: the profile summary (p. ${profile.page}) uses Advantage; the sheet follows the full core Trait definition (p. ${trait.page}), which uses Momentum.`,
           }
         : {}),
     };

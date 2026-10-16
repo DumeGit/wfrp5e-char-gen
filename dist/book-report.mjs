@@ -16,8 +16,9 @@ export function buildBookReport(library) {
           (x) => x.contentId === entry.contentId,
         );
         const deferredSearch =
-          entry.contentKind === "referenceEntries" &&
-          !isSearchCategoryEnabled(entry.category);
+          ["referenceEntries", "ruleReferences"].includes(entry.contentKind) &&
+          (!isSearchCategoryEnabled(entry.category) ||
+            library.referenceExclusions?.[entry.contentId]);
         const status = entry.unavailable
           ? "unavailable"
           : deferredSearch
@@ -38,6 +39,10 @@ export function buildBookReport(library) {
           source: entry.source,
           reason:
             entry.unavailable ||
+            library.referenceExclusions?.[entry.contentId]?.reason ||
+            (deferredSearch &&
+              entry.category === "rule" &&
+              "Standalone Rules are excluded from publication; original extraction is retained only for private audit.") ||
             (deferredSearch &&
               "Reviewed NPC/creature source retained for future use; currently excluded from shared search and supplemental GM creation.") ||
             override?.reason ||

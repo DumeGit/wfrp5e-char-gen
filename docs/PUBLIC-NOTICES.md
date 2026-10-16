@@ -8,7 +8,7 @@ Credits identify Games Workshop, Cubicle 7 and the relevant authors/artists with
 
 There is **no client analytics integration**: the Vercel package, integration module, generated browser SDK, build copier, SDK licence asset and former positive tracking tests were removed together. No Web Analytics dashboard setting was changed remotely. Existing provider-side data/logs are not deleted by a code change. Privacy text describes browser-local drafts/preferences, functional offline storage, local file imports/exports and separate Vercel hosting request/security logs. It does not promise zero network processing or GDPR certification. A complete public launch review still needs the operator's appropriate identity/contact and provider retention/processing arrangements.
 
-Rules are hidden from shared search, All categories, worker matching and related-term chaining. Reviewed records, frozen audits and generated source coverage remain intact; Rules data is **still distributed** in source/index assets. Other categories, creator mechanics and the supplied PDF sheet remain unchanged.
+Standalone Rules are excluded from published book/reference/search assets, All categories, worker matching and related-term chaining. Original extraction and frozen audits remain outside static hosting. Retained description prose is reviewed mechanical summary text; names and numerical lookup data retain their printed values, and source/Legacy notes remain. Creator mechanics and the supplied PDF sheet remain unchanged. Paraphrasing and removing standalone Rules do not establish rights-holder permission or legal clearance.
 
 ## Clearance remains separate
 

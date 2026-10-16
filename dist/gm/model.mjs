@@ -1908,7 +1908,8 @@ export function calculateGM(data, R, s) {
   warnings.push(...result.traits.map((t) => t.descriptionNote).filter(Boolean));
   if (
     traits.some((t) => t.name === "Venom") &&
-    /avoid|pass.*Endurance/.test(p.sections.Traits || "")
+    (p.venomSourceConflict ||
+      /avoid|pass.*Endurance/.test(p.sections.Traits || ""))
   )
     warnings.push(
       "Venom uses the full p. 363 rule: Wounds inflict Poisoned; the Difficulty applies to recovery. Some profile summaries conflict.",

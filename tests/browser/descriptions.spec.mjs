@@ -49,3 +49,19 @@ test("Marijan shared descriptions and personal overrides survive reload independ
   await details.click();
   await expect(personal).toHaveValue("");
 });
+
+test("source conflicts remain visible beside a summary but do not match search @descriptions", async ({
+  page,
+}) => {
+  await openPC(page);
+  await search(page, "Godspakt");
+  await page.getByRole("option", { name: /^Godspakt / }).click();
+  const reader = page.locator("#book-search-dialog");
+  await expect(reader).toContainText("Source discrepancy:");
+  await expect(reader).toContainText("Range Touch and Target 1");
+  await reader
+    .getByRole("button", { name: "Back to search", exact: true })
+    .click();
+  await page.locator("#book-search").fill("user selected");
+  await expect(page.getByRole("option", { name: /^Godspakt / })).toHaveCount(0);
+});

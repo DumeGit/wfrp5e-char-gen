@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 4043,
-  "newlyImported": 1359,
-  "retainedOutsideSearch": 178,
+  "references": 2987,
+  "newlyImported": 567,
+  "retainedOutsideSearch": 970,
   "removedNonMechanicalRules": 112,
   "books": [
     {
@@ -12,10 +12,10 @@
       "version": "1.1.7",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1934,
-      "newlyImported": 224,
-      "retainedOutsideSearch": 0,
-      "existingReferences": 1710,
+      "references": 1548,
+      "newlyImported": 102,
+      "retainedOutsideSearch": 122,
+      "existingReferences": 1446,
       "adaptedReferences": 0,
       "categories": {
         "career": 64,
@@ -26,7 +26,6 @@
         "condition": 13,
         "property": 36,
         "psychology": 5,
-        "rule": 386,
         "trait": 67,
         "species": 5,
         "table": 86,
@@ -287,9 +286,9 @@
       "version": "1.0.5",
       "edition": 4,
       "sourceHash": "9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdfd",
-      "references": 226,
-      "newlyImported": 128,
-      "retainedOutsideSearch": 9,
+      "references": 157,
+      "newlyImported": 59,
+      "retainedOutsideSearch": 78,
       "existingReferences": 98,
       "adaptedReferences": 13,
       "categories": {
@@ -298,8 +297,7 @@
         "magic": 9,
         "equipment": 70,
         "species": 3,
-        "rule": 63,
-        "table": 40,
+        "table": 34,
         "property": 7,
         "trait": 1,
         "endeavour": 6
@@ -439,9 +437,9 @@
       "version": "1.0.3",
       "edition": 4,
       "sourceHash": "d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d7",
-      "references": 49,
-      "newlyImported": 10,
-      "retainedOutsideSearch": 13,
+      "references": 47,
+      "newlyImported": 8,
+      "retainedOutsideSearch": 15,
       "existingReferences": 39,
       "adaptedReferences": 21,
       "categories": {
@@ -449,7 +447,6 @@
         "talent": 1,
         "equipment": 18,
         "species": 16,
-        "rule": 2,
         "table": 8
       },
       "dispositions": {
@@ -507,9 +504,9 @@
       "version": "1.0.7",
       "edition": 4,
       "sourceHash": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b",
-      "references": 127,
-      "newlyImported": 103,
-      "retainedOutsideSearch": 15,
+      "references": 68,
+      "newlyImported": 44,
+      "retainedOutsideSearch": 74,
       "existingReferences": 24,
       "adaptedReferences": 7,
       "categories": {
@@ -519,7 +516,6 @@
         "equipment": 12,
         "species": 1,
         "table": 36,
-        "rule": 59,
         "psychology": 1,
         "endeavour": 7
       },
@@ -602,16 +598,15 @@
       "version": "1.0.5",
       "edition": 4,
       "sourceHash": "e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde4788",
-      "references": 164,
-      "newlyImported": 105,
-      "retainedOutsideSearch": 12,
+      "references": 94,
+      "newlyImported": 35,
+      "retainedOutsideSearch": 82,
       "existingReferences": 59,
       "adaptedReferences": 14,
       "categories": {
         "career": 3,
         "magic": 58,
         "species": 11,
-        "rule": 70,
         "table": 10,
         "endeavour": 1,
         "property": 7,
@@ -733,9 +728,9 @@
       "version": "1.0.4",
       "edition": 4,
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
-      "references": 424,
-      "newlyImported": 252,
-      "retainedOutsideSearch": 21,
+      "references": 289,
+      "newlyImported": 117,
+      "retainedOutsideSearch": 156,
       "existingReferences": 172,
       "adaptedReferences": 55,
       "categories": {
@@ -743,7 +738,6 @@
         "skill": 2,
         "magic": 229,
         "equipment": 7,
-        "rule": 135,
         "table": 29,
         "endeavour": 5,
         "talent": 3,
@@ -952,17 +946,16 @@
       "version": "1.0.2",
       "edition": 4,
       "sourceHash": "08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f7",
-      "references": 26,
-      "newlyImported": 24,
-      "retainedOutsideSearch": 80,
+      "references": 6,
+      "newlyImported": 4,
+      "retainedOutsideSearch": 100,
       "existingReferences": 2,
       "adaptedReferences": 2,
       "categories": {
         "talent": 1,
         "species": 1,
         "magic": 1,
-        "table": 3,
-        "rule": 20
+        "table": 3
       },
       "dispositions": {
         "excluded": 24,
@@ -990,9 +983,9 @@
       "version": "1.0.3",
       "edition": 4,
       "sourceHash": "74238e8c5660fcaf2df05dd721b0786e277da42b32eacfa03ca08291d4415a7c",
-      "references": 328,
-      "newlyImported": 107,
-      "retainedOutsideSearch": 0,
+      "references": 242,
+      "newlyImported": 21,
+      "retainedOutsideSearch": 86,
       "existingReferences": 221,
       "adaptedReferences": 103,
       "categories": {
@@ -1003,7 +996,6 @@
         "equipment": 38,
         "species": 11,
         "table": 18,
-        "rule": 86,
         "property": 3
       },
       "dispositions": {
@@ -1134,9 +1126,9 @@
       "version": "1.0.3",
       "edition": 4,
       "sourceHash": "16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9",
-      "references": 197,
-      "newlyImported": 81,
-      "retainedOutsideSearch": 0,
+      "references": 145,
+      "newlyImported": 29,
+      "retainedOutsideSearch": 52,
       "existingReferences": 116,
       "adaptedReferences": 50,
       "categories": {
@@ -1146,7 +1138,6 @@
         "equipment": 23,
         "species": 11,
         "table": 20,
-        "rule": 52,
         "endeavour": 1
       },
       "dispositions": {
@@ -1250,15 +1241,14 @@
       "version": "1.0.2",
       "edition": 4,
       "sourceHash": "6e62fc57534f2d56cfd99333666389d0bf293ddb81b6f3d8284382b3e2f5b8df",
-      "references": 27,
-      "newlyImported": 2,
-      "retainedOutsideSearch": 6,
+      "references": 26,
+      "newlyImported": 1,
+      "retainedOutsideSearch": 7,
       "existingReferences": 25,
       "adaptedReferences": 10,
       "categories": {
         "magic": 24,
         "equipment": 1,
-        "rule": 1,
         "table": 1
       },
       "dispositions": {
@@ -1282,16 +1272,15 @@
       "version": "1.0.4",
       "edition": 4,
       "sourceHash": "2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537eec",
-      "references": 202,
-      "newlyImported": 146,
-      "retainedOutsideSearch": 22,
+      "references": 132,
+      "newlyImported": 76,
+      "retainedOutsideSearch": 92,
       "existingReferences": 56,
       "adaptedReferences": 17,
       "categories": {
         "career": 9,
         "magic": 32,
         "equipment": 15,
-        "rule": 70,
         "table": 44,
         "endeavour": 32
       },
@@ -1634,14 +1623,12 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "f8bb99e7da5163cbb094208f78c183410b1d1b0490d01188f09a8dbddca25b53",
-      "references": 4,
-      "newlyImported": 4,
-      "retainedOutsideSearch": 0,
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 4,
       "existingReferences": 0,
       "adaptedReferences": 0,
-      "categories": {
-        "rule": 4
-      },
+      "categories": {},
       "dispositions": {
         "included": 12,
         "excluded": 2,
@@ -1663,14 +1650,12 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "bf5839ff86537d1d4aee619d4d4095904b58de8d86295383d5695703114b4a6e",
-      "references": 3,
-      "newlyImported": 3,
-      "retainedOutsideSearch": 0,
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 3,
       "existingReferences": 0,
       "adaptedReferences": 0,
-      "categories": {
-        "rule": 3
-      },
+      "categories": {},
       "dispositions": {
         "included": 12,
         "existing": 2,
@@ -1692,14 +1677,13 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8a",
-      "references": 6,
-      "newlyImported": 5,
-      "retainedOutsideSearch": 0,
+      "references": 1,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 5,
       "existingReferences": 1,
       "adaptedReferences": 0,
       "categories": {
-        "trait": 1,
-        "rule": 5
+        "trait": 1
       },
       "dispositions": {
         "included": 14,
@@ -1722,16 +1706,15 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6e",
-      "references": 64,
-      "newlyImported": 15,
-      "retainedOutsideSearch": 0,
+      "references": 51,
+      "newlyImported": 2,
+      "retainedOutsideSearch": 13,
       "existingReferences": 49,
       "adaptedReferences": 12,
       "categories": {
         "magic": 28,
         "equipment": 12,
         "trait": 9,
-        "rule": 13,
         "table": 2
       },
       "dispositions": {
@@ -1764,9 +1747,9 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62c",
-      "references": 80,
-      "newlyImported": 19,
-      "retainedOutsideSearch": 0,
+      "references": 67,
+      "newlyImported": 6,
+      "retainedOutsideSearch": 13,
       "existingReferences": 61,
       "adaptedReferences": 28,
       "categories": {
@@ -1776,7 +1759,6 @@
         "equipment": 4,
         "trait": 15,
         "species": 4,
-        "rule": 13,
         "property": 1,
         "table": 4
       },
@@ -1810,14 +1792,13 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583c",
-      "references": 57,
-      "newlyImported": 49,
-      "retainedOutsideSearch": 0,
+      "references": 36,
+      "newlyImported": 28,
+      "retainedOutsideSearch": 21,
       "existingReferences": 8,
       "adaptedReferences": 0,
       "categories": {
         "equipment": 29,
-        "rule": 21,
         "table": 7
       },
       "dispositions": {
@@ -1850,15 +1831,14 @@
       "version": "1.1.0",
       "edition": 4,
       "sourceHash": "fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ceb",
-      "references": 10,
-      "newlyImported": 4,
-      "retainedOutsideSearch": 0,
+      "references": 9,
+      "newlyImported": 3,
+      "retainedOutsideSearch": 1,
       "existingReferences": 6,
       "adaptedReferences": 3,
       "categories": {
         "magic": 4,
-        "equipment": 5,
-        "rule": 1
+        "equipment": 5
       },
       "dispositions": {
         "included": 14,
@@ -1885,9 +1865,9 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee73157844",
-      "references": 71,
-      "newlyImported": 54,
-      "retainedOutsideSearch": 0,
+      "references": 36,
+      "newlyImported": 19,
+      "retainedOutsideSearch": 35,
       "existingReferences": 17,
       "adaptedReferences": 5,
       "categories": {
@@ -1895,7 +1875,6 @@
         "magic": 13,
         "equipment": 11,
         "property": 1,
-        "rule": 35,
         "table": 2,
         "trait": 5
       },
@@ -1939,16 +1918,15 @@
       "version": "1.0.0",
       "edition": 4,
       "sourceHash": "a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81ea",
-      "references": 29,
-      "newlyImported": 24,
-      "retainedOutsideSearch": 0,
+      "references": 18,
+      "newlyImported": 13,
+      "retainedOutsideSearch": 11,
       "existingReferences": 5,
       "adaptedReferences": 5,
       "categories": {
         "career": 1,
         "species": 4,
         "table": 11,
-        "rule": 11,
         "trait": 1,
         "equipment": 1
       },

@@ -13,11 +13,17 @@ import {
 export function buildReferenceLibrary(library, gm) {
   const found = new Map(),
     contexts = [];
+  const excluded = library.referenceExclusions || {};
   for (const pack of library.packs) {
     const R = assembleBooks(library, [pack.manifest.id]);
     contexts.push(R);
     for (const row of buildSearchIndex(R)) {
-      if (!isSearchCategoryEnabled(row.kind)) continue;
+      if (
+        !isSearchCategoryEnabled(row.kind) ||
+        excluded[row.key] ||
+        excluded[row.entry?.id]
+      )
+        continue;
       const previous = found.get(row.key);
       if (previous) {
         previous.aliases = [...new Set([...previous.aliases, ...row.aliases])];
@@ -27,7 +33,8 @@ export function buildReferenceLibrary(library, gm) {
     }
     for (const entry of pack.data.referenceEntries || []) {
       validateReferenceEntry(entry, pack.manifest.id);
-      if (!isSearchCategoryEnabled(entry.category)) continue;
+      if (!isSearchCategoryEnabled(entry.category) || excluded[entry.id])
+        continue;
       const fields = [entry.text, entry.topic, pack.manifest.title];
       found.set(entry.id, {
         key: entry.id,

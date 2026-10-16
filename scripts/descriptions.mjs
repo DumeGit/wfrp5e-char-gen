@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import {
   visitDescriptionFields,
   descriptionBinding,
+  requiresDescription,
 } from "../dist/description-data.mjs";
 
 export const sourceRoot = new URL("../content/sources/", import.meta.url);
@@ -44,8 +45,20 @@ export async function checkDescriptions(catalogue) {
     throw Error("Invalid canonical description catalogue.");
   const used = new Set(),
     bindings = new Set();
+  const seenExclusions = new Set();
   for (const { file, data } of await descriptionSources()) {
     visitDescriptionFields(data, (entry, path) => {
+      const exclusion = catalogue.excludedReferences?.[entry.id];
+      if (exclusion) {
+        if (
+          exclusion.name !== entry.name ||
+          !exclusion.reason?.trim() ||
+          !exclusion.descriptionId
+        )
+          throw Error(`Invalid editorial reference exclusion: ${entry.id}`);
+        seenExclusions.add(entry.id);
+      }
+      if (!requiresDescription(file, entry, path, catalogue)) return;
       const key = descriptionBinding(file, path),
         binding = catalogue.bindings[key],
         record = catalogue.records[binding?.id];
@@ -57,6 +70,10 @@ export async function checkDescriptions(catalogue) {
         );
       if (!["imported", "reviewed"].includes(record.status))
         throw Error(`Invalid description review status: ${binding.id}`);
+      if (catalogue.editorialComplete && record.status !== "reviewed")
+        throw Error(
+          `Description needs editorial review before publication: ${binding.id}`,
+        );
       if (!record.source?.book)
         throw Error(`Description needs a book source: ${binding.id}`);
       const book = file.startsWith("data/books/")
@@ -76,12 +93,19 @@ export async function checkDescriptions(catalogue) {
     if (!bindings.has(key)) throw Error(`Orphan description binding: ${key}`);
   for (const id of Object.keys(catalogue.records))
     if (!used.has(id)) throw Error(`Orphan canonical description: ${id}`);
+  for (const id of Object.keys(catalogue.excludedReferences || {}))
+    if (!seenExclusions.has(id))
+      throw Error(`Unknown editorial reference exclusion: ${id}`);
   return {
     records: used.size,
     reviewed: [...used].filter(
       (id) => catalogue.records[id].status === "reviewed",
     ).length,
     bindings: bindings.size,
+    structured: [...used].filter(
+      (id) => catalogue.records[id].reviewType === "structured-data",
+    ).length,
+    excludedReferences: seenExclusions.size,
   };
 }
 
@@ -102,6 +126,7 @@ export async function registerDescriptions() {
         ? file.split("/").at(-1).replace(".json", "")
         : "core";
     visitDescriptionFields(data, (entry, path) => {
+      if (!requiresDescription(file, entry, path, catalogue)) return;
       const key = descriptionBinding(file, path);
       if (catalogue.bindings[key]) return;
       const id = `description:${hash(key).slice(0, 24)}`;

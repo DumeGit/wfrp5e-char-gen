@@ -106,7 +106,7 @@ test("Only distinct fair-price consumables enter the shared shop; unknown weight
   assert.equal(R.careers.length, core.careers.length);
 });
 
-test("Search retains concrete game rules and genuine tables, without NPCs, flavour or unreviewed Legacy tags", async () => {
+test("source rules remain auditable while Search retains only genuine tables and supported options", async () => {
   const refs = await json(
     "../content/sources/data/books/taverns-old-world/reference-entries.json",
   );
@@ -134,7 +134,17 @@ test("Search retains concrete game rules and genuine tables, without NPCs, flavo
     json("../dist/data/search-library.json"),
   );
   const rows = search.rows.filter((x) => x.entry.source.book === book);
-  assert.ok(rows.some((x) => x.name === "Tavern game: Cerevis"));
+  assert.ok(!rows.some((x) => x.kind === "rule"));
+  assert.ok(!rows.some((x) => x.name === "Tavern game: Cerevis"));
+  const tables = rows.filter((x) => x.kind === "table");
+  assert.equal(tables.length, 7);
+  const gold = tables.find(
+    (x) => x.name === "Gold Tavern Venue Vital Statistics Table",
+  );
+  assert.ok(gold);
+  assert.equal(gold.entry.descriptionStatus, "reviewed");
+  assert.match(gold.entry.text, /10: Staff: Excellent Staff/);
+  assert.match(gold.entry.text, /Legendary Wine/);
   assert.ok(
     !rows.some((x) =>
       /Landlord|Doorman|Chef|Coach and Horses|Crossed Pikes/.test(x.name),

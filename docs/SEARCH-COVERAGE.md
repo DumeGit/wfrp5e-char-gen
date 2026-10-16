@@ -6,32 +6,32 @@ Gameplay reference search includes concrete game procedures, calculations, defin
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The common PC/GM catalogue contains **4043 results**, including **1359 new printed references**. Existing profiles include grouped specialisations and reference variants.
-A further **178 reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.
-The Rules audit explicitly removed **112 non-mechanical entries**; **1050 Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.
+The common PC/GM catalogue contains **2987 results**, including **567 new printed references**. Existing profiles include grouped specialisations and reference variants.
+A further **970 original records** are retained only in private source/audit inputs. NPCs & Creatures, Templates and standalone Rules are excluded from the published search.
+Standalone Rules are completely absent from published reference payloads. Historical source audits (including **112 previously removed non-mechanical entries**) remain private build evidence; creator calculations and other reference categories are unchanged.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1710 | 224 | 1934 | 0 |
-| Up in Arms | 1.0.5 | 98 | 128 | 226 | 13 |
-| Archives of the Empire: Volume I | 1.0.3 | 39 | 10 | 49 | 21 |
-| Archives of the Empire: Volume II | 1.0.7 | 24 | 103 | 127 | 7 |
-| Archives of the Empire: Volume III | 1.0.5 | 59 | 105 | 164 | 14 |
-| Winds of Magic | 1.0.4 | 172 | 252 | 424 | 55 |
-| Rough Nights & Hard Days | 1.0.2 | 2 | 24 | 26 | 2 |
-| Dwarf Player’s Guide | 1.0.3 | 221 | 107 | 328 | 103 |
-| High Elf Player’s Guide | 1.0.3 | 116 | 81 | 197 | 50 |
-| Blood and Bramble | 1.0.2 | 25 | 2 | 27 | 10 |
-| Deft Steps, Light Fingers | 1.0.4 | 56 | 146 | 202 | 17 |
-| The Night Parade | 1.0.0 | 0 | 4 | 4 | 0 |
-| The Warband of Bayl of Many Eyes | 1.0.0 | 0 | 3 | 3 | 0 |
-| The Cluster-Eye Tribe | 1.0.0 | 1 | 5 | 6 | 0 |
-| Tribes and Tribulations | 1.0.0 | 49 | 15 | 64 | 12 |
-| Sea of Claws | 1.0.0 | 61 | 19 | 80 | 28 |
-| Taverns of the Old World | 1.0.0 | 8 | 49 | 57 | 0 |
-| The Corsairs of Captain Flariel | 1.1.0 | 6 | 4 | 10 | 3 |
-| Lustria | 1.0.0 | 17 | 54 | 71 | 5 |
-| Salzenmund: City of Salt and Silver | 1.0.0 | 5 | 24 | 29 | 5 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.7 | 1446 | 102 | 1548 | 0 |
+| Up in Arms | 1.0.5 | 98 | 59 | 157 | 13 |
+| Archives of the Empire: Volume I | 1.0.3 | 39 | 8 | 47 | 21 |
+| Archives of the Empire: Volume II | 1.0.7 | 24 | 44 | 68 | 7 |
+| Archives of the Empire: Volume III | 1.0.5 | 59 | 35 | 94 | 14 |
+| Winds of Magic | 1.0.4 | 172 | 117 | 289 | 55 |
+| Rough Nights & Hard Days | 1.0.2 | 2 | 4 | 6 | 2 |
+| Dwarf Player’s Guide | 1.0.3 | 221 | 21 | 242 | 103 |
+| High Elf Player’s Guide | 1.0.3 | 116 | 29 | 145 | 50 |
+| Blood and Bramble | 1.0.2 | 25 | 1 | 26 | 10 |
+| Deft Steps, Light Fingers | 1.0.4 | 56 | 76 | 132 | 17 |
+| The Night Parade | 1.0.0 | 0 | 0 | 0 | 0 |
+| The Warband of Bayl of Many Eyes | 1.0.0 | 0 | 0 | 0 | 0 |
+| The Cluster-Eye Tribe | 1.0.0 | 1 | 0 | 1 | 0 |
+| Tribes and Tribulations | 1.0.0 | 49 | 2 | 51 | 12 |
+| Sea of Claws | 1.0.0 | 61 | 6 | 67 | 28 |
+| Taverns of the Old World | 1.0.0 | 8 | 28 | 36 | 0 |
+| The Corsairs of Captain Flariel | 1.1.0 | 6 | 3 | 9 | 3 |
+| Lustria | 1.0.0 | 17 | 19 | 36 | 5 |
+| Salzenmund: City of Salt and Silver | 1.0.0 | 5 | 13 | 18 | 5 |
 
 ## Source review
 
@@ -54,8 +54,8 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 
 Candidate sections: included 224; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 294; talent 443; magic 225; equipment 254; condition 13; property 36; psychology 5; rule 386; trait 67; species 5; table 86; endeavour 16; mutation 40.
-Reviewed printed records retained outside search: 0.
+Categories: career 64; skill 294; talent 443; magic 225; equipment 254; condition 13; property 36; psychology 5; trait 67; species 5; table 86; endeavour 16; mutation 40.
+Reviewed printed records retained outside search: 122.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.
 
@@ -107,8 +107,8 @@ Source SHA-256: `9d0a5cc54b6e2a81076c4e227204540ff14b4916225f2b84c705de37e902fdf
 
 Candidate sections: excluded 62; included 137; existing 14; consolidated 12.
 
-Categories: career 15; talent 12; magic 9; equipment 70; species 3; rule 63; table 40; property 7; trait 1; endeavour 6.
-Reviewed printed records retained outside search: 9.
+Categories: career 15; talent 12; magic 9; equipment 70; species 3; table 34; property 7; trait 1; endeavour 6.
+Reviewed printed records retained outside search: 78.
 
 Rules audit (2026-10-08): 72 prior results; 9 excluded. The following standalone entries were removed from published reference sources.
 
@@ -137,8 +137,8 @@ Source SHA-256: `d07f2cbd9faf64f3e979ee249c44bfbfa3e8163b47a2fc678e6749700920c5d
 
 Candidate sections: excluded 72; included 23; existing 18.
 
-Categories: career 4; talent 1; equipment 18; species 16; rule 2; table 8.
-Reviewed printed records retained outside search: 13.
+Categories: career 4; talent 1; equipment 18; species 16; table 8.
+Reviewed printed records retained outside search: 15.
 
 Rules audit (2026-10-08): 4 prior results; 2 excluded. The following standalone entries were removed from published reference sources.
 
@@ -162,8 +162,8 @@ Source SHA-256: `95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132
 
 Candidate sections: excluded 93; included 118; existing 16.
 
-Categories: career 3; talent 1; magic 7; equipment 12; species 1; table 36; rule 59; psychology 1; endeavour 7.
-Reviewed printed records retained outside search: 15.
+Categories: career 3; talent 1; magic 7; equipment 12; species 1; table 36; psychology 1; endeavour 7.
+Reviewed printed records retained outside search: 74.
 
 Rules audit (2026-10-08): 63 prior results; 4 excluded. The following standalone entries were removed from published reference sources.
 
@@ -192,8 +192,8 @@ Source SHA-256: `e9762ca00b14029412002b331492e996f7782fb2dde92058157aec5b0dde478
 
 Candidate sections: excluded 113; included 117; consolidated 18; existing 30.
 
-Categories: career 3; magic 58; species 11; rule 70; table 10; endeavour 1; property 7; trait 4.
-Reviewed printed records retained outside search: 12.
+Categories: career 3; magic 58; species 11; table 10; endeavour 1; property 7; trait 4.
+Reviewed printed records retained outside search: 82.
 
 Rules audit (2026-10-08): 77 prior results; 7 excluded. The following standalone entries were removed from published reference sources.
 
@@ -238,8 +238,8 @@ Source SHA-256: `28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a15
 
 Candidate sections: excluded 143; included 273; existing 161; consolidated 4.
 
-Categories: career 12; skill 2; magic 229; equipment 7; rule 135; table 29; endeavour 5; talent 3; property 1; trait 1.
-Reviewed printed records retained outside search: 21.
+Categories: career 12; skill 2; magic 229; equipment 7; table 29; endeavour 5; talent 3; property 1; trait 1.
+Reviewed printed records retained outside search: 156.
 
 Rules audit (2026-10-08): 145 prior results; 10 excluded. The following standalone entries were removed from published reference sources.
 
@@ -267,8 +267,8 @@ Source SHA-256: `08b4301029408f02f60ad94037a5e07091259a3a05108644d8c4b3f3b534e6f
 
 Candidate sections: excluded 24; included 104; existing 1.
 
-Categories: talent 1; species 1; magic 1; table 3; rule 20.
-Reviewed printed records retained outside search: 80.
+Categories: talent 1; species 1; magic 1; table 3.
+Reviewed printed records retained outside search: 100.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -285,8 +285,8 @@ Source SHA-256: `74238e8c5660fcaf2df05dd721b0786e277da42b32eacfa03ca08291d4415a7
 
 Candidate sections: excluded 146; included 107; existing 107.
 
-Categories: career 10; skill 3; talent 88; magic 71; equipment 38; species 11; table 18; rule 86; property 3.
-Reviewed printed records retained outside search: 0.
+Categories: career 10; skill 3; talent 88; magic 71; equipment 38; species 11; table 18; property 3.
+Reviewed printed records retained outside search: 86.
 
 Rules audit (2026-10-08): 97 prior results; 11 excluded. The following standalone entries were removed from published reference sources.
 
@@ -319,8 +319,8 @@ Source SHA-256: `16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b
 
 Candidate sections: excluded 140; included 81; existing 92; consolidated 1.
 
-Categories: career 10; talent 11; magic 69; equipment 23; species 11; table 20; rule 52; endeavour 1.
-Reviewed printed records retained outside search: 0.
+Categories: career 10; talent 11; magic 69; equipment 23; species 11; table 20; endeavour 1.
+Reviewed printed records retained outside search: 52.
 
 Rules audit (2026-10-08): 59 prior results; 7 excluded. The following standalone entries were removed from published reference sources.
 
@@ -344,8 +344,8 @@ Source SHA-256: `6e62fc57534f2d56cfd99333666389d0bf293ddb81b6f3d8284382b3e2f5b8d
 
 Candidate sections: excluded 11; included 8; existing 24.
 
-Categories: magic 24; equipment 1; rule 1; table 1.
-Reviewed printed records retained outside search: 6.
+Categories: magic 24; equipment 1; table 1.
+Reviewed printed records retained outside search: 7.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -369,8 +369,8 @@ Source SHA-256: `2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537ee
 
 Candidate sections: excluded 237; included 168; existing 42; consolidated 15.
 
-Categories: career 9; magic 32; equipment 15; rule 70; table 44; endeavour 32.
-Reviewed printed records retained outside search: 22.
+Categories: career 9; magic 32; equipment 15; table 44; endeavour 32.
+Reviewed printed records retained outside search: 92.
 
 Rules audit (2026-10-08): 106 prior results; 36 excluded. The following standalone entries were removed from published reference sources.
 
@@ -423,8 +423,8 @@ Source SHA-256: `f8bb99e7da5163cbb094208f78c183410b1d1b0490d01188f09a8dbddca25b5
 
 Candidate sections: included 12; excluded 2; existing 1.
 
-Categories: rule 4.
-Reviewed printed records retained outside search: 0.
+Categories: .
+Reviewed printed records retained outside search: 4.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -436,8 +436,8 @@ Source SHA-256: `bf5839ff86537d1d4aee619d4d4095904b58de8d86295383d5695703114b4a6
 
 Candidate sections: included 12; existing 2; excluded 2.
 
-Categories: rule 3.
-Reviewed printed records retained outside search: 0.
+Categories: .
+Reviewed printed records retained outside search: 3.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -449,8 +449,8 @@ Source SHA-256: `ec7d5a19124409fc45103a35a38b94d0792ccea1ef3af8ffc1a28ad5dd6d2e8
 
 Candidate sections: included 14; excluded 2; existing 1.
 
-Categories: trait 1; rule 5.
-Reviewed printed records retained outside search: 0.
+Categories: trait 1.
+Reviewed printed records retained outside search: 5.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -464,8 +464,8 @@ Source SHA-256: `008c2e08337b15dd6776ae108acae4749d5276fbcff63eb7db74e3b9daf8dc6
 
 Candidate sections: included 50; excluded 1.
 
-Categories: magic 28; equipment 12; trait 9; rule 13; table 2.
-Reviewed printed records retained outside search: 0.
+Categories: magic 28; equipment 12; trait 9; table 2.
+Reviewed printed records retained outside search: 13.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -479,8 +479,8 @@ Source SHA-256: `30b76209db926d2f392f184e5825601f27cffb967e5c667926e0910c775ba62
 
 Candidate sections: included 32; excluded 1.
 
-Categories: career 9; talent 9; magic 21; equipment 4; trait 15; species 4; rule 13; property 1; table 4.
-Reviewed printed records retained outside search: 0.
+Categories: career 9; talent 9; magic 21; equipment 4; trait 15; species 4; property 1; table 4.
+Reviewed printed records retained outside search: 13.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -494,8 +494,8 @@ Source SHA-256: `07edfb947c730388c08b2ae15a50bb128fcdb559b1dbfbe08e1353210b19583
 
 Candidate sections: included 61; excluded 1.
 
-Categories: equipment 29; rule 21; table 7.
-Reviewed printed records retained outside search: 0.
+Categories: equipment 29; table 7.
+Reviewed printed records retained outside search: 21.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -508,8 +508,8 @@ Source SHA-256: `fe5a0cef5b91f482bc7c46cb817bcfa4b34bc4f32d82973a00d148fcae2c8ce
 
 Candidate sections: included 14; excluded 3.
 
-Categories: magic 4; equipment 5; rule 1.
-Reviewed printed records retained outside search: 0.
+Categories: magic 4; equipment 5.
+Reviewed printed records retained outside search: 1.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -525,8 +525,8 @@ Source SHA-256: `8899d0341f58ced71ac4f1fdedaa16d702718d41f4e1b4759543bfee7315784
 
 Candidate sections: included 54; excluded 3.
 
-Categories: career 4; magic 13; equipment 11; property 1; rule 35; table 2; trait 5.
-Reviewed printed records retained outside search: 0.
+Categories: career 4; magic 13; equipment 11; property 1; table 2; trait 5.
+Reviewed printed records retained outside search: 35.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 
@@ -542,8 +542,8 @@ Source SHA-256: `a09f59d0c2ccd854987de09be3bdbfd2828e5bfa7b8175c97af5dea11dbc81e
 
 Candidate sections: included 35; excluded 3.
 
-Categories: career 1; species 4; table 11; rule 11; trait 1; equipment 1.
-Reviewed printed records retained outside search: 0.
+Categories: career 1; species 4; table 11; trait 1; equipment 1.
+Reviewed printed records retained outside search: 11.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 

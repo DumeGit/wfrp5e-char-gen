@@ -38,9 +38,32 @@ export function visitDescriptionFields(value, visit, path = []) {
 export const descriptionBinding = (file, path) =>
   `${file}#/${path.map(encodeURIComponent).join("/")}`;
 
+// Original excluded references remain private audit material. They have no
+// editorial/public description and must never acquire a generated copy.
+export const requiresDescription = (file, entry, path = [], catalogue) =>
+  !catalogue?.excludedReferences?.[entry.id] &&
+  !(
+    (/(?:reference-entries|rule-references)\.json$/.test(file) &&
+      ["rule", "profile", "template"].includes(entry.category)) ||
+    (file.startsWith("gm/books/") &&
+      path.length === 2 &&
+      ["profiles", "creatures", "templates"].includes(path[0]))
+  );
+
 export function hydrateDescriptions(value, catalogue, file) {
   const result = structuredClone(value);
   visitDescriptionFields(result, (entry, path) => {
+    if (!requiresDescription(file, entry, path, catalogue)) return;
+    // Preserve mechanical classification before editorial wording changes.
+    // Runtime calculations must not reinterpret a rewritten attack sentence.
+    if (file.startsWith("gm/books/") && path.includes("attacks")) {
+      entry.ranged ??=
+        /Bow|Sling|Crossbow|Rocks|Breath|Vomit/.test(entry.name) ||
+        /yards/.test(entry.text);
+      entry.free ??=
+        /Bite|Horns|Tail|Tentacle|Breath|Vomit|Grasp|Howl/.test(entry.name) ||
+        /Free Attack/.test(entry.text);
+    }
     const key = descriptionBinding(file, path),
       binding = catalogue.bindings[key],
       record = catalogue.records[binding?.id];

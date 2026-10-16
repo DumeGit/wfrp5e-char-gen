@@ -18,9 +18,11 @@ const full = await loadReferenceLibrary(library, () => wire);
 const named = (name, kind) =>
   full.rows.filter((row) => row.name === name && (!kind || row.kind === kind));
 
-test("the live search projection hides Rules from all results and related-term chaining", () => {
+test("Rules are absent from the shipped payload, all results and related-term chaining", () => {
   const visible = full.rows.filter((row) => isSearchCategoryVisible(row.kind));
-  assert.ok(full.rows.some((row) => row.kind === "rule"));
+  assert.ok(!wire.rows.some((row) => row.kind === "rule"));
+  assert.ok(!wire.entries.some((entry) => entry.category === "rule"));
+  assert.ok(!full.rows.some((row) => row.kind === "rule"));
   assert.ok(!visible.some((row) => row.kind === "rule"));
   for (const query of [
     "Fortune",
@@ -32,11 +34,9 @@ test("the live search projection hides Rules from all results and related-term c
         (row) => row.kind !== "rule",
       ),
     );
-  const rule = named("Achieving the Impossible", "rule")[0];
-  assert.ok(rule);
   assert.ok(
-    createReferenceLinker(visible)(rule.name).every(
-      (segment) => !segment.keys?.includes(rule.key),
+    createReferenceLinker(full.rows)("Achieving the Impossible").every(
+      (segment) => !segment.keys?.length,
     ),
   );
   assert.ok(
@@ -46,49 +46,16 @@ test("the live search projection hides Rules from all results and related-term c
   );
 });
 
-test("core Fate and Fortune references include all spending and replenishment rules", () => {
-  const fate = named("Fate", "rule")[0],
-    fortune = named("Fortune", "rule")[0],
-    combined = named("Fate and Fortune", "rule")[0];
-  for (const row of [fate, fortune, combined]) {
-    assert.equal(row.entry.page, 133);
-    assert.equal(row.entry.source.book, "core");
-    assert.equal(row.legacy.length, 0);
-  }
-  for (const heading of [
-    "Cheating Death",
-    "Achieving the Impossible",
-    "Replenishing Fate",
-  ])
-    assert.ok(referenceBodyHTML(fate).includes(`<h3>${heading}</h3>`));
-  assert.match(fate.entry.text, /How Did That Miss\?/);
-  assert.match(fate.entry.text, /Not Today!/);
-  assert.match(fate.entry.text, /I Will Not Fail!/);
-  assert.match(fate.entry.text, /win by at least \+1 SL/);
-  assert.match(fate.entry.text, /pick the Hit Location/);
-  assert.match(fate.entry.text, /Fate is not automatically replenished/);
-  assert.match(fortune.entry.text, /Gain Advantage on a Test before rolling/);
-  assert.match(fortune.entry.text, /Reroll a Test, keeping the new result/);
-  assert.match(fortune.entry.text, /another Fortune to reroll again/);
-  assert.match(fortune.entry.text, /Remove one Condition \(page 184\)/);
-  assert.match(referenceBodyHTML(fortune), /<h3>Replenishing Fortune<\/h3>/);
-  assert.match(
-    fortune.entry.text,
-    /regain all Fortune Points at the start of each gaming session/,
-  );
-  assert.ok(combined.entry.text.includes(fate.entry.text));
-  assert.ok(combined.entry.text.includes(fortune.entry.text));
+test("removed Fate and Fortune Rules leave the distinct Fortune Blessing available", () => {
   for (const title of [
+    "Fate",
+    "Fortune",
+    "Fate and Fortune",
     "Achieving the Impossible",
     "Replenishing Fate",
     "Replenishing Fortune",
   ])
-    assert.equal(named(title, "rule").length, 1);
-  for (const [query, row] of [
-    ["Fate Points", fate],
-    ["Fortune Points", fortune],
-  ])
-    assert.equal(searchBooks(full.rows, query, 20).rows[0].key, row.key);
+    assert.equal(named(title, "rule").length, 0, title);
   assert.ok(
     named("Blessing of Fortune", "magic").length,
     "Fortune Blessing remains a separate reference",
@@ -123,7 +90,7 @@ test("one all-book reference corpus includes inactive books, explicit variants a
   assert.equal(JSON.stringify(R), coreBefore);
 });
 
-test("global references retain selective Legacy metadata, source text and safe read-only rendering", () => {
+test("global references retain selective Legacy metadata, mechanical summaries and safe read-only rendering", () => {
   const gnome = named("Gnome", "species")[0];
   assert.ok(gnome.legacy.length);
   const talent = named("Suffuse with Ulgu", "talent")[0];
@@ -142,7 +109,13 @@ test("global references retain selective Legacy metadata, source text and safe r
   );
   const spell = named("Godspakt", "magic")[0];
   assert.match(referenceBodyHTML(spell), /Range<\/dt><dd>You/);
-  assert.doesNotMatch(referenceBodyHTML(spell), /Source discrepancy/);
+  assert.match(referenceBodyHTML(spell), /Source discrepancy/);
+  assert.match(referenceBodyHTML(spell), /Range Touch and Target 1/);
+  assert.match(
+    referenceBodyHTML(spell),
+    /selected the detailed p\. 10 profile/,
+  );
+  assert.match(referenceBodyHTML(spell), /Mechanical summary/);
   assert.match(
     referenceBodyHTML({
       ...compatible,
@@ -195,7 +168,7 @@ test("lazy global library rejects stale versions, invalid profile pointers and d
     loadReferenceLibrary(library, () => duplicate),
     /Invalid/,
   );
-  for (const kind of ["profile", "template"]) {
+  for (const kind of ["rule", "profile", "template"]) {
     const hidden = structuredClone(wire);
     hidden.rows[0].kind = kind;
     await assert.rejects(

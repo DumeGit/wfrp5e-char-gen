@@ -95,6 +95,29 @@ test("printed source material is searchable and reference-only without entering 
     .records.find((r) => r.contentId === source.id);
   assert.equal(record.status, "reference-only");
 });
+
+test("explicit reference exclusions suppress individual tables without suppressing retained categories", () => {
+  const copy = structuredClone(library);
+  const pack = copy.packs.find((p) => p.manifest.id === "up-in-arms");
+  pack.data.referenceEntries = [
+    source,
+    {
+      ...source,
+      id: "up-in-arms:reference:retained-fixture",
+      name: "Retained fixture",
+    },
+  ];
+  copy.referenceExclusions[source.id] = { reason: "Explicit test exclusion" };
+  const corpus = buildReferenceLibrary(copy, {
+    profiles: [],
+    templates: [],
+    mutations: [],
+  });
+  assert.ok(!corpus.rows.some((r) => r.key === source.id));
+  assert.ok(
+    corpus.rows.some((r) => r.key === "up-in-arms:reference:retained-fixture"),
+  );
+});
 test("worker ranking agrees with synchronous matching, categories and accents", async () => {
   const rows = [
     {
@@ -205,7 +228,7 @@ const get = (book, name) =>
       r.entry.source.book === book &&
       r.name.toLowerCase() === name.toLowerCase(),
   );
-test("all supplied books publish gameplay references, without enabling creator systems", () => {
+test("supplied books publish retained gameplay references, without enabling creator systems", () => {
   const samples = {
     core: "Head Critical Wounds",
     "up-in-arms": "Alcatini Method",
@@ -213,12 +236,11 @@ test("all supplied books publish gameplay references, without enabling creator s
     "archives-ii": "Magical Artefact Generation Table",
     "archives-iii": "Enterprise Events",
     "winds-of-magic": "Minor Miscast Table",
-    "rough-nights": "Bull Ring",
-    "dwarf-guide": "Crafting Runes",
-    "high-elf": "Priest Careers",
-    "blood-bramble": "The Lore of Hedgecraft",
+    "rough-nights": "Reveal the Inner Beauty",
+    "dwarf-guide": "Runic Flaws Table",
+    "high-elf": "Smith-priest of Vaul — printed Career",
+    "blood-bramble": "Nameless Summons Table",
     "deft-steps": "Black Market",
-    "night-parade": "Vigor Mortis",
   };
   for (const [book, name] of Object.entries(samples)) {
     const row = get(book, name);
@@ -234,6 +256,8 @@ test("all supplied books publish gameplay references, without enabling creator s
       /data-action|data-search-route|Use in the creator/,
     );
   }
+  assert.equal(get("night-parade", "Vigor Mortis"), undefined);
+  assert.ok(!raw.some((r) => r.entry.source.book === "night-parade"));
   for (const pack of library.packs.filter(
     (p) => p.manifest.kind !== "variant",
   )) {
@@ -258,10 +282,7 @@ test("complete event, corruption, artillery and injury tables preserve their sou
     get("core", "Character Events Table").entry.text,
     /98–00: They’re a Witch!/,
   );
-  assert.doesNotMatch(
-    get("core", "Money to Burn").entry.text,
-    /85–90: Scandalous Rumours/,
-  );
+  assert.equal(get("core", "Money to Burn"), undefined);
   for (const name of ["Mental Corruption Table", "Physical Corruption Table"])
     assert.equal(
       (get("core", name).entry.text.match(/^\| \d/gm) || []).length,
@@ -273,15 +294,37 @@ test("complete event, corruption, artillery and injury tables preserve their sou
     /Ballista \| 30 GC \| 20 \| Scarce \| 150 \| \+12/,
   );
   assert.match(artillery.entry.text, /Helstorm Rocket Battery/);
-  assert.match(artillery.entry.text, /increases the Salvo number by 1/);
   assert.match(
-    get("up-in-arms", "Alcatini Method").entry.text,
-    /at least two ranks of the Drilled Talent/,
+    artillery.entry.text,
+    /completed Reload sequence restores 1 Salvo/,
+  );
+  assert.match(
+    artillery.entry.text,
+    /Reload 6 for Salvo 1, repeated 9 times.*Salvo 9/,
+  );
+  const alcatini = get("up-in-arms", "Alcatini Method").entry.text;
+  assert.match(alcatini, /requires at least two ranks of Drilled/);
+  assert.match(alcatini, /Difficult \(–10\) Leadership Test/);
+  assert.match(
+    alcatini,
+    /Each SL.*one Character.*rank of Drilled.*next adventure/,
+  );
+  assert.match(
+    alcatini,
+    /already possessing Drilled gain \+1 rank, up to your own Drilled rank/,
+  );
+  assert.match(
+    alcatini,
+    /\+3 SL and Inspiring 2.*\+1 Drilled rank to 30 Characters/,
+  );
+  assert.match(
+    events.entry.text,
+    /Only one investor per Enterprise.*at most one Event/,
   );
   assert.match(get("core", "Selection of Traps").entry.text, /If Triggered/);
   assert.match(
     get("core", "Selection of Traps").entry.text,
-    /Target takes 1d10 \+ 5 to Leg Location/,
+    /Target takes 1d10 \+ 5 to a Leg and 1 Entangled, Strength 55/,
   );
   for (const book of ["core", "up-in-arms"])
     assert.equal(
@@ -292,46 +335,48 @@ test("complete event, corruption, artillery and injury tables preserve their sou
       20,
     );
 });
-test("core creation references and multi-page Wrath table contain complete reviewed procedures", () => {
+test("core creation and Wrath tables preserve complete rows and advancement prices", () => {
   const career = get("core", "Random Class and Career Table");
   assert.equal(career.entry.page, "36–37");
   assert.equal(
     (career.entry.text.match(/^\| (?!---|Class)/gm) || []).length,
     64,
   );
-  assert.doesNotMatch(get("core", "Career Level").entry.text, /56 55/);
+  assert.equal(get("core", "Career Level"), undefined);
   const characteristics = get("core", "Characteristic Table");
   assert.equal(
     (characteristics.entry.text.match(/^\| (?!---|Characteristic)/gm) || [])
       .length,
     10,
   );
+  assert.equal(get("core", "Generating Characteristics"), undefined);
+  assert.equal(get("core", "Starting Talents and Trappings"), undefined);
   assert.match(
-    get("core", "Generating Characteristics").entry.text,
-    /up to six in total/,
+    get("core", "Class Trappings Table").entry.text,
+    /Rogues \|.*2 Candles, 1d10 Matches/,
   );
+  const advancement = full.rows.find(
+    (r) => r.key === "core:reference:191-advancement-xp-costs",
+  );
+  assert.equal(advancement.kind, "table");
   assert.match(
-    get("core", "Generating Characteristics").entry.text,
-    /up to three in total/,
+    advancement.entry.text,
+    /\| \+45 \| 1,800 \| 6,150 \| 850 \| 3,325 \|/,
   );
-  assert.match(
-    get("core", "Starting Talents and Trappings").entry.text,
-    /Clothing, a Dagger, and a Pouch/,
+  const individual = full.rows.find(
+    (r) => r.key === "core:reference:364-advancement-xp-costs",
   );
+  assert.equal(individual.kind, "table");
+  assert.match(individual.entry.text, /Cost of Advance \(\+1\)/);
+  assert.match(individual.entry.text, /\| 41 to 45 \| 360 \| 170 \|/);
   const wrath = get("core", "Wrath of the Gods Table");
   assert.equal(wrath.entry.page, "218–219");
   assert.equal((wrath.entry.text.match(/^\| \d/gm) || []).length, 31);
   assert.match(wrath.entry.text, /151\+ \| Called to Account/);
 });
 test("old profiles and unconverted systems remain distinct from approved adapted creator profiles", () => {
-  assert.match(
-    get("archives-iii", "Combining Armour").entry.text,
-    /Brigandine|Plate/,
-  );
-  assert.equal(
-    get("archives-iii", "Animal Familiar Generation").entry.source.book,
-    "archives-iii",
-  );
+  assert.equal(get("archives-iii", "Combining Armour"), undefined);
+  assert.equal(get("archives-iii", "Animal Familiar Generation"), undefined);
   const priest = get("high-elf", "Smith-priest of Vaul — printed Career");
   assert.match(priest.entry.text, /Level 3: Smith-priest/);
   assert.match(priest.entry.text, /Level 5: Arch Forge-priest/);
@@ -380,9 +425,9 @@ test("raw lazy wire data rejects altered identity, commentary fields and invente
   );
   assert.equal(JSON.stringify(wire), before);
 });
-test("related terms can chain to same-book new rules and original Careers", () => {
+test("related terms can chain to retained Endeavours and original Careers", () => {
   const link = createReferenceLinker(full.rows),
-    current = get("high-elf", "Priest Careers");
+    current = get("high-elf", "Smith-priest of Vaul — printed Career");
   const terms = link("Mage — printed Career", current).filter((s) => s.keys);
   assert.ok(
     terms.some((s) =>
@@ -416,13 +461,16 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
       assert.match(row.entry.text, /\| D100 \|/, row.key);
   }
   for (const [book, name, kind] of [
-    ["up-in-arms", "Critical Wounds", "rule"],
-    ["up-in-arms", "Complex Pursuits", "rule"],
     ["winds-of-magic", "Panacea Universalis", "equipment"],
     ["winds-of-magic", "Knuckles of Ignominy", "equipment"],
-    ["rough-nights", "Bull Ring", "rule"],
   ])
     assert.equal(get(book, name).kind, kind);
+  for (const [book, name] of [
+    ["up-in-arms", "Critical Wounds"],
+    ["up-in-arms", "Complex Pursuits"],
+    ["rough-nights", "Bull Ring"],
+  ])
+    assert.equal(get(book, name), undefined);
   for (const name of ["Weather Table", "Terrain Table"])
     assert.equal(
       full.rows.filter(
@@ -432,8 +480,15 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
     );
   assert.match(
     get("deft-steps", "Weather Table").entry.text,
-    /Roll separately for each column/,
+    /Roll independently for each weather column/,
   );
+  const weather = get("deft-steps", "Weather Table").entry.text;
+  assert.match(
+    weather,
+    /add 2 in spring or autumn, 4 in winter, and another 2 for colder climates or high altitude/,
+  );
+  assert.match(weather, /Gloves are required.*-2 SL on Dexterity/);
+  assert.match(weather, /Undead and Constructs ignore temperature penalties/);
   assert.match(
     get("deft-steps", "Terrain Table").entry.text,
     /Deep forest.*-2 SL/,
@@ -462,8 +517,10 @@ test("lookup tables exclude standalone NPC stat blocks, Career grids and written
   );
 });
 
-test("NPCs and templates stay outside search while reviewed source records and the workshop remain intact", async () => {
-  assert.ok(!full.rows.some((r) => ["profile", "template"].includes(r.kind)));
+test("Rules, NPCs and templates stay outside published search while source records and the workshop remain intact", async () => {
+  assert.ok(
+    !full.rows.some((r) => ["rule", "profile", "template"].includes(r.kind)),
+  );
   const retained = library.packs
     .flatMap((p) => p.data.referenceEntries || [])
     .filter((e) => ["profile", "template"].includes(e.category));
@@ -477,7 +534,9 @@ test("NPCs and templates stay outside search while reviewed source records and t
   const before = JSON.stringify(gm);
   const generated = buildReferenceLibrary(library, gm);
   assert.ok(
-    !generated.rows.some((r) => ["profile", "template"].includes(r.kind)),
+    !generated.rows.some((r) =>
+      ["rule", "profile", "template"].includes(r.kind),
+    ),
   );
   assert.equal(JSON.stringify(gm), before);
   for (const name of [
@@ -492,9 +551,9 @@ test("NPCs and templates stay outside search while reviewed source records and t
       !raw.some((r) => r.name === name && r.entry.source.book === "up-in-arms"),
       name,
     );
-  // Ordinary printed hireling prices and procedures remain references.
+  // The ordinary hireling price table remains; the standalone procedure does not.
   assert.equal(get("core", "Hirelings").kind, "table");
-  assert.equal(get("up-in-arms", "Hireling Profiles").kind, "rule");
+  assert.equal(get("up-in-arms", "Hireling Profiles"), undefined);
 });
 
 test("coverage is generated from registry and frozen review, separate from creator inclusion", async () => {
@@ -518,7 +577,11 @@ test("coverage is generated from registry and frozen review, separate from creat
     report.retainedOutsideSearch,
     library.packs
       .flatMap((p) => p.data.referenceEntries || [])
-      .filter((e) => ["profile", "template"].includes(e.category)).length,
+      .filter(
+        (e) =>
+          ["rule", "profile", "template"].includes(e.category) ||
+          library.referenceExclusions[e.id],
+      ).length,
   );
   for (const b of report.books) {
     const bytes = await readFile(
@@ -571,7 +634,7 @@ test("coverage is generated from registry and frozen review, separate from creat
   );
 });
 
-test("Rules omit reviewed flavour and introductions while preserving qualitative requirements and mechanics", async () => {
+test("standalone Rules and explicit reference exclusions cannot be searched or linked", async () => {
   const review = JSON.parse(
     await readFile(
       new URL("../scripts/search-reference-review.json", import.meta.url),
@@ -597,28 +660,52 @@ test("Rules omit reviewed flavour and introductions while preserving qualitative
       );
     }
   }
-  for (const [key, expected] of [
-    [
-      "rule:core:rule-reference:rule-167-outnumbering:Outnumbering",
-      /twice as many Engaged/,
-    ],
-    [
-      "rule:core:rule-reference:rule-148-what-you-already-know:What You Already Know",
-      /does not require a Test/,
-    ],
-    ["core:reference:207-strictures", /Respect prisoners of war/],
-    ["archives-iii:reference:58-strictures", /Never harm an animal/],
-    ["high-elf:reference:86-the-lore-of-high-magic", /High Magic Talent/],
-    ["deft-steps:reference:98-notorious-prisons", /Hard \(-20\).*Test/],
-  ]) {
-    const row = full.rows.find((r) => r.key === key);
-    assert.equal(row?.kind, "rule", key);
-    assert.match(row.entry.text, expected);
+  const omitted = library.packs.flatMap((pack) => [
+    ...(pack.data.referenceEntries || [])
+      .filter((r) => r.category === "rule")
+      .map((r) => ({ key: r.id, name: r.name })),
+    ...(pack.data.ruleReferences || [])
+      .filter((r) => r.category === "rule")
+      .map((r) => ({ key: `rule:${r.id}:${r.name}`, name: r.name })),
+  ]);
+  assert.ok(omitted.length > 100);
+  for (const { key, name } of omitted) {
+    assert.ok(!full.rows.some((r) => r.key === key), key);
+    assert.ok(
+      link(name).every((segment) => !segment.keys?.includes(key)),
+      key,
+    );
   }
-  assert.equal(get("up-in-arms", "Critical Wounds").kind, "rule");
-  assert.equal(get("up-in-arms", "Complex Pursuits").kind, "rule");
+  assert.deepEqual(Object.keys(library.referenceExclusions).sort(), [
+    "up-in-arms:reference:116-physical-quirks",
+    "up-in-arms:reference:116-work-ethic",
+    "up-in-arms:reference:117-personality-quirks",
+    "up-in-arms:reference:139-location-table",
+    "up-in-arms:reference:139-objective-table",
+    "up-in-arms:reference:139-personality-table",
+  ]);
+  for (const [key, exclusion] of Object.entries(library.referenceExclusions)) {
+    assert.ok(exclusion.reason && exclusion.name, key);
+    assert.ok(!full.rows.some((r) => r.key === key), key);
+    assert.ok(
+      link(exclusion.name).every((segment) => !segment.keys?.includes(key)),
+      key,
+    );
+    assert.ok(
+      !searchBooks(full.rows, exclusion.name, Infinity).rows.some(
+        (r) => r.key === key,
+      ),
+      key,
+    );
+  }
+  assert.equal(get("up-in-arms", "Critical Wounds"), undefined);
+  assert.equal(get("up-in-arms", "Complex Pursuits"), undefined);
   assert.equal(
-    searchBooks(full.rows, "Fortune", 20, { category: "rule" }).rows[0].name,
-    "Fortune",
+    searchBooks(full.rows, "Fortune", 20, { category: "rule" }).total,
+    0,
+  );
+  assert.equal(
+    searchBooks(full.rows, "", Infinity, { category: "rule" }).total,
+    0,
   );
 });

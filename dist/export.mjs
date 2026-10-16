@@ -929,12 +929,11 @@ export async function exportSheet(
     ...grudgeSlots(s, d.talents).map(
       (_, i) => `Ancestral Grudge: ${s.grudgeTargets?.[i] || "unresolved"}.`,
     ),
-    ...speciesReferences(R, s)
-      .filter((x) => x.text.startsWith("Proposed"))
-      .map(
-        (x) =>
-          `Proposed adaptation: 2 Fate / 2 Fortune for Gnomes; no extra points (Rough Nights p. 88). See full record.`,
-      ),
+    ...(s.species === "Gnome" && R.species.Gnome?.source.book === "rough-nights"
+      ? [
+          "Proposed adaptation: 2 Fate / 2 Fortune for Gnomes; no extra points (Rough Nights p. 88). See full record.",
+        ]
+      : []),
     ...womReferences(R, s).map((x) => `${x.text} (${sourceLabel(R, x)})`),
     ...chartRecord(R, s),
     ...result.cants.map(
@@ -1003,12 +1002,12 @@ export async function exportSheet(
                       "Longbeard adaptation: −1 starting Fate/Fortune; see record (Dwarf Guide p. 50).",
                     ]
                   : []),
-                ...speciesReferences(R, s)
-                  .filter((x) => x.text.startsWith("Proposed"))
-                  .map(
-                    () =>
-                      `Proposed adaptation: Gnome 2 Fate / 2 Fortune (Rough Nights p. 88).`,
-                  ),
+                ...(s.species === "Gnome" &&
+                R.species.Gnome?.source.book === "rough-nights"
+                  ? [
+                      "Proposed adaptation: Gnome 2 Fate / 2 Fortune (Rough Nights p. 88).",
+                    ]
+                  : []),
                 ...womReferences(R, s).map(
                   (x) => `${x.text.split(". ")[0]} (${sourceLabel(R, x)}).`,
                 ),

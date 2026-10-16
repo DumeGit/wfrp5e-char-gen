@@ -21,12 +21,11 @@ export const REFERENCE_CATEGORIES = [
 // Keep reviewed NPC sources for a future search extension. The current shared
 // reader excludes stat blocks and templates; GM creation uses its own catalogue.
 export const isSearchCategoryEnabled = (category) =>
-  category !== "profile" && category !== "template";
+  category !== "profile" && category !== "template" && category !== "rule";
 
-// Visibility is separate from the frozen source inventory. Rules remain in
-// reviewed data, but never enter live results, workers or related-term links.
+// Standalone Rules are excluded at build time, not merely hidden in the UI.
 export const isSearchCategoryVisible = (category) =>
-  isSearchCategoryEnabled(category) && category !== "rule";
+  isSearchCategoryEnabled(category);
 
 export function validateReferenceEntry(entry, book) {
   const nonempty = (value) => typeof value === "string" && !!value.trim();

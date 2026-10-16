@@ -96,7 +96,11 @@ test("Matching excludes adaptation/creator annotations but preserves actual book
       (x) => x.key === staff.key,
     ),
   );
-  assert.match(searchBookText(bludgeoner.entry).text, /hammer swings/);
+  assert.match(searchBookText(bludgeoner.entry).text, /Opposed Test.*Pummel/);
+  assert.match(
+    searchBookText(bludgeoner.entry).text,
+    /extra Stunned Condition per Bludgeoner level/,
+  );
   const shield = find(all, "Shield Platform", "equipment");
   assert.ok(
     !searchBooks(
@@ -105,7 +109,7 @@ test("Matching excludes adaptation/creator annotations but preserves actual book
       all.length,
     ).rows.some((x) => x.key === shield.key),
   );
-  assert.match(searchBookText(shield.entry).text, /not sold by Dwarf clans/);
+  assert.match(searchBookText(shield.entry).text, /Dwarf clans do not sell/);
   assert.match(searchBookText(shield.entry).text, /15 GC/);
   assert.ok(
     searchBookText(shield.entry).notes.some((n) =>
@@ -118,7 +122,7 @@ test("Matching excludes adaptation/creator annotations but preserves actual book
     /user selected/i,
     "Stored interpretations are retained for the dialog",
   );
-  const actual = searchBooks(all, "item’s creator", all.length).rows;
+  const actual = searchBooks(all, "its creator", all.length).rows;
   assert.ok(
     actual.some((x) => x.name === "Arcane Insight"),
     "Book prose using 'creator' remains searchable",
@@ -151,7 +155,6 @@ test("Unified search respects selected books, withdrawals and stable profile ide
       "talent",
       "magic",
       "equipment",
-      "rule",
       "condition",
       "psychology",
       "property",
@@ -271,7 +274,7 @@ import {
 } from "../dist/rule-references.mjs";
 import { ruleTextHTML, searchLabel } from "../dist/search-presentation.mjs";
 
-test("core references provide complete Skill prose and distinguish rules, Conditions, Psychology and properties", () => {
+test("core references hydrate reviewed Skill summaries and distinguish Conditions, Psychology and properties", () => {
   const before = JSON.stringify(R);
   assert.equal(
     R.ruleReferences.filter((x) => x.category === "skill").length,
@@ -279,19 +282,22 @@ test("core references provide complete Skill prose and distinguish rules, Condit
   );
   for (const skill of R.skills) {
     const ref = R.ruleReferences.find((x) => x.target === skill.contentId);
-    assert.ok(ref?.text.length > 60, skill.name);
+    assert.ok(ref?.text.trim(), skill.name);
     assert.equal(find(core, skill.name, "skill").entry.text, ref.text);
     for (const row of core.filter(
       (x) => x.kind === "skill" && x.entry.contentId === skill.contentId,
     ))
       assert.equal(row.entry.text, ref.text, row.name);
   }
+  const track = find(core, "Track", "skill").entry.text;
+  assert.match(track, /Find and follow another's trail/);
+  assert.match(track, /conceal your own/);
   assert.equal(core.filter((x) => x.kind === "condition").length, 13);
   assert.equal(core.filter((x) => x.kind === "psychology").length, 5);
   assert.equal(core.filter((x) => x.kind === "trait").length, 67);
   assert.equal(find(core, "Bleeding", "condition").entry.source.page, 185);
   assert.ok(
-    searchBooks(core, "lose Wound", 100, { category: "condition" }).rows.some(
+    searchBooks(core, "lose 1 Wound", 100, { category: "condition" }).rows.some(
       (x) => x.name === "Bleeding",
     ),
   );
@@ -319,12 +325,12 @@ test("core references provide complete Skill prose and distinguish rules, Condit
 test("category browsing and offsets preserve ranking without duplicates or omissions", () => {
   assert.equal(searchBooks(core, "").total, 0);
   assert.equal(searchBooks(core, "", 100, { category: "condition" }).total, 13);
-  const complete = searchBooks(core, "test", Infinity, { category: "rule" });
+  const complete = searchBooks(core, "", Infinity, { category: "talent" });
   assert.ok(complete.total > 40);
   const keys = [];
   for (let offset = 0; offset < complete.total; offset += 20)
     keys.push(
-      ...searchBooks(core, "test", 20, { category: "rule", offset }).rows.map(
+      ...searchBooks(core, "", 20, { category: "talent", offset }).rows.map(
         (x) => x.key,
       ),
     );
@@ -333,7 +339,7 @@ test("category browsing and offsets preserve ranking without duplicates or omiss
     complete.rows.map((x) => x.key),
   );
   assert.equal(new Set(keys).size, keys.length);
-  assert.ok(complete.rows.every((x) => x.kind === "rule"));
+  assert.ok(complete.rows.every((x) => x.kind === "talent"));
   assert.equal(
     searchBooks(core, "unimported-word-zxy", 20, { category: "condition" })
       .total,
@@ -341,26 +347,32 @@ test("category browsing and offsets preserve ranking without duplicates or omiss
   );
 });
 
-test("source tables retain Fifth Edition numbers and optional individual advances without creator conventions", () => {
-  const enc = find(core, "Encumbrance", "rule");
-  assert.match(enc.entry.text, /200 coins/);
-  assert.doesNotMatch(enc.searchable, /ignore coin|automatically pack/);
-  assert.match(
-    find(core, "Advancement XP Costs", "rule").entry.text,
-    /\| \+45 \| 1800 \| 6150 \| 850 \| 3325 \|/,
-  );
-  const optional = searchBooks(core, "Individual Skill Advances").rows[0];
-  assert.equal(optional.entry.source.page, 364);
-  assert.match(optional.entry.text, /multiple of 5/);
-  assert.match(optional.entry.text, /\| 41 to 45 \| 360 \| 170 \|/);
-  assert.match(
-    ruleTextHTML(find(core, "Combat Modifiers", "rule").entry.text),
-    /<table>/,
-  );
-  assert.match(
-    find(core, "Weapon Range", "rule").entry.text,
-    /Extreme \| Range × 3/,
-  );
+test("standalone Rules are absent from assembled references, searches and related-term links", () => {
+  const link = createReferenceLinker(all);
+  for (const rules of [R, B])
+    assert.ok(rules.ruleReferences.every((row) => row.category !== "rule"));
+  for (const index of [core, all]) {
+    assert.ok(index.every((row) => row.kind !== "rule"));
+    assert.equal(searchBooks(index, "", 100, { category: "rule" }).total, 0);
+    assert.equal(
+      searchBooks(index, "test", 100, { category: "rule" }).total,
+      0,
+    );
+  }
+  for (const name of [
+    "Encumbrance",
+    "Advancement XP Costs",
+    "Individual Skill Advances",
+    "Combat Modifiers",
+    "Weapon Range",
+  ]) {
+    assert.equal(find(all, name, "rule"), undefined);
+    assert.ok(
+      link(name).every((segment) =>
+        (segment.keys || []).every((key) => !key.startsWith("rule:")),
+      ),
+    );
+  }
   assert.equal(
     searchBooks(core, "Trained GM permission", 100).rows.some(
       (x) => x.kind === "trait",

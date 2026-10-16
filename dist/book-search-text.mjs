@@ -11,17 +11,22 @@ export function searchBookText(entry) {
     }
   };
   const tail = (marker) => {
-    const at = text.indexOf(marker);
+    // Paragraph layout is editorial; it must not make notes searchable.
+    const label = marker.trim();
+    const at = text.indexOf(label);
+    if (at > 0 && !/\s/.test(text[at - 1])) return;
     if (at >= 0) {
       notes.push(text.slice(at).trim());
       text = text.slice(0, at);
     }
   };
   if (book === "dwarf-guide") {
+    tail("Legacy: approved Fourth Edition adaptation");
     remove(
       "Adaptation warning — Approved Fourth Edition adaptation: printed purchase limit and effects retained. No old per-rank Test SL bonus. Situational, combat and campaign effects are references only. ",
     );
     remove("Live bearer/activation effects are deferred.");
+    remove("Bearer and activation effects are deferred.");
     remove(
       "Rune forging is deferred to character management; no item is granted by learning a rune.",
     );
@@ -32,10 +37,14 @@ export function searchBookText(entry) {
     remove("Reference only; ");
     remove("Reference only, ");
   }
-  if (book === "archives-ii")
+  if (book === "archives-ii") {
+    remove(
+      "Quality/Flaw editing is deferred; the creator selects none automatically.",
+    );
     remove(
       " Equipment Quality/Flaw editing is deferred in this creator; no option is silently chosen.",
     );
+  }
   if (["rough-nights", "high-elf"].includes(book)) tail(" Adaptation warning:");
   if (book === "blood-bramble") {
     tail(" Source discrepancy:");
@@ -47,6 +56,7 @@ export function searchBookText(entry) {
       " Each purchase records one purchase of ingredients, not a defined number of spell uses.",
     );
     remove(" Foraging and consumption are deferred.");
+    remove("Foraging and consumption remain deferred.");
   }
   if (book === "high-elf") {
     remove(
@@ -65,6 +75,8 @@ export function searchBookText(entry) {
     );
   }
   if (book === "winds-of-magic") {
+    remove("Generating and managing the creature remain deferred.");
+    remove(", deferred by user choice; unavailable as a shop purchase");
     remove(", approved for this creator’s shop");
     remove(" Situational magic modifiers remain reference text.");
     remove(

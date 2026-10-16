@@ -4,9 +4,11 @@ Lustria's initial batch adds 45 reviewed mechanical references plus its implemen
 
 The masthead search launcher opens the same **Search the books** workspace in both creators. Desktop uses a large centred modal with results on the left and a reading pane on the right. Phones use a full-screen modal with separate results/reference views; **Back to search** restores the results. The input node stays stable throughout. Existing Career, Experience, magic and shop filters remain independent.
 
-## Rules visibility — 15 October 2026
+## Publication scope — 16 October 2026
 
-The Rules category is hidden in every mode, including All categories, queries and related-term chaining. The shared reference-search controller removes these rows before supplying the reader or worker; Category does not list Rules. Source-reviewed Rules and generated coverage counts remain intact and distributed. This is a visibility change, not removal of copyrighted source data or public-launch clearance. Other named categories remain visible. Coverage reports describe the retained source inventory, not only currently visible categories.
+Standalone category Rules are absent from published book/reference/search assets in every mode, including All results and related-term chaining. Original extraction and frozen historical audits remain outside static hosting. All retained descriptions are explicitly reviewed summaries, with book/page citations and selective Legacy notes; pure names/statistical lookup data retain their values with documented exceptions. Six hireling-generation/job-hook tables are excluded by exact identity. Other named categories remain. Generated coverage distinguishes public results from private retained inventory. This change does not establish legal clearance. See [DESCRIPTIONS.md](DESCRIPTIONS.md).
+
+Earlier dated integration/count/verification sections below describe historical releases; this publication scope and the generated SEARCH-COVERAGE report supersede their old Rules visibility and counts.
 
 ## Categories and results
 
@@ -56,7 +58,7 @@ The startup bundle contains validated reference metadata and `textRef: true`, ke
 
 ## References and chaining
 
-Adaptation/conversion notes and internal app decisions are **excluded from matching**. Explicit book-content fields are indexed instead of serialised records. `book-search-text.mjs` separates reviewed embedded annotations without deleting stored text, and preserves genuine book words such as “creator”. New imports must keep commentary in separate metadata. The app's approved adapted profiles remain searchable; original Fourth Edition reconstruction was not requested. Actual adaptations keep selective Legacy badges/explanations. Core source rules remain unchanged references even when the creator uses a user-approved convention, such as ignoring coin weight.
+Adaptation/conversion notes and internal app decisions are **excluded from matching**. Explicit book-content fields are indexed instead of serialised records. `book-search-text.mjs` separates reviewed embedded annotations without deleting stored text, and preserves genuine book words such as “creator”. New imports must keep commentary in separate metadata. The app's approved adapted profiles remain searchable; original Fourth Edition reconstruction was not requested. Actual adaptations keep selective Legacy badges/explanations. Original source values stay unchanged in retained categories even where the creator uses an approved convention. Standalone Rules, including Encumbrance/Fate/Fortune reading entries, are now excluded rather than distributed as hidden references.
 
 The reading pane contains book references, descriptions, profile fields and source/Legacy access, with no **Use in the creator** section, ownership/status panel or appended creator commentary. The reference workspace has no creator navigation or actions. Reading a book does not enable it or modify either draft. Actual creation controls remain authoritative.
 

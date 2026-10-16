@@ -386,6 +386,7 @@ export async function loadBookLibrary(
     schemaVersion: BOOK_SCHEMA,
     core: index.core,
     packs,
+    referenceExclusions: descriptions?.excludedReferences || {},
     aliases: validateAliases(CONTENT_ALIASES, [...seen]),
   };
   for (const p of packs) validateCoverage(p, registeredEntries(p));
@@ -705,6 +706,7 @@ export function assembleBooks(library, ids = [library.core]) {
       if (data[key] === undefined) continue;
       if (!Array.isArray(data[key])) fail(`${p.id}: ${key} must be an array.`);
       for (const entry of data[key]) {
+        if (key === "ruleReferences" && entry.category === "rule") continue;
         if (
           !packs.some((q) =>
             (q.data.withdrawals || []).some(

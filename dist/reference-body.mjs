@@ -24,8 +24,17 @@ function fieldsHTML(entry, fields) {
     .join("")}</dl>`;
 }
 export function referenceBodyHTML(row) {
+  // Keep printed conflicts visible without putting editorial decisions back in
+  // matching or mixing them into the mechanical summary. Adaptations retain
+  // their separate Legacy explanation in the reader header.
+  const sourceNotes = searchBookText(row.entry).notes.filter((note) =>
+    /^(Source discrepancy|Printed ambiguity):/.test(note),
+  );
   return (
     referenceContentHTML(row) +
+    sourceNotes
+      .map((note) => `<aside class="notice"><p>${esc(note)}</p></aside>`)
+      .join("") +
     (row.entry.text
       ? `<p class="small muted">${esc(descriptionNotice(row.entry))}</p>`
       : "")

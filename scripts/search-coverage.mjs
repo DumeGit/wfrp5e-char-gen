@@ -55,7 +55,11 @@ function validateRulesAudit(pack, rows, audit, byKey) {
     keys.add(entry.key);
   }
   if (
-    rows.filter((r) => r.kind === "rule").length + audit.removed.length !==
+    [
+      ...(pack.data.referenceEntries || []),
+      ...(pack.data.ruleReferences || []),
+    ].filter((r) => r.category === "rule").length +
+      audit.removed.length !==
     audit.reviewedRuleResults
   )
     throw Error(`Rules audit count is stale: ${book}`);
@@ -66,15 +70,23 @@ export function searchCoverage(library, corpus, review, gm) {
   if (review?.schemaVersion !== 1 || !review.books || !review.scope)
     throw Error("Missing reviewed search inventory.");
   const byKey = new Map(corpus.rows.map((row) => [row.key, row]));
+  const excluded = library.referenceExclusions || {};
+  const searchable = (entry) =>
+    isSearchCategoryEnabled(entry.category) && !excluded[entry.id];
   const retainedOutsideSearch = new Set(
     library.packs.flatMap((p) =>
       (p.data.referenceEntries || [])
-        .filter((e) => !isSearchCategoryEnabled(e.category))
+        .filter((e) => !searchable(e))
         .map((e) => e.id),
     ),
   );
   const retainedReviewTargets = new Set([
     ...retainedOutsideSearch,
+    ...library.packs.flatMap((pack) =>
+      (pack.data.ruleReferences || [])
+        .filter((entry) => entry.category === "rule")
+        .flatMap((entry) => [entry.id, `rule:${entry.id}:${entry.name}`]),
+    ),
     ...(gm?.profiles || []).map((e) => e.id),
     ...(gm?.templates || []).map((e) => e.id),
   ]);
@@ -91,9 +103,7 @@ export function searchCoverage(library, corpus, review, gm) {
       if (
         audit.entries !== retained.length ||
         retained.some((e) =>
-          isSearchCategoryEnabled(e.category)
-            ? !byKey.get(e.id)?.printedReference
-            : byKey.has(e.id),
+          searchable(e) ? !byKey.get(e.id)?.printedReference : byKey.has(e.id),
         )
       )
         throw Error(`Search import count differs from its review: ${id}`);
@@ -127,9 +137,7 @@ export function searchCoverage(library, corpus, review, gm) {
         sourceHash: audit.sourceHash,
         references: rows.length,
         newlyImported: imported.length,
-        retainedOutsideSearch: retained.filter(
-          (e) => !isSearchCategoryEnabled(e.category),
-        ).length,
+        retainedOutsideSearch: retained.filter((e) => !searchable(e)).length,
         existingReferences: rows.length - imported.length,
         adaptedReferences: rows.filter((row) => row.legacy.length).length,
         categories,
@@ -163,8 +171,8 @@ export function searchCoverageMarkdown(report) {
     "Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.",
     "",
     `The common PC/GM catalogue contains **${report.references} results**, including **${report.newlyImported} new printed references**. Existing profiles include grouped specialisations and reference variants.`,
-    `A further **${report.retainedOutsideSearch} reviewed NPC/creature records** are retained outside search. NPCs & Creatures and Templates are not active search categories.`,
-    `The Rules audit explicitly removed **${report.removedNonMechanicalRules} non-mechanical entries**; **${report.books.reduce((sum, b) => sum + (b.categories.rule || 0), 0)} Rules results** remain. Qualitative requirements and worked mechanical examples remain eligible; numbers are not required.`,
+    `A further **${report.retainedOutsideSearch} original records** are retained only in private source/audit inputs. NPCs & Creatures, Templates and standalone Rules are excluded from the published search.`,
+    `Standalone Rules are completely absent from published reference payloads. Historical source audits (including **${report.removedNonMechanicalRules} previously removed non-mechanical entries**) remain private build evidence; creator calculations and other reference categories are unchanged.`,
     "",
     "| Book | Version | Existing results | New printed references | Total | Results with actual adaptations |",
     "|---|---|---:|---:|---:|---:|",

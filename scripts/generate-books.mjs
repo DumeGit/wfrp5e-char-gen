@@ -12,6 +12,7 @@ import {
   loadDescriptionCatalogue,
 } from "./descriptions.mjs";
 import { hydrateDescriptions } from "../dist/description-data.mjs";
+import { publicGMData } from "./public-gm-data.mjs";
 import { assembleGMOptions } from "../dist/gm/books.mjs";
 import {
   searchCoverage,
@@ -109,6 +110,7 @@ gm.books = gm.books.filter((book) =>
     (entry) => (entry.source?.book || entry.id.split(":")[0]) === book.id,
   ),
 );
+gm = publicGMData(gm);
 gm.version = createHash("sha256")
   .update(JSON.stringify(gm))
   .digest("hex")
@@ -149,7 +151,19 @@ const outputs = [
   ],
   [
     "../docs/DESCRIPTION-COVERAGE.md",
-    `# Description coverage\n\nGenerated from the canonical description catalogue.\n\n- ${descriptionReport.records} canonical descriptions; ${descriptionReport.bindings} source bindings.\n- ${descriptionReport.reviewed} reviewed mechanical summaries.\n- ${descriptionReport.records - descriptionReport.reviewed} imported descriptions awaiting editorial review.\n\nRegistration centralises wording; it does not certify that imported wording is paraphrased. Conditional Trait summaries are authored in the same description directory. Book/page and Legacy notes remain separate. See [DESCRIPTIONS.md](DESCRIPTIONS.md).\n`,
+    `# Description coverage\n\nGenerated from the canonical description catalogue.\n\n- ${descriptionReport.records} canonical descriptions; ${descriptionReport.bindings} source bindings.\n- ${descriptionReport.reviewed} explicitly reviewed entries: ${descriptionReport.reviewed - descriptionReport.structured} prose summaries and ${descriptionReport.structured} structured-data exceptions.\n- ${descriptionReport.records - descriptionReport.reviewed} imported descriptions awaiting editorial review.\n- ${descriptionReport.excludedReferences} explicit hireling/job-hook reference exclusions, in addition to all standalone Rules and private NPC/template references.\n\nPure names, statistical labels and numerical lookup cells retain their printed values; their review does not claim those values were reworded. Conditional Trait presentation is authored in the same description directory. Book/page and Legacy notes remain separate. See [DESCRIPTIONS.md](DESCRIPTIONS.md) and [DESCRIPTION-REVIEW.md](DESCRIPTION-REVIEW.md).\n\n## Structured-data exceptions\n\n${Object.entries(
+      descriptions.records,
+    )
+      .filter(([, record]) => record.reviewType === "structured-data")
+      .map(
+        ([id, record]) =>
+          `- ${id}: ${record.name} (${record.source.book}${record.source.page ? ` p. ${record.source.page}` : ""}).`,
+      )
+      .join("\n")}\n\n## Explicit reference exclusions\n\n${Object.entries(
+      descriptions.excludedReferences || {},
+    )
+      .map(([id, record]) => `- ${id}: ${record.reason}`)
+      .join("\n")}\n`,
   ],
   [
     "../dist/data/search-library.json",
@@ -169,7 +183,9 @@ const outputs = [
         .map((p) => ({
           id: p.manifest.id,
           version: p.manifest.version,
-          records: p.data.ruleReferences,
+          records: p.data.ruleReferences.filter(
+            (entry) => entry.category !== "rule",
+          ),
         })),
     }) + "\n",
   ],
@@ -188,9 +204,9 @@ const outputs = [
           ...(p.data.referenceEntries ? { referenceEntries: [] } : {}),
           ...(p.data.ruleReferences
             ? {
-                ruleReferences: p.data.ruleReferences.map(
-                  ({ text, ...entry }) => ({ ...entry, textRef: true }),
-                ),
+                ruleReferences: p.data.ruleReferences
+                  .filter((entry) => entry.category !== "rule")
+                  .map(({ text, ...entry }) => ({ ...entry, textRef: true })),
               }
             : {}),
         },

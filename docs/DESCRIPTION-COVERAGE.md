@@ -2,8 +2,271 @@
 
 Generated from the canonical description catalogue.
 
-- 3576 canonical descriptions; 3643 source bindings.
-- 107 reviewed mechanical summaries.
-- 3469 imported descriptions awaiting editorial review.
+- 2204 canonical descriptions; 2271 source bindings.
+- 2204 explicitly reviewed entries: 1954 prose summaries and 250 structured-data exceptions.
+- 0 imported descriptions awaiting editorial review.
+- 6 explicit hireling/job-hook reference exclusions, in addition to all standalone Rules and private NPC/template references.
 
-Registration centralises wording; it does not certify that imported wording is paraphrased. Conditional Trait summaries are authored in the same description directory. Book/page and Legacy notes remain separate. See [DESCRIPTIONS.md](DESCRIPTIONS.md).
+Pure names, statistical labels and numerical lookup cells retain their printed values; their review does not claim those values were reworded. Conditional Trait presentation is authored in the same description directory. Book/page and Legacy notes remain separate. See [DESCRIPTIONS.md](DESCRIPTIONS.md) and [DESCRIPTION-REVIEW.md](DESCRIPTION-REVIEW.md).
+
+## Structured-data exceptions
+
+- description:5b07089012d4172176083216: Dwarf Melee Weapons (archives-i p. 92).
+- description:ee9eb945918e5c4624e43226: Eonir Melee Weapons (archives-i p. 92).
+- description:d5a18339434e0f034e798ac5: Halfling Melee Weapons (archives-i p. 92).
+- description:f7855dfd85f749ea2c99ce3d: Dwarf Ammunition (archives-i p. 93).
+- description:9d56050dc18447ee66271552: Random Class And Career Table (archives-ii p. 18).
+- description:02d45a3f9b35ec7b9a55e8c0: Ogre Attributes Table (archives-ii p. 20).
+- description:5c2903a7fb803175e8325a7b: Eye Colour Table (archives-ii p. 21).
+- description:a768fa1512ac3679b370e416: Hair Colour Table (archives-ii p. 21).
+- description:698ba0628103585288e5a3aa: Ogre Element 1 Table (archives-ii p. 22).
+- description:55ee4471ae40d364c291ca0a: Ogre Element 2 Table (archives-ii p. 22).
+- description:640044bc33914b6d594fc4eb: Magical Artefact Generation Table (archives-ii p. 51).
+- description:e731f6cbb6705ee192d7ea77: Magical Weapons Table (archives-ii p. 57).
+- description:9fc23661df43bf365be1f709: Typical Barricades And Cover (archives-ii p. 89).
+- description:4e3549cc2d7e0cfed967b912: Boiled Leather (archives-iii p. 37).
+- description:c573e9d5d007da8146195b20: Brigandine (archives-iii p. 37).
+- description:6ba42d14533db9a29b20fcc3: Chainmail (archives-iii p. 37).
+- description:ea84caffdbe393628f2c9d23: Soft Kits (archives-iii p. 37).
+- description:34a53110a16b16e1e01971a0: Animal Familiar Characteristics (archives-iii p. 78).
+- description:f6b2f8869eedbb1d9616a167: Badger — familiar starting choices (archives-iii p. 79).
+- description:39047928943db4c4a5d869b1: Cat — familiar starting choices (archives-iii p. 79).
+- description:5411681a52c70ae5efdc9c15: Crow — familiar starting choices (archives-iii p. 79).
+- description:0056ec4b23d126ca040cd3d9: Fox — familiar starting choices (archives-iii p. 79).
+- description:a02bfb6bc80c180d7ef40cbd: Owl — familiar starting choices (archives-iii p. 79).
+- description:f0fb1abde952c4be4aa63ea4: Stoat — familiar starting choices (archives-iii p. 79).
+- description:473c0d7a9ea7b618d3d5e5d5: Random Class and Career Table (core p. 36–37).
+- description:d210b3f3f3ee68a07ca85eb9: Characteristic Table (core p. 38).
+- description:5a9e2798a72cb0aa0a181bb8: Class Trappings Table (core p. 39).
+- description:565cba31a6a6d1268b61a244: Locating Herbs For Remedies (core p. 153).
+- description:ba5b6d1bc762a6ad77ffe291: Remedy Creation Difficulty (core p. 154).
+- description:8b77031d5959f10980846ab4: Movement Table (core p. 163).
+- description:a34a3dca8fe921155636d7a2: Melee Attack Modifiers (core p. 166).
+- description:b60b9630bb474c19194dd53b: Ranged Attack Modifiers - Add All That Apply (core p. 166).
+- description:14b4bb81624c30a0f3e56a55: Effect Of Pre-Prepared Cures (core p. 182).
+- description:2d56ee3031cab55319538836: Strength Of Materials (core p. 186).
+- description:0ff339cd43c4b34fe4b2b049: Mental Corruption Table (core p. 189).
+- description:13dc64e5b4d202f9dcf1ca92: Physical Corruption Table (core p. 189).
+- description:bb728aba8fbaaa0ff83c9205: Crafting Difficulty (core p. 198).
+- description:a73985291653148211784c98: Crafting Sl Required (core p. 198).
+- description:0c27c19bc9ceac189e9d9a05: Blessings By Cult (core p. 220).
+- description:188b3a4bc097e018d999187b: Encumbrance Examples (core p. 299).
+- description:aa0a505529ca19e44474614f: Overburdened Examples (core p. 299).
+- description:f4684441ff91ec6113131e93: Ammunition (core p. 302).
+- description:24df39af84b588699666f5ad: Example Weapon Ranges (core p. 302).
+- description:d34c3acaaebb5f21b74b1350: Tools And Kits (core p. 310).
+- description:093c0c6c92bc8e3f3aa3ac8f: Travel Prices (core p. 313).
+- description:38e19f094ea38f7f56da0d12: Herbs And Remedies (core p. 314).
+- description:c7ad1c841345905a6427f3e4: Advancement Xp Costs (core p. 364).
+- description:075b4bf4ad5d6780189f85e1: Difficulty Table (core p. 364).
+- description:7321ef48474c9269c70936d7: Ravenship (corsairs-flariel p. 10).
+- description:7ca37d69b35822f0e456a98f: Hochland Lockhund (deft-steps p. 132).
+- description:7595cf384abbf85681699b93: Nordlander Bamse (deft-steps p. 132).
+- description:8d27ad3774ce6e811a6c059a: Grootscher Marsh Hound (deft-steps p. 132).
+- description:d1d31e873ce8067353f94625: Dove Hawk (deft-steps p. 132).
+- description:463f69e9d85288d34a305edf: Arabyan Redhawk (deft-steps p. 132).
+- description:24f99c75d798c7216f3db9fb: Item Recognition (deft-steps p. 41).
+- description:222b8293d3fa1230469baf36: Random Business Table (deft-steps p. 42).
+- description:aa0c0b634203cf199834cb99: Criminal Enterprises (deft-steps p. 59).
+- description:ebd0af8a793d3c49e4bb33fe: Criminal Enterprise Perks (deft-steps p. 67).
+- description:d0768ab0f43e363aff62e409: Travel Stages And Distances (deft-steps p. 113).
+- description:36bcf1eee982b4fd62413d26: Factors Impacting Navigate Endeavours (deft-steps p. 125).
+- description:413002c5d576c3e773a1e95f: Dwarf Bullets and Powder (12) (dwarf-guide p. 93).
+- description:f6ffbcf087b92f24b9efbaad: Dwarf Crossbow Bolts (12) (dwarf-guide p. 93).
+- description:99ae229c67cef0eb13000b4b: Metal Foil Sheets (dwarf-guide p. 96).
+- description:e1dc264d97f21c864664c270: Stone Tablet (dwarf-guide p. 96).
+- description:48cc649aaf6bd358749c1983: Candelabra (with a dozen candles) (dwarf-guide p. 95).
+- description:7277e5635bc208803a28b2fa: Mail Skirt (dwarf-guide p. 95).
+- description:9c91e348ee072bd101528dd4: Dwarf Random Class And Career Table (dwarf-guide p. 51).
+- description:8cc558067c24adfe039d5c9e: Ancestral Heirlooms (dwarf-guide p. 96).
+- description:7a7d45c44436064a4881c14d: Skycraft (dwarf-guide p. 108).
+- description:044d8749476f2e4a65a1c40e: Hollow Heart (high-elf).
+- description:28a1092a11e1bfce1605bdcc: Profane Urgency (high-elf).
+- description:01916a2be9cb61c767a7b984: Thrill Hunter (high-elf).
+- description:0222f3ebd650c1816dca50c1: Tortured Visions (high-elf).
+- description:6b54a59ba1599bc62f7e49e8: High Elf Merchant Ships (high-elf p. 42).
+- description:2df0a76504aafd028301c8de: Effects Of Yenlui (high-elf p. 47).
+- description:b0205a5236b4831913344601: Random Class And Career Table (high-elf p. 59).
+- description:09a2360a76bfdc505ce6b6ce: Eagle Eye (lustria p. 89).
+- description:d5c99104236cd570253cf60b: Contracting Thought Fog (lustria p. 187).
+- description:58684f7bb5e22d933435b120: Giant Blowpipe (lustria p. 178).
+- description:cd21cc85cea60a1eef2594bd: Giant Bow (lustria p. 178).
+- description:bacdc32a3d2948ff796b31b3: Engine of the Gods’ Burning Alignment (lustria p. 178).
+- description:3f38c5ca3c909ac7b49437fa: Engine of the Gods’ Power of the Ancients (lustria p. 178).
+- description:eb26d2c0252a23f8e9b04c27: Solar Engine’s Beam of Chotec (lustria p. 178).
+- description:4d95c547cecef6a8c67cc7d4: Eagle Eye (lustria p. 89).
+- description:45525306d2a6eaa54560f883: Random Species Table (rough-nights p. 87).
+- description:9ac1a8ec14b5d0f84e8df91f: Attributes Table (rough-nights p. 88).
+- description:5f8aceb5af63c2bffa081b89: Community Size ratings (salzenmund p. 138).
+- description:df58bfccb460e56928b47004: Community Wealth ratings (salzenmund p. 138).
+- description:3db8392a5ce877e8b70b992d: Ball and Powder (Cannon) (sea-of-claws-artillery p. 101).
+- description:001f26708f04c760432d32a4: Grapeshot and Powder (Cannon) (sea-of-claws-artillery p. 101).
+- description:1f7e29e3ae8f831a8cb93e14: Norse Class and Career Table (sea-of-claws p. 57).
+- description:6c59257191bcf290f6908c73: Seafarer Class Table (sea-of-claws p. 63).
+- description:a009bf8493d415c906e55589: Naval Artillery Profiles (sea-of-claws p. 100).
+- description:178ff3f0cf4f4f2edd6f0ca7: Naval Artillery Ammunition (sea-of-claws p. 101).
+- description:e19b92a976fbc0b35271ca70: Random Tavern Tier Table (taverns-old-world p. 4).
+- description:c36b4f219fe05fd7cb404880: Brass Tavern Venue Vital Statistics Table (taverns-old-world p. 12).
+- description:b49169436897dd86a68ddae0: Silver Tavern Venue Vital Statistics Table (taverns-old-world p. 12).
+- description:0c2eb53dbdc3a2c170e7b448: Gold Tavern Venue Vital Statistics Table (taverns-old-world p. 13).
+- description:da253e368f4f5d1aaddff9e0: Brass Tavern Capacity, Games and Entertainment Table (taverns-old-world p. 19).
+- description:5011aadb0f4d0239c41aa7de: Silver Tavern Capacity, Games and Entertainment Table (taverns-old-world p. 19).
+- description:410bd076197e7547481d292f: Gold Tavern Capacity, Games and Entertainment Table (taverns-old-world p. 19).
+- description:0d8decdab07a198578f9d8d7: War Machine Bolt (tribes-tribulations p. 41).
+- description:500a0bd93615c2524735404b: War Machine Stone (tribes-tribulations p. 41).
+- description:6a8a798086c648690026a1e2: Spear Chukka (tribes-tribulations p. 41).
+- description:4358b06bc531288c50fd2bbb: Doom Diver (tribes-tribulations p. 41).
+- description:5d6d2895a70765d9b2e1bb38: Rock Lobber (tribes-tribulations p. 41).
+- description:53cffe7c5ac68330e93171b5: Barbed Arrow (12) (up-in-arms p. 98).
+- description:75cd311a7355ddf37e4edbe1: Bodkin Arrow (12) (up-in-arms p. 98).
+- description:d6df1232ea2a6ae3ae7eec44: Paper Cartridge (12) (up-in-arms p. 102).
+- description:bc2fa4be07bc8cd166f996bc: Aqshy-Infused Powder (12) (up-in-arms p. 102).
+- description:bfb9618e6b65636523d27ca0: Precision Shot and Powder (up-in-arms p. 102).
+- description:8d7eddb0dcc4492408912aec: Scrap and Powder (12) (up-in-arms p. 102).
+- description:47e9df660e500356310351bc: Large Bullet and Powder (12) (up-in-arms p. 102).
+- description:c8f0b26d84455f75d5fa5ef4: Grapple (up-in-arms p. 102).
+- description:65d204f66a41847cb925d307: Bolt (Ballista) (up-in-arms p. 124).
+- description:f0c1156cb54531260020b5aa: Ball and Powder (Cannon) (up-in-arms p. 124).
+- description:20c3769e3a16f55cafd8f0ea: Grapeshot and Powder (Cannon) (up-in-arms p. 124).
+- description:54f35800c757e570e899192b: Stone (Catapult) (up-in-arms p. 124).
+- description:04d4dc2d253b7a9e039ba8e0: Bullets and Powder for 1 shot (Swivel Gun) (up-in-arms p. 124).
+- description:1c9e8d262a2f6ebc3d2534c0: Small Shot and Powder for 1 shot (Swivel Gun) (up-in-arms p. 124).
+- description:cb6077b16d11fd74e5b3594e: Rocket (Helstorm Rocket) (up-in-arms p. 124).
+- description:bf1a75be370a2b1a080f501d: New Careers (up-in-arms p. 9).
+- description:eadaa752c8c7df5fda8dc46e: Fencing Weapons Table (up-in-arms p. 93).
+- description:b3e22d76a1462f74189b2ccf: Flail Weapons Table (up-in-arms p. 95).
+- description:24eb2bef4ec75d7af10b6d6a: Crossbow (up-in-arms p. 98).
+- description:38a4aef7398a4303e72a1128: Traditional Ammunition Table (up-in-arms p. 98).
+- description:6b0862156127ace1d93ce6d1: Two-Handed Weapons Table (up-in-arms p. 98).
+- description:247e002c00844393768a5999: Gunpowder Weapons Table (up-in-arms p. 101).
+- description:54604194409e3b4a06dc84c6: Common Structures Table (up-in-arms p. 119).
+- description:fe7a07fa027f90687634d6b4: Riverboats (up-in-arms p. 119).
+- description:59c67affbce8a116170bde57: Siege Ammunition (up-in-arms p. 124).
+- description:c442e638292eefdf450aff84: Exhaustion Table (up-in-arms p. 132).
+- description:f508e5d21d86dc5e67efa7cc: Vortex Movement Table (winds-of-magic p. 21).
+- description:41480dd34f2a553f71fd2186: Overcast Table (winds-of-magic p. 23).
+- description:8888731660f72dfbff5b69d4: Augury Spells Overcast Table (winds-of-magic p. 46).
+- description:a8ddb96e9454dc09ee2145fa: Alchemical Products (winds-of-magic p. 51).
+- description:7f932708bc75eb219c3bb362: Brewing Skill Test (winds-of-magic p. 160).
+- description:6112634def3238735e4593d8: Familiar Personality (winds-of-magic p. 181).
+- description:061a52cae5761428bb277805: summary of arcane phenomena (winds-of-magic p. 199).
+- description:11d10e4e8547a004ac749747: Construct Traits (winds-of-magic p. 30).
+- description:7bba334031e8a80bc0d5fd16: Coolheaded (core p. 117).
+- description:c96fef493cc8eec32e13e369: Lightning Reflexes (core p. 121).
+- description:886c83f16045d2e6226de510: Marksman (core p. 122).
+- description:a0eb49cc47f25c3a8d4b016d: Nimble-fingered (core p. 123).
+- description:d453f5d5f4155d561c9c44fd: Savvy (core p. 125).
+- description:b54b0d1aaa2a2e3b6daf99b1: Sharp (core p. 125).
+- description:671347e02e66c381aa18a7eb: Suave (core p. 127).
+- description:fb03ad2d20fa6aa7f5252ef3: Very Resilient (core p. 128).
+- description:b4e49b61e3c9e935f383c637: Very Strong (core p. 128).
+- description:50bcf1f22d0b69fd0c7d9b87: Warrior Born (core p. 128).
+- description:24c8a7d96eb04596abd3574b: Hooves and Horns (bayl-many-eyes).
+- description:6e991018539c9f61cfcb004c: Fangs (cluster-eye-tribe).
+- description:cb5ad243e926dc5aefaf63f9: Bow and Arrows (core).
+- description:106519a2eb2a92b569a4efcb: Sling and Bullets (core).
+- description:726f9de3e0a1dbda2ce5d7e7: Crossbow and Bolts (core).
+- description:407e774facf492cc782779d5: Longbow and Elf Arrows (core).
+- description:98051eb1e381678797800402: Hooves (core).
+- description:c460ec63dbdbcdfd721db8f4: Breath (Any One) (core).
+- description:15e5378433059543cc9c854e: Fists (core).
+- description:976c72808105420998b3fe78: Talons (core).
+- description:a95ccb618ac4b49d83b21fbd: Hooves (core).
+- description:a525b51c007e9e1ddbb3b7f2: Shortbow and Arrows (core).
+- description:d2489e2fdfd5b54db93e657a: Bow and Arrows (core).
+- description:89db98bacb6e19cc91de95d9: Knife (core).
+- description:e96815c20c3880e9260a2861: Rocks (core).
+- description:30037d08b20de6e24144cb54: Hand Weapon (core).
+- description:93ec23948437bffeda7ddebc: Hand Weapon (core).
+- description:fec948e8990b06c905ebf8c8: Ghostly Grasp (core).
+- description:a0a9204aa3c3b02bf227b278: Scythe (core).
+- description:20694c7fef0042e82072cbe8: Hand Weapon (core).
+- description:291e42cc01b805578e107a6c: Shortbow and Arrows (core).
+- description:80d0671961b90d9c683f462f: Bow and Arrows (core).
+- description:c019e622d9a44fa2ddd09ef4: Hellblade (core).
+- description:25b7e52b5cb326261ce6bd3d: Claws (core).
+- description:236029eb0132edee53f8994e: Halberd (core).
+- description:52acf391733e7b6296a75502: Greataxe (core).
+- description:9d66a7e8867633133565e48c: Shortbow and Arrows (core).
+- description:83dcfbf2975c24a56a70816a: Animalistic Legs (core p. 189).
+- description:9f49c1cae6ef5ace5a8be97e: Corpulent (core p. 189).
+- description:94d4c741e89f761c2b078bd8: Distended Digits (core p. 189).
+- description:04775323aa003692dfd8e13b: Emaciated (core p. 189).
+- description:0f1981cc0687df0362f22560: Enormous Eye (core p. 189).
+- description:fce05ca58c2a62bb959b04be: Extra Leg Joints (core p. 189).
+- description:48e3698dbc7da14d8ea5df75: Fleshy Tentacle (core p. 189).
+- description:79b0d289611855846be4ef57: Inverted Face (core p. 189).
+- description:340f2d81bc063a1a9709d7e1: Iron Skin (core p. 189).
+- description:aeabefb0467b44f81bcb22a7: Short Legs (core p. 189).
+- description:2090426c2271f060cc031aa4: Thorny Scales (core p. 189).
+- description:64685c4a63c51071e8ea45b7: Uneven Horns (core p. 189).
+- description:110d0aa22d52c5b66c9ff62c: Webbed Feet (core p. 189).
+- description:0ec2d4d598063dab32ab2716: Whiskered Snout (core p. 189).
+- description:cab53241a7a45810a61e0322: Awful Cravings (core p. 189).
+- description:0f4dbd0127ff84b8862798c3: Beast Within (core p. 189).
+- description:56f9af66f23634b3213b91e2: Crawling Skin (core p. 189).
+- description:6bd841d55f120c37ea9aa8cf: Erratic Fantasist (core p. 189).
+- description:49f40f96890bde322714fe9f: Fearful Concern (core p. 189).
+- description:3affd804b6a031e87ae942bd: Hollow Heart (core p. 189).
+- description:3e17559c0038757d354f7f9a: Jealous Thoughts (core p. 189).
+- description:2ad50caa5ea8afafd177ddc8: Mental Blocks (core p. 189).
+- description:1de2f01452326356cd18e613: Profane Urgency (core p. 189).
+- description:5f16bcfa690ebd968f0127e7: Suspicious Mind (core p. 189).
+- description:6d27fe41ad7afc53da59d158: Thrill Hunter (core p. 189).
+- description:543020317fa7d71dfef819c0: Tortured Visions (core p. 189).
+- description:cf7318da594778b10c59de69: Totally Unhinged (core p. 189).
+- description:16be3ecd3070eb48f9163890: Worried Jitters (core p. 189).
+- description:380699f2d78df3b73574e012: Ranged attack (corsairs-flariel).
+- description:1c0f38ae521d09ff28e79102: Blowpipe (lustria).
+- description:89485b4098f46e2df9f019a6: Tongue Attack (lustria).
+- description:8258356d9650dd2e5f35f6be: Ranged (lustria).
+- description:446551cd9945cd8166faa2f6: Ranged (lustria).
+- description:19560f0c74328108ed1c7d63: Ranged (lustria).
+- description:dc77323368c1e15e696da2cf: Ranged (lustria).
+- description:94272b4248d718dee9dfad3b: Flailing Limb 1 (night-parade).
+- description:e9f1364717e21c73ee07e49c: Flailing Limb 2 (night-parade).
+- description:e0302372d7eac630bef8f367: Flailing Limb 3 (night-parade).
+- description:60c5b7f57e8e272429ac129d: Flailing Limb 4 (night-parade).
+- description:bc26e1c903dfa5ad8c6f63da: Flailing Limb 5 (night-parade).
+- description:3160d5c2bbbc823403f4352b: Horrific Fangs (sea-of-claws).
+- description:927684f6c57f82af93e1b832: Pincer (sea-of-claws).
+- description:af5b7c751f93950dff8e13dd: Fangs (sea-of-claws).
+- description:c68956b870e89b71ce4a664e: Slashing Fins (sea-of-claws).
+- description:746ceb3e33cecab3d076d020: Fists (sea-of-claws).
+- description:a2f15fc356f9c0079c74274b: Razor-sharp Teeth (sea-of-claws).
+- description:3f8af90cd137a8f999b26ea6: Fangs and Claws (sea-of-claws).
+- description:012ab0e2e60c309c30cf5ef0: Fanged Maw (sea-of-claws).
+- description:ac82df2ddb5997ce29e629af: Ghostly Blade (sea-of-claws).
+- description:4a708db8ac841497f5b8401c: Snapping Jaws (sea-of-claws).
+- description:cd398ca0fab015f3a547738f: Snapping Jaws (sea-of-claws).
+- description:b25ab4f51005c861237bd7b6: Vast Fangs (sea-of-claws).
+- description:5be67d19fa9cc03f72195f85: Vast Fangs (sea-of-claws).
+- description:1d7591946bf6f85254cb27d1: Hand Weapon (tribes-tribulations).
+- description:b38890506536d18a849600f0: Hand Weapon (tribes-tribulations).
+- description:fe9e16326301ea0cd3889390: Hand Weapon (tribes-tribulations).
+- description:ed95e9305a304d1078670796: Hand Weapon (tribes-tribulations).
+- description:ce618e0574d7362481da3fdb: Choppa (tribes-tribulations).
+- description:60b46ea60c64b602a73db08d: Stone Axe (tribes-tribulations).
+- description:8fa02fe90f62806489a6242f: Choppa (tribes-tribulations).
+- description:003f7c90bbf8fc6919f557af: Hand Weapon (tribes-tribulations).
+- description:bc92326a3a6b7943704b1850: Hand Weapon (tribes-tribulations).
+- description:c92a664f5ce7416df2ffba17: Hand Weapon (tribes-tribulations).
+- description:3fe721e03ee0e3a4ff3dd6af: Hand Weapon (tribes-tribulations).
+- description:7879c6e4f8329c73500f3109: Weapon (tribes-tribulations).
+- description:f9de0fa5d275a7deb70e3784: Weapon (tribes-tribulations).
+- description:25561cd1761fa6e0930a9d39: Fangs (tribes-tribulations).
+- description:8ae8b59b090b61ad5e35db9d: Weapon (tribes-tribulations).
+- description:973632c27551778a900144e5: Weapon (tribes-tribulations).
+- description:92ffccb850a4014e91a0b76a: Weapon (tribes-tribulations).
+- description:50b953e5001605c373e7c730: Spear (tribes-tribulations).
+- description:3defffe28dc2909761707bf8: Sword (tribes-tribulations).
+- description:6fc9f19be171543da577d883: Fangs (tribes-tribulations).
+
+## Explicit reference exclusions
+
+- up-in-arms:reference:116-physical-quirks: Hireling-only generation table for physical appearance, mutations and amputations; outside the authorised character creator/search scope and not a generic price table.
+- up-in-arms:reference:116-work-ethic: Hireling-only work-contract and management generation table; outside the authorised character creator/search scope and not a generic price table.
+- up-in-arms:reference:117-personality-quirks: Hireling-only personality generation table; outside the authorised character creator/search scope and not a generic price table.
+- up-in-arms:reference:139-location-table: Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope.
+- up-in-arms:reference:139-objective-table: Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope.
+- up-in-arms:reference:139-personality-table: Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope.
