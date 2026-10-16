@@ -52,6 +52,7 @@ test("Owler is an explicit Riverfolk choice with its visually verified scheme; c
   assert.deepEqual(R.careers.find((x) => x.id === "smuggler"), core.careers.find((x) => x.id === "smuggler"));
   assert.deepEqual(R["career-rolls"], core["career-rolls"]);
   const s = Object.assign(M.fresh(), {
+    species: "Human", points: Array(10).fill(10),
     career: c.id, name: "Salzenmund verification", origin: "salzenmund:origin:nordlander",
     randomTalents: ["Read/Write", "Super Numerate"], freeTalent: "Strong Back",
     wealth: { amount: 10, currency: "brass pennies" },

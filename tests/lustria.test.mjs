@@ -34,6 +34,7 @@ function character(career) {
   Object.assign(s, {
     career,
     species: "Human",
+    points: Array(10).fill(10),
     name: "Lustria verification",
     wealth: { amount: 100, currency: "gold crowns" },
   });
