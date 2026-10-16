@@ -1,7 +1,8 @@
 import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName, armourLabel } from "./model.mjs";
+import { rowName } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
+import { soakLines, talentLabel } from "./export-sections.mjs";
 
 export const PRINT_LAYOUTS = [6, 4];
 const A4 = [595.28, 841.89];
@@ -65,22 +66,13 @@ export function cardSections(r, s) {
           (a) =>
             `${a.name} ${a.skill ?? "—"} / ${a.damage === null ? "—" : "+" + a.damage}${a.text ? " (" + a.text + ")" : ""}`,
         )
-        .join("; "),
+        .join("\n"),
     ],
-    [
-      "Defence",
-      Object.entries(r.ap)
-        .map(([k, v]) => `${k} ${v}`)
-        .join(" · ") +
-        (r.shield ? ` · Shield +${r.shield} AP (conditional)` : "") +
-        (r.armour.length ? " · " + r.armour.map(armourLabel).join(", ") : ""),
-    ],
+    ["Soak", soakLines(r).join("\n")],
     ["Skills", r.skills.map((x) => `${x.name} ${x.total}`).join("; ")],
     [
       "Talents",
-      r.talents
-        .map((x) => x.name + (x.ranks > 1 ? ` ×${x.ranks}` : ""))
-        .join("; "),
+      r.talents.map((x) => `${talentLabel(x)}: ${x.description}`).join("\n"),
     ],
     [
       "Traits",
@@ -151,18 +143,39 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
         inner,
       ),
       description = s.description ? wrap(font, s.description, size, inner) : [],
+      summary = wrap(
+        bold,
+        `W ${r.wounds} · TB ${r.tb} · ${r.size}${r.swarm ? " (Size ignored)" : ""}`,
+        8,
+        inner,
+      ),
       sections = cardSections(r, s).map(([label, value]) => ({
         label,
         lines: wrapPDFRuns(
-          label === "Traits"
+          ["Traits", "Talents", "Attacks"].includes(label)
             ? [
-                { text: "Traits: ", bold: true },
-                ...r.traits.flatMap((t, i) => [
+                { text: `${label}: `, bold: true },
+                ...(label === "Traits"
+                  ? r.traits
+                  : label === "Talents"
+                    ? r.talents
+                    : r.attacks
+                ).flatMap((t, i) => [
                   {
-                    text: printable(font, `${i ? "\n" : ""}${rowName(t)}: `),
+                    text: printable(
+                      font,
+                      `${i ? "\n" : ""}${label === "Traits" ? rowName(t) : label === "Talents" ? talentLabel(t) : t.name}${label === "Attacks" ? " " : ": "}`,
+                    ),
                     bold: true,
                   },
-                  { text: printable(font, t.description) },
+                  {
+                    text: printable(
+                      font,
+                      label === "Attacks"
+                        ? `${t.skill ?? "—"} / ${t.damage === null ? "—" : "+" + t.damage}${t.text ? " (" + t.text + ")" : ""}`
+                        : t.description,
+                    ),
+                  },
                 ]),
               ]
             : [
@@ -176,12 +189,15 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
         ),
       })),
       heightNeeded =
-        20 +
+        18 +
         title.length * 14 +
-        subtitle.length * 9 +
+        subtitle.length * 9.5 +
+        3 +
         description.length * (size + 2) +
-        44 +
-        14 +
+        (description.length ? 3 : 0) +
+        38 +
+        summary.length * 10 +
+        3 +
         sections.reduce(
           (n, x) => n + x.lines.length * lineHeight + sectionGap,
           0,
@@ -194,6 +210,7 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
         title,
         subtitle,
         description,
+        summary,
         sections,
         heightNeeded,
         fits: true,
@@ -206,6 +223,7 @@ function cardPlan(font, bold, entry, width, height, maxSize) {
         title,
         subtitle,
         description,
+        summary,
         sections,
         heightNeeded,
         fits: false,
@@ -324,16 +342,7 @@ export async function prepareGMPrint(PDFLib, entries, { perPage = 6 } = {}) {
             });
           }
           y -= 38;
-          draw(
-            wrap(
-              bold,
-              `W ${r.wounds} · TB ${r.tb} · ${r.size}${r.swarm ? " (Size ignored)" : ""}`,
-              8,
-              width - 20,
-            ),
-            8,
-            bold,
-          );
+          draw(plan.summary, 8, bold);
           y -= 3;
           for (const section of plan.sections) {
             for (const line of section.lines) {

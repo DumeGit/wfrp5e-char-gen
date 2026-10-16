@@ -2,6 +2,7 @@ import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
 import { rowName, armourLabel } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
+import { soakLines, talentLabel } from "./export-sections.mjs";
 
 // The sheet consumes exactly the same result as review and the folio.
 // Source conflicts, imported history and calculation commentary stay in the app.
@@ -15,12 +16,9 @@ export function sheetSections(r, s) {
       ),
     ],
     [
-      "Defence",
+      "Soak",
       [
-        Object.entries(r.ap)
-          .map(([k, v]) => `${k} ${v} AP`)
-          .join(" · ") +
-          (r.shield ? ` · Shield +${r.shield} AP when applicable` : ""),
+        ...soakLines(r),
         ...(r.armour.length ? [r.armour.map(armourLabel).join(", ")] : []),
       ],
     ],
@@ -30,16 +28,7 @@ export function sheetSections(r, s) {
         ? [r.skills.map((x) => `${x.name} ${x.total}`).join("; ")]
         : [],
     ],
-    [
-      "Talents",
-      r.talents.length
-        ? [
-            r.talents
-              .map((x) => x.name + (x.ranks > 1 ? ` ×${x.ranks}` : ""))
-              .join("; "),
-          ]
-        : [],
-    ],
+    ["Talents", r.talents.map((x) => `${talentLabel(x)}: ${x.description}`)],
     ["Creature Traits", r.traits.map((t) => `${rowName(t)}: ${t.description}`)],
     [
       "Magic & prayers",
@@ -249,11 +238,13 @@ export async function createGMPDF(PDFLib, r, s) {
               ? r.cants[i].name
               : title === "Corruption"
                 ? r.mutations[i].name + ":"
-                : title === "Creature Traits"
-                  ? rowName(r.traits[i]) + ":"
-                  : title === "Personality"
-                    ? line.slice(0, line.indexOf(":") + 1)
-                    : "";
+                : title === "Talents"
+                  ? talentLabel(r.talents[i]) + ":"
+                  : title === "Creature Traits"
+                    ? rowName(r.traits[i]) + ":"
+                    : title === "Personality"
+                      ? line.slice(0, line.indexOf(":") + 1)
+                      : "";
       return wrapPDFRuns(
         [
           { text: safe(label), bold: true },

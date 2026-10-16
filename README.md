@@ -1,5 +1,7 @@
 # WFRP Character Ledger
 
+Bestiary Skill/Talent selection browses complete compact lists with a second selector for specialisations. Printed cards and full sheets show each attack and described ability on its own row, plus TB + AP soak by hit location and conditional shield totals. Six cards per A4 remains the default; dense builds retain the measured larger-layout fallback. See [Bestiary Workshop](docs/GM-WORKSHOP.md).
+
 **Salzenmund: City of Salt and Silver** adds four opt-in regional origins, the Riverfolk Owler alternative, seven generic GM profiles/four Spite templates and 24 mechanical references. Missing Venom/Ward/Wind and Skill specialisations require explicit choices; approved conversions have Legacy notes. Core Smuggler/equipment remain unchanged. Scope and source discrepancies: [SALZENMUND.md](docs/SALZENMUND.md).
 
 **Lustria** adds four opt-in Careers, 55 generic GM profiles, six Skink castes and nine stacking sacred marks, five weapon profiles/six purchases, seven spells/prayers and 54 mechanical reading references (including five artillery references). Skinks are NPC-only by user choice. Slann choose explicit Lores/Winds; duplicate High Elf spells remain unchanged. Scope, conversions and source gaps: [LUSTRIA.md](docs/LUSTRIA.md).

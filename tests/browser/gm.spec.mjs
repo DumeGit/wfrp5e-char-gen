@@ -166,6 +166,21 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
+    if (["Add Skill", "Add Talent"].includes(kind) && name.includes("(")) {
+      await page
+        .locator(
+          `[data-action="picker-group"][data-id="group:${name.split(" (")[0]}"]`,
+        )
+        .click();
+      await page
+        .getByLabel("Specialisation", { exact: true })
+        .selectOption({ label: name });
+      await page
+        .getByRole("dialog")
+        .getByRole("button", { name: "Add", exact: true })
+        .click();
+      return;
+    }
     await page
       .locator(".gm-picker-row")
       .filter({ has: page.getByText(name, { exact: true }) })
@@ -603,6 +618,21 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
+    if (["Add Skill", "Add Talent"].includes(kind) && name.includes("(")) {
+      await page
+        .locator(
+          `[data-action="picker-group"][data-id="group:${name.split(" (")[0]}"]`,
+        )
+        .click();
+      await page
+        .getByLabel("Specialisation", { exact: true })
+        .selectOption({ label: name });
+      await page
+        .getByRole("dialog")
+        .getByRole("button", { name: "Add", exact: true })
+        .click();
+      return;
+    }
     await page
       .locator(".gm-picker-row")
       .filter({ has: page.getByText(name, { exact: true }) })
@@ -654,6 +684,21 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
+    if (["Add Skill", "Add Talent"].includes(kind) && name.includes("(")) {
+      await page
+        .locator(
+          `[data-action="picker-group"][data-id="group:${name.split(" (")[0]}"]`,
+        )
+        .click();
+      await page
+        .getByLabel("Specialisation", { exact: true })
+        .selectOption({ label: name });
+      await page
+        .getByRole("dialog")
+        .getByRole("button", { name: "Add", exact: true })
+        .click();
+      return;
+    }
     await page
       .locator(".gm-picker-row")
       .filter({ has: page.getByText(name, { exact: true }) })

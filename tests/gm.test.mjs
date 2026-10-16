@@ -16,6 +16,7 @@ import { sheetSections, createGMPDF } from "../dist/gm/pdf.mjs";
 import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
 import { wrapPDFRuns } from "../dist/gm/pdf-text.mjs";
 import { statBlock } from "../dist/gm/sheet.mjs";
+import { soakLines } from "../dist/gm/export-sections.mjs";
 import * as PDFLib from "pdf-lib";
 const R = assembleBooks(
     JSON.parse(
@@ -28,7 +29,9 @@ const R = assembleBooks(
     await readFile(new URL("../dist/gm/data.json", import.meta.url)),
   ),
   raw = JSON.parse(
-    await readFile(new URL("../content/sources/gm/books/core.json", import.meta.url)),
+    await readFile(
+      new URL("../content/sources/gm/books/core.json", import.meta.url),
+    ),
   );
 const profile = (name) => data.profiles.find((p) => p.name === name),
   draft = (name) => freshGM(data, profile(name).id),
@@ -41,6 +44,55 @@ const profile = (name) => data.profiles.find((p) => p.name === name),
       ranks: 1,
       origin: "GM",
     });
+
+test("cards separate attacks and described abilities, sharing canonical Talent wording", async () => {
+  const s = draft("Human");
+  trait(s, "Night Vision");
+  s.talents.push({
+    key: "gm-strong",
+    name: "Very Strong",
+    ranks: 1,
+    origin: "GM",
+  });
+  const r = result(s);
+  const sections = Object.fromEntries(cardSections(r, s));
+  assert.equal(sections.Attacks.split("\n").length, r.attacks.length);
+  assert.equal(sections.Traits.split("\n").length, r.traits.length);
+  assert.match(sections.Talents, /Very Strong:.*5/);
+  assert.equal(
+    r.talents[0].description,
+    R.talents.find((x) => x.name === "Very Strong").text,
+  );
+  assert.equal(
+    Object.fromEntries(sheetSections(r, s)).Talents.length,
+    r.talents.length,
+  );
+  const print = await prepareGMPrint(
+    PDFLib,
+    Array.from({ length: 6 }, () => ({ r, s })),
+  );
+  assert.deepEqual(print.overflow, []);
+});
+
+test("per-location soak preserves AP/TB and displays conditional shield totals", () => {
+  const r = { tb: 4, ap: { Head: 0, Arms: 1, Body: 3, Legs: 2 }, shield: 2 };
+  assert.deepEqual(soakLines(r), [
+    "Head 4/6 · Arms 5/7 · Body 7/9 · Legs 6/8",
+    "TB 4 + location AP; / includes Shield +2 when Opposing with Dodge/Melee.",
+  ]);
+  assert.equal(
+    soakLines({ ...r, shield: 0 })[0],
+    "Head 4 · Arms 5 · Body 7 · Legs 6",
+  );
+  assert.equal(
+    soakLines({
+      ...r,
+      ap: { Head: 3, Body: 3, Forelegs: 3, "Rear Legs": 1 },
+    })[0],
+    "Head 7/9 · Body 7/9 · Forelegs 7/9 · Rear Legs 5/7",
+  );
+  assert.equal(r.ap.Body, 3);
+});
 
 test("mixed-weight PDF wrapping preserves content and measures the actual font faces", async () => {
   const doc = await PDFLib.PDFDocument.create(),

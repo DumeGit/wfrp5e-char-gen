@@ -1,11 +1,34 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { searchPickerEntries } from "../dist/gm/views.mjs";
+import { searchPickerEntries, groupPickerEntries } from "../dist/gm/views.mjs";
 
 const { traits } = JSON.parse(
   await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
 );
+
+test("complete picker browsing groups specialisations without dropping catalogue entries", () => {
+  const entries = [
+    { name: "Art (Painting)", key: "painting" },
+    { name: "Art (Calligraphy)", key: "calligraphy" },
+    ...Array.from({ length: 80 }, (_, i) => ({
+      name: `Talent ${i}`,
+      key: `t${i}`,
+    })),
+  ];
+  const groups = groupPickerEntries(entries);
+  assert.equal(groups.length, 81);
+  assert.equal(groups[0].name, "Art");
+  assert.deepEqual(
+    groups[0].choices.map((x) => x.key),
+    ["painting", "calligraphy"],
+  );
+  assert.equal(groups.flatMap((x) => x.choices || [x]).length, entries.length);
+  assert.equal(
+    groupPickerEntries(searchPickerEntries(entries, "Calligraphy"))[0].name,
+    "Art",
+  );
+});
 
 test("partial Trained names precede description-only Trait matches", () => {
   for (const query of ["tr", "tra", "trai", "train", " TRAINED "]) {

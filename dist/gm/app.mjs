@@ -23,6 +23,7 @@ import {
   workspace,
   profileResults,
   pickerEntries,
+  groupPickerEntries,
   searchPickerEntries,
   issuePanel,
   sourceNotes,
@@ -270,6 +271,10 @@ function templatePreview(id) {
 }
 function showPicker(kind) {
   picker = { kind, rows: pickerEntries(data, R, r, kind), query: "" };
+  pickerList();
+}
+function pickerList() {
+  const { kind } = picker;
   modal(
     {
       trait: "Add Creature Trait",
@@ -279,16 +284,18 @@ function showPicker(kind) {
       magic: "Choose magic",
       mutation: "Choose Corruption",
     }[kind],
-    `<div class="field"><label for="gm-picker-search">Search ${esc(kind)}</label><input id="gm-picker-search" type="search" autocomplete="off" placeholder="Name or rule text…"></div><div id="gm-picker-results" class="gm-picker-results"></div>`,
+    `<div class="field"><label for="gm-picker-search">Search ${esc(kind)}</label><input id="gm-picker-search" type="search" value="${esc(picker.query)}" autocomplete="off" placeholder="Name or rule text…"></div><div id="gm-picker-results" class="gm-picker-results"></div>`,
   );
   pickerResults();
   document.querySelector("#gm-picker-search").focus();
 }
 function pickerResults() {
-  const rows = searchPickerEntries(picker.rows, picker.query),
+  const grouped = ["skill", "talent"].includes(picker.kind),
+    matches = searchPickerEntries(picker.rows, picker.query),
+    rows = grouped ? groupPickerEntries(matches) : matches,
     container = document.querySelector("#gm-picker-results");
   container.innerHTML = `<p class="gm-results-count">${rows.length} available entries</p>${rows
-    .slice(0, 60)
+    .slice(0, grouped ? rows.length : 60)
     .map((x) => {
       const kind = picker.kind,
         owned =
@@ -296,11 +303,38 @@ function pickerResults() {
           (kind === "magic" && r.spells.some((t) => t.contentId === x.key)) ||
           (kind === "trait" && r.traits.some((t) => t.name === x.name)) ||
           (kind === "mutation" && s.mutations.includes(x.key));
+      if (grouped)
+        return `<div class="gm-picker-row gm-picker-compact"><div><strong>${esc(x.name)}</strong><small>${x.choices ? `${x.choices.length} specialisations` : `${x.char || "Talent"} · ${sourceLabel(x)}`}</small>${legacyBadge(x)}${!x.choices && x.disabled ? `<small>${esc(x.disabled)}</small>` : ""}</div>${button(x.choices ? "Choose…" : owned || (kind === "skill" && r.skills.some((t) => t.name === x.name)) ? "Added" : x.disabled ? "Unavailable" : "Add", x.choices ? "picker-group" : "picker-add", `data-id="${esc(x.key)}" ${!x.choices && (owned || x.disabled || (kind === "skill" && r.skills.some((t) => t.name === x.name))) ? "disabled" : ""}`, "primary")}</div>`;
       return `<div class="gm-picker-row"><div><strong>${esc(x.name)}</strong><small> ${esc(x.category || "")} · ${esc(sourceLabel(x))}</small>${legacyBadge(x)}<p>${esc(x.damage !== undefined ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}` : x.ap !== undefined ? `${x.ap} AP · ${x.locations}` : (kind === "trait" ? traitSummary(x) : x.text?.slice(0, 180)) || `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`)}${kind !== "trait" && x.text?.length > 180 ? "…" : ""}</p>${x.disabled ? `<p class="gm-small">${esc(x.disabled)}</p>` : ""}</div>${button(x.disabled ? "Unavailable" : owned ? "Added" : "Add", "picker-add", `data-id="${esc(x.key)}" ${owned || x.disabled ? "disabled" : ""}`, "primary")}</div>`;
     })
     .join(
       "",
-    )}${rows.length > 60 ? '<p class="gm-small">Type a more specific search to narrow this list.</p>' : ""}`;
+    )}${!grouped && rows.length > 60 ? '<p class="gm-small">Type a more specific search to narrow this list.</p>' : ""}`;
+}
+function pickerGroup(id) {
+  // Include every specialisation even when the parent was found by a child name.
+  const group = groupPickerEntries(picker.rows).find((x) => x.key === id);
+  if (!group?.choices) return;
+  picker.group = group;
+  modal(
+    `Choose ${group.name}`,
+    `${select("Specialisation", "gm-picker-specialisation", [["", "Choose a specialisation…"], ...group.choices.map((x) => [x.key, x.name])], "")}<div id="gm-picker-choice"></div><div class="gm-dialog-actions">${button("Back to list", "picker-back")}${button("Add", "picker-choice-add", "disabled", "primary")}</div>`,
+  );
+  document.querySelector("#gm-picker-specialisation").focus();
+}
+function pickerChoice() {
+  const id = document.querySelector("#gm-picker-specialisation").value,
+    x = picker.group.choices.find((x) => x.key === id),
+    owned =
+      x &&
+      r[picker.kind === "skill" ? "skills" : "talents"].some(
+        (t) => t.name === x.name,
+      );
+  document.querySelector("#gm-picker-choice").innerHTML = x
+    ? `${legacyBadge(x)}<p class="gm-small">${esc(sourceLabel(x))}</p><p>${esc(x.text || "")}</p>${owned || x.disabled ? `<p class="gm-small">${esc(owned ? "Already added. Edit its existing entry." : x.disabled)}</p>` : ""}`
+    : "";
+  document.querySelector('[data-action="picker-choice-add"]').disabled =
+    !x || !!owned || !!x.disabled;
 }
 function addEntry(id) {
   const x = picker.rows.find((x) => x.key === id),
@@ -463,6 +497,18 @@ async function action(el) {
   }
   if (a === "picker-add") {
     addEntry(el.dataset.id);
+    return;
+  }
+  if (a === "picker-group") {
+    pickerGroup(el.dataset.id);
+    return;
+  }
+  if (a === "picker-back") {
+    pickerList();
+    return;
+  }
+  if (a === "picker-choice-add") {
+    addEntry(document.querySelector("#gm-picker-specialisation").value);
     return;
   }
   if (a === "undead-ride" || a === "book-ride") {
@@ -1007,6 +1053,7 @@ root.addEventListener("input", (e) => {
 });
 root.addEventListener("focusout", () => history.breakGroup());
 dialog.addEventListener("change", (e) => {
+  if (e.target.id === "gm-picker-specialisation") pickerChoice();
   if (e.target.matches("[data-template-book]")) change(e.target);
 });
 dialog.addEventListener("input", (e) => {

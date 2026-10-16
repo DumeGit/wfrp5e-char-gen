@@ -1679,14 +1679,18 @@ export function calculateGM(data, R, s) {
       ).values(),
     ].map((t) => {
       const definition = talentInfo(R, t.name);
+      const described = {
+        ...t,
+        description: definition?.text || "See the cited Talent in the book.",
+      };
       return definition?.adaptation
         ? {
-            ...t,
+            ...described,
             adaptation: definition.adaptation,
             source: definition.source,
             page: definition.page,
           }
-        : t;
+        : described;
     }),
     traits: describeTraits(
       p,

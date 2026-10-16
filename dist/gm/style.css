@@ -817,6 +817,8 @@
   font-size: 11px;
   color: var(--color-muted);
 }
+.gm-picker-compact { padding-block: 8px; }
+.gm-picker-compact small { display: block; }
 .gm-dialog-actions {
   display: flex;
   justify-content: flex-end;

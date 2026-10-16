@@ -509,6 +509,23 @@ export function searchPickerEntries(entries, query) {
     )
     .map(({ entry }) => entry);
 }
+// Group only the presentation: saved selections retain their exact catalogue key.
+export function groupPickerEntries(entries) {
+  const groups = new Map();
+  for (const entry of entries) {
+    const name = entry.name.includes("(") ? base(entry.name) : entry.name;
+    const key = entry.name.includes("(") ? `group:${name}` : entry.key;
+    if (!groups.has(key))
+      groups.set(
+        key,
+        entry.name.includes("(") ? { ...entry, name, key, choices: [] } : entry,
+      );
+    const group = groups.get(key);
+    if (group.choices && !group.choices.some((x) => x.key === entry.key))
+      group.choices.push(entry);
+  }
+  return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
+}
 export function pickerEntries(data, R, r, kind) {
   if (kind === "trait")
     return data.traits
