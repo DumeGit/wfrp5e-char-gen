@@ -4,6 +4,7 @@ import {
   selectableTemplates,
 } from "./templates.mjs";
 import { syncGMCants } from "./cants.mjs";
+import { appearanceSpecies, rollGMAppearance } from "./appearance.mjs";
 import { loadBookBundle } from "../book-bundle.mjs";
 import { KEYS, skillInfo, base } from "../rules.mjs";
 import { captureDisclosures, restoreDisclosures } from "../disclosures.mjs";
@@ -392,6 +393,33 @@ function addEntry(id) {
 async function action(el) {
   const a = el.dataset.action;
   textEdit = null;
+  if (a === "roll-appearance") {
+    const choices = appearanceSpecies(R, r.profile);
+    if (!choices.length) return;
+    if (choices.length === 1) {
+      commit(
+        () => rollGMAppearance(R, s, r.profile),
+        "Appearance rolled; previous description can be restored with Undo.",
+      );
+    } else {
+      modal(
+        "Choose appearance tables",
+        `${select("Appearance Species", "gm-appearance-species", [["", "Choose a Species…"], ...choices], "")}<p class="gm-small">The combined Elf profile has two PC appearance lists. Choose one explicitly; this changes only the short description.</p><div class="gm-dialog-actions">${button("Roll appearance", "roll-appearance-choice", "disabled", "primary")}</div>`,
+      );
+      document.querySelector("#gm-appearance-species").focus();
+    }
+    return;
+  }
+  if (a === "roll-appearance-choice") {
+    const species = document.querySelector("#gm-appearance-species").value;
+    if (!appearanceSpecies(R, r.profile).includes(species)) return;
+    close();
+    commit(
+      () => rollGMAppearance(R, s, r.profile, species),
+      "Appearance rolled; previous description can be restored with Undo.",
+    );
+    return;
+  }
   if (a === "legacy") {
     const entries = [
       ...data.profiles,
@@ -1053,6 +1081,9 @@ root.addEventListener("input", (e) => {
 });
 root.addEventListener("focusout", () => history.breakGroup());
 dialog.addEventListener("change", (e) => {
+  if (e.target.id === "gm-appearance-species")
+    dialog.querySelector('[data-action="roll-appearance-choice"]').disabled =
+      !e.target.value;
   if (e.target.id === "gm-picker-specialisation") pickerChoice();
   if (e.target.matches("[data-template-book]")) change(e.target);
 });

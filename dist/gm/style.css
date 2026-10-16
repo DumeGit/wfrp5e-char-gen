@@ -819,6 +819,9 @@
 }
 .gm-picker-compact { padding-block: 8px; }
 .gm-picker-compact small { display: block; }
+.gm-description-controls { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 6px; }
+.gm-description-controls button { display: grid; place-items: center; padding: 0; min-width: 0; }
+.gm-appearance-field > small { display: block; margin-top: 4px; line-height: 1.4; }
 .gm-dialog-actions {
   display: flex;
   justify-content: flex-end;

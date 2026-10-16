@@ -16,6 +16,8 @@
 
 ## Agreed creator behavior
 
+- GM appearance rolls reuse shared PC height/eye/hair definitions and explicit foundation Species identities. Require a choice for the combined Elf profile; never infer an equivalent Species for unsupported creatures or invent weight/sex/beard/distinguishing-feature tables. Keep those details manual, record source-addressed dice, replace the description on reroll and use shared Undo/Redo without granting PC creation benefits or duplicating content.
+
 - GM Skill/Talent pickers browse the complete alphabetical catalogue, grouping specialised families behind an explicit native selector; do not restore the 60-entry cutoff for these two pickers. Print each actual attack/Talent/Trait as a separate compact row, with canonical ability summaries, and derive hit-location soak from the calculated TB/AP. Shield-inclusive totals are conditional on Opposing with Dodge/Melee, not permanent AP. Keep six cards per A4 by default and measured larger-layout fallback rather than truncating mechanics or reducing the 7.5 pt minimum.
 
 - New Player drafts start with 0 base XP, no selected Species or Career and blank Characteristic point allocations (null in the draft). Require ten whole-number allocations of 4–16 totaling 100; allow clearing a field, and preserve deliberate allocations when switching methods. Keep empty Species/Career states usable and saveable; prompt for Species before showing dependent screens/resources. Keep the empty-Career state with no Career grants or Class kit; clear an unavailable Career after Species/origin changes rather than automatically choosing a replacement.

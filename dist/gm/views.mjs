@@ -1,4 +1,5 @@
-import { tab } from "../controls.mjs";
+import { tab, diceIcon } from "../controls.mjs";
+import { appearanceSpecies } from "./appearance.mjs";
 import { trollModifiers } from "./tribes.mjs";
 import { sacredMarks, LORE_WINDS } from "./lustria.mjs";
 import {
@@ -136,8 +137,12 @@ export function profileResults(data, ui) {
       );
   return `<p class="gm-results-count" role="status">${rows.length} printed profile${rows.length === 1 ? "" : "s"}</p><div class="gm-profile-grid">${rows.map((p) => `<button class="gm-profile-card" type="button" data-action="preview-profile" data-id="${p.id}"><span class="gm-card-category">${esc(p.category)}${p.example ? " · Worked example" : ""}</span><strong>${esc(p.name)}</strong><span class="gm-card-stats"><b>${esc(p.size)}</b><span>M ${score(p.stats.M)} · WS ${score(p.stats.WS)} · W ${p.stats.W}</span></span><small>${esc(sourceLabel(p))}${p.adaptation ? ' <span class="legacy-tag">Legacy</span>' : ""}<span>Preview →</span></small></button>`).join("")}</div>${!rows.length ? empty("No matching profiles. Try another name, category or book.") : ""}`;
 }
-function starting(data, s, r, ui) {
-  return `<p class="lede">Start with a complete printed profile. Keep it as written or make it your own.</p>${r.profile ? `<div class="gm-foundation"><div><span class="eyebrow">Starting profile</span><strong>${esc(r.profile.name)}</strong><small>${esc(r.profile.category)} · ${esc(sourceLabel(r.profile))}</small></div>${legacyBadge(r.profile)}${button(ui.browse ? "Close library" : "Browse profiles", "browse")}</div><div class="gm-fields">${field("Name", "gm-name", s.name, `data-bind="name" placeholder="${esc(r.profile.name)}"`)}${field("Short description", "gm-description", s.description, 'data-bind="description" placeholder="Appearance or identifying detail"')}</div>${detail("personality", "Personality & purpose <small>Optional</small>", `<p class="gm-small">Give the NPC a purpose, motivation and manner. Core guidance for roleplaying NPCs; no mechanical bonuses.</p><div class="gm-fields">${field("Purpose / role", "gm-purpose", s.purpose, 'data-bind="purpose"')}${field("Motivation", "gm-motivation", s.motivation, 'data-bind="motivation"')}${field("Manner", "gm-manner", s.manner, 'data-bind="manner"')}</div>`)} ` : ""}${bookControls(data, s)}
+function appearanceField(R, s, profile) {
+  const supported = appearanceSpecies(R, profile).length > 0;
+  return `<div class="field gm-appearance-field"><label for="gm-description">Short description</label><div class="gm-description-controls"><input id="gm-description" type="text" data-bind="description" value="${esc(s.description)}" placeholder="Appearance or identifying detail" autocomplete="off" aria-describedby="gm-appearance-help">${button(diceIcon, "roll-appearance", `aria-label="Roll appearance" aria-describedby="gm-appearance-help" title="Roll appearance; replaces the description. Undo restores the previous text" ${supported ? "" : "disabled"}`)}</div><small id="gm-appearance-help" class="gm-small">${supported ? "Roll height, eyes and hair from PC tables. Weight, sex, beard and distinguishing features: enter manually." : "No matching PC appearance tables for this profile. Enter appearance details manually."}</small></div>`;
+}
+function starting(data, R, s, r, ui) {
+  return `<p class="lede">Start with a complete printed profile. Keep it as written or make it your own.</p>${r.profile ? `<div class="gm-foundation"><div><span class="eyebrow">Starting profile</span><strong>${esc(r.profile.name)}</strong><small>${esc(r.profile.category)} · ${esc(sourceLabel(r.profile))}</small></div>${legacyBadge(r.profile)}${button(ui.browse ? "Close library" : "Browse profiles", "browse")}</div><div class="gm-fields">${field("Name", "gm-name", s.name, `data-bind="name" placeholder="${esc(r.profile.name)}"`)}${appearanceField(R, s, r.profile)}</div>${detail("personality", "Personality & purpose <small>Optional</small>", `<p class="gm-small">Give the NPC a purpose, motivation and manner. Core guidance for roleplaying NPCs; no mechanical bonuses.</p><div class="gm-fields">${field("Purpose / role", "gm-purpose", s.purpose, 'data-bind="purpose"')}${field("Motivation", "gm-motivation", s.motivation, 'data-bind="motivation"')}${field("Manner", "gm-manner", s.manner, 'data-bind="manner"')}</div>`)} ` : ""}${bookControls(data, s)}
   ${!r.profile || ui.browse ? `<div class="gm-library"><div class="gm-browser-filters">${field("Find a profile", "gm-profile-search", ui.profileQuery, 'type="search" data-ui="profileQuery" placeholder="Human, Goblin, Dragon…"')}${select("Category", "gm-category", [["", "All categories"], ...[...new Set(data.profiles.map((p) => p.category))].map((x) => [x, x])], ui.category, 'data-ui="category"')}${select("Book", "gm-profile-book", [["", "All enabled books"], ...data.books.filter((b) => data.profiles.some((p) => bookId(p) === b.id)).map((b) => [b.id, b.shortTitle || b.title])], ui.profileBook || "", 'data-ui="profileBook"')}</div><div id="gm-profile-results">${profileResults(data, ui)}</div></div>` : ""}`;
 }
 function templateChoices(data, s, r) {
@@ -466,7 +471,7 @@ function review(s, r) {
 }
 export function workspace(data, R, s, r, ui, verify, saveMessage) {
   const body = [
-    () => starting(data, s, r, ui),
+    () => starting(data, R, s, r, ui),
     () => customise(data, R, s, r, ui),
     () => equipmentMagic(R, s, r),
     () => review(s, r),
