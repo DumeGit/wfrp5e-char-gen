@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bestiary card layout studies</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #e5e8ea;
+      color: #142333;
+      font:
+        15px/1.45 "Segoe UI",
+        sans-serif;
+    }
+    main {
+      max-width: 1480px;
+      margin: auto;
+      padding: 24px;
+    }
+    header {
+      border-bottom: 1px solid #a7afb7;
+      padding-bottom: 18px;
+    }
+    h1 {
+      font:
+        600 28px Georgia,
+        serif;
+      margin: 0 0 7px;
+    }
+    header p {
+      margin: 0;
+      color: #43515e;
+      max-width: 85ch;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 18px 0 0;
+    }
+    .controls label {
+      display: grid;
+      gap: 4px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    select {
+      font:
+        16px "Segoe UI",
+        sans-serif;
+      min-height: 44px;
+      padding: 8px;
+      border: 1px solid #84929d;
+      background: #fff;
+      color: #142333;
+      border-radius: 2px;
+    }
+    select:focus-visible {
+      outline: 2px solid #285b83;
+      outline-offset: 2px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .study {
+      min-width: 0;
+    }
+    .study > h2 {
+      font:
+        600 20px Georgia,
+        serif;
+      margin: 0 0 7px;
+    }
+    .study > p {
+      min-height: 66px;
+      font-size: 14px;
+      margin: 0 0 12px;
+      max-width: 47ch;
+      color: #43515e;
+    }
+    .metric {
+      display: block;
+      margin: 12px 0;
+      font-size: 13px;
+      color: #43515e;
+    }
+    .metric b {
+      color: #142333;
+    }
+    .card {
+      width: 275.64pt;
+      max-width: 100%;
+      margin: 0 auto;
+      background: #fff;
+      color: #111;
+      border: 0.5pt solid #444;
+      padding: 4pt;
+      font:
+        var(--print-size, 9.25pt) / 1.08 Arial,
+        sans-serif;
+      font-variant-numeric: tabular-nums;
+      overflow-wrap: anywhere;
+    }
+    .card h3 {
+      font:
+        700 12pt/1.05 Georgia,
+        serif;
+      margin: 0;
+    }
+    .identity {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 4pt;
+    }
+    .identity > small {
+      font-size: 6.5pt;
+      white-space: nowrap;
+    }
+    .meta {
+      font-size: 7pt;
+      line-height: 1.15;
+      margin: 1pt 0 3pt;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      border-block: 0.4pt solid #444;
+      margin-bottom: 2pt;
+      background: #f1f1f1;
+    }
+    .stat {
+      text-align: center;
+      border-right: 0.25pt solid #bbb;
+      padding: 2pt 0 1pt;
+    }
+    .stat:last-child {
+      border: 0;
+    }
+    .stat span {
+      display: block;
+      font-size: 6pt;
+      line-height: 1.2;
+    }
+    .stat b {
+      display: block;
+      font-size: 9pt;
+      line-height: 1.2;
+    }
+    .record {
+      display: grid;
+      grid-template-columns: 30pt minmax(0, 1fr);
+      column-gap: 3pt;
+      padding: 2pt 0;
+      border-bottom: 0.3pt solid #aaa;
+    }
+    .record:last-child {
+      border-bottom: 0;
+    }
+    .record-label {
+      font-size: 6.5pt;
+      font-weight: 700;
+      padding-top: 1pt;
+    }
+    .record-content {
+      min-width: 0;
+    }
+    .attack {
+      display: flow-root;
+    }
+    .attack + .attack {
+      border-top: 0.25pt dotted #aaa;
+      margin-top: 1pt;
+      padding-top: 1pt;
+    }
+    .roll {
+      float: right;
+      margin-left: 4pt;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .attack-detail {
+      font-size: 0.96em;
+    }
+    .ability {
+      margin: 0;
+      padding: 1pt 0;
+    }
+    .ability b {
+      font-weight: 700;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 6pt;
+    }
+    .skill {
+      display: flex;
+      justify-content: space-between;
+      gap: 3pt;
+      align-items: baseline;
+    }
+    .skill b {
+      white-space: nowrap;
+    }
+    .soak {
+      display: grid;
+      grid-template-columns: repeat(var(--locations, 4), minmax(0, 1fr));
+      gap: 1pt;
+    }
+    .soak div {
+      text-align: center;
+    }
+    .soak span {
+      font-size: 6pt;
+      display: block;
+    }
+    .soak b {
+      font-size: 9pt;
+    }
+    .block {
+      padding: 2pt 0;
+    }
+    .block-title {
+      font-size: 6.5pt;
+      font-weight: 700;
+      margin: 0 0 1pt;
+      border-bottom: 0.3pt solid #aaa;
+      line-height: 1.15;
+    }
+    .combat-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0 5pt;
+    }
+    .combat-grid > .wide {
+      grid-column: 1/-1;
+    }
+    .combat-grid .skills {
+      grid-template-columns: 1fr;
+    }
+    .combat-grid .block {
+      min-width: 0;
+    }
+    .combat-grid .block-title {
+      padding: 1pt 2pt;
+      background: #eee;
+    }
+    .flow {
+      column-count: 2;
+      column-gap: 6pt;
+      column-rule: 0.25pt solid #bbb;
+    }
+    .flow .block {
+      padding: 2pt 0;
+    }
+    .flow .block-title {
+      break-after: avoid;
+    }
+    .flow .ability,
+    .flow .attack,
+    .flow .skill {
+      break-inside: avoid;
+    }
+    .flow .skills {
+      display: block;
+    }
+    .flow .ability {
+      padding: 1.5pt 0;
+    }
+    .flow-soak {
+      padding: 1pt 0 3pt;
+      border-bottom: 0.3pt solid #aaa;
+    }
+    .explanation {
+      background: #f4f5f6;
+      border-left: 3px solid #456582;
+      padding: 14px 18px;
+      max-width: 100ch;
+    }
+    .explanation p {
+      margin: 0 0 7px;
+    }
+    .explanation p:last-child {
+      margin: 0;
+    }
+    footer {
+      font-size: 13px;
+      color: #43515e;
+      margin-top: 20px;
+    }
+    .card p {
+      margin: 0;
+    }
+    @media (max-width: 1250px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 850px) {
+      main {
+        padding: 16px 10px;
+      }
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .study > p {
+        min-height: 0;
+        max-width: 65ch;
+      }
+      .card {
+        margin: 0;
+      }
+      .metric {
+        margin-top: 7px;
+      }
+      .controls {
+        gap: 12px;
+      }
+      h1 {
+        font-size: 25px;
+      }
+    }
+    @media print {
+      body {
+        background: #fff;
+      }
+      header,
+      .study > p,
+      .metric,
+      .explanation,
+      footer {
+        display: none;
+      }
+      main {
+        padding: 0;
+      }
+      .gallery {
+        display: block;
+      }
+      .study {
+        break-after: page;
+      }
+      .study > h2 {
+        font-size: 10pt;
+      }
+      .card {
+        margin: 0;
+        max-width: none;
+      }
+    }
+  </style>
+  <main>
+    <header>
+      <h1>Bestiary card layouts</h1>
+      <p>
+        Three compact alternatives. Each uses the same character, descriptions
+        and text size. These are layout studies; the current exports are
+        unchanged.
+      </p>
+      <div class="controls">
+        <label>Example<select id="example"></select></label
+        ><label
+          >Body text<select id="size">
+            <option value="9.25">
+              9.25 pt · current six-card starting size
+            </option>
+            <option value="8">8 pt</option>
+            <option value="7.5">7.5 pt · current minimum</option>
+          </select></label
+        >
+      </div>
+    </header>
+    <div class="gallery">
+      <section class="study">
+        <h2>A · Record grid</h2>
+        <p>
+          A narrow section-label column replaces repeated heading rows. The
+          descriptions stay together at almost full width.
+        </p>
+        <div class="card" id="a"></div>
+        <small class="metric" id="metric-a"></small>
+      </section>
+      <section class="study">
+        <h2>B · Combat grid</h2>
+        <p>
+          Compact numbers and short lists share rows. Weapons and long Trait
+          descriptions keep the full card width.
+        </p>
+        <div class="card" id="b"></div>
+        <small class="metric" id="metric-b"></small>
+      </section>
+      <section class="study">
+        <h2>C · Flowing columns</h2>
+        <p>
+          Text balances between two columns. Short abilities pack tightly; long
+          descriptions wrap more and can take extra space.
+        </p>
+        <div class="card" id="c"></div>
+        <small class="metric" id="metric-c"></small>
+      </section>
+    </div>
+    <aside class="explanation">
+      <p>
+        <strong
+          >For maximum density: C, with content-sized packing for the
+          page.</strong
+        >
+        C packs these examples most tightly. Choose B if you prefer long
+        descriptions at full width; it is easier to follow while running a
+        fight.
+      </p>
+      <p>
+        A further page-layout improvement would let cards have different heights
+        and pack them down two A4 columns. That removes unused space below short
+        creatures, but produces uneven cut lines. Fixed six-card cut lines can
+        stay as an option.
+      </p>
+    </aside>
+    <footer>
+      White paper, greyscale ink, no decorative padding. Height measurements
+      below the previews are browser estimates; final PDF fitting must still use
+      its actual font measurements. No descriptions have been shortened or
+      omitted for these comparisons.
+    </footer>
+  </main>
+  <script type="application/json" id="examples">
+    [
+      {
+        "label": "City gate guard · short abilities",
+        "name": "City gate guard",
+        "source": "Core p. 319",
+        "meta": "Custom Human profile · Average · TB 3",
+        "stats": {
+          "M": 4,
+          "WS": 30,
+          "BS": 30,
+          "S": 35,
+          "T": 30,
+          "I": 30,
+          "Ag": 30,
+          "Dex": 30,
+          "Int": 30,
+          "WP": 30,
+          "Fel": 30,
+          "W": 12
+        },
+        "soak": [
+          ["Head", "3/5"],
+          ["Arms", "3/5"],
+          ["Body", "4/6"],
+          ["Legs", "3/5"]
+        ],
+        "attacks": [
+          {
+            "name": "Hand Weapon",
+            "skill": 35,
+            "damage": 7,
+            "optional": false,
+            "text": "",
+            "key": "human-attack-0",
+            "origin": "Printed",
+            "ranged": false,
+            "free": false
+          },
+          {
+            "key": "preview-Sword",
+            "name": "Sword",
+            "skill": 35,
+            "damage": 7,
+            "text": "Average",
+            "origin": "GM",
+            "ranged": false
+          }
+        ],
+        "skills": [
+          {
+            "name": "Animal Care",
+            "total": 35,
+            "origin": "Printed",
+            "char": "Int"
+          },
+          { "name": "Gossip", "total": 35, "origin": "Printed", "char": "Fel" },
+          { "name": "Haggle", "total": 35, "origin": "Printed", "char": "Fel" },
+          {
+            "name": "Melee (Basic)",
+            "total": 35,
+            "origin": "Printed",
+            "char": "WS"
+          },
+          {
+            "name": "Ranged (Bow)",
+            "total": 35,
+            "origin": "Printed",
+            "char": "BS"
+          }
+        ],
+        "talents": [
+          {
+            "name": "Very Strong",
+            "description": "Gain +5 Strength. This does not count toward Advances."
+          },
+          {
+            "name": "Combat Aware",
+            "description": "Pass a Challenging (+0 SL) Perception Test to avoid Surprised. If the GM would already allow a Test to avoid Surprise, succeed automatically."
+          }
+        ],
+        "traits": [
+          {
+            "name": "Night Vision",
+            "description": "See clearly in natural darkness for 20 yards; extend the illumination distance of light sources by 20 yards."
+          }
+        ],
+        "gear": "1 × Shield; 1 × Leather Jerkin; 1 × Sword"
+      },
+      {
+        "label": "Griffon · long Size description",
+        "name": "Griffon",
+        "source": "Core p. 332",
+        "meta": "Griffon · Enormous · TB 5",
+        "stats": {
+          "M": 6,
+          "WS": 50,
+          "BS": null,
+          "S": 50,
+          "T": 50,
+          "I": 45,
+          "Ag": 60,
+          "Dex": null,
+          "Int": 20,
+          "WP": 50,
+          "Fel": 15,
+          "W": 80
+        },
+        "soak": [
+          ["Head", "6"],
+          ["Arms", "6"],
+          ["Body", "6"],
+          ["Legs", "6"]
+        ],
+        "attacks": [
+          {
+            "name": "Talons",
+            "skill": 60,
+            "damage": 14,
+            "optional": false,
+            "text": "Fast",
+            "ranged": false,
+            "free": false,
+            "key": "griffon-attack-0",
+            "origin": "Printed"
+          },
+          {
+            "name": "Bite",
+            "skill": 60,
+            "damage": 8,
+            "optional": false,
+            "text": "This Free Attack costs Momentum and has Penetrating.",
+            "ranged": false,
+            "free": true,
+            "key": "griffon-attack-1",
+            "origin": "Printed"
+          }
+        ],
+        "skills": [
+          {
+            "name": "Athletics",
+            "total": 65,
+            "origin": "Printed",
+            "char": "Ag"
+          },
+          {
+            "name": "Melee (Brawling)",
+            "total": 60,
+            "origin": "Printed",
+            "char": "WS"
+          },
+          {
+            "name": "Perception",
+            "total": 60,
+            "origin": "Printed",
+            "char": "I"
+          }
+        ],
+        "talents": [],
+        "traits": [
+          {
+            "name": "Fly (80)",
+            "description": "As its Move, fly up to 80 yards, ignoring intervening terrain, obstacles and creatures; may Charge. End landed or airborne; if starting a turn airborne, must Fly or fall (GM decides distance). Against it, measure horizontal range then increase one range step (Extreme becomes unreachable). While flying, −20 to its Ranged Attacks."
+          },
+          {
+            "name": "Night Vision",
+            "description": "See clearly in natural darkness for 20 yards; extend the illumination distance of light sources by 20 yards."
+          },
+          {
+            "name": "Size (Enormous)",
+            "description": "Wounds: (SB + 2 × TB + WPB) ×4. Primary melee Damage adds SB (included; not ranged/extra attacks). Melee defence vs larger: −2 SL. Aggressive: Fear to smaller; leave smaller foes without Disengaging. Opposed Strength/similar: 2+ steps larger wins automatically; 1 step unless smaller rolls a Critical (compare SL). Counts as 3 when outnumbered; only 1 for its own outnumbering bonuses. Vs smaller: lose Momentum for Free Stomp (Melee (Brawling), SB Damage). Resize: +10 S/T, −5 Ag per step up; reverse down (pp. 360–361)."
+          }
+        ],
+        "gear": ""
+      },
+      {
+        "label": "Varghulf · many abilities",
+        "name": "Varghulf",
+        "source": "Core p. 344",
+        "meta": "Varghulf · Large · TB 5",
+        "stats": {
+          "M": 8,
+          "WS": 55,
+          "BS": null,
+          "S": 55,
+          "T": 55,
+          "I": 20,
+          "Ag": 50,
+          "Dex": null,
+          "Int": 10,
+          "WP": 25,
+          "Fel": null,
+          "W": 32
+        },
+        "soak": [
+          ["Head", "6"],
+          ["Arms", "6"],
+          ["Body", "6"],
+          ["Legs", "6"]
+        ],
+        "attacks": [
+          {
+            "name": "Claws",
+            "skill": 65,
+            "damage": 14,
+            "optional": false,
+            "text": "",
+            "key": "varghulf-attack-0",
+            "origin": "Printed",
+            "ranged": false,
+            "free": false
+          },
+          {
+            "name": "Bite",
+            "skill": 65,
+            "damage": 8,
+            "optional": false,
+            "text": "This Free Attack costs Momentum.",
+            "ranged": false,
+            "free": true,
+            "key": "varghulf-attack-1",
+            "origin": "Printed"
+          }
+        ],
+        "skills": [
+          { "name": "Climb", "total": 65, "origin": "Printed", "char": "S" },
+          {
+            "name": "Melee (Brawling)",
+            "total": 65,
+            "origin": "Printed",
+            "char": "WS"
+          },
+          {
+            "name": "Perception",
+            "total": 30,
+            "origin": "Printed",
+            "char": "I"
+          },
+          {
+            "name": "Stealth (Rural)",
+            "total": 60,
+            "origin": "Printed",
+            "char": "Ag"
+          },
+          {
+            "name": "Stealth (Urban)",
+            "total": 60,
+            "origin": "Printed",
+            "char": "Ag"
+          },
+          { "name": "Track", "total": 20, "origin": "Printed", "char": "I" }
+        ],
+        "talents": [],
+        "traits": [
+          {
+            "name": "Bestial",
+            "description": "No rational thought/language; defends only with Dodge. Shies from fire; fire Wounds inflict Broken. Flees after losing over half Wounds; enters Frenzy instead if cornered, protecting young or Territorial."
+          },
+          {
+            "name": "Dark Vision",
+            "description": "Sees in darkness as in daylight."
+          },
+          {
+            "name": "Hatred (Living)",
+            "description": "On meeting target: Psychology Test; failure activates Hatred. Attack by fastest, deadliest means; +1 SL Melee/Ranged against them. Immune to their Intimidate/Fear, not Terror (p. 184)."
+          },
+          {
+            "name": "Hungry",
+            "description": "After killing/incapacitating living prey or finding a fresh corpse: Average (+2 SL) Cool or feast; lose next Move and Action."
+          },
+          {
+            "name": "Regeneration",
+            "description": "Round start: above 0 Wounds, heal 1d10; at 0, heal 1 on 1d10 of 8+. A roll of 10 fully heals one Critical and its penalties/Conditions. Cannot regenerate fire-caused Wounds/Criticals."
+          },
+          {
+            "name": "Size (Large)",
+            "description": "Wounds: (SB + 2 × TB + WPB) ×2. Primary melee Damage adds SB (included; not ranged/extra attacks). Melee defence vs larger: −2 SL. Aggressive: Fear to smaller; leave smaller foes without Disengaging. Opposed Strength/similar: 2+ steps larger wins automatically; 1 step unless smaller rolls a Critical (compare SL). Counts as 2 when outnumbered; only 1 for its own outnumbering bonuses. Vs smaller: lose Momentum for Free Stomp (Melee (Brawling), SB Damage). Resize: +10 S/T, −5 Ag per step up; reverse down (pp. 360–361)."
+          },
+          {
+            "name": "Terror (3)",
+            "description": "First encounter: Psychology Test; failure gives Broken equal to Rating +1 per negative SL. Causes Fear of same Rating regardless of result (p. 183)."
+          },
+          {
+            "name": "Undead",
+            "description": "Needs no air, food, water or other life necessities; counts as Undead for spells, Miracles and abilities."
+          },
+          {
+            "name": "Vampiric",
+            "description": "Successful Bite against suitable prey: heal Wounds equal to target’s loss. Blood-drinking is its only healing method."
+          }
+        ],
+        "gear": ""
+      }
+    ]
+  </script>
+  <script>
+    const examples = JSON.parse(
+      document.querySelector("#examples").textContent,
+    );
+    const esc = (value) =>
+      String(value ?? "").replace(
+        /[&<>"']/g,
+        (c) =>
+          ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+          })[c],
+      );
+    const select = document.querySelector("#example");
+    select.innerHTML = examples
+      .map((x, i) => `<option value="${i}">${esc(x.label)}</option>`)
+      .join("");
+    const stats = (x) =>
+      `<div class="stats">${Object.entries(x.stats)
+        .map(
+          ([key, v]) =>
+            `<div class="stat"><span>${key}</span><b>${esc(v ?? "—")}</b></div>`,
+        )
+        .join("")}</div>`;
+    const header = (x) =>
+      `<div class="identity"><h3>${esc(x.name)}</h3><small>${esc(x.source)}</small></div><div class="meta">${esc(x.meta)}</div>${stats(x)}`;
+    const attacks = (x) =>
+      x.attacks
+        .map(
+          (a) =>
+            `<div class="attack"><span class="roll">${esc(a.skill ?? "—")} / ${a.damage === null ? "—" : "+" + a.damage}</span><b>${esc(a.name)}</b>${a.text ? `<span class="attack-detail"> · ${esc(a.text)}</span>` : ""}</div>`,
+        )
+        .join("");
+    const soak = (x) =>
+      `<div class="soak" style="--locations:${x.soak.length}">${x.soak.map(([k, v]) => `<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join("")}</div>`;
+    const skills = (x) =>
+      `<div class="skills">${x.skills.map((s) => `<div class="skill"><span>${esc(s.name)}</span><b>${s.total}</b></div>`).join("")}</div>`;
+    const abilities = (list) =>
+      list
+        .map(
+          (t) =>
+            `<div class="ability"><b>${esc(t.name)}:</b> ${esc(t.description)}</div>`,
+        )
+        .join("");
+    const record = (label, body) =>
+      body
+        ? `<div class="record"><div class="record-label">${label}</div><div class="record-content">${body}</div></div>`
+        : "";
+    const block = (label, body, wide = false) =>
+      body
+        ? `<section class="block ${wide ? "wide" : ""}"><h4 class="block-title">${label}</h4>${body}</section>`
+        : "";
+    function render() {
+      const x = examples[Number(select.value)];
+      document.documentElement.style.setProperty(
+        "--print-size",
+        document.querySelector("#size").value + "pt",
+      );
+      document.querySelector("#a").innerHTML =
+        header(x) +
+        record("Attacks", attacks(x)) +
+        record("Soak", soak(x)) +
+        record("Skills", skills(x)) +
+        record("Talents", abilities(x.talents)) +
+        record("Traits", abilities(x.traits)) +
+        record("Gear", esc(x.gear));
+      document.querySelector("#b").innerHTML =
+        header(x) +
+        `<div class="combat-grid">${block("Attacks", attacks(x), true)}${block("Soak", soak(x), true)}${block("Skills", skills(x))}${block("Trappings", esc(x.gear))}${block("Talents", abilities(x.talents), true)}${block("Traits", abilities(x.traits), true)}</div>`;
+      document.querySelector("#c").innerHTML =
+        header(x) +
+        `<div class="flow-soak"><div class="block-title">Soak</div>${soak(x)}</div><div class="flow">${block("Attacks", attacks(x))}${block("Skills", skills(x))}${block("Talents", abilities(x.talents))}${block("Traits", abilities(x.traits))}${block("Trappings", esc(x.gear))}</div>`;
+      requestAnimationFrame(() => {
+        for (const id of ["a", "b", "c"]) {
+          const mm =
+            (document.querySelector("#" + id).getBoundingClientRect().height *
+              25.4) /
+            96;
+          document.querySelector("#metric-" + id).innerHTML =
+            `<b>${mm.toFixed(1)} mm</b> content height · ${mm <= 90.5 ? "within" : "taller than"} the current six-card slot`;
+        }
+      });
+    }
+    select.addEventListener("change", render);
+    document.querySelector("#size").addEventListener("change", render);
+    render();
+  </script>
+</html>
