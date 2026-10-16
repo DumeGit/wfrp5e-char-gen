@@ -1,6 +1,6 @@
 import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName, armourLabel } from "./model.mjs";
+import { rowName } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 import { soakLines, talentLabel } from "./export-sections.mjs";
 
@@ -15,13 +15,7 @@ export function sheetSections(r, s) {
           `${a.name}  ${a.skill ?? "—"} / ${a.damage === null ? "—" : "+" + a.damage}${a.text ? ` · ${a.text}` : ""}`,
       ),
     ],
-    [
-      "Soak",
-      [
-        ...soakLines(r),
-        ...(r.armour.length ? [r.armour.map(armourLabel).join(", ")] : []),
-      ],
-    ],
+    ["Soak", soakLines(r)],
     [
       "Skills",
       r.skills.length

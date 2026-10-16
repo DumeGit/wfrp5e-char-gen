@@ -76,10 +76,7 @@ test("cards separate attacks and described abilities, sharing canonical Talent w
 
 test("per-location soak preserves AP/TB and displays conditional shield totals", () => {
   const r = { tb: 4, ap: { Head: 0, Arms: 1, Body: 3, Legs: 2 }, shield: 2 };
-  assert.deepEqual(soakLines(r), [
-    "Head 4/6 · Arms 5/7 · Body 7/9 · Legs 6/8",
-    "TB 4 + location AP; / includes Shield +2 when Opposing with Dodge/Melee.",
-  ]);
+  assert.deepEqual(soakLines(r), ["Head 4/6 · Arms 5/7 · Body 7/9 · Legs 6/8"]);
   assert.equal(
     soakLines({ ...r, shield: 0 })[0],
     "Head 4 · Arms 5 · Body 7 · Legs 6",
