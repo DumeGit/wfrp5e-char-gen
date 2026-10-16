@@ -22,7 +22,7 @@ export function createGMPrinting(data, R, { current, download, toast }) {
   async function render() {
     const version = ++revision;
     prepared = null;
-    dialog.innerHTML = `<div class="gm-dialog-heading"><h2 id="gm-print-title">Print table cards</h2>${button("Close", "print-close")}</div><p>Six compact stat blocks per A4 page, or four with more room. Actual Traits include their descriptions, with no unselected optional Traits. Other abilities retain compact names and ratings. Larger profiles may need four cards or a full sheet. Source discrepancies stay in the app.</p><div class="gm-print-toolbar"><div class="field"><label for="gm-print-layout">Cards per A4 page</label><select id="gm-print-layout"><option value="6" ${perPage === 6 ? "selected" : ""}>6 cards · 2 columns × 3 rows</option><option value="4" ${perPage === 4 ? "selected" : ""}>4 cards · 2 columns × 2 rows</option></select></div>${button("Add current creature", "print-current", entries.length >= 48 ? "disabled" : "")}${button("Add saved drafts…", "print-import")}</div><p class="gm-small">Use Copy for duplicates. Saved drafts are read locally and do not replace your character. This print batch is kept until you reload the page. Up to 48 cards; empty slots remain blank.</p><ol class="gm-print-list">${entries.map(({ r }, i) => `<li><div><strong>${esc(r.name)}</strong><small>${esc(r.profile?.name || "No starting profile")} · ${esc(r.size || "")}</small>${r.issues.length ? `<ul class="gm-print-errors">${r.issues.map((x) => `<li>${esc(x.message)}</li>`).join("")}</ul>` : ""}</div><div class="gm-print-actions">${button("Copy", "print-copy", `data-index="${i}" ${entries.length >= 48 ? "disabled" : ""}`)}${button("Remove", "print-remove", `data-index="${i}"`)}</div></li>`).join("")}</ol>${importErrors.length ? `<div class="gm-print-errors" role="alert"><strong>Drafts not added</strong><ul>${importErrors.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}<div id="gm-print-status" role="status">Checking card sizes…</div><div class="gm-dialog-actions">${button("Back to workshop", "print-close")}${button("Download A4 PDF", "print-export", "disabled", "primary")}</div><input id="gm-print-files" type="file" multiple accept=".json,application/json" hidden>`;
+    dialog.innerHTML = `<div class="gm-dialog-heading"><h2 id="gm-print-title">Print table cards</h2>${button("Close", "print-close")}</div><p>Compact Record grid cards with actual Talent and Trait descriptions. Choose six or four equal cards, or flexible packing with content-sized heights. Short descriptions print in a Desc row when present. Source discrepancies stay in the app.</p><div class="gm-print-toolbar"><div class="field"><label for="gm-print-layout">Cards per A4 page</label><select id="gm-print-layout"><option value="6" ${perPage === 6 ? "selected" : ""}>6 cards · 2 columns × 3 rows</option><option value="4" ${perPage === 4 ? "selected" : ""}>4 cards · 2 columns × 2 rows</option><option value="flexible" ${perPage === "flexible" ? "selected" : ""}>Flexible packing · variable card heights</option></select></div>${button("Add current creature", "print-current", entries.length >= 48 ? "disabled" : "")}${button("Add saved drafts…", "print-import")}</div><p class="gm-small">Use Copy for duplicates. Saved drafts are read locally and do not replace your character. This print batch is kept until you reload the page. Up to 48 cards. Fixed layouts keep even cut lines; flexible packing balances two columns, with a variable number of cards per page and uneven cut lines. Later short cards may fill earlier gaps, so printed order can differ from this list.</p><ol class="gm-print-list">${entries.map(({ r }, i) => `<li><div><strong>${esc(r.name)}</strong><small>${esc(r.profile?.name || "No starting profile")} · ${esc(r.size || "")}</small>${r.issues.length ? `<ul class="gm-print-errors">${r.issues.map((x) => `<li>${esc(x.message)}</li>`).join("")}</ul>` : ""}</div><div class="gm-print-actions">${button("Copy", "print-copy", `data-index="${i}" ${entries.length >= 48 ? "disabled" : ""}`)}${button("Remove", "print-remove", `data-index="${i}"`)}</div></li>`).join("")}</ol>${importErrors.length ? `<div class="gm-print-errors" role="alert"><strong>Drafts not added</strong><ul>${importErrors.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}<div id="gm-print-status" role="status">Checking card sizes…</div><div class="gm-dialog-actions">${button("Back to workshop", "print-close")}${button("Download A4 PDF", "print-export", "disabled", "primary")}</div><input id="gm-print-files" type="file" multiple accept=".json,application/json" hidden>`;
     let status;
     enhanceInterface(dialog);
     const issues = entries.some((e) => e.r.issues.length || !e.r.profile);
@@ -38,8 +38,8 @@ export function createGMPrinting(data, R, { current, download, toast }) {
         if (version !== revision) return;
         prepared = result;
         status = result.overflow.length
-          ? `${result.overflow.join(", ")} ${result.overflow.length === 1 ? "does" : "do"} not fit this layout at readable text size. ${perPage === 6 ? "Try four cards per page." : "Use the full sheet for these profiles, or shorten optional description/notes."}`
-          : `${entries.length} card${entries.length === 1 ? "" : "s"} · ${result.pages} A4 page${result.pages === 1 ? "" : "s"} · text ${Math.min(...result.cards.map((c) => c.fontSize))}–${Math.max(...result.cards.map((c) => c.fontSize))} pt · cut along the borders`;
+          ? `${result.overflow.join(", ")} ${result.overflow.length === 1 ? "does" : "do"} not fit this layout at readable text size. ${perPage === 6 ? "Try four cards per page or flexible packing." : perPage === "flexible" ? "Use the full sheet; this card exceeds a full A4 column." : "Try flexible packing or the full sheet."}`
+          : `${entries.length} card${entries.length === 1 ? "" : "s"} · ${result.pages} A4 page${result.pages === 1 ? "" : "s"} · text ${Math.min(...result.cards.map((c) => c.fontSize))}–${Math.max(...result.cards.map((c) => c.fontSize))} pt · ${perPage === "flexible" ? "flexible heights · " : ""}cut along the borders`;
       } catch (e) {
         status = e.message;
       }
@@ -53,7 +53,8 @@ export function createGMPrinting(data, R, { current, download, toast }) {
   }
   dialog.addEventListener("change", async (e) => {
     if (e.target.id === "gm-print-layout") {
-      perPage = Number(e.target.value);
+      perPage =
+        e.target.value === "flexible" ? "flexible" : Number(e.target.value);
       await render();
     }
     if (e.target.id === "gm-print-files") {
@@ -103,7 +104,9 @@ export function createGMPrinting(data, R, { current, download, toast }) {
           await withBusy(target, "Preparing…", async () => {
             download(
               await prepared.bytes(),
-              `Bestiary-${perPage}-per-A4.pdf`,
+              perPage === "flexible"
+                ? "Bestiary-flexible-A4.pdf"
+                : `Bestiary-${perPage}-per-A4.pdf`,
               "application/pdf",
             );
             toast("A4 table cards exported.");

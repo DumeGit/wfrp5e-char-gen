@@ -301,7 +301,7 @@ test("table cards retain mechanical fields and Trait descriptions, omitting disc
   await assert.rejects(prepareGMPrint(PDFLib, []), /between 1 and 48/);
   await assert.rejects(
     prepareGMPrint(PDFLib, [{ s, r }], { perPage: 3 }),
-    /six or four/,
+    /six, four or flexible/,
   );
 });
 test("every core profile preserves untouched printed values, Skills and attacks", () => {

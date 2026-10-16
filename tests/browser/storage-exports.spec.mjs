@@ -9,6 +9,7 @@ import {
   gmDraft,
   fileUpload,
   downloadBytes,
+  noOverflow,
   PC_STORAGE,
 } from "./helpers.mjs";
 import { PDFDocument } from "pdf-lib";
@@ -128,6 +129,9 @@ test("GM browser downloads compact PDF and six-card A4 sheet @exports @gm", asyn
 }) => {
   await openGM(page);
   await applyProfile(page, "Human");
+  await page
+    .getByRole("textbox", { name: "Short description", exact: true })
+    .fill("Grey eyes; a scar across the left cheek.");
   await gmStep(page, "Review & export");
   const sheet = await downloadBytes(
     page,
@@ -161,4 +165,24 @@ test("GM browser downloads compact PDF and six-card A4 sheet @exports @gm", asyn
   const { width, height } = doc.getPages()[0].getSize();
   expect(width).toBeCloseTo(595.28, 1);
   expect(height).toBeCloseTo(841.89, 1);
+  await print
+    .getByLabel("Cards per A4 page", { exact: true })
+    .selectOption("flexible");
+  await expect(print.locator("#gm-print-status")).toContainText(
+    "flexible heights",
+  );
+  await noOverflow(page);
+  const flexible = await downloadBytes(
+    page,
+    print.getByRole("button", { name: "Download A4 PDF", exact: true }),
+  );
+  expect(flexible.name).toBe("Bestiary-flexible-A4.pdf");
+  expect((await PDFDocument.load(flexible.bytes)).getPageCount()).toBe(1);
+  await print.getByRole("button", { name: "Close", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Print A4 table cards", exact: true })
+    .click();
+  await expect(
+    print.getByLabel("Cards per A4 page", { exact: true }),
+  ).toHaveValue("6");
 });
