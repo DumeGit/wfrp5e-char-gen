@@ -131,7 +131,11 @@ export function linkReferenceNodes(root, linker, current, attribute) {
     nodes = [];
   while (walker.nextNode()) {
     const node = walker.currentNode;
-    if (!node.parentElement.closest("button,a,h2,h3,dt,.gm-dialog-actions"))
+    if (
+      !node.parentElement.closest(
+        "button,a,h2,h3,dt,.gm-dialog-actions,.search-career-references",
+      )
+    )
       nodes.push(node);
   }
   for (const node of nodes) {

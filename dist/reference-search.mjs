@@ -8,6 +8,10 @@ import { loadReferenceLibrary } from "./search-library.mjs";
 import { isSearchCategoryVisible } from "./reference-entries.mjs";
 import { referenceBodyHTML } from "./reference-body.mjs";
 import {
+  createCareerReferenceIndex,
+  careerReferencesHTML,
+} from "./career-references.mjs";
+import {
   searchLabel,
   linkReferenceNodes,
   referenceSnippetText,
@@ -41,6 +45,7 @@ export function createReferenceSearch(library) {
   let index = [],
     books = [],
     linkText,
+    careerReferences,
     currentView,
     history = [],
     previewTarget,
@@ -53,6 +58,7 @@ export function createReferenceSearch(library) {
       index = payload.rows.filter((row) => isSearchCategoryVisible(row.kind));
       books = payload.books;
       linkText = createReferenceLinker(index);
+      careerReferences = createCareerReferenceIndex(index);
       engine?.dispose();
       engine = createSearchEngine(index);
       return index;
@@ -141,7 +147,7 @@ export function createReferenceSearch(library) {
       books.find((b) => b.id === row.entry.source.book)?.edition === 4
         ? '<p class="notice"><strong>Fourth Edition source.</strong> This reference preserves its printed mechanics; no Fifth Edition conversion is implied. References to its core rulebook pages refer to Fourth Edition.</p>'
         : "";
-    body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(searchLabel(row))}</span> ${ref(row)}</p>${printedWarning}<div class="search-book-reference">${referenceBodyHTML(row)}</div><div class="search-rule-actions"><button type="button" class="text-button" data-search-back>Back to search</button></div>`;
+    body.innerHTML = `<p class="search-rule-source"><span class="search-kind">${esc(searchLabel(row))}</span> ${ref(row)}</p>${printedWarning}<div class="search-book-reference">${referenceBodyHTML(row)}${careerReferencesHTML(row, careerReferences(row), books)}</div><div class="search-rule-actions"><button type="button" class="text-button" data-search-back>Back to search</button></div>`;
     linkReferences(row);
   }
   function linkReferences(row) {

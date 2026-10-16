@@ -1,5 +1,9 @@
 import { addSearchMetadata } from "./search-metadata.mjs";
 import { validateSearchFilters } from "./search-filters.mjs";
+import {
+  mergeCareerOptions,
+  validateCareerOptions,
+} from "./career-references.mjs";
 import { assembleBooks } from "./books.mjs";
 import { buildSearchIndex, normalizeSearch } from "./book-search.mjs";
 import { legacySources } from "./legacy.mjs";
@@ -27,6 +31,11 @@ export function buildReferenceLibrary(library, gm) {
       const previous = found.get(row.key);
       if (previous) {
         previous.aliases = [...new Set([...previous.aliases, ...row.aliases])];
+        if (row.kind === "career")
+          previous.careerOptions = mergeCareerOptions(
+            previous.careerOptions,
+            row.careerOptions,
+          );
         continue;
       }
       found.set(row.key, { ...row, legacy: legacySources(R, row.entry) });
@@ -178,6 +187,7 @@ export async function loadReferenceLibrary(
       throw Error("Invalid book reference record.");
     if (row.printedReference !== undefined && row.printedReference !== true)
       throw Error("Invalid printed reference marker.");
+    validateCareerOptions(row);
     if (row.printedReference) {
       const { contentId, source, ...record } = row.entry;
       validateReferenceEntry(record, source.book);

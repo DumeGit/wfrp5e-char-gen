@@ -144,3 +144,22 @@ dialog.book-search-panel .search-panel-heading{position:static;display:flex;alig
  .search-reader .search-rule-actions>*{width:100%;min-height:44px}
 }
 @media print{dialog.book-search-panel{display:none!important}}
+
+.search-career-references{margin-top:22px;border-top:1px solid var(--color-line);padding-top:16px}
+.search-career-references h3{margin:0;font-size:18px}.search-career-references h3 small{font:12px var(--font-body);color:var(--color-muted);margin-left:6px}
+.search-career-references>p{margin:5px 0 10px}.search-career-references .search-table-wrap{margin:0}
+.search-career-references table{table-layout:fixed;line-height:1.4}
+.search-career-references th:first-child{width:46%}.search-career-references .search-career-class{width:20%}
+.search-career-references tbody th{font:inherit;text-transform:none;letter-spacing:normal;background:transparent;color:var(--color-ink)}
+.search-career-references th,.search-career-references td{padding:6px 8px;overflow-wrap:anywhere}
+.search-career-link{min-height:32px;display:inline-flex;align-items:center;text-align:left;font-weight:650}
+.search-career-source,.search-career-rank{display:block;font-size:12px;font-weight:400;color:var(--color-muted)}
+.search-career-rank b{font-weight:650;color:var(--color-ink);margin-right:3px}.search-career-rank+.search-career-rank{margin-top:4px}
+.search-career-mobile-class{display:none}
+@media(max-width:760px){
+ .search-career-references .search-career-class{display:none}
+ .search-career-references th:first-child{width:54%}
+ .search-career-mobile-class{display:block;font-size:12px;font-weight:400;color:var(--color-muted)}
+ .search-career-link{min-height:44px}
+ .search-career-references th,.search-career-references td{padding:6px}
+}

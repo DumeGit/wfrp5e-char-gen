@@ -76,7 +76,34 @@ export function buildSearchIndex(
       ),
     });
   };
-  R.careers.forEach((x) => add("career", x));
+  R.careers.forEach((x) =>
+    add("career", x, x.name, {
+      careerOptions: x.levels.map((level, levelIndex) =>
+        Object.fromEntries(
+          ["skill", "talent"].map((kind) => [
+            kind + "s",
+            [
+              ...new Set(
+                level[kind + "s"].flatMap((raw) => {
+                  if (kind === "talent" && raw.includes("(as Trade)")) {
+                    return x.levels
+                      .slice(0, levelIndex + 1)
+                      .flatMap((l) => l.skills)
+                      .flatMap((skill) => M.options(R, skill, "skill"))
+                      .filter((skill) => M.base(skill) === "Trade")
+                      .map((skill) =>
+                        raw.replace("(as Trade)", skill.slice(6)),
+                      );
+                  }
+                  return M.options(R, raw, kind);
+                }),
+              ),
+            ],
+          ]),
+        ),
+      ),
+    }),
+  );
   for (const kind of ["skill", "talent"]) {
     const entries = R[kind + "s"];
     const names = new Set(
