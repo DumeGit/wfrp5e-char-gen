@@ -6,11 +6,9 @@ Status: implementation plan and handoff. Preparing this document does not start 
 
 ## Objective and user decisions
 
-Migrate the existing application to Next.js before implementing the character manager. Use an orchestrator and narrowly scoped implementation agents, with coordinated integration.
+Migrate the current Player, Bestiary and Marijan creators to Next.js. Use an orchestrator and narrowly scoped implementation agents, with coordinated integration.
 
-This is a behaviour-preserving migration. Retain the current appearance, book content, calculations, saved drafts and exports. Complete the existing creators before starting manager functionality.
-
-The user also established a future manager requirement: imports from Player creation and Marijan Mode become ordinary manager characters with the same interface, rules and capabilities. Do not introduce source-dependent manager restrictions or Marijan badges. That normalisation belongs to the later manager project; do not merge the three creator save formats as part of this migration.
+This is a behaviour-preserving migration of the current app. Retain its appearance, book content, calculations, saved drafts and exports. Keep the three creator save formats distinct and preserve their current import behaviour. New modes and features are outside this plan's scope.
 
 ## Repository and handoff context
 
@@ -228,8 +226,6 @@ Requirements:
 - Apply service-worker/manifest cache headers through supported hosting configuration.
 - Prevent stale caches from mixing incompatible build assets or navigation payloads.
 
-Future manager constraint: local character IDs cannot be enumerated during a static build. A fixed route such as `/manager/?character=...` is suitable initially. Do not assume arbitrary `/manager/[id]` paths can be statically generated for private browser-only characters.
-
 Acceptance: offline soft navigation, hard refresh and safe updates pass against production-shaped output. Successful development-server navigation alone is insufficient.
 
 ## Phase 9: verification and performance
@@ -265,7 +261,7 @@ Acceptance: the compatibility checklist is satisfied, remaining known issues are
 6. Prepare a rollback procedure that also considers installed service-worker caches.
 7. Obtain explicit push/deployment authorisation at cutover.
 
-Acceptance: all three creators are complete on the new foundation, the old deployment can be recovered if necessary, and manager implementation can start as a separate milestone.
+Acceptance: all three current creators are complete on the new foundation, the compatibility checklist is satisfied, and the old deployment can be recovered if necessary.
 
 ## Multi-agent implementation model
 
