@@ -88,3 +88,7 @@ Templates may restrict foundations by stable `profileIds`, and optional gear use
 
 
 Bestiary card exports separate canonical section data (`gm/print.mjs`), measured Record-grid text boxes/drawing (`gm/card-layout.mjs`), fixed/flexible A4 placement (`gm/card-packing.mjs`) and temporary batch controls (`gm/printing.mjs`). The same measured boxes drive fitting and drawing. Flexible packing may backfill earlier-page gaps while preserving the original entries and never mutating a draft; fixed six/four cut layouts remain available. Short descriptions reuse the existing draft string in a conditional Desc row.
+
+## Compact tablet shell
+
+`responsive.mjs` owns the 1000px compact-shell media query used by `mobile-shell.mjs` and the search launcher in `search-controller.mjs`. `mobile-shell.css` uses the matching boundary; wider layout rules in `interface.css` start at 1001px. Move the existing mode/file/install/history nodes, preserving delegation and listeners across redraw and resize. Search reader/filter responsiveness remains independent at 760px. Marijan statistic columns follow the `.mm-page` inline-size container rather than screen width. The dedicated local tablet configuration extends the existing isolated Playwright server and is excluded from the ordinary desktop/phone projects.

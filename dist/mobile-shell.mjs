@@ -1,12 +1,14 @@
-// Shared phone chrome. Controls remain inside #app so the existing delegated
+// Shared phone/tablet chrome (keep the 1000px boundary in mobile-shell.css).
+// Controls remain inside #app so the existing delegated
 // actions still work; install controls keep their original node and listeners.
 import {
   historyControls,
   refreshHistoryControls,
 } from "./history-controls.mjs";
 import { enhanceInterface } from "./interface-kit.mjs";
+import { COMPACT_SHELL_QUERY } from "./responsive.mjs";
 export function createMobileShell() {
-  const mobile = matchMedia("(max-width: 760px)"),
+  const mobile = matchMedia(COMPACT_SHELL_QUERY),
     launcher = document.createElement("button");
   launcher.type = "button";
   launcher.className = "mobile-menu-launcher quiet";

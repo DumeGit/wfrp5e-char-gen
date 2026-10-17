@@ -68,6 +68,7 @@ Player review layout: run `node --test tests/review-sheet.test.mjs` and `npx pla
 | `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, Tribes Troll composition/Hag spells and Shaman Lore controls, book-removal confirmation/undo, early blocking issue and repair |
 | `storage` | Actual JSON downloads/imports, reload persistence, rejection of the wrong save type |
 | `exports` | Actual browser PDF downloads, editable player fields, compact NPC PDF, flexible A4 default, explicit six-card layout and mixed-draft batch |
+| `tablet` | All three modes at portrait/landscape, enlarged display settings and short landscape: compact menu/history boundary, touch controls, readable numeric fields, references, templates and print-action reachability |
 | `mobile` | Scenarios tagged for navigation, narrow layout and search; mobile Chromium only |
 | `pwa` | Real worker precache, offline reload and unopened references/GM entry, waiting update and retained purchases |
 | `all` | Every scenario, including Marijan Mode, in desktop and mobile Chromium |
@@ -126,3 +127,7 @@ GM Trait summaries: `node --test tests/gm-trait-summaries.test.mjs tests/gm.test
 
 
 Panel material changes use the focused `tests/browser/panel-materials.spec.mjs` cases (included by `@interface`): all three modes on desktop/phone, equal menu/folio surfaces, actual local asset decoding, mobile folio opening, no overflow, reduced-motion consistency and plain print backgrounds. Run this file directly for material-only changes instead of unrelated creator/book flows, then rebuild/check offline assets. Native SVG texture strength is baked at 0.15; no character data or PDF layout is involved.
+
+## Tablet preset — 17 October 2026
+
+Run `npm run test:ui:tablet` locally. `playwright.tablet.config.mjs` extends the existing runner/server; `tablet.spec.mjs` is excluded from ordinary desktop/phone suites. The five CSS viewports are 800×1180, 1280×700, 667×970, 1067×570 and 1280×480, with touch/mobile Chromium and representative 2/2.4 scaling. These are viewport scenarios allowing for browser controls, not a verified Android default. They cover all three modes, exact 1000/1001px transitions, live menu/save/history/search placement, 44px controls, uncut three-digit Characteristic input, scroll-reachable print actions and no horizontal overflow. Screenshots and the HTML report stay under ignored `test-results/tablet*`. Physical tablet display scaling, OS keyboard/pickers and touch behaviour remain unverified. No GitHub CI is added.

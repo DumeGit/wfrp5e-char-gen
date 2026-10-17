@@ -1,5 +1,9 @@
 # Shared UI/UX implementation — 10 October 2026
 
+## Tablet polish — 17 October 2026
+
+Compact navigation now extends through 1000 CSS pixels across all modes; live tool/history/search nodes restore on crossing 1001px. Search filter layout remains independent at 760px. Marijan Characteristics use an editor container with two/three/five columns and readable 64px number inputs. Coarse-pointer standalone actions and selects retain 44px touch targets, while inline prose links keep their compact appearance. Local tablet cases cover portrait, landscape, larger display settings and reduced height; physical-device behaviour is not certified. Verification: 15 tablet cases, 24 shared interface/shell cases (four intentional skips) and two narrow-screen allocation cases passed. Portrait GM/Player, portrait/landscape Marijan and short-landscape print screenshots were visually inspected; code, formatting and offline checks passed.
+
 ## Player Review sheet — 15 October 2026
 
 Replaced the long review tables and export explanations with a compact sheet: identity/rank, current Characteristic cells, resource and XP/money strips, trained Skills with totals, Talent ranks, magic and structured weapons/armour/belongings. Current load effects come from the shared character result. Native disclosures retain breakdowns, descriptions, untrained Basic Skills, PDF options, background/ambitions, notes, XP/dice history and book-specific references. Missing creation choices stay visible and actionable before export; section Edit controls return to existing steps. Scoped `review-sheet.css` inherits the Black Banner tokens, pairs desktop columns and stacks phone sections with 44px targets. Export files and rules are unchanged. Focused review and actual PDF-download checks use desktop/mobile Chromium; physical phones are not claimed.

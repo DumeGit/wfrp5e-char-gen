@@ -1,5 +1,6 @@
 import { searchBooks, normalizeSearch } from "./book-search.mjs";
 import { SEARCH_CATEGORIES, searchLabel } from "./search-presentation.mjs";
+import { COMPACT_SHELL_QUERY } from "./responsive.mjs";
 import {
   CATEGORY_FILTERS,
   CHARACTERISTICS,
@@ -45,7 +46,8 @@ export function createSearchController({
     bookSelect = document.createElement("select"),
     filtersPanel = document.createElement("details"),
     chips = document.createElement("div"),
-    mobile = window.matchMedia("(max-width: 760px)");
+    mobile = window.matchMedia("(max-width: 760px)"),
+    compact = window.matchMedia(COMPACT_SHELL_QUERY);
   panel.className = "creator-dialog book-search-panel";
   panel.setAttribute("aria-labelledby", "search-panel-title");
   panel.innerHTML =
@@ -57,10 +59,10 @@ export function createSearchController({
   banner.prepend(launch);
   const headerActions = document.querySelector(".masthead-actions");
   const placeLauncher = () => {
-    if (mobile.matches && headerActions) headerActions.prepend(launch);
+    if (compact.matches && headerActions) headerActions.prepend(launch);
     else banner.prepend(launch);
   };
-  mobile.addEventListener("change", placeLauncher);
+  compact.addEventListener("change", placeLauncher);
   placeLauncher();
   select.id = "book-search-category";
   select.setAttribute("aria-label", "Search category");

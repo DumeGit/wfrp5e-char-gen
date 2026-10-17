@@ -21,6 +21,7 @@ const chromium = [
 export default defineConfig({
   testDir: "./tests/browser",
   testMatch: "**/*.spec.mjs",
+  testIgnore: "**/tablet.spec.mjs",
   fullyParallel: true,
   workers: 2,
   timeout: 45000,

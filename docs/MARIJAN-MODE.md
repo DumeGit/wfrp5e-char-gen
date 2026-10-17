@@ -1,5 +1,7 @@
 # Marijan Mode
 
+Through 1000 CSS pixels, Marijan uses the shared compact banner menu, native section jump and bottom history/View controls. Its Characteristic overview measures the editor container: two columns below 420px, three from 420px, five from 700px. Numeric inputs retain at least 64px width with compact padding; coarse-pointer manual-override actions and dropdowns use 44px targets. Wide layouts keep the existing rail and folio.
+
 Shared descriptions resolve by canonical ID rather than saved wording copies. Personal descriptions override only that character; clearing one restores the shared definition. Custom entries stay independent; generated quantity notes remain separate. Results and PDFs use the same resolved entries. See [DESCRIPTIONS.md](DESCRIPTIONS.md).
 
 A separate, unrestricted one-page character editor at `dist/marijan.html`. The user authorised this mode on 9 October 2026, using Hammergen as an interaction reference, not a rules source or copied interface. The guided player creator and GM workshop remain independent.

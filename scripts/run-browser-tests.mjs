@@ -13,6 +13,7 @@ const scopes = [
   "storage",
   "exports",
   "mobile",
+  "tablet",
   "interface",
   "pwa",
   "all",
@@ -73,7 +74,8 @@ const args = [
   ),
   "test",
 ];
-if (scope === "mobile") args.push("--project=mobile");
+if (scope === "tablet") args.push("--config=playwright.tablet.config.mjs");
+else if (scope === "mobile") args.push("--project=mobile");
 else if (scope !== "all")
   args.push("--grep", scope === "cross-browser" ? "@smoke" : `@${scope}\\b`);
 if (process.argv.includes("--last-failed")) args.push("--last-failed");

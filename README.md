@@ -1,5 +1,7 @@
 # WFRP Character Ledger
 
+All three creators use compact navigation through 1000 CSS pixels: banner Search/Menu, one step or section selector, and bottom Undo/Redo/View controls. Wider windows retain the sidebar. Marijan stat fields respond to editor width and keep number inputs readable. The local tablet preset is `npm run test:ui:tablet`; it does not replace testing on physical hardware.
+
 Bestiary Skill/Talent selection browses complete compact lists with a second selector for specialisations. Short description has a dice action reusing supported PC height/eye/hair tables, with recorded rolls and Undo; other appearance details stay manual. Printed cards and full sheets show each attack and described ability on its own row, plus TB + AP soak by hit location and conditional shield totals. Cards use the compact Record grid, with a Desc row when filled. Flexible-height packing is the default; six/four equal cards are available, with measured overflow protection. See [Bestiary Workshop](docs/GM-WORKSHOP.md).
 
 **Salzenmund: City of Salt and Silver** adds four opt-in regional origins, the Riverfolk Owler alternative, seven generic GM profiles/four Spite templates and 24 mechanical references. Missing Venom/Ward/Wind and Skill specialisations require explicit choices; approved conversions have Legacy notes. Core Smuggler/equipment remain unchanged. Scope and source discrepancies: [SALZENMUND.md](docs/SALZENMUND.md).

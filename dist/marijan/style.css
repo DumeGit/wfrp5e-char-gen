@@ -15,6 +15,8 @@
   align-items: start;
 }
 .mm-page {
+  container-type: inline-size;
+  container-name: marijan-editor;
   min-width: 0;
   padding: 26px 30px;
 }
@@ -1091,12 +1093,12 @@
 }
 .mm-char-overview {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 4px 8px;
 }
 .mm-char-cell {
   display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) 30px;
+  grid-template-columns: 24px minmax(64px, 1fr) 30px;
   align-items: center;
   gap: 4px;
   border-bottom: 1px solid var(--color-line);
@@ -1119,6 +1121,8 @@
 }
 .mm-char-cell input {
   width: 100%;
+  min-width: 64px;
+  padding-inline: 4px;
   text-align: center;
 }
 .mm-char-cell output {
@@ -1153,10 +1157,17 @@
   width: 100%;
   text-align: center;
 }
-@media (max-width: 760px) {
+@container marijan-editor (min-width: 420px) {
   .mm-char-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+@container marijan-editor (min-width: 700px) {
+  .mm-char-overview {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
   .mm-char-adjustment-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px 8px;
