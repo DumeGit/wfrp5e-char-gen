@@ -2,21 +2,22 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import * as PDFLib from "pdf-lib";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
 import {
   freshGM,
   calculateGM,
   validateGMDraft,
   magicChoices,
-} from "../dist/gm/model.mjs";
-import { pickerEntries, traitParameter } from "../dist/gm/views.mjs";
-import { sheetSections } from "../dist/gm/pdf.mjs";
-import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/gm/model.mjs";
+import { pickerEntries } from "../src/engine/gm/pickers.mjs";
+import { traitParameter } from "./bestiary-presentation.mjs";
+import { sheetSections } from "../src/engine/gm/pdf.mjs";
+import { prepareGMPrint, cardSections } from "../src/engine/gm/print.mjs";
 const json = async (p) =>
   JSON.parse(await readFile(new URL(p, import.meta.url), "utf8"));
 const [library, data, raw] = await Promise.all([
-  json("../dist/data/book-library.json"),
-  json("../dist/gm/data.json"),
+  json("../public/data/book-library.json"),
+  json("../public/gm/data.json"),
   json("../content/sources/gm/books/archives-ii.json"),
 ]);
 const rulesFor = createGMRules(library, data);
@@ -158,7 +159,9 @@ test("Great Maw is Ogre-only, uses Toughness for Magick, and rejects illegal Ogr
     r.stats.T + 10,
   );
   assert.equal(
-    magicChoices(R, r).filter((x) => x.category === "The Great Maw" && x.source.book === "archives-ii").length,
+    magicChoices(R, r).filter(
+      (x) => x.category === "The Great Maw" && x.source.book === "archives-ii",
+    ).length,
     7,
   );
   assert.equal(
@@ -175,8 +178,11 @@ test("Great Maw is Ogre-only, uses Toughness for Magick, and rejects illegal Ogr
   );
   assert.match(html, /The Great Maw/);
   // Tribes and Tribulations adds Firebelly support to the shared GM catalogue.
-  assert.match(html, /value="Fire"(?![^>]*disabled)/);
-  assert.match(html, /value="Life"[^>]*disabled/);
+  const inputFor = (name) =>
+    html.match(new RegExp(`<input\\b(?=[^>]*value="${name}")[^>]*>`))?.[0];
+  assert.ok(inputFor("Fire"));
+  assert.doesNotMatch(inputFor("Fire"), /\bdisabled/);
+  assert.match(inputFor("Life"), /\bdisabled/);
   s.spells = [
     magicChoices(R, r).find((x) => x.name === "Bullgorger").contentId,
   ];

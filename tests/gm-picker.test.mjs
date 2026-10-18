@@ -1,10 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { searchPickerEntries, groupPickerEntries } from "../dist/gm/views.mjs";
+import { searchPickerEntries, groupPickerEntries } from "../src/engine/gm/pickers.mjs";
 
 const { traits } = JSON.parse(
-  await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+  await readFile(new URL("../public/gm/data.json", import.meta.url), "utf8"),
 );
 
 test("complete picker browsing groups specialisations without dropping catalogue entries", () => {

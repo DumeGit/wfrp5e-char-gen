@@ -21,9 +21,12 @@ test("Salzenmund origins and Owler reuse Player choices without replacing core S
     .getByRole("button", { name: "Choose books", exact: true })
     .click();
   await page.locator('[data-book="salzenmund"]').check();
+  page.once("dialog", (dialog) => dialog.accept());
   await page
     .getByRole("button", { name: "Use selected books", exact: true })
     .click();
+  await page.locator("#species").selectOption("Human");
+  await page.getByRole("button", { name: "Apply change", exact: true }).click();
   await page
     .locator("#regional-origin")
     .selectOption("salzenmund:origin:nordlander");

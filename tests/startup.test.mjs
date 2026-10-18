@@ -2,19 +2,19 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library, soldier } from "./fixture.mjs";
-import { loadBookBundle } from "../dist/book-bundle.mjs";
+import { loadBookBundle } from "../src/engine/book-bundle.mjs";
 import {
   assembleBooks,
   bookSelection,
   catalogForCharacter,
-} from "../dist/books.mjs";
-import { buildSearchIndex } from "../dist/book-search.mjs";
-import { characterResult } from "../dist/character-result.mjs";
-import { loadRuleReferences } from "../dist/rule-references.mjs";
+} from "../src/engine/books.mjs";
+import { buildSearchIndex } from "../src/engine/book-search.mjs";
+import { characterResult } from "../src/engine/character-result.mjs";
+import { loadRuleReferences } from "../src/engine/rule-references.mjs";
 
 const bundle = JSON.parse(
   await readFile(
-    new URL("../dist/data/book-library.json", import.meta.url),
+    new URL("../public/data/book-library.json", import.meta.url),
     "utf8",
   ),
 );
@@ -22,7 +22,7 @@ const loaded = await loadBookBundle(() => structuredClone(bundle));
 const readBundle = (value) => loadBookBundle(() => value);
 const referenceLibrary = JSON.parse(
   await readFile(
-    new URL("../dist/data/rule-reference-library.json", import.meta.url),
+    new URL("../public/data/rule-reference-library.json", import.meta.url),
     "utf8",
   ),
 );
@@ -46,7 +46,7 @@ const hydrate = async (catalogue) => ({
 test("startup uses one request and preserves the fully validated source library", async () => {
   const requests = [];
   const result = await loadBookBundle((url) => {
-    requests.push(url.pathname);
+    requests.push(typeof url === "string" ? url : url.pathname);
     return structuredClone(bundle);
   });
   assert.equal(requests.length, 1);

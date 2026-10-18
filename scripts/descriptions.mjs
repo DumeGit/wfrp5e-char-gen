@@ -5,7 +5,7 @@ import {
   visitDescriptionFields,
   descriptionBinding,
   requiresDescription,
-} from "../dist/description-data.mjs";
+} from "../src/engine/description-data.mjs";
 
 export const sourceRoot = new URL("../content/sources/", import.meta.url);
 export const catalogueURL = new URL(

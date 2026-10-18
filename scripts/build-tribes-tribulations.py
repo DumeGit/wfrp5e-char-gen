@@ -206,7 +206,7 @@ def build(decisions):
         river['traits'].append(trait('Striding Gait','Wetland',adaptation='Legacy: proposed replacement of undefined Swamp-strider by core Striding Gait (Wetland), approved by the user.'))
         river['adaptation'] = river['traits'][-1]['adaptation']
     else: river['notes'].append('Swamp-strider is undefined and unavailable; no mechanical effect is invented.')
-    core = json.loads((ROOT/'dist/data/book-library.json').read_text(encoding='utf-8'))
+    core = json.loads((ROOT/'public/data/book-library.json').read_text(encoding='utf-8'))
     all_spells = [r for pack in core['packs'] if pack['manifest']['id'] == 'core' for r in pack['data'].get('spells',[])]
     for t in troll:
         if 'fixedSpellNames' in t:

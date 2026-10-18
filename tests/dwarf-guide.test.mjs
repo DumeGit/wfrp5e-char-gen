@@ -2,18 +2,11 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
-import * as M from "../dist/rules.mjs";
+import * as M from "../src/engine/rules.mjs";
 import { library, R } from "./fixture.mjs";
-import {
-  assembleBooks,
-  bookSelection,
-  randomTable,
-  tableResult,
-  catalogForCharacter,
-  validateCatalog,
-  loadBookLibrary,
-} from "../dist/books.mjs";
-import { creationSpecies, careerAvailable } from "../dist/origins.mjs";
+import {loadBookLibrary} from '../scripts/book-source-library.mjs';
+import {assembleBooks,bookSelection,randomTable,tableResult,catalogForCharacter,validateCatalog} from '../src/engine/books.mjs';
+import { creationSpecies, careerAvailable } from "../src/engine/origins.mjs";
 import {
   dwarfNameRoll,
   defaultCareerResult,
@@ -22,15 +15,15 @@ import {
   dwarfReferences,
   dwarfSkillRaw,
   dwarfGearSlots,
-} from "../dist/dwarf-guide.mjs";
+} from "../src/engine/dwarf-guide.mjs";
 import {
   gearSlots,
   gearOptions,
   inventoryEntries,
   equipment,
-} from "../dist/equipment.mjs";
-import { marketCatalog, buyTrapping } from "../dist/market.mjs";
-import { exportSheet } from "../dist/export.mjs";
+} from "../src/engine/equipment.mjs";
+import { marketCatalog, buyTrapping } from "../src/engine/market.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
 
 const B = assembleBooks(library, ["dwarf-guide"]);
 export function dwarf(career = "soldier", catalog = B, origin) {
@@ -463,11 +456,11 @@ test("Editable PDF and creation record include rune knowledge, grudges, Longbear
       B,
       s,
       fs.readFileSync(
-        new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+        new URL("../public/assets/character-sheet.pdf", import.meta.url),
       ),
       JSON.parse(
         fs.readFileSync(
-          new URL("../dist/data/sheet-fields.json", import.meta.url),
+          new URL("../public/data/sheet-fields.json", import.meta.url),
         ),
       ),
     ),

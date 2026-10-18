@@ -1,15 +1,16 @@
+import {createElement, Fragment} from "react";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { assembleBooks } from "../dist/books.mjs";
-import { fresh } from "../dist/rules.mjs";
-import { characterResult } from "../dist/character-result.mjs";
-import { reviewSheet } from "../dist/review-sheet.mjs";
-import { esc } from "../dist/controls.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
+import { fresh } from "../src/engine/rules.mjs";
+import { characterResult } from "../src/engine/character-result.mjs";
+import { reviewSheet } from "./presentation-review-sheet.mjs";
+import { esc } from "./presentation-controls.mjs";
 
 const R = assembleBooks(
   JSON.parse(
-    readFileSync(new URL("../dist/data/book-library.json", import.meta.url)),
+    readFileSync(new URL("../public/data/book-library.json", import.meta.url)),
   ),
 );
 const ui = {
@@ -17,7 +18,7 @@ const ui = {
   issueHTML: "",
   recordsHTML: "",
   fullAppendix: false,
-  talentDescription: (name, { metadata }) => `${esc(name)}${metadata}`,
+  talentDescription: (name, { metadata }) => createElement(Fragment, null, name, metadata),
   spellDescription: (spell) => esc(spell.name),
 };
 

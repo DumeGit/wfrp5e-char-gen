@@ -2,10 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
-import * as M from '../dist/rules.mjs';
-import {equipment,gearSlots} from '../dist/equipment.mjs';
-import {buyTrapping,formatMoney,marketCatalog,priceInPennies,purse} from '../dist/market.mjs';
-import {exportSheet} from '../dist/export.mjs';
+import * as M from '../src/engine/rules.mjs';
+import {equipment,gearSlots} from '../src/engine/equipment.mjs';
+import {buyTrapping,formatMoney,marketCatalog,priceInPennies,purse} from '../src/engine/market.mjs';
+import {exportSheet} from '../src/engine/export.mjs';
 import {R,soldier} from './fixture.mjs';
 
 test('listed book prices convert exactly across denominations',()=>{
@@ -43,7 +43,7 @@ test('purchased armour updates protection and the editable sheet shows remaining
  assert.equal(purse(R,s).remaining,360);
  assert.equal(equipment(R,s).armour.filter(x=>x.name==='Leather Jerkin').length,2);
  assert.equal(M.derive(R,s).earnedBoxes,0);
- const bytes=await exportSheet(R,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
+ const bytes=await exportSheet(R,s,fs.readFileSync(new URL('../public/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../public/data/sheet-fields.json',import.meta.url))));
  const form=(await PDFLib.PDFDocument.load(bytes)).getForm();
  assert.equal(form.getTextField('Wealth_Gold_Crowns_GC').getText(),'1');
  assert.equal(form.getTextField('Wealth_Silver_Shillings_SS').getText(),'10');

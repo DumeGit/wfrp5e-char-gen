@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {R,soldier} from './fixture.mjs';
-import {suggestion,traditionalName,selectedTraditionalName} from '../dist/background.mjs';
-import {validateBackgroundTable} from '../dist/books.mjs';
+import {suggestion,traditionalName,selectedTraditionalName} from '../src/engine/background.mjs';
+import {validateBackgroundTable} from '../src/engine/books.mjs';
 
 // Printed pp. 21–22 source fixtures; not installed runtime character options.
 const data=JSON.parse(fs.readFileSync(new URL('./fixtures/archives-ii-background.json',import.meta.url),'utf8'));

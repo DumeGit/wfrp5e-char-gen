@@ -3,13 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
 import {library,R,soldier} from './fixture.mjs';
-import {assembleBooks,loadBookLibrary,validateManifest,bookSelection,catalogForCharacter,randomTable,tableResult} from '../dist/books.mjs';
-import {sourceLabel} from '../dist/sources.mjs';
-import {bookPanel,bookSetup} from '../dist/book-ui.mjs';
-import * as M from '../dist/rules.mjs';
-import {marketCatalog,buyTrapping,purse} from '../dist/market.mjs';
-import {equipment,gearOptions} from '../dist/equipment.mjs';
-import {exportSheet} from '../dist/export.mjs';
+import {loadBookLibrary} from '../scripts/book-source-library.mjs';
+import {assembleBooks,validateManifest,bookSelection,catalogForCharacter,randomTable,tableResult} from '../src/engine/books.mjs';
+import {sourceLabel} from '../src/engine/sources.mjs';
+import {bookPanel,bookSetup} from "./presentation-book-ui.mjs";
+import * as M from '../src/engine/rules.mjs';
+import {marketCatalog,buyTrapping,purse} from '../src/engine/market.mjs';
+import {equipment,gearOptions} from '../src/engine/equipment.mjs';
+import {exportSheet} from '../src/engine/export.mjs';
 
 // Synthetic options exercise integration only; none are published game content.
 const raw=library.packs[0].data;
@@ -124,12 +125,12 @@ test('loader rejects duplicate registry entries and paths outside published book
 });
 test('book selector lists real registered books, mandatory core and opt-in variants',()=>{
  const p=additions(),lib=withPack(p),s=soldier(),html=bookSetup(lib,R,s);
- assert.match(html,/data-book="core" checked disabled/);assert.match(html,/data-book="fixture"\s*>/);assert.match(html,/Changing books starts a new character/);
+ const core=html.match(/<input\b[^>]*data-book="core"[^>]*>/)?.[0];assert.ok(core);assert.match(core,/\bchecked=""/);assert.match(core,/\bdisabled=""/);const optional=html.match(/<input\b[^>]*data-book="fixture"[^>]*>/)?.[0];assert.ok(optional);assert.doesNotMatch(optional,/\bchecked=|\bdisabled=/);assert.match(html,/Changing books starts a new character/);
  assert.ok(bookSetup(library,R,s).includes('data-action="apply-books"'));assert.doesNotMatch(bookPanel(library,R,s),/data-book=/);
  assert.match(bookSetup({...library,packs:library.packs.filter(p=>p.manifest.kind==='core')},R,s),/Required core rules/);
 });
 test('a supplement character fills the editable PDF with book-specific references',async()=>{
  globalThis.PDFLib=PDFLib;const on=assembleBooks(withPack(additions()),['fixture']),s=soldier();s.career='fixture:soldier';s.freeTalent='Fixture Talent';s.books=bookSelection(on);buyTrapping(on,s,'fixture:blade');
- const bytes=await exportSheet(on,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
+ const bytes=await exportSheet(on,s,fs.readFileSync(new URL('../public/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../public/data/sheet-fields.json',import.meta.url))));
  const doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Career_1_pg').getText(),'12');assert.equal(form.getTextField('Talent_06_pg').getText(),'14');assert.match(form.getTextField('Notes').getText(),/Books: Core; Test/);assert.match(form.getTextField('Notes').getText(),/Career: Test/);
 });

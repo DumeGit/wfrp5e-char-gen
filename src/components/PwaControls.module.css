@@ -1,0 +1,10 @@
+.update {
+  z-index: 100;
+  max-height: calc(100dvh - 110px);
+  overflow: auto;
+}
+@media (max-width: 1000px) {
+  .update {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+}

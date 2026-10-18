@@ -3,16 +3,16 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
 import {library,R as core,soldier} from './fixture.mjs';
-import {assembleBooks,bookSelection,catalogForCharacter} from '../dist/books.mjs';
-import * as M from '../dist/rules.mjs';
-import {isLegacy,legacyTag,legacySources,legacyMechanic} from '../dist/legacy.mjs';
-import {legacyOption,legacyContext,legacyMagic,legacyGear} from '../dist/legacy-character.mjs';
-import {sourceLabel} from '../dist/sources.mjs';
-import {folioData} from '../dist/folio.mjs';
-import {bookPanel} from '../dist/book-ui.mjs';
-import {elfOriginPanel,elfCareerPanel} from '../dist/high-elf-ui.mjs';
-import {dwarfOriginPanel} from '../dist/dwarf-guide-ui.mjs';
-import {exportSheet} from '../dist/export.mjs';
+import {assembleBooks,bookSelection,catalogForCharacter} from '../src/engine/books.mjs';
+import * as M from '../src/engine/rules.mjs';
+import {isLegacy,legacyTag,legacySources,legacyMechanic} from "./presentation-legacy.mjs";
+import {legacyOption,legacyContext,legacyMagic,legacyGear} from '../src/engine/legacy-character.mjs';
+import {sourceLabel} from '../src/engine/sources.mjs';
+import {folioData} from '../src/engine/folio.mjs';
+import {bookPanel} from "./presentation-book-ui.mjs";
+import {elfOriginPanel,elfCareerPanel} from "./presentation-high-elf-ui.mjs";
+import {dwarfOriginPanel} from "./presentation-dwarf-guide-ui.mjs";
+import {exportSheet} from '../src/engine/export.mjs';
 const all=assembleBooks(library,library.packs.filter(p=>p.manifest.kind!=='variant').map(p=>p.manifest.id));
 const record=(kind,book,name)=>all[kind].find(x=>x.source.book===book&&x.name===name);
 
@@ -98,7 +98,7 @@ test('invalid explicit adaptation metadata is rejected rather than silently clas
 });
 
 test('editable PDF preserves mixed changed/unchanged spells, core values and all 556 fields',async()=>{
- globalThis.PDFLib=PDFLib;globalThis.fetch=async url=>({json:async()=>JSON.parse(fs.readFileSync(new URL(url,new URL('../dist/',import.meta.url)),'utf8')),arrayBuffer:async()=>fs.readFileSync(new URL(url,new URL('../dist/',import.meta.url)))});
+ globalThis.PDFLib=PDFLib;globalThis.fetch=async url=>({json:async()=>JSON.parse(fs.readFileSync(new URL(String(url).replace(/^\//,''),new URL('../public/',import.meta.url)),'utf8')),arrayBuffer:async()=>fs.readFileSync(new URL(String(url).replace(/^\//,''),new URL('../public/',import.meta.url)))});
  const B=assembleBooks(library,['blood-bramble']);const s=soldier();s.career='hedge-witch';s.ledger.push({type:'talent',name:'Arcane Magic (Hedgecraft)',cost:100,tick:true});s.spells=['Badwill'];M.purchaseSpell(B,s,'Fetterfetch','Arcane Magic (Hedgecraft)');s.books=bookSelection(B);s.version=2;
  const before=JSON.stringify(s),output=await exportSheet(B,s),pdf=await PDFLib.PDFDocument.load(output),form=pdf.getForm();
  assert.equal(form.getFields().length,556);assert.equal(form.getTextField('Spell_1_Name').getText(),'Badwill');assert.equal(form.getTextField('Spell_2_Name').getText(),'[Legacy] Fetterfetch');

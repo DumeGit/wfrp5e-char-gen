@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {R,soldier,library} from './fixture.mjs';
-import {assembleBooks,validateCatalog} from '../dist/books.mjs';
-import {careerAvailable} from '../dist/origins.mjs';
-import {equipment} from '../dist/equipment.mjs';
-import {folioData} from '../dist/folio.mjs';
-import * as M from '../dist/rules.mjs';
+import {assembleBooks,validateCatalog} from '../src/engine/books.mjs';
+import {careerAvailable} from '../src/engine/origins.mjs';
+import {equipment} from '../src/engine/equipment.mjs';
+import {folioData} from '../src/engine/folio.mjs';
+import * as M from '../src/engine/rules.mjs';
 
 // A synthetic, unpublished Species exercises the handlers needed by Archives II.
 // Its fixture identity is not a game option and is never installed in the app.

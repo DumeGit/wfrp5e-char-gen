@@ -2,17 +2,17 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
-import * as M from "../dist/rules.mjs";
+import * as M from "../src/engine/rules.mjs";
 import { library, R, soldier } from "./fixture.mjs";
 import {
   assembleBooks,
   bookSelection,
   catalogForCharacter,
   randomTable,
-} from "../dist/books.mjs";
-import { marketCatalog, buyTrapping, purse } from "../dist/market.mjs";
-import { equipment } from "../dist/equipment.mjs";
-import { exportSheet, exportRecord } from "../dist/export.mjs";
+} from "../src/engine/books.mjs";
+import { marketCatalog, buyTrapping, purse } from "../src/engine/market.mjs";
+import { equipment } from "../src/engine/equipment.mjs";
+import { exportSheet, exportRecord } from "../src/engine/export.mjs";
 const B = assembleBooks(library, ["blood-bramble"]);
 
 export function brambleCaster(
@@ -266,7 +266,7 @@ test("Editable sheet and full creation record preserve known spell details and s
   M.purchaseSpell(B, s, "Bonesetter", "Arcane Magic (Hedgecraft)");
   globalThis.PDFLib = PDFLib;
   const source = fs.readFileSync(
-    new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+    new URL("../public/assets/character-sheet.pdf", import.meta.url),
   );
   const bytes = await exportSheet(
     B,
@@ -274,7 +274,7 @@ test("Editable sheet and full creation record preserve known spell details and s
     source,
     JSON.parse(
       fs.readFileSync(
-        new URL("../dist/data/sheet-fields.json", import.meta.url),
+        new URL("../public/data/sheet-fields.json", import.meta.url),
       ),
     ),
   );

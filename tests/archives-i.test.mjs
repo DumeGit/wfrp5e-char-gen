@@ -1,21 +1,22 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { library, R, soldier } from "./fixture.mjs";
-import { assembleBooks, randomTable, loadBookLibrary } from "../dist/books.mjs";
-import * as M from "../dist/rules.mjs";
-import { creationSpecies } from "../dist/origins.mjs";
-import { marketCatalog, buyTrapping, purse } from "../dist/market.mjs";
-import { equipment, gearOptions } from "../dist/equipment.mjs";
+import {loadBookLibrary} from '../scripts/book-source-library.mjs';
+import {assembleBooks,randomTable} from '../src/engine/books.mjs';
+import * as M from "../src/engine/rules.mjs";
+import { creationSpecies } from "../src/engine/origins.mjs";
+import { marketCatalog, buyTrapping, purse } from "../src/engine/market.mjs";
+import { equipment, gearOptions } from "../src/engine/equipment.mjs";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
-import { exportSheet } from "../dist/export.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
 import {
   careerAvailable,
   sheetSpecies,
   sheetClass,
   regionalCareerChoices,
-} from "../dist/origins.mjs";
-import { regionalCareer } from "../dist/regional-careers.mjs";
+} from "../src/engine/origins.mjs";
+import { regionalCareer } from "../src/engine/regional-careers.mjs";
 
 const on = assembleBooks(library, ["archives-i"]);
 export function archivesCharacter(species, career, origin = "") {
@@ -275,11 +276,11 @@ test("Cityborn exports the Eonir Species and kindred on the editable Class field
     on,
     s,
     fs.readFileSync(
-      new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+      new URL("../public/assets/character-sheet.pdf", import.meta.url),
     ),
     JSON.parse(
       fs.readFileSync(
-        new URL("../dist/data/sheet-fields.json", import.meta.url),
+        new URL("../public/data/sheet-fields.json", import.meta.url),
       ),
     ),
   );

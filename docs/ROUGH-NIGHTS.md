@@ -8,7 +8,7 @@ Supplied file: `Rough Nights & Hard Days.pdf`, 97 PDF pages. Printed page = PDF 
 
 MarkItDown extraction was checked against the printed tables and rendered PDF pages. Relevant content is Appendix I, pp. 86–90. Appendix II's pub games, the five adventures and their NPCs are outside character-creation scope. Full source PDFs and full-book extraction are not published.
 
-`scripts/extract-rough-nights.py` stages text, tables, appearance and source metadata outside `dist`. `scripts/build-rough-nights.py` builds the reviewed pack; it requires explicit conversion flags and never registers a pack automatically. Current decisions are `--small-talent omit --wounds core --bawd knave --miracles map --suffuse allow`. The installed pack is `rough-nights`, version 1.0.0.
+`scripts/extract-rough-nights.py` stages text, tables, appearance and source metadata outside `public/` and `out/`. `scripts/build-rough-nights.py` builds the reviewed pack; it requires explicit conversion flags and never registers a pack automatically. Current decisions are `--small-talent omit --wounds core --bawd knave --miracles map --suffuse allow`. The installed pack is `rough-nights`, version 1.0.0.
 
 ## Approved Fifth Edition adaptations
 

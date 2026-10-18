@@ -2,7 +2,7 @@
 
 Prepared: 17 October 2026.
 
-Status: implementation plan and handoff. Preparing this document does not start the migration or authorise deployment.
+Status: implemented locally on 18 October 2026; final verification and known limitations are recorded in [NEXTJS-MIGRATION-REPORT.md](NEXTJS-MIGRATION-REPORT.md). Deployment remains separately authorized. The plan below records the agreed migration scope and acceptance criteria.
 
 ## Objective and user decisions
 

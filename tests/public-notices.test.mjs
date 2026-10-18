@@ -4,23 +4,23 @@ import { readFile, access } from "node:fs/promises";
 
 const read = (name) => readFile(new URL(`../${name}`, import.meta.url), "utf8");
 test("all creators identify the independent project and expose the same static notices", async () => {
-  for (const page of ["index.html", "gm.html", "marijan.html"]) {
-    const html = await read(`dist/${page}`);
+  for (const page of ["index.html", "bestiary/index.html", "marijan/index.html"]) {
+    const html = await read(`out/${page}`);
     assert.match(html, /UNOFFICIAL · WFRP FIFTH EDITION/);
     assert.match(
       html,
       /Not affiliated with or endorsed by Games Workshop or Cubicle 7/,
     );
     for (const section of ["credits", "privacy", "contact"])
-      assert.match(html, new RegExp(`href="legal.html#${section}"`));
+      assert.match(html, new RegExp(`href="/legal/#${section}"`));
     assert.match(html, /assets\/ledger-emblem.svg/);
     assert.doesNotMatch(html, /analytics\.mjs|black-banner\/w\.svg/);
   }
-  const legal = await read("dist/legal.html");
+  const legal = await read("out/legal/index.html");
   for (const name of ["pdf-lib", "cinzel", "fell", "gothic"])
     assert.ok(legal.includes(name));
-  for (const [, path] of legal.matchAll(/href="(assets\/[^"]+)"/g))
-    await access(new URL(`../dist/${path}`, import.meta.url));
+  for (const [, path] of legal.matchAll(/href="\/(assets\/[^"]+)"/g))
+    await access(new URL(`../out/${path}`, import.meta.url));
   assert.match(
     legal,
     /not a statement of rights-holder approval or permission/,
@@ -36,15 +36,15 @@ test("analytics is absent from dependencies, the build and the offline package",
   assert.doesNotMatch(pkg.scripts.build, /analytics/);
   assert.doesNotMatch(await read("package-lock.json"), /@vercel\/analytics/);
   assert.doesNotMatch(
-    await read("dist/sw.js"),
+    await read("out/sw.js"),
     /analytics\.mjs|vercel-analytics|black-banner\/w\.svg/,
   );
-  assert.match(await read("dist/sw.js"), /legal\.html/);
+  assert.match(await read("out/sw.js"), /legal\.html/);
   for (const name of [
-    "dist/analytics.mjs",
-    "dist/assets/vercel-analytics.mjs",
+    "out/analytics.mjs",
+    "out/assets/vercel-analytics.mjs",
     "scripts/build-analytics.mjs",
-    "dist/assets/black-banner/w.svg",
+    "out/assets/black-banner/w.svg",
   ])
     await assert.rejects(access(new URL(`../${name}`, import.meta.url)));
 });

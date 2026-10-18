@@ -1,18 +1,18 @@
 import test from "node:test";
+import { careerReferencesHTML } from "./reference-render.mjs";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library, R } from "./fixture.mjs";
-import { buildSearchIndex } from "../dist/book-search.mjs";
-import { loadReferenceLibrary } from "../dist/search-library.mjs";
+import { buildSearchIndex } from "../src/engine/book-search.mjs";
+import { loadReferenceLibrary } from "../src/engine/search-library.mjs";
 import {
   createCareerReferenceIndex,
-  careerReferencesHTML,
   validateCareerOptions,
-} from "../dist/career-references.mjs";
+} from "../src/engine/career-references.mjs";
 
 const wire = JSON.parse(
   await readFile(
-    new URL("../dist/data/search-library.json", import.meta.url),
+    new URL("../public/data/search-library.json", import.meta.url),
     "utf8",
   ),
 );

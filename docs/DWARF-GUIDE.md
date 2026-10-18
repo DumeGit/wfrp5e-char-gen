@@ -57,7 +57,7 @@ Vehicles, artillery, crews, engineering installations, forging, play-time grudge
 
 ## Maintenance and verification
 
-`scripts/extract-dwarf-guide.py` stages extraction outside the published app. `scripts/prepare-dwarf-guide.py --output-dir ../tmp/pdfs/dwarf-guide-prepared` applies reviewed conversions. Copy only `manifest.json` and files declared by its `files` object into the pack; never copy full page text or raw extraction into `dist`.
+`scripts/extract-dwarf-guide.py` stages extraction outside the published app. `scripts/prepare-dwarf-guide.py --output-dir ../tmp/pdfs/dwarf-guide-prepared` applies reviewed conversions. Copy only `manifest.json` and files declared by its `files` object into the pack; never copy full page text or raw extraction into `public/` or `out/`.
 
 Tests cover all 128 combinations of earlier supplements in both load orders, regional tables, all new Career schemes and complete allocations, name boundaries, Longbeard values, unavailable choices, optional swaps, shared rune limits, Doom grants, grudges, Species restrictions, shop precedence, schema failures and all 556 editable PDF fields. Browser verification uses an isolated draft; exported PDFs are rendered and checked independently of field values.
 

@@ -1,23 +1,23 @@
-import { syncGMCants } from "../dist/gm/cants.mjs";
+import { syncGMCants } from "../src/engine/gm/cants.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
 import {
   freshGM,
   calculateGM,
   validateGMDraft,
   magicChoices,
   gmSpellCatalogue,
-} from "../dist/gm/model.mjs";
-import { pickerEntries } from "../dist/gm/views.mjs";
-import { sheetSections } from "../dist/gm/pdf.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/gm/model.mjs";
+import { pickerEntries } from "../src/engine/gm/pickers.mjs";
+import { sheetSections } from "../src/engine/gm/pdf.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 const json = async (p) =>
   JSON.parse(await readFile(new URL(p, import.meta.url), "utf8"));
 const [library, data, raw] = await Promise.all([
-  json("../dist/data/book-library.json"),
-  json("../dist/gm/data.json"),
+  json("../public/data/book-library.json"),
+  json("../public/gm/data.json"),
   json("../content/sources/gm/books/archives-iii.json"),
 ]);
 const rulesFor = createGMRules(library, data),

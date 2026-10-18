@@ -2,24 +2,24 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library, soldier } from "./fixture.mjs";
-import { equipment } from "../dist/equipment.mjs";
-import { assembleBooks } from "../dist/books.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
+import { equipment } from "../src/engine/equipment.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
 import {
   freshGM,
   calculateGM,
   applyTemplate,
   validateGMDraft,
   magicChoices,
-} from "../dist/gm/model.mjs";
-import { sheetSections } from "../dist/gm/pdf.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
-import { loadReferenceLibrary } from "../dist/search-library.mjs";
+} from "../src/engine/gm/model.mjs";
+import { sheetSections } from "../src/engine/gm/pdf.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
+import { loadReferenceLibrary } from "../src/engine/search-library.mjs";
 
 const book = "corsairs-flariel";
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
-const data = await json("../dist/gm/data.json");
+const data = await json("../public/gm/data.json");
 const raw = await json("../content/sources/gm/books/corsairs-flariel.json");
 const rulesFor = createGMRules(library, data);
 const draft = () => freshGM(data, `${book}:creatures:dark-elf`);
@@ -140,7 +140,7 @@ test("Dark Magic and Reaper are shared options with selective conversions and no
   assert.ok(!R.market.some((x) => x.name === "Reaper"));
   assert.ok(rulesFor(freshGM(data)).spells.some((x) => x.source.book === book));
   const references = await loadReferenceLibrary(library, () =>
-    json("../dist/data/search-library.json"),
+    json("../public/data/search-library.json"),
   );
   const rows = references.rows.filter((x) => x.entry.source.book === book);
   assert.ok(rows.some((x) => /Sea Dragon Cloak/.test(x.name)));

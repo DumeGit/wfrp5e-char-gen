@@ -8,27 +8,28 @@ import {
 import {
   descriptionBinding,
   hydrateDescriptions,
-} from "../dist/description-data.mjs";
-import { loadBookLibrary, assembleBooks } from "../dist/books.mjs";
+} from "../src/engine/description-data.mjs";
+import {loadBookLibrary} from '../scripts/book-source-library.mjs';
+import {assembleBooks} from '../src/engine/books.mjs';
 import {
   createMarijanCatalogue,
   entryDescription,
-} from "../dist/marijan/catalogue.mjs";
+} from "../src/engine/marijan/catalogue.mjs";
 import {
   freshMarijan,
   addEntry,
   validateMarijan,
   calculateMarijan,
-} from "../dist/marijan/model.mjs";
-import { buildSearchIndex } from "../dist/book-search.mjs";
-import { describeTraits } from "../dist/gm/trait-descriptions.mjs";
+} from "../src/engine/marijan/model.mjs";
+import { buildSearchIndex } from "../src/engine/book-search.mjs";
+import { describeTraits } from "../src/engine/gm/trait-descriptions.mjs";
 import { publicGMData } from "../scripts/public-gm-data.mjs";
 
 const read = async (url) => JSON.parse(await readFile(url, "utf8"));
 const registry = await loadDescriptionCatalogue();
 const library = await loadBookLibrary(read),
   R = assembleBooks(library);
-const gm = await read(new URL("../dist/gm/data.json", import.meta.url));
+const gm = await read(new URL("../public/gm/data.json", import.meta.url));
 
 test("all registered description fields have a canonical record and honest review status", async () => {
   const result = await checkDescriptions(registry);
@@ -77,7 +78,7 @@ test("rewritten attack prose cannot change free or ranged attack classification"
 
 test("published payloads exclude standalone Rules and unused full stat blocks", async () => {
   const references = await read(
-    new URL("../dist/data/rule-reference-library.json", import.meta.url),
+    new URL("../public/data/rule-reference-library.json", import.meta.url),
   );
   assert.ok(
     references.books.every((book) =>
@@ -85,7 +86,7 @@ test("published payloads exclude standalone Rules and unused full stat blocks", 
     ),
   );
   const startup = await read(
-    new URL("../dist/data/book-library.json", import.meta.url),
+    new URL("../public/data/book-library.json", import.meta.url),
   );
   assert.ok(
     startup.packs.every((pack) =>
@@ -208,10 +209,10 @@ test("Marijan resolves canonical wording after save/load while preserving explic
 
 test("original extraction and the editorial catalogue are outside public assets", async () => {
   await assert.rejects(
-    access(new URL("../dist/data/books/index.json", import.meta.url)),
+    access(new URL("../public/data/books/index.json", import.meta.url)),
   );
   await assert.rejects(
-    access(new URL("../dist/gm/sources/core.json", import.meta.url)),
+    access(new URL("../public/gm/sources/core.json", import.meta.url)),
   );
   const raw = await readFile(
     new URL("../content/sources/gm/books/core.json", import.meta.url),

@@ -7,17 +7,17 @@ import {
   calculateGM,
   applyTemplate,
   validateGMDraft,
-} from "../dist/gm/model.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
-import { templateEligibility, templateRowKey } from "../dist/gm/templates.mjs";
-import { templateOverview, workspace } from "../dist/gm/views.mjs";
-import { createGMPDF, sheetSections } from "../dist/gm/pdf.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/gm/model.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
+import { templateEligibility, templateRowKey } from "../src/engine/gm/templates.mjs";
+import { templateOverview, workspace } from "./bestiary-presentation.mjs";
+import { createGMPDF, sheetSections } from "../src/engine/gm/pdf.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
-const data = await json("../dist/gm/data.json"),
-  library = await json("../dist/data/book-library.json");
+const data = await json("../public/gm/data.json"),
+  library = await json("../public/data/book-library.json");
 const rulesFor = createGMRules(library, data);
 const draft = (profile = "Skeleton", name = "") => {
   const s = freshGM(data, data.profiles.find((p) => p.name === profile).id, [

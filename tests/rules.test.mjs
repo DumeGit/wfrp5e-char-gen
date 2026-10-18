@@ -1,6 +1,6 @@
-import {tableResult} from '../dist/books.mjs';
+import {tableResult} from '../src/engine/books.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';
-import * as M from '../dist/rules.mjs';import {equipment} from '../dist/equipment.mjs';import {R,soldier,advancedSoldier} from './fixture.mjs';
+import * as M from '../src/engine/rules.mjs';import {equipment} from '../src/engine/equipment.mjs';import {R,soldier,advancedSoldier} from './fixture.mjs';
 test('new drafts have no Species grants and a Species issue routed to Origins', () => {
   const s = M.fresh(), d = M.derive(R, s);
   assert.equal(s.species, '');

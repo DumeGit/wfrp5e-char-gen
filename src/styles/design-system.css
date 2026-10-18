@@ -1,0 +1,1635 @@
+/* Black Banner component skin. Feature CSS continues to own behaviour/layout. */
+:root {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-world);
+  color-scheme: light;
+}
+body {
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      var(--color-leather-raised),
+      transparent 800px
+    ),
+    var(--color-world);
+}
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  transition:
+    background-color var(--motion-control) ease,
+    color var(--motion-control) ease,
+    border-color var(--motion-control) ease;
+}
+button:disabled {
+  opacity: 0.6;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+h1 {
+  font-size: var(--text-heading);
+  color: var(--color-crimson);
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+/* Explicit line box and optical correction centre the glyph, not its baseline. */
+.chapter-title {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.chapter-initial {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 1.12em;
+  height: 1.12em;
+  border: var(--line-ornament);
+  background: var(--color-crimson);
+  color: var(--color-chapter-initial);
+  font: 0.9em/1 var(--font-caps);
+  box-shadow: inset 0 0 0 2px var(--color-crimson-hover);
+}
+.chapter-initial > span {
+  display: block;
+  line-height: 1;
+  transform: translateY(-0.045em);
+}
+.chapter-title > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ledger-emblem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* The masthead must stay overflow-visible for search results. Art is clipped separately. */
+.masthead {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 24px;
+  padding: 14px var(--layout-gutter) 0;
+  min-height: 0;
+  color: var(--color-on-leather);
+  background: var(--color-leather-deep);
+  border-bottom: var(--line-ornament);
+}
+.masthead-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #1c150feb, #21170e77 58%, #180d0633),
+    url(/assets/black-banner/banner.png) 50% 35% / cover;
+}
+.brand {
+  min-width: 0;
+  gap: 14px;
+}
+.brand-mark {
+  width: 48px;
+  height: 50px;
+  flex: none;
+  border: 0;
+  background: transparent;
+}
+.brand-title {
+  min-width: 0;
+  padding: 6px 10px;
+  border-block: 1px solid var(--color-gold);
+  background: var(--color-title-veil);
+}
+.brand-world {
+  display: block;
+  font: 9px/1.5 var(--font-caps);
+  letter-spacing: 0.08em;
+}
+.brand strong {
+  display: block;
+  font: 700 clamp(26px, 2.5vw, 34px) / 1.12 var(--font-banner);
+  letter-spacing: 0.01em;
+  color: var(--color-gold-light);
+  margin: 4px 0;
+}
+.brand small {
+  font: 9px/1.5 var(--font-caps);
+  letter-spacing: 0.1em;
+  color: var(--color-on-leather-muted);
+  margin-top: 4px;
+}
+.masthead-actions {
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 260px;
+  gap: 10px;
+}
+.masthead-actions .edition {
+  flex-basis: 100%;
+  font: 10px/1.5 var(--font-caps);
+  color: var(--color-on-leather);
+}
+.banner-search-ribbon {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 720px) minmax(0, 1fr);
+  align-items: center;
+  gap: 22px;
+  padding: 8px 0;
+  border-top: 1px solid var(--color-line-dark);
+  background: var(--color-search-veil);
+}
+.banner-caption {
+  font: 10px/1.5 var(--font-caps);
+  color: var(--color-on-leather-muted);
+  letter-spacing: 0.05em;
+}
+.banner-caption:last-child {
+  text-align: right;
+}
+.banner-search {
+  width: 100%;
+  z-index: 30;
+}
+.banner-search-field {
+  min-height: 42px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-control);
+  background: var(--color-paper-raised);
+  box-shadow: inset 0 0 8px #82613a12;
+  color: var(--color-muted);
+}
+.banner-search-field:focus-within {
+  border-color: var(--color-gold-light);
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 2px;
+}
+.banner-search input {
+  color: var(--color-ink);
+  font-size: 14px;
+}
+.banner-search input::placeholder {
+  color: var(--color-muted);
+}
+.banner-search-icon {
+  color: var(--color-gold-dark);
+}
+#book-search-clear {
+  color: var(--color-muted);
+}
+@media (hover: hover) and (pointer: fine) {
+  #book-search-clear:hover {
+    background: var(--color-paper-hover);
+    color: var(--color-crimson);
+  }
+}
+
+.book-search-dropdown {
+  background: var(--color-paper-raised);
+  border-color: var(--color-gold);
+  border-radius: var(--radius-surface);
+  box-shadow: var(--shadow-dialog);
+}
+#book-search-status,
+#book-search-more {
+  color: var(--color-muted);
+  background: var(--color-paper-recessed);
+  border-color: var(--color-line);
+}
+#book-search-results [role="option"] {
+  border-color: var(--color-line-soft);
+}
+#book-search-results [aria-selected="true"] {
+  background: var(--color-paper-hover);
+  color: var(--color-ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  #book-search-results [role="option"]:hover,
+  #book-search-more:hover {
+    background: var(--color-paper-hover);
+    color: var(--color-ink);
+  }
+}
+
+.search-kind {
+  background: var(--color-paper-recessed);
+  color: var(--color-muted);
+  border-radius: var(--radius-control);
+}
+.book-search-result-source,
+.book-search-excerpt,
+.search-term-preview small {
+  color: var(--color-muted);
+}
+mark {
+  background: var(--color-warning-surface);
+}
+
+/* Joined leather bindings and parchment leaf, with independent sticky rails. */
+.workspace {
+  grid-template-columns: var(--layout-rail) minmax(0, 1fr) var(--layout-folio);
+  max-width: none;
+  gap: 0;
+  padding: 0 var(--layout-gutter);
+  margin: 24px auto;
+}
+.book-setup-workspace {
+  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
+}
+.rail,
+.sheet {
+  position: sticky;
+  top: 16px;
+  border: var(--line-ornament);
+  border-radius: 0;
+  background:
+    var(--surface-panel-texture) 0 0 / var(--surface-panel-texture-size) repeat,
+    radial-gradient(ellipse at 30% 0%, #ffffff09, transparent 75%)
+      var(--color-panel);
+  background-blend-mode: soft-light, normal;
+  color: var(--color-on-leather);
+  box-shadow: var(--shadow-panel);
+  scrollbar-color: var(--color-gold-dark) var(--color-leather-deep);
+}
+.rail {
+  padding: 14px 12px;
+}
+.sheet {
+  padding: 20px 16px;
+  max-height: calc(100dvh - 32px);
+}
+.panel {
+  position: relative;
+  padding: 28px 32px;
+  border: 1px solid var(--color-gold);
+  border-radius: 0;
+  background: var(--surface-working-leaf);
+  box-shadow: var(--shadow-working-leaf);
+}
+/* Controls and catalogues fill the leaf; longer prose keeps a readable measure. */
+.panel :where(p, li) {
+  max-inline-size: 75ch;
+}
+.panel::before,
+.panel::after {
+  content: "✦";
+  position: absolute;
+  top: 7px;
+  font-size: 12px;
+  color: var(--color-gold-dark);
+  pointer-events: none;
+}
+.panel::before {
+  left: 7px;
+}
+.panel::after {
+  right: 7px;
+}
+.stage-meta {
+  color: var(--color-muted);
+  border-color: var(--color-line);
+  font: 11px/1.5 var(--font-caps);
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+.rail-heading strong {
+  font: 23px/1.2 var(--font-heading);
+  color: var(--color-gold-light);
+}
+.rail .eyebrow,
+.sheet .eyebrow {
+  font: 10px/1.5 var(--font-caps);
+  letter-spacing: 0.05em;
+  color: var(--color-gold);
+}
+.rail-heading p,
+.save-status,
+.rail > .text-button,
+.rail > .source {
+  color: var(--color-on-leather-muted);
+}
+.creation-meter {
+  background: var(--color-leather-raised);
+}
+.steps button {
+  border-radius: 0;
+  color: var(--color-on-leather);
+  padding: 9px 8px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .steps button:hover {
+    background: var(--color-leather-raised);
+    color: var(--color-on-crimson);
+  }
+}
+
+.steps button.active {
+  background:
+    linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
+    var(--color-crimson-hover);
+  border-color: var(--color-gold-dark);
+  color: var(--color-on-crimson);
+}
+.step-number {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--color-gold);
+  width: 22px;
+  flex-basis: 22px;
+}
+.active .step-number {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-step-number-active);
+}
+.steps small {
+  color: var(--color-on-leather-muted);
+}
+.steps button.active small {
+  color: var(--color-step-caption-active);
+}
+.header-actions {
+  border-color: var(--color-line-dark);
+}
+.install-app-slot:has(button[hidden]) {
+  display: none;
+}
+.install-app-slot .install-app {
+  display: block;
+  width: 100%;
+  min-height: var(--control-height-compact);
+  padding: 6px 8px;
+  text-align: center;
+}
+@media (min-width: 761px) {
+  .rail-heading {
+    flex-shrink: 0;
+    padding: 0 4px 9px;
+  }
+  .rail .eyebrow {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .rail .rail-heading strong {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-top: 5px;
+  }
+  .rail-heading p {
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 6px 0;
+  }
+  .rail nav {
+    flex: 0 1 auto;
+  }
+  .rail .steps button {
+    min-height: 40px;
+    padding: 3px 6px;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .rail .steps small {
+    font-size: 10px;
+    line-height: 1.3;
+    margin-top: 1px;
+  }
+  .rail .header-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 9px;
+    padding: 9px 0 0;
+  }
+  .rail .header-actions .quiet,
+  .rail .install-app {
+    font-size: 12px;
+    line-height: 1.3;
+    min-height: var(--control-height-compact);
+    padding: 6px;
+    text-align: center;
+  }
+  .rail [data-action="new"],
+  .rail .install-app-slot {
+    grid-column: 1 / -1;
+  }
+  .rail .save-status {
+    flex-shrink: 0;
+    font-size: 11px;
+    line-height: 1.35;
+    margin: 7px 0 5px;
+  }
+  .rail > .text-button {
+    flex-shrink: 0;
+    font-size: 11px;
+    line-height: 1.3;
+    min-height: 26px;
+    padding: 3px 4px;
+    margin: 0;
+  }
+}
+.rail .quiet,
+.masthead .quiet,
+.install-app,
+.summary-toggle,
+.mobile-workspace-bar .quiet {
+  border-color: var(--color-line-dark);
+  background: var(--color-leather-deep);
+  color: var(--color-on-leather);
+  border-radius: var(--radius-control);
+}
+@media (hover: hover) and (pointer: fine) {
+  .rail .quiet:hover:not(:disabled),
+  .masthead .quiet:hover:not(:disabled),
+  .install-app:hover,
+  .summary-toggle:hover,
+  .mobile-workspace-bar .quiet:hover:not(:disabled) {
+    background: var(--color-leather-raised);
+    color: var(--color-on-crimson);
+    border-color: var(--color-gold);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rail > .text-button:hover,
+  .sheet .source-button:hover {
+    color: var(--color-gold-light);
+  }
+}
+
+.sheet-heading {
+  text-align: center;
+}
+.folio-crest {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 66px;
+  margin: 12px auto;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.folio-crest img {
+  width: 100%;
+  height: 100%;
+}
+.sheet h2 {
+  font: 700 23px/1.3 var(--font-caps);
+  color: var(--color-on-leather);
+  margin: 10px 0 8px;
+}
+.sheet-heading > p {
+  color: var(--color-on-leather-muted);
+  font-size: 13px;
+}
+.profile-badge {
+  border-color: var(--color-line-dark);
+  border-radius: 0;
+  color: var(--color-gold);
+  font-size: 11px;
+}
+.sheet .stat-calculation,
+.sheet .stat-grid > .career-current,
+.sheet .stat-grid > .career-future {
+  background: #d2b4790c;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-line-dark);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sheet .stat-calculation:hover {
+    background: var(--color-leather-raised);
+  }
+}
+
+.stat-grid small,
+.derived span,
+.folio-xp > span,
+.folio-xp p,
+.folio-coin > span,
+.folio-line,
+.mobile-totals {
+  color: var(--color-on-leather-muted);
+}
+.stat-grid strong,
+.derived strong {
+  font-family: var(--font-heading);
+  color: var(--color-on-leather);
+}
+.derived,
+.folio-line,
+.folio-status,
+.sheet .folio-section,
+.folio-list li,
+.mobile-totals {
+  border-color: var(--color-line-dark);
+}
+.folio-xp > strong,
+.folio-coin > strong,
+.folio-value,
+.mobile-totals strong {
+  color: var(--color-gold-light);
+  font-family: var(--font-heading);
+}
+.folio-line strong,
+.sheet .folio-section > summary,
+.folio-list li {
+  color: var(--color-on-leather);
+}
+.folio-toggle,
+.folio-count {
+  color: var(--color-gold);
+}
+.folio-count {
+  background: transparent;
+}
+.sheet .folio-empty,
+.sheet .source-button {
+  color: var(--color-on-leather-muted);
+}
+.folio-status > span {
+  color: var(--color-gold-light);
+}
+.folio-status.complete > span {
+  color: var(--color-success-on-dark);
+}
+.folio-status button {
+  background: var(--color-crimson);
+  color: var(--color-on-crimson);
+  border-color: var(--color-gold-dark);
+}
+@media (hover: hover) and (pointer: fine) {
+  .folio-status button:hover:not(:disabled) {
+    background: var(--color-crimson-hover);
+    color: var(--color-on-crimson);
+    border-color: var(--color-gold);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .derived-calculation:hover,
+  .capacity-calculation:hover {
+    background: var(--color-leather-raised);
+  }
+}
+
+/* Shared controls and information surfaces. New features reuse these classes. */
+input,
+select,
+textarea {
+  border-color: var(--color-line);
+  border-radius: var(--radius-control);
+  background: var(--color-paper-raised);
+  color: var(--color-ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  input:hover,
+  select:hover,
+  textarea:hover {
+    border-color: var(--color-gold-dark);
+  }
+}
+
+.primary,
+.secondary,
+.quiet,
+.summary-toggle,
+.install-app {
+  border-radius: var(--radius-control);
+}
+.primary {
+  /* An opaque base prevents the page flashing through when hover removes the gradient. */
+  background:
+    linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
+    var(--color-crimson-hover);
+  border-color: var(--color-crimson);
+  color: var(--color-on-crimson);
+  box-shadow: 0 2px 3px #50231822;
+}
+@media (hover: hover) and (pointer: fine) {
+  .primary:hover:not(:disabled) {
+    background: var(--color-crimson-hover);
+    color: var(--color-on-crimson);
+  }
+}
+
+.secondary {
+  background: var(--color-leather);
+  border-color: var(--color-line-dark);
+  color: var(--color-on-leather);
+}
+@media (hover: hover) and (pointer: fine) {
+  .secondary:hover:not(:disabled) {
+    background: var(--color-leather-raised);
+    color: var(--color-on-crimson);
+  }
+}
+
+.quiet {
+  background: var(--color-paper-raised);
+  border-color: var(--color-line);
+  color: var(--color-ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  .quiet:hover:not(:disabled) {
+    background: var(--color-paper-hover);
+    color: var(--color-ink);
+    border-color: var(--color-gold-dark);
+  }
+}
+
+.source-button,
+.text-button {
+  color: var(--color-muted);
+}
+@media (hover: hover) and (pointer: fine) {
+  .source-button:hover,
+  .text-button:hover {
+    color: var(--color-crimson);
+  }
+}
+
+.page-tabs {
+  border-color: var(--color-gold-dark);
+  gap: 4px;
+}
+.page-tabs button {
+  border: 1px solid var(--color-line);
+  border-bottom: 0;
+  background: var(--color-paper-recessed);
+  color: var(--color-muted);
+  padding-block: 12px;
+}
+.page-tabs button[aria-selected="true"] {
+  border-color: var(--color-gold-dark);
+  background: var(--color-leather);
+  color: var(--color-on-leather);
+  box-shadow: inset 0 2px var(--color-gold);
+}
+@media (hover: hover) and (pointer: fine) {
+  .page-tabs button:hover {
+    background: var(--color-paper-hover);
+    color: var(--color-ink);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-tabs button[aria-selected="true"]:hover {
+    background: var(--color-leather-raised);
+    color: var(--color-on-leather);
+  }
+}
+
+.inline-choice .active {
+  background: var(--color-leather);
+  color: var(--color-on-leather);
+  border-color: var(--color-line-dark);
+}
+.advance-result {
+  color: var(--color-ink);
+}
+.advance-result small {
+  color: var(--color-success);
+  background: var(--color-success-surface);
+}
+.advance-calculation-help {
+  background: var(--color-paper-recessed);
+  color: var(--color-muted);
+  border-color: var(--color-line);
+}
+@media (hover: hover) and (pointer: fine) {
+  .advance-calculation-help:hover {
+    background: var(--color-paper-hover);
+    color: var(--color-ink);
+    border-color: var(--color-gold-dark);
+  }
+}
+
+.xp-balance,
+.market-balance,
+.allocation-budgets {
+  background: var(--color-paper-recessed);
+  border-color: var(--color-line);
+  border-radius: var(--radius-surface);
+}
+.xp-balance > div + div,
+.market-balance > div + div {
+  border-color: var(--color-line);
+}
+.xp-balance strong,
+.market-balance strong,
+.load-totals strong {
+  font-family: var(--font-heading);
+}
+.xp-balance .remaining {
+  background: var(--color-success-surface);
+}
+.xp-balance .remaining strong {
+  color: var(--color-success);
+}
+.xp-sticky-balance,
+.advance-choice {
+  background: var(--color-paper);
+}
+.skill-catalog-group .xp-row {
+  background: var(--color-paper-recessed);
+}
+.purchase-error,
+.packing-warning {
+  color: var(--color-error) !important;
+}
+.sheet .packing-warning {
+  color: var(--color-gold-light) !important;
+}
+.check-row,
+.book-card,
+.career-result,
+.kit-item,
+.book-panel,
+.spell-meta,
+.equipment-modifiers > span,
+.empty,
+.rule-card,
+.load-summary,
+.identity-preview,
+.career-preview {
+  background: var(--color-paper-raised);
+  border-color: var(--color-line-soft);
+  border-radius: var(--radius-surface);
+}
+.book-card:has(input:checked),
+.check-row:has(input:checked),
+.species-skill-option:has(input:checked) {
+  background: var(--color-success-surface);
+  border-color: var(--color-success-line);
+}
+@media (hover: hover) and (pointer: fine) {
+  .career-result:hover {
+    background: var(--color-paper-hover);
+    border-color: var(--color-gold-dark);
+  }
+}
+
+.career-result.previewed {
+  border-color: var(--color-crimson);
+}
+.career-result span,
+.allocation-overlap,
+.species-career-marker {
+  color: var(--color-success);
+}
+.species-career-marker {
+  border-color: var(--color-success-line);
+}
+.notice {
+  background: var(--color-warning-surface);
+  border-color: var(--color-line);
+  border-left-color: var(--color-gold-dark);
+  border-radius: 0;
+}
+.notice.error,
+.issue-panel {
+  background: var(--color-error-surface);
+  border-color: var(--color-error-line);
+  color: var(--color-error);
+}
+.issue-panel li + li {
+  border-color: var(--color-error-line);
+}
+.notice.success,
+.choice-undo,
+.career-progress {
+  background: var(--color-success-surface);
+  border-color: var(--color-success-line);
+}
+.review-warnings {
+  background: var(--color-warning-surface);
+  border-color: var(--color-gold-dark);
+}
+.calculation-status {
+  color: var(--color-success);
+  border-color: var(--color-success-line);
+}
+.counter {
+  color: var(--color-crimson);
+  background: var(--color-error-surface);
+}
+.chip {
+  background: var(--color-paper-recessed);
+  color: var(--color-ink);
+  border-radius: var(--radius-control);
+}
+.stepper button {
+  background: var(--color-paper-raised);
+  border-color: var(--color-line);
+  border-radius: var(--radius-control);
+}
+@media (hover: hover) and (pointer: fine) {
+  .stepper button:hover {
+    background: var(--color-paper-hover);
+  }
+}
+
+th {
+  background: var(--color-paper-recessed);
+}
+/* Creation scores share one compact row; Career badges never add row height. */
+.characteristics-table {
+  font-size: 13px;
+  line-height: 1.35;
+}
+.characteristics-table th,
+.characteristics-table td {
+  padding: 6px 8px;
+  vertical-align: middle;
+}
+.characteristics-table th {
+  font-size: 11px;
+  white-space: nowrap;
+}
+.characteristic-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.characteristics-table .characteristic-label {
+  min-width: 88px;
+  flex: none;
+}
+.characteristics-table .characteristic-name {
+  margin: 0;
+  font-size: 12px;
+}
+.characteristics-table select {
+  min-height: 32px;
+  width: 80px;
+  max-width: 100%;
+  padding: 4px 6px;
+  font-size: 13px;
+}
+.career-starting-increases {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-raised);
+}
+.starting-increases-heading,
+.starting-increases-controls,
+.starting-increase {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.starting-increases-heading h3 {
+  font-size: 16px;
+  margin: 0;
+}
+.starting-increases-controls {
+  gap: 12px;
+}
+.starting-increase {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 650;
+}
+.starting-increase input {
+  width: 52px;
+  min-height: var(--control-height-compact);
+  padding: 5px;
+  text-align: center;
+}
+.market-item,
+.market-purchase,
+.search-career-level,
+.search-equipment-profile,
+.search-rule-actions {
+  border-color: var(--color-line-soft);
+}
+.market {
+  border-color: var(--color-line);
+}
+.tracker-boxes span {
+  border-radius: 0;
+  border-color: var(--color-line);
+  background: var(--color-paper-raised);
+}
+.tracker-boxes .filled {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+.level-pill {
+  border-color: var(--color-success-line);
+  border-radius: var(--radius-control);
+}
+summary::marker {
+  color: var(--color-gold-dark);
+}
+.legacy-tag {
+  background: var(--color-legacy-surface);
+  border-color: var(--color-legacy-line);
+  color: var(--color-legacy);
+  border-radius: var(--radius-control);
+}
+@media (hover: hover) and (pointer: fine) {
+  button.legacy-tag:hover {
+    background: var(--color-legacy-line);
+    color: var(--color-ink);
+  }
+}
+
+.sheet .legacy-tag {
+  background: var(--color-legacy);
+  color: var(--color-legacy-surface);
+  border-color: var(--color-legacy-line);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sheet .legacy-tag:hover {
+    background: var(--color-legacy-line);
+    color: var(--color-leather-deep);
+  }
+}
+
+.career-level-1 {
+  --career-color: var(--color-crimson);
+  --career-tint: var(--color-career-start-tint);
+}
+.career-level-2 {
+  --career-color: var(--color-success);
+  --career-tint: var(--color-success-surface);
+}
+.career-level-3 {
+  --career-color: var(--color-career-later);
+  --career-tint: var(--color-career-later-tint);
+}
+.career-level-4 {
+  --career-color: var(--color-warning);
+  --career-tint: var(--color-warning-surface);
+}
+.sheet .career-level-1 {
+  --career-color: var(--color-career-1-on-dark);
+}
+.sheet .career-level-2 {
+  --career-color: var(--color-career-2-on-dark);
+}
+.sheet .career-level-3 {
+  --career-color: var(--color-career-3-on-dark);
+}
+.sheet .career-level-4 {
+  --career-color: var(--color-gold-light);
+}
+
+/* Dialogs, nested references, installation and notices use the same paper. */
+.creator-dialog,
+.book-search-dialog,
+.pwa-dialog,
+.pwa-update,
+.search-term-preview {
+  background: var(--color-paper-raised);
+  color: var(--color-ink);
+  border: var(--line-ornament);
+  border-radius: var(--radius-surface);
+  box-shadow: var(--shadow-dialog);
+}
+dialog::backdrop {
+  background: var(--color-dialog-backdrop);
+  backdrop-filter: blur(2px);
+}
+:root[data-theme] .creator-dialog::backdrop {
+  background: var(--color-dialog-backdrop);
+}
+:root[data-theme] input::placeholder,
+:root[data-theme] textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+.dialog-heading {
+  background: var(--color-paper-raised);
+  border-color: var(--color-line);
+}
+.dialog-heading h2 {
+  font-family: var(--font-heading);
+  color: var(--color-crimson);
+}
+.search-term-link {
+  color: var(--color-crimson);
+  border-bottom-color: var(--color-gold-dark);
+}
+.search-term-link:focus-visible {
+  background: var(--color-warning-surface);
+  color: var(--color-crimson-hover);
+}
+@media (hover: hover) and (pointer: fine) {
+  .search-term-link:hover {
+    background: var(--color-warning-surface);
+    color: var(--color-crimson-hover);
+  }
+}
+
+.search-career-level h3 small,
+.search-profile-fields dt,
+.search-rule-status {
+  color: var(--color-muted);
+}
+.search-term-preview {
+  border-width: 1px;
+}
+#toast {
+  background: var(--color-leather);
+  color: var(--color-on-leather);
+  border-radius: var(--radius-surface);
+}
+#toast:not(:empty) {
+  border-color: var(--color-gold);
+}
+.footer-note,
+.pwa-status {
+  color: var(--color-on-leather-muted);
+}
+.choice-highlight {
+  background: var(--color-warning-surface) !important;
+  outline-color: var(--color-gold-dark) !important;
+}
+
+/* Ambient decoration: no glints, sound, animated controls or moving rule text. */
+.banner-atmosphere {
+  position: absolute;
+  inset: 0 0 60px;
+  pointer-events: none;
+  overflow: hidden;
+}
+.banner-atmosphere i {
+  position: absolute;
+  left: calc(52% + var(--particle) * 7%);
+  bottom: -4px;
+  width: 2px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-gold-light);
+  opacity: 0;
+  animation: ledger-ash var(--motion-ash) linear infinite;
+  animation-delay: calc(var(--particle) * -2.8s);
+}
+.masthead-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 76% 82%, #e4cda146, transparent 38%);
+  opacity: 0.3;
+  animation: ledger-mist var(--motion-mist) ease-in-out infinite alternate;
+}
+@keyframes ledger-ash {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-50px, -210px);
+    opacity: 0;
+  }
+}
+@keyframes ledger-mist {
+  from {
+    transform: translateX(-12px);
+    opacity: 0.15;
+  }
+  to {
+    transform: translateX(12px);
+    opacity: 0.5;
+  }
+}
+@media (min-width: 1500px) {
+  :root {
+    --layout-folio: clamp(350px, 14vw, 420px);
+  }
+}
+@media (max-width: 1200px) and (min-width: 761px) {
+  .workspace,
+  .book-setup-workspace {
+    grid-template-columns: 185px minmax(0, 1fr);
+  }
+  .sheet {
+    position: static;
+    max-height: none;
+  }
+  .sheet-heading {
+    text-align: left;
+  }
+  .folio-crest {
+    display: none;
+  }
+}
+/* Preserve the search field when decorative captions no longer fit beside it. */
+@media (max-width: 1000px) and (min-width: 761px) {
+  .banner-search-ribbon {
+    grid-template-columns: minmax(0, 720px);
+    justify-content: center;
+    gap: 0;
+  }
+  .banner-caption {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .masthead {
+    min-height: 0;
+    gap: 6px 10px;
+    padding: 10px 4% 0;
+  }
+  .brand {
+    gap: 10px;
+    grid-column: 1 / -1;
+  }
+  .brand-mark {
+    width: 36px;
+    height: 42px;
+  }
+  .brand-title {
+    padding: 7px 0;
+    background: transparent;
+    border: 0;
+  }
+  .brand-world {
+    font: 8px/1.5 var(--font-caps);
+    letter-spacing: 0;
+  }
+  .masthead .brand strong {
+    font: 700 clamp(22px, 5.4vw, 32px) / 1.1 var(--font-banner);
+    letter-spacing: 0;
+  }
+  .brand small,
+  .masthead .brand small {
+    font-size: 8px;
+    letter-spacing: 0;
+    max-width: none;
+  }
+  .masthead-actions {
+    display: none;
+  }
+  .masthead-actions .edition {
+    display: none;
+  }
+  .masthead-actions .quiet,
+  .install-app {
+    font-size: 10px;
+    min-height: 34px;
+    padding: 6px 7px;
+  }
+  .banner-search-ribbon {
+    display: block;
+    padding-block: 8px;
+  }
+  .banner-caption {
+    display: none;
+  }
+  .banner-search input {
+    font-size: 16px;
+  }
+  .banner-search input::placeholder {
+    font-size: 12px;
+  }
+  .banner-search-field {
+    min-height: 44px;
+  }
+  .banner-atmosphere {
+    bottom: 56px;
+  }
+  .workspace {
+    padding: 0 3%;
+    margin: 14px auto;
+    gap: 12px;
+  }
+  .rail {
+    position: static;
+    padding: 12px;
+    border: 1px solid var(--color-line-dark);
+    color: var(--color-on-leather);
+  }
+  .rail .mobile-step label,
+  .rail .save-status {
+    color: var(--color-on-leather-muted);
+  }
+  .rail .header-actions {
+    flex-wrap: wrap;
+  }
+  .rail .install-app-slot {
+    flex: 0 0 100%;
+  }
+  .characteristics-table th,
+  .characteristics-table td {
+    padding: 5px 4px;
+  }
+  .characteristics-table th {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .characteristic-identity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .characteristics-table .characteristic-name {
+    font-size: 10px;
+  }
+  .characteristics-table select {
+    width: 72px;
+    font-size: 16px;
+  }
+  .career-starting-increases {
+    padding: 9px;
+  }
+  .starting-increases-heading {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .starting-increases-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .starting-increase {
+    gap: 5px;
+  }
+  .rail-seal,
+  .rail-oath {
+    display: none;
+  }
+  .sheet {
+    position: static;
+    max-height: none;
+    border-width: 1px;
+    padding: 14px;
+  }
+  .sheet-heading {
+    text-align: left;
+  }
+  .folio-crest {
+    display: none;
+  }
+  .sheet h2 {
+    font: 24px/1.2 var(--font-heading);
+    padding-right: 112px;
+    margin-top: 0;
+  }
+  .sheet-heading > p {
+    font-size: 12px;
+  }
+  .sheet .stat-grid {
+    display: grid;
+  }
+  .panel {
+    padding: 23px 18px;
+  }
+  .stage-meta {
+    font: 11px/1.5 var(--font-body);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .chapter-title {
+    font-size: 30px;
+  }
+  .page-tabs {
+    gap: 2px;
+  }
+  .page-tabs button {
+    padding: 10px 4px;
+  }
+  .creator-dialog,
+  .pwa-dialog {
+    padding: 18px;
+  }
+  .creator-dialog .dialog-heading {
+    top: -18px;
+  }
+  .book-search-dialog {
+    border: 0;
+    border-radius: 0;
+    padding: 20px;
+  }
+  .book-search-dialog .dialog-heading {
+    top: -20px;
+  }
+  .mobile-workspace-bar {
+    background: var(--color-leather-deep);
+    color: var(--color-on-leather);
+    border-top: 1px solid var(--color-gold-dark);
+  }
+}
+@media (max-width: 390px) {
+  .panel {
+    padding-inline: 15px;
+  }
+  .brand-world {
+    font-size: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .banner-atmosphere,
+  .masthead-art::after {
+    display: none;
+  }
+}
+@media print {
+  :root,
+  body {
+    color: black;
+    background: white;
+  }
+  .workspace {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .masthead,
+  .rail,
+  .folio-crest,
+  .rail-seal,
+  .rail-oath,
+  .panel::before,
+  .panel::after,
+  .sheet::before {
+    display: none !important;
+  }
+  .panel,
+  .sheet {
+    position: static;
+    border: 0;
+    border-radius: 0;
+    color: black;
+    background: white;
+    box-shadow: none;
+    max-height: none;
+    overflow: visible;
+  }
+  .chapter-initial {
+    background: white;
+    color: black;
+    border-color: #666;
+    box-shadow: none;
+  }
+  .sheet h2,
+  .sheet-heading > p,
+  .stat-grid small,
+  .stat-grid strong,
+  .derived span,
+  .derived strong,
+  .folio-line,
+  .folio-line strong,
+  .folio-xp > strong,
+  .folio-coin > strong,
+  .folio-list li,
+  .folio-value {
+    color: black;
+  }
+  .sheet .stat-calculation {
+    background: white;
+    border-color: #999;
+  }
+}
+
+/* Compact overview leaves room for the purchase list without hiding any rules. */
+.xp-balance > div {
+  padding: 12px 14px;
+}
+.xp-balance strong {
+  font-size: 26px;
+  margin-top: 5px;
+}
+.budget-edit {
+  padding-bottom: 8px;
+}
+.xp-browser-controls {
+  margin: 12px 0;
+  gap: 6px 18px;
+}
+.xp-browser-controls .check-row {
+  background: transparent;
+  border: 0;
+}
+.xp-browser-controls .muted {
+  font-size: 11px;
+}
+.page-tabs {
+  margin-top: 20px;
+}
+.advance-choice {
+  top: 100px;
+}
+@media (max-width: 760px) {
+  .advance-choice {
+    top: 0;
+  }
+  .xp-balance > div {
+    padding: 12px 9px;
+  }
+  .xp-balance strong {
+    font-size: 24px;
+  }
+}
+
+/* Shared creator navigation, available on desktop and phone. */
+.creator-switch {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border: 1px solid var(--color-line-dark);
+  background: var(--color-leather-deep);
+}
+.creator-switch a {
+  padding: 9px 8px;
+  text-align: center;
+  color: var(--color-on-leather-muted);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+.creator-switch a[aria-current] {
+  background: var(--color-leather-raised);
+  color: var(--color-gold-light);
+  border-color: var(--color-line-dark);
+}
+@media (hover: hover) and (pointer: fine) {
+  .creator-switch a:hover {
+    color: var(--color-on-leather);
+    background: var(--color-leather-raised);
+  }
+}
+
+.creator-switch a:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 2px;
+}
+@media (max-width: 800px) {
+  .creator-switch {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+  }
+}
+
+/* One compact history control, mounted by the shared shell in every mode. */
+.history-controls {
+  display: flex;
+  gap: 4px;
+  margin: 8px 0;
+  flex: none;
+}
+.history-controls .history-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  color: var(--color-on-leather);
+  background: var(--color-leather-deep);
+  border: 1px solid var(--color-line-dark);
+}
+.history-controls .history-button:focus-visible {
+  color: var(--color-on-leather);
+  background: var(--color-leather-raised);
+}
+@media (hover: hover) and (pointer: fine) {
+  .history-controls .history-button:hover:not(:disabled) {
+    color: var(--color-on-leather);
+    background: var(--color-leather-raised);
+  }
+}
+
+.history-controls svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.history-redo-icon {
+  transform: scaleX(-1);
+}
+
+/* Marijan's fixed theme inherits all controls and semantic feedback roles. */
+:root[data-theme="ash-vellum"] .masthead .brand-title {
+  background: var(--color-title-veil);
+  border-block: 1px solid var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .masthead .brand-title strong {
+  color: var(--color-on-crimson);
+}
+@media (max-width: 760px) {
+  :root[data-theme="ash-vellum"] .masthead .brand-title {
+    padding: 3px 6px;
+  }
+}
+:root[data-theme="ash-vellum"] .ledger-emblem {
+  filter: grayscale(1);
+}
+:root[data-theme="ash-vellum"] .masthead-art::after {
+  background: linear-gradient(0deg, #08080988, transparent 65%);
+}
+
+/* Oxblood landmarks keep the neutral Marijan editor from feeling flat. */
+:root[data-theme="ash-vellum"] .mm-section h2,
+:root[data-theme="ash-vellum"] .mm-char-cell output {
+  color: var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .mm-section summary::marker {
+  color: var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .mm-section {
+  border-top-color: color-mix(
+    in srgb,
+    var(--color-crimson) 28%,
+    var(--color-line)
+  );
+}
+:root[data-theme="ash-vellum"] .mm-generation {
+  border-left: 3px solid var(--color-crimson);
+  background: color-mix(
+    in srgb,
+    var(--color-crimson) 6%,
+    var(--color-paper-raised)
+  );
+}
+:root[data-theme="ash-vellum"] .mm-folio {
+  box-shadow:
+    inset 0 2px var(--color-crimson),
+    var(--shadow-surface);
+}
+:root[data-theme="ash-vellum"] .mm-folio-stats > div {
+  border-top-color: var(--color-crimson);
+}
+:root[data-theme="ash-vellum"] .creator-switch a[aria-current="page"] {
+  background: var(--color-crimson);
+  border-color: var(--color-crimson);
+  color: var(--color-on-crimson);
+}
+:root[data-theme="ash-vellum"] .mm-section-nav a:focus-visible {
+  border-color: var(--color-crimson);
+  background: color-mix(
+    in srgb,
+    var(--color-crimson) 20%,
+    var(--color-leather)
+  );
+  color: var(--color-on-leather);
+}
+@media (hover: hover) and (pointer: fine) {
+  :root[data-theme="ash-vellum"] .mm-section-nav a:hover {
+    border-color: var(--color-crimson);
+    background: color-mix(
+      in srgb,
+      var(--color-crimson) 20%,
+      var(--color-leather)
+    );
+    color: var(--color-on-leather);
+  }
+}

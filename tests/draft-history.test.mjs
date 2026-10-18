@@ -4,7 +4,7 @@ import {
   createDraftHistory,
   restoreDraftSnapshot,
   mergeRollHistory,
-} from "../dist/draft-history.mjs";
+} from "../src/engine/draft-history.mjs";
 const snapshot = (draft = {}, document = "one") => ({
   draft: { step: 0, name: "", rolls: [], ...draft },
   document,

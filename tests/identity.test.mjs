@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {bookName,nameParts,setNamePart,setAgeHeight,suggestion,appearanceSummary} from '../dist/background.mjs';
+import {bookName,nameParts,setNamePart,setAgeHeight,suggestion,appearanceSummary} from '../src/engine/background.mjs';
 import {R,soldier} from './fixture.mjs';
 
 test('old full names display as editable parts without changing the saved character',()=>{

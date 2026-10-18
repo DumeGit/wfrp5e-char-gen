@@ -1,0 +1,43 @@
+/* React retains ownership of controls when the compact shell changes. */
+#compact-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+[data-mode="player"] .masthead-art {
+  background-image:
+    linear-gradient(90deg, #21130ee6, #21130e55 58%, #21130e22),
+    url(/assets/black-banner/banner.png);
+}
+.react-dialog::backdrop {
+  background: #0009;
+}
+.react-dialog {
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+}
+.player-history:not(.compact) {
+  position: fixed;
+  bottom: 20px;
+  left: var(--layout-gutter);
+  z-index: 20;
+}
+@media (max-width: 1000px) {
+  [data-mode="player"] .rail .header-actions,
+  [data-mode="player"] .rail > .text-button,
+  [data-mode="player"] .rail > .save-status {
+    display: none;
+  }
+  .player-history.compact {
+    position: fixed;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    left: var(--layout-gutter);
+    z-index: 45;
+  }
+  [data-mode="player"] .mobile-workspace-bar > span {
+    display: none;
+  }
+  [data-mode="player"] .mobile-workspace-bar {
+    justify-content: flex-end;
+  }
+}

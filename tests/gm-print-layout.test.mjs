@@ -2,25 +2,25 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import * as PDFLib from "pdf-lib";
-import { assembleBooks } from "../dist/books.mjs";
-import { freshGM, calculateGM } from "../dist/gm/model.mjs";
-import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
+import { freshGM, calculateGM } from "../src/engine/gm/model.mjs";
+import { prepareGMPrint, cardSections } from "../src/engine/gm/print.mjs";
 import {
   CARD_PAGE,
   printGeometry,
   packTableCards,
-} from "../dist/gm/card-packing.mjs";
-import { planRecordCard } from "../dist/gm/card-layout.mjs";
+} from "../src/engine/gm/card-packing.mjs";
+import { planRecordCard } from "../src/engine/gm/card-layout.mjs";
 
 const R = assembleBooks(
     JSON.parse(
       await readFile(
-        new URL("../dist/data/book-library.json", import.meta.url),
+        new URL("../public/data/book-library.json", import.meta.url),
       ),
     ),
   ),
   data = JSON.parse(
-    await readFile(new URL("../dist/gm/data.json", import.meta.url)),
+    await readFile(new URL("../public/gm/data.json", import.meta.url)),
   );
 function entry(name = "Human", description = "") {
   const p = data.profiles.find((p) => p.name === name),

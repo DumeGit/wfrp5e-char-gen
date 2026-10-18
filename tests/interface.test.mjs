@@ -1,9 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { referenceSnippetText } from "../dist/search-presentation.mjs";
-import { field, select, tab, score } from "../dist/controls.mjs";
-import { displayNumber } from "../dist/display-number.mjs";
-import { formatMoney, priceInPennies } from "../dist/market.mjs";
+import { referenceSnippetText } from "../src/engine/search-presentation.mjs";
+import { field, select, tab, score } from "./presentation-controls.mjs";
+import { displayNumber } from "../src/engine/display-number.mjs";
+import { formatMoney, priceInPennies } from "../src/engine/market.mjs";
 
 test("display numbers group totals without changing input values or money parsing", () => {
   assert.equal(displayNumber(2000000), "2,000,000");
@@ -36,7 +36,7 @@ test("reader excerpts remove layout syntax while preserving printed mechanics", 
 test("shared controls carry escaped identities and native input intent", () => {
   assert.match(
     field("Wounds", "wounds", 3, 'min="0"', "number"),
-    /inputmode="decimal"/,
+    /inputmode="decimal"/i,
   );
   assert.match(field("Name", "name", "<test>"), /value="&lt;test&gt;"/);
   const custom = select(
@@ -56,5 +56,5 @@ test("shared controls carry escaped identities and native input intent", () => {
     short: "Stats",
   });
   assert.match(stats, /aria-label="Characteristics"/);
-  assert.match(stats, /aria-selected="true" tabindex="0"/);
+  assert.match(stats, /aria-selected="true" tabindex="0"/i);
 });

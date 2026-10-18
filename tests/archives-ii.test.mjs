@@ -1,20 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import * as M from '../dist/rules.mjs';
+import * as M from '../src/engine/rules.mjs';
 import {library,R,soldier} from './fixture.mjs';
-import {assembleBooks,randomTable,tableResult} from '../dist/books.mjs';
-import {careerAvailable,creationBackground} from '../dist/origins.mjs';
-import {equipment,gearOptions} from '../dist/equipment.mjs';
-import {marketCatalog,buyTrapping,purse} from '../dist/market.mjs';
-import {chartXP,chartGrants,starEffect,rollStar,rollWitchling,chartRecord} from '../dist/astrology.mjs';
-import {folioData} from '../dist/folio.mjs';
-import {bookPanel,tablePicker} from '../dist/book-ui.mjs';
+import {assembleBooks,randomTable,tableResult} from '../src/engine/books.mjs';
+import {careerAvailable,creationBackground} from '../src/engine/origins.mjs';
+import {equipment,gearOptions} from '../src/engine/equipment.mjs';
+import {marketCatalog,buyTrapping,purse} from '../src/engine/market.mjs';
+import {chartXP,chartGrants,starEffect,rollStar,rollWitchling,chartRecord} from '../src/engine/astrology.mjs';
+import {folioData} from '../src/engine/folio.mjs';
+import {bookPanel,tablePicker} from "./presentation-book-ui.mjs";
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
-import {exportSheet} from '../dist/export.mjs';
-import {bookSelection,catalogForCharacter} from '../dist/books.mjs';
-import {speciesMagicReferences} from '../dist/species-mechanics.mjs';
-import {speciesRulePanel} from '../dist/archives-ui.mjs';
+import {exportSheet} from '../src/engine/export.mjs';
+import {bookSelection,catalogForCharacter} from '../src/engine/books.mjs';
+import {speciesMagicReferences} from '../src/engine/species-mechanics.mjs';
+import {speciesRulePanel} from "./presentation-archives-ui.mjs";
 const B=assembleBooks(library,['archives-ii']);
 export function ogre(career='archives-ii:career:maneater'){
  const s=M.fresh();s.points=Array(10).fill(10);s.xp=1000;Object.assign(s,{name:'Arabba Goldtooth',species:'Ogre',career,freeTalent:career.endsWith('maneater')?'Sturdy':career.endsWith('rhinox-herder')?'Marksman':'Petty Magic',speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'}});
@@ -61,7 +61,7 @@ test('Archives II Species table defaults only when enabled and preserves explici
   const catalog=assembleBooks(library,ids),s=M.fresh(),table=randomTable(catalog,s,'species');
   assert.equal(table.id,'archives-ii:table:species');
   for(let face=1;face<=100;face++)assert.equal(tableResult(table,face),expected(face),`Species ${face}`);
-  assert.match(tablePicker(catalog,s,'species'),/<option value="archives-ii:table:species" selected>/);
+  assert.match(tablePicker(catalog,s,'species'),/<option value="archives-ii:table:species"[^>]*selected="">/);
   const core=randomTable(R,s,'species');s.rollTables={species:core.id};assert.equal(randomTable(catalog,s,'species').id,core.id);
   assert.equal(randomTable(catalogForCharacter(library,{...s,version:2,books:bookSelection(catalog)}),s,'species').id,core.id);
  }
@@ -146,7 +146,7 @@ export function advancedButcher(){
 test('Archives II PDF keeps editable fields and agrees on Large Wounds, casting, armour and rewarded XP',async()=>{
  globalThis.PDFLib=PDFLib;const s=advancedButcher(),d=M.derive(B,s);assert.deepEqual(M.validation(B,s),[]);
  assert.ok(equipment(B,s).entries.every(x=>x.quantity!==null));
- const bytes=await exportSheet(B,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))));
+ const bytes=await exportSheet(B,s,fs.readFileSync(new URL('../public/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../public/data/sheet-fields.json',import.meta.url))));
  const doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);
  for(const [key,value]of Object.entries({Species:'[Legacy] Ogre',Wounds_Total:d.wounds,Enc_Max:d.capacity,Fate:1,Fortune_Max:2,XP_Total:1225,XP_Spent:d.spent,XP_Current:d.remaining,AP_Body:3,AP_Shield:1}))assert.equal(form.getTextField(key).getText(),String(value),key);
  assert.match(form.getTextField('Notes').getText(),/Large/);assert.ok(M.knownSpells(B,s).some(x=>x.category==='The Great Maw'));

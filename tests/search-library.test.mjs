@@ -2,15 +2,15 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library, R, soldier } from "./fixture.mjs";
-import { loadReferenceLibrary } from "../dist/search-library.mjs";
-import { searchBooks } from "../dist/book-search.mjs";
-import { referenceBodyHTML } from "../dist/reference-body.mjs";
-import { isSearchCategoryVisible } from "../dist/reference-entries.mjs";
-import { createReferenceLinker } from "../dist/book-search-links.mjs";
+import { loadReferenceLibrary } from "../src/engine/search-library.mjs";
+import { searchBooks } from "../src/engine/book-search.mjs";
+import { referenceBodyHTML } from "./reference-render.mjs";
+import { isSearchCategoryVisible } from "../src/engine/reference-entries.mjs";
+import { createReferenceLinker } from "../src/engine/book-search-links.mjs";
 
 const wire = JSON.parse(
   await readFile(
-    new URL("../dist/data/search-library.json", import.meta.url),
+    new URL("../public/data/search-library.json", import.meta.url),
     "utf8",
   ),
 );
@@ -125,23 +125,22 @@ test("global references retain selective Legacy metadata, mechanical summaries a
   );
 });
 
-test("both entry points are thin wrappers around the same reference search and scope", async () => {
-  const pc = await readFile(
-    new URL("../dist/features/book-search.mjs", import.meta.url),
+test("all creator routes use one shared React reference search and scope", async () => {
+  const frame = await readFile(
+    new URL("../src/components/CreatorFrame.tsx", import.meta.url),
     "utf8",
   );
-  const gm = await readFile(
-    new URL("../dist/gm/references.mjs", import.meta.url),
-    "utf8",
-  );
-  assert.match(pc, /createReferenceSearch\(getContext\(\)\.library\)/);
-  assert.match(gm, /createReferenceSearch\(library\)/);
-  for (const filename of ["index.html", "gm.html"]) {
+  assert.match(frame, /<ReferenceSearch\s*\/>/);
+  for (const filename of [
+    "index.html",
+    "bestiary/index.html",
+    "marijan/index.html",
+  ]) {
     const html = await readFile(
-      new URL(`../dist/${filename}`, import.meta.url),
+      new URL(`../out/${filename}`, import.meta.url),
       "utf8",
     );
-    assert.match(html, /aria-label="Search the books"/);
+    assert.match(html, /aria-label="Search rules and book references"/);
     assert.doesNotMatch(
       html,
       /Search selected books|Only the core book|Only selected/,

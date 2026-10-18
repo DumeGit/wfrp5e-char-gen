@@ -27,7 +27,7 @@ No named Flariel, Rakaria, Corvian or Cynwra profile, named warhound pack, ship 
 
 ## Maintenance
 
-Run `python scripts/build-corsairs.py`, then `npm run build`. Keep the source hash, frozen search-review hash, coverage and this document aligned. Focused regression tests: `node --test tests/corsairs.test.mjs`; browser coverage: `npx playwright test tests/browser/corsairs.spec.mjs` after the build. Full release testing remains governed by `TESTING.md`.
+Run `python scripts/build-corsairs.py`, then `npm run build`. Keep the source hash, frozen search-review hash, coverage and this document aligned. Focused regression tests: `node --import tsx --test tests/corsairs.test.mjs`; browser coverage: `npx playwright test tests/browser/corsairs.spec.mjs` after the build. Full release testing remains governed by `TESTING.md`.
 
 Verification covers opt-in counts, printed sparse columns, optional Talents/equipment, fixed-profile Skill choices, save/load, Warhound sizing/training, mixed spell counts/Lore/Wind gates, Whip/Net choices and shared additional-armour calculations. The full release check passed 466 Node tests and 151 browser checks (one expected skip) before final qualifier/selector refinements; affected tests cover those final changes. Browser checks exercise native selectors and the Broken-roll issue on desktop and mobile. The PDF layout and theme are unchanged.
 

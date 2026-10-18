@@ -1,6 +1,6 @@
 // Build-only audit. Creator inclusion status and search availability are separate.
 import { createHash } from "node:crypto";
-import { isSearchCategoryEnabled } from "../dist/reference-entries.mjs";
+import { isSearchCategoryEnabled } from "../src/engine/reference-entries.mjs";
 
 // Git can convert text files to CRLF on Windows. Review the UTF-8/LF content,
 // so a fresh checkout does not invalidate an unchanged source review.

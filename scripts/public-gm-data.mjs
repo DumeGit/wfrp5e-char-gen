@@ -1,4 +1,4 @@
-import { describeTraits } from "../dist/gm/trait-descriptions.mjs";
+import { describeTraits } from "../src/engine/gm/trait-descriptions.mjs";
 
 // Compile source conflicts before discarding unused full-text stat blocks.
 // Actual attacks, Skills, Traits, armour and choices are already structured.

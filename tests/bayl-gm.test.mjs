@@ -7,15 +7,15 @@ import {
   applyTemplate,
   validateGMDraft,
   magicChoices,
-} from "../dist/gm/model.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
-import { templateEligibility } from "../dist/gm/templates.mjs";
-import { addGMSupplement } from "../dist/gm/content.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/gm/model.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
+import { templateEligibility } from "../src/engine/gm/templates.mjs";
+import { addGMSupplement } from "../src/engine/gm/content.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 const json = async (p) =>
   JSON.parse(await readFile(new URL(p, import.meta.url), "utf8"));
-const data = await json("../dist/gm/data.json");
-const library = await json("../dist/data/book-library.json");
+const data = await json("../public/gm/data.json");
+const library = await json("../public/data/book-library.json");
 const rulesFor = createGMRules(library, data);
 const raw = await json("../content/sources/gm/books/bayl-many-eyes.json");
 const draft = (name = "Chaos Warrior of Nurgle", template = "") => {

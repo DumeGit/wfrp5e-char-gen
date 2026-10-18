@@ -105,7 +105,8 @@ test("Ship's Crew choices route early, retain one performance/instrument and sur
 }) => {
   await openGM(page);
   await openGMBooks(page);
-  await page.goto("/gm.html");
+  await page.goto("/bestiary/");
+  await openGMBooks(page);
   await page.locator("#gm-book-corsairs-flariel").check();
   await applyProfile(page, "Dark Elf Ship's Crew");
   await page
@@ -152,7 +153,8 @@ test("Warhound's Broken roll issue opens the real recorded roll control @gm @mob
 }) => {
   await openGM(page);
   await openGMBooks(page);
-  await page.goto("/gm.html");
+  await page.goto("/bestiary/");
+  await openGMBooks(page);
   await page.locator("#gm-book-corsairs-flariel").check();
   await applyProfile(page, "Dog");
   await gmStep(page, "Customise");

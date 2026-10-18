@@ -6,10 +6,10 @@ import {
   issueStep,
   restoreNavigation,
   hasCharacterChanges,
-} from "../dist/ui.mjs";
+} from "../src/engine/ui.mjs";
 import { soldier, R } from "./fixture.mjs";
-import { characterResult } from "../dist/character-result.mjs";
-import { fresh } from "../dist/rules.mjs";
+import { characterResult } from "../src/engine/character-result.mjs";
+import { fresh } from "../src/engine/rules.mjs";
 
 test("book changes skip reset confirmation only for an untouched character", () => {
   const empty = restoreNavigation(fresh());

@@ -1,11 +1,11 @@
-import { characterResult } from "../dist/character-result.mjs";
+import { characterResult } from "../src/engine/character-result.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
 import { library, R, soldier, advancedSoldier } from "./fixture.mjs";
-import * as M from "../dist/rules.mjs";
-import { assembleBooks, bookSelection } from "../dist/books.mjs";
+import * as M from "../src/engine/rules.mjs";
+import { assembleBooks, bookSelection } from "../src/engine/books.mjs";
 import {
   careerResults,
   careerDifferences,
@@ -13,13 +13,13 @@ import {
   purchaseReason,
   calculation,
   talentCalculation,
-} from "../dist/workspace.mjs";
-import { careerBrowser, comparisonHTML } from "../dist/flow-ui.mjs";
-import { magicRows, filterMagic } from "../dist/magic-browser.mjs";
-import { characterReferences } from "../dist/record-sources.mjs";
-import { issueTarget } from "../dist/issue-targets.mjs";
-import { marketCatalog, buyTrapping } from "../dist/market.mjs";
-import { exportRecord, exportSheet } from "../dist/export.mjs";
+} from "../src/engine/workspace.mjs";
+import { careerBrowser, comparisonHTML } from "./presentation-flow-ui.mjs";
+import { magicRows, filterMagic } from "../src/engine/magic-browser.mjs";
+import { characterReferences } from "../src/engine/record-sources.mjs";
+import { issueTarget } from "../src/engine/issue-targets.mjs";
+import { marketCatalog, buyTrapping } from "../src/engine/market.mjs";
+import { exportRecord, exportSheet } from "../src/engine/export.mjs";
 const B = assembleBooks(
   library,
   library.packs
@@ -240,11 +240,11 @@ test("Compact and full exports preserve the filled sheet and complete character 
         B,
         s,
         fs.readFileSync(
-          new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+          new URL("../public/assets/character-sheet.pdf", import.meta.url),
         ),
         JSON.parse(
           fs.readFileSync(
-            new URL("../dist/data/sheet-fields.json", import.meta.url),
+            new URL("../public/data/sheet-fields.json", import.meta.url),
           ),
         ),
       ),

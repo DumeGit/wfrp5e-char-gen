@@ -1,16 +1,16 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { R, library, soldier } from "./fixture.mjs";
-import { assembleBooks } from "../dist/books.mjs";
-import { characterResult } from "../dist/character-result.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
+import { characterResult } from "../src/engine/character-result.mjs";
 import {
   buildSearchIndex,
   searchBooks,
   searchContext,
-} from "../dist/book-search.mjs";
-import * as M from "../dist/rules.mjs";
-import { searchBookText } from "../dist/book-search-text.mjs";
-import { createReferenceLinker } from "../dist/book-search-links.mjs";
+} from "../src/engine/book-search.mjs";
+import * as M from "../src/engine/rules.mjs";
+import { searchBookText } from "../src/engine/book-search-text.mjs";
+import { createReferenceLinker } from "../src/engine/book-search-links.mjs";
 const B = assembleBooks(
   library,
   library.packs
@@ -271,8 +271,9 @@ test("Unavailable references stay visible and live routes reflect Career locks a
 import {
   loadRuleReferences,
   validateRuleReference,
-} from "../dist/rule-references.mjs";
-import { ruleTextHTML, searchLabel } from "../dist/search-presentation.mjs";
+} from "../src/engine/rule-references.mjs";
+import { searchLabel } from "../src/engine/search-presentation.mjs";
+import { ruleTextHTML } from "./reference-render.mjs";
 
 test("core references hydrate reviewed Skill summaries and distinguish Conditions, Psychology and properties", () => {
   const before = JSON.stringify(R);

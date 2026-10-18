@@ -7,19 +7,19 @@ import {
   applyTemplate,
   validateGMDraft,
   magicChoices,
-} from "../dist/gm/model.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
-import { assembleBooks } from "../dist/books.mjs";
+} from "../src/engine/gm/model.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
 import {
   templateEligibility,
   templateGearEnabled,
-} from "../dist/gm/templates.mjs";
-import { workspace } from "../dist/gm/views.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/gm/templates.mjs";
+import { workspace } from "./bestiary-presentation.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 const json = async (p) =>
   JSON.parse(await readFile(new URL(p, import.meta.url), "utf8"));
-const data = await json("../dist/gm/data.json"),
-  library = await json("../dist/data/book-library.json");
+const data = await json("../public/gm/data.json"),
+  library = await json("../public/data/book-library.json");
 const rulesFor = createGMRules(library, data),
   B = "tribes-tribulations";
 const id = (kind, name) => `${B}:${kind}:${name}`;
@@ -213,6 +213,7 @@ test("Troll controls expose only compatible modifiers and Chaos mutation actions
   const ui = { tab: 0, expanded: [], profileQuery: "", category: "" };
   let html = workspace(gmCatalogue(data, s.books), rulesFor(s), s, calc(s), ui);
   assert.match(html, /gm-troll-modifiers/);
+  assert.match(html, /data-troll-modifier="[^"]+river-troll-hag"/);
   assert.ok(
     !html.match(/data-troll-modifier="[^"]+river-troll-hag"[^>]+disabled/),
   );

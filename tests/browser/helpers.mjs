@@ -1,8 +1,8 @@
 import { test as base, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
-import { assembleBooks, bookSelection } from "../../dist/books.mjs";
-import * as rules from "../../dist/rules.mjs";
-import { freshGM } from "../../dist/gm/model.mjs";
+import { assembleBooks, bookSelection } from "../../src/engine/books.mjs";
+import * as rules from "../../src/engine/rules.mjs";
+import { freshGM } from "../../src/engine/gm/model.mjs";
 
 export { expect };
 export const PC_STORAGE = "wfrp-fifth-character-ledger-v2-verification";
@@ -34,12 +34,13 @@ let content;
 async function fixtures() {
   content ||= Promise.all([
     readFile(
-      new URL("../../dist/data/book-library.json", import.meta.url),
+      new URL("../../public/data/book-library.json", import.meta.url),
       "utf8",
     ).then(JSON.parse),
-    readFile(new URL("../../dist/gm/data.json", import.meta.url), "utf8").then(
-      JSON.parse,
-    ),
+    readFile(
+      new URL("../../public/gm/data.json", import.meta.url),
+      "utf8",
+    ).then(JSON.parse),
   ]).then(([library, gm]) => ({ library, gm, R: assembleBooks(library) }));
   return content;
 }
@@ -109,7 +110,7 @@ export async function openPC(page, options = {}) {
   ).toBeVisible();
 }
 export async function openGM(page) {
-  await page.goto("/gm.html?verify=1");
+  await page.goto("/bestiary/?verify=1");
   await expect(
     page.getByRole("heading", { name: "Starting profile", exact: true }),
   ).toBeVisible();

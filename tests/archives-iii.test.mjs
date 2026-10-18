@@ -2,14 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
-import * as M from '../dist/rules.mjs';
+import * as M from '../src/engine/rules.mjs';
 import {library,R,soldier} from './fixture.mjs';
-import {assembleBooks,bookSelection,catalogForCharacter,randomTable} from '../dist/books.mjs';
-import {creationSpecies,careerAvailable} from '../dist/origins.mjs';
-import {spellChoices,cantGrants,knownCants,cantIssues,syncCants,freeMagicIssues,divineReference} from '../dist/archives-iii.mjs';
-import {cantPanel,originTalentChoice} from '../dist/archives-iii-ui.mjs';
-import {folioData} from '../dist/folio.mjs';
-import {exportSheet} from '../dist/export.mjs';
+import {assembleBooks,bookSelection,catalogForCharacter,randomTable} from '../src/engine/books.mjs';
+import {creationSpecies,careerAvailable} from '../src/engine/origins.mjs';
+import {spellChoices,cantGrants,knownCants,cantIssues,syncCants,freeMagicIssues,divineReference} from '../src/engine/archives-iii.mjs';
+import {cantPanel,originTalentChoice} from "./presentation-archives-iii-ui.mjs";
+import {folioData} from '../src/engine/folio.mjs';
+import {exportSheet} from '../src/engine/export.mjs';
 const B=assembleBooks(library,['archives-iii']);
 export function iiiPriest(career='priest',talent='Bless (Old Faith)'){
  const s=M.fresh();s.species='Human';s.points=Array(10).fill(10);Object.assign(s,{name:'Archives III test priest',career,freeTalent:talent,randomTalents:['Read/Write','Cardsharp','Attractive','Strong Back'],speciesSkills:['s-0','s-1','s-2','s-3','s-4'],careerSkills:Object.fromEntries(Array.from({length:8},(_,i)=>[`c1-${i}`,1])),wealth:{amount:100,currency:'silver shillings'},xp:30000});return s;
@@ -104,7 +104,7 @@ test('animal-doctor Hedge Witch is an explicit opt-in replacement with no extra 
 });
 test('Archives III editable PDF exports chosen Old Faith prayers and Cant reference records',async()=>{
  globalThis.PDFLib=PDFLib;const s=oldFaithPriest();M.purchaseSpell(B,s,'Blessing of Wit','Invoke (Old Faith)');
- const sheet=fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),fields=JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url))),bytes=await exportSheet(B,s,sheet,fields),doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));assert.ok(M.knownSpells(B,s).some(x=>x.name==='Blessing of Wit'));
+ const sheet=fs.readFileSync(new URL('../public/assets/character-sheet.pdf',import.meta.url)),fields=JSON.parse(fs.readFileSync(new URL('../public/data/sheet-fields.json',import.meta.url))),bytes=await exportSheet(B,s,sheet,fields),doc=await PDFLib.PDFDocument.load(bytes),form=doc.getForm();assert.equal(form.getFields().length,556);assert.equal(form.getTextField('XP_Spent').getText(),String(M.derive(B,s).spent));assert.ok(M.knownSpells(B,s).some(x=>x.name==='Blessing of Wit'));
  const mage=colourMage();mage.cants.choices.Fire=[B.cants.find(x=>x.lore==='Fire').id];const mageBytes=await exportSheet(B,mage,sheet,fields);assert.equal((await PDFLib.PDFDocument.load(mageBytes)).getForm().getFields().length,556);
  if(process.env.WFRP_QA_OUTPUT){fs.writeFileSync(new URL('../../tmp/pdfs/archives-iii-old-faith.pdf',import.meta.url),bytes);fs.writeFileSync(new URL('../../tmp/pdfs/archives-iii-cants.pdf',import.meta.url),mageBytes);}
 });

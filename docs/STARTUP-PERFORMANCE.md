@@ -1,27 +1,58 @@
-# Mode startup — 15 October 2026
+# Mode startup and navigation — 18 October 2026
 
-Mode changes still use independent pages and draft storage. This change accelerates their startup without adding a single-page router, sharing mutable catalogues between modes or skipping content validation.
+All three creators now run on Next.js App Router routes with client navigation. Each creator keeps its own draft, calculations and session history. Immutable book/search wire data is cached by the shared content service; catalogues are assembled independently for each mode. Links disable automatic route prefetching, so opening Player does not initialize every creator.
 
-The CPU profile identified repeated `canonicalName` scans through the entire static alias inventory as the main catalogue-building cost. An exact kind/name index now narrows lookup to that name's aliases, preserving declaration order, global/scoped matching and unchanged-name fallback. No alias, conversion or game rule changed. A focused regression checks the complete inventory against its original lookup semantics across every installed book scope.
+The earlier exact-alias index remains in the unchanged rule engine. Selected-content and current-save validation still run; full source inventories, source descriptions and dependency-context validation belong in build tooling. Public assets resolve from application-root URLs rather than depending on a bundled module's location.
 
-All three entry pages preload the shared JSON bundle while JavaScript dependencies are discovered; Bestiary/Marijan also preload their creature data. Matching anonymous fetch preloads are reused by the existing loaders, so data is requested once rather than fetched twice. The book-bundle module has an early module-preload hint.
+Search data loads on first use. The React reader preserves native filters, stable input/caret, twenty-result batches, reference chaining and Career membership tables. Its shared validated payload/link index is reused across modes. Normalization/ranking runs in the actual `/workers/search-worker.mjs` module worker, with the existing synchronous fallback when workers are unavailable. Generated worker dependencies are byte-identical to the canonical engine modules. A production test requires real worker initialization and query replies, rather than accepting a silent missing-import fallback.
 
-`pdf-runtime.mjs` loads the existing local pdf-lib script on first export/print, sharing an in-flight Promise and allowing retry after failure. Player PDF exporters and Bestiary PDF/card-print modules now import on demand; Marijan's already-lazy exporter awaits the same shared runtime. Existing Preparing states cover this first-use load. The temporary GM print batch still persists for the lifetime of that page. All modules and PDF assets remain in the offline worker: background offline preparation may download them, but editor startup no longer executes or waits for PDF tools.
+PDF runtime loading and exporters remain lazy. Editor startup does not execute PDF tools; offline installation intentionally downloads their files in the background so a first export can work without a network. Large book/search JSON stays in generated public files rather than being duplicated inside framework bundles.
 
-## Measurements
+## Reproducible measurements
 
-Illustrative local cold runs used fresh desktop Chromium contexts, blocked service workers and 50ms added per request, with usability measured when the rendered creator rail appeared. Request interception disables HTTP caching. This models dependency-discovery delays; it is not a bandwidth simulation or production/physical-phone benchmark.
+The pre-migration source commit was `1a279d4`. Original static `dist` contained 170 files / 26,102,943 bytes. The tested Next output, offline version `21229ad2a3f0702f4e16`, contains 91 files / 26,471,525 bytes including its worker (about 1.4% more bytes). The worker inventories 90 files; it excludes itself. These output counts describe that tested build, not a permanent release requirement.
 
-| Mode | Before | After |
+Cold startup uses fresh desktop Chromium contexts, blocked service workers, disabled HTTP caching and 50ms added to each request. The usable-editor marker is the creator rail plus visible main panel. This models dependency discovery, not bandwidth, production latency or physical-phone performance. The original baseline is one sample; the Next values are medians of three same-condition samples.
+
+| Mode | Original baseline | Next median | Initial resources: original → Next |
+| --- | ---: | ---: | --- |
+| Player | 585ms | 449ms | 104 → 20 |
+| Bestiary | 676ms | 534ms | 91 → 20–21 |
+| Marijan | 737ms | 549ms | 79 → 19–20 |
+
+Warm client navigation with the same 50ms request delay measured 445ms to first Bestiary visit, 431ms to first Marijan visit and 130ms returning to Player (medians of three runs). Each run starts on Player; the first visits still load mode-specific code. These are navigation outcomes, not animation durations.
+
+A separate controlled first-use comparison used three fresh contexts per mode/build, no added latency, no HTTP cache and the same immediate editor-ready marker. It opens search, waits for the category catalogue, types **Trained** and waits for its actual result. The median complete time from opening search to that first result was:
+
+| Mode | Original | Next |
 | --- | ---: | ---: |
-| Player | 961ms | 583ms |
-| Bestiary | 2,311ms | 767ms |
-| Marijan | 3,045ms | 769ms |
+| Player | 262ms | 217ms |
+| Bestiary | 281ms | 286ms |
+| Marijan | 262ms | 265ms |
 
-A separate local Node sample reduced catalogue construction from 449ms to 59ms (core), 2,111ms to 266ms (GM options), and 3,044ms to 287ms (Marijan). These one-run values demonstrate the bottleneck and are not timing guarantees.
+The initial catalogue-ready phase is slower in React; query ranking after that phase is faster. Measuring only category availability would miss this distinction. The 3–5ms complete-result differences in Bestiary/Marijan are within these samples' variation. All measured runs had zero uncaught page errors. The earlier screenshot-based first-search observations used a later stabilization point and are retained only in local diagnostic artifacts, not treated as the controlled comparison.
 
-To repeat against the existing preview server: `node scripts/measure-startup.mjs http://127.0.0.1:8110/dist/ 50`. A different loopback base URL and delay are accepted. The diagnostic uses independent temporary browser contexts, does not touch personal saves, and writes the latest timings/resource inventory to ignored `test-results/startup-measurement.json`. It does not start or stop preview servers. Use delay 0 for a local unthrottled observation; compare equivalent conditions rather than enforcing flaky timing thresholds.
+Use the starting cold-load observations as investigation thresholds for follow-up work: repeated medians above 585/676/737ms under these conditions need explanation. Duplicate book/creature requests, eagerly executed exports, worker failures and first-result regressions also require investigation. Do not enforce single-run millisecond limits in tests or treat the framework itself as proof of speed.
+
+## Repeat the diagnostic
+
+Start the isolated static output server, then run the diagnostic from a second terminal:
+
+```powershell
+node scripts/browser-test-server.mjs
+node scripts/measure-startup.mjs http://127.0.0.1:8199/ 50
+```
+
+Stop that server before running Playwright, which owns the same port. A different loopback URL and a delay from 0–1000ms are accepted. Delay 0 records a local unthrottled observation. The diagnostic does not start/stop servers or read personal saved drafts. It records cold ready time, resource inventory, first search readiness/result and warm navigation in ignored `test-results/startup-measurement.json`.
+
+Migration baseline screenshots (desktop 1440×900, phone 390×844, tablet 800×1180), isolated storage snapshots, raw timing samples and the real legacy-to-Next update result are retained locally in ignored `test-results/nextjs-baseline/`. They contain synthetic/fresh drafts. The documented timings above remain reviewable without committing large screenshots or transient resource logs.
 
 ## Focused checks
 
-Run `node --test tests/architecture.test.mjs tests/books.test.mjs tests/rules.test.mjs` for exact alias behavior and catalogue/rule consistency. `tests/browser/startup.spec.mjs` checks all modes defer PDF tools, reuse their data preloads, recover from a failed PDF runtime request, reuse the successful runtime and support the first PDF export offline. Existing Player, GM/cards and Marijan download tests check actual PDF output. Rebuild/check the offline worker after changing runtime modules. Unrelated book/browser matrices are not required for this behavior-preserving startup optimization.
+`node --import tsx --test tests/architecture.test.mjs tests/books.test.mjs tests/rules.test.mjs` checks rule/alias consistency. `tests/browser/startup.spec.mjs` checks one data request per mode, deferred PDF execution, retry/reuse and first export offline. Existing actual JSON/PDF download cases remain the output checks. `tests/browser/migration-platform.spec.mjs` additionally verifies production routes, real worker ranking, offline navigation and updates. See [PWA.md](PWA.md) for static output, cache/update and rollback contracts.
+
+The first production integration passed 15 focused platform/lifecycle/inventory/reference Node tests and 12 production desktop/mobile browser cases (eight migration-platform and four existing PWA cases) against offline version `21229ad2a3f0702f4e16`. The 28 existing search/Career-reference cases passed across the initial run and three affected reruns after transient concurrent development edits cleared. This is scoped evidence, not a full release or physical-device claim.
+
+## Earlier alias optimization
+
+The October 15 pre-Next optimization reduced illustrative 50ms/request cold runs from 961→583ms (Player), 2,311→767ms (Bestiary) and 3,045→769ms (Marijan). A separate one-run Node observation reduced catalogue construction from 449→59ms (core), 2,111→266ms (GM options) and 3,044→287ms (Marijan). Those historical runs used the old independent pages and are separate from the migration comparison above.

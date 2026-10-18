@@ -64,7 +64,7 @@ Read using MarkItDown, then rebuild the hash-checked pack and frozen review:
 python -m markitdown "C:/Users/ninod/Downloads/Taverns of the Old World.pdf" -o ../taverns-of-the-old-world.md
 python scripts/build-taverns.py
 npm run build
-node --test tests/taverns.test.mjs tests/gm-options.test.mjs
+node --import tsx --test tests/taverns.test.mjs tests/gm-options.test.mjs
 ```
 
 Focused desktop/mobile coverage is in `tests/browser/taverns.spec.mjs`. Tests

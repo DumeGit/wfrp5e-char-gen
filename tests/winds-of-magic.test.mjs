@@ -1,20 +1,20 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import * as M from "../dist/rules.mjs";
+import * as M from "../src/engine/rules.mjs";
 import { library, R, soldier } from "./fixture.mjs";
 import {
   assembleBooks,
   bookSelection,
   catalogForCharacter,
   randomTable,
-} from "../dist/books.mjs";
+} from "../src/engine/books.mjs";
 import {
   careerAvailable,
   careerRefinementTable,
   regionalCareerChoices,
-} from "../dist/origins.mjs";
-import { refineCareer } from "../dist/regional-careers.mjs";
+} from "../src/engine/origins.mjs";
+import { refineCareer } from "../src/engine/regional-careers.mjs";
 import {
   psychometrySacrifice,
   psychicSkillIssue,
@@ -22,24 +22,24 @@ import {
   quoteRitual,
   womIssues,
   womReferences,
-} from "../dist/winds-of-magic.mjs";
+} from "../src/engine/winds-of-magic.mjs";
 import {
   cantGrants,
   syncCants,
   freeMagicIssues,
-} from "../dist/archives-iii.mjs";
+} from "../src/engine/archives-iii.mjs";
 import {
   collegePanel,
   psychometryPanel,
   ritualShop,
   womGearPanel,
   pettyGrantNote,
-} from "../dist/winds-of-magic-ui.mjs";
-import { marketCatalog, buyTrapping, purse } from "../dist/market.mjs";
-import { equipment, gearSlots } from "../dist/equipment.mjs";
+} from "./presentation-winds-of-magic-ui.mjs";
+import { marketCatalog, buyTrapping, purse } from "../src/engine/market.mjs";
+import { equipment, gearSlots } from "../src/engine/equipment.mjs";
 import * as PDFLib from "pdf-lib";
-import { exportSheet } from "../dist/export.mjs";
-import { folioData } from "../dist/folio.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
+import { folioData } from "../src/engine/folio.mjs";
 const lib = library;
 const B = assembleBooks(lib, ["winds-of-magic"]);
 export function womCharacter(name = "Astromancer") {
@@ -488,11 +488,11 @@ test("capped Petty grants preserve a subsequent Arcane grant and editable PDF ma
     B,
     s,
     fs.readFileSync(
-      new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+      new URL("../public/assets/character-sheet.pdf", import.meta.url),
     ),
     JSON.parse(
       fs.readFileSync(
-        new URL("../dist/data/sheet-fields.json", import.meta.url),
+        new URL("../public/data/sheet-fields.json", import.meta.url),
       ),
     ),
   );
@@ -660,11 +660,11 @@ test("new magic and Augury export with all 556 editable fields, sourced ritual X
     B,
     s,
     fs.readFileSync(
-      new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+      new URL("../public/assets/character-sheet.pdf", import.meta.url),
     ),
     JSON.parse(
       fs.readFileSync(
-        new URL("../dist/data/sheet-fields.json", import.meta.url),
+        new URL("../public/data/sheet-fields.json", import.meta.url),
       ),
     ),
   );

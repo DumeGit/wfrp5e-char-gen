@@ -1,12 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { traitSummary } from "../dist/gm/trait-summaries.mjs";
-import { describeTraits } from "../dist/gm/trait-descriptions.mjs";
-import { selectableTemplates } from "../dist/gm/templates.mjs";
+import { traitSummary } from "../src/engine/gm/trait-summaries.mjs";
+import { describeTraits } from "../src/engine/gm/trait-descriptions.mjs";
+import { selectableTemplates } from "../src/engine/gm/templates.mjs";
 
 const data = JSON.parse(
-  await readFile(new URL("../dist/gm/data.json", import.meta.url)),
+  await readFile(new URL("../public/gm/data.json", import.meta.url)),
 );
 const definition = (name) => data.traits.find((t) => t.name === name);
 const summary = (name, value = "") =>

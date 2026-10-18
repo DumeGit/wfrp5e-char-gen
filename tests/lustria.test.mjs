@@ -2,20 +2,20 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library, R as core } from "./fixture.mjs";
-import { assembleBooks } from "../dist/books.mjs";
-import * as M from "../dist/rules.mjs";
-import { creationSpecies } from "../dist/origins.mjs";
-import { canonicalName } from "../dist/content-references.mjs";
-import { createGMRules } from "../dist/gm/books.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
+import * as M from "../src/engine/rules.mjs";
+import { creationSpecies } from "../src/engine/origins.mjs";
+import { canonicalName } from "../src/engine/content-references.mjs";
+import { createGMRules } from "../src/engine/gm/books.mjs";
 import {
   freshGM,
   calculateGM,
   validateGMDraft,
   applyTemplate,
   magicChoices,
-} from "../dist/gm/model.mjs";
-import { templateEligibility } from "../dist/gm/templates.mjs";
-import { lustriaSpellIssue } from "../dist/lustria.mjs";
+} from "../src/engine/gm/model.mjs";
+import { templateEligibility } from "../src/engine/gm/templates.mjs";
+import { lustriaSpellIssue } from "../src/engine/lustria.mjs";
 
 const B = "lustria";
 const R = assembleBooks(library, [B]);
@@ -133,7 +133,7 @@ test("Lustrian weapons retain printed prices and ammunition without supplying po
 
 test("shared GM catalogues receive Lustria choices independently of foundation selection", async () => {
   const data = JSON.parse(
-    await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+    await readFile(new URL("../public/gm/data.json", import.meta.url), "utf8"),
   );
   const G = createGMRules(library, data)(freshGM(data, data.profiles[0].id));
   assert.ok(
@@ -193,7 +193,7 @@ test("mechanical references retain source rules with clean section boundaries", 
 });
 
 const data = JSON.parse(
-  await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+  await readFile(new URL("../public/gm/data.json", import.meta.url), "utf8"),
 );
 const gmRules = createGMRules(library, data);
 const draft = (name) =>

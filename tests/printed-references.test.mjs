@@ -1,28 +1,25 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { library } from "./fixture.mjs";
-import { assembleBooks } from "../dist/books.mjs";
-import { buildReferenceLibrary } from "../dist/search-library.mjs";
-import { buildBookReport } from "../dist/book-report.mjs";
-import { validateReferenceEntry } from "../dist/reference-entries.mjs";
-import { referenceBodyHTML } from "../dist/reference-body.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
+import { buildReferenceLibrary } from "../src/engine/search-library.mjs";
+import { buildBookReport } from "../src/engine/book-report.mjs";
+import { validateReferenceEntry } from "../src/engine/reference-entries.mjs";
+import { referenceBodyHTML, ruleTextHTML } from "./reference-render.mjs";
 import {
   createWorkerHandler,
   prepareSearchRows,
-} from "../dist/search-worker.mjs";
-import { createSearchEngine } from "../dist/search-engine.mjs";
-import { searchBooks } from "../dist/search-ranking.mjs";
+} from "../src/engine/search-worker.mjs";
+import { createSearchEngine } from "../src/engine/search-engine.mjs";
+import { searchBooks } from "../src/engine/search-ranking.mjs";
 import { readFile } from "node:fs/promises";
-import { loadReferenceLibrary } from "../dist/search-library.mjs";
-import { createReferenceLinker } from "../dist/book-search-links.mjs";
+import { loadReferenceLibrary } from "../src/engine/search-library.mjs";
+import { createReferenceLinker } from "../src/engine/book-search-links.mjs";
 import {
   searchCoverage,
   referenceContentHash,
 } from "../scripts/search-coverage.mjs";
-import {
-  referenceSnippetText,
-  ruleTextHTML,
-} from "../dist/search-presentation.mjs";
+import { referenceSnippetText } from "../src/engine/search-presentation.mjs";
 
 const source = {
   id: "up-in-arms:reference:fixture",
@@ -213,13 +210,13 @@ test("worker failure falls back and concurrent queries return their own results"
 
 const wire = JSON.parse(
   await readFile(
-    new URL("../dist/data/search-library.json", import.meta.url),
+    new URL("../public/data/search-library.json", import.meta.url),
     "utf8",
   ),
 );
 const full = await loadReferenceLibrary(library, () => wire);
 const workshop = JSON.parse(
-  await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+  await readFile(new URL("../public/gm/data.json", import.meta.url), "utf8"),
 );
 const raw = full.rows.filter((row) => row.printedReference);
 const get = (book, name) =>
@@ -527,7 +524,7 @@ test("Rules, NPCs and templates stay outside published search while source recor
   assert.ok(retained.length > 100);
   assert.ok(retained.every((e) => !full.rows.some((r) => r.key === e.id)));
   const gm = JSON.parse(
-    await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+    await readFile(new URL("../public/gm/data.json", import.meta.url), "utf8"),
   );
   assert.equal(gm.profiles.filter((p) => p.id.startsWith("core:")).length, 49);
   assert.equal(gm.templates.filter((t) => t.id.startsWith("core:")).length, 7);

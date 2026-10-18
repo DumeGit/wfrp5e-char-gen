@@ -7,15 +7,15 @@ import {
   applyTemplate,
   validateGMDraft,
   magicChoices,
-} from "../dist/gm/model.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
-import { addGMSupplement } from "../dist/gm/content.mjs";
-import { workspace } from "../dist/gm/views.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/gm/model.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
+import { addGMSupplement } from "../src/engine/gm/content.mjs";
+import { workspace } from "./bestiary-presentation.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
-const data = await json("../dist/gm/data.json");
-const library = await json("../dist/data/book-library.json");
+const data = await json("../public/gm/data.json");
+const library = await json("../public/data/book-library.json");
 const raw = await json("../content/sources/gm/books/cluster-eye-tribe.json");
 const rulesFor = createGMRules(library, data);
 const profile = data.profiles.find(

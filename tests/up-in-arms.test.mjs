@@ -8,22 +8,22 @@ import {
   bookSelection,
   randomTable,
   tableResult,
-} from "../dist/books.mjs";
-import * as M from "../dist/rules.mjs";
+} from "../src/engine/books.mjs";
+import * as M from "../src/engine/rules.mjs";
 import {
   creationSpecies,
   creationBackground,
   careerRefinementTable,
-} from "../dist/origins.mjs";
+} from "../src/engine/origins.mjs";
 import {
   refineCareer,
   regionalCareer,
   storedRefinement,
-} from "../dist/regional-careers.mjs";
-import { suggestion } from "../dist/background.mjs";
-import { marketCatalog, buyTrapping, purse } from "../dist/market.mjs";
-import { equipment } from "../dist/equipment.mjs";
-import { exportSheet } from "../dist/export.mjs";
+} from "../src/engine/regional-careers.mjs";
+import { suggestion } from "../src/engine/background.mjs";
+import { marketCatalog, buyTrapping, purse } from "../src/engine/market.mjs";
+import { equipment } from "../src/engine/equipment.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
 
 const on = assembleBooks(library, ["up-in-arms"]);
 function madeCareer(c, origin = "") {
@@ -413,11 +413,11 @@ test("regional supplement character exports all editable fields with the added m
     on,
     s,
     fs.readFileSync(
-      new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+      new URL("../public/assets/character-sheet.pdf", import.meta.url),
     ),
     JSON.parse(
       fs.readFileSync(
-        new URL("../dist/data/sheet-fields.json", import.meta.url),
+        new URL("../public/data/sheet-fields.json", import.meta.url),
       ),
     ),
   );

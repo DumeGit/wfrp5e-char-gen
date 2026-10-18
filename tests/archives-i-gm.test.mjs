@@ -1,17 +1,18 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { createGMRules, gmCatalogue, sourceLabel } from "../dist/gm/books.mjs";
-import { freshGM, calculateGM, validateGMDraft } from "../dist/gm/model.mjs";
-import { pickerEntries, workspace } from "../dist/gm/views.mjs";
-import { sheetSections } from "../dist/gm/pdf.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+import { createGMRules, gmCatalogue, sourceLabel } from "../src/engine/gm/books.mjs";
+import { freshGM, calculateGM, validateGMDraft } from "../src/engine/gm/model.mjs";
+import { pickerEntries } from "../src/engine/gm/pickers.mjs";
+import { workspace } from "./bestiary-presentation.mjs";
+import { sheetSections } from "../src/engine/gm/pdf.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
 const [library, data, raw] = await Promise.all([
-  json("../dist/data/book-library.json"),
-  json("../dist/gm/data.json"),
+  json("../public/data/book-library.json"),
+  json("../public/gm/data.json"),
   json("../content/sources/gm/books/archives-i.json"),
 ]);
 const rulesFor = createGMRules(library, data);

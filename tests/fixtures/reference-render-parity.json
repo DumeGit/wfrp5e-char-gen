@@ -1,0 +1,111 @@
+{
+  "sourceCommit": "1a279d4",
+  "description": "Normalized visible-text hashes from the pre-migration renderer; no duplicate renderer or wording catalogue.",
+  "samples": [
+    {
+      "kind": "career",
+      "key": "career:core:careers:adviser:Adviser",
+      "textSHA256": "1b4383d9210c1e7ec2a2772a0c6ee899b829982e880441146fed46742b584ba2"
+    },
+    {
+      "kind": "skill",
+      "key": "skill:core:skills:climb:Climb",
+      "textSHA256": "8ab9f0f804b8637438f78af035b4b9d6b67fa43637d9362e93dc2b17a981c93e"
+    },
+    {
+      "kind": "talent",
+      "key": "talent:core:talents:accurate-shot:Accurate Shot",
+      "textSHA256": "0bf4ed854a0d98d42c5fed4c1f96eee9d38e78dd9491d754d6ad49fab331e3ed"
+    },
+    {
+      "kind": "magic",
+      "key": "magic:core:spells:blessing-of-battle:Blessing of Battle",
+      "textSHA256": "af5b0220635ad7851cd7d5c07cc9fd19b1fee836bcc743ee7c1d72f2bbf762b0"
+    },
+    {
+      "kind": "equipment",
+      "key": "equipment:core:weapon:0:Dagger",
+      "textSHA256": "7433e227c09b3387827ae26c34b1f76d6340cbac598d4a5113cf89955bc19662"
+    },
+    {
+      "kind": "condition",
+      "key": "condition:core:rule-reference:condition-185-ablaze:Ablaze",
+      "textSHA256": "a86fe6ca474cec848f8eeeb9d50f413ec8c96cd94421117a6646ea1a09a66258"
+    },
+    {
+      "kind": "property",
+      "key": "property:core:rule-reference:property-298-durable:Durable",
+      "textSHA256": "7d3c84e49b24eac3e597f9ef688499e486cf97696fbfaac8e0762fefc918958e"
+    },
+    {
+      "kind": "psychology",
+      "key": "psychology:core:rule-reference:psychology-183-animosity-target:Animosity (Target)",
+      "textSHA256": "eeb5025f70b646716cc13622220b2dd2b5d7358060d9573f1cc8414595197825"
+    },
+    {
+      "kind": "trait",
+      "key": "trait:core:rule-reference:trait-356-afraid:Afraid",
+      "textSHA256": "a574d1b85cb263e04a86753c9f6944544734a8972a8e96f8230c0d551d6039fa"
+    },
+    {
+      "kind": "species",
+      "key": "species:core:species:human:Human",
+      "textSHA256": "182711de7149a3d2a9b49d36d546206e24458b60a580d312f87faba987661bc8"
+    },
+    {
+      "kind": "table:printed",
+      "key": "core:reference:23-random-talents",
+      "textSHA256": "ff332e8e022fc72ba3fcaa2e630850f2b302df094d71c4d26a69f1a17902f08d"
+    },
+    {
+      "kind": "endeavour:printed",
+      "key": "core:reference:196-advance-career",
+      "textSHA256": "c2520c6985f99e7c66c61506468cc064d273776b31e7b5c93fac2b5c31eef402"
+    },
+    {
+      "kind": "property:printed",
+      "key": "up-in-arms:reference:89-slash-xa",
+      "textSHA256": "31d21a8d4a62576a85291797105024ddebc7682c6ec576aff8361c18981803a0"
+    },
+    {
+      "kind": "trait:printed",
+      "key": "up-in-arms:reference:107-new-trait-trained-shock-cavalry",
+      "textSHA256": "9752c7a2d0fc7ea27fdb8ae230d96be553c916f43eab33e3bc353e4b2fd47ff7"
+    },
+    {
+      "kind": "talent:printed",
+      "key": "up-in-arms:reference:140-beat-blade",
+      "textSHA256": "ceaf8a776f977f325a07f5748a4a804742632eaa96d6d1354bef356445a7d7e7"
+    },
+    {
+      "kind": "psychology:printed",
+      "key": "archives-ii:reference:20-new-psychology-vice",
+      "textSHA256": "e0907dfaf183941c6f8737bf5c5ef9dbbc3f70258e128c51d765fc84d03acf6b"
+    },
+    {
+      "kind": "magic:printed",
+      "key": "archives-iii:reference:63-goodwill",
+      "textSHA256": "49a544053910329ce9e9ca65016d2ee3931a2bc8891625668e4762b343b5e115"
+    },
+    {
+      "kind": "species:printed",
+      "key": "archives-iii:reference:79-badger",
+      "textSHA256": "fc140e6693629f8ba6aaaee653747f7c5261c51a28e6a99a5300a9ee897b9794"
+    },
+    {
+      "kind": "equipment:printed",
+      "key": "winds-of-magic:reference:163-panacea-universalis",
+      "textSHA256": "efc6afc8164cb31b9e5b6723b1f9209127f59a1ed45ce58dcc8c4febaa576e96"
+    },
+    {
+      "kind": "career:printed",
+      "key": "high-elf:reference:90-mage-printed-career",
+      "textSHA256": "91228af5ee0da4ce4d766caa4c2a723e8460cce4cbb0c620e949d1b6093d5fdb"
+    },
+    {
+      "kind": "mutation",
+      "key": "core:mutations:animalistic-legs",
+      "textSHA256": "b9dae1788cf350d2952e5efb1fc608b032366b85a5335953dade09d002250327"
+    }
+  ]
+}

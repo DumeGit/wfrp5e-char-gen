@@ -1,21 +1,21 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { createMarijanCatalogue } from "../dist/marijan/catalogue.mjs";
+import { createMarijanCatalogue } from "../src/engine/marijan/catalogue.mjs";
 import {
   freshMarijan,
   validateMarijan,
   calculateMarijan,
-} from "../dist/marijan/model.mjs";
+} from "../src/engine/marijan/model.mjs";
 import {
   generateCharacter,
   rollStartingChoices,
   addStartingChoices,
   availableGenerationCareers,
-} from "../dist/marijan/generation.mjs";
+} from "../src/engine/marijan/generation.mjs";
 const c = createMarijanCatalogue(
-  JSON.parse(readFileSync("dist/data/book-library.json")),
-  JSON.parse(readFileSync("dist/gm/data.json")),
+  JSON.parse(readFileSync("public/data/book-library.json")),
+  JSON.parse(readFileSync("public/gm/data.json")),
 );
 function seeded(seed = 1234567) {
   return {

@@ -28,13 +28,24 @@ async function check(dir) {
           `${url.pathname}: undeclared identifiers: ${unknown.join(", ")}`,
         );
       for (const node of ast.body.filter((x) => x.type === "ImportDeclaration"))
-        if (node.source.value.startsWith("."))
-          await readFile(new URL(node.source.value.split("?")[0], url));
+        if (node.source.value.startsWith(".")) {
+          const target = new URL(node.source.value.split("?")[0], url);
+          let resolved = false;
+          for (const extension of ["", ".ts", ".tsx", ".mjs", ".js"]) {
+            try {
+              await readFile(new URL(target.href + extension));
+              resolved = true;
+              break;
+            } catch {}
+          }
+          if (!resolved)
+            throw Error(`${url.pathname}: missing import ${node.source.value}`);
+        }
       count++;
     }
   }
 }
-await check(new URL("../dist/", import.meta.url));
+await check(new URL("../src/", import.meta.url));
 console.log(
   `Checked syntax, imported files and undeclared identifiers in ${count} application modules.`,
 );

@@ -5,7 +5,7 @@ import { createRequire } from "node:module";
 import {
   createMarijanCatalogue,
   findEntries,
-} from "../dist/marijan/catalogue.mjs";
+} from "../src/engine/marijan/catalogue.mjs";
 import {
   freshMarijan,
   validateMarijan,
@@ -14,20 +14,20 @@ import {
   applySpeciesDefaults,
   rollCharacteristics,
   fromPlayer,
-} from "../dist/marijan/model.mjs";
+} from "../src/engine/marijan/model.mjs";
 import {
   marijanFieldValues,
   exportMarijanSheet,
-} from "../dist/marijan/pdf.mjs";
-import { assembleBooks, bookSelection } from "../dist/books.mjs";
-import { fresh } from "../dist/rules.mjs";
-import { characterResult } from "../dist/character-result.mjs";
+} from "../src/engine/marijan/pdf.mjs";
+import { assembleBooks, bookSelection } from "../src/engine/books.mjs";
+import { fresh } from "../src/engine/rules.mjs";
+import { characterResult } from "../src/engine/character-result.mjs";
 const [library, gm] = await Promise.all([
   readFile(
-    new URL("../dist/data/book-library.json", import.meta.url),
+    new URL("../public/data/book-library.json", import.meta.url),
     "utf8",
   ).then(JSON.parse),
-  readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8").then(
+  readFile(new URL("../public/gm/data.json", import.meta.url), "utf8").then(
     JSON.parse,
   ),
 ]);
@@ -165,11 +165,11 @@ test("editable PDF and complete record retain values, ranks, overrides and overf
   assert.equal(values.Fortune_Max, 2);
   assert.equal(values.Talent_01_Name, "Custom talent 0 x12");
   const templateBytes = await readFile(
-      new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+      new URL("../public/assets/character-sheet.pdf", import.meta.url),
     ),
     fieldMeta = JSON.parse(
       await readFile(
-        new URL("../dist/data/sheet-fields.json", import.meta.url),
+        new URL("../public/data/sheet-fields.json", import.meta.url),
         "utf8",
       ),
     );

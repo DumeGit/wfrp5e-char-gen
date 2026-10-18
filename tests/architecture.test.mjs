@@ -2,37 +2,37 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
-import * as M from "../dist/rules.mjs";
+import * as M from "../src/engine/rules.mjs";
 import { R, library, soldier } from "./fixture.mjs";
-import { assembleBooks, registeredEntries } from "../dist/books.mjs";
+import { assembleBooks, registeredEntries } from "../src/engine/books.mjs";
 import {
   characterResult,
   createResultReader,
-} from "../dist/character-result.mjs";
-import { folioData } from "../dist/folio.mjs";
-import { calculation, esc } from "../dist/workspace.mjs";
-import { exportSheet } from "../dist/export.mjs";
-import { issueTarget } from "../dist/issue-targets.mjs";
-import { buildBookReport } from "../dist/book-report.mjs";
-import { validateCoverage } from "../dist/book-coverage.mjs";
+} from "../src/engine/character-result.mjs";
+import { folioData } from "../src/engine/folio.mjs";
+import { calculation, esc } from "../src/engine/workspace.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
+import { issueTarget } from "../src/engine/issue-targets.mjs";
+import { buildBookReport } from "../src/engine/book-report.mjs";
+import { validateCoverage } from "../src/engine/book-coverage.mjs";
 import {
   CONTENT_ALIASES,
   canonicalName,
   resolveContent,
   validateAliases,
-} from "../dist/content-references.mjs";
-import { sourceButton } from "../dist/source-controls.mjs";
+} from "../src/engine/content-references.mjs";
+import { sourceButton } from "./presentation-source-controls.mjs";
 import {
   detailKey,
   captureDisclosures,
   restoreDisclosures,
-} from "../dist/disclosures.mjs";
-import { createFeature as createActions } from "../dist/features/actions.mjs";
-import { createDraftHistory } from "../dist/draft-history.mjs";
-import { createFeature as createResets } from "../dist/features/creation-state.mjs";
-import { createFeature as createExperience } from "../dist/features/experience-view.mjs";
-import { runeShopRows } from "../dist/dwarf-guide-ui.mjs";
-import { createFeature as createReview } from "../dist/features/review-view.mjs";
+} from "../src/engine/disclosures.mjs";
+import { createFeature as createActions } from "./presentation-features-actions.mjs";
+import { createDraftHistory } from "../src/engine/draft-history.mjs";
+import { createFeature as createResets } from "./presentation-features-creation-state.mjs";
+import { createFeature as createExperience } from "./presentation-features-experience-view.mjs";
+import { runeShopRows } from "./presentation-dwarf-guide-ui.mjs";
+import { createFeature as createReview } from "./presentation-features-review-view.mjs";
 const B = assembleBooks(
   library,
   library.packs
@@ -139,11 +139,11 @@ test("folio, review, calculation and editable PDF share load-adjusted Skill/XP/r
       R,
       s,
       fs.readFileSync(
-        new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+        new URL("../public/assets/character-sheet.pdf", import.meta.url),
       ),
       JSON.parse(
         fs.readFileSync(
-          new URL("../dist/data/sheet-fields.json", import.meta.url),
+          new URL("../public/data/sheet-fields.json", import.meta.url),
         ),
       ),
       { result },

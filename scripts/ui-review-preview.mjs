@@ -5,7 +5,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { reviewFixtures } from "../tests/ui-review-fixtures.mjs";
-const root = path.resolve(fileURLToPath(new URL("../dist/", import.meta.url)));
+const root = path.resolve(fileURLToPath(new URL("../out/", import.meta.url)));
 const fixtures = JSON.stringify(reviewFixtures());
 const types = {
   ".html": "text/html",

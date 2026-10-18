@@ -96,13 +96,13 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     });
     await expect(
       menu.getByRole("link", { name: "Player character" }),
-    ).toHaveAttribute("href", "./?verify=1");
+    ).toHaveAttribute("href", "/?verify=1");
     await expect(
       menu.getByRole("link", { name: "NPC & creature" }),
-    ).toHaveAttribute("href", "gm.html?verify=1");
+    ).toHaveAttribute("href", "/bestiary/?verify=1");
     await expect(
       menu.getByRole("link", { name: "Marijan Mode" }),
-    ).toHaveAttribute("href", "marijan.html?verify=1");
+    ).toHaveAttribute("href", "/marijan/?verify=1");
     await expect(save).toBeVisible();
     await noOverflow(page);
     await page.screenshot({

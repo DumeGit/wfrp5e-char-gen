@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
-import * as M from "../dist/rules.mjs";
+import * as M from "../src/engine/rules.mjs";
 import {
   equipment,
   inventoryEntries,
@@ -10,21 +10,21 @@ import {
   gearSlots,
   recordAcquisition,
   itemWeight,
-} from "../dist/equipment.mjs";
+} from "../src/engine/equipment.mjs";
 import {
   buyTrapping,
   purse,
   marketCatalog,
   purchaseItem,
-} from "../dist/market.mjs";
-import { migrateInventory } from "../dist/inventory.mjs";
+} from "../src/engine/market.mjs";
+import { migrateInventory } from "../src/engine/inventory.mjs";
 import {
   appearanceSummary,
   doomingResult,
   suggestedName,
-} from "../dist/background.mjs";
-import { exportSheet } from "../dist/export.mjs";
-import { folioGear } from "../dist/folio.mjs";
+} from "../src/engine/background.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
+import { folioGear } from "../src/engine/folio.mjs";
 import { R, soldier } from "./fixture.mjs";
 const rich = () => {
   const s = soldier();
@@ -513,11 +513,11 @@ test("fillable PDF has both left/right armour fields, effective load scores and 
       R,
       s,
       fs.readFileSync(
-        new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+        new URL("../public/assets/character-sheet.pdf", import.meta.url),
       ),
       JSON.parse(
         fs.readFileSync(
-          new URL("../dist/data/sheet-fields.json", import.meta.url),
+          new URL("../public/data/sheet-fields.json", import.meta.url),
         ),
       ),
     );

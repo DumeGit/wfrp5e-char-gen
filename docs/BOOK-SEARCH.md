@@ -2,7 +2,7 @@
 
 Lustria's initial batch adds 45 reviewed mechanical references plus its implemented Career/equipment/spell profiles. It preserves original Mathlann prayer and Trait rules as reading references while conflicting creator adaptations remain pending. Sections are bounded independently; the audit is selected coverage rather than a full-book claim. See [LUSTRIA.md](LUSTRIA.md).
 
-The masthead search launcher opens the same **Search the books** workspace in both creators. Desktop uses a large centred modal with results on the left and a reading pane on the right. Phones use a full-screen modal with separate results/reference views; **Back to search** restores the results. The input node stays stable throughout. Existing Career, Experience, magic and shop filters remain independent.
+The masthead search launcher opens the same **Search the books** workspace in all three creators. Desktop uses a large centred modal with results on the left and a reading pane on the right. Phones use a full-screen modal with separate results/reference views; **Back to search** restores the results. The input node stays stable throughout. Existing Career, Experience, magic and shop filters remain independent.
 
 ## Publication scope — 16 October 2026
 
@@ -72,20 +72,19 @@ Exact catalogue names and reviewed scoped aliases in the body become discreet li
 
 ## Modules and maintenance
 
-- `book-search.mjs`: creator-derived index and existing PC navigation context; re-exports the shared matcher.
-- `search-ranking.mjs`, `search-engine.mjs`, `search-worker.mjs`: shared pure matching, lazy worker orchestration and worker/fallback ranking.
-- `reference-entries.mjs`: strict independent schema for printed gameplay records; no creator mechanics.
+- `src/engine/book-search.mjs`: creator-derived index and existing PC navigation context; re-exports the shared matcher.
+- `src/engine/search-ranking.mjs`, `search-engine.mjs`, `search-worker.mjs`: pure matching, lazy worker orchestration and fallback ranking. `scripts/build-search-worker.mjs` publishes the canonical worker and its dependencies under `public/workers/`.
+- `src/engine/reference-entries.mjs`: strict independent schema for printed gameplay records; no creator mechanics.
 - `scripts/search-coverage.mjs`: generated search inventory, source/output hashes and reference target checks.
-- `rule-references.mjs`: source validation and lazy version/identity-checked hydration.
-- `search-controller.mjs`: shared modal, persistent field, native filters, chips, loading/retry, keyboard, result batches, reader layout and return position.
-- `search-filters.mjs`: category grouping, exact filter vocabulary, matching, options and wire validation.
-- `search-metadata.mjs`: build-time source-field projection and reviewed identity-based classifications; never character state.
-- `search-presentation.mjs`: shared category labels, escaped paragraphs/bullets/tables, Species metadata and related-term DOM links.
-- `book-search-text.mjs` / `book-search-links.mjs`: annotation separation and exact related-name/alias resolution.
-- `search-library.mjs`: build-time all-pack index, compact wire format and version-checked lazy loading.
-- `reference-search.mjs` / `reference-body.mjs`: common source/Legacy reader, safe profiles and chain history.
-- `features/book-search.mjs` / `gm/references.mjs`: thin entry-point wrappers around the same reader.
-- `book-search.css`: shared desktop/mobile surfaces using Black Banner semantic tokens.
+- `src/engine/rule-references.mjs`: source validation and lazy version/identity-checked hydration.
+- `src/features/reference-search/ReferenceSearch.tsx`: native React modal, stable input, native filters/chips, loading/retry, keyboard, result batches, reader layout and chain/return position.
+- `src/features/reference-search/ReferenceBody.tsx`: safe React paragraphs/tables, profile fields, Species metadata and Career membership tables; source wording is not duplicated here.
+- `src/features/reference-search/library.ts`: shared lazy payload, related-name linker and Career index; `src/services/content.ts` caches immutable public wire data across modes.
+- `src/engine/search-filters.mjs`, `search-metadata.mjs`: filter vocabulary, matching/options/wire validation and build-time reviewed metadata projection; never character state.
+- `src/engine/search-presentation.mjs`: shared category labels and plain-text result snippets.
+- `src/engine/book-search-text.mjs`, `book-search-links.mjs`: annotation separation and exact related-name/alias resolution.
+- `src/engine/search-library.mjs`: build-time all-pack index, compact wire format and version-checked lazy loading of `public/data/search-library.json`.
+- `src/styles/book-search.css`: shared desktop/mobile surfaces using semantic tokens. `CreatorFrame` mounts the same React search in every mode; the old search-controller/reference-search/reference-body DOM renderers and mode wrappers have been removed.
 
 Add a rule only after reviewing its supplied page and checking tables/symbols against the PDF. Bump the book version and regenerate all libraries, registry coverage/counts and offline assets together. Keep creator handlers separate from reference prose and do not imply exhaustive coverage. Use `npm run test:ui:search` and affected Node regressions for search changes, with generated/source checks after imports. Follow [TESTING.md](TESTING.md) for when full release validation is required; update affected Markdown and commit locally without pushing.
 
@@ -115,7 +114,7 @@ The compact wire library stores each printed body once and rehydrates its matchi
 
 ## Reviewed extraction workflow
 
-Reuse MarkItDown text as the prose locator. The companion PDF-layout tools require PyMuPDF (reviewed with 1.28.2). `python scripts/extract-search-sources.py --book <book-id>` verifies the supplied PDF hash and stages coordinates/fonts outside the app. `python scripts/prepare-search-references.py --book <book-id>` proposes gameplay sections from the reviewed range recipe. After staging all supplements, `python scripts/prepare-search-profiles.py` proposes isolated stat blocks and flags nonstandard layouts. The default staging directory is the outer workspace's `tmp/pdfs/search-review`; the configurable tools refuse a directory inside `dist`.
+Reuse MarkItDown text as the prose locator. The companion PDF-layout tools require PyMuPDF (reviewed with 1.28.2). `python scripts/extract-search-sources.py --book <book-id>` verifies the supplied PDF hash and stages coordinates/fonts outside the app. `python scripts/prepare-search-references.py --book <book-id>` proposes gameplay sections from the reviewed range recipe. After staging all supplements, `python scripts/prepare-search-profiles.py` proposes isolated stat blocks and flags nonstandard layouts. The default staging directory is the outer workspace's `tmp/pdfs/search-review`; the tools retain a legacy guard against staging inside `dist`. Staging must also remain outside the current `public/` and `out/` directories; do not rely on that legacy guard to protect the new public roots.
 
 These are review aids, not a reproducible one-command publisher. Check column order, table headers/continuations, labels, original numeric modifiers, printed-page offsets and profile rows against the PDF. Consolidate multi-page tables; give extracted examples an explicit context. Decide whether each candidate is included, already represented, consolidated, excluded or unresolved. Register only reviewed text in `reference-entries.json`, then freeze source/output hashes and target identities in `scripts/search-reference-review.json`. Excluded full text, raw layout and original PDFs remain outside the release. The creator rebuild helper preserves separately reviewed references, coverage and the installed version.
 
@@ -160,7 +159,7 @@ The four source-only High Elf Careers previously shown under Not specified are A
 
 Focused verification: 21 search-filter/printed-reference tests passed, covering Academic filtering, removed search/chaining targets, retained Create Familiar and source-review consistency. Build and syntax/format checks passed. No UI changes were made for this correction.
 
-The Night Parade integration: see [NIGHT-PARADE.md](NIGHT-PARADE.md). Its pack shares three Ride specialisations; GM foundations/templates are opt-in. Supplement template operations live in `dist/gm/templates.mjs`, validated and compiled from reviewed `content/sources/gm/books/*.json`. Book generation discovers registered GM source files automatically; no hardcoded supplement list is maintained.
+The Night Parade integration: see [NIGHT-PARADE.md](NIGHT-PARADE.md). Its pack shares three Ride specialisations; GM foundations/templates are opt-in. Supplement template operations live in `src/engine/gm/templates.mjs`, validated and compiled from reviewed `content/sources/gm/books/*.json`. Book generation discovers registered GM source files automatically; no hardcoded supplement list is maintained.
 
 The launcher stays in the wide desktop search ribbon; on phones its existing button moves to a 44px magnifying-glass icon at the top right, beside the shared creator menu. All three modes use the same controller/dialog; opening and closing behavior, filters, reference history and lazy loading are unchanged.
 

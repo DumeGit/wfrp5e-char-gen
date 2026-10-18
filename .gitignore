@@ -6,3 +6,8 @@ test-results/
 __pycache__/
 playwright-report/
 content/descriptions/edits/
+
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts

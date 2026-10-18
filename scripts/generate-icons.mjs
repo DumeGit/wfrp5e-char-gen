@@ -3,7 +3,7 @@
 import { chromium } from "@playwright/test";
 import { readFile, writeFile } from "node:fs/promises";
 
-const assets = new URL("../dist/assets/", import.meta.url);
+const assets = new URL("../public/assets/", import.meta.url);
 const svg = await readFile(new URL("ledger-emblem.svg", assets), "utf8");
 const bounds = svg
   .match(/viewBox="([^"]+)"/)?.[1]

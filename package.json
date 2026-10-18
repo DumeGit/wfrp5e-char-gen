@@ -8,13 +8,13 @@
     "check:books": "node scripts/check-books.mjs",
     "check:descriptions": "node scripts/descriptions.mjs",
     "descriptions:register": "node scripts/descriptions.mjs --register",
-    "build": "npm run check:books && npm run generate:books && node scripts/build-pwa.mjs",
-    "test": "node --test tests/*.test.mjs",
+    "build": "npm run check:books && npm run generate:books && node scripts/build-search-worker.mjs && node scripts/build-static-guide.mjs && next build && node scripts/build-compatibility.mjs && node scripts/build-pwa.mjs",
+    "test": "node --import tsx --test tests/*.test.mjs",
     "generate:books": "node scripts/generate-books.mjs",
     "check:generated": "node scripts/generate-books.mjs --check",
     "check:code": "node scripts/check-code.mjs",
-    "check:format": "prettier --check \"dist/*.mjs\" \"dist/features/*.mjs\" \"dist/gm/*.mjs\" \"dist/marijan/*.mjs\" dist/app.js scripts/check-code.mjs scripts/check-offline.mjs scripts/generate-books.mjs playwright.config.mjs \"tests/browser/*.mjs\" scripts/browser-test-server.mjs scripts/run-browser-tests.mjs scripts/browser-build.mjs tests/browser-build.test.mjs",
-    "check:release": "npm run check:books && npm run check:code && npm run check:generated && npm run check:format && npm test && node scripts/check-offline.mjs && node scripts/run-browser-tests.mjs all --built",
+    "check:format": "prettier --check \"src/**/*.{ts,tsx,mjs,js,css,html}\" next.config.ts tsconfig.json package.json playwright*.mjs scripts/check-code.mjs scripts/check-offline.mjs scripts/generate-books.mjs scripts/book-source-library.mjs scripts/build-search-worker.mjs scripts/build-static-guide.mjs scripts/build-compatibility.mjs scripts/build-pwa.mjs scripts/service-worker.template.js scripts/browser-test-server.mjs scripts/run-browser-tests.mjs scripts/browser-build.mjs scripts/measure-startup.mjs \"tests/browser/*.mjs\" \"tests/presentation*.mjs\" tests/react-presentation.mjs tests/bestiary-presentation.mjs tests/reference-render.mjs tests/reference-react.test.mjs tests/pwa-lifecycle.test.mjs tests/browser-build.test.mjs tests/offline-build.test.mjs",
+    "check:release": "npm run build && npm run check:code && npm run check:generated && npm run check:format && npm run check:framework && npm run test:unit && npm run check:offline && node scripts/run-browser-tests.mjs all --built && node scripts/run-browser-tests.mjs tablet --built",
     "test:ui:smoke": "node scripts/run-browser-tests.mjs smoke",
     "test:ui:search": "node scripts/run-browser-tests.mjs search",
     "test:ui:notices": "node scripts/run-browser-tests.mjs notices",
@@ -34,15 +34,34 @@
     "test:ui:report": "playwright show-report playwright-report",
     "check:quick": "npm run check:code && npm run check:format",
     "test:ui:failed": "node scripts/run-browser-tests.mjs all --last-failed",
-    "test:ui:tablet": "node scripts/run-browser-tests.mjs tablet"
+    "test:ui:tablet": "node scripts/run-browser-tests.mjs tablet",
+    "dev": "next dev",
+    "check:types": "tsc --noEmit",
+    "predev": "node scripts/build-search-worker.mjs && node scripts/build-static-guide.mjs",
+    "test:stores": "tsx --test src/features/*/*.test.ts",
+    "check:framework": "npm run check:types && npm run test:stores",
+    "check:offline": "node scripts/check-offline.mjs",
+    "test:unit": "node --import tsx --test tests/*.test.mjs"
   },
   "dependencies": {
-    "pdf-lib": "1.17.1"
+    "next": "16.4.2",
+    "pdf-lib": "1.17.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.0",
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "acorn": "^8.15.0",
     "eslint-scope": "^8.4.0",
-    "prettier": "^3.6.2"
+    "parse5": "8.0.0",
+    "prettier": "^3.6.2",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }

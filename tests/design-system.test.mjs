@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { chapterHeading } from "../dist/design-system.mjs";
+import { chapterHeading } from "./presentation-design-system.mjs";
 
 test("Decorated character headings preserve the accessible name without interpreting user markup", () => {
   const html = chapterHeading('"<img src=x onerror=alert(1)> & Walther');

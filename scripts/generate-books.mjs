@@ -1,19 +1,20 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
-import { loadBookLibrary, assembleBooks } from "../dist/books.mjs";
+import { loadBookLibrary } from "./book-source-library.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
 import {
   prepareGM,
   addGMSupplement,
   gmInventory,
-} from "../dist/gm/content.mjs";
-import { BOOK_BUNDLE_FORMAT } from "../dist/book-bundle.mjs";
+} from "../src/engine/gm/content.mjs";
+import { BOOK_BUNDLE_FORMAT } from "../src/engine/book-bundle.mjs";
 import {
   checkDescriptions,
   loadDescriptionCatalogue,
 } from "./descriptions.mjs";
-import { hydrateDescriptions } from "../dist/description-data.mjs";
+import { hydrateDescriptions } from "../src/engine/description-data.mjs";
 import { publicGMData } from "./public-gm-data.mjs";
-import { assembleGMOptions } from "../dist/gm/books.mjs";
+import { assembleGMOptions } from "../src/engine/gm/books.mjs";
 import {
   searchCoverage,
   searchCoverageMarkdown,
@@ -22,12 +23,12 @@ import {
 import {
   buildReferenceLibrary,
   compactReferenceLibrary,
-} from "../dist/search-library.mjs";
+} from "../src/engine/search-library.mjs";
 import {
   buildBookReport,
   inclusionMarkdown,
   countSummary,
-} from "../dist/book-report.mjs";
+} from "../src/engine/book-report.mjs";
 const descriptions = await loadDescriptionCatalogue();
 const descriptionReport = await checkDescriptions(descriptions);
 const library = await loadBookLibrary(async (url) =>
@@ -140,7 +141,7 @@ for (const pack of library.packs.filter((p) => p.manifest.kind !== "variant")) {
 const searchReport = searchCoverage(library, corpus, review, gm);
 const outputs = [
   [
-    "../dist/description-rules.mjs",
+    "../src/engine/description-rules.mjs",
     "// Generated from content/descriptions/trait-rules.mjs. Edit the authoring source.\n" +
       (
         await readFile(
@@ -166,16 +167,16 @@ const outputs = [
       .join("\n")}\n`,
   ],
   [
-    "../dist/data/search-library.json",
+    "../public/data/search-library.json",
     JSON.stringify(compactReferenceLibrary(corpus)) + "\n",
   ],
   [
-    "../dist/data/search-coverage.json",
+    "../public/data/search-coverage.json",
     JSON.stringify(searchReport, null, 2) + "\n",
   ],
   ["../docs/SEARCH-COVERAGE.md", searchCoverageMarkdown(searchReport)],
   [
-    "../dist/data/rule-reference-library.json",
+    "../public/data/rule-reference-library.json",
     JSON.stringify({
       schemaVersion: 1,
       books: library.packs
@@ -189,10 +190,10 @@ const outputs = [
         })),
     }) + "\n",
   ],
-  ["../dist/gm/data.json", JSON.stringify(gm) + "\n"],
+  ["../public/gm/data.json", JSON.stringify(gm) + "\n"],
   ["../docs/GM-CONTENT.md", gmInventory(gm)],
   [
-    "../dist/data/book-library.json",
+    "../public/data/book-library.json",
     JSON.stringify({
       format: BOOK_BUNDLE_FORMAT,
       schemaVersion: library.schemaVersion,
@@ -213,7 +214,10 @@ const outputs = [
       })),
     }) + "\n",
   ],
-  ["../dist/data/content-report.json", JSON.stringify(report, null, 2) + "\n"],
+  [
+    "../public/data/content-report.json",
+    JSON.stringify(report, null, 2) + "\n",
+  ],
   ["../docs/INCLUSION-MATRIX.md", inclusionMarkdown(report)],
   ["../README.md", next],
 ];

@@ -1,23 +1,23 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { library, R } from "./fixture.mjs";
-import { assembleBooks, bookSelection, randomTable } from "../dist/books.mjs";
-import * as M from "../dist/rules.mjs";
-import { miracleChoices, cultIssues } from "../dist/cults.mjs";
+import { assembleBooks, bookSelection, randomTable } from "../src/engine/books.mjs";
+import * as M from "../src/engine/rules.mjs";
+import { miracleChoices, cultIssues } from "../src/engine/cults.mjs";
 import {
   careerVariantPanel,
   switchCareerVariant,
-} from "../dist/career-variants.mjs";
-import { regionalCareer } from "../dist/regional-careers.mjs";
-import { marketCatalog } from "../dist/market.mjs";
-import { legacyTitle } from "../dist/legacy.mjs";
-import { deftMiracleAdaptation } from "../dist/deft-steps.mjs";
-import { buildSearchIndex, searchBooks } from "../dist/book-search.mjs";
+} from "./presentation-career-variants.mjs";
+import { regionalCareer } from "../src/engine/regional-careers.mjs";
+import { marketCatalog } from "../src/engine/market.mjs";
+import { legacyTitle } from "./presentation-legacy.mjs";
+import { deftMiracleAdaptation } from "../src/engine/deft-steps.mjs";
+import { buildSearchIndex, searchBooks } from "../src/engine/book-search.mjs";
 import {
   CAUSE_KEY,
   CAUSE_PLACEHOLDER,
   namedCause,
-} from "../dist/talent-targets.mjs";
+} from "../src/engine/talent-targets.mjs";
 
 const B = assembleBooks(library, ["deft-steps"]);
 const source = (x) => x.source.book === "deft-steps";

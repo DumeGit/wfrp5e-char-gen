@@ -13,7 +13,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
   }, info) => {
     if (mode === "Player") await openPC(page);
     else if (mode === "GM") await openGM(page);
-    else await page.goto("/marijan.html?verify=1");
+    else await page.goto("/marijan/?verify=1");
     const before = await page.evaluate(() => JSON.stringify(localStorage));
     await search(page, "Strong Back");
     await page.getByRole("option", { name: /^Strong Back Talent/ }).click();

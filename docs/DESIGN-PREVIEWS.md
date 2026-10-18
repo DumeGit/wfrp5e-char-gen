@@ -1,12 +1,14 @@
 # Old World visual studies
 
+Current component reference: build the app and open `/design-system.html` from `out/`. The studies below are historical proposals, not the Next application. Some gallery/review scripts still refer to removed `/dist/` assets and require path adaptation before reuse; do not present those legacy servers as current production previews.
+
 ## Compact Bestiary card studies — 16 October 2026
 
 `design-previews/bestiary-card-layouts.html` retains three print-layout studies; A is now selected and implemented: A uses a section-label gutter, B groups short combat data while retaining full-width ability descriptions, and C balances content across two text columns. A native selector switches among a customised core Human, Griffon and Varghulf; a second selector compares 9.25, 8 and 7.5 pt body text. Each layout receives identical calculated statistics, attacks, location soak, Skills, canonical Talent/Trait summaries and equipment. Embedded snapshots were produced through the existing GM result and shared all-book catalogue; they are examples, not a new game-data source. The study remains a historical snapshot; production now uses the measured A grid and optional flexible packing. Saved drafts and the default six-card selection remain unchanged.
 
 Cards have content-driven height and minimal white-paper/greyscale framing. The page reports browser height estimates against the existing six-card slot, not a promise of PDF fit. C is the densest of these samples at equal text size; B prioritises full-width reading and can be taller. Flexible-height A4 packing is now implemented with measured pagination, earlier-page gap filling and retained six/four fixed cut-line alternatives. The comparison itself does not implement page packing. Desktop and 390px browser checks found no horizontal overflow or script errors; snapshots were visually inspected. No rule text was shortened or omitted to force a fit.
 
-Four small standalone style studies live in `design-previews/`, outside the published `dist` application. They are historical proposals; the user subsequently selected C from the fantasy Muster Roll iterations for implementation. Serve that directory locally and open its `index.html`; the current development preview is http://127.0.0.1:8075/.
+Four small standalone style studies live in `design-previews/`, outside the published `out/` application. They are historical proposals; the user subsequently selected C from the fantasy Muster Roll iterations for implementation. Serve that directory locally and open its `index.html`; the historical local preview used port 8075.
 
 | Study | Direction | Sample motion / sound |
 | --- | --- | --- |
@@ -45,7 +47,7 @@ The decorative S now uses a line-height-one box with an optical correction in th
 
 ## Bestiary colour studies — 7 October 2026
 
-Three proposals are in `design-previews/bestiary-colours.html`, outside `dist`. Serve the repository root and open `/design-previews/bestiary-colours.html` (the original local preview used port 8095). They draw their palette from the generated skeleton-army banner. The user selected **A — Moonlit Vellum** on 7 October 2026, now implemented through shared theme tokens in the GM creator. The player creator retains its original palette.
+Three proposals are in `design-previews/bestiary-colours.html`, outside `public/` and `out/`. Serve the repository root and open `/design-previews/bestiary-colours.html` (the original local preview used port 8095). They draw their palette from the generated skeleton-army banner. The user selected **A — Moonlit Vellum** on 7 October 2026, now implemented through shared theme tokens in the GM creator. The player creator retains its original palette.
 
 | Study | Colour direction |
 | --- | --- |
@@ -114,4 +116,4 @@ The user approved implementation of the final three panel materials. Production 
 
 `design-previews/ledger-logos.html` compares four original vector marks: **A — The Scribe’s Ward** (quill and divided shield), **B — Fate’s Seal** (ten-sided die and burning trail), **C — The Illuminated Ledger** (custom angular C/L monogram), and **D — The Carrion Standard** (skull and ragged pennon). Each has a large view, a header-sized sample, 48/32/24px comparisons and a vellum/folio sample. Their source SVGs and saved comparison are in `design-previews/logo-studies/`.
 
-Run the existing `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/ledger-logos.html`. The gallery was visually inspected with all assets loaded; SVG XML and local image references were checked. These studies use local fonts, original paths and the existing brass/oxblood/vellum palette; no copied Warhammer wordmark or faction crest is embedded. The user subsequently selected **D — The Carrion Standard** for production on 15 October. Its canonical SVG now lives in `dist/assets/ledger-emblem.svg`, shared by all creators and favicons. Generated PNG install icons use that same SVG; the folio no longer adds another shield frame. A/B/C remain standalone alternatives; creator behavior is unchanged. No production build or creator regression suite is needed for these isolated previews.
+Run the existing `node design-previews/serve.mjs` and open `http://127.0.0.1:8110/design-previews/ledger-logos.html`. The gallery was visually inspected with all assets loaded; SVG XML and local image references were checked. These studies use local fonts, original paths and the existing brass/oxblood/vellum palette; no copied Warhammer wordmark or faction crest is embedded. The user subsequently selected **D — The Carrion Standard** for production on 15 October. Its canonical SVG now lives in `public/assets/ledger-emblem.svg`, shared by all creators and favicons. Generated PNG install icons use that same SVG; the folio no longer adds another shield frame. A/B/C remain standalone alternatives; creator behavior is unchanged. No production build or creator regression suite is needed for these isolated previews.

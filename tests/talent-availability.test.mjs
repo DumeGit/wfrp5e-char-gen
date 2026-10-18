@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import * as M from '../dist/rules.mjs';
+import * as M from '../src/engine/rules.mjs';
 import {R,soldier} from './fixture.mjs';
 
 test('a second Bless explains the normal one-Talent limit even when XP is insufficient',()=>{

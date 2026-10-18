@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import * as PDFLib from "pdf-lib";
-import * as M from "../dist/rules.mjs";
+import * as M from "../src/engine/rules.mjs";
 import { library, R, soldier } from "./fixture.mjs";
 import {
   assembleBooks,
@@ -11,20 +11,20 @@ import {
   randomTable,
   tableResult,
   validateCatalog,
-} from "../dist/books.mjs";
-import { careerAvailable } from "../dist/origins.mjs";
+} from "../src/engine/books.mjs";
+import { careerAvailable } from "../src/engine/origins.mjs";
 import {
   speciesReferences,
   speciesLoreIssue,
-} from "../dist/species-mechanics.mjs";
-import { miracleChoices, cultIssues } from "../dist/cults.mjs";
-import { divineReference, freeMagicIssues } from "../dist/archives-iii.mjs";
-import { speciesRulePanel } from "../dist/archives-ui.mjs";
-import { collegePanel } from "../dist/winds-of-magic-ui.mjs";
-import { suggestion } from "../dist/background.mjs";
-import { exportSheet } from "../dist/export.mjs";
-import { folioData } from "../dist/folio.mjs";
-import { gearSlots } from "../dist/equipment.mjs";
+} from "../src/engine/species-mechanics.mjs";
+import { miracleChoices, cultIssues } from "../src/engine/cults.mjs";
+import { divineReference, freeMagicIssues } from "../src/engine/archives-iii.mjs";
+import { speciesRulePanel } from "./presentation-archives-ui.mjs";
+import { collegePanel } from "./presentation-winds-of-magic-ui.mjs";
+import { suggestion } from "../src/engine/background.mjs";
+import { exportSheet } from "../src/engine/export.mjs";
+import { folioData } from "../src/engine/folio.mjs";
+import { gearSlots } from "../src/engine/equipment.mjs";
 
 const B = assembleBooks(library, ["rough-nights"]);
 export function gnome(career = "soldier", catalog = B) {
@@ -381,11 +381,11 @@ test("Gnome PDF retains all editable fields and exports Small Wounds, adapted va
       B,
       s,
       fs.readFileSync(
-        new URL("../dist/assets/character-sheet.pdf", import.meta.url),
+        new URL("../public/assets/character-sheet.pdf", import.meta.url),
       ),
       JSON.parse(
         fs.readFileSync(
-          new URL("../dist/data/sheet-fields.json", import.meta.url),
+          new URL("../public/data/sheet-fields.json", import.meta.url),
         ),
       ),
     ),

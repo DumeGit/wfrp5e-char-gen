@@ -65,6 +65,12 @@ test("a waiting offline update applies without losing purchases @pwa", async ({
     (key) => localStorage.getItem(key),
     PC_STORAGE,
   );
+  const originalCaches = await page.evaluate(async () =>
+    (await caches.keys()).filter((key) =>
+      key.startsWith("wfrp-ledger-offline-"),
+    ),
+  );
+  expect(originalCaches).toHaveLength(1);
   await context.addCookies([
     { name: "wfrp-test-update", value: "1", url: baseURL },
   ]);
@@ -86,5 +92,5 @@ test("a waiting offline update applies without losing purchases @pwa", async ({
         ),
       ),
     )
-    .toEqual([expect.stringMatching(/-browser-update$/)]);
+    .toEqual([...originalCaches, expect.stringMatching(/-browser-update$/)]);
 });

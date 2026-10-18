@@ -1,5 +1,7 @@
 # Shared UI/UX implementation — 10 October 2026
 
+Current maintenance note (Next migration): the dated results below describe their original implementation. React components and mode stores now own the shell, native fields/disclosures, issue presentation and busy states; `interface-kit.mjs` and the mobile-shell controller have been removed. Use `src/components/`, `src/features/`, `src/styles/interface.css` and `src/styles/mobile-shell.css` for current changes.
+
 ## Tablet polish — 17 October 2026
 
 Compact navigation now extends through 1000 CSS pixels across all modes; live tool/history/search nodes restore on crossing 1001px. Search filter layout remains independent at 760px. Marijan Characteristics use an editor container with two/three/five columns and readable 64px number inputs. Coarse-pointer standalone actions and selects retain 44px touch targets, while inline prose links keep their compact appearance. Local tablet cases cover portrait, landscape, larger display settings and reduced height; physical-device behaviour is not certified. Verification: 15 tablet cases, 24 shared interface/shell cases (four intentional skips) and two narrow-screen allocation cases passed. Portrait GM/Player, portrait/landscape Marijan and short-landscape print screenshots were visually inspected; code, formatting and offline checks passed.

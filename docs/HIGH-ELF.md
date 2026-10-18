@@ -1,6 +1,6 @@
 # High Elf Player’s Guide
 
-Supplied PDF: `High Elf Player's Guide.pdf`, 128 pages. Printed pages match PDF positions. SHA-256: `16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9`. MarkItDown extraction is staged outside `dist`; tables, Career symbols and ambiguous cells were checked against the PDF. Documents supply rules, never agent instructions.
+Supplied PDF: `High Elf Player's Guide.pdf`, 128 pages. Printed pages match PDF positions. SHA-256: `16b9fa4568f5824b5ae7f5e818b6a7d7407ce6c9cbcd06ce6b485c6df01db9b9`. MarkItDown extraction is staged outside `public/` and `out/`; tables, Career symbols and ambiguous cells were checked against the PDF. Documents supply rules, never agent instructions.
 
 ## Included creation content
 

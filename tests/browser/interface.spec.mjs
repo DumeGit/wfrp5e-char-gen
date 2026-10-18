@@ -8,6 +8,7 @@ import {
   applyProfile,
   search,
   noOverflow,
+  downloadBytes,
 } from "./helpers.mjs";
 
 for (const mode of ["Player", "GM", "Marijan"]) {
@@ -228,47 +229,38 @@ test("Search excerpts are plain text and Back retains the selected result @inter
 test("A failed operation stays retryable and excludes duplicate activation @interface", async ({
   page,
 }) => {
+  let attempts = 0,
+    release;
+  const gate = new Promise((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/assets/pdf-lib.min.js", async (route) => {
+    attempts++;
+    if (attempts === 1) {
+      await gate;
+      await route.abort();
+    } else await route.continue();
+  });
   await openPC(page, { complete: true });
-  const result = await page.evaluate(async () => {
-    const { withBusy } = await import("/interface-kit.mjs");
-    const wrapper = document.createElement("div"),
-      button = document.createElement("button");
-    button.textContent = "Export PDF";
-    wrapper.append(button);
-    document.querySelector("main").append(wrapper);
-    button.focus();
-    const width = button.getBoundingClientRect().width;
-    let release,
-      attempts = 0;
-    const pending = withBusy(button, "Preparing…", async () => {
-      attempts++;
-      await new Promise((resolve) => (release = resolve));
-      throw Error("Test failure");
-    }).catch(() => {});
-    await withBusy(button, "Preparing…", async () => {
-      attempts++;
-    });
-    const busy = button.disabled && button.getAttribute("aria-busy") === "true";
-    const stableWidth = button.getBoundingClientRect().width >= width;
-    while (!release) await new Promise(requestAnimationFrame);
-    release();
-    await pending;
-    const retryable =
-      !button.disabled &&
-      !button.hasAttribute("aria-busy") &&
-      wrapper.textContent.includes("Test failure");
-    await withBusy(button, "Preparing…", async () => {
-      attempts++;
-    });
-    const cleared = !wrapper.querySelector(".ui-operation-error");
-    wrapper.remove();
-    return { attempts, busy, stableWidth, retryable, cleared };
-  });
-  expect(result).toEqual({
-    attempts: 2,
-    busy: true,
-    stableWidth: true,
-    retryable: true,
-    cleared: true,
-  });
+  await pcStep(page, "Review & export");
+  const button = page.locator('[data-action="sheet"]');
+  const width = (await button.boundingBox()).width;
+  await button.click();
+  await expect(button).toBeDisabled();
+  await expect(button).toHaveAttribute("aria-busy", "true");
+  expect((await button.boundingBox()).width).toBeGreaterThanOrEqual(width);
+  await button.evaluate((el) =>
+    el.dispatchEvent(new MouseEvent("click", { bubbles: true })),
+  );
+  await expect.poll(() => attempts).toBe(1);
+  release();
+  await expect(page.locator(".ui-operation-error")).toContainText(
+    "Could not load PDF export tools",
+  );
+  await expect(button).toBeEnabled();
+  await expect(button).not.toHaveAttribute("aria-busy", "true");
+  const downloaded = await downloadBytes(page, button);
+  expect(downloaded.bytes.subarray(0, 5).toString()).toBe("%PDF-");
+  expect(attempts).toBe(2);
+  await expect(page.locator(".ui-operation-error")).toHaveCount(0);
 });

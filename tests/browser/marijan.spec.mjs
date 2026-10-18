@@ -8,7 +8,7 @@ import {
 } from "./helpers.mjs";
 import { PDFDocument } from "pdf-lib";
 const open = async (page) => {
-  await page.goto("/marijan.html?verify=1");
+  await page.goto("/marijan/?verify=1");
   await expect(
     page.getByRole("heading", { name: "Marijan Mode", exact: true }),
   ).toBeVisible();

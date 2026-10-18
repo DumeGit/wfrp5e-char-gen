@@ -20,9 +20,12 @@ test("Sea origins and optional artillery reuse Player book and origin controls @
     .click();
   await page.locator('[data-book="sea-of-claws"]').check();
   await page.locator('[data-book="sea-of-claws-artillery"]').check();
+  page.once("dialog", (dialog) => dialog.accept());
   await page
     .getByRole("button", { name: "Use selected books", exact: true })
     .click();
+  await page.locator("#species").selectOption("Human");
+  await page.getByRole("button", { name: "Apply change", exact: true }).click();
   await page
     .locator("#regional-origin")
     .selectOption("sea-of-claws:origin:bjornling");
@@ -78,7 +81,8 @@ test("Leech Wyrm warns before export and accepts a persisted manual Vomit score 
   await openGM(page);
   await openGMBooks(page);
   // A fresh Playwright context isolates this real autosave/reload check.
-  await page.goto("/gm.html");
+  await page.goto("/bestiary/");
+  await openGMBooks(page);
   await page.locator("#gm-book-sea-of-claws").check();
   await applyProfile(page, "Leech Wyrm");
   await expect(page.locator(".gm-issues")).toContainText(

@@ -3,9 +3,11 @@ import http from "node:http";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-const root = path.resolve(fileURLToPath(new URL("../dist/", import.meta.url)));
+const root = path.resolve(fileURLToPath(new URL("../out/", import.meta.url)));
 const types = {
   ".html": "text/html",
+  ".txt": "text/x-component",
+  ".rsc": "text/x-component",
   ".js": "text/javascript",
   ".mjs": "text/javascript",
   ".json": "application/json",
@@ -48,17 +50,19 @@ const server = http.createServer(async (req, res) => {
     }
     let bytes = await readFile(file);
     // An isolated test cookie serves a second real worker version without
-    // rewriting dist or touching another browser's preview/storage.
-    if (
-      pathname === "/sw.js" &&
-      /(?:^|;\s*)wfrp-test-update=1(?:;|$)/.test(req.headers.cookie || "")
-    ) {
+    // rewriting out or touching another browser's preview/storage.
+    const update = /(?:^|;\s*)wfrp-test-update=(\d+)(?:;|$)/.exec(
+      req.headers.cookie || "",
+    );
+    if (pathname === "/sw.js" && update && Number(update[1]) > 0) {
+      const suffix =
+        update[1] === "1" ? "-browser-update" : "-browser-update-" + update[1];
       bytes = Buffer.from(
         bytes
           .toString("utf8")
           .replace(
-            /const CACHE=CACHE_PREFIX\+"([^"]+)";/,
-            'const CACHE=CACHE_PREFIX+"$1-browser-update";',
+            /const CACHE\s*=\s*CACHE_PREFIX\s*\+\s*"([^"]+)";/,
+            (_, version) => `const CACHE=CACHE_PREFIX+"${version}${suffix}";`,
           ),
       );
     }

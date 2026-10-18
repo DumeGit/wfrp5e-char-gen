@@ -1,19 +1,19 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { assembleGMOptions } from "../dist/gm/books.mjs";
-import { freshGM, validateGMDraft } from "../dist/gm/model.mjs";
-import { appearanceSpecies, rollGMAppearance } from "../dist/gm/appearance.mjs";
+import { assembleGMOptions } from "../src/engine/gm/books.mjs";
+import { freshGM, validateGMDraft } from "../src/engine/gm/model.mjs";
+import { appearanceSpecies, rollGMAppearance } from "../src/engine/gm/appearance.mjs";
 
 const R = assembleGMOptions(
     JSON.parse(
       await readFile(
-        new URL("../dist/data/book-library.json", import.meta.url),
+        new URL("../public/data/book-library.json", import.meta.url),
       ),
     ),
   ),
   data = JSON.parse(
-    await readFile(new URL("../dist/gm/data.json", import.meta.url)),
+    await readFile(new URL("../public/gm/data.json", import.meta.url)),
   );
 const profile = (id) => data.profiles.find((p) => p.id === id);
 

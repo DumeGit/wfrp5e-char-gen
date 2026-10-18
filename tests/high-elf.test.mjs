@@ -3,16 +3,16 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
 import {library,R as core} from './fixture.mjs';
-import {assembleBooks,bookSelection,randomTable,tableResult,catalogForCharacter} from '../dist/books.mjs';
-import * as M from '../dist/rules.mjs';
-import * as E from '../dist/high-elf.mjs';
-import {creationSpecies,careerAvailable} from '../dist/origins.mjs';
-import {marketCatalog,buyTrapping,purse} from '../dist/market.mjs';
-import {gearSlots,equipment} from '../dist/equipment.mjs';
-import {folioData} from '../dist/folio.mjs';
-import {exportSheet} from '../dist/export.mjs';
-import {quoteRitual} from '../dist/winds-of-magic.mjs';
-import {elfOriginPanel,elfSkillsPanel,elfMagicShop,elfCareerPanel} from '../dist/high-elf-ui.mjs';
+import {assembleBooks,bookSelection,randomTable,tableResult,catalogForCharacter} from '../src/engine/books.mjs';
+import * as M from '../src/engine/rules.mjs';
+import * as E from '../src/engine/high-elf.mjs';
+import {creationSpecies,careerAvailable} from '../src/engine/origins.mjs';
+import {marketCatalog,buyTrapping,purse} from '../src/engine/market.mjs';
+import {gearSlots,equipment} from '../src/engine/equipment.mjs';
+import {folioData} from '../src/engine/folio.mjs';
+import {exportSheet} from '../src/engine/export.mjs';
+import {quoteRitual} from '../src/engine/winds-of-magic.mjs';
+import {elfOriginPanel,elfSkillsPanel,elfMagicShop,elfCareerPanel} from "./presentation-high-elf-ui.mjs";
 const R=assembleBooks(library,['high-elf']);
 function character(career='high-elf:career:sea-guard',origin='high-elf:origin:eataine',catalog=R){
  const s=M.fresh();s.points=Array(10).fill(10);Object.assign(s,{version:2,books:bookSelection(catalog),rollTables:{},name:'High Elf verification',species:'High Elf',origin,career,xp:100000,wealth:{amount:1000,currency:'gold crowns'}});
@@ -150,7 +150,7 @@ test('saved High Elf rules reject unknown data and impossible roll history but p
 });
 test('editable export records Elder Corruption, individual Skills, ancestry Fate and learned techniques',async()=>{
  globalThis.PDFLib=PDFLib;const s=character('high-elf:career:swordmaster');E.selectElfEra(R,s,'incursion');s.highElf.elderAge=250;for(const era of ['steel','incursion'])past(s,era);s.highElf.ancestry='chosen';s.highElf.prodigy='martial';s.highElf.psychology=1;for(const slot of M.careerSkillSlots(R,s,1).slice(0,8))M.purchase(R,s,'skill',slot.name);for(const k of M.KEYS.filter(k=>M.career(R,s).advanceScheme[k]===1).slice(0,2))M.purchase(R,s,'char',k);M.purchase(R,s,'promotion','');M.purchase(R,s,'talent','Sword-dancing');M.purchase(R,s,'technique','Flight of the Phoenix');assert.deepEqual(M.validation(R,s),[]);
- const bytes=await exportSheet(R,s,fs.readFileSync(new URL('../dist/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../dist/data/sheet-fields.json',import.meta.url),'utf8'))),doc=await PDFLib.PDFDocument.load(bytes),f=doc.getForm();
+ const bytes=await exportSheet(R,s,fs.readFileSync(new URL('../public/assets/character-sheet.pdf',import.meta.url)),JSON.parse(fs.readFileSync(new URL('../public/data/sheet-fields.json',import.meta.url),'utf8'))),doc=await PDFLib.PDFDocument.load(bytes),f=doc.getForm();
  assert.equal(f.getFields().length,556);assert.equal(f.getTextField('Fate').getText(),String(M.derive(R,s).fate));for(let n=1;n<=5;n++)assert.equal(f.getCheckBox(`Corruption_Point_${String(n).padStart(2,'0')}`).isChecked(),true);assert.equal(f.getCheckBox('Corruption_Point_06').isChecked(),false);assert.ok(doc.getPageCount()>2);
  fs.mkdirSync(new URL('../../tmp/pdfs/high-elf-review/output/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('../../tmp/pdfs/high-elf-review/output/elf-sheet.pdf',import.meta.url),bytes);fs.writeFileSync(new URL('../../tmp/pdfs/high-elf-review/output/elf-character.json',import.meta.url),JSON.stringify(s,null,2));
 });

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { assembleBooks } from "../dist/books.mjs";
+import { assembleBooks } from "../src/engine/books.mjs";
 import {
   freshGM,
   calculateGM,
@@ -9,24 +9,25 @@ import {
   applyTemplate,
   individualise,
   woundFormula,
-} from "../dist/gm/model.mjs";
-import { prepareGM } from "../dist/gm/content.mjs";
-import { pickerEntries, workspace } from "../dist/gm/views.mjs";
-import { sheetSections, createGMPDF } from "../dist/gm/pdf.mjs";
-import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
-import { wrapPDFRuns } from "../dist/gm/pdf-text.mjs";
-import { statBlock } from "../dist/gm/sheet.mjs";
-import { soakLines } from "../dist/gm/export-sections.mjs";
+} from "../src/engine/gm/model.mjs";
+import { prepareGM } from "../src/engine/gm/content.mjs";
+import { pickerEntries } from "../src/engine/gm/pickers.mjs";
+import { workspace } from "./bestiary-presentation.mjs";
+import { sheetSections, createGMPDF } from "../src/engine/gm/pdf.mjs";
+import { prepareGMPrint, cardSections } from "../src/engine/gm/print.mjs";
+import { wrapPDFRuns } from "../src/engine/gm/pdf-text.mjs";
+import { statBlock } from "./bestiary-presentation.mjs";
+import { soakLines } from "../src/engine/gm/export-sections.mjs";
 import * as PDFLib from "pdf-lib";
 const R = assembleBooks(
     JSON.parse(
       await readFile(
-        new URL("../dist/data/book-library.json", import.meta.url),
+        new URL("../public/data/book-library.json", import.meta.url),
       ),
     ),
   ),
   data = JSON.parse(
-    await readFile(new URL("../dist/gm/data.json", import.meta.url)),
+    await readFile(new URL("../public/gm/data.json", import.meta.url)),
   ),
   raw = JSON.parse(
     await readFile(

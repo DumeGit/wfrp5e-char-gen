@@ -2,21 +2,21 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library, R as core } from "./fixture.mjs";
-import { assembleBooks, randomTable, tableResult } from "../dist/books.mjs";
-import * as M from "../dist/rules.mjs";
+import { assembleBooks, randomTable, tableResult } from "../src/engine/books.mjs";
+import * as M from "../src/engine/rules.mjs";
 import {
   creationSpecies,
   creationBackground,
   careerAvailable,
-} from "../dist/origins.mjs";
-import { freshGM, calculateGM, validateGMDraft } from "../dist/gm/model.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
-import { cardSections } from "../dist/gm/print.mjs";
+} from "../src/engine/origins.mjs";
+import { freshGM, calculateGM, validateGMDraft } from "../src/engine/gm/model.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
+import { cardSections } from "../src/engine/gm/print.mjs";
 
 const B = "sea-of-claws";
 const R = assembleBooks(library, [B]);
 const data = JSON.parse(
-  await readFile(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+  await readFile(new URL("../public/gm/data.json", import.meta.url), "utf8"),
 );
 const rulesFor = createGMRules(library, data);
 const gm = (name) => freshGM(data, `${B}:creatures:${name}`);

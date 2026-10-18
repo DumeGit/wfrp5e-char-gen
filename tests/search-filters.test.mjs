@@ -2,15 +2,15 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { library } from "./fixture.mjs";
-import { loadReferenceLibrary } from "../dist/search-library.mjs";
-import { searchBooks } from "../dist/search-ranking.mjs";
-import { RUNE_LABELS, filterOptions } from "../dist/search-filters.mjs";
-import { createReferenceLinker } from "../dist/book-search-links.mjs";
-import { createSearchEngine } from "../dist/search-engine.mjs";
-import { createWorkerHandler } from "../dist/search-worker.mjs";
+import { loadReferenceLibrary } from "../src/engine/search-library.mjs";
+import { searchBooks } from "../src/engine/search-ranking.mjs";
+import { RUNE_LABELS, filterOptions } from "../src/engine/search-filters.mjs";
+import { createReferenceLinker } from "../src/engine/book-search-links.mjs";
+import { createSearchEngine } from "../src/engine/search-engine.mjs";
+import { createWorkerHandler } from "../src/engine/search-worker.mjs";
 const wire = JSON.parse(
   await readFile(
-    new URL("../dist/data/search-library.json", import.meta.url),
+    new URL("../public/data/search-library.json", import.meta.url),
     "utf8",
   ),
 );

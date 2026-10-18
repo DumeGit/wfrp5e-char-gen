@@ -2,17 +2,18 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import * as PDFLib from "pdf-lib";
-import { freshGM, calculateGM, validateGMDraft } from "../dist/gm/model.mjs";
-import { createGMRules, gmCatalogue } from "../dist/gm/books.mjs";
-import { addGMSupplement, prepareGM } from "../dist/gm/content.mjs";
-import { profileResults, pickerEntries } from "../dist/gm/views.mjs";
-import { sheetSections, createGMPDF } from "../dist/gm/pdf.mjs";
-import { prepareGMPrint, cardSections } from "../dist/gm/print.mjs";
+import { freshGM, calculateGM, validateGMDraft } from "../src/engine/gm/model.mjs";
+import { createGMRules, gmCatalogue } from "../src/engine/gm/books.mjs";
+import { addGMSupplement, prepareGM } from "../src/engine/gm/content.mjs";
+import { pickerEntries } from "../src/engine/gm/pickers.mjs";
+import { profileResults } from "./bestiary-presentation.mjs";
+import { sheetSections, createGMPDF } from "../src/engine/gm/pdf.mjs";
+import { prepareGMPrint, cardSections } from "../src/engine/gm/print.mjs";
 const json = async (path) =>
   JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
 const [library, data, raw, core] = await Promise.all([
-  json("../dist/data/book-library.json"),
-  json("../dist/gm/data.json"),
+  json("../public/data/book-library.json"),
+  json("../public/gm/data.json"),
   json("../content/sources/gm/books/up-in-arms.json"),
   json("../content/sources/gm/books/core.json"),
 ]);

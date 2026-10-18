@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import * as M from '../dist/rules.mjs';
-import {folioData,folioGear} from '../dist/folio.mjs';
-import {buyTrapping,marketCatalog} from '../dist/market.mjs';
+import * as M from '../src/engine/rules.mjs';
+import {folioData,folioGear} from '../src/engine/folio.mjs';
+import {buyTrapping,marketCatalog} from '../src/engine/market.mjs';
 import {R,soldier,advancedSoldier} from './fixture.mjs';
 
 test('folio shows total trained Skill scores and counts free and purchased Talents without mutating state',()=>{

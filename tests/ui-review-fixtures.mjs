@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import { R, soldier } from "./fixture.mjs";
-import * as M from "../dist/rules.mjs";
-import { bookSelection } from "../dist/books.mjs";
-import { freshGM } from "../dist/gm/model.mjs";
-import { freshMarijan, makeEntry } from "../dist/marijan/model.mjs";
+import * as M from "../src/engine/rules.mjs";
+import { bookSelection } from "../src/engine/books.mjs";
+import { freshGM } from "../src/engine/gm/model.mjs";
+import { freshMarijan, makeEntry } from "../src/engine/marijan/model.mjs";
 const data = JSON.parse(
-  fs.readFileSync(new URL("../dist/gm/data.json", import.meta.url), "utf8"),
+  fs.readFileSync(new URL("../public/gm/data.json", import.meta.url), "utf8"),
 );
 const longName = "Siegfried Maximilian von Drachenfels-Wiśniewska-Kowalczyk";
 export function reviewFixtures() {

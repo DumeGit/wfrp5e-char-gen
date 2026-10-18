@@ -2,7 +2,7 @@
 
 `content/descriptions/catalogue.json` is the authoring source for description wording across the installed books. Records contain a stable description ID, book/page, text and editorial status. Exact source bindings retain a SHA-256 of original wording. Equivalent projections share explicit bindings, such as core Creature Trait references and GM definitions. Same-name content from different books is not merged.
 
-`content/descriptions/trait-rules.mjs` owns conditional presentation: actual Size, Swarm, Breath types, Chaos god, training and Fly rating. The build emits `dist/description-rules.mjs`; never edit the generated copy. GM and Marijan share it. Static Trait wording lives in the catalogue, not a separate GM word bank. Explicit situational replacements still take precedence.
+`content/descriptions/trait-rules.mjs` owns conditional presentation: actual Size, Swarm, Breath types, Chaos god, training and Fly rating. The build emits `src/engine/description-rules.mjs`; never edit the generated copy. GM and Marijan share it. Static Trait wording lives in the catalogue, not a separate GM word bank. Explicit situational replacements still take precedence.
 
 ## Sources and published data
 

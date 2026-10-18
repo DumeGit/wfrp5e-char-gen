@@ -27,7 +27,7 @@ def difficulty(text):
 
 def build(doc):
     catalogue = {"config": read(ROOT / "content/sources/data/books/core/config.json")}
-    core_traits = read(ROOT / "dist/gm/data.json")["traits"]
+    core_traits = read(ROOT / "public/gm/data.json")["traits"]
     definitions = {x["name"] for x in core_traits if x.get("source", {}).get("book") != BOOK}
     traits, profiles = [], []
     def ability(name, page, text, adaptation=None):

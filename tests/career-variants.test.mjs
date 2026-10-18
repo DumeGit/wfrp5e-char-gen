@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import * as M from '../dist/rules.mjs';
+import * as M from '../src/engine/rules.mjs';
 import {library,R} from './fixture.mjs';
-import {assembleBooks,bookSelection,catalogForCharacter} from '../dist/books.mjs';
-import {bookPanel} from '../dist/book-ui.mjs';
-import {careerVariantPanel,switchCareerVariant} from '../dist/career-variants.mjs';
+import {assembleBooks,bookSelection,catalogForCharacter} from '../src/engine/books.mjs';
+import {bookPanel} from "./presentation-book-ui.mjs";
+import {careerVariantPanel,switchCareerVariant} from "./presentation-career-variants.mjs";
 
 const B=assembleBooks(library,['archives-iii','winds-of-magic']);
 test('Career variants appear only with their Career and parent book, outside the book picker',()=>{
@@ -14,7 +14,7 @@ test('Career variants appear only with their Career and parent book, outside the
  assert.match(careerVariantPanel(B,s),/Animal-doctor Hedge Witch/);
  assert.doesNotMatch(bookPanel(library,B,s),/archives-iii-hedge|Animal-doctor/);
  const V=switchCareerVariant(library,B,s,'archives-iii-hedge');
- assert.match(careerVariantPanel(V,s),/value="archives-iii-hedge" selected/);
+ assert.match(careerVariantPanel(V,s),/value="archives-iii-hedge"[^>]*selected=""/);
  assert.doesNotMatch(bookPanel(library,V,s),/archives-iii-hedge|Animal-doctor/);
  assert.match(bookPanel(library,V,s),/3 selected books/);
 });
