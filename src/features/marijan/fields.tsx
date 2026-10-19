@@ -137,7 +137,7 @@ export function Action({
   children,
   action,
   onClick,
-  className = "",
+  className = "quiet",
   disabled = false,
   label,
   attributes,

@@ -57,7 +57,7 @@ h3 {
 /* Explicit line box and optical correction centre the glyph, not its baseline. */
 .chapter-title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1px;
 }
 .chapter-initial {
@@ -255,7 +255,8 @@ mark {
 }
 
 /* Joined leather bindings and parchment leaf, with independent sticky rails. */
-.workspace {
+.workspace,
+.mm-workspace {
   grid-template-columns: var(--layout-rail) minmax(0, 1fr) var(--layout-folio);
   max-width: none;
   gap: 0;
@@ -363,7 +364,7 @@ mark {
   background: transparent;
   border: 0;
   border-radius: 0;
-  color: var(--color-gold);
+  color: var(--color-on-leather-muted);
   width: 22px;
   flex-basis: 22px;
 }
@@ -1234,10 +1235,11 @@ dialog::backdrop {
   .banner-atmosphere {
     bottom: 56px;
   }
-  .workspace {
+  .workspace,
+  .mm-workspace {
     padding: 0 3%;
     margin: 14px auto;
-    gap: 12px;
+    gap: 0;
   }
   .rail {
     position: static;

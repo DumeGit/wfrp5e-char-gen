@@ -6,7 +6,11 @@ import {
   combine,
   interpolate,
 } from "../../../components/react-elements";
-import { sourceButton } from "./source-controls.mjs";
+import {
+  sourceButton,
+  legacySummary,
+  referenceSummary,
+} from "./source-controls.mjs";
 import { detailKey } from "../../../engine/disclosures.mjs";
 import { legacyTag, legacyMechanic } from "./legacy.mjs";
 import { speciesLoreIssue } from "../../../engine/species-mechanics.mjs";
@@ -96,10 +100,8 @@ export function psychometryPanel(R, s) {
       class: "section-gap",
       ...attributes(s.psychometrySlot !== undefined ? "open" : ""),
     },
-    element(
-      "summary",
-      {},
-      "Optional Psychometry · Winds of Magic p. 48 ",
+    legacySummary(
+      "Optional Psychometry · Winds of Magic p. 48",
       legacyTag(R, legacyMechanic("psychometry")),
     ),
     element(
@@ -317,14 +319,10 @@ export function ritualShop(R, s, creationErrors = []) {
                   x,
                 ),
               },
-              element(
-                "summary",
-                {},
+              referenceSummary(
                 esc(x.name),
-                " ",
-                legacyTag(R, x),
-                " ",
-                sourceButton(R, x),
+                fragment(legacyTag(R, x), " ", sourceButton(R, x)),
+                { legacy: Boolean(legacyTag(R, x)) },
               ),
               element("p", {}, esc(x.text)),
               "\n",

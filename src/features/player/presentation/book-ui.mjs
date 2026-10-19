@@ -12,7 +12,11 @@ import { sourceLabel } from "../../../engine/sources.mjs";
 import { LEGACY_EXPLANATION } from "./legacy.mjs";
 import { careerSpecies } from "../../../engine/origins.mjs";
 import { isCareerVariant } from "./career-variants.mjs";
-import { bookSummary, esc } from "../../../engine/workspace.mjs";
+import {
+  bookHasPlayerOptions,
+  bookSummary,
+  esc,
+} from "../../../engine/workspace.mjs";
 
 export function bookPanel(library, R) {
   return element(
@@ -25,7 +29,9 @@ export function bookPanel(library, R) {
         "strong",
         {},
         R.books.filter((b) => !isCareerVariant(b.id)).length,
-        " selected books",
+        R.books.filter((b) => !isCareerVariant(b.id)).length === 1
+          ? " selected book"
+          : " selected books",
       ),
       element(
         "small",
@@ -71,7 +77,8 @@ export function bookSetup(library, R) {
         library.packs
           .filter((x) => !isCareerVariant(x.manifest.id))
           .map((pack) => {
-            const b = pack.manifest;
+            const b = pack.manifest,
+              hasPlayerOptions = bookHasPlayerOptions(pack);
             return element(
               "label",
               { class: "book-card" },
@@ -79,7 +86,9 @@ export function bookSetup(library, R) {
                 type: "checkbox",
                 "data-book": esc(b.id),
                 ...attributes(enabled.has(b.id) ? "checked" : ""),
-                ...attributes(b.kind === "core" ? "disabled" : ""),
+                ...attributes(
+                  b.kind === "core" || !hasPlayerOptions ? "disabled" : "",
+                ),
               }),
               element(
                 "span",
@@ -90,7 +99,9 @@ export function bookSetup(library, R) {
                   {},
                   b.kind === "core"
                     ? "Required core rules"
-                    : "Additional character options",
+                    : hasPlayerOptions
+                      ? "Additional character options"
+                      : "Bestiary content · no Player additions",
                 ),
                 element("p", {}, esc(bookSummary(pack))),
                 "\n",

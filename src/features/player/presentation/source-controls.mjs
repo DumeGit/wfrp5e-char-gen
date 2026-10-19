@@ -15,6 +15,28 @@ const esc = (v) =>
         c
       ],
   );
+
+// A disclosure toggle and its reference actions are separate keyboard controls.
+export function referenceSummary(title, reference, { legacy = false } = {}) {
+  return fragment(
+    element(
+      "summary",
+      {},
+      title,
+      legacy ? element("span", { class: "legacy-label" }, " · Legacy") : "",
+    ),
+    reference
+      ? element("p", { class: "small disclosure-reference" }, reference)
+      : "",
+  );
+}
+
+export function legacySummary(title, adaptationReference) {
+  return referenceSummary(title, adaptationReference, {
+    legacy: Boolean(adaptationReference),
+  });
+}
+
 export function sourceButton(R, entry) {
   const source = entry?.source;
   if (!source?.book || source.page === undefined)

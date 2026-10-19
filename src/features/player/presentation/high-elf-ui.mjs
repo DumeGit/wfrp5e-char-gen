@@ -6,7 +6,7 @@ import {
   combine,
   interpolate,
 } from "../../../components/react-elements";
-import { sourceButton } from "./source-controls.mjs";
+import { sourceButton, legacySummary } from "./source-controls.mjs";
 import { detailKey } from "../../../engine/disclosures.mjs";
 import { legacyTag, legacyMechanic } from "./legacy.mjs";
 import * as E from "../../../engine/high-elf.mjs";
@@ -122,10 +122,8 @@ export function elfOriginPanel(R, s) {
         "data-group": "elf-elder",
         ...attributes(era ? "open" : ""),
       },
-      element(
-        "summary",
-        {},
-        "Age & optional Elder creation · p. 53 ",
+      legacySummary(
+        "Age & optional Elder creation · p. 53",
         legacyTag(R, legacyMechanic("elder")),
       ),
       element(
@@ -259,10 +257,8 @@ export function elfOriginPanel(R, s) {
         "data-group": "elf-blood",
         ...attributes(E.blood(R, s) ? "open" : ""),
       },
-      element(
-        "summary",
-        {},
-        "Blood of Aenarion · p. 51 ",
+      legacySummary(
+        "Blood of Aenarion · p. 51",
         legacyTag(R, legacyMechanic("blood")),
       ),
       element(
@@ -620,20 +616,19 @@ export function elfMagicShop(R, s, errors = []) {
                   class: "section-gap",
                   "data-group": ["elf-magic-", category].join(""),
                 },
-                element(
-                  "summary",
-                  {},
-                  esc(category),
-                  " ",
+                legacySummary(
+                  fragment(
+                    esc(category),
+                    " · ",
+                    R.spells.filter((x) => x.category === category).length,
+                    " spells",
+                  ),
                   legacyTag(
                     R,
                     category === "High Magic"
                       ? M.talentInfo(R, "High Magic")
                       : legacyMechanic("elvenArcane"),
                   ),
-                  " · ",
-                  R.spells.filter((x) => x.category === category).length,
-                  " spells",
                 ),
                 element(
                   "p",

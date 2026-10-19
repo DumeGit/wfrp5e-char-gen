@@ -360,7 +360,7 @@ export function kitSummary(R, s, { select, button, tag }) {
       (m) => s.gearRolls[interpolate(["", ":", ""], [x.key, m])] ?? m,
     );
   return fragment(
-    element("h3", {}, "Your starting kit"),
+    element("h2", { class: "creation-section-heading" }, "Your starting kit"),
     "\n",
     element(
       "p",

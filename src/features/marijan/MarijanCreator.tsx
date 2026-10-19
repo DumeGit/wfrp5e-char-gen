@@ -11,6 +11,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { ModeNavigation } from "../../components/ModeNavigation";
+import { CreatorMenu } from "../../components/CreatorMenu";
 import { KEYS } from "../../engine/rules.mjs";
 import { characteristicNames } from "../../engine/ui.mjs";
 import { score } from "../../engine/controls.mjs";
@@ -176,7 +177,6 @@ function MarijanSession({
   const [generationModule, setGenerationModule] = useState<any>(null);
   const [generated, setGenerated] = useState<any>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const menuRef = useRef<HTMLDialogElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const filePlayer = useRef(false);
   const active = useRef(true);
@@ -225,14 +225,6 @@ function MarijanSession({
       if (node?.open) node.close();
     };
   }, [dialog]);
-  useEffect(() => {
-    const node = menuRef.current;
-    if (menuOpen && node && !node.open) node.showModal();
-    if (!menuOpen && node?.open) node.close();
-    return () => {
-      if (node?.open) node.close();
-    };
-  }, [menuOpen]);
 
   function notify(message: string) {
     setToast(message);
@@ -1114,11 +1106,6 @@ function MarijanSession({
       <div id="mm-install">
         <span data-install-slot />
       </div>
-      {compact && (
-        <small id="mm-save-status" role="status">
-          {snapshot.message}
-        </small>
-      )}
     </>
   );
   const menuButton = compact && (
@@ -1126,7 +1113,8 @@ function MarijanSession({
       type="button"
       className="quiet mobile-menu-launcher"
       aria-label="Open creator menu"
-      aria-controls="marijan-creator-menu"
+      aria-controls="creator-menu"
+      aria-haspopup="dialog"
       onClick={() => setMenuOpen(true)}
     >
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
@@ -1716,7 +1704,11 @@ function MarijanSession({
         </aside>
       </div>
       {compact && (
-        <div className="mobile-workspace-bar mobile-marijan-bar">
+        <div
+          className="mobile-workspace-bar mobile-marijan-bar"
+          role="region"
+          aria-label="Character actions"
+        >
           {historyControls}
           <strong>{s.name || "Your character"}</strong>
           <button
@@ -1732,56 +1724,15 @@ function MarijanSession({
         </div>
       )}
       {menuTarget ? createPortal(menuButton, menuTarget) : menuButton}
-      <dialog
-        ref={menuRef}
-        id="marijan-creator-menu"
-        className="creator-dialog mobile-creator-menu"
-        aria-label="Creator menu"
-        onCancel={(event) => {
-          event.preventDefault();
-          setMenuOpen(false);
-        }}
-        onClickCapture={(event) => {
-          if (
-            (event.target as HTMLElement).closest(
-              "[data-action],a,#pwa-install",
-            )
-          ) {
-            menuRef.current?.close();
-            setMenuOpen(false);
-          }
-        }}
-        onClick={(event) => {
-          if (event.target !== event.currentTarget) return;
-          const bounds = event.currentTarget.getBoundingClientRect();
-          if (
-            event.clientX < bounds.left ||
-            event.clientX > bounds.right ||
-            event.clientY < bounds.top ||
-            event.clientY > bounds.bottom
-          )
-            setMenuOpen(false);
-        }}
+      <CreatorMenu
+        mode="marijan"
+        verify={verify}
+        open={compact && menuOpen}
+        onClose={() => setMenuOpen(false)}
+        status={snapshot.message}
       >
-        <div className="dialog-heading">
-          <h2>Creator menu</h2>
-          <button
-            type="button"
-            className="quiet"
-            aria-label="Close creator menu"
-            onClick={() => setMenuOpen(false)}
-          >
-            Close
-          </button>
-        </div>
         {compact && tools}
-        {compact && (
-          <>
-            <h3>Switch creator</h3>
-            <ModeNavigation mode="marijan" verify={verify} />
-          </>
-        )}
-      </dialog>
+      </CreatorMenu>
       <input
         ref={fileRef}
         type="file"

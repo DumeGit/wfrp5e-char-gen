@@ -8,28 +8,22 @@
 .mm-workspace {
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr) 270px;
-  gap: 20px;
-  max-width: none;
-  margin: 0 auto;
-  padding: 22px var(--layout-gutter) 40px;
   align-items: start;
 }
 .mm-page {
   container-type: inline-size;
   container-name: marijan-editor;
   min-width: 0;
-  padding: 26px 30px;
 }
 .mm-rail,
 .mm-folio {
   position: sticky;
-  top: 14px;
-  max-height: calc(100dvh - 28px);
+  top: 16px;
+  max-height: calc(100dvh - 32px);
   overflow: auto;
 }
 .mm-rail {
   color: var(--color-on-leather);
-  padding: 12px;
 }
 .mm-rail-intro {
   font-size: 13px;
@@ -553,10 +547,6 @@
   color: var(--color-muted);
   margin: 14px 0;
 }
-.mm-folio {
-  padding: 18px;
-  border-radius: 6px;
-}
 .mm-folio-emblem {
   display: grid;
   place-items: center;
@@ -696,10 +686,6 @@
   }
 }
 @media (max-width: 760px) {
-  .mm-workspace {
-    display: block;
-    padding: 12px 10px 30px;
-  }
   .mm-rail {
     position: static;
     max-height: none;
@@ -761,15 +747,18 @@
     min-height: 44px;
   }
   .mm-add-bar {
-    grid-template-columns: minmax(0, 1fr) 90px auto;
-    gap: 6px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+  .mm-add-bar > .field:first-child {
+    grid-column: 1 / -1;
   }
   .mm-add-bar > button {
     grid-column: auto;
     justify-self: stretch;
     min-height: 44px;
-    font-size: 11px;
-    padding: 5px 7px;
+    font-size: 13px;
+    padding: 5px 10px;
   }
   .mm-add-bar select {
     padding: 7px;
@@ -1026,7 +1015,6 @@
 @media (max-width: 760px) {
   .mm-rail {
     padding: 10px;
-    margin-bottom: 12px;
     overflow: visible;
   }
   .mm-rail .rail-heading {

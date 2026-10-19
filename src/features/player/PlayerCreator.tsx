@@ -14,7 +14,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { getPlayerStore } from "./store";
-import { ModeNavigation } from "../../components/ModeNavigation";
+import { CreatorMenu } from "../../components/CreatorMenu";
 import { HistoryControls } from "../../components/HistoryControls";
 import { ActionExecutor } from "../../components/AsyncActionButton";
 
@@ -68,8 +68,8 @@ function PlayerSession({ store }: { store: PlayerStore }) {
     store.getSnapshot,
     store.getSnapshot,
   );
-  const dialog = useRef<HTMLDialogElement>(null),
-    menu = useRef<HTMLDialogElement>(null);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [compact, setCompact] = useState(false),
     [slot, setSlot] = useState<Element | null>(null);
   const [busy, setBusy] = useState(false),
@@ -87,7 +87,7 @@ function PlayerSession({ store }: { store: PlayerStore }) {
     const media = matchMedia(COMPACT_SHELL_QUERY);
     const update = () => {
       setCompact(media.matches);
-      if (!media.matches) menu.current?.close();
+      if (!media.matches) setMenuOpen(false);
     };
     update();
     media.addEventListener("change", update);
@@ -185,7 +185,8 @@ function PlayerSession({ store }: { store: PlayerStore }) {
             className="mobile-menu-launcher quiet"
             aria-label="Open creator menu"
             aria-haspopup="dialog"
-            onClick={() => menu.current?.showModal()}
+            aria-controls="creator-menu"
+            onClick={() => setMenuOpen(true)}
           >
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path d="M4 6h16M4 12h16M4 18h16" />
@@ -194,39 +195,30 @@ function PlayerSession({ store }: { store: PlayerStore }) {
           slot,
         )}
       {compact && (
-        <dialog
-          ref={menu}
-          className="creator-dialog mobile-creator-menu"
-          aria-labelledby="mobile-menu-title"
+        <CreatorMenu
+          mode="player"
+          verify={new URLSearchParams(location.search).has("verify")}
+          open={menuOpen}
+          onClose={() => setMenuOpen(false)}
+          status="Saved automatically on this device"
         >
-          <div className="dialog-heading">
-            <h2 id="mobile-menu-title">Creator menu</h2>
-            <button
-              type="button"
-              className="quiet"
-              aria-label="Close creator menu"
-              onClick={() => menu.current?.close()}
-            >
-              Close
-            </button>
-          </div>
-          <div
-            className="mobile-menu-actions"
-            onClick={() => menu.current?.close()}
-          >
-            <button data-action="save-file">Save character</button>
-            <button data-action="load-file">Load character</button>
-            <button data-action="new">New character</button>
-            <span data-install-slot="" />
-            <button data-action="sources">Sources &amp; decisions</button>
-            <button data-action="books">Choose books</button>
-          </div>
-          <h3>Switch creator</h3>
-          <ModeNavigation
-            mode="player"
-            verify={new URLSearchParams(location.search).has("verify")}
-          />
-        </dialog>
+          <button className="quiet" data-action="save-file">
+            Save character
+          </button>
+          <button className="quiet" data-action="load-file">
+            Load character
+          </button>
+          <button className="quiet" data-action="new">
+            New character
+          </button>
+          <span data-install-slot="" />
+          <button className="quiet" data-action="sources">
+            Sources &amp; decisions
+          </button>
+          <button className="quiet" data-action="books">
+            Choose books
+          </button>
+        </CreatorMenu>
       )}
       <dialog
         id="creator-dialog"

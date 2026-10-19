@@ -8,7 +8,7 @@ import {
 } from "../../../../components/react-elements";
 import { chapterHeading } from "../design-system.mjs";
 import { causeControl } from "../talent-targets-ui.mjs";
-import { sourceButton } from "../source-controls.mjs";
+import { sourceButton, legacySummary } from "../source-controls.mjs";
 import { detailKey } from "../../../../engine/disclosures.mjs";
 import { elfSkillsPanel } from "../high-elf-ui.mjs";
 import { grudgePanel, runePanel } from "../dwarf-guide-ui.mjs";
@@ -379,17 +379,16 @@ export function createFeature(getContext, setContext) {
               ),
               ...attributes(l.level === 1 ? "open" : ""),
             },
-            element(
-              "summary",
-              {},
-              l.level,
-              ". ",
-              esc(l.name),
-              " · ",
-              l.status,
-              " ",
-              l.standing,
-              " ",
+            legacySummary(
+              fragment(
+                l.level,
+                ". ",
+                esc(l.name),
+                " · ",
+                l.status,
+                " ",
+                l.standing,
+              ),
               legacyTag(R, l.source ? l : c),
             ),
             element(
@@ -651,7 +650,11 @@ export function createFeature(getContext, setContext) {
             element(
               "div",
               { class: "starting-increases-heading" },
-              element("h3", {}, "Career starting increases"),
+              element(
+                "h2",
+                { class: "creation-section-heading" },
+                "Career starting increases",
+              ),
               element(
                 "span",
                 { class: "counter" },
@@ -744,8 +747,8 @@ export function createFeature(getContext, setContext) {
           "data-ui-issue-group": "skills.species",
         },
         element(
-          "h3",
-          {},
+          "h2",
+          { class: "creation-section-heading" },
           "Species Skills ",
           element(
             "span",
@@ -823,8 +826,8 @@ export function createFeature(getContext, setContext) {
           "data-ui-issue-group": "skills.career",
         },
         element(
-          "h3",
-          {},
+          "h2",
+          { class: "creation-section-heading" },
           "Career Skills ",
           legacyTag(R, M.career(R, s)),
           " ",
@@ -1033,7 +1036,7 @@ export function createFeature(getContext, setContext) {
         "Choose your special abilities and any starting spells or Miracles.",
       ),
       "\n",
-      element("h3", {}, "Species Talents"),
+      element("h2", { class: "creation-section-heading" }, "Species Talents"),
       originTalentChoice(R, s),
       lucciniTalentChoice(),
       joinNodes(
@@ -1176,7 +1179,8 @@ export function createFeature(getContext, setContext) {
               class: "section-gap",
               open: "",
             },
-            element("summary", {}, "Your Dooming ", page(118)),
+            element("summary", {}, "Your Dooming"),
+            element("p", { class: "small" }, page(118)),
             element(
               "p",
               { class: "small muted" },
@@ -1270,7 +1274,12 @@ export function createFeature(getContext, setContext) {
           .map((n) => element("div", { class: "notice" }, esc(n))),
         "",
       ),
-      element("h3", {}, "Starting wealth ", page(39)),
+      element(
+        "h2",
+        { class: "creation-section-heading" },
+        "Starting wealth ",
+        page(39),
+      ),
       s.wealth
         ? element(
             "p",

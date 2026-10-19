@@ -1,5 +1,7 @@
 # Marijan Mode
 
+October 19 interface alignment: Marijan shares the joined rail/editor/folio geometry, square folio frame and mobile gutters with Player and Bestiary. The common Creator menu owns Close/Escape/backdrop behavior, full-width file actions above Switch creator and one status message. The bottom bar is a named Character actions region. Standalone actions use the shared quiet button skin; phone add-entry search occupies its own row above Book and Custom, keeping the selected filter readable. These changes do not alter unrestricted values, saves or calculations.
+
 Through 1000 CSS pixels, Marijan uses the shared compact banner menu, native section jump and bottom history/View controls. Its Characteristic overview measures the editor container: two columns below 420px, three from 420px, five from 700px. Numeric inputs retain at least 64px width with compact padding; coarse-pointer manual-override actions and dropdowns use 44px targets. Wide layouts keep the existing rail and folio.
 
 Shared descriptions resolve by canonical ID rather than saved wording copies. Personal descriptions override only that character; clearing one restores the shared definition. Custom entries stay independent; generated quantity notes remain separate. Results and PDFs use the same resolved entries. See [DESCRIPTIONS.md](DESCRIPTIONS.md).

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { HistoryControls } from "../../components/HistoryControls";
 import { ModeNavigation } from "../../components/ModeNavigation";
+import { CreatorMenu } from "../../components/CreatorMenu";
 import { KEYS, skillInfo } from "../../engine/rules.mjs";
 import { pickerEntries } from "../../engine/gm/pickers.mjs";
 import {
@@ -16,7 +17,6 @@ import {
   BestiaryContext,
   Button,
   Details,
-  Modal,
   Select,
   Check,
   useBestiary,
@@ -544,6 +544,7 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
             className="mobile-menu-launcher"
             aria-label="Open creator menu"
             aria-haspopup="dialog"
+            aria-controls="creator-menu"
             onClick={() => setTools(true)}
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -740,7 +741,11 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
         </aside>
       </div>
       {compact && (
-        <div className="mobile-workspace-bar gm-mobile-bar">
+        <div
+          className="mobile-workspace-bar gm-mobile-bar"
+          role="region"
+          aria-label="Character actions"
+        >
           <History />
           <span>{status}</span>
           <Button
@@ -748,21 +753,20 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
             aria-expanded={folio}
             aria-controls="gm-folio"
           >
-            Stat block
+            {folio ? "Back to editor" : "Stat block"}
           </Button>
-          <Button onClick={() => navigate(3)}>Review</Button>
         </div>
       )}
-      {tools && compact && (
-        <Modal
-          title="Creator menu"
-          className="mobile-creator-menu"
-          close={() => setTools(false)}
+      {compact && (
+        <CreatorMenu
+          mode="gm"
+          verify={verify}
+          open={tools}
+          onClose={() => setTools(false)}
+          status={state.storageMessage}
         >
-          <ModeNavigation mode="gm" verify={verify} />
           {fileActions}
-          <p className="save-status">{state.storageMessage}</p>
-        </Modal>
+        </CreatorMenu>
       )}
       {modal && (
         <BestiaryDialogs

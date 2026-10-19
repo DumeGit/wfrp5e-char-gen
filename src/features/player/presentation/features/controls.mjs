@@ -21,6 +21,7 @@ import {
 } from "../../../../engine/legacy-character.mjs";
 import { talentCalculation } from "../../../../engine/workspace.mjs";
 import { creationSpecies } from "../../../../engine/origins.mjs";
+import { referenceSummary } from "../source-controls.mjs";
 
 // Live context keeps rendering state outside the saved character. Unusual book
 // mechanics remain explicit handlers rather than generic configuration rules.
@@ -161,7 +162,8 @@ export function createFeature(getContext, setContext) {
     let { R, s, esc } = getContext();
 
     const t = M.talentInfo(R, name),
-      context = legacyOption(R, s, "talent", name);
+      context = legacyOption(R, s, "talent", name),
+      sources = [...context.legacySources, ...legacySources(R, quote)];
     return element(
       "details",
       {
@@ -175,16 +177,16 @@ export function createFeature(getContext, setContext) {
           "span",
           {},
           esc(name),
-          " ",
-          ref({
-            ...t,
-            legacySources: [
-              ...context.legacySources,
-              ...legacySources(R, quote),
-            ],
-          }),
+          sources.length
+            ? element("span", { class: "legacy-label" }, " · Legacy")
+            : "",
         ),
         metadata,
+      ),
+      element(
+        "p",
+        { class: "small talent-reference" },
+        ref({ ...t, legacySources: sources }),
       ),
       talentDetailsBody(name),
     );
@@ -384,14 +386,10 @@ export function createFeature(getContext, setContext) {
         "data-detail-key": detailKey("controls:spellDescription:0", x),
         class: "spell-description",
       },
-      element(
-        "summary",
-        {},
-        esc(x.displayName || x.name),
-        " · ",
-        esc(x.category),
-        " ",
+      referenceSummary(
+        fragment(esc(x.displayName || x.name), " · ", esc(x.category)),
         ref(x),
+        { legacy: legacySources(R, x).length > 0 },
       ),
       x.grantSource
         ? element(

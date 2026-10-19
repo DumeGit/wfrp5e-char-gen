@@ -2,19 +2,21 @@
 .review-sheet {
   min-width: 0;
 }
-.review-sheet .chapter-title {
+.review-sheet .review-character-name {
   margin-bottom: 12px;
+  overflow-wrap: anywhere;
 }
+.review-sheet h2,
 .review-sheet h3,
 .review-sheet h4,
 .review-sheet p,
 .review-sheet dl {
   margin: 0;
 }
-.review-sheet h3 {
+.review-sheet h2 {
   font-size: 1.35rem;
 }
-.review-sheet h4 {
+.review-sheet h3 {
   font: 600 0.8rem var(--font-body);
   color: var(--color-muted);
   margin: 12px 0 6px;

@@ -24,6 +24,7 @@ html:has(.mobile-creator-menu[open]) {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
     padding-bottom: 88px;
   }
   .workspace > .rail,
@@ -101,11 +102,7 @@ html:has(.mobile-creator-menu[open]) {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
     padding-bottom: 85px;
-  }
-  .gm-workspace {
-    gap: 12px;
   }
   .mobile-marijan-bar > strong {
     font-size: 12px;
@@ -235,14 +232,13 @@ html:has(.mobile-creator-menu[open]) {
   .mobile-menu-actions,
   .mobile-menu-extra {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 8px;
     margin: 0;
     padding: 0;
     border: 0;
   }
-  .mobile-creator-menu .quiet,
-  .mobile-creator-menu .install-app,
-  .mobile-creator-menu .text-button {
+  .mobile-creator-menu button {
     width: 100%;
     min-height: 44px;
     font-size: 14px;
@@ -302,6 +298,14 @@ html:has(.mobile-creator-menu[open]) {
   }
   .mobile-workspace-bar .history-controls {
     margin: 0;
+    order: -1;
+    flex: none;
+  }
+  .mobile-workspace-bar > .mobile-balance {
+    display: grid;
+    gap: 2px;
+    text-align: center;
+    line-height: 1.3;
   }
   .mobile-workspace-bar > span,
   .mobile-workspace-bar > strong {

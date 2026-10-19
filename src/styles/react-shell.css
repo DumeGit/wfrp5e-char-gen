@@ -34,10 +34,4 @@
     left: var(--layout-gutter);
     z-index: 45;
   }
-  [data-mode="player"] .mobile-workspace-bar > span {
-    display: none;
-  }
-  [data-mode="player"] .mobile-workspace-bar {
-    justify-content: flex-end;
-  }
 }

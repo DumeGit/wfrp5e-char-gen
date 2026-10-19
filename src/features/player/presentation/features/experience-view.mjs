@@ -18,6 +18,7 @@ import { legacyOption } from "../../../../engine/legacy-character.mjs";
 import { magicRows, filterMagic } from "../../../../engine/magic-browser.mjs";
 import { cantPanel } from "../archives-iii-ui.mjs";
 import { causeControl } from "../talent-targets-ui.mjs";
+import { legacySummary } from "../source-controls.mjs";
 
 // Live context keeps rendering state outside the saved character. Unusual book
 // mechanics remain explicit handlers rather than generic configuration rules.
@@ -833,10 +834,8 @@ export function createFeature(getContext, setContext) {
           "data-detail-key": detailKey("experience-view:experience:1"),
           class: "section-gap",
         },
-        element(
-          "summary",
-          {},
-          "Acquire a higher-level Career Trapping ",
+        legacySummary(
+          "Acquire a higher-level Career Trapping",
           legacyTag(R, c),
         ),
         element(

@@ -8,7 +8,6 @@ import {
 } from "../../../components/react-elements";
 import { esc, score, button } from "./controls.mjs";
 import { characteristicNames } from "../../../engine/ui.mjs";
-import { chapterHeading } from "./design-system.mjs";
 import { formatMoney } from "../../../engine/market.mjs";
 import { sheetSpecies } from "../../../engine/origins.mjs";
 import { legacyTag } from "./legacy.mjs";
@@ -44,7 +43,7 @@ export function reviewSheet(R, s, snapshot, ui) {
         "div",
         { class: "review-block-heading" },
         element(
-          "h3",
+          "h2",
           { id: ["review-", id].join("") },
           title,
           count !== ""
@@ -260,7 +259,7 @@ export function reviewSheet(R, s, snapshot, ui) {
     joinNodes(
       extraMagic.map(([label, rows]) =>
         fragment(
-          element("h4", {}, label),
+          element("h3", {}, label),
           element(
             "ul",
             { class: "review-belongings" },
@@ -290,7 +289,11 @@ export function reviewSheet(R, s, snapshot, ui) {
       "header",
       { class: "review-identity" },
       element("span", { class: "eyebrow" }, "08 / Review & export"),
-      chapterHeading(s.name || "Your character"),
+      element(
+        "h1",
+        { class: "review-character-name" },
+        esc(s.name || "Your character"),
+      ),
       "\n      ",
       element(
         "dl",
@@ -638,13 +641,13 @@ export function reviewSheet(R, s, snapshot, ui) {
         element(
           "div",
           { class: "review-equipment-grid" },
-          element("div", {}, element("h4", {}, "Weapons"), weapons),
+          element("div", {}, element("h3", {}, "Weapons"), weapons),
           element(
             "div",
             {},
-            element("h4", {}, "Armour"),
+            element("h3", {}, "Armour"),
             armour,
-            element("h4", {}, "Other belongings"),
+            element("h3", {}, "Other belongings"),
             belongings,
           ),
         ),

@@ -16,30 +16,49 @@ export const esc = (value) =>
       ],
   );
 
+export function bookHasPlayerOptions(pack) {
+  return Object.entries(pack.data).some(
+    ([key, value]) =>
+      !["coverage", "referenceEntries", "ruleReferences"].includes(key) &&
+      value !== null &&
+      typeof value === "object" &&
+      Object.keys(value).length > 0,
+  );
+}
+
 export function bookSummary(pack) {
   const d = pack.data,
     parts = [];
-  for (const [key, label] of [
-    ["species", "Species"],
-    ["origins", "origins"],
-    ["careers", "Career profiles"],
-    ["talents", "Talents"],
-    ["spells", "magic profiles"],
-    ["runes", "runes"],
-    ["techniques", "techniques"],
-    ["cants", "Cants"],
+  for (const [key, singular, plural = singular + "s"] of [
+    ["species", "Species", "Species"],
+    ["origins", "origin"],
+    ["careers", "Career profile"],
+    ["skills", "Skill"],
+    ["talents", "Talent"],
+    ["spells", "magic profile"],
+    ["runes", "rune"],
+    ["techniques", "technique"],
+    ["cants", "Cant"],
   ]) {
     const count = Array.isArray(d[key])
       ? d[key].length
       : Object.keys(d[key] || {}).length;
-    if (count) parts.push(`${count} ${label}`);
+    if (count) parts.push(`${count} ${count === 1 ? singular : plural}`);
   }
   const gear = ["weapons", "armour", "gear", "market"].reduce(
     (n, k) => n + (d[k]?.length || 0),
     0,
   );
-  if (gear) parts.push(`${gear} equipment profiles / shop entries`);
-  return parts.join(" · ") || "Optional rules and source references";
+  if (gear)
+    parts.push(
+      `${gear} ${gear === 1 ? "equipment profile / shop entry" : "equipment profiles / shop entries"}`,
+    );
+  return (
+    parts.join(" · ") ||
+    (bookHasPlayerOptions(pack)
+      ? "Additional creation rules"
+      : "Use this book in Bestiary Workshop. Book search is available without enabling it here.")
+  );
 }
 
 export function careerResults(

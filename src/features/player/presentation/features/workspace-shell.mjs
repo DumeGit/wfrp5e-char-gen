@@ -74,7 +74,7 @@ export function createFeature(getContext) {
               ready,
               " of ",
               creationStepCount,
-              " creation steps ready",
+              " required stages complete",
             ),
             "\n",
             element(
@@ -86,7 +86,7 @@ export function createFeature(getContext) {
                   ready,
                   " of ",
                   creationStepCount,
-                  " creation steps ready",
+                  " required stages complete",
                 ].join(""),
               },
               "\n",
@@ -311,6 +311,11 @@ export function createFeature(getContext) {
                     ),
               )
             : "",
+          element(
+            "p",
+            { class: "footer-note" },
+            "Rules from your selected books · Your draft stays on this device",
+          ),
         ),
         "\n",
         element(
@@ -647,24 +652,28 @@ export function createFeature(getContext) {
       "\n",
       element(
         "div",
-        { class: "mobile-workspace-bar" },
+        {
+          class: "mobile-workspace-bar",
+          role: "region",
+          "aria-label": "Character actions",
+        },
         "\n",
         element(
           "span",
-          {},
-          d.remaining.toLocaleString(),
-          " XP · ",
-          s.wealth ? formatMoney(result().wallet.remaining) : "Coin unrolled",
+          {
+            class: "mobile-balance",
+            "aria-label": "Remaining experience and money",
+          },
+          element("span", {}, d.remaining.toLocaleString(), " XP"),
+          element(
+            "span",
+            {},
+            s.wealth ? formatMoney(result().wallet.remaining) : "Coin unrolled",
+          ),
         ),
         summaryExpanded
           ? button("mobile-choice", "Back to choice")
           : button("mobile-folio", "View character"),
-      ),
-      "\n",
-      element(
-        "footer",
-        { class: "footer-note" },
-        "Rules from your selected books · Your draft stays on this device",
       ),
     );
   }

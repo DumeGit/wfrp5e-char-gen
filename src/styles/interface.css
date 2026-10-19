@@ -1,5 +1,14 @@
 /* Shared interface contract. Feature styles own layout; theme tokens own colour. */
 
+.panel .creation-section-heading {
+  font-size: 1.25rem;
+}
+
+.talent-reference,
+.disclosure-reference {
+  margin-block: 8px;
+}
+
 /* Immediate touch feedback without movement; content stays selectable. */
 button,
 summary,
@@ -43,7 +52,8 @@ summary:active,
   .masthead .banner-caption {
     display: none;
   }
-  .workspace {
+  .workspace,
+  .mm-workspace {
     margin-block: 16px;
   }
   .mm-workspace {
@@ -930,13 +940,10 @@ input[type="number"] {
     padding-inline: calc(3% + env(safe-area-inset-left, 0px))
       calc(3% + env(safe-area-inset-right, 0px));
   }
-  .workspace {
+  .workspace,
+  .mm-workspace {
     padding-inline: calc(3% + env(safe-area-inset-left, 0px))
       calc(3% + env(safe-area-inset-right, 0px));
-  }
-  .mm-workspace {
-    padding-inline: calc(10px + env(safe-area-inset-left, 0px))
-      calc(10px + env(safe-area-inset-right, 0px));
   }
   .mobile-workspace-bar {
     padding-left: calc(10px + env(safe-area-inset-left, 0px));

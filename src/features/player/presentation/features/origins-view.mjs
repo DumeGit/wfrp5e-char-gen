@@ -275,7 +275,8 @@ export function createFeature(getContext, setContext) {
           class: "origin-roll-help",
           "data-detail-key": "origins:roll-bonuses",
         },
-        element("summary", {}, "Random creation bonuses ", page("23, 40")),
+        element("summary", {}, "Random creation bonuses"),
+        element("p", { class: "small" }, page("23, 40")),
         element(
           "p",
           { class: "small muted" },

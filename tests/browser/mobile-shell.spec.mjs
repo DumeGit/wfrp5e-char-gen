@@ -104,6 +104,28 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       menu.getByRole("link", { name: "Marijan Mode" }),
     ).toHaveAttribute("href", "/marijan/?verify=1");
     await expect(save).toBeVisible();
+    const switchHeading = menu.getByRole("heading", {
+      name: "Switch creator",
+      exact: true,
+    });
+    const actions = menu.locator(".mobile-menu-actions button");
+    const closeBounds = await menu
+      .getByRole("button", { name: "Close creator menu", exact: true })
+      .boundingBox();
+    expect(closeBounds.height).toBeGreaterThanOrEqual(44);
+    expect(closeBounds.width).toBeLessThan(100);
+    const actionBounds = await menu
+      .locator(":scope > .mobile-menu-actions")
+      .boundingBox();
+    const switchBounds = await switchHeading.boundingBox();
+    for (const action of await actions.all()) {
+      const bounds = await action.boundingBox();
+      expect(bounds.height).toBeGreaterThanOrEqual(44);
+      expect(Math.abs(bounds.width - actionBounds.width)).toBeLessThanOrEqual(
+        1,
+      );
+      expect(bounds.y + bounds.height).toBeLessThan(switchBounds.y);
+    }
     await noOverflow(page);
     await page.screenshot({
       path: info.outputPath(`${mode.toLowerCase()}-creator-menu.png`),
@@ -125,6 +147,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     await expect(
       page.getByRole("dialog", { name: "Creator menu", exact: true }),
     ).not.toBeVisible();
+    await expect(menuButton).toBeFocused();
     // Resizing restores the original nodes, without duplicate mode links or
     // losing save/install listeners; returning to phone recreates one menu.
     await page.setViewportSize({ width: 1440, height: 900 });

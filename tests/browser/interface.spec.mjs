@@ -39,6 +39,10 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       expect(rail.width).toBeLessThanOrEqual(240);
       expect(folio.width).toBeGreaterThanOrEqual(270);
       expect(folio.width).toBeLessThanOrEqual(420);
+      expect(Math.abs(rail.x + rail.width - editor.x)).toBeLessThanOrEqual(1);
+      expect(Math.abs(editor.x + editor.width - folio.x)).toBeLessThanOrEqual(
+        1,
+      );
       expect(rail.x).toBeGreaterThanOrEqual(16);
       expect(rail.x).toBeLessThanOrEqual(40);
       const brand = await page.locator(".brand").boundingBox();
@@ -65,6 +69,13 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     for (const width of [960, 390]) {
       await page.setViewportSize({ width, height: 844 });
       await noOverflow(page);
+      if (await page.locator(".rail").isVisible()) {
+        const rail = await page.locator(".rail").boundingBox();
+        const editor = await page.locator("main").boundingBox();
+        expect(Math.abs(rail.y + rail.height - editor.y)).toBeLessThanOrEqual(
+          1,
+        );
+      }
     }
   });
 }

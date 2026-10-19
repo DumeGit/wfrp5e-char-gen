@@ -22,9 +22,11 @@ This is the fresh NPC & creature creator authorised in October 2026. It shares t
 
 ## Workflow
 
+October 19 interface alignment: Bestiary uses the same native Creator menu as Player and Marijan, with a compact Close action, full-width file tools, one storage message and Switch creator beneath. The labelled bottom action bar has Undo/Redo, status and Stat block/Back to editor; Review remains available in the workshop selector and folio. The selector/editor edges meet using shared gutters, and three-digit Characteristic fields retain their full values with enlarged text. Shared navigation numbers use the readable on-panel muted foreground. Calculations, profile scope and PDF layouts are unchanged.
+
 Workshop status notifications clear after 4.5 seconds. They use the shared empty-text visibility convention, accept no pointer events and sit above the fixed phone action bar with safe-area clearance. Persistent issues remain in the issue panel; they are not hidden by notification expiry.
 
-The creator switch is available in the desktop rail and above the phone page selector. Player and GM drafts remain independent. Creature creation uses the supplied Fifth Edition core and shared options from all integrated books. Enable a reviewed supplement in **Profile & template books** on Starting profile to show their reviewed foundations; player book choices are independent. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
+The creator switch is available in the desktop rail and inside the shared phone banner menu. Player and GM drafts remain independent. Creature creation uses the supplied Fifth Edition core and shared options from all integrated books. Enable a reviewed supplement in **Profile & template books** on Starting profile to show their reviewed foundations; player book choices are independent. The masthead reference search is the same all-book library as the player creator, independently of enabled creation books.
 
 The workshop banner uses original generated undead-army artwork inspired by the user's image, with a moonlit gothic fortress and skeleton ranks. Its compact WebP is cached offline; CSS crops it and supplies title contrast without changing shared banner height or interaction. The player creator keeps its own art. Source, generation prompt and encoding details: [design-assets/bestiary](../design-assets/bestiary/README.md).
 
