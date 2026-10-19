@@ -739,7 +739,10 @@ export function createFeature(getContext, setContext) {
       elfSkillsPanel(R, s),
       element(
         "section",
-        { class: "species-skill-section" },
+        {
+          class: "species-skill-section",
+          "data-ui-issue-group": "skills.species",
+        },
         element(
           "h3",
           {},
@@ -814,67 +817,74 @@ export function createFeature(getContext, setContext) {
       ),
       "\n",
       element(
-        "h3",
-        {},
-        "Career Skills ",
-        legacyTag(R, M.career(R, s)),
-        " ",
-        element("span", { class: "counter" }, total, " / 8 Advances"),
-      ),
-      psychicSkillPanel(R, s),
-      joinNodes(
-        slots
-          .filter((x) => x.level === 1)
-          .map((slot) =>
-            element(
-              "div",
-              { class: "skill-row" },
+        "section",
+        {
+          class: "career-skill-section",
+          "data-ui-issue-group": "skills.career",
+        },
+        element(
+          "h3",
+          {},
+          "Career Skills ",
+          legacyTag(R, M.career(R, s)),
+          " ",
+          element("span", { class: "counter" }, total, " / 8 Advances"),
+        ),
+        psychicSkillPanel(R, s),
+        joinNodes(
+          slots
+            .filter((x) => x.level === 1)
+            .map((slot) =>
               element(
                 "div",
-                {},
-                skillChoice(slot),
+                { class: "skill-row" },
                 element(
                   "div",
-                  { class: "minilabel" },
-                  M.skillInfo(R, slot.name, s)?.char,
-                  " · Species +",
-                  M.speciesSkillSlots(R, s).filter(
-                    (x) =>
-                      x.name === slot.name && s.speciesSkills.includes(x.key),
-                  ).length * 5,
-                  " · Career +",
-                  (s.careerSkills[slot.key] || 0) * 5,
-                  " · total starting +",
-                  (M.freeSkills(R, s)[slot.name] || 0) * 5,
+                  {},
+                  skillChoice(slot),
+                  element(
+                    "div",
+                    { class: "minilabel" },
+                    M.skillInfo(R, slot.name, s)?.char,
+                    " · Species +",
+                    M.speciesSkillSlots(R, s).filter(
+                      (x) =>
+                        x.name === slot.name && s.speciesSkills.includes(x.key),
+                    ).length * 5,
+                    " · Career +",
+                    (s.careerSkills[slot.key] || 0) * 5,
+                    " · total starting +",
+                    (M.freeSkills(R, s)[slot.name] || 0) * 5,
+                  ),
+                  "\n",
+                ),
+                "\n",
+                element(
+                  "div",
+                  { class: "stepper" },
+                  button(
+                    "skill-minus",
+                    "−",
+                    interpolate(
+                      ['data-key="', '" aria-label="Decrease ', '"'],
+                      [slot.key, esc(slot.name)],
+                    ),
+                  ),
+                  element("strong", {}, s.careerSkills[slot.key] || 0),
+                  button(
+                    "skill-plus",
+                    "+",
+                    interpolate(
+                      ['data-key="', '" aria-label="Increase ', '"'],
+                      [slot.key, esc(slot.name)],
+                    ),
+                  ),
                 ),
                 "\n",
               ),
-              "\n",
-              element(
-                "div",
-                { class: "stepper" },
-                button(
-                  "skill-minus",
-                  "−",
-                  interpolate(
-                    ['data-key="', '" aria-label="Decrease ', '"'],
-                    [slot.key, esc(slot.name)],
-                  ),
-                ),
-                element("strong", {}, s.careerSkills[slot.key] || 0),
-                button(
-                  "skill-plus",
-                  "+",
-                  interpolate(
-                    ['data-key="', '" aria-label="Increase ', '"'],
-                    [slot.key, esc(slot.name)],
-                  ),
-                ),
-              ),
-              "\n",
             ),
-          ),
-        "",
+          "",
+        ),
       ),
       element(
         "details",

@@ -13,6 +13,7 @@ async function incompleteAllocations(page) {
   draft.points = Array(10).fill(null);
   draft.charMode = "points";
   draft.careerSkills = {};
+  draft.speciesSkills.pop();
   draft.xp = 0;
   await page.addInitScript(
     ({ key, draft }) => {
@@ -23,7 +24,7 @@ async function incompleteAllocations(page) {
   await openPC(page);
 }
 
-test("allocation errors stay below Characteristic cells and Career Skill controls @interface @mobile", async ({
+test("allocation errors stay below Characteristic cells and whole Skill selections @interface @mobile", async ({
   page,
 }, info) => {
   await incompleteAllocations(page);
@@ -65,22 +66,49 @@ test("allocation errors stay below Characteristic cells and Career Skill control
     await page.screenshot({ path: info.outputPath(`points-${width}.png`) });
 
     await pcStep(page, "Skills");
-    const skillError = page
-      .locator(".skill-row > .ui-field-issue")
-      .filter({ hasText: "Allocate eight" });
-    await expect(skillError).toBeVisible();
+    for (const [selector, text, rows] of [
+      [
+        ".species-skill-section",
+        "Select five different Species Skills.",
+        ".species-skill-option",
+      ],
+      [
+        ".career-skill-section",
+        "Allocate eight free Career Skill Advances.",
+        ".skill-row",
+      ],
+    ]) {
+      const section = page.locator(selector);
+      const message = section.locator(":scope > .ui-field-issue");
+      await expect(message).toHaveText(text);
+      await expect(section.locator(`${rows} .ui-field-issue`)).toHaveCount(0);
+      const messageBounds = await message.boundingBox();
+      const rowBottoms = await section
+        .locator(rows)
+        .evaluateAll((nodes) =>
+          nodes.map((node) => node.getBoundingClientRect().bottom),
+        );
+      expect(messageBounds.y).toBeGreaterThanOrEqual(Math.max(...rowBottoms));
+      const sectionBounds = await section.boundingBox();
+      expect(messageBounds.width).toBeGreaterThan(
+        Math.min(sectionBounds.width * 0.95, 400),
+      );
+      await message.scrollIntoViewIfNeeded();
+      await page.screenshot({
+        path: info.outputPath(`${selector.slice(1)}-${width}.png`),
+      });
+    }
     await expect(page.locator(".stepper .ui-field-issue")).toHaveCount(0);
-    const row = skillError.locator("..");
-    const label = await row.locator(":scope > div").first().boundingBox();
-    const controls = await row.locator(".stepper").boundingBox();
-    const skillMessage = await skillError.boundingBox();
-    expect(label.x + label.width).toBeLessThanOrEqual(controls.x);
-    expect(skillMessage.y).toBeGreaterThanOrEqual(
-      Math.max(label.y + label.height, controls.y + controls.height),
+    const speciesMessage = page.locator(
+      ".species-skill-section > .ui-field-issue",
     );
-    await row.scrollIntoViewIfNeeded();
+    expect(
+      await page
+        .locator('[data-bind="speciesSkills"]')
+        .first()
+        .getAttribute("aria-describedby"),
+    ).toContain(await speciesMessage.getAttribute("id"));
     await noOverflow(page);
-    await page.screenshot({ path: info.outputPath(`skills-${width}.png`) });
   }
 });
 

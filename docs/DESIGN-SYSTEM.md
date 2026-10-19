@@ -29,6 +29,8 @@ Use `chapterHeading(title)` for the page-level heading and normal h2/h3 for sect
 
 ## Component contract
 
+Player allocation messages belong below the whole Characteristic grid or Species/Career Skill selection. Use an explicit `data-ui-issue-group` matching the structured issue code for selection-wide feedback; keep individual choice errors local. Reuse the existing `.ui-field-issue` styling and control descriptions rather than inserting text inside a checkbox label or stepper.
+
 | Purpose | Reuse | Treatment |
 | --- | --- | --- |
 | Main action | `.primary` | Oxblood/ivory for players, cobalt/ivory for GM; persistent hover contrast and nearby disabled reasons |

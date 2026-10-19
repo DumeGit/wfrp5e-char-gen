@@ -80,10 +80,12 @@ export function decoratePlayerTree(
         )
           continue;
         const container =
-          chain.find((x) =>
-            String(x.node.props.className || "")
-              .split(" ")
-              .includes("points-grid"),
+          chain.find(
+            (x) =>
+              x.node.props["data-ui-issue-group"] === issue.code ||
+              String(x.node.props.className || "")
+                .split(" ")
+                .includes("points-grid"),
           ) ??
           [...chain]
             .reverse()

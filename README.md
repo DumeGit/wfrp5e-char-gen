@@ -89,7 +89,7 @@ The NPC Customise page leads with a prominent Choose template action beneath the
 
 ## Rules and source
 
-Mobile allocation feedback stays below the Characteristic grid or Career Skill row, outside individual score cells and +/- controls. Point columns adapt to available width; XP help and purchase actions retain separate touch areas. The focused interface suite checks these layouts at narrow widths.
+Allocation feedback stays below the Characteristic grid or the complete Species/Career Skill selection, outside individual score cells, Skill rows and +/- controls. Point columns adapt to available width; XP help and purchase actions retain separate touch areas. The focused interface suite checks these layouts on desktop and at narrow widths.
 
 ### Archives III
 
