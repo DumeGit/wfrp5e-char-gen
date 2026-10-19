@@ -1,5 +1,7 @@
 # Local testing
 
+Extension hydration verification, 19 October 2026: a new development-browser regression adds `cz-shortcut-listen` to the body before React hydrates on all three creator routes. It reproduced the reported warning before the root-body attribute exception. All 18 development desktop/phone cases now pass with a clean console. The production build, type/module/format checks and 92-asset offline inventory also passed. Root attribute tolerance does not suppress mismatches inside the creator tree; this small layout change did not require rerunning the rules suite.
+
 Skills feedback verification, 19 October 2026: the focused interface suite passed 38 desktop/phone cases with four existing viewport-specific skips. Its allocation regression now checks the Species and Career messages below their complete selections at 320/390/430/1024/1440px, outside all Skill rows, with retained control descriptions and no page overflow. Desktop Species and phone Career screenshots were visually inspected. All 16 development-console cases, 11 store tests, type/module/format checks, the production build and the 92-asset offline inventory passed. The rules suite was not rerun for this presentation-only repair.
 
 Follow-up, 19 October 2026: the stale Sea Dragon Cloak export assertion now checks the equipment name and exact per-location Soak totals, while retaining the additional-armour/Partial profile checks. The complete Node suite passes 534/534. The original migration results below remain a dated record.

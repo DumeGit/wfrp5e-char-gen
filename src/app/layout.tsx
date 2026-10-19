@@ -36,7 +36,8 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      {/* Extensions can add body attributes before React hydrates. */}
+      <body suppressHydrationWarning>
         {children}
         <PwaControls />
       </body>

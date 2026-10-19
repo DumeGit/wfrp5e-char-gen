@@ -62,6 +62,8 @@ Pure ranking/filter/linker/source modules remain in `src/engine`. `build-search-
 
 ## Appearance, offline and verification
 
+The root layout tolerates pre-hydration attribute changes on `html` and `body`. The body exception handles browser-extension attributes such as `cz-shortcut-listen`; it does not suppress hydration checks inside creator components. The development rendering regression injects that attribute before hydration on every creator route and requires a clean console.
+
 The root frame preserves the selected Player, Moonlit Vellum and Ash & Vellum themes. Root CSS matches the server-rendered frame's theme with `:has()` so the initial palette works before hydration and with JavaScript disabled. A layout effect updates root mode/theme attributes and theme-colour metadata during client navigation; the frame never renders an executable script. CSS order, panel materials, local art/fonts, reduced motion, safe areas and public notices remain shared. Styles use public root asset URLs rather than source-module URL assumptions. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
 
 The root PWA service is independent of creator remounts. The worker inventories the completed static build, distinguishes route HTML from App Router payloads, installs atomically and waits for explicit Update now. One previous cache can supply old immutable hashed chunks to an open tab; current route documents/payloads never mix releases. See [PWA.md](PWA.md) for headers, update verification and rollback.

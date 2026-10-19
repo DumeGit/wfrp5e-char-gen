@@ -7,6 +7,39 @@ import {
   PC_STORAGE,
 } from "./helpers.mjs";
 
+test("extension-added body attributes do not interrupt hydration @rendering", async ({
+  page,
+}) => {
+  const consoleErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  await page.addInitScript(() => {
+    // Reproduce an extension changing the document before React hydrates.
+    const observer = new MutationObserver(() => {
+      if (!document.body) return;
+      document.body.setAttribute("cz-shortcut-listen", "true");
+      observer.disconnect();
+    });
+    observer.observe(document, { childList: true, subtree: true });
+  });
+  await openPC(page);
+  for (const [route, mode] of [
+    ["/", "player"],
+    ["/bestiary/", "gm"],
+    ["/marijan/", "marijan"],
+  ]) {
+    await page.goto(`${route}?verify=1`);
+    await expect(page.locator("body")).toHaveAttribute(
+      "cz-shortcut-listen",
+      "true",
+    );
+    await expect(page.locator("html")).toHaveAttribute("data-mode", mode);
+    await expect(page.locator(".rail")).toBeVisible();
+  }
+  expect(consoleErrors).toEqual([]);
+});
+
 test("rolled Characteristics and Career comparisons keep rows inside tables @rendering @pc", async ({
   page,
 }) => {
