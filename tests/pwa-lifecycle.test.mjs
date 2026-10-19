@@ -129,7 +129,7 @@ test("PWA lifecycle preserves explicit activation, root registration and removes
   assert.equal(await service.install(), true);
   assert.equal(await service.install(), false);
   assert.equal(prompts, 1);
-  service.update();
+  await service.update();
   assert.deepEqual(env.messages, [{ type: "APPLY_UPDATE" }]);
   assert.equal(states.at(-1).applying, true);
   service.dispose();
@@ -155,6 +155,38 @@ test("late registration completion cannot reconnect a disposed PWA service", asy
   await new Promise((resolve) => setImmediate(resolve));
   env.assertDisposed();
   assert.equal(states.length, 1);
+});
+
+test("updates await database writes and do not activate after an unsaved conflict", async (t) => {
+  const env = environment(t);
+  const states = [];
+  const service = connectPwa((state) => states.push(state));
+  await new Promise((resolve) => setImmediate(resolve));
+  let finish;
+  const pending = new Promise((resolve) => {
+    finish = resolve;
+  });
+  const wait = (e) => e.detail.waitUntil(pending);
+  env.window.addEventListener("wfrp-before-update", wait);
+  const updating = service.update();
+  assert.deepEqual(env.messages, []);
+  finish();
+  await updating;
+  assert.deepEqual(env.messages, [{ type: "APPLY_UPDATE" }]);
+  env.window.removeEventListener("wfrp-before-update", wait);
+  service.dispose();
+  const second = connectPwa((state) => states.push(state));
+  await new Promise((resolve) => setImmediate(resolve));
+  env.messages.length = 0;
+  const fail = (e) =>
+    e.detail.waitUntil(Promise.reject(Error("Unsaved changes")));
+  env.window.addEventListener("wfrp-before-update", fail);
+  await second.update();
+  assert.deepEqual(env.messages, []);
+  assert.equal(states.at(-1).failed, true);
+  env.window.removeEventListener("wfrp-before-update", fail);
+  second.dispose();
+  env.assertDisposed();
 });
 test("development mode does not request a production offline worker", async (t) => {
   const env = environment(t, { development: true });

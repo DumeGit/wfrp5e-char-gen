@@ -295,9 +295,9 @@ function slotAliasNote(e) {
     ? `${e.name} uses the ${e.alias} profile (p. 301); no separate profile is printed.`
     : "";
 }
-export function equipment(R, s) {
-  const d = derive(R, s),
-    entries = inventoryEntries(R, s),
+export function equipment(R, s, supplied) {
+  const d = supplied?.derived || derive(R, s),
+    entries = supplied?.entries || inventoryEntries(R, s),
     notes = [],
     warnings = [],
     unknown = [],
@@ -757,8 +757,16 @@ export function equipment(R, s) {
     },
   };
 }
-export function recordAcquisition(R, s, level, index, reason, linkedGear = "") {
-  const d = derive(R, s);
+export function recordAcquisition(
+  R,
+  s,
+  level,
+  index,
+  reason,
+  linkedGear = "",
+  context,
+) {
+  const d = context || derive(R, s);
   if (level !== d.level + 1 || level > 4)
     throw Error("Only the next Career level grants Trapping boxes.");
   const name = career(R, s).levels[level - 1].trappings[index];

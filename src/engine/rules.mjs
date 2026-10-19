@@ -733,11 +733,11 @@ export function derive(R, s) {
     warnings: warnings.map((x) => x.message),
   };
 }
-export function invalidTalent(R, s, name) {
+export function invalidTalent(R, s, name, context) {
   const lustria = lustriaTalentIssue(name, s.species);
   if (lustria) return lustria;
   if (causeIssue(name)) return causeIssue(name);
-  const d = derive(R, s),
+  const d = context || derive(R, s),
     b = base(name),
     magical = ["Arcane Magic", "Chaos Magic", "Petty Magic", "Witch!"],
     divine = ["Bless", "Invoke"],
@@ -797,8 +797,8 @@ export function invalidTalent(R, s, name) {
     const previous = lores.at(-1),
       category = previous.match(/\((.*)\)/)[1];
     const count = R.highElfCreation
-      ? mageLoreCount(R, s, category, d.talents)
-      : knownSpells(R, s).filter(
+      ? mageLoreCount(R, s, category, d.talents, d)
+      : knownSpells(R, s, d).filter(
           (x) =>
             !x.ritual &&
             (x.category === category ||
@@ -839,8 +839,8 @@ export function invalidTalent(R, s, name) {
     return "Already known; this purchase is not repeatable.";
   return "";
 }
-export function talentSkillUnlocks(R, s) {
-  const d = derive(R, s);
+export function talentSkillUnlocks(R, s, context) {
+  const d = context || derive(R, s);
   return [
     ...new Set([
       ...(psychometrySacrifice(R, s) ? ["Psychometry"] : []),
@@ -853,9 +853,9 @@ export function talentSkillUnlocks(R, s) {
     ]),
   ];
 }
-export function quote(R, s, type, name, amount = 5) {
+export function quote(R, s, type, name, amount = 5, context) {
   if (type === "technique") return quoteTechnique(R, s, name);
-  const d = derive(R, s),
+  const d = context || derive(R, s),
     c = career(R, s);
   let cost,
     tick = false,
@@ -905,7 +905,7 @@ export function quote(R, s, type, name, amount = 5) {
     else if (
       !inCareer &&
       info.advanced &&
-      !talentSkillUnlocks(R, s).includes(name)
+      !talentSkillUnlocks(R, s, d).includes(name)
     )
       error =
         "Non-career Advanced Skills require a Training Endeavour (p. 44).";
@@ -935,7 +935,7 @@ export function quote(R, s, type, name, amount = 5) {
     tick = inCareer && d.earnedBoxes < 36;
     error = !inCareer
       ? "Not available in this Career level."
-      : invalidTalent(R, s, name);
+      : invalidTalent(R, s, name, d);
   }
   if (type === "promotion") {
     cost = 100;
@@ -1319,7 +1319,8 @@ export function spellGrants(R, s) {
   }
   return out;
 }
-export function knownSpells(R, s) {
+export function knownSpells(R, s, context) {
+  if (context?.knownMagic) return context.knownMagic;
   const d = derive(R, s),
     names = [];
   let offset = 0;

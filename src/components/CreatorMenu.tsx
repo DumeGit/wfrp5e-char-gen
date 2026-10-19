@@ -64,11 +64,15 @@ export function CreatorMenu({
       }}
     >
       <div className="dialog-heading">
-        <h2 id={title}>Creator menu</h2>
+        <h2 id={title}>
+          {mode === "manager" ? "Manager menu" : "Creator menu"}
+        </h2>
         <button
           type="button"
           className="quiet"
-          aria-label="Close creator menu"
+          aria-label={
+            mode === "manager" ? "Close manager menu" : "Close creator menu"
+          }
           onClick={onClose}
         >
           Close

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-export type CreatorMode = "player" | "gm" | "marijan";
+export type CreatorMode = "player" | "gm" | "marijan" | "manager";
 export function ModeNavigation({
   mode,
   verify = false,
@@ -17,6 +17,7 @@ export function ModeNavigation({
           ["player", "/", "Player character"],
           ["gm", "/bestiary/", "NPC & creature"],
           ["marijan", "/marijan/", "Marijan Mode"],
+          ["manager", "/manager/", "Character manager"],
         ] as const
       ).map(([id, href, label]) => (
         <Link

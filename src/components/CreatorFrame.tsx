@@ -26,6 +26,13 @@ const modes = {
     caption: "FIFTH EDITION · UNRESTRICTED CREATION",
     oath: "YOUR WILL. YOUR WORLD.",
   },
+  manager: {
+    theme: "imperial-field-ledger",
+    color: "#252d21",
+    name: "The Field Ledger",
+    caption: "FIFTH EDITION · CHARACTER MANAGER",
+    oath: "KEEP THE RECORD",
+  },
 };
 export function CreatorFrame({
   mode,

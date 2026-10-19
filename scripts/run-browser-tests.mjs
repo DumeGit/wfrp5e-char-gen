@@ -10,6 +10,7 @@ const scopes = [
   "pc",
   "gm",
   "marijan",
+  "manager",
   "storage",
   "exports",
   "mobile",

@@ -59,6 +59,11 @@ export default function LegalPage() {
         <h3>{"Software & fonts"}</h3>
         {"\n        "}
         <ul>
+          <li>
+            Local character storage uses Dexie.js.{" "}
+            <a href="/assets/LICENSE-dexie.txt">Apache 2.0 licence</a> and{" "}
+            <a href="/assets/NOTICE-dexie.txt">copyright notice</a>.
+          </li>
           {"\n          "}
           <li>
             {"PDF exports use pdf-lib. "}
@@ -90,13 +95,13 @@ export default function LegalPage() {
         {"\n        "}
         <p>
           {
-            "There is no Character Ledger account system or character database on a server. Drafts and preferences are saved in this browser on this device. The app also caches files through a service worker for offline use. These are functional storage features, not advertising or analytics cookies."
+            "There is no Character Ledger account system or character database on a server. Drafts and preferences are saved in this browser on this device. The character manager stores its library, portraits, journal and change history locally using IndexedDB. The app also caches files through a service worker for offline use. These are functional storage features, not advertising or analytics cookies."
           }
         </p>
         {"\n        "}
         <p>
           {
-            "Character generation and PDF export run in your browser. Save and Load use files you download to or select from your device; the app does not upload those character files. Clear this site's browser storage to remove local drafts, preferences and offline files. Download any backups you want to keep first."
+            "Character generation and PDF export run in your browser. Save, Load and manager backups use files you download to or select from your device; the app does not upload character files or portraits. Clear this site's browser storage to remove local drafts, manager characters, preferences and offline files. Download any backups you want to keep first."
           }
         </p>
         {"\n        "}

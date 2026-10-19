@@ -312,11 +312,17 @@ export function rollBlood(R, s, roll) {
   e.ancestry = "rolled";
   return e.bloodRoll;
 }
-export function mageLoreCount(R, s, lore, talents = M.derive(R, s).talents) {
+export function mageLoreCount(
+  R,
+  s,
+  lore,
+  talents = M.derive(R, s).talents,
+  context,
+) {
   const all = talents.filter((t) => M.base(t) === "Arcane Magic"),
     current = `Arcane Magic (${lore})`,
     prior = new Set(all.slice(0, all.indexOf(current))),
-    known = M.knownSpells(R, s);
+    known = M.knownSpells(R, s, context);
   return known.filter(
     (x) =>
       !x.ritual &&
@@ -335,7 +341,7 @@ export function mageNextLoreIssue(R, s, d) {
   const points = Math.round(
       (d.skills[`Channelling (${WINDS[lore]})`] || 0) * 5,
     ),
-    spells = mageLoreCount(R, s, lore, d.talents);
+    spells = mageLoreCount(R, s, lore, d.talents, d);
   return points < 10 || spells < 4
     ? `Mage requires 10 Channelling (${WINDS[lore]}) points and 4 qualifying ${lore} spells before another Lore (${points}/10 points, ${spells}/4 spells; High Elf Guide p. 79).`
     : "";
@@ -351,7 +357,7 @@ export function highElfTalentIssue(R, s, name, d) {
       return "Blessed by Isha requires Willpower 80 (High Elf Guide p. 80).";
     if (
       !d.talents.includes("Petty Magic") ||
-      M.knownSpells(R, s).filter(
+      M.knownSpells(R, s, d).filter(
         (x) =>
           x.category === "Petty" &&
           R.highElfCreation.pettySpells.includes(x.name),
@@ -362,7 +368,7 @@ export function highElfTalentIssue(R, s, name, d) {
       if (
         !d.talents.includes(`Arcane Magic (${lore})`) ||
         (d.skills[`Channelling (${wind})`] || 0) * 5 < 10 ||
-        mageLoreCount(R, s, lore, d.talents) < 4
+        mageLoreCount(R, s, lore, d.talents, d) < 4
       )
         return `Requires all eight Colour Lores, 10 points in each Channelling Skill and 4 qualifying spells in each Lore; ${lore} is incomplete (High Elf Guide p. 80).`;
   }
@@ -390,7 +396,7 @@ export function highElfAdvanceIssue(R, s, type, name, amount, d) {
     type === "promotion" &&
     mage(s) &&
     d.level === 1 &&
-    M.knownSpells(R, s).filter(
+    M.knownSpells(R, s, d).filter(
       (x) =>
         x.category === "Petty" &&
         R.highElfCreation.pettySpells.includes(x.name),

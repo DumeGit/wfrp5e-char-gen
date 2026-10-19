@@ -1,5 +1,7 @@
 # Public identity and notices — 15 October 2026
 
+The new manager shares these notices. Privacy now describes its browser-local IndexedDB library, portraits, journal and history, with no character/portrait uploads or account service. Dexie.js 4.4.6's Apache licence and NOTICE are shipped locally and linked from Credits. No analytics or hosting settings are added.
+
 The public project identity is **The Character Ledger**, an independent, unofficial WFRP Fifth Edition companion. All three creator headers state unofficial status; static footers link to Credits & rights, Privacy and Contact in `src/app/legal/page.tsx`. The footer works without JavaScript, uses existing theme colours and leaves room for the phone action bar. The information page is also included in offline assets.
 
 `public/assets/ledger-emblem.svg` is the user-selected **D — The Carrion Standard**: an original bone skull on a ragged burgundy pennon with antique brass details. It replaces the former closed-book mark in mastheads, folios, the design-system specimen, favicons and install icons. `node scripts/generate-icons.mjs` renders PNG icons from the canonical SVG using local Playwright/Chromium, retaining its gradients and curves; regenerate them after changing the SVG. No Warhammer wordmark or faction crest is embedded. Historical standalone design previews and provenance remain historical, not production branding.

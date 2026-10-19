@@ -8,7 +8,7 @@ import {
 } from "./helpers.mjs";
 
 test.use({ serviceWorkers: "allow" });
-test("all three tools and previously unopened references work offline @pwa", async ({
+test("creators, manager and previously unopened references work offline @pwa", async ({
   page,
   context,
 }) => {
@@ -42,6 +42,16 @@ test("all three tools and previously unopened references work offline @pwa", asy
   await expect(page.getByLabel("Name", { exact: true })).toHaveValue(
     "Offline Marijan",
   );
+  await page.goto("/manager/?verify=1");
+  await page
+    .getByRole("button", { name: "New blank character", exact: true })
+    .click();
+  await page.locator("#manager-name").fill("Offline manager");
+  await expect(page.locator("main").getByRole("status").last()).toContainText(
+    "Saved",
+  );
+  await page.reload();
+  await expect(page.locator("#manager-name")).toHaveValue("Offline manager");
 });
 
 test("a waiting offline update applies without losing purchases @pwa", async ({

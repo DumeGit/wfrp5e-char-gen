@@ -1,5 +1,7 @@
 # Application architecture
 
+The separate `/manager/` route adds a local play sheet/library. Its normalized `wfrp-manager` records use Dexie/IndexedDB; all three creator formats/storage remain independent. Both creator imports produce ordinary manager characters with identical tools. Rules, descriptions, packing and PDF templates are shared, using optional calculated contexts rather than invented creation ledgers. Manager commands serialize transactional saves with expected revisions, independent session Undo/Redo and persistent audit history. App updates await its persistence promises after navigation away. See [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md).
+
 The application uses Next.js App Router with a static export, React and TypeScript. The repository and hosting root remain `character-generator`. There is no application server, account database or analytics SDK. The reviewed Fifth Edition rule engine remains JavaScript; migrating the interface does not change game mechanics or source content.
 
 ## Source and output boundaries

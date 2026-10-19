@@ -1,0 +1,78 @@
+# Character manager — Imperial field ledger
+
+The `/manager/` route adds a local play sheet and character library alongside the three creators. The user selected Imperial field ledger on 19 October 2026: military olive framing, parchment, aged brass and subtle static canvas. It reuses the emblem/fonts, shared Search and native mobile menu, joined desktop panels and compact navigation.
+
+## Characters and imports
+
+Player version-2, Marijan schema-1 and manager schema-1 files import through a preview into the same manager format. There are no source-mode badges, editing restrictions or different tools. Imports create independent records and leave creator drafts untouched. Player imports require supported selected Species/Career and matching installed book versions. Blank characters use the same tools without creation grants.
+
+A schema-1 `wfrp-manager` document has an independent ID, revision/timestamps, normalized `wfrp-character` sheet, mechanical context, calculation adjustments, current resources, Conditions, journal, persistent audit history, actual manager purchases, and optional original attachments/portrait. The sheet internally reuses freehand-model validation/calculation; its public format is not a Marijan save. Original creator data and rolls remain downloadable historical attachments. No previous purchases or verified randomness are invented.
+
+Player imports preserve totals while moving already-applied Characteristic Talent benefits out of base scores before enabling ordinary future calculation. Skill differences and derived-value offsets preserve imported totals; resource override labels show calculated comparisons and imported offsets. Explicit manual totals remain manual. Current Wounds/Fortune are separate from maximums and never silently refill when maximums change. Both origins receive the same adjustment and advancement tools.
+
+## Library, persistence and recovery
+
+Search name/Species/Career; sort by recent edit/name/Career; filter Active, Favourites, Archived or All. Duplicate creates an independent character. Archive is reversible; permanent deletion requires a concrete confirmation. Optional local PNG/JPEG/WebP portraits up to 512 KB are backed up in JSON, never uploaded or embedded into PDFs.
+
+Dexie 4.4.6 stores records independently in IndexedDB `wfrp-character-manager-v1`, table `characters`, schema version 1. Tests use the separate `-verification` database. Creator storage and the authored/generated book catalogue are unchanged. Transactions compare expected revisions, preventing a stale tab from overwriting newer data. Failed/conflicting copies remain exportable, with retry, save-as-duplicate and confirmed reload actions.
+
+Commands serialize and capture their target character. Session Undo/Redo keeps up to 60 full states per character; persistent audit entries record reversals without deleting the audit. Switching characters preserves independent histories. Application-lifetime guards protect pending/failed writes after leaving the manager. PWA updates await registered save promises and do not activate across an unsaved conflict.
+
+Individual JSON and complete-library backups retain the manager data. Restore previews offer independent copies, skipping existing IDs or replacing matching IDs. Validate all records before an atomic batch transaction; reject duplicate IDs and compare revisions captured when the preview opened. Invalid initial storage offers a raw recovery download. Local storage is not a downloaded backup: no server, account or device synchronization is provided.
+
+## Sheet and everyday play
+
+| Section | Implemented behavior |
+| --- | --- |
+| Overview | Identity/portrait, Characteristics, resources/load, appearance, Conditions and GM adjustments |
+| Skills & Talents | Search, totals/ranks, descriptions/source access, manual totals and pinning |
+| Combat & Gear | Weapon Damage/attack Skill, location AP/Soak, conditional shield totals, acquisitions, money, quantities, placement and automatic packing |
+| Magic & Faith | Known magic/prayers/Cants, Traits/runes/techniques, canonical descriptions, custom references and learning-Lore records |
+| Advancement | XP awards, shared +1/+5/Talent quotes, tracker bands, next-level Trapping credits, promotion and Career changes |
+| Journal & history | Background/ambitions, typed session/downtime/companion/business notes, change history and historical attachments |
+| Session view | Resource actions, Conditions, equipped attacks and pinned Skills/Talents/magic |
+
+Current Wounds/Fortune can be changed independently of maximums. Fate changes explain their permanent effect before application. Above-maximum current values are preserved and reported. Resource controls do not roll combat or recover Conditions automatically. Desktop resources share the menu's green material; compact layouts use the shared menu, section selector and Undo/Redo/Resources/Library controls. Names and enlarged text wrap down to 320px.
+
+All characters have explicit GM adjustments for base values/Advances, Species/Career, resource overrides, XP, money, tracker and custom/catalogue entries. These are recorded separately from paid purchases. Unknown weights/AP stay unresolved. Stored gear and coin weight are excluded from load; automatic packing reuses the creator calculation. Equipment acquisition debits the entered total price in pennies once (zero for gifts/loot); unknown listed prices remain unknown. Removal gives no automatic refund. Ordinary money transactions support agreed selling without invented haggling.
+
+## Rules and source boundaries
+
+The shared `quote`, `invalidTalent`, `talentSkillUnlocks` and `knownSpells` accept optional manager calculated contexts; existing creator behavior is retained. High Elf Lore checks forward this context rather than deriving an unrelated creation draft. Imported mechanical origin/variant choices and spell-learning Lores are preserved. Manually recorded spells can specify their learning Talent/Lore; missing history is not invented.
+
+Equipment accepts normalized inventory/derived inputs to reuse actual packing, armour layering, load penalties and weapon calculations. New catalogue weapons retain their melee/ranged identity. Prices, Talent limits, non-Career restrictions and user-approved individual-point tracker grouping come from the existing engine. Partial five-point bands require +1 before +5. Next-level Trapping acquisition delegates to the shared tracker rule with an acquisition reason and duplicate-credit prevention; it does not add gear or charge again.
+
+Promotion requires sufficient tracker boxes, 100 XP and a recorded Advance Career Endeavour (core p. 196). Change Career was checked against supplied core printed p. 197: GM agreement/Endeavour, 100 XP within a Class or 200 XP across Classes. The implemented workflow enters level 1 with a fresh tracker and retains learned values/possessions, without creation grants. That entry-level workflow is explicit in the UI, not a claim about an unprinted higher-level entry rule; GM adjustments support agreed alternatives.
+
+As planned, complex systems remain manual records: Condition effects/recovery, injuries, live casting/gathered power, crafting/commissioning, tutor fees/Training, familiar progression, hirelings and Enterprises. They can be recorded in Conditions, adjustments and typed journals. Automatic spell/prayer/rune purchases and companion/business managers need separate reviewed handlers. Adding knowledge is explicitly a GM adjustment with no XP charge. Cloud sync is future work.
+
+## Exports and ownership
+
+The common supplied editable PDF sheet receives manager branding, current Wounds/Fortune and maximums. Its complete character record is followed by paginated Conditions, journal and full persistent history; original purchase/roll records are appended. Original attachments remain complete in JSON. PDF tools load only when exporting, with a captured character snapshot. Existing Marijan export defaults remain unchanged.
+
+| Location | Responsibility |
+| --- | --- |
+| `src/app/manager/page.tsx` | Static route/shared frame |
+| `src/engine/manager/model.mjs` | Validation/normalization, calculation projection, imports/backups and commands |
+| `src/features/manager/database.ts` | Dexie schema, revision checks and atomic restore |
+| `src/features/manager/store.ts` | Serialized saves, character sessions, conflict recovery and history |
+| `src/features/manager/Manager.tsx` | Native React library, sheet, dialogs and responsive controls |
+| `src/features/manager/export.ts` | Common PDF adapter and complete manager appendix |
+| `src/styles/design-tokens.css`, `manager.css` | Semantic theme and feature geometry respectively |
+
+The field-canvas SVG is original project vector work, with static weave strokes totalling 0.15 strength. Menu/folio/header share it; it remains visible with reduced motion and is omitted from print. Dexie's Apache licence/notice ship under `public/assets/` and are linked in Credits. The existing offline build inventories manager route/chunks/assets. No new game-data source or duplicate book catalogue is introduced.
+
+## Verification
+
+Verified locally on 19 October 2026:
+
+- Production build, 28 book-pack checks, generated content, types, all 11 store checks and the complete 105-file offline inventory passed.
+- The 549-test Node run initially passed 546. One obsolete privacy-copy assertion was updated; two offline tests had read `out/` during a concurrent rebuild. All eight affected notice/offline tests passed against stable output. A later 38-case manager/High Elf/PWA regression run passed, including the final update guard behavior.
+- The 298-case production browser run passed 289 and skipped six, exposing three short-desktop rail failures from the added workspace link. The shared switcher now uses an even 2×2 desktop grid. All 28 applicable shell/interface/PWA follow-ups passed (four scoped skips), including those three cases and manager offline creation/reload. All 18 manager cases passed on the updated build. All 15 tablet checks passed.
+- All 20 development-browser cases passed; a final focused manager development run also checks the final native field/hydration behavior.
+- Chromium and WebKit visual checks covered 320/390/768/1440/2560px and native menus. Sixteen initial axe scans found one repeated definition-list markup issue; it was repaired, and both final Overview scans were clean. Other sections/menus were clean in the initial scans. These checks do not assert blanket accessibility compliance or physical-device verification.
+- `check:release` stopped at the existing repository-wide Windows CRLF formatting issue (171 files). `check:format -- --end-of-line auto`, syntax checks and generated-content checks passed. The remaining release checks were run separately; formatting policy and untouched files were not broadly rewritten.
+
+Ignored logs, screenshots and diagnostics are under `test-results/manager-*`. The original creator drafts and personal character libraries were not used by verification.
+
+`npm run test:ui:manager` covers real-browser imports/reload, resources/history, purchases, backups, malformed files, conflicting tabs, PDF downloads and 320/768/1440/2560px geometry. `tests/manager.test.mjs` protects imported totals, common quotes, individual tracker bands, failed-command atomicity, Career/Trapping rules, unknown values, weapon identity, backup validation and PDF resource/history content. Development checks include manager hydration/editing; PWA checks create/reload a manager character offline. Physical phones/tablets/software keyboards remain unverified. The existing Windows CRLF formatting limitation in TESTING.md remains; the documented `--end-of-line auto` diagnostic separates it from content formatting.

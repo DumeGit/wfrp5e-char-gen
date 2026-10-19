@@ -101,7 +101,8 @@ export function PwaControls() {
         aria-label="App update"
       >
         <p>
-          An update is ready. Your character will be saved before reloading.
+          {state.updateError ||
+            "An update is ready. Your character will be saved before reloading."}
         </p>
         <button
           type="button"

@@ -4853,6 +4853,43 @@ dialog.book-search-panel .search-panel-heading {
   --color-step-caption-active: var(--color-on-crimson);
 }
 
+/* Imperial field ledger: one palette shared by the shell, menus and sheet. */
+:root[data-theme="imperial-field-ledger"],
+:root:has(body > [data-theme="imperial-field-ledger"]) {
+  --color-world: #252d21;
+  --color-leather: #35402d;
+  --color-leather-deep: #252d21;
+  --color-panel: #35402d;
+  --surface-panel-texture: url(/assets/panel-textures/field-canvas.svg);
+  --surface-panel-texture-size: 240px 240px;
+  --color-leather-raised: #48553c;
+  --color-on-leather: #f1eedb;
+  --color-on-leather-muted: #c4cbb4;
+  --color-line-dark: #858f73;
+  --color-paper: #e9e4cf;
+  --color-paper-raised: #f6f2e3;
+  --color-paper-recessed: #dcdcc6;
+  --color-paper-hover: #e2e4d1;
+  --color-ink: #25291f;
+  --color-muted: #555d48;
+  --color-line: #949a7f;
+  --color-line-soft: #b8bca2;
+  --color-gold: #b6a16a;
+  --color-gold-light: #e6d3a1;
+  --color-gold-dark: #706039;
+  --color-crimson: #3d5031;
+  --color-crimson-hover: #293c20;
+  --color-on-crimson: #fbf6df;
+  --color-focus: #655019;
+  --color-focus-on-dark: #ead19b;
+  --color-title-veil: #252d21d9;
+  --color-search-veil: #252d21d9;
+  --color-dialog-backdrop: #121c14cc;
+  --color-chapter-initial: #f1eedb;
+  --surface-working-leaf: var(--color-paper);
+  --shadow-working-leaf: inset 0 0 24px #35402d0a;
+}
+
 /* Black Banner component skin. Feature CSS continues to own behaviour/layout. */
 :root {
   font-family: var(--font-body);

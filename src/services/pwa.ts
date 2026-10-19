@@ -6,10 +6,11 @@ export type PwaState = {
   applying: boolean;
   failed: boolean;
   development: boolean;
+  updateError?: string;
 };
 export type PwaController = {
   install: () => Promise<boolean>;
-  update: () => void;
+  update: () => Promise<void>;
   dispose: () => void;
 };
 type InstallEvent = Event & { prompt: () => Promise<void> };
@@ -125,9 +126,30 @@ export function connectPwa(onChange: (state: PwaState) => void): PwaController {
       await prompt.prompt();
       return true;
     },
-    update: () => {
+    update: async () => {
+      if (!registration?.waiting || disposed || state.applying) return;
+      state.applying = true;
+      emit();
+      const pending: Promise<unknown>[] = [];
+      window.dispatchEvent(
+        new CustomEvent("wfrp-before-update", {
+          detail: {
+            waitUntil: (promise: Promise<unknown>) => pending.push(promise),
+          },
+        }),
+      );
+      try {
+        await Promise.all(pending);
+      } catch {
+        state.failed = true;
+        state.applying = false;
+        state.updateError =
+          "Save or export unsaved characters before updating. Open the manager to resolve any save conflicts.";
+        emit();
+        return;
+      }
       if (!registration?.waiting || disposed) return;
-      window.dispatchEvent(new Event("wfrp-before-update"));
+      state.updateError = undefined;
       state.applying = true;
       emit();
       registration.waiting.postMessage({ type: "APPLY_UPDATE" });

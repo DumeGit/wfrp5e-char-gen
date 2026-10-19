@@ -30,6 +30,9 @@ export async function marijanRecord(
   s,
   r,
   PDFLib = globalThis.PDFLib,
+  {
+    heading: recordHeading = "MARIJAN MODE  /  UNRESTRICTED CHARACTER RECORD",
+  } = {},
 ) {
   const { PDFDocument, StandardFonts, rgb } = PDFLib,
     doc = await PDFDocument.create(),
@@ -45,7 +48,7 @@ export async function marijanRecord(
     page = doc.addPage([595.28, 841.89]);
     y = 784;
     index++;
-    page.drawText("MARIJAN MODE  /  UNRESTRICTED CHARACTER RECORD", {
+    page.drawText(recordHeading, {
       x: 42,
       y: 810,
       font: bold,
@@ -345,7 +348,14 @@ export async function exportMarijanSheet(
   catalogue,
   s,
   r,
-  { PDFLib = globalThis.PDFLib, templateBytes, fieldMeta } = {},
+  {
+    PDFLib = globalThis.PDFLib,
+    templateBytes,
+    fieldMeta,
+    fieldOverrides = {},
+    recordHeading,
+    documentTitle,
+  } = {},
 ) {
   if (!PDFLib)
     throw Error(
@@ -370,7 +380,7 @@ export async function exportMarijanSheet(
     doc = await PDFDocument.load(template),
     font = await doc.embedFont(StandardFonts.Helvetica),
     form = doc.getForm(),
-    values = marijanFieldValues(catalogue, s, r),
+    values = { ...marijanFieldValues(catalogue, s, r), ...fieldOverrides },
     rects = new Map(meta.map((x) => [x.name, x.rect]));
   for (const f of form.getFields()) {
     if (f instanceof PDFCheckBox) {
@@ -414,11 +424,13 @@ export async function exportMarijanSheet(
   form.updateFieldAppearances(font);
   form.acroForm.dict.set(PDFName.of("NeedAppearances"), PDFBool.False);
   const record = await PDFDocument.load(
-    await marijanRecord(catalogue, s, r, PDFLib),
+    await marijanRecord(catalogue, s, r, PDFLib, { heading: recordHeading }),
   );
   for (const page of await doc.copyPages(record, record.getPageIndices()))
     doc.addPage(page);
-  doc.setTitle(`${s.name || "Character"} - Marijan Mode sheet and record`);
+  doc.setTitle(
+    documentTitle || `${s.name || "Character"} - Marijan Mode sheet and record`,
+  );
   doc.setAuthor("WFRP Character Ledger");
   return doc.save();
 }

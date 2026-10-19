@@ -20,6 +20,7 @@
     "test:ui:notices": "node scripts/run-browser-tests.mjs notices",
     "test:ui:pc": "node scripts/run-browser-tests.mjs pc",
     "test:ui:marijan": "node scripts/run-browser-tests.mjs marijan",
+    "test:ui:manager": "node scripts/run-browser-tests.mjs manager",
     "test:ui:gm": "node scripts/run-browser-tests.mjs gm",
     "test:ui:storage": "node scripts/run-browser-tests.mjs storage",
     "test:ui:exports": "node scripts/run-browser-tests.mjs exports",
@@ -45,6 +46,7 @@
     "test:unit": "node --import tsx --test tests/*.test.mjs"
   },
   "dependencies": {
+    "dexie": "4.4.6",
     "next": "16.4.2",
     "pdf-lib": "1.17.1",
     "react": "19.3.1",

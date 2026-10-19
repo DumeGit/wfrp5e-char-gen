@@ -1,6 +1,6 @@
 # Offline builds, installation and static hosting
 
-The Next.js App Router application is exported as static files in `out/`. The repository and hosting-project root remain `character-generator`; `public/` holds approved public inputs, while `src/`, `content/`, source PDFs, extraction and build scripts remain outside the published directory. There is no account service, database or analytics SDK.
+The Next.js App Router application is exported as static files in `out/`. The repository and hosting-project root remain `character-generator`; `public/` holds approved public inputs, while `src/`, `content/`, source PDFs, extraction and build scripts remain outside the published directory. There is no account service, server database or analytics SDK. The character manager stores its own library in browser-local IndexedDB, independently of creator drafts and the offline asset cache.
 
 ## Build and hosting contract
 
@@ -24,7 +24,7 @@ Activation retains the current complete cache and at most one previous ledger ca
 
 `src/services/pwa.ts` owns registration, installation prompts, online/offline status and waiting-update state. It accesses browser APIs only when connected from a client effect and disposes listeners and late asynchronous callbacks. The singleton `PwaControls` in the root layout keeps these services alive across client navigation. Its one install button is rendered into the active creator's `data-install-slot`; it hides in an installed window. Native installation instructions remain available when a browser supplies no install prompt.
 
-Before activation, **Update now** dispatches `wfrp-before-update`. Each mounted creator persists its current draft, then the service sends `APPLY_UPDATE` to the waiting worker. A controller change reloads the page only when the user chose the update. **Later** dismisses the offer for the current session. Update controls remain above the phone history bar. Draft keys, save formats and independent histories are unrelated to cache-version changes.
+Before activation, **Update now** dispatches `wfrp-before-update`. Each mounted creator persists its current draft. Async stores can register promises through `event.detail.waitUntil`; the manager's application-lifetime guard waits for its serialized writes, including after navigation away. Any unresolved conflict prevents activation and displays recovery guidance. After saves finish, the service sends `APPLY_UPDATE` to the waiting worker. A controller change reloads only after the user chose the update. **Later** dismisses the offer for the current session. Update controls remain above the phone history bar. Character databases, draft keys, save formats and independent histories are unrelated to cache-version changes.
 
 ## Local verification
 

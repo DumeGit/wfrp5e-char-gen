@@ -80,6 +80,24 @@ test("rolled Characteristics and Career comparisons keep rows inside tables @ren
   expect(consoleErrors).toEqual([]);
 });
 
+test("manager hydrates and edits native fields without development warnings @rendering @manager", async ({
+  page,
+}) => {
+  const errors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") errors.push(message.text());
+  });
+  await page.goto("/manager/?verify=1");
+  await page
+    .getByRole("button", { name: "New blank character", exact: true })
+    .click();
+  await page.locator("#manager-name").fill("Development manager");
+  await expect(page.locator("main").getByRole("status").last()).toContainText(
+    "Saved",
+  );
+  expect(errors).toEqual([]);
+});
+
 test("XP history keeps rows inside tables @rendering @pc", async ({ page }) => {
   const consoleErrors = [];
   page.on("console", (message) => {

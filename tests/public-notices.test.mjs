@@ -4,7 +4,12 @@ import { readFile, access } from "node:fs/promises";
 
 const read = (name) => readFile(new URL(`../${name}`, import.meta.url), "utf8");
 test("all creators identify the independent project and expose the same static notices", async () => {
-  for (const page of ["index.html", "bestiary/index.html", "marijan/index.html"]) {
+  for (const page of [
+    "index.html",
+    "bestiary/index.html",
+    "marijan/index.html",
+    "manager/index.html",
+  ]) {
     const html = await read(`out/${page}`);
     assert.match(html, /UNOFFICIAL · WFRP FIFTH EDITION/);
     assert.match(
@@ -17,7 +22,7 @@ test("all creators identify the independent project and expose the same static n
     assert.doesNotMatch(html, /analytics\.mjs|black-banner\/w\.svg/);
   }
   const legal = await read("out/legal/index.html");
-  for (const name of ["pdf-lib", "cinzel", "fell", "gothic"])
+  for (const name of ["pdf-lib", "cinzel", "fell", "gothic", "dexie"])
     assert.ok(legal.includes(name));
   for (const [, path] of legal.matchAll(/href="\/(assets\/[^"]+)"/g))
     await access(new URL(`../out/${path}`, import.meta.url));
@@ -25,7 +30,8 @@ test("all creators identify the independent project and expose the same static n
     legal,
     /not a statement of rights-holder approval or permission/,
   );
-  assert.match(legal, /does not upload those character files/);
+  assert.match(legal, /does not upload character files or portraits/);
+  assert.match(legal, /IndexedDB/);
   assert.match(legal, /does not remove hosting logs/);
   assert.doesNotMatch(legal, /mailto:/);
 });
