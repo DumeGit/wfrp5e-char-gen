@@ -32,49 +32,6 @@ export function createFeature(getContext, setContext) {
       ? element(
           "div",
           { class: "table-wrap" },
-          joinNodes(
-            s.ledger.map((x, i) =>
-              element(
-                "tr",
-                {},
-                element(
-                  "td",
-                  {},
-                  combine(i, 1),
-                  ". ",
-                  esc(x.name),
-                  ["char", "skill"].includes(x.type)
-                    ? interpolate([" +", ""], [x.amount === 1 ? 1 : 5])
-                    : "",
-                  element("br", {}),
-                  element(
-                    "small",
-                    {},
-                    d.trackerCredits[i]
-                      ? "+1 tracker box"
-                      : x.type === "promotion"
-                        ? "Career advancement"
-                        : x.amount === 1 && (x.inCareer ?? x.tick)
-                          ? interpolate(
-                              ["", "/5 toward a tracker box"],
-                              [d.trackerProgressAt[i]],
-                            )
-                          : "No tracker box",
-                  ),
-                ),
-                element("td", {}, x.cost),
-                element(
-                  "td",
-                  {},
-                  s.ledger
-                    .slice(0, combine(i, 1))
-                    .reduce((a, b) => combine(a, b.cost), 0),
-                ),
-                element("td", {}, ref(x)),
-              ),
-            ),
-            "",
-          ),
           element(
             "table",
             {},
@@ -90,7 +47,53 @@ export function createFeature(getContext, setContext) {
                 element("th", {}, "Source"),
               ),
             ),
-            element("tbody", {}),
+            element(
+              "tbody",
+              {},
+              joinNodes(
+                s.ledger.map((x, i) =>
+                  element(
+                    "tr",
+                    {},
+                    element(
+                      "td",
+                      {},
+                      combine(i, 1),
+                      ". ",
+                      esc(x.name),
+                      ["char", "skill"].includes(x.type)
+                        ? interpolate([" +", ""], [x.amount === 1 ? 1 : 5])
+                        : "",
+                      element("br", {}),
+                      element(
+                        "small",
+                        {},
+                        d.trackerCredits[i]
+                          ? "+1 tracker box"
+                          : x.type === "promotion"
+                            ? "Career advancement"
+                            : x.amount === 1 && (x.inCareer ?? x.tick)
+                              ? interpolate(
+                                  ["", "/5 toward a tracker box"],
+                                  [d.trackerProgressAt[i]],
+                                )
+                              : "No tracker box",
+                      ),
+                    ),
+                    element("td", {}, x.cost),
+                    element(
+                      "td",
+                      {},
+                      s.ledger
+                        .slice(0, combine(i, 1))
+                        .reduce((a, b) => combine(a, b.cost), 0),
+                    ),
+                    element("td", {}, ref(x)),
+                  ),
+                ),
+                "",
+              ),
+            ),
           ),
           "\n",
         )

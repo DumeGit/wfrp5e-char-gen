@@ -141,6 +141,32 @@ function nodes(root: ReactNode): any[] {
       : [],
   );
 }
+function assertTableNesting(root: ReactNode, parent = "root") {
+  const allowedParents: Record<string, string[]> = {
+    tr: ["thead", "tbody", "tfoot"],
+    td: ["tr"],
+    th: ["tr"],
+    thead: ["table"],
+    tbody: ["table"],
+    tfoot: ["table"],
+    caption: ["table"],
+    colgroup: ["table"],
+    col: ["colgroup"],
+  };
+  for (const child of Children.toArray(root)) {
+    if (!isValidElement<any>(child)) continue;
+    const tag = typeof child.type === "string" ? child.type : undefined;
+    if (tag && allowedParents[tag])
+      assert.ok(
+        allowedParents[tag].includes(parent),
+        `<${tag}> cannot be a child of <${parent}>`,
+      );
+    assertTableNesting(
+      (child as ReactElement<{ children?: ReactNode }>).props.children,
+      tag ?? parent,
+    );
+  }
+}
 function scoreIntent(store: PlayerStore, key: string) {
   const node = nodes(store.getSnapshot().node).find(
     (node) =>
@@ -314,5 +340,50 @@ test("late file reads are cancelled after route departure, a newer import or int
     assert.deepEqual(store.getSnapshot().draft, before, cancellation);
     assert.notEqual(store.getSnapshot().draft.name, incoming.name);
     parity(store);
+  }
+});
+
+test("Player tables retain valid React ancestry across creation methods, Career changes and XP history", async () => {
+  for (const career of ["", "soldier"]) {
+    for (const charMode of ["points", "first", "rearrange", "reroll"]) {
+      const draft = {
+        ...fixture(),
+        career,
+        charMode,
+        charRolls: Array(10).fill(10),
+      };
+      memory.set(VERIFY, JSON.stringify(draft));
+      const store = await freshStore();
+      for (let step = 0; step < 8; step++) {
+        await store.action(element("step", { step: String(step) }));
+        assertTableNesting(store.getSnapshot().node);
+        if (step === 2 && charMode !== "points")
+          assert.equal(
+            nodes(store.getSnapshot().node).filter(
+              (node) => node.type === "tbody",
+            ).length,
+            1,
+          );
+      }
+    }
+  }
+  memory.set(VERIFY, JSON.stringify(fixture()));
+  const store = await freshStore();
+  store.dispatch("change", {
+    target: { dataset: { bind: "career" }, value: "guard", checked: false },
+  });
+  await flush();
+  const comparison = store.getSnapshot().modal;
+  assert.ok(comparison, "Career changes open the comparison dialog");
+  assert.ok(nodes(comparison.body).some((node) => node.type === "tr"));
+  assertTableNesting(comparison.body);
+  store.closeDialog();
+  await store.action(element("buy", { type: "char", name: "WS", amount: "5" }));
+  for (const step of [6, 7]) {
+    await store.action(element("step", { step: String(step) }));
+    const snapshot = store.getSnapshot();
+    assert.equal(snapshot.draft.ledger.length, 1);
+    assert.ok(nodes(snapshot.node).some((node) => node.type === "tbody"));
+    assertTableNesting(snapshot.node);
   }
 });

@@ -451,18 +451,6 @@ export function comparisonHTML(before, after) {
         element(
           "div",
           { class: "table-wrap" },
-          joinNodes(
-            rows.map((x) =>
-              element(
-                "tr",
-                {},
-                element("th", {}, esc(x.label)),
-                element("td", {}, esc(x.before)),
-                element("td", {}, esc(x.after)),
-              ),
-            ),
-            "",
-          ),
           element(
             "table",
             {},
@@ -477,7 +465,22 @@ export function comparisonHTML(before, after) {
                 element("th", {}, "After change"),
               ),
             ),
-            element("tbody", {}),
+            element(
+              "tbody",
+              {},
+              joinNodes(
+                rows.map((x) =>
+                  element(
+                    "tr",
+                    {},
+                    element("th", {}, esc(x.label)),
+                    element("td", {}, esc(x.before)),
+                    element("td", {}, esc(x.after)),
+                  ),
+                ),
+                "",
+              ),
+            ),
           ),
           "\n",
         ),

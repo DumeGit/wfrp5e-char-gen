@@ -1,4 +1,79 @@
-import { test, expect, openPC } from "./helpers.mjs";
+import {
+  test,
+  expect,
+  openPC,
+  pcDraft,
+  pcStep,
+  PC_STORAGE,
+} from "./helpers.mjs";
+
+test("rolled Characteristics and Career comparisons keep rows inside tables @rendering @pc", async ({
+  page,
+}) => {
+  const consoleErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  const draft = await pcDraft({ complete: true });
+  draft.career = "";
+  await page.addInitScript(
+    ({ key, draft }) => {
+      localStorage.setItem(key, JSON.stringify(draft));
+    },
+    { key: PC_STORAGE, draft },
+  );
+  await openPC(page);
+  await pcStep(page, "Characteristics");
+  await page
+    .getByRole("button", { name: "Roll 10 × 2d10", exact: true })
+    .click();
+  await expect(page.locator("main table > tbody > tr.career-none")).toHaveCount(
+    10,
+  );
+  await expect(page.locator("main > tr")).toHaveCount(0);
+
+  await pcStep(page, "Career");
+  await page.locator("#career-search").fill("Soldier");
+  await page.locator('.career-result[data-id="soldier"]').click();
+  await page
+    .getByRole("button", { name: "Choose Soldier", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog.locator("table > tbody > tr").first()).toBeVisible();
+  await expect(dialog.locator(".table-wrap > tr")).toHaveCount(0);
+  await dialog
+    .getByRole("button", { name: "Apply change", exact: true })
+    .click();
+  expect(consoleErrors).toEqual([]);
+});
+
+test("XP history keeps rows inside tables @rendering @pc", async ({ page }) => {
+  const consoleErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  await openPC(page, { complete: true });
+  await pcStep(page, "Experience");
+  await page
+    .locator(".xp-characteristic-row")
+    .filter({ has: page.getByText("Weapon Skill", { exact: true }) })
+    .getByRole("button", { name: /^[0-9]+ XP$/ })
+    .click();
+  await expect(page.locator(".ledger-section table > tbody > tr")).toHaveCount(
+    1,
+  );
+  await expect(
+    page.locator(".ledger-section table > tbody > tr > td"),
+  ).toHaveCount(4);
+  await expect(page.locator(".table-wrap > tr")).toHaveCount(0);
+  await pcStep(page, "Review & export");
+  await expect(
+    page.locator(
+      '[data-detail-key="review-sheet:stat-breakdown"] table > tbody > tr',
+    ),
+  ).toHaveCount(10);
+  expect(consoleErrors).toEqual([]);
+});
 
 test("creator navigation updates themes without React console errors @rendering", async ({
   page,

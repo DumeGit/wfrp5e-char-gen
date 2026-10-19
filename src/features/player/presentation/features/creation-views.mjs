@@ -568,57 +568,6 @@ export function createFeature(getContext, setContext) {
             ),
           )
         : fragment(
-            joinNodes(
-              M.KEYS.map((k, i) =>
-                element(
-                  "tr",
-                  { class: characteristicClass(k) },
-                  element(
-                    "td",
-                    {},
-                    element(
-                      "div",
-                      { class: "characteristic-identity" },
-                      element(
-                        "span",
-                        { class: "characteristic-label" },
-                        element("strong", {}, k),
-                        characteristicBadge(k),
-                      ),
-                      element(
-                        "small",
-                        { class: "characteristic-name" },
-                        characteristicNames[k],
-                      ),
-                    ),
-                  ),
-                  element(
-                    "td",
-                    {},
-                    s.charMode === "first"
-                      ? s.charRolls[i]
-                      : select(
-                          interpolate(
-                            [
-                              'data-bind="assignment" data-key="',
-                              '" aria-label="Roll for ',
-                              '"',
-                            ],
-                            [i, k],
-                          ),
-                          s.charRolls.map((v, j) => [
-                            j,
-                            interpolate(["", ": ", ""], [combine(j, 1), v]),
-                          ]),
-                          s.assignment[i],
-                        ),
-                  ),
-                  element("td", {}, "+", sp.offsets[k]),
-                  element("td", {}, M.initial(R, s)[k]),
-                ),
-              ),
-              "",
-            ),
             element(
               "table",
               { class: "characteristics-table" },
@@ -634,7 +583,61 @@ export function createFeature(getContext, setContext) {
                   element("th", {}, "Initial"),
                 ),
               ),
-              element("tbody", {}),
+              element(
+                "tbody",
+                {},
+                joinNodes(
+                  M.KEYS.map((k, i) =>
+                    element(
+                      "tr",
+                      { class: characteristicClass(k) },
+                      element(
+                        "td",
+                        {},
+                        element(
+                          "div",
+                          { class: "characteristic-identity" },
+                          element(
+                            "span",
+                            { class: "characteristic-label" },
+                            element("strong", {}, k),
+                            characteristicBadge(k),
+                          ),
+                          element(
+                            "small",
+                            { class: "characteristic-name" },
+                            characteristicNames[k],
+                          ),
+                        ),
+                      ),
+                      element(
+                        "td",
+                        {},
+                        s.charMode === "first"
+                          ? s.charRolls[i]
+                          : select(
+                              interpolate(
+                                [
+                                  'data-bind="assignment" data-key="',
+                                  '" aria-label="Roll for ',
+                                  '"',
+                                ],
+                                [i, k],
+                              ),
+                              s.charRolls.map((v, j) => [
+                                j,
+                                interpolate(["", ": ", ""], [combine(j, 1), v]),
+                              ]),
+                              s.assignment[i],
+                            ),
+                      ),
+                      element("td", {}, "+", sp.offsets[k]),
+                      element("td", {}, M.initial(R, s)[k]),
+                    ),
+                  ),
+                  "",
+                ),
+              ),
             ),
           ),
       characteristicLegend(),
