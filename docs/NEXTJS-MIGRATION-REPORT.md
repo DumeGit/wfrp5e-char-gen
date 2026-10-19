@@ -43,10 +43,13 @@ Detailed machine output and screenshots remain local under ignored `test-results
 | Complete production desktop/phone browser run | 254 passed, four existing viewport-specific skips, zero failures; 258 cases in 28 files |
 | Lenovo tablet matrix | All 15 scenarios passed across portrait, landscape, enlarged settings and short landscape windows |
 | Final focused platform/reference/Tribes Node checks | All 23 tests passed |
+| Follow-up complete Node suite, 19 October | All 534 passed; the stale cloak assertion is resolved |
+| Follow-up React development checks | All 12 desktop/phone cases passed with a clean console |
+| Follow-up production Player/review/navigation/exports | All 32 focused desktop/phone cases passed |
 
 All four major generated payloads (`book-library`, `search-library`, `rule-reference-library` and GM data) are identical to the starting commit after line-ending normalization. Seventy-four retained engine files are likewise unchanged; nine adapt imports, public asset loading, formatting or extracted helpers. Calculations remain covered by the existing rule and PDF tests.
 
-The final browser and tablet runs used the same completed production output. The complete release command remains non-zero at its Node stage because of the retained baseline discrepancy below; the remaining gates were run independently and are reported explicitly. No blanket successful release-gate claim is made.
+The final migration browser and tablet runs used the same completed production output. At that point, the complete release command remained non-zero at its Node stage because of the baseline discrepancy below; the remaining gates were run independently. The 19 October follow-up corrected the stale assertion and passed the complete Node suite (534/534). This does not claim a new complete release-chain run.
 
 The retained baseline includes nine fresh/synthetic desktop, phone and tablet screenshots and storage snapshots. React reference rendering is compared to 18 compact normalized-text hashes from the original reader; tests render the actual `ReferenceBody` component. Existing presentation assertions use adapters that serialize the actual React elements. Boolean attribute ordering assertions were adapted to React serialization without changing the required behavior.
 
@@ -56,9 +59,13 @@ A real pre-Next service worker was installed before serving the Next output on t
 
 Original PDF calculation/layout modules and approved assets were preserved. Existing tests inspect actual downloaded editable sheet fields, creation records, NPC sheets and fixed/flexible A4 card PDFs. There is no intentional PDF layout change.
 
-## Known pre-existing discrepancy
+## Resolved pre-existing discrepancy — 19 October 2026
 
-`tests/corsairs.test.mjs`, “Sea Dragon Cloak is optional acquired additional armour with no inferred price or weight”, already failed at untouched baseline `1a279d4`. Its table-card Trappings assertion expects `Sea Dragon Cloak (Body +2 AP; Partial)`, while the original export section contains `Sea Dragon Cloak`. The on-screen armour description and calculations are separate assertions. This migration does not change the approved armour rules or paper wording to hide the unrelated failure. The test is retained and remains visible in the complete Node run.
+`tests/corsairs.test.mjs`, “Sea Dragon Cloak is optional acquired additional armour with no inferred price or weight”, already failed at untouched baseline `1a279d4`. It expected the older armour-description row after the later shared print design deliberately changed exports to equipment names and per-location Soak totals. The follow-up now checks the exact cloak Trappings entry and Soak values in both formats, plus the app's Body +2 AP / Partial label and existing stacking/unknown-value rules. All 534 Node tests pass. No calculation, canonical content or PDF output was changed for this correction.
+
+The same follow-up removes the client-rendered theme script and repairs Review's Characteristic table nesting. Root CSS selects the server-rendered palette before hydration, and the layout effect maintains navigation attributes. Bound Player checkboxes keep a defined checked state and commit their React change event before controlled-state restoration. The development regression suite exercises all three palettes without JavaScript, repeated creator navigation, the ten-row Review table and checkbox toggles while requiring a clean console. It uses its own dev server/cache so production output and the normal preview remain independent.
+
+The follow-up production build, module/format/type checks, all 10 store tests and complete 92-asset offline inventory pass against offline version `6fad324286960d28b0cd`. Its browser verification is the focused 32-case run above, separately from the original broad migration run.
 
 Several original browser setups needed correction: opening a book disclosure before a full navigation cannot leave the newly loaded disclosure open; selecting different Player books uses the existing native confirmation and starts a blank character requiring an explicit Species choice and confirmation. Tests now perform those actions explicitly. The empty-Career roll button now labels a later attempt correctly after Undo; dice eligibility itself is unchanged. Mobile creator-link assertions use the canonical Next routes. The former synthetic browser import of removed `interface-kit.mjs` was replaced by a failure/retry/duplicate-activation check against the real React PDF download button. No mechanical outcome assertion was removed or skipped.
 

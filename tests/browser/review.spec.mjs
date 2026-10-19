@@ -3,6 +3,10 @@ import { test, expect, openPC, pcStep, noOverflow } from "./helpers.mjs";
 test("Player review is a compact character sheet with working details @pc @mobile", async ({
   page,
 }, info) => {
+  const consoleErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
   await openPC(page, { complete: true });
   await pcStep(page, "Review & export");
   const sheet = page.locator(".review-sheet");
@@ -11,6 +15,26 @@ test("Player review is a compact character sheet with working details @pc @mobil
   ).toBeVisible();
   await expect(sheet.locator(".review-identity-grid")).toContainText("Soldier");
   await expect(sheet.locator(".review-stats > div")).toHaveCount(10);
+  const breakdown = sheet.locator(
+    '[data-detail-key="review-sheet:stat-breakdown"]',
+  );
+  await breakdown.locator("summary").click();
+  await expect(breakdown.locator("table > thead > tr > th")).toHaveCount(5);
+  await expect(breakdown.locator("table > tbody > tr")).toHaveCount(10);
+  await expect(breakdown.locator('tbody th[scope="row"]')).toHaveText([
+    "Weapon Skill",
+    "Ballistic Skill",
+    "Strength",
+    "Toughness",
+    "Initiative",
+    "Agility",
+    "Dexterity",
+    "Intelligence",
+    "Willpower",
+    "Fellowship",
+  ]);
+  await expect(breakdown.locator(".table-wrap > tr")).toHaveCount(0);
+  await breakdown.locator("summary").click();
   await expect(sheet.locator(".review-resources")).toContainText("Fortune");
   await expect(sheet.locator(".review-resources")).toContainText("Wounds");
   await expect(sheet.locator(".review-skills").first()).toContainText(
@@ -40,6 +64,9 @@ test("Player review is a compact character sheet with working details @pc @mobil
     })
     .check();
   await expect(sheet.getByRole("checkbox")).toBeChecked();
+  await sheet.getByRole("checkbox").uncheck();
+  await expect(sheet.getByRole("checkbox")).not.toBeChecked();
+  await sheet.getByRole("checkbox").check();
   await sheet.getByText("PDF options", { exact: true }).click();
   await sheet.locator(".talent-description").first().locator("summary").click();
   await expect(sheet.locator(".talent-description").first()).toHaveAttribute(
@@ -80,6 +107,7 @@ test("Player review is a compact character sheet with working details @pc @mobil
     .getByRole("button", { name: "Edit Characteristics", exact: true })
     .click();
   await expect(page.locator(".review-sheet")).toHaveCount(0);
+  expect(consoleErrors).toEqual([]);
 });
 
 test("Player review shows actionable export blockers without losing the overview @pc @mobile", async ({

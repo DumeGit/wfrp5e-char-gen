@@ -35,6 +35,7 @@
     "check:quick": "npm run check:code && npm run check:format",
     "test:ui:failed": "node scripts/run-browser-tests.mjs all --last-failed",
     "test:ui:tablet": "node scripts/run-browser-tests.mjs tablet",
+    "test:ui:dev": "playwright test --config=playwright.dev.config.mjs",
     "dev": "next dev",
     "check:types": "tsc --noEmit",
     "predev": "node scripts/build-search-worker.mjs && node scripts/build-static-guide.mjs",

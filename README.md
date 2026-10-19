@@ -48,6 +48,8 @@ The local app uses Next.js App Router, React and TypeScript with a static produc
 
 Use Node 24.14.0 (the pinned development version), install locked dependencies with `npm ci`, and start development with `npm run dev`.
 
+`npm run test:ui:dev` checks React development-console errors, creator themes and the Review table on desktop and phone. It owns a separate development server/cache, leaving your normal preview independent. See [local testing](docs/TESTING.md).
+
 For a production-shaped local preview:
 
 ```powershell

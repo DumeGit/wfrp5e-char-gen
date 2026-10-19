@@ -97,7 +97,11 @@ function PlayerSession({ store }: { store: PlayerStore }) {
     const toggle = (event: Event) => store.toggle(event);
     const ownedRoot = root.current;
     ownedRoot?.addEventListener("toggle", toggle, true);
-    const change = (event: Event) => store.dispatch("change", event);
+    const change = (event: Event) => {
+      const type = (event.target as HTMLInputElement).type;
+      if (type !== "checkbox" && type !== "radio")
+        store.dispatch("change", event);
+    };
     ownedRoot?.addEventListener("change", change);
     return () => {
       media.removeEventListener("change", update);
@@ -157,6 +161,11 @@ function PlayerSession({ store }: { store: PlayerStore }) {
       ref={root}
       onClick={click}
       onInput={(event) => store.dispatch("input", event)}
+      onChange={(event) => {
+        const type = (event.target as HTMLInputElement).type;
+        if (type === "checkbox" || type === "radio")
+          store.dispatch("change", event);
+      }}
       onKeyDown={(event) => store.dispatch("keydown", event)}
       onBlur={() => store.breakGroup()}
     >

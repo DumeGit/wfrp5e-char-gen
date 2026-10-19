@@ -154,6 +154,10 @@ export function element(
     props.name ??= props.id ?? props["data-bind"] ?? "choice";
     if (tag !== "select") props.autoComplete ??= "off";
     if (props.type === "number") props.inputMode ??= "decimal";
+    // Bound choices stay controlled even when unchecked. Book selection is an
+    // uncommitted native form and intentionally has no data-bind.
+    if (["checkbox", "radio"].includes(props.type) && props["data-bind"])
+      props.checked ??= false;
   }
   if (tag === "button" && children.length === 1 && children[0] === "⚄") {
     props.className = [props.className, "ui-dice-button"]

@@ -9,6 +9,7 @@ import {
   freshGM,
   calculateGM,
   applyTemplate,
+  armourLabel,
   validateGMDraft,
   magicChoices,
 } from "../src/engine/gm/model.mjs";
@@ -313,14 +314,13 @@ test("Sea Dragon Cloak is optional acquired additional armour with no inferred p
   assert.equal(cloak.entry.enc, null);
   assert.equal(cloak.entry.ap, 2);
   assert.equal(cloak.entry.adaptation, undefined);
-  assert.match(
-    JSON.stringify(cardSections(r, s)),
-    /Sea Dragon Cloak \(Body \+2 AP; Partial\)/,
-  );
-  assert.match(
-    JSON.stringify(sheetSections(r, s)),
-    /Sea Dragon Cloak \(Body \+2 AP; Partial\)/,
-  );
+  assert.equal(armourLabel(cloak.entry), "Sea Dragon Cloak (Body +2 AP; Partial)");
+  const card = Object.fromEntries(cardSections(r, s)),
+    sheet = Object.fromEntries(sheetSections(r, s));
+  assert.ok(card.Trappings.split("; ").includes("1 × Sea Dragon Cloak"));
+  assert.ok(sheet.Trappings.includes("1 × Sea Dragon Cloak"));
+  assert.equal(card.Soak, "Head 4 · Arms 4 · Body 6 · Legs 4");
+  assert.deepEqual(sheet.Soak, ["Head 4 · Arms 4 · Body 6 · Legs 4"]);
   assert.equal(r.ap.Body, 3);
   assert.equal(r.ap.Head, 1);
   assert.ok(!rulesFor(s).market.some((x) => x.name === "Sea Dragon Cloak"));

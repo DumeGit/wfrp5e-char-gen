@@ -8,6 +8,7 @@ playwright-report/
 content/descriptions/edits/
 
 .next/
+.next-rendering-check/
 out/
 *.tsbuildinfo
 next-env.d.ts

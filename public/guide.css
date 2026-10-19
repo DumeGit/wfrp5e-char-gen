@@ -4765,8 +4765,11 @@ dialog.book-search-panel .search-panel-heading {
   --focus: var(--color-focus);
 }
 
+/* The server-rendered frame selects the initial palette before hydration.
+   The root attribute also supports standalone previews and client navigation. */
 /* Moonlit Vellum: the approved GM palette. Shared components inherit these roles. */
-:root[data-theme="moonlit-vellum"] {
+:root[data-theme="moonlit-vellum"],
+:root:has(body > [data-theme="moonlit-vellum"]) {
   --color-world: #101b2c;
   --color-leather: #192b43;
   --color-leather-deep: #122136;
@@ -4808,7 +4811,8 @@ dialog.book-search-panel .search-panel-heading {
 }
 
 /* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
-:root[data-theme="ash-vellum"] {
+:root[data-theme="ash-vellum"],
+:root:has(body > [data-theme="ash-vellum"]) {
   --color-title-veil: #681e29ed;
   --color-search-veil: #101012dd;
   --color-dialog-backdrop: #080809d9;

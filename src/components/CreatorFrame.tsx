@@ -44,11 +44,6 @@ export function CreatorFrame({
   }, [config, mode]);
   return (
     <div data-mode={mode} data-theme={config.theme}>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `document.documentElement.dataset.theme=${JSON.stringify(config.theme)};document.documentElement.dataset.mode=${JSON.stringify(mode)};`,
-        }}
-      />
       <a className="skip-link" href="#creator-main">
         Skip to editor
       </a>

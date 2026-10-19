@@ -62,7 +62,7 @@ Pure ranking/filter/linker/source modules remain in `src/engine`. `build-search-
 
 ## Appearance, offline and verification
 
-The root frame preserves the selected Player, Moonlit Vellum and Ash & Vellum themes. Static route markup sets the initial theme before paint; client navigation updates it before layout paint. CSS order, panel materials, local art/fonts, reduced motion, safe areas and public notices remain shared. Styles use public root asset URLs rather than source-module URL assumptions. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
+The root frame preserves the selected Player, Moonlit Vellum and Ash & Vellum themes. Root CSS matches the server-rendered frame's theme with `:has()` so the initial palette works before hydration and with JavaScript disabled. A layout effect updates root mode/theme attributes and theme-colour metadata during client navigation; the frame never renders an executable script. CSS order, panel materials, local art/fonts, reduced motion, safe areas and public notices remain shared. Styles use public root asset URLs rather than source-module URL assumptions. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
 
 The root PWA service is independent of creator remounts. The worker inventories the completed static build, distinguishes route HTML from App Router payloads, installs atomically and waits for explicit Update now. One previous cache can supply old immutable hashed chunks to an open tab; current route documents/payloads never mix releases. See [PWA.md](PWA.md) for headers, update verification and rollback.
 

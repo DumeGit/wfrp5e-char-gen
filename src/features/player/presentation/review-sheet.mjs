@@ -396,7 +396,7 @@ export function reviewSheet(R, s, snapshot, ui) {
             element("input", {
               type: "checkbox",
               "data-bind": "fullAppendix",
-              ...attributes(fullAppendix ? "checked" : ""),
+              checked: Boolean(fullAppendix),
             }),
             "Include the complete enabled-book compatibility appendix",
           ),
@@ -467,20 +467,6 @@ export function reviewSheet(R, s, snapshot, ui) {
             element(
               "div",
               { class: "table-wrap" },
-              joinNodes(
-                Object.entries(characteristicNames).map(([k, name]) =>
-                  element(
-                    "tr",
-                    {},
-                    element("th", { scope: "row" }, name),
-                    element("td", {}, score(d.stats[k] - d.charAdv[k])),
-                    element("td", {}, "+", score(d.charAdv[k])),
-                    element("td", {}, score(d.stats[k])),
-                    element("td", {}, score(current(k))),
-                  ),
-                ),
-                "",
-              ),
               element(
                 "table",
                 {},
@@ -497,7 +483,24 @@ export function reviewSheet(R, s, snapshot, ui) {
                     element("th", {}, "Current"),
                   ),
                 ),
-                element("tbody", {}),
+                element(
+                  "tbody",
+                  {},
+                  joinNodes(
+                    Object.entries(characteristicNames).map(([k, name]) =>
+                      element(
+                        "tr",
+                        {},
+                        element("th", { scope: "row" }, name),
+                        element("td", {}, score(d.stats[k] - d.charAdv[k])),
+                        element("td", {}, "+", score(d.charAdv[k])),
+                        element("td", {}, score(d.stats[k])),
+                        element("td", {}, score(current(k))),
+                      ),
+                    ),
+                    "",
+                  ),
+                ),
               ),
             ),
             element(
