@@ -582,7 +582,7 @@
   grid-column: 1/-1;
   grid-row: 2;
 }
-.manager-play > .manager-abilities-screen {
+.manager-play > .manager-ability-sections {
   grid-column: 1/-1;
   grid-row: 3;
 }
@@ -684,7 +684,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.manager-skill-divider {
+.manager-main .manager-skill-divider {
   grid-column: 1/-1;
   display: flex;
   align-items: center;
@@ -977,27 +977,6 @@
 }
 .manager-entry-list[data-group="skills"] .manager-entry > summary::before {
   display: none;
-}
-.manager-abilities-screen > .manager-page-heading {
-  margin-bottom: 10px;
-}
-.manager-abilities-toolbar {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.manager-abilities-toolbar .field {
-  width: 210px;
-  max-width: 100%;
-}
-.manager-abilities-toolbar input {
-  width: 100%;
-  min-height: 34px;
-  padding: 5px 8px;
-}
-.manager-section-content > div:has(> .manager-abilities-screen) {
-  padding: 12px;
 }
 .manager-abilities-grid {
   display: grid;
@@ -1920,12 +1899,6 @@
   .manager-skill-headings > div:nth-child(n + 2) {
     display: none;
   }
-  .manager-abilities-toolbar {
-    width: 100%;
-  }
-  .manager-abilities-toolbar .field {
-    width: 100%;
-  }
 }
 @media (pointer: coarse) {
   .manager-main button.manager-step {
@@ -1960,9 +1933,6 @@
   .manager-skill-headings > div {
     grid-template-columns: minmax(0, 1fr) 24px 34px;
   }
-  .manager-abilities-toolbar input {
-    min-height: 44px;
-  }
 }
 .manager-library-identity :is(h2, .manager-character-link) {
   min-width: 0;
@@ -1990,7 +1960,7 @@
   .manager-play > .manager-play-status {
     order: 2;
   }
-  .manager-play > .manager-abilities-screen {
+  .manager-play > .manager-ability-sections {
     order: 3;
   }
   .manager-play > .manager-gear-screen {
@@ -2005,14 +1975,6 @@
   .manager-card-summary {
     max-width: 54%;
     font-size: 10px;
-  }
-  .manager-abilities-toolbar {
-    width: 100%;
-  }
-  .manager-abilities-toolbar .field {
-    flex: 1;
-    width: auto;
-    min-width: 130px;
   }
   .manager-status-entry summary,
   .manager-status-history > summary {
@@ -2068,7 +2030,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.manager-abilities-screen .manager-page-heading {
+.manager-ability-sections .manager-page-heading {
   margin-bottom: 10px;
 }
 @media (min-width: 720px) {

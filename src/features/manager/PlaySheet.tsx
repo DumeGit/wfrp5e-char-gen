@@ -1,6 +1,6 @@
 import { KEYS } from "../../engine/rules.mjs";
 import { score } from "../../engine/controls.mjs";
-import { AbilitiesScreen, GearScreen } from "./CharacterScreens";
+import { AbilitySections, GearScreen } from "./CharacterScreens";
 import { StatusCard } from "./StatusCard";
 import { useEffect, useState } from "react";
 import { SheetCard } from "./SheetCard";
@@ -14,7 +14,6 @@ type Props = {
   catalogue: any;
   edit: Edit;
   open: (kind: string, values?: Record<string, any>) => void;
-  advance: (group?: string, name?: string) => void;
   initialView?: string;
   disabled: boolean;
 };
@@ -24,7 +23,6 @@ export function PlaySheet({
   catalogue,
   edit,
   open,
-  advance,
   initialView,
   disabled,
 }: Props) {
@@ -168,12 +166,12 @@ export function PlaySheet({
         {...{ record, result, catalogue, edit, open }}
         reveal={reveals.status || 0}
       />
-      <AbilitiesScreen
-        {...{ record, result, catalogue, edit, open, advance }}
+      <AbilitySections
+        {...{ record, result, catalogue, edit, open }}
         reveal={reveals.abilities || 0}
       />
       <GearScreen
-        {...{ record, result, catalogue, edit, open, advance }}
+        {...{ record, result, catalogue, edit, open }}
         reveal={reveals.gear || 0}
       />
       <SheetCard

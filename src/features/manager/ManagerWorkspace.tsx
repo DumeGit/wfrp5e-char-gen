@@ -65,20 +65,6 @@ export function ManagerWorkspace({
       {(section === id || visited.has(id)) && content}
     </div>
   );
-  const screenProps = {
-    record,
-    result,
-    catalogue,
-    edit,
-    open,
-    advance: (group?: string, name?: string) =>
-      navigateSection(
-        "advancement",
-        group
-          ? `${group === "talents" ? "talent" : group === "skills" ? "skill" : "char"}:${name || ""}`
-          : undefined,
-      ),
-  };
   const saveStatus = (
     <p
       className="manager-save-status"
@@ -199,7 +185,6 @@ export function ManagerWorkspace({
                 <PlaySheet
                   key={record.id}
                   {...{ record, result, catalogue, edit, open }}
-                  advance={screenProps.advance}
                   initialView={section === "play" ? view : ""}
                   disabled={state.saving || state.dirty}
                 />,

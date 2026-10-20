@@ -253,6 +253,12 @@ test("Fate and Fortune use adjacent plain values and compact steppers, with the 
   await expect(
     skills.getByRole("heading", { name: "Advanced Skills", exact: true }),
   ).toBeVisible();
+  expect(
+    await skills
+      .locator(".manager-skill-divider")
+      .first()
+      .evaluate((el) => Number.parseFloat(getComputedStyle(el).fontSize)),
+  ).toBeLessThanOrEqual(12);
   const order = await skills
     .locator(".manager-skill-divider, .manager-entry-name")
     .allTextContents();
@@ -329,7 +335,7 @@ test("imported mutations appear once in Status and retain their original data wh
   await section(page, "Abilities");
   await expect(
     page
-      .locator(".manager-abilities-screen")
+      .locator(".manager-ability-sections")
       .getByText("Animalistic Legs", { exact: true }),
   ).toHaveCount(0);
 });
@@ -355,7 +361,26 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
       .evaluate((el) => getComputedStyle(el, "::after").content),
   ).toContain("✦");
   await section(page, "Abilities");
-  const sheet = page.locator(".manager-abilities-screen");
+  const sheet = page.locator(".manager-ability-sections");
+  await expect(
+    page.getByRole("button", { name: "Abilities", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByLabel("Find an owned ability", { exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: "Learn or improve with XP", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: "Improve with XP", exact: true }),
+  ).toHaveCount(0);
+  for (const name of ["Skills", "Talents", "Magic & Faith", "Other abilities"])
+    expect(
+      await sheet
+        .getByRole("button", { name, exact: true })
+        .evaluate((el) => el.closest("h2") !== null),
+    ).toBe(true);
+
   for (const name of ["Skills", "Talents", "Magic & Faith"])
     await expect(
       sheet.getByRole("region", { name, exact: true }),
@@ -472,9 +497,13 @@ async function section(page, name) {
       .getByRole("navigation", { name: "Character sections" })
       .getByRole("button", { name: "Play", exact: true })
       .click();
-    const toggle = page.getByRole("button", { name, exact: true });
-    if ((await toggle.getAttribute("aria-expanded")) === "false")
-      await toggle.click();
+    for (const title of name === "Abilities"
+      ? ["Skills", "Talents", "Magic & Faith", "Other abilities"]
+      : [name]) {
+      const toggle = page.getByRole("button", { name: title, exact: true });
+      if ((await toggle.getAttribute("aria-expanded")) === "false")
+        await toggle.click();
+    }
     return;
   }
   await page
@@ -1007,9 +1036,9 @@ test("profile drafts require Save, closing protects changes, and abilities live 
     "A deliberate profile change",
   );
   await section(page, "Abilities");
-  await expect(page.locator(".manager-abilities-screen")).toBeVisible();
+  await expect(page.locator(".manager-ability-sections")).toBeVisible();
   await expect(
-    page.locator(".manager-abilities-screen .manager-favourite"),
+    page.locator(".manager-ability-sections .manager-favourite"),
   ).toHaveCount(0);
   await expect(page.locator(".manager-play-favourites")).toHaveCount(0);
   await expect(page.locator(".manager-resource-band")).toHaveCount(1);
@@ -1108,20 +1137,22 @@ test("money uses explicit denominations and equipment quantity updates its price
   ).toBeVisible();
 });
 
-test("screen filters survive navigation and an ability opens its own XP options @manager", async ({
+test("ability details survive navigation while search and XP actions stay in Advance @manager", async ({
   page,
 }) => {
   await open(page);
   await importData(page, await pcDraft({ complete: true }));
   await section(page, "Abilities");
-  await page.getByLabel("Find an owned ability", { exact: true }).fill("Dodge");
   const row = page.locator(".manager-entry-row").filter({
     has: page.locator("summary strong").getByText("Dodge", { exact: true }),
   });
   await row.locator("summary").first().click();
-  await row
-    .getByRole("button", { name: "Improve with XP", exact: true })
+  await section(page, "Advance");
+  await page
+    .getByRole("group", { name: "Advancement categories" })
+    .getByRole("button", { name: "Skills", exact: true })
     .click();
+  await page.getByLabel("Find advancement", { exact: true }).fill("Dodge");
   await expect(
     page.getByLabel("Find advancement", { exact: true }),
   ).toHaveValue("Dodge");
@@ -1133,7 +1164,7 @@ test("screen filters survive navigation and an ability opens its own XP options 
   await page.goBack();
   await expect(
     page.getByLabel("Find an owned ability", { exact: true }),
-  ).toHaveValue("Dodge");
+  ).toHaveCount(0);
   await expect(row.locator("details").first()).toHaveAttribute("open", "");
   await section(page, "Advance");
   await page.locator(".manager-purchases summary").click();
@@ -1261,7 +1292,7 @@ test("compact identity, combat cards and collapsible abilities keep long names a
       const range = document.createRange();
       range.selectNodeContents(heading);
       const cards = [
-        ...main.querySelectorAll(".manager-play > .manager-card"),
+        ...main.querySelectorAll(".manager-play .manager-card"),
       ].map((el) => {
         const r = el.getBoundingClientRect();
         return {
@@ -1318,7 +1349,10 @@ test("compact identity, combat cards and collapsible abilities keep long names a
       for (const title of [
         "Combat",
         "Status & afflictions",
-        "Abilities",
+        "Skills",
+        "Talents",
+        "Magic & Faith",
+        "Other abilities",
         "Gear",
         "Characteristics",
       ]) {
@@ -1364,8 +1398,8 @@ test("compact identity, combat cards and collapsible abilities keep long names a
     await toggle.click();
     await expect(toggle).toHaveAttribute("aria-expanded", "false");
   }
+  await section(page, "Advance");
   await section(page, "Play");
-  await section(page, "Abilities");
   await expect(
     page.getByRole("button", { name: "Skills", exact: true }),
   ).toHaveAttribute("aria-expanded", "false");

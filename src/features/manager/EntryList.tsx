@@ -28,7 +28,7 @@ export function EntryList({
   edit,
   open,
   compact = false,
-  advance,
+  reveal = 0,
 }: {
   catalogue: any;
   record: any;
@@ -39,7 +39,7 @@ export function EntryList({
   edit: Edit;
   open: (kind: string, values?: Record<string, any>) => void;
   compact?: boolean;
-  advance?: (group?: string, name?: string) => void;
+  reveal?: number;
 }) {
   const sheet = record.sheet;
   const entries = (
@@ -71,6 +71,11 @@ export function EntryList({
     <button
       className={group === "gear" ? "manager-primary" : "quiet"}
       type="button"
+      aria-label={
+        group === "gear"
+          ? "Acquire equipment"
+          : `Add ${group === "extras" ? "reference" : group === "magic" ? "spell / prayer" : group.slice(0, -1)}`
+      }
       onClick={() =>
         open(group === "gear" ? "acquire" : "entry", {
           group,
@@ -83,9 +88,7 @@ export function EntryList({
         })
       }
     >
-      {group === "gear"
-        ? "Acquire equipment"
-        : `Add ${group === "extras" ? "reference" : group === "magic" ? "spell / prayer" : group.slice(0, -1)}`}
+      {group === "gear" ? "Acquire equipment" : "Add"}
     </button>
   );
   return (
@@ -94,7 +97,7 @@ export function EntryList({
       compact={compact}
       count={entries.length}
       actions={actions}
-      reveal={query.trim() && entries.length ? query.trim() : ""}
+      reveal={query.trim() && entries.length ? query.trim() : reveal}
     >
       {!entries.length && (
         <p className="manager-empty-line">
@@ -119,9 +122,9 @@ export function EntryList({
           <Fragment key={x.key}>
             {group === "skills" &&
               (index === 0 || advanced(entries[index - 1]) !== advanced(x)) && (
-                <h4 className="manager-skill-divider">
+                <h3 className="manager-skill-divider">
                   {advanced(x) ? "Advanced Skills" : "Basic Skills"}
-                </h4>
+                </h3>
               )}
             <div className="manager-entry-row">
               <details className="manager-entry">
@@ -242,15 +245,6 @@ export function EntryList({
                   )}
                   {!compact && group !== "gear" && (
                     <>
-                      {advance && ["skills", "talents"].includes(group) && (
-                        <button
-                          type="button"
-                          className="quiet"
-                          onClick={() => advance(group, x.name)}
-                        >
-                          Improve with XP
-                        </button>
-                      )}
                       <details className="manager-adjust-entry">
                         <summary>Adjust this entry</summary>
                         <p className="manager-meta">
@@ -396,17 +390,17 @@ function EntryFrame({
   count: number;
   actions: ReactNode;
   children: ReactNode;
-  reveal?: string;
+  reveal?: string | number;
 }) {
   if (!compact && group !== "gear")
     return (
       <SheetCard
         title={GROUP_NAMES[group]}
-        level={3}
+        level={2}
+        id={`manager-${group}`}
         group={group}
         count={count}
         className="manager-entry-list"
-        mobileOpen={group === "skills"}
         actions={actions}
         reveal={reveal}
       >

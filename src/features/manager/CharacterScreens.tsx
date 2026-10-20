@@ -12,44 +12,19 @@ type Props = {
   catalogue: any;
   edit: Edit;
   open: (kind: string, values?: Record<string, any>) => void;
-  advance: (group?: string, name?: string) => void;
   reveal?: number;
 };
-export function AbilitiesScreen(props: Props) {
-  const [query, setQuery] = useState("");
+export function AbilitySections(props: Props) {
   return (
-    <SheetCard
-      title="Abilities"
-      id="manager-abilities"
-      className="manager-abilities-screen"
-      reveal={props.reveal}
-      summary={`${props.result.skills.length} Skills · ${props.result.entries.talents.length} Talents`}
-    >
-      <div className="manager-page-heading">
-        <div className="manager-abilities-toolbar">
-          <Field
-            id="skill-find"
-            label="Find an owned ability"
-            value={query}
-            onValue={setQuery}
-          />
-          <button
-            type="button"
-            className="quiet"
-            onClick={() => props.advance()}
-          >
-            Learn or improve with XP
-          </button>
-        </div>
-      </div>
+    <div id="manager-abilities" className="manager-ability-sections">
       <div className="manager-abilities-grid">
-        <EntryList {...props} query={query} group="skills" />
+        <EntryList {...props} group="skills" />
         <div className="manager-abilities-side">
-          <EntryList {...props} query={query} group="talents" />
-          <EntryList {...props} query={query} group="magic" />
+          <EntryList {...props} reveal={0} group="talents" />
+          <EntryList {...props} reveal={0} group="magic" />
           <EntryList
             {...props}
-            query={query}
+            reveal={0}
             group="extras"
             rows={props.result.entries.extras.filter(
               (row: any) => row.kind !== "mutation",
@@ -57,13 +32,7 @@ export function AbilitiesScreen(props: Props) {
           />
         </div>
       </div>
-      {props.result.entries.magic.length > 0 && (
-        <p className="manager-local-note">
-          Casting and situational effects remain manual. Recording knowledge
-          does not apply spell effects automatically.
-        </p>
-      )}
-    </SheetCard>
+    </div>
   );
 }
 export function GearScreen(props: Props) {
