@@ -1,6 +1,7 @@
 import { calculateManager } from "../../engine/manager/model.mjs";
 import { loadPDFLibrary } from "../../engine/pdf-runtime.mjs";
 import { exportMarijanSheet } from "../../engine/marijan/pdf.mjs";
+import { entryDescription } from "../../engine/marijan/catalogue.mjs";
 
 export async function exportManagerPDF(
   catalogue: any,
@@ -78,6 +79,23 @@ export async function exportManagerPDF(
   text("Active Conditions (manual effects)");
   for (const condition of record.conditions)
     text(`${condition.name} x${condition.amount}: ${condition.note}`);
+  text("Critical wounds and mutations (manual effects)");
+  const legacyMutations = record.sheet.entries.extras
+    .filter((entry: any) => entry.kind === "mutation")
+    .map((entry: any) => ({
+      ...entry,
+      resolved: !!entry.inactive,
+      text: entryDescription(catalogue, { ...entry, descriptionNote: "" }),
+      note: entry.descriptionNote || "",
+    }));
+  for (const entry of [...(record.afflictions || []), ...legacyMutations]) {
+    text(
+      `${entry.kind === "critical" ? "Critical wound" : "Mutation"}: ${entry.name}${entry.location ? ` / ${entry.location}` : ""}${entry.resolved ? " / healed or inactive" : ""}`,
+    );
+    text(entry.text);
+    text(entry.note);
+    if (entry.source) text(`${entry.source.book}, p. ${entry.source.page}`);
+  }
   text("Journal");
   for (const entry of record.journal) {
     text(`${entry.at} / ${entry.kind} / ${entry.title}`);

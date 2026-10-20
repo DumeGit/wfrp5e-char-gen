@@ -1,5 +1,5 @@
 import { test, expect, pcDraft } from "./helpers.mjs";
-import { freshMarijan } from "../../src/engine/marijan/model.mjs";
+import { freshMarijan, makeEntry } from "../../src/engine/marijan/model.mjs";
 import { readFile } from "node:fs/promises";
 
 test("core Conditions are selectable with source summaries, non-stacking counts and custom notes @manager", async ({
@@ -9,7 +9,7 @@ test("core Conditions are selectable with source summaries, non-stacking counts 
   await importData(page, await pcDraft({ complete: true }));
   const before = (await rawRecords(page))[0].current;
   await page
-    .getByRole("button", { name: "Record Condition", exact: true })
+    .getByRole("button", { name: "Add status entry", exact: true })
     .click();
   let dialog = page.getByRole("dialog");
   const select = dialog.getByLabel("Condition", { exact: true });
@@ -46,7 +46,7 @@ test("core Conditions are selectable with source summaries, non-stacking counts 
   });
   expect((await rawRecords(page))[0].current).toEqual(before);
   await page
-    .getByRole("button", { name: "Record Condition", exact: true })
+    .getByRole("button", { name: "Add status entry", exact: true })
     .click();
   dialog = page.getByRole("dialog");
   await dialog.getByLabel("Condition", { exact: true }).selectOption("custom");
@@ -66,6 +66,272 @@ test("core Conditions are selectable with source summaries, non-stacking counts 
     amount: 2,
     note: "Agreed at the table",
   });
+});
+
+test("status card records sourced Critical Wounds and mutations, recovery and custom notes without applying effects @manager", async ({
+  page,
+}) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  const before = (await rawRecords(page))[0];
+  await page
+    .getByRole("button", { name: "Add status entry", exact: true })
+    .click();
+  let dialog = page.getByRole("dialog");
+  await dialog
+    .getByLabel("Entry type", { exact: true })
+    .selectOption("critical");
+  const critical = dialog.getByLabel("Critical wound", { exact: true });
+  await expect(critical.locator("option")).not.toHaveCount(2);
+  const id = await critical.evaluate(
+    (el) =>
+      [...el.options].find((x) => x.text.includes("Head · Ear Bash")).value,
+  );
+  await critical.selectOption(id);
+  await expect(
+    dialog.getByText("Wounds: 1. Gain 1 Deafened.", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    dialog.getByRole("button", { name: "Core Rulebook, p. 173", exact: true }),
+  ).toBeVisible();
+  await dialog
+    .getByLabel("Recovery / notes", { exact: true })
+    .fill("Healer reviewed this injury");
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  const status = page.locator("#manager-status");
+  await status
+    .locator(".manager-status-entry summary")
+    .filter({ hasText: "Ear Bash" })
+    .click();
+  await expect(
+    status.getByText("Healer reviewed this injury", { exact: true }),
+  ).toBeVisible();
+  await status
+    .getByRole("button", { name: "Mark healed", exact: true })
+    .click();
+  await saved(page);
+  await expect(
+    status.locator(".manager-status-history summary").first(),
+  ).toContainText("Healed / inactive (1)");
+  await page
+    .getByRole("button", { name: "Add status entry", exact: true })
+    .click();
+  dialog = page.getByRole("dialog");
+  await dialog
+    .getByLabel("Entry type", { exact: true })
+    .selectOption("mutation");
+  const mutation = dialog.getByLabel("Mutation", { exact: true });
+  const mutationId = await mutation.evaluate(
+    (el) => [...el.options].find((x) => x.text === "Animalistic Legs").value,
+  );
+  await mutation.selectOption(mutationId);
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  const after = (await rawRecords(page))[0];
+  expect(after.afflictions).toHaveLength(2);
+  expect(after.afflictions[0]).toMatchObject({
+    kind: "critical",
+    name: "Ear Bash",
+    resolved: true,
+    source: { book: "core", page: 173 },
+  });
+  expect(after.current).toEqual(before.current);
+  expect(after.sheet).toEqual(before.sheet);
+  await page.reload();
+  await expect(
+    status.getByText("Animalistic Legs", { exact: true }),
+  ).toBeVisible();
+  await status
+    .locator(".manager-status-entry summary")
+    .filter({ hasText: "Animalistic Legs" })
+    .click();
+  await status
+    .getByRole("button", { name: "Edit Animalistic Legs", exact: true })
+    .click();
+  dialog = page.getByRole("dialog");
+  await dialog.getByLabel("Notes", { exact: true }).fill("Agreed at the table");
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].afflictions[1].note).toBe(
+    "Agreed at the table",
+  );
+  await page
+    .getByRole("button", { name: "Add status entry", exact: true })
+    .click();
+  dialog = page.getByRole("dialog");
+  await dialog
+    .getByLabel("Entry type", { exact: true })
+    .selectOption("critical");
+  await dialog
+    .getByLabel("Critical wound", { exact: true })
+    .selectOption("custom");
+  await dialog
+    .getByLabel("Critical wound name", { exact: true })
+    .fill("Campaign injury");
+  await dialog
+    .getByLabel("Effects", { exact: true })
+    .fill("Recorded manual effect");
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].afflictions[2]).toMatchObject({
+    name: "Campaign injury",
+    source: null,
+  });
+});
+
+test("Fate and Fortune use adjacent plain values and compact steppers, with the pen beside the name @manager", async ({
+  page,
+}) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  const before = (await rawRecords(page))[0];
+  const band = page.getByRole("group", {
+    name: "Fate and Fortune",
+    exact: true,
+  });
+  await expect(band.locator("button")).toHaveCount(4);
+  await expect(band.locator(".manager-resource-number")).toHaveCount(2);
+  await expect(
+    page
+      .getByRole("navigation", { name: "Character sections" })
+      .getByRole("button"),
+  ).toHaveText(["Play", "Advance", "Journal"]);
+  await expect(
+    page.getByLabel("Jump to Play section", { exact: true }),
+  ).toHaveCount(0);
+  await band
+    .getByRole("button", { name: "Decrease Fate", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].sheet.fate).toBe(before.sheet.fate - 1);
+  expect((await rawRecords(page))[0].current).toEqual(before.current);
+  await band
+    .getByRole("button", { name: "Increase Fate", exact: true })
+    .click();
+  await saved(page);
+  await band
+    .getByRole("button", { name: "Spend Fortune", exact: true })
+    .click();
+  await saved(page);
+  await band
+    .getByRole("button", { name: "Restore Fortune", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].current).toEqual(before.current);
+  const heading = await page.locator("#manager-character-name").boundingBox();
+  const pen = await page
+    .getByRole("button", { name: "Edit profile", exact: true })
+    .boundingBox();
+  expect(pen.x - (heading.x + heading.width)).toBeLessThan(8);
+  const sizes = await band.locator("button").evaluateAll((els) =>
+    els.map((el) => ({
+      width: el.getBoundingClientRect().width,
+      height: el.getBoundingClientRect().height,
+      inset: getComputedStyle(el, "::before").top,
+    })),
+  );
+  if (page.viewportSize().width < 720)
+    for (const size of sizes) {
+      expect(size.width).toBeGreaterThanOrEqual(44);
+      expect(size.height).toBeGreaterThanOrEqual(44);
+      expect(Number.parseFloat(size.inset)).toBeGreaterThanOrEqual(8);
+    }
+  await section(page, "Abilities");
+  const skills = page.getByRole("region", { name: "Skills", exact: true });
+  await expect(
+    skills.getByRole("heading", { name: "Basic Skills", exact: true }),
+  ).toBeVisible();
+  await expect(
+    skills.getByRole("heading", { name: "Advanced Skills", exact: true }),
+  ).toBeVisible();
+  const order = await skills
+    .locator(".manager-skill-divider, .manager-entry-name")
+    .allTextContents();
+  expect(order.indexOf("Dodge")).toBeLessThan(order.indexOf("Advanced Skills"));
+  expect(order.indexOf("Language (Reikspiel)")).toBeGreaterThan(
+    order.indexOf("Advanced Skills"),
+  );
+  const charHeader = await skills
+    .locator(".manager-skill-headings > div")
+    .first()
+    .locator("span")
+    .nth(1)
+    .boundingBox();
+  const firstChar = await skills
+    .locator(".manager-skill-characteristic")
+    .first()
+    .boundingBox();
+  expect(Math.abs(charHeader.x - firstChar.x)).toBeLessThanOrEqual(2);
+});
+
+test("imported mutations appear once in Status and retain their original data when notes change @manager", async ({
+  page,
+}) => {
+  const creatures = JSON.parse(
+    await readFile(
+      new URL("../../public/gm/data.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const mutation = creatures.mutations.find(
+    (row) => row.name === "Animalistic Legs",
+  );
+  const draft = freshMarijan();
+  draft.name = "Mutation import";
+  draft.entries.extras.push(
+    makeEntry(
+      {
+        ...mutation,
+        id: `mutation:${mutation.id}:${encodeURIComponent(mutation.name)}`,
+        kind: "mutation",
+        source: { book: "core", page: mutation.page },
+      },
+      "extras",
+    ),
+  );
+  await open(page);
+  await importData(page, draft);
+  const status = page.locator("#manager-status");
+  await expect(
+    status.getByText("Animalistic Legs", { exact: true }),
+  ).toHaveCount(1);
+  await status
+    .locator("summary")
+    .filter({ hasText: "Animalistic Legs" })
+    .click();
+  await status
+    .getByRole("button", { name: "Edit Animalistic Legs", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog");
+  await dialog
+    .getByLabel("Notes", { exact: true })
+    .fill("Old mutation, new note");
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  const record = (await rawRecords(page))[0];
+  expect(record.sheet.entries.extras).toHaveLength(1);
+  expect(record.sheet.entries.extras[0].key).toBe(draft.entries.extras[0].key);
+  expect(record.sheet.entries.extras[0].descriptionNote).toBe(
+    "Old mutation, new note",
+  );
+  expect(record.afflictions).toHaveLength(0);
+  await section(page, "Abilities");
+  await expect(
+    page
+      .locator(".manager-abilities-screen")
+      .getByText("Animalistic Legs", { exact: true }),
+  ).toHaveCount(0);
 });
 
 test("abilities share a compact sheet, Skills show Characteristics, gear forms a grid and mobile library lives in the menu @manager", async ({
@@ -201,6 +467,16 @@ async function open(page) {
   ).toBeVisible();
 }
 async function section(page, name) {
+  if (["Abilities", "Gear"].includes(name)) {
+    await page
+      .getByRole("navigation", { name: "Character sections" })
+      .getByRole("button", { name: "Play", exact: true })
+      .click();
+    const toggle = page.getByRole("button", { name, exact: true });
+    if ((await toggle.getAttribute("aria-expanded")) === "false")
+      await toggle.click();
+    return;
+  }
   await page
     .getByRole("navigation", { name: "Character sections" })
     .getByRole("button", { name, exact: true })
@@ -362,7 +638,7 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
   await saved(page);
   expect((await rawRecords(page))[0].current.wounds).toBe(before);
   await main
-    .getByRole("button", { name: "Record Condition", exact: true })
+    .getByRole("button", { name: "Add status entry", exact: true })
     .click();
   let dialog = page.getByRole("dialog");
   await dialog
@@ -374,7 +650,10 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
     .click();
   await expect(dialog).not.toBeVisible();
   await expect(main.getByText("Bleeding ×2")).toBeVisible();
-  await main.getByRole("button", { name: "Add session note" }).click();
+  await section(page, "Journal");
+  await main
+    .getByRole("button", { name: "Add journal entry", exact: true })
+    .click();
   dialog = page.getByRole("dialog");
   await dialog.getByLabel("Title", { exact: true }).fill("At the watchtower");
   await dialog
@@ -503,9 +782,9 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
       page
         .getByRole("navigation", { name: "Character sections" })
         .getByRole("button"),
-    ).toHaveCount(5);
+    ).toHaveCount(3);
     const fits = await page
-      .locator(".manager-resource-actions")
+      .locator(".manager-resource-controls")
       .evaluateAll((els) =>
         els.every(
           (el) =>
@@ -702,7 +981,7 @@ test("Undo histories stay with their characters when switching the library @mana
   ).toBeTruthy();
 });
 
-test("profile drafts require Save, closing protects changes, and favourite abilities appear on Play @manager", async ({
+test("profile drafts require Save, closing protects changes, and abilities live on Play without favourites @manager", async ({
   page,
 }) => {
   await open(page);
@@ -728,14 +1007,11 @@ test("profile drafts require Save, closing protects changes, and favourite abili
     "A deliberate profile change",
   );
   await section(page, "Abilities");
-  await page
-    .getByRole("button", { name: "Add Dodge to favourites", exact: true })
-    .click();
-  await saved(page);
-  await section(page, "Play");
-  await expect(page.locator(".manager-play-favourites summary")).toContainText(
-    "Dodge",
-  );
+  await expect(page.locator(".manager-abilities-screen")).toBeVisible();
+  await expect(
+    page.locator(".manager-abilities-screen .manager-favourite"),
+  ).toHaveCount(0);
+  await expect(page.locator(".manager-play-favourites")).toHaveCount(0);
   await expect(page.locator(".manager-resource-band")).toHaveCount(1);
   await expect(
     page.locator(".manager-navigation [aria-current='page']"),
@@ -828,7 +1104,7 @@ test("money uses explicit denominations and equipment quantity updates its price
   ).toBe(2);
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "Gear", exact: true }),
+    page.getByRole("button", { name: "Gear", exact: true }),
   ).toBeVisible();
 });
 
@@ -971,7 +1247,7 @@ test("compact identity, combat cards and collapsible abilities keep long names a
       combat.getByRole("heading", { name, exact: true }),
     ).toBeVisible();
   await expect(
-    combat.getByRole("button", { name: "Set Wounds", exact: true }),
+    combat.getByRole("group", { name: "Current Wounds", exact: true }),
   ).toBeVisible();
   await expect(combat.getByText("Movement", { exact: true })).toBeVisible();
   for (const width of [1440, 2560, 1024, 768, 390, 320]) {
@@ -985,7 +1261,7 @@ test("compact identity, combat cards and collapsible abilities keep long names a
       const range = document.createRange();
       range.selectNodeContents(heading);
       const cards = [
-        ...main.querySelectorAll(".manager-play .manager-card"),
+        ...main.querySelectorAll(".manager-play > .manager-card"),
       ].map((el) => {
         const r = el.getBoundingClientRect();
         return {
@@ -1038,13 +1314,13 @@ test("compact identity, combat cards and collapsible abilities keep long names a
           .sort((a, b) => a.y - b.y)
           .slice(0, 2)
           .map((x) => x.title),
-      ).toEqual(["Combat", "Favourites"]);
+      ).toEqual(["Combat", "Status & afflictions"]);
       for (const title of [
         "Combat",
-        "Favourites",
-        "Conditions",
+        "Status & afflictions",
+        "Abilities",
+        "Gear",
         "Characteristics",
-        "In the field",
       ]) {
         const toggle = page.getByRole("button", { name: title, exact: true });
         const wasOpen = await toggle.getAttribute("aria-expanded");
@@ -1064,7 +1340,7 @@ test("compact identity, combat cards and collapsible abilities keep long names a
         page.getByRole("button", { name: "Characteristics", exact: true }),
       ).toHaveAttribute("aria-expanded", "false");
       await expect(
-        page.getByRole("button", { name: "Conditions", exact: true }),
+        page.getByRole("button", { name: "Status & afflictions", exact: true }),
       ).toHaveAttribute("aria-expanded", "false");
     }
   }

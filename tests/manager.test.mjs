@@ -21,6 +21,8 @@ import {
   readImport,
   awardXP,
   changeResource,
+  changeFate,
+  saveAffliction,
   quoteManager,
   purchaseAdvance,
   creditTrapping,
@@ -31,6 +33,7 @@ import {
 } from "../src/engine/manager/model.mjs";
 import { exportManagerPDF } from "../src/features/manager/export.ts";
 import * as PDFLib from "pdf-lib";
+import { criticalChoices } from "../src/engine/manager/afflictions.mjs";
 const catalogue = createMarijanCatalogue(
   library,
   JSON.parse(
@@ -45,6 +48,97 @@ const player = (advanced = false) => ({
 });
 const entry = (group, name) =>
   catalogue.rows.find((x) => x.collection === group && x.name === name);
+
+test("status records survive legacy saves and backups without applying effects; Fate stays separate", () => {
+  const old = importCharacter(catalogue, library, player());
+  delete old.afflictions;
+  const record = validateManager(old);
+  assert.deepEqual(record.afflictions, []);
+  const before = calculateManager(catalogue, record);
+  const current = structuredClone(record.current);
+  saveAffliction(record, {
+    kind: "critical",
+    name: "Recorded injury",
+    text: "Manual effect",
+    location: "Left arm",
+    note: "Recovery note",
+  });
+  saveAffliction(record, {
+    kind: "mutation",
+    name: "Recorded mutation",
+    text: "+5 Strength",
+  });
+  assert.deepEqual(calculateManager(catalogue, record).stats, before.stats);
+  assert.deepEqual(calculateManager(catalogue, record).values, before.values);
+  assert.deepEqual(record.current, current);
+  const id = record.afflictions[0].id;
+  saveAffliction(record, {
+    ...record.afflictions[0],
+    note: "Updated recovery",
+  });
+  assert.equal(record.afflictions.length, 2);
+  record.afflictions[0].resolved = true;
+  const restored = readImport(catalogue, library, backup([record]))[0];
+  assert.deepEqual(restored.afflictions, record.afflictions);
+  assert.equal(restored.afflictions[0].id, id);
+  const original = JSON.stringify(record);
+  assert.throws(() => saveAffliction(record, { kind: "critical", name: "" }));
+  assert.equal(JSON.stringify(record), original);
+  assert.throws(() =>
+    validateManager({
+      ...record,
+      afflictions: [record.afflictions[0], record.afflictions[0]],
+    }),
+  );
+  assert.throws(() =>
+    validateManager({
+      ...record,
+      afflictions: [{ ...record.afflictions[0], resolved: "yes" }],
+    }),
+  );
+  changeFate(record, 0);
+  changeFate(record, 3);
+  assert.equal(record.sheet.fate, 3);
+  assert.deepEqual(record.current, current);
+  assert.throws(() => changeFate(record, -1));
+});
+
+test("Critical Wound choices project all four reviewed core tables and preserve source effects", () => {
+  const payload = JSON.parse(
+    fs.readFileSync(
+      new URL("../public/data/search-library.json", import.meta.url),
+    ),
+  );
+  const rows = payload.rows.map((row) => ({
+    ...row,
+    entry: payload.entries[row.entryRef],
+  }));
+  const choices = criticalChoices(rows);
+  assert.deepEqual([...new Set(choices.map((row) => row.location))].sort(), [
+    "Arm",
+    "Body",
+    "Head",
+    "Leg",
+  ]);
+  assert(choices.length >= 70);
+  assert(
+    choices.every(
+      (row) =>
+        row.source.book === "core" &&
+        row.referenceId.startsWith("core:reference:"),
+    ),
+  );
+  for (const row of choices) {
+    const original = rows.find((x) => x.entry.id === row.referenceId).entry;
+    assert(original.text.includes(row.name));
+    assert(original.text.includes(row.text.replace(/^Wounds: .*?\. /, "")));
+  }
+  assert.equal(
+    choices.find((row) => row.location === "Head" && row.name === "Ear Bash")
+      .source.page,
+    173,
+  );
+});
 
 test("Player import preserves all derived totals and original history without mutating the creator", () => {
   for (const pc of [player(), player(true)]) {
@@ -266,6 +360,22 @@ test("manager PDF uses common sheet with current resources and complete history"
   changeResource(record, "fortune", 0);
   addCondition(record, "Bleeding", 1, "Recorded effect");
   addJournal(record, "Long note", "Long note ".repeat(3000));
+  saveAffliction(record, {
+    kind: "critical",
+    name: "Recorded critical",
+    text: "Manual effects",
+    location: "Left arm",
+    note: "Recovery note",
+  });
+  saveAffliction(record, {
+    kind: "mutation",
+    name: "Recorded mutation",
+    text: "Reference effect",
+  });
+  const mutation = entry("extras", "Animalistic Legs");
+  const mutationKey = addEntry(record.sheet, "extras", mutation);
+  record.sheet.entries.extras.find((row) => row.key === mutationKey).inactive =
+    true;
   const bytes = await exportManagerPDF(catalogue, record, {
     PDFLib,
     templateBytes: fs.readFileSync(

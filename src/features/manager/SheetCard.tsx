@@ -1,4 +1,10 @@
-import { useId, useState, useSyncExternalStore, type ReactNode } from "react";
+import {
+  useEffect,
+  useId,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 
 const query = "(max-width: 719px)";
 const subscribe = (notify: () => void) => {
@@ -16,6 +22,9 @@ export function SheetCard({
   count,
   mobileOpen = false,
   level = 2,
+  id: anchor,
+  reveal = 0,
+  summary,
 }: {
   title: string;
   children: ReactNode;
@@ -25,6 +34,9 @@ export function SheetCard({
   count?: number;
   mobileOpen?: boolean;
   level?: 2 | 3;
+  id?: string;
+  reveal?: number | string;
+  summary?: string;
 }) {
   const mobile = useSyncExternalStore(
     subscribe,
@@ -32,11 +44,15 @@ export function SheetCard({
     () => false,
   );
   const [choice, setChoice] = useState<boolean>();
+  useEffect(() => {
+    if (reveal) setChoice(true);
+  }, [reveal]);
   const expanded = choice ?? (!mobile || mobileOpen);
   const id = useId();
   const Heading = level === 2 ? "h2" : "h3";
   return (
     <section
+      id={anchor}
       className={`manager-card ${className}`}
       data-group={group}
       aria-label={title}
@@ -56,6 +72,9 @@ export function SheetCard({
             </svg>
             <span>{title}</span>
             {count !== undefined && <small>{count}</small>}
+            {!expanded && summary && (
+              <small className="manager-card-summary">{summary}</small>
+            )}
           </button>
         </Heading>
         {actions && <div className="manager-card-actions">{actions}</div>}

@@ -4,6 +4,7 @@ import { EntryList } from "./EntryList";
 import { score } from "../../engine/controls.mjs";
 import { formatMoney } from "../../engine/market.mjs";
 import type { Edit } from "./ui";
+import { SheetCard } from "./SheetCard";
 
 type Props = {
   record: any;
@@ -12,13 +13,19 @@ type Props = {
   edit: Edit;
   open: (kind: string, values?: Record<string, any>) => void;
   advance: (group?: string, name?: string) => void;
+  reveal?: number;
 };
 export function AbilitiesScreen(props: Props) {
   const [query, setQuery] = useState("");
   return (
-    <section className="manager-abilities-screen">
+    <SheetCard
+      title="Abilities"
+      id="manager-abilities"
+      className="manager-abilities-screen"
+      reveal={props.reveal}
+      summary={`${props.result.skills.length} Skills · ${props.result.entries.talents.length} Talents`}
+    >
       <div className="manager-page-heading">
-        <h2>Abilities</h2>
         <div className="manager-abilities-toolbar">
           <Field
             id="skill-find"
@@ -40,7 +47,14 @@ export function AbilitiesScreen(props: Props) {
         <div className="manager-abilities-side">
           <EntryList {...props} query={query} group="talents" />
           <EntryList {...props} query={query} group="magic" />
-          <EntryList {...props} query={query} group="extras" />
+          <EntryList
+            {...props}
+            query={query}
+            group="extras"
+            rows={props.result.entries.extras.filter(
+              (row: any) => row.kind !== "mutation",
+            )}
+          />
         </div>
       </div>
       {props.result.entries.magic.length > 0 && (
@@ -49,7 +63,7 @@ export function AbilitiesScreen(props: Props) {
           does not apply spell effects automatically.
         </p>
       )}
-    </section>
+    </SheetCard>
   );
 }
 export function GearScreen(props: Props) {
@@ -62,10 +76,15 @@ export function GearScreen(props: Props) {
       (place === "active" ? x.state !== "stored" : x.state === place),
   );
   return (
-    <section className="manager-gear-screen">
+    <SheetCard
+      title="Gear"
+      id="manager-gear"
+      className="manager-gear-screen"
+      reveal={props.reveal}
+      count={rows.length}
+    >
       <div className="manager-page-heading">
         <div>
-          <h2>Gear</h2>
           <p className="manager-meta">
             Enc {score(props.result.values.enc)} /{" "}
             {score(props.result.values.capacity)}
@@ -138,6 +157,6 @@ export function GearScreen(props: Props) {
           excluded. Removing an item does not refund its price.
         </p>
       </details>
-    </section>
+    </SheetCard>
   );
 }

@@ -1,15 +1,9 @@
 import { score } from "../../engine/controls.mjs";
-import { changeResource } from "../../engine/manager/model.mjs";
+import { changeFate, changeResource } from "../../engine/manager/model.mjs";
 import type { Edit } from "./ui";
 
-type Props = {
-  record: any;
-  result: any;
-  edit: Edit;
-  open: (kind: string, values?: Record<string, any>) => void;
-  disabled: boolean;
-};
-export function ResourceBand({ record, edit, open, disabled }: Props) {
+type Props = { record: any; result: any; edit: Edit; disabled: boolean };
+export function ResourceBand({ record, edit, disabled }: Props) {
   return (
     <fieldset
       className="manager-resource-band"
@@ -18,73 +12,79 @@ export function ResourceBand({ record, edit, open, disabled }: Props) {
     >
       <legend className="manager-visually-hidden">Fate and Fortune</legend>
       <div className="manager-luck-pair">
-        <button
-          className="manager-luck-value"
-          type="button"
-          aria-label="Change Fate"
-          title="Change permanent Fate"
-          onClick={() => open("fate", { value: record.sheet.fate })}
-        >
-          <span>Fate</span>
-          <strong>{score(record.sheet.fate)}</strong>
-        </button>
-        <button
-          className="manager-luck-value"
-          type="button"
-          aria-label="Set current Fortune"
-          title="Set current Fortune"
-          onClick={() =>
-            open("resource", {
-              key: "fortune",
-              value: record.current.fortune ?? 0,
-            })
+        <ResourceStepper
+          label="Fate"
+          value={record.sheet.fate}
+          decrease="Decrease Fate"
+          increase="Increase Fate"
+          change={(value) => edit("Fate changed", (r) => changeFate(r, value))}
+        />
+        <ResourceStepper
+          label="Fortune"
+          value={record.current.fortune}
+          max={record.sheet.fortune}
+          decrease="Spend Fortune"
+          increase="Restore Fortune"
+          change={(value) =>
+            edit("Fortune changed", (r) => changeResource(r, "fortune", value))
           }
-        >
-          <span>Fortune</span>
-          <strong>
-            {score(record.current.fortune)}{" "}
-            <small>/ {score(record.sheet.fortune)}</small>
-          </strong>
-        </button>
-      </div>
-      <div className="manager-resource-actions">
-        <button
-          type="button"
-          className="manager-step"
-          aria-label="Spend Fortune"
-          title="Spend Fortune"
-          disabled={record.current.fortune <= 0}
-          onClick={() =>
-            edit("Fortune spent", (r) =>
-              changeResource(r, "fortune", Math.max(0, r.current.fortune - 1)),
-            )
-          }
-        >
-          −
-        </button>
-        <button
-          type="button"
-          className="manager-step"
-          aria-label="Restore Fortune"
-          title="Restore Fortune"
-          disabled={record.current.fortune >= record.sheet.fortune}
-          onClick={() =>
-            edit("Fortune restored", (r) =>
-              changeResource(
-                r,
-                "fortune",
-                Math.min(r.sheet.fortune, r.current.fortune + 1),
-              ),
-            )
-          }
-        >
-          +
-        </button>
+        />
       </div>
     </fieldset>
   );
 }
-export function WoundsControl({ record, result, edit, open, disabled }: Props) {
+function ResourceStepper({
+  label,
+  value,
+  max,
+  change,
+  decrease,
+  increase,
+}: {
+  label: string;
+  value: number | null;
+  max?: number | null;
+  change: (value: number) => void;
+  decrease: string;
+  increase: string;
+}) {
+  return (
+    <div className="manager-resource-stepper" role="group" aria-label={label}>
+      <span className="manager-resource-label">{label}</span>
+      <div className="manager-resource-controls">
+        <button
+          className="manager-step"
+          type="button"
+          aria-label={decrease}
+          title={decrease}
+          disabled={value === null || value <= 0}
+          onClick={() => change(Math.max(0, (value ?? 0) - 1))}
+        >
+          −
+        </button>
+        <strong className="manager-resource-number">
+          {score(value)}
+          {max !== undefined && <small> / {score(max)}</small>}
+        </strong>
+        <button
+          className="manager-step"
+          type="button"
+          aria-label={increase}
+          title={increase}
+          disabled={
+            max === null ||
+            (max !== undefined && (value ?? 0) >= max) ||
+            (value ?? 0) >= 1e9
+          }
+          onClick={() => change(Math.min(max ?? 1e9, (value ?? 0) + 1))}
+        >
+          +
+        </button>
+      </div>
+    </div>
+  );
+}
+export function WoundsControl({ record, result, edit, disabled }: Props) {
   return (
     <fieldset
       className="manager-combat-wounds"
@@ -92,60 +92,16 @@ export function WoundsControl({ record, result, edit, open, disabled }: Props) {
       aria-label="Current Wounds"
     >
       <legend className="manager-visually-hidden">Current Wounds</legend>
-      <button
-        type="button"
-        className="manager-wounds-value"
-        aria-label="Set Wounds"
-        title="Set current Wounds"
-        onClick={() =>
-          open("resource", { key: "wounds", value: record.current.wounds ?? 0 })
+      <ResourceStepper
+        label="Wounds"
+        value={record.current.wounds}
+        max={result.values.wounds}
+        decrease="Lose one Wound"
+        increase="Recover one Wound"
+        change={(value) =>
+          edit("Wounds changed", (r) => changeResource(r, "wounds", value))
         }
-      >
-        <span>Wounds</span>
-        <strong>
-          {score(record.current.wounds)}{" "}
-          <small>/ {score(result.values.wounds)}</small>
-        </strong>
-      </button>
-      <div className="manager-resource-actions">
-        <button
-          type="button"
-          className="manager-step"
-          aria-label="Lose one Wound"
-          title="Lose one Wound"
-          disabled={
-            record.current.wounds === null || record.current.wounds <= 0
-          }
-          onClick={() =>
-            edit("Wounds changed", (r) =>
-              changeResource(r, "wounds", Math.max(0, r.current.wounds - 1)),
-            )
-          }
-        >
-          −
-        </button>
-        <button
-          type="button"
-          className="manager-step"
-          aria-label="Recover one Wound"
-          title="Recover one Wound"
-          disabled={
-            result.values.wounds === null ||
-            record.current.wounds >= result.values.wounds
-          }
-          onClick={() =>
-            edit("Wounds changed", (r) =>
-              changeResource(
-                r,
-                "wounds",
-                Math.min(result.values.wounds, (r.current.wounds ?? 0) + 1),
-              ),
-            )
-          }
-        >
-          +
-        </button>
-      </div>
+      />
     </fieldset>
   );
 }

@@ -48,6 +48,7 @@ export function freshManager() {
     adjustments: Object.fromEntries(AUTO_FIELDS.map((k) => [k, 0])),
     current: { wounds: null, fortune: 0 },
     conditions: [],
+    afflictions: [],
     journal: [],
     history: [],
     purchases: [],
@@ -64,6 +65,15 @@ export function validateManager(input) {
     "Choose a supported manager character or library backup.",
   );
   const s = clone(input);
+  // Schema-1 saves predating the status card have no affliction records.
+  if (s.afflictions === undefined) s.afflictions = [];
+  requireValue(Array.isArray(s.afflictions) && s.afflictions.length <= 500);
+  const afflictionIds = new Set();
+  for (const row of s.afflictions) {
+    validateAffliction(row);
+    requireValue(!afflictionIds.has(row.id));
+    afflictionIds.add(row.id);
+  }
   requireValue(typeof s.id === "string" && /^[a-zA-Z0-9-]{1,100}$/.test(s.id));
   requireValue(Number.isSafeInteger(s.revision) && s.revision >= 0);
   requireValue(
@@ -590,6 +600,74 @@ export function changeResource(record, key, value) {
     `${key === "wounds" ? "Wounds" : "Fortune"}: ${old ?? "—"} → ${value}`,
     "Current value changed; maximum unchanged.",
     "resource",
+  );
+}
+export function changeFate(record, value) {
+  requireValue(
+    Number.isSafeInteger(value) && value >= 0 && value <= 1e9,
+    "Enter non-negative whole Fate.",
+  );
+  const old = record.sheet.fate;
+  if (old === value) return;
+  record.sheet.fate = value;
+  event(
+    record,
+    `Fate: ${old} → ${value}`,
+    "Permanent resource value changed; Fortune unchanged.",
+    "resource",
+  );
+}
+
+function validateAffliction(row) {
+  requireValue(
+    row &&
+      typeof row.id === "string" &&
+      row.id.length > 0 &&
+      ["critical", "mutation"].includes(row.kind) &&
+      typeof row.at === "string" &&
+      Number.isFinite(Date.parse(row.at)) &&
+      typeof row.name === "string" &&
+      row.name.trim().length > 0 &&
+      ["text", "note", "location", "referenceId", "catalogueId"].every(
+        (key) => typeof row[key] === "string",
+      ) &&
+      typeof row.resolved === "boolean" &&
+      (row.source === null ||
+        (typeof row.source?.book === "string" &&
+          ((Number.isInteger(row.source.page) && row.source.page > 0) ||
+            (typeof row.source.page === "string" &&
+              /^\d+[–-]\d+$/.test(row.source.page))))),
+  );
+}
+export function saveAffliction(record, values) {
+  const rows = record.afflictions || [];
+  const old = values.id ? rows.find((row) => row.id === values.id) : undefined;
+  requireValue(!values.id || old, "This entry is no longer available.");
+  const next = {
+    id: old?.id || uid(),
+    at: old?.at || at(),
+    kind: values.kind,
+    name: typeof values.name === "string" ? values.name.trim() : "",
+    text: values.text || "",
+    note: values.note || "",
+    location: values.location || "",
+    referenceId: values.referenceId || "",
+    catalogueId: values.catalogueId || "",
+    source: values.source || null,
+    resolved: old?.resolved || false,
+  };
+  validateAffliction(next);
+  requireValue(
+    old || rows.length < 500,
+    "This character has too many affliction records.",
+  );
+  if (old) Object.assign(old, next);
+  else record.afflictions = [...rows, next];
+  event(
+    record,
+    `${old ? "Updated" : "Recorded"} ${next.name}`,
+    next.note,
+    "affliction",
   );
 }
 export function awardXP(record, amount, note = "") {

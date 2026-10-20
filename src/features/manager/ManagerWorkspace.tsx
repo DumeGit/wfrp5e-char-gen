@@ -4,15 +4,12 @@ import type { Edit } from "./ui";
 import { CharacterLibrary } from "./CharacterLibrary";
 import { PlaySheet } from "./PlaySheet";
 import { ResourceBand } from "./ResourceBand";
-import { AbilitiesScreen, GearScreen } from "./CharacterScreens";
 import { AdvancementScreen } from "./AdvancementScreen";
 import { JournalScreen } from "./JournalScreen";
 import { score } from "../../engine/controls.mjs";
 
 export const SECTIONS = [
   ["play", "Play"],
-  ["abilities", "Abilities"],
-  ["gear", "Gear"],
   ["advancement", "Advance"],
   ["journal", "Journal"],
 ];
@@ -141,12 +138,30 @@ export function ManagerWorkspace({
                 />
               )}
               <div className="manager-character-identity">
-                <h1
-                  id="manager-character-name"
-                  title={record.sheet.name || "Unnamed character"}
-                >
-                  {record.sheet.name || "Unnamed character"}
-                </h1>
+                <div className="manager-name-line">
+                  <h1
+                    id="manager-character-name"
+                    title={record.sheet.name || "Unnamed character"}
+                  >
+                    {record.sheet.name || "Unnamed character"}
+                  </h1>
+                  <button
+                    className="manager-profile-link"
+                    aria-label="Edit profile"
+                    title="Edit profile"
+                    type="button"
+                    onClick={profile}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                    >
+                      <path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15z" />
+                    </svg>
+                  </button>
+                </div>
                 <p className="manager-meta">
                   {record.sheet.species || "Species not entered"} ·{" "}
                   {result.career?.name || "Career not entered"} · Level{" "}
@@ -155,22 +170,6 @@ export function ManagerWorkspace({
                     <strong className="manager-archive-label"> Archived</strong>
                   )}
                 </p>
-                <button
-                  className="manager-profile-link"
-                  aria-label="Edit profile"
-                  title="Edit profile"
-                  type="button"
-                  onClick={profile}
-                >
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                  >
-                    <path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15z" />
-                  </svg>
-                </button>
               </div>
               <ResourceBand
                 {...{ record, result, edit, open }}
@@ -200,15 +199,11 @@ export function ManagerWorkspace({
                 <PlaySheet
                   key={record.id}
                   {...{ record, result, catalogue, edit, open }}
-                  navigate={navigateSection}
+                  advance={screenProps.advance}
+                  initialView={section === "play" ? view : ""}
                   disabled={state.saving || state.dirty}
                 />,
               )}
-              {panel(
-                "abilities",
-                <AbilitiesScreen key={record.id} {...screenProps} />,
-              )}
-              {panel("gear", <GearScreen key={record.id} {...screenProps} />)}
               {panel(
                 "advancement",
                 <AdvancementScreen

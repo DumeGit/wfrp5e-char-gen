@@ -9,7 +9,7 @@ import { ActionGroups } from "./ActionGroups";
 import { Dialog } from "./ui";
 import { ManagerWorkspace, SECTIONS } from "./ManagerWorkspace";
 import { AdjustmentEditor } from "./AdjustmentEditor";
-import { ConditionFields } from "./ConditionFields";
+import { StatusFields } from "./StatusFields";
 import { Field, Select } from "../marijan/fields";
 import { requestReference } from "../../services/content";
 import { KEYS } from "../../engine/rules.mjs";
@@ -26,6 +26,8 @@ import {
   readImport,
   backup,
   changeResource,
+  changeFate,
+  saveAffliction,
   awardXP,
   changeCareer,
   acquire,
@@ -41,8 +43,10 @@ const normalSection = (value: string | null) =>
         {
           overview: "play",
           session: "play",
-          skills: "abilities",
-          magic: "abilities",
+          skills: "play",
+          magic: "play",
+          abilities: "play",
+          gear: "play",
           advance: "advancement",
         } as Record<string, string>
       )[value || ""] || "play";
@@ -178,7 +182,12 @@ function Manager({ store }: { store: Store }) {
         p.get("character"),
         normalSection(next),
         false,
-        p.get("view") || (next === "magic" ? "magic" : ""),
+        p.get("view") ||
+          (["skills", "magic", "abilities"].includes(next || "")
+            ? "abilities"
+            : next === "gear"
+              ? "gear"
+              : ""),
       );
     });
     setPortal(document.getElementById("compact-menu"));
@@ -189,7 +198,12 @@ function Manager({ store }: { store: Store }) {
         p.get("character"),
         normalSection(next),
         false,
-        p.get("view") || (next === "magic" ? "magic" : ""),
+        p.get("view") ||
+          (["skills", "magic", "abilities"].includes(next || "")
+            ? "abilities"
+            : next === "gear"
+              ? "gear"
+              : ""),
       );
     };
     window.addEventListener("popstate", pop);
@@ -633,6 +647,10 @@ function Manager({ store }: { store: Store }) {
                 resource: "Set current resource",
                 fate: "Change Fate",
                 condition: "Record Condition",
+                status:
+                  form.id || form.legacy
+                    ? "Edit status entry"
+                    : "Add status entry",
                 journal: "Add journal entry",
                 acquire: "Acquire equipment",
                 entry: "Add character entry",
@@ -895,6 +913,7 @@ function Manager({ store }: { store: Store }) {
           {[
             "award",
             "condition",
+            "status",
             "journal",
             "resource",
             "fate",
@@ -917,21 +936,62 @@ function Manager({ store }: { store: Store }) {
                       changeResource(r, form.key, Number(form.value)),
                     );
                   if (modal === "fate")
-                    await store.edit("Fate changed", (r) => {
-                      if (
-                        !Number.isSafeInteger(Number(form.value)) ||
-                        Number(form.value) < 0
-                      )
-                        throw Error("Enter non-negative whole Fate.");
-                      const old = r.sheet.fate;
-                      r.sheet.fate = Number(form.value);
-                      addEvent(
-                        r,
-                        `Fate: ${old} → ${r.sheet.fate}`,
-                        "Permanent resource value changed; Fortune unchanged.",
-                        "resource",
-                      );
-                    });
+                    await store.edit("Fate changed", (r) =>
+                      changeFate(r, Number(form.value)),
+                    );
+                  if (modal === "status")
+                    await store.edit(
+                      form.id || form.legacy
+                        ? "Status entry updated"
+                        : "Status entry recorded",
+                      (r) => {
+                        if (form.kind === "condition") {
+                          if (form.id) {
+                            const row = r.conditions.find(
+                              (entry: any) => entry.id === form.id,
+                            );
+                            if (
+                              !row ||
+                              !form.name?.trim() ||
+                              !Number.isSafeInteger(form.amount) ||
+                              form.amount < 1
+                            )
+                              throw Error(
+                                "Enter a Condition name and positive count.",
+                              );
+                            Object.assign(row, {
+                              name: form.name.trim(),
+                              amount: form.amount,
+                              note: form.note || "",
+                            });
+                          } else
+                            addCondition(
+                              r,
+                              form.name || "",
+                              Number(form.amount),
+                              form.note || "",
+                            );
+                        } else if (form.legacy) {
+                          const row = r.sheet.entries.extras.find(
+                            (entry: any) =>
+                              entry.key === form.legacy &&
+                              entry.kind === "mutation",
+                          );
+                          if (!row || !form.name?.trim())
+                            throw Error("Enter a mutation name.");
+                          Object.assign(row, {
+                            id: form.catalogueId || row.id,
+                            name: form.name.trim(),
+                            text: form.text || "",
+                            source: form.source || undefined,
+                            custom: !!form.custom,
+                            descriptionId: "",
+                            descriptionOverride: true,
+                            descriptionNote: form.note || "",
+                          });
+                        } else saveAffliction(r, form);
+                      },
+                    );
                   if (modal === "condition")
                     await store.edit("Condition recorded", (r) =>
                       addCondition(
@@ -1118,8 +1178,8 @@ function Manager({ store }: { store: Store }) {
                   />
                 </>
               )}
-              {modal === "condition" && (
-                <ConditionFields
+              {["condition", "status"].includes(modal) && (
+                <StatusFields
                   catalogue={state.catalogue}
                   value={form}
                   change={(patch) => setForm((old) => ({ ...old, ...patch }))}

@@ -1,7 +1,8 @@
 import { KEYS } from "../../engine/rules.mjs";
 import { score } from "../../engine/controls.mjs";
-import { requestReference } from "../../services/content";
-import { EntryList } from "./EntryList";
+import { AbilitiesScreen, GearScreen } from "./CharacterScreens";
+import { StatusCard } from "./StatusCard";
+import { useEffect, useState } from "react";
 import { SheetCard } from "./SheetCard";
 import { WoundsControl } from "./ResourceBand";
 import type { Edit } from "./ui";
@@ -13,7 +14,8 @@ type Props = {
   catalogue: any;
   edit: Edit;
   open: (kind: string, values?: Record<string, any>) => void;
-  navigate: (section: string) => void;
+  advance: (group?: string, name?: string) => void;
+  initialView?: string;
   disabled: boolean;
 };
 export function PlaySheet({
@@ -22,18 +24,34 @@ export function PlaySheet({
   catalogue,
   edit,
   open,
-  navigate,
+  advance,
+  initialView,
   disabled,
 }: Props) {
   const scoreLength = Math.max(
     ...KEYS.map((key: string) => score(result.stats[key]).length),
   );
-  const groups = ["skills", "talents", "magic", "extras"].map((group) => ({
-    group,
-    rows: (group === "skills" ? result.skills : result.entries[group]).filter(
-      (entry: any) => entry.favourite,
-    ),
-  }));
+  const [reveals, setReveals] = useState<Record<string, number>>({});
+  const jump = (name: string) => {
+    setReveals((old) => ({ ...old, [name]: (old[name] || 0) + 1 }));
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        const target = document.getElementById(`manager-${name}`);
+        target
+          ?.querySelector<HTMLButtonElement>(".manager-card-toggle")
+          ?.focus({ preventScroll: true });
+        target?.scrollIntoView({ block: "start" });
+      }),
+    );
+  };
+  useEffect(() => {
+    if (
+      ["abilities", "gear", "characteristics", "status"].includes(
+        initialView || "",
+      )
+    )
+      jump(initialView!);
+  }, [initialView]);
   const weapons = result.equipment.weapons.filter(
     (entry: any) => entry.placement === "equipped",
   );
@@ -42,14 +60,12 @@ export function PlaySheet({
     <div className="manager-play">
       <SheetCard
         title="Combat"
+        id="manager-combat"
+        reveal={reveals.combat}
         className="manager-play-combat"
         mobileOpen
         actions={
-          <button
-            className="quiet"
-            type="button"
-            onClick={() => navigate("gear")}
-          >
+          <button className="quiet" type="button" onClick={() => jump("gear")}>
             Manage gear
           </button>
         }
@@ -148,129 +164,24 @@ export function PlaySheet({
           </p>
         )}
       </SheetCard>
-      <div className="manager-play-context">
-        <SheetCard
-          title="Favourites"
-          className="manager-play-favourites"
-          mobileOpen
-          count={groups.reduce((sum, group) => sum + group.rows.length, 0)}
-          actions={
-            <button
-              className="quiet"
-              type="button"
-              onClick={() => navigate("abilities")}
-            >
-              Browse abilities
-            </button>
-          }
-        >
-          {groups.some((group) => group.rows.length) ? (
-            groups
-              .filter((group) => group.rows.length)
-              .map(({ group, rows }) => (
-                <EntryList
-                  key={group}
-                  {...{ catalogue, record, result, edit, open, group, rows }}
-                  compact
-                />
-              ))
-          ) : (
-            <p className="manager-empty-line">
-              Use the star beside an ability to keep it here.
-            </p>
-          )}
-        </SheetCard>
-
-        <SheetCard
-          title="Conditions"
-          className="manager-play-conditions"
-          count={record.conditions.length}
-          mobileOpen={record.conditions.length > 0}
-          actions={
-            <button
-              className="quiet"
-              type="button"
-              onClick={() =>
-                open("condition", { amount: 1, name: "", note: "" })
-              }
-            >
-              Record Condition
-            </button>
-          }
-        >
-          {record.conditions.length ? (
-            record.conditions.map((entry: any) => (
-              <div className="manager-condition" key={entry.id}>
-                <div>
-                  <strong>
-                    {entry.name} ×{score(entry.amount)}
-                  </strong>
-                  {entry.note && <p>{entry.note}</p>}
-                </div>
-                <div className="manager-inline">
-                  <button
-                    className="manager-text"
-                    type="button"
-                    onClick={() =>
-                      requestReference({ kind: "condition", name: entry.name })
-                    }
-                  >
-                    Rule
-                  </button>
-                  <button
-                    className="manager-text"
-                    type="button"
-                    aria-label={`Remove ${entry.name} Condition`}
-                    onClick={() =>
-                      edit("Removed Condition", (r) => {
-                        r.conditions = r.conditions.filter(
-                          (condition: any) => condition.id !== entry.id,
-                        );
-                      })
-                    }
-                  >
-                    Remove
-                  </button>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="manager-empty-line">No active Conditions.</p>
-          )}
-        </SheetCard>
-        <SheetCard
-          title="In the field"
-          className="manager-play-facts"
-          actions={
-            <button
-              className="quiet"
-              type="button"
-              onClick={() =>
-                open("journal", { title: "", text: "", kind: "Session" })
-              }
-            >
-              Add session note
-            </button>
-          }
-        >
-          <dl className="manager-facts">
-            {[
-              [
-                "Enc / capacity",
-                `${score(result.values.enc)} / ${score(result.values.capacity)}`,
-              ],
-              ["Corruption", record.sheet.corruption],
-              ["Sin", record.sheet.sin],
-            ].map(([label, value]) => (
-              <div key={String(label)}>
-                <dt>{label}</dt>
-                <dd>{typeof value === "number" ? score(value) : value}</dd>
-              </div>
-            ))}
-          </dl>
-        </SheetCard>
-      </div>
-      <SheetCard title="Characteristics" className="manager-play-stats">
+      <StatusCard
+        {...{ record, result, catalogue, edit, open }}
+        reveal={reveals.status || 0}
+      />
+      <AbilitiesScreen
+        {...{ record, result, catalogue, edit, open, advance }}
+        reveal={reveals.abilities || 0}
+      />
+      <GearScreen
+        {...{ record, result, catalogue, edit, open, advance }}
+        reveal={reveals.gear || 0}
+      />
+      <SheetCard
+        title="Characteristics"
+        id="manager-characteristics"
+        reveal={reveals.characteristics}
+        className="manager-play-stats"
+      >
         <dl
           className="manager-stats"
           data-wide={scoreLength > 4 ? "true" : undefined}
