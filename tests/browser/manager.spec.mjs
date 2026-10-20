@@ -2,6 +2,129 @@ import { test, expect, pcDraft } from "./helpers.mjs";
 import { freshMarijan } from "../../src/engine/marijan/model.mjs";
 import { readFile } from "node:fs/promises";
 
+test("core Conditions are selectable with source summaries, non-stacking counts and custom notes @manager", async ({
+  page,
+}) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  const before = (await rawRecords(page))[0].current;
+  await page
+    .getByRole("button", { name: "Record Condition", exact: true })
+    .click();
+  let dialog = page.getByRole("dialog");
+  const select = dialog.getByLabel("Condition", { exact: true });
+  const names = await select.locator("option").allTextContents();
+  expect(names.slice(1, -1)).toEqual([
+    "Ablaze",
+    "Besmirched",
+    "Bleeding",
+    "Blinded",
+    "Broken",
+    "Deafened",
+    "Entangled",
+    "Fatigued",
+    "Poisoned",
+    "Prone",
+    "Stunned",
+    "Surprised",
+    "Unconscious",
+  ]);
+  await select.selectOption("Unconscious");
+  await expect(dialog.getByText(/Helpless, unaware/)).toBeVisible();
+  await expect(
+    dialog.getByRole("button", { name: "Core Rulebook, p. 187", exact: true }),
+  ).toBeVisible();
+  await expect(dialog.getByLabel("Count", { exact: true })).toHaveCount(0);
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].conditions[0]).toMatchObject({
+    name: "Unconscious",
+    amount: 1,
+    note: "",
+  });
+  expect((await rawRecords(page))[0].current).toEqual(before);
+  await page
+    .getByRole("button", { name: "Record Condition", exact: true })
+    .click();
+  dialog = page.getByRole("dialog");
+  await dialog.getByLabel("Condition", { exact: true }).selectOption("custom");
+  await dialog
+    .getByLabel("Condition name", { exact: true })
+    .fill("Campaign effect");
+  await dialog.getByLabel("Count", { exact: true }).fill("2");
+  await dialog
+    .getByLabel("Effect / notes", { exact: true })
+    .fill("Agreed at the table");
+  await dialog
+    .getByRole("button", { name: "Record change", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].conditions[1]).toMatchObject({
+    name: "Campaign effect",
+    amount: 2,
+    note: "Agreed at the table",
+  });
+});
+
+test("abilities share a compact sheet, Skills show Characteristics, gear forms a grid and mobile library lives in the menu @manager", async ({
+  page,
+}) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  await expect(
+    page
+      .locator("main")
+      .getByRole("button", { name: "Character library", exact: true }),
+  ).toHaveCount(0);
+  expect(
+    await page
+      .locator(".manager-main")
+      .evaluate((el) => getComputedStyle(el, "::before").content),
+  ).toContain("✦");
+  expect(
+    await page
+      .locator(".manager-main")
+      .evaluate((el) => getComputedStyle(el, "::after").content),
+  ).toContain("✦");
+  await section(page, "Abilities");
+  const sheet = page.locator(".manager-abilities-screen");
+  for (const name of ["Skills", "Talents", "Magic & Faith"])
+    await expect(
+      sheet.getByRole("region", { name, exact: true }),
+    ).toBeVisible();
+  const dodge = sheet.locator(".manager-entry-row").filter({
+    has: page
+      .locator(".manager-entry-name")
+      .getByText("Dodge", { exact: true }),
+  });
+  await expect(dodge.locator(".manager-skill-characteristic")).toHaveText("Ag");
+  if (page.viewportSize().width > 1000) {
+    const columns = await sheet
+      .locator('[data-group="skills"] .manager-entry-items')
+      .evaluate(
+        (el) => getComputedStyle(el).gridTemplateColumns.split(" ").length,
+      );
+    expect(columns).toBeGreaterThan(1);
+  }
+  await section(page, "Gear");
+  const gear = page.locator(".manager-gear-screen");
+  if (page.viewportSize().width > 1000) {
+    const columns = await gear
+      .locator(".manager-entry-items")
+      .evaluate(
+        (el) => getComputedStyle(el).gridTemplateColumns.split(" ").length,
+      );
+    expect(columns).toBeGreaterThan(1);
+    expect(
+      (await gear.getByLabel("Find equipment", { exact: true }).boundingBox())
+        .width,
+    ).toBeLessThan(320);
+  }
+  await library(page);
+});
+
 async function open(page) {
   await page.goto("/manager/?verify=1");
   await expect(
@@ -15,6 +138,11 @@ async function section(page, name) {
     .click();
 }
 async function library(page) {
+  const menu = page.getByRole("button", {
+    name: "Open manager menu",
+    exact: true,
+  });
+  if (await menu.isVisible()) await menu.click();
   await page
     .getByRole("button", { name: "Character library", exact: true })
     .click();
@@ -139,7 +267,9 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
     .getByRole("button", { name: "Record Condition", exact: true })
     .click();
   let dialog = page.getByRole("dialog");
-  await dialog.getByLabel("Condition name").fill("Bleeding");
+  await dialog
+    .getByLabel("Condition", { exact: true })
+    .selectOption("Bleeding");
   await dialog.getByLabel("Count", { exact: true }).fill("2");
   await dialog
     .getByRole("button", { name: "Record change", exact: true })

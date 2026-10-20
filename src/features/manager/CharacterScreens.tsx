@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Field, Select } from "../marijan/fields";
 import { EntryList } from "./EntryList";
 import { score } from "../../engine/controls.mjs";
@@ -12,67 +12,45 @@ type Props = {
   edit: Edit;
   open: (kind: string, values?: Record<string, any>) => void;
   advance: (group?: string, name?: string) => void;
-  initialCategory?: string;
 };
 export function AbilitiesScreen(props: Props) {
-  const [category, setCategory] = useState("skills"),
-    [query, setQuery] = useState("");
-  useEffect(() => {
-    if (
-      ["skills", "talents", "magic", "extras"].includes(
-        props.initialCategory || "",
-      )
-    )
-      setCategory(props.initialCategory!);
-  }, [props.initialCategory]);
+  const [query, setQuery] = useState("");
   return (
-    <section>
+    <section className="manager-abilities-screen">
       <div className="manager-page-heading">
-        <div>
-          <h2>Abilities</h2>
-          <p className="manager-meta">
-            Your known Skills, Talents and other abilities.
-          </p>
-        </div>
-        <button type="button" className="quiet" onClick={() => props.advance()}>
-          Learn or improve with XP
-        </button>
-      </div>
-      <div
-        className="manager-local-nav"
-        role="group"
-        aria-label="Ability categories"
-      >
-        {[
-          ["skills", "Skills"],
-          ["talents", "Talents"],
-          ["magic", "Magic & Faith"],
-          ["extras", "Other abilities"],
-        ].map(([id, label]) => (
+        <h2>Abilities</h2>
+        <div className="manager-abilities-toolbar">
+          <Field
+            id="skill-find"
+            label="Find an owned ability"
+            value={query}
+            onValue={setQuery}
+          />
           <button
-            className="quiet"
-            key={id}
             type="button"
-            aria-pressed={category === id}
-            onClick={() => {
-              setCategory(id);
-              setQuery("");
-            }}
+            className="quiet"
+            onClick={() => props.advance()}
           >
-            {label}
+            Learn or improve with XP
           </button>
-        ))}
+        </div>
       </div>
-      <div className="manager-search">
-        <Field
-          id="skill-find"
-          label="Find an owned ability"
-          value={query}
-          onValue={setQuery}
-        />
+      <div className="manager-abilities-grid">
+        <EntryList {...props} query={query} group="skills" />
+        <div className="manager-abilities-side">
+          <EntryList {...props} query={query} group="talents" />
+          <EntryList {...props} query={query} group="magic" />
+          {props.result.entries.extras.length ? (
+            <EntryList {...props} query={query} group="extras" />
+          ) : (
+            <details className="manager-other-abilities">
+              <summary>Other abilities</summary>
+              <EntryList {...props} query={query} group="extras" />
+            </details>
+          )}
+        </div>
       </div>
-      <EntryList {...props} {...{ query, group: category }} />
-      {category === "magic" && (
+      {props.result.entries.magic.length > 0 && (
         <p className="manager-local-note">
           Casting and situational effects remain manual. Recording knowledge
           does not apply spell effects automatically.

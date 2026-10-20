@@ -7,6 +7,7 @@ import { CreatorMenu } from "../../components/CreatorMenu";
 import { Dialog } from "./ui";
 import { ManagerWorkspace, SECTIONS } from "./ManagerWorkspace";
 import { AdjustmentEditor } from "./AdjustmentEditor";
+import { ConditionFields } from "./ConditionFields";
 import { Field, Select } from "../marijan/fields";
 import { requestReference } from "../../services/content";
 import { KEYS } from "../../engine/rules.mjs";
@@ -1126,32 +1127,11 @@ function Manager({ store }: { store: Store }) {
                 </>
               )}
               {modal === "condition" && (
-                <>
-                  <Field
-                    id="condition-name"
-                    label="Condition name"
-                    value={form.name}
-                    onValue={(value) => updateForm("name", value)}
-                  />
-                  <Field
-                    id="condition-amount"
-                    label="Count"
-                    numeric
-                    value={form.amount}
-                    onValue={(value) => updateForm("amount", value)}
-                  />
-                  <Field
-                    id="condition-note"
-                    label="Effect / notes"
-                    area
-                    value={form.note}
-                    onValue={(value) => updateForm("note", value)}
-                  />
-                  <p className="manager-meta">
-                    Recorded for play; numerical effects and recovery are
-                    applied manually.
-                  </p>
-                </>
+                <ConditionFields
+                  catalogue={state.catalogue}
+                  value={form}
+                  change={(patch) => setForm((old) => ({ ...old, ...patch }))}
+                />
               )}
               {modal === "journal" && (
                 <>

@@ -68,7 +68,7 @@ export function PlaySheet({
         <div className="manager-section-heading">
           <h2>Conditions</h2>
           <button
-            className="manager-text"
+            className="quiet"
             type="button"
             onClick={() => open("condition", { amount: 1, name: "", note: "" })}
           >
@@ -119,7 +119,7 @@ export function PlaySheet({
         <div className="manager-section-heading">
           <h2>Ready attacks</h2>
           <button
-            className="manager-text"
+            className="quiet"
             type="button"
             onClick={() => navigate("gear")}
           >
@@ -167,7 +167,7 @@ export function PlaySheet({
         <div className="manager-section-heading">
           <h2>Favourites</h2>
           <button
-            className="manager-text"
+            className="quiet"
             type="button"
             onClick={() => navigate("abilities")}
           >
@@ -260,7 +260,7 @@ export function PlaySheet({
           ))}
         </dl>
         <button
-          className="manager-text"
+          className="quiet"
           type="button"
           onClick={() =>
             open("journal", { title: "", text: "", kind: "Session" })

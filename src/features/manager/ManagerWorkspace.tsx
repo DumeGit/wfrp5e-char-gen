@@ -112,14 +112,6 @@ export function ManagerWorkspace({
       </aside>
       <main id="creator-main" className="manager-main">
         <div className="manager-workspace-tools">
-          <button
-            className="manager-mobile-library"
-            type="button"
-            onClick={() => navigate(null)}
-            aria-current={!record ? "page" : undefined}
-          >
-            Character library
-          </button>
           <p className="manager-save-status" role="status">
             {state.saving
               ? "Saving…"
@@ -271,11 +263,7 @@ export function ManagerWorkspace({
               )}
               {panel(
                 "abilities",
-                <AbilitiesScreen
-                  key={record.id}
-                  {...screenProps}
-                  initialCategory={section === "abilities" ? view : ""}
-                />,
+                <AbilitiesScreen key={record.id} {...screenProps} />,
               )}
               {panel("gear", <GearScreen key={record.id} {...screenProps} />)}
               {panel(

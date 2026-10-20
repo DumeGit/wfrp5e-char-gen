@@ -87,11 +87,27 @@
   line-height: 1.6;
 }
 .manager-main {
+  position: relative;
   min-width: 0;
   min-height: 640px;
   padding: 0;
   color: var(--color-ink);
   background: var(--color-paper);
+}
+.manager-main::before,
+.manager-main::after {
+  content: "✦";
+  position: absolute;
+  top: 7px;
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  pointer-events: none;
+}
+.manager-main::before {
+  left: 7px;
+}
+.manager-main::after {
+  right: 7px;
 }
 .manager-main h1 {
   margin: 0 0 6px;
@@ -216,11 +232,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 8px 24px;
+  padding: 6px 24px;
   background: var(--manager-surface-heading);
-}
-.manager-main .manager-mobile-library {
-  display: none;
 }
 .manager-save-status {
   font-size: 12px;
@@ -299,7 +312,7 @@
   gap: 24px;
   min-width: 0;
   margin: 0;
-  padding: 14px 24px;
+  padding: 10px 24px;
   border: 0;
   border-bottom: 1px solid var(--color-line);
   background: var(--color-paper-recessed);
@@ -597,6 +610,128 @@
   gap: 4px;
   border-top: 1px solid var(--color-line-soft);
 }
+.manager-entry-count {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-muted);
+  margin-left: 4px;
+}
+.manager-skill-characteristic {
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+.manager-abilities-screen > .manager-page-heading {
+  margin-bottom: 14px;
+}
+.manager-abilities-toolbar {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.manager-abilities-toolbar .field {
+  width: 230px;
+  max-width: 100%;
+}
+.manager-abilities-toolbar input {
+  width: 100%;
+}
+.manager-section-content > div:has(> .manager-abilities-screen) {
+  padding: 12px;
+}
+.manager-abilities-toolbar input {
+  min-height: 36px;
+  padding: 6px 10px;
+}
+.manager-abilities-grid [data-group="skills"] .manager-entry-name {
+  font-size: 12.5px;
+}
+.manager-other-abilities {
+  margin: 0;
+}
+.manager-other-abilities > summary {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--color-line-soft);
+  background: var(--color-paper-raised);
+}
+.manager-abilities-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
+  align-items: start;
+  gap: 12px;
+}
+.manager-abilities-side {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.manager-abilities-grid .manager-entry-list {
+  min-width: 0;
+  padding: 12px;
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-line-soft);
+}
+.manager-abilities-grid .manager-section-heading {
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.manager-abilities-grid .manager-section-heading h3 {
+  margin: 0;
+}
+.manager-abilities-grid .manager-section-heading button {
+  min-height: 32px;
+  padding: 5px 7px;
+  font-size: 12px;
+}
+.manager-abilities-grid [data-group="skills"] .manager-entry-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  align-items: start;
+  gap: 0 12px;
+}
+.manager-abilities-grid .manager-entry summary {
+  min-height: 32px;
+  padding: 3px 0;
+  gap: 5px;
+  font-size: 13px;
+}
+.manager-abilities-grid .manager-entry-total {
+  font-size: 16px;
+}
+.manager-main .manager-abilities-grid button.manager-favourite {
+  min-width: 28px;
+  min-height: 32px;
+  padding: 2px;
+  font-size: 20px;
+}
+.manager-abilities-grid .manager-entry-row:has(> details[open]),
+.manager-gear-screen .manager-entry-row:has(> details[open]) {
+  grid-column: 1/-1;
+}
+.manager-gear-screen .manager-entry-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  align-items: start;
+  gap: 8px;
+}
+.manager-gear-screen .manager-entry-row {
+  border: 1px solid var(--color-line-soft);
+  background: var(--color-paper-raised);
+}
+.manager-gear-screen .manager-entry summary {
+  padding: 9px 10px;
+}
+.manager-gear-screen .manager-entry-content {
+  padding: 0 12px 12px;
+}
+.manager-gear-screen .manager-page-heading {
+  margin-bottom: 12px;
+}
 .manager-entry-row > .manager-entry {
   flex: 1;
   min-width: 0;
@@ -683,10 +818,10 @@
 }
 .manager-gear-filters {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(140px, 1fr);
-  gap: 16px;
-  max-width: 720px;
-  margin-bottom: 20px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(120px, 1fr);
+  gap: 12px;
+  max-width: 480px;
+  margin-bottom: 12px;
 }
 .manager-gear-filters :is(input, select) {
   width: 100%;
@@ -1075,6 +1210,12 @@
   }
 }
 @media (max-width: 1100px) {
+  .manager-abilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .manager-abilities-side {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
   .manager-play {
     grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
     gap: 16px;
@@ -1091,19 +1232,45 @@
   .manager-workspace > .manager-rail {
     display: none;
   }
-  .manager-main .manager-mobile-library {
-    display: inline-flex;
-    background: var(--color-panel);
-    color: var(--color-on-leather);
-    border-color: var(--color-panel);
-  }
 }
 @media (min-width: 1001px) {
+  .manager-character-header {
+    padding: 8px 24px 12px;
+  }
+  .manager-character-identity {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+  .manager-character-identity h1 {
+    grid-column: 1;
+    font-size: 28px;
+  }
+  .manager-character-identity > .manager-meta {
+    grid-column: 1;
+  }
+  .manager-character-identity .manager-profile-link {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
   .manager-main .manager-library-actions {
     display: none;
   }
 }
 @media (max-width: 719px) {
+  .manager-abilities-side {
+    grid-template-columns: 1fr;
+  }
+  .manager-abilities-grid [data-group="skills"] .manager-entry-items {
+    grid-template-columns: 1fr;
+  }
+  .manager-abilities-toolbar {
+    width: 100%;
+  }
+  .manager-abilities-toolbar .field {
+    width: 100%;
+  }
   .manager-workspace {
     margin: 0 0 12px;
     border-inline: 0;
@@ -1392,6 +1559,17 @@
     min-height: 44px;
   }
   .manager-main button.manager-resource-value-button {
+    min-height: 44px;
+  }
+  .manager-abilities-grid .manager-entry summary,
+  .manager-abilities-grid .manager-section-heading button,
+  .manager-main .manager-abilities-grid button.manager-favourite {
+    min-height: 44px;
+  }
+  .manager-main .manager-abilities-grid button.manager-favourite {
+    min-width: 44px;
+  }
+  .manager-abilities-toolbar input {
     min-height: 44px;
   }
 }
