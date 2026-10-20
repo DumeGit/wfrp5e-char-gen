@@ -82,6 +82,15 @@ export function ManagerWorkspace({
           : undefined,
       ),
   };
+  const saveStatus = (
+    <p
+      className="manager-save-status"
+      role="status"
+      title={state.dirty ? "Unsaved changes" : "Saved on this device"}
+    >
+      {state.saving ? "Saving…" : state.dirty ? "Unsaved changes" : "Saved"}
+    </p>
+  );
   return (
     <div className={`manager-workspace ${record ? "" : "manager-library"}`}>
       <aside className="rail manager-rail" aria-label="Application menu">
@@ -109,15 +118,7 @@ export function ManagerWorkspace({
         </p>
       </aside>
       <main id="creator-main" className="manager-main">
-        <div className="manager-workspace-tools">
-          <p className="manager-save-status" role="status">
-            {state.saving
-              ? "Saving…"
-              : state.dirty
-                ? "Unsaved changes"
-                : "Saved on this device"}
-          </p>
-        </div>
+        {!record && <div className="manager-workspace-tools">{saveStatus}</div>}
         {alerts}
         <div hidden={!!record}>
           <CharacterLibrary
@@ -140,7 +141,10 @@ export function ManagerWorkspace({
                 />
               )}
               <div className="manager-character-identity">
-                <h1 id="manager-character-name">
+                <h1
+                  id="manager-character-name"
+                  title={record.sheet.name || "Unnamed character"}
+                >
                   {record.sheet.name || "Unnamed character"}
                 </h1>
                 <p className="manager-meta">
@@ -152,13 +156,27 @@ export function ManagerWorkspace({
                   )}
                 </p>
                 <button
-                  className="manager-text manager-profile-link"
+                  className="manager-profile-link"
+                  aria-label="Edit profile"
+                  title="Edit profile"
                   type="button"
                   onClick={profile}
                 >
-                  Edit profile
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                  >
+                    <path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15z" />
+                  </svg>
                 </button>
               </div>
+              <ResourceBand
+                {...{ record, result, edit, open }}
+                disabled={state.saving || state.dirty}
+              />
+              {saveStatus}
             </div>
             <nav className="manager-navigation" aria-label="Character sections">
               {SECTIONS.map(([id, label]) => (
@@ -172,10 +190,6 @@ export function ManagerWorkspace({
                 </button>
               ))}
             </nav>
-            <ResourceBand
-              {...{ record, result, edit, open }}
-              disabled={state.saving || state.dirty}
-            />
             <div
               id="manager-section-content"
               className="manager-section-content"
@@ -184,8 +198,10 @@ export function ManagerWorkspace({
               {panel(
                 "play",
                 <PlaySheet
+                  key={record.id}
                   {...{ record, result, catalogue, edit, open }}
                   navigate={navigateSection}
+                  disabled={state.saving || state.dirty}
                 />,
               )}
               {panel(

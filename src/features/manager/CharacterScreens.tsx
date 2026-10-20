@@ -40,14 +40,7 @@ export function AbilitiesScreen(props: Props) {
         <div className="manager-abilities-side">
           <EntryList {...props} query={query} group="talents" />
           <EntryList {...props} query={query} group="magic" />
-          {props.result.entries.extras.length ? (
-            <EntryList {...props} query={query} group="extras" />
-          ) : (
-            <details className="manager-other-abilities">
-              <summary>Other abilities</summary>
-              <EntryList {...props} query={query} group="extras" />
-            </details>
-          )}
+          <EntryList {...props} query={query} group="extras" />
         </div>
       </div>
       {props.result.entries.magic.length > 0 && (

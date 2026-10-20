@@ -931,6 +931,12 @@ test("large manual scores remain readable on one line without page overflow @man
   await importData(page, draft);
   for (const width of [320, 390, 1440]) {
     await page.setViewportSize({ width, height: 900 });
+    const characteristics = page.getByRole("button", {
+      name: "Characteristics",
+      exact: true,
+    });
+    if ((await characteristics.getAttribute("aria-expanded")) === "false")
+      await characteristics.click();
     const measurement = await page
       .locator(".manager-stat-button")
       .first()
@@ -949,4 +955,143 @@ test("large manual scores remain readable on one line without page overflow @man
     expect(measurement.scroll).toBeLessThanOrEqual(measurement.width + 1);
     expect(measurement.page).toBeLessThanOrEqual(measurement.viewport);
   }
+});
+
+test("compact identity, combat cards and collapsible abilities keep long names and panels contained @manager", async ({
+  page,
+}) => {
+  await open(page);
+  const draft = await pcDraft({ complete: true });
+  draft.name = "AlexandervonUnbrokenName".repeat(12);
+  await importData(page, draft);
+  await page.evaluate(() => document.fonts.ready);
+  const combat = page.getByRole("region", { name: "Combat", exact: true });
+  for (const name of ["Ready attacks", "Protection"])
+    await expect(
+      combat.getByRole("heading", { name, exact: true }),
+    ).toBeVisible();
+  await expect(
+    combat.getByRole("button", { name: "Set Wounds", exact: true }),
+  ).toBeVisible();
+  await expect(combat.getByText("Movement", { exact: true })).toBeVisible();
+  for (const width of [1440, 2560, 1024, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    await expect(page.locator("#manager-character-name")).toHaveAttribute(
+      "title",
+      draft.name,
+    );
+    const layout = await page.locator(".manager-main").evaluate((main) => {
+      const heading = main.querySelector("#manager-character-name");
+      const range = document.createRange();
+      range.selectNodeContents(heading);
+      const cards = [
+        ...main.querySelectorAll(".manager-play .manager-card"),
+      ].map((el) => {
+        const r = el.getBoundingClientRect();
+        return {
+          title: el.getAttribute("aria-label"),
+          x: r.x,
+          y: r.y,
+          right: r.right,
+          bottom: r.bottom,
+        };
+      });
+      const pair = [...main.querySelectorAll(".manager-luck-pair > *")].map(
+        (el) => {
+          const r = el.getBoundingClientRect();
+          return { x: r.x, y: r.y, right: r.right };
+        },
+      );
+      return {
+        headerHeight: main
+          .querySelector(".manager-character-header")
+          .getBoundingClientRect().height,
+        ellipsis: getComputedStyle(heading).textOverflow,
+        whiteSpace: getComputedStyle(heading).whiteSpace,
+        pageWidth: document.documentElement.scrollWidth,
+        pair,
+        cards,
+      };
+    });
+    expect(layout.ellipsis).toBe("ellipsis");
+    expect(layout.whiteSpace).toBe("nowrap");
+    expect(layout.headerHeight).toBeLessThan(width < 720 ? 115 : 85);
+    expect(layout.pageWidth).toBeLessThanOrEqual(width);
+    expect(layout.pair).toHaveLength(2);
+    expect(Math.abs(layout.pair[0].y - layout.pair[1].y)).toBeLessThan(2);
+    expect(layout.pair[0].right).toBeLessThanOrEqual(layout.pair[1].x);
+    for (let i = 0; i < layout.cards.length; i++)
+      for (let j = i + 1; j < layout.cards.length; j++) {
+        const a = layout.cards[i],
+          b = layout.cards[j];
+        const overlap =
+          Math.min(a.right, b.right) - Math.max(a.x, b.x) > 1 &&
+          Math.min(a.bottom, b.bottom) - Math.max(a.y, b.y) > 1;
+        expect(
+          overlap,
+          `${width}px: ${a.title} must not overlap ${b.title}`,
+        ).toBe(false);
+      }
+    if (width < 720) {
+      expect(
+        [...layout.cards]
+          .sort((a, b) => a.y - b.y)
+          .slice(0, 2)
+          .map((x) => x.title),
+      ).toEqual(["Combat", "Favourites"]);
+      for (const title of [
+        "Combat",
+        "Favourites",
+        "Conditions",
+        "Characteristics",
+        "In the field",
+      ]) {
+        const toggle = page.getByRole("button", { name: title, exact: true });
+        const wasOpen = await toggle.getAttribute("aria-expanded");
+        await toggle.click();
+        await expect(toggle).toHaveAttribute(
+          "aria-expanded",
+          String(wasOpen !== "true"),
+        );
+        const body = page.locator(
+          `[id="${await toggle.getAttribute("aria-controls")}"]`,
+        );
+        if (wasOpen === "true") await expect(body).toBeHidden();
+        else await expect(body).toBeVisible();
+        await toggle.click();
+      }
+      await expect(
+        page.getByRole("button", { name: "Characteristics", exact: true }),
+      ).toHaveAttribute("aria-expanded", "false");
+      await expect(
+        page.getByRole("button", { name: "Conditions", exact: true }),
+      ).toHaveAttribute("aria-expanded", "false");
+    }
+  }
+  await section(page, "Abilities");
+  const skills = page.getByRole("region", { name: "Skills", exact: true });
+  expect(
+    await skills
+      .locator("summary")
+      .first()
+      .evaluate((el) => getComputedStyle(el, "::before").display),
+  ).toBe("none");
+  for (const title of [
+    "Skills",
+    "Talents",
+    "Magic & Faith",
+    "Other abilities",
+  ]) {
+    const toggle = page.getByRole("button", { name: title, exact: true });
+    if ((await toggle.getAttribute("aria-expanded")) === "false")
+      await toggle.click();
+    await toggle.click();
+    await expect(toggle).toHaveAttribute("aria-expanded", "false");
+  }
+  await section(page, "Play");
+  await section(page, "Abilities");
+  await expect(
+    page.getByRole("button", { name: "Skills", exact: true }),
+  ).toHaveAttribute("aria-expanded", "false");
+  expect((await rawRecords(page))[0].sheet.name).toBe(draft.name);
 });

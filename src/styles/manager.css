@@ -66,8 +66,8 @@
 }
 .manager-rail-actions button {
   width: 100%;
-  min-height: 40px;
-  padding: 9px 10px;
+  min-height: 32px;
+  padding: 6px 9px;
   border: 1px solid var(--color-line-dark);
   border-radius: 3px;
   color: var(--color-on-leather);
@@ -284,71 +284,104 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
 .manager-workspace-tools {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 6px 24px;
+  justify-content: flex-end;
+  padding: 8px 20px;
   background: var(--manager-surface-heading);
 }
 .manager-save-status {
-  font-size: 12px;
-  color: var(--color-muted);
   margin: 0 !important;
-  margin-left: auto !important;
+  color: var(--color-muted);
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .manager-character-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px 24px 18px;
+  gap: 12px;
+  padding: 8px 20px;
   background: var(--manager-surface-heading);
 }
 .manager-character-identity {
-  min-width: 0;
   flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 8px;
 }
-.manager-character-identity .manager-meta {
+.manager-character-identity h1 {
   margin: 0;
+  font-size: 24px;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-column: 1;
 }
-.manager-portrait,
-.manager-library-portrait {
-  width: 56px;
-  height: 70px;
+.manager-character-identity > .manager-meta {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  grid-column: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.manager-main .manager-profile-link {
+  grid-column: 2;
+  grid-row: 1/3;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 6px;
+  background: transparent;
+  border-color: transparent;
+}
+.manager-profile-link svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.manager-portrait {
+  width: 32px;
+  height: 40px;
   object-fit: cover;
   border: 1px solid var(--color-line);
   flex: none;
 }
-.manager-main .manager-profile-link {
-  padding: 5px 0;
-  min-height: 32px;
-  font-size: 14px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.manager-library-portrait {
+  width: 48px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid var(--color-line);
+  flex: none;
 }
 .manager-archive-label {
-  margin-left: 8px;
-  padding: 2px 6px;
-  background: var(--color-paper-recessed);
+  margin-left: 6px;
+  font-size: 11px;
 }
 .manager-navigation {
   display: flex;
-  gap: 6px;
-  padding: 6px 24px 0;
+  gap: 4px;
+  padding: 0 16px;
   background: var(--color-panel);
   border-bottom: 1px solid var(--color-line-dark);
 }
 .manager-navigation button {
-  padding: 10px 16px;
-  min-height: 48px;
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: 14px;
   border: 0;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   border-radius: 0;
   background: transparent;
   color: var(--color-on-leather);
-  font-size: 15px;
 }
 .manager-navigation button[aria-current="page"] {
   color: var(--color-ink);
@@ -356,65 +389,60 @@
   border-bottom-color: var(--color-gold);
 }
 .manager-resource-band {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  min-width: 0;
-  margin: 0;
-  padding: 10px 24px;
-  border: 0;
-  border-bottom: 1px solid var(--color-line);
-  background: var(--color-paper-recessed);
-}
-.manager-resource {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
   min-width: 0;
+  border: 0;
+  flex: none;
 }
-.manager-resource-value {
-  min-width: 76px;
-  margin-right: auto;
+.manager-luck-pair {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-.manager-resource-value > span,
-.manager-resource-value-button > span {
-  font-size: 14px;
-  color: var(--color-muted);
-  font-weight: 400;
-}
-.manager-resource-value strong {
-  display: block;
-  font: 600 25px/1.25 var(--font-body);
-  font-variant-numeric: tabular-nums;
-}
-.manager-resource-value small {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--color-muted);
-}
-.manager-main button.manager-resource-value-button {
-  min-height: 0;
+.manager-main .manager-luck-value {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 36px;
+  padding: 2px 5px;
   border: 0;
-  background: none;
-  text-align: left;
+  background: transparent;
 }
-.manager-resource-value-button > span {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.manager-luck-value > span {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+.manager-luck-value strong {
+  font-size: 19px;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.manager-luck-value small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-muted);
 }
 .manager-resource-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 .manager-main button.manager-step {
-  font-size: 20px;
-  min-width: 44px;
+  min-width: 32px;
+  width: 32px;
+  min-height: 32px;
+  padding: 3px;
+  font-size: 19px;
 }
+
 .manager-section-content {
   padding: 20px;
   min-width: 0;
@@ -450,62 +478,204 @@
 .manager-section-heading button {
   font-size: 14px;
 }
+
 .manager-play {
   display: grid;
-  grid-template-columns: minmax(0, 2.2fr) minmax(240px, 1fr);
-  gap: 16px;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
 }
-.manager-play > section {
+.manager-card {
   min-width: 0;
-  padding: 16px;
   background: var(--color-paper);
   border: 1px solid var(--color-line);
-  border-top: 3px solid var(--color-line);
 }
-.manager-play
-  > :is(
-    .manager-play-conditions,
-    .manager-play-favourites,
-    .manager-play-facts
-  ) {
+.manager-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 10px;
+  border-bottom: 1px solid var(--color-line-soft);
   background: var(--manager-surface-heading);
 }
-.manager-play .manager-section-title,
-.manager-play .manager-section-heading {
-  padding-bottom: 10px;
+.manager-card-heading > :is(h2, h3) {
+  margin: 0;
+  min-width: 0;
+  flex: 1;
+}
+.manager-card button.manager-card-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 34px;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font: 20px/1.2 var(--font-heading);
+  text-align: left;
+}
+.manager-card h3 button.manager-card-toggle {
+  font: 600 15px/1.3 var(--font-body);
+}
+.manager-card-toggle > span {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.manager-card-toggle small {
+  font: 12px var(--font-body);
+  color: var(--color-muted);
+}
+.manager-card-toggle svg {
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  transition: transform 120ms ease;
+}
+.manager-card-toggle[aria-expanded="false"] svg {
+  transform: rotate(-90deg);
+}
+.manager-card-actions {
+  flex: none;
+}
+.manager-card .manager-card-actions button {
+  padding: 5px 8px;
+  min-height: 30px;
+  font-size: 12px;
+}
+.manager-card-body {
+  padding: 10px 12px;
+  min-width: 0;
+}
+.manager-card-body[hidden] {
+  display: none;
+}
+.manager-play-combat {
+  grid-column: 1;
+  grid-row: 1;
+}
+.manager-play-context {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  align-content: start;
+}
+.manager-play-stats {
+  grid-column: 1;
+  grid-row: 2;
+}
+.manager-play-facts,
+.manager-play-notes {
+  grid-column: 1/-1;
+}
+.manager-combat-vitals {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--color-line-soft);
+}
+.manager-combat-wounds {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.manager-main .manager-wounds-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 0;
+  padding: 0 4px 0 0;
+  background: transparent;
+  min-height: 36px;
+}
+.manager-wounds-value > span,
+.manager-combat-movement > span {
+  display: block;
+  font-size: 12px;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+.manager-wounds-value strong,
+.manager-combat-movement strong {
+  font: 600 22px/1.2 var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+.manager-wounds-value small {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+.manager-combat-movement {
+  flex: none;
+  padding-left: 12px;
+  border-left: 1px solid var(--color-line-soft);
+}
+.manager-play-combat .manager-card-body > h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+.manager-play-combat .manager-table :is(th, td) {
+  padding: 5px 6px 5px 0;
+}
+.manager-play-combat .manager-table th:first-child {
+  width: 50%;
+}
+.manager-play-combat .manager-table-note {
+  font-size: 11px;
+  margin-top: 2px;
+}
+.manager-combat-name {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.manager-play-combat .manager-protection-heading {
+  margin-top: 10px !important;
+}
+.manager-protection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+}
+.manager-protection-grid > div {
+  padding: 5px 6px;
+  background: var(--color-paper-recessed);
+  min-width: 0;
+}
+.manager-protection-grid dt {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+.manager-protection-grid dd {
+  margin: 2px 0 0;
+  font-size: 12px;
+}
+.manager-protection-grid dd > span {
+  display: block;
+}
+.manager-protection-grid .manager-shield-soak {
+  font-size: 11px;
 }
 .manager-play .manager-stats {
   border: 0;
   padding: 0;
-}
-.manager-play-stats {
-  grid-column: 1;
-  grid-row: 1;
-}
-.manager-play-conditions {
-  grid-column: 2;
-  grid-row: 1;
-}
-.manager-play-attacks {
-  grid-column: 1;
-  grid-row: 2;
-}
-.manager-play-favourites {
-  grid-column: 2;
-  grid-row: 2;
-}
-.manager-play-protection {
-  grid-column: 1;
-  grid-row: 3;
-}
-.manager-play-facts {
-  grid-column: 2;
-  grid-row: 3;
-}
-.manager-play-notes {
-  grid-column: 1/-1;
 }
 .manager-stats {
   display: grid;
@@ -659,6 +829,7 @@
   gap: 4px;
   border-top: 1px solid var(--color-line-soft);
 }
+
 .manager-entry-count {
   font-size: 12px;
   font-weight: 400;
@@ -666,47 +837,44 @@
   margin-left: 4px;
 }
 .manager-skill-characteristic {
-  display: inline-block;
-  margin-left: 3px;
   font-size: 11px;
   font-weight: 400;
   color: var(--color-muted);
   white-space: nowrap;
 }
+.manager-entry-name {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.manager-entry[open] .manager-entry-name {
+  white-space: normal;
+}
+.manager-entry-list[data-group="skills"] .manager-entry > summary::before {
+  display: none;
+}
 .manager-abilities-screen > .manager-page-heading {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .manager-abilities-toolbar {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 .manager-abilities-toolbar .field {
-  width: 230px;
+  width: 210px;
   max-width: 100%;
 }
 .manager-abilities-toolbar input {
   width: 100%;
+  min-height: 34px;
+  padding: 5px 8px;
 }
 .manager-section-content > div:has(> .manager-abilities-screen) {
   padding: 12px;
-}
-.manager-abilities-toolbar input {
-  min-height: 36px;
-  padding: 6px 10px;
-}
-.manager-abilities-grid [data-group="skills"] .manager-entry-name {
-  font-size: 12.5px;
-}
-.manager-other-abilities {
-  margin: 0;
-}
-.manager-other-abilities > summary {
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid var(--color-line-soft);
-  background: var(--color-paper-raised);
 }
 .manager-abilities-grid {
   display: grid;
@@ -720,48 +888,69 @@
   min-width: 0;
 }
 .manager-abilities-grid .manager-entry-list {
-  min-width: 0;
-  padding: 12px;
-  background: var(--color-paper-raised);
-  border: 1px solid var(--color-line-soft);
+  padding: 0;
 }
-.manager-abilities-grid .manager-section-heading {
-  gap: 6px;
-  margin-bottom: 8px;
+.manager-abilities-grid .manager-card-body {
+  padding: 4px 10px 8px;
 }
-.manager-abilities-grid .manager-section-heading h3 {
-  margin: 0;
+.manager-abilities-grid [data-group="skills"] {
+  --manager-skill-columns: 2;
 }
-.manager-abilities-grid .manager-section-heading button {
-  min-height: 32px;
-  padding: 5px 7px;
-  font-size: 12px;
-}
-.manager-abilities-grid [data-group="skills"] .manager-entry-items {
+.manager-abilities-grid [data-group="skills"] .manager-entry-items,
+.manager-skill-headings {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  grid-template-columns: repeat(var(--manager-skill-columns), minmax(0, 1fr));
   align-items: start;
-  gap: 0 12px;
+  gap: 0 14px;
+}
+.manager-skill-headings {
+  padding-bottom: 3px;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+.manager-skill-headings > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px 34px 28px;
+  gap: 4px;
+}
+.manager-skill-headings > div:nth-child(3) {
+  display: none;
+}
+.manager-skill-headings > div > span:nth-child(3) {
+  text-align: right;
 }
 .manager-abilities-grid .manager-entry summary {
   min-height: 32px;
   padding: 3px 0;
-  gap: 5px;
+  gap: 4px;
   font-size: 13px;
 }
+.manager-abilities-grid [data-group="skills"] .manager-entry summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px 34px;
+}
+.manager-abilities-grid [data-group="skills"] .manager-entry summary strong {
+  min-width: 0;
+}
+.manager-abilities-grid [data-group="skills"] .manager-entry-total {
+  text-align: right;
+}
 .manager-abilities-grid .manager-entry-total {
-  font-size: 16px;
+  font-size: 15px;
+  white-space: nowrap;
 }
 .manager-main .manager-abilities-grid button.manager-favourite {
   min-width: 28px;
+  width: 28px;
   min-height: 32px;
   padding: 2px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .manager-abilities-grid .manager-entry-row:has(> details[open]),
 .manager-gear-screen .manager-entry-row:has(> details[open]) {
   grid-column: 1/-1;
 }
+
 .manager-gear-screen .manager-entry-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
@@ -1259,16 +1448,6 @@
   }
 }
 @media (max-width: 1100px) {
-  .manager-abilities-grid {
-    grid-template-columns: 1fr;
-  }
-  .manager-abilities-side {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-  }
-  .manager-play {
-    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
-    gap: 16px;
-  }
   .manager-stats {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 8px 2px;
@@ -1283,88 +1462,17 @@
   }
 }
 @media (min-width: 1001px) {
-  .manager-character-header {
-    padding: 8px 24px 12px;
-  }
-  .manager-character-identity {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    column-gap: 12px;
-  }
-  .manager-character-identity h1 {
-    grid-column: 1;
-    font-size: 28px;
-  }
-  .manager-character-identity > .manager-meta {
-    grid-column: 1;
-  }
-  .manager-character-identity .manager-profile-link {
-    grid-column: 2;
-    grid-row: 1 / 3;
-  }
   .manager-main .manager-library-actions {
     display: none;
   }
 }
 @media (max-width: 719px) {
-  .manager-abilities-side {
-    grid-template-columns: 1fr;
-  }
-  .manager-abilities-grid [data-group="skills"] .manager-entry-items {
-    grid-template-columns: 1fr;
-  }
-  .manager-abilities-toolbar {
-    width: 100%;
-  }
-  .manager-abilities-toolbar .field {
-    width: 100%;
-  }
   .manager-workspace {
     margin: 0 0 12px;
     border-inline: 0;
   }
   .manager-workspace-tools {
     padding: 6px 16px;
-  }
-  .manager-character-header {
-    padding: 16px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 4px 12px;
-  }
-  .manager-main h1 {
-    font-size: 28px;
-  }
-  .manager-character-identity {
-    display: contents;
-  }
-  .manager-character-identity h1,
-  .manager-character-identity > p {
-    grid-column: 1/-1;
-  }
-  .manager-character-identity .manager-profile-link {
-    grid-column: 1/-1;
-    grid-row: 3;
-    justify-self: start;
-  }
-  .manager-character-header:has(.manager-portrait) {
-    grid-template-columns: 56px minmax(0, 1fr);
-  }
-  .manager-character-header:has(.manager-portrait)
-    .manager-character-identity
-    h1,
-  .manager-character-header:has(.manager-portrait)
-    .manager-character-identity
-    > p {
-    grid-column: 2;
-  }
-  .manager-character-header .manager-portrait {
-    grid-column: 1;
-    grid-row: 1 / 3;
-  }
-  .manager-main .manager-profile-link {
-    min-height: 44px;
   }
   .manager-navigation {
     position: fixed;
@@ -1396,63 +1504,11 @@
     background: var(--color-leather-raised);
     border-top-color: var(--color-gold-light);
   }
-  .manager-resource-band {
-    padding: 12px 16px;
-    gap: 16px;
-  }
-  .manager-resource {
-    display: block;
-  }
-  .manager-resource-value {
-    margin-bottom: 8px;
-  }
-  .manager-resource-value strong {
-    font-size: 24px;
-  }
-  .manager-resource-actions {
-    gap: 5px;
-  }
-  .manager-resource-actions button {
-    padding: 8px;
-  }
   .manager-section-content {
     padding: 12px;
   }
   .manager-section-content > div:not([hidden]):not(:has(> .manager-play)) {
     padding: 12px;
-  }
-  .manager-play > section {
-    padding: 12px;
-  }
-  .manager-play {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .manager-play > * {
-    width: 100%;
-    min-width: 0;
-  }
-  .manager-play-stats {
-    order: 1;
-  }
-  .manager-play-conditions {
-    order: 2;
-  }
-  .manager-play-attacks {
-    order: 3;
-  }
-  .manager-play-protection {
-    order: 4;
-  }
-  .manager-play-favourites {
-    order: 5;
-  }
-  .manager-play-facts {
-    order: 6;
-  }
-  .manager-play-notes {
-    order: 7;
   }
   .manager-main h2 {
     font-size: 22px;
@@ -1576,24 +1632,10 @@
   }
 }
 @media (max-width: 359px) {
-  .manager-resource-band {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding-inline: 12px;
-  }
-  .manager-resource {
-    display: flex;
-  }
-  .manager-resource-value {
-    margin-bottom: 0;
-  }
   .manager-workspace-tools,
   .manager-section-content,
   .manager-character-header {
     padding-inline: 12px;
-  }
-  .manager-character-identity {
-    flex-basis: 180px;
   }
 }
 @media (pointer: coarse) {
@@ -1604,16 +1646,8 @@
   .manager-main button.manager-resource-value-button {
     min-height: 44px;
   }
-  .manager-abilities-grid .manager-entry summary,
-  .manager-abilities-grid .manager-section-heading button,
-  .manager-main .manager-abilities-grid button.manager-favourite {
-    min-height: 44px;
-  }
   .manager-main .manager-abilities-grid button.manager-favourite {
     min-width: 44px;
-  }
-  .manager-abilities-toolbar input {
-    min-height: 44px;
   }
 }
 @media print {
@@ -1632,5 +1666,190 @@
   .manager-main {
     background: white;
     color: black;
+  }
+}
+
+@media (min-width: 1800px) {
+  .manager-abilities-grid [data-group="skills"] {
+    --manager-skill-columns: 3;
+  }
+  .manager-skill-headings > div:nth-child(3) {
+    display: grid;
+  }
+}
+@media (max-width: 1100px) {
+  .manager-abilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .manager-abilities-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .manager-play {
+    grid-template-columns: minmax(0, 1.35fr) minmax(230px, 1fr);
+  }
+}
+@media (max-width: 719px) {
+  .manager-character-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 6px 20px;
+    gap: 3px 8px;
+  }
+  .manager-character-identity {
+    grid-column: 1/-1;
+  }
+  .manager-character-identity h1 {
+    font-size: 22px;
+  }
+  .manager-character-identity > .manager-meta {
+    font-size: 11px;
+  }
+  .manager-character-header:has(.manager-portrait) {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+  }
+  .manager-character-header:has(.manager-portrait) .manager-character-identity {
+    grid-column: 2/-1;
+  }
+  .manager-character-header .manager-portrait {
+    width: 28px;
+    height: 36px;
+    grid-column: 1;
+  }
+  .manager-character-header .manager-resource-band {
+    grid-column: 1;
+  }
+  .manager-character-header:has(.manager-portrait) .manager-resource-band {
+    grid-column: 1/3;
+  }
+  .manager-character-header .manager-save-status {
+    max-width: 55px;
+    text-align: right;
+  }
+  .manager-resource-band {
+    gap: 4px;
+  }
+  .manager-luck-value > span {
+    font-size: 10px;
+  }
+  .manager-luck-value strong {
+    font-size: 18px;
+  }
+  .manager-navigation button {
+    min-height: 48px;
+    padding-block: 8px;
+  }
+  .manager-play {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .manager-play-context {
+    display: contents;
+  }
+  .manager-play .manager-card {
+    width: 100%;
+  }
+  .manager-play > * {
+    width: 100%;
+    min-width: 0;
+  }
+  .manager-card-heading {
+    padding: 3px 8px;
+    gap: 6px;
+  }
+  .manager-card button.manager-card-toggle {
+    font-size: 19px;
+  }
+  .manager-card-body {
+    padding: 8px 10px;
+  }
+  .manager-combat-vitals {
+    gap: 8px;
+  }
+  .manager-combat-movement {
+    padding-left: 8px;
+  }
+  .manager-protection-grid {
+    gap: 4px;
+  }
+  .manager-protection-grid > div {
+    padding: 5px 4px;
+  }
+  .manager-play-combat .manager-table {
+    font-size: 12px;
+    table-layout: fixed;
+  }
+  .manager-play-combat .manager-attacks th:first-child {
+    width: 46%;
+  }
+  .manager-abilities-grid {
+    display: block;
+  }
+  .manager-abilities-side {
+    display: contents;
+  }
+  .manager-abilities-grid .manager-entry-list {
+    margin-bottom: 10px;
+  }
+  .manager-abilities-grid [data-group="skills"] {
+    --manager-skill-columns: 1;
+  }
+  .manager-skill-headings > div:nth-child(n + 2) {
+    display: none;
+  }
+  .manager-abilities-toolbar {
+    width: 100%;
+  }
+  .manager-abilities-toolbar .field {
+    width: 100%;
+  }
+}
+@media (pointer: coarse) {
+  .manager-main button.manager-step {
+    min-width: 44px;
+    width: 44px;
+    min-height: 44px;
+  }
+  .manager-main .manager-luck-value,
+  .manager-main .manager-wounds-value,
+  .manager-main .manager-profile-link {
+    min-height: 44px;
+  }
+  .manager-main .manager-profile-link {
+    min-width: 44px;
+    width: 44px;
+  }
+  .manager-card button.manager-card-toggle,
+  .manager-card .manager-card-actions button {
+    min-height: 44px;
+  }
+  .manager-rail-actions button {
+    min-height: 44px;
+  }
+  .manager-abilities-grid .manager-entry summary {
+    min-height: 44px;
+  }
+  .manager-main .manager-abilities-grid button.manager-favourite {
+    min-width: 44px;
+    width: 44px;
+    min-height: 44px;
+  }
+  .manager-skill-headings > div {
+    grid-template-columns: minmax(0, 1fr) 24px 34px 44px;
+  }
+  .manager-abilities-toolbar input {
+    min-height: 44px;
+  }
+}
+.manager-library-identity :is(h2, .manager-character-link) {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .manager-card-toggle svg {
+    transition: none;
   }
 }

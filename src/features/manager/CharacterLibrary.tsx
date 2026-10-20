@@ -122,9 +122,12 @@ export function CharacterLibrary({
               <button
                 type="button"
                 className="manager-character-link"
+                title={x.sheet.name || "Unnamed character"}
                 onClick={() => openCharacter(x.id)}
               >
-                {x.sheet.name || "Unnamed character"}
+                <span className="manager-entry-name">
+                  {x.sheet.name || "Unnamed character"}
+                </span>
               </button>
             </h2>
             <p className="manager-meta">

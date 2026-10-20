@@ -7,6 +7,8 @@ import {
   entrySource,
 } from "../../engine/marijan/catalogue.mjs";
 import type { Edit } from "./ui";
+import { SheetCard } from "./SheetCard";
+import type { ReactNode } from "react";
 
 export const GROUP_NAMES: Record<string, string> = {
   skills: "Skills",
@@ -57,39 +59,34 @@ export function EntryList({
     }
     if (row) change(row);
   }
-  return (
-    <section
-      className="manager-entry-list"
-      data-group={group}
-      aria-label={GROUP_NAMES[group]}
+  const actions = (
+    <button
+      className={group === "gear" ? "manager-primary" : "quiet"}
+      type="button"
+      onClick={() =>
+        open(group === "gear" ? "acquire" : "entry", {
+          group,
+          amount: 1,
+          name: "",
+          id: "",
+          note: "",
+          custom: false,
+          char: "Int",
+        })
+      }
     >
-      {!compact && (
-        <div className="manager-section-heading">
-          <h3>
-            {GROUP_NAMES[group]}{" "}
-            <span className="manager-entry-count">{entries.length}</span>
-          </h3>
-          <button
-            className={group === "gear" ? "manager-primary" : "quiet"}
-            type="button"
-            onClick={() =>
-              open(group === "gear" ? "acquire" : "entry", {
-                group,
-                amount: 1,
-                name: "",
-                id: "",
-                note: "",
-                custom: false,
-                char: "Int",
-              })
-            }
-          >
-            {group === "gear"
-              ? "Acquire equipment"
-              : `Add ${group === "extras" ? "reference" : group === "magic" ? "spell / prayer" : group.slice(0, -1)}${group === "gear" ? "" : " (adjustment)"}`}
-          </button>
-        </div>
-      )}
+      {group === "gear"
+        ? "Acquire equipment"
+        : `Add ${group === "extras" ? "reference" : group === "magic" ? "spell / prayer" : group.slice(0, -1)}`}
+    </button>
+  );
+  return (
+    <EntryFrame
+      group={group}
+      compact={compact}
+      count={entries.length}
+      actions={actions}
+    >
       {!entries.length && (
         <p className="manager-empty-line">
           {query
@@ -97,22 +94,27 @@ export function EntryList({
             : "No entries recorded."}
         </p>
       )}
+      {!compact && group === "skills" && (
+        <div className="manager-skill-headings" aria-hidden="true">
+          {[0, 1, 2].map((index) => (
+            <div key={index}>
+              <span>Skill</span>
+              <span>Char.</span>
+              <span>Score</span>
+              <span />
+            </div>
+          ))}
+        </div>
+      )}
       <div className="manager-entry-items">
         {entries.map((x: any) => (
           <div className="manager-entry-row" key={x.key}>
             <details className="manager-entry">
               <summary>
                 <strong>
-                  <span className="manager-entry-name">{x.name}</span>
-                  {group === "skills" && (
-                    <small
-                      className="manager-skill-characteristic"
-                      title={`Linked Characteristic: ${x.char}`}
-                    >
-                      {" "}
-                      {x.char}
-                    </small>
-                  )}
+                  <span className="manager-entry-name" title={x.name}>
+                    {x.name}
+                  </span>
                   {group === "gear" && (
                     <span className="manager-entry-subtitle">
                       {x.state || "carried"} · Enc{" "}
@@ -123,6 +125,16 @@ export function EntryList({
                     </span>
                   )}
                 </strong>
+                {group === "skills" && (
+                  <small
+                    className="manager-skill-characteristic"
+                    title={`Linked Characteristic: ${x.char}`}
+                  >
+                    {" "}
+                    {x.char}
+                  </small>
+                )}
+
                 <span className="manager-entry-total">
                   {group === "skills"
                     ? score(x.total)
@@ -364,6 +376,53 @@ export function EntryList({
           </div>
         ))}
       </div>
+    </EntryFrame>
+  );
+}
+
+function EntryFrame({
+  group,
+  compact,
+  count,
+  actions,
+  children,
+}: {
+  group: string;
+  compact: boolean;
+  count: number;
+  actions: ReactNode;
+  children: ReactNode;
+}) {
+  if (!compact && group !== "gear")
+    return (
+      <SheetCard
+        title={GROUP_NAMES[group]}
+        level={3}
+        group={group}
+        count={count}
+        className="manager-entry-list"
+        mobileOpen={group === "skills"}
+        actions={actions}
+      >
+        {children}
+      </SheetCard>
+    );
+  return (
+    <section
+      className="manager-entry-list"
+      data-group={group}
+      aria-label={GROUP_NAMES[group]}
+    >
+      {!compact && (
+        <div className="manager-section-heading">
+          <h3>
+            {GROUP_NAMES[group]}{" "}
+            <span className="manager-entry-count">{count}</span>
+          </h3>
+          {actions}
+        </div>
+      )}
+      {children}
     </section>
   );
 }
