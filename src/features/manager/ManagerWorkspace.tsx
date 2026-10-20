@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { ModeNavigation } from "../../components/ModeNavigation";
-import { ActionMenu, type Edit } from "./ui";
+import type { Edit } from "./ui";
 import { CharacterLibrary } from "./CharacterLibrary";
 import { PlaySheet } from "./PlaySheet";
 import { ResourceBand } from "./ResourceBand";
@@ -31,8 +31,6 @@ export function ManagerWorkspace({
   restore,
   backup,
   create,
-  duplicate,
-  exportPDF,
   exportRecord,
   libraryAction,
   download,
@@ -52,8 +50,6 @@ export function ManagerWorkspace({
   restore: () => void;
   backup: () => void;
   create: () => void;
-  duplicate: () => void;
-  exportPDF: () => void;
   exportRecord: (record: any) => void;
   libraryAction: (record: any, kind: string) => void;
   download: (value: any, name: string) => void;
@@ -106,6 +102,8 @@ export function ManagerWorkspace({
           </button>
         </nav>
         <div className="manager-rail-actions">{menuActions}</div>
+        {historyControls}
+        <div className="manager-install" data-install-slot />
         <p className="manager-rail-note">
           Characters save on this device. Back up your library to keep a copy.
         </p>
@@ -160,77 +158,6 @@ export function ManagerWorkspace({
                 >
                   Edit profile
                 </button>
-              </div>
-              <div className="manager-character-actions">
-                <div
-                  className="manager-history-controls"
-                  role="group"
-                  aria-label="Edit history"
-                >
-                  {historyControls}
-                </div>
-                <ActionMenu>
-                  <button
-                    type="button"
-                    onClick={() => exportRecord(record)}
-                    disabled={state.saving}
-                  >
-                    Export character JSON
-                  </button>
-                  <button
-                    type="button"
-                    onClick={exportPDF}
-                    disabled={state.saving}
-                  >
-                    Export PDF sheet
-                  </button>
-                  <button
-                    type="button"
-                    onClick={duplicate}
-                    disabled={state.saving}
-                  >
-                    Duplicate character
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      edit(
-                        record.archived
-                          ? "Restored character"
-                          : "Archived character",
-                        (r) => {
-                          r.archived = !r.archived;
-                        },
-                      )
-                    }
-                  >
-                    {record.archived
-                      ? "Restore character"
-                      : "Archive character"}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      edit("Changed character favourite", (r) => {
-                        r.favourite = !r.favourite;
-                      })
-                    }
-                  >
-                    {record.favourite
-                      ? "Remove favourite"
-                      : "Favourite character"}
-                  </button>
-                  <button type="button" onClick={() => open("adjustments")}>
-                    Adjust sheet
-                  </button>
-                  <button
-                    type="button"
-                    className="manager-danger-text"
-                    onClick={() => open("delete")}
-                  >
-                    Permanently delete character
-                  </button>
-                </ActionMenu>
               </div>
             </div>
             <nav className="manager-navigation" aria-label="Character sections">

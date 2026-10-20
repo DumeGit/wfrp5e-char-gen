@@ -88,7 +88,21 @@ test("manager hydrates and edits native fields without development warnings @ren
     if (message.type() === "error") errors.push(message.text());
   });
   await page.goto("/manager/?verify=1");
-  await page
+  await expect(
+    page.getByRole("heading", { name: "Your characters", exact: true }),
+  ).toBeVisible();
+  const menu = page.getByRole("button", {
+    name: "Open manager menu",
+    exact: true,
+  });
+  if (page.viewportSize().width <= 1000) await menu.click();
+  await page.getByRole("button", { name: "New & import", exact: true }).click();
+  const actions = page.getByRole("dialog", {
+    name: "New & import",
+    exact: true,
+  });
+  await expect(actions).toBeVisible();
+  await actions
     .getByRole("button", { name: "New blank character", exact: true })
     .click();
   await page.getByRole("button", { name: "Edit profile", exact: true }).click();

@@ -125,6 +125,75 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
   await library(page);
 });
 
+test("grouped sidebar dialogs retain actions, shared history icons and focus across nested editors @manager", async ({
+  page,
+}) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  const main = page.locator("main");
+  await expect(
+    main.getByRole("button", { name: "Undo", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    main.getByRole("button", { name: "Redo", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    main.getByRole("button", { name: "More", exact: true }),
+  ).toHaveCount(0);
+  if (page.viewportSize().width > 1000) {
+    await expect(page.locator(".manager-rail-actions > button")).toHaveCount(3);
+    await expect(
+      page.locator(".manager-rail .history-controls svg"),
+    ).toHaveCount(2);
+  }
+  await applicationMenu(page, "More");
+  await expect(
+    page.getByRole("dialog", { name: "Character actions", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Adjust sheet", exact: true })
+    .click();
+  await expect(
+    page.getByRole("dialog", { name: "Adjust sheet", exact: true }),
+  ).toBeVisible();
+  await page.keyboard.press("Escape");
+  const opener = page.getByRole("button", {
+    name: page.viewportSize().width > 1000 ? "More" : "Open manager menu",
+    exact: true,
+  });
+  await expect(opener).toBeFocused();
+  await applicationMenu(page, "More");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Permanently delete character", exact: true })
+    .click();
+  await expect(
+    page.getByRole("dialog", {
+      name: "Permanently delete character",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Keep character", exact: true })
+    .click();
+  expect(await rawRecords(page)).toHaveLength(1);
+  await expect(opener).toBeFocused();
+  await applicationMenu(page, "More");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Favourite character", exact: true })
+    .click();
+  await saved(page);
+  expect((await rawRecords(page))[0].favourite).toBe(true);
+  await (await historyButton(page, "Undo")).click();
+  await saved(page);
+  expect((await rawRecords(page))[0].favourite).toBe(false);
+  await (await historyButton(page, "Redo")).click();
+  await saved(page);
+  expect((await rawRecords(page))[0].favourite).toBe(true);
+});
+
 async function open(page) {
   await page.goto("/manager/?verify=1");
   await expect(
@@ -142,7 +211,13 @@ async function library(page) {
     name: "Open manager menu",
     exact: true,
   });
-  if (await menu.isVisible()) await menu.click();
+  if (
+    (await menu.isVisible()) &&
+    !(await page
+      .getByRole("dialog", { name: "Manager menu", exact: true })
+      .isVisible())
+  )
+    await menu.click();
   await page
     .getByRole("button", { name: "Character library", exact: true })
     .click();
@@ -157,16 +232,41 @@ async function profile(page, name) {
   await expect(page.getByRole("dialog")).not.toBeVisible();
   await saved(page);
 }
-async function applicationMenu(page) {
+async function applicationMenu(page, group = "Save & export") {
   const compact = page.getByRole("button", {
     name: "Open manager menu",
     exact: true,
   });
-  if (await compact.isVisible()) await compact.click();
-  else
+  if (await compact.isVisible()) {
+    if (
+      !(await page
+        .getByRole("dialog", { name: "Manager menu", exact: true })
+        .isVisible())
+    )
+      await compact.click();
+  } else
     await expect(
       page.getByRole("complementary", { name: "Application menu" }),
     ).toBeVisible();
+  await page.getByRole("button", { name: group, exact: true }).click();
+  await expect(
+    page.getByRole("dialog", {
+      name: group === "More" ? "Character actions" : group,
+      exact: true,
+    }),
+  ).toBeVisible();
+}
+async function historyButton(page, name) {
+  const button = page
+    .getByRole("button", { name, exact: true })
+    .filter({ visible: true });
+  if (!(await button.count()))
+    await page
+      .getByRole("button", { name: "Open manager menu", exact: true })
+      .click();
+  return page
+    .getByRole("button", { name, exact: true })
+    .filter({ visible: true });
 }
 async function importData(page, data) {
   await page
@@ -257,9 +357,7 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
     .click();
   await saved(page);
   expect((await rawRecords(page))[0].current.wounds).toBe(before - 1);
-  const undo = page
-    .getByRole("button", { name: "Undo", exact: true })
-    .filter({ visible: true });
+  const undo = await historyButton(page, "Undo");
   await undo.click();
   await saved(page);
   expect((await rawRecords(page))[0].current.wounds).toBe(before);
@@ -426,7 +524,7 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
         rail.getByRole("button", { name: "Character library", exact: true }),
       ).toBeVisible();
       await expect(
-        rail.getByRole("button", { name: "Import character", exact: true }),
+        rail.getByRole("button", { name: "New & import", exact: true }),
       ).toBeVisible();
       await expect(
         rail.getByRole("button", { name: "Install app", exact: true }),
@@ -443,6 +541,10 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
         );
       expect(joined).toBe(true);
       await rail
+        .getByRole("button", { name: "Save & export", exact: true })
+        .click();
+      await page
+        .getByRole("dialog")
         .getByRole("button", { name: "Restore library backup", exact: true })
         .click();
       await expect(
@@ -454,7 +556,7 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
       await page.keyboard.press("Escape");
       await expect(
         rail.getByRole("button", {
-          name: "Restore library backup",
+          name: "Save & export",
           exact: true,
         }),
       ).toBeFocused();
@@ -492,7 +594,7 @@ test("archiving retains the character and exports do not carry creator mode bran
   expect((await readFile(await pdf.path())).slice(0, 4).toString()).toBe(
     "%PDF",
   );
-  await applicationMenu(page);
+  await applicationMenu(page, "More");
   await page
     .getByRole("button", { name: "Archive character", exact: true })
     .filter({ visible: true })
@@ -578,11 +680,7 @@ test("Undo histories stay with their characters when switching the library @mana
   const b = freshMarijan();
   b.name = "Second character";
   await importData(page, b);
-  await expect(
-    page
-      .getByRole("button", { name: "Undo", exact: true })
-      .filter({ visible: true }),
-  ).toBeDisabled();
+  await expect(await historyButton(page, "Undo")).toBeDisabled();
   await library(page);
   await page
     .locator("main article")
@@ -594,10 +692,7 @@ test("Undo histories stay with their characters when switching the library @mana
     })
     .getByRole("button", { name: "First character edited", exact: true })
     .click();
-  await page
-    .getByRole("button", { name: "Undo", exact: true })
-    .filter({ visible: true })
-    .click();
+  await (await historyButton(page, "Undo")).click();
   await saved(page);
   await expect(page.locator("#manager-character-name")).toHaveText(
     "First character",
@@ -701,6 +796,15 @@ test("money uses explicit denominations and equipment quantity updates its price
   await dialog
     .getByLabel("Catalogue entry", { exact: true })
     .selectOption(option);
+  await expect
+    .poll(async () =>
+      Number(
+        await dialog
+          .getByLabel("Total price paid (pennies)", { exact: true })
+          .inputValue(),
+      ),
+    )
+    .toBeGreaterThan(0);
   const unit = Number(
     await dialog
       .getByLabel("Total price paid (pennies)", { exact: true })

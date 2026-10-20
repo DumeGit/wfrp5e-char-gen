@@ -4,6 +4,8 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { getManagerStore } from "./store";
 import { CreatorMenu } from "../../components/CreatorMenu";
+import { HistoryControls } from "../../components/HistoryControls";
+import { ActionGroups } from "./ActionGroups";
 import { Dialog } from "./ui";
 import { ManagerWorkspace, SECTIONS } from "./ManagerWorkspace";
 import { AdjustmentEditor } from "./AdjustmentEditor";
@@ -371,104 +373,47 @@ function Manager({ store }: { store: Store }) {
       <button
         className="quiet"
         type="button"
-        onClick={() => {
-          setPreview([]);
-          open("import");
-        }}
+        aria-haspopup="dialog"
+        onClick={() => open("new-actions")}
       >
-        Import character
+        New &amp; import
       </button>
       <button
         className="quiet"
         type="button"
-        onClick={() => void store.add([freshManager()])}
+        aria-haspopup="dialog"
+        onClick={() => open("file-actions")}
       >
-        New blank character
-      </button>
-      <button
-        className="quiet"
-        type="button"
-        onClick={() =>
-          download(backup(store.allRecords()), "character-library-backup.json")
-        }
-        disabled={state.saving}
-      >
-        Back up library
-      </button>
-      <button
-        className="quiet"
-        type="button"
-        onClick={() => {
-          setPreview([]);
-          open("import", { restore: true });
-        }}
-      >
-        Restore library backup
+        Save &amp; export
       </button>
       {record && (
-        <>
-          <button
-            className="quiet"
-            type="button"
-            onClick={() => download(record, `${filename(sheet.name)}.json`)}
-            disabled={state.saving}
-          >
-            Export character JSON
-          </button>
-          <button
-            className="quiet"
-            type="button"
-            disabled={busy || state.saving}
-            onClick={() => void exportPDF()}
-          >
-            Export PDF sheet
-          </button>
-          <button
-            className="quiet"
-            type="button"
-            onClick={() => void store.duplicate()}
-            disabled={state.saving}
-          >
-            Duplicate character
-          </button>
-          <button
-            className="quiet"
-            type="button"
-            onClick={() =>
-              edit(
-                record.archived ? "Restored character" : "Archived character",
-                (r) => {
-                  r.archived = !r.archived;
-                },
-              )
-            }
-          >
-            {record.archived ? "Restore character" : "Archive character"}
-          </button>
-        </>
+        <button
+          className="quiet"
+          type="button"
+          aria-haspopup="dialog"
+          onClick={() => open("character-actions")}
+        >
+          More
+        </button>
       )}
-      <span data-install-slot />
     </>
   );
   const historyControls = (
-    <>
-      <button
-        className="quiet"
-        type="button"
-        disabled={!state.canUndo || state.saving || state.dirty}
-        onClick={() => void store.undo()}
-      >
-        Undo
-      </button>
-      <button
-        className="quiet"
-        type="button"
-        disabled={!state.canRedo || state.saving || state.dirty}
-        onClick={() => void store.undo(true)}
-      >
-        Redo
-      </button>
-    </>
+    <div
+      className="manager-history"
+      onClick={(event) => {
+        const action = (event.target as Element).closest<HTMLButtonElement>(
+          "button[data-action]",
+        )?.dataset.action;
+        if (action === "undo" || action === "redo")
+          void store.undo(action === "redo");
+      }}
+    >
+      <HistoryControls
+        canUndo={!!record && state.canUndo && !state.saving && !state.dirty}
+        canRedo={!!record && state.canRedo && !state.saving && !state.dirty}
+      />
+    </div>
   );
   const profile = () =>
     open(
@@ -509,6 +454,39 @@ function Manager({ store }: { store: Store }) {
       },
     );
     store.select(null);
+  };
+  const runMenuAction = (action: string) => {
+    if (action === "import") return importFile();
+    if (action === "restore") return restore();
+    if (action === "profile") return profile();
+    if (action === "adjustments" || action === "delete") return open(action);
+    if (action === "new") return void submit(() => store.add([freshManager()]));
+    if (action === "duplicate") return void submit(() => store.duplicate());
+    if (action === "pdf") return void exportPDF().then(() => setModal(""));
+    if (action === "json") {
+      exportRecord(record);
+      setModal("");
+      return;
+    }
+    if (action === "backup") {
+      backupLibrary();
+      setModal("");
+      return;
+    }
+    if (action === "archive" || action === "favourite") {
+      const label =
+        action === "favourite"
+          ? "Changed character favourite"
+          : record.archived
+            ? "Restored character"
+            : "Archived character";
+      return void submit(() =>
+        store.edit(label, (next) => {
+          if (action === "favourite") next.favourite = !next.favourite;
+          else next.archived = !next.archived;
+        }),
+      );
+    }
   };
   const alerts = (
     <>
@@ -615,6 +593,8 @@ function Manager({ store }: { store: Store }) {
           Character library
         </button>
         {menuActions}
+        {historyControls}
+        <span data-install-slot />
       </CreatorMenu>
       <ManagerWorkspace
         state={state}
@@ -630,8 +610,6 @@ function Manager({ store }: { store: Store }) {
         restore={restore}
         backup={backupLibrary}
         create={() => void store.add([freshManager()])}
-        duplicate={() => void store.duplicate()}
-        exportPDF={() => void exportPDF()}
         exportRecord={exportRecord}
         libraryAction={libraryAction}
         download={download}
@@ -640,6 +618,7 @@ function Manager({ store }: { store: Store }) {
       />
       {modal && (
         <Dialog
+          key={modal}
           trigger={dialogTrigger.current}
           title={
             (
@@ -647,6 +626,9 @@ function Manager({ store }: { store: Store }) {
                 import: form.restore
                   ? "Restore library backup"
                   : "Import characters",
+                "new-actions": "New & import",
+                "file-actions": "Save & export",
+                "character-actions": "Character actions",
                 award: "Award XP",
                 resource: "Set current resource",
                 fate: "Change Fate",
@@ -670,6 +652,16 @@ function Manager({ store }: { store: Store }) {
             <p className="manager-notice manager-error" role="alert">
               {error}
             </p>
+          )}
+          {["new-actions", "file-actions", "character-actions"].includes(
+            modal,
+          ) && (
+            <ActionGroups
+              group={modal}
+              record={record}
+              disabled={busy || state.saving}
+              act={runMenuAction}
+            />
           )}
           {discard && (
             <div className="manager-notice" role="alert">
