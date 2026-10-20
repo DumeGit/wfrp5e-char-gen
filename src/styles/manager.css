@@ -975,9 +975,6 @@
 .manager-entry[open] .manager-entry-name {
   white-space: normal;
 }
-.manager-entry-list[data-group="skills"] .manager-entry > summary::before {
-  display: none;
-}
 .manager-abilities-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
@@ -1027,11 +1024,19 @@
   gap: 4px;
   font-size: 13px;
 }
-.manager-abilities-grid [data-group="skills"] .manager-entry summary {
+.manager-skill-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 24px 34px;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px;
+  padding: 4px 0;
+  font-size: 13px;
+  cursor: default;
 }
-.manager-abilities-grid [data-group="skills"] .manager-entry summary strong {
+.manager-skill-row strong {
   min-width: 0;
 }
 .manager-abilities-grid [data-group="skills"] .manager-entry-total {

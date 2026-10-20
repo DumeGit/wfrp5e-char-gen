@@ -1144,7 +1144,7 @@ test("ability details survive navigation while search and XP actions stay in Adv
   await importData(page, await pcDraft({ complete: true }));
   await section(page, "Abilities");
   const row = page.locator(".manager-entry-row").filter({
-    has: page.locator("summary strong").getByText("Dodge", { exact: true }),
+    has: page.locator("summary strong").getByText("Doomed", { exact: true }),
   });
   await row.locator("summary").first().click();
   await section(page, "Advance");
@@ -1380,12 +1380,17 @@ test("compact identity, combat cards and collapsible abilities keep long names a
   }
   await section(page, "Abilities");
   const skills = page.getByRole("region", { name: "Skills", exact: true });
+  await expect(
+    skills.locator(
+      "details, summary, .manager-skill-row button, .manager-skill-row a, .manager-skill-row [tabindex]",
+    ),
+  ).toHaveCount(0);
   expect(
     await skills
-      .locator("summary")
+      .locator(".manager-skill-row")
       .first()
-      .evaluate((el) => getComputedStyle(el, "::before").display),
-  ).toBe("none");
+      .evaluate((el) => getComputedStyle(el).cursor),
+  ).toBe("default");
   for (const title of [
     "Skills",
     "Talents",
