@@ -197,7 +197,7 @@ function Workshop({ verify }: { verify: boolean }) {
       };
     resize();
     media.addEventListener("change", resize);
-    setPortal(document.getElementById("compact-tools"));
+    setPortal(document.getElementById("compact-menu"));
     window.addEventListener("pagehide", store.persist);
     window.addEventListener("wfrp-before-update", store.persist);
     return () => {

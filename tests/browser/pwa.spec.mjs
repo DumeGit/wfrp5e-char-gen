@@ -46,12 +46,17 @@ test("creators, manager and previously unopened references work offline @pwa", a
   await page
     .getByRole("button", { name: "New blank character", exact: true })
     .click();
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
   await page.locator("#manager-name").fill("Offline manager");
+  await page.getByRole("button", { name: "Save profile", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(page.locator("main").getByRole("status").last()).toContainText(
     "Saved",
   );
   await page.reload();
-  await expect(page.locator("#manager-name")).toHaveValue("Offline manager");
+  await expect(page.locator("#manager-character-name")).toHaveText(
+    "Offline manager",
+  );
 });
 
 test("a waiting offline update applies without losing purchases @pwa", async ({

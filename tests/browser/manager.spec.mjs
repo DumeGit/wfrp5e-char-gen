@@ -9,24 +9,36 @@ async function open(page) {
   ).toBeVisible();
 }
 async function section(page, name) {
-  if (await page.locator("#manager-section").isVisible())
-    await page.locator("#manager-section").selectOption({ label: name });
-  else
-    await page
-      .getByRole("navigation", { name: "Character sections" })
-      .getByRole("button", { name, exact: true })
-      .click();
+  await page
+    .getByRole("navigation", { name: "Character sections" })
+    .getByRole("button", { name, exact: true })
+    .click();
 }
 async function library(page) {
-  if (await page.locator("#manager-section").isVisible())
-    await page.locator("#manager-section").selectOption("library");
-  else
-    await page
-      .getByRole("button", { name: "Character library", exact: true })
-      .click();
+  await page
+    .getByRole("button", { name: "Character library", exact: true })
+    .click();
   await expect(
     page.getByRole("heading", { name: "Your characters", exact: true }),
   ).toBeVisible();
+}
+async function profile(page, name) {
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
+  await page.locator("#manager-name").fill(name);
+  await page.getByRole("button", { name: "Save profile", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await saved(page);
+}
+async function applicationMenu(page) {
+  const compact = page.getByRole("button", {
+    name: "Open manager menu",
+    exact: true,
+  });
+  if (await compact.isVisible()) await compact.click();
+  else
+    await page
+      .getByRole("button", { name: "Application menu", exact: true })
+      .click();
 }
 async function importData(page, data) {
   await page
@@ -42,15 +54,11 @@ async function importData(page, data) {
   ).toBeVisible();
   await dialog.getByRole("button", { name: /Import 1 character/ }).click();
   await expect(dialog).not.toBeVisible();
-  await expect(page.locator("#manager-name")).toBeVisible();
-  await expect(
-    page.locator(".manager-main").getByRole("status").last(),
-  ).toContainText(/Saved/);
+  await expect(page.locator("#manager-character-name")).toBeVisible();
+  await expect(page.locator(".manager-save-status")).toContainText(/Saved/);
 }
 async function saved(page) {
-  await expect(
-    page.locator(".manager-main").getByRole("status").last(),
-  ).toContainText(/Saved/);
+  await expect(page.locator(".manager-save-status")).toContainText(/Saved/);
 }
 async function rawRecords(page) {
   return page.evaluate(
@@ -91,9 +99,9 @@ test("Player and Marijan imports become independent manager characters and survi
   await expect(page.locator(".manager-stat")).toHaveCount(10);
   const first = (await rawRecords(page))[0];
   expect(first.sheet.type).toBe("wfrp-character");
-  await expect(page.locator("#manager-name")).toHaveValue(draft.name);
+  await expect(page.locator("#manager-character-name")).toHaveText(draft.name);
   await page.reload();
-  await expect(page.locator("#manager-name")).toHaveValue(draft.name);
+  await expect(page.locator("#manager-character-name")).toHaveText(draft.name);
   await library(page);
   const manual = freshMarijan();
   manual.name = "Manual adventurer";
@@ -113,7 +121,7 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
 }) => {
   await open(page);
   await importData(page, await pcDraft({ complete: true }));
-  await section(page, "Session view");
+  await section(page, "Play");
   const main = page.locator("main");
   const before = (await rawRecords(page))[0].current.wounds;
   await main
@@ -148,7 +156,7 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
     .getByRole("button", { name: "Record change", exact: true })
     .click();
   await expect(dialog).not.toBeVisible();
-  await section(page, "Advancement");
+  await section(page, "Advance");
   await main.getByRole("button", { name: "Award XP", exact: true }).click();
   dialog = page.getByRole("dialog");
   await dialog.getByLabel("XP to award").fill("500");
@@ -183,8 +191,7 @@ test("library backup restores safely, malformed batches write nothing, and downl
   a.name = "Library original";
   await importData(page, a);
   const download = page.waitForEvent("download");
-  if (await page.getByRole("button", { name: "Open manager menu" }).isVisible())
-    await page.getByRole("button", { name: "Open manager menu" }).click();
+  await applicationMenu(page);
   await page
     .getByRole("button", { name: "Back up library", exact: true })
     .filter({ visible: true })
@@ -216,10 +223,25 @@ test("conflicting tabs preserve the stored character and expose an unsaved copy 
   await importData(page, s);
   const second = await context.newPage();
   await second.goto(page.url());
-  await expect(second.locator("#manager-name")).toHaveValue(s.name);
-  await page.locator("#manager-name").fill("First tab");
-  await saved(page);
+  await expect(second.locator("#manager-character-name")).toHaveText(s.name);
+  await profile(page, "First tab");
+  await second
+    .getByRole("button", { name: "Edit profile", exact: true })
+    .click();
   await second.locator("#manager-name").fill("Second tab");
+  await second
+    .getByRole("button", { name: "Save profile", exact: true })
+    .click();
+  await expect(second.getByRole("dialog").getByRole("alert")).toContainText(
+    "another tab",
+  );
+  await second
+    .getByRole("dialog")
+    .getByRole("button", { name: "Close", exact: true })
+    .click();
+  await second
+    .getByRole("button", { name: "Discard changes", exact: true })
+    .click();
   await expect(second.locator("main").getByRole("alert")).toContainText(
     "another tab",
   );
@@ -247,14 +269,31 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
+    await expect(page.locator(".manager-rail,.manager-folio")).toHaveCount(0);
+    await expect(page.locator(".manager-resource-band")).toHaveCount(1);
+    await expect(
+      page
+        .getByRole("navigation", { name: "Character sections" })
+        .getByRole("button"),
+    ).toHaveCount(5);
+    const fits = await page
+      .locator(".manager-resource-actions")
+      .evaluateAll((els) =>
+        els.every(
+          (el) =>
+            el.getBoundingClientRect().right <=
+            el.parentElement.getBoundingClientRect().right + 1,
+        ),
+      );
+    expect(fits).toBe(true);
     if (width > 1000) {
-      const boxes = await page.locator(".manager-workspace").evaluate((el) => {
-        const a = el.querySelector(".manager-rail").getBoundingClientRect(),
-          b = el.querySelector("main").getBoundingClientRect(),
-          c = el.querySelector(".manager-folio").getBoundingClientRect();
-        return [b.left - a.right, c.left - b.right];
-      });
-      expect(boxes).toEqual([0, 0]);
+      await page
+        .getByRole("button", { name: "Application menu", exact: true })
+        .click();
+      await page.keyboard.press("Escape");
+      await expect(
+        page.getByRole("button", { name: "Application menu", exact: true }),
+      ).toBeFocused();
     } else {
       await page.getByRole("button", { name: "Open manager menu" }).click();
       await expect(
@@ -272,8 +311,7 @@ test("archiving retains the character and exports do not carry creator mode bran
 }) => {
   await open(page);
   await importData(page, await pcDraft({ complete: true }));
-  if (await page.getByRole("button", { name: "Open manager menu" }).isVisible())
-    await page.getByRole("button", { name: "Open manager menu" }).click();
+  await applicationMenu(page);
   const download = page.waitForEvent("download");
   await page
     .getByRole("button", { name: "Export PDF sheet", exact: true })
@@ -284,8 +322,7 @@ test("archiving retains the character and exports do not carry creator mode bran
   expect((await readFile(await pdf.path())).slice(0, 4).toString()).toBe(
     "%PDF",
   );
-  if (await page.getByRole("button", { name: "Open manager menu" }).isVisible())
-    await page.getByRole("button", { name: "Open manager menu" }).click();
+  await applicationMenu(page);
   await page
     .getByRole("button", { name: "Archive character", exact: true })
     .filter({ visible: true })
@@ -332,10 +369,11 @@ test("backup skip/replace respects IDs, and portraits remain in the local record
   expect(await rawRecords(page)).toHaveLength(1);
   backup.characters[0].sheet.name = "Restored from backup";
   await restore("replace");
-  await expect(page.locator("#manager-name")).toHaveValue(
+  await expect(page.locator("#manager-character-name")).toHaveText(
     "Restored from backup",
   );
   expect((await rawRecords(page))[0].id).toBe(original.id);
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
   await page
     .getByLabel("Import character portrait", { exact: true })
     .setInputFiles({
@@ -346,6 +384,9 @@ test("backup skip/replace respects IDs, and portraits remain in the local record
         "base64",
       ),
     });
+  await expect(page.locator(".manager-profile-portrait")).toBeVisible();
+  await page.getByRole("button", { name: "Save profile", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(page.locator(".manager-portrait")).toBeVisible();
   await saved(page);
   expect((await rawRecords(page))[0].portrait).toMatch(
@@ -362,8 +403,7 @@ test("Undo histories stay with their characters when switching the library @mana
   const a = freshMarijan();
   a.name = "First character";
   await importData(page, a);
-  await page.locator("#manager-name").fill("First character edited");
-  await saved(page);
+  await profile(page, "First character edited");
   await library(page);
   const b = freshMarijan();
   b.name = "Second character";
@@ -382,15 +422,257 @@ test("Undo histories stay with their characters when switching the library @mana
         exact: true,
       }),
     })
-    .getByRole("button", { name: "Open sheet" })
+    .getByRole("button", { name: "First character edited", exact: true })
     .click();
   await page
     .getByRole("button", { name: "Undo", exact: true })
     .filter({ visible: true })
     .click();
   await saved(page);
-  await expect(page.locator("#manager-name")).toHaveValue("First character");
+  await expect(page.locator("#manager-character-name")).toHaveText(
+    "First character",
+  );
   expect(
     (await rawRecords(page)).find((x) => x.sheet.name === "Second character"),
   ).toBeTruthy();
+});
+
+test("profile drafts require Save, closing protects changes, and favourite abilities appear on Play @manager", async ({
+  page,
+}) => {
+  await open(page);
+  const draft = await pcDraft({ complete: true });
+  await importData(page, draft);
+  await expect(page.locator("#manager-name")).toHaveCount(0);
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
+  await page.keyboard.press("Escape");
+  await expect(
+    page.getByRole("button", { name: "Edit profile", exact: true }),
+  ).toBeFocused();
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
+  await page.locator("#manager-name").fill("A deliberate profile change");
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog").getByRole("alert")).toContainText(
+    "Discard",
+  );
+  expect((await rawRecords(page))[0].sheet.name).toBe(draft.name);
+  await page.getByRole("button", { name: "Keep editing", exact: true }).click();
+  await page.getByRole("button", { name: "Save profile", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await expect(page.locator("#manager-character-name")).toHaveText(
+    "A deliberate profile change",
+  );
+  await section(page, "Abilities");
+  await page
+    .getByRole("button", { name: "Add Dodge to favourites", exact: true })
+    .click();
+  await saved(page);
+  await section(page, "Play");
+  await expect(page.locator(".manager-play-favourites summary")).toContainText(
+    "Dodge",
+  );
+  await expect(page.locator(".manager-resource-band")).toHaveCount(1);
+  await expect(
+    page.locator(".manager-navigation [aria-current='page']"),
+  ).toHaveText("Play");
+});
+
+test("money uses explicit denominations and equipment quantity updates its price before a gift acquisition @manager", async ({
+  page,
+}) => {
+  await open(page);
+  const draft = freshMarijan();
+  draft.name = "Equipment keeper";
+  draft.coins = { gc: 2, ss: 0, d: 0 };
+  await importData(page, draft);
+  const money = (r) =>
+    r.sheet.coins.gc * 240 + r.sheet.coins.ss * 12 + r.sheet.coins.d;
+  await section(page, "Gear");
+  await page
+    .getByRole("button", { name: "Receive money", exact: true })
+    .click();
+  await page
+    .getByRole("dialog")
+    .getByLabel("Silver shillings", { exact: true })
+    .fill("2");
+  await page
+    .getByRole("dialog")
+    .getByLabel("Brass pennies", { exact: true })
+    .fill("3");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Receive money", exact: true })
+    .click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  expect(money((await rawRecords(page))[0])).toBe(507);
+  await page.getByRole("button", { name: "Spend money", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByLabel("Silver shillings", { exact: true })
+    .fill("1");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Spend money", exact: true })
+    .click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  expect(money((await rawRecords(page))[0])).toBe(495);
+  await page
+    .getByRole("button", { name: "Acquire equipment", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog");
+  await dialog
+    .getByLabel("Find catalogue entry", { exact: true })
+    .fill("Dagger");
+  const option = await dialog
+    .getByLabel("Catalogue entry", { exact: true })
+    .evaluate(
+      (el) => [...el.options].find((x) => x.text.startsWith("Dagger ·")).value,
+    );
+  await dialog
+    .getByLabel("Catalogue entry", { exact: true })
+    .selectOption(option);
+  const unit = Number(
+    await dialog
+      .getByLabel("Total price paid (pennies)", { exact: true })
+      .inputValue(),
+  );
+  await dialog.getByLabel("Quantity", { exact: true }).fill("2");
+  await expect(
+    dialog.getByLabel("Total price paid (pennies)", { exact: true }),
+  ).toHaveValue(String(unit * 2));
+  await dialog.getByLabel("Gift / loot (no payment)", { exact: true }).check();
+  await dialog
+    .getByRole("button", { name: "Acquire equipment", exact: true })
+    .click();
+  await expect(dialog).not.toBeVisible();
+  const after = (await rawRecords(page))[0];
+  expect(money(after)).toBe(495);
+  expect(
+    after.sheet.entries.gear
+      .filter((x) => x.name === "Dagger")
+      .reduce((sum, x) => sum + x.amount, 0),
+  ).toBe(2);
+  await page.reload();
+  await expect(
+    page.getByRole("heading", { name: "Gear", exact: true }),
+  ).toBeVisible();
+});
+
+test("screen filters survive navigation and an ability opens its own XP options @manager", async ({
+  page,
+}) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  await section(page, "Abilities");
+  await page.getByLabel("Find an owned ability", { exact: true }).fill("Dodge");
+  const row = page.locator(".manager-entry-row").filter({
+    has: page.locator("summary strong").getByText("Dodge", { exact: true }),
+  });
+  await row.locator("summary").first().click();
+  await row
+    .getByRole("button", { name: "Improve with XP", exact: true })
+    .click();
+  await expect(
+    page.getByLabel("Find advancement", { exact: true }),
+  ).toHaveValue("Dodge");
+  await expect(
+    page
+      .getByRole("group", { name: "Advancement categories" })
+      .getByRole("button", { name: "Skills", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await page.goBack();
+  await expect(
+    page.getByLabel("Find an owned ability", { exact: true }),
+  ).toHaveValue("Dodge");
+  await expect(row.locator("details").first()).toHaveAttribute("open", "");
+  await section(page, "Advance");
+  await page.locator(".manager-purchases summary").click();
+  await page
+    .getByRole("button", { name: "View complete history", exact: true })
+    .click();
+  await expect(
+    page
+      .getByRole("group", { name: "Journal views" })
+      .getByRole("button", { name: "History", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await library(page);
+  await page
+    .getByLabel("Find a character", { exact: true })
+    .fill("no such character");
+  await expect(
+    page.getByRole("heading", { name: "No matching characters", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Clear search and filters", exact: true })
+    .click();
+});
+
+test("every mode retains the shared header and a stable menu-before-search order @manager @interface", async ({
+  page,
+}) => {
+  let headerHeight;
+  for (const route of [
+    "/?verify=1",
+    "/bestiary/?verify=1",
+    "/marijan/?verify=1",
+    "/manager/?verify=1",
+  ]) {
+    await page.goto(route);
+    await expect(page.locator("#creator-main")).toBeVisible();
+    if (page.viewportSize().width <= 1000)
+      await page
+        .locator("#compact-menu .mobile-menu-launcher")
+        .waitFor({ state: "attached" });
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.locator(".masthead")).toHaveCount(1);
+    await expect(page.locator(".masthead .ledger-emblem")).toBeVisible();
+    const height = (await page.locator(".masthead").boundingBox()).height;
+    if (headerHeight === undefined) headerHeight = height;
+    else expect(Math.abs(headerHeight - height)).toBeLessThanOrEqual(2);
+    if (await page.locator("#compact-menu .mobile-menu-launcher").isVisible()) {
+      await expect(
+        page.locator("#compact-search .book-search-launcher"),
+      ).toBeVisible();
+      const menu = await page.locator("#compact-menu button").boundingBox();
+      const search = await page.locator("#compact-search button").boundingBox();
+      expect(menu.x + menu.width).toBeLessThanOrEqual(search.x);
+      const order = await page
+        .locator("#compact-tools")
+        .evaluate((el) =>
+          [...el.querySelectorAll("button")].map((x) => x.className),
+        );
+      expect(order[0]).toContain("mobile-menu-launcher");
+      expect(order[1]).toContain("book-search-launcher");
+    }
+  }
+});
+
+test("large manual scores remain readable on one line without page overflow @manager", async ({
+  page,
+}) => {
+  await open(page);
+  const draft = freshMarijan();
+  draft.name = "Long numerical values";
+  draft.characteristics.WS.initial = 123456;
+  await importData(page, draft);
+  for (const width of [320, 390, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    const measurement = await page
+      .locator(".manager-stat-button")
+      .first()
+      .evaluate((el) => {
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        return {
+          lines: range.getClientRects().length,
+          scroll: el.scrollWidth,
+          width: el.clientWidth,
+          page: document.documentElement.scrollWidth,
+          viewport: innerWidth,
+        };
+      });
+    expect(measurement.lines).toBe(1);
+    expect(measurement.scroll).toBeLessThanOrEqual(measurement.width + 1);
+    expect(measurement.page).toBeLessThanOrEqual(measurement.viewport);
+  }
 });

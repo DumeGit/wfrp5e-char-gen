@@ -4,6 +4,10 @@
   align-items: center;
   gap: 8px;
 }
+#compact-menu,
+#compact-search {
+  display: contents;
+}
 [data-mode="player"] .masthead-art {
   background-image:
     linear-gradient(90deg, #21130ee6, #21130e55 58%, #21130e22),

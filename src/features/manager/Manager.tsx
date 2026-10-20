@@ -1,36 +1,22 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  useSyncExternalStore,
-  type ReactNode,
-} from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { getManagerStore } from "./store";
 import { CreatorMenu } from "../../components/CreatorMenu";
-import { ModeNavigation } from "../../components/ModeNavigation";
+import { Dialog } from "./ui";
+import { ManagerWorkspace, SECTIONS } from "./ManagerWorkspace";
+import { AdjustmentEditor } from "./AdjustmentEditor";
 import { Field, Select } from "../marijan/fields";
 import { requestReference } from "../../services/content";
-import {
-  KEYS,
-  careerTalentOptions,
-  careerSkillSlots,
-  options as ruleOptions,
-} from "../../engine/rules.mjs";
+import { KEYS } from "../../engine/rules.mjs";
 import { score } from "../../engine/controls.mjs";
 import { formatMoney } from "../../engine/market.mjs";
-import {
-  makeEntry,
-  addEntry,
-  AUTO_FIELDS,
-} from "../../engine/marijan/model.mjs";
+import { makeEntry } from "../../engine/marijan/model.mjs";
 import {
   entryDescription,
   entrySource,
 } from "../../engine/marijan/catalogue.mjs";
-import { LABELS } from "../../engine/marijan/labels.mjs";
 import {
   freshManager,
   calculateManager,
@@ -38,9 +24,6 @@ import {
   backup,
   changeResource,
   awardXP,
-  quoteManager,
-  purchaseAdvance,
-  creditTrapping,
   changeCareer,
   acquire,
   listedPrice,
@@ -48,29 +31,19 @@ import {
   addJournal,
   event as addEvent,
 } from "../../engine/manager/model.mjs";
-
-const SECTIONS = [
-  ["overview", "Overview"],
-  ["skills", "Skills & Talents"],
-  ["gear", "Combat & Gear"],
-  ["magic", "Magic & Faith"],
-  ["advancement", "Advancement"],
-  ["journal", "Journal & history"],
-  ["session", "Session view"],
-];
-const GROUP_NAMES: Record<string, string> = {
-  skills: "Skills",
-  talents: "Talents",
-  gear: "Equipment",
-  magic: "Magic & prayers",
-  extras: "Traits, runes & techniques",
-};
+const normalSection = (value: string | null) =>
+  SECTIONS.some(([id]) => id === value)
+    ? value!
+    : (
+        {
+          overview: "play",
+          session: "play",
+          skills: "abilities",
+          magic: "abilities",
+          advance: "advancement",
+        } as Record<string, string>
+      )[value || ""] || "play";
 type Store = ReturnType<typeof getManagerStore>;
-const date = (value: string) =>
-  new Intl.DateTimeFormat(undefined, {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(new Date(value));
 function download(value: any, filename: string, mime = "application/json") {
   const bytes =
     mime === "application/json" ? JSON.stringify(value, null, 2) : value;
@@ -84,55 +57,6 @@ function download(value: any, filename: string, mime = "application/json") {
 const filename = (name: string) =>
   (name || "character").replace(/[^\p{L}\p{N} _-]/gu, "").slice(0, 80) ||
   "character";
-function Dialog({
-  title,
-  close,
-  children,
-}: {
-  title: string;
-  close: () => void;
-  children: ReactNode;
-}) {
-  const dialog = useRef<HTMLDialogElement>(null);
-  useEffect(() => {
-    const opener = document.activeElement as HTMLElement;
-    dialog.current?.showModal();
-    return () => {
-      dialog.current?.close();
-      if (opener?.isConnected) opener.focus();
-    };
-  }, []);
-  return (
-    <dialog
-      className="manager-dialog"
-      ref={dialog}
-      aria-labelledby="manager-dialog-title"
-      onCancel={(e) => {
-        e.preventDefault();
-        close();
-      }}
-      onClick={(e) => {
-        if (e.target !== e.currentTarget) return;
-        const r = e.currentTarget.getBoundingClientRect();
-        if (
-          e.clientX < r.left ||
-          e.clientX > r.right ||
-          e.clientY < r.top ||
-          e.clientY > r.bottom
-        )
-          close();
-      }}
-    >
-      <div className="dialog-heading">
-        <h2 id="manager-dialog-title">{title}</h2>
-        <button className="quiet" type="button" onClick={close}>
-          Close
-        </button>
-      </div>
-      {children}
-    </dialog>
-  );
-}
 export default function ManagerEntry() {
   const [store, setStore] = useState<Store | null>(null);
   useEffect(() => {
@@ -155,20 +79,35 @@ function Manager({ store }: { store: Store }) {
     store.getSnapshot,
     store.getSnapshot,
   );
-  const [section, setSection] = useState("overview"),
+  const [section, setSection] = useState("play"),
     [menu, setMenu] = useState(false);
+  const [view, setView] = useState("");
+  const scrollPositions = useRef(new Map<string, number>());
   const [portal, setPortal] = useState<HTMLElement | null>(null);
   const [modal, setModal] = useState(""),
     [error, setError] = useState("");
-  const [query, setQuery] = useState(""),
-    [filter, setFilter] = useState("active"),
-    [sort, setSort] = useState("recent");
   const [preview, setPreview] = useState<any[]>([]),
     [restorePolicy, setRestorePolicy] = useState("copy");
   const previewRevisions = useRef(new Map<string, number>());
   const [busy, setBusy] = useState(false),
     [notice, setNotice] = useState("");
   const [form, setForm] = useState<Record<string, any>>({});
+  const [discard, setDiscard] = useState(false);
+  const profileStart = useRef("");
+  const menuTrigger = useRef<HTMLElement | null>(null),
+    dialogTrigger = useRef<HTMLElement | null>(null),
+    lastAction = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const remember = (event: Event) => {
+      const node =
+        event.target instanceof Element
+          ? event.target.closest<HTMLElement>("button,summary,a")
+          : null;
+      if (node) lastAction.current = node;
+    };
+    document.addEventListener("click", remember, true);
+    return () => document.removeEventListener("click", remember, true);
+  }, []);
   const file = useRef<HTMLInputElement>(null);
   const portrait = useRef<HTMLInputElement>(null);
   const importEpoch = useRef(0),
@@ -181,18 +120,33 @@ function Manager({ store }: { store: Store }) {
   const updateForm = (key: string, value: any) =>
     setForm((old) => ({ ...old, [key]: value }));
   function open(kind: string, values: Record<string, any> = {}) {
+    if (!modal)
+      dialogTrigger.current = lastAction.current?.closest("#creator-menu")
+        ? menuTrigger.current
+        : lastAction.current;
     setError("");
     setNotice("");
     setForm(values);
+    setDiscard(false);
+    if (["profile", "journal"].includes(kind))
+      profileStart.current = JSON.stringify(values);
     setModal(kind);
   }
-  function navigate(id: string | null, nextSection = "overview", push = true) {
+  function navigate(
+    id: string | null,
+    nextSection = "play",
+    push = true,
+    nextView = "",
+  ) {
     navigatedCharacter.current = id;
     store.select(id);
     setSection(nextSection);
-    setQuery("");
+    setView(nextView);
     if (push) {
+      scrollPositions.current.set(location.href, window.scrollY);
       const url = new URL(location.href);
+      if (nextView) url.searchParams.set("view", nextView);
+      else url.searchParams.delete("view");
       if (id) {
         url.searchParams.set("character", id);
         url.searchParams.set("section", nextSection);
@@ -201,6 +155,12 @@ function Manager({ store }: { store: Store }) {
         url.searchParams.delete("section");
       }
       window.history.pushState(null, "", url);
+      requestAnimationFrame(() =>
+        window.scrollTo({
+          top: scrollPositions.current.get(url.href) ?? 0,
+          behavior: "instant",
+        }),
+      );
     }
   }
   useEffect(() => {
@@ -213,18 +173,20 @@ function Manager({ store }: { store: Store }) {
       const next = p.get("section");
       navigate(
         p.get("character"),
-        SECTIONS.some(([id]) => id === next) ? next! : "overview",
+        normalSection(next),
         false,
+        p.get("view") || (next === "magic" ? "magic" : ""),
       );
     });
-    setPortal(document.getElementById("compact-tools"));
+    setPortal(document.getElementById("compact-menu"));
     const pop = () => {
       const p = new URLSearchParams(location.search);
       const next = p.get("section");
       navigate(
         p.get("character"),
-        SECTIONS.some(([id]) => id === next) ? next! : "overview",
+        normalSection(next),
         false,
+        p.get("view") || (next === "magic" ? "magic" : ""),
       );
     };
     window.addEventListener("popstate", pop);
@@ -241,8 +203,10 @@ function Manager({ store }: { store: Store }) {
       const url = new URL(location.href);
       url.searchParams.set("character", state.record.id);
       if (navigatedCharacter.current !== state.record.id) {
-        setSection("overview");
-        url.searchParams.set("section", "overview");
+        setSection("play");
+        setView("");
+        url.searchParams.delete("view");
+        url.searchParams.set("section", "play");
         navigatedCharacter.current = state.record.id;
       }
       if (!url.searchParams.has("section"))
@@ -283,7 +247,9 @@ function Manager({ store }: { store: Store }) {
         throw Error("Choose a JSON file smaller than 30 MB.");
       const text = await selected.text();
       if (epoch !== importEpoch.current) return;
-      const next = readImport(state.catalogue, state.library, JSON.parse(text));
+      const input = JSON.parse(text);
+      setForm({ restore: input?.type === "wfrp-manager-library" });
+      const next = readImport(state.catalogue, state.library, input);
       previewRevisions.current = new Map(
         store.getSnapshot().records.map((x) => [x.id, x.revision]),
       );
@@ -324,7 +290,7 @@ function Manager({ store }: { store: Store }) {
       !["image/png", "image/jpeg", "image/webp"].includes(selected.type) ||
       selected.size > 512 * 1024
     ) {
-      setNotice("Choose a PNG, JPEG, or WebP portrait smaller than 512 KB.");
+      setError("Choose a PNG, JPEG, or WebP portrait smaller than 512 KB.");
       return;
     }
     const reader = new FileReader();
@@ -336,12 +302,15 @@ function Manager({ store }: { store: Store }) {
         );
         return;
       }
-      edit("Changed portrait", (r) => {
-        r.portrait = reader.result;
-      });
+      if (modal === "profile")
+        setForm((old) => ({ ...old, portrait: reader.result }));
+      else
+        edit("Changed portrait", (r) => {
+          r.portrait = reader.result;
+        });
     };
     reader.onerror = () =>
-      setNotice("Could not read this portrait. Try another image.");
+      setError("Could not read this portrait. Try another image.");
     reader.readAsDataURL(selected);
     if (portrait.current) portrait.current.value = "";
   }
@@ -380,6 +349,15 @@ function Manager({ store }: { store: Store }) {
       </main>
     );
   const close = () => {
+    if (busy && modal !== "import") return;
+    if (
+      ["profile", "journal"].includes(modal) &&
+      JSON.stringify(form) !== profileStart.current
+    ) {
+      setDiscard(true);
+      return;
+    }
+    portraitEpoch.current++;
     if (modal === "import") {
       importEpoch.current++;
       setBusy(false);
@@ -474,650 +452,96 @@ function Manager({ store }: { store: Store }) {
       </button>
     </>
   );
-  function resources() {
-    return (
-      <>
-        <div className="manager-resource">
-          <span>Wounds</span>
-          <strong>
-            {score(record.current.wounds)} / {score(result.values.wounds)}
-          </strong>
-          <div className="manager-inline">
-            <button
-              type="button"
-              className="quiet"
-              aria-label="Lose one Wound"
-              disabled={
-                record.current.wounds === null || record.current.wounds <= 0
-              }
-              onClick={() =>
-                edit("Wounds changed", (r) =>
-                  changeResource(
-                    r,
-                    "wounds",
-                    Math.max(0, r.current.wounds - 1),
-                  ),
-                )
-              }
-            >
-              −
-            </button>
-            <button
-              type="button"
-              className="quiet"
-              aria-label="Recover one Wound"
-              disabled={
-                result.values.wounds === null ||
-                record.current.wounds >= result.values.wounds
-              }
-              onClick={() =>
-                edit("Wounds changed", (r) =>
-                  changeResource(
-                    r,
-                    "wounds",
-                    Math.min(result.values.wounds, (r.current.wounds ?? 0) + 1),
-                  ),
-                )
-              }
-            >
-              +
-            </button>
-            <button
-              type="button"
-              className="quiet"
-              onClick={() =>
-                open("resource", {
-                  key: "wounds",
-                  value: record.current.wounds ?? 0,
-                })
-              }
-            >
-              Set Wounds
-            </button>
-          </div>
+  const profile = () =>
+    open(
+      "profile",
+      Object.fromEntries(
+        ["name", "appearance", "ambition", "partyAmbition", "notes"]
+          .map((key) => [key, sheet[key] || ""])
+          .concat([["portrait", record.portrait || ""]]),
+      ),
+    );
+  const importFile = () => {
+    setPreview([]);
+    open("import");
+  };
+  const restore = () => {
+    setPreview([]);
+    open("import", { restore: true });
+  };
+  const backupLibrary = () =>
+    download(backup(store.allRecords()), "character-library-backup.json");
+  const exportRecord = (r: any) =>
+    download(r, `${filename(r.sheet.name)}.json`);
+  const libraryAction = (r: any, kind: string) => {
+    store.select(r.id);
+    if (kind === "duplicate") {
+      void store.duplicate();
+      return;
+    }
+    void store.edit(
+      kind === "favourite"
+        ? "Changed character favourite"
+        : r.archived
+          ? "Restored character"
+          : "Archived character",
+      (next) => {
+        if (kind === "favourite") next.favourite = !next.favourite;
+        else next.archived = !next.archived;
+      },
+    );
+    store.select(null);
+  };
+  const alerts = (
+    <>
+      {state.error && (
+        <div className="manager-notice manager-error" role="alert">
+          <p>{state.error}</p>
+          {state.dirty && (
+            <div className="manager-inline">
+              <button
+                type="button"
+                onClick={() =>
+                  download(record, `${filename(sheet.name)}-unsaved.json`)
+                }
+              >
+                Download unsaved copy
+              </button>
+              <button type="button" onClick={() => void store.retry()}>
+                Retry saving
+              </button>
+              <button type="button" onClick={() => void store.duplicate()}>
+                Save as duplicate
+              </button>
+              <button
+                className="quiet"
+                type="button"
+                onClick={() => open("reload")}
+              >
+                Reload saved character
+              </button>
+            </div>
+          )}
         </div>
-        <div className="manager-resource">
-          <span>Fortune</span>
-          <strong>
-            {score(record.current.fortune)} / {score(sheet.fortune)}
-          </strong>
-          <div className="manager-inline">
-            <button
-              type="button"
-              className="quiet"
-              disabled={record.current.fortune <= 0}
-              onClick={() =>
-                edit("Fortune spent", (r) =>
-                  changeResource(
-                    r,
-                    "fortune",
-                    Math.max(0, r.current.fortune - 1),
-                  ),
-                )
-              }
-            >
-              Spend Fortune
-            </button>
-            <button
-              type="button"
-              className="quiet"
-              disabled={record.current.fortune >= sheet.fortune}
-              onClick={() =>
-                edit("Fortune restored", (r) =>
-                  changeResource(
-                    r,
-                    "fortune",
-                    Math.min(r.sheet.fortune, r.current.fortune + 1),
-                  ),
-                )
-              }
-            >
-              Restore Fortune
-            </button>
-          </div>
-        </div>
-        <div className="manager-resource">
-          <span>Fate</span>
-          <strong>{score(sheet.fate)}</strong>
-          <button
-            className="quiet"
-            type="button"
-            onClick={() => open("fate", { value: sheet.fate })}
-          >
-            Change Fate
+      )}
+      {state.unsavedCount > 0 && !state.dirty && (
+        <div className="manager-notice" role="alert">
+          <p>
+            {state.unsavedCount} character
+            {state.unsavedCount === 1 ? " has" : "s have"} unsaved changes in
+            this tab. Back up the library before closing.
+          </p>
+          <button type="button" onClick={() => navigate(store.firstUnsaved())}>
+            Open unsaved character
           </button>
         </div>
-        <p>
-          {score(sheet.xpUnspent)} XP available
-          <br />
-          {formatMoney(
-            sheet.coins.gc * 240 + sheet.coins.ss * 12 + sheet.coins.d,
-          )}
+      )}
+      {notice && (
+        <p className="manager-notice" role="status">
+          {notice}
         </p>
-      </>
-    );
-  }
-  function entryList(group: string, rows?: any[]) {
-    const entries =
-      rows || (group === "skills" ? result.skills : result.entries[group]);
-    return (
-      <section>
-        <div className="manager-inline">
-          <h2>{GROUP_NAMES[group]}</h2>
-          {!rows && (
-            <button
-              className="quiet"
-              type="button"
-              onClick={() =>
-                open(group === "gear" ? "acquire" : "entry", {
-                  group,
-                  amount: 1,
-                  name: "",
-                  id: "",
-                  note: "",
-                  custom: false,
-                  char: "Int",
-                })
-              }
-            >
-              {group === "gear"
-                ? "Acquire equipment"
-                : `Add ${group === "extras" ? "reference" : group === "magic" ? "spell / prayer" : group.slice(0, -1)}`}
-            </button>
-          )}
-        </div>
-        {!entries.length && (
-          <p>
-            {rows
-              ? "Pin entries from the full sheet to keep them here."
-              : "No entries recorded."}
-          </p>
-        )}
-        {entries
-          .filter(
-            (x: any) =>
-              !query ||
-              `${x.name} ${x.text || ""}`
-                .toLowerCase()
-                .includes(query.toLowerCase()),
-          )
-          .map((x: any) => (
-            <details className="manager-entry" key={x.key}>
-              <summary>
-                <strong>{x.name}</strong>
-                <span>
-                  {group === "skills"
-                    ? score(x.total)
-                    : ["talents", "gear"].includes(group)
-                      ? `×${score(x.amount)}`
-                      : x.kind}
-                </span>
-              </summary>
-              <p>
-                {entryDescription(state.catalogue, x) ||
-                  "No description recorded."}
-              </p>
-              {x.source && (
-                <button
-                  className="quiet"
-                  type="button"
-                  onClick={() =>
-                    requestReference({ name: x.name, book: x.source.book })
-                  }
-                >
-                  {entrySource(state.catalogue, x)}
-                </button>
-              )}
-              {x.adaptation && (
-                <p className="manager-notice">
-                  Legacy:{" "}
-                  {typeof x.adaptation === "string"
-                    ? x.adaptation
-                    : x.adaptation.text ||
-                      "Reviewed adaptation; open the source reference for details."}
-                </p>
-              )}
-              {group === "skills" && (
-                <p className="manager-meta">
-                  {x.char} {score(result.stats[x.char])} + {score(x.amount)}{" "}
-                  Advances
-                  {x.total !== result.stats[x.char] + x.amount
-                    ? " · adjusted total"
-                    : ""}
-                </p>
-              )}
-              {group === "gear" && (
-                <>
-                  <p className="manager-meta">
-                    Enc {score(x.enc)} per item ·{" "}
-                    {x.kind === "weapon"
-                      ? `Damage ${x.damage || "—"} · ${x.qualities}`
-                      : x.kind === "armour"
-                        ? `AP ${score(x.ap)} · ${x.locations}`
-                        : ""}
-                  </p>
-                  <Select
-                    id={`state-${x.key}`}
-                    label="Equipment placement"
-                    value={x.state}
-                    options={["equipped", "worn", "carried", "stored"]}
-                    onValue={(value) =>
-                      edit(`Moved ${x.name}: ${value}`, (r) => {
-                        r.sheet.entries.gear.find(
-                          (e: any) => e.key === x.key,
-                        ).state = value;
-                      })
-                    }
-                  />
-                </>
-              )}
-              {group === "magic" && x.kind === "spell" && (
-                <Select
-                  id={`learned-with-${x.key}`}
-                  label="Learning Talent / Lore"
-                  value={x.learnedWith || ""}
-                  options={[
-                    ["", "Not recorded"],
-                    ...result.derived.talents.filter((name: string) =>
-                      /^(Arcane Magic|Invoke|Bless|Petty Magic|Witch!|High Magic)/.test(
-                        name,
-                      ),
-                    ),
-                  ]}
-                  onValue={(value) =>
-                    edit(`Recorded learning Lore for ${x.name}`, (r) => {
-                      r.sheet.entries.magic.find(
-                        (row: any) => row.key === x.key,
-                      ).learnedWith = value;
-                    })
-                  }
-                />
-              )}
-              {["skills", "talents", "gear"].includes(group) && (
-                <Field
-                  id={`amount-${x.key}`}
-                  label={
-                    group === "skills"
-                      ? "Advances (GM adjustment; no XP charge)"
-                      : group === "talents"
-                        ? "Ranks (GM adjustment; no XP charge)"
-                        : "Quantity"
-                  }
-                  numeric
-                  value={x.amount}
-                  onValue={(value) =>
-                    edit(
-                      `Adjusted ${x.name}`,
-                      (r) => {
-                        if (!Number.isSafeInteger(value) || value < 0)
-                          throw Error("Enter a non-negative whole number.");
-                        let row = r.sheet.entries[group].find(
-                          (e: any) => e.key === x.key,
-                        );
-                        if (!row && x.reference) {
-                          const key = addEntry(
-                            r.sheet,
-                            group,
-                            state.catalogue.rows.find(
-                              (e: any) => e.id === x.id,
-                            ),
-                          );
-                          row = r.sheet.entries[group].find(
-                            (e: any) => e.key === key,
-                          );
-                        }
-                        if (row.total !== null && group === "skills")
-                          row.total += value - row.amount;
-                        row.amount = value;
-                      },
-                      "Recorded manual adjustment; no XP charged.",
-                    )
-                  }
-                />
-              )}
-              {group === "skills" && (
-                <Field
-                  id={`total-${x.key}`}
-                  label="Manual Skill total (blank uses calculation)"
-                  numeric
-                  nullable
-                  value={
-                    sheet.entries.skills.find((e: any) => e.key === x.key)
-                      ?.total ?? null
-                  }
-                  onValue={(value) =>
-                    edit(`Adjusted ${x.name} total`, (r) => {
-                      let row = r.sheet.entries.skills.find(
-                        (e: any) => e.key === x.key,
-                      );
-                      if (!row && x.reference) {
-                        const key = addEntry(
-                          r.sheet,
-                          "skills",
-                          state.catalogue.rows.find((e: any) => e.id === x.id),
-                        );
-                        row = r.sheet.entries.skills.find(
-                          (e: any) => e.key === key,
-                        );
-                      }
-                      row.total = value;
-                    })
-                  }
-                />
-              )}
-              {
-                <div className="manager-inline">
-                  <button
-                    className="quiet"
-                    type="button"
-                    onClick={() =>
-                      edit(
-                        `${x.favourite ? "Unpinned" : "Pinned"} ${x.name}`,
-                        (r) => {
-                          let row = r.sheet.entries[group].find(
-                            (e: any) => e.key === x.key,
-                          );
-                          if (!row && x.reference) {
-                            const key = addEntry(
-                              r.sheet,
-                              group,
-                              state.catalogue.rows.find(
-                                (e: any) => e.id === x.id,
-                              ),
-                            );
-                            row = r.sheet.entries[group].find(
-                              (e: any) => e.key === key,
-                            );
-                          }
-                          row.favourite = !row.favourite;
-                        },
-                      )
-                    }
-                  >
-                    {x.favourite
-                      ? "Unpin from Session view"
-                      : "Pin to Session view"}
-                  </button>
-                  {!x.reference && (
-                    <button
-                      className="quiet"
-                      type="button"
-                      onClick={() =>
-                        edit(
-                          `Removed ${x.name}`,
-                          (r) => {
-                            r.sheet.entries[group] = r.sheet.entries[
-                              group
-                            ].filter((e: any) => e.key !== x.key);
-                          },
-                          "Removed entry without an XP refund. Use Undo to restore it.",
-                        )
-                      }
-                    >
-                      Remove entry
-                    </button>
-                  )}
-                </div>
-              }
-            </details>
-          ))}
-      </section>
-    );
-  }
-  function adjustments() {
-    return (
-      <details className="manager-entry">
-        <summary>
-          <strong>GM adjustments</strong>
-        </summary>
-        <p>
-          Direct adjustments are available to every character and recorded
-          separately from XP purchases. Existing current resources are retained
-          when maximums change.
-        </p>
-        <div className="manager-grid manager-form">
-          <Field
-            id="manager-species"
-            label="Species"
-            value={sheet.species}
-            onValue={(value) =>
-              edit("Adjusted Species", (r) => {
-                r.sheet.species = value;
-              })
-            }
-          />
-          <Select
-            id="manager-career-adjust"
-            label="Career (GM adjustment)"
-            value={sheet.career}
-            options={[
-              ["", "No Career"],
-              ...state.catalogue.careers.map((c: any) => [
-                c.contentId || c.id,
-                `${c.name} · ${c.source.book}`,
-              ]),
-            ]}
-            onValue={(value) =>
-              edit("Adjusted Career", (r) => {
-                r.sheet.career = value;
-              })
-            }
-          />
-          <Field
-            id="manager-level"
-            label="Career level"
-            numeric
-            value={sheet.level}
-            onValue={(value) =>
-              edit("Adjusted Career level", (r) => {
-                if (!Number.isInteger(value) || value < 1)
-                  throw Error("Enter a positive Career level.");
-                r.sheet.level = value;
-              })
-            }
-          />
-          <Field
-            id="manager-tracker"
-            label="Career tracker boxes"
-            numeric
-            value={sheet.tracker}
-            onValue={(value) =>
-              edit("Adjusted tracker", (r) => {
-                if (!Number.isInteger(value) || value < 0 || value > 36)
-                  throw Error("Enter 0–36 tracker boxes.");
-                r.sheet.tracker = value;
-              })
-            }
-          />
-        </div>
-        <h3>Characteristics</h3>
-        <div className="manager-grid manager-form">
-          {KEYS.map((key: string) => (
-            <div key={key}>
-              <Field
-                id={`initial-${key}`}
-                label={`${key} initial`}
-                numeric
-                value={sheet.characteristics[key].initial}
-                onValue={(value) =>
-                  edit(`Adjusted ${key} initial`, (r) => {
-                    r.sheet.characteristics[key].initial = value;
-                  })
-                }
-              />
-              <Field
-                id={`advances-${key}`}
-                label={`${key} Advances`}
-                numeric
-                value={sheet.characteristics[key].advances}
-                onValue={(value) =>
-                  edit(`Adjusted ${key} Advances`, (r) => {
-                    if (!Number.isInteger(value) || value < 0)
-                      throw Error(
-                        "Advances must be a non-negative whole number.",
-                      );
-                    r.sheet.characteristics[key].advances = value;
-                  })
-                }
-              />
-              <Field
-                id={`modifier-${key}`}
-                label={`${key} modifier`}
-                numeric
-                value={sheet.characteristics[key].modifier}
-                onValue={(value) =>
-                  edit(`Adjusted ${key} modifier`, (r) => {
-                    r.sheet.characteristics[key].modifier = value;
-                  })
-                }
-              />
-            </div>
-          ))}
-        </div>
-        <h3>Resource maximums and calculations</h3>
-        <div className="manager-grid manager-form">
-          <Field
-            id="max-fortune"
-            label="Maximum Fortune"
-            numeric
-            value={sheet.fortune}
-            onValue={(value) =>
-              edit("Adjusted maximum Fortune", (r) => {
-                if (value < 0) throw Error("Fortune cannot be negative.");
-                r.sheet.fortune = value;
-              })
-            }
-          />
-          <Select
-            id="manager-size"
-            label="Size"
-            value={sheet.size}
-            options={[
-              "Tiny",
-              "Small",
-              "Average",
-              "Large",
-              "Enormous",
-              "Monstrous",
-            ]}
-            onValue={(value) =>
-              edit("Adjusted Size", (r) => {
-                r.sheet.size = value;
-              })
-            }
-          />
-          {AUTO_FIELDS.map((key: string) => (
-            <Field
-              key={key}
-              id={`override-${key}`}
-              label={`${(LABELS as any)[key]} override (blank = ${score(result.auto[key])}${record.adjustments[key] ? ` + ${record.adjustments[key]} adjustment` : ""})`}
-              numeric
-              nullable
-              value={sheet.overrides[key]}
-              onValue={(value) =>
-                edit(`Adjusted ${(LABELS as any)[key]}`, (r) => {
-                  r.sheet.overrides[key] = value;
-                })
-              }
-            />
-          ))}
-        </div>
-        <h3>Money and XP balances</h3>
-        <div className="manager-grid manager-form">
-          {[
-            ["gc", "Gold crowns"],
-            ["ss", "Silver shillings"],
-            ["d", "Brass pennies"],
-          ].map(([key, label]) => (
-            <Field
-              key={key}
-              id={`coins-${key}`}
-              label={label}
-              numeric
-              value={sheet.coins[key]}
-              onValue={(value) =>
-                edit(`Adjusted ${label}`, (r) => {
-                  if (!Number.isInteger(value) || value < 0)
-                    throw Error("Enter non-negative whole coins.");
-                  r.sheet.coins[key] = value;
-                })
-              }
-            />
-          ))}
-          <Field
-            id="xp-unspent"
-            label="Available XP (adjustment)"
-            numeric
-            value={sheet.xpUnspent}
-            onValue={(value) =>
-              edit("Adjusted available XP", (r) => {
-                r.sheet.xpUnspent = value;
-              })
-            }
-          />
-          <Field
-            id="xp-spent"
-            label="Spent XP (adjustment)"
-            numeric
-            value={sheet.xpSpent}
-            onValue={(value) =>
-              edit("Adjusted spent XP", (r) => {
-                r.sheet.xpSpent = value;
-              })
-            }
-          />
-          <Field
-            id="corruption"
-            label="Corruption"
-            numeric
-            value={sheet.corruption}
-            onValue={(value) =>
-              edit("Adjusted Corruption", (r) => {
-                r.sheet.corruption = value;
-              })
-            }
-          />
-          <Field
-            id="sin"
-            label="Sin"
-            numeric
-            value={sheet.sin}
-            onValue={(value) =>
-              edit("Adjusted Sin", (r) => {
-                r.sheet.sin = value;
-              })
-            }
-          />
-        </div>
-      </details>
-    );
-  }
-  const recordActions = (
-    <div className="manager-inline">
-      <button
-        className="quiet"
-        type="button"
-        onClick={() =>
-          edit(
-            record.favourite
-              ? "Unfavourited character"
-              : "Favourited character",
-            (r) => {
-              r.favourite = !r.favourite;
-            },
-          )
-        }
-      >
-        {record?.favourite ? "Remove favourite" : "Favourite character"}
-      </button>
-      <button
-        className="quiet"
-        type="button"
-        onClick={() => open("condition", { amount: 1, name: "", note: "" })}
-      >
-        Record Condition
-      </button>
-    </div>
+      )}
+    </>
   );
   return (
     <>
@@ -1145,7 +569,10 @@ function Manager({ store }: { store: Store }) {
             aria-label="Open manager menu"
             aria-controls="creator-menu"
             aria-expanded={menu}
-            onClick={() => setMenu(true)}
+            onClick={(event) => {
+              menuTrigger.current = event.currentTarget;
+              setMenu(true);
+            }}
           >
             <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
               <path
@@ -1163,732 +590,43 @@ function Manager({ store }: { store: Store }) {
         open={menu}
         onClose={() => setMenu(false)}
         status={state.message}
+        trigger={menuTrigger.current}
       >
         {menuActions}
       </CreatorMenu>
-      <div className={`manager-workspace ${record ? "" : "manager-library"}`}>
-        <aside className="manager-rail">
-          <div className="manager-rail-inner">
-            <button
-              className="quiet"
-              type="button"
-              aria-current={!record ? "page" : undefined}
-              onClick={() => navigate(null)}
-            >
-              Character library
-            </button>
-            {record && (
-              <nav aria-label="Character sections">
-                {SECTIONS.map(([id, label]) => (
-                  <button
-                    className="quiet"
-                    type="button"
-                    key={id}
-                    aria-current={section === id ? "page" : undefined}
-                    onClick={() => navigate(record.id, id)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </nav>
-            )}
-            <div className="manager-form">{menuActions}</div>
-            <p className="save-status" role="status">
-              {state.saving ? "Saving…" : state.message}
-            </p>
-            {record && (
-              <div
-                className="manager-inline"
-                role="group"
-                aria-label="Edit history"
-              >
-                {historyControls}
-              </div>
-            )}
-            <ModeNavigation mode="manager" verify={verify} />
-          </div>
-        </aside>
-        <div className="manager-mobile-selector">
-          {record ? (
-            <>
-              <label htmlFor="manager-section">Character section</label>
-              <select
-                id="manager-section"
-                value={section}
-                onChange={(e) =>
-                  e.target.value === "library"
-                    ? navigate(null)
-                    : navigate(record.id, e.target.value)
-                }
-              >
-                <option value="library">Character library</option>
-                {SECTIONS.map(([id, label]) => (
-                  <option key={id} value={id}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </>
-          ) : (
-            <span>Character library</span>
-          )}
-        </div>
-        <main id="creator-main" className="manager-main">
-          {state.error && (
-            <div className="manager-notice manager-error" role="alert">
-              <p>{state.error}</p>
-              {state.dirty && (
-                <div className="manager-inline">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      download(record, `${filename(sheet.name)}-unsaved.json`)
-                    }
-                  >
-                    Download unsaved copy
-                  </button>
-                  <button type="button" onClick={() => void store.retry()}>
-                    Retry saving
-                  </button>
-                  <button type="button" onClick={() => void store.duplicate()}>
-                    Save as duplicate
-                  </button>
-                  <button
-                    className="quiet"
-                    type="button"
-                    onClick={() => open("reload")}
-                  >
-                    Reload saved character
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
-          {state.unsavedCount > 0 && !state.dirty && (
-            <div className="manager-notice" role="alert">
-              <p>
-                {state.unsavedCount} character
-                {state.unsavedCount === 1 ? " has" : "s have"} unsaved changes
-                in this tab. Back up the library before closing.
-              </p>
-              <button
-                type="button"
-                onClick={() => navigate(store.firstUnsaved())}
-              >
-                Open unsaved character
-              </button>
-            </div>
-          )}
-          {notice && (
-            <p className="manager-notice" role="status">
-              {notice}
-            </p>
-          )}
-          {!record ? (
-            <>
-              <h1>Your characters</h1>
-              <p className="manager-intro">
-                A field register for your adventures. Characters stay in this
-                browser; keep a backup for travel between devices.
-              </p>
-              <div className="manager-toolbar">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setPreview([]);
-                    open("import");
-                  }}
-                >
-                  Import character
-                </button>
-                <button
-                  className="quiet"
-                  type="button"
-                  onClick={() => void store.add([freshManager()])}
-                >
-                  New blank character
-                </button>
-              </div>
-              <div className="manager-toolbar">
-                <Field
-                  id="manager-find"
-                  label="Find a character"
-                  value={query}
-                  onValue={setQuery}
-                />
-                <Select
-                  id="manager-filter"
-                  label="Show"
-                  value={filter}
-                  options={[
-                    ["active", "Active"],
-                    ["favourites", "Favourites"],
-                    ["archived", "Archived"],
-                    ["all", "All characters"],
-                  ]}
-                  onValue={setFilter}
-                />
-                <Select
-                  id="manager-sort"
-                  label="Sort"
-                  value={sort}
-                  options={[
-                    ["recent", "Recently edited"],
-                    ["name", "Name"],
-                    ["career", "Career"],
-                  ]}
-                  onValue={setSort}
-                />
-              </div>
-              {(() => {
-                const rows = state.records
-                  .filter(
-                    (x) =>
-                      (filter === "all" || filter === "archived"
-                        ? filter === "all" || x.archived
-                        : !x.archived &&
-                          (filter !== "favourites" || x.favourite)) &&
-                      `${x.sheet.name} ${x.sheet.species} ${state.catalogue.careers.find((c: any) => (c.contentId || c.id) === x.sheet.career)?.name || x.sheet.career}`
-                        .toLowerCase()
-                        .includes(query.toLowerCase()),
-                  )
-                  .sort((a, b) =>
-                    sort === "recent"
-                      ? b.updatedAt.localeCompare(a.updatedAt)
-                      : String(
-                          sort === "career" ? a.sheet.career : a.sheet.name,
-                        ).localeCompare(
-                          String(
-                            sort === "career" ? b.sheet.career : b.sheet.name,
-                          ),
-                        ),
-                  );
-                return rows.length ? (
-                  rows.map((x) => (
-                    <article className="manager-row" key={x.id}>
-                      <div>
-                        <h2>{x.sheet.name || "Unnamed character"}</h2>
-                        <div className="manager-meta">
-                          {x.sheet.species || "Species not entered"} ·{" "}
-                          {state.catalogue.careers.find(
-                            (c: any) =>
-                              (c.contentId || c.id) === x.sheet.career,
-                          )?.name || "Career not entered"}{" "}
-                          · level {score(x.sheet.level)}
-                          {x.favourite ? " · Favourite" : ""}
-                          {x.archived ? " · Archived" : ""}
-                          <br />
-                          Edited {date(x.updatedAt)}
-                        </div>
-                      </div>
-                      <button
-                        className="quiet"
-                        type="button"
-                        onClick={() => navigate(x.id)}
-                      >
-                        Open sheet
-                      </button>
-                    </article>
-                  ))
-                ) : (
-                  <div className="manager-empty">
-                    <h2>
-                      {state.records.length
-                        ? "No matching characters"
-                        : "Your register is ready"}
-                    </h2>
-                    <p>
-                      {state.records.length
-                        ? "Try another search or filter."
-                        : "Import a Player or Marijan save, or create a blank character. Every character uses the same sheet and tools."}
-                    </p>
-                  </div>
-                );
-              })()}
-            </>
-          ) : (
-            <>
-              <h1>{sheet.name || "Unnamed character"}</h1>
-              <p className="manager-intro">
-                {sheet.species || "Species not entered"} ·{" "}
-                {result.career?.name || "Career not entered"} · level{" "}
-                {score(sheet.level)}
-                {record.archived ? " · Archived" : ""}
-              </p>
-              <div className="manager-compact-resources">
-                <span>
-                  Wounds {score(record.current.wounds)}/
-                  {score(result.values.wounds)}
-                </span>
-                <span>
-                  Fortune {score(record.current.fortune)}/{score(sheet.fortune)}
-                </span>
-                <span>Fate {score(sheet.fate)}</span>
-                <span>XP {score(sheet.xpUnspent)}</span>
-              </div>
-              {section === "overview" && (
-                <>
-                  <h2>Overview</h2>
-                  {record.portrait && (
-                    <img
-                      className="manager-portrait"
-                      src={record.portrait}
-                      alt={`Portrait of ${sheet.name || "this character"}`}
-                    />
-                  )}
-                  <div className="manager-inline">
-                    <button
-                      className="quiet"
-                      type="button"
-                      onClick={() => portrait.current?.click()}
-                    >
-                      {record.portrait ? "Change portrait" : "Add portrait"}
-                    </button>
-                    {record.portrait && (
-                      <button
-                        className="quiet"
-                        type="button"
-                        onClick={() =>
-                          edit("Removed portrait", (r) => {
-                            delete r.portrait;
-                          })
-                        }
-                      >
-                        Remove portrait
-                      </button>
-                    )}
-                  </div>
-                  <Field
-                    id="manager-name"
-                    label="Character name"
-                    value={sheet.name}
-                    onValue={(value) =>
-                      edit("Renamed character", (r) => {
-                        r.sheet.name = value;
-                      })
-                    }
-                  />
-                  {recordActions}
-                  <dl className="manager-stats">
-                    {KEYS.map((key: string) => (
-                      <div className="manager-stat" key={key}>
-                        <dt>{key}</dt>
-                        <dd>
-                          {score(result.stats[key])}
-                          <small>
-                            {score(sheet.characteristics[key].advances)}{" "}
-                            Advances
-                          </small>
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                  <div className="manager-grid">
-                    <p>
-                      Movement <strong>{score(result.values.movement)}</strong>
-                      <br />
-                      Enc{" "}
-                      <strong>
-                        {score(result.values.enc)} /{" "}
-                        {score(result.values.capacity)}
-                      </strong>
-                    </p>
-                    <p>
-                      Corruption <strong>{score(sheet.corruption)}</strong>
-                      <br />
-                      Sin <strong>{score(sheet.sin)}</strong>
-                    </p>
-                  </div>
-                  <Field
-                    id="manager-appearance"
-                    label="Appearance"
-                    area
-                    value={sheet.appearance}
-                    onValue={(value) =>
-                      edit("Updated appearance", (r) => {
-                        r.sheet.appearance = value;
-                      })
-                    }
-                  />
-                  <Conditions
-                    record={record}
-                    onRemove={(id) =>
-                      edit("Removed Condition", (r) => {
-                        r.conditions = r.conditions.filter(
-                          (c: any) => c.id !== id,
-                        );
-                      })
-                    }
-                  />
-                  {adjustments()}
-                  {result.warnings.length > 0 && (
-                    <details className="manager-entry">
-                      <summary>
-                        <strong>
-                          Calculation notes ({result.warnings.length})
-                        </strong>
-                      </summary>
-                      {result.warnings.map((warning: string, i: number) => (
-                        <p key={i}>{warning}</p>
-                      ))}
-                    </details>
-                  )}
-                </>
-              )}
-              {section === "skills" && (
-                <>
-                  <Field
-                    id="skill-find"
-                    label="Find Skill or Talent"
-                    value={query}
-                    onValue={setQuery}
-                  />
-                  {entryList("skills")}
-                  {entryList("talents")}
-                </>
-              )}
-              {section === "gear" && (
-                <>
-                  <h2>Combat &amp; Gear</h2>
-                  <h3>Soak by location</h3>
-                  <p className="manager-meta">
-                    Toughness Bonus plus active armour. Shield-inclusive totals
-                    apply only while opposing with Dodge/Melee.
-                  </p>
-                  <table className="manager-table">
-                    <thead>
-                      <tr>
-                        <th>Location</th>
-                        <th>AP</th>
-                        <th>Soak</th>
-                        <th>With shield</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        ["head", "Head"],
-                        ["arms", "Arms"],
-                        ["body", "Body"],
-                        ["legs", "Legs"],
-                      ].map(([key, label]) => (
-                        <tr key={key}>
-                          <th scope="row">{label}</th>
-                          <td>{score(result.values[key])}</td>
-                          <td>
-                            {result.values[key] === null
-                              ? "—"
-                              : score(result.tb + result.values[key])}
-                          </td>
-                          <td>
-                            {result.values[key] === null ||
-                            result.values.shield === null
-                              ? "—"
-                              : score(
-                                  result.tb +
-                                    result.values[key] +
-                                    result.values.shield,
-                                )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                  <h3>Attacks</h3>
-                  {result.equipment.weapons.length ? (
-                    result.equipment.weapons.map((x: any) => (
-                      <div className="manager-row" key={x.key}>
-                        <div>
-                          <strong>{x.label}</strong>
-                          <p className="manager-meta">
-                            {x.attackSkill}:{" "}
-                            {x.attackScore === null
-                              ? "Untrained"
-                              : score(x.attackScore)}{" "}
-                            · Damage {x.damage} ·{" "}
-                            {x.qualities || "No listed properties"}
-                          </p>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <p>No active weapons.</p>
-                  )}
-                  <p>
-                    Money:{" "}
-                    <strong>
-                      {formatMoney(
-                        sheet.coins.gc * 240 +
-                          sheet.coins.ss * 12 +
-                          sheet.coins.d,
-                      )}
-                    </strong>
-                  </p>
-                  <button
-                    className="quiet"
-                    type="button"
-                    onClick={() => open("money", { value: 0, note: "" })}
-                  >
-                    Record money transaction
-                  </button>
-                  <p>
-                    Enc {score(result.values.enc)} /{" "}
-                    {score(result.values.capacity)}. Items are packed
-                    automatically; stored belongings and coin weight are
-                    excluded.
-                  </p>
-                  <p className="manager-meta">
-                    {result.equipment.penalties.complete
-                      ? `Load-adjusted Movement ${score(result.equipment.penalties.movement)}; Agility ${score(result.equipment.penalties.agility)}. Armour modifiers: Stealth ${score(result.equipment.penalties.stealth)} SL; Perception ${score(result.equipment.penalties.perception)} SL.`
-                      : "Load effects remain unresolved while carried weights are unknown."}
-                  </p>
-                  {entryList("gear")}
-                </>
-              )}
-              {section === "magic" && (
-                <>
-                  {entryList("magic")}
-                  {entryList("extras")}
-                  <p className="manager-meta">
-                    Casting and situational effects remain recorded references.
-                    Adding knowledge is an explicit GM adjustment; it grants no
-                    automatic equipment or spell effects.
-                  </p>
-                </>
-              )}
-              {section === "advancement" && (
-                <Advancement
-                  catalogue={state.catalogue}
-                  record={record}
-                  result={result}
-                  edit={edit}
-                  award={() => open("award", { amount: 0, note: "" })}
-                  career={() => open("career", { id: "", confirmed: false })}
-                />
-              )}
-              {section === "journal" && (
-                <>
-                  <h2>Journal &amp; history</h2>
-                  <div className="manager-inline">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        open("journal", {
-                          title: "",
-                          text: "",
-                          kind: "Session",
-                        })
-                      }
-                    >
-                      Add journal entry
-                    </button>
-                  </div>
-                  <Field
-                    id="manager-ambition"
-                    label="Personal ambition"
-                    value={sheet.ambition}
-                    area
-                    onValue={(value) =>
-                      edit("Updated personal ambition", (r) => {
-                        r.sheet.ambition = value;
-                      })
-                    }
-                  />
-                  <Field
-                    id="manager-party-ambition"
-                    label="Party ambition"
-                    value={sheet.partyAmbition}
-                    area
-                    onValue={(value) =>
-                      edit("Updated party ambition", (r) => {
-                        r.sheet.partyAmbition = value;
-                      })
-                    }
-                  />
-                  <Field
-                    id="manager-notes"
-                    label="Background & notes"
-                    value={sheet.notes}
-                    area
-                    onValue={(value) =>
-                      edit("Updated background & notes", (r) => {
-                        r.sheet.notes = value;
-                      })
-                    }
-                  />
-                  {[...record.journal].reverse().map((x: any) => (
-                    <details className="manager-entry" key={x.id}>
-                      <summary>
-                        <strong>{x.title}</strong>
-                        <span>{x.kind}</span>
-                      </summary>
-                      <p className="manager-meta">{date(x.at)}</p>
-                      <pre>{x.text}</pre>
-                    </details>
-                  ))}
-                  <h2>Change history</h2>
-                  <ul className="manager-history">
-                    {[...record.history]
-                      .reverse()
-                      .slice(0, 100)
-                      .map((x: any) => (
-                        <li key={x.id}>
-                          <strong>{x.label}</strong>
-                          <div className="manager-meta">{date(x.at)}</div>
-                          <p>{x.detail}</p>
-                        </li>
-                      ))}
-                  </ul>
-                  {record.history.length > 100 && (
-                    <p>
-                      Showing the latest 100 changes. JSON and PDF records
-                      retain the complete history.
-                    </p>
-                  )}
-                  <h2>Historical attachments</h2>
-                  {record.attachments.length ? (
-                    record.attachments.map((x: any, i: number) => (
-                      <p key={i}>
-                        <button
-                          className="quiet"
-                          type="button"
-                          onClick={() =>
-                            download(x.data, `historical-record-${i + 1}.json`)
-                          }
-                        >
-                          {x.name}
-                        </button>
-                      </p>
-                    ))
-                  ) : (
-                    <p>No historical attachments.</p>
-                  )}
-                  <div className="manager-inline">
-                    <button
-                      className="quiet"
-                      type="button"
-                      onClick={() => open("delete")}
-                    >
-                      Permanently delete character
-                    </button>
-                  </div>
-                </>
-              )}
-              {section === "session" && (
-                <>
-                  <h2>Session view</h2>
-                  <div className="manager-grid">{resources()}</div>
-                  <div className="manager-inline">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        open("condition", { name: "", amount: 1, note: "" })
-                      }
-                    >
-                      Record Condition
-                    </button>
-                    <button
-                      className="quiet"
-                      type="button"
-                      onClick={() =>
-                        open("journal", {
-                          title: "",
-                          text: "",
-                          kind: "Session",
-                        })
-                      }
-                    >
-                      Add session note
-                    </button>
-                  </div>
-                  <Conditions
-                    record={record}
-                    onRemove={(id) =>
-                      edit("Removed Condition", (r) => {
-                        r.conditions = r.conditions.filter(
-                          (x: any) => x.id !== id,
-                        );
-                      })
-                    }
-                  />
-                  <h2>Ready attacks</h2>
-                  {result.equipment.weapons
-                    .filter((x: any) => x.placement === "equipped")
-                    .map((x: any) => (
-                      <p key={x.key}>
-                        <strong>{x.label}</strong> · {x.attackSkill}:{" "}
-                        {x.attackScore === null
-                          ? "Untrained"
-                          : score(x.attackScore)}{" "}
-                        · Damage {x.damage}
-                        <br />
-                        {x.qualities}
-                      </p>
-                    ))}
-                  {["skills", "talents", "magic"].map((group) => (
-                    <div key={group}>
-                      {entryList(
-                        group,
-                        (group === "skills"
-                          ? result.skills
-                          : result.entries[group]
-                        ).filter((x: any) => x.favourite),
-                      )}
-                    </div>
-                  ))}
-                </>
-              )}
-            </>
-          )}
-          <p className="manager-meta" role="status">
-            {state.saving ? "Saving…" : state.message}
-          </p>
-        </main>
-        {record && (
-          <aside className="manager-folio" aria-label="Current resources">
-            <div className="manager-folio-inner">
-              <h2>In the field</h2>
-              {resources()}
-              <button
-                className="quiet"
-                type="button"
-                onClick={() =>
-                  open("condition", { name: "", amount: 1, note: "" })
-                }
-              >
-                Record Condition
-              </button>
-              <p>{record.conditions.length} active Condition entries</p>
-            </div>
-          </aside>
-        )}
-      </div>
-      {record && (
-        <nav className="manager-bottom" aria-label="Character actions">
-          <div role="group" aria-label="Edit history">
-            {historyControls}
-          </div>
-          <button
-            className="quiet"
-            type="button"
-            onClick={() => open("resources")}
-          >
-            Resources
-          </button>
-          <button
-            className="quiet"
-            type="button"
-            onClick={() => navigate(null)}
-          >
-            Library
-          </button>
-        </nav>
-      )}
+      <ManagerWorkspace
+        state={state}
+        section={section}
+        view={view}
+        edit={edit}
+        open={open}
+        navigate={(id, section, view) => navigate(id, section, true, view)}
+        profile={profile}
+        applicationMenu={(event) => {
+          menuTrigger.current = event.currentTarget;
+          setMenu(true);
+        }}
+        importFile={importFile}
+        restore={restore}
+        backup={backupLibrary}
+        create={() => void store.add([freshManager()])}
+        duplicate={() => void store.duplicate()}
+        exportPDF={() => void exportPDF()}
+        exportRecord={exportRecord}
+        libraryAction={libraryAction}
+        download={download}
+        historyControls={historyControls}
+        alerts={alerts}
+      />
       {modal && (
         <Dialog
+          trigger={dialogTrigger.current}
           title={
             (
               {
-                import: "Import characters",
+                import: form.restore
+                  ? "Restore library backup"
+                  : "Import characters",
                 award: "Award XP",
                 resource: "Set current resource",
                 fate: "Change Fate",
@@ -1900,7 +638,9 @@ function Manager({ store }: { store: Store }) {
                 money: "Money transaction",
                 delete: "Permanently delete character",
                 reload: "Reload saved character",
-                resources: "Current resources",
+                profile: "Edit profile",
+                adjustments: "Adjust sheet",
+                stat: "Characteristic calculation",
               } as Record<string, string>
             )[modal] || "Character manager"
           }
@@ -1911,7 +651,152 @@ function Manager({ store }: { store: Store }) {
               {error}
             </p>
           )}
-          {modal === "resources" && resources()}
+          {discard && (
+            <div className="manager-notice" role="alert">
+              <p>
+                Discard your unsaved{" "}
+                {modal === "journal" ? "journal" : "profile"} changes?
+              </p>
+              <div className="manager-inline">
+                <button
+                  type="button"
+                  className="quiet"
+                  onClick={() => setDiscard(false)}
+                >
+                  Keep editing
+                </button>
+                <button
+                  type="button"
+                  className="manager-danger-text"
+                  onClick={() => {
+                    portraitEpoch.current++;
+                    setDiscard(false);
+                    setModal("");
+                  }}
+                >
+                  Discard changes
+                </button>
+              </div>
+            </div>
+          )}
+          {modal === "adjustments" && (
+            <AdjustmentEditor
+              record={record}
+              result={result}
+              catalogue={state.catalogue}
+              edit={edit}
+              changeFate={() => open("fate", { value: sheet.fate })}
+            />
+          )}
+          {modal === "stat" && (
+            <>
+              <p>
+                {form.key}: <strong>{score(result.stats[form.key])}</strong>
+              </p>
+              <p>
+                Initial {score(sheet.characteristics[form.key].initial)} +{" "}
+                {score(sheet.characteristics[form.key].advances)} Advances +{" "}
+                {score(sheet.characteristics[form.key].modifier)} modifier.
+                Talent and equipment effects use the character's current
+                calculations.
+              </p>
+              <div className="manager-inline">
+                <button
+                  type="button"
+                  className="quiet"
+                  onClick={() => {
+                    close();
+                    navigate(record.id, "advancement");
+                  }}
+                >
+                  Improve with XP
+                </button>
+                <button
+                  type="button"
+                  className="quiet"
+                  onClick={() => open("adjustments")}
+                >
+                  Adjust sheet
+                </button>
+              </div>
+            </>
+          )}
+          {modal === "profile" && (
+            <form
+              className="manager-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                void submit(() =>
+                  store.edit("Updated profile", (r) => {
+                    for (const key of [
+                      "name",
+                      "appearance",
+                      "ambition",
+                      "partyAmbition",
+                      "notes",
+                    ])
+                      r.sheet[key] = form[key] || "";
+                    if (form.portrait) r.portrait = form.portrait;
+                    else delete r.portrait;
+                  }),
+                );
+              }}
+            >
+              {form.portrait && (
+                <img
+                  className="manager-profile-portrait"
+                  src={form.portrait}
+                  alt="Portrait preview"
+                />
+              )}
+              <div className="manager-inline">
+                <button
+                  type="button"
+                  className="quiet"
+                  onClick={() => portrait.current?.click()}
+                >
+                  {form.portrait ? "Change portrait" : "Add portrait"}
+                </button>
+                {form.portrait && (
+                  <button
+                    type="button"
+                    className="quiet"
+                    onClick={() => updateForm("portrait", "")}
+                  >
+                    Remove portrait
+                  </button>
+                )}
+              </div>
+              <Field
+                id="manager-name"
+                label="Character name"
+                value={form.name || ""}
+                onValue={(value) => updateForm("name", value)}
+              />
+              {[
+                ["appearance", "Appearance"],
+                ["ambition", "Personal ambition"],
+                ["partyAmbition", "Party ambition"],
+                ["notes", "Background & notes"],
+              ].map(([key, label]) => (
+                <Field
+                  key={key}
+                  id={`manager-${key}`}
+                  label={label}
+                  area
+                  value={form[key] || ""}
+                  onValue={(value) => updateForm(key, value)}
+                />
+              ))}
+              <button
+                type="submit"
+                className="manager-primary"
+                disabled={busy || state.saving}
+              >
+                Save profile
+              </button>
+            </form>
+          )}
           {modal === "import" && (
             <>
               <p>
@@ -1929,23 +814,34 @@ function Manager({ store }: { store: Store }) {
               {preview.length > 0 && (
                 <>
                   <ul className="manager-preview">
-                    {preview.map((r, i) => (
-                      <li key={i}>
-                        <strong>{r.sheet.name || "Unnamed character"}</strong>
-                        <br />
-                        {r.sheet.species} · {score(r.sheet.xpUnspent)} XP
-                        available ·{" "}
-                        {KEYS.map(
-                          (key: string) =>
-                            `${key} ${score(calculateManager(state.catalogue, r).stats[key])}`,
-                        ).join(" / ")}
-                        {state.records.some((x) => x.id === r.id) ? (
-                          <strong> · Existing character ID</strong>
-                        ) : (
-                          ""
-                        )}
-                      </li>
-                    ))}
+                    {preview.map((r, i) => {
+                      const projected = calculateManager(state.catalogue, r);
+                      return (
+                        <li key={i}>
+                          <strong>{r.sheet.name || "Unnamed character"}</strong>
+                          <br />
+                          {r.sheet.species || "Species not entered"} ·{" "}
+                          {projected.career?.name || "Career not entered"} ·{" "}
+                          {score(r.sheet.xpUnspent)} XP available
+                          {state.records.some((x) => x.id === r.id) ? (
+                            <strong> · Existing character ID</strong>
+                          ) : (
+                            ""
+                          )}
+                          <details>
+                            <summary>Review Characteristic totals</summary>
+                            <dl className="manager-preview-stats">
+                              {KEYS.map((key: string) => (
+                                <div key={key}>
+                                  <dt>{key}</dt>
+                                  <dd>{score(projected.stats[key])}</dd>
+                                </div>
+                              ))}
+                            </dl>
+                          </details>
+                        </li>
+                      );
+                    })}
                   </ul>
                   <Select
                     id="restore-policy"
@@ -2034,13 +930,36 @@ function Manager({ store }: { store: Store }) {
                       ),
                     );
                   if (modal === "journal")
-                    await store.edit("Journal entry added", (r) =>
-                      addJournal(
-                        r,
-                        form.title || "",
-                        form.text || "",
-                        form.kind || "Session",
-                      ),
+                    await store.edit(
+                      form.id ? "Journal entry updated" : "Journal entry added",
+                      (r) => {
+                        if (!form.title?.trim())
+                          throw Error("Enter a journal title.");
+                        if (form.id) {
+                          const entry = r.journal.find(
+                            (x: any) => x.id === form.id,
+                          );
+                          if (!entry)
+                            throw Error("This entry is no longer available.");
+                          Object.assign(entry, {
+                            title: form.title.trim(),
+                            text: form.text || "",
+                            kind: form.kind || "Session",
+                          });
+                          addEvent(
+                            r,
+                            `Updated journal: ${form.title.trim()}`,
+                            form.kind || "Session",
+                            "journal",
+                          );
+                        } else
+                          addJournal(
+                            r,
+                            form.title,
+                            form.text || "",
+                            form.kind || "Session",
+                          );
+                      },
                     );
                   if (modal === "career")
                     await store.edit("Career changed", (r) =>
@@ -2053,9 +972,22 @@ function Manager({ store }: { store: Store }) {
                     );
                   if (modal === "money")
                     await store.edit("Money transaction", (r) => {
-                      const amount = Number(form.value);
-                      if (!Number.isSafeInteger(amount))
-                        throw Error("Enter whole pennies (negative to spend).");
+                      const coins = [
+                        Number(form.gc || 0),
+                        Number(form.ss || 0),
+                        Number(form.d || 0),
+                      ];
+                      if (
+                        coins.some(
+                          (value) => !Number.isSafeInteger(value) || value < 0,
+                        )
+                      )
+                        throw Error("Enter non-negative whole coins.");
+                      const entered = coins[0] * 240 + coins[1] * 12 + coins[2];
+                      if (!Number.isSafeInteger(entered) || entered <= 0)
+                        throw Error("Enter a positive amount of money.");
+                      const amount =
+                        form.direction === "spend" ? -entered : entered;
                       const total =
                         r.sheet.coins.gc * 240 +
                         r.sheet.coins.ss * 12 +
@@ -2075,7 +1007,15 @@ function Manager({ store }: { store: Store }) {
                       );
                     });
                   if (modal === "acquire")
-                    await store.edit("Equipment acquired", (r) =>
+                    await store.edit("Equipment acquired", (r) => {
+                      if (
+                        form.price === null ||
+                        form.price === undefined ||
+                        form.price === ""
+                      )
+                        throw Error(
+                          "Enter the total price paid, or choose Gift / loot.",
+                        );
                       acquire(
                         state.catalogue,
                         r,
@@ -2083,8 +1023,8 @@ function Manager({ store }: { store: Store }) {
                         Number(form.amount || 1),
                         Number(form.price || 0),
                         form.note || "",
-                      ),
-                    );
+                      );
+                    });
                   if (modal === "entry")
                     await store.edit("Recorded GM adjustment", (r) => {
                       if (!form.note?.trim())
@@ -2230,19 +1170,50 @@ function Manager({ store }: { store: Store }) {
               )}
               {modal === "money" && (
                 <>
-                  <Field
-                    id="money-value"
-                    label="Pennies received (negative to spend)"
-                    numeric
-                    value={form.value}
-                    onValue={(value) => updateForm("value", value)}
+                  <Select
+                    id="money-direction"
+                    label="Transaction"
+                    value={form.direction || "receive"}
+                    options={[
+                      ["receive", "Receive money"],
+                      ["spend", "Spend money"],
+                    ]}
+                    onValue={(value) => updateForm("direction", value)}
                   />
+                  <div className="manager-grid">
+                    {[
+                      ["gc", "Gold crowns"],
+                      ["ss", "Silver shillings"],
+                      ["d", "Brass pennies"],
+                    ].map(([key, label]) => (
+                      <Field
+                        key={key}
+                        id={`money-${key}`}
+                        label={label}
+                        numeric
+                        value={form[key] || 0}
+                        onValue={(value) => updateForm(key, value)}
+                      />
+                    ))}
+                  </div>
                   <Field
                     id="money-note"
                     label="Reason"
-                    value={form.note}
+                    value={form.note || ""}
                     onValue={(value) => updateForm("note", value)}
                   />
+                  <p className="manager-transaction-preview">
+                    Balance after transaction:{" "}
+                    {formatMoney(
+                      sheet.coins.gc * 240 +
+                        sheet.coins.ss * 12 +
+                        sheet.coins.d +
+                        (form.direction === "spend" ? -1 : 1) *
+                          (Number(form.gc || 0) * 240 +
+                            Number(form.ss || 0) * 12 +
+                            Number(form.d || 0)),
+                    )}
+                  </p>
                 </>
               )}
               {modal === "career" && (
@@ -2295,7 +1266,12 @@ function Manager({ store }: { store: Store }) {
                       setForm((old) => ({
                         ...old,
                         id,
-                        price: listedPrice(row) ?? 0,
+                        price: old.gift
+                          ? 0
+                          : listedPrice(row) === null
+                            ? null
+                            : Number(listedPrice(row)) * (old.amount ?? 1),
+                        priceEdited: false,
                         amount: old.amount ?? 1,
                       }));
                     }}
@@ -2351,17 +1327,74 @@ function Manager({ store }: { store: Store }) {
                     }
                     numeric
                     value={form.amount ?? 1}
-                    onValue={(value) => updateForm("amount", value)}
+                    onValue={(value) =>
+                      setForm((old) => ({
+                        ...old,
+                        amount: value,
+                        price:
+                          modal !== "acquire" || old.priceEdited || old.gift
+                            ? old.price
+                            : old.id &&
+                                listedPrice(
+                                  state.catalogue.rows.find(
+                                    (x: any) => x.id === old.id,
+                                  ),
+                                ) !== null
+                              ? Number(
+                                  listedPrice(
+                                    state.catalogue.rows.find(
+                                      (x: any) => x.id === old.id,
+                                    ),
+                                  ),
+                                ) * Number(value)
+                              : null,
+                      }))
+                    }
                   />
                   {modal === "acquire" && (
                     <>
-                      <Field
-                        id="entry-price"
-                        label="Total price paid (pennies; 0 for loot or gifts)"
-                        numeric
-                        value={form.price || 0}
-                        onValue={(value) => updateForm("price", value)}
-                      />
+                      <label className="manager-check">
+                        <input
+                          type="checkbox"
+                          checked={!!form.gift}
+                          onChange={(e) =>
+                            setForm((old) => ({
+                              ...old,
+                              gift: e.target.checked,
+                              price: e.target.checked ? 0 : null,
+                              priceEdited: false,
+                            }))
+                          }
+                        />
+                        Gift / loot (no payment)
+                      </label>
+                      {!form.gift && (
+                        <Field
+                          id="entry-price"
+                          label="Total price paid (pennies)"
+                          numeric
+                          nullable
+                          value={form.price ?? null}
+                          onValue={(value) =>
+                            setForm((old) => ({
+                              ...old,
+                              price: value,
+                              priceEdited: true,
+                            }))
+                          }
+                        />
+                      )}
+                      <p className="manager-transaction-preview">
+                        Balance after acquisition:{" "}
+                        {form.price === null || form.price === undefined
+                          ? "Enter the transaction price"
+                          : formatMoney(
+                              sheet.coins.gc * 240 +
+                                sheet.coins.ss * 12 +
+                                sheet.coins.d -
+                                Number(form.price),
+                            )}
+                      </p>
                       <p className="manager-meta">
                         Listed unit price:{" "}
                         {form.id
@@ -2400,7 +1433,15 @@ function Manager({ store }: { store: Store }) {
                   ? "Saving…"
                   : modal === "career"
                     ? "Change Career"
-                    : "Record change"}
+                    : modal === "acquire"
+                      ? "Acquire equipment"
+                      : modal === "money"
+                        ? form.direction === "spend"
+                          ? "Spend money"
+                          : "Receive money"
+                        : modal === "journal" && form.id
+                          ? "Save entry"
+                          : "Record change"}
               </button>
             </form>
           )}
@@ -2446,49 +1487,6 @@ function Manager({ store }: { store: Store }) {
   );
 }
 
-function Conditions({
-  record,
-  onRemove,
-}: {
-  record: any;
-  onRemove: (id: string) => void;
-}) {
-  return (
-    <section>
-      <h2>Active Conditions</h2>
-      {record.conditions.length ? (
-        record.conditions.map((x: any) => (
-          <div className="manager-row" key={x.id}>
-            <div>
-              <strong>
-                {x.name} ×{x.amount}
-              </strong>
-              <p>{x.note}</p>
-              <button
-                className="quiet"
-                type="button"
-                onClick={() =>
-                  requestReference({ kind: "condition", name: x.name })
-                }
-              >
-                Find Condition rule
-              </button>
-            </div>
-            <button
-              className="quiet"
-              type="button"
-              onClick={() => onRemove(x.id)}
-            >
-              Remove Condition
-            </button>
-          </div>
-        ))
-      ) : (
-        <p>No Conditions recorded.</p>
-      )}
-    </section>
-  );
-}
 function CataloguePicker({
   catalogue,
   group,
@@ -2531,6 +1529,29 @@ function CataloguePicker({
         ]}
         onValue={onValue}
       />
+      {selected && (
+        <div className="manager-catalogue-preview">
+          <strong>{selected.name}</strong>
+          <p>
+            {entryDescription(catalogue, selected) ||
+              "No description recorded."}
+          </p>
+          {selected.source && (
+            <button
+              type="button"
+              className="manager-text"
+              onClick={() =>
+                requestReference({
+                  name: selected.name,
+                  book: selected.source.book,
+                })
+              }
+            >
+              {entrySource(catalogue, selected)}
+            </button>
+          )}
+        </div>
+      )}
       {rows.length > 150 && (
         <p className="manager-meta">
           Showing 150 of {rows.length} matches. Narrow the search to find
@@ -2538,248 +1559,5 @@ function CataloguePicker({
         </p>
       )}
     </>
-  );
-}
-function Advancement({
-  catalogue,
-  record,
-  result,
-  edit,
-  award,
-  career,
-}: {
-  catalogue: any;
-  record: any;
-  result: any;
-  edit: (label: string, change: (r: any) => void, detail?: string) => void;
-  award: () => void;
-  career: () => void;
-}) {
-  const [type, setType] = useState("char"),
-    [name, setName] = useState("WS"),
-    [amount, setAmount] = useState(5),
-    [endeavour, setEndeavour] = useState(false),
-    [query, setQuery] = useState("");
-  const [trapping, setTrapping] = useState(""),
-    [trappingReason, setTrappingReason] = useState("");
-  const q: any = quoteManager(catalogue, record, type, name, amount);
-  let names: string[] =
-    type === "char"
-      ? KEYS
-      : type === "skill"
-        ? catalogue.rows
-            .filter((x: any) => x.collection === "skills")
-            .map((x: any) => x.name)
-        : type === "talent"
-          ? careerTalentOptions(
-              result.R,
-              result.context,
-              Math.min(4, record.sheet.level),
-            )
-          : [];
-  names = [...new Set(names)];
-  const matches = names.filter((x) =>
-    x.toLowerCase().includes(query.toLowerCase()),
-  );
-  return (
-    <section>
-      <h2>Advancement</h2>
-      <p>
-        <strong>{score(record.sheet.xpUnspent)} XP available</strong> ·{" "}
-        {score(record.sheet.xpSpent)} spent · {score(result.xpTotal)} total
-      </p>
-      <div className="manager-inline">
-        <button type="button" onClick={award}>
-          Award XP
-        </button>
-        <button className="quiet" type="button" onClick={career}>
-          Change Career
-        </button>
-      </div>
-      <p>
-        Career tracker: {score(record.sheet.tracker)} / 36 total boxes. Current
-        level: {score(result.derived.ticks)} /{" "}
-        {[10, 12, 14, 0][record.sheet.level - 1] ?? "—"} boxes.
-      </p>
-      <details className="manager-entry">
-        <summary>
-          <strong>Career Skill specialisations</strong>
-        </summary>
-        <p>
-          Choose the specialisations used for Career advancement eligibility.
-        </p>
-        {careerSkillSlots(
-          result.R,
-          result.context,
-          Math.min(4, record.sheet.level),
-        )
-          .filter(
-            (slot: any) =>
-              ruleOptions(result.R, slot.raw, "skill", result.context).length >
-              1,
-          )
-          .map((slot: any) => (
-            <Select
-              key={slot.key}
-              id={`manager-slot-${slot.key}`}
-              label={`Level ${slot.level}: ${slot.raw}`}
-              value={slot.name}
-              options={ruleOptions(result.R, slot.raw, "skill", result.context)}
-              onValue={(value) =>
-                edit("Updated Career specialisation", (r) => {
-                  r.context.skillChoices = {
-                    ...r.context.skillChoices,
-                    [slot.key]: value,
-                  };
-                })
-              }
-            />
-          ))}
-      </details>
-      <div className="manager-form">
-        <Select
-          id="advance-type"
-          label="Purchase type"
-          value={type}
-          options={[
-            ["char", "Characteristic"],
-            ["skill", "Skill"],
-            ["talent", "Talent"],
-            ["promotion", "Career promotion"],
-          ]}
-          onValue={(value) => {
-            setType(value);
-            setName(value === "char" ? "WS" : "");
-            setQuery("");
-          }}
-        />
-        {type !== "promotion" && (
-          <>
-            {type !== "char" && (
-              <Field
-                id="advance-find"
-                label="Find advancement"
-                value={query}
-                onValue={setQuery}
-              />
-            )}
-            <Select
-              id="advance-name"
-              label="Advance"
-              value={name}
-              options={[["", "Choose an advance"], ...matches.slice(0, 200)]}
-              onValue={setName}
-            />
-            {matches.length > 200 && (
-              <p>Narrow your search to see more options.</p>
-            )}
-          </>
-        )}
-        {["char", "skill"].includes(type) && (
-          <Select
-            id="advance-amount"
-            label="Advance amount"
-            value={amount}
-            options={[
-              [5, "+5"],
-              [1, "+1 (Appendix II)"],
-            ]}
-            onValue={(value) => setAmount(Number(value))}
-          />
-        )}
-        {type === "promotion" && (
-          <label className="manager-check">
-            <input
-              type="checkbox"
-              checked={endeavour}
-              onChange={(e) => setEndeavour(e.target.checked)}
-            />
-            Advance Career Endeavour completed (core p. 196)
-          </label>
-        )}
-        <p aria-live="polite">
-          {q.cost === null
-            ? ""
-            : `${score(q.cost)} XP${q.inCareer ? " · Career advance" : ""}${q.tick ? " · earns a tracker box" : ""}`}
-          {q.error ? ` · ${q.error}` : ""}
-        </p>
-        <button
-          type="button"
-          disabled={!!q.error || (type === "promotion" && !endeavour)}
-          onClick={() =>
-            edit("Purchased advancement", (r) =>
-              purchaseAdvance(catalogue, r, type, name, amount, endeavour),
-            )
-          }
-        >
-          Purchase{" "}
-          {type === "promotion"
-            ? "Career promotion"
-            : `${name}${["char", "skill"].includes(type) ? ` +${amount}` : ""}`}
-        </button>
-      </div>
-      <p className="manager-meta">
-        Prices, limits, and tracker grouping use the shared Fifth Edition
-        engine. Other GM-approved changes belong in the sheet’s adjustments.
-        Existing paid purchases are retained in the history; use Undo for
-        immediate corrections.
-      </p>
-      <details className="manager-entry">
-        <summary>
-          <strong>Record a next-level Career Trapping</strong>
-        </summary>
-        <p>
-          Record how it was acquired to earn a tracker box. This records
-          acquisition without adding equipment or charging money again.
-        </p>
-        <Select
-          id="manager-trapping"
-          label="Next-level Trapping"
-          value={trapping}
-          options={[
-            ["", "Choose a Trapping"],
-            ...(result.career?.levels[record.sheet.level]?.trappings || []).map(
-              (name: string, index: number) => [String(index), name],
-            ),
-          ]}
-          onValue={setTrapping}
-        />
-        <Field
-          id="manager-trapping-reason"
-          label="How it was obtained"
-          value={trappingReason}
-          onValue={setTrappingReason}
-        />
-        <button
-          className="quiet"
-          type="button"
-          disabled={trapping === "" || !trappingReason.trim()}
-          onClick={() =>
-            edit("Career Trapping recorded", (r) =>
-              creditTrapping(catalogue, r, Number(trapping), trappingReason),
-            )
-          }
-        >
-          Record Trapping acquisition
-        </button>
-      </details>
-      <h3>Manager purchases</h3>
-      {record.purchases.length ? (
-        <ul className="manager-history">
-          {[...record.purchases].reverse().map((p: any) => (
-            <li key={p.id}>
-              {p.name}
-              {p.amount ? ` +${p.amount}` : ""} · {score(p.cost)} XP ·{" "}
-              {date(p.at)}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>
-          No purchases recorded in the manager. Earlier creation records remain
-          historical attachments.
-        </p>
-      )}
-    </section>
   );
 }

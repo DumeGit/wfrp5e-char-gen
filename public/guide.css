@@ -4856,38 +4856,38 @@ dialog.book-search-panel .search-panel-heading {
 /* Imperial field ledger: one palette shared by the shell, menus and sheet. */
 :root[data-theme="imperial-field-ledger"],
 :root:has(body > [data-theme="imperial-field-ledger"]) {
-  --color-world: #252d21;
-  --color-leather: #35402d;
-  --color-leather-deep: #252d21;
-  --color-panel: #35402d;
+  --color-world: #26382d;
+  --color-leather: #304632;
+  --color-leather-deep: #26382d;
+  --color-panel: #304632;
   --surface-panel-texture: url(/assets/panel-textures/field-canvas.svg);
   --surface-panel-texture-size: 240px 240px;
-  --color-leather-raised: #48553c;
+  --color-leather-raised: #42563a;
   --color-on-leather: #f1eedb;
   --color-on-leather-muted: #c4cbb4;
   --color-line-dark: #858f73;
-  --color-paper: #e9e4cf;
-  --color-paper-raised: #f6f2e3;
-  --color-paper-recessed: #dcdcc6;
-  --color-paper-hover: #e2e4d1;
-  --color-ink: #25291f;
-  --color-muted: #555d48;
-  --color-line: #949a7f;
-  --color-line-soft: #b8bca2;
-  --color-gold: #b6a16a;
+  --color-paper: #f4f1e7;
+  --color-paper-raised: #fffdf6;
+  --color-paper-recessed: #e7eade;
+  --color-paper-hover: #e4e8d9;
+  --color-ink: #232b25;
+  --color-muted: #5b645b;
+  --color-line: #7f8977;
+  --color-line-soft: #d4d8cc;
+  --color-gold: #aa9056;
   --color-gold-light: #e6d3a1;
   --color-gold-dark: #706039;
-  --color-crimson: #3d5031;
-  --color-crimson-hover: #293c20;
+  --color-crimson: #26382d;
+  --color-crimson-hover: #3c523f;
   --color-on-crimson: #fbf6df;
   --color-focus: #655019;
   --color-focus-on-dark: #ead19b;
-  --color-title-veil: #252d21d9;
-  --color-search-veil: #252d21d9;
+  --color-title-veil: #26382dd9;
+  --color-search-veil: #26382dd9;
   --color-dialog-backdrop: #121c14cc;
   --color-chapter-initial: #f1eedb;
   --surface-working-leaf: var(--color-paper);
-  --shadow-working-leaf: inset 0 0 24px #35402d0a;
+  --shadow-working-leaf: inset 0 0 24px #3046320a;
 }
 
 /* Black Banner component skin. Feature CSS continues to own behaviour/layout. */

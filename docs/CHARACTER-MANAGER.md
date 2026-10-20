@@ -1,6 +1,8 @@
 # Character manager — Imperial field ledger
 
-The `/manager/` route adds a local play sheet and character library alongside the three creators. The user selected Imperial field ledger on 19 October 2026: military olive framing, parchment, aged brass and subtle static canvas. It reuses the emblem/fonts, shared Search and native mobile menu, joined desktop panels and compact navigation.
+Implemented redesign: [Character manager redesign plan](CHARACTER-MANAGER-REDESIGN-PLAN.md), approved with the existing shared header retained.
+
+The `/manager/` route adds a local play sheet and character library alongside the three creators. The user selected Imperial field ledger on 19 October 2026: military olive framing, parchment, aged brass and subtle static canvas. The 20 October redesign keeps the same CreatorFrame header, emblem, Search and native menu as the other modes, with a clean paper workspace below it. Dedicated menu/search portal slots fix their visual and keyboard order across modes.
 
 ## Characters and imports
 
@@ -24,15 +26,17 @@ Individual JSON and complete-library backups retain the manager data. Restore pr
 
 | Section | Implemented behavior |
 | --- | --- |
-| Overview | Identity/portrait, Characteristics, resources/load, appearance, Conditions and GM adjustments |
-| Skills & Talents | Search, totals/ranks, descriptions/source access, manual totals and pinning |
-| Combat & Gear | Weapon Damage/attack Skill, location AP/Soak, conditional shield totals, acquisitions, money, quantities, placement and automatic packing |
-| Magic & Faith | Known magic/prayers/Cants, Traits/runes/techniques, canonical descriptions, custom references and learning-Lore records |
-| Advancement | XP awards, shared +1/+5/Talent quotes, tracker bands, next-level Trapping credits, promotion and Career changes |
-| Journal & history | Background/ambitions, typed session/downtime/companion/business notes, change history and historical attachments |
-| Session view | Resource actions, Conditions, equipped attacks and pinned Skills/Talents/magic |
+| Play | Readable Characteristics with calculation details, equipped attacks, protection, Conditions, favourite abilities and field facts |
+| Abilities | Skills/Talents/magic/prayers/other references, owned-entry search, expandable rules/sources and row-level favourites |
+| Gear | Quantity/placement/load, filtered equipment, explicit receive/spend money in gc/ss/d, and acquisition previews |
+| Advance | XP awards, browseable +1/+5/Talent rows with before/after scores/cost/eligibility, tracker, Trapping credits and Career progression |
+| Journal | Readable notes with explicit editing, character background/ambitions, filtered/paged complete audit and original attachments |
 
-Current Wounds/Fortune can be changed independently of maximums. Fate changes explain their permanent effect before application. Above-maximum current values are preserved and reported. Resource controls do not roll combat or recover Conditions automatically. Desktop resources share the menu's green material; compact layouts use the shared menu, section selector and Undo/Redo/Resources/Library controls. Names and enlarged text wrap down to 320px.
+The default Play screen combines the former Overview and Session view. Old section links still resolve to their corresponding destinations. Desktop navigation uses five horizontal destinations; phones use the same five labels in a bottom bar. There is no permanent action rail or resource folio. One Wounds/Fortune control band appears on each character screen, and Fate is a field fact with a deliberate permanent-change editor. Current values remain separate from maximums; above-maximum values are preserved and reported. Resource controls do not roll combat or recover Conditions automatically.
+
+Edit profile uses a draft and an explicit Save profile action. Closing a changed profile or journal draft asks whether to discard it. Portrait changes join the same profile save. Character More groups exports, duplicate/archive/favourite, Adjust sheet and deliberate deletion; whole-library backup/restore live in the library/application menu. Adjust sheet uses grouped disclosures rather than a form on the play surface. Local searches, filters and expanded rows survive destination changes; ability improvement and history links open the relevant destination/view. Browser Back/Forward restores destination/view parameters. Routine saves use one status indicator; failures retain the existing recovery banner and unsaved-copy actions.
+
+Equipment acquisition suggests quantity × listed unit price until a custom total is entered; unknown prices require an explicit amount or Gift / loot. The actual entered total is debited once. Money transactions use non-negative denominations and a separate Receive/Spend choice, with a balance preview. Unknown weights remain unknown. Normal scores retain compact grids; unusually long manual totals use wider cells and never split a number over lines. Names and enlarged text reflow down to 320px.
 
 All characters have explicit GM adjustments for base values/Advances, Species/Career, resource overrides, XP, money, tracker and custom/catalogue entries. These are recorded separately from paid purchases. Unknown weights/AP stay unresolved. Stored gear and coin weight are excluded from load; automatic packing reuses the creator calculation. Equipment acquisition debits the entered total price in pennies once (zero for gifts/loot); unknown listed prices remain unknown. Removal gives no automatic refund. Ordinary money transactions support agreed selling without invented haggling.
 
@@ -56,15 +60,27 @@ The common supplied editable PDF sheet receives manager branding, current Wounds
 | `src/engine/manager/model.mjs` | Validation/normalization, calculation projection, imports/backups and commands |
 | `src/features/manager/database.ts` | Dexie schema, revision checks and atomic restore |
 | `src/features/manager/store.ts` | Serialized saves, character sessions, conflict recovery and history |
-| `src/features/manager/Manager.tsx` | Native React library, sheet, dialogs and responsive controls |
+| `src/features/manager/Manager.tsx` | Import/export and dialog orchestration using the existing store commands |
+| `ManagerWorkspace.tsx`, `ResourceBand.tsx`, `ui.tsx` | Workspace, navigation, one resource controller and shared native dialogs/action menus |
+| `CharacterLibrary.tsx`, `PlaySheet.tsx`, `CharacterScreens.tsx`, `EntryList.tsx` | Roster, play sheet, ability/equipment lists and details |
+| `AdvancementScreen.tsx`, `JournalScreen.tsx`, `AdjustmentEditor.tsx` | XP/Career, journal/audit and grouped manual corrections |
 | `src/features/manager/export.ts` | Common PDF adapter and complete manager appendix |
 | `src/styles/design-tokens.css`, `manager.css` | Semantic theme and feature geometry respectively |
 
-The field-canvas SVG is original project vector work, with static weave strokes totalling 0.15 strength. Menu/folio/header share it; it remains visible with reduced motion and is omitted from print. Dexie's Apache licence/notice ship under `public/assets/` and are linked in Credits. The existing offline build inventories manager route/chunks/assets. No new game-data source or duplicate book catalogue is introduced.
+The field-canvas SVG is original project vector work, with static weave strokes totalling 0.15 strength. The header and shared compact menu retain it; the paper working surface is texture-free. It remains visible with reduced motion and is omitted from print. Dexie's Apache licence/notice ship under `public/assets/` and are linked in Credits. The existing offline build inventories manager route/chunks/assets. No new game-data source or duplicate book catalogue is introduced.
 
 ## Verification
 
-Verified locally on 19 October 2026:
+Redesign verification on 20 October 2026:
+
+- Production build and 28 book-pack/generated-content checks passed. Syntax/import checks covered 114 application modules; TypeScript and all 11 store tests passed. All 17 focused manager/PWA lifecycle tests passed, including PDF output, imported totals, advancement atomicity and update protection. The final 105-file offline inventory passed.
+- All 28 manager browser checks passed on Chromium desktop and emulated phone. Coverage includes explicit profile saving/draft protection, retained filters and expanded entries, contextual XP navigation, browser Back, row purchases, money denominations, quantity/price previews, gift acquisitions, backups/replacement, conflict recovery, exports, independent Undo and single-line large scores at 320/390/1440px. Header geometry and menu-before-search visual/DOM order passed across all four modes.
+- All 14 manager browser cases also passed on emulated WebKit phone, including the desktop-width menu checks. Explicit opener tracking fixes WebKit's different click-focus behavior; application menus and profile dialogs return focus to the correct trigger. Desktop application-menu file actions use a compact two-column arrangement, while the shared phone menu retains full-width actions.
+- The shared interface/PWA production run passed 79 checks and skipped six; three failures were test-locator assumptions, corrected in the passing manager follow-up above. All 20 development checks passed, followed by both manager development cases after final layout changes. All 15 tablet checks passed.
+- Sixteen axe scans (library, five destinations, profile and application menu on Chromium desktop and emulated WebKit phone) passed without violations after correcting the desktop menu save-status contrast. Screenshots were inspected for actual hierarchy, compactness and first useful viewport, rather than treating accessibility/overflow checks as design approval.
+- Scoped formatting with the repository's documented `--end-of-line auto` diagnostic and `git diff --check` passed. No repository-wide line-ending policy or unrelated files were reformatted. Physical phones, software keyboards and real-device safe areas remain unverified.
+
+Initial implementation verification on 19 October 2026 (historical baseline):
 
 - Production build, 28 book-pack checks, generated content, types, all 11 store checks and the complete 105-file offline inventory passed.
 - The 549-test Node run initially passed 546. One obsolete privacy-copy assertion was updated; two offline tests had read `out/` during a concurrent rebuild. All eight affected notice/offline tests passed against stable output. A later 38-case manager/High Elf/PWA regression run passed, including the final update guard behavior.

@@ -28,7 +28,7 @@ const modes = {
   },
   manager: {
     theme: "imperial-field-ledger",
-    color: "#252d21",
+    color: "#26382d",
     name: "The Field Ledger",
     caption: "FIFTH EDITION · CHARACTER MANAGER",
     oath: "KEEP THE RECORD",
@@ -79,7 +79,10 @@ export function CreatorFrame({
         </div>
         <div className="masthead-actions">
           <span className="edition">{config.oath}</span>
-          <div id="compact-tools" />
+          <div id="compact-tools">
+            <div id="compact-menu" />
+            <div id="compact-search" />
+          </div>
         </div>
         <ReferenceSearch />
       </header>

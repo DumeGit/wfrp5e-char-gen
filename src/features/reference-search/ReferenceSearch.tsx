@@ -157,7 +157,7 @@ export function ReferenceSearch() {
       phone = window.matchMedia("(max-width: 760px)");
     const resize = () => {
       setCompactTarget(
-        compact.matches ? document.querySelector("#compact-tools") : null,
+        compact.matches ? document.querySelector("#compact-search") : null,
       );
       setMobile(phone.matches);
     };

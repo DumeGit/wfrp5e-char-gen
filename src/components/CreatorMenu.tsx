@@ -9,6 +9,7 @@ export function CreatorMenu({
   onClose,
   children,
   status,
+  trigger,
 }: {
   mode: CreatorMode;
   verify?: boolean;
@@ -16,6 +17,7 @@ export function CreatorMenu({
   onClose: () => void;
   children: ReactNode;
   status?: string;
+  trigger?: HTMLElement | null;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLElement | null>(null);
@@ -23,9 +25,11 @@ export function CreatorMenu({
   useEffect(() => {
     const node = dialog.current;
     if (open && node && !node.open) {
-      opener.current = document.querySelector<HTMLElement>(
-        '.mobile-menu-launcher[aria-controls="creator-menu"]',
-      );
+      opener.current =
+        trigger ||
+        document.querySelector<HTMLElement>(
+          '.mobile-menu-launcher[aria-controls="creator-menu"]',
+        );
       node.showModal();
     }
     if (!open && node?.open) {

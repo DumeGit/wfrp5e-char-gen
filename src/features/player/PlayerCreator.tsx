@@ -91,7 +91,7 @@ function PlayerSession({ store }: { store: PlayerStore }) {
     };
     update();
     media.addEventListener("change", update);
-    setSlot(document.getElementById("compact-tools"));
+    setSlot(document.getElementById("compact-menu"));
     const persist = () => store.persist();
     window.addEventListener("wfrp-before-update", persist);
     const toggle = (event: Event) => store.toggle(event);

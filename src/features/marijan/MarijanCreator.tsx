@@ -201,7 +201,7 @@ function MarijanSession({
     };
     change();
     media.addEventListener("change", change);
-    setMenuTarget(document.getElementById("compact-tools"));
+    setMenuTarget(document.getElementById("compact-menu"));
     return () => {
       active.current = false;
       task.current++;

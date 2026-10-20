@@ -91,7 +91,10 @@ test("manager hydrates and edits native fields without development warnings @ren
   await page
     .getByRole("button", { name: "New blank character", exact: true })
     .click();
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
   await page.locator("#manager-name").fill("Development manager");
+  await page.getByRole("button", { name: "Save profile", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(page.locator("main").getByRole("status").last()).toContainText(
     "Saved",
   );
