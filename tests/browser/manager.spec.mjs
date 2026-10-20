@@ -36,9 +36,9 @@ async function applicationMenu(page) {
   });
   if (await compact.isVisible()) await compact.click();
   else
-    await page
-      .getByRole("button", { name: "Application menu", exact: true })
-      .click();
+    await expect(
+      page.getByRole("complementary", { name: "Application menu" }),
+    ).toBeVisible();
 }
 async function importData(page, data) {
   await page
@@ -269,7 +269,7 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
-    await expect(page.locator(".manager-rail,.manager-folio")).toHaveCount(0);
+    await expect(page.locator(".manager-folio")).toHaveCount(0);
     await expect(page.locator(".manager-resource-band")).toHaveCount(1);
     await expect(
       page
@@ -287,17 +287,57 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
       );
     expect(fits).toBe(true);
     if (width > 1000) {
-      await page
-        .getByRole("button", { name: "Application menu", exact: true })
+      const rail = page.getByRole("complementary", {
+        name: "Application menu",
+      });
+      await expect(rail).toBeVisible();
+      await expect(rail.getByRole("link")).toHaveCount(4);
+      await expect(
+        rail.getByRole("button", { name: "Character library", exact: true }),
+      ).toBeVisible();
+      await expect(
+        rail.getByRole("button", { name: "Import character", exact: true }),
+      ).toBeVisible();
+      await expect(
+        rail.getByRole("button", { name: "Install app", exact: true }),
+      ).toBeVisible();
+      const joined = await page
+        .locator(".manager-rail")
+        .evaluate(
+          (el) =>
+            Math.abs(
+              el.getBoundingClientRect().right -
+                document.querySelector(".manager-main").getBoundingClientRect()
+                  .left,
+            ) < 1,
+        );
+      expect(joined).toBe(true);
+      await rail
+        .getByRole("button", { name: "Restore library backup", exact: true })
         .click();
+      await expect(
+        page.getByRole("dialog", {
+          name: "Restore library backup",
+          exact: true,
+        }),
+      ).toBeVisible();
       await page.keyboard.press("Escape");
       await expect(
-        page.getByRole("button", { name: "Application menu", exact: true }),
+        rail.getByRole("button", {
+          name: "Restore library backup",
+          exact: true,
+        }),
       ).toBeFocused();
     } else {
+      await expect(page.locator(".manager-rail")).not.toBeVisible();
       await page.getByRole("button", { name: "Open manager menu" }).click();
       await expect(
         page.getByRole("dialog", { name: "Manager menu", exact: true }),
+      ).toBeVisible();
+      await expect(
+        page
+          .getByRole("dialog")
+          .getByRole("button", { name: "Install app", exact: true }),
       ).toBeVisible();
       await page.keyboard.press("Escape");
       await expect(

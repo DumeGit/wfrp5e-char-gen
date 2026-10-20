@@ -58,7 +58,7 @@ export function CharacterLibrary({
             Open a sheet and return to the adventure.
           </p>
         </div>
-        <div className="manager-inline">
+        <div className="manager-inline manager-library-actions">
           <button
             type="button"
             className="manager-primary"

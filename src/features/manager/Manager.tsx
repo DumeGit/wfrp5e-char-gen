@@ -380,12 +380,29 @@ function Manager({ store }: { store: Store }) {
       <button
         className="quiet"
         type="button"
+        onClick={() => void store.add([freshManager()])}
+      >
+        New blank character
+      </button>
+      <button
+        className="quiet"
+        type="button"
         onClick={() =>
           download(backup(store.allRecords()), "character-library-backup.json")
         }
         disabled={state.saving}
       >
         Back up library
+      </button>
+      <button
+        className="quiet"
+        type="button"
+        onClick={() => {
+          setPreview([]);
+          open("import", { restore: true });
+        }}
+      >
+        Restore library backup
       </button>
       {record && (
         <>
@@ -567,6 +584,7 @@ function Manager({ store }: { store: Store }) {
             className="mobile-menu-launcher quiet"
             type="button"
             aria-label="Open manager menu"
+            aria-haspopup="dialog"
             aria-controls="creator-menu"
             aria-expanded={menu}
             onClick={(event) => {
@@ -592,6 +610,9 @@ function Manager({ store }: { store: Store }) {
         status={state.message}
         trigger={menuTrigger.current}
       >
+        <button className="quiet" type="button" onClick={() => navigate(null)}>
+          Character library
+        </button>
         {menuActions}
       </CreatorMenu>
       <ManagerWorkspace
@@ -602,10 +623,8 @@ function Manager({ store }: { store: Store }) {
         open={open}
         navigate={(id, section, view) => navigate(id, section, true, view)}
         profile={profile}
-        applicationMenu={(event) => {
-          menuTrigger.current = event.currentTarget;
-          setMenu(true);
-        }}
+        verify={verify}
+        menuActions={menuActions}
         importFile={importFile}
         restore={restore}
         backup={backupLibrary}

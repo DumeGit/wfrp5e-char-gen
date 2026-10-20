@@ -1,4 +1,5 @@
-import { useEffect, useState, type ReactNode, type MouseEvent } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import { ModeNavigation } from "../../components/ModeNavigation";
 import { ActionMenu, type Edit } from "./ui";
 import { CharacterLibrary } from "./CharacterLibrary";
 import { PlaySheet } from "./PlaySheet";
@@ -24,7 +25,8 @@ export function ManagerWorkspace({
   open,
   navigate,
   profile,
-  applicationMenu,
+  verify,
+  menuActions,
   importFile,
   restore,
   backup,
@@ -44,7 +46,8 @@ export function ManagerWorkspace({
   open: (kind: string, values?: Record<string, any>) => void;
   navigate: (id: string | null, section?: string, view?: string) => void;
   profile: () => void;
-  applicationMenu: (event: MouseEvent<HTMLButtonElement>) => void;
+  verify: boolean;
+  menuActions: ReactNode;
   importFile: () => void;
   restore: () => void;
   backup: () => void;
@@ -85,25 +88,38 @@ export function ManagerWorkspace({
   };
   return (
     <div className={`manager-workspace ${record ? "" : "manager-library"}`}>
+      <aside className="rail manager-rail" aria-label="Application menu">
+        <ModeNavigation mode="manager" verify={verify} />
+        <nav
+          className="manager-library-navigation"
+          aria-label="Manager library"
+        >
+          <button
+            type="button"
+            aria-current={!record ? "page" : undefined}
+            onClick={() => navigate(null)}
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M4 4h6v16H4zM10 4h5v16h-5zM17 4l4 15-4 1-4-15" />
+            </svg>
+            Character library
+          </button>
+        </nav>
+        <div className="manager-rail-actions">{menuActions}</div>
+        <p className="manager-rail-note">
+          Characters save on this device. Back up your library to keep a copy.
+        </p>
+      </aside>
       <main id="creator-main" className="manager-main">
         <div className="manager-workspace-tools">
-          <div className="manager-inline">
-            <button
-              className="manager-text"
-              type="button"
-              onClick={() => navigate(null)}
-              aria-current={!record ? "page" : undefined}
-            >
-              Character library
-            </button>
-            <button
-              className="manager-text manager-desktop-menu"
-              type="button"
-              onClick={applicationMenu}
-            >
-              Application menu
-            </button>
-          </div>
+          <button
+            className="manager-mobile-library"
+            type="button"
+            onClick={() => navigate(null)}
+            aria-current={!record ? "page" : undefined}
+          >
+            Character library
+          </button>
           <p className="manager-save-status" role="status">
             {state.saving
               ? "Saving…"
