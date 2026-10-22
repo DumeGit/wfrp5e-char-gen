@@ -25,6 +25,7 @@ import {
 import { sacredMarks, LORE_WINDS } from "../../engine/gm/lustria.mjs";
 import { trollModifiers } from "../../engine/gm/tribes.mjs";
 import { appearanceSpecies } from "../../engine/gm/appearance.mjs";
+import { DISTINGUISHING_FEATURES } from "../../engine/gm/distinguishing-features.mjs";
 import { lootLines } from "../../engine/gm/loot.mjs";
 import { LootSection } from "./Loot";
 import { gmCantBook } from "../../engine/gm/cants.mjs";
@@ -352,8 +353,7 @@ export function Starting() {
                 />
                 <Button
                   aria-label="Roll appearance"
-                  title="Roll appearance; replaces the description"
-                  disabled={!appearanceSpecies(R, r.profile).length}
+                  title="Roll appearance and a feature; replaces the description"
                   onClick={rollAppearance}
                 >
                   <DiceIcon />
@@ -361,9 +361,37 @@ export function Starting() {
               </div>
               <small id="gm-appearance-help" className="gm-small">
                 {appearanceSpecies(R, r.profile).length
-                  ? "Roll height, eyes and hair from PC tables. Weight, sex, beard and distinguishing features: enter manually."
-                  : "No matching PC appearance tables for this profile. Enter appearance details manually."}
+                  ? "Roll height, eyes, hair and a distinguishing feature."
+                  : "Roll a distinguishing feature. Add other details yourself."}
               </small>
+              <Details id="gm:feature-table" title="View feature table">
+                <p className="gm-small">
+                  An original app table. Reroll or edit any result that does not
+                  fit.
+                </p>
+                <table className="gm-feature-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">d100</th>
+                      <th scope="col">Feature</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {DISTINGUISHING_FEATURES.map(
+                      (text: string, index: number) => (
+                        <tr key={index}>
+                          <td>
+                            {index === 99
+                              ? "00"
+                              : String(index + 1).padStart(2, "0")}
+                          </td>
+                          <td>{text}</td>
+                        </tr>
+                      ),
+                    )}
+                  </tbody>
+                </table>
+              </Details>
             </div>
           </div>
           <Details id="gm:personality" title="Personality & purpose · Optional">

@@ -1,5 +1,9 @@
 import { suggestion } from "../background.mjs";
 import { gmRoll } from "./model.mjs";
+import {
+  DISTINGUISHING_FEATURES,
+  FEATURE_SOURCE,
+} from "./distinguishing-features.mjs";
 
 // Reviewed foundation identities, not name matching (a Rat Ogre is not an Ogre).
 // Supplement foundations may already declare their Species explicitly.
@@ -30,35 +34,44 @@ export function appearanceSpecies(R, profile) {
 }
 
 export function rollGMAppearance(R, s, profile, species) {
+  if (!profile) throw Error("Choose a starting profile first.");
   const choices = appearanceSpecies(R, profile);
   species ||= choices.length === 1 ? choices[0] : "";
-  if (!choices.includes(species))
+  if ((choices.length || species) && !choices.includes(species))
     throw Error("Choose a supported PC appearance Species for this profile.");
-  const sp = R.species[species];
-  const roll = (sides, page, kind, source, count = 1) => {
-    const faces = gmRoll(
-      s,
-      `${species} appearance: ${kind}`,
-      count,
-      sides,
-      page,
-    );
-    s.rolls.at(-1).source = source;
-    return faces.reduce((sum, face) => sum + face, 0);
-  };
-  const height =
-    sp.height[0] +
-    roll(
-      10,
-      sp.appearancePage || sp.page,
-      "height (inches)",
-      { ...sp.source, page: sp.appearancePage || sp.page },
-      sp.height[1],
-    );
-  const background = { species };
-  const eyes = suggestion(R, background, "eyes", roll);
-  const hair = suggestion(R, background, "hair", roll);
-  // One editable value, no duplicate table or saved copy of catalogue wording.
-  // Rerolls replace it; the shared Undo history restores the previous description.
-  s.description = `${Math.floor(height / 12)} ft ${height % 12} in; ${eyes.toLowerCase()} eyes; ${hair.toLowerCase()} hair.`;
+  let appearance = "";
+  if (choices.length) {
+    const sp = R.species[species];
+    const roll = (sides, page, kind, source, count = 1) => {
+      const faces = gmRoll(
+        s,
+        `${species} appearance: ${kind}`,
+        count,
+        sides,
+        page,
+      );
+      s.rolls.at(-1).source = source;
+      return faces.reduce((sum, face) => sum + face, 0);
+    };
+    const height =
+      sp.height[0] +
+      roll(
+        10,
+        sp.appearancePage || sp.page,
+        "height (inches)",
+        { ...sp.source, page: sp.appearancePage || sp.page },
+        sp.height[1],
+      );
+    const background = { species };
+    const eyes = suggestion(R, background, "eyes", roll);
+    const hair = suggestion(R, background, "hair", roll);
+    appearance = `${Math.floor(height / 12)} ft ${height % 12} in; ${eyes.toLowerCase()} eyes; ${hair.toLowerCase()} hair.`;
+  }
+  const [face] = gmRoll(s, "Distinguishing feature", 1, 100, 0);
+  s.rolls.at(-1).source = { ...FEATURE_SOURCE };
+  // Every creature uses the same unfiltered d100. The GM can reroll/edit it.
+  // Replace the single editable value; never append a second generated feature.
+  s.description = [appearance, DISTINGUISHING_FEATURES[face - 1]]
+    .filter(Boolean)
+    .join(" ");
 }

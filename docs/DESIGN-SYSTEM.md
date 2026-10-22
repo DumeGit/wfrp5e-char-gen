@@ -1,5 +1,7 @@
 # Black Banner design system — v1
 
+Bestiary Short description keeps its adjacent dice button enabled for every profile. A roll includes one short distinguishing feature; supported PC appearance tables also supply height/eyes/hair. Keep the feature table in a collapsed native disclosure below the field, using shared compact table styling. All 100 results remain available for every creature; no body-part checks or extra dialogs. The existing combined-Elf Species choice remains explicit.
+
 Bestiary Loot sits below Trappings and before magic. Its single **Roll loot** button immediately adds results, including automatic extra rolls on 00. Do not add a dialog, preview, location choice or roll-count selector. Use the shared heading/button, compact item rows with adjacent quantity/Remove controls, expandable item sources and a collapsed inline d100 table. Keep labelled 44px touch controls and wrapping rows; loot remains separate from equipped combat controls.
 
 Bestiary Customise uses a native checkbox with `role="switch"` for each selected Trait/Talent's **Description** output preference. Keep the 30 × 18px track inside a 44px-tall clickable label, using existing primary/paper/muted/focus tokens. Show only the Description label, with no On/Off text. Place it outside the disclosure beside rank/Remove controls; wrap the control group beneath the name when space is narrow. Preserve keyboard focus, whole-label tapping and unchanged canonical editor rules.

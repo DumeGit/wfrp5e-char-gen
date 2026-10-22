@@ -151,18 +151,25 @@ test("Bestiary groups typing, keeps redo across navigation, and caches one consi
   );
 });
 test("Bestiary preserves dice occurrence records through undo and isolates replacement documents", async () => {
-  const store = await human(),
+  const store = await human(false),
     initial = store.getSnapshot();
   store.edit((d) => rollGMAppearance(initial.rules, d, initial.result.profile));
   const rolled = store.getSnapshot();
-  assert.equal(rolled.draft.rolls.length, 3);
+  assert.equal(rolled.draft.rolls.length, 4);
   assert.notEqual(rolled.draft.description, "");
   store.travel("undo");
   assert.equal(store.getSnapshot().draft.description, "");
   assert.deepEqual(store.getSnapshot().draft.rolls, rolled.draft.rolls);
   store.travel("redo");
   assert.equal(store.getSnapshot().draft.description, rolled.draft.description);
-  assert.equal(store.getSnapshot().draft.rolls.length, 3);
+  assert.equal(store.getSnapshot().draft.rolls.length, 4);
+  const restored = new BestiaryStore(false);
+  await restored.initialize();
+  assert.equal(
+    restored.getSnapshot().draft.description,
+    rolled.draft.description,
+  );
+  assert.deepEqual(restored.getSnapshot().draft.rolls, rolled.draft.rolls);
   store.replace(freshGM(initial.data));
   assert.equal(store.getSnapshot().draft.rolls.length, 0);
   store.travel("undo");

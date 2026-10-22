@@ -362,7 +362,7 @@ function Workshop({ verify }: { verify: boolean }) {
     });
   const rollAppearance = () => {
     const options = appearanceSpecies(R, r.profile);
-    if (options.length === 1) {
+    if (options.length <= 1) {
       edit((d) => rollGMAppearance(R, d, r.profile));
       setMessage("Appearance rolled. Undo restores the previous description.");
     } else if (options.length > 1) setModal({ kind: "appearance" });

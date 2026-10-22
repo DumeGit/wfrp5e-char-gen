@@ -440,19 +440,23 @@
 .gm-loot-controls .gm-rank {
   width: 80px;
 }
-.gm-loot-table {
+.gm-loot-table,
+.gm-feature-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
 }
 .gm-loot-table th,
-.gm-loot-table td {
+.gm-loot-table td,
+.gm-feature-table th,
+.gm-feature-table td {
   padding: 8px 6px;
   border-bottom: 1px solid var(--color-line-soft);
   text-align: left;
   vertical-align: top;
 }
-.gm-loot-table td:first-child {
+.gm-loot-table td:first-child,
+.gm-feature-table td:first-child {
   white-space: nowrap;
 }
 .gm-ability-entry > .gm-ability-content {
