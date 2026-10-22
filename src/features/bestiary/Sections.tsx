@@ -1615,29 +1615,35 @@ export function EquipmentMagic() {
           title="Optional printed equipment"
           initial
         >
-          {[
-            [optional, "optionalAttacks"],
-            [armour, "optionalArmour"],
-          ].map(([rows, key]: any) =>
-            rows.map((x: any) => (
-              <Check
-                key={x.key}
-                checked={s[key].includes(x.key)}
-                onChange={(v) =>
-                  edit((d: any) => {
-                    d[key] = v
-                      ? [...new Set([...d[key], x.key])]
-                      : d[key].filter((k: string) => k !== x.key);
-                  })
-                }
-              >
-                {x.name} ·{" "}
-                {x.ap === undefined
-                  ? `${x.skill ?? "—"} / +${x.damage}`
-                  : `+${x.ap} AP`}
-              </Check>
-            )),
-          )}
+          <div className="gm-equipment-options">
+            {[
+              [optional, "optionalAttacks"],
+              [armour, "optionalArmour"],
+            ].map(([rows, key]: any) =>
+              rows.map((x: any) => (
+                <Check
+                  key={x.key}
+                  checked={s[key].includes(x.key)}
+                  onChange={(v) =>
+                    edit((d: any) => {
+                      d[key] = v
+                        ? [...new Set([...d[key], x.key])]
+                        : d[key].filter((k: string) => k !== x.key);
+                    })
+                  }
+                >
+                  <span className="gm-equipment-option-text">
+                    <span>{x.name}</span>
+                    <small>
+                      {x.ap === undefined
+                        ? `${x.skill ?? "—"} / +${x.damage}`
+                        : `+${x.ap} AP`}
+                    </small>
+                  </span>
+                </Check>
+              )),
+            )}
+          </div>
         </Details>
       )}
       <div className="gm-attack-labels">

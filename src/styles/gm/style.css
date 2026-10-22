@@ -331,6 +331,67 @@
   margin: 0;
   flex: 0 0 17px;
 }
+.gm-equipment-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 8px;
+}
+.gm-equipment-options .gm-check {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 8px;
+  min-height: var(--control-touch);
+  margin: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-control);
+  background: var(--color-paper-raised);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.gm-equipment-options input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-crimson);
+}
+.gm-equipment-option-text {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+  line-height: 17px;
+  overflow-wrap: anywhere;
+}
+.gm-equipment-option-text > span {
+  font-weight: 600;
+}
+.gm-equipment-option-text small {
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 14px;
+}
+.gm-equipment-options .gm-check:has(input:checked) {
+  border-color: var(--color-crimson);
+  background: color-mix(
+    in srgb,
+    var(--color-crimson) 8%,
+    var(--color-paper-raised)
+  );
+}
+.gm-equipment-options .gm-check:has(input:focus-visible) {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.gm-equipment-options .gm-check:active {
+  background: var(--color-paper-recessed);
+}
+@media (hover: hover) and (pointer: fine) {
+  .gm-equipment-options .gm-check:hover {
+    border-color: var(--color-crimson);
+  }
+}
 .gm-entry {
   display: flex;
   align-items: start;

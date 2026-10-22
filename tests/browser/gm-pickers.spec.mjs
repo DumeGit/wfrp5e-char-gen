@@ -7,6 +7,44 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
+test("optional printed equipment has compact full-label tap targets and native keyboard selection @gm @mobile", async ({
+  page,
+}, info) => {
+  await openGM(page);
+  await applyProfile(page, "Human");
+  await gmStep(page, "Equipment & magic");
+  const choices = page.locator(".gm-equipment-options");
+  const labels = choices.locator("label");
+  await expect(labels).toHaveCount(4);
+  for (const label of await labels.all()) {
+    const bounds = await label.boundingBox();
+    expect(bounds.height).toBeGreaterThanOrEqual(44);
+    expect(bounds.height).toBeLessThanOrEqual(48);
+    expect(
+      (await label.locator("input").boundingBox()).width,
+    ).toBeLessThanOrEqual(18);
+  }
+  const bow = labels.filter({ hasText: "Bow and Arrows" });
+  const checkbox = bow.getByRole("checkbox");
+  const bounds = await bow.boundingBox();
+  await bow.click({ position: { x: bounds.width - 6, y: bounds.height / 2 } });
+  await expect(checkbox).toBeChecked();
+  await expect(
+    page.locator(".gm-attack-row").filter({ hasText: "Bow and Arrows" }),
+  ).toBeVisible();
+  await checkbox.focus();
+  await page.keyboard.press("Space");
+  await expect(checkbox).not.toBeChecked();
+  await expect(
+    page.locator(".gm-attack-row").filter({ hasText: "Bow and Arrows" }),
+  ).toHaveCount(0);
+  await labels.filter({ hasText: "Light Armour" }).click();
+  await labels.filter({ hasText: "Shield" }).click();
+  await expect(choices.getByRole("checkbox", { checked: true })).toHaveCount(2);
+  await noOverflow(page);
+  await choices.screenshot({ path: info.outputPath("optional-equipment.png") });
+});
+
 test("equipment filters narrow by type and dependent group, reset stale choices and add the exact item @gm @mobile", async ({
   page,
 }, info) => {
