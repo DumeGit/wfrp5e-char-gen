@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { assembleGMOptions } from "../src/engine/gm/books.mjs";
-import { equipmentPickerEntries } from "../src/engine/gm/trapping-groups.mjs";
+import { equipmentPickerEntries } from "../src/engine/trapping-groups.mjs";
 
 const library = JSON.parse(
   await readFile(new URL("../public/data/book-library.json", import.meta.url)),

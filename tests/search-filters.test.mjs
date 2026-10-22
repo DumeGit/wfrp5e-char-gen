@@ -4,7 +4,12 @@ import { readFile } from "node:fs/promises";
 import { library } from "./fixture.mjs";
 import { loadReferenceLibrary } from "../src/engine/search-library.mjs";
 import { searchBooks } from "../src/engine/search-ranking.mjs";
-import { RUNE_LABELS, filterOptions } from "../src/engine/search-filters.mjs";
+import {
+  RUNE_LABELS,
+  filterOptions,
+  searchFilterFields,
+  changeSearchFilter,
+} from "../src/engine/search-filters.mjs";
 import { createReferenceLinker } from "../src/engine/book-search-links.mjs";
 import { createSearchEngine } from "../src/engine/search-engine.mjs";
 import { createWorkerHandler } from "../src/engine/search-worker.mjs";
@@ -137,7 +142,7 @@ test("Rune labels, applicability and Techniques remain distinct from Spells, Pra
     }).some((row) => row.name === "Crewed"),
   );
   assert.ok(
-    browse("equipment", { type: "Packs & clothing" }).some(
+    browse("equipment", { type: "Containers & carrying" }).some(
       (row) => row.name === "Backpack",
     ),
   );
@@ -162,6 +167,113 @@ test("Rune labels, applicability and Techniques remain distinct from Spells, Pra
     ),
   );
 });
+
+test("Trappings share the reviewed dependent groups and preserve correlated shield/weapon paths", () => {
+  const equipment = rows.filter((row) => row.kind === "equipment");
+  assert.equal(filterOptions(rows, "equipment", "type").length, 14);
+  assert.ok(
+    equipment.every(
+      (row) => !row.filterValues.type.includes("Other trappings"),
+    ),
+  );
+  assert.deepEqual(
+    searchFilterFields(rows, "equipment").map(([key]) => key),
+    ["type"],
+  );
+  assert.deepEqual(searchFilterFields(rows, "equipment", { type: "Weapons" }), [
+    ["type", "Trapping type"],
+    ["group", "Weapon type"],
+  ]);
+  const selected = {
+    type: "Weapons",
+    group: "Ranged",
+    weaponGroup: "Engineering",
+  };
+  assert.equal(searchFilterFields(rows, "equipment", selected).length, 3);
+  assert.ok(
+    filterOptions(rows, "equipment", "weaponGroup", selected).includes(
+      "Engineering",
+    ),
+  );
+  assert.ok(
+    !filterOptions(rows, "equipment", "weaponGroup", {
+      type: "Weapons",
+      group: "Melee",
+    }).includes("Bow"),
+  );
+  const engineering = browse(
+    "equipment",
+    { ...selected, book: "core" },
+    "pistol",
+  );
+  assert.ok(engineering.length);
+  assert.ok(
+    engineering.every((row) =>
+      row.trappingPaths.some(
+        (path) => path.join("/") === "Weapons/Ranged/Engineering",
+      ),
+    ),
+  );
+  assert.ok(
+    browse("equipment", {
+      type: "Armour & shields",
+      group: "Shields",
+      book: "core",
+    }).some((row) => row.name === "Buckler"),
+  );
+  assert.equal(
+    browse("equipment", { type: "Armour & shields", group: "Melee" }, "Buckler")
+      .length,
+    0,
+  );
+  assert.deepEqual(
+    changeSearchFilter("equipment", selected, "type", "Armour & shields"),
+    { type: "Armour & shields" },
+  );
+  assert.deepEqual(changeSearchFilter("equipment", selected, "group", ""), {
+    type: "Weapons",
+    group: "",
+  });
+  assert.deepEqual(
+    changeSearchFilter(
+      "magic",
+      { type: "Miracle", lore: "Ranald" },
+      "type",
+      "Blessing",
+    ),
+    { type: "Blessing", lore: "Ranald" },
+  );
+});
+
+test("source-only Trappings use reviewed groups without inventing weapon Skills", () => {
+  const artillery = browse("equipment", {
+    type: "Weapons",
+    group: "Artillery references",
+    book: "lustria",
+  });
+  assert.equal(artillery.length, 5);
+  assert.ok(
+    artillery.every((row) =>
+      row.filterValues.weaponGroup.includes("Not specified"),
+    ),
+  );
+  assert.ok(
+    browse("equipment", { type: "Food & drink", group: "Drink" }).some(
+      (row) => row.name === "Tavern drink: Legendary Wine",
+    ),
+  );
+  assert.ok(
+    browse("equipment", { type: "Travel & camping", group: "Lodging" }).some(
+      (row) => row.name === "Tavern board: Room",
+    ),
+  );
+  assert.ok(
+    browse("equipment", {
+      type: "Armour & shields",
+      group: "Additional armour",
+    }).some((row) => row.printedReference && row.name === "Sea Dragon Cloak"),
+  );
+});
 test("library rejects malformed or missing filter metadata without mutating source entries", async () => {
   for (const change of [
     (row) => delete row.filterValues,
@@ -183,6 +295,18 @@ test("library rejects malformed or missing filter metadata without mutating sour
     /filters/,
   );
   assert.ok(rows.every((row) => !row.entry.filterValues));
+  for (const change of [
+    (row) => delete row.trappingPaths,
+    (row) => row.trappingPaths.push(["Wrong type"]),
+    (row) => row.trappingPaths.push(["Weapons", "", "Engineering"]),
+  ]) {
+    const bad = structuredClone(wire);
+    change(bad.rows.find((row) => row.kind === "equipment"));
+    await assert.rejects(
+      loadReferenceLibrary(library, () => bad),
+      /filters/,
+    );
+  }
 });
 test("worker and fallback return identical filtered results under concurrent searches", async () => {
   class Worker {
@@ -205,6 +329,17 @@ test("worker and fallback return identical filtered results under concurrent sea
     ["", "rune", { label: "Master Rune", applicable: "Armour" }],
     ["", "magic", { type: "Cant", lore: "Fire" }],
     ["Godspakt", "all", { book: "blood-bramble" }],
+    [
+      "",
+      "equipment",
+      {
+        type: "Weapons",
+        group: "Ranged",
+        weaponGroup: "Engineering",
+        book: "core",
+      },
+    ],
+    ["Buckler", "equipment", { type: "Armour & shields", group: "Shields" }],
   ]) {
     const [a, b] = await Promise.all([
       worker.search(query, category, filters),

@@ -6,6 +6,7 @@ import {
   searchBookId,
   validateSearchFilters,
 } from "./search-filters.mjs";
+import { trappingPath } from "./trapping-groups.mjs";
 const unknown = "Not specified";
 // Reviewed printed High Elf Careers: explicit class metadata, independent of drafts.
 const careerClasses = {
@@ -60,33 +61,6 @@ const runeForms = {
   Protection: ["Protection items", "Protection Rune"],
   Engineering: ["Engineering weapons", "Engineering Rune"],
   Doom: ["Anvil of Doom", "Doom Rune"],
-};
-const equipmentCategories = {
-  "Melee weapons": "Weapons",
-  "Ranged weapons": "Weapons",
-  Ammunition: "Ammunition",
-  Armour: "Armour",
-  "Packs and clothing": "Packs & clothing",
-  "Wizard robes": "Clothing",
-  Clothing: "Clothing",
-  "Trade tools": "Tools & kits",
-  "Tools and kits": "Tools & kits",
-  "Thieving tools": "Tools & kits",
-  "Animals and vehicles": "Animals & vehicles",
-  Animals: "Animals & vehicles",
-  "Food and drink": "Food & drink",
-  "Books and documents": "Books & documents",
-  Poisons: "Poisons",
-  "Herbs and remedies": "Herbs & remedies",
-  "Herbs & drinks": "Herbs & drinks",
-  Prosthetics: "Prosthetics",
-  "Spell ingredients": "Spell ingredients",
-  "Magical artefacts": "Magical items",
-  "Enchanted items": "Magical items",
-  "Ancestral heirlooms": "Ancestral heirlooms",
-  "Dwarf trappings": "Other trappings",
-  Trappings: "Other trappings",
-  Miscellaneous: "Other trappings",
 };
 export function addSearchMetadata(rows, contexts, books) {
   const memberships = new Map(),
@@ -147,19 +121,27 @@ export function addSearchMetadata(rows, contexts, books) {
       f.applicable = [pair[0]];
       f.label = [pair[1], ...(x.master ? ["Master Rune"] : [])];
     } else if (category === "equipment") {
-      f.type = [
-        ...new Set(
-          [...(row.facets || [x]), ...(row.shop || [])].map((profile) =>
-            ["melee", "ranged"].includes(profile.kind)
-              ? "Weapons"
-              : profile.ap !== undefined && profile.locations
-                ? "Armour"
-                : equipmentCategories[profile.category] || unknown,
-          ),
-        ),
-      ];
-      if (f.type.length > 1) f.type = f.type.filter((type) => type !== unknown);
-      if (row.printedReference) f.type = ["Magical items"];
+      const facets = row.facets || [x];
+      const profiles = facets.filter(
+        (profile) => profile.kind || profile.ap !== undefined,
+      );
+      const paths = (profiles.length ? profiles : facets).map(trappingPath);
+      const reviewed = paths.filter((path) => path[0] !== "Other trappings");
+      row = {
+        ...row,
+        trappingPaths: [
+          ...new Map(
+            (reviewed.length ? reviewed : paths).map((path) => [
+              JSON.stringify(path),
+              path,
+            ]),
+          ).values(),
+        ],
+      };
+      for (const [i, key] of ["type", "group", "weaponGroup"].entries())
+        f[key] = [
+          ...new Set(row.trappingPaths.map((path) => path[i] || unknown)),
+        ];
     } else if (category === "magic") {
       if (row.label === "Cant") {
         f.type = ["Cant"];

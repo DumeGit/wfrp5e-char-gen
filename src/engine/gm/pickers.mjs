@@ -1,7 +1,7 @@
 // Pure catalogue projections shared by the React interface and rule tests.
 import { base, options } from "../rules.mjs";
 import { magicChoices, gmSkillCharacteristic, gmLoreIssue } from "./model.mjs";
-import { equipmentPickerEntries } from "./trapping-groups.mjs";
+import { equipmentPickerEntries } from "../trapping-groups.mjs";
 export function searchPickerEntries(entries, query) {
   const q = query.toLowerCase().trim();
   if (!q) return entries;

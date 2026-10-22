@@ -31,8 +31,13 @@ export const CATEGORY_FILTERS = {
     ["type", "Spell type"],
     ["lore", "Lore / Patron"],
   ],
-  equipment: [["type", "Trapping type"]],
+  equipment: [
+    ["type", "Trapping type"],
+    ["group", "Trapping group"],
+    ["weaponGroup", "Weapon group"],
+  ],
 };
+const trappingKeys = ["type", "group", "weaponGroup"];
 export const CHARACTERISTICS = {
   WS: "Weapon Skill",
   BS: "Ballistic Skill",
@@ -56,9 +61,20 @@ export function matchesSearchFilters(row, category = "all", filters = {}) {
     "book",
     ...(CATEGORY_FILTERS[category] || []).map(([key]) => key),
   ]);
-  return Object.entries(filters).every(
-    ([key, value]) =>
-      !value || (allowed.has(key) && row.filterValues?.[key]?.includes(value)),
+  return (
+    Object.entries(filters).every(
+      ([key, value]) =>
+        !value ||
+        (allowed.has(key) && row.filterValues?.[key]?.includes(value)),
+    ) &&
+    (category !== "equipment" ||
+      !trappingKeys.some((key) => filters[key]) ||
+      row.trappingPaths?.some((path) =>
+        trappingKeys.every(
+          (key, i) =>
+            !filters[key] || (path[i] || "Not specified") === filters[key],
+        ),
+      ))
   );
 }
 export function searchBookId(id, books) {
@@ -99,9 +115,56 @@ export function validateSearchFilters(row, books) {
     values.characteristic?.some((value) => !CHARACTERISTICS[value])
   )
     throw Error("Invalid book reference filters.");
+  if (searchCategory(row) === "equipment") {
+    const paths = row.trappingPaths;
+    if (
+      !Array.isArray(paths) ||
+      !paths.length ||
+      paths.some(
+        (path) =>
+          !Array.isArray(path) ||
+          !path.length ||
+          path.length > 3 ||
+          path.some((value) => typeof value !== "string" || !value.trim()),
+      ) ||
+      new Set(paths.map((path) => JSON.stringify(path))).size !==
+        paths.length ||
+      trappingKeys.some(
+        (key, i) =>
+          JSON.stringify(values[key]) !==
+          JSON.stringify([
+            ...new Set(paths.map((path) => path[i] || "Not specified")),
+          ]),
+      )
+    )
+      throw Error("Invalid trapping reference filters.");
+  } else if (row.trappingPaths !== undefined)
+    throw Error("Unexpected trapping reference filters.");
 }
-export function filterOptions(rows, category, key) {
+export function filterOptions(rows, category, key, filters = {}) {
   if (key === "label") return RUNE_LABELS;
+  if (category === "equipment" && trappingKeys.includes(key)) {
+    const depth = trappingKeys.indexOf(key);
+    return [
+      ...new Set(
+        rows
+          .filter((row) => row.kind === "equipment")
+          .flatMap((row) =>
+            (row.trappingPaths || [])
+              .filter((path) =>
+                trappingKeys
+                  .slice(0, depth)
+                  .every(
+                    (parent, i) =>
+                      !filters[parent] || path[i] === filters[parent],
+                  ),
+              )
+              .map((path) => path[depth]),
+          )
+          .filter(Boolean),
+      ),
+    ].sort((a, b) => a.localeCompare(b));
+  }
   return [
     ...new Set(
       rows
@@ -113,8 +176,8 @@ export function filterOptions(rows, category, key) {
 
 // Native option groups separate magical traditions from divine patrons.
 // Membership follows the generated spell/prayer type, never name guesses.
-export function filterOptionGroups(rows, category, key) {
-  const values = filterOptions(rows, category, key);
+export function filterOptionGroups(rows, category, key, filters = {}) {
+  const values = filterOptions(rows, category, key, filters);
   if (category !== "magic" || key !== "lore") return [{ label: "", values }];
   const groups = new Map([
     ["Lores", new Set()],
@@ -136,4 +199,27 @@ export function filterOptionGroups(rows, category, key) {
       values: values.filter((value) => members.has(value)),
     }))
     .filter((group) => group.values.length);
+}
+
+export function searchFilterFields(rows, category, filters = {}) {
+  if (category !== "equipment") return CATEGORY_FILTERS[category] || [];
+  return CATEGORY_FILTERS.equipment
+    .filter(
+      ([key], depth) =>
+        depth === 0 ||
+        (trappingKeys.slice(0, depth).every((parent) => filters[parent]) &&
+          filterOptions(rows, category, key, filters).length),
+    )
+    .map(([key, label]) => [
+      key,
+      key === "group" && filters.type === "Weapons" ? "Weapon type" : label,
+    ]);
+}
+
+export function changeSearchFilter(category, filters, key, value) {
+  const next = { ...filters, [key]: value };
+  if (category === "equipment")
+    for (const child of trappingKeys.slice(trappingKeys.indexOf(key) + 1))
+      delete next[child];
+  return next;
 }

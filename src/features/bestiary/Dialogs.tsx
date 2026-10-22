@@ -20,7 +20,7 @@ import { traitSummary } from "../../engine/gm/trait-summaries.mjs";
 import {
   filterEquipment,
   equipmentFilterOptions,
-} from "../../engine/gm/trapping-groups.mjs";
+} from "../../engine/trapping-groups.mjs";
 import {
   appearanceSpecies,
   rollGMAppearance,

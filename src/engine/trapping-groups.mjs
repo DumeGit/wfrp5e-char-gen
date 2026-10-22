@@ -80,6 +80,30 @@ const overrides = {
   "Ithiltaen Helm": ["Armour & shields", "Armour references"],
   "Candelabra (with a dozen candles)": ["Miscellaneous", "Lighting & fire"],
 };
+const referencePaths = {
+  "winds-of-magic:reference:163-panacea-universalis": [
+    "Magical & ceremonial items",
+    "Magical artefacts",
+  ],
+  "winds-of-magic:reference:172-knuckles-of-ignominy": [
+    "Magical & ceremonial items",
+    "Magical artefacts",
+  ],
+  "sea-of-claws:reference:grubark-gearing-system": [
+    "Animals & transport",
+    "Ship equipment",
+  ],
+  "corsairs-flariel:reference:sea-dragon-cloak": [
+    "Armour & shields",
+    "Additional armour",
+  ],
+  "corsairs-flariel:reference:reaper-bolt-thrower": [
+    "Weapons",
+    "Artillery references",
+  ],
+  "corsairs-flariel:reference:ravenship": ["Animals & transport", "Boats"],
+  "salzenmund:reference:night-goblin-net": ["Weapons", "Weapon references"],
+};
 
 function ammunitionGroup(name) {
   if (/Arrow|Shaft/.test(name)) return "Arrows";
@@ -97,6 +121,17 @@ function ammunitionGroup(name) {
 
 export function trappingPath(entry) {
   const { name, category } = entry;
+  const identity = entry.contentId || entry.id;
+  if (referencePaths[identity]) return referencePaths[identity];
+  if (identity?.startsWith("taverns-old-world:reference:tavern-drink-"))
+    return ["Food & drink", "Drink"];
+  if (identity?.startsWith("taverns-old-world:reference:tavern-fare-"))
+    return ["Food & drink", "Food"];
+  if (identity?.startsWith("taverns-old-world:reference:tavern-board-"))
+    return ["Travel & camping", "Lodging"];
+  // These source-only artillery references have no agreed weapon Skill group.
+  if (entry.source?.book === "lustria" && entry.topic === "Lizardman artillery")
+    return ["Weapons", "Artillery references"];
   if (entry.kind)
     return [
       "Weapons",
@@ -127,6 +162,14 @@ export function trappingPath(entry) {
     return ["Armour & shields", type];
   }
   if (overrides[name]) return overrides[name];
+  if (
+    ["Weapons", "Dwarf weapons", "Siege weapons", "War machines"].includes(
+      category,
+    )
+  )
+    return ["Weapons", "Weapon references"];
+  if (["Armour", "Dwarf armour"].includes(category))
+    return ["Armour & shields", "Armour references"];
   if (
     category === "Ammunition" ||
     (category === "Dwarf trappings" && /Bullets|Bolts|Shots|Torpedo/.test(name))

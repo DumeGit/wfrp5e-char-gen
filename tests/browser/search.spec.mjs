@@ -160,6 +160,84 @@ async function categoryFilters(page, category) {
     await details.locator("summary").click();
 }
 for (const creator of ["PC", "GM"]) {
+  test(`${creator} narrows Trappings with dependent groups and clears child filters @search @mobile`, async ({
+    page,
+  }, info) => {
+    await (creator === "PC" ? openPC(page) : openGM(page));
+    const input = await search(page);
+    await categoryFilters(page, "equipment");
+    const type = page.getByRole("combobox", {
+      name: "Trapping type",
+      exact: true,
+    });
+    await expect(
+      page.getByRole("combobox", { name: "Trapping group", exact: true }),
+    ).toHaveCount(0);
+    await type.selectOption("Weapons");
+    await page
+      .getByRole("combobox", { name: "Weapon type", exact: true })
+      .selectOption("Ranged");
+    const group = page.getByRole("combobox", {
+      name: "Weapon group",
+      exact: true,
+    });
+    await group.selectOption("Engineering");
+    await page.locator("#book-search-book").selectOption("core");
+    await input.fill("pistol");
+    const results = page.locator("#book-search-results").getByRole("option");
+    await expect(results.first()).toBeVisible();
+    await expect(results.first()).toContainText(/Pistol/i);
+    await noOverflow(page);
+    await page.screenshot({
+      path: info.outputPath("trapping-dependent-filters.png"),
+    });
+    await results.first().click();
+    await page
+      .getByRole("button", { name: "Back to search", exact: true })
+      .click();
+    await expect(group).toHaveValue("Engineering");
+    await categoryFilters(page, "skill");
+    await categoryFilters(page, "equipment");
+    await expect(group).toHaveValue("Engineering");
+    await page
+      .getByRole("button", {
+        name: "Remove Weapon type filter: Ranged",
+        exact: true,
+      })
+      .click();
+    await expect(group).toHaveCount(0);
+    await expect(
+      page.getByRole("combobox", { name: "Weapon type", exact: true }),
+    ).toHaveValue("");
+    await type.selectOption("Armour & shields");
+    await page
+      .getByRole("combobox", { name: "Trapping group", exact: true })
+      .selectOption("Shields");
+    await input.fill("");
+    await expect(results.filter({ hasText: "Buckler" })).toBeVisible();
+    await type.selectOption("Food & drink");
+    await expect(
+      page.getByRole("combobox", { name: "Trapping group", exact: true }),
+    ).toHaveValue("");
+    await page
+      .getByRole("combobox", { name: "Trapping group", exact: true })
+      .selectOption("Drink");
+    await input.fill("wine");
+    await page
+      .getByRole("button", { name: "Clear filters", exact: true })
+      .click();
+    await expect(type).toHaveValue("");
+    await expect(input).toHaveValue("wine");
+    await expect(page.locator("#book-search-category")).toHaveValue(
+      "equipment",
+    );
+    await expect(
+      page.getByRole("combobox", { name: "Trapping group", exact: true }),
+    ).toHaveCount(0);
+    await noOverflow(page);
+  });
+}
+for (const creator of ["PC", "GM"]) {
   test(`${creator} combines filters in the shared workspace and remembers each category @search @mobile`, async ({
     page,
   }) => {

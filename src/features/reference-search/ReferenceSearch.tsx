@@ -19,9 +19,10 @@ import {
 } from "../../engine/search-presentation.mjs";
 import { normalizeSearch } from "../../engine/search-ranking.mjs";
 import {
-  CATEGORY_FILTERS,
   CHARACTERISTICS,
   filterOptionGroups,
+  searchFilterFields,
+  changeSearchFilter,
   searchCategory,
 } from "../../engine/search-filters.mjs";
 import { searchBookText } from "../../engine/book-search-text.mjs";
@@ -342,8 +343,11 @@ export function ReferenceSearch() {
     .sort(([a, labelA], [b, labelB]) =>
       a === "all" ? -1 : b === "all" ? 1 : labelA.localeCompare(labelB),
     );
-  const fields =
-    (CATEGORY_FILTERS as Record<string, string[][]>)[category] || [];
+  const fields: string[][] = searchFilterFields(
+    data?.rows || [],
+    category,
+    filters,
+  );
   const sourceText = (row: ReferenceRow) => {
     const source = data?.books.find(
       (book) => book.id === row.entry.source.book,
@@ -481,7 +485,12 @@ export function ReferenceSearch() {
     else
       setCategoryValues((previous) => ({
         ...previous,
-        [category]: { ...previous[category], [key]: "" },
+        [category]: changeSearchFilter(
+          category,
+          previous[category] || {},
+          key,
+          "",
+        ),
       }));
   }
   const launch = (
@@ -648,16 +657,23 @@ export function ReferenceSearch() {
                     onChange={(event) => {
                       setCategoryValues((previous) => ({
                         ...previous,
-                        [category]: {
-                          ...previous[category],
-                          [key]: event.target.value,
-                        },
+                        [category]: changeSearchFilter(
+                          category,
+                          previous[category] || {},
+                          key,
+                          event.target.value,
+                        ),
                       }));
                       setView(null);
                     }}
                   >
                     <option value="">All</option>
-                    {filterOptionGroups(data?.rows || [], category, key).map(
+                    {filterOptionGroups(
+                      data?.rows || [],
+                      category,
+                      key,
+                      filters,
+                    ).map(
                       ({ label: groupLabel, values }: any, index: number) =>
                         groupLabel ? (
                           <optgroup label={groupLabel} key={index}>

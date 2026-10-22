@@ -12,12 +12,22 @@ export function createSearchEngine(
 ) {
   const byKey = new Map(rows.map((row) => [row.key, row]));
   const projection = rows.map(
-    ({ key, name, kind, label, filterValues, aliases, textFields }) => ({
+    ({
       key,
       name,
       kind,
       label,
       filterValues,
+      trappingPaths,
+      aliases,
+      textFields,
+    }) => ({
+      key,
+      name,
+      kind,
+      label,
+      filterValues,
+      trappingPaths,
       aliases,
       textFields,
     }),

@@ -10,7 +10,7 @@ import {
 import {
   filterEquipment,
   equipmentFilterOptions,
-} from "../src/engine/gm/trapping-groups.mjs";
+} from "../src/engine/trapping-groups.mjs";
 import { sheetSections } from "../src/engine/gm/pdf.mjs";
 import { cardSections } from "../src/engine/gm/print.mjs";
 
