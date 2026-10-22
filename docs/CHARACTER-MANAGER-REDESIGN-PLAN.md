@@ -1,5 +1,12 @@
 # Character manager: implemented layout specification
 
+## Imperial Desk — 22 October 2026
+
+All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.
+
+The [design system](DESIGN-SYSTEM.md) and [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) supersede older dated geometry/material/menu descriptions below. Historical results remain evidence for their original builds, not claims of current verification. Materials and decoration stay outside print; rules, formats and PDF layouts remain unchanged.
+
+
 Current as of **22 October 2026**. This replaces the original proposal and its superseded amendments with the implemented design. The user approved the redesign while retaining the shared header, then requested the visible desktop left menu and the compact unified Play sheet. Earlier proposals remain in Git history. [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md) documents data, rules, imports, persistence and verification.
 
 ## Purpose and visual hierarchy

@@ -13,6 +13,7 @@ import "../styles/review-sheet.css";
 import "../styles/site-notices.css";
 import "../styles/react-shell.css";
 import "../styles/manager.css";
+import "../styles/workspace-shell.css";
 import { PwaControls } from "../components/PwaControls";
 
 export const metadata: Metadata = {

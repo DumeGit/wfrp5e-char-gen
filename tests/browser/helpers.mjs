@@ -219,11 +219,53 @@ export async function revealCreatorTool(page, trigger) {
     exact: true,
   });
   // Reload can finish before React mounts the creator tools.
+  const firstGroup = page.getByRole("button", {
+    name: "New & import",
+    exact: true,
+  });
   await expect
-    .poll(async () => (await trigger.isVisible()) || (await menu.isVisible()))
+    .poll(
+      async () =>
+        (await trigger.isVisible()) ||
+        (await menu.isVisible()) ||
+        (await firstGroup.isVisible()),
+    )
     .toBe(true);
-  if (!(await trigger.isVisible())) await menu.click();
+  if (await trigger.isVisible()) return;
+  for (const label of ["New & import", "Save & export", "More"]) {
+    const openGroup = page.locator(".workspace-action-dialog[open]");
+    if (await openGroup.count())
+      await openGroup
+        .getByRole("button", { name: "Close actions", exact: true })
+        .click();
+    if (!(await firstGroup.isVisible()) && (await menu.isVisible()))
+      await menu.click();
+    const group = page.getByRole("button", { name: label, exact: true });
+    if (!(await group.isVisible())) continue;
+    await group.click();
+    if (await trigger.isVisible()) break;
+  }
   await expect(trigger).toBeVisible();
+}
+export async function switchWorkspace(page, name) {
+  const actions = page.locator(".workspace-action-dialog[open]");
+  if (await actions.count())
+    await actions
+      .getByRole("button", { name: "Close actions", exact: true })
+      .click();
+  const summary = page
+    .locator(".workspace-switcher > summary")
+    .filter({ visible: true });
+  if (!(await summary.isVisible()))
+    await page
+      .getByRole("button", { name: /Open (creator|manager) menu/, exact: true })
+      .click();
+  const switcher = page
+    .locator(".workspace-switcher")
+    .filter({ visible: true });
+  if ((await switcher.getAttribute("open")) === null)
+    await switcher.locator(":scope > summary").click();
+  await switcher.getByRole("link", { name, exact: true }).click();
 }
 export async function downloadBytes(page, trigger) {
   await revealCreatorTool(page, trigger);

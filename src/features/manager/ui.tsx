@@ -73,11 +73,20 @@ export function Dialog({
     dialog.current?.showModal();
     return () => {
       dialog.current?.close();
-      if (opener?.isConnected) {
+      if (
+        opener?.isConnected &&
+        opener.getClientRects().length &&
+        !opener.closest("dialog:not([open])")
+      ) {
         const parent = opener.closest("details:not([open])");
         const target = parent?.querySelector<HTMLElement>("summary") || opener;
         target.focus();
-      }
+      } else
+        document
+          .querySelector<HTMLElement>(
+            ".mobile-menu-launcher, .workspace-rail .workspace-switcher > summary",
+          )
+          ?.focus({ preventScroll: true });
     };
   }, []);
   return (

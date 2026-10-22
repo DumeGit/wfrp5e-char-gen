@@ -7,7 +7,7 @@ import {
   interpolate,
 } from "../../../../components/react-elements";
 
-import { creatorSwitch } from "../creator-switch.mjs";
+import { WorkspaceMenu } from "../../../../components/WorkspaceMenu";
 
 import {
   steps,
@@ -34,6 +34,12 @@ export function createFeature(getContext) {
       marketShop,
     } = getContext();
     return fragment(
+      element("input", {
+        type: "file",
+        id: "import-file",
+        accept: "application/json,.json",
+        hidden: "",
+      }),
       element(
         "div",
         {
@@ -42,78 +48,14 @@ export function createFeature(getContext) {
           ),
         },
         "\n",
-        element(
-          "aside",
-          { class: "rail" },
-          "\n",
-          creatorSwitch(
-            "player",
+        element(WorkspaceMenu, {
+          mode: "player",
+          documentState: JSON.stringify(s),
+          verify:
             typeof location !== "undefined" &&
-              new URLSearchParams(location.search).has("verify"),
-          ),
-          "\n",
-          element(
-            "div",
-            { class: "rail-heading" },
-            "\n",
-            element("span", { class: "eyebrow" }, "Character creation"),
-            "\n",
-            element("strong", {}, "Your next chapter"),
-            "\n",
-            element(
-              "p",
-              {},
-              ready,
-              " of ",
-              creationStepCount,
-              " required stages complete",
-            ),
-            "\n",
-            element(
-              "div",
-              {
-                class: "creation-meter",
-                role: "img",
-                "aria-label": [
-                  ready,
-                  " of ",
-                  creationStepCount,
-                  " required stages complete",
-                ].join(""),
-              },
-              "\n",
-              element(
-                "span",
-                {
-                  style: [
-                    "width:",
-                    (ready / creationStepCount) * 100,
-                    "%",
-                  ].join(""),
-                },
-                "\n",
-              ),
-              "\n",
-            ),
-            "\n",
-          ),
-          "\n",
-          element(
-            "div",
-            { class: "mobile-step field" },
-            "\n",
-            element("label", { for: "mobile-step" }, "Creation step"),
-            select(
-              'id="mobile-step" data-bind="stepSwitch"',
-              steps.map((name, i) => [
-                i,
-                interpolate(["", ". ", ""], [combine(i, 1), name]),
-              ]),
-              s.step,
-            ),
-          ),
-          "\n",
-          element(
+            new URLSearchParams(location.search).has("verify"),
+          heading: `${ready} of ${creationStepCount} required stages complete`,
+          navigation: element(
             "nav",
             { "aria-label": "Character creation steps" },
             "\n",
@@ -129,9 +71,11 @@ export function createFeature(getContext) {
                     element(
                       "button",
                       {
-                        class: i === s.step ? "active" : "",
+                        class: !setupOpen && i === s.step ? "active" : "",
                         ...attributes(
-                          i === s.step ? 'aria-current="step"' : "",
+                          !setupOpen && i === s.step
+                            ? 'aria-current="step"'
+                            : "",
                         ),
                         "data-action": "step",
                         "data-step": i,
@@ -178,36 +122,93 @@ export function createFeature(getContext) {
             ),
             "\n",
           ),
-          "\n",
-          element("div", { "data-player-history-slot": "" }),
-          element(
+          selector: element(
             "div",
-            { class: "header-actions" },
-            button("save-file", "Save character"),
-            button("load-file", "Load character"),
-            button("new", "New character"),
-            element("input", {
-              type: "file",
-              id: "import-file",
-              accept: "application/json,.json",
-              hidden: "",
-            }),
+            { class: "mobile-step field" },
             "\n",
-            element("div", {
-              class: "install-app-slot",
-              "data-install-slot": "",
-            }),
-            "\n",
+            element("label", { for: "mobile-step" }, "Creation step"),
+            select(
+              'id="mobile-step" data-bind="stepSwitch"',
+              steps.map((name, i) => [
+                i,
+                interpolate(["", ". ", ""], [combine(i, 1), name]),
+              ]),
+              s.step,
+            ),
           ),
-          "\n",
-          element(
-            "p",
-            { class: "save-status" },
-            "Saved automatically on this device",
-          ),
-          button("sources", "Sources & decisions", "", "text-button"),
-          button("books", "Choose books", "", "text-button"),
-        ),
+          groups: [
+            {
+              id: "new",
+              label: "New & import",
+              commands: [
+                {
+                  id: "new",
+                  label: "New character",
+                  effect: "navigate",
+                  data: { "data-action": "new" },
+                },
+                {
+                  id: "load",
+                  label: "Load character",
+                  effect: "file",
+                  data: { "data-action": "load-file" },
+                },
+              ],
+            },
+            {
+              id: "save",
+              label: "Save & export",
+              commands: [
+                {
+                  id: "save",
+                  label: "Save character",
+                  effect: "close",
+                  data: { "data-action": "save-file" },
+                },
+                {
+                  id: "sheet",
+                  label: "Export character sheet PDF",
+                  effect: "close",
+                  disabled: issues.length > 0,
+                  reason: issues.length
+                    ? "Finish the required creation choices before exporting."
+                    : undefined,
+                  data: { "data-action": "sheet" },
+                },
+                {
+                  id: "record",
+                  label: "Export creation record PDF",
+                  effect: "close",
+                  disabled: issues.length > 0,
+                  reason: issues.length
+                    ? "Finish the required creation choices before exporting."
+                    : undefined,
+                  data: { "data-action": "record" },
+                },
+              ],
+            },
+            {
+              id: "more",
+              label: "More",
+              commands: [
+                {
+                  id: "books",
+                  label: "Choose books",
+                  effect: "navigate",
+                  data: { "data-action": "books" },
+                },
+                {
+                  id: "sources",
+                  label: "Sources & decisions",
+                  effect: "dialog",
+                  data: { "data-action": "sources" },
+                },
+              ],
+            },
+          ],
+          history: element("div", { "data-player-history-slot": "" }),
+          status: getContext().saveStatus,
+        }),
         "\n",
         element(
           "main",

@@ -27,7 +27,7 @@ test("section navigation stays compact and export moves with the tools @marijan 
 }, info) => {
   await open(page);
   const jump = page.getByLabel("Jump to section", { exact: true });
-  const rail = page.locator(".mm-rail");
+  const rail = page.locator(".workspace-rail");
   const skills = page.locator("#mm-section-skills .mm-section-disclosure");
   await page.getByLabel("Name", { exact: true }).fill("Navigation test");
   await page.getByRole("button", { name: "Undo", exact: true }).click();
@@ -37,8 +37,8 @@ test("section navigation stays compact and export moves with the tools @marijan 
       await page.setViewportSize({ width, height: 844 });
       await expect(jump).toBeVisible();
       await expect(rail.locator(".mm-section-nav")).not.toBeVisible();
-      await expect(rail.locator(".mm-rail-tools")).not.toBeVisible();
-      expect((await rail.boundingBox()).height).toBeLessThan(85);
+      await expect(rail.locator(".workspace-action-groups")).not.toBeVisible();
+      expect((await rail.boundingBox()).height).toBeLessThan(110);
       await noOverflow(page);
     }
     await jump.selectOption("skills");
@@ -58,10 +58,10 @@ test("section navigation stays compact and export moves with the tools @marijan 
 
   // One live export node follows resize and retains its existing download action.
   await page.setViewportSize({ width: 390, height: 844 });
-  const exportButton = page.locator(
-    '.mobile-creator-menu [data-action="export"]',
-  );
-  await expect(exportButton).toHaveCount(1);
+  const exportButton = page.getByRole("button", {
+    name: "Export PDF",
+    exact: true,
+  });
   const downloaded = await downloadBytes(page, exportButton);
   expect(downloaded.name).toMatch(/-marijan\.pdf$/);
   expect(
@@ -71,11 +71,11 @@ test("section navigation stays compact and export moves with the tools @marijan 
     page.getByRole("dialog", { name: "Creator menu", exact: true }),
   ).not.toBeVisible();
   await page.setViewportSize({ width: 1440, height: 900 });
-  await expect(rail.locator('[data-action="export"]')).toHaveCount(1);
-  await expect(rail.locator('[data-action="export"]')).toBeVisible();
+  await expect(
+    rail.getByRole("button", { name: "Save & export", exact: true }),
+  ).toBeVisible();
   await expect(jump).not.toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
-  await expect(exportButton).toHaveCount(1);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page.screenshot({
     path: info.outputPath("marijan-section-navigation.png"),
@@ -236,10 +236,13 @@ test("creator switch uses shared bordered rail and compact desktop fields @marij
   page,
 }, info) => {
   await open(page);
-  const rail = page.locator(".rail.mm-rail");
+  const rail = page.locator(".workspace-rail");
   if (info.project.name === "mobile") {
     await page
       .getByRole("button", { name: "Open creator menu", exact: true })
+      .click();
+    await page
+      .locator(".mobile-creator-menu .workspace-switcher > summary")
       .click();
     await expect(
       page
@@ -249,10 +252,12 @@ test("creator switch uses shared bordered rail and compact desktop fields @marij
     await page
       .getByRole("button", { name: "Close creator menu", exact: true })
       .click();
-  } else
+  } else {
+    await rail.locator(".workspace-switcher > summary").click();
     await expect(
       rail.getByRole("navigation", { name: "Creator", exact: true }),
     ).toBeVisible();
+  }
   await expect(page.locator("#app > .creator-switch")).toHaveCount(0);
   await noOverflow(page);
   await page.screenshot({ path: info.outputPath("marijan-compact.png") });

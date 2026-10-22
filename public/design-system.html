@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
-    <title>Black Banner — Component reference</title>
+    <title>Imperial Desk — Component reference</title>
     <link rel="icon" href="/assets/ledger-emblem.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/guide.css" />
     <style>
@@ -62,8 +62,8 @@
         /></span>
         <div class="brand-title">
           <span class="brand-world">THE CHARACTER LEDGER</span
-          ><strong>The Black Banner</strong
-          ><small>DESIGN SYSTEM · VERSION ONE</small>
+          ><strong>The Imperial Desk</strong
+          ><small>SHARED DESIGN · FOUR WORKSPACES</small>
         </div>
       </div>
       <div class="masthead-actions">
@@ -79,7 +79,7 @@
     <main class="system-guide">
       <article class="panel">
         <div class="stage-meta">
-          <span>THE SHARED VISUAL LANGUAGE</span><span>BLACK BANNER v1</span>
+          <span>THE SHARED VISUAL LANGUAGE</span><span>IMPERIAL DESK</span>
         </div>
         <div id="system-heading">
           <h1 class="chapter-title" aria-label="A new chapter">
@@ -119,6 +119,66 @@
             <code>--color-legacy</code>
           </div>
         </div>
+        <h2>One menu, four workspaces</h2>
+        <p>
+          Oak and parchment are shared. Player oxblood, Bestiary cobalt, Marijan
+          crimson and manager olive remain action accents. This reference
+          demonstrates appearance; creator commands belong to the working
+          routes.
+        </p>
+        <div
+          class="workspace-menu-content"
+          style="
+            max-width: 296px;
+            background:
+              var(--surface-panel-texture) 0 0 / 384px 768px,
+              var(--color-panel);
+            padding: 18px;
+            margin-bottom: 24px;
+            color: var(--color-on-leather);
+          "
+        >
+          <details class="workspace-switcher">
+            <summary>
+              <span class="workspace-mode-mark" aria-hidden="true">✦</span
+              ><span><small>Workspace</small>Player character</span
+              ><span aria-hidden="true">⌄</span>
+            </summary>
+            <nav class="creator-switch" aria-label="Workspaces">
+              <a href="/" aria-current="page">Player character</a
+              ><a href="/bestiary/">NPC &amp; creature</a
+              ><a href="/marijan/">Marijan Mode</a
+              ><a href="/manager/">Character manager</a>
+            </nav>
+          </details>
+          <div class="workspace-local-navigation">
+            <nav aria-label="Example stages">
+              <ol class="steps">
+                <li>
+                  <button aria-current="step" type="button">
+                    <span class="step-number">01</span
+                    ><span
+                      >Origins<small>Required choices stay visible</small></span
+                    >
+                  </button>
+                </li>
+                <li>
+                  <button disabled type="button">
+                    <span class="step-number">02</span
+                    ><span
+                      >An unavailable example<small
+                        >Open a working creator to edit</small
+                      ></span
+                    >
+                  </button>
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <div class="workspace-menu-footer">
+            <div class="save-status">Example menu · no character data</div>
+          </div>
+        </div>
         <div class="kit-grid">
           <section>
             <h2>Actions & fields</h2>
@@ -126,6 +186,8 @@
               <button class="primary" type="button">Main action</button
               ><button class="secondary" type="button">Secondary</button
               ><button class="quiet" type="button">Neutral</button
+              ><button class="quiet" type="button" aria-busy="true" disabled>
+                Preparing…</button
               ><button class="primary" type="button" disabled>
                 Unavailable
               </button>

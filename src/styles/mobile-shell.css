@@ -1,4 +1,4 @@
-/* Shared compact shell through 1000px; wider rails retain their layout. */
+/* Shared compact shell through 1100px; wider rails retain their layout. */
 .mobile-menu-launcher {
   display: none;
 }
@@ -14,43 +14,7 @@
 html:has(.mobile-creator-menu[open]) {
   overflow: hidden;
 }
-@media (max-width: 1000px) {
-  .workspace,
-  .mm-workspace {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding-bottom: 88px;
-  }
-  .workspace > .rail,
-  .mm-workspace > .rail {
-    width: 100%;
-    position: static;
-    max-height: none;
-    overflow: visible;
-    order: 0;
-    padding: 10px;
-  }
-  .rail .rail-heading,
-  .rail nav,
-  .mm-rail .mm-section-nav,
-  .rail > .eyebrow,
-  .rail .mm-rail-intro,
-  .rail .gm-rail-note {
-    display: none;
-  }
-  .rail .mobile-step,
-  .gm-workspace .rail > .field,
-  .mm-rail .mm-mobile-section {
-    display: block;
-    margin: 0;
-  }
-  .workspace > .panel,
-  .mm-workspace > .panel {
-    width: 100%;
-    order: 2;
-  }
+@media (max-width: 1100px) {
   .mobile-workspace-bar {
     display: flex;
     position: fixed;
@@ -64,12 +28,6 @@ html:has(.mobile-creator-menu[open]) {
     background: var(--color-leather-deep);
     color: var(--color-on-leather);
     border-top: 1px solid var(--color-gold-dark);
-  }
-  .mm-workspace {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding-bottom: 85px;
   }
   .mobile-marijan-bar > strong {
     font-size: 12px;
@@ -187,47 +145,6 @@ html:has(.mobile-creator-menu[open]) {
   .mobile-creator-menu h2 {
     margin: 0;
     font-size: 25px;
-  }
-  .mobile-creator-menu h3 {
-    margin: 20px 0 9px;
-    font-size: 16px;
-  }
-  .mobile-creator-menu .header-actions,
-  .mobile-menu-actions,
-  .mobile-menu-extra {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  .mobile-creator-menu button {
-    width: 100%;
-    min-height: 44px;
-    font-size: 14px;
-  }
-  .mobile-creator-menu .save-status,
-  .mobile-creator-menu #mm-save-status {
-    color: var(--color-muted);
-    font-size: 12px;
-    margin: 4px 0;
-  }
-  .mobile-creator-menu .creator-switch {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-  }
-  .mobile-creator-menu .creator-switch a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 44px;
-  }
-  .mobile-creator-menu .creator-switch a[aria-current]::after {
-    content: " · Current";
-    font-size: 12px;
-    margin-left: 4px;
   }
   .rail .mobile-step {
     margin: 0;

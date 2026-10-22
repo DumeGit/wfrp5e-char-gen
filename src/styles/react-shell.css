@@ -20,22 +20,3 @@
   max-height: calc(100dvh - 32px);
   overflow: auto;
 }
-.player-history:not(.compact) {
-  position: fixed;
-  bottom: 20px;
-  left: var(--layout-gutter);
-  z-index: 20;
-}
-@media (max-width: 1000px) {
-  [data-mode="player"] .rail .header-actions,
-  [data-mode="player"] .rail > .text-button,
-  [data-mode="player"] .rail > .save-status {
-    display: none;
-  }
-  .player-history.compact {
-    position: fixed;
-    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-    left: var(--layout-gutter);
-    z-index: 45;
-  }
-}

@@ -1,5 +1,12 @@
 # Character manager — Imperial field ledger
 
+## Imperial Desk — 22 October 2026
+
+All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.
+
+The [design system](DESIGN-SYSTEM.md) and [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) supersede older dated geometry/material/menu descriptions below. Historical results remain evidence for their original builds, not claims of current verification. Materials and decoration stay outside print; rules, formats and PDF layouts remain unchanged.
+
+
 Current implemented layout: [Character manager layout specification](CHARACTER-MANAGER-REDESIGN-PLAN.md), approved with the existing shared header retained.
 
 The `/manager/` route adds a local play sheet and character library alongside the three creators. The user selected Imperial field ledger on 19 October 2026: military olive framing, parchment, aged brass and subtle static canvas. The 20 October follow-up keeps the shared CreatorFrame header geometry, emblem and Search, and restores the joined desktop left menu used by the other modes. The manager's banner illustration was generated from the user's supplied fantasy-sports reference; see [art provenance and prompt](../design-assets/field-ledger/README.md). Dedicated menu/search portal slots keep their visual and keyboard order stable across modes.

@@ -1,5 +1,12 @@
 # Bestiary Workshop
 
+## Imperial Desk — 22 October 2026
+
+All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.
+
+The [design system](DESIGN-SYSTEM.md) and [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) supersede older dated geometry/material/menu descriptions below. Historical results remain evidence for their original builds, not claims of current verification. Materials and decoration stay outside print; rules, formats and PDF layouts remain unchanged.
+
+
 **Loot placement and flow (22 October 2026):** Equipment & magic has a Loot section immediately after Trappings and before Magic & knowledge. Its single **Roll loot** button rolls once and adds the result immediately. There is no dialog, preview, carried/lair distinction or manual roll count. An initial 00 automatically generates two extra results and their quantity dice; further 00s are rerolled rather than multiplied. The collapsed inline **View d100 loot table** disclosure shows the original app-authored `additional-loot-v1` table, using exact existing catalogue IDs and approved coin/item/bundle quantities, without new prices or properties.
 
 Each click records all dice and adds the full reward in one Undo step. Dice keep their app-table provenance, quantities, times and reroll occurrences even through Undo. Pathological repeated 00s are bounded, retain their dice and add no partial reward. Accepted loot stays in a separate additive schema-2 `loot` array with stable keys, quantity and either an item ID or brass/silver/gold denomination. Missing loot defaults to empty. Older rows containing the retired carried/lair field are strictly validated, then restored without that field or any loss of items, quantities or keys; the imported object is not mutated. Historical dice remain intact.

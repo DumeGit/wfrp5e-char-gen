@@ -21,7 +21,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     page,
   }, info) => {
     const initial = page.viewportSize(),
-      compact = initial.width <= 1000;
+      compact = initial.width <= 1100;
     if (mode === "Player") await openPC(page, { complete: true });
     else if (mode === "GM") {
       await openGM(page);
@@ -49,7 +49,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     await expect(history).toHaveCount(1);
     if (compact) {
       await expect(menu).toBeVisible();
-      expect((await rail.boundingBox()).height).toBeLessThan(85);
+      expect((await rail.boundingBox()).height).toBeLessThan(110);
       await expect(
         page.locator(".mobile-workspace-bar .history-controls"),
       ).toBeVisible();
@@ -64,8 +64,11 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       expect(JSON.parse(saved.bytes).name).toBeDefined();
     } else {
       await expect(menu).toBeHidden();
-      await expect(rail.locator(".creator-switch")).toBeVisible();
+      await expect(rail.locator(".workspace-switcher > summary")).toBeVisible();
     }
+
+    if (await page.locator(".workspace-action-dialog[open]").count())
+      await page.keyboard.press("Escape");
 
     if (mode === "Player") {
       for (const select of await page.locator(".panel select:visible").all())
@@ -148,20 +151,20 @@ for (const mode of ["Player", "GM", "Marijan"]) {
 
     if (info.project.name === "portrait") {
       // Cross the exact boundary both ways: move live controls, never copy them.
-      for (const width of [1001, 1000, 1280, 800]) {
+      for (const width of [1101, 1100, 1099, 1280, 800]) {
         await page.setViewportSize({ width, height: 800 });
-        await expect(menu).toBeVisible({ visible: width <= 1000 });
+        await expect(menu).toBeVisible({ visible: width <= 1100 });
         await expect(history).toHaveCount(1);
         await expect(
           page.locator(
-            width <= 1000
+            width <= 1100
               ? ".mobile-workspace-bar .history-controls"
               : ".rail .history-controls",
           ),
         ).toBeVisible();
         await expect(
           page.locator(
-            width <= 1000
+            width <= 1100
               ? ".masthead-actions .book-search-launcher"
               : ".banner-search .book-search-launcher",
           ),

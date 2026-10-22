@@ -8,9 +8,9 @@ import {
 } from "./helpers.mjs";
 
 const surfaces = {
-  player: { file: "tavern-wood.svg", color: "rgb(48, 34, 27)" },
-  gm: { file: "crypt-masonry.svg", color: "rgb(28, 44, 60)" },
-  marijan: { file: "vellum.svg", color: "rgb(36, 35, 38)" },
+  player: { file: "tavern-wood.svg", color: "rgb(43, 37, 31)" },
+  gm: { file: "tavern-wood.svg", color: "rgb(43, 37, 31)" },
+  marijan: { file: "tavern-wood.svg", color: "rgb(43, 37, 31)" },
 };
 for (const [mode, expected] of Object.entries(surfaces)) {
   test(`${mode} menu panel materials stay static, usable and print-free @interface @mobile`, async ({
@@ -45,7 +45,7 @@ for (const [mode, expected] of Object.entries(surfaces)) {
       `/assets/panel-textures/${expected.file}`,
     );
     expect(panels[0].color).toBe(expected.color);
-    expect(panels[0].blend).toBe("soft-light, normal");
+    expect(panels[0].blend).toBe("normal, soft-light, normal");
     expect(panels[0].overlay).toBe("none");
     const image = await page.evaluate(async (file) => {
       const img = new Image();

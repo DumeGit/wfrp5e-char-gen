@@ -1,5 +1,8 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { ModeNavigation } from "../../components/ModeNavigation";
+import {
+  WorkspaceMenu,
+  type WorkspaceActionGroup,
+} from "../../components/WorkspaceMenu";
 import type { Edit } from "./ui";
 import { CharacterLibrary } from "./CharacterLibrary";
 import { PlaySheet } from "./PlaySheet";
@@ -23,7 +26,7 @@ export function ManagerWorkspace({
   navigate,
   profile,
   verify,
-  menuActions,
+  actionGroups,
   importFile,
   restore,
   backup,
@@ -42,7 +45,7 @@ export function ManagerWorkspace({
   navigate: (id: string | null, section?: string, view?: string) => void;
   profile: () => void;
   verify: boolean;
-  menuActions: ReactNode;
+  actionGroups: WorkspaceActionGroup[];
   importFile: () => void;
   restore: () => void;
   backup: () => void;
@@ -65,43 +68,55 @@ export function ManagerWorkspace({
       {(section === id || visited.has(id)) && content}
     </div>
   );
-  const saveStatus = (
-    <p
-      className="manager-save-status"
-      role="status"
-      title={state.dirty ? "Unsaved changes" : "Saved on this device"}
-    >
-      {state.saving ? "Saving…" : state.dirty ? "Unsaved changes" : "Saved"}
-    </p>
-  );
   return (
     <div className={`manager-workspace ${record ? "" : "manager-library"}`}>
-      <aside className="rail manager-rail" aria-label="Application menu">
-        <ModeNavigation mode="manager" verify={verify} />
-        <nav
-          className="manager-library-navigation"
-          aria-label="Manager library"
-        >
-          <button
-            type="button"
-            aria-current={!record ? "page" : undefined}
-            onClick={() => navigate(null)}
-          >
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <path d="M4 4h6v16H4zM10 4h5v16h-5zM17 4l4 15-4 1-4-15" />
-            </svg>
-            Character library
-          </button>
-        </nav>
-        <div className="manager-rail-actions">{menuActions}</div>
-        {historyControls}
-        <div className="manager-install" data-install-slot />
-        <p className="manager-rail-note">
-          Characters save on this device. Back up your library to keep a copy.
-        </p>
-      </aside>
+      <WorkspaceMenu
+        mode="manager"
+        verify={verify}
+        groups={actionGroups}
+        history={historyControls}
+        status={
+          state.saving
+            ? "Saving…"
+            : state.dirty
+              ? "Unsaved changes"
+              : state.message || "Saved on this device"
+        }
+        navigation={
+          <>
+            <nav
+              className="manager-library-navigation"
+              aria-label="Manager library"
+            >
+              <button
+                type="button"
+                aria-current={!record ? "page" : undefined}
+                onClick={() => navigate(null)}
+              >
+                Character library
+              </button>
+            </nav>
+            {record && (
+              <nav
+                className="workspace-manager-sections"
+                aria-label="Character sections"
+              >
+                {SECTIONS.map(([id, label]) => (
+                  <button
+                    type="button"
+                    key={id}
+                    aria-current={section === id ? "page" : undefined}
+                    onClick={() => navigateSection(id)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </nav>
+            )}
+          </>
+        }
+      />
       <main id="creator-main" className="manager-main">
-        {!record && <div className="manager-workspace-tools">{saveStatus}</div>}
         {alerts}
         <div hidden={!!record}>
           <CharacterLibrary
@@ -161,7 +176,6 @@ export function ManagerWorkspace({
                 {...{ record, result, edit, open }}
                 disabled={state.saving || state.dirty}
               />
-              {saveStatus}
             </div>
             <nav className="manager-navigation" aria-label="Character sections">
               {SECTIONS.map(([id, label]) => (

@@ -9,9 +9,10 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
-import { createPortal } from "react-dom";
-import { ModeNavigation } from "../../components/ModeNavigation";
-import { CreatorMenu } from "../../components/CreatorMenu";
+import {
+  WorkspaceMenu,
+  type WorkspaceActionGroup,
+} from "../../components/WorkspaceMenu";
 import { KEYS } from "../../engine/rules.mjs";
 import { characteristicNames } from "../../engine/ui.mjs";
 import { score } from "../../engine/controls.mjs";
@@ -158,8 +159,6 @@ function MarijanSession({
   const [careerQuery, setCareerQuery] = useState(session.careerQuery);
   const [activeSearch, setActiveSearch] = useState("");
   const [compact, setCompact] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [menuTarget, setMenuTarget] = useState<HTMLElement | null>(null);
   const [dialog, setDialog] = useState<any>(null);
   const [toast, setToast] = useState("");
   const [busy, setBusy] = useState("");
@@ -193,11 +192,9 @@ function MarijanSession({
     const media = matchMedia(COMPACT_SHELL_QUERY);
     const change = () => {
       setCompact(media.matches);
-      if (!media.matches) setMenuOpen(false);
     };
     change();
     media.addEventListener("change", change);
-    setMenuTarget(document.getElementById("compact-menu"));
     return () => {
       active.current = false;
       task.current++;
@@ -253,9 +250,11 @@ function MarijanSession({
     const valid = () => active.current && task.current === request;
     try {
       await operation(valid);
+      return true;
     } catch (error) {
       if (valid())
         setFailure(error instanceof Error ? error.message : String(error));
+      return false;
     } finally {
       if (valid()) setBusy("");
     }
@@ -504,7 +503,7 @@ function MarijanSession({
   async function exportPDF() {
     const draft = structuredClone(s),
       result = r;
-    await run("Preparing…", async (valid) => {
+    return run("Preparing…", async (valid) => {
       const [{ exportMarijanSheet }, { loadPDFLibrary }] = await Promise.all([
         import("../../engine/marijan/pdf.mjs"),
         import("../../engine/pdf-runtime.mjs"),
@@ -1039,69 +1038,75 @@ function MarijanSession({
       ))}
     </div>
   );
-  const tools = (
-    <>
-      <div className={compact ? "mobile-menu-actions" : "mm-rail-tools"}>
-        <Action action="save" onClick={save}>
-          Save character
-        </Action>
-        <Action
-          action="load"
-          onClick={() =>
-            openDialog({ type: "load", title: "Load Marijan character" })
-          }
-        >
-          Load character
-        </Action>
-        <Action
-          action="copy-player"
-          onClick={() =>
-            openDialog({ type: "copy", title: "Copy player character" })
-          }
-        >
-          Copy player character
-        </Action>
-        <Action
-          action="new"
-          onClick={() => {
+  const actionGroups: WorkspaceActionGroup[] = [
+    {
+      id: "new",
+      label: "New & import",
+      commands: [
+        {
+          id: "new",
+          label: "New character",
+          effect: "navigate",
+          run: () => {
             store.replace(freshMarijan());
             notify("New blank character. Undo restores the previous draft.");
-          }}
-        >
-          New character
-        </Action>
-        <Action
-          action="export"
-          className="primary"
-          disabled={!!busy}
-          onClick={() => void exportPDF()}
-        >
-          Export PDF
-        </Action>
-      </div>
-      <div id="mm-install">
-        <span data-install-slot />
-      </div>
-    </>
-  );
-  const menuButton = compact && (
-    <button
-      type="button"
-      className="quiet mobile-menu-launcher"
-      aria-label="Open creator menu"
-      aria-controls="creator-menu"
-      aria-haspopup="dialog"
-      onClick={() => setMenuOpen(true)}
-    >
-      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-        <path
-          d="M4 6h16M4 12h16M4 18h16"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </svg>
-    </button>
-  );
+          },
+        },
+        {
+          id: "load",
+          label: "Load character",
+          effect: "dialog",
+          run: () =>
+            openDialog({ type: "load", title: "Load Marijan character" }),
+        },
+        {
+          id: "copy",
+          label: "Copy player character",
+          effect: "dialog",
+          run: () =>
+            openDialog({ type: "copy", title: "Copy player character" }),
+        },
+      ],
+    },
+    {
+      id: "save",
+      label: "Save & export",
+      commands: [
+        { id: "save", label: "Save character", effect: "close", run: save },
+        {
+          id: "backup",
+          label: "Download JSON backup",
+          effect: "close",
+          run: backup,
+        },
+        {
+          id: "pdf",
+          label: "Export PDF",
+          effect: "close",
+          disabled: !!busy,
+          run: async () => {
+            if ((await exportPDF()) === false)
+              throw Error(
+                "The PDF could not be prepared. Try exporting again.",
+              );
+          },
+        },
+      ],
+    },
+    {
+      id: "more",
+      label: "More",
+      commands: [
+        {
+          id: "generate",
+          label: "Generate a character",
+          effect: "dialog",
+          disabled: !!busy,
+          run: startGeneration,
+        },
+      ],
+    },
+  ];
   const inspected =
     dialog?.type === "inspect"
       ? s.entries[dialog.group].find((x: any) => x.key === dialog.key)
@@ -1134,54 +1139,52 @@ function MarijanSession({
       }}
     >
       <div className="mm-workspace">
-        <aside className="rail mm-rail">
-          {!compact && <ModeNavigation mode="marijan" verify={verify} />}
-          <div className="rail-heading">
-            <span className="eyebrow">Marijan Mode</span>
-            <strong>Freehand character</strong>
-            <p className="mm-rail-intro">One page. Your values.</p>
-          </div>
-          <nav className="mm-section-nav" aria-label="Editor sections">
-            {SECTIONS.map(([id, title]) => (
-              <a
-                href={`#mm-section-${id}`}
-                key={id}
-                onClick={(event) => {
-                  event.preventDefault();
+        <WorkspaceMenu
+          mode="marijan"
+          verify={verify}
+          heading="One page. Your values."
+          navigation={
+            <nav className="mm-section-nav" aria-label="Editor sections">
+              {SECTIONS.map(([id, title]) => (
+                <a
+                  href={`#mm-section-${id}`}
+                  key={id}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    jump(id);
+                  }}
+                >
+                  {title}
+                </a>
+              ))}
+            </nav>
+          }
+          selector={
+            <div className="field mm-mobile-section">
+              <label htmlFor="mm-section-jump">Jump to section</label>
+              <select
+                id="mm-section-jump"
+                value=""
+                onChange={(event) => {
+                  const id = event.currentTarget.value;
+                  event.currentTarget.value = "";
                   jump(id);
                 }}
               >
-                {title}
-              </a>
-            ))}
-          </nav>
-          <div className="field mm-mobile-section">
-            <label htmlFor="mm-section-jump">Jump to section</label>
-            <select
-              id="mm-section-jump"
-              value=""
-              onChange={(event) => {
-                const id = event.currentTarget.value;
-                event.currentTarget.value = "";
-                jump(id);
-              }}
-            >
-              <option value="">Jump to section…</option>
-              {SECTIONS.map(([id, title]) => (
-                <option key={id} value={id}>
-                  {title}
-                </option>
-              ))}
-            </select>
-          </div>
-          {!compact && historyControls}
-          {!compact && tools}
-          {!compact && (
-            <small id="mm-save-status" role="status">
-              {snapshot.message}
-            </small>
-          )}
-        </aside>
+                <option value="">Jump to section…</option>
+                {SECTIONS.map(([id, title]) => (
+                  <option key={id} value={id}>
+                    {title}
+                  </option>
+                ))}
+              </select>
+            </div>
+          }
+          groups={actionGroups}
+          history={historyControls}
+          status={snapshot.message}
+          documentState={s}
+        />
         <main id="creator-main" className="panel mm-page" tabIndex={-1}>
           <h1 className="chapter-title" aria-label="Marijan Mode">
             <span className="chapter-initial" aria-hidden="true">
@@ -1613,16 +1616,6 @@ function MarijanSession({
           <strong>{s.name || "Your character"}</strong>
         </div>
       )}
-      {menuTarget ? createPortal(menuButton, menuTarget) : menuButton}
-      <CreatorMenu
-        mode="marijan"
-        verify={verify}
-        open={compact && menuOpen}
-        onClose={() => setMenuOpen(false)}
-        status={snapshot.message}
-      >
-        {compact && tools}
-      </CreatorMenu>
       <input
         ref={fileRef}
         type="file"

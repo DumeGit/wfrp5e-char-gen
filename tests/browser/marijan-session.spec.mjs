@@ -1,4 +1,12 @@
-import { test, expect, noOverflow, pcDraft, gmDraft } from "./helpers.mjs";
+import {
+  test,
+  expect,
+  noOverflow,
+  pcDraft,
+  gmDraft,
+  switchWorkspace,
+  revealCreatorTool,
+} from "./helpers.mjs";
 
 async function open(page) {
   await page.goto("/marijan/?verify=1");
@@ -7,12 +15,7 @@ async function open(page) {
   ).toBeVisible();
 }
 async function switchMode(page, name) {
-  const link = page.getByRole("link", { name, exact: true });
-  if (!(await link.isVisible()))
-    await page
-      .getByRole("button", { name: "Open creator menu", exact: true })
-      .click();
-  await link.click();
+  await switchWorkspace(page, name);
 }
 
 test("Marijan restores independent edits, redo and browsing across client navigation @marijan @migration @mobile", async ({
@@ -176,20 +179,14 @@ test("JSON file imports reject the wrong creator and replace only Marijan with u
     name: "New character",
     exact: true,
   });
-  if (!(await newButton.isVisible()))
-    await page
-      .getByRole("button", { name: "Open creator menu", exact: true })
-      .click();
+  await revealCreatorTool(page, newButton);
   await newButton.click();
   await page.getByLabel("Name", { exact: true }).fill("Current draft");
   const loadButton = page.getByRole("button", {
     name: "Load character",
     exact: true,
   });
-  if (!(await loadButton.isVisible()))
-    await page
-      .getByRole("button", { name: "Open creator menu", exact: true })
-      .click();
+  await revealCreatorTool(page, loadButton);
   await loadButton.click();
   const modal = page.getByRole("dialog", {
     name: "Load Marijan character",

@@ -152,11 +152,14 @@ export async function createPlayerStore(verification = false) {
       );
 
   const locked = () => s.ledger.length > 0;
+  let saveStatus = "Saved on this device";
   function save(group = null) {
     if (history.record(historySnapshot(), { group })) taskEpoch++;
     try {
       localStorage.setItem(STORAGE, JSON.stringify(s));
+      saveStatus = "Saved on this device";
     } catch {
+      saveStatus = "Could not save · download a character file";
       toast(
         "Draft could not be saved in this browser. Download a character file to keep it.",
       );
@@ -165,6 +168,7 @@ export async function createPlayerStore(verification = false) {
 
   function getContext() {
     return {
+      saveStatus,
       marketShop,
       characteristicTitle,
       R,
@@ -435,6 +439,7 @@ export async function createPlayerStore(verification = false) {
             .map((x) => issueTarget(R, s, x).step)
             .filter((i) => i < creationStepCount),
         ).size;
+    save();
     const node = workspaceShell({
       d,
       issues,
@@ -443,7 +448,6 @@ export async function createPlayerStore(verification = false) {
       ready,
     });
 
-    save();
     publish(
       decoratePlayerTree(node, {
         s,

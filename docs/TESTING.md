@@ -1,5 +1,14 @@
 # Local testing
 
+## Imperial Desk acceptance — 22 October 2026
+
+The shared oak/parchment shell is implemented in all four modes. The complete production run passed **348 cases with 6 existing skips**; **568 Node**, **13 store**, **15 tablet**, **20 development rendering** and **9 WebKit shell** cases passed. Build/book/generated/type/module/format checks and the 108-file offline manifest passed. After the final active-navigation CSS correction, the 18 Chromium menu cases, 9 WebKit cases, tablet/development checks and visual review were rerun successfully. The [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md#final-acceptance-record--22-october-2026) records exact evidence and limitations.
+
+`npm run test:ui:shell:webkit` runs `playwright.shell.config.mjs` against the prepared export. It exercises the same production fixtures as Chromium: the exact 1100px boundary, drawer/switcher Escape, group/child cancellation and focus, native file cancellation, rejected-import/search isolation, real books navigation, stable editor nodes and manager library. Run `npm run build` first after changes. The full Chromium suite includes these cases without a separate implementation.
+
+Long synthetic identities were checked at 15 logical widths in every mode (320–3840px), including 720/360px reflow models. Actual exports from all four modes were downloaded/rendered/inspected. Native phone keyboards, OS pickers, enlarged-text settings and physical installation are not certified by emulation. Broader cross-browser smoke passed Chromium/WebKit; Firefox still fails before opening the app on this host (`spawn UNKNOWN`). One resource-buffer failure during concurrent testing was resolved by an isolated full run; assertions/retries were not weakened.
+
+
 ## Folio removal — 22 October 2026
 
 All three creators and the component/design studies no longer render character/creature folios. Browser regressions check that no summary panel or mobile View/Back control is mounted, that desktop editors fill the released width at 1440–3840px, and that mobile history/balances/status, navigation, save/load and Review remain usable. Calculation notes formerly in Marijan's folio remain in the editor. Equipment aggregation is retained independently in `gear-summary.mjs`; its tests cover quantities, containers and weapon/shield deduplication. Former folio rule assertions now inspect the shared character result.

@@ -92,23 +92,6 @@ a {
   color: var(--brass);
   letter-spacing: 0.12em;
 }
-.workspace {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 24px;
-  max-width: 1700px;
-  margin: auto;
-  padding: 28px 3.5%;
-  align-items: start;
-}
-.rail {
-  position: sticky;
-  top: 24px;
-  background: var(--ink);
-  color: #f8f6ed;
-  border-radius: 8px;
-  padding: 22px 14px;
-}
 .rail-heading {
   padding: 0 9px 20px;
 }

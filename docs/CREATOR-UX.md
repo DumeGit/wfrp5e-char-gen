@@ -1,5 +1,12 @@
 # Creator browsing and explanations
 
+## Imperial Desk — 22 October 2026
+
+All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.
+
+The [design system](DESIGN-SYSTEM.md) and [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) supersede older dated geometry/material/menu descriptions below. Historical results remain evidence for their original builds, not claims of current verification. Materials and decoration stay outside print; rules, formats and PDF layouts remain unchanged.
+
+
 October 2026 UX refresh: audit items 1 and 3–22. Saved book presets (item 2) were explicitly excluded. This is presentation and workflow work; the book registry, printed tables, eligibility and advancement rules remain authoritative. This document covers creation workflows. The separate [character manager](CHARACTER-MANAGER.md) now handles everyday play, a local library, XP and Career progression; live effects and complex campaign systems remain manual.
 
 | Item | Implemented behavior |

@@ -14,7 +14,6 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { getPlayerStore } from "./store";
-import { CreatorMenu } from "../../components/CreatorMenu";
 import { HistoryControls } from "../../components/HistoryControls";
 import { ActionExecutor } from "../../components/AsyncActionButton";
 
@@ -69,9 +68,7 @@ function PlayerSession({ store }: { store: PlayerStore }) {
     store.getSnapshot,
   );
   const dialog = useRef<HTMLDialogElement>(null);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [compact, setCompact] = useState(false),
-    [slot, setSlot] = useState<Element | null>(null);
+  const [compact, setCompact] = useState(false);
   const [busy, setBusy] = useState(false),
     [failure, setFailure] = useState("");
   const root = useRef<HTMLDivElement>(null);
@@ -87,11 +84,9 @@ function PlayerSession({ store }: { store: PlayerStore }) {
     const media = matchMedia(COMPACT_SHELL_QUERY);
     const update = () => {
       setCompact(media.matches);
-      if (!media.matches) setMenuOpen(false);
     };
     update();
     media.addEventListener("change", update);
-    setSlot(document.getElementById("compact-menu"));
     const persist = () => store.persist();
     window.addEventListener("wfrp-before-update", persist);
     const toggle = (event: Event) => store.toggle(event);
@@ -178,48 +173,6 @@ function PlayerSession({ store }: { store: PlayerStore }) {
           />,
           historySlot,
         )}
-      {compact &&
-        slot &&
-        createPortal(
-          <button
-            className="mobile-menu-launcher quiet"
-            aria-label="Open creator menu"
-            aria-haspopup="dialog"
-            aria-controls="creator-menu"
-            onClick={() => setMenuOpen(true)}
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>,
-          slot,
-        )}
-      {compact && (
-        <CreatorMenu
-          mode="player"
-          verify={new URLSearchParams(location.search).has("verify")}
-          open={menuOpen}
-          onClose={() => setMenuOpen(false)}
-          status="Saved automatically on this device"
-        >
-          <button className="quiet" data-action="save-file">
-            Save character
-          </button>
-          <button className="quiet" data-action="load-file">
-            Load character
-          </button>
-          <button className="quiet" data-action="new">
-            New character
-          </button>
-          <span data-install-slot="" />
-          <button className="quiet" data-action="sources">
-            Sources &amp; decisions
-          </button>
-          <button className="quiet" data-action="books">
-            Choose books
-          </button>
-        </CreatorMenu>
-      )}
       <dialog
         id="creator-dialog"
         ref={dialog}

@@ -1,6 +1,6 @@
 # Documentation index and current application state
 
-Reviewed against repository source on **22 October 2026**. This index covers all 53 existing tracked Markdown files, plus this new index. Private PDF extractions, temporary review copies, dependencies and build output are not product documentation; third-party licence text is preserved verbatim.
+Reviewed against repository source on **22 October 2026**. This index covers the current tracked guides and their ownership. Private PDF extractions, temporary review copies, dependencies and build output are not product documentation; third-party licence text is preserved verbatim.
 
 ## Current application
 
@@ -11,7 +11,7 @@ Reviewed against repository source on **22 October 2026**. This index covers all
 | Marijan Mode | `/marijan/` | Unrestricted one-page creation, manual overrides, optional reviewed random generation and independent saves |
 | The Field Ledger | `/manager/` | Local character library; Play/Advance/Journal; creator imports, resources, Conditions/afflictions, equipment, XP/Career progression and backups |
 
-The shared masthead, four-workspace switch, Menu-before-Search compact controls, notices and native dialogs are common. The three creators retain their rail/editor workflow and mobile Undo/Redo bar with Player balances or workshop status. The manager uses a joined desktop left menu, grouped action dialogs/history and a compact sheet; its phone bottom bar selects Play/Advance/Journal. Its four ability sections and Gear are part of Play, and Skills are plain noninteractive rows in balanced alphabetical vertical columns. See the [manager specification](CHARACTER-MANAGER-REDESIGN-PLAN.md).
+The shared Imperial Desk uses a 296px oak menu, aged parchment, a native four-workspace switcher and New & import / Save & export / More action groups. Compact layout includes 1100px. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) and the [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md). The shared masthead, four-workspace switch, Menu-before-Search compact controls, notices and native dialogs are common. The three creators retain their rail/editor workflow and mobile Undo/Redo bar with Player balances or workshop status. The manager uses a joined desktop left menu, grouped action dialogs/history and a compact sheet; its phone bottom bar selects Play/Advance/Journal. Its four ability sections and Gear are part of Play, and Skills are plain noninteractive rows in balanced alphabetical vertical columns. See the [manager specification](CHARACTER-MANAGER-REDESIGN-PLAN.md).
 
 Next.js 16.4.2 App Router, React 19.3.1 and TypeScript 5.9.3 provide the static browser interface around the retained JavaScript rules. Node 24.x is required (`.nvmrc`: 24.14.0); use `npm ci`. Only `out/` is deployed. Legal information is at `/legal/`; old gm/marijan/legal `.html` addresses preserve queries/fragments. No account server, cloud synchronization or analytics SDK is included. Creator drafts remain separate; the manager uses revision-checked Dexie/IndexedDB records. The PWA cache stores app assets, not character backups, and updates await manager saves/conflicts even after navigation away.
 
@@ -36,7 +36,7 @@ For prose-only changes, check factual source paths, local links and stale claims
 - [Description editorial review — 16 October 2026](DESCRIPTION-REVIEW.md) — `docs/DESCRIPTION-REVIEW.md`
 - [Canonical descriptions](DESCRIPTIONS.md) — `docs/DESCRIPTIONS.md`
 - [Black Banner design system — v1](DESIGN-SYSTEM.md) — `docs/DESIGN-SYSTEM.md`
-- [Unified design implementation contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) — approved A with oak and parchment; detailed target, migration tracker and future consistency rules; production migration pending
+- [Unified design implementation contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) — approved A with oak and parchment; detailed target, migration tracker and future consistency rules; implemented common shell; continuing design contract
 - [Unified layout studies](UNIFIED-LAYOUT-PROPOSAL.md) — initial comparison and selected visual direction
 - [Bestiary Workshop](GM-WORKSHOP.md) — `docs/GM-WORKSHOP.md`
 - [Legacy: actual Fifth Edition adaptations](LEGACY.md) — `docs/LEGACY.md`

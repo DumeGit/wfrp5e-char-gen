@@ -29,6 +29,7 @@
     "test:ui:pwa": "node scripts/run-browser-tests.mjs pwa",
     "test:ui:all": "node scripts/run-browser-tests.mjs all",
     "test:ui:cross-browser": "node scripts/run-browser-tests.mjs cross-browser",
+    "test:ui:shell:webkit": "playwright test --config=playwright.shell.config.mjs",
     "test:ui": "npm run test:ui:smoke",
     "test:ui:install": "playwright install chromium",
     "test:ui:install:all": "playwright install chromium firefox webkit",

@@ -6,6 +6,7 @@ import {
   isValidElement,
   type ReactElement,
   type ReactNode,
+  type ElementType,
 } from "react";
 import { AsyncActionButton } from "./AsyncActionButton";
 import { NativeTextField } from "./NativeTextField";
@@ -117,7 +118,7 @@ export function fragment(...children: ReactNode[]): ReactElement {
   return createElement(Fragment, null, ...children.map(text));
 }
 export function element(
-  tag: string,
+  tag: ElementType,
   intent: Record<string, any>,
   ...nodes: ReactNode[]
 ): ReactElement {
@@ -150,7 +151,10 @@ export function element(
     else props[key] = typeof value === "string" ? decode(value) : value;
   }
   const children = Children.toArray(nodes.map(text));
-  if (["input", "select", "textarea"].includes(tag)) {
+  if (
+    typeof tag === "string" &&
+    ["input", "select", "textarea"].includes(tag)
+  ) {
     props.name ??= props.id ?? props["data-bind"] ?? "choice";
     if (tag !== "select") props.autoComplete ??= "off";
     if (props.type === "number") props.inputMode ??= "decimal";
@@ -196,7 +200,10 @@ export function element(
       props.value =
         chosen.props.value ?? Children.toArray(chosen.props.children).join("");
   }
-  if (["input", "select", "textarea"].includes(tag)) {
+  if (
+    typeof tag === "string" &&
+    ["input", "select", "textarea"].includes(tag)
+  ) {
     props.onChange ??= () => {};
     if (tag === "textarea") {
       props.value ??= children.join("");

@@ -9,6 +9,7 @@ import {
   search,
   noOverflow,
   downloadBytes,
+  revealCreatorTool,
 } from "./helpers.mjs";
 
 for (const mode of ["Player", "GM", "Marijan"]) {
@@ -36,7 +37,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       await expect(page.locator(".sheet")).toHaveCount(0);
       expect(shell.width).toBeGreaterThan(width * 0.96);
       expect(editor.width).toBeGreaterThan(previousEditorWidth);
-      expect(rail.width).toBeLessThanOrEqual(240);
+      expect(rail.width).toBe(296);
       expect(Math.abs(rail.x + rail.width - editor.x)).toBeLessThanOrEqual(1);
       const rightGutter = await page
         .locator(".workspace, .mm-workspace")
@@ -58,6 +59,10 @@ for (const mode of ["Player", "GM", "Marijan"]) {
         });
     }
     if (mode === "Player") {
+      await revealCreatorTool(
+        page,
+        page.getByRole("button", { name: "Choose books", exact: true }),
+      );
       await page
         .getByRole("button", { name: "Choose books", exact: true })
         .first()

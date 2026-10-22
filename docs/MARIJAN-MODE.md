@@ -1,5 +1,12 @@
 # Marijan Mode
 
+## Imperial Desk — 22 October 2026
+
+All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.
+
+The [design system](DESIGN-SYSTEM.md) and [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) supersede older dated geometry/material/menu descriptions below. Historical results remain evidence for their original builds, not claims of current verification. Materials and decoration stay outside print; rules, formats and PDF layouts remain unchanged.
+
+
 The character folio and its mobile View/Back controls are removed. The editor occupies the freed space; export remains in the existing menu/editor footer.
 
 October 19 interface alignment: Marijan shares the joined rail/editor geometry and mobile gutters with Player and Bestiary. The common Creator menu owns Close/Escape/backdrop behavior, full-width file actions above Switch creator and one status message. The bottom bar is a named Character actions region. Standalone actions use the shared quiet button skin; phone add-entry search occupies its own row above Book and Custom, keeping the selected filter readable. These changes do not alter unrestricted values, saves or calculations.

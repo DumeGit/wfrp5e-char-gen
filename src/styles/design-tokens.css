@@ -1,4 +1,4 @@
-/* Black Banner v1. Semantic roles are the public styling API for new features. */
+/* Imperial Desk. Semantic roles are the public styling API for new features. */
 @font-face {
   font-family: Ledger Text;
   src: url(/assets/fonts/fell.ttf) format("truetype");
@@ -16,27 +16,27 @@
   font-display: swap;
 }
 :root {
-  --color-world: #201a16;
-  --color-leather: #30221b;
-  --color-leather-deep: #251c17;
+  --color-world: #201c17;
+  --color-leather: #2b251f;
+  --color-leather-deep: #201c17;
   /* One fixed, static Subtle material used by the menu. */
-  --color-panel: #30221b;
+  --color-panel: #2b251f;
   --surface-panel-texture: url(/assets/panel-textures/tavern-wood.svg);
   --surface-panel-texture-size: 384px 768px;
   --shadow-panel: inset 0 0 32px #0005, 0 8px 24px #0003;
-  --color-leather-raised: #493328;
+  --color-leather-raised: #463b2e;
   --color-on-leather: #f2dfb7;
-  --color-on-leather-muted: #c7af88;
-  --color-line-dark: #806744;
-  --color-paper: #eee0bd;
-  --color-paper-raised: #f9f0db;
+  --color-on-leather-muted: #cabb9f;
+  --color-line-dark: #957746;
+  --color-paper: #eddfbf;
+  --color-paper-raised: #f7edda;
   --color-paper-recessed: #e5d4ae;
   --color-paper-hover: #f5e6c5;
-  --color-ink: #38291d;
-  --color-muted: #70583c;
-  --color-line: #c4ab7d;
+  --color-ink: #352b20;
+  --color-muted: #604b33;
+  --color-line: #c6b08b;
   --color-line-soft: #d4c19b;
-  --color-gold: #bda16a;
+  --color-gold: #c4a36b;
   --color-gold-light: #e5c683;
   --color-gold-dark: #82613a;
   --color-crimson: #812c31;
@@ -54,7 +54,7 @@
   --color-legacy: #65475b;
   --color-legacy-surface: #efe2e8;
   --color-legacy-line: #b697a7;
-  --color-focus: #8a5425;
+  --color-focus: #754921;
   --color-title-veil: #251610ad;
   --color-search-veil: #251810b3;
   --color-dialog-backdrop: #17100ecc;
@@ -62,15 +62,20 @@
   --color-step-number-active: var(--color-gold-light);
   --color-step-caption-active: var(--color-on-leather-muted);
   --surface-working-leaf:
-    radial-gradient(ellipse at 40% 0, #fff6, transparent 75%),
+    radial-gradient(ellipse at 0 6%, #84541d20, transparent 24%),
+    radial-gradient(ellipse at 100% 96%, #9d672c22, transparent 30%),
     linear-gradient(
       90deg,
-      #79532a12,
-      transparent 8%,
-      transparent 94%,
-      #79532a1a
+      #7c4a1a38,
+      #a8773122 5px,
+      transparent 23px,
+      transparent calc(100% - 16px),
+      #8d60231c
     ),
+    url(/assets/imperial-desk/parchment.webp) 0 0 / 1024px 1024px repeat,
     var(--color-paper);
+  --manager-surface-frame: #d2cfb4;
+  --manager-surface-heading: #e4dfc7;
   --shadow-working-leaf: inset 0 0 24px #79532a18;
   --color-career-start-tint: #eee0d2;
   --color-career-later: #62646b;
@@ -89,7 +94,7 @@
   --color-focus-on-dark: var(--color-gold-light);
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-heading: clamp(1.9rem, 2.5vw, 2.5rem);
+  --text-heading: clamp(1.9rem, 2.5vw, 2.25rem);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -104,7 +109,7 @@
   --control-height: 44px;
   --control-height-compact: 36px;
   --layout-gutter: clamp(16px, 1.25vw, 40px);
-  --layout-rail: 230px;
+  --layout-rail: 296px;
   --motion-control: 160ms;
   --motion-ash: 16s;
   --motion-mist: 22s;
@@ -119,125 +124,25 @@
   --focus: var(--color-focus);
 }
 
-/* The server-rendered frame selects the initial palette before hydration.
-   The root attribute also supports standalone previews and client navigation. */
-/* Moonlit Vellum: the approved GM palette. Shared components inherit these roles. */
+/* First-paint mode accents; the oak and paper roles above are shared. */
 :root[data-theme="moonlit-vellum"],
 :root:has(body > [data-theme="moonlit-vellum"]) {
-  --color-world: #101b2c;
-  --color-leather: #192b43;
-  --color-leather-deep: #122136;
-  --color-panel: #1c2c3c;
-  --surface-panel-texture: url(/assets/panel-textures/crypt-masonry.svg);
-  --surface-panel-texture-size: 512px 640px;
-  --color-leather-raised: #304560;
-  --color-on-leather: #e9dfc4;
-  --color-on-leather-muted: #bac8d4;
-  --color-line-dark: #687b92;
-  --color-paper: #e7e3d4;
-  --color-paper-raised: #f5f2e8;
-  --color-paper-recessed: #d7d6c9;
-  --color-paper-hover: #e6ebeb;
-  --color-ink: #243444;
-  --color-muted: #4c5962;
-  --color-line: #a5adac;
-  --color-line-soft: #bfc6c2;
-  --color-gold: #ab9768;
-  --color-gold-light: #e5d199;
-  --color-gold-dark: #72603c;
-  /* Historical primary-action role names; errors retain their separate red role. */
   --color-crimson: #294e78;
   --color-crimson-hover: #203f63;
-  --color-on-crimson: #f4f0df;
-  --color-focus: #3972ab;
   --color-title-veil: #0b1725bf;
   --color-search-veil: #101e2cb3;
-  --color-dialog-backdrop: #0c172bcc;
-  --color-chapter-initial: var(--color-on-crimson);
-  --color-step-number-active: var(--color-on-crimson);
-  --color-step-caption-active: var(--color-on-crimson);
-  --surface-working-leaf:
-    radial-gradient(ellipse at 40% 0, #ffffff18, transparent 75%),
-    var(--color-paper);
-  --shadow-working-leaf: inset 0 0 24px #07172d12;
 }
-
-/* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
 :root[data-theme="ash-vellum"],
 :root:has(body > [data-theme="ash-vellum"]) {
-  --color-title-veil: #681e29ed;
-  --color-search-veil: #101012dd;
-  --color-dialog-backdrop: #080809d9;
-  --color-chapter-initial: var(--color-on-crimson);
-  --surface-working-leaf:
-    radial-gradient(ellipse at 50% 0, #ffffff12, transparent 70%),
-    var(--color-paper);
-  --shadow-working-leaf: inset 0 0 30px #00000012;
-  color-scheme: light;
-  --color-world: #151517;
-  --color-leather: #262629;
-  --color-leather-deep: #18181b;
-  --color-panel: #242326;
-  --surface-panel-texture: url(/assets/panel-textures/vellum.svg);
-  --surface-panel-texture-size: 256px 256px;
-  --color-leather-raised: #3f3f43;
-  --color-on-leather: #f2f2f2;
-  --color-on-leather-muted: #bcbcc3;
-  --color-line-dark: #77777e;
-  --color-paper: #e6e6e7;
-  --color-paper-raised: #fafafa;
-  --color-paper-recessed: #d8d8da;
-  --color-paper-hover: #eeeeef;
-  --color-ink: #242426;
-  --color-muted: #606067;
-  --color-line: #a2a2a9;
-  --color-line-soft: #c4c4c8;
-  --color-gold: #8b8b92;
-  --color-gold-light: #f1f1f2;
-  --color-gold-dark: #5d5d64;
   --color-crimson: #962e38;
   --color-crimson-hover: #75212a;
-  --color-on-crimson: #ffffff;
-  --color-focus: #ac3540;
-  --color-step-number-active: var(--color-on-crimson);
-  --color-step-caption-active: var(--color-on-crimson);
+  --color-title-veil: #681e29ed;
+  --color-search-veil: #101012dd;
 }
-
-/* Imperial field ledger: one palette shared by the shell, menus and sheet. */
 :root[data-theme="imperial-field-ledger"],
 :root:has(body > [data-theme="imperial-field-ledger"]) {
-  --color-world: #26382d;
-  --color-leather: #304632;
-  --color-leather-deep: #26382d;
-  --color-panel: #304632;
-  --surface-panel-texture: url(/assets/panel-textures/field-canvas.svg);
-  --surface-panel-texture-size: 240px 240px;
-  --color-leather-raised: #42563a;
-  --color-on-leather: #f1eedb;
-  --color-on-leather-muted: #c4cbb4;
-  --color-line-dark: #858f73;
-  --color-paper: #eee9da;
-  --color-paper-raised: #f7f3e8;
-  --color-paper-recessed: #d7dec9;
-  --color-paper-hover: #dfe5d1;
-  --manager-surface-frame: #c4cdb4;
-  --manager-surface-heading: #e0e5d3;
-  --color-ink: #232b25;
-  --color-muted: #485248;
-  --color-line: #7f8977;
-  --color-line-soft: #b9c2ab;
-  --color-gold: #aa9056;
-  --color-gold-light: #e6d3a1;
-  --color-gold-dark: #706039;
-  --color-crimson: #26382d;
-  --color-crimson-hover: #3c523f;
-  --color-on-crimson: #fbf6df;
-  --color-focus: #655019;
-  --color-focus-on-dark: #ead19b;
+  --color-crimson: #304632;
+  --color-crimson-hover: #42563a;
   --color-title-veil: #26382dd9;
   --color-search-veil: #26382dd9;
-  --color-dialog-backdrop: #121c14cc;
-  --color-chapter-initial: #f1eedb;
-  --surface-working-leaf: var(--color-paper);
-  --shadow-working-leaf: inset 0 0 24px #3046320a;
 }

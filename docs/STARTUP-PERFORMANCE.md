@@ -58,3 +58,7 @@ The first production integration passed 15 focused platform/lifecycle/inventory/
 ## Earlier alias optimization
 
 The October 15 pre-Next optimization reduced illustrative 50ms/request cold runs from 961→583ms (Player), 2,311→767ms (Bestiary) and 3,045→769ms (Marijan). A separate one-run Node observation reduced catalogue construction from 449→59ms (core), 2,111→266ms (GM options) and 3,044→287ms (Marijan). Those historical runs used the old independent pages and are separate from the migration comparison above.
+
+## Imperial Desk measurement — 22 October 2026
+
+The optional diagnostic now opens the native workspace disclosure before following real route links and includes manager startup. The final unthrottled loopback run observed 213/362/388/439ms usable for Player/Bestiary/Marijan/manager, 19–22 resources, 88–344ms warm navigation and zero console errors. These are local measurements, not a comparison against an unrecorded cold baseline or a performance guarantee. The existing baseline/final lazy-tool regressions pass, and the new menu leaves PDF/catalogue ownership with existing services. Materials add 9,876 loaded bytes (static WebP plus divider); source SVG is preserved separately. Full evidence/limits: [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md).

@@ -5,6 +5,7 @@ import {
   pcDraft,
   pcStep,
   PC_STORAGE,
+  switchWorkspace,
 } from "./helpers.mjs";
 
 test("extension-added body attributes do not interrupt hydration @rendering", async ({
@@ -95,7 +96,7 @@ test("manager hydrates and edits native fields without development warnings @ren
     name: "Open manager menu",
     exact: true,
   });
-  if (page.viewportSize().width <= 1000) await menu.click();
+  if (page.viewportSize().width <= 1100) await menu.click();
   await page.getByRole("button", { name: "New & import", exact: true }).click();
   const actions = page.getByRole("dialog", {
     name: "New & import",
@@ -109,9 +110,9 @@ test("manager hydrates and edits native fields without development warnings @ren
   await page.locator("#manager-name").fill("Development manager");
   await page.getByRole("button", { name: "Save profile", exact: true }).click();
   await expect(page.getByRole("dialog")).not.toBeVisible();
-  await expect(page.locator("main").getByRole("status").last()).toContainText(
-    "Saved",
-  );
+  await expect(
+    page.locator(".workspace-menu-footer .save-status"),
+  ).toContainText("Saved");
   expect(errors).toEqual([]);
 });
 
@@ -157,12 +158,7 @@ test("creator navigation updates themes without React console errors @rendering"
     ["Player character", "black-banner", "player"],
     ["NPC & creature", "moonlit-vellum", "gm"],
   ]) {
-    const link = page.getByRole("link", { name, exact: true });
-    if (!(await link.isVisible()))
-      await page
-        .getByRole("button", { name: "Open creator menu", exact: true })
-        .click();
-    await link.click();
+    await switchWorkspace(page, name);
     await expect(page.locator("html")).toHaveAttribute("data-mode", mode);
     await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
     await expect(page.locator(".rail")).toBeVisible();
@@ -173,9 +169,9 @@ test("creator navigation updates themes without React console errors @rendering"
 test.describe("initial creator palette before hydration", () => {
   test.use({ javaScriptEnabled: false });
   for (const [route, theme, world] of [
-    ["/", "black-banner", "#201a16"],
-    ["/bestiary/", "moonlit-vellum", "#101b2c"],
-    ["/marijan/", "ash-vellum", "#151517"],
+    ["/", "black-banner", "#201c17"],
+    ["/bestiary/", "moonlit-vellum", "#201c17"],
+    ["/marijan/", "ash-vellum", "#201c17"],
   ]) {
     test(`${theme} paints without JavaScript @rendering`, async ({ page }) => {
       await page.goto(route);

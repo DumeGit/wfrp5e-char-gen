@@ -258,7 +258,9 @@ export function createFeature(getContext, setContext) {
       return;
     }
     if (a === "load-file") {
-      $("#import-file").click();
+      const input = $("#import-file");
+      input.value = "";
+      input.click();
       return;
     }
     if (a === "unlock") {

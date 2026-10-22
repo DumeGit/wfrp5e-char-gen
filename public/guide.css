@@ -92,23 +92,6 @@ a {
   color: var(--brass);
   letter-spacing: 0.12em;
 }
-.workspace {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 24px;
-  max-width: 1700px;
-  margin: auto;
-  padding: 28px 3.5%;
-  align-items: start;
-}
-.rail {
-  position: sticky;
-  top: 24px;
-  background: var(--ink);
-  color: #f8f6ed;
-  border-radius: 8px;
-  padding: 22px 14px;
-}
 .rail-heading {
   padding: 0 9px 20px;
 }
@@ -4071,7 +4054,7 @@ dialog.book-search-panel .search-panel-heading {
   }
 }
 
-/* Black Banner v1. Semantic roles are the public styling API for new features. */
+/* Imperial Desk. Semantic roles are the public styling API for new features. */
 @font-face {
   font-family: Ledger Text;
   src: url(/assets/fonts/fell.ttf) format("truetype");
@@ -4089,27 +4072,27 @@ dialog.book-search-panel .search-panel-heading {
   font-display: swap;
 }
 :root {
-  --color-world: #201a16;
-  --color-leather: #30221b;
-  --color-leather-deep: #251c17;
+  --color-world: #201c17;
+  --color-leather: #2b251f;
+  --color-leather-deep: #201c17;
   /* One fixed, static Subtle material used by the menu. */
-  --color-panel: #30221b;
+  --color-panel: #2b251f;
   --surface-panel-texture: url(/assets/panel-textures/tavern-wood.svg);
   --surface-panel-texture-size: 384px 768px;
   --shadow-panel: inset 0 0 32px #0005, 0 8px 24px #0003;
-  --color-leather-raised: #493328;
+  --color-leather-raised: #463b2e;
   --color-on-leather: #f2dfb7;
-  --color-on-leather-muted: #c7af88;
-  --color-line-dark: #806744;
-  --color-paper: #eee0bd;
-  --color-paper-raised: #f9f0db;
+  --color-on-leather-muted: #cabb9f;
+  --color-line-dark: #957746;
+  --color-paper: #eddfbf;
+  --color-paper-raised: #f7edda;
   --color-paper-recessed: #e5d4ae;
   --color-paper-hover: #f5e6c5;
-  --color-ink: #38291d;
-  --color-muted: #70583c;
-  --color-line: #c4ab7d;
+  --color-ink: #352b20;
+  --color-muted: #604b33;
+  --color-line: #c6b08b;
   --color-line-soft: #d4c19b;
-  --color-gold: #bda16a;
+  --color-gold: #c4a36b;
   --color-gold-light: #e5c683;
   --color-gold-dark: #82613a;
   --color-crimson: #812c31;
@@ -4127,7 +4110,7 @@ dialog.book-search-panel .search-panel-heading {
   --color-legacy: #65475b;
   --color-legacy-surface: #efe2e8;
   --color-legacy-line: #b697a7;
-  --color-focus: #8a5425;
+  --color-focus: #754921;
   --color-title-veil: #251610ad;
   --color-search-veil: #251810b3;
   --color-dialog-backdrop: #17100ecc;
@@ -4135,15 +4118,20 @@ dialog.book-search-panel .search-panel-heading {
   --color-step-number-active: var(--color-gold-light);
   --color-step-caption-active: var(--color-on-leather-muted);
   --surface-working-leaf:
-    radial-gradient(ellipse at 40% 0, #fff6, transparent 75%),
+    radial-gradient(ellipse at 0 6%, #84541d20, transparent 24%),
+    radial-gradient(ellipse at 100% 96%, #9d672c22, transparent 30%),
     linear-gradient(
       90deg,
-      #79532a12,
-      transparent 8%,
-      transparent 94%,
-      #79532a1a
+      #7c4a1a38,
+      #a8773122 5px,
+      transparent 23px,
+      transparent calc(100% - 16px),
+      #8d60231c
     ),
+    url(/assets/imperial-desk/parchment.webp) 0 0 / 1024px 1024px repeat,
     var(--color-paper);
+  --manager-surface-frame: #d2cfb4;
+  --manager-surface-heading: #e4dfc7;
   --shadow-working-leaf: inset 0 0 24px #79532a18;
   --color-career-start-tint: #eee0d2;
   --color-career-later: #62646b;
@@ -4162,7 +4150,7 @@ dialog.book-search-panel .search-panel-heading {
   --color-focus-on-dark: var(--color-gold-light);
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-heading: clamp(1.9rem, 2.5vw, 2.5rem);
+  --text-heading: clamp(1.9rem, 2.5vw, 2.25rem);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -4177,7 +4165,7 @@ dialog.book-search-panel .search-panel-heading {
   --control-height: 44px;
   --control-height-compact: 36px;
   --layout-gutter: clamp(16px, 1.25vw, 40px);
-  --layout-rail: 230px;
+  --layout-rail: 296px;
   --motion-control: 160ms;
   --motion-ash: 16s;
   --motion-mist: 22s;
@@ -4192,127 +4180,27 @@ dialog.book-search-panel .search-panel-heading {
   --focus: var(--color-focus);
 }
 
-/* The server-rendered frame selects the initial palette before hydration.
-   The root attribute also supports standalone previews and client navigation. */
-/* Moonlit Vellum: the approved GM palette. Shared components inherit these roles. */
+/* First-paint mode accents; the oak and paper roles above are shared. */
 :root[data-theme="moonlit-vellum"],
 :root:has(body > [data-theme="moonlit-vellum"]) {
-  --color-world: #101b2c;
-  --color-leather: #192b43;
-  --color-leather-deep: #122136;
-  --color-panel: #1c2c3c;
-  --surface-panel-texture: url(/assets/panel-textures/crypt-masonry.svg);
-  --surface-panel-texture-size: 512px 640px;
-  --color-leather-raised: #304560;
-  --color-on-leather: #e9dfc4;
-  --color-on-leather-muted: #bac8d4;
-  --color-line-dark: #687b92;
-  --color-paper: #e7e3d4;
-  --color-paper-raised: #f5f2e8;
-  --color-paper-recessed: #d7d6c9;
-  --color-paper-hover: #e6ebeb;
-  --color-ink: #243444;
-  --color-muted: #4c5962;
-  --color-line: #a5adac;
-  --color-line-soft: #bfc6c2;
-  --color-gold: #ab9768;
-  --color-gold-light: #e5d199;
-  --color-gold-dark: #72603c;
-  /* Historical primary-action role names; errors retain their separate red role. */
   --color-crimson: #294e78;
   --color-crimson-hover: #203f63;
-  --color-on-crimson: #f4f0df;
-  --color-focus: #3972ab;
   --color-title-veil: #0b1725bf;
   --color-search-veil: #101e2cb3;
-  --color-dialog-backdrop: #0c172bcc;
-  --color-chapter-initial: var(--color-on-crimson);
-  --color-step-number-active: var(--color-on-crimson);
-  --color-step-caption-active: var(--color-on-crimson);
-  --surface-working-leaf:
-    radial-gradient(ellipse at 40% 0, #ffffff18, transparent 75%),
-    var(--color-paper);
-  --shadow-working-leaf: inset 0 0 24px #07172d12;
 }
-
-/* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
 :root[data-theme="ash-vellum"],
 :root:has(body > [data-theme="ash-vellum"]) {
-  --color-title-veil: #681e29ed;
-  --color-search-veil: #101012dd;
-  --color-dialog-backdrop: #080809d9;
-  --color-chapter-initial: var(--color-on-crimson);
-  --surface-working-leaf:
-    radial-gradient(ellipse at 50% 0, #ffffff12, transparent 70%),
-    var(--color-paper);
-  --shadow-working-leaf: inset 0 0 30px #00000012;
-  color-scheme: light;
-  --color-world: #151517;
-  --color-leather: #262629;
-  --color-leather-deep: #18181b;
-  --color-panel: #242326;
-  --surface-panel-texture: url(/assets/panel-textures/vellum.svg);
-  --surface-panel-texture-size: 256px 256px;
-  --color-leather-raised: #3f3f43;
-  --color-on-leather: #f2f2f2;
-  --color-on-leather-muted: #bcbcc3;
-  --color-line-dark: #77777e;
-  --color-paper: #e6e6e7;
-  --color-paper-raised: #fafafa;
-  --color-paper-recessed: #d8d8da;
-  --color-paper-hover: #eeeeef;
-  --color-ink: #242426;
-  --color-muted: #606067;
-  --color-line: #a2a2a9;
-  --color-line-soft: #c4c4c8;
-  --color-gold: #8b8b92;
-  --color-gold-light: #f1f1f2;
-  --color-gold-dark: #5d5d64;
   --color-crimson: #962e38;
   --color-crimson-hover: #75212a;
-  --color-on-crimson: #ffffff;
-  --color-focus: #ac3540;
-  --color-step-number-active: var(--color-on-crimson);
-  --color-step-caption-active: var(--color-on-crimson);
+  --color-title-veil: #681e29ed;
+  --color-search-veil: #101012dd;
 }
-
-/* Imperial field ledger: one palette shared by the shell, menus and sheet. */
 :root[data-theme="imperial-field-ledger"],
 :root:has(body > [data-theme="imperial-field-ledger"]) {
-  --color-world: #26382d;
-  --color-leather: #304632;
-  --color-leather-deep: #26382d;
-  --color-panel: #304632;
-  --surface-panel-texture: url(/assets/panel-textures/field-canvas.svg);
-  --surface-panel-texture-size: 240px 240px;
-  --color-leather-raised: #42563a;
-  --color-on-leather: #f1eedb;
-  --color-on-leather-muted: #c4cbb4;
-  --color-line-dark: #858f73;
-  --color-paper: #eee9da;
-  --color-paper-raised: #f7f3e8;
-  --color-paper-recessed: #d7dec9;
-  --color-paper-hover: #dfe5d1;
-  --manager-surface-frame: #c4cdb4;
-  --manager-surface-heading: #e0e5d3;
-  --color-ink: #232b25;
-  --color-muted: #485248;
-  --color-line: #7f8977;
-  --color-line-soft: #b9c2ab;
-  --color-gold: #aa9056;
-  --color-gold-light: #e6d3a1;
-  --color-gold-dark: #706039;
-  --color-crimson: #26382d;
-  --color-crimson-hover: #3c523f;
-  --color-on-crimson: #fbf6df;
-  --color-focus: #655019;
-  --color-focus-on-dark: #ead19b;
+  --color-crimson: #304632;
+  --color-crimson-hover: #42563a;
   --color-title-veil: #26382dd9;
   --color-search-veil: #26382dd9;
-  --color-dialog-backdrop: #121c14cc;
-  --color-chapter-initial: #f1eedb;
-  --surface-working-leaf: var(--color-paper);
-  --shadow-working-leaf: inset 0 0 24px #3046320a;
 }
 
 /* Black Banner component skin. Feature CSS continues to own behaviour/layout. */
@@ -4571,35 +4459,6 @@ mark {
   background: var(--color-warning-surface);
 }
 
-/* Joined leather bindings and parchment leaf, with independent sticky rails. */
-.workspace,
-.mm-workspace {
-  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
-  max-width: none;
-  gap: 0;
-  padding: 0 var(--layout-gutter);
-  margin: 24px auto;
-}
-.book-setup-workspace {
-  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
-}
-.rail {
-  position: sticky;
-  top: 16px;
-  border: var(--line-ornament);
-  border-radius: 0;
-  background:
-    var(--surface-panel-texture) 0 0 / var(--surface-panel-texture-size) repeat,
-    radial-gradient(ellipse at 30% 0%, #ffffff09, transparent 75%)
-      var(--color-panel);
-  background-blend-mode: soft-light, normal;
-  color: var(--color-on-leather);
-  box-shadow: var(--shadow-panel);
-  scrollbar-color: var(--color-gold-dark) var(--color-leather-deep);
-}
-.rail {
-  padding: 14px 12px;
-}
 .panel {
   position: relative;
   padding: 28px 32px;
@@ -4702,73 +4561,6 @@ mark {
   min-height: var(--control-height-compact);
   padding: 6px 8px;
   text-align: center;
-}
-@media (min-width: 761px) {
-  .rail-heading {
-    flex-shrink: 0;
-    padding: 0 4px 9px;
-  }
-  .rail .eyebrow {
-    font-size: 10px;
-    line-height: 1.4;
-  }
-  .rail .rail-heading strong {
-    font-size: 20px;
-    line-height: 1.15;
-    margin-top: 5px;
-  }
-  .rail-heading p {
-    font-size: 11px;
-    line-height: 1.4;
-    margin: 6px 0;
-  }
-  .rail nav {
-    flex: 0 1 auto;
-  }
-  .rail .steps button {
-    min-height: 40px;
-    padding: 3px 6px;
-    gap: 8px;
-    font-size: 12px;
-    line-height: 1.35;
-  }
-  .rail .steps small {
-    font-size: 10px;
-    line-height: 1.3;
-    margin-top: 1px;
-  }
-  .rail .header-actions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-    margin-top: 9px;
-    padding: 9px 0 0;
-  }
-  .rail .header-actions .quiet,
-  .rail .install-app {
-    font-size: 12px;
-    line-height: 1.3;
-    min-height: var(--control-height-compact);
-    padding: 6px;
-    text-align: center;
-  }
-  .rail [data-action="new"],
-  .rail .install-app-slot {
-    grid-column: 1 / -1;
-  }
-  .rail .save-status {
-    flex-shrink: 0;
-    font-size: 11px;
-    line-height: 1.35;
-    margin: 7px 0 5px;
-  }
-  .rail > .text-button {
-    flex-shrink: 0;
-    font-size: 11px;
-    line-height: 1.3;
-    min-height: 26px;
-    padding: 3px 4px;
-    margin: 0;
-  }
 }
 .rail .quiet,
 .masthead .quiet,
@@ -5310,7 +5102,7 @@ dialog::backdrop {
   }
 }
 /* Preserve the search field when decorative captions no longer fit beside it. */
-@media (max-width: 1000px) and (min-width: 761px) {
+@media (max-width: 1100px) and (min-width: 761px) {
   .banner-search-ribbon {
     grid-template-columns: minmax(0, 720px);
     justify-content: center;
@@ -5582,38 +5374,7 @@ dialog::backdrop {
 }
 
 /* Shared creator navigation, available on desktop and phone. */
-.creator-switch {
-  display: grid;
-  gap: 4px;
-  margin-bottom: 16px;
-  padding: 4px;
-  border: 1px solid var(--color-line-dark);
-  background: var(--color-leather-deep);
-}
-.creator-switch a {
-  padding: 9px 8px;
-  text-align: center;
-  color: var(--color-on-leather-muted);
-  font-size: var(--text-sm);
-  text-decoration: none;
-  border: 1px solid transparent;
-}
-.creator-switch a[aria-current] {
-  background: var(--color-leather-raised);
-  color: var(--color-gold-light);
-  border-color: var(--color-line-dark);
-}
-@media (hover: hover) and (pointer: fine) {
-  .creator-switch a:hover {
-    color: var(--color-on-leather);
-    background: var(--color-leather-raised);
-  }
-}
 
-.creator-switch a:focus-visible {
-  outline: 2px solid var(--color-gold-light);
-  outline-offset: 2px;
-}
 @media (max-width: 800px) {
   .creator-switch {
     grid-template-columns: 1fr 1fr;
@@ -5730,5 +5491,585 @@ dialog::backdrop {
       var(--color-leather)
     );
     color: var(--color-on-leather);
+  }
+}
+
+/* Imperial Desk: shared shell primitives, never character/rule state. */
+.workspace,
+.mm-workspace,
+.manager-workspace {
+  max-width: none;
+  display: grid;
+  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
+  align-items: start;
+  gap: 0;
+  margin: 20px auto;
+  padding-block: 0;
+  padding-inline: calc(var(--layout-gutter) + env(safe-area-inset-left, 0px))
+    calc(var(--layout-gutter) + env(safe-area-inset-right, 0px));
+  border: 0;
+  background: transparent;
+}
+.workspace > .workspace-rail,
+.mm-workspace > .workspace-rail,
+.manager-workspace > .workspace-rail {
+  position: static;
+  align-self: start;
+  width: 100%;
+  min-width: 0;
+  max-height: none;
+  padding: 20px 18px;
+  overflow: visible;
+  border: 1px solid var(--color-line-dark);
+  border-right: 4px solid #21160f;
+  background:
+    linear-gradient(
+      90deg,
+      #100c0870,
+      transparent 12%,
+      transparent 93%,
+      #0c0908c9
+    ),
+    var(--surface-panel-texture) 0 0 / var(--surface-panel-texture-size) repeat,
+    var(--color-panel);
+  background-blend-mode: normal, soft-light, normal;
+  box-shadow:
+    inset 0 0 0 5px #baa06c15,
+    inset -7px 0 8px #0004;
+  color: var(--color-on-leather);
+}
+.workspace-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.workspace-switcher {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-on-leather);
+}
+.workspace-switcher > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 66px;
+  margin: 0;
+  padding: 10px;
+  border: 3px double #957746;
+  border-radius: 4px 3px 5px 2px;
+  background: linear-gradient(135deg, #c29c5820, #140d0829 55%), #2c251c;
+  box-shadow:
+    inset 0 1px #e9c78520,
+    0 2px 3px #0005;
+  color: var(--color-on-leather);
+  font: 600 14px/1.4 var(--font-body);
+  list-style: none;
+}
+.workspace-switcher > summary::-webkit-details-marker {
+  display: none;
+}
+.workspace-switcher > summary::after {
+  display: none;
+}
+.workspace-switcher > summary > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+.workspace-switcher small {
+  display: block;
+  color: var(--color-on-leather-muted);
+  font: 12px/1.5 var(--font-heading);
+  letter-spacing: 0.08em;
+}
+.workspace-mode-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 34px;
+  flex: none;
+  border: 1px solid #ac8c53;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 20%, #9b7a4233, #1c150f66);
+  color: var(--color-gold-light);
+}
+.workspace-switcher .creator-switch {
+  position: absolute;
+  inset: calc(100% + 6px) 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid var(--color-gold);
+  border-radius: 3px;
+  background: #2b251f;
+  box-shadow: 0 8px 24px #0006;
+}
+.workspace-switcher .creator-switch a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  color: var(--color-on-leather);
+  background: transparent;
+  font: 14px/1.4 var(--font-body);
+  text-align: left;
+}
+.workspace-switcher .creator-switch a[aria-current] {
+  border-color: #c4a36b77;
+  background: #493c2c;
+}
+.workspace-switcher .creator-switch a[aria-current]::after {
+  content: none;
+}
+.workspace-menu-heading {
+  padding: 0 4px 12px;
+  border-bottom: 1px solid #ad8d5440;
+  color: #d3bd93;
+  font: 17px/1.4 var(--font-heading);
+}
+.workspace-local-navigation nav {
+  display: block;
+  overflow: visible;
+}
+.workspace-local-navigation .steps {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.workspace-local-navigation .steps li {
+  margin: 0;
+  padding: 0;
+}
+.workspace-local-navigation
+  :is(
+    .steps button,
+    .mm-section-nav a,
+    .workspace-manager-sections button,
+    .manager-library-navigation button
+  ) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 9px 12px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: var(--color-on-leather);
+  background: transparent;
+  box-shadow: none;
+  font: 14px/1.4 var(--font-body);
+  text-align: left;
+  text-decoration: none;
+}
+.workspace-local-navigation .steps small {
+  position: static;
+  display: block;
+  width: auto;
+  height: auto;
+  margin-top: 2px;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+  font: 12px/1.4 var(--font-body);
+  color: var(--color-on-leather-muted);
+}
+.workspace-local-navigation .step-number {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 28px;
+  flex: none;
+  border: 0;
+  color: var(--color-gold-light);
+  font: 15px var(--font-heading);
+  background: transparent;
+}
+.workspace-local-navigation :is(button, a)[aria-current] {
+  border-color: #c4a36b66;
+  background:
+    linear-gradient(90deg, #c5aa770d, #10090635),
+    color-mix(in srgb, var(--color-crimson) 24%, #352a21);
+  box-shadow:
+    inset 3px 0 #c4a36b,
+    inset 0 1px #e9d09b14,
+    0 2px 3px #0003;
+}
+.workspace-local-navigation .mm-section-nav,
+.workspace-manager-sections {
+  display: grid;
+  gap: 4px;
+}
+.workspace-local-navigation .manager-library-navigation {
+  margin: 0 0 12px;
+}
+.workspace-local-navigation .manager-library-navigation button {
+  border: 1px solid #957746;
+}
+.workspace-action-groups {
+  display: grid;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 3px double #95774666;
+}
+.workspace-group-launcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #95774670;
+  border-radius: 3px;
+  background: #201c1759;
+  color: var(--color-on-leather);
+  box-shadow: inset 0 1px #e9c7850d;
+  font: 14px/1.4 var(--font-body);
+  text-align: left;
+}
+.workspace-group-launcher > span:last-child {
+  font-size: 22px;
+  line-height: 1;
+  color: var(--color-gold);
+}
+.workspace-menu-footer {
+  padding-top: 14px;
+  border-top: 3px double #95774666;
+}
+.workspace-menu-footer .history-controls {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+}
+.workspace-menu-footer .history-button {
+  flex: 1;
+  width: auto;
+  min-height: 44px;
+}
+.workspace-menu-footer .save-status {
+  margin: 12px 4px 0;
+  color: var(--color-on-leather-muted);
+  font: 12px/1.5 var(--font-body);
+}
+.workspace-menu-content :focus-visible {
+  outline-color: var(--color-focus-on-dark);
+}
+.workspace-compact-selector {
+  display: none;
+}
+.workspace-command-list {
+  display: grid;
+  gap: 12px;
+  margin-block: 20px;
+}
+.workspace-command-list button {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 16px;
+  text-align: left;
+}
+.workspace-command-reason {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+.workspace-action-dialog {
+  width: 480px;
+}
+.mobile-creator-menu .workspace-menu-content {
+  gap: 20px;
+}
+.creator-dialog.mobile-creator-menu {
+  width: 360px;
+  max-width: calc(
+    100vw - 24px - env(safe-area-inset-left, 0px) -
+      env(safe-area-inset-right, 0px)
+  );
+  max-height: calc(
+    100dvh - 24px - env(safe-area-inset-top, 0px) -
+      env(safe-area-inset-bottom, 0px)
+  );
+  background:
+    var(--surface-panel-texture) 0 0 / var(--surface-panel-texture-size) repeat,
+    #2b251f;
+  background-blend-mode: soft-light, normal;
+  color: var(--color-on-leather);
+  padding: 20px;
+}
+.mobile-creator-menu .dialog-heading h2 {
+  color: var(--color-on-leather);
+  font-size: 24px;
+}
+.mobile-creator-menu .dialog-heading {
+  background: transparent;
+  border-color: #95774666;
+  margin-bottom: 20px;
+}
+.mobile-creator-menu .dialog-heading button {
+  min-height: 44px;
+  color: var(--color-on-leather);
+  border-color: #957746;
+  background: #201c17;
+}
+.mobile-creator-menu .mobile-menu-actions {
+  display: block;
+}
+.panel,
+.manager-main,
+.creator-dialog:not(.mobile-creator-menu),
+.manager-dialog {
+  background: var(--surface-working-leaf);
+  box-shadow:
+    inset 0 1px #fff1cb,
+    inset 0 0 45px #87572016;
+}
+.workspace > .panel,
+.mm-workspace > .panel,
+.manager-main {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  border: 1px solid var(--color-line);
+}
+.panel::before,
+.manager-main::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 auto 0 0;
+  width: 13px;
+  pointer-events: none;
+  background:
+    radial-gradient(
+        ellipse 3px 5px at 3px 25px,
+        #271b14 45%,
+        #38241b80 60%,
+        transparent 80%
+      )
+      0 0 / 12px 114px repeat-y,
+    linear-gradient(90deg, #3520147a, #956c2e1a 5px, transparent);
+}
+.panel::after,
+.manager-main::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: auto 24px 24px auto;
+  width: 180px;
+  height: 210px;
+  background: url(/assets/ledger-emblem.svg) center / contain no-repeat;
+  opacity: 0.035;
+  pointer-events: none;
+}
+.chapter-initial {
+  width: auto;
+  height: auto;
+  margin-right: 1px;
+  border: 0;
+  background: transparent;
+  color: var(--color-crimson);
+  box-shadow: none;
+  font: 700 1.15em/0.95 var(--font-banner);
+}
+.chapter-initial > span {
+  transform: none;
+}
+.panel h2 {
+  font-size: 24px;
+}
+.stage-meta,
+.gm-page-heading {
+  border-bottom: 1px solid #96734666;
+  padding-bottom: 14px;
+  background: url(/assets/imperial-desk/ornament.svg) center bottom / 160px 14px
+    no-repeat;
+}
+.gm-page-heading h1 {
+  margin: 6px 0 0;
+}
+.stage-meta {
+  font: 13px/1.5 var(--font-heading);
+}
+.masthead {
+  min-height: 80px;
+  box-shadow:
+    inset 0 1px #f2d49730,
+    inset 0 -7px 14px #17100c99;
+}
+.masthead::before,
+.masthead::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #5e4528;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #d5b579, #7b5b34 65%, #3e2c1b);
+  box-shadow: 0 1px 2px #000b;
+  pointer-events: none;
+}
+.masthead::before {
+  left: 8px;
+}
+.masthead::after {
+  right: 8px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .workspace-menu-content
+    :is(
+      .workspace-group-launcher,
+      .steps button,
+      .mm-section-nav a,
+      .workspace-manager-sections button,
+      .creator-switch a
+    ):not(:disabled):hover {
+    background: #493c2c;
+    color: #fff1ce;
+    border-color: #c4a36b99;
+  }
+}
+@media (min-width: 1101px) {
+  .manager-navigation {
+    display: none;
+  }
+  .panel {
+    padding: 28px clamp(24px, 2vw, 40px);
+  }
+}
+/* Only pin navigation when the entire menu actually fits the viewport. */
+@media (min-width: 1101px) and (min-height: 880px) {
+  .workspace > .workspace-rail[data-fits="true"],
+  .mm-workspace > .workspace-rail[data-fits="true"],
+  .manager-workspace > .workspace-rail[data-fits="true"] {
+    position: sticky;
+    top: 16px;
+  }
+}
+@media (max-width: 1100px) {
+  .workspace,
+  .mm-workspace,
+  .manager-workspace {
+    display: block;
+    margin-block: 12px;
+    padding-bottom: 88px;
+  }
+  .workspace > .workspace-rail,
+  .mm-workspace > .workspace-rail {
+    padding: 12px 16px;
+    border: 1px solid #957746;
+  }
+  .manager-workspace > .workspace-rail {
+    display: none;
+  }
+  .workspace-compact-selector {
+    display: block;
+  }
+  .workspace-compact-selector :is(.mobile-step, .mm-mobile-section, .field) {
+    display: block;
+    margin: 0;
+  }
+  .workspace-compact-selector label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-on-leather-muted);
+    font: 12px var(--font-body);
+  }
+  .workspace-compact-selector select {
+    width: 100%;
+    min-height: 44px;
+    font-size: 16px;
+  }
+  .manager-navigation {
+    display: flex;
+  }
+  .masthead {
+    min-height: 76px;
+  }
+}
+@media (max-width: 760px) {
+  .workspace,
+  .mm-workspace,
+  .manager-workspace {
+    padding-inline: calc(12px + env(safe-area-inset-left, 0px))
+      calc(12px + env(safe-area-inset-right, 0px));
+  }
+  .workspace > .panel,
+  .mm-workspace > .panel {
+    padding: 24px 18px;
+  }
+  .panel h1 {
+    font-size: 30px;
+  }
+  .panel::after,
+  .manager-main::after {
+    width: 120px;
+    height: 150px;
+  }
+}
+@media (max-width: 1100px) and (max-height: 700px) {
+  .workspace-compact-selector label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .gm-page-heading {
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+  }
+  .gm-panel .lede {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+@media print {
+  .workspace,
+  .mm-workspace,
+  .manager-workspace {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .workspace-rail,
+  .workspace-action-dialog,
+  .mobile-creator-menu {
+    display: none !important;
+  }
+  .panel,
+  .manager-main,
+  .creator-dialog,
+  .manager-dialog {
+    background: white;
+    box-shadow: none;
+  }
+  .panel::before,
+  .panel::after,
+  .manager-main::before,
+  .manager-main::after,
+  .masthead::before,
+  .masthead::after {
+    display: none;
   }
 }

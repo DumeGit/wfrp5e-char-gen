@@ -41,6 +41,14 @@ test("PC save/load and reload retain actual purchases but exclude search state @
     object,
     "test-soldier.json",
   );
+  await expect
+    .poll(
+      async () =>
+        JSON.parse(
+          await page.evaluate((key) => localStorage.getItem(key), PC_STORAGE),
+        ).name,
+    )
+    .toBe("Reloaded Test Soldier");
   await expect(page.locator(".xp-balance .remaining strong")).toHaveText("875");
   await page.reload();
   await expect(page.locator(".xp-balance .remaining strong")).toHaveText("875");

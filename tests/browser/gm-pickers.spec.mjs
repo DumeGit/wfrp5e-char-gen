@@ -191,7 +191,7 @@ test("equipment filters narrow by type and dependent group, reset stale choices 
     dialog.getByText("No trappings match these filters.", { exact: false }),
   ).toBeVisible();
   await dialog.locator("#gm-picker-search").fill("");
-  if (page.viewportSize().width > 1000) {
+  if (page.viewportSize().width > 1100) {
     const clear = await dialog
       .getByRole("button", { name: "Clear filters", exact: true })
       .boundingBox();

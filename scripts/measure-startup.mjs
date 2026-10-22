@@ -15,6 +15,7 @@ const modes = [
   ["Player", "", "player"],
   ["Bestiary", "bestiary/", "gm"],
   ["Marijan", "marijan/", "marijan"],
+  ["Manager", "manager/", "manager"],
 ];
 const browser = await chromium.launch();
 const results = [],
@@ -24,7 +25,12 @@ async function waitForMode(page, mode) {
     .locator(`[data-mode="${mode}"] #app .rail`)
     .first()
     .waitFor({ state: "attached" });
-  await page.locator(`[data-mode="${mode}"] #app .panel`).first().waitFor();
+  await page
+    .locator(
+      `[data-mode="${mode}"] #app ${mode === "manager" ? ".manager-main" : ".panel"}`,
+    )
+    .first()
+    .waitFor();
 }
 async function isolate() {
   const context = await browser.newContext({ serviceWorkers: "block" });
@@ -94,6 +100,10 @@ try {
     await page.goto(new URL("?verify=1", base).href);
     await waitForMode(page, "player");
     for (const [mode, entry, id] of [...modes.slice(1), modes[0]]) {
+      await page
+        .locator(".workspace-switcher > summary")
+        .filter({ visible: true })
+        .click();
       const href = new URL(entry, base).pathname + "?verify=1";
       const link = page
         .locator(`a[href="${href}"]`)

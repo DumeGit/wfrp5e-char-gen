@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { createPortal } from "react-dom";
 import { getManagerStore } from "./store";
-import { CreatorMenu } from "../../components/CreatorMenu";
 import { HistoryControls } from "../../components/HistoryControls";
 import { ActionGroups } from "./ActionGroups";
 import { Dialog } from "./ui";
@@ -86,11 +84,9 @@ function Manager({ store }: { store: Store }) {
     store.getSnapshot,
     store.getSnapshot,
   );
-  const [section, setSection] = useState("play"),
-    [menu, setMenu] = useState(false);
+  const [section, setSection] = useState("play");
   const [view, setView] = useState("");
   const scrollPositions = useRef(new Map<string, number>());
-  const [portal, setPortal] = useState<HTMLElement | null>(null);
   const [modal, setModal] = useState(""),
     [error, setError] = useState("");
   const [preview, setPreview] = useState<any[]>([]),
@@ -101,8 +97,7 @@ function Manager({ store }: { store: Store }) {
   const [form, setForm] = useState<Record<string, any>>({});
   const [discard, setDiscard] = useState(false);
   const profileStart = useRef("");
-  const menuTrigger = useRef<HTMLElement | null>(null),
-    dialogTrigger = useRef<HTMLElement | null>(null),
+  const dialogTrigger = useRef<HTMLElement | null>(null),
     lastAction = useRef<HTMLElement | null>(null);
   useEffect(() => {
     const remember = (event: Event) => {
@@ -129,7 +124,7 @@ function Manager({ store }: { store: Store }) {
   function open(kind: string, values: Record<string, any> = {}) {
     if (!modal)
       dialogTrigger.current = lastAction.current?.closest("#creator-menu")
-        ? menuTrigger.current
+        ? document.querySelector(".mobile-menu-launcher")
         : lastAction.current;
     setError("");
     setNotice("");
@@ -190,7 +185,6 @@ function Manager({ store }: { store: Store }) {
               : ""),
       );
     });
-    setPortal(document.getElementById("compact-menu"));
     const pop = () => {
       const p = new URLSearchParams(location.search);
       const next = p.get("section");
@@ -382,36 +376,13 @@ function Manager({ store }: { store: Store }) {
     setModal("");
     setError("");
   };
-  const menuActions = (
-    <>
-      <button
-        className="quiet"
-        type="button"
-        aria-haspopup="dialog"
-        onClick={() => open("new-actions")}
-      >
-        New &amp; import
-      </button>
-      <button
-        className="quiet"
-        type="button"
-        aria-haspopup="dialog"
-        onClick={() => open("file-actions")}
-      >
-        Save &amp; export
-      </button>
-      {record && (
-        <button
-          className="quiet"
-          type="button"
-          aria-haspopup="dialog"
-          onClick={() => open("character-actions")}
-        >
-          More
-        </button>
-      )}
-    </>
-  );
+  const actionGroups = [
+    { id: "new", label: "New & import", run: () => open("new-actions") },
+    { id: "save", label: "Save & export", run: () => open("file-actions") },
+    ...(record
+      ? [{ id: "more", label: "More", run: () => open("character-actions") }]
+      : [{ id: "more", label: "More", commands: [] }]),
+  ];
   const historyControls = (
     <div
       className="manager-history"
@@ -571,45 +542,6 @@ function Manager({ store }: { store: Store }) {
         aria-label="Import character portrait"
         onChange={(e) => void loadPortrait(e.target.files?.[0])}
       />
-      {portal &&
-        createPortal(
-          <button
-            className="mobile-menu-launcher quiet"
-            type="button"
-            aria-label="Open manager menu"
-            aria-haspopup="dialog"
-            aria-controls="creator-menu"
-            aria-expanded={menu}
-            onClick={(event) => {
-              menuTrigger.current = event.currentTarget;
-              setMenu(true);
-            }}
-          >
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          </button>,
-          portal,
-        )}
-      <CreatorMenu
-        mode="manager"
-        verify={verify}
-        open={menu}
-        onClose={() => setMenu(false)}
-        status={state.message}
-        trigger={menuTrigger.current}
-      >
-        <button className="quiet" type="button" onClick={() => navigate(null)}>
-          Character library
-        </button>
-        {menuActions}
-        {historyControls}
-        <span data-install-slot />
-      </CreatorMenu>
       <ManagerWorkspace
         state={state}
         section={section}
@@ -619,7 +551,7 @@ function Manager({ store }: { store: Store }) {
         navigate={(id, section, view) => navigate(id, section, true, view)}
         profile={profile}
         verify={verify}
-        menuActions={menuActions}
+        actionGroups={actionGroups}
         importFile={importFile}
         restore={restore}
         backup={backupLibrary}

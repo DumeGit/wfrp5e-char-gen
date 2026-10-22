@@ -1,5 +1,7 @@
 # Selected panel textures
 
+Historical material inventory. Production now selects the same oak for every mode; see [Imperial Desk provenance](../imperial-desk/README.md). The earlier per-mode assignments below describe their original design, not the current theme.
+
 Current production ownership is `public/assets/panel-textures/`, with semantic roles in `src/styles/design-tokens.css` and shared painting in `src/styles/design-system.css`. The manager's Imperial field ledger adds original `field-canvas.svg` (240 × 240): a static six-pixel weave with pale 0.055 and dark 0.095 strokes, totalling the selected 0.15 strength. The tile paints its sidebar/compact menu, while the header uses the generated banner and there is no manager folio, with no motion, external requests, pointer overlay or print texture. Its source is the small production SVG itself.
 
 Approved by the user on 15 October 2026 after the matching-panel studies. These are original code-native SVG/procedural materials, not supplied book artwork, third-party images or imagegen outputs. They make no external resource requests and contain no scripts or motion.

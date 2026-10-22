@@ -113,6 +113,7 @@ export function ActionGroups({ group, record, disabled, act }: Props) {
           )}
         </div>
       )}
+      {group === "character-actions" && <div data-install-slot="" />}
     </div>
   );
 }

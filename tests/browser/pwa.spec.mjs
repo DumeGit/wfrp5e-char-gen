@@ -43,7 +43,7 @@ test("creators, manager and previously unopened references work offline @pwa", a
     "Offline Marijan",
   );
   await page.goto("/manager/?verify=1");
-  if (page.viewportSize().width > 1000)
+  if (page.viewportSize().width > 1100)
     await page
       .getByRole("button", { name: "New & import", exact: true })
       .click();
@@ -54,9 +54,9 @@ test("creators, manager and previously unopened references work offline @pwa", a
   await page.locator("#manager-name").fill("Offline manager");
   await page.getByRole("button", { name: "Save profile", exact: true }).click();
   await expect(page.getByRole("dialog")).not.toBeVisible();
-  await expect(page.locator("main").getByRole("status").last()).toContainText(
-    "Saved",
-  );
+  await expect(
+    page.locator(".workspace-menu-footer .save-status"),
+  ).toContainText("Saved");
   await page.reload();
   await expect(page.locator("#manager-character-name")).toHaveText(
     "Offline manager",

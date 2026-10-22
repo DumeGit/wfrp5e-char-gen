@@ -353,13 +353,13 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
   expect(
     await page
       .locator(".manager-main")
-      .evaluate((el) => getComputedStyle(el, "::before").content),
-  ).toContain("✦");
+      .evaluate((el) => getComputedStyle(el, "::before").backgroundImage),
+  ).toContain("radial-gradient");
   expect(
     await page
       .locator(".manager-main")
-      .evaluate((el) => getComputedStyle(el, "::after").content),
-  ).toContain("✦");
+      .evaluate((el) => getComputedStyle(el, "::after").backgroundImage),
+  ).toContain("ledger-emblem.svg");
   await section(page, "Abilities");
   const sheet = page.locator(".manager-ability-sections");
   await expect(
@@ -391,7 +391,7 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
       .getByText("Dodge", { exact: true }),
   });
   await expect(dodge.locator(".manager-skill-characteristic")).toHaveText("Ag");
-  if (page.viewportSize().width > 1000) {
+  if (page.viewportSize().width > 1100) {
     const columns = await sheet
       .locator('[data-group="skills"] .manager-skill-items')
       .first()
@@ -400,7 +400,7 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
   }
   await section(page, "Gear");
   const gear = page.locator(".manager-gear-screen");
-  if (page.viewportSize().width > 1000) {
+  if (page.viewportSize().width > 1100) {
     const columns = await gear
       .locator(".manager-entry-items")
       .evaluate(
@@ -495,10 +495,12 @@ test("grouped sidebar dialogs retain actions, shared history icons and focus acr
   await expect(
     main.getByRole("button", { name: "More", exact: true }),
   ).toHaveCount(0);
-  if (page.viewportSize().width > 1000) {
-    await expect(page.locator(".manager-rail-actions > button")).toHaveCount(3);
+  if (page.viewportSize().width > 1100) {
     await expect(
-      page.locator(".manager-rail .history-controls svg"),
+      page.locator(".workspace-rail .workspace-group-launcher"),
+    ).toHaveCount(3);
+    await expect(
+      page.locator(".workspace-rail .history-controls svg"),
     ).toHaveCount(2);
   }
   await applicationMenu(page, "More");
@@ -514,7 +516,7 @@ test("grouped sidebar dialogs retain actions, shared history icons and focus acr
   ).toBeVisible();
   await page.keyboard.press("Escape");
   const opener = page.getByRole("button", {
-    name: page.viewportSize().width > 1000 ? "More" : "Open manager menu",
+    name: page.viewportSize().width > 1100 ? "More" : "Open manager menu",
     exact: true,
   });
   await expect(opener).toBeFocused();
@@ -652,10 +654,14 @@ async function importData(page, data) {
   await dialog.getByRole("button", { name: /Import 1 character/ }).click();
   await expect(dialog).not.toBeVisible();
   await expect(page.locator("#manager-character-name")).toBeVisible();
-  await expect(page.locator(".manager-save-status")).toContainText(/Saved/);
+  await expect(
+    page.locator(".workspace-menu-footer .save-status"),
+  ).toContainText(/Saved/);
 }
 async function saved(page) {
-  await expect(page.locator(".manager-save-status")).toContainText(/Saved/);
+  await expect(
+    page.locator(".workspace-menu-footer .save-status"),
+  ).toContainText(/Saved/);
 }
 async function rawRecords(page) {
   return page.evaluate(
@@ -730,6 +736,8 @@ test("resources, Conditions, journal, Undo and advancement persist together @man
   await undo.click();
   await saved(page);
   expect((await rawRecords(page))[0].current.wounds).toBe(before);
+  if (await page.locator("#creator-menu[open]").count())
+    await page.keyboard.press("Escape");
   await main
     .getByRole("button", { name: "Add status entry", exact: true })
     .click();
@@ -886,23 +894,27 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
         ),
       );
     expect(fits).toBe(true);
-    if (width > 1000) {
+    if (width > 1100) {
       const rail = page.getByRole("complementary", {
         name: "Application menu",
       });
       await expect(rail).toBeVisible();
+      await rail.locator(".workspace-switcher > summary").click();
       await expect(rail.getByRole("link")).toHaveCount(4);
+      await rail.locator(".workspace-switcher > summary").click();
       await expect(
         rail.getByRole("button", { name: "Character library", exact: true }),
       ).toBeVisible();
       await expect(
         rail.getByRole("button", { name: "New & import", exact: true }),
       ).toBeVisible();
+      await rail.getByRole("button", { name: "More", exact: true }).click();
       await expect(
-        rail.getByRole("button", { name: "Install app", exact: true }),
+        page.getByRole("button", { name: "Install app", exact: true }),
       ).toBeVisible();
+      await page.keyboard.press("Escape");
       const joined = await page
-        .locator(".manager-rail")
+        .locator(".workspace-rail")
         .evaluate(
           (el) =>
             Math.abs(
@@ -933,15 +945,14 @@ test("green shell, joined edges, menus and long names fit phone, tablet and wide
         }),
       ).toBeFocused();
     } else {
-      await expect(page.locator(".manager-rail")).not.toBeVisible();
+      await expect(page.locator(".workspace-rail")).not.toBeVisible();
       await page.getByRole("button", { name: "Open manager menu" }).click();
       await expect(
         page.getByRole("dialog", { name: "Manager menu", exact: true }),
       ).toBeVisible();
+      await page.getByRole("button", { name: "More", exact: true }).click();
       await expect(
-        page
-          .getByRole("dialog")
-          .getByRole("button", { name: "Install app", exact: true }),
+        page.getByRole("button", { name: "Install app", exact: true }),
       ).toBeVisible();
       await page.keyboard.press("Escape");
       await expect(
@@ -1107,7 +1118,11 @@ test("profile drafts require Save, closing protects changes, and abilities live 
   await expect(page.locator(".manager-play-favourites")).toHaveCount(0);
   await expect(page.locator(".manager-resource-band")).toHaveCount(1);
   await expect(
-    page.locator(".manager-navigation [aria-current='page']"),
+    page
+      .locator(
+        ".workspace-manager-sections [aria-current='page'], .manager-navigation [aria-current='page']",
+      )
+      .filter({ visible: true }),
   ).toHaveText("Play");
 });
 
@@ -1264,7 +1279,7 @@ test("every mode retains the shared header and a stable menu-before-search order
   ]) {
     await page.goto(route);
     await expect(page.locator("#creator-main")).toBeVisible();
-    if (page.viewportSize().width <= 1000)
+    if (page.viewportSize().width <= 1100)
       await page
         .locator("#compact-menu .mobile-menu-launcher")
         .waitFor({ state: "attached" });

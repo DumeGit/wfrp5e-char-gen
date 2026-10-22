@@ -1,10 +1,8 @@
 "use client";
 import { COMPACT_SHELL_QUERY } from "../../engine/responsive.mjs";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { createPortal } from "react-dom";
 import { HistoryControls } from "../../components/HistoryControls";
-import { ModeNavigation } from "../../components/ModeNavigation";
-import { CreatorMenu } from "../../components/CreatorMenu";
+import { WorkspaceMenu } from "../../components/WorkspaceMenu";
 import { KEYS, skillInfo } from "../../engine/rules.mjs";
 import { pickerEntries } from "../../engine/gm/pickers.mjs";
 import {
@@ -178,8 +176,6 @@ function Workshop({ verify }: { verify: boolean }) {
   const [ui, setView] = useState(session.ui),
     [modal, setModal] = useState<any>(null),
     [compact, setCompact] = useState(false),
-    [tools, setTools] = useState(false),
-    [portal, setPortal] = useState<HTMLElement | null>(null),
     [message, setMessage] = useState(""),
     [working, setWorking] = useState("");
   const file = useRef<HTMLInputElement>(null),
@@ -192,11 +188,9 @@ function Workshop({ verify }: { verify: boolean }) {
     const media = matchMedia(COMPACT_SHELL_QUERY),
       resize = () => {
         setCompact(media.matches);
-        if (!media.matches) setTools(false);
       };
     resize();
     media.addEventListener("change", resize);
-    setPortal(document.getElementById("compact-menu"));
     window.addEventListener("pagehide", store.persist);
     window.addEventListener("wfrp-before-update", store.persist);
     return () => {
@@ -224,9 +218,11 @@ function Workshop({ verify }: { verify: boolean }) {
     setWorking(label);
     try {
       await action();
+      return true;
     } catch (error) {
       if (mounted.current)
         setMessage(error instanceof Error ? error.message : String(error));
+      return false;
     } finally {
       busyRef.current = false;
       if (mounted.current) setWorking("");
@@ -367,7 +363,7 @@ function Workshop({ verify }: { verify: boolean }) {
     } else if (options.length > 1) setModal({ kind: "appearance" });
   };
   const exportPDF = () =>
-    void busy("Preparing PDF…", async () => {
+    busy("Preparing PDF…", async () => {
       if (r.issues.length || !r.profile)
         throw Error("Resolve the highlighted choices before export.");
       const [PDFLib, { createGMPDF }] = await Promise.all([
@@ -422,38 +418,87 @@ function Workshop({ verify }: { verify: boolean }) {
     : r.issues.length
       ? `${r.issues.length} ${r.issues.length === 1 ? "choice" : "choices"} left`
       : "Ready to export";
-  const fileActions = (
-    <div className="header-actions">
-      <Button
-        type="button"
-        onClick={() => {
-          save();
-          setTools(false);
-        }}
-      >
-        Save NPC / creature
-      </Button>
-      <Button
-        type="button"
-        onClick={() => {
-          setTools(false);
-          file.current?.click();
-        }}
-      >
-        Load draft
-      </Button>
-      <Button
-        type="button"
-        onClick={() => {
-          setTools(false);
-          setModal({ kind: "new" });
-        }}
-      >
-        New NPC / creature
-      </Button>
-      <div data-install-slot />
-    </div>
-  );
+  const actionGroups = [
+    {
+      id: "new",
+      label: "New & import",
+      commands: [
+        {
+          id: "new",
+          label: "New NPC / creature",
+          effect: "dialog" as const,
+          run: () => setModal({ kind: "new" }),
+        },
+        {
+          id: "load",
+          label: "Load draft",
+          effect: "file" as const,
+          run: () => file.current?.click(),
+        },
+      ],
+    },
+    {
+      id: "save",
+      label: "Save & export",
+      commands: [
+        {
+          id: "save",
+          label: "Save NPC / creature",
+          effect: "close" as const,
+          run: save,
+        },
+        {
+          id: "pdf",
+          label: "Export PDF",
+          effect: "close" as const,
+          run: async () => {
+            if ((await exportPDF()) === false)
+              throw Error(
+                "The PDF could not be prepared. Try exporting again.",
+              );
+          },
+          disabled: !r.profile || r.issues.length > 0 || !!working,
+          reason:
+            !r.profile || r.issues.length
+              ? "Choose a profile and resolve the highlighted choices before export."
+              : undefined,
+        },
+        {
+          id: "print",
+          label: "Print A4 table cards",
+          effect: "dialog" as const,
+          run: () => setModal({ kind: "print" }),
+          disabled: !r.profile || r.issues.length > 0 || !!working,
+          reason:
+            !r.profile || r.issues.length
+              ? "Choose a profile and resolve the highlighted choices before export."
+              : undefined,
+        },
+      ],
+    },
+    {
+      id: "more",
+      label: "More",
+      commands: [
+        {
+          id: "books",
+          label: "Choose profile books",
+          effect: "navigate" as const,
+          run: () => {
+            navigate(0);
+            requestAnimationFrame(() => {
+              const node = document.querySelector<HTMLDetailsElement>(
+                '[data-detail-key="gm:profile-books"]',
+              );
+              if (node instanceof HTMLDetailsElement) node.open = true;
+              node?.scrollIntoView({ block: "center" });
+              node?.querySelector("summary")?.focus({ preventScroll: true });
+            });
+          },
+        },
+      ],
+    },
+  ];
   const context = {
     ...state,
     store,
@@ -481,13 +526,10 @@ function Workshop({ verify }: { verify: boolean }) {
           root,
           file,
           compact,
-          portal,
           verify,
           navigate,
           jump,
-          fileActions,
-          tools,
-          setTools,
+          actionGroups,
           message,
           mounted,
           status,
@@ -505,99 +547,68 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
     root,
     file,
     compact,
-    portal,
     verify,
     navigate,
     jump,
-    fileActions,
-    tools,
-    setTools,
+    actionGroups,
     message,
     mounted,
     status,
   } = controls;
   return (
     <div ref={root} onBlurCapture={() => store.breakGroup()}>
-      {compact &&
-        portal &&
-        createPortal(
-          <Button
-            type="button"
-            className="mobile-menu-launcher"
-            aria-label="Open creator menu"
-            aria-haspopup="dialog"
-            aria-controls="creator-menu"
-            onClick={() => setTools(true)}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </Button>,
-          portal,
-        )}
       <div className="workspace gm-workspace">
-        <aside className="rail">
-          {!compact && <ModeNavigation mode="gm" verify={verify} />}
-          <div className="rail-heading">
-            <span className="eyebrow">Game Master’s workshop</span>
-            <strong>The Bestiary</strong>
-            <p>
-              Profile books:{" "}
-              {s.books.length > 1
-                ? `Core + ${s.books.length - 1} supplements`
-                : "Core · Fifth Edition"}
-            </p>
-          </div>
-          <Select
-            label="Workshop page"
-            id="gm-step-select"
-            options={STEPS.map((name, i) => [i, name])}
-            value={s.step}
-            onChange={(value) => navigate(Number(value))}
-          />
-          <nav className="gm-step-nav" aria-label="Workshop pages">
-            <ol className="steps">
-              {STEPS.map((name, i) => (
-                <li key={name}>
-                  <Button
-                    type="button"
-                    className={s.step === i ? "active" : ""}
-                    aria-current={s.step === i ? "step" : undefined}
-                    onClick={() => navigate(i)}
-                  >
-                    <span className="step-number">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span>
-                      {name}
-                      <small>
-                        {
-                          [
-                            "Choose your foundation",
-                            "Optional changes",
-                            "Armour, attacks & spells",
-                            "A compact sheet",
-                          ][i]
-                        }
-                      </small>
-                    </span>
-                  </Button>
-                </li>
-              ))}
-            </ol>
-          </nav>
-          {!compact && (
-            <>
-              {fileActions}
-              <History />
-            </>
-          )}
-          {!compact && <p className="save-status">{state.storageMessage}</p>}
-          <p className="gm-rail-note">
-            Independent from your player character. Career development and
-            campaign tracking are outside this workshop.
-          </p>
-        </aside>
+        <WorkspaceMenu
+          mode="gm"
+          verify={verify}
+          heading={`Profile books: ${s.books.length > 1 ? `Core + ${s.books.length - 1} supplements` : "Core · Fifth Edition"}`}
+          selector={
+            <Select
+              label="Workshop page"
+              id="gm-step-select"
+              options={STEPS.map((name, i) => [i, name])}
+              value={s.step}
+              onChange={(value) => navigate(Number(value))}
+            />
+          }
+          navigation={
+            <nav className="gm-step-nav" aria-label="Workshop pages">
+              <ol className="steps">
+                {STEPS.map((name, i) => (
+                  <li key={name}>
+                    <Button
+                      type="button"
+                      className={s.step === i ? "active" : ""}
+                      aria-current={s.step === i ? "step" : undefined}
+                      onClick={() => navigate(i)}
+                    >
+                      <span className="step-number">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span>
+                        {name}
+                        <small>
+                          {
+                            [
+                              "Choose your foundation",
+                              "Optional changes",
+                              "Armour, attacks & spells",
+                              "A compact sheet",
+                            ][i]
+                          }
+                        </small>
+                      </span>
+                    </Button>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          }
+          groups={actionGroups || []}
+          history={<History />}
+          status={state.storageMessage}
+          documentState={s}
+        />
         <main className="panel gm-panel" id="creator-main" tabIndex={-1}>
           <div className="gm-page-heading">
             <span className="eyebrow">
@@ -607,39 +618,27 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
           </div>
           <div id="gm-feedback">
             {state.error && <p role="alert">{state.error}</p>}
-            {!r.profile ? (
-              <section
-                className="gm-issues gm-welcome"
-                aria-label="Get started"
-              >
-                <p>
-                  Choose a printed profile to begin. You can use it immediately
-                  or customise it.
-                </p>
+            {r.profile && r.issues.length > 0 && (
+              <section className="gm-issues" aria-label="Choices to finish">
+                <strong>
+                  {r.issues.length}{" "}
+                  {r.issues.length === 1 ? "choice" : "choices"} to finish
+                  before export
+                </strong>
+                <ul>
+                  {r.issues.map((x: any, i: number) => (
+                    <li key={`${x.code}:${i}`}>
+                      <Button
+                        type="button"
+                        className="text-button"
+                        onClick={() => jump(x)}
+                      >
+                        {x.message}
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
               </section>
-            ) : (
-              r.issues.length > 0 && (
-                <section className="gm-issues" aria-label="Choices to finish">
-                  <strong>
-                    {r.issues.length}{" "}
-                    {r.issues.length === 1 ? "choice" : "choices"} to finish
-                    before export
-                  </strong>
-                  <ul>
-                    {r.issues.map((x: any, i: number) => (
-                      <li key={`${x.code}:${i}`}>
-                        <Button
-                          type="button"
-                          className="text-button"
-                          onClick={() => jump(x)}
-                        >
-                          {x.message}
-                        </Button>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )
             )}
             {r.warnings.length > 0 && (
               <Details
@@ -697,17 +696,6 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
           <span>{status}</span>
         </div>
       )}
-      {compact && (
-        <CreatorMenu
-          mode="gm"
-          verify={verify}
-          open={tools}
-          onClose={() => setTools(false)}
-          status={state.storageMessage}
-        >
-          {fileActions}
-        </CreatorMenu>
-      )}
       {modal && (
         <BestiaryDialogs
           key={modal.kind === "appearance" ? "appearance" : "dialog"}
@@ -726,9 +714,11 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
           event.target.value = "";
           if (!selected) return;
           void busy("Reading draft…", async () => {
+            const revision = store.getSnapshot().revision;
             if (selected.size > 2000000) throw Error("This save is too large.");
             const draft = store.validate(JSON.parse(await selected.text()));
-            if (mounted.current) setModal({ kind: "load", draft });
+            if (mounted.current && revision === store.getSnapshot().revision)
+              setModal({ kind: "load", draft });
           });
         }}
       />

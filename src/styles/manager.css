@@ -10,93 +10,6 @@
   display: none;
 }
 
-.manager-workspace {
-  display: grid;
-  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
-  align-items: stretch;
-  margin: 16px var(--layout-gutter);
-  border: 1px solid var(--color-line-dark);
-  background: var(--color-panel);
-}
-.manager-workspace > .manager-rail {
-  position: static;
-  border: 0;
-  border-right: 1px solid var(--color-line-dark);
-  box-shadow: none;
-  padding: 10px;
-  min-width: 0;
-}
-.manager-rail :is(button, a) {
-  font-family: var(--font-body);
-  overflow-wrap: anywhere;
-}
-.manager-library-navigation {
-  margin: 8px 0 16px;
-}
-.manager-library-navigation button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  width: 100%;
-  min-height: 48px;
-  padding: 10px;
-  border: 1px solid var(--color-gold);
-  border-radius: 3px;
-  background: var(--color-paper-recessed);
-  color: var(--color-ink);
-  font-size: 14px;
-  font-weight: 600;
-  text-align: left;
-  box-shadow: none;
-}
-.manager-library-navigation svg {
-  flex: none;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linejoin: round;
-}
-.manager-library-navigation button[aria-current] {
-  border-left-width: 4px;
-}
-.manager-rail-actions {
-  display: grid;
-  gap: 6px;
-}
-.manager-rail-actions button {
-  width: 100%;
-  min-height: 32px;
-  padding: 6px 9px;
-  border: 1px solid var(--color-line-dark);
-  border-radius: 3px;
-  color: var(--color-on-leather);
-  background: var(--color-leather-deep);
-  font-size: 13px;
-  font-weight: 400;
-  text-align: left;
-  box-shadow: none;
-}
-.manager-history {
-  margin-top: 10px;
-}
-.manager-install {
-  margin-top: 8px;
-}
-.manager-rail .manager-install button {
-  width: 100%;
-}
-.mobile-menu-actions .manager-history {
-  margin: 0;
-}
-.mobile-menu-actions .manager-history .history-controls {
-  display: flex;
-  margin: 0;
-}
-.mobile-menu-actions .manager-history button {
-  flex: 1;
-  width: auto;
-}
 .manager-action-groups {
   display: grid;
   gap: 20px;
@@ -137,12 +50,6 @@
   .manager-action-grid {
     grid-template-columns: 1fr;
   }
-}
-.manager-rail-note {
-  margin: 16px 4px 4px;
-  color: var(--color-on-leather-muted);
-  font-size: 12px;
-  line-height: 1.6;
 }
 .manager-main {
   position: relative;
@@ -285,20 +192,6 @@
   gap: 8px;
 }
 
-.manager-workspace-tools {
-  display: flex;
-  justify-content: flex-end;
-  padding: 8px 20px;
-  background: var(--manager-surface-heading);
-}
-.manager-save-status {
-  margin: 0 !important;
-  color: var(--color-muted);
-  font-size: 11px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .manager-character-header {
   display: flex;
   align-items: center;
@@ -1320,9 +1213,6 @@
 .manager-library-content {
   padding: 20px;
 }
-.manager-library .manager-main {
-  background: var(--manager-surface-frame);
-}
 .manager-library-content > .manager-page-heading {
   padding: 16px;
   border: 1px solid var(--color-line);
@@ -1541,10 +1431,6 @@
   font-size: 14px;
 }
 @media (hover: hover) and (pointer: fine) {
-  .manager-rail-actions button:not(:disabled):hover {
-    background: var(--color-leather-raised);
-    color: var(--color-on-leather);
-  }
   .manager-library-navigation button:hover {
     background: var(--color-paper-raised);
     color: var(--color-ink);
@@ -1567,15 +1453,7 @@
     gap: 8px 2px;
   }
 }
-@media (max-width: 1000px) {
-  .manager-workspace {
-    display: block;
-  }
-  .manager-workspace > .manager-rail {
-    display: none;
-  }
-}
-@media (min-width: 1001px) {
+@media (min-width: 1101px) {
   .manager-main .manager-library-actions {
     display: none;
   }
@@ -1584,9 +1462,6 @@
   .manager-workspace {
     margin: 0 0 12px;
     border-inline: 0;
-  }
-  .manager-workspace-tools {
-    padding: 6px 16px;
   }
   .manager-navigation {
     position: fixed;
@@ -1746,7 +1621,6 @@
   }
 }
 @media (max-width: 359px) {
-  .manager-workspace-tools,
   .manager-section-content,
   .manager-character-header {
     padding-inline: 12px;
@@ -1765,13 +1639,6 @@
   }
 }
 @media print {
-  .manager-rail,
-  .manager-workspace-tools,
-  .manager-navigation,
-  .manager-resource-band,
-  .manager-profile-link {
-    display: none;
-  }
   .manager-workspace {
     display: block;
     margin: 0;
@@ -1834,10 +1701,6 @@
   }
   .manager-character-header:has(.manager-portrait) .manager-resource-band {
     grid-column: 1/3;
-  }
-  .manager-character-header .manager-save-status {
-    max-width: 55px;
-    text-align: right;
   }
   .manager-resource-band {
     gap: 4px;
@@ -1929,9 +1792,6 @@
   }
   .manager-card button.manager-card-toggle,
   .manager-card .manager-card-actions button {
-    min-height: 44px;
-  }
-  .manager-rail-actions button {
     min-height: 44px;
   }
   .manager-abilities-grid .manager-entry summary {

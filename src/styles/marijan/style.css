@@ -5,67 +5,17 @@
     url(/assets/marijan/banner.webp) 50% 42% / cover;
 }
 /* Layout only: colours, type, buttons and paper come from the shared skin. */
-.mm-workspace {
-  display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  align-items: start;
-}
 .mm-page {
   container-type: inline-size;
   container-name: marijan-editor;
   min-width: 0;
 }
-.mm-rail {
-  position: sticky;
-  top: 16px;
-  max-height: calc(100dvh - 32px);
-  overflow: auto;
-}
-.mm-rail {
-  color: var(--color-on-leather);
-}
-.mm-rail-intro {
-  font-size: 13px;
-  margin: 6px 0 12px;
-}
-.mm-rail .mm-section-nav {
-  display: grid;
-  gap: 3px;
-}
 .mm-mobile-section {
   display: none;
 }
-.mm-rail .mm-section-nav a {
-  padding: 8px 12px;
-  border-left: 2px solid var(--color-line);
-  color: inherit;
-  text-decoration: none;
-}
-.mm-rail .mm-section-nav a:focus-visible {
-  border-color: var(--color-gold);
-  background: var(--color-leather);
-}
 @media (hover: hover) and (pointer: fine) {
-  .mm-rail .mm-section-nav a:hover {
-    border-color: var(--color-gold);
-    background: var(--color-leather);
-  }
 }
 
-.mm-rail-tools {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7px;
-  margin-top: 18px;
-}
-.mm-rail-tools button:nth-child(n + 3) {
-  grid-column: 1/-1;
-}
-.mm-rail small {
-  display: block;
-  margin-top: 12px;
-  font-size: 11px;
-}
 .mm-intro {
   color: var(--color-muted);
   margin-bottom: 22px;
@@ -597,19 +547,6 @@
   }
 }
 @media (max-width: 760px) {
-  .mm-rail {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    padding: 0 0 14px;
-  }
-  .mm-rail > .eyebrow,
-  .mm-rail-intro {
-    display: none;
-  }
-  .mm-rail .mm-section-nav {
-    display: none;
-  }
   .mm-mobile-section {
     display: block;
     margin: 0;
@@ -623,9 +560,6 @@
   }
   .mm-mobile-section select {
     width: 100%;
-  }
-  .mm-rail small {
-    font-size: 10px;
   }
   .mm-page {
     padding: 18px 14px;
@@ -753,47 +687,6 @@
 }
 
 /* Shared rail shell and compact desktop controls; phones keep touch targets. */
-.mm-rail {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.mm-rail .creator-switch {
-  flex: none;
-  overflow: visible;
-}
-.mm-rail .creator-switch a {
-  border-left: 1px solid transparent;
-  padding: 7px 6px;
-}
-.mm-rail .creator-switch a[aria-current] {
-  border-color: var(--color-line-dark);
-}
-.mm-rail .mm-section-nav {
-  min-height: 0;
-  overflow: auto;
-  flex: 1;
-}
-.mm-rail .mm-section-nav a {
-  padding: 5px 8px;
-  font-size: 12px;
-}
-.mm-rail-tools {
-  flex: none;
-  margin-top: 10px;
-  gap: 5px;
-}
-.mm-rail-tools button {
-  font-size: 12px;
-  padding: 6px 8px;
-  min-height: 34px;
-}
-.mm-rail .rail-heading {
-  padding-bottom: 8px;
-}
-.mm-rail .rail-heading strong {
-  font-size: 19px;
-}
 .mm-page {
   padding: 22px 24px;
 }
@@ -910,33 +803,6 @@
   font-size: 12px;
 }
 @media (max-width: 760px) {
-  .mm-rail {
-    padding: 10px;
-    overflow: visible;
-  }
-  .mm-rail .rail-heading {
-    display: none;
-  }
-  .mm-rail .creator-switch {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .mm-rail .creator-switch a {
-    white-space: normal;
-    font-size: 11px;
-    padding: 5px;
-    min-height: 44px;
-    display: grid;
-    place-items: center;
-  }
-  .mm-rail .mm-section-nav {
-    flex: none;
-    overflow-x: auto;
-  }
-  .mm-rail .mm-section-nav a,
-  .mm-rail-tools button {
-    min-height: 44px;
-  }
   .mm-page {
     padding: 16px 12px;
   }

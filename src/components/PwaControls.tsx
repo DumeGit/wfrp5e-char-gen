@@ -19,6 +19,8 @@ export function PwaControls() {
   const [installSlot, setInstallSlot] = useState<Element | null>(null);
   const controller = useRef<PwaController | null>(null);
   const dialog = useRef<HTMLDialogElement | null>(null);
+  const installParent = useRef<HTMLDialogElement | null>(null);
+  const installTrigger = useRef<HTMLElement | null>(null);
   async function install() {
     if (await controller.current?.install()) return;
     const ios =
@@ -31,6 +33,10 @@ export function PwaControls() {
           ? "Open your browser menu and choose Install app or Add to Home screen, then confirm."
           : "Use your browser’s install option in the address bar or menu. Chrome and Edge support installing this app; Safari on Mac offers Add to Dock.",
     );
+    installTrigger.current = document.activeElement as HTMLElement;
+    installParent.current =
+      installTrigger.current?.closest("dialog[open]") || null;
+    installParent.current?.close();
     dialog.current?.showModal();
   }
   useEffect(() => {
@@ -127,6 +133,14 @@ export function PwaControls() {
         className="pwa-dialog"
         ref={dialog}
         aria-labelledby="pwa-install-title"
+        onClose={() => {
+          const parent = installParent.current;
+          if (parent?.isConnected && !document.querySelector("dialog[open]"))
+            parent.showModal();
+          if (installTrigger.current?.isConnected)
+            installTrigger.current.focus({ preventScroll: true });
+          installParent.current = null;
+        }}
       >
         <h2 id="pwa-install-title">Install Character Ledger</h2>
         <p id="pwa-install-instructions">{instructions}</p>

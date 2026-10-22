@@ -1,14 +1,13 @@
-import { test, expect, search } from "./helpers.mjs";
+import {
+  test,
+  expect,
+  search,
+  switchWorkspace,
+  revealCreatorTool,
+} from "./helpers.mjs";
 const MAR_STORAGE = "wfrp-marijan-v1-verification";
 async function navigate(page, label, path) {
-  const link = page
-    .getByRole("navigation", { name: "Creator", exact: true })
-    .getByRole("link", { name: label, exact: true });
-  if (!(await link.isVisible()))
-    await page
-      .getByRole("button", { name: "Open creator menu", exact: true })
-      .click();
-  await link.click();
+  await switchWorkspace(page, label);
   await expect(page).toHaveURL(
     new RegExp(path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\?verify=1$"),
   );
@@ -232,10 +231,7 @@ test("one install control survives route switches and compact resize without dup
     });
     await expect(page.locator("#pwa-install")).toHaveCount(1);
     const install = page.locator("#pwa-install");
-    if (!(await install.isVisible()))
-      await page
-        .getByRole("button", { name: "Open creator menu", exact: true })
-        .click();
+    await revealCreatorTool(page, install);
     await page.evaluate(() => {
       window.__installPromptCalls ??= 0;
       const event = new Event("beforeinstallprompt", { cancelable: true });
@@ -249,10 +245,7 @@ test("one install control survives route switches and compact resize without dup
     expect(await page.evaluate(() => window.__installPromptCalls)).toBe(
       prompts,
     );
-    if (!(await install.isVisible()))
-      await page
-        .getByRole("button", { name: "Open creator menu", exact: true })
-        .click();
+    await revealCreatorTool(page, install);
     await install.click();
     const instructions = page.locator("#pwa-install-dialog");
     await expect(instructions).toBeVisible();
@@ -260,6 +253,8 @@ test("one install control survives route switches and compact resize without dup
     await instructions
       .getByRole("button", { name: "Close", exact: true })
       .click();
+    await expect(instructions).not.toBeVisible();
+    await expect(page.locator(".workspace-action-dialog[open]")).toBeVisible();
     await navigate(page, label, path);
     await expect(page.locator("#pwa-install")).toHaveCount(1);
   }

@@ -1,5 +1,12 @@
 # Shared UI/UX implementation — 10 October 2026
 
+## Imperial Desk — 22 October 2026
+
+All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.
+
+The [design system](DESIGN-SYSTEM.md) and [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) supersede older dated geometry/material/menu descriptions below. Historical results remain evidence for their original builds, not claims of current verification. Materials and decoration stay outside print; rules, formats and PDF layouts remain unchanged.
+
+
 **Historical implementation log (10–19 October 2026).** Counts, tools and screenshots below describe their dated checkpoints, before the latest manager redesign. Current contracts are [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md), [CREATOR-UX.md](CREATOR-UX.md) and [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md); removed controllers and old release failures mentioned below are not current implementation guidance.
 
 Current maintenance note (Next migration): the dated results below describe their original implementation. React components and mode stores now own the shell, native fields/disclosures, issue presentation and busy states; `interface-kit.mjs` and the mobile-shell controller have been removed. Use `src/components/`, `src/features/`, `src/styles/interface.css` and `src/styles/mobile-shell.css` for current changes.

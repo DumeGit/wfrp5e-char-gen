@@ -302,10 +302,12 @@ export function Starting() {
     }, `field:${key}`);
   return (
     <>
-      <p className="lede">
-        Start with a complete printed profile. Keep it as written or make it
-        your own.
-      </p>
+      <section aria-label={!r.profile ? "Get started" : undefined}>
+        <p className="lede">
+          Start with a complete printed profile. Keep it as written or make it
+          your own.
+        </p>
+      </section>
       {r.profile && (
         <>
           <div className="gm-foundation">
