@@ -1,5 +1,4 @@
 "use client";
-import { LootDialog } from "./Loot";
 import { useEffect, useRef, useState } from "react";
 import { KEYS } from "../../engine/rules.mjs";
 import {
@@ -626,7 +625,6 @@ export function BestiaryDialogs() {
   if (kind === "picker")
     return <PickerDialog key={`${kind}:${modal.entryKind}`} />;
   if (kind === "print") return <PrintDialog />;
-  if (kind === "loot") return <LootDialog />;
   if (kind === "profile") {
     const draft = freshGM(data, modal.entry.id, s.books),
       result = store.calculate(draft);

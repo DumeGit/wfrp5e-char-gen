@@ -1,6 +1,6 @@
 # Black Banner design system — v1
 
-Bestiary Loot reuses the existing SectionHeading/quiet native controls and modal below Trappings, before magic. Keep the initial section compact; the roll dialog exposes Location and Number of rolls, a live preview, Reroll/Add actions and collapsed dice/table details. Use shared paper/line tokens, wrapping two-field layout, labelled 44px touch controls and the existing modal focus/Escape behaviour. Loot rows show name/location with an adjacent quantity/Remove group; location/source details expand. Treat loot as possessions, not equipped combat controls.
+Bestiary Loot sits below Trappings and before magic. Its single **Roll loot** button immediately adds results, including automatic extra rolls on 00. Do not add a dialog, preview, location choice or roll-count selector. Use the shared heading/button, compact item rows with adjacent quantity/Remove controls, expandable item sources and a collapsed inline d100 table. Keep labelled 44px touch controls and wrapping rows; loot remains separate from equipped combat controls.
 
 Bestiary Customise uses a native checkbox with `role="switch"` for each selected Trait/Talent's **Description** output preference. Keep the 30 × 18px track inside a 44px-tall clickable label, using existing primary/paper/muted/focus tokens. Show only the Description label, with no On/Off text. Place it outside the disclosure beside rank/Remove controls; wrap the control group beneath the name when space is narrow. Preserve keyboard focus, whole-label tapping and unchanged canonical editor rules.
 

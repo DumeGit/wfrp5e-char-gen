@@ -13,7 +13,6 @@ import {
   MAX_LOOT_DICE,
   rollGMLoot,
   addGMLoot,
-  defaultLootLocation,
   lootLines,
 } from "../src/engine/gm/loot.mjs";
 import { sheetSections, createGMPDF } from "../src/engine/gm/pdf.mjs";
@@ -42,8 +41,7 @@ const sequence = (faces) => {
     return face;
   };
 };
-const roll = (faces, options = {}) =>
-  rollGMLoot(R, { location: "carried", count: 1, ...options }, sequence(faces));
+const roll = (faces) => rollGMLoot(R, sequence(faces));
 
 test("the approved original loot table covers d100 exactly once and resolves every item to its existing core record", () => {
   assert.equal(LOOT_TABLE.length, 26);
@@ -55,16 +53,20 @@ test("the approved original loot table covers d100 exactly once and resolves eve
   );
   const originals = structuredClone(R);
   for (let face = 1; face <= 100; face++) {
-    const preview = rollGMLoot(R, { location: "lair", count: 1 }, (sides) =>
-      sides === 100 ? (face === 100 ? 39 : face) : sides,
-    );
+    let first = true;
+    const preview = rollGMLoot(R, (sides) => {
+      if (sides !== 100) return sides;
+      if (!first) return 39;
+      first = false;
+      return face;
+    });
     assert.equal(preview.error, "");
     assert.ok(preview.entries.length);
     const s = draft();
     addGMLoot(R, s, preview.entries);
     validateGMDraft(data, R, s);
     for (const row of calculateGM(data, R, s).loot) {
-      assert.equal(row.location, "lair");
+      assert.ok(!Object.hasOwn(row, "location"));
       if (row.id) {
         assert.ok(row.entry.source.book === "core");
         assert.equal(row.entry.contentId, row.id);
@@ -72,31 +74,22 @@ test("the approved original loot table covers d100 exactly once and resolves eve
     }
   }
   assert.deepEqual(R, originals);
-  assert.equal(
-    defaultLootLocation(data.profiles.find((p) => p.name === "Human")),
-    "carried",
-  );
-  for (const name of ["Wolf", "Griffon", "Blood Hungry Spore Cloud"])
-    assert.equal(
-      defaultLootLocation(data.profiles.find((p) => p.name === name)),
-      "lair",
-    );
 });
 
 test("loot dice record exact quantities, bundles and app provenance without adding previewed possessions", () => {
   const s = draft();
   const before = structuredClone(s);
-  const preview = roll([41, 7, 98, 99, 3], { count: 3 });
+  const preview = roll([99, 3]);
   assert.equal(preview.error, "");
-  assert.equal(preview.entries.length, 7);
+  assert.equal(preview.entries.length, 3);
   assert.deepEqual(
     preview.entries.map((x) => x.quantity),
-    [1, 7, 1, 1, 1, 1, 3],
+    [1, 1, 3],
   );
   assert.deepEqual(s, before);
   assert.deepEqual(
     preview.rolls.map((x) => x.faces),
-    [[41], [7], [98], [99], [3]],
+    [[99], [3]],
   );
   for (const record of preview.rolls) {
     assert.equal(record.source.kind, "app");
@@ -128,30 +121,23 @@ test("00 creates exactly two extra results, rerolls further 00s and bounds patho
   );
   assert.equal(preview.outcomes.filter((x) => x.rerolled).length, 2);
   assert.equal(preview.rolls.length, 6);
-  const capped = rollGMLoot(R, { location: "carried", count: 1 }, () => 100);
+  const capped = rollGMLoot(R, () => 100);
   assert.match(capped.error, /Too many/);
   assert.equal(capped.rolls.length, MAX_LOOT_DICE);
   assert.deepEqual(capped.entries, []);
-  for (const options of [
-    { location: "pockets", count: 1 },
-    { location: "lair", count: 0 },
-    { location: "carried", count: 4 },
-  ])
-    assert.throws(() => rollGMLoot(R, options), /Choose/);
 });
 
-test("loot adds atomically, merges only matching locations and does not change existing equipment or mechanics", () => {
+test("loot adds atomically, merges matching items and does not change existing equipment or mechanics", () => {
   const s = draft("Griffon");
   s.gear.push({ key: "gm-own-lantern", id: "core:gear:lantern", quantity: 1 });
   const before = calculateGM(data, R, s);
   const preview = roll([98]);
   addGMLoot(R, s, preview.entries);
   addGMLoot(R, s, preview.entries);
-  addGMLoot(R, s, roll([98], { location: "lair" }).entries);
-  assert.equal(s.loot.length, 4);
+  assert.equal(s.loot.length, 2);
   assert.deepEqual(
     s.loot.map((r) => r.quantity),
-    [2, 2, 1, 1],
+    [2, 2],
   );
   const after = calculateGM(data, R, s);
   assert.deepEqual({ ...after, loot: [] }, { ...before, loot: [] });
@@ -175,7 +161,6 @@ test("legacy saves default to no loot and malformed loot is rejected without rep
   assert.ok(!Object.hasOwn(legacy, "loot"));
   const row = {
     key: "gm-loot-test",
-    location: "carried",
     coin: "brass",
     quantity: 3,
   };
@@ -195,7 +180,6 @@ test("legacy saves default to no loot and malformed loot is rejected without rep
       {
         key: "gm-a",
         id: "core:weapon:hand-weapon",
-        location: "carried",
         quantity: 1,
       },
     ],
@@ -210,19 +194,19 @@ test("legacy saves default to no loot and malformed loot is rejected without rep
   assert.throws(() => validateGMDraft(data, R, s), /identity/);
 });
 
-test("carried/lair loot and coin quantities appear under Gear in preview, full sheets and measured A4 cards", async () => {
+test("loot and coin quantities appear under Gear in preview, full sheets and measured A4 cards", async () => {
   const s = draft();
   addGMLoot(R, s, roll([41, 7]).entries);
-  addGMLoot(R, s, roll([99, 3], { location: "lair" }).entries);
+  addGMLoot(R, s, roll([99, 3]).entries);
   const r = calculateGM(data, R, s);
   assert.equal(lootLines(r.loot).length, 5);
   const full = Object.fromEntries(sheetSections(r, s));
   const card = Object.fromEntries(cardSections(r, s));
   const html = statBlock(r, s);
   for (const text of [
-    "Carried loot: 7 brass pennies",
-    "Lair loot: 3 × Rations, 1 day",
-    "Carried loot: 1 × Pouch",
+    "Loot: 7 brass pennies",
+    "Loot: 3 × Rations, 1 day",
+    "Loot: 1 × Pouch",
   ]) {
     assert.ok(full.Gear.includes(text));
     assert.ok(card.Gear.includes(text));

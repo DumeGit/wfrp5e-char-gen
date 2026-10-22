@@ -314,6 +314,10 @@ export function validateGMDraft(data, R, s) {
     if (!gmSpellCatalogue(R).some((p) => p.contentId === id))
       throw Error("Unknown spell.");
   validateGMLoot(R, s.loot);
+  // Older loot rows kept a location choice. Preserve their possessions while
+  // dropping that retired field from restored drafts, without mutating input.
+  if (s.loot.some((row) => own(row, "location")))
+    s = { ...s, loot: s.loot.map(({ location, ...row }) => row) };
   for (const id of s.mutations)
     if (!data.mutations.some((p) => p.id === id))
       throw Error("Unknown mutation.");

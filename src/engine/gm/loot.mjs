@@ -69,8 +69,6 @@ const catalogue = (R) => [...R.weapons, ...R.armour, ...R.gear, ...R.market];
 const lootIds = new Set(
   LOOT_TABLE.flatMap((r) => r.drops.map((d) => d.id)).filter(Boolean),
 );
-export const lootLocation = (location) =>
-  location === "carried" ? "Carried loot" : "Lair loot";
 export const lootName = (row) =>
   row.coin ? LOOT_COINS[row.coin][row.quantity === 1 ? 0 : 1] : row.entry.name;
 export const lootText = (row) =>
@@ -78,7 +76,7 @@ export const lootText = (row) =>
     ? `${displayNumber(row.quantity)} ${lootName(row)}`
     : `${displayNumber(row.quantity)} × ${lootName(row)}`;
 export const lootLines = (rows = []) =>
-  rows.map((row) => `${lootLocation(row.location)}: ${lootText(row)}`);
+  rows.map((row) => `Loot: ${lootText(row)}`);
 export const resolveGMLoot = (R, rows = []) =>
   rows.map((row) => ({
     ...row,
@@ -86,23 +84,6 @@ export const resolveGMLoot = (R, rows = []) =>
       ? { entry: catalogue(R).find((e) => e.contentId === row.id) }
       : {}),
   }));
-
-// Conservative presentation default. Every profile can explicitly use either.
-export function defaultLootLocation(profile) {
-  return profile?.category === "Peoples of the Reikland" ||
-    [
-      "Human",
-      "Halfling",
-      "Dwarf",
-      "Gnome",
-      "Ogre",
-      "High Elf",
-      "Wood Elf",
-      "Dark Elf",
-    ].includes(profile?.species)
-    ? "carried"
-    : "lair";
-}
 
 export function validateGMLoot(R, rows) {
   if (!Array.isArray(rows) || rows.length > 1000)
@@ -113,13 +94,14 @@ export function validateGMLoot(R, rows) {
       !row ||
       typeof row !== "object" ||
       Array.isArray(row) ||
-      !["carried", "lair"].includes(row.location) ||
+      (Object.hasOwn(row, "location") &&
+        !["carried", "lair"].includes(row.location)) ||
       !Number.isInteger(row.quantity) ||
       row.quantity < 1 ||
       row.quantity > MAX_LOOT_QUANTITY ||
       typeof row.key !== "string" ||
       !/^gm-[a-z0-9-]+$/.test(row.key) ||
-      Object.keys(row).length !== 4 ||
+      Object.keys(row).length !== (Object.hasOwn(row, "location") ? 4 : 3) ||
       Object.keys(row).some(
         (key) => !["key", "location", "quantity", "id", "coin"].includes(key),
       ) ||
@@ -135,11 +117,9 @@ export function validateGMLoot(R, rows) {
     throw Error("Duplicate loot identity.");
 }
 
-// Returns a preview; it never alters a draft or equips anything. An injected
-// die is used only by deterministic tests; production uses rejection sampling.
-export function rollGMLoot(R, { location, count }, roller = die) {
-  if (!["carried", "lair"].includes(location) || ![1, 2, 3].includes(count))
-    throw Error("Choose a loot location and one to three rolls.");
+// Resolves one click, including automatic extra results and quantity dice.
+// An injected die is used only by deterministic tests.
+export function rollGMLoot(R, roller = die) {
   const entries = [],
     rolls = [],
     outcomes = [];
@@ -147,7 +127,7 @@ export function rollGMLoot(R, { location, count }, roller = die) {
   const roll = (label, count, sides) => {
     if (rolls.length >= MAX_LOOT_DICE)
       throw Error(
-        "Too many consecutive extra rolls. Roll again to try a fresh preview.",
+        "Too many consecutive extra rolls. Roll again to try fresh results.",
       );
     const faces = Array.from({ length: count }, () => roller(sides));
     if (
@@ -156,7 +136,7 @@ export function rollGMLoot(R, { location, count }, roller = die) {
       throw Error("Invalid loot die result.");
     const total = faces.reduce((sum, face) => sum + face, 0);
     rolls.push({
-      label: `${lootLocation(location)}: ${label}`,
+      label: `Loot: ${label}`,
       count,
       sides,
       faces,
@@ -193,14 +173,13 @@ export function rollGMLoot(R, { location, count }, roller = die) {
         ? roll(`${name} quantity`, drop.count, drop.sides)
         : drop.count;
       entries.push({
-        location,
         quantity,
         ...(drop.id ? { id: drop.id } : { coin: drop.coin }),
       });
     }
   };
   try {
-    for (let i = 0; i < count; i++) resolve();
+    resolve();
   } catch (problem) {
     error = problem.message;
     entries.length = 0;
@@ -211,14 +190,11 @@ export function rollGMLoot(R, { location, count }, roller = die) {
 export function addGMLoot(R, draft, entries) {
   if (!Array.isArray(entries) || !entries.length || entries.length > 18)
     throw Error("Roll some loot before adding it.");
-  const next = structuredClone(draft.loot || []);
+  const next = (draft.loot || []).map(({ location, ...row }) => ({ ...row }));
   for (const entry of entries) {
     const row = { ...entry, key: `gm-${crypto.randomUUID()}` };
     validateGMLoot(R, [row]);
-    const existing = next.find(
-      (x) =>
-        x.location === row.location && x.id === row.id && x.coin === row.coin,
-    );
+    const existing = next.find((x) => x.id === row.id && x.coin === row.coin);
     if (existing) existing.quantity += row.quantity;
     else next.push(row);
   }

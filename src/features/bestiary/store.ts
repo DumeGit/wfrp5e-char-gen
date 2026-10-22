@@ -159,19 +159,25 @@ export class BestiaryStore {
     });
   };
   breakGroup = () => this.history?.breakGroup();
-  rollLoot = (options: { location: string; count: number }) => {
+  rollLoot = () => {
     const { draft, rules } = this.snapshot;
-    if (!draft.profile) throw Error("Choose a starting profile first.");
+    if (!draft?.profile) throw Error("Choose a starting profile first.");
     if (draft.rolls.length + MAX_LOOT_DICE > 1000)
       throw Error("This draft has reached the recorded-dice limit.");
-    const preview = rollGMLoot(rules, options);
-    this.edit((d) => d.rolls.push(...preview.rolls));
-    return { ...preview, draft: this.snapshot.draft };
-  };
-  addLoot = (preview: any) => {
-    if (!preview || preview.draft !== this.snapshot.draft || preview.error)
-      throw Error("The creature changed. Roll a fresh loot preview.");
-    this.edit((d) => addGMLoot(this.snapshot.rules, d, preview.entries));
+    const result = rollGMLoot(rules);
+    let error = result.error;
+    this.edit((d) => {
+      d.rolls.push(...result.rolls);
+      if (!error) {
+        try {
+          addGMLoot(rules, d, result.entries);
+        } catch (problem) {
+          error = problem instanceof Error ? problem.message : String(problem);
+        }
+      }
+    });
+    if (error) throw Error(error);
+    return result;
   };
   travel = (direction: "undo" | "redo") => {
     const next = this.history.travel(direction);
