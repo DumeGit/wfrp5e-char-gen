@@ -106,299 +106,352 @@ export function EntryList({
             : "No entries recorded."}
         </p>
       )}
-      {!compact && group === "skills" && (
-        <div className="manager-skill-headings" aria-hidden="true">
-          {[0, 1, 2].map((index) => (
-            <div key={index}>
-              <span>Skill</span>
-              <span>Char.</span>
-              <span>Score</span>
-            </div>
+      {group === "skills" ? (
+        <SkillGroups entries={entries} isAdvanced={advanced} />
+      ) : (
+        <div className="manager-entry-items">
+          {entries.map((x: any, index: number) => (
+            <Fragment key={x.key}>
+              {group === "skills" &&
+                (index === 0 ||
+                  advanced(entries[index - 1]) !== advanced(x)) && (
+                  <h3 className="manager-skill-divider">
+                    {advanced(x) ? "Advanced Skills" : "Basic Skills"}
+                  </h3>
+                )}
+              <div className="manager-entry-row">
+                {group === "skills" ? (
+                  <div className="manager-skill-row">
+                    <strong className="manager-entry-name" title={x.name}>
+                      {x.name}
+                    </strong>
+                    <small
+                      className="manager-skill-characteristic"
+                      title={`Linked Characteristic: ${x.char}`}
+                    >
+                      {x.char}
+                    </small>
+                    <span className="manager-entry-total">
+                      {score(x.total)}
+                    </span>
+                  </div>
+                ) : (
+                  <details className="manager-entry">
+                    <summary>
+                      <strong>
+                        <span className="manager-entry-name" title={x.name}>
+                          {x.name}
+                        </span>
+                        {group === "gear" && (
+                          <span className="manager-entry-subtitle">
+                            {x.state || "carried"} · Enc{" "}
+                            {x.enc === null || x.enc === undefined
+                              ? "Unknown"
+                              : score(x.enc)}{" "}
+                            each
+                          </span>
+                        )}
+                      </strong>
+                      {group === "skills" && (
+                        <small
+                          className="manager-skill-characteristic"
+                          title={`Linked Characteristic: ${x.char}`}
+                        >
+                          {" "}
+                          {x.char}
+                        </small>
+                      )}
+
+                      <span className="manager-entry-total">
+                        {group === "skills"
+                          ? score(x.total)
+                          : ["talents", "gear"].includes(group)
+                            ? `×${score(x.amount)}`
+                            : x.kind}
+                      </span>
+                    </summary>
+                    <div className="manager-entry-content">
+                      <p>
+                        {entryDescription(catalogue, x) ||
+                          "No description recorded."}
+                      </p>
+                      {x.source && (
+                        <button
+                          className="manager-text"
+                          type="button"
+                          onClick={() =>
+                            requestReference({
+                              name: x.name,
+                              book: x.source.book,
+                            })
+                          }
+                        >
+                          {entrySource(catalogue, x)}
+                        </button>
+                      )}
+                      {x.adaptation && (
+                        <p className="manager-notice">
+                          Legacy:{" "}
+                          {typeof x.adaptation === "string"
+                            ? x.adaptation
+                            : x.adaptation.text ||
+                              "Reviewed adaptation; open the source reference for details."}
+                        </p>
+                      )}
+                      {group === "skills" && (
+                        <p className="manager-meta">
+                          {x.char} {score(result.stats[x.char])} +{" "}
+                          {score(x.amount)} Advances
+                          {x.total !== result.stats[x.char] + x.amount
+                            ? " · adjusted total"
+                            : ""}
+                        </p>
+                      )}
+                      {!compact && group === "gear" && (
+                        <div className="manager-form manager-gear-editor">
+                          <p className="manager-meta">
+                            Enc{" "}
+                            {x.enc === null || x.enc === undefined
+                              ? "Unknown"
+                              : score(x.enc)}{" "}
+                            per item
+                            {x.kind === "weapon"
+                              ? ` · Damage ${x.damage || "—"} · ${x.qualities || "No listed properties"}`
+                              : x.kind === "armour"
+                                ? ` · AP ${score(x.ap)} · ${x.locations}`
+                                : ""}
+                          </p>
+                          <Select
+                            id={`state-${x.key}`}
+                            label="Equipment placement"
+                            value={x.state}
+                            options={["equipped", "worn", "carried", "stored"]}
+                            onValue={(value) =>
+                              edit(`Moved ${x.name}: ${value}`, (r) =>
+                                withRow(r, x, (row) => {
+                                  row.state = value;
+                                }),
+                              )
+                            }
+                          />
+                          <Field
+                            id={`amount-${x.key}`}
+                            label="Quantity"
+                            numeric
+                            value={x.amount}
+                            onValue={(value) =>
+                              edit(`Adjusted ${x.name}`, (r) => {
+                                if (!Number.isSafeInteger(value) || value < 0)
+                                  throw Error(
+                                    "Enter a non-negative whole number.",
+                                  );
+                                withRow(r, x, (row) => {
+                                  row.amount = value;
+                                });
+                              })
+                            }
+                          />
+                          <p className="manager-meta">
+                            Packing is automatic. Stored belongings and coin
+                            weight are excluded from load.
+                          </p>
+                        </div>
+                      )}
+                      {!compact && group !== "gear" && (
+                        <>
+                          <details className="manager-adjust-entry">
+                            <summary>Adjust this entry</summary>
+                            <p className="manager-meta">
+                              Manual changes are recorded without an XP charge.
+                            </p>
+                            {["skills", "talents"].includes(group) && (
+                              <Field
+                                id={`amount-${x.key}`}
+                                label={
+                                  group === "skills"
+                                    ? "Advances (GM adjustment; no XP charge)"
+                                    : "Ranks (GM adjustment; no XP charge)"
+                                }
+                                numeric
+                                value={x.amount}
+                                onValue={(value) =>
+                                  edit(
+                                    `Adjusted ${x.name}`,
+                                    (r) => {
+                                      if (
+                                        !Number.isSafeInteger(value) ||
+                                        value < 0
+                                      )
+                                        throw Error(
+                                          "Enter a non-negative whole number.",
+                                        );
+                                      withRow(r, x, (row) => {
+                                        if (
+                                          row.total !== null &&
+                                          group === "skills"
+                                        )
+                                          row.total += value - row.amount;
+                                        row.amount = value;
+                                      });
+                                    },
+                                    "Recorded manual adjustment; no XP charged.",
+                                  )
+                                }
+                              />
+                            )}
+                            {group === "skills" && (
+                              <Field
+                                id={`total-${x.key}`}
+                                label="Manual Skill total (blank uses calculation)"
+                                numeric
+                                nullable
+                                value={
+                                  sheet.entries.skills.find(
+                                    (e: any) => e.key === x.key,
+                                  )?.total ?? null
+                                }
+                                onValue={(value) =>
+                                  edit(`Adjusted ${x.name} total`, (r) =>
+                                    withRow(r, x, (row) => {
+                                      row.total = value;
+                                    }),
+                                  )
+                                }
+                              />
+                            )}
+                            {group === "magic" && x.kind === "spell" && (
+                              <Select
+                                id={`learned-with-${x.key}`}
+                                label="Learning Talent / Lore"
+                                value={x.learnedWith || ""}
+                                options={[
+                                  ["", "Not recorded"],
+                                  ...result.derived.talents.filter(
+                                    (name: string) =>
+                                      /^(Arcane Magic|Invoke|Bless|Petty Magic|Witch!|High Magic)/.test(
+                                        name,
+                                      ),
+                                  ),
+                                ]}
+                                onValue={(value) =>
+                                  edit(
+                                    `Recorded learning Lore for ${x.name}`,
+                                    (r) =>
+                                      withRow(r, x, (row) => {
+                                        row.learnedWith = value;
+                                      }),
+                                  )
+                                }
+                              />
+                            )}
+                            {!x.reference && (
+                              <button
+                                className="manager-danger-text"
+                                type="button"
+                                onClick={() =>
+                                  edit(
+                                    `Removed ${x.name}`,
+                                    (r) => {
+                                      r.sheet.entries[group] = r.sheet.entries[
+                                        group
+                                      ].filter((e: any) => e.key !== x.key);
+                                    },
+                                    "Removed entry without an XP refund. Use Undo to restore it.",
+                                  )
+                                }
+                              >
+                                Remove entry
+                              </button>
+                            )}
+                          </details>
+                        </>
+                      )}
+                      {!compact && group === "gear" && (
+                        <button
+                          className="manager-danger-text"
+                          type="button"
+                          onClick={() =>
+                            edit(
+                              `Removed ${x.name}`,
+                              (r) => {
+                                r.sheet.entries.gear =
+                                  r.sheet.entries.gear.filter(
+                                    (e: any) => e.key !== x.key,
+                                  );
+                              },
+                              "No money refunded. Use Undo to restore it.",
+                            )
+                          }
+                        >
+                          Remove item
+                        </button>
+                      )}
+                    </div>
+                  </details>
+                )}
+              </div>
+            </Fragment>
           ))}
         </div>
       )}
-      <div className="manager-entry-items">
-        {entries.map((x: any, index: number) => (
-          <Fragment key={x.key}>
-            {group === "skills" &&
-              (index === 0 || advanced(entries[index - 1]) !== advanced(x)) && (
-                <h3 className="manager-skill-divider">
-                  {advanced(x) ? "Advanced Skills" : "Basic Skills"}
-                </h3>
-              )}
-            <div className="manager-entry-row">
-              {group === "skills" ? (
-                <div className="manager-skill-row">
-                  <strong className="manager-entry-name" title={x.name}>
-                    {x.name}
-                  </strong>
-                  <small
-                    className="manager-skill-characteristic"
-                    title={`Linked Characteristic: ${x.char}`}
-                  >
-                    {x.char}
-                  </small>
-                  <span className="manager-entry-total">{score(x.total)}</span>
-                </div>
-              ) : (
-                <details className="manager-entry">
-                  <summary>
-                    <strong>
-                      <span className="manager-entry-name" title={x.name}>
-                        {x.name}
-                      </span>
-                      {group === "gear" && (
-                        <span className="manager-entry-subtitle">
-                          {x.state || "carried"} · Enc{" "}
-                          {x.enc === null || x.enc === undefined
-                            ? "Unknown"
-                            : score(x.enc)}{" "}
-                          each
-                        </span>
-                      )}
-                    </strong>
-                    {group === "skills" && (
-                      <small
-                        className="manager-skill-characteristic"
-                        title={`Linked Characteristic: ${x.char}`}
-                      >
-                        {" "}
-                        {x.char}
-                      </small>
-                    )}
-
-                    <span className="manager-entry-total">
-                      {group === "skills"
-                        ? score(x.total)
-                        : ["talents", "gear"].includes(group)
-                          ? `×${score(x.amount)}`
-                          : x.kind}
-                    </span>
-                  </summary>
-                  <div className="manager-entry-content">
-                    <p>
-                      {entryDescription(catalogue, x) ||
-                        "No description recorded."}
-                    </p>
-                    {x.source && (
-                      <button
-                        className="manager-text"
-                        type="button"
-                        onClick={() =>
-                          requestReference({
-                            name: x.name,
-                            book: x.source.book,
-                          })
-                        }
-                      >
-                        {entrySource(catalogue, x)}
-                      </button>
-                    )}
-                    {x.adaptation && (
-                      <p className="manager-notice">
-                        Legacy:{" "}
-                        {typeof x.adaptation === "string"
-                          ? x.adaptation
-                          : x.adaptation.text ||
-                            "Reviewed adaptation; open the source reference for details."}
-                      </p>
-                    )}
-                    {group === "skills" && (
-                      <p className="manager-meta">
-                        {x.char} {score(result.stats[x.char])} +{" "}
-                        {score(x.amount)} Advances
-                        {x.total !== result.stats[x.char] + x.amount
-                          ? " · adjusted total"
-                          : ""}
-                      </p>
-                    )}
-                    {!compact && group === "gear" && (
-                      <div className="manager-form manager-gear-editor">
-                        <p className="manager-meta">
-                          Enc{" "}
-                          {x.enc === null || x.enc === undefined
-                            ? "Unknown"
-                            : score(x.enc)}{" "}
-                          per item
-                          {x.kind === "weapon"
-                            ? ` · Damage ${x.damage || "—"} · ${x.qualities || "No listed properties"}`
-                            : x.kind === "armour"
-                              ? ` · AP ${score(x.ap)} · ${x.locations}`
-                              : ""}
-                        </p>
-                        <Select
-                          id={`state-${x.key}`}
-                          label="Equipment placement"
-                          value={x.state}
-                          options={["equipped", "worn", "carried", "stored"]}
-                          onValue={(value) =>
-                            edit(`Moved ${x.name}: ${value}`, (r) =>
-                              withRow(r, x, (row) => {
-                                row.state = value;
-                              }),
-                            )
-                          }
-                        />
-                        <Field
-                          id={`amount-${x.key}`}
-                          label="Quantity"
-                          numeric
-                          value={x.amount}
-                          onValue={(value) =>
-                            edit(`Adjusted ${x.name}`, (r) => {
-                              if (!Number.isSafeInteger(value) || value < 0)
-                                throw Error(
-                                  "Enter a non-negative whole number.",
-                                );
-                              withRow(r, x, (row) => {
-                                row.amount = value;
-                              });
-                            })
-                          }
-                        />
-                        <p className="manager-meta">
-                          Packing is automatic. Stored belongings and coin
-                          weight are excluded from load.
-                        </p>
-                      </div>
-                    )}
-                    {!compact && group !== "gear" && (
-                      <>
-                        <details className="manager-adjust-entry">
-                          <summary>Adjust this entry</summary>
-                          <p className="manager-meta">
-                            Manual changes are recorded without an XP charge.
-                          </p>
-                          {["skills", "talents"].includes(group) && (
-                            <Field
-                              id={`amount-${x.key}`}
-                              label={
-                                group === "skills"
-                                  ? "Advances (GM adjustment; no XP charge)"
-                                  : "Ranks (GM adjustment; no XP charge)"
-                              }
-                              numeric
-                              value={x.amount}
-                              onValue={(value) =>
-                                edit(
-                                  `Adjusted ${x.name}`,
-                                  (r) => {
-                                    if (
-                                      !Number.isSafeInteger(value) ||
-                                      value < 0
-                                    )
-                                      throw Error(
-                                        "Enter a non-negative whole number.",
-                                      );
-                                    withRow(r, x, (row) => {
-                                      if (
-                                        row.total !== null &&
-                                        group === "skills"
-                                      )
-                                        row.total += value - row.amount;
-                                      row.amount = value;
-                                    });
-                                  },
-                                  "Recorded manual adjustment; no XP charged.",
-                                )
-                              }
-                            />
-                          )}
-                          {group === "skills" && (
-                            <Field
-                              id={`total-${x.key}`}
-                              label="Manual Skill total (blank uses calculation)"
-                              numeric
-                              nullable
-                              value={
-                                sheet.entries.skills.find(
-                                  (e: any) => e.key === x.key,
-                                )?.total ?? null
-                              }
-                              onValue={(value) =>
-                                edit(`Adjusted ${x.name} total`, (r) =>
-                                  withRow(r, x, (row) => {
-                                    row.total = value;
-                                  }),
-                                )
-                              }
-                            />
-                          )}
-                          {group === "magic" && x.kind === "spell" && (
-                            <Select
-                              id={`learned-with-${x.key}`}
-                              label="Learning Talent / Lore"
-                              value={x.learnedWith || ""}
-                              options={[
-                                ["", "Not recorded"],
-                                ...result.derived.talents.filter(
-                                  (name: string) =>
-                                    /^(Arcane Magic|Invoke|Bless|Petty Magic|Witch!|High Magic)/.test(
-                                      name,
-                                    ),
-                                ),
-                              ]}
-                              onValue={(value) =>
-                                edit(
-                                  `Recorded learning Lore for ${x.name}`,
-                                  (r) =>
-                                    withRow(r, x, (row) => {
-                                      row.learnedWith = value;
-                                    }),
-                                )
-                              }
-                            />
-                          )}
-                          {!x.reference && (
-                            <button
-                              className="manager-danger-text"
-                              type="button"
-                              onClick={() =>
-                                edit(
-                                  `Removed ${x.name}`,
-                                  (r) => {
-                                    r.sheet.entries[group] = r.sheet.entries[
-                                      group
-                                    ].filter((e: any) => e.key !== x.key);
-                                  },
-                                  "Removed entry without an XP refund. Use Undo to restore it.",
-                                )
-                              }
-                            >
-                              Remove entry
-                            </button>
-                          )}
-                        </details>
-                      </>
-                    )}
-                    {!compact && group === "gear" && (
-                      <button
-                        className="manager-danger-text"
-                        type="button"
-                        onClick={() =>
-                          edit(
-                            `Removed ${x.name}`,
-                            (r) => {
-                              r.sheet.entries.gear =
-                                r.sheet.entries.gear.filter(
-                                  (e: any) => e.key !== x.key,
-                                );
-                            },
-                            "No money refunded. Use Undo to restore it.",
-                          )
-                        }
-                      >
-                        Remove item
-                      </button>
-                    )}
-                  </div>
-                </details>
-              )}
-            </div>
-          </Fragment>
-        ))}
-      </div>
     </EntryFrame>
+  );
+}
+
+function SkillGroups({
+  entries,
+  isAdvanced,
+}: {
+  entries: any[];
+  isAdvanced: (entry: any) => boolean;
+}) {
+  return (
+    <>
+      {[false, true].map((advanced) => {
+        const rows = entries.filter((entry) => isAdvanced(entry) === advanced);
+        if (!rows.length) return null;
+        const label = advanced ? "Advanced Skills" : "Basic Skills";
+        return (
+          <div
+            className="manager-skill-group"
+            key={label}
+            role="group"
+            aria-label={label}
+          >
+            <h3 className="manager-skill-divider">{label}</h3>
+            <div className="manager-skill-headings" aria-hidden="true">
+              {[0, 1, 2].map((index) => (
+                <div key={index}>
+                  <span>Skill</span>
+                  <span>Char.</span>
+                  <span>Score</span>
+                </div>
+              ))}
+            </div>
+            <div className="manager-entry-items manager-skill-items">
+              {rows.map((entry) => (
+                <div className="manager-entry-row" key={entry.key}>
+                  <div className="manager-skill-row">
+                    <strong className="manager-entry-name" title={entry.name}>
+                      {entry.name}
+                    </strong>
+                    <small
+                      className="manager-skill-characteristic"
+                      title={`Linked Characteristic: ${entry.char}`}
+                    >
+                      {entry.char}
+                    </small>
+                    <span className="manager-entry-total">
+                      {score(entry.total)}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 }
 

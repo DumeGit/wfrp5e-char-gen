@@ -393,10 +393,9 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
   await expect(dodge.locator(".manager-skill-characteristic")).toHaveText("Ag");
   if (page.viewportSize().width > 1000) {
     const columns = await sheet
-      .locator('[data-group="skills"] .manager-entry-items')
-      .evaluate(
-        (el) => getComputedStyle(el).gridTemplateColumns.split(" ").length,
-      );
+      .locator('[data-group="skills"] .manager-skill-items')
+      .first()
+      .evaluate((el) => Number(getComputedStyle(el).columnCount));
     expect(columns).toBeGreaterThan(1);
   }
   await section(page, "Gear");
@@ -414,6 +413,71 @@ test("abilities share a compact sheet, Skills show Characteristics, gear forms a
     ).toBeLessThan(320);
   }
   await library(page);
+});
+
+test("odd Skill groups balance down desktop columns and retain alphabetical phone order @manager", async ({
+  page,
+}, info) => {
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  const record = (await rawRecords(page))[0];
+  record.sheet.entries.skills.push(
+    makeEntry(
+      {
+        id: "balanced-test-skill",
+        name: "Zoological Study",
+        custom: true,
+        advanced: false,
+        char: "Int",
+      },
+      "skills",
+    ),
+  );
+  await importData(page, record);
+  await section(page, "Abilities");
+  const skills = page.getByRole("region", { name: "Skills", exact: true });
+  const basics = skills.getByRole("group", {
+    name: "Basic Skills",
+    exact: true,
+  });
+  expect((await basics.locator(".manager-skill-row").count()) % 2).toBe(1);
+  for (const width of [1440, 2560, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    const toggle = skills.getByRole("button", { name: "Skills", exact: true });
+    if ((await toggle.getAttribute("aria-expanded")) === "false")
+      await toggle.click();
+    const rows = await basics.locator(".manager-entry-row").evaluateAll((els) =>
+      els.map((el) => {
+        const rect = el.getBoundingClientRect();
+        return {
+          name: el.querySelector(".manager-entry-name").textContent,
+          x: Math.round(rect.x),
+          y: rect.y,
+        };
+      }),
+    );
+    const columns = [...new Set(rows.map((row) => row.x))];
+    expect(columns).toHaveLength(width < 720 ? 1 : width >= 1800 ? 3 : 2);
+    const lengths = columns.map(
+      (x) => rows.filter((row) => row.x === x).length,
+    );
+    expect(Math.max(...lengths) - Math.min(...lengths)).toBeLessThanOrEqual(1);
+    const names = rows.map((row) => row.name);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+    expect(new Set(names).size).toBe(names.length);
+    for (let i = 1; i < rows.length; i++) {
+      if (rows[i].x === rows[i - 1].x)
+        expect(rows[i].y).toBeGreaterThan(rows[i - 1].y);
+      else {
+        expect(rows[i].x).toBeGreaterThan(rows[i - 1].x);
+        expect(Math.abs(rows[i].y - rows[0].y)).toBeLessThan(2);
+      }
+    }
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth),
+    ).toBeLessThanOrEqual(width);
+    await skills.screenshot({ path: info.outputPath(`balanced-${width}.png`) });
+  }
 });
 
 test("grouped sidebar dialogs retain actions, shared history icons and focus across nested editors @manager", async ({

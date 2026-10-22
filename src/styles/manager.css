@@ -995,7 +995,14 @@
 .manager-abilities-grid [data-group="skills"] {
   --manager-skill-columns: 2;
 }
-.manager-abilities-grid [data-group="skills"] .manager-entry-items,
+.manager-skill-items {
+  column-count: var(--manager-skill-columns);
+  column-gap: 14px;
+  column-fill: balance;
+}
+.manager-skill-items > .manager-entry-row {
+  break-inside: avoid;
+}
 .manager-skill-headings {
   display: grid;
   grid-template-columns: repeat(var(--manager-skill-columns), minmax(0, 1fr));
