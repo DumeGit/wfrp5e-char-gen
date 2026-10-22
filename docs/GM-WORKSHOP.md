@@ -22,6 +22,8 @@ This is the fresh NPC & creature creator authorised in October 2026. It shares t
 
 ## Workflow
 
+The equipment filter row owns its spacing: field wrappers have no outer margins, so Clear filters aligns with the dropdown bottoms on larger screens while the row still wraps on phones.
+
 Equipment browsing (22 October 2026): Add equipment lists the complete alphabetical catalogue, with search combined with native dependent filters. Choose a Trapping type, then its available group; Weapons additionally offers Melee/Ranged followed by the printed weapon group (including Engineering). Changing a parent clears its child filters; Clear filters restores the complete list. Empty results explain how to recover. Browsing never changes character data or catalogue IDs. All integrated entries have reviewed groups; the generated [trapping inventory](TRAPPING-GROUPS.md) records the classification and dual weapon/shield paths. Rebuild it with `node scripts/audit-trapping-groups.mjs` and verify with `--check` after catalogue changes.
 
 Full sheets and A4 cards share one **Gear** list: existing free-text Trappings, added/template equipment with quantities, active printed armour/shields and explicitly physical printed weapons. Removed or unselected optional equipment stays absent. Added armour is listed once even though it also supplies protection. Natural hide/scales and generic protection are not possessions; Soak retains only the calculated location totals. No unknown ammunition counts or armour profiles are inferred.

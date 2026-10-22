@@ -37,6 +37,18 @@ test("equipment filters narrow by type and dependent group, reset stale choices 
     dialog.getByText("No trappings match these filters.", { exact: false }),
   ).toBeVisible();
   await dialog.locator("#gm-picker-search").fill("");
+  if (page.viewportSize().width > 1000) {
+    const clear = await dialog
+      .getByRole("button", { name: "Clear filters", exact: true })
+      .boundingBox();
+    const selects = await dialog.locator(".gm-equipment-filters select").all();
+    for (const select of selects) {
+      const bounds = await select.boundingBox();
+      expect(
+        Math.abs(bounds.y + bounds.height - clear.y - clear.height),
+      ).toBeLessThanOrEqual(1);
+    }
+  }
   await noOverflow(page);
   await page.screenshot({ path: info.outputPath("equipment-engineering.png") });
   await dialog.getByLabel("Weapon type", { exact: true }).selectOption("Melee");

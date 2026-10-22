@@ -792,6 +792,7 @@
 .gm-equipment-filters .field {
   flex: 1 1 150px;
   min-width: 0;
+  margin: 0;
 }
 .gm-equipment-filters select {
   width: 100%;
