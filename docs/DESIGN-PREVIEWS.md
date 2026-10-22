@@ -1,5 +1,13 @@
 # Old World visual studies
 
+## Unified layout and menus — 22 October 2026
+
+The user requested examples before changing the four live workspaces. Run `node scripts/serve-layout-studies.mjs`, then open `http://127.0.0.1:8208/design-previews/unified-layout.html`. This loopback preview serves only the studies and public artwork/fonts. **A · Imperial Desk** (recommended), **B · Guild Register** and **C · War Room** compare wider menus, shared navigation/action groups and editor treatments. The workspace selector shows Player, Bestiary, Marijan and manager examples; Phone shows the compact menu. Study/mode links can be shared locally through query parameters. All actions remain illustrative, with no personal storage, file operations or production changes. Layout, tokens, mode mappings and implementation stages are in [UNIFIED-LAYOUT-PROPOSAL.md](UNIFIED-LAYOUT-PROPOSAL.md).
+
+The 72 study/mode/viewport combinations (320/390/768/1024/1440/1920px) were checked for page/frame overflow. Native drawer open/close, workspace switching, file-group dialogs, Escape/focus return, description switches and search keyboard focus were exercised. Desktop examples and phone/drawer captures were visually inspected. These are preview checks, not certification of production functionality or physical phones. Existing art/font provenance is unchanged; the interface icons are simple original inline SVGs.
+
+## Earlier studies
+
 22 October 2026: removed character/creature folio markup, snapshots, toggles and styles from the studies alongside the production removal. Historical descriptions below record their original proposals. Texture studies now show the menu panel alone.
 
 Current component reference: build the app and open `/design-system.html` from `out/`. The studies below are historical proposals, not the Next application. Some gallery/review scripts still refer to removed `/dist/` assets and require path adaptation before reuse; do not present those legacy servers as current production previews.

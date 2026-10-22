@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#1e1c19" />
+    <title>Character Ledger · Workspace studies</title>
+    <link
+      rel="icon"
+      href="../public/assets/ledger-emblem.svg"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="unified-layout.css" />
+    <script type="module" src="unified-layout.mjs"></script>
+  </head>
+  <body>
+    <div class="studio">
+      <header class="studio-heading">
+        <div>
+          <p>Character Ledger / Design studies</p>
+          <h1>One app. Four workspaces.</h1>
+        </div>
+        <span class="preview-label"
+          >Interactive examples · no personal data</span
+        >
+      </header>
+      <div class="study-picker" role="group" aria-label="Layout direction">
+        <button type="button" data-study="a" aria-pressed="true">
+          <span>A</span>
+          <div>
+            <strong>Imperial Desk</strong
+            ><small>Wider dark menu · recommended</small>
+          </div>
+        </button>
+        <button type="button" data-study="b" aria-pressed="false">
+          <span>B</span>
+          <div>
+            <strong>Guild Register</strong
+            ><small>Light parchment · more breathing room</small>
+          </div>
+        </button>
+        <button type="button" data-study="c" aria-pressed="false">
+          <span>C</span>
+          <div>
+            <strong>War Room</strong
+            ><small>Slate framing · compact and direct</small>
+          </div>
+        </button>
+      </div>
+      <div class="study-controls">
+        <p id="study-description">
+          A 296px menu, clear action groups and warm parchment. My recommended
+          balance of Old World character and modern usability.
+        </p>
+        <div class="preview-options">
+          <label for="preview-mode">Workspace</label>
+          <select id="preview-mode">
+            <option value="player">Player character</option>
+            <option value="gm" selected>NPC & creature</option>
+            <option value="marijan">Marijan Mode</option>
+            <option value="manager">Character manager</option>
+          </select>
+          <div role="group" aria-label="Preview size" class="size-picker">
+            <button type="button" data-size="desktop" aria-pressed="true">
+              Desktop</button
+            ><button type="button" data-size="phone" aria-pressed="false">
+              Phone
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="preview-frame" class="preview-frame" data-size="desktop">
+      <div id="example" class="example" data-study="a" data-mode="gm">
+        <a class="skip-link" href="#example-main">Skip to editor</a>
+        <header class="app-masthead">
+          <a
+            class="app-brand"
+            href="#"
+            aria-label="Character Ledger preview home"
+            ><img
+              src="../public/assets/ledger-emblem.svg"
+              alt=""
+              width="40"
+              height="46"
+            /><span>The Character Ledger</span></a
+          >
+          <div class="header-tools">
+            <button
+              type="button"
+              class="menu-launch icon-button"
+              aria-label="Open application menu"
+              aria-haspopup="dialog"
+            ></button
+            ><button type="button" class="search-launch" data-command="search">
+              <span class="search-symbol"></span
+              ><span class="search-label">Search the books</span><kbd>/</kbd>
+            </button>
+          </div>
+        </header>
+        <div class="app-workspace">
+          <aside
+            id="desktop-sidebar"
+            class="app-sidebar"
+            aria-label="Application menu"
+          ></aside>
+          <main id="example-main" class="app-main" tabindex="-1"></main>
+        </div>
+        <div id="compact-bar" class="compact-bar"></div>
+        <footer class="app-footer">
+          Unofficial WFRP companion <span>Characters stay on your device.</span>
+        </footer>
+        <dialog
+          id="mobile-menu"
+          class="mobile-menu"
+          aria-labelledby="mobile-menu-title"
+        >
+          <div class="drawer-heading">
+            <h2 id="mobile-menu-title">Menu</h2>
+            <button
+              type="button"
+              class="icon-button close-drawer"
+              aria-label="Close menu"
+            ></button>
+          </div>
+          <div id="mobile-sidebar" class="app-sidebar"></div>
+        </dialog>
+        <dialog
+          id="sample-dialog"
+          class="sample-dialog"
+          aria-labelledby="sample-dialog-title"
+        >
+          <div class="dialog-top">
+            <h2 id="sample-dialog-title"></h2>
+            <button
+              type="button"
+              class="icon-button close-dialog"
+              aria-label="Close dialog"
+            ></button>
+          </div>
+          <div id="sample-dialog-body"></div>
+        </dialog>
+        <p id="preview-status" class="preview-status" role="status"></p>
+      </div>
+    </div>
+    <section class="design-notes studio" aria-labelledby="notes-title">
+      <h2 id="notes-title">The same structure, wherever you work.</h2>
+      <div>
+        <p>
+          <strong>Switch workspace</strong><br />One clear switcher for all four
+          modes, with names and short explanations.
+        </p>
+        <p>
+          <strong>Find your place</strong><br />Creation steps, editor sections
+          or Play / Advance / Journal share one navigation style.
+        </p>
+        <p>
+          <strong>Keep tools predictable</strong><br />New & import, Save &
+          export, More, history and one save indicator stay in the same places.
+        </p>
+      </div>
+      <p class="study-footnote">
+        Try the workspace switcher inside the menu, different pages, file groups
+        and the phone drawer. These are visual studies; character changes and
+        file operations are illustrative.
+      </p>
+    </section>
+  </body>
+</html>
