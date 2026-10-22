@@ -43,6 +43,10 @@ test("creators, manager and previously unopened references work offline @pwa", a
     "Offline Marijan",
   );
   await page.goto("/manager/?verify=1");
+  if (page.viewportSize().width > 1000)
+    await page
+      .getByRole("button", { name: "New & import", exact: true })
+      .click();
   await page
     .getByRole("button", { name: "New blank character", exact: true })
     .click();

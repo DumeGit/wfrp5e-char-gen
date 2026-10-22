@@ -5,7 +5,123 @@ import {
   applyProfile,
   gmStep,
   noOverflow,
+  gmDraft,
+  fileUpload,
+  downloadBytes,
 } from "./helpers.mjs";
+
+test("Trait descriptions have compact switches without On/Off text and retain the readable rule @gm @mobile", async ({
+  page,
+}, info) => {
+  await openGM(page);
+  await applyProfile(page, "Griffon");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  const toggle = page.getByRole("switch", {
+    name: "Night Vision description",
+    exact: true,
+  });
+  await expect(toggle).toBeChecked();
+  const row = page.locator(".gm-ability-entry").filter({ has: toggle });
+  await expect(row.locator(".gm-description-toggle")).toHaveText("Description");
+  const bounds = await row.locator(".gm-description-toggle").boundingBox();
+  expect(bounds.height).toBeGreaterThanOrEqual(44);
+  expect((await toggle.boundingBox()).height).toBeLessThanOrEqual(18);
+  await row.locator(".gm-description-toggle span").click();
+  await expect(toggle).not.toBeChecked();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(toggle).toBeChecked();
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  await expect(toggle).not.toBeChecked();
+  await row.locator("summary").click();
+  await expect(row.locator(".gm-detail-body")).toContainText("20 yards");
+  await toggle.focus();
+  await page.keyboard.press("Space");
+  await expect(toggle).toBeChecked();
+  await page.keyboard.press("Space");
+  await expect(toggle).not.toBeChecked();
+  await noOverflow(page);
+  await page.screenshot({
+    path: info.outputPath("trait-description-switch.png"),
+  });
+  await gmStep(page, "Review & export");
+  const preview = page
+    .locator(".gm-stat-block")
+    .filter({ has: page.getByRole("heading", { name: /^Traits ·/ }) })
+    .first();
+  await expect(
+    preview.locator("p").filter({
+      has: page.locator("strong").filter({ hasText: /^Night Vision$/ }),
+    }),
+  ).toHaveText("Night Vision");
+});
+
+test("Talent descriptions retain ranks and survive saved draft round-trips @gm @mobile @storage", async ({
+  page,
+}, info) => {
+  await openGM(page);
+  const draft = await gmDraft();
+  draft.talents = [
+    {
+      key: "gm-browser-strong-back",
+      name: "Strong Back",
+      ranks: 2,
+      origin: "GM",
+    },
+  ];
+  delete draft.hiddenDescriptions;
+  const load = async (value) => {
+    await fileUpload(
+      page,
+      page.getByRole("button", { name: "Load draft", exact: true }),
+      value,
+      "description-draft.json",
+    );
+    await page
+      .getByRole("dialog", { name: "Load this GM draft?", exact: true })
+      .getByRole("button", { name: "Load draft", exact: true })
+      .click();
+    await gmStep(page, "Customise");
+    await page
+      .getByRole("tab", { name: "Skills & Talents", exact: true })
+      .click();
+  };
+  await load(draft);
+  const toggle = page.getByRole("switch", {
+    name: "Strong Back ×2 description",
+    exact: true,
+  });
+  await expect(toggle).toBeChecked();
+  await toggle.uncheck();
+  const saved = await downloadBytes(
+    page,
+    page.getByRole("button", { name: "Save NPC / creature", exact: true }),
+  );
+  const exported = JSON.parse(saved.bytes);
+  expect(exported.hiddenDescriptions).toEqual([
+    "talent:gm-browser-strong-back",
+  ]);
+  await load(exported);
+  await expect(toggle).not.toBeChecked();
+  const row = page.locator(".gm-ability-entry").filter({ has: toggle });
+  await expect(
+    row.getByRole("spinbutton", { name: "Strong Back ranks", exact: true }),
+  ).toHaveValue("2");
+  await row.scrollIntoViewIfNeeded();
+  await noOverflow(page);
+  await page.screenshot({
+    path: info.outputPath("talent-description-switch.png"),
+  });
+  await gmStep(page, "Review & export");
+  await expect(
+    page
+      .locator(".gm-stat-block p")
+      .filter({
+        has: page.locator("strong").filter({ hasText: /^Strong Back ×2$/ }),
+      })
+      .first(),
+  ).toHaveText("Strong Back ×2");
+});
 
 test("optional printed equipment has compact full-label tap targets and native keyboard selection @gm @mobile", async ({
   page,

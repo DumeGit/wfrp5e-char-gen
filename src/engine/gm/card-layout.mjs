@@ -1,7 +1,6 @@
 import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName } from "./model.mjs";
-import { talentLabel } from "./export-sections.mjs";
+import { abilityPresentation } from "./ability-presentation.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 
 export const MIN_CARD_FONT = 7.5;
@@ -33,7 +32,7 @@ function printable(font, value) {
 }
 
 // The drawing consumes these exact measured text boxes; no parallel height math.
-function measure(font, bold, { r, sections }, width, size) {
+function measure(font, bold, { r, s, sections }, width, size) {
   const commands = [],
     inner = width - PAD * 2,
     lineHeight = size + 0.75;
@@ -253,13 +252,11 @@ function measure(font, bold, { r, sections }, width, size) {
     } else if (label === "Talents" || label === "Traits") {
       for (const ability of label === "Talents" ? r.talents : r.traits)
         y += text(
-          [
-            {
-              text: `${label === "Talents" ? talentLabel(ability) : rowName(ability)}: `,
-              bold: true,
-            },
-            { text: ability.description },
-          ],
+          abilityPresentation(
+            label === "Talents" ? "talent" : "trait",
+            ability,
+            s,
+          ).runs,
           contentX,
           y,
           contentWidth,

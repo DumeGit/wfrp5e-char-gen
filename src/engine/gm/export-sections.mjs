@@ -1,6 +1,6 @@
 // Derived export presentation only; ability wording comes from the shared result.
-export const talentLabel = (talent) =>
-  talent.name + (talent.ranks > 1 ? ` ×${talent.ranks}` : "");
+import { abilityName } from "./ability-presentation.mjs";
+export const talentLabel = (talent) => abilityName("talent", talent);
 
 // Printed weapon attacks are belongings too. Use only explicitly physical names
 // from the supplied profiles; body parts and Trait attacks are not inventory.

@@ -1,8 +1,8 @@
 import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
-import { rowName } from "./model.mjs";
+import { abilityPresentation } from "./ability-presentation.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
-import { soakLines, talentLabel, gearLines } from "./export-sections.mjs";
+import { soakLines, gearLines } from "./export-sections.mjs";
 
 // The sheet consumes exactly the same result as review and the folio.
 // Source conflicts, imported history and calculation commentary stay in the app.
@@ -22,8 +22,11 @@ export function sheetSections(r, s) {
         ? [r.skills.map((x) => `${x.name} ${x.total}`).join("; ")]
         : [],
     ],
-    ["Talents", r.talents.map((x) => `${talentLabel(x)}: ${x.description}`)],
-    ["Creature Traits", r.traits.map((t) => `${rowName(t)}: ${t.description}`)],
+    ["Talents", r.talents.map((x) => abilityPresentation("talent", x, s).text)],
+    [
+      "Creature Traits",
+      r.traits.map((t) => abilityPresentation("trait", t, s).text),
+    ],
     [
       "Magic & prayers",
       r.spells.map(
@@ -217,6 +220,21 @@ export async function createGMPDF(PDFLib, r, s) {
   y -= 5;
   for (const [title, lines] of sheetSections(r, s)) {
     const richLines = lines.map((line, i) => {
+      if (title === "Talents" || title === "Creature Traits") {
+        const ability = title === "Talents" ? r.talents[i] : r.traits[i];
+        const runs = abilityPresentation(
+          title === "Talents" ? "talent" : "trait",
+          ability,
+          s,
+        ).runs;
+        return wrapPDFRuns(
+          runs.map((run) => ({ ...run, text: safe(run.text) })),
+          font,
+          bold,
+          10,
+          width,
+        );
+      }
       const label =
         title === "Attacks"
           ? r.attacks[i].name
@@ -226,13 +244,9 @@ export async function createGMPDF(PDFLib, r, s) {
               ? r.cants[i].name
               : title === "Corruption"
                 ? r.mutations[i].name + ":"
-                : title === "Talents"
-                  ? talentLabel(r.talents[i]) + ":"
-                  : title === "Creature Traits"
-                    ? rowName(r.traits[i]) + ":"
-                    : title === "Personality"
-                      ? line.slice(0, line.indexOf(":") + 1)
-                      : "";
+                : title === "Personality"
+                  ? line.slice(0, line.indexOf(":") + 1)
+                  : "";
       return wrapPDFRuns(
         [
           { text: safe(label), bold: true },

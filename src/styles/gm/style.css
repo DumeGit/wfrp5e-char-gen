@@ -417,6 +417,74 @@
   min-height: 36px;
   padding: 7px;
 }
+.gm-ability-entry {
+  flex-wrap: wrap;
+}
+.gm-ability-entry > .gm-ability-content {
+  flex: 1 1 150px;
+}
+.gm-ability-entry > .gm-ability-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.gm-description-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--control-touch);
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.gm-ability-entry .gm-description-toggle input {
+  appearance: none;
+  position: relative;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 18px;
+  min-height: 18px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  background: var(--color-paper-raised);
+}
+.gm-description-toggle input::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: var(--color-muted);
+}
+.gm-ability-entry .gm-description-toggle input:checked {
+  border-color: var(--color-crimson);
+  background: var(--color-crimson);
+}
+.gm-description-toggle input:checked::before {
+  left: 14px;
+  background: var(--color-on-crimson);
+}
+.gm-description-toggle:has(input:focus-visible) {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.gm-description-toggle:active {
+  color: var(--color-crimson);
+}
+@media (hover: hover) and (pointer: fine) {
+  .gm-description-toggle:hover {
+    color: var(--color-crimson);
+  }
+}
 .gm-origin {
   display: inline-block;
   font-size: 9px;

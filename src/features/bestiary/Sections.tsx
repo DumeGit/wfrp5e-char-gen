@@ -26,10 +26,12 @@ import { sacredMarks, LORE_WINDS } from "../../engine/gm/lustria.mjs";
 import { trollModifiers } from "../../engine/gm/tribes.mjs";
 import { appearanceSpecies } from "../../engine/gm/appearance.mjs";
 import { gmCantBook } from "../../engine/gm/cants.mjs";
+import { abilityPresentation } from "../../engine/gm/ability-presentation.mjs";
 import { sourceLabel } from "../../engine/sources.mjs";
 import { requestReference } from "../../services/content";
 import {
   Check,
+  DescriptionToggle,
   Input,
   Button,
   DiceIcon,
@@ -52,6 +54,26 @@ export const STEPS = [
 ];
 export const TABS = ["Characteristics", "Traits", "Skills & Talents"];
 const label = (R: any, entry: any) => sourceLabel(R, entry);
+function AbilityText({
+  kind,
+  entry,
+  draft,
+}: {
+  kind: "trait" | "talent";
+  entry: any;
+  draft: any;
+}) {
+  const output = abilityPresentation(kind, entry, draft);
+  return (
+    <>
+      <strong>
+        {output.name}
+        {output.description ? ":" : ""}
+      </strong>
+      {output.description && <> {output.description}</>}
+    </>
+  );
+}
 export function StatBlock({
   result: given,
   draft: givenDraft,
@@ -179,11 +201,11 @@ export function StatBlock({
         section(
           "talents",
           `Talents · ${r.talents.length}`,
-          <p>
-            {r.talents
-              .map((x: any) => `${x.name}${x.ranks > 1 ? ` ×${x.ranks}` : ""}`)
-              .join(", ")}
-          </p>,
+          r.talents.map((x: any) => (
+            <p key={x.key}>
+              <AbilityText kind="talent" entry={x} draft={s} />
+            </p>
+          )),
         )}
       {!!r.traits.length &&
         section(
@@ -191,7 +213,7 @@ export function StatBlock({
           `Traits · ${r.traits.length}`,
           r.traits.map((t: any) => (
             <p key={t.key}>
-              <strong>{rowName(t)}:</strong> {t.description || t.summary}
+              <AbilityText kind="trait" entry={t} draft={s} />
             </p>
           )),
         )}
@@ -1141,11 +1163,12 @@ function Traits() {
       <p className="gm-small">
         Mechanical summaries for the creature’s actual Traits. Consult the cited
         book for full rules; situational effects remain references for play.
+        Description controls the text shown in the stat block and PDFs.
       </p>
       <div className="gm-entry-list">
         {r.traits.map((t: any) => (
-          <div className="gm-entry" key={t.key}>
-            <div>
+          <div className="gm-entry gm-ability-entry" key={t.key}>
+            <div className="gm-ability-content">
               <Details
                 id={t.key}
                 title={
@@ -1164,9 +1187,12 @@ function Traits() {
                 <TraitParameter trait={t} />
               )}
             </div>
-            {t.name !== "Size" && t.origin !== "Training" && (
-              <Remove entryKey={t.key} />
-            )}
+            <div className="gm-ability-controls">
+              <DescriptionToggle kind="trait" entry={t} />
+              {t.name !== "Size" && t.origin !== "Training" && (
+                <Remove entryKey={t.key} />
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -1437,9 +1463,13 @@ function SkillsTalents() {
       <SectionHeading action={() => picker("talent")} label="Add Talent">
         Talents
       </SectionHeading>
+      <p className="gm-small">
+        Description controls the text shown in the stat block and PDFs. Open an
+        entry to read its rule.
+      </p>
       {r.talents.map((t: any) => (
-        <div className="gm-entry" key={t.key}>
-          <div>
+        <div className="gm-entry gm-ability-entry" key={t.key}>
+          <div className="gm-ability-content">
             <Details
               id={t.key}
               title={
@@ -1476,36 +1506,39 @@ function SkillsTalents() {
               />
             )}
           </div>
-          {t.origin === "GM" && (
-            <Input
-              className="gm-rank"
-              type="number"
-              min="1"
-              max={
-                Number.isFinite(gmTalentLimit(R, r.stats, t.name))
-                  ? gmTalentLimit(R, r.stats, t.name)
-                  : undefined
-              }
-              value={t.ranks}
-              aria-label={`${t.name} ranks`}
-              onChange={(e) =>
-                edit((d: any) => {
-                  const row = d.talents.find((x: any) => x.key === t.key),
-                    limit =
-                      R.config.talentLimits[base(row.name)] === null
-                        ? Infinity
-                        : (R.config.talentLimits[base(row.name)] ?? 1);
-                  row.ranks = Math.max(
-                    1,
-                    Math.min(limit, Number(e.target.value) || 1),
-                  );
-                }, `rank:${t.key}`)
-              }
-            />
-          )}{" "}
-          {t.origin !== "Template" && t.origin !== "Trait" && (
-            <Remove entryKey={t.key} />
-          )}
+          <div className="gm-ability-controls">
+            {t.origin === "GM" && (
+              <Input
+                className="gm-rank"
+                type="number"
+                min="1"
+                max={
+                  Number.isFinite(gmTalentLimit(R, r.stats, t.name))
+                    ? gmTalentLimit(R, r.stats, t.name)
+                    : undefined
+                }
+                value={t.ranks}
+                aria-label={`${t.name} ranks`}
+                onChange={(e) =>
+                  edit((d: any) => {
+                    const row = d.talents.find((x: any) => x.key === t.key),
+                      limit =
+                        R.config.talentLimits[base(row.name)] === null
+                          ? Infinity
+                          : (R.config.talentLimits[base(row.name)] ?? 1);
+                    row.ranks = Math.max(
+                      1,
+                      Math.min(limit, Number(e.target.value) || 1),
+                    );
+                  }, `rank:${t.key}`)
+                }
+              />
+            )}
+            <DescriptionToggle kind="talent" entry={t} />
+            {t.origin !== "Template" && t.origin !== "Trait" && (
+              <Remove entryKey={t.key} />
+            )}
+          </div>
         </div>
       ))}
     </>

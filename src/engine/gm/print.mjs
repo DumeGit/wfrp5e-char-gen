@@ -1,5 +1,5 @@
-import { rowName } from "./model.mjs";
-import { soakLines, talentLabel, gearLines } from "./export-sections.mjs";
+import { abilityPresentation } from "./ability-presentation.mjs";
+import { soakLines, gearLines } from "./export-sections.mjs";
 import { planRecordCard, drawRecordCard } from "./card-layout.mjs";
 import { CARD_PAGE, printGeometry, packTableCards } from "./card-packing.mjs";
 export { PRINT_LAYOUTS } from "./card-packing.mjs";
@@ -21,11 +21,11 @@ export function cardSections(r, s) {
     ["Skills", r.skills.map((x) => `${x.name} ${x.total}`).join("; ")],
     [
       "Talents",
-      r.talents.map((x) => `${talentLabel(x)}: ${x.description}`).join("\n"),
+      r.talents.map((x) => abilityPresentation("talent", x, s).text).join("\n"),
     ],
     [
       "Traits",
-      r.traits.map((t) => `${rowName(t)}: ${t.description}`).join("\n"),
+      r.traits.map((t) => abilityPresentation("trait", t, s).text).join("\n"),
     ],
     [
       "Magic",

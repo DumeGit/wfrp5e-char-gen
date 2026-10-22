@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { BestiaryStore } from "./store";
 import { freshGM, calculateGM } from "../../engine/gm/model.mjs";
 import { rollGMAppearance } from "../../engine/gm/appearance.mjs";
+import { descriptionKey } from "../../engine/gm/ability-presentation.mjs";
 
 const memory = new Map<string, string>();
 const storage: Storage = {
@@ -58,6 +59,38 @@ async function human(verify = true) {
   store.replace(freshGM(data, "core:creatures:human"));
   return store;
 }
+
+test("description preferences persist, undo/redo and restore old saves without changing calculated abilities", async () => {
+  const store = await human(false);
+  store.edit((d) => {
+    d.talents.push({
+      key: "gm-test-hardy",
+      name: "Hardy",
+      ranks: 1,
+      origin: "GM",
+    });
+  });
+  const before = store.getSnapshot();
+  const key = descriptionKey("talent", before.result.talents[0], before.draft);
+  store.edit((d) => {
+    d.hiddenDescriptions = [key];
+  });
+  assert.deepEqual(store.getSnapshot().result, before.result);
+  store.travel("undo");
+  assert.deepEqual(store.getSnapshot().draft.hiddenDescriptions, []);
+  store.travel("redo");
+  assert.deepEqual(store.getSnapshot().draft.hiddenDescriptions, [key]);
+  const restored = new BestiaryStore(false);
+  await restored.initialize();
+  assert.deepEqual(restored.getSnapshot().draft.hiddenDescriptions, [key]);
+  const legacy = JSON.parse(storage.getItem(store.storageKey)!);
+  delete legacy.hiddenDescriptions;
+  storage.setItem(store.storageKey, JSON.stringify(legacy));
+  const old = new BestiaryStore(false);
+  await old.initialize();
+  assert.equal(old.getSnapshot().error, "");
+  assert.deepEqual(old.getSnapshot().draft.hiddenDescriptions, []);
+});
 
 test("Bestiary groups typing, keeps redo across navigation, and caches one consistent derived result", async () => {
   const store = await human();

@@ -12,6 +12,11 @@ import {
 } from "react";
 import { requestReference } from "../../services/content";
 import { sourceLabel } from "../../engine/sources.mjs";
+import {
+  abilityName,
+  descriptionKey,
+  showsDescription,
+} from "../../engine/gm/ability-presentation.mjs";
 
 export const BestiaryContext = createContext<any>(null);
 export const useBestiary = () => useContext(BestiaryContext);
@@ -162,6 +167,36 @@ export function Check({
         onChange={(event) => onChange(event.target.checked)}
       />
       {children}
+    </label>
+  );
+}
+export function DescriptionToggle({
+  kind,
+  entry,
+}: {
+  kind: "trait" | "talent";
+  entry: any;
+}) {
+  const { draft, edit } = useBestiary();
+  return (
+    <label className="gm-description-toggle">
+      <input
+        type="checkbox"
+        role="switch"
+        aria-label={`${abilityName(kind, entry)} description`}
+        checked={showsDescription(kind, entry, draft)}
+        onChange={(event) => {
+          const enabled = event.target.checked;
+          edit((next: any) => {
+            const key = descriptionKey(kind, entry, next);
+            const hidden = next.hiddenDescriptions || [];
+            next.hiddenDescriptions = enabled
+              ? hidden.filter((id: string) => id !== key)
+              : [...new Set([...hidden, key])];
+          });
+        }}
+      />
+      <span>Description</span>
     </label>
   );
 }

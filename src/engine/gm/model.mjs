@@ -141,11 +141,16 @@ export function freshGM(data, profile = "", books = ["core"]) {
     brokenRoll: null,
     markRoll: null,
     includeNotes: false,
+    hiddenDescriptions: [],
   };
 }
 export function validateGMDraft(data, R, s) {
   const empty = freshGM(data),
     plain = (v) => v && typeof v === "object" && !Array.isArray(v);
+  // Additive schema-2 presentation preference: old valid saves default to On.
+  // Clone only legacy input; never repair malformed or explicitly supplied data.
+  if (plain(s) && !own(s, "hiddenDescriptions"))
+    s = { ...s, hiddenDescriptions: [] };
   if (
     !plain(s) ||
     s.type !== empty.type ||
@@ -230,9 +235,20 @@ export function validateGMDraft(data, R, s) {
     "optionalAttacks",
     "optionalArmour",
     "rolls",
+    "hiddenDescriptions",
   ])
     if (!Array.isArray(s[k]) || s[k].length > 1000)
       throw Error(`Invalid ${k} list.`);
+  if (
+    new Set(s.hiddenDescriptions).size !== s.hiddenDescriptions.length ||
+    s.hiddenDescriptions.some(
+      (key) =>
+        typeof key !== "string" ||
+        key.length > 2000 ||
+        !/^(trait|talent):.+$/.test(key),
+    )
+  )
+    throw Error("Invalid hidden ability descriptions.");
   const printedTraining =
     data.profiles
       .find((p) => p.id === s.profile)
@@ -511,6 +527,11 @@ export function individualise(s, p, key) {
 export function applyTemplate(s, id) {
   const previous = s.template;
   if (previous) {
+    s.hiddenDescriptions = (s.hiddenDescriptions || []).filter(
+      (key) =>
+        !key.startsWith(`trait:${previous}:`) &&
+        !key.startsWith(`talent:${previous}:`),
+    );
     s.removed = s.removed.filter((key) => !key.startsWith(previous + ":"));
     for (const key of Object.keys(s.attackOverrides))
       if (key.startsWith(previous + ":")) delete s.attackOverrides[key];
