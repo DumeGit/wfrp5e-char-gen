@@ -8,7 +8,7 @@ The supplied 112-page Fourth Edition PDF has SHA-256 `008c2e08337b15dd6776ae108a
 - **16 templates:** seven warband templates (pp. 16–17), Goblin Artillery Crew (p. 41), four Troll types (p. 88), four combinable Troll modifiers (p. 89).
 - **28 shared spells:** twelve Little Waaagh!, twelve Big Waaagh! (pp. 98–101) and Bilebrew, Bloodgruel, Get Some Guts and Toothcracker for The Great Maw (p. 82). The latter four are also available to eligible PC Ogres when this book is selected. No playable Greenskin Species or Career is invented.
 - **Acquired equipment:** three war machines and two ammunition profiles (p. 41), six Shaman artefacts (p. 97), Wulfang’s Pelt (p. 63). Prices are not supplied, so none becomes an ordinary shop purchase. Unknown Encumbrance stays unknown. Shared PC weapon/equipment records feed GM choices.
-- **Mechanical search references:** Waaagh! operation/access and Lore benefits, both miscast tables, Gut Magic, Shaman Shrooms, Purple Skullback, Idols, Crewed artillery, puffballs and equipment restrictions. Actual Traits and template abilities have sourced descriptions. NPC profiles/templates stay outside shared search.
+- **Reference scope:** the original extraction covers Waaagh! operation, Lore benefits, Gut Magic, equipment restrictions and related topics, but standalone Rules now remain private. The two genuine miscast tables remain public, alongside eligible shared catalogue options. Actual selected Traits/template abilities retain reviewed summaries in Bestiary. NPC profiles/templates stay outside shared search; [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) reports current counts.
 
 ## Approved conversions
 

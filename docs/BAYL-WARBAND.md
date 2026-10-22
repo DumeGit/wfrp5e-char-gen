@@ -8,7 +8,7 @@ The book contains two generic foundations (Chaos Warrior of Nurgle and Chaos Ste
 
 Included: **Chaos Warrior of Nurgle** and **Chaos Steed** (p. 8), plus **Chosen**, **Chaos Knight**, **Forsaken** (p. 8), **Exalted Hero**, **Chaos Lord**, **Chaos Sorcerer** and **Chaos Sorcerer Lord** (p. 9). The book is opt-in for these GM foundations/templates. All Skills, Talents and equipment reuse the installed creator catalogue. Profiles/templates stay outside shared reference search.
 
-Three mechanical references are available in global search: Applying Chaos Warrior Advancement Templates (p. 3), Chaos Sorcerer Spell Lists and Chaos Sorcerers and Armour (p. 9). These retain printed source wording/meaning and the existing Fourth Edition reference warning. No live casting, magic armour protection, magic item statistics or career XP development is invented.
+The original three mechanical Rule references (Applying Chaos Warrior Advancement Templates, Chaos Sorcerer Spell Lists and Chaos Sorcerers and Armour) remain private reviewed source records. This book contributes no public shared-search results under the current standalone Rules exclusion. Its reviewed foundations/templates and Mark still function in Bestiary. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md); no live casting, magic armour protection or invented item statistics are added.
 
 ## Core definitions and explicit choices
 

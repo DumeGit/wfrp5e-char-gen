@@ -1,6 +1,6 @@
 # Muster Roll painted banner
 
-`muster-banner-v2.png` is original artwork generated with the built-in **imagegen** tool for the three standalone fantasy design previews. It remains outside the published app. The user's supplied Warhammer fantasy box-art image informed the art direction; its pixels, lettering, logo and composition were not copied.
+`muster-banner-v2.png` is original artwork generated with the built-in **imagegen** tool for the three standalone fantasy design previews. The editable original stays outside the published app; its byte-identical production PNG copy is `public/assets/black-banner/banner.png`. The user's supplied Warhammer fantasy box-art image informed the art direction; its pixels, lettering, logo and composition were not copied.
 
 Generated output was copied from the Codex generated-images directory into this project, leaving the source intact. The preview uses the full original image with CSS cropping, rather than modifying its pixels. There is no image-generation API/CLI dependency in the project.
 
@@ -10,4 +10,4 @@ Final prompt, verbatim:
 
 ## Gilded W
 
-`muster-w.svg` is drawn directly in vector code for the user's requested logo revision. The supplied Warhammer wordmark guides its angular W shape, now softened to antique gold with a thin oxblood bevel to match the surrounding design. Its viewBox centres the visible letter, and the folio uses a centred grid placement with even inset space. It is not an extracted official logo or an imagegen output. It replaces the shield/comet mark in the three fantasy iterations. The user requested removal of the glint; the emblem remains static. Both assets remain outside the published app.
+`muster-w.svg` is drawn directly in vector code for the user's requested logo revision. The supplied Warhammer wordmark guides its angular W shape, now softened to antique gold with a thin oxblood bevel to match the surrounding design. Its viewBox centres the visible letter, and the folio uses a centred grid placement with even inset space. It is not an extracted official logo or an imagegen output. It replaces the shield/comet mark in the three fantasy iterations. The user requested removal of the glint; the emblem remains static. The historical W logo stays outside the published app; production uses the independent Carrion Standard emblem in `public/assets/ledger-emblem.svg`. The banner’s production PNG copy is separate from the editable original.

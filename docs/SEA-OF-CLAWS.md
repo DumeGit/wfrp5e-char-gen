@@ -67,11 +67,7 @@ continue to require four cards or a full sheet for unusually long builds.
 
 ## Reference and deferred scope
 
-Search includes the imported definitions, songs, naval tables, Hullbreaker,
-Grubark Gearing System, source creature abilities and selected mechanical rules.
-Adaptation decisions are excluded from matching and shown separately in dialogs.
-The frozen review records the exact curated entries and source hash; it does not
-claim exhaustive search coverage of ship/voyage chapters.
+Search retains eligible songs, equipment/abilities and genuine naval tables; the current corpus has six printed references plus shared catalogue entries. Standalone Rules remain private even when mechanical. Adaptation notes stay separate from matching. The frozen review records the original curated extraction and source hash, not current publication or exhaustive ship/voyage coverage. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md).
 
 Skaeling’s optional Pure Soul → Mark of Khorne replacement is reference-only.
 Norse Skill/equipment advice and Riverfolk Lore (Oceans) substitution are readable
@@ -81,8 +77,8 @@ is a ship upgrade reference, not a character purchase/packing mechanic.
 
 Named captains and Triton (148–158), hiring, ship/crew/voyage management and live
 effects are excluded/deferred. Taverns of the Old World is integrated separately
-(see `TAVERNS.md`); The Corsairs of Captain Flariel remains queued. Neither book
-is part of this Sea of Claws pack.
+(see [TAVERNS.md](TAVERNS.md)); The Corsairs of Captain Flariel is also integrated
+separately (see [CORSAIRS.md](CORSAIRS.md)). Neither belongs to this pack.
 
 ## Reproduction and verification
 

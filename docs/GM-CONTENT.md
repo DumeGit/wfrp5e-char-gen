@@ -2,7 +2,7 @@
 
 Generated from reviewed supplied-book sources. Do not edit by hand.
 
-166 printed profiles, 71 templates, 127 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. Career development, hirelings and live play are deferred.
+166 printed profiles, 71 templates, 127 Creature Traits/abilities, 1 supplementary training option and 40 Physical/Mental Corruption table entries. All integrated player-book options are shared automatically. Only starting profiles and templates are filtered by GM book selection; option-only books do not appear in that selector. This inventory describes Bestiary creation; it does not add Career development, hireling management or ongoing play to the workshop. The separate character manager supports its documented play/advancement workflows.
 
 | Book | Profiles | Templates | GM options |
 | --- | --- | --- | --- |

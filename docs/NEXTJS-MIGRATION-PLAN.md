@@ -1,5 +1,7 @@
 # Next.js migration implementation plan
 
+**Completed migration plan, retained as history.** The app now uses Next.js App Router, React/TypeScript and a static `out/` export. Migration results are in [NEXTJS-MIGRATION-REPORT.md](NEXTJS-MIGRATION-REPORT.md); use [ARCHITECTURE.md](ARCHITECTURE.md) for current ownership and [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md) for the subsequently added fourth workspace. Unchecked proposal items and suggested work sequencing below are historical, not current pending work or authorization.
+
 Prepared: 17 October 2026.
 
 Status: implemented locally on 18 October 2026; final verification and known limitations are recorded in [NEXTJS-MIGRATION-REPORT.md](NEXTJS-MIGRATION-REPORT.md). Deployment remains separately authorized. The plan below records the agreed migration scope and acceptance criteria.

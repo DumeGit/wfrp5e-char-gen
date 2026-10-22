@@ -41,7 +41,7 @@ Solkan suitability (p. 53), his no-Sin/no-Corruption rule (p. 55), and Handrich'
 
 ## Deferred scope
 
-Enterprises, including optional starting ownership (p. 6), financing/debt, trading and shop management are deferred together to the manager phase. So are armour looting/fit/damage/repair/critical deflection, familiar creation/progression, live casting/Cants, named NPCs and adventures. These chapters are not claimed as implemented.
+Enterprises, including optional starting ownership (p. 6), financing/debt, trading and shop management are not automated in the manager or creators; they can only be recorded manually. So are armour looting/fit/damage/repair/critical deflection, familiar creation/progression, live casting/Cants, named NPCs and adventures. These chapters are not claimed as implemented.
 
 ## Extraction and verification
 
@@ -51,9 +51,9 @@ Tests cover every supplement combination, unchanged armour/tables, three Careers
 
 ## Reviewed reference imports — 7 October 2026
 
-Current scope (8 October): standalone NPC/creature profiles and all templates are retained for possible future use but excluded from shared search, its reader and chaining. The chapter inventory below records reviewed source material; other game rules/options remain searchable, with standalone non-mechanical introductions, history/flavour and general storytelling advice removed by the later Rules audit. Qualitative requirements and worked mechanical examples remain. The GM workshop always offers the reviewed shared prayer/Hedgecraft options described below.
+Current publication scope (22 October): the chapter inventory below retains the reviewed extraction history. All standalone category Rules and NPC/creature profiles/templates are excluded from public reference/search assets. Retained tables, Endeavours and other categories are listed in [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md). This boundary does not remove reviewed workshop foundations or change creator rules.
 
-Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. The non-NPC rules/options from these imports are readable in both creators regardless of enabled creation books; standalone NPC/creature profiles and templates are excluded from search. Newly imported Fourth Edition rules preserve their source mechanics with an edition warning; they do not automatically receive Legacy or enter creator catalogues. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
+Enterprises and their consolidated 33-outcome Events table, the alternative armour system, familiar generation/bonding/profiles, alternate Channelling, Cants and cult obligations. Alternative armour remains excluded from creator calculations, and familiar/Enterprise creation remains deferred. This is a reviewed source inventory, not a list of everything published. The retained public subset is readable in all four workspaces independently of enabled creation books. Standalone category Rules, NPC/creature profiles and templates are excluded from shared search and chaining; actual tables, Endeavours and other retained categories follow the generated coverage report and explicit exclusions. Published Fourth Edition references retain their source mechanics and edition warning; reference inclusion grants no creator mechanics or Legacy tag. Existing approved adaptations remain unchanged. Full PDFs and staged extraction are not published. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) for generated source ranges/counts and [BOOK-SEARCH.md](BOOK-SEARCH.md) for the shared reader and maintenance rules.
 
 ## Search categorisation — 8 October 2026
 

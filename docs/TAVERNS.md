@@ -39,15 +39,7 @@ No new player Career, Species, Talent, spell or creation rule is added.
 
 ## Shared rules search
 
-**49 reviewed printed references** cover drink/food prices and serving rules,
-board, poor-quality food/board illness procedures, booth privacy, twelve abstract
-game procedures plus invitations/stakes, four concrete hazards, and seven actual
-tables (Tier; Brass/Silver/Gold Vital Statistics; Brass/Silver/Gold Capacity).
-Tables retain their row numbers and column labels; the Vital Statistics tables
-also include the printed drink/board abbreviations. These are reference-only
-procedures; Fourth Edition Test Difficulty wording is preserved with the shared
-edition warning, without claiming an implemented adaptation. Old disease page
-cross-references are explicitly identified as Fourth Edition references.
+The original **49-reference source inventory** covers serving rules, board/illness, privacy, abstract games/hazards and genuine tables. The current public subset contains **28 eligible printed references** plus eight shared equipment entries; all standalone Rules remain private. Tables retain row numbers, column labels and printed abbreviations. Published summaries preserve source values and Fourth Edition warnings; original extraction wording is audit input, not the editable public wording source. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) and [DESCRIPTIONS.md](DESCRIPTIONS.md).
 
 Setting-only introductions, tavern names/descriptions, entertainment flavour,
 customer encounter lists with partial NPC statistics, named venues/patrons and

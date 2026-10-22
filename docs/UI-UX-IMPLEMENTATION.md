@@ -1,5 +1,7 @@
 # Shared UI/UX implementation — 10 October 2026
 
+**Historical implementation log (10–19 October 2026).** Counts, tools and screenshots below describe their dated checkpoints, before the latest manager redesign. Current contracts are [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md), [CREATOR-UX.md](CREATOR-UX.md) and [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md); removed controllers and old release failures mentioned below are not current implementation guidance.
+
 Current maintenance note (Next migration): the dated results below describe their original implementation. React components and mode stores now own the shell, native fields/disclosures, issue presentation and busy states; `interface-kit.mjs` and the mobile-shell controller have been removed. Use `src/components/`, `src/features/`, `src/styles/interface.css` and `src/styles/mobile-shell.css` for current changes.
 
 Skills feedback correction, 19 October 2026: the Species five-choice and Career eight-Advance validation messages now appear below their complete selection sections, rather than inside the first Skill. The React issue connector uses explicit issue-code group destinations; individual choice errors retain their existing local placement. The allocation browser regression checks both messages outside all Skill rows at 320/390/430/1024/1440px and retains the existing field association, overflow and XP-control checks.

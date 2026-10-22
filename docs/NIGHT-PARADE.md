@@ -8,7 +8,7 @@ Enable **The Night Parade** in the Bestiary Workshop's profile/template books: o
 
 Shared Skill options add Ride (Rotting Mount), Ride (Skeletal Steed) and Ride (Corpse Cart). PCs select these through ordinary permitted Ride choices; there are no extra free Species/Career Advances. GM undead riding buttons explicitly add the printed +20 bonus, preserving a higher existing total. Necromancy unlocks the additional Corpse Cart riding choice. This book adds no PC Species or Careers.
 
-Four mechanical references are searchable across the creators: Applying Undead Advancement Templates, Undead Mounts, Vigor Mortis and Balefire Brazier. Stat blocks/templates remain outside shared search, as previously requested. Adventure prose, warband disposition and named Old Jasper, Mheava, The Herald and Charnel Chorus are excluded.
+The four originally imported standalone Rules (Applying Undead Advancement Templates, Undead Mounts, Vigor Mortis and Balefire Brazier) are now private source records, with no public shared-search results from this book. The workshop still exposes its actual selected abilities and reviewed templates. Stat blocks/templates stay outside shared search. Adventure prose, warband disposition and named Old Jasper, Mheava, The Herald and Charnel Chorus are excluded. See [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md).
 
 ## Explicit template operations
 
@@ -33,4 +33,4 @@ Liche spell lists remain separate: Corpsemaster chooses 3 Petty, 2 generic Arcan
 
 Vigor Mortis and optional Balefire Brazier are reference abilities on the actual sheet. Nearby Undead can ignore Unstable; the Cart itself retains it. Selecting the brazier replaces the normal +20 Necromancy casting benefit with the printed −20 Lore (Magic) effect. Both retain the printed range **within 8**, without an invented unit. Their numeric modifiers are retained as descriptions, with no live aura or casting automation. Unselected optional Traits never print.
 
-Legacy/removal/discrepancy notes stay in the app before export. Compact PDFs contain the actual selected stat block and Trait descriptions. Dense creatures use the existing measured overflow handling rather than truncation; six cards remain the default and four/full sheets remain available.
+Legacy/removal/discrepancy notes stay in the app before export. Compact PDFs contain the actual selected stat block and Trait descriptions. Dense creatures use the existing measured overflow handling rather than truncation; flexible packing is the default, with fixed six/four-card layouts and full sheets available.

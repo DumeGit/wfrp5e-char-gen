@@ -35,7 +35,7 @@ Discrepancy/adaptation notes remain in the app, outside compact creature exports
 
 ## Search and exclusions
 
-Twenty-four bounded mechanical references cover Enchanted Masks, Fulcrum of Azyr, Morning Fury, Chokan’s Fate rewards, Spite Dooming/Naiad swaps/dance resistance, prospecting, strike/equipment/events tables, Night Goblin Net/traps, cargo bribery, settlement ratings and smuggling procedures/tables. Tables are reconstructed as complete labelled rows from PDF geometry. Reference text preserves original Fourth Edition wording; editorial notes do not participate in search matching.
+The original 24-reference source inventory covers masks, rewards, Spite procedures, prospecting, mines, traps, settlement ratings and smuggling. The current public subset contains 13 eligible printed references; standalone Rules remain private. Genuine tables preserve complete rows reconstructed from PDF geometry, with reviewed summaries, source edition warnings and separate editorial notes. [SEARCH-COVERAGE.md](SEARCH-COVERAGE.md) records current counts; source inventory is not a publication list.
 
 The prospecting table prints inconsistent **Challenging (−20)** Gossip; Size of Strike includes zero in both positive/negative bands. Preserve these with separate warnings; no automated roll or correction. Mine equipment is enterprise reference material, not carried shop stock. Night Goblin Net prints a non-core Group without price/weight; reference-only, leaving core Net unchanged. Mask effects and Chokan rewards are not automatically applied.
 

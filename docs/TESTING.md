@@ -1,6 +1,8 @@
 # Local testing
 
-Character manager: `npm run test:ui:manager` covers creator imports, reload, resources/Conditions/journal, purchases, backups, malformed batches, tab conflicts, downloads and 320/768/1440/2560px geometry. `node --import tsx --test tests/manager.test.mjs` protects imported totals, shared quotes/tracker grouping, failed-command atomicity, Career/Trapping rules, unknown values and PDF contents. Manager hydration runs in `test:ui:dev`; the PWA suite also creates/reloads a manager character offline. Tests use `wfrp-character-manager-v1-verification`, never personal libraries. See [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md).
+Character manager: `npm run test:ui:manager` covers the library, creator imports, reload, Play/Advance/Journal, grouped menu dialogs and shared history, adjacent Fate/Fortune steppers, compact Combat, Conditions/critical wounds/mutations, purchases, backups, malformed batches, tab conflicts, downloads and responsive geometry. Skills are noninteractive; Basic/Advanced groups use balanced top-to-bottom columns (two desktop, three from 1800px, one phone). The odd-group regression checks alphabetical order, at most one row difference, headings, uniqueness and overflow at 1440/2560/390px. `node --import tsx --test tests/manager.test.mjs` protects imports, shared quotes/tracker grouping, atomic commands, affliction validation, Career/Trapping rules, unknown values and PDF contents. `npm run test:stores` includes serialized saves, revision conflicts and recovery. Manager hydration runs in `test:ui:dev`; PWA cases also create/reload a manager character offline. Tests use `wfrp-character-manager-v1-verification`, never personal libraries. See [CHARACTER-MANAGER.md](CHARACTER-MANAGER.md).
+
+The results below are dated evidence, not a claim that the full release chain was rerun for the documentation audit on 22 October. Feature suites grow over time; use actual runner output for current counts.
 
 ## QA consistency follow-up — 19 October 2026
 
@@ -16,7 +18,7 @@ Skills feedback verification, 19 October 2026: the focused interface suite passe
 
 Follow-up, 19 October 2026: the stale Sea Dragon Cloak export assertion now checks the equipment name and exact per-location Soak totals, while retaining the additional-armour/Partial profile checks. The complete Node suite passes 534/534. The original migration results below remain a dated record.
 
-Use `npm run test:ui:dev` for development-only React diagnostics. It starts an isolated Next development server on port 8204 with its own ignored `.next-rendering-check/` cache and synthetic verification drafts. The focused desktop/phone cases check creator navigation, all three initial palettes with JavaScript disabled, rolled Characteristics without a Career, Career comparisons, XP history, the ten-row Review breakdown and checkbox toggles, and fail on React console errors. This does not stop or reuse your normal preview. To explicitly test an already running local server, set `WFRP_DEV_URL` to its HTTP loopback URL. Production and PWA acceptance still use the normal static export suites.
+Use `npm run test:ui:dev` for development-only React diagnostics. It starts an isolated Next development server on port 8204 with its own ignored `.next-rendering-check/` cache and synthetic verification drafts. The focused desktop/phone cases include manager rendering and check creator navigation, all three initial palettes with JavaScript disabled, rolled Characteristics without a Career, Career comparisons, XP history, the ten-row Review breakdown and checkbox toggles, and fail on React console errors. This does not stop or reuse your normal preview. To explicitly test an already running local server, set `WFRP_DEV_URL` to its HTTP loopback URL. Production and PWA acceptance still use the normal static export suites.
 
 Player store regressions also inspect the actual React element ancestry for every creation step across all four Characteristic methods, with and without a Career, plus the Career comparison dialog and purchased XP history. These assertions run before HTML parsing can repair invalid table markup. The reported `tr` under `main` was reproduced by this regression before repairing the rolled Characteristics table; the same misplaced-row pattern was also repaired in Career comparisons and XP history.
 
@@ -45,7 +47,7 @@ Browser checks run locally with Playwright. There is no GitHub Actions workflow,
 ## First setup
 
 ```powershell
-npm install
+npm ci
 npm run test:ui:install
 npm run test:ui:smoke
 ```
@@ -54,15 +56,15 @@ The install command downloads Chromium once for the installed Playwright version
 
 ## Next.js integration checks
 
-Use `npm run check:types` for the TypeScript boundary and `npm run test:stores` for all three real mode-store contracts. `npm run test:unit` runs the existing rules/content/PDF suite with the TS loader needed by React presentation adapters. Those adapters serialize production components, not a retained legacy renderer. `migration-platform.spec.mjs` covers compatibility URLs, route/payload separation, real worker ranking, offline navigation, safe updates and the install singleton. `marijan-session.spec.mjs` covers repeated cross-mode history/filter/disclosure restoration and late-task cancellation.
+Use `npm run check:types` for the TypeScript boundary and `npm run test:stores` for the three creator stores and the manager store, including independent histories and persistence recovery. `npm run test:unit` runs the existing rules/content/PDF suite with the TS loader needed by React presentation adapters. Those adapters serialize production components, not a retained legacy renderer. `migration-platform.spec.mjs` covers compatibility URLs, route/payload separation, real worker ranking, offline navigation, safe updates and the install singleton. `marijan-session.spec.mjs` covers repeated cross-mode history/filter/disclosure restoration and late-task cancellation.
 
-The baseline and known unrelated failure are recorded in [NEXTJS-MIGRATION-REPORT.md](NEXTJS-MIGRATION-REPORT.md). No assertion is skipped to conceal that failure. Existing intentional browser skips remain explicit. Development and production worker checks are separate; final routing/offline acceptance uses `out/`.
+The dated baseline and its original Sea Dragon Cloak failure (fixed on 19 October) are recorded in [NEXTJS-MIGRATION-REPORT.md](NEXTJS-MIGRATION-REPORT.md). The corrected assertion checks equipment identity and exact per-location Soak totals; no assertion is skipped to conceal a failure. Existing intentional browser skips remain explicit. Development and production worker checks are separate; final routing/offline acceptance uses `out/`.
 
 ## Choose checks by impact
 
 | Change | Normal local checks |
 | --- | --- |
-| Documentation only | Review affected documents, links and stale claims; no browser run |
+| Documentation only | Review affected documents against source, check local links and stale claims; `npm run check:generated`, `check:books` and `check:descriptions` when auditing content inventories. Regenerate generated reports with `generate:books`; no browser run for prose-only edits. |
 | Local styling/control | `npm run check:quick` plus the relevant browser suite; inspect new visual design once |
 | Search/controller/reader | Quick checks, relevant `node --import tsx --test tests/<file>.test.mjs`, `npm run test:ui:search` |
 | PC purchases/creation | Quick checks, affected rule tests, `npm run test:ui:pc` |
@@ -80,7 +82,7 @@ A routine styling or scoped control push uses the same proportional checks as it
 
 ### Known broad-suite failures — 15 October 2026
 
-The allocation-layout release run reported 496/498 passing Node tests and 193 passing browser cases, nine failures and four intentional skips. The targeted interface/layout checks passed. Its Lustria/Salzenmund complete-character fixture failures are now fixed (October 16, 18 affected cases passing). Other outstanding wider checks from that release include GM Corsairs/Leech Wyrm navigation/reload scenarios, the empty-Career history locator and Salzenmund's former Origins language caption; these have not been reverified by the fixture-only fix. The Tavern search expectation was updated for the deliberately hidden Rules category.
+The allocation-layout release run reported 496/498 passing Node tests and 193 passing browser cases, nine failures and four intentional skips. The targeted interface/layout checks passed. Its Lustria/Salzenmund complete-character fixture failures are now fixed (October 16, 18 affected cases passing). Other failures in that dated run included GM Corsairs/Leech Wyrm navigation/reload scenarios, the empty-Career history locator and Salzenmund’s former Origins language caption. That fixture-only follow-up did not verify them; the later 19 October complete Chromium run above passed 274 cases with six skips. Do not treat this old list as the current failure register. The Tavern search expectation was updated for the deliberately hidden Rules category.
 
 ## Browser commands
 
@@ -94,6 +96,7 @@ Player review layout: run `node --import tsx --test tests/review-sheet.test.mjs`
 | `search` | Stable typing/caret, categories/book/combined filters and memory, Rune labels, Cants/prayers, loading retry, inactive-book availability, keyboard controls, automatic batches, return position and chained references without changing the draft |
 | `notices` | All three modes on desktop/mobile and a production-shaped HTTPS origin: independent emblem, unofficial notices and working legal/privacy/contact links, no analytics requests, Rules absent from the search category/results with other references still available |
 | `pc` | Career rolls, recorded dice, advancement/tracker grouping and undo, repeatable Talents, equipment purchase/removal |
+| `manager` | Library/imports, Play/Advance/Journal, grouped dialogs/history, adjacent bounded Fate/Fortune controls, manual Conditions/afflictions, purchases, backups/conflicts, noninteractive Skills and balanced top-to-bottom columns at desktop/wide/phone widths |
 | `marijan` | Unrestricted one-page editing, additions, custom entries, overrides, Undo, independent saves/reload, player copying and editable PDF downloads |
 | `gm` | Printed profile application, expiring notice, stable edits, template preview/apply/remove/undo, independent GM books, mount training, Tribes Troll composition/Hag spells and Shaman Lore controls, book-removal confirmation/undo, early blocking issue and repair |
 | `storage` | Actual JSON downloads/imports, reload persistence, rejection of the wrong save type |

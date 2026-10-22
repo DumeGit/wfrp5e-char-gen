@@ -1,5 +1,7 @@
 # Mode startup and navigation — 18 October 2026
 
+**Dated benchmark, not a current four-workspace performance certification.** The three creator measurements below belong to the stated builds. The manager was added afterwards and is not covered by those timings or asset counts. Use [ARCHITECTURE.md](ARCHITECTURE.md) for current architecture and [TESTING.md](TESTING.md) for rerunning the diagnostic.
+
 All three creators now run on Next.js App Router routes with client navigation. Each creator keeps its own draft, calculations and session history. Immutable book/search wire data is cached by the shared content service; catalogues are assembled independently for each mode. Links disable automatic route prefetching, so opening Player does not initialize every creator.
 
 The earlier exact-alias index remains in the unchanged rule engine. Selected-content and current-save validation still run; full source inventories, source descriptions and dependency-context validation belong in build tooling. Public assets resolve from application-root URLs rather than depending on a bundled module's location.

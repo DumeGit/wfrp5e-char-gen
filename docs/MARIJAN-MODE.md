@@ -6,7 +6,7 @@ Through 1000 CSS pixels, Marijan uses the shared compact banner menu, native sec
 
 Shared descriptions resolve by canonical ID rather than saved wording copies. Personal descriptions override only that character; clearing one restores the shared definition. Custom entries stay independent; generated quantity notes remain separate. Results and PDFs use the same resolved entries. See [DESCRIPTIONS.md](DESCRIPTIONS.md).
 
-A separate, unrestricted one-page character editor at `/marijan/`, implemented by `src/app/marijan/page.tsx`. The former `marijan.html` address remains a compatibility alias with its query parameters preserved. The user authorised this mode on 9 October 2026, using Hammergen as an interaction reference, not a rules source or copied interface. The guided player creator and GM workshop remain independent.
+A separate, unrestricted one-page character editor at `/marijan/`, implemented by `src/app/marijan/page.tsx`. The former `marijan.html` address remains a compatibility alias with its query parameters preserved. The user authorised this mode on 9 October 2026, using Hammergen as an interaction reference, not a rules source or copied interface. The guided player creator, GM workshop and manager remain independent. The manager can import a copy of a Marijan save into its ordinary play/library format; this does not change the original draft.
 
 ## React state and browser lifecycle
 
@@ -66,7 +66,7 @@ Initial verification (9 October 2026): the release check passed 404 Node tests a
 
 Compact layout/generation verification: 15 targeted Node tests and 14 desktop/mobile Marijan Playwright cases passed, with quick checks and offline asset validation. Desktop/phone layouts and generated editable sheet/record pages were visually inspected. Unchanged player/GM release suites were not repeated.
 
-Compact-entry search keeps the query, Book and custom-entry action on one phone row. Leaving a search for an editor control hides results only once the click has reached its target, preventing layout movement between pointerdown and click. No rule values or save formats change.
+Compact-entry search places its query on a full phone row, with Book and Custom beneath. Leaving a search for an editor control hides results only once the click has reached its target, preventing layout movement between pointerdown and click. No rule values or save formats change.
 
 
 ## Selected visual theme

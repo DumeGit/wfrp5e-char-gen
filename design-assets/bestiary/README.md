@@ -2,9 +2,9 @@
 
 Original decorative artwork generated on 7 October 2026 with the built-in **imagegen** tool. The user's supplied skeleton-army image guided the undead subject, cobalt moonlight, aged bones, gothic fortress and old-school painted fantasy mood. It was used as an art-direction reference rather than a source of game rules.
 
-`banner-original.png` preserves the generated 2172 × 724 image unchanged, outside the published app. The tool's original output remains in the Codex generated-images directory. `dist/assets/black-banner/bestiary-banner.webp` is a full-resolution WebP encoding (quality 85, method 6) for the website: 375,188 bytes rather than the original 3,085,892-byte PNG. No resizing, compositing or retouching was applied. The browser handles cropping and contrast overlays.
+`banner-original.png` preserves the generated 2172 × 724 image unchanged, outside the published app. The tool's original output remains in the Codex generated-images directory. `public/assets/black-banner/bestiary-banner.webp` is a full-resolution WebP encoding (quality 85, method 6) for the website: 375,188 bytes rather than the original 3,085,892-byte PNG. No resizing, compositing or retouching was applied. The browser handles cropping and contrast overlays.
 
-Only `dist/gm/style.css` selects this image. The player creator retains its existing artwork. The banner is decorative and hidden from the accessibility tree; headings, controls and search remain real HTML. The generated offline worker includes the published WebP. There is no generation API or CLI dependency at runtime.
+Only `src/styles/gm/style.css` selects this image. The player creator retains its existing artwork. The banner is decorative and hidden from the accessibility tree; headings, controls and search remain real HTML. The generated offline worker includes the published WebP. There is no generation API or CLI dependency at runtime.
 
 Final prompt, verbatim:
 

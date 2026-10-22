@@ -1,5 +1,7 @@
 # Next.js migration report
 
+**Dated migration snapshot (18–19 October 2026).** Measurements, asset/test counts and the recorded original failure describe that migration build, before the manager. The Sea Dragon Cloak assertion was corrected on 19 October and the then-complete Node suite passed 534/534; see [TESTING.md](TESTING.md). Current routes/storage are documented in [ARCHITECTURE.md](ARCHITECTURE.md), not inferred from these historical totals.
+
 Implemented locally on 18 October 2026 on `codex/nextjs-migration`. This report accompanies the migration commit; use `git log --oneline -- docs/NEXTJS-MIGRATION-REPORT.md` to identify it. No push, deployment or remote hosting setting has been changed.
 
 ## Baseline and scope
