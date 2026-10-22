@@ -23,6 +23,7 @@ import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
 import { calculateGMCants, validateGMCants } from "./cants.mjs";
 import { knownRunes } from "../dwarf-guide.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
+import { validateGMLoot, resolveGMLoot } from "./loot.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
 import { trollModifiers, warbandLoreChoices, tribesIssues } from "./tribes.mjs";
@@ -129,6 +130,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     skills: [],
     talents: [],
     gear: [],
+    loot: [],
     spells: [],
     spellLores: {},
     cants: { enabled: false, choices: {} },
@@ -147,10 +149,14 @@ export function freshGM(data, profile = "", books = ["core"]) {
 export function validateGMDraft(data, R, s) {
   const empty = freshGM(data),
     plain = (v) => v && typeof v === "object" && !Array.isArray(v);
-  // Additive schema-2 presentation preference: old valid saves default to On.
+  // Additive schema-2 fields: old saves show descriptions and have no extra loot.
   // Clone only legacy input; never repair malformed or explicitly supplied data.
-  if (plain(s) && !own(s, "hiddenDescriptions"))
-    s = { ...s, hiddenDescriptions: [] };
+  if (plain(s)) {
+    const defaults = {};
+    for (const key of ["hiddenDescriptions", "loot"])
+      if (!own(s, key)) defaults[key] = [];
+    if (Object.keys(defaults).length) s = { ...s, ...defaults };
+  }
   if (
     !plain(s) ||
     s.type !== empty.type ||
@@ -307,6 +313,7 @@ export function validateGMDraft(data, R, s) {
   for (const id of s.spells)
     if (!gmSpellCatalogue(R).some((p) => p.contentId === id))
       throw Error("Unknown spell.");
+  validateGMLoot(R, s.loot);
   for (const id of s.mutations)
     if (!data.mutations.some((p) => p.id === id))
       throw Error("Unknown mutation.");
@@ -445,9 +452,13 @@ export function validateGMDraft(data, R, s) {
   for (const key of s.optionalArmour)
     if (!p?.armour.some((a) => a.key === key && a.optional))
       throw Error("Unknown optional armour.");
-  const rowKeys = [...s.traits, ...s.skills, ...s.talents, ...s.gear].map(
-    (x) => x.key,
-  );
+  const rowKeys = [
+    ...s.traits,
+    ...s.skills,
+    ...s.talents,
+    ...s.gear,
+    ...s.loot,
+  ].map((x) => x.key);
   if (
     rowKeys.some((k) => !/^gm-[a-z0-9-]+$/.test(k)) ||
     new Set(rowKeys).size !== rowKeys.length
@@ -733,6 +744,7 @@ export function calculateGM(data, R, s) {
       cants: [],
       cantGrants: [],
       gear: [],
+      loot: [],
       mutations: [],
       size: "",
       tb: null,
@@ -1735,6 +1747,7 @@ export function calculateGM(data, R, s) {
     shield: Math.max(0, ...armour.filter((a) => a.shield).map((a) => a.ap)),
     spells,
     gear,
+    loot: resolveGMLoot(R, s.loot),
     mutations,
     issues,
     warnings,

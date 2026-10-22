@@ -60,6 +60,42 @@ async function human(verify = true) {
   return store;
 }
 
+test("loot persists independently of equipment; Undo keeps dice, and stale or repeated previews cannot be added", async () => {
+  const store = await human(false);
+  const before = store.getSnapshot();
+  const preview = store.rollLoot({ location: "carried", count: 3 });
+  assert.equal(store.getSnapshot().draft.loot.length, 0);
+  assert.ok(store.getSnapshot().draft.rolls.length);
+  store.addLoot(preview);
+  assert.ok(store.getSnapshot().draft.loot.length);
+  assert.throws(() => store.addLoot(preview), /changed/);
+  const added = structuredClone(store.getSnapshot().draft.loot);
+  const dice = structuredClone(store.getSnapshot().draft.rolls);
+  assert.deepEqual(store.getSnapshot().result.attacks, before.result.attacks);
+  assert.deepEqual(store.getSnapshot().result.ap, before.result.ap);
+  assert.deepEqual(store.getSnapshot().draft.gear, []);
+  store.travel("undo");
+  assert.deepEqual(store.getSnapshot().draft.loot, []);
+  assert.deepEqual(store.getSnapshot().draft.rolls, dice);
+  store.travel("redo");
+  assert.deepEqual(store.getSnapshot().draft.loot, added);
+  const restored = new BestiaryStore(false);
+  await restored.initialize();
+  assert.deepEqual(restored.getSnapshot().draft.loot, added);
+  assert.deepEqual(restored.getSnapshot().draft.rolls, dice);
+  const stale = store.rollLoot({ location: "lair", count: 1 });
+  store.edit((d) => {
+    d.name = "Changed creature";
+  });
+  assert.throws(() => store.addLoot(stale), /changed/);
+  const legacy = JSON.parse(storage.getItem(store.storageKey)!);
+  delete legacy.loot;
+  storage.setItem(store.storageKey, JSON.stringify(legacy));
+  const old = new BestiaryStore(false);
+  await old.initialize();
+  assert.deepEqual(old.getSnapshot().draft.loot, []);
+});
+
 test("description preferences persist, undo/redo and restore old saves without changing calculated abilities", async () => {
   const store = await human(false);
   store.edit((d) => {

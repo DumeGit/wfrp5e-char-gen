@@ -25,6 +25,8 @@ import {
 import { sacredMarks, LORE_WINDS } from "../../engine/gm/lustria.mjs";
 import { trollModifiers } from "../../engine/gm/tribes.mjs";
 import { appearanceSpecies } from "../../engine/gm/appearance.mjs";
+import { lootLines } from "../../engine/gm/loot.mjs";
+import { LootSection } from "./Loot";
 import { gmCantBook } from "../../engine/gm/cants.mjs";
 import { abilityPresentation } from "../../engine/gm/ability-presentation.mjs";
 import { sourceLabel } from "../../engine/sources.mjs";
@@ -249,10 +251,12 @@ export function StatBlock({
             </p>
           )),
         )}
-      {(r.gear.length > 0 || (r.trappings ?? r.profile.sections.Trappings)) &&
+      {(r.gear.length > 0 ||
+        r.loot?.length > 0 ||
+        (r.trappings ?? r.profile.sections.Trappings)) &&
         section(
           "gear",
-          "Trappings",
+          "Gear",
           <>
             <p>{r.trappings ?? r.profile.sections.Trappings}</p>
             <div className="gm-mini-list">
@@ -261,6 +265,9 @@ export function StatBlock({
                   <span>{x.entry.name}</span>
                   <b>×{x.quantity}</b>
                 </div>
+              ))}
+              {lootLines(r.loot).map((line: string, index: number) => (
+                <p key={`loot-${index}`}>{line}</p>
               ))}
             </div>
           </>,
@@ -987,8 +994,14 @@ function Characteristics() {
               <li key={i}>
                 <strong>{x.label}</strong> {x.faces.join(" + ")} = {x.total}
                 <small>
-                  {x.at} · {x.source?.book || "Core"} p.{" "}
-                  {x.source?.page || x.page}
+                  {x.at} ·{" "}
+                  {x.source?.kind === "app" ? (
+                    x.source.name
+                  ) : (
+                    <>
+                      {x.source?.book || "Core"} p. {x.source?.page || x.page}
+                    </>
+                  )}
                 </small>
               </li>
             ))}
@@ -1773,6 +1786,7 @@ export function EquipmentMagic() {
           <Remove entryKey={g.key} />
         </div>
       ))}
+      <LootSection />
       <section id="gm-magic">
         <SectionHeading
           action={eligible.length ? () => picker("magic") : undefined}

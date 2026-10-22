@@ -420,6 +420,63 @@
 .gm-ability-entry {
   flex-wrap: wrap;
 }
+.gm-loot-entry {
+  flex-wrap: wrap;
+}
+.gm-loot-entry > div:first-child {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+.gm-loot-entry .gm-small {
+  display: block;
+}
+.gm-loot-entry > .gm-loot-controls {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-left: auto;
+  gap: 8px;
+}
+.gm-loot-controls .gm-rank {
+  width: 80px;
+}
+.gm-loot-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 12px;
+}
+.gm-loot-options .field {
+  margin: 0;
+}
+.gm-loot-preview {
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-recessed);
+}
+.gm-loot-preview h3,
+.gm-loot-preview p {
+  margin: 0;
+}
+.gm-loot-preview ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+.gm-loot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.gm-loot-table th,
+.gm-loot-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--color-line-soft);
+  text-align: left;
+  vertical-align: top;
+}
+.gm-loot-table td:first-child {
+  white-space: nowrap;
+}
 .gm-ability-entry > .gm-ability-content {
   flex: 1 1 150px;
 }

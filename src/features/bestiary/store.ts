@@ -7,6 +7,7 @@ import {
 } from "../../engine/gm/model.mjs";
 import { syncGMCants } from "../../engine/gm/cants.mjs";
 import { createDraftHistory } from "../../engine/draft-history.mjs";
+import { rollGMLoot, addGMLoot, MAX_LOOT_DICE } from "../../engine/gm/loot.mjs";
 
 export type BestiarySnapshot = {
   ready: boolean;
@@ -158,6 +159,20 @@ export class BestiaryStore {
     });
   };
   breakGroup = () => this.history?.breakGroup();
+  rollLoot = (options: { location: string; count: number }) => {
+    const { draft, rules } = this.snapshot;
+    if (!draft.profile) throw Error("Choose a starting profile first.");
+    if (draft.rolls.length + MAX_LOOT_DICE > 1000)
+      throw Error("This draft has reached the recorded-dice limit.");
+    const preview = rollGMLoot(rules, options);
+    this.edit((d) => d.rolls.push(...preview.rolls));
+    return { ...preview, draft: this.snapshot.draft };
+  };
+  addLoot = (preview: any) => {
+    if (!preview || preview.draft !== this.snapshot.draft || preview.error)
+      throw Error("The creature changed. Roll a fresh loot preview.");
+    this.edit((d) => addGMLoot(this.snapshot.rules, d, preview.entries));
+  };
   travel = (direction: "undo" | "redo") => {
     const next = this.history.travel(direction);
     if (!next) return;

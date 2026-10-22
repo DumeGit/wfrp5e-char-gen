@@ -291,7 +291,7 @@ function Workshop({ verify }: { verify: boolean }) {
   const remove = (key: string) =>
     edit((d) => {
       let removed = false;
-      for (const list of ["traits", "skills", "talents", "gear"]) {
+      for (const list of ["traits", "skills", "talents", "gear", "loot"]) {
         const index = d[list].findIndex((t: any) => t.key === key);
         if (index >= 0) {
           d[list].splice(index, 1);
@@ -468,6 +468,7 @@ function Workshop({ verify }: { verify: boolean }) {
     picker,
     addEntry,
     rollAppearance,
+    notify: setMessage,
     save,
     exportPDF,
     busy,
