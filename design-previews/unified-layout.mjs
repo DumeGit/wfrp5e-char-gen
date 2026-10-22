@@ -111,7 +111,7 @@ const modes = {
   },
 };
 const studies = {
-  a: "A 296px menu, clear action groups and warm parchment. My recommended balance of Old World character and modern usability.",
+  a: "A well-used campaign ledger: aged parchment, stitched leather and tarnished brass. The clean 296px menu and readable controls stay intact.",
   b: "A 312px parchment menu with larger serif navigation and a framed working page. A gentler, more book-like direction.",
   c: "A 280px slate menu, a shorter masthead and a tighter toolbar. The most compact, practical direction for frequent use.",
 };
@@ -124,6 +124,7 @@ const state = {
   xpTab: "Characteristics",
   wounds: 11,
   fortune: 2,
+  finish: "weathered",
 };
 const params = new URLSearchParams(location.search);
 if (Object.hasOwn(studies, params.get("study")))
@@ -133,6 +134,7 @@ if (Object.hasOwn(modes, params.get("mode"))) {
   state.page = modes[state.mode].page;
 }
 if (params.get("size") === "phone") state.size = "phone";
+if (params.get("finish") === "clean") state.finish = "clean";
 const example = document.getElementById("example");
 const main = document.getElementById("example-main");
 const drawer = document.getElementById("mobile-menu");
@@ -423,11 +425,16 @@ function render() {
   const address = new URL(location.href);
   address.searchParams.set("study", state.study);
   address.searchParams.set("mode", state.mode);
+  if (state.finish === "clean") address.searchParams.set("finish", "clean");
+  else address.searchParams.delete("finish");
   if (state.size === "phone") address.searchParams.set("size", "phone");
   else address.searchParams.delete("size");
   window.history.replaceState(null, "", address);
   example.dataset.study = state.study;
   example.dataset.mode = state.mode;
+  example.dataset.finish = state.finish;
+  document.querySelector(".finish-control").hidden = state.study !== "a";
+  document.getElementById("preview-finish").value = state.finish;
   document.getElementById("preview-frame").dataset.size = state.size;
   document
     .querySelectorAll("button[data-size]")
@@ -641,6 +648,12 @@ for (const modal of [drawer, dialog])
 document
   .getElementById("preview-mode")
   .addEventListener("change", (event) => setMode(event.target.value));
+document
+  .getElementById("preview-finish")
+  .addEventListener("change", (event) => {
+    state.finish = event.target.value;
+    render();
+  });
 document.addEventListener("click", (event) => {
   const study = event.target.closest("button[data-study]");
   if (study) {

@@ -33,7 +33,9 @@ http
         return res.end();
       }
       if (
-        !/^\/design-previews\/unified-layout\.(html|css|mjs)$/.test(pathname) &&
+        !/^\/design-previews\/unified-(?:layout\.(?:html|css|mjs)|rustic\.css|(?:parchment|leather|ornament)\.svg)$/.test(
+          pathname,
+        ) &&
         !pathname.startsWith("/public/assets/")
       ) {
         res.writeHead(404);

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <filter id="mottle" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".009 .013" numOctaves="4" seed="37" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 .39 0 0 0 0 .25 0 0 0 0 .10 0 0 0 .30 0"/>
+    </filter>
+    <filter id="fibre" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".52 .83" numOctaves="3" seed="19" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".17"/></feComponentTransfer>
+    </filter>
+    <radialGradient id="cloud"><stop stop-color="#b78c4c" stop-opacity=".12"/><stop offset="1" stop-color="#b78c4c" stop-opacity="0"/></radialGradient>
+  </defs>
+  <path fill="#f0e3c4" d="M0 0h1024v1024H0z"/>
+  <ellipse cx="172" cy="318" rx="293" ry="254" fill="url(#cloud)"/>
+  <ellipse cx="824" cy="762" rx="360" ry="290" fill="url(#cloud)"/>
+  <path filter="url(#mottle)" d="M0 0h1024v1024H0z"/>
+  <path opacity=".43" filter="url(#fibre)" d="M0 0h1024v1024H0z"/>
+  <g fill="none" stroke="#795728" stroke-opacity=".08" stroke-linecap="round">
+    <path d="m35 97 8 1m-2 2 4 1m291 166 2 8m2-6 1 7m412-93 9-2m-6 4 5-1M782 540l1 8m-3-5 2 7M125 806l8-1m-5 3 5-1m284 106 6-2m340-86 2 7m-5-6 2 8M940 393l6 1M568 72l1 6m-3-3 2 7M267 640l5 1m-4 2 6 1"/>
+  </g>
+</svg>

@@ -14,6 +14,7 @@
       type="image/svg+xml"
     />
     <link rel="stylesheet" href="unified-layout.css" />
+    <link rel="stylesheet" href="unified-rustic.css" />
     <script type="module" src="unified-layout.mjs"></script>
   </head>
   <body>
@@ -32,7 +33,7 @@
           <span>A</span>
           <div>
             <strong>Imperial Desk</strong
-            ><small>Wider dark menu · recommended</small>
+            ><small>Worn leather · aged parchment</small>
           </div>
         </button>
         <button type="button" data-study="b" aria-pressed="false">
@@ -52,8 +53,9 @@
       </div>
       <div class="study-controls">
         <p id="study-description">
-          A 296px menu, clear action groups and warm parchment. My recommended
-          balance of Old World character and modern usability.
+          A well-used campaign ledger: aged parchment, stitched leather and
+          tarnished brass. The clean 296px menu and readable controls stay
+          intact.
         </p>
         <div class="preview-options">
           <label for="preview-mode">Workspace</label>
@@ -63,6 +65,13 @@
             <option value="marijan">Marijan Mode</option>
             <option value="manager">Character manager</option>
           </select>
+          <div class="finish-control">
+            <label for="preview-finish">Finish</label>
+            <select id="preview-finish">
+              <option value="weathered">Weathered</option>
+              <option value="clean">Original</option>
+            </select>
+          </div>
           <div role="group" aria-label="Preview size" class="size-picker">
             <button type="button" data-size="desktop" aria-pressed="true">
               Desktop</button
@@ -74,7 +83,13 @@
       </div>
     </div>
     <div id="preview-frame" class="preview-frame" data-size="desktop">
-      <div id="example" class="example" data-study="a" data-mode="gm">
+      <div
+        id="example"
+        class="example"
+        data-study="a"
+        data-mode="gm"
+        data-finish="weathered"
+      >
         <a class="skip-link" href="#example-main">Skip to editor</a>
         <header class="app-masthead">
           <a
