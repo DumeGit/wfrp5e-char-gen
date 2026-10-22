@@ -453,7 +453,9 @@ test("removing a mount book requires explicit reset and undo restores its select
   await openGMBooks(page);
   await page.locator("#gm-book-up-in-arms").check();
   await applyProfile(page, "Demigryph Mount");
-  await expect(page.locator("#gm-folio")).toContainText("Forelegs");
+  await gmStep(page, "Review & export");
+  await expect(page.locator(".gm-stat-block")).toContainText("Forelegs");
+  await gmStep(page, "Starting profile");
   await page.locator("#gm-book-up-in-arms").click();
   const confirm = page.getByRole("dialog", { name: "Remove Up in Arms?" });
   await confirm.getByRole("button", { name: "Keep book", exact: true }).click();
@@ -498,7 +500,9 @@ test("Archives II foundations and Legacy work on desktop and mobile @gm @mobile"
   await page.locator("#gm-book-archives-ii").check();
   await expect(page.locator(".gm-profile-card")).toHaveCount(51);
   await applyProfile(page, "Rhinox");
-  await expect(page.locator("#gm-folio")).toContainText("50");
+  await gmStep(page, "Review & export");
+  await expect(page.locator(".gm-stat-block")).toContainText("50");
+  await gmStep(page, "Starting profile");
   await page
     .locator(".gm-foundation")
     .getByRole("button", { name: "Read Rhinox adaptation" })

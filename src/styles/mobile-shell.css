@@ -1,10 +1,6 @@
-/* Shared compact shell through 1000px; wider rails and folios retain their layout. */
-.mobile-menu-launcher,
-.mobile-folio-heading {
+/* Shared compact shell through 1000px; wider rails retain their layout. */
+.mobile-menu-launcher {
   display: none;
-}
-.mobile-folio-content {
-  display: contents;
 }
 .book-search-launcher svg {
   width: 18px;
@@ -50,36 +46,10 @@ html:has(.mobile-creator-menu[open]) {
     display: block;
     margin: 0;
   }
-  .workspace > .sheet,
-  .mm-workspace > .sheet {
-    width: 100%;
-    position: static;
-    max-height: none;
-    overflow: visible;
-    order: 1;
-  }
   .workspace > .panel,
   .mm-workspace > .panel {
     width: 100%;
     order: 2;
-  }
-  .sheet .sheet-heading {
-    position: relative;
-  }
-  .sheet .sheet-heading h2 {
-    padding-right: 120px;
-  }
-  .sheet .summary-toggle {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .sheet .sheet-body {
-    display: none;
-  }
-  .sheet.expanded .sheet-body {
-    display: block;
   }
   .mobile-workspace-bar {
     display: flex;
@@ -94,9 +64,6 @@ html:has(.mobile-creator-menu[open]) {
     background: var(--color-leather-deep);
     color: var(--color-on-leather);
     border-top: 1px solid var(--color-gold-dark);
-  }
-  .sheet:not(.expanded):not(.mobile-folio-open) {
-    display: none;
   }
   .mm-workspace {
     display: flex;
@@ -116,9 +83,6 @@ html:has(.mobile-creator-menu[open]) {
   }
   .mobile-marijan-bar > button {
     flex: none;
-  }
-  .mm-workspace > .mm-folio {
-    margin-top: 0;
   }
   .gm-workspace .rail > .quiet {
     min-height: 44px;
@@ -281,8 +245,7 @@ html:has(.mobile-creator-menu[open]) {
     min-height: 44px;
     font-size: 16px;
   }
-  .mobile-workspace-bar .quiet,
-  .sheet .summary-toggle {
+  .mobile-workspace-bar .quiet {
     min-height: 44px;
   }
   .mobile-workspace-bar {
@@ -321,33 +284,6 @@ html:has(.mobile-creator-menu[open]) {
     padding: 7px 8px;
     font-size: 11px;
   }
-  .mobile-folio-heading {
-    display: flex;
-    gap: 12px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .mobile-folio-heading strong {
-    font: 20px/1.2 var(--font-heading);
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-  .mobile-folio-heading button {
-    min-height: 44px;
-    flex: none;
-    font-size: 12px;
-    padding: 7px 10px;
-  }
-  .mobile-fold-folio:not(.mobile-folio-open) .mobile-folio-content {
-    display: none;
-  }
-  .mobile-folio-open .mobile-folio-content {
-    display: block;
-    margin-top: 16px;
-  }
-  .gm-workspace > .gm-folio {
-    order: 1;
-  }
   .gm-workspace > .gm-panel {
     order: 2;
   }
@@ -356,9 +292,6 @@ html:has(.mobile-creator-menu[open]) {
   }
   .gm-workspace .gm-rail-note {
     display: none;
-  }
-  .mm-workspace > .mm-folio {
-    order: 1;
   }
   .mm-workspace > .mm-page {
     order: 2;
@@ -379,8 +312,7 @@ html:has(.mobile-creator-menu[open]) {
 }
 @media print {
   .mobile-menu-launcher,
-  .mobile-creator-menu,
-  .mobile-folio-heading {
+  .mobile-creator-menu {
     display: none !important;
   }
 }

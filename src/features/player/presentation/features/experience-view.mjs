@@ -194,7 +194,7 @@ export function createFeature(getContext, setContext) {
           ? element(
               "p",
               { class: "minilabel xp-advance-note" },
-              "Base score shown; the folio includes load penalties (p. 299).",
+              "Base score shown; Review includes load penalties (p. 299).",
             )
           : "",
       );

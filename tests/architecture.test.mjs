@@ -9,7 +9,6 @@ import {
   characterResult,
   createResultReader,
 } from "../src/engine/character-result.mjs";
-import { folioData } from "../src/engine/folio.mjs";
 import { calculation, esc } from "../src/engine/workspace.mjs";
 import { exportSheet } from "../src/engine/export.mjs";
 import { issueTarget } from "../src/engine/issue-targets.mjs";
@@ -97,17 +96,12 @@ test("result reuse invalidates for in-place purchases, undo, optional choices an
   assert.notStrictEqual(reader(B, s), reader(R, s));
 });
 
-test("folio, review, calculation and editable PDF share load-adjusted Skill/XP/resource rows", async () => {
+test("review, calculation and editable PDF share load-adjusted Skill/XP/resource rows", async () => {
   globalThis.PDFLib = PDFLib;
   const s = soldier();
   M.purchase(R, s, "skill", "Dodge");
-  const result = characterResult(R, s),
-    folio = folioData(R, s, result);
+  const result = characterResult(R, s);
   for (const row of result.skills.filter((x) => x.adv > 0)) {
-    assert.equal(
-      folio.skills.find((x) => x.name === row.name).value,
-      row.total,
-    );
     assert.equal(
       calculation(R, s, "skill", row.name, result).rows.at(-1)[1],
       row.total,

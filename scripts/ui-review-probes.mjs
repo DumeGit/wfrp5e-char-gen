@@ -10,8 +10,8 @@ const page = await browser.newPage({
 await page.goto("http://127.0.0.1:8211/__ui-review?mode=gm&data=worst");
 let frame = page.frameLocator("iframe");
 await frame.locator(".gm-workspace").waitFor();
-await frame.getByRole("button", { name: "Stat block", exact: true }).click();
-await page.screenshot({ path: "test-results/emil-review/gm-320-folio.png" });
+await frame.locator("#gm-step").selectOption("3");
+await page.screenshot({ path: "test-results/emil-review/gm-320-review.png" });
 const probes = [];
 for (const mode of ["player", "gm", "marijan"]) {
   await page.setViewportSize({ width: 1440, height: 1000 });

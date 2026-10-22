@@ -1,5 +1,7 @@
 # Old World visual studies
 
+22 October 2026: removed character/creature folio markup, snapshots, toggles and styles from the studies alongside the production removal. Historical descriptions below record their original proposals. Texture studies now show the menu panel alone.
+
 Current component reference: build the app and open `/design-system.html` from `out/`. The studies below are historical proposals, not the Next application. Some gallery/review scripts still refer to removed `/dist/` assets and require path adaptation before reuse; do not present those legacy servers as current production previews.
 
 ## Compact Bestiary card studies — 16 October 2026

@@ -34,17 +34,17 @@ Implements the approved fourteen-point review using UI/UX Pro Max, Vercel Web De
 | --- | --- |
 | 1. Touch targets | Shared 44px phone inputs, tabs, dice and primary actions; compact source chips extend their vertical hit area. |
 | 2. Bottom-bar states | Player shows View character while editing and Back to choice while viewing, preserving history/resources, focus and return scroll. |
-| 3. Readable text/numbers | Supporting text uses 12–13px, phone fields 16px; folio numbers use aligned body digits. Opaque disabled actions remain legible. Decorative banner captions remain ornamental. |
+| 3. Readable text/numbers | Supporting text uses 12–13px, phone fields 16px; resource numbers use aligned body digits. Opaque disabled actions remain legible. Decorative banner captions remain ornamental. |
 | 4. Shared controls | Field/select intent, dice SVG, tabs and disclosures use common controls; enhancement, issue association and busy handling live in interface-kit.mjs. Geometry is in interface.css, colours in semantic tokens. Obsolete tracker layout overrides removed. |
 | 5. Experience density | Short XP strip, compact level/tracker/promotion card, inline filters and nearby tabs/+1/+5. Longer policy/rules expand on demand. Advance controls no longer form a second sticky layer. |
 | 6. Origins/Career density | Tighter introductory/section gaps and metadata, aligned suggestion/dice actions, retained meaningful fields, required supplement choices and roll/chosen/search order. |
 | 7. Search/reader | Clean excerpts for every category, selected rows, quieter empty reader hint, bounded prose width, readable hierarchy. Printed reader content, chaining, filters and batches preserved. |
-| 8. Disclosure language | Native disclosures share chevron/hit-area conventions and stable persisted UI keys; compact folio/entry chevrons retained as a variant. Only multi-option Skill families expand in Experience. |
+| 8. Disclosure language | Native disclosures share chevron/hit-area conventions and stable persisted UI keys; compact entry chevrons retained as a variant. Only multi-option Skill families expand in Experience. |
 | 9. Issues/empty state | Structured control targets produce inline messages and aria-invalid/aria-describedby associations; resolved feedback clears. Fresh GM creation starts with a neutral invitation. Required export gates remain; Marijan stays unrestricted. |
 | 10. Long operations | Generation/PDF actions share a painted busy label, preserved width, duplicate guard, restored control and persistent retryable failures. Loading placeholders have accessible status. Completed notices remain transient. |
 | 11. Navigation/accessibility | Stable main and skip link in every mode, native numeric input intent, retained roving keyboard tabs/modal Escape/Back, and focused phone fields kept above fixed bars/visual viewport. |
 | 12. Visual hierarchy | Clear page/section/disclosure levels, fewer redundant template eyebrows and tighter interior spaces; approved artwork, frames, textures and palettes retained. |
-| 13. Folio comparison | Compact Characteristic/resources, tabular numbers and aligned counts; centred emblem and desktop bounded scroll remain, with deliberate phone View/Back flow. Actual Traits and source/calculation access retained. |
+| 13. Character summary | Folio removed on 22 October 2026; complete Review and PDFs retain character information. |
 | 14. Regression/maintenance | Focused local interface/browser tests, pure excerpt/control regressions, small three-theme screenshot set, measured long lists and same-commit documentation. Lazy loading/offline build preserved. |
 
 ## Verification evidence and limits
@@ -55,7 +55,7 @@ Semantic text pairs measured at least 5.00:1 (muted on paper); the lowest sample
 
 A local desktop measurement inserted 300 actual Rules results and forced layout five times: 7.6–8.4ms. Existing 20-row incremental loading was retained. No containment/windowing was justified by that measurement. Real low-end device performance may differ.
 
-The local interface suite covers skip/main focus, numeric intent and touch sizes, contextual folio navigation, compact Experience/help persistence, keyboard tabs, neutral/inline GM errors, clean snippets/Back selection and duplicate-safe retry behavior. Existing rule, history, save/load, generation, PDF, search and offline suites remain the release boundary. Ignored screenshots/metrics are in test-results/ui-implemented; pass captures are produced by the interface suite.
+The local interface suite covers skip/main focus, numeric intent and touch sizes, mobile balances/history, compact Experience/help persistence, keyboard tabs, neutral/inline GM errors, clean snippets/Back selection and duplicate-safe retry behavior. Existing rule, history, save/load, generation, PDF, search and offline suites remain the release boundary. Ignored screenshots/metrics are in test-results/ui-implemented; pass captures are produced by the interface suite.
 
 Physical iOS/Android keyboards, OS native selectors and full screen-reader behavior remain unverified on this Windows host. Native controls and VisualViewport handling are retained, with narrow/short viewport and keyboard navigation checked locally. No broader conformance claim is made.
 
@@ -84,3 +84,6 @@ Verification: focused hover/focus/press and GM folio cases passed on desktop/mob
 
 
 15 October approved materials: shared rail/folio backgrounds now use matching Tavern oak (Player), Crypt masonry (Bestiary) and Pressed ash vellum (Marijan) at fixed Subtle strength. Central theme tokens and three local SVGs replace the old flat/differing backgrounds and candle overlays. Texture is painted beneath controls, remains static under reduced motion and is excluded from print. Mobile inherits the shared surface. See DESIGN-SYSTEM.md for ownership, provenance and focused verification.
+
+
+22 October 2026: removed folios, mobile summary controls, saved display preferences, compact stat-block branches and folio-only styling. All three creators use rail/editor layouts and retain existing mobile balances/status/history. Design previews and component specimens no longer render folios.

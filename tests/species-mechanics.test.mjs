@@ -4,7 +4,7 @@ import {R,soldier,library} from './fixture.mjs';
 import {assembleBooks,validateCatalog} from '../src/engine/books.mjs';
 import {careerAvailable} from '../src/engine/origins.mjs';
 import {equipment} from '../src/engine/equipment.mjs';
-import {folioData} from '../src/engine/folio.mjs';
+import {characterResult} from "../src/engine/character-result.mjs";
 import * as M from '../src/engine/rules.mjs';
 
 // A synthetic, unpublished Species exercises the handlers needed by Archives II.
@@ -29,11 +29,11 @@ test('large Species calculate Wounds and capacity without changing core Species'
  s.ledger.push({type:'talent',name:'Hardy',cost:100});assert.equal(M.derive(catalog,s).wounds,38);
  assert.equal(M.derive(R,soldier()).size,'Average');
 });
-test('Species casting uses its characteristic in folio totals and preserves the core catalog',()=>{
+test('Species casting uses its characteristic in calculated totals and preserves the core catalog',()=>{
  const {catalog,s}=setup();s.ledger.push({type:'skill',name:'Language (Magick)',amount:5,cost:50});
  assert.equal(M.skillInfo(catalog,'Language (Magick)',s).char,'T');
  assert.equal(M.skillInfo(catalog,'Language (Magick)').char,'Int');
- assert.equal(folioData(catalog,s).skills.find(x=>x.name==='Language (Magick)').value,50);
+ assert.equal(characterResult(catalog,s).skills.find(x=>x.name==='Language (Magick)').total,50);
  assert.equal(M.skillInfo(R,'Language (Magick)',soldier()).char,'Int');
 });
 test('additional Career access is Species-specific and Ride replacements retain eligibility',()=>{

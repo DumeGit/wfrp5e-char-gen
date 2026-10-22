@@ -246,7 +246,7 @@
 }
 .fantasy-muster .study-workspace {
   height: calc(100% - 20cqw);
-  grid-template-columns: 20% 56% 24%;
+  grid-template-columns: 20% 80%;
 }
 .fantasy-muster .study-nav {
   background:
@@ -376,15 +376,6 @@
   box-shadow: none;
   border-color: #9e7e49;
 }
-.fantasy-muster .study-folio {
-  background:
-    linear-gradient(100deg, #0003, #8d382018 35%, #0002), var(--cover);
-  border-left: 0.45cqw double var(--gold);
-  padding: 1.9cqw 1.5cqw;
-}
-.fantasy-muster .folio-caption {
-  font-size: 0.95cqw;
-}
 .fantasy-muster .portrait {
   display: grid;
   place-items: center;
@@ -402,14 +393,6 @@
   width: 72%;
   height: 72%;
   opacity: 1;
-}
-.fantasy-muster .study-folio h4 {
-  font:
-    700 2.35cqw Cinzel,
-    Georgia,
-    serif;
-  color: #f8e0b0;
-  line-height: 1.2;
 }
 .fantasy-muster .mini-stats > div {
   background: #f0dba60b;
@@ -519,18 +502,6 @@
     0 0.2cqw 0.4cqw #49291755;
   transform: rotate(-10deg);
 }
-.regimental-ledger .study-folio {
-  background: linear-gradient(100deg, #9f633e18, transparent 23%), #f0e4c9;
-  color: #533b27;
-  border-color: #bd9d6b;
-}
-.regimental-ledger .study-folio h4 {
-  color: #762b2b;
-  font:
-    2.8cqw Fell,
-    Georgia,
-    serif;
-}
 .regimental-ledger .portrait {
   color: #80282c;
   background: #e4d5b9;
@@ -558,10 +529,8 @@
   opacity: 1;
 }
 .regimental-ledger .nav-caption,
-.regimental-ledger .folio-caption,
 .regimental-ledger .rank,
-.regimental-ledger .mini-stats small,
-.regimental-ledger .study-folio summary span {
+.regimental-ledger .mini-stats small {
   color: #7d5a34;
 }
 .regimental-ledger .study-page h4 {
@@ -637,9 +606,6 @@
 .black-banner .mini-tabs button[aria-selected="true"] {
   background: #38251b;
   color: #f4dfb1;
-}
-.black-banner .study-folio {
-  background: linear-gradient(110deg, #0005, #65342510), #29201a;
 }
 .black-banner .portrait {
   background: linear-gradient(135deg, #b8975f13, #17120f44);

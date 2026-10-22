@@ -67,7 +67,7 @@ export function decoratePlayerTree(
     const chain = [...parents, { node, path }];
     if (
       !chain.some((x) =>
-        /(?:^| )(rail|sheet|mobile-workspace-bar)(?: |$)/.test(
+        /(?:^| )(rail|mobile-workspace-bar)(?: |$)/.test(
           x.node.props.className || "",
         ),
       )

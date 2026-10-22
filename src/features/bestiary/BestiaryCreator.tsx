@@ -179,7 +179,6 @@ function Workshop({ verify }: { verify: boolean }) {
     [modal, setModal] = useState<any>(null),
     [compact, setCompact] = useState(false),
     [tools, setTools] = useState(false),
-    [folio, setFolio] = useState(false),
     [portal, setPortal] = useState<HTMLElement | null>(null),
     [message, setMessage] = useState(""),
     [working, setWorking] = useState("");
@@ -487,8 +486,6 @@ function Workshop({ verify }: { verify: boolean }) {
           navigate,
           jump,
           fileActions,
-          folio,
-          setFolio,
           tools,
           setTools,
           message,
@@ -502,7 +499,6 @@ function Workshop({ verify }: { verify: boolean }) {
 
 // The same native presentation is used by the live store and static parity tests.
 export function BestiaryWorkspace({ controls }: { controls: any }) {
-  const returnPosition = useRef(0);
   const state = useBestiary();
   const { store, draft: s, result: r, modal, setModal, working, busy } = state;
   const {
@@ -514,27 +510,12 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
     navigate,
     jump,
     fileActions,
-    folio,
-    setFolio,
     tools,
     setTools,
     message,
     mounted,
     status,
   } = controls;
-  const showFolio = (next: boolean) => {
-    if (next) returnPosition.current = window.scrollY;
-    setFolio(next);
-    requestAnimationFrame(() => {
-      if (!root.current?.isConnected) return;
-      if (next)
-        document
-          .getElementById("gm-folio")
-          ?.scrollIntoView({ block: "start", behavior: "instant" });
-      else
-        window.scrollTo({ top: returnPosition.current, behavior: "instant" });
-    });
-  };
   return (
     <div ref={root} onBlurCapture={() => store.breakGroup()}>
       {compact &&
@@ -705,41 +686,6 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
             )}
           </footer>
         </main>
-        <aside
-          className={`sheet gm-folio mobile-fold-folio ${folio ? "mobile-folio-open" : ""}`}
-          id="gm-folio"
-          aria-label="Current stat block"
-        >
-          <div className="mobile-folio-heading">
-            <strong>The creature folio</strong>
-            <Button
-              onClick={() => showFolio(false)}
-              aria-expanded={folio}
-              aria-controls="gm-folio-content"
-            >
-              Hide details
-            </Button>
-          </div>
-          <div className="mobile-folio-content" id="gm-folio-content">
-            <div className="sheet-title">
-              <span className="folio-crest" aria-hidden="true">
-                <img
-                  className="ledger-emblem"
-                  src="/assets/ledger-emblem.svg"
-                  alt=""
-                  width="128"
-                  height="144"
-                />
-              </span>
-              <span className="eyebrow">The creature folio</span>
-            </div>
-            <StatBlock compact />
-            <div className="gm-folio-footer">
-              <span>{status}</span>
-              <Button onClick={() => navigate(3)}>Review & export</Button>
-            </div>
-          </div>
-        </aside>
       </div>
       {compact && (
         <div
@@ -749,13 +695,6 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
         >
           <History />
           <span>{status}</span>
-          <Button
-            onClick={() => showFolio(!folio)}
-            aria-expanded={folio}
-            aria-controls="gm-folio"
-          >
-            {folio ? "Back to editor" : "Stat block"}
-          </Button>
         </div>
       )}
       {compact && (

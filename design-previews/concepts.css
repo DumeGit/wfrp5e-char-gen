@@ -252,7 +252,7 @@ footer {
 }
 .study-workspace {
   display: grid;
-  grid-template-columns: 20% 56% 24%;
+  grid-template-columns: 20% 80%;
   height: calc(100% - 12cqw);
   position: relative;
   z-index: 1;
@@ -566,34 +566,9 @@ footer {
   border: 1px solid var(--gold);
   box-shadow: inset 0 0 0 2px #0001;
 }
-.folio-footer {
-  text-align: center;
-}
-.folio-footer .scrollwork {
-  height: 2.6cqw;
-}
-.folio-footer > span {
-  font-size: 1.25cqw;
-  font-style: italic;
-  color: var(--muted);
-}
 .demo-note {
   font-size: 1.6cqw;
   color: var(--muted);
-}
-.study-folio {
-  padding: 2.2cqw 1.6cqw;
-  border-left: 0.45cqw double var(--gold);
-  color: var(--heading);
-  background: linear-gradient(110deg, #0004, transparent 26%), var(--cover);
-  text-align: center;
-}
-.folio-caption {
-  font:
-    1.05cqw Cinzel,
-    serif;
-  letter-spacing: 0.18em;
-  color: var(--gold);
 }
 .portrait {
   height: 9cqw;
@@ -621,17 +596,6 @@ footer {
   background: var(--cover);
   border: 1px solid var(--gold);
   padding: 0 0.9cqw;
-}
-.study-folio h4 {
-  font:
-    700 2.65cqw var(--display),
-    serif;
-  margin: 1.2cqw 0 0.4cqw;
-  line-height: 1.15;
-}
-.study-folio p {
-  font-size: 1.4cqw;
-  margin: 0.5cqw 0 1.2cqw;
 }
 .rank {
   font-size: 0.92cqw;
@@ -676,36 +640,6 @@ footer {
   margin-left: 0.4cqw;
   font-size: 1.65cqw;
   font-weight: 400;
-}
-.study-folio details {
-  text-align: left;
-  font-size: 1.65cqw;
-  padding: 0.5cqw 0;
-  border-bottom: 1px solid #b7996644;
-}
-.study-folio summary {
-  cursor: pointer;
-  list-style: none;
-}
-.study-folio summary:before {
-  content: "+";
-  margin-right: 0.7cqw;
-  color: var(--gold);
-}
-.study-folio details[open] summary:before {
-  content: "−";
-}
-.study-folio summary span {
-  float: right;
-  color: var(--gold);
-}
-.study-folio details p {
-  font-size: 1.1cqw;
-  text-align: left;
-  margin: 0.5cqw 0;
-}
-.study-folio details b {
-  float: right;
 }
 .mini-export {
   width: 100%;
@@ -839,11 +773,6 @@ footer {
   color: #f3e0b0;
   clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
 }
-.armoury .study-folio {
-  background:
-    repeating-linear-gradient(5deg, #fff1 0 1px, transparent 1px 4px), #26332c;
-  border-left: 3px ridge #5f6b5b;
-}
 .armoury .portrait {
   border-radius: 15% 15% 40% 40%;
   box-shadow:
@@ -949,10 +878,6 @@ footer {
   opacity: 0.9;
   color: #c1b292;
 }
-.dossier .study-folio {
-  background:
-    radial-gradient(ellipse at 50% 0, #55433733, transparent 80%), #222323;
-}
 .dossier .portrait {
   border-radius: 0;
   border: 1px solid #ad9774;
@@ -961,10 +886,6 @@ footer {
   box-shadow: none;
   transform: rotate(4deg);
   color: #c8b391;
-}
-.dossier .study-folio h4 {
-  font-size: 3.7cqw;
-  line-height: 1.05;
 }
 .dossier .xp-price {
   transform: rotate(-1deg);
@@ -1085,10 +1006,6 @@ footer {
   background: #73815633;
   border-color: #b7a05b;
   color: #f2dfa1;
-}
-.grimoire .study-folio {
-  background:
-    radial-gradient(ellipse at 50% 0, #72aeb224, transparent 65%), #172b32;
 }
 .grimoire .portrait {
   outline: 1px dashed #af995f;
@@ -1304,3 +1221,7 @@ footer {
     animation: none !important;
   }
 }
+
+.study-footer { margin-top: 4cqw; text-align: center; }
+.study-footer .scrollwork { margin-bottom: 1cqw; }
+.study-footer > span { font-size: 1.1cqw; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }

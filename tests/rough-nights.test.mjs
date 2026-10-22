@@ -23,7 +23,7 @@ import { speciesRulePanel } from "./presentation-archives-ui.mjs";
 import { collegePanel } from "./presentation-winds-of-magic-ui.mjs";
 import { suggestion } from "../src/engine/background.mjs";
 import { exportSheet } from "../src/engine/export.mjs";
-import { folioData } from "../src/engine/folio.mjs";
+import {characterResult} from "../src/engine/character-result.mjs";
 import { gearSlots } from "../src/engine/equipment.mjs";
 
 const B = assembleBooks(library, ["rough-nights"]);
@@ -269,9 +269,9 @@ test("Suffuse with Ulgu preserves its printed non-stacking effects, maximum one 
   assert.match(t.text, /8 yards/);
   assert.match(t.text, /once/);
   assert.match(t.text, /Adaptation warning/);
-  const before = folioData(B, s);
+  const before = characterResult(B, s);
   s.talentChoices["species-0"] = t.name;
-  assert.deepEqual(folioData(B, s).skills, before.skills);
+  assert.deepEqual(characterResult(B, s).skills, before.skills);
   assert.match(M.invalidTalent(B, s, t.name), /not repeatable/);
   assert.equal(M.derive(B, s).spent, 0);
   assert.equal(M.freeTalents(B, s).filter((x) => x === t.name).length, 1);

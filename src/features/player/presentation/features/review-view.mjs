@@ -1,7 +1,6 @@
 import {
   element,
   fragment,
-  attributes,
   joinNodes,
   combine,
   interpolate,
@@ -11,9 +10,8 @@ import { sourceButton } from "../source-controls.mjs";
 import { detailKey } from "../../../../engine/disclosures.mjs";
 import { elfReview } from "../high-elf-ui.mjs";
 import { dwarfReview } from "../dwarf-guide-ui.mjs";
-import * as M from "../../../../engine/rules.mjs";
+
 import { steps } from "../../../../engine/ui.mjs";
-import { folioData } from "../../../../engine/folio.mjs";
 import { penaltySummary } from "../creator-ui.mjs";
 import { LEGACY_EXPLANATION } from "../legacy.mjs";
 import { issueTarget } from "../../../../engine/issue-targets.mjs";
@@ -311,99 +309,6 @@ export function createFeature(getContext, setContext) {
       : element("p", { class: "small muted" }, "Final Career level reached.");
   }
 
-  function folioMenus() {
-    let { R, s, result, folioOpen, button, esc } = getContext();
-
-    const sections = folioData(R, s, result());
-    return element(
-      "div",
-      { class: "folio-menus" },
-      joinNodes(
-        Object.entries(sections).map(([key, rows]) =>
-          element(
-            "details",
-            {
-              "data-detail-key": detailKey("folio", key),
-              class: "folio-section",
-              "data-folio-section": key,
-              ...attributes(folioOpen.has(key) ? "open" : ""),
-            },
-            element(
-              "summary",
-              {},
-              element("span", { class: "folio-toggle", "aria-hidden": "true" }),
-              element("span", {}, combine(key[0].toUpperCase(), key.slice(1))),
-              element("span", { class: "folio-count" }, rows.length),
-            ),
-            rows.length
-              ? element(
-                  "ul",
-                  { class: "folio-list" },
-                  joinNodes(
-                    rows.map((row) =>
-                      element(
-                        "li",
-                        {},
-                        element(
-                          "span",
-                          {},
-                          key === "skills"
-                            ? button(
-                                "calculation",
-                                esc(row.name),
-                                interpolate(
-                                  ['data-kind="skill" data-name="', '"'],
-                                  [esc(row.name)],
-                                ),
-                                "folio-name-button",
-                              )
-                            : esc(row.name),
-                          row.legacy
-                            ? element(
-                                "button",
-                                {
-                                  type: "button",
-                                  class: "legacy-tag",
-                                  "data-action": "legacy-info",
-                                  "data-explanation": esc(row.legacyTitle),
-                                  title: esc(row.legacyTitle),
-                                },
-                                "Legacy",
-                              )
-                            : "",
-                        ),
-                        key === "magic"
-                          ? ""
-                          : element(
-                              "strong",
-                              {
-                                class: "folio-value",
-                                ...attributes(
-                                  row.value === null
-                                    ? ' title="Quantity not rolled yet"'
-                                    : "",
-                                ),
-                              },
-                              row.value === null
-                                ? "?"
-                                : interpolate(
-                                    ["", "", ""],
-                                    [key === "skills" ? "" : "×", row.value],
-                                  ),
-                            ),
-                      ),
-                    ),
-                    "",
-                  ),
-                )
-              : element("p", { class: "folio-empty" }, "None yet."),
-          ),
-        ),
-        "",
-      ),
-    );
-  }
-
   function hasColourMagic() {
     let { result, R } = getContext();
 
@@ -468,7 +373,6 @@ export function createFeature(getContext, setContext) {
     review,
     issuePanel,
     trackerBoxes,
-    folioMenus,
     hasColourMagic,
     reviewNotices,
   };

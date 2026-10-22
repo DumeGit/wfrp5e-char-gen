@@ -172,14 +172,10 @@ function scoreIntent(store: PlayerStore, key: string) {
     (node) =>
       String(node.props.className || "")
         .split(" ")
-        .includes("stat-calculation") && node.props["data-name"] === key,
+        .includes("review-stat-button") && node.props["data-name"] === key,
   );
   assert.ok(node, key);
-  const strong = nodes(node.props.children).find(
-    (child) => child.type === "strong",
-  );
-  assert.ok(strong);
-  return Number(strong.props.children);
+  return Number(Children.toArray(node.props.children).join(""));
 }
 function parity(store: PlayerStore) {
   const snapshot = store.getSnapshot();
@@ -281,6 +277,7 @@ test("Player purchase results and rendered score intent share canonical calculat
     5,
   );
   assert.deepEqual(before.draft.ledger, []);
+  await store.action(element("step", { step: "7" }));
   assert.equal(scoreIntent(store, "WS"), after.calculated.derived.stats.WS);
   parity(store);
   const reloaded = (await createPlayerStore(true)) as PlayerStore;

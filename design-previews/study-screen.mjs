@@ -26,19 +26,8 @@ export function screen(c) {
   <section class="study-page"><div class="page-corners"></div><div class="page-heading"><span>VII. THE PATH AHEAD</span><span>CREATION COMPLETE</span></div><h4>Spend experience</h4><p class="page-sub">A deed remembered. A skill honed.</p>${ornament}<div class="mini-budget"><div><small>Remaining</small><strong>1,000 <em>XP</em></strong></div><div><small>Current Career</small><strong>Recruit <em>Brass 5</em></strong></div></div>
   <div class="mini-tabs" role="tablist" aria-label="${c.name} purchases"><button role="tab" aria-selected="true" data-tab="Characteristics">Characteristics</button><button role="tab" aria-selected="false" data-tab="Skills">Skills</button><button role="tab" aria-selected="false" data-tab="Talents">Talents</button></div>
   <div class="mini-advance"><span>Advance by <b>+5</b></span><span class="career-key"><i></i>Career Characteristic</span></div>
-  <div class="demo-rows">${rows("Characteristics")}</div><div class="mini-tracker"><span>CAREER TRACKER</span><div>${"<i></i>".repeat(10)}</div><small>0 / 10</small></div><div class="folio-footer">${ornament}<span>Every experience point accounted for.</span></div></section>
-  <aside class="study-folio"><span class="folio-caption">CHARACTER FOLIO</span><div class="portrait">${emblem(c.mark)}<span>WS</span></div><h4>Walther<br>Schmidt</h4><p>Human · Soldier</p><div class="rank">RECRUIT / BRASS 5</div><div class="mini-stats">${[
-    ["WS", 41],
-    ["BS", 26],
-    ["S", 35],
-    ["T", 35],
-    ["I", 29],
-    ["Ag", 32],
-  ]
-    .map(([k, v]) => `<div><small>${k}</small><strong>${v}</strong></div>`)
-    .join(
-      "",
-    )}</div><div class="resources"><span>Fate <b>4</b></span><span>Fortune <b>3</b></span></div><details><summary>Skills <span>13</span></summary><p>Cool <b>37</b><br>Melee (Basic) <b>46</b></p></details><details><summary>Talents <span>6</span></summary><p>Six owned ranks</p></details><details><summary>Gear <span>7</span></summary><p>Seven starting items</p></details><button class="mini-export" data-demo="Export">Review & export</button></aside></div></div>`;
+  <div class="demo-rows">${rows("Characteristics")}</div><div class="mini-tracker"><span>CAREER TRACKER</span><div>${"<i></i>".repeat(10)}</div><small>0 / 10</small></div><div class="study-footer">${ornament}<span>Every experience point accounted for.</span></div></section>
+</div></div>`;
 }
 export function rows(tab) {
   if (tab === "Talents")

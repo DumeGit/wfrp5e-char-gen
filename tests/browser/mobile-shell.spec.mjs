@@ -12,7 +12,7 @@ import {
 } from "./helpers.mjs";
 
 for (const mode of ["Player", "GM", "Marijan"]) {
-  test(`${mode} shares compact header, tools menu and folio @mobile-shell @mobile`, async ({
+  test(`${mode} shares compact header, tools menu without a folio @mobile-shell @mobile`, async ({
     page,
   }, info) => {
     if (mode === "Player") await openPC(page, { complete: true });
@@ -56,23 +56,12 @@ for (const mode of ["Player", "GM", "Marijan"]) {
     }
     await expect(menuButton).toBeVisible();
     await expect(save).toBeHidden();
-    const folio = page.locator(
-      mode === "GM" ? ".gm-folio" : mode === "Marijan" ? ".mm-folio" : ".sheet",
-    );
-    await expect(folio).toBeHidden();
-    const view = page.locator(".mobile-workspace-bar").getByRole("button", {
-      name: mode === "GM" ? "Stat block" : "View character",
-      exact: true,
-    });
-    await view.click();
-    await expect(folio).toBeVisible();
+    await expect(page.locator(".sheet")).toHaveCount(0);
     await expect(
-      folio.getByRole("button", { name: "Hide details", exact: true }),
-    ).toHaveAttribute("aria-expanded", "true");
-    await folio
-      .getByRole("button", { name: "Hide details", exact: true })
-      .click();
-    await page.evaluate(() => scrollTo(0, 0));
+      page.locator(".mobile-workspace-bar").getByRole("button", {
+        name: /View character|Back to editor|Stat block/,
+      }),
+    ).toHaveCount(0);
     for (const width of [320, 390]) {
       await page.setViewportSize({ width, height: 844 });
       await noOverflow(page);

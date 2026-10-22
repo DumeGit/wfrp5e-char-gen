@@ -257,7 +257,7 @@ mark {
 /* Joined leather bindings and parchment leaf, with independent sticky rails. */
 .workspace,
 .mm-workspace {
-  grid-template-columns: var(--layout-rail) minmax(0, 1fr) var(--layout-folio);
+  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
   max-width: none;
   gap: 0;
   padding: 0 var(--layout-gutter);
@@ -266,8 +266,7 @@ mark {
 .book-setup-workspace {
   grid-template-columns: var(--layout-rail) minmax(0, 1fr);
 }
-.rail,
-.sheet {
+.rail {
   position: sticky;
   top: 16px;
   border: var(--line-ornament);
@@ -283,10 +282,6 @@ mark {
 }
 .rail {
   padding: 14px 12px;
-}
-.sheet {
-  padding: 20px 16px;
-  max-height: calc(100dvh - 32px);
 }
 .panel {
   position: relative;
@@ -326,8 +321,7 @@ mark {
   font: 23px/1.2 var(--font-heading);
   color: var(--color-gold-light);
 }
-.rail .eyebrow,
-.sheet .eyebrow {
+.rail .eyebrow {
   font: 10px/1.5 var(--font-caps);
   letter-spacing: 0.05em;
   color: var(--color-gold);
@@ -462,7 +456,6 @@ mark {
 .rail .quiet,
 .masthead .quiet,
 .install-app,
-.summary-toggle,
 .mobile-workspace-bar .quiet {
   border-color: var(--color-line-dark);
   background: var(--color-leather-deep);
@@ -473,7 +466,6 @@ mark {
   .rail .quiet:hover:not(:disabled),
   .masthead .quiet:hover:not(:disabled),
   .install-app:hover,
-  .summary-toggle:hover,
   .mobile-workspace-bar .quiet:hover:not(:disabled) {
     background: var(--color-leather-raised);
     color: var(--color-on-crimson);
@@ -482,125 +474,8 @@ mark {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .rail > .text-button:hover,
-  .sheet .source-button:hover {
+  .rail > .text-button:hover {
     color: var(--color-gold-light);
-  }
-}
-
-.sheet-heading {
-  text-align: center;
-}
-.folio-crest {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 66px;
-  margin: 12px auto;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
-.folio-crest img {
-  width: 100%;
-  height: 100%;
-}
-.sheet h2 {
-  font: 700 23px/1.3 var(--font-caps);
-  color: var(--color-on-leather);
-  margin: 10px 0 8px;
-}
-.sheet-heading > p {
-  color: var(--color-on-leather-muted);
-  font-size: 13px;
-}
-.profile-badge {
-  border-color: var(--color-line-dark);
-  border-radius: 0;
-  color: var(--color-gold);
-  font-size: 11px;
-}
-.sheet .stat-calculation,
-.sheet .stat-grid > .career-current,
-.sheet .stat-grid > .career-future {
-  background: #d2b4790c;
-  border-radius: 0;
-  border-bottom: 1px solid var(--color-line-dark);
-}
-@media (hover: hover) and (pointer: fine) {
-  .sheet .stat-calculation:hover {
-    background: var(--color-leather-raised);
-  }
-}
-
-.stat-grid small,
-.derived span,
-.folio-xp > span,
-.folio-xp p,
-.folio-coin > span,
-.folio-line,
-.mobile-totals {
-  color: var(--color-on-leather-muted);
-}
-.stat-grid strong,
-.derived strong {
-  font-family: var(--font-heading);
-  color: var(--color-on-leather);
-}
-.derived,
-.folio-line,
-.folio-status,
-.sheet .folio-section,
-.folio-list li,
-.mobile-totals {
-  border-color: var(--color-line-dark);
-}
-.folio-xp > strong,
-.folio-coin > strong,
-.folio-value,
-.mobile-totals strong {
-  color: var(--color-gold-light);
-  font-family: var(--font-heading);
-}
-.folio-line strong,
-.sheet .folio-section > summary,
-.folio-list li {
-  color: var(--color-on-leather);
-}
-.folio-toggle,
-.folio-count {
-  color: var(--color-gold);
-}
-.folio-count {
-  background: transparent;
-}
-.sheet .folio-empty,
-.sheet .source-button {
-  color: var(--color-on-leather-muted);
-}
-.folio-status > span {
-  color: var(--color-gold-light);
-}
-.folio-status.complete > span {
-  color: var(--color-success-on-dark);
-}
-.folio-status button {
-  background: var(--color-crimson);
-  color: var(--color-on-crimson);
-  border-color: var(--color-gold-dark);
-}
-@media (hover: hover) and (pointer: fine) {
-  .folio-status button:hover:not(:disabled) {
-    background: var(--color-crimson-hover);
-    color: var(--color-on-crimson);
-    border-color: var(--color-gold);
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .derived-calculation:hover,
-  .capacity-calculation:hover {
-    background: var(--color-leather-raised);
   }
 }
 
@@ -624,7 +499,6 @@ textarea {
 .primary,
 .secondary,
 .quiet,
-.summary-toggle,
 .install-app {
   border-radius: var(--radius-control);
 }
@@ -768,9 +642,6 @@ textarea {
 .purchase-error,
 .packing-warning {
   color: var(--color-error) !important;
-}
-.sheet .packing-warning {
-  color: var(--color-gold-light) !important;
 }
 .check-row,
 .book-card,
@@ -973,18 +844,6 @@ summary::marker {
   }
 }
 
-.sheet .legacy-tag {
-  background: var(--color-legacy);
-  color: var(--color-legacy-surface);
-  border-color: var(--color-legacy-line);
-}
-@media (hover: hover) and (pointer: fine) {
-  .sheet .legacy-tag:hover {
-    background: var(--color-legacy-line);
-    color: var(--color-leather-deep);
-  }
-}
-
 .career-level-1 {
   --career-color: var(--color-crimson);
   --career-tint: var(--color-career-start-tint);
@@ -1000,18 +859,6 @@ summary::marker {
 .career-level-4 {
   --career-color: var(--color-warning);
   --career-tint: var(--color-warning-surface);
-}
-.sheet .career-level-1 {
-  --career-color: var(--color-career-1-on-dark);
-}
-.sheet .career-level-2 {
-  --career-color: var(--color-career-2-on-dark);
-}
-.sheet .career-level-3 {
-  --career-color: var(--color-career-3-on-dark);
-}
-.sheet .career-level-4 {
-  --career-color: var(--color-gold-light);
 }
 
 /* Dialogs, nested references, installation and notices use the same paper. */
@@ -1139,25 +986,10 @@ dialog::backdrop {
     opacity: 0.5;
   }
 }
-@media (min-width: 1500px) {
-  :root {
-    --layout-folio: clamp(350px, 14vw, 420px);
-  }
-}
 @media (max-width: 1200px) and (min-width: 761px) {
   .workspace,
   .book-setup-workspace {
     grid-template-columns: 185px minmax(0, 1fr);
-  }
-  .sheet {
-    position: static;
-    max-height: none;
-  }
-  .sheet-heading {
-    text-align: left;
-  }
-  .folio-crest {
-    display: none;
   }
 }
 /* Preserve the search field when decorative captions no longer fit beside it. */
@@ -1296,29 +1128,6 @@ dialog::backdrop {
   .rail-oath {
     display: none;
   }
-  .sheet {
-    position: static;
-    max-height: none;
-    border-width: 1px;
-    padding: 14px;
-  }
-  .sheet-heading {
-    text-align: left;
-  }
-  .folio-crest {
-    display: none;
-  }
-  .sheet h2 {
-    font: 24px/1.2 var(--font-heading);
-    padding-right: 112px;
-    margin-top: 0;
-  }
-  .sheet-heading > p {
-    font-size: 12px;
-  }
-  .sheet .stat-grid {
-    display: grid;
-  }
   .panel {
     padding: 23px 18px;
   }
@@ -1391,16 +1200,13 @@ dialog::backdrop {
   }
   .masthead,
   .rail,
-  .folio-crest,
   .rail-seal,
   .rail-oath,
   .panel::before,
-  .panel::after,
-  .sheet::before {
+  .panel::after {
     display: none !important;
   }
-  .panel,
-  .sheet {
+  .panel {
     position: static;
     border: 0;
     border-radius: 0;
@@ -1415,24 +1221,6 @@ dialog::backdrop {
     color: black;
     border-color: #666;
     box-shadow: none;
-  }
-  .sheet h2,
-  .sheet-heading > p,
-  .stat-grid small,
-  .stat-grid strong,
-  .derived span,
-  .derived strong,
-  .folio-line,
-  .folio-line strong,
-  .folio-xp > strong,
-  .folio-coin > strong,
-  .folio-list li,
-  .folio-value {
-    color: black;
-  }
-  .sheet .stat-calculation {
-    background: white;
-    border-color: #999;
   }
 }
 
@@ -1601,14 +1389,6 @@ dialog::backdrop {
     var(--color-crimson) 6%,
     var(--color-paper-raised)
   );
-}
-:root[data-theme="ash-vellum"] .mm-folio {
-  box-shadow:
-    inset 0 2px var(--color-crimson),
-    var(--shadow-surface);
-}
-:root[data-theme="ash-vellum"] .mm-folio-stats > div {
-  border-top-color: var(--color-crimson);
 }
 :root[data-theme="ash-vellum"] .creator-switch a[aria-current="page"] {
   background: var(--color-crimson);

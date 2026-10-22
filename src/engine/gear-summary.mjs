@@ -48,7 +48,7 @@ function itemParts(text) {
     ];
   return [{ name: units[text] || text, quantity: 1 }];
 }
-export function folioGear(R, s) {
+export function gearSummary(R, s) {
   const grouped = new Map();
   for (const slot of gearSlots(R, s)) {
     const choices = gearOptions(slot.name, R);

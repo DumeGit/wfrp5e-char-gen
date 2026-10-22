@@ -1,7 +1,6 @@
 /* Shared browsing and explanation controls; no game rules are defined here. */
 .source-button,
-.text-button,
-.folio-name-button {
+.text-button {
   font: inherit;
   border: 0;
   background: transparent;
@@ -100,7 +99,6 @@ button.legacy-tag {
 .book-setup-workspace {
   grid-template-columns: 220px minmax(0, 1fr);
 }
-.book-setup-workspace .sheet,
 .book-setup-workspace .stage-meta,
 .book-setup-workspace .steps {
   display: none;
@@ -402,30 +400,7 @@ button.legacy-tag {
 .review-warnings summary {
   font-weight: 650;
 }
-.stat-grid > .stat-calculation {
-  text-align: center;
-  padding: 8px 2px;
-  background: #2b3737;
-  border: 0;
-  border-top: 3px solid transparent;
-  border-radius: 3px;
-  color: inherit;
-  min-width: 0;
-  cursor: pointer;
-}
 @media (hover: hover) and (pointer: fine) {
-  .stat-grid > .stat-calculation:hover {
-    background: #3a4844;
-  }
-}
-.stat-grid strong {
-  pointer-events: none;
-}
-.stat-grid > .stat-calculation.career-characteristic {
-  border-top-color: var(--career-color);
-}
-.stat-grid > .stat-calculation.career-future {
-  border-top-style: dashed;
 }
 .derived-calculation {
   border: 0;
@@ -439,27 +414,6 @@ button.legacy-tag {
   .derived-calculation:hover {
     background: #314238;
   }
-}
-.folio-name-button {
-  color: inherit;
-  font-size: 14px;
-  text-decoration: none;
-}
-@media (hover: hover) and (pointer: fine) {
-  .folio-name-button:hover {
-    text-decoration: underline;
-    color: #f0d394;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .sheet .legacy-tag:hover {
-    background: #665579;
-    color: #fff;
-  }
-}
-.sheet .source-button {
-  color: #d9dccc;
 }
 .mobile-workspace-bar {
   display: none;
@@ -637,9 +591,6 @@ button.legacy-tag {
   .market-item > div:last-child {
     max-width: 110px;
   }
-  .sheet .stat-calculation {
-    padding: 8px 2px;
-  }
 }
 @media (max-width: 390px) {
   .browser-filters {
@@ -659,24 +610,6 @@ button.legacy-tag {
   .choice-undo {
     display: none !important;
   }
-}
-
-.capacity-calculation {
-  width: 100%;
-  background: transparent;
-  color: inherit;
-  border: 0;
-  padding: 12px 0;
-  text-align: left;
-  cursor: pointer;
-}
-@media (hover: hover) and (pointer: fine) {
-  .capacity-calculation:hover {
-    background: #314238;
-  }
-}
-.capacity-calculation small {
-  font: 12px system-ui;
 }
 .book-setup-workspace ~ .mobile-workspace-bar {
   display: none;

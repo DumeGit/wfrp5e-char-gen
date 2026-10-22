@@ -19,7 +19,7 @@
   --color-world: #201a16;
   --color-leather: #30221b;
   --color-leather-deep: #251c17;
-  /* One fixed, static Subtle material shared by menu and folio. */
+  /* One fixed, static Subtle material used by the menu. */
   --color-panel: #30221b;
   --surface-panel-texture: url(/assets/panel-textures/tavern-wood.svg);
   --surface-panel-texture-size: 384px 768px;
@@ -72,8 +72,6 @@
     ),
     var(--color-paper);
   --shadow-working-leaf: inset 0 0 24px #79532a18;
-  --surface-folio-crest: linear-gradient(135deg, #b8975f13, #17120f44);
-  --shadow-folio-crest: inset 0 0 0 2px #b4986026;
   --color-career-start-tint: #eee0d2;
   --color-career-later: #62646b;
   --color-career-later-tint: #e4e1d6;
@@ -107,7 +105,6 @@
   --control-height-compact: 36px;
   --layout-gutter: clamp(16px, 1.25vw, 40px);
   --layout-rail: 230px;
-  --layout-folio: 310px;
   --motion-control: 160ms;
   --motion-ash: 16s;
   --motion-mist: 22s;
@@ -163,8 +160,6 @@
     radial-gradient(ellipse at 40% 0, #ffffff18, transparent 75%),
     var(--color-paper);
   --shadow-working-leaf: inset 0 0 24px #07172d12;
-  --surface-folio-crest: #8ca8bb0c;
-  --shadow-folio-crest: inset 0 0 0 2px #afc3ce22;
 }
 
 /* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
@@ -178,8 +173,6 @@
     radial-gradient(ellipse at 50% 0, #ffffff12, transparent 70%),
     var(--color-paper);
   --shadow-working-leaf: inset 0 0 30px #00000012;
-  --surface-folio-crest: linear-gradient(135deg, #ffffff12, #00000044);
-  --shadow-folio-crest: inset 0 0 0 2px #ffffff22;
   color-scheme: light;
   --color-world: #151517;
   --color-leather: #262629;

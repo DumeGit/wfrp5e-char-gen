@@ -33,16 +33,19 @@ for (const mode of ["Player", "GM", "Marijan"]) {
         .boundingBox();
       const editor = await page.locator("main").boundingBox();
       const rail = await page.locator(".rail").boundingBox();
-      const folio = await page.locator(".sheet").boundingBox();
+      await expect(page.locator(".sheet")).toHaveCount(0);
       expect(shell.width).toBeGreaterThan(width * 0.96);
       expect(editor.width).toBeGreaterThan(previousEditorWidth);
       expect(rail.width).toBeLessThanOrEqual(240);
-      expect(folio.width).toBeGreaterThanOrEqual(270);
-      expect(folio.width).toBeLessThanOrEqual(420);
       expect(Math.abs(rail.x + rail.width - editor.x)).toBeLessThanOrEqual(1);
-      expect(Math.abs(editor.x + editor.width - folio.x)).toBeLessThanOrEqual(
-        1,
-      );
+      const rightGutter = await page
+        .locator(".workspace, .mm-workspace")
+        .evaluate((el) => parseFloat(getComputedStyle(el).paddingRight));
+      expect(
+        Math.abs(
+          editor.x + editor.width - (shell.x + shell.width - rightGutter),
+        ),
+      ).toBeLessThanOrEqual(1);
       expect(rail.x).toBeGreaterThanOrEqual(16);
       expect(rail.x).toBeLessThanOrEqual(40);
       const brand = await page.locator(".brand").boundingBox();
@@ -132,34 +135,18 @@ for (const mode of ["Player", "GM", "Marijan"]) {
   });
 }
 
-test("Player phone folio has one contextual bottom action @interface @mobile", async ({
+test("Player phone keeps balances and history without a folio action @interface @mobile", async ({
   page,
 }, info) => {
-  test.skip(
-    info.project.name !== "mobile",
-    "The contextual strip is phone navigation.",
-  );
+  test.skip(info.project.name !== "mobile", "Phone resource strip");
   await openPC(page, { complete: true });
   const bar = page.locator(".mobile-workspace-bar");
+  await expect(bar.getByLabel("Remaining experience and money")).toBeVisible();
+  await expect(bar.getByRole("group", { name: "Edit history" })).toBeVisible();
   await expect(
-    bar.getByRole("button", { name: "Back to choice", exact: true }),
+    bar.getByRole("button", { name: /View character|Back to choice/ }),
   ).toHaveCount(0);
-  await bar
-    .getByRole("button", { name: "View character", exact: true })
-    .click();
-  await expect(
-    bar.getByRole("button", { name: "View character", exact: true }),
-  ).toHaveCount(0);
-  await expect(
-    bar.getByRole("button", { name: "Back to choice", exact: true }),
-  ).toBeFocused();
-  await bar
-    .getByRole("button", { name: "Back to choice", exact: true })
-    .click();
-  await expect(page.locator(".sheet")).not.toBeVisible();
-  await expect(
-    bar.getByRole("button", { name: "View character", exact: true }),
-  ).toBeFocused();
+  await expect(page.locator(".sheet")).toHaveCount(0);
 });
 
 test("Experience keeps purchases near controls and remembers rule disclosures @interface @pc", async ({

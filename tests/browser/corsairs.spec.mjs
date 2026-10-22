@@ -45,9 +45,11 @@ test("Corsairs book filters and Chief Mate optional Talents work on desktop and 
   await expect(cloak).toHaveValue("");
   await cloak.selectOption({ label: "Sea Dragon Cloak" });
   await expect(cloak).not.toHaveValue("");
+  await gmStep(page, "Review & export");
   await expect(page.locator(".gm-stat-block")).toContainText(
     "Sea Dragon Cloak (Body +2 AP; Partial)",
   );
+  await gmStep(page, "Customise");
   await choice.selectOption("Dual Wielder");
   await page
     .getByRole("tab", { name: "Skills & Talents", exact: true })

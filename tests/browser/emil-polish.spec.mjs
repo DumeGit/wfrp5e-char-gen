@@ -1,4 +1,4 @@
-import { test, expect, noOverflow, PC_STORAGE } from "./helpers.mjs";
+import { test, expect, noOverflow, PC_STORAGE, gmStep } from "./helpers.mjs";
 import { reviewFixtures } from "../ui-review-fixtures.mjs";
 const fixtures = reviewFixtures();
 async function openFixture(page, mode) {
@@ -123,7 +123,7 @@ test("Marijan digits and expanded custom names remain readable and editable @int
   await noOverflow(page);
   await page.screenshot({ path: info.outputPath("marijan-readable-rows.png") });
 });
-test("GM keeps selected identity above collapsed books and compact prose @interface @gm @mobile", async ({
+test("GM keeps selected identity above collapsed books and full Review @interface @gm @mobile", async ({
   page,
 }, info) => {
   await openFixture(page, "gm");
@@ -135,18 +135,11 @@ test("GM keeps selected identity above collapsed books and compact prose @interf
   await picker.locator(":scope > summary").click();
   await expect(page.locator("#gm-book-up-in-arms")).toBeVisible();
   await picker.locator(":scope > summary").click();
-  if (info.project.name === "mobile") {
+  if (info.project.name === "mobile")
     await page.setViewportSize({ width: 320, height: 844 });
-    await page.getByRole("button", { name: "Stat block", exact: true }).click();
-    await expect(page.locator(".gm-folio .gm-stat-name")).toBeHidden();
-  }
-  const description = page.locator(
-    '.gm-folio details[data-detail-key="gm:folio:description"]',
-  );
-  await expect(description).not.toHaveAttribute("open", "");
-  await description.locator("summary").click();
-  await expect(description.locator("p")).toBeVisible();
-  await description.locator("summary").click();
+  await gmStep(page, "Review & export");
+  await expect(page.locator(".gm-stat-block .gm-stat-name")).toBeVisible();
+  await expect(page.locator(".sheet")).toHaveCount(0);
   await noOverflow(page);
-  await page.screenshot({ path: info.outputPath("gm-compact-folio.png") });
+  await page.screenshot({ path: info.outputPath("gm-full-review.png") });
 });

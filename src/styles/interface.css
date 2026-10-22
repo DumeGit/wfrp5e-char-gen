@@ -26,7 +26,7 @@ summary:active,
 }
 
 /* Desktop chrome uses natural height: navigation must never become a scroller.
-   Short windows scroll the page instead; the folio keeps its independent scroll. */
+   Short windows scroll the page instead. */
 @media (min-width: 1001px) {
   .masthead {
     grid-template-columns: minmax(300px, 1fr) minmax(280px, 1.4fr) auto;
@@ -57,7 +57,7 @@ summary:active,
     margin-block: 16px;
   }
   .mm-workspace {
-    grid-template-columns: var(--layout-rail) minmax(0, 1fr) 270px;
+    grid-template-columns: var(--layout-rail) minmax(0, 1fr);
   }
   .rail,
   .gm-workspace .rail,
@@ -173,11 +173,7 @@ summary:active,
 }
 @media (min-width: 1500px) {
   .mm-workspace {
-    grid-template-columns: var(--layout-rail) minmax(0, 1fr) clamp(
-        310px,
-        12vw,
-        380px
-      );
+    grid-template-columns: var(--layout-rail) minmax(0, 1fr);
   }
 }
 
@@ -248,7 +244,6 @@ summary {
   touch-action: manipulation;
 }
 .rail :focus-visible,
-.sheet :focus-visible,
 .masthead :focus-visible,
 .mobile-workspace-bar :focus-visible {
   outline-color: var(--color-focus-on-dark);
@@ -293,11 +288,9 @@ summary {
   content: "›";
   transform: translateY(-50%) rotate(90deg);
 }
-.ui-disclosure.folio-section > summary,
 .ui-disclosure.mm-entry-disclosure > summary {
   padding-inline-start: 0;
 }
-.ui-disclosure.folio-section > summary::before,
 .ui-disclosure.mm-entry-disclosure > summary::before {
   display: none;
 }
@@ -356,26 +349,12 @@ summary {
 .mm-derived-heading label,
 .mm-starter-actions small,
 .mm-entries small,
-.mm-folio-stats span,
-.mm-folio > small,
-.mm-folio .mobile-folio-content > small,
 .career-progress > small,
 .xp-browser-controls .muted {
   font-size: var(--text-note);
   line-height: 1.45;
 }
-.sheet .stat-grid strong,
-.sheet .derived strong,
-.sheet .folio-xp strong,
-.sheet .folio-coin strong,
-.sheet .folio-line strong,
-.sheet .folio-value,
-.sheet .coin-display,
-.sheet .gm-stat-block .gm-stat-grid strong,
-.sheet .gm-stat-block td,
 .gm-derived strong,
-.mm-folio-stats strong,
-.mm-folio-resources dd,
 .mm-char-cell output,
 .advance-result,
 .xp-balance strong,
@@ -383,35 +362,6 @@ summary {
 input[type="number"] {
   font-family: var(--font-body);
   font-variant-numeric: tabular-nums;
-}
-.sheet .folio-xp strong {
-  font-size: 22px;
-}
-.sheet .folio-coin strong {
-  font-size: 20px;
-}
-.sheet .stat-grid strong,
-.sheet .derived strong {
-  font-size: 19px;
-  margin-top: 5px;
-}
-.sheet .stat-grid {
-  gap: 5px;
-  margin-block: 14px;
-}
-.sheet .stat-grid > div {
-  padding-block: 8px;
-}
-.sheet .derived {
-  gap: 12px;
-  padding-bottom: 14px;
-}
-.sheet .folio-list li {
-  align-items: baseline;
-}
-.sheet .folio-value {
-  min-width: 3ch;
-  text-align: right;
 }
 .chapter-title {
   margin-block: 14px 18px;
@@ -881,16 +831,14 @@ input[type="number"] {
 .save-status,
 .gm-rail-note,
 .gm-books small,
-.gm-stat-block small,
-.gm-folio-footer button {
+.gm-stat-block small {
   font-size: var(--text-note);
 }
 .gm-stat-grid strong {
   font-family: var(--font-body);
   font-variant-numeric: tabular-nums;
 }
-.mm-page small,
-.mm-page .mm-warnings {
+.mm-page small {
   font-size: var(--text-note);
   line-height: 1.45;
 }
@@ -959,23 +907,11 @@ input[type="number"] {
         env(safe-area-inset-right, 0px)
     );
   }
-  .gm-folio .gm-stat-name {
-    display: none;
-  }
-  .gm-folio .gm-stat-compact {
-    padding: 0;
-  }
-  .gm-folio .gm-stat-compact header {
-    margin-bottom: 10px;
-  }
 }
 
 @media print {
   .workspace,
   .mm-workspace {
     padding-inline: 0;
-  }
-  .gm-folio .gm-stat-name {
-    display: block;
   }
 }

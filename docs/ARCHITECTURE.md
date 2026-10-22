@@ -55,7 +55,7 @@ Listeners, media queries, observers and modal services clean up on departure. Pe
 
 `content/descriptions/catalogue.json` and `trait-rules.mjs` remain the only authored mechanical wording sources. Generation emits `public/data/`, `public/gm/data.json` and `src/engine/description-rules.mjs`. Stable IDs, sources, selective Legacy decisions, exclusions and editorial checks are unchanged. Standalone Rules and excluded references never enter public assets. See [DESCRIPTIONS.md](DESCRIPTIONS.md), [BOOKS.md](BOOKS.md) and the individual supplement documents.
 
-`character-result.mjs`, `gm/model.mjs`, `marijan/model.mjs` and the `manager/model.mjs` projection remain authoritative calculators. Folios, review, structured issues and exporters consume their results. Issue destinations come from structured detecting-rule metadata, never English message matching. Rule eligibility, prices, Fifth Edition adaptations, unknown values and manual overrides retain their existing boundaries.
+`character-result.mjs`, `gm/model.mjs`, `marijan/model.mjs` and the `manager/model.mjs` projection remain authoritative calculators. Review, structured issues and exporters consume their results. Issue destinations come from structured detecting-rule metadata, never English message matching. Rule eligibility, prices, Fifth Edition adaptations, unknown values and manual overrides retain their existing boundaries.
 
 PDF runtime and exporters load on demand. The supplied editable sheet, complete creation/XP record, NPC sheets and fixed/flexible Bestiary cards retain their calculation/layout code. Card measurement and drawing use the same boxes and fonts; flexible packing, conditional Desc and Soak rules remain intact. There is no startup import of PDF tools or a GM catalogue request on Player startup.
 
@@ -74,3 +74,6 @@ The root frame preserves the selected Player, Moonlit Vellum, Ash & Vellum and I
 The root PWA service is independent of creator remounts. The worker inventories the completed static build, distinguishes route HTML from App Router payloads, installs atomically and waits for explicit Update now. One previous cache can supply old immutable hashed chunks to an open tab; current route documents/payloads never mix releases. See [PWA.md](PWA.md) for headers, update verification and rollback.
 
 All testing remains local. Existing Node rules, content validation, real browser fixtures/downloads and production worker tests are retained; React tests exercise store isolation, cancellation and result parity. Browser servers serve only `out/` and use isolated drafts. Emulated desktop/phone/tablet checks are not physical-device certification. The dated migration baseline and its then-outstanding failure (fixed on 19 October; see TESTING.md) are recorded in [NEXTJS-MIGRATION-REPORT.md](NEXTJS-MIGRATION-REPORT.md).
+
+
+The retired folio UI, mobile toggle state/preferences and list adapter are removed. `gear-summary.mjs` retains the equipment aggregation consumed by the shared Player result and exports. Creators render only their rail/editor workspace, with no compact stat-block rendering branch.

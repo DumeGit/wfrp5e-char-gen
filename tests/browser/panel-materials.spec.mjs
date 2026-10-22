@@ -13,7 +13,7 @@ const surfaces = {
   marijan: { file: "vellum.svg", color: "rgb(36, 35, 38)" },
 };
 for (const [mode, expected] of Object.entries(surfaces)) {
-  test(`${mode} matching panel materials stay static, usable and print-free @interface @mobile`, async ({
+  test(`${mode} menu panel materials stay static, usable and print-free @interface @mobile`, async ({
     page,
   }, info) => {
     if (mode === "player") await openPC(page, { complete: true });
@@ -26,7 +26,7 @@ for (const [mode, expected] of Object.entries(surfaces)) {
       await page.getByLabel("Name", { exact: true }).fill("Albrecht");
     }
     const readSurfaces = () =>
-      page.locator(".rail, .sheet").evaluateAll((panels) =>
+      page.locator(".rail").evaluateAll((panels) =>
         panels.map((el) => {
           const s = getComputedStyle(el);
           return {
@@ -39,8 +39,8 @@ for (const [mode, expected] of Object.entries(surfaces)) {
         }),
       );
     const panels = await readSurfaces();
-    expect(panels).toHaveLength(2);
-    expect(panels[0]).toEqual(panels[1]);
+    expect(panels).toHaveLength(1);
+    await expect(page.locator(".sheet")).toHaveCount(0);
     expect(panels[0].image).toContain(
       `/assets/panel-textures/${expected.file}`,
     );
@@ -55,16 +55,6 @@ for (const [mode, expected] of Object.entries(surfaces)) {
     }, expected.file);
     expect(image.width).toBeGreaterThan(0);
     expect(image.height).toBeGreaterThan(0);
-    if (info.project.name === "mobile") {
-      await page
-        .locator(".mobile-workspace-bar")
-        .getByRole("button", {
-          name: mode === "gm" ? "Stat block" : "View character",
-          exact: true,
-        })
-        .click();
-      await expect(page.locator(".sheet")).toBeVisible();
-    }
     await noOverflow(page);
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({
@@ -75,11 +65,6 @@ for (const [mode, expected] of Object.entries(surfaces)) {
     await page.emulateMedia({ reducedMotion: "no-preference" });
     expect(await readSurfaces()).toEqual(panels);
     await page.emulateMedia({ media: "print", reducedMotion: "reduce" });
-    expect(
-      await page
-        .locator(".sheet")
-        .evaluate((el) => getComputedStyle(el).backgroundImage),
-    ).toBe("none");
     expect(
       await page
         .locator(".rail")

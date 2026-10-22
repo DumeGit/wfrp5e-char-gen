@@ -14,7 +14,7 @@ import { legacyTag } from "./legacy.mjs";
 import { legacyOption, legacyGear } from "../../../engine/legacy-character.mjs";
 
 // Presentation only. All scores, ranks, load effects and inventory come from
-// the same calculated result used by the folio and PDF exports.
+// the same calculated result used by Review and PDF exports.
 export function reviewSheet(R, s, snapshot, ui) {
   const { derived: d, equipment: eq, career: c, wallet } = snapshot;
   const {

@@ -7,7 +7,7 @@
 /* Layout only: colours, type, buttons and paper come from the shared skin. */
 .mm-workspace {
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr) 270px;
+  grid-template-columns: 210px minmax(0, 1fr);
   align-items: start;
 }
 .mm-page {
@@ -15,8 +15,7 @@
   container-name: marijan-editor;
   min-width: 0;
 }
-.mm-rail,
-.mm-folio {
+.mm-rail {
   position: sticky;
   top: 16px;
   max-height: calc(100dvh - 32px);
@@ -547,74 +546,6 @@
   color: var(--color-muted);
   margin: 14px 0;
 }
-.mm-folio-emblem {
-  display: grid;
-  place-items: center;
-}
-.mm-folio-emblem img {
-  width: 50px;
-  height: 48px;
-}
-.mm-folio h2 {
-  text-align: center;
-  font-size: 23px;
-  margin: 10px 0;
-  overflow-wrap: anywhere;
-}
-.mm-folio > p,
-.mm-folio .mobile-folio-content > p {
-  text-align: center;
-  font-size: 12px;
-}
-.mm-folio-stats {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
-}
-.mm-folio-stats > div {
-  text-align: center;
-  border: 1px solid var(--color-line);
-  border-radius: 3px;
-  padding: 5px 2px;
-}
-.mm-folio-stats span {
-  display: block;
-  font-size: 10px;
-}
-.mm-folio-stats strong {
-  font-size: 18px;
-}
-.mm-folio-resources > div {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--color-line);
-  padding: 5px 0;
-  font-size: 13px;
-}
-.mm-folio-resources dd {
-  font-weight: bold;
-}
-.mm-folio > button,
-.mm-folio .mobile-folio-content > button {
-  width: 100%;
-  margin: 12px 0;
-}
-.mm-folio > small,
-.mm-folio .mobile-folio-content > small {
-  display: block;
-  text-align: center;
-  font-size: 10px;
-}
-.mm-warnings {
-  font-size: 11px;
-  color: var(--color-muted);
-}
-.mm-warnings p {
-  padding: 8px;
-  border-left: 2px solid var(--color-gold);
-  background: var(--color-paper-raised);
-  margin: 7px 0;
-}
 .mm-page-footer {
   display: flex;
   gap: 10px;
@@ -622,12 +553,6 @@
   margin-top: 24px;
   padding-top: 20px;
   border-top: 1px solid var(--color-line);
-}
-.mm-entry-counts {
-  font-size: 12px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 4px;
 }
 .mm-modal-actions {
   display: flex;
@@ -660,26 +585,12 @@
 }
 @media (min-width: 1500px) {
   .mm-workspace {
-    grid-template-columns: 210px minmax(0, 1fr) 310px;
+    grid-template-columns: 210px minmax(0, 1fr);
   }
 }
 @media (max-width: 1200px) {
   .mm-workspace {
     grid-template-columns: 160px minmax(0, 1fr);
-  }
-  .mm-folio {
-    grid-column: 2;
-    position: static;
-    max-height: none;
-  }
-  .mm-folio-emblem {
-    display: none;
-  }
-  .mm-folio-stats {
-    grid-template-columns: repeat(10, 1fr);
-  }
-  .mm-folio #mm-warnings {
-    display: none;
   }
   .mm-resource-fields {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -803,20 +714,6 @@
   }
   .mm-entry-name small {
     font-size: 11px;
-  }
-  .mm-folio {
-    margin-top: 18px;
-  }
-  .mm-folio-stats {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  .mm-folio #mm-warnings {
-    display: block;
-  }
-  .mm-folio h2,
-  .mm-folio > p,
-  .mm-folio .mobile-folio-content > p {
-    display: none;
   }
   .mm-section {
     scroll-margin-top: 10px;

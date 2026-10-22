@@ -26,10 +26,6 @@
       .system-guide section {
         min-width: 0;
       }
-      .system-guide .sheet {
-        position: static;
-        max-height: none;
-      }
       .swatches {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -44,9 +40,6 @@
         font-size: 12px;
         overflow-wrap: anywhere;
       }
-      .system-guide .folio-list {
-        text-align: left;
-      }
       @media (max-width: 760px) {
         .system-guide {
           padding: 0 3%;
@@ -56,9 +49,6 @@
         }
         .system-guide .panel {
           padding: 22px 18px;
-        }
-        .system-guide .folio-crest {
-          display: grid;
         }
       }
     </style>
@@ -226,41 +216,6 @@
               ><span></span><span></span><span></span><span></span><span></span
               ><span></span><span></span><span></span>
             </div>
-          </section>
-          <section>
-            <h2>Leather folio</h2>
-            <aside class="sheet" aria-label="Example folio">
-              <div class="sheet-heading">
-                <span class="eyebrow">Character folio</span>
-                <div class="folio-crest" aria-hidden="true">
-                  <img
-                    class="ledger-emblem"
-                    src="/assets/ledger-emblem.svg"
-                    alt=""
-                  />
-                </div>
-                <h2>Walther Schmidt</h2>
-                <p>Human · Soldier</p>
-              </div>
-              <details class="folio-section">
-                <summary>
-                  <span class="folio-toggle" aria-hidden="true"></span
-                  ><span>Skills</span><span class="folio-count">2</span>
-                </summary>
-                <ul class="folio-list">
-                  <li>
-                    <span>Cool</span><strong class="folio-value">37</strong>
-                  </li>
-                  <li>
-                    <span>Melee (Basic)</span
-                    ><strong class="folio-value">46</strong>
-                  </li>
-                </ul>
-              </details>
-              <div class="folio-status">
-                <button class="quiet" type="button">Review & export</button>
-              </div>
-            </aside>
           </section>
         </div>
       </article>

@@ -24,7 +24,7 @@ import {
   suggestedName,
 } from "../src/engine/background.mjs";
 import { exportSheet } from "../src/engine/export.mjs";
-import { folioGear } from "../src/engine/folio.mjs";
+import { gearSummary } from "../src/engine/gear-summary.mjs";
 import { R, soldier } from "./fixture.mjs";
 const rich = () => {
   const s = soldier();
@@ -252,10 +252,10 @@ test("linking an owned purchase grants one Career box without duplicating its in
   const s = rich(),
     key = bought(s, "307:Breastplate"),
     index = M.career(R, s).levels[1].trappings.indexOf("Breastplate"),
-    before = folioGear(R, s).find((x) => x.name === "Breastplate").quantity;
+    before = gearSummary(R, s).find((x) => x.name === "Breastplate").quantity;
   recordAcquisition(R, s, 2, index, "Bought with starting funds", key);
   assert.equal(
-    folioGear(R, s).find((x) => x.name === "Breastplate").quantity,
+    gearSummary(R, s).find((x) => x.name === "Breastplate").quantity,
     before,
   );
   assert.equal(M.derive(R, s).earnedBoxes, 1);
@@ -265,7 +265,7 @@ test("linking an owned purchase grants one Career box without duplicating its in
   );
   s.ledger.pop();
   assert.equal(
-    folioGear(R, s).find((x) => x.name === "Breastplate").quantity,
+    gearSummary(R, s).find((x) => x.name === "Breastplate").quantity,
     before,
   );
 });

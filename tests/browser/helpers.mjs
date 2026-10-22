@@ -214,10 +214,15 @@ export async function fileUpload(page, trigger, object, filename) {
   });
 }
 export async function revealCreatorTool(page, trigger) {
-  if (!(await trigger.isVisible()))
-    await page
-      .getByRole("button", { name: "Open creator menu", exact: true })
-      .click();
+  const menu = page.getByRole("button", {
+    name: "Open creator menu",
+    exact: true,
+  });
+  // Reload can finish before React mounts the creator tools.
+  await expect
+    .poll(async () => (await trigger.isVisible()) || (await menu.isVisible()))
+    .toBe(true);
+  if (!(await trigger.isVisible())) await menu.click();
   await expect(trigger).toBeVisible();
 }
 export async function downloadBytes(page, trigger) {

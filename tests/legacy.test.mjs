@@ -8,7 +8,7 @@ import * as M from '../src/engine/rules.mjs';
 import {isLegacy,legacyTag,legacySources,legacyMechanic} from "./presentation-legacy.mjs";
 import {legacyOption,legacyContext,legacyMagic,legacyGear} from '../src/engine/legacy-character.mjs';
 import {sourceLabel} from '../src/engine/sources.mjs';
-import {folioData} from '../src/engine/folio.mjs';
+import {characterResult} from "../src/engine/character-result.mjs";
 import {bookPanel} from "./presentation-book-ui.mjs";
 import {elfOriginPanel,elfCareerPanel} from "./presentation-high-elf-ui.mjs";
 import {dwarfOriginPanel} from "./presentation-dwarf-guide-ui.mjs";
@@ -48,7 +48,7 @@ test('regional allocation tags do not contaminate unchanged core Talents, native
  const talent=M.freeTalents(B,s).find(x=>x!==s.freeTalent);
  assert.equal(isLegacy(B,legacyOption(B,s,'talent',talent)),false);
  assert.equal(isLegacy(B,legacyOption(B,s,'skill','Language (Reikspiel)')),false);
- const ordinary=soldier();assert.ok(Object.values(folioData(core,ordinary)).flat().every(x=>!x.legacy));
+ const ordinary=soldier();assert.ok(characterResult(core,ordinary).spells.every(x=>!isLegacy(core,legacyMagic(core,ordinary,x))));
  const refined={...soldier(),careerRefinement:{base:'soldier',career:'soldier',source:{book:'up-in-arms',page:9}}};
  assert.equal(isLegacy(B,legacyContext(B,refined)),false);
  s.origin='';s.career=B.careers.find(x=>x.name==='Greatsword').id;
@@ -81,10 +81,10 @@ test('XP records and patron grants tag the actual changed effect, not an entire 
  assert.equal(isLegacy(all,{type:'skill',name:'Cool',source:{book:'core',page:191},eligibility:{book:'high-elf',page:70}}),false);
 });
 
-test('mixed folio lists, source labels, save/load and book choices retain selective provenance',()=>{
+test('mixed spell results, source labels, save/load and book choices retain selective provenance',()=>{
  const B=assembleBooks(library,['blood-bramble']);const s=soldier();s.career='hedge-witch';s.ledger.push({type:'talent',name:'Arcane Magic (Hedgecraft)',cost:100,tick:true});s.spells=['Badwill'];M.purchaseSpell(B,s,'Fetterfetch','Arcane Magic (Hedgecraft)');s.books=bookSelection(B);s.version=2;
- const snapshot=JSON.stringify(s),f=folioData(B,s);
- assert.deepEqual(f.magic.find(x=>x.name==='Badwill'),{name:'Badwill'});assert.equal(f.magic.find(x=>x.name==='Fetterfetch').legacy,true);assert.match(f.magic.find(x=>x.name==='Fetterfetch').legacyTitle,/Difficulty/);
+ const snapshot=JSON.stringify(s),f=characterResult(B,s);
+ assert.equal(isLegacy(B,legacyMagic(B,s,f.spells.find(x=>x.name==='Badwill'))),false);const adapted=legacyMagic(B,s,f.spells.find(x=>x.name==='Fetterfetch'));assert.equal(isLegacy(B,adapted),true);assert.match(adapted.adaptation,/Difficulty/);
  assert.equal(JSON.stringify(s),snapshot);assert.deepEqual(catalogForCharacter(library,JSON.parse(snapshot)).selection,B.selection);
  const html=bookPanel(library,B,s);assert.ok(!html.match(/<strong>[^<]*legacy-tag/));assert.ok(!html.match(/High Elf Player’s Guide <span class="legacy-tag"/));
  assert.equal(sourceLabel(B,B.spells.find(x=>x.name==='Badwill')).includes('Legacy'),false);

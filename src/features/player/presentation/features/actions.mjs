@@ -1,7 +1,6 @@
 import {
   element,
   fragment,
-  attributes,
   joinNodes,
   combine,
   interpolate,
@@ -91,9 +90,6 @@ export function createFeature(getContext, setContext) {
       careerPreview,
       careerLimit,
       magicFilters,
-      choiceReturn,
-      summaryExpanded,
-      saveFolioPreferences,
       toast,
       newCharacter,
       library,
@@ -219,35 +215,6 @@ export function createFeature(getContext, setContext) {
     if (a === "browse-magic") {
       magicFilters.status = "all";
       render();
-      return;
-    }
-    if (a === "mobile-folio") {
-      setContext(
-        "choiceReturn",
-        (choiceReturn = { step: s.step, y: window.scrollY }),
-      );
-      setContext("summaryExpanded", (summaryExpanded = true));
-      saveFolioPreferences();
-      render();
-      $(".sheet")?.scrollIntoView({ block: "start", behavior: "instant" });
-      $(".mobile-workspace-bar [data-action=mobile-choice]")?.focus({
-        preventScroll: true,
-      });
-      return;
-    }
-    if (a === "mobile-choice") {
-      setContext("summaryExpanded", (summaryExpanded = false));
-      saveFolioPreferences();
-      render();
-      $(".mobile-workspace-bar [data-action=mobile-folio]")?.focus({
-        preventScroll: true,
-      });
-      if (choiceReturn?.step === s.step)
-        window.scrollTo({ top: choiceReturn.y, behavior: "instant" });
-      else
-        document
-          .querySelector("main h1")
-          ?.scrollIntoView({ block: "start", behavior: "instant" });
       return;
     }
     if (
@@ -723,10 +690,6 @@ export function createFeature(getContext, setContext) {
         }
     }
     if (a === "xp-tab") setContext("xpTab", (xpTab = el.dataset.tab));
-    if (a === "summary-toggle") {
-      setContext("summaryExpanded", (summaryExpanded = !summaryExpanded));
-      saveFolioPreferences();
-    }
     if (a === "set-xp") {
       const n = Number($("#xp").value);
       if (

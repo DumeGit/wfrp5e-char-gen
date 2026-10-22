@@ -39,7 +39,7 @@ import { marketCatalog, buyTrapping, purse } from "../src/engine/market.mjs";
 import { equipment, gearSlots } from "../src/engine/equipment.mjs";
 import * as PDFLib from "pdf-lib";
 import { exportSheet } from "../src/engine/export.mjs";
-import { folioData } from "../src/engine/folio.mjs";
+import {characterResult} from "../src/engine/character-result.mjs";
 const lib = library;
 const B = assembleBooks(lib, ["winds-of-magic"]);
 export function womCharacter(name = "Astromancer") {
@@ -644,7 +644,7 @@ test("ritual schema rejects invalid categories, duplicate Lores and unsupported 
     );
   }
 });
-test("new magic and Augury export with all 556 editable fields, sourced ritual XP and folio totals", async () => {
+test("new magic and Augury export with all 556 editable fields, sourced ritual XP and calculated totals", async () => {
   const s = promotedAstromancer();
   assert.deepEqual(M.validation(B, s), []);
   assert.deepEqual(freeMagicIssues(B, s, M.spellGrants(B, s)), []);
@@ -654,7 +654,7 @@ test("new magic and Augury export with all 556 editable fields, sourced ritual X
   assert.equal(d.earnedBoxes, 11);
   assert.equal(d.skills.Augury, 2);
   assert.equal(d.status, "Silver 4");
-  assert.ok(folioData(B, s).magic.some((x) => x.name === "Create Power Stone"));
+  assert.ok(characterResult(B, s).spells.some((x) => x.name === "Create Power Stone"));
   globalThis.PDFLib = PDFLib;
   const bytes = await exportSheet(
     B,

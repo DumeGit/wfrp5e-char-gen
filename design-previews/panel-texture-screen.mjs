@@ -15,14 +15,11 @@ document.getElementById("mode-style").href =
     : `/dist/${mode === "marijan" ? "marijan" : "gm"}/style.css`;
 document.getElementById("sample").className =
   `${snapshot.workspace} texture-pair`;
-document.getElementById("sample").innerHTML = snapshot.rail + snapshot.folio;
+document.getElementById("sample").innerHTML = snapshot.rail;
 // Static snapshots have no creator runtime, dice, storage, network services or saves.
 // Native disclosures remain inspectable; character-changing controls are inert.
 document.getElementById("sample").addEventListener("click", (e) => {
   if (e.target.closest("button,a")) e.preventDefault();
-});
-document.querySelectorAll(".sheet details").forEach((el, i) => {
-  el.open = i < 2;
 });
 if (params.has("thumbnail")) document.body.classList.add("is-thumbnail");
 const strength = document.getElementById("strength");

@@ -8,7 +8,7 @@ import {assembleBooks,bookSelection,catalogForCharacter,randomTable} from '../sr
 import {creationSpecies,careerAvailable} from '../src/engine/origins.mjs';
 import {spellChoices,cantGrants,knownCants,cantIssues,syncCants,freeMagicIssues,divineReference} from '../src/engine/archives-iii.mjs';
 import {cantPanel,originTalentChoice} from "./presentation-archives-iii-ui.mjs";
-import {folioData} from '../src/engine/folio.mjs';
+import {characterResult} from "../src/engine/character-result.mjs";
 import {exportSheet} from '../src/engine/export.mjs';
 const B=assembleBooks(library,['archives-iii']);
 export function iiiPriest(career='priest',talent='Bless (Old Faith)'){
@@ -83,7 +83,7 @@ test('Cants unlock at 1, 3 and 6 Colour Lore spells, cost nothing and prune afte
  assert.equal(cantGrants(B,s)[0].count,1);assert.match(cantIssues(B,s).join('\n'),/Choose 1 distinct Fire/);
  s.cants.choices.Fire=[B.cants.find(x=>x.lore==='Fire').id];assert.deepEqual(cantIssues(B,s),[]);
  for(let n=2;n<=6;n++){M.purchaseSpell(B,s,choices[n-2].name,talent);assert.equal(cantGrants(B,s)[0].count,n>=6?3:n>=3?2:1);}
- s.cants.choices.Fire=B.cants.filter(x=>x.lore==='Fire').map(x=>x.id);assert.equal(knownCants(B,s).length,3);assert.equal(folioData(B,s).magic.filter(x=>x.name.includes('Cant')).length,3);
+ s.cants.choices.Fire=B.cants.filter(x=>x.lore==='Fire').map(x=>x.id);assert.equal(knownCants(B,s).length,3);assert.equal(characterResult(B,s).cants.length,3);
  const before=M.derive(B,s);s.ledger.pop();syncCants(B,s);assert.equal(knownCants(B,s).length,2);assert.equal(s.cants.choices.Fire.length,2);assert.equal(M.derive(B,s).earnedBoxes,before.earnedBoxes);
  s.cants.enabled=false;assert.equal(knownCants(B,s).length,0);assert.ok(cantPanel(B,s).includes('checkbox'));assert.equal(cantPanel(R,s),'');
 });

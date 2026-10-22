@@ -94,7 +94,7 @@ a {
 }
 .workspace {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) 290px;
+  grid-template-columns: 220px minmax(0, 1fr);
   gap: 24px;
   max-width: 1700px;
   margin: auto;
@@ -120,8 +120,7 @@ a {
   text-transform: uppercase;
   color: var(--red);
 }
-.rail .eyebrow,
-.sheet .eyebrow {
+.rail .eyebrow {
   color: var(--brass);
 }
 .rail-heading strong {
@@ -228,9 +227,7 @@ a {
   margin: 0 8px;
   font-size: 12px;
 }
-.mobile-step,
-.mobile-totals,
-.summary-toggle {
+.mobile-step {
   display: none;
 }
 .panel {
@@ -359,8 +356,7 @@ input[type="search"] {
 }
 .primary,
 .secondary,
-.quiet,
-.summary-toggle {
+.quiet {
   border-radius: 5px;
   min-height: 44px;
   padding: 10px 15px;
@@ -468,129 +464,6 @@ input[type="search"] {
   margin-top: 5px;
   font-size: 12px;
   color: var(--muted);
-}
-.sheet {
-  position: sticky;
-  top: 24px;
-  background: var(--ink);
-  color: #f5f3e8;
-  border: 1px solid #202a2c;
-  border-top: 3px solid var(--brass);
-  border-radius: 7px;
-  padding: 24px;
-}
-.sheet h2 {
-  font-size: 29px;
-  margin: 10px 0;
-  overflow-wrap: anywhere;
-}
-.sheet-heading > p {
-  font-size: 14px;
-  color: #c2cdc3;
-  margin: 0 0 12px;
-}
-.profile-badge {
-  font-size: 12px;
-  display: inline-block;
-  padding: 5px 9px;
-  border: 1px solid #66766a;
-  border-radius: 4px;
-  color: #dbe5d8;
-}
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 6px;
-  margin: 23px 0;
-}
-.stat-grid > div {
-  text-align: center;
-  padding: 10px 2px;
-  background: #2b3737;
-  border-radius: 3px;
-  border-top: 3px solid transparent;
-}
-.stat-grid small {
-  display: block;
-  font-size: 12px;
-  color: #c9d3cb;
-  white-space: nowrap;
-}
-.stat-grid strong {
-  display: block;
-  font: 23px Georgia;
-  margin-top: 8px;
-}
-.derived {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 17px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #4e5c54;
-}
-.derived span,
-.folio-xp > span {
-  display: block;
-  font-size: 12px;
-  color: #c6d1c6;
-}
-.derived strong {
-  display: block;
-  font: 26px Georgia;
-  margin-top: 6px;
-}
-.folio-xp {
-  padding: 19px 0 10px;
-}
-.folio-xp > strong {
-  display: block;
-  font: 34px Georgia;
-  color: #efd39c;
-  margin: 8px 0;
-}
-.folio-xp strong small {
-  font:
-    12px "Segoe UI",
-    sans-serif;
-}
-.folio-xp p {
-  font-size: 12px;
-  margin: 5px 0;
-  color: #c1cdbf;
-}
-.folio-line {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  border-top: 1px solid #46534c;
-  padding: 13px 0;
-  font-size: 12px;
-  color: #cbd3c8;
-}
-.folio-line strong {
-  font-size: 14px;
-  color: #f5f6ed;
-}
-.folio-status {
-  border-top: 1px solid #46534c;
-  margin-top: 4px;
-  padding-top: 17px;
-}
-.folio-status > span {
-  display: block;
-  font-size: 12px;
-  margin-bottom: 12px;
-  color: #e2c78e;
-}
-.folio-status.complete > span {
-  color: #b2d4b5;
-}
-.folio-status button {
-  width: 100%;
-  border-color: #66766a;
-  background: #35453e;
-  color: #f0f4e7;
 }
 .step-footer {
   display: flex;
@@ -1178,28 +1051,6 @@ tr.career-characteristic td:first-child {
 tr.career-future td:first-child {
   border-left-style: dashed;
 }
-.sheet .career-level-1 {
-  --career-color: #d9868e;
-}
-.sheet .career-level-2 {
-  --career-color: #88c69f;
-}
-.sheet .career-level-3 {
-  --career-color: #b8c2cd;
-}
-.sheet .career-level-4 {
-  --career-color: #e6c471;
-}
-.sheet .stat-grid > .career-characteristic {
-  border-top-color: var(--career-color);
-}
-.sheet .stat-grid > .career-future {
-  border-top-style: dashed;
-  background: #253131;
-}
-.sheet .stat-grid > .career-current {
-  background: #3b4940;
-}
 .spell-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1343,34 +1194,6 @@ tr.career-future td:first-child {
 .header-actions .quiet:last-of-type {
   grid-column: 1 / -1;
 }
-.sheet {
-  padding: 20px;
-}
-.sheet .derived {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  padding-bottom: 17px;
-}
-.sheet .derived strong {
-  font-size: 23px;
-}
-.sheet .stat-grid {
-  margin: 19px 0;
-  gap: 5px;
-}
-.sheet .folio-xp {
-  padding: 15px 0 9px;
-}
-.sheet .folio-xp > strong {
-  font-size: 29px;
-  margin: 6px 0;
-}
-.sheet .folio-line {
-  padding: 11px 0;
-}
-.sheet .folio-status {
-  padding-top: 13px;
-}
 .review-section {
   margin-top: 15px;
 }
@@ -1396,35 +1219,6 @@ tr.career-future td:first-child {
   .rail {
     grid-column: 1;
     grid-row: 1 / span 2;
-  }
-  .sheet {
-    grid-column: 2;
-    position: static;
-    max-height: none;
-    overflow: visible;
-  }
-  .sheet-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 25px;
-  }
-  .sheet .stat-grid {
-    grid-column: 1;
-    margin: 20px 0;
-  }
-  .derived {
-    grid-column: 2;
-    grid-row: 1;
-    margin-top: 20px;
-  }
-  .folio-xp {
-    padding-bottom: 18px;
-  }
-  .folio-status {
-    grid-column: 1 / -1;
-  }
-  .sheet-heading > p {
-    margin-bottom: 10px;
   }
 }
 @media (max-width: 760px) {
@@ -1517,79 +1311,6 @@ tr.career-future td:first-child {
     font-size: 12px;
     margin: 8px 0;
     color: var(--muted);
-  }
-  .sheet {
-    order: 1;
-    position: static;
-    padding: 16px 18px;
-    border-radius: 6px;
-  }
-  .sheet h2 {
-    font-size: 22px;
-    padding-right: 110px;
-    margin: 0 0 7px;
-  }
-  .sheet .eyebrow {
-    display: none;
-  }
-  .sheet-heading {
-    position: relative;
-  }
-  .sheet-heading > p {
-    font-size: 12px;
-    margin: 0 0 7px;
-  }
-  .profile-badge {
-    font-size: 12px;
-    padding: 3px 6px;
-  }
-  .summary-toggle {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 12px;
-    min-height: 35px;
-    padding: 7px 10px;
-    background: #35453e;
-    color: #f8f9ec;
-    border-color: #758371;
-  }
-  .mobile-totals {
-    display: flex;
-    gap: 20px;
-    border-top: 1px solid #4b5a51;
-    margin-top: 12px;
-    padding-top: 11px;
-    color: #c4cfc4;
-    font-size: 12px;
-  }
-  .mobile-totals strong {
-    font-size: 14px;
-    color: #e8d2a4;
-    font-weight: 650;
-  }
-  .sheet-body {
-    display: none;
-  }
-  .sheet.expanded .sheet-body {
-    display: block;
-  }
-  .sheet .stat-grid {
-    margin-top: 18px;
-  }
-  .sheet .derived {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin: 0;
-  }
-  .sheet .derived strong {
-    font-size: 23px;
-  }
-  .sheet .folio-xp {
-    display: none;
-  }
-  .folio-line {
-    font-size: 12px;
   }
   .panel {
     order: 2;
@@ -1791,8 +1512,6 @@ tr.career-future td:first-child {
   .page-tabs,
   .header-actions,
   .actions,
-  .mobile-totals,
-  .summary-toggle,
   .stage-meta {
     display: none !important;
   }
@@ -1803,37 +1522,6 @@ tr.career-future td:first-child {
   .panel {
     border: 0;
     box-shadow: none;
-  }
-  .sheet {
-    break-before: page;
-    position: static;
-    background: white;
-    color: black;
-  }
-  .sheet-body {
-    display: block !important;
-  }
-  .sheet h2 {
-    padding: 0;
-  }
-  .sheet-heading > p,
-  .stat-grid small,
-  .derived span,
-  .folio-line,
-  .folio-line strong,
-  .folio-xp > span,
-  .folio-xp p,
-  .folio-status > span {
-    color: #333;
-  }
-  .sheet .stat-grid > div {
-    background: white !important;
-  }
-  .folio-xp > strong {
-    color: #333;
-  }
-  .folio-status button {
-    display: none;
   }
   body {
     background: white;
@@ -1866,8 +1554,7 @@ tr.career-future td:first-child {
   .rail .mobile-step {
     display: block;
   }
-  .rail,
-  .sheet {
+  .rail {
     max-height: none;
     overflow: visible;
   }
@@ -1912,101 +1599,6 @@ tr.career-future td:first-child {
   margin-top: 12px;
 }
 
-.sheet .folio-menus {
-  margin-top: 5px;
-}
-.sheet .folio-section {
-  border: 0;
-  border-top: 1px solid #46534c;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-}
-.sheet .folio-section > summary {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  cursor: pointer;
-  list-style: none;
-  padding: 13px 0;
-  margin: 0;
-  color: #eef1e8;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-.sheet .folio-section > summary::-webkit-details-marker {
-  display: none;
-}
-.folio-section > summary > span:nth-child(2) {
-  flex: 1;
-}
-.folio-toggle {
-  width: 12px;
-  color: #cdb17c;
-  font-size: 18px;
-  line-height: 1;
-}
-.folio-toggle::before {
-  content: "+";
-}
-.folio-section[open] > summary .folio-toggle::before {
-  content: "−";
-}
-.folio-count {
-  color: #ced8cb;
-  background: #34423b;
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 400;
-}
-.folio-list {
-  list-style: none;
-  margin: 0 0 10px;
-  padding: 0;
-}
-.folio-list li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 7px 0;
-  border-top: 1px solid #34413a;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #d5ddd2;
-}
-.folio-list li > span {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-.folio-value {
-  flex-shrink: 0;
-  font-size: 14px;
-  color: #edd19a;
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
-}
-.sheet .folio-empty {
-  font-size: 12px;
-  color: #b9c7b6;
-  margin: 0 0 13px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .sheet .folio-section > summary:hover {
-    color: #f5dbab;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .folio-status button:hover:not(:disabled) {
-    background: #465c50;
-    color: #fff4da;
-    border-color: #97a889;
-  }
-}
-
 .characteristic-label {
   display: flex;
   align-items: center;
@@ -2018,89 +1610,9 @@ tr.career-future td:first-child {
   margin: 0;
   white-space: nowrap;
 }
-
-.sheet {
-  position: static;
-  max-height: none;
-  overflow: visible;
-}
-.folio-balances {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 16px;
-  padding: 14px 0;
-  grid-column: 1 / -1;
-}
-.folio-balances .folio-xp {
-  padding: 0;
-}
-.folio-balances .folio-xp > strong {
-  font-size: 26px;
-  margin: 6px 0;
-}
-.folio-coin > span {
-  display: block;
-  font-size: 12px;
-  color: #c6d1c6;
-}
-.folio-coin > strong {
-  display: block;
-  font: 26px Georgia;
-  color: #efd39c;
-  margin: 6px 0;
-  overflow-wrap: anywhere;
-}
-.sheet .folio-line,
-.sheet .folio-menus {
-  grid-column: 1 / -1;
-}
-@media screen and (min-width: 1201px) {
-  .sheet {
-    position: sticky;
-    top: 24px;
-    max-height: calc(100dvh - 48px);
-    overflow-y: auto;
-    scrollbar-width: thin;
-  }
-}
 @media (min-width: 1500px) {
   .workspace {
-    grid-template-columns: 220px minmax(0, 1fr) clamp(350px, 20vw, 380px);
-  }
-}
-@media (min-width: 761px) {
-  .sheet h2 {
-    font-size: 26px;
-    margin: 7px 0;
-  }
-  .sheet-heading > p {
-    margin-bottom: 8px;
-  }
-  .sheet .profile-badge {
-    padding: 4px 8px;
-  }
-  .sheet .stat-grid {
-    margin: 16px 0;
-  }
-  .sheet .stat-grid > div {
-    padding: 8px 2px;
-  }
-  .sheet .stat-grid strong {
-    margin-top: 5px;
-  }
-  .sheet .derived {
-    padding-bottom: 12px;
-  }
-  .sheet .folio-line {
-    padding: 10px 0;
-  }
-  .sheet .folio-section > summary {
-    padding: 11px 0;
-  }
-}
-@media (max-width: 760px) {
-  .folio-balances {
-    display: none;
+    grid-template-columns: 220px minmax(0, 1fr);
   }
 }
 .masthead-actions {
@@ -2262,9 +1774,6 @@ tr.career-future td:first-child {
   font-size: 13px;
   line-height: 1.6;
   margin: 10px 0;
-}
-.sheet .packing-warning {
-  color: #f1d299;
 }
 .origin-species {
   display: flex;
@@ -2465,26 +1974,13 @@ tr.career-future td:first-child {
 .legacy-legend .legacy-tag {
   margin-left: 0;
 }
-.folio-list .legacy-tag {
-  font-size: 9px;
-  padding: 1px 4px;
-}
-.sheet .legacy-tag {
-  color: #e9dff7;
-  background: #544467;
-  border-color: #90809e;
-}
-.sheet-heading .legacy-tag {
-  margin-top: 4px;
-}
 .book-choice .legacy-tag {
   font-size: 10px;
 }
 
 /* Shared browsing and explanation controls; no game rules are defined here. */
 .source-button,
-.text-button,
-.folio-name-button {
+.text-button {
   font: inherit;
   border: 0;
   background: transparent;
@@ -2583,7 +2079,6 @@ button.legacy-tag {
 .book-setup-workspace {
   grid-template-columns: 220px minmax(0, 1fr);
 }
-.book-setup-workspace .sheet,
 .book-setup-workspace .stage-meta,
 .book-setup-workspace .steps {
   display: none;
@@ -2885,30 +2380,7 @@ button.legacy-tag {
 .review-warnings summary {
   font-weight: 650;
 }
-.stat-grid > .stat-calculation {
-  text-align: center;
-  padding: 8px 2px;
-  background: #2b3737;
-  border: 0;
-  border-top: 3px solid transparent;
-  border-radius: 3px;
-  color: inherit;
-  min-width: 0;
-  cursor: pointer;
-}
 @media (hover: hover) and (pointer: fine) {
-  .stat-grid > .stat-calculation:hover {
-    background: #3a4844;
-  }
-}
-.stat-grid strong {
-  pointer-events: none;
-}
-.stat-grid > .stat-calculation.career-characteristic {
-  border-top-color: var(--career-color);
-}
-.stat-grid > .stat-calculation.career-future {
-  border-top-style: dashed;
 }
 .derived-calculation {
   border: 0;
@@ -2922,27 +2394,6 @@ button.legacy-tag {
   .derived-calculation:hover {
     background: #314238;
   }
-}
-.folio-name-button {
-  color: inherit;
-  font-size: 14px;
-  text-decoration: none;
-}
-@media (hover: hover) and (pointer: fine) {
-  .folio-name-button:hover {
-    text-decoration: underline;
-    color: #f0d394;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .sheet .legacy-tag:hover {
-    background: #665579;
-    color: #fff;
-  }
-}
-.sheet .source-button {
-  color: #d9dccc;
 }
 .mobile-workspace-bar {
   display: none;
@@ -3120,9 +2571,6 @@ button.legacy-tag {
   .market-item > div:last-child {
     max-width: 110px;
   }
-  .sheet .stat-calculation {
-    padding: 8px 2px;
-  }
 }
 @media (max-width: 390px) {
   .browser-filters {
@@ -3142,24 +2590,6 @@ button.legacy-tag {
   .choice-undo {
     display: none !important;
   }
-}
-
-.capacity-calculation {
-  width: 100%;
-  background: transparent;
-  color: inherit;
-  border: 0;
-  padding: 12px 0;
-  text-align: left;
-  cursor: pointer;
-}
-@media (hover: hover) and (pointer: fine) {
-  .capacity-calculation:hover {
-    background: #314238;
-  }
-}
-.capacity-calculation small {
-  font: 12px system-ui;
 }
 .book-setup-workspace ~ .mobile-workspace-bar {
   display: none;
@@ -4662,7 +4092,7 @@ dialog.book-search-panel .search-panel-heading {
   --color-world: #201a16;
   --color-leather: #30221b;
   --color-leather-deep: #251c17;
-  /* One fixed, static Subtle material shared by menu and folio. */
+  /* One fixed, static Subtle material used by the menu. */
   --color-panel: #30221b;
   --surface-panel-texture: url(/assets/panel-textures/tavern-wood.svg);
   --surface-panel-texture-size: 384px 768px;
@@ -4715,8 +4145,6 @@ dialog.book-search-panel .search-panel-heading {
     ),
     var(--color-paper);
   --shadow-working-leaf: inset 0 0 24px #79532a18;
-  --surface-folio-crest: linear-gradient(135deg, #b8975f13, #17120f44);
-  --shadow-folio-crest: inset 0 0 0 2px #b4986026;
   --color-career-start-tint: #eee0d2;
   --color-career-later: #62646b;
   --color-career-later-tint: #e4e1d6;
@@ -4750,7 +4178,6 @@ dialog.book-search-panel .search-panel-heading {
   --control-height-compact: 36px;
   --layout-gutter: clamp(16px, 1.25vw, 40px);
   --layout-rail: 230px;
-  --layout-folio: 310px;
   --motion-control: 160ms;
   --motion-ash: 16s;
   --motion-mist: 22s;
@@ -4806,8 +4233,6 @@ dialog.book-search-panel .search-panel-heading {
     radial-gradient(ellipse at 40% 0, #ffffff18, transparent 75%),
     var(--color-paper);
   --shadow-working-leaf: inset 0 0 24px #07172d12;
-  --surface-folio-crest: #8ca8bb0c;
-  --shadow-folio-crest: inset 0 0 0 2px #afc3ce22;
 }
 
 /* Ash & Vellum: the selected Marijan palette. Layout remains shared. */
@@ -4821,8 +4246,6 @@ dialog.book-search-panel .search-panel-heading {
     radial-gradient(ellipse at 50% 0, #ffffff12, transparent 70%),
     var(--color-paper);
   --shadow-working-leaf: inset 0 0 30px #00000012;
-  --surface-folio-crest: linear-gradient(135deg, #ffffff12, #00000044);
-  --shadow-folio-crest: inset 0 0 0 2px #ffffff22;
   color-scheme: light;
   --color-world: #151517;
   --color-leather: #262629;
@@ -5151,7 +4574,7 @@ mark {
 /* Joined leather bindings and parchment leaf, with independent sticky rails. */
 .workspace,
 .mm-workspace {
-  grid-template-columns: var(--layout-rail) minmax(0, 1fr) var(--layout-folio);
+  grid-template-columns: var(--layout-rail) minmax(0, 1fr);
   max-width: none;
   gap: 0;
   padding: 0 var(--layout-gutter);
@@ -5160,8 +4583,7 @@ mark {
 .book-setup-workspace {
   grid-template-columns: var(--layout-rail) minmax(0, 1fr);
 }
-.rail,
-.sheet {
+.rail {
   position: sticky;
   top: 16px;
   border: var(--line-ornament);
@@ -5177,10 +4599,6 @@ mark {
 }
 .rail {
   padding: 14px 12px;
-}
-.sheet {
-  padding: 20px 16px;
-  max-height: calc(100dvh - 32px);
 }
 .panel {
   position: relative;
@@ -5220,8 +4638,7 @@ mark {
   font: 23px/1.2 var(--font-heading);
   color: var(--color-gold-light);
 }
-.rail .eyebrow,
-.sheet .eyebrow {
+.rail .eyebrow {
   font: 10px/1.5 var(--font-caps);
   letter-spacing: 0.05em;
   color: var(--color-gold);
@@ -5356,7 +4773,6 @@ mark {
 .rail .quiet,
 .masthead .quiet,
 .install-app,
-.summary-toggle,
 .mobile-workspace-bar .quiet {
   border-color: var(--color-line-dark);
   background: var(--color-leather-deep);
@@ -5367,7 +4783,6 @@ mark {
   .rail .quiet:hover:not(:disabled),
   .masthead .quiet:hover:not(:disabled),
   .install-app:hover,
-  .summary-toggle:hover,
   .mobile-workspace-bar .quiet:hover:not(:disabled) {
     background: var(--color-leather-raised);
     color: var(--color-on-crimson);
@@ -5376,125 +4791,8 @@ mark {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .rail > .text-button:hover,
-  .sheet .source-button:hover {
+  .rail > .text-button:hover {
     color: var(--color-gold-light);
-  }
-}
-
-.sheet-heading {
-  text-align: center;
-}
-.folio-crest {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 66px;
-  margin: 12px auto;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
-.folio-crest img {
-  width: 100%;
-  height: 100%;
-}
-.sheet h2 {
-  font: 700 23px/1.3 var(--font-caps);
-  color: var(--color-on-leather);
-  margin: 10px 0 8px;
-}
-.sheet-heading > p {
-  color: var(--color-on-leather-muted);
-  font-size: 13px;
-}
-.profile-badge {
-  border-color: var(--color-line-dark);
-  border-radius: 0;
-  color: var(--color-gold);
-  font-size: 11px;
-}
-.sheet .stat-calculation,
-.sheet .stat-grid > .career-current,
-.sheet .stat-grid > .career-future {
-  background: #d2b4790c;
-  border-radius: 0;
-  border-bottom: 1px solid var(--color-line-dark);
-}
-@media (hover: hover) and (pointer: fine) {
-  .sheet .stat-calculation:hover {
-    background: var(--color-leather-raised);
-  }
-}
-
-.stat-grid small,
-.derived span,
-.folio-xp > span,
-.folio-xp p,
-.folio-coin > span,
-.folio-line,
-.mobile-totals {
-  color: var(--color-on-leather-muted);
-}
-.stat-grid strong,
-.derived strong {
-  font-family: var(--font-heading);
-  color: var(--color-on-leather);
-}
-.derived,
-.folio-line,
-.folio-status,
-.sheet .folio-section,
-.folio-list li,
-.mobile-totals {
-  border-color: var(--color-line-dark);
-}
-.folio-xp > strong,
-.folio-coin > strong,
-.folio-value,
-.mobile-totals strong {
-  color: var(--color-gold-light);
-  font-family: var(--font-heading);
-}
-.folio-line strong,
-.sheet .folio-section > summary,
-.folio-list li {
-  color: var(--color-on-leather);
-}
-.folio-toggle,
-.folio-count {
-  color: var(--color-gold);
-}
-.folio-count {
-  background: transparent;
-}
-.sheet .folio-empty,
-.sheet .source-button {
-  color: var(--color-on-leather-muted);
-}
-.folio-status > span {
-  color: var(--color-gold-light);
-}
-.folio-status.complete > span {
-  color: var(--color-success-on-dark);
-}
-.folio-status button {
-  background: var(--color-crimson);
-  color: var(--color-on-crimson);
-  border-color: var(--color-gold-dark);
-}
-@media (hover: hover) and (pointer: fine) {
-  .folio-status button:hover:not(:disabled) {
-    background: var(--color-crimson-hover);
-    color: var(--color-on-crimson);
-    border-color: var(--color-gold);
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .derived-calculation:hover,
-  .capacity-calculation:hover {
-    background: var(--color-leather-raised);
   }
 }
 
@@ -5518,7 +4816,6 @@ textarea {
 .primary,
 .secondary,
 .quiet,
-.summary-toggle,
 .install-app {
   border-radius: var(--radius-control);
 }
@@ -5662,9 +4959,6 @@ textarea {
 .purchase-error,
 .packing-warning {
   color: var(--color-error) !important;
-}
-.sheet .packing-warning {
-  color: var(--color-gold-light) !important;
 }
 .check-row,
 .book-card,
@@ -5867,18 +5161,6 @@ summary::marker {
   }
 }
 
-.sheet .legacy-tag {
-  background: var(--color-legacy);
-  color: var(--color-legacy-surface);
-  border-color: var(--color-legacy-line);
-}
-@media (hover: hover) and (pointer: fine) {
-  .sheet .legacy-tag:hover {
-    background: var(--color-legacy-line);
-    color: var(--color-leather-deep);
-  }
-}
-
 .career-level-1 {
   --career-color: var(--color-crimson);
   --career-tint: var(--color-career-start-tint);
@@ -5894,18 +5176,6 @@ summary::marker {
 .career-level-4 {
   --career-color: var(--color-warning);
   --career-tint: var(--color-warning-surface);
-}
-.sheet .career-level-1 {
-  --career-color: var(--color-career-1-on-dark);
-}
-.sheet .career-level-2 {
-  --career-color: var(--color-career-2-on-dark);
-}
-.sheet .career-level-3 {
-  --career-color: var(--color-career-3-on-dark);
-}
-.sheet .career-level-4 {
-  --career-color: var(--color-gold-light);
 }
 
 /* Dialogs, nested references, installation and notices use the same paper. */
@@ -6033,25 +5303,10 @@ dialog::backdrop {
     opacity: 0.5;
   }
 }
-@media (min-width: 1500px) {
-  :root {
-    --layout-folio: clamp(350px, 14vw, 420px);
-  }
-}
 @media (max-width: 1200px) and (min-width: 761px) {
   .workspace,
   .book-setup-workspace {
     grid-template-columns: 185px minmax(0, 1fr);
-  }
-  .sheet {
-    position: static;
-    max-height: none;
-  }
-  .sheet-heading {
-    text-align: left;
-  }
-  .folio-crest {
-    display: none;
   }
 }
 /* Preserve the search field when decorative captions no longer fit beside it. */
@@ -6190,29 +5445,6 @@ dialog::backdrop {
   .rail-oath {
     display: none;
   }
-  .sheet {
-    position: static;
-    max-height: none;
-    border-width: 1px;
-    padding: 14px;
-  }
-  .sheet-heading {
-    text-align: left;
-  }
-  .folio-crest {
-    display: none;
-  }
-  .sheet h2 {
-    font: 24px/1.2 var(--font-heading);
-    padding-right: 112px;
-    margin-top: 0;
-  }
-  .sheet-heading > p {
-    font-size: 12px;
-  }
-  .sheet .stat-grid {
-    display: grid;
-  }
   .panel {
     padding: 23px 18px;
   }
@@ -6285,16 +5517,13 @@ dialog::backdrop {
   }
   .masthead,
   .rail,
-  .folio-crest,
   .rail-seal,
   .rail-oath,
   .panel::before,
-  .panel::after,
-  .sheet::before {
+  .panel::after {
     display: none !important;
   }
-  .panel,
-  .sheet {
+  .panel {
     position: static;
     border: 0;
     border-radius: 0;
@@ -6309,24 +5538,6 @@ dialog::backdrop {
     color: black;
     border-color: #666;
     box-shadow: none;
-  }
-  .sheet h2,
-  .sheet-heading > p,
-  .stat-grid small,
-  .stat-grid strong,
-  .derived span,
-  .derived strong,
-  .folio-line,
-  .folio-line strong,
-  .folio-xp > strong,
-  .folio-coin > strong,
-  .folio-list li,
-  .folio-value {
-    color: black;
-  }
-  .sheet .stat-calculation {
-    background: white;
-    border-color: #999;
   }
 }
 
@@ -6495,14 +5706,6 @@ dialog::backdrop {
     var(--color-crimson) 6%,
     var(--color-paper-raised)
   );
-}
-:root[data-theme="ash-vellum"] .mm-folio {
-  box-shadow:
-    inset 0 2px var(--color-crimson),
-    var(--shadow-surface);
-}
-:root[data-theme="ash-vellum"] .mm-folio-stats > div {
-  border-top-color: var(--color-crimson);
 }
 :root[data-theme="ash-vellum"] .creator-switch a[aria-current="page"] {
   background: var(--color-crimson);

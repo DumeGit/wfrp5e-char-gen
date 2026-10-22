@@ -9,7 +9,7 @@ import * as E from '../src/engine/high-elf.mjs';
 import {creationSpecies,careerAvailable} from '../src/engine/origins.mjs';
 import {marketCatalog,buyTrapping,purse} from '../src/engine/market.mjs';
 import {gearSlots,equipment} from '../src/engine/equipment.mjs';
-import {folioData} from '../src/engine/folio.mjs';
+import {characterResult} from "../src/engine/character-result.mjs";
 import {exportSheet} from '../src/engine/export.mjs';
 import {quoteRitual} from '../src/engine/winds-of-magic.mjs';
 import {elfOriginPanel,elfSkillsPanel,elfMagicShop,elfCareerPanel} from "./presentation-high-elf-ui.mjs";
@@ -132,11 +132,11 @@ test('Elven Arcane spells require both printed Lores, belong to latest Lore, and
 test('High Magic has no free grant and costs 200 XP per inclusive Intelligence Bonus band',()=>{
  const s=character('high-elf:career:mage');grant(s,'High Magic');assert.ok(!M.spellGrants(R,s).some(x=>x.category==='High Magic'));const list=R.spells.filter(x=>x.category==='High Magic'),ib=Math.floor(M.derive(R,s).stats.Int/10);
  for(let n=0;n<ib+2;n++){const q=M.quoteSpell(R,s,list[n].name);assert.equal(q.cost,n<=ib?200:400);assert.equal(q.tick,false);M.purchaseSpell(R,s,list[n].name);}
- assert.match(M.invalidTalent(R,s,'High Magic'),/Requires/);assert.equal(folioData(R,s).magic.length,ib+2);
+ assert.match(M.invalidTalent(R,s,'High Magic'),/Requires/);assert.equal(characterResult(R,s).spells.length,ib+2);
 });
 test('Sword-dancing grants one technique and escalation without tracker boxes; Talent caps use printed Bonuses',()=>{
  const s=character('high-elf:career:swordmaster');s.freeTalent='Sword-dancing';assert.equal(E.knownTechniques(R,s).length,1);const names=R.techniques.filter(x=>x.name!=='Ritual of Cleansing').map(x=>x.name);
- M.purchase(R,s,'technique',names[0]);M.purchase(R,s,'technique',names[1]);assert.deepEqual(s.ledger.map(x=>x.cost),[100,200]);assert.equal(M.derive(R,s).ticks,0);assert.equal(folioData(R,s).magic.length,3);s.ledger.pop();assert.equal(M.derive(R,s).spent,100);assert.equal(E.knownTechniques(R,s).length,2);
+ M.purchase(R,s,'technique',names[0]);M.purchase(R,s,'technique',names[1]);assert.deepEqual(s.ledger.map(x=>x.cost),[100,200]);assert.equal(M.derive(R,s).ticks,0);assert.equal(characterResult(R,s).techniques.length,3);s.ledger.pop();assert.equal(M.derive(R,s).spent,100);assert.equal(E.knownTechniques(R,s).length,2);
  const m=character();const cap=Math.floor(M.derive(R,m).stats.WS/10);for(let n=0;n<cap;n++)grant(m,'Martial Arts');assert.match(M.invalidTalent(R,m,'Martial Arts'),/limit reached/);assert.match(elfMagicShop(R,s),/Sword-dancing techniques/);
 });
 test('new equipment preserves qualified prices, Unique exclusions, inherent qualities and unresolved protection',()=>{

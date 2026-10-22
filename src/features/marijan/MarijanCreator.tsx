@@ -82,7 +82,6 @@ type Session = {
   disclosures: Record<string, boolean>;
   searches: Record<string, { query: string; book: string; count: number }>;
   careerQuery: string;
-  expanded: boolean;
 };
 const sessions = new Map<boolean, Session>();
 function getSession(verify: boolean) {
@@ -93,7 +92,6 @@ function getSession(verify: boolean) {
         GROUPS.map((g: string) => [g, { query: "", book: "", count: 8 }]),
       ),
       careerQuery: "",
-      expanded: false,
     });
   return sessions.get(verify)!;
 }
@@ -160,7 +158,6 @@ function MarijanSession({
   const [careerQuery, setCareerQuery] = useState(session.careerQuery);
   const [activeSearch, setActiveSearch] = useState("");
   const [compact, setCompact] = useState(false);
-  const [expanded, setExpanded] = useState(session.expanded);
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuTarget, setMenuTarget] = useState<HTMLElement | null>(null);
   const [dialog, setDialog] = useState<any>(null);
@@ -184,7 +181,6 @@ function MarijanSession({
   const toastTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
     undefined,
   );
-  const returnPosition = useRef(0);
   const rootRef = useRef<HTMLDivElement>(null);
   const { draft: s, result: r, catalogue, library } = snapshot;
 
@@ -384,26 +380,6 @@ function MarijanSession({
       heading?.setAttribute("tabindex", "-1");
       heading?.focus({ preventScroll: true });
     });
-  }
-  function setFolioView(next: boolean) {
-    setExpanded(next);
-    session.expanded = next;
-    if (next) {
-      returnPosition.current = window.scrollY;
-      requestAnimationFrame(() => {
-        if (active.current && session.expanded)
-          rootRef.current
-            ?.querySelector(".mm-folio")
-            ?.scrollIntoView({ block: "start", behavior: "instant" });
-      });
-    } else {
-      // Restore after React removes the folio, so native scroll anchoring does
-      // not move the editor again when its preceding panel disappears.
-      requestAnimationFrame(() => {
-        if (active.current && !session.expanded)
-          window.scrollTo({ top: returnPosition.current, behavior: "instant" });
-      });
-    }
   }
   function derived(keys: string[]) {
     return (
@@ -1600,6 +1576,18 @@ function MarijanSession({
               </Disclosure>
             </>,
           )}
+          {r.warnings.length > 0 && (
+            <Disclosure
+              {...detail("marijan:calculation-notes")}
+              summary="Calculation notes"
+            >
+              {r.warnings.map((warning: string) => (
+                <p key={warning} className="small">
+                  {warning}
+                </p>
+              ))}
+            </Disclosure>
+          )}
           <div className="mm-page-footer">
             <Action
               action="export"
@@ -1614,94 +1602,6 @@ function MarijanSession({
             </Action>
           </div>
         </main>
-        <aside
-          className={`sheet mm-folio${compact ? " mobile-fold-folio" : ""}${expanded ? " mobile-folio-open" : ""}`}
-          aria-label="Character summary"
-          hidden={compact && !expanded}
-          data-mobile-expanded={expanded ? "true" : "false"}
-        >
-          <div className="mobile-folio-heading">
-            <strong>{s.name || "Your character"}</strong>
-            <button
-              type="button"
-              className="quiet"
-              data-mobile-folio-toggle
-              aria-controls="mobile-folio-content"
-              aria-expanded={expanded}
-              onClick={() => setFolioView(!expanded)}
-            >
-              {expanded ? "Hide details" : "View character"}
-            </button>
-          </div>
-          <div className="mobile-folio-content" id="mobile-folio-content">
-            <div className="mm-folio-emblem">
-              <img
-                className="ledger-emblem"
-                src="/assets/ledger-emblem.svg"
-                alt=""
-                width="128"
-                height="144"
-              />
-            </div>
-            <h2 id="mm-folio-name">{s.name || "Your character"}</h2>
-            <p id="mm-folio-identity">
-              {s.species}
-              {r.career
-                ? ` · ${r.career.name}`
-                : s.career
-                  ? ` · ${s.career}`
-                  : ""}
-            </p>
-            <div className="mm-folio-stats">
-              {KEYS.map((key: string) => (
-                <div key={key}>
-                  <span>{key}</span>
-                  <strong data-result={`stat:${key}`}>{r.stats[key]}</strong>
-                </div>
-              ))}
-            </div>
-            <dl className="mm-folio-resources">
-              {["wounds", "movement", "capacity", "enc"].map((key) => (
-                <div key={key}>
-                  <dt>{LABELS[key]}</dt>
-                  <dd data-result={`derived:${key}`}>{score(r.values[key])}</dd>
-                </div>
-              ))}
-              <div>
-                <dt>Total XP</dt>
-                <dd data-result="xp">{score(r.xpTotal)}</dd>
-              </div>
-            </dl>
-            <div id="mm-counts">
-              <dl className="mm-entry-counts">
-                {GROUPS.map((group: string) => (
-                  <Fragment key={group}>
-                    <dt>
-                      {group === "gear"
-                        ? "Equipment"
-                        : group[0].toUpperCase() + group.slice(1)}
-                    </dt>
-                    <dd>{s.entries[group].length}</dd>
-                  </Fragment>
-                ))}
-              </dl>
-            </div>
-            <div id="mm-warnings" className="mm-warnings">
-              {r.warnings.map((warning: string, index: number) => (
-                <p key={index}>{warning}</p>
-              ))}
-            </div>
-            <Action
-              action="export"
-              className="primary"
-              disabled={!!busy}
-              onClick={() => void exportPDF()}
-            >
-              Export PDF
-            </Action>
-            <small>Marijan Mode · unrestricted</small>
-          </div>
-        </aside>
       </div>
       {compact && (
         <div
@@ -1711,16 +1611,6 @@ function MarijanSession({
         >
           {historyControls}
           <strong>{s.name || "Your character"}</strong>
-          <button
-            type="button"
-            className="quiet"
-            data-mobile-view
-            aria-controls="mobile-folio-content"
-            aria-expanded={expanded}
-            onClick={() => setFolioView(!expanded)}
-          >
-            {expanded ? "Back to editor" : "View character"}
-          </button>
         </div>
       )}
       {menuTarget ? createPortal(menuButton, menuTarget) : menuButton}

@@ -16,17 +16,11 @@ import { createResultReader } from "../../engine/character-result.mjs";
 
 import * as M from "../../engine/rules.mjs";
 import {
-  characteristicNames,
   steps,
   creationStepCount,
-  experienceStep,
-  reviewStep,
   restoreNavigation,
 } from "../../engine/ui.mjs";
 
-import { formatMoney } from "../../engine/market.mjs";
-
-import { penaltySummary } from "./presentation/creator-ui.mjs";
 import { setNamePart } from "../../engine/background.mjs";
 import {
   assembleBooks,
@@ -34,18 +28,12 @@ import {
   catalogForCharacter,
   randomTable,
 } from "../../engine/books.mjs";
-import { loadBookBundle } from "../../engine/book-bundle.mjs";
 
-import { legacyTag } from "./presentation/legacy.mjs";
-import { legacyContext } from "../../engine/legacy-character.mjs";
 import { bookSetup } from "./presentation/book-ui.mjs";
 
 import { issueTarget } from "../../engine/issue-targets.mjs";
 
-import { sheetSpecies } from "../../engine/origins.mjs";
-
 import { syncCants } from "../../engine/archives-iii.mjs";
-import { cantPanel } from "./presentation/archives-iii-ui.mjs";
 
 import { loadLibrary } from "../../services/content";
 import { element } from "../../components/react-elements";
@@ -77,8 +65,7 @@ export async function createPlayerStore(verification = false) {
   let s = newCharacter(),
     restoreIssue = "",
     setupOpen = !localStorage.getItem(STORAGE),
-    pendingChange = null,
-    choiceReturn = null;
+    pendingChange = null;
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE));
     if (saved) {
@@ -98,9 +85,7 @@ export async function createPlayerStore(verification = false) {
     R = assembleBooks(library);
     s = newCharacter();
   }
-  let folioOpen = new Set(),
-    summaryExpanded = false,
-    detailsState = new Map(),
+  let detailsState = new Map(),
     xpTab = "Characteristics",
     careerFilter = "All classes",
     skillSearch = "",
@@ -152,23 +137,6 @@ export async function createPlayerStore(verification = false) {
       status: "available",
     },
     fullAppendix = false;
-  try {
-    const prefs = JSON.parse(localStorage.getItem(STORAGE + "-folio"));
-    summaryExpanded = prefs?.expanded === true;
-    folioOpen = new Set(
-      (Array.isArray(prefs?.open) ? prefs.open : []).filter((x) =>
-        ["skills", "talents", "magic", "gear"].includes(x),
-      ),
-    );
-  } catch {}
-  function saveFolioPreferences() {
-    try {
-      localStorage.setItem(
-        STORAGE + "-folio",
-        JSON.stringify({ expanded: summaryExpanded, open: [...folioOpen] }),
-      );
-    } catch {}
-  }
   const $ = (q) => document.querySelector(q),
     esc = (v) =>
       String(v ?? "").replace(
@@ -198,7 +166,6 @@ export async function createPlayerStore(verification = false) {
   function getContext() {
     return {
       marketShop,
-      folioMenus,
       characteristicTitle,
       R,
       s,
@@ -244,7 +211,6 @@ export async function createPlayerStore(verification = false) {
       shopAffordable,
       openedMarketGroups,
       fullAppendix,
-      folioOpen,
       pendingChange,
       setupOpen,
       render,
@@ -253,9 +219,6 @@ export async function createPlayerStore(verification = false) {
       showCalculation,
       freeMagicPicker,
       jumpToIssue,
-      choiceReturn,
-      summaryExpanded,
-      saveFolioPreferences,
       toast,
       newCharacter,
       detailsState,
@@ -287,15 +250,6 @@ export async function createPlayerStore(verification = false) {
         break;
       case "pendingChange":
         pendingChange = value;
-        break;
-      case "choiceReturn":
-        choiceReturn = value;
-        break;
-      case "folioOpen":
-        folioOpen = value;
-        break;
-      case "summaryExpanded":
-        summaryExpanded = value;
         break;
       case "detailsState":
         detailsState = value;
@@ -388,14 +342,8 @@ export async function createPlayerStore(verification = false) {
     setContext,
   );
   const { marketShop, filterMarket } = create_shop_view(getContext, setContext);
-  const {
-    ledgerTable,
-    review,
-    issuePanel,
-    trackerBoxes,
-    folioMenus,
-    hasColourMagic,
-  } = create_review_view(getContext, setContext);
+  const { ledgerTable, review, issuePanel, trackerBoxes, hasColourMagic } =
+    create_review_view(getContext, setContext);
   const { resetDependent, changeCareer, rolledCareer } = create_creation_state(
     getContext,
     setContext,
@@ -446,8 +394,6 @@ export async function createPlayerStore(verification = false) {
   function render() {
     syncCants(R, s);
     const d = result().derived,
-      eq = result().equipment,
-      c = M.career(R, s),
       issues = errors(),
       pending = Array.from({ length: steps.length }, (_, i) =>
         issues.filter((x) => issueTarget(R, s, x).step === i),
@@ -491,8 +437,6 @@ export async function createPlayerStore(verification = false) {
         ).size;
     const node = workspaceShell({
       d,
-      eq,
-      c,
       issues,
       pending,
       body,
@@ -512,18 +456,6 @@ export async function createPlayerStore(verification = false) {
       }),
     );
   }
-  on(
-    "toggle",
-    (e) => {
-      const detail = e.target;
-      if (!detail.isConnected || !detail.dataset.folioSection) return;
-      const key = detail.dataset.folioSection;
-      if (detail.open) folioOpen.add(key);
-      else folioOpen.delete(key);
-      saveFolioPreferences();
-    },
-    true,
-  );
   on("click", (e) => {
     const el = e.target.closest("[data-action]");
     if (!el || el.disabled || el.closest("fieldset[disabled]")) return;
@@ -691,11 +623,6 @@ export async function createPlayerStore(verification = false) {
       const detail = e.target;
       if (detail.dataset.detailKey)
         detailsState.set(detail.dataset.detailKey, detail.open);
-      if (detail.dataset.folioSection) {
-        if (detail.open) folioOpen.add(detail.dataset.folioSection);
-        else folioOpen.delete(detail.dataset.folioSection);
-        saveFolioPreferences();
-      }
     },
     breakGroup: () => history.breakGroup(),
     cancelPending: () => {

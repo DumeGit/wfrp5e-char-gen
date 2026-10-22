@@ -99,8 +99,7 @@
     var(--color-paper);
   box-shadow: inset 0 0 24px #07172d12;
 }
-.rail::before,
-.sheet::before {
+.rail::before {
   background: radial-gradient(ellipse at 0 50%, #72aad514, transparent 25%);
 }
 .chapter-initial {
@@ -118,12 +117,6 @@
 }
 :root[data-palette="midnight"] .secondary:hover:not(:disabled) {
   color: var(--color-on-leather);
-}
-.sheet-heading {
-  background: #8ca8bb0c;
-}
-.sheet-heading .folio-crest {
-  box-shadow: inset 0 0 0 2px #afc3ce22;
 }
 input::placeholder {
   color: var(--color-muted);

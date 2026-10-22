@@ -44,12 +44,11 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       exact: true,
     });
     const rail = page.locator(".rail");
-    const folio = page.locator(".sheet");
+    await expect(page.locator(".sheet")).toHaveCount(0);
     const history = page.getByRole("group", { name: "Edit history" });
     await expect(history).toHaveCount(1);
     if (compact) {
       await expect(menu).toBeVisible();
-      await expect(folio).toBeHidden();
       expect((await rail.boundingBox()).height).toBeLessThan(85);
       await expect(
         page.locator(".mobile-workspace-bar .history-controls"),

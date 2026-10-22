@@ -80,11 +80,9 @@ function AbilityText({
 export function StatBlock({
   result: given,
   draft: givenDraft,
-  compact = false,
 }: {
   result?: any;
   draft?: any;
-  compact?: boolean;
 }) {
   const context = useBestiary(),
     r = given || context.result,
@@ -100,24 +98,14 @@ export function StatBlock({
         </p>
       </div>
     );
-  const section = (key: string, title: string, children: React.ReactNode) =>
-    compact ? (
-      <Details
-        key={key}
-        id={`folio:${key}`}
-        title={title}
-        initial={key === "attacks"}
-      >
-        {children}
-      </Details>
-    ) : (
-      <section key={key} className="gm-stat-section">
-        <h3>{title}</h3>
-        {children}
-      </section>
-    );
+  const section = (key: string, title: string, children: React.ReactNode) => (
+    <section key={key} className="gm-stat-section">
+      <h3>{title}</h3>
+      {children}
+    </section>
+  );
   return (
-    <article className={`gm-stat-block ${compact ? "gm-stat-compact" : ""}`}>
+    <article className="gm-stat-block">
       <header>
         <span className="eyebrow">{r.profile.category}</span>
         <h2 className="gm-stat-name">{r.name}</h2>
@@ -126,7 +114,7 @@ export function StatBlock({
             .filter(Boolean)
             .join(" · ")}
         </p>
-        {s.description && !compact && <p>{s.description}</p>}
+        {s.description && <p>{s.description}</p>}
         <Metadata entry={r.profile} />
       </header>
       <div className="gm-stat-grid">
@@ -151,9 +139,6 @@ export function StatBlock({
           <strong>{r.size}</strong>
         </div>
       </div>
-      {s.description &&
-        compact &&
-        section("description", "Description", <p>{s.description}</p>)}
       {section(
         "attacks",
         "Attacks",
@@ -248,7 +233,7 @@ export function StatBlock({
               <strong>
                 {x.name} ({x.lore})
               </strong>
-              {!compact && `: ${x.text}`}
+              {`: ${x.text}`}
             </p>
           )),
         )}
@@ -279,8 +264,7 @@ export function StatBlock({
           "Corruption",
           <p>{r.mutations.map((x: any) => x.name).join(", ")}</p>,
         )}
-      {!compact &&
-        s.includeNotes &&
+      {s.includeNotes &&
         s.notes &&
         section("notes", "GM notes", <p className="gm-prewrap">{s.notes}</p>)}
     </article>

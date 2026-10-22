@@ -31,8 +31,6 @@ const controls = {
   navigate: noop,
   jump: noop,
   fileActions: null,
-  folio: false,
-  setFolio: noop,
   tools: false,
   setTools: noop,
   message: "",

@@ -740,20 +740,6 @@
 .gm-workspace .creator-switch {
   flex-shrink: 0;
 }
-.gm-folio {
-  max-height: calc(100dvh - 48px);
-  overflow-y: auto;
-  position: sticky;
-  top: 24px;
-}
-.gm-folio .sheet-title {
-  border-bottom: 1px solid var(--color-line-dark);
-  padding-bottom: 15px;
-  margin-bottom: 18px;
-}
-.gm-folio .eyebrow {
-  color: var(--color-on-leather-muted);
-}
 .gm-stat-block {
   border: 1px solid var(--color-line);
   padding: 22px;
@@ -859,72 +845,6 @@
   min-width: 0;
   overflow-wrap: anywhere;
 }
-.gm-stat-compact {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--color-on-leather);
-  margin: 0;
-}
-.gm-stat-compact header h2 {
-  font-size: 28px;
-  color: var(--color-on-leather);
-  overflow-wrap: anywhere;
-}
-.gm-stat-compact header p {
-  color: var(--color-on-leather-muted);
-}
-.gm-stat-compact .gm-stat-grid {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  background: var(--color-leather-deep);
-  border-color: var(--color-line-dark);
-}
-.gm-stat-compact .gm-stat-grid > div {
-  border-color: var(--color-line-dark);
-  padding: 8px 2px;
-}
-.gm-stat-compact .gm-derived {
-  border-color: var(--color-line-dark);
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
-.gm-stat-compact details {
-  border-bottom: 1px solid var(--color-line-dark);
-  padding: 12px 0;
-  font-size: 12px;
-  line-height: 1.6;
-}
-.gm-stat-compact summary {
-  color: var(--color-on-leather);
-  font-weight: 600;
-  cursor: pointer;
-  line-height: 1.5;
-}
-.gm-stat-compact summary small {
-  font-weight: 400;
-  color: var(--color-on-leather-muted);
-  margin-left: 5px;
-}
-.gm-stat-compact .gm-detail-body {
-  padding: 8px 0 0;
-}
-.gm-stat-compact .gm-stat-attacks > div {
-  border-color: var(--color-line-dark);
-}
-.gm-stat-compact .gm-mini-list {
-  grid-template-columns: 1fr;
-}
-.gm-stat-compact .gm-empty {
-  border-color: var(--color-line-dark);
-  color: var(--color-on-leather-muted);
-  padding: 10px;
-}
-.gm-stat-compact .gm-small {
-  color: var(--color-on-leather-muted);
-}
-.gm-stat-compact .gm-ap-line {
-  line-height: 1.8;
-}
 .gm-stat-empty {
   padding: 10px 0 35px;
 }
@@ -936,19 +856,6 @@
   font-size: 13px;
   line-height: 1.7;
   color: var(--color-on-leather-muted);
-}
-.gm-folio-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 18px 0 0;
-  font-size: 11px;
-}
-.gm-folio-footer button {
-  font-size: 11px;
-  min-height: 36px;
-  padding: 7px 10px;
 }
 .gm-equipment-filters {
   display: flex;
@@ -1182,17 +1089,6 @@
   .gm-workspace {
     grid-template-columns: 180px minmax(0, 1fr);
   }
-  .gm-folio {
-    grid-column: 2;
-    position: static;
-    max-height: none;
-  }
-  .gm-folio .gm-stat-grid {
-    grid-template-columns: repeat(11, minmax(0, 1fr));
-  }
-  .gm-folio .gm-mini-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .gm-workspace .rail {
     grid-row: 1 / span 2;
   }
@@ -1366,29 +1262,6 @@
   .gm-mini-list {
     grid-template-columns: 1fr;
   }
-  .gm-folio {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    width: 100%;
-    padding: 20px;
-    margin-top: 14px;
-  }
-  .gm-folio .sheet-title {
-    display: none;
-  }
-  .gm-folio .gm-stat-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-  .gm-folio .gm-derived {
-    margin-bottom: 12px;
-  }
-  .gm-folio-footer {
-    display: none;
-  }
-  .gm-stat-compact header h2 {
-    font-size: 26px;
-  }
   .gm-mobile-bar {
     display: flex;
   }
@@ -1430,7 +1303,6 @@
   .gm-page-heading,
   .gm-issues,
   .gm-page-footer,
-  .gm-folio,
   .gm-review-status,
   .gm-export-options,
   .gm-mobile-bar {
@@ -1479,9 +1351,6 @@
   }
   .gm-workspace > .gm-panel {
     order: 1;
-  }
-  .gm-workspace > .gm-folio {
-    order: 2;
   }
   .gm-panel .gm-remove {
     min-height: 40px;

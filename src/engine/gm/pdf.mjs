@@ -4,7 +4,7 @@ import { abilityPresentation } from "./ability-presentation.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
 import { soakLines, gearLines } from "./export-sections.mjs";
 
-// The sheet consumes exactly the same result as review and the folio.
+// The sheet consumes exactly the same result as review.
 // Source conflicts, imported history and calculation commentary stay in the app.
 export function sheetSections(r, s) {
   return [

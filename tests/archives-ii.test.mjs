@@ -7,7 +7,7 @@ import {careerAvailable,creationBackground} from '../src/engine/origins.mjs';
 import {equipment,gearOptions} from '../src/engine/equipment.mjs';
 import {marketCatalog,buyTrapping,purse} from '../src/engine/market.mjs';
 import {chartXP,chartGrants,starEffect,rollStar,rollWitchling,chartRecord} from '../src/engine/astrology.mjs';
-import {folioData} from '../src/engine/folio.mjs';
+import {characterResult} from "../src/engine/character-result.mjs";
 import {bookPanel,tablePicker} from "./presentation-book-ui.mjs";
 import fs from 'node:fs';
 import * as PDFLib from 'pdf-lib';
@@ -90,7 +90,7 @@ test('Ironfist supplies its printed Shield AP while its weight is counted only o
  assert.ok(!gearOptions('Two-handed Weapon or Ogre Pistol',B).includes('Two-handed Weapon'));
 });
 test('Ogre casting uses Toughness and Great Maw grants only compatible spells',()=>{
- const s=ogre('archives-ii:career:ogre-butcher');assert.equal(M.skillInfo(B,'Language (Magick)',s).char,'T');assert.equal(folioData(B,s).skills.find(x=>x.name==='Language (Magick)').value,55);
+ const s=ogre('archives-ii:career:ogre-butcher');assert.equal(M.skillInfo(B,'Language (Magick)',s).char,'T');assert.equal(characterResult(B,s).skills.find(x=>x.name==='Language (Magick)').total,55);
  assert.equal(equipment(B,s).weapons.find(x=>x.label==='Hand Weapon (Cleaver)').enc,2);
  assert.match(M.invalidTalent(B,s,'Arcane Magic (Fire)'),/only/);assert.match(M.invalidTalent(B,soldier(),'Arcane Magic (The Great Maw)'),/Ogre/);
  assert.equal(M.invalidTalent(B,s,'Arcane Magic (The Great Maw)'),'');

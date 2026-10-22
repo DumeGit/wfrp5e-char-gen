@@ -6,11 +6,10 @@ import {
   combine,
   interpolate,
 } from "../../../../components/react-elements";
-import { ledgerEmblem } from "../design-system.mjs";
+
 import { creatorSwitch } from "../creator-switch.mjs";
-import * as M from "../../../../engine/rules.mjs";
+
 import {
-  characteristicNames,
   steps,
   creationStepCount,
   experienceStep,
@@ -18,28 +17,21 @@ import {
 } from "../../../../engine/ui.mjs";
 import { formatMoney } from "../../../../engine/market.mjs";
 import { penaltySummary } from "../creator-ui.mjs";
-import { legacyTag } from "../legacy.mjs";
-import { legacyContext } from "../../../../engine/legacy-character.mjs";
-import { issueTarget } from "../../../../engine/issue-targets.mjs";
-import { sheetSpecies } from "../../../../engine/origins.mjs";
+
 import { cantPanel } from "../archives-iii-ui.mjs";
 export function createFeature(getContext) {
-  function workspaceShell({ d, eq, c, issues, pending, body, ready }) {
+  function workspaceShell({ d, issues, pending, body, ready }) {
     const {
       setupOpen,
       select,
       s,
       button,
-      locked,
       esc,
-      hasColourMagic,
       R,
-      marketShop,
-      summaryExpanded,
       result,
-      folioMenus,
-      characteristicClass,
-      characteristicTitle,
+      locked,
+      hasColourMagic,
+      marketShop,
     } = getContext();
     return fragment(
       element(
@@ -318,336 +310,6 @@ export function createFeature(getContext) {
           ),
         ),
         "\n",
-        element(
-          "aside",
-          {
-            class: ["sheet ", summaryExpanded ? "expanded" : ""].join(""),
-            "aria-label": "Character summary",
-          },
-          "\n",
-          element(
-            "div",
-            { class: "sheet-heading" },
-            "\n",
-            element("span", { class: "eyebrow" }, "Character folio"),
-            element(
-              "div",
-              { class: "folio-crest", "aria-hidden": "true" },
-              ledgerEmblem(),
-            ),
-            "\n",
-            element("h2", {}, esc(s.name || "Your character")),
-            "\n",
-            element(
-              "p",
-              {},
-              esc(sheetSpecies(R, s) || "Choose a Species"),
-              s.species
-                ? interpolate(
-                    [" · ", " ", ""],
-                    [esc(c.name), legacyTag(R, legacyContext(R, s))],
-                  )
-                : "",
-            ),
-            "\n",
-            s.career
-              ? element(
-                  "span",
-                  { class: "profile-badge" },
-                  esc(c.levels[d.level - 1].name),
-                  " · ",
-                  d.status,
-                )
-              : "",
-            button(
-              "summary-toggle",
-              summaryExpanded ? "Hide details" : "View character",
-              interpolate(
-                ['aria-expanded="', '" aria-controls="sheet-body"'],
-                [summaryExpanded],
-              ),
-              "summary-toggle",
-            ),
-          ),
-          "\n",
-          element(
-            "div",
-            { class: "mobile-totals" },
-            "\n",
-            element(
-              "span",
-              {},
-              "\n",
-              element("strong", {}, d.remaining.toLocaleString()),
-              " XP left",
-            ),
-            "\n",
-            element(
-              "span",
-              {},
-              "\n",
-              element(
-                "strong",
-                {},
-                s.wealth ? formatMoney(result().wallet.remaining) : "—",
-              ),
-              " coin",
-            ),
-            "\n",
-          ),
-          "\n",
-          element(
-            "div",
-            { id: "sheet-body", class: "sheet-body" },
-            "\n",
-            !s.species
-              ? element(
-                  "p",
-                  { class: "empty" },
-                  "Choose or roll a Species in Origins to begin.",
-                )
-              : fragment(
-                  element(
-                    "div",
-                    { class: "stat-grid" },
-                    joinNodes(
-                      M.KEYS.map((k) =>
-                        element(
-                          "button",
-                          {
-                            type: "button",
-                            class: [
-                              "stat-calculation ",
-                              characteristicClass(k),
-                            ].join(""),
-                            "data-action": "calculation",
-                            "data-kind": "char",
-                            "data-name": k,
-                            title: esc(
-                              combine(
-                                combine(characteristicNames[k], ": "),
-                                characteristicTitle(k),
-                              ),
-                            ),
-                            "aria-label": [
-                              "Calculate ",
-                              esc(characteristicNames[k]),
-                            ].join(""),
-                          },
-                          "\n",
-                          element(
-                            "small",
-                            {},
-                            k,
-                            c.advanceScheme[k]
-                              ? interpolate([" · L", ""], [c.advanceScheme[k]])
-                              : "",
-                          ),
-                          "\n",
-                          element(
-                            "strong",
-                            {},
-                            k === "Ag" && eq.penalties.complete
-                              ? eq.penalties.agility
-                              : d.stats[k],
-                          ),
-                          "\n",
-                        ),
-                      ),
-                      "",
-                    ),
-                  ),
-                  "\n",
-                  element(
-                    "div",
-                    { class: "derived" },
-                    joinNodes(
-                      [
-                        ["Wounds", d.wounds],
-                        [
-                          "Movement",
-                          eq.penalties.complete
-                            ? eq.penalties.movement
-                            : d.movement,
-                        ],
-                        ["Fate", d.fate],
-                        ["Fortune", d.fortune],
-                      ].map(([k, v]) =>
-                        element(
-                          "button",
-                          {
-                            type: "button",
-                            class: "derived-calculation",
-                            "data-action": "calculation",
-                            "data-kind": "derived",
-                            "data-name": k,
-                          },
-                          "\n",
-                          element(
-                            "span",
-                            { title: k },
-                            k === "Movement" ? "Move" : k,
-                          ),
-                          "\n",
-                          element("strong", {}, v),
-                          "\n",
-                        ),
-                      ),
-                      "",
-                    ),
-                  ),
-                  "\n",
-                  element(
-                    "div",
-                    { class: "folio-balances" },
-                    "\n",
-                    element(
-                      "div",
-                      { class: "folio-xp" },
-                      "\n",
-                      element("span", {}, "XP remaining"),
-                      "\n",
-                      element(
-                        "strong",
-                        {},
-                        d.remaining.toLocaleString(),
-                        " ",
-                        element("small", {}, "XP"),
-                        "\n",
-                      ),
-                      "\n",
-                      element(
-                        "p",
-                        {},
-                        d.spent.toLocaleString(),
-                        " spent of ",
-                        d.xpTotal.toLocaleString(),
-                        d.xpBonus
-                          ? interpolate([" (+", " star sign)"], [d.xpBonus])
-                          : "",
-                      ),
-                      "\n",
-                    ),
-                    "\n",
-                    element(
-                      "div",
-                      { class: "folio-coin" },
-                      "\n",
-                      element("span", {}, "Remaining coin"),
-                      "\n",
-                      element(
-                        "strong",
-                        {},
-                        s.wealth
-                          ? formatMoney(result().wallet.remaining)
-                          : "Not rolled",
-                      ),
-                      "\n",
-                    ),
-                    "\n",
-                  ),
-                  "\n",
-                  element(
-                    "div",
-                    { class: "folio-line" },
-                    "\n",
-                    element("span", {}, "Current tracker"),
-                    "\n",
-                    element(
-                      "strong",
-                      {},
-                      d.ticks,
-                      " / ",
-                      [10, 12, 14, "—"][d.level - 1],
-                    ),
-                    "\n",
-                  ),
-                  "\n",
-                  element(
-                    "button",
-                    {
-                      type: "button",
-                      class: "folio-line capacity-calculation",
-                      "data-action": "calculation",
-                      "data-kind": "derived",
-                      "data-name": "Capacity",
-                      "aria-label": "How is carrying capacity calculated?",
-                    },
-                    "\n",
-                    element(
-                      "span",
-                      {},
-                      eq.unknown.length
-                        ? "Known Enc / capacity"
-                        : "Enc / capacity",
-                    ),
-                    "\n",
-                    element(
-                      "strong",
-                      {},
-                      eq.total,
-                      " / ",
-                      d.capacity,
-                      " ",
-                      element("small", {}, "ⓘ"),
-                      "\n",
-                    ),
-                    "\n",
-                  ),
-                  eq.penalties.complete && eq.penalties.band
-                    ? element(
-                        "p",
-                        { class: "packing-warning" },
-                        eq.penalties.immobile
-                          ? "Unable to move"
-                          : interpolate(
-                              ["Load: Move ", ", Ag ", ""],
-                              [eq.penalties.movement, eq.penalties.agility],
-                            ),
-                        " (p. 299)",
-                      )
-                    : "",
-                  folioMenus(),
-                ),
-            element(
-              "div",
-              {
-                class: [
-                  "folio-status ",
-                  issues.length ? "pending" : "complete",
-                ].join(""),
-              },
-              "\n",
-              element(
-                "span",
-                {},
-                issues.length
-                  ? interpolate(["", " choices remaining"], [issues.length])
-                  : "✓ Creation complete",
-              ),
-              issues.length
-                ? button(
-                    "issue",
-                    "Finish choices",
-                    interpolate(
-                      ['data-step="', '" data-target="', '"'],
-                      [
-                        issueTarget(R, s, issues[0]).step,
-                        esc(issueTarget(R, s, issues[0]).target),
-                      ],
-                    ),
-                  )
-                : button(
-                    "step",
-                    "Review & export",
-                    interpolate(['data-step="', '"'], [reviewStep]),
-                  ),
-            ),
-            "\n",
-          ),
-          "\n",
-        ),
-        "\n",
       ),
       "\n",
       element(
@@ -671,9 +333,6 @@ export function createFeature(getContext) {
             s.wealth ? formatMoney(result().wallet.remaining) : "Coin unrolled",
           ),
         ),
-        summaryExpanded
-          ? button("mobile-choice", "Back to choice")
-          : button("mobile-folio", "View character"),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import { folioGear } from "./folio-gear.mjs";
+import { gearSummary } from "./gear-summary.mjs";
 import * as M from "./rules.mjs";
 import { equipment, gearSlots } from "./equipment.mjs";
 import { purse, purchaseItem } from "./market.mjs";
@@ -151,7 +151,7 @@ export function characterResult(R, s) {
     derived,
     equipment: eq,
     wallet,
-    gearSummary: folioGear(R, s),
+    gearSummary: gearSummary(R, s),
     career,
     skills: calculateSkills(R, s, derived, eq.penalties),
     spells: M.knownSpells(R, s),
