@@ -65,7 +65,7 @@ export function PwaControls() {
     };
   }, []);
   const status = state.development
-    ? "Offline access is available in the published app."
+    ? null
     : state.failed
       ? "Offline access could not be prepared. Reopen the app online to retry."
       : state.ready
@@ -91,9 +91,11 @@ export function PwaControls() {
       ) : (
         <span hidden>{installButton}</span>
       )}
-      <p id="pwa-status" className="pwa-status" role="status">
-        {status}
-      </p>
+      {status && (
+        <p id="pwa-status" className="pwa-status" role="status">
+          {status}
+        </p>
+      )}
       <section
         id="pwa-update"
         className={`pwa-update ${styles.update}`}

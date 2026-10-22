@@ -24,6 +24,8 @@ Activation retains the current complete cache and at most one previous ledger ca
 
 `src/services/pwa.ts` owns registration, installation prompts, online/offline status and waiting-update state. It accesses browser APIs only when connected from a client effect and disposes listeners and late asynchronous callbacks. The singleton `PwaControls` in the root layout keeps these services alive across client navigation. Its one install button is rendered into the active workspace's `data-install-slot`; it hides in an installed window. Native installation instructions remain available when a browser supplies no install prompt.
 
+Development previews omit the offline-status paragraph entirely, including its spacing, to keep the footer compact. Published builds retain their preparation, ready, offline and failure status messages.
+
 Before activation, **Update now** dispatches `wfrp-before-update`. Each mounted creator persists its current draft. Async stores can register promises through `event.detail.waitUntil`; the manager's application-lifetime guard waits for its serialized writes, including after navigation away. Any unresolved conflict prevents activation and displays recovery guidance. After saves finish, the service sends `APPLY_UPDATE` to the waiting worker. A controller change reloads only after the user chose the update. **Later** dismisses the offer for the current session. Update controls remain above the phone history bar. Character databases, draft keys, save formats and independent histories are unrelated to cache-version changes. Offline installation is not a character backup; download individual JSON or a manager library backup before moving devices or clearing browser storage.
 
 ## Local verification
