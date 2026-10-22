@@ -1,6 +1,6 @@
 # Unified workspace and menu proposal
 
-22 October 2026. The user selected A as the direction to refine, asking for more rustic Old World character. These remain interactive examples; the production layout is unchanged.
+22 October 2026. The user selected A with rustic parchment, then requested wood panelling instead of leather. The authoritative implementation and continuing design contract is now [UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md). This document preserves the initial comparison; the production layout is unchanged.
 
 ## Brief and direction
 
@@ -10,7 +10,7 @@ The live comparison is `design-previews/unified-layout.html`. Three treatments s
 
 | Study | Character | Geometry | Tradeoff |
 | --- | --- | --- | --- |
-| A · Imperial Desk — selected for refinement | Worn stitched leather, tarnished brass, aged parchment and restrained inkwork; Original finish retained for comparison | 296px sidebar; joined editor; 80px illustrated masthead; 44px navigation rows | Clean information hierarchy with more tactile Old World character |
+| A · Imperial Desk — selected | Worn oak panelling, tarnished brass, aged parchment and restrained inkwork; Original finish retained for comparison | 296px sidebar; joined editor; 80px illustrated masthead; 44px navigation rows | Clean information hierarchy with more tactile Old World character |
 | B · Guild Register | Light ash parchment menu, ink labels, oxblood selection ribbon and serif navigation | 312px sidebar; inset editor; 88px masthead; 48px navigation rows | Softer and more spacious; lighter division between navigation and working paper |
 | C · War Room | Slate framing, chalk parchment and restrained mode accents; compact toolbar | 280px sidebar; flush workspace; 68px masthead; 44px navigation rows | Highest density and clearest application feel; less ornamental |
 
@@ -41,9 +41,9 @@ All modes use New & import, Save & export and More in the same order. The dialog
 
 ## Visual language
 
-The default Weathered A finish uses charcoal leather `#2b251f`, recessed shell `#201c17`, parchment `#eddfbf`, dark ink `#352b20`, supporting ink `#604b33` and tarnished brass `#c4a36b`. Original A remains available in the Finish selector and through `?study=a&finish=clean`. Mode accents remain contextual: Player oxblood, Bestiary muted cobalt, Marijan ash/oxblood, manager olive. Status colours retain their meanings independently of mode.
+The default Weathered A finish uses dark oak panelling over `#2b251f`, recessed shell `#201c17`, parchment `#eddfbf`, dark ink `#352b20`, supporting ink `#604b33` and tarnished brass `#c4a36b`. Original A remains available in the Finish selector and through `?study=a&finish=clean`. Mode accents remain contextual: Player oxblood, Bestiary muted cobalt, Marijan ash/oxblood, manager olive. Status colours retain their meanings independently of mode.
 
-Weathering belongs to the materials, without changing the layout or making controls irregular to operate. Original static SVGs provide paper fibres/mottling, worn leather and a small engraved ornament. Margins have darkened edges, a narrow punched binding seam, stitched leather tooling and tiny brass rivets. A very faint existing heraldic emblem reads as archival ink at the lower page edge. Headings use one Gothic initial; source labels resemble softly impressed stamps. Text, controls, hit targets and tables stay straight and readable. Paper focus rings use dark brown, while the dark menu retains its bright focus treatment. No noise animation, moving decoration, new book content or production assets are introduced. The source materials and provenance are documented in `design-previews/UNIFIED-MATERIALS.md`.
+Weathering belongs to the materials, without changing the layout or making controls irregular to operate. Original static SVGs provide paper fibres/mottling and a small engraved ornament; the menu reuses the approved tavern-oak SVG in all four A mode samples. Margins have darkened edges, a narrow punched binding seam, carved panel rules and tiny brass rivets. A very faint existing heraldic emblem reads as archival ink at the lower page edge. Headings use one Gothic initial; source labels resemble softly impressed stamps. Text, controls, hit targets and tables stay straight and readable. Paper focus rings use dark brown, while the dark menu retains its bright focus treatment. No noise animation, moving decoration, new book content or production assets are introduced. The source materials and provenance are documented in `design-previews/UNIFIED-MATERIALS.md`.
 
 Use the existing Ledger Display only for the application name, Ledger Text for page headings, and Segoe UI/system UI for controls and numeric content. Body controls are 14–16px; supporting text at least 12px; phone inputs at least 16px. Navigation icons share a 20px box and one stroke weight. Selected rows use fill, a leading marker and text weight, not colour alone. Hover does not move rows; focus is visible independently. No sound, glint or continuous menu animation.
 

@@ -36,7 +36,8 @@ For prose-only changes, check factual source paths, local links and stale claims
 - [Description editorial review — 16 October 2026](DESCRIPTION-REVIEW.md) — `docs/DESCRIPTION-REVIEW.md`
 - [Canonical descriptions](DESCRIPTIONS.md) — `docs/DESCRIPTIONS.md`
 - [Black Banner design system — v1](DESIGN-SYSTEM.md) — `docs/DESIGN-SYSTEM.md`
-- [Unified layout and menu proposal](UNIFIED-LAYOUT-PROPOSAL.md) — three interactive studies awaiting selection; production layout unchanged
+- [Unified design implementation contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) — approved A with oak and parchment; detailed target, migration tracker and future consistency rules; production migration pending
+- [Unified layout studies](UNIFIED-LAYOUT-PROPOSAL.md) — initial comparison and selected visual direction
 - [Bestiary Workshop](GM-WORKSHOP.md) — `docs/GM-WORKSHOP.md`
 - [Legacy: actual Fifth Edition adaptations](LEGACY.md) — `docs/LEGACY.md`
 - [Marijan Mode](MARIJAN-MODE.md) — `docs/MARIJAN-MODE.md`

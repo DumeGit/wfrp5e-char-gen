@@ -111,7 +111,7 @@ const modes = {
   },
 };
 const studies = {
-  a: "A well-used campaign ledger: aged parchment, stitched leather and tarnished brass. The clean 296px menu and readable controls stay intact.",
+  a: "A well-used campaign ledger: aged parchment, worn oak panelling and tarnished brass. The clean 296px menu and readable controls stay intact.",
   b: "A 312px parchment menu with larger serif navigation and a framed working page. A gentler, more book-like direction.",
   c: "A 280px slate menu, a shorter masthead and a tighter toolbar. The most compact, practical direction for frequent use.",
 };

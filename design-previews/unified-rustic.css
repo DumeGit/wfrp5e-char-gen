@@ -19,7 +19,7 @@
   --shell-line: #67523a;
   --shell-muted: #cabb9f;
   --brass: #c4a36b;
-  --texture: url(unified-leather.svg);
+  --texture: url(../public/assets/panel-textures/tavern-wood.svg);
   --accent-wash: color-mix(in srgb, var(--accent) 9%, #eaddbd);
   --nav-fill: color-mix(in srgb, var(--accent) 24%, #352a21);
   border-color: #a58956;
@@ -69,9 +69,10 @@
       transparent 93%,
       #0c0908c9
     ),
-    url(unified-leather.svg) 0 0 / 384px 512px repeat,
+    url(../public/assets/panel-textures/tavern-wood.svg) 0 0 / 384px 768px
+      repeat,
     var(--shell);
-  background-blend-mode: normal;
+  background-blend-mode: normal, soft-light, normal;
   border-right: 4px solid #21160f;
   box-shadow:
     inset 0 0 0 1px #a98a5126,
@@ -82,8 +83,9 @@
   position: absolute;
   z-index: -1;
   inset: 8px 6px;
-  border: 1px dashed #baa06c45;
-  border-radius: 5px;
+  border: 1px solid #baa06c45;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #130c0738;
   pointer-events: none;
 }
 [data-study="a"][data-finish="weathered"] .workspace-switch > summary {
@@ -342,7 +344,7 @@
 }
 [data-study="a"][data-finish="weathered"] .app-footer {
   background:
-    url(unified-leather.svg) center / 384px 512px,
+    url(../public/assets/panel-textures/tavern-wood.svg) center / 384px 768px,
     #211a14;
   border-top: 3px double #977340;
 }

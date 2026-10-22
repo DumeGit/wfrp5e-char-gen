@@ -33,7 +33,7 @@ http
         return res.end();
       }
       if (
-        !/^\/design-previews\/unified-(?:layout\.(?:html|css|mjs)|rustic\.css|(?:parchment|leather|ornament)\.svg)$/.test(
+        !/^\/design-previews\/unified-(?:layout\.(?:html|css|mjs)|rustic\.css|(?:parchment|ornament)\.svg)$/.test(
           pathname,
         ) &&
         !pathname.startsWith("/public/assets/")

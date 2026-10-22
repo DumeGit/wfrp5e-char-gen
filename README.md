@@ -2,7 +2,7 @@
 
 Character and creature folios have been removed from every creator, including mobile controls and design previews. Desktop uses a joined rail and flexible editor; compact screens show the editor directly with history and existing balances/status. Complete character summaries remain in Review & export, and PDFs retain all equipment and abilities.
 
-Three proposed unified menu/layout studies are available without changing the live app: [proposal](docs/UNIFIED-LAYOUT-PROPOSAL.md) and [local preview instructions](docs/DESIGN-PREVIEWS.md). They compare Imperial Desk, Guild Register and War Room across all four modes. The user selected A for rustic refinement; its Weathered finish adds aged parchment and worn leather, with Original retained for comparison.
+The approved next shared design is **A · Imperial Desk with oak panelling and aged parchment**. Its [implementation and continuing design contract](docs/UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) defines shared components, navigation, responsive/focus behavior, migration checkpoints and acceptance checks. The [standalone studies](docs/DESIGN-PREVIEWS.md) remain available with Original/Weathered comparison; the production migration has not started.
 
 Documentation checked against the app on **22 October 2026**. Start with the [documentation index](docs/README.md) for current guides, generated inventories and dated implementation reports.
 

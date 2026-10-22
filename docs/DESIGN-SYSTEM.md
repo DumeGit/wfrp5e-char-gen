@@ -1,5 +1,7 @@
 # Black Banner design system — v1
 
+**Approved next design:** Imperial Desk A with shared oak panelling, aged parchment and the existing mode artwork/accents. The [implementation and continuing design contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) defines the exact tokens, shared components, interaction/resize rules, migration phases and acceptance checks. Production migration has not started; this document still describes the live design. Update these live specifications as each phase lands, using the new contract for explicitly changed geometry/material/menu decisions and retaining existing rules/data behavior.
+
 Bestiary Short description keeps its adjacent dice button enabled for every profile. A roll includes one short distinguishing feature; supported PC appearance tables also supply height/eyes/hair. Keep the feature table in a collapsed native disclosure below the field, using shared compact table styling. All 100 results remain available for every creature; no body-part checks or extra dialogs. The existing combined-Elf Species choice remains explicit.
 
 Bestiary Loot sits below Trappings and before magic. Its single **Roll loot** button immediately adds results, including automatic extra rolls on 00. Do not add a dialog, preview, location choice or roll-count selector. Use the shared heading/button, compact item rows with adjacent quantity/Remove controls, expandable item sources and a collapsed inline d100 table. Keep labelled 44px touch controls and wrapping rows; loot remains separate from equipped combat controls.
