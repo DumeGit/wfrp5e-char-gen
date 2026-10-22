@@ -69,6 +69,7 @@ For prose-only changes, check factual source paths, local links and stale claims
 
 - [Description coverage](DESCRIPTION-COVERAGE.md) — `docs/DESCRIPTION-COVERAGE.md`
 - [GM content inventory](GM-CONTENT.md) — `docs/GM-CONTENT.md`
+- [Bestiary trapping groups](TRAPPING-GROUPS.md) — `docs/TRAPPING-GROUPS.md`, regenerated with `node scripts/audit-trapping-groups.mjs`
 - [Book inclusion matrix](INCLUSION-MATRIX.md) — `docs/INCLUSION-MATRIX.md`
 - [Search coverage](SEARCH-COVERAGE.md) — `docs/SEARCH-COVERAGE.md`
 

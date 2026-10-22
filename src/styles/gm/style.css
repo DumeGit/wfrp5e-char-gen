@@ -782,6 +782,25 @@
   min-height: 36px;
   padding: 7px 10px;
 }
+.gm-equipment-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+.gm-equipment-filters .field {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+.gm-equipment-filters select {
+  width: 100%;
+}
+@media (max-width: 540px) {
+  .gm-equipment-filters .field:first-child {
+    flex-basis: 100%;
+  }
+}
 .gm-picker-results {
   max-height: 55dvh;
   overflow-y: auto;

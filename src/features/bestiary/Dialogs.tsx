@@ -18,6 +18,10 @@ import {
 } from "../../engine/gm/pickers.mjs";
 import { traitSummary } from "../../engine/gm/trait-summaries.mjs";
 import {
+  filterEquipment,
+  equipmentFilterOptions,
+} from "../../engine/gm/trapping-groups.mjs";
+import {
   appearanceSpecies,
   rollGMAppearance,
 } from "../../engine/gm/appearance.mjs";
@@ -171,11 +175,17 @@ function PickerDialog() {
     setModal,
   } = useBestiary();
   const [query, setQuery] = useState(""),
+    [equipmentPath, setEquipmentPath] = useState<string[]>([]),
     [group, setGroup] = useState<any>(null),
     [choice, setChoice] = useState("");
   const kind = modal.entryKind,
     grouped = ["skill", "talent"].includes(kind),
-    matches = searchPickerEntries(modal.rows, query),
+    equipment = kind === "equipment",
+    completeList = grouped || equipment,
+    filtered = equipment
+      ? filterEquipment(modal.rows, equipmentPath)
+      : modal.rows,
+    matches = searchPickerEntries(filtered, query),
     rows = grouped ? groupPickerEntries(matches) : matches;
   const owned = (x: any) =>
     kind === "talent"
@@ -262,9 +272,64 @@ function PickerDialog() {
             autoFocus
             placeholder="Name or rule text…"
           />
+          {equipment && (
+            <div className="gm-equipment-filters">
+              {Array.from({ length: equipmentPath.length + 1 }, (_, depth) => {
+                const options = equipmentFilterOptions(
+                  modal.rows,
+                  equipmentPath.slice(0, depth),
+                );
+                if (!options.length) return null;
+                const label =
+                  depth === 0
+                    ? "Trapping type"
+                    : equipmentPath[0] === "Weapons"
+                      ? depth === 1
+                        ? "Weapon type"
+                        : "Weapon group"
+                      : "Trapping group";
+                return (
+                  <Select
+                    key={depth}
+                    id={`gm-equipment-filter-${depth}`}
+                    label={label}
+                    value={equipmentPath[depth] || ""}
+                    options={[
+                      ["", depth === 0 ? "All trappings" : "All groups"],
+                      ...options.map((value: string) => [value, value]),
+                    ]}
+                    onChange={(value) =>
+                      setEquipmentPath([
+                        ...equipmentPath.slice(0, depth),
+                        ...(value ? [value] : []),
+                      ])
+                    }
+                  />
+                );
+              })}
+              {(equipmentPath.length > 0 || query) && (
+                <Button
+                  onClick={() => {
+                    setEquipmentPath([]);
+                    setQuery("");
+                  }}
+                >
+                  Clear filters
+                </Button>
+              )}
+            </div>
+          )}
           <div id="gm-picker-results" className="gm-picker-results">
-            <p className="gm-results-count">{rows.length} available entries</p>
-            {rows.slice(0, grouped ? rows.length : 60).map((x: any) => (
+            <p className="gm-results-count" role="status">
+              {rows.length} available entries
+            </p>
+            {equipment && !rows.length && (
+              <p className="gm-small">
+                No trappings match these filters. Clear the filters or change
+                your search.
+              </p>
+            )}
+            {rows.slice(0, completeList ? rows.length : 60).map((x: any) => (
               <div
                 className={`gm-picker-row ${grouped ? "gm-picker-compact" : ""}`}
                 key={x.key}
@@ -276,16 +341,29 @@ function PickerDialog() {
                   ) : (
                     <>
                       <Metadata entry={x} />
+                      {equipment && <small>{x.trappingPath.join(" · ")}</small>}
                       {!grouped && (
                         <p>
                           {x.damage !== undefined
                             ? `${x.group} · Damage ${x.damage} · ${x.reach} · ${x.qualities || ""}`
                             : x.ap !== undefined
                               ? `${x.ap} AP · ${x.locations}`
-                              : kind === "trait"
-                                ? traitSummary(x)
-                                : x.text?.slice(0, 180) ||
-                                  `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`}
+                              : equipment
+                                ? [
+                                    x.price,
+                                    x.enc === null
+                                      ? "Encumbrance unknown"
+                                      : x.enc !== undefined
+                                        ? `Enc ${x.enc}`
+                                        : "",
+                                    x.text?.slice(0, 180),
+                                  ]
+                                    .filter(Boolean)
+                                    .join(" · ")
+                                : kind === "trait"
+                                  ? traitSummary(x)
+                                  : x.text?.slice(0, 180) ||
+                                    `${x.advanced ? "Advanced" : "Basic"} Skill · ${x.char || "Core option"}`}
                         </p>
                       )}
                       {x.disabled && <small>{x.disabled}</small>}
@@ -317,7 +395,7 @@ function PickerDialog() {
                 </Button>
               </div>
             ))}
-            {!grouped && rows.length > 60 && (
+            {!completeList && rows.length > 60 && (
               <p className="gm-small">
                 Type a more specific search to narrow this list.
               </p>

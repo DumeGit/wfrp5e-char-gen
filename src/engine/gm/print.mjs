@@ -1,5 +1,5 @@
 import { rowName } from "./model.mjs";
-import { soakLines, talentLabel } from "./export-sections.mjs";
+import { soakLines, talentLabel, gearLines } from "./export-sections.mjs";
 import { planRecordCard, drawRecordCard } from "./card-layout.mjs";
 import { CARD_PAGE, printGeometry, packTableCards } from "./card-packing.mjs";
 export { PRINT_LAYOUTS } from "./card-packing.mjs";
@@ -47,15 +47,7 @@ export function cardSections(r, s) {
       (r.runes || []).map((x) => `${x.name} (${x.form})`).join("; "),
     ],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore})`).join("; ")],
-    [
-      "Trappings",
-      [
-        r.trappings ?? r.profile.sections.Trappings,
-        ...r.gear.map((g) => `${g.quantity} × ${g.entry.name}`),
-      ]
-        .filter(Boolean)
-        .join("; "),
-    ],
+    ["Gear", gearLines(r).join("; ")],
     ["Corruption", r.mutations.map((x) => x.name).join("; ")],
     [
       "Personality",

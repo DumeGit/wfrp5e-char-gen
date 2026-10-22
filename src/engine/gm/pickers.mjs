@@ -1,6 +1,7 @@
 // Pure catalogue projections shared by the React interface and rule tests.
 import { base, options } from "../rules.mjs";
 import { magicChoices, gmSkillCharacteristic, gmLoreIssue } from "./model.mjs";
+import { equipmentPickerEntries } from "./trapping-groups.mjs";
 export function searchPickerEntries(entries, query) {
   const q = query.toLowerCase().trim();
   if (!q) return entries;
@@ -14,7 +15,7 @@ export function searchPickerEntries(entries, query) {
               ? 1
               : name.includes(q)
                 ? 2
-                : `${entry.text || ""} ${entry.category || ""}`
+                : `${entry.text || ""} ${entry.category || ""} ${(entry.trappingPaths || []).flat().join(" ")}`
                       .toLowerCase()
                       .includes(q)
                   ? 3
@@ -55,18 +56,7 @@ export function pickerEntries(data, R, r, kind) {
     return data.mutations.map((x) => ({ ...x, key: x.id }));
   if (kind === "magic")
     return magicChoices(R, r).map((x) => ({ ...x, key: x.contentId }));
-  if (kind === "equipment")
-    return [...R.weapons, ...R.armour, ...R.gear, ...R.market]
-      .filter((x, i, a) => a.findIndex((y) => y.name === x.name) === i)
-      .map((x) => ({
-        ...x,
-        key: x.contentId,
-        category: x.kind
-          ? "Weapon"
-          : x.ap !== undefined
-            ? "Armour"
-            : x.category || "Trappings",
-      }));
+  if (kind === "equipment") return equipmentPickerEntries(R);
   if (kind === "skill")
     return R.skills.flatMap((x) =>
       x.grouped

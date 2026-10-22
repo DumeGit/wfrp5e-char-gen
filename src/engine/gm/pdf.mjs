@@ -2,7 +2,7 @@ import { KEYS } from "../rules.mjs";
 import { sourceLabel } from "./books.mjs";
 import { rowName } from "./model.mjs";
 import { wrapPDFRuns, drawPDFRuns } from "./pdf-text.mjs";
-import { soakLines, talentLabel } from "./export-sections.mjs";
+import { soakLines, talentLabel, gearLines } from "./export-sections.mjs";
 
 // The sheet consumes exactly the same result as review and the folio.
 // Source conflicts, imported history and calculation commentary stay in the app.
@@ -33,13 +33,7 @@ export function sheetSections(r, s) {
     ],
     ["Rune knowledge", (r.runes || []).map((x) => `${x.name} (${x.form})`)],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore}): ${x.text}`)],
-    [
-      "Trappings",
-      [
-        r.trappings ?? r.profile.sections.Trappings,
-        ...r.gear.map((g) => `${g.quantity} × ${g.entry.name}`),
-      ].filter(Boolean),
-    ],
+    ["Gear", gearLines(r)],
     ["Corruption", r.mutations.map((m) => `${m.name}: ${m.text}`)],
     [
       "Personality",

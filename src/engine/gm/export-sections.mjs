@@ -2,6 +2,37 @@
 export const talentLabel = (talent) =>
   talent.name + (talent.ranks > 1 ? ` ×${talent.ranks}` : "");
 
+// Printed weapon attacks are belongings too. Use only explicitly physical names
+// from the supplied profiles; body parts and Trait attacks are not inventory.
+const printedWeapon =
+  /^(?:Hand Weapon|Dagger|Knife|Knuckledusters|Scythe|Hellblade|Halberd|Weapon|Choppa|Stone Axe|Spear|Sword|Blowpipe|Pick|Shortbow|Rocks|Sharp rocks|Weapon \(Stone Axe\)|(?:Bow|Shortbow|Longbow|Crossbow|Sling) and (?:Elf )?(?:Arrows|Bolts|Bullets))$/;
+export function gearLines(r) {
+  const gear = r.gear || [];
+  const keys = new Set(gear.map((g) => g.key));
+  const names = new Set(gear.map((g) => g.entry.name));
+  return [
+    r.trappings ?? r.profile.sections.Trappings,
+    ...gear.map((g) => `${g.quantity} × ${g.entry.name}`),
+    ...(r.armour || [])
+      .filter(
+        (a) =>
+          !keys.has(a.key) &&
+          !names.has(a.name) &&
+          !/Hide|Scales|Bark|Natural armour|protection/i.test(a.name),
+      )
+      .map((a) => a.name),
+    ...(r.attacks || [])
+      .filter(
+        (a) =>
+          a.origin === "Printed" &&
+          printedWeapon.test(a.name) &&
+          !keys.has(a.key) &&
+          !names.has(a.name),
+      )
+      .map((a) => a.name),
+  ].filter(Boolean);
+}
+
 export function soakLines(r) {
   const locations = Object.entries(r.ap).map(
     ([location, ap]) =>

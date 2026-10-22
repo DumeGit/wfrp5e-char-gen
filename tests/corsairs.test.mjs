@@ -317,8 +317,8 @@ test("Sea Dragon Cloak is optional acquired additional armour with no inferred p
   assert.equal(armourLabel(cloak.entry), "Sea Dragon Cloak (Body +2 AP; Partial)");
   const card = Object.fromEntries(cardSections(r, s)),
     sheet = Object.fromEntries(sheetSections(r, s));
-  assert.ok(card.Trappings.split("; ").includes("1 × Sea Dragon Cloak"));
-  assert.ok(sheet.Trappings.includes("1 × Sea Dragon Cloak"));
+  assert.ok(card.Gear.split("; ").includes("1 × Sea Dragon Cloak"));
+  assert.ok(sheet.Gear.includes("1 × Sea Dragon Cloak"));
   assert.equal(card.Soak, "Head 4 · Arms 4 · Body 6 · Legs 4");
   assert.deepEqual(sheet.Soak, ["Head 4 · Arms 4 · Body 6 · Legs 4"]);
   assert.equal(r.ap.Body, 3);
