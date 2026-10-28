@@ -10,10 +10,22 @@
       <feComponentTransfer><feFuncA type="linear" slope=".17"/></feComponentTransfer>
     </filter>
     <radialGradient id="cloud"><stop stop-color="#b78c4c" stop-opacity=".12"/><stop offset="1" stop-color="#b78c4c" stop-opacity="0"/></radialGradient>
+    <g id="age-clouds">
+      <ellipse cx="172" cy="318" rx="293" ry="254" fill="url(#cloud)"/>
+      <ellipse cx="824" cy="762" rx="360" ry="290" fill="url(#cloud)"/>
+    </g>
   </defs>
   <path fill="#f0e3c4" d="M0 0h1024v1024H0z"/>
-  <ellipse cx="172" cy="318" rx="293" ry="254" fill="url(#cloud)"/>
-  <ellipse cx="824" cy="762" rx="360" ry="290" fill="url(#cloud)"/>
+  <!-- Wrap age marks across both edges of the repeating tile. -->
+  <use href="#age-clouds"/>
+  <use href="#age-clouds" transform="translate(-1024 -1024)"/>
+  <use href="#age-clouds" transform="translate(0 -1024)"/>
+  <use href="#age-clouds" transform="translate(1024 -1024)"/>
+  <use href="#age-clouds" transform="translate(-1024 0)"/>
+  <use href="#age-clouds" transform="translate(1024 0)"/>
+  <use href="#age-clouds" transform="translate(-1024 1024)"/>
+  <use href="#age-clouds" transform="translate(0 1024)"/>
+  <use href="#age-clouds" transform="translate(1024 1024)"/>
   <path filter="url(#mottle)" d="M0 0h1024v1024H0z"/>
   <path opacity=".43" filter="url(#fibre)" d="M0 0h1024v1024H0z"/>
   <g fill="none" stroke="#795728" stroke-opacity=".08" stroke-linecap="round">

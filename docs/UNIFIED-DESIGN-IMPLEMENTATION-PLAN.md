@@ -77,6 +77,8 @@ Use `public/assets/panel-textures/tavern-wood.svg` (384×768, existing Subtle st
 
 The current prototype sources are `design-previews/unified-parchment.svg`, `unified-ornament.svg` and `unified-rustic.css`. During implementation, promote the selected assets into a dedicated, documented production asset folder and central tokens. Preserve originals and provenance. Evaluate static rasterisation of deterministic SVG noise if profiling shows expensive repainting; do not add live filters or noise overlays to the whole application. Do not increase wood opacity by accident when combining an already attenuated asset with blending.
 
+28 October material correction: the production parchment must repeat seamlessly horizontally and vertically, without straight tile-edge lines on long or wide ledgers. Wrap the production SVG’s edge-crossing age marks and render stitched noise with `scripts/build-parchment.mjs`; its encoded-edge check guards the production WebP. Keep historical prototypes, the shared 1024px repeat, oak, existing edge shading and print exclusion intact.
+
 Weathering is strongest at the outer margins. Tables, small numbers, input interiors and long descriptions need a quieter raised-paper surface. Decoration must be pointer-inert, excluded from accessibility names and print, remain below content and avoid negative stacking outside a deliberate isolated surface. No rotation of actual text, fields, click targets or tables. No torn-edge clipping of a focus ring or popup.
 
 ### Semantic palette
