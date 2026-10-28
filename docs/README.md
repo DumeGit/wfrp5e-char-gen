@@ -77,6 +77,7 @@ For prose-only changes, check factual source paths, local links and stale claims
 
 ## Historical reports and design studies
 
+- [Interface audit — 28 October 2026](UI-REVIEW-EMIL-2026-10-28.md) — empty-library actions, reference focus return and shared navigation polish
 - [Old World visual studies](DESIGN-PREVIEWS.md) — `docs/DESIGN-PREVIEWS.md`
 - [Next.js migration implementation plan](NEXTJS-MIGRATION-PLAN.md) — `docs/NEXTJS-MIGRATION-PLAN.md`
 - [Next.js migration report](NEXTJS-MIGRATION-REPORT.md) — `docs/NEXTJS-MIGRATION-REPORT.md`

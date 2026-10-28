@@ -33,6 +33,10 @@ export function ModeNavigation({
     <details
       className="workspace-switcher"
       ref={disclosure}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null))
+          event.currentTarget.open = false;
+      }}
       onKeyDown={(event) => {
         if (event.key === "Escape" && disclosure.current?.open) {
           event.preventDefault();

@@ -61,6 +61,7 @@ export function ReferenceSearch() {
     infoDialog = useRef<HTMLDialogElement>(null),
     input = useRef<HTMLInputElement>(null),
     launcher = useRef<HTMLButtonElement>(null),
+    opener = useRef<HTMLElement | null>(null),
     list = useRef<HTMLDivElement>(null),
     reader = useRef<HTMLElement>(null),
     sentinel = useRef<HTMLDivElement>(null),
@@ -106,6 +107,7 @@ export function ReferenceSearch() {
     return request;
   }
   function show() {
+    opener.current = launcher.current;
     setOpen(true);
     void ensure().catch(() => {});
   }
@@ -125,7 +127,11 @@ export function ReferenceSearch() {
     setInfo(null);
     resultsScroll.current = 0;
     dialog.current?.close();
-    launcher.current?.focus({ preventScroll: true });
+    const target =
+      opener.current?.isConnected && opener.current.getClientRects().length
+        ? opener.current
+        : launcher.current;
+    target?.focus({ preventScroll: true });
   }
   function choose(keys: string[], name: string, push = true) {
     setPreview(null);
@@ -169,6 +175,11 @@ export function ReferenceSearch() {
     const external = (event: Event) => {
       const request = (event as CustomEvent<ReferenceRequest>).detail;
       if (!request) return;
+      if (!dialog.current?.open)
+        opener.current =
+          document.activeElement instanceof HTMLElement
+            ? document.activeElement
+            : launcher.current;
       setOpen(true);
       void ensure()
         .then((payload) => {

@@ -1282,6 +1282,12 @@
 .manager-empty p {
   max-width: 65ch;
 }
+.manager-empty-actions {
+  margin-top: 20px;
+}
+.manager-empty-actions button {
+  min-height: 44px;
+}
 .manager-action-menu {
   position: relative;
   flex: none;

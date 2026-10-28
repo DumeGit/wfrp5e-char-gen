@@ -5942,6 +5942,13 @@ dialog::backdrop {
     color: #fff1ce;
     border-color: #c4a36b99;
   }
+  .workspace-menu-content
+    .workspace-local-navigation
+    :is(button, a)[aria-current]:not(:disabled):hover {
+    background:
+      linear-gradient(90deg, #c5aa770d, #10090635),
+      color-mix(in srgb, var(--color-crimson) 24%, #352a21);
+  }
 }
 @media (min-width: 1101px) {
   .manager-navigation {

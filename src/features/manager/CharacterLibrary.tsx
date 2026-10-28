@@ -58,7 +58,10 @@ export function CharacterLibrary({
             Open a sheet and return to the adventure.
           </p>
         </div>
-        <div className="manager-inline manager-library-actions">
+        <div
+          className="manager-inline manager-library-actions"
+          hidden={!records.length}
+        >
           <button
             type="button"
             className="manager-primary"
@@ -176,6 +179,20 @@ export function CharacterLibrary({
               ? "Try another search or show a different group of characters."
               : "Import a Player, Marijan or manager save, or start with a blank character. Every character gets the same tools."}
           </p>
+          {records.length === 0 && (
+            <div className="manager-inline manager-empty-actions">
+              <button
+                type="button"
+                className="manager-primary"
+                onClick={importFile}
+              >
+                Import character
+              </button>
+              <button type="button" className="quiet" onClick={create}>
+                New blank character
+              </button>
+            </div>
+          )}
           {records.length > 0 && (
             <button
               type="button"

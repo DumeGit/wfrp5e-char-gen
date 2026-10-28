@@ -116,7 +116,7 @@ export function ManagerWorkspace({
           </>
         }
       />
-      <main id="creator-main" className="manager-main">
+      <main id="creator-main" className="manager-main" tabIndex={-1}>
         {alerts}
         <div hidden={!!record}>
           <CharacterLibrary

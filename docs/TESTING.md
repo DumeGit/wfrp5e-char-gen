@@ -1,5 +1,9 @@
 # Local testing
 
+## Interface audit — 28 October 2026
+
+The focused production interface suite passed **73 cases with 7 viewport-specific skips**, including the new `emil-audit.spec.mjs` regressions. The final run used port 8207 and `--output test-results/emil-isolated --reporter dot` to avoid concurrent browser-report writes. Earlier attempts caught a selected-hover specificity issue and two incorrect fixture expectations, then encountered shared-report file collisions; those attempts are not the acceptance result. All **20 development rendering**, **13 store** and **11 affected Node** cases passed, along with types, module checks, Prettier (`--end-of-line auto` for this Windows checkout), production build and the 108-file offline inventory. Desktop/390px/320px captures covered all four modes with no page overflow; representative screens and the manager's new action placement were visually inspected. Physical phones and assistive technology were not tested. Findings and motion decisions: [interface audit](UI-REVIEW-EMIL-2026-10-28.md).
+
 ## Imperial Desk acceptance — 22 October 2026
 
 The shared oak/parchment shell is implemented in all four modes. The complete production run passed **348 cases with 6 existing skips**; **568 Node**, **13 store**, **15 tablet**, **20 development rendering** and **9 WebKit shell** cases passed. Build/book/generated/type/module/format checks and the 108-file offline manifest passed. After the final active-navigation CSS correction, the 18 Chromium menu cases, 9 WebKit cases, tablet/development checks and visual review were rerun successfully. The [continuing contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md#final-acceptance-record--22-october-2026) records exact evidence and limitations.

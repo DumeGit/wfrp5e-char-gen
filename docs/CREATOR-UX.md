@@ -1,5 +1,7 @@
 # Creator browsing and explanations
 
+28 October interface follow-up: the shared workspace chooser closes when keyboard focus leaves it, and selected navigation retains its mode tint on hover. Shared book references return focus to their editor opener without scrolling; the header launcher is the fallback if the opener disappeared. These changes add no motion or character state. See the [audit](UI-REVIEW-EMIL-2026-10-28.md).
+
 ## Imperial Desk — 22 October 2026
 
 All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.

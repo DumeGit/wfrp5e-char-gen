@@ -21,6 +21,8 @@ Player imports preserve totals while moving already-applied Characteristic Talen
 
 ## Library, persistence and recovery
 
+An empty library places **Import character** and **New blank character** directly below its explanation on desktop and compact layouts. Both use the existing handlers; import still opens its preview workflow. Populated compact libraries retain their header actions, and the shared New & import menu remains available throughout. The editor main is a focusable skip-link destination.
+
 Search name/Species/Career; sort by recent edit/name/Career; filter Active, Favourites, Archived or All. Duplicate creates an independent character. Archive is reversible; permanent deletion requires a concrete confirmation. Optional local PNG/JPEG/WebP portraits up to 512 KB are backed up in JSON, never uploaded or embedded into PDFs.
 
 Dexie 4.4.6 stores records independently in IndexedDB `wfrp-character-manager-v1`, table `characters`, schema version 1. Tests use the separate `-verification` database. Creator storage and the authored/generated book catalogue are unchanged. Transactions compare expected revisions, preventing a stale tab from overwriting newer data. Failed/conflicting copies remain exportable, with retry, save-as-duplicate and confirmed reload actions.
