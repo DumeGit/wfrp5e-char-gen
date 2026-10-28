@@ -1,5 +1,7 @@
 # WFRP Character Ledger
 
+[PRODUCT.md](PRODUCT.md) captures the confirmed public audience, product purpose and durable constraints for future design work. Impeccable's workflow preference is stored separately in `.impeccable/config.json`; the existing visual system remains documented below.
+
 The four workspaces share the **Imperial Desk**: oak panelling, aged parchment, a wider joined menu, workspace switcher and grouped actions. Desktop starts at 1101px; compact menus preserve each tool's editing/navigation and history. The [design system](docs/DESIGN-SYSTEM.md) and [continuing contract](docs/UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) govern future UI changes.
 
 Bestiary's [weapon creator](docs/WEAPON-CREATOR.md) builds NPC-local ordinary, magical and runic weapons from published bases, with recorded enchantment rolls, complete effects, Undo/Redo and attack/Gear exports.

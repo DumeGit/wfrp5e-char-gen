@@ -25,6 +25,7 @@ For prose-only changes, check factual source paths, local links and stale claims
 
 ## Current product and maintenance guides
 
+- [Product context](../PRODUCT.md) — public player/GM audience, purpose, workflow boundaries and durable constraints
 - [Project instructions](../AGENTS.md) — `AGENTS.md`
 - [WFRP Character Ledger](../README.md) — `README.md`
 - [Application architecture](ARCHITECTURE.md) — `docs/ARCHITECTURE.md`
