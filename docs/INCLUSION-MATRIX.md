@@ -19,7 +19,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 287 | 0 | 386 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 312 | 0 | 386 |
 | Up in Arms | 135 | 13 | 59 | 0 | 78 |
 | Archives of the Empire: Volume I | 31 | 22 | 8 | 0 | 15 |
 | Archives of the Empire: Volume II | 50 | 7 | 44 | 0 | 74 |
@@ -52,7 +52,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.8
+Pack `core` · version 1.1.9
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -61,7 +61,7 @@ Pack `core` · version 1.1.8
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 120 | 0 | 122 |
+| referenceEntries | 0 | 0 | 145 | 0 | 122 |
 | ruleReferences | 0 | 0 | 166 | 0 | 264 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
@@ -178,9 +178,34 @@ Pack `core` · version 1.1.8
 | `core:reference:178-lost-leg` — Lost Leg | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `core:reference:178-lost-nose` — Lost Nose | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
 | `core:reference:178-lost-teeth` — Lost Teeth | referenceEntries | reference-only | p. 178–179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:179-disease-black-plague` — Black Plague | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:179-disease-blood-rot` — Blood Rot | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:179-disease-diagnosis` — Disease and Infection | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:179-disease-format` — Disease Format | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
 | `core:reference:179-lost-toes` — Lost Toes | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
 | `core:reference:179-lost-tongue` — Lost Tongue | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:180-disease-bloody-flux` — Bloody Flux | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:reference:180-disease-festering-wound` — Festering Wound | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:reference:180-disease-galloping-trots` — Galloping Trots | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:reference:180-disease-itching-pox` — Itching Pox | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:reference:180-disease-packers-pox` — Packer’s Pox | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:reference:180-disease-ratte-fever` — Ratte Fever | referenceEntries | reference-only | p. 180 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-disease-sea-sickness` — Sea Sickness | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-disease-weevil-cough` — Weevil Cough | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-symptom-blight` — Blight | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-symptom-buboes` — Buboes | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-symptom-convulsions` — Convulsions | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-symptom-coughs-and-sneezes` — Coughs and Sneezes | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-symptom-fever` — Fever | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:181-symptom-flux` — Flux | referenceEntries | reference-only | p. 181 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-disease-cures-and-tonics` — Cures and Tonics | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-disease-treatment` — Treatment of Disease | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `core:reference:182-effect-of-pre-prepared-cures` — Effect Of Pre-Prepared Cures | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-symptom-gangrene` — Gangrene | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-symptom-infection` — Infection | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-symptom-malaise` — Malaise | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-symptom-nausea` — Nausea | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
+| `core:reference:182-symptom-pox` — Pox | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `core:reference:183-creature-size-and-dosage` — Creature Size And Dosage | referenceEntries | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
 | `core:reference:184-conditions-and-fortune` — Conditions And Fortune | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:184-multiple-conditions` — Multiple Conditions | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |

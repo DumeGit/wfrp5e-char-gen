@@ -32,7 +32,15 @@ export function createReferenceLinker(index) {
       const sameBook = candidates.filter(
         (x) => x.entry.source.book === current?.entry?.source?.book,
       );
-      const targets = sameBook.length ? sameBook : candidates;
+      const sourceTargets = sameBook.length ? sameBook : candidates;
+      // Within disease references, a named symptom such as Blight refers to
+      // its disease definition rather than a same-name spell. Other contexts
+      // retain the ordinary ambiguity chooser and exact-name behavior.
+      const diseaseTargets =
+        current?.kind === "disease"
+          ? sourceTargets.filter((row) => row.kind === "disease")
+          : [];
+      const targets = diseaseTargets.length ? diseaseTargets : sourceTargets;
       if (!targets.length) continue;
       if (match.index > start)
         segments.push({ text: text.slice(start, match.index) });

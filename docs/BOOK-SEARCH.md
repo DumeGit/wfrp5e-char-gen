@@ -14,6 +14,10 @@ Earlier dated integration/count/verification sections below describe historical 
 
 ## Categories and results
 
+**Diseases** contains 25 reviewed core references from pp. 179–182: ten diseases, eleven named Symptoms and four care/format/diagnosis references. **Reference type** narrows the category to Disease, Symptom or Care & treatment, combined with Book and query. Disease readers show contraction and progression, including printed incubation/duration/Symptoms and any immunity or permanent consequences. Sea Sickness keeps its special daily/hourly recovery and has no invented incubation. Symptoms include their full mechanical restrictions, escalation and recovery exceptions; care records link to the existing Effect Of Pre-Prepared Cures table.
+
+Within disease reading, exact same-book disease/Symptom references take precedence over same-name spells, so Black Plague → Blight opens its Symptom directly. Other references and general matching retain normal ambiguity, including the separate Blight spell. Symptoms can chain to Conditions and affected injury records through existing Back/history. Original private Rules remain unchanged. This is read-only book lookup and adds no disease tracking, rolls or automatic character effects.
+
 **Injuries** contains 18 reviewed core references from pp. 176–179: the injury overview, Minor/Major Broken Bone and Torn Muscle, Amputated Parts, eleven lost-part effects, and Impressive Scars. Each includes its effects, recovery requirements where printed, and source page. Exact aliases cover singular/plural injury names, and critical wound descriptions link to the specified severity through normal reference history. The category has the shared Book filter. Contextual names such as Lost Arm identify the corresponding subheading in Amputated Parts; they are not new injury mechanics. These user-requested injury references are a distinct category and do not restore the excluded Rules catalogue or apply effects to characters.
 
 **Critical Wounds** contains all 80 individual core results from the four Head/Arm/Body/Leg tables (pp. 173–176), with a **Hit location** filter. Names shared by several locations remain distinct and show their location in the result label. Each reader shows the original roll range, Wounds and reviewed effects, plus **View full table**, which uses normal reference history/Back. The original core tables and Up in Arms alternatives remain under Tables. Core ranges above 100 and `00 or more` are preserved; this is a read-only lookup, not a random roll or injury handler.
@@ -26,12 +30,13 @@ The table covers the full imported reference library regardless of character boo
 
 `book-search.mjs` compiles per-level `careerOptions` from the existing shared choice resolver. `search-library.mjs` unions context-dependent choices for the same Career key without merging different source profiles. Only the lazy reference payload carries this metadata; it does not increase the startup book bundle or add a request. `career-references.mjs` validates it, builds one reverse lookup when references load, and renders the common table in all four workspaces. The table's explicit Career links bypass automatic related-term relinking. No new game data or Hammergen rules were imported.
 
-**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Critical Wounds, Injuries, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
+**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Critical Wounds, Diseases, Injuries, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
 
 | Category | Additional filters |
 | --- | --- |
 | Careers | Class; Species |
 | Critical Wounds | Hit location (Head/Arm/Body/Leg) |
+| Diseases | Reference type (Disease/Symptom/Care & treatment) |
 | Mutations | Physical/Mental |
 | Qualities & Flaws | Quality/Flaw; Applicable to |
 | Runes | Applicable to; Rune label |
@@ -103,6 +108,12 @@ Add an eligible reference only after reviewing its supplied page and checking ta
 Outcome tests cover all-book availability with a core-only draft, separate source variants and withdrawn profiles, selective Legacy status, facet joins, stable identities, aliases/ranking/category browsing/pagination, full Skill prose, unchanged character calculations, source table values, safe rendering, lazy hydration and stale/malformed/failing sources. Browser checks use isolated `?verify=1` drafts for one-click focus, caret/keyboard, chained references and ambiguity, list return position, automatic/fallback batches, book-selection independence and desktop/mobile layout. Simulated phone viewports verify layout; real iOS/Android software keyboards and native picker behavior require an actual device and must not be reported as tested through desktop emulation.
 
 Dated verification sections below record earlier releases. Their Rules/NPC/profile/template checks and result counts predate current exclusions and are superseded by the current scope above. The undated extraction/maintenance guidance still applies to eligible retained categories.
+
+## Disease reference verification — 28 October 2026
+
+Core 1.1.9 adds ten diseases, eleven Symptoms and four care/diagnosis/format references, individually checked against supplied pp. 179–182 and registered with reviewed canonical summaries. All 581 Node tests, TypeScript and 13 store tests passed. The build, 28-pack validation, generated/module checks, formatting with `--end-of-line auto` and 108-file offline inventory passed. Eight focused disease browser cases passed on desktop and simulated phone across all four workspaces, covering type/Book filters and disease → Symptom → Condition navigation/history. Disease and Symptom screenshots were visually inspected on desktop and simulated mobile; physical phones were not tested.
+
+The 378-case broad browser run had 371 passes, six existing skips and one unrelated Bestiary startup failure. Its trace recorded Windows `ERR_NO_BUFFER_SPACE` while loading a framework chunk before the mount-book test began. The same case passed on both desktop and mobile in a two-case isolated follow-up, without retries or code changes. All 15 tablet cases passed. This records a broad run and an isolated follow-up, not a second clean broad run.
 
 ## Injury reference verification — 28 October 2026
 

@@ -19,6 +19,7 @@ export const REFERENCE_CATEGORIES = [
   "mutation",
   "critical",
   "injury",
+  "disease",
 ];
 // Keep reviewed NPC sources for a future search extension. The current shared
 // reader excludes stat blocks and templates; GM creation uses its own catalogue.

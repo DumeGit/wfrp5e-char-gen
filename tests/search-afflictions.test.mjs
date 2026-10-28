@@ -19,6 +19,131 @@ const { rows } = await loadReferenceLibrary(library, () => wire);
 const search = (query, category = "all", filters = {}) =>
   searchBooks(rows, query, Infinity, { category, filters }).rows;
 
+test("Diseases publishes ten core diseases, eleven Symptoms and four care references", () => {
+  const all = search("", "disease", { book: "core" });
+  assert.equal(all.length, 25);
+  for (const [type, count, label] of [
+    ["Disease", 10, "Disease"],
+    ["Symptom", 11, "Disease symptom"],
+    ["Care & treatment", 4, "Disease reference"],
+  ]) {
+    const found = search("", "disease", { book: "core", type });
+    assert.equal(found.length, count);
+    assert.ok(
+      found.every(
+        (row) =>
+          row.entry.descriptionStatus === "reviewed" &&
+          searchLabel(row) === label,
+      ),
+    );
+  }
+  assert.equal(search("", "disease", { book: "up-in-arms" }).length, 0);
+  assert.ok(rows.every((row) => row.kind !== "rule"));
+});
+
+test("disease profiles preserve printed incubation, duration, symptoms and special contraction rules", () => {
+  for (const [name, page, incubation, duration] of [
+    ["Black Plague", 179, "1d10 hours", "3d10 days"],
+    ["Blood Rot", 179, "Instant", "1d10 days"],
+    ["Bloody Flux", 180, "1d10 hours", "1d10 days"],
+    ["Festering Wound", 180, "1d10 days; instant", "1d10 days"],
+    ["Galloping Trots", 180, "1d10 hours", "1d10 days"],
+    ["Itching Pox", 180, "1d10 days", "1d10 + 7 days"],
+    ["Packer’s Pox", 180, "1d10 days", "5d10 days"],
+    ["Ratte Fever", 180, "3d10 + 5 days", "3d10 + 10 days"],
+    ["Weevil Cough", 181, "1d10 days", "1d10 days"],
+  ]) {
+    const row = search(name, "disease", { type: "Disease" })[0];
+    assert.deepEqual(row.entry.source, { book: "core", page });
+    assert.ok(row.entry.text.includes(`Incubation: ${incubation}`), name);
+    assert.ok(row.entry.text.includes(`Duration: ${duration}`), name);
+    assert.ok(row.entry.text.includes("Symptoms:"), name);
+  }
+  const plague = search("Black Plague", "disease")[0];
+  assert.match(plague.entry.text, /hour or part-hour/);
+  assert.match(
+    plague.entry.text,
+    /Previous survivors instead Test once daily with Advantage/,
+  );
+  assert.match(
+    search("Itching Pox", "disease")[0].entry.text,
+    /immune to catching it again/,
+  );
+  assert.equal(search("Pie Fever")[0].name, "Ratte Fever");
+  assert.equal(search("Packer's Pox")[0].name, "Packer’s Pox");
+  const sea = search("Sea Sickness", "disease")[0];
+  assert.match(sea.entry.text, /Elves are immune/);
+  assert.match(sea.entry.text, /Challenging \(\+0 SL\)/);
+  assert.match(sea.entry.text, /Test Average \(\+2 SL\) Endurance hourly/);
+  assert.doesNotMatch(sea.entry.text, /Incubation:/);
+});
+
+test("symptoms and care retain their escalating failures, recovery exceptions and permanent consequences", () => {
+  const get = (name) => search(name, "disease")[0].entry.text;
+  assert.match(get("Blight"), /first failure causes Unconscious/);
+  assert.match(get("Blight"), /second failure is fatal/);
+  assert.match(get("Infection"), /Each Infection prevents recovery of 1 Wound/);
+  assert.match(get("Infection"), /Very Easy \(\+6 SL\)/);
+  assert.match(
+    get("Infection"),
+    /Easy \(\+4 SL\) instead; failure causes Blood Rot/,
+  );
+  assert.match(get("Gangrene"), /after more failures than Toughness Bonus/);
+  assert.match(
+    get("Pox"),
+    /removable only by spending your next 1d10 Actions scratching/,
+  );
+  assert.match(get("Pox"), /reverse those Test dice/);
+  assert.match(get("Pox"), /permanently reduces Fellowship by 1/);
+  assert.match(get("Treatment of Disease"), /at least one Heal Advance/);
+  assert.match(get("Treatment of Disease"), /1 additional day/);
+  assert.match(
+    get("Treatment of Disease"),
+    /each SL after the first protects one other character/,
+  );
+  assert.match(get("Cures and Tonics"), /Symptom for 1 day/);
+  assert.match(
+    get("Cures and Tonics"),
+    /Astounding Failure \(-6 SL\) causes Galloping Trots/,
+  );
+});
+
+test("disease links choose the named symptom while other contexts retain same-name spell ambiguity", () => {
+  const link = createReferenceLinker(rows);
+  const plague = search("Black Plague", "disease")[0];
+  const symptom = search("Blight", "disease", { type: "Symptom" })[0];
+  const segment = link(plague.entry.text, plague).find(
+    (part) => part.text === "Blight",
+  );
+  assert.deepEqual(segment.keys, [symptom.key]);
+  const generic = link("Blight")[0].keys;
+  assert.ok(generic.includes(symptom.key));
+  assert.ok(
+    generic.some(
+      (key) => rows.find((row) => row.key === key)?.kind === "magic",
+    ),
+  );
+  const other = rows.find(
+    (row) => row.kind === "magic" && row.name !== "Blight",
+  );
+  assert.ok(link("Blight", other)[0].keys.includes(symptom.key));
+  const html = referenceBodyHTML(plague);
+  assert.match(html, /<h3>Contraction<\/h3>/);
+  assert.match(html, /<h3>Progression<\/h3>/);
+  assert.match(html, /Incubation: 1d10 hours<br\/>Duration: 3d10 days/);
+});
+
+test("loading rejects an unreviewed disease type filter", async () => {
+  const payload = structuredClone(wire);
+  payload.rows.find((row) => row.kind === "disease").filterValues.type = [
+    "Spell",
+  ];
+  await assert.rejects(
+    loadReferenceLibrary(library, () => payload),
+    /disease reference type/,
+  );
+});
+
 test("the Injuries category includes all 18 reviewed core injury references and both severities", () => {
   const injuries = search("", "injury", { book: "core" });
   assert.equal(injuries.length, 18);

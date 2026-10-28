@@ -34,6 +34,8 @@ Shared book search uses the existing native Category/Book selectors and compact 
 
 Injuries uses the same category selector and reference reader, with compact Effects/Healing headings where applicable. Exact severity names in critical wounds open the corresponding injury using normal reference history; all prose and controls retain the shared typography, source links and touch targets.
 
+Diseases reuses the native Reference type filter for Disease, Symptom and Care & treatment. Distinct result labels identify Symptoms and care references. Disease readers use the shared Contraction/Progression headings and compact text fields; exact symptom links use normal reader history, with the disease definition selected ahead of same-name spells only inside disease reading.
+
 Desktop begins at **1101px**; compact includes **1100px**. `COMPACT_SHELL_QUERY` matches CSS. Search's 760px filters, manager's 719px phone sheet and Marijan's container grids are independent feature boundaries. All four use 296px joined rail/editor geometry with fluid 16–40px gutters and no folio. The rail has natural height, with page scrolling and no nested navigation scroller. It pins only on windows at least 880px tall when a measured rail actually fits.
 
 The menu order is workspace switcher → real local navigation/context → **New & import**, **Save & export**, **More** → history/save status. Player keeps eight pages/six readiness stages; Bestiary keeps four; Marijan keeps nine in-page section links and the compact Jump selector; manager keeps Character library and desktop Play/Advance/Journal. Manager compact destinations retain their existing sheet navigation, with a fixed bottom bar on phones.

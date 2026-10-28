@@ -332,6 +332,8 @@ test("worker and fallback return identical filtered results under concurrent sea
     ["critical wounds", "critical", { location: "Arm", book: "core" }],
     ["mutations", "mutation", { type: "Mental", book: "core" }],
     ["Torn Muscle", "injury", { book: "core" }],
+    ["Ratte Fever", "disease", { type: "Disease", book: "core" }],
+    ["Blight", "disease", { type: "Symptom", book: "core" }],
     [
       "",
       "equipment",

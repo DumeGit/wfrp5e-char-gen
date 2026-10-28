@@ -21,12 +21,12 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.8",
+      "version": "1.1.9",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 287,
+        "reference-only": 312,
         "unavailable": 0,
         "deferred": 386
       },
@@ -76,7 +76,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 120,
+          "reference-only": 145,
           "unavailable": 0,
           "deferred": 122
         },
@@ -4917,6 +4917,50 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "core:reference:179-disease-black-plague",
+          "kind": "referenceEntries",
+          "name": "Black Plague",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:179-disease-blood-rot",
+          "kind": "referenceEntries",
+          "name": "Blood Rot",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:179-disease-diagnosis",
+          "kind": "referenceEntries",
+          "name": "Disease and Infection",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:179-disease-format",
+          "kind": "referenceEntries",
+          "name": "Disease Format",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "core:reference:179-lost-toes",
           "kind": "referenceEntries",
           "name": "Lost Toes",
@@ -4939,9 +4983,240 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "core:reference:180-disease-bloody-flux",
+          "kind": "referenceEntries",
+          "name": "Bloody Flux",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:180-disease-festering-wound",
+          "kind": "referenceEntries",
+          "name": "Festering Wound",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:180-disease-galloping-trots",
+          "kind": "referenceEntries",
+          "name": "Galloping Trots",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:180-disease-itching-pox",
+          "kind": "referenceEntries",
+          "name": "Itching Pox",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:180-disease-packers-pox",
+          "kind": "referenceEntries",
+          "name": "Packer’s Pox",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:180-disease-ratte-fever",
+          "kind": "referenceEntries",
+          "name": "Ratte Fever",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 180
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-disease-sea-sickness",
+          "kind": "referenceEntries",
+          "name": "Sea Sickness",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-disease-weevil-cough",
+          "kind": "referenceEntries",
+          "name": "Weevil Cough",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-symptom-blight",
+          "kind": "referenceEntries",
+          "name": "Blight",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-symptom-buboes",
+          "kind": "referenceEntries",
+          "name": "Buboes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-symptom-convulsions",
+          "kind": "referenceEntries",
+          "name": "Convulsions",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-symptom-coughs-and-sneezes",
+          "kind": "referenceEntries",
+          "name": "Coughs and Sneezes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-symptom-fever",
+          "kind": "referenceEntries",
+          "name": "Fever",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:181-symptom-flux",
+          "kind": "referenceEntries",
+          "name": "Flux",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 181
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-disease-cures-and-tonics",
+          "kind": "referenceEntries",
+          "name": "Cures and Tonics",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-disease-treatment",
+          "kind": "referenceEntries",
+          "name": "Treatment of Disease",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "core:reference:182-effect-of-pre-prepared-cures",
           "kind": "referenceEntries",
           "name": "Effect Of Pre-Prepared Cures",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-symptom-gangrene",
+          "kind": "referenceEntries",
+          "name": "Gangrene",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-symptom-infection",
+          "kind": "referenceEntries",
+          "name": "Infection",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-symptom-malaise",
+          "kind": "referenceEntries",
+          "name": "Malaise",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-symptom-nausea",
+          "kind": "referenceEntries",
+          "name": "Nausea",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 182
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:182-symptom-pox",
+          "kind": "referenceEntries",
+          "name": "Pox",
           "status": "reference-only",
           "source": {
             "book": "core",

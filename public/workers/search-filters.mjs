@@ -9,6 +9,11 @@ export const RUNE_LABELS = [
   "Doom Rune",
   "Master Rune",
 ];
+export const DISEASE_REFERENCE_TYPES = [
+  "Disease",
+  "Symptom",
+  "Care & treatment",
+];
 export const CATEGORY_FILTERS = {
   career: [
     ["class", "Class"],
@@ -16,6 +21,7 @@ export const CATEGORY_FILTERS = {
   ],
   mutation: [["type", "Mutation type"]],
   critical: [["location", "Hit location"]],
+  disease: [["type", "Reference type"]],
   property: [
     ["type", "Quality or Flaw"],
     ["applicable", "Applicable to"],
@@ -116,6 +122,12 @@ export function validateSearchFilters(row, books) {
     values.characteristic?.some((value) => !CHARACTERISTICS[value])
   )
     throw Error("Invalid book reference filters.");
+  if (
+    searchCategory(row) === "disease" &&
+    (values.type.length !== 1 ||
+      !DISEASE_REFERENCE_TYPES.includes(values.type[0]))
+  )
+    throw Error("Invalid disease reference type.");
   if (searchCategory(row) === "equipment") {
     const paths = row.trappingPaths;
     if (

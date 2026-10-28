@@ -6,13 +6,13 @@ The same reference catalogue serves Player, Bestiary, Marijan and the character 
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The shared four-workspace catalogue contains **3085 results**, including **585 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The shared four-workspace catalogue contains **3110 results**, including **610 new printed references**. Existing profiles include grouped specialisations and reference variants.
 A further **970 original records** are retained only in private source/audit inputs. NPCs & Creatures, Templates and standalone Rules are excluded from the published search.
 Standalone Rules are completely absent from published reference payloads. Historical source audits (including **112 previously removed non-mechanical entries**) remain private build evidence; creator calculations and other reference categories are unchanged.
 
 | Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
 |---|---|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.8 | 1526 | 120 | 1646 | 0 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 1.1.9 | 1526 | 145 | 1671 | 0 |
 | Up in Arms | 1.0.5 | 98 | 59 | 157 | 13 |
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 8 | 47 | 21 |
 | Archives of the Empire: Volume II | 1.0.7 | 24 | 44 | 68 | 7 |
@@ -52,9 +52,9 @@ Source SHA-256: `f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d90
 - pp. 318–322: Bestiary rules.
 - pp. 350–364: Templates, Traits and appendices.
 
-Candidate sections: included 242; consolidated 3; excluded 249; existing 620.
+Candidate sections: included 267; consolidated 3; excluded 249; existing 620.
 
-Categories: career 64; skill 294; talent 443; magic 225; equipment 254; condition 13; property 36; psychology 5; trait 67; species 5; table 86; endeavour 16; injury 18; critical 80; mutation 40.
+Categories: career 64; skill 294; talent 443; magic 225; equipment 254; condition 13; property 36; psychology 5; trait 67; species 5; table 86; endeavour 16; injury 18; disease 25; critical 80; mutation 40.
 Reviewed printed records retained outside search: 122.
 
 Rules audit (2026-10-08): 412 prior results; 26 excluded. The following standalone entries were removed from published reference sources.

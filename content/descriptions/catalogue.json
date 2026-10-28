@@ -20106,6 +20106,231 @@
       },
       "status": "reviewed",
       "text": "With enough visible scars, lost parts or other marks, and the GM’s agreement, gain permanent +1 SL to Intimidate Tests and -1 SL to Charm Tests."
+    },
+    "description:2dfe3050a8334edc0bb4b86c": {
+      "name": "Black Plague",
+      "source": {
+        "book": "core",
+        "page": 179
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nTest Average (+2 SL) Endurance for each hour or part-hour in an area with infected fleas, or when exposed to infected fluids. Previous survivors instead Test once daily with Advantage.\n\n### Progression\n\nIncubation: 1d10 hours\nDuration: 3d10 days\nSymptoms: Blight, Buboes, Fever"
+    },
+    "description:0f6bccd196093be0a35ba436": {
+      "name": "Blood Rot",
+      "source": {
+        "book": "core",
+        "page": 179
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nDevelops from another disease or a Critical Wound.\n\n### Progression\n\nIncubation: Instant\nDuration: 1d10 days\nSymptoms: Blight, Fever, Malaise"
+    },
+    "description:cb885661b7c4da6626c2c826": {
+      "name": "Bloody Flux",
+      "source": {
+        "book": "core",
+        "page": 180
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Easy (+4 SL) Endurance after an infected source enters the mouth.\n\n### Progression\n\nIncubation: 1d10 hours\nDuration: 1d10 days\nSymptoms: Fever, Flux, Malaise"
+    },
+    "description:17d0c14106819200ab7a7d75": {
+      "name": "Festering Wound",
+      "source": {
+        "book": "core",
+        "page": 180
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Average (+2 SL) Endurance after fighting a creature with the Infected Trait. It can also develop from Infection.\n\n### Progression\n\nIncubation: 1d10 days; instant if it develops from another disease or Infection\nDuration: 1d10 days\nSymptoms: Fever, Malaise"
+    },
+    "description:f215f0d626d633ae5846afb0": {
+      "name": "Galloping Trots",
+      "source": {
+        "book": "core",
+        "page": 180
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Easy (+4 SL) Endurance after an infected source enters the mouth.\n\n### Progression\n\nIncubation: 1d10 hours\nDuration: 1d10 days\nSymptoms: Flux, Malaise, Nausea"
+    },
+    "description:e93cb92a9ffd08f119f0a3dd": {
+      "name": "Itching Pox",
+      "source": {
+        "book": "core",
+        "page": 180
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Average (+2 SL) Endurance after contact with an infected individual.\n\n### Progression\n\nIncubation: 1d10 days\nDuration: 1d10 + 7 days\nSymptoms: Pox\n\nPermanent: Contracting Itching Pox makes you immune to catching it again."
+    },
+    "description:9664e216d3bdfdb779e56a31": {
+      "name": "Packer’s Pox",
+      "source": {
+        "book": "core",
+        "page": 180
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Easy (+4 SL) Endurance after contact with infected animals, hides or bodies.\n\n### Progression\n\nIncubation: 1d10 days\nDuration: 5d10 days\nSymptoms: Pox, Infection"
+    },
+    "description:38dadc13f15f9caafac47409": {
+      "name": "Ratte Fever",
+      "source": {
+        "book": "core",
+        "page": 180
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Average (+2 SL) Endurance after combat in which infected rodents, including skaven with the Infected Trait, wounded you; or fail Easy (+4 SL) Endurance after an infected source enters your mouth.\n\n### Progression\n\nIncubation: 3d10 + 5 days\nDuration: 3d10 + 10 days\nSymptoms: Fever, Malaise, Pox"
+    },
+    "description:5596c7915e852bb2466f9ccc": {
+      "name": "Sea Sickness",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nElves are immune. On a susceptible character’s first sea journey, fail Challenging (+0 SL) Endurance to become seasick. In rough weather, the Test is Average (+2 SL).\n\n### Progression\n\nDuration: For first-time seafarers, Test Average (+2 SL) Endurance after each day travelling at sea; success prevents this form of Sea Sickness permanently. For rough seas or other temporary causes, Test Average (+2 SL) Endurance hourly.\nSymptoms: Nausea"
+    },
+    "description:206e119cdd808d3832198e66": {
+      "name": "Weevil Cough",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "### Contraction\n\nFail Average (+2 SL) Endurance after contact with infected hay, wheat or flour, or when an infected person coughs nearby. Test about once per hour of exposure.\n\n### Progression\n\nIncubation: 1d10 days\nDuration: 1d10 days\nSymptoms: Coughs and Sneezes, Malaise\n\nThere is no reliable cure for Weevil Cough."
+    },
+    "description:3d2991bbb45b49b67b9f745a": {
+      "name": "Blight",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "Test Average (+2 SL) Endurance daily, normally when sleeping. The first failure causes Unconscious, which cannot be removed while Blight persists. The second failure is fatal."
+    },
+    "description:f413ae757d8693725f1784b5": {
+      "name": "Buboes",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "All physical Tests suffer -1 SL; Fellowship Tests also suffer -1 SL if the swellings can be seen or smelled. A Heal Test by someone with Surgery can lance them and remove the penalty; failure causes a Festering Wound. Once lanced, Test Difficult (-1 SL) Endurance daily or the swellings return."
+    },
+    "description:f2de7eaf96ff454ca85f485e": {
+      "name": "Convulsions",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "All physical Tests suffer -1 SL."
+    },
+    "description:7851483e2895fa865378f98b": {
+      "name": "Coughs and Sneezes",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "At the start of a session, secretly roll 1d10: the GM may trigger the urge that many times at most during the session. Resist with Average (+2 SL) Endurance or spend your next Action coughing or sneezing. If not resisted, creatures within 3 yards are exposed and must Test for Contraction."
+    },
+    "description:29999bc8c79d0094427da37a": {
+      "name": "Fever",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "Agility, Dexterity and Psychology Tests suffer -2 SL."
+    },
+    "description:9682171c1612a9f4628d5c33": {
+      "name": "Flux",
+      "source": {
+        "book": "core",
+        "page": 181
+      },
+      "status": "reviewed",
+      "text": "Take opportunities for toilet breaks. Once per session, the GM can require an urgent visit: reach a suitable place within Toughness Bonus Rounds or gain Besmirched."
+    },
+    "description:c4c8485c9c25c92409db4dc0": {
+      "name": "Gangrene",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "Roll percentile dice for a Hit Location (p. 164): Head affects the nose, Arm a finger, Leg a toe, and Body causes a Festering Wound. For an affected nose, finger or toe, Test Average (+2 SL) Endurance daily. Failure worsens it; after more failures than Toughness Bonus, that location loses all function and uses the Amputated Parts rules. While Gangrene persists, all Fellowship Tests suffer -1 SL."
+    },
+    "description:ae21c7e98fd9cf9f4b175803": {
+      "name": "Infection",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "Each Infection prevents recovery of 1 Wound. Test Very Easy (+6 SL) Endurance once daily or gain a Festering Wound. If you already have a Festering Wound, Test Easy (+4 SL) instead; failure causes Blood Rot. An Infection from lost Wounds ends when it causes a Festering Wound or receives treatment. A disease-caused Infection lasts until its disease is cured."
+    },
+    "description:a951d384ef522daf0fefa526": {
+      "name": "Malaise",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "Acute Sense Talents cannot be used. Language and Perception Tests suffer -2 SL."
+    },
+    "description:80f06033a3417a212f178f48": {
+      "name": "Nausea",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "Whenever a Turn involves strenuous activity, such as running, climbing or fighting, Test Average (+2 SL) Endurance. Failure gives 1 Stunned and may cause Besmirched from vomiting; an empty stomach instead produces dry heaving."
+    },
+    "description:21484cbefeab41fbb3263384": {
+      "name": "Pox",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "Fellowship Tests suffer -1 SL. Up to twice per session, the GM may trigger an urge to scratch. Resist with Average (+2 SL) Endurance; failure gives Fatigued, removable only by spending your next 1d10 Actions scratching.\n\nWhen Pox ends, Test Average (+2 SL) Endurance. On failure, reverse those Test dice to find the Hit Location for permanent scarring (p. 164). A Head result permanently reduces Fellowship by 1."
+    },
+    "description:25f056ffd9e404050fc1c0e3": {
+      "name": "Disease and Infection",
+      "source": {
+        "book": "core",
+        "page": 179
+      },
+      "status": "reviewed",
+      "text": "Heal can diagnose a disease. The Test Difficulty depends on how rare it is and whether the diagnosing character has encountered it before."
+    },
+    "description:4dbf004f1b09ee1d2e39eb6b": {
+      "name": "Disease Format",
+      "source": {
+        "book": "core",
+        "page": 179
+      },
+      "status": "reviewed",
+      "text": "Contraction explains how infection occurs. Incubation is the delay before Symptoms appear. Duration is how long untreated Symptoms last, after which the disease ends. Symptoms list its effects; Permanent lists lasting consequences when applicable."
+    },
+    "description:cbb6340ff46f41173bc842d0": {
+      "name": "Treatment of Disease",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "A carer needs at least one Heal Advance. Each day a patient rests under their care removes 1 additional day from the disease’s duration. Successful Challenging (+0 SL) Heal protects the carer from catching it that day; each SL after the first protects one other character. The GM may modify the Heal Test for the disease, conditions, supplies or stress."
+    },
+    "description:420e4f2593f009df2c9a012e": {
+      "name": "Cures and Tonics",
+      "source": {
+        "book": "core",
+        "page": 182
+      },
+      "status": "reviewed",
+      "text": "Pre-prepared cures usually require an Endurance Test at the Difficulty shown for that cure and Symptom in Effect Of Pre-Prepared Cures. Success suppresses the Symptom for 1 day. An Astounding Failure (-6 SL) causes Galloping Trots. See the Consumer Guide for purchasing medicines."
     }
   },
   "bindings": {
@@ -29264,6 +29489,106 @@
     "data/books/core/reference-entries.json#/core%3Areference%3A178-injury-scars": {
       "id": "description:fe4453a30aa87d91f3e6e764",
       "sourceHash": "45cc23746f787c130fbf2dedab2e8bf36e4d694a2ad7868a4d8b6bd384fa620c"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A179-disease-black-plague": {
+      "id": "description:2dfe3050a8334edc0bb4b86c",
+      "sourceHash": "2f90edc9d37dbb3df3bf6fa30556cb6c69d3a40597e1312d43736fb702d90de8"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A179-disease-blood-rot": {
+      "id": "description:0f6bccd196093be0a35ba436",
+      "sourceHash": "d03c4aaedde9c7f7ded765f5a849752c472c8485ac5fd771d5c1d8056ecc3d21"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A180-disease-bloody-flux": {
+      "id": "description:cb885661b7c4da6626c2c826",
+      "sourceHash": "261fcb211dfbe0cb6cf90ed9a01171c8d58bcc763c68bb518ac2542e5cbb27cf"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A180-disease-festering-wound": {
+      "id": "description:17d0c14106819200ab7a7d75",
+      "sourceHash": "61a2527934e3469edf4e60dcb269f4186b9edf21a717b11091e4e4fcae4cde59"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A180-disease-galloping-trots": {
+      "id": "description:f215f0d626d633ae5846afb0",
+      "sourceHash": "967f43ddb2f703b5614c2cc947cec21314d69c8ea5619d797aeaf92c8ee47956"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A180-disease-itching-pox": {
+      "id": "description:e93cb92a9ffd08f119f0a3dd",
+      "sourceHash": "eddc9bb9bcf65e0bd9087194a33433312ef2eb801eb6b013b743f50955390b94"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A180-disease-packers-pox": {
+      "id": "description:9664e216d3bdfdb779e56a31",
+      "sourceHash": "9bbfe423575ba5293920f1e10b423276c24b6b2af3d21e1d93492086db2ba392"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A180-disease-ratte-fever": {
+      "id": "description:38dadc13f15f9caafac47409",
+      "sourceHash": "316d9409bb198650159f7957ae56d109e5f725d4f5bfc12a5ff4e1e1644b237d"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-disease-sea-sickness": {
+      "id": "description:5596c7915e852bb2466f9ccc",
+      "sourceHash": "a924a0e61cb9db2d59e9fba83e33bd68b03e9d6bc7186e23cea4c2498b1dec66"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-disease-weevil-cough": {
+      "id": "description:206e119cdd808d3832198e66",
+      "sourceHash": "b4c8121c6e464f0aef37149f8f381d26804762ffa6ad8d33c4f2ce3d3d3e846d"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-symptom-blight": {
+      "id": "description:3d2991bbb45b49b67b9f745a",
+      "sourceHash": "a2dbe8dcbff02ce536554ef227e6507e7902d6cb62b07662feee87457caeed18"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-symptom-buboes": {
+      "id": "description:f413ae757d8693725f1784b5",
+      "sourceHash": "53df849cc5ec511ef33867dd48495cc622bdad037d115eea2e66b6263af307dc"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-symptom-convulsions": {
+      "id": "description:f2de7eaf96ff454ca85f485e",
+      "sourceHash": "fb47cec402ec9825b7cac45de87653585b44c564d27066e155bd62222e6dab57"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-symptom-coughs-and-sneezes": {
+      "id": "description:7851483e2895fa865378f98b",
+      "sourceHash": "f69242593bd8a05e61d92089e102d16e1b24bad60f722ecb5719178cb3f46899"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-symptom-fever": {
+      "id": "description:29999bc8c79d0094427da37a",
+      "sourceHash": "9b2224c227605a5b8a4a229486d7d1d8111f341ed0ccad03f3f4724088e7e449"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A181-symptom-flux": {
+      "id": "description:9682171c1612a9f4628d5c33",
+      "sourceHash": "810b73624e8824cd2ccc82eda221c897b8fff015d9f2cba064e957d2452fd41c"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-symptom-gangrene": {
+      "id": "description:c4c8485c9c25c92409db4dc0",
+      "sourceHash": "3f0ae18d00b4ce3d523064479c9b165582a9e1408f778a4a429bda7584ae328b"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-symptom-infection": {
+      "id": "description:ae21c7e98fd9cf9f4b175803",
+      "sourceHash": "5f152003747ef733d5321188f0593a682fe4d7f5ab07fe8b45e75fc98fe5682b"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-symptom-malaise": {
+      "id": "description:a951d384ef522daf0fefa526",
+      "sourceHash": "a0fe37636f5267a9e3bbc3126fd2d6986845f6a31a0423d180f474cddf99ad10"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-symptom-nausea": {
+      "id": "description:80f06033a3417a212f178f48",
+      "sourceHash": "249ac64d1cfbbe6c4d45b8e6dd8544204ef763b16ec38eee167905f96e3325ea"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-symptom-pox": {
+      "id": "description:21484cbefeab41fbb3263384",
+      "sourceHash": "bfee2d837a8b43c56ea38cb5a7a552f09d7164a89b9923a5a4f5f02196f24133"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A179-disease-diagnosis": {
+      "id": "description:25f056ffd9e404050fc1c0e3",
+      "sourceHash": "68d2ea858a9848599e233c396d7d102d5b19124ada1cd497268d12f4a340bef0"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A179-disease-format": {
+      "id": "description:4dbf004f1b09ee1d2e39eb6b",
+      "sourceHash": "c3fd5d847ef1f3aceb3e3f98661f9af58b39b7ae42388e4efcf7a4aff6a966e0"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-disease-treatment": {
+      "id": "description:cbb6340ff46f41173bc842d0",
+      "sourceHash": "91fd7123657966a03c2dbbbfbb0a67afb3af23319d5a15b1585134f161ed9f56"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A182-disease-cures-and-tonics": {
+      "id": "description:420e4f2593f009df2c9a012e",
+      "sourceHash": "27041e0dc137117d47fabe90042cfc26f9769e58db73208b2f48a3db154c8841"
     }
   },
   "excludedReferences": {

@@ -301,6 +301,77 @@ for (const [workspace, route] of [
     await expect(reader).toContainText("automatically fail");
     await noOverflow(page);
   });
+  test(`${workspace} browses diseases and opens their exact symptoms @search @mobile`, async ({
+    page,
+  }, info) => {
+    await page.goto(`${route}?verify=1`);
+    const input = await search(page);
+    await categoryFilters(page, "disease");
+    const type = page.getByRole("combobox", {
+      name: "Reference type",
+      exact: true,
+    });
+    await type.selectOption("Disease");
+    await page.locator("#book-search-book").selectOption("core");
+    const results = page.locator("#book-search-results").getByRole("option");
+    await expect(results).toHaveCount(10);
+    await input.fill("Black Plague");
+    await page.getByRole("option", { name: /^Black Plague Disease/ }).click();
+    const plague = page.getByRole("region", {
+      name: "Black Plague",
+      exact: true,
+    });
+    await expect(plague).toContainText("p. 179");
+    await expect(plague).toContainText("Incubation: 1d10 hours");
+    await expect(plague).toContainText("Duration: 3d10 days");
+    await noOverflow(page);
+    await page.screenshot({ path: info.outputPath("disease-reference.png") });
+    await plague
+      .getByRole("button", { name: "View Blight reference", exact: true })
+      .click();
+    const blight = page.getByRole("region", { name: "Blight", exact: true });
+    await expect(blight).toBeVisible();
+    await expect(blight).toContainText("Disease symptom");
+    await expect(blight).toContainText("p. 181");
+    await expect(blight).toContainText("second failure is fatal");
+    await blight
+      .getByRole("button", { name: "View Unconscious reference", exact: true })
+      .click();
+    await expect(
+      page.getByRole("region", { name: "Unconscious", exact: true }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to previous reference", exact: true })
+      .click();
+    await expect(blight).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to previous reference", exact: true })
+      .click();
+    await expect(plague).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to search", exact: true })
+      .click();
+    await expect(input).toHaveValue("Black Plague");
+    await expect(type).toHaveValue("Disease");
+    await type.selectOption("Symptom");
+    await input.fill("");
+    await expect(results).toHaveCount(11);
+    await input.fill("Infection");
+    await page
+      .getByRole("option", { name: /^Infection Disease symptom/ })
+      .click();
+    const infection = page.getByRole("region", {
+      name: "Infection",
+      exact: true,
+    });
+    await expect(infection).toContainText("p. 182");
+    await expect(infection).toContainText("Very Easy (+6 SL)");
+    await expect(infection).toContainText("Easy (+4 SL)");
+    await noOverflow(page);
+    await page.screenshot({
+      path: info.outputPath("disease-symptom-reference.png"),
+    });
+  });
 }
 for (const creator of ["PC", "GM"]) {
   test(`${creator} narrows Trappings with dependent groups and clears child filters @search @mobile`, async ({

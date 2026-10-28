@@ -8583,11 +8583,161 @@
           "sourceHash": "45cc23746f787c130fbf2dedab2e8bf36e4d694a2ad7868a4d8b6bd384fa620c",
           "disposition": "included",
           "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:179-disease-black-plague",
+          "sourceHash": "2f90edc9d37dbb3df3bf6fa30556cb6c69d3a40597e1312d43736fb702d90de8",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:179-disease-blood-rot",
+          "sourceHash": "d03c4aaedde9c7f7ded765f5a849752c472c8485ac5fd771d5c1d8056ecc3d21",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:180-disease-bloody-flux",
+          "sourceHash": "261fcb211dfbe0cb6cf90ed9a01171c8d58bcc763c68bb518ac2542e5cbb27cf",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:180-disease-festering-wound",
+          "sourceHash": "61a2527934e3469edf4e60dcb269f4186b9edf21a717b11091e4e4fcae4cde59",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:180-disease-galloping-trots",
+          "sourceHash": "967f43ddb2f703b5614c2cc947cec21314d69c8ea5619d797aeaf92c8ee47956",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:180-disease-itching-pox",
+          "sourceHash": "eddc9bb9bcf65e0bd9087194a33433312ef2eb801eb6b013b743f50955390b94",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:180-disease-packers-pox",
+          "sourceHash": "9bbfe423575ba5293920f1e10b423276c24b6b2af3d21e1d93492086db2ba392",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:180-disease-ratte-fever",
+          "sourceHash": "316d9409bb198650159f7957ae56d109e5f725d4f5bfc12a5ff4e1e1644b237d",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-disease-sea-sickness",
+          "sourceHash": "a924a0e61cb9db2d59e9fba83e33bd68b03e9d6bc7186e23cea4c2498b1dec66",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-disease-weevil-cough",
+          "sourceHash": "b4c8121c6e464f0aef37149f8f381d26804762ffa6ad8d33c4f2ce3d3d3e846d",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-symptom-blight",
+          "sourceHash": "a2dbe8dcbff02ce536554ef227e6507e7902d6cb62b07662feee87457caeed18",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-symptom-buboes",
+          "sourceHash": "53df849cc5ec511ef33867dd48495cc622bdad037d115eea2e66b6263af307dc",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-symptom-convulsions",
+          "sourceHash": "fb47cec402ec9825b7cac45de87653585b44c564d27066e155bd62222e6dab57",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-symptom-coughs-and-sneezes",
+          "sourceHash": "f69242593bd8a05e61d92089e102d16e1b24bad60f722ecb5719178cb3f46899",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-symptom-fever",
+          "sourceHash": "9b2224c227605a5b8a4a229486d7d1d8111f341ed0ccad03f3f4724088e7e449",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:181-symptom-flux",
+          "sourceHash": "810b73624e8824cd2ccc82eda221c897b8fff015d9f2cba064e957d2452fd41c",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-symptom-gangrene",
+          "sourceHash": "3f0ae18d00b4ce3d523064479c9b165582a9e1408f778a4a429bda7584ae328b",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-symptom-infection",
+          "sourceHash": "5f152003747ef733d5321188f0593a682fe4d7f5ab07fe8b45e75fc98fe5682b",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-symptom-malaise",
+          "sourceHash": "a0fe37636f5267a9e3bbc3126fd2d6986845f6a31a0423d180f474cddf99ad10",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-symptom-nausea",
+          "sourceHash": "249ac64d1cfbbe6c4d45b8e6dd8544204ef763b16ec38eee167905f96e3325ea",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-symptom-pox",
+          "sourceHash": "bfee2d837a8b43c56ea38cb5a7a552f09d7164a89b9923a5a4f5f02196f24133",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:179-disease-diagnosis",
+          "sourceHash": "68d2ea858a9848599e233c396d7d102d5b19124ada1cd497268d12f4a340bef0",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:179-disease-format",
+          "sourceHash": "c3fd5d847ef1f3aceb3e3f98661f9af58b39b7ae42388e4efcf7a4aff6a966e0",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-disease-treatment",
+          "sourceHash": "91fd7123657966a03c2dbbbfbb0a67afb3af23319d5a15b1585134f161ed9f56",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
+        },
+        {
+          "id": "core:reference:182-disease-cures-and-tonics",
+          "sourceHash": "27041e0dc137117d47fabe90042cfc26f9769e58db73208b2f48a3db154c8841",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Diseases category. Core pp. 179–182 visually reviewed; printed diseases, named Symptoms and their care procedures only. Original private Rules are unchanged."
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "b1b1015f0095a1868d4a086ec7716d4ef42449882c0923ee7342ebc344580001",
-      "entries": 242,
+      "publishedSHA256": "63fa05e5150a47f96e69b1aedcfda3dff10046425dd3c68073d6652974fdbd99",
+      "entries": 267,
       "rulesAudit": {
         "date": "2026-10-08",
         "reviewedRuleResults": 412,

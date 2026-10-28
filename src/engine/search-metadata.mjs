@@ -108,6 +108,23 @@ export function addSearchMetadata(rows, contexts, books) {
     } else if (category === "skill") {
       f.type = [x.advanced ? "Advanced" : "Basic"];
       f.characteristic = [x.char];
+    } else if (category === "disease") {
+      const type = {
+        Diseases: "Disease",
+        "Disease symptoms": "Symptom",
+        "Disease care": "Care & treatment",
+      }[x.topic];
+      if (!type) throw Error(`Unreviewed disease reference type: ${row.key}`);
+      f.type = [type];
+      row = {
+        ...row,
+        label:
+          type === "Symptom"
+            ? "Disease symptom"
+            : type === "Disease"
+              ? "Disease"
+              : "Disease reference",
+      };
     } else if (category === "critical") f.location = [x.location];
     else if (category === "mutation") f.type = [x.category];
     else if (category === "property") {
