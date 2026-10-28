@@ -3379,8 +3379,9 @@
         },
         {
           "id": "core:reference:196-endeavours",
-          "sourceHash": "4d2934b01f7481371a5ba605a9e8ea81faf3963499e02cdb26a0fdf494431856",
-          "disposition": "included"
+          "sourceHash": "4683fdef6fda7c5d7f0a038a7c3c49f57f9a59935d0d9dda099eef421920b8b9",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:196-duties-responsibilities",
@@ -3399,52 +3400,60 @@
         },
         {
           "id": "core:reference:196-common-endeavours",
-          "sourceHash": "74caf9b4f276ccfe45ca10396eff85939b11ecd1d571c23523c6d715491859fc",
-          "disposition": "included"
+          "sourceHash": "72b636b7f18e9364449e6d90248b684e3e69aaf746feba8af5d9350782c0ce2b",
+          "disposition": "consolidated",
+          "targets": [
+            "core:reference:196-endeavours"
+          ],
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:196-advance-career",
-          "sourceHash": "213b41e607d1b33c6ccc1e8d6f6331425d95023ba969592a27b40fd41d56cdb7",
-          "disposition": "included"
+          "sourceHash": "a3b9e7daad36dca2de62066169a40b4f3700b0c905dcc10a49943d5d86da952a",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:196-animal-training",
-          "sourceHash": "9d2c5dd4da82f0616923418df6a8d5fa9ecf36761f4baafa41687b69786c438e",
-          "disposition": "existing",
-          "targets": [
-            "skill:core:skills:animal-training:Animal Training"
-          ],
-          "reason": "Named reference already indexed from this source."
+          "sourceHash": "07400af05af33c531ddcbe4e3b7f889a0461619f49bde8ca5ebea3757cf6d706",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:197-banking",
-          "sourceHash": "4c5528c6ed1a155e1388817734ce4fef0171a37e7c3a4b939797201a6539527c",
-          "disposition": "included"
+          "sourceHash": "636de643d32552c1c3ccc5bcc595c39aaca4d2058102029b32224627a63f67c3",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:197-change-career",
-          "sourceHash": "e2463e4fdeabc09057e5c2a7754ef4a734bf73fcd0541dbfcee5ba1df40a2cb5",
-          "disposition": "included"
+          "sourceHash": "ec20d999d1c8857b1fc9d2855d6b7d113e05ff47ad085088ad362836043ce410",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:197-combat-training",
-          "sourceHash": "67a56e44bc91007b37ee29d736e4c5d4db8550da26ef3415e2242ec6f521e77b",
-          "disposition": "included"
+          "sourceHash": "1d1fec690cc3f429ab5723377b716bb04f497fef360b4b6ce20fc5814c619346",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:197-commission",
-          "sourceHash": "97753b0bfd47b37751cb4f1a4ec6b4dd40453281519bed1b50201ecca4593f1a",
-          "disposition": "included"
+          "sourceHash": "569e637f943962a6e7478a164fff7c67de967b7ae8dd157d69f4494a6974da7c",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:197-consult-an-expert",
-          "sourceHash": "558db9bec18aa440745e21226f833532519caf202c6afe098ececf5079186d14",
-          "disposition": "included"
+          "sourceHash": "59abccbe1560129b12c3531ee237f4723290c8d75bc709a1d23c6b55e14901db",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:198-crafting",
-          "sourceHash": "741e52037e1214feb5ac9237cb5ea5162a0b9386879729f46d890bdd5e31dc51",
-          "disposition": "included"
+          "sourceHash": "07881799b486b10abb4d7c4b63b8fe2aa2fa17412fe2812fe96ff428f112decd",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:198-crafting-difficulty",
@@ -3458,18 +3467,21 @@
         },
         {
           "id": "core:reference:198-custom-gear",
-          "sourceHash": "4abd2329449984e81e1383cb8f52f8376d28cbf887d485efc5905327e17077ef",
-          "disposition": "included"
+          "sourceHash": "6cc7d483f48dceec53898931770a86c14132eb25ea43cbe5242bb3272142ec39",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:198-foment-dissent",
-          "sourceHash": "9ee184147e9137e2f34a7a8afd28ff285c4955061a0f96491317d06be94ae7ca",
-          "disposition": "included"
+          "sourceHash": "edd204a4f488bb2db52e2df239ab84fdeb2a542b1981da63dd20984c3e5eb6bb",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:199-income",
-          "sourceHash": "e3939ddfc61e5579e1ecc18a6bd60a481a48c13cfb7d1dfa38d209f8db94ed01",
-          "disposition": "included"
+          "sourceHash": "325c0905af7e474351b9e8129e7b3cad29a7e275a5010857e677a8597927b45a",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:199-earned-income",
@@ -3478,8 +3490,9 @@
         },
         {
           "id": "core:reference:199-invent",
-          "sourceHash": "14a26443663bca40747154a727a0f1248927fa62540598f9658c8b7513d43855",
-          "disposition": "included"
+          "sourceHash": "90e93b0499f9775d373f56673764913d9b67723a9c7dbece4a2933b6146d3c5e",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:199-hardly-working",
@@ -3488,19 +3501,21 @@
         },
         {
           "id": "core:reference:200-the-latest-news",
-          "sourceHash": "06572a2945bf7d5e2c30029b400badb4e600d2dd07545861ba30d5fbd2b3660f",
-          "disposition": "included"
+          "sourceHash": "69834a8a35effec93277229c0a859f52481b9f1206d393e77a50522531ceba82",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:200-raise-reputation",
-          "sourceHash": "4e3fc15e319f1c90ff6a4640ef8b9c763f377a425e653ae53a13ad18a6869c48",
-          "disposition": "excluded",
-          "reason": "Heading fragment, repeated label or setting-only prose."
+          "sourceHash": "a9446386b4ebfcf5ca454fb8bffb5f9f55e3f05e3248b50baec0a28f015e3c9e",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:200-research-lore",
-          "sourceHash": "c764c267a17ddfa78be04a35e50cc68c647b233727ce7e29c95417a11d1fdc74",
-          "disposition": "included"
+          "sourceHash": "0e8d924d32cc2e81dfd4287c646244a69727cbd80425f46300a97b3e3213b0b8",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:200-do-me-a-favour",
@@ -3509,18 +3524,21 @@
         },
         {
           "id": "core:reference:201-study-a-mark",
-          "sourceHash": "fdb70b654df1acbd02a5f8ef822e99091bc14a28372ff969e2f0228c19af1b1e",
-          "disposition": "included"
+          "sourceHash": "3dd4aa351f01c77932cbf80da28ba313f5a138f59a820536063a033c52d1d91c",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:201-training",
-          "sourceHash": "7540bf2816efa3149d6959be177d0b489e1737830cc1908c4b799cf45df8c1c2",
-          "disposition": "included"
+          "sourceHash": "0eaa0d67cc2c2f7cb5b8ff267c2bfffed85b248a75ffeecc26bd19b95b8d5b2a",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:201-unusual-learning",
-          "sourceHash": "499afc5f853725a435e7f8959cb073f39c681f424d3909758a8b882552025e36",
-          "disposition": "included"
+          "sourceHash": "12552c6b317e0a200cdbcd56c94543b171e1963f90b5ecc9e6e80d09b66784b2",
+          "disposition": "included",
+          "reason": "28 October 2026: core pp. 196–201 visually checked against the supplied PDF. Correct Endeavour classification, complete table/sidebar continuations and a single consolidated overview; distinct Skills and supplement variants remain separate."
         },
         {
           "id": "core:reference:202-religion-and-belief",
@@ -8736,11 +8754,11 @@
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "63fa05e5150a47f96e69b1aedcfda3dff10046425dd3c68073d6652974fdbd99",
-      "entries": 267,
+      "publishedSHA256": "7c6c32f60de33950b350856fad7e6caa5f4d6ba9c024b9145c32b1833a02c3a2",
+      "entries": 269,
       "rulesAudit": {
         "date": "2026-10-08",
-        "reviewedRuleResults": 412,
+        "reviewedRuleResults": 411,
         "removed": [
           {
             "id": "core:rule-reference:rule-134-stealth-and-surveillance",

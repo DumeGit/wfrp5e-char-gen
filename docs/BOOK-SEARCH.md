@@ -14,6 +14,8 @@ Earlier dated integration/count/verification sections below describe historical 
 
 ## Categories and results
 
+**Endeavours** includes all 17 core activities on pp. 196–201 and one consolidated overview. Animal Training, Raise Reputation and Invent! are restored; Animal Training remains distinct from the Skill. Crafting and Income include their lookup values and complete procedures within the reader, while standalone Tables stay excluded. Common Endeavours is an alias of the overview. Other books retain their separate entries. See the [core review and inventory](CORE-ENDEAVOURS-REVIEW.md).
+
 **Diseases** contains 25 reviewed core references from pp. 179–182: ten diseases, eleven named Symptoms and four care/format/diagnosis references. **Reference type** narrows the category to Disease, Symptom or Care & treatment, combined with Book and query. Disease readers show contraction and progression, including printed incubation/duration/Symptoms and any immunity or permanent consequences. Sea Sickness keeps its special daily/hourly recovery and has no invented incubation. Symptoms include their full mechanical restrictions, escalation and recovery exceptions; care records cite the book’s Effect Of Pre-Prepared Cures table without opening a standalone table reader.
 
 Within disease reading, exact same-book disease/Symptom references take precedence over same-name spells, so Black Plague → Blight opens its Symptom directly. Other references and general matching retain normal ambiguity, including the separate Blight spell. Symptoms can chain to Conditions and affected injury records through existing Back/history. Original private Rules remain unchanged. This is read-only book lookup and adds no disease tracking, rolls or automatic character effects.

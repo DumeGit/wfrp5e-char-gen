@@ -685,6 +685,7 @@ test("standalone Rules and explicit reference exclusions cannot be searched or l
     );
   }
   assert.deepEqual(Object.keys(library.referenceExclusions).sort(), [
+    "core:reference:196-common-endeavours",
     "up-in-arms:reference:116-physical-quirks",
     "up-in-arms:reference:116-work-ethic",
     "up-in-arms:reference:117-personality-quirks",

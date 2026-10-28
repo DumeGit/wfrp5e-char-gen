@@ -29,6 +29,7 @@ For prose-only changes, check factual source paths, local links and stale claims
 - [WFRP Character Ledger](../README.md) — `README.md`
 - [Application architecture](ARCHITECTURE.md) — `docs/ARCHITECTURE.md`
 - [Search the books](BOOK-SEARCH.md) — `docs/BOOK-SEARCH.md`
+- [Core Endeavours review and complete inventory](CORE-ENDEAVOURS-REVIEW.md) — `docs/CORE-ENDEAVOURS-REVIEW.md`
 - [Adding supplied books](BOOKS.md) — `docs/BOOKS.md`
 - [Character manager: implemented layout specification](CHARACTER-MANAGER-REDESIGN-PLAN.md) — `docs/CHARACTER-MANAGER-REDESIGN-PLAN.md`
 - [Character manager — Imperial field ledger](CHARACTER-MANAGER.md) — `docs/CHARACTER-MANAGER.md`

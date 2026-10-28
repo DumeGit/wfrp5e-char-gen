@@ -2,10 +2,10 @@
 
 Generated from the canonical description catalogue.
 
-- 2247 canonical descriptions; 2314 source bindings.
-- 2247 explicitly reviewed entries: 1997 prose summaries and 250 structured-data exceptions.
+- 2249 canonical descriptions; 2316 source bindings.
+- 2249 explicitly reviewed entries: 1999 prose summaries and 250 structured-data exceptions.
 - 0 imported descriptions awaiting editorial review.
-- 6 explicit hireling/job-hook reference exclusions, in addition to all standalone Rules and private NPC/template references.
+- 7 explicit editorial reference exclusions, in addition to all standalone Rules and private NPC/template references.
 
 Pure names, statistical labels and numerical lookup cells retain their printed values; their review does not claim those values were reworded. Conditional Trait presentation is authored in the same description directory. Book/page and Legacy notes remain separate. See [DESCRIPTIONS.md](DESCRIPTIONS.md) and [DESCRIPTION-REVIEW.md](DESCRIPTION-REVIEW.md).
 
@@ -270,3 +270,4 @@ Pure names, statistical labels and numerical lookup cells retain their printed v
 - up-in-arms:reference:139-location-table: Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope.
 - up-in-arms:reference:139-objective-table: Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope.
 - up-in-arms:reference:139-personality-table: Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope.
+- core:reference:196-common-endeavours: 28 October 2026: introductory availability paragraph consolidated into the single Endeavours overview, with Common Endeavours retained as an alias. It is not a separate activity; preserve this source only for audit.

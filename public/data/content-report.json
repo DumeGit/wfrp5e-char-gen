@@ -21,12 +21,12 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.9",
+      "version": "1.1.10",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 312,
+        "reference-only": 314,
         "unavailable": 0,
         "deferred": 386
       },
@@ -76,7 +76,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 145,
+          "reference-only": 147,
           "unavailable": 0,
           "deferred": 122
         },
@@ -5357,6 +5357,17 @@
           "reason": "Sourced book rule reference; no live-play automation."
         },
         {
+          "contentId": "core:reference:196-animal-training",
+          "kind": "referenceEntries",
+          "name": "Animal Training",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 196
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "core:reference:196-burdens-of-power",
           "kind": "referenceEntries",
           "name": "Burdens of Power",
@@ -5371,12 +5382,12 @@
           "contentId": "core:reference:196-common-endeavours",
           "kind": "referenceEntries",
           "name": "Common Endeavours",
-          "status": "reference-only",
+          "status": "deferred",
           "source": {
             "book": "core",
             "page": 196
           },
-          "reason": "Sourced book rule reference; no live-play automation."
+          "reason": "28 October 2026: introductory availability paragraph consolidated into the single Endeavours overview, with Common Endeavours retained as an alias. It is not a separate activity; preserve this source only for audit."
         },
         {
           "contentId": "core:reference:196-duties-responsibilities",
@@ -5451,7 +5462,7 @@
           "status": "reference-only",
           "source": {
             "book": "core",
-            "page": 197
+            "page": "197–198"
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -5558,12 +5569,12 @@
           "contentId": "core:reference:199-invent",
           "kind": "referenceEntries",
           "name": "Invent!",
-          "status": "deferred",
+          "status": "reference-only",
           "source": {
             "book": "core",
             "page": 199
           },
-          "reason": "Standalone Rules are excluded from publication; original extraction is retained only for private audit."
+          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "core:reference:200-do-me-a-favour",
@@ -5575,6 +5586,17 @@
             "page": 200
           },
           "reason": "Standalone Rules are excluded from publication; original extraction is retained only for private audit."
+        },
+        {
+          "contentId": "core:reference:200-raise-reputation",
+          "kind": "referenceEntries",
+          "name": "Raise Reputation",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 200
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "core:reference:200-research-lore",

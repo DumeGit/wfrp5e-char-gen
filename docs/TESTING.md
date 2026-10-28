@@ -1,5 +1,11 @@
 # Local testing
 
+## Core Endeavour cleanup — 28 October 2026
+
+All 17 named core Endeavours on pp. 196–201 were checked against the supplied PDF pages. Core 1.1.10 restores Animal Training, Raise Reputation and correctly classified Invent!, consolidates Common Endeavours into one overview/alias, and repairs Crafting/Income table continuations and Commission’s Custom Gear scope. The [review inventory](CORE-ENDEAVOURS-REVIEW.md) records each activity and source boundary.
+
+All 66 focused Endeavour/description/reference/search cases passed. The shared-reader journey passed once on desktop and once at simulated 390px phone width, checking Book/category filters, restored entries, Invent! → Crafting navigation, both Crafting tables, Income, the overview alias and no page overflow or uncaught page errors. Both reader screenshots were visually inspected. The reader is shared, so this content-only update did not repeat the journey in all four modes. Production build/28-pack validation, canonical source checks, generated output, module checks, Windows-compatible formatting and the 108-file offline inventory passed. The complete unrelated rules/browser matrix and physical devices were not retested.
+
 ## Continuous parchment — 28 October 2026
 
 The shared parchment now wraps its age marks across tile edges and renders stitched SVG noise with Chromium before static WebP encoding. The manual `node scripts/build-parchment.mjs` workflow checks the compressed edges before writing the asset. The 11,972-byte production texture reduces mean opposing-edge RGB differences from X/Y 3.425/4.031 to 0.695/1.112, retaining the original palette and 1024px repeat. A 2×2 repeat and representative wide/tall app captures were visually inspected. All four modes were checked at 2560px and 390px with the shared material, no horizontal overflow and no uncaught page errors; these are emulated widths, not physical-device certification.

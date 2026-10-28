@@ -3061,15 +3061,6 @@
       "status": "reviewed",
       "text": "After acquiring the required Trappings, Talents and Advances, spend this Endeavour and 100 XP to gain the next Career level. Fill 10 tracker boxes for level two, 12 additional boxes for level three and 14 additional boxes for level four."
     },
-    "description:749e2571edddab53f04a7a86": {
-      "name": "Common Endeavours",
-      "source": {
-        "book": "core",
-        "page": 196
-      },
-      "status": "reviewed",
-      "text": "These Endeavours are generally available between adventures. The GM may limit availability according to downtime location and circumstances."
-    },
     "description:692454ba8b65d3daa09c6030": {
       "name": "Endeavours",
       "source": {
@@ -3077,7 +3068,7 @@
         "page": 196
       },
       "status": "reviewed",
-      "text": "While not adventuring, choose one Endeavour per week, with a maximum of three per downtime period."
+      "text": "While not adventuring, choose one Endeavour per week, up to three per downtime period. The GM decides availability according to location and circumstances. Career or Species obligations may use some of these Endeavours.\n\n### Elves and Yenlui\n\nAn elf spends one Endeavour maintaining spiritual balance. This requirement does not apply when using the High Elf Player’s Guide’s detailed yenlui rules.\n\n### Burdens of Power\n\nAt your Career’s highest level, skipping Income still requires its Earning Test. Success preserves Standing but earns no money; failure permanently reduces Standing by 1 within your Status Tier. Each later Income Endeavour restores 1 Standing, up to the current Career level’s maximum.\n\nIf this loss would reduce Standing to 0, drop from Career level four to level three at no XP cost, using its lower Status and future earnings. Keep all acquired Advances. Returning to the higher level requires paying its XP cost again."
     },
     "description:d253969eddab3f2247013138": {
       "name": "Banking",
@@ -3086,7 +3077,7 @@
         "page": 197
       },
       "status": "reviewed",
-      "text": "Unbanked money remaining after Between Adventures is lost before the next adventure. Choose a Banking option.\n\nInvest with Banking House: Silver or Gold Status only. Choose or roll 1–10 as both percentage interest and risk. Withdrawing requires a further Banking Endeavour, immediately or after later adventures. Roll 1d100: at or below the chosen risk, lose the entire deposit; above it, recover principal plus accrued interest. For example, risk 6 yields 6% interest and fails on 6 or less; 10 GC earns 12 silver shillings.\n\nStash the Loot: Any Status may hide money or entrust it to someone. Withdraw before an adventure without an Endeavour; roll 1d100. On 10 or less, lose the entire stash; otherwise recover the principal. Successful withdrawals are available at the next adventure’s start alongside Income earnings."
+      "text": "Money left after Between Adventures is lost before the next adventure unless saved through Banking. Choose one option.\n\n### Invest with Banking House\n\nSilver or Gold Status only. Choose a number from 1–10, or roll 1d10: this is both the percentage interest and the risk. Withdrawing requires another Banking Endeavour, immediately or after later adventures. Roll 1d100: at or below the risk, lose the entire deposit; above it, receive the original funds plus accrued interest.\n\n### Stash the Loot\n\nAvailable to any Status: hide the money or leave it with someone. Withdraw before an adventure without spending an Endeavour. Roll 1d100: on 10 or less, lose the entire stash; otherwise recover the original funds. Successful withdrawals from either option are available at the next adventure’s start, alongside Income earnings."
     },
     "description:cbf898e5cf82b28828e08601": {
       "name": "Change Career",
@@ -3110,10 +3101,10 @@
       "name": "Commission",
       "source": {
         "book": "core",
-        "page": 197
+        "page": "197–198"
       },
       "status": "reviewed",
-      "text": "Commission one Exotic or bespoke Trapping per Endeavour. Find a capable craftsperson or supplier first, using Consult an Expert if necessary. Order and pay the listed cost; collect after the next adventure. Each additional item needs another Commission."
+      "text": "Commission one Exotic or bespoke Trapping per Endeavour. Find a capable craftsperson or supplier first, using Consult an Expert if necessary. Place the order and pay the item’s cost; collect after the next adventure. Each additional item needs another Commission Endeavour.\n\n### Custom Gear\n\nWith GM permission, use two or more consecutive Commission Endeavours for more unusual items. These can be extremely expensive and may also require Favours or an adventure to obtain materials; no fixed additional price is supplied."
     },
     "description:9f5c6de7ca0c4d080453a53d": {
       "name": "Consult an Expert",
@@ -3122,7 +3113,7 @@
         "page": "197–198"
       },
       "status": "reviewed",
-      "text": "Consult an expert to support another Endeavour or obtain knowledge. If none is known, make Challenging (+0 SL) Gossip: success finds a genuine specialist; failure finds a self-proclaimed authority whose advice the GM determines. The GM sets payment or Favours (page 200), callable in later adventures or repaid with future Endeavours. Advice depends on the expert’s field, experience, bias and your questions.\n\nWhen seeking knowledge rather than supporting another Endeavour, also record an Expert Reroll: use it once on a directly related Test before the next adventure ends."
+      "text": "Consult an expert to support another Endeavour or obtain knowledge. If none is known, make Challenging (+0 SL) Gossip: success finds a genuine specialist; failure finds a self-proclaimed authority whose advice the GM determines. The GM sets any payment or Favours; the different repayment rules for Favours are on page 200. Advice depends on the expert’s field, experience, biases and your questions.\n\nWhen seeking knowledge rather than supporting another Endeavour, also record an Expert Reroll: use it once on a directly related Test before the next adventure ends."
     },
     "description:5e825182e30c6597851444a2": {
       "name": "Crafting",
@@ -3131,7 +3122,7 @@
         "page": 198
       },
       "status": "reviewed",
-      "text": "With the appropriate Trade Skill, Trade Tools, raw materials and workshop, make a Consumer Guide Trapping or another GM-approved item. Materials normally cost one quarter of its list price. Make an Extended Trade Test; the GM sets Difficulty, usually guided by Availability."
+      "text": "Make a Consumer Guide Trapping, or another GM-approved item, with the appropriate Trade Skill, Trade Tools, raw materials and workshop. Materials normally cost one quarter of the item’s list price.\n\nMake an Extended Trade Test. The GM sets its Difficulty, normally guided by Availability:\n\n| Availability | Difficulty |\n| --- | --- |\n| Common | Average (+2 SL) |\n| Scarce | Challenging (+0 SL) |\n| Rare | Difficult (-1 SL) |\n| Exotic | Very Hard (-3 SL) |\n\nThe GM also sets the target SL using the item’s listed price as a guide:\n\n| List Price | SL |\n| --- | --- |\n| Brass | 5 |\n| Silver | 10 |\n| Gold | 15+ |\n\nEach Flaw halves the required SL. Then add +5 SL for each Quality. Each Crafting Endeavour permits one roll towards the Extended Test. Keep unfinished work at your lodgings or carry it while adventuring if possible."
     },
     "description:bb728aba8fbaaa0ff83c9205": {
       "name": "Crafting Difficulty",
@@ -3178,7 +3169,7 @@
         "page": 199
       },
       "status": "reviewed",
-      "text": "Make an Average (+2 SL) Test with the Earning Skill shown in bold italics at Career level one. Success earns income for your current Career level’s Status, using Earned Income."
+      "text": "Make an Average (+2 SL) Test with the Earning Skill printed in bold italics at your Career’s first level. Use the Status of your current Career level to determine earnings:\n\n| Status Tier | Income |\n| --- | --- |\n| Brass | 2d10 brass pennies per Standing Level |\n| Silver | 1d10 silver shillings per Standing Level |\n| Gold | 1 gold crown per Standing Level |\n\nOn failure, roll normal earnings and halve the result, rounding down. Character Events may modify income. Receive this money after the previous adventure’s unspent money is lost.\n\n### Without Income\n\nIf you skip Income during downtime, earn nothing and begin the next adventure with one coin for your Status Tier: 1 brass penny, 1 silver shilling or 1 gold crown. At your Career’s highest level, the Burdens of Power restrictions in the Endeavours overview (page 196) also apply."
     },
     "description:680590134a23c169eb6a4b3f": {
       "name": "Research Lore",
@@ -3205,7 +3196,7 @@
         "page": 201
       },
       "status": "reviewed",
-      "text": "Observe a chosen criminal target and make Challenging (+0 SL) Perception, adjusted for the mark’s accessibility. Success grants Advantage to one Test involving that mark next adventure; record it. The GM also supplies information or misinformation according to SL. This Endeavour may be taken repeatedly."
+      "text": "Observe a chosen criminal target and make Challenging (+0 SL) Perception, adjusted for the mark’s accessibility. On success, you may gain Advantage on one Test concerning that mark during the next adventure; record it. The GM also supplies information or misinformation according to SL. This Endeavour may be taken repeatedly."
     },
     "description:f4ae3297d3a3dcc39b4403be": {
       "name": "Training",
@@ -20331,6 +20322,33 @@
       },
       "status": "reviewed",
       "text": "Pre-prepared cures usually require an Endurance Test at the Difficulty shown for that cure and Symptom in Effect Of Pre-Prepared Cures. Success suppresses the Symptom for 1 day. An Astounding Failure (-6 SL) causes Galloping Trots. See the Consumer Guide for purchasing medicines."
+    },
+    "description:d6b52d797ab19ebab0399a85": {
+      "name": "Animal Training",
+      "source": {
+        "book": "core",
+        "page": 196
+      },
+      "status": "reviewed",
+      "text": "Train one of your animals with an Average (+2 SL) Animal Training Test. On success, add one skill from the Trained Creature Trait (page 363) to that animal."
+    },
+    "description:8f536045f129853a36fe428b": {
+      "name": "Invent!",
+      "source": {
+        "book": "core",
+        "page": 199
+      },
+      "status": "reviewed",
+      "text": "Combine the properties of two or more existing Trappings into a new invention. The GM decides its effects and capabilities.\n\n### Plan\n\nSpend one Endeavour on blueprints and make a Trade (Engineer) Test at a GM-set Difficulty based on the invention’s ambition. Success completes the plans; each SL provides +1 SL when building it.\n\n### Build\n\nUse either Crafting or Commission:\n\n- Crafting: You need the Skills required for every component. The Crafting Test is Very Hard (-3 SL), modified by the Plan bonus. Materials cost twice the components’ combined listed price and have the rarest component’s Availability.\n- Commission: Find a suitable engineer, using Consult an Expert if necessary. Resolve Commission normally, except the cost is six times the components’ combined listed price."
+    },
+    "description:963e5a9434a506f00f62aab4": {
+      "name": "Raise Reputation",
+      "source": {
+        "book": "core",
+        "page": 200
+      },
+      "status": "reviewed",
+      "text": "Spend coin equal to your maximum Earnings (page 199): for example, earnings of 4d10 brass pennies require spending 40 brass pennies. Increase Standing by +1 until the next downtime, unless your reputation is damaged during the adventure."
     }
   },
   "bindings": {
@@ -21678,13 +21696,9 @@
       "id": "description:abd817dcef347be51a2cca74",
       "sourceHash": "a3b9e7daad36dca2de62066169a40b4f3700b0c905dcc10a49943d5d86da952a"
     },
-    "data/books/core/reference-entries.json#/core%3Areference%3A196-common-endeavours": {
-      "id": "description:749e2571edddab53f04a7a86",
-      "sourceHash": "72b636b7f18e9364449e6d90248b684e3e69aaf746feba8af5d9350782c0ce2b"
-    },
     "data/books/core/reference-entries.json#/core%3Areference%3A196-endeavours": {
       "id": "description:692454ba8b65d3daa09c6030",
-      "sourceHash": "1ed36dcf1ac93076658d17f10037597609a462ea16cd6de554209972c3cf5fa4"
+      "sourceHash": "4683fdef6fda7c5d7f0a038a7c3c49f57f9a59935d0d9dda099eef421920b8b9"
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A197-banking": {
       "id": "description:d253969eddab3f2247013138",
@@ -21700,7 +21714,7 @@
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A197-commission": {
       "id": "description:f5ef6aa8964c0f1a54e9ebf4",
-      "sourceHash": "40fa4ccb3c0490d38024a73714c69563d7cc94c840faa32c8a75fe017c838a16"
+      "sourceHash": "569e637f943962a6e7478a164fff7c67de967b7ae8dd157d69f4494a6974da7c"
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A197-consult-an-expert": {
       "id": "description:9f5c6de7ca0c4d080453a53d",
@@ -21708,7 +21722,7 @@
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A198-crafting": {
       "id": "description:5e825182e30c6597851444a2",
-      "sourceHash": "eeb867d796f12f26d30b7451ed0b42dfe878ae31604ded55181985eec72d7db8"
+      "sourceHash": "07881799b486b10abb4d7c4b63b8fe2aa2fa17412fe2812fe96ff428f112decd"
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A198-crafting-difficulty": {
       "id": "description:bb728aba8fbaaa0ff83c9205",
@@ -21728,7 +21742,7 @@
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A199-income": {
       "id": "description:6fbf1e42fa1e5560299a62b9",
-      "sourceHash": "5e4563d9abeb4935458194784a0e2646cd95c7445ceeea9805eca101192f8cfd"
+      "sourceHash": "325c0905af7e474351b9e8129e7b3cad29a7e275a5010857e677a8597927b45a"
     },
     "data/books/core/reference-entries.json#/core%3Areference%3A200-research-lore": {
       "id": "description:680590134a23c169eb6a4b3f",
@@ -29589,6 +29603,18 @@
     "data/books/core/reference-entries.json#/core%3Areference%3A182-disease-cures-and-tonics": {
       "id": "description:420e4f2593f009df2c9a012e",
       "sourceHash": "27041e0dc137117d47fabe90042cfc26f9769e58db73208b2f48a3db154c8841"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A196-animal-training": {
+      "id": "description:d6b52d797ab19ebab0399a85",
+      "sourceHash": "07400af05af33c531ddcbe4e3b7f889a0461619f49bde8ca5ebea3757cf6d706"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A199-invent": {
+      "id": "description:8f536045f129853a36fe428b",
+      "sourceHash": "90e93b0499f9775d373f56673764913d9b67723a9c7dbece4a2933b6146d3c5e"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A200-raise-reputation": {
+      "id": "description:963e5a9434a506f00f62aab4",
+      "sourceHash": "a9446386b4ebfcf5ca454fb8bffb5f9f55e3f05e3248b50baec0a28f015e3c9e"
     }
   },
   "excludedReferences": {
@@ -29621,6 +29647,11 @@
       "descriptionId": "description:3c1e4d4394e6ff97ddd6f808",
       "name": "Personality Table",
       "reason": "Quartermaster Shuffle illustrative job-hook generator with no mechanical reference values; adventure hooks and setting-only search are outside the authorised scope."
+    },
+    "core:reference:196-common-endeavours": {
+      "descriptionId": "description:749e2571edddab53f04a7a86",
+      "name": "Common Endeavours",
+      "reason": "28 October 2026: introductory availability paragraph consolidated into the single Endeavours overview, with Common Endeavours retained as an alias. It is not a separate activity; preserve this source only for audit."
     }
   },
   "editorialComplete": true

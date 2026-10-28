@@ -19,7 +19,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 312 | 0 | 386 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 314 | 0 | 386 |
 | Up in Arms | 135 | 13 | 59 | 0 | 78 |
 | Archives of the Empire: Volume I | 31 | 22 | 8 | 0 | 15 |
 | Archives of the Empire: Volume II | 50 | 7 | 44 | 0 | 74 |
@@ -52,7 +52,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.9
+Pack `core` · version 1.1.10
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -61,7 +61,7 @@ Pack `core` · version 1.1.9
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 145 | 0 | 122 |
+| referenceEntries | 0 | 0 | 147 | 0 | 122 |
 | ruleReferences | 0 | 0 | 166 | 0 | 264 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
@@ -218,15 +218,16 @@ Pack `core` · version 1.1.9
 | `core:reference:194-character-events` — Character Events Table | referenceEntries | reference-only | p. 194–195 | Sourced book rule reference; no live-play automation. |
 | `core:reference:195-money-to-burn` — Money To Burn | referenceEntries | deferred | p. 195 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:196-advance-career` — Advance Career | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
+| `core:reference:196-animal-training` — Animal Training | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
 | `core:reference:196-burdens-of-power` — Burdens of Power | referenceEntries | deferred | p. 196 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
-| `core:reference:196-common-endeavours` — Common Endeavours | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
+| `core:reference:196-common-endeavours` — Common Endeavours | referenceEntries | deferred | p. 196 | 28 October 2026: introductory availability paragraph consolidated into the single Endeavours overview, with Common Endeavours retained as an alias. It is not a separate activity; preserve this source only for audit. |
 | `core:reference:196-duties-responsibilities` — Duties & Responsibilities | referenceEntries | deferred | p. 196 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:196-elves-and-yenlui` — Elves and Yenlui | referenceEntries | deferred | p. 196 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:196-endeavours` — Endeavours | referenceEntries | reference-only | p. 196 | Sourced book rule reference; no live-play automation. |
 | `core:reference:197-banking` — Banking | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
 | `core:reference:197-change-career` — Change Career | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
 | `core:reference:197-combat-training` — Combat Training | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
-| `core:reference:197-commission` — Commission | referenceEntries | reference-only | p. 197 | Sourced book rule reference; no live-play automation. |
+| `core:reference:197-commission` — Commission | referenceEntries | reference-only | p. 197–198 | Sourced book rule reference; no live-play automation. |
 | `core:reference:197-consult-an-expert` — Consult an Expert | referenceEntries | reference-only | p. 197–198 | Sourced book rule reference; no live-play automation. |
 | `core:reference:198-crafting` — Crafting | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
 | `core:reference:198-crafting-difficulty` — Crafting Difficulty | referenceEntries | reference-only | p. 198 | Sourced book rule reference; no live-play automation. |
@@ -236,8 +237,9 @@ Pack `core` · version 1.1.9
 | `core:reference:199-earned-income` — Earned Income | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
 | `core:reference:199-hardly-working` — Hardly Working | referenceEntries | deferred | p. 199 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:199-income` — Income | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
-| `core:reference:199-invent` — Invent! | referenceEntries | deferred | p. 199 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:199-invent` — Invent! | referenceEntries | reference-only | p. 199 | Sourced book rule reference; no live-play automation. |
 | `core:reference:200-do-me-a-favour` — Do Me A Favour! | referenceEntries | deferred | p. 200 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:200-raise-reputation` — Raise Reputation | referenceEntries | reference-only | p. 200 | Sourced book rule reference; no live-play automation. |
 | `core:reference:200-research-lore` — Research Lore | referenceEntries | reference-only | p. 200 | Sourced book rule reference; no live-play automation. |
 | `core:reference:200-the-latest-news` — The Latest News | referenceEntries | reference-only | p. 200 | Sourced book rule reference; no live-play automation. |
 | `core:reference:201-study-a-mark` — Study a Mark | referenceEntries | reference-only | p. 201 | Sourced book rule reference; no live-play automation. |
