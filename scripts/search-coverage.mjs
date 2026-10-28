@@ -1,6 +1,9 @@
 // Build-only audit. Creator inclusion status and search availability are separate.
 import { createHash } from "node:crypto";
-import { isSearchCategoryEnabled } from "../src/engine/reference-entries.mjs";
+import {
+  isSearchCategoryEnabled,
+  isSearchCategoryVisible,
+} from "../src/engine/reference-entries.mjs";
 
 // Git can convert text files to CRLF on Windows. Review the UTF-8/LF content,
 // so a fresh checkout does not invalidate an unchanged source review.
@@ -151,6 +154,10 @@ export function searchCoverage(library, corpus, review, gm) {
     schemaVersion: 1,
     scope: review.scope,
     references: corpus.rows.length,
+    visibleReferences: corpus.rows.filter((row) =>
+      isSearchCategoryVisible(row.kind),
+    ).length,
+    internalTables: corpus.rows.filter((row) => row.kind === "table").length,
     newlyImported: books.reduce((sum, b) => sum + b.newlyImported, 0),
     retainedOutsideSearch: retainedOutsideSearch.size,
     removedNonMechanicalRules: books.reduce(
@@ -170,11 +177,12 @@ export function searchCoverageMarkdown(report) {
     "",
     "Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.",
     "",
-    `The shared four-workspace catalogue contains **${report.references} results**, including **${report.newlyImported} new printed references**. Existing profiles include grouped specialisations and reference variants.`,
+    `The shared reference library retains **${report.references} records**, including **${report.newlyImported} printed reference records**. **${report.visibleReferences} results** are visible in all four search workspaces. Existing profiles include grouped specialisations and reference variants.`,
+    `The library retains **${report.internalTables} standalone tables** for internal source projections and the manager's wound picker. Tables are absent from search categories, results, related-term links and direct table readers. Tables embedded within retained references, such as Skill/Talent Career membership, remain part of those references. The per-book inventory below counts library records, including internal tables.`,
     `A further **${report.retainedOutsideSearch} original records** are retained only in private source/audit inputs. NPCs & Creatures, Templates and standalone Rules are excluded from the published search.`,
     `Standalone Rules are completely absent from published reference payloads. Historical source audits (including **${report.removedNonMechanicalRules} previously removed non-mechanical entries**) remain private build evidence; creator calculations and other reference categories are unchanged.`,
     "",
-    "| Book | Version | Existing results | New printed references | Total | Results with actual adaptations |",
+    "| Book | Version | Existing library records | Printed reference records | Library total | Records with actual adaptations |",
     "|---|---|---:|---:|---:|---:|",
   ];
   for (const b of report.books)

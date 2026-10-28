@@ -95,6 +95,16 @@ test("status card records sourced Critical Wounds and mutations, recovery and cu
     dialog.getByRole("button", { name: "Core Rulebook, p. 173", exact: true }),
   ).toBeVisible();
   await dialog
+    .getByRole("button", { name: "Core Rulebook, p. 173", exact: true })
+    .click();
+  await expect(
+    page.getByRole("region", { name: "Ear Bash", exact: true }),
+  ).toContainText("Critical Wound · Head");
+  await page
+    .getByRole("dialog", { name: "Search the books", exact: true })
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
+  await dialog
     .getByLabel("Recovery / notes", { exact: true })
     .fill("Healer reviewed this injury");
   await dialog
@@ -109,6 +119,16 @@ test("status card records sourced Critical Wounds and mutations, recovery and cu
   await expect(
     status.getByText("Healer reviewed this injury", { exact: true }),
   ).toBeVisible();
+  await status
+    .getByRole("button", { name: /^Core(?: Rulebook)?, p\. 173$/ })
+    .click();
+  await expect(
+    page.getByRole("region", { name: "Ear Bash", exact: true }),
+  ).toContainText("Wounds: 1. Gain 1 Deafened.");
+  await page
+    .getByRole("dialog", { name: "Search the books", exact: true })
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await status
     .getByRole("button", { name: "Mark healed", exact: true })
     .click();

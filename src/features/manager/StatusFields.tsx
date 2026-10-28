@@ -159,15 +159,14 @@ export function StatusFields({
                   onClick={() =>
                     requestReference({
                       id:
-                        selected?.referenceId ||
+                        (kind === "critical"
+                          ? selected?.id
+                          : selected?.referenceId) ||
                         value.referenceId ||
                         value.catalogueId,
-                      name:
-                        kind === "critical"
-                          ? `${selected?.location || value.location} Critical Wounds`
-                          : value.name,
+                      name: selected?.name || value.name,
                       book: "core",
-                      kind: kind === "critical" ? "table" : "mutation",
+                      kind: kind === "critical" ? "critical" : "mutation",
                     })
                   }
                 >

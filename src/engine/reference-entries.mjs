@@ -26,9 +26,11 @@ export const REFERENCE_CATEGORIES = [
 export const isSearchCategoryEnabled = (category) =>
   category !== "profile" && category !== "template" && category !== "rule";
 
-// Standalone Rules are excluded at build time, not merely hidden in the UI.
+// Tables remain in the validated library for the manager's wound picker and
+// source projections. They are excluded from every search surface and linker.
+// Standalone Rules are excluded at build time.
 export const isSearchCategoryVisible = (category) =>
-  isSearchCategoryEnabled(category);
+  isSearchCategoryEnabled(category) && category !== "table";
 
 export function validateReferenceEntry(entry, book) {
   const nonempty = (value) => typeof value === "string" && !!value.trim();

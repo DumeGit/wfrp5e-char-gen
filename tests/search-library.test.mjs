@@ -7,6 +7,7 @@ import { searchBooks } from "../src/engine/book-search.mjs";
 import { referenceBodyHTML } from "./reference-render.mjs";
 import { isSearchCategoryVisible } from "../src/engine/reference-entries.mjs";
 import { createReferenceLinker } from "../src/engine/book-search-links.mjs";
+import { SEARCH_CATEGORIES } from "../src/engine/search-presentation.mjs";
 
 const wire = JSON.parse(
   await readFile(
@@ -17,6 +18,47 @@ const wire = JSON.parse(
 const full = await loadReferenceLibrary(library, () => wire);
 const named = (name, kind) =>
   full.rows.filter((row) => row.name === name && (!kind || row.kind === kind));
+
+test("standalone tables stay internal and are absent from visible search and reference chaining", () => {
+  const visible = full.rows.filter((row) => isSearchCategoryVisible(row.kind));
+  assert.equal(SEARCH_CATEGORIES.table, undefined);
+  assert.ok(
+    full.rows.some((row) => row.kind === "table"),
+    "manager source tables remain available internally",
+  );
+  assert.ok(visible.every((row) => row.kind !== "table"));
+  for (const query of [
+    "Head Critical Wounds",
+    "Hit Locations",
+    "Physical Corruption Table",
+    "Random Talents",
+  ]) {
+    assert.ok(
+      searchBooks(visible, query, Infinity).rows.every(
+        (row) => row.kind !== "table",
+      ),
+    );
+    assert.ok(
+      createReferenceLinker(visible)(query).every(
+        (part) =>
+          !part.keys?.some(
+            (key) => full.rows.find((row) => row.key === key)?.kind === "table",
+          ),
+      ),
+    );
+  }
+  assert.equal(
+    searchBooks(visible, "", Infinity, { category: "table" }).total,
+    0,
+  );
+  for (const [kind, count] of [
+    ["critical", 80],
+    ["mutation", 40],
+    ["injury", 18],
+    ["disease", 25],
+  ])
+    assert.equal(visible.filter((row) => row.kind === kind).length, count);
+});
 
 test("Rules are absent from the shipped payload, all results and related-term chaining", () => {
   const visible = full.rows.filter((row) => isSearchCategoryVisible(row.kind));

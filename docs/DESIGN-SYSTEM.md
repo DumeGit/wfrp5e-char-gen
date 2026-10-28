@@ -30,7 +30,7 @@ Use local Ledger Display for mastheads and one decorative chapter initial, Ledge
 
 ## Layout and navigation
 
-Shared book search uses the existing native Category/Book selectors and compact filter controls for every reference type. Critical Wounds adds a labelled Hit location selector; Mutations retains Physical/Mental. Their readers use the shared definition fields for location/type and roll range, and a quiet **View full table** button with normal reference history. No new palette, dialog or persistent character setting is introduced.
+Shared book search uses the existing native Category/Book selectors and compact filter controls for every reference type. Critical Wounds adds a labelled Hit location selector; Mutations retains Physical/Mental. Their readers use the shared definition fields for location/type and roll range, and book/page citations. Standalone table readers and full-table buttons are removed from search; embedded reference tables such as Skill/Talent Career membership retain their existing format. No new palette, dialog or persistent character setting is introduced.
 
 Injuries uses the same category selector and reference reader, with compact Effects/Healing headings where applicable. Exact severity names in critical wounds open the corresponding injury using normal reference history; all prose and controls retain the shared typography, source links and touch targets.
 

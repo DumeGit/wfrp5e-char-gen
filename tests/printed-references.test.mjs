@@ -4,7 +4,10 @@ import { library } from "./fixture.mjs";
 import { assembleBooks } from "../src/engine/books.mjs";
 import { buildReferenceLibrary } from "../src/engine/search-library.mjs";
 import { buildBookReport } from "../src/engine/book-report.mjs";
-import { validateReferenceEntry } from "../src/engine/reference-entries.mjs";
+import {
+  validateReferenceEntry,
+  isSearchCategoryVisible,
+} from "../src/engine/reference-entries.mjs";
 import { referenceBodyHTML, ruleTextHTML } from "./reference-render.mjs";
 import {
   createWorkerHandler,
@@ -562,6 +565,14 @@ test("coverage is generated from registry and frozen review, separate from creat
   );
   const report = searchCoverage(library, full, review, workshop);
   assert.equal(report.removedNonMechanicalRules, 112);
+  assert.equal(
+    report.visibleReferences,
+    full.rows.filter((row) => isSearchCategoryVisible(row.kind)).length,
+  );
+  assert.equal(
+    report.internalTables,
+    full.rows.filter((row) => row.kind === "table").length,
+  );
   assert.deepEqual(
     report.books.map((b) => b.id).sort(),
     library.packs

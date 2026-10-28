@@ -181,7 +181,12 @@ export function ReferenceSearch() {
           let matches = request.id
             ? allowed.filter(
                 (row) =>
-                  row.key === request.id || row.entry.contentId === request.id,
+                  row.key === request.id ||
+                  row.entry.contentId === request.id ||
+                  (request.kind === "critical" &&
+                    row.entry.referenceId === request.id &&
+                    normalizeSearch(row.name) ===
+                      normalizeSearch(request.name || "")),
               )
             : allowed.filter(
                 (row) =>
@@ -897,20 +902,6 @@ export function ReferenceSearch() {
                     )}
                   <div className="search-book-reference">
                     <ReferenceBody row={current} renderText={renderText} />
-                    {current.entry.referenceId && data && (
-                      <button
-                        type="button"
-                        className="quiet"
-                        onClick={() => {
-                          const table = data.rows.find(
-                            (row) => row.key === current.entry.referenceId,
-                          );
-                          if (table) choose([table.key], table.name);
-                        }}
-                      >
-                        View full table
-                      </button>
-                    )}
                     {data && (
                       <CareerReferences
                         row={current}

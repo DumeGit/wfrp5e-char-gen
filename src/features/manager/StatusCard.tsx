@@ -56,12 +56,9 @@ export function StatusCard({
             type="button"
             onClick={() =>
               requestReference({
-                name:
-                  row.kind === "critical"
-                    ? `${row.referenceId?.includes("head") ? "Head" : row.referenceId?.includes("arm") ? "Arm" : row.referenceId?.includes("body") ? "Body" : "Leg"} Critical Wounds`
-                    : row.name,
+                name: row.name,
                 id: row.referenceId || row.catalogueId,
-                kind: row.kind === "critical" ? "table" : row.kind,
+                kind: row.kind,
                 book: row.source?.book || "core",
               })
             }

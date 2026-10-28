@@ -165,11 +165,18 @@ for (const [workspace, route] of [
   ["Marijan", "/marijan/"],
   ["Manager", "/manager/"],
 ]) {
-  test(`${workspace} searches individual critical wounds and mutations with source tables @search @mobile`, async ({
+  test(`${workspace} searches individual wounds and mutations without standalone tables @search @mobile`, async ({
     page,
   }, info) => {
     await page.goto(`${route}?verify=1`);
-    const input = await search(page, "Minor Cut");
+    const input = await search(page, "Head Critical Wounds");
+    await expect(
+      page.locator('#book-search-category option[value="table"]'),
+    ).toHaveCount(0);
+    await expect(
+      page.getByRole("option", { name: /^Head Critical Wounds / }),
+    ).toHaveCount(0);
+    await input.fill("Minor Cut");
     await categoryFilters(page, "critical");
     const results = page.locator("#book-search-results").getByRole("option");
     await expect(results.filter({ hasText: /^Minor Cut/ })).toHaveCount(3);
@@ -186,16 +193,9 @@ for (const [workspace, route] of [
     await expect(reader).toContainText("p. 174");
     await expect(reader).toContainText("21–25");
     await expect(reader).toContainText("Wounds: 1. Gain 1 Bleeding.");
-    await reader
-      .getByRole("button", { name: "View full table", exact: true })
-      .click();
     await expect(
-      page.getByRole("region", { name: "Arm Critical Wounds", exact: true }),
-    ).toBeVisible();
-    await page
-      .getByRole("button", { name: "Back to previous reference", exact: true })
-      .click();
-    await expect(reader).toBeVisible();
+      reader.getByRole("button", { name: "View full table", exact: true }),
+    ).toHaveCount(0);
     await page
       .getByRole("button", { name: "Back to search", exact: true })
       .click();
@@ -217,15 +217,9 @@ for (const [workspace, route] of [
     await expect(mutation).toContainText("96–00");
     await noOverflow(page);
     await page.screenshot({ path: info.outputPath("mutation-reference.png") });
-    await mutation
-      .getByRole("button", { name: "View full table", exact: true })
-      .click();
     await expect(
-      page.getByRole("region", {
-        name: "Mental Corruption Table",
-        exact: true,
-      }),
-    ).toBeVisible();
+      mutation.getByRole("button", { name: "View full table", exact: true }),
+    ).toHaveCount(0);
     await page
       .getByRole("button", { name: "Back to search", exact: true })
       .click();

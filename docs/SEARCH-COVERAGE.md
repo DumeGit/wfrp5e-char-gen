@@ -6,11 +6,12 @@ The same reference catalogue serves Player, Bestiary, Marijan and the character 
 
 Search availability does not enable creation or play automation. Fourth Edition references preserve printed mechanics and carry an edition warning. Legacy remains reserved for actual approved adaptations. Excluded extraction text is not shipped. Reviewed NPC/creature source records are retained in their book files for possible future use but excluded from the shared search, its reader and chaining. Core GM profiles/templates remain available in the workshop. The audit counts extraction sections, which can be consolidated into one reference; they are not page-completeness percentages.
 
-The shared four-workspace catalogue contains **3110 results**, including **610 new printed references**. Existing profiles include grouped specialisations and reference variants.
+The shared reference library retains **3110 records**, including **610 printed reference records**. **2795 results** are visible in all four search workspaces. Existing profiles include grouped specialisations and reference variants.
+The library retains **315 standalone tables** for internal source projections and the manager's wound picker. Tables are absent from search categories, results, related-term links and direct table readers. Tables embedded within retained references, such as Skill/Talent Career membership, remain part of those references. The per-book inventory below counts library records, including internal tables.
 A further **970 original records** are retained only in private source/audit inputs. NPCs & Creatures, Templates and standalone Rules are excluded from the published search.
 Standalone Rules are completely absent from published reference payloads. Historical source audits (including **112 previously removed non-mechanical entries**) remain private build evidence; creator calculations and other reference categories are unchanged.
 
-| Book | Version | Existing results | New printed references | Total | Results with actual adaptations |
+| Book | Version | Existing library records | Printed reference records | Library total | Records with actual adaptations |
 |---|---|---:|---:|---:|---:|
 | Warhammer Fantasy Roleplay, Fifth Edition | 1.1.9 | 1526 | 145 | 1671 | 0 |
 | Up in Arms | 1.0.5 | 98 | 59 | 157 | 13 |
