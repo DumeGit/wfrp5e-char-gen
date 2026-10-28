@@ -1,4 +1,5 @@
 import { publicAsset } from "./asset-path.mjs";
+import { criticalChoices } from "./critical-wounds.mjs";
 import { addSearchMetadata } from "./search-metadata.mjs";
 import { validateSearchFilters } from "./search-filters.mjs";
 import {
@@ -64,10 +65,33 @@ export function buildReferenceLibrary(library, gm) {
       });
     }
   }
+  for (const wound of criticalChoices([...found.values()])) {
+    const table = found.get(wound.referenceId).entry;
+    const fields = [
+      wound.text,
+      `${wound.location} Critical Wounds · Injury reference`,
+      wound.roll,
+      library.packs.find((pack) => pack.manifest.id === "core").manifest.title,
+    ];
+    found.set(wound.id, {
+      key: wound.id,
+      kind: "critical",
+      name: wound.name,
+      entry: {
+        ...wound,
+        contentId: wound.id,
+        descriptionStatus: table.descriptionStatus,
+      },
+      aliases: [],
+      textFields: fields,
+      legacy: [],
+      normalizedName: normalizeSearch(wound.name),
+    });
+  }
   for (const [collection, kind] of [["mutations", "mutation"]])
     for (const x of gm[collection]) {
       const { notes, ...entry } = x;
-      const fields = [x.text || "", x.category || ""];
+      const fields = [x.text || "", `${x.category} mutations · Corruption`];
       found.set(x.id, {
         key: x.id,
         kind,
@@ -76,6 +100,8 @@ export function buildReferenceLibrary(library, gm) {
           ...entry,
           contentId: x.id,
           source: { book: "core", page: x.page },
+          roll: `${String(x.min).padStart(2, "0")}–${x.max === 100 ? "00" : String(x.max).padStart(2, "0")}`,
+          referenceId: `core:reference:189-${x.category.toLowerCase()}-corruption-table`,
         },
         aliases: [],
         textFields: fields,
@@ -220,5 +246,17 @@ export async function loadReferenceLibrary(
       ),
     };
   });
+  for (const row of rows.filter((row) => row.entry.referenceId)) {
+    const table = rows.find(
+      (candidate) => candidate.key === row.entry.referenceId,
+    );
+    if (
+      !table ||
+      table.kind !== "table" ||
+      table.entry.source.book !== row.entry.source.book ||
+      table.entry.source.page !== row.entry.source.page
+    )
+      throw Error("Invalid source table for book reference.");
+  }
   return { schemaVersion: payload.schemaVersion, books: payload.books, rows };
 }

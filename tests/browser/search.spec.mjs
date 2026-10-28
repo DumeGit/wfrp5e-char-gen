@@ -159,6 +159,88 @@ async function categoryFilters(page, category) {
   )
     await details.locator("summary").click();
 }
+for (const [workspace, route] of [
+  ["Player", "/"],
+  ["Bestiary", "/bestiary/"],
+  ["Marijan", "/marijan/"],
+  ["Manager", "/manager/"],
+]) {
+  test(`${workspace} searches individual critical wounds and mutations with source tables @search @mobile`, async ({
+    page,
+  }, info) => {
+    await page.goto(`${route}?verify=1`);
+    const input = await search(page, "Minor Cut");
+    await categoryFilters(page, "critical");
+    const results = page.locator("#book-search-results").getByRole("option");
+    await expect(results.filter({ hasText: /^Minor Cut/ })).toHaveCount(3);
+    const location = page.getByRole("combobox", {
+      name: "Hit location",
+      exact: true,
+    });
+    await location.selectOption("Arm");
+    await expect(results.filter({ hasText: /^Minor Cut/ })).toHaveCount(1);
+    await expect(results.first()).toContainText("Critical Wound · Arm");
+    await results.first().click();
+    const reader = page.getByRole("region", { name: "Minor Cut", exact: true });
+    await expect(reader).toBeVisible();
+    await expect(reader).toContainText("p. 174");
+    await expect(reader).toContainText("21–25");
+    await expect(reader).toContainText("Wounds: 1. Gain 1 Bleeding.");
+    await reader
+      .getByRole("button", { name: "View full table", exact: true })
+      .click();
+    await expect(
+      page.getByRole("region", { name: "Arm Critical Wounds", exact: true }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to previous reference", exact: true })
+      .click();
+    await expect(reader).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to search", exact: true })
+      .click();
+    await expect(input).toHaveValue("Minor Cut");
+    await expect(location).toHaveValue("Arm");
+    await categoryFilters(page, "mutation");
+    await input.fill("mutations");
+    await page
+      .getByRole("combobox", { name: "Mutation type", exact: true })
+      .selectOption("Mental");
+    await expect(results).toHaveCount(20);
+    await results.filter({ hasText: /^Worried Jitters/ }).click();
+    const mutation = page.getByRole("region", {
+      name: "Worried Jitters",
+      exact: true,
+    });
+    await expect(mutation).toBeVisible();
+    await expect(mutation).toContainText("p. 189");
+    await expect(mutation).toContainText("96–00");
+    await noOverflow(page);
+    await page.screenshot({ path: info.outputPath("mutation-reference.png") });
+    await mutation
+      .getByRole("button", { name: "View full table", exact: true })
+      .click();
+    await expect(
+      page.getByRole("region", {
+        name: "Mental Corruption Table",
+        exact: true,
+      }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to search", exact: true })
+      .click();
+    await categoryFilters(page, "critical");
+    await expect(location).toHaveValue("Arm");
+    await input.fill("Brutal Dismemberment");
+    await expect(results).toHaveCount(1);
+    await results.first().click();
+    await expect(
+      page.getByRole("region", { name: "Brutal Dismemberment", exact: true }),
+    ).toContainText("136 or more");
+    await noOverflow(page);
+    await page.screenshot({ path: info.outputPath("critical-reference.png") });
+  });
+}
 for (const creator of ["PC", "GM"]) {
   test(`${creator} narrows Trappings with dependent groups and clears child filters @search @mobile`, async ({
     page,

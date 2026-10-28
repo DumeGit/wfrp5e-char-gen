@@ -340,6 +340,8 @@ export function ReferenceBody({
           entry={x}
           fields={[
             ["category", "Type"],
+            ["location", "Hit location"],
+            ["roll", "Roll (d100)"],
             ["stats", "Characteristics"],
             ["adjustments", "Adjustments"],
           ]}

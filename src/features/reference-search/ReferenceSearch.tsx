@@ -897,6 +897,20 @@ export function ReferenceSearch() {
                     )}
                   <div className="search-book-reference">
                     <ReferenceBody row={current} renderText={renderText} />
+                    {current.entry.referenceId && data && (
+                      <button
+                        type="button"
+                        className="quiet"
+                        onClick={() => {
+                          const table = data.rows.find(
+                            (row) => row.key === current.entry.referenceId,
+                          );
+                          if (table) choose([table.key], table.name);
+                        }}
+                      >
+                        View full table
+                      </button>
+                    )}
                     {data && (
                       <CareerReferences
                         row={current}

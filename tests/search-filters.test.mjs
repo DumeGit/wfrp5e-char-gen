@@ -329,6 +329,8 @@ test("worker and fallback return identical filtered results under concurrent sea
     ["", "rune", { label: "Master Rune", applicable: "Armour" }],
     ["", "magic", { type: "Cant", lore: "Fire" }],
     ["Godspakt", "all", { book: "blood-bramble" }],
+    ["critical wounds", "critical", { location: "Arm", book: "core" }],
+    ["mutations", "mutation", { type: "Mental", book: "core" }],
     [
       "",
       "equipment",

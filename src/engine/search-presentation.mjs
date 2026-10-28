@@ -15,27 +15,30 @@ export const SEARCH_CATEGORIES = {
   technique: "Techniques",
   equipment: "Trappings",
   mutation: "Mutations",
+  critical: "Critical Wounds",
 };
 export const searchLabel = (row) =>
-  row.kind === "rule" || row.kind === "property"
-    ? `${row.kind === "rule" ? "Rule" : "Property"} · ${row.entry.topic}`
-    : row.label ||
-      {
-        species: "Species / Origin",
-        career: "Career",
-        skill: "Skill",
-        talent: "Talent",
-        magic: "Spell",
-        equipment: "Trapping",
-        condition: "Condition",
-        psychology: "Psychology",
-        trait: "Creature Trait",
-        profile: "NPC / Creature",
-        template: "Template",
-        mutation: "Mutations",
-      }[row.kind] ||
-      SEARCH_CATEGORIES[row.kind]?.replace(/s$/, "") ||
-      row.kind;
+  row.kind === "critical"
+    ? `Critical Wound · ${row.entry.location}`
+    : row.kind === "rule" || row.kind === "property"
+      ? `${row.kind === "rule" ? "Rule" : "Property"} · ${row.entry.topic}`
+      : row.label ||
+        {
+          species: "Species / Origin",
+          career: "Career",
+          skill: "Skill",
+          talent: "Talent",
+          magic: "Spell",
+          equipment: "Trapping",
+          condition: "Condition",
+          psychology: "Psychology",
+          trait: "Creature Trait",
+          profile: "NPC / Creature",
+          template: "Template",
+          mutation: "Mutations",
+        }[row.kind] ||
+        SEARCH_CATEGORIES[row.kind]?.replace(/s$/, "") ||
+        row.kind;
 
 const escape = (value) =>
   String(value ?? "").replace(

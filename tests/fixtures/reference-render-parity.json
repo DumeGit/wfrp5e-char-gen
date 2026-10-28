@@ -105,7 +105,8 @@
     {
       "kind": "mutation",
       "key": "core:mutations:animalistic-legs",
-      "textSHA256": "b9dae1788cf350d2952e5efb1fc608b032366b85a5335953dade09d002250327"
+      "reviewNote": "28 October 2026: show the printed roll 01–05; Physical type, M: 1 adjustment, +1 Movement and summary notice are unchanged.",
+      "textSHA256": "752df2f641bc0b96d6b74821aad9fa5d52ce1e63d6cecb03e22728b11762d037"
     }
   ]
 }

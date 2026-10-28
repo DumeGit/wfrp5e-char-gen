@@ -154,11 +154,14 @@ export async function search(page, text = "") {
   const launch = page.getByRole("button", {
     name: /^Search (rules and book references|books:)/,
   });
-  if (await launch.isVisible()) await launch.click();
   const input = page.getByRole("combobox", {
     name: "Search the books",
     exact: true,
   });
+  if (!(await input.isVisible())) {
+    await expect(launch).toBeEnabled();
+    await launch.click();
+  }
   await expect(input).toBeEnabled();
   await input.fill(text);
   if (!text) await input.click();

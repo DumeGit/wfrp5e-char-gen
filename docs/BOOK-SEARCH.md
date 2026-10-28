@@ -14,17 +14,22 @@ Earlier dated integration/count/verification sections below describe historical 
 
 ## Categories and results
 
+**Critical Wounds** contains all 80 individual core results from the four Head/Arm/Body/Leg tables (pp. 173–176), with a **Hit location** filter. Names shared by several locations remain distinct and show their location in the result label. Each reader shows the original roll range, Wounds and reviewed effects, plus **View full table**, which uses normal reference history/Back. The original core tables and Up in Arms alternatives remain under Tables. Core ranges above 100 and `00 or more` are preserved; this is a read-only lookup, not a random roll or injury handler.
+
+**Mutations** contains all 40 core Physical/Mental results (p. 189). They match their names, effects and generic mutation/corruption queries, retain the Physical/Mental filter, and show their printed d100 range and a full-table link. Search and the manager's injury picker derive wound rows through `critical-wounds.mjs` from the same reviewed tables; there is no separate wording list or saved-character change. The five source pages were visually checked against the supplied Fifth Edition PDF on 28 October 2026. The existing mutation identities/effects remain unchanged.
+
 Every Skill and Talent reference includes an alphabetical **Careers with this skill/talent** table. Each row identifies the Career, Class, book/page and every level where the option is listed, with the level's rank title. On phones Class moves below the Career/source so the table fits without horizontal scrolling; Career links retain 44 px targets. Clicking a Career opens its exact source/variant in the existing reference reader and Back restores the previous reference/position. Empty tables explicitly say that no imported Career profile lists the option.
 
 The table covers the full imported reference library regardless of character books, Species, XP or search filters. It describes Career listings, including alternatives; it is not a purchase or eligibility promise. Generic groups aggregate their specialisations, while individual specialisations match exact resolved names (case-insensitively), never substrings. Any Colour excludes Magick; as-Trade Talents use only Trade choices available to that Career at the listed level. Repeated listings combine level numbers rather than duplicate rows. Source-specific and optional whole-Career variants retain separate keys and parent-book labels. Unimplemented optional Career modifications are not invented as additional profiles, nor are indirect Talent-based Skill unlocks claimed as printed Career listings.
 
 `book-search.mjs` compiles per-level `careerOptions` from the existing shared choice resolver. `search-library.mjs` unions context-dependent choices for the same Career key without merging different source profiles. Only the lazy reference payload carries this metadata; it does not increase the startup book bundle or add a request. `career-references.mjs` validates it, builds one reverse lookup when references load, and renders the common table in all four workspaces. The table's explicit Career links bypass automatic related-term relinking. No new game data or Hammergen rules were imported.
 
-**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
+**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Critical Wounds, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
 
 | Category | Additional filters |
 | --- | --- |
 | Careers | Class; Species |
+| Critical Wounds | Hit location (Head/Arm/Body/Leg) |
 | Mutations | Physical/Mental |
 | Qualities & Flaws | Quality/Flaw; Applicable to |
 | Runes | Applicable to; Rune label |
@@ -88,6 +93,7 @@ Exact catalogue names and reviewed scoped aliases in the body become discreet li
 - `src/engine/search-presentation.mjs`: shared category labels and plain-text result snippets.
 - `src/engine/book-search-text.mjs`, `book-search-links.mjs`: annotation separation and exact related-name/alias resolution.
 - `src/engine/search-library.mjs`: build-time all-pack index, compact wire format and version-checked lazy loading of `public/data/search-library.json`.
+- `src/engine/critical-wounds.mjs`: shared projection of reviewed core table rows into individual search results and manager injury choices, preserving existing table-row identities.
 - `src/styles/book-search.css`: shared desktop/mobile surfaces using semantic tokens. `CreatorFrame` mounts the same React search in every mode; the old search-controller/reference-search/reference-body DOM renderers and mode wrappers have been removed.
 
 Add an eligible reference only after reviewing its supplied page and checking tables/symbols against the PDF. Standalone written Rules remain private even when mechanical. Bump the book version and regenerate all libraries, registry coverage/counts and offline assets together. Keep creator handlers separate from reference prose and do not imply exhaustive coverage. Use `npm run test:ui:search` and affected Node regressions for search changes, with generated/source checks after imports. Follow [TESTING.md](TESTING.md) for when full release validation is required; update affected Markdown and commit locally without pushing.
@@ -95,6 +101,12 @@ Add an eligible reference only after reviewing its supplied page and checking ta
 Outcome tests cover all-book availability with a core-only draft, separate source variants and withdrawn profiles, selective Legacy status, facet joins, stable identities, aliases/ranking/category browsing/pagination, full Skill prose, unchanged character calculations, source table values, safe rendering, lazy hydration and stale/malformed/failing sources. Browser checks use isolated `?verify=1` drafts for one-click focus, caret/keyboard, chained references and ambiguity, list return position, automatic/fallback batches, book-selection independence and desktop/mobile layout. Simulated phone viewports verify layout; real iOS/Android software keyboards and native picker behavior require an actual device and must not be reported as tested through desktop emulation.
 
 Dated verification sections below record earlier releases. Their Rules/NPC/profile/template checks and result counts predate current exclusions and are superseded by the current scope above. The undated extraction/maintenance guidance still applies to eligible retained categories.
+
+## Critical wound and mutation verification — 28 October 2026
+
+The final Node suite passed all 572 tests; TypeScript and all 13 store tests passed. All 38 focused shared-search browser cases passed, plus 12 isolated wound/mutation, real-worker and Career cases and all 15 tablet cases. Desktop and simulated-phone reference screenshots were inspected. The production build validated 28 packs; generated/source/module checks and the 108-file offline inventory passed. Physical phones were not tested.
+
+The initial 362-case broad browser run had 352 passes, six existing skips and four failures. One trace recorded Windows `ERR_NO_BUFFER_SPACE` loading an unrelated Player chunk. Three search cases exposed a test-helper race: an immediate visibility probe could skip opening Search before the launcher mounted. The helper now waits for an enabled launcher when the search input is not visible. All four failed cases passed in the isolated 12-case follow-up, and the final 38-case search run passed without retries. The unmodified release command stopped at the existing CRLF formatting mismatch; the same formatting check passed with `--end-of-line auto`, without reformatting unrelated files. This records a broad run plus focused follow-ups, not a second clean broad run.
 
 ## Verification — 7 October 2026
 

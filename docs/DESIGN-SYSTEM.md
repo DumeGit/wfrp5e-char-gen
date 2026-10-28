@@ -30,6 +30,8 @@ Use local Ledger Display for mastheads and one decorative chapter initial, Ledge
 
 ## Layout and navigation
 
+Shared book search uses the existing native Category/Book selectors and compact filter controls for every reference type. Critical Wounds adds a labelled Hit location selector; Mutations retains Physical/Mental. Their readers use the shared definition fields for location/type and roll range, and a quiet **View full table** button with normal reference history. No new palette, dialog or persistent character setting is introduced.
+
 Desktop begins at **1101px**; compact includes **1100px**. `COMPACT_SHELL_QUERY` matches CSS. Search's 760px filters, manager's 719px phone sheet and Marijan's container grids are independent feature boundaries. All four use 296px joined rail/editor geometry with fluid 16–40px gutters and no folio. The rail has natural height, with page scrolling and no nested navigation scroller. It pins only on windows at least 880px tall when a measured rail actually fits.
 
 The menu order is workspace switcher → real local navigation/context → **New & import**, **Save & export**, **More** → history/save status. Player keeps eight pages/six readiness stages; Bestiary keeps four; Marijan keeps nine in-page section links and the compact Jump selector; manager keeps Character library and desktop Play/Advance/Journal. Manager compact destinations retain their existing sheet navigation, with a fixed bottom bar on phones.

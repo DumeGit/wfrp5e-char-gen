@@ -15,6 +15,7 @@ export const CATEGORY_FILTERS = {
     ["species", "Species"],
   ],
   mutation: [["type", "Mutation type"]],
+  critical: [["location", "Hit location"]],
   property: [
     ["type", "Quality or Flaw"],
     ["applicable", "Applicable to"],
@@ -140,6 +141,12 @@ export function validateSearchFilters(row, books) {
       throw Error("Invalid trapping reference filters.");
   } else if (row.trappingPaths !== undefined)
     throw Error("Unexpected trapping reference filters.");
+  if (
+    searchCategory(row) === "critical" &&
+    (!["Head", "Arm", "Body", "Leg"].includes(row.entry.location) ||
+      JSON.stringify(values.location) !== JSON.stringify([row.entry.location]))
+  )
+    throw Error("Invalid Critical Wound location filters.");
 }
 export function filterOptions(rows, category, key, filters = {}) {
   if (key === "label") return RUNE_LABELS;

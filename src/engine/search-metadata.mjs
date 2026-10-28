@@ -108,7 +108,8 @@ export function addSearchMetadata(rows, contexts, books) {
     } else if (category === "skill") {
       f.type = [x.advanced ? "Advanced" : "Basic"];
       f.characteristic = [x.char];
-    } else if (category === "mutation") f.type = [x.category];
+    } else if (category === "critical") f.location = [x.location];
+    else if (category === "mutation") f.type = [x.category];
     else if (category === "property") {
       const pair = propertyTopics[x.topic] || propertyOverrides[row.key];
       if (!pair) throw Error(`Unreviewed property filters: ${row.key}`);
