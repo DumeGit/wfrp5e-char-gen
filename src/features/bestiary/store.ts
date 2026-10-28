@@ -60,6 +60,7 @@ export class BestiaryStore {
     };
   };
   getSnapshot = () => this.snapshot;
+  getDocumentId = () => this.document;
   getServerSnapshot = () => initialSnapshot;
   private publish(patch: Partial<BestiarySnapshot>) {
     this.snapshot = {

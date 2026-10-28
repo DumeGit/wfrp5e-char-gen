@@ -40,6 +40,7 @@ For prose-only changes, check factual source paths, local links and stale claims
 - [Unified design implementation contract](UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) — approved A with oak and parchment; detailed target, migration tracker and future consistency rules; implemented common shell; continuing design contract
 - [Unified layout studies](UNIFIED-LAYOUT-PROPOSAL.md) — initial comparison and selected visual direction
 - [Bestiary Workshop](GM-WORKSHOP.md) — `docs/GM-WORKSHOP.md`
+- [Bestiary weapon creator](WEAPON-CREATOR.md) — ordinary, magical and runic custom weapons, source review and calculation boundaries
 - [Legacy: actual Fifth Edition adaptations](LEGACY.md) — `docs/LEGACY.md`
 - [Marijan Mode](MARIJAN-MODE.md) — `docs/MARIJAN-MODE.md`
 - [Public identity and notices — 15 October 2026](PUBLIC-NOTICES.md) — `docs/PUBLIC-NOTICES.md`

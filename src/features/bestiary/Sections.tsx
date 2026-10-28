@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+import { WeaponWorkbench } from "./WeaponWorkbench";
 import { KEYS, base, talentInfo } from "../../engine/rules.mjs";
 import {
   SIZES,
@@ -1654,6 +1656,15 @@ export function Customise() {
 }
 export function EquipmentMagic() {
   const { rules: R, draft: s, result: r, edit, picker } = useBestiary();
+  const [weaponEditor, setWeaponEditor] = useState<any>(null);
+  const [creatingWeapon, setCreatingWeapon] = useState(false);
+  const closeWeapon = () => {
+    setCreatingWeapon(false);
+    setWeaponEditor(null);
+    requestAnimationFrame(() =>
+      document.getElementById("gm-create-weapon")?.focus(),
+    );
+  };
   if (!r.profile)
     return <p className="gm-empty">Choose a starting profile first.</p>;
   const optional = r.profile.attacks.filter((x: any) => x.optional),
@@ -1662,9 +1673,30 @@ export function EquipmentMagic() {
   return (
     <>
       <div id="gm-equipment" />
-      <SectionHeading action={() => picker("equipment")} label="Add equipment">
-        Attacks & equipment
-      </SectionHeading>
+      <div className="gm-section-heading">
+        <h2>Attacks & equipment</h2>
+        <div className="weapon-actions">
+          <Button
+            id="gm-create-weapon"
+            onClick={() => {
+              setWeaponEditor(null);
+              setCreatingWeapon(true);
+            }}
+          >
+            Create weapon
+          </Button>
+          <Button className="primary" onClick={() => picker("equipment")}>
+            Add equipment
+          </Button>
+        </div>
+      </div>
+      {creatingWeapon && (
+        <WeaponWorkbench
+          key={weaponEditor?.key || "new"}
+          initial={weaponEditor}
+          close={closeWeapon}
+        />
+      )}
       <p className="gm-small">
         The printed attack and armour profiles are included. GM equipment has no
         shopping budget. Clear an attack override to restore the calculation.
@@ -1718,6 +1750,19 @@ export function EquipmentMagic() {
             <strong>{a.name}</strong>
             <small>{a.text || "Primary attack"}</small>
             <Metadata entry={a} />
+            {a.custom && (
+              <Button
+                aria-label={`Edit ${a.name} weapon`}
+                onClick={() => {
+                  setWeaponEditor(
+                    s.customWeapons.find((w: any) => w.key === a.key),
+                  );
+                  setCreatingWeapon(true);
+                }}
+              >
+                Edit weapon
+              </Button>
+            )}
           </div>
           {["skill", "damage"].map((property) => (
             <Input
@@ -1789,9 +1834,16 @@ export function EquipmentMagic() {
               aria-label={`${g.entry.name} quantity`}
               onChange={(e) =>
                 edit((d: any) => {
-                  d.gear.find((x: any) => x.key === g.key).quantity = Math.max(
-                    1,
-                    Number(e.target.value) || 1,
+                  const row = g.custom
+                    ? d.customWeapons.find(
+                        (x: any) =>
+                          x.key ===
+                          (g.ammunition ? g.key.replace(/-ammo$/, "") : g.key),
+                      )
+                    : d.gear.find((x: any) => x.key === g.key);
+                  row[g.ammunition ? "ammunition" : "quantity"] = Math.min(
+                    g.ammunition ? 10 : 9999,
+                    Math.max(1, Math.trunc(Number(e.target.value)) || 1),
                   );
                 }, `quantity:${g.key}`)
               }

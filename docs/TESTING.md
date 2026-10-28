@@ -1,5 +1,13 @@
 # Local testing
 
+## Bestiary weapon creator — 28 October 2026
+
+The [ordinary/magical/runic workbench](WEAPON-CREATOR.md) is implemented, with immutable published bases, NPC-local saved profiles, source-specific properties, explicit calculations, complete conditional effects, recorded enchantment rolls and linked Hoarfrost ammunition. The supplied Archives II pp. 55 and 58–59 and Dwarf Guide pp. 125–128/131–132 informed the source review. The original overlapping table is preserved privately; the user-approved 25–28/29–31 correction is explicit in the new source.
+
+The final affected run passed **109 model/description/reference cases**, including every magical d100 face, recursive/capped/duplicate Legendary rolls, Bane targets, ammunition, rune restrictions, direct effects/removal, distinct supplement property definitions, malformed imports, older compatible drafts, Size/Talents and export sections. All **14 store tests** passed, including atomic add/edit/remove, history, persistence and document identity. All **10 focused Bestiary browser cases** passed on the final production build, covering the creator and existing loot flows on desktop and simulated 390px/320px phones: selection/edit/cancel, base/power controls, Legendary rolls, Hoarfrost removal/Undo, actual JSON round-trips, references, keyboard-ready controls and overflow. No uncaught page errors were recorded; ordinary/magical/runic screenshots were inspected.
+
+Four full-sheet PDFs and mixed flexible/four-card A4 PDFs were generated for ordinary, magical, runic and ranged-ammunition examples. Rendered sheets/cards were visually inspected for complete effects, readable wrapping, accurate calculated bonuses and exactly one custom Gear line plus separate ammunition. The production build, TypeScript, 28-pack/generated validation, canonical description/source checks, module checks, Windows-compatible formatting and all 108 offline assets passed. The complete unrelated release/browser matrix, physical phones and assistive technology were not retested. Crafting progress and encounter effects remain manual as documented.
+
 ## Core Endeavour cleanup — 28 October 2026
 
 All 17 named core Endeavours on pp. 196–201 were checked against the supplied PDF pages. Core 1.1.10 restores Animal Training, Raise Reputation and correctly classified Invent!, consolidates Common Endeavours into one overview/alias, and repairs Crafting/Income table continuations and Commission’s Custom Gear scope. The [review inventory](CORE-ENDEAVOURS-REVIEW.md) records each activity and source boundary.

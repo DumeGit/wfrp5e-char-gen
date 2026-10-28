@@ -141,6 +141,45 @@ for (const pack of library.packs.filter((p) => p.manifest.kind !== "variant")) {
 const searchReport = searchCoverage(library, corpus, review, gm);
 const outputs = [
   [
+    "../src/engine/gm/weapon-definitions.mjs",
+    "// Generated from reviewed weapon-effect sources and canonical descriptions.\n// prettier-ignore\nexport const WEAPON_DEFINITIONS = " +
+      JSON.stringify({
+        ...hydrateDescriptions(
+          JSON.parse(
+            await readFile(
+              new URL(
+                "../content/sources/data/books/archives-ii/weapon-effects.json",
+                import.meta.url,
+              ),
+              "utf8",
+            ),
+          ),
+          descriptions,
+          "data/books/archives-ii/weapon-effects.json",
+        ),
+        properties: library.packs.flatMap((pack) =>
+          [
+            ...(pack.data.ruleReferences || []),
+            ...(pack.data.referenceEntries || []),
+          ]
+            .filter(
+              (entry) =>
+                entry.category === "property" && !/Armour/.test(entry.topic),
+            )
+            .map((entry) => ({
+              id: entry.id,
+              name: entry.name,
+              text: entry.text,
+              family: entry.topic.startsWith("Item")
+                ? entry.topic
+                : "Weapon properties",
+              source: { book: pack.manifest.id, page: entry.page },
+            })),
+        ),
+      }) +
+      ";\n",
+  ],
+  [
     "../src/engine/description-rules.mjs",
     "// Generated from content/descriptions/trait-rules.mjs. Edit the authoring source.\n" +
       (

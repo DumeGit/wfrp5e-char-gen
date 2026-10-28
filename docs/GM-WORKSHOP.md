@@ -1,5 +1,7 @@
 # Bestiary Workshop
 
+**Weapon creator:** Create weapon opens an inline workbench in Equipment & magic. Copy a published weapon, edit its profile/properties and choose Ordinary, Magical or Runic power, then add it as an attack and a Gear item. Enchantments support choose/roll and automatic Legendary follow-ups; runes enforce form/slot restrictions and calculate direct weapon bonuses. Conditional effects remain printed rules. Designs, dice, ammunition and history stay with the NPC. See the [weapon creator contract and source review](WEAPON-CREATOR.md).
+
 ## Imperial Desk — 22 October 2026
 
 All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.

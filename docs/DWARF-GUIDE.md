@@ -1,5 +1,7 @@
 # Dwarf Player’s Guide integration
 
+The later user-approved Bestiary weapon creator can now define owned runic weapons and calculate explicit weapon-local bonuses. This is independent of learning Rune Magic Talents and does not simulate Forge Rune Endeavours, activation resources, rune suppression or other campaign systems. The [weapon creator](WEAPON-CREATOR.md) records eligible forms, stacking and manual-effect boundaries; the PC rules below retain their existing knowledge-only scope.
+
 Source: the user-supplied `Dwarf Player's Guide.pdf`, 144 pages. Printed pages match PDF positions. MarkItDown provides searchable text; PDF tables, columns and Career symbols were checked separately. The pack records its source SHA-256 and includes structured creator content plus separately reviewed gameplay references, not the source PDF.
 
 Enable **Dwarf Player’s Guide** in Choose books. Fifth Edition core allocations, XP prices, native languages, Creature Traits and existing Talents govern unless a reviewed user decision below says otherwise. This is a creator integration; descriptions of situational or campaign effects do not automate those effects.

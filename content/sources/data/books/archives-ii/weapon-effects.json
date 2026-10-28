@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "book": "archives-ii",
+    "sha256": "95944ec217df9982aac83cfa7a6020706f23eb13fda0c8498ee349fba91f132b"
+  },
+  "review": "Supplied PDF pp. 55, 58–59 checked. Original p. 58 overlaps 28; user explicitly approved Dolorous 29–31. P. 55 printed 0–19 resolves valid d100 faces 01–19; 00 is Jabberslythes. Original private reference tables are unchanged.",
+  "effects": [
+    {
+      "id": "archives-ii:weapon-effect:touched-by-the-winds",
+      "name": "Touched by the Winds",
+      "min": 1,
+      "max": 20,
+      "page": 58,
+      "text": "The weapon has petty enchantments cast upon it. Beyond damaging creatures that are immune to non-magical attacks it has no particular ability. If the weapon is a ranged item, this ability is conferred to its ammunition."
+    },
+    {
+      "id": "archives-ii:weapon-effect:wreathed-in-shadow",
+      "name": "Wreathed in Shadow",
+      "min": 21,
+      "max": 24,
+      "page": 58,
+      "text": "These weapons are often made by Grey Wizard artificers. The blade of a melee weapon seems insubstantial and ghostly, while the same effect lingers on the string of a bow or crossbow, and is conferred to any ammunition the weapon fires. Any target hit by the weapon receives no benefit from non- magical armour."
+    },
+    {
+      "id": "archives-ii:weapon-effect:alight-with-flame",
+      "name": "Alight with Flame",
+      "min": 25,
+      "max": 28,
+      "page": 58,
+      "text": "Many of these weapons are produced in the forges of the Bright College. Once drawn the weapon bursts into searing flame, but does not harm the wielder or any possessions they carry. If the wielder hits a flammable target with the weapon, the target suffers one Ablaze Condition."
+    },
+    {
+      "id": "archives-ii:weapon-effect:dolorous",
+      "name": "Dolorous",
+      "min": 29,
+      "max": 31,
+      "page": 58,
+      "text": "Death magic permeates the weapon, filling foes with fright. The wielder counts as causing Fear (1)."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-leaping-silver-wroth",
+      "name": "Of Leaping Silver Wroth",
+      "min": 32,
+      "max": 35,
+      "page": 58,
+      "text": "Alloys used in constructing this weapon lend it expert balance and surprising lightness. A melee weapon of Leaping Silver has the Fast Quality. A ranged weapon with this enchantment bears the silver alloy in fine filigree about it, granting a wielder +10 Initiative in combat.",
+      "properties": [
+        "Fast"
+      ],
+      "meleeOnlyProperties": true
+    },
+    {
+      "id": "archives-ii:weapon-effect:carved-of-rage",
+      "name": "Carved of Rage",
+      "min": 36,
+      "max": 39,
+      "page": 58,
+      "text": "Often created by the shamans of the Amber Order, animalistic fury and instinct fill the mind of the wielder whenever this weapon is drawn in anger. Once drawn, the wielder of this weapon becomes subject to Frenzy."
+    },
+    {
+      "id": "archives-ii:weapon-effect:envigoured",
+      "name": "Envigoured",
+      "min": 40,
+      "max": 43,
+      "page": 58,
+      "text": "The life-giving wind of Ghyran courses through the weapon. The wielder ignores Fatigue Conditions whilst fighting with the weapon. The blade also has the Unbreakable Quality.",
+      "properties": [
+        "Unbreakable"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:entwined-with-fate",
+      "name": "Entwined with Fate",
+      "min": 44,
+      "max": 47,
+      "page": 58,
+      "text": "Celestial magics have imbued the weapon with subtle prognosticative abilities. At the start of each round of combat, the weapon imbues the wielder with one Advantage.",
+      "adaptation": "Printed Fourth Edition Advantage/Test Difficulty converted using Fifth Edition core Appendix I."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-rigor-wroth",
+      "name": "Of Rigor Wroth",
+      "min": 48,
+      "max": 51,
+      "page": 58,
+      "text": "Light magic makes a paragon of this weapon’s wielder. The wielder of such a melee weapon benefits from the following Talents: Strike Mighty Blow, Strike to Injure, and Strike to Stun. The wielder of a ranged weapon gains the benefit of the following Talents: Fast Shot, Sharpshooter, and Sniper."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-stalwart-sorcery",
+      "name": "Of Stalwart Sorcery",
+      "min": 52,
+      "max": 54,
+      "page": 58,
+      "text": "These weapons strike true as Verena (though the Verenan cult is at pains to point out they don’t endorse magical weapons as instruments of justice). The weapon has the Precise Quality.",
+      "properties": [
+        "Precise"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:bewildering",
+      "name": "Bewildering",
+      "min": 55,
+      "max": 57,
+      "page": 58,
+      "text": "Powerful enchantments of bemusement and misdirection are woven into the weapon. Anyone wounded by the weapon gains the Surprised Condition."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-bold-brass",
+      "name": "Of Bold Brass",
+      "min": 58,
+      "max": 60,
+      "page": 58,
+      "text": "This weapon’s bearer is filled with a sense of vim, is immune to the effects of Fear, and enjoys a +2 SL bonus to resist Terror."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-the-wolf-s-wide-jaws",
+      "name": "Of the Wolf ’s Wide Jaws",
+      "min": 61,
+      "max": 63,
+      "page": 59,
+      "text": "The most favoured Ulrican warriors wield these weapons with wolf ’s head pommels and other lupine motifs. The weapon has the Damaging Quality.",
+      "properties": [
+        "Damaging"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-deft-and-cunning",
+      "name": "Of Deft and Cunning",
+      "min": 64,
+      "max": 66,
+      "page": 59,
+      "text": "Often created with the aid of Myrmidian experts, these deft weapons handle with exquisite precision. The wielder benefits from +20 WS or BS, as appropriate."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-salt-and-brine",
+      "name": "Of Salt and Brine",
+      "min": 67,
+      "max": 69,
+      "page": 59,
+      "text": "The priests of Manann lend their knowledge to artificers seeking to create weapons that guard against unexpected raiders. The bearer of this weapon may make a free Action in the first Round of any combat. The weapon also has the Fast Quality.",
+      "properties": [
+        "Fast"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-grisly-wounds",
+      "name": "Of Grisly Wounds",
+      "min": 70,
+      "max": 72,
+      "page": 59,
+      "text": "Deathly enchantments ensure that wounds caused by this weapon are severe. The weapon has the Damaging Quality.",
+      "properties": [
+        "Damaging"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-tooth-and-claw",
+      "name": "Of Tooth and Claw",
+      "min": 73,
+      "max": 75,
+      "page": 59,
+      "text": "Creatures with the Bestial Creature Trait recognise something of themselves in this weapon. They must pass a Difficult (–10) Willpower Test before attacking the wielder.",
+      "adaptation": "Printed Fourth Edition Advantage/Test Difficulty converted using Fifth Edition core Appendix I."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-deepest-banishing",
+      "name": "Of Deepest Banishing",
+      "min": 76,
+      "max": 78,
+      "page": 59,
+      "text": "The energies given off by this weapon are anathema to Daemons and Ethereal Undead. The wielder always counts as having three additional points of Advantage when determining effects of the Unstable Trait.",
+      "adaptation": "Printed Fourth Edition Advantage/Test Difficulty converted using Fifth Edition core Appendix I."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-undue-substance",
+      "name": "Of Undue Substance",
+      "min": 79,
+      "max": 81,
+      "page": 59,
+      "text": "A master of Chamon has imbued this weapon with strange properties of density and mass. The weapon has the Pummel and Hack Qualities.",
+      "properties": [
+        "Pummel",
+        "Hack"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-languishing-death",
+      "name": "Of Languishing Death",
+      "min": 82,
+      "max": 84,
+      "page": 59,
+      "text": "Morr calls earnestly to those wounded by this weapon. All Wounds the weapon inflicts are Festering Wounds (WFRP, page 187)."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-keenest-edge",
+      "name": "Of Keenest Edge",
+      "min": 85,
+      "max": 87,
+      "page": 59,
+      "text": "The tip and edges of this weapon are kept magically keen, or any ammunition it fires becomes so. The weapon has the following Qualities: Hack, Impale, and Penetrating.",
+      "properties": [
+        "Hack",
+        "Impale",
+        "Penetrating"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-bane",
+      "name": "Of Bane",
+      "min": 88,
+      "max": 90,
+      "page": 59,
+      "text": "The weapon was made with enchantments that increase its deadliness to a given enemy. If it deals damage to a particular type of creature, it inflicts twice the number of Wounds. Roll on the Random Creature Table (see page 55) to determine the affected creature.",
+      "target": true
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-ceaseless-cleaving",
+      "name": "Of Ceaseless Cleaving",
+      "min": 91,
+      "max": 92,
+      "page": 59,
+      "text": "Powerful enchantments guide the weapon easily through flesh and bone. If a hit from the weapon deals Damage, it inflicts an additional two Wounds."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-leaping-gold",
+      "name": "Of Leaping Gold",
+      "min": 93,
+      "max": 94,
+      "page": 59,
+      "text": "This stunning weapon handles like a feather, but lands like a block of lead. The weapon has the following Qualities: Fast, Penetrating, and Precise.",
+      "properties": [
+        "Fast",
+        "Penetrating",
+        "Precise"
+      ]
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-grievous-injury",
+      "name": "Of Grievous Injury",
+      "min": 95,
+      "max": 96,
+      "page": 59,
+      "text": "The injuries inflicted by this weapon are cruel and severe. Whenever the wielder rolls on the Critical Injuries Chart (WFRP, page 174) they can reverse the numbers of the roll and apply whichever is the most damaging result."
+    },
+    {
+      "id": "archives-ii:weapon-effect:of-form-mercurial",
+      "name": "Of Form Mercurial",
+      "min": 97,
+      "max": 98,
+      "page": 59,
+      "text": "A master of Chamon has created this weapon, allowing it to morph according to the wielder’s movements. When used to thrust, it becomes long and thin. When used to slash or strike, it becomes broad and razor-edged. Each round the weieldger may choose from the following Qualities: Fast, Hack, Impale, Penetrating, and Precise."
+    },
+    {
+      "id": "archives-ii:weapon-effect:hoarfrost-blade",
+      "name": "Hoarfrost Blade",
+      "min": 99,
+      "max": 99,
+      "page": 59,
+      "text": "These rare and powerful weapons are sometimes created through painstaking rites undergone by the Ice Witches of Kislev. So much as a nick from one of these blades can prove fatal. If a hit from the weapon deals Damage, it inflicts double the number of Wounds, plus four additional Wounds. There is no way to create ranged weapons that imbue their ammunition with this quality. If you roll this result for a ranged weapon, it represents 1d10 pieces of ammunition imbued with the above ability. If you have already rolled Legendary Weapon for a ranged weapon, ignore this result."
+    },
+    {
+      "id": "archives-ii:weapon-effect:legendary-weapon",
+      "name": "Legendary Weapon",
+      "min": 100,
+      "max": 100,
+      "page": 59,
+      "text": "Roll twice more on this table. If you roll this result multiple times, a magical weapon has a maximum of five abilities. Duplicate abilities are not cumulative."
+    }
+  ],
+  "creatures": [
+    {
+      "min": 1,
+      "max": 19,
+      "name": "Goblins and Snotlings",
+      "page": 55
+    },
+    {
+      "min": 20,
+      "max": 29,
+      "name": "Orcs",
+      "page": 55
+    },
+    {
+      "min": 30,
+      "max": 32,
+      "name": "Daemons of Tzeentch",
+      "page": 55
+    },
+    {
+      "min": 33,
+      "max": 35,
+      "name": "Daemons of Nurgle",
+      "page": 55
+    },
+    {
+      "min": 36,
+      "max": 38,
+      "name": "Daemons of Khorne",
+      "page": 55
+    },
+    {
+      "min": 39,
+      "max": 40,
+      "name": "Daemons of Slaanesh",
+      "page": 55
+    },
+    {
+      "min": 41,
+      "max": 55,
+      "name": "Daemons (All)",
+      "page": 55
+    },
+    {
+      "min": 56,
+      "max": 58,
+      "name": "Beastmen",
+      "page": 55
+    },
+    {
+      "min": 59,
+      "max": 62,
+      "name": "Skeletons and Zombies",
+      "page": 55
+    },
+    {
+      "min": 63,
+      "max": 65,
+      "name": "Ethereal Undead",
+      "page": 55
+    },
+    {
+      "min": 66,
+      "max": 69,
+      "name": "Skaven and their vile kin",
+      "page": 55
+    },
+    {
+      "min": 70,
+      "max": 73,
+      "name": "Vampires",
+      "page": 55
+    },
+    {
+      "min": 74,
+      "max": 75,
+      "name": "Lizardmen",
+      "page": 55
+    },
+    {
+      "min": 76,
+      "max": 78,
+      "name": "Trolls",
+      "page": 55
+    },
+    {
+      "min": 79,
+      "max": 81,
+      "name": "Humans",
+      "page": 55
+    },
+    {
+      "min": 82,
+      "max": 82,
+      "name": "Halflings",
+      "page": 55
+    },
+    {
+      "min": 83,
+      "max": 83,
+      "name": "Ogres",
+      "page": 55
+    },
+    {
+      "min": 84,
+      "max": 84,
+      "name": "Dwarfs",
+      "page": 55
+    },
+    {
+      "min": 85,
+      "max": 85,
+      "name": "Elves",
+      "page": 55
+    },
+    {
+      "min": 86,
+      "max": 86,
+      "name": "Giants",
+      "page": 55
+    },
+    {
+      "min": 87,
+      "max": 88,
+      "name": "Spites, Dryads, Tree Kin, Treemen",
+      "page": 55
+    },
+    {
+      "min": 89,
+      "max": 90,
+      "name": "Beasts (Bestial Trait)",
+      "page": 55
+    },
+    {
+      "min": 91,
+      "max": 91,
+      "name": "Spiders",
+      "page": 55
+    },
+    {
+      "min": 92,
+      "max": 92,
+      "name": "Mutants",
+      "page": 55
+    },
+    {
+      "min": 93,
+      "max": 93,
+      "name": "The Truly Faithful (Bless or Invoke)",
+      "page": 55
+    },
+    {
+      "min": 94,
+      "max": 94,
+      "name": "Spellcasters (printed Talent or Spellcaster Trait prerequisite)",
+      "page": 55
+    },
+    {
+      "min": 95,
+      "max": 95,
+      "name": "Giant Spiders",
+      "page": 55
+    },
+    {
+      "min": 96,
+      "max": 96,
+      "name": "Manticores, Chimera",
+      "page": 55
+    },
+    {
+      "min": 97,
+      "max": 97,
+      "name": "Pegasi",
+      "page": 55
+    },
+    {
+      "min": 98,
+      "max": 98,
+      "name": "Griffons, Hippogriffs, Demigryphs",
+      "page": 55
+    },
+    {
+      "min": 99,
+      "max": 99,
+      "name": "Dragons",
+      "page": 55
+    },
+    {
+      "min": 100,
+      "max": 100,
+      "name": "Jabberslythes",
+      "page": 55
+    }
+  ]
+}

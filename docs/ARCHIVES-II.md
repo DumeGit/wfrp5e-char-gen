@@ -1,5 +1,7 @@
 # Archives of the Empire: Volume II — integration review
 
+The later user-approved Bestiary [weapon creator](WEAPON-CREATOR.md) uses the magical weapon effects on pp. 58–59 and creature targets on p. 55 to define NPC possessions. It supports manual choices and recorded rolls, Legendary follow-ups and ranged Hoarfrost ammunition. The user explicitly corrects Dolorous to 29–31, resolving the printed overlap at 28. General PC artifice, manufacturing, commissioning, curses and campaign systems below remain deferred; this does not grant gear through a Talent or invent retail prices.
+
 Pack 1.0.7 makes the printed Striding Gait (Mountains) choice idempotent when independently enabled with Salzenmund; the terrain’s mechanics are unchanged. Explicit Talent specialisations now support the same shared `include` operation as Skill options, while derived lists remain protected.
 
 **Status: installed as the opt-in `archives-ii` pack (see the registry for its current version)** All creation decisions below are approved. Unspecified profiles remain unresolved; campaign systems are deferred.

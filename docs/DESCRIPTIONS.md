@@ -6,6 +6,8 @@
 
 ## Sources and published data
 
+Bestiary weapon abilities add 28 individually reviewed Archives II descriptions in the canonical catalogue. Their private `weapon-effects.json` sidecar retains original text, reviewed roll ranges and the explicit user correction at 28/29. The generator emits a Bestiary-only definitions module with these summaries and existing property definitions. It does not restore standalone Tables/Rules to search or create a second editable wording bank. See [the weapon creator contract](WEAPON-CREATOR.md).
+
 Original structured extractions live in `content/sources/data/` and `content/sources/gm/books/`, outside static hosting. These are audit/rebuild inputs, not the place to edit public wording. Extraction scripts write there; existing PDF hashes and printed-reference reviews remain enforced. Original PDFs are not published. All retained descriptions have now been reviewed. Pure numerical tables, proper names, named grants and terse statistical labels are explicitly marked `reviewType: structured-data`; their values remain as printed. This is not legal clearance or Git history removal.
 
 The source loader hydrates canonical text before validating book packs. Explicit Skill reference targets also populate creator Skills. The generator hydrates GM definitions before compilation, then emits the existing book, search, rule-reference and GM payloads. Views, folios and exports read resolved profiles. Generated copies are expected; there is one editable wording source. No editorial-catalogue fetch is added to browser startup or search. Browser preparation hashes `content/`; the offline worker includes resolved assets and excludes source/catalogue inputs.

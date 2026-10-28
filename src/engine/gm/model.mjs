@@ -24,6 +24,10 @@ import { calculateGMCants, validateGMCants } from "./cants.mjs";
 import { knownRunes } from "../dwarf-guide.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
 import { validateGMLoot, resolveGMLoot } from "./loot.mjs";
+import {
+  validateCustomWeapons,
+  resolveCustomWeapon,
+} from "./custom-weapons.mjs";
 import { describeTraits } from "./trait-descriptions.mjs";
 import { bookId, validateGMBooks } from "./books.mjs";
 import { trollModifiers, warbandLoreChoices, tribesIssues } from "./tribes.mjs";
@@ -131,6 +135,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     talents: [],
     gear: [],
     loot: [],
+    customWeapons: [],
     spells: [],
     spellLores: {},
     cants: { enabled: false, choices: {} },
@@ -153,7 +158,7 @@ export function validateGMDraft(data, R, s) {
   // Clone only legacy input; never repair malformed or explicitly supplied data.
   if (plain(s)) {
     const defaults = {};
-    for (const key of ["hiddenDescriptions", "loot"])
+    for (const key of ["hiddenDescriptions", "loot", "customWeapons"])
       if (!own(s, key)) defaults[key] = [];
     if (Object.keys(defaults).length) s = { ...s, ...defaults };
   }
@@ -314,6 +319,7 @@ export function validateGMDraft(data, R, s) {
     if (!gmSpellCatalogue(R).some((p) => p.contentId === id))
       throw Error("Unknown spell.");
   validateGMLoot(R, s.loot);
+  validateCustomWeapons(R, s.customWeapons);
   // Older loot rows kept a location choice. Preserve their possessions while
   // dropping that retired field from restored drafts, without mutating input.
   if (s.loot.some((row) => own(row, "location")))
@@ -462,7 +468,14 @@ export function validateGMDraft(data, R, s) {
     ...s.talents,
     ...s.gear,
     ...s.loot,
-  ].map((x) => x.key);
+    ...s.customWeapons,
+  ]
+    .map((x) => x.key)
+    .concat(
+      s.customWeapons
+        .filter((w) => w.ammunition > 0)
+        .map((w) => `${w.key}-ammo`),
+    );
   if (
     rowKeys.some((k) => !/^gm-[a-z0-9-]+$/.test(k)) ||
     new Set(rowKeys).size !== rowKeys.length
@@ -497,7 +510,9 @@ export function validateGMDraft(data, R, s) {
       (k) =>
         !p?.attacks.some((a) => a.key === k) &&
         !p?.traits.some((t) => t.deriveAttack && t.key === k) &&
-        ![...s.gear, ...s.traits].some((x) => x.key === k) &&
+        ![...s.gear, ...s.traits, ...s.customWeapons].some(
+          (x) => x.key === k,
+        ) &&
         !(t?.gear || []).some((x, i) => templateRowKey(t, "gear", i) === k),
     )
   )
@@ -1432,6 +1447,15 @@ export function calculateGM(data, R, s) {
         ]
       : [];
   });
+  const customWeapons = (s.customWeapons || []).map((w) =>
+    resolveCustomWeapon(
+      R,
+      w,
+      stats,
+      [...skills.values()],
+      sizeDamage(swarm ? "Average" : size, sb),
+    ),
+  );
   const gear = live([...grantedGear, ...s.gear])
     .filter((g) => !g.id.startsWith("printed-attack-"))
     .map((g) => {
@@ -1449,16 +1473,30 @@ export function calculateGM(data, R, s) {
             }
           : entry,
       };
-    });
+    })
+    .concat(
+      customWeapons.flatMap((w) => [
+        w.gear,
+        ...(w.ammunition ? [w.ammunition] : []),
+      ]),
+    );
   for (const g of gear) {
+    if (g.ammunition) continue;
+    const customBase = g.custom
+      ? R.weapons.find(
+          (w) =>
+            w.contentId ===
+            s.customWeapons.find((w) => w.key === g.key)?.baseId,
+        )
+      : null;
     const sizing = equipmentSize(
       R,
       { species: gmSpecies(p) },
-      g.entry.name,
-      g.entry,
+      customBase?.name || g.entry.name,
+      customBase || g.entry,
     );
     if (sizing.useUnresolved) {
-      const weapon = R.weapons.some((w) => w.contentId === g.id);
+      const weapon = !!g.custom || R.weapons.some((w) => w.contentId === g.id);
       const override = s.attackOverrides[g.key] || {};
       if (!weapon || !own(override, "skill") || !own(override, "damage"))
         issues.push({
@@ -1478,6 +1516,7 @@ export function calculateGM(data, R, s) {
       warnings.push(sizing.note);
     }
   }
+  attacks.push(...customWeapons.map((w) => w.attack));
   for (const g of gear.filter((g) =>
     R.weapons.some((w) => w.contentId === g.id),
   )) {

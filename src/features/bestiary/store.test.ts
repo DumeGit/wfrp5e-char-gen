@@ -5,6 +5,7 @@ import { BestiaryStore } from "./store";
 import { freshGM, calculateGM } from "../../engine/gm/model.mjs";
 import { rollGMAppearance } from "../../engine/gm/appearance.mjs";
 import { descriptionKey } from "../../engine/gm/ability-presentation.mjs";
+import { newCustomWeapon } from "../../engine/gm/custom-weapons.mjs";
 
 const memory = new Map<string, string>();
 const storage: Storage = {
@@ -59,6 +60,50 @@ async function human(verify = true) {
   store.replace(freshGM(data, "core:creatures:human"));
   return store;
 }
+
+test("custom weapons add, edit and remove atomically, persist and preserve source/roll history", async () => {
+  const store = await human(false);
+  const start = store.getSnapshot();
+  const w = newCustomWeapon(start.rules, "core:weapon:3", "gm-store-weapon");
+  w.name = "Store test sword";
+  store.edit((d) => d.customWeapons.push(w));
+  assert.equal(
+    store.getSnapshot().result.attacks.filter((a: any) => a.custom).length,
+    1,
+  );
+  store.travel("undo");
+  assert.deepEqual(store.getSnapshot().draft.customWeapons, []);
+  store.travel("redo");
+  assert.equal(store.getSnapshot().draft.customWeapons[0].name, w.name);
+  store.edit((d) => {
+    d.customWeapons[0].damage = "SB+7";
+    d.customWeapons[0].notes = "Etched steel";
+  });
+  store.travel("undo");
+  assert.equal(store.getSnapshot().draft.customWeapons[0].damage, "SB+4");
+  store.travel("redo");
+  const restored = new BestiaryStore(false);
+  await restored.initialize();
+  assert.deepEqual(
+    restored.getSnapshot().draft.customWeapons,
+    store.getSnapshot().draft.customWeapons,
+  );
+  const document = store.getDocumentId();
+  store.edit((d) => {
+    d.customWeapons = [];
+    delete d.attackOverrides[w.key];
+  });
+  assert.equal(
+    store.getSnapshot().result.attacks.filter((a: any) => a.custom).length,
+    0,
+  );
+  store.travel("undo");
+  assert.equal(store.getDocumentId(), document);
+  assert.equal(
+    store.getSnapshot().draft.customWeapons[0].notes,
+    "Etched steel",
+  );
+});
 
 test("one loot click adds possessions with dice in one Undo step and restores older location-based saves", async () => {
   const store = await human(false);

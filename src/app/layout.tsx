@@ -6,6 +6,7 @@ import "../styles/book-search.css";
 import "../styles/design-tokens.css";
 import "../styles/design-system.css";
 import "../styles/gm/style.css";
+import "../styles/gm/weapon.css";
 import "../styles/marijan/style.css";
 import "../styles/mobile-shell.css";
 import "../styles/interface.css";

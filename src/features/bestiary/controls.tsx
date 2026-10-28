@@ -288,7 +288,9 @@ export function Metadata({ entry }: { entry: any }) {
   return (
     <>
       <small className="gm-small">
-        {sourceLabel(context?.rules || { books: [] }, entry)}
+        {entry.custom
+          ? `Custom · Based on ${entry.baseName} · ${sourceLabel(context?.rules || { books: [] }, { source: entry.baseSource })}`
+          : sourceLabel(context?.rules || { books: [] }, entry)}
       </small>
       <Legacy entry={entry} />
     </>

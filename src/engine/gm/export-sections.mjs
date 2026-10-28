@@ -10,7 +10,7 @@ const printedWeapon =
 export function gearLines(r) {
   const gear = r.gear || [];
   const keys = new Set(gear.map((g) => g.key));
-  const names = new Set(gear.map((g) => g.entry.name));
+  const names = new Set(gear.filter((g) => !g.custom).map((g) => g.entry.name));
   return [
     r.trappings ?? r.profile.sections.Trappings,
     ...gear.map((g) => `${g.quantity} × ${g.entry.name}`),

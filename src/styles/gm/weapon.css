@@ -1,0 +1,202 @@
+.weapon-workbench {
+  container: weapon-workbench / inline-size;
+  margin-block: 1rem 1.5rem;
+  padding: clamp(12px, 2vw, 24px);
+  border: 1px solid var(--color-line);
+  border-top: 3px solid var(--color-gold);
+  background: var(--color-paper-raised);
+  scroll-margin-top: 1rem;
+}
+.weapon-workbench h3,
+.weapon-workbench h4 {
+  margin-block: 0.5rem 0.75rem;
+}
+.weapon-workbench h4 {
+  font-size: 1.15rem;
+}
+.weapon-workbench h5 {
+  font-size: 0.9rem;
+  margin-block: 1rem 0.5rem;
+}
+.weapon-layout {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+.weapon-form,
+.weapon-preview,
+.weapon-property > div,
+.weapon-fields > * {
+  min-width: 0;
+}
+.weapon-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 12px;
+}
+.weapon-workbench .field {
+  margin: 0 0 12px;
+}
+.weapon-workbench :is(input, select, textarea) {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.weapon-workbench textarea {
+  display: block;
+  margin-block: 6px 16px;
+  resize: vertical;
+}
+.weapon-workbench details {
+  margin-block: 8px 12px;
+}
+.weapon-workbench summary {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.weapon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.weapon-workbench button {
+  min-height: 44px;
+}
+.weapon-property {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--color-line);
+}
+.weapon-property > button {
+  min-width: 44px;
+}
+.weapon-add-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+  margin-block: 12px 20px;
+}
+.weapon-add-row > label {
+  grid-column: 1 / -1;
+}
+.weapon-add-row .field {
+  margin: 0;
+}
+.weapon-power {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 0;
+  padding: 0;
+  margin: 0 0 16px;
+}
+.weapon-power label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-line);
+  cursor: pointer;
+  background: var(--color-paper-raised);
+}
+.weapon-power label:has(input:checked) {
+  background: #dbe4e7;
+  border-color: #34536c;
+  box-shadow: inset 0 -2px #34536c;
+}
+.weapon-power label:focus-within {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+.weapon-power input {
+  width: 16px;
+  min-height: 16px;
+  margin: 0;
+}
+.weapon-power legend {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+.weapon-power-panel {
+  padding: 12px;
+  border: 1px solid var(--color-line);
+  margin-bottom: 16px;
+  background: var(--color-paper);
+}
+.weapon-rune-count {
+  font-weight: 600;
+  color: #34536c;
+}
+.weapon-preview {
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  overflow-wrap: anywhere;
+}
+.weapon-preview-label {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+.weapon-preview dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-block: 16px;
+}
+.weapon-preview dl div {
+  min-width: 0;
+}
+.weapon-preview dt {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.weapon-preview dd {
+  font-weight: 600;
+  margin: 4px 0 0;
+}
+.weapon-preview p,
+.weapon-preview li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.weapon-preview ul {
+  padding-left: 20px;
+}
+.weapon-confirm,
+.weapon-issues {
+  border-left: 3px solid var(--color-warning);
+  padding: 10px 12px;
+  background: var(--color-warning-surface);
+  margin-block: 12px;
+}
+.weapon-footer {
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-line);
+}
+@container weapon-workbench (min-width: 760px) {
+  .weapon-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.7fr);
+  }
+}
+@media (max-width: 479px) {
+  .weapon-add-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .weapon-add-row > button {
+    justify-self: start;
+  }
+}
+@media print {
+  .weapon-workbench {
+    display: none;
+  }
+}

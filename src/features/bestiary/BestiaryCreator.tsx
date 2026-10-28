@@ -285,8 +285,25 @@ function Workshop({ verify }: { verify: boolean }) {
   };
   const remove = (key: string) =>
     edit((d) => {
+      const ammunition = d.customWeapons.find(
+        (w: any) => `${w.key}-ammo` === key,
+      );
+      if (ammunition) {
+        ammunition.effects = [];
+        ammunition.ammunition = 0;
+        ammunition.legendary = false;
+        ammunition.power = "ordinary";
+        return;
+      }
       let removed = false;
-      for (const list of ["traits", "skills", "talents", "gear", "loot"]) {
+      for (const list of [
+        "traits",
+        "skills",
+        "talents",
+        "gear",
+        "loot",
+        "customWeapons",
+      ]) {
         const index = d[list].findIndex((t: any) => t.key === key);
         if (index >= 0) {
           d[list].splice(index, 1);

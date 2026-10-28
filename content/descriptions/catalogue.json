@@ -20349,6 +20349,258 @@
       },
       "status": "reviewed",
       "text": "Spend coin equal to your maximum Earnings (page 199): for example, earnings of 4d10 brass pennies require spending 40 brass pennies. Increase Standing by +1 until the next downtime, unless your reputation is damaged during the adventure."
+    },
+    "description:873e962c1b64715c2b7ffd68": {
+      "name": "Touched by the Winds",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "Magical attacks can harm creatures immune to non-magical attacks. A ranged weapon also makes its ammunition magical. No other ability."
+    },
+    "description:9ab4319379bbdd49bbdcae56": {
+      "name": "Wreathed in Shadow",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "Hits ignore non-magical armour. Applies to the melee blade or the ammunition fired by the enchanted bow or crossbow."
+    },
+    "description:eee9c89e8b9c8fecb05d3bd5": {
+      "name": "Alight with Flame",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "The drawn weapon burns without harming its wielder or their possessions. A hit on a flammable target inflicts 1 Ablaze Condition."
+    },
+    "description:9694acc3a5a96dda2e51c4f0": {
+      "name": "Dolorous",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "The wielder causes Fear (1)."
+    },
+    "description:cbac7881364cbcc3a3ca06ab": {
+      "name": "Of Leaping Silver Wroth",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "A melee weapon gains Fast. With a ranged weapon, the wielder instead gains +10 Initiative in combat."
+    },
+    "description:8f121b749617e4c0220c92e8": {
+      "name": "Carved of Rage",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "Drawing the weapon in anger subjects the wielder to Frenzy."
+    },
+    "description:73a0c671173c8ba0f1ca4ec0": {
+      "name": "Envigoured",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "The wielder ignores Fatigued Conditions while fighting with the weapon. The weapon gains Unbreakable."
+    },
+    "description:e5f7a8f78ee6c00e0372a75d": {
+      "name": "Entwined with Fate",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "At the start of each combat Round, the wielder gains 1 Momentum (core Appendix I conversion from Advantage)."
+    },
+    "description:80d3694155ec0a9bef16c58b": {
+      "name": "Of Rigor Wroth",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "The wielder of a melee weapon benefits from Strike Mighty Blow, Strike to Injure and Strike to Stun. A ranged wielder benefits from Fast Shot, Sharpshooter and Sniper. Use the current core Talent definitions; these are benefits while wielding, not permanent Talent purchases."
+    },
+    "description:bcf405413989d62d79aada8d": {
+      "name": "Of Stalwart Sorcery",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "The weapon gains Precise."
+    },
+    "description:3362fec788d5e2cd1cafa882": {
+      "name": "Bewildering",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "An enemy wounded by the weapon gains Surprised."
+    },
+    "description:527bffad291ad476617bec96": {
+      "name": "Of Bold Brass",
+      "source": {
+        "book": "archives-ii",
+        "page": 58
+      },
+      "status": "reviewed",
+      "text": "The bearer is immune to Fear and gains +2 SL to resist Terror."
+    },
+    "description:274261bae41769c2a7d9e6e4": {
+      "name": "Of the Wolf ’s Wide Jaws",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The weapon gains Damaging."
+    },
+    "description:efd08779fe72e0226efa1203": {
+      "name": "Of Deft and Cunning",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The wielder benefits from +20 WS or BS, as appropriate. This conditional Characteristic benefit is not a permanent change to the NPC profile."
+    },
+    "description:64adc7a0926252f07e1d5ed9": {
+      "name": "Of Salt and Brine",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The bearer may take a free Action in the first Round of any combat. The weapon also gains Fast."
+    },
+    "description:6356c42ff8b14e9d4532cc62": {
+      "name": "Of Grisly Wounds",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The weapon gains Damaging."
+    },
+    "description:5e55de62fe483504b3102bff": {
+      "name": "Of Tooth and Claw",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Creatures with Bestial must pass Difficult (-1 SL) Willpower before attacking the wielder (core Appendix I conversion of the printed -10 Test Difficulty)."
+    },
+    "description:e961d0fe47e872a7fbe6fb34": {
+      "name": "Of Deepest Banishing",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The wielder counts as having 3 additional Momentum when resolving Unstable effects against Daemons and Ethereal Undead (core Appendix I conversion from Advantage)."
+    },
+    "description:b0c63f5e0fb24e0cf0b7995b": {
+      "name": "Of Undue Substance",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The weapon gains Pummel and Hack."
+    },
+    "description:f6259e9db09d18620e6f90d4": {
+      "name": "Of Languishing Death",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Every Wound inflicted by this weapon is a Festering Wound. The source cites Fourth Edition core p. 187; consult the current core disease reference."
+    },
+    "description:b7c4a1caaf8d0c80f23fb925": {
+      "name": "Of Keenest Edge",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The weapon or its ammunition gains Hack, Impale and Penetrating."
+    },
+    "description:c3cc47ae5cf1e8a1b489a86d": {
+      "name": "Of Bane",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Choose or roll a creature type. When this weapon damages that creature type, double Wounds inflicted. This modifies Wounds, not the weapon's printed Damage."
+    },
+    "description:9dd1aca7cb0a23cbdae1460d": {
+      "name": "Of Ceaseless Cleaving",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "A hit that deals Damage inflicts 2 additional Wounds."
+    },
+    "description:47024e1ea0e5de55b146dd3c": {
+      "name": "Of Leaping Gold",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "The weapon gains Fast, Penetrating and Precise."
+    },
+    "description:1843110ff40fae7e8b9646e6": {
+      "name": "Of Grievous Injury",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "When rolling a Critical Injury caused by this weapon, reverse the roll if that gives a more damaging result. The source's core-page reference is Fourth Edition."
+    },
+    "description:28f11125ec14194382a618b9": {
+      "name": "Of Form Mercurial",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Each Round choose one of Fast, Hack, Impale, Penetrating or Precise. The weapon changes shape to suit the wielder's movements; these Qualities are not all active together."
+    },
+    "description:8b68b8f90be7e1169e45ec15": {
+      "name": "Hoarfrost Blade",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "A hit that deals Damage inflicts twice the normal Wounds, plus 4 additional Wounds."
+    },
+    "description:906804e39acf3f1c7d89dd1e": {
+      "name": "Legendary Weapon",
+      "source": {
+        "book": "archives-ii",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Roll twice more. Further Legendary results can produce at most 5 distinct abilities; duplicate abilities are not cumulative."
     }
   },
   "bindings": {
@@ -29615,6 +29867,118 @@
     "data/books/core/reference-entries.json#/core%3Areference%3A200-raise-reputation": {
       "id": "description:963e5a9434a506f00f62aab4",
       "sourceHash": "a9446386b4ebfcf5ca454fb8bffb5f9f55e3f05e3248b50baec0a28f015e3c9e"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Atouched-by-the-winds": {
+      "id": "description:873e962c1b64715c2b7ffd68",
+      "sourceHash": "46c86e15a39b7864428e234b920def8970107ad353bb8219c11e624a80cb76a4"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Awreathed-in-shadow": {
+      "id": "description:9ab4319379bbdd49bbdcae56",
+      "sourceHash": "11a9a033c44da238e68209ab0fb7969d8edab6958fffbe47b08fdd4534383ed0"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aalight-with-flame": {
+      "id": "description:eee9c89e8b9c8fecb05d3bd5",
+      "sourceHash": "fe91b0b9cc2d9b095a27634945a8760ae31c47f1b577059686205b068d8e8873"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Adolorous": {
+      "id": "description:9694acc3a5a96dda2e51c4f0",
+      "sourceHash": "e248c10445f31f2a4864d6be7ec7de908acb764d82f1f65a0052f7d7e1b08d62"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-leaping-silver-wroth": {
+      "id": "description:cbac7881364cbcc3a3ca06ab",
+      "sourceHash": "aa160645dc9379c7c72f9b5cbd4ca4262b3e78e6b82427e6bb38499cce4450cc"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Acarved-of-rage": {
+      "id": "description:8f121b749617e4c0220c92e8",
+      "sourceHash": "1a1172ea752896f09a26dfc0edf489b330db6b3fb7d5c6d3d132db7f776196ff"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aenvigoured": {
+      "id": "description:73a0c671173c8ba0f1ca4ec0",
+      "sourceHash": "6fe21fd350a6fec0ce6439f3d2273bf4f026dae722f3691550295bbc6936cc07"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aentwined-with-fate": {
+      "id": "description:e5f7a8f78ee6c00e0372a75d",
+      "sourceHash": "f0fe2f4aed956c1a29d4f349cd6af58d67d7be36117360235e97a8f60f73326b"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-rigor-wroth": {
+      "id": "description:80d3694155ec0a9bef16c58b",
+      "sourceHash": "8b66aa56544792a4659c43a71d0123c1cc9507cd7fc2e505a223237f97bb2a78"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-stalwart-sorcery": {
+      "id": "description:bcf405413989d62d79aada8d",
+      "sourceHash": "8977c0d4bd6f4e0d35dba4fdc7bc23ddfd0edcc49d5f673023ab978b028d2958"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Abewildering": {
+      "id": "description:3362fec788d5e2cd1cafa882",
+      "sourceHash": "5b04b8feb10b52ed8eb52f64de33174b857b800122a2bede569a6d76144bbab0"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-bold-brass": {
+      "id": "description:527bffad291ad476617bec96",
+      "sourceHash": "d2ec5a55fee978074a7de91616964a17ad18abe1e37f6289890e5311f49b2c52"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-the-wolf-s-wide-jaws": {
+      "id": "description:274261bae41769c2a7d9e6e4",
+      "sourceHash": "081fa4d14b3f22cd373097152d80c7a18767ea36aab9a74723e76e1214e4abad"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-deft-and-cunning": {
+      "id": "description:efd08779fe72e0226efa1203",
+      "sourceHash": "16269cdbdfff21e7a3521b77ab3c7bb682dc842ea0cef68c45d4d85c4c0cacb8"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-salt-and-brine": {
+      "id": "description:64adc7a0926252f07e1d5ed9",
+      "sourceHash": "ad7c33a1ebdf98d7f6d1519c86be0e082734498d4b3bf3a9d82eacab640159aa"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-grisly-wounds": {
+      "id": "description:6356c42ff8b14e9d4532cc62",
+      "sourceHash": "1f9769dc36c5c5f91892bc889ba23b88a9b7347afa8a84b8b359f43f92a9d7f3"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-tooth-and-claw": {
+      "id": "description:5e55de62fe483504b3102bff",
+      "sourceHash": "ed24c148c5a18907489332da3e6d01ebaeaa51fa0ec8b6b3f646e8d325a5fd7e"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-deepest-banishing": {
+      "id": "description:e961d0fe47e872a7fbe6fb34",
+      "sourceHash": "49cd28e8368ed69f28ca9ed19a6e77ba9dd9c8d3445a0a55d07573b8cae244a6"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-undue-substance": {
+      "id": "description:b0c63f5e0fb24e0cf0b7995b",
+      "sourceHash": "c6664479577295cc49b861ab5c1e8cf7bb0a7105521519b3a2da4dcafb3ec730"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-languishing-death": {
+      "id": "description:f6259e9db09d18620e6f90d4",
+      "sourceHash": "43dc98d7cf1fbd9a915c905e7c7c163e7559e5d0228b501a03bd3edb8a3c42d6"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-keenest-edge": {
+      "id": "description:b7c4a1caaf8d0c80f23fb925",
+      "sourceHash": "0574ccdc8273acd0cbf6331fd6e52f6ca3de28d508674a2bc87f2a01823395ff"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-bane": {
+      "id": "description:c3cc47ae5cf1e8a1b489a86d",
+      "sourceHash": "8d0fc9f5435c2a7c19d02260d80ee89282022beb661b323cd6093258db12ff61"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-ceaseless-cleaving": {
+      "id": "description:9dd1aca7cb0a23cbdae1460d",
+      "sourceHash": "e70e9a402e877c3b230182477f5a8e20337209817efac09d91ee0e4fff31fe85"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-leaping-gold": {
+      "id": "description:47024e1ea0e5de55b146dd3c",
+      "sourceHash": "fde8e0769f9c4b48701ec52c4aba95f1f0506da6c80316c7e5bbadc44439c134"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-grievous-injury": {
+      "id": "description:1843110ff40fae7e8b9646e6",
+      "sourceHash": "14ed06b7cd33112cf7c11353741bb6e1381d47d93ba44432ce1c6ef051e84e6d"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Aof-form-mercurial": {
+      "id": "description:28f11125ec14194382a618b9",
+      "sourceHash": "0a1ea9c4997cf0d909052590c35cf2bbe0fa39ccd23376bcd9aecb5da9aedd18"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Ahoarfrost-blade": {
+      "id": "description:8b68b8f90be7e1169e45ec15",
+      "sourceHash": "0cc153fb1fca37ad94465acc471cf6193397b01cc120bc9a07fbe86d5b9820fb"
+    },
+    "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Alegendary-weapon": {
+      "id": "description:906804e39acf3f1c7d89dd1e",
+      "sourceHash": "044a8372c9a950820afb86efa3fe5769a3046f4db3a07c0c6070b9ba5f36b9ea"
     }
   },
   "excludedReferences": {
