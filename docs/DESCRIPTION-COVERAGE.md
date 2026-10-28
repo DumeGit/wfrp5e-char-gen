@@ -2,8 +2,8 @@
 
 Generated from the canonical description catalogue.
 
-- 2204 canonical descriptions; 2271 source bindings.
-- 2204 explicitly reviewed entries: 1954 prose summaries and 250 structured-data exceptions.
+- 2222 canonical descriptions; 2289 source bindings.
+- 2222 explicitly reviewed entries: 1972 prose summaries and 250 structured-data exceptions.
 - 0 imported descriptions awaiting editorial review.
 - 6 explicit hireling/job-hook reference exclusions, in addition to all standalone Rules and private NPC/template references.
 

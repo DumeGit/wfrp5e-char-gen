@@ -240,6 +240,67 @@ for (const [workspace, route] of [
     await noOverflow(page);
     await page.screenshot({ path: info.outputPath("critical-reference.png") });
   });
+  test(`${workspace} finds injury effects and follows exact severity from a critical wound @search @mobile`, async ({
+    page,
+  }, info) => {
+    await page.goto(`${route}?verify=1`);
+    const input = await search(page, "Torn Muscle");
+    await categoryFilters(page, "injury");
+    const results = page.locator("#book-search-results").getByRole("option");
+    await expect(results).toHaveCount(2);
+    await page
+      .getByRole("option", { name: /^Torn Muscle \(Minor\) Injury/ })
+      .click();
+    let reader = page.getByRole("region", {
+      name: "Torn Muscle (Minor)",
+      exact: true,
+    });
+    await expect(reader).toBeVisible();
+    await expect(reader).toContainText("p. 177");
+    await expect(reader).toContainText("30 - Toughness Bonus days");
+    await expect(reader).toContainText("leg injury also halves Movement");
+    await expect(
+      reader.getByRole("heading", { name: "Healing", exact: true }),
+    ).toBeVisible();
+    await noOverflow(page);
+    await page.screenshot({ path: info.outputPath("injury-reference.png") });
+    await page
+      .getByRole("button", { name: "Back to search", exact: true })
+      .click();
+    await categoryFilters(page, "critical");
+    await input.fill("Sprain");
+    await page
+      .getByRole("option", { name: /^Sprain Critical Wound · Arm/ })
+      .click();
+    reader = page.getByRole("region", { name: "Sprain", exact: true });
+    await reader
+      .getByRole("button", {
+        name: "View Torn Muscle (Minor) reference",
+        exact: true,
+      })
+      .click();
+    await expect(
+      page.getByRole("region", { name: "Torn Muscle (Minor)", exact: true }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to previous reference", exact: true })
+      .click();
+    await expect(reader).toBeVisible();
+    await page
+      .getByRole("button", { name: "Back to search", exact: true })
+      .click();
+    await categoryFilters(page, "injury");
+    await input.fill("");
+    await expect(results).toHaveCount(18);
+    await input.fill("Lost Tongue");
+    const tongue = page.getByRole("option", { name: /^Lost Tongue Injury/ });
+    await expect(tongue).toHaveCount(1);
+    await tongue.click();
+    reader = page.getByRole("region", { name: "Lost Tongue", exact: true });
+    await expect(reader).toContainText("p. 179");
+    await expect(reader).toContainText("automatically fail");
+    await noOverflow(page);
+  });
 }
 for (const creator of ["PC", "GM"]) {
   test(`${creator} narrows Trappings with dependent groups and clears child filters @search @mobile`, async ({

@@ -19,7 +19,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Source pack | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
-| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 269 | 0 | 386 |
+| Warhammer Fantasy Roleplay, Fifth Edition | 840 | 0 | 287 | 0 | 386 |
 | Up in Arms | 135 | 13 | 59 | 0 | 78 |
 | Archives of the Empire: Volume I | 31 | 22 | 8 | 0 | 15 |
 | Archives of the Empire: Volume II | 50 | 7 | 44 | 0 | 74 |
@@ -52,7 +52,7 @@ The table above counts catalog records. The feature matrix below includes system
 
 ## Warhammer Fantasy Roleplay, Fifth Edition
 
-Pack `core` · version 1.1.7
+Pack `core` · version 1.1.8
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -61,7 +61,7 @@ Pack `core` · version 1.1.7
 | careers | 64 | 0 | 0 | 0 | 0 |
 | gear | 129 | 0 | 1 | 0 | 0 |
 | market | 124 | 0 | 0 | 0 | 0 |
-| referenceEntries | 0 | 0 | 102 | 0 | 122 |
+| referenceEntries | 0 | 0 | 120 | 0 | 122 |
 | ruleReferences | 0 | 0 | 166 | 0 | 264 |
 | skills | 45 | 0 | 0 | 0 | 0 |
 | species | 5 | 0 | 0 | 0 | 0 |
@@ -158,10 +158,28 @@ Pack `core` · version 1.1.7
 | `core:reference:174-arm-critical-wounds` — Arm Critical Wounds | referenceEntries | reference-only | p. 174 | Sourced book rule reference; no live-play automation. |
 | `core:reference:175-body-critical-wounds` — Body Critical Wounds | referenceEntries | reference-only | p. 175 | Sourced book rule reference; no live-play automation. |
 | `core:reference:176-injuries` — Injuries | referenceEntries | deferred | p. 176 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:176-injury-overview` — Injuries | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
 | `core:reference:176-leg-critical-wounds` — Leg Critical Wounds | referenceEntries | reference-only | p. 176 | Sourced book rule reference; no live-play automation. |
+| `core:reference:177-amputation-injuries` — Amputated Parts | referenceEntries | reference-only | p. 177–178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:177-broken-bone-major` — Broken Bone (Major) | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
+| `core:reference:177-broken-bone-minor` — Broken Bone (Minor) | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
 | `core:reference:177-characteristic-loss` — Characteristic Loss | referenceEntries | deferred | p. 177 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 | `core:reference:177-healing-times-and-downtime` — Healing Times And Downtime | referenceEntries | deferred | p. 177 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:177-torn-muscle-major` — Torn Muscle (Major) | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
+| `core:reference:177-torn-muscle-minor` — Torn Muscle (Minor) | referenceEntries | reference-only | p. 177 | Sourced book rule reference; no live-play automation. |
 | `core:reference:178-impressive-scars` — Impressive Scars | referenceEntries | deferred | p. 178 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
+| `core:reference:178-injury-scars` — Impressive Scars | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-arm` — Lost Arm | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-ear` — Lost Ear | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-eye` — Lost Eye | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-fingers` — Lost Fingers | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-foot` — Lost Foot | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-hand` — Lost Hand | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-leg` — Lost Leg | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-nose` — Lost Nose | referenceEntries | reference-only | p. 178 | Sourced book rule reference; no live-play automation. |
+| `core:reference:178-lost-teeth` — Lost Teeth | referenceEntries | reference-only | p. 178–179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:179-lost-toes` — Lost Toes | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
+| `core:reference:179-lost-tongue` — Lost Tongue | referenceEntries | reference-only | p. 179 | Sourced book rule reference; no live-play automation. |
 | `core:reference:182-effect-of-pre-prepared-cures` — Effect Of Pre-Prepared Cures | referenceEntries | reference-only | p. 182 | Sourced book rule reference; no live-play automation. |
 | `core:reference:183-creature-size-and-dosage` — Creature Size And Dosage | referenceEntries | reference-only | p. 183 | Sourced book rule reference; no live-play automation. |
 | `core:reference:184-conditions-and-fortune` — Conditions And Fortune | referenceEntries | deferred | p. 184 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |

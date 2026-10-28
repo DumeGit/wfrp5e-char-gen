@@ -6,6 +6,8 @@ The canonical catalogue is the only editable wording bank. Working batches are e
 
 ## Scope and source boundaries
 
+- On 28 October 2026, the user requested injury references alongside Critical Wounds and Mutations. Eighteen new core `injury` entries were checked visually against pp. 176–179 and individually summarised in the canonical catalogue. Minor/Major Broken Bone and Torn Muscle retain all recovery phases and Heal/binding exceptions; Major Torn Muscle keeps the printed -2 SL to “all Tests”, without inferred errata. No minimum is added to 30 - Toughness Bonus days. Lost-part display names provide the context of Amputated Parts; Lost Teeth cites both pp. 178–179. Original private Rules and their historical audit remain unchanged; the explicit injury category is published independently.
+
 - All standalone category Rules are absent from published reference/book/search payloads. Original extraction and historical audits remain private. Conditions, Psychology, Traits, properties, Skills, Talents, magic, actual tables and Endeavours remain distinct categories.
 - Six leftover hireling-generation and Quartermaster job-hook tables are excluded by exact IDs/reasons in the catalogue. Real price tables and genuine Endeavours remain.
 - Unused full-profile/template prose and duplicate GM sections are removed after source-conflict notes are compiled. Actual structured profiles, Traits, Skills, equipment and template operations remain. Rewriting attack prose cannot change free/ranged classification.

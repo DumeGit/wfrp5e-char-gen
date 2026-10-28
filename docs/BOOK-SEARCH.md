@@ -14,6 +14,8 @@ Earlier dated integration/count/verification sections below describe historical 
 
 ## Categories and results
 
+**Injuries** contains 18 reviewed core references from pp. 176–179: the injury overview, Minor/Major Broken Bone and Torn Muscle, Amputated Parts, eleven lost-part effects, and Impressive Scars. Each includes its effects, recovery requirements where printed, and source page. Exact aliases cover singular/plural injury names, and critical wound descriptions link to the specified severity through normal reference history. The category has the shared Book filter. Contextual names such as Lost Arm identify the corresponding subheading in Amputated Parts; they are not new injury mechanics. These user-requested injury references are a distinct category and do not restore the excluded Rules catalogue or apply effects to characters.
+
 **Critical Wounds** contains all 80 individual core results from the four Head/Arm/Body/Leg tables (pp. 173–176), with a **Hit location** filter. Names shared by several locations remain distinct and show their location in the result label. Each reader shows the original roll range, Wounds and reviewed effects, plus **View full table**, which uses normal reference history/Back. The original core tables and Up in Arms alternatives remain under Tables. Core ranges above 100 and `00 or more` are preserved; this is a read-only lookup, not a random roll or injury handler.
 
 **Mutations** contains all 40 core Physical/Mental results (p. 189). They match their names, effects and generic mutation/corruption queries, retain the Physical/Mental filter, and show their printed d100 range and a full-table link. Search and the manager's injury picker derive wound rows through `critical-wounds.mjs` from the same reviewed tables; there is no separate wording list or saved-character change. The five source pages were visually checked against the supplied Fifth Edition PDF on 28 October 2026. The existing mutation identities/effects remain unchanged.
@@ -24,7 +26,7 @@ The table covers the full imported reference library regardless of character boo
 
 `book-search.mjs` compiles per-level `careerOptions` from the existing shared choice resolver. `search-library.mjs` unions context-dependent choices for the same Career key without merging different source profiles. Only the lazy reference payload carries this metadata; it does not increase the startup book bundle or add a request. `career-references.mjs` validates it, builds one reverse lookup when references load, and renders the common table in all four workspaces. The table's explicit Career links bypass automatic related-term relinking. No new game data or Hammergen rules were imported.
 
-**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Critical Wounds, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
+**All categories** is the default and stays first; the remaining category labels are sorted alphabetically. Native selectors offer Category and **Book** in every view. Categories include Tables, Endeavours, Conditions, Critical Wounds, Injuries, Psychology, Qualities & Flaws, Creature Traits, Species & Origins, Careers, Skills, Talents, **Spells, Prayers & Cants**, **Runes**, **Techniques**, **Trappings** and **Mutations**. Choosing a category or book with an empty query browses alphabetically; an empty unfiltered All categories view shows a hint.
 
 | Category | Additional filters |
 | --- | --- |
@@ -101,6 +103,12 @@ Add an eligible reference only after reviewing its supplied page and checking ta
 Outcome tests cover all-book availability with a core-only draft, separate source variants and withdrawn profiles, selective Legacy status, facet joins, stable identities, aliases/ranking/category browsing/pagination, full Skill prose, unchanged character calculations, source table values, safe rendering, lazy hydration and stale/malformed/failing sources. Browser checks use isolated `?verify=1` drafts for one-click focus, caret/keyboard, chained references and ambiguity, list return position, automatic/fallback batches, book-selection independence and desktop/mobile layout. Simulated phone viewports verify layout; real iOS/Android software keyboards and native picker behavior require an actual device and must not be reported as tested through desktop emulation.
 
 Dated verification sections below record earlier releases. Their Rules/NPC/profile/template checks and result counts predate current exclusions and are superseded by the current scope above. The undated extraction/maintenance guidance still applies to eligible retained categories.
+
+## Injury reference verification — 28 October 2026
+
+Core 1.1.8 adds 18 visually reviewed injury references, with explicit source hashes and individually reviewed canonical summaries. All 576 Node tests, TypeScript and 13 store tests passed. The production build, 28-pack validation, generated/module checks, formatting with `--end-of-line auto` and the 108-file offline inventory passed. Desktop and simulated-phone injury screenshots were inspected; physical phones were not tested.
+
+The initial 370-case browser run had 355 passes, six existing skips and nine failures. Eight new injury cases incorrectly expected Lost Tongue to be the only full-text match, although Amputated Parts also names it. The tests now select the exact injury without suppressing valid prose matches. The existing manager large-score geometry case also failed once. The final 48-case search/manager follow-up passed all cases without retries, and all 15 tablet cases passed. This records a broad run plus focused follow-ups, not a second clean broad run.
 
 ## Critical wound and mutation verification — 28 October 2026
 

@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "scope": "Gameplay reference search includes concrete game procedures, calculations, definitions, restrictions and effects. Standalone non-mechanical introductions, setting/history, flavour descriptions and general storytelling advice are excluded from Rules. Standalone NPC/creature profiles and templates are excluded by user request, with reviewed NPC source records retained for possible future use. Setting-only prose, adventure scenes and secrets are excluded. Existing adapted character-creation profiles remain. This inventory audits selected gameplay ranges, not every sentence in the PDFs.",
-  "references": 3067,
-  "newlyImported": 567,
+  "references": 3085,
+  "newlyImported": 585,
   "retainedOutsideSearch": 970,
   "removedNonMechanicalRules": 112,
   "books": [
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.7",
+      "version": "1.1.8",
       "edition": 5,
       "sourceHash": "f7be14489e4ccbe2d36c0124973cae8b200e42e2818c42d8785d0b104ef6d902",
-      "references": 1628,
-      "newlyImported": 102,
+      "references": 1646,
+      "newlyImported": 120,
       "retainedOutsideSearch": 122,
       "existingReferences": 1526,
       "adaptedReferences": 0,
@@ -30,11 +30,12 @@
         "species": 5,
         "table": 86,
         "endeavour": 16,
+        "injury": 18,
         "critical": 80,
         "mutation": 40
       },
       "dispositions": {
-        "included": 224,
+        "included": 242,
         "consolidated": 3,
         "excluded": 249,
         "existing": 620

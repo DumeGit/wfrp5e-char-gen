@@ -16,6 +16,7 @@ export const SEARCH_CATEGORIES = {
   equipment: "Trappings",
   mutation: "Mutations",
   critical: "Critical Wounds",
+  injury: "Injuries",
 };
 export const searchLabel = (row) =>
   row.kind === "critical"
@@ -36,6 +37,7 @@ export const searchLabel = (row) =>
           profile: "NPC / Creature",
           template: "Template",
           mutation: "Mutations",
+          injury: "Injury",
         }[row.kind] ||
         SEARCH_CATEGORIES[row.kind]?.replace(/s$/, "") ||
         row.kind;

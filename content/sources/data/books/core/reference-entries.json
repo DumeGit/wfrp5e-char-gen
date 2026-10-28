@@ -1790,5 +1790,213 @@
     "topic": "Rules and combat",
     "page": 131,
     "text": "| Difficulty | Test Modifier | Example |\n| --- | --- | --- |\n| Very Easy | +6 SL | Noticing the obvious, jumping a small gap |\n| Easy | +4 SL | Sharpening the edge of a trusty blade |\n| Average | +2 SL | Quickly finding pertinent information in a book you can read |\n| Challenging | +0 | Typical Ranged and Melee attack Tests, climbing a stone wall |\n| Difficult | −1 SL | Recalling an obscure fact about a long-dead noble |\n| Hard | −2 SL | Swimming upstream in a flooding sewer |\n| Very Hard | −3 SL | Convincing a witch hunter they’ve made a terrible mistake |\n\nIf a difficulty is not specified, you should assume it is Challenging (+0 SL). Most Tests made during Combat are Challenging (+0 SL)."
+  },
+  {
+    "id": "core:reference:176-injury-overview",
+    "name": "Injuries",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 176,
+    "text": "Injuries are lasting ailments inflicted by Critical Wounds that require specialist treatment or some other step to address. While you have an Injury, the Critical Wound that caused it does not count as healed."
+  },
+  {
+    "id": "core:reference:177-broken-bone-minor",
+    "name": "Broken Bone (Minor)",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 177,
+    "text": "You have fractured one of your bones, but it is still aligned, meaning it may heal of its own accord without Medical Attention. The Hit Location cannot be used until the breakage heals. For arm and leg hits, you are down to one limb as the other is too painful to use, and may require binding. Use the rules for an amputated arm or leg to represent this (see Amputated Parts, page 177).\n\nFor head hits, you will be down to a liquid diet and will suffer a penalty of -3 SL to all Language Tests. For body hits, your strength and mobility will be severely limited: you suffer Disadvantage on Tests based on Strength and Agility, and halve your Movement.\n\nHealing: A fractured bone will take 30 + 1d10 days to heal. At the end of this, a successful Average (+2 SL) Endurance Test means the bone has set well, and no long-term effects will be suffered. If the Test is failed, you suffer -1 SL to all Agility Tests when using a damaged arm, a permanent loss of -1 Movement and -10 to your Agility Characteristic for a badly healed body or leg hit, or -1 SL to spoken Language Tests for a badly healed head hit.\n\nA successful Average (+2 SL) Heal Test within a week of receiving the fracture will negate the need for the Endurance Test, but the affected area must remain bound and held in place for the duration of the healing. If the binding should be undone, another Average (+2 SL) Heal Test enacted within a day will need to be passed to avoid the Endurance Test.",
+    "aliases": [
+      "Broken Bones (Minor)",
+      "Broken Bone",
+      "Broken Bones",
+      "Fractured Bone"
+    ]
+  },
+  {
+    "id": "core:reference:177-broken-bone-major",
+    "name": "Broken Bone (Major)",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 177,
+    "text": "One of your bones is badly broken, and is either resting at an odd angle, or has splintered at the point of breakage. It is unlikely to heal properly without Medical Attention. The Hit Location is effectively unusable until the breakage heals. Use all the same rules as for Broken Bone (Minor).\n\nHealing: Healing takes 10 days longer. All associated Tests are Challenging (+0 SL). If the Test is failed, you suffer –2 SL to all Agility Tests when using a damaged arm, a permanent loss of -2 Movement and -20 to your Agility Characteristic for a badly healed body or leg hit, or -2 SL to spoken Language Tests for a badly healed head hit.",
+    "aliases": [
+      "Broken Bones (Major)",
+      "Broken Bone",
+      "Broken Bones"
+    ]
+  },
+  {
+    "id": "core:reference:177-torn-muscle-minor",
+    "name": "Torn Muscle (Minor)",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 177,
+    "text": "One of your muscles is sprained or torn, resulting in impaired capabilities and much pain. Suffer a penalty of -1 SL to all Tests involving the Location. If a leg is hit, also halve your Movement.\n\nHealing: The muscle will partially heal in 30 - Toughness Bonus days. Successful use of the Heal Skill reduces the time by 1 day, plus a further day per SL after the first — you can gain this benefit once.",
+    "aliases": [
+      "Torn Muscles (Minor)",
+      "Torn Muscle",
+      "Torn Muscles"
+    ]
+  },
+  {
+    "id": "core:reference:177-torn-muscle-major",
+    "name": "Torn Muscle (Major)",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 177,
+    "text": "One of your muscles or some important tendons have been severely damaged, resulting in extreme pain and a significant loss in capability of the afflicted limb. Suffer the same effects as Torn Muscle (Minor), but the penalties are -2 SL to all Tests.\n\nHealing: The muscle will partially heal in 30 - Toughness Bonus days, after which the penalty for using the limb reduces to -1 SL to all relevant Tests. The muscle will completely heal after another 30 - Toughness Bonus days. Use of the Heal Skill does little but inform you of the extent of the damage.",
+    "aliases": [
+      "Torn Muscles (Major)",
+      "Torn Muscle",
+      "Torn Muscles"
+    ]
+  },
+  {
+    "id": "core:reference:177-amputation-injuries",
+    "name": "Amputated Parts",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": "177–178",
+    "text": "Many of the more severe Critical Wounds result in the loss of a body part, such as fingers, hands, feet, or even a whole leg! Should a Character suffer more than one severed body part, it is probably time to start looking for an appropriate replacement to mitigate any possible penalties (see Chapter 11: Consumer Guide). Whenever you suffer a Critical Wound marked ‘Amputation (Difficulty)’, you must pass an Endurance Test (the Difficulty is marked in the parentheses) or gain the Prone Condition. On a Failure (-1 SL) or worse, you also gain a Stunned Condition; on an Impressive Failure (-4 SL or worse), gain the Unconscious Condition. All amputations require Surgery to heal properly, the associated Critical Wound does not count as healed until you visit a surgeon. See Surgery on page 172.",
+    "aliases": [
+      "Amputation",
+      "Amputations"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-arm",
+    "name": "Lost Arm",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Use the rules for lost hand, but you cannot strap a shield to the arm since you do not have one.",
+    "aliases": [
+      "Amputated Arm"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-ear",
+    "name": "Lost Ear",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Losing an ear is painful, but does not lead to any measurable penalty. Should you have the bad luck to lose both your ears, you suffer Disadvantage on all hearing-based Perception Tests.",
+    "aliases": [
+      "Amputated Ear"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-eye",
+    "name": "Lost Eye",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Losing an eye is horrendous, but you soon learn to compensate. Should you have the misfortune to lose both eyes, you suffer Disadvantage on all Tests influenced by sight and opponents gain Advantage on Tests made to hit you in melee.",
+    "aliases": [
+      "Amputated Eye"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-fingers",
+    "name": "Lost Fingers",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Losing a finger results in lessened grip, you suffer a -1 SL penalty to all Tests using the hand in question per finger lost. Once 4 or more fingers are lost on a hand, use the rules for a severed hand.",
+    "aliases": [
+      "Amputated Fingers",
+      "Lost Finger"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-foot",
+    "name": "Lost Foot",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Losing a foot reduces your Movement by half, rounding up, permanently. Further, you lose 10 points each of Weapon Skill and Agility, and suffer Disadvantage on all Dodge and Athletics Tests. If you lose a second foot, reduce your Movement to 1, and lose another 5 points of Weapon Skill and Agility. Reduce the Characteristic penalty caused by a lost foot by the number of toes previously severed from that appendage, if any.",
+    "aliases": [
+      "Amputated Foot"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-hand",
+    "name": "Lost Hand",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "You suffer Disadvantage on all Tests that typically rely on the use of two hands and you cannot wield two-handed weapons; however, a shield can be strapped to the injured arm. Should the lost hand be your primary hand, remember that there is a -2 SL penalty to Melee Tests made with weapons using your off-hand. For every 100 XP you spend, you can reduce this penalty by 1 SL as you relearn how to do everything with the other hand. If you lose both hands, you will need to use prosthetics in order to manipulate objects.",
+    "aliases": [
+      "Amputated Hand"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-leg",
+    "name": "Lost Leg",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Treat this as a lost foot, but you cannot use the Dodge Skill at all.",
+    "aliases": [
+      "Amputated Leg"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-nose",
+    "name": "Lost Nose",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "A loss of a nose is an unsettling injury. This always counts as an Impressive Scar, but the bonus and penalty increase to +2 SL and -2 SL respectively. All Tests involving the sense of smell suffer Disadvantage.",
+    "aliases": [
+      "Amputated Nose"
+    ]
+  },
+  {
+    "id": "core:reference:178-lost-teeth",
+    "name": "Lost Teeth",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": "178–179",
+    "text": "Loss of teeth may be unsightly and can make eating difficult. For every two teeth you lose, you also suffer a permanent loss of 1 from your Fellowship Characteristic. Further, once more than half your teeth (Humans: 16; Elves: 18; Halflings and Dwarfs: 20) are lost, you find consuming solids significantly more difficult than your peers, doubling eating times, and making some foodstuffs nigh-on impossible to eat, which is largely a matter of roleplaying and narrative description of your actions.",
+    "aliases": [
+      "Amputated Teeth",
+      "Lost Tooth"
+    ]
+  },
+  {
+    "id": "core:reference:179-lost-toes",
+    "name": "Lost Toes",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 179,
+    "text": "Loss of toes has an adverse effect on your balance. For each toe lost, suffer a permanent loss of -1 to your Weapon Skill and Agility Characteristics.",
+    "aliases": [
+      "Amputated Toes",
+      "Lost Toe"
+    ]
+  },
+  {
+    "id": "core:reference:179-lost-tongue",
+    "name": "Lost Tongue",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 179,
+    "text": "A loss of a tongue leaves you grunting and humming, or relying on sign language, for communication. You automatically fail all Language Tests involving speaking.",
+    "aliases": [
+      "Amputated Tongue"
+    ]
+  },
+  {
+    "id": "core:reference:178-injury-scars",
+    "name": "Impressive Scars",
+    "category": "injury",
+    "topic": "Injuries and injury recovery",
+    "page": 178,
+    "text": "Scars and amputations are common in the Empire, and even sought out as a mark of an accomplished duelist or street tough. Should you accumulate a sufficient number of visible scars, severed appendages, and other marks of hard-lived life, and the GM agrees, you gain a permanent bonus of +1 SL to Intimidate Tests, and incur -1 SL penalty to Charm Tests.",
+    "aliases": [
+      "Impressive Scar"
+    ]
   }
 ]

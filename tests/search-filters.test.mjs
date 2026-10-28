@@ -331,6 +331,7 @@ test("worker and fallback return identical filtered results under concurrent sea
     ["Godspakt", "all", { book: "blood-bramble" }],
     ["critical wounds", "critical", { location: "Arm", book: "core" }],
     ["mutations", "mutation", { type: "Mental", book: "core" }],
+    ["Torn Muscle", "injury", { book: "core" }],
     [
       "",
       "equipment",

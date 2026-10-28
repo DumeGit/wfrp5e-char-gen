@@ -8475,11 +8475,119 @@
             "core:reference:131-difficulty-table"
           ],
           "reason": "Reviewed standalone Difficulty Table against source p.131, preserving all seven modifiers and examples."
+        },
+        {
+          "id": "core:reference:176-injury-overview",
+          "sourceHash": "69b5ee29d406c475020449c3835f0c51d502ee30f494cab73e4f853f5f0de053",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:177-broken-bone-minor",
+          "sourceHash": "e05b5b9044a5c1a3ae9ad09204cd32c6c1fa3bc2294e58ee51da06082223a024",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:177-broken-bone-major",
+          "sourceHash": "c18b7957b3bb1b7ee0971773d4445be31046a24d0c071b5bc8de142ea5eb1b85",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:177-torn-muscle-minor",
+          "sourceHash": "d10371d3f55aabdd4d156f3e0345e9d5c1ddfcf0738806cdbc0b1f9c4ecce4af",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:177-torn-muscle-major",
+          "sourceHash": "8f610c9fab246c924b74828fc7f5fcb9a115801f189fb5ac0e19d75890872864",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:177-amputation-injuries",
+          "sourceHash": "6160ad14c6e9b6c38a3378088da932375c570ab86013cbce356dec2444db77ae",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-arm",
+          "sourceHash": "43202cd12294bdad8d56c32bf92bde7270053e2516d659b95415dbe6414e65fc",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-ear",
+          "sourceHash": "0f53313bb21d3043d796a2b97b42ef1152e761cf4bd73b929f917d312440fef7",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-eye",
+          "sourceHash": "283b32fd08f0e65aef4892ed0c83c399c29a612f8735d7407e0f97c146764bdc",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-fingers",
+          "sourceHash": "5723f12d60637f498c68ed575af8ebdf4e65ff5c0f94c8a2b8ad8a7fe28eaba4",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-foot",
+          "sourceHash": "77a21ddd79ab8fef1a041e5122a9c0f147311d8fd1b04718dcf143f6d37716d3",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-hand",
+          "sourceHash": "ffeead24f9e6905b452aef73638752546b7627b4be61b295b474206e7ea2fa5d",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-leg",
+          "sourceHash": "bcfa34bec6dd0f660dc5f9329bf78bd39a3a164dc3a3ebe465f855872902e0cf",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-nose",
+          "sourceHash": "b5c81acd7ca9b022e7da846bf91666eeac797003a27d5d9a511774218e8e3bd2",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-lost-teeth",
+          "sourceHash": "cae4ad0fad25036b0541c3a9f8c5357fde3b4201de2f37cea9b8cd54e80448e6",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:179-lost-toes",
+          "sourceHash": "4e9524942a559d52c4727f34b24563b953d3f2806e4612d3f68c22df160933a1",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:179-lost-tongue",
+          "sourceHash": "5bba46a4f55c0904fad73c9421dd49e063341f589b14a1808c321261ed1165ca",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
+        },
+        {
+          "id": "core:reference:178-injury-scars",
+          "sourceHash": "45cc23746f787c130fbf2dedab2e8bf36e4d694a2ad7868a4d8b6bd384fa620c",
+          "disposition": "included",
+          "reason": "28 October 2026: user-requested Injuries category; visually reviewed core pp. 176–179. Contextual lost-part names identify printed Amputated Parts subheadings."
         }
       ],
       "unresolvedProfiles": [],
-      "publishedSHA256": "7c4324d21f7666b0f66b39c6f25e8a4de8c0bf5066eedf20203c9d9cdd7921c3",
-      "entries": 224,
+      "publishedSHA256": "b1b1015f0095a1868d4a086ec7716d4ef42449882c0923ee7342ebc344580001",
+      "entries": 242,
       "rulesAudit": {
         "date": "2026-10-08",
         "reviewedRuleResults": 412,

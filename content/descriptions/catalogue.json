@@ -19944,6 +19944,168 @@
       },
       "status": "reviewed",
       "text": "Requires Trained (War). A Charging rider may pass through smaller creatures to reach the target. Each makes Challenging (+0 SL) Dodge or takes 4 + the mount’s SB Damage; every creature damaged removes 2 yards of remaining Movement. A creature at least the mount’s Size stops the Charge. At the Charge’s end, enemies in melee range are Engaged; resolve the Charge as if one of them were its target. A smaller creature that has not acted this Round may replace its Dodge attempt with one attack using a held weapon against the mount or rider. The Charge continues unless that attack kills or disables the mount."
+    },
+    "description:033efb70580ca36965ce6f1e": {
+      "name": "Injuries",
+      "source": {
+        "book": "core",
+        "page": 176
+      },
+      "status": "reviewed",
+      "text": "Injuries are lasting effects of Critical Wounds and need specialist treatment or another stated remedy. The Critical Wound remains unhealed while its Injury persists."
+    },
+    "description:3176c6b24e2c5f3197e7719f": {
+      "name": "Broken Bone (Minor)",
+      "source": {
+        "book": "core",
+        "page": 177
+      },
+      "status": "reviewed",
+      "text": "### Effects\n\nThe affected location cannot be used until healed. For an arm or leg, use the corresponding Lost Arm or Lost Leg rules. A head fracture requires a liquid diet and gives -3 SL to all Language Tests. A body fracture gives Disadvantage on Strength- and Agility-based Tests and halves Movement.\n\n### Healing\n\nRecovery takes 30 + 1d10 days. Then pass Average (+2 SL) Endurance to avoid lasting damage. Failure causes -1 SL to Agility Tests using an injured arm; permanent -1 Movement and -10 Agility for a body or leg fracture; or -1 SL to spoken Language Tests for a head fracture.\n\nAn Average (+2 SL) Heal Test within one week removes the need for that Endurance Test, provided the location remains bound and immobilised until healed. If the binding comes undone, another Average (+2 SL) Heal Test within a day is required to retain that benefit."
+    },
+    "description:7f65a166082d05c215751752": {
+      "name": "Broken Bone (Major)",
+      "source": {
+        "book": "core",
+        "page": 177
+      },
+      "status": "reviewed",
+      "text": "### Effects\n\nUse Broken Bone (Minor), including the unusable location and its location-specific effects.\n\n### Healing\n\nRecovery takes 10 days longer than Broken Bone (Minor). All associated Tests are Challenging (+0 SL). A failed healing Test causes -2 SL to Agility Tests using an injured arm; permanent -2 Movement and -20 Agility for a body or leg fracture; or -2 SL to spoken Language Tests for a head fracture. The binding and early Heal rules of Broken Bone (Minor) still apply."
+    },
+    "description:44d84c747d74f1daa30422e3": {
+      "name": "Torn Muscle (Minor)",
+      "source": {
+        "book": "core",
+        "page": 177
+      },
+      "status": "reviewed",
+      "text": "### Effects\n\nTests involving the injured location suffer -1 SL. A leg injury also halves Movement.\n\n### Healing\n\nThe muscle partially heals after 30 - Toughness Bonus days. Successful Heal reduces this time once by 1 day, plus 1 further day per SL after the first."
+    },
+    "description:de5635b6319f8f0e38247cd6": {
+      "name": "Torn Muscle (Major)",
+      "source": {
+        "book": "core",
+        "page": 177
+      },
+      "status": "reviewed",
+      "text": "### Effects\n\nUse Torn Muscle (Minor), but the penalty is -2 SL to all Tests. A leg injury also halves Movement.\n\n### Healing\n\nAfter 30 - Toughness Bonus days, the penalty for using the limb falls to -1 SL on relevant Tests. Complete healing takes another 30 - Toughness Bonus days. Heal can diagnose the damage but does not shorten recovery."
+    },
+    "description:aac6aa3f77f88a30f8347e66": {
+      "name": "Amputated Parts",
+      "source": {
+        "book": "core",
+        "page": "177–178"
+      },
+      "status": "reviewed",
+      "text": "When a Critical Wound specifies Amputation (Difficulty), pass Endurance at that Difficulty or gain Prone. Failure at -1 SL or worse also gives Stunned; at -4 SL or worse, gain Unconscious as well. All amputations need Surgery, and the associated Critical Wound remains unhealed until surgical treatment (p. 172).\n\nThe lasting effects are listed under Lost Arm, Lost Ear, Lost Eye, Lost Fingers, Lost Foot, Lost Hand, Lost Leg, Lost Nose, Lost Teeth, Lost Toes and Lost Tongue."
+    },
+    "description:e30a02331f55d5a388a81c4b": {
+      "name": "Lost Arm",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "Use Lost Hand, but a shield cannot be strapped to the missing arm."
+    },
+    "description:faf5805386b7bfd33bdeab5f": {
+      "name": "Lost Ear",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "One lost ear has no measurable penalty. Losing both ears gives Disadvantage on hearing-based Perception Tests."
+    },
+    "description:d32a6b1fe5d23929d8c818ab": {
+      "name": "Lost Eye",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "If both eyes are lost, all sight-influenced Tests have Disadvantage, and opponents gain Advantage on melee Tests to hit you."
+    },
+    "description:e65dd043833c56d74ec8d385": {
+      "name": "Lost Fingers",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "Each lost finger gives -1 SL to all Tests using that hand. Once four or more fingers on a hand are lost, use Lost Hand."
+    },
+    "description:4ecacd8d545822505617144c": {
+      "name": "Lost Foot",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "Permanently halve Movement, rounding up, and lose 10 Weapon Skill and 10 Agility. Dodge and Athletics Tests have Disadvantage. Losing a second foot sets Movement to 1 and costs another 5 Weapon Skill and 5 Agility. Reduce the lost-foot Characteristic penalty by the number of toes previously lost from that foot."
+    },
+    "description:067763e97bb9113d98c773b3": {
+      "name": "Lost Hand",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "Tests normally needing two hands have Disadvantage, and two-handed weapons cannot be wielded. A shield can be strapped to the injured arm. If the primary hand is lost, off-hand weapon Melee Tests suffer -2 SL; reduce this penalty by 1 SL for each 100 XP spent relearning use of the other hand. Losing both hands requires prosthetics to manipulate objects."
+    },
+    "description:d6d09ad75f4f5e37faf9022d": {
+      "name": "Lost Leg",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "Use Lost Foot, and the Dodge Skill cannot be used at all."
+    },
+    "description:7eb48885bbbdb3294d207c9b": {
+      "name": "Lost Nose",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "This always counts as an Impressive Scar, with +2 SL to Intimidate and -2 SL to Charm instead of the usual modifiers. Smell-based Tests have Disadvantage."
+    },
+    "description:e2e11b795ae832c11d7d8606": {
+      "name": "Lost Teeth",
+      "source": {
+        "book": "core",
+        "page": "178–179"
+      },
+      "status": "reviewed",
+      "text": "Every two lost teeth permanently reduce Fellowship by 1. Losing more than half the teeth (Humans: 16; Elves: 18; Halflings and Dwarfs: 20) doubles eating times and makes some foods almost impossible to eat."
+    },
+    "description:1e2a770a3b831206359058de": {
+      "name": "Lost Toes",
+      "source": {
+        "book": "core",
+        "page": 179
+      },
+      "status": "reviewed",
+      "text": "Each lost toe permanently reduces Weapon Skill and Agility by 1."
+    },
+    "description:d87d91c256ebe0b13c872747": {
+      "name": "Lost Tongue",
+      "source": {
+        "book": "core",
+        "page": 179
+      },
+      "status": "reviewed",
+      "text": "All Language Tests involving speech automatically fail. Communication must rely on other methods, such as sign language."
+    },
+    "description:fe4453a30aa87d91f3e6e764": {
+      "name": "Impressive Scars",
+      "source": {
+        "book": "core",
+        "page": 178
+      },
+      "status": "reviewed",
+      "text": "With enough visible scars, lost parts or other marks, and the GM’s agreement, gain permanent +1 SL to Intimidate Tests and -1 SL to Charm Tests."
     }
   },
   "bindings": {
@@ -29030,6 +29192,78 @@
     "gm/books/up-in-arms.json#/training/up-in-arms%3Atraining%3Ashock-cavalry": {
       "id": "description:fa043cae28dc3d214e6511c9",
       "sourceHash": "4c8fa0c50895f9fdbf606f310dea1cd3cfb7dec2dd8c96fa16bc0e382846c6ec"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A176-injury-overview": {
+      "id": "description:033efb70580ca36965ce6f1e",
+      "sourceHash": "69b5ee29d406c475020449c3835f0c51d502ee30f494cab73e4f853f5f0de053"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A177-broken-bone-minor": {
+      "id": "description:3176c6b24e2c5f3197e7719f",
+      "sourceHash": "e05b5b9044a5c1a3ae9ad09204cd32c6c1fa3bc2294e58ee51da06082223a024"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A177-broken-bone-major": {
+      "id": "description:7f65a166082d05c215751752",
+      "sourceHash": "c18b7957b3bb1b7ee0971773d4445be31046a24d0c071b5bc8de142ea5eb1b85"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A177-torn-muscle-minor": {
+      "id": "description:44d84c747d74f1daa30422e3",
+      "sourceHash": "d10371d3f55aabdd4d156f3e0345e9d5c1ddfcf0738806cdbc0b1f9c4ecce4af"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A177-torn-muscle-major": {
+      "id": "description:de5635b6319f8f0e38247cd6",
+      "sourceHash": "8f610c9fab246c924b74828fc7f5fcb9a115801f189fb5ac0e19d75890872864"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A177-amputation-injuries": {
+      "id": "description:aac6aa3f77f88a30f8347e66",
+      "sourceHash": "6160ad14c6e9b6c38a3378088da932375c570ab86013cbce356dec2444db77ae"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-arm": {
+      "id": "description:e30a02331f55d5a388a81c4b",
+      "sourceHash": "43202cd12294bdad8d56c32bf92bde7270053e2516d659b95415dbe6414e65fc"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-ear": {
+      "id": "description:faf5805386b7bfd33bdeab5f",
+      "sourceHash": "0f53313bb21d3043d796a2b97b42ef1152e761cf4bd73b929f917d312440fef7"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-eye": {
+      "id": "description:d32a6b1fe5d23929d8c818ab",
+      "sourceHash": "283b32fd08f0e65aef4892ed0c83c399c29a612f8735d7407e0f97c146764bdc"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-fingers": {
+      "id": "description:e65dd043833c56d74ec8d385",
+      "sourceHash": "5723f12d60637f498c68ed575af8ebdf4e65ff5c0f94c8a2b8ad8a7fe28eaba4"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-foot": {
+      "id": "description:4ecacd8d545822505617144c",
+      "sourceHash": "77a21ddd79ab8fef1a041e5122a9c0f147311d8fd1b04718dcf143f6d37716d3"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-hand": {
+      "id": "description:067763e97bb9113d98c773b3",
+      "sourceHash": "ffeead24f9e6905b452aef73638752546b7627b4be61b295b474206e7ea2fa5d"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-leg": {
+      "id": "description:d6d09ad75f4f5e37faf9022d",
+      "sourceHash": "bcfa34bec6dd0f660dc5f9329bf78bd39a3a164dc3a3ebe465f855872902e0cf"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-nose": {
+      "id": "description:7eb48885bbbdb3294d207c9b",
+      "sourceHash": "b5c81acd7ca9b022e7da846bf91666eeac797003a27d5d9a511774218e8e3bd2"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-lost-teeth": {
+      "id": "description:e2e11b795ae832c11d7d8606",
+      "sourceHash": "cae4ad0fad25036b0541c3a9f8c5357fde3b4201de2f37cea9b8cd54e80448e6"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A179-lost-toes": {
+      "id": "description:1e2a770a3b831206359058de",
+      "sourceHash": "4e9524942a559d52c4727f34b24563b953d3f2806e4612d3f68c22df160933a1"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A179-lost-tongue": {
+      "id": "description:d87d91c256ebe0b13c872747",
+      "sourceHash": "5bba46a4f55c0904fad73c9421dd49e063341f589b14a1808c321261ed1165ca"
+    },
+    "data/books/core/reference-entries.json#/core%3Areference%3A178-injury-scars": {
+      "id": "description:fe4453a30aa87d91f3e6e764",
+      "sourceHash": "45cc23746f787c130fbf2dedab2e8bf36e4d694a2ad7868a4d8b6bd384fa620c"
     }
   },
   "excludedReferences": {

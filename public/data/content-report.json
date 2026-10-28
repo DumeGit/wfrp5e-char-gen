@@ -21,12 +21,12 @@
     {
       "id": "core",
       "title": "Warhammer Fantasy Roleplay, Fifth Edition",
-      "version": "1.1.7",
+      "version": "1.1.8",
       "kind": "core",
       "recordCounts": {
         "implemented": 840,
         "adapted": 0,
-        "reference-only": 269,
+        "reference-only": 287,
         "unavailable": 0,
         "deferred": 386
       },
@@ -76,7 +76,7 @@
         "referenceEntries": {
           "implemented": 0,
           "adapted": 0,
-          "reference-only": 102,
+          "reference-only": 120,
           "unavailable": 0,
           "deferred": 122
         },
@@ -4697,6 +4697,17 @@
           "reason": "Standalone Rules are excluded from publication; original extraction is retained only for private audit."
         },
         {
+          "contentId": "core:reference:176-injury-overview",
+          "kind": "referenceEntries",
+          "name": "Injuries",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 176
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "core:reference:176-leg-critical-wounds",
           "kind": "referenceEntries",
           "name": "Leg Critical Wounds",
@@ -4704,6 +4715,39 @@
           "source": {
             "book": "core",
             "page": 176
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:177-amputation-injuries",
+          "kind": "referenceEntries",
+          "name": "Amputated Parts",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": "177–178"
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:177-broken-bone-major",
+          "kind": "referenceEntries",
+          "name": "Broken Bone (Major)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 177
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:177-broken-bone-minor",
+          "kind": "referenceEntries",
+          "name": "Broken Bone (Minor)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 177
           },
           "reason": "Sourced book rule reference; no live-play automation."
         },
@@ -4730,6 +4774,28 @@
           "reason": "Standalone Rules are excluded from publication; original extraction is retained only for private audit."
         },
         {
+          "contentId": "core:reference:177-torn-muscle-major",
+          "kind": "referenceEntries",
+          "name": "Torn Muscle (Major)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 177
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:177-torn-muscle-minor",
+          "kind": "referenceEntries",
+          "name": "Torn Muscle (Minor)",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 177
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
           "contentId": "core:reference:178-impressive-scars",
           "kind": "referenceEntries",
           "name": "Impressive Scars",
@@ -4739,6 +4805,138 @@
             "page": 178
           },
           "reason": "Standalone Rules are excluded from publication; original extraction is retained only for private audit."
+        },
+        {
+          "contentId": "core:reference:178-injury-scars",
+          "kind": "referenceEntries",
+          "name": "Impressive Scars",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-arm",
+          "kind": "referenceEntries",
+          "name": "Lost Arm",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-ear",
+          "kind": "referenceEntries",
+          "name": "Lost Ear",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-eye",
+          "kind": "referenceEntries",
+          "name": "Lost Eye",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-fingers",
+          "kind": "referenceEntries",
+          "name": "Lost Fingers",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-foot",
+          "kind": "referenceEntries",
+          "name": "Lost Foot",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-hand",
+          "kind": "referenceEntries",
+          "name": "Lost Hand",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-leg",
+          "kind": "referenceEntries",
+          "name": "Lost Leg",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-nose",
+          "kind": "referenceEntries",
+          "name": "Lost Nose",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 178
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:178-lost-teeth",
+          "kind": "referenceEntries",
+          "name": "Lost Teeth",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": "178–179"
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:179-lost-toes",
+          "kind": "referenceEntries",
+          "name": "Lost Toes",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
+        },
+        {
+          "contentId": "core:reference:179-lost-tongue",
+          "kind": "referenceEntries",
+          "name": "Lost Tongue",
+          "status": "reference-only",
+          "source": {
+            "book": "core",
+            "page": 179
+          },
+          "reason": "Sourced book rule reference; no live-play automation."
         },
         {
           "contentId": "core:reference:182-effect-of-pre-prepared-cures",
