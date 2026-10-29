@@ -1,5 +1,7 @@
 # Creator browsing and explanations
 
+Species Skill rows use the whole item as the native checkbox label target, including the Skill name and empty row space. Specialisation selectors and reference buttons remain independent controls; clicking them does not change selection. Checkbox and keyboard activation retain the same five-Skill limit and history behaviour.
+
 29 October Impeccable implementation: book setup exposes **Use selected books** before and after the catalogue. Its compact context says **Choose books** until applying or cancelling restores the existing creation step. A chosen Career keeps required training/options beside **Continue to Characteristics**; **Change Career · Browse alternatives** and **Read the full Career path** expand separately. Gear also offers **Continue to Experience** before its optional kit/reference content. These actions reuse existing handlers and allow unfinished navigation as before.
 
 Player Review now offers **Save editable character (.json)** independently of PDF readiness. Its guidance explains browser-local autosave, a downloadable editable backup and importing a completed supported character into the separate Character manager. Opening the manager does not transfer the draft. Paper supporting notes use the shared muted-ink role.

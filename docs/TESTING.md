@@ -1,5 +1,7 @@
 # Local testing
 
+29 October Species Skill row fix: `species-skill-selection.spec.mjs` passed its two focused desktop/phone cases. Clicking a Skill name or empty row space toggles once, direct checkbox/Space activation still works, and clicking/changing the Dwarf Trade specialisation leaves its checkbox unchanged. The production build and TypeScript passed; no broader suite was rerun.
+
 29 October Impeccable follow-up: `tests/browser/impeccable-plan.spec.mjs` covers the nine-item implementation across desktop/phone, including visible manager destination/next Tab, paper-note contrast, identical book actions, Career/Gear continuation, actual Review JSON creator-reload/independent manager-import, incomplete-save gates, compact profile filter recovery and characteristic geometry at 320–2560px. Manager tests add failed-summary/retry and keyboard disclosure at 320×480. Tablet coverage requires the first profile header to clear fixed history. See [IMPECCABLE-IMPLEMENTATION.md](IMPECCABLE-IMPLEMENTATION.md) for exact runs, resolved failures, limits and the independent re-critique; this is not a new full release-chain claim.
 
 ## Bestiary weapon creator — 28–29 October 2026

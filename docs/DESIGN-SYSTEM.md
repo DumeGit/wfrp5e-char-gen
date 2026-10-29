@@ -58,7 +58,7 @@ Menu state is ephemeral. It never changes document schemas, enters Undo, combine
 
 Use native buttons for commands, links for routes, labelled fields and existing tab handlers/semantics. One primary action per local task. Disabled actions have nearby reasons, busy labels retain useful width and retry failures remain visible. Existing cards use raised paper; source links and Legacy badges keep provenance distinct from errors. Unknown values remain explicit.
 
-Disclosure summaries contain only their toggle label and noninteractive metadata. Put source/Legacy buttons, ranks, Remove and Description switches beside/below them. Bestiary Description remains a 30×18px track inside a 44px label, with no On/Off text. Optional equipment supports whole-label tapping.
+Disclosure summaries contain only their toggle label and noninteractive metadata. Put source/Legacy buttons, ranks, Remove and Description switches beside/below them. Bestiary Description remains a 30×18px track inside a 44px label, with no On/Off text. Optional equipment and Species Skill rows support whole-label tapping. Species Skill selectors and reference buttons sit above the extended label target so they remain independently operable.
 
 Dense controls may look small inside 44px targets. Preserve 8px separation for standalone neighbors, readable numeric padding and sibling geometry at 320px/enlarged text. Focus is dark brown on paper and light brass on oak. Hover exists only under `(hover:hover) and (pointer:fine)`; press/focus work independently. No moving rows or new continuous effects. Keep existing reduced-motion mastheads.
 

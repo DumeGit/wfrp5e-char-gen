@@ -2743,6 +2743,7 @@ button.legacy-tag {
   gap: 0 16px;
 }
 .species-skill-option {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 54px;
   gap: 8px;
@@ -2791,6 +2792,17 @@ button.legacy-tag {
   font-size: 11px;
   color: var(--muted);
   cursor: pointer;
+}
+/* Extend the native checkbox label without nesting other controls in it. */
+.species-skill-check::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.species-skill-info :is(select, button, a),
+.species-skill-check input {
+  position: relative;
+  z-index: 1;
 }
 .species-skill-check input {
   width: 18px;
