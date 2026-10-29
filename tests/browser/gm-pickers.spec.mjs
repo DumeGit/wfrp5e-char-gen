@@ -250,7 +250,7 @@ test("equipment filters narrow by type and dependent group, reset stale choices 
   await page.screenshot({ path: info.outputPath("equipment-boats.png") });
 });
 
-test("Skill and Talent pickers browse the complete list with explicit specialisations @gm", async ({
+test("Skill and Talent pickers add multiple exact specialisations in one history action @gm @mobile", async ({
   page,
 }, info) => {
   await openGM(page);
@@ -260,55 +260,113 @@ test("Skill and Talent pickers browse the complete list with explicit specialisa
     .getByRole("tab", { name: "Skills & Talents", exact: true })
     .click();
   await page.getByRole("button", { name: "Add Skill", exact: true }).click();
-  let dialog = page.getByRole("dialog", { name: "Add Skill", exact: true });
+  const dialog = page.getByRole("dialog", { name: "Add Skill", exact: true });
   await expect(
-    dialog.locator(".gm-picker-row strong", { hasText: /^Art$/ }),
-  ).toHaveCount(1);
-  await expect(dialog.getByText("Art (Painting)", { exact: true })).toHaveCount(
-    0,
-  );
-  await dialog
-    .locator(".gm-picker-row")
-    .filter({ has: page.getByText("Art", { exact: true }) })
-    .getByRole("button", { name: "Choose…" })
-    .click();
-  dialog = page.getByRole("dialog", { name: "Choose Art", exact: true });
-  await expect(
-    dialog.getByRole("button", { name: "Add", exact: true }),
+    dialog.getByRole("button", { name: "Add selected Skills", exact: true }),
   ).toBeDisabled();
+  const art = dialog
+    .locator("summary")
+    .filter({ has: page.getByText("Art", { exact: true }) });
+  await art.click();
   await dialog
-    .getByLabel("Specialisation", { exact: true })
-    .selectOption({ label: "Art (Painting)" });
+    .getByRole("checkbox", { name: "Select Art (Painting)", exact: true })
+    .check();
+  await dialog
+    .getByRole("checkbox", { name: "Select Art (Sculpture)", exact: true })
+    .check();
+  await dialog.getByLabel("Search skill", { exact: true }).fill("Intimidate");
+  await dialog.getByText("Intimidate", { exact: true }).click();
+  await expect(
+    dialog.getByRole("button", { name: "Add 3 Skills", exact: true }),
+  ).toBeEnabled();
+  await expect(
+    page.getByRole("spinbutton", { name: "Art (Painting) total", exact: true }),
+  ).toHaveCount(0);
   await noOverflow(page);
-  await page.screenshot({ path: info.outputPath("skill-specialisation.png") });
-  await dialog.getByRole("button", { name: "Add", exact: true }).click();
+  await page.screenshot({ path: info.outputPath("bulk-skills.png") });
+  await dialog
+    .getByRole("button", { name: "Add 3 Skills", exact: true })
+    .click();
+  for (const name of ["Art (Painting)", "Art (Sculpture)", "Intimidate"])
+    await expect(
+      page.getByRole("spinbutton", { name: `${name} total`, exact: true }),
+    ).toBeVisible();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  for (const name of ["Art (Painting)", "Art (Sculpture)", "Intimidate"])
+    await expect(
+      page.getByRole("spinbutton", { name: `${name} total`, exact: true }),
+    ).toHaveCount(0);
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
   await expect(
     page.getByRole("spinbutton", { name: "Art (Painting) total", exact: true }),
   ).toBeVisible();
+
   await page.getByRole("button", { name: "Add Talent", exact: true }).click();
-  dialog = page.getByRole("dialog", { name: "Add Talent", exact: true });
-  expect(await dialog.locator(".gm-picker-row").count()).toBeGreaterThan(60);
-  await expect(
-    dialog.getByText("Type a more specific search to narrow this list."),
-  ).toHaveCount(0);
-  const talent = dialog
-    .locator(".gm-picker-row")
-    .filter({ has: page.getByText("Very Strong", { exact: true }) });
-  await talent.getByRole("button", { name: "Add", exact: true }).click();
+  const talents = page.getByRole("dialog", { name: "Add Talent", exact: true });
+  expect(
+    await talents
+      .locator(".gm-bulk-results > .gm-bulk-choice, .gm-bulk-group")
+      .count(),
+  ).toBeGreaterThan(60);
+  await talents
+    .getByLabel("Search talent", { exact: true })
+    .fill("Very Strong");
+  await talents
+    .getByRole("checkbox", { name: "Select Very Strong", exact: true })
+    .check();
+  await talents
+    .getByLabel("Search talent", { exact: true })
+    .fill("Strong Back");
+  await talents
+    .getByRole("checkbox", { name: "Select Strong Back", exact: true })
+    .check();
+  await page.screenshot({ path: info.outputPath("bulk-talents.png") });
+  await talents
+    .getByRole("button", { name: "Add 2 Talents", exact: true })
+    .click();
   await expect(
     page.getByRole("spinbutton", { name: "Very Strong ranks", exact: true }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Add Talent", exact: true }).click();
-  await page.locator("#gm-picker-search").fill("Arcane Magic");
-  await page
-    .getByRole("dialog")
-    .locator('.gm-picker-row:has([data-id="group:Arcane Magic"])')
-    .getByRole("button", { name: "Choose…", exact: true })
-    .click();
   await expect(
-    page.getByRole("combobox", { name: "Specialisation", exact: true }),
+    page.getByRole("spinbutton", { name: "Strong Back ranks", exact: true }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Back to list", exact: true }).click();
-  await expect(page.locator("#gm-picker-search")).toHaveValue("Arcane Magic");
-  await noOverflow(page);
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(
+    page.getByRole("spinbutton", { name: "Very Strong ranks", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("spinbutton", { name: "Strong Back ranks", exact: true }),
+  ).toHaveCount(0);
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  const json = JSON.parse(
+    (
+      await downloadBytes(
+        page,
+        page.getByRole("button", { name: "Save NPC / creature", exact: true }),
+      )
+    ).bytes,
+  );
+  expect(
+    json.skills.filter((x) =>
+      ["Art (Painting)", "Art (Sculpture)", "Intimidate"].includes(x.name),
+    ),
+  ).toHaveLength(3);
+  expect(
+    json.talents.filter((x) => ["Very Strong", "Strong Back"].includes(x.name)),
+  ).toHaveLength(2);
+  await page.getByRole("button", { name: "Add Talent", exact: true }).click();
+  await talents
+    .getByLabel("Search talent", { exact: true })
+    .fill("Very Strong");
+  await expect(
+    talents.getByRole("checkbox", { name: "Select Very Strong", exact: true }),
+  ).toBeDisabled();
+  await talents.getByLabel("Search talent", { exact: true }).fill("Hardy");
+  await talents
+    .getByRole("checkbox", { name: "Select Hardy", exact: true })
+    .check();
+  await talents.getByRole("button", { name: "Cancel", exact: true }).click();
+  await expect(
+    page.getByRole("spinbutton", { name: "Hardy ranks", exact: true }),
+  ).toHaveCount(0);
 });

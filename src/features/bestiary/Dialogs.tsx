@@ -17,6 +17,7 @@ import {
   searchPickerEntries,
 } from "../../engine/gm/pickers.mjs";
 import { traitSummary } from "../../engine/gm/trait-summaries.mjs";
+import { sourceLabel } from "../../engine/sources.mjs";
 import {
   filterEquipment,
   equipmentFilterOptions,
@@ -166,6 +167,153 @@ export function TemplatePreview({ template: t }: { template: any }) {
   );
 }
 function PickerDialog() {
+  const { modal } = useBestiary();
+  return ["skill", "talent"].includes(modal.entryKind) ? (
+    <BulkPickerDialog />
+  ) : (
+    <SinglePickerDialog />
+  );
+}
+function BulkPickerDialog() {
+  const { modal, rules, result, setModal, addEntries } = useBestiary();
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState<string[]>([]);
+  const [error, setError] = useState("");
+  const kind = modal.entryKind;
+  const plural = kind === "skill" ? "Skills" : "Talents";
+  const owned = (entry: any) =>
+    result[kind === "skill" ? "skills" : "talents"].some(
+      (x: any) => x.name === entry.name,
+    );
+  const rows = groupPickerEntries(searchPickerEntries(modal.rows, query));
+  const toggle = (entry: any, checked: boolean) => {
+    setSelected((previous) =>
+      checked
+        ? [...new Set([...previous, entry.key])]
+        : previous.filter((key) => key !== entry.key),
+    );
+    setError("");
+  };
+  const choice = (entry: any) => {
+    const checked = selected.includes(entry.key);
+    const unavailable = owned(entry) || !!entry.disabled;
+    return (
+      <div className="gm-bulk-choice" key={entry.key}>
+        <label>
+          <input
+            type="checkbox"
+            aria-label={`Select ${entry.name}`}
+            checked={checked}
+            disabled={unavailable && !checked}
+            onChange={(event) => toggle(entry, event.target.checked)}
+          />
+          <span>
+            <strong>{entry.name}</strong>
+            <small>{sourceLabel(rules, entry)}</small>
+            {unavailable && (
+              <small>{owned(entry) ? "Already added" : entry.disabled}</small>
+            )}
+          </span>
+        </label>
+        {entry.adaptation && (
+          <details className="gm-bulk-legacy">
+            <summary>Legacy</summary>
+            <p>{entry.adaptation}</p>
+          </details>
+        )}
+      </div>
+    );
+  };
+  return (
+    <Modal
+      title={kind === "skill" ? "Add Skill" : "Add Talent"}
+      close={() => setModal(null)}
+      className="gm-bulk-picker"
+      trapFocus
+    >
+      <div className="gm-bulk-search">
+        <p>
+          Select multiple {plural.toLowerCase()}, then add them together. Your
+          selection stays when you search.
+        </p>
+        <Field
+          label={`Search ${kind}`}
+          id="gm-picker-search"
+          type="search"
+          autoFocus
+          value={query}
+          onChange={setQuery}
+          placeholder="Name or rule text…"
+        />
+      </div>
+      <div className="gm-bulk-results" id="gm-picker-results">
+        <p className="gm-results-count">
+          {rows.length} matching entries or groups
+        </p>
+        {!rows.length && (
+          <p>No matches. Try another name or clear your search.</p>
+        )}
+        {rows.map((entry: any) =>
+          entry.choices ? (
+            <details
+              className="gm-bulk-group"
+              key={`${entry.key}:${!!query.trim()}`}
+              open={!!query.trim() || undefined}
+            >
+              <summary>
+                <strong>{entry.name}</strong>
+                <small>
+                  {entry.choices.length} specialisations
+                  {selected.some((key) =>
+                    entry.choices.some((x: any) => x.key === key),
+                  )
+                    ? ` · ${entry.choices.filter((x: any) => selected.includes(x.key)).length} selected`
+                    : ""}
+                </small>
+              </summary>
+              <div>{entry.choices.map(choice)}</div>
+            </details>
+          ) : (
+            choice(entry)
+          ),
+        )}
+      </div>
+      <footer className="gm-bulk-footer">
+        <div className="gm-bulk-selection">
+          <span role="status">{selected.length} selected</span>
+          <Button
+            disabled={!selected.length}
+            onClick={() => {
+              setSelected([]);
+              setError("");
+            }}
+          >
+            Clear selection
+          </Button>
+        </div>
+        {error && <p role="alert">{error}</p>}
+        <div className="gm-bulk-actions">
+          <Button onClick={() => setModal(null)}>Cancel</Button>
+          <Button
+            className="primary"
+            disabled={!selected.length}
+            onClick={() => {
+              if (!addEntries(kind, selected))
+                setError(
+                  "The selection changed. Review unavailable entries and try again.",
+                );
+            }}
+          >
+            {selected.length
+              ? `Add ${selected.length} ${selected.length === 1 ? (kind === "skill" ? "Skill" : "Talent") : plural}`
+              : `Add selected ${plural}`}
+          </Button>
+        </div>
+      </footer>
+    </Modal>
+  );
+}
+function SinglePickerDialog() {
   const {
     modal,
     rules: R,

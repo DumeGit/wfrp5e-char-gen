@@ -29,18 +29,7 @@ export function cardSections(r, s) {
     ],
     [
       "Magic",
-      r.spells
-        .map(
-          (x) =>
-            x.name +
-            (x.category === "Arcane" && x.lore ? ` (${x.lore})` : "") +
-            (x.cn !== undefined
-              ? ` (CN ${x.cn})`
-              : x.sl !== undefined
-                ? ` (SL ${x.sl})`
-                : ""),
-        )
-        .join("; "),
+      r.spells.map((x) => abilityPresentation("magic", x, s).text).join("\n"),
     ],
     [
       "Rune knowledge",

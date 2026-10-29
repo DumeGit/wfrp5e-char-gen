@@ -181,7 +181,7 @@ export function DescriptionToggle({
   kind,
   entry,
 }: {
-  kind: "trait" | "talent";
+  kind: "trait" | "talent" | "magic";
   entry: any;
 }) {
   const { draft, edit } = useBestiary();

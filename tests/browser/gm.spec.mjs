@@ -168,18 +168,17 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent"].includes(kind) && name.includes("(")) {
-      await page
-        .locator(
-          `[data-action="picker-group"][data-id="group:${name.split(" (")[0]}"]`,
-        )
-        .click();
-      await page
-        .getByLabel("Specialisation", { exact: true })
-        .selectOption({ label: name });
+    if (["Add Skill", "Add Talent"].includes(kind)) {
       await page
         .getByRole("dialog")
-        .getByRole("button", { name: "Add", exact: true })
+        .getByRole("checkbox", { name: `Select ${name}`, exact: true })
+        .check();
+      await page
+        .getByRole("dialog")
+        .getByRole("button", {
+          name: kind === "Add Skill" ? "Add 1 Skill" : "Add 1 Talent",
+          exact: true,
+        })
         .click();
       return;
     }
@@ -263,21 +262,23 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
     .click();
   await page.getByRole("button", { name: "Add Talent", exact: true }).click();
   await page.locator("#gm-picker-search").fill("Youngblood");
-  const row = page.locator("#gm-picker-results .gm-picker-row").first();
+  const row = page.locator("#gm-picker-results .gm-bulk-choice").first();
   await expect(row).toContainText("Archives I · p. 78");
-  await row
-    .getByRole("button", { name: "Read Youngblood adaptation", exact: true })
-    .click();
-  await expect(
-    page.getByRole("dialog", { name: "Youngblood · Legacy", exact: true }),
-  ).toContainText("per-rank");
+  await row.locator("summary").click();
+  await expect(row.locator(".gm-bulk-legacy")).toContainText("per-rank");
   await page
     .getByRole("dialog")
     .getByRole("button", { name: "Close", exact: true })
     .click();
   await page.getByRole("button", { name: "Add Talent", exact: true }).click();
   await page.locator("#gm-picker-search").fill("Youngblood");
-  await row.getByRole("button", { name: "Add", exact: true }).click();
+  await row
+    .getByRole("checkbox", { name: "Select Youngblood", exact: true })
+    .check();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Add 1 Talent", exact: true })
+    .click();
   await expect(
     page.getByLabel("Youngblood ranks", { exact: true }),
   ).toHaveAttribute("max", "1");
@@ -292,9 +293,14 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
     .getByRole("button", { name: "Add equipment", exact: true })
     .click();
   await page.locator("#gm-picker-search").fill("Eonir War Blade");
-  await expect(row).toContainText("Archives I · p. 92");
-  await expect(row.getByRole("button", { name: /adaptation/ })).toHaveCount(0);
-  await row.getByRole("button", { name: "Add", exact: true }).click();
+  const equipmentRow = page
+    .locator("#gm-picker-results .gm-picker-row")
+    .first();
+  await expect(equipmentRow).toContainText("Archives I · p. 92");
+  await expect(
+    equipmentRow.getByRole("button", { name: /adaptation/ }),
+  ).toHaveCount(0);
+  await equipmentRow.getByRole("button", { name: "Add", exact: true }).click();
   await expect(
     page.locator(".gm-attack-row").filter({ hasText: "Eonir War Blade" }),
   ).toBeVisible();
@@ -624,18 +630,17 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent"].includes(kind) && name.includes("(")) {
-      await page
-        .locator(
-          `[data-action="picker-group"][data-id="group:${name.split(" (")[0]}"]`,
-        )
-        .click();
-      await page
-        .getByLabel("Specialisation", { exact: true })
-        .selectOption({ label: name });
+    if (["Add Skill", "Add Talent"].includes(kind)) {
       await page
         .getByRole("dialog")
-        .getByRole("button", { name: "Add", exact: true })
+        .getByRole("checkbox", { name: `Select ${name}`, exact: true })
+        .check();
+      await page
+        .getByRole("dialog")
+        .getByRole("button", {
+          name: kind === "Add Skill" ? "Add 1 Skill" : "Add 1 Talent",
+          exact: true,
+        })
         .click();
       return;
     }
@@ -690,18 +695,17 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent"].includes(kind) && name.includes("(")) {
-      await page
-        .locator(
-          `[data-action="picker-group"][data-id="group:${name.split(" (")[0]}"]`,
-        )
-        .click();
-      await page
-        .getByLabel("Specialisation", { exact: true })
-        .selectOption({ label: name });
+    if (["Add Skill", "Add Talent"].includes(kind)) {
       await page
         .getByRole("dialog")
-        .getByRole("button", { name: "Add", exact: true })
+        .getByRole("checkbox", { name: `Select ${name}`, exact: true })
+        .check();
+      await page
+        .getByRole("dialog")
+        .getByRole("button", {
+          name: kind === "Add Skill" ? "Add 1 Skill" : "Add 1 Talent",
+          exact: true,
+        })
         .click();
       return;
     }

@@ -29,10 +29,7 @@ export function sheetSections(r, s) {
     ],
     [
       "Magic & prayers",
-      r.spells.map(
-        (x) =>
-          `${x.name} (${x.lore || x.category})${x.cn !== undefined ? ` · CN ${x.cn}` : x.sl !== undefined ? ` · SL ${x.sl}` : ""} · ${x.range || "—"} · ${x.target || "—"} · ${x.duration || "—"}`,
-      ),
+      r.spells.map((x) => abilityPresentation("magic", x, s).text),
     ],
     ["Rune knowledge", (r.runes || []).map((x) => `${x.name} (${x.form})`)],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore}): ${x.text}`)],
@@ -220,10 +217,19 @@ export async function createGMPDF(PDFLib, r, s) {
   y -= 5;
   for (const [title, lines] of sheetSections(r, s)) {
     const richLines = lines.map((line, i) => {
-      if (title === "Talents" || title === "Creature Traits") {
-        const ability = title === "Talents" ? r.talents[i] : r.traits[i];
+      if (["Talents", "Creature Traits", "Magic & prayers"].includes(title)) {
+        const ability =
+          title === "Talents"
+            ? r.talents[i]
+            : title === "Creature Traits"
+              ? r.traits[i]
+              : r.spells[i];
         const runs = abilityPresentation(
-          title === "Talents" ? "talent" : "trait",
+          title === "Talents"
+            ? "talent"
+            : title === "Creature Traits"
+              ? "trait"
+              : "magic",
           ability,
           s,
         ).runs;

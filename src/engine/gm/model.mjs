@@ -256,7 +256,7 @@ export function validateGMDraft(data, R, s) {
       (key) =>
         typeof key !== "string" ||
         key.length > 2000 ||
-        !/^(trait|talent):.+$/.test(key),
+        !/^(trait|talent|magic):.+$/.test(key),
     )
   )
     throw Error("Invalid hidden ability descriptions.");

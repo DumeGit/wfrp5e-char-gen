@@ -382,6 +382,52 @@ function Workshop({ verify }: { verify: boolean }) {
       entryKind,
       rows: pickerEntries(data, R, r, entryKind),
     });
+  const addEntries = (kind: string, keys: string[]) => {
+    if (!["skill", "talent"].includes(kind) || !keys.length) return false;
+    const list = kind === "skill" ? "skills" : "talents";
+    const catalogue = pickerEntries(data, R, r, kind);
+    const rows = [...new Set(keys)].map((key) =>
+      catalogue.find((x: any) => x.key === key),
+    );
+    if (
+      rows.some(
+        (x: any) =>
+          !x ||
+          x.disabled ||
+          r[list].some((owned: any) => owned.name === x.name),
+      )
+    ) {
+      setMessage(
+        "Some selected entries are no longer available. Review your selection.",
+      );
+      return false;
+    }
+    try {
+      store.edit((d: any) => {
+        for (const x of rows as any[]) {
+          const key = `gm-${crypto.randomUUID()}`;
+          d[list].push(
+            kind === "skill"
+              ? {
+                  key,
+                  name: x.name,
+                  total: r.stats[x.char ?? skillInfo(R, x.name)?.char] ?? 0,
+                  origin: "GM",
+                }
+              : { key, name: x.name, ranks: 1, origin: "GM" },
+          );
+        }
+      });
+      setModal(null);
+      setMessage(
+        `${rows.length} ${kind === "skill" ? (rows.length === 1 ? "Skill" : "Skills") : rows.length === 1 ? "Talent" : "Talents"} added.`,
+      );
+      return true;
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : String(error));
+      return false;
+    }
+  };
   const rollAppearance = () => {
     const options = appearanceSpecies(R, r.profile);
     if (options.length <= 1) {
@@ -540,6 +586,7 @@ function Workshop({ verify }: { verify: boolean }) {
     remove,
     picker,
     addEntry,
+    addEntries,
     rollAppearance,
     notify: setMessage,
     save,

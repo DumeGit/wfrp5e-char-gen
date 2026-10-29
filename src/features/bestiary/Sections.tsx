@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { WeaponWorkbench } from "./WeaponWorkbench";
 import { KEYS, base, talentInfo } from "../../engine/rules.mjs";
 import {
@@ -64,18 +64,20 @@ function AbilityText({
   entry,
   draft,
 }: {
-  kind: "trait" | "talent";
+  kind: "trait" | "talent" | "magic";
   entry: any;
   draft: any;
 }) {
   const output = abilityPresentation(kind, entry, draft);
   return (
     <>
-      <strong>
-        {output.name}
-        {output.description ? ":" : ""}
-      </strong>
-      {output.description && <> {output.description}</>}
+      {output.runs.map((run: any, index: number) =>
+        run.bold ? (
+          <strong key={index}>{run.text}</strong>
+        ) : (
+          <Fragment key={index}>{run.text}</Fragment>
+        ),
+      )}
     </>
   );
 }
@@ -211,14 +213,11 @@ export function StatBlock({
         section(
           "magic",
           `Magic · ${r.spells.length}`,
-          <p>
-            {r.spells
-              .map(
-                (x: any) =>
-                  `${x.name}${x.category === "Arcane" && x.lore ? ` (${x.lore})` : ""}`,
-              )
-              .join(", ")}
-          </p>,
+          r.spells.map((x: any) => (
+            <p key={x.contentId}>
+              <AbilityText kind="magic" entry={x} draft={s} />
+            </p>
+          )),
         )}
       {!!r.runes?.length &&
         section(
@@ -1912,8 +1911,11 @@ export function EquipmentMagic() {
           </Details>
         ))}
         {r.spells.map((x: any, i: number) => (
-          <div className="gm-entry" key={x.contentId}>
-            <div>
+          <div
+            className="gm-entry gm-ability-entry gm-magic-entry"
+            key={x.contentId}
+          >
+            <div className="gm-ability-content">
               <Details
                 id={x.contentId}
                 title={
@@ -1923,15 +1925,14 @@ export function EquipmentMagic() {
                 }
               >
                 <p className="gm-small">
-                  {x.category === "Technique"
-                    ? `SL ${x.sl}`
-                    : x.ritual
-                      ? "Ritual"
-                      : `CN ${x.cn ?? "—"}`}{" "}
-                  · Range {x.range || "—"} · Target {x.target || "—"} · Duration{" "}
-                  {x.duration || "—"}
+                  {abilityPresentation("magic", x).parameters}
                 </p>
-                <Rule entry={x} />
+                <Rule
+                  entry={{
+                    ...x,
+                    text: abilityPresentation("magic", x).description,
+                  }}
+                />
               </Details>
               <Legacy entry={x} />
               {gmCantBook(R) && x.category === "Arcane" && (
@@ -1949,7 +1950,10 @@ export function EquipmentMagic() {
                 />
               )}
             </div>
-            <Remove entryKey={x.contentId} />
+            <div className="gm-ability-controls">
+              <DescriptionToggle kind="magic" entry={x} />
+              <Remove entryKey={x.contentId} />
+            </div>
           </div>
         ))}
       </section>

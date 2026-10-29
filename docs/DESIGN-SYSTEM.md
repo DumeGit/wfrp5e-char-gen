@@ -60,6 +60,8 @@ Use native buttons for commands, links for routes, labelled fields and existing 
 
 Disclosure summaries contain only their toggle label and noninteractive metadata. Put source/Legacy buttons, ranks, Remove and Description switches beside/below them. Bestiary Description remains a 30×18px track inside a 44px label, with no On/Off text. Optional equipment and Species Skill rows support whole-label tapping. Species Skill selectors and reference buttons sit above the extended label target so they remain independently operable.
 
+Bestiary Skill/Talent batch pickers use native checkbox labels, expandable specialisation groups and fixed selection actions. Search preserves pending selections; adding commits one history action. Spell/prayer Description switches reuse the Trait/Talent control outside the disclosure. On phones, expanded magic rules use the full row width and controls wrap below.
+
 Dense controls may look small inside 44px targets. Preserve 8px separation for standalone neighbors, readable numeric padding and sibling geometry at 320px/enlarged text. Focus is dark brown on paper and light brass on oak. Hover exists only under `(hover:hover) and (pointer:fine)`; press/focus work independently. No moving rows or new continuous effects. Keep existing reduced-motion mastheads.
 
 Reference search stays lazy, keeps the same query/filter/list-position/chaining rules, and reuses reviewed dependent trapping filters. PDF tools stay lazy and exports keep their existing content/layout. Generated sheets never inherit screen paper textures. The single project footer stays compact.

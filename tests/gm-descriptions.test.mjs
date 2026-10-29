@@ -50,6 +50,110 @@ function withAbilities() {
   });
   return s;
 }
+function withMagic() {
+  const s = draft();
+  s.talents.push({
+    key: "gm-petty",
+    name: "Petty Magic",
+    ranks: 1,
+    origin: "GM",
+  });
+  s.traits.push({
+    key: "gm-miracles",
+    name: "Miracles",
+    value: "Sigmar",
+    ranks: 1,
+    origin: "GM",
+  });
+  s.spells = [
+    "core:spells:animal-friend",
+    "core:spells:beacon-of-righteous-virtue",
+  ];
+  return s;
+}
+
+test("spell and Miracle descriptions share output preferences without changing magic or parameters", () => {
+  const s = withMagic();
+  const r = calculateGM(data, R, s);
+  assert.deepEqual(r.issues, []);
+  const spell = r.spells[0],
+    miracle = r.spells[1];
+  const shown = abilityPresentation("magic", spell, s);
+  assert.ok(shown.description.length > 20);
+  assert.ok(shown.parameters.includes("Range"));
+  s.hiddenDescriptions = [descriptionKey("magic", spell, s)];
+  assert.doesNotThrow(() =>
+    validateGMDraft(data, R, JSON.parse(JSON.stringify(s))),
+  );
+  assert.deepEqual(calculateGM(data, R, s), r);
+  const hidden = abilityPresentation("magic", spell, s);
+  assert.equal(hidden.description, "");
+  assert.equal(hidden.name, shown.name);
+  assert.equal(hidden.parameters, shown.parameters);
+  assert.ok(!hidden.text.includes(shown.description));
+  assert.ok(abilityPresentation("magic", miracle, s).description.length);
+  const sheet = Object.fromEntries(sheetSections(r, s))["Magic & prayers"];
+  const card = Object.fromEntries(cardSections(r, s)).Magic;
+  assert.equal(sheet[0], hidden.text);
+  assert.ok(card.includes(hidden.text));
+  assert.ok(!card.includes(shown.description));
+  assert.ok(statBlock(r, s).includes(hidden.name));
+  const legacy = { ...s };
+  delete legacy.hiddenDescriptions;
+  const restored = validateGMDraft(data, R, legacy);
+  assert.equal(showsDescription("magic", spell, restored), true);
+});
+
+test("magic description switches affect measured and drawn cards and full PDF exports", async () => {
+  const shown = withMagic(),
+    r = calculateGM(data, R, shown);
+  const hidden = {
+    ...shown,
+    hiddenDescriptions: r.spells.map((x) => descriptionKey("magic", x, shown)),
+  };
+  const doc = await PDFLib.PDFDocument.create();
+  const font = await doc.embedFont(PDFLib.StandardFonts.Helvetica);
+  const bold = await doc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+  const geometry = printGeometry("flexible");
+  const plan = (s) =>
+    planRecordCard(
+      font,
+      bold,
+      { s, r, sections: cardSections(r, s) },
+      geometry.width,
+      geometry.height,
+      9.25,
+    );
+  const on = plan(shown),
+    off = plan(hidden);
+  assert.ok(on.heightNeeded > off.heightNeeded);
+  const text = off.commands
+    .filter((c) => c.kind === "text")
+    .flatMap((c) => c.lines.map((line) => line.map((run) => run.text).join("")))
+    .join(" ");
+  for (const spell of r.spells)
+    assert.ok(
+      !text.includes(abilityPresentation("magic", spell, shown).description),
+    );
+  const batch = await prepareGMPrint(PDFLib, [
+    { s: shown, r },
+    { s: hidden, r },
+  ]);
+  assert.deepEqual(batch.overflow, []);
+  assert.ok(
+    (await PDFLib.PDFDocument.load(await batch.bytes())).getPageCount(),
+  );
+  assert.ok(
+    (
+      await PDFLib.PDFDocument.load(await createGMPDF(PDFLib, r, shown))
+    ).getPageCount(),
+  );
+  assert.ok(
+    (
+      await PDFLib.PDFDocument.load(await createGMPDF(PDFLib, r, hidden))
+    ).getPageCount(),
+  );
+});
 
 test("legacy current-version drafts default descriptions to shown without changing the input", () => {
   const legacy = withAbilities();

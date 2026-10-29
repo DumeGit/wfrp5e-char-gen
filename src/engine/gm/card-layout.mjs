@@ -249,11 +249,19 @@ function measure(font, bold, { r, s, sections }, width, size) {
         }
         y += rowHeight;
       }
-    } else if (label === "Talents" || label === "Traits") {
-      for (const ability of label === "Talents" ? r.talents : r.traits)
+    } else if (["Talents", "Traits", "Magic"].includes(label)) {
+      for (const ability of label === "Talents"
+        ? r.talents
+        : label === "Traits"
+          ? r.traits
+          : r.spells)
         y += text(
           abilityPresentation(
-            label === "Talents" ? "talent" : "trait",
+            label === "Talents"
+              ? "talent"
+              : label === "Traits"
+                ? "trait"
+                : "magic",
             ability,
             s,
           ).runs,
