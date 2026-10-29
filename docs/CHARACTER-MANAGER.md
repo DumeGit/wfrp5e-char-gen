@@ -1,6 +1,8 @@
 # Character manager — Imperial field ledger
 
-29 October Impeccable implementation: compact menu navigation focuses the visible destination heading for Library, Play, Advance or Journal. Hidden mounted library content cannot receive that navigation focus. Condition entry puts Count/non-stacking status, notes and the manual-effects explanation before the optional **Condition rules** disclosure. The disclosure retains the complete canonical rule and source action; rule-load failures and Retry remain exposed. Recording and recovery stay manual.
+29 October rule help: Ability and status rows use ? beside a published rule name to open the shared book reader. Names, ranks/counts, citations, notes and edit actions remain visible. Rule-only rows have no description disclosure. Equipment/manual adjustment panels and sheet sections remain collapsible. Condition entry keeps recording fields and recovery ahead of its direct rule-help button; custom notes remain local.
+
+29 October Impeccable implementation: compact menu navigation focuses the visible destination heading for Library, Play, Advance or Journal. Hidden mounted library content cannot receive that navigation focus. Condition entry puts Count/non-stacking status, notes and the manual-effects explanation before the **?** rule-help action. The shared reader retains the complete canonical rule and source; rule-load failures and Retry remain exposed. Recording and recovery stay manual.
 
 ## Imperial Desk — 22 October 2026
 

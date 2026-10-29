@@ -100,11 +100,22 @@ test("Corpse Cart optional brazier changes actual descriptions and Disease is hi
     .getByRole("button", { name: "Balefire Brazier", exact: true })
     .click();
   const vigor = page.locator(".gm-entry").filter({
-    has: page.locator("summary").filter({ hasText: "Vigor Mortis" }),
+    has: page.getByRole("button", { name: "Read Vigor Mortis", exact: true }),
   });
-  await vigor.locator("summary").click();
-  await expect(vigor).toContainText("replaces its Necromancy casting benefit");
-  await expect(vigor).not.toContainText("+20");
+  await vigor
+    .getByRole("button", { name: "Read Vigor Mortis", exact: true })
+    .click();
+  const vigorReader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(vigorReader).toContainText(
+    "replaces its Necromancy casting benefit",
+  );
+  await expect(vigorReader).not.toContainText("+20");
+  await vigorReader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await page.getByRole("button", { name: "Disease", exact: true }).click();
   await expect(page.locator("#gm-feedback")).toContainText(
     "Set type for Disease",
@@ -199,8 +210,17 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   const technique = page
     .locator("#gm-magic .gm-entry")
     .filter({ hasText: "Flight of the Phoenix" });
-  await technique.locator("summary").click();
-  await expect(technique).toContainText("SL 1");
+  await technique
+    .getByRole("button", { name: "Read Flight of the Phoenix", exact: true })
+    .click();
+  const techniqueReader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(techniqueReader).toContainText("SL 1");
+  await techniqueReader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await expect(technique).toContainText("High Elf Guide");
   await noOverflow(page);
   await gmStep(page, "Starting profile");
@@ -302,8 +322,17 @@ test("Archives I reuses equipment and Youngblood with selective Legacy and indep
   await page.locator("#gm-picker-search").fill("Youngblood");
   const row = page.locator("#gm-picker-results .gm-bulk-choice").first();
   await expect(row).toContainText("Archives I · p. 78");
-  await row.locator("summary").click();
-  await expect(row.locator(".gm-bulk-legacy")).toContainText("per-rank");
+  await row
+    .getByRole("button", { name: "Read Youngblood adaptation", exact: true })
+    .click();
+  const legacyReader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(legacyReader).toContainText("per-rank");
+  await legacyReader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await page
     .getByRole("dialog")
     .getByRole("button", { name: "Close", exact: true })

@@ -31,12 +31,17 @@ test("core Conditions are selectable with source summaries, non-stacking counts 
   ]);
   await select.selectOption("Unconscious");
   await dialog
-    .getByText("Condition rules · Unconscious", { exact: true })
+    .getByRole("button", { name: "Read Unconscious", exact: true })
     .click();
-  await expect(dialog.getByText(/Helpless, unaware/)).toBeVisible();
-  await expect(
-    dialog.getByRole("button", { name: "Core Rulebook, p. 187", exact: true }),
-  ).toBeVisible();
+  const conditionReader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(conditionReader.getByText(/Helpless, unaware/)).toBeVisible();
+  await expect(conditionReader).toContainText("p. 187");
+  await conditionReader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await expect(dialog.getByLabel("Count", { exact: true })).toHaveCount(0);
   await dialog
     .getByRole("button", { name: "Record change", exact: true })
@@ -103,11 +108,14 @@ test("Condition entry exposes recording before rules and recovers failed summari
     .getByLabel("Condition", { exact: true })
     .selectOption("Bleeding");
   const count = dialog.getByLabel("Count", { exact: true });
-  const summary = dialog.getByText("Condition rules · Bleeding", {
+  const summary = dialog.getByRole("button", {
+    name: "Read Bleeding",
     exact: true,
   });
   await expect(count).toHaveValue("1");
-  await expect(summary.locator("..")).not.toHaveAttribute("open", "");
+  await expect(dialog.locator("details.manager-condition-rules")).toHaveCount(
+    0,
+  );
   expect((await count.boundingBox()).y).toBeLessThan(
     (await summary.boundingBox()).y,
   );
@@ -121,10 +129,9 @@ test("Condition entry exposes recording before rules and recovers failed summari
     path: info.outputPath("condition-entry-320-short.png"),
   });
   await summary.press("Enter");
-  await expect(summary.locator("..")).toHaveAttribute("open", "");
   await expect(
-    dialog.getByRole("button", { name: "Core Rulebook, p. 185", exact: true }),
-  ).toBeVisible();
+    page.getByRole("dialog", { name: "Search the books", exact: true }),
+  ).toContainText("p. 185");
   await page.setViewportSize({ width: 390, height: 640 });
   await page.screenshot({ path: info.outputPath("condition-rules-390.png") });
   await noOverflow(page);
@@ -176,15 +183,12 @@ test("status card records sourced Critical Wounds and mutations, recovery and cu
     .click();
   await saved(page);
   const status = page.locator("#manager-status");
-  await status
-    .locator(".manager-status-entry summary")
-    .filter({ hasText: "Ear Bash" })
-    .click();
+
   await expect(
     status.getByText("Healer reviewed this injury", { exact: true }),
   ).toBeVisible();
   await status
-    .getByRole("button", { name: /^Core(?: Rulebook)?, p\. 173$/ })
+    .getByRole("button", { name: "Read Ear Bash", exact: true })
     .click();
   await expect(
     page.getByRole("region", { name: "Ear Bash", exact: true }),
@@ -230,10 +234,7 @@ test("status card records sourced Critical Wounds and mutations, recovery and cu
   await expect(
     status.getByText("Animalistic Legs", { exact: true }),
   ).toBeVisible();
-  await status
-    .locator(".manager-status-entry summary")
-    .filter({ hasText: "Animalistic Legs" })
-    .click();
+
   await status
     .getByRole("button", { name: "Edit Animalistic Legs", exact: true })
     .click();
@@ -394,10 +395,7 @@ test("imported mutations appear once in Status and retain their original data wh
   await expect(
     status.getByText("Animalistic Legs", { exact: true }),
   ).toHaveCount(1);
-  await status
-    .locator("summary")
-    .filter({ hasText: "Animalistic Legs" })
-    .click();
+
   await status
     .getByRole("button", { name: "Edit Animalistic Legs", exact: true })
     .click();
@@ -1300,16 +1298,16 @@ test("money uses explicit denominations and equipment quantity updates its price
   ).toBeVisible();
 });
 
-test("ability details survive navigation while search and XP actions stay in Advance @manager", async ({
+test("ability editing survives navigation while search and XP actions stay in Advance @manager", async ({
   page,
 }) => {
   await open(page);
   await importData(page, await pcDraft({ complete: true }));
   await section(page, "Abilities");
   const row = page.locator(".manager-entry-row").filter({
-    has: page.locator("summary strong").getByText("Doomed", { exact: true }),
+    has: page.getByRole("button", { name: "Read Doomed", exact: true }),
   });
-  await row.locator("summary").first().click();
+  await row.locator(".manager-adjust-entry > summary").first().click();
   await section(page, "Advance");
   await page
     .getByRole("group", { name: "Advancement categories" })

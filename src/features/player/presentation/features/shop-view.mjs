@@ -1,3 +1,5 @@
+import { RuleName } from "../../../../components/RuleReference";
+import { entryReference } from "../../../../engine/entry-reference.mjs";
 import {
   element,
   fragment,
@@ -296,25 +298,9 @@ export function createFeature(getContext, setContext) {
                         element(
                           "div",
                           {},
-                          x.text
-                            ? element(
-                                "details",
-                                {
-                                  class: "market-profile",
-                                  "data-detail-key": [
-                                    "equipment:",
-                                    esc(x.id),
-                                  ].join(""),
-                                },
-                                element(
-                                  "summary",
-                                  {},
-                                  element("strong", {}, esc(x.name)),
-                                ),
-                                element("p", { class: "small" }, esc(x.text)),
-                                "\n",
-                              )
-                            : element("strong", {}, esc(x.name)),
+                          element(RuleName, {
+                            reference: entryReference("gear", x),
+                          }),
                           element(
                             "small",
                             {},

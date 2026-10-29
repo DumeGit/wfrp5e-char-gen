@@ -1,3 +1,5 @@
+import { RuleName } from "../../../../components/RuleReference";
+import { entryReference } from "../../../../engine/entry-reference.mjs";
 import {
   element,
   fragment,
@@ -959,22 +961,15 @@ export function createFeature(getContext, setContext) {
         joinNodes(
           speciesMagicReferences(R, s, result().derived.talents).map((x) =>
             element(
-              "details",
-              {
-                "data-detail-key": detailKey(
-                  "creation-views:magicSection:0",
-                  x,
-                ),
-                class: "section-gap",
-              },
-              element(
-                "summary",
-                {},
-                "Ogre magic reference · ",
-                esc(sourceLabel(R, x)),
-              ),
-              element("p", {}, esc(x.text)),
-              "\n",
+              "div",
+              { class: "section-gap" },
+              element(RuleName, {
+                reference: entryReference(undefined, {
+                  ...x,
+                  name: x.name || "Ogre magic",
+                }),
+              }),
+              element("small", {}, esc(sourceLabel(R, x))),
             ),
           ),
           "",

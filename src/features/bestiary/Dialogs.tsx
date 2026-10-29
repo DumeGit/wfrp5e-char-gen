@@ -17,6 +17,7 @@ import {
   searchPickerEntries,
 } from "../../engine/gm/pickers.mjs";
 import { traitSummary } from "../../engine/gm/trait-summaries.mjs";
+import { requestReference } from "../../services/content";
 import { sourceLabel } from "../../engine/sources.mjs";
 import {
   filterEquipment,
@@ -222,10 +223,23 @@ function BulkPickerDialog() {
           </span>
         </label>
         {entry.adaptation && (
-          <details className="gm-bulk-legacy">
-            <summary>Legacy</summary>
-            <p>{entry.adaptation}</p>
-          </details>
+          <Button
+            className="legacy-tag rule-reference"
+            aria-label={`Read ${entry.name} adaptation`}
+            onClick={() =>
+              requestReference({
+                name: `${entry.name} · Legacy`,
+                book: (entry.adaptationSource || entry.source).book,
+                quote: {
+                  text: entry.adaptation,
+                  source: entry.adaptationSource || entry.source,
+                  label: "Legacy adaptation",
+                },
+              })
+            }
+          >
+            Legacy
+          </Button>
         )}
       </div>
     );

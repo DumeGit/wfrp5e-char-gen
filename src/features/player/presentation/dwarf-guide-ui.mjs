@@ -1,3 +1,5 @@
+import { RuleName } from "../../../components/RuleReference";
+import { entryReference } from "../../../engine/entry-reference.mjs";
 import {
   element,
   fragment,
@@ -350,21 +352,17 @@ export function runePanel(R, s) {
     joinNodes(
       runes.map((x) =>
         element(
-          "details",
-          { "data-detail-key": detailKey("dwarf-guide-ui:runePanel:0", x) },
+          "div",
+          { class: "rule-entry" },
           element(
-            "summary",
-            {},
-            esc(x.name),
-            " · ",
-            esc(x.form),
-            " ",
-            esc(sourceLabel(R, x)),
+            RuleName,
+            { reference: entryReference("magic", x) },
+            fragment(esc(x.name), " · ", esc(x.form)),
           ),
-          element("p", {}, esc(x.text)),
-          "\n",
-          element("p", { class: "small muted" }, esc(x.conversion)),
-          "\n",
+          element("small", {}, esc(sourceLabel(R, x))),
+          x.conversion
+            ? element("p", { class: "small muted" }, esc(x.conversion))
+            : "",
         ),
       ),
       "",

@@ -1,4 +1,6 @@
 "use client";
+import { RuleName } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { COMPACT_SHELL_QUERY } from "../../engine/responsive.mjs";
 
 import {
@@ -650,21 +652,27 @@ function MarijanSession({
             ) : x.custom ? (
               entryField("Custom name", "name")
             ) : (
-              <Action
-                action="inspect"
-                className="mm-name-button"
-                attributes={attributes}
-                onClick={() =>
-                  openDialog({
-                    type: "inspect",
-                    title: x.name,
-                    group,
-                    key: x.key,
-                  })
-                }
+              <RuleName
+                reference={entryReference(
+                  (
+                    {
+                      skills: "skill",
+                      talents: "talent",
+                      gear: "gear",
+                      magic:
+                        x.kind === "cant"
+                          ? "cant"
+                          : x.kind === "rune"
+                            ? "magic"
+                            : "spell",
+                      extras: x.kind,
+                    } as Record<string, string>
+                  )[group],
+                  x,
+                )}
               >
                 {x.name}
-              </Action>
+              </RuleName>
             )}
             {x.adaptation && (
               <Action
@@ -744,13 +752,7 @@ function MarijanSession({
             aria-label={`Edit ${x.name} details`}
             title="Details & overrides"
           >
-            <svg
-              className="mm-entry-chevron"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
+            Edit
           </summary>
           <div className="mm-entry-detail">
             {customSkill && (
@@ -828,14 +830,7 @@ function MarijanSession({
                 ))}
               </div>
             )}
-            {!x.custom && (
-              <p className="small">
-                {entryDescription(catalogue, {
-                  ...x,
-                  descriptionOverride: false,
-                })}
-              </p>
-            )}
+
             {entryField(
               x.custom ? "Description" : "Personal description (optional)",
               "text",

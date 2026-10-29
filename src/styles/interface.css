@@ -772,3 +772,30 @@ input[type="number"] {
     padding-inline: 0;
   }
 }
+/* Rule names stay separate from selection and editing controls. */
+.rule-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.rule-name-row > strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.rule-reference {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 4px 8px;
+  font: inherit;
+  font-weight: 700;
+}
+@media (pointer: coarse), (max-width: 760px) {
+  .rule-reference {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

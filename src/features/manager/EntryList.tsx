@@ -1,5 +1,6 @@
+import { RuleReference } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { Field, Select } from "../marijan/fields";
-import { requestReference } from "../../services/content";
 import { score } from "../../engine/controls.mjs";
 import { addEntry } from "../../engine/marijan/model.mjs";
 import {
@@ -136,8 +137,8 @@ export function EntryList({
                     </span>
                   </div>
                 ) : (
-                  <details className="manager-entry">
-                    <summary>
+                  <div className="manager-entry">
+                    <div className="manager-entry-heading">
                       <strong>
                         <span className="manager-entry-name" title={x.name}>
                           {x.name}
@@ -169,25 +170,41 @@ export function EntryList({
                             ? `×${score(x.amount)}`
                             : x.kind}
                       </span>
-                    </summary>
+                      {!x.custom && (
+                        <RuleReference
+                          reference={entryReference(
+                            (
+                              {
+                                talents: "talent",
+                                gear: "gear",
+                                magic:
+                                  x.kind === "cant"
+                                    ? "cant"
+                                    : x.kind === "rune"
+                                      ? "magic"
+                                      : "spell",
+                                extras: x.kind,
+                              } as Record<string, string>
+                            )[group],
+                            x,
+                          )}
+                        />
+                      )}
+                    </div>
                     <div className="manager-entry-content">
-                      <p>
-                        {entryDescription(catalogue, x) ||
-                          "No description recorded."}
-                      </p>
+                      {x.custom && (
+                        <p>
+                          {entryDescription(catalogue, x) ||
+                            "No description recorded."}
+                        </p>
+                      )}
+                      {x.descriptionNote && !x.custom && (
+                        <p>{x.descriptionNote}</p>
+                      )}
                       {x.source && (
-                        <button
-                          className="manager-text"
-                          type="button"
-                          onClick={() =>
-                            requestReference({
-                              name: x.name,
-                              book: x.source.book,
-                            })
-                          }
-                        >
+                        <small className="manager-meta">
                           {entrySource(catalogue, x)}
-                        </button>
+                        </small>
                       )}
                       {x.adaptation && (
                         <p className="manager-notice">
@@ -208,54 +225,62 @@ export function EntryList({
                         </p>
                       )}
                       {!compact && group === "gear" && (
-                        <div className="manager-form manager-gear-editor">
-                          <p className="manager-meta">
-                            Enc{" "}
-                            {x.enc === null || x.enc === undefined
-                              ? "Unknown"
-                              : score(x.enc)}{" "}
-                            per item
-                            {x.kind === "weapon"
-                              ? ` · Damage ${x.damage || "—"} · ${x.qualities || "No listed properties"}`
-                              : x.kind === "armour"
-                                ? ` · AP ${score(x.ap)} · ${x.locations}`
-                                : ""}
-                          </p>
-                          <Select
-                            id={`state-${x.key}`}
-                            label="Equipment placement"
-                            value={x.state}
-                            options={["equipped", "worn", "carried", "stored"]}
-                            onValue={(value) =>
-                              edit(`Moved ${x.name}: ${value}`, (r) =>
-                                withRow(r, x, (row) => {
-                                  row.state = value;
-                                }),
-                              )
-                            }
-                          />
-                          <Field
-                            id={`amount-${x.key}`}
-                            label="Quantity"
-                            numeric
-                            value={x.amount}
-                            onValue={(value) =>
-                              edit(`Adjusted ${x.name}`, (r) => {
-                                if (!Number.isSafeInteger(value) || value < 0)
-                                  throw Error(
-                                    "Enter a non-negative whole number.",
-                                  );
-                                withRow(r, x, (row) => {
-                                  row.amount = value;
-                                });
-                              })
-                            }
-                          />
-                          <p className="manager-meta">
-                            Packing is automatic. Stored belongings and coin
-                            weight are excluded from load.
-                          </p>
-                        </div>
+                        <details className="manager-adjust-entry">
+                          <summary>Edit equipment</summary>
+                          <div className="manager-form manager-gear-editor">
+                            <p className="manager-meta">
+                              Enc{" "}
+                              {x.enc === null || x.enc === undefined
+                                ? "Unknown"
+                                : score(x.enc)}{" "}
+                              per item
+                              {x.kind === "weapon"
+                                ? ` · Damage ${x.damage || "—"} · ${x.qualities || "No listed properties"}`
+                                : x.kind === "armour"
+                                  ? ` · AP ${score(x.ap)} · ${x.locations}`
+                                  : ""}
+                            </p>
+                            <Select
+                              id={`state-${x.key}`}
+                              label="Equipment placement"
+                              value={x.state}
+                              options={[
+                                "equipped",
+                                "worn",
+                                "carried",
+                                "stored",
+                              ]}
+                              onValue={(value) =>
+                                edit(`Moved ${x.name}: ${value}`, (r) =>
+                                  withRow(r, x, (row) => {
+                                    row.state = value;
+                                  }),
+                                )
+                              }
+                            />
+                            <Field
+                              id={`amount-${x.key}`}
+                              label="Quantity"
+                              numeric
+                              value={x.amount}
+                              onValue={(value) =>
+                                edit(`Adjusted ${x.name}`, (r) => {
+                                  if (!Number.isSafeInteger(value) || value < 0)
+                                    throw Error(
+                                      "Enter a non-negative whole number.",
+                                    );
+                                  withRow(r, x, (row) => {
+                                    row.amount = value;
+                                  });
+                                })
+                              }
+                            />
+                            <p className="manager-meta">
+                              Packing is automatic. Stored belongings and coin
+                              weight are excluded from load.
+                            </p>
+                          </div>
+                        </details>
                       )}
                       {!compact && group !== "gear" && (
                         <>
@@ -387,7 +412,7 @@ export function EntryList({
                         </button>
                       )}
                     </div>
-                  </details>
+                  </div>
                 )}
               </div>
             </Fragment>

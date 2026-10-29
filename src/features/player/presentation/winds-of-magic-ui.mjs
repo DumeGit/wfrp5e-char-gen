@@ -1,3 +1,5 @@
+import { RuleName } from "../../../components/RuleReference";
+import { entryReference } from "../../../engine/entry-reference.mjs";
 import {
   element,
   fragment,
@@ -172,28 +174,25 @@ export function psychicSkillPanel(R, s) {
   return !windsOfMagic(R)
     ? ""
     : element(
-        "details",
+        "section",
         {
           "data-detail-key": detailKey("winds-of-magic-ui:psychicSkillPanel:0"),
           class: "section-gap",
         },
-        element(
-          "summary",
-          {},
-          "Augury & Psychometry · Winds of Magic pp. 44–48",
-        ),
+        element("h3", {}, "Augury & Psychometry · Winds of Magic pp. 44–48"),
         joinNodes(
           R.skills
             .filter((x) => ["Augury", "Psychometry"].includes(x.name))
             .map((x) =>
               element(
-                "p",
-                {},
-                element("strong", {}, x.name, " (", x.char, ")"),
-                " · p. ",
-                x.page,
-                element("br", {}),
-                esc(x.text),
+                "div",
+                { class: "rule-entry" },
+                element(
+                  RuleName,
+                  { reference: entryReference("skill", x) },
+                  fragment(x.name, " (", x.char, ")"),
+                ),
+                sourceButton(R, x),
               ),
             ),
           "",
@@ -312,20 +311,14 @@ export function ritualShop(R, s, creationErrors = []) {
             "div",
             { class: "xp-row" },
             element(
-              "details",
-              {
-                "data-detail-key": detailKey(
-                  "winds-of-magic-ui:ritualShop:0",
-                  x,
-                ),
-              },
-              referenceSummary(
-                esc(x.name),
+              "div",
+              { class: "rule-entry" },
+              element(RuleName, { reference: entryReference("spell", x) }),
+              element(
+                "p",
+                { class: "small" },
                 fragment(legacyTag(R, x), " ", sourceButton(R, x)),
-                { legacy: Boolean(legacyTag(R, x)) },
               ),
-              element("p", {}, esc(x.text)),
-              "\n",
             ),
             "\n",
             element(

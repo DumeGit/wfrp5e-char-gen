@@ -1,3 +1,5 @@
+import { RuleName } from "../../../components/RuleReference";
+import { entryReference } from "../../../engine/entry-reference.mjs";
 import {
   element,
   fragment,
@@ -210,23 +212,12 @@ export function cantPanel(R, s) {
                       ),
                       chosen
                         ? element(
-                            "details",
-                            {
-                              "data-detail-key": detailKey(
-                                "archives-iii-ui:cantPanel:0",
-                                chosen,
-                              ),
-                              class: "spell-description",
-                            },
-                            element(
-                              "summary",
-                              {},
-                              esc(chosen.name),
-                              " ",
-                              esc(sourceLabel(R, chosen)),
-                            ),
-                            element("p", {}, esc(chosen.text)),
-                            "\n",
+                            "div",
+                            { class: "spell-description" },
+                            element(RuleName, {
+                              reference: entryReference("cant", chosen),
+                            }),
+                            element("small", {}, esc(sourceLabel(R, chosen))),
                           )
                         : "",
                     );

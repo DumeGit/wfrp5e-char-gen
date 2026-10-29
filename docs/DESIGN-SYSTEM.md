@@ -26,6 +26,8 @@ Mobile bottom-bar Undo/Redo targets are 64px wide and 44px high, separated by 8p
 
 Bestiary derived values show Wounds and Toughness Bonus as read-only totals below Size and the optional Wounds override. Changed builds calculate TB automatically; no TB source selector or manual TB field remains. Tiny keeps its focused manual-Wounds recovery.
 
+Rule-only descriptions open through the shared `RuleReference` ? button beside a name (`RuleName`); no per-rule expand arrow. Use a 32px desktop control and at least 44px on phones/coarse pointers, with the existing button skin, visible focus and a specific Read-name label. Keep native section/specialisation groups and actual editing panels collapsible. Names/parameters/ranks, sources, Legacy information and output Description switches remain distinct. The shared reader restores the opener and can show a reviewed source-only quote without publishing a new search result. No new animation.
+
 ## Materials and typography
 
 Every mode uses charcoal oak `#2b251f`, recess `#201c17`, parchment `#eddfbf`, raised paper `#f7edda`, ink `#352b20`, muted ink `#604b33`, brass `#c4a36b` and line `#c6b08b`. Mode primary actions remain Player oxblood, Bestiary cobalt, Marijan crimson and manager olive. Errors/success/warnings/Legacy retain separate semantic roles. Historical `--color-leather*` aliases mean shared dark chrome; they do not select a leather material.
@@ -64,7 +66,7 @@ Use native buttons for commands, links for routes, labelled fields and existing 
 
 Disclosure summaries contain only their toggle label and noninteractive metadata. Put source/Legacy buttons, ranks, Remove and Description switches beside/below them. Bestiary Description remains a 30×18px track inside a 44px label, with no On/Off text. Optional equipment and Species Skill rows support whole-label tapping. Species Skill selectors and reference buttons sit above the extended label target so they remain independently operable.
 
-Bestiary Skill/Talent/Trait batch pickers use native checkbox labels and fixed selection actions. Skills/Talents retain expandable specialisation groups; Traits retain individual entries, concise rule summaries and parameter editing after addition. Search preserves pending selections; adding commits one history action. Spell/prayer Description switches reuse the Trait/Talent control outside the disclosure. On phones, expanded magic rules use the full row width and controls wrap below.
+Bestiary Skill/Talent/Trait batch pickers use native checkbox labels and fixed selection actions. Skills/Talents retain expandable specialisation groups; Traits retain individual entries, concise rule summaries and parameter editing after addition. Search preserves pending selections; adding commits one history action. Spell/prayer Description switches reuse the Trait/Talent control beside the rule name/help. On phones, expanded magic rules use the full row width and controls wrap below.
 
 Dense controls may look small inside 44px targets. Preserve 8px separation for standalone neighbors, readable numeric padding and sibling geometry at 320px/enlarged text. Focus is dark brown on paper and light brass on oak. Hover exists only under `(hover:hover) and (pointer:fine)`; press/focus work independently. No moving rows or new continuous effects. Keep existing reduced-motion mastheads.
 

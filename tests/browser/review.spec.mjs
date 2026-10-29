@@ -68,12 +68,15 @@ test("Player review is a compact character sheet with working details @pc @mobil
   await expect(sheet.getByRole("checkbox")).not.toBeChecked();
   await sheet.getByRole("checkbox").check();
   await sheet.getByText("PDF options", { exact: true }).click();
-  await sheet.locator(".talent-description").first().locator("summary").click();
-  await expect(sheet.locator(".talent-description").first()).toHaveAttribute(
-    "open",
-    "",
-  );
-  await sheet.locator(".talent-description").first().locator("summary").click();
+  await sheet.locator(".talent-description .rule-reference").first().click();
+  const reader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(reader).toBeVisible();
+  await reader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await sheet
     .getByText("Background & character notes", { exact: true })
     .click();

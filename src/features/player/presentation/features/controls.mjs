@@ -6,7 +6,6 @@ import {
   combine,
   interpolate,
 } from "../../../../components/react-elements";
-import { detailKey } from "../../../../engine/disclosures.mjs";
 import { button as sharedButton } from "../controls.mjs";
 import { runeChoiceDescription } from "../dwarf-guide-ui.mjs";
 import * as M from "../../../../engine/rules.mjs";
@@ -21,7 +20,8 @@ import {
 } from "../../../../engine/legacy-character.mjs";
 import { talentCalculation } from "../../../../engine/workspace.mjs";
 import { creationSpecies } from "../../../../engine/origins.mjs";
-import { referenceSummary } from "../source-controls.mjs";
+import { RuleName } from "../../../../components/RuleReference";
+import { entryReference } from "../../../../engine/entry-reference.mjs";
 
 // Live context keeps rendering state outside the saved character. Unusual book
 // mechanics remain explicit handlers rather than generic configuration rules.
@@ -165,30 +165,23 @@ export function createFeature(getContext, setContext) {
       context = legacyOption(R, s, "talent", name),
       sources = [...context.legacySources, ...legacySources(R, quote)];
     return element(
-      "details",
-      {
-        class: "talent-description",
-        "data-detail-key": ["talent:", esc(name)].join(""),
-      },
+      "div",
+      { class: "talent-description" },
       element(
-        "summary",
-        {},
-        element(
-          "span",
-          {},
-          esc(name),
-          sources.length
-            ? element("span", { class: "legacy-label" }, " · Legacy")
-            : "",
-        ),
-        metadata,
+        RuleName,
+        { reference: entryReference("talent", { ...t, name }) },
+        fragment(esc(name), metadata),
       ),
       element(
         "p",
         { class: "small talent-reference" },
         ref({ ...t, legacySources: sources }),
       ),
-      talentDetailsBody(name),
+      element(
+        "p",
+        { class: "calculation-status" },
+        esc(talentCalculation(R, name)),
+      ),
     );
   }
 
@@ -381,15 +374,25 @@ export function createFeature(getContext, setContext) {
 
     x = legacyMagic(R, s, x);
     return element(
-      "details",
-      {
-        "data-detail-key": detailKey("controls:spellDescription:0", x),
-        class: "spell-description",
-      },
-      referenceSummary(
+      "div",
+      { class: "spell-description" },
+      element(
+        RuleName,
+        { reference: entryReference("spell", x) },
         fragment(esc(x.displayName || x.name), " · ", esc(x.category)),
-        ref(x),
-        { legacy: legacySources(R, x).length > 0 },
+      ),
+      element("p", { class: "small" }, ref(x)),
+      element(
+        "p",
+        { class: "small" },
+        [
+          x.cn !== undefined ? `CN ${x.cn}` : "",
+          x.range ? `Range ${x.range}` : "",
+          x.target ? `Target ${x.target}` : "",
+          x.duration ? `Duration ${x.duration}` : "",
+        ]
+          .filter(Boolean)
+          .join(" · "),
       ),
       x.grantSource
         ? element(
@@ -402,12 +405,12 @@ export function createFeature(getContext, setContext) {
             ". Reimagined for this patron using the core Miracle’s effects.",
           )
         : "",
-      spellDetailsBody(x),
       x.conversion
         ? element("p", { class: "small muted" }, esc(x.conversion))
         : "",
     );
   }
+
   return {
     selectionEntry,
     select,

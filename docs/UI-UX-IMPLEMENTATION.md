@@ -1,5 +1,7 @@
 # Shared UI/UX implementation — 10 October 2026
 
+29 October rule-help refinement: `RuleReference`/`RuleName` provide the shared labelled ? control; `entryReference` preserves exact source identities and reviewed fallback text. Rule-only description disclosures are replaced across all four workspaces, including Player Talents/magic/shop/supplement references and Bestiary abilities. Grouping and editing disclosures remain native. Reading is immediate, restores focus and never changes character/history or pending batch selections. Phone help targets are at least 44px; existing Imperial Desk tokens/fonts are reused with no motion.
+
 ## Imperial Desk — 22 October 2026
 
 All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.

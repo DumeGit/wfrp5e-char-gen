@@ -82,8 +82,17 @@ test("spell and Miracle descriptions toggle independently and survive JSON with 
   await page.getByRole("button", { name: "Redo", exact: true }).click();
   await expect(spellToggle).not.toBeChecked();
   const row = page.locator(".gm-ability-entry").filter({ has: spellToggle });
-  await row.locator("summary").click();
-  await expect(row).toContainText(body(spell));
+  await row
+    .getByRole("button", { name: "Read Animal Friend", exact: true })
+    .click();
+  const reader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(reader).toContainText(body(spell));
+  await reader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await noOverflow(page);
   await row.scrollIntoViewIfNeeded();
   await page.screenshot({

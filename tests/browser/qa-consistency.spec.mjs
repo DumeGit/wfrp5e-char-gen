@@ -59,13 +59,12 @@ test("Source disclosures have separate keyboard actions and Review names stay in
   await expect(page.getByRole("contentinfo")).toHaveCount(1);
   await pcStep(page, "Talents");
   const description = page.locator(".talent-description").first();
-  await description.locator("summary").click();
   const source = description.locator(".source-button").first();
   await source.focus();
   await page.keyboard.press("Enter");
   await expect(page.locator("#creator-dialog")).toBeVisible();
   await page.getByRole("button", { name: "Close dialog", exact: true }).click();
-  await expect(description).toHaveAttribute("open", "");
+  await expect(description.locator("summary")).toHaveCount(0);
   await pcStep(page, "Review");
   await expect(page.locator(".review-character-name")).toHaveText(
     "Browser Test Soldier",

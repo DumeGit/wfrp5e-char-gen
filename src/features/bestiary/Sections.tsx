@@ -1,6 +1,8 @@
 "use client";
 import { Fragment, useRef, useState } from "react";
 import { WeaponWorkbench } from "./WeaponWorkbench";
+import { RuleName, RuleReference } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { KEYS, base, talentInfo } from "../../engine/rules.mjs";
 import {
   SIZES,
@@ -33,7 +35,6 @@ import { LootSection } from "./Loot";
 import { gmCantBook } from "../../engine/gm/cants.mjs";
 import { abilityPresentation } from "../../engine/gm/ability-presentation.mjs";
 import { sourceLabel } from "../../engine/sources.mjs";
-import { requestReference } from "../../services/content";
 import {
   Check,
   DescriptionToggle,
@@ -1195,25 +1196,18 @@ function Traits() {
         Creature Traits
       </SectionHeading>
       <p className="gm-small">
-        Mechanical summaries for the creature’s actual Traits. Consult the cited
-        book for full rules; situational effects remain references for play.
-        Description controls the text shown in the stat block and PDFs.
+        Use ? beside a name to read its rule. Description controls the text
+        shown in the stat block and PDFs.
       </p>
       <div className="gm-entry-list">
         {r.traits.map((t: any) => (
           <div className="gm-entry gm-ability-entry" key={t.key}>
             <div className="gm-ability-content">
-              <Details
-                id={t.key}
-                title={
-                  <>
-                    {t.name} {t.value && <small>({t.value})</small>}{" "}
-                    <span className="gm-origin">{t.origin}</span>
-                  </>
-                }
-              >
-                <Rule entry={{ ...t, text: t.summary }} />
-              </Details>
+              <RuleName reference={entryReference("trait", t)}>
+                {t.name} {t.value && <small>({t.value})</small>}{" "}
+                <span className="gm-origin">{t.origin}</span>
+              </RuleName>
+              <small className="gm-small">{sourceLabel(R, t)}</small>
               <Legacy entry={t} />
               {(t.origin === "GM" ||
                 t.requiresParameter ||
@@ -1348,9 +1342,10 @@ function Traits() {
           </div>
           {r.mutations.map((m: any) => (
             <div className="gm-entry" key={m.id}>
-              <Details id={m.id} title={m.name}>
-                <Rule entry={m} />
-              </Details>
+              <div>
+                <RuleName reference={entryReference("mutation", m)} />
+                <Metadata entry={m} />
+              </div>
               <Remove entryKey={m.id} />
             </div>
           ))}
@@ -1429,12 +1424,7 @@ function SkillsTalents() {
                 }, `skill:${t.name}`)
               }
             />
-            <Button
-              aria-label={`Read ${t.name}`}
-              onClick={() => requestReference({ kind: "skill", name: t.name })}
-            >
-              ?
-            </Button>
+            <RuleReference reference={{ kind: "skill", name: t.name }} />
             <Remove entryKey={t.key || `skill:${t.name}`} />
           </div>
         ))}
@@ -1498,33 +1488,25 @@ function SkillsTalents() {
         Talents
       </SectionHeading>
       <p className="gm-small">
-        Description controls the text shown in the stat block and PDFs. Open an
-        entry to read its rule.
+        Description controls the text shown in the stat block and PDFs. Use ?
+        beside a name to read its rule.
       </p>
       {r.talents.map((t: any) => (
         <div className="gm-entry gm-ability-entry" key={t.key}>
           <div className="gm-ability-content">
-            <Details
-              id={t.key}
-              title={
-                <>
-                  {t.name}
-                  {t.ranks > 1 ? ` ×${t.ranks}` : ""}{" "}
-                  <span className="gm-origin">{t.origin}</span>
-                </>
-              }
+            <RuleName
+              reference={entryReference(
+                "talent",
+                talentInfo(R, t.name) || { ...t, source: r.profile.source },
+              )}
             >
-              <Rule
-                entry={
-                  talentInfo(R, t.name) || {
-                    name: t.name,
-                    text: "Printed Talent; see source.",
-                    source: r.profile.source,
-                  }
-                }
-                kind="talent"
-              />
-            </Details>
+              {t.name}
+              {t.ranks > 1 ? ` ×${t.ranks}` : ""}{" "}
+              <span className="gm-origin">{t.origin}</span>
+            </RuleName>
+            <small className="gm-small">
+              {sourceLabel(R, talentInfo(R, t.name) || r.profile)}
+            </small>
             <Legacy entry={{ ...talentInfo(R, t.name), ...t }} />
             {t.origin === "GM" && base(t.name) === "Impassioned Zeal" && (
               <Field
@@ -1883,13 +1865,14 @@ export function EquipmentMagic() {
             : ""}
         </p>
         {r.runes?.map((x: any) => (
-          <Details
-            key={x.contentId}
-            id={`rune:${x.contentId}`}
-            title={`${x.name} (${x.form})`}
-          >
-            <Rule entry={x} />
-          </Details>
+          <div key={x.contentId} className="gm-entry">
+            <div>
+              <RuleName reference={entryReference("magic", x)}>
+                {x.name} ({x.form})
+              </RuleName>
+              <Metadata entry={x} />
+            </div>
+          </div>
         ))}
         {r.spells.map((x: any, i: number) => (
           <div
@@ -1897,24 +1880,13 @@ export function EquipmentMagic() {
             key={x.contentId}
           >
             <div className="gm-ability-content">
-              <Details
-                id={x.contentId}
-                title={
-                  <>
-                    {x.name} <small>{x.category}</small>
-                  </>
-                }
-              >
-                <p className="gm-small">
-                  {abilityPresentation("magic", x).parameters}
-                </p>
-                <Rule
-                  entry={{
-                    ...x,
-                    text: abilityPresentation("magic", x).description,
-                  }}
-                />
-              </Details>
+              <RuleName reference={entryReference("spell", x)}>
+                {x.name} <small>{x.category}</small>
+              </RuleName>
+              <p className="gm-small">
+                {abilityPresentation("magic", x).parameters}
+              </p>
+              <small className="gm-small">{sourceLabel(R, x)}</small>
               <Legacy entry={x} />
               {gmCantBook(R) && x.category === "Arcane" && (
                 <Select
@@ -2006,13 +1978,14 @@ export function EquipmentMagic() {
                 </p>
               )}
               {r.cants.map((x: any) => (
-                <Details
-                  key={x.id}
-                  id={`cant:${x.id}`}
-                  title={`${x.name} (${x.lore})`}
-                >
-                  <Rule entry={x} />
-                </Details>
+                <div key={x.id} className="gm-entry">
+                  <div>
+                    <RuleName reference={entryReference("cant", x)}>
+                      {x.name} ({x.lore})
+                    </RuleName>
+                    <Metadata entry={x} />
+                  </div>
+                </div>
               ))}
             </>
           )}

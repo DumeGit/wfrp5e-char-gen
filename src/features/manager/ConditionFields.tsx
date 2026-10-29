@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Field, Select } from "../marijan/fields";
-import { requestReference } from "../../services/content";
+import { RuleName } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { loadRuleReferences } from "../../engine/rule-references.mjs";
 
 // Core Fifth Edition pp. 185–187 explicitly mark these four as non-stacking.
@@ -105,30 +106,9 @@ export function ConditionFields({
         </div>
       )}
       {selected && !custom && (
-        <details className="manager-condition-rules">
-          <summary>Condition rules · {selected.name}</summary>
-          <div className="manager-catalogue-preview">
-            {selected.text ? (
-              <p>{selected.text}</p>
-            ) : (
-              !failure && <p role="status">Loading Condition summary…</p>
-            )}
-            <button
-              className="quiet"
-              type="button"
-              onClick={() =>
-                requestReference({
-                  kind: "condition",
-                  name: selected.name,
-                  book: "core",
-                  id: selected.id,
-                })
-              }
-            >
-              Core Rulebook, p. {selected.page}
-            </button>
-          </div>
-        </details>
+        <div className="manager-condition-rules">
+          <RuleName reference={entryReference("condition", selected)} />
+        </div>
       )}
     </>
   );

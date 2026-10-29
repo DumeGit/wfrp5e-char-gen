@@ -1,3 +1,5 @@
+import { RuleName } from "../../../components/RuleReference";
+import { entryReference } from "../../../engine/entry-reference.mjs";
 import {
   element,
   fragment,
@@ -242,20 +244,15 @@ export function astrologyPanel(R, s, { select, button, options }) {
                     )
                   : "",
                 element(
-                  "details",
-                  {
-                    "data-detail-key": detailKey(
-                      "archives-ui:astrologyPanel:0",
-                    ),
-                  },
-                  element(
-                    "summary",
-                    {},
-                    "Your sign’s description · Archives II p. ",
-                    sign.profilePage,
-                  ),
-                  element("p", {}, esc(sign.text)),
-                  "\n",
+                  "div",
+                  { class: "rule-entry" },
+                  element(RuleName, {
+                    reference: entryReference(undefined, {
+                      name: sign.name,
+                      text: sign.text,
+                      source: { book: "archives-ii", page: sign.profilePage },
+                    }),
+                  }),
                   element(
                     "p",
                     { class: "small" },
@@ -270,7 +267,6 @@ export function astrologyPanel(R, s, { select, button, options }) {
                     " · Appearance: ",
                     esc(sign.appearance),
                   ),
-                  "\n",
                 ),
                 "\n",
                 element(

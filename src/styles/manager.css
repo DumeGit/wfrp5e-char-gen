@@ -1000,6 +1000,29 @@
   overflow-wrap: anywhere;
   font-size: 14px;
 }
+.manager-entry-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 4px 0;
+}
+.manager-entry-heading > strong {
+  flex: 1;
+  min-width: 0;
+}
+.manager-entry-heading .manager-entry-name {
+  white-space: normal;
+}
+.manager-entry-heading .manager-entry-subtitle {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+div.manager-entry > .manager-entry-content {
+  padding-left: 0;
+}
 .manager-entry summary::before {
   content: "+";
   flex: 0 0 12px;

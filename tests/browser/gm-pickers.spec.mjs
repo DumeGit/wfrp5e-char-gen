@@ -33,8 +33,17 @@ test("Trait descriptions have compact switches without On/Off text and retain th
   await expect(toggle).toBeChecked();
   await page.getByRole("button", { name: "Redo", exact: true }).click();
   await expect(toggle).not.toBeChecked();
-  await row.locator("summary").click();
-  await expect(row.locator(".gm-detail-body")).toContainText("20 yards");
+  await row
+    .getByRole("button", { name: "Read Night Vision", exact: true })
+    .click();
+  const reader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(reader).toContainText("20 yards");
+  await reader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
   await toggle.focus();
   await page.keyboard.press("Space");
   await expect(toggle).toBeChecked();

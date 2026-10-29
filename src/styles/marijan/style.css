@@ -335,6 +335,8 @@
   padding: 0;
   list-style: none;
   border-radius: var(--radius-control);
+  font-size: 12px;
+  font-weight: 600;
 }
 .mm-entry-disclosure > summary::-webkit-details-marker {
   display: none;

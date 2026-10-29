@@ -1,6 +1,7 @@
+import { RuleName } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { score } from "../../engine/controls.mjs";
 import { entryDescription } from "../../engine/marijan/catalogue.mjs";
-import { requestReference } from "../../services/content";
 import { SheetCard } from "./SheetCard";
 import type { Edit } from "./ui";
 import { useState } from "react";
@@ -37,8 +38,27 @@ export function StatusCard({
   const active = afflictions.filter((row) => !row.resolved);
   const inactive = afflictions.filter((row) => row.resolved);
   const rowView = (row: any) => (
-    <details className="manager-status-entry" key={row.id}>
-      <summary>
+    <div className="manager-status-entry" key={row.id}>
+      <RuleName
+        reference={
+          row.source ||
+          row.referenceId ||
+          row.catalogueId ||
+          (row.kind === "condition" &&
+            catalogue.R.ruleReferences.some(
+              (entry: any) =>
+                entry.category === "condition" && entry.name === row.name,
+            ))
+            ? entryReference(row.kind, {
+                ...row,
+                id: row.referenceId || row.catalogueId,
+                source:
+                  row.source ||
+                  (row.kind === "condition" ? { book: "core" } : undefined),
+              })
+            : null
+        }
+      >
         <strong>
           {row.name}
           {row.kind === "condition" && row.amount > 1
@@ -46,27 +66,12 @@ export function StatusCard({
             : ""}
         </strong>
         {row.location && <small title={row.location}>{row.location}</small>}
-      </summary>
-      {row.text && <p>{row.text}</p>}
+      </RuleName>
+      {!row.source && row.kind !== "condition" && row.text && <p>{row.text}</p>}
       {row.note && <p>{row.note}</p>}
       <div className="manager-inline">
-        {(row.source || row.kind === "condition") && (
-          <button
-            className="manager-text"
-            type="button"
-            onClick={() =>
-              requestReference({
-                name: row.name,
-                id: row.referenceId || row.catalogueId,
-                kind: row.kind,
-                book: row.source?.book || "core",
-              })
-            }
-          >
-            {row.source
-              ? `${catalogue.books.find((book: any) => book.id === row.source.book)?.shortTitle || (row.source.book === "core" ? "Core Rulebook" : catalogue.books.find((book: any) => book.id === row.source.book)?.title || row.source.book)}, p. ${row.source.page}`
-              : "Rule"}
-          </button>
+        {row.source && (
+          <small className="manager-meta">{`${catalogue.books.find((book: any) => book.id === row.source.book)?.shortTitle || catalogue.books.find((book: any) => book.id === row.source.book)?.title || row.source.book}, p. ${row.source.page}`}</small>
         )}
         <button
           className="manager-text"
@@ -129,7 +134,7 @@ export function StatusCard({
           Remove
         </button>
       </div>
-    </details>
+    </div>
   );
   return (
     <SheetCard
