@@ -20,6 +20,8 @@
 
 ## Agreed creator behavior
 
+- Player Review’s primary Open in character manager action directly saves an independent copy using the existing import conversion and atomic IndexedDB create, then opens its Play sheet. Keep it gated on creation completion, snapshot/epoch protected, lazy, retryable and deduplicated; preserve creator drafts, existing manager records and verification isolation. JSON backup stays available for unfinished characters; no PDF loading or file round-trip is required for transfer.
+
 - User-approved Player creation convention: missing published equipment weight counts as 0 Enc for carried totals, load effects, Review and both PDF exports. Preserve null source weights and label the assumption; unrolled quantities still require recorded rolls and leave load incomplete. The manager explicitly opts out of this creator convention; Marijan/Bestiary calculations retain their existing treatment.
 
 - Player and Bestiary retain top Next navigation before Review: beside the compact selector through 1100px and at the editor’s top right on desktop. Reuse existing navigation, focus the destination heading, keep compact navigation visible and retain footer actions. No Next during book setup, on Review or in print; unfinished choices still allow navigation while exports stay gated.

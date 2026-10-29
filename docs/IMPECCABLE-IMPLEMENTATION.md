@@ -7,7 +7,7 @@ All nine findings in the [implementation plan](IMPECCABLE-IMPLEMENTATION-PLAN.md
 | F01: manager menu could focus the hidden library heading | Explicit visible Library/Play/Advance/Journal destinations and visible heading/main fallback | Keyboard navigation retains content context. |
 | F02: pale supporting notes on parchment | Muted ink scoped to paper notes; dark-chrome roles retained | Restore readable supporting text. |
 | F03: continuation followed long optional content | Book actions at both ends; Career training/Continue before alternatives/path disclosures; Gear Continue before references | Keep the next task near the completed decision. |
-| F04: reusable JSON and play handoff were indirect | Review editable-save action and browser-local backup/independent manager-import guidance | Preserve unfinished work and explain the path to play. |
+| F04: reusable JSON and play handoff were indirect | Review editable-save action and direct independent manager copy/open action for completed characters | Preserve unfinished work and explain the path to play. |
 | F05: Condition rules preceded recording | Count/non-stacking status, notes and manual scope first; full rules/source in a disclosure | Speed routine play while retaining rules and visible failure/retry recovery. |
 | F06: compact setup showed an unrelated creation step | Visible Character setup / Choose books context | Name the transient state without creating another saved step. |
 | F07: initial/total ownership was weak | Bounded cells with individual Total headings and wrapping | Distinguish values without caps or changed calculations. |

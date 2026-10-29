@@ -187,9 +187,9 @@ test("Career and Gear offer continuation before optional browsing @interface @pc
   ).toBeVisible();
 });
 
-test("Review JSON saves a complete editable character for independent manager import @interface @pc @manager @storage @mobile", async ({
+test("Review saves JSON and opens an independent manager copy with retry @interface @pc @manager @storage @mobile", async ({
   page,
-}) => {
+}, info) => {
   const requests = [];
   page.on("request", (request) => requests.push(request.url()));
   await openPC(page, { complete: true });
@@ -218,7 +218,6 @@ test("Review JSON saves a complete editable character for independent manager im
     )
     .toMatchObject(draft);
   await page.reload();
-  await pcStep(page, "Review");
   await expect(
     page.getByRole("button", {
       name: "Save editable character (.json)",
@@ -230,27 +229,91 @@ test("Review JSON saves a complete editable character for independent manager im
     (key) => localStorage.getItem(key),
     PC_STORAGE,
   );
-  await page
-    .getByRole("link", { name: "Character manager", exact: true })
-    .click();
+  const transfer = page.locator('[data-action="manager-transfer"]');
+  await expect(transfer).toHaveText("Open in character manager");
+  await page.locator(".review-export").scrollIntoViewIfNeeded();
+  await noOverflow(page);
+  await page.screenshot({ path: info.outputPath("review-open-manager.png") });
+  let attempts = 0,
+    release;
+  await page.route("**/gm/data.json", async (route) => {
+    if (++attempts === 1) {
+      await route.fulfill({ status: 503, body: "Temporary test failure" });
+    } else if (attempts === 2) {
+      await new Promise((resolve) => {
+        release = resolve;
+      });
+      await route.continue();
+    } else await route.continue();
+  });
+  await transfer.click();
   await expect(
-    page.getByRole("heading", { name: "Your characters", exact: true }),
-  ).toBeVisible();
-  await expect(page.locator("#manager-character-name")).toHaveCount(0);
-  await page
-    .getByLabel("Import character JSON", { exact: true })
-    .setInputFiles({
-      name: saved.name,
-      mimeType: "application/json",
-      buffer: saved.bytes,
-    });
-  await page.getByRole("button", { name: /Import 1 character/ }).click();
+    page.locator(".review-export .ui-operation-error"),
+  ).toContainText("Could not complete this action");
+  await expect(transfer).toBeEnabled();
+  await expect(page).toHaveURL(/\/?\?verify=1$/);
+  await transfer.click();
+  await expect(transfer).toHaveAttribute("aria-busy", "true");
+  await expect(transfer).toBeDisabled();
+  await expect.poll(() => typeof release).toBe("function");
+  release();
+  await expect(page).toHaveURL(
+    /\/manager\/\?.*character=.*section=play.*verify=1/,
+  );
   await expect(page.locator("#manager-character-name")).toHaveText(draft.name);
+  const copies = () =>
+    page.evaluate(
+      () =>
+        new Promise((resolve, reject) => {
+          const request = indexedDB.open(
+            "wfrp-character-manager-v1-verification",
+          );
+          request.onerror = () => reject(request.error);
+          request.onsuccess = () => {
+            const db = request.result;
+            const read = db
+              .transaction("characters")
+              .objectStore("characters")
+              .getAll();
+            read.onsuccess = () => {
+              db.close();
+              resolve(read.result);
+            };
+            read.onerror = () => {
+              db.close();
+              reject(read.error);
+            };
+          };
+        }),
+    );
+  const records = await copies();
+  expect(records).toHaveLength(1);
+  expect(
+    records[0].attachments.find((x) => x.name === "Original character record")
+      .data,
+  ).toEqual(JSON.parse(before));
+  expect(
+    await page.evaluate((key) => localStorage.getItem(key), PC_STORAGE),
+  ).toBe(before);
+  expect(requests.some((url) => /pdf-runtime|pdf-lib/.test(url))).toBe(false);
+  await noOverflow(page);
+  await page.screenshot({
+    path: info.outputPath("manager-opened-from-review.png"),
+  });
+  await page.getByRole("button", { name: "Edit profile", exact: true }).click();
+  await page.locator("#manager-name").fill("Independent manager copy");
+  await page.getByRole("button", { name: "Save profile", exact: true }).click();
+  await expect
+    .poll(async () => (await copies())[0].sheet.name)
+    .toBe("Independent manager copy");
   expect(
     await page.evaluate((key) => localStorage.getItem(key), PC_STORAGE),
   ).toBe(before);
   await page.reload();
-  await expect(page.locator("#manager-character-name")).toHaveText(draft.name);
+  await expect(page.locator("#manager-character-name")).toHaveText(
+    "Independent manager copy",
+  );
+  expect(await copies()).toHaveLength(1);
 });
 
 test("unfinished Review can save JSON while PDFs remain blocked @interface @pc @storage @mobile", async ({
@@ -260,6 +323,12 @@ test("unfinished Review can save JSON while PDFs remain blocked @interface @pc @
   await pcStep(page, "Review");
   await expect(
     page.getByRole("button", { name: "Download character sheet", exact: true }),
+  ).toBeDisabled();
+  await expect(
+    page.getByRole("button", {
+      name: "Open in character manager",
+      exact: true,
+    }),
   ).toBeDisabled();
   const saved = await downloadBytes(
     page,

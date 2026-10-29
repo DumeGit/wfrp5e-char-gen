@@ -63,6 +63,7 @@ import {
 // Live context keeps rendering state outside the saved character. Unusual book
 // mechanics remain explicit handlers rather than generic configuration rules.
 export function createFeature(getContext, setContext) {
+  let managerCopy = null;
   function download(bytes, name, type) {
     const url = URL.createObjectURL(new Blob([bytes], { type })),
       a = document.createElement("a");
@@ -748,6 +749,37 @@ export function createFeature(getContext, setContext) {
         $("#acquisition").value,
         $("#owned-trapping").value,
       );
+    }
+    if (a === "manager-transfer") {
+      if (errors().length)
+        throw Error("Finish creation before opening the manager.");
+      const draft = structuredClone(s),
+        epoch = getContext().taskEpoch,
+        verify = new URLSearchParams(location.search).has("verify"),
+        isCurrent = () => getContext().isCurrentTask(epoch);
+      await withBusy(el, "Preparing…", async () => {
+        if (managerCopy?.epoch !== epoch) {
+          const { copyPlayerToManager } = await import(
+            "../../../manager/import-from-creator"
+          );
+          if (!isCurrent()) return;
+          const id = await copyPlayerToManager(draft, verify, isCurrent);
+          managerCopy = { epoch, id };
+        }
+        if (!isCurrent()) {
+          toast(
+            "Your manager copy was saved. Open it from the character library.",
+          );
+          return;
+        }
+        const params = new URLSearchParams({
+          character: managerCopy.id,
+          section: "play",
+        });
+        if (verify) params.set("verify", "1");
+        location.assign(`/manager/?${params}`);
+      });
+      return;
     }
     if (a === "sheet" || a === "record") {
       if (errors().length) throw Error("Finish creation before exporting.");

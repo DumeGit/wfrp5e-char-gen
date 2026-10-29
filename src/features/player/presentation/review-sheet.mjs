@@ -349,6 +349,7 @@ export function reviewSheet(R, s, snapshot, ui) {
       element(
         "div",
         {
+          id: "review-export-status",
           class: [
             "review-export-status ",
             issues.length ? "review-incomplete" : "review-ready",
@@ -362,24 +363,32 @@ export function reviewSheet(R, s, snapshot, ui) {
                 ["", " unfinished ", ""],
                 [issues.length, issues.length === 1 ? "choice" : "choices"],
               )
-            : "Ready to export",
+            : "Ready for play",
         ),
         element(
           "span",
           {},
           issues.length
-            ? "Resolve the choices below to enable PDF downloads."
-            : "Editable character sheet and complete creation record.",
+            ? "Resolve the choices below to open the manager or download PDFs."
+            : "Open a manager copy or download your character.",
         ),
       ),
       element(
         "div",
         { class: "review-export-actions" },
         button(
+          "Open in character manager",
+          "manager-transfer",
+          issues.length
+            ? 'disabled aria-describedby="review-export-status"'
+            : "",
+          "primary",
+        ),
+        button(
           "Download character sheet",
           "sheet",
           issues.length ? "disabled" : "",
-          "primary",
+          "quiet",
         ),
         button(
           "Download creation & XP record",
@@ -396,20 +405,7 @@ export function reviewSheet(R, s, snapshot, ui) {
         element(
           "p",
           { class: "small muted" },
-          "Your draft stays in this browser. Save a JSON backup to reopen it here, including unfinished choices. For play, import a completed character into the separate ",
-          element(
-            "a",
-            {
-              href:
-                "/manager/" +
-                (typeof location !== "undefined" &&
-                new URLSearchParams(location.search).has("verify")
-                  ? "?verify=1"
-                  : ""),
-            },
-            "Character manager",
-          ),
-          ". Importing creates an independent copy; opening the manager does not transfer your draft.",
+          "Opening in the manager creates an independent copy for play. Your creator draft stays here. Save JSON to keep an editable backup, including unfinished choices.",
         ),
       ),
       disclosure(

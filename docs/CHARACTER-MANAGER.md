@@ -19,6 +19,8 @@ The `/manager/` route adds a local play sheet and character library alongside th
 
 ## Characters and imports
 
+Completed Player characters can use **Open in character manager** directly from Review & export. This explicit action applies the same conversion as JSON import, creates a new independent record atomically and opens its Play sheet without an intermediate import preview or file round-trip. The creator draft and existing manager records remain intact. Import data is loaded lazily; busy/error/retry states remain in Review until saving succeeds. A changed/replaced creator snapshot cannot start a stale save, and completed saves are retained for navigation retry. Verification sessions use only the isolated manager database. Ordinary JSON imports retain their preview.
+
 Player version-2, Marijan schema-1 and manager schema-1 files import through a preview into the same manager format. There are no source-mode badges, editing restrictions or different tools. Imports create independent records and leave creator drafts untouched. Player imports require supported selected Species/Career and matching installed book versions. Blank characters use the same tools without creation grants.
 
 A schema-1 `wfrp-manager` document has an independent ID, revision/timestamps, normalized `wfrp-character` sheet, mechanical context, calculation adjustments, current resources, Conditions, journal, persistent audit history, actual manager purchases, and optional original attachments/portrait. The sheet internally reuses freehand-model validation/calculation; its public format is not a Marijan save. Original creator data and rolls remain downloadable historical attachments. No previous purchases or verified randomness are invented.

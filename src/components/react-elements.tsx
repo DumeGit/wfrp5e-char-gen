@@ -218,7 +218,10 @@ export function element(
   )
     props["data-react-selected"] = true;
   let rendered: any = tag;
-  if (tag === "button" && ["sheet", "record"].includes(props["data-action"]))
+  if (
+    tag === "button" &&
+    ["sheet", "record", "manager-transfer"].includes(props["data-action"])
+  )
     rendered = AsyncActionButton;
   if (
     (tag === "textarea" ||
