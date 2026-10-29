@@ -1,3 +1,18 @@
 {
-  "buildPath": "comp"
+  "buildPath": "comp",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/gm/style.css"
+        ],
+        "createdAt": "2026-10-29T19:33:19.027Z",
+        "reason": "Agent review: these three foundation/template, warning and error borders are inherited from commit e79405da (7 October 2026), unchanged by the NPC batch/magic-description work. Preserve the incumbent Imperial Desk identity and semantic status indicators."
+      }
+    ]
+  }
 }
