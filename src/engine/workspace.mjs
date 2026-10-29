@@ -318,7 +318,7 @@ export function calculation(R, s, kind, name, result) {
         ["Final capacity", d.capacity],
         ["Known carried Enc", eq.total],
       ],
-      note: "Strong Back adds 1 at one rank or 3 at two or more. Ogre capacity doubles after carrying Talents. Automatic packing ignores coin weight; unknown weights remain unknown.",
+      note: "Strong Back adds 1 at one rank or 3 at two or more. Ogre capacity doubles after carrying Talents. Automatic packing ignores coin weight; unlisted weights count as 0 Enc in this creator.",
     };
   if (name === "Movement")
     return {

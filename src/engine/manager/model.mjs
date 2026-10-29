@@ -323,6 +323,7 @@ export function calculateManager(catalogue, record) {
   const slots = M.careerSkillSlots(R, s, Math.min(4, Math.max(1, sheet.level)));
   d.currentSkills = [...new Set(slots.map((x) => x.name))];
   const eq = equipment(R, s, {
+    assumeUnlistedWeight: false,
     derived: d,
     entries: inventory(catalogue, record, R, s),
   });

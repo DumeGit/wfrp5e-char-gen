@@ -20,6 +20,8 @@
 
 ## Agreed creator behavior
 
+- User-approved Player creation convention: missing published equipment weight counts as 0 Enc for carried totals, load effects, Review and both PDF exports. Preserve null source weights and label the assumption; unrolled quantities still require recorded rolls and leave load incomplete. The manager explicitly opts out of this creator convention; Marijan/Bestiary calculations retain their existing treatment.
+
 - Player and Bestiary retain top Next navigation before Review: beside the compact selector through 1100px and at the editor’s top right on desktop. Reuse existing navigation, focus the destination heading, keep compact navigation visible and retain footer actions. No Next during book setup, on Review or in print; unfinished choices still allow navigation while exports stay gated.
 
 - Starting Talents use equal-width grid tiles with aligned direct ? help for fixed Species grants, real random results, specialisation choices and the free Career Talent. Keep the Career selector in its tile without a duplicate selected-name/description row. Do not restore the separate Read all your Talent rules disclosure. Keep random rolls, replacements, Psychometry sacrifices and grants unchanged; extra already-owned Talents retain direct help in a compact Additional Talents group.

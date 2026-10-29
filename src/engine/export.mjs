@@ -367,11 +367,15 @@ export async function exportRecord(
       [290, 125, 92],
     );
   text(
-    `Carrying capacity ${d.capacity}; ${eq.unknown.length ? "known Encumbrance subtotal" : "total Encumbrance"} ${eq.total}. Weapons ${eq.weaponEnc}, armour when worn ${eq.armourEnc}, other known gear ${eq.gearEnc}. Worn Encumbrance is reduced by 1, minimum 0 (pp. 40, 299).`,
+    `Carrying capacity ${d.capacity}; ${eq.penalties.complete ? "total Encumbrance" : "known Encumbrance subtotal"} ${eq.total}. Weapons ${eq.weaponEnc}, armour when worn ${eq.armourEnc}, other gear ${eq.gearEnc}. Worn Encumbrance is reduced by 1, minimum 0 (pp. 40, 299).`,
   );
-  if (eq.unknown.length)
+  if (eq.assumedZero.length)
     text(
-      `Unresolved Encumbrance (not counted as zero): ${eq.unknown.join("; ")}. The book gives no weight for these items. The sheet's Enc_Total is left blank.`,
+      `Creator convention: unlisted weights count as 0 Enc: ${eq.assumedZero.join("; ")}.`,
+    );
+  if (eq.unresolved.length)
+    text(
+      `Unresolved equipment quantities: ${eq.unresolved.join("; ")}. Roll these quantities to calculate final Encumbrance. The sheet's Enc_Total is left blank.`,
     );
   h("6. Derived values and rules decisions");
   text(
@@ -717,9 +721,9 @@ export async function exportSheet(
     AP_Shield: eq.ap.Shield,
     Enc_Weapons: eq.weaponEnc,
     Enc_Armour: eq.armourEnc,
-    Enc_Trappings: eq.unknown.length ? "" : eq.gearEnc,
+    Enc_Trappings: eq.penalties.complete ? eq.gearEnc : "",
     Enc_Max: d.capacity,
-    Enc_Total: eq.unknown.length ? "" : eq.total,
+    Enc_Total: eq.penalties.complete ? eq.total : "",
     Sin_Points: 0,
     Wealth_Brass_Pennies_D: wallet.coins.d,
     Wealth_Silver_Shillings_SS: wallet.coins.ss,
@@ -969,8 +973,11 @@ export async function exportSheet(
       .map(([l, v]) => `${l} Casting/Channelling ${v} SL`)
       .join("; ")}.`,
     s.dooming ? `Dooming: ${s.dooming}` : "",
-    eq.unknown.length
-      ? "Encumbrance incomplete; unresolved items in record."
+    eq.assumedZero.length
+      ? `Unlisted weights count as 0 Enc: ${eq.assumedZero.join("; ")}.`
+      : "",
+    eq.unresolved.length
+      ? "Encumbrance incomplete; unresolved quantities in record."
       : "",
     s.notes,
   ].filter(Boolean);

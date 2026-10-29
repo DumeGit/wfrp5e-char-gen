@@ -554,7 +554,7 @@ export function reviewSheet(R, s, snapshot, ui) {
       metric(
         "Enc. / capacity",
         interpolate(["", " / ", ""], [score(eq.total), score(d.capacity)]),
-        eq.unknown.length ? "Known weight only" : "",
+        eq.penalties.complete ? "" : "Known weight only",
       ),
     ),
     "\n    ",
@@ -674,12 +674,21 @@ export function reviewSheet(R, s, snapshot, ui) {
             belongings,
           ),
         ),
-        eq.unknown.length
+        eq.assumedZero.length
+          ? element(
+              "p",
+              { class: "review-caption" },
+              "Unlisted weights count as 0 Enc: ",
+              joinNodes(eq.assumedZero.map(esc), ", "),
+              ".",
+            )
+          : "",
+        eq.unresolved.length
           ? element(
               "p",
               { class: "review-weight-warning" },
-              "Unlisted weights: ",
-              joinNodes(eq.unknown.map(esc), ", "),
+              "Unresolved quantities: ",
+              joinNodes(eq.unresolved.map(esc), ", "),
               ". Encumbrance shows the known subtotal.",
             )
           : "",

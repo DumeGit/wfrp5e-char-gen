@@ -449,12 +449,21 @@ test("Quick Armour is worn automatically and uses the printed worn Enc and prote
   assert.match(eq.warnings.join(" "), /replaces detailed/);
 });
 
-test("unlisted weights remain explicit rather than silently assumed zero", () => {
+test("unlisted Player weights explicitly count as zero without changing source values", () => {
   const s = rich();
   s.ledger.push({ type: "trapping", name: "Unlisted Keepsake", cost: 0 });
   const eq = equipment(R, s);
   assert.ok(eq.unknown.includes("Unlisted Keepsake"));
-  assert.equal(eq.penalties.complete, false);
+  assert.ok(eq.assumedZero.includes("Unlisted Keepsake"));
+  assert.equal(
+    eq.entries.find((x) => x.name === "Unlisted Keepsake").enc,
+    null,
+  );
+  assert.equal(
+    eq.entries.find((x) => x.name === "Unlisted Keepsake").carriedEnc,
+    0,
+  );
+  assert.equal(eq.penalties.complete, true);
 });
 
 test("reference corrections retain complete Mimic and spell duration, excluding Dooming-table fragments", () => {

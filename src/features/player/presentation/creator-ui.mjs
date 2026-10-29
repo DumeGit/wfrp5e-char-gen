@@ -113,13 +113,20 @@ export function penaltySummary(R, s, snapshot = null) {
       e.warnings.map((w) => element("p", { class: "packing-warning" }, esc(w))),
       "",
     ),
-    e.unknown.length
+    e.assumedZero.length
+      ? element(
+          "p",
+          { class: "small muted" },
+          "Unlisted weights count as 0 Enc: ",
+          esc(joinNodes(e.assumedZero, "; ")),
+          ".",
+        )
+      : "",
+    e.unresolved.length
       ? element(
           "p",
           { class: "packing-warning" },
-          "No published weight for: ",
-          esc(joinNodes(e.unknown, "; ")),
-          ". The export leaves total Enc blank instead of assuming zero.",
+          "Roll unresolved equipment quantities in Gear to calculate final Encumbrance.",
         )
       : "",
   );

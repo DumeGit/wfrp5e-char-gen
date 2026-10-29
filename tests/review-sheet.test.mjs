@@ -53,10 +53,11 @@ test("Review displays the shared current totals, distinct Fate/Fortune and count
   );
 });
 
-test("Review retains unknown weights and magic collections without inventing values", () => {
+test("Review retains unresolved quantities and magic collections", () => {
   const s = { ...fresh(), species: "Human" };
   const result = characterResult(R, s);
   result.equipment.unknown = ["Unknown <parcel>"];
+  result.equipment.unresolved = ["Unknown <parcel>"];
   result.equipment.penalties.complete = false;
   result.spells = [{ name: "Test prayer" }];
   result.runes = [{ name: "Test rune" }];

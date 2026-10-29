@@ -133,15 +133,19 @@ export function characterResult(R, s) {
   const notices = [
     ...eq.unknown.map((name) =>
       issue(
-        "gear.unknown-weight",
-        `${name}: no published weight; total Encumbrance and load effects remain unresolved.`,
+        eq.unresolved.includes(name)
+          ? "gear.unresolved-quantity"
+          : "gear.assumed-weight",
+        eq.unresolved.includes(name)
+          ? `${name}: resolve its quantity to calculate final Encumbrance and load effects.`
+          : `${name}: no published weight; counted as 0 Enc in this creator.`,
         5,
         ".shop-disclosure",
         eq.entries.find((x) => x.name === name)?.source || {
           book: "core",
           page: 299,
         },
-        "warning",
+        eq.unresolved.includes(name) ? "warning" : "info",
       ),
     ),
     ...derived.notices,

@@ -301,10 +301,14 @@ export function equipment(R, s, supplied) {
     notes = [],
     warnings = [],
     unknown = [],
+    assumedZero = [],
+    unresolved = [],
     weapons = [],
     armour = [],
     other = [],
     ap = { Head: 0, Arms: 0, Body: 0, Legs: 0, Shield: 0 };
+  // User-selected Player creation convention; published catalogue Enc stays null.
+  const assumeUnlistedWeight = supplied?.assumeUnlistedWeight ?? true;
   // Creation defaults are derived, so saved packing preferences cannot hide gear.
   const parents = new Map(entries.map((e) => [e.key, null]));
   const bags = entries.filter(
@@ -349,7 +353,9 @@ export function equipment(R, s, supplied) {
   const weights = new Map();
   for (const e of entries) {
     let value =
-      e.enc === null || e.quantity === null ? null : e.enc * e.quantity;
+      e.quantity === null || (e.enc === null && !assumeUnlistedWeight)
+        ? null
+        : (e.enc ?? 0) * e.quantity;
     const worn = e.placement === "worn" && e.canWear && !parents.get(e.key);
     if (!e.quick && worn && value !== null)
       value = e.flaws.includes("Bulky")
@@ -404,9 +410,12 @@ export function equipment(R, s, supplied) {
     if (
       personallyCarried(e) &&
       !parents.get(e.key) &&
-      weights.get(e.key) === null
-    )
+      (e.enc === null || weights.get(e.key) === null)
+    ) {
       unknown.push(e.name);
+      if (weights.get(e.key) === null) unresolved.push(e.name);
+      else if (e.enc === null && assumeUnlistedWeight) assumedZero.push(e.name);
+    }
     if (e.name === "Hook")
       notes.push(
         issue(
@@ -632,7 +641,7 @@ export function equipment(R, s, supplied) {
     armourEnc = armour.reduce((n, x) => n + (x.carriedEnc || 0), 0),
     gearEnc = other.reduce((n, x) => n + (x.enc || 0), 0),
     total = Number((weaponEnc + armourEnc + gearEnc).toFixed(3));
-  const complete = !unknown.length;
+  const complete = !unresolved.length;
   let band =
     total <= d.capacity
       ? 0
@@ -730,6 +739,8 @@ export function equipment(R, s, supplied) {
     armour,
     other,
     unknown: [...new Set(unknown)],
+    assumedZero: [...new Set(assumedZero)],
+    unresolved: [...new Set(unresolved)],
     ap,
     weaponEnc,
     armourEnc,
