@@ -22,6 +22,7 @@ test("Sea origins and optional artillery reuse Player book and origin controls @
   await page.locator('[data-book="sea-of-claws-artillery"]').check();
   page.once("dialog", (dialog) => dialog.accept());
   await page
+    .getByRole("group", { name: "Book selection actions", exact: true })
     .getByRole("button", { name: "Use selected books", exact: true })
     .click();
   await page.locator("#species").selectOption("Human");

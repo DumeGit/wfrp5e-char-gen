@@ -122,20 +122,27 @@ export function createFeature(getContext) {
             ),
             "\n",
           ),
-          selector: element(
-            "div",
-            { class: "mobile-step field" },
-            "\n",
-            element("label", { for: "mobile-step" }, "Creation step"),
-            select(
-              'id="mobile-step" data-bind="stepSwitch"',
-              steps.map((name, i) => [
-                i,
-                interpolate(["", ". ", ""], [combine(i, 1), name]),
-              ]),
-              s.step,
-            ),
-          ),
+          selector: setupOpen
+            ? element(
+                "div",
+                { class: "workspace-setup-context" },
+                element("span", { class: "small" }, "Character setup"),
+                element("strong", {}, "Choose books"),
+              )
+            : element(
+                "div",
+                { class: "mobile-step field" },
+                "\n",
+                element("label", { for: "mobile-step" }, "Creation step"),
+                select(
+                  'id="mobile-step" data-bind="stepSwitch"',
+                  steps.map((name, i) => [
+                    i,
+                    interpolate(["", ". ", ""], [combine(i, 1), name]),
+                  ]),
+                  s.step,
+                ),
+              ),
           groups: [
             {
               id: "new",

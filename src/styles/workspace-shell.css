@@ -275,6 +275,22 @@
 .workspace-compact-selector {
   display: none;
 }
+.workspace-setup-context {
+  display: grid;
+  gap: var(--space-1);
+  color: var(--color-on-leather);
+}
+.workspace-setup-context > .small {
+  color: var(--color-on-leather-muted);
+}
+.book-setup-actions,
+.contextual-continue {
+  margin-block: var(--space-4);
+}
+.contextual-continue {
+  padding-block: var(--space-3);
+  border-block: 1px solid var(--color-line-soft);
+}
 .workspace-command-list {
   display: grid;
   gap: 12px;
@@ -481,6 +497,7 @@
   }
   .workspace > .workspace-rail,
   .mm-workspace > .workspace-rail {
+    display: block;
     padding: 12px 16px;
     border: 1px solid #957746;
   }

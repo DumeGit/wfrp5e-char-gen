@@ -281,13 +281,6 @@ export function createFeature(getContext, setContext) {
         esc(originProfile(R, s)?.name || s.species),
         " characters.",
       ),
-      careerBrowser(R, s, {
-        query: careerSearch,
-        className: careerFilter,
-        book: careerBook,
-        preview: careerPreview,
-        limit: careerLimit,
-      }),
       careerOptions(R, s),
       trainingPrerequisites(R, s, { select, button }),
       element(
@@ -367,85 +360,124 @@ export function createFeature(getContext, setContext) {
           ),
         "",
       ),
-      element("h3", {}, "The Career path"),
-      joinNodes(
-        c.levels.map((l) =>
-          element(
-            "details",
-            {
-              "data-detail-key": detailKey(
-                "career:level",
-                combine(combine(c.contentId, ":"), l.level),
-              ),
-              ...attributes(l.level === 1 ? "open" : ""),
-            },
-            legacySummary(
-              fragment(
-                l.level,
-                ". ",
-                esc(l.name),
-                " · ",
-                l.status,
-                " ",
-                l.standing,
-              ),
-              legacyTag(R, l.source ? l : c),
-            ),
-            element(
-              "p",
-              {},
-              element("strong", {}, "Skills:"),
-              " ",
-              esc(joinNodes(l.skills, ", ")),
-            ),
-            joinNodes(
-              (l.unavailableSkills || []).map((x) =>
-                element(
-                  "p",
-                  { class: "small muted" },
-                  element("strong", {}, esc(x.name), " · unavailable"),
-                  element("br", {}),
-                  esc(x.reason),
-                ),
-              ),
-              "",
-            ),
-            element(
-              "p",
-              {},
-              element("strong", {}, "Talents:"),
-              " ",
-              joinNodes(
-                l.talents.map((n) =>
-                  M.talentInfo(R, n)?.unavailable
-                    ? element(
-                        "span",
-                        { class: "muted" },
-                        esc(n),
-                        " (unavailable)",
-                      )
-                    : esc(n),
-                ),
-                ", ",
-              ),
-            ),
-            joinNodes(
-              l.talents
-                .filter((n) => M.talentInfo(R, n)?.unavailable)
-                .map((n) => talentDescription(n)),
-              "",
-            ),
-            element(
-              "p",
-              {},
-              element("strong", {}, "Trappings:"),
-              " ",
-              esc(joinNodes(l.trappings, ", ")),
-            ),
-            "\n",
-          ),
+      element(
+        "div",
+        {
+          class: "actions contextual-continue",
+          "aria-label": "Next creation step",
+        },
+        button(
+          "step",
+          "Continue to Characteristics",
+          'data-step="2"',
+          "primary",
         ),
-        "",
+      ),
+      element(
+        "details",
+        {
+          "data-detail-key": detailKey("career:browse", c.contentId || c.id),
+          class: "career-browse-disclosure",
+        },
+        element("summary", {}, "Change Career · Browse alternatives"),
+        element(
+          "p",
+          { class: "muted" },
+          available.length,
+          " available Careers. Previewing alternatives leaves your current Career unchanged.",
+        ),
+        careerBrowser(R, s, {
+          query: careerSearch,
+          className: careerFilter,
+          book: careerBook,
+          preview: careerPreview,
+          limit: careerLimit,
+        }),
+      ),
+      element(
+        "details",
+        { "data-detail-key": detailKey("career:path", c.contentId || c.id) },
+        element("summary", {}, "Read the full Career path"),
+        element("h3", {}, "The Career path"),
+        joinNodes(
+          c.levels.map((l) =>
+            element(
+              "details",
+              {
+                "data-detail-key": detailKey(
+                  "career:level",
+                  combine(combine(c.contentId, ":"), l.level),
+                ),
+                ...attributes(l.level === 1 ? "open" : ""),
+              },
+              legacySummary(
+                fragment(
+                  l.level,
+                  ". ",
+                  esc(l.name),
+                  " · ",
+                  l.status,
+                  " ",
+                  l.standing,
+                ),
+                legacyTag(R, l.source ? l : c),
+              ),
+              element(
+                "p",
+                {},
+                element("strong", {}, "Skills:"),
+                " ",
+                esc(joinNodes(l.skills, ", ")),
+              ),
+              joinNodes(
+                (l.unavailableSkills || []).map((x) =>
+                  element(
+                    "p",
+                    { class: "small muted" },
+                    element("strong", {}, esc(x.name), " · unavailable"),
+                    element("br", {}),
+                    esc(x.reason),
+                  ),
+                ),
+                "",
+              ),
+              element(
+                "p",
+                {},
+                element("strong", {}, "Talents:"),
+                " ",
+                joinNodes(
+                  l.talents.map((n) =>
+                    M.talentInfo(R, n)?.unavailable
+                      ? element(
+                          "span",
+                          { class: "muted" },
+                          esc(n),
+                          " (unavailable)",
+                        )
+                      : esc(n),
+                  ),
+                  ", ",
+                ),
+              ),
+              joinNodes(
+                l.talents
+                  .filter((n) => M.talentInfo(R, n)?.unavailable)
+                  .map((n) => talentDescription(n)),
+                "",
+              ),
+              element(
+                "p",
+                {},
+                element("strong", {}, "Trappings:"),
+                " ",
+                esc(joinNodes(l.trappings, ", ")),
+              ),
+              "\n",
+            ),
+          ),
+          "",
+        ),
       ),
     );
   }
@@ -1262,6 +1294,14 @@ export function createFeature(getContext, setContext) {
         "p",
         { class: "muted" },
         "Resolve your starting belongings, roll your purse, and buy extra equipment.",
+      ),
+      element(
+        "div",
+        {
+          class: "actions contextual-continue",
+          "aria-label": "Next creation step",
+        },
+        button("step", "Continue to Experience", 'data-step="6"', "primary"),
       ),
       kitSummary(R, s, {
         select,

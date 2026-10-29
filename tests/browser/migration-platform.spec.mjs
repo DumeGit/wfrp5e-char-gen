@@ -125,6 +125,7 @@ test.describe("production offline routes", () => {
       .click();
     await navigate(page, "Player character", "/");
     await page
+      .getByRole("group", { name: "Book selection actions", exact: true })
       .getByRole("button", { name: "Use selected books", exact: true })
       .click();
     await expect(

@@ -72,6 +72,24 @@ export function bookSetup(library, R) {
     "\n",
     element(
       "div",
+      {
+        class: "actions book-setup-actions",
+        role: "group",
+        "aria-label": "Book selection actions",
+      },
+      element(
+        "button",
+        { type: "button", class: "primary", "data-action": "apply-books" },
+        "Use selected books",
+      ),
+      element(
+        "button",
+        { type: "button", class: "quiet", "data-action": "books-cancel" },
+        "Return to character",
+      ),
+    ),
+    element(
+      "div",
       { class: "book-grid" },
       joinNodes(
         library.packs
