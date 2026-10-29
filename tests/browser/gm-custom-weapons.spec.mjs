@@ -9,6 +9,22 @@ import {
   fileUpload,
 } from "./helpers.mjs";
 
+async function chooseBase(page, name = "Sword") {
+  await page.locator("#weapon-base-search").fill(name);
+  await page
+    .getByRole("button", {
+      name: `Choose ${name === "Bow" ? "Bow (2H)" : name} · Core · p. ${name === "Bow" ? "303" : "301"}`,
+      exact: true,
+    })
+    .click();
+}
+async function section(page, name) {
+  await page
+    .getByRole("navigation", { name: "Weapon sections" })
+    .getByRole("button", { name: new RegExp(`^${name}`) })
+    .click();
+}
+
 test("magical rolls resolve Legendary follow-ups and Hoarfrost ammunition before atomic addition @gm @mobile", async ({
   page,
 }) => {
@@ -34,10 +50,11 @@ test("magical rolls resolve Legendary follow-ups and Hoarfrost ammunition before
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
   const form = page.locator(".weapon-workbench");
-  await page.locator("#weapon-base").selectOption("core:weapon:3");
+  await chooseBase(page);
   await page
     .getByLabel("Weapon name", { exact: true })
     .fill("Legendary test sword");
+  await section(page, "Power");
   await page.getByRole("radio", { name: "Magical", exact: true }).check();
   await page.evaluate(() => {
     window.weaponTestFaces = [100, 25, 64];
@@ -45,14 +62,16 @@ test("magical rolls resolve Legendary follow-ups and Hoarfrost ammunition before
   await form
     .getByRole("button", { name: "Roll enchantment", exact: true })
     .click();
-  await expect(form).toContainText("Legendary weapon · 2/5 abilities");
+  await expect(form).toContainText("Legendary enchantments");
+  await expect(form).toContainText("2 / 5 abilities");
   await expect(form).toContainText("Alight with Flame");
   await expect(form).toContainText("Of Deft and Cunning");
   await form.getByRole("button", { name: "Add weapon", exact: true }).click();
   await page
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
-  await page.locator("#weapon-base").selectOption("core:weapon:28");
+  await chooseBase(page, "Bow");
+  await section(page, "Power");
   await page.getByRole("radio", { name: "Magical", exact: true }).check();
   await page.evaluate(() => {
     window.weaponTestFaces = [99, 4];
@@ -106,12 +125,12 @@ test("weapon workbench creates and edits an independent weapon with history and 
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
   const form = page.locator(".weapon-workbench");
-  await page.locator("#weapon-base").selectOption("core:weapon:3");
+  await chooseBase(page);
   await page
     .getByLabel("Weapon name", { exact: true })
     .fill("Watch Captain’s blade");
+  await form.getByRole("button", { name: "Edit profile", exact: true }).click();
   await page.getByLabel("Damage formula", { exact: true }).fill("SB+5");
-  await form.getByText("Notes & references", { exact: true }).click();
   await page
     .getByLabel("Printed weapon notes", { exact: true })
     .fill("Etched with the captain’s seal.");
@@ -128,12 +147,14 @@ test("weapon workbench creates and edits an independent weapon with history and 
   await expect(page.locator(".gm-attack-row")).toHaveCount(before);
   await page.getByRole("button", { name: "Redo", exact: true }).click();
   await row.getByRole("button", { name: /Edit .* weapon/ }).click();
+  await form.getByRole("button", { name: "Edit profile", exact: true }).click();
   await page.getByLabel("Damage formula", { exact: true }).fill("SB+6");
   await form.getByRole("button", { name: "Save changes", exact: true }).click();
   await expect(row).toContainText("Etched with the captain’s seal.");
   const editWeapon = row.getByRole("button", { name: /Edit .* weapon/ });
   await expect(editWeapon).toBeFocused();
   await editWeapon.click();
+  await form.getByRole("button", { name: "Edit profile", exact: true }).click();
   await page.getByLabel("Damage formula", { exact: true }).fill("SB+99");
   await page
     .getByRole("dialog", { name: "Edit weapon", exact: true })
@@ -164,7 +185,7 @@ test("weapon workbench creates and edits an independent weapon with history and 
   await page
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
-  await page.locator("#weapon-base").selectOption("core:weapon:3");
+  await chooseBase(page);
   await page
     .getByLabel("Weapon name", { exact: true })
     .fill("Cancelled weapon");
@@ -179,7 +200,7 @@ test("weapon workbench creates and edits an independent weapon with history and 
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
   await expect(
-    page.getByLabel("Search base weapons", { exact: true }),
+    page.getByLabel("Find a base weapon", { exact: true }),
   ).toBeFocused();
   await page.keyboard.press("Escape");
   await expect(form).toHaveCount(0);
@@ -200,24 +221,24 @@ test("magical effects and rune restrictions integrate with the weapon dialog pre
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
   const form = page.locator(".weapon-workbench");
-  await page.locator("#weapon-base").selectOption("core:weapon:3");
+  await chooseBase(page);
   await page.getByLabel("Weapon name", { exact: true }).fill("Runebound sword");
+  await section(page, "Power");
   await page.getByRole("radio", { name: "Runic", exact: true }).check();
   await expect(
     form.getByRole("button", { name: "Add weapon", exact: true }),
   ).toBeDisabled();
-  await page
-    .locator("#weapon-rune-select")
-    .selectOption("dwarf-guide:rune:weapon-rune-of-cleaving");
+  await page.locator("#weapon-rune-select").fill("Cleaving");
   await form
-    .getByRole("button", { name: "Inscribe rune", exact: true })
+    .getByRole("button", { name: "Inscribe Rune of Cleaving", exact: true })
     .click();
   await page
     .getByLabel("Rune of Cleaving inscriptions", { exact: true })
     .fill("2");
-  await expect(form.locator(".weapon-rune-count")).toContainText("2 / 3");
+  await expect(form).toContainText("2 / 3");
+  await section(page, "Review");
   await expect(
-    form.getByRole("complementary", { name: "Weapon preview" }),
+    form.getByRole("article", { name: "Weapon preview" }),
   ).toContainText("+2 Damage");
   await noOverflow(page);
   await page.screenshot({ path: info.outputPath("runic-workbench.png") });
@@ -228,18 +249,24 @@ test("magical effects and rune restrictions integrate with the weapon dialog pre
   await page
     .getByRole("button", { name: "Create weapon", exact: true })
     .click();
-  await page.locator("#weapon-base").selectOption("core:weapon:3");
+  await chooseBase(page);
   await page.getByLabel("Weapon name", { exact: true }).fill("Silver dawn");
+  await section(page, "Power");
   await page.getByRole("radio", { name: "Magical", exact: true }).check();
-  await page
-    .locator("#weapon-effect-select")
-    .selectOption("archives-ii:weapon-effect:of-leaping-gold");
-  await form.getByRole("button", { name: "Add ability", exact: true }).click();
+  await page.locator("#weapon-effect-select").fill("Leaping Gold");
+  await form
+    .getByRole("button", {
+      name: "Add Of Leaping Gold enchantment",
+      exact: true,
+    })
+    .click();
+  await section(page, "Review");
   await expect(
-    form.getByRole("complementary", { name: "Weapon preview" }),
+    form.getByRole("article", { name: "Weapon preview" }),
   ).toContainText("Fast, Penetrating, Precise");
+  await section(page, "Power");
   await page.getByRole("radio", { name: "Ordinary", exact: true }).click();
-  await expect(form).toContainText("Replace the current powers");
+  await expect(form).toContainText("Switch to ordinary?");
   await form.getByRole("button", { name: "Keep editing", exact: true }).click();
   await expect(
     page.getByRole("radio", { name: "Magical", exact: true }),

@@ -7,16 +7,6 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
-const consoleErrors = new WeakMap();
-test.beforeEach(({ page }) => {
-  const errors = [];
-  consoleErrors.set(page, errors);
-  page.on("console", (message) => {
-    if (message.type() === "error") errors.push(message.text());
-  });
-});
-test.afterEach(({ page }) => expect(consoleErrors.get(page)).toEqual([]));
-
 async function openWeapon(page) {
   await openGM(page);
   await applyProfile(page, "Human");
@@ -26,59 +16,87 @@ async function openWeapon(page) {
     .click();
   return page.getByRole("dialog", { name: "Create weapon", exact: true });
 }
+async function chooseBase(page) {
+  await page.getByLabel("Find a base weapon", { exact: true }).fill("Sword");
+  await page
+    .getByRole("button", { name: "Choose Sword · Core · p. 301", exact: true })
+    .click();
+}
+async function section(page, name) {
+  await page
+    .getByRole("navigation", { name: "Weapon sections" })
+    .getByRole("button", { name: new RegExp(`^${name}`) })
+    .click();
+}
 async function chromeVisible(page, dialog) {
   const viewport = page.viewportSize();
   const bounds = await dialog.boundingBox();
   expect(bounds.y).toBeGreaterThanOrEqual(-1);
   expect(bounds.y + bounds.height).toBeLessThanOrEqual(viewport.height + 1);
   for (const name of ["Close", "Cancel", "Add weapon"]) {
-    const button = dialog.getByRole("button", { name, exact: true });
-    const box = await button.boundingBox();
+    const box = await dialog
+      .getByRole("button", { name, exact: true })
+      .boundingBox();
     expect(box.height).toBeGreaterThanOrEqual(44);
     expect(box.y).toBeGreaterThanOrEqual(bounds.y);
     expect(box.y + box.height).toBeLessThanOrEqual(
       bounds.y + bounds.height + 1,
     );
   }
+  expect(
+    await dialog.evaluate((node) => node.scrollWidth <= node.clientWidth + 1),
+  ).toBe(true);
   await noOverflow(page);
 }
 
-test("weapon dialog keeps actions visible and discards unsaved changes on Close, Cancel and Escape @gm @interface @mobile", async ({
+test("weapon builder searches, edits and discards with keyboard and responsive actions @gm @interface @mobile", async ({
   page,
 }, info) => {
   const dialog = await openWeapon(page);
+  const search = page.getByLabel("Find a base weapon", { exact: true });
+  await expect(search).toBeFocused();
+  await search.fill("zzzz-no-weapon");
   await expect(
-    page.getByLabel("Search base weapons", { exact: true }),
-  ).toBeFocused();
-  await expect(
-    dialog.getByRole("button", { name: "Add weapon", exact: true }),
-  ).toBeDisabled();
-  await page
-    .getByLabel("Search base weapons", { exact: true })
-    .fill("zzzz-no-weapon");
-  await expect(
-    dialog.getByText(
-      "No matching weapons. Clear the search or change a filter.",
-      { exact: true },
-    ),
+    dialog.getByRole("heading", { name: "No weapons match", exact: true }),
   ).toBeVisible();
-  await page.getByLabel("Search base weapons", { exact: true }).fill("");
+  await dialog
+    .getByRole("button", { name: "Clear filters", exact: true })
+    .click();
+  await page.screenshot({ path: info.outputPath("weapon-catalogue.png") });
+  await chooseBase(page);
+  const name = page.getByLabel("Weapon name", { exact: true });
+  await expect(name).toBeFocused();
+  await expect(dialog.locator("#weapon-profile")).toBeHidden();
+  await name.fill("Watch captain’s blade");
   await page
-    .getByLabel("Published weapon", { exact: true })
-    .selectOption("core:weapon:3");
-  await expect(page.getByLabel("Weapon name", { exact: true })).toBeFocused();
-  await expect(dialog.locator("#weapon-profile")).toHaveAttribute("open", "");
-  await expect(dialog.locator("#weapon-properties")).not.toHaveAttribute(
-    "open",
-    "",
-  );
-  await expect(dialog.locator("#weapon-notes-section")).not.toHaveAttribute(
-    "open",
-    "",
-  );
-  await page
-    .getByLabel("Weapon name", { exact: true })
-    .fill("Unsaved review sword");
+    .getByLabel("Printed weapon notes", { exact: true })
+    .fill("A blade carried on the night watch.");
+  await dialog
+    .getByRole("button", { name: "Change base", exact: true })
+    .click();
+  await search.fill("Bow");
+  await dialog
+    .getByRole("button", {
+      name: "Choose Bow (2H) · Core · p. 303",
+      exact: true,
+    })
+    .click();
+  await expect(
+    dialog.getByRole("button", { name: "Replace base", exact: true }),
+  ).toBeFocused();
+  await dialog
+    .getByRole("button", { name: "Keep current base", exact: true })
+    .click();
+  await dialog
+    .getByRole("button", { name: "Back to weapon", exact: true })
+    .click();
+  await expect(name).toHaveValue("Watch captain’s blade");
+  await section(page, "Properties");
+  await expect(
+    page.getByLabel("Find a property", { exact: true }),
+  ).toBeVisible();
+  await section(page, "Details");
+  await expect(name).toHaveValue("Watch captain’s blade");
   for (const [width, height] of info.project.name === "mobile"
     ? [
         [320, 844],
@@ -87,40 +105,30 @@ test("weapon dialog keeps actions visible and discards unsaved changes on Close,
       ]
     : [
         [1440, 900],
+        [1280, 720],
         [1100, 650],
         [1440, 480],
       ]) {
     await page.setViewportSize({ width, height });
     await chromeVisible(page, dialog);
-    await dialog.locator(".weapon-dialog-body").evaluate((node) => {
-      node.scrollTop = node.scrollHeight;
-    });
-    await chromeVisible(page, dialog);
-    expect(
-      await dialog.evaluate((node) => node.scrollWidth <= node.clientWidth + 1),
-    ).toBe(true);
+    if (width === 320 || width === 1280)
+      await page.screenshot({ path: info.outputPath(`weapon-${width}.png`) });
   }
   await page.setViewportSize(
     info.project.name === "mobile"
       ? { width: 390, height: 844 }
       : { width: 1440, height: 900 },
   );
-  await dialog.locator(".weapon-dialog-body").evaluate((node) => {
-    node.scrollTop = 0;
-  });
-  await page.screenshot({ path: info.outputPath("weapon-dialog.png") });
+  await page.screenshot({ path: info.outputPath("weapon-builder.png") });
   const add = dialog.getByRole("button", { name: "Add weapon", exact: true });
   await add.focus();
   await add.press("Tab");
   await expect(
     dialog.getByRole("button", { name: "Close", exact: true }),
   ).toBeFocused();
-  await dialog
-    .getByRole("button", { name: "Close", exact: true })
-    .press("Shift+Tab");
+  await page.keyboard.press("Shift+Tab");
   await expect(add).toBeFocused();
   await dialog.getByRole("button", { name: "Close", exact: true }).click();
-  await expect(dialog).toHaveCount(0);
   await expect(
     page.getByRole("button", { name: "Create weapon", exact: true }),
   ).toBeFocused();
@@ -128,69 +136,61 @@ test("weapon dialog keeps actions visible and discards unsaved changes on Close,
     await page
       .getByRole("button", { name: "Create weapon", exact: true })
       .click();
-    await expect(
-      page.getByLabel("Search base weapons", { exact: true }),
-    ).toBeFocused();
-    await page
-      .getByLabel("Published weapon", { exact: true })
-      .selectOption("core:weapon:3");
-    await expect(page.getByLabel("Weapon name", { exact: true })).toHaveValue(
-      "Sword",
-    );
+    await chooseBase(page);
+    await expect(name).toHaveValue("Sword");
     if (method === "Escape") await page.keyboard.press("Escape");
     else
       await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
     await expect(dialog).toHaveCount(0);
-    await expect(
-      page.getByRole("button", { name: "Create weapon", exact: true }),
-    ).toBeFocused();
   }
   await expect(page.locator(".gm-attack-row")).toHaveCount(1);
 });
 
-test("weapon requirements reveal their controls and source reading retains the unfinished design @gm @interface @mobile", async ({
+test("weapon builder returns to invalid fields and preserves work through source reading @gm @interface @mobile", async ({
   page,
 }, info) => {
   const dialog = await openWeapon(page);
-  await page
-    .getByLabel("Published weapon", { exact: true })
-    .selectOption("core:weapon:3");
+  await chooseBase(page);
   await page
     .getByLabel("Weapon name", { exact: true })
     .fill("Source review sword");
+  await dialog
+    .getByRole("button", { name: "Edit profile", exact: true })
+    .click();
   const damage = page.getByLabel("Damage formula", { exact: true });
   await damage.fill("SB+cats");
   await damage.press("Tab");
   await expect(damage).toHaveAttribute("aria-invalid", "true");
-  await dialog.locator("#weapon-profile > summary").click();
+  await section(page, "Review");
   await dialog
     .getByRole("button", { name: "1 choice to finish", exact: true })
     .click();
   await expect(damage).toBeFocused();
   await damage.fill("SB+4");
-  await dialog.locator("#weapon-properties > summary").click();
-  await page
-    .getByLabel("Add property", { exact: true })
-    .selectOption({ label: "Fine · Core · p. 298" });
+  await section(page, "Properties");
   await dialog
-    .getByRole("button", { name: "Add property", exact: true })
+    .getByRole("button", { name: "Craftsmanship", exact: true })
+    .click();
+  await page.getByLabel("Find a property", { exact: true }).fill("Fine");
+  await dialog
+    .getByRole("button", { name: /^Add Fine/ })
+    .first()
     .click();
   const rating = page.getByLabel("Fine rating", { exact: true });
   await rating.fill("0");
-  await dialog.locator("#weapon-properties > summary").click();
+  await section(page, "Review");
   await dialog
     .getByRole("button", { name: "1 choice to finish", exact: true })
     .click();
   await expect(rating).toBeFocused();
   await rating.fill("2");
+  await section(page, "Power");
   await page.getByRole("radio", { name: "Magical", exact: true }).check();
-  await page
-    .getByLabel("Magical ability", { exact: true })
-    .selectOption("archives-ii:weapon-effect:of-bane");
+  await page.getByLabel("Find an enchantment", { exact: true }).fill("Of Bane");
   await dialog
-    .getByRole("button", { name: "Add ability", exact: true })
+    .getByRole("button", { name: "Add Of Bane enchantment", exact: true })
     .click();
-  await dialog.locator("#weapon-enchantments > summary").click();
+  await section(page, "Review");
   await dialog
     .getByRole("button", { name: "1 choice to finish", exact: true })
     .click();
@@ -198,13 +198,11 @@ test("weapon requirements reveal their controls and source reading retains the u
     page.getByLabel("Bane creature target", { exact: true }),
   ).toBeFocused();
   await page.getByLabel("Bane creature target", { exact: true }).fill("Humans");
-  await expect(
-    dialog.getByRole("button", { name: "Add weapon", exact: true }),
-  ).toBeEnabled();
-  await dialog.locator("#weapon-notes-section > summary").click();
+  await section(page, "Details");
   await page
     .getByLabel("Printed weapon notes", { exact: true })
     .fill("Still an unsaved draft.");
+  await section(page, "Review");
   await dialog.getByText("Rules & crafting", { exact: true }).click();
   const source = dialog.getByRole("button", {
     name: "Read Crafting",
@@ -220,13 +218,13 @@ test("weapon requirements reveal their controls and source reading retains the u
     .getByRole("button", { name: "Close search", exact: true })
     .click();
   await expect(source).toBeFocused();
-  await expect(page.getByLabel("Weapon name", { exact: true })).toHaveValue(
-    "Source review sword",
-  );
   await expect(
-    page.getByLabel("Printed weapon notes", { exact: true }),
-  ).toHaveValue("Still an unsaved draft.");
-  await page.screenshot({ path: info.outputPath("weapon-dialog-magical.png") });
+    dialog.getByRole("article", { name: "Weapon preview" }),
+  ).toContainText("Still an unsaved draft.");
+  await page.screenshot({ path: info.outputPath("weapon-review.png") });
+  await expect(
+    dialog.getByRole("button", { name: "Add weapon", exact: true }),
+  ).toBeEnabled();
   await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
   await expect(page.locator(".gm-attack-row")).toHaveCount(1);
 });

@@ -5,6 +5,7 @@ node_modules/
 test-results/
 __pycache__/
 playwright-report/
+.impeccable/review/
 content/descriptions/edits/
 
 .next/

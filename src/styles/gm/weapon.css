@@ -1,33 +1,70 @@
-.creator-dialog.weapon-dialog {
-  width: min(1120px, calc(100vw - 48px));
-  max-width: calc(100vw - 48px);
-  max-height: min(900px, calc(100dvh - 48px));
-  padding: 0;
-  overflow: hidden;
-}
 .creator-dialog.weapon-dialog[open] {
   display: flex;
   flex-direction: column;
+  width: min(1200px, calc(100vw - 48px));
+  max-width: calc(100vw - 48px);
+  height: min(820px, calc(100dvh - 48px));
+  max-height: calc(100dvh - 48px);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-surface);
+  background: var(--surface-working-leaf);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-dialog);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  scrollbar-color: var(--color-gold-dark) var(--color-paper-recessed);
+  caret-color: var(--color-crimson);
 }
 html:has(.weapon-dialog[open]) {
   overflow: hidden;
 }
+.weapon-dialog::backdrop {
+  background: var(--color-dialog-backdrop);
+}
+.weapon-dialog ::selection {
+  color: var(--color-ink);
+  background: var(--color-paper-hover);
+}
 .weapon-dialog > .gm-dialog-heading {
   flex: none;
   flex-wrap: nowrap;
-  gap: var(--space-4);
-  padding: var(--space-4) var(--space-6);
+  gap: 16px;
+  padding: 18px 28px;
+  border: 0;
+  background: var(--color-paper-raised);
+  color: var(--color-ink);
   border-bottom: 1px solid var(--color-line);
 }
 .weapon-dialog > .gm-dialog-heading h2 {
-  font: 28px / 1.2 var(--font-heading);
+  margin: 0;
   color: var(--color-crimson);
+  font: 400 28px/1.25 var(--font-heading);
+  letter-spacing: 0;
+  text-shadow: none;
+}
+.weapon-dialog > .gm-dialog-heading button {
+  background: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  box-shadow: none;
+  padding-inline: 18px;
 }
 .weapon-dialog button {
-  min-height: var(--control-touch);
+  min-height: 44px;
+  font-family: inherit;
+  box-shadow: none;
+}
+.weapon-dialog :is(button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.weapon-dialog :is(button, input, select, textarea) {
+  border-radius: var(--radius-control);
 }
 .weapon-workbench {
-  container: weapon-workbench / inline-size;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -36,317 +73,775 @@ html:has(.weapon-dialog[open]) {
   padding: 0;
   overflow: hidden;
 }
+.weapon-builder-context {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 28px;
+  color: var(--color-muted);
+  background: var(--color-paper-recessed);
+  border-bottom: 1px solid var(--color-line);
+  font-size: 12px;
+}
 .weapon-dialog-body {
+  display: grid;
+  grid-template-columns: 212px minmax(0, 1fr);
   flex: 1;
+  min-height: 0;
+}
+.weapon-dialog-body.is-catalogue {
+  grid-template-columns: minmax(0, 1fr);
+}
+.weapon-builder-nav {
+  padding: 24px 12px;
+  background: var(--color-paper-recessed);
+  border-right: 1px solid var(--color-line);
+}
+.weapon-base-record {
+  padding: 0 12px 22px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--color-line);
+}
+.weapon-base-record strong {
+  display: block;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+.weapon-base-record small {
+  display: block;
+  color: var(--color-muted);
+  margin: 4px 0 12px;
+}
+.weapon-base-record button {
+  background: transparent;
+  padding: 0 10px;
+  font-size: 12px;
+}
+.weapon-builder-nav > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 68px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  text-align: left;
+  color: var(--color-ink);
+}
+.weapon-builder-nav > button strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+.weapon-builder-nav > button small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.weapon-builder-nav > button[aria-current="page"] {
+  background: var(--color-paper-raised);
+  border-color: var(--color-gold-dark);
+  color: var(--color-crimson);
+}
+.weapon-nav-count {
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: var(--color-warning);
+  background: var(--color-warning-surface);
+  font-size: 12px;
+}
+.weapon-editor-scroll {
+  min-width: 0;
   min-height: 0;
   overflow: auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
-  padding: var(--space-5) var(--space-6);
+  padding: 28px 32px 40px;
 }
-.weapon-intro {
+.weapon-panel[hidden],
+.weapon-workbench [hidden] {
+  display: none;
+}
+.weapon-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+.weapon-panel-heading h3 {
+  margin: 0 0 7px;
+  font: 400 26px/1.25 var(--font-heading);
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+.weapon-panel-heading p {
+  margin: 0;
   max-width: 70ch;
-  margin: 0 0 var(--space-4);
   color: var(--color-muted);
-  font-size: var(--text-sm);
-  line-height: 1.5;
 }
-.weapon-identity {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 120px;
-  gap: var(--space-4);
-  margin-top: var(--space-4);
-}
-.weapon-workbench h3 {
-  margin-block: 0.5rem 0.75rem;
+.weapon-workbench h4 {
+  font: 400 21px/1.35 var(--font-heading);
+  margin: 0;
+  color: var(--color-ink);
 }
 .weapon-workbench h5 {
-  font-size: 0.9rem;
-  margin-block: 1rem 0.5rem;
+  font: 600 14px/1.4 var(--font-body);
+  margin: 24px 0 8px;
 }
-.weapon-layout {
-  display: grid;
-  grid-template-areas: "preview" "form";
-  gap: var(--space-5);
-  align-items: start;
+.weapon-workbench .field {
+  margin: 0 0 14px;
 }
-.weapon-form {
-  grid-area: form;
+.weapon-workbench .field > :is(label, span:first-child),
+.weapon-notes-field > label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.weapon-workbench
+  :is(input:not([type="radio"]):not([type="checkbox"]), select, textarea) {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  font: inherit;
+  padding: 10px 12px;
+}
+.weapon-workbench input::placeholder,
+.weapon-workbench textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+.weapon-workbench :is(input[type="radio"], input[type="checkbox"]) {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin: 0;
+  accent-color: var(--color-crimson);
+  flex: none;
+}
+.weapon-workbench label:has(> input[type="checkbox"]) {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+}
+.weapon-workbench textarea {
+  display: block;
+  resize: vertical;
+  margin-top: 8px;
 }
 .weapon-validated-field {
   min-width: 0;
 }
-.weapon-validated-field > .ui-field-issue {
-  margin: -4px 0 var(--space-3);
+.weapon-validated-field > :is(.ui-field-issue, .ui-field-hint) {
+  margin: -6px 0 14px;
 }
-.weapon-validated-field > .ui-field-hint {
-  margin: -4px 0 var(--space-3);
-}
-.weapon-form,
-.weapon-preview,
-.weapon-property > div,
-.weapon-fields > * {
-  min-width: 0;
+.weapon-workbench .gm-small,
+.weapon-help {
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.55;
 }
 .weapon-fields {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 18px;
 }
-.weapon-workbench .field {
-  margin: 0 0 12px;
+.weapon-name-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 100px;
+  gap: 20px;
 }
-.weapon-workbench :is(input, select, textarea) {
-  width: 100%;
-  min-width: 0;
-  max-width: 100%;
+.weapon-name-row input#weapon-name {
+  font-size: 19px;
 }
-.weapon-workbench textarea {
-  display: block;
-  margin-block: 6px 16px;
-  resize: vertical;
+.weapon-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 24px 0 14px;
 }
-.weapon-workbench details {
-  margin-block: 8px 12px;
-}
-.weapon-workbench .weapon-section {
+.weapon-subheading > p {
   margin: 0;
-  border: 0;
-  border-bottom: 1px solid var(--color-line);
-  padding: 0;
-}
-.weapon-section > summary {
-  min-height: 56px;
-  padding-block: var(--space-3);
-  font-weight: 650;
-}
-.weapon-section > summary small {
-  display: block;
-  margin: var(--space-1) 0 0 var(--space-4);
   color: var(--color-muted);
-  font-size: var(--text-xs);
-  font-weight: 400;
+  font-size: 12px;
 }
-.weapon-section-body {
-  padding-block: var(--space-2) var(--space-4);
+.weapon-profile-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 24px;
+  padding: 18px 0;
+  border-block: 1px solid var(--color-line);
 }
-.weapon-workbench summary {
-  min-height: var(--control-touch);
-  padding-block: var(--space-2);
-  cursor: pointer;
-  overflow-wrap: anywhere;
-}
-.weapon-workbench .weapon-base-picker {
-  padding: 0;
-  margin: 0;
-}
-.weapon-base-picker > summary small {
-  margin-left: var(--space-2);
+.weapon-profile-overview dt {
   color: var(--color-muted);
+  font-size: 12px;
+}
+.weapon-profile-overview dd {
+  margin: 3px 0 0;
+  font-weight: 600;
+}
+.weapon-notes-field {
+  margin-top: 24px;
 }
 .weapon-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
 }
-.weapon-workbench button {
-  min-height: 44px;
-}
-.weapon-property {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 12px;
-  align-items: start;
-  padding-block: 10px;
+.weapon-catalogue-tools {
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--color-line);
 }
-.weapon-property > button {
-  min-width: 44px;
+.weapon-catalogue-tools #weapon-base-search {
+  min-height: 50px;
+  font-size: 17px;
 }
-.weapon-add-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 8px;
+.weapon-catalogue-filter-row {
+  display: flex;
+  justify-content: space-between;
   align-items: end;
-  margin-block: 12px 20px;
+  gap: 24px;
 }
-.weapon-add-row > label {
-  grid-column: 1 / -1;
+.weapon-catalogue-filter-row .weapon-validated-field {
+  width: 240px;
 }
-.weapon-add-row .field {
+.weapon-catalogue-filter-row .field {
   margin: 0;
 }
-.weapon-power {
+.weapon-filter-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
+}
+.weapon-filter-buttons button {
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-line);
+  padding-inline: 18px;
+}
+.weapon-filter-buttons button[aria-pressed="true"] {
+  color: var(--color-on-crimson);
+  background: var(--color-crimson);
+  border-color: var(--color-crimson);
+}
+.weapon-result-count {
+  margin: 18px 0 10px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+.weapon-base-columns,
+.weapon-base-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(90px, 1fr) 90px 100px;
+  gap: 16px;
+  align-items: center;
+}
+.weapon-base-columns {
+  padding: 0 18px 10px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+.weapon-workbench .weapon-base-row {
+  width: 100%;
+  min-height: 76px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-line);
+  background: transparent;
+  text-align: left;
+  color: var(--color-ink);
+  font-weight: 400;
+}
+.weapon-base-name {
+  min-width: 0;
+}
+.weapon-base-name strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+.weapon-base-name small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+.weapon-base-stat {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.weapon-base-stat small {
+  display: none;
+}
+.weapon-load-more {
+  display: block;
+  margin: 20px auto 0;
+}
+.weapon-empty {
+  padding: 32px 12px;
+  text-align: center;
+}
+.weapon-empty-inline {
+  color: var(--color-muted);
+  padding-block: 10px;
+}
+.weapon-property,
+.weapon-option-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--color-line);
+}
+.weapon-property > div,
+.weapon-option-row > div {
+  min-width: 0;
+}
+.weapon-property strong,
+.weapon-option-row strong {
+  font-size: 15px;
+}
+.weapon-option-row small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+.weapon-property > button,
+.weapon-option-row > button {
+  min-width: 80px;
+}
+.weapon-option-row > button {
+  background: var(--color-paper-raised);
+  border-color: var(--color-line);
+  color: var(--color-crimson);
+}
+.weapon-option-library {
+  margin-top: 30px;
+}
+.weapon-option-library > .weapon-validated-field {
+  margin-top: 16px;
+}
+.weapon-workbench details {
   border: 0;
   padding: 0;
-  margin: 0 0 16px;
+  margin: 8px 0;
+  background: transparent;
 }
-.weapon-power label {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+.weapon-workbench summary {
   min-height: 44px;
-  padding: 8px 12px;
-  border: 1px solid var(--color-line);
+  padding-block: 11px;
   cursor: pointer;
+  color: var(--color-crimson);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+.weapon-workbench details p {
+  max-width: 72ch;
+  line-height: 1.6;
+}
+.weapon-rule > summary {
+  padding-block: 10px;
+}
+.weapon-power-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 28px;
+  border: 0;
+}
+.weapon-power-choices legend {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.weapon-power-choices label {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  min-height: 108px;
+  padding: 16px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-control);
   background: var(--color-paper-raised);
+  cursor: pointer;
 }
-.weapon-power label:has(input:checked) {
-  background: color-mix(in srgb, var(--color-crimson) 12%, var(--color-paper));
+.weapon-power-choices label:has(:checked) {
   border-color: var(--color-crimson);
-  box-shadow: inset 0 -2px var(--color-crimson);
+  background: var(--color-paper-hover);
 }
-.weapon-power label:focus-within {
-  outline: 2px solid var(--color-ink);
-  outline-offset: 2px;
+.weapon-power-choices label input {
+  margin-top: 3px;
 }
-.weapon-power input {
-  width: 16px;
-  min-height: 16px;
-  margin: 0;
+.weapon-power-choices strong {
+  display: block;
+  font-weight: 600;
 }
-.weapon-power legend {
-  font-size: 0.85rem;
-  margin-bottom: 6px;
+.weapon-power-choices small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.weapon-ordinary-note {
+  max-width: 65ch;
+  padding-block: 12px;
 }
 .weapon-rune-count {
   font-weight: 600;
-  color: var(--color-crimson);
-}
-.weapon-preview {
-  grid-area: preview;
-  padding: 16px;
-  border: 1px solid var(--color-line);
-  background: var(--color-paper);
-  overflow-wrap: anywhere;
-}
-.weapon-preview h3 {
-  font: 22px / 1.2 var(--font-heading);
-  margin: 0 0 var(--space-2);
-}
-.weapon-preview dl {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-2);
-  margin-block: var(--space-3);
-}
-.weapon-preview dl div {
-  min-width: 0;
-}
-.weapon-preview dt {
-  font-size: 0.8rem;
-  color: var(--color-muted);
-}
-.weapon-preview abbr {
-  text-decoration: none;
-}
-.weapon-preview dd {
-  font-weight: 600;
-  margin: 4px 0 0;
-}
-.weapon-preview p,
-.weapon-preview li {
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-.weapon-preview ul {
-  padding-left: 20px;
 }
 .weapon-confirm,
-.weapon-section-issues {
+.weapon-review-issues {
+  margin-block: 18px;
+  padding: 16px;
   border: 1px solid var(--color-warning);
-  padding: 10px 12px;
   background: var(--color-warning-surface);
-  margin-block: 12px;
+  color: var(--color-warning);
+}
+.weapon-confirm p {
+  margin: 0 0 12px;
+}
+.weapon-finished-record {
+  max-width: 72ch;
+  overflow-wrap: anywhere;
+}
+.weapon-finished-record h4 {
+  font-size: 28px;
+  line-height: 1.25;
+}
+.weapon-finished-record .weapon-attack-readout {
+  padding: 22px 0;
+  margin: 22px 0;
+  border-block: 1px solid var(--color-line);
+}
+.weapon-finished-properties {
+  font-weight: 600;
+}
+.weapon-preserve-lines {
+  white-space: pre-line;
+}
+.weapon-reference-section {
+  margin-top: 32px;
+  border-top: 1px solid var(--color-line);
+  padding-top: 16px;
+}
+.weapon-review-issues button {
+  display: block;
+  background: transparent;
+  text-align: left;
+  margin-top: 8px;
 }
 .weapon-dialog-footer {
   display: flex;
   flex: none;
   justify-content: space-between;
   align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-4) var(--space-6);
+  gap: 24px;
+  padding: 16px 28px;
   border-top: 1px solid var(--color-line);
+  background: var(--color-paper-raised);
 }
-.weapon-save-status {
+.weapon-attack-readout {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
   min-width: 0;
-  font-size: var(--text-xs);
+}
+.weapon-attack-readout dt {
+  font-size: 12px;
   color: var(--color-muted);
 }
-.weapon-preview-details > summary {
-  min-height: var(--control-touch);
-  padding-block: var(--space-3);
-  font-size: var(--text-sm);
+.weapon-attack-readout dd {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
 }
-.weapon-workbench .weapon-preview-details {
-  padding: 0;
+.weapon-commit {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.weapon-save-status {
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: right;
+}
+.weapon-save-status p {
   margin: 0;
-  border: 0;
-  border-top: 1px solid var(--color-line);
 }
-@container weapon-workbench (min-width: 760px) {
-  .weapon-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
-    grid-template-areas: "form preview";
+.weapon-workbench .weapon-issue-link {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--color-warning);
+  font-size: 12px;
+  text-decoration: underline;
+}
+.weapon-runtime-error {
+  max-width: 32ch;
+  margin: 0;
+  color: var(--color-error);
+  font-size: 12px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .weapon-workbench .weapon-base-row:hover {
+    background: var(--color-paper-hover);
   }
-  .weapon-preview {
-    position: sticky;
-    top: 0;
+  .weapon-builder-nav > button:not([aria-current="page"]):hover {
+    background: var(--color-paper-hover);
   }
-  .weapon-preview dl {
-    grid-template-columns: 1fr 1fr;
+  .weapon-option-row > button:hover {
+    background: var(--color-paper-hover);
+  }
+}
+@media (max-width: 960px) {
+  .weapon-dialog-body {
+    grid-template-columns: 172px minmax(0, 1fr);
+  }
+  .weapon-editor-scroll {
+    padding: 24px;
+  }
+  .weapon-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .weapon-commit {
+    gap: 10px;
+  }
+  .weapon-attack-readout {
+    gap: 16px;
+  }
+  .weapon-power-choices {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .weapon-power-choices label {
+    min-height: 62px;
+    padding: 12px;
+  }
+  .weapon-power-choices small {
+    margin-top: 2px;
   }
 }
 @media (max-width: 760px) {
-  .creator-dialog.weapon-dialog {
+  .creator-dialog.weapon-dialog[open] {
     width: 100vw;
     max-width: 100vw;
     height: 100dvh;
     max-height: 100dvh;
     margin: 0;
-    border: 0;
     border-radius: 0;
   }
   .weapon-dialog > .gm-dialog-heading {
-    padding: var(--space-3) var(--space-4);
-    padding-top: max(var(--space-3), env(safe-area-inset-top, 0px));
+    padding: 12px 16px;
+    padding-top: max(12px, env(safe-area-inset-top, 0px));
+  }
+  .weapon-dialog > .gm-dialog-heading h2 {
+    font-size: 26px;
+  }
+  .weapon-builder-context {
+    padding: 7px 16px;
+  }
+  .weapon-builder-context span + span {
+    display: none;
   }
   .weapon-dialog-body {
-    padding: var(--space-4);
-  }
-  .weapon-dialog-footer {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-2);
-    padding: var(--space-3) var(--space-4);
-    padding-bottom: max(var(--space-3), env(safe-area-inset-bottom, 0px));
   }
-  .weapon-dialog-footer > .weapon-actions {
+  .weapon-builder-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    flex: none;
+    padding: 8px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line);
   }
-  .weapon-dialog :is(input, select, textarea) {
+  .weapon-base-record {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 4px;
+    padding: 0 8px 4px;
+    border: 0;
+  }
+  .weapon-base-record strong {
+    font-size: 13px;
+  }
+  .weapon-base-record small {
+    display: none;
+  }
+  .weapon-base-record button {
+    min-height: 44px;
+  }
+  .weapon-builder-nav > button {
+    min-height: 44px;
+    padding: 8px 4px;
+    margin: 0;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
+  .weapon-builder-nav > button strong {
+    font-size: 12px;
+  }
+  .weapon-builder-nav > button small {
+    display: none;
+  }
+  .weapon-nav-count {
+    padding-inline: 4px;
+  }
+  .weapon-editor-scroll {
+    flex: 1;
+    padding: 22px 16px 28px;
+  }
+  .weapon-panel-heading {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .weapon-panel-heading h3 {
+    font-size: 25px;
+  }
+  .weapon-catalogue-filter-row {
+    display: block;
+  }
+  .weapon-catalogue-filter-row .weapon-validated-field {
+    width: 100%;
+    margin-top: 14px;
+  }
+  .weapon-filter-buttons button {
+    padding-inline: 14px;
+  }
+  .weapon-base-columns {
+    display: none;
+  }
+  .weapon-workbench .weapon-base-row {
+    grid-template-columns: minmax(0, 1fr) 60px 70px;
+    gap: 6px 12px;
+    padding: 14px 0;
+  }
+  .weapon-base-name {
+    grid-row: 1;
+  }
+  .weapon-base-name strong {
+    font-size: 15px;
+  }
+  .weapon-base-name small {
+    font-size: 12px;
+  }
+  .weapon-base-group {
+    grid-row: 2;
+    grid-column: 1/-1;
+    font-size: 12px;
+    color: var(--color-muted);
+  }
+  .weapon-base-stat {
+    grid-row: 1;
+    font-size: 13px;
+  }
+  .weapon-base-stat small {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-muted);
+  }
+  .weapon-name-row {
+    grid-template-columns: minmax(0, 1fr) 82px;
+    gap: 12px;
+  }
+  .weapon-workbench
+    :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
     font-size: 16px;
   }
-  .weapon-identity {
-    grid-template-columns: minmax(0, 1fr) 88px;
-    gap: var(--space-3);
+  .weapon-name-row input#weapon-name {
+    font-size: 16px;
+  }
+  .weapon-profile-overview {
+    gap: 18px 12px;
+  }
+  .weapon-property,
+  .weapon-option-row {
+    gap: 12px;
+  }
+  .weapon-dialog-footer {
+    display: block;
+    padding: 12px 16px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  }
+  .weapon-dialog-footer > .weapon-attack-readout {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-line);
+    gap: 12px;
+  }
+  .weapon-attack-readout dd {
+    font-size: 16px;
+  }
+  .weapon-commit {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .weapon-save-status {
+    text-align: left;
+  }
+  .weapon-commit .weapon-actions {
+    flex-wrap: nowrap;
+  }
+  .weapon-commit .weapon-actions button {
+    padding-inline: 12px;
+  }
+  .weapon-finished-record h4 {
+    font-size: 25px;
   }
 }
-@media (max-width: 479px) {
-  .weapon-add-row {
+@media (max-width: 359px) {
+  .weapon-fields {
     grid-template-columns: minmax(0, 1fr);
   }
-  .weapon-add-row > button {
-    justify-self: start;
+  .weapon-save-status {
+    max-width: 100px;
+  }
+  .weapon-attack-readout {
+    gap: 8px;
+  }
+}
+@media (max-height: 560px) and (max-width: 760px) {
+  .weapon-builder-context {
+    display: none;
+  }
+  .weapon-builder-nav {
+    padding-block: 4px;
+  }
+  .weapon-dialog-footer > .weapon-attack-readout {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+  .weapon-dialog-footer {
+    padding-block: 8px;
   }
 }
 @media print {
-  .weapon-workbench {
-    display: none;
+  .weapon-dialog {
+    display: none !important;
   }
 }
