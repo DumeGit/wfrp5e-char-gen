@@ -53,7 +53,7 @@ export function CharacterLibrary({
     <section className="manager-library-content">
       <div className="manager-page-heading">
         <div>
-          <h1>Your characters</h1>
+          <h1 data-workspace-focus="">Your characters</h1>
           <p className="manager-meta">
             Open a sheet and return to the adventure.
           </p>

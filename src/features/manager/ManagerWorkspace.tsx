@@ -142,6 +142,7 @@ export function ManagerWorkspace({
                 <div className="manager-name-line">
                   <h1
                     id="manager-character-name"
+                    data-workspace-focus={section === "play" ? "" : undefined}
                     title={record.sheet.name || "Unnamed character"}
                   >
                     {record.sheet.name || "Unnamed character"}

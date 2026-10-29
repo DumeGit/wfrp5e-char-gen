@@ -1,5 +1,11 @@
 /* Shared interface contract. Feature styles own layout; theme tokens own colour. */
 
+/* Supporting text on paper needs ink, not the pale dark-chrome status role. */
+.panel .footer-note,
+.manager-main .footer-note {
+  color: var(--color-muted);
+}
+
 .panel .creation-section-heading {
   font-size: 1.25rem;
 }

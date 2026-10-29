@@ -74,7 +74,14 @@ export function WorkspaceMenu({
   const childObserver = useRef<MutationObserver | null>(null);
   const childIntent = useRef<AbortController | null>(null);
   function focusEditor() {
-    const target = document.querySelector<HTMLElement>("#creator-main h1");
+    const main = document.querySelector<HTMLElement>("#creator-main");
+    const visible = (nodes: NodeListOf<HTMLElement>) =>
+      [...nodes].find((node) => node.getClientRects().length > 0);
+    const target =
+      main &&
+      (visible(main.querySelectorAll<HTMLElement>("[data-workspace-focus]")) ||
+        visible(main.querySelectorAll<HTMLElement>("h1")) ||
+        main);
     if (target) {
       target.tabIndex = -1;
       target.focus({ preventScroll: true });

@@ -20,6 +20,8 @@ The shared production design is **Imperial Desk A: oak panelling and aged parchm
 
 Feature styles own editor content grids, never another shell width, material or menu. Reuse the shared menu model instead of writing a separate mobile action list. Proposed component names in the contract are boundaries, not a requirement to create redundant wrappers.
 
+29 October refinements: mark the intended visible menu-navigation destination with `data-workspace-focus`; the shared resolver ignores non-rendered targets and falls back to a visible h1/main. Paper footer notes use `--color-muted`, while dark menu/public status text retains its own roles. Compact book setup shows its transient setup context instead of a saved creation step. Required recording/creation controls precede optional reference disclosures. These operate surfaces add no animation: frequent navigation, validation and data entry respond immediately.
+
 ## Materials and typography
 
 Every mode uses charcoal oak `#2b251f`, recess `#201c17`, parchment `#eddfbf`, raised paper `#f7edda`, ink `#352b20`, muted ink `#604b33`, brass `#c4a36b` and line `#c6b08b`. Mode primary actions remain Player oxblood, Bestiary cobalt, Marijan crimson and manager olive. Errors/success/warnings/Legacy retain separate semantic roles. Historical `--color-leather*` aliases mean shared dark chrome; they do not select a leather material.

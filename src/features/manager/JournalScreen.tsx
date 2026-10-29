@@ -34,7 +34,7 @@ export function JournalScreen({
   return (
     <section>
       <div className="manager-page-heading">
-        <h2>Journal</h2>
+        <h2 data-workspace-focus="">Journal</h2>
         <button
           type="button"
           className="manager-primary"

@@ -96,7 +96,7 @@ export function AdvancementScreen({
     <section className="manager-advancement">
       <div className="manager-page-heading">
         <div>
-          <h2>Advancement</h2>
+          <h2 data-workspace-focus="">Advancement</h2>
           <p className="manager-meta">
             {score(record.sheet.xpSpent)} XP spent · {score(result.xpTotal)}{" "}
             total
