@@ -789,7 +789,14 @@ export function BestiaryDialogs() {
   const [templateBook, setTemplateBook] = useState(""),
     [appearance, setAppearance] = useState("");
   if (!modal) return null;
-  const close = () => setModal(null),
+  const close = () => {
+      setModal(null);
+      if (modal.kind === "profile")
+        requestAnimationFrame(() => {
+          if (modal.opener?.isConnected)
+            modal.opener.focus({ preventScroll: true });
+        });
+    },
     kind = modal.kind;
   if (kind === "picker")
     return <PickerDialog key={`${kind}:${modal.entryKind}`} />;

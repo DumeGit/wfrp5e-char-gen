@@ -73,9 +73,6 @@
 .gm-books .gm-check {
   flex-wrap: wrap;
 }
-.gm-profile-card .legacy-tag {
-  pointer-events: none;
-}
 .gm-fields .field label {
   font-size: 12px;
 }
@@ -313,19 +310,23 @@
 }
 .gm-profile-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 8px;
 }
 .gm-profile-card {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: center;
+  align-items: baseline;
+  gap: 4px 12px;
   text-align: left;
-  padding: 16px;
+  padding: 10px 12px;
   border: 1px solid var(--color-line);
-  border-top: 3px double var(--color-gold);
   background: var(--color-paper-raised);
   color: var(--color-ink);
   min-width: 0;
-  box-shadow: 0 2px 4px #24150b0d;
+  min-height: 72px;
+  box-shadow: none;
 }
 @media (hover: hover) and (pointer: fine) {
   .gm-profile-card:hover {
@@ -336,38 +337,27 @@
 }
 
 .gm-profile-card strong {
-  display: block;
-  font: 21px/1.4 var(--font-heading);
-  margin: 5px 0 11px;
+  min-width: 0;
+  font: 18px/1.25 var(--font-heading);
+  margin: 0;
+  overflow-wrap: anywhere;
 }
-.gm-card-category {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.gm-card-size {
+  font-size: 12px;
   color: var(--color-muted);
-  display: block;
+  text-align: right;
 }
-.gm-card-stats {
+.gm-card-meta {
+  grid-column: 1 / -1;
   display: flex;
-  gap: 8px;
+  gap: 2px 12px;
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 12px;
-}
-.gm-card-stats b {
-  font-weight: 500;
-}
-.gm-profile-card > small {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid var(--color-line-soft);
-  padding-top: 10px;
-  margin-top: 12px;
-  font-size: 11px;
   color: var(--color-muted);
 }
-.gm-profile-card > small > span {
-  color: var(--color-crimson);
+.gm-card-meta small {
+  font: inherit;
 }
 .gm-empty {
   padding: 20px;
@@ -1332,9 +1322,6 @@
   .gm-char-row {
     gap: 6px;
   }
-  .gm-profile-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 @media (max-width: 1100px) and (min-width: 801px) {
   .gm-workspace {
@@ -1342,9 +1329,6 @@
   }
   .gm-workspace .rail {
     grid-row: 1 / span 2;
-  }
-  .gm-profile-grid {
-    grid-template-columns: 1fr;
   }
   .gm-characteristics {
     grid-template-columns: 1fr;
@@ -1427,17 +1411,6 @@
   }
   .gm-results-count {
     margin-top: 12px;
-  }
-  .gm-profile-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .gm-profile-card {
-    padding: 14px;
-  }
-  .gm-profile-card strong {
-    margin: 3px 0 9px;
-    font-size: 22px;
   }
   .gm-foundation,
   .gm-template-bar {

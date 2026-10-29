@@ -28,6 +28,8 @@ Bestiary derived values show Wounds and Toughness Bonus as read-only totals belo
 
 Rule-only descriptions open through the shared `RuleReference` ? button beside a name (`RuleName`); no per-rule expand arrow. Use a 32px desktop control and at least 44px on phones/coarse pointers, with the existing button skin, visible focus and a specific Read-name label. Keep native section/specialisation groups and actual editing panels collapsible. Names/parameters/ranks, sources, Legacy information and output Description switches remain distinct. The shared reader restores the opener and can show a reviewed source-only quote without publishing a new search result. No new animation.
 
+Bestiary browser cards use the shared raised paper and one thin border, with 18px Ledger Text names, 12px Size/category/citation metadata and no shadow or ornamental top rule. Use the full card as the Preview button: two compact lines, wrapping complete text, 10px × 12px padding, a 72px desktop baseline and 8px grid gaps; phone rows keep the shared 44px touch minimum while fitting their content. The grid fits 240px-minimum cards into the available editor width; no phone-specific title enlargement. Full mechanics/Legacy stay in Preview.
+
 ## Materials and typography
 
 Every mode uses charcoal oak `#2b251f`, recess `#201c17`, parchment `#eddfbf`, raised paper `#f7edda`, ink `#352b20`, muted ink `#604b33`, brass `#c4a36b` and line `#c6b08b`. Mode primary actions remain Player oxblood, Bestiary cobalt, Marijan crimson and manager olive. Errors/success/warnings/Legacy retain separate semantic roles. Historical `--color-leather*` aliases mean shared dark chrome; they do not select a leather material.

@@ -59,7 +59,6 @@ export const STEPS = [
   "Review & export",
 ];
 export const TABS = ["Characteristics", "Traits", "Skills & Talents"];
-const label = (R: any, entry: any) => sourceLabel(R, entry);
 function AbilityText({
   kind,
   entry,
@@ -547,24 +546,23 @@ export function Starting() {
                   type="button"
                   className="gm-profile-card"
                   key={p.id}
-                  onClick={() => setModal({ kind: "profile", entry: p })}
+                  aria-haspopup="dialog"
+                  aria-label={`Preview ${p.name}, ${p.category}, ${p.size}, ${sourceLabel(R, p, { legacy: false })}`}
+                  onClick={(event) => {
+                    event.currentTarget.focus({ preventScroll: true });
+                    setModal({
+                      kind: "profile",
+                      entry: p,
+                      opener: event.currentTarget,
+                    });
+                  }}
                 >
-                  <span className="gm-card-category">
-                    {p.category}
-                    {p.example ? " · Worked example" : ""}
-                  </span>
                   <strong>{p.name}</strong>
-                  <span className="gm-card-stats">
-                    <b>{p.size}</b>
-                    <span>
-                      M {p.stats.M} · WS {p.stats.WS} · W {p.stats.W}
-                    </span>
+                  <span className="gm-card-size">{p.size}</span>
+                  <span className="gm-card-meta">
+                    <span className="gm-card-category">{p.category}</span>
+                    <small>{sourceLabel(R, p, { legacy: false })}</small>
                   </span>
-                  <small>
-                    {label(R, p)}{" "}
-                    {p.adaptation && <span className="legacy-tag">Legacy</span>}
-                    <span>Preview →</span>
-                  </small>
                 </Button>
               ))}
             </div>
