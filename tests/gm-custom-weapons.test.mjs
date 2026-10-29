@@ -45,6 +45,22 @@ const effect = (name) => ({
   id: WEAPON_EFFECTS.find((e) => e.name === name).id,
   target: "",
 });
+
+test("weapon editor validation provides stable control destinations without changing its messages", () => {
+  const w = weapon();
+  w.name = "";
+  w.damage = "SB+cats";
+  w.quantity = 0;
+  const issues = customWeaponIssues(R, w, { structured: true });
+  assert.deepEqual(issues.map((issue) => issue.message), customWeaponIssues(R, w));
+  assert.deepEqual(issues.map((issue) => issue.target), ["#weapon-name", "#weapon-quantity", "#weapon-damage"]);
+  w.name = "Named sword";
+  w.damage = "SB+4";
+  w.quantity = 1;
+  w.power = "magical";
+  w.effects = [effect("Of Bane")];
+  assert.equal(customWeaponIssues(R, w, { structured: true })[0].target, "#weapon-bane");
+});
 const calc = (w) => {
   const s = draft();
   s.customWeapons = [w];

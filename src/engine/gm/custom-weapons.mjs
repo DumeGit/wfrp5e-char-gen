@@ -127,52 +127,70 @@ export function availableWeaponRunes(R, w) {
 }
 const runeTargets = (name) =>
   ["Grudge Rune", "Master Rune of the Slayer"].includes(name);
-export function customWeaponIssues(R, w) {
+export function customWeaponIssues(R, w, { structured = false } = {}) {
   const problems = [];
-  if (!w.name.trim()) problems.push("Give the weapon a name.");
+  let section = "profile",
+    sectionTarget = "#weapon-profile";
+  const add = (message, target = sectionTarget) =>
+    problems.push(structured ? { message, target, section } : message);
+  if (!w.name.trim()) add("Give the weapon a name.", "#weapon-name");
+  if (!integer(w.quantity, 1, 9999))
+    add("Use a quantity from 1 to 9999.", "#weapon-quantity");
   if (!damageFormula(w.damage, {}).valid)
-    problems.push("Use Damage such as SB+4, TB+2, 9 or — (no Damage).");
+    add("Use Damage such as SB+4, TB+2, 9 or — (no Damage).", "#weapon-damage");
   if (!R.weapons.some((b) => b.kind === w.kind && b.group === w.group))
-    problems.push("Choose a weapon group for this weapon type.");
+    add("Choose a weapon group for this weapon type.", "#weapon-group");
   if (!w.reach.trim())
-    problems.push(
+    add(
       w.kind === "melee"
         ? "Set the weapon’s Reach."
         : "Set the weapon’s Range, including units or its formula.",
+      "#weapon-reach",
     );
   if (w.kind === "melee" && !REACHES.includes(w.reach))
-    problems.push("Choose a printed melee Reach.");
+    add("Choose a printed melee Reach.", "#weapon-reach");
   let enc = w.enc;
   if (enc !== null) {
     if (w.properties.some((p) => rootName(p) === "Lightweight")) enc--;
     if (w.properties.some((p) => rootName(p) === "Bulky")) enc++;
     if (!integer(enc))
-      problems.push(
+      add(
         "The final Encumbrance must be nonnegative; adjust base Encumbrance or craftsmanship.",
+        "#weapon-enc",
       );
   }
+  section = "properties";
+  sectionTarget = "#weapon-properties";
   const names = w.properties.map(rootName);
   if (new Set(names).size !== names.length)
-    problems.push("Combine duplicate properties into one rated selection.");
-  for (const token of w.properties) {
+    add("Combine duplicate properties into one rated selection.");
+  for (const [index, token] of w.properties.entries()) {
     const def = propertyDefinition(token, w.propertySources?.[rootName(token)]),
       name = rootName(token);
     if (!def && !splitWeaponProperties(w.base.qualities).includes(token))
-      problems.push(`Unknown property: ${token}. Use Notes for custom rules.`);
+      add(`Unknown property: ${token}. Use Notes for custom rules.`);
     if (def && /\(Rating\)/i.test(def.name) && !/ \d+$/.test(token))
-      problems.push(`${name} needs a positive whole-number rating.`);
+      add(
+        `${name} needs a positive whole-number rating.`,
+        `#weapon-property-${index}`,
+      );
     if (
       def &&
       /\(Condition\)/.test(def.name) &&
       !/^Inflict \(.+\)$/.test(token)
     )
-      problems.push("Inflict needs a Condition or explicit printed parameter.");
+      add(
+        "Inflict needs a Condition or explicit printed parameter.",
+        `#weapon-property-${index}`,
+      );
     if (
       / \d+$/.test(token) &&
       !integer(Number(token.match(/(\d+)$/)[1]), 1, 100)
     )
-      problems.push(`${name} needs a rating from 1 to 100.`);
+      add(`${name} needs a rating from 1 to 100.`, `#weapon-property-${index}`);
   }
+  section = "power";
+  sectionTarget = "#weapon-power";
   if (
     w.power !== "magical" &&
     (w.effects.length ||
@@ -181,10 +199,12 @@ export function customWeaponIssues(R, w) {
       w.legendary ||
       w.ammunition)
   )
-    problems.push("Clear magical abilities before changing Power.");
+    add("Clear magical abilities before changing Power.");
   if (w.power !== "runic" && w.runes.length)
-    problems.push("Clear runes before changing Power.");
+    add("Clear runes before changing Power.");
   if (w.power === "magical") {
+    section = "enchantments";
+    sectionTarget = "#weapon-effect-select";
     if (
       w.ammunition &&
       !(
@@ -192,40 +212,39 @@ export function customWeaponIssues(R, w) {
         w.effects.some((e) => effectDefinition(e.id)?.min === 99)
       )
     )
-      problems.push(
-        "Hoarfrost ammunition needs its ranged enchantment result.",
-      );
+      add("Hoarfrost ammunition needs its ranged enchantment result.");
     if (
       !w.effects.length &&
       !w.legendary &&
       !w.customEffect.text.trim() &&
       !w.properties.includes("Magical")
     )
-      problems.push(
-        "Choose an enchantment or describe a custom magical effect.",
-      );
+      add("Choose an enchantment or describe a custom magical effect.");
     if (w.effects.length + Number(!!w.customEffect.text.trim()) > 5)
-      problems.push(
-        "A Legendary weapon can have at most five distinct abilities.",
-      );
+      add("A Legendary weapon can have at most five distinct abilities.");
     if (new Set(w.effects.map((e) => e.id)).size !== w.effects.length)
-      problems.push("Duplicate enchantments are not cumulative.");
+      add("Duplicate enchantments are not cumulative.");
     if (!!w.customEffect.name.trim() !== !!w.customEffect.text.trim())
-      problems.push("Custom magic needs both a name and its full effect.");
+      add(
+        "Custom magic needs both a name and its full effect.",
+        !w.customEffect.name.trim()
+          ? "#weapon-custom-name"
+          : "#weapon-custom-text",
+      );
     for (const selection of w.effects) {
       const effect = effectDefinition(selection.id);
       if (!effect || effect.min === 100)
-        problems.push(
+        add(
           "Choose a concrete magical ability; Legendary resolves additional rolls.",
         );
       if (effect?.target && !selection.target.trim())
-        problems.push("Choose or roll a creature target for Of Bane.");
+        add("Choose or roll a creature target for Of Bane.", "#weapon-bane");
       if (
         effect?.min === 99 &&
         w.kind === "ranged" &&
         (w.legendary || w.effects.length > 1 || w.customEffect.text)
       )
-        problems.push(
+        add(
           "Hoarfrost ammunition cannot be combined with a Legendary ranged weapon.",
         );
       if (
@@ -233,38 +252,41 @@ export function customWeaponIssues(R, w) {
         w.kind === "ranged" &&
         !integer(w.ammunition, 1, 10)
       )
-        problems.push("Set 1–10 pieces of Hoarfrost ammunition.");
+        add("Set 1–10 pieces of Hoarfrost ammunition.", "#weapon-ammo");
     }
   }
   if (w.power === "runic") {
+    section = "runes";
+    sectionTarget = "#weapon-rune-select";
     const count = w.runes.reduce((n, r) => n + r.count, 0);
-    if (!count || count > 3)
-      problems.push("Use one to three rune inscriptions.");
+    if (!count || count > 3) add("Use one to three rune inscriptions.");
     if (
       w.runes
         .filter((r) => weaponRune(R, r.id)?.master)
         .reduce((n, r) => n + r.count, 0) > 1
     )
-      problems.push("A runic item permits at most one Master Rune.");
+      add("A runic item permits at most one Master Rune.");
     if (new Set(w.runes.map((r) => r.id)).size !== w.runes.length)
-      problems.push("Combine repeated ordinary runes using their count.");
+      add("Combine repeated ordinary runes using their count.");
     if (!w.material)
-      problems.push("Choose a material suitable for permanent inscription.");
-    if (splitWeaponProperties(w.base.qualities).includes("Magical"))
-      problems.push(
-        "Runes cannot be added to an already enchanted non-runic base.",
+      add(
+        "Choose a material suitable for permanent inscription.",
+        "#weapon-material",
       );
+    if (splitWeaponProperties(w.base.qualities).includes("Magical"))
+      add("Runes cannot be added to an already enchanted non-runic base.");
     if (w.surface === "weapon") {
       if (w.kind !== "melee" || w.group === "Engineering")
-        problems.push(
+        add(
           "Weapon Runes require a melee weapon outside the Engineering group.",
         );
       if (w.weaponForm === "Other" && !w.formException.trim())
-        problems.push(
+        add(
           "Record the GM form exception for this non-standard melee weapon.",
+          "#weapon-form-exception",
         );
     } else if (!isArtilleryBase(w) || !w.dwarfArtillery || w.kind !== "ranged")
-      problems.push(
+      add(
         "Engineering Runes require an explicitly Dwarf-built Blackpowder cannon base.",
       );
     for (const row of w.runes) {
@@ -273,9 +295,12 @@ export function customWeaponIssues(R, w) {
         !rune ||
         !availableWeaponRunes(R, w).some((r) => runeKey(r) === row.id)
       )
-        problems.push("Choose a rune of the correct form.");
+        add("Choose a rune of the correct form.");
       if (runeTargets(rune?.name) && !row.target.trim())
-        problems.push(`${rune.name} needs a target.`);
+        add(
+          `${rune.name} needs a target.`,
+          `#weapon-rune-target-${row.id.replace(/[^a-z0-9-]/gi, "-")}`,
+        );
     }
   }
   return problems;

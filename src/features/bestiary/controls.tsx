@@ -246,11 +246,13 @@ export function Modal({
   children,
   close,
   className = "",
+  trapFocus = false,
 }: {
   title: string;
   children: ReactNode;
   close: () => void;
   className?: string;
+  trapFocus?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -271,6 +273,28 @@ export function Modal({
       className={`creator-dialog ${className}`}
       aria-labelledby="gm-dialog-title"
       onCancel={close}
+      onKeyDown={(event) => {
+        if (!trapFocus || event.key !== "Tab" || event.defaultPrevented) return;
+        const controls = [
+          ...event.currentTarget.querySelectorAll<HTMLElement>(
+            "button, input, select, textarea, summary, a[href], [tabindex]",
+          ),
+        ].filter(
+          (node) =>
+            node.tabIndex >= 0 &&
+            !node.matches(":disabled") &&
+            node.getClientRects().length,
+        );
+        const first = controls[0],
+          last = controls.at(-1);
+        if (!event.shiftKey && document.activeElement === last && first) {
+          event.preventDefault();
+          first.focus();
+        } else if (event.shiftKey && document.activeElement === first && last) {
+          event.preventDefault();
+          last.focus();
+        }
+      }}
     >
       <div className="gm-dialog-heading">
         <h2 id="gm-dialog-title">{title}</h2>

@@ -11,7 +11,11 @@ if (
   throw Error("WFRP_DEV_URL must use a local HTTP development server.");
 export default {
   ...base,
-  testMatch: ["**/react-rendering.spec.mjs", "**/review.spec.mjs"],
+  testMatch: [
+    "**/react-rendering.spec.mjs",
+    "**/review.spec.mjs",
+    "**/gm-weapon-dialog.spec.mjs",
+  ],
   outputDir: "test-results/dev-rendering",
   reporter: [["dot"]],
   timeout: 90000,

@@ -111,6 +111,7 @@ test("weapon workbench creates and edits an independent weapon with history and 
     .getByLabel("Weapon name", { exact: true })
     .fill("Watch Captain’s blade");
   await page.getByLabel("Damage formula", { exact: true }).fill("SB+5");
+  await form.getByText("Notes & references", { exact: true }).click();
   await page
     .getByLabel("Printed weapon notes", { exact: true })
     .fill("Etched with the captain’s seal.");
@@ -130,6 +131,15 @@ test("weapon workbench creates and edits an independent weapon with history and 
   await page.getByLabel("Damage formula", { exact: true }).fill("SB+6");
   await form.getByRole("button", { name: "Save changes", exact: true }).click();
   await expect(row).toContainText("Etched with the captain’s seal.");
+  const editWeapon = row.getByRole("button", { name: /Edit .* weapon/ });
+  await expect(editWeapon).toBeFocused();
+  await editWeapon.click();
+  await page.getByLabel("Damage formula", { exact: true }).fill("SB+99");
+  await page
+    .getByRole("dialog", { name: "Edit weapon", exact: true })
+    .getByRole("button", { name: "Close", exact: true })
+    .click();
+  await expect(editWeapon).toBeFocused();
   const saved = await downloadBytes(
     page,
     page.getByRole("button", { name: "Save NPC / creature", exact: true }),
@@ -178,7 +188,7 @@ test("weapon workbench creates and edits an independent weapon with history and 
   ).toBeFocused();
 });
 
-test("magical effects and rune restrictions integrate with the inline weapon preview @gm @mobile", async ({
+test("magical effects and rune restrictions integrate with the weapon dialog preview @gm @mobile", async ({
   page,
 }, info) => {
   if (page.viewportSize().width < 540)

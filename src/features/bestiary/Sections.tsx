@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { WeaponWorkbench } from "./WeaponWorkbench";
 import { KEYS, base, talentInfo } from "../../engine/rules.mjs";
 import {
@@ -1683,12 +1683,16 @@ export function EquipmentMagic() {
   const { rules: R, draft: s, result: r, edit, picker } = useBestiary();
   const [weaponEditor, setWeaponEditor] = useState<any>(null);
   const [creatingWeapon, setCreatingWeapon] = useState(false);
+  const weaponOpener = useRef<HTMLElement | null>(null);
   const closeWeapon = () => {
     setCreatingWeapon(false);
     setWeaponEditor(null);
-    requestAnimationFrame(() =>
-      document.getElementById("gm-create-weapon")?.focus(),
-    );
+    requestAnimationFrame(() => {
+      const target = weaponOpener.current?.isConnected
+        ? weaponOpener.current
+        : document.getElementById("gm-create-weapon");
+      target?.focus({ preventScroll: true });
+    });
   };
   if (!r.profile)
     return <p className="gm-empty">Choose a starting profile first.</p>;
@@ -1703,7 +1707,8 @@ export function EquipmentMagic() {
         <div className="weapon-actions">
           <Button
             id="gm-create-weapon"
-            onClick={() => {
+            onClick={(event) => {
+              weaponOpener.current = event.currentTarget;
               setWeaponEditor(null);
               setCreatingWeapon(true);
             }}
@@ -1778,7 +1783,8 @@ export function EquipmentMagic() {
             {a.custom && (
               <Button
                 aria-label={`Edit ${a.name} weapon`}
-                onClick={() => {
+                onClick={(event) => {
+                  weaponOpener.current = event.currentTarget;
                   setWeaponEditor(
                     s.customWeapons.find((w: any) => w.key === a.key),
                   );
