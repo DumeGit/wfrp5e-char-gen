@@ -25,7 +25,8 @@ For prose-only changes, check factual source paths, local links and stale claims
 
 ## Current product and maintenance guides
 
-- [Impeccable critique implementation plan](IMPECCABLE-IMPLEMENTATION-PLAN.md) — complete scope, implementation sequence, invariants and acceptance checks; fixes not yet implemented
+- [Impeccable critique implementation plan](IMPECCABLE-IMPLEMENTATION-PLAN.md) — completed scope, sequence, invariants and acceptance checks
+- [Impeccable implementation](IMPECCABLE-IMPLEMENTATION.md) — all nine changes, Before/After rationale, verification and independent 29→32/40 re-critique
 - [Product context](../PRODUCT.md) — public player/GM audience, purpose, workflow boundaries and durable constraints
 - [Project instructions](../AGENTS.md) — `AGENTS.md`
 - [WFRP Character Ledger](../README.md) — `README.md`

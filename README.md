@@ -2,7 +2,7 @@
 
 [PRODUCT.md](PRODUCT.md) captures the confirmed public audience, product purpose and durable constraints for future design work. Impeccable's workflow preference is stored separately in `.impeccable/config.json`; the existing visual system remains documented below.
 
-The [whole-project critique implementation plan](docs/IMPECCABLE-IMPLEMENTATION-PLAN.md) maps all five priority recommendations and smaller findings to concrete code owners, acceptance checks and a phased implementation sequence. The critique and plan are complete; the planned UI fixes are not yet implemented.
+All nine findings in the [whole-project critique implementation plan](docs/IMPECCABLE-IMPLEMENTATION-PLAN.md) are implemented. The [completion report](docs/IMPECCABLE-IMPLEMENTATION.md) records the Before/After rationale, browser verification and independent re-critique (29→32/40), including the new follow-up backlog.
 
 The four workspaces share the **Imperial Desk**: oak panelling, aged parchment, a wider joined menu, workspace switcher and grouped actions. Desktop starts at 1101px; compact menus preserve each tool's editing/navigation and history. The [design system](docs/DESIGN-SYSTEM.md) and [continuing contract](docs/UNIFIED-DESIGN-IMPLEMENTATION-PLAN.md) govern future UI changes.
 
@@ -215,7 +215,7 @@ Regression coverage includes the audit cases, complete 1,000 XP Soldier creation
 
 Origins integrates first name and surname/epithet directly into the main form. Each can be typed, selected from the Species’ printed suggestions, or rolled independently; a full-name roll is also available. Name parts update the folio and saved/exported full name immediately. Old full names remain unchanged until a part is edited, and multiword custom names persist as separate parts. Eye colour, hair colour and Dwarf clan use the same editable book-list and roll controls. Rolls choose uniformly from printed lists and retain their page references; they are suggestions, not invented rulebook roll tables.
 
-Origins uses tighter spacing, adjacent dice buttons, a compact starting-resource strip and shorter editable background/ambition fields. Random-creation explanations expand on demand; supplement choices and warnings remain visible. Phone fields retain 16px text and 44px controls, with eyes/hair side by side. Career roll controls appear first, followed by the chosen Career summary and searchable browser. Rolled selections populate Find a Career and reset Class/Source filters so the result is visible; choosing a result from the three offers does the same. Manual searches remain independent of the chosen Career. These browsing values are not stored in character files.
+Origins uses tighter spacing, adjacent dice buttons, a compact starting-resource strip and shorter editable background/ambition fields. Random-creation explanations expand on demand; supplement choices and warnings remain visible. Phone fields retain 16px text and 44px controls, with eyes/hair side by side. Career roll controls appear first, followed by the chosen Career, required choices and contextual Continue. Alternatives and the complete Career path expand separately; the searchable browser stays directly available until a Career is chosen. Rolled selections populate Find a Career and reset Class/Source filters so the result is visible; choosing a result from the three offers does the same. Manual searches remain independent of the chosen Career. These browsing values are not stored in character files.
 
 
 ## Archives of the Empire I

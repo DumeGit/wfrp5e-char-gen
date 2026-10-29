@@ -1,5 +1,7 @@
 # Local testing
 
+29 October Impeccable follow-up: `tests/browser/impeccable-plan.spec.mjs` covers the nine-item implementation across desktop/phone, including visible manager destination/next Tab, paper-note contrast, identical book actions, Career/Gear continuation, actual Review JSON creator-reload/independent manager-import, incomplete-save gates, compact profile filter recovery and characteristic geometry at 320–2560px. Manager tests add failed-summary/retry and keyboard disclosure at 320×480. Tablet coverage requires the first profile header to clear fixed history. See [IMPECCABLE-IMPLEMENTATION.md](IMPECCABLE-IMPLEMENTATION.md) for exact runs, resolved failures, limits and the independent re-critique; this is not a new full release-chain claim.
+
 ## Bestiary weapon creator — 28 October 2026
 
 The [ordinary/magical/runic workbench](WEAPON-CREATOR.md) is implemented, with immutable published bases, NPC-local saved profiles, source-specific properties, explicit calculations, complete conditional effects, recorded enchantment rolls and linked Hoarfrost ammunition. The supplied Archives II pp. 55 and 58–59 and Dwarf Guide pp. 125–128/131–132 informed the source review. The original overlapping table is preserved privately; the user-approved 25–28/29–31 correction is explicit in the new source.

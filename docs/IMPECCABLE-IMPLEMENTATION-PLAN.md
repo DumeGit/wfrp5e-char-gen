@@ -1,6 +1,6 @@
 # Whole-project critique: implementation plan
 
-29 October 2026. **Planning complete; implementation has not started.** Scope is all actionable findings from the [whole-project critique](../.impeccable/critique/2026-10-29T08-30-10Z__src-app.md), including its smaller observations. The user requested the complete critique and a plan; no further priority interview is needed to produce this plan.
+29 October 2026. **Implementation complete.** All F01–F09 findings are implemented and verified; D01/N01 remain deliberate preservation constraints. The [completion report](IMPECCABLE-IMPLEMENTATION.md) records evidence and the independent follow-up critique. The original scope remains all actionable findings from the [whole-project critique](../.impeccable/critique/2026-10-29T08-30-10Z__src-app.md), including its smaller observations.
 
 The baseline is **29/40, Good**, with five P2 priorities and no P0/P1 established in the inspected workflows. The critique was recorded in `8e23539`; source reinspection for this plan found the same causes. The score is an expert-review judgment, not a measured task-success rate. The original snapshot remains historical evidence and must not be rewritten as fixes land.
 
@@ -127,5 +127,5 @@ Finish with `$impeccable polish` across the touched surfaces, then re-run `$impe
 | -------------------------------------- | ----------- | --------------------------------------------------------------------------------------------- |
 | Whole-project critique                 | Complete    | [Archived report](../.impeccable/critique/2026-10-29T08-30-10Z__src-app.md); commit `8e23539` |
 | Finding-by-finding implementation plan | Complete    | This document: F01–F09, D01, N01; owner files, sequence, acceptance and verification          |
-| Application fixes                      | Not started | This task changes documentation only; no implementation test pass is claimed                  |
-| Post-fix review                        | Planned     | Phase 6, after evidence-backed completion of the implementation slices                        |
+| Application fixes                      | Complete | F01–F09; [implementation and verification](IMPECCABLE-IMPLEMENTATION.md) |
+| Post-fix review                        | Complete | [Independent follow-up snapshot](../.impeccable/critique/2026-10-29T09-10-36Z__src-app.md), 32/40; new backlog disclosed |
