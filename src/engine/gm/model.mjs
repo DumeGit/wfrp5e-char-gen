@@ -1031,23 +1031,9 @@ export function calculateGM(data, R, s) {
     size !== p.size ||
     swarm !== p.traits.some((t) => t.name === "Swarm") ||
     construct !== p.traits.some((t) => t.name === "Construct");
-  let tb = p.toughnessBonus ?? bonus(stats.T);
-  const tbConflict =
-    p.toughnessBonus !== null && p.toughnessBonus !== bonus(p.stats.T);
-  if (changed) tb = bonus(stats.T);
-  if (s.tbMode === "printed") tb = p.toughnessBonus ?? bonus(p.stats.T);
-  if (s.tbMode === "calculated") tb = bonus(stats.T);
-  if (s.tbMode === "manual") {
-    tb = s.tb;
-    if (tb === null) add("Set a manual Toughness Bonus.", 1, "#gm-tb");
-  }
-  if (tbConflict && changed && !s.tbMode)
-    add(
-      "The printed Toughness Bonus conflicts with Toughness. Choose which value to use before exporting this changed profile.",
-      1,
-      "#gm-tb-mode",
-      "source.tb",
-    );
+  // Old schema-2 tbMode/tb fields remain readable, but no longer choose a
+  // hidden alternative to the automatic bonus shown in the workshop.
+  const tb = changed ? bonus(stats.T) : (p.toughnessBonus ?? bonus(stats.T));
   const hardy = talents
       .filter((t) => base(t.name) === "Hardy")
       .reduce((n, t) => n + t.ranks, 0),

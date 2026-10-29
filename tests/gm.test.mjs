@@ -379,19 +379,24 @@ test("Tiny requires an early structured issue and blocks PDF until a manual Woun
   s.wounds = 2;
   assert.equal(result(s).issues.length, 0);
 });
-test("Orc retains printed TB4 until a changed profile requires an explicit decision", () => {
+test("Orc preserves its printed baseline and automatically derives TB and Wounds after changes", () => {
   const s = draft("Orc");
   assert.equal(result(s).tb, 4);
+  assert.equal(result(s).wounds, 11);
   s.stats.T = 40;
   let r = result(s);
-  assert.ok(r.issues.some((x) => x.code === "source.tb"));
-  s.tbMode = "printed";
-  r = result(s);
   assert.equal(r.tb, 4);
+  assert.equal(r.wounds, 13);
   assert.equal(r.issues.length, 0);
   s.stats.T = 50;
-  s.tbMode = "calculated";
-  assert.equal(result(s).tb, 5);
+  for (const mode of ["", "printed", "calculated", "manual"]) {
+    s.tbMode = mode;
+    s.tb = mode === "manual" ? 9 : null;
+    r = result(s);
+    assert.equal(r.tb, 5);
+    assert.equal(r.wounds, 15);
+    assert.equal(r.issues.length, 0);
+  }
 });
 test("templates use higher Skill bonuses, require distinct alternatives and never stack", () => {
   const s = draft("Human Watchman");

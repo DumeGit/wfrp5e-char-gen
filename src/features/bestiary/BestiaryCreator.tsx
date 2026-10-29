@@ -476,7 +476,7 @@ function Workshop({ verify }: { verify: boolean }) {
     else if (target === "#gm-tab-2") setUI({ tab: 2 });
     else if (
       target.startsWith("#stat-") ||
-      ["#gm-size", "#gm-wounds", "#gm-tb", "#gm-tb-mode"].includes(target)
+      ["#gm-size", "#gm-wounds"].includes(target)
     )
       setUI({ tab: 0 });
     requestAnimationFrame(() => {

@@ -24,6 +24,8 @@ Feature styles own editor content grids, never another shell width, material or 
 
 Mobile bottom-bar Undo/Redo targets are 64px wide and 44px high, separated by 8px, across the three creators. The wider shared controls preserve room for Player balances and workshop status; desktop rail sizing remains independent.
 
+Bestiary derived values show Wounds and Toughness Bonus as read-only totals below Size and the optional Wounds override. Changed builds calculate TB automatically; no TB source selector or manual TB field remains. Tiny keeps its focused manual-Wounds recovery.
+
 ## Materials and typography
 
 Every mode uses charcoal oak `#2b251f`, recess `#201c17`, parchment `#eddfbf`, raised paper `#f7edda`, ink `#352b20`, muted ink `#604b33`, brass `#c4a36b` and line `#c6b08b`. Mode primary actions remain Player oxblood, Bestiary cobalt, Marijan crimson and manager olive. Errors/success/warnings/Legacy retain separate semantic roles. Historical `--color-leather*` aliases mean shared dark chrome; they do not select a leather material.

@@ -964,44 +964,24 @@ function Characteristics() {
           type="number"
           min="0"
           value={s.wounds ?? ""}
-          placeholder="Calculated / printed"
+          placeholder={r.wounds === null ? "Required" : "Auto"}
           onChange={(v) =>
             edit((d: any) => {
               d.wounds = numberValue(v);
             }, "wounds")
           }
         />
-        <Select
-          label="Toughness Bonus"
-          id="gm-tb-mode"
-          options={[
-            ["", "Printed until changed"],
-            ["printed", "Keep printed bonus"],
-            ["calculated", "Calculate from Toughness"],
-            ["manual", "Set manually"],
-          ]}
-          value={s.tbMode}
-          onChange={(v) =>
-            edit((d: any) => {
-              d.tbMode = v;
-            })
-          }
-        />
-        {s.tbMode === "manual" && (
-          <Field
-            label="Manual Toughness Bonus"
-            id="gm-tb"
-            type="number"
-            min="0"
-            value={s.tb ?? ""}
-            onChange={(v) =>
-              edit((d: any) => {
-                d.tb = numberValue(v);
-              }, "tb")
-            }
-          />
-        )}
       </div>
+      <p className="gm-small">
+        Wounds:{" "}
+        <strong>
+          <output aria-label="Wounds total">{r.wounds ?? "—"}</output>
+        </strong>
+        {" · "}Toughness Bonus:{" "}
+        <strong>
+          <output aria-label="Toughness Bonus total">{r.tb ?? "—"}</output>
+        </strong>
+      </p>
       <Check
         checked={s.recalculate}
         onChange={(v) =>
@@ -1022,7 +1002,8 @@ function Characteristics() {
         </p>
         <p>
           Untouched profiles retain printed Wounds, attacks and Toughness Bonus.
-          Changed profiles use the core Size formula (pp. 360–361). Tiny
+          Changed profiles automatically calculate Toughness Bonus from current
+          Toughness and Wounds with the core Size formula (pp. 360–361). Tiny
           requires manual Wounds. Situational effects remain references for
           play.
         </p>

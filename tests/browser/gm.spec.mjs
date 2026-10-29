@@ -216,6 +216,45 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   ).toBeEnabled();
 });
 
+test("Wounds follow automatic Toughness Bonus without a source selector @gm @mobile", async ({
+  page,
+}, info) => {
+  await openGM(page);
+  await applyProfile(page, "Orc");
+  await gmStep(page, "Customise");
+  await expect(
+    page.getByRole("combobox", { name: "Toughness Bonus", exact: true }),
+  ).toHaveCount(0);
+  const wounds = page.getByLabel("Wounds total", { exact: true });
+  const bonus = page.getByLabel("Toughness Bonus total", { exact: true });
+  await expect(wounds).toHaveText("11");
+  await page
+    .getByRole("spinbutton", { name: "T starting score", exact: true })
+    .fill("50");
+  await expect(bonus).toHaveText("5");
+  await expect(wounds).toHaveText("15");
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(wounds).toHaveText("11");
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  await expect(wounds).toHaveText("15");
+  const override = page.getByRole("spinbutton", {
+    name: "Wounds override",
+    exact: true,
+  });
+  await override.fill("20");
+  await expect(wounds).toHaveText("20");
+  await override.fill("");
+  await expect(wounds).toHaveText("15");
+  await expect(page.locator("#gm-tb-mode, #gm-tb")).toHaveCount(0);
+  await wounds.scrollIntoViewIfNeeded();
+  await noOverflow(page);
+  await page.screenshot({ path: info.outputPath("automatic-wounds.png") });
+  await gmStep(page, "Review & export");
+  await expect(
+    page.getByRole("button", { name: "Export PDF", exact: true }),
+  ).toBeEnabled();
+});
+
 test("Trait picker prioritises names while typing and keeps description search @gm @mobile", async ({
   page,
 }) => {
