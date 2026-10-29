@@ -1087,6 +1087,11 @@
 .gm-bulk-choice strong {
   font-size: 14px;
 }
+.gm-bulk-summary {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+}
 .gm-bulk-choice small,
 .gm-bulk-group > summary small {
   display: block;

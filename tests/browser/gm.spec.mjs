@@ -168,7 +168,7 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent"].includes(kind)) {
+    if (["Add Skill", "Add Talent", "Add Trait"].includes(kind)) {
       await page
         .getByRole("dialog")
         .getByRole("checkbox", { name: `Select ${name}`, exact: true })
@@ -176,7 +176,7 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
       await page
         .getByRole("dialog")
         .getByRole("button", {
-          name: kind === "Add Skill" ? "Add 1 Skill" : "Add 1 Talent",
+          name: `Add 1 ${kind.slice(4)}`,
           exact: true,
         })
         .click();
@@ -226,7 +226,7 @@ test("Trait picker prioritises names while typing and keeps description search @
   await page.getByRole("tab", { name: "Traits", exact: true }).click();
   await page.getByRole("button", { name: "Add Trait", exact: true }).click();
   const search = page.locator("#gm-picker-search"),
-    names = page.locator("#gm-picker-results .gm-picker-row strong");
+    names = page.locator("#gm-picker-results .gm-bulk-choice strong");
   await search.pressSequentially("tra");
   await expect(names).toContainText(["Trained"]);
   expect((await names.allTextContents()).indexOf("Trained")).toBeLessThan(3);
@@ -241,10 +241,9 @@ test("Trait picker prioritises names while typing and keeps description search @
   await expect(names).toContainText(["Trained"]);
   await search.fill("trai");
   await page
-    .locator("#gm-picker-results .gm-picker-row")
-    .first()
-    .getByRole("button", { name: "Add", exact: true })
-    .click();
+    .getByRole("checkbox", { name: "Select Trained", exact: true })
+    .check();
+  await page.getByRole("button", { name: "Add 1 Trait", exact: true }).click();
   await expect(page.locator(".gm-entry-list")).toContainText("Trained");
 });
 
@@ -562,10 +561,9 @@ test("Ogre Spellcaster offers Great Maw and Firebelly Fire while excluding other
   await page.getByRole("button", { name: "Add Trait", exact: true }).click();
   await page.locator("#gm-picker-search").fill("Spellcaster");
   await page
-    .locator(".gm-picker-row")
-    .filter({ has: page.getByText("Spellcaster", { exact: true }) })
-    .getByRole("button", { name: "Add", exact: true })
-    .click();
+    .getByRole("checkbox", { name: "Select Spellcaster", exact: true })
+    .check();
+  await page.getByRole("button", { name: "Add 1 Trait", exact: true }).click();
   await page
     .getByRole("checkbox", { name: "The Great Maw", exact: true })
     .check();
@@ -630,7 +628,7 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent"].includes(kind)) {
+    if (["Add Skill", "Add Talent", "Add Trait"].includes(kind)) {
       await page
         .getByRole("dialog")
         .getByRole("checkbox", { name: `Select ${name}`, exact: true })
@@ -638,7 +636,7 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
       await page
         .getByRole("dialog")
         .getByRole("button", {
-          name: kind === "Add Skill" ? "Add 1 Skill" : "Add 1 Talent",
+          name: `Add 1 ${kind.slice(4)}`,
           exact: true,
         })
         .click();
@@ -695,7 +693,7 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent"].includes(kind)) {
+    if (["Add Skill", "Add Talent", "Add Trait"].includes(kind)) {
       await page
         .getByRole("dialog")
         .getByRole("checkbox", { name: `Select ${name}`, exact: true })
@@ -703,7 +701,7 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
       await page
         .getByRole("dialog")
         .getByRole("button", {
-          name: kind === "Add Skill" ? "Add 1 Skill" : "Add 1 Talent",
+          name: `Add 1 ${kind.slice(4)}`,
           exact: true,
         })
         .click();

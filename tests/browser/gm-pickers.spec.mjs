@@ -250,6 +250,98 @@ test("equipment filters narrow by type and dependent group, reset stale choices 
   await page.screenshot({ path: info.outputPath("equipment-boats.png") });
 });
 
+test("Trait picker adds multiple entries with editable parameters in one history action @gm @mobile", async ({
+  page,
+}, info) => {
+  await openGM(page);
+  await applyProfile(page, "Human");
+  await gmStep(page, "Customise");
+  await page.getByRole("tab", { name: "Traits", exact: true }).click();
+  const open = () =>
+    page.getByRole("button", { name: "Add Trait", exact: true }).click();
+  await open();
+  const dialog = page.getByRole("dialog", {
+    name: "Add Creature Trait",
+    exact: true,
+  });
+  const search = dialog.getByLabel("Search trait", { exact: true });
+  await expect(
+    dialog.getByRole("button", { name: "Add selected Traits", exact: true }),
+  ).toBeDisabled();
+  await expect(
+    dialog.getByRole("checkbox", { name: "Select Size", exact: true }),
+  ).toHaveCount(0);
+  await search.fill("Fear");
+  const fear = dialog.locator(".gm-bulk-choice").filter({
+    has: page.getByRole("checkbox", { name: "Select Fear", exact: true }),
+  });
+  await expect(fear.locator(".gm-bulk-summary")).not.toBeEmpty();
+  await fear.locator("label").click();
+  await search.fill("Fly");
+  await dialog
+    .getByRole("checkbox", { name: "Select Fly", exact: true })
+    .check();
+  await search.fill("Fear");
+  await expect(
+    dialog.getByRole("checkbox", { name: "Select Fear", exact: true }),
+  ).toBeChecked();
+  await noOverflow(page);
+  await page.screenshot({ path: info.outputPath("bulk-traits.png") });
+  await dialog
+    .getByRole("button", { name: "Add 2 Traits", exact: true })
+    .click();
+  const row = (name) =>
+    page.locator(".gm-ability-entry").filter({
+      has: page.getByRole("switch", {
+        name: `${name === "Fear" ? "Fear (1)" : name} description`,
+        exact: true,
+      }),
+    });
+  await expect(row("Fear").locator("input[data-trait]")).toHaveValue("1");
+  await expect(row("Fly").locator("input[data-trait]")).toHaveValue("");
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(row("Fear")).toHaveCount(0);
+  await expect(row("Fly")).toHaveCount(0);
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  await expect(row("Fear")).toBeVisible();
+  await expect(row("Fly")).toBeVisible();
+  const json = JSON.parse(
+    (
+      await downloadBytes(
+        page,
+        page.getByRole("button", { name: "Save NPC / creature", exact: true }),
+      )
+    ).bytes,
+  );
+  expect(
+    json.traits
+      .filter((entry) => ["Fear", "Fly"].includes(entry.name))
+      .map(({ name, value, ranks, origin }) => ({
+        name,
+        value,
+        ranks,
+        origin,
+      })),
+  ).toEqual([
+    { name: "Fear", value: "1", ranks: 1, origin: "GM" },
+    { name: "Fly", value: "", ranks: 1, origin: "GM" },
+  ]);
+  await open();
+  await search.fill("Fear");
+  await expect(
+    dialog.getByRole("checkbox", { name: "Select Fear", exact: true }),
+  ).toBeDisabled();
+  await search.fill("Regeneration");
+  await dialog
+    .getByRole("checkbox", { name: "Select Regeneration", exact: true })
+    .check();
+  await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
+  await expect(row("Regeneration")).toHaveCount(0);
+  await open();
+  await expect(dialog.getByRole("status")).toHaveText("0 selected");
+  await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
+});
+
 test("Skill and Talent pickers add multiple exact specialisations in one history action @gm @mobile", async ({
   page,
 }, info) => {

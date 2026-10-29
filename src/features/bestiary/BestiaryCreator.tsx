@@ -383,8 +383,10 @@ function Workshop({ verify }: { verify: boolean }) {
       rows: pickerEntries(data, R, r, entryKind),
     });
   const addEntries = (kind: string, keys: string[]) => {
-    if (!["skill", "talent"].includes(kind) || !keys.length) return false;
-    const list = kind === "skill" ? "skills" : "talents";
+    if (!["skill", "talent", "trait"].includes(kind) || !keys.length)
+      return false;
+    const list =
+      kind === "skill" ? "skills" : kind === "talent" ? "talents" : "traits";
     const catalogue = pickerEntries(data, R, r, kind);
     const rows = [...new Set(keys)].map((key) =>
       catalogue.find((x: any) => x.key === key),
@@ -414,13 +416,25 @@ function Workshop({ verify }: { verify: boolean }) {
                   total: r.stats[x.char ?? skillInfo(R, x.name)?.char] ?? 0,
                   origin: "GM",
                 }
-              : { key, name: x.name, ranks: 1, origin: "GM" },
+              : kind === "trait"
+                ? {
+                    key,
+                    name: x.name,
+                    value: x.name === "Fear" ? "1" : "",
+                    ranks: 1,
+                    origin: "GM",
+                  }
+                : { key, name: x.name, ranks: 1, origin: "GM" },
           );
         }
+        if (kind === "trait") d.step = 1;
       });
       setModal(null);
+      if (kind === "trait") setUI({ tab: 1 });
+      const singular =
+        kind === "skill" ? "Skill" : kind === "talent" ? "Talent" : "Trait";
       setMessage(
-        `${rows.length} ${kind === "skill" ? (rows.length === 1 ? "Skill" : "Skills") : rows.length === 1 ? "Talent" : "Talents"} added.`,
+        `${rows.length} ${singular}${rows.length === 1 ? "" : "s"} added.`,
       );
       return true;
     } catch (error) {

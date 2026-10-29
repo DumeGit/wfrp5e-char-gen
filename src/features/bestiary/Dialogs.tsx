@@ -168,7 +168,7 @@ export function TemplatePreview({ template: t }: { template: any }) {
 }
 function PickerDialog() {
   const { modal } = useBestiary();
-  return ["skill", "talent"].includes(modal.entryKind) ? (
+  return ["skill", "talent", "trait"].includes(modal.entryKind) ? (
     <BulkPickerDialog />
   ) : (
     <SinglePickerDialog />
@@ -180,12 +180,15 @@ function BulkPickerDialog() {
   const [selected, setSelected] = useState<string[]>([]);
   const [error, setError] = useState("");
   const kind = modal.entryKind;
-  const plural = kind === "skill" ? "Skills" : "Talents";
+  const singular =
+    kind === "skill" ? "Skill" : kind === "talent" ? "Talent" : "Trait";
+  const plural = `${singular}s`;
+  const list =
+    kind === "skill" ? "skills" : kind === "talent" ? "talents" : "traits";
   const owned = (entry: any) =>
-    result[kind === "skill" ? "skills" : "talents"].some(
-      (x: any) => x.name === entry.name,
-    );
-  const rows = groupPickerEntries(searchPickerEntries(modal.rows, query));
+    result[list].some((x: any) => x.name === entry.name);
+  const matches = searchPickerEntries(modal.rows, query);
+  const rows = kind === "trait" ? matches : groupPickerEntries(matches);
   const toggle = (entry: any, checked: boolean) => {
     setSelected((previous) =>
       checked
@@ -210,6 +213,9 @@ function BulkPickerDialog() {
           <span>
             <strong>{entry.name}</strong>
             <small>{sourceLabel(rules, entry)}</small>
+            {kind === "trait" && (
+              <span className="gm-bulk-summary">{traitSummary(entry)}</span>
+            )}
             {unavailable && (
               <small>{owned(entry) ? "Already added" : entry.disabled}</small>
             )}
@@ -226,7 +232,7 @@ function BulkPickerDialog() {
   };
   return (
     <Modal
-      title={kind === "skill" ? "Add Skill" : "Add Talent"}
+      title={kind === "trait" ? "Add Creature Trait" : `Add ${singular}`}
       close={() => setModal(null)}
       className="gm-bulk-picker"
       trapFocus
@@ -248,7 +254,8 @@ function BulkPickerDialog() {
       </div>
       <div className="gm-bulk-results" id="gm-picker-results">
         <p className="gm-results-count">
-          {rows.length} matching entries or groups
+          {rows.length} matching{" "}
+          {kind === "trait" ? "traits" : "entries or groups"}
         </p>
         {!rows.length && (
           <p>No matches. Try another name or clear your search.</p>
@@ -305,7 +312,7 @@ function BulkPickerDialog() {
             }}
           >
             {selected.length
-              ? `Add ${selected.length} ${selected.length === 1 ? (kind === "skill" ? "Skill" : "Talent") : plural}`
+              ? `Add ${selected.length} ${selected.length === 1 ? singular : plural}`
               : `Add selected ${plural}`}
           </Button>
         </div>
