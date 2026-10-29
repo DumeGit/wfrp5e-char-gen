@@ -208,6 +208,12 @@ test("Issue destinations distinguish prerequisite choices, magic allocation and 
     { step: 5, target: '[data-action="wealth"]' },
   );
   s.career = "soldier";
+  s.careerSkills["c1-wom-augury"] = 1;
+  assert.deepEqual(
+    issueTarget(records().find((x) => x.code === "wom.augury-patron")),
+    { step: 4, target: "#freeTalent" },
+  );
+  delete s.careerSkills["c1-wom-augury"];
   s.careerSkills["c1-7"] = 4;
   assert.deepEqual(
     issueTarget(records().find((x) => x.code === "skills.creation-cap")),

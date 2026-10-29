@@ -24,12 +24,7 @@ import {
   legacyGear,
 } from "../../../../engine/legacy-character.mjs";
 import { tablePicker } from "../book-ui.mjs";
-import {
-  careerBrowser,
-  careerOptions,
-  trainingPrerequisites,
-  kitSummary,
-} from "../flow-ui.mjs";
+import { careerBrowser, careerOptions, kitSummary } from "../flow-ui.mjs";
 import {
   creationSpecies,
   originProfile,
@@ -43,6 +38,7 @@ import { starSign, starEffect } from "../../../../engine/astrology.mjs";
 import { speciesMagicReferences } from "../../../../engine/species-mechanics.mjs";
 import { originTalentChoice, divinePanel } from "../archives-iii-ui.mjs";
 import {
+  collegePanel,
   psychometryPanel,
   psychicSkillPanel,
   womReferencePanel,
@@ -284,7 +280,7 @@ export function createFeature(getContext, setContext) {
         " characters.",
       ),
       careerOptions(R, s),
-      trainingPrerequisites(R, s, { select, button }),
+      collegePanel(R, s),
       element(
         "div",
         { class: "notice" },

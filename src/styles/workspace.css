@@ -170,8 +170,7 @@ button.legacy-tag {
   margin: 13px 0;
   overflow-wrap: anywhere;
 }
-.career-options > summary,
-.training-prerequisites > summary {
+.career-options > summary {
   font-weight: 650;
 }
 .career-options .notice {

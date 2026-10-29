@@ -1057,13 +1057,7 @@ export function validation(R, s, structured = false) {
   const careerIssue = careerCreationIssue(R, s, derive(R, s).talents);
   if (careerIssue)
     e.push(
-      issue(
-        "career.prerequisite",
-        careerIssue,
-        1,
-        "#prereq-freeTalent",
-        c.source,
-      ),
+      issue("career.prerequisite", careerIssue, 4, "#freeTalent", c.source),
     );
   if (
     s.charMode === "points" &&

@@ -268,8 +268,8 @@ export function womIssues(R, s, structured = false) {
       issue(
         "wom.augury-patron",
         "Augury requires a matching Career and patron before allocating Career Skill Advances (Winds of Magic p. 46).",
-        1,
-        "#prereq-freeTalent",
+        4,
+        "#freeTalent",
         { book: "winds-of-magic", page: 46 },
       ),
     );

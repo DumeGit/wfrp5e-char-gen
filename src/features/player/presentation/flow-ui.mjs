@@ -19,7 +19,6 @@ import { gearSlots, gearOptions } from "../../../engine/equipment.mjs";
 import { careerVariantPanel } from "./career-variants.mjs";
 import { dwarfCareerPanel } from "./dwarf-guide-ui.mjs";
 import { elfCareerPanel } from "./high-elf-ui.mjs";
-import { collegePanel } from "./winds-of-magic-ui.mjs";
 
 export function careerBrowser(R, s, filters) {
   const available = careerResults(R, s),
@@ -280,74 +279,6 @@ export function careerOptions(R, s) {
         joinNodes(parts, ""),
       )
     : "";
-}
-
-export function trainingPrerequisites(R, s, { select, button }) {
-  const options = M.careerTalentOptions(R, s),
-    problem = s.freeTalent
-      ? M.invalidTalent(R, { ...s, freeTalent: "", ledger: [] }, s.freeTalent)
-      : "";
-  return element(
-    "details",
-    {
-      "data-detail-key": detailKey("flow-ui:trainingPrerequisites:0"),
-      class: "training-prerequisites section-gap",
-      ...attributes(
-        options.some((x) =>
-          /^(Bless|Invoke|Arcane Magic|Petty Magic|Sword-dancing)/.test(x),
-        )
-          ? "open"
-          : "",
-      ),
-    },
-    element("summary", {}, "Training choices before Skills"),
-    element(
-      "p",
-      { class: "small muted" },
-      "You may choose your one free Career Talent now. Your choice is the same one shown in Talents; a patron can unlock conditional training. Equipment alternatives below are also shared with Gear.",
-    ),
-    collegePanel(R, s),
-    element(
-      "div",
-      { class: "field" },
-      element("label", { for: "prereq-freeTalent" }, "One free Career Talent"),
-      select(
-        'id="prereq-freeTalent" data-bind="freeTalent"',
-        options.map((n) => [n, n, M.talentInfo(R, n)?.unavailable]),
-        s.freeTalent,
-        true,
-      ),
-    ),
-    problem ? element("p", { class: "purchase-error" }, esc(problem)) : "",
-    joinNodes(
-      gearSlots(R, s)
-        .filter(
-          (x) =>
-            x.key.startsWith("career-") && gearOptions(x.name, R).length > 1,
-        )
-        .map((x) =>
-          element(
-            "div",
-            { class: "field" },
-            element(
-              "label",
-              { for: ["prereq-", esc(x.key)].join("") },
-              esc(x.name),
-            ),
-            select(
-              interpolate(
-                ['id="prereq-', '" data-bind="gearChoices" data-key="', '"'],
-                [esc(x.key), esc(x.key)],
-              ),
-              gearOptions(x.name, R),
-              s.gearChoices[x.key] || gearOptions(x.name, R)[0],
-            ),
-          ),
-        ),
-      "",
-    ),
-    button("step", "Continue to Skill allocation", 'data-step="3"'),
-  );
 }
 
 export function kitSummary(R, s, { select, button, tag }) {

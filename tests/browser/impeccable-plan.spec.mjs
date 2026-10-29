@@ -128,9 +128,15 @@ test("book setup has accurate context and matching top/bottom actions @interface
 
 test("Career and Gear offer continuation before optional browsing @interface @pc @mobile", async ({
   page,
-}) => {
+}, info) => {
   await openPC(page, { complete: true });
   await pcStep(page, "Career");
+  await expect(
+    page.getByText("Training choices before Skills", { exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.locator('[data-bind="freeTalent"], [data-bind="gearChoices"]'),
+  ).toHaveCount(0);
   const next = page
     .locator(".contextual-continue")
     .getByRole("button", { name: "Continue to Characteristics", exact: true });
@@ -139,6 +145,9 @@ test("Career and Gear offer continuation before optional browsing @interface @pc
   expect((await next.boundingBox()).y).toBeLessThan(
     (await alternatives.boundingBox()).y,
   );
+  await page.screenshot({
+    path: info.outputPath("career-without-training-choices.png"),
+  });
   const before = await page.evaluate(
     (key) => localStorage.getItem(key),
     PC_STORAGE,
@@ -157,7 +166,14 @@ test("Career and Gear offer continuation before optional browsing @interface @pc
   await expect(
     page.getByRole("heading", { name: "Characteristics", exact: true }),
   ).toBeVisible();
+  await pcStep(page, "Talents");
+  await expect(
+    page.getByLabel("One free Career Talent", { exact: true }),
+  ).toBeVisible();
   await pcStep(page, "Gear & money");
+  await expect(
+    page.getByRole("heading", { name: "Your starting kit", exact: true }),
+  ).toBeVisible();
   await page
     .locator(".contextual-continue")
     .getByRole("button", { name: "Continue to Experience", exact: true })

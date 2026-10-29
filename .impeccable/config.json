@@ -39,6 +39,15 @@
         ],
         "createdAt": "2026-10-29T20:35:39.166Z",
         "reason": "Agent review: the only finding is the existing ui-operation-error status indicator, inherited from 36df76f2 (10 October). Its error-colour border identifies failed operations in the shared UI contract; preserve this functional feedback. The new starting-Talent grid adds no accent border."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/workspace.css"
+        ],
+        "createdAt": "2026-10-29T20:40:28.919Z",
+        "reason": "Agent review: chosen-career and career-result.previewed are inherited current-Career and preview-selection indicators from 0d439b7b (18 October). Preserve the incumbent Imperial Desk selection treatment; removal of the duplicate Training choices section changes neither indicator."
       }
     ]
   }
