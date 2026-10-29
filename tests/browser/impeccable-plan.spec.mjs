@@ -272,7 +272,7 @@ test("Bestiary compact filters disclose active choices and retain the missing-pr
   }
   for (const width of info.project.name === "mobile"
     ? [320, 390, 430, 599]
-    : [600, 768, 1100, 1101, 1440]) {
+    : [600, 768, 952, 1067, 1100, 1101, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     if (width <= 1100) {
       const summary = filters.locator(":scope > summary");
@@ -314,17 +314,33 @@ test("Bestiary compact filters disclose active choices and retain the missing-pr
       expect(Math.abs(categoryBox.width - searchBox.width)).toBeLessThanOrEqual(
         1,
       );
-    }
-    if (width <= 1100) {
       expect(Math.abs(categoryBox.x - bookBox.x)).toBeLessThanOrEqual(1);
       expect(Math.abs(categoryBox.width - bookBox.width)).toBeLessThanOrEqual(
         1,
       );
       expect(bookBox.y).toBeGreaterThan(categoryBox.bottom);
+    } else if (width <= 1100) {
+      expect(Math.abs(categoryBox.x - searchBox.x)).toBeLessThanOrEqual(1);
+      expect(Math.abs(bookBox.right - searchBox.right)).toBeLessThanOrEqual(1);
+      expect(Math.abs(categoryBox.y - bookBox.y)).toBeLessThanOrEqual(1);
+      expect(Math.abs(categoryBox.width - bookBox.width)).toBeLessThanOrEqual(
+        1,
+      );
+      expect(categoryBox.y).toBeGreaterThan(searchBox.bottom);
+      expect(bookBox.x).toBeGreaterThan(categoryBox.right);
     } else expect(Math.abs(categoryBox.y - bookBox.y)).toBeLessThanOrEqual(1);
     await noOverflow(page);
-    if ([390, 768, 1440].includes(width)) {
+    if ([390, 768, 952, 1067, 1440].includes(width)) {
+      if ([952, 1067].includes(width)) {
+        await page.setViewportSize({
+          width,
+          height: width === 952 ? 600 : 570,
+        });
+      }
       await filters.scrollIntoViewIfNeeded();
+      await expect(page.locator("#gm-category")).toBeInViewport();
+      await expect(page.locator("#gm-profile-book")).toBeInViewport();
+      await noOverflow(page);
       await page.screenshot({
         path: info.outputPath(`profile-filters-${width}.png`),
       });

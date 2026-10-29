@@ -11,7 +11,7 @@ All nine findings in the [implementation plan](IMPECCABLE-IMPLEMENTATION-PLAN.md
 | F05: Condition rules preceded recording | Count/non-stacking status, notes and manual scope first; full rules/source in a disclosure | Speed routine play while retaining rules and visible failure/retry recovery. |
 | F06: compact setup showed an unrelated creation step | Visible Character setup / Choose books context | Name the transient state without creating another saved step. |
 | F07: initial/total ownership was weak | Bounded cells with individual Total headings and wrapping | Distinguish values without caps or changed calculations. |
-| F08: compact filters delayed profile results | Exposed search, optional native filters with active-state summary, adjacent tablet search/filter | Bring profiles earlier while preserving catalogue/filter behavior. |
+| F08: compact filters delayed profile results | Exposed search, optional native filters with active-state summary; tablet follow-up places equal Category/Book columns below full-width search | Bring profiles earlier while preserving catalogue/filter behavior and avoiding a narrow tablet side column. |
 | F09: untouched required profile looked invalid | Neutral initial guidance; actionable Review blocker restores field focus and validation | Keep entry calm without weakening export requirements. |
 
 No animation was added. Frequent navigation, validation and recording respond immediately. Existing hover/press, dialog, reduced-motion and focus-restoration conventions remain authoritative.
