@@ -1,5 +1,7 @@
 # Creator browsing and explanations
 
+Player has a top Next button on every creation page before Review: beside the page selector on phones/tablets and beside stage status at the editor’s top right on desktop. It uses existing step navigation, permits unfinished choices and focuses the destination heading. Book setup and Review have no Next button; footer navigation and export gates remain unchanged.
+
 Species Skill rows use the whole item as the native checkbox label target, including the Skill name and empty row space. Specialisation selectors and reference buttons remain independent controls; clicking them does not change selection. Checkbox and keyboard activation retain the same five-Skill limit and history behaviour.
 
 29 October Impeccable implementation: book setup exposes **Use selected books** before and after the catalogue. Its compact context says **Choose books** until applying or cancelling restores the existing creation step. A chosen Career keeps required training/options beside **Continue to Characteristics**; **Change Career · Browse alternatives** and **Read the full Career path** expand separately. Gear also offers **Continue to Experience** before its optional kit/reference content. These actions reuse existing handlers and allow unfinished navigation as before.

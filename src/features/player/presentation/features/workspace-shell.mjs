@@ -8,6 +8,7 @@ import {
 } from "../../../../components/react-elements";
 
 import { WorkspaceMenu } from "../../../../components/WorkspaceMenu";
+import { CreatorNextButton } from "../../../../components/CreatorNextButton";
 
 import {
   steps,
@@ -143,6 +144,13 @@ export function createFeature(getContext) {
                   s.step,
                 ),
               ),
+          next:
+            !setupOpen && s.step < reviewStep
+              ? element(CreatorNextButton, {
+                  destination: steps[s.step + 1],
+                  step: s.step + 1,
+                })
+              : null,
           groups: [
             {
               id: "new",
@@ -259,6 +267,13 @@ export function createFeature(getContext) {
                   : "✓ Creation complete",
             ),
             "\n",
+            !setupOpen && s.step < reviewStep
+              ? element(CreatorNextButton, {
+                  destination: steps[s.step + 1],
+                  step: s.step + 1,
+                  desktop: true,
+                })
+              : null,
           ),
           !setupOpen && locked() && s.step < creationStepCount
             ? fragment(

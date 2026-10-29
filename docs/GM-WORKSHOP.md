@@ -1,5 +1,7 @@
 # Bestiary Workshop
 
+Top Next navigation is available on Starting profile, Customise and Equipment & magic. Through 1100px it sits beside the Workshop page selector; on desktop it sits to the right of the page heading. It reuses normal navigation, focuses the destination heading and keeps compact navigation visible. Review has no Next button. Footer actions, unfinished navigation and export requirements remain unchanged.
+
 29 October duplicate-description correction: selected ability and ordinary equipment rows show names, sources and editing/output controls without repeating read-only rules beneath help. Spell casting parameters are available in the reader and remain unchanged in Review/PDF output. Custom weapon text and personal notes keep their own context. Weapon enchantment rows show a compact Legacy marker rather than the whole adaptation beside a clickable name.
 
 29 October compact profile browser: each whole-card Preview button shows only name, Size, category and book/page. The name and Size share the first line; category and source share a wrapping second line. Cards use a 72px desktop baseline, compact content-sized phone rows and 8px gaps and use an automatic 240px-minimum grid (one column on phones, more when space permits). No Characteristics strip, separate Preview footer, Legacy badge or worked-example subtitle appears in the browse card. The complete stat block, source notes and Legacy information remain in Preview before Use this profile. Search/filter/order and application/Undo behavior are unchanged.

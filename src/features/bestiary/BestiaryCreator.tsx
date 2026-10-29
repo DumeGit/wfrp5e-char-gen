@@ -3,6 +3,7 @@ import { COMPACT_SHELL_QUERY } from "../../engine/responsive.mjs";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { HistoryControls } from "../../components/HistoryControls";
 import { WorkspaceMenu } from "../../components/WorkspaceMenu";
+import { CreatorNextButton } from "../../components/CreatorNextButton";
 import { KEYS, skillInfo } from "../../engine/rules.mjs";
 import { pickerEntries } from "../../engine/gm/pickers.mjs";
 import {
@@ -661,6 +662,14 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
               onChange={(value) => navigate(Number(value))}
             />
           }
+          next={
+            s.step < STEPS.length - 1 ? (
+              <CreatorNextButton
+                destination={STEPS[s.step + 1]}
+                onNavigate={() => navigate(s.step + 1)}
+              />
+            ) : undefined
+          }
           navigation={
             <nav className="gm-step-nav" aria-label="Workshop pages">
               <ol className="steps">
@@ -705,6 +714,13 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
               THE BESTIARY · {String(s.step + 1).padStart(2, "0")} / 04
             </span>
             <h1>{STEPS[s.step]}</h1>
+            {s.step < STEPS.length - 1 && (
+              <CreatorNextButton
+                destination={STEPS[s.step + 1]}
+                onNavigate={() => navigate(s.step + 1)}
+                desktop
+              />
+            )}
           </div>
           <div id="gm-feedback">
             {state.error && <p role="alert">{state.error}</p>}

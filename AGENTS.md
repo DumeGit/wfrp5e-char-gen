@@ -20,6 +20,8 @@
 
 ## Agreed creator behavior
 
+- Player and Bestiary retain top Next navigation before Review: beside the compact selector through 1100px and at the editor’s top right on desktop. Reuse existing navigation, focus the destination heading, keep compact navigation visible and retain footer actions. No Next during book setup, on Review or in print; unfinished choices still allow navigation while exports stay gated.
+
 - Starting Talents use equal-width grid tiles with aligned direct ? help for fixed Species grants, real random results, specialisation choices and the free Career Talent. Keep the Career selector in its tile without a duplicate selected-name/description row. Do not restore the separate Read all your Talent rules disclosure. Keep random rolls, replacements, Psychometry sacrifices and grants unchanged; extra already-owned Talents retain direct help in a compact Additional Talents group.
 
 - Bestiary profile browser cards show only name, Size, category and book/page, using the compact wrapping two-line layout and automatic grid. The whole card opens the complete preview; preserve source/Legacy notes there and the separate Use this profile action. Do not restore the card stats strip, large title treatment or separate Preview footer.

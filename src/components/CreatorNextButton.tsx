@@ -1,0 +1,46 @@
+"use client";
+
+export function CreatorNextButton({
+  destination,
+  step,
+  onNavigate,
+  desktop = false,
+}: {
+  destination: string;
+  step?: number;
+  onNavigate?: () => void;
+  desktop?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      className={`quiet creator-next${desktop ? " creator-desktop-next" : ""}`}
+      aria-label={`Next: ${destination}`}
+      title={`Continue to ${destination}`}
+      data-action={step === undefined ? undefined : "step"}
+      data-step={step}
+      onClick={(event) => {
+        const workspace = event.currentTarget.closest(".workspace");
+        onNavigate?.();
+        requestAnimationFrame(() => {
+          const heading = workspace?.querySelector<HTMLElement>("main h1");
+          if (heading) {
+            heading.tabIndex = -1;
+            heading.focus({ preventScroll: true });
+          }
+          const selector = workspace?.querySelector<HTMLElement>(
+            ".workspace-compact-selector",
+          );
+          if (selector && selector.getBoundingClientRect().top < 0) {
+            selector.scrollIntoView({ block: "start", behavior: "instant" });
+          }
+        });
+      }}
+    >
+      Next
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </svg>
+    </button>
+  );
+}
