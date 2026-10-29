@@ -12,6 +12,24 @@
         ],
         "createdAt": "2026-10-29T19:33:19.027Z",
         "reason": "Agent review: these three foundation/template, warning and error borders are inherited from commit e79405da (7 October 2026), unchanged by the NPC batch/magic-description work. Preserve the incumbent Imperial Desk identity and semantic status indicators."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/manager.css"
+        ],
+        "createdAt": "2026-10-29T20:03:51.491Z",
+        "reason": "Agent review: manager-notice is the existing semantic storage-conflict, validation, recovery and Legacy status treatment from 060502dc (19 October), matching shared Imperial Desk warning indicators. It is intentional functional feedback, unchanged by the rule-help work, not a decorative card accent."
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/styles/manager.css"
+        ],
+        "createdAt": "2026-10-29T20:03:51.529Z",
+        "reason": "Agent review: false positive on the inherited mobile navigation selection indicator from 2f9dfeb0 (20 October). manager-navigation buttons explicitly have border-radius: 0; the transparent 3px top border reserves space for the selected-page gold indicator. This is square navigation, not a rounded card."
       }
     ]
   }
