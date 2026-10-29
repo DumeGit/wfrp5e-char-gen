@@ -589,7 +589,7 @@ export function WeaponWorkbench({
               />
               <small className="weapon-reference-source">
                 Archives II · p. {e.page}
-                {e.adaptation ? ` · ${e.adaptation}` : ""}
+                {e.adaptation ? " · Legacy" : ""}
               </small>
               {e.target && (
                 <>

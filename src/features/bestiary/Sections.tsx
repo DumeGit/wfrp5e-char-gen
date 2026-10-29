@@ -1806,13 +1806,17 @@ export function EquipmentMagic() {
       {r.gear.map((g: any) => (
         <div className="gm-entry" id={`gear-${g.key}`} key={g.key}>
           <div>
-            <strong>{g.entry.name}</strong>
+            {g.custom ? (
+              <strong>{g.entry.name}</strong>
+            ) : (
+              <RuleName reference={entryReference("gear", g.entry)} />
+            )}
             <Metadata entry={g.entry} />
             <small className="gm-small">
               {g.entry.enc === null ? "Encumbrance unknown" : ""}{" "}
               {g.entry.qualities}
             </small>
-            {g.entry.text && <p>{g.entry.text}</p>}
+            {g.custom && g.entry.text && <p>{g.entry.text}</p>}
           </div>
           {g.origin === "Template" ? (
             <small>Template · ×1</small>
@@ -1881,9 +1885,6 @@ export function EquipmentMagic() {
               <RuleName reference={entryReference("spell", x)}>
                 {x.name} <small>{x.category}</small>
               </RuleName>
-              <p className="gm-small">
-                {abilityPresentation("magic", x).parameters}
-              </p>
               <small className="gm-small">{sourceLabel(R, x)}</small>
               <Legacy entry={x} />
               {gmCantBook(R) && x.category === "Arcane" && (

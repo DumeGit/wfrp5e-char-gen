@@ -5,9 +5,11 @@ import { requestReference, type ReferenceRequest } from "../services/content";
 export function RuleReference({
   reference,
   onOpen,
+  children = "?",
 }: {
   reference: ReferenceRequest;
   onOpen?: () => void;
+  children?: ReactNode;
 }) {
   return (
     <button
@@ -22,7 +24,7 @@ export function RuleReference({
         requestReference(reference);
       }}
     >
-      ?
+      {children}
     </button>
   );
 }

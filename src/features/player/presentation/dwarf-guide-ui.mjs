@@ -360,9 +360,7 @@ export function runePanel(R, s) {
             fragment(esc(x.name), " · ", esc(x.form)),
           ),
           element("small", {}, esc(sourceLabel(R, x))),
-          x.conversion
-            ? element("p", { class: "small muted" }, esc(x.conversion))
-            : "",
+          legacyTag(R, x),
         ),
       ),
       "",

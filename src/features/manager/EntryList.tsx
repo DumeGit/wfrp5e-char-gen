@@ -207,13 +207,28 @@ export function EntryList({
                         </small>
                       )}
                       {x.adaptation && (
-                        <p className="manager-notice">
-                          Legacy:{" "}
-                          {typeof x.adaptation === "string"
-                            ? x.adaptation
-                            : x.adaptation.text ||
-                              "Reviewed adaptation; open the source reference for details."}
-                        </p>
+                        <RuleReference
+                          reference={{
+                            ...entryReference(undefined, x),
+                            ...(x.source
+                              ? {
+                                  id: undefined,
+                                  name: `Legacy · ${x.name}`,
+                                  quote: {
+                                    text:
+                                      typeof x.adaptation === "string"
+                                        ? x.adaptation
+                                        : x.adaptation.text ||
+                                          "Reviewed adaptation; consult the source reference.",
+                                    source: x.source,
+                                    label: "Legacy adaptation",
+                                  },
+                                }
+                              : {}),
+                          }}
+                        >
+                          Legacy
+                        </RuleReference>
                       )}
                       {group === "skills" && (
                         <p className="manager-meta">

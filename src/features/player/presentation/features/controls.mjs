@@ -177,11 +177,6 @@ export function createFeature(getContext, setContext) {
         { class: "small talent-reference" },
         ref({ ...t, legacySources: sources }),
       ),
-      element(
-        "p",
-        { class: "calculation-status" },
-        esc(talentCalculation(R, name)),
-      ),
     );
   }
 
@@ -382,31 +377,15 @@ export function createFeature(getContext, setContext) {
         fragment(esc(x.displayName || x.name), " · ", esc(x.category)),
       ),
       element("p", { class: "small" }, ref(x)),
-      element(
-        "p",
-        { class: "small" },
-        [
-          x.cn !== undefined ? `CN ${x.cn}` : "",
-          x.range ? `Range ${x.range}` : "",
-          x.target ? `Target ${x.target}` : "",
-          x.duration ? `Duration ${x.duration}` : "",
-        ]
-          .filter(Boolean)
-          .join(" · "),
-      ),
+
       x.grantSource
         ? element(
-            "p",
-            { class: "small muted" },
-            "Available through ",
+            "small",
+            { class: "small" },
             esc(x.lore),
             " · ",
             ref({ source: x.grantSource }),
-            ". Reimagined for this patron using the core Miracle’s effects.",
           )
-        : "",
-      x.conversion
-        ? element("p", { class: "small muted" }, esc(x.conversion))
         : "",
     );
   }

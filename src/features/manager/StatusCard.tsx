@@ -37,105 +37,105 @@ export function StatusCard({
   const afflictions = [...(record.afflictions || []), ...legacy];
   const active = afflictions.filter((row) => !row.resolved);
   const inactive = afflictions.filter((row) => row.resolved);
-  const rowView = (row: any) => (
-    <div className="manager-status-entry" key={row.id}>
-      <RuleName
-        reference={
-          row.source ||
-          row.referenceId ||
-          row.catalogueId ||
-          (row.kind === "condition" &&
-            catalogue.R.ruleReferences.some(
-              (entry: any) =>
-                entry.category === "condition" && entry.name === row.name,
-            ))
-            ? entryReference(row.kind, {
-                ...row,
-                id: row.referenceId || row.catalogueId,
-                source:
-                  row.source ||
-                  (row.kind === "condition" ? { book: "core" } : undefined),
-              })
-            : null
-        }
-      >
-        <strong>
-          {row.name}
-          {row.kind === "condition" && row.amount > 1
-            ? ` ×${score(row.amount)}`
-            : ""}
-        </strong>
-        {row.location && <small title={row.location}>{row.location}</small>}
-      </RuleName>
-      {!row.source && row.kind !== "condition" && row.text && <p>{row.text}</p>}
-      {row.note && <p>{row.note}</p>}
-      <div className="manager-inline">
-        {row.source && (
-          <small className="manager-meta">{`${catalogue.books.find((book: any) => book.id === row.source.book)?.shortTitle || catalogue.books.find((book: any) => book.id === row.source.book)?.title || row.source.book}, p. ${row.source.page}`}</small>
-        )}
-        <button
-          className="manager-text"
-          type="button"
-          aria-label={`Edit ${row.name}`}
-          onClick={() =>
-            open("status", { ...row, id: row.legacy ? undefined : row.id })
-          }
-        >
-          Edit
-        </button>
-        {row.kind !== "condition" && (
+  const rowView = (row: any) => {
+    const reference =
+      row.source ||
+      row.referenceId ||
+      row.catalogueId ||
+      (row.kind === "condition" &&
+        catalogue.R.ruleReferences.some(
+          (entry: any) =>
+            entry.category === "condition" && entry.name === row.name,
+        ))
+        ? entryReference(row.kind, {
+            ...row,
+            id: row.referenceId || row.catalogueId,
+            source:
+              row.source ||
+              (row.kind === "condition" ? { book: "core" } : undefined),
+          })
+        : null;
+    return (
+      <div className="manager-status-entry" key={row.id}>
+        <RuleName reference={reference}>
+          <strong>
+            {row.name}
+            {row.kind === "condition" && row.amount > 1
+              ? ` ×${score(row.amount)}`
+              : ""}
+          </strong>
+          {row.location && <small title={row.location}>{row.location}</small>}
+        </RuleName>
+        {!reference && row.text && <p>{row.text}</p>}
+        {row.note && <p>{row.note}</p>}
+        <div className="manager-inline">
+          {row.source && (
+            <small className="manager-meta">{`${catalogue.books.find((book: any) => book.id === row.source.book)?.shortTitle || catalogue.books.find((book: any) => book.id === row.source.book)?.title || row.source.book}, p. ${row.source.page}`}</small>
+          )}
           <button
             className="manager-text"
             type="button"
+            aria-label={`Edit ${row.name}`}
             onClick={() =>
-              edit(
-                `${row.name}: ${row.resolved ? "active" : row.kind === "critical" ? "healed" : "inactive"}`,
-                (r) => {
-                  if (row.legacy)
-                    r.sheet.entries.extras.find(
-                      (entry: any) => entry.key === row.legacy,
-                    ).inactive = !row.resolved;
-                  else
-                    r.afflictions.find(
-                      (entry: any) => entry.id === row.id,
-                    ).resolved = !row.resolved;
-                },
-              )
+              open("status", { ...row, id: row.legacy ? undefined : row.id })
             }
           >
-            {row.resolved
-              ? "Restore"
-              : row.kind === "critical"
-                ? "Mark healed"
-                : "Mark inactive"}
+            Edit
           </button>
-        )}
-        <button
-          className="manager-danger-text"
-          type="button"
-          aria-label={`Remove ${row.name}${row.kind === "condition" ? " Condition" : ""}`}
-          onClick={() =>
-            edit(`Removed ${row.name}`, (r) => {
-              if (row.kind === "condition")
-                r.conditions = r.conditions.filter(
-                  (entry: any) => entry.id !== row.id,
-                );
-              else if (row.legacy)
-                r.sheet.entries.extras = r.sheet.entries.extras.filter(
-                  (entry: any) => entry.key !== row.legacy,
-                );
-              else
-                r.afflictions = r.afflictions.filter(
-                  (entry: any) => entry.id !== row.id,
-                );
-            })
-          }
-        >
-          Remove
-        </button>
+          {row.kind !== "condition" && (
+            <button
+              className="manager-text"
+              type="button"
+              onClick={() =>
+                edit(
+                  `${row.name}: ${row.resolved ? "active" : row.kind === "critical" ? "healed" : "inactive"}`,
+                  (r) => {
+                    if (row.legacy)
+                      r.sheet.entries.extras.find(
+                        (entry: any) => entry.key === row.legacy,
+                      ).inactive = !row.resolved;
+                    else
+                      r.afflictions.find(
+                        (entry: any) => entry.id === row.id,
+                      ).resolved = !row.resolved;
+                  },
+                )
+              }
+            >
+              {row.resolved
+                ? "Restore"
+                : row.kind === "critical"
+                  ? "Mark healed"
+                  : "Mark inactive"}
+            </button>
+          )}
+          <button
+            className="manager-danger-text"
+            type="button"
+            aria-label={`Remove ${row.name}${row.kind === "condition" ? " Condition" : ""}`}
+            onClick={() =>
+              edit(`Removed ${row.name}`, (r) => {
+                if (row.kind === "condition")
+                  r.conditions = r.conditions.filter(
+                    (entry: any) => entry.id !== row.id,
+                  );
+                else if (row.legacy)
+                  r.sheet.entries.extras = r.sheet.entries.extras.filter(
+                    (entry: any) => entry.key !== row.legacy,
+                  );
+                else
+                  r.afflictions = r.afflictions.filter(
+                    (entry: any) => entry.id !== row.id,
+                  );
+              })
+            }
+          >
+            Remove
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
   return (
     <SheetCard
       title="Status & afflictions"

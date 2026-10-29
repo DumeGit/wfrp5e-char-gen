@@ -8,6 +8,8 @@ The masthead search launcher opens the same **Search the books** workspace in al
 
 Weapon creator property and rune names request an exact book/content identity. Enchantment names can supply their existing reviewed text and citation as a temporary reader entry when no catalogue entry exists. It uses the same reader, related-reference links and Back history; closing restores the weapon-name opener. Temporary entries stay outside the search rows, worker, categories and saved character data.
 
+Gear help maps the creator’s internal gear group to the shared equipment reference kind, so equipment help opens the matching article directly rather than falling back to a general query.
+
 Rule-description help across all four workspaces uses labelled ? buttons rather than individual expanders. Player/Bestiary Traits, Talents, magic, Runes, Cants and equipment/supplement references preserve their exact names, catalogue identities and book citations. Manager ability/status and Condition help share that reader. Existing reviewed text can be passed as a temporary source-only quote when an identity is intentionally absent from search; adapted build text and Legacy notes stay scoped to that reader request. Custom notes remain editable local text. Reading restores focus and preserves pending picker selections without a character/history edit.
 
 ## Publication scope — 16 October 2026

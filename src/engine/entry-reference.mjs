@@ -3,7 +3,7 @@
 export function entryReference(kind, entry) {
   const text = entry.summary || entry.description || entry.text;
   return {
-    kind,
+    kind: kind === "gear" ? "equipment" : kind,
     name: entry.name,
     book: entry.source?.book,
     id: entry.contentId || entry.catalogueId || entry.id,
