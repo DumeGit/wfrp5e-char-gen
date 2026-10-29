@@ -358,16 +358,6 @@ function Workshop({ verify }: { verify: boolean }) {
         if (existing) existing.quantity++;
         else d.gear.push({ key, id: x.key, quantity: 1 });
       }
-      if (kind === "magic") {
-        d.removed = d.removed.filter((k: string) => k !== x.key);
-        d.spells.push(x.key);
-        if (
-          R.cants.length &&
-          x.category === "Arcane" &&
-          r.magicLores.length === 1
-        )
-          d.spellLores[x.key] = r.magicLores[0];
-      }
       if (kind === "mutation") d.mutations.push(x.key);
     });
     setModal(null);
@@ -384,10 +374,16 @@ function Workshop({ verify }: { verify: boolean }) {
       rows: pickerEntries(data, R, r, entryKind),
     });
   const addEntries = (kind: string, keys: string[]) => {
-    if (!["skill", "talent", "trait"].includes(kind) || !keys.length)
+    if (!["skill", "talent", "trait", "magic"].includes(kind) || !keys.length)
       return false;
     const list =
-      kind === "skill" ? "skills" : kind === "talent" ? "talents" : "traits";
+      kind === "magic"
+        ? "spells"
+        : kind === "skill"
+          ? "skills"
+          : kind === "talent"
+            ? "talents"
+            : "traits";
     const catalogue = pickerEntries(data, R, r, kind);
     const rows = [...new Set(keys)].map((key) =>
       catalogue.find((x: any) => x.key === key),
@@ -397,7 +393,11 @@ function Workshop({ verify }: { verify: boolean }) {
         (x: any) =>
           !x ||
           x.disabled ||
-          r[list].some((owned: any) => owned.name === x.name),
+          r[list].some((owned: any) =>
+            kind === "magic"
+              ? owned.contentId === x.key
+              : owned.name === x.name,
+          ),
       )
     ) {
       setMessage(
@@ -408,6 +408,17 @@ function Workshop({ verify }: { verify: boolean }) {
     try {
       store.edit((d: any) => {
         for (const x of rows as any[]) {
+          if (kind === "magic") {
+            d.removed = d.removed.filter((key: string) => key !== x.key);
+            d.spells.push(x.key);
+            if (
+              R.cants.length &&
+              x.category === "Arcane" &&
+              r.magicLores.length === 1
+            )
+              d.spellLores[x.key] = r.magicLores[0];
+            continue;
+          }
           const key = `gm-${crypto.randomUUID()}`;
           d[list].push(
             kind === "skill"
@@ -433,9 +444,15 @@ function Workshop({ verify }: { verify: boolean }) {
       setModal(null);
       if (kind === "trait") setUI({ tab: 1 });
       const singular =
-        kind === "skill" ? "Skill" : kind === "talent" ? "Talent" : "Trait";
+        kind === "magic"
+          ? "magic entry"
+          : kind === "skill"
+            ? "Skill"
+            : kind === "talent"
+              ? "Talent"
+              : "Trait";
       setMessage(
-        `${rows.length} ${singular}${rows.length === 1 ? "" : "s"} added.`,
+        `${rows.length} ${rows.length === 1 ? singular : kind === "magic" ? "magic entries" : `${singular}s`} added.`,
       );
       return true;
     } catch (error) {

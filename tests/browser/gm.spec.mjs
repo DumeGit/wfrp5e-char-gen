@@ -179,7 +179,9 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent", "Add Trait"].includes(kind)) {
+    if (
+      ["Add Skill", "Add Talent", "Add Trait", "Choose magic"].includes(kind)
+    ) {
       await page
         .getByRole("dialog")
         .getByRole("checkbox", { name: `Select ${name}`, exact: true })
@@ -187,7 +189,7 @@ test("all-book knowledge is available without option-only book checkboxes @gm @m
       await page
         .getByRole("dialog")
         .getByRole("button", {
-          name: `Add 1 ${kind.slice(4)}`,
+          name: `Add 1 ${kind === "Choose magic" ? "magic entry" : kind.slice(4)}`,
           exact: true,
         })
         .click();
@@ -641,9 +643,10 @@ test("Ogre Spellcaster offers Great Maw and Firebelly Fire while excluding other
   await page.getByRole("button", { name: "Choose magic", exact: true }).click();
   await page.locator("#gm-picker-search").fill("Bullgorger");
   await page
-    .locator(".gm-picker-row")
-    .filter({ has: page.getByText("Bullgorger", { exact: true }) })
-    .getByRole("button", { name: "Add", exact: true })
+    .getByRole("checkbox", { name: "Select Bullgorger", exact: true })
+    .check();
+  await page
+    .getByRole("button", { name: "Add 1 magic entry", exact: true })
     .click();
   await expect(page.locator("#gm-magic")).toContainText("Bullgorger");
   await expect(
@@ -696,7 +699,9 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent", "Add Trait"].includes(kind)) {
+    if (
+      ["Add Skill", "Add Talent", "Add Trait", "Choose magic"].includes(kind)
+    ) {
       await page
         .getByRole("dialog")
         .getByRole("checkbox", { name: `Select ${name}`, exact: true })
@@ -704,7 +709,7 @@ test("Archives III shares prayers and targeted Hedgecraft without adding exclude
       await page
         .getByRole("dialog")
         .getByRole("button", {
-          name: `Add 1 ${kind.slice(4)}`,
+          name: `Add 1 ${kind === "Choose magic" ? "magic entry" : kind.slice(4)}`,
           exact: true,
         })
         .click();
@@ -761,7 +766,9 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
   const add = async (kind, name) => {
     await page.getByRole("button", { name: kind, exact: true }).click();
     await page.locator("#gm-picker-search").fill(name);
-    if (["Add Skill", "Add Talent", "Add Trait"].includes(kind)) {
+    if (
+      ["Add Skill", "Add Talent", "Add Trait", "Choose magic"].includes(kind)
+    ) {
       await page
         .getByRole("dialog")
         .getByRole("checkbox", { name: `Select ${name}`, exact: true })
@@ -769,7 +776,7 @@ test("GM Arcane Lore assignment and Cants have focused issues, compact reference
       await page
         .getByRole("dialog")
         .getByRole("button", {
-          name: `Add 1 ${kind.slice(4)}`,
+          name: `Add 1 ${kind === "Choose magic" ? "magic entry" : kind.slice(4)}`,
           exact: true,
         })
         .click();

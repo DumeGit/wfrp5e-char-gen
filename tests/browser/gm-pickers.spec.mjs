@@ -10,6 +10,146 @@ import {
   downloadBytes,
 } from "./helpers.mjs";
 
+test("Magic picker batches exact spells, prayers and rituals with one Undo @gm @mobile", async ({
+  page,
+}, info) => {
+  await openGM(page);
+  await applyProfile(page, "Human");
+  await gmStep(page, "Customise");
+  await page
+    .getByRole("tab", { name: "Skills & Talents", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Add Talent", exact: true }).click();
+  for (const name of [
+    "Arcane Magic (Fire)",
+    "Petty Magic",
+    "Bless (Sigmar)",
+    "Invoke (Sigmar)",
+  ]) {
+    await page.getByLabel("Search talent", { exact: true }).fill(name);
+    await page
+      .getByRole("checkbox", { name: `Select ${name}`, exact: true })
+      .check();
+  }
+  await page
+    .getByRole("button", { name: "Add 4 Talents", exact: true })
+    .click();
+  await gmStep(page, "Equipment & magic");
+  const open = () =>
+    page.getByRole("button", { name: "Choose magic", exact: true }).click();
+  await open();
+  const dialog = page.getByRole("dialog", {
+    name: "Choose magic",
+    exact: true,
+  });
+  const search = dialog.getByLabel("Search magic", { exact: true });
+  await expect(
+    dialog.getByRole("button", {
+      name: "Add selected magic entries",
+      exact: true,
+    }),
+  ).toBeDisabled();
+  for (const name of [
+    "Animal Friend",
+    "Aethyric Armour",
+    "Blessing of Battle",
+    "Soulfire",
+    "Create Familiar",
+  ]) {
+    await search.fill(name);
+    await dialog
+      .locator(".gm-bulk-choice")
+      .filter({
+        has: page.getByRole("checkbox", {
+          name: `Select ${name}`,
+          exact: true,
+        }),
+      })
+      .locator("label")
+      .click();
+  }
+  await expect(dialog.getByRole("status")).toHaveText("5 selected");
+  await expect(page.locator(".gm-magic-entry")).toHaveCount(0);
+  await search.fill("Bullgorger");
+  await expect(dialog.getByRole("checkbox")).toHaveCount(0);
+  await search.fill("Animal Friend");
+  await expect(
+    dialog.getByRole("checkbox", { name: "Select Animal Friend", exact: true }),
+  ).toBeChecked();
+  const help = dialog.getByRole("button", {
+    name: "Read Animal Friend",
+    exact: true,
+  });
+  await help.click();
+  const reader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  await expect(reader.locator("#book-search-title")).toHaveText(
+    "Animal Friend",
+  );
+  await reader
+    .getByRole("button", { name: "Close search", exact: true })
+    .click();
+  await expect(help).toBeFocused();
+  await expect(dialog.getByRole("status")).toHaveText("5 selected");
+  await noOverflow(page);
+  await page.screenshot({ path: info.outputPath("bulk-magic.png") });
+  await dialog
+    .getByRole("button", { name: "Add 5 magic entries", exact: true })
+    .click();
+  await expect(dialog).toHaveCount(0);
+  await expect(page.locator(".gm-magic-entry")).toHaveCount(5);
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(page.locator(".gm-magic-entry")).toHaveCount(0);
+  await page.getByRole("button", { name: "Redo", exact: true }).click();
+  await expect(page.locator(".gm-magic-entry")).toHaveCount(5);
+  const saved = JSON.parse(
+    (
+      await downloadBytes(
+        page,
+        page.getByRole("button", { name: "Save NPC / creature", exact: true }),
+      )
+    ).bytes,
+  );
+  expect(saved.spells).toEqual([
+    "core:spells:animal-friend",
+    "core:spells:aethyric-armour",
+    "core:spells:blessing-of-battle",
+    "core:spells:soulfire",
+    "winds-of-magic:ritual:create-familiar",
+  ]);
+  expect(saved.spellLores["core:spells:aethyric-armour"]).toBe("Fire");
+  for (const close of ["Cancel", "Escape", "Close"]) {
+    await open();
+    await expect(dialog.getByRole("status")).toHaveText("0 selected");
+    await search.fill("Animal Friend");
+    await expect(
+      dialog.getByRole("checkbox", {
+        name: "Select Animal Friend",
+        exact: true,
+      }),
+    ).toBeDisabled();
+    await search.fill("Light");
+    await dialog
+      .getByRole("checkbox", { name: "Select Light", exact: true })
+      .check();
+    if (close === "Cancel") {
+      await dialog
+        .getByRole("button", { name: "Clear selection", exact: true })
+        .click();
+      await expect(dialog.getByRole("status")).toHaveText("0 selected");
+      await dialog
+        .getByRole("checkbox", { name: "Select Light", exact: true })
+        .check();
+    }
+    if (close === "Escape") await page.keyboard.press("Escape");
+    else await dialog.getByRole("button", { name: close, exact: true }).click();
+    await expect(dialog).toHaveCount(0);
+    await expect(page.locator(".gm-magic-entry")).toHaveCount(5);
+  }
+});
+
 test("Trait descriptions have compact switches without On/Off text and retain the readable rule @gm @mobile", async ({
   page,
 }, info) => {

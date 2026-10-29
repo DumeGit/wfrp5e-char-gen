@@ -18,6 +18,8 @@ import {
 } from "../../engine/gm/pickers.mjs";
 import { traitSummary } from "../../engine/gm/trait-summaries.mjs";
 import { requestReference } from "../../services/content";
+import { RuleReference } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { sourceLabel } from "../../engine/sources.mjs";
 import {
   filterEquipment,
@@ -169,7 +171,7 @@ export function TemplatePreview({ template: t }: { template: any }) {
 }
 function PickerDialog() {
   const { modal } = useBestiary();
-  return ["skill", "talent", "trait"].includes(modal.entryKind) ? (
+  return ["skill", "talent", "trait", "magic"].includes(modal.entryKind) ? (
     <BulkPickerDialog />
   ) : (
     <SinglePickerDialog />
@@ -182,14 +184,30 @@ function BulkPickerDialog() {
   const [error, setError] = useState("");
   const kind = modal.entryKind;
   const singular =
-    kind === "skill" ? "Skill" : kind === "talent" ? "Talent" : "Trait";
-  const plural = `${singular}s`;
+    kind === "magic"
+      ? "magic entry"
+      : kind === "skill"
+        ? "Skill"
+        : kind === "talent"
+          ? "Talent"
+          : "Trait";
+  const plural = kind === "magic" ? "magic entries" : `${singular}s`;
   const list =
-    kind === "skill" ? "skills" : kind === "talent" ? "talents" : "traits";
+    kind === "magic"
+      ? "spells"
+      : kind === "skill"
+        ? "skills"
+        : kind === "talent"
+          ? "talents"
+          : "traits";
   const owned = (entry: any) =>
-    result[list].some((x: any) => x.name === entry.name);
+    result[list].some((x: any) =>
+      kind === "magic" ? x.contentId === entry.key : x.name === entry.name,
+    );
   const matches = searchPickerEntries(modal.rows, query);
-  const rows = kind === "trait" ? matches : groupPickerEntries(matches);
+  const rows = ["trait", "magic"].includes(kind)
+    ? matches
+    : groupPickerEntries(matches);
   const toggle = (entry: any, checked: boolean) => {
     setSelected((previous) =>
       checked
@@ -207,13 +225,21 @@ function BulkPickerDialog() {
           <input
             type="checkbox"
             aria-label={`Select ${entry.name}`}
+            aria-describedby={
+              kind === "magic" ? `magic-source-${entry.key}` : undefined
+            }
             checked={checked}
             disabled={unavailable && !checked}
             onChange={(event) => toggle(entry, event.target.checked)}
           />
           <span>
             <strong>{entry.name}</strong>
-            <small>{sourceLabel(rules, entry)}</small>
+            <small
+              id={kind === "magic" ? `magic-source-${entry.key}` : undefined}
+            >
+              {kind === "magic" && `${entry.category} · `}
+              {sourceLabel(rules, entry)}
+            </small>
             {kind === "trait" && (
               <span className="gm-bulk-summary">{traitSummary(entry)}</span>
             )}
@@ -222,6 +248,9 @@ function BulkPickerDialog() {
             )}
           </span>
         </label>
+        {kind === "magic" && (
+          <RuleReference reference={entryReference("spell", entry)} />
+        )}
         {entry.adaptation && (
           <Button
             className="legacy-tag rule-reference"
@@ -246,7 +275,13 @@ function BulkPickerDialog() {
   };
   return (
     <Modal
-      title={kind === "trait" ? "Add Creature Trait" : `Add ${singular}`}
+      title={
+        kind === "magic"
+          ? "Choose magic"
+          : kind === "trait"
+            ? "Add Creature Trait"
+            : `Add ${singular}`
+      }
       close={() => setModal(null)}
       className="gm-bulk-picker"
       trapFocus
@@ -269,7 +304,13 @@ function BulkPickerDialog() {
       <div className="gm-bulk-results" id="gm-picker-results">
         <p className="gm-results-count">
           {rows.length} matching{" "}
-          {kind === "trait" ? "traits" : "entries or groups"}
+          {kind === "magic"
+            ? rows.length === 1
+              ? "magic entry"
+              : "magic entries"
+            : kind === "trait"
+              ? "traits"
+              : "entries or groups"}
         </p>
         {!rows.length && (
           <p>No matches. Try another name or clear your search.</p>

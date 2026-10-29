@@ -131,6 +131,11 @@ test("Slann Lore choices are required early and unlock their restricted spells @
   await gmStep(page, "Equipment & magic");
   await page.getByRole("button", { name: "Choose magic", exact: true }).click();
   await page.locator("#gm-picker-search").fill("Earth Line");
-  await expect(page.getByRole("dialog")).toContainText("Slann only");
+  await page
+    .getByRole("button", { name: "Read Earth Line", exact: true })
+    .click();
+  await expect(
+    page.getByRole("dialog", { name: "Search the books", exact: true }),
+  ).toContainText("Slann only");
   await noOverflow(page);
 });
