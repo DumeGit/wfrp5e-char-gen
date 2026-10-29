@@ -270,9 +270,76 @@ test("Bestiary compact filters disclose active choices and retain the missing-pr
     await expect(filters).not.toHaveAttribute("open", "");
     await filters.locator(":scope > summary").click();
   }
+  for (const width of info.project.name === "mobile"
+    ? [320, 390, 430, 599]
+    : [600, 768, 1100, 1101, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    if (width <= 1100) {
+      const summary = filters.locator(":scope > summary");
+      await expect(summary).toBeVisible();
+      if ((await filters.getAttribute("open")) !== null) await summary.click();
+      await expect(filters).not.toHaveAttribute("open", "");
+      const first = await page
+        .locator(".gm-profile-card")
+        .first()
+        .boundingBox();
+      const history = await page.locator(".mobile-workspace-bar").boundingBox();
+      expect(first.y + 44).toBeLessThan(history.y);
+      await summary.click();
+    }
+    await expect(filters).toHaveAttribute("open", "");
+    const boxes = await page
+      .locator("#gm-profile-search, #gm-category, #gm-profile-book")
+      .evaluateAll((nodes) =>
+        nodes.map((node) => {
+          const box = node.getBoundingClientRect();
+          return {
+            x: box.x,
+            y: box.y,
+            width: box.width,
+            height: box.height,
+            bottom: box.bottom,
+            right: box.right,
+          };
+        }),
+      );
+    const [searchBox, categoryBox, bookBox] = boxes;
+    for (const box of boxes) {
+      expect(box.width).toBeGreaterThanOrEqual(150);
+      expect(box.height).toBeGreaterThanOrEqual(44);
+      expect(box.right).toBeLessThanOrEqual(width);
+    }
+    if (width < 600) {
+      expect(Math.abs(categoryBox.x - searchBox.x)).toBeLessThanOrEqual(1);
+      expect(Math.abs(categoryBox.width - searchBox.width)).toBeLessThanOrEqual(
+        1,
+      );
+    }
+    if (width <= 1100) {
+      expect(Math.abs(categoryBox.x - bookBox.x)).toBeLessThanOrEqual(1);
+      expect(Math.abs(categoryBox.width - bookBox.width)).toBeLessThanOrEqual(
+        1,
+      );
+      expect(bookBox.y).toBeGreaterThan(categoryBox.bottom);
+    } else expect(Math.abs(categoryBox.y - bookBox.y)).toBeLessThanOrEqual(1);
+    await noOverflow(page);
+    if ([390, 768, 1440].includes(width)) {
+      await filters.scrollIntoViewIfNeeded();
+      await page.screenshot({
+        path: info.outputPath(`profile-filters-${width}.png`),
+      });
+    }
+  }
+  await page.setViewportSize(
+    info.project.name === "mobile"
+      ? { width: 390, height: 844 }
+      : { width: 1440, height: 900 },
+  );
   const category = page.getByLabel("Category", { exact: true });
   const value = await category.locator("option").nth(1).getAttribute("value");
   await category.selectOption(value);
+  const book = filters.getByLabel("Book", { exact: true });
+  await book.selectOption("core");
   const count = await page.locator(".gm-profile-card").count();
   expect(count).toBeGreaterThan(0);
   expect(count).toBeLessThan(49);
@@ -285,6 +352,8 @@ test("Bestiary compact filters disclose active choices and retain the missing-pr
     .getByRole("button", { name: "Clear profile filters", exact: true })
     .click();
   await expect(page.locator(".gm-profile-card")).toHaveCount(49);
+  await expect(category).toHaveValue("");
+  await expect(book).toHaveValue("");
   await gmStep(page, "Review & export");
   await page
     .getByRole("button", {
