@@ -1,5 +1,7 @@
 # Bestiary Workshop
 
+29 October Impeccable implementation: compact Starting keeps **Find a profile** exposed and places optional Category/Book selectors in **Filters · Category & book**. The summary names active filters; **Clear profile filters** restores the full catalogue. Desktop selectors stay visible. An untouched missing profile has neutral required-choice guidance. Review exposes the structured export blocker as a button that returns focus to the required field and shows its validation state. No profile is chosen automatically and exports remain gated.
+
 **Weapon creator:** Create weapon opens an inline workbench in Equipment & magic. Copy a published weapon, edit its profile/properties and choose Ordinary, Magical or Runic power, then add it as an attack and a Gear item. Enchantments support choose/roll and automatic Legendary follow-ups; runes enforce form/slot restrictions and calculate direct weapon bonuses. Conditional effects remain printed rules. Designs, dice, ammunition and history stay with the NPC. See the [weapon creator contract and source review](WEAPON-CREATOR.md).
 
 ## Imperial Desk — 22 October 2026

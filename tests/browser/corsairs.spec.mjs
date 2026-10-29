@@ -1,3 +1,4 @@
+import { openProfileFilters } from "./helpers.mjs";
 import { openGMBooks } from "./helpers.mjs";
 import {
   test,
@@ -17,6 +18,7 @@ test("Corsairs book filters and Chief Mate optional Talents work on desktop and 
     page.locator("label:has(#gm-book-corsairs-flariel)"),
   ).toContainText("2 profiles · 8 templates");
   await page.locator("#gm-book-corsairs-flariel").check();
+  await openProfileFilters(page);
   await page.locator("#gm-profile-book").selectOption("corsairs-flariel");
   await applyProfile(page, "Dark Elf");
   await expect(page.locator(".gm-issues")).toHaveCount(0);

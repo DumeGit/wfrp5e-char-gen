@@ -27,6 +27,8 @@ export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
       (issue: any) => props.id && issue.control?.target === `#${props.id}`,
     ) ?? [];
   const issueId = issues.length ? `${props.id}-issue` : undefined;
+  const neutralRequired =
+    props.id === "gm-profile-search" && !context?.ui?.profileValidation;
   return (
     <>
       <input
@@ -36,14 +38,19 @@ export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
         inputMode={
           props.inputMode ?? (props.type === "number" ? "decimal" : undefined)
         }
-        aria-invalid={issues.length ? true : props["aria-invalid"]}
+        aria-invalid={
+          issues.length && !neutralRequired ? true : props["aria-invalid"]
+        }
         aria-describedby={
           [props["aria-describedby"], issueId].filter(Boolean).join(" ") ||
           undefined
         }
       />
       {issueId && (
-        <p id={issueId} className="ui-field-issue">
+        <p
+          id={issueId}
+          className={neutralRequired ? "ui-field-hint" : "ui-field-issue"}
+        >
           {issues.map((issue: any) => issue.message).join(" ")}
         </p>
       )}

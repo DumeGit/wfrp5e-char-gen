@@ -1,3 +1,4 @@
+import { openProfileFilters } from "./helpers.mjs";
 import { openGMBooks } from "./helpers.mjs";
 import {
   test,
@@ -18,6 +19,7 @@ test("Tavern staff use shared foundation filters and display usable printed defe
     page.locator("label:has(#gm-book-taverns-old-world)"),
   ).toContainText("12 profiles · 0 templates");
   await page.locator("#gm-book-taverns-old-world").check();
+  await openProfileFilters(page);
   await page.locator("#gm-profile-book").selectOption("taverns-old-world");
   await expect(page.locator(".gm-profile-card")).toHaveCount(12);
   await applyProfile(page, "Quality Doorman");

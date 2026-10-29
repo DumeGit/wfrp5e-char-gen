@@ -1413,12 +1413,15 @@ function MarijanSession({
                       `characteristics.${key}.initial`,
                       true,
                     )}
-                    <output
-                      data-result={`stat:${key}`}
-                      aria-label={`${(characteristicNames as Record<string, string>)[key]} total`}
-                    >
-                      {r.stats[key]}
-                    </output>
+                    <span className="mm-char-total">
+                      <small aria-hidden="true">Total</small>
+                      <output
+                        data-result={`stat:${key}`}
+                        aria-label={`${(characteristicNames as Record<string, string>)[key]} total`}
+                      >
+                        {r.stats[key]}
+                      </output>
+                    </span>
                   </div>
                 ))}
               </div>

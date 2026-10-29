@@ -32,7 +32,10 @@ for (const mode of ["Player", "GM", "Marijan"]) {
           .locator(".gm-profile-card")
           .first()
           .boundingBox();
-        expect(first.y).toBeLessThan(initial.height);
+        const historyTop = (
+          await page.locator(".mobile-workspace-bar").boundingBox()
+        ).y;
+        expect(first.y + 44).toBeLessThan(historyTop);
       }
       await applyProfile(page, "Human");
     } else {

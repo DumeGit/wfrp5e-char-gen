@@ -35,6 +35,8 @@ type Session = {
     category: string;
     profileBook: string;
     browse: boolean;
+    filtersOpen: boolean;
+    profileValidation: boolean;
   };
   disclosures: Map<string, boolean>;
   printEntries: any[];
@@ -44,7 +46,15 @@ function getSession(verify: boolean) {
   let session = sessions.get(verify);
   if (!session) {
     session = {
-      ui: { tab: 0, query: "", category: "", profileBook: "", browse: false },
+      ui: {
+        tab: 0,
+        query: "",
+        category: "",
+        profileBook: "",
+        browse: false,
+        filtersOpen: false,
+        profileValidation: false,
+      },
       disclosures: new Map(),
       printEntries: [],
     };
@@ -396,6 +406,7 @@ function Workshop({ verify }: { verify: boolean }) {
     });
   const jump = (issue: any) => {
     const target = issue.control.target;
+    if (target === "#gm-profile-search") setUI({ profileValidation: true });
     store.navigate(issue.control.step);
     if (
       target.startsWith("#trait-") ||
@@ -521,6 +532,7 @@ function Workshop({ verify }: { verify: boolean }) {
     store,
     session,
     ui,
+    compact,
     setUI,
     modal,
     setModal,
@@ -635,7 +647,7 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
           </div>
           <div id="gm-feedback">
             {state.error && <p role="alert">{state.error}</p>}
-            {r.profile && r.issues.length > 0 && (
+            {(r.profile || s.step === 3) && r.issues.length > 0 && (
               <section className="gm-issues" aria-label="Choices to finish">
                 <strong>
                   {r.issues.length}{" "}

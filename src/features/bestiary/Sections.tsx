@@ -279,6 +279,7 @@ export function Starting() {
     draft: s,
     result: r,
     ui,
+    compact,
     setUI,
     edit,
     setModal,
@@ -489,28 +490,52 @@ export function Starting() {
               onChange={(query) => setUI({ query })}
               placeholder="Human, Goblin, Dragon…"
             />
-            <Select
-              label="Category"
-              id="gm-category"
-              value={ui.category}
-              options={[
-                ["", "All categories"],
-                ...new Set(selected.map((p: any) => p.category)),
-              ]}
-              onChange={(category) => setUI({ category })}
-            />
-            <Select
-              label="Book"
-              id="gm-profile-book"
-              value={ui.profileBook}
-              options={[
-                ["", "All enabled books"],
-                ...data.books
-                  .filter((b: any) => s.books.includes(b.id))
-                  .map((b: any) => [b.id, b.shortTitle || b.title]),
-              ]}
-              onChange={(profileBook) => setUI({ profileBook })}
-            />
+            <details
+              className="gm-profile-filter-disclosure"
+              open={!compact || ui.filtersOpen}
+              onToggle={(event) => {
+                if (compact) setUI({ filtersOpen: event.currentTarget.open });
+              }}
+            >
+              <summary>
+                Filters
+                {ui.category || ui.profileBook
+                  ? ` · ${[ui.category, data.books.find((b: any) => b.id === ui.profileBook)?.shortTitle || ui.profileBook].filter(Boolean).join(" · ")}`
+                  : " · Category & book"}
+              </summary>
+              <div className="gm-profile-filter-fields">
+                <Select
+                  label="Category"
+                  id="gm-category"
+                  value={ui.category}
+                  options={[
+                    ["", "All categories"],
+                    ...new Set(selected.map((p: any) => p.category)),
+                  ]}
+                  onChange={(category) => setUI({ category })}
+                />
+                <Select
+                  label="Book"
+                  id="gm-profile-book"
+                  value={ui.profileBook}
+                  options={[
+                    ["", "All enabled books"],
+                    ...data.books
+                      .filter((b: any) => s.books.includes(b.id))
+                      .map((b: any) => [b.id, b.shortTitle || b.title]),
+                  ]}
+                  onChange={(profileBook) => setUI({ profileBook })}
+                />
+                {(ui.category || ui.profileBook) && (
+                  <Button
+                    className="text-button"
+                    onClick={() => setUI({ category: "", profileBook: "" })}
+                  >
+                    Clear profile filters
+                  </Button>
+                )}
+              </div>
+            </details>
           </div>
           <div id="gm-profile-results">
             <p className="gm-results-count" role="status">

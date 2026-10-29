@@ -347,7 +347,7 @@ test("compact scores and entry rows keep quick edits and detailed overrides acce
   await page.getByLabel("Strength initial", { exact: true }).fill("42");
   const overview = page.locator(".mm-char-overview");
   expect((await overview.boundingBox()).height).toBeLessThan(
-    info.project.name === "mobile" ? 280 : 120,
+    info.project.name === "mobile" ? 390 : 150,
   );
   await expect(
     page.getByLabel("Strength advances", { exact: true }),

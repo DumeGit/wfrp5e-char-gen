@@ -120,6 +120,11 @@ export async function openGMBooks(page) {
   if ((await picker.getAttribute("open")) === null)
     await picker.locator(":scope > summary").click();
 }
+export async function openProfileFilters(page) {
+  const filters = page.locator(".gm-profile-filter-disclosure");
+  if ((await filters.getAttribute("open")) === null)
+    await filters.locator(":scope > summary").click();
+}
 export async function pcStep(page, name) {
   const select = page.getByRole("combobox", {
     name: "Creation step",

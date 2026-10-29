@@ -1,3 +1,4 @@
+import { openProfileFilters } from "./helpers.mjs";
 import { openGMBooks } from "./helpers.mjs";
 import {
   test,
@@ -22,6 +23,7 @@ test("Lustria manual Careers and complete source references work on desktop and 
   await page.locator('[data-book="lustria"]').check();
   page.once("dialog", (dialog) => dialog.accept());
   await page
+    .getByRole("group", { name: "Book selection actions", exact: true })
     .getByRole("button", { name: "Use selected books", exact: true })
     .click();
   await page.getByLabel("Species", { exact: true }).selectOption("Human");
@@ -79,6 +81,7 @@ test("Lustria Skink castes and stacking marks are usable on desktop and phone @g
   await openGM(page);
   await openGMBooks(page);
   await page.locator("#gm-book-lustria").check();
+  await openProfileFilters(page);
   await page.locator("#gm-profile-book").selectOption("lustria");
   await applyProfile(page, "Skink");
   await gmStep(page, "Customise");

@@ -1,5 +1,7 @@
 # Marijan Mode
 
+29 October Impeccable implementation: each Characteristic has its own paper/line boundary, with its abbreviation above the editable initial and a visible **Total** heading above the calculated value. Totals can wrap within their cell without imposing numeric caps. The existing two/three/five-column container layouts, accessible field names, native typing buffers, calculations and saved values remain authoritative. Explicit headings add some phone height; the compact-grid regression retains a 390px budget for all ten Characteristics rather than doubling the old grid.
+
 ## Imperial Desk — 22 October 2026
 
 All four workspaces now use the shared 296px oak menu, aged parchment, native workspace switcher and grouped New & import / Save & export / More capabilities. Compact layout includes 1100px; desktop starts at 1101px. `WorkspaceMenu` owns menu/dialog transitions while existing mode handlers/stores own all editing, persistence and exports. Creator compact selectors/history/balances, Marijan's one-page Jump and the manager's compact sheet destinations remain. Manager desktop Play/Advance/Journal is in the sidebar, with one save indicator in the menu. Downloads close their action group after success; cancelled feature dialogs restore their parent command. There is no folio or finish selector.

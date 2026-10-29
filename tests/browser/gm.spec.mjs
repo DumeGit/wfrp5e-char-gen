@@ -1,3 +1,4 @@
+import { openProfileFilters } from "./helpers.mjs";
 import { openGMBooks } from "./helpers.mjs";
 import {
   test,
@@ -122,6 +123,7 @@ test("profile books show fixed contribution counts and combine with browser filt
   const filter = page
     .locator(".gm-library")
     .getByLabel("Book", { exact: true });
+  await openProfileFilters(page);
   await expect(filter.locator("option")).toHaveCount(2);
   await page.locator("#gm-book-up-in-arms").check();
   await page.locator("#gm-book-archives-ii").check();
@@ -763,6 +765,7 @@ test("Bayl Warband uses shared profile/template filters, explicit choices and op
     page.locator("label:has(#gm-book-bayl-many-eyes)"),
   ).toContainText("2 profiles · 7 templates");
   await page.locator("#gm-book-bayl-many-eyes").check();
+  await openProfileFilters(page);
   await page.locator("#gm-profile-book").selectOption("bayl-many-eyes");
   await expect(page.locator(".gm-profile-card")).toHaveCount(2);
   await applyProfile(page, "Chaos Warrior of Nurgle");
@@ -831,6 +834,7 @@ test("Cluster-Eye exposes missing targets early and validates template ammunitio
     page.locator("label:has(#gm-book-cluster-eye-tribe)"),
   ).toContainText("2 profiles · 7 templates");
   await page.locator("#gm-book-cluster-eye-tribe").check();
+  await openProfileFilters(page);
   await page.locator("#gm-profile-book").selectOption("cluster-eye-tribe");
   await applyProfile(page, "Forest Goblin");
   const issues = page.getByRole("region", { name: "Choices to finish" });
@@ -904,6 +908,7 @@ test("Cluster-Eye Mancatcher routes missing Venom recovery Difficulty to a nativ
   await openGM(page);
   await openGMBooks(page);
   await page.locator("#gm-book-cluster-eye-tribe").check();
+  await openProfileFilters(page);
   await page.locator("#gm-profile-book").selectOption("cluster-eye-tribe");
   await applyProfile(page, "Drakwald Mancatcher");
   const issues = page.getByRole("region", { name: "Choices to finish" });
