@@ -28,6 +28,123 @@ async function section(page, name) {
     .getByRole("button", { name: new RegExp(`^${name}`) })
     .click();
 }
+test("weapon names open exact references from catalogues and selected items @gm @interface @mobile", async ({
+  page,
+}, info) => {
+  const dialog = await openWeapon(page);
+  await chooseBase(page);
+  await page
+    .getByLabel("Weapon name", { exact: true })
+    .fill("Reference-linked sword");
+  const reader = page.getByRole("dialog", {
+    name: "Search the books",
+    exact: true,
+  });
+  async function readName(button, name, text, chain = false) {
+    await button.click();
+    await expect(
+      reader.getByRole("heading", { name, exact: true }),
+    ).toBeVisible();
+    await expect(reader.locator("#book-search-body")).toContainText(text);
+    if (chain) {
+      await reader
+        .getByRole("button", { name: "View Ablaze reference", exact: true })
+        .click();
+      await expect(
+        reader.getByRole("heading", { name: "Ablaze", exact: true }),
+      ).toBeVisible();
+      await reader
+        .getByRole("button", {
+          name: "Back to previous reference",
+          exact: true,
+        })
+        .click();
+      await expect(
+        reader.getByRole("heading", { name, exact: true }),
+      ).toBeVisible();
+    }
+    await reader
+      .getByRole("button", { name: "Close search", exact: true })
+      .click();
+    await expect(button).toBeFocused();
+  }
+  await section(page, "Properties");
+  await page.getByLabel("Find a property", { exact: true }).fill("Fast");
+  await readName(
+    dialog
+      .getByRole("region", { name: "Property library" })
+      .getByRole("button", { name: "Read Fast", exact: true }),
+    "Fast",
+    "Add 20 to combat initiative",
+  );
+  await dialog
+    .getByRole("button", { name: "Add Fast property", exact: true })
+    .click();
+  await readName(
+    dialog
+      .locator(".weapon-property")
+      .getByRole("button", { name: "Read Fast", exact: true }),
+    "Fast",
+    "Add 20 to combat initiative",
+  );
+  await expect(dialog.locator(".weapon-property summary")).toHaveCount(0);
+  await expect(dialog.getByText("Read rule", { exact: true })).toHaveCount(0);
+
+  await section(page, "Power");
+  await page.getByRole("radio", { name: "Magical", exact: true }).check();
+  await page.getByLabel("Find an enchantment", { exact: true }).fill("Alight");
+  await readName(
+    dialog.getByRole("button", { name: "Read Alight with Flame", exact: true }),
+    "Alight with Flame",
+    "flammable target",
+    true,
+  );
+  await dialog
+    .getByRole("button", {
+      name: "Add Alight with Flame enchantment",
+      exact: true,
+    })
+    .click();
+  await readName(
+    dialog
+      .locator(".weapon-property")
+      .getByRole("button", { name: "Read Alight with Flame", exact: true }),
+    "Alight with Flame",
+    "flammable target",
+  );
+  await page.getByRole("radio", { name: "Runic", exact: true }).click();
+  await dialog
+    .getByRole("button", { name: "Change power", exact: true })
+    .click();
+  await page.getByLabel("Find a rune", { exact: true }).fill("Cleaving");
+  await readName(
+    dialog.getByRole("button", { name: "Read Rune of Cleaving", exact: true }),
+    "Rune of Cleaving",
+    "+1 Damage",
+  );
+  await dialog
+    .getByRole("button", { name: "Inscribe Rune of Cleaving", exact: true })
+    .click();
+  await readName(
+    dialog
+      .locator(".weapon-property")
+      .getByRole("button", { name: "Read Rune of Cleaving", exact: true }),
+    "Rune of Cleaving",
+    "+1 Damage",
+  );
+  await expect(
+    page.getByLabel("Rune of Cleaving inscriptions", { exact: true }),
+  ).toHaveValue("1");
+  await page.screenshot({
+    path: info.outputPath("weapon-reference-names.png"),
+  });
+  await section(page, "Details");
+  await expect(page.getByLabel("Weapon name", { exact: true })).toHaveValue(
+    "Reference-linked sword",
+  );
+  await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
+  await expect(page.locator(".gm-attack-row")).toHaveCount(1);
+});
 async function chromeVisible(page, dialog) {
   const viewport = page.viewportSize();
   const bounds = await dialog.boundingBox();

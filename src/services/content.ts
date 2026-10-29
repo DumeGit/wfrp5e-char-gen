@@ -32,6 +32,12 @@ export type ReferenceRequest = {
   name?: string;
   book?: string;
   id?: string;
+  // Reviewed creator references can use the shared reader without joining search.
+  quote?: {
+    text: string;
+    source: { book: string; page: number };
+    label: string;
+  };
 };
 export function requestReference(request: ReferenceRequest) {
   window.dispatchEvent(new CustomEvent("wfrp-reference", { detail: request }));

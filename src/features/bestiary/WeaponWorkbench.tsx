@@ -30,7 +30,10 @@ import {
 } from "../../engine/gm/custom-weapons.mjs";
 import { sourceLabel } from "../../engine/sources.mjs";
 import { die } from "../../engine/rules.mjs";
-import { requestReference } from "../../services/content";
+import {
+  requestReference,
+  type ReferenceRequest,
+} from "../../services/content";
 import {
   Button,
   Check,
@@ -496,13 +499,18 @@ export function WeaponWorkbench({
         return (
           <div className="weapon-property" key={index}>
             <div>
-              <strong>{token || "Property"}</strong>
-              {definition && (
-                <details>
-                  <summary>Effect</summary>
-                  <p>{definition.text}</p>
-                  <small>{sourceLabel(R, definition)}</small>
-                </details>
+              {definition ? (
+                <>
+                  <WeaponReferenceName
+                    name={token}
+                    reference={propertyReference(definition)}
+                  />
+                  <small className="weapon-reference-source">
+                    {sourceLabel(R, definition)}
+                  </small>
+                </>
+              ) : (
+                <strong>{token || "Property"}</strong>
               )}
               {/\(Rating\)|^(Fine|Durable|Salvo|Crewed)$/.test(
                 definition?.name || "",
@@ -566,14 +574,14 @@ export function WeaponWorkbench({
         return (
           <div className="weapon-property" key={selection.id}>
             <div>
-              <details>
-                <summary>{e.name}</summary>
-                <p>{e.text}</p>
-                <small>
-                  Archives II · p. {e.page}
-                  {e.adaptation ? ` · ${e.adaptation}` : ""}
-                </small>
-              </details>
+              <WeaponReferenceName
+                name={e.name}
+                reference={enchantmentReference(e)}
+              />
+              <small className="weapon-reference-source">
+                Archives II · p. {e.page}
+                {e.adaptation ? ` · ${e.adaptation}` : ""}
+              </small>
               {e.target && (
                 <>
                   <Field
@@ -765,17 +773,12 @@ export function WeaponWorkbench({
         return (
           <div className="weapon-property" key={selection.id}>
             <div>
-              <details>
-                <summary>
-                  {r.name}
-                  {r.master ? " · Master Rune" : ""}
-                </summary>
-                <p>{r.text}</p>
-                <small>
-                  {sourceLabel(R, r)} · Fourth Edition reference · {r.sl}{" "}
-                  forging SL
-                </small>
-              </details>
+              <WeaponReferenceName name={r.name} reference={runeReference(r)} />
+              <small className="weapon-reference-source">
+                {r.master ? "Master Rune · " : ""}
+                {sourceLabel(R, r)} · Fourth Edition reference · {r.sl} forging
+                SL
+              </small>
               <Field
                 label={`${r.name} inscriptions`}
                 id={`weapon-rune-${runeKeyForId(selection.id)}`}
@@ -1217,7 +1220,7 @@ export function WeaponWorkbench({
                                 key={entry.id}
                                 name={entry.name}
                                 source={sourceLabel(R, entry)}
-                                text={entry.text}
+                                reference={propertyReference(entry)}
                                 action={
                                   <Button
                                     disabled={selected}
@@ -1369,7 +1372,7 @@ export function WeaponWorkbench({
                                   key={entry.id}
                                   name={entry.name}
                                   source={`Archives II · p. ${entry.page}`}
-                                  text={entry.text}
+                                  reference={enchantmentReference(entry)}
                                   action={
                                     <Button
                                       disabled={
@@ -1421,7 +1424,7 @@ export function WeaponWorkbench({
                                   key={entry.contentId || entry.id}
                                   name={entry.name}
                                   source={`${sourceLabel(R, entry)} · ${entry.sl} forging SL`}
-                                  text={entry.text}
+                                  reference={runeReference(entry)}
                                   action={
                                     <Button
                                       disabled={count >= 3}
@@ -1782,27 +1785,70 @@ function WeaponPane({
 function OptionRow({
   name,
   source,
-  text,
+  reference,
   action,
 }: {
   name: string;
   source: string;
-  text: string;
+  reference: ReferenceRequest;
   action: ReactNode;
 }) {
   return (
     <div className="weapon-option-row">
       <div>
-        <strong>{name}</strong>
+        <WeaponReferenceName name={name} reference={reference} />
         <small>{source}</small>
-        <details className="weapon-rule">
-          <summary>Read rule</summary>
-          <p>{text}</p>
-        </details>
       </div>
       {action}
     </div>
   );
+}
+function WeaponReferenceName({
+  name,
+  reference,
+}: {
+  name: string;
+  reference: ReferenceRequest;
+}) {
+  return (
+    <Button
+      className="weapon-reference-name"
+      aria-label={`Read ${name}`}
+      aria-haspopup="dialog"
+      onClick={() => requestReference(reference)}
+    >
+      {name}
+    </Button>
+  );
+}
+function propertyReference(entry: any): ReferenceRequest {
+  return {
+    kind: "property",
+    name: entry.name,
+    id: entry.id,
+    book: entry.source.book,
+  };
+}
+function runeReference(entry: any): ReferenceRequest {
+  return {
+    kind: "magic",
+    name: entry.name,
+    id: entry.contentId || entry.id,
+    book: entry.source.book,
+  };
+}
+function enchantmentReference(entry: any): ReferenceRequest {
+  return {
+    kind: "magic",
+    name: entry.name,
+    id: entry.id,
+    book: "archives-ii",
+    quote: {
+      text: [entry.text, entry.adaptation].filter(Boolean).join("\n\n"),
+      source: { book: "archives-ii", page: entry.page },
+      label: "Weapon enchantment",
+    },
+  };
 }
 function AttackReadout({
   preview,

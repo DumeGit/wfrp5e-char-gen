@@ -34,7 +34,7 @@ import {
 } from "./library";
 import { ReferenceBody, CareerReferences } from "./ReferenceBody";
 
-type View = { keys: string[]; name: string };
+type View = { keys: string[]; name: string; quote?: ReferenceRow };
 type Preview = { keys: string[]; name: string; left: number; top: number };
 type Filters = Record<string, string>;
 export function ReferenceSearch() {
@@ -216,7 +216,31 @@ export function ReferenceSearch() {
               request.name || matches[0].name,
               false,
             );
-          else setQuery(request.name || "");
+          else if (request.quote) {
+            const name = request.name || "Book reference";
+            setPreview(null);
+            setHistory([]);
+            restoredScroll.current = 0;
+            setView({
+              keys: [],
+              name,
+              quote: {
+                key: request.id || name,
+                name,
+                kind: request.kind || "magic",
+                label: request.quote.label,
+                entry: {
+                  name,
+                  text: request.quote.text,
+                  source: request.quote.source,
+                  descriptionStatus: "reviewed",
+                },
+                aliases: [],
+                legacy: [],
+                filterValues: {},
+              },
+            });
+          } else setQuery(request.name || "");
         })
         .catch(() => {});
     };
@@ -436,9 +460,10 @@ export function ReferenceSearch() {
     return `${start ? "…" : ""}${text.slice(start, start + 130)}${text.length > start + 130 ? "…" : ""}`;
   }
   const current =
-    view?.keys.length === 1
+    view?.quote ??
+    (view?.keys.length === 1
       ? data?.rows.find((row) => row.key === view.keys[0])
-      : undefined;
+      : undefined);
   function showPreview(keys: string[], name: string, target: HTMLElement) {
     const rect = target.getBoundingClientRect();
     setPreview({

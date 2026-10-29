@@ -6,6 +6,8 @@ Lustria’s retained public catalogue includes reviewed equipment, magic, Traits
 
 The masthead search launcher opens the same **Search the books** workspace in all four workspaces. Desktop uses a large centred modal with results on the left and a reading pane on the right. Phones use a full-screen modal with separate results/reference views; **Back to search** restores the results. The input node stays stable throughout. Existing Career, Experience, magic and shop filters remain independent.
 
+Weapon creator property and rune names request an exact book/content identity. Enchantment names can supply their existing reviewed text and citation as a temporary reader entry when no catalogue entry exists. It uses the same reader, related-reference links and Back history; closing restores the weapon-name opener. Temporary entries stay outside the search rows, worker, categories and saved character data.
+
 ## Publication scope — 16 October 2026
 
 Standalone category Rules are absent from published book/reference/search assets in every mode, including All results and related-term chaining. Original extraction and frozen historical audits remain outside static hosting. All retained descriptions are explicitly reviewed summaries, with book/page citations and selective Legacy notes; pure names/statistical lookup data retain their values with documented exceptions. Six hireling-generation/job-hook tables are excluded by exact identity. Other named categories remain. Generated coverage distinguishes public results from private retained inventory. This change does not establish legal clearance. See [DESCRIPTIONS.md](DESCRIPTIONS.md).

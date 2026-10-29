@@ -413,6 +413,28 @@ html:has(.weapon-dialog[open]) {
 .weapon-option-row strong {
   font-size: 15px;
 }
+.weapon-workbench button.weapon-reference-name {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-crimson);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.weapon-reference-source {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
 .weapon-option-row small {
   display: block;
   color: var(--color-muted);
@@ -452,9 +474,6 @@ html:has(.weapon-dialog[open]) {
 .weapon-workbench details p {
   max-width: 72ch;
   line-height: 1.6;
-}
-.weapon-rule > summary {
-  padding-block: 10px;
 }
 .weapon-power-choices {
   display: grid;
