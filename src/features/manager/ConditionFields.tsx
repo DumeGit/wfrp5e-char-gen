@@ -69,40 +69,6 @@ export function ConditionFields({
           onValue={(name) => change({ name })}
         />
       )}
-      {selected && !custom && (
-        <div className="manager-catalogue-preview">
-          {selected.text ? (
-            <p>{selected.text}</p>
-          ) : failure ? (
-            <div role="alert">
-              <p>{failure}</p>
-              <button
-                type="button"
-                className="quiet"
-                onClick={() => setAttempt((old) => old + 1)}
-              >
-                Retry summary
-              </button>
-            </div>
-          ) : (
-            <p role="status">Loading Condition summary…</p>
-          )}
-          <button
-            className="quiet"
-            type="button"
-            onClick={() =>
-              requestReference({
-                kind: "condition",
-                name: selected.name,
-                book: "core",
-                id: selected.id,
-              })
-            }
-          >
-            Core Rulebook, p. {selected.page}
-          </button>
-        </div>
-      )}
       {selected && !custom && single.has(selected.name) ? (
         <p className="manager-meta">
           This Condition does not stack; record it once.
@@ -126,6 +92,44 @@ export function ConditionFields({
       <p className="manager-meta">
         Recorded for play; numerical effects and recovery are applied manually.
       </p>
+      {failure && !custom && (
+        <div role="alert">
+          <p>Could not load Condition rules. {failure}</p>
+          <button
+            type="button"
+            className="quiet"
+            onClick={() => setAttempt((old) => old + 1)}
+          >
+            Retry summary
+          </button>
+        </div>
+      )}
+      {selected && !custom && (
+        <details className="manager-condition-rules">
+          <summary>Condition rules · {selected.name}</summary>
+          <div className="manager-catalogue-preview">
+            {selected.text ? (
+              <p>{selected.text}</p>
+            ) : (
+              !failure && <p role="status">Loading Condition summary…</p>
+            )}
+            <button
+              className="quiet"
+              type="button"
+              onClick={() =>
+                requestReference({
+                  kind: "condition",
+                  name: selected.name,
+                  book: "core",
+                  id: selected.id,
+                })
+              }
+            >
+              Core Rulebook, p. {selected.page}
+            </button>
+          </div>
+        </details>
+      )}
     </>
   );
 }

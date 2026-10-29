@@ -1,4 +1,4 @@
-import { test, expect, pcDraft } from "./helpers.mjs";
+import { test, expect, pcDraft, noOverflow } from "./helpers.mjs";
 import { freshMarijan, makeEntry } from "../../src/engine/marijan/model.mjs";
 import { readFile } from "node:fs/promises";
 
@@ -30,6 +30,9 @@ test("core Conditions are selectable with source summaries, non-stacking counts 
     "Unconscious",
   ]);
   await select.selectOption("Unconscious");
+  await dialog
+    .getByText("Condition rules · Unconscious", { exact: true })
+    .click();
   await expect(dialog.getByText(/Helpless, unaware/)).toBeVisible();
   await expect(
     dialog.getByRole("button", { name: "Core Rulebook, p. 187", exact: true }),
@@ -66,6 +69,67 @@ test("core Conditions are selectable with source summaries, non-stacking counts 
     amount: 2,
     note: "Agreed at the table",
   });
+});
+
+test("Condition entry exposes recording before rules and recovers failed summaries at short phone sizes @manager @interface @mobile", async ({
+  page,
+}, info) => {
+  let fail = true;
+  await page.route("**/data/rule-reference-library.json", (route) =>
+    fail
+      ? route.fulfill({ status: 503, body: "Unavailable" })
+      : route.continue(),
+  );
+  await open(page);
+  await importData(page, await pcDraft({ complete: true }));
+  const before = (await rawRecords(page))[0];
+  await page.setViewportSize({ width: 320, height: 480 });
+  await page
+    .getByRole("button", { name: "Add status entry", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog.getByRole("alert")).toContainText(
+    "Could not load Condition rules.",
+  );
+  await expect(
+    dialog.getByRole("button", { name: "Retry summary", exact: true }),
+  ).toBeVisible();
+  fail = false;
+  await dialog
+    .getByRole("button", { name: "Retry summary", exact: true })
+    .click();
+  await expect(dialog.getByRole("alert")).toHaveCount(0);
+  await dialog
+    .getByLabel("Condition", { exact: true })
+    .selectOption("Bleeding");
+  const count = dialog.getByLabel("Count", { exact: true });
+  const summary = dialog.getByText("Condition rules · Bleeding", {
+    exact: true,
+  });
+  await expect(count).toHaveValue("1");
+  await expect(summary.locator("..")).not.toHaveAttribute("open", "");
+  expect((await count.boundingBox()).y).toBeLessThan(
+    (await summary.boundingBox()).y,
+  );
+  await expect(
+    dialog.getByText(
+      "Recorded for play; numerical effects and recovery are applied manually.",
+      { exact: true },
+    ),
+  ).toBeVisible();
+  await page.screenshot({
+    path: info.outputPath("condition-entry-320-short.png"),
+  });
+  await summary.press("Enter");
+  await expect(summary.locator("..")).toHaveAttribute("open", "");
+  await expect(
+    dialog.getByRole("button", { name: "Core Rulebook, p. 185", exact: true }),
+  ).toBeVisible();
+  await page.setViewportSize({ width: 390, height: 640 });
+  await page.screenshot({ path: info.outputPath("condition-rules-390.png") });
+  await noOverflow(page);
+  await dialog.getByRole("button", { name: "Close", exact: true }).click();
+  expect((await rawRecords(page))[0].conditions).toEqual(before.conditions);
 });
 
 test("status card records sourced Critical Wounds and mutations, recovery and custom notes without applying effects @manager", async ({
