@@ -28,6 +28,92 @@ async function section(page, name) {
     .getByRole("button", { name: new RegExp(`^${name}`) })
     .click();
 }
+test("weapon selection stays clear after browsing and replacing a base @gm @interface @mobile", async ({
+  page,
+}, info) => {
+  const dialog = await openWeapon(page);
+  // Browse the unfiltered list below the search controls, as a person would.
+  await dialog
+    .getByRole("button", {
+      name: "Choose Bow (2H) · Core · p. 303",
+      exact: true,
+    })
+    .click();
+  const heading = dialog.getByRole("heading", {
+    name: "Customise Bow (2H)",
+    exact: true,
+  });
+  await expect(heading).toBeFocused();
+  await expect(heading).toBeInViewport();
+  await expect(page.locator("#weapon-base-search")).toHaveCount(0);
+  await expect(page.getByLabel("Weapon name", { exact: true })).toHaveValue(
+    "Bow",
+  );
+  expect(
+    await dialog
+      .locator(".weapon-editor-scroll")
+      .evaluate((node) => node.scrollTop),
+  ).toBe(0);
+  await page.screenshot({ path: info.outputPath("weapon-selected.png") });
+  await page
+    .getByLabel("Weapon name", { exact: true })
+    .fill("Captain’s weapon");
+  await page
+    .getByLabel("Printed weapon notes", { exact: true })
+    .fill("Keep this note.");
+  await dialog
+    .getByRole("button", { name: "Change base", exact: true })
+    .click();
+  const cannon = dialog.getByRole("button", {
+    name: "Choose Cannon (small) · Up in Arms · p. 123",
+    exact: true,
+  });
+  await cannon.click();
+  await expect(cannon).toHaveAttribute("aria-pressed", "true");
+  const confirmation = dialog.getByRole("group", {
+    name: "Replace base profile",
+    exact: true,
+  });
+  await expect(confirmation).toContainText("Use Cannon (small) as the base?");
+  await expect(confirmation).toBeInViewport();
+  await expect(page.locator("#weapon-base-search")).not.toBeInViewport();
+  await expect(
+    dialog.getByRole("button", { name: "Replace base", exact: true }),
+  ).toBeFocused();
+  const rowBox = await cannon.boundingBox();
+  const confirmBox = await confirmation.boundingBox();
+  expect(confirmBox.y - rowBox.y - rowBox.height).toBeLessThanOrEqual(24);
+  await page.screenshot({
+    path: info.outputPath("weapon-replace-context.png"),
+  });
+  await dialog
+    .getByRole("button", { name: "Keep current base", exact: true })
+    .click();
+  await expect(cannon).toBeFocused();
+  await expect(cannon).toBeInViewport();
+  await cannon.click();
+  await dialog
+    .getByRole("button", { name: "Replace base", exact: true })
+    .click();
+  await expect(
+    dialog.getByRole("heading", {
+      name: "Customise Cannon (small)",
+      exact: true,
+    }),
+  ).toBeFocused();
+  await expect(page.getByLabel("Weapon name", { exact: true })).toHaveValue(
+    "Captain’s weapon",
+  );
+  await expect(
+    page.getByLabel("Printed weapon notes", { exact: true }),
+  ).toHaveValue("Keep this note.");
+  expect(
+    await dialog
+      .locator(".weapon-editor-scroll")
+      .evaluate((node) => node.scrollTop),
+  ).toBe(0);
+  await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
+});
 test("weapon names open exact references from catalogues and selected items @gm @interface @mobile", async ({
   page,
 }, info) => {
@@ -182,7 +268,9 @@ test("weapon builder searches, edits and discards with keyboard and responsive a
   await page.screenshot({ path: info.outputPath("weapon-catalogue.png") });
   await chooseBase(page);
   const name = page.getByLabel("Weapon name", { exact: true });
-  await expect(name).toBeFocused();
+  await expect(
+    dialog.getByRole("heading", { name: "Customise Sword", exact: true }),
+  ).toBeFocused();
   await expect(dialog.locator("#weapon-profile")).toBeHidden();
   await name.fill("Watch captain’s blade");
   await page

@@ -3,6 +3,7 @@ import {
   createContext,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -65,6 +66,7 @@ export function WeaponWorkbench({
   const [error, setError] = useState("");
   const [reviewValidation, setReviewValidation] = useState(false);
   const root = useRef<HTMLDivElement>(null);
+  const baseOpener = useRef<HTMLButtonElement | null>(null);
   const hasWeapon = !!weapon;
   const [panel, setPanel] = useState<WeaponPanel>("details");
   const [choosingBase, setChoosingBase] = useState(!initial);
@@ -79,12 +81,12 @@ export function WeaponWorkbench({
   }, [draft, store, close]);
   useEffect(() => {
     root.current
-      ?.querySelector<HTMLInputElement>(
-        hasWeapon ? "#weapon-name" : "#weapon-base-search",
+      ?.querySelector<HTMLElement>(
+        hasWeapon ? '[data-weapon-panel="details"] h3' : "#weapon-base-search",
       )
       ?.focus({ preventScroll: true });
   }, [hasWeapon, initial]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const scroll = root.current?.querySelector(".weapon-editor-scroll");
     if (scroll) scroll.scrollTop = 0;
   }, [panel, choosingBase]);
@@ -136,13 +138,18 @@ export function WeaponWorkbench({
   );
   const chooseBase = (id: string) => {
     if (!id) return;
+    if (weapon?.baseId === id) {
+      setPendingBase("");
+      openPanel("details", true);
+      return;
+    }
     if (weapon) {
       setPendingBase(id);
       requestAnimationFrame(() => {
         const confirmation = root.current?.querySelector<HTMLElement>(
           '[aria-label="Replace base profile"]',
         );
-        confirmation?.scrollIntoView({ block: "start" });
+        confirmation?.scrollIntoView({ block: "nearest", behavior: "instant" });
         confirmation?.querySelector<HTMLButtonElement>("button")?.focus({
           preventScroll: true,
         });
@@ -165,7 +172,9 @@ export function WeaponWorkbench({
     setPanel("details");
     setError("");
     requestAnimationFrame(() =>
-      root.current?.querySelector<HTMLInputElement>("#weapon-name")?.focus(),
+      root.current
+        ?.querySelector<HTMLElement>('[data-weapon-panel="details"] h3')
+        ?.focus({ preventScroll: true }),
     );
   };
   const switchPower = (power: string) => {
@@ -915,7 +924,7 @@ export function WeaponWorkbench({
                       <Button
                         onClick={() => {
                           setPendingBase("");
-                          setChoosingBase(false);
+                          openPanel(panel, true);
                         }}
                       >
                         Back to weapon
@@ -973,35 +982,6 @@ export function WeaponWorkbench({
                       />
                     </div>
                   </div>
-                  {pendingBase && (
-                    <div
-                      className="weapon-confirm"
-                      role="group"
-                      aria-label="Replace base profile"
-                    >
-                      <strong>
-                        Use{" "}
-                        {
-                          R.weapons.find(
-                            (entry: any) => entry.contentId === pendingBase,
-                          )?.name
-                        }{" "}
-                        instead?
-                      </strong>
-                      <p>
-                        The profile, properties and powers will reset. Your
-                        name, notes, quantity and dice history stay.
-                      </p>
-                      <div className="weapon-actions">
-                        <Button className="primary" onClick={replaceBase}>
-                          Replace base
-                        </Button>
-                        <Button onClick={() => setPendingBase("")}>
-                          Keep current base
-                        </Button>
-                      </div>
-                    </div>
-                  )}
                   <p className="weapon-result-count" role="status">
                     {bases.length} {bases.length === 1 ? "weapon" : "weapons"}
                     {query || kind || group
@@ -1016,32 +996,74 @@ export function WeaponWorkbench({
                   </div>
                   <div className="weapon-base-list">
                     {bases.slice(0, baseLimit).map((base: any) => (
-                      <Button
-                        key={base.contentId}
-                        className="weapon-base-row"
-                        aria-label={`Choose ${base.name} · ${sourceLabel(R, base)}`}
-                        aria-pressed={
-                          weapon?.baseId === base.contentId ||
-                          pendingBase === base.contentId
-                        }
-                        onClick={() => chooseBase(base.contentId)}
-                      >
-                        <span className="weapon-base-name">
-                          <strong>{base.name}</strong>
-                          <small>{sourceLabel(R, base)}</small>
-                        </span>
-                        <span className="weapon-base-group">{base.group}</span>
-                        <span className="weapon-base-stat">
-                          <small>Damage</small>
-                          {base.damage || "—"}
-                        </span>
-                        <span className="weapon-base-stat">
-                          <small>
-                            {base.kind === "melee" ? "Reach" : "Range"}
-                          </small>
-                          {base.reach || "—"}
-                        </span>
-                      </Button>
+                      <div className="weapon-base-choice" key={base.contentId}>
+                        <Button
+                          className="weapon-base-row"
+                          aria-label={`Choose ${base.name} · ${sourceLabel(R, base)}`}
+                          aria-pressed={
+                            (pendingBase || weapon?.baseId) === base.contentId
+                          }
+                          onClick={(event) => {
+                            baseOpener.current = event.currentTarget;
+                            chooseBase(base.contentId);
+                          }}
+                        >
+                          <span className="weapon-base-name">
+                            <strong>{base.name}</strong>
+                            <small>
+                              {sourceLabel(R, base)}
+                              {pendingBase === base.contentId
+                                ? " · Selected"
+                                : weapon?.baseId === base.contentId
+                                  ? " · Current base"
+                                  : ""}
+                            </small>
+                          </span>
+                          <span className="weapon-base-group">
+                            {base.group}
+                          </span>
+                          <span className="weapon-base-stat">
+                            <small>Damage</small>
+                            {base.damage || "—"}
+                          </span>
+                          <span className="weapon-base-stat">
+                            <small>
+                              {base.kind === "melee" ? "Reach" : "Range"}
+                            </small>
+                            {base.reach || "—"}
+                          </span>
+                        </Button>
+                        {pendingBase === base.contentId && (
+                          <div
+                            className="weapon-confirm"
+                            role="group"
+                            aria-label="Replace base profile"
+                          >
+                            <strong>Use {base.name} as the base?</strong>
+                            <p>
+                              The profile, properties and powers will reset.
+                              Your name, notes, quantity and dice history stay.
+                            </p>
+                            <div className="weapon-actions">
+                              <Button className="primary" onClick={replaceBase}>
+                                Replace base
+                              </Button>
+                              <Button
+                                onClick={() => {
+                                  setPendingBase("");
+                                  requestAnimationFrame(() =>
+                                    baseOpener.current?.focus({
+                                      preventScroll: true,
+                                    }),
+                                  );
+                                }}
+                              >
+                                Keep current base
+                              </Button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                   {!bases.length && (
@@ -1073,8 +1095,8 @@ export function WeaponWorkbench({
                   <>
                     <WeaponPane
                       id="details"
-                      title="Weapon details"
-                      intro="Give it a name. Keep the printed profile or adjust it for this weapon."
+                      title={`Customise ${weapon.base.name}`}
+                      intro={`Selected base from ${sourceLabel(R, { source: weapon.base.source })}. Give it a name, keep the printed profile or adjust it for this weapon.`}
                       hidden={panel !== "details"}
                     >
                       <div className="weapon-name-row">

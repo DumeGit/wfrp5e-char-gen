@@ -366,6 +366,10 @@ html:has(.weapon-dialog[open]) {
 .weapon-base-name {
   min-width: 0;
 }
+.weapon-workbench .weapon-base-row[aria-pressed="true"] {
+  background: var(--color-paper-hover);
+  box-shadow: inset 0 0 0 1px var(--color-crimson);
+}
 .weapon-base-name strong {
   display: block;
   font-size: 17px;

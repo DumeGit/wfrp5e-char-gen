@@ -1,5 +1,7 @@
 # Local testing
 
+29 October weapon-selection follow-up: four focused desktop/phone browser cases passed. Unfiltered-list selection focuses the named Customise heading with editor scroll at zero; base replacement highlights the candidate and keeps confirmation beside it, outside the search controls. Cancellation returns to the row, confirmed replacement retains name/notes, and existing responsive/discard checks still pass. Production build and TypeScript passed; screenshots of the selected editor and replacement context were inspected. No unrelated suite was rerun.
+
 29 October weapon-name references: two focused desktop/phone cases passed for property, enchantment and rune names in both catalogues and selected rows. Coverage includes exact reader content, removal of Effect/Read rule disclosures, opener focus and draft retention, and enchantment → Condition → Back history. Production build and TypeScript passed; no unrelated suite was rerun.
 
 29 October Species Skill row fix: `species-skill-selection.spec.mjs` passed its two focused desktop/phone cases. Clicking a Skill name or empty row space toggles once, direct checkbox/Space activation still works, and clicking/changing the Dwarf Trade specialisation leaves its checkbox unchanged. The production build and TypeScript passed; no broader suite was rerun.
