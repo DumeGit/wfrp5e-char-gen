@@ -1,5 +1,7 @@
 # Local testing
 
+29 October mobile history sizing: three focused Player/Bestiary/Marijan browser cases passed for Undo/Redo, grouped typing, branching and responsive targets at 320/390/1440px. Compact history buttons measure at least 64px wide by 44px high; inspected 320px screenshots retain balances/status without overflow. Production build, TypeScript and targeted formatting passed. No unrelated suite was rerun.
+
 29 October Traits follow-up: the production build and TypeScript passed. Four focused desktop/phone browser cases passed for Trait batch selection across searches, full-label selection, canonical summaries, existing parameter defaults, duplicate blocking, Cancel, one-step Undo/Redo and saved JSON, plus existing name-priority/description search. Desktop and 390px screenshots were visually inspected with no horizontal overflow. No unrelated suite was rerun.
 
 29 October Bestiary mobile profile filters: the existing focused filter case now checks 320/390/430/599/600/768/1100/1101/1440px geometry, aligned full-width phone controls, stacked compact selectors, 44px targets, category/book selection and clearing, no overflow, and the collapsed first-profile/history clearance. The new geometry assertion reproduced the original 26px-wide broken control before the CSS fix. Both desktop/phone cases passed on the corrected production build; phone/tablet/desktop captures were inspected. Build and TypeScript passed; no unrelated suite was rerun.

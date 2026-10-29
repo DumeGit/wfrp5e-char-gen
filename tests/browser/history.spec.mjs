@@ -70,7 +70,7 @@ for (const mode of ["Player", "GM", "Marijan"]) {
       ).toBeVisible();
       await noOverflow(page);
       const bounds = await redo.boundingBox();
-      expect(bounds.width).toBeGreaterThanOrEqual(44);
+      expect(bounds.width).toBeGreaterThanOrEqual(width <= 760 ? 64 : 44);
       expect(bounds.height).toBeGreaterThanOrEqual(
         width <= 760 || info.project.name === "mobile" ? 44 : 32,
       );

@@ -180,6 +180,11 @@ html:has(.mobile-creator-menu[open]) {
     margin: 0;
     order: -1;
     flex: none;
+    gap: 8px;
+  }
+  .mobile-workspace-bar .history-button {
+    width: 64px;
+    min-width: 64px;
   }
   .mobile-workspace-bar > .mobile-balance {
     display: grid;
