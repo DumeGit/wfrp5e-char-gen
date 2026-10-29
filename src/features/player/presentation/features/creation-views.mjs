@@ -1,4 +1,4 @@
-import { RuleName } from "../../../../components/RuleReference";
+import { RuleName, RuleReference } from "../../../../components/RuleReference";
 import { entryReference } from "../../../../engine/entry-reference.mjs";
 import {
   element,
@@ -1037,22 +1037,60 @@ export function createFeature(getContext, setContext) {
   }
 
   function talents() {
-    let {
-      R,
-      s,
-      result,
-      lucciniTalentChoice,
-      ref,
-      button,
-      select,
-      talentDescription,
-      page,
-      esc,
-    } = getContext();
+    let { R, s, result, lucciniTalentChoice, ref, button, select, page, esc } =
+      getContext();
 
     const sp = creationSpecies(R, s),
       d = result().derived,
       replacement = startingTalentReplacement(R, s);
+    const talentHelp = (name) =>
+      name
+        ? element(RuleReference, {
+            reference: entryReference("talent", {
+              ...M.talentInfo(R, name),
+              name,
+            }),
+          })
+        : "";
+    const talentChip = (
+      name,
+      note = "",
+      entry = legacyOption(R, s, "talent", name),
+      muted = false,
+    ) =>
+      element(
+        "span",
+        { class: `chip starting-talent-chip${muted ? " muted" : ""}` },
+        element(
+          "span",
+          {},
+          esc(name),
+          note ? element("small", {}, " · ", note) : "",
+        ),
+        legacyTag(R, entry),
+        talentHelp(name),
+      );
+    const speciesNames = sp.talents.map((_, i) =>
+      replacement?.slot === `species-${i}`
+        ? replacement.talent
+        : s.talentChoices[`species-${i}`] || M.speciesTalentOptions(R, s, i)[0],
+    );
+    const randomName = (t, i) =>
+      replacement?.slot === `random-${i}`
+        ? replacement.talent
+        : t === "Artistic"
+          ? s.talentChoices[`random-${i}`] || "Artistic (Drawing)"
+          : t;
+    const granted = originProfile(R, s)?.grantedTalents || [];
+    const shown = new Set([
+      ...speciesNames,
+      ...s.randomTalents.map(randomName),
+      ...granted,
+      s.freeTalent,
+    ]);
+    const additional = [...new Set(d.talents)].filter(
+      (name) => !shown.has(name),
+    );
     return fragment(
       element("span", { class: "eyebrow" }, "05 / Talents"),
       chapterHeading("Starting Talents"),
@@ -1066,48 +1104,46 @@ export function createFeature(getContext, setContext) {
       element("h2", { class: "creation-section-heading" }, "Species Talents"),
       originTalentChoice(R, s),
       lucciniTalentChoice(),
-      joinNodes(
-        sp.talents.map((_, i) => {
-          const opts = M.speciesTalentOptions(R, s, i);
-          return replacement?.slot === interpolate(["species-", ""], [i])
-            ? element(
-                "span",
-                { class: "chip" },
-                esc(replacement.talent),
-                " · regional replacement ",
-                legacyTag(R, sp),
-              )
-            : opts.length === 1
-              ? element(
-                  "span",
-                  { class: "chip" },
-                  esc(opts[0]),
-                  legacyTag(R, legacyOption(R, s, "talent", opts[0])),
-                )
-              : element(
-                  "div",
-                  { class: "field" },
-                  element(
-                    "label",
-                    { for: ["talent-", i].join("") },
-                    "Species choice",
+      element(
+        "div",
+        {
+          class: "starting-talent-list",
+          role: "group",
+          "aria-label": "Species Talents",
+        },
+        joinNodes(
+          sp.talents.map((_, i) => {
+            const opts = M.speciesTalentOptions(R, s, i);
+            const name = speciesNames[i];
+            if (replacement?.slot === `species-${i}`)
+              return talentChip(name, "regional replacement", sp);
+            if (opts.length === 1) return talentChip(name);
+            return element(
+              "div",
+              { class: "field" },
+              element("label", { for: `talent-${i}` }, "Species choice"),
+              element(
+                "div",
+                { class: "starting-talent-control" },
+                select(
+                  interpolate(
+                    [
+                      'id="talent-',
+                      '" data-bind="talentChoices" data-key="species-',
+                      '"',
+                    ],
+                    [i, i],
                   ),
-                  select(
-                    interpolate(
-                      [
-                        'id="talent-',
-                        '" data-bind="talentChoices" data-key="species-',
-                        '"',
-                      ],
-                      [i, i],
-                    ),
-                    opts,
-                    s.talentChoices[interpolate(["species-", ""], [i])] ||
-                      opts[0],
-                  ),
-                );
-        }),
-        "",
+                  opts,
+                  s.talentChoices[interpolate(["species-", ""], [i])] ||
+                    opts[0],
+                ),
+                talentHelp(name),
+              ),
+            );
+          }),
+          "",
+        ),
       ),
       sp.randomTalents
         ? fragment(
@@ -1121,45 +1157,49 @@ export function createFeature(getContext, setContext) {
               ". Duplicates are rerolled and retained in your roll record.",
             ),
             s.randomTalents.length
-              ? joinNodes(
-                  s.randomTalents.map((t, i) =>
-                    psychometrySacrifice(R, s) && s.psychometrySlot === i
-                      ? element(
-                          "span",
-                          { class: "chip muted" },
-                          esc(t),
-                          " · given up for Psychometry",
-                        )
-                      : replacement?.slot === interpolate(["random-", ""], [i])
+              ? element(
+                  "div",
+                  {
+                    class: "starting-talent-list",
+                    role: "group",
+                    "aria-label": "Rolled Talents",
+                  },
+                  joinNodes(
+                    s.randomTalents.map((t, i) => {
+                      if (psychometrySacrifice(R, s) && s.psychometrySlot === i)
+                        return talentChip(
+                          t,
+                          "given up for Psychometry",
+                          undefined,
+                          true,
+                        );
+                      if (replacement?.slot === `random-${i}`)
+                        return talentChip(
+                          replacement.talent,
+                          "regional replacement",
+                          sp,
+                        );
+                      const name = randomName(t, i);
+                      return t === "Artistic"
                         ? element(
-                            "span",
-                            { class: "chip" },
-                            esc(replacement.talent),
-                            " · regional replacement ",
-                            legacyTag(R, sp),
-                          )
-                        : t === "Artistic"
-                          ? element(
+                            "div",
+                            { class: "field" },
+                            element("label", {}, "Artistic specialisation"),
+                            element(
                               "div",
-                              { class: "field" },
-                              element("label", {}, "Artistic specialisation"),
+                              { class: "starting-talent-control" },
                               select(
-                                interpolate(
-                                  [
-                                    'data-bind="talentChoices" data-key="random-',
-                                    '" aria-label="Artistic specialisation"',
-                                  ],
-                                  [i],
-                                ),
+                                `data-bind="talentChoices" data-key="random-${i}" aria-label="Artistic specialisation"`,
                                 M.options(R, "Artistic", "talent"),
-                                s.talentChoices[
-                                  interpolate(["random-", ""], [i])
-                                ] || "Artistic (Drawing)",
+                                name,
                               ),
-                            )
-                          : element("span", { class: "chip" }, esc(t)),
+                              talentHelp(name),
+                            ),
+                          )
+                        : talentChip(name);
+                    }),
+                    "",
                   ),
-                  "",
                 )
               : button(
                   "random-talents",
@@ -1170,34 +1210,72 @@ export function createFeature(getContext, setContext) {
           )
         : "",
       psychometryPanel(R, s),
-      joinNodes(
-        (originProfile(R, s)?.grantedTalents || []).map((t) =>
-          fragment(
-            element("span", { class: "chip" }, esc(t), " · kindred grant"),
-            talentDescription(t),
-          ),
-        ),
-        "",
-      ),
+      granted.length
+        ? element(
+            "div",
+            {
+              class: "starting-talent-list",
+              role: "group",
+              "aria-label": "Kindred Talents",
+            },
+            joinNodes(
+              granted.map((t) => talentChip(t, "kindred grant")),
+              "",
+            ),
+          )
+        : "",
       element(
         "div",
         { class: "field section-gap" },
         element("label", { for: "freeTalent" }, "One free Career Talent"),
-        select(
-          'id="freeTalent" data-bind="freeTalent"',
-          M.careerTalentOptions(R, s).map((n) => [
-            n,
-            n,
-            M.talentInfo(R, n)?.unavailable,
-          ]),
-          s.freeTalent,
-          true,
+        element(
+          "div",
+          {
+            class: "starting-talent-list",
+            role: "group",
+            "aria-label": "Free Career Talent",
+          },
+          element(
+            "div",
+            { class: "chip starting-talent-chip starting-talent-control" },
+            select(
+              'id="freeTalent" data-bind="freeTalent"',
+              M.careerTalentOptions(R, s).map((n) => [
+                n,
+                n,
+                M.talentInfo(R, n)?.unavailable,
+              ]),
+              s.freeTalent,
+              true,
+            ),
+            talentHelp(s.freeTalent),
+          ),
         ),
       ),
       M.careerTalentOptions(R, s).some((n) => M.base(n) === "Impassioned Zeal")
         ? causeControl(s, esc, button)
         : "",
-      s.freeTalent ? talentDescription(s.freeTalent) : "",
+      additional.length
+        ? fragment(
+            element(
+              "h2",
+              { class: "creation-section-heading" },
+              "Additional Talents",
+            ),
+            element(
+              "div",
+              {
+                class: "starting-talent-list",
+                role: "group",
+                "aria-label": "Additional Talents",
+              },
+              joinNodes(
+                additional.map((t) => talentChip(t)),
+                "",
+              ),
+            ),
+          )
+        : "",
       d.talents.includes("Doomed")
         ? element(
             "details",
@@ -1264,15 +1342,6 @@ export function createFeature(getContext, setContext) {
             "Your patron grants six Blessings automatically (p. 220). All six appear in the export; overflow goes into the creation record.",
           )
         : "",
-      element(
-        "details",
-        {
-          "data-detail-key": detailKey("creation-views:talents:1"),
-          class: "section-gap",
-        },
-        element("summary", {}, "Read all your Talent rules"),
-        joinNodes([...new Set(d.talents)].map(talentDescription), ""),
-      ),
     );
   }
 

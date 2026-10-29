@@ -10,6 +10,8 @@ Weapon creator property and rune names request an exact book/content identity. E
 
 Gear help maps the creator’s internal gear group to the shared equipment reference kind, so equipment help opens the matching article directly rather than falling back to a general query.
 
+Starting Talents expose direct help beside every fixed/rolled Talent and selected specialisation, including the free Career choice. When a content identity covers several specialisations, an explicit requested name narrows those matches before opening the reader; genuine same-name ambiguity still uses the existing chooser. Reading leaves rolled results and character data unchanged.
+
 Rule-description help across all four workspaces uses labelled ? buttons rather than individual expanders. Player/Bestiary Traits, Talents, magic, Runes, Cants and equipment/supplement references preserve their exact names, catalogue identities and book citations. Manager ability/status and Condition help share that reader. Existing reviewed text can be passed as a temporary source-only quote when an identity is intentionally absent from search; adapted build text and Legacy notes stay scoped to that reader request. Custom notes remain editable local text. Reading restores focus and preserves pending picker selections without a character/history edit.
 
 ## Publication scope — 16 October 2026

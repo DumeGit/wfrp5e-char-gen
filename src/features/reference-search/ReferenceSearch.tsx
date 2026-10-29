@@ -204,6 +204,13 @@ export function ReferenceSearch() {
                   normalizeSearch(row.name) ===
                   normalizeSearch(request.name || ""),
               );
+          if (matches.length > 1 && request.name) {
+            const exact = matches.filter(
+              (row) =>
+                normalizeSearch(row.name) === normalizeSearch(request.name!),
+            );
+            if (exact.length) matches = exact;
+          }
           if (!matches.length && request.name)
             matches = allowed.filter(
               (row) =>

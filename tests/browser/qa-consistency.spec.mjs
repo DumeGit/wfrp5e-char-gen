@@ -57,7 +57,7 @@ test("Source disclosures have separate keyboard actions and Review names stay in
     ).toHaveCount(0);
   }
   await expect(page.getByRole("contentinfo")).toHaveCount(1);
-  await pcStep(page, "Talents");
+  await pcStep(page, "Review");
   const description = page.locator(".talent-description").first();
   const source = description.locator(".source-button").first();
   await source.focus();
