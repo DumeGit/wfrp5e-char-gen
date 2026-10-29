@@ -389,6 +389,29 @@ export function reviewSheet(R, s, snapshot, ui) {
         ),
       ),
       "\n    ",
+      element(
+        "div",
+        { class: "review-reusable-save" },
+        button("Save editable character (.json)", "save-file", "", "quiet"),
+        element(
+          "p",
+          { class: "small muted" },
+          "Your draft stays in this browser. Save a JSON backup to reopen it here, including unfinished choices. For play, import a completed character into the separate ",
+          element(
+            "a",
+            {
+              href:
+                "/manager/" +
+                (typeof location !== "undefined" &&
+                new URLSearchParams(location.search).has("verify")
+                  ? "?verify=1"
+                  : ""),
+            },
+            "Character manager",
+          ),
+          ". Importing creates an independent copy; opening the manager does not transfer your draft.",
+        ),
+      ),
       disclosure(
         "pdf-options",
         "PDF options",
