@@ -338,8 +338,9 @@ input[type="search"] {
   gap: 18px;
 }
 .primary,
-.secondary,
-.quiet {
+.quiet,
+.danger,
+.danger-text {
   border-radius: 5px;
   min-height: 44px;
   padding: 10px 15px;
@@ -358,16 +359,6 @@ input[type="search"] {
 @media (hover: hover) and (pointer: fine) {
   .primary:hover:not(:disabled) {
     background: #682c32;
-  }
-}
-.secondary {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
-}
-@media (hover: hover) and (pointer: fine) {
-  .secondary:hover:not(:disabled) {
-    background: #38494a;
   }
 }
 
@@ -864,7 +855,7 @@ td small {
   max-width: 165px;
   text-align: right;
 }
-.xp-row .primary {
+.xp-row .purchase-button {
   min-width: 95px;
   font-variant-numeric: tabular-nums;
   padding: 9px 12px;
@@ -1121,7 +1112,7 @@ tr.career-future td:first-child {
   font-size: 12px;
   color: var(--muted);
 }
-.market-item .primary {
+.market-item .purchase-button {
   white-space: nowrap;
 }
 .market-purchases {
@@ -1318,7 +1309,7 @@ tr.career-future td:first-child {
     flex-wrap: wrap;
     margin-top: 25px;
   }
-  .step-footer .primary {
+  .step-footer > [data-action="step"]:last-child {
     flex: 1;
     text-align: center;
   }
@@ -1350,7 +1341,7 @@ tr.career-future td:first-child {
   .xp-row > div:last-child {
     max-width: 98px;
   }
-  .xp-row .primary {
+  .xp-row .purchase-button {
     min-width: 85px;
     font-size: 12px;
     padding: 9px 8px;
@@ -1414,7 +1405,7 @@ tr.career-future td:first-child {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
   }
-  .market-item .primary {
+  .market-item .purchase-button {
     font-size: 12px;
     padding: 8px;
   }
@@ -1469,13 +1460,13 @@ tr.career-future td:first-child {
   .xp-row strong {
     font-size: 14px;
   }
-  .step-footer .primary {
+  .step-footer > [data-action="step"]:last-child {
     font-size: 12px;
   }
   .market-item {
     grid-template-columns: 1fr;
   }
-  .market-item .primary {
+  .market-item .purchase-button {
     width: 100%;
   }
   .brand small {

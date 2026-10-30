@@ -70,7 +70,7 @@ export function EntryList({
   }
   const actions = (
     <button
-      className={group === "gear" ? "manager-primary" : "quiet"}
+      className="quiet"
       type="button"
       aria-label={
         group === "gear"
@@ -386,7 +386,7 @@ export function EntryList({
                             )}
                             {!x.reference && (
                               <button
-                                className="manager-danger-text"
+                                className="danger-text"
                                 type="button"
                                 onClick={() =>
                                   edit(
@@ -408,7 +408,7 @@ export function EntryList({
                       )}
                       {!compact && group === "gear" && (
                         <button
-                          className="manager-danger-text"
+                          className="danger-text"
                           type="button"
                           onClick={() =>
                             edit(

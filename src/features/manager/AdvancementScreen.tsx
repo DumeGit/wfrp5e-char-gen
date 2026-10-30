@@ -106,7 +106,7 @@ export function AdvancementScreen({
           <strong>
             {score(record.sheet.xpUnspent)} <span>XP available</span>
           </strong>
-          <button className="manager-primary" type="button" onClick={award}>
+          <button className="quiet" type="button" onClick={award}>
             Award XP
           </button>
         </div>
@@ -246,7 +246,7 @@ export function AdvancementScreen({
                   </p>
                 </details>
                 <button
-                  className="quiet manager-buy"
+                  className="quiet purchase-button manager-buy"
                   type="button"
                   disabled={disabled || !!q.error}
                   aria-label={`Purchase ${name}${type === "talent" ? "" : ` +${amount}`}`}
@@ -306,7 +306,7 @@ export function AdvancementScreen({
                 Advance Career Endeavour completed (core p. 196)
               </label>
               <button
-                className="manager-primary"
+                className="primary"
                 type="button"
                 disabled={disabled || !!promotion.error || !endeavour}
                 onClick={() => {
@@ -435,7 +435,7 @@ export function AdvancementScreen({
             remain historical attachments.
           </p>
         )}
-        <button className="manager-text" type="button" onClick={history}>
+        <button className="text-button" type="button" onClick={history}>
           View complete history
         </button>
       </details>

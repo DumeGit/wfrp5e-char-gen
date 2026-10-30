@@ -1,5 +1,7 @@
 # Bestiary Workshop
 
+Buttons follow the shared [role contract](BUTTON-AUDIT.md): quiet navigation and Add/Edit/picker launchers, primary batch/apply/save confirmations, danger draft/base replacement confirmations, danger-text individual removal. The main ready-state PDF remains primary.
+
 Top navigation places Back on the left and Next on the right. Through 1100px they flank the Workshop page selector; on desktop they flank the page heading. They reuse normal navigation, focus the destination heading and keep compact navigation visible. Starting profile has no Back button and Review has no Next. Footer actions, unfinished navigation and export requirements remain unchanged.
 
 29 October duplicate-description correction: selected ability and ordinary equipment rows show names, sources and editing/output controls without repeating read-only rules beneath help. Spell casting parameters are available in the reader and remain unchanged in Review/PDF output. Custom weapon text and personal notes keep their own context. Weapon enchantment rows show a compact Legacy marker rather than the whole adaptation beside a clickable name.

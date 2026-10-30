@@ -819,7 +819,7 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
               <Button onClick={() => navigate(s.step - 1)}>← Previous</Button>
             )}
             {s.step < 3 && (
-              <Button className="primary" onClick={() => navigate(s.step + 1)}>
+              <Button className="quiet" onClick={() => navigate(s.step + 1)}>
                 {STEPS[s.step + 1]} →
               </Button>
             )}

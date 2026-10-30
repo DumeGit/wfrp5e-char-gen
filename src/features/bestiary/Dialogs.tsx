@@ -581,7 +581,7 @@ function SinglePickerDialog() {
                   )}
                 </div>
                 <Button
-                  className="primary"
+                  className="quiet"
                   data-action={x.choices ? "picker-group" : "picker-add"}
                   data-id={x.key}
                   disabled={!x.choices && (owned(x) || !!x.disabled)}
@@ -1072,7 +1072,7 @@ export function BestiaryDialogs() {
             {kind === "remove-book" ? "Keep book" : "Cancel"}
           </Button>
           <Button
-            className="primary"
+            className="danger"
             onClick={() => {
               store.replace(kind === "load" ? modal.draft : freshGM(data));
               setUI({

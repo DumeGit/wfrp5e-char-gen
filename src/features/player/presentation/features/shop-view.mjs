@@ -146,6 +146,7 @@ export function createFeature(getContext, setContext) {
                           ['data-index="', '" aria-label="Remove ', '"'],
                           [i, esc(item?.name || "item")],
                         ),
+                        "danger-text",
                       ),
                     );
                   }),
@@ -339,7 +340,7 @@ export function createFeature(getContext, setContext) {
                               ['data-id="', '" ', ""],
                               [esc(x.id), reason ? "disabled" : ""],
                             ),
-                            "primary",
+                            "quiet purchase-button",
                           ),
                           reason
                             ? element(

@@ -1045,7 +1045,7 @@ export function WeaponWorkbench({
                               Your name, notes, quantity and dice history stay.
                             </p>
                             <div className="weapon-actions">
-                              <Button className="primary" onClick={replaceBase}>
+                              <Button className="danger" onClick={replaceBase}>
                                 Replace base
                               </Button>
                               <Button
@@ -1314,7 +1314,7 @@ export function WeaponWorkbench({
                           </p>
                           <div className="weapon-actions">
                             <Button
-                              className="primary"
+                              className="danger"
                               onClick={() => switchPower(pendingPower)}
                             >
                               Change power

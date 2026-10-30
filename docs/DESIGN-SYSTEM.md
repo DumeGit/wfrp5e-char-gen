@@ -76,6 +76,16 @@ Menu state is ephemeral. It never changes document schemas, enters Undo, combine
 
 Use native buttons for commands, links for routes, labelled fields and existing tab handlers/semantics. One primary action per local task. Disabled actions have nearby reasons, busy labels retain useful width and retry failures remain visible. Existing cards use raised paper; source links and Legacy badges keep provenance distinct from errors. Unknown values remain explicit.
 
+| Command variant | Action role |
+| --- | --- |
+| `primary` | Main positive commitment: Save, Apply, Add selected, required starting roll or main ready-state output. |
+| `quiet` | Back/Next, Cancel/Close, editor/picker launchers, supporting downloads/retries and repeated Buy/Add row actions. |
+| `text-button` | Inline supporting help, clear-filter or history commands. |
+| `danger` | Final delete/discard/reset/replacement confirmation. |
+| `danger-text` | Compact individual Remove action. |
+
+Use the same roles everywhere. Adapters default to quiet; native submits require an explicit variant. Do not use `secondary` or manager-specific aliases. Shared skins separate role from geometry; use `purchase-button` for purchase layout rather than selecting `.primary`. Disabled variants use opaque neutral paper/muted ink. Tabs, selected navigation, profile/menu choice cards, toggles, reference/source/Legacy controls, history icons and steppers retain dedicated state/shape styles. The [button audit](BUTTON-AUDIT.md) records decisions, exceptions and the generated inventory; `/design-system.html#button-roles` shows command specimens. No additional animation is justified for these frequent actions.
+
 Disclosure summaries contain only their toggle label and noninteractive metadata. Put source/Legacy buttons, ranks, Remove and Description switches beside/below them. Bestiary Description remains a 30×18px track inside a 44px label, with no On/Off text. Optional equipment and Species Skill rows support whole-label tapping. Species Skill selectors and reference buttons sit above the extended label target so they remain independently operable.
 
 Bestiary Skill/Talent/Trait/magic batch pickers use native checkbox labels and fixed selection actions. Skills/Talents retain expandable specialisation groups; Traits retain individual entries, concise rule summaries and parameter editing after addition. Search preserves pending selections; adding commits one history action. Spell/prayer Description switches reuse the Trait/Talent control beside the rule name/help. Magic uses individual checkbox rows with category/source and direct ? help, retaining exact source identities and the existing reader above the pending selection. Spell/prayer editing controls wrap on phones; rules stay in the shared reader.

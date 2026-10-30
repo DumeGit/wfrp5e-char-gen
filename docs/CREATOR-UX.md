@@ -1,5 +1,7 @@
 # Creator browsing and explanations
 
+Button emphasis follows the shared [role contract](BUTTON-AUDIT.md): quiet navigation/launchers/repeated purchases, primary commits and required starting rolls, danger destructive confirmations, and danger-text individual removal. Review retains its primary manager handoff and quiet PDF alternatives.
+
 Player has top Back/Next controls flanking the page selector on phones/tablets and the stage metadata on desktop. They use existing step navigation, permit unfinished choices and focus the destination heading. The first step has no Back, Review has no Next, and book setup has neither. Footer navigation and export gates remain unchanged.
 
 Species Skill rows use the whole item as the native checkbox label target, including the Skill name and empty row space. Specialisation selectors and reference buttons remain independent controls; clicking them does not change selection. Checkbox and keyboard activation retain the same five-Skill limit and history behaviour.

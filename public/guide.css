@@ -338,8 +338,9 @@ input[type="search"] {
   gap: 18px;
 }
 .primary,
-.secondary,
-.quiet {
+.quiet,
+.danger,
+.danger-text {
   border-radius: 5px;
   min-height: 44px;
   padding: 10px 15px;
@@ -358,16 +359,6 @@ input[type="search"] {
 @media (hover: hover) and (pointer: fine) {
   .primary:hover:not(:disabled) {
     background: #682c32;
-  }
-}
-.secondary {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
-}
-@media (hover: hover) and (pointer: fine) {
-  .secondary:hover:not(:disabled) {
-    background: #38494a;
   }
 }
 
@@ -864,7 +855,7 @@ td small {
   max-width: 165px;
   text-align: right;
 }
-.xp-row .primary {
+.xp-row .purchase-button {
   min-width: 95px;
   font-variant-numeric: tabular-nums;
   padding: 9px 12px;
@@ -1121,7 +1112,7 @@ tr.career-future td:first-child {
   font-size: 12px;
   color: var(--muted);
 }
-.market-item .primary {
+.market-item .purchase-button {
   white-space: nowrap;
 }
 .market-purchases {
@@ -1318,7 +1309,7 @@ tr.career-future td:first-child {
     flex-wrap: wrap;
     margin-top: 25px;
   }
-  .step-footer .primary {
+  .step-footer > [data-action="step"]:last-child {
     flex: 1;
     text-align: center;
   }
@@ -1350,7 +1341,7 @@ tr.career-future td:first-child {
   .xp-row > div:last-child {
     max-width: 98px;
   }
-  .xp-row .primary {
+  .xp-row .purchase-button {
     min-width: 85px;
     font-size: 12px;
     padding: 9px 8px;
@@ -1414,7 +1405,7 @@ tr.career-future td:first-child {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
   }
-  .market-item .primary {
+  .market-item .purchase-button {
     font-size: 12px;
     padding: 8px;
   }
@@ -1469,13 +1460,13 @@ tr.career-future td:first-child {
   .xp-row strong {
     font-size: 14px;
   }
-  .step-footer .primary {
+  .step-footer > [data-action="step"]:last-child {
     font-size: 12px;
   }
   .market-item {
     grid-template-columns: 1fr;
   }
-  .market-item .primary {
+  .market-item .purchase-button {
     width: 100%;
   }
   .brand small {
@@ -2225,7 +2216,7 @@ button.legacy-tag {
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
-.free-magic-results article > .primary {
+.free-magic-results article > .purchase-button {
   margin: 12px 0;
 }
 .magic-profile details {
@@ -2561,7 +2552,7 @@ button.legacy-tag {
   .market-item > div:last-child {
     max-width: none;
   }
-  .market-item > div:last-child .primary {
+  .market-item > div:last-child .purchase-button {
     width: 100%;
   }
 }
@@ -2656,7 +2647,7 @@ button.legacy-tag {
   max-width: none;
   text-align: right;
 }
-.xp-advance-row .primary {
+.xp-advance-row .purchase-button {
   width: 84px;
   min-width: 0;
   min-height: 36px;
@@ -2711,7 +2702,7 @@ button.legacy-tag {
     grid-column: 3;
     grid-row: 1 / span 2;
   }
-  .xp-advance-row .primary {
+  .xp-advance-row .purchase-button {
     width: 76px;
   }
   .xp-advance-row .advance-result {
@@ -2829,7 +2820,7 @@ button.legacy-tag {
   line-height: 1.4;
   color: var(--muted);
 }
-.xp-talent-row .primary {
+.xp-talent-row .purchase-button {
   min-height: 36px;
   padding: 7px 9px;
   font-size: 12px;
@@ -2863,7 +2854,7 @@ button.legacy-tag {
     min-height: 48px;
     padding: 2px 4px;
   }
-  .xp-talent-row .primary {
+  .xp-talent-row .purchase-button {
     min-width: 76px;
   }
   .xp-talent-meta {
@@ -4116,6 +4107,8 @@ dialog.book-search-panel .search-panel-heading {
   --color-warning: #785422;
   --color-warning-surface: #f2e4c1;
   --color-error: #7b292e;
+  --color-error-hover: #5f1e24;
+  --color-on-error: #fff1ce;
   --color-error-surface: #f4dfd6;
   --color-error-line: #c89988;
   --color-legacy: #65475b;
@@ -4617,12 +4610,21 @@ textarea {
 }
 
 .primary,
-.secondary,
 .quiet,
+.danger,
+.danger-text,
 .install-app {
   border-radius: var(--radius-control);
 }
 .primary {
+  --button-fill: linear-gradient(
+    var(--color-crimson),
+    var(--color-crimson-hover)
+  );
+  --button-ink: var(--color-on-crimson);
+  --button-line: var(--color-crimson);
+  --button-hover-fill: var(--color-crimson-hover);
+  --button-hover-ink: var(--color-on-crimson);
   /* An opaque base prevents the page flashing through when hover removes the gradient. */
   background:
     linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
@@ -4638,19 +4640,10 @@ textarea {
   }
 }
 
-.secondary {
-  background: var(--color-leather);
-  border-color: var(--color-line-dark);
-  color: var(--color-on-leather);
-}
-@media (hover: hover) and (pointer: fine) {
-  .secondary:hover:not(:disabled) {
-    background: var(--color-leather-raised);
-    color: var(--color-on-crimson);
-  }
-}
-
 .quiet {
+  --button-fill: var(--color-paper-raised);
+  --button-ink: var(--color-ink);
+  --button-line: var(--color-line);
   background: var(--color-paper-raised);
   border-color: var(--color-line);
   color: var(--color-ink);
@@ -4666,6 +4659,52 @@ textarea {
 .source-button,
 .text-button {
   color: var(--color-muted);
+}
+.text-button {
+  --button-fill: transparent;
+  --button-ink: var(--color-muted);
+  --button-line: transparent;
+  --button-hover-fill: transparent;
+  --button-hover-ink: var(--color-crimson);
+}
+.danger {
+  --button-fill: var(--color-error);
+  --button-ink: var(--color-on-error);
+  --button-line: var(--color-error);
+  --button-hover-fill: var(--color-error-hover);
+  --button-hover-ink: var(--color-on-error);
+  background: var(--button-fill);
+  color: var(--button-ink);
+  border-color: var(--button-line);
+  box-shadow: none;
+}
+.danger-text {
+  --button-fill: transparent;
+  --button-ink: var(--color-error);
+  --button-line: transparent;
+  --button-hover-fill: var(--color-error-surface);
+  --button-hover-ink: var(--color-error);
+  background: var(--button-fill);
+  color: var(--button-ink);
+  border-color: var(--button-line);
+  box-shadow: none;
+}
+.primary:disabled,
+.quiet:disabled,
+.danger-text:disabled,
+.danger:disabled {
+  color: var(--color-muted);
+  background: var(--color-paper-raised);
+  border-color: var(--color-line);
+  box-shadow: none;
+  opacity: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(.danger, .danger-text):hover:not(:disabled) {
+    background: var(--button-hover-fill);
+    color: var(--button-hover-ink);
+    border-color: var(--button-line);
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .source-button:hover,

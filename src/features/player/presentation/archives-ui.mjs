@@ -156,7 +156,7 @@ export function astrologyPanel(R, s, { select, button, options }) {
                 ? "Initial roll recorded"
                 : "Roll star sign · d100",
               chart.rolledSign ? "disabled" : "",
-              "primary",
+              "quiet",
             ),
           ),
           chart.rolledSign

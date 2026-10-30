@@ -297,7 +297,12 @@ export function createFeature(getContext) {
                   "div",
                   { class: "notice" },
                   "Creation is locked while XP is spent. ",
-                  button("unlock", "Clear advancement & edit creation"),
+                  button(
+                    "unlock",
+                    "Clear advancement & edit creation",
+                    "",
+                    "danger",
+                  ),
                 ),
                 "\n",
                 element("div", { class: "creation-lock" }, body),
@@ -316,6 +321,7 @@ export function createFeature(getContext) {
                       "step",
                       "Back",
                       interpolate(['data-step="', '"'], [s.step - 1]),
+                      "quiet",
                     )
                   : element("span", {}),
                 element(
@@ -333,12 +339,13 @@ export function createFeature(getContext) {
                         [steps[combine(s.step, 1)]],
                       ),
                       interpolate(['data-step="', '"'], [combine(s.step, 1)]),
-                      "primary",
+                      "quiet",
                     )
                   : button(
                       "step",
                       "Back to Experience",
                       interpolate(['data-step="', '"'], [experienceStep]),
+                      "quiet",
                     ),
               )
             : "",

@@ -364,12 +364,7 @@ export function createFeature(getContext, setContext) {
           class: "actions contextual-continue",
           "aria-label": "Next creation step",
         },
-        button(
-          "step",
-          "Continue to Characteristics",
-          'data-step="2"',
-          "primary",
-        ),
+        button("step", "Continue to Characteristics", 'data-step="2"', "quiet"),
       ),
       element(
         "details",
@@ -1361,7 +1356,7 @@ export function createFeature(getContext, setContext) {
           class: "actions contextual-continue",
           "aria-label": "Next creation step",
         },
-        button("step", "Continue to Experience", 'data-step="6"', "primary"),
+        button("step", "Continue to Experience", 'data-step="6"', "quiet"),
       ),
       kitSummary(R, s, {
         select,

@@ -725,7 +725,7 @@ function MarijanSession({
               entryField(`${x.name} rating or target`, "rating")}
             <Action
               action="remove"
-              className="quiet mm-remove"
+              className="danger-text mm-remove"
               attributes={attributes}
               label={`Remove ${x.name}`}
               onClick={() =>
@@ -1197,7 +1197,7 @@ function MarijanSession({
             </p>
             <Action
               action="generate"
-              className="primary"
+              className="quiet"
               disabled={!!busy}
               onClick={() => void startGeneration()}
             >
@@ -1359,7 +1359,7 @@ function MarijanSession({
               <div className="mm-inline-tools">
                 <Action
                   action="roll"
-                  className="secondary"
+                  className="primary"
                   onClick={() => {
                     try {
                       store.edit((draft) =>
@@ -1835,7 +1835,7 @@ function MarijanSession({
               <div className="mm-modal-actions">
                 <Action
                   action="copy-current"
-                  className="primary"
+                  className="danger"
                   disabled={!!busy}
                   onClick={() =>
                     void run("Copying…", async (valid) => {
@@ -1912,7 +1912,7 @@ function MarijanSession({
               </p>
               <Action
                 action="generate-preview"
-                className="primary"
+                className="quiet"
                 disabled={!!busy || !generationModule}
                 onClick={() =>
                   void run("Generating…", async (valid) => {
@@ -1963,7 +1963,7 @@ function MarijanSession({
                     )}
                     <Action
                       action="generate-apply"
-                      className="primary"
+                      className="danger"
                       onClick={() => {
                         store.replace(generated);
                         closeDialog();

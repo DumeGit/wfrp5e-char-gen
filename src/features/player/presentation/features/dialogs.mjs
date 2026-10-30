@@ -155,7 +155,7 @@ export function createFeature(getContext, setContext) {
                     ['data-index="', '" data-name="', '" ', ""],
                     [index, esc(x.name), duplicate ? "disabled" : ""],
                   ),
-                  "primary",
+                  "quiet purchase-button",
                 ),
               );
             }),

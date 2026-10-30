@@ -37,7 +37,7 @@ export function JournalScreen({
         <h2 data-workspace-focus="">Journal</h2>
         <button
           type="button"
-          className="manager-primary"
+          className="quiet"
           onClick={() =>
             open("journal", { title: "", text: "", kind: "Session" })
           }
@@ -84,7 +84,7 @@ export function JournalScreen({
               <p className="manager-prose">{x.text}</p>
               <button
                 type="button"
-                className="manager-text"
+                className="text-button"
                 onClick={() => open("journal", { ...x })}
               >
                 Edit entry

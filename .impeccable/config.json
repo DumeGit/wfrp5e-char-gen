@@ -48,6 +48,42 @@
         ],
         "createdAt": "2026-10-29T20:40:28.919Z",
         "reason": "Agent review: chosen-career and career-result.previewed are inherited current-Career and preview-selection indicators from 0d439b7b (18 October). Preserve the incumbent Imperial Desk selection treatment; removal of the duplicate Training choices section changes neither indicator."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/styles.css"
+        ],
+        "createdAt": "2026-10-30T09:02:00.812Z",
+        "reason": "Agent review: shared notice is existing semantic feedback; career-characteristic row/cell borders encode current/future Career level alongside badges, colours and dashed states. Preserve functional Imperial Desk indicators during the button-role audit."
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/styles/styles.css"
+        ],
+        "createdAt": "2026-10-30T09:02:00.852Z",
+        "reason": "Agent review: page-tabs explicitly use border-radius 0 with an active underline; Characteristic cell borders encode Career level with current/future states and badges. These are existing selection/progression indicators, not decorative rounded-card accents."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/design-system.css"
+        ],
+        "createdAt": "2026-10-30T09:02:00.889Z",
+        "reason": "Agent review: the sole finding is the inherited Marijan generation starter callout, retained as the established Imperial Desk entry point for optional random generation. Button-role work changes only its launcher emphasis, preserving its existing section identity."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "src/static/design-system.html"
+        ],
+        "createdAt": "2026-10-30T09:02:00.927Z",
+        "reason": "Agent review: false positive because source HTML links /guide.css generated into public, absent under src/static. Built guide resolves actual shared typography; rendered desktop/phone screenshots show the intended heading hierarchy."
       }
     ]
   }

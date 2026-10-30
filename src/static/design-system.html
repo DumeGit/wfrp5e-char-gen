@@ -180,18 +180,28 @@
           </div>
         </div>
         <div class="kit-grid">
-          <section>
+          <section id="button-roles">
             <h2>Actions & fields</h2>
             <div class="actions">
-              <button class="primary" type="button">Main action</button
-              ><button class="secondary" type="button">Secondary</button
-              ><button class="quiet" type="button">Neutral</button
+              <button class="primary" type="button">Save changes</button
+              ><button class="quiet" type="button">Back</button
+              ><button class="quiet" type="button">Open picker</button
               ><button class="quiet" type="button" aria-busy="true" disabled>
                 Preparing…</button
               ><button class="primary" type="button" disabled>
                 Unavailable
               </button>
             </div>
+            <div class="actions section-gap">
+              <button class="text-button" type="button">Read source</button>
+              <button class="danger-text" type="button">Remove entry</button>
+              <button class="danger" type="button">Confirm delete</button>
+            </div>
+            <p>
+              Primary confirms the main task. Quiet is for navigation, launchers
+              and repeated row actions. Text is for inline help. Danger confirms
+              a destructive action; danger text marks an individual removal.
+            </p>
             <p class="purchase-error">
               A disabled action keeps its reason visible.
             </p>
@@ -263,7 +273,9 @@
                 ?
               </button>
               <div class="xp-advance-purchase">
-                <button class="primary" type="button">125 XP</button>
+                <button class="quiet purchase-button" type="button">
+                  125 XP
+                </button>
               </div>
             </div>
             <p class="small muted">

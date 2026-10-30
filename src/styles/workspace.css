@@ -262,7 +262,7 @@ button.legacy-tag {
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
-.free-magic-results article > .primary {
+.free-magic-results article > .purchase-button {
   margin: 12px 0;
 }
 .magic-profile details {
@@ -598,7 +598,7 @@ button.legacy-tag {
   .market-item > div:last-child {
     max-width: none;
   }
-  .market-item > div:last-child .primary {
+  .market-item > div:last-child .purchase-button {
     width: 100%;
   }
 }
@@ -693,7 +693,7 @@ button.legacy-tag {
   max-width: none;
   text-align: right;
 }
-.xp-advance-row .primary {
+.xp-advance-row .purchase-button {
   width: 84px;
   min-width: 0;
   min-height: 36px;
@@ -748,7 +748,7 @@ button.legacy-tag {
     grid-column: 3;
     grid-row: 1 / span 2;
   }
-  .xp-advance-row .primary {
+  .xp-advance-row .purchase-button {
     width: 76px;
   }
   .xp-advance-row .advance-result {
@@ -866,7 +866,7 @@ button.legacy-tag {
   line-height: 1.4;
   color: var(--muted);
 }
-.xp-talent-row .primary {
+.xp-talent-row .purchase-button {
   min-height: 36px;
   padding: 7px 9px;
   font-size: 12px;
@@ -900,7 +900,7 @@ button.legacy-tag {
     min-height: 48px;
     padding: 2px 4px;
   }
-  .xp-talent-row .primary {
+  .xp-talent-row .purchase-button {
     min-width: 76px;
   }
   .xp-talent-meta {

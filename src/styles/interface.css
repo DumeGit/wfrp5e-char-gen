@@ -381,14 +381,6 @@ input[type="number"] {
   place-items: center;
   border: 1px solid var(--color-line);
 }
-.primary:disabled,
-.secondary:disabled {
-  color: var(--color-muted);
-  background: var(--color-paper-raised);
-  border-color: var(--color-line);
-  box-shadow: none;
-  opacity: 1;
-}
 .browser-help > summary::before {
   display: none;
 }

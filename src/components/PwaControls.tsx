@@ -115,6 +115,7 @@ export function PwaControls() {
         <button
           type="button"
           id="pwa-update-now"
+          className="primary"
           disabled={state.applying}
           onClick={() => controller.current?.update()}
         >
@@ -123,6 +124,7 @@ export function PwaControls() {
         <button
           type="button"
           id="pwa-update-later"
+          className="quiet"
           onClick={() => setDismissed(true)}
         >
           Later
@@ -147,6 +149,7 @@ export function PwaControls() {
         <button
           type="button"
           id="pwa-install-close"
+          className="quiet"
           onClick={() => dialog.current?.close()}
         >
           Close

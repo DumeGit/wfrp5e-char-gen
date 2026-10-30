@@ -401,12 +401,21 @@ textarea {
 }
 
 .primary,
-.secondary,
 .quiet,
+.danger,
+.danger-text,
 .install-app {
   border-radius: var(--radius-control);
 }
 .primary {
+  --button-fill: linear-gradient(
+    var(--color-crimson),
+    var(--color-crimson-hover)
+  );
+  --button-ink: var(--color-on-crimson);
+  --button-line: var(--color-crimson);
+  --button-hover-fill: var(--color-crimson-hover);
+  --button-hover-ink: var(--color-on-crimson);
   /* An opaque base prevents the page flashing through when hover removes the gradient. */
   background:
     linear-gradient(var(--color-crimson), var(--color-crimson-hover)),
@@ -422,19 +431,10 @@ textarea {
   }
 }
 
-.secondary {
-  background: var(--color-leather);
-  border-color: var(--color-line-dark);
-  color: var(--color-on-leather);
-}
-@media (hover: hover) and (pointer: fine) {
-  .secondary:hover:not(:disabled) {
-    background: var(--color-leather-raised);
-    color: var(--color-on-crimson);
-  }
-}
-
 .quiet {
+  --button-fill: var(--color-paper-raised);
+  --button-ink: var(--color-ink);
+  --button-line: var(--color-line);
   background: var(--color-paper-raised);
   border-color: var(--color-line);
   color: var(--color-ink);
@@ -450,6 +450,52 @@ textarea {
 .source-button,
 .text-button {
   color: var(--color-muted);
+}
+.text-button {
+  --button-fill: transparent;
+  --button-ink: var(--color-muted);
+  --button-line: transparent;
+  --button-hover-fill: transparent;
+  --button-hover-ink: var(--color-crimson);
+}
+.danger {
+  --button-fill: var(--color-error);
+  --button-ink: var(--color-on-error);
+  --button-line: var(--color-error);
+  --button-hover-fill: var(--color-error-hover);
+  --button-hover-ink: var(--color-on-error);
+  background: var(--button-fill);
+  color: var(--button-ink);
+  border-color: var(--button-line);
+  box-shadow: none;
+}
+.danger-text {
+  --button-fill: transparent;
+  --button-ink: var(--color-error);
+  --button-line: transparent;
+  --button-hover-fill: var(--color-error-surface);
+  --button-hover-ink: var(--color-error);
+  background: var(--button-fill);
+  color: var(--button-ink);
+  border-color: var(--button-line);
+  box-shadow: none;
+}
+.primary:disabled,
+.quiet:disabled,
+.danger-text:disabled,
+.danger:disabled {
+  color: var(--color-muted);
+  background: var(--color-paper-raised);
+  border-color: var(--color-line);
+  box-shadow: none;
+  opacity: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(.danger, .danger-text):hover:not(:disabled) {
+    background: var(--button-hover-fill);
+    color: var(--button-hover-ink);
+    border-color: var(--button-line);
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .source-button:hover,

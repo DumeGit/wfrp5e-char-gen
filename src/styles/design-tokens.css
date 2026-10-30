@@ -49,6 +49,8 @@
   --color-warning: #785422;
   --color-warning-surface: #f2e4c1;
   --color-error: #7b292e;
+  --color-error-hover: #5f1e24;
+  --color-on-error: #fff1ce;
   --color-error-surface: #f4dfd6;
   --color-error-line: #c89988;
   --color-legacy: #65475b;

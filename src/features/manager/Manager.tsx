@@ -350,7 +350,11 @@ function Manager({ store }: { store: Store }) {
             >
               Download library for recovery
             </button>
-            <button type="button" onClick={() => void store.initialize()}>
+            <button
+              type="button"
+              onClick={() => void store.initialize()}
+              className="quiet"
+            >
               Retry opening manager
             </button>
           </>
@@ -485,13 +489,22 @@ function Manager({ store }: { store: Store }) {
                 onClick={() =>
                   download(record, `${filename(sheet.name)}-unsaved.json`)
                 }
+                className="quiet"
               >
                 Download unsaved copy
               </button>
-              <button type="button" onClick={() => void store.retry()}>
+              <button
+                type="button"
+                onClick={() => void store.retry()}
+                className="primary"
+              >
                 Retry saving
               </button>
-              <button type="button" onClick={() => void store.duplicate()}>
+              <button
+                type="button"
+                onClick={() => void store.duplicate()}
+                className="quiet"
+              >
                 Save as duplicate
               </button>
               <button
@@ -512,7 +525,11 @@ function Manager({ store }: { store: Store }) {
             {state.unsavedCount === 1 ? " has" : "s have"} unsaved changes in
             this tab. Back up the library before closing.
           </p>
-          <button type="button" onClick={() => navigate(store.firstUnsaved())}>
+          <button
+            type="button"
+            onClick={() => navigate(store.firstUnsaved())}
+            className="quiet"
+          >
             Open unsaved character
           </button>
         </div>
@@ -629,7 +646,7 @@ function Manager({ store }: { store: Store }) {
                 </button>
                 <button
                   type="button"
-                  className="manager-danger-text"
+                  className="danger"
                   onClick={() => {
                     portraitEpoch.current++;
                     setDiscard(false);
@@ -752,7 +769,7 @@ function Manager({ store }: { store: Store }) {
               ))}
               <button
                 type="submit"
-                className="manager-primary"
+                className="primary"
                 disabled={busy || state.saving}
               >
                 Save profile
@@ -769,6 +786,7 @@ function Manager({ store }: { store: Store }) {
                 type="button"
                 disabled={busy}
                 onClick={() => file.current?.click()}
+                className="quiet"
               >
                 Choose JSON file
               </button>
@@ -824,6 +842,9 @@ function Manager({ store }: { store: Store }) {
                   </p>
                   <button
                     type="button"
+                    className={
+                      restorePolicy === "replace" ? "danger" : "primary"
+                    }
                     disabled={state.saving}
                     onClick={() =>
                       void submit(() =>
@@ -1411,7 +1432,11 @@ function Manager({ store }: { store: Store }) {
                   />
                 </>
               )}
-              <button type="submit" disabled={busy || state.saving}>
+              <button
+                type="submit"
+                className="primary"
+                disabled={busy || state.saving}
+              >
                 {busy || state.saving
                   ? "Saving…"
                   : modal === "career"
@@ -1437,6 +1462,7 @@ function Manager({ store }: { store: Store }) {
               </p>
               <button
                 type="button"
+                className="danger"
                 onClick={() => void submit(() => store.reload())}
               >
                 Reload saved character
@@ -1450,18 +1476,21 @@ function Manager({ store }: { store: Store }) {
                 stored history from this browser. Export a backup first if you
                 may need it again.
               </p>
-              <button
-                type="button"
-                disabled={state.saving || state.dirty}
-                onClick={() =>
-                  void submit(() => store.remove(record.id, record.revision))
-                }
-              >
-                Permanently delete character
-              </button>
-              <button className="quiet" type="button" onClick={close}>
-                Keep character
-              </button>
+              <div className="manager-inline">
+                <button
+                  type="button"
+                  className="danger"
+                  disabled={state.saving || state.dirty}
+                  onClick={() =>
+                    void submit(() => store.remove(record.id, record.revision))
+                  }
+                >
+                  Permanently delete character
+                </button>
+                <button className="quiet" type="button" onClick={close}>
+                  Keep character
+                </button>
+              </div>
             </>
           )}
         </Dialog>
@@ -1522,7 +1551,7 @@ function CataloguePicker({
           {selected.source && (
             <button
               type="button"
-              className="manager-text"
+              className="text-button"
               onClick={() =>
                 requestReference({
                   name: selected.name,

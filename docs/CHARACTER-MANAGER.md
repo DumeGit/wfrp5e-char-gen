@@ -1,5 +1,7 @@
 # Character manager — Imperial field ledger
 
+Buttons use the shared [role contract](BUTTON-AUDIT.md) and skins: quiet launchers/purchases/navigation, explicit primary save/submit, danger destructive/replacement confirmation and danger-text individual removal. Native submits no longer imply primary, and manager-specific variant aliases are retired.
+
 29 October duplicate-description correction: published ability rows omit canonical rule prose beneath help; Legacy explanations open from their compact labelled action. Status entries with a catalogue identity omit duplicate canonical text even when a legacy import lacks source metadata. Personal notes and genuinely custom descriptions remain visible.
 
 29 October rule help: Ability and status rows use ? beside a published rule name to open the shared book reader. Names, ranks/counts, citations, notes and edit actions remain visible. Rule-only rows have no description disclosure. Equipment/manual adjustment panels and sheet sections remain collapsible. Condition entry keeps recording fields and recovery ahead of its direct rule-help button; custom notes remain local.

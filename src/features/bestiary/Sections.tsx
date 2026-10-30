@@ -1576,7 +1576,7 @@ export function Customise() {
         </div>
         <div className="gm-template-actions">
           <Button
-            className="primary"
+            className="quiet"
             data-action="template-picker"
             onClick={() => setModal({ kind: "templates" })}
           >
@@ -1675,7 +1675,7 @@ export function EquipmentMagic() {
           >
             Create weapon
           </Button>
-          <Button className="primary" onClick={() => picker("equipment")}>
+          <Button className="quiet" onClick={() => picker("equipment")}>
             Add equipment
           </Button>
         </div>

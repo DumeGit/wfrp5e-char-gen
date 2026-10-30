@@ -19,6 +19,8 @@ The installed registry has 20 supplied books / 28 packs including variants. Curr
 
 ## How to read and maintain these files
 
+The command-variant policy and implementation findings are in [BUTTON-AUDIT.md](BUTTON-AUDIT.md) and [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md#controls-and-content). Regenerate [BUTTON-INVENTORY.csv](BUTTON-INVENTORY.csv) with `node scripts/audit-buttons.mjs` after button changes.
+
 Current guides describe implemented behavior. Book documents preserve approved conversions, source ambiguities and exclusions; older extraction inventories are labelled separately from current publication. Generated inventories must be rebuilt with `npm run generate:books`, never edited by hand. Historical reports retain their original observations/counts with explicit status notices; they do not certify the current build or represent unresolved work. Asset documents preserve prompts and provenance; notices do not establish rights clearance.
 
 For prose-only changes, check factual source paths, local links and stale claims. For registry/report work, run `npm run check:books`, `npm run check:descriptions` and `npm run check:generated`; update the renderer when generated explanatory text is stale. UI, rule, export and release checks follow [TESTING.md](TESTING.md). Local commits do not authorize a push.

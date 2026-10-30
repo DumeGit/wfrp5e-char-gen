@@ -169,11 +169,11 @@
   padding: 10px 15px;
   min-height: 44px;
 }
-.gm-template-actions .primary {
+.gm-template-actions .quiet {
   min-width: 180px;
 }
 @media (max-width: 760px) {
-  .gm-template-actions .primary {
+  .gm-template-actions .quiet {
     flex: 1;
   }
 }
@@ -634,7 +634,7 @@
   padding: 2px;
   min-height: 30px;
   min-width: 30px;
-  color: var(--color-muted);
+  color: var(--color-error);
   flex-shrink: 0;
   line-height: 1;
   font-size: 19px;

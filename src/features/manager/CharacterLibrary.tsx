@@ -62,21 +62,17 @@ export function CharacterLibrary({
           className="manager-inline manager-library-actions"
           hidden={!records.length}
         >
-          <button
-            type="button"
-            className="manager-primary"
-            onClick={importFile}
-          >
+          <button type="button" className="quiet" onClick={importFile}>
             Import character
           </button>
           <button type="button" className="quiet" onClick={create}>
             New blank character
           </button>
           <ActionMenu label="Library actions">
-            <button type="button" onClick={backup}>
+            <button type="button" onClick={backup} className="quiet">
               Back up library
             </button>
-            <button type="button" onClick={restore}>
+            <button type="button" onClick={restore} className="quiet">
               Restore library backup
             </button>
           </ActionMenu>
@@ -151,16 +147,32 @@ export function CharacterLibrary({
               {x.favourite ? "★" : "☆"}
             </button>
             <ActionMenu label={`More for ${x.sheet.name || "character"}`}>
-              <button type="button" onClick={() => openCharacter(x.id)}>
+              <button
+                type="button"
+                onClick={() => openCharacter(x.id)}
+                className="quiet"
+              >
                 Open sheet
               </button>
-              <button type="button" onClick={() => exportRecord(x)}>
+              <button
+                type="button"
+                onClick={() => exportRecord(x)}
+                className="quiet"
+              >
                 Export character JSON
               </button>
-              <button type="button" onClick={() => act(x, "duplicate")}>
+              <button
+                type="button"
+                onClick={() => act(x, "duplicate")}
+                className="quiet"
+              >
                 Duplicate character
               </button>
-              <button type="button" onClick={() => act(x, "archive")}>
+              <button
+                type="button"
+                onClick={() => act(x, "archive")}
+                className="quiet"
+              >
                 {x.archived ? "Restore character" : "Archive character"}
               </button>
             </ActionMenu>
@@ -181,11 +193,7 @@ export function CharacterLibrary({
           </p>
           {records.length === 0 && (
             <div className="manager-inline manager-empty-actions">
-              <button
-                type="button"
-                className="manager-primary"
-                onClick={importFile}
-              >
+              <button type="button" className="quiet" onClick={importFile}>
                 Import character
               </button>
               <button type="button" className="quiet" onClick={create}>

@@ -47,6 +47,7 @@ export default function PlayerCreator() {
               new URLSearchParams(location.search).has("verify"),
             ).then(setStore, (reason: Error) => setError(reason.message));
           }}
+          className="quiet"
         >
           Try again
         </button>

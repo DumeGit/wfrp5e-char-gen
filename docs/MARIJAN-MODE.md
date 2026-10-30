@@ -1,5 +1,7 @@
 # Marijan Mode
 
+Buttons follow the shared [role contract](BUTTON-AUDIT.md): quiet launchers and repeated Add rows, primary local commits/starting-value roll/main PDF, danger confirmation when copying/applying a replacement draft, and danger-text individual removal.
+
 29 October rule help: Published entry names now have a ? button opening the shared book reader directly. The separate Edit control opens character-specific fields and personal descriptions; it uses a text label instead of a description chevron. Custom entries keep their own editable text. The canonical book rule is no longer repeated inside personal overrides.
 
 29 October Impeccable implementation: each Characteristic has its own paper/line boundary, with its abbreviation above the editable initial and a visible **Total** heading above the calculated value. Totals can wrap within their cell without imposing numeric caps. The existing two/three/five-column container layouts, accessible field names, native typing buffers, calculations and saved values remain authoritative. Explicit headings add some phone height; the compact-grid regression retains a 390px budget for all ten Characteristics rather than doubling the old grid.

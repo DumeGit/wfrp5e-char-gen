@@ -379,7 +379,7 @@ export function Remove({ entryKey }: { entryKey: string }) {
   return (
     <Button
       type="button"
-      className="gm-remove quiet"
+      className="gm-remove danger-text"
       onClick={() => remove(entryKey)}
       aria-label="Remove this entry"
       title="Remove entry"
@@ -401,7 +401,7 @@ export function SectionHeading({
     <div className="gm-section-heading">
       <h2>{children}</h2>
       {action && (
-        <Button type="button" className="primary" onClick={action}>
+        <Button type="button" className="quiet" onClick={action}>
           {label}
         </Button>
       )}

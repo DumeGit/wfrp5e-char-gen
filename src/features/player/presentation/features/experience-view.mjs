@@ -180,7 +180,7 @@ export function createFeature(getContext, setContext) {
                 esc(blocked || "Purchase this improvement"),
               ],
             ),
-            "primary",
+            "quiet purchase-button",
           ),
         ),
         blocked
@@ -236,7 +236,7 @@ export function createFeature(getContext, setContext) {
                 esc(blocked || "Purchase this improvement"),
               ],
             ),
-            "primary",
+            "quiet purchase-button",
           ),
           blocked
             ? element("p", { class: "minilabel purchase-error" }, esc(blocked))
@@ -627,7 +627,7 @@ export function createFeature(getContext, setContext) {
               value: s.xp,
             }),
           ),
-          button("set-xp", "Update budget", "", "secondary"),
+          button("set-xp", "Update budget", "", "primary"),
         ),
         "\n",
         element(
@@ -666,7 +666,7 @@ export function createFeature(getContext, setContext) {
                     ["", ' aria-describedby="promotion-reason"'],
                     [q.error || e.length ? "disabled" : ""],
                   ),
-                  "secondary",
+                  "primary",
                 ),
               ),
               "\n",
@@ -1136,7 +1136,7 @@ export function createFeature(getContext, setContext) {
                               reason ? "disabled" : "",
                             ],
                           ),
-                          "primary",
+                          "quiet purchase-button",
                         ),
                     reason && !x.owned
                       ? element(

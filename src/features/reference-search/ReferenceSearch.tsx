@@ -631,6 +631,7 @@ export function ReferenceSearch() {
                 setView(null);
                 input.current?.focus();
               }}
+              className="quiet"
             >
               ×
             </button>
@@ -808,6 +809,7 @@ export function ReferenceSearch() {
                     type="button"
                     onClick={() => void ensure().catch(() => {})}
                     aria-label="Retry loading book references"
+                    className="quiet"
                   >
                     Retry loading book references
                   </button>
@@ -875,6 +877,7 @@ export function ReferenceSearch() {
                 onClick={() =>
                   setVisible((count) => Math.min(count + 20, ranked.length))
                 }
+                className="quiet"
               >
                 Load more results
               </button>

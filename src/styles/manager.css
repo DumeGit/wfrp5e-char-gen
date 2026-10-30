@@ -139,10 +139,10 @@
   gap: 6px;
   min-height: 40px;
   padding: 8px 12px;
-  border: 1px solid var(--color-line);
-  border-radius: 5px;
-  background: var(--color-paper-raised);
-  color: var(--color-ink);
+  border: 1px solid var(--button-line, var(--color-line));
+  border-radius: var(--radius-control);
+  background: var(--button-fill, var(--color-paper-raised));
+  color: var(--button-ink, var(--color-ink));
   font-size: 14px;
   font-weight: 600;
   line-height: 1.35;
@@ -151,20 +151,9 @@
   overflow-wrap: anywhere;
   text-align: center;
 }
-:is(.manager-main, .manager-dialog) button.manager-primary,
-.manager-dialog button[type="submit"] {
-  background: var(--color-crimson);
-  color: var(--color-on-crimson);
-  border-color: var(--color-crimson);
-}
-:is(.manager-main, .manager-dialog) button.manager-text,
-:is(.manager-main, .manager-dialog) button.manager-danger-text {
-  background: transparent;
-  border-color: transparent;
+:is(.manager-main, .manager-dialog)
+  :is(button.text-button, button.danger-text) {
   font-weight: 400;
-}
-:is(.manager-main, .manager-dialog) button.manager-danger-text {
-  color: var(--color-error);
 }
 :is(.manager-main, .manager-dialog) :is(input, select, textarea) {
   color: var(--color-ink);
@@ -1466,14 +1455,8 @@ div.manager-entry > .manager-entry-content {
   }
   :is(.manager-main, .manager-dialog) button:not(:disabled):hover,
   .manager-action-menu > summary:hover {
-    background: var(--color-paper-hover);
-    color: var(--color-ink);
-  }
-  :is(.manager-main, .manager-dialog)
-    button.manager-primary:not(:disabled):hover,
-  .manager-dialog button[type="submit"]:not(:disabled):hover {
-    background: var(--color-crimson-hover);
-    color: var(--color-on-crimson);
+    background: var(--button-hover-fill, var(--color-paper-hover));
+    color: var(--button-hover-ink, var(--color-ink));
   }
 }
 @media (max-width: 1100px) {

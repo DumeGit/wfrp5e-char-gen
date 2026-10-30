@@ -73,7 +73,7 @@ export function StatusCard({
             <small className="manager-meta">{`${catalogue.books.find((book: any) => book.id === row.source.book)?.shortTitle || catalogue.books.find((book: any) => book.id === row.source.book)?.title || row.source.book}, p. ${row.source.page}`}</small>
           )}
           <button
-            className="manager-text"
+            className="text-button"
             type="button"
             aria-label={`Edit ${row.name}`}
             onClick={() =>
@@ -84,7 +84,7 @@ export function StatusCard({
           </button>
           {row.kind !== "condition" && (
             <button
-              className="manager-text"
+              className="text-button"
               type="button"
               onClick={() =>
                 edit(
@@ -110,7 +110,7 @@ export function StatusCard({
             </button>
           )}
           <button
-            className="manager-danger-text"
+            className="danger-text"
             type="button"
             aria-label={`Remove ${row.name}${row.kind === "condition" ? " Condition" : ""}`}
             onClick={() =>

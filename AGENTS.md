@@ -20,6 +20,8 @@
 
 ## Agreed creator behavior
 
+- Follow the command-role table in `docs/DESIGN-SYSTEM.md` and `docs/BUTTON-AUDIT.md`: primary positive commit, quiet navigation/launchers/repeated purchases, text inline support, danger destructive confirmation, danger-text individual removal. No `secondary`, manager aliases or automatic submit colouring. Keep geometry independent of variant and preserve specialised selection/help controls. Regenerate `docs/BUTTON-INVENTORY.csv` with `node scripts/audit-buttons.mjs` after button changes; use focused `button-variants.spec.mjs` checks for role/skin changes.
+
 - Player Review’s primary Open in character manager action directly saves an independent copy using the existing import conversion and atomic IndexedDB create, then opens its Play sheet. Keep it gated on creation completion, snapshot/epoch protected, lazy, retryable and deduplicated; preserve creator drafts, existing manager records and verification isolation. JSON backup stays available for unfinished characters; no PDF loading or file round-trip is required for transfer.
 
 - User-approved Player creation convention: missing published equipment weight counts as 0 Enc for carried totals, load effects, Review and both PDF exports. Preserve null source weights and label the assumption; unrolled quantities still require recorded rolls and leave load incomplete. The manager explicitly opts out of this creator convention; Marijan/Bestiary calculations retain their existing treatment.

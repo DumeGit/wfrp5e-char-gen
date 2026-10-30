@@ -328,7 +328,7 @@ export function ritualShop(R, s, creationErrors = []) {
                 "button",
                 {
                   type: "button",
-                  class: "primary",
+                  class: "quiet purchase-button",
                   "data-action": "buy-spell",
                   "data-name": esc(x.name),
                   "data-talent": esc(q.talent),

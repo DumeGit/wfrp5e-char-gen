@@ -419,7 +419,7 @@ export async function createPlayerStore(verification = false) {
                 "step",
                 "Choose or roll a Species",
                 'data-step="0"',
-                "primary",
+                "quiet",
               ),
             )
           : [
