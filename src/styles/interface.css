@@ -793,13 +793,18 @@ input[type="number"] {
   gap: 8px;
   margin-block: 10px;
 }
+.starting-talent-list > :is(.starting-talent-chip, .field) {
+  background: var(--color-paper-raised);
+  border: 1px solid var(--color-line-dark);
+  border-radius: var(--radius-control);
+}
 .starting-talent-list .starting-talent-chip {
   display: flex;
   align-items: center;
   gap: 8px;
   max-width: 100%;
   min-width: 0;
-  min-height: 54px;
+  min-height: 56px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -809,9 +814,11 @@ input[type="number"] {
   flex: 1;
   min-width: 0;
   overflow-wrap: anywhere;
+  font-weight: 600;
 }
 .starting-talent-chip small {
   font-size: 12px;
+  font-weight: 400;
 }
 .starting-talent-list > .field {
   min-width: 0;
@@ -820,8 +827,6 @@ input[type="number"] {
   margin: 0;
   padding: 4px 6px 4px 10px;
   justify-content: center;
-  background: var(--color-paper-recessed);
-  border-radius: var(--radius-control);
 }
 .field > .starting-talent-list {
   margin: 0;

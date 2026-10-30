@@ -1,5 +1,7 @@
 # Creator browsing and explanations
 
+Starting Talent tiles use opaque raised paper, a thin dark-brass outline and semibold names for clear separation from the page. The same surface covers fixed, rolled, specialisation, additional and free Career entries; equal sizing, direct ? help and native selectors remain unchanged.
+
 Button emphasis follows the shared [role contract](BUTTON-AUDIT.md): quiet navigation/launchers/repeated purchases, primary commits and required starting rolls, danger destructive confirmations, and danger-text individual removal. Review retains its primary manager handoff and quiet PDF alternatives.
 
 Player has top Back/Next controls flanking the page selector on phones/tablets and the stage metadata on desktop. They use existing step navigation, permit unfinished choices and focus the destination heading. The first step has no Back, Review has no Next, and book setup has neither. Footer navigation and export gates remain unchanged.

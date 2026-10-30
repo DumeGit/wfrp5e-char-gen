@@ -1,5 +1,7 @@
 # WFRP Character Ledger
 
+Starting Talent tiles have a raised-paper fill, thin brass outline and stronger names so they remain distinct from the parchment, with consistent styling for Species, rolled and free Career choices.
+
 Button roles are consistent across all four workspaces: primary confirms the main task, quiet handles navigation/launchers/repeated purchases, and danger marks destructive confirmations. See the [button audit and Before/After rationale](docs/BUTTON-AUDIT.md), [design-system contract](docs/DESIGN-SYSTEM.md#controls-and-content) and live `/design-system.html#button-roles` specimens.
 
 [PRODUCT.md](PRODUCT.md) captures the confirmed public audience, product purpose and durable constraints for future design work. Impeccable's workflow preference is stored separately in `.impeccable/config.json`; the existing visual system remains documented below.
