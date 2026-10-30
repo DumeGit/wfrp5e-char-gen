@@ -1,6 +1,6 @@
 # Bestiary Workshop
 
-Top Next navigation is available on Starting profile, Customise and Equipment & magic. Through 1100px it sits beside the Workshop page selector; on desktop it sits to the right of the page heading. It reuses normal navigation, focuses the destination heading and keeps compact navigation visible. Review has no Next button. Footer actions, unfinished navigation and export requirements remain unchanged.
+Top navigation places Back on the left and Next on the right. Through 1100px they flank the Workshop page selector; on desktop they flank the page heading. They reuse normal navigation, focus the destination heading and keep compact navigation visible. Starting profile has no Back button and Review has no Next. Footer actions, unfinished navigation and export requirements remain unchanged.
 
 29 October duplicate-description correction: selected ability and ordinary equipment rows show names, sources and editing/output controls without repeating read-only rules beneath help. Spell casting parameters are available in the reader and remain unchanged in Review/PDF output. Custom weapon text and personal notes keep their own context. Weapon enchantment rows show a compact Legacy marker rather than the whole adaptation beside a clickable name.
 

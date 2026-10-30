@@ -8,7 +8,7 @@ import {
 } from "../../../../components/react-elements";
 
 import { WorkspaceMenu } from "../../../../components/WorkspaceMenu";
-import { CreatorNextButton } from "../../../../components/CreatorNextButton";
+import { CreatorStepButton } from "../../../../components/CreatorStepButton";
 
 import {
   steps,
@@ -146,9 +146,17 @@ export function createFeature(getContext) {
               ),
           next:
             !setupOpen && s.step < reviewStep
-              ? element(CreatorNextButton, {
+              ? element(CreatorStepButton, {
                   destination: steps[s.step + 1],
                   step: s.step + 1,
+                })
+              : null,
+          back:
+            !setupOpen && s.step > 0
+              ? element(CreatorStepButton, {
+                  direction: "back",
+                  destination: steps[s.step - 1],
+                  step: s.step - 1,
                 })
               : null,
           groups: [
@@ -232,6 +240,14 @@ export function createFeature(getContext) {
           element(
             "div",
             { class: "stage-meta" },
+            !setupOpen && s.step > 0
+              ? element(CreatorStepButton, {
+                  direction: "back",
+                  destination: steps[s.step - 1],
+                  step: s.step - 1,
+                  desktop: true,
+                })
+              : null,
             "\n",
             element(
               "span",
@@ -268,7 +284,7 @@ export function createFeature(getContext) {
             ),
             "\n",
             !setupOpen && s.step < reviewStep
-              ? element(CreatorNextButton, {
+              ? element(CreatorStepButton, {
                   destination: steps[s.step + 1],
                   step: s.step + 1,
                   desktop: true,

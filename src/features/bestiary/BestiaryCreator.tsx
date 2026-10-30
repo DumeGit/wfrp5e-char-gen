@@ -3,7 +3,7 @@ import { COMPACT_SHELL_QUERY } from "../../engine/responsive.mjs";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { HistoryControls } from "../../components/HistoryControls";
 import { WorkspaceMenu } from "../../components/WorkspaceMenu";
-import { CreatorNextButton } from "../../components/CreatorNextButton";
+import { CreatorStepButton } from "../../components/CreatorStepButton";
 import { KEYS, skillInfo } from "../../engine/rules.mjs";
 import { pickerEntries } from "../../engine/gm/pickers.mjs";
 import {
@@ -681,9 +681,18 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
           }
           next={
             s.step < STEPS.length - 1 ? (
-              <CreatorNextButton
+              <CreatorStepButton
                 destination={STEPS[s.step + 1]}
                 onNavigate={() => navigate(s.step + 1)}
+              />
+            ) : undefined
+          }
+          back={
+            s.step > 0 ? (
+              <CreatorStepButton
+                direction="back"
+                destination={STEPS[s.step - 1]}
+                onNavigate={() => navigate(s.step - 1)}
               />
             ) : undefined
           }
@@ -727,12 +736,20 @@ export function BestiaryWorkspace({ controls }: { controls: any }) {
         />
         <main className="panel gm-panel" id="creator-main" tabIndex={-1}>
           <div className="gm-page-heading">
+            {s.step > 0 && (
+              <CreatorStepButton
+                direction="back"
+                destination={STEPS[s.step - 1]}
+                onNavigate={() => navigate(s.step - 1)}
+                desktop
+              />
+            )}
             <span className="eyebrow">
               THE BESTIARY · {String(s.step + 1).padStart(2, "0")} / 04
             </span>
             <h1>{STEPS[s.step]}</h1>
             {s.step < STEPS.length - 1 && (
-              <CreatorNextButton
+              <CreatorStepButton
                 destination={STEPS[s.step + 1]}
                 onNavigate={() => navigate(s.step + 1)}
                 desktop

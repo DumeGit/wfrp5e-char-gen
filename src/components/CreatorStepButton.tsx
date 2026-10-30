@@ -1,12 +1,14 @@
 "use client";
 
-export function CreatorNextButton({
+export function CreatorStepButton({
   destination,
+  direction = "next",
   step,
   onNavigate,
   desktop = false,
 }: {
   destination: string;
+  direction?: "back" | "next";
   step?: number;
   onNavigate?: () => void;
   desktop?: boolean;
@@ -14,9 +16,9 @@ export function CreatorNextButton({
   return (
     <button
       type="button"
-      className={`quiet creator-next${desktop ? " creator-desktop-next" : ""}`}
-      aria-label={`Next: ${destination}`}
-      title={`Continue to ${destination}`}
+      className={`quiet creator-step-button creator-${direction}${desktop ? ` creator-desktop-${direction}` : ""}`}
+      aria-label={`${direction === "back" ? "Back" : "Next"}: ${destination}`}
+      title={`${direction === "back" ? "Back" : "Continue"} to ${destination}`}
       data-action={step === undefined ? undefined : "step"}
       data-step={step}
       onClick={(event) => {
@@ -37,9 +39,15 @@ export function CreatorNextButton({
         });
       }}
     >
-      Next
+      {direction === "back" ? "Back" : "Next"}
       <svg aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M4 12h15m-6-6 6 6-6 6" />
+        <path
+          d={
+            direction === "back"
+              ? "M20 12H5m6-6-6 6 6 6"
+              : "M4 12h15m-6-6 6 6-6 6"
+          }
+        />
       </svg>
     </button>
   );

@@ -5791,10 +5791,10 @@ dialog::backdrop {
   flex: 1;
   min-width: 0;
 }
-.workspace-selector-row .creator-next:focus-visible {
+.workspace-selector-row .creator-step-button:focus-visible {
   outline-color: var(--color-focus-on-dark);
 }
-.workspace .creator-next {
+.workspace .creator-step-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -5808,7 +5808,7 @@ dialog::backdrop {
   text-transform: none;
   white-space: nowrap;
 }
-.creator-next svg {
+.creator-step-button svg {
   width: 18px;
   height: 18px;
   fill: none;
@@ -5817,7 +5817,15 @@ dialog::backdrop {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.stage-meta > :nth-child(2) {
+.creator-back {
+  flex-direction: row-reverse;
+}
+.workspace-selector-row:has(.creator-back) > .creator-step-button {
+  min-width: 68px;
+  gap: 6px;
+  padding-inline: 8px;
+}
+.stage-meta > :is(.pending-status, .ready-status) {
   margin-inline-start: auto;
 }
 .workspace-setup-context {
@@ -6029,6 +6037,20 @@ dialog::backdrop {
     grid-row: 1 / 3;
     align-self: center;
   }
+  .gm-page-heading:has(.creator-back) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  .gm-page-heading:has(.creator-back) > :is(.eyebrow, h1) {
+    grid-column: 2;
+  }
+  .gm-page-heading > .creator-back {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+  .gm-page-heading:has(.creator-back) > .creator-next {
+    grid-column: 3;
+  }
   .manager-navigation {
     display: none;
   }
@@ -6046,7 +6068,7 @@ dialog::backdrop {
   }
 }
 @media (max-width: 1100px) {
-  .workspace .creator-desktop-next {
+  .workspace :is(.creator-desktop-next, .creator-desktop-back) {
     display: none;
   }
   .workspace,
@@ -6144,7 +6166,7 @@ dialog::backdrop {
   .workspace-rail,
   .workspace-action-dialog,
   .mobile-creator-menu,
-  .creator-next {
+  .creator-step-button {
     display: none !important;
   }
   .panel,

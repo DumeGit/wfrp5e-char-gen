@@ -37,6 +37,7 @@ export function WorkspaceMenu({
   navigation,
   selector,
   next,
+  back,
   groups,
   history,
   status,
@@ -49,6 +50,7 @@ export function WorkspaceMenu({
   navigation: ReactNode;
   selector?: ReactNode;
   next?: ReactNode;
+  back?: ReactNode;
   groups: WorkspaceActionGroup[];
   history?: ReactNode;
   status?: ReactNode;
@@ -305,8 +307,9 @@ export function WorkspaceMenu({
               if (mode !== "marijan") requestAnimationFrame(focusEditor);
             }}
           >
-            {next ? (
+            {back || next ? (
               <div className="workspace-selector-row">
+                {back}
                 <div className="workspace-selector-field">{selector}</div>
                 {next}
               </div>

@@ -9,7 +9,7 @@ import {
 } from "./helpers.mjs";
 
 for (const mode of ["Player", "Bestiary"]) {
-  test(`${mode} top Next follows each step at phone, tablet and desktop sizes @interface @mobile`, async ({
+  test(`${mode} top Back and Next follow each step at phone, tablet and desktop sizes @interface @mobile`, async ({
     page,
   }, info) => {
     const player = mode === "Player";
@@ -64,12 +64,6 @@ for (const mode of ["Player", "Bestiary"]) {
         );
       }
       await noOverflow(page);
-      if ([390, 768, 1067, 1440].includes(width)) {
-        await page.evaluate(() => window.scrollTo(0, 0));
-        await page.screenshot({
-          path: info.outputPath(`${mode.toLowerCase()}-next-${width}.png`),
-        });
-      }
       await next.focus();
       await page.keyboard.press("Enter");
       await expect(page.locator("main h1")).toBeFocused();
@@ -89,6 +83,41 @@ for (const mode of ["Player", "Bestiary"]) {
             .locator('[aria-current="step"]'),
         ).toContainText(names[1]);
       }
+      const back = page.getByRole("button", {
+        name: `Back: ${names[0]}`,
+        exact: true,
+      });
+      const forward = page.getByRole("button", {
+        name: `Next: ${names[2]}`,
+        exact: true,
+      });
+      await expect(back).toBeVisible();
+      const backBox = await back.boundingBox();
+      expect(backBox.width).toBeGreaterThanOrEqual(64);
+      expect(backBox.height).toBeGreaterThanOrEqual(44);
+      expect(backBox.x).toBeLessThan((await forward.boundingBox()).x);
+      if (width <= 1100) {
+        const select = await page
+          .locator(player ? "#mobile-step" : "#gm-step-select")
+          .boundingBox();
+        expect(backBox.x + backBox.width).toBeLessThan(select.x);
+        expect(select.width).toBeGreaterThanOrEqual(90);
+        expect(
+          Math.abs(backBox.y + backBox.height - select.y - select.height),
+        ).toBeLessThanOrEqual(1);
+        await expect(page.locator("main .creator-desktop-back")).toBeHidden();
+      }
+      await noOverflow(page);
+      if ([390, 768, 1067, 1440].includes(width)) {
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await page.screenshot({
+          path: info.outputPath(`${mode.toLowerCase()}-back-next-${width}.png`),
+        });
+      }
+      await back.focus();
+      await page.keyboard.press("Enter");
+      await expect(page.locator("main h1")).toBeFocused();
+      await expect(page.locator(".creator-back")).toHaveCount(0);
     }
     await jump(names[0]);
     for (const name of names.slice(1)) {
@@ -104,11 +133,18 @@ for (const mode of ["Player", "Bestiary"]) {
       player ? "Your character" : "Review",
     );
     await noOverflow(page);
-    await jump(names[0]);
+    for (const name of names.slice(0, -1).reverse()) {
+      await page
+        .getByRole("button", { name: `Back: ${name}`, exact: true })
+        .click();
+      await expect(page.locator("main h1")).toBeFocused();
+    }
+    await expect(page.locator(".creator-back")).toHaveCount(0);
+    await jump(names[1]);
     await expect(
-      page.getByRole("button", { name: `Next: ${names[1]}`, exact: true }),
+      page.getByRole("button", { name: `Back: ${names[0]}`, exact: true }),
     ).toBeVisible();
     await page.emulateMedia({ media: "print" });
-    await expect(page.locator(".creator-next:visible")).toHaveCount(0);
+    await expect(page.locator(".creator-step-button:visible")).toHaveCount(0);
   });
 }
