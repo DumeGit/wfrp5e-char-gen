@@ -7,6 +7,7 @@ export const MIN_CARD_FONT = 7.5;
 const PAD = 4,
   GUTTER = 33,
   COLUMN_GAP = 4;
+const gmTextLabels = new Set(["GM Notes", "GM Info"]);
 
 function printable(font, value) {
   return [
@@ -132,9 +133,25 @@ function measure(font, bold, { r, s, sections }, width, size) {
     height: top - statsTop,
   });
 
+  const gmText = sections.filter(([label]) => gmTextLabels.has(label));
+  if (gmText.length) {
+    const gap = 8;
+    const columnWidth = (inner - gap * (gmText.length - 1)) / gmText.length;
+    commands.push({ kind: "rule", x: PAD, top, width: inner });
+    let height = 0;
+    for (const [index, [label, value]] of gmText.entries()) {
+      const x = PAD + index * (columnWidth + gap);
+      const heading = text(plain(label, true), x, top + 3, columnWidth, 6.5, 8);
+      const body = text(plain(value), x, top + 3 + heading, columnWidth);
+      height = Math.max(height, heading + body);
+    }
+    top += height + 6;
+  }
+
   const contentX = PAD + GUTTER + COLUMN_GAP,
     contentWidth = width - PAD - contentX;
   for (const [label, value] of sections) {
+    if (gmTextLabels.has(label)) continue;
     commands.push({ kind: "rule", x: PAD, top, width: inner });
     const start = top + 2;
     const labelHeight = text(

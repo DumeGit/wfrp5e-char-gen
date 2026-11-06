@@ -20,7 +20,7 @@ Responsive filter alignment: through 1100px, search and the filter disclosure ea
 
 **Condition rules.** In Equipment & magic, a weapon or trapping with a recognised Condition effect shows the Condition name and a ? control for the core rule. The weapon or trapping’s own text still governs when it applies.
 
-**GM Notes and GM Info.** GM Notes sits below Name in Starting profile. GM Info is edited in Review & export. The two fields save independently. Review checkboxes control the stat block and full sheet and start off. New A4 cards include both fields when they contain text. Each card has its own checkboxes to hide either field.
+**GM Notes and GM Info.** GM Notes sits below Name in Starting profile. GM Info is edited in Review & export. The two fields save independently. Review checkboxes control the stat block and full sheet and start off. New A4 cards place GM Notes and GM Info side by side below the statistics. If only one field is included, it uses the full card width. Each card has its own checkboxes to hide either field.
 
 ## Imperial Desk — 22 October 2026
 

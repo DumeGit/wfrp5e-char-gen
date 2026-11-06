@@ -165,3 +165,54 @@ test("flexible packing paginates long profiles and blocks a card taller than a f
   assert.equal(blocked.cards[0].fontSize, 7.5);
   await assert.rejects(blocked.bytes(), /full A4 column/);
 });
+
+test("A4 cards place GM Notes and GM Info side by side and give a single field the full width", async () => {
+  const value = entry("Human", "Description below the GM fields.");
+  value.s.briefing = "Watch the gate and wait for the second bell. "
+    .repeat(3)
+    .trim();
+  value.s.notes = "Ask for the key.";
+  value.s.includeBriefing = true;
+  value.s.includeNotes = true;
+  const doc = await PDFLib.PDFDocument.create(),
+    font = await doc.embedFont(PDFLib.StandardFonts.Helvetica),
+    bold = await doc.embedFont(PDFLib.StandardFonts.HelveticaBold),
+    { width, height } = printGeometry(6);
+  const plan = () =>
+    planRecordCard(
+      font,
+      bold,
+      { ...value, sections: cardSections(value.r, value.s) },
+      width,
+      height,
+      9.25,
+    );
+  const find = (card, label) =>
+    card.commands.find(
+      (command) =>
+        command.kind === "text" &&
+        command.lines
+          .flat()
+          .map((run) => run.text)
+          .join("")
+          .startsWith(label),
+    );
+  const paired = plan();
+  assert.ok(paired.fits);
+  const notesHeading = find(paired, "GM Notes"),
+    infoHeading = find(paired, "GM Info"),
+    notesBody = find(paired, "Watch the gate"),
+    infoBody = find(paired, "Ask for the key");
+  assert.equal(notesHeading.top, infoHeading.top);
+  assert.equal(notesBody.top, infoBody.top);
+  assert.ok(notesBody.x + notesBody.width < infoBody.x);
+  assert.ok(notesBody.lines.length > 1);
+  assert.ok(
+    find(paired, "Desc").top >
+      notesBody.top + notesBody.lines.length * notesBody.leading,
+  );
+  value.s.includeNotes = false;
+  const single = plan();
+  assert.equal(find(single, "GM Info"), undefined);
+  assert.ok(find(single, "Watch the gate").width > notesBody.width);
+});
