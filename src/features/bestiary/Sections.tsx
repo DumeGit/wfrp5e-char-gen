@@ -117,7 +117,7 @@ export function StatBlock({
         <h2 className="gm-stat-name">{r.name}</h2>
         {s.includeBriefing && s.briefing?.trim() && (
           <p className="gm-prewrap">
-            <strong>GM Briefing</strong> {s.briefing}
+            <strong>GM Notes</strong> {s.briefing}
           </p>
         )}
         <p>
@@ -278,7 +278,7 @@ export function StatBlock({
         )}
       {s.includeNotes &&
         s.notes &&
-        section("notes", "GM notes", <p className="gm-prewrap">{s.notes}</p>)}
+        section("notes", "GM Info", <p className="gm-prewrap">{s.notes}</p>)}
     </article>
   );
 }
@@ -343,7 +343,7 @@ export function Starting() {
                 onChange={(value) => bind("name", value)}
               />
               <div className="field">
-                <label htmlFor="gm-briefing">GM Briefing</label>
+                <label htmlFor="gm-briefing">GM Notes</label>
                 <textarea
                   id="gm-briefing"
                   value={s.briefing}

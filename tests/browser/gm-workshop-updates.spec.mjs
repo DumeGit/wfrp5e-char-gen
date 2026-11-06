@@ -9,7 +9,7 @@ import {
   noOverflow,
 } from "./helpers.mjs";
 
-test("Zoo category, GM Briefing, mutation output and attack Condition rules @gm @mobile", async ({
+test("Zoo category, GM Notes, mutation output and attack Condition rules @gm @mobile", async ({
   page,
 }, info) => {
   await openGM(page);
@@ -22,14 +22,14 @@ test("Zoo category, GM Briefing, mutation output and attack Condition rules @gm 
   await expect(page.locator(".gm-profile-card")).toHaveCount(43);
   await applyProfile(page, "Dread Maw");
 
-  const briefing = page.getByLabel("GM Briefing", { exact: true });
+  const briefing = page.getByLabel("GM Notes", { exact: true });
   await page.getByLabel("Name", { exact: true }).fill("Marsh Dread Maw");
   await briefing.fill("Ambush beneath the causeway.");
   await briefing.scrollIntoViewIfNeeded();
   await noOverflow(page);
   await page
     .locator(".gm-identity-fields")
-    .screenshot({ path: info.outputPath("gm-briefing.png") });
+    .screenshot({ path: info.outputPath("gm-notes.png") });
 
   await gmStep(page, "Customise");
   await page.getByRole("tab", { name: "Traits", exact: true }).click();
@@ -64,16 +64,14 @@ test("Zoo category, GM Briefing, mutation output and attack Condition rules @gm 
   await gmStep(page, "Review & export");
   const block = page.locator(".gm-stat-block");
   await expect(block.getByText(mutationName, { exact: true })).toBeVisible();
-  await page
-    .getByLabel("Private GM notes", { exact: true })
-    .fill("Keep this secret.");
+  await page.getByLabel("GM Info", { exact: true }).fill("Keep this secret.");
   await expect(block).not.toContainText("Ambush beneath the causeway.");
-  await page.getByLabel("Include my GM Briefing in the PDF").check();
+  await page.getByLabel("Include GM Notes").check();
   await expect(block).toContainText("Ambush beneath the causeway.");
   await expect(block).not.toContainText("Keep this secret.");
-  await page.getByLabel("Include my GM notes in the PDF").check();
+  await page.getByLabel("Include GM Info").check();
   await expect(block).toContainText("Keep this secret.");
-  await page.getByLabel("Include my GM Briefing in the PDF").uncheck();
+  await page.getByLabel("Include GM Notes").uncheck();
   await expect(block).not.toContainText("Ambush beneath the causeway.");
   await expect(block).toContainText("Keep this secret.");
 });

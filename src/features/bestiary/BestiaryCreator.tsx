@@ -17,7 +17,7 @@ import {
   Button,
   Details,
   Select,
-  Check,
+  PrintNoteOptions,
   useBestiary,
 } from "./controls";
 import { BestiaryDialogs, download } from "./Dialogs";
@@ -141,28 +141,14 @@ function Review() {
         </p>
       )}
       <div className="gm-export-options">
-        {s.briefing.trim() && (
-          <Check
-            checked={s.includeBriefing}
-            onChange={(value) =>
-              edit((d: any) => {
-                d.includeBriefing = value;
-              })
-            }
-          >
-            Include my GM Briefing in the PDF
-          </Check>
-        )}
-        <Check
-          checked={s.includeNotes}
-          onChange={(v) =>
+        <PrintNoteOptions
+          draft={s}
+          onChange={(key, value) =>
             edit((d: any) => {
-              d.includeNotes = v;
+              d[key] = value;
             })
           }
-        >
-          Include my GM notes in the PDF
-        </Check>
+        />
         <Button
           disabled={r.issues.length > 0 || !!working}
           onClick={() => setModal({ kind: "print" })}
@@ -173,7 +159,7 @@ function Review() {
       </div>
       <StatBlock />
       <div className="field">
-        <label htmlFor="gm-notes">Private GM notes</label>
+        <label htmlFor="gm-notes">GM Info</label>
         <textarea
           id="gm-notes"
           value={s.notes}

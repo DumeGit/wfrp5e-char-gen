@@ -39,7 +39,7 @@ test("Imperial Zoo profiles have a separate category and valid printed baselines
   );
 });
 
-test("mutation descriptions and both GM notes have independent output choices", () => {
+test("mutation descriptions and GM Notes and GM Info have independent output choices", () => {
   const s = freshGM(data, data.profiles.find((p) => p.name === "Human").id);
   s.notes = "The old notes.";
   s.dataVersion = "051f38d3891a3ddb";
@@ -63,13 +63,20 @@ test("mutation descriptions and both GM notes have independent output choices", 
   restored.includeBriefing = true;
   const card = Object.fromEntries(cardSections(r, restored));
   assert.equal(card.Corruption, mutation.name);
-  assert.equal(card["GM Briefing"], restored.briefing);
-  assert.equal(card["GM notes"], undefined);
+  assert.equal(card["GM Notes"], restored.briefing);
+  assert.equal(card["GM Info"], undefined);
   assert.deepEqual(Object.fromEntries(sheetSections(r, restored)).Corruption, [
     mutation.name,
   ]);
   assert.ok(statBlock(r, restored).includes(restored.briefing));
   assert.ok(!statBlock(r, restored).includes(restored.notes));
+  restored.includeNotes = true;
+  const both = Object.fromEntries(cardSections(r, restored));
+  assert.equal(both["GM Notes"], restored.briefing);
+  assert.equal(both["GM Info"], restored.notes);
+  assert.deepEqual(Object.fromEntries(sheetSections(r, restored))["GM Info"], [
+    restored.notes,
+  ]);
 });
 
 test("equipment help identifies explicit conditions and relevant weapon qualities", () => {

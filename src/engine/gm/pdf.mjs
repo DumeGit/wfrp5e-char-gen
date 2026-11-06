@@ -46,7 +46,7 @@ export function sheetSections(r, s) {
         s.manner ? `Manner: ${s.manner}` : "",
       ].filter(Boolean),
     ],
-    ["GM notes", s.includeNotes && s.notes ? [s.notes] : []],
+    ["GM Info", s.includeNotes && s.notes?.trim() ? [s.notes] : []],
   ].filter(([, lines]) => lines.length);
 }
 export async function createGMPDF(PDFLib, r, s) {
@@ -172,7 +172,7 @@ export async function createGMPDF(PDFLib, r, s) {
   newPage();
   text(r.name, 26, heading);
   if (s.includeBriefing && s.briefing?.trim()) {
-    text("GM Briefing", 10, bold);
+    text("GM Notes", 10, bold);
     text(s.briefing);
   }
   text(

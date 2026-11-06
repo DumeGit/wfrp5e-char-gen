@@ -424,12 +424,12 @@
   margin: 0;
   flex: 0 0 17px;
 }
-.gm-equipment-options {
+:is(.gm-equipment-options, .gm-note-options) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   gap: 8px;
 }
-.gm-equipment-options .gm-check {
+:is(.gm-equipment-options, .gm-note-options) .gm-check {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 18px minmax(0, 1fr);
@@ -445,7 +445,7 @@
   user-select: none;
   -webkit-user-select: none;
 }
-.gm-equipment-options input {
+:is(.gm-equipment-options, .gm-note-options) input {
   width: 18px;
   height: 18px;
   accent-color: var(--color-crimson);
@@ -465,7 +465,7 @@
   font-size: 12px;
   line-height: 14px;
 }
-.gm-equipment-options .gm-check:has(input:checked) {
+:is(.gm-equipment-options, .gm-note-options) .gm-check:has(input:checked) {
   border-color: var(--color-crimson);
   background: color-mix(
     in srgb,
@@ -473,15 +473,16 @@
     var(--color-paper-raised)
   );
 }
-.gm-equipment-options .gm-check:has(input:focus-visible) {
+:is(.gm-equipment-options, .gm-note-options)
+  .gm-check:has(input:focus-visible) {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
-.gm-equipment-options .gm-check:active {
+:is(.gm-equipment-options, .gm-note-options) .gm-check:active {
   background: var(--color-paper-recessed);
 }
 @media (hover: hover) and (pointer: fine) {
-  .gm-equipment-options .gm-check:hover {
+  :is(.gm-equipment-options, .gm-note-options) .gm-check:hover {
     border-color: var(--color-crimson);
   }
 }
@@ -813,10 +814,14 @@
 }
 .gm-export-options {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
   justify-content: space-between;
   margin-bottom: 24px;
+}
+.gm-export-options .gm-note-options {
+  width: min(100%, 360px);
 }
 .gm-prewrap {
   white-space: pre-wrap;
@@ -1628,6 +1633,9 @@
 .gm-print-list small {
   display: block;
   color: var(--color-muted);
+}
+.gm-print-list .gm-note-options {
+  margin-top: 8px;
 }
 .gm-print-actions {
   flex-shrink: 0;

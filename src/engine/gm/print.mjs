@@ -7,7 +7,7 @@ export { PRINT_LAYOUTS } from "./card-packing.mjs";
 // All actual fields remain; the record-grid planner owns only their presentation.
 export function cardSections(r, s) {
   return [
-    ["GM Briefing", s.includeBriefing ? s.briefing?.trim() : ""],
+    ["GM Notes", s.includeBriefing ? s.briefing?.trim() : ""],
     ["Desc", s.description?.trim() || ""],
     [
       "Attacks",
@@ -54,7 +54,7 @@ export function cardSections(r, s) {
         .filter(Boolean)
         .join(" · "),
     ],
-    ["GM notes", s.includeNotes ? s.notes : ""],
+    ["GM Info", s.includeNotes ? s.notes?.trim() : ""],
   ].filter(([, value]) => value);
 }
 

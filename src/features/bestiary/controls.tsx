@@ -179,6 +179,35 @@ export function Check({
     </label>
   );
 }
+export function PrintNoteOptions({
+  draft,
+  onChange,
+}: {
+  draft: any;
+  onChange: (key: "includeBriefing" | "includeNotes", value: boolean) => void;
+}) {
+  if (!draft.briefing.trim() && !draft.notes.trim()) return null;
+  return (
+    <div className="gm-note-options" role="group" aria-label="Include in PDF">
+      {draft.briefing.trim() && (
+        <Check
+          checked={draft.includeBriefing}
+          onChange={(value) => onChange("includeBriefing", value)}
+        >
+          Include GM Notes
+        </Check>
+      )}
+      {draft.notes.trim() && (
+        <Check
+          checked={draft.includeNotes}
+          onChange={(value) => onChange("includeNotes", value)}
+        >
+          Include GM Info
+        </Check>
+      )}
+    </div>
+  );
+}
 export function DescriptionToggle({
   kind,
   entry,

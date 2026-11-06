@@ -20,7 +20,7 @@ Responsive filter alignment: through 1100px, search and the filter disclosure ea
 
 **Condition rules.** In Equipment & magic, a weapon or trapping with a recognised Condition effect shows the Condition name and a ? control for the core rule. The weapon or trapping’s own text still governs when it applies.
 
-**GM Briefing.** The Starting profile editor places this private text field directly below Name. It saves separately from Private GM notes in Review & export. Each field has its own export option, off by default, for the stat block, full sheet and A4 cards.
+**GM Notes and GM Info.** GM Notes sits below Name in Starting profile. GM Info is edited in Review & export. The two fields save independently. Review checkboxes control the stat block and full sheet and set the initial choices for cards added to the A4 batch. Each card has its own checkboxes for the saved text, so you can change its print choices inside the batch. Both fields are private by default.
 
 ## Imperial Desk — 22 October 2026
 

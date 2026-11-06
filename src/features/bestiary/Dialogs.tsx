@@ -36,6 +36,7 @@ import {
   Field,
   Metadata,
   Modal,
+  PrintNoteOptions,
   Rule,
   Select,
   useBestiary,
@@ -634,6 +635,7 @@ function PrintDialog() {
   const update = (value: any[]) => {
     session.printEntries = value;
     setEntries(value);
+    setPrepared(null);
   };
   useEffect(() => {
     let active = true;
@@ -728,6 +730,18 @@ function PrintDialog() {
                   ))}
                 </ul>
               )}
+              <PrintNoteOptions
+                draft={entry.s}
+                onChange={(key, value) =>
+                  update(
+                    entries.map((card, index) =>
+                      index === i
+                        ? { ...card, s: { ...card.s, [key]: value } }
+                        : card,
+                    ),
+                  )
+                }
+              />
             </div>
             <div className="gm-print-actions">
               <Button
@@ -793,23 +807,27 @@ function PrintDialog() {
         onChange={async (e) => {
           const selected = Array.from(e.target.files || []);
           e.target.value = "";
-          const next = [...entries],
+          const added: { name: string; card: ReturnType<typeof snapshot> }[] =
+              [],
             failures: string[] = [];
           for (const file of selected)
             try {
-              if (next.length >= 48)
+              if (session.printEntries.length + added.length >= 48)
                 throw Error("The print batch already has 48 cards.");
               if (file.size > 2000000) throw Error("This draft is too large.");
-              next.push(
-                snapshot(store.validate(JSON.parse(await file.text()))),
-              );
+              const draft = store.validate(JSON.parse(await file.text()));
+              added.push({ name: file.name, card: snapshot(draft) });
             } catch (error) {
               failures.push(
                 `${file.name}: ${error instanceof Error ? error.message : error}`,
               );
             }
+          const remaining = 48 - session.printEntries.length;
+          for (const { name } of added.slice(remaining))
+            failures.push(`${name}: The print batch already has 48 cards.`);
+          const cards = added.slice(0, remaining).map(({ card }) => card);
           setErrors(failures);
-          update(next);
+          if (cards.length) update([...session.printEntries, ...cards]);
         }}
       />
     </Modal>
