@@ -20601,6 +20601,645 @@
       },
       "status": "reviewed",
       "text": "Roll twice more. Further Legendary results can produce at most 5 distinct abilities; duplicate abilities are not cumulative."
+    },
+    "description:32df0f6d960ddf319198bbd0": {
+      "name": "Antlers",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 10
+      },
+      "status": "reviewed",
+      "text": "Impale, Penetrating"
+    },
+    "description:31d2b00c95939a41ae7b8fad": {
+      "name": "Horns (Antlers)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 10
+      },
+      "status": "reviewed",
+      "text": "Impale, Penetrating"
+    },
+    "description:5b4a04d04b1c3e40fd4082b7": {
+      "name": "Short Bow",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 15
+      },
+      "status": "reviewed",
+      "text": "20 yards"
+    },
+    "description:fffd27a86d62a9ac735d13d6": {
+      "name": "Talons",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 21
+      },
+      "status": "reviewed",
+      "text": "Fast"
+    },
+    "description:d0eb571c76b98d9dc93d799c": {
+      "name": "Breath (Slime)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 23
+      },
+      "status": "reviewed",
+      "text": "Wounds ignore AP. For TB rounds, targets must pass Average (+2 SL) Agility before physically acting or gain Prone."
+    },
+    "description:da3502d04dfa095e2a90e28c": {
+      "name": "Shortbow",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 28
+      },
+      "status": "reviewed",
+      "text": "20 yards"
+    },
+    "description:dbabc994e5c84fb779fc2f98": {
+      "name": "Net",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 28
+      },
+      "status": "reviewed",
+      "text": "6 yards · Fourth Edition Entangle rating 3"
+    },
+    "description:661476a4810f662534ed6b54": {
+      "name": "Breath (Soporific)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 30
+      },
+      "status": "reviewed",
+      "text": "Free Attack. Wounds ignore AP. A target wounded by it makes a Hard (−2 SL) Willpower Test or gains Stupid for TB rounds."
+    },
+    "description:f282fe9906b282704ddafc61": {
+      "name": "Teeth",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 32
+      },
+      "status": "reviewed",
+      "text": "Infected"
+    },
+    "description:6074d00222e61c7ae77738ab": {
+      "name": "Tail",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 32
+      },
+      "status": "reviewed",
+      "text": "Venom (Challenging): Wounding a target inflicts Poisoned."
+    },
+    "description:d163f217773952a0dd7c39ed": {
+      "name": "Breath (Poison)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 32
+      },
+      "status": "reviewed",
+      "text": "Free Attack"
+    },
+    "description:c1266c4863d74d6ad611e2ea": {
+      "name": "Tail",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 36
+      },
+      "status": "reviewed",
+      "text": "One Tail attack each Round costs no Momentum."
+    },
+    "description:a5bcb4c89eca7fd7fa1b479f": {
+      "name": "Vicious Fangs",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 41
+      },
+      "status": "reviewed",
+      "text": "Penetrating"
+    },
+    "description:623e05252ae872b723dfcc53": {
+      "name": "Vomit",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "status": "reviewed",
+      "text": "Free Attack. The first Vomit in a combat costs no Momentum."
+    },
+    "description:f499ea9ab6ad6bd385a4235e": {
+      "name": "Vomit",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "status": "reviewed",
+      "text": "Free Attack. The first Vomit in a combat costs no Momentum."
+    },
+    "description:99332a981e6e85d6e0927158": {
+      "name": "Saw-tooth Bite",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 50
+      },
+      "status": "reviewed",
+      "text": "On hit it attaches and drains 1 Wound per Round ignoring TB and AP, until it drains 1d10 Wounds. Opposed Strength removes it but inflicts one more Wound and a Bleeding Condition. Salt makes it release and flee."
+    },
+    "description:153f6f74fad30540e3d21f4b": {
+      "name": "Serrated Horns",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 57
+      },
+      "status": "reviewed",
+      "text": "Impale and Penetrating on the Round it charges."
+    },
+    "description:11f52ca7c6c1b69512b599f1": {
+      "name": "Horns",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 57
+      },
+      "status": "reviewed",
+      "text": "Impale and Penetrating on the Round it charges."
+    },
+    "description:9962906b39a1a91272e54bd6": {
+      "name": "Talons",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Impale, Penetrating"
+    },
+    "description:eebdb1fc04e2602cf8213d11": {
+      "name": "Bite (Vicious Beaks)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 59
+      },
+      "status": "reviewed",
+      "text": "Impale, Penetrating. Separate Bite Damage is not printed."
+    },
+    "description:e54921ca5e9befe32ca824e4": {
+      "name": "Talons",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 63
+      },
+      "status": "reviewed",
+      "text": "Fast, Penetrating"
+    },
+    "description:2cf498e729826200cb356030": {
+      "name": "Bite (Beak)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 63
+      },
+      "status": "reviewed",
+      "text": "Fast, Penetrating"
+    },
+    "description:0f365b32abb85f0ba0572020": {
+      "name": "Talons",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 65
+      },
+      "status": "reviewed",
+      "text": "Venom (Hard): Wounding a target inflicts Poisoned."
+    },
+    "description:d330101a7839f10b68746583": {
+      "name": "Breath (Corrosion)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 65
+      },
+      "status": "reviewed",
+      "text": "Free Attack. Use the source-specific Corrosion effect."
+    },
+    "description:168dca857ce967dec8cbfb95": {
+      "name": "Breath (Fire)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 67
+      },
+      "status": "reviewed",
+      "text": "Free Attack"
+    },
+    "description:a6b51872f10488ecc36955b6": {
+      "name": "Tongue",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 67
+      },
+      "status": "reviewed",
+      "text": "Free Attack"
+    },
+    "description:379713f52bfd8acbf2ace164": {
+      "name": "Breath (Fire)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 75
+      },
+      "status": "reviewed",
+      "text": "Free Attack"
+    },
+    "description:affd4734c66d5b03b974838c": {
+      "name": "Barbed Forelimbs",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 76
+      },
+      "status": "reviewed",
+      "text": "A hit inflicts an Entangled Condition. The Tregara can start a Grapple and hold up to two opponents at once."
+    },
+    "description:f7103eb0d46539e9e1881a9d": {
+      "name": "Bite (Vicious Mandibles)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 76
+      },
+      "status": "reviewed",
+      "text": "Impale, Penetrating"
+    },
+    "description:9d61faf6b27de3985b557143": {
+      "name": "Hooked Bill",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 77
+      },
+      "status": "reviewed",
+      "text": "After taking Damage, pass an Average (+2 SL) Endurance Test or gain a Bleeding Condition."
+    },
+    "description:e436b66f8eff9e923879474c": {
+      "name": "Rear",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 79
+      },
+      "status": "reviewed",
+      "text": "Stomp as its Move against a smaller opponent."
+    },
+    "description:907a3233435bfb131b4c7baa": {
+      "name": "Claws",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 82
+      },
+      "status": "reviewed",
+      "text": "Fast, Penetrating"
+    },
+    "description:516ce62c63d61fcf7c5f4c02": {
+      "name": "Bite",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 82
+      },
+      "status": "reviewed",
+      "text": "Fast, Penetrating"
+    },
+    "description:ea036b36da7dd50af95ea1ea": {
+      "name": "Claws",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 85
+      },
+      "status": "reviewed",
+      "text": "Penetrating"
+    },
+    "description:2970bbd33876eb9d15bfb4a7": {
+      "name": "Fanged Maw",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 88
+      },
+      "status": "reviewed",
+      "text": "Venom (Difficult): Wounding a target inflicts Poisoned."
+    },
+    "description:192bf7971490a33e7e07ceb6": {
+      "name": "Bite (Fanged Maw)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 88
+      },
+      "status": "reviewed",
+      "text": "Venom (Difficult): Wounding a target inflicts Poisoned."
+    },
+    "description:8565ff6708a5c0ea5616d88a": {
+      "name": "Bite",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 90
+      },
+      "status": "reviewed",
+      "text": "Penetrating. Venom (Challenging): Wounding a target inflicts Poisoned."
+    },
+    "description:cfc32f91e7a0f18330874262": {
+      "name": "Wight Blade",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 93
+      },
+      "status": "reviewed",
+      "text": "Impale. On a Critical Hit, roll twice on the Critical table and apply the higher result."
+    },
+    "description:f05143b9f82a3e06294062f7": {
+      "name": "Vicious Webs",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 13
+      },
+      "status": "reviewed",
+      "text": "A target entangled by the Arachnarok’s webs also gains a Poisoned Condition."
+    },
+    "description:86a9d93a330838a4a8a2172f": {
+      "name": "Borrowed Courage",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 15
+      },
+      "status": "reviewed",
+      "text": "Away from the tribe, scouts or raiders typically ride giant spiders in groups of 3 to 10. Mounted Forest Goblins ignore Afraid (Elves)."
+    },
+    "description:2d0e41ebc83ba264492786ad": {
+      "name": "Strength of the Pack",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 17
+      },
+      "status": "reviewed",
+      "text": "Fourth Edition reference. When the pack outnumbers a foe, the wolves add a further +10 to their outnumbering modifier."
+    },
+    "description:0a28e382f985ae39c28dd304": {
+      "name": "Piercing Cry",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 21
+      },
+      "status": "reviewed",
+      "text": "When charging, spend 2 Momentum to screech as a Free Attack. Opponents within Toughness Bonus yards make a Hard (−2 SL) Willpower Test or gain one Stunned Condition."
+    },
+    "description:5d9c7618237def31fec1a861": {
+      "name": "Burrow 30",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 23
+      },
+      "status": "reviewed",
+      "text": "As its Move, tunnel up to 30 yards through earth and stone, ignoring terrain, obstacles and characters. It can Charge and choose whether to emerge. If it starts underground, it must use Burrow for its Move. Against it, measure horizontal distance and increase range by two steps."
+    },
+    "description:5d0658134d54cb786eba198b": {
+      "name": "Swallow Whole",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 23
+      },
+      "status": "reviewed",
+      "text": "After a maw attack critically hits or deals Wounds of twice the target’s TB to a target its Size or smaller, oppose Strength. A win inflicts Entangled, plus another for each 2 SL of margin. The victim’s next Action must be an Opposed Strength Test to escape. If still Entangled, they take 10 Wounds, reduced by TB and AP, and are swallowed. Inside, they stay Entangled and suffer 10 Wounds per Round ignoring AP. After a Willpower Test to act, an unopposed Melee Test with a Very Short or Personal weapon gains +20. Deal 20 cumulative Wounds ignoring its Armour to escape."
+    },
+    "description:bc3a730752ba23dc8c59bda8": {
+      "name": "Too Ornery to Die",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 25
+      },
+      "status": "reviewed",
+      "text": "Ignore the effects of the first Critical Hit suffered in each combat."
+    },
+    "description:ca3b5ce822dc402753a19fd6": {
+      "name": "The Forest Is My Shield",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 30
+      },
+      "status": "reviewed",
+      "text": "In woodland among trees, it cannot be outnumbered. Ranged attacks against it suffer −20. If that penalty turns an otherwise successful shot into a miss, the GM randomly determines which nearby tree or engaged foe the shot hits."
+    },
+    "description:e627fd5af94f7d8a31a4a2c9": {
+      "name": "A Wyvern’s Spite",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 32
+      },
+      "status": "reviewed",
+      "text": "A foe surprised by the Wyvern must pass a Willpower Test or suffer −10 to all Tests and lose access to Fortune until the Wyvern dies or the foe loses 5 or more Wounds."
+    },
+    "description:186288c84b8615ed02f9965d": {
+      "name": "I Am Unstoppable",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 41
+      },
+      "status": "reviewed",
+      "text": "A mounted Skaven rider gains Immunity to Psychology. If the Bonebreaker dies, the rider gains 5 Broken Conditions and other Skaven within 10 yards gain 1."
+    },
+    "description:48ef054b51da33e7d69cd0cd": {
+      "name": "Engulf",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "status": "reviewed",
+      "text": "On a hit against a target of its Size or smaller, the amoeba may engulf one victim, inflicting Entangled Conditions equal to its SB. The victim loses SB Wounds each Round ignoring TB and AP. The amoeba cannot attack the victim, but any attack that hits the amoeba also hits the victim. It withdraws to digest if the victim dies or stops struggling."
+    },
+    "description:37fdee1601fa6a5ff80b0a02": {
+      "name": "Jelly from Hell",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "status": "reviewed",
+      "text": "Halve Wounds from sources other than fire, extreme cold or magic, rounding down. Only these exceptions usually kill it permanently."
+    },
+    "description:29ad92798fa67881b745f190": {
+      "name": "Mostly Mindless",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "status": "reviewed",
+      "text": "It cannot test Intelligence, Willpower or Fellowship. Substitute its Strength Bonus for Willpower Bonus. It will not approach open flame and gains Broken if approached with it."
+    },
+    "description:20f950d423c9ec7674876aa0": {
+      "name": "Four-Fold Knowing Gaze",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 47
+      },
+      "status": "reviewed",
+      "text": "It cannot be surprised and it takes at least four opponents to outnumber it. Once each Round it can reverse one of its Combat Tests."
+    },
+    "description:eb7fabffe12313524b85ead6": {
+      "name": "Rotten Stench",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "status": "reviewed",
+      "text": "Living targets within Toughness Bonus yards suffer −10 to all Tests. Multiple Rotten Stenches do not stack."
+    },
+    "description:bb9790fbe429205eaa2c24cc": {
+      "name": "Overwhelming Stench",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "status": "reviewed",
+      "text": "Living targets within Toughness Bonus yards suffer −10 to all Tests. Multiple stenches do not stack. On first exposure, test Willpower or gain a Stunned Condition."
+    },
+    "description:3ee14d5ff94e93c6b7575fdb": {
+      "name": "Hallucinogenic Cloud",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 50
+      },
+      "status": "reviewed",
+      "text": "Mammals within TB yards make a Hard (−2 SL) Toughness Test. Success protects against this leech for a day. Failure leaves them effectively Unconscious for 3 Rounds plus one per SL of failure."
+    },
+    "description:bc983ce6c430b63e19867faf": {
+      "name": "Endless Coils",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 52
+      },
+      "status": "reviewed",
+      "text": "It may grapple up to five smaller targets at once."
+    },
+    "description:65f5a21b43a3ac8495aad24c": {
+      "name": "Endless Malice",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 61
+      },
+      "status": "reviewed",
+      "text": "After killing or incapacitating a living foe, test Willpower or spend its next Action and Move mauling the victim. An unconscious victim suffers a Critical Wound. Witnesses are subject to Fear 2."
+    },
+    "description:9dc0cbd6c160ca7a895f1995": {
+      "name": "We See You",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 67
+      },
+      "status": "reviewed",
+      "text": "A Chimera cannot be surprised or outnumbered in combat."
+    },
+    "description:f1a5fc497fcc958c975ec642": {
+      "name": "Endless Rage",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 70
+      },
+      "status": "reviewed",
+      "text": "The Skin Wolf is always Frenzied."
+    },
+    "description:052ee6536bdf523f30e6f7ea": {
+      "name": "Blazing Body",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 75
+      },
+      "status": "reviewed",
+      "text": "At the end of each Round, all engaged targets take 1d10 Wounds reduced by TB and AP, to a minimum of 1. Against non-magical attacks, the Great Taurus uses double its TB."
+    },
+    "description:50e00033c1b74fde486af9ba": {
+      "name": "Bloodrage",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 75
+      },
+      "status": "reviewed",
+      "text": "The Great Taurus is always Frenzied and hates all opponents."
+    },
+    "description:74fd4f63c68fd3fe50839870": {
+      "name": "Vibrational Senses",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 76
+      },
+      "status": "reviewed",
+      "text": "It detects all physical creatures within four times its Initiative Bonus in yards and cannot be Surprised."
+    },
+    "description:0e09ed3f42483d2fb7154272": {
+      "name": "Unstoppable Charge (Imperial Zoo)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 79
+      },
+      "status": "reviewed",
+      "text": "The Stegadon gains 3 Momentum when it charges."
+    },
+    "description:e936dd9f4c1a34cb646faa14": {
+      "name": "Blood Frenzy (Imperial Zoo)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 81
+      },
+      "status": "reviewed",
+      "text": "After inflicting a Wound in combat, it is Frenzied until all foes it can sense are dead."
+    },
+    "description:c3677d895d5569ee63671004": {
+      "name": "Disruption",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 82
+      },
+      "status": "reviewed",
+      "text": "Fourth Edition reference. Unstable creatures in its presence count as having 2 less Advantage when resolving Unstable at the end of the Round, without spending or losing any."
+    },
+    "description:5449720bd1251e04f203dfc7": {
+      "name": "Crustacean",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 85
+      },
+      "status": "reviewed",
+      "text": "Can breathe underwater and has Movement 8 in water."
+    },
+    "description:5c6d3744dc9277454d3ed8ea": {
+      "name": "Siren’s Song",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 86
+      },
+      "status": "reviewed",
+      "text": "A listener makes a Difficult (−1 SL) Willpower Test or can only move toward the singer, effectively Unconscious but awake. Plugging the ears makes the Test Easy (+4 SL). A victim may test again when attacked."
+    },
+    "description:da8af333bb38a48cf1b4b29c": {
+      "name": "Water Born",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 86
+      },
+      "status": "reviewed",
+      "text": "Can breathe underwater and has Movement 8 in water."
+    },
+    "description:22b969b1586072add71f148b": {
+      "name": "Rabid Frenzy",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 90
+      },
+      "status": "reviewed",
+      "text": "When wounded in combat, it enters an unbreakable Frenzy granting two free Melee Tests per Round."
+    },
+    "description:a7f164d881ade485bc20396e": {
+      "name": "Razor Scales",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 90
+      },
+      "status": "reviewed",
+      "text": "An engaged opponent that attacks it takes 1d10 Wounds reduced by TB and AP, to a minimum of 1."
+    },
+    "description:b7335ec555736778344ad36e": {
+      "name": "Fury (Imperial Zoo)",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 136
+      },
+      "status": "reviewed",
+      "text": "Spend 1 Momentum to hate opponents in close combat. Spend 3 Momentum to become Frenzied and then lose any remaining Momentum."
     }
   },
   "bindings": {
@@ -29979,6 +30618,290 @@
     "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Alegendary-weapon": {
       "id": "description:906804e39acf3f1c7d89dd1e",
       "sourceHash": "044a8372c9a950820afb86efa3fe5769a3046f4db3a07c0c6070b9ba5f36b9ea"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Agreat-stag/attacks/Antlers%7C%7C10": {
+      "id": "description:32df0f6d960ddf319198bbd0",
+      "sourceHash": "f32e92403e4fb94b0a68fa76e8e58dafb0074a82eafef485dce3a5e8d2781d1b"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Agreat-stag/attacks/Horns%20(Antlers)%7C%7C10": {
+      "id": "description:31d2b00c95939a41ae7b8fad",
+      "sourceHash": "f32e92403e4fb94b0a68fa76e8e58dafb0074a82eafef485dce3a5e8d2781d1b"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Aforest-goblin/attacks/Short%20Bow%7C%7C15": {
+      "id": "description:5b4a04d04b1c3e40fd4082b7",
+      "sourceHash": "ec22eed4c74e888fd80b667e2e09af985f2ecd3747170562e7a2b7402cafba74"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Agriffon/attacks/Talons%7C%7C21": {
+      "id": "description:fffd27a86d62a9ac735d13d6",
+      "sourceHash": "6c582b62e0e5aa05647388bd045f2e3e5e7f51f479d00d9df592634c8088a22b"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Adread-maw/attacks/Breath%20(Slime)%7C%7C23": {
+      "id": "description:d0eb571c76b98d9dc93d799c",
+      "sourceHash": "437b74e5d7b466ecf6a8a7fc3ee673ec6d50bffa634d547ae7633dc5a22e551f"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Anight-goblin/attacks/Shortbow%7C%7C28": {
+      "id": "description:da3502d04dfa095e2a90e28c",
+      "sourceHash": "ec22eed4c74e888fd80b667e2e09af985f2ecd3747170562e7a2b7402cafba74"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Anight-goblin/attacks/Net%7C%7C28": {
+      "id": "description:dbabc994e5c84fb779fc2f98",
+      "sourceHash": "511096808ba2ca37263b4e4fa51c918368d1d40af4c0eb65e4f6bd06d9c156c4"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Aforest-dragon/attacks/Breath%20(Soporific)%7C%7C30": {
+      "id": "description:661476a4810f662534ed6b54",
+      "sourceHash": "6118422d2ee4a6739af315de4d4933ff112aad6c6ee2ce225a0c520603626601"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Awyvern/attacks/Teeth%7C%7C32": {
+      "id": "description:f282fe9906b282704ddafc61",
+      "sourceHash": "1bd853d8b3b8037c8935c59eb70b94cd808371ff20650031bf6673fa51f6a729"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Awyvern/attacks/Tail%7C%7C32": {
+      "id": "description:6074d00222e61c7ae77738ab",
+      "sourceHash": "96252b0dca112a805ae6c671b9e2d3eeec70efdc8c408727b764606cdce007c8"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Awyvern/attacks/Breath%20(Poison)%7C%7C32": {
+      "id": "description:d163f217773952a0dd7c39ed",
+      "sourceHash": "a27ae44c9d3a0cc4a0e5306d7c2e7707662989542c7adf7c6b4a23171ce53954"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Astirpike/attacks/Tail%7C%7C36": {
+      "id": "description:c1266c4863d74d6ad611e2ea",
+      "sourceHash": "6e5e23d56729bc21aa2212bdb0a9ae539e74a6fd7267d000a06b57bd9e579d62"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Awolf-rat/attacks/Vicious%20Fangs%7C%7C41": {
+      "id": "description:a5bcb4c89eca7fd7fa1b479f",
+      "sourceHash": "1602e475051b7cfa9f5ddad9179852966bd726cef52739ba79ff152d7dbede86"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Ariver-troll/attacks/Vomit%7C%7C49": {
+      "id": "description:623e05252ae872b723dfcc53",
+      "sourceHash": "37862fe88ea0fb1df1fd731b939d5943cefc67f5aa3721f0e26a2c757eb92837"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Ariver-troll-hag/attacks/Vomit%7C%7C49": {
+      "id": "description:f499ea9ab6ad6bd385a4235e",
+      "sourceHash": "37862fe88ea0fb1df1fd731b939d5943cefc67f5aa3721f0e26a2c757eb92837"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Achameleoleech/attacks/Saw-tooth%20Bite%7C%7C50": {
+      "id": "description:99332a981e6e85d6e0927158",
+      "sourceHash": "f875898408565897936dc3ac5e33084d82d1cefc7431de264b577ac5938ae1df"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Adark-pegasus/attacks/Serrated%20Horns%7C%7C57": {
+      "id": "description:153f6f74fad30540e3d21f4b",
+      "sourceHash": "fae7ff046386d257022b220db5e37bdd3886388d8a99d603b06fc87c882edc8a"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Adark-pegasus/attacks/Horns%7C%7C57": {
+      "id": "description:11f52ca7c6c1b69512b599f1",
+      "sourceHash": "fae7ff046386d257022b220db5e37bdd3886388d8a99d603b06fc87c882edc8a"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Anightraven-flock/attacks/Talons%7C%7C59": {
+      "id": "description:9962906b39a1a91272e54bd6",
+      "sourceHash": "f32e92403e4fb94b0a68fa76e8e58dafb0074a82eafef485dce3a5e8d2781d1b"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Anightraven-flock/attacks/Bite%20(Vicious%20Beaks)%7C%7C59": {
+      "id": "description:eebdb1fc04e2602cf8213d11",
+      "sourceHash": "5f981730d199ee3b9f4ec0a211d3408e6ae7a5fa2d1bf2db197286fc4f450a0e"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Agreat-eagle/attacks/Talons%7C%7C63": {
+      "id": "description:e54921ca5e9befe32ca824e4",
+      "sourceHash": "35e36e52366fba07e653a4f87beff6c8d9e695803ba3ff2439dccdfd657120ae"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Agreat-eagle/attacks/Bite%20(Beak)%7C%7C63": {
+      "id": "description:2cf498e729826200cb356030",
+      "sourceHash": "35e36e52366fba07e653a4f87beff6c8d9e695803ba3ff2439dccdfd657120ae"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Acockatrice/attacks/Talons%7C%7C65": {
+      "id": "description:0f365b32abb85f0ba0572020",
+      "sourceHash": "bb2f534bd6d9628cfb76922d2c79db2ad9920acd8efc3f2d52225817e88446da"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Acockatrice/attacks/Breath%20(Corrosion)%7C%7C65": {
+      "id": "description:d330101a7839f10b68746583",
+      "sourceHash": "a3f55e85b3c2990f8aa2cf020c0a05dfdc57da19e9c749f04b5a6aceef222b26"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Achimera/attacks/Breath%20(Fire)%7C%7C67": {
+      "id": "description:168dca857ce967dec8cbfb95",
+      "sourceHash": "a27ae44c9d3a0cc4a0e5306d7c2e7707662989542c7adf7c6b4a23171ce53954"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Achimera/attacks/Tongue%7C%7C67": {
+      "id": "description:a6b51872f10488ecc36955b6",
+      "sourceHash": "a27ae44c9d3a0cc4a0e5306d7c2e7707662989542c7adf7c6b4a23171ce53954"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Agreat-taurus/attacks/Breath%20(Fire)%7C%7C75": {
+      "id": "description:379713f52bfd8acbf2ace164",
+      "sourceHash": "a27ae44c9d3a0cc4a0e5306d7c2e7707662989542c7adf7c6b4a23171ce53954"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Atregara/attacks/Barbed%20Forelimbs%7C%7C76": {
+      "id": "description:affd4734c66d5b03b974838c",
+      "sourceHash": "9857f2318b2a86b70e2c78a2a057a4da82e11d91a2446087de1b23ef049fe2f2"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Atregara/attacks/Bite%20(Vicious%20Mandibles)%7C%7C76": {
+      "id": "description:f7103eb0d46539e9e1881a9d",
+      "sourceHash": "f32e92403e4fb94b0a68fa76e8e58dafb0074a82eafef485dce3a5e8d2781d1b"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Arazorbill/attacks/Hooked%20Bill%7C%7C77": {
+      "id": "description:9d61faf6b27de3985b557143",
+      "sourceHash": "ad56ff3d3949dc85105d6782dcc4dcda6f56a89e522c1f8bf19bdd850357d168"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Astegadon/attacks/Rear%7C%7C79": {
+      "id": "description:e436b66f8eff9e923879474c",
+      "sourceHash": "4ca3372cf3c17d72004095796855b6df9d504757ab6f67c82fe233df3ddfe566"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Awar-lion-of-chrace/attacks/Claws%7C%7C82": {
+      "id": "description:907a3233435bfb131b4c7baa",
+      "sourceHash": "35e36e52366fba07e653a4f87beff6c8d9e695803ba3ff2439dccdfd657120ae"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Awar-lion-of-chrace/attacks/Bite%7C%7C82": {
+      "id": "description:516ce62c63d61fcf7c5f4c02",
+      "sourceHash": "35e36e52366fba07e653a4f87beff6c8d9e695803ba3ff2439dccdfd657120ae"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Aleviathan/attacks/Claws%7C%7C85": {
+      "id": "description:ea036b36da7dd50af95ea1ea",
+      "sourceHash": "1602e475051b7cfa9f5ddad9179852966bd726cef52739ba79ff152d7dbede86"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Amerwyrm/attacks/Fanged%20Maw%7C%7C88": {
+      "id": "description:2970bbd33876eb9d15bfb4a7",
+      "sourceHash": "38470af1abec582d1b7df1239175546ba91f3bdd6827c909692057364ddf79b9"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Amerwyrm/attacks/Bite%20(Fanged%20Maw)%7C%7C88": {
+      "id": "description:192bf7971490a33e7e07ceb6",
+      "sourceHash": "38470af1abec582d1b7df1239175546ba91f3bdd6827c909692057364ddf79b9"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Ashard-dragon/attacks/Bite%7C%7C90": {
+      "id": "description:8565ff6708a5c0ea5616d88a",
+      "sourceHash": "c665a50d31f1f4e55f9419f0ad3e9955073ba5845e9666cf22be8d07aeac9b19"
+    },
+    "gm/books/imperial-zoo.json#/profiles/imperial-zoo%3Acreatures%3Aundead-knight-wight/attacks/Wight%20Blade%7C%7C93": {
+      "id": "description:cfc32f91e7a0f18330874262",
+      "sourceHash": "a5bca7788fcc34c570269e9be9999deb827fb90fcca80b9a816772cb13dcbdf2"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Avicious-webs": {
+      "id": "description:f05143b9f82a3e06294062f7",
+      "sourceHash": "741d9a94482d60825d829bcae3329db7c57f848ce49776cfbb351a725a223351"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aborrowed-courage": {
+      "id": "description:86a9d93a330838a4a8a2172f",
+      "sourceHash": "aea7ce0e30a5c4578234d8f069628cbe1f101d5143d5640b56cca1806f3b308b"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Astrength-of-the-pack": {
+      "id": "description:2d0e41ebc83ba264492786ad",
+      "sourceHash": "a98c28f3d0dbed1956c63641d48690cf43311e5d1464355c86596d6c9b54c19e"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Apiercing-cry": {
+      "id": "description:0a28e382f985ae39c28dd304",
+      "sourceHash": "5ee6ba5ec0c37860c2edf6c880e936e01eba4b775d7eee9d3d0d56a1fbda72ad"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aburrow-30": {
+      "id": "description:5d9c7618237def31fec1a861",
+      "sourceHash": "b537c02d8a27565de049851caa0e71de0605772727b4609590995b5bae9a656c"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aswallow-whole": {
+      "id": "description:5d0658134d54cb786eba198b",
+      "sourceHash": "6e0dbbf686a8d60ed5ec5c37722e2141f5339012cb4460b714da80267440851d"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Atoo-ornery-to-die": {
+      "id": "description:bc3a730752ba23dc8c59bda8",
+      "sourceHash": "63245f5e4d77f0777b66777f1a07ad22b0426decbbf59dd82aa3627e937f4187"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Athe-forest-is-my-shield": {
+      "id": "description:ca3b5ce822dc402753a19fd6",
+      "sourceHash": "349fffde43ce1f6a8a63e6b96390bd7101598024243aaa4f19fae730d1e7630c"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aa-wyvern-s-spite": {
+      "id": "description:e627fd5af94f7d8a31a4a2c9",
+      "sourceHash": "d59c016799a89c8b8ecbdaa5feda828340c138362ea7199f99c4e58d82f6c384"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Ai-am-unstoppable": {
+      "id": "description:186288c84b8615ed02f9965d",
+      "sourceHash": "1c1ea76a895522dd825af5ab607b3b56da50a245bbac8b32b18fa0417f467a78"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aengulf": {
+      "id": "description:48ef054b51da33e7d69cd0cd",
+      "sourceHash": "1e8cdda93444ba1f23e33655acab360b6259a1f88a1300a6754e3b30b43b1380"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Ajelly-from-hell": {
+      "id": "description:37fdee1601fa6a5ff80b0a02",
+      "sourceHash": "97d7ef728eaa55aeb783fc86eeb4a235cd968afbbcd209c00f95442a89a7acc5"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Amostly-mindless": {
+      "id": "description:29ad92798fa67881b745f190",
+      "sourceHash": "9f218d7926ce705014300d54ef930fecf4f3a2ed100df4c89145fdc70a6a0c05"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Afour-fold-knowing-gaze": {
+      "id": "description:20f950d423c9ec7674876aa0",
+      "sourceHash": "d9d2a2afee279b97f00f96a4a08e6350791a9aa3b8a0061f3815d66b57160561"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Arotten-stench": {
+      "id": "description:eb7fabffe12313524b85ead6",
+      "sourceHash": "f1d7ca6015566cc002ceda7908971c6343c3657c2bf53f3d5d219ae01edc00a1"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aoverwhelming-stench": {
+      "id": "description:bb9790fbe429205eaa2c24cc",
+      "sourceHash": "013bd4159197a580d8a554accf0b38829d3cf58c069c34745eaaea08a9d9513f"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Ahallucinogenic-cloud": {
+      "id": "description:3ee14d5ff94e93c6b7575fdb",
+      "sourceHash": "42f69b3b27c58ae5582f2c66d3dfa7c56994d52c2d5674cd32fd3b7cc407f502"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aendless-coils": {
+      "id": "description:bc983ce6c430b63e19867faf",
+      "sourceHash": "a92b65e6959937073576e16d4a17fec6467af2dfb25ac7b81e1175fec0d56d8c"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aendless-malice": {
+      "id": "description:65f5a21b43a3ac8495aad24c",
+      "sourceHash": "5c5d26e58bcf138e9d5e88022c8a1deb46d053c497bd7577984c000a4da1f2c3"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Awe-see-you": {
+      "id": "description:9dc0cbd6c160ca7a895f1995",
+      "sourceHash": "7dbd0bab557a37e8328da77c113732335f9cf0fbefa8611905732fec0e889d19"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aendless-rage": {
+      "id": "description:f1a5fc497fcc958c975ec642",
+      "sourceHash": "c831ff9cf9df185543fd282d5e2a7923add2003022d3296a230b9b419da6bb62"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Ablazing-body": {
+      "id": "description:052ee6536bdf523f30e6f7ea",
+      "sourceHash": "b0e6e5fe815c43ccb1ca83dd2d68128b77a418b5b1ce13316ba33fa558be2cb1"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Abloodrage": {
+      "id": "description:50e00033c1b74fde486af9ba",
+      "sourceHash": "a7980444773c3d89da626697ef43574b83c22f86f8346ec5272f919ef82ad9aa"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Avibrational-senses": {
+      "id": "description:74fd4f63c68fd3fe50839870",
+      "sourceHash": "19f32fa71b7cb88c9020e168c3931df24029248108109ed2340ac6b6a9077244"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Aunstoppable-charge-imperial-zoo": {
+      "id": "description:0e09ed3f42483d2fb7154272",
+      "sourceHash": "69e5f92fb33af1bd41867d431cd0dec1cbe4fd30053deff71de89198ece01865"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Ablood-frenzy-imperial-zoo": {
+      "id": "description:e936dd9f4c1a34cb646faa14",
+      "sourceHash": "0f507a8767196db7a829885fa3b52e2bd21748cb631131830d44b565af64c61b"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Adisruption": {
+      "id": "description:c3677d895d5569ee63671004",
+      "sourceHash": "cea59e09649e143be139cc06bfd9deeec9a095588d4fc9ef325f683a496359d0"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Acrustacean": {
+      "id": "description:5449720bd1251e04f203dfc7",
+      "sourceHash": "c8d533aeea559fff02807ad1c1043c875db1e302cda9b82647eaa6e9892f0e79"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Asiren-s-song": {
+      "id": "description:5c6d3744dc9277454d3ed8ea",
+      "sourceHash": "f67c76be5c84449f25f90c01cec74f26e7766ca1de676be37f300667b8f8ba39"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Awater-born": {
+      "id": "description:da8af333bb38a48cf1b4b29c",
+      "sourceHash": "c8d533aeea559fff02807ad1c1043c875db1e302cda9b82647eaa6e9892f0e79"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Arabid-frenzy": {
+      "id": "description:22b969b1586072add71f148b",
+      "sourceHash": "f0d3a0f387df4fbfe3530f4e15711ea31945c56faa3bcb0150441d098479256b"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Arazor-scales": {
+      "id": "description:a7f164d881ade485bc20396e",
+      "sourceHash": "ee0ddf57f32c75965d63e69fc7fc19975e11bf1cf660591f7a8feed028f5ac4c"
+    },
+    "gm/books/imperial-zoo.json#/traits/imperial-zoo%3Atrait%3Afury-imperial-zoo": {
+      "id": "description:b7335ec555736778344ad36e",
+      "sourceHash": "812ba758150372d511edc9f36723b1bb822efd8f712787053c0c0a118aae3b69"
     }
   },
   "excludedReferences": {

@@ -10,6 +10,8 @@ import {
   type ButtonHTMLAttributes,
   type SelectHTMLAttributes,
 } from "react";
+import { RuleName } from "../../components/RuleReference";
+import { entryReference } from "../../engine/entry-reference.mjs";
 import { requestReference } from "../../services/content";
 import { sourceLabel } from "../../engine/sources.mjs";
 import {
@@ -181,7 +183,7 @@ export function DescriptionToggle({
   kind,
   entry,
 }: {
-  kind: "trait" | "talent" | "magic";
+  kind: "trait" | "talent" | "magic" | "mutation";
   entry: any;
 }) {
   const { draft, edit } = useBestiary();
@@ -405,6 +407,24 @@ export function SectionHeading({
           {label}
         </Button>
       )}
+    </div>
+  );
+}
+
+export function ConditionReferences({ entries }: { entries?: any[] }) {
+  if (!entries?.length) return null;
+  return (
+    <div
+      className="gm-condition-references"
+      aria-label="Condition rules"
+      role="group"
+    >
+      {entries.map((entry) => (
+        <RuleName
+          key={entry.contentId || entry.id}
+          reference={entryReference("condition", entry)}
+        />
+      ))}
     </div>
   );
 }

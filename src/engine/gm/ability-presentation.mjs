@@ -22,7 +22,9 @@ export function descriptionKey(kind, entry, draft = {}) {
       ? `${draft.template}:${entry.key}:${entry.name}`
       : kind === "magic"
         ? entry.contentId
-        : entry.key;
+        : kind === "mutation"
+          ? entry.id
+          : entry.key;
   return `${kind}:${identity}`;
 }
 
@@ -71,7 +73,8 @@ export function abilityPresentation(kind, entry, draft = {}) {
     };
   }
   const description = showsDescription(kind, entry, draft)
-    ? entry.description || entry.summary || ""
+    ? (kind === "mutation" ? entry.text : entry.description || entry.summary) ||
+      ""
     : "";
   return {
     name,

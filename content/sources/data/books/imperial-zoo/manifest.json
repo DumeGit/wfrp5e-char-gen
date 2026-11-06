@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "imperial-zoo",
+  "title": "The Imperial Zoo",
+  "shortTitle": "The Imperial Zoo",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "The Imperial Zoo.pdf",
+    "sha256": "af8f2dcecb3a918afe6d3b0bbaa40a7861610bf1dd3a1ddfb3a38b26d812f237"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Bestiary-only generic profiles preserve printed Characteristic, Wounds, Armour and Damage baselines. Shared Creature Traits follow Fifth Edition core; profile-specific effects remain table references.",
+      "Use Appendix I Momentum and SL conversions only where directly applicable. Keep ambiguities and distinct Fourth Edition interactions visible."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

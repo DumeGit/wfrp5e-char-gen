@@ -23,6 +23,7 @@ import { spellChoices, divineReferencesForTalents } from "../archives-iii.mjs";
 import { calculateGMCants, validateGMCants } from "./cants.mjs";
 import { knownRunes } from "../dwarf-guide.mjs";
 import { equipmentSize } from "../equipment-sizing.mjs";
+import { equipmentConditions } from "./equipment-conditions.mjs";
 import { validateGMLoot, resolveGMLoot } from "./loot.mjs";
 import {
   validateCustomWeapons,
@@ -107,6 +108,7 @@ export function freshGM(data, profile = "", books = ["core"]) {
     ],
     profile,
     name: "",
+    briefing: "",
     description: "",
     purpose: "",
     motivation: "",
@@ -148,18 +150,29 @@ export function freshGM(data, profile = "", books = ["core"]) {
     brokenRoll: null,
     markRoll: null,
     includeNotes: false,
+    includeBriefing: false,
     hiddenDescriptions: [],
   };
 }
 export function validateGMDraft(data, R, s) {
   const empty = freshGM(data),
     plain = (v) => v && typeof v === "object" && !Array.isArray(v);
-  // Additive schema-2 fields: old saves show descriptions and have no extra loot.
+  // The pre-Zoo catalogue has the same existing profile/option identities.
+  // Upgrade only that known version; all saved references still validate below.
+  if (plain(s) && s.dataVersion === "051f38d3891a3ddb")
+    s = { ...s, dataVersion: data.version };
+  // Additive schema-2 fields default only when absent from a legacy draft.
   // Clone only legacy input; never repair malformed or explicitly supplied data.
   if (plain(s)) {
     const defaults = {};
-    for (const key of ["hiddenDescriptions", "loot", "customWeapons"])
-      if (!own(s, key)) defaults[key] = [];
+    for (const key of [
+      "briefing",
+      "includeBriefing",
+      "hiddenDescriptions",
+      "loot",
+      "customWeapons",
+    ])
+      if (!own(s, key)) defaults[key] = empty[key];
     if (Object.keys(defaults).length) s = { ...s, ...defaults };
   }
   if (
@@ -177,6 +190,7 @@ export function validateGMDraft(data, R, s) {
   for (const k of [
     "profile",
     "name",
+    "briefing",
     "description",
     "purpose",
     "motivation",
@@ -210,6 +224,7 @@ export function validateGMDraft(data, R, s) {
     s.step > 3 ||
     typeof s.recalculate !== "boolean" ||
     typeof s.includeNotes !== "boolean" ||
+    typeof s.includeBriefing !== "boolean" ||
     !["", "printed", "calculated", "manual"].includes(s.tbMode)
   )
     throw Error("Invalid NPC controls.");
@@ -256,7 +271,7 @@ export function validateGMDraft(data, R, s) {
       (key) =>
         typeof key !== "string" ||
         key.length > 2000 ||
-        !/^(trait|talent|magic):.+$/.test(key),
+        !/^(trait|talent|magic|mutation):.+$/.test(key),
     )
   )
     throw Error("Invalid hidden ability descriptions.");
@@ -1399,6 +1414,7 @@ export function calculateGM(data, R, s) {
         damage: own(override, "damage") ? override.damage : damage,
         ranged,
         free,
+        conditions: equipmentConditions(R, a, weapon),
       };
     });
   const grantedGear = (template?.gear || []).flatMap((slot, i) => {
@@ -1502,7 +1518,12 @@ export function calculateGM(data, R, s) {
       warnings.push(sizing.note);
     }
   }
-  attacks.push(...customWeapons.map((w) => w.attack));
+  attacks.push(
+    ...customWeapons.map(({ attack }) => ({
+      ...attack,
+      conditions: equipmentConditions(R, attack),
+    })),
+  );
   for (const g of gear.filter((g) =>
     R.weapons.some((w) => w.contentId === g.id),
   )) {
@@ -1528,6 +1549,7 @@ export function calculateGM(data, R, s) {
       skill,
       damage,
       text: [w.reach, w.qualities].filter(Boolean).join(" · "),
+      conditions: equipmentConditions(R, w),
       origin: "GM",
       ranged: w.kind === "ranged",
       ...(w.adaptation

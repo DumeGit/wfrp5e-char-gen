@@ -10,6 +10,7 @@ import {
 } from "../src/engine/gm/model.mjs";
 import {
   LOOT_TABLE,
+  LOOT_TABLES,
   MAX_LOOT_DICE,
   rollGMLoot,
   addGMLoot,
@@ -227,4 +228,36 @@ test("loot and coin quantities appear under Gear in preview, full sheets and mea
   assert.ok(
     (await PDFLib.PDFDocument.load(await batch.bytes())).getPageCount(),
   );
+});
+
+test("all three loot tiers cover d100 and save distinct jewellery variants", () => {
+  for (const [tier, rows] of Object.entries(LOOT_TABLES)) {
+    assert.deepEqual(
+      rows.flatMap(({ min, max }) =>
+        Array.from({ length: max - min + 1 }, (_, i) => min + i),
+      ),
+      Array.from({ length: 100 }, (_, i) => i + 1),
+    );
+    for (let face = 1; face < 100; face++) {
+      const rolled = rollGMLoot(R, (sides) => (sides === 100 ? face : 1), tier);
+      assert.equal(rolled.error, "");
+      assert.equal(rolled.rolls[0].source.table, `additional-loot-${tier}-v1`);
+      addGMLoot(R, draft(), rolled.entries);
+    }
+  }
+  const s = draft();
+  const gold = rollGMLoot(R, sequence([100, 100, 46, 54]), "gold");
+  assert.equal(gold.error, "");
+  assert.ok(
+    gold.rolls.every((x) => x.source.table === "additional-loot-gold-v1"),
+  );
+  addGMLoot(R, s, gold.entries);
+  addGMLoot(R, s, gold.entries.slice(0, 1));
+  const restored = validateGMDraft(data, R, JSON.parse(JSON.stringify(s)));
+  assert.deepEqual(lootLines(calculateGM(data, R, restored).loot), [
+    "Loot: 2 × Gold necklace",
+    "Loot: 1 × Gold bracelet",
+  ]);
+  s.loot[0].variant = "Unrecognised jewellery";
+  assert.throws(() => validateGMDraft(data, R, s), /Invalid loot entry/);
 });

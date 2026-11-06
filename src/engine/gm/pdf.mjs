@@ -34,7 +34,10 @@ export function sheetSections(r, s) {
     ["Rune knowledge", (r.runes || []).map((x) => `${x.name} (${x.form})`)],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore}): ${x.text}`)],
     ["Gear", gearLines(r)],
-    ["Corruption", r.mutations.map((m) => `${m.name}: ${m.text}`)],
+    [
+      "Corruption",
+      r.mutations.map((m) => abilityPresentation("mutation", m, s).text),
+    ],
     [
       "Personality",
       [
@@ -168,6 +171,10 @@ export async function createGMPDF(PDFLib, r, s) {
   };
   newPage();
   text(r.name, 26, heading);
+  if (s.includeBriefing && s.briefing?.trim()) {
+    text("GM Briefing", 10, bold);
+    text(s.briefing);
+  }
   text(
     [r.profile.name, r.template?.name, r.size, sourceLabel(r.profile)]
       .filter(Boolean)
@@ -249,7 +256,11 @@ export async function createGMPDF(PDFLib, r, s) {
             : title === "Cants"
               ? r.cants[i].name
               : title === "Corruption"
-                ? r.mutations[i].name + ":"
+                ? abilityPresentation(
+                    "mutation",
+                    r.mutations[i],
+                    s,
+                  ).runs[0].text.trim()
                 : title === "Personality"
                   ? line.slice(0, line.indexOf(":") + 1)
                   : "";

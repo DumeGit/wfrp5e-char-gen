@@ -141,6 +141,18 @@ function Review() {
         </p>
       )}
       <div className="gm-export-options">
+        {s.briefing.trim() && (
+          <Check
+            checked={s.includeBriefing}
+            onChange={(value) =>
+              edit((d: any) => {
+                d.includeBriefing = value;
+              })
+            }
+          >
+            Include my GM Briefing in the PDF
+          </Check>
+        )}
         <Check
           checked={s.includeNotes}
           onChange={(v) =>

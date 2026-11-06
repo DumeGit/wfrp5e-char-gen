@@ -33,6 +33,7 @@ Standalone Rules are completely absent from published reference payloads. Histor
 | The Corsairs of Captain Flariel | 1.1.0 | 6 | 3 | 9 | 3 |
 | Lustria | 1.0.0 | 17 | 19 | 36 | 5 |
 | Salzenmund: City of Salt and Silver | 1.0.0 | 5 | 13 | 18 | 5 |
+| The Imperial Zoo | 1.0.0 | 0 | 0 | 0 | 0 |
 
 ## Source review
 
@@ -545,6 +546,19 @@ Candidate sections: included 35; excluded 3.
 
 Categories: career 1; species 4; table 11; trait 1; equipment 1.
 Reviewed printed records retained outside search: 11.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### The Imperial Zoo
+
+Source SHA-256: `af8f2dcecb3a918afe6d3b0bbaa40a7861610bf1dd3a1ddfb3a38b26d812f237`.
+
+- pp. 10–93: Bestiary expedition profiles.
+
+Candidate sections: included 43.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 

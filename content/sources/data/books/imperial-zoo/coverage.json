@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "imperial-zoo:feature:gm",
+      "name": "Generic expedition creatures",
+      "status": "adapted",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 10
+      },
+      "reason": "Reviewed Bestiary foundations with separate book and category filters."
+    },
+    {
+      "id": "imperial-zoo:feature:excluded",
+      "name": "Named creatures, adventure NPCs and appendix options",
+      "status": "deferred",
+      "source": {
+        "book": "imperial-zoo",
+        "page": 10
+      },
+      "reason": "This pack covers generic beasts and monsters. Named examples, adventure character builds and appendix gear are outside the workshop integration."
+    }
+  ]
+}

@@ -1968,6 +1968,31 @@
         }
       ],
       "unresolved": []
+    },
+    {
+      "id": "imperial-zoo",
+      "title": "The Imperial Zoo",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "af8f2dcecb3a918afe6d3b0bbaa40a7861610bf1dd3a1ddfb3a38b26d812f237",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 43
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 10,
+          "last": 93,
+          "topic": "Bestiary expedition profiles"
+        }
+      ],
+      "unresolved": []
     }
   ]
 }

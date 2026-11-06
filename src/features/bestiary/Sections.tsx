@@ -31,12 +31,14 @@ import { trollModifiers } from "../../engine/gm/tribes.mjs";
 import { appearanceSpecies } from "../../engine/gm/appearance.mjs";
 import { DISTINGUISHING_FEATURES } from "../../engine/gm/distinguishing-features.mjs";
 import { lootLines } from "../../engine/gm/loot.mjs";
+import { equipmentConditions } from "../../engine/gm/equipment-conditions.mjs";
 import { LootSection } from "./Loot";
 import { gmCantBook } from "../../engine/gm/cants.mjs";
 import { abilityPresentation } from "../../engine/gm/ability-presentation.mjs";
 import { sourceLabel } from "../../engine/sources.mjs";
 import {
   Check,
+  ConditionReferences,
   DescriptionToggle,
   Input,
   Button,
@@ -64,7 +66,7 @@ function AbilityText({
   entry,
   draft,
 }: {
-  kind: "trait" | "talent" | "magic";
+  kind: "trait" | "talent" | "magic" | "mutation";
   entry: any;
   draft: any;
 }) {
@@ -113,6 +115,11 @@ export function StatBlock({
       <header>
         <span className="eyebrow">{r.profile.category}</span>
         <h2 className="gm-stat-name">{r.name}</h2>
+        {s.includeBriefing && s.briefing?.trim() && (
+          <p className="gm-prewrap">
+            <strong>GM Briefing</strong> {s.briefing}
+          </p>
+        )}
         <p>
           {[r.profile.name, r.template?.name, r.size]
             .filter(Boolean)
@@ -263,7 +270,11 @@ export function StatBlock({
         section(
           "mutations",
           "Corruption",
-          <p>{r.mutations.map((x: any) => x.name).join(", ")}</p>,
+          r.mutations.map((m: any) => (
+            <p key={m.id}>
+              <AbilityText kind="mutation" entry={m} draft={s} />
+            </p>
+          )),
         )}
       {s.includeNotes &&
         s.notes &&
@@ -323,13 +334,25 @@ export function Starting() {
             </Button>
           </div>
           <div className="gm-fields">
-            <Field
-              label="Name"
-              id="gm-name"
-              value={s.name}
-              placeholder={r.profile.name}
-              onChange={(value) => bind("name", value)}
-            />
+            <div className="gm-identity-fields">
+              <Field
+                label="Name"
+                id="gm-name"
+                value={s.name}
+                placeholder={r.profile.name}
+                onChange={(value) => bind("name", value)}
+              />
+              <div className="field">
+                <label htmlFor="gm-briefing">GM Briefing</label>
+                <textarea
+                  id="gm-briefing"
+                  value={s.briefing}
+                  rows={3}
+                  maxLength={20000}
+                  onChange={(event) => bind("briefing", event.target.value)}
+                />
+              </div>
+            </div>
             <div className="field gm-appearance-field">
               <label htmlFor="gm-description">Short description</label>
               <div className="gm-description-controls">
@@ -1339,12 +1362,15 @@ function Traits() {
             ))}
           </div>
           {r.mutations.map((m: any) => (
-            <div className="gm-entry" key={m.id}>
+            <div className="gm-entry gm-ability-entry" key={m.id}>
               <div>
                 <RuleName reference={entryReference("mutation", m)} />
                 <Metadata entry={m} />
               </div>
-              <Remove entryKey={m.id} />
+              <div className="gm-ability-controls">
+                <DescriptionToggle kind="mutation" entry={m} />
+                <Remove entryKey={m.id} />
+              </div>
             </div>
           ))}
         </section>
@@ -1739,6 +1765,7 @@ export function EquipmentMagic() {
           <div>
             <strong>{a.name}</strong>
             <small>{a.text || "Primary attack"}</small>
+            <ConditionReferences entries={a.conditions} />
             <Metadata entry={a} />
             {a.custom && (
               <Button
@@ -1817,6 +1844,7 @@ export function EquipmentMagic() {
               {g.entry.qualities}
             </small>
             {g.custom && g.entry.text && <p>{g.entry.text}</p>}
+            <ConditionReferences entries={equipmentConditions(R, g.entry)} />
           </div>
           {g.origin === "Template" ? (
             <small>Template · ×1</small>

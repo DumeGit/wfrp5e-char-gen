@@ -47,6 +47,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 16px;
 }
+.gm-identity-fields {
+  display: grid;
+  gap: 12px;
+}
 .gm-fields .field {
   margin: 0;
 }
@@ -1663,4 +1667,20 @@
 }
 .gm-book-picker .gm-books {
   margin-top: 10px;
+}
+
+.gm-condition-references {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+}
+
+.gm-loot-roll {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 8px 12px;
+}
+.gm-loot-roll .field {
+  margin: 0;
 }

@@ -29514,6 +29514,321 @@
           "reason": "No flavour-only rules results or named NPCs."
         }
       ]
+    },
+    "imperial-zoo": {
+      "sourceHash": "af8f2dcecb3a918afe6d3b0bbaa40a7861610bf1dd3a1ddfb3a38b26d812f237",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 10,
+          "last": 93,
+          "topic": "Bestiary expedition profiles"
+        }
+      ],
+      "records": [
+        {
+          "id": "imperial-zoo:creatures:great-stag",
+          "name": "Great Stag",
+          "page": 10,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:drakwald-mancatcher-giant-spider",
+          "name": "Drakwald Mancatcher (Giant Spider)",
+          "page": 13,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:arachnarok-spider",
+          "name": "Arachnarok Spider",
+          "page": 13,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:forest-goblin",
+          "name": "Forest Goblin",
+          "page": 15,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:great-wolf",
+          "name": "Great Wolf",
+          "page": 17,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:razorgor",
+          "name": "Razorgor",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:griffon",
+          "name": "Griffon",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:dread-maw",
+          "name": "Dread Maw",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:rhinox",
+          "name": "Rhinox",
+          "page": 25,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:night-goblin-cave-squig-swarm",
+          "name": "Night Goblin Cave Squig Swarm",
+          "page": 27,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:night-goblin",
+          "name": "Night Goblin",
+          "page": 28,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:forest-dragon",
+          "name": "Forest Dragon",
+          "page": 30,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:wyvern",
+          "name": "Wyvern",
+          "page": 32,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:stirpike",
+          "name": "Stirpike",
+          "page": 36,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:rat-ogre-bonebreaker",
+          "name": "Rat Ogre Bonebreaker",
+          "page": 41,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:wolf-rat",
+          "name": "Wolf Rat",
+          "page": 41,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:amoeba",
+          "name": "Amoeba",
+          "page": 45,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:amphisbaena",
+          "name": "Amphisbaena",
+          "page": 47,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:river-troll",
+          "name": "River Troll",
+          "page": 49,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:river-troll-hag",
+          "name": "River Troll Hag",
+          "page": 49,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:chameleoleech",
+          "name": "Chameleoleech",
+          "page": 50,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:fen-worm",
+          "name": "Fen Worm",
+          "page": 52,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:dark-pegasus",
+          "name": "Dark Pegasus",
+          "page": 57,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:nightraven-flock",
+          "name": "Nightraven Flock",
+          "page": 59,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:preyton",
+          "name": "Preyton",
+          "page": 61,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:great-eagle",
+          "name": "Great Eagle",
+          "page": 63,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:grey-mountain-hawk",
+          "name": "Grey Mountain Hawk",
+          "page": 63,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:cockatrice",
+          "name": "Cockatrice",
+          "page": 65,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:chimera",
+          "name": "Chimera",
+          "page": 67,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:skin-wolf",
+          "name": "Skin Wolf",
+          "page": 70,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:great-taurus",
+          "name": "Great Taurus",
+          "page": 75,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:tregara",
+          "name": "Tregara",
+          "page": 76,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:razorbill",
+          "name": "Razorbill",
+          "page": 77,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:stegadon",
+          "name": "Stegadon",
+          "page": 79,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:horned-one",
+          "name": "Horned One",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:carnosaur",
+          "name": "Carnosaur",
+          "page": 81,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:wild-cat",
+          "name": "Wild Cat",
+          "page": 82,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:war-lion-of-chrace",
+          "name": "War Lion of Chrace",
+          "page": 82,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:leviathan",
+          "name": "Leviathan",
+          "page": 85,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:siren",
+          "name": "Siren",
+          "page": 86,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:merwyrm",
+          "name": "Merwyrm",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:shard-dragon",
+          "name": "Shard Dragon",
+          "page": 90,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        },
+        {
+          "id": "imperial-zoo:creatures:undead-knight-wight",
+          "name": "Undead Knight (Wight)",
+          "page": 93,
+          "disposition": "included",
+          "reason": "Bestiary only; excluded from shared search."
+        }
+      ]
     }
   }
 }

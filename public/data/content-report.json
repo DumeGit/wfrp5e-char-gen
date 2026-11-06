@@ -8,7 +8,7 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 20,
+    "books": 21,
     "careers": 140,
     "magicProfiles": 596,
     "rituals": 17,
@@ -46336,6 +46336,50 @@
             "page": 115
           },
           "reason": "Approved core Size, Sprinter, Frenzy, Die Hard, Tunnel Fighter and Trained conversions; explicit Stealth/Melee/Wind/Venom/Ward choices. No named NPCs."
+        }
+      ]
+    },
+    {
+      "id": "imperial-zoo",
+      "title": "The Imperial Zoo",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 1
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "imperial-zoo:feature:excluded",
+          "name": "Named creatures, adventure NPCs and appendix options",
+          "status": "deferred",
+          "source": {
+            "book": "imperial-zoo",
+            "page": 10
+          },
+          "reason": "This pack covers generic beasts and monsters. Named examples, adventure character builds and appendix gear are outside the workshop integration."
+        },
+        {
+          "id": "imperial-zoo:feature:gm",
+          "name": "Generic expedition creatures",
+          "status": "adapted",
+          "source": {
+            "book": "imperial-zoo",
+            "page": 10
+          },
+          "reason": "Reviewed Bestiary foundations with separate book and category filters."
         }
       ]
     }

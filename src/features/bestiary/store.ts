@@ -160,12 +160,12 @@ export class BestiaryStore {
     });
   };
   breakGroup = () => this.history?.breakGroup();
-  rollLoot = () => {
+  rollLoot = (tier?: string) => {
     const { draft, rules } = this.snapshot;
     if (!draft?.profile) throw Error("Choose a starting profile first.");
     if (draft.rolls.length + MAX_LOOT_DICE > 1000)
       throw Error("This draft has reached the recorded-dice limit.");
-    const result = rollGMLoot(rules);
+    const result = rollGMLoot(rules, undefined, tier);
     let error = result.error;
     this.edit((d) => {
       d.rolls.push(...result.rolls);

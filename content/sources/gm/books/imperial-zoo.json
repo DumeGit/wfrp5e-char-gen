@@ -1,0 +1,5965 @@
+{
+  "schemaVersion": 1,
+  "id": "imperial-zoo",
+  "source": {
+    "file": "The Imperial Zoo.pdf",
+    "sha256": "af8f2dcecb3a918afe6d3b0bbaa40a7861610bf1dd3a1ddfb3a38b26d812f237"
+  },
+  "summary": "Generic beasts and monsters from the three expeditions",
+  "profiles": [
+    {
+      "id": "imperial-zoo:creatures:great-stag",
+      "name": "Great Stag",
+      "page": 10,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 10
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 7,
+        "WS": 45,
+        "BS": null,
+        "S": 45,
+        "T": 40,
+        "I": 30,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 20,
+        "WP": 40,
+        "Fel": null,
+        "W": 32
+      },
+      "toughnessBonus": 4,
+      "skills": [
+        {
+          "name": "Melee (Antlers)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Animosity",
+          "value": "Snakes",
+          "ranks": 1
+        },
+        {
+          "name": "Blessed",
+          "value": "Taal",
+          "ranks": 1
+        },
+        {
+          "name": "Immunity",
+          "value": "Poison",
+          "ranks": 1
+        },
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Antlers",
+          "damage": 8,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Impale, Penetrating",
+          "page": 10
+        },
+        {
+          "name": "Horns (Antlers)",
+          "damage": 8,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Impale, Penetrating",
+          "page": 10
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:drakwald-mancatcher-giant-spider",
+      "name": "Drakwald Mancatcher (Giant Spider)",
+      "page": 13,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 13
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": 30,
+        "S": 25,
+        "T": 35,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 20,
+        "WP": 35,
+        "Fel": null,
+        "W": 22
+      },
+      "toughnessBonus": 3,
+      "skills": [
+        {
+          "name": "Stealth (Rural)",
+          "total": 60
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Wallcrawler",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Hatred",
+          "value": "Previous Foes",
+          "ranks": 1
+        },
+        {
+          "name": "Web",
+          "value": "40",
+          "ranks": 1
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Guard",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "damage": 6,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 13
+        },
+        {
+          "name": "Bite",
+          "damage": 6,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 13
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Enormous is a printed alternative. Use the Size control to apply it."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:arachnarok-spider",
+      "name": "Arachnarok Spider",
+      "page": 13,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 13
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Monstrous",
+      "stats": {
+        "M": 5,
+        "WS": 50,
+        "BS": 35,
+        "S": 55,
+        "T": 45,
+        "I": 20,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 45,
+        "Fel": 10,
+        "W": 136
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Wallcrawler",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Web",
+          "value": "50",
+          "ranks": 1
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous",
+          "ranks": 1
+        },
+        {
+          "name": "Vicious Webs",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corrosive Blood",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 13
+        },
+        {
+          "name": "Bite",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 13
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:forest-goblin",
+      "name": "Forest Goblin",
+      "page": 15,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 15
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Trick Riding",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Greenskins",
+          "ranks": 1
+        },
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging",
+          "ranks": 1
+        },
+        {
+          "name": "Borrowed Courage",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Short Bow",
+          "damage": 5,
+          "skill": 35,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "20 yards",
+          "page": 15
+        },
+        {
+          "name": "Crude Spear",
+          "damage": 6,
+          "skill": 25,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 15
+        }
+      ],
+      "armour": [
+        {
+          "name": "Printed armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Short Bow, Crude Spear"
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ],
+      "species": "Goblin"
+    },
+    {
+      "id": "imperial-zoo:creatures:great-wolf",
+      "name": "Great Wolf",
+      "page": 17,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 17
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 45,
+        "T": 40,
+        "I": 35,
+        "Ag": 25,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 13
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Tracker",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Drive, Guard, Magic, Mount, War",
+          "ranks": 1
+        },
+        {
+          "name": "Strength of the Pack",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "damage": 7,
+          "skill": 35,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 17
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The printed Large alternative removes Bestial, Territorial and Trained and sets Fellowship to 15. Apply those changes explicitly if using that variant."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:razorgor",
+      "name": "Razorgor",
+      "page": 19,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 19
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 7,
+        "WS": 45,
+        "BS": null,
+        "S": 55,
+        "T": 45,
+        "I": 33,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 5,
+        "WP": 30,
+        "Fel": null,
+        "W": 32
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Distracting",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infestation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Tusks",
+          "damage": 10,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 19
+        },
+        {
+          "name": "Horns (Tusks)",
+          "damage": 10,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 19
+        },
+        {
+          "name": "Tail",
+          "damage": 9,
+          "skill": 45,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 19
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Enormous is a printed alternative. Use the Size control to apply it."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:griffon",
+      "name": "Griffon",
+      "page": 21,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 21
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 50,
+        "BS": null,
+        "S": 50,
+        "T": 50,
+        "I": 45,
+        "Ag": 60,
+        "Dex": null,
+        "Int": 20,
+        "WP": 50,
+        "Fel": null,
+        "W": 76
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "80",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Piercing Cry",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Guard",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Talons",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Fast",
+          "page": 21
+        },
+        {
+          "name": "Bite (Hooked Beak)",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 21
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Piercing Cry uses the core Appendix I Momentum and Test Difficulty conversions. The printed alternative to Bestial grants Fellowship 20."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:dread-maw",
+      "name": "Dread Maw",
+      "page": 23,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 23
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 3,
+        "WS": 45,
+        "BS": 30,
+        "S": 55,
+        "T": 55,
+        "I": 15,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 15,
+        "WP": 35,
+        "Fel": null,
+        "W": 36
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Burrow 30",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Swallow Whole",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corrosive Blood",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Cavernous Maw",
+          "damage": 10,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 23
+        },
+        {
+          "name": "Bite (Cavernous Maw)",
+          "damage": 10,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 23
+        },
+        {
+          "name": "Breath (Slime)",
+          "damage": 5,
+          "skill": 30,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": "Wounds ignore AP. For TB rounds, targets must pass Average (+2 SL) Agility before physically acting or gain Prone.",
+          "page": 23
+        },
+        {
+          "name": "Horns (Hooked Spines)",
+          "damage": 9,
+          "skill": 45,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 23
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Slime Breath uses the printed BS and Damage. Enormous and Monstrous are printed Size alternatives."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:rhinox",
+      "name": "Rhinox",
+      "page": 25,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 25
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": null,
+        "S": 55,
+        "T": 50,
+        "I": 23,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": null,
+        "W": 32
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Too Ornery to Die",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infestation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Drive",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Curling Horns",
+          "damage": 10,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 25
+        },
+        {
+          "name": "Horns",
+          "damage": 10,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 25
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:night-goblin-cave-squig-swarm",
+      "name": "Night Goblin Cave Squig Swarm",
+      "page": 27,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 27
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 50,
+        "T": 30,
+        "I": 10,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 5,
+        "WP": 15,
+        "Fel": null,
+        "W": 60
+      },
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bounce",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Swarm",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Fang-filled Gob",
+          "damage": 9,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 27
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Printed WS and Wounds already include the swarm adjustments."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:night-goblin",
+      "name": "Night Goblin",
+      "page": 28,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 28
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 35,
+        "S": 30,
+        "T": 35,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Greenskins",
+          "ranks": 1
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Hatred",
+          "value": "Dwarfs",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Shortbow",
+          "damage": 5,
+          "skill": 35,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "20 yards",
+          "page": 28
+        },
+        {
+          "name": "Rusty Blades",
+          "damage": 7,
+          "skill": 30,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 28
+        },
+        {
+          "name": "Net",
+          "damage": null,
+          "skill": 35,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "6 yards · Fourth Edition Entangle rating 3",
+          "page": 28
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Rusty Blades"
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Optional Squig Hoppers have Ride (Squig) 40. On a Hard (−2 SL) Ride Test they may target a foe and act or attack. On failure they cling on. On a Fumble the mount throws and eats the rider."
+      ],
+      "species": "Goblin"
+    },
+    {
+      "id": "imperial-zoo:creatures:forest-dragon",
+      "name": "Forest Dragon",
+      "page": 30,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 30
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 65,
+        "BS": 60,
+        "S": 65,
+        "T": 65,
+        "I": 60,
+        "Ag": 35,
+        "Dex": 15,
+        "Int": 65,
+        "WP": 85,
+        "Fel": 45,
+        "W": 104
+      },
+      "toughnessBonus": 6,
+      "skills": [
+        {
+          "name": "Melee (Root-like Claws)",
+          "total": 75
+        },
+        {
+          "name": "Stealth",
+          "total": 65
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "50",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Immunity",
+          "value": "Poison",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "The Forest Is My Shield",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Root-like Claws",
+          "damage": 11,
+          "skill": 75,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 30,
+          "skillName": "Melee (Root-like Claws)"
+        },
+        {
+          "name": "Bite",
+          "damage": 12,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 30
+        },
+        {
+          "name": "Breath (Soporific)",
+          "damage": 10,
+          "skill": 60,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack. Wounds ignore AP. A target wounded by it makes a Hard (−2 SL) Willpower Test or gains Stupid for TB rounds.",
+          "page": 30
+        },
+        {
+          "name": "Tail",
+          "damage": 9,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 30
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 5,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Optional printed Jade spellcasting is a manual choice. No Lore or spells are preselected."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:wyvern",
+      "name": "Wyvern",
+      "page": 32,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 32
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 60,
+        "T": 55,
+        "I": 15,
+        "Ag": 45,
+        "Dex": null,
+        "Int": 10,
+        "WP": 50,
+        "Fel": null,
+        "W": 84
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "90",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "A Wyvern’s Spite",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Horns",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Guard",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Teeth",
+          "damage": 10,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Infected",
+          "page": 32
+        },
+        {
+          "name": "Tail",
+          "damage": 12,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Venom (Challenging): Wounding a target inflicts Poisoned.",
+          "page": 32
+        },
+        {
+          "name": "Breath (Poison)",
+          "damage": 10,
+          "skill": null,
+          "optional": true,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack",
+          "page": 32
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Optional Poison Breath needs a BS attack score if selected. The printed cunning alternative is Large, removes Bestial, adds 20 to I, Int and Fel, sets Wounds to 42 and Stealth (Rural) to 65."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:stirpike",
+      "name": "Stirpike",
+      "page": 36,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 36
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 8,
+        "WS": 45,
+        "BS": null,
+        "S": 52,
+        "T": 50,
+        "I": 32,
+        "Ag": 38,
+        "Dex": null,
+        "Int": 14,
+        "WP": 50,
+        "Fel": null,
+        "W": 40
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Cold-blooded",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Hungry",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Ward",
+          "value": "9",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Lethal Tail",
+          "damage": 9,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 36
+        },
+        {
+          "name": "Bite",
+          "damage": 8,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 36
+        },
+        {
+          "name": "Tail",
+          "damage": 9,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "One Tail attack each Round costs no Momentum.",
+          "page": 36
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Enormous is a printed alternative. Notable older, named Stirpike have 3 Fortune."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:rat-ogre-bonebreaker",
+      "name": "Rat Ogre Bonebreaker",
+      "page": 41,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 41
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": 10,
+        "S": 75,
+        "T": 55,
+        "I": 35,
+        "Ag": 40,
+        "Dex": 20,
+        "Int": 10,
+        "WP": 20,
+        "Fel": 10,
+        "W": 76
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Stupid",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "I Am Unstoppable",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Disease",
+          "value": "Ratte Fever",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infestation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Metal-shod Claws",
+          "damage": 11,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 41
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:wolf-rat",
+      "name": "Wolf Rat",
+      "page": 41,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 41
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 35,
+        "BS": null,
+        "S": 40,
+        "T": 35,
+        "I": 40,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "skills": [
+        {
+          "name": "Track",
+          "total": 60
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Skittish",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Tracker",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Guard, Home, Magic, Mount, War",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infestation",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Vicious Fangs",
+          "damage": 8,
+          "skill": 35,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Penetrating",
+          "page": 41
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Large is a printed alternative. Use the Size control to apply it."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:amoeba",
+      "name": "Amoeba",
+      "page": 45,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 30,
+        "BS": null,
+        "S": 35,
+        "T": 50,
+        "I": 3,
+        "Ag": 22,
+        "Dex": 5,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 16
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Afraid",
+          "value": "Fire",
+          "ranks": 1
+        },
+        {
+          "name": "Tentacles",
+          "value": "2",
+          "ranks": 1
+        },
+        {
+          "name": "Engulf",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Jelly from Hell",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mostly Mindless",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Pseudopod Lash",
+          "damage": 6,
+          "skill": 30,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 45
+        },
+        {
+          "name": "Tentacles (2)",
+          "damage": 6,
+          "skill": 30,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 45
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Small, Large and Enormous are printed Size alternatives. Recalculated Wounds may require a manual value."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:amphisbaena",
+      "name": "Amphisbaena",
+      "page": 47,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 47
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": null,
+        "S": 45,
+        "T": 40,
+        "I": 35,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 30,
+        "WP": 45,
+        "Fel": 10,
+        "W": 24
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Cold-blooded",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Venom",
+          "value": "Hard",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Four-Fold Knowing Gaze",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Hatred",
+          "value": "Bog Octopuses",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "damage": 8,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 47
+        },
+        {
+          "name": "Bite",
+          "damage": 8,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 47
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Enormous is a printed alternative. Use the Size control to apply it."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:river-troll",
+      "name": "River Troll",
+      "page": 49,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 40,
+        "BS": 15,
+        "S": 55,
+        "T": 55,
+        "I": 20,
+        "Ag": 15,
+        "Dex": 15,
+        "Int": 20,
+        "WP": 20,
+        "Fel": 5,
+        "W": 34
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stupid",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Rotten Stench",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Hungry",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Crude Maul",
+          "damage": 9,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 49
+        },
+        {
+          "name": "Bite",
+          "damage": 8,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 49
+        },
+        {
+          "name": "Vomit",
+          "damage": 9,
+          "skill": 15,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack. The first Vomit in a combat costs no Momentum.",
+          "page": 49
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Crude Maul"
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The optional Stealthy variant also removes Stupid."
+      ],
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:river-troll-hag",
+      "name": "River Troll Hag",
+      "page": 49,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 5,
+        "WS": 50,
+        "BS": 35,
+        "S": 65,
+        "T": 65,
+        "I": 20,
+        "Ag": 15,
+        "Dex": 15,
+        "Int": 45,
+        "WP": 50,
+        "Fel": 10,
+        "W": 92
+      },
+      "toughnessBonus": 6,
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 80
+        },
+        {
+          "name": "Language (Magick)",
+          "total": 75
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Die Hard",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Witchcraft",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Overwhelming Stench",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Hungry",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Death",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Deadwood Staff",
+          "damage": 10,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 49
+        },
+        {
+          "name": "Bite",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 49
+        },
+        {
+          "name": "Vomit",
+          "damage": 14,
+          "skill": 35,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack. The first Vomit in a combat costs no Momentum.",
+          "page": 49
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Deadwood Staff"
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ],
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:chameleoleech",
+      "name": "Chameleoleech",
+      "page": 50,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 50
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Small",
+      "stats": {
+        "M": 3,
+        "WS": 28,
+        "BS": null,
+        "S": 25,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 5,
+        "WP": 25,
+        "Fel": null,
+        "W": 8
+      },
+      "toughnessBonus": 3,
+      "skills": [
+        {
+          "name": "Stealth (Rural)",
+          "total": 60
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Size",
+          "value": "Small",
+          "ranks": 1
+        },
+        {
+          "name": "Hallucinogenic Cloud",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Saw-tooth Bite",
+          "damage": 5,
+          "skill": 28,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "On hit it attaches and drains 1 Wound per Round ignoring TB and AP, until it drains 1d10 Wounds. Opposed Strength removes it but inflicts one more Wound and a Bleeding Condition. Salt makes it release and flee.",
+          "page": 50
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The printed +20 Int and automatic Illusion casting variant requires separate adjudication."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:fen-worm",
+      "name": "Fen Worm",
+      "page": 52,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 52
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 3,
+        "WS": 50,
+        "BS": null,
+        "S": 60,
+        "T": 55,
+        "I": 10,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 30,
+        "WP": 45,
+        "Fel": null,
+        "W": 80
+      },
+      "toughnessBonus": 5,
+      "skills": [
+        {
+          "name": "Stealth (Rural)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Cold-blooded",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Constrictor",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Endless Coils",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Terror",
+          "value": "1",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Crushing Coils",
+          "damage": 10,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 52
+        },
+        {
+          "name": "Tentacles (4)",
+          "damage": 10,
+          "skill": 50,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 52
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Monstrous is a printed Size alternative. Fanatical Cultists are an encounter option, separate from the creature."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:dark-pegasus",
+      "name": "Dark Pegasus",
+      "page": 57,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 57
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 8,
+        "WS": 45,
+        "BS": null,
+        "S": 45,
+        "T": 40,
+        "I": 25,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 15,
+        "WP": 25,
+        "Fel": null,
+        "W": 28
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "120",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Serrated Horns",
+          "damage": 8,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Impale and Penetrating on the Round it charges.",
+          "page": 57
+        },
+        {
+          "name": "Horns",
+          "damage": 8,
+          "skill": 45,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Impale and Penetrating on the Round it charges.",
+          "page": 57
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:nightraven-flock",
+      "name": "Nightraven Flock",
+      "page": 59,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 59
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 2,
+        "WS": 55,
+        "BS": 20,
+        "S": 42,
+        "T": 45,
+        "I": 60,
+        "Ag": 24,
+        "Dex": null,
+        "Int": 14,
+        "WP": 38,
+        "Fel": 10,
+        "W": 55
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Light",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fear",
+          "value": "2",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "100",
+          "ranks": 1
+        },
+        {
+          "name": "Swarm",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Unstable",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Talons",
+          "damage": 8,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Impale, Penetrating",
+          "page": 59
+        },
+        {
+          "name": "Bite (Vicious Beaks)",
+          "damage": null,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Impale, Penetrating. Separate Bite Damage is not printed.",
+          "page": 59
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Printed WS and Wounds already include the swarm adjustments."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:preyton",
+      "name": "Preyton",
+      "page": 61,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 61
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 50,
+        "BS": null,
+        "S": 55,
+        "T": 50,
+        "I": 40,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 45,
+        "Fel": null,
+        "W": 38
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "ranks": 1
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "50",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Endless Malice",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infestation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Jagged Fangs",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 61
+        },
+        {
+          "name": "Horns (Antlers)",
+          "damage": 10,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 61
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:great-eagle",
+      "name": "Great Eagle",
+      "page": 63,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 63
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 2,
+        "WS": 65,
+        "BS": null,
+        "S": 55,
+        "T": 43,
+        "I": 35,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 45,
+        "WP": 45,
+        "Fel": 25,
+        "W": 68
+      },
+      "toughnessBonus": 4,
+      "skills": [
+        {
+          "name": "Perception",
+          "total": 85
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "120",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Talons",
+          "damage": 10,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Fast, Penetrating",
+          "page": 63
+        },
+        {
+          "name": "Bite (Beak)",
+          "damage": 9,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Fast, Penetrating",
+          "page": 63
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The book offers an optional Language of choice at 50."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:grey-mountain-hawk",
+      "name": "Grey Mountain Hawk",
+      "page": 63,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 63
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 2,
+        "WS": 35,
+        "BS": null,
+        "S": 35,
+        "T": 40,
+        "I": 45,
+        "Ag": 50,
+        "Dex": null,
+        "Int": 20,
+        "WP": 55,
+        "Fel": null,
+        "W": 32
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "100",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Talons",
+          "damage": 7,
+          "skill": 35,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 63
+        },
+        {
+          "name": "Bite (Beak)",
+          "damage": 6,
+          "skill": 35,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 63
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:cockatrice",
+      "name": "Cockatrice",
+      "page": 65,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 65
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": 52,
+        "S": 35,
+        "T": 45,
+        "I": 55,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 20,
+        "WP": 25,
+        "Fel": null,
+        "W": 34
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "60",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Petrifying Gaze",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Afraid",
+          "value": "Weasels",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Talons",
+          "damage": 7,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Venom (Hard): Wounding a target inflicts Poisoned.",
+          "page": 65
+        },
+        {
+          "name": "Bite (Fanged Beak)",
+          "damage": 7,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 65
+        },
+        {
+          "name": "Tail",
+          "damage": 7,
+          "skill": 40,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 65
+        },
+        {
+          "name": "Breath (Corrosion)",
+          "damage": 9,
+          "skill": 52,
+          "optional": true,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack. Use the source-specific Corrosion effect.",
+          "page": 65
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:chimera",
+      "name": "Chimera",
+      "page": 67,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 67
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 65,
+        "BS": 55,
+        "S": 63,
+        "T": 52,
+        "I": 50,
+        "Ag": 54,
+        "Dex": null,
+        "Int": 24,
+        "WP": 40,
+        "Fel": null,
+        "W": 80
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "80",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Terror",
+          "value": "1",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "We See You",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corrosive Blood",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "damage": 10,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 67
+        },
+        {
+          "name": "Bite",
+          "damage": 10,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 67
+        },
+        {
+          "name": "Breath (Fire)",
+          "damage": 12,
+          "skill": 55,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack",
+          "page": 67
+        },
+        {
+          "name": "Horns",
+          "damage": 10,
+          "skill": 65,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 67
+        },
+        {
+          "name": "Tail",
+          "damage": 10,
+          "skill": 65,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 67
+        },
+        {
+          "name": "Tongue",
+          "damage": 10,
+          "skill": 55,
+          "optional": true,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack",
+          "page": 67
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:skin-wolf",
+      "name": "Skin Wolf",
+      "page": 70,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 70
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 7,
+        "WS": 60,
+        "BS": null,
+        "S": 54,
+        "T": 58,
+        "I": 55,
+        "Ag": 48,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 50,
+        "Fel": 30,
+        "W": 25
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Die Hard",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fear",
+          "value": "2",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Tracker",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Endless Rage",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Hungry",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws (two attacks)",
+          "damage": 10,
+          "skill": 60,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 70
+        },
+        {
+          "name": "Bite",
+          "damage": 9,
+          "skill": 60,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 70
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:great-taurus",
+      "name": "Great Taurus",
+      "page": 75,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 75
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": 40,
+        "S": 63,
+        "T": 52,
+        "I": 32,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 30,
+        "WP": 48,
+        "Fel": null,
+        "W": 80
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "80",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Immunity",
+          "value": "Fire, Bright Magic",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Blazing Body",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bloodrage",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burning Hooves (two attacks)",
+          "damage": 11,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 75
+        },
+        {
+          "name": "Breath (Fire)",
+          "damage": 10,
+          "skill": 40,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": "Free Attack",
+          "page": 75
+        },
+        {
+          "name": "Horns",
+          "damage": 11,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 75
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": true,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:tregara",
+      "name": "Tregara",
+      "page": 76,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 76
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 38,
+        "BS": null,
+        "S": 45,
+        "T": 42,
+        "I": 47,
+        "Ag": 38,
+        "Dex": 15,
+        "Int": 18,
+        "WP": 32,
+        "Fel": 10,
+        "W": 30
+      },
+      "toughnessBonus": 4,
+      "skills": [
+        {
+          "name": "Stealth (Underground)",
+          "total": 68
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Wallcrawler",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Vibrational Senses",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Barbed Forelimbs",
+          "damage": 8,
+          "skill": 38,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "A hit inflicts an Entangled Condition. The Tregara can start a Grapple and hold up to two opponents at once.",
+          "page": 76
+        },
+        {
+          "name": "Bite (Vicious Mandibles)",
+          "damage": 9,
+          "skill": 38,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Impale, Penetrating",
+          "page": 76
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The profile prints Armour 3 and combined soak 6. Armour 3 with Toughness 42 gives 7 soak under the normal Fifth Edition calculation."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:razorbill",
+      "name": "Razorbill",
+      "page": 77,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 77
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Small",
+      "stats": {
+        "M": 2,
+        "WS": 38,
+        "BS": null,
+        "S": 22,
+        "T": 34,
+        "I": 30,
+        "Ag": 24,
+        "Dex": null,
+        "Int": 10,
+        "WP": 24,
+        "Fel": null,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fly",
+          "value": "90",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Skittish",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Small",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Hungry",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Swarm",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hooked Bill",
+          "damage": 7,
+          "skill": 38,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "After taking Damage, pass an Average (+2 SL) Endurance Test or gain a Bleeding Condition.",
+          "page": 77
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The printed swarm alternative has WS 48 and 55 Wounds."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:stegadon",
+      "name": "Stegadon",
+      "page": 79,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 79
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": null,
+        "S": 63,
+        "T": 82,
+        "I": 15,
+        "Ag": 15,
+        "Dex": null,
+        "Int": 28,
+        "WP": 65,
+        "Fel": 10,
+        "W": 112
+      },
+      "toughnessBonus": 8,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Cold-blooded",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Unstoppable Charge (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Guard",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Sheer Bulk",
+          "damage": 12,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 79
+        },
+        {
+          "name": "Bite",
+          "damage": 10,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 79
+        },
+        {
+          "name": "Horns",
+          "damage": 12,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 79
+        },
+        {
+          "name": "Rear",
+          "damage": 6,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Stomp as its Move against a smaller opponent.",
+          "page": 79
+        },
+        {
+          "name": "Tail",
+          "damage": 11,
+          "skill": 55,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 79
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 6,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Monstrous is a printed Size alternative. Unstoppable Charge uses the core Appendix I Momentum conversion."
+      ],
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:horned-one",
+      "name": "Horned One",
+      "page": 80,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 80
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 7,
+        "WS": 42,
+        "BS": null,
+        "S": 42,
+        "T": 45,
+        "I": 25,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 35,
+        "Fel": null,
+        "W": 22
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Cold-blooded",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Belligerent",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stupid",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait",
+          "value": "Wetland",
+          "ranks": 1,
+          "adaptation": "Printed Swamp-strider uses the Fifth Edition Striding Gait rule."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Guard",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "damage": 8,
+          "skill": 42,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 80
+        },
+        {
+          "name": "Horns",
+          "damage": 9,
+          "skill": 42,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 80
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:carnosaur",
+      "name": "Carnosaur",
+      "page": 81,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 81
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 7,
+        "WS": 65,
+        "BS": null,
+        "S": 75,
+        "T": 55,
+        "I": 20,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 25,
+        "WP": 55,
+        "Fel": null,
+        "W": 88
+      },
+      "toughnessBonus": 5,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Cold-blooded",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Blood Frenzy (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Champion",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Guard",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Mount",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "War",
+          "ranks": 1
+        },
+        {
+          "name": "Tracker",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Teeth",
+          "damage": 13,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 81
+        },
+        {
+          "name": "Bite",
+          "damage": 13,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 81
+        },
+        {
+          "name": "Tail",
+          "damage": 11,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 81
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 4,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Monstrous is a printed Size alternative."
+      ],
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:wild-cat",
+      "name": "Wild Cat",
+      "page": 82,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 82
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 41,
+        "BS": null,
+        "S": 43,
+        "T": 32,
+        "I": 45,
+        "Ag": 55,
+        "Dex": null,
+        "Int": 10,
+        "WP": 44,
+        "Fel": null,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "skills": [
+        {
+          "name": "Stealth (Rural)",
+          "total": 75
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Bestial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Skittish",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Tracker",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Disruption",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Infestation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Mutation",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Trained",
+          "value": "Broken",
+          "ranks": 1
+        },
+        {
+          "name": "Ward",
+          "value": "9",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "damage": 7,
+          "skill": 41,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 82
+        },
+        {
+          "name": "Bite",
+          "damage": 6,
+          "skill": 41,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 82
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:war-lion-of-chrace",
+      "name": "War Lion of Chrace",
+      "page": 82,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 82
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Large",
+      "stats": {
+        "M": 8,
+        "WS": 55,
+        "BS": null,
+        "S": 52,
+        "T": 48,
+        "I": 38,
+        "Ag": 42,
+        "Dex": null,
+        "Int": 35,
+        "WP": 50,
+        "Fel": 30,
+        "W": 36
+      },
+      "toughnessBonus": 4,
+      "skills": [
+        {
+          "name": "Melee (Claws)",
+          "total": 65
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 62
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Night Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Tracker",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Large",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Champion",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "damage": 10,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Fast, Penetrating",
+          "page": 82
+        },
+        {
+          "name": "Bite",
+          "damage": 9,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Fast, Penetrating",
+          "page": 82
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ],
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:leviathan",
+      "name": "Leviathan",
+      "page": 85,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 85
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Monstrous",
+      "stats": {
+        "M": 4,
+        "WS": 65,
+        "BS": null,
+        "S": 60,
+        "T": 68,
+        "I": 30,
+        "Ag": 14,
+        "Dex": 10,
+        "Int": 10,
+        "WP": 44,
+        "Fel": 1,
+        "W": 176
+      },
+      "toughnessBonus": 6,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "Printed Stride uses the Fifth Edition Sprinter rule."
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous",
+          "ranks": 1
+        },
+        {
+          "name": "Crustacean",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Magic Resistance",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "damage": 12,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Penetrating",
+          "page": 85
+        },
+        {
+          "name": "Bite",
+          "damage": 11,
+          "skill": 65,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 85
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 6,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "The printed fanatical or Chaos cult is an encounter option."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:siren",
+      "name": "Siren",
+      "page": 86,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 86
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 2,
+        "WS": 35,
+        "BS": null,
+        "S": 49,
+        "T": 33,
+        "I": 42,
+        "Ag": 49,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 52,
+        "Fel": 35,
+        "W": 15
+      },
+      "toughnessBonus": 3,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Siren’s Song",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Water Born",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Distracting",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fear",
+          "value": "1",
+          "ranks": 1
+        },
+        {
+          "name": "Fear",
+          "value": "2",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "damage": 7,
+          "skill": 35,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 86
+        },
+        {
+          "name": "Tentacles (2)",
+          "damage": 5,
+          "skill": 35,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 86
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": true,
+          "quick": false,
+          "shield": false
+        },
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": true,
+          "quick": false,
+          "shield": false
+        },
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": true,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:merwyrm",
+      "name": "Merwyrm",
+      "page": 88,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 88
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 62,
+        "BS": null,
+        "S": 65,
+        "T": 60,
+        "I": 45,
+        "Ag": 26,
+        "Dex": null,
+        "Int": 15,
+        "WP": 38,
+        "Fel": 10,
+        "W": 84
+      },
+      "toughnessBonus": 6,
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Hungry",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Regeneration",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fanged Maw",
+          "damage": 11,
+          "skill": 62,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Venom (Difficult): Wounding a target inflicts Poisoned.",
+          "page": 88
+        },
+        {
+          "name": "Bite (Fanged Maw)",
+          "damage": 11,
+          "skill": 62,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Venom (Difficult): Wounding a target inflicts Poisoned.",
+          "page": 88
+        },
+        {
+          "name": "Tail",
+          "damage": 13,
+          "skill": 62,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "",
+          "page": 88
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits.",
+        "Monstrous is a printed Size alternative."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:shard-dragon",
+      "name": "Shard Dragon",
+      "page": 90,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 90
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Enormous",
+      "stats": {
+        "M": 5,
+        "WS": 48,
+        "BS": 38,
+        "S": 62,
+        "T": 76,
+        "I": 34,
+        "Ag": 45,
+        "Dex": null,
+        "Int": 10,
+        "WP": 44,
+        "Fel": 5,
+        "W": 96
+      },
+      "toughnessBonus": 7,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Enclosed Fighter",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Grim",
+          "value": "",
+          "ranks": 1,
+          "adaptation": "The printed ranked Grim uses the unranked Fifth Edition core Trait."
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Wallcrawler",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Size",
+          "value": "Enormous",
+          "ranks": 1
+        },
+        {
+          "name": "Rabid Frenzy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Razor Scales",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corruption",
+          "value": "Minor",
+          "ranks": 1
+        },
+        {
+          "name": "Infected",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Ward",
+          "value": "8",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Sickle Claws",
+          "damage": 11,
+          "skill": 48,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "page": 90
+        },
+        {
+          "name": "Bite",
+          "damage": 11,
+          "skill": 48,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": "Penetrating. Venom (Challenging): Wounding a target inflicts Poisoned.",
+          "page": 90
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 5,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": ""
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ]
+    },
+    {
+      "id": "imperial-zoo:creatures:undead-knight-wight",
+      "name": "Undead Knight (Wight)",
+      "page": 93,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 93
+      },
+      "example": false,
+      "category": "The Imperial Zoo",
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 35,
+        "S": 45,
+        "T": 45,
+        "I": 38,
+        "Ag": 30,
+        "Dex": 20,
+        "Int": 35,
+        "WP": 50,
+        "Fel": 30,
+        "W": 17
+      },
+      "toughnessBonus": 4,
+      "skills": [],
+      "talents": [
+        {
+          "name": "Combat Master",
+          "ranks": 2
+        },
+        {
+          "name": "Strike to Injure",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fear",
+          "value": "2",
+          "ranks": 1
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Magical",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Painless",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Undead",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Champion",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Chill Grasp",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Stealthy",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Territorial",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Unstable",
+          "value": "",
+          "ranks": 1
+        },
+        {
+          "name": "Fury (Imperial Zoo)",
+          "value": "",
+          "ranks": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Wight Blade",
+          "damage": 9,
+          "skill": 50,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "Impale. On a Critical Hit, roll twice on the Critical table and apply the higher result.",
+          "page": 93
+        }
+      ],
+      "armour": [
+        {
+          "name": "Printed armour",
+          "ap": 4,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Traits": "",
+        "Trappings": "Wight Blade"
+      },
+      "notes": [
+        "Printed Characteristics, Wounds and attack Damage are the starting baseline. Fifth Edition core rules apply to shared Traits."
+      ],
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    }
+  ],
+  "training": [],
+  "templates": [],
+  "traits": [
+    {
+      "id": "imperial-zoo:trait:vicious-webs",
+      "name": "Vicious Webs",
+      "page": 13,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 13
+      },
+      "text": "A target entangled by the Arachnarok’s webs also gains a Poisoned Condition."
+    },
+    {
+      "id": "imperial-zoo:trait:borrowed-courage",
+      "name": "Borrowed Courage",
+      "page": 15,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 15
+      },
+      "text": "Away from the tribe, scouts or raiders typically ride giant spiders in groups of 3 to 10. Mounted Forest Goblins ignore Afraid (Elves)."
+    },
+    {
+      "id": "imperial-zoo:trait:strength-of-the-pack",
+      "name": "Strength of the Pack",
+      "page": 17,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 17
+      },
+      "text": "Fourth Edition reference. When the pack outnumbers a foe, the wolves add a further +10 to their outnumbering modifier."
+    },
+    {
+      "id": "imperial-zoo:trait:piercing-cry",
+      "name": "Piercing Cry",
+      "page": 21,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 21
+      },
+      "text": "When charging, spend 2 Momentum to screech as a Free Attack. Opponents within Toughness Bonus yards make a Hard (−2 SL) Willpower Test or gain one Stunned Condition."
+    },
+    {
+      "id": "imperial-zoo:trait:burrow-30",
+      "name": "Burrow 30",
+      "page": 23,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 23
+      },
+      "text": "As its Move, tunnel up to 30 yards through earth and stone, ignoring terrain, obstacles and characters. It can Charge and choose whether to emerge. If it starts underground, it must use Burrow for its Move. Against it, measure horizontal distance and increase range by two steps."
+    },
+    {
+      "id": "imperial-zoo:trait:swallow-whole",
+      "name": "Swallow Whole",
+      "page": 23,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 23
+      },
+      "text": "After a maw attack critically hits or deals Wounds of twice the target’s TB to a target its Size or smaller, oppose Strength. A win inflicts Entangled, plus another for each 2 SL of margin. The victim’s next Action must be an Opposed Strength Test to escape. If still Entangled, they take 10 Wounds, reduced by TB and AP, and are swallowed. Inside, they stay Entangled and suffer 10 Wounds per Round ignoring AP. After a Willpower Test to act, an unopposed Melee Test with a Very Short or Personal weapon gains +20. Deal 20 cumulative Wounds ignoring its Armour to escape."
+    },
+    {
+      "id": "imperial-zoo:trait:too-ornery-to-die",
+      "name": "Too Ornery to Die",
+      "page": 25,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 25
+      },
+      "text": "Ignore the effects of the first Critical Hit suffered in each combat."
+    },
+    {
+      "id": "imperial-zoo:trait:the-forest-is-my-shield",
+      "name": "The Forest Is My Shield",
+      "page": 30,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 30
+      },
+      "text": "In woodland among trees, it cannot be outnumbered. Ranged attacks against it suffer −20. If that penalty turns an otherwise successful shot into a miss, the GM randomly determines which nearby tree or engaged foe the shot hits."
+    },
+    {
+      "id": "imperial-zoo:trait:a-wyvern-s-spite",
+      "name": "A Wyvern’s Spite",
+      "page": 32,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 32
+      },
+      "text": "A foe surprised by the Wyvern must pass a Willpower Test or suffer −10 to all Tests and lose access to Fortune until the Wyvern dies or the foe loses 5 or more Wounds."
+    },
+    {
+      "id": "imperial-zoo:trait:i-am-unstoppable",
+      "name": "I Am Unstoppable",
+      "page": 41,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 41
+      },
+      "text": "A mounted Skaven rider gains Immunity to Psychology. If the Bonebreaker dies, the rider gains 5 Broken Conditions and other Skaven within 10 yards gain 1."
+    },
+    {
+      "id": "imperial-zoo:trait:engulf",
+      "name": "Engulf",
+      "page": 45,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "text": "On a hit against a target of its Size or smaller, the amoeba may engulf one victim, inflicting Entangled Conditions equal to its SB. The victim loses SB Wounds each Round ignoring TB and AP. The amoeba cannot attack the victim, but any attack that hits the amoeba also hits the victim. It withdraws to digest if the victim dies or stops struggling."
+    },
+    {
+      "id": "imperial-zoo:trait:jelly-from-hell",
+      "name": "Jelly from Hell",
+      "page": 45,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "text": "Halve Wounds from sources other than fire, extreme cold or magic, rounding down. Only these exceptions usually kill it permanently."
+    },
+    {
+      "id": "imperial-zoo:trait:mostly-mindless",
+      "name": "Mostly Mindless",
+      "page": 45,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 45
+      },
+      "text": "It cannot test Intelligence, Willpower or Fellowship. Substitute its Strength Bonus for Willpower Bonus. It will not approach open flame and gains Broken if approached with it."
+    },
+    {
+      "id": "imperial-zoo:trait:four-fold-knowing-gaze",
+      "name": "Four-Fold Knowing Gaze",
+      "page": 47,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 47
+      },
+      "text": "It cannot be surprised and it takes at least four opponents to outnumber it. Once each Round it can reverse one of its Combat Tests."
+    },
+    {
+      "id": "imperial-zoo:trait:rotten-stench",
+      "name": "Rotten Stench",
+      "page": 49,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "text": "Living targets within Toughness Bonus yards suffer −10 to all Tests. Multiple Rotten Stenches do not stack."
+    },
+    {
+      "id": "imperial-zoo:trait:overwhelming-stench",
+      "name": "Overwhelming Stench",
+      "page": 49,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 49
+      },
+      "text": "Living targets within Toughness Bonus yards suffer −10 to all Tests. Multiple stenches do not stack. On first exposure, test Willpower or gain a Stunned Condition."
+    },
+    {
+      "id": "imperial-zoo:trait:hallucinogenic-cloud",
+      "name": "Hallucinogenic Cloud",
+      "page": 50,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 50
+      },
+      "text": "Mammals within TB yards make a Hard (−2 SL) Toughness Test. Success protects against this leech for a day. Failure leaves them effectively Unconscious for 3 Rounds plus one per SL of failure."
+    },
+    {
+      "id": "imperial-zoo:trait:endless-coils",
+      "name": "Endless Coils",
+      "page": 52,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 52
+      },
+      "text": "It may grapple up to five smaller targets at once."
+    },
+    {
+      "id": "imperial-zoo:trait:endless-malice",
+      "name": "Endless Malice",
+      "page": 61,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 61
+      },
+      "text": "After killing or incapacitating a living foe, test Willpower or spend its next Action and Move mauling the victim. An unconscious victim suffers a Critical Wound. Witnesses are subject to Fear 2."
+    },
+    {
+      "id": "imperial-zoo:trait:we-see-you",
+      "name": "We See You",
+      "page": 67,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 67
+      },
+      "text": "A Chimera cannot be surprised or outnumbered in combat."
+    },
+    {
+      "id": "imperial-zoo:trait:endless-rage",
+      "name": "Endless Rage",
+      "page": 70,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 70
+      },
+      "text": "The Skin Wolf is always Frenzied."
+    },
+    {
+      "id": "imperial-zoo:trait:blazing-body",
+      "name": "Blazing Body",
+      "page": 75,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 75
+      },
+      "text": "At the end of each Round, all engaged targets take 1d10 Wounds reduced by TB and AP, to a minimum of 1. Against non-magical attacks, the Great Taurus uses double its TB."
+    },
+    {
+      "id": "imperial-zoo:trait:bloodrage",
+      "name": "Bloodrage",
+      "page": 75,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 75
+      },
+      "text": "The Great Taurus is always Frenzied and hates all opponents."
+    },
+    {
+      "id": "imperial-zoo:trait:vibrational-senses",
+      "name": "Vibrational Senses",
+      "page": 76,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 76
+      },
+      "text": "It detects all physical creatures within four times its Initiative Bonus in yards and cannot be Surprised."
+    },
+    {
+      "id": "imperial-zoo:trait:unstoppable-charge-imperial-zoo",
+      "name": "Unstoppable Charge (Imperial Zoo)",
+      "page": 79,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 79
+      },
+      "text": "The Stegadon gains 3 Momentum when it charges."
+    },
+    {
+      "id": "imperial-zoo:trait:blood-frenzy-imperial-zoo",
+      "name": "Blood Frenzy (Imperial Zoo)",
+      "page": 81,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 81
+      },
+      "text": "After inflicting a Wound in combat, it is Frenzied until all foes it can sense are dead."
+    },
+    {
+      "id": "imperial-zoo:trait:disruption",
+      "name": "Disruption",
+      "page": 82,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 82
+      },
+      "text": "Fourth Edition reference. Unstable creatures in its presence count as having 2 less Advantage when resolving Unstable at the end of the Round, without spending or losing any."
+    },
+    {
+      "id": "imperial-zoo:trait:crustacean",
+      "name": "Crustacean",
+      "page": 85,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 85
+      },
+      "text": "Can breathe underwater and has Movement 8 in water."
+    },
+    {
+      "id": "imperial-zoo:trait:siren-s-song",
+      "name": "Siren’s Song",
+      "page": 86,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 86
+      },
+      "text": "A listener makes a Difficult (−1 SL) Willpower Test or can only move toward the singer, effectively Unconscious but awake. Plugging the ears makes the Test Easy (+4 SL). A victim may test again when attacked."
+    },
+    {
+      "id": "imperial-zoo:trait:water-born",
+      "name": "Water Born",
+      "page": 86,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 86
+      },
+      "text": "Can breathe underwater and has Movement 8 in water."
+    },
+    {
+      "id": "imperial-zoo:trait:rabid-frenzy",
+      "name": "Rabid Frenzy",
+      "page": 90,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 90
+      },
+      "text": "When wounded in combat, it enters an unbreakable Frenzy granting two free Melee Tests per Round."
+    },
+    {
+      "id": "imperial-zoo:trait:razor-scales",
+      "name": "Razor Scales",
+      "page": 90,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 90
+      },
+      "text": "An engaged opponent that attacks it takes 1d10 Wounds reduced by TB and AP, to a minimum of 1."
+    },
+    {
+      "id": "imperial-zoo:trait:fury-imperial-zoo",
+      "name": "Fury (Imperial Zoo)",
+      "page": 136,
+      "source": {
+        "book": "imperial-zoo",
+        "page": 136
+      },
+      "text": "Spend 1 Momentum to hate opponents in close combat. Spend 3 Momentum to become Frenzied and then lose any remaining Momentum."
+    }
+  ]
+}

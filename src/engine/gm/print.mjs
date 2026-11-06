@@ -7,6 +7,7 @@ export { PRINT_LAYOUTS } from "./card-packing.mjs";
 // All actual fields remain; the record-grid planner owns only their presentation.
 export function cardSections(r, s) {
   return [
+    ["GM Briefing", s.includeBriefing ? s.briefing?.trim() : ""],
     ["Desc", s.description?.trim() || ""],
     [
       "Attacks",
@@ -37,7 +38,12 @@ export function cardSections(r, s) {
     ],
     ["Cants", (r.cants || []).map((x) => `${x.name} (${x.lore})`).join("; ")],
     ["Gear", gearLines(r).join("; ")],
-    ["Corruption", r.mutations.map((x) => x.name).join("; ")],
+    [
+      "Corruption",
+      r.mutations
+        .map((x) => abilityPresentation("mutation", x, s).text)
+        .join("\n"),
+    ],
     [
       "Personality",
       [

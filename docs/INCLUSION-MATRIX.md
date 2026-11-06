@@ -8,7 +8,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 20 |
+| books | 21 |
 | careers | 140 |
 | magicProfiles | 596 |
 | rituals | 17 |
@@ -47,6 +47,7 @@ Each source inventory remains visible even when another selected book supersedes
 | The Corsairs of Captain Flariel | 3 | 3 | 3 | 0 | 1 |
 | Lustria | 17 | 5 | 19 | 0 | 35 |
 | Salzenmund: City of Salt and Silver | 0 | 5 | 13 | 0 | 11 |
+| The Imperial Zoo | 0 | 0 | 0 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
 
@@ -3109,6 +3110,18 @@ Pack `salzenmund` · version 1.0.0
 | `salzenmund:reference:spites-serving-naiads` — Spites serving Naiads | referenceEntries | deferred | p. 116 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 
 </details>
+
+## The Imperial Zoo
+
+Pack `imperial-zoo` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Named creatures, adventure NPCs and appendix options | deferred | p. 10 | This pack covers generic beasts and monsters. Named examples, adventure character builds and appendix gear are outside the workshop integration. |
+| Generic expedition creatures | adapted | p. 10 | Reviewed Bestiary foundations with separate book and category filters. |
 
 ## Reviewed aliases
 

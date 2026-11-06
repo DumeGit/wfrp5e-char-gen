@@ -113,6 +113,10 @@
     {
       "id": "salzenmund",
       "path": "salzenmund/manifest.json"
+    },
+    {
+      "id": "imperial-zoo",
+      "path": "imperial-zoo/manifest.json"
     }
   ]
 }

@@ -61,7 +61,11 @@ test("startup uses one request and preserves the fully validated source library"
   assert.ok(
     library.packs
       .filter((pack) => pack.manifest.kind !== "variant")
-      .every((pack) => pack.data.referenceEntries.length),
+      .every((pack) =>
+        pack.manifest.id === "imperial-zoo"
+          ? pack.data.referenceEntries.length === 0
+          : pack.data.referenceEntries.length > 0,
+      ),
   );
 });
 

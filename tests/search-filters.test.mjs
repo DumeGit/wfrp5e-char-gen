@@ -75,7 +75,9 @@ test("category filters combine with the book and text query; browsing stays alph
       .filter(
         (p) =>
           p.manifest.kind !== "variant" &&
-          !["bayl-many-eyes", "night-parade"].includes(p.manifest.id),
+          !["bayl-many-eyes", "night-parade", "imperial-zoo"].includes(
+            p.manifest.id,
+          ),
       )
       .map((p) => p.manifest.id)
       .sort(),

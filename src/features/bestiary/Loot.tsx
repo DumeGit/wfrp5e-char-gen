@@ -1,26 +1,31 @@
 "use client";
 import { useState } from "react";
 import {
-  LOOT_TABLE,
+  LOOT_TABLES,
+  LOOT_TIERS,
   MAX_LOOT_QUANTITY,
   lootName,
 } from "../../engine/gm/loot.mjs";
+import { equipmentConditions } from "../../engine/gm/equipment-conditions.mjs";
 import {
   Button,
+  ConditionReferences,
   Details,
   Input,
   Metadata,
   SectionHeading,
+  Select,
   useBestiary,
 } from "./controls";
 
 export function LootSection() {
-  const { draft, result, edit, store, notify, remove } = useBestiary();
+  const { draft, result, rules, edit, store, notify, remove } = useBestiary();
+  const [tier, setTier] = useState("brass");
   const [error, setError] = useState("");
   const roll = () => {
     setError("");
     try {
-      store.rollLoot();
+      store.rollLoot(tier);
       notify("Loot added.");
     } catch (problem) {
       setError(problem instanceof Error ? problem.message : String(problem));
@@ -28,12 +33,25 @@ export function LootSection() {
   };
   return (
     <section id="gm-loot" aria-labelledby="gm-loot-title">
-      <SectionHeading action={roll} label="Roll loot">
+      <SectionHeading>
         <span id="gm-loot-title">Loot</span>
       </SectionHeading>
+      <div className="gm-loot-roll">
+        <Select
+          label="Loot category"
+          id="gm-loot-tier"
+          value={tier}
+          options={Object.entries(LOOT_TIERS)}
+          onChange={(value) => {
+            setTier(value);
+            setError("");
+          }}
+        />
+        <Button onClick={roll}>Roll loot</Button>
+      </div>
       <p className="gm-small">
-        Roll to add loot straight to Gear. A result of 00 automatically rolls
-        two loot results. Loot stays unequipped.
+        Roll to add loot straight to Gear. A result of 00 rolls twice more in
+        the selected category. Loot stays unequipped.
       </p>
       {error && <p role="alert">{error}</p>}
       {!draft.loot.length && <p className="gm-small">No additional loot.</p>}
@@ -54,6 +72,9 @@ export function LootSection() {
             ) : (
               <strong>{lootName(row)}</strong>
             )}
+            <ConditionReferences
+              entries={equipmentConditions(rules, row.entry)}
+            />
           </div>
           <div className="gm-loot-controls">
             <Input
@@ -86,10 +107,13 @@ export function LootSection() {
           </div>
         </div>
       ))}
-      <Details id="loot:table" title="View d100 loot table">
+      <Details
+        id="loot:table"
+        title={`View ${LOOT_TIERS[tier as keyof typeof LOOT_TIERS]} d100 loot table`}
+      >
         <p className="gm-small">
-          An original table for this app. Item details use the existing book
-          entries. No treasure values or magical properties are added.
+          An original app table. Jewellery variants use the existing Jewellery
+          entry.
         </p>
         <table className="gm-loot-table">
           <thead>
@@ -99,7 +123,7 @@ export function LootSection() {
             </tr>
           </thead>
           <tbody>
-            {LOOT_TABLE.map((row: any) => {
+            {LOOT_TABLES[tier as keyof typeof LOOT_TABLES].map((row: any) => {
               const number = (n: number) =>
                 n === 100 ? "00" : String(n).padStart(2, "0");
               return (

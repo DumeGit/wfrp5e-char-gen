@@ -41,22 +41,22 @@ test("one click adds 00 loot results immediately without a dialog, with history 
   await gmStep(page, "Equipment & magic");
   const attacks = await page.locator(".gm-attack-row").allTextContents();
   const defence = await page.locator(".gm-defence-summary").textContent();
-  await seed(page, [100, 100, 39, 49, 2]);
+  await seed(page, [100, 100, 15, 3, 58, 2]);
   await page.getByRole("button", { name: "Roll loot", exact: true }).click();
   await expect(page.getByRole("dialog")).toHaveCount(0);
   await expect(page.locator(".gm-loot-entry")).toHaveCount(2);
   const loot = page.locator("#gm-loot");
-  await expect(loot.locator("select")).toHaveCount(0);
+  await expect(loot.getByLabel("Loot category")).toHaveValue("brass");
   await expect(loot).not.toContainText(/Carried loot|Lair loot|preview/i);
   await expect(
     page.getByRole("button", { name: "Add loot", exact: true }),
   ).toHaveCount(0);
   await expect(
     loot.getByRole("spinbutton", {
-      name: "gold crown loot quantity",
+      name: "brass pennies loot quantity",
       exact: true,
     }),
-  ).toHaveValue("1");
+  ).toHaveValue("3");
   await expect(
     loot.getByRole("spinbutton", {
       name: "Bandage loot quantity",
@@ -82,13 +82,13 @@ test("one click adds 00 loot results immediately without a dialog, with history 
     ).bytes,
   );
   expect(saved.gear).toEqual([]);
-  expect(saved.loot.map((row) => row.quantity)).toEqual([1, 4]);
+  expect(saved.loot.map((row) => row.quantity)).toEqual([3, 4]);
   expect(saved.loot.every((row) => !Object.hasOwn(row, "location"))).toBe(true);
   expect(
     saved.rolls
       .filter((row) => row.source?.kind === "app")
       .map((row) => row.faces),
-  ).toEqual([[100], [100], [39], [49], [2]]);
+  ).toEqual([[100], [100], [15], [3], [58], [2]]);
   await bandage
     .getByRole("button", { name: "Remove Bandage loot", exact: true })
     .click();
@@ -115,7 +115,7 @@ test("one click adds 00 loot results immediately without a dialog, with history 
   await loot.screenshot({ path: info.outputPath("loot-direct.png") });
   await gmStep(page, "Review & export");
   const block = page.locator(".gm-stat-block").first();
-  await expect(block).toContainText("Loot: 1 gold crown");
+  await expect(block).toContainText("Loot: 3 brass pennies");
   await expect(block).toContainText("Loot: 4 \u00d7 Bandage");
   await expect(block).not.toContainText(/Carried loot|Lair loot/);
 });
@@ -128,9 +128,12 @@ test("successive loot clicks and keyboard activation add bundles and merge quant
   await applyProfile(page, "Human");
   await gmStep(page, "Equipment & magic");
   const roll = page.getByRole("button", { name: "Roll loot", exact: true });
-  await seed(page, [98]);
+  const category = page.getByLabel("Loot category");
+  await category.selectOption("silver");
+  await seed(page, [33]);
   await roll.click();
   await expect(page.locator(".gm-loot-entry")).toHaveCount(2);
+  await category.selectOption("brass");
   await seed(page, [99, 3]);
   await roll.click();
   await expect(page.locator(".gm-loot-entry")).toHaveCount(5);
@@ -140,22 +143,23 @@ test("successive loot clicks and keyboard activation add bundles and merge quant
       exact: true,
     }),
   ).toHaveValue("3");
-  await seed(page, [96]);
+  await category.selectOption("gold");
+  await seed(page, [46]);
   await roll.focus();
   await page.keyboard.press("Space");
   await expect(page.locator(".gm-loot-entry")).toHaveCount(6);
-  await seed(page, [96]);
+  await seed(page, [46]);
   await roll.click();
   await expect(page.locator(".gm-loot-entry")).toHaveCount(6);
   await expect(
     page.getByRole("spinbutton", {
-      name: "Jewellery loot quantity",
+      name: "Gold necklace loot quantity",
       exact: true,
     }),
   ).toHaveValue("2");
   await expect(page.getByRole("dialog")).toHaveCount(0);
-  await page.getByText("View d100 loot table", { exact: true }).click();
-  await expect(page.locator("#gm-loot tbody tr")).toHaveCount(26);
+  await page.getByText("View Gold d100 loot table", { exact: true }).click();
+  await expect(page.locator("#gm-loot tbody tr")).toHaveCount(12);
   await noOverflow(page);
   await page
     .locator("#gm-loot")
